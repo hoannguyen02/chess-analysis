@@ -57,4 +57,19 @@ const PuzzlesPage = () => {
   );
 };
 
+export async function getServerSideProps() {
+  const apiDomain = process.env.NEXT_PUBLIC_PHONG_CHESS_DOMAIN;
+  const res = await fetch(`${apiDomain}/v1/puzzles`);
+  const data = await res.json();
+
+  console.log(data);
+
+  return {
+    props: {
+      data,
+    },
+  };
+}
+
+
 export default PuzzlesPage;
