@@ -21,55 +21,33 @@ const Puzzle = ({ puzzle }: any) => {
   );
 };
 
-const PuzzlesPage = () => {
-  const puzzles = [
-    {
-      fen: "r1bqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
-      move: "e4",
-      evaluationBefore: 0,
-      evaluationAfter: 50,
-      evalChange: 50,
-      difficulty: "easy",
-      theme: "general",
-      phase: "opening",
-      impact: "neutral"
-    },
-    {
-      fen: "4r1k1/ppp2ppp/8/8/4Q3/8/PPP2PPP/4R1K1 w - - 0 1",
-      move: "Re8#",
-      evaluationBefore: 200,
-      evaluationAfter: 1000,
-      evalChange: 800,
-      difficulty: "hard",
-      theme: "checkmate pattern",
-      phase: "endgame",
-      impact: "brilliant move"
-    }
-  ];
-
+const PuzzlesPage = ({ puzzles }: { puzzles: any[] }) => {
   return (
     <div style={{ padding: '16px' }}>
       <h1>Chess Puzzles</h1>
-      {puzzles.map((puzzle, index) => (
-        <Puzzle key={index} puzzle={puzzle} />
-      ))}
+      {puzzles.length > 0 ? (
+        puzzles.map((puzzle, index) => <Puzzle key={index} puzzle={puzzle} />)
+      ) : (
+        <p>No puzzles available</p>
+      )}
     </div>
   );
 };
 
 export async function getServerSideProps() {
   const apiDomain = process.env.NEXT_PUBLIC_PHONG_CHESS_DOMAIN;
-  const res = await fetch(`${apiDomain}/v1/puzzles`);
-  const data = await res.json();
 
-  console.log(data);
-
-  return {
-    props: {
-      data,
-    },
-  };
+  try {
+    const res = await fetch(`${apiDomain}/v1/puzzles`);
+    if (!res.ok) {
+      throw new Error(`Failed to fetch puzzles: ${res.statusText}`);
+    }
+    const data = await res.json();
+    return { props: { puzzles: data } };
+  } catch (error) {
+    console.error('Fetch error:', error);
+    return { props: { puzzles: [] } }; // Fallback to empty puzzles
+  }
 }
-
 
 export default PuzzlesPage;
