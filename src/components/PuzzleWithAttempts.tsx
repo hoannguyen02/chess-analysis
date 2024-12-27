@@ -15,6 +15,7 @@ const PuzzleWithAttempts: React.FC<PuzzleProps> = ({ puzzle }) => {
   const [attempts, setAttempts] = useState<number>(0);
 
   const handleMove = (sourceSquare: Square, targetSquare: Square): boolean => {
+    // debugger
     const userMove = game.move({ from: sourceSquare, to: targetSquare });
 
     if (!userMove) {
@@ -25,16 +26,17 @@ const PuzzleWithAttempts: React.FC<PuzzleProps> = ({ puzzle }) => {
     const expectedMove = puzzle.solutions[currentStep];
     if (userMove.san === expectedMove.move) {
       setFeedback(puzzle.feedback.correct);
-      setCurrentStep((prev) => prev + 1);
-
+      
       const nextStep = currentStep + 1;
       if (
         nextStep < puzzle.solutions.length &&
-        puzzle.solution[nextStep].player === "engine"
+        puzzle.solutions[nextStep].player === "engine"
       ) {
         const engineMove = puzzle.solutions[nextStep].move;
         game.move(engineMove);
         setCurrentStep((prev) => prev + 2);
+      } else {
+        setCurrentStep((prev) => prev + 1);
       }
 
       setCurrentFen(game.fen());
