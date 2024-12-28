@@ -2,20 +2,53 @@ import React from 'react';
 import { Chessboard } from 'react-chessboard';
 
 const Puzzle = ({ puzzle }: any) => {
-  const { fen, move, evaluationBefore, evaluationAfter, evalChange, difficulty, theme, phase, impact } = puzzle;
+  const {
+    fen,
+    move,
+    evaluationBefore,
+    evaluationAfter,
+    evalChange,
+    difficulty,
+    theme,
+    phase,
+    impact,
+  } = puzzle;
 
   return (
-    <div style={{ border: '1px solid #ccc', padding: '16px', marginBottom: '16px', borderRadius: '8px' }}>
+    <div
+      style={{
+        border: '1px solid #ccc',
+        padding: '16px',
+        marginBottom: '16px',
+        borderRadius: '8px',
+      }}
+    >
       <Chessboard position={fen} arePiecesDraggable={false} boardWidth={400} />
       <div style={{ marginTop: '16px' }}>
-        <p><strong>Move:</strong> {move}</p>
-        <p><strong>Evaluation Before:</strong> {evaluationBefore}</p>
-        <p><strong>Evaluation After:</strong> {evaluationAfter}</p>
-        <p><strong>Evaluation Change:</strong> {evalChange}</p>
-        <p><strong>Difficulty:</strong> {difficulty}</p>
-        <p><strong>Theme:</strong> {theme}</p>
-        <p><strong>Phase:</strong> {phase}</p>
-        <p><strong>Impact:</strong> {impact}</p>
+        <p>
+          <strong>Move:</strong> {move}
+        </p>
+        <p>
+          <strong>Evaluation Before:</strong> {evaluationBefore}
+        </p>
+        <p>
+          <strong>Evaluation After:</strong> {evaluationAfter}
+        </p>
+        <p>
+          <strong>Evaluation Change:</strong> {evalChange}
+        </p>
+        <p>
+          <strong>Difficulty:</strong> {difficulty}
+        </p>
+        <p>
+          <strong>Theme:</strong> {theme}
+        </p>
+        <p>
+          <strong>Phase:</strong> {phase}
+        </p>
+        <p>
+          <strong>Impact:</strong> {impact}
+        </p>
       </div>
     </div>
   );

@@ -4,45 +4,61 @@ import { Chessboard } from 'react-chessboard';
 import axios from 'axios';
 
 const ChessAnalysis: React.FC = () => {
-  const [game] = useState(new Chess('rn3rk1/pp3ppp/2p2n2/7q/1b1P4/2N1PNPb/PPQ3BP/R1B2RK1 w - - 5 14')); // Initialize the game
+  const [game] = useState(
+    new Chess('rn3rk1/pp3ppp/2p2n2/7q/1b1P4/2N1PNPb/PPQ3BP/R1B2RK1 w - - 5 14')
+  ); // Initialize the game
   const [fen, setFen] = useState(game.fen()); // FEN state
   const [moveHistory, setMoveHistory] = useState<string[]>([]); // To display moves
-  const [analysis, setAnalysis] = useState<{ move: string; evaluation: string } | null>(null); // Analysis results
+  const [analysis, setAnalysis] = useState<{
+    move: string;
+    evaluation: string;
+  } | null>(null); // Analysis results
 
-  const onDrop = async (sourceSquare: Square, targetSquare: Square): Promise<boolean> => {
+  const onDrop = async (
+    sourceSquare: Square,
+    targetSquare: Square
+  ): Promise<boolean> => {
     const move = game.move({
       from: sourceSquare,
       to: targetSquare,
-      promotion: sourceSquare[1] === '7' && targetSquare[1] === '8' ? 'q' : undefined,
+      promotion:
+        sourceSquare[1] === '7' && targetSquare[1] === '8' ? 'q' : undefined,
     });
-  
+
     if (!move) {
-      console.error(`Invalid move: { from: "${sourceSquare}", to: "${targetSquare}" }`);
+      console.error(
+        `Invalid move: { from: "${sourceSquare}", to: "${targetSquare}" }`
+      );
       return false;
     }
-  
+
     // Update FEN and move history
     const newFen = game.fen();
     setFen(newFen);
     setMoveHistory((prevHistory) => [...prevHistory, move.san]);
-  
+
     console.log('Updated FEN:', newFen);
-  
+
     // Send move for analysis
     await analyzeMove(newFen, `${sourceSquare}${targetSquare}`);
     return true;
   };
-  
 
   // Send move for analysis
   const analyzeMove = async (fen: string, userMove: string) => {
     try {
-      const response = await axios.post(`${process.env.NEXT_PUBLIC_PHONG_CHESS_DOMAIN}/v1/stockfish/analyze`, {
-        fen,
-        userMove,
-        depth: 15,
+      const response = await axios.post(
+        `${process.env.NEXT_PUBLIC_PHONG_CHESS_DOMAIN}/v1/stockfish/analyze`,
+        {
+          fen,
+          userMove,
+          depth: 15,
+        }
+      );
+      setAnalysis({
+        move: response.data.bestMove,
+        evaluation: response.data.evaluation,
       });
-      setAnalysis({ move: response.data.bestMove, evaluation: response.data.evaluation });
     } catch (error) {
       console.error('Analysis error:', error);
     }

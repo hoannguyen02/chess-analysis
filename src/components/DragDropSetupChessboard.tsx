@@ -1,39 +1,42 @@
 import { Chess } from 'chess.js';
 import { useMemo, useState } from 'react';
-import { ChessboardDnDProvider, SparePiece, Chessboard } from 'react-chessboard'
+import {
+  ChessboardDnDProvider,
+  SparePiece,
+  Chessboard,
+} from 'react-chessboard';
 import { Piece } from 'react-chessboard/dist/chessboard/types';
 
 const boardWrapper = {
   width: `70vw`,
-  maxWidth: "70vh",
-  margin: "3rem auto",
+  maxWidth: '70vh',
+  margin: '3rem auto',
 };
 
-
 const buttonStyle = {
-  cursor: "pointer",
-  padding: "10px 20px",
-  margin: "10px 10px 0px 0px",
-  borderRadius: "6px",
-  backgroundColor: "#f0d9b5",
-  border: "none",
-  boxShadow: "0 2px 5px rgba(0, 0, 0, 0.5)",
+  cursor: 'pointer',
+  padding: '10px 20px',
+  margin: '10px 10px 0px 0px',
+  borderRadius: '6px',
+  backgroundColor: '#f0d9b5',
+  border: 'none',
+  boxShadow: '0 2px 5px rgba(0, 0, 0, 0.5)',
 };
 
 const inputStyle = {
-  padding: "10px 20px",
-  margin: "10px 0 10px 0",
-  borderRadius: "6px",
-  border: "none",
-  boxShadow: "0 2px 5px rgba(0, 0, 0, 0.5)",
-  width: "100%",
+  padding: '10px 20px',
+  margin: '10px 0 10px 0',
+  borderRadius: '6px',
+  border: 'none',
+  boxShadow: '0 2px 5px rgba(0, 0, 0, 0.5)',
+  width: '100%',
 };
 
-
 const DragDropSetupChessboard = () => {
-  const game = useMemo(() => new Chess("8/8/8/8/8/8/8/8 w - - 0 1"), []); // empty board
-  const [boardOrientation, setBoardOrientation] =
-    useState<"white" | "black">("white");
+  const game = useMemo(() => new Chess('8/8/8/8/8/8/8/8 w - - 0 1'), []); // empty board
+  const [boardOrientation, setBoardOrientation] = useState<'white' | 'black'>(
+    'white'
+  );
   const [boardWidth, setBoardWidth] = useState(360);
   const [fenPosition, setFenPosition] = useState(game.fen());
 
@@ -47,7 +50,7 @@ const DragDropSetupChessboard = () => {
       setFenPosition(game.fen());
     } else {
       alert(
-        `The board already contains ${color === "w" ? "WHITE" : "BLACK"} KING`
+        `The board already contains ${color === 'w' ? 'WHITE' : 'BLACK'} KING`
       );
     }
 
@@ -84,33 +87,33 @@ const DragDropSetupChessboard = () => {
     }
   };
   const pieces = [
-    "wP",
-    "wN",
-    "wB",
-    "wR",
-    "wQ",
-    "wK",
-    "bP",
-    "bN",
-    "bB",
-    "bR",
-    "bQ",
-    "bK",
+    'wP',
+    'wN',
+    'wB',
+    'wR',
+    'wQ',
+    'wK',
+    'bP',
+    'bN',
+    'bB',
+    'bR',
+    'bQ',
+    'bK',
   ];
 
   return (
     <div
       style={{
         ...boardWrapper,
-        margin: "0 auto",
-        maxWidth: "60vh",
+        margin: '0 auto',
+        maxWidth: '60vh',
       }}
     >
       <ChessboardDnDProvider>
         <div>
           <div
             style={{
-              display: "flex",
+              display: 'flex',
               margin: `${boardWidth / 32}px ${boardWidth / 8}px`,
             }}
           >
@@ -133,13 +136,13 @@ const DragDropSetupChessboard = () => {
             onPieceDropOffBoard={handlePieceDropOffBoard}
             dropOffBoardAction="trash"
             customBoardStyle={{
-              borderRadius: "4px",
-              boxShadow: "0 2px 10px rgba(0, 0, 0, 0.5)",
+              borderRadius: '4px',
+              boxShadow: '0 2px 10px rgba(0, 0, 0, 0.5)',
             }}
           />
           <div
             style={{
-              display: "flex",
+              display: 'flex',
               margin: `${boardWidth / 32}px ${boardWidth / 8}px`,
             }}
           >
@@ -153,7 +156,7 @@ const DragDropSetupChessboard = () => {
             ))}
           </div>
         </div>
-        <div style={{ display: "flex", justifyContent: "center" }}>
+        <div style={{ display: 'flex', justifyContent: 'center' }}>
           <button
             style={buttonStyle}
             onClick={() => {
@@ -176,7 +179,7 @@ const DragDropSetupChessboard = () => {
             style={buttonStyle}
             onClick={() => {
               setBoardOrientation(
-                boardOrientation === "white" ? "black" : "white"
+                boardOrientation === 'white' ? 'black' : 'white'
               );
             }}
           >
