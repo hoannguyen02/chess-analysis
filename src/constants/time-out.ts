@@ -1,0 +1,1 @@
+export const DEFAULT_ENGINE_MOVE_DELAY_TIME = 200;

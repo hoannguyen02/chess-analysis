@@ -1,4 +1,4 @@
-import PuzzleWithAttempts from '@/components/PuzzleWithAttempts';
+import SolvePuzzle from '@/components/SolvePuzzle';
 import {
   GetServerSideProps,
   GetServerSidePropsContext,
@@ -7,7 +7,7 @@ import {
 import { ParsedUrlQuery } from 'querystring';
 
 const SolvePuzzlePage = ({ puzzle }: any) => {
-  return <PuzzleWithAttempts puzzle={puzzle} />;
+  return <SolvePuzzle puzzle={puzzle} />;
 };
 
 export const getServerSideProps: GetServerSideProps = async (

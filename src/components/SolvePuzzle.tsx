@@ -2,6 +2,12 @@ import React, { useMemo, useState } from 'react';
 import { Chessboard } from 'react-chessboard';
 import { Chess } from 'chess.js';
 import { Piece, Square } from 'react-chessboard/dist/chessboard/types';
+import { PromotionType } from '@/types/promotion';
+import {
+  JUST_MOVED_FAILED_BG_COLOR,
+  JUST_MOVED_SUCCESS_BG_COLOR,
+} from '@/constants/colors';
+import { DEFAULT_ENGINE_MOVE_DELAY_TIME } from '@/constants/time-out';
 
 type PuzzleProps = {
   puzzle: {
@@ -11,8 +17,10 @@ type PuzzleProps = {
   };
 };
 
-const PuzzleWithAttempts: React.FC<PuzzleProps> = ({ puzzle }) => {
+const SolvePuzzle: React.FC<PuzzleProps> = ({ puzzle }) => {
   const game = useMemo(() => new Chess(puzzle.fen), [puzzle.fen]);
+  const [currentTimeout, setCurrentTimeout] = useState<NodeJS.Timeout>();
+
   const [currentFen, setCurrentFen] = useState<string>(puzzle.fen);
   const [currentStep, setCurrentStep] = useState<number>(0);
   const [feedback, setFeedback] = useState<string>('');
@@ -24,6 +32,9 @@ const PuzzleWithAttempts: React.FC<PuzzleProps> = ({ puzzle }) => {
     Record<string, any>
   >({});
   const [optionSquares, setOptionSquares] = useState<Record<string, any>>({});
+  const [moveSquareStyle, setMoveSquareStyle] = useState<Record<string, any>>(
+    {}
+  );
 
   const getMoveOptions = (square: Square) => {
     const moves = game.moves({
@@ -47,9 +58,85 @@ const PuzzleWithAttempts: React.FC<PuzzleProps> = ({ puzzle }) => {
       };
     });
     newSquares[square] = {
-      background: 'rgba(255, 255, 0, 0.4)',
+      background: JUST_MOVED_SUCCESS_BG_COLOR,
     };
     setOptionSquares(newSquares);
+    return true;
+  };
+
+  const handleMove = (
+    sourceSquare: Square,
+    targetSquare: Square,
+    promotion?: PromotionType
+  ): boolean => {
+    const userMove = game.move({
+      from: sourceSquare,
+      to: targetSquare,
+      promotion,
+    });
+
+    if (!userMove) {
+      setFeedback('Invalid move. Try again.');
+      return false;
+    }
+
+    setAttempts((prev) => prev + 1);
+    const expectedMove = puzzle.solutions[currentStep];
+
+    if (userMove.san === expectedMove.move) {
+      setFeedback(puzzle.feedback.correct);
+
+      const nextStep = currentStep + 1;
+      if (
+        nextStep < puzzle.solutions.length &&
+        puzzle.solutions[nextStep].player === 'engine'
+      ) {
+        const engineMove = puzzle.solutions[nextStep].move;
+
+        // Clear any previous timeout
+        if (currentTimeout) {
+          clearTimeout(currentTimeout);
+        }
+
+        const timeout = setTimeout(() => {
+          game.move(engineMove);
+          setCurrentStep((prev) => prev + 2);
+          setCurrentFen(game.fen()); // Update the FEN after the engine move
+          setMoveSquareStyle({
+            [targetSquare]: {
+              background: JUST_MOVED_SUCCESS_BG_COLOR,
+            },
+          });
+        }, DEFAULT_ENGINE_MOVE_DELAY_TIME);
+
+        setCurrentTimeout(timeout); // Save the timeout to state
+      } else {
+        setCurrentStep((prev) => prev + 1);
+      }
+
+      setCurrentFen(game.fen());
+      setMoveSquareStyle({
+        [targetSquare]: {
+          background: JUST_MOVED_SUCCESS_BG_COLOR,
+        },
+      });
+    } else {
+      if (attempts + 1 >= puzzle.solutions.length) {
+        setFeedback('Puzzle failed. Try again!');
+        resetPuzzle();
+      } else {
+        setMoveSquareStyle({
+          [targetSquare]: {
+            background: JUST_MOVED_FAILED_BG_COLOR,
+          },
+        });
+        setFeedback(puzzle.feedback.retry);
+        // Make random moves
+        // game.undo();
+        setCurrentFen(game.fen());
+      }
+    }
+
     return true;
   };
 
@@ -85,12 +172,7 @@ const PuzzleWithAttempts: React.FC<PuzzleProps> = ({ puzzle }) => {
       setShowPromotionDialog(true);
       return;
     }
-
-    const move = game.move({
-      from: moveFrom,
-      to: square,
-      promotion: 'q',
-    });
+    const move = handleMove(moveFrom, square, 'q');
 
     if (!move) {
       const hasMoveOptions = getMoveOptions(square);
@@ -126,13 +208,10 @@ const PuzzleWithAttempts: React.FC<PuzzleProps> = ({ puzzle }) => {
       setFeedback('Invalid promotion piece selected.');
       return false;
     }
-
-    // Perform the promotion move
-    game.move({
-      from: promoteFromSquare,
-      to: promoteToSquare,
-      promotion: promotionType,
-    });
+    const move = handleMove(promoteFromSquare, promoteToSquare, promotionType);
+    if (!move) {
+      return false;
+    }
 
     setMoveFrom(null);
     setMoveTo(null);
@@ -142,47 +221,6 @@ const PuzzleWithAttempts: React.FC<PuzzleProps> = ({ puzzle }) => {
 
     return true;
   }
-
-  const handleMove = (sourceSquare: Square, targetSquare: Square): boolean => {
-    const userMove = game.move({ from: sourceSquare, to: targetSquare });
-
-    if (!userMove) {
-      setFeedback('Invalid move. Try again.');
-      return false;
-    }
-
-    setAttempts((prev) => prev + 1);
-    const expectedMove = puzzle.solutions[currentStep];
-
-    if (userMove.san === expectedMove.move) {
-      setFeedback(puzzle.feedback.correct);
-
-      const nextStep = currentStep + 1;
-      if (
-        nextStep < puzzle.solutions.length &&
-        puzzle.solutions[nextStep].player === 'engine'
-      ) {
-        const engineMove = puzzle.solutions[nextStep].move;
-        game.move(engineMove);
-        setCurrentStep((prev) => prev + 2);
-      } else {
-        setCurrentStep((prev) => prev + 1);
-      }
-
-      setCurrentFen(game.fen());
-    } else {
-      if (attempts + 1 >= puzzle.solutions.length) {
-        setFeedback('Puzzle failed. Try again!');
-        resetPuzzle();
-      } else {
-        setFeedback(puzzle.feedback.retry);
-        game.undo();
-        setCurrentFen(game.fen());
-      }
-    }
-
-    return true;
-  };
 
   const resetPuzzle = () => {
     game.load(puzzle.fen);
@@ -196,9 +234,6 @@ const PuzzleWithAttempts: React.FC<PuzzleProps> = ({ puzzle }) => {
     <div>
       <h2>Chess Puzzle</h2>
       <p>Feedback: {feedback}</p>
-      <p>
-        Attempts: {attempts}/{puzzle.solutions.length}
-      </p>
       <Chessboard
         position={currentFen}
         onPieceDrop={(sourceSquare, targetSquare) =>
@@ -214,6 +249,7 @@ const PuzzleWithAttempts: React.FC<PuzzleProps> = ({ puzzle }) => {
         customSquareStyles={{
           ...optionSquares,
           ...rightClickedSquares,
+          ...moveSquareStyle,
         }}
         promotionToSquare={moveTo}
         showPromotionDialog={showPromotionDialog}
@@ -223,4 +259,4 @@ const PuzzleWithAttempts: React.FC<PuzzleProps> = ({ puzzle }) => {
   );
 };
 
-export default PuzzleWithAttempts;
+export default SolvePuzzle;
