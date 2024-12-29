@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import { Chessboard } from 'react-chessboard';
 import { Chess } from 'chess.js';
 import { Piece, Square } from 'react-chessboard/dist/chessboard/types';
@@ -12,8 +12,13 @@ import { DEFAULT_ENGINE_MOVE_DELAY_TIME } from '@/constants/time-out';
 type PuzzleProps = {
   puzzle: {
     fen: string;
-    solutions: { move: string; player: 'engine' | 'user' }[];
-    feedback: { correct: string; retry: string };
+    solutions: {
+      move: string;
+      player: 'engine' | 'user';
+      from: Square;
+      to: Square;
+    }[];
+    prevMove: { move: string; player: 'w' | 'b'; from: Square; to: Square };
   };
 };
 
@@ -24,9 +29,9 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({ puzzle }) => {
   const [currentFen, setCurrentFen] = useState<string>(puzzle.fen);
   const [currentStep, setCurrentStep] = useState<number>(0);
   const [feedback, setFeedback] = useState<string>('');
-  const [attempts, setAttempts] = useState<number>(0);
   const [moveFrom, setMoveFrom] = useState<Square | null>(null);
   const [moveTo, setMoveTo] = useState<Square | null>(null);
+  const [showRetry, setShowRetry] = useState<boolean>(false);
   const [showPromotionDialog, setShowPromotionDialog] = useState(false);
   const [rightClickedSquares, setRightClickedSquares] = useState<
     Record<string, any>
@@ -35,6 +40,26 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({ puzzle }) => {
   const [moveSquareStyle, setMoveSquareStyle] = useState<Record<string, any>>(
     {}
   );
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      const { move, from, to } = puzzle.prevMove;
+      if (game && move) {
+        game.move(move);
+        setCurrentFen(game.fen());
+        setMoveSquareStyle({
+          [from]: {
+            background: JUST_MOVED_SUCCESS_BG_COLOR,
+          },
+          [to]: {
+            background: JUST_MOVED_SUCCESS_BG_COLOR,
+          },
+        });
+      }
+    }, 500);
+    return () => clearTimeout(timer);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [puzzle.prevMove]); // Run once after the component mounts
 
   const getMoveOptions = (square: Square) => {
     const moves = game.moves({
@@ -76,16 +101,12 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({ puzzle }) => {
     });
 
     if (!userMove) {
-      setFeedback('Invalid move. Try again.');
       return false;
     }
 
-    setAttempts((prev) => prev + 1);
     const expectedMove = puzzle.solutions[currentStep];
 
     if (userMove.san === expectedMove.move) {
-      setFeedback(puzzle.feedback.correct);
-
       const nextStep = currentStep + 1;
       if (
         nextStep < puzzle.solutions.length &&
@@ -93,7 +114,6 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({ puzzle }) => {
       ) {
         const engineMove = puzzle.solutions[nextStep].move;
 
-        // Clear any previous timeout
         if (currentTimeout) {
           clearTimeout(currentTimeout);
         }
@@ -101,15 +121,18 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({ puzzle }) => {
         const timeout = setTimeout(() => {
           game.move(engineMove);
           setCurrentStep((prev) => prev + 2);
-          setCurrentFen(game.fen()); // Update the FEN after the engine move
+          setCurrentFen(game.fen());
           setMoveSquareStyle({
             [targetSquare]: {
+              background: JUST_MOVED_SUCCESS_BG_COLOR,
+            },
+            [sourceSquare]: {
               background: JUST_MOVED_SUCCESS_BG_COLOR,
             },
           });
         }, DEFAULT_ENGINE_MOVE_DELAY_TIME);
 
-        setCurrentTimeout(timeout); // Save the timeout to state
+        setCurrentTimeout(timeout);
       } else {
         setCurrentStep((prev) => prev + 1);
       }
@@ -119,23 +142,24 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({ puzzle }) => {
         [targetSquare]: {
           background: JUST_MOVED_SUCCESS_BG_COLOR,
         },
+        [sourceSquare]: {
+          background: JUST_MOVED_SUCCESS_BG_COLOR,
+        },
       });
     } else {
-      if (attempts + 1 >= puzzle.solutions.length) {
-        setFeedback('Puzzle failed. Try again!');
-        resetPuzzle();
-      } else {
-        setMoveSquareStyle({
-          [targetSquare]: {
-            background: JUST_MOVED_FAILED_BG_COLOR,
-          },
-        });
-        setFeedback(puzzle.feedback.retry);
-        // Make random moves
-        // game.undo();
-        setCurrentFen(game.fen());
-      }
+      setMoveSquareStyle({
+        [targetSquare]: {
+          background: JUST_MOVED_FAILED_BG_COLOR,
+        },
+        [sourceSquare]: {
+          background: JUST_MOVED_FAILED_BG_COLOR,
+        },
+      });
+      setCurrentFen(game.fen());
+      setShowRetry(true);
     }
+
+    setOptionSquares({});
 
     return true;
   };
@@ -225,15 +249,52 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({ puzzle }) => {
   const resetPuzzle = () => {
     game.load(puzzle.fen);
     setCurrentFen(puzzle.fen);
+    setOptionSquares({});
+    setMoveSquareStyle({});
     setCurrentStep(0);
     setFeedback('Puzzle restarted. Try again!');
-    setAttempts(0);
+  };
+
+  const retry = () => {
+    setShowRetry(false);
+    game.undo();
+    game.undo();
+    setCurrentFen(game.fen());
+    let engineMove;
+    let nextStep: number = 0;
+    debugger;
+    // First attempt failed
+    if (currentStep === 0) {
+      engineMove = puzzle.prevMove;
+    } else {
+      nextStep = currentStep - 1;
+      engineMove = puzzle.solutions[nextStep];
+    }
+
+    // Remake last move
+    if (currentTimeout) {
+      clearTimeout(currentTimeout);
+    }
+
+    const timeout = setTimeout(() => {
+      game.move(engineMove.move);
+      setCurrentFen(game.fen());
+      setMoveSquareStyle({
+        [engineMove.from]: {
+          background: JUST_MOVED_SUCCESS_BG_COLOR,
+        },
+        [engineMove.to]: {
+          background: JUST_MOVED_SUCCESS_BG_COLOR,
+        },
+      });
+    }, 1000);
+
+    setCurrentTimeout(timeout);
   };
 
   return (
     <div>
       <h2>Chess Puzzle</h2>
-      <p>Feedback: {feedback}</p>
       <Chessboard
         position={currentFen}
         onPieceDrop={(sourceSquare, targetSquare) =>
@@ -254,7 +315,10 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({ puzzle }) => {
         promotionToSquare={moveTo}
         showPromotionDialog={showPromotionDialog}
       />
-      <button onClick={resetPuzzle}>Restart Puzzle</button>
+      {currentStep === puzzle.solutions.length && (
+        <button onClick={resetPuzzle}>Restart Puzzle</button>
+      )}
+      {showRetry && <button onClick={retry}>Retry Puzzle</button>}
     </div>
   );
 };
