@@ -353,6 +353,13 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({ puzzle }) => {
     setCurrentTimeout(timeout);
   };
 
+  const showHint = () => {
+    const hintMove = puzzle.solutions[currentStep];
+    setMoveSquareStyle({
+      [hintMove.from]: { background: JUST_MOVED_SUCCESS_BG_COLOR },
+    });
+  };
+
   return (
     <div>
       <h2>Chess Puzzle</h2>
@@ -376,15 +383,18 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({ puzzle }) => {
         promotionToSquare={moveTo}
         showPromotionDialog={showPromotionDialog}
       />
+      {!showRetry && currentStep !== puzzle.solutions.length && (
+        <button onClick={showHint}>Hint</button>
+      )}
       {currentStep === puzzle.solutions.length && (
         <>
-          <button onClick={resetPuzzle}>Restart Puzzle</button>
+          <button onClick={resetPuzzle}>Restart</button>
         </>
       )}
       {showRetry && (
         <>
-          <button onClick={retry}>Retry Puzzle</button>
-          <button onClick={showSolution}>Show Solution</button>
+          <button onClick={retry}>Retry</button>
+          <button onClick={showSolution}>Solution</button>
         </>
       )}
     </div>
