@@ -44,23 +44,28 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({ puzzle }) => {
     {}
   );
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      const { move, from, to } = puzzle.prevMove;
+  const handlePreMove = (callback?: () => void) => {
+    const { move, from, to } = puzzle.prevMove;
+
+    const timeout = setTimeout(() => {
       if (game && move) {
-        game.move(move);
-        setCurrentFen(game.fen());
+        game.move(move); // Execute the pre-move on the chess.js instance
+        setCurrentFen(game.fen()); // Update the board's FEN string
         setMoveSquareStyle({
-          [from]: {
-            background: JUST_MOVED_SUCCESS_BG_COLOR,
-          },
-          [to]: {
-            background: JUST_MOVED_SUCCESS_BG_COLOR,
-          },
+          [from]: { background: JUST_MOVED_SUCCESS_BG_COLOR },
+          [to]: { background: JUST_MOVED_SUCCESS_BG_COLOR },
         });
       }
-    }, 500);
-    return () => clearTimeout(timer);
+      if (callback) {
+        callback(); // Proceed to callback
+      }
+    }, DEFAULT_SOLUTION_DELAY_TIME); // Use a timeout for the pre-move
+
+    setCurrentTimeout(timeout); // Store the timeout reference
+  };
+
+  useEffect(() => {
+    handlePreMove();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [puzzle.prevMove]); // Run once after the component mounts
 
@@ -252,6 +257,7 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({ puzzle }) => {
   const resetPuzzle = () => {
     game.load(puzzle.fen);
     setCurrentFen(puzzle.fen);
+    handlePreMove();
     setOptionSquares({});
     setMoveSquareStyle({});
     setCurrentStep(0);
@@ -267,24 +273,6 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({ puzzle }) => {
     if (currentTimeout) {
       clearTimeout(currentTimeout); // Clear any existing timeouts
     }
-
-    const handlePreMove = (callback: () => void) => {
-      const { move, from, to } = puzzle.prevMove;
-
-      const timeout = setTimeout(() => {
-        if (game && move) {
-          game.move(move); // Execute the pre-move on the chess.js instance
-          setCurrentFen(game.fen()); // Update the board's FEN string
-          setMoveSquareStyle({
-            [from]: { background: JUST_MOVED_SUCCESS_BG_COLOR },
-            [to]: { background: JUST_MOVED_SUCCESS_BG_COLOR },
-          });
-        }
-        callback(); // Proceed to solution steps
-      }, DEFAULT_SOLUTION_DELAY_TIME); // Use a timeout for the pre-move
-
-      setCurrentTimeout(timeout); // Store the timeout reference
-    };
 
     const executeStep = (stepIndex: number) => {
       if (stepIndex >= puzzle.solutions.length) {
@@ -348,7 +336,7 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({ puzzle }) => {
           background: JUST_MOVED_SUCCESS_BG_COLOR,
         },
       });
-    }, 1000);
+    }, DEFAULT_SOLUTION_DELAY_TIME);
 
     setCurrentTimeout(timeout);
   };
