@@ -7,7 +7,10 @@ import {
   JUST_MOVED_FAILED_BG_COLOR,
   JUST_MOVED_SUCCESS_BG_COLOR,
 } from '@/constants/colors';
-import { DEFAULT_ENGINE_MOVE_DELAY_TIME } from '@/constants/time-out';
+import {
+  DEFAULT_ENGINE_MOVE_DELAY_TIME,
+  DEFAULT_SOLUTION_DELAY_TIME,
+} from '@/constants/time-out';
 
 type PuzzleProps = {
   puzzle: {
@@ -255,6 +258,65 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({ puzzle }) => {
     setFeedback('Puzzle restarted. Try again!');
   };
 
+  const showSolution = () => {
+    game.load(puzzle.fen); // Reset the board to the initial puzzle state
+    setCurrentFen(puzzle.fen); // Render the initial FEN
+    setCurrentStep(0);
+    setMoveSquareStyle({});
+
+    if (currentTimeout) {
+      clearTimeout(currentTimeout); // Clear any existing timeouts
+    }
+
+    const handlePreMove = (callback: () => void) => {
+      const { move, from, to } = puzzle.prevMove;
+
+      const timeout = setTimeout(() => {
+        if (game && move) {
+          game.move(move); // Execute the pre-move on the chess.js instance
+          setCurrentFen(game.fen()); // Update the board's FEN string
+          setMoveSquareStyle({
+            [from]: { background: JUST_MOVED_SUCCESS_BG_COLOR },
+            [to]: { background: JUST_MOVED_SUCCESS_BG_COLOR },
+          });
+        }
+        callback(); // Proceed to solution steps
+      }, DEFAULT_SOLUTION_DELAY_TIME); // Use a timeout for the pre-move
+
+      setCurrentTimeout(timeout); // Store the timeout reference
+    };
+
+    const executeStep = (stepIndex: number) => {
+      if (stepIndex >= puzzle.solutions.length) {
+        return; // Stop when all steps have been executed
+      }
+
+      const { move, from, to } = puzzle.solutions[stepIndex];
+
+      const timeout = setTimeout(() => {
+        game.move(move); // Execute the move on the chess.js instance
+        setCurrentFen(game.fen()); // Update the board's FEN string
+        setMoveSquareStyle({
+          [from]: { background: JUST_MOVED_SUCCESS_BG_COLOR },
+          [to]: { background: JUST_MOVED_SUCCESS_BG_COLOR },
+        });
+
+        setCurrentStep(stepIndex + 1); // Update the current step
+
+        // Proceed to the next step
+        executeStep(stepIndex + 1);
+      }, DEFAULT_ENGINE_MOVE_DELAY_TIME);
+
+      setCurrentTimeout(timeout); // Store the timeout reference
+    };
+
+    // Perform the pre-move with a timeout before starting the solution playback
+    handlePreMove(() => {
+      // Start the solution playback from the first step after pre-move
+      executeStep(0);
+    });
+  };
+
   const retry = () => {
     setShowRetry(false);
     game.undo();
@@ -262,7 +324,6 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({ puzzle }) => {
     setCurrentFen(game.fen());
     let engineMove;
     let nextStep: number = 0;
-    debugger;
     // First attempt failed
     if (currentStep === 0) {
       engineMove = puzzle.prevMove;
@@ -316,9 +377,16 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({ puzzle }) => {
         showPromotionDialog={showPromotionDialog}
       />
       {currentStep === puzzle.solutions.length && (
-        <button onClick={resetPuzzle}>Restart Puzzle</button>
+        <>
+          <button onClick={resetPuzzle}>Restart Puzzle</button>
+        </>
       )}
-      {showRetry && <button onClick={retry}>Retry Puzzle</button>}
+      {showRetry && (
+        <>
+          <button onClick={retry}>Retry Puzzle</button>
+          <button onClick={showSolution}>Show Solution</button>
+        </>
+      )}
     </div>
   );
 };
