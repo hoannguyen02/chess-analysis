@@ -12,15 +12,16 @@ import {
   DEFAULT_SOLUTION_DELAY_TIME,
 } from '@/constants/time-out';
 
+type SolutionMove = {
+  move: string;
+  player: 'engine' | 'user';
+  from: Square;
+  to: Square;
+};
 type PuzzleProps = {
   puzzle: {
     fen: string;
-    solutions: {
-      move: string;
-      player: 'engine' | 'user';
-      from: Square;
-      to: Square;
-    }[];
+    solutions: SolutionMove[];
     prevMove: { move: string; player: 'w' | 'b'; from: Square; to: Square };
   };
 };
@@ -42,6 +43,17 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({ puzzle }) => {
   const [moveSquareStyle, setMoveSquareStyle] = useState<Record<string, any>>(
     {}
   );
+
+  //  Only show back/forward buttons if puzzle is done, either by normal solved or by solution
+  const [historyMoveCurrentIdx, setHistoryMoveCurrentIdx] = useState<number>(0);
+  const [isBoardClickAble, setIsBoardClickAble] = useState<boolean>(true);
+
+  useEffect(() => {
+    if (currentStep === puzzle.solutions.length) {
+      setIsBoardClickAble(false);
+      setHistoryMoveCurrentIdx(puzzle.solutions.length);
+    }
+  }, [currentStep, puzzle.solutions.length]);
 
   const handlePreMove = (callback?: () => void) => {
     const { move, from, to } = puzzle.prevMove;
@@ -119,7 +131,8 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({ puzzle }) => {
         nextStep < puzzle.solutions.length &&
         puzzle.solutions[nextStep].player === 'engine'
       ) {
-        const engineMove = puzzle.solutions[nextStep].move;
+        const solution = puzzle.solutions[nextStep];
+        const { move: engineMove, from, to } = solution;
 
         if (currentTimeout) {
           clearTimeout(currentTimeout);
@@ -130,10 +143,10 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({ puzzle }) => {
           setCurrentStep((prev) => prev + 2);
           setCurrentFen(game.fen());
           setMoveSquareStyle({
-            [targetSquare]: {
+            [from]: {
               background: JUST_MOVED_SUCCESS_BG_COLOR,
             },
-            [sourceSquare]: {
+            [to]: {
               background: JUST_MOVED_SUCCESS_BG_COLOR,
             },
           });
@@ -172,6 +185,9 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({ puzzle }) => {
   };
 
   const onSquareClick = (square: Square) => {
+    if (!isBoardClickAble) {
+      return;
+    }
     setRightClickedSquares({});
 
     if (!moveFrom) {
@@ -259,9 +275,11 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({ puzzle }) => {
     setOptionSquares({});
     setMoveSquareStyle({});
     setCurrentStep(0);
+    setIsBoardClickAble(true);
   };
 
   const showSolution = () => {
+    setShowRetry(false);
     game.load(puzzle.fen); // Reset the board to the initial puzzle state
     setCurrentFen(puzzle.fen); // Render the initial FEN
     setCurrentStep(0);
@@ -345,14 +363,50 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({ puzzle }) => {
     });
   };
 
+  const backMove = () => {
+    game.undo();
+    setCurrentFen(game.fen());
+
+    const idx = historyMoveCurrentIdx - 1;
+
+    const { from, to } = puzzle.solutions[idx];
+    setMoveSquareStyle({
+      [from]: {
+        background: JUST_MOVED_SUCCESS_BG_COLOR,
+      },
+      [to]: {
+        background: JUST_MOVED_SUCCESS_BG_COLOR,
+      },
+    });
+    setHistoryMoveCurrentIdx(idx);
+  };
+
+  const forwardMove = () => {
+    const { move, from, to } = puzzle.solutions[historyMoveCurrentIdx];
+    game.move(move);
+    setCurrentFen(game.fen());
+    setMoveSquareStyle({
+      [from]: {
+        background: JUST_MOVED_SUCCESS_BG_COLOR,
+      },
+      [to]: {
+        background: JUST_MOVED_SUCCESS_BG_COLOR,
+      },
+    });
+    setHistoryMoveCurrentIdx(historyMoveCurrentIdx + 1);
+  };
+
   return (
     <div>
       <h2>Chess Puzzle</h2>
       <Chessboard
         position={currentFen}
-        onPieceDrop={(sourceSquare, targetSquare) =>
-          handleMove(sourceSquare, targetSquare)
-        }
+        onPieceDrop={(sourceSquare, targetSquare) => {
+          if (!isBoardClickAble) {
+            return false;
+          }
+          return handleMove(sourceSquare, targetSquare);
+        }}
         boardWidth={500}
         onSquareClick={onSquareClick}
         onPromotionPieceSelect={onPromotionPieceSelect}
@@ -374,6 +428,15 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({ puzzle }) => {
       {currentStep === puzzle.solutions.length && (
         <>
           <button onClick={resetPuzzle}>Restart</button>
+          <button onClick={backMove} disabled={historyMoveCurrentIdx === 0}>
+            back
+          </button>
+          <button
+            onClick={forwardMove}
+            disabled={historyMoveCurrentIdx >= currentStep}
+          >
+            forward
+          </button>
         </>
       )}
       {showRetry && (
