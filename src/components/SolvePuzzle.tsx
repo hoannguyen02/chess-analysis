@@ -31,7 +31,6 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({ puzzle }) => {
 
   const [currentFen, setCurrentFen] = useState<string>(puzzle.fen);
   const [currentStep, setCurrentStep] = useState<number>(0);
-  const [feedback, setFeedback] = useState<string>('');
   const [moveFrom, setMoveFrom] = useState<Square | null>(null);
   const [moveTo, setMoveTo] = useState<Square | null>(null);
   const [showRetry, setShowRetry] = useState<boolean>(false);
@@ -237,7 +236,6 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({ puzzle }) => {
       piece[1]?.toLowerCase() as 'q' | 'r' | 'b' | 'n';
 
     if (!promotionType) {
-      setFeedback('Invalid promotion piece selected.');
       return false;
     }
     const move = handleMove(promoteFromSquare, promoteToSquare, promotionType);
@@ -261,7 +259,6 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({ puzzle }) => {
     setOptionSquares({});
     setMoveSquareStyle({});
     setCurrentStep(0);
-    setFeedback('Puzzle restarted. Try again!');
   };
 
   const showSolution = () => {
