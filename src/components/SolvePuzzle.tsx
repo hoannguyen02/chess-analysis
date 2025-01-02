@@ -4,10 +4,6 @@ import { Chess } from 'chess.js';
 import { Piece, Square } from 'react-chessboard/dist/chessboard/types';
 import { PromotionType } from '@/types/promotion';
 import {
-  JUST_MOVED_FAILED_BG_COLOR,
-  JUST_MOVED_SUCCESS_BG_COLOR,
-} from '@/constants/colors';
-import {
   DEFAULT_ENGINE_MOVE_DELAY_TIME,
   DEFAULT_SOLUTION_DELAY_TIME,
 } from '@/constants/time-out';
@@ -63,8 +59,8 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({ puzzle }) => {
         game.move(move); // Execute the pre-move on the chess.js instance
         setCurrentFen(game.fen()); // Update the board's FEN string
         setMoveSquareStyle({
-          [from]: { background: JUST_MOVED_SUCCESS_BG_COLOR },
-          [to]: { background: JUST_MOVED_SUCCESS_BG_COLOR },
+          [from]: { background: 'var(--p-highlight)' },
+          [to]: { background: 'var(--p-highlight)' },
         });
       }
       if (callback) {
@@ -102,7 +98,7 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({ puzzle }) => {
       };
     });
     newSquares[square] = {
-      background: JUST_MOVED_SUCCESS_BG_COLOR,
+      background: 'var(--p-highlight)',
     };
     setOptionSquares(newSquares);
     return true;
@@ -144,10 +140,10 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({ puzzle }) => {
           setCurrentFen(game.fen());
           setMoveSquareStyle({
             [from]: {
-              background: JUST_MOVED_SUCCESS_BG_COLOR,
+              background: 'var(--p-highlight)',
             },
             [to]: {
-              background: JUST_MOVED_SUCCESS_BG_COLOR,
+              background: 'var(--p-highlight)',
             },
           });
         }, DEFAULT_ENGINE_MOVE_DELAY_TIME);
@@ -160,19 +156,19 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({ puzzle }) => {
       setCurrentFen(game.fen());
       setMoveSquareStyle({
         [targetSquare]: {
-          background: JUST_MOVED_SUCCESS_BG_COLOR,
+          background: 'var(--p-highlight)',
         },
         [sourceSquare]: {
-          background: JUST_MOVED_SUCCESS_BG_COLOR,
+          background: 'var(--p-highlight)',
         },
       });
     } else {
       setMoveSquareStyle({
         [targetSquare]: {
-          background: JUST_MOVED_FAILED_BG_COLOR,
+          background: 'var(--p-warning)',
         },
         [sourceSquare]: {
-          background: JUST_MOVED_FAILED_BG_COLOR,
+          background: 'var(--p-warning)',
         },
       });
       setCurrentFen(game.fen());
@@ -300,8 +296,8 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({ puzzle }) => {
         game.move(move); // Execute the move on the chess.js instance
         setCurrentFen(game.fen()); // Update the board's FEN string
         setMoveSquareStyle({
-          [from]: { background: JUST_MOVED_SUCCESS_BG_COLOR },
-          [to]: { background: JUST_MOVED_SUCCESS_BG_COLOR },
+          [from]: { background: 'var(--p-highlight)' },
+          [to]: { background: 'var(--p-highlight)' },
         });
 
         setCurrentStep(stepIndex + 1); // Update the current step
@@ -345,10 +341,10 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({ puzzle }) => {
       setCurrentFen(game.fen());
       setMoveSquareStyle({
         [engineMove.from]: {
-          background: JUST_MOVED_SUCCESS_BG_COLOR,
+          background: 'var(--p-highlight)',
         },
         [engineMove.to]: {
-          background: JUST_MOVED_SUCCESS_BG_COLOR,
+          background: 'var(--p-highlight)',
         },
       });
     }, DEFAULT_SOLUTION_DELAY_TIME);
@@ -359,7 +355,7 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({ puzzle }) => {
   const showHint = () => {
     const hintMove = puzzle.solutions[currentStep];
     setMoveSquareStyle({
-      [hintMove.from]: { background: JUST_MOVED_SUCCESS_BG_COLOR },
+      [hintMove.from]: { background: 'var(--p-highlight)' },
     });
   };
 
@@ -372,10 +368,10 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({ puzzle }) => {
     const { from, to } = puzzle.solutions[idx];
     setMoveSquareStyle({
       [from]: {
-        background: JUST_MOVED_SUCCESS_BG_COLOR,
+        background: 'var(--p-highlight)',
       },
       [to]: {
-        background: JUST_MOVED_SUCCESS_BG_COLOR,
+        background: 'var(--p-highlight)',
       },
     });
     setHistoryMoveCurrentIdx(idx);
@@ -387,10 +383,10 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({ puzzle }) => {
     setCurrentFen(game.fen());
     setMoveSquareStyle({
       [from]: {
-        background: JUST_MOVED_SUCCESS_BG_COLOR,
+        background: 'var(--p-highlight)',
       },
       [to]: {
-        background: JUST_MOVED_SUCCESS_BG_COLOR,
+        background: 'var(--p-highlight)',
       },
     });
     setHistoryMoveCurrentIdx(historyMoveCurrentIdx + 1);
