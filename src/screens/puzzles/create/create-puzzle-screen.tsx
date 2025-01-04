@@ -1,5 +1,6 @@
 import { TitlePage } from '@/components/TitlePage';
 import { PuzzleDifficulty, PuzzlePhase, PuzzleStatus } from '@/types/puzzle';
+import { PuzzleTheme } from '@/types/puzzle-theme';
 import { Button, Checkbox, Label, Select, TextInput } from 'flowbite-react';
 import Link from 'next/link';
 import { SubmitHandler, useForm } from 'react-hook-form';
@@ -11,9 +12,13 @@ type CreatePuzzleForm = {
   difficulty: PuzzleDifficulty;
   isPublic: boolean;
   phase?: PuzzlePhase;
+  theme: string;
 };
 
-export const CreatePuzzleScreen = () => {
+type Props = {
+  themes: PuzzleTheme[];
+};
+export const CreatePuzzleScreen = ({ themes }: Props) => {
   const {
     register, // Register inputs
     handleSubmit, // Handle form submission
@@ -103,7 +108,18 @@ export const CreatePuzzleScreen = () => {
               <option>Endgame</option>
             </Select>
           </div>
-          <div></div>
+          <div>
+            <div className="mb-2">
+              <Label htmlFor="theme" value="Theme" />
+            </div>
+            <Select value={watch('theme')} id="theme" {...register('theme')}>
+              {themes.map((theme) => (
+                <option key={theme.code} label={theme.title}>
+                  {theme.code}
+                </option>
+              ))}
+            </Select>
+          </div>
         </div>
 
         <Button type="submit" gradientMonochrome="info">
