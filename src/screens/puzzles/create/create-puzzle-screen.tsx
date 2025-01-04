@@ -13,6 +13,7 @@ type CreatePuzzleForm = {
   isPublic: boolean;
   phase?: PuzzlePhase;
   theme: string;
+  title?: string;
 };
 
 type Props = {
@@ -45,6 +46,15 @@ export const CreatePuzzleScreen = ({ themes }: Props) => {
     <div className="">
       <TitlePage>Create Puzzle</TitlePage>
       <form onSubmit={handleSubmit(onSubmit)} className="">
+        <div className="mb-4">
+          <Label htmlFor="title" value="Title" />
+          <TextInput
+            id="title"
+            type="text"
+            placeholder="Title of puzzle is optional"
+            {...register('title')}
+          />
+        </div>
         <div className="grid grid-cols-3  place-content-start mb-4 gap-8">
           <div className="flex flex-col">
             <div className="w-[90%]">
@@ -122,9 +132,14 @@ export const CreatePuzzleScreen = ({ themes }: Props) => {
           </div>
         </div>
 
-        <Button type="submit" gradientMonochrome="info">
-          Submit
-        </Button>
+        <div className="flex mt-4">
+          <Button type="button" outline className="mr-8">
+            Preview
+          </Button>
+          <Button type="submit" gradientMonochrome="info">
+            Submit
+          </Button>
+        </div>
       </form>
     </div>
   );
