@@ -1,4 +1,7 @@
 import { TitlePage } from '@/components/TitlePage';
+import { ROUTE_CHANGE_MESSAGE } from '@/constants/route';
+import useBeforeUnload from '@/hooks/useBeforeUnload';
+import usePreventRouteChange from '@/hooks/usePreventRouteChange';
 import { Puzzle } from '@/types/puzzle';
 import { PuzzleTheme } from '@/types/puzzle-theme';
 import { Button, Checkbox, Label, Select, TextInput } from 'flowbite-react';
@@ -15,7 +18,7 @@ export const PuzzleFormScreen = ({ themes, puzzle }: Props) => {
     register, // Register inputs
     control,
     handleSubmit, // Handle form submission
-    formState: { errors }, // Access form errors
+    formState: { errors, isDirty }, // Access form errors
     watch,
     setValue,
     getValues,
@@ -35,6 +38,12 @@ export const PuzzleFormScreen = ({ themes, puzzle }: Props) => {
       },
     },
   });
+
+  // Warn on browser close/refresh
+  useBeforeUnload(ROUTE_CHANGE_MESSAGE, isDirty);
+
+  // Warn on internal navigation
+  usePreventRouteChange(ROUTE_CHANGE_MESSAGE, isDirty);
 
   const { fields, append, remove } = useFieldArray({
     control,
@@ -82,7 +91,7 @@ export const PuzzleFormScreen = ({ themes, puzzle }: Props) => {
 
   return (
     <div className="">
-      <TitlePage>Create Puzzle</TitlePage>
+      <TitlePage>Puzzle Form</TitlePage>
       <form onSubmit={handleSubmit(onSubmit)} className="">
         <div className="mb-4">
           <Label htmlFor="title" value="Title" />
