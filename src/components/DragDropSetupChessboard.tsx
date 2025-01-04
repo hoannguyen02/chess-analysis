@@ -1,39 +1,21 @@
+import { setTurn } from '@/utils/set-turn';
 import { Chess } from 'chess.js';
+import { Button, Clipboard, TextInput } from 'flowbite-react';
 import { useMemo, useState } from 'react';
 import {
   ChessboardDnDProvider,
   SparePiece,
   Chessboard,
 } from 'react-chessboard';
-import { Piece } from 'react-chessboard/dist/chessboard/types';
+import { Piece, Square } from 'react-chessboard/dist/chessboard/types';
 
-const boardWrapper = {
-  width: `70vw`,
-  maxWidth: '70vh',
-  margin: '3rem auto',
+type Props = {
+  fen?: string;
 };
-
-const buttonStyle = {
-  cursor: 'pointer',
-  padding: '10px 20px',
-  margin: '10px 10px 0px 0px',
-  borderRadius: '6px',
-  backgroundColor: '#f0d9b5',
-  border: 'none',
-  boxShadow: '0 2px 5px rgba(0, 0, 0, 0.5)',
-};
-
-const inputStyle = {
-  padding: '10px 20px',
-  margin: '10px 0 10px 0',
-  borderRadius: '6px',
-  border: 'none',
-  boxShadow: '0 2px 5px rgba(0, 0, 0, 0.5)',
-  width: '100%',
-};
-
-const DragDropSetupChessboard = () => {
-  const game = useMemo(() => new Chess('8/8/8/8/8/8/8/8 w - - 0 1'), []); // empty board
+const DragDropSetupChessboard = ({
+  fen = '8/8/8/8/8/8/8/8 w - - 0 1',
+}: Props) => {
+  const game = useMemo(() => new Chess(fen), [fen]); // empty board
   const [boardOrientation, setBoardOrientation] = useState<'white' | 'black'>(
     'white'
   );
@@ -71,7 +53,7 @@ const DragDropSetupChessboard = () => {
     return success;
   };
 
-  const handlePieceDropOffBoard = (sourceSquare) => {
+  const handlePieceDropOffBoard = (sourceSquare: Square) => {
     game.remove(sourceSquare);
     setFenPosition(game.fen());
   };
@@ -100,17 +82,22 @@ const DragDropSetupChessboard = () => {
     'bQ',
     'bK',
   ];
+  const setTurn = (turn: 'w' | 'b') => {
+    let fen = game.fen();
+    fen = fen.replace(/ [wb] /, ` ${turn} `);
+
+    const isValid = game.load(fen);
+    if (isValid) {
+      setFenPosition(game.fen());
+    } else {
+      throw new Error('Failed to set turn. The resulting FEN is invalid.');
+    }
+  };
 
   return (
-    <div
-      style={{
-        ...boardWrapper,
-        margin: '0 auto',
-        maxWidth: '60vh',
-      }}
-    >
-      <ChessboardDnDProvider>
-        <div>
+    <ChessboardDnDProvider>
+      <div className="grid grid-cols-2 w-full gap-4">
+        <div className="w-[500px]">
           <div
             style={{
               display: 'flex',
@@ -156,44 +143,83 @@ const DragDropSetupChessboard = () => {
             ))}
           </div>
         </div>
-        <div style={{ display: 'flex', justifyContent: 'center' }}>
-          <button
-            style={buttonStyle}
-            onClick={() => {
-              game.reset();
-              setFenPosition(game.fen());
-            }}
-          >
-            Start position ♟️
-          </button>
-          <button
-            style={buttonStyle}
-            onClick={() => {
-              game.clear();
-              setFenPosition(game.fen());
-            }}
-          >
-            Clear board 🗑️
-          </button>
-          <button
-            style={buttonStyle}
-            onClick={() => {
-              setBoardOrientation(
-                boardOrientation === 'white' ? 'black' : 'white'
-              );
-            }}
-          >
-            Flip board 🔁
-          </button>
+        <div className="grid place-items-top">
+          <div className="flex flex-col mt-24 w-[50%] mx-auto">
+            <Button
+              onClick={() => {
+                game.reset();
+                setFenPosition(game.fen());
+              }}
+              className="mb-4"
+            >
+              Start position
+            </Button>
+            <Button
+              onClick={() => {
+                game.clear();
+                setFenPosition(game.fen());
+              }}
+              className="mb-4"
+            >
+              Clear board
+            </Button>
+            <Button
+              onClick={() => {
+                setBoardOrientation(
+                  boardOrientation === 'white' ? 'black' : 'white'
+                );
+              }}
+            >
+              Flip board
+            </Button>
+          </div>
+          <div className="flex flex-col items-start mt-4">
+            <label className="mb-2 font-semibold text-gray-700">
+              Select the next player to move:
+            </label>
+            <div className="flex items-center">
+              <Button
+                className={`flex items-center px-4 py-2 rounded-lg transition-all duration-200 ${
+                  game.turn() === 'w'
+                    ? 'bg-blue-500 text-white shadow-lg'
+                    : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+                }`}
+                onClick={() => {
+                  setTurn('w');
+                }}
+              >
+                White
+              </Button>
+              <Button
+                className={`flex items-center px-4 py-2 ml-2 rounded-lg transition-all duration-200 ${
+                  game.turn() === 'b'
+                    ? 'bg-blue-500 text-white shadow-lg'
+                    : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+                }`}
+                onClick={() => {
+                  setTurn('b');
+                }}
+              >
+                Black
+              </Button>
+            </div>
+            <p className="text-sm text-gray-500 mt-2">
+              Tip: Click on "White" or "Black" to set the next player to move.
+            </p>
+          </div>
+
+          <div className="flex items-center mt-4">
+            <TextInput
+              className="w-[400px] rounded"
+              value={fenPosition}
+              onChange={handleFenInputChange}
+              placeholder="Paste FEN position to start editing"
+            />
+            <Clipboard className="ml-4" valueToCopy={game.fen()} label="Copy" />
+          </div>
         </div>
-        <input
-          value={fenPosition}
-          style={inputStyle}
-          onChange={handleFenInputChange}
-          placeholder="Paste FEN position to start editing"
-        />
-      </ChessboardDnDProvider>
-    </div>
+      </div>
+    </ChessboardDnDProvider>
   );
 };
 

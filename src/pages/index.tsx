@@ -1,7 +1,7 @@
 import { DragDropExample } from '@/components/DragDropExample';
 import FormExample from '@/components/FormExample';
 import Layout from '@/components/Layout';
-import ModalExample from '@/components/Modal';
+import ModalExample from '@/components/ModalExample';
 
 export default function Home() {
   return (
