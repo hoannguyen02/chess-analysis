@@ -1,5 +1,5 @@
 import Layout from '@/components/Layout';
-import { CreatePuzzleScreen } from '@/screens/puzzles/create/create-puzzle-screen';
+import { PuzzleFormScreen } from '@/screens/puzzles/puzzle-form';
 import { PuzzleTheme } from '@/types/puzzle-theme';
 import { GetServerSideProps } from 'next';
 
@@ -9,7 +9,7 @@ type Props = {
 const CreatePuzzlePage = ({ themes }: Props) => {
   return (
     <Layout>
-      <CreatePuzzleScreen themes={themes} />
+      <PuzzleFormScreen themes={themes} />
     </Layout>
   );
 };

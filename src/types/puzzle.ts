@@ -7,3 +7,29 @@ export type PuzzleStatus = 'Draft' | 'Verified';
  */
 export type PuzzleDifficulty = 'Easy' | 'Medium' | 'Hard' | 'Very Hard';
 export type PuzzlePhase = 'Opening' | 'Middle' | 'Endgame';
+export type PuzzleSolutionMove = {
+  move: string;
+  player: 'user' | 'engine';
+  from: string;
+  to: string;
+};
+export type PuzzlePreMove = {
+  move: string;
+  player: 'b' | 'w';
+  from: string;
+  to: string;
+};
+
+export type Puzzle = {
+  fen: string;
+  status: PuzzleStatus;
+  difficulty: PuzzleDifficulty;
+  isPublic: boolean;
+  theme: string;
+  solutions: PuzzleSolutionMove[];
+  preMove?: PuzzlePreMove;
+  title?: string;
+  phase?: PuzzlePhase;
+  _id?: string;
+  lessons?: string[];
+};

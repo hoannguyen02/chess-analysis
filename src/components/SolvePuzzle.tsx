@@ -18,7 +18,7 @@ type PuzzleProps = {
   puzzle: {
     fen: string;
     solutions: SolutionMove[];
-    prevMove: { move: string; player: 'w' | 'b'; from: Square; to: Square };
+    preMove: { move: string; player: 'w' | 'b'; from: Square; to: Square };
   };
 };
 
@@ -52,7 +52,7 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({ puzzle }) => {
   }, [currentStep, puzzle.solutions.length]);
 
   const handlePreMove = (callback?: () => void) => {
-    const { move, from, to } = puzzle.prevMove;
+    const { move, from, to } = puzzle.preMove;
 
     const timeout = setTimeout(() => {
       if (game && move) {
@@ -74,7 +74,7 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({ puzzle }) => {
   useEffect(() => {
     handlePreMove();
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [puzzle.prevMove]); // Run once after the component mounts
+  }, [puzzle.preMove]); // Run once after the component mounts
 
   const getMoveOptions = (square: Square) => {
     const moves = game.moves({
@@ -304,7 +304,7 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({ puzzle }) => {
 
         // Proceed to the next step
         executeStep(stepIndex + 1);
-      }, DEFAULT_ENGINE_MOVE_DELAY_TIME);
+      }, DEFAULT_SOLUTION_DELAY_TIME);
 
       setCurrentTimeout(timeout); // Store the timeout reference
     };
@@ -325,7 +325,7 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({ puzzle }) => {
     let nextStep: number = 0;
     // First attempt failed
     if (currentStep === 0) {
-      engineMove = puzzle.prevMove;
+      engineMove = puzzle.preMove;
     } else {
       nextStep = currentStep - 1;
       engineMove = puzzle.solutions[nextStep];
