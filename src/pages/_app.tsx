@@ -13,6 +13,7 @@ const customTheme: CustomFlowbiteTheme = {
 };
 
 import { Poppins } from 'next/font/google';
+import { AppProvider } from '@/contexts/AppContext';
 
 // Load Poppins font with specific styles
 const poppins = Poppins({
@@ -24,7 +25,9 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <ErrorBoundary>
       <Flowbite theme={{ theme: customTheme }}>
-        <Component className={poppins.className} {...pageProps} />
+        <AppProvider themes={pageProps.themes} apiDomain={pageProps.apiDomain}>
+          <Component className={poppins.className} {...pageProps} />
+        </AppProvider>
       </Flowbite>
     </ErrorBoundary>
   );

@@ -9,13 +9,8 @@ import {
   DEFAULT_SOLUTION_DELAY_TIME,
 } from '@/constants/time-out';
 import { useCustomBoard } from '@/hooks/useCustomBoard';
-import {
-  exportComponentAsJPEG,
-  exportComponentAsPDF,
-  exportComponentAsPNG,
-} from 'react-component-export-image';
 import { useRouter } from 'next/router';
-import { Button } from 'flowbite-react';
+import { Button, theme } from 'flowbite-react';
 import {
   VscLightbulbSparkle,
   VscSync,
@@ -27,23 +22,17 @@ import {
 } from 'react-icons/vsc';
 import { getActivePlayerFromFEN } from '@/utils/get-player-name-from-fen';
 import html2canvas from 'html2canvas';
-import { Canvg } from 'canvg';
+import { Puzzle, PuzzlePreMove, PuzzleSolutionMove } from '@/types/puzzle';
+import { PUZZLE_RATING } from '@/constants/puzzle-rating';
+import { useAppContext } from '@/contexts/AppContext';
+import { PuzzleTheme } from '@/types/puzzle-theme';
 
-type SolutionMove = {
-  move: string;
-  player: 'engine' | 'user';
-  from: Square;
-  to: Square;
-};
 type PuzzleProps = {
-  puzzle: {
-    fen: string;
-    solutions: SolutionMove[];
-    preMove: { move: string; player: 'w' | 'b'; from: Square; to: Square };
-  };
+  puzzle: Puzzle;
 };
 
 const SolvePuzzle: React.FC<PuzzleProps> = ({ puzzle }) => {
+  const { themes } = useAppContext();
   const boardRef = useRef<HTMLDivElement>(null);
   const router = useRouter();
   const { customPieces, bgDark, bgLight } = useCustomBoard();
@@ -76,7 +65,7 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({ puzzle }) => {
   }, [currentStep, puzzle.solutions.length]);
 
   const handlePreMove = (callback?: () => void) => {
-    const { move, from, to } = puzzle.preMove;
+    const { move, from, to } = puzzle.preMove as PuzzlePreMove;
 
     const timeout = setTimeout(() => {
       if (game && move) {
@@ -345,11 +334,11 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({ puzzle }) => {
     game.undo();
     game.undo();
     setCurrentFen(game.fen());
-    let engineMove;
+    let engineMove: PuzzlePreMove | PuzzleSolutionMove;
     let nextStep: number = 0;
     // First attempt failed
     if (currentStep === 0) {
-      engineMove = puzzle.preMove;
+      engineMove = puzzle.preMove as PuzzlePreMove;
     } else {
       nextStep = currentStep - 1;
       engineMove = puzzle.solutions[nextStep];
@@ -482,6 +471,23 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({ puzzle }) => {
     }
   };
 
+  const themeTitle: string | undefined = useMemo(() => {
+    if (themes?.length) {
+      const idx = themes.findIndex((theme) => theme.code === puzzle.theme);
+      return idx >= 0 ? themes[idx].title : 'unknown';
+    }
+    return 'unknown';
+  }, [puzzle.theme, themes]);
+
+  const { firstMainMoves, secondMainMoves } = useMemo(() => {
+    const mainMoves = puzzle.solutions.filter((s) => s.player === 'user');
+    const limit = Math.round(mainMoves.length / 2);
+    return {
+      firstMainMoves: mainMoves.slice(0, limit),
+      secondMainMoves: mainMoves.slice(limit),
+    };
+  }, [puzzle.solutions]);
+
   return (
     <div>
       <button
@@ -531,6 +537,33 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({ puzzle }) => {
           >
             {message}
           </div>
+          {currentStep === puzzle.solutions.length && (
+            <div className="flex flex-col p-4">
+              <h3>Summary: </h3>
+              <hr className="my-2" />
+              <p className="mb-2">Theme: {themeTitle}</p>
+              <p className="mb-2">
+                Difficulty: {PUZZLE_RATING[puzzle.difficulty]}
+              </p>
+              Main moves:{' '}
+              <div className="mb-2 grid grid-cols-2">
+                <div>
+                  {firstMainMoves.map((s, index) => (
+                    <p key={`first-${index}-${s.move}`} className="mb-2">
+                      {index + 1} - <strong className="ml-4">{s.move}</strong>
+                    </p>
+                  ))}
+                </div>
+                <div>
+                  {secondMainMoves.map((s, index) => (
+                    <p key={`second-${index}-${s.move}`} className="mb-2">
+                      {index + 1} - <strong className="ml-4">{s.move}</strong>
+                    </p>
+                  ))}
+                </div>
+              </div>
+            </div>
+          )}
           <div className="absolute bottom-4 left-0 w-full px-4">
             {!showRetry && currentStep !== puzzle.solutions.length && (
               <Button className="mx-auto" color="primary" onClick={showHint}>
@@ -539,9 +572,18 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({ puzzle }) => {
             )}
             {currentStep === puzzle.solutions.length && (
               <div className="flex justify-between">
-                <Button color="primary" onClick={resetPuzzle}>
-                  Restart <VscSync size={20} className="ml-1" />
-                </Button>
+                <div className="flex">
+                  <Button
+                    color="primary"
+                    onClick={resetPuzzle}
+                    className="mr-2"
+                  >
+                    Restart <VscSync size={20} className="ml-1" />
+                  </Button>
+                  <Button color="primary" onClick={exportAsImage}>
+                    Download png
+                  </Button>
+                </div>
                 <div className="flex">
                   <Button
                     color="primary"
@@ -575,11 +617,6 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({ puzzle }) => {
             )}
           </div>
         </div>
-      </div>
-      <div className="mt-16 mb-4 flex justify-center">
-        <Button color="primary" onClick={exportAsImage}>
-          Download image
-        </Button>
       </div>
     </div>
   );

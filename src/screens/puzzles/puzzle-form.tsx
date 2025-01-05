@@ -1,19 +1,19 @@
 import { TitlePage } from '@/components/TitlePage';
 import { ROUTE_CHANGE_MESSAGE } from '@/constants/route';
+import { useAppContext } from '@/contexts/AppContext';
 import useBeforeUnload from '@/hooks/useBeforeUnload';
 import usePreventRouteChange from '@/hooks/usePreventRouteChange';
 import { Puzzle } from '@/types/puzzle';
-import { PuzzleTheme } from '@/types/puzzle-theme';
 import { Button, Checkbox, Label, Select, TextInput } from 'flowbite-react';
 import Link from 'next/link';
 import { SubmitHandler, useFieldArray, useForm } from 'react-hook-form';
 import { VscEdit } from 'react-icons/vsc';
 
 type Props = {
-  themes: PuzzleTheme[];
   puzzle?: Puzzle;
 };
-export const PuzzleFormScreen = ({ themes, puzzle }: Props) => {
+export const PuzzleFormScreen = ({ puzzle }: Props) => {
+  const { themes } = useAppContext();
   const {
     register, // Register inputs
     control,
