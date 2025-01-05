@@ -3,11 +3,24 @@ import { Chessboard } from 'react-chessboard';
 import { Chess } from 'chess.js';
 import { Piece, Square } from 'react-chessboard/dist/chessboard/types';
 import { PromotionType } from '@/types/promotion';
+import { VscArrowLeft } from 'react-icons/vsc';
 import {
   DEFAULT_ENGINE_MOVE_DELAY_TIME,
   DEFAULT_SOLUTION_DELAY_TIME,
 } from '@/constants/time-out';
 import { useCustomBoard } from '@/hooks/useCustomBoard';
+import { useRouter } from 'next/router';
+import { Button } from 'flowbite-react';
+import {
+  VscLightbulbSparkle,
+  VscSync,
+  VscChevronLeft,
+  VscChevronRight,
+  VscCheckAll,
+  VscError,
+  VscPass,
+} from 'react-icons/vsc';
+import { getActivePlayerFromFEN } from '@/utils/get-player-name-from-fen';
 
 type SolutionMove = {
   move: string;
@@ -24,6 +37,7 @@ type PuzzleProps = {
 };
 
 const SolvePuzzle: React.FC<PuzzleProps> = ({ puzzle }) => {
+  const router = useRouter();
   const { customPieces, bgDark, bgLight } = useCustomBoard();
   const game = useMemo(() => new Chess(puzzle.fen), [puzzle.fen]);
   const [currentTimeout, setCurrentTimeout] = useState<NodeJS.Timeout>();
@@ -394,61 +408,140 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({ puzzle }) => {
     setHistoryMoveCurrentIdx(historyMoveCurrentIdx + 1);
   };
 
+  const playerName = useMemo(() => {
+    const { preMove, fen } = puzzle;
+    if (preMove?.player) {
+      return preMove.player === 'w' ? 'Black' : 'White';
+    }
+
+    return getActivePlayerFromFEN(fen);
+  }, [puzzle]);
+
+  const { message, bgHeader } = useMemo(() => {
+    if (showRetry) {
+      return {
+        bgHeader: 'bg-[var(--p-warning)]',
+        message: (
+          <div className="flex items-center">
+            <VscError size={20} className="mr-2" />
+            Oops! Try Again
+          </div>
+        ),
+      };
+    }
+
+    if (currentStep === puzzle.solutions.length) {
+      return {
+        bgHeader: 'bg-[var(--s-bg)]',
+        message: (
+          <div className="flex items-center">
+            <VscPass size={20} className="mr-2" />
+            Well Done
+          </div>
+        ),
+      };
+    }
+
+    return {
+      message: `${playerName} Move`,
+      bgHeader: 'bg-[var(--p-bg)]',
+    };
+  }, [currentStep, playerName, puzzle.solutions.length, showRetry]);
+
   return (
     <div>
-      <Chessboard
-        position={currentFen}
-        onPieceDrop={(sourceSquare, targetSquare) => {
-          if (!isBoardClickAble) {
-            return false;
-          }
-          return handleMove(sourceSquare, targetSquare);
+      <button
+        className="mb-4 flex items-center"
+        onClick={() => {
+          router.back();
         }}
-        boardWidth={500}
-        onSquareClick={onSquareClick}
-        onPromotionPieceSelect={onPromotionPieceSelect}
-        customBoardStyle={{
-          borderRadius: '4px',
-          boxShadow: '0 2px 10px rgba(0, 0, 0, 0.5)',
-        }}
-        customSquareStyles={{
-          ...optionSquares,
-          ...rightClickedSquares,
-          ...moveSquareStyle,
-        }}
-        promotionToSquare={moveTo}
-        showPromotionDialog={showPromotionDialog}
-        customPieces={customPieces}
-        customDarkSquareStyle={{
-          backgroundColor: bgDark,
-        }}
-        customLightSquareStyle={{
-          backgroundColor: bgLight,
-        }}
-      />
-      {!showRetry && currentStep !== puzzle.solutions.length && (
-        <button onClick={showHint}>Hint</button>
-      )}
-      {currentStep === puzzle.solutions.length && (
-        <>
-          <button onClick={resetPuzzle}>Restart</button>
-          <button onClick={backMove} disabled={historyMoveCurrentIdx === 0}>
-            back
-          </button>
-          <button
-            onClick={forwardMove}
-            disabled={historyMoveCurrentIdx >= currentStep}
+      >
+        <VscArrowLeft /> Back
+      </button>
+      <div className="grid grid-cols-2">
+        <div>
+          <Chessboard
+            position={currentFen}
+            onPieceDrop={(sourceSquare, targetSquare) => {
+              if (!isBoardClickAble) {
+                return false;
+              }
+              return handleMove(sourceSquare, targetSquare);
+            }}
+            boardWidth={500}
+            onSquareClick={onSquareClick}
+            onPromotionPieceSelect={onPromotionPieceSelect}
+            customBoardStyle={{
+              borderRadius: '4px',
+              boxShadow: '0 2px 10px rgba(0, 0, 0, 0.5)',
+            }}
+            customSquareStyles={{
+              ...optionSquares,
+              ...rightClickedSquares,
+              ...moveSquareStyle,
+            }}
+            promotionToSquare={moveTo}
+            showPromotionDialog={showPromotionDialog}
+            customPieces={customPieces}
+            customDarkSquareStyle={{
+              backgroundColor: bgDark,
+            }}
+            customLightSquareStyle={{
+              backgroundColor: bgLight,
+            }}
+          />
+        </div>
+        <div className="relative rounded border-[1px]">
+          <div
+            className={`${bgHeader} flex justify-center py-4 text-white font-bold`}
           >
-            forward
-          </button>
-        </>
-      )}
-      {showRetry && (
-        <>
-          <button onClick={retry}>Retry</button>
-          <button onClick={showSolution}>Solution</button>
-        </>
-      )}
+            {message}
+          </div>
+          <div className="absolute bottom-4 left-0 w-full px-4">
+            {!showRetry && currentStep !== puzzle.solutions.length && (
+              <Button className="mx-auto" color="primary" onClick={showHint}>
+                Hint <VscLightbulbSparkle size={20} className="ml-1" />
+              </Button>
+            )}
+            {currentStep === puzzle.solutions.length && (
+              <div className="flex justify-between">
+                <Button color="primary" onClick={resetPuzzle}>
+                  Restart <VscSync size={20} className="ml-1" />
+                </Button>
+                <div className="flex">
+                  <Button
+                    color="primary"
+                    onClick={backMove}
+                    disabled={historyMoveCurrentIdx === 0}
+                    className="mr-4"
+                  >
+                    <VscChevronLeft size={20} className="ml-1" />
+                  </Button>
+                  <Button
+                    color="primary"
+                    onClick={forwardMove}
+                    disabled={historyMoveCurrentIdx >= currentStep}
+                  >
+                    <VscChevronRight size={20} className="ml-1" />
+                  </Button>
+                </div>
+              </div>
+            )}
+            {showRetry && (
+              <div className="flex justify-around">
+                <Button color="primary" onClick={retry}>
+                  Retry
+                  <VscSync size={20} className="ml-1" />
+                </Button>
+                <Button color="primary" onClick={showSolution}>
+                  Solution
+                  <VscCheckAll size={20} className="ml-1" />
+                </Button>
+              </div>
+            )}
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

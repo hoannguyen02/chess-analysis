@@ -1,6 +1,16 @@
 import ErrorBoundary from '@/components/ErrorBoundary';
 import '@/styles/globals.css';
 import type { AppProps } from 'next/app';
+import type { CustomFlowbiteTheme } from 'flowbite-react';
+import { Flowbite } from 'flowbite-react';
+
+const customTheme: CustomFlowbiteTheme = {
+  button: {
+    color: {
+      primary: 'bg-[#607D8B] text-white',
+    },
+  },
+};
 
 import { Poppins } from 'next/font/google';
 
@@ -13,7 +23,9 @@ const poppins = Poppins({
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <ErrorBoundary>
-      <Component className={poppins.className} {...pageProps} />
+      <Flowbite theme={{ theme: customTheme }}>
+        <Component className={poppins.className} {...pageProps} />
+      </Flowbite>
     </ErrorBoundary>
   );
 }

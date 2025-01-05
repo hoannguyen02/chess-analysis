@@ -44,7 +44,7 @@ export const useCustomBoard = () => {
 
   return {
     customPieces,
-    bgDark: '#779952',
-    bgLight: '#edeed1',
+    bgDark: 'var(--bg-dark)',
+    bgLight: 'var(--bg-light)',
   };
 };

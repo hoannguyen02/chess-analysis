@@ -270,7 +270,7 @@ export const PuzzleFormScreen = ({ themes, puzzle }: Props) => {
           >
             Preview
           </Button>
-          <Button type="submit" gradientMonochrome="info">
+          <Button color="primary" type="submit">
             Submit
           </Button>
         </div>

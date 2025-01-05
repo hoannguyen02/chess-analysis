@@ -13,7 +13,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         <MenuLeft />
       </div>
       <div className="pl-[245px] flex flex-col h-[100vh]">
-        <main className="mx-auto max-w-[1140px] w-full">
+        <main className="mx-auto max-w-[1140px] w-full py-4">
           {children}
           <Footer />
         </main>
