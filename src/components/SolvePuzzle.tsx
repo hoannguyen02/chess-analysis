@@ -396,7 +396,6 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({ puzzle }) => {
 
   return (
     <div>
-      <h2>Chess Puzzle</h2>
       <Chessboard
         position={currentFen}
         onPieceDrop={(sourceSquare, targetSquare) => {

@@ -2,14 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Website/App Design Inspiration
+
+Buttons:
+Default: Yellow (#FFEB46) background with black (#4A4A4A) text.
+Hover: Light Green (#A9B8C3) background with white text.
+
+*/
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-  --p-bg: #4A4A4A;
+  --p-bg: #607D8B;
   --s-bg: #B58863;
-  --p-text: #E0E0E0;
-  --p-text-hover: #D4A373;
-  --p-highlight: #FFFF99;
+  --p-text: #4A4A4A;
+  --s-text: #D0D0D0;
+  --p-highlight: #FFEB46;
   --p-warning: rgba(236, 119, 119, 1)
 }
 
