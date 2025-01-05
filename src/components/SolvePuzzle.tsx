@@ -25,6 +25,8 @@ import html2canvas from 'html2canvas';
 import { Puzzle, PuzzlePreMove, PuzzleSolutionMove } from '@/types/puzzle';
 import { useAppContext } from '@/contexts/AppContext';
 import { PUZZLE_RATING } from '@/constants/puzzle';
+import { PIECE_MAP } from '@/constants/piece';
+import { UppercasePieceType } from '@/types/piece';
 
 type PuzzleProps = {
   puzzle: Puzzle;
@@ -55,6 +57,7 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({ puzzle }) => {
   //  Only show back/forward buttons if puzzle is done, either by normal solved or by solution
   const [historyMoveCurrentIdx, setHistoryMoveCurrentIdx] = useState<number>(0);
   const [isBoardClickAble, setIsBoardClickAble] = useState<boolean>(true);
+  const [hintMessage, setHintMessage] = useState('');
 
   useEffect(() => {
     if (currentStep === puzzle.solutions.length) {
@@ -193,6 +196,9 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({ puzzle }) => {
   };
 
   const onSquareClick = (square: Square) => {
+    if (hintMessage) {
+      setHintMessage('');
+    }
     if (!isBoardClickAble) {
       return;
     }
@@ -369,6 +375,9 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({ puzzle }) => {
     setMoveSquareStyle({
       [hintMove.from]: { background: 'var(--p-highlight)' },
     });
+    const piece = hintMove.move.charAt(0) as UppercasePieceType;
+    const msg = `Find best move for your <b>${PIECE_MAP[piece]}</b> at <b>${hintMove.from}</b>!`;
+    setHintMessage(msg);
   };
 
   const backMove = () => {
@@ -494,6 +503,9 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({ puzzle }) => {
           <Chessboard
             position={currentFen}
             onPieceDrop={(sourceSquare, targetSquare) => {
+              if (hintMessage) {
+                setHintMessage('');
+              }
               if (!isBoardClickAble) {
                 return false;
               }
@@ -528,6 +540,12 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({ puzzle }) => {
           >
             {message}
           </div>
+          {hintMessage && (
+            <div
+              className="mt-8 mx-4"
+              dangerouslySetInnerHTML={{ __html: hintMessage }}
+            ></div>
+          )}
           {currentStep === puzzle.solutions.length && (
             <div className="flex flex-col p-4">
               <h3>Summary: </h3>
