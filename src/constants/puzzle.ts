@@ -12,3 +12,6 @@ export const PUZZLE_RATING: Record<PuzzleDifficulty, string> = {
   Hard: '1600-2000: Hard',
   'Very Hard': '2000+: Very hard',
 };
+
+export const PuzzleStatues = ['Draft', 'Verified'];
+export const PuzzlePhases = ['Opening', 'Middle', 'Endgame'];

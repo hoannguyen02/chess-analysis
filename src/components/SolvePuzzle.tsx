@@ -10,7 +10,7 @@ import {
 } from '@/constants/time-out';
 import { useCustomBoard } from '@/hooks/useCustomBoard';
 import { useRouter } from 'next/router';
-import { Button, theme } from 'flowbite-react';
+import { Button } from 'flowbite-react';
 import {
   VscLightbulbSparkle,
   VscSync,
@@ -23,16 +23,15 @@ import {
 import { getActivePlayerFromFEN } from '@/utils/get-player-name-from-fen';
 import html2canvas from 'html2canvas';
 import { Puzzle, PuzzlePreMove, PuzzleSolutionMove } from '@/types/puzzle';
-import { PUZZLE_RATING } from '@/constants/puzzle-rating';
 import { useAppContext } from '@/contexts/AppContext';
-import { PuzzleTheme } from '@/types/puzzle-theme';
+import { PUZZLE_RATING } from '@/constants/puzzle';
 
 type PuzzleProps = {
   puzzle: Puzzle;
 };
 
 const SolvePuzzle: React.FC<PuzzleProps> = ({ puzzle }) => {
-  const { themes } = useAppContext();
+  const { themeMap } = useAppContext();
   const boardRef = useRef<HTMLDivElement>(null);
   const router = useRouter();
   const { customPieces, bgDark, bgLight } = useCustomBoard();
@@ -471,14 +470,6 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({ puzzle }) => {
     }
   };
 
-  const themeTitle: string | undefined = useMemo(() => {
-    if (themes?.length) {
-      const idx = themes.findIndex((theme) => theme.code === puzzle.theme);
-      return idx >= 0 ? themes[idx].title : 'unknown';
-    }
-    return 'unknown';
-  }, [puzzle.theme, themes]);
-
   const { firstMainMoves, secondMainMoves } = useMemo(() => {
     const mainMoves = puzzle.solutions.filter((s) => s.player === 'user');
     const limit = Math.round(mainMoves.length / 2);
@@ -541,7 +532,9 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({ puzzle }) => {
             <div className="flex flex-col p-4">
               <h3>Summary: </h3>
               <hr className="my-2" />
-              <p className="mb-2">Theme: {themeTitle}</p>
+              <p className="mb-2">
+                Theme: {themeMap[puzzle.theme]?.title || puzzle.theme}
+              </p>
               <p className="mb-2">
                 Difficulty: {PUZZLE_RATING[puzzle.difficulty]}
               </p>

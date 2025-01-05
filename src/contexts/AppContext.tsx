@@ -2,8 +2,9 @@ import { PuzzleTheme } from '@/types/puzzle-theme';
 import React, { createContext, useContext, useMemo } from 'react';
 
 export interface AppContextProps {
-  themes: PuzzleTheme[] | null;
+  themes: PuzzleTheme[] | [];
   apiDomain: string;
+  themeMap: Partial<Record<string, PuzzleTheme>>;
 }
 
 const AppContext = createContext<AppContextProps | undefined>(undefined);
@@ -16,6 +17,12 @@ export const AppProvider: React.FC<{
   const value = useMemo(
     () => ({
       themes,
+      themeMap: themes.reduce((acc, theme) => {
+        return {
+          ...acc,
+          [theme.code]: theme,
+        };
+      }, {}),
       apiDomain,
     }),
     [themes, apiDomain]
