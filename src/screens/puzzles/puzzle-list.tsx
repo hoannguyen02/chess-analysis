@@ -10,6 +10,7 @@ import {
 } from '@/types/puzzle';
 import { Checkbox, Pagination, Select, Spinner, Table } from 'flowbite-react';
 import { PUZZLE_RATING, PuzzlePhases, PuzzleStatues } from '@/constants/puzzle';
+import { TitlePage } from '@/components/TitlePage';
 
 export const PuzzleListScreen = () => {
   const { themes, apiDomain, themeMap } = useAppContext();
@@ -64,7 +65,7 @@ export const PuzzleListScreen = () => {
 
   return (
     <>
-      <h3 className="mb-2">Filter By:</h3>
+      <TitlePage>Puzzle List</TitlePage>
       <div className="flex flex-col">
         Public:
         <Checkbox
