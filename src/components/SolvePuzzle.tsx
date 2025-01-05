@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from 'react';
+import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { Chessboard } from 'react-chessboard';
 import { Chess } from 'chess.js';
 import { Piece, Square } from 'react-chessboard/dist/chessboard/types';
@@ -9,6 +9,11 @@ import {
   DEFAULT_SOLUTION_DELAY_TIME,
 } from '@/constants/time-out';
 import { useCustomBoard } from '@/hooks/useCustomBoard';
+import {
+  exportComponentAsJPEG,
+  exportComponentAsPDF,
+  exportComponentAsPNG,
+} from 'react-component-export-image';
 import { useRouter } from 'next/router';
 import { Button } from 'flowbite-react';
 import {
@@ -21,6 +26,8 @@ import {
   VscPass,
 } from 'react-icons/vsc';
 import { getActivePlayerFromFEN } from '@/utils/get-player-name-from-fen';
+import html2canvas from 'html2canvas';
+import { Canvg } from 'canvg';
 
 type SolutionMove = {
   move: string;
@@ -37,6 +44,7 @@ type PuzzleProps = {
 };
 
 const SolvePuzzle: React.FC<PuzzleProps> = ({ puzzle }) => {
+  const boardRef = useRef<HTMLDivElement>(null);
   const router = useRouter();
   const { customPieces, bgDark, bgLight } = useCustomBoard();
   const game = useMemo(() => new Chess(puzzle.fen), [puzzle.fen]);
@@ -448,6 +456,32 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({ puzzle }) => {
     };
   }, [currentStep, playerName, puzzle.solutions.length, showRetry]);
 
+  const exportAsImage = async () => {
+    if (!boardRef.current) {
+      console.error('boardRef is null or undefined');
+      return;
+    }
+
+    try {
+      // Use html2canvas to render the div to a canvas
+      const canvas = await html2canvas(boardRef.current, {
+        scale: 1, // Increase scale for higher resolution
+        useCORS: true, // Ensure cross-origin resources are handled
+      });
+
+      // Convert the canvas to a data URL (image)
+      const imgURL = canvas.toDataURL('image/png');
+
+      // Create a link element and trigger download
+      const link = document.createElement('a');
+      link.href = imgURL;
+      link.download = 'phongchess.png';
+      link.click();
+    } catch (error) {
+      console.error('Error exporting image:', error);
+    }
+  };
+
   return (
     <div>
       <button
@@ -458,8 +492,8 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({ puzzle }) => {
       >
         <VscArrowLeft /> Back
       </button>
-      <div className="grid grid-cols-2">
-        <div>
+      <div className="grid grid-cols-2 gap-16">
+        <div ref={boardRef}>
           <Chessboard
             position={currentFen}
             onPieceDrop={(sourceSquare, targetSquare) => {
@@ -468,7 +502,7 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({ puzzle }) => {
               }
               return handleMove(sourceSquare, targetSquare);
             }}
-            boardWidth={500}
+            boardWidth={boardRef.current?.clientWidth || 500}
             onSquareClick={onSquareClick}
             onPromotionPieceSelect={onPromotionPieceSelect}
             customBoardStyle={{
@@ -542,6 +576,7 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({ puzzle }) => {
           </div>
         </div>
       </div>
+      <button onClick={exportAsImage}>Download image</button>
     </div>
   );
 };
