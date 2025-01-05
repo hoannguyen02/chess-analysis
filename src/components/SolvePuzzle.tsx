@@ -576,7 +576,11 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({ puzzle }) => {
           </div>
         </div>
       </div>
-      <button onClick={exportAsImage}>Download image</button>
+      <div className="mt-16 mb-4 flex justify-center">
+        <Button color="primary" onClick={exportAsImage}>
+          Download image
+        </Button>
+      </div>
     </div>
   );
 };
