@@ -13,8 +13,25 @@ export const PuzzleListScreen = () => {
   const [difficulty, setDifficulty] = useState<PuzzleDifficulty | undefined>();
 
   const queryString = useMemo(() => {
-    return `phase=${phase}&theme=${theme}&difficulty=${difficulty}&status=${status}&page=${currentPage}`;
-  }, [phase, theme, difficulty, status, currentPage]);
+    // Define your query parameters as an object
+    const queryObject: Record<string, any> = {
+      phase,
+      theme,
+      difficulty,
+      status,
+      page: currentPage,
+    };
+
+    const filteredQuery = Object.entries(queryObject)
+      .filter(([, value]) => value !== undefined) // Exclude undefined values
+      .map(
+        ([key, value]) =>
+          `${key}=${encodeURIComponent(value as string | number)}`
+      ) // Encode values for safety
+      .join('&');
+
+    return filteredQuery;
+  }, [currentPage, phase, status, theme, difficulty]); // Add all states as dependencies
 
   const { apiDomain } = useAppContext();
   const { data, error, isLoading } = useSWR(
