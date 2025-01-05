@@ -9,24 +9,10 @@
   --s-bg: #B58863;
   --p-text: #E0E0E0;
   --p-text-hover: #D4A373;
-  --p-highlight: #FFD700;
+  --p-highlight: #FFFF99;
   --p-warning: rgba(224, 40, 40, 1);
 }
 
-/* // Accent Colors
-// Tan/Brown (Highlights and Theme): #B58863
-// Beige (Chessboard Light Squares): #F0D9B5
-// Gold (Buttons and Highlights): #D4A373
-
-// Text Colors
-// White (Main Text): #FFFFFF
-// Light Gray (Secondary Text): #CCCCCC
-// Beige/Gold (Highlighted or Active Text): #D4A373
-
-// Interactive Elements
-// Button Background (Neutral Gray): #595959
-// Button Hover/Active State (Gold): #D4A373
-// Icons (White with Gold Hover): #FFFFFF / #D4A373 */
 
 body {
   font-family: 'Poppins', sans-serif;

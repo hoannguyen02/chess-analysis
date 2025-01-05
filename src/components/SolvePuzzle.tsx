@@ -7,6 +7,7 @@ import {
   DEFAULT_ENGINE_MOVE_DELAY_TIME,
   DEFAULT_SOLUTION_DELAY_TIME,
 } from '@/constants/time-out';
+import { useCustomBoard } from '@/hooks/useCustomBoard';
 
 type SolutionMove = {
   move: string;
@@ -23,6 +24,7 @@ type PuzzleProps = {
 };
 
 const SolvePuzzle: React.FC<PuzzleProps> = ({ puzzle }) => {
+  const { customPieces, bgDark, bgLight } = useCustomBoard();
   const game = useMemo(() => new Chess(puzzle.fen), [puzzle.fen]);
   const [currentTimeout, setCurrentTimeout] = useState<NodeJS.Timeout>();
 
@@ -417,6 +419,13 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({ puzzle }) => {
         }}
         promotionToSquare={moveTo}
         showPromotionDialog={showPromotionDialog}
+        customPieces={customPieces}
+        customDarkSquareStyle={{
+          backgroundColor: bgDark,
+        }}
+        customLightSquareStyle={{
+          backgroundColor: bgLight,
+        }}
       />
       {!showRetry && currentStep !== puzzle.solutions.length && (
         <button onClick={showHint}>Hint</button>

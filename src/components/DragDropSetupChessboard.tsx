@@ -1,4 +1,4 @@
-import { setTurn } from '@/utils/set-turn';
+import { useCustomBoard } from '@/hooks/useCustomBoard';
 import { Chess } from 'chess.js';
 import { Button, Clipboard, TextInput } from 'flowbite-react';
 import { useMemo, useState } from 'react';
@@ -15,6 +15,7 @@ type Props = {
 const DragDropSetupChessboard = ({
   fen = '8/8/8/8/8/8/8/8 w - - 0 1',
 }: Props) => {
+  const { customPieces, bgDark, bgLight } = useCustomBoard();
   const game = useMemo(() => new Chess(fen), [fen]); // empty board
   const [boardOrientation, setBoardOrientation] = useState<'white' | 'black'>(
     'white'
@@ -125,6 +126,13 @@ const DragDropSetupChessboard = ({
             customBoardStyle={{
               borderRadius: '4px',
               boxShadow: '0 2px 10px rgba(0, 0, 0, 0.5)',
+            }}
+            customPieces={customPieces}
+            customDarkSquareStyle={{
+              backgroundColor: bgDark,
+            }}
+            customLightSquareStyle={{
+              backgroundColor: bgLight,
             }}
           />
           <div
