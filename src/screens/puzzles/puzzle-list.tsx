@@ -1,7 +1,6 @@
-import useSWR from 'swr';
-import { fetcher } from './fetcher';
+import { TitlePage } from '@/components/TitlePage';
+import { PUZZLE_RATING, PuzzlePhases, PuzzleStatues } from '@/constants/puzzle';
 import { useAppContext } from '@/contexts/AppContext';
-import { useMemo, useState } from 'react';
 import {
   Puzzle,
   PuzzleDifficulty,
@@ -9,8 +8,9 @@ import {
   PuzzleStatus,
 } from '@/types/puzzle';
 import { Checkbox, Pagination, Select, Spinner, Table } from 'flowbite-react';
-import { PUZZLE_RATING, PuzzlePhases, PuzzleStatues } from '@/constants/puzzle';
-import { TitlePage } from '@/components/TitlePage';
+import { useMemo, useState } from 'react';
+import useSWR from 'swr';
+import { fetcher } from './fetcher';
 
 export const PuzzleListScreen = () => {
   const { themes, apiDomain, themeMap } = useAppContext();
@@ -49,7 +49,7 @@ export const PuzzleListScreen = () => {
   );
 
   const { data, error, isLoading } = useSWR<{
-    puzzles: Puzzle[];
+    items: Puzzle[];
     total: number;
     hasNext: boolean;
     hasPrev: boolean;
@@ -148,7 +148,7 @@ export const PuzzleListScreen = () => {
               <Spinner />
             </div>
           ) : (
-            data.puzzles.map((puzzle, index) => {
+            data.items.map((puzzle, index) => {
               return (
                 <Table.Row
                   key={`puzzle-${index}`}
