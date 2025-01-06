@@ -376,7 +376,7 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({ puzzle }) => {
       [hintMove.from]: { background: 'var(--p-highlight)' },
     });
     const piece = hintMove.move.charAt(0) as UppercasePieceType;
-    const msg = `Find best move for your <b>${PIECE_MAP[piece]}</b> at <b>${hintMove.from}</b>!`;
+    const msg = `Find best move for your <b class="mx-1">${PIECE_MAP[piece]}</b> at <b class="ml-1">${hintMove.from}</b>!`;
     setHintMessage(msg);
   };
 
@@ -479,12 +479,12 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({ puzzle }) => {
     }
   };
 
-  const { firstMainMoves, secondMainMoves } = useMemo(() => {
-    const mainMoves = puzzle.solutions.filter((s) => s.player === 'user');
-    const limit = Math.round(mainMoves.length / 2);
+  const { firstMoves, secondMoves } = useMemo(() => {
+    const moves = puzzle.solutions || [];
+    const limit = Math.round(moves.length / 2);
     return {
-      firstMainMoves: mainMoves.slice(0, limit),
-      secondMainMoves: mainMoves.slice(limit),
+      firstMoves: moves.slice(0, limit),
+      secondMoves: moves.slice(limit),
     };
   }, [puzzle.solutions]);
 
@@ -540,35 +540,51 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({ puzzle }) => {
           >
             {message}
           </div>
-          {hintMessage && (
-            <div
-              className="mt-8 mx-4"
-              dangerouslySetInnerHTML={{ __html: hintMessage }}
-            ></div>
-          )}
           {currentStep === puzzle.solutions.length && (
             <div className="flex flex-col p-4">
-              <h3>Summary: </h3>
-              <hr className="my-2" />
               <p className="mb-2">
                 Theme: {themeMap[puzzle.theme]?.title || puzzle.theme}
               </p>
               <p className="mb-2">
                 Difficulty: {PUZZLE_RATING[puzzle.difficulty]}
               </p>
-              Main moves:{' '}
-              <div className="mb-2 grid grid-cols-2">
+              Moves: <hr />
+              <div className="mb-2 mt-4 grid grid-cols-2 gap-4">
                 <div>
-                  {firstMainMoves.map((s, index) => (
-                    <p key={`first-${index}-${s.move}`} className="mb-2">
-                      {index + 1} - <strong className="ml-4">{s.move}</strong>
+                  {puzzle.preMove?.move && (
+                    <p
+                      key={`prev-${puzzle.preMove.move}`}
+                      className="mb-1 grid grid-cols-2 gap-2"
+                    >
+                      0<span className="ml-2">{puzzle.preMove.move}</span>
+                    </p>
+                  )}
+                  {firstMoves.map((s, index) => (
+                    <p
+                      key={`first-${index}-${s.move}`}
+                      className="mb-1 grid grid-cols-2 gap-2"
+                    >
+                      {index + 1}
+                      {s.player === 'user' ? (
+                        <strong className="ml-2">{s.move}</strong>
+                      ) : (
+                        <span className="ml-2">{s.move}</span>
+                      )}
                     </p>
                   ))}
                 </div>
                 <div>
-                  {secondMainMoves.map((s, index) => (
-                    <p key={`second-${index}-${s.move}`} className="mb-2">
-                      {index + 1} - <strong className="ml-4">{s.move}</strong>
+                  {secondMoves.map((s, index) => (
+                    <p
+                      key={`second-${index}-${s.move}`}
+                      className="mb-1 grid grid-cols-2 gap-2"
+                    >
+                      {index + 1}
+                      {s.player === 'user' ? (
+                        <strong className="ml-2">{s.move}</strong>
+                      ) : (
+                        <span className="ml-2">{s.move}</span>
+                      )}
                     </p>
                   ))}
                 </div>
@@ -577,9 +593,22 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({ puzzle }) => {
           )}
           <div className="absolute bottom-4 left-0 w-full px-4">
             {!showRetry && currentStep !== puzzle.solutions.length && (
-              <Button className="mx-auto" color="primary" onClick={showHint}>
-                Hint <VscLightbulbSparkle size={20} className="ml-1" />
-              </Button>
+              <>
+                {hintMessage ? (
+                  <div
+                    className="flex justify-center"
+                    dangerouslySetInnerHTML={{ __html: hintMessage }}
+                  />
+                ) : (
+                  <Button
+                    className="mx-auto"
+                    color="primary"
+                    onClick={showHint}
+                  >
+                    Hint <VscLightbulbSparkle size={20} className="ml-1" />
+                  </Button>
+                )}
+              </>
             )}
             {currentStep === puzzle.solutions.length && (
               <div className="flex justify-between">
