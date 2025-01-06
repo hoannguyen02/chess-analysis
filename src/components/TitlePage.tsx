@@ -4,5 +4,5 @@ type Props = {
   children: ReactNode;
 };
 export const TitlePage = ({ children }: Props) => {
-  return <h3 className="my-4">{children}</h3>;
+  return <h3 className="my-4 flex justify-between">{children}</h3>;
 };

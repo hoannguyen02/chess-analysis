@@ -5,6 +5,7 @@ import useBeforeUnload from '@/hooks/useBeforeUnload';
 import usePreventRouteChange from '@/hooks/usePreventRouteChange';
 import { Lesson } from '@/types/lesson';
 import { Button, Label, Select, TextInput } from 'flowbite-react';
+import { useRouter } from 'next/router';
 import { SubmitHandler, useFieldArray, useForm } from 'react-hook-form';
 
 type Props = {
@@ -87,6 +88,8 @@ export const LessonFormScreen = ({ lesson }: Props) => {
     window.open(`/lessons/preview?data=${encodedData}`, '_blank');
   };
 
+  const router = useRouter();
+
   return (
     <div className="">
       <TitlePage>Lesson Form</TitlePage>
@@ -134,6 +137,15 @@ export const LessonFormScreen = ({ lesson }: Props) => {
         </div>
 
         <div className="flex mt-4">
+          <Button
+            className="mr-8"
+            type="button"
+            onClick={() => {
+              router.push('/puzzles');
+            }}
+          >
+            Back to the list
+          </Button>
           <Button
             type="button"
             onClick={handlePreview}

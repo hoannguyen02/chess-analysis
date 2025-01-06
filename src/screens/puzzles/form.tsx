@@ -7,6 +7,7 @@ import usePreventRouteChange from '@/hooks/usePreventRouteChange';
 import { Puzzle } from '@/types/puzzle';
 import { Button, Checkbox, Label, Select, TextInput } from 'flowbite-react';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import { SubmitHandler, useFieldArray, useForm } from 'react-hook-form';
 import { VscEdit } from 'react-icons/vsc';
 
@@ -14,6 +15,7 @@ type Props = {
   puzzle?: Puzzle;
 };
 export const PuzzleFormScreen = ({ puzzle }: Props) => {
+  const router = useRouter();
   const { themes } = useAppContext();
   const {
     register, // Register inputs
@@ -265,6 +267,15 @@ export const PuzzleFormScreen = ({ puzzle }: Props) => {
         </div>
 
         <div className="flex mt-4">
+          <Button
+            className="mr-8"
+            type="button"
+            onClick={() => {
+              router.push('/puzzles');
+            }}
+          >
+            Back to the list
+          </Button>
           <Button
             type="button"
             onClick={handlePreview}

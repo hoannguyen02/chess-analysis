@@ -3,7 +3,15 @@ import { PUZZLE_RATING, PuzzlePhases, PuzzleStatues } from '@/constants/puzzle';
 import { useAppContext } from '@/contexts/AppContext';
 import { Puzzle, PuzzleDifficulty, PuzzlePhase } from '@/types/puzzle';
 import { StatusType } from '@/types/status';
-import { Checkbox, Pagination, Select, Spinner, Table } from 'flowbite-react';
+import {
+  Button,
+  Checkbox,
+  Pagination,
+  Select,
+  Spinner,
+  Table,
+} from 'flowbite-react';
+import { useRouter } from 'next/router';
 import { useMemo, useState } from 'react';
 import useSWR from 'swr';
 import { fetcher } from '../../utils/fetcher';
@@ -55,13 +63,24 @@ export const PuzzleListScreen = () => {
     lastPage: number;
   }>(queryKey, fetcher);
 
+  const router = useRouter();
+
   const onPageChange = (page: number) => setCurrentPage(page);
 
   if (error || !data) return <div>Error occurred</div>;
 
   return (
     <>
-      <TitlePage>Puzzle List</TitlePage>
+      <TitlePage>
+        Puzzle List{' '}
+        <Button
+          onClick={() => {
+            router.push('/puzzles/create');
+          }}
+        >
+          Add new
+        </Button>
+      </TitlePage>
       <div className="flex flex-col">
         Public:
         <Checkbox

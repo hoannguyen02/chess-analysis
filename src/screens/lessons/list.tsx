@@ -5,7 +5,8 @@ import { useAppContext } from '@/contexts/AppContext';
 import { LessonExpanded } from '@/types/lesson';
 import { PuzzleDifficulty } from '@/types/puzzle';
 import { StatusType } from '@/types/status';
-import { Pagination, Select, Spinner, Table } from 'flowbite-react';
+import { Button, Pagination, Select, Spinner, Table } from 'flowbite-react';
+import { useRouter } from 'next/router';
 import { useMemo, useState } from 'react';
 import useSWR from 'swr';
 import { fetcher } from '../../utils/fetcher';
@@ -53,13 +54,24 @@ export const LessonsListScreen = () => {
     lastPage: number;
   }>(queryKey, fetcher);
 
+  const router = useRouter();
+
   const onPageChange = (page: number) => setCurrentPage(page);
 
   if (error || !data) return <div>Error occurred</div>;
 
   return (
     <>
-      <TitlePage>Lessons List</TitlePage>
+      <TitlePage>
+        Lessons List{' '}
+        <Button
+          onClick={() => {
+            router.push('/lessons/create');
+          }}
+        >
+          Add new
+        </Button>
+      </TitlePage>
       <div className="grid grid-cols-4 gap-4 mb-8">
         <div className="flex flex-col">
           Title:

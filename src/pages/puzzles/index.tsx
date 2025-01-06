@@ -1,6 +1,6 @@
 import Layout from '@/components/Layout';
 import { withThemes } from '@/HOF/withThemes';
-import { PuzzleListScreen } from '@/screens/puzzles/puzzle-list';
+import { PuzzleListScreen } from '@/screens/puzzles/list';
 
 const PuzzlesPage = () => {
   return (

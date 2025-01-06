@@ -1,6 +1,6 @@
 import Layout from '@/components/Layout';
 import { withThemes } from '@/HOF/withThemes';
-import { PuzzleFormScreen } from '@/screens/puzzles/puzzle-form';
+import { PuzzleFormScreen } from '@/screens/puzzles/form';
 
 const CreatePuzzlePage = () => {
   return (
