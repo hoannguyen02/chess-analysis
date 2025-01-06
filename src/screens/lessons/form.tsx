@@ -1,11 +1,14 @@
+import { DraggableItem } from '@/components/DraggableItem';
 import { TitlePage } from '@/components/TitlePage';
 import { PUZZLE_RATING, PuzzleStatues } from '@/constants/puzzle';
 import { ROUTE_CHANGE_MESSAGE } from '@/constants/route';
 import useBeforeUnload from '@/hooks/useBeforeUnload';
 import usePreventRouteChange from '@/hooks/usePreventRouteChange';
 import { Lesson } from '@/types/lesson';
-import { Button, Label, Select, TextInput } from 'flowbite-react';
+import { Button, Label, Select, Textarea, TextInput } from 'flowbite-react';
 import { useRouter } from 'next/router';
+import { DndProvider } from 'react-dnd';
+import { HTML5Backend } from 'react-dnd-html5-backend';
 import { SubmitHandler, useFieldArray, useForm } from 'react-hook-form';
 
 type Props = {
@@ -90,6 +93,24 @@ export const LessonFormScreen = ({ lesson }: Props) => {
 
   const router = useRouter();
 
+  const moveContentItem = (fromIndex: number, toIndex: number) => {
+    const contents = watch('contents') || [];
+    const updatedItems = [...contents];
+    const [movedItem] = updatedItems.splice(fromIndex, 1);
+    updatedItems.splice(toIndex, 0, movedItem);
+    setValue('contents', updatedItems, {
+      shouldDirty: true,
+    });
+  };
+
+  const objectives = watch('objectives') || [];
+
+  const addObjective = () => {
+    const currentObjectives = watch('objectives') || [];
+    const newObjectives = [...currentObjectives, ''];
+    setValue('objectives', newObjectives, { shouldDirty: true });
+  };
+
   return (
     <div className="">
       <TitlePage>Lesson Form</TitlePage>
@@ -134,6 +155,56 @@ export const LessonFormScreen = ({ lesson }: Props) => {
             />
           </div>
           <div>Tags - Do later</div>
+        </div>
+        <div className="mb-4">
+          Objectives:
+          {objectives.map((objective, index) => (
+            <TextInput
+              className="mb-2"
+              key={objective}
+              {...register(`objectives.${index}`)}
+              defaultValue={objective}
+            />
+          ))}
+          <Button type="button" outline size="sm" onClick={addObjective}>
+            +
+          </Button>
+        </div>
+        <div className="mb-4">
+          Contents:
+          <DndProvider backend={HTML5Backend}>
+            {contentFields.map((field, index) => (
+              <DraggableItem
+                itemType="contents"
+                index={index}
+                moveItem={moveContentItem}
+                key={field.id}
+                className="mb-4"
+              >
+                <div className="grid grid-cols-[auto_50px] mb-2 gap-4 place-items-center">
+                  <Textarea rows={3} {...register(`contents.${index}.value`)} />
+                  <div className="">
+                    <Button
+                      outline
+                      size="sm"
+                      type="button"
+                      onClick={() => removeContent(index)}
+                    >
+                      -
+                    </Button>
+                  </div>
+                </div>
+              </DraggableItem>
+            ))}
+          </DndProvider>
+          <Button
+            type="button"
+            outline
+            size="sm"
+            onClick={() => appendContent({ type: 'text', value: '', order: 0 })}
+          >
+            +
+          </Button>
         </div>
 
         <div className="flex mt-4">
