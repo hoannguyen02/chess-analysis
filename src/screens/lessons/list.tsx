@@ -1,31 +1,29 @@
+import DebouncedInput from '@/components/DebounceInput';
 import { TitlePage } from '@/components/TitlePage';
-import { PUZZLE_RATING, PuzzlePhases, PuzzleStatues } from '@/constants/puzzle';
+import { PUZZLE_RATING, PuzzleStatues } from '@/constants/puzzle';
 import { useAppContext } from '@/contexts/AppContext';
-import { Puzzle, PuzzleDifficulty, PuzzlePhase } from '@/types/puzzle';
+import { LessonExpanded } from '@/types/lesson';
+import { PuzzleDifficulty } from '@/types/puzzle';
 import { StatusType } from '@/types/status';
-import { Checkbox, Pagination, Select, Spinner, Table } from 'flowbite-react';
+import { Pagination, Select, Spinner, Table } from 'flowbite-react';
 import { useMemo, useState } from 'react';
 import useSWR from 'swr';
 import { fetcher } from '../../utils/fetcher';
 
-export const PuzzleListScreen = () => {
-  const { themes, apiDomain, themeMap } = useAppContext();
+export const LessonsListScreen = () => {
+  const { apiDomain } = useAppContext();
   const [currentPage, setCurrentPage] = useState(1);
-  const [phase, setPhase] = useState<PuzzlePhase | ''>('');
   const [status, setStatus] = useState<StatusType | ''>('');
-  const [theme, setTheme] = useState<string | ''>('');
+  const [title, setTitle] = useState<string | ''>('');
   const [difficulty, setDifficulty] = useState<PuzzleDifficulty | ''>('');
-  const [isPublic, setIsPublic] = useState<boolean | undefined>();
 
   const queryString = useMemo(() => {
     // Define your query parameters as an object
     const queryObject: Record<string, any> = {
-      phase,
-      theme,
       difficulty,
       status,
+      title,
       page: currentPage,
-      isPublic,
     };
 
     const filteredQuery = Object.entries(queryObject)
@@ -37,15 +35,15 @@ export const PuzzleListScreen = () => {
       .join('&');
 
     return filteredQuery;
-  }, [currentPage, phase, status, theme, difficulty, isPublic]);
+  }, [difficulty, status, title, currentPage]);
 
   const queryKey = useMemo(
-    () => `${apiDomain}/v1/puzzles?${queryString}`,
+    () => `${apiDomain}/v1/lessons?${queryString}`,
     [apiDomain, queryString]
   );
 
   const { data, error, isLoading } = useSWR<{
-    items: Puzzle[];
+    items: LessonExpanded[];
     total: number;
     hasNext: boolean;
     hasPrev: boolean;
@@ -61,17 +59,18 @@ export const PuzzleListScreen = () => {
 
   return (
     <>
-      <TitlePage>Puzzle List</TitlePage>
-      <div className="flex flex-col">
-        Public:
-        <Checkbox
-          checked={isPublic}
-          onChange={(event) => {
-            setIsPublic(event.target.checked);
-          }}
-        />
-      </div>
+      <TitlePage>Lessons List</TitlePage>
       <div className="grid grid-cols-4 gap-4 mb-8">
+        <div className="flex flex-col">
+          Title:
+          <DebouncedInput
+            placeholder="Enter a title"
+            initialValue={title}
+            onChange={(value) => {
+              setTitle(value);
+            }}
+          />
+        </div>
         <div className="flex flex-col">
           Status:
           <Select
@@ -81,20 +80,6 @@ export const PuzzleListScreen = () => {
             <option value="">Select a status</option>
             {PuzzleStatues.map((status) => (
               <option key={status}>{status}</option>
-            ))}
-          </Select>
-        </div>
-        <div className="flex flex-col">
-          Theme:
-          <Select
-            value={theme}
-            onChange={(event) => setTheme(event.target.value)}
-          >
-            <option value="">Select a theme</option>
-            {themes.map((theme, idx) => (
-              <option key={`${theme.code}-${idx}`} label={theme.title}>
-                {theme.code}
-              </option>
             ))}
           </Select>
         </div>
@@ -114,26 +99,12 @@ export const PuzzleListScreen = () => {
             ))}
           </Select>
         </div>
-        <div className="flex flex-col">
-          Phase:
-          <Select
-            value={phase}
-            onChange={(event) => setPhase(event.target.value as PuzzlePhase)}
-          >
-            <option value="">Select a phase</option>
-            {PuzzlePhases.map((phase) => (
-              <option key={phase}>{phase}</option>
-            ))}
-          </Select>
-        </div>
       </div>
       <Table hoverable>
         <Table.Head>
-          <Table.HeadCell>Theme</Table.HeadCell>
-          <Table.HeadCell>Phase</Table.HeadCell>
+          <Table.HeadCell>Title</Table.HeadCell>
           <Table.HeadCell>Difficulty</Table.HeadCell>
           <Table.HeadCell>Status</Table.HeadCell>
-          <Table.HeadCell>Public</Table.HeadCell>
           <Table.HeadCell>
             <span className="sr-only">Edit</span>
           </Table.HeadCell>
@@ -144,23 +115,20 @@ export const PuzzleListScreen = () => {
               <Spinner />
             </div>
           ) : (
-            data.items.map((puzzle, index) => {
+            data.items.map((lesson, index) => {
               return (
                 <Table.Row
-                  key={`puzzle-${index}`}
+                  key={`lesson-${index}`}
                   className="bg-white dark:border-gray-700 dark:bg-gray-800"
                 >
                   <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
-                    {themeMap[puzzle.theme]?.title || puzzle.theme}
+                    {lesson.title}
                   </Table.Cell>
-                  <Table.Cell>{puzzle.phase}</Table.Cell>
-                  <Table.Cell>{puzzle.difficulty}</Table.Cell>
-                  <Table.Cell>
-                    <Checkbox checked={puzzle.isPublic} />
-                  </Table.Cell>
+                  <Table.Cell>{lesson.difficulty}</Table.Cell>
+                  <Table.Cell>{lesson.status}</Table.Cell>
                   <Table.Cell>
                     <a
-                      href={`/puzzles/${puzzle._id}`}
+                      href={`/lessons/${lesson._id}`}
                       className="font-medium text-cyan-600 hover:underline dark:text-cyan-500"
                     >
                       Edit
