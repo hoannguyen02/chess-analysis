@@ -27,6 +27,7 @@ import { useAppContext } from '@/contexts/AppContext';
 import { PUZZLE_RATING } from '@/constants/puzzle';
 import { PIECE_MAP } from '@/constants/piece';
 import { UppercasePieceType } from '@/types/piece';
+import ConfettiEffect from './ConfettiEffect';
 
 type PuzzleProps = {
   puzzle: Puzzle;
@@ -439,10 +440,13 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({ puzzle }) => {
       return {
         bgHeader: 'bg-[var(--s-bg)]',
         message: (
-          <div className="flex items-center">
-            <VscPass size={20} className="mr-2" />
-            Well Done
-          </div>
+          <>
+            <ConfettiEffect />
+            <div className="flex items-center">
+              <VscPass size={20} className="mr-2" />
+              Well Done
+            </div>
+          </>
         ),
       };
     }
