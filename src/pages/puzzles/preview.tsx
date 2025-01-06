@@ -1,5 +1,6 @@
 import Layout from '@/components/Layout';
 import SolvePuzzle from '@/components/SolvePuzzle';
+import { withThemes } from '@/HOF/withThemes';
 import { useRouter } from 'next/router';
 
 const PreviewPuzzlePage = () => {
@@ -18,4 +19,10 @@ const PreviewPuzzlePage = () => {
 
   return null;
 };
+
+export const getServerSideProps = withThemes(async () => {
+  return {
+    props: {},
+  };
+});
 export default PreviewPuzzlePage;
