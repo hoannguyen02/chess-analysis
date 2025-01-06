@@ -1,12 +1,8 @@
 import { TitlePage } from '@/components/TitlePage';
 import { PUZZLE_RATING, PuzzlePhases, PuzzleStatues } from '@/constants/puzzle';
 import { useAppContext } from '@/contexts/AppContext';
-import {
-  Puzzle,
-  PuzzleDifficulty,
-  PuzzlePhase,
-  PuzzleStatus,
-} from '@/types/puzzle';
+import { Puzzle, PuzzleDifficulty, PuzzlePhase } from '@/types/puzzle';
+import { StatusType } from '@/types/status';
 import { Checkbox, Pagination, Select, Spinner, Table } from 'flowbite-react';
 import { useMemo, useState } from 'react';
 import useSWR from 'swr';
@@ -16,7 +12,7 @@ export const PuzzleListScreen = () => {
   const { themes, apiDomain, themeMap } = useAppContext();
   const [currentPage, setCurrentPage] = useState(1);
   const [phase, setPhase] = useState<PuzzlePhase | ''>('');
-  const [status, setStatus] = useState<PuzzleStatus | ''>('');
+  const [status, setStatus] = useState<StatusType | ''>('');
   const [theme, setTheme] = useState<string | ''>('');
   const [difficulty, setDifficulty] = useState<PuzzleDifficulty | ''>('');
   const [isPublic, setIsPublic] = useState<boolean | undefined>();
@@ -80,7 +76,7 @@ export const PuzzleListScreen = () => {
           Status:
           <Select
             value={status}
-            onChange={(event) => setStatus(event.target.value as PuzzleStatus)}
+            onChange={(event) => setStatus(event.target.value as StatusType)}
           >
             <option value="">Select a status</option>
             {PuzzleStatues.map((status) => (

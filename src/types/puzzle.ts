@@ -1,4 +1,5 @@
-export type PuzzleStatus = 'Draft' | 'Verified';
+import { StatusType } from './status';
+
 /**
  * 800-1200: Easy
  * 1200-1600: Medium
@@ -22,7 +23,7 @@ export type PuzzlePreMove = {
 
 export type Puzzle = {
   fen: string;
-  status: PuzzleStatus;
+  status: StatusType;
   difficulty: PuzzleDifficulty;
   isPublic: boolean;
   theme: string;
