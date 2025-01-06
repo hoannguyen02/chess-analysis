@@ -546,7 +546,7 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({ puzzle }) => {
                 Theme: {themeMap[puzzle.theme]?.title || puzzle.theme}
               </p>
               <p className="mb-2">
-                Difficulty: {PUZZLE_RATING[puzzle.difficulty]}
+                Rating/difficulty: {PUZZLE_RATING[puzzle.difficulty]}
               </p>
               Moves: <hr />
               <div className="mb-2 mt-4 grid grid-cols-2 gap-4">
