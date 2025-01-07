@@ -1,7 +1,7 @@
 import Layout from '@/components/Layout';
 import { withThemes } from '@/HOF/withThemes';
 import { LessonFormScreen } from '@/screens/lessons/form';
-import { Lesson } from '@/types/lesson';
+import { LessonExpanded } from '@/types/lesson';
 import {
   GetServerSideProps,
   GetServerSidePropsContext,
@@ -10,7 +10,7 @@ import {
 import { ParsedUrlQuery } from 'querystring';
 
 type Props = {
-  lesson: Lesson;
+  lesson: LessonExpanded;
 };
 const LessonPage = ({ lesson }: Props) => {
   return (

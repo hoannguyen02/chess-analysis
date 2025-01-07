@@ -13,8 +13,9 @@ import { VscEdit } from 'react-icons/vsc';
 
 type Props = {
   puzzle?: Puzzle;
+  onSaveSuccess?: (puzzle: Puzzle) => void;
 };
-export const PuzzleFormScreen = ({ puzzle }: Props) => {
+export const PuzzleFormScreen = ({ puzzle, onSaveSuccess }: Props) => {
   const router = useRouter();
   const { themes } = useAppContext();
   const {
@@ -74,7 +75,11 @@ export const PuzzleFormScreen = ({ puzzle }: Props) => {
       }
       const response = await request;
       if (response.ok) {
-        await response.json();
+        const data = await response.json();
+        if (onSaveSuccess) {
+          onSaveSuccess(data);
+        }
+
         alert('Data submitted successfully');
       } else {
         console.error('Failed to submit data:', response.statusText);

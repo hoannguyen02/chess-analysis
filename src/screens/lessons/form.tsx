@@ -4,17 +4,33 @@ import { PUZZLE_RATING, PuzzleStatues } from '@/constants/puzzle';
 import { ROUTE_CHANGE_MESSAGE } from '@/constants/route';
 import useBeforeUnload from '@/hooks/useBeforeUnload';
 import usePreventRouteChange from '@/hooks/usePreventRouteChange';
-import { Lesson } from '@/types/lesson';
-import { Button, Label, Select, Textarea, TextInput } from 'flowbite-react';
+import { Lesson, LessonExpanded } from '@/types/lesson';
+import { Puzzle } from '@/types/puzzle';
+import {
+  Button,
+  Label,
+  Modal,
+  Select,
+  Textarea,
+  TextInput,
+} from 'flowbite-react';
 import { useRouter } from 'next/router';
+import { useState } from 'react';
 import { DndProvider } from 'react-dnd';
 import { HTML5Backend } from 'react-dnd-html5-backend';
 import { SubmitHandler, useFieldArray, useForm } from 'react-hook-form';
+import { PuzzleFormScreen } from '../puzzles/form';
 
 type Props = {
-  lesson?: Lesson;
+  lesson?: LessonExpanded;
+};
+
+type LessonForm = Lesson & {
+  puzzles: Puzzle[];
 };
 export const LessonFormScreen = ({ lesson }: Props) => {
+  const [addPuzzlePopup, setAddPuzzlePopup] = useState(false);
+
   const {
     register, // Register inputs
     control,
@@ -23,11 +39,18 @@ export const LessonFormScreen = ({ lesson }: Props) => {
     watch,
     setValue,
     getValues,
-  } = useForm<Lesson>({
-    defaultValues: lesson || {
-      status: 'Draft',
-      difficulty: 'Easy',
-    },
+  } = useForm<LessonForm>({
+    defaultValues: lesson
+      ? {
+          ...lesson,
+          puzzles: lesson.puzzles.map((puzzle) => ({
+            ...puzzle.id,
+          })),
+        }
+      : {
+          status: 'Draft',
+          difficulty: 'Easy',
+        },
   });
 
   // Warn on browser close/refresh
@@ -55,7 +78,7 @@ export const LessonFormScreen = ({ lesson }: Props) => {
   });
 
   // Handle form submission
-  const onSubmit: SubmitHandler<Lesson> = async (data) => {
+  const onSubmit: SubmitHandler<LessonForm> = async (data) => {
     const { _id, ...rest } = data;
     try {
       const apiDomain = process.env.NEXT_PUBLIC_PHONG_CHESS_DOMAIN;
@@ -93,7 +116,7 @@ export const LessonFormScreen = ({ lesson }: Props) => {
 
   const router = useRouter();
 
-  const moveContentItem = (fromIndex: number, toIndex: number) => {
+  const reorderContents = (fromIndex: number, toIndex: number) => {
     const contents = watch('contents') || [];
     const updatedItems = [...contents];
     const [movedItem] = updatedItems.splice(fromIndex, 1);
@@ -116,6 +139,16 @@ export const LessonFormScreen = ({ lesson }: Props) => {
     const newObjectives = [...currentObjectives];
     newObjectives.splice(index, 1);
     setValue('objectives', newObjectives, { shouldDirty: true });
+  };
+
+  const reOrderPuzzles = (fromIndex: number, toIndex: number) => {
+    const puzzles = watch('puzzles') || [];
+    const updatedItems = [...puzzles];
+    const [movedItem] = updatedItems.splice(fromIndex, 1);
+    updatedItems.splice(toIndex, 0, movedItem);
+    setValue('puzzles', updatedItems, {
+      shouldDirty: true,
+    });
   };
 
   return (
@@ -196,7 +229,7 @@ export const LessonFormScreen = ({ lesson }: Props) => {
               <DraggableItem
                 itemType="contents"
                 index={index}
-                moveItem={moveContentItem}
+                moveItem={reorderContents}
                 key={field.id}
                 className="mb-4"
               >
@@ -220,7 +253,58 @@ export const LessonFormScreen = ({ lesson }: Props) => {
             type="button"
             outline
             size="sm"
-            onClick={() => appendContent({ type: 'text', value: '', order: 0 })}
+            onClick={() => appendContent({ type: 'text', value: '' })}
+          >
+            +
+          </Button>
+        </div>
+
+        <div className="mb-4">
+          Puzzles:
+          <div className="grid grid-cols-[50%_10%_25%_5%_5%] mb-2 gap-4 place-items-center">
+            <Label>Fen</Label>
+            <Label>Difficulty</Label>
+            <Label>Theme</Label>
+            <Label>Status</Label>
+            <Label>Actions</Label>
+          </div>
+          <DndProvider backend={HTML5Backend}>
+            {puzzleFields.map((field, index) => {
+              return (
+                <DraggableItem
+                  itemType="puzzles"
+                  index={index}
+                  moveItem={reOrderPuzzles}
+                  key={field._id}
+                  className="mb-4"
+                >
+                  <div className="grid grid-cols-[50%_10%_25%_5%_5%] mb-2 gap-4 place-items-center">
+                    <Label>{field.fen}</Label>
+                    <Label>{field.difficulty}</Label>
+                    <Label>{field.theme}</Label>
+                    <Label>{field.status}</Label>
+                    <div className="">
+                      <Button
+                        outline
+                        size="sm"
+                        type="button"
+                        onClick={() => removePuzzle(index)}
+                      >
+                        -
+                      </Button>
+                    </div>
+                  </div>
+                </DraggableItem>
+              );
+            })}
+          </DndProvider>
+          <Button
+            type="button"
+            outline
+            size="sm"
+            onClick={() => {
+              setAddPuzzlePopup(true);
+            }}
           >
             +
           </Button>
@@ -249,6 +333,25 @@ export const LessonFormScreen = ({ lesson }: Props) => {
           </Button>
         </div>
       </form>
+      {addPuzzlePopup && (
+        <Modal show position="center" onClose={() => setAddPuzzlePopup(false)}>
+          <Modal.Header>Small modal</Modal.Header>
+          <Modal.Body>
+            <PuzzleFormScreen
+              onSaveSuccess={(puzzle) => {
+                appendPuzzle(puzzle);
+                setAddPuzzlePopup(false);
+              }}
+            />
+          </Modal.Body>
+          <Modal.Footer>
+            {/* <Button onClick={() => setOpenModal(false)}>I accept</Button> */}
+            <Button color="gray" onClick={() => setAddPuzzlePopup(false)}>
+              Decline
+            </Button>
+          </Modal.Footer>
+        </Modal>
+      )}
     </div>
   );
 };

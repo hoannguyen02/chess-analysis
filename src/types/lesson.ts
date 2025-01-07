@@ -7,8 +7,8 @@ export type Lesson = {
   title: string;
   description?: string;
   objectives?: string[];
-  puzzles: { id: string; order: number }[];
-  contents?: { type: ContentType; value: string; order: number }[];
+  puzzles: { id: string }[];
+  contents?: { type: ContentType; value: string }[];
   tags?: string[];
   difficulty?: DifficultyType;
   status: StatusType;
@@ -19,8 +19,8 @@ export type LessonExpanded = {
   title: string;
   description?: string;
   objectives?: string[];
-  puzzles: { id: Puzzle; order: number }[];
-  contents?: { type: ContentType; value: string; order: number }[];
+  puzzles: { id: Puzzle }[];
+  contents?: { type: ContentType; value: string }[];
   tags?: string[];
   difficulty?: DifficultyType;
   status: StatusType;
