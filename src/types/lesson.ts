@@ -13,6 +13,7 @@ export type Lesson = {
   difficulty?: DifficultyType;
   status: StatusType;
   _id?: string;
+  isPublic?: boolean;
 };
 
 export type LessonExpanded = {
@@ -25,4 +26,5 @@ export type LessonExpanded = {
   difficulty?: DifficultyType;
   status: StatusType;
   _id?: string;
+  isPublic?: boolean;
 };

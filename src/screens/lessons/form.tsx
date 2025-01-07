@@ -8,6 +8,7 @@ import { Lesson, LessonExpanded } from '@/types/lesson';
 import { Puzzle } from '@/types/puzzle';
 import {
   Button,
+  Checkbox,
   Label,
   Modal,
   Select,
@@ -155,7 +156,7 @@ export const LessonFormScreen = ({ lesson }: Props) => {
     <div className="">
       <TitlePage>Lesson Form</TitlePage>
       <form onSubmit={handleSubmit(onSubmit)} className="">
-        <div className="grid grid-cols-3  place-content-start mb-4 gap-8">
+        <div className="grid grid-cols-4  place-content-start mb-4 gap-8">
           <div className="flex flex-col">
             <Label htmlFor="title" value="Title" />
             <TextInput
@@ -172,6 +173,10 @@ export const LessonFormScreen = ({ lesson }: Props) => {
                 <option key={status}>{status}</option>
               ))}
             </Select>
+          </div>
+          <div className="flex items-center">
+            <Label className="mr-2" htmlFor="isPublic" value="Public" />
+            <Checkbox id="isPublic" {...register('isPublic')} />
           </div>
           <div className="flex flex-col">
             <Label htmlFor="difficulty" value="Difficulty" />
