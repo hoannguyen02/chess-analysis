@@ -111,6 +111,13 @@ export const LessonFormScreen = ({ lesson }: Props) => {
     setValue('objectives', newObjectives, { shouldDirty: true });
   };
 
+  const removeObjective = (index: number) => {
+    const currentObjectives = watch('objectives') || [];
+    const newObjectives = [...currentObjectives];
+    newObjectives.splice(index, 1);
+    setValue('objectives', newObjectives, { shouldDirty: true });
+  };
+
   return (
     <div className="">
       <TitlePage>Lesson Form</TitlePage>
@@ -159,12 +166,24 @@ export const LessonFormScreen = ({ lesson }: Props) => {
         <div className="mb-4">
           Objectives:
           {objectives.map((objective, index) => (
-            <TextInput
-              className="mb-2"
+            <div
               key={objective}
-              {...register(`objectives.${index}`)}
-              defaultValue={objective}
-            />
+              className="flex justify-between items-center mb-2"
+            >
+              <TextInput
+                className="w-[90%]"
+                {...register(`objectives.${index}`)}
+                defaultValue={objective}
+              />
+              <Button
+                outline
+                size="sm"
+                type="button"
+                onClick={() => removeObjective(index)}
+              >
+                -
+              </Button>
+            </div>
           ))}
           <Button type="button" outline size="sm" onClick={addObjective}>
             +
