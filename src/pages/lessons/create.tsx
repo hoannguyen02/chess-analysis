@@ -2,7 +2,7 @@ import Layout from '@/components/Layout';
 import { withThemes } from '@/HOF/withThemes';
 import { LessonFormScreen } from '@/screens/lessons/form';
 
-const CreatePuzzlePage = () => {
+const CreateLessonPage = () => {
   return (
     <Layout>
       <LessonFormScreen />
@@ -16,4 +16,4 @@ export const getServerSideProps = withThemes(async () => {
   };
 });
 
-export default CreatePuzzlePage;
+export default CreateLessonPage;

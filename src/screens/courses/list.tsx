@@ -2,7 +2,7 @@ import DebouncedInput from '@/components/DebounceInput';
 import { TitlePage } from '@/components/TitlePage';
 import { PUZZLE_RATING, PuzzleStatues } from '@/constants/puzzle';
 import { useAppContext } from '@/contexts/AppContext';
-import { Lesson } from '@/types/lesson';
+import { Course } from '@/types/course';
 import { PuzzleDifficulty } from '@/types/puzzle';
 import { StatusType } from '@/types/status';
 import { Button, Pagination, Select, Spinner, Table } from 'flowbite-react';
@@ -11,7 +11,7 @@ import { useMemo, useState } from 'react';
 import useSWR from 'swr';
 import { fetcher } from '../../utils/fetcher';
 
-export const LessonsListScreen = () => {
+export const CourseListScreen = () => {
   const { apiDomain } = useAppContext();
   const [currentPage, setCurrentPage] = useState(1);
   const [status, setStatus] = useState<StatusType | ''>('');
@@ -39,12 +39,12 @@ export const LessonsListScreen = () => {
   }, [difficulty, status, title, currentPage]);
 
   const queryKey = useMemo(
-    () => `${apiDomain}/v1/lessons?${queryString}`,
+    () => `${apiDomain}/v1/courses?${queryString}`,
     [apiDomain, queryString]
   );
 
   const { data, error, isLoading } = useSWR<{
-    items: Lesson[];
+    items: Course[];
     total: number;
     hasNext: boolean;
     hasPrev: boolean;
@@ -63,10 +63,10 @@ export const LessonsListScreen = () => {
   return (
     <>
       <TitlePage>
-        Lessons List{' '}
+        Course List{' '}
         <Button
           onClick={() => {
-            router.push('/lessons/create');
+            router.push('/courses/create');
           }}
         >
           Add new
@@ -140,7 +140,7 @@ export const LessonsListScreen = () => {
                   <Table.Cell>{item.status}</Table.Cell>
                   <Table.Cell>
                     <a
-                      href={`/lessons/${item._id}`}
+                      href={`/courses/${item._id}`}
                       className="font-medium text-cyan-600 hover:underline dark:text-cyan-500"
                     >
                       Edit

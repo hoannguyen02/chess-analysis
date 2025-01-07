@@ -1,11 +1,11 @@
 import Layout from '@/components/Layout';
 import { withThemes } from '@/HOF/withThemes';
-import { LessonsListScreen } from '@/screens/lessons/list';
+import { CourseListScreen } from '@/screens/courses/list';
 
-const LessonsPage = () => {
+const CoursesPage = () => {
   return (
     <Layout>
-      <LessonsListScreen />
+      <CourseListScreen />
     </Layout>
   );
 };
@@ -16,4 +16,4 @@ export const getServerSideProps = withThemes(async () => {
   };
 });
 
-export default LessonsPage;
+export default CoursesPage;

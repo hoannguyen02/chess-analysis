@@ -4,15 +4,14 @@ import { PUZZLE_RATING, PuzzleStatues } from '@/constants/puzzle';
 import { ROUTE_CHANGE_MESSAGE } from '@/constants/route';
 import useBeforeUnload from '@/hooks/useBeforeUnload';
 import usePreventRouteChange from '@/hooks/usePreventRouteChange';
-import { Lesson, LessonExpanded } from '@/types/lesson';
-import { Puzzle } from '@/types/puzzle';
+import { Course, CourseExpanded } from '@/types/course';
+import { Lesson } from '@/types/lesson';
 import {
   Button,
   Checkbox,
   Label,
   Modal,
   Select,
-  Textarea,
   TextInput,
 } from 'flowbite-react';
 import { useRouter } from 'next/router';
@@ -20,17 +19,16 @@ import { useState } from 'react';
 import { DndProvider } from 'react-dnd';
 import { HTML5Backend } from 'react-dnd-html5-backend';
 import { SubmitHandler, useFieldArray, useForm } from 'react-hook-form';
-import { PuzzleFormScreen } from '../puzzles/form';
 
 type Props = {
-  lesson?: LessonExpanded;
+  course?: CourseExpanded;
 };
 
-type LessonForm = Lesson & {
-  puzzles: Puzzle[];
+type CourseForm = Course & {
+  lessons: Lesson[];
 };
-export const LessonFormScreen = ({ lesson }: Props) => {
-  const [addPuzzlePopup, setAddPuzzlePopup] = useState(false);
+export const CourseFormScreen = ({ course }: Props) => {
+  const [addLessonPopup, setAddLessonPopup] = useState(false);
 
   const {
     register, // Register inputs
@@ -40,12 +38,12 @@ export const LessonFormScreen = ({ lesson }: Props) => {
     watch,
     setValue,
     getValues,
-  } = useForm<LessonForm>({
-    defaultValues: lesson
+  } = useForm<CourseForm>({
+    defaultValues: course
       ? {
-          ...lesson,
-          puzzles: lesson.puzzles.map((puzzle) => ({
-            ...puzzle.id,
+          ...course,
+          lessons: course.lessons.map((lesson) => ({
+            ...lesson.id,
           })),
         }
       : {
@@ -61,37 +59,28 @@ export const LessonFormScreen = ({ lesson }: Props) => {
   usePreventRouteChange(ROUTE_CHANGE_MESSAGE, isDirty);
 
   const {
-    fields: puzzleFields,
-    append: appendPuzzle,
-    remove: removePuzzle,
+    fields: lessonFields,
+    append: appendLesson,
+    remove: removeLesson,
   } = useFieldArray({
     control,
-    name: 'puzzles',
-  });
-
-  const {
-    fields: contentFields,
-    append: appendContent,
-    remove: removeContent,
-  } = useFieldArray({
-    control,
-    name: 'contents',
+    name: 'lessons',
   });
 
   // Handle form submission
-  const onSubmit: SubmitHandler<LessonForm> = async (data) => {
+  const onSubmit: SubmitHandler<CourseForm> = async (data) => {
     const { _id, ...rest } = data;
     try {
       const apiDomain = process.env.NEXT_PUBLIC_PHONG_CHESS_DOMAIN;
       let request;
       if (_id) {
-        request = fetch(`${apiDomain}/v1/lessons/${_id}`, {
+        request = fetch(`${apiDomain}/v1/courses/${_id}`, {
           method: 'PUT',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(rest),
         });
       } else {
-        request = fetch(`${apiDomain}/v1/lessons`, {
+        request = fetch(`${apiDomain}/v1/courses`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(rest),
@@ -112,20 +101,10 @@ export const LessonFormScreen = ({ lesson }: Props) => {
 
   const handlePreview = () => {
     const encodedData = encodeURIComponent(JSON.stringify(getValues()));
-    window.open(`/lessons/preview?data=${encodedData}`, '_blank');
+    window.open(`/courses/preview?data=${encodedData}`, '_blank');
   };
 
   const router = useRouter();
-
-  const reorderContents = (fromIndex: number, toIndex: number) => {
-    const contents = watch('contents') || [];
-    const updatedItems = [...contents];
-    const [movedItem] = updatedItems.splice(fromIndex, 1);
-    updatedItems.splice(toIndex, 0, movedItem);
-    setValue('contents', updatedItems, {
-      shouldDirty: true,
-    });
-  };
 
   const objectives = watch('objectives') || [];
 
@@ -142,19 +121,19 @@ export const LessonFormScreen = ({ lesson }: Props) => {
     setValue('objectives', newObjectives, { shouldDirty: true });
   };
 
-  const reOrderPuzzles = (fromIndex: number, toIndex: number) => {
-    const puzzles = watch('puzzles') || [];
-    const updatedItems = [...puzzles];
+  const reOrderLessons = (fromIndex: number, toIndex: number) => {
+    const lessons = watch('lessons') || [];
+    const updatedItems = [...lessons];
     const [movedItem] = updatedItems.splice(fromIndex, 1);
     updatedItems.splice(toIndex, 0, movedItem);
-    setValue('puzzles', updatedItems, {
+    setValue('lessons', updatedItems, {
       shouldDirty: true,
     });
   };
 
   return (
     <div className="">
-      <TitlePage>Lesson Form</TitlePage>
+      <TitlePage>Course Form</TitlePage>
       <form onSubmit={handleSubmit(onSubmit)} className="">
         <div className="grid grid-cols-3  place-content-start mb-4 gap-8">
           <div className="flex flex-col">
@@ -226,73 +205,35 @@ export const LessonFormScreen = ({ lesson }: Props) => {
             +
           </Button>
         </div>
-        <div className="mb-4">
-          Contents:
-          <DndProvider backend={HTML5Backend}>
-            {contentFields.map((field, index) => (
-              <DraggableItem
-                itemType="contents"
-                index={index}
-                moveItem={reorderContents}
-                key={field.id}
-                className="mb-4"
-              >
-                <div className="grid grid-cols-[auto_50px] mb-2 gap-4 place-items-center">
-                  <Textarea rows={3} {...register(`contents.${index}.value`)} />
-                  <div className="">
-                    <Button
-                      outline
-                      size="sm"
-                      type="button"
-                      onClick={() => removeContent(index)}
-                    >
-                      -
-                    </Button>
-                  </div>
-                </div>
-              </DraggableItem>
-            ))}
-          </DndProvider>
-          <Button
-            type="button"
-            outline
-            size="sm"
-            onClick={() => appendContent({ type: 'text', value: '' })}
-          >
-            +
-          </Button>
-        </div>
 
         <div className="mb-4">
-          Puzzles:
-          <div className="grid grid-cols-[50%_10%_25%_5%_5%] mb-2 gap-4 place-items-center">
-            <Label>Fen</Label>
+          Lessons:
+          <div className="grid grid-cols-[50%_10%_25%_5%] mb-2 gap-4 place-items-center">
+            <Label>Title</Label>
             <Label>Difficulty</Label>
-            <Label>Theme</Label>
             <Label>Status</Label>
             <Label>Actions</Label>
           </div>
           <DndProvider backend={HTML5Backend}>
-            {puzzleFields.map((field, index) => {
+            {lessonFields.map((field, index) => {
               return (
                 <DraggableItem
                   itemType="puzzles"
                   index={index}
-                  moveItem={reOrderPuzzles}
+                  moveItem={reOrderLessons}
                   key={field._id}
                   className="mb-4"
                 >
-                  <div className="grid grid-cols-[50%_10%_25%_5%_5%] mb-2 gap-4 place-items-center">
-                    <Label>{field.fen}</Label>
+                  <div className="grid grid-cols-[50%_10%_25%_5%] mb-2 gap-4 place-items-center">
+                    <Label>{field.title}</Label>
                     <Label>{field.difficulty}</Label>
-                    <Label>{field.theme}</Label>
                     <Label>{field.status}</Label>
                     <div className="">
                       <Button
                         outline
                         size="sm"
                         type="button"
-                        onClick={() => removePuzzle(index)}
+                        onClick={() => removeLesson(index)}
                       >
                         -
                       </Button>
@@ -307,7 +248,7 @@ export const LessonFormScreen = ({ lesson }: Props) => {
             outline
             size="sm"
             onClick={() => {
-              setAddPuzzlePopup(true);
+              setAddLessonPopup(true);
             }}
           >
             +
@@ -319,7 +260,7 @@ export const LessonFormScreen = ({ lesson }: Props) => {
             className="mr-8"
             type="button"
             onClick={() => {
-              router.push('/lessons');
+              router.push('/courses');
             }}
           >
             Back to the list
@@ -337,21 +278,16 @@ export const LessonFormScreen = ({ lesson }: Props) => {
           </Button>
         </div>
       </form>
-      {addPuzzlePopup && (
-        <Modal show position="center" onClose={() => setAddPuzzlePopup(false)}>
-          <Modal.Header>Add new puzzle</Modal.Header>
+      {addLessonPopup && (
+        <Modal show position="center" onClose={() => setAddLessonPopup(false)}>
+          <Modal.Header>Add lesson to course</Modal.Header>
           <Modal.Body>
-            <PuzzleFormScreen
-              onSaveSuccess={(puzzle) => {
-                appendPuzzle(puzzle);
-                setAddPuzzlePopup(false);
-              }}
-            />
+            {/* appendLesson(puzzle);
+          setAddLessonPopup(false); */}
           </Modal.Body>
           <Modal.Footer>
-            {/* <Button onClick={() => setOpenModal(false)}>I accept</Button> */}
-            <Button color="gray" onClick={() => setAddPuzzlePopup(false)}>
-              Decline
+            <Button color="gray" onClick={() => setAddLessonPopup(false)}>
+              Close
             </Button>
           </Modal.Footer>
         </Modal>
