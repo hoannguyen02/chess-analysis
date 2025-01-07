@@ -5,7 +5,7 @@ export type Course = {
   title: string;
   description?: string;
   objectives?: string[];
-  lessons: { id: string }[];
+  lessons: { lessonId: string }[];
   tags?: string[];
   difficulty?: DifficultyType;
   status: StatusType;
@@ -22,5 +22,5 @@ export type CourseExpanded = {
   status: StatusType;
   _id?: string;
   isPublic?: boolean;
-  lessons: { id: Lesson }[];
+  lessons: { lessonId: Lesson }[];
 };

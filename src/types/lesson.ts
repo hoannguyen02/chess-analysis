@@ -13,6 +13,7 @@ export type Lesson = {
   difficulty?: DifficultyType;
   status: StatusType;
   _id?: string;
+  id?: string;
   isPublic?: boolean;
 };
 
@@ -20,7 +21,7 @@ export type LessonExpanded = {
   title: string;
   description?: string;
   objectives?: string[];
-  puzzles: { id: Puzzle }[];
+  puzzles: { puzzleId: Puzzle }[];
   contents?: { type: ContentType; value: string }[];
   tags?: string[];
   difficulty?: DifficultyType;

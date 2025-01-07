@@ -6,19 +6,13 @@ import useBeforeUnload from '@/hooks/useBeforeUnload';
 import usePreventRouteChange from '@/hooks/usePreventRouteChange';
 import { Course, CourseExpanded } from '@/types/course';
 import { Lesson } from '@/types/lesson';
-import {
-  Button,
-  Checkbox,
-  Label,
-  Modal,
-  Select,
-  TextInput,
-} from 'flowbite-react';
+import { Button, Checkbox, Label, Select, TextInput } from 'flowbite-react';
 import { useRouter } from 'next/router';
 import { useState } from 'react';
 import { DndProvider } from 'react-dnd';
 import { HTML5Backend } from 'react-dnd-html5-backend';
 import { SubmitHandler, useFieldArray, useForm } from 'react-hook-form';
+import LessonSearchModal from './LessonsSearchModal';
 
 type Props = {
   course?: CourseExpanded;
@@ -29,6 +23,7 @@ type CourseForm = Course & {
 };
 export const CourseFormScreen = ({ course }: Props) => {
   const [addLessonPopup, setAddLessonPopup] = useState(false);
+  console.log('course', course);
 
   const {
     register, // Register inputs
@@ -43,7 +38,8 @@ export const CourseFormScreen = ({ course }: Props) => {
       ? {
           ...course,
           lessons: course.lessons.map((lesson) => ({
-            ...lesson.id,
+            ...lesson.lessonId,
+            lessonId: lesson.lessonId._id,
           })),
         }
       : {
@@ -279,18 +275,15 @@ export const CourseFormScreen = ({ course }: Props) => {
         </div>
       </form>
       {addLessonPopup && (
-        <Modal show position="center" onClose={() => setAddLessonPopup(false)}>
-          <Modal.Header>Add lesson to course</Modal.Header>
-          <Modal.Body>
-            {/* appendLesson(puzzle);
-          setAddLessonPopup(false); */}
-          </Modal.Body>
-          <Modal.Footer>
-            <Button color="gray" onClick={() => setAddLessonPopup(false)}>
-              Close
-            </Button>
-          </Modal.Footer>
-        </Modal>
+        <LessonSearchModal
+          onClose={() => {
+            setAddLessonPopup(false);
+          }}
+          selectedLessons={watch('lessons')}
+          onAddLessons={(lessons: Lesson[]) => {
+            setValue('lessons', lessons, { shouldDirty: true });
+          }}
+        />
       )}
     </div>
   );

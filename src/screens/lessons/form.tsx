@@ -45,7 +45,8 @@ export const LessonFormScreen = ({ lesson }: Props) => {
       ? {
           ...lesson,
           puzzles: lesson.puzzles.map((puzzle) => ({
-            ...puzzle.id,
+            ...puzzle.puzzleId,
+            puzzleId: puzzle.puzzleId._id,
           })),
         }
       : {
