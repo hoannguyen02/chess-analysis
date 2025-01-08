@@ -4,20 +4,36 @@ import { ROUTE_CHANGE_MESSAGE } from '@/constants/route';
 import { useAppContext } from '@/contexts/AppContext';
 import useBeforeUnload from '@/hooks/useBeforeUnload';
 import usePreventRouteChange from '@/hooks/usePreventRouteChange';
+import { Lesson } from '@/types/lesson';
 import { Puzzle } from '@/types/puzzle';
+import { fetcher } from '@/utils/fetcher';
 import { Button, Checkbox, Label, Select, TextInput } from 'flowbite-react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+import { useState } from 'react';
 import { SubmitHandler, useFieldArray, useForm } from 'react-hook-form';
 import { VscEdit } from 'react-icons/vsc';
+import useSWR from 'swr';
+import { AddToLessonsModal } from './AddToLessonsModal';
 
 type Props = {
   puzzle?: Puzzle;
   onSaveSuccess?: (puzzle: Puzzle) => void;
 };
 export const PuzzleFormScreen = ({ puzzle, onSaveSuccess }: Props) => {
+  const { themes, apiDomain } = useAppContext();
+  const [addToLessonsPopup, setAddToLessonsPopup] = useState(false);
+
+  const {
+    data: lessons,
+    error,
+    isLoading,
+    mutate: refreshLessons,
+  } = useSWR<Lesson[]>(
+    puzzle?._id ? `${apiDomain}/v1/puzzles/${puzzle?._id}/lessons` : undefined,
+    fetcher
+  );
   const router = useRouter();
-  const { themes } = useAppContext();
   const {
     register, // Register inputs
     control,
@@ -271,6 +287,36 @@ export const PuzzleFormScreen = ({ puzzle, onSaveSuccess }: Props) => {
           </Button>
         </div>
 
+        {lessons?.length && (
+          <div className="mb-16">
+            Lessons:
+            <div className="grid grid-cols-[70%_15%_15%] mb-2 gap-4">
+              <Label className="font-bold">Title</Label>
+              <Label className="font-bold">Difficulty</Label>
+              <Label className="font-bold">Status</Label>
+            </div>
+            {lessons.map((lessons, index) => (
+              <div
+                key={`lessons-${index}`}
+                className="grid grid-cols-[70%_15%_15%] mb-2 gap-4"
+              >
+                <Label>{lessons.title}</Label>
+                <Label>{lessons.difficulty}</Label>
+                <Label>{lessons.status}</Label>
+              </div>
+            ))}
+            <Button
+              type="button"
+              outline
+              onClick={() => {
+                setAddToLessonsPopup(true);
+              }}
+            >
+              Add this puzzle to another lessons
+            </Button>
+          </div>
+        )}
+
         <div className="flex mt-4">
           <Button
             className="mr-8"
@@ -294,6 +340,16 @@ export const PuzzleFormScreen = ({ puzzle, onSaveSuccess }: Props) => {
           </Button>
         </div>
       </form>
+      {puzzle?._id && addToLessonsPopup && (
+        <AddToLessonsModal
+          onClose={() => {
+            setAddToLessonsPopup(false);
+          }}
+          selectedLessons={lessons || []}
+          puzzleId={puzzle?._id}
+          onSaveSuccess={refreshLessons}
+        />
+      )}
     </div>
   );
 };

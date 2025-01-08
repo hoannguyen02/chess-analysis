@@ -4,6 +4,7 @@ import { PUZZLE_RATING, PuzzleStatues } from '@/constants/puzzle';
 import { ROUTE_CHANGE_MESSAGE } from '@/constants/route';
 import { useAppContext } from '@/contexts/AppContext';
 import useBeforeUnload from '@/hooks/useBeforeUnload';
+import useDialog from '@/hooks/useDialog';
 import usePreventRouteChange from '@/hooks/usePreventRouteChange';
 import { Course } from '@/types/course';
 import { Lesson, LessonExpanded } from '@/types/lesson';
@@ -18,12 +19,12 @@ import {
   TextInput,
 } from 'flowbite-react';
 import { useRouter } from 'next/router';
-import { useMemo, useState } from 'react';
+import { useState } from 'react';
 import { DndProvider } from 'react-dnd';
 import { HTML5Backend } from 'react-dnd-html5-backend';
 import { SubmitHandler, useFieldArray, useForm } from 'react-hook-form';
 import useSWR from 'swr';
-import { AddToCourseModal } from './AddToCourseModal';
+import { AddToCoursesModal } from './AddToCoursesModal';
 import { PuzzlesSearchModal } from './PuzzlesSearchModal';
 
 type Props = {
@@ -36,23 +37,29 @@ type LessonForm = Lesson & {
 export const LessonFormScreen = ({ lesson }: Props) => {
   const { apiDomain } = useAppContext();
 
-  const fetchCoursesKey = useMemo(
-    () =>
-      lesson?._id
-        ? `${apiDomain}/v1/lessons/${lesson?._id}/courses`
-        : undefined,
-    [apiDomain, lesson?._id]
-  );
-
   const {
     data: courses,
     error,
     isLoading,
     mutate: refreshCourses,
-  } = useSWR<Course[]>(fetchCoursesKey, fetcher);
+  } = useSWR<Course[]>(
+    lesson?._id ? `${apiDomain}/v1/lessons/${lesson?._id}/courses` : undefined,
+    fetcher
+  );
 
-  const [addPuzzlePopup, setAddPuzzlePopup] = useState(false);
+  const [addPuzzlesPopup, setAddPuzzlePopup] = useState(false);
   const [addToCoursesPopup, setAddToCoursesPopup] = useState(false);
+  const {
+    open: isOpenContentPuzzle,
+    data: addContentPuzzleData,
+    onCloseDialog: closeContentPuzzleDialog,
+    onOpenDialog: openContentPuzzleDialog,
+  } = useDialog<{
+    puzzles: Puzzle[];
+    contentIdex: number;
+  }>();
+
+  console.log('addContentPuzzleData', addContentPuzzleData);
 
   const {
     register, // Register inputs
@@ -63,6 +70,8 @@ export const LessonFormScreen = ({ lesson }: Props) => {
     setValue,
     getValues,
   } = useForm<LessonForm>({
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-ignore
     defaultValues: lesson
       ? {
           ...lesson,
@@ -244,7 +253,7 @@ export const LessonFormScreen = ({ lesson }: Props) => {
             </div>
           ))}
           <Button type="button" outline size="sm" onClick={addObjective}>
-            +
+            Add objective
           </Button>
         </div>
         <div className="mb-4">
@@ -259,7 +268,49 @@ export const LessonFormScreen = ({ lesson }: Props) => {
                 className="mb-4"
               >
                 <div className="grid grid-cols-[auto_50px] mb-2 gap-4 place-items-center">
-                  <Textarea rows={3} {...register(`contents.${index}.value`)} />
+                  <div className="flex flex-col w-full">
+                    <Textarea
+                      rows={3}
+                      {...register(`contents.${index}.value`)}
+                    />
+                    <div className="mt-2">
+                      <div className="grid grid-cols-3">
+                        <Label className="font-bold">Title</Label>
+                        <Label className="font-bold">Difficulty</Label>
+                        <Label></Label>
+                      </div>
+                      {field.contentPuzzles.map((p, pIndex) => (
+                        <div
+                          key={`content-puzzle-${index}-${pIndex}`}
+                          className="grid grid-cols-3"
+                        >
+                          <Label>{p.puzzleId.title}</Label>
+                          <Label>{p.puzzleId.difficulty}</Label>
+                          <a
+                            className="text-[12px] underline"
+                            href={`/puzzles/${p.puzzleId._id}`}
+                          >
+                            Details
+                          </a>
+                        </div>
+                      ))}
+                      <Button
+                        outline
+                        className="mt-2"
+                        type="button"
+                        onClick={() => {
+                          openContentPuzzleDialog({
+                            // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+                            // @ts-ignore
+                            puzzles: field.contentPuzzles,
+                            contentIdex: index,
+                          });
+                        }}
+                      >
+                        Add puzzle
+                      </Button>
+                    </div>
+                  </div>
                   <div className="">
                     <Button
                       outline
@@ -278,9 +329,11 @@ export const LessonFormScreen = ({ lesson }: Props) => {
             type="button"
             outline
             size="sm"
-            onClick={() => appendContent({ type: 'text', value: '' })}
+            onClick={() =>
+              appendContent({ type: 'text', value: '', contentPuzzles: [] })
+            }
           >
-            +
+            Add content
           </Button>
         </div>
 
@@ -329,11 +382,11 @@ export const LessonFormScreen = ({ lesson }: Props) => {
               setAddPuzzlePopup(true);
             }}
           >
-            +
+            Add puzzle
           </Button>
         </div>
 
-        {courses?.length && (
+        {courses && courses?.length > 0 && (
           <div className="mb-16">
             Courses:
             <div className="grid grid-cols-[70%_15%_15%] mb-2 gap-4">
@@ -386,7 +439,7 @@ export const LessonFormScreen = ({ lesson }: Props) => {
           </Button>
         </div>
       </form>
-      {addPuzzlePopup && (
+      {addPuzzlesPopup && (
         <PuzzlesSearchModal
           onClose={() => {
             setAddPuzzlePopup(false);
@@ -395,14 +448,41 @@ export const LessonFormScreen = ({ lesson }: Props) => {
           onAddPuzzles={(puzzles: Puzzle[]) => {
             const currentPuzzles = watch('puzzles');
             const updatedPuzzles = [...currentPuzzles, ...puzzles];
+            // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+            // @ts-ignore
             setValue('puzzles', updatedPuzzles, {
               shouldDirty: true,
             });
           }}
         />
       )}
+      {isOpenContentPuzzle && (
+        <PuzzlesSearchModal
+          onClose={() => {
+            closeContentPuzzleDialog();
+          }}
+          selectedPuzzles={addContentPuzzleData?.puzzles || []}
+          onAddPuzzles={(addedItems: Puzzle[]) => {
+            const { puzzles, contentIdex } = addContentPuzzleData || {};
+            const contents = watch('contents') || [];
+            const newContents = [...contents];
+            if (contentIdex !== undefined && newContents[contentIdex]) {
+              // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+              // @ts-ignore
+              newContents[contentIdex].contentPuzzles = (puzzles || []).concat(
+                // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+                // @ts-ignore
+                addedItems.map((p) => ({ puzzleId: p }))
+              );
+              setValue('contents', newContents, {
+                shouldDirty: true,
+              });
+            }
+          }}
+        />
+      )}
       {lesson?._id && addToCoursesPopup && (
-        <AddToCourseModal
+        <AddToCoursesModal
           onClose={() => {
             setAddToCoursesPopup(false);
           }}

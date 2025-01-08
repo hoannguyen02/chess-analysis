@@ -8,7 +8,11 @@ export type Lesson = {
   description?: string;
   objectives?: string[];
   puzzles: { puzzleId: string }[];
-  contents?: { type: ContentType; value: string }[];
+  contents?: {
+    type: ContentType;
+    value: string;
+    contentPuzzles: { puzzleId: string }[];
+  }[];
   tags?: string[];
   difficulty?: DifficultyType;
   status: StatusType;
@@ -22,7 +26,11 @@ export type LessonExpanded = {
   description?: string;
   objectives?: string[];
   puzzles: { puzzleId: Puzzle }[];
-  contents?: { type: ContentType; value: string }[];
+  contents?: {
+    type: ContentType;
+    value: string;
+    contentPuzzles: { puzzleId: Puzzle }[];
+  }[];
   tags?: string[];
   difficulty?: DifficultyType;
   status: StatusType;

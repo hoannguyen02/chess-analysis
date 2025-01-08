@@ -1,7 +1,7 @@
 import DebouncedInput from '@/components/DebounceInput';
 import { PUZZLE_RATING, PuzzleStatues } from '@/constants/puzzle';
 import { useAppContext } from '@/contexts/AppContext';
-import { Course } from '@/types/lesson';
+import { Lesson } from '@/types/lesson';
 import { PuzzleDifficulty } from '@/types/puzzle';
 import { StatusType } from '@/types/status';
 import { fetcher } from '@/utils/fetcher';
@@ -18,22 +18,22 @@ import {
 import React, { useMemo, useState } from 'react';
 import useSWR from 'swr';
 
-interface LessonSearchModalProps {
+interface Props {
   onClose: () => void;
-  selectedCourses: Course[];
-  lessonId: string;
+  selectedLessons: Lesson[];
+  puzzleId: string;
   onSaveSuccess: () => void;
 }
 
-export const AddToCourseModal: React.FC<LessonSearchModalProps> = ({
+export const AddToLessonsModal: React.FC<Props> = ({
   onClose,
-  selectedCourses,
-  lessonId,
+  selectedLessons,
+  puzzleId,
   onSaveSuccess,
 }) => {
   const [loading, setLoading] = useState(false);
   const { apiDomain } = useAppContext();
-  const [selectedInModal, setSelectedInModal] = useState<Course[]>([]);
+  const [selectedInModal, setSelectedInModal] = useState<Lesson[]>([]);
   const [difficulty, setDifficulty] = useState<PuzzleDifficulty | ''>('');
   const [title, setTitle] = useState<string | ''>('');
   const [currentPage, setCurrentPage] = useState(1);
@@ -46,7 +46,7 @@ export const AddToCourseModal: React.FC<LessonSearchModalProps> = ({
       status,
       title,
       page: currentPage,
-      excludedIds: selectedCourses.map((l) => l._id).join(','),
+      excludedIds: selectedLessons.map((l) => l._id).join(','),
     };
 
     const filteredQuery = Object.entries(queryObject)
@@ -58,15 +58,15 @@ export const AddToCourseModal: React.FC<LessonSearchModalProps> = ({
       .join('&');
 
     return filteredQuery;
-  }, [difficulty, status, title, currentPage, selectedCourses]);
+  }, [difficulty, status, title, currentPage, selectedLessons]);
 
   const queryKey = useMemo(
-    () => `${apiDomain}/v1/courses?${queryString}`,
+    () => `${apiDomain}/v1/lessons?${queryString}`,
     [apiDomain, queryString]
   );
 
   const { data, error, isLoading } = useSWR<{
-    items: Course[];
+    items: Lesson[];
     total: number;
     hasNext: boolean;
     hasPrev: boolean;
@@ -76,7 +76,7 @@ export const AddToCourseModal: React.FC<LessonSearchModalProps> = ({
     lastPage: number;
   }>(queryKey, fetcher);
 
-  const handleCheckboxChange = (lesson: Course) => {
+  const handleCheckboxChange = (lesson: Lesson) => {
     setSelectedInModal((prev) =>
       prev.find((l) => l._id === lesson._id)
         ? prev.filter((l) => l._id !== lesson._id)
@@ -84,20 +84,20 @@ export const AddToCourseModal: React.FC<LessonSearchModalProps> = ({
     );
   };
 
-  const handleAddCourses = async () => {
+  const handleAddLessons = async () => {
     setLoading(true);
     try {
-      await axios.post(`${apiDomain}/v1/courses/add-multiple`, {
-        lessonId,
-        courseIds: selectedInModal.map((l) => l._id),
+      await axios.post(`${apiDomain}/v1/lessons/add-multiple`, {
+        puzzleId,
+        lessonIds: selectedInModal.map((l) => l._id),
       });
 
-      alert('Lesson added to selected courses successfully!');
+      alert('Puzzle added to selected lessons successfully!');
       onSaveSuccess();
       onClose();
     } catch (error) {
-      console.error('Error adding lesson to courses:', error);
-      alert('Failed to add lesson to courses.');
+      console.error('Error adding puzzle to lessons:', error);
+      alert('Failed to add puzzle to lessons.');
     } finally {
       setLoading(false);
     }
@@ -108,7 +108,7 @@ export const AddToCourseModal: React.FC<LessonSearchModalProps> = ({
 
   return (
     <Modal show onClose={onClose} position="center">
-      <Modal.Header>Search and Add Courses</Modal.Header>
+      <Modal.Header>Search and Add Lessons</Modal.Header>
       <Modal.Body>
         <div className="space-y-4">
           <div className="flex flex-col">
@@ -206,10 +206,10 @@ export const AddToCourseModal: React.FC<LessonSearchModalProps> = ({
           />
           <Button
             className="mt-4"
-            onClick={handleAddCourses}
+            onClick={handleAddLessons}
             disabled={loading}
           >
-            Add Selected Courses
+            Add Selected Lessons
           </Button>
         </div>
       </Modal.Footer>

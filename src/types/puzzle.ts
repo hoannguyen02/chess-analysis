@@ -32,6 +32,5 @@ export type Puzzle = {
   title?: string;
   phase?: PuzzlePhase;
   _id?: string;
-  puzzleId?: string;
-  lessons?: string[];
+  puzzleId?: any;
 };
