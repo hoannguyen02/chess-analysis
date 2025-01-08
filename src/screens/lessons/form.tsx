@@ -2,10 +2,13 @@ import { DraggableItem } from '@/components/DraggableItem';
 import { TitlePage } from '@/components/TitlePage';
 import { PUZZLE_RATING, PuzzleStatues } from '@/constants/puzzle';
 import { ROUTE_CHANGE_MESSAGE } from '@/constants/route';
+import { useAppContext } from '@/contexts/AppContext';
 import useBeforeUnload from '@/hooks/useBeforeUnload';
 import usePreventRouteChange from '@/hooks/usePreventRouteChange';
+import { Course } from '@/types/course';
 import { Lesson, LessonExpanded } from '@/types/lesson';
 import { Puzzle } from '@/types/puzzle';
+import { fetcher } from '@/utils/fetcher';
 import {
   Button,
   Checkbox,
@@ -15,10 +18,12 @@ import {
   TextInput,
 } from 'flowbite-react';
 import { useRouter } from 'next/router';
-import { useState } from 'react';
+import { useMemo, useState } from 'react';
 import { DndProvider } from 'react-dnd';
 import { HTML5Backend } from 'react-dnd-html5-backend';
 import { SubmitHandler, useFieldArray, useForm } from 'react-hook-form';
+import useSWR from 'swr';
+import { AddToCourseModal } from './AddToCourseModal';
 import { PuzzlesSearchModal } from './PuzzlesSearchModal';
 
 type Props = {
@@ -29,7 +34,25 @@ type LessonForm = Lesson & {
   puzzles: Puzzle[];
 };
 export const LessonFormScreen = ({ lesson }: Props) => {
+  const { apiDomain } = useAppContext();
+
+  const fetchCoursesKey = useMemo(
+    () =>
+      lesson?._id
+        ? `${apiDomain}/v1/lessons/${lesson?._id}/courses`
+        : undefined,
+    [apiDomain, lesson?._id]
+  );
+
+  const {
+    data: courses,
+    error,
+    isLoading,
+    mutate: refreshCourses,
+  } = useSWR<Course[]>(fetchCoursesKey, fetcher);
+
   const [addPuzzlePopup, setAddPuzzlePopup] = useState(false);
+  const [addToCoursesPopup, setAddToCoursesPopup] = useState(false);
 
   const {
     register, // Register inputs
@@ -202,7 +225,7 @@ export const LessonFormScreen = ({ lesson }: Props) => {
           Objectives:
           {objectives.map((objective, index) => (
             <div
-              key={objective}
+              key={`${index}-objective`}
               className="flex justify-between items-center mb-2"
             >
               <TextInput
@@ -262,7 +285,7 @@ export const LessonFormScreen = ({ lesson }: Props) => {
         </div>
 
         <div className="mb-4">
-          Lessons:
+          Puzzles:
           <div className="grid grid-cols-[50%_10%_25%_5%] mb-2 gap-4 place-items-center">
             <Label>Title</Label>
             <Label>Difficulty</Label>
@@ -310,6 +333,36 @@ export const LessonFormScreen = ({ lesson }: Props) => {
           </Button>
         </div>
 
+        {courses?.length && (
+          <div className="mb-16">
+            Courses:
+            <div className="grid grid-cols-[70%_15%_15%] mb-2 gap-4">
+              <Label className="font-bold">Title</Label>
+              <Label className="font-bold">Difficulty</Label>
+              <Label className="font-bold">Status</Label>
+            </div>
+            {courses.map((course, index) => (
+              <div
+                key={`course-${index}`}
+                className="grid grid-cols-[70%_15%_15%] mb-2 gap-4"
+              >
+                <Label>{course.title}</Label>
+                <Label>{course.difficulty}</Label>
+                <Label>{course.status}</Label>
+              </div>
+            ))}
+            <Button
+              type="button"
+              outline
+              onClick={() => {
+                setAddToCoursesPopup(true);
+              }}
+            >
+              Add this lesson to another courses
+            </Button>
+          </div>
+        )}
+
         <div className="flex mt-4">
           <Button
             className="mr-8"
@@ -346,6 +399,16 @@ export const LessonFormScreen = ({ lesson }: Props) => {
               shouldDirty: true,
             });
           }}
+        />
+      )}
+      {lesson?._id && addToCoursesPopup && (
+        <AddToCourseModal
+          onClose={() => {
+            setAddToCoursesPopup(false);
+          }}
+          selectedCourses={courses || []}
+          lessonId={lesson?._id}
+          onSaveSuccess={refreshCourses}
         />
       )}
     </div>

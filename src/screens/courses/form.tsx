@@ -176,7 +176,7 @@ export const CourseFormScreen = ({ course }: Props) => {
           Objectives:
           {objectives.map((objective, index) => (
             <div
-              key={objective}
+              key={`${index}-objective`}
               className="flex justify-between items-center mb-2"
             >
               <TextInput

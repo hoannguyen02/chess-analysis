@@ -155,7 +155,7 @@ export const CourseListScreen = () => {
       <div className="flex justify-center mt-4">
         <Pagination
           currentPage={currentPage}
-          totalPages={data.total}
+          totalPages={data.lastPage}
           onPageChange={onPageChange}
         />
       </div>
