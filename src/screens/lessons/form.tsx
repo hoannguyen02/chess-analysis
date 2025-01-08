@@ -287,6 +287,7 @@ export const LessonFormScreen = ({ lesson }: Props) => {
                           <a
                             className="text-[12px] underline"
                             href={`/puzzles/${p.puzzleId._id}`}
+                            target="_blank"
                           >
                             Details
                           </a>
