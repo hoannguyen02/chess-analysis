@@ -1,32 +1,32 @@
-import React, { useEffect, useMemo, useRef, useState } from 'react';
-import { Chessboard } from 'react-chessboard';
-import { Chess } from 'chess.js';
-import { Piece, Square } from 'react-chessboard/dist/chessboard/types';
-import { PromotionType } from '@/types/promotion';
-import { VscArrowLeft } from 'react-icons/vsc';
+import { PIECE_MAP } from '@/constants/piece';
+import { PUZZLE_RATING } from '@/constants/puzzle';
 import {
   DEFAULT_ENGINE_MOVE_DELAY_TIME,
   DEFAULT_SOLUTION_DELAY_TIME,
 } from '@/constants/time-out';
+import { useAppContext } from '@/contexts/AppContext';
 import { useCustomBoard } from '@/hooks/useCustomBoard';
-import { useRouter } from 'next/router';
+import { UppercasePieceType } from '@/types/piece';
+import { PromotionType } from '@/types/promotion';
+import { Puzzle, PuzzlePreMove, PuzzleSolutionMove } from '@/types/puzzle';
+import { getActivePlayerFromFEN } from '@/utils/get-player-name-from-fen';
+import { Chess } from 'chess.js';
 import { Button } from 'flowbite-react';
+import html2canvas from 'html2canvas';
+import { useRouter } from 'next/router';
+import React, { useEffect, useMemo, useRef, useState } from 'react';
+import { Chessboard } from 'react-chessboard';
+import { Piece, Square } from 'react-chessboard/dist/chessboard/types';
 import {
-  VscLightbulbSparkle,
-  VscSync,
+  VscArrowLeft,
+  VscCheckAll,
   VscChevronLeft,
   VscChevronRight,
-  VscCheckAll,
   VscError,
+  VscLightbulbSparkle,
   VscPass,
+  VscSync,
 } from 'react-icons/vsc';
-import { getActivePlayerFromFEN } from '@/utils/get-player-name-from-fen';
-import html2canvas from 'html2canvas';
-import { Puzzle, PuzzlePreMove, PuzzleSolutionMove } from '@/types/puzzle';
-import { useAppContext } from '@/contexts/AppContext';
-import { PUZZLE_RATING } from '@/constants/puzzle';
-import { PIECE_MAP } from '@/constants/piece';
-import { UppercasePieceType } from '@/types/piece';
 import ConfettiEffect from './ConfettiEffect';
 
 type PuzzleProps = {
@@ -476,7 +476,7 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({ puzzle }) => {
       // Create a link element and trigger download
       const link = document.createElement('a');
       link.href = imgURL;
-      link.download = 'phongchess.png';
+      link.download = 'LIMA-Chess.png';
       link.click();
     } catch (error) {
       console.error('Error exporting image:', error);
