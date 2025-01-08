@@ -7,7 +7,7 @@ export type Lesson = {
   title: string;
   description?: string;
   objectives?: string[];
-  puzzles: { id: string }[];
+  puzzles: { puzzleId: string }[];
   contents?: { type: ContentType; value: string }[];
   tags?: string[];
   difficulty?: DifficultyType;

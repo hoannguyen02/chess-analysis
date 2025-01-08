@@ -23,7 +23,6 @@ type CourseForm = Course & {
 };
 export const CourseFormScreen = ({ course }: Props) => {
   const [addLessonPopup, setAddLessonPopup] = useState(false);
-  console.log('course', course);
 
   const {
     register, // Register inputs
@@ -54,18 +53,16 @@ export const CourseFormScreen = ({ course }: Props) => {
   // Warn on internal navigation
   usePreventRouteChange(ROUTE_CHANGE_MESSAGE, isDirty);
 
-  const {
-    fields: lessonFields,
-    append: appendLesson,
-    remove: removeLesson,
-  } = useFieldArray({
+  const { fields: lessonFields, remove: removeLesson } = useFieldArray({
     control,
     name: 'lessons',
   });
 
   // Handle form submission
   const onSubmit: SubmitHandler<CourseForm> = async (data) => {
-    const { _id, ...rest } = data;
+    const { _id, lessons, ...rest } = data;
+    const lessonIds = lessons.map((l: Lesson) => ({ lessonId: l._id }));
+    const payload = { ...rest, lessons: lessonIds };
     try {
       const apiDomain = process.env.NEXT_PUBLIC_PHONG_CHESS_DOMAIN;
       let request;
@@ -73,13 +70,13 @@ export const CourseFormScreen = ({ course }: Props) => {
         request = fetch(`${apiDomain}/v1/courses/${_id}`, {
           method: 'PUT',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(rest),
+          body: JSON.stringify(payload),
         });
       } else {
         request = fetch(`${apiDomain}/v1/courses`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(rest),
+          body: JSON.stringify(payload),
         });
       }
       const response = await request;
@@ -281,7 +278,10 @@ export const CourseFormScreen = ({ course }: Props) => {
           }}
           selectedLessons={watch('lessons')}
           onAddLessons={(lessons: Lesson[]) => {
-            setValue('lessons', lessons, { shouldDirty: true });
+            const currentLessons = watch('lessons');
+            const updatedLessons = [...currentLessons, ...lessons];
+
+            setValue('lessons', updatedLessons, { shouldDirty: true });
           }}
         />
       )}

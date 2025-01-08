@@ -106,7 +106,7 @@ export const PuzzleFormScreen = ({ puzzle, onSaveSuccess }: Props) => {
           <TextInput
             id="title"
             type="text"
-            placeholder="Title of puzzle - leave it blank if not needed"
+            placeholder="Title of puzzle - Should have clear name so can easy to find and added it to lesson later on"
             {...register('title')}
           />
         </div>

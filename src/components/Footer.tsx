@@ -6,7 +6,7 @@ export const Footer = () => {
         textAlign: 'center',
       }}
     >
-      <p>© {new Date().getFullYear()} PhongChess. All Rights Reserved.</p>
+      <p>© {new Date().getFullYear()} LIMA Chess. All Rights Reserved.</p>
     </footer>
   );
 };

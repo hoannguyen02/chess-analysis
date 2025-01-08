@@ -10,7 +10,6 @@ import {
   Button,
   Checkbox,
   Label,
-  Modal,
   Select,
   Textarea,
   TextInput,
@@ -20,7 +19,7 @@ import { useState } from 'react';
 import { DndProvider } from 'react-dnd';
 import { HTML5Backend } from 'react-dnd-html5-backend';
 import { SubmitHandler, useFieldArray, useForm } from 'react-hook-form';
-import { PuzzleFormScreen } from '../puzzles/form';
+import { PuzzlesSearchModal } from './PuzzlesSearchModal';
 
 type Props = {
   lesson?: LessonExpanded;
@@ -61,11 +60,7 @@ export const LessonFormScreen = ({ lesson }: Props) => {
   // Warn on internal navigation
   usePreventRouteChange(ROUTE_CHANGE_MESSAGE, isDirty);
 
-  const {
-    fields: puzzleFields,
-    append: appendPuzzle,
-    remove: removePuzzle,
-  } = useFieldArray({
+  const { fields: puzzleFields, remove: removePuzzle } = useFieldArray({
     control,
     name: 'puzzles',
   });
@@ -81,7 +76,9 @@ export const LessonFormScreen = ({ lesson }: Props) => {
 
   // Handle form submission
   const onSubmit: SubmitHandler<LessonForm> = async (data) => {
-    const { _id, ...rest } = data;
+    const { _id, puzzles, ...rest } = data;
+    const puzzleIds = puzzles.map((p: Puzzle) => ({ puzzleId: p._id }));
+    const payload = { ...rest, puzzles: puzzleIds };
     try {
       const apiDomain = process.env.NEXT_PUBLIC_PHONG_CHESS_DOMAIN;
       let request;
@@ -89,13 +86,13 @@ export const LessonFormScreen = ({ lesson }: Props) => {
         request = fetch(`${apiDomain}/v1/lessons/${_id}`, {
           method: 'PUT',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(rest),
+          body: JSON.stringify(payload),
         });
       } else {
         request = fetch(`${apiDomain}/v1/lessons`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(rest),
+          body: JSON.stringify(payload),
         });
       }
       const response = await request;
@@ -265,11 +262,10 @@ export const LessonFormScreen = ({ lesson }: Props) => {
         </div>
 
         <div className="mb-4">
-          Puzzles:
-          <div className="grid grid-cols-[50%_10%_25%_5%_5%] mb-2 gap-4 place-items-center">
-            <Label>Fen</Label>
+          Lessons:
+          <div className="grid grid-cols-[50%_10%_25%_5%] mb-2 gap-4 place-items-center">
+            <Label>Title</Label>
             <Label>Difficulty</Label>
-            <Label>Theme</Label>
             <Label>Status</Label>
             <Label>Actions</Label>
           </div>
@@ -283,10 +279,9 @@ export const LessonFormScreen = ({ lesson }: Props) => {
                   key={field._id}
                   className="mb-4"
                 >
-                  <div className="grid grid-cols-[50%_10%_25%_5%_5%] mb-2 gap-4 place-items-center">
-                    <Label>{field.fen}</Label>
+                  <div className="grid grid-cols-[50%_10%_25%_5%] mb-2 gap-4 place-items-center">
+                    <Label>{field.title}</Label>
                     <Label>{field.difficulty}</Label>
-                    <Label>{field.theme}</Label>
                     <Label>{field.status}</Label>
                     <div className="">
                       <Button
@@ -339,23 +334,19 @@ export const LessonFormScreen = ({ lesson }: Props) => {
         </div>
       </form>
       {addPuzzlePopup && (
-        <Modal show position="center" onClose={() => setAddPuzzlePopup(false)}>
-          <Modal.Header>Add new puzzle</Modal.Header>
-          <Modal.Body>
-            <PuzzleFormScreen
-              onSaveSuccess={(puzzle) => {
-                appendPuzzle(puzzle);
-                setAddPuzzlePopup(false);
-              }}
-            />
-          </Modal.Body>
-          <Modal.Footer>
-            {/* <Button onClick={() => setOpenModal(false)}>I accept</Button> */}
-            <Button color="gray" onClick={() => setAddPuzzlePopup(false)}>
-              Decline
-            </Button>
-          </Modal.Footer>
-        </Modal>
+        <PuzzlesSearchModal
+          onClose={() => {
+            setAddPuzzlePopup(false);
+          }}
+          selectedPuzzles={watch('puzzles')}
+          onAddPuzzles={(puzzles: Puzzle[]) => {
+            const currentPuzzles = watch('puzzles');
+            const updatedPuzzles = [...currentPuzzles, ...puzzles];
+            setValue('puzzles', updatedPuzzles, {
+              shouldDirty: true,
+            });
+          }}
+        />
       )}
     </div>
   );
