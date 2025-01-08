@@ -59,8 +59,6 @@ export const LessonFormScreen = ({ lesson }: Props) => {
     contentIdex: number;
   }>();
 
-  console.log('addContentPuzzleData', addContentPuzzleData);
-
   const {
     register, // Register inputs
     control,
