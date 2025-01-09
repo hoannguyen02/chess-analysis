@@ -286,7 +286,7 @@ export const LessonFormScreen = ({ lesson }: Props) => {
                           <Label>{p.puzzleId.difficulty}</Label>
                           <a
                             className="text-[12px] underline"
-                            href={`/puzzles/${p.puzzleId._id}`}
+                            href={`/settings/puzzles/${p.puzzleId._id}`}
                             target="_blank"
                           >
                             Details
@@ -420,7 +420,7 @@ export const LessonFormScreen = ({ lesson }: Props) => {
             className="mr-8"
             type="button"
             onClick={() => {
-              router.push('/lessons');
+              router.push('/settings/lessons');
             }}
           >
             Back to the list

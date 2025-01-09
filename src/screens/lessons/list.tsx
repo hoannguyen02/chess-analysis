@@ -66,7 +66,7 @@ export const LessonsListScreen = () => {
         Lessons List{' '}
         <Button
           onClick={() => {
-            router.push('/lessons/create');
+            router.push('/settings/lessons/create');
           }}
         >
           Add new
@@ -140,7 +140,7 @@ export const LessonsListScreen = () => {
                   <Table.Cell>{item.status}</Table.Cell>
                   <Table.Cell>
                     <a
-                      href={`/lessons/${item._id}`}
+                      href={`/settings/lessons/${item._id}`}
                       className="font-medium text-cyan-600 hover:underline dark:text-cyan-500"
                     >
                       Edit

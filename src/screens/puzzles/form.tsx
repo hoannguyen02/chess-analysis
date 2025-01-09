@@ -344,7 +344,7 @@ export const PuzzleFormScreen = ({ puzzle, onSaveSuccess }: Props) => {
             className="mr-8"
             type="button"
             onClick={() => {
-              router.push('/puzzles');
+              router.push('/settings/puzzles');
             }}
           >
             Back to the list

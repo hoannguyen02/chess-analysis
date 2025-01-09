@@ -75,7 +75,7 @@ export const PuzzleListScreen = () => {
         Puzzle List{' '}
         <Button
           onClick={() => {
-            router.push('/puzzles/create');
+            router.push('/settings/puzzles/create');
           }}
         >
           Add new
@@ -179,7 +179,7 @@ export const PuzzleListScreen = () => {
                   </Table.Cell>
                   <Table.Cell>
                     <a
-                      href={`/puzzles/${puzzle._id}`}
+                      href={`/settings/puzzles/${puzzle._id}`}
                       className="font-medium text-cyan-600 hover:underline dark:text-cyan-500"
                     >
                       Edit

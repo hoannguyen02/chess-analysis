@@ -43,15 +43,24 @@ export const MenuLeft = () => {
         Traps
       </Link>
       {/*  Role: User, Admin, Super */}
-      <Link href="/courses" className="mb-6 hover:text-[var(--p-highlight)]">
+      <Link
+        href="/settings/courses"
+        className="mb-6 hover:text-[var(--p-highlight)]"
+      >
         Courses
       </Link>
       {/*  Role: Admin, Super */}
-      <Link href="/lessons" className="mb-6 hover:text-[var(--p-highlight)]">
+      <Link
+        href="/settings/lessons"
+        className="mb-6 hover:text-[var(--p-highlight)]"
+      >
         Lessons
       </Link>
       {/*  Role: Admin, Super */}
-      <Link href="/puzzles" className="mb-6 hover:text-[var(--p-highlight)]">
+      <Link
+        href="/settings/puzzles"
+        className="mb-6 hover:text-[var(--p-highlight)]"
+      >
         All Puzzles
       </Link>
       <hr className="mt-8 border-color-[red] mb-8" />

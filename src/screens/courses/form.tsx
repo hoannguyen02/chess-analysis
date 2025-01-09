@@ -253,7 +253,7 @@ export const CourseFormScreen = ({ course }: Props) => {
             className="mr-8"
             type="button"
             onClick={() => {
-              router.push('/courses');
+              router.push('/settings/courses');
             }}
           >
             Back to the list
