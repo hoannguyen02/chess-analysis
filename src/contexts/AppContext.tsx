@@ -17,7 +17,7 @@ export const AppProvider: React.FC<{
   const value = useMemo(
     () => ({
       themes,
-      themeMap: themes.reduce((acc, theme) => {
+      themeMap: themes?.reduce((acc, theme) => {
         return {
           ...acc,
           [theme.code]: theme,

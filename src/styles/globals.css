@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  --p-bg: #607D8B;
+  --p-bg: rgb(31 41 55);
   --p-bg-hover: #A9B8C3;
   --s-bg: #F5A623;
   --p-text: #4A4A4A;
@@ -14,8 +14,6 @@
   --bg-light: #edeed1;
 }
 
-
-body {
-  font-family: 'Poppins', sans-serif;
-  
+html, body {
+  height: 100%;
 }

@@ -131,7 +131,7 @@ export const PuzzleFormScreen = ({ puzzle, onSaveSuccess }: Props) => {
   const handlePreview = () => {
     if (isValidFormValues()) {
       const encodedData = encodeURIComponent(JSON.stringify(getValues()));
-      window.open(`/puzzles/preview?data=${encodedData}`, '_blank');
+      window.open(`/settings/puzzles/preview?data=${encodedData}`, '_blank');
     }
   };
 

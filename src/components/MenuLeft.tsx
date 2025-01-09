@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import LanguageSwitcher from './LanguageSwitcher';
 
 export const MenuLeft = () => {
   return (
@@ -24,9 +25,6 @@ export const MenuLeft = () => {
           />
         </svg>
       </div>
-      <Link href="/" className={`mb-6 hover:text-[var(--p-highlight)]`}>
-        Home
-      </Link>
       <Link href="/openings" className="mb-6 hover:text-[var(--p-highlight)]">
         Openings
       </Link>
@@ -42,27 +40,35 @@ export const MenuLeft = () => {
       <Link href="/traps" className="mb-6 hover:text-[var(--p-highlight)]">
         Traps
       </Link>
+      <hr className="mb-4" />
       {/*  Role: User, Admin, Super */}
-      <Link
-        href="/settings/courses"
-        className="mb-6 hover:text-[var(--p-highlight)]"
-      >
-        Courses
-      </Link>
-      {/*  Role: Admin, Super */}
-      <Link
-        href="/settings/lessons"
-        className="mb-6 hover:text-[var(--p-highlight)]"
-      >
-        Lessons
-      </Link>
-      {/*  Role: Admin, Super */}
-      <Link
-        href="/settings/puzzles"
-        className="mb-6 hover:text-[var(--p-highlight)]"
-      >
-        All Puzzles
-      </Link>
+      Manage
+      <ul className="pl-4">
+        <li className="my-2">
+          <Link
+            href="/settings/courses"
+            className="mb-6 hover:text-[var(--p-highlight)]"
+          >
+            Courses
+          </Link>
+        </li>
+        <li className="mb-2">
+          <Link
+            href="/settings/lessons"
+            className="mb-6 hover:text-[var(--p-highlight)]"
+          >
+            Lessons
+          </Link>
+        </li>
+        <li className="mb-2">
+          <Link
+            href="/settings/puzzles"
+            className="mb-6 hover:text-[var(--p-highlight)]"
+          >
+            Puzzles
+          </Link>
+        </li>
+      </ul>
       <hr className="mt-8 border-color-[red] mb-8" />
       <Link
         href="/log-in"
@@ -70,6 +76,7 @@ export const MenuLeft = () => {
       >
         Log In
       </Link>
+      <LanguageSwitcher />
     </nav>
   );
 };
