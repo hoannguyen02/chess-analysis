@@ -1,6 +1,6 @@
 import Layout from '@/components/Layout';
 import { withThemes } from '@/HOF/withThemes';
-import { LessonsListScreen } from '@/screens/lessons/list';
+import { LessonsListScreen } from '@/setting-screens/lessons/list';
 
 const LessonsPage = () => {
   return (

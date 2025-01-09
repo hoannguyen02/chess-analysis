@@ -1,6 +1,6 @@
 import Layout from '@/components/Layout';
 import { withThemes } from '@/HOF/withThemes';
-import { LessonFormScreen } from '@/screens/lessons/form';
+import { LessonFormScreen } from '@/setting-screens/lessons/form';
 import { LessonExpanded } from '@/types/lesson';
 import {
   GetServerSideProps,

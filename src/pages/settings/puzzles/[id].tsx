@@ -1,6 +1,6 @@
 import Layout from '@/components/Layout';
 import { withThemes } from '@/HOF/withThemes';
-import { PuzzleFormScreen } from '@/screens/puzzles/form';
+import { PuzzleFormScreen } from '@/setting-screens/puzzles/form';
 import { Puzzle } from '@/types/puzzle';
 import {
   GetServerSideProps,

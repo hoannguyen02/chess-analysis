@@ -1,6 +1,6 @@
 import Layout from '@/components/Layout';
 import { withThemes } from '@/HOF/withThemes';
-import { CourseFormScreen } from '@/screens/courses/form';
+import { CourseFormScreen } from '@/setting-screens/courses/form';
 
 const CreateCoursePage = () => {
   return (

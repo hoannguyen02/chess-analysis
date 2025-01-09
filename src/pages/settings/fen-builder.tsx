@@ -1,6 +1,6 @@
 import Layout from '@/components/Layout';
 import { withThemes } from '@/HOF/withThemes';
-import { FenBuilderScreen } from '@/screens/FenBuilder';
+import { FenBuilderScreen } from '@/setting-screens/FenBuilder';
 
 const FenBuilderPage = () => {
   return (
