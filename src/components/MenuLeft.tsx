@@ -33,8 +33,11 @@ export const MenuLeft = () => {
       <Link href="/endgames" className="mb-6 hover:text-[var(--p-highlight)]">
         Endgames
       </Link>
-      <Link href="/checkmates" className="mb-6 hover:text-[var(--p-highlight)]">
-        Mate Patterns
+      <Link href="/strategy" className="mb-6 hover:text-[var(--p-highlight)]">
+        Strategy
+      </Link>
+      <Link href="/tactics" className="mb-6 hover:text-[var(--p-highlight)]">
+        Tactics
       </Link>
       <Link href="/traps" className="mb-6 hover:text-[var(--p-highlight)]">
         Traps

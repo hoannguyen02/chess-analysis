@@ -65,6 +65,24 @@ export const PuzzleFormScreen = ({ puzzle, onSaveSuccess }: Props) => {
   // Warn on internal navigation
   usePreventRouteChange(ROUTE_CHANGE_MESSAGE, isDirty);
 
+  const isValidFormValues = () => {
+    const { fen, preMove, solutions } = getValues();
+    if (!fen) {
+      alert('Please enter a valid FEN position');
+      return false;
+    }
+    if (preMove && (!preMove.move || !preMove.from || !preMove.to)) {
+      alert('Please enter a valid pre-move');
+      return false;
+    }
+    if (!solutions.length) {
+      alert('Please enter solutions');
+      return false;
+    }
+
+    return true;
+  };
+
   const { fields, append, remove } = useFieldArray({
     control,
     name: 'solutions',
@@ -73,44 +91,48 @@ export const PuzzleFormScreen = ({ puzzle, onSaveSuccess }: Props) => {
   // Handle form submission
   const onSubmit: SubmitHandler<Puzzle> = async (data) => {
     const { _id, ...rest } = data;
-    try {
-      const apiDomain = process.env.NEXT_PUBLIC_PHONG_CHESS_DOMAIN;
-      let request;
-      if (_id) {
-        request = fetch(`${apiDomain}/v1/puzzles/${_id}`, {
-          method: 'PUT',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(rest),
-        });
-      } else {
-        request = fetch(`${apiDomain}/v1/puzzles`, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(rest),
-        });
-      }
-      const response = await request;
-      if (response.ok) {
-        const data = await response.json();
-        if (onSaveSuccess) {
-          onSaveSuccess(data);
+    if (isValidFormValues()) {
+      try {
+        const apiDomain = process.env.NEXT_PUBLIC_PHONG_CHESS_DOMAIN;
+        let request;
+        if (_id) {
+          request = fetch(`${apiDomain}/v1/puzzles/${_id}`, {
+            method: 'PUT',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(rest),
+          });
+        } else {
+          request = fetch(`${apiDomain}/v1/puzzles`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(rest),
+          });
         }
+        const response = await request;
+        if (response.ok) {
+          const data = await response.json();
+          if (onSaveSuccess) {
+            onSaveSuccess(data);
+          }
 
-        alert('Data submitted successfully');
-      } else {
-        console.error('Failed to submit data:', response.statusText);
-        alert('Submission failed');
+          alert('Data submitted successfully');
+        } else {
+          console.error('Failed to submit data:', response.statusText);
+          alert('Submission failed');
+        }
+      } catch (error) {
+        console.error('Error submitting data:', error);
       }
-    } catch (error) {
-      console.error('Error submitting data:', error);
     }
   };
 
   const fen = watch('fen');
 
   const handlePreview = () => {
-    const encodedData = encodeURIComponent(JSON.stringify(getValues()));
-    window.open(`/puzzles/preview?data=${encodedData}`, '_blank');
+    if (isValidFormValues()) {
+      const encodedData = encodeURIComponent(JSON.stringify(getValues()));
+      window.open(`/puzzles/preview?data=${encodedData}`, '_blank');
+    }
   };
 
   return (
