@@ -55,8 +55,10 @@ Chúng tôi tạo ra không gian học tập an toàn, khuyến khích sự sán
 LIMA Chess tự hào sở hữu đội ngũ chuyên gia cờ vua hàng đầu:
 
 - **A**: Huấn luyện viên trưởng với hơn 10 năm kinh nghiệm giảng dạy và tham gia các giải đấu quốc tế.
-- **Nguyễn Văn Hoàn**: Chuyên gia khai cuộc và người truyền cảm hứng cho học viên trẻ.
-- **Lê Hoàng C**: Kiện tướng quốc gia, chuyên gia trong các chiến thuật trung cuộc.
+- **Hoàn Nguyễn**: Chuyên gia IT toàn cầu, giáo viên cấp quốc gia và là nguồn cảm hứng cho các học viên trẻ.
+- **Lê Hoàng C**: Kiện tướng quốc gia, chuyên gia về chiến thuật và chiến lược.
+- **Học viên của chúng tôi**: Những người chơi tài năng đóng góp vào thành công và tinh thần năng động của đội ngũ.
+
 &nbsp;
 
 ---

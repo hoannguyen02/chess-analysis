@@ -56,9 +56,10 @@ We create a safe space that encourages creativity and personal development.
 
 LIMA Chess is proud to have a team of top chess experts:
 
-- **Nguyen Van A**: Head coach with over 10 years of teaching experience and participation in international tournaments.
-- **Tran Thi B**: Opening expert and an inspiration for young learners.
-- **Le Hoang C**: National master specializing in middle-game tactics.
+- **Tien Tran**: Head coach with over 20 years of teaching experience and participation in international tournaments.
+- **Hoan Nguyen**: Global IT expert, national-level teacher, and an inspiration for young learners.
+- **Le Hoang C**: National master specializing in game & tactics.
+- **Our Students:**: Talented players who have achieved the highest levels in their respective categories, contributing to our team's success and dynamic spirit.
 
 &nbsp;
 
