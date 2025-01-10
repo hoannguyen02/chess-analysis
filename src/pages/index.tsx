@@ -1,21 +1,21 @@
-import { DragDropExample } from '@/components/DragDropExample';
-import FormExample from '@/components/FormExample';
+// pages/index.tsx
 import Layout from '@/components/Layout';
-import ModalExample from '@/components/ModalExample';
-import { withThemes } from '@/HOF/withThemes';
+import { GetServerSidePropsContext } from 'next';
 
 export default function Home() {
-  return (
-    <Layout>
-      <DragDropExample />
-      <ModalExample />
-      <FormExample />
-    </Layout>
-  );
+  return <Layout>Home Page</Layout>;
 }
 
-export const getServerSideProps = withThemes(async () => {
+export const getServerSideProps = async ({
+  locale,
+}: GetServerSidePropsContext) => {
+  const commonMessages = (await import(`@/locales/${locale}/common.json`))
+    .default;
   return {
-    props: {},
+    props: {
+      messages: {
+        ...commonMessages,
+      },
+    },
   };
-});
+};

@@ -1,6 +1,7 @@
 import Layout from '@/components/Layout';
 import { withThemes } from '@/HOF/withThemes';
 import { CourseListScreen } from '@/setting-screens/courses/list';
+import { GetServerSidePropsContext } from 'next';
 
 const CoursesPage = () => {
   return (
@@ -10,10 +11,18 @@ const CoursesPage = () => {
   );
 };
 
-export const getServerSideProps = withThemes(async () => {
-  return {
-    props: {},
-  };
-});
+export const getServerSideProps = withThemes(
+  async ({ locale }: GetServerSidePropsContext) => {
+    const commonMessages = (await import(`@/locales/${locale}/common.json`))
+      .default;
+    return {
+      props: {
+        messages: {
+          ...commonMessages,
+        },
+      },
+    };
+  }
+);
 
 export default CoursesPage;

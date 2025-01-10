@@ -1,0 +1,23 @@
+{
+  "navigation": {
+    "openings": "Khai cuộc",
+    "endgames": "Tàn cuộc",
+    "strategy": "Chiến lược",
+    "tactics": "Chiến thuật",
+    "traps": "Bẫy",
+    "courses": "Khóa học",
+    "lessons": "Bài học",
+    "puzzles": "Câu đố",
+    "login": "Đăng nhập",
+    "privacy": "Chính sách bảo mật",
+    "terms": "Điều khoản sử dụng",
+    "contact": "Liên Hệ Chúng Tôi",
+    "about": "Về Chúng Tôi"
+  },
+  "title": {
+    "manage": "Quản lý"
+  },
+  "buttons": {
+    "retry": "Thử lại"
+  }
+}

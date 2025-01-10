@@ -23,7 +23,7 @@ const LessonPage = ({ lesson }: Props) => {
 export const getServerSideProps: GetServerSideProps = withThemes(
   async (context: GetServerSidePropsContext<ParsedUrlQuery, PreviewData>) => {
     const apiDomain = process.env.NEXT_PUBLIC_PHONG_CHESS_DOMAIN;
-    const { id } = context.params as { id: string };
+    const { id, locale } = context.params as { id: string; locale: string };
 
     try {
       const res = await fetch(`${apiDomain}/v1/lessons/${id}`);
@@ -34,7 +34,17 @@ export const getServerSideProps: GetServerSideProps = withThemes(
 
       const data = await res.json();
 
-      return { props: { lesson: data } };
+      const commonMessages = (await import(`@/locales/${locale}/common.json`))
+        .default;
+
+      return {
+        props: {
+          lesson: data,
+          messages: {
+            ...commonMessages,
+          },
+        },
+      };
     } catch (error) {
       console.error('Fetch error:', error);
       return { props: { puzzles: [] } };

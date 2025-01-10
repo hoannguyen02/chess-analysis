@@ -3,11 +3,10 @@ import { AppProvider } from '@/contexts/AppContext';
 import '@/styles/globals.css';
 import type { CustomFlowbiteTheme } from 'flowbite-react';
 import { Flowbite } from 'flowbite-react';
-import { appWithTranslation, UserConfig } from 'next-i18next';
+import { NextIntlClientProvider } from 'next-intl';
 import type { AppProps } from 'next/app';
 import { Poppins, Roboto } from 'next/font/google'; // Import additional fonts
 import { useRouter } from 'next/router';
-import nextI18NextConfig from '../../next-i18next.config';
 
 // Load Poppins font
 const poppins = Poppins({
@@ -30,14 +29,6 @@ const customTheme: CustomFlowbiteTheme = {
   },
 };
 
-// Empty initial config for i18next
-const emptyInitialI18NextConfig: UserConfig = {
-  i18n: {
-    defaultLocale: nextI18NextConfig.i18n.defaultLocale,
-    locales: nextI18NextConfig.i18n.locales,
-  },
-};
-
 const App = ({ Component, pageProps }: AppProps) => {
   const { locale } = useRouter(); // Get current locale
 
@@ -47,15 +38,24 @@ const App = ({ Component, pageProps }: AppProps) => {
   return (
     <ErrorBoundary>
       <Flowbite theme={{ theme: customTheme }}>
-        <AppProvider themes={pageProps.themes} apiDomain={pageProps.apiDomain}>
-          <div className={fontClass}>
-            {/* Apply the font class dynamically */}
-            <Component {...pageProps} />
-          </div>
-        </AppProvider>
+        <NextIntlClientProvider
+          messages={pageProps.messages}
+          locale={locale}
+          timeZone="Asia/Ho_Chi_Minh"
+        >
+          <AppProvider
+            themes={pageProps.themes}
+            apiDomain={pageProps.apiDomain}
+          >
+            <div className={fontClass}>
+              {/* Apply the font class dynamically */}
+              <Component {...pageProps} />
+            </div>
+          </AppProvider>
+        </NextIntlClientProvider>
       </Flowbite>
     </ErrorBoundary>
   );
 };
 
-export default appWithTranslation(App, emptyInitialI18NextConfig);
+export default App;

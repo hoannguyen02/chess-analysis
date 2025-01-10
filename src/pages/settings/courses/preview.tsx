@@ -20,9 +20,15 @@ const PreviewCoursePage = () => {
   return null;
 };
 
-export const getServerSideProps = withThemes(async () => {
+export const getServerSideProps = withThemes(async ({ locale }) => {
+  const commonMessages = (await import(`@/locales/${locale}/common.json`))
+    .default;
   return {
-    props: {},
+    props: {
+      messages: {
+        ...commonMessages,
+      },
+    },
   };
 });
 export default PreviewCoursePage;

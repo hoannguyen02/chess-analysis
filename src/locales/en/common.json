@@ -1,0 +1,23 @@
+{
+  "navigation": {
+    "openings": "Openings",
+    "endgames": "Endgames",
+    "strategy": "Strategy",
+    "tactics": "Tactics",
+    "traps": "Traps",
+    "courses": "Courses",
+    "lessons": "Lessons",
+    "puzzles": "Puzzles",
+    "login": "Login",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "contact": "Contact",
+    "about": "About Us"
+  },
+  "title": {
+    "manage": "Manage"
+  },
+  "buttons": {
+    "retry": "Retry"
+  }
+}

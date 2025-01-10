@@ -1,5 +1,4 @@
 import Layout from '@/components/Layout';
-import { getTranslations } from '@/utils/getTranslations';
 import fs from 'fs';
 import matter from 'gray-matter';
 import { GetStaticProps } from 'next';
@@ -33,9 +32,12 @@ export const getStaticProps: GetStaticProps = async ({ locale }) => {
   const processedContent = await remark().use(html).process(content);
   const contentHtml = processedContent.toString();
 
+  const commonMessages = (await import(`@/locales/${locale}/common.json`))
+    .default;
+
   return {
     props: {
-      ...(await getTranslations(locale || 'en', ['common'])),
+      messages: { ...commonMessages },
       title: data.title,
       content: contentHtml,
     },
