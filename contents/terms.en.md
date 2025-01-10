@@ -2,12 +2,36 @@
 title: "Terms of Service"
 ---
 
-Welcome to LIMA Chess! By accessing or using our website and services, you agree to comply with the following terms:
+# Terms of Service
 
-Eligibility: Our services are open to all individuals interested in chess.
+Welcome to **LIMA Chess**! By accessing or using our website and services, you agree to comply with the following terms:
 
-User Conduct: Users must respect community guidelines and not engage in inappropriate behavior.
+&nbsp;
 
-Termination: We reserve the right to terminate accounts for violations of our terms.
+##  **Eligibility**
 
-For inquiries, please contact us at contact@limachess.com.
+Our services are open to all individuals interested in chess.
+
+&nbsp;
+
+## **User Conduct**
+
+Users are expected to:
+
+- Respect community guidelines.
+- Refrain from engaging in inappropriate or disruptive behavior.
+
+&nbsp;
+
+## **Termination**
+
+We reserve the right to terminate accounts for violations of our terms, including but not limited to:
+
+- Breach of community guidelines.
+- Misuse of our services.
+
+&nbsp;
+
+## **Contact Us**
+
+For inquiries or further assistance, please reach out to us at **[contact@limachess.com](mailto:contact@limachess.com)**.

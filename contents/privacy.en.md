@@ -1,21 +1,45 @@
 ---
 title: "Privacy Policy"
 ---
-At LIMA Chess, we value your privacy. This Privacy Policy outlines how we collect, use, and protect your personal information. By using our website and services, you agree to the terms outlined below.
 
-Information We Collect
+# Privacy Policy
 
-Name, email address, and contact details when you register for our services.
+At **LIMA Chess**, we value your privacy. This Privacy Policy outlines how we collect, use, and protect your personal information. By using our website and services, you agree to the terms outlined below.
 
-Data from your activity on our website, including preferences and feedback.
+&nbsp;
 
-How We Use Your Information
+---
 
-To provide personalized services and improve your learning experience.
+&nbsp;
 
-To notify you about updates, events, and promotions.
+## Information We Collect
 
+- **Personal Information:** Name, email address, and contact details when you register for our services.
+- **Usage Data:** Data from your activity on our website, including preferences and feedback.
 
-Your Rights
+&nbsp;
 
-You can request access to, update, or delete your personal information by contacting us at privacy@limachess.com.
+---
+
+&nbsp;
+
+## How We Use Your Information
+
+- To provide personalized services and improve your learning experience.
+- To notify you about updates, events, and promotions.
+
+&nbsp;
+
+---
+
+&nbsp;
+
+## Your Rights
+
+You can:
+
+- Request access to your personal information.
+- Update or correct your personal details.
+- Delete your personal information.
+
+To exercise these rights, contact us at **[contact@limachess.com](mailto:contact@limachess.com)**.

@@ -1,5 +1,5 @@
-import { Footer } from 'flowbite-react';
 import React, { ReactNode } from 'react';
+import { Footer } from './Footer';
 import { MenuLeft } from './MenuLeft';
 
 interface LayoutProps {

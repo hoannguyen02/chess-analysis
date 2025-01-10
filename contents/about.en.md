@@ -5,11 +5,13 @@ title: "About Us"
 # Introduction
 
 Welcome to **LIMA Chess**, where chess enthusiasts of all levels have the opportunity to learn, grow, and conquer. Built on the exclusive **LIMA method**: **Learn, Improve, Master, Achieve**, we are committed to providing an inspiring chess journey for players of all skill levels.
+
 &nbsp;
 
 ---
 
 &nbsp;
+
 ## Our Mission
 
 We not only teach how to play chess but also guide learners to develop:
@@ -23,9 +25,13 @@ Our mission is to:
 1. **Foster a passion for chess.**
 2. **Build a connected community** through tournaments and events.
 3. **Equip learners** with the skills to confidently participate in national and international competitions.
+
 &nbsp;
+
 ---
+
 &nbsp;
+
 ## Why Choose LIMA Chess?
 
 ### **Exclusive Training Method**
@@ -39,9 +45,13 @@ Lessons, puzzles, and strategy guides are designed to optimize learning.
 
 ### **Friendly Learning Environment**
 We create a safe space that encourages creativity and personal development.
+
 &nbsp;
+
 ---
+
 &nbsp;
+
 ## Our Team
 
 LIMA Chess is proud to have a team of top chess experts:
