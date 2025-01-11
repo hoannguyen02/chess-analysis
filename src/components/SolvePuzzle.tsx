@@ -506,7 +506,7 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({ puzzle }) => {
           router.back();
         }}
       >
-        <VscArrowLeft /> {}
+        <VscArrowLeft /> {t('common.button.back')}
       </button>
       <div className="grid grid-cols-2 gap-16">
         <div ref={boardRef}>
