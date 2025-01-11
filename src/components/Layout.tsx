@@ -1,4 +1,4 @@
-import { Button, Drawer } from 'flowbite-react';
+import { Drawer } from 'flowbite-react';
 import Link from 'next/link';
 import React, { ReactNode, useState } from 'react';
 import { VscMenu, VscMortarBoard } from 'react-icons/vsc';
@@ -19,16 +19,13 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         <LanguageSwitcher />
       </div>
       <div className="lg:pl-[245px] flex flex-col h-[100vh]">
-        <div className="lg:hidden flex items-center ">
-          <Button
-            color="light"
-            className="border-0 focus:ring-0"
+        <div className="lg:hidden flex items-center bg-[var(--p-bg)]">
+          <VscMenu
+            className="pointer text-white mx-2"
             onClick={() => {
               setIsOpenDrawer((prev) => !prev);
             }}
-          >
-            <VscMenu />
-          </Button>
+          />
           <Link href="/" className="">
             <svg
               width="172"
