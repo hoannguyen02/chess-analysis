@@ -1,20 +1,12 @@
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
-import LanguageSwitcher from './LanguageSwitcher';
 
 export const MenuLeft = () => {
   const t = useTranslations('common');
 
   return (
-    <nav
-      style={{
-        background: 'var(--p-bg)',
-        color: 'white',
-        padding: '1rem',
-      }}
-      className="flex flex-col h-[100vh] fixed left-0 z-10"
-    >
-      <div className="mb-4">
+    <nav className="flex flex-col w-full bg-[var(--p-bg)] text-white p-[1rem]">
+      <div className="mb-4 hidden lg:flex">
         <Link href="/" className="mb-6 hover:text-[var(--p-highlight)]">
           <svg
             width="172"
@@ -81,7 +73,6 @@ export const MenuLeft = () => {
       >
         {t('navigation.login')}
       </Link>
-      <LanguageSwitcher />
     </nav>
   );
 };

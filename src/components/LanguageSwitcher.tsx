@@ -9,16 +9,16 @@ const LanguageSwitcher = () => {
   };
 
   return (
-    <div className="flex items-center absolute left-[30px] bottom-[24px]">
+    <div className="flex items-center absolute bottom-[24px] w-full justify-center">
       <button
-        className={`${locale === 'en' ? 'text-[var(--s-bg)]' : ''}`}
+        className={`${locale === 'en' ? 'text-[var(--s-bg)]' : 'text-white'}`}
         onClick={() => switchLanguage('en')}
         disabled={locale === 'en'}
       >
         English
       </button>
       <button
-        className={`ml-2 ${locale === 'vi' ? 'text-[var(--s-bg)]' : ''}`}
+        className={`ml-4 ${locale === 'vi' ? 'text-[var(--s-bg)]' : 'text-white'}`}
         onClick={() => switchLanguage('vi')}
         disabled={locale === 'vi'}
       >
