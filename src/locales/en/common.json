@@ -15,9 +15,14 @@
     "about": "About Us"
   },
   "title": {
-    "manage": "Manage"
+    "manage": "Manage",
+    "theme": "Theme",
+    "rating": "Rating",
+    "White": "White",
+    "Black": "Black",
+    "move": "move"
   },
-  "buttons": {
-    "retry": "Retry"
+  "button": {
+    "back": "Back"
   }
 }

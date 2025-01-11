@@ -14,7 +14,7 @@ export const getServerSideProps = async ({
   return {
     props: {
       messages: {
-        ...commonMessages,
+        common: commonMessages,
       },
     },
   };

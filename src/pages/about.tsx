@@ -42,7 +42,7 @@ export const getStaticProps: GetStaticProps = async ({ locale }) => {
 
   return {
     props: {
-      messages: { ...commonMessages },
+      messages: { common: commonMessages },
       title: data.title,
       content: contentHtml,
     },

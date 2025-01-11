@@ -21,9 +21,12 @@ const PuzzlePage = ({ puzzle }: Props) => {
 };
 
 export const getServerSideProps: GetServerSideProps = withThemes(
-  async (context: GetServerSidePropsContext<ParsedUrlQuery, PreviewData>) => {
+  async ({
+    params,
+    locale,
+  }: GetServerSidePropsContext<ParsedUrlQuery, PreviewData>) => {
     const apiDomain = process.env.NEXT_PUBLIC_PHONG_CHESS_DOMAIN;
-    const { id, locale } = context.params as { id: string; locale: string };
+    const { id } = params as { id: string };
 
     try {
       const res = await fetch(`${apiDomain}/v1/puzzles/${id}`);
@@ -34,14 +37,15 @@ export const getServerSideProps: GetServerSideProps = withThemes(
 
       const data = await res.json();
 
-      const commonMessages = (await import(`@/locales/${locale}/common.json`))
-        .default;
+      const commonMessages = (
+        await import(`@/locales/${locale || 'en'}/common.json`)
+      ).default;
 
       return {
         props: {
           puzzle: data,
           messages: {
-            ...commonMessages,
+            common: commonMessages,
           },
         },
       };

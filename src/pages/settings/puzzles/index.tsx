@@ -17,7 +17,7 @@ export const getServerSideProps = withThemes(async ({ locale }) => {
   return {
     props: {
       messages: {
-        ...commonMessages,
+        common: commonMessages,
       },
     },
   };

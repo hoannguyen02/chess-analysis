@@ -3,7 +3,7 @@ import Link from 'next/link';
 import LanguageSwitcher from './LanguageSwitcher';
 
 export const MenuLeft = () => {
-  const t = useTranslations();
+  const t = useTranslations('common');
 
   return (
     <nav

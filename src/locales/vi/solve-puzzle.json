@@ -1,0 +1,17 @@
+{
+  "button": {
+    "retry": "Thử lại",
+    "solution": "Giải pháp",
+    "restart": "Khởi động lại",
+    "download-png": "Tải xuống PNG",
+    "hint": "Gợi ý"
+  },
+  "title": {
+    "moves": "Nước đi",
+    "best-move": "Tìm nước đi tốt nhất cho <b></b> tại ô <small></small>!"
+  },
+  "message": {
+    "invalid-move": "Ôi! Thử lại nhé",
+    "done": "Tuyệt vời"
+  }
+}

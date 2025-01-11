@@ -2,7 +2,7 @@ import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 
 export const Footer = () => {
-  const t = useTranslations();
+  const t = useTranslations('common');
   return (
     <footer
       style={{

@@ -21,9 +21,12 @@ const CoursePage = ({ course }: Props) => {
 };
 
 export const getServerSideProps: GetServerSideProps = withThemes(
-  async (context: GetServerSidePropsContext<ParsedUrlQuery, PreviewData>) => {
+  async ({
+    params,
+    locale,
+  }: GetServerSidePropsContext<ParsedUrlQuery, PreviewData>) => {
     const apiDomain = process.env.NEXT_PUBLIC_PHONG_CHESS_DOMAIN;
-    const { id, locale } = context.params as { id: string; locale: string };
+    const { id } = params as { id: string };
 
     const commonMessages = (await import(`@/locales/${locale}/common.json`))
       .default;
@@ -41,7 +44,7 @@ export const getServerSideProps: GetServerSideProps = withThemes(
         props: {
           course: data,
           messages: {
-            ...commonMessages,
+            common: commonMessages,
           },
         },
       };

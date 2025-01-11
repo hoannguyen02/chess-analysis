@@ -1,0 +1,17 @@
+{
+  "button": {
+    "retry": "Retry",
+    "solution": "Solution",
+    "restart": "Restart",
+    "download-png": "Download png",
+    "hint": "Hint"
+  },
+  "title": {
+    "moves": "Moves",
+    "best-move": "Find best move for your <b>Piece</b> at <small>Position</small>!"
+  },
+  "message": {
+    "invalid-move": "Oops! Try Again",
+    "done": "Well Done"
+  }
+}

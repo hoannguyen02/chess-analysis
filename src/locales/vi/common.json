@@ -15,9 +15,14 @@
     "about": "Về Chúng Tôi"
   },
   "title": {
-    "manage": "Quản lý"
+    "manage": "Quản lý",
+    "theme": "Loại",
+    "rating": "Xếp hạng",
+    "White": "Trắng",
+    "Black": "Đen",
+    "move": "đi"
   },
-  "buttons": {
-    "retry": "Thử lại"
+  "button": {
+    "back": "Back"
   }
 }

@@ -6,12 +6,14 @@ import { Course } from '@/types/course';
 import { PuzzleDifficulty } from '@/types/puzzle';
 import { StatusType } from '@/types/status';
 import { Button, Pagination, Select, Spinner, Table } from 'flowbite-react';
+import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useMemo, useState } from 'react';
 import useSWR from 'swr';
 import { fetcher } from '../../utils/fetcher';
 
 export const CourseListScreen = () => {
+  const { locale } = useRouter();
   const { apiDomain } = useAppContext();
   const [currentPage, setCurrentPage] = useState(1);
   const [status, setStatus] = useState<StatusType | ''>('');
@@ -139,12 +141,12 @@ export const CourseListScreen = () => {
                   <Table.Cell>{item.difficulty}</Table.Cell>
                   <Table.Cell>{item.status}</Table.Cell>
                   <Table.Cell>
-                    <a
-                      href={`/settings/courses/${item._id}`}
+                    <Link
+                      href={`/${locale}/settings/courses/${item._id}`}
                       className="font-medium text-cyan-600 hover:underline dark:text-cyan-500"
                     >
                       Edit
-                    </a>
+                    </Link>
                   </Table.Cell>
                 </Table.Row>
               );

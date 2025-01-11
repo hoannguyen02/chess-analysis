@@ -13,8 +13,9 @@ import { getActivePlayerFromFEN } from '@/utils/get-player-name-from-fen';
 import { Chess } from 'chess.js';
 import { Button } from 'flowbite-react';
 import html2canvas from 'html2canvas';
+import { useTranslations } from 'next-intl';
 import { useRouter } from 'next/router';
-import React, { useEffect, useMemo, useRef, useState } from 'react';
+import React, { ReactNode, useEffect, useMemo, useRef, useState } from 'react';
 import { Chessboard } from 'react-chessboard';
 import { Piece, Square } from 'react-chessboard/dist/chessboard/types';
 import {
@@ -34,6 +35,7 @@ type PuzzleProps = {
 };
 
 const SolvePuzzle: React.FC<PuzzleProps> = ({ puzzle }) => {
+  const t = useTranslations();
   const { themeMap } = useAppContext();
   const boardRef = useRef<HTMLDivElement>(null);
   const router = useRouter();
@@ -58,7 +60,7 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({ puzzle }) => {
   //  Only show back/forward buttons if puzzle is done, either by normal solved or by solution
   const [historyMoveCurrentIdx, setHistoryMoveCurrentIdx] = useState<number>(0);
   const [isBoardClickAble, setIsBoardClickAble] = useState<boolean>(true);
-  const [hintMessage, setHintMessage] = useState('');
+  const [hintMessage, setHintMessage] = useState<ReactNode | ''>('');
 
   useEffect(() => {
     if (currentStep === puzzle.solutions.length) {
@@ -377,7 +379,10 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({ puzzle }) => {
       [hintMove.from]: { background: 'var(--p-highlight)' },
     });
     const piece = hintMove.move.charAt(0) as UppercasePieceType;
-    const msg = `Find best move for your <b class="mx-1">${PIECE_MAP[piece]}</b> at <b class="ml-1">${hintMove.from}</b>!`;
+    const msg = t.rich('solve-puzzle.title.best-move', {
+      b: () => `<b class="mx-1">${PIECE_MAP[piece]}</b>`,
+      small: () => `<b class="ml-1">${hintMove.from}</b>!`,
+    });
     setHintMessage(msg);
   };
 
@@ -430,7 +435,7 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({ puzzle }) => {
         message: (
           <div className="flex items-center">
             <VscError size={20} className="mr-2" />
-            Oops! Try Again
+            {t('solve-puzzle.message.invalid-move')}
           </div>
         ),
       };
@@ -444,7 +449,7 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({ puzzle }) => {
             <ConfettiEffect />
             <div className="flex items-center">
               <VscPass size={20} className="mr-2" />
-              Well Done
+              {t('solve-puzzle.message.done')}
             </div>
           </>
         ),
@@ -452,10 +457,10 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({ puzzle }) => {
     }
 
     return {
-      message: `${playerName} Move`,
+      message: `${t(`common.title.${playerName}`)} ${t('common.title.move')}`,
       bgHeader: 'bg-[var(--p-bg)]',
     };
-  }, [currentStep, playerName, puzzle.solutions.length, showRetry]);
+  }, [currentStep, playerName, puzzle.solutions.length, showRetry, t]);
 
   const exportAsImage = async () => {
     if (!boardRef.current) {
@@ -500,7 +505,7 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({ puzzle }) => {
           router.back();
         }}
       >
-        <VscArrowLeft /> Back
+        <VscArrowLeft /> {}
       </button>
       <div className="grid grid-cols-2 gap-16">
         <div ref={boardRef}>
@@ -547,10 +552,13 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({ puzzle }) => {
           {currentStep === puzzle.solutions.length && (
             <div className="flex flex-col p-4">
               <p className="mb-2">
-                Theme: {themeMap[puzzle.theme]?.title || puzzle.theme}
+                {t('common.title.theme')}:{' '}
+                {themeMap[puzzle.theme]?.title || puzzle.theme}
               </p>
-              <p className="mb-2">Rating: {PUZZLE_RATING[puzzle.difficulty]}</p>
-              Moves: <hr />
+              <p className="mb-2">
+                {t('common.title.rating')}: {PUZZLE_RATING[puzzle.difficulty]}
+              </p>
+              {t('solve-puzzle.title.moves')}: <hr />
               <div className="mb-2 mt-4 grid grid-cols-2 gap-4">
                 <div>
                   {puzzle.preMove?.move && (
@@ -597,17 +605,20 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({ puzzle }) => {
             {!showRetry && currentStep !== puzzle.solutions.length && (
               <>
                 {hintMessage ? (
-                  <div
-                    className="flex justify-center"
-                    dangerouslySetInnerHTML={{ __html: hintMessage }}
-                  />
+                  <div>
+                    <div
+                      className="flex justify-center"
+                      dangerouslySetInnerHTML={{ __html: hintMessage }}
+                    />
+                  </div>
                 ) : (
                   <Button
                     className="mx-auto"
                     color="primary"
                     onClick={showHint}
                   >
-                    Hint <VscLightbulbSparkle size={20} className="ml-1" />
+                    {t('solve-puzzle.button.hint')}
+                    <VscLightbulbSparkle size={20} className="ml-1" />
                   </Button>
                 )}
               </>
@@ -620,10 +631,11 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({ puzzle }) => {
                     onClick={resetPuzzle}
                     className="mr-2"
                   >
-                    Restart <VscSync size={20} className="ml-1" />
+                    {t('solve-puzzle.button.restart')}{' '}
+                    <VscSync size={20} className="ml-1" />
                   </Button>
                   <Button color="primary" onClick={exportAsImage}>
-                    Download png
+                    {t('solve-puzzle.button.download-png')}
                   </Button>
                 </div>
                 <div className="flex">
@@ -648,11 +660,11 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({ puzzle }) => {
             {showRetry && (
               <div className="flex justify-around">
                 <Button color="primary" onClick={retry}>
-                  Retry
+                  {t('solve-puzzle.button.retry')}
                   <VscSync size={20} className="ml-1" />
                 </Button>
                 <Button color="primary" onClick={showSolution}>
-                  Solution
+                  {t('solve-puzzle.button.solution')}
                   <VscCheckAll size={20} className="ml-1" />
                 </Button>
               </div>
