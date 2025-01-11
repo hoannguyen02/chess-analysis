@@ -36,6 +36,7 @@ type PuzzleProps = {
 
 const SolvePuzzle: React.FC<PuzzleProps> = ({ puzzle }) => {
   const t = useTranslations();
+  const { locale = 'en' } = useRouter();
   const { themeMap } = useAppContext();
   const boardRef = useRef<HTMLDivElement>(null);
   const router = useRouter();
@@ -553,7 +554,8 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({ puzzle }) => {
             <div className="flex flex-col p-4">
               <p className="mb-2">
                 {t('common.title.theme')}:{' '}
-                {themeMap[puzzle.theme]?.title || puzzle.theme}
+                {themeMap[puzzle.theme]?.title[locale as 'en' | 'vi'] ||
+                  puzzle.theme}
               </p>
               <p className="mb-2">
                 {t('common.title.rating')}: {PUZZLE_RATING[puzzle.difficulty]}

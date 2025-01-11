@@ -1,5 +1,8 @@
 export type PuzzleTheme = {
-  title: string;
+  title: {
+    en: string;
+    vi: string;
+  };
   code: string;
   description?: string;
 };
