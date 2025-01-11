@@ -351,6 +351,7 @@ export const LessonFormScreen = ({ lesson }: Props) => {
                       rows={3}
                       placeholder="English Content"
                       {...register(`contents.${index}.value.en`)}
+                      className="mb-2"
                     />
                     <Textarea
                       rows={3}
