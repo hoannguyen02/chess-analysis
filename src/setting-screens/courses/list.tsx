@@ -13,7 +13,7 @@ import useSWR from 'swr';
 import { fetcher } from '../../utils/fetcher';
 
 export const CourseListScreen = () => {
-  const { apiDomain } = useAppContext();
+  const { apiDomain, locale } = useAppContext();
   const [currentPage, setCurrentPage] = useState(1);
   const [status, setStatus] = useState<StatusType | ''>('');
   const [title, setTitle] = useState<string | ''>('');
@@ -135,7 +135,7 @@ export const CourseListScreen = () => {
                   className="bg-white dark:border-gray-700 dark:bg-gray-800"
                 >
                   <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
-                    {item.title}
+                    {item.title[locale]}
                   </Table.Cell>
                   <Table.Cell>{item.difficulty}</Table.Cell>
                   <Table.Cell>{item.status}</Table.Cell>

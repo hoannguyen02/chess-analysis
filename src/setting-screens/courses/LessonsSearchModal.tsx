@@ -28,7 +28,7 @@ const LessonSearchModal: React.FC<LessonSearchModalProps> = ({
   onAddLessons,
   selectedLessons,
 }) => {
-  const { apiDomain } = useAppContext();
+  const { apiDomain, locale } = useAppContext();
   const [selectedInModal, setSelectedInModal] = useState<Lesson[]>([]);
   const [difficulty, setDifficulty] = useState<PuzzleDifficulty | ''>('');
   const [title, setTitle] = useState<string | ''>('');
@@ -166,7 +166,7 @@ const LessonSearchModal: React.FC<LessonSearchModalProps> = ({
                         />
                       </Table.Cell>
                       <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
-                        {item.title}
+                        {item.title[locale]}
                       </Table.Cell>
                       <Table.Cell>{item.difficulty}</Table.Cell>
                       <Table.Cell>{item.status}</Table.Cell>

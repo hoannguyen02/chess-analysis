@@ -1,10 +1,17 @@
+import { ObjectiveType } from '.';
 import { Lesson } from './lesson';
 import { DifficultyType, StatusType } from './status';
 
 export type Course = {
-  title: string;
-  description?: string;
-  objectives?: string[];
+  title: {
+    en: string;
+    vi: string;
+  };
+  description?: {
+    en: string;
+    vi: string;
+  };
+  objectives?: ObjectiveType;
   lessons: { lessonId: string }[];
   tags?: string[];
   difficulty?: DifficultyType;
@@ -14,9 +21,15 @@ export type Course = {
 };
 
 export type CourseExpanded = {
-  title: string;
-  description?: string;
-  objectives?: string[];
+  title: {
+    en: string;
+    vi: string;
+  };
+  description?: {
+    en: string;
+    vi: string;
+  };
+  objectives?: ObjectiveType;
   tags?: string[];
   difficulty?: DifficultyType;
   status: StatusType;
