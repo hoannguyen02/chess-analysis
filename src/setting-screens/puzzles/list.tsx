@@ -1,6 +1,7 @@
 import { TitlePage } from '@/components/TitlePage';
 import { PUZZLE_RATING, PuzzlePhases, PuzzleStatues } from '@/constants/puzzle';
 import { useAppContext } from '@/contexts/AppContext';
+import { LocaleType } from '@/types/locale';
 import { Puzzle, PuzzleDifficulty, PuzzlePhase } from '@/types/puzzle';
 import { StatusType } from '@/types/status';
 import {
@@ -18,6 +19,7 @@ import { fetcher } from '../../utils/fetcher';
 
 export const PuzzleListScreen = () => {
   const { themes, apiDomain, themeMap } = useAppContext();
+  const { locale } = useRouter();
   const [currentPage, setCurrentPage] = useState(1);
   const [phase, setPhase] = useState<PuzzlePhase | ''>('');
   const [status, setStatus] = useState<StatusType | ''>('');
@@ -111,7 +113,10 @@ export const PuzzleListScreen = () => {
           >
             <option value="">Select a theme</option>
             {themes.map((theme, idx) => (
-              <option key={`${theme.code}-${idx}`} label={theme.title}>
+              <option
+                key={`${theme.code}-${idx}`}
+                label={theme.title[locale as LocaleType]}
+              >
                 {theme.code}
               </option>
             ))}
@@ -170,7 +175,8 @@ export const PuzzleListScreen = () => {
                   className="bg-white dark:border-gray-700 dark:bg-gray-800"
                 >
                   <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
-                    {themeMap[puzzle.theme]?.title || puzzle.theme}
+                    {themeMap[puzzle.theme]?.title[locale as LocaleType] ||
+                      puzzle.theme}
                   </Table.Cell>
                   <Table.Cell>{puzzle.phase}</Table.Cell>
                   <Table.Cell>{puzzle.difficulty}</Table.Cell>
