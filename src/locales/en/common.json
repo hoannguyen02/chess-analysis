@@ -23,6 +23,8 @@
     "move": "move"
   },
   "button": {
-    "back": "Back"
+    "back": "Back",
+    "preview": "Preview",
+    "submit": "Submit"
   }
 }

@@ -1,6 +1,7 @@
 import ErrorBoundary from '@/components/ErrorBoundary';
 import { AppProvider } from '@/contexts/AppContext';
 import '@/styles/globals.css';
+import { LocaleType } from '@/types/locale';
 import type { CustomFlowbiteTheme } from 'flowbite-react';
 import { Flowbite } from 'flowbite-react';
 import { NextIntlClientProvider } from 'next-intl';
@@ -30,7 +31,7 @@ const customTheme: CustomFlowbiteTheme = {
 };
 
 const App = ({ Component, pageProps }: AppProps) => {
-  const { locale } = useRouter(); // Get current locale
+  const { locale } = useRouter();
 
   // Determine the font based on the locale
   const fontClass = locale === 'vi' ? roboto.className : poppins.className;
@@ -45,6 +46,7 @@ const App = ({ Component, pageProps }: AppProps) => {
         >
           <AppProvider
             themes={pageProps.themes}
+            locale={locale as LocaleType}
             apiDomain={pageProps.apiDomain}
           >
             <div className={fontClass}>

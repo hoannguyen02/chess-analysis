@@ -13,7 +13,6 @@ import useSWR from 'swr';
 import { fetcher } from '../../utils/fetcher';
 
 export const CourseListScreen = () => {
-  const { locale } = useRouter();
   const { apiDomain } = useAppContext();
   const [currentPage, setCurrentPage] = useState(1);
   const [status, setStatus] = useState<StatusType | ''>('');
@@ -142,7 +141,7 @@ export const CourseListScreen = () => {
                   <Table.Cell>{item.status}</Table.Cell>
                   <Table.Cell>
                     <Link
-                      href={`/${locale}/settings/courses/${item._id}`}
+                      href={`/settings/courses/${item._id}`}
                       className="font-medium text-cyan-600 hover:underline dark:text-cyan-500"
                     >
                       Edit

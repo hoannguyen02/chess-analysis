@@ -23,6 +23,8 @@
     "move": "đi"
   },
   "button": {
-    "back": "Quay lại"
+    "back": "Quay lại",
+    "preview": "Xem trước",
+    "submit": "Lưu"
   }
 }

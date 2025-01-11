@@ -8,6 +8,7 @@ import { Lesson } from '@/types/lesson';
 import { Puzzle } from '@/types/puzzle';
 import { fetcher } from '@/utils/fetcher';
 import { Button, Checkbox, Label, Select, TextInput } from 'flowbite-react';
+import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useState } from 'react';
@@ -21,7 +22,8 @@ type Props = {
   onSaveSuccess?: (puzzle: Puzzle) => void;
 };
 export const PuzzleFormScreen = ({ puzzle, onSaveSuccess }: Props) => {
-  const { themes, apiDomain } = useAppContext();
+  const { themes, apiDomain, locale } = useAppContext();
+  const t = useTranslations();
   const [addToLessonsPopup, setAddToLessonsPopup] = useState(false);
 
   const {
@@ -144,8 +146,15 @@ export const PuzzleFormScreen = ({ puzzle, onSaveSuccess }: Props) => {
           <TextInput
             id="title"
             type="text"
-            placeholder="Title of puzzle - Should have clear name so can easy to find and added it to lesson later on"
-            {...register('title')}
+            placeholder="English"
+            {...register('title.en')}
+          />
+          <TextInput
+            className="mt-2"
+            id="title"
+            type="text"
+            placeholder="Vietnamse"
+            {...register('title.vi')}
           />
         </div>
         <div className="grid grid-cols-3  place-content-start mb-4 gap-8">
@@ -219,7 +228,7 @@ export const PuzzleFormScreen = ({ puzzle, onSaveSuccess }: Props) => {
             </div>
             <Select value={watch('theme')} id="theme" {...register('theme')}>
               {themes.map((theme) => (
-                <option key={theme.code} label={theme.title}>
+                <option key={theme.code} label={theme.title[locale]}>
                   {theme.code}
                 </option>
               ))}
@@ -347,7 +356,7 @@ export const PuzzleFormScreen = ({ puzzle, onSaveSuccess }: Props) => {
               router.push('/settings/puzzles');
             }}
           >
-            Back to the list
+            {t('common.button.back')}
           </Button>
           <Button
             type="button"
@@ -355,10 +364,10 @@ export const PuzzleFormScreen = ({ puzzle, onSaveSuccess }: Props) => {
             outline
             className="mr-8"
           >
-            Preview
+            {t('common.button.preview')}
           </Button>
           <Button color="primary" type="submit">
-            Submit
+            {t('common.button.submit')}
           </Button>
         </div>
       </form>

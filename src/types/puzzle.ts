@@ -29,7 +29,10 @@ export type Puzzle = {
   theme: string;
   solutions: PuzzleSolutionMove[];
   preMove?: PuzzlePreMove;
-  title?: string;
+  title?: {
+    en: string;
+    vi: string;
+  };
   phase?: PuzzlePhase;
   _id?: string;
   puzzleId?: any;
