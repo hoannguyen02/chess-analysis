@@ -1,19 +1,28 @@
+import { ObjectiveType } from '.';
 import { Puzzle } from './puzzle';
 import { DifficultyType, StatusType } from './status';
 
 export type ContentType = 'text' | 'video' | 'image';
 
 export type Lesson = {
-  title: string;
-  description?: string;
-  objectives?: string[];
+  title: {
+    en: string;
+    vi: string;
+  };
+  description?: {
+    en: string;
+    vi: string;
+  };
+  objectives?: ObjectiveType;
   puzzles: { puzzleId: string }[];
   contents?: {
     type: ContentType;
-    value: string;
+    value: {
+      en: string;
+      vi: string;
+    };
     contentPuzzles: { puzzleId: string }[];
   }[];
-  tags?: string[];
   difficulty?: DifficultyType;
   status: StatusType;
   _id?: string;
@@ -22,16 +31,24 @@ export type Lesson = {
 };
 
 export type LessonExpanded = {
-  title: string;
-  description?: string;
-  objectives?: string[];
+  title: {
+    en: string;
+    vi: string;
+  };
+  description?: {
+    en: string;
+    vi: string;
+  };
+  objectives?: ObjectiveType;
   puzzles: { puzzleId: Puzzle }[];
   contents?: {
     type: ContentType;
-    value: string;
+    value: {
+      en: string;
+      vi: string;
+    };
     contentPuzzles: { puzzleId: Puzzle }[];
   }[];
-  tags?: string[];
   difficulty?: DifficultyType;
   status: StatusType;
   _id?: string;

@@ -331,7 +331,7 @@ export const PuzzleFormScreen = ({ puzzle, onSaveSuccess }: Props) => {
                 key={`lessons-${index}`}
                 className="grid grid-cols-[70%_15%_15%] mb-2 gap-4"
               >
-                <Label>{lessons.title}</Label>
+                <Label>{lessons.title[locale]}</Label>
                 <Label>{lessons.difficulty}</Label>
                 <Label>{lessons.status}</Label>
               </div>

@@ -35,7 +35,7 @@ type LessonForm = Lesson & {
   puzzles: Puzzle[];
 };
 export const LessonFormScreen = ({ lesson }: Props) => {
-  const { apiDomain } = useAppContext();
+  const { apiDomain, locale } = useAppContext();
 
   const {
     data: courses,
@@ -155,19 +155,54 @@ export const LessonFormScreen = ({ lesson }: Props) => {
     });
   };
 
-  const objectives = watch('objectives') || [];
+  const enObjectives = watch('objectives.en') || [];
 
-  const addObjective = () => {
-    const currentObjectives = watch('objectives') || [];
+  const addEnObjective = () => {
+    const currentObjectives = watch('objectives.en') || [];
     const newObjectives = [...currentObjectives, ''];
-    setValue('objectives', newObjectives, { shouldDirty: true });
+    setValue('objectives.en', newObjectives, { shouldDirty: true });
   };
 
-  const removeObjective = (index: number) => {
-    const currentObjectives = watch('objectives') || [];
+  const removeEnObjective = (index: number) => {
+    const currentObjectives = watch('objectives.en') || [];
     const newObjectives = [...currentObjectives];
     newObjectives.splice(index, 1);
-    setValue('objectives', newObjectives, { shouldDirty: true });
+    setValue('objectives.en', newObjectives, { shouldDirty: true });
+  };
+
+  const reorderEnObjectives = (fromIndex: number, toIndex: number) => {
+    const objectives = watch('objectives.en') || [];
+    const updatedItems = [...objectives];
+    const [movedItem] = updatedItems.splice(fromIndex, 1);
+    updatedItems.splice(toIndex, 0, movedItem);
+    setValue('objectives.en', updatedItems, {
+      shouldDirty: true,
+    });
+  };
+
+  const viObjectives = watch('objectives.vi') || [];
+
+  const addViObjective = () => {
+    const currentObjectives = watch('objectives.vi') || [];
+    const newObjectives = [...currentObjectives, ''];
+    setValue('objectives.vi', newObjectives, { shouldDirty: true });
+  };
+
+  const removeViObjective = (index: number) => {
+    const currentObjectives = watch('objectives.vi') || [];
+    const newObjectives = [...currentObjectives];
+    newObjectives.splice(index, 1);
+    setValue('objectives.vi', newObjectives, { shouldDirty: true });
+  };
+
+  const reorderViObjective = (fromIndex: number, toIndex: number) => {
+    const objectives = watch('objectives.vi') || [];
+    const updatedItems = [...objectives];
+    const [movedItem] = updatedItems.splice(fromIndex, 1);
+    updatedItems.splice(toIndex, 0, movedItem);
+    setValue('objectives.vi', updatedItems, {
+      shouldDirty: true,
+    });
   };
 
   const reOrderPuzzles = (fromIndex: number, toIndex: number) => {
@@ -184,16 +219,23 @@ export const LessonFormScreen = ({ lesson }: Props) => {
     <div className="">
       <TitlePage>Lesson Form</TitlePage>
       <form onSubmit={handleSubmit(onSubmit)} className="">
-        <div className="grid grid-cols-3  place-content-start mb-4 gap-8">
-          <div className="flex flex-col">
-            <Label htmlFor="title" value="Title" />
-            <TextInput
-              id="title"
-              type="text"
-              placeholder="Title"
-              {...register('title')}
-            />
-          </div>
+        <div className="flex flex-col">
+          <Label htmlFor="title" value="Title" />
+          <TextInput
+            id="title"
+            type="text"
+            placeholder="English title"
+            {...register('title.en')}
+            className="mb-2"
+          />
+          <TextInput
+            id="title"
+            type="text"
+            placeholder="Vietnamese title"
+            {...register('title.vi')}
+          />
+        </div>
+        <div className="mt-4 grid grid-cols-2  place-content-start mb-4 gap-8">
           <div className="flex flex-col">
             <Label htmlFor="status" value="Status" />
             <Select id="status" required {...register('status')}>
@@ -229,29 +271,67 @@ export const LessonFormScreen = ({ lesson }: Props) => {
           </div>
         </div>
         <div className="mb-4">
-          Objectives:
-          {objectives.map((objective, index) => (
-            <div
-              key={`${index}-objective`}
-              className="flex justify-between items-center mb-2"
-            >
-              <TextInput
-                className="w-[90%]"
-                {...register(`objectives.${index}`)}
-                defaultValue={objective}
-              />
-              <Button
-                outline
-                size="sm"
-                type="button"
-                onClick={() => removeObjective(index)}
+          English Objectives:
+          <DndProvider backend={HTML5Backend}>
+            {enObjectives.map((objective: string, index: number) => (
+              <DraggableItem
+                itemType="enObjectives"
+                index={index}
+                moveItem={reorderEnObjectives}
+                key={`${index}-en-objective`}
+                className="flex justify-between items-center mb-2"
               >
-                -
-              </Button>
-            </div>
-          ))}
-          <Button type="button" outline size="sm" onClick={addObjective}>
-            Add objective
+                <TextInput
+                  className="w-[90%]"
+                  {...register(`objectives.en.${index}`)}
+                  defaultValue={objective}
+                />
+                <Button
+                  outline
+                  size="sm"
+                  className="mt-2"
+                  type="button"
+                  onClick={() => removeEnObjective(index)}
+                >
+                  -
+                </Button>
+              </DraggableItem>
+            ))}
+          </DndProvider>
+          <Button type="button" outline size="sm" onClick={addEnObjective}>
+            Add english objective
+          </Button>
+        </div>
+        <div className="mb-4">
+          Vietnamese Objectives:
+          <DndProvider backend={HTML5Backend}>
+            {viObjectives.map((objective: string, index: number) => (
+              <DraggableItem
+                itemType="viObjectives"
+                index={index}
+                moveItem={reorderViObjective}
+                key={`${index}-vi-objective`}
+                className="flex justify-between items-center mb-2"
+              >
+                <TextInput
+                  className="w-[90%]"
+                  {...register(`objectives.vi.${index}`)}
+                  defaultValue={objective}
+                />
+                <Button
+                  outline
+                  size="sm"
+                  className="mt-2"
+                  type="button"
+                  onClick={() => removeViObjective(index)}
+                >
+                  -
+                </Button>
+              </DraggableItem>
+            ))}
+          </DndProvider>
+          <Button type="button" outline size="sm" onClick={addViObjective}>
+            Add vietnamese objective
           </Button>
         </div>
         <div className="mb-4">
@@ -269,7 +349,13 @@ export const LessonFormScreen = ({ lesson }: Props) => {
                   <div className="flex flex-col w-full">
                     <Textarea
                       rows={3}
-                      {...register(`contents.${index}.value`)}
+                      placeholder="English Content"
+                      {...register(`contents.${index}.value.en`)}
+                    />
+                    <Textarea
+                      rows={3}
+                      placeholder="Vietnamese Content"
+                      {...register(`contents.${index}.value.vi`)}
                     />
                     <div className="mt-2">
                       <div className="grid grid-cols-3">
@@ -282,7 +368,7 @@ export const LessonFormScreen = ({ lesson }: Props) => {
                           key={`content-puzzle-${index}-${pIndex}`}
                           className="grid grid-cols-3"
                         >
-                          <Label>{p.puzzleId.title}</Label>
+                          <Label>{p.puzzleId.title[locale]}</Label>
                           <Label>{p.puzzleId.difficulty}</Label>
                           <a
                             className="text-[12px] underline"
@@ -329,7 +415,14 @@ export const LessonFormScreen = ({ lesson }: Props) => {
             outline
             size="sm"
             onClick={() =>
-              appendContent({ type: 'text', value: '', contentPuzzles: [] })
+              appendContent({
+                type: 'text',
+                value: {
+                  en: '',
+                  vi: '',
+                },
+                contentPuzzles: [],
+              })
             }
           >
             Add content
@@ -355,7 +448,7 @@ export const LessonFormScreen = ({ lesson }: Props) => {
                   className="mb-4"
                 >
                   <div className="grid grid-cols-[50%_10%_25%_5%] mb-2 gap-4 place-items-center">
-                    <Label>{field.title}</Label>
+                    <Label>{field.title[locale]}</Label>
                     <Label>{field.difficulty}</Label>
                     <Label>{field.status}</Label>
                     <div className="">

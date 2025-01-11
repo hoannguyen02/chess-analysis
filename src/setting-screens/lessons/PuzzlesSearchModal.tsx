@@ -27,7 +27,7 @@ export const PuzzlesSearchModal: React.FC<PuzzlesSearchModalProps> = ({
   onAddPuzzles,
   selectedPuzzles,
 }) => {
-  const { apiDomain, themes } = useAppContext();
+  const { apiDomain, themes, locale } = useAppContext();
   const [selectedInModal, setSelectedInModal] = useState<Puzzle[]>([]);
   const [difficulty, setDifficulty] = useState<PuzzleDifficulty | ''>('');
   const [theme, setTheme] = useState<string | ''>('');
@@ -128,7 +128,7 @@ export const PuzzlesSearchModal: React.FC<PuzzlesSearchModalProps> = ({
               >
                 <option value="">Select a theme</option>
                 {themes.map((theme) => (
-                  <option key={theme.code} label={theme.title}>
+                  <option key={theme.code} label={theme.title[locale]}>
                     {theme.code}
                   </option>
                 ))}
@@ -183,7 +183,7 @@ export const PuzzlesSearchModal: React.FC<PuzzlesSearchModalProps> = ({
                         />
                       </Table.Cell>
                       <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
-                        {item.title}
+                        {item?.title?.[locale]}
                       </Table.Cell>
                       <Table.Cell>{item.difficulty}</Table.Cell>
                       <Table.Cell>{item.status}</Table.Cell>
