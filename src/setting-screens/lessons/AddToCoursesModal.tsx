@@ -32,7 +32,7 @@ export const AddToCoursesModal: React.FC<Props> = ({
   onSaveSuccess,
 }) => {
   const [loading, setLoading] = useState(false);
-  const { apiDomain } = useAppContext();
+  const { apiDomain, locale } = useAppContext();
   const [selectedInModal, setSelectedInModal] = useState<Course[]>([]);
   const [difficulty, setDifficulty] = useState<PuzzleDifficulty | ''>('');
   const [title, setTitle] = useState<string | ''>('');
@@ -44,7 +44,8 @@ export const AddToCoursesModal: React.FC<Props> = ({
     const queryObject: Record<string, any> = {
       difficulty,
       status,
-      title,
+      search: title,
+      locale,
       page: currentPage,
       excludedIds: selectedCourses.map((l) => l._id).join(','),
     };

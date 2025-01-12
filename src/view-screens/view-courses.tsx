@@ -1,21 +1,19 @@
 import DebouncedInput from '@/components/DebounceInput';
-import { TitlePage } from '@/components/TitlePage';
-import { PUZZLE_RATING, PuzzleStatues } from '@/constants/puzzle';
+import { PUZZLE_RATING } from '@/constants/puzzle';
 import { useAppContext } from '@/contexts/AppContext';
 import { Course } from '@/types/course';
 import { PuzzleDifficulty } from '@/types/puzzle';
-import { StatusType } from '@/types/status';
-import { Button, Pagination, Select, Spinner, Table } from 'flowbite-react';
+import { fetcher } from '@/utils/fetcher';
+import { Pagination, Select, Spinner, Table } from 'flowbite-react';
+import { useTranslations } from 'next-intl';
 import Link from 'next/link';
-import { useRouter } from 'next/router';
 import { useMemo, useState } from 'react';
 import useSWR from 'swr';
-import { fetcher } from '../../utils/fetcher';
 
-export const CourseListScreen = () => {
+export const ViewCoursesScreen = () => {
+  const t = useTranslations();
   const { apiDomain, locale } = useAppContext();
   const [currentPage, setCurrentPage] = useState(1);
-  const [status, setStatus] = useState<StatusType | ''>('');
   const [title, setTitle] = useState<string | ''>('');
   const [difficulty, setDifficulty] = useState<PuzzleDifficulty | ''>('');
 
@@ -23,7 +21,6 @@ export const CourseListScreen = () => {
     // Define your query parameters as an object
     const queryObject: Record<string, any> = {
       difficulty,
-      status,
       search: title,
       locale,
       page: currentPage,
@@ -38,7 +35,7 @@ export const CourseListScreen = () => {
       .join('&');
 
     return filteredQuery;
-  }, [difficulty, status, title, locale, currentPage]);
+  }, [difficulty, title, locale, currentPage]);
 
   const queryKey = useMemo(
     () => `${apiDomain}/v1/courses?${queryString}`,
@@ -56,29 +53,16 @@ export const CourseListScreen = () => {
     lastPage: number;
   }>(queryKey, fetcher);
 
-  const router = useRouter();
-
   const onPageChange = (page: number) => setCurrentPage(page);
 
   if (error || !data) return <div>Error occurred</div>;
 
   return (
     <>
-      <TitlePage>
-        Course List{' '}
-        <Button
-          onClick={() => {
-            router.push('/settings/courses/create');
-          }}
-        >
-          Add new
-        </Button>
-      </TitlePage>
       <div className="grid grid-cols-4 gap-4 mb-8">
         <div className="flex flex-col">
-          Title:
           <DebouncedInput
-            placeholder="Enter a title"
+            placeholder={t('common.title.search')}
             initialValue={title}
             onChange={(value) => {
               setTitle(value);
@@ -86,26 +70,14 @@ export const CourseListScreen = () => {
           />
         </div>
         <div className="flex flex-col">
-          Status:
-          <Select
-            value={status}
-            onChange={(event) => setStatus(event.target.value as StatusType)}
-          >
-            <option value="">Select a status</option>
-            {PuzzleStatues.map((status) => (
-              <option key={status}>{status}</option>
-            ))}
-          </Select>
-        </div>
-        <div className="flex flex-col">
-          Rating:
+          {t('common.title.rating')}
           <Select
             value={difficulty}
             onChange={(event) =>
               setDifficulty(event.target.value as PuzzleDifficulty)
             }
           >
-            <option value="">Select a rating</option>
+            <option value="">{t('common.title.select-rating')}</option>
             {Object.entries(PUZZLE_RATING).map(([rating, title]) => (
               <option key={rating} label={title}>
                 {rating}

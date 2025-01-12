@@ -21,11 +21,10 @@ const LessonPage = ({ lesson }: Props) => {
 };
 
 export const getServerSideProps: GetServerSideProps = withThemes(
-  async ({
-    params,
-    locale,
-  }: GetServerSidePropsContext<ParsedUrlQuery, PreviewData>) => {
-    const apiDomain = process.env.NEXT_PUBLIC_PHONG_CHESS_DOMAIN;
+  async (
+    { params, locale }: GetServerSidePropsContext<ParsedUrlQuery, PreviewData>,
+    { apiDomain }
+  ) => {
     const { id } = params as { id: string };
 
     try {

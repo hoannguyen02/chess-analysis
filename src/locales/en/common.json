@@ -20,7 +20,9 @@
     "rating": "Rating",
     "White": "White",
     "Black": "Black",
-    "move": "move"
+    "move": "move",
+    "search": "Search",
+    "select-rating": "Select a rating"
   },
   "button": {
     "back": "Back",

@@ -35,7 +35,7 @@ type LessonForm = Lesson & {
   puzzles: Puzzle[];
 };
 export const LessonFormScreen = ({ lesson }: Props) => {
-  const { apiDomain, locale } = useAppContext();
+  const { apiDomain, locale, themes } = useAppContext();
 
   const {
     data: courses,
@@ -220,22 +220,31 @@ export const LessonFormScreen = ({ lesson }: Props) => {
       <TitlePage>Lesson Form</TitlePage>
       <form onSubmit={handleSubmit(onSubmit)} className="">
         <div className="flex flex-col">
-          <Label htmlFor="title" value="Title" />
+          <Label value="Title" />
           <TextInput
-            id="title"
             type="text"
             placeholder="English title"
             {...register('title.en')}
             className="mb-2"
           />
           <TextInput
-            id="title"
             type="text"
             placeholder="Vietnamese title"
             {...register('title.vi')}
           />
         </div>
-        <div className="mt-4 grid grid-cols-2  place-content-start mb-4 gap-8">
+        <div className="mt-4 grid grid-cols-3  place-content-start mb-4 gap-8">
+          <div className="flex flex-col">
+            <Label htmlFor="theme" value="Theme" />
+            <Select value={watch('theme')} id="theme" {...register('theme')}>
+              <option value="">Select a theme</option>
+              {themes.map((theme) => (
+                <option key={theme.code} label={theme.title[locale]}>
+                  {theme.code}
+                </option>
+              ))}
+            </Select>
+          </div>
           <div className="flex flex-col">
             <Label htmlFor="status" value="Status" />
             <Select id="status" required {...register('status')}>
@@ -449,7 +458,7 @@ export const LessonFormScreen = ({ lesson }: Props) => {
                   className="mb-4"
                 >
                   <div className="grid grid-cols-[50%_10%_25%_5%] mb-2 gap-4 place-items-center">
-                    <Label>{field.title[locale]}</Label>
+                    <Label>{field?.title?.[locale]}</Label>
                     <Label>{field.difficulty}</Label>
                     <Label>{field.status}</Label>
                     <div className="">
@@ -492,7 +501,7 @@ export const LessonFormScreen = ({ lesson }: Props) => {
                 key={`course-${index}`}
                 className="grid grid-cols-[70%_15%_15%] mb-2 gap-4"
               >
-                <Label>{course.title}</Label>
+                <Label>{course.title[locale]}</Label>
                 <Label>{course.difficulty}</Label>
                 <Label>{course.status}</Label>
               </div>

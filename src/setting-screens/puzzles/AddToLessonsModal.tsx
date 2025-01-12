@@ -44,7 +44,8 @@ export const AddToLessonsModal: React.FC<Props> = ({
     const queryObject: Record<string, any> = {
       difficulty,
       status,
-      title,
+      search: title,
+      locale,
       page: currentPage,
       excludedIds: selectedLessons.map((l) => l._id).join(','),
     };
@@ -58,7 +59,7 @@ export const AddToLessonsModal: React.FC<Props> = ({
       .join('&');
 
     return filteredQuery;
-  }, [difficulty, status, title, currentPage, selectedLessons]);
+  }, [difficulty, status, title, locale, currentPage, selectedLessons]);
 
   const queryKey = useMemo(
     () => `${apiDomain}/v1/lessons?${queryString}`,

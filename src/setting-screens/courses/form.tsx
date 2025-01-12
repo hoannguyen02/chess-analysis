@@ -24,7 +24,7 @@ type CourseForm = Course & {
 };
 export const CourseFormScreen = ({ course }: Props) => {
   const [addLessonPopup, setAddLessonPopup] = useState(false);
-  const { locale } = useAppContext();
+  const { locale, themes, apiDomain } = useAppContext();
 
   const {
     register, // Register inputs
@@ -66,7 +66,6 @@ export const CourseFormScreen = ({ course }: Props) => {
     const lessonIds = lessons.map((l: Lesson) => ({ lessonId: l._id }));
     const payload = { ...rest, lessons: lessonIds };
     try {
-      const apiDomain = process.env.NEXT_PUBLIC_PHONG_CHESS_DOMAIN;
       let request;
       if (_id) {
         request = fetch(`${apiDomain}/v1/courses/${_id}`, {
@@ -181,7 +180,18 @@ export const CourseFormScreen = ({ course }: Props) => {
             {...register('title.vi')}
           />
         </div>
-        <div className="mt-2 grid grid-cols-2  place-content-start mb-4 gap-8">
+        <div className="mt-2 grid grid-cols-3  place-content-start mb-4 gap-8">
+          <div className="flex flex-col">
+            <Label htmlFor="theme" value="Theme" />
+            <Select value={watch('theme')} id="theme" {...register('theme')}>
+              <option value="">Select a theme</option>
+              {themes.map((theme) => (
+                <option key={theme.code} label={theme.title[locale]}>
+                  {theme.code}
+                </option>
+              ))}
+            </Select>
+          </div>
           <div className="flex flex-col">
             <Label htmlFor="status" value="Status" />
             <Select id="status" required {...register('status')}>

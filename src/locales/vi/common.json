@@ -20,7 +20,9 @@
     "rating": "Xếp hạng",
     "White": "Trắng",
     "Black": "Đen",
-    "move": "đi"
+    "move": "đi",
+    "search": "Tìm kiếm",
+    "select-rating": "Chọn level"
   },
   "button": {
     "back": "Quay lại",

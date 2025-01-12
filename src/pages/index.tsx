@@ -17,7 +17,7 @@ export default function Home() {
       <h1 className="text-center mt-8 text-[24px] lg:text-[50px]">
         <div
           dangerouslySetInnerHTML={{
-            __html: headline,
+            __html: headline as TrustedHTML,
           }}
         />
       </h1>

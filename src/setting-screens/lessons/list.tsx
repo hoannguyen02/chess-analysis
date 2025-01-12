@@ -23,7 +23,8 @@ export const LessonsListScreen = () => {
     const queryObject: Record<string, any> = {
       difficulty,
       status,
-      title,
+      search: title,
+      locale,
       page: currentPage,
     };
 
@@ -36,7 +37,7 @@ export const LessonsListScreen = () => {
       .join('&');
 
     return filteredQuery;
-  }, [difficulty, status, title, currentPage]);
+  }, [difficulty, status, title, locale, currentPage]);
 
   const queryKey = useMemo(
     () => `${apiDomain}/v1/lessons?${queryString}`,
