@@ -28,7 +28,7 @@ export const MenuLeft = () => {
       <Link href="/endgames" className="mb-6 hover:text-[var(--p-highlight)]">
         {t('navigation.endgames')}
       </Link>
-      <Link href="/strategy" className="mb-6 hover:text-[var(--p-highlight)]">
+      <Link href="/strategies" className="mb-6 hover:text-[var(--p-highlight)]">
         {t('navigation.strategy')}
       </Link>
       <Link href="/tactics" className="mb-6 hover:text-[var(--p-highlight)]">

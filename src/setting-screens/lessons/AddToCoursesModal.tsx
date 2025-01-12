@@ -59,7 +59,7 @@ export const AddToCoursesModal: React.FC<Props> = ({
       .join('&');
 
     return filteredQuery;
-  }, [difficulty, status, title, currentPage, selectedCourses]);
+  }, [difficulty, status, title, locale, currentPage, selectedCourses]);
 
   const queryKey = useMemo(
     () => `${apiDomain}/v1/courses?${queryString}`,

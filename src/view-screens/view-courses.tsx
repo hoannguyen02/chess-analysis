@@ -2,137 +2,185 @@ import DebouncedInput from '@/components/DebounceInput';
 import { PUZZLE_RATING } from '@/constants/puzzle';
 import { useAppContext } from '@/contexts/AppContext';
 import { Course } from '@/types/course';
-import { PuzzleDifficulty } from '@/types/puzzle';
+import { LocaleType } from '@/types/locale';
 import { fetcher } from '@/utils/fetcher';
-import { Pagination, Select, Spinner, Table } from 'flowbite-react';
-import { useTranslations } from 'next-intl';
-import Link from 'next/link';
-import { useMemo, useState } from 'react';
+import { filteredQuery } from '@/utils/filteredQuery';
+import { getDifficultyColor } from '@/utils/getDifficultyColor';
+import {
+  Badge,
+  Card,
+  Pagination,
+  Progress,
+  Select,
+  Spinner,
+} from 'flowbite-react';
+import { useRouter } from 'next/router';
+import React, { useMemo } from 'react';
 import useSWR from 'swr';
 
-export const ViewCoursesScreen = () => {
-  const t = useTranslations();
-  const { apiDomain, locale } = useAppContext();
-  const [currentPage, setCurrentPage] = useState(1);
-  const [title, setTitle] = useState<string | ''>('');
-  const [difficulty, setDifficulty] = useState<PuzzleDifficulty | ''>('');
+type Props = {
+  initialCourses: Course[];
+  locale: LocaleType;
+  currentPage: number;
+  totalPages: number;
+  tacticsOnly?: boolean;
+  initialTheme?: string;
+};
+
+export const ViewCourses: React.FC<Props> = ({
+  initialCourses,
+  locale,
+  currentPage,
+  totalPages,
+  tacticsOnly,
+  initialTheme,
+}) => {
+  const router = useRouter();
+  const { apiDomain, themes } = useAppContext();
+
+  const { theme, difficulty, search } = router.query;
 
   const queryString = useMemo(() => {
-    // Define your query parameters as an object
     const queryObject: Record<string, any> = {
       difficulty,
-      search: title,
+      search,
       locale,
       page: currentPage,
+      tacticsOnly,
+      theme: theme || initialTheme,
     };
 
-    const filteredQuery = Object.entries(queryObject)
-      .filter(([, value]) => value) // Exclude undefined values
-      .map(
-        ([key, value]) =>
-          `${key}=${encodeURIComponent(value as string | number)}`
-      ) // Encode values for safety
-      .join('&');
-
-    return filteredQuery;
-  }, [difficulty, title, locale, currentPage]);
+    return filteredQuery(queryObject);
+  }, [
+    difficulty,
+    search,
+    locale,
+    currentPage,
+    tacticsOnly,
+    theme,
+    initialTheme,
+  ]);
 
   const queryKey = useMemo(
     () => `${apiDomain}/v1/courses?${queryString}`,
     [apiDomain, queryString]
   );
 
-  const { data, error, isLoading } = useSWR<{
-    items: Course[];
-    total: number;
-    hasNext: boolean;
-    hasPrev: boolean;
-    currentPage: number;
-    nextPage: number;
-    prevPage: number;
-    lastPage: number;
-  }>(queryKey, fetcher);
+  const { data, isValidating } = useSWR(queryKey, fetcher, {
+    fallbackData: { items: initialCourses, totalPages },
+    revalidateOnMount: false,
+    revalidateOnFocus: false,
+  });
 
-  const onPageChange = (page: number) => setCurrentPage(page);
-
-  if (error || !data) return <div>Error occurred</div>;
+  const handleFilterChange = (filterType: string, value: string) => {
+    router.push(
+      {
+        pathname: router.pathname,
+        query: { ...router.query, [filterType]: value, page: 1 },
+      },
+      undefined,
+      {
+        shallow: true,
+      }
+    );
+  };
 
   return (
-    <>
-      <div className="grid grid-cols-4 gap-4 mb-8">
-        <div className="flex flex-col">
-          <DebouncedInput
-            placeholder={t('common.title.search')}
-            initialValue={title}
-            onChange={(value) => {
-              setTitle(value);
-            }}
-          />
-        </div>
-        <div className="flex flex-col">
-          {t('common.title.rating')}
+    <div>
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-8">
+        <DebouncedInput
+          placeholder="Search..."
+          initialValue={search as string}
+          onChange={(value) => {
+            debugger;
+            router.push(
+              {
+                pathname: '/',
+                query: { ...router.query, page: 1, search: value },
+              },
+              undefined,
+              { shallow: true }
+            );
+          }}
+        />
+        <div className="flex gap-4">
           <Select
-            value={difficulty}
-            onChange={(event) =>
-              setDifficulty(event.target.value as PuzzleDifficulty)
-            }
+            value={difficulty as string}
+            onChange={(e) => handleFilterChange('difficulty', e.target.value)}
           >
-            <option value="">{t('common.title.select-rating')}</option>
+            <option value="">All Ratings</option>
             {Object.entries(PUZZLE_RATING).map(([rating, title]) => (
               <option key={rating} label={title}>
                 {rating}
               </option>
             ))}
           </Select>
+          {tacticsOnly && (
+            <Select
+              value={theme as string}
+              onChange={(e) => handleFilterChange('theme', e.target.value)}
+            >
+              <option value="">All Themes</option>
+              {themes.map((theme) => (
+                <option key={theme.code} label={theme.title[locale]}>
+                  {theme.code}
+                </option>
+              ))}
+            </Select>
+          )}
         </div>
       </div>
-      <Table hoverable>
-        <Table.Head>
-          <Table.HeadCell>Title</Table.HeadCell>
-          <Table.HeadCell>Difficulty</Table.HeadCell>
-          <Table.HeadCell>Status</Table.HeadCell>
-          <Table.HeadCell>
-            <span className="sr-only">Edit</span>
-          </Table.HeadCell>
-        </Table.Head>
-        <Table.Body className="divide-y">
-          {isLoading ? (
-            <div className="text-center">
-              <Spinner />
-            </div>
-          ) : (
-            data.items.map((item, index) => {
-              return (
-                <Table.Row
-                  key={`item-${index}`}
-                  className="bg-white dark:border-gray-700 dark:bg-gray-800"
-                >
-                  <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
-                    {item.title[locale]}
-                  </Table.Cell>
-                  <Table.Cell>{item.difficulty}</Table.Cell>
-                  <Table.Cell>{item.status}</Table.Cell>
-                  <Table.Cell>
-                    <Link
-                      href={`/settings/courses/${item._id}`}
-                      className="font-medium text-cyan-600 hover:underline dark:text-cyan-500"
-                    >
-                      Edit
-                    </Link>
-                  </Table.Cell>
-                </Table.Row>
-              );
-            })
-          )}
-        </Table.Body>
-      </Table>
-      <div className="flex justify-center mt-4">
+      {isValidating ? (
+        <div className="flex justify-center">
+          <Spinner size="lg" />
+        </div>
+      ) : (
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {data.items.map((course: Course) => (
+            <Card key={course.title[locale]}>
+              <div className="flex items-center justify-between">
+                <h5 className="text-lg font-semibold">
+                  {course.title[locale]}
+                </h5>
+                <Badge color={getDifficultyColor(course.difficulty)}>
+                  {course.difficulty || 'Unknown'}
+                </Badge>
+              </div>
+              <p className="text-sm text-gray-500">
+                {course.description?.[locale] || ''}
+              </p>
+              <div className="mt-2">
+                {course.lessons && (
+                  <Progress
+                    progress={(course.lessons.length / 10) * 100}
+                    size="sm"
+                  />
+                )}
+              </div>
+            </Card>
+          ))}
+        </div>
+      )}
+      <div className="flex justify-center mt-6">
         <Pagination
           currentPage={currentPage}
-          totalPages={data.lastPage}
-          onPageChange={onPageChange}
+          totalPages={totalPages}
+          onPageChange={(page) => {
+            router.push(
+              {
+                pathname: '/',
+                query: { ...router.query, page },
+              },
+              undefined,
+              {
+                shallow: true,
+              }
+            );
+          }}
+          previousLabel="Previous"
+          nextLabel="Next"
         />
       </div>
-    </>
+    </div>
   );
 };
