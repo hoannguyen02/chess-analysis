@@ -38,6 +38,7 @@ export const getServerSideProps: GetServerSideProps = withThemes(
       const solvePuzzleMessages = (
         await import(`@/locales/${locale || 'en'}/solve-puzzle.json`)
       ).default;
+
       return {
         props: {
           puzzle: data,

@@ -44,6 +44,7 @@ export const PuzzleFormScreen = ({ puzzle, onSaveSuccess }: Props) => {
     watch,
     setValue,
     getValues,
+    reset,
   } = useForm<Puzzle>({
     defaultValues: puzzle || {
       fen: '8/8/8/8/8/8/8/8 w - - 0 1',
@@ -113,11 +114,15 @@ export const PuzzleFormScreen = ({ puzzle, onSaveSuccess }: Props) => {
         const response = await request;
         if (response.ok) {
           const data = await response.json();
+          reset(data);
           if (onSaveSuccess) {
             onSaveSuccess(data);
           }
 
           alert('Data submitted successfully');
+          if (!_id) {
+            router.push(`/settings/puzzles/${data._id}`);
+          }
         } else {
           console.error('Failed to submit data:', response.statusText);
           alert('Submission failed');
@@ -318,7 +323,7 @@ export const PuzzleFormScreen = ({ puzzle, onSaveSuccess }: Props) => {
           </Button>
         </div>
 
-        {lessons?.length && (
+        {lessons && lessons?.length > 0 && (
           <div className="mb-16">
             Lessons:
             <div className="grid grid-cols-[70%_15%_15%] mb-2 gap-4">

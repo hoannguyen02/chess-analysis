@@ -23,10 +23,15 @@ const PreviewPuzzlePage = () => {
 export const getServerSideProps = withThemes(async ({ locale }) => {
   const commonMessages = (await import(`@/locales/${locale}/common.json`))
     .default;
+  const solvePuzzleMessages = (
+    await import(`@/locales/${locale || 'en'}/solve-puzzle.json`)
+  ).default;
+
   return {
     props: {
       messages: {
         common: commonMessages,
+        'solve-puzzle': solvePuzzleMessages,
       },
     },
   };
