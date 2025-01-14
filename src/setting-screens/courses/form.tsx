@@ -7,7 +7,14 @@ import useBeforeUnload from '@/hooks/useBeforeUnload';
 import usePreventRouteChange from '@/hooks/usePreventRouteChange';
 import { Course, CourseExpanded } from '@/types/course';
 import { Lesson } from '@/types/lesson';
-import { Button, Checkbox, Label, Select, TextInput } from 'flowbite-react';
+import {
+  Button,
+  Checkbox,
+  Label,
+  Select,
+  Textarea,
+  TextInput,
+} from 'flowbite-react';
 import { useRouter } from 'next/router';
 import { useState } from 'react';
 import { DndProvider } from 'react-dnd';
@@ -211,14 +218,19 @@ export const CourseFormScreen = ({ course }: Props) => {
             </Select>
           </div>
         </div>
-        <div className="grid grid-cols-3  place-content-start mb-4 gap-8">
+        <div className="grid grid-cols-2  place-content-start mb-4 gap-8">
           <div className="flex flex-col">
-            <Label htmlFor="description" value="Description " />
-            <TextInput
-              id="description"
-              type="text"
-              placeholder="Description string"
-              {...register('description')}
+            <Label value="Description" />
+            <Textarea
+              placeholder="English Description"
+              {...register('description.en')}
+              className="mb-2"
+              rows={3}
+            />
+            <Textarea
+              placeholder="Vietnamese Description"
+              rows={3}
+              {...register('description.vi')}
             />
           </div>
           <div className="flex items-center">

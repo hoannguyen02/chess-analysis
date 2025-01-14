@@ -174,8 +174,8 @@ export const PuzzleFormScreen = ({ puzzle, onSaveSuccess }: Props) => {
             </div>
             <div className="mt-2">
               <Link
-                href={`/fen-builder?fen=${fen}`}
-                className="w-full flex items-center text-[12px]"
+                href={`/settings/fen-builder?fen=${fen}`}
+                className="inline-flex items-center text-[12px]"
                 target="_blank"
               >
                 Update FEN: <VscEdit className="ml-2" />
