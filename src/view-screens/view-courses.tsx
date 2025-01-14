@@ -14,6 +14,7 @@ import {
   Select,
   Spinner,
 } from 'flowbite-react';
+import { useTranslations } from 'next-intl';
 import { useRouter } from 'next/router';
 import React, { useMemo } from 'react';
 import useSWR from 'swr';
@@ -35,6 +36,7 @@ export const ViewCourses: React.FC<Props> = ({
   tacticsOnly,
   initialTheme,
 }) => {
+  const t = useTranslations();
   const router = useRouter();
   const { apiDomain, themes } = useAppContext();
 
@@ -108,7 +110,7 @@ export const ViewCourses: React.FC<Props> = ({
             value={difficulty as string}
             onChange={(e) => handleFilterChange('difficulty', e.target.value)}
           >
-            <option value="">All Ratings</option>
+            <option value="">{t('common.title.all-levels')}</option>
             {Object.entries(PUZZLE_RATING).map(([rating, title]) => (
               <option key={rating} label={title}>
                 {rating}
@@ -120,7 +122,7 @@ export const ViewCourses: React.FC<Props> = ({
               value={theme as string}
               onChange={(e) => handleFilterChange('theme', e.target.value)}
             >
-              <option value="">All Themes</option>
+              <option value="">{t('common.title.all-themes')}</option>
               {themes.map((theme) => (
                 <option key={theme.code} label={theme.title[locale]}>
                   {theme.code}

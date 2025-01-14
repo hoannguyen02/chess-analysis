@@ -22,7 +22,8 @@
     "Black": "Black",
     "move": "move",
     "search": "Search",
-    "select-rating": "Select a rating"
+    "all-levels": "All levels",
+    "all-themes": "All themes"
   },
   "button": {
     "back": "Back",

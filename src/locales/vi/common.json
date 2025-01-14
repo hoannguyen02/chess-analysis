@@ -22,7 +22,8 @@
     "Black": "Đen",
     "move": "đi",
     "search": "Tìm kiếm",
-    "select-rating": "Chọn level"
+    "all-levels": "Tất cả cấp độ",
+    "all-themes": "Tất cả các loại"
   },
   "button": {
     "back": "Quay lại",
