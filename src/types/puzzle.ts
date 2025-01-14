@@ -1,12 +1,18 @@
 import { StatusType } from './status';
 
 /**
+ * 0-800: Beginner
  * 800-1200: Easy
  * 1200-1600: Medium
  * 1600-2000: Hard
  * 2000+: Very hard
  */
-export type PuzzleDifficulty = 'Easy' | 'Medium' | 'Hard' | 'Very Hard';
+export type PuzzleDifficulty =
+  | 'Beginner'
+  | 'Easy'
+  | 'Medium'
+  | 'Hard'
+  | 'Very Hard';
 export type PuzzlePhase = 'Opening' | 'Middle' | 'Endgame';
 export type PuzzleSolutionMove = {
   move: string;

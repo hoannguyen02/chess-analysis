@@ -1,4 +1,4 @@
-import { ObjectiveType } from '.';
+import { ExplanationType, ObjectiveType } from '.';
 import { Puzzle } from './puzzle';
 import { DifficultyType, StatusType } from './status';
 
@@ -18,10 +18,11 @@ export type Lesson = {
   puzzles: { puzzleId: string }[];
   contents?: {
     type: ContentType;
-    value: {
+    title: {
       en: string;
       vi: string;
     };
+    explanations?: ExplanationType;
     contentPuzzles: { puzzleId: string }[];
   }[];
   difficulty?: DifficultyType;
@@ -45,10 +46,11 @@ export type LessonExpanded = {
   puzzles: { puzzleId: Puzzle }[];
   contents?: {
     type: ContentType;
-    value: {
+    title: {
       en: string;
       vi: string;
     };
+    explanations?: ExplanationType;
     contentPuzzles: { puzzleId: Puzzle }[];
   }[];
   difficulty?: DifficultyType;
