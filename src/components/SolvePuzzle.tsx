@@ -489,14 +489,17 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({ puzzle }) => {
     }
   };
 
-  const { firstMoves, secondMoves } = useMemo(() => {
+  const { setupMoves, followUpMoves, splitIndex } = useMemo(() => {
     const moves = puzzle.solutions || [];
-    const limit = Math.round(moves.length / 2);
+    const splitIndex = Math.round(moves.length / 2);
     return {
-      firstMoves: moves.slice(0, limit),
-      secondMoves: moves.slice(limit),
+      setupMoves: moves.slice(0, splitIndex),
+      followUpMoves: moves.slice(splitIndex),
+      splitIndex,
     };
   }, [puzzle.solutions]);
+
+  const preMove = useMemo(() => puzzle.preMove?.move, [puzzle]);
 
   return (
     <div>
@@ -511,6 +514,7 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({ puzzle }) => {
       <div className="grid grid-cols-2 gap-16">
         <div ref={boardRef}>
           <Chessboard
+            boardOrientation={playerName?.toLowerCase() as 'black' | 'white'}
             position={currentFen}
             onPieceDrop={(sourceSquare, targetSquare) => {
               if (hintMessage) {
@@ -563,20 +567,20 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({ puzzle }) => {
               {t('solve-puzzle.title.moves')}: <hr />
               <div className="mb-2 mt-4 grid grid-cols-2 gap-4">
                 <div>
-                  {puzzle.preMove?.move && (
+                  {preMove && (
                     <p
-                      key={`prev-${puzzle.preMove.move}`}
+                      key={`prev-${preMove}`}
                       className="mb-1 grid grid-cols-2 gap-2"
                     >
-                      0<span className="ml-2">{puzzle.preMove.move}</span>
+                      1 <span className="ml-2">{preMove}</span>
                     </p>
                   )}
-                  {firstMoves.map((s, index) => (
+                  {setupMoves.map((s, index) => (
                     <p
                       key={`first-${index}-${s.move}`}
                       className="mb-1 grid grid-cols-2 gap-2"
                     >
-                      {index + 1}
+                      {preMove ? index + 2 : index + 1}
                       {s.player === 'user' ? (
                         <strong className="ml-2">{s.move}</strong>
                       ) : (
@@ -586,12 +590,14 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({ puzzle }) => {
                   ))}
                 </div>
                 <div>
-                  {secondMoves.map((s, index) => (
+                  {followUpMoves.map((s, index) => (
                     <p
                       key={`second-${index}-${s.move}`}
                       className="mb-1 grid grid-cols-2 gap-2"
                     >
-                      {index + 1}
+                      {preMove
+                        ? splitIndex + index + 2
+                        : splitIndex + index + 1}
                       {s.player === 'user' ? (
                         <strong className="ml-2">{s.move}</strong>
                       ) : (
