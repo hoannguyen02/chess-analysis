@@ -23,11 +23,21 @@
     "move": "đi",
     "search": "Tìm kiếm",
     "all-levels": "Tất cả cấp độ",
-    "all-themes": "Tất cả các loại"
+    "all-themes": "Tất cả các loại",
+    "course-overview": "Tổng Quan Khóa Học",
+    "objectives": "Mục Tiêu",
+    "lessons": "Bài Học",
+    "puzzles": "Thử Thách",
+    "start-course": "Vào Học",
+    "continue-learning": "Học Tiếp"
   },
   "button": {
     "back": "Quay lại",
     "preview": "Xem trước",
-    "submit": "Lưu"
+    "submit": "Lưu",
+    "previous": "Trước",
+    "next": "Sau",
+    "continue": "Tiếp Tục",
+    "completed": "Đã Hoàn tất"
   }
 }

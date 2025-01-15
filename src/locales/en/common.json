@@ -23,11 +23,21 @@
     "move": "move",
     "search": "Search",
     "all-levels": "All levels",
-    "all-themes": "All themes"
+    "all-themes": "All themes",
+    "course-overview": "Course Overview",
+    "objectives": "Objectives",
+    "lessons": "Lessons",
+    "puzzles": "Puzzles",
+    "start-course": "Start Course",
+    "continue-learning": "Continue Learning"
   },
   "button": {
     "back": "Back",
     "preview": "Preview",
-    "submit": "Submit"
+    "submit": "Submit",
+    "previous": "Previous",
+    "next": "Next",
+    "continue": "Continue",
+    "completed": "Completed"
   }
 }

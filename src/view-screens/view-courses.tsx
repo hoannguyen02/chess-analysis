@@ -15,6 +15,7 @@ import {
   Spinner,
 } from 'flowbite-react';
 import { useTranslations } from 'next-intl';
+import Link from 'next/link';
 import { useRouter } from 'next/router';
 import React, { useMemo } from 'react';
 import useSWR from 'swr';
@@ -139,27 +140,33 @@ export const ViewCourses: React.FC<Props> = ({
       ) : (
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {data.items.map((course: Course) => (
-            <Card key={course.title[locale]}>
-              <div className="flex items-center justify-between">
-                <h5 className="text-lg font-semibold">
-                  {course.title[locale]}
-                </h5>
-                <Badge color={getDifficultyColor(course.difficulty)}>
-                  {course.difficulty || 'Unknown'}
-                </Badge>
-              </div>
-              <p className="text-sm text-gray-500">
-                {course.description?.[locale] || ''}
-              </p>
-              <div className="mt-2">
-                {course.lessons && (
-                  <Progress
-                    progress={(course.lessons.length / 10) * 100}
-                    size="sm"
-                  />
-                )}
-              </div>
-            </Card>
+            <Link key={course.title[locale]} href={`/lessons/${course.slug}`}>
+              <Card className="h-full w-full flex flex-col items-start min-h-[230px]">
+                <div className="flex flex-col flex-grow items-start">
+                  <div className="grid grid-cols-[auto_100px] w-full">
+                    <h5 className="text-lg font-semibold">
+                      {course.title[locale]}
+                    </h5>
+                    <div className="flex justify-end">
+                      <Badge color={getDifficultyColor(course.difficulty)}>
+                        {course.difficulty || 'Unknown'}
+                      </Badge>
+                    </div>
+                  </div>
+                  <p className="text-sm text-gray-500 line-clamp-3 mt-2">
+                    {course.description?.[locale] || ''}
+                  </p>
+                </div>
+                <div className="mt-2 w-full">
+                  {course.lessons && (
+                    <Progress
+                      progress={(course.lessons.length / 10) * 100}
+                      size="sm"
+                    />
+                  )}
+                </div>
+              </Card>
+            </Link>
           ))}
         </div>
       )}
@@ -179,8 +186,8 @@ export const ViewCourses: React.FC<Props> = ({
               }
             );
           }}
-          previousLabel="Previous"
-          nextLabel="Next"
+          previousLabel={t('common.button.previous')}
+          nextLabel={t('common.button.next')}
         />
       </div>
     </div>

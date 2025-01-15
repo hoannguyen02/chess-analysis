@@ -18,6 +18,7 @@ export type Course = {
   status: StatusType;
   _id?: string;
   isPublic?: boolean;
+  slug: string;
 };
 
 export type CourseExpanded = {
@@ -36,4 +37,5 @@ export type CourseExpanded = {
   _id?: string;
   isPublic?: boolean;
   lessons: { lessonId: Lesson }[];
+  slug: string;
 };

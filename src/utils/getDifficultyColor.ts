@@ -1,5 +1,7 @@
 export const getDifficultyColor = (difficulty?: string) => {
   switch (difficulty) {
+    case 'Beginner':
+      return 'blue';
     case 'Easy':
       return 'success';
     case 'Medium':
