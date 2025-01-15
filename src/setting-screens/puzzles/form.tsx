@@ -1,5 +1,5 @@
 import { TitlePage } from '@/components/TitlePage';
-import { PUZZLE_RATING, PuzzleStatues } from '@/constants/puzzle';
+import { LEVEL_RATING, Statues } from '@/constants';
 import { ROUTE_CHANGE_MESSAGE } from '@/constants/route';
 import { useAppContext } from '@/contexts/AppContext';
 import useBeforeUnload from '@/hooks/useBeforeUnload';
@@ -192,7 +192,7 @@ export const PuzzleFormScreen = ({ puzzle, onSaveSuccess }: Props) => {
               <Label htmlFor="status" value="Status" />
             </div>
             <Select id="status" required {...register('status')}>
-              {PuzzleStatues.map((status) => (
+              {Statues.map((status) => (
                 <option key={status}>{status}</option>
               ))}
             </Select>
@@ -210,7 +210,7 @@ export const PuzzleFormScreen = ({ puzzle, onSaveSuccess }: Props) => {
               <Label htmlFor="difficulty" value="Difficulty" />
             </div>
             <Select id="difficulty" required {...register('difficulty')}>
-              {Object.entries(PUZZLE_RATING).map(([rating, title]) => (
+              {Object.entries(LEVEL_RATING).map(([rating, title]) => (
                 <option key={rating} label={title}>
                   {rating}
                 </option>

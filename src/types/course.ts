@@ -11,7 +11,6 @@ export type Course = {
     en: string;
     vi: string;
   };
-  theme?: string;
   objectives?: ObjectiveType;
   lessons: { lessonId: string }[];
   tags?: string[];
@@ -22,7 +21,6 @@ export type Course = {
 };
 
 export type CourseExpanded = {
-  theme?: string;
   title: {
     en: string;
     vi: string;

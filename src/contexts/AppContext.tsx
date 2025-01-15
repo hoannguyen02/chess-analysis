@@ -1,9 +1,11 @@
 import { LocaleType } from '@/types/locale';
 import { PuzzleTheme } from '@/types/puzzle-theme';
+import { Tag } from '@/types/tag';
 import React, { createContext, useContext, useMemo } from 'react';
 
 export interface AppContextProps {
   themes: PuzzleTheme[] | [];
+  tags: Tag[] | [];
   apiDomain: string;
   themeMap: Partial<Record<string, PuzzleTheme>>;
   locale: LocaleType;
@@ -16,12 +18,21 @@ export const AppProvider: React.FC<{
   themes: PuzzleTheme[];
   apiDomain: string;
   locale: LocaleType;
-}> = ({ children, themes, apiDomain, locale }) => {
+  tags: Tag[];
+}> = ({ children, themes, apiDomain, locale, tags }) => {
   const value = useMemo(
     () => ({
       locale,
       themes,
-      themeMap: themes?.reduce((acc, theme) => {
+      tags:
+        (tags || []).map((tag) => ({
+          value: tag.name,
+          label: tag.name,
+          _id: tag._id,
+          name: tag.name,
+          type: tag.type,
+        })) || [],
+      themeMap: (themes || []).reduce((acc, theme) => {
         return {
           ...acc,
           [theme.code]: theme,
@@ -29,7 +40,7 @@ export const AppProvider: React.FC<{
       }, {}),
       apiDomain,
     }),
-    [locale, themes, apiDomain]
+    [locale, themes, tags, apiDomain]
   );
 
   return <AppContext.Provider value={value}>{children}</AppContext.Provider>;

@@ -1,44 +1,60 @@
 import DebouncedInput from '@/components/DebounceInput';
 import { TitlePage } from '@/components/TitlePage';
-import { PUZZLE_RATING, PuzzleStatues } from '@/constants/puzzle';
+import { LEVEL_RATING, Statues } from '@/constants';
 import { useAppContext } from '@/contexts/AppContext';
 import { Course } from '@/types/course';
 import { PuzzleDifficulty } from '@/types/puzzle';
 import { StatusType } from '@/types/status';
-import { Button, Pagination, Select, Spinner, Table } from 'flowbite-react';
+import { Button, Pagination, Spinner, Table } from 'flowbite-react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useMemo, useState } from 'react';
+import Select from 'react-select';
 import useSWR from 'swr';
 import { fetcher } from '../../utils/fetcher';
 
 export const CourseListScreen = () => {
-  const { apiDomain, locale } = useAppContext();
+  const { apiDomain, locale, tags: tagOptions } = useAppContext();
   const [currentPage, setCurrentPage] = useState(1);
   const [status, setStatus] = useState<StatusType | ''>('');
   const [title, setTitle] = useState<string | ''>('');
+  const [tags, setTags] = useState<string[]>([]);
   const [difficulty, setDifficulty] = useState<PuzzleDifficulty | ''>('');
 
+  // Options for Status
+  const statusOptions = Statues.map((status) => ({
+    value: status,
+    label: status,
+  }));
+
+  // Options for Difficulty
+  const difficultyOptions = Object.entries(LEVEL_RATING).map(
+    ([rating, title]) => ({
+      value: rating,
+      label: title,
+    })
+  );
+
   const queryString = useMemo(() => {
-    // Define your query parameters as an object
     const queryObject: Record<string, any> = {
       difficulty,
       status,
       search: title,
       locale,
       page: currentPage,
+      tags: tags.join(','),
     };
 
     const filteredQuery = Object.entries(queryObject)
-      .filter(([, value]) => value) // Exclude undefined values
+      .filter(([, value]) => value)
       .map(
         ([key, value]) =>
           `${key}=${encodeURIComponent(value as string | number)}`
-      ) // Encode values for safety
+      )
       .join('&');
 
     return filteredQuery;
-  }, [difficulty, status, title, locale, currentPage]);
+  }, [difficulty, status, title, locale, currentPage, tags]);
 
   const queryKey = useMemo(
     () => `${apiDomain}/v1/courses?${queryString}`,
@@ -74,46 +90,64 @@ export const CourseListScreen = () => {
           Add new
         </Button>
       </TitlePage>
+
       <div className="grid grid-cols-4 gap-4 mb-8">
+        {/* Title Search */}
         <div className="flex flex-col">
           Title:
           <DebouncedInput
             placeholder="Enter a title"
             initialValue={title}
-            onChange={(value) => {
-              setTitle(value);
-            }}
+            onChange={(value) => setTitle(value)}
           />
         </div>
+
+        {/* Status Filter */}
         <div className="flex flex-col">
           Status:
           <Select
-            value={status}
-            onChange={(event) => setStatus(event.target.value as StatusType)}
-          >
-            <option value="">Select a status</option>
-            {PuzzleStatues.map((status) => (
-              <option key={status}>{status}</option>
-            ))}
-          </Select>
+            options={statusOptions}
+            value={statusOptions.find((option) => option.value === status)}
+            onChange={(selectedOption) =>
+              setStatus(selectedOption?.value as StatusType)
+            }
+            placeholder="Select status..."
+            isClearable
+          />
         </div>
+
+        {/* Rating Filter */}
         <div className="flex flex-col">
           Rating:
           <Select
-            value={difficulty}
-            onChange={(event) =>
-              setDifficulty(event.target.value as PuzzleDifficulty)
+            options={difficultyOptions}
+            value={difficultyOptions.find(
+              (option) => option.value === difficulty
+            )}
+            onChange={(selectedOption) =>
+              setDifficulty(selectedOption?.value as PuzzleDifficulty)
             }
-          >
-            <option value="">Select a rating</option>
-            {Object.entries(PUZZLE_RATING).map(([rating, title]) => (
-              <option key={rating} label={title}>
-                {rating}
-              </option>
-            ))}
-          </Select>
+            placeholder="Select rating..."
+            isClearable
+          />
+        </div>
+
+        {/* Tags Filter */}
+        <div className="flex flex-col">
+          Tags:
+          <Select
+            isMulti
+            options={tagOptions}
+            value={tagOptions.filter((option) => tags.includes(option.value))}
+            onChange={(selectedOptions) =>
+              setTags(selectedOptions.map((option) => option.value))
+            }
+            placeholder="Select tags..."
+          />
         </div>
       </div>
+
+      {/* Courses Table */}
       <Table hoverable>
         <Table.Head>
           <Table.HeadCell>Title</Table.HeadCell>
@@ -129,31 +163,31 @@ export const CourseListScreen = () => {
               <Spinner />
             </div>
           ) : (
-            data.items.map((item, index) => {
-              return (
-                <Table.Row
-                  key={`item-${index}`}
-                  className="bg-white dark:border-gray-700 dark:bg-gray-800"
-                >
-                  <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
-                    {item.title[locale]}
-                  </Table.Cell>
-                  <Table.Cell>{item.difficulty}</Table.Cell>
-                  <Table.Cell>{item.status}</Table.Cell>
-                  <Table.Cell>
-                    <Link
-                      href={`/settings/courses/${item._id}`}
-                      className="font-medium text-cyan-600 hover:underline dark:text-cyan-500"
-                    >
-                      Edit
-                    </Link>
-                  </Table.Cell>
-                </Table.Row>
-              );
-            })
+            data.items.map((item, index) => (
+              <Table.Row
+                key={`item-${index}`}
+                className="bg-white dark:border-gray-700 dark:bg-gray-800"
+              >
+                <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                  {item.title[locale]}
+                </Table.Cell>
+                <Table.Cell>{item.difficulty}</Table.Cell>
+                <Table.Cell>{item.status}</Table.Cell>
+                <Table.Cell>
+                  <Link
+                    href={`/settings/courses/${item._id}`}
+                    className="font-medium text-cyan-600 hover:underline dark:text-cyan-500"
+                  >
+                    Edit
+                  </Link>
+                </Table.Cell>
+              </Table.Row>
+            ))
           )}
         </Table.Body>
       </Table>
+
+      {/* Pagination */}
       <div className="flex justify-center mt-4">
         <Pagination
           currentPage={currentPage}

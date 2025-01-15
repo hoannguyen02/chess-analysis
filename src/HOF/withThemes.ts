@@ -18,13 +18,14 @@ export const withThemes =
     // Get themes from cookies
     const cookies = nookies.get(ctx);
     let themes = cookies.themes ? JSON.parse(cookies.themes) : null;
+    let tags = cookies.tags ? JSON.parse(cookies.tags) : null;
     const apiDomain = process.env.NEXT_PUBLIC_PHONG_CHESS_DOMAIN;
 
     // If themes are not available, fetch them
     if (!themes) {
       try {
         const { data } = await axios.get(`${apiDomain}/v1/puzzle-themes`);
-        themes = data;
+        themes = data.items;
 
         // Store themes in cookies
         nookies.set(ctx, 'themes', JSON.stringify(themes), {
@@ -38,7 +39,23 @@ export const withThemes =
       }
     }
 
-    const result = await handler(ctx, { themes, apiDomain });
+    if (!tags) {
+      try {
+        const { data: data } = await axios.get(`${apiDomain}/v1/tags`);
+        tags = data.items;
+        // Store tags in cookies
+        nookies.set(ctx, 'tags', JSON.stringify(tags), {
+          httpOnly: false, // Accessible by JavaScript
+          maxAge: 60 * 60, // 1 hour
+          path: '/', // Available for all routes
+        });
+      } catch (error) {
+        console.error('Error fetching tags:', error);
+        tags = [];
+      }
+    }
+
+    const result = await handler(ctx, { themes, apiDomain, tags });
 
     if ('props' in result) {
       return {
@@ -46,6 +63,7 @@ export const withThemes =
         props: {
           ...result.props,
           themes,
+          tags,
           apiDomain,
         },
       };

@@ -46,6 +46,7 @@ const App = ({ Component, pageProps }: AppProps) => {
         >
           <AppProvider
             themes={pageProps.themes}
+            tags={pageProps.tags}
             locale={locale as LocaleType}
             apiDomain={pageProps.apiDomain}
           >

@@ -1,18 +1,18 @@
 import { DraggableItem } from '@/components/DraggableItem';
 import { TitlePage } from '@/components/TitlePage';
-import { PUZZLE_RATING, PuzzleStatues } from '@/constants/puzzle';
+import { LEVEL_RATING, Statues } from '@/constants';
 import { ROUTE_CHANGE_MESSAGE } from '@/constants/route';
 import { useAppContext } from '@/contexts/AppContext';
 import useBeforeUnload from '@/hooks/useBeforeUnload';
 import usePreventRouteChange from '@/hooks/usePreventRouteChange';
 import { Course, CourseExpanded } from '@/types/course';
 import { Lesson } from '@/types/lesson';
+import { Tag } from '@/types/tag';
 import {
   Button,
   Card,
   Checkbox,
   Label,
-  Select,
   Textarea,
   TextInput,
 } from 'flowbite-react';
@@ -21,6 +21,7 @@ import { useState } from 'react';
 import { DndProvider } from 'react-dnd';
 import { HTML5Backend } from 'react-dnd-html5-backend';
 import {
+  Controller,
   FormProvider,
   SubmitHandler,
   useFieldArray,
@@ -28,6 +29,7 @@ import {
   useFormContext,
 } from 'react-hook-form';
 import { VscAdd, VscTrash } from 'react-icons/vsc';
+import Select, { SingleValue } from 'react-select';
 import LessonSearchModal from './LessonsSearchModal';
 
 type Props = {
@@ -36,6 +38,7 @@ type Props = {
 
 type CourseForm = Course & {
   lessons: Lesson[];
+  tags: Tag[];
 };
 
 const ObjectivesSection = () => {
@@ -109,9 +112,14 @@ const ObjectivesSection = () => {
   );
 };
 
+const DefaultFormValues: Partial<CourseForm> = {
+  status: 'Draft',
+  difficulty: 'Easy',
+  tags: [],
+};
 export const CourseFormScreen = ({ course }: Props) => {
   const [addLessonPopup, setAddLessonPopup] = useState(false);
-  const { locale, themes, apiDomain } = useAppContext();
+  const { locale, apiDomain, tags: defaultTags } = useAppContext();
 
   const buildInitialCourseForm = (course: CourseExpanded) => {
     return {
@@ -124,12 +132,7 @@ export const CourseFormScreen = ({ course }: Props) => {
   };
 
   const methods = useForm<CourseForm>({
-    defaultValues: course
-      ? buildInitialCourseForm(course)
-      : {
-          status: 'Draft',
-          difficulty: 'Easy',
-        },
+    defaultValues: course ? buildInitialCourseForm(course) : DefaultFormValues,
   });
 
   const {
@@ -155,10 +158,11 @@ export const CourseFormScreen = ({ course }: Props) => {
   });
 
   // Handle form submission
-  const onSubmit: SubmitHandler<CourseForm> = async (data) => {
-    const { _id, lessons, ...rest } = data;
+  const onSubmit: SubmitHandler<CourseForm> = async (formData) => {
+    const { _id, lessons, tags, ...rest } = formData;
     const lessonIds = lessons.map((l: Lesson) => ({ lessonId: l._id }));
-    const payload = { ...rest, lessons: lessonIds };
+    const tagIds = tags.map((tag: Tag) => tag._id);
+    const payload = { ...rest, lessons: lessonIds, tags: tagIds };
     try {
       let request;
       if (_id) {
@@ -177,7 +181,7 @@ export const CourseFormScreen = ({ course }: Props) => {
       const response = await request;
       if (response.ok) {
         const data = await response.json();
-        reset(buildInitialCourseForm(data));
+        reset(formData);
         alert('Data submitted successfully');
         if (!_id) {
           router.push(`/settings/courses/${data._id}`);
@@ -208,6 +212,11 @@ export const CourseFormScreen = ({ course }: Props) => {
     });
   };
 
+  const statusOptions = Statues.map((status) => ({
+    value: status as string,
+    label: status as string,
+  }));
+
   return (
     <div className="">
       <TitlePage>Course Form</TitlePage>
@@ -231,33 +240,85 @@ export const CourseFormScreen = ({ course }: Props) => {
           </div>
           <div className="mt-2 grid grid-cols-3  place-content-start mb-4 gap-8">
             <div className="flex flex-col">
-              <Label htmlFor="theme" value="Theme" />
-              <Select value={watch('theme')} id="theme" {...register('theme')}>
-                <option value="">Select a theme</option>
-                {themes.map((theme) => (
-                  <option key={theme.code} label={theme.title[locale]}>
-                    {theme.code}
-                  </option>
-                ))}
-              </Select>
+              <Label htmlFor="tags" value="Tags" />
+
+              <Controller
+                control={control}
+                name="tags"
+                render={({ field }) => (
+                  <Select
+                    id="tags"
+                    isMulti
+                    options={defaultTags}
+                    value={defaultTags.filter((option) =>
+                      field.value?.some(
+                        (selected) => selected._id === option._id
+                      )
+                    )}
+                    onChange={(selectedOptions) =>
+                      field.onChange(selectedOptions)
+                    }
+                    getOptionLabel={(e) => e.name}
+                    getOptionValue={(e) => e._id}
+                    className="w-full"
+                  />
+                )}
+              />
             </div>
+
             <div className="flex flex-col">
               <Label htmlFor="status" value="Status" />
-              <Select id="status" required {...register('status')}>
-                {PuzzleStatues.map((status) => (
-                  <option key={status}>{status}</option>
-                ))}
-              </Select>
+              <Controller
+                control={control}
+                name="status"
+                render={({ field }) => (
+                  <Select
+                    id="status"
+                    options={statusOptions}
+                    value={statusOptions.find(
+                      (option) => option.value === field.value
+                    )}
+                    onChange={(
+                      selectedOption: SingleValue<{
+                        value: string;
+                        label: string;
+                      }>
+                    ) => field.onChange(selectedOption?.value)}
+                    className="w-full"
+                  />
+                )}
+              />
             </div>
+
             <div className="flex flex-col">
               <Label htmlFor="difficulty" value="Difficulty" />
-              <Select id="difficulty" required {...register('difficulty')}>
-                {Object.entries(PUZZLE_RATING).map(([rating, title]) => (
-                  <option key={rating} label={title}>
-                    {rating}
-                  </option>
-                ))}
-              </Select>
+              <Controller
+                control={control}
+                name="difficulty"
+                render={({ field }) => (
+                  <Select
+                    id="difficulty"
+                    options={Object.entries(LEVEL_RATING).map(
+                      ([rating, title]) => ({
+                        value: rating,
+                        label: title,
+                      })
+                    )}
+                    value={
+                      Object.entries(LEVEL_RATING)
+                        .map(([rating, title]) => ({
+                          value: rating,
+                          label: title,
+                        }))
+                        .find((option) => option.value === field.value) || null
+                    }
+                    onChange={(selectedOption) =>
+                      field.onChange(selectedOption?.value)
+                    }
+                    className="w-full"
+                  />
+                )}
+              />
             </div>
           </div>
           <div className="grid grid-cols-2  place-content-start mb-4 gap-8">

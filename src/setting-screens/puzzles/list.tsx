@@ -1,5 +1,5 @@
 import { TitlePage } from '@/components/TitlePage';
-import { PUZZLE_RATING, PuzzlePhases, PuzzleStatues } from '@/constants/puzzle';
+import { LEVEL_RATING, Phases, Statues } from '@/constants';
 import { useAppContext } from '@/contexts/AppContext';
 import { Puzzle, PuzzleDifficulty, PuzzlePhase } from '@/types/puzzle';
 import { StatusType } from '@/types/status';
@@ -98,7 +98,7 @@ export const PuzzleListScreen = () => {
             onChange={(event) => setStatus(event.target.value as StatusType)}
           >
             <option value="">Select a status</option>
-            {PuzzleStatues.map((status) => (
+            {Statues.map((status) => (
               <option key={status}>{status}</option>
             ))}
           </Select>
@@ -126,7 +126,7 @@ export const PuzzleListScreen = () => {
             }
           >
             <option value="">Select a rating</option>
-            {Object.entries(PUZZLE_RATING).map(([rating, title]) => (
+            {Object.entries(LEVEL_RATING).map(([rating, title]) => (
               <option key={rating} label={title}>
                 {rating}
               </option>
@@ -140,7 +140,7 @@ export const PuzzleListScreen = () => {
             onChange={(event) => setPhase(event.target.value as PuzzlePhase)}
           >
             <option value="">Select a phase</option>
-            {PuzzlePhases.map((phase) => (
+            {Phases.map((phase) => (
               <option key={phase}>{phase}</option>
             ))}
           </Select>

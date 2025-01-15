@@ -1,5 +1,5 @@
 import DebouncedInput from '@/components/DebounceInput';
-import { PUZZLE_RATING, PuzzleStatues } from '@/constants/puzzle';
+import { LEVEL_RATING, Statues } from '@/constants';
 import { useAppContext } from '@/contexts/AppContext';
 import { Lesson } from '@/types/lesson';
 import { PuzzleDifficulty } from '@/types/puzzle';
@@ -132,7 +132,7 @@ export const AddToLessonsModal: React.FC<Props> = ({
                 }
               >
                 <option value="">Select a status</option>
-                {PuzzleStatues.map((status) => (
+                {Statues.map((status) => (
                   <option key={status}>{status}</option>
                 ))}
               </Select>
@@ -146,7 +146,7 @@ export const AddToLessonsModal: React.FC<Props> = ({
                 }
               >
                 <option value="">Select a rating</option>
-                {Object.entries(PUZZLE_RATING).map(([rating, title]) => (
+                {Object.entries(LEVEL_RATING).map(([rating, title]) => (
                   <option key={rating} label={title}>
                     {rating}
                   </option>

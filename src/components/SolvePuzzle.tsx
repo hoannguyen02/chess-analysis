@@ -1,5 +1,5 @@
+import { LEVEL_RATING } from '@/constants';
 import { PIECE_MAP } from '@/constants/piece';
-import { PUZZLE_RATING } from '@/constants/puzzle';
 import {
   DEFAULT_ENGINE_MOVE_DELAY_TIME,
   DEFAULT_SOLUTION_DELAY_TIME,
@@ -562,7 +562,7 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({ puzzle }) => {
                   puzzle.theme}
               </p>
               <p className="mb-2">
-                {t('common.title.rating')}: {PUZZLE_RATING[puzzle.difficulty]}
+                {t('common.title.rating')}: {LEVEL_RATING[puzzle.difficulty]}
               </p>
               {t('solve-puzzle.title.moves')}: <hr />
               <div className="mb-2 mt-4 grid grid-cols-2 gap-4">

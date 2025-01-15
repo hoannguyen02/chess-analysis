@@ -7,7 +7,7 @@ import { PuzzleDifficulty } from '@/types/puzzle';
  * 1600-2000: Hard
  * 2000+: Very hard
  */
-export const PUZZLE_RATING: Record<PuzzleDifficulty, string> = {
+export const LEVEL_RATING: Record<PuzzleDifficulty, string> = {
   Beginner: 'Beginner (Rating: 800)',
   Easy: 'Easy (Rating: 0–1200)',
   Medium: 'Medium (Rating: 1200-1600)',
@@ -15,5 +15,6 @@ export const PUZZLE_RATING: Record<PuzzleDifficulty, string> = {
   'Very Hard': 'Very hard (Rating: 2000+)',
 };
 
-export const PuzzleStatues = ['Draft', 'Active', 'Inactive', 'Deleted'];
-export const PuzzlePhases = ['Opening', 'Middle', 'Endgame'];
+export const Statues = ['Draft', 'Active', 'Inactive', 'Deleted'];
+
+export const Phases = ['Opening', 'Middle', 'Endgame'];

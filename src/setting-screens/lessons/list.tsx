@@ -1,6 +1,6 @@
 import DebouncedInput from '@/components/DebounceInput';
 import { TitlePage } from '@/components/TitlePage';
-import { PUZZLE_RATING, PuzzleStatues } from '@/constants/puzzle';
+import { LEVEL_RATING, Statues } from '@/constants';
 import { useAppContext } from '@/contexts/AppContext';
 import { Lesson } from '@/types/lesson';
 import { PuzzleDifficulty } from '@/types/puzzle';
@@ -91,7 +91,7 @@ export const LessonsListScreen = () => {
             onChange={(event) => setStatus(event.target.value as StatusType)}
           >
             <option value="">Select a status</option>
-            {PuzzleStatues.map((status) => (
+            {Statues.map((status) => (
               <option key={status}>{status}</option>
             ))}
           </Select>
@@ -105,7 +105,7 @@ export const LessonsListScreen = () => {
             }
           >
             <option value="">Select a rating</option>
-            {Object.entries(PUZZLE_RATING).map(([rating, title]) => (
+            {Object.entries(LEVEL_RATING).map(([rating, title]) => (
               <option key={rating} label={title}>
                 {rating}
               </option>

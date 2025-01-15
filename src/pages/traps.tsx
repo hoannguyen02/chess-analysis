@@ -27,14 +27,14 @@ export const getServerSideProps = withThemes(
   async ({ locale, query }: GetServerSidePropsContext, { apiDomain }) => {
     try {
       const page = Number(query.page);
-      const { search, theme, difficulty } = query;
+      const { search, tags = 'Traps', difficulty } = query;
 
       const queryString = filteredQuery({
         difficulty,
         search,
         locale,
         page: page || 1,
-        theme: theme || 'TRAPPED',
+        tags,
       });
 
       const res = await axios.get(`${apiDomain}/v1/courses?${queryString}`);
@@ -52,7 +52,7 @@ export const getServerSideProps = withThemes(
           initialCourses: items,
           currentPage,
           totalPages: lastPage,
-          initialTheme: 'TRAPPED',
+          tags,
         },
       };
     } catch (error) {

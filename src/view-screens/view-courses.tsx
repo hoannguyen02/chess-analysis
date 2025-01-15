@@ -1,5 +1,5 @@
 import DebouncedInput from '@/components/DebounceInput';
-import { PUZZLE_RATING } from '@/constants/puzzle';
+import { LEVEL_RATING } from '@/constants';
 import { useAppContext } from '@/contexts/AppContext';
 import { Course } from '@/types/course';
 import { LocaleType } from '@/types/locale';
@@ -111,7 +111,7 @@ export const ViewCourses: React.FC<Props> = ({
             onChange={(e) => handleFilterChange('difficulty', e.target.value)}
           >
             <option value="">{t('common.title.all-levels')}</option>
-            {Object.entries(PUZZLE_RATING).map(([rating, title]) => (
+            {Object.entries(LEVEL_RATING).map(([rating, title]) => (
               <option key={rating} label={title}>
                 {rating}
               </option>

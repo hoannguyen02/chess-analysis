@@ -7,3 +7,5 @@ export type ExplanationType = {
   en?: string[];
   vi?: string[];
 };
+
+export type PhaseType = 'Opening' | 'Middle' | 'Endgame';
