@@ -69,13 +69,15 @@ const ObjectivesSection = () => {
         >
           <div className="flex items-center gap-4 w-full">
             <div className="flex-grow grid grid-cols-2 gap-4">
-              <TextInput
+              <Textarea
+                rows={2}
                 placeholder="English Objective"
                 {...register(`objectives.en.${index}`)}
                 defaultValue={watch(`objectives.en.${index}`)}
                 className="w-full"
               />
-              <TextInput
+              <Textarea
+                rows={2}
                 placeholder="Vietnamese Objective"
                 {...register(`objectives.vi.${index}`)}
                 defaultValue={watch(`objectives.vi.${index}`)}

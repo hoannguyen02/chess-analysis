@@ -4,6 +4,7 @@ import { useAppContext } from '@/contexts/AppContext';
 import { Puzzle, PuzzleDifficulty } from '@/types/puzzle';
 import { StatusType } from '@/types/status';
 import { fetcher } from '@/utils/fetcher';
+import { previewPuzzle } from '@/utils/previewPuzzle';
 import {
   Button,
   Checkbox,
@@ -88,6 +89,11 @@ export const PuzzlesSearchModal: React.FC<PuzzlesSearchModalProps> = ({
 
   const onPageChange = (page: number) => setCurrentPage(page);
 
+  const handlePreview = (item: Puzzle) => {
+    const encodedData = encodeURIComponent(JSON.stringify(item));
+    window.open(`/settings/puzzles/preview?data=${encodedData}`, '_blank');
+  };
+
   return (
     <Modal show onClose={onClose} position="center">
       <Modal.Header>Search and Add Puzzles</Modal.Header>
@@ -156,10 +162,7 @@ export const PuzzlesSearchModal: React.FC<PuzzlesSearchModalProps> = ({
               <Table.HeadCell></Table.HeadCell>
               <Table.HeadCell>Title</Table.HeadCell>
               <Table.HeadCell>Difficulty</Table.HeadCell>
-              <Table.HeadCell>Status</Table.HeadCell>
-              <Table.HeadCell>
-                <span className="sr-only">Edit</span>
-              </Table.HeadCell>
+              <Table.HeadCell>Actions</Table.HeadCell>
             </Table.Head>
             <Table.Body className="divide-y">
               {isLoading ? (
@@ -186,7 +189,11 @@ export const PuzzlesSearchModal: React.FC<PuzzlesSearchModalProps> = ({
                         {item?.title?.[locale]}
                       </Table.Cell>
                       <Table.Cell>{item.difficulty}</Table.Cell>
-                      <Table.Cell>{item.status}</Table.Cell>
+                      <Table.Cell>
+                        <Button onClick={() => previewPuzzle(item)}>
+                          View
+                        </Button>
+                      </Table.Cell>
                     </Table.Row>
                   );
                 })
@@ -199,7 +206,7 @@ export const PuzzlesSearchModal: React.FC<PuzzlesSearchModalProps> = ({
         <div className="flex justify-center mt-4 flex-col">
           <Pagination
             currentPage={currentPage}
-            totalPages={data?.total || 0}
+            totalPages={data?.lastPage || 0}
             onPageChange={onPageChange}
           />
           <Button className="mt-4" onClick={handleAddPuzzles}>

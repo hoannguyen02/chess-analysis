@@ -12,6 +12,7 @@ import { ContentType } from '@/types/lesson';
 import { Puzzle } from '@/types/puzzle';
 import { DifficultyType, StatusType } from '@/types/status';
 import { fetcher } from '@/utils/fetcher';
+import { previewPuzzle } from '@/utils/previewPuzzle';
 import {
   Button,
   Card,
@@ -32,7 +33,7 @@ import {
   useForm,
   useFormContext,
 } from 'react-hook-form';
-import { VscAdd, VscTrash } from 'react-icons/vsc';
+import { VscAdd, VscOpenPreview, VscTrash } from 'react-icons/vsc';
 import useSWR from 'swr';
 import { AddToCoursesModal } from './AddToCoursesModal';
 import { PuzzlesSearchModal } from './PuzzlesSearchModal';
@@ -105,7 +106,7 @@ type LessonForm = Lesson & {
       vi: string;
     };
     explanations?: { en: string[]; vi: string[] };
-    contentPuzzles: { puzzleId: string }[];
+    contentPuzzles: Puzzle[];
   }[];
   objectives?: ObjectiveType;
 };
@@ -141,13 +142,15 @@ const ObjectivesSection = () => {
         >
           <div className="flex items-center gap-4 w-full">
             <div className="flex-grow grid grid-cols-2 gap-4">
-              <TextInput
+              <Textarea
+                rows={2}
                 placeholder="English Objective"
                 {...register(`objectives.en.${index}`)}
                 defaultValue={watch(`objectives.en.${index}`)}
                 className="w-full"
               />
-              <TextInput
+              <Textarea
+                rows={2}
                 placeholder="Vietnamese Objective"
                 {...register(`objectives.vi.${index}`)}
                 defaultValue={watch(`objectives.vi.${index}`)}
@@ -219,7 +222,8 @@ const ContentExplanations = ({ contentIndex }: { contentIndex: number }) => {
           >
             <div className="flex items-center gap-4 w-full">
               <div className="flex-grow grid grid-cols-2 gap-4">
-                <TextInput
+                <Textarea
+                  rows={2}
                   placeholder="English Explanation"
                   {...register(
                     `contents.${contentIndex}.explanations.en.${index}`
@@ -229,7 +233,8 @@ const ContentExplanations = ({ contentIndex }: { contentIndex: number }) => {
                   )}
                   className="w-full"
                 />
-                <TextInput
+                <Textarea
+                  rows={2}
                   placeholder="Vietnamese Explanation"
                   {...register(
                     `contents.${contentIndex}.explanations.vi.${index}`
@@ -296,6 +301,13 @@ export const LessonFormScreen = ({ lesson }: Props) => {
       puzzles: lesson.puzzles.map((puzzle) => ({
         ...puzzle.puzzleId,
         puzzleId: puzzle.puzzleId._id,
+      })),
+      contents: lesson.contents?.map((content) => ({
+        ...content,
+        contentPuzzles: content.contentPuzzles.map((p) => ({
+          ...p.puzzleId,
+          puzzleId: p.puzzleId._id,
+        })),
       })),
     };
   };
@@ -382,11 +394,6 @@ export const LessonFormScreen = ({ lesson }: Props) => {
     }
   };
 
-  const handlePreview = () => {
-    const encodedData = encodeURIComponent(JSON.stringify(getValues()));
-    window.open(`/lessons/preview?data=${encodedData}`, '_blank');
-  };
-
   const router = useRouter();
 
   const reorderContents = (fromIndex: number, toIndex: number) => {
@@ -407,6 +414,19 @@ export const LessonFormScreen = ({ lesson }: Props) => {
     setValue('puzzles', updatedItems, {
       shouldDirty: true,
     });
+  };
+
+  const removeContentPuzzle = (contentIndex: number, puzzleIndex: number) => {
+    const contents = watch('contents') || [];
+    const updatedContents = [...contents];
+
+    if (
+      updatedContents[contentIndex] &&
+      updatedContents[contentIndex].contentPuzzles
+    ) {
+      updatedContents[contentIndex].contentPuzzles.splice(puzzleIndex, 1);
+      setValue('contents', updatedContents, { shouldDirty: true });
+    }
   };
 
   return (
@@ -479,7 +499,7 @@ export const LessonFormScreen = ({ lesson }: Props) => {
               <Checkbox id="isPublic" {...register('isPublic')} />
             </div>
           </div>
-          <ObjectivesSection lang={locale} />
+          <ObjectivesSection />
           <div className="mb-4">
             Contents:
             <DndProvider backend={HTML5Backend}>
@@ -509,22 +529,37 @@ export const LessonFormScreen = ({ lesson }: Props) => {
                         <div className="grid grid-cols-3">
                           <Label className="font-bold">Title</Label>
                           <Label className="font-bold">Difficulty</Label>
-                          <Label></Label>
+                          <Label>Actions</Label>
                         </div>
                         {field.contentPuzzles.map((p, pIndex) => (
                           <div
                             key={`content-puzzle-${index}-${pIndex}`}
                             className="grid grid-cols-3"
                           >
-                            <Label>{p.puzzleId.title[locale]}</Label>
-                            <Label>{p.puzzleId.difficulty}</Label>
-                            <a
-                              className="text-[12px] underline"
-                              href={`/settings/puzzles/${p.puzzleId._id}`}
-                              target="_blank"
-                            >
-                              Details
-                            </a>
+                            <Label>{p.title?.[locale]}</Label>
+                            <Label>{p.difficulty}</Label>
+                            <div className="flex">
+                              <Button
+                                outline
+                                size="sm"
+                                onClick={() => {
+                                  previewPuzzle(p);
+                                }}
+                                className="mr-2"
+                              >
+                                <VscOpenPreview />
+                              </Button>
+                              <Button
+                                outline
+                                size="sm"
+                                type="button"
+                                onClick={() =>
+                                  removeContentPuzzle(index, pIndex)
+                                }
+                              >
+                                -
+                              </Button>
+                            </div>
                           </div>
                         ))}
                         <Button
@@ -540,7 +575,7 @@ export const LessonFormScreen = ({ lesson }: Props) => {
                             });
                           }}
                         >
-                          Add puzzle
+                          Add puzzle for content
                         </Button>
                       </div>
                     </div>
@@ -558,28 +593,30 @@ export const LessonFormScreen = ({ lesson }: Props) => {
                 </DraggableItem>
               ))}
             </DndProvider>
-            <Button
-              type="button"
-              outline
-              size="sm"
-              onClick={() =>
-                appendContent({
-                  type: 'text',
-                  title: {
-                    en: '',
-                    vi: '',
-                  },
-                  contentPuzzles: [],
-                })
-              }
-            >
-              Add content
-            </Button>
+            <div className="flex items-center">
+              <Button
+                type="button"
+                outline
+                className="w-full"
+                onClick={() =>
+                  appendContent({
+                    type: 'text',
+                    title: {
+                      en: '',
+                      vi: '',
+                    },
+                    contentPuzzles: [],
+                  })
+                }
+              >
+                <VscAdd className="text-[20px]" /> Add content
+              </Button>
+            </div>
           </div>
 
           <div className="mb-4">
             Puzzles:
-            <div className="grid grid-cols-[50%_10%_25%_5%] mb-2 gap-4 place-items-center">
+            <div className="grid grid-cols-[45%_10%_25%_10%] mb-2 gap-4 place-items-center">
               <Label>Title</Label>
               <Label>Difficulty</Label>
               <Label>Status</Label>
@@ -595,11 +632,19 @@ export const LessonFormScreen = ({ lesson }: Props) => {
                     key={field._id}
                     className="mb-4"
                   >
-                    <div className="grid grid-cols-[50%_10%_25%_5%] mb-2 gap-4 place-items-center">
+                    <div className="grid grid-cols-[45%_10%_25%_10%] mb-2 gap-4 place-items-center">
                       <Label>{field?.title?.[locale]}</Label>
                       <Label>{field.difficulty}</Label>
                       <Label>{field.status}</Label>
-                      <div className="">
+                      <div className="flex">
+                        <Button
+                          outline
+                          size="sm"
+                          onClick={() => previewPuzzle(field)}
+                          className="mr-2"
+                        >
+                          <VscOpenPreview />
+                        </Button>
                         <Button
                           outline
                           size="sm"
@@ -614,16 +659,18 @@ export const LessonFormScreen = ({ lesson }: Props) => {
                 );
               })}
             </DndProvider>
-            <Button
-              type="button"
-              outline
-              size="sm"
-              onClick={() => {
-                setAddPuzzlePopup(true);
-              }}
-            >
-              Add puzzle
-            </Button>
+            <div className="flex items-center">
+              <Button
+                type="button"
+                outline
+                className="w-full"
+                onClick={() => {
+                  setAddPuzzlePopup(true);
+                }}
+              >
+                <VscAdd className="text-[20px]" /> Add puzzle
+              </Button>
+            </div>
           </div>
 
           {courses && courses?.length > 0 && (
@@ -668,7 +715,11 @@ export const LessonFormScreen = ({ lesson }: Props) => {
             </Button>
             <Button
               type="button"
-              onClick={handlePreview}
+              onClick={() => {
+                // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+                // @ts-ignore
+                previewPuzzle(getValues() as Puzzle);
+              }}
               outline
               className="mr-8"
             >
@@ -713,7 +764,7 @@ export const LessonFormScreen = ({ lesson }: Props) => {
               newContents[contentIdex].contentPuzzles = (puzzles || []).concat(
                 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
                 // @ts-ignore
-                addedItems.map((p) => ({ puzzleId: p }))
+                addedItems.map((p) => ({ ...p, puzzleId: p.puzzleId }))
               );
               setValue('contents', newContents, {
                 shouldDirty: true,

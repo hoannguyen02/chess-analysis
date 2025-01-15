@@ -7,6 +7,7 @@ import usePreventRouteChange from '@/hooks/usePreventRouteChange';
 import { Lesson } from '@/types/lesson';
 import { Puzzle } from '@/types/puzzle';
 import { fetcher } from '@/utils/fetcher';
+import { previewPuzzle } from '@/utils/previewPuzzle';
 import { Button, Checkbox, Label, Select, TextInput } from 'flowbite-react';
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
@@ -137,8 +138,7 @@ export const PuzzleFormScreen = ({ puzzle, onSaveSuccess }: Props) => {
 
   const handlePreview = () => {
     if (isValidFormValues()) {
-      const encodedData = encodeURIComponent(JSON.stringify(getValues()));
-      window.open(`/settings/puzzles/preview?data=${encodedData}`, '_blank');
+      previewPuzzle(getValues());
     }
   };
 
