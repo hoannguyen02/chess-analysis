@@ -8,7 +8,7 @@
   },
   "title": {
     "moves": "Nước đi",
-    "best-move": "Tìm nước đi tốt nhất cho <b></b> tại ô <small></small>!"
+    "best-move": "Tìm nước đi tốt nhất cho quân cờ đang được đánh dấu!"
   },
   "message": {
     "invalid-move": "Ôi! Thử lại nhé",

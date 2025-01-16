@@ -15,10 +15,12 @@ export type PuzzleDifficulty =
   | 'Very Hard';
 export type PuzzlePhase = 'Opening' | 'Middle' | 'Endgame';
 export type PuzzleSolutionMove = {
-  move: string;
   player: 'user' | 'engine';
-  from: string;
-  to: string;
+  moves: {
+    move: string;
+    from: string;
+    to: string;
+  }[];
 };
 export type PuzzlePreMove = {
   move: string;

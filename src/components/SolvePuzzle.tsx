@@ -1,14 +1,12 @@
 import { LEVEL_RATING } from '@/constants';
-import { PIECE_MAP } from '@/constants/piece';
 import {
   DEFAULT_ENGINE_MOVE_DELAY_TIME,
   DEFAULT_SOLUTION_DELAY_TIME,
 } from '@/constants/time-out';
 import { useAppContext } from '@/contexts/AppContext';
 import { useCustomBoard } from '@/hooks/useCustomBoard';
-import { UppercasePieceType } from '@/types/piece';
 import { PromotionType } from '@/types/promotion';
-import { Puzzle, PuzzlePreMove, PuzzleSolutionMove } from '@/types/puzzle';
+import { Puzzle, PuzzlePreMove } from '@/types/puzzle';
 import { getActivePlayerFromFEN } from '@/utils/get-player-name-from-fen';
 import { Chess } from 'chess.js';
 import { Button } from 'flowbite-react';
@@ -32,6 +30,13 @@ import ConfettiEffect from './ConfettiEffect';
 
 type PuzzleProps = {
   puzzle: Puzzle;
+};
+
+export type HistoryMove = {
+  move: string;
+  player: 'user' | 'engine';
+  from: string;
+  to: string;
 };
 
 const SolvePuzzle: React.FC<PuzzleProps> = ({ puzzle }) => {
@@ -60,6 +65,7 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({ puzzle }) => {
 
   //  Only show back/forward buttons if puzzle is done, either by normal solved or by solution
   const [historyMoveCurrentIdx, setHistoryMoveCurrentIdx] = useState<number>(0);
+  const [historyMoves, setHistoryMoves] = useState<HistoryMove[]>([]);
   const [isBoardClickAble, setIsBoardClickAble] = useState<boolean>(true);
   const [hintMessage, setHintMessage] = useState<ReactNode | ''>('');
 
@@ -138,16 +144,31 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({ puzzle }) => {
       return false;
     }
 
-    const expectedMove = puzzle.solutions[currentStep];
+    const solution = puzzle.solutions[currentStep];
 
-    if (userMove.san === expectedMove.move) {
+    const validMove =
+      solution.moves.findIndex(({ move }) => move === userMove.san) >= 0;
+
+    setHistoryMoves((prev) => {
+      return [
+        ...prev,
+        {
+          player: 'user',
+          move: userMove.san,
+          from: sourceSquare,
+          to: targetSquare,
+        },
+      ];
+    });
+
+    if (validMove) {
       const nextStep = currentStep + 1;
       if (
         nextStep < puzzle.solutions.length &&
         puzzle.solutions[nextStep].player === 'engine'
       ) {
         const solution = puzzle.solutions[nextStep];
-        const { move: engineMove, from, to } = solution;
+        const { move: engineMove, from, to } = solution.moves[0]; // Engine by 1 move by default
 
         if (currentTimeout) {
           clearTimeout(currentTimeout);
@@ -164,6 +185,17 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({ puzzle }) => {
             [to]: {
               background: 'var(--p-highlight)',
             },
+          });
+          setHistoryMoves((prev) => {
+            return [
+              ...prev,
+              {
+                player: 'engine',
+                move: engineMove,
+                from,
+                to,
+              },
+            ];
           });
         }, DEFAULT_ENGINE_MOVE_DELAY_TIME);
 
@@ -294,6 +326,7 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({ puzzle }) => {
     setMoveSquareStyle({});
     setCurrentStep(0);
     setIsBoardClickAble(true);
+    setHistoryMoves([]);
   };
 
   const showSolution = () => {
@@ -302,18 +335,16 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({ puzzle }) => {
     setCurrentFen(puzzle.fen); // Render the initial FEN
     setCurrentStep(0);
     setMoveSquareStyle({});
-
+    setHistoryMoves([]);
     if (currentTimeout) {
       clearTimeout(currentTimeout); // Clear any existing timeouts
     }
-
     const executeStep = (stepIndex: number) => {
       if (stepIndex >= puzzle.solutions.length) {
         return; // Stop when all steps have been executed
       }
-
-      const { move, from, to } = puzzle.solutions[stepIndex];
-
+      const moves = puzzle.solutions[stepIndex].moves;
+      const { move, from, to } = moves[0]; // Auto run first move by default
       const timeout = setTimeout(() => {
         game.move(move); // Execute the move on the chess.js instance
         setCurrentFen(game.fen()); // Update the board's FEN string
@@ -321,16 +352,12 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({ puzzle }) => {
           [from]: { background: 'var(--p-highlight)' },
           [to]: { background: 'var(--p-highlight)' },
         });
-
         setCurrentStep(stepIndex + 1); // Update the current step
-
         // Proceed to the next step
         executeStep(stepIndex + 1);
       }, DEFAULT_SOLUTION_DELAY_TIME);
-
       setCurrentTimeout(timeout); // Store the timeout reference
     };
-
     // Perform the pre-move with a timeout before starting the solution playback
     handlePreMove(() => {
       // Start the solution playback from the first step after pre-move
@@ -343,14 +370,14 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({ puzzle }) => {
     game.undo();
     game.undo();
     setCurrentFen(game.fen());
-    let engineMove: PuzzlePreMove | PuzzleSolutionMove;
+    let engineMove: PuzzlePreMove | HistoryMove;
     let nextStep: number = 0;
     // First attempt failed
     if (currentStep === 0) {
       engineMove = puzzle.preMove as PuzzlePreMove;
     } else {
       nextStep = currentStep - 1;
-      engineMove = puzzle.solutions[nextStep];
+      engineMove = historyMoves[nextStep];
     }
 
     // Remake last move
@@ -369,31 +396,31 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({ puzzle }) => {
           background: 'var(--p-highlight)',
         },
       });
-    }, DEFAULT_SOLUTION_DELAY_TIME);
+    }, DEFAULT_ENGINE_MOVE_DELAY_TIME);
 
     setCurrentTimeout(timeout);
   };
 
   const showHint = () => {
-    const hintMove = puzzle.solutions[currentStep];
-    setMoveSquareStyle({
-      [hintMove.from]: { background: 'var(--p-highlight)' },
-    });
-    const piece = hintMove.move.charAt(0) as UppercasePieceType;
-    const msg = t.rich('solve-puzzle.title.best-move', {
-      b: () => `<b class="mx-1">${PIECE_MAP[piece]}</b>`,
-      small: () => `<b class="ml-1">${hintMove.from}</b>!`,
-    });
+    const solution = puzzle.solutions[currentStep];
+    const moves = solution.moves;
+    const fromPositions = new Set(moves.map((move) => move.from));
+    const highLightSquares = Array.from(fromPositions).reduce((acc, cur) => {
+      return {
+        ...acc,
+        [cur]: { background: 'var(--p-highlight)' },
+      };
+    }, {});
+    setMoveSquareStyle(highLightSquares);
+    const msg = t('solve-puzzle.title.best-move');
     setHintMessage(msg);
   };
 
   const backMove = () => {
     game.undo();
     setCurrentFen(game.fen());
-
     const idx = historyMoveCurrentIdx - 1;
-
-    const { from, to } = puzzle.solutions[idx];
+    const { from, to } = historyMoves[idx];
     setMoveSquareStyle({
       [from]: {
         background: 'var(--p-highlight)',
@@ -406,7 +433,7 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({ puzzle }) => {
   };
 
   const forwardMove = () => {
-    const { move, from, to } = puzzle.solutions[historyMoveCurrentIdx];
+    const { move, from, to } = historyMoves[historyMoveCurrentIdx];
     game.move(move);
     setCurrentFen(game.fen());
     setMoveSquareStyle({
@@ -490,14 +517,14 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({ puzzle }) => {
   };
 
   const { setupMoves, followUpMoves, splitIndex } = useMemo(() => {
-    const moves = puzzle.solutions || [];
+    const moves = historyMoves || [];
     const splitIndex = Math.round(moves.length / 2);
     return {
       setupMoves: moves.slice(0, splitIndex),
       followUpMoves: moves.slice(splitIndex),
       splitIndex,
     };
-  }, [puzzle.solutions]);
+  }, [historyMoves]);
 
   const preMove = useMemo(() => puzzle.preMove?.move, [puzzle]);
 

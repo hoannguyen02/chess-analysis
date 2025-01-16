@@ -8,7 +8,7 @@
   },
   "title": {
     "moves": "Moves",
-    "best-move": "Find best move for your <b>Piece</b> at <small>Position</small>!"
+    "best-move": "Find best move for your the highlight piece!"
   },
   "message": {
     "invalid-move": "Oops! Try Again",

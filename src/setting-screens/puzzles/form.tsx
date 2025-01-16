@@ -9,7 +9,7 @@ import { Puzzle } from '@/types/puzzle';
 import { fetcher } from '@/utils/fetcher';
 import { previewPuzzle } from '@/utils/previewPuzzle';
 import { Button, Checkbox, Label, Select, TextInput } from 'flowbite-react';
-import isEmpty from 'lodash/isEmpty';
+import { isEmpty } from 'lodash';
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
@@ -18,11 +18,13 @@ import { SubmitHandler, useFieldArray, useForm } from 'react-hook-form';
 import { VscEdit } from 'react-icons/vsc';
 import useSWR from 'swr';
 import { AddToLessonsModal } from './AddToLessonsModal';
+import { NestedMoveField } from './NestedMoveField';
 
 type Props = {
   puzzle?: Puzzle;
   onSaveSuccess?: (puzzle: Puzzle) => void;
 };
+
 export const PuzzleFormScreen = ({ puzzle, onSaveSuccess }: Props) => {
   const { themes, apiDomain, locale } = useAppContext();
   const t = useTranslations();
@@ -52,7 +54,7 @@ export const PuzzleFormScreen = ({ puzzle, onSaveSuccess }: Props) => {
       fen: '8/8/8/8/8/8/8/8 w - - 0 1',
       isPublic: false,
       status: 'Draft',
-      difficulty: 'Easy',
+      difficulty: 'Beginner',
       phase: 'Middle',
       solutions: [],
       preMove: {
@@ -71,14 +73,10 @@ export const PuzzleFormScreen = ({ puzzle, onSaveSuccess }: Props) => {
   usePreventRouteChange(ROUTE_CHANGE_MESSAGE, isDirty);
 
   const isValidFormValues = () => {
-    const { fen, preMove, solutions } = getValues();
+    const { fen, solutions } = getValues();
     if (!fen) {
       alert('Please enter a valid FEN position');
       return false;
-    }
-    if (!isEmpty(preMove?.move)) {
-      // Clear pre move inform if not set
-      setValue('preMove', undefined);
     }
     if (!solutions.length) {
       alert('Please enter solutions');
@@ -95,8 +93,17 @@ export const PuzzleFormScreen = ({ puzzle, onSaveSuccess }: Props) => {
 
   // Handle form submission
   const onSubmit: SubmitHandler<Puzzle> = async (data) => {
-    const { _id, ...rest } = data;
+    const { _id, preMove, ...rest } = data;
     if (isValidFormValues()) {
+      let payload: Partial<Puzzle> = rest;
+      if (!isEmpty(preMove?.move)) {
+        payload = {
+          ...rest,
+          preMove,
+        };
+      } else {
+        payload = rest;
+      }
       try {
         const apiDomain = process.env.NEXT_PUBLIC_PHONG_CHESS_DOMAIN;
         let request;
@@ -104,13 +111,13 @@ export const PuzzleFormScreen = ({ puzzle, onSaveSuccess }: Props) => {
           request = fetch(`${apiDomain}/v1/puzzles/${_id}`, {
             method: 'PUT',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(rest),
+            body: JSON.stringify(payload),
           });
         } else {
           request = fetch(`${apiDomain}/v1/puzzles`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(rest),
+            body: JSON.stringify(payload),
           });
         }
         const response = await request;
@@ -286,42 +293,68 @@ export const PuzzleFormScreen = ({ puzzle, onSaveSuccess }: Props) => {
               </Button>
             </div>
           </div>
+          <h2 className="mb-4 text-xl font-bold">Solution Moves</h2>
           {fields.map((field, index) => (
-            <div className="grid grid-cols-5 mb-2 gap-4" key={field.id}>
-              <div className="">
+            <div
+              key={field.id}
+              className="mb-6 border border-gray-300 p-4 rounded-lg shadow-sm bg-white"
+            >
+              <div className="flex justify-between items-center mb-3">
+                <h4 className="font-semibold text-lg">Step {index + 1}</h4>
+
+                {/* Player Selector */}
                 <Select
-                  id="status"
-                  required
                   {...register(`solutions.${index}.player`)}
+                  onChange={(e) => {
+                    // setValue(`solutions.${index}.moves`, [
+                    //   { move: '', from: '', to: '' },
+                    // ]);
+                    setValue(
+                      `solutions.${index}.player`,
+                      e.target.value as 'user' | 'engine'
+                    );
+                  }}
+                  className="w-32"
                 >
-                  <option label="User">user</option>
-                  <option label="Engine">engine</option>
+                  <option value="user">User</option>
+                  <option value="engine">Engine</option>
                 </Select>
-              </div>
-              <TextInput {...register(`solutions.${index}.move`)} />
-              <TextInput {...register(`solutions.${index}.from`)} />
-              <TextInput {...register(`solutions.${index}.to`)} />
-              <div className="">
+
+                {/* Remove Step */}
                 <Button
-                  outline
-                  size="sm"
                   type="button"
+                  outline
+                  size="xs"
+                  color="failure"
                   onClick={() => remove(index)}
                 >
-                  -
+                  🗑️ Remove Step
                 </Button>
               </div>
+
+              {/* Moves */}
+              <NestedMoveField
+                key={getValues(`solutions.${index}.player`)}
+                control={control}
+                register={register}
+                index={index}
+              />
             </div>
           ))}
+
           <Button
             type="button"
             outline
-            size="sm"
+            size="md"
             onClick={() =>
-              append({ move: '', player: 'user', from: '', to: '' })
+              append({
+                player: 'user',
+                moves: [{ move: '', from: '', to: '' }],
+              })
             }
+            className="mt-4"
           >
-            +
+            ➕ Add Solution Step
           </Button>
         </div>
 
