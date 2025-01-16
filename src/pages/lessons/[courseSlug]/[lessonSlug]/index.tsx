@@ -1,7 +1,10 @@
 import Layout from '@/components/Layout';
+import { SolvePuzzleDrawer } from '@/components/SolvePuzzleDrawer';
 import { useAppContext } from '@/contexts/AppContext';
 import { withThemes } from '@/HOF/withThemes';
+import useDialog from '@/hooks/useDialog';
 import { LessonExpanded } from '@/types/lesson';
+import { Puzzle } from '@/types/puzzle';
 import { getDifficultyColor } from '@/utils/getDifficultyColor';
 import axios from 'axios';
 import { Accordion, Badge, Button, Card } from 'flowbite-react';
@@ -13,6 +16,12 @@ type Props = {
 };
 const LessonDetailsPage = ({ data }: Props) => {
   const { locale } = useAppContext();
+  const {
+    open: isOpenSolvePuzzle,
+    data: puzzle,
+    onCloseDialog,
+    onOpenDialog,
+  } = useDialog<Puzzle>();
   const t = useTranslations();
 
   if (!data) return null;
@@ -70,7 +79,9 @@ const LessonDetailsPage = ({ data }: Props) => {
             <Accordion>
               {contents.map((content, idx) => (
                 <Accordion.Panel key={idx}>
-                  <Accordion.Title>{content.title.en}</Accordion.Title>
+                  <Accordion.Title className="focus:outline-none focus:ring-0">
+                    {content.title.en}
+                  </Accordion.Title>
                   <Accordion.Content>
                     <ul className="list-inside list-decimal space-y-1">
                       {content.explanations?.[locale]?.map((explanation, i) => (
@@ -91,7 +102,14 @@ const LessonDetailsPage = ({ data }: Props) => {
                             <p className="text-center">
                               {t('common.title.puzzle')} {index + 1}
                             </p>
-                            <Button color="blue" size="sm" fullSized>
+                            <Button
+                              color="blue"
+                              size="sm"
+                              fullSized
+                              onClick={() => {
+                                onOpenDialog(puzzle);
+                              }}
+                            >
                               {t('common.button.solve-now')}
                             </Button>
                           </Card>
@@ -137,6 +155,9 @@ const LessonDetailsPage = ({ data }: Props) => {
           )}
         </div>
       </div>
+      {isOpenSolvePuzzle && puzzle && (
+        <SolvePuzzleDrawer puzzle={puzzle} onClose={onCloseDialog} />
+      )}
     </Layout>
   );
 };
@@ -150,10 +171,14 @@ export const getServerSideProps = withThemes(
 
       const commonMessages = (await import(`@/locales/${locale}/common.json`))
         .default;
+      const solvePuzzleMessages = (
+        await import(`@/locales/${locale || 'en'}/solve-puzzle.json`)
+      ).default;
       return {
         props: {
           messages: {
             common: commonMessages,
+            'solve-puzzle': solvePuzzleMessages,
           },
           data: res.data,
         },

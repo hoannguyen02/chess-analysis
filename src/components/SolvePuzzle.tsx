@@ -10,7 +10,6 @@ import { Puzzle, PuzzlePreMove } from '@/types/puzzle';
 import { getActivePlayerFromFEN } from '@/utils/get-player-name-from-fen';
 import { Chess } from 'chess.js';
 import { Button } from 'flowbite-react';
-import html2canvas from 'html2canvas';
 import { useTranslations } from 'next-intl';
 import { useRouter } from 'next/router';
 import React, { ReactNode, useEffect, useMemo, useRef, useState } from 'react';
@@ -30,6 +29,7 @@ import ConfettiEffect from './ConfettiEffect';
 
 type PuzzleProps = {
   puzzle: Puzzle;
+  showBackButton?: boolean;
 };
 
 export type HistoryMove = {
@@ -39,7 +39,10 @@ export type HistoryMove = {
   to: string;
 };
 
-const SolvePuzzle: React.FC<PuzzleProps> = ({ puzzle }) => {
+const SolvePuzzle: React.FC<PuzzleProps> = ({
+  puzzle,
+  showBackButton = true,
+}) => {
   const t = useTranslations();
   const { locale = 'en' } = useRouter();
   const { themeMap } = useAppContext();
@@ -77,7 +80,7 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({ puzzle }) => {
   }, [currentStep, puzzle.solutions.length]);
 
   const handlePreMove = (callback?: () => void) => {
-    const { move, from, to } = puzzle.preMove as PuzzlePreMove;
+    const { move, from, to } = (puzzle.preMove as PuzzlePreMove) || {};
 
     const timeout = setTimeout(() => {
       if (game && move) {
@@ -490,32 +493,6 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({ puzzle }) => {
     };
   }, [currentStep, playerName, puzzle.solutions.length, showRetry, t]);
 
-  const exportAsImage = async () => {
-    if (!boardRef.current) {
-      console.error('boardRef is null or undefined');
-      return;
-    }
-
-    try {
-      // Use html2canvas to render the div to a canvas
-      const canvas = await html2canvas(boardRef.current, {
-        scale: 1, // Increase scale for higher resolution
-        useCORS: true, // Ensure cross-origin resources are handled
-      });
-
-      // Convert the canvas to a data URL (image)
-      const imgURL = canvas.toDataURL('image/png');
-
-      // Create a link element and trigger download
-      const link = document.createElement('a');
-      link.href = imgURL;
-      link.download = 'LIMA-Chess.png';
-      link.click();
-    } catch (error) {
-      console.error('Error exporting image:', error);
-    }
-  };
-
   const { setupMoves, followUpMoves, splitIndex } = useMemo(() => {
     const moves = historyMoves || [];
     const splitIndex = Math.round(moves.length / 2);
@@ -530,15 +507,18 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({ puzzle }) => {
 
   return (
     <div>
-      <button
-        className="mb-4 flex items-center"
-        onClick={() => {
-          router.back();
-        }}
-      >
-        <VscArrowLeft /> {t('common.button.back')}
-      </button>
-      <div className="grid grid-cols-2 gap-16">
+      {showBackButton && (
+        <button
+          className="mb-4 flex items-center"
+          onClick={() => {
+            router.back();
+          }}
+        >
+          <VscArrowLeft /> {t('common.button.back')}
+        </button>
+      )}
+
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
         <div ref={boardRef}>
           <Chessboard
             boardOrientation={playerName?.toLowerCase() as 'black' | 'white'}
@@ -552,7 +532,12 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({ puzzle }) => {
               }
               return handleMove(sourceSquare, targetSquare);
             }}
-            boardWidth={boardRef.current?.clientWidth || 500}
+            boardWidth={
+              boardRef.current?.clientWidth &&
+              boardRef.current?.clientWidth > 500
+                ? 500
+                : boardRef.current?.clientWidth
+            }
             onSquareClick={onSquareClick}
             onPromotionPieceSelect={onPromotionPieceSelect}
             customBoardStyle={{
@@ -668,9 +653,6 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({ puzzle }) => {
                   >
                     {t('solve-puzzle.button.restart')}{' '}
                     <VscSync size={20} className="ml-1" />
-                  </Button>
-                  <Button color="primary" onClick={exportAsImage}>
-                    {t('solve-puzzle.button.download-png')}
                   </Button>
                 </div>
                 <div className="flex">
