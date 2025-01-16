@@ -5,6 +5,7 @@ import { useAppContext } from '@/contexts/AppContext';
 import { Course } from '@/types/course';
 import { PuzzleDifficulty } from '@/types/puzzle';
 import { StatusType } from '@/types/status';
+import { filteredQuery } from '@/utils/filteredQuery';
 import { Button, Pagination, Spinner, Table } from 'flowbite-react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
@@ -45,15 +46,7 @@ export const CourseListScreen = () => {
       tags: tags.join(','),
     };
 
-    const filteredQuery = Object.entries(queryObject)
-      .filter(([, value]) => value)
-      .map(
-        ([key, value]) =>
-          `${key}=${encodeURIComponent(value as string | number)}`
-      )
-      .join('&');
-
-    return filteredQuery;
+    return filteredQuery(queryObject);
   }, [difficulty, status, title, locale, currentPage, tags]);
 
   const queryKey = useMemo(

@@ -5,6 +5,7 @@ import { useAppContext } from '@/contexts/AppContext';
 import { Lesson } from '@/types/lesson';
 import { PuzzleDifficulty } from '@/types/puzzle';
 import { StatusType } from '@/types/status';
+import { filteredQuery } from '@/utils/filteredQuery';
 import { Button, Pagination, Select, Spinner, Table } from 'flowbite-react';
 import { useRouter } from 'next/router';
 import { useMemo, useState } from 'react';
@@ -28,15 +29,7 @@ export const LessonsListScreen = () => {
       page: currentPage,
     };
 
-    const filteredQuery = Object.entries(queryObject)
-      .filter(([, value]) => value) // Exclude undefined values
-      .map(
-        ([key, value]) =>
-          `${key}=${encodeURIComponent(value as string | number)}`
-      ) // Encode values for safety
-      .join('&');
-
-    return filteredQuery;
+    return filteredQuery(queryObject);
   }, [difficulty, status, title, locale, currentPage]);
 
   const queryKey = useMemo(

@@ -305,15 +305,6 @@ export const PuzzleFormScreen = ({ puzzle, onSaveSuccess }: Props) => {
                 {/* Player Selector */}
                 <Select
                   {...register(`solutions.${index}.player`)}
-                  onChange={(e) => {
-                    // setValue(`solutions.${index}.moves`, [
-                    //   { move: '', from: '', to: '' },
-                    // ]);
-                    setValue(
-                      `solutions.${index}.player`,
-                      e.target.value as 'user' | 'engine'
-                    );
-                  }}
                   className="w-32"
                 >
                   <option value="user">User</option>

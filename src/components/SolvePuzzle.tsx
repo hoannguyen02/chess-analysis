@@ -449,7 +449,7 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({ puzzle }) => {
 
   const playerName = useMemo(() => {
     const { preMove, fen } = puzzle;
-    if (preMove?.player) {
+    if (preMove?.player && preMove?.move) {
       return preMove.player === 'w' ? 'Black' : 'White';
     }
 

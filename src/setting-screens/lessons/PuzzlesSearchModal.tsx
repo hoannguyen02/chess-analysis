@@ -89,11 +89,6 @@ export const PuzzlesSearchModal: React.FC<PuzzlesSearchModalProps> = ({
 
   const onPageChange = (page: number) => setCurrentPage(page);
 
-  const handlePreview = (item: Puzzle) => {
-    const encodedData = encodeURIComponent(JSON.stringify(item));
-    window.open(`/settings/puzzles/preview?data=${encodedData}`, '_blank');
-  };
-
   return (
     <Modal show onClose={onClose} position="center">
       <Modal.Header>Search and Add Puzzles</Modal.Header>
@@ -161,7 +156,6 @@ export const PuzzlesSearchModal: React.FC<PuzzlesSearchModalProps> = ({
             <Table.Head>
               <Table.HeadCell></Table.HeadCell>
               <Table.HeadCell>Title</Table.HeadCell>
-              <Table.HeadCell>Difficulty</Table.HeadCell>
               <Table.HeadCell>Actions</Table.HeadCell>
             </Table.Head>
             <Table.Body className="divide-y">
@@ -188,7 +182,6 @@ export const PuzzlesSearchModal: React.FC<PuzzlesSearchModalProps> = ({
                       <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
                         {item?.title?.[locale]}
                       </Table.Cell>
-                      <Table.Cell>{item.difficulty}</Table.Cell>
                       <Table.Cell>
                         <Button onClick={() => previewPuzzle(item)}>
                           View

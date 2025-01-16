@@ -1,8 +1,10 @@
+import DebouncedInput from '@/components/DebounceInput';
 import { TitlePage } from '@/components/TitlePage';
 import { LEVEL_RATING, Phases, Statues } from '@/constants';
 import { useAppContext } from '@/contexts/AppContext';
 import { Puzzle, PuzzleDifficulty, PuzzlePhase } from '@/types/puzzle';
 import { StatusType } from '@/types/status';
+import { filteredQuery } from '@/utils/filteredQuery';
 import {
   Button,
   Checkbox,
@@ -17,13 +19,14 @@ import useSWR from 'swr';
 import { fetcher } from '../../utils/fetcher';
 
 export const PuzzleListScreen = () => {
-  const { themes, apiDomain, themeMap, locale } = useAppContext();
+  const { themes, apiDomain, locale } = useAppContext();
   const [currentPage, setCurrentPage] = useState(1);
   const [phase, setPhase] = useState<PuzzlePhase | ''>('');
   const [status, setStatus] = useState<StatusType | ''>('');
   const [theme, setTheme] = useState<string | ''>('');
   const [difficulty, setDifficulty] = useState<PuzzleDifficulty | ''>('');
   const [isPublic, setIsPublic] = useState<boolean | undefined>();
+  const [title, setTitle] = useState<string | ''>('');
 
   const queryString = useMemo(() => {
     // Define your query parameters as an object
@@ -34,18 +37,11 @@ export const PuzzleListScreen = () => {
       status,
       page: currentPage,
       isPublic,
+      search: title,
     };
 
-    const filteredQuery = Object.entries(queryObject)
-      .filter(([, value]) => value) // Exclude undefined values
-      .map(
-        ([key, value]) =>
-          `${key}=${encodeURIComponent(value as string | number)}`
-      ) // Encode values for safety
-      .join('&');
-
-    return filteredQuery;
-  }, [currentPage, phase, status, theme, difficulty, isPublic]);
+    return filteredQuery(queryObject);
+  }, [phase, theme, difficulty, status, currentPage, isPublic, title]);
 
   const queryKey = useMemo(
     () => `${apiDomain}/v1/puzzles?${queryString}`,
@@ -81,7 +77,16 @@ export const PuzzleListScreen = () => {
           Add new
         </Button>
       </TitlePage>
-      <div className="flex flex-col">
+      {/* Title Search */}
+      <div className="flex flex-col mb-2">
+        Title:
+        <DebouncedInput
+          placeholder="Enter a title"
+          initialValue={title}
+          onChange={(value) => setTitle(value)}
+        />
+      </div>
+      <div className="flex flex-col mb-2">
         Public:
         <Checkbox
           checked={isPublic}
@@ -148,14 +153,9 @@ export const PuzzleListScreen = () => {
       </div>
       <Table hoverable>
         <Table.Head>
-          <Table.HeadCell>Theme</Table.HeadCell>
-          <Table.HeadCell>Phase</Table.HeadCell>
+          <Table.HeadCell>Title</Table.HeadCell>
           <Table.HeadCell>Difficulty</Table.HeadCell>
-          <Table.HeadCell>Status</Table.HeadCell>
-          <Table.HeadCell>Public</Table.HeadCell>
-          <Table.HeadCell>
-            <span className="sr-only">Edit</span>
-          </Table.HeadCell>
+          <Table.HeadCell></Table.HeadCell>
         </Table.Head>
         <Table.Body className="divide-y">
           {isLoading ? (
@@ -169,14 +169,8 @@ export const PuzzleListScreen = () => {
                   key={`puzzle-${index}`}
                   className="bg-white dark:border-gray-700 dark:bg-gray-800"
                 >
-                  <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
-                    {themeMap[puzzle.theme]?.title[locale] || puzzle.theme}
-                  </Table.Cell>
-                  <Table.Cell>{puzzle.phase}</Table.Cell>
+                  <Table.Cell>{puzzle?.title?.[locale]}</Table.Cell>
                   <Table.Cell>{puzzle.difficulty}</Table.Cell>
-                  <Table.Cell>
-                    <Checkbox checked={puzzle.isPublic} />
-                  </Table.Cell>
                   <Table.Cell>
                     <a
                       href={`/settings/puzzles/${puzzle._id}`}

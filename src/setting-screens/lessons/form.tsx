@@ -6,11 +6,10 @@ import { useAppContext } from '@/contexts/AppContext';
 import useBeforeUnload from '@/hooks/useBeforeUnload';
 import useDialog from '@/hooks/useDialog';
 import usePreventRouteChange from '@/hooks/usePreventRouteChange';
-import { ExplanationType, ObjectiveType } from '@/types';
+import { ObjectiveType } from '@/types';
 import { Course } from '@/types/course';
-import { ContentType } from '@/types/lesson';
+import { ContentType, Lesson, LessonExpanded } from '@/types/lesson';
 import { Puzzle } from '@/types/puzzle';
-import { DifficultyType, StatusType } from '@/types/status';
 import { fetcher } from '@/utils/fetcher';
 import { previewPuzzle } from '@/utils/previewPuzzle';
 import {
@@ -38,76 +37,23 @@ import useSWR from 'swr';
 import { AddToCoursesModal } from './AddToCoursesModal';
 import { PuzzlesSearchModal } from './PuzzlesSearchModal';
 
-export type Lesson = {
-  theme?: string;
-  title: {
-    en: string;
-    vi: string;
-  };
-  description?: {
-    en: string;
-    vi: string;
-  };
-  objectives?: ObjectiveType;
-  puzzles: { puzzleId: string }[];
-  contents?: {
-    type: ContentType;
-    title: {
-      en: string;
-      vi: string;
-    };
-    explanations?: ExplanationType;
-    contentPuzzles: { puzzleId: string }[];
-  }[];
-  difficulty?: DifficultyType;
-  status: StatusType;
-  _id?: string;
-  id?: string;
-  isPublic?: boolean;
-};
-
-export type LessonExpanded = {
-  theme?: string;
-  title: {
-    en: string;
-    vi: string;
-  };
-  description?: {
-    en: string;
-    vi: string;
-  };
-  objectives?: ObjectiveType;
-  puzzles: { puzzleId: Puzzle }[];
-  contents?: {
-    type: ContentType;
-    title: {
-      en: string;
-      vi: string;
-    };
-    explanations?: ExplanationType;
-    contentPuzzles: { puzzleId: Puzzle }[];
-  }[];
-  difficulty?: DifficultyType;
-  status: StatusType;
-  _id?: string;
-  isPublic?: boolean;
-};
-
 type Props = {
   lesson?: LessonExpanded;
 };
 
+type LessonContent = {
+  type: ContentType;
+  title: {
+    en: string;
+    vi: string;
+  };
+  explanations?: { en: string[]; vi: string[] };
+  contentPuzzles: Puzzle[];
+};
+
 type LessonForm = Lesson & {
   puzzles: Puzzle[];
-  contents: {
-    type: ContentType;
-    title: {
-      en: string;
-      vi: string;
-    };
-    explanations?: { en: string[]; vi: string[] };
-    contentPuzzles: Puzzle[];
-  }[];
+  contents: LessonContent[];
   objectives?: ObjectiveType;
 };
 
@@ -356,9 +302,17 @@ export const LessonFormScreen = ({ lesson }: Props) => {
 
   // Handle form submission
   const onSubmit: SubmitHandler<LessonForm> = async (data) => {
-    const { _id, puzzles, ...rest } = data;
+    const { _id, puzzles, contents, ...rest } = data;
     const puzzleIds = puzzles.map((p: Puzzle) => ({ puzzleId: p._id }));
-    const payload = { ...rest, puzzles: puzzleIds };
+    const newContents = contents.map((p) => ({
+      ...p,
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+      //@ts-ignore
+      contentPuzzles: p.contentPuzzles.map((cp: Puzzle) => ({
+        puzzleId: cp._id,
+      })),
+    }));
+    const payload = { ...rest, puzzles: puzzleIds, contents: newContents };
     try {
       const apiDomain = process.env.NEXT_PUBLIC_PHONG_CHESS_DOMAIN;
       let request;
@@ -377,10 +331,7 @@ export const LessonFormScreen = ({ lesson }: Props) => {
       }
       const response = await request;
       if (response.ok) {
-        const data = await response.json();
-        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-        // @ts-ignore
-        reset(buildInitialLessonForm(data));
+        await response.json();
         alert('Data submitted successfully');
         if (!_id) {
           router.push(`/settings/lessons/${data._id}`);
@@ -525,16 +476,18 @@ export const LessonFormScreen = ({ lesson }: Props) => {
                         {...register(`contents.${index}.title.vi`)}
                       />
                       <ContentExplanations contentIndex={index} />
-                      <div className="mt-2">
+                      <h2 className="mt-2">Puzzles/Challenges</h2>
+                      <div>
                         <div className="grid grid-cols-3">
                           <Label className="font-bold">Title</Label>
                           <Label className="font-bold">Difficulty</Label>
                           <Label>Actions</Label>
                         </div>
+
                         {field.contentPuzzles.map((p, pIndex) => (
                           <div
                             key={`content-puzzle-${index}-${pIndex}`}
-                            className="grid grid-cols-3"
+                            className="grid grid-cols-3 mb-2"
                           >
                             <Label>{p.title?.[locale]}</Label>
                             <Label>{p.difficulty}</Label>
