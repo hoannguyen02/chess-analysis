@@ -1,14 +1,14 @@
 import Layout from '@/components/Layout';
 import { useAppContext } from '@/contexts/AppContext';
 import { withThemes } from '@/HOF/withThemes';
-import { CourseExpanded } from '@/types/course';
+import { LessonExpanded } from '@/types/lesson';
 import { getDifficultyColor } from '@/utils/getDifficultyColor';
 import axios from 'axios';
-import { Accordion, Badge } from 'flowbite-react';
+import { Accordion, Badge, Button, Card } from 'flowbite-react';
 import { GetServerSidePropsContext } from 'next';
 
 type Props = {
-  data: CourseExpanded;
+  data: LessonExpanded;
 };
 const LessonDetailsPage = ({ data }: Props) => {
   const { locale } = useAppContext();
@@ -17,82 +17,111 @@ const LessonDetailsPage = ({ data }: Props) => {
 
   const {
     title,
-    difficulty,
-    status,
-    // progress,
     description,
     objectives,
-    lessons,
+    contents,
+    puzzles,
+    difficulty,
+    isPublic,
   } = data;
 
   const difficultyColor = getDifficultyColor(difficulty);
-  const statusColor = status === 'Active' ? 'green' : 'red';
 
   return (
     <Layout>
-      <div className="max-w-4xl mx-auto p-6 bg-white shadow-md rounded-lg">
+      <div className="container mx-auto p-4">
         {/* Header Section */}
-        <div className="flex justify-between items-center mb-4">
-          <h1 className="text-3xl font-bold text-gray-800">{title[locale]}</h1>
-          <div className="space-x-2">
+        <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-4">
+          <h1 className="text-2xl sm:text-3xl font-bold text-gray-800">
+            {title[locale]}
+          </h1>
+          <div className="flex space-x-2 mt-2 sm:mt-0">
             <Badge color={difficultyColor}>{difficulty}</Badge>
-            <Badge color={statusColor}>{status}</Badge>
           </div>
         </div>
-        {/* <Progress progress={progress} size="lg" />
-        <Button className="mt-4 w-full" color="blue">
-          {progress === 0 ? 'Start Course' : 'Continue Learning'}
-        </Button> */}
 
-        {/* Description Section */}
-        <div className="mt-6">
-          <h2 className="text-2xl font-semibold">Course Overview</h2>
-          <p className="mt-2 text-gray-600">{description?.[locale]}</p>
-        </div>
+        {/* Description */}
+        {description?.en && (
+          <p className="text-gray-600 mb-4">{description.en}</p>
+        )}
 
-        {/* Objectives Section */}
-        <div className="mt-6">
-          <h3 className="text-xl font-semibold">Objectives</h3>
-          <ul className="list-disc list-inside text-gray-600 mt-2">
-            {objectives?.[locale]?.map((obj, index) => (
-              <li key={index}>{obj}</li>
-            ))}
-          </ul>
-        </div>
+        {/* Objectives */}
+        {objectives?.en && (
+          <div className="mb-6">
+            <h2 className="text-xl font-semibold mb-2">Objectives</h2>
+            <ul className="list-disc list-inside space-y-1">
+              {objectives.en.map((objective, idx) => (
+                <li key={idx}>{objective}</li>
+              ))}
+            </ul>
+          </div>
+        )}
 
-        {/* Lessons Section */}
-        <div className="mt-6">
-          <h3 className="text-xl font-semibold">Lessons</h3>
-          <Accordion>
-            {lessons.map(({ lessonId: lesson }) => (
-              <Accordion.Panel key={lesson.id}>
-                <Accordion.Title>
-                  {lesson.title[locale]}
-                  {/* {lesson.isCompleted && (
-                    <Badge color="green" className="ml-2">
-                      Completed
-                    </Badge>
-                  )} */}
-                  {/* {lesson.isLocked && (
-                    <Badge color="gray" className="ml-2">
-                      Locked
-                    </Badge>
-                  )} */}
-                </Accordion.Title>
-                {/* {!lesson.isLocked && (
+        {/* Contents */}
+        {contents && (
+          <div className="mb-6">
+            <h2 className="text-xl font-semibold mb-2">Lesson Contents</h2>
+            <Accordion>
+              {contents.map((content, idx) => (
+                <Accordion.Panel key={idx}>
+                  <Accordion.Title>{content.title.en}</Accordion.Title>
                   <Accordion.Content>
-                    <Button
-                      color="blue"
-                      onClick={() => setActiveLesson(lesson.id)}
-                      disabled={lesson.isCompleted}
-                    >
-                      {lesson.isCompleted ? 'Completed' : 'Start Lesson'}
-                    </Button>
+                    {content.explanations?.en?.map((explanation, i) => (
+                      <p key={i} className="text-gray-600 mb-2">
+                        {explanation}
+                      </p>
+                    ))}
+
+                    {/* Content Puzzles */}
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-4">
+                      {content.contentPuzzles.map(({ puzzleId: puzzle }, i) => (
+                        <Card key={i} className="hover:shadow-lg transition">
+                          <p className="text-center">
+                            Puzzle {puzzle?.title?.[locale]}
+                          </p>
+                          <Button color="blue" size="sm" fullSized>
+                            Solve Now
+                          </Button>
+                        </Card>
+                      ))}
+                    </div>
                   </Accordion.Content>
-                )} */}
-              </Accordion.Panel>
-            ))}
-          </Accordion>
+                </Accordion.Panel>
+              ))}
+            </Accordion>
+          </div>
+        )}
+
+        {/* Puzzle Section */}
+        {puzzles && (
+          <div className="mb-6">
+            <h2 className="text-xl font-semibold mb-2">Practice Puzzles</h2>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              {puzzles.map(({ puzzleId: puzzle }, idx) => (
+                <Card key={idx} className="hover:shadow-lg transition">
+                  <p className="text-center">
+                    Puzzle {puzzle?.title?.[locale]}
+                  </p>
+                  <Button color="green" size="sm" fullSized>
+                    Start Puzzle
+                  </Button>
+                </Card>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* Call-to-Action */}
+        <div className="text-center">
+          {isPublic ? (
+            <Button color="purple" size="lg">
+              Start Lesson
+            </Button>
+          ) : (
+            <Button color="yellow" size="lg">
+              Unlock Lesson
+            </Button>
+          )}
         </div>
       </div>
     </Layout>
@@ -104,7 +133,7 @@ export const getServerSideProps = withThemes(
     try {
       const slug = params?.lessonSlug;
 
-      const res = await axios.get(`${apiDomain}/v1/lesson/slug/${slug}`);
+      const res = await axios.get(`${apiDomain}/v1/lessons/slug/${slug}`);
 
       const commonMessages = (await import(`@/locales/${locale}/common.json`))
         .default;

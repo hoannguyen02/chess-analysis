@@ -9,6 +9,7 @@ import { Puzzle } from '@/types/puzzle';
 import { fetcher } from '@/utils/fetcher';
 import { previewPuzzle } from '@/utils/previewPuzzle';
 import { Button, Checkbox, Label, Select, TextInput } from 'flowbite-react';
+import isEmpty from 'lodash/isEmpty';
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
@@ -75,9 +76,9 @@ export const PuzzleFormScreen = ({ puzzle, onSaveSuccess }: Props) => {
       alert('Please enter a valid FEN position');
       return false;
     }
-    if (preMove && (!preMove.move || !preMove.from || !preMove.to)) {
-      alert('Please enter a valid pre-move');
-      return false;
+    if (!isEmpty(preMove?.move)) {
+      // Clear pre move inform if not set
+      setValue('preMove', undefined);
     }
     if (!solutions.length) {
       alert('Please enter solutions');
@@ -262,6 +263,7 @@ export const PuzzleFormScreen = ({ puzzle, onSaveSuccess }: Props) => {
                 required
                 {...register(`preMove.player`)}
               >
+                <option label="">Select player</option>
                 <option label="White">w</option>
                 <option label="Black">b</option>
               </Select>

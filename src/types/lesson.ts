@@ -30,6 +30,7 @@ export type Lesson = {
   _id?: string;
   id?: string;
   isPublic?: boolean;
+  slug: string;
 };
 
 export type LessonExpanded = {
@@ -57,4 +58,5 @@ export type LessonExpanded = {
   status: StatusType;
   _id?: string;
   isPublic?: boolean;
+  slug: string;
 };

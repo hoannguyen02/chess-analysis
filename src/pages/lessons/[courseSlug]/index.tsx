@@ -7,6 +7,8 @@ import axios from 'axios';
 import { Badge, Button, Progress } from 'flowbite-react';
 import { GetServerSidePropsContext } from 'next';
 import { useTranslations } from 'next-intl';
+import { useParams } from 'next/navigation';
+import { useRouter } from 'next/router';
 
 type Props = {
   data: CourseExpanded;
@@ -15,6 +17,8 @@ type Props = {
 const LessonDetailsPage = ({ data }: Props) => {
   const { locale } = useAppContext();
   const t = useTranslations();
+  const router = useRouter();
+  const params = useParams();
 
   if (!data) return null;
 
@@ -107,6 +111,11 @@ const LessonDetailsPage = ({ data }: Props) => {
                     }
                     disabled={completedPuzzles === lesson.puzzles.length}
                     className="mt-3 sm:mt-0 w-full sm:w-auto"
+                    onClick={() => {
+                      router.push(
+                        `/lessons/${params.courseSlug}/${lesson.slug}`
+                      );
+                    }}
                   >
                     {completedPuzzles === lesson.puzzles.length
                       ? t('common.button.completed')
