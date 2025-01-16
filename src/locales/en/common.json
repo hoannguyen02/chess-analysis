@@ -28,8 +28,10 @@
     "objectives": "Objectives",
     "lessons": "Lessons",
     "puzzles": "Puzzles",
+    "puzzle": "Puzzle",
     "start-course": "Start Course",
-    "continue-learning": "Continue Learning"
+    "continue-learning": "Continue Learning",
+    "lesson-contents": "Lesson Contents"
   },
   "button": {
     "back": "Back",
@@ -38,6 +40,7 @@
     "previous": "Previous",
     "next": "Next",
     "continue": "Continue",
-    "completed": "Completed"
+    "completed": "Completed",
+    "solve-now": "Solve Now"
   }
 }

@@ -77,11 +77,17 @@ const LessonDetailsPage = ({ data }: Props) => {
           </h3>
           <div className="grid gap-3 sm:gap-4">
             {lessons.map(({ lessonId: lesson }) => {
+              let contentPuzzles = 0;
               const completedPuzzles = lesson.puzzles.filter(
-                (p) => isCompleted
+                () => isCompleted
               ).length;
+              lesson.contents?.forEach((c) => {
+                contentPuzzles += c.contentPuzzles.length;
+              });
+
+              const totalPuzzles = contentPuzzles + lesson.puzzles.length;
               const lessonProgress = Math.round(
-                (completedPuzzles / lesson.puzzles.length) * 100
+                (completedPuzzles / totalPuzzles) * 100
               );
 
               return (
@@ -94,7 +100,7 @@ const LessonDetailsPage = ({ data }: Props) => {
                       {lesson.title[locale]}
                     </h4>
                     <p className="text-xs sm:text-sm text-gray-600">
-                      {completedPuzzles} / {lesson.puzzles.length}{' '}
+                      {completedPuzzles} / {totalPuzzles}{' '}
                       {t('common.title.puzzles')}
                     </p>
                     <Progress
@@ -104,12 +110,7 @@ const LessonDetailsPage = ({ data }: Props) => {
                     />
                   </div>
                   <Button
-                    color={
-                      completedPuzzles === lesson.puzzles.length
-                        ? 'green'
-                        : 'blue'
-                    }
-                    disabled={completedPuzzles === lesson.puzzles.length}
+                    color={completedPuzzles === totalPuzzles ? 'green' : 'blue'}
                     className="mt-3 sm:mt-0 w-full sm:w-auto"
                     onClick={() => {
                       router.push(
@@ -117,7 +118,7 @@ const LessonDetailsPage = ({ data }: Props) => {
                       );
                     }}
                   >
-                    {completedPuzzles === lesson.puzzles.length
+                    {completedPuzzles === totalPuzzles
                       ? t('common.button.completed')
                       : t('common.button.continue')}
                   </Button>

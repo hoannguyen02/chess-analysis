@@ -27,9 +27,11 @@
     "course-overview": "Tổng Quan Khóa Học",
     "objectives": "Mục Tiêu",
     "lessons": "Bài Học",
-    "puzzles": "Thử Thách",
+    "puzzles": "Bài tập",
+    "puzzle": "Bài tập",
     "start-course": "Vào Học",
-    "continue-learning": "Học Tiếp"
+    "continue-learning": "Học Tiếp",
+    "lesson-contents": "Nội Dung Bài Học"
   },
   "button": {
     "back": "Quay lại",
@@ -37,7 +39,8 @@
     "submit": "Lưu",
     "previous": "Trước",
     "next": "Sau",
-    "continue": "Tiếp Tục",
-    "completed": "Đã Hoàn tất"
+    "continue": "Tiếp tục",
+    "completed": "Đã hoàn tất",
+    "solve-now": "Giải ngay"
   }
 }
