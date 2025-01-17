@@ -518,14 +518,14 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({
         </button>
       )}
 
+      {/* Mobile message */}
+      <div
+        className={`${bgHeader} flex justify-center py-4 text-white font-bold lg:hidden mb-4 rounded-lg`}
+      >
+        {message}
+      </div>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-2 lg:gap-16 mx-auto max-w-[900px]">
         <div ref={boardRef}>
-          {/* Mobile message */}
-          <div
-            className={`${bgHeader} flex justify-center py-4 text-white font-bold lg:hidden mb-4`}
-          >
-            {message}
-          </div>
           <Chessboard
             boardOrientation={playerName?.toLowerCase() as 'black' | 'white'}
             position={currentFen}
