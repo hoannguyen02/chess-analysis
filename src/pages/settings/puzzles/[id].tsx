@@ -1,48 +1,56 @@
 import Layout from '@/components/Layout';
+import { useAppContext } from '@/contexts/AppContext';
 import { withThemes } from '@/HOF/withThemes';
 import { PuzzleFormScreen } from '@/setting-screens/puzzles/form';
-import { Puzzle } from '@/types/puzzle';
+import { fetcher } from '@/utils/fetcher';
+import { Spinner } from 'flowbite-react';
 import {
   GetServerSideProps,
   GetServerSidePropsContext,
   PreviewData,
 } from 'next';
+import { useParams } from 'next/navigation';
 import { ParsedUrlQuery } from 'querystring';
+import { useMemo } from 'react';
+import useSWR from 'swr';
 
-type Props = {
-  puzzle: Puzzle;
-};
-const PuzzlePage = ({ puzzle }: Props) => {
+const PuzzlePage = () => {
+  const { apiDomain } = useAppContext();
+  const params = useParams();
+
+  const key = useMemo(
+    () => `${apiDomain}/v1/puzzles/${params.id}`,
+    [apiDomain, params.id]
+  );
+
+  const { data, mutate, isLoading, isValidating } = useSWR(key, fetcher);
+
+  if (isLoading || isValidating) {
+    return <Spinner />;
+  }
+
   return (
     <Layout>
-      <PuzzleFormScreen puzzle={puzzle} />
+      <PuzzleFormScreen
+        isValidating={isValidating}
+        onSaveSuccess={mutate}
+        puzzle={data}
+      />
     </Layout>
   );
 };
 
 export const getServerSideProps: GetServerSideProps = withThemes(
-  async (
-    { params, locale }: GetServerSidePropsContext<ParsedUrlQuery, PreviewData>,
-    { apiDomain }
-  ) => {
-    const { id } = params as { id: string };
-
+  async ({
+    locale,
+  }: GetServerSidePropsContext<ParsedUrlQuery, PreviewData>) => {
     try {
-      const res = await fetch(`${apiDomain}/v1/puzzles/${id}`);
-
-      if (!res.ok) {
-        throw new Error(`Failed to fetch data: ${res.statusText}`);
-      }
-
-      const data = await res.json();
-
       const commonMessages = (
         await import(`@/locales/${locale || 'en'}/common.json`)
       ).default;
 
       return {
         props: {
-          puzzle: data,
           messages: {
             common: commonMessages,
           },

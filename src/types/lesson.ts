@@ -5,7 +5,6 @@ import { DifficultyType, StatusType } from './status';
 export type ContentType = 'text' | 'video' | 'image';
 
 export type Lesson = {
-  theme?: string;
   title: {
     en: string;
     vi: string;
@@ -35,7 +34,6 @@ export type Lesson = {
 };
 
 export type LessonExpanded = {
-  theme?: string;
   title: {
     en: string;
     vi: string;

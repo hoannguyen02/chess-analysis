@@ -1,6 +1,6 @@
 import { DraggableItem } from '@/components/DraggableItem';
 import { TitlePage } from '@/components/TitlePage';
-import { LEVEL_RATING, Statues } from '@/constants';
+import { RatingOptions, StatusOptions } from '@/constants';
 import { ROUTE_CHANGE_MESSAGE } from '@/constants/route';
 import { useAppContext } from '@/contexts/AppContext';
 import useBeforeUnload from '@/hooks/useBeforeUnload';
@@ -212,11 +212,6 @@ export const CourseFormScreen = ({ course }: Props) => {
     });
   };
 
-  const statusOptions = Statues.map((status) => ({
-    value: status as string,
-    label: status as string,
-  }));
-
   return (
     <div className="">
       <TitlePage>Course Form</TitlePage>
@@ -274,8 +269,8 @@ export const CourseFormScreen = ({ course }: Props) => {
                 render={({ field }) => (
                   <Select
                     id="status"
-                    options={statusOptions}
-                    value={statusOptions.find(
+                    options={StatusOptions}
+                    value={StatusOptions.find(
                       (option) => option.value === field.value
                     )}
                     onChange={(
@@ -298,19 +293,11 @@ export const CourseFormScreen = ({ course }: Props) => {
                 render={({ field }) => (
                   <Select
                     id="difficulty"
-                    options={Object.entries(LEVEL_RATING).map(
-                      ([rating, title]) => ({
-                        value: rating,
-                        label: title,
-                      })
-                    )}
+                    options={RatingOptions}
                     value={
-                      Object.entries(LEVEL_RATING)
-                        .map(([rating, title]) => ({
-                          value: rating,
-                          label: title,
-                        }))
-                        .find((option) => option.value === field.value) || null
+                      RatingOptions.find(
+                        (option) => option.value === field.value
+                      ) || null
                     }
                     onChange={(selectedOption) =>
                       field.onChange(selectedOption?.value)

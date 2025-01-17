@@ -217,7 +217,7 @@ const ContentExplanations = ({ contentIndex }: { contentIndex: number }) => {
   );
 };
 export const LessonFormScreen = ({ lesson }: Props) => {
-  const { apiDomain, locale, themes } = useAppContext();
+  const { apiDomain, locale } = useAppContext();
 
   const {
     data: courses,
@@ -399,18 +399,7 @@ export const LessonFormScreen = ({ lesson }: Props) => {
               {...register('title.vi')}
             />
           </div>
-          <div className="mt-4 grid grid-cols-3  place-content-start mb-4 gap-8">
-            <div className="flex flex-col">
-              <Label htmlFor="theme" value="Theme" />
-              <Select value={watch('theme')} id="theme" {...register('theme')}>
-                <option value="">Select a theme</option>
-                {themes.map((theme) => (
-                  <option key={theme.code} label={theme.title[locale]}>
-                    {theme.code}
-                  </option>
-                ))}
-              </Select>
-            </div>
+          <div className="mt-4 grid grid-cols-2  place-content-start mb-4 gap-8">
             <div className="flex flex-col">
               <Label htmlFor="status" value="Status" />
               <Select id="status" required {...register('status')}>

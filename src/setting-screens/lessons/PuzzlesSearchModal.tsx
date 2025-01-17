@@ -1,5 +1,5 @@
 import DebouncedInput from '@/components/DebounceInput';
-import { LEVEL_RATING, Statues } from '@/constants';
+import { RatingOptions, StatusOptions } from '@/constants';
 import { useAppContext } from '@/contexts/AppContext';
 import { Puzzle, PuzzleDifficulty } from '@/types/puzzle';
 import { StatusType } from '@/types/status';
@@ -10,11 +10,11 @@ import {
   Checkbox,
   Modal,
   Pagination,
-  Select,
   Spinner,
   Table,
 } from 'flowbite-react';
 import React, { useMemo, useState } from 'react';
+import Select from 'react-select';
 import useSWR from 'swr';
 
 interface PuzzlesSearchModalProps {
@@ -28,10 +28,10 @@ export const PuzzlesSearchModal: React.FC<PuzzlesSearchModalProps> = ({
   onAddPuzzles,
   selectedPuzzles,
 }) => {
-  const { apiDomain, themes, locale } = useAppContext();
+  const { apiDomain, themes: themeOptions, locale } = useAppContext();
   const [selectedInModal, setSelectedInModal] = useState<Puzzle[]>([]);
   const [difficulty, setDifficulty] = useState<PuzzleDifficulty | ''>('');
-  const [theme, setTheme] = useState<string | ''>('');
+  const [themes, setThemes] = useState<string[]>([]);
   const [title, setTitle] = useState<string | ''>('');
   const [currentPage, setCurrentPage] = useState(1);
   const [status, setStatus] = useState<StatusType | ''>('');
@@ -44,7 +44,7 @@ export const PuzzlesSearchModal: React.FC<PuzzlesSearchModalProps> = ({
       title,
       page: currentPage,
       excludedIds: selectedPuzzles.map((l) => l._id).join(','),
-      theme,
+      themes: themes.join(','),
     };
 
     const filteredQuery = Object.entries(queryObject)
@@ -56,7 +56,7 @@ export const PuzzlesSearchModal: React.FC<PuzzlesSearchModalProps> = ({
       .join('&');
 
     return filteredQuery;
-  }, [difficulty, status, title, currentPage, selectedPuzzles, theme]);
+  }, [difficulty, status, title, currentPage, selectedPuzzles, themes]);
 
   const queryKey = useMemo(
     () => `${apiDomain}/v1/puzzles?${queryString}`,
@@ -105,51 +105,50 @@ export const PuzzlesSearchModal: React.FC<PuzzlesSearchModalProps> = ({
                 }}
               />
             </div>
+            {/* Status Filter */}
             <div className="flex flex-col">
               Status:
               <Select
-                value={status}
-                onChange={(event) =>
-                  setStatus(event.target.value as StatusType)
+                options={StatusOptions}
+                value={StatusOptions.find((option) => option.value === status)}
+                onChange={(selectedOption) =>
+                  setStatus(selectedOption?.value as StatusType)
                 }
-              >
-                <option value="">Select a status</option>
-                {Statues.map((status) => (
-                  <option key={status}>{status}</option>
-                ))}
-              </Select>
+                placeholder="Select status..."
+                isClearable
+              />
             </div>
           </div>
           <div className="grid grid-cols-2 gap-4 mb-8">
+            {/* Themes Filter */}
             <div className="flex flex-col">
-              Theme:
+              Themes:
               <Select
-                value={theme}
-                onChange={(event) => setTheme(event.target.value)}
-              >
-                <option value="">Select a theme</option>
-                {themes.map((theme) => (
-                  <option key={theme.code} label={theme.title[locale]}>
-                    {theme.code}
-                  </option>
-                ))}
-              </Select>
+                isMulti
+                options={themeOptions}
+                value={themeOptions.filter((option) =>
+                  themes.includes(option.value)
+                )}
+                onChange={(selectedOptions) =>
+                  setThemes(selectedOptions.map((option) => option.value))
+                }
+                placeholder="Select themes..."
+              />
             </div>
+            {/* Rating Filter */}
             <div className="flex flex-col">
               Rating:
               <Select
-                value={difficulty}
-                onChange={(event) =>
-                  setDifficulty(event.target.value as PuzzleDifficulty)
+                options={RatingOptions}
+                value={RatingOptions.find(
+                  (option) => option.value === difficulty
+                )}
+                onChange={(selectedOption) =>
+                  setDifficulty(selectedOption?.value as PuzzleDifficulty)
                 }
-              >
-                <option value="">Select a rating</option>
-                {Object.entries(LEVEL_RATING).map(([rating, title]) => (
-                  <option key={rating} label={title}>
-                    {rating}
-                  </option>
-                ))}
-              </Select>
+                placeholder="Select rating..."
+                isClearable
+              />
             </div>
           </div>
           <Table hoverable>

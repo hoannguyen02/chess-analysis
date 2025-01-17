@@ -1,7 +1,7 @@
 import DebouncedInput from '@/components/DebounceInput';
 import { DraggableItem } from '@/components/DraggableItem';
 import { TitlePage } from '@/components/TitlePage';
-import { LEVEL_RATING, Statues } from '@/constants';
+import { RatingOptions, StatusOptions } from '@/constants';
 import { useAppContext } from '@/contexts/AppContext';
 import { Course } from '@/types/course';
 import { PuzzleDifficulty } from '@/types/puzzle';
@@ -27,20 +27,6 @@ export const CourseListScreen = () => {
   const [difficulty, setDifficulty] = useState<PuzzleDifficulty | ''>('');
   const [courses, setCourses] = useState<Course[]>([]);
   const [isReordered, setIsReordered] = useState(false);
-
-  // Options for Status
-  const statusOptions = Statues.map((status) => ({
-    value: status,
-    label: status,
-  }));
-
-  // Options for Difficulty
-  const difficultyOptions = Object.entries(LEVEL_RATING).map(
-    ([rating, title]) => ({
-      value: rating,
-      label: title,
-    })
-  );
 
   const queryString = useMemo(() => {
     const queryObject: Record<string, any> = {
@@ -136,8 +122,8 @@ export const CourseListScreen = () => {
         <div className="flex flex-col">
           Status:
           <Select
-            options={statusOptions}
-            value={statusOptions.find((option) => option.value === status)}
+            options={StatusOptions}
+            value={StatusOptions.find((option) => option.value === status)}
             onChange={(selectedOption) =>
               setStatus(selectedOption?.value as StatusType)
             }
@@ -150,10 +136,8 @@ export const CourseListScreen = () => {
         <div className="flex flex-col">
           Rating:
           <Select
-            options={difficultyOptions}
-            value={difficultyOptions.find(
-              (option) => option.value === difficulty
-            )}
+            options={RatingOptions}
+            value={RatingOptions.find((option) => option.value === difficulty)}
             onChange={(selectedOption) =>
               setDifficulty(selectedOption?.value as PuzzleDifficulty)
             }
@@ -222,7 +206,7 @@ export const CourseListScreen = () => {
       <div className="flex justify-center mt-4">
         <Pagination
           currentPage={currentPage}
-          totalPages={data.lastPage}
+          totalPages={data?.lastPage || 1}
           onPageChange={onPageChange}
         />
       </div>

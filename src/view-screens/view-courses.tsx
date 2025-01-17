@@ -95,7 +95,6 @@ export const ViewCourses: React.FC<Props> = ({
           placeholder="Search..."
           initialValue={search as string}
           onChange={(value) => {
-            debugger;
             router.push(
               {
                 pathname: '/',

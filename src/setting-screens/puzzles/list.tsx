@@ -1,29 +1,24 @@
 import DebouncedInput from '@/components/DebounceInput';
 import { TitlePage } from '@/components/TitlePage';
-import { LEVEL_RATING, Phases, Statues } from '@/constants';
+import { PhaseOptions, RatingOptions, StatusOptions } from '@/constants';
 import { useAppContext } from '@/contexts/AppContext';
+import { PhaseType } from '@/types';
 import { Puzzle, PuzzleDifficulty, PuzzlePhase } from '@/types/puzzle';
 import { StatusType } from '@/types/status';
 import { filteredQuery } from '@/utils/filteredQuery';
-import {
-  Button,
-  Checkbox,
-  Pagination,
-  Select,
-  Spinner,
-  Table,
-} from 'flowbite-react';
+import { Button, Checkbox, Pagination, Spinner, Table } from 'flowbite-react';
 import { useRouter } from 'next/router';
 import { useMemo, useState } from 'react';
+import Select from 'react-select';
 import useSWR from 'swr';
 import { fetcher } from '../../utils/fetcher';
 
 export const PuzzleListScreen = () => {
-  const { themes, apiDomain, locale } = useAppContext();
+  const { apiDomain, locale, themes: themeOptions } = useAppContext();
   const [currentPage, setCurrentPage] = useState(1);
   const [phase, setPhase] = useState<PuzzlePhase | ''>('');
   const [status, setStatus] = useState<StatusType | ''>('');
-  const [theme, setTheme] = useState<string | ''>('');
+  const [themes, setThemes] = useState<string[]>([]);
   const [difficulty, setDifficulty] = useState<PuzzleDifficulty | ''>('');
   const [isPublic, setIsPublic] = useState<boolean | undefined>();
   const [title, setTitle] = useState<string | ''>('');
@@ -32,7 +27,7 @@ export const PuzzleListScreen = () => {
     // Define your query parameters as an object
     const queryObject: Record<string, any> = {
       phase,
-      theme,
+      themes: themes.join(','),
       difficulty,
       status,
       page: currentPage,
@@ -41,7 +36,7 @@ export const PuzzleListScreen = () => {
     };
 
     return filteredQuery(queryObject);
-  }, [phase, theme, difficulty, status, currentPage, isPublic, title]);
+  }, [phase, themes, difficulty, status, currentPage, isPublic, title]);
 
   const queryKey = useMemo(
     () => `${apiDomain}/v1/puzzles?${queryString}`,
@@ -96,59 +91,60 @@ export const PuzzleListScreen = () => {
         />
       </div>
       <div className="grid grid-cols-4 gap-4 mb-8">
+        {/* Themes Filter */}
+        <div className="flex flex-col">
+          Themes:
+          <Select
+            isMulti
+            options={themeOptions}
+            value={themeOptions.filter((option) =>
+              themes.includes(option.value)
+            )}
+            onChange={(selectedOptions) =>
+              setThemes(selectedOptions.map((option) => option.value))
+            }
+            placeholder="Select themes..."
+          />
+        </div>
+        {/* Status Filter */}
         <div className="flex flex-col">
           Status:
           <Select
-            value={status}
-            onChange={(event) => setStatus(event.target.value as StatusType)}
-          >
-            <option value="">Select a status</option>
-            {Statues.map((status) => (
-              <option key={status}>{status}</option>
-            ))}
-          </Select>
+            options={StatusOptions}
+            value={StatusOptions.find((option) => option.value === status)}
+            onChange={(selectedOption) =>
+              setStatus(selectedOption?.value as StatusType)
+            }
+            placeholder="Select status..."
+            isClearable
+          />
         </div>
-        <div className="flex flex-col">
-          Theme:
-          <Select
-            value={theme}
-            onChange={(event) => setTheme(event.target.value)}
-          >
-            <option value="">Select a theme</option>
-            {themes.map((theme, idx) => (
-              <option key={`${theme.code}-${idx}`} label={theme.title[locale]}>
-                {theme.code}
-              </option>
-            ))}
-          </Select>
-        </div>
+
+        {/* Rating Filter */}
         <div className="flex flex-col">
           Rating:
           <Select
-            value={difficulty}
-            onChange={(event) =>
-              setDifficulty(event.target.value as PuzzleDifficulty)
+            options={RatingOptions}
+            value={RatingOptions.find((option) => option.value === difficulty)}
+            onChange={(selectedOption) =>
+              setDifficulty(selectedOption?.value as PuzzleDifficulty)
             }
-          >
-            <option value="">Select a rating</option>
-            {Object.entries(LEVEL_RATING).map(([rating, title]) => (
-              <option key={rating} label={title}>
-                {rating}
-              </option>
-            ))}
-          </Select>
+            placeholder="Select rating..."
+            isClearable
+          />
         </div>
+        {/* Phase Filter */}
         <div className="flex flex-col">
           Phase:
           <Select
-            value={phase}
-            onChange={(event) => setPhase(event.target.value as PuzzlePhase)}
-          >
-            <option value="">Select a phase</option>
-            {Phases.map((phase) => (
-              <option key={phase}>{phase}</option>
-            ))}
-          </Select>
+            options={PhaseOptions}
+            value={PhaseOptions.find((option) => option.value === difficulty)}
+            onChange={(selectedOption) =>
+              setPhase(selectedOption?.value as PhaseType)
+            }
+            placeholder="Select phase..."
+            isClearable
+          />
         </div>
       </div>
       <Table hoverable>

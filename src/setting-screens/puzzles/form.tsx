@@ -1,21 +1,34 @@
 import { TitlePage } from '@/components/TitlePage';
-import { LEVEL_RATING, Statues } from '@/constants';
+import {
+  PhaseOptions,
+  PreMovePlayerOptions,
+  RatingOptions,
+  SolutionMovePlayerOptions,
+  StatusOptions,
+} from '@/constants';
 import { ROUTE_CHANGE_MESSAGE } from '@/constants/route';
 import { useAppContext } from '@/contexts/AppContext';
 import useBeforeUnload from '@/hooks/useBeforeUnload';
 import usePreventRouteChange from '@/hooks/usePreventRouteChange';
 import { Lesson } from '@/types/lesson';
 import { Puzzle } from '@/types/puzzle';
+import { PuzzleTheme } from '@/types/puzzle-theme';
 import { fetcher } from '@/utils/fetcher';
 import { previewPuzzle } from '@/utils/previewPuzzle';
-import { Button, Checkbox, Label, Select, TextInput } from 'flowbite-react';
+import { Button, Checkbox, Label, TextInput } from 'flowbite-react';
 import { isEmpty } from 'lodash';
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useState } from 'react';
-import { SubmitHandler, useFieldArray, useForm } from 'react-hook-form';
+import {
+  Controller,
+  SubmitHandler,
+  useFieldArray,
+  useForm,
+} from 'react-hook-form';
 import { VscEdit } from 'react-icons/vsc';
+import Select, { SingleValue } from 'react-select';
 import useSWR from 'swr';
 import { AddToLessonsModal } from './AddToLessonsModal';
 import { NestedMoveField } from './NestedMoveField';
@@ -23,10 +36,11 @@ import { NestedMoveField } from './NestedMoveField';
 type Props = {
   puzzle?: Puzzle;
   onSaveSuccess?: (puzzle: Puzzle) => void;
+  isValidating?: boolean;
 };
 
 export const PuzzleFormScreen = ({ puzzle, onSaveSuccess }: Props) => {
-  const { themes, apiDomain, locale } = useAppContext();
+  const { themes: defaultThemes, apiDomain, locale } = useAppContext();
   const t = useTranslations();
   const [addToLessonsPopup, setAddToLessonsPopup] = useState(false);
 
@@ -93,16 +107,21 @@ export const PuzzleFormScreen = ({ puzzle, onSaveSuccess }: Props) => {
 
   // Handle form submission
   const onSubmit: SubmitHandler<Puzzle> = async (data) => {
-    const { _id, preMove, ...rest } = data;
+    const { _id, preMove, themes, ...rest } = data;
     if (isValidFormValues()) {
-      let payload: Partial<Puzzle> = rest;
+      let payload: any = rest;
+      const themeIds = themes.map((theme: PuzzleTheme) => theme._id);
       if (!isEmpty(preMove?.move)) {
         payload = {
           ...rest,
+          themes: themeIds,
           preMove,
         };
       } else {
-        payload = rest;
+        payload = {
+          ...rest,
+          themes: themeIds,
+        };
       }
       try {
         const apiDomain = process.env.NEXT_PUBLIC_PHONG_CHESS_DOMAIN;
@@ -196,14 +215,27 @@ export const PuzzleFormScreen = ({ puzzle, onSaveSuccess }: Props) => {
             </div>
           </div>
           <div className="flex items-center">
-            <div className="mr-4">
-              <Label htmlFor="status" value="Status" />
-            </div>
-            <Select id="status" required {...register('status')}>
-              {Statues.map((status) => (
-                <option key={status}>{status}</option>
-              ))}
-            </Select>
+            <Label htmlFor="status" value="Status" />
+            <Controller
+              control={control}
+              name="status"
+              render={({ field }) => (
+                <Select
+                  id="status"
+                  options={StatusOptions}
+                  value={StatusOptions.find(
+                    (option) => option.value === field.value
+                  )}
+                  onChange={(
+                    selectedOption: SingleValue<{
+                      value: string;
+                      label: string;
+                    }>
+                  ) => field.onChange(selectedOption?.value)}
+                  className="w-full"
+                />
+              )}
+            />
           </div>
           <div className="flex items-center">
             <div className="mr-4">
@@ -214,38 +246,74 @@ export const PuzzleFormScreen = ({ puzzle, onSaveSuccess }: Props) => {
         </div>
         <div className="grid grid-cols-3  place-content-start mb-4 gap-8">
           <div>
-            <div className="mb-2">
-              <Label htmlFor="difficulty" value="Difficulty" />
-            </div>
-            <Select id="difficulty" required {...register('difficulty')}>
-              {Object.entries(LEVEL_RATING).map(([rating, title]) => (
-                <option key={rating} label={title}>
-                  {rating}
-                </option>
-              ))}
-            </Select>
+            <Label htmlFor="difficulty" value="Difficulty" />
+            <Controller
+              control={control}
+              name="difficulty"
+              render={({ field }) => (
+                <Select
+                  id="difficulty"
+                  options={RatingOptions}
+                  value={
+                    RatingOptions.find(
+                      (option) => option.value === field.value
+                    ) || null
+                  }
+                  onChange={(selectedOption) =>
+                    field.onChange(selectedOption?.value)
+                  }
+                  className="w-full"
+                />
+              )}
+            />
           </div>
           <div>
-            <div className="mb-2">
-              <Label htmlFor="phase" value="Phase" />
-            </div>
-            <Select value={watch('phase')} id="phase" {...register('phase')}>
-              <option>Opening</option>
-              <option>Middle</option>
-              <option>Endgame</option>
-            </Select>
+            <Label htmlFor="phase" value="Phase" />
+            <Controller
+              control={control}
+              name="phase"
+              render={({ field }) => (
+                <Select
+                  id="phase"
+                  options={PhaseOptions}
+                  value={
+                    PhaseOptions.find(
+                      (option) => option.value === field.value
+                    ) || null
+                  }
+                  onChange={(selectedOption) =>
+                    field.onChange(selectedOption?.value)
+                  }
+                  className="w-full"
+                />
+              )}
+            />
           </div>
-          <div>
-            <div className="mb-2">
-              <Label htmlFor="theme" value="Theme" />
-            </div>
-            <Select value={watch('theme')} id="theme" {...register('theme')}>
-              {themes.map((theme) => (
-                <option key={theme.code} label={theme.title[locale]}>
-                  {theme.code}
-                </option>
-              ))}
-            </Select>
+          <div className="flex flex-col">
+            <Label htmlFor="themes" value="Themes" />
+
+            <Controller
+              control={control}
+              name="themes"
+              render={({ field }) => (
+                <Select
+                  id="themes"
+                  isMulti
+                  options={defaultThemes}
+                  value={defaultThemes.filter((option) =>
+                    field.value?.some(
+                      (selected) => selected.code === option.code
+                    )
+                  )}
+                  onChange={(selectedOptions) =>
+                    field.onChange(selectedOptions)
+                  }
+                  getOptionLabel={(e) => e.label}
+                  getOptionValue={(e) => e._id}
+                  className="w-full"
+                />
+              )}
+            />
           </div>
         </div>
         <div>
@@ -265,15 +333,25 @@ export const PuzzleFormScreen = ({ puzzle, onSaveSuccess }: Props) => {
           </label>
           <div className="grid grid-cols-5 mb-4 gap-4">
             <div className="">
-              <Select
-                id="prevMovePlayer"
-                required
-                {...register(`preMove.player`)}
-              >
-                <option label="">Select player</option>
-                <option label="White">w</option>
-                <option label="Black">b</option>
-              </Select>
+              <Controller
+                control={control}
+                name="preMove.player"
+                render={({ field }) => (
+                  <Select
+                    id="preMove.player"
+                    options={PreMovePlayerOptions}
+                    value={
+                      PreMovePlayerOptions.find(
+                        (option) => option.value === field.value
+                      ) || null
+                    }
+                    onChange={(selectedOption) =>
+                      field.onChange(selectedOption?.value)
+                    }
+                    className="w-full"
+                  />
+                )}
+              />
             </div>
             <TextInput {...register(`preMove.move`)} />
             <TextInput {...register(`preMove.from`)} />
@@ -301,15 +379,27 @@ export const PuzzleFormScreen = ({ puzzle, onSaveSuccess }: Props) => {
             >
               <div className="flex justify-between items-center mb-3">
                 <h4 className="font-semibold text-lg">Step {index + 1}</h4>
-
-                {/* Player Selector */}
-                <Select
-                  {...register(`solutions.${index}.player`)}
-                  className="w-32"
-                >
-                  <option value="user">User</option>
-                  <option value="engine">Engine</option>
-                </Select>
+                <div>
+                  <Controller
+                    control={control}
+                    name={`solutions.${index}.player`}
+                    render={({ field }) => (
+                      <Select
+                        id={`solutions.${index}.player`}
+                        options={SolutionMovePlayerOptions}
+                        value={
+                          SolutionMovePlayerOptions.find(
+                            (option) => option.value === field.value
+                          ) || null
+                        }
+                        onChange={(selectedOption) =>
+                          field.onChange(selectedOption?.value)
+                        }
+                        className="w-full"
+                      />
+                    )}
+                  />
+                </div>
 
                 {/* Remove Step */}
                 <Button

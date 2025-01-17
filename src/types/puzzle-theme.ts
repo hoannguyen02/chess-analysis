@@ -4,5 +4,8 @@ export type PuzzleTheme = {
     vi: string;
   };
   code: string;
+  value: string;
+  label: string;
   description?: string;
+  _id: string;
 };

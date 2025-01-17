@@ -23,7 +23,14 @@ export const AppProvider: React.FC<{
   const value = useMemo(
     () => ({
       locale,
-      themes,
+      themes:
+        (themes || []).map((theme) => ({
+          value: theme.code,
+          label: theme.title[locale],
+          _id: theme._id,
+          code: theme.code,
+          title: theme.title,
+        })) || [],
       tags:
         (tags || []).map((tag) => ({
           value: tag.name,
