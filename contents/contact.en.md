@@ -2,8 +2,6 @@
 title: "Contact Us"
 ---
 
-# Contact Us
-
 We’d love to hear from you! Whether you have questions, need assistance, or want to share your feedback, feel free to reach out to us.
 
 &nbsp;
