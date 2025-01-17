@@ -55,7 +55,10 @@ export const withThemes =
       }
     }
 
-    const result = await handler(ctx, { themes, apiDomain, tags });
+    const userAgent = ctx.req.headers['user-agent'] || '';
+    const isMobile = /mobile/i.test(userAgent);
+
+    const result = await handler(ctx, { themes, apiDomain, tags, isMobile });
 
     if ('props' in result) {
       return {
@@ -65,6 +68,7 @@ export const withThemes =
           themes,
           tags,
           apiDomain,
+          isMobile,
         },
       };
     }

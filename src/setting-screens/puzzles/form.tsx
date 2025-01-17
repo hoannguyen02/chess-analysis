@@ -87,9 +87,13 @@ export const PuzzleFormScreen = ({ puzzle, onSaveSuccess }: Props) => {
   usePreventRouteChange(ROUTE_CHANGE_MESSAGE, isDirty);
 
   const isValidFormValues = () => {
-    const { fen, solutions } = getValues();
+    const { fen, solutions, themes } = getValues();
     if (!fen) {
       alert('Please enter a valid FEN position');
+      return false;
+    }
+    if (!themes.length) {
+      alert('Please enter themes');
       return false;
     }
     if (!solutions.length) {
@@ -110,7 +114,7 @@ export const PuzzleFormScreen = ({ puzzle, onSaveSuccess }: Props) => {
     const { _id, preMove, themes, ...rest } = data;
     if (isValidFormValues()) {
       let payload: any = rest;
-      const themeIds = themes.map((theme: PuzzleTheme) => theme._id);
+      const themeIds = themes?.map((theme: PuzzleTheme) => theme._id);
       if (!isEmpty(preMove?.move)) {
         payload = {
           ...rest,

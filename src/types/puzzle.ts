@@ -1,4 +1,3 @@
-import { PuzzleTheme } from './puzzle-theme';
 import { StatusType } from './status';
 
 /**
@@ -35,7 +34,7 @@ export type Puzzle = {
   status: StatusType;
   difficulty: PuzzleDifficulty;
   isPublic: boolean;
-  themes: PuzzleTheme[];
+  themes: string[];
   solutions: PuzzleSolutionMove[];
   preMove?: PuzzlePreMove;
   title?: {

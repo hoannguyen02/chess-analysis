@@ -23,7 +23,9 @@ const PuzzlePage = () => {
     [apiDomain, params.id]
   );
 
-  const { data, mutate, isLoading, isValidating } = useSWR(key, fetcher);
+  const { data, mutate, isLoading, isValidating } = useSWR(key, fetcher, {
+    revalidateOnFocus: false,
+  });
 
   if (isLoading || isValidating) {
     return <Spinner />;

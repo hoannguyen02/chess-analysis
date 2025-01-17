@@ -1,7 +1,13 @@
 import { LocaleType } from '@/types/locale';
 import { PuzzleTheme } from '@/types/puzzle-theme';
 import { Tag } from '@/types/tag';
-import React, { createContext, useContext, useMemo } from 'react';
+import React, {
+  createContext,
+  useContext,
+  useEffect,
+  useMemo,
+  useState,
+} from 'react';
 
 export interface AppContextProps {
   themes: PuzzleTheme[] | [];
@@ -9,6 +15,7 @@ export interface AppContextProps {
   apiDomain: string;
   themeMap: Partial<Record<string, PuzzleTheme>>;
   locale: LocaleType;
+  isMobile: boolean;
 }
 
 const AppContext = createContext<AppContextProps | undefined>(undefined);
@@ -19,7 +26,21 @@ export const AppProvider: React.FC<{
   apiDomain: string;
   locale: LocaleType;
   tags: Tag[];
-}> = ({ children, themes, apiDomain, locale, tags }) => {
+  isMobileSSR: boolean;
+}> = ({ children, themes, apiDomain, locale, tags, isMobileSSR }) => {
+  const [isMobile, setIsMobile] = useState(isMobileSSR);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    handleResize(); // Initial client-side check
+    window.addEventListener('resize', handleResize);
+
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   const value = useMemo(
     () => ({
       locale,
@@ -42,12 +63,13 @@ export const AppProvider: React.FC<{
       themeMap: (themes || []).reduce((acc, theme) => {
         return {
           ...acc,
-          [theme.code]: theme,
+          [theme._id]: theme,
         };
       }, {}),
       apiDomain,
+      isMobile,
     }),
-    [locale, themes, tags, apiDomain]
+    [locale, themes, tags, apiDomain, isMobile]
   );
 
   return <AppContext.Provider value={value}>{children}</AppContext.Provider>;

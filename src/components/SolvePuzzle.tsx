@@ -45,10 +45,9 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({
   showBackButton = true,
   highlightPossibleMoves = false,
 }) => {
+  console.log('theme', puzzle.themes);
   const t = useTranslations();
-  const { locale = 'en' } = useRouter();
-  const { themeMap } = useAppContext();
-  const boardRef = useRef<HTMLDivElement>(null);
+  const { themeMap, isMobile, locale } = useAppContext();
   const router = useRouter();
   const { customPieces, bgDark, bgLight } = useCustomBoard();
   const game = useMemo(() => new Chess(puzzle.fen), [puzzle.fen]);
@@ -73,6 +72,7 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({
   const [historyMoves, setHistoryMoves] = useState<HistoryMove[]>([]);
   const [isBoardClickAble, setIsBoardClickAble] = useState<boolean>(true);
   const [hintMessage, setHintMessage] = useState<ReactNode | ''>('');
+  const boardRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (currentStep === puzzle.solutions.length) {
@@ -530,7 +530,7 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({
       >
         {message}
       </div>
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-2 lg:gap-16 mx-auto max-w-[900px]">
+      <div className="grid grid-cols-1 lg:grid-cols-[500px_auto] gap-2 lg:gap-16 mx-auto max-w-[900px]">
         <div ref={boardRef}>
           <Chessboard
             boardOrientation={playerName?.toLowerCase() as 'black' | 'white'}
@@ -544,12 +544,7 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({
               }
               return handleMove(sourceSquare, targetSquare);
             }}
-            boardWidth={
-              boardRef.current?.clientWidth &&
-              boardRef.current?.clientWidth > 500
-                ? 500
-                : boardRef.current?.clientWidth
-            }
+            boardWidth={isMobile ? boardRef.current?.clientWidth || 320 : 500}
             onSquareClick={onSquareClick}
             onPromotionPieceSelect={onPromotionPieceSelect}
             customBoardStyle={{
@@ -580,13 +575,17 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({
           </div>
           {currentStep === puzzle.solutions.length && (
             <div className="hidden lg:flex flex-col p-4">
-              <p className="mb-2">
-                {t('common.title.theme')}:{' '}
-                {themeMap[puzzle.theme]?.title[locale as 'en' | 'vi'] ||
-                  puzzle.theme}
-              </p>
-              <p className="mb-2">
-                {t('common.title.rating')}: {LEVEL_RATING[puzzle.difficulty]}
+              {t('common.title.theme')}:
+              {puzzle.themes.map((id) => {
+                return (
+                  <p className="mb-2 text-[14px]" key={id}>
+                    {themeMap[id]?.title?.[locale]}
+                  </p>
+                );
+              })}
+              {t('common.title.rating')}:
+              <p className="mb-2 text-[14px]">
+                {LEVEL_RATING[puzzle.difficulty]}
               </p>
               {t('solve-puzzle.title.moves')}: <hr />
               <div className="mb-2 mt-4 grid grid-cols-2 gap-4">
@@ -594,15 +593,15 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({
                   {preMove && (
                     <p
                       key={`prev-${preMove}`}
-                      className="mb-1 grid grid-cols-2 gap-2"
+                      className="mb-1 grid grid-cols-2 gap-2 text-[14px]"
                     >
-                      1 <span className="ml-2">{preMove}</span>
+                      1 <span className="ml-2 ">{preMove}</span>
                     </p>
                   )}
                   {setupMoves.map((s, index) => (
                     <p
                       key={`first-${index}-${s.move}`}
-                      className="mb-1 grid grid-cols-2 gap-2"
+                      className="mb-1 grid grid-cols-2 gap-2 text-[14px]"
                     >
                       {preMove ? index + 2 : index + 1}
                       {s.player === 'user' ? (
@@ -617,7 +616,7 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({
                   {followUpMoves.map((s, index) => (
                     <p
                       key={`second-${index}-${s.move}`}
-                      className="mb-1 grid grid-cols-2 gap-2"
+                      className="mb-1 grid grid-cols-2 gap-2 text-[14px]"
                     >
                       {preMove
                         ? splitIndex + index + 2
