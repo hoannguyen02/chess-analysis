@@ -30,6 +30,7 @@ import ConfettiEffect from './ConfettiEffect';
 type PuzzleProps = {
   puzzle: Puzzle;
   showBackButton?: boolean;
+  highlightPossibleMoves?: boolean;
 };
 
 export type HistoryMove = {
@@ -42,6 +43,7 @@ export type HistoryMove = {
 const SolvePuzzle: React.FC<PuzzleProps> = ({
   puzzle,
   showBackButton = true,
+  highlightPossibleMoves = false,
 }) => {
   const t = useTranslations();
   const { locale = 'en' } = useRouter();
@@ -115,20 +117,24 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({
     }
 
     const newSquares: Record<string, any> = {};
-    moves.forEach((move) => {
-      newSquares[move.to] = {
-        background:
-          game.get(move.to) &&
-          game.get(move.to)?.color !== game.get(square)?.color
-            ? 'radial-gradient(circle, rgba(0,0,0,.1) 85%, transparent 85%)'
-            : 'radial-gradient(circle, rgba(0,0,0,.1) 25%, transparent 25%)',
-        borderRadius: '50%',
-      };
-    });
     newSquares[square] = {
       background: 'var(--p-highlight)',
     };
     setOptionSquares(newSquares);
+
+    if (highlightPossibleMoves) {
+      moves.forEach((move) => {
+        newSquares[move.to] = {
+          background:
+            game.get(move.to) &&
+            game.get(move.to)?.color !== game.get(square)?.color
+              ? 'radial-gradient(circle, rgba(0,0,0,.1) 85%, transparent 85%)'
+              : 'radial-gradient(circle, rgba(0,0,0,.1) 25%, transparent 25%)',
+          borderRadius: '50%',
+        };
+      });
+    }
+
     return true;
   };
 
