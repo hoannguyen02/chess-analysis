@@ -1,4 +1,5 @@
 import DebouncedInput from '@/components/DebounceInput';
+import { DraggableItem } from '@/components/DraggableItem';
 import { TitlePage } from '@/components/TitlePage';
 import { LEVEL_RATING, Statues } from '@/constants';
 import { useAppContext } from '@/contexts/AppContext';
@@ -6,9 +7,13 @@ import { Lesson } from '@/types/lesson';
 import { PuzzleDifficulty } from '@/types/puzzle';
 import { StatusType } from '@/types/status';
 import { filteredQuery } from '@/utils/filteredQuery';
-import { Button, Pagination, Select, Spinner, Table } from 'flowbite-react';
+import axios from 'axios';
+import { Button, Label, Pagination, Select, Spinner } from 'flowbite-react';
+import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
+import { DndProvider } from 'react-dnd';
+import { HTML5Backend } from 'react-dnd-html5-backend';
 import useSWR from 'swr';
 import { fetcher } from '../../utils/fetcher';
 
@@ -18,7 +23,8 @@ export const LessonsListScreen = () => {
   const [status, setStatus] = useState<StatusType | ''>('');
   const [title, setTitle] = useState<string | ''>('');
   const [difficulty, setDifficulty] = useState<PuzzleDifficulty | ''>('');
-
+  const [lessons, setLessons] = useState<Lesson[]>([]);
+  const [isReordered, setIsReordered] = useState(false);
   const queryString = useMemo(() => {
     // Define your query parameters as an object
     const queryObject: Record<string, any> = {
@@ -37,7 +43,7 @@ export const LessonsListScreen = () => {
     [apiDomain, queryString]
   );
 
-  const { data, error, isLoading } = useSWR<{
+  const { data, error, isLoading, mutate } = useSWR<{
     items: Lesson[];
     total: number;
     hasNext: boolean;
@@ -51,6 +57,37 @@ export const LessonsListScreen = () => {
   const router = useRouter();
 
   const onPageChange = (page: number) => setCurrentPage(page);
+
+  useEffect(() => {
+    if (data?.items) {
+      setLessons(data.items);
+    }
+  }, [data?.items]);
+
+  const reOrderLessons = (fromIndex: number, toIndex: number) => {
+    const updatedItems = [...lessons];
+    const [movedItem] = updatedItems.splice(fromIndex, 1);
+    updatedItems.splice(toIndex, 0, movedItem);
+    const prioritizedLessons = updatedItems.map((course, index) => ({
+      ...course,
+      priority: index + 1,
+    }));
+    setLessons(prioritizedLessons);
+    setIsReordered(true);
+  };
+
+  const handleSaveOrder = async () => {
+    try {
+      await axios.post(`${apiDomain}/v1/lessons/reorder`, {
+        lessons: lessons.map(({ _id, priority }) => ({ _id, priority })),
+      });
+      alert('Lessons order updated!');
+      mutate();
+      setIsReordered(false);
+    } catch (error) {
+      console.error('Failed to save course order', error);
+    }
+  };
 
   if (error || !data) return <div>Error occurred</div>;
 
@@ -106,46 +143,46 @@ export const LessonsListScreen = () => {
           </Select>
         </div>
       </div>
-      <Table hoverable>
-        <Table.Head>
-          <Table.HeadCell>Title</Table.HeadCell>
-          <Table.HeadCell>Difficulty</Table.HeadCell>
-          <Table.HeadCell>Status</Table.HeadCell>
-          <Table.HeadCell>
-            <span className="sr-only">Edit</span>
-          </Table.HeadCell>
-        </Table.Head>
-        <Table.Body className="divide-y">
-          {isLoading ? (
-            <div className="text-center">
-              <Spinner />
-            </div>
-          ) : (
-            data.items.map((item, index) => {
-              return (
-                <Table.Row
-                  key={`item-${index}`}
-                  className="bg-white dark:border-gray-700 dark:bg-gray-800"
+      {/* Courses Table */}
+      <DndProvider backend={HTML5Backend}>
+        <div className="grid grid-cols-4">
+          <Label>Title</Label>
+          <Label>Difficulty</Label>
+          <Label>Status</Label>
+          <Label>Actions</Label>
+        </div>
+        {isLoading ? (
+          <div className="text-center">
+            <Spinner />
+          </div>
+        ) : (
+          lessons.map((item, index) => (
+            <DraggableItem
+              itemType="lessons"
+              index={index}
+              moveItem={reOrderLessons}
+              key={`item-${index}`}
+              className="mb-4"
+            >
+              <div className="grid grid-cols-4">
+                <Label>{item.title[locale]}</Label>
+                <Label>{item.difficulty}</Label>
+                <Label>{item.status}</Label>
+                <Link
+                  href={`/settings/lessons/${item._id}`}
+                  className="font-medium text-cyan-600 hover:underline dark:text-cyan-500"
                 >
-                  <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
-                    {item.title[locale]}
-                  </Table.Cell>
-                  <Table.Cell>{item.difficulty}</Table.Cell>
-                  <Table.Cell>{item.status}</Table.Cell>
-                  <Table.Cell>
-                    <a
-                      href={`/settings/lessons/${item._id}`}
-                      className="font-medium text-cyan-600 hover:underline dark:text-cyan-500"
-                    >
-                      Edit
-                    </a>
-                  </Table.Cell>
-                </Table.Row>
-              );
-            })
-          )}
-        </Table.Body>
-      </Table>
+                  Edit
+                </Link>
+              </div>
+            </DraggableItem>
+          ))
+        )}
+      </DndProvider>
+
+      <Button disabled={!isReordered} onClick={handleSaveOrder}>
+        Save lessons
+      </Button>
       <div className="flex justify-center mt-4">
         <Pagination
           currentPage={currentPage}

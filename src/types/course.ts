@@ -19,6 +19,7 @@ export type Course = {
   _id?: string;
   isPublic?: boolean;
   slug: string;
+  priority?: number;
 };
 
 export type CourseExpanded = {
@@ -38,4 +39,5 @@ export type CourseExpanded = {
   isPublic?: boolean;
   lessons: { lessonId: Lesson }[];
   slug: string;
+  priority?: number;
 };

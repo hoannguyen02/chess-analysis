@@ -31,6 +31,7 @@ export type Lesson = {
   id?: string;
   isPublic?: boolean;
   slug: string;
+  priority?: number;
 };
 
 export type LessonExpanded = {
@@ -59,4 +60,5 @@ export type LessonExpanded = {
   _id?: string;
   isPublic?: boolean;
   slug: string;
+  priority?: number;
 };
