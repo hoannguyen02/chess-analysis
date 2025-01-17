@@ -29,6 +29,7 @@
     "lessons": "Lessons",
     "puzzles": "Puzzles",
     "puzzle": "Puzzle",
+    "example": "Ex",
     "start-course": "Start Course",
     "continue-learning": "Continue Learning",
     "lesson-contents": "Lesson Contents"
@@ -41,6 +42,8 @@
     "next": "Next",
     "continue": "Continue",
     "completed": "Completed",
-    "solve-now": "Solve Now"
+    "solve-now": "Solve Now",
+    "try-it": "Try It",
+    "view": "View"
   }
 }

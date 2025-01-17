@@ -518,8 +518,14 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({
         </button>
       )}
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-2 lg:gap-16 mx-auto max-w-[900px]">
         <div ref={boardRef}>
+          {/* Mobile message */}
+          <div
+            className={`${bgHeader} flex justify-center py-4 text-white font-bold lg:hidden mb-4`}
+          >
+            {message}
+          </div>
           <Chessboard
             boardOrientation={playerName?.toLowerCase() as 'black' | 'white'}
             position={currentFen}
@@ -560,14 +566,14 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({
             }}
           />
         </div>
-        <div className="relative rounded border-[1px]">
+        <div className="relative rounded lg:border-[1px]">
           <div
-            className={`${bgHeader} flex justify-center py-4 text-white font-bold`}
+            className={`hidden lg:flex ${bgHeader} justify-center py-4 text-white font-bold`}
           >
             {message}
           </div>
           {currentStep === puzzle.solutions.length && (
-            <div className="flex flex-col p-4">
+            <div className="hidden lg:flex flex-col p-4">
               <p className="mb-2">
                 {t('common.title.theme')}:{' '}
                 {themeMap[puzzle.theme]?.title[locale as 'en' | 'vi'] ||
@@ -621,7 +627,7 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({
               </div>
             </div>
           )}
-          <div className="absolute bottom-4 left-0 w-full px-4">
+          <div className="fixed lg:absolute bottom-4 left-0 w-full px-4">
             {!showRetry && currentStep !== puzzle.solutions.length && (
               <>
                 {hintMessage ? (

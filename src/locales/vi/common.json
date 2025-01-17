@@ -29,6 +29,7 @@
     "lessons": "Bài Học",
     "puzzles": "Bài tập",
     "puzzle": "Bài tập",
+    "example": "Ví dụ",
     "start-course": "Vào Học",
     "continue-learning": "Học Tiếp",
     "lesson-contents": "Nội Dung Bài Học"
@@ -41,6 +42,8 @@
     "next": "Sau",
     "continue": "Tiếp tục",
     "completed": "Đã hoàn tất",
-    "solve-now": "Giải ngay"
+    "solve-now": "Giải ngay",
+    "try-it": "Thử Ngay",
+    "view": "Xem"
   }
 }

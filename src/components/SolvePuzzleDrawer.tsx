@@ -1,6 +1,7 @@
 import { Puzzle } from '@/types/puzzle';
 import { Drawer } from 'flowbite-react';
 import { VscClose } from 'react-icons/vsc';
+import { Logo } from './Logo';
 import SolvePuzzle from './SolvePuzzle';
 
 type Props = {
@@ -19,8 +20,16 @@ export const SolvePuzzleDrawer = ({ onClose, puzzle }: Props) => {
     >
       <Drawer.Header
         closeIcon={VscClose}
-        // title="Solve puzzle"
-        className="cursor-pointer px-4 pt-4 hover:bg-gray-50 dark:hover:bg-gray-700"
+        titleIcon={Logo}
+        className="cursor-pointer px-4 pt-4 hover:bg-gray-50 dark:hover:bg-gray-700 "
+        onClick={onClose}
+        theme={{
+          inner: {
+            titleIcon: 'hidden md:flex w-32 h-auto',
+            titleText:
+              'mb-0 inline-flex items-center text-base font-semibold text-gray-500',
+          },
+        }}
       />
       <Drawer.Items className="p-4">
         <SolvePuzzle showBackButton={false} puzzle={puzzle} />

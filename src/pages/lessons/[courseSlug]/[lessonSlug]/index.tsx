@@ -100,7 +100,7 @@ const LessonDetailsPage = ({ data }: Props) => {
                             className="hover:shadow-lg transition"
                           >
                             <p className="text-center">
-                              {t('common.title.puzzle')} {index + 1}
+                              {t('common.title.example')} {index + 1}
                             </p>
                             <Button
                               color="blue"
@@ -110,7 +110,7 @@ const LessonDetailsPage = ({ data }: Props) => {
                                 onOpenDialog(puzzle);
                               }}
                             >
-                              {t('common.button.solve-now')}
+                              {t('common.button.view')}
                             </Button>
                           </Card>
                         )
