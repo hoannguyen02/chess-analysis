@@ -6,9 +6,11 @@ import { PhaseType } from '@/types';
 import { Puzzle, PuzzleDifficulty, PuzzlePhase } from '@/types/puzzle';
 import { StatusType } from '@/types/status';
 import { filteredQuery } from '@/utils/filteredQuery';
+import axios from 'axios';
 import { Button, Checkbox, Pagination, Spinner, Table } from 'flowbite-react';
 import { useRouter } from 'next/router';
 import { useMemo, useState } from 'react';
+import { VscCopy } from 'react-icons/vsc';
 import Select from 'react-select';
 import useSWR from 'swr';
 import { fetcher } from '../../utils/fetcher';
@@ -22,6 +24,7 @@ export const PuzzleListScreen = () => {
   const [difficulty, setDifficulty] = useState<PuzzleDifficulty | ''>('');
   const [isPublic, setIsPublic] = useState<boolean | undefined>();
   const [title, setTitle] = useState<string | ''>('');
+  const [loading, setLoading] = useState(false);
 
   const queryString = useMemo(() => {
     // Define your query parameters as an object
@@ -57,6 +60,26 @@ export const PuzzleListScreen = () => {
   const router = useRouter();
 
   const onPageChange = (page: number) => setCurrentPage(page);
+
+  const duplicatePuzzle = async (puzzle: Puzzle) => {
+    const { title, _id, ...rest } = puzzle;
+    try {
+      setLoading(true);
+      const newPuzzleResult = await axios.post(`${apiDomain}/v1/puzzles`, {
+        ...rest,
+        title: {
+          en: `${title?.en} (Copy)`,
+          vi: `${title?.vi} (Copy)`,
+        },
+      });
+
+      router.push(`/settings/puzzles/${newPuzzleResult.data._id}`);
+    } catch (error) {
+      console.error('Failed to duplicate puzzle', error);
+    } finally {
+      setLoading(false);
+    }
+  };
 
   if (error || !data) return <div>Error occurred</div>;
 
@@ -168,6 +191,14 @@ export const PuzzleListScreen = () => {
                   <Table.Cell>{puzzle?.title?.[locale]}</Table.Cell>
                   <Table.Cell>{puzzle.difficulty}</Table.Cell>
                   <Table.Cell>
+                    <Button
+                      size="xs"
+                      outline
+                      onClick={() => duplicatePuzzle(puzzle)}
+                      className="mb-2"
+                    >
+                      <VscCopy />
+                    </Button>
                     <a
                       href={`/settings/puzzles/${puzzle._id}`}
                       className="font-medium text-cyan-600 hover:underline dark:text-cyan-500"
