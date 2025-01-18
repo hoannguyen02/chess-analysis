@@ -193,6 +193,22 @@ export const PuzzleFormScreen = ({ puzzle, onSaveSuccess }: Props) => {
             {...register('title.vi')}
           />
         </div>
+        <div className="mb-4">
+          <Label htmlFor="hint" value="Hint" />
+          <TextInput
+            id="hint"
+            type="text"
+            placeholder="English"
+            {...register('hint.en')}
+          />
+          <TextInput
+            className="mt-2"
+            id="hint"
+            type="text"
+            placeholder="Vietnamse"
+            {...register('hint.vi')}
+          />
+        </div>
         <div className="grid grid-cols-3  place-content-start mb-4 gap-8">
           <div className="flex flex-col ">
             <div className="w-[90%]">

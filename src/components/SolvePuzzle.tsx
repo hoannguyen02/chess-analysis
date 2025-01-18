@@ -31,6 +31,8 @@ type PuzzleProps = {
   puzzle: Puzzle;
   showBackButton?: boolean;
   highlightPossibleMoves?: boolean;
+  showNextButton?: boolean;
+  onNextClick?(): void;
 };
 
 export type HistoryMove = {
@@ -44,8 +46,9 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({
   puzzle,
   showBackButton = true,
   highlightPossibleMoves = false,
+  showNextButton = false,
+  onNextClick,
 }) => {
-  console.log('theme', puzzle.themes);
   const t = useTranslations();
   const { themeMap, isMobile, locale } = useAppContext();
   const router = useRouter();
@@ -421,8 +424,9 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({
       };
     }, {});
     setMoveSquareStyle(highLightSquares);
-    const msg = t('solve-puzzle.title.best-move');
-    setHintMessage(msg);
+    const hintMsg = puzzle?.hint?.[locale];
+    const defaultHintMsg = t('solve-puzzle.title.best-move');
+    setHintMessage(hintMsg || defaultHintMsg);
   };
 
   const backMove = () => {
@@ -655,34 +659,45 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({
               </>
             )}
             {currentStep === puzzle.solutions.length && (
-              <div className="flex justify-between">
-                <div className="flex">
-                  <Button
-                    color="primary"
-                    onClick={resetPuzzle}
-                    className="mr-2"
-                  >
-                    {t('solve-puzzle.button.restart')}{' '}
-                    <VscSync size={20} className="ml-1" />
-                  </Button>
+              <div className="flex flex-col">
+                <div className="flex justify-between">
+                  <div className="flex">
+                    <Button
+                      color="primary"
+                      onClick={resetPuzzle}
+                      className="mr-2"
+                    >
+                      {t('solve-puzzle.button.restart')}{' '}
+                      <VscSync size={20} className="ml-1" />
+                    </Button>
+                  </div>
+                  <div className="flex">
+                    <Button
+                      color="primary"
+                      onClick={backMove}
+                      disabled={historyMoveCurrentIdx === 0}
+                      className="mr-4"
+                    >
+                      <VscChevronLeft size={20} className="ml-1" />
+                    </Button>
+                    <Button
+                      color="primary"
+                      onClick={forwardMove}
+                      disabled={historyMoveCurrentIdx >= currentStep}
+                    >
+                      <VscChevronRight size={20} className="ml-1" />
+                    </Button>
+                  </div>
                 </div>
-                <div className="flex">
+                {showNextButton && (
                   <Button
                     color="primary"
-                    onClick={backMove}
-                    disabled={historyMoveCurrentIdx === 0}
-                    className="mr-4"
+                    onClick={onNextClick}
+                    className="mt-2"
                   >
-                    <VscChevronLeft size={20} className="ml-1" />
+                    Next
                   </Button>
-                  <Button
-                    color="primary"
-                    onClick={forwardMove}
-                    disabled={historyMoveCurrentIdx >= currentStep}
-                  >
-                    <VscChevronRight size={20} className="ml-1" />
-                  </Button>
-                </div>
+                )}
               </div>
             )}
             {showRetry && (

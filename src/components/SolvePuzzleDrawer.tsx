@@ -7,9 +7,16 @@ import SolvePuzzle from './SolvePuzzle';
 type Props = {
   onClose(): void;
   puzzle: Puzzle;
+  showNextButton?: boolean;
+  onNextClick?(): void;
 };
 
-export const SolvePuzzleDrawer = ({ onClose, puzzle }: Props) => {
+export const SolvePuzzleDrawer = ({
+  onClose,
+  puzzle,
+  showNextButton = false,
+  onNextClick,
+}: Props) => {
   return (
     <Drawer
       edge
@@ -25,6 +32,7 @@ export const SolvePuzzleDrawer = ({ onClose, puzzle }: Props) => {
         onClick={onClose}
         theme={{
           inner: {
+            closeIcon: 'h-8 w-8',
             titleIcon: 'hidden md:flex w-32 h-auto',
             titleText:
               'mb-0 inline-flex items-center text-base font-semibold text-gray-500',
@@ -32,7 +40,12 @@ export const SolvePuzzleDrawer = ({ onClose, puzzle }: Props) => {
         }}
       />
       <Drawer.Items className="p-4">
-        <SolvePuzzle showBackButton={false} puzzle={puzzle} />
+        <SolvePuzzle
+          showNextButton={showNextButton}
+          onNextClick={onNextClick}
+          showBackButton={false}
+          puzzle={puzzle}
+        />
       </Drawer.Items>
     </Drawer>
   );

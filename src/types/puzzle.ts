@@ -41,6 +41,10 @@ export type Puzzle = {
     en: string;
     vi: string;
   };
+  hint?: {
+    en: string;
+    vi: string;
+  };
   phase?: PuzzlePhase;
   _id?: string;
   puzzleId?: any;
