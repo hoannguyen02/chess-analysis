@@ -1,5 +1,6 @@
 // pages/index.tsx
 import Layout from '@/components/Layout';
+import { withThemes } from '@/HOF/withThemes';
 import { GetServerSidePropsContext } from 'next';
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
@@ -34,18 +35,19 @@ export default function Home() {
   );
 }
 
-export const getServerSideProps = async ({
-  locale,
-}: GetServerSidePropsContext) => {
-  const commonMessages = (await import(`@/locales/${locale}/common.json`))
-    .default;
-  const homeMessages = (await import(`@/locales/${locale}/home.json`)).default;
-  return {
-    props: {
-      messages: {
-        common: commonMessages,
-        home: homeMessages,
+export const getServerSideProps = withThemes(
+  async ({ locale }: GetServerSidePropsContext) => {
+    const commonMessages = (await import(`@/locales/${locale}/common.json`))
+      .default;
+    const homeMessages = (await import(`@/locales/${locale}/home.json`))
+      .default;
+    return {
+      props: {
+        messages: {
+          common: commonMessages,
+          home: homeMessages,
+        },
       },
-    },
-  };
-};
+    };
+  }
+);

@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import { Chess, Square } from 'chess.js';
-import { Chessboard } from 'react-chessboard';
 import axios from 'axios';
+import { Chess, Square } from 'chess.js';
+import React, { useState } from 'react';
+import { Chessboard } from 'react-chessboard';
 
 const ChessAnalysis: React.FC = () => {
   const [game] = useState(
@@ -48,7 +48,7 @@ const ChessAnalysis: React.FC = () => {
   const analyzeMove = async (fen: string, userMove: string) => {
     try {
       const response = await axios.post(
-        `${process.env.NEXT_PUBLIC_PHONG_CHESS_DOMAIN}/v1/stockfish/analyze`,
+        `${process.env.NEXT_PUBLIC_LIMA_BE_DOMAIN}/v1/stockfish/analyze`,
         {
           fen,
           userMove,

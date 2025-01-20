@@ -21,7 +21,7 @@ export const getServerSideProps: GetServerSideProps = withThemes(
     params,
     locale,
   }: GetServerSidePropsContext<ParsedUrlQuery, PreviewData>) => {
-    const apiDomain = process.env.NEXT_PUBLIC_PHONG_CHESS_DOMAIN;
+    const apiDomain = process.env.NEXT_PUBLIC_LIMA_BE_DOMAIN;
     const { id } = params as {
       id: string;
     };

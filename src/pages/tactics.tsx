@@ -2,9 +2,9 @@ import Layout from '@/components/Layout';
 import { withThemes } from '@/HOF/withThemes';
 import { Course } from '@/types/course';
 import { LocaleType } from '@/types/locale';
+import { createServerAxios } from '@/utils/axiosInstance';
 import { filteredQuery } from '@/utils/filteredQuery';
 import { ViewCourses } from '@/view-screens/view-courses';
-import axios from 'axios';
 import { GetServerSidePropsContext } from 'next';
 
 type Props = {
@@ -23,7 +23,8 @@ const TacticsPage = (props: Props) => {
 };
 
 export const getServerSideProps = withThemes(
-  async ({ locale, query }: GetServerSidePropsContext, { apiDomain }) => {
+  async (ctx: GetServerSidePropsContext) => {
+    const { locale, query } = ctx;
     try {
       const page = Number(query.page);
       const { search, tags = 'Tactics', difficulty } = query;
@@ -36,7 +37,8 @@ export const getServerSideProps = withThemes(
         tags,
       });
 
-      const res = await axios.get(`${apiDomain}/v1/courses?${queryString}`);
+      const serverAxios = createServerAxios(ctx);
+      const res = await serverAxios.get(`/v1/courses?${queryString}`);
 
       const { items, lastPage, currentPage } = res.data || {};
 

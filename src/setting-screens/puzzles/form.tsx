@@ -128,7 +128,7 @@ export const PuzzleFormScreen = ({ puzzle, onSaveSuccess }: Props) => {
         };
       }
       try {
-        const apiDomain = process.env.NEXT_PUBLIC_PHONG_CHESS_DOMAIN;
+        const apiDomain = process.env.NEXT_PUBLIC_LIMA_BE_DOMAIN;
         let request;
         if (_id) {
           request = fetch(`${apiDomain}/v1/puzzles/${_id}`, {

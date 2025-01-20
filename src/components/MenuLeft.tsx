@@ -1,8 +1,14 @@
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
+import { useMemo } from 'react';
 
 export const MenuLeft = () => {
   const t = useTranslations('common');
+  const router = useRouter();
+  const currentPath = useMemo(() => {
+    return router.asPath;
+  }, [router]);
 
   return (
     <nav className="flex flex-col w-full bg-[var(--p-bg)] text-white p-[1rem]">
@@ -68,7 +74,11 @@ export const MenuLeft = () => {
       </ul>
       <hr className="mt-8 border-color-[red] mb-8" />
       <Link
-        href="/log-in"
+        href={
+          currentPath !== '/'
+            ? `/login?redirect=${encodeURIComponent(currentPath)}`
+            : '/login'
+        }
         className="mb-6 hover:text-[var(--p-highlight)] border text-center py-2 rounded"
       >
         {t('navigation.login')}

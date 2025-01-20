@@ -49,6 +49,7 @@ const App = ({ Component, pageProps }: AppProps) => {
             tags={pageProps.tags}
             locale={locale as LocaleType}
             apiDomain={pageProps.apiDomain}
+            isMobileSSR={pageProps.isMobileSSR}
           >
             <div className={fontClass}>
               {/* Apply the font class dynamically */}

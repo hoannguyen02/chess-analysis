@@ -2,8 +2,8 @@ import Layout from '@/components/Layout';
 import { useAppContext } from '@/contexts/AppContext';
 import { withThemes } from '@/HOF/withThemes';
 import { CourseExpanded } from '@/types/course';
+import { createServerAxios } from '@/utils/axiosInstance';
 import { getDifficultyColor } from '@/utils/getDifficultyColor';
-import axios from 'axios';
 import { Badge, Button, Progress } from 'flowbite-react';
 import { GetServerSidePropsContext } from 'next';
 import { useTranslations } from 'next-intl';
@@ -133,10 +133,12 @@ const LessonDetailsPage = ({ data }: Props) => {
 };
 
 export const getServerSideProps = withThemes(
-  async ({ locale, params }: GetServerSidePropsContext, { apiDomain }) => {
+  async (ctx: GetServerSidePropsContext) => {
+    const { locale, params } = ctx;
     try {
       const slug = params?.courseSlug;
-      const res = await axios.get(`${apiDomain}/v1/courses/slug/${slug}`);
+      const serverAxios = createServerAxios(ctx);
+      const res = await serverAxios.get(`/v1/courses/slug/${slug}`);
 
       const commonMessages = (await import(`@/locales/${locale}/common.json`))
         .default;

@@ -19,7 +19,7 @@ export const withThemes =
     const cookies = nookies.get(ctx);
     let themes = cookies.themes ? JSON.parse(cookies.themes) : null;
     let tags = cookies.tags ? JSON.parse(cookies.tags) : null;
-    const apiDomain = process.env.NEXT_PUBLIC_PHONG_CHESS_DOMAIN;
+    const apiDomain = process.env.NEXT_PUBLIC_LIMA_BE_DOMAIN;
 
     // If themes are not available, fetch them
     if (!themes) {

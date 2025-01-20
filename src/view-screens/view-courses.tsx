@@ -138,7 +138,7 @@ export const ViewCourses: React.FC<Props> = ({
         </div>
       ) : (
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {data.items.map((course: Course) => (
+          {data.items?.map((course: Course) => (
             <Link key={course.title[locale]} href={`/lessons/${course.slug}`}>
               <Card className="h-full w-full flex flex-col items-start min-h-[230px] border border-gray-200 transition-transform transform hover:scale-105 hover:shadow-lg hover:border-blue-500">
                 <div className="flex flex-col flex-grow items-start">
