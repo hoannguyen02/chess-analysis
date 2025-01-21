@@ -1,8 +1,9 @@
 import Layout from '@/components/Layout';
+import { PrimaryButton } from '@/components/PrimaryButton';
 import { useAppContext } from '@/contexts/AppContext';
 import { withThemes } from '@/HOF/withThemes';
 import axiosInstance from '@/utils/axiosInstance';
-import { Button, Label, TextInput } from 'flowbite-react';
+import { Label, TextInput } from 'flowbite-react';
 import { GetServerSidePropsContext } from 'next';
 import { useTranslations } from 'next-intl';
 import { useRouter } from 'next/router';
@@ -55,7 +56,7 @@ const LoginPage = () => {
             type="email"
             placeholder="example@example.com"
             {...register('username', {
-              required: t('login.message.email'),
+              required: t('login.message.email-required'),
               pattern: {
                 value: /^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/,
                 message: t('login.message.email-invalid'),
@@ -76,7 +77,7 @@ const LoginPage = () => {
             type="password"
             placeholder="******"
             {...register('password', {
-              required: t('login.message.password'),
+              required: t('login.message.password-required'),
             })}
             color={errors.password ? 'failure' : undefined} // Error styling
           />
@@ -85,9 +86,7 @@ const LoginPage = () => {
           )}
         </div>
 
-        <Button type="submit" gradientMonochrome="info">
-          {t('common.button.submit')}
-        </Button>
+        <PrimaryButton type="submit">{t('common.button.submit')}</PrimaryButton>
       </form>
     </Layout>
   );
@@ -100,6 +99,7 @@ export const getServerSideProps = withThemes(
         .default;
       const loginMessages = (await import(`@/locales/${locale}/login.json`))
         .default;
+
       return {
         props: {
           messages: {

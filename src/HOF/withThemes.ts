@@ -1,4 +1,5 @@
 // utils/withThemes.ts
+import { getSession } from '@/utils/getSession';
 import axios from 'axios';
 import {
   GetServerSideProps,
@@ -17,6 +18,7 @@ export const withThemes =
   async (ctx) => {
     // Get themes from cookies
     const cookies = nookies.get(ctx);
+
     let themes = cookies.themes ? JSON.parse(cookies.themes) : null;
     let tags = cookies.tags ? JSON.parse(cookies.tags) : null;
     const apiDomain = process.env.NEXT_PUBLIC_LIMA_BE_DOMAIN;
@@ -58,7 +60,15 @@ export const withThemes =
     const userAgent = ctx.req.headers['user-agent'] || '';
     const isMobile = /mobile/i.test(userAgent);
 
-    const result = await handler(ctx, { themes, apiDomain, tags, isMobile });
+    const session = await getSession(ctx.req, ctx.res);
+
+    const result = await handler(ctx, {
+      themes,
+      apiDomain,
+      tags,
+      isMobile,
+      session,
+    });
 
     if ('props' in result) {
       return {
@@ -69,6 +79,7 @@ export const withThemes =
           tags,
           apiDomain,
           isMobile,
+          session,
         },
       };
     }

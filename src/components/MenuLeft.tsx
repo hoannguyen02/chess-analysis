@@ -1,3 +1,4 @@
+import { useAppContext } from '@/contexts/AppContext';
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
@@ -6,6 +7,8 @@ import { useMemo } from 'react';
 export const MenuLeft = () => {
   const t = useTranslations('common');
   const router = useRouter();
+  const { session } = useAppContext();
+  console.log('session', session);
   const currentPath = useMemo(() => {
     return router.asPath;
   }, [router]);

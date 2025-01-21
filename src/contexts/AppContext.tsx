@@ -1,5 +1,6 @@
 import { LocaleType } from '@/types/locale';
 import { PuzzleTheme } from '@/types/puzzle-theme';
+import { Session } from '@/types/session';
 import { Tag } from '@/types/tag';
 import React, {
   createContext,
@@ -16,6 +17,7 @@ export interface AppContextProps {
   themeMap: Partial<Record<string, PuzzleTheme>>;
   locale: LocaleType;
   isMobile: boolean;
+  session?: Session;
 }
 
 const AppContext = createContext<AppContextProps | undefined>(undefined);
@@ -27,7 +29,8 @@ export const AppProvider: React.FC<{
   locale: LocaleType;
   tags: Tag[];
   isMobileSSR: boolean;
-}> = ({ children, themes, apiDomain, locale, tags, isMobileSSR }) => {
+  session?: Session;
+}> = ({ children, themes, apiDomain, locale, tags, isMobileSSR, session }) => {
   const [isMobile, setIsMobile] = useState(isMobileSSR);
 
   useEffect(() => {
@@ -68,8 +71,9 @@ export const AppProvider: React.FC<{
       }, {}),
       apiDomain,
       isMobile,
+      session,
     }),
-    [locale, themes, tags, apiDomain, isMobile]
+    [locale, themes, tags, apiDomain, isMobile, session]
   );
 
   return <AppContext.Provider value={value}>{children}</AppContext.Provider>;

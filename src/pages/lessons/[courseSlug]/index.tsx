@@ -1,4 +1,6 @@
+import { ErrorBanner } from '@/components/ErrorBanner';
 import Layout from '@/components/Layout';
+import { AccessDeniedCode, ServerErrorCode } from '@/constants/error';
 import { useAppContext } from '@/contexts/AppContext';
 import { withThemes } from '@/HOF/withThemes';
 import { CourseExpanded } from '@/types/course';
@@ -12,15 +14,16 @@ import { useRouter } from 'next/router';
 
 type Props = {
   data: CourseExpanded;
+  error: string | null;
 };
 
-const LessonDetailsPage = ({ data }: Props) => {
+const LessonDetailsPage = ({ data, error }: Props) => {
   const { locale } = useAppContext();
   const t = useTranslations();
   const router = useRouter();
   const params = useParams();
 
-  if (!data) return null;
+  if (error) return <ErrorBanner error={error} />;
 
   const { title, difficulty, description, objectives, lessons } = data;
 
@@ -135,25 +138,56 @@ const LessonDetailsPage = ({ data }: Props) => {
 export const getServerSideProps = withThemes(
   async (ctx: GetServerSidePropsContext) => {
     const { locale, params } = ctx;
-    try {
-      const slug = params?.courseSlug;
-      const serverAxios = createServerAxios(ctx);
-      const res = await serverAxios.get(`/v1/courses/slug/${slug}`);
+    // Helper function to load localization messages
+    const loadMessages = async (locale: string) => {
+      try {
+        const commonMessages = (await import(`@/locales/${locale}/common.json`))
+          .default;
 
-      const commonMessages = (await import(`@/locales/${locale}/common.json`))
-        .default;
+        return {
+          common: commonMessages,
+        };
+      } catch (err) {
+        console.error('Localization loading error:', err);
+        return {};
+      }
+    };
+
+    // Initialize props
+    const messages = await loadMessages(locale || 'en');
+    const slug = params?.courseSlug;
+
+    try {
+      const serverAxios = createServerAxios(ctx);
+      const response = await serverAxios.get(`/v1/courses/public/slug/${slug}`);
+
       return {
         props: {
-          messages: {
-            common: commonMessages,
-          },
-          data: res.data,
+          messages,
+          data: response.data,
+          error: null,
         },
       };
-    } catch (error) {
-      console.error('Fetch error:', error);
+    } catch (error: any) {
+      console.log('error', error);
+      if (error.response?.status === 403 || error.response?.status === 401) {
+        const reason = error.response?.data?.reason || AccessDeniedCode;
+        return {
+          props: {
+            messages,
+            error: reason,
+            data: null,
+          },
+        };
+      }
+
+      // Handle other errors
       return {
-        props: {},
+        props: {
+          messages,
+          error: ServerErrorCode,
+          data: null,
+        },
       };
     }
   }

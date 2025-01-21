@@ -32,7 +32,8 @@
     "example": "Ex",
     "start-course": "Start Course",
     "continue-learning": "Continue Learning",
-    "lesson-contents": "Lesson Contents"
+    "lesson-contents": "Lesson Contents",
+    "renew-subscription": "Renew Subscription"
   },
   "button": {
     "back": "Back",
@@ -44,6 +45,15 @@
     "completed": "Completed",
     "solve-now": "Solve Now",
     "try-it": "Try It",
-    "view": "View"
+    "view": "View",
+    "retry": "Retry"
+  },
+  "error": {
+    "access-denied": "Access denied.",
+    "guest_user": "You need to log in to access this content.",
+    "subscription_expired": "Your subscription has expired. Please renew to access this lesson.",
+    "not_found": "Not Found",
+    "server_error": "An error occurred while processing your request. Please try again later or contact support if the issue persists.",
+    "invalid_request": "Invalid request. Please check your input and try again."
   }
 }

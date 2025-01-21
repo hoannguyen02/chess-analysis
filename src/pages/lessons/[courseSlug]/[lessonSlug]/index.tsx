@@ -1,5 +1,7 @@
+import { ErrorBanner } from '@/components/ErrorBanner';
 import Layout from '@/components/Layout';
 import { SolvePuzzleDrawer } from '@/components/SolvePuzzleDrawer';
+import { AccessDeniedCode, ServerErrorCode } from '@/constants/error';
 import { useAppContext } from '@/contexts/AppContext';
 import { withThemes } from '@/HOF/withThemes';
 import useDialog from '@/hooks/useDialog';
@@ -13,8 +15,9 @@ import { useTranslations } from 'next-intl';
 
 type Props = {
   data: LessonExpanded;
+  error: string | null;
 };
-const LessonDetailsPage = ({ data }: Props) => {
+const LessonDetailsPage = ({ data, error }: Props) => {
   const { locale } = useAppContext();
   const {
     open: isOpenSolvePuzzle,
@@ -24,7 +27,7 @@ const LessonDetailsPage = ({ data }: Props) => {
   } = useDialog<Puzzle>();
   const t = useTranslations();
 
-  if (!data) return null;
+  if (error) return <ErrorBanner error={error} />;
 
   const {
     title,
@@ -165,30 +168,61 @@ const LessonDetailsPage = ({ data }: Props) => {
 export const getServerSideProps = withThemes(
   async (ctx: GetServerSidePropsContext) => {
     const { locale, params } = ctx;
+
+    // Helper function to load localization messages
+    const loadMessages = async (locale: string) => {
+      try {
+        const commonMessages = (await import(`@/locales/${locale}/common.json`))
+          .default;
+        const solvePuzzleMessages = (
+          await import(`@/locales/${locale}/solve-puzzle.json`)
+        ).default;
+
+        return {
+          common: commonMessages,
+          'solve-puzzle': solvePuzzleMessages,
+        };
+      } catch (err) {
+        console.error('Localization loading error:', err);
+        return {};
+      }
+    };
+
+    // Initialize props
+    const messages = await loadMessages(locale || 'en');
+    const slug = params?.lessonSlug;
+
     try {
-      const slug = params?.lessonSlug;
-
       const serverAxios = createServerAxios(ctx);
-      const res = await serverAxios.get(`/v1/lessons/slug/${slug}`);
+      const response = await serverAxios.get(`/v1/lessons/public/slug/${slug}`);
 
-      const commonMessages = (await import(`@/locales/${locale}/common.json`))
-        .default;
-      const solvePuzzleMessages = (
-        await import(`@/locales/${locale || 'en'}/solve-puzzle.json`)
-      ).default;
       return {
         props: {
-          messages: {
-            common: commonMessages,
-            'solve-puzzle': solvePuzzleMessages,
-          },
-          data: res.data,
+          messages,
+          data: response.data,
+          error: null,
         },
       };
-    } catch (error) {
-      console.error('Fetch error:', error);
+    } catch (error: any) {
+      const statusCode = error.response?.status;
+      if (statusCode === 403 || statusCode === 401 || statusCode === 400) {
+        const reason = error.response?.data?.reason || AccessDeniedCode;
+        return {
+          props: {
+            messages,
+            error: reason,
+            data: null,
+          },
+        };
+      }
+
+      // Handle other errors
       return {
-        props: {},
+        props: {
+          messages,
+          error: ServerErrorCode,
+          data: null,
+        },
       };
     }
   }

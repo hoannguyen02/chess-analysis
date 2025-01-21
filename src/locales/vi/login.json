@@ -1,13 +1,14 @@
 {
   "title": {
     "email": "Email",
-    "password": "Password",
-    "forgot-password": "Forgot Password?",
-    "sign-in": "Sign In"
+    "password": "Mật khẩu",
+    "forgot-password": "Quên mật khẩu?",
+    "login": "Login"
   },
   "message": {
     "login-attempts": "Too many login attempts. Please try again later.'",
-    "password-required": "Password is required",
-    "email-required": "Email is required"
+    "password-required": "Mật khẩu là bắt buộc",
+    "email-required": "Email là bắt buộc",
+    "email-invalid": "Địa chỉ Email không hợp lệ"
   }
 }

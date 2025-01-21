@@ -39,7 +39,7 @@ export const getServerSideProps = withThemes(
       });
 
       const serverAxios = createServerAxios(ctx);
-      const res = await serverAxios.get(`/v1/courses?${queryString}`);
+      const res = await serverAxios.get(`/v1/courses/public?${queryString}`);
 
       const { items, lastPage, currentPage } = res.data || {};
 
