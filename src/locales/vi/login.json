@@ -1,14 +1,11 @@
 {
-  "title": {
-    "email": "Email",
-    "password": "Mật khẩu",
-    "forgot-password": "Quên mật khẩu?",
-    "login": "Login"
-  },
-  "message": {
-    "login-attempts": "Too many login attempts. Please try again later.'",
-    "password-required": "Mật khẩu là bắt buộc",
-    "email-required": "Email là bắt buộc",
-    "email-invalid": "Địa chỉ Email không hợp lệ"
-  }
+  "email-label": "Địa chỉ email",
+  "password": "Mật khẩu",
+  "forgot-password": "Quên mật khẩu?",
+  "login": "Đăng nhập",
+  "remember-me": "Nhớ mật khẩu",
+  "login-attempts": "Too many login attempts. Please try again later.'",
+  "password-required": "Mật khẩu là bắt buộc",
+  "email-required": "Email là bắt buộc",
+  "email-invalid": "Địa chỉ Email không hợp lệ"
 }

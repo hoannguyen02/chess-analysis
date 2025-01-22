@@ -46,35 +46,39 @@ export const MenuLeft = () => {
       <Link href="/traps" className="mb-6 hover:text-[var(--p-highlight)]">
         {t('navigation.traps')}
       </Link>
-      <hr className="mb-4" />
-      {/*  Role: User, Admin, Super */}
-      {t('title.manage')}
-      <ul className="pl-4">
-        <li className="my-2">
-          <Link
-            href="/settings/courses"
-            className="mb-6 hover:text-[var(--p-highlight)]"
-          >
-            {t('navigation.courses')}
-          </Link>
-        </li>
-        <li className="mb-2">
-          <Link
-            href="/settings/lessons"
-            className="mb-6 hover:text-[var(--p-highlight)]"
-          >
-            {t('navigation.lessons')}
-          </Link>
-        </li>
-        <li className="mb-2">
-          <Link
-            href="/settings/puzzles"
-            className="mb-6 hover:text-[var(--p-highlight)]"
-          >
-            {t('navigation.puzzles')}
-          </Link>
-        </li>
-      </ul>
+      {session?.permissions?.write_courses && (
+        <>
+          <hr className="mb-4" />
+          {/*  Role: Teacher, Admin */}
+          {t('title.manage')}
+          <ul className="pl-4">
+            <li className="my-2">
+              <Link
+                href="/settings/courses"
+                className="mb-6 hover:text-[var(--p-highlight)]"
+              >
+                {t('navigation.courses')}
+              </Link>
+            </li>
+            <li className="mb-2">
+              <Link
+                href="/settings/lessons"
+                className="mb-6 hover:text-[var(--p-highlight)]"
+              >
+                {t('navigation.lessons')}
+              </Link>
+            </li>
+            <li className="mb-2">
+              <Link
+                href="/settings/puzzles"
+                className="mb-6 hover:text-[var(--p-highlight)]"
+              >
+                {t('navigation.puzzles')}
+              </Link>
+            </li>
+          </ul>
+        </>
+      )}
       <hr className="mt-8 border-color-[red] mb-8" />
       <Link
         href={

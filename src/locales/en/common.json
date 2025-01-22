@@ -33,12 +33,14 @@
     "start-course": "Start Course",
     "continue-learning": "Continue Learning",
     "lesson-contents": "Lesson Contents",
-    "renew-subscription": "Renew Subscription"
+    "renew-subscription": "Renew Subscription",
+    "ex": "Ex"
   },
   "button": {
     "back": "Back",
     "preview": "Preview",
     "submit": "Submit",
+    "sending": "Sending...",
     "previous": "Previous",
     "next": "Next",
     "continue": "Continue",

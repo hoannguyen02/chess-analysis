@@ -33,12 +33,14 @@
     "start-course": "Vào Học",
     "continue-learning": "Học Tiếp",
     "lesson-contents": "Nội Dung Bài Học",
-    "renew-subscription": "Gia Hạn Đăng Ký"
+    "renew-subscription": "Gia Hạn Đăng Ký",
+    "ex": "Ví dụ"
   },
   "button": {
     "back": "Quay lại",
     "preview": "Xem trước",
-    "submit": "Gửi",
+    "submit": "Gửi đi",
+    "sending": "Đang xử lý...",
     "previous": "Trước",
     "next": "Sau",
     "continue": "Tiếp tục",
