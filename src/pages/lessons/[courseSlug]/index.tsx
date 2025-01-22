@@ -169,7 +169,6 @@ export const getServerSideProps = withThemes(
         },
       };
     } catch (error: any) {
-      console.log(error.response);
       return {
         props: {
           messages,
