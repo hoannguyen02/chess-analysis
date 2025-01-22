@@ -34,7 +34,8 @@
     "continue-learning": "Continue Learning",
     "lesson-contents": "Lesson Contents",
     "renew-subscription": "Renew Subscription",
-    "ex": "Ex"
+    "ex": "Ex",
+    "success": "Request completed successfully"
   },
   "button": {
     "back": "Back",
@@ -49,13 +50,5 @@
     "try-it": "Try It",
     "view": "View",
     "retry": "Retry"
-  },
-  "error": {
-    "access-denied": "Access denied.",
-    "guest_user": "You need to log in to access this content.",
-    "subscription_expired": "Your subscription has expired. Please renew to access this lesson.",
-    "not_found": "Not Found",
-    "server_error": "An error occurred while processing your request. Please try again later or contact support if the issue persists.",
-    "invalid_request": "Invalid request. Please check your input and try again."
   }
 }

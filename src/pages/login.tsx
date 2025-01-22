@@ -67,7 +67,9 @@ const LoginPage = () => {
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="max-w-md mx-auto px-4">
       <div className="flex justify-center mt-8">
-        <Logo />
+        <Link href="/" className="mb-6">
+          <Logo />
+        </Link>
       </div>
       {successMessage && (
         <div className="text-center bg-green-100 text-green-700 p-2 mb-4 rounded">

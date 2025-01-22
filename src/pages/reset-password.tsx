@@ -1,11 +1,14 @@
 import { Logo } from '@/components/Logo';
 import { PrimaryButton } from '@/components/PrimaryButton';
 import { useAppContext } from '@/contexts/AppContext';
+import { useToast } from '@/contexts/ToastContext';
 import { withThemes } from '@/HOF/withThemes';
-import axiosInstance from '@/utils/axiosInstance';
+import axiosInstance, { setAxiosLocale } from '@/utils/axiosInstance';
+import { handleSubmission } from '@/utils/handleSubmission';
 import { Label, TextInput } from 'flowbite-react';
 import { GetServerSidePropsContext } from 'next';
 import { useTranslations } from 'next-intl';
+import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useState } from 'react';
 import { SubmitHandler, useForm } from 'react-hook-form';
@@ -18,7 +21,8 @@ type ResetPasswordFormValues = {
 
 const ResetPasswordPage = () => {
   const router = useRouter();
-  const { apiDomain } = useAppContext();
+  const { apiDomain, locale } = useAppContext();
+  const { addToast } = useToast();
   const t = useTranslations();
   const [showPassword, setShowPassword] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -34,31 +38,40 @@ const ResetPasswordPage = () => {
     confirmPassword,
   }) => {
     if (password !== confirmPassword) {
-      alert(t('reset-password.error.mismatch'));
+      addToast(t('reset-password.error.mismatch'), 'error'); // Use Toast for mismatch error
       return;
     }
 
     setIsSubmitting(true);
-    try {
-      const token = router.query.token as string; // Get the token from the query params
-      await axiosInstance.post(`${apiDomain}/v1/auth/reset-password`, {
-        token,
-        newPassword: password,
-      });
 
+    const result = await handleSubmission(
+      async () => {
+        setAxiosLocale(locale);
+        const token = router.query.token as string; // Get the token from the query params
+        return await axiosInstance.post(`${apiDomain}/v1/auth/reset-password`, {
+          token,
+          newPassword: password,
+        });
+      },
+      addToast, // Pass addToast to show toast notifications
+      t('reset-password.success') // Success message
+    );
+
+    setIsSubmitting(false);
+
+    if (result !== undefined) {
       // Redirect to login page with success message
       sessionStorage.setItem('successMessage', t('reset-password.success'));
       router.push('/login');
-    } catch (error) {
-      console.error('Reset Password failed:', error);
-      setIsSubmitting(false);
     }
   };
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="max-w-md mx-auto px-4">
       <div className="flex justify-center mt-8">
-        <Logo />
+        <Link href="/" className="mb-6">
+          <Logo />
+        </Link>
       </div>
       <div className="my-8 text-center">
         <h1 className="text-xl font-semibold">{t('reset-password.title')}</h1>

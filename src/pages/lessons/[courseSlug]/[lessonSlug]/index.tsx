@@ -1,7 +1,6 @@
 import { ErrorBanner } from '@/components/ErrorBanner';
 import Layout from '@/components/Layout';
 import { SolvePuzzleDrawer } from '@/components/SolvePuzzleDrawer';
-import { AccessDeniedCode, ServerErrorCode } from '@/constants/error';
 import { useAppContext } from '@/contexts/AppContext';
 import { withThemes } from '@/HOF/withThemes';
 import useDialog from '@/hooks/useDialog';
@@ -16,8 +15,9 @@ import { useTranslations } from 'next-intl';
 type Props = {
   data: LessonExpanded;
   error: string | null;
+  errorCode: number;
 };
-const LessonDetailsPage = ({ data, error }: Props) => {
+const LessonDetailsPage = ({ data, error, errorCode }: Props) => {
   const { locale } = useAppContext();
   const {
     open: isOpenSolvePuzzle,
@@ -27,7 +27,7 @@ const LessonDetailsPage = ({ data, error }: Props) => {
   } = useDialog<Puzzle>();
   const t = useTranslations();
 
-  if (error) return <ErrorBanner error={error} />;
+  if (error) return <ErrorBanner error={error} errorCode={errorCode} />;
 
   const {
     title,
@@ -204,23 +204,11 @@ export const getServerSideProps = withThemes(
         },
       };
     } catch (error: any) {
-      const statusCode = error.response?.status;
-      if (statusCode === 403 || statusCode === 401 || statusCode === 400) {
-        const reason = error.response?.data?.reason || AccessDeniedCode;
-        return {
-          props: {
-            messages,
-            error: reason,
-            data: null,
-          },
-        };
-      }
-
-      // Handle other errors
       return {
         props: {
           messages,
-          error: ServerErrorCode,
+          error: error.message || error,
+          errorCode: error.response?.status,
           data: null,
         },
       };

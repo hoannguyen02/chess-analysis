@@ -1,6 +1,5 @@
 import { ErrorBanner } from '@/components/ErrorBanner';
 import Layout from '@/components/Layout';
-import { AccessDeniedCode, ServerErrorCode } from '@/constants/error';
 import { useAppContext } from '@/contexts/AppContext';
 import { withThemes } from '@/HOF/withThemes';
 import { CourseExpanded } from '@/types/course';
@@ -15,15 +14,16 @@ import { useRouter } from 'next/router';
 type Props = {
   data: CourseExpanded;
   error: string | null;
+  errorCode: number;
 };
 
-const LessonDetailsPage = ({ data, error }: Props) => {
+const LessonDetailsPage = ({ data, error, errorCode }: Props) => {
   const { locale } = useAppContext();
   const t = useTranslations();
   const router = useRouter();
   const params = useParams();
 
-  if (error) return <ErrorBanner error={error} />;
+  if (error) return <ErrorBanner error={error} errorCode={errorCode} />;
 
   const { title, difficulty, description, objectives, lessons } = data;
 
@@ -169,23 +169,13 @@ export const getServerSideProps = withThemes(
         },
       };
     } catch (error: any) {
-      console.log('error', error);
-      if (error.response?.status === 403 || error.response?.status === 401) {
-        const reason = error.response?.data?.reason || AccessDeniedCode;
-        return {
-          props: {
-            messages,
-            error: reason,
-            data: null,
-          },
-        };
-      }
-
-      // Handle other errors
+      console.log(error.response);
       return {
         props: {
           messages,
-          error: ServerErrorCode,
+          error:
+            error.response?.data.message || error.response?.data.message?.error,
+          errorCode: error.response?.status,
           data: null,
         },
       };

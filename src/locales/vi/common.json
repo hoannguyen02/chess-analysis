@@ -34,7 +34,8 @@
     "continue-learning": "Học Tiếp",
     "lesson-contents": "Nội Dung Bài Học",
     "renew-subscription": "Gia Hạn Đăng Ký",
-    "ex": "Ví dụ"
+    "ex": "Ví dụ",
+    "success": "Yêu Cầu Đã Được Xử Lý Thành Công"
   },
   "button": {
     "back": "Quay lại",
@@ -49,13 +50,5 @@
     "try-it": "Thử Ngay",
     "view": "Xem",
     "retry": "Thử lại"
-  },
-  "error": {
-    "access-denied": "Truy Cập Bị Từ Chối.",
-    "guest_user": "Bạn cần đăng nhập để truy cập nội dung này.",
-    "subscription_expired": "Gói đăng ký của bạn đã hết hạn. Vui lòng gia hạn để truy cập bài học này.",
-    "not_found": "Không Tìm Thấy",
-    "server_error": "Đã xảy ra lỗi khi xử lý yêu cầu của bạn. Vui lòng thử lại sau hoặc liên hệ hỗ trợ nếu vấn đề vẫn tiếp diễn.",
-    "invalid_request": "Yêu cầu không hợp lệ. Vui lòng kiểm tra thông tin và thử lại."
   }
 }

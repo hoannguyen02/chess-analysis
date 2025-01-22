@@ -1,5 +1,7 @@
 import ErrorBoundary from '@/components/ErrorBoundary';
+import ToastContainer from '@/components/ToastContainer';
 import { AppProvider } from '@/contexts/AppContext';
+import { ToastProvider } from '@/contexts/ToastContext';
 import '@/styles/globals.css';
 import { LocaleType } from '@/types/locale';
 import type { CustomFlowbiteTheme } from 'flowbite-react';
@@ -52,9 +54,12 @@ const App = ({ Component, pageProps }: AppProps) => {
             isMobileSSR={pageProps.isMobileSSR}
             session={pageProps.session}
           >
+            {/* Apply the font class dynamically */}
             <div className={fontClass}>
-              {/* Apply the font class dynamically */}
-              <Component {...pageProps} />
+              <ToastProvider>
+                <Component {...pageProps} />
+                <ToastContainer />
+              </ToastProvider>
             </div>
           </AppProvider>
         </NextIntlClientProvider>

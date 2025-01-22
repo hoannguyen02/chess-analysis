@@ -1,8 +1,9 @@
 import { Logo } from '@/components/Logo';
 import { PrimaryButton } from '@/components/PrimaryButton';
 import { useAppContext } from '@/contexts/AppContext';
+import { useToast } from '@/contexts/ToastContext';
 import { withThemes } from '@/HOF/withThemes';
-import axiosInstance from '@/utils/axiosInstance';
+import axiosInstance, { setAxiosLocale } from '@/utils/axiosInstance';
 import { Label, TextInput } from 'flowbite-react';
 import { GetServerSidePropsContext } from 'next';
 import { useTranslations } from 'next-intl';
@@ -17,9 +18,10 @@ type ForgotPasswordFormValues = {
 
 const ForgotPasswordPage = () => {
   const router = useRouter();
-  const { apiDomain } = useAppContext();
+  const { apiDomain, locale } = useAppContext();
   const t = useTranslations();
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const { addToast } = useToast();
   const {
     register,
     handleSubmit,
@@ -32,6 +34,7 @@ const ForgotPasswordPage = () => {
   }) => {
     setIsSubmitting(true);
     try {
+      setAxiosLocale(locale);
       await axiosInstance.post(`${apiDomain}/v1/auth/forgot-password`, {
         email,
       });
@@ -39,13 +42,17 @@ const ForgotPasswordPage = () => {
       // Save success message in sessionStorage
       sessionStorage.setItem(
         'successMessage',
-        t('forgot-password.success', { email: email })
+        t('forgot-password.success', { email })
       );
+
+      addToast(t('common.title.success'), 'success');
 
       // Redirect to login page
       router.push('/login');
-    } catch (error) {
+    } catch (error: any) {
       console.error('Forgot Password failed:', error);
+      addToast(t(error?.message), 'error');
+    } finally {
       setIsSubmitting(false);
     }
   };
@@ -53,7 +60,9 @@ const ForgotPasswordPage = () => {
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="max-w-md mx-auto px-4">
       <div className="flex justify-center mt-8">
-        <Logo />
+        <Link href="/" className="mb-6">
+          <Logo />
+        </Link>
       </div>
       <div className="my-8 text-center">
         <h1 className="text-xl font-semibold">{t('forgot-password.title')}</h1>
