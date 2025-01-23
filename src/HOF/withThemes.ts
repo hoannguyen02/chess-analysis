@@ -1,6 +1,6 @@
 // utils/withThemes.ts
+import axiosInstance from '@/utils/axiosInstance';
 import { getSession } from '@/utils/getSession';
-import axios from 'axios';
 import {
   GetServerSideProps,
   GetServerSidePropsContext,
@@ -26,7 +26,9 @@ export const withThemes =
     // If themes are not available, fetch them
     if (!themes) {
       try {
-        const { data } = await axios.get(`${apiDomain}/v1/puzzle-themes`);
+        const { data } = await axiosInstance.get(
+          `${apiDomain}/v1/puzzle-themes`
+        );
         themes = data.items;
 
         // Store themes in cookies
@@ -43,7 +45,7 @@ export const withThemes =
 
     if (!tags) {
       try {
-        const { data: data } = await axios.get(`${apiDomain}/v1/tags`);
+        const { data: data } = await axiosInstance.get(`${apiDomain}/v1/tags`);
         tags = data.items;
         // Store tags in cookies
         nookies.set(ctx, 'tags', JSON.stringify(tags), {

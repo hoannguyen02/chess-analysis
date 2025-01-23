@@ -4,8 +4,8 @@ import { useAppContext } from '@/contexts/AppContext';
 import { Lesson } from '@/types/lesson';
 import { PuzzleDifficulty } from '@/types/puzzle';
 import { StatusType } from '@/types/status';
+import axiosInstance from '@/utils/axiosInstance';
 import { fetcher } from '@/utils/fetcher';
-import axios from 'axios';
 import {
   Button,
   Checkbox,
@@ -88,7 +88,7 @@ export const AddToLessonsModal: React.FC<Props> = ({
   const handleAddLessons = async () => {
     setLoading(true);
     try {
-      await axios.post(`${apiDomain}/v1/lessons/add-multiple`, {
+      await axiosInstance.post(`${apiDomain}/v1/lessons/add-multiple`, {
         puzzleId,
         lessonIds: selectedInModal.map((l) => l._id),
       });

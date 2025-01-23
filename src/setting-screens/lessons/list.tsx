@@ -6,8 +6,8 @@ import { useAppContext } from '@/contexts/AppContext';
 import { Lesson } from '@/types/lesson';
 import { PuzzleDifficulty } from '@/types/puzzle';
 import { StatusType } from '@/types/status';
+import axiosInstance from '@/utils/axiosInstance';
 import { filteredQuery } from '@/utils/filteredQuery';
-import axios from 'axios';
 import { Button, Label, Pagination, Select, Spinner } from 'flowbite-react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
@@ -78,7 +78,7 @@ export const LessonsListScreen = () => {
 
   const handleSaveOrder = async () => {
     try {
-      await axios.post(`${apiDomain}/v1/lessons/reorder`, {
+      await axiosInstance.post(`${apiDomain}/v1/lessons/reorder`, {
         lessons: lessons.map(({ _id, priority }) => ({ _id, priority })),
       });
       alert('Lessons order updated!');

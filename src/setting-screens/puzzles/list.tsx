@@ -5,8 +5,8 @@ import { useAppContext } from '@/contexts/AppContext';
 import { PhaseType } from '@/types';
 import { Puzzle, PuzzleDifficulty, PuzzlePhase } from '@/types/puzzle';
 import { StatusType } from '@/types/status';
+import axiosInstance from '@/utils/axiosInstance';
 import { filteredQuery } from '@/utils/filteredQuery';
-import axios from 'axios';
 import { Button, Checkbox, Pagination, Spinner, Table } from 'flowbite-react';
 import { useRouter } from 'next/router';
 import { useMemo, useState } from 'react';
@@ -65,13 +65,16 @@ export const PuzzleListScreen = () => {
     const { title, _id, ...rest } = puzzle;
     try {
       setLoading(true);
-      const newPuzzleResult = await axios.post(`${apiDomain}/v1/puzzles`, {
-        ...rest,
-        title: {
-          en: `${title?.en} (Copy)`,
-          vi: `${title?.vi} (Copy)`,
-        },
-      });
+      const newPuzzleResult = await axiosInstance.post(
+        `${apiDomain}/v1/puzzles`,
+        {
+          ...rest,
+          title: {
+            en: `${title?.en} (Copy)`,
+            vi: `${title?.vi} (Copy)`,
+          },
+        }
+      );
 
       router.push(`/settings/puzzles/${newPuzzleResult.data._id}`);
     } catch (error) {
