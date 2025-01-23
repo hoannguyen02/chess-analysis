@@ -103,7 +103,8 @@ export const CreateUserForm = ({ roles, user }: Props) => {
     setIsSubmitting(false);
 
     if (result !== undefined && !user?._id) {
-      router.push(`/settings/users/${result.data?._id}`);
+      const user = result.data?.data;
+      router.push(`/settings/users/${user?._id}`);
     }
   };
 
