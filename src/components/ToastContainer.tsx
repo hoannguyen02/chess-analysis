@@ -12,11 +12,11 @@ const ToastContainer: React.FC = () => {
           key={toast.id}
           className={`p-4 rounded-lg shadow-lg ${
             toast.type === 'error'
-              ? 'bg-red-500'
+              ? 'bg-red-500 text-white'
               : toast.type === 'success'
-                ? 'bg-green-500'
-                : 'bg-blue-500'
-          } text-white flex items-center justify-between`}
+                ? 'bg-green-100 text-green-700'
+                : 'bg-blue-500 text-white'
+          }  flex items-center justify-between`}
         >
           <span>{toast.message}</span>
           <button onClick={() => removeToast(toast.id)} className="ml-4">

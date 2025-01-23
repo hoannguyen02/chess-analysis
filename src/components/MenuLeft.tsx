@@ -1,20 +1,42 @@
 import { useAppContext } from '@/contexts/AppContext';
+import { useToast } from '@/contexts/ToastContext';
+import axiosInstance, { setAxiosLocale } from '@/utils/axiosInstance';
+import { handleSubmission } from '@/utils/handleSubmission';
+import { Dropdown } from 'flowbite-react';
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { useMemo } from 'react';
+import { useCallback, useMemo } from 'react';
+import LanguageSwitcher from './LanguageSwitcher';
 
 export const MenuLeft = () => {
   const t = useTranslations('common');
   const router = useRouter();
-  const { session } = useAppContext();
-  console.log('session', session);
+  const { addToast } = useToast();
+  const { session, isMobile, locale, apiDomain } = useAppContext();
   const currentPath = useMemo(() => {
     return router.asPath;
   }, [router]);
 
+  const handleLogout = useCallback(async () => {
+    const result = await handleSubmission(
+      async () => {
+        setAxiosLocale(locale);
+        return await axiosInstance.post(`${apiDomain}/v1/auth/logout`);
+      },
+      addToast, // Pass addToast to show toast notifications
+      t('title.logout-success') // Success message
+    );
+    if (result !== undefined) {
+      router.push('/');
+    }
+  }, [addToast, apiDomain, locale, router, t]);
+
   return (
-    <nav className="flex flex-col w-full bg-[var(--p-bg)] text-white p-[1rem]">
+    <nav
+      className="flex flex-col w-full h-full bg-[var(--p-bg)] text-white p-[1rem] pb-0]
+    "
+    >
       <div className="mb-4 hidden lg:flex">
         <Link href="/" className="mb-6 hover:text-[var(--p-highlight)]">
           <svg
@@ -79,17 +101,36 @@ export const MenuLeft = () => {
           </ul>
         </>
       )}
-      <hr className="mt-8 border-color-[red] mb-8" />
-      <Link
-        href={
-          currentPath !== '/'
-            ? `/login?redirect=${encodeURIComponent(currentPath)}`
-            : '/login'
-        }
-        className="mb-6 hover:text-[var(--p-highlight)] border text-center py-2 rounded"
-      >
-        {t('navigation.login')}
-      </Link>
+      {!isMobile && !session?.username && (
+        <>
+          <hr className="mt-8 border-color-[red] mb-8" />
+          <Link
+            href={
+              currentPath !== '/'
+                ? `/login?redirect=${encodeURIComponent(currentPath)}`
+                : '/login'
+            }
+            className="mb-6 hover:text-[var(--p-highlight)] border text-center py-2 rounded"
+          >
+            {t('navigation.login')}
+          </Link>
+        </>
+      )}
+      <div className="mt-auto">
+        <LanguageSwitcher />
+        {session?.username && (
+          <div className="mt-4 flex justify-center">
+            <Dropdown label={t('title.settings')}>
+              <Dropdown.Item onClick={() => router.push('/change-password')}>
+                {t('navigation.change-password')}
+              </Dropdown.Item>
+              <Dropdown.Item onClick={handleLogout}>
+                {t('navigation.logout')}
+              </Dropdown.Item>
+            </Dropdown>
+          </div>
+        )}
+      </div>
     </nav>
   );
 };

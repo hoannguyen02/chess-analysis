@@ -4,6 +4,7 @@ import { useAppContext } from '@/contexts/AppContext';
 import { useToast } from '@/contexts/ToastContext';
 import { withThemes } from '@/HOF/withThemes';
 import axiosInstance, { setAxiosLocale } from '@/utils/axiosInstance';
+import { handleSubmission } from '@/utils/handleSubmission';
 import { Label, TextInput } from 'flowbite-react';
 import { GetServerSidePropsContext } from 'next';
 import { useTranslations } from 'next-intl';
@@ -33,27 +34,23 @@ const ForgotPasswordPage = () => {
     email,
   }) => {
     setIsSubmitting(true);
-    try {
-      setAxiosLocale(locale);
-      await axiosInstance.post(`${apiDomain}/v1/auth/forgot-password`, {
-        email,
-      });
+    const result = await handleSubmission(
+      async () => {
+        setAxiosLocale(locale);
+        return await axiosInstance.post(
+          `${apiDomain}/v1/auth/forgot-password`,
+          {
+            email,
+          }
+        );
+      },
+      addToast, // Pass addToast to show toast notifications
+      t('forgot-password.success', { email })
+    );
+    setIsSubmitting(false);
 
-      // Save success message in sessionStorage
-      sessionStorage.setItem(
-        'successMessage',
-        t('forgot-password.success', { email })
-      );
-
-      addToast(t('common.title.success'), 'success');
-
-      // Redirect to login page
+    if (result !== undefined) {
       router.push('/login');
-    } catch (error: any) {
-      console.error('Forgot Password failed:', error);
-      addToast(t(error?.message), 'error');
-    } finally {
-      setIsSubmitting(false);
     }
   };
 

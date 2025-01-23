@@ -1,14 +1,16 @@
 import { Logo } from '@/components/Logo';
 import { PrimaryButton } from '@/components/PrimaryButton';
 import { useAppContext } from '@/contexts/AppContext';
+import { useToast } from '@/contexts/ToastContext';
 import { withThemes } from '@/HOF/withThemes';
-import axiosInstance from '@/utils/axiosInstance';
+import axiosInstance, { setAxiosLocale } from '@/utils/axiosInstance';
+import { handleSubmission } from '@/utils/handleSubmission';
 import { Checkbox, Label, TextInput } from 'flowbite-react';
 import { GetServerSidePropsContext } from 'next';
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import { VscEye, VscEyeClosed } from 'react-icons/vsc';
 
@@ -18,19 +20,11 @@ type LoginFormValues = {
   rememberMe: boolean;
 };
 const LoginPage = () => {
-  const [successMessage, setSuccessMessage] = useState<string | null>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  useEffect(() => {
-    // Retrieve success message from sessionStorage
-    const message = sessionStorage.getItem('successMessage');
-    if (message) {
-      setSuccessMessage(message);
-      sessionStorage.removeItem('successMessage'); // Clear the message after showing it
-    }
-  }, []);
+  const { addToast } = useToast();
   const router = useRouter();
-  const { apiDomain } = useAppContext();
+  const { apiDomain, locale } = useAppContext();
   const t = useTranslations();
   const [showPassword, setShowPassword] = useState(false);
   const {
@@ -46,22 +40,27 @@ const LoginPage = () => {
     rememberMe,
   }) => {
     setIsSubmitting(true);
-    try {
-      await axiosInstance.post(`${apiDomain}/v1/auth/login`, {
-        username,
-        password,
-        rememberMe,
-      });
+    const result = await handleSubmission(
+      async () => {
+        setAxiosLocale(locale);
+        return await axiosInstance.post(`${apiDomain}/v1/auth/login`, {
+          username,
+          password,
+          rememberMe,
+        });
+      },
+      addToast, // Pass addToast to show toast notifications
+      t('login.success') // Success message
+    );
 
+    setIsSubmitting(false);
+
+    if (result !== undefined) {
       router.push(
         router.query.redirect
           ? decodeURIComponent(router.query.redirect as string)
           : '/'
       ); // Redirect manually
-    } catch (error) {
-      console.error('Login failed:', error);
-    } finally {
-      setIsSubmitting(false);
     }
   };
   return (
@@ -71,11 +70,6 @@ const LoginPage = () => {
           <Logo />
         </Link>
       </div>
-      {successMessage && (
-        <div className="text-center bg-green-100 text-green-700 p-2 mb-4 rounded">
-          {successMessage}
-        </div>
-      )}
       <div className="mb-4">
         <Label htmlFor="username" value={t('login.email-label')} />
         <TextInput
@@ -158,9 +152,7 @@ const LoginPage = () => {
 
       <div className="flex justify-center mt-16">
         <PrimaryButton type="submit" disabled={isSubmitting}>
-          {isSubmitting
-            ? t('common.button.sending')
-            : t('common.button.submit')}
+          {isSubmitting ? t('common.button.sending') : t('login.login')}
         </PrimaryButton>
       </div>
     </form>

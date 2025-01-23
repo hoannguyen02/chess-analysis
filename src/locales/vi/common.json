@@ -9,10 +9,12 @@
     "lessons": "Bài học",
     "puzzles": "Câu đố",
     "login": "Đăng nhập",
+    "logout": "Đăng xuất",
     "privacy": "Chính sách bảo mật",
     "terms": "Điều khoản sử dụng",
     "contact": "Liên Hệ Chúng Tôi",
-    "about": "Về Chúng Tôi"
+    "about": "Về Chúng Tôi",
+    "change-password": "Đổi mật khẩu"
   },
   "title": {
     "manage": "Quản lý",
@@ -35,7 +37,9 @@
     "lesson-contents": "Nội Dung Bài Học",
     "renew-subscription": "Gia Hạn Đăng Ký",
     "ex": "Ví dụ",
-    "success": "Yêu Cầu Đã Được Xử Lý Thành Công"
+    "success": "Yêu Cầu Đã Được Xử Lý Thành Công",
+    "logout-success": "Đăng xuất thành công",
+    "settings": "Cài đặt"
   },
   "button": {
     "back": "Quay lại",

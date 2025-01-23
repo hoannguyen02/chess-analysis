@@ -9,10 +9,12 @@
     "lessons": "Lessons",
     "puzzles": "Puzzles",
     "login": "Login",
+    "logout": "Logout",
     "privacy": "Privacy Policy",
     "terms": "Terms of Service",
     "contact": "Contact",
-    "about": "About Us"
+    "about": "About Us",
+    "change-password": "Change Password"
   },
   "title": {
     "manage": "Manage",
@@ -35,7 +37,9 @@
     "lesson-contents": "Lesson Contents",
     "renew-subscription": "Renew Subscription",
     "ex": "Ex",
-    "success": "Request completed successfully"
+    "success": "Request completed successfully",
+    "logout-success": "Logout successfully",
+    "settings": "Settings"
   },
   "button": {
     "back": "Back",

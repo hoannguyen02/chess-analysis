@@ -9,7 +9,7 @@ const LanguageSwitcher = () => {
   };
 
   return (
-    <div className="flex items-center absolute bottom-[24px] w-full justify-center">
+    <div className="flex items-center w-full justify-center">
       <button
         className={`${locale === 'en' ? 'text-[var(--s-bg)]' : 'text-white'}`}
         onClick={() => switchLanguage('en')}

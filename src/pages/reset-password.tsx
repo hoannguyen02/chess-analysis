@@ -54,14 +54,12 @@ const ResetPasswordPage = () => {
         });
       },
       addToast, // Pass addToast to show toast notifications
-      t('reset-password.success') // Success message
+      t('common.title.success') // Success message
     );
 
     setIsSubmitting(false);
 
     if (result !== undefined) {
-      // Redirect to login page with success message
-      sessionStorage.setItem('successMessage', t('reset-password.success'));
       router.push('/login');
     }
   };
