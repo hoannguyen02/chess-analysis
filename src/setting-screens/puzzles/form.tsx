@@ -8,12 +8,15 @@ import {
 } from '@/constants';
 import { ROUTE_CHANGE_MESSAGE } from '@/constants/route';
 import { useAppContext } from '@/contexts/AppContext';
+import { useToast } from '@/contexts/ToastContext';
 import useBeforeUnload from '@/hooks/useBeforeUnload';
 import usePreventRouteChange from '@/hooks/usePreventRouteChange';
 import { Lesson } from '@/types/lesson';
 import { Puzzle } from '@/types/puzzle';
 import { PuzzleTheme } from '@/types/puzzle-theme';
+import axiosInstance from '@/utils/axiosInstance';
 import { fetcher } from '@/utils/fetcher';
+import { handleSubmission } from '@/utils/handleSubmission';
 import { previewPuzzle } from '@/utils/previewPuzzle';
 import { Button, Checkbox, Label, TextInput } from 'flowbite-react';
 import { isEmpty } from 'lodash';
@@ -42,6 +45,8 @@ type Props = {
 export const PuzzleFormScreen = ({ puzzle, onSaveSuccess }: Props) => {
   const { themes: defaultThemes, apiDomain, locale } = useAppContext();
   const t = useTranslations();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const { addToast } = useToast();
   const [addToLessonsPopup, setAddToLessonsPopup] = useState(false);
 
   const {
@@ -127,40 +132,35 @@ export const PuzzleFormScreen = ({ puzzle, onSaveSuccess }: Props) => {
           themes: themeIds,
         };
       }
-      try {
-        const apiDomain = process.env.NEXT_PUBLIC_LIMA_BE_DOMAIN;
-        let request;
-        if (_id) {
-          request = fetch(`${apiDomain}/v1/puzzles/${_id}`, {
-            method: 'PUT',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(payload),
-          });
-        } else {
-          request = fetch(`${apiDomain}/v1/puzzles`, {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(payload),
-          });
-        }
-        const response = await request;
-        if (response.ok) {
-          const data = await response.json();
-          reset(data);
-          if (onSaveSuccess) {
-            onSaveSuccess(data);
+      setIsSubmitting(true);
+      const result = await handleSubmission(
+        async () => {
+          if (_id) {
+            return await axiosInstance.put(
+              `${apiDomain}/v1/puzzles/${_id}`,
+              payload
+            );
+          } else {
+            return await axiosInstance.post(`${apiDomain}/v1/puzzles`, {
+              payload,
+            });
           }
+        },
+        addToast, // Pass addToast to show toast notifications
+        t('common.title.success') // Success message
+      );
 
-          alert('Data submitted successfully');
-          if (!_id) {
-            router.push(`/settings/puzzles/${data._id}`);
-          }
-        } else {
-          console.error('Failed to submit data:', response.statusText);
-          alert('Submission failed');
+      setIsSubmitting(false);
+
+      if (result !== undefined) {
+        reset(data);
+        if (onSaveSuccess) {
+          onSaveSuccess(data);
         }
-      } catch (error) {
-        console.error('Error submitting data:', error);
+        if (!_id) {
+          const data = result.data;
+          router.push(`/settings/puzzles/${data._id}`);
+        }
       }
     }
   };
@@ -493,6 +493,7 @@ export const PuzzleFormScreen = ({ puzzle, onSaveSuccess }: Props) => {
           <Button
             className="mr-8"
             type="button"
+            disabled={isSubmitting}
             onClick={() => {
               router.push('/settings/puzzles');
             }}
@@ -507,7 +508,7 @@ export const PuzzleFormScreen = ({ puzzle, onSaveSuccess }: Props) => {
           >
             {t('common.button.preview')}
           </Button>
-          <Button color="primary" type="submit">
+          <Button disabled={isSubmitting} color="primary" type="submit">
             {t('common.button.submit')}
           </Button>
         </div>

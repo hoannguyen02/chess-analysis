@@ -3,11 +3,14 @@ import { TitlePage } from '@/components/TitlePage';
 import { RatingOptions, StatusOptions } from '@/constants';
 import { ROUTE_CHANGE_MESSAGE } from '@/constants/route';
 import { useAppContext } from '@/contexts/AppContext';
+import { useToast } from '@/contexts/ToastContext';
 import useBeforeUnload from '@/hooks/useBeforeUnload';
 import usePreventRouteChange from '@/hooks/usePreventRouteChange';
 import { Course, CourseExpanded } from '@/types/course';
 import { Lesson } from '@/types/lesson';
 import { Tag } from '@/types/tag';
+import axiosInstance from '@/utils/axiosInstance';
+import { handleSubmission } from '@/utils/handleSubmission';
 import {
   Button,
   Card,
@@ -16,6 +19,7 @@ import {
   Textarea,
   TextInput,
 } from 'flowbite-react';
+import { useTranslations } from 'next-intl';
 import { useRouter } from 'next/router';
 import { useState } from 'react';
 import { DndProvider } from 'react-dnd';
@@ -120,6 +124,9 @@ const DefaultFormValues: Partial<CourseForm> = {
 export const CourseFormScreen = ({ course }: Props) => {
   const [addLessonPopup, setAddLessonPopup] = useState(false);
   const { locale, apiDomain, tags: defaultTags } = useAppContext();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const { addToast } = useToast();
+  const t = useTranslations();
 
   const buildInitialCourseForm = (course: CourseExpanded) => {
     return {
@@ -163,35 +170,29 @@ export const CourseFormScreen = ({ course }: Props) => {
     const lessonIds = lessons.map((l: Lesson) => ({ lessonId: l._id }));
     const tagIds = tags.map((tag: Tag) => tag._id);
     const payload = { ...rest, lessons: lessonIds, tags: tagIds };
-    try {
-      let request;
-      if (_id) {
-        request = fetch(`${apiDomain}/v1/courses/${_id}`, {
-          method: 'PUT',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(payload),
-        });
-      } else {
-        request = fetch(`${apiDomain}/v1/courses`, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(payload),
-        });
-      }
-      const response = await request;
-      if (response.ok) {
-        const data = await response.json();
-        reset(formData);
-        alert('Data submitted successfully');
-        if (!_id) {
-          router.push(`/settings/courses/${data._id}`);
+    setIsSubmitting(true);
+    const result = await handleSubmission(
+      async () => {
+        if (_id) {
+          return await axiosInstance.put(
+            `${apiDomain}/v1/courses/${_id}`,
+            payload
+          );
+        } else {
+          return await axiosInstance.post(`${apiDomain}/v1/courses`, {
+            payload,
+          });
         }
-      } else {
-        console.error('Failed to submit data:', response.statusText);
-        alert('Submission failed');
-      }
-    } catch (error) {
-      console.error('Error submitting data:', error);
+      },
+      addToast, // Pass addToast to show toast notifications
+      t('common.title.success') // Success message
+    );
+
+    setIsSubmitting(false);
+
+    if (result !== undefined && !_id) {
+      const data = result.data;
+      router.push(`/settings/courses/${data._id}`);
     }
   };
 
@@ -383,6 +384,7 @@ export const CourseFormScreen = ({ course }: Props) => {
             <Button
               className="mr-8"
               type="button"
+              disabled={isSubmitting}
               onClick={() => {
                 router.push('/settings/courses');
               }}
@@ -397,7 +399,7 @@ export const CourseFormScreen = ({ course }: Props) => {
             >
               Preview
             </Button>
-            <Button color="primary" type="submit">
+            <Button disabled={isSubmitting} color="primary" type="submit">
               Submit
             </Button>
           </div>

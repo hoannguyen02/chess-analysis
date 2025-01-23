@@ -3,6 +3,7 @@ import { TitlePage } from '@/components/TitlePage';
 import { LEVEL_RATING, Statues } from '@/constants';
 import { ROUTE_CHANGE_MESSAGE } from '@/constants/route';
 import { useAppContext } from '@/contexts/AppContext';
+import { useToast } from '@/contexts/ToastContext';
 import useBeforeUnload from '@/hooks/useBeforeUnload';
 import useDialog from '@/hooks/useDialog';
 import usePreventRouteChange from '@/hooks/usePreventRouteChange';
@@ -10,7 +11,9 @@ import { ObjectiveType } from '@/types';
 import { Course } from '@/types/course';
 import { ContentType, Lesson, LessonExpanded } from '@/types/lesson';
 import { Puzzle } from '@/types/puzzle';
+import axiosInstance from '@/utils/axiosInstance';
 import { fetcher } from '@/utils/fetcher';
+import { handleSubmission } from '@/utils/handleSubmission';
 import { previewPuzzle } from '@/utils/previewPuzzle';
 import {
   Button,
@@ -21,6 +24,7 @@ import {
   Textarea,
   TextInput,
 } from 'flowbite-react';
+import { useTranslations } from 'next-intl';
 import { useRouter } from 'next/router';
 import { useState } from 'react';
 import { DndProvider } from 'react-dnd';
@@ -218,6 +222,9 @@ const ContentExplanations = ({ contentIndex }: { contentIndex: number }) => {
 };
 export const LessonFormScreen = ({ lesson }: Props) => {
   const { apiDomain, locale } = useAppContext();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const { addToast } = useToast();
+  const t = useTranslations();
 
   const {
     data: courses,
@@ -313,35 +320,29 @@ export const LessonFormScreen = ({ lesson }: Props) => {
       })),
     }));
     const payload = { ...rest, puzzles: puzzleIds, contents: newContents };
-    try {
-      const apiDomain = process.env.NEXT_PUBLIC_LIMA_BE_DOMAIN;
-      let request;
-      if (_id) {
-        request = fetch(`${apiDomain}/v1/lessons/${_id}`, {
-          method: 'PUT',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(payload),
-        });
-      } else {
-        request = fetch(`${apiDomain}/v1/lessons`, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(payload),
-        });
-      }
-      const response = await request;
-      if (response.ok) {
-        await response.json();
-        alert('Data submitted successfully');
-        if (!_id) {
-          router.push(`/settings/lessons/${data._id}`);
+    setIsSubmitting(true);
+    const result = await handleSubmission(
+      async () => {
+        if (_id) {
+          return await axiosInstance.put(
+            `${apiDomain}/v1/lessons/${_id}`,
+            payload
+          );
+        } else {
+          return await axiosInstance.post(`${apiDomain}/v1/lessons`, {
+            payload,
+          });
         }
-      } else {
-        console.error('Failed to submit data:', response.statusText);
-        alert('Submission failed');
-      }
-    } catch (error) {
-      console.error('Error submitting data:', error);
+      },
+      addToast, // Pass addToast to show toast notifications
+      t('common.title.success') // Success message
+    );
+
+    setIsSubmitting(false);
+
+    if (result !== undefined && !_id) {
+      const data = result.data;
+      router.push(`/settings/lessons/${data._id}`);
     }
   };
 
@@ -649,6 +650,7 @@ export const LessonFormScreen = ({ lesson }: Props) => {
             <Button
               className="mr-8"
               type="button"
+              disabled={isSubmitting}
               onClick={() => {
                 router.push('/settings/lessons');
               }}
@@ -667,7 +669,7 @@ export const LessonFormScreen = ({ lesson }: Props) => {
             >
               Preview
             </Button>
-            <Button color="primary" type="submit">
+            <Button disabled={isSubmitting} color="primary" type="submit">
               Submit
             </Button>
           </div>

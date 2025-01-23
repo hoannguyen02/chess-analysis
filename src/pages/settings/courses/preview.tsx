@@ -1,6 +1,6 @@
 import Layout from '@/components/Layout';
-import SolvePuzzle from '@/components/SolvePuzzle';
 import { withThemes } from '@/HOF/withThemes';
+import { CourseFormScreen } from '@/setting-screens/courses/form';
 import { useRouter } from 'next/router';
 
 const PreviewCoursePage = () => {
@@ -12,7 +12,7 @@ const PreviewCoursePage = () => {
   if (data) {
     return (
       <Layout>
-        <SolvePuzzle puzzle={data} />
+        <CourseFormScreen course={data} />
       </Layout>
     );
   }

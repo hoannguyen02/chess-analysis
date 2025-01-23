@@ -1,6 +1,7 @@
 import Layout from '@/components/Layout';
 import SolvePuzzle from '@/components/SolvePuzzle';
 import { withThemes } from '@/HOF/withThemes';
+import { createServerAxios } from '@/utils/axiosInstance';
 import {
   GetServerSideProps,
   GetServerSidePropsContext,
@@ -17,40 +18,56 @@ const SolvePuzzlePage = ({ puzzle }: any) => {
 };
 
 export const getServerSideProps: GetServerSideProps = withThemes(
-  async ({
-    params,
-    locale,
-  }: GetServerSidePropsContext<ParsedUrlQuery, PreviewData>) => {
-    const apiDomain = process.env.NEXT_PUBLIC_LIMA_BE_DOMAIN;
-    const { id } = params as {
-      id: string;
+  async (
+    ctx: GetServerSidePropsContext<ParsedUrlQuery, PreviewData>,
+    { apiDomain }
+  ) => {
+    const { locale, params } = ctx;
+    // Helper function to load localization messages
+    const loadMessages = async (locale: string) => {
+      try {
+        const commonMessages = (await import(`@/locales/${locale}/common.json`))
+          .default;
+
+        const solvePuzzleMessages = (
+          await import(`@/locales/${locale || 'en'}/solve-puzzle.json`)
+        ).default;
+
+        return {
+          common: commonMessages,
+          'solve-puzzle': solvePuzzleMessages,
+        };
+      } catch (err) {
+        console.error('Localization loading error:', err);
+        return {};
+      }
     };
 
+    // Initialize props
+    const messages = await loadMessages(locale || 'en');
+    const id = params?.id;
+
     try {
-      const res = await fetch(`${apiDomain}/v1/puzzles/${id}`);
-      if (!res.ok) {
-        throw new Error(`Failed to fetch puzzles: ${res.statusText}`);
-      }
-      const data = await res.json();
-      const commonMessages = (
-        await import(`@/locales/${locale || 'en'}/common.json`)
-      ).default;
-      const solvePuzzleMessages = (
-        await import(`@/locales/${locale || 'en'}/solve-puzzle.json`)
-      ).default;
+      const serverAxios = createServerAxios(ctx);
+      const response = await serverAxios.get(`${apiDomain}/v1/puzzles/${id}`);
 
       return {
         props: {
-          puzzle: data,
-          messages: {
-            common: commonMessages,
-            'solve-puzzle': solvePuzzleMessages,
-          },
+          messages,
+          puzzle: response.data,
+          error: null,
         },
       };
-    } catch (error) {
-      console.error('Fetch error:', error);
-      return { props: { puzzles: [] } }; // Fallback to empty puzzles
+    } catch (error: any) {
+      return {
+        props: {
+          messages,
+          error:
+            error.response?.data.message || error.response?.data.message?.error,
+          errorCode: error.response?.status,
+          puzzle: [],
+        },
+      };
     }
   }
 );
