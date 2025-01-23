@@ -136,7 +136,11 @@ const LoginPage = () => {
       <div className="flex items-center justify-between">
         {/* Remember Me Checkbox */}
         <div className="flex items-center">
-          <Checkbox id="rememberMe" {...register('rememberMe')} />
+          <Checkbox
+            id="rememberMe"
+            {...register('rememberMe')}
+            defaultChecked
+          />
           <Label htmlFor="rememberMe" className="ml-2">
             {t('login.remember-me')}
           </Label>

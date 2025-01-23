@@ -8,6 +8,7 @@
     "courses": "Khóa học",
     "lessons": "Bài học",
     "puzzles": "Câu đố",
+    "users": "Tài khoản",
     "login": "Đăng nhập",
     "logout": "Đăng xuất",
     "privacy": "Chính sách bảo mật",
@@ -39,7 +40,7 @@
     "ex": "Ví dụ",
     "success": "Yêu Cầu Đã Được Xử Lý Thành Công",
     "logout-success": "Đăng xuất thành công",
-    "settings": "Cài đặt"
+    "profile": "Tài khoản"
   },
   "button": {
     "back": "Quay lại",

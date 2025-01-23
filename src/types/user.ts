@@ -10,3 +10,20 @@ export type User = {
   role: string;
   _id?: string;
 };
+
+export type Role = {
+  value: string; // Id of the role
+  label: string;
+  _id?: string;
+};
+
+export type UserExpanded = {
+  username: string;
+  password?: string;
+  refreshToken?: string;
+  subscriptionStart?: string;
+  subscriptionEnd?: string;
+  status?: StatusType;
+  role?: Role;
+  _id?: string;
+};

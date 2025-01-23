@@ -98,6 +98,16 @@ export const MenuLeft = () => {
                 {t('navigation.puzzles')}
               </Link>
             </li>
+            {session?.permissions?.user_accounts && (
+              <li className="mb-2">
+                <Link
+                  href="/settings/users"
+                  className="mb-6 hover:text-[var(--p-highlight)]"
+                >
+                  {t('navigation.users')}
+                </Link>
+              </li>
+            )}
           </ul>
         </>
       )}
@@ -120,7 +130,7 @@ export const MenuLeft = () => {
         <LanguageSwitcher />
         {session?.username && (
           <div className="mt-4 flex justify-center">
-            <Dropdown label={t('title.settings')}>
+            <Dropdown label={t('title.profile')}>
               <Dropdown.Item onClick={() => router.push('/change-password')}>
                 {t('navigation.change-password')}
               </Dropdown.Item>

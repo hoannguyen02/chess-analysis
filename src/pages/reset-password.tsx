@@ -54,7 +54,7 @@ const ResetPasswordPage = () => {
         });
       },
       addToast, // Pass addToast to show toast notifications
-      t('common.title.success') // Success message
+      t('reset-password.success') // Success message
     );
 
     setIsSubmitting(false);

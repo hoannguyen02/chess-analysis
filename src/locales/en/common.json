@@ -8,6 +8,7 @@
     "courses": "Courses",
     "lessons": "Lessons",
     "puzzles": "Puzzles",
+    "users": "Users",
     "login": "Login",
     "logout": "Logout",
     "privacy": "Privacy Policy",
@@ -39,7 +40,7 @@
     "ex": "Ex",
     "success": "Request completed successfully",
     "logout-success": "Logout successfully",
-    "settings": "Settings"
+    "profile": "Profile"
   },
   "button": {
     "back": "Back",
