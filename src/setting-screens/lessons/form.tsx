@@ -24,9 +24,10 @@ import {
   Textarea,
   TextInput,
 } from 'flowbite-react';
+import cloneDeep from 'lodash/cloneDeep';
 import { useTranslations } from 'next-intl';
 import { useRouter } from 'next/router';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { DndProvider } from 'react-dnd';
 import { HTML5Backend } from 'react-dnd-html5-backend';
 import {
@@ -381,6 +382,36 @@ export const LessonFormScreen = ({ lesson }: Props) => {
     }
   };
 
+  const reorderPuzzles = (
+    fromIndex: number,
+    toIndex: number,
+    contentIdx: number
+  ) => {
+    // Clone the content puzzles
+    const newPuzzles = cloneDeep(
+      watch(`contents.${contentIdx}.contentPuzzles`)
+    );
+
+    // Create a new array for updated puzzles
+    const updatedPuzzles = [...newPuzzles];
+    console.log('Before splice:', newPuzzles, updatedPuzzles);
+    const [movedPuzzle] = updatedPuzzles.splice(fromIndex, 1); // Remove the item
+    console.log('After splice:', updatedPuzzles);
+    updatedPuzzles.splice(toIndex, 0, movedPuzzle); // Insert the item
+
+    // Update the form state with the reordered puzzles
+    setValue(`contents.${contentIdx}.contentPuzzles`, updatedPuzzles, {
+      shouldDirty: true,
+    });
+
+    // Force a re-render
+    setValue(`contents`, cloneDeep(watch('contents')), { shouldDirty: true });
+  };
+
+  useEffect(() => {
+    console.log('Contents updated:', watch('contents'));
+  }, [watch]);
+
   return (
     <div className="">
       <TitlePage>Lesson Form</TitlePage>
@@ -444,97 +475,106 @@ export const LessonFormScreen = ({ lesson }: Props) => {
           <div className="mb-4">
             Contents:
             <DndProvider backend={HTML5Backend}>
-              {contentFields.map((field, index) => (
-                <DraggableItem
-                  itemType="contents"
-                  index={index}
-                  moveItem={reorderContents}
-                  key={field.id}
-                  className="mb-4"
-                >
-                  <div className="grid grid-cols-[auto_50px] mb-2 gap-4 place-items-center">
-                    <div className="flex flex-col w-full">
-                      <Textarea
-                        rows={3}
-                        placeholder="English title"
-                        {...register(`contents.${index}.title.en`)}
-                        className="mb-2"
-                      />
-                      <Textarea
-                        rows={3}
-                        placeholder="Vietnamese title"
-                        {...register(`contents.${index}.title.vi`)}
-                      />
-                      <ContentExplanations contentIndex={index} />
-                      <h2 className="mt-2">Puzzles/Challenges</h2>
-                      <div>
-                        <div className="grid grid-cols-3">
-                          <Label className="font-bold">Title</Label>
-                          <Label className="font-bold">Difficulty</Label>
-                          <Label>Actions</Label>
-                        </div>
-
-                        {field.contentPuzzles.map((p, pIndex) => (
-                          <div
-                            key={`content-puzzle-${index}-${pIndex}`}
-                            className="grid grid-cols-3 mb-2"
-                          >
-                            <Label>{p.title?.[locale]}</Label>
-                            <Label>{p.difficulty}</Label>
-                            <div className="flex">
-                              <Button
-                                outline
-                                size="sm"
-                                onClick={() => {
-                                  previewPuzzle(p);
-                                }}
-                                className="mr-2"
-                              >
-                                <VscOpenPreview />
-                              </Button>
-                              <Button
-                                outline
-                                size="sm"
-                                type="button"
-                                onClick={() =>
-                                  removeContentPuzzle(index, pIndex)
+              {contentFields.map((field, index) => {
+                return (
+                  <DraggableItem
+                    itemType="contents"
+                    index={index}
+                    moveItem={reorderContents}
+                    key={field.id}
+                    className="mb-4"
+                  >
+                    <div className="grid grid-cols-[auto_50px] mb-2 gap-4 place-items-center">
+                      <div className="flex flex-col w-full">
+                        <Textarea
+                          rows={3}
+                          placeholder="English title"
+                          {...register(`contents.${index}.title.en`)}
+                          className="mb-2"
+                        />
+                        <Textarea
+                          rows={3}
+                          placeholder="Vietnamese title"
+                          {...register(`contents.${index}.title.vi`)}
+                        />
+                        <ContentExplanations contentIndex={index} />
+                        <h2 className="mt-2">Puzzles/Challenges</h2>
+                        <div>
+                          <div className="grid grid-cols-3">
+                            <Label className="font-bold">Title</Label>
+                            <Label className="font-bold">Difficulty</Label>
+                            <Label>Actions</Label>
+                          </div>
+                          <DndProvider backend={HTML5Backend}>
+                            {field.contentPuzzles.map((puzzle, puzzleIndex) => (
+                              <DraggableItem
+                                key={`content-puzzle-${index}-${puzzleIndex}`}
+                                itemType={`contentPuzzles-${index}`}
+                                index={puzzleIndex}
+                                moveItem={(fromIndex, toIndex) =>
+                                  reorderPuzzles(fromIndex, toIndex, index)
                                 }
                               >
-                                -
-                              </Button>
-                            </div>
-                          </div>
-                        ))}
+                                <div className="grid grid-cols-3 mb-2">
+                                  <Label>{puzzle.title?.[locale]}</Label>
+                                  <Label>{puzzle.difficulty}</Label>
+                                  <div className="flex">
+                                    <Button
+                                      outline
+                                      size="sm"
+                                      onClick={() => {
+                                        previewPuzzle(puzzle);
+                                      }}
+                                      className="mr-2"
+                                    >
+                                      <VscOpenPreview />
+                                    </Button>
+                                    <Button
+                                      outline
+                                      size="sm"
+                                      type="button"
+                                      onClick={() =>
+                                        removeContentPuzzle(index, puzzleIndex)
+                                      }
+                                    >
+                                      -
+                                    </Button>
+                                  </div>
+                                </div>
+                              </DraggableItem>
+                            ))}
+                          </DndProvider>
+                          <Button
+                            outline
+                            className="mt-2"
+                            type="button"
+                            onClick={() => {
+                              openContentPuzzleDialog({
+                                // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+                                // @ts-ignore
+                                puzzles: field.contentPuzzles,
+                                contentIdex: index,
+                              });
+                            }}
+                          >
+                            Add puzzle for content
+                          </Button>
+                        </div>
+                      </div>
+                      <div className="">
                         <Button
                           outline
-                          className="mt-2"
+                          size="sm"
                           type="button"
-                          onClick={() => {
-                            openContentPuzzleDialog({
-                              // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-                              // @ts-ignore
-                              puzzles: field.contentPuzzles,
-                              contentIdex: index,
-                            });
-                          }}
+                          onClick={() => removeContent(index)}
                         >
-                          Add puzzle for content
+                          -
                         </Button>
                       </div>
                     </div>
-                    <div className="">
-                      <Button
-                        outline
-                        size="sm"
-                        type="button"
-                        onClick={() => removeContent(index)}
-                      >
-                        -
-                      </Button>
-                    </div>
-                  </div>
-                </DraggableItem>
-              ))}
+                  </DraggableItem>
+                );
+              })}
             </DndProvider>
             <div className="flex items-center">
               <Button

@@ -42,6 +42,7 @@ export const SolvePuzzleDrawer = ({
       <Drawer.Items className="p-4">
         <SolvePuzzle
           showNextButton={showNextButton}
+          highlightPossibleMoves
           onNextClick={onNextClick}
           showBackButton={false}
           puzzle={puzzle}
