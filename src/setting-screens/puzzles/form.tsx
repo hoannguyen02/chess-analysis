@@ -341,8 +341,8 @@ export const PuzzleFormScreen = ({ puzzle, onSaveSuccess }: Props) => {
           <div className="grid grid-cols-5 mb-2 gap-4">
             <Label className="font-semibold" value="Player" />
             <Label className="font-semibold" value="Move" />
-            <Label className="font-semibold" value="From Square" />
             <Label className="font-semibold" value="To Square" />
+            <Label className="font-semibold" value="From Square" />
             <Label className="font-semibold" value="Actions" />
           </div>
           <label className="flex items-center text-[12px]">
@@ -373,9 +373,18 @@ export const PuzzleFormScreen = ({ puzzle, onSaveSuccess }: Props) => {
                 )}
               />
             </div>
-            <TextInput {...register(`preMove.move`)} />
-            <TextInput {...register(`preMove.from`)} />
-            <TextInput {...register(`preMove.to`)} />
+            <TextInput
+              {...register(`preMove.move`)}
+              placeholder="Move (e.g., e4)"
+            />
+            <TextInput
+              {...register(`preMove.to`)}
+              placeholder="To (e.g., e4)"
+            />
+            <TextInput
+              {...register(`preMove.from`)}
+              placeholder="From (e.g., e2)"
+            />
             <div className="">
               <Button
                 outline
@@ -399,6 +408,11 @@ export const PuzzleFormScreen = ({ puzzle, onSaveSuccess }: Props) => {
             >
               <div className="flex justify-between items-center mb-3">
                 <h4 className="font-semibold text-lg">Step {index + 1}</h4>
+                <small>
+                  Noted: First move is default move when user click show
+                  solution
+                </small>
+
                 <div>
                   <Controller
                     control={control}
@@ -420,7 +434,6 @@ export const PuzzleFormScreen = ({ puzzle, onSaveSuccess }: Props) => {
                     )}
                   />
                 </div>
-
                 {/* Remove Step */}
                 <Button
                   type="button"

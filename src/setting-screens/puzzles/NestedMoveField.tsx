@@ -45,17 +45,17 @@ export const NestedMoveField = ({
             className="w-24 rounded-md shadow-sm"
           />
 
-          {/* From Square */}
-          <TextInput
-            placeholder="From (e.g., e2)"
-            {...register(`solutions.${index}.moves.${moveIndex}.from`)}
-            className="w-20 rounded-md shadow-sm"
-          />
-
           {/* To Square */}
           <TextInput
             placeholder="To (e.g., e4)"
             {...register(`solutions.${index}.moves.${moveIndex}.to`)}
+            className="w-20 rounded-md shadow-sm"
+          />
+
+          {/* From Square */}
+          <TextInput
+            placeholder="From (e.g., e2)"
+            {...register(`solutions.${index}.moves.${moveIndex}.from`)}
             className="w-20 rounded-md shadow-sm"
           />
 
