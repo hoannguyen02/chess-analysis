@@ -75,7 +75,7 @@ const LoginPage = () => {
         <TextInput
           id="username"
           type="email"
-          placeholder={`${t('common.title.ex')}: contact@limachess.com`}
+          placeholder={`${t('common.title.example')}: contact@limachess.com`}
           {...register('username', {
             required: t('login.email-required'),
             pattern: {

@@ -1,9 +1,8 @@
-import { useAppContext } from '@/contexts/AppContext';
-import { Alert } from 'flowbite-react';
+import { Alert, Button } from 'flowbite-react';
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import React from 'react';
+import React, { useMemo } from 'react';
 import { VscError } from 'react-icons/vsc';
 import { Logo } from './Logo';
 import { PrimaryButton } from './PrimaryButton';
@@ -21,26 +20,9 @@ export const ErrorBanner: React.FC<ErrorBannerProps> = ({
 }) => {
   const router = useRouter();
   const t = useTranslations();
-  const { session } = useAppContext();
-
-  const handleAction = () => {
-    switch (errorCode) {
-      case 401:
-        router.push('/login');
-        break;
-      case 403:
-        if (session?.username) {
-          router.push('/subscription');
-        }
-        break;
-
-      default:
-        if (retryAction) {
-          retryAction();
-        }
-        break;
-    }
-  };
+  const currentPath = useMemo(() => {
+    return router.asPath;
+  }, [router]);
 
   return (
     <div className="flex justify-center items-center lg:px-4 py-6">
@@ -57,14 +39,31 @@ export const ErrorBanner: React.FC<ErrorBannerProps> = ({
             <p className="text-sm sm:text-base font-medium text-red-800">
               {error}
             </p>
-            {[401, 403].includes(errorCode) || retryAction ? (
+            {[401].includes(errorCode) || retryAction ? (
               <PrimaryButton
                 className="ml-2 mt-2 sm:mt-0"
-                onClick={handleAction}
+                onClick={() => {
+                  router.push(
+                    currentPath !== '/'
+                      ? `/login?redirect=${encodeURIComponent(currentPath)}`
+                      : '/login'
+                  );
+                }}
               >
-                {t('common.button.retry')}
+                {t('common.navigation.login')}
               </PrimaryButton>
             ) : null}
+            {[403].includes(errorCode) && (
+              <Button
+                color="yellow"
+                size="lg"
+                onClick={() => {
+                  router.push('/register-guide');
+                }}
+              >
+                {'common.button.register'}
+              </Button>
+            )}
           </div>
         </Alert>
       </div>

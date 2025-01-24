@@ -1,0 +1,21 @@
+{
+  "title": "Registration & login",
+  "description": "Follow the steps below to complete your registration and login.",
+  "step-1": "Step 1: Make Your Payment",
+  "step-1-description": "Transfer the payment to the following bank details:",
+  "step-2": "Step 2: Send Payment Proof",
+  "step-2-description": "After making the payment, send your payment proof through one of the following channels:",
+  "bank-name": "Bank Name: ",
+  "account-name": "Account Name:",
+  "account-number": "Account Number: ",
+  "payment-description": "Description: ",
+  "payment-description-note": "(phone + email): ",
+  "copy": "Copy",
+  "phone": "Phone:",
+  "gmail": "Gmail: ",
+  "facebook": "Facebook: ",
+  "facebook-button": "Click here to send on Messenger",
+  "step-3": "Step 3: Set password and login",
+  "step-3-description": "We will send you an email to your account, you need to set your password and login. Refer",
+  "video-link": "this video"
+}

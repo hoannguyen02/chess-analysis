@@ -74,7 +74,7 @@ const ForgotPasswordPage = () => {
         <TextInput
           id="email"
           type="email"
-          placeholder={`${t('common.title.ex')}: contact@limachess.com`}
+          placeholder={`${t('common.title.example')}: contact@limachess.com`}
           {...register('email', {
             required: t('forgot-password.email-required'),
             pattern: {

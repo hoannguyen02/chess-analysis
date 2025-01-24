@@ -55,18 +55,18 @@ const LessonDetailsPage = ({ data, error, errorCode }: Props) => {
         </div>
 
         {/* Description */}
-        {description?.en && (
-          <p className="text-gray-600 mb-4">{description.en}</p>
+        {description?.[locale] && (
+          <p className="text-gray-600 mb-4">{description[locale]}</p>
         )}
 
         {/* Objectives */}
-        {objectives?.en && (
+        {objectives?.[locale] && (
           <div className="mb-6">
             <h2 className="text-xl font-semibold mb-2">
               {t('common.title.objectives')}
             </h2>
             <ul className="list-disc list-inside space-y-1">
-              {objectives.en.map((objective, idx) => (
+              {objectives[locale].map((objective, idx) => (
                 <li key={idx}>{objective}</li>
               ))}
             </ul>
@@ -83,7 +83,7 @@ const LessonDetailsPage = ({ data, error, errorCode }: Props) => {
               {contents.map((content, idx) => (
                 <Accordion.Panel key={idx}>
                   <Accordion.Title className="focus:outline-none focus:ring-0">
-                    {content.title.en}
+                    {content.title[locale]}
                   </Accordion.Title>
                   <Accordion.Content>
                     <ul className="list-inside list-decimal space-y-1">
@@ -144,19 +144,6 @@ const LessonDetailsPage = ({ data, error, errorCode }: Props) => {
             </div>
           </div>
         )}
-
-        {/* Call-to-Action */}
-        <div className="text-center">
-          {isPublic ? (
-            <Button color="purple" size="lg">
-              Start Lesson
-            </Button>
-          ) : (
-            <Button color="yellow" size="lg">
-              Unlock Lesson
-            </Button>
-          )}
-        </div>
       </div>
       {isOpenSolvePuzzle && puzzle && (
         <SolvePuzzleDrawer puzzle={puzzle} onClose={onCloseDialog} />

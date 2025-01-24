@@ -37,7 +37,6 @@
     "continue-learning": "Continue Learning",
     "lesson-contents": "Lesson Contents",
     "renew-subscription": "Renew Subscription",
-    "ex": "Ex",
     "success": "Request completed successfully",
     "logout-success": "Logout successfully",
     "profile": "Profile"
@@ -54,6 +53,7 @@
     "solve-now": "Solve Now",
     "try-it": "Try It",
     "view": "View",
-    "retry": "Retry"
+    "retry": "Retry",
+    "register": "Register"
   }
 }

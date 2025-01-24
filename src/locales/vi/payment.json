@@ -1,0 +1,21 @@
+{
+  "title": "Đăng ký & đăng nhập",
+  "description": "Làm theo các bước dưới đây để đăng ký và đăng nhập vào hệ thống.",
+  "step-1": "Bước 1: Thanh toán",
+  "step-1-description": "Chuyển khoản đến thông tin ngân hàng sau:",
+  "bank-name": "Ngân hàng: ",
+  "account-name": "Tên tài khoản:",
+  "account-number": "Số tài khoản: ",
+  "payment-description": "Nội dung",
+  "payment-description-note": "(điện thoại + email): ",
+  "copy": "Sao chép",
+  "phone": "Điện thoại:",
+  "gmail": "Email: ",
+  "step-2": "Bước 2: Gửi biên lai",
+  "step-2-description": "Sau khi thực hiện thanh toán, gửi biên lai của bạn qua một trong các kênh sau:",
+  "facebook": "Facebook: ",
+  "facebook-button": "Nhấn vào đây để gửi qua messenger",
+  "step-3": "Bước 3: Tạo mật khẩu trên hệ thống",
+  "step-3-description": "Chúng tôi sẽ gửi liên kết qua email để bạn đặt mật khẩu và đăng nhập vào hệ thống. Tìm hiểu thêm ở",
+  "video-link": "video này"
+}
