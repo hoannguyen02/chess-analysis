@@ -500,7 +500,8 @@ export const LessonFormScreen = ({ lesson }: Props) => {
                         <ContentExplanations contentIndex={index} />
                         <h2 className="mt-2">Puzzles/Challenges</h2>
                         <div>
-                          <div className="grid grid-cols-3">
+                          <div className="grid grid-cols-4">
+                            <Label className="font-bold">Index</Label>
                             <Label className="font-bold">Title</Label>
                             <Label className="font-bold">Difficulty</Label>
                             <Label>Actions</Label>
@@ -515,7 +516,8 @@ export const LessonFormScreen = ({ lesson }: Props) => {
                                   reorderPuzzles(fromIndex, toIndex, index)
                                 }
                               >
-                                <div className="grid grid-cols-3 mb-2">
+                                <div className="grid grid-cols-4 mb-2">
+                                  <Label>{puzzleIndex + 1}</Label>
                                   <Label>{puzzle.title?.[locale]}</Label>
                                   <Label>{puzzle.difficulty}</Label>
                                   <div className="flex">

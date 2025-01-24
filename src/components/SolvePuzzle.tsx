@@ -398,16 +398,20 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({
     }
 
     const timeout = setTimeout(() => {
-      game.move(engineMove.move);
-      setCurrentFen(game.fen());
-      setMoveSquareStyle({
-        [engineMove.from]: {
-          background: 'var(--p-highlight)',
-        },
-        [engineMove.to]: {
-          background: 'var(--p-highlight)',
-        },
-      });
+      if (engineMove) {
+        game.move(engineMove.move);
+        setCurrentFen(game.fen());
+        setMoveSquareStyle({
+          [engineMove.from]: {
+            background: 'var(--p-highlight)',
+          },
+          [engineMove.to]: {
+            background: 'var(--p-highlight)',
+          },
+        });
+      } else {
+        setMoveSquareStyle({});
+      }
     }, DEFAULT_ENGINE_MOVE_DELAY_TIME);
 
     setCurrentTimeout(timeout);
