@@ -33,6 +33,7 @@ type PuzzleProps = {
   highlightPossibleMoves?: boolean;
   showNextButton?: boolean;
   onNextClick?(): void;
+  onSolved?(): void;
 };
 
 export type HistoryMove = {
@@ -48,6 +49,7 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({
   highlightPossibleMoves = false,
   showNextButton = false,
   onNextClick,
+  onSolved,
 }) => {
   const t = useTranslations();
   const { themeMap, isMobile, locale } = useAppContext();
@@ -175,6 +177,12 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({
 
     if (validMove) {
       const nextStep = currentStep + 1;
+      if (nextStep === puzzle.solutions.length) {
+        // The puzzle is solved
+        if (onSolved) {
+          onSolved(); // Trigger any callback or event when the puzzle is solved
+        }
+      }
       if (
         nextStep < puzzle.solutions.length &&
         puzzle.solutions[nextStep].player === 'engine'

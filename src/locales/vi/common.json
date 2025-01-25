@@ -33,13 +33,14 @@
     "puzzles": "Bài tập",
     "puzzle": "Bài tập",
     "example": "Ví dụ",
-    "start-course": "Vào Học",
+    "start": "Vào Học",
     "continue-learning": "Học Tiếp",
     "lesson-contents": "Nội Dung Bài Học",
     "renew-subscription": "Gia Hạn Đăng Ký",
     "success": "Yêu Cầu Đã Được Xử Lý Thành Công",
     "logout-success": "Đăng xuất thành công",
-    "profile": "Tài khoản"
+    "profile": "Tài khoản",
+    "congrats-course": "Xuất sắc! bạn đã hoàn thành khóa học. hãy tiếp tục nỗ lực nhé!"
   },
   "button": {
     "back": "Quay lại",
@@ -53,7 +54,11 @@
     "solve-now": "Giải ngay",
     "try-it": "Thử Ngay",
     "view": "Xem",
+    "solved": "đã giải",
     "retry": "Thử lại",
-    "register": "Đăng ký tài khoản"
+    "register": "Đăng ký tài khoản",
+    "review-course": "Xem lại khóa học",
+    "review-lesson": "Xem lại bài học",
+    "next-lesson": "Bài tiếp theo"
   }
 }

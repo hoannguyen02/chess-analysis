@@ -12,6 +12,7 @@
   },
   "message": {
     "invalid-move": "Ôi! Thử lại nhé",
-    "done": "Tuyệt vời"
+    "done": "Tuyệt vời",
+    "save-progress-failed": "Không thể lưu được tiến độ, vui lòng thử lại sau"
   }
 }

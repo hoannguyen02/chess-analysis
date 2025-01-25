@@ -36,7 +36,7 @@ export const CourseDetails = ({ data }: Props) => {
       <Button className="mt-4 w-full" color="blue">
         {progress > 0
           ? t('common.title.continue-learning')
-          : t('common.title.start-course')}
+          : t('common.title.start')}
       </Button>
 
       {/* Description Section */}

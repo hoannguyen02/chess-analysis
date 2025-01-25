@@ -12,6 +12,7 @@
   },
   "message": {
     "invalid-move": "Oops! Try Again",
-    "done": "Well Done"
+    "done": "Well Done",
+    "save-progress-failed": "Failed to save progress, please try again later"
   }
 }

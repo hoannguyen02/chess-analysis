@@ -9,6 +9,7 @@ type Props = {
   puzzle: Puzzle;
   showNextButton?: boolean;
   onNextClick?(): void;
+  onSolved?(): void;
 };
 
 export const SolvePuzzleDrawer = ({
@@ -16,6 +17,7 @@ export const SolvePuzzleDrawer = ({
   puzzle,
   showNextButton = false,
   onNextClick,
+  onSolved,
 }: Props) => {
   return (
     <Drawer
@@ -46,6 +48,7 @@ export const SolvePuzzleDrawer = ({
           onNextClick={onNextClick}
           showBackButton={false}
           puzzle={puzzle}
+          onSolved={onSolved}
         />
       </Drawer.Items>
     </Drawer>

@@ -31,6 +31,16 @@ export type Lesson = {
   isPublic?: boolean;
   slug: string;
   priority?: number;
+  totalPuzzles: number; // Precomputed
+  version: number; // Track version changes
+  progress: [
+    {
+      userId: string;
+      completedPuzzles: string[];
+      completedPuzzlesCount: number;
+      completedAtVersion: number;
+    },
+  ];
 };
 
 export type LessonExpanded = {
@@ -59,4 +69,14 @@ export type LessonExpanded = {
   isPublic?: boolean;
   slug: string;
   priority?: number;
+  totalPuzzles: number; // Precomputed
+  version: number; // Track version changes
+  progress: [
+    {
+      userId: string;
+      completedPuzzles: string[];
+      completedPuzzlesCount: number;
+      completedAtVersion: number;
+    },
+  ];
 };

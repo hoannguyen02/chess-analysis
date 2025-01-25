@@ -1,5 +1,5 @@
-import React, { useEffect } from 'react';
 import confetti from 'canvas-confetti';
+import React, { useEffect } from 'react';
 
 const ConfettiEffect: React.FC = () => {
   useEffect(() => {
