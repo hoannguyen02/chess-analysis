@@ -10,12 +10,13 @@ interface Progress {
   completedAtVersion: number;
 }
 
-export const useLessonProgress = (lessonId: string) => {
-  const [progress, setProgress] = useState<Progress>({
-    completedPuzzles: [],
-    completedPuzzlesCount: 0,
-    completedAtVersion: 1,
-  });
+const DefaultProgress = {
+  completedPuzzles: [],
+  completedPuzzlesCount: 0,
+  completedAtVersion: 1,
+};
+export const useLessonProgress = (lessonId: string, version: number) => {
+  const [progress, setProgress] = useState<Progress>(DefaultProgress);
 
   const { addToast } = useToast();
 
@@ -27,12 +28,18 @@ export const useLessonProgress = (lessonId: string) => {
 
   // Load progress on mount
   useEffect(() => {
+    // Fetch progress from local storage
+    const localProgressRaw = JSON.parse(
+      localStorage.getItem(`lesson_${lessonId}`) || 'null'
+    ) as Progress | null;
+    const localProgress = localProgressRaw || DefaultProgress;
+
     const fetchProgress = async () => {
       try {
         if (userId) {
           // 1. Fetch progress from the server
           const response = await axiosInstance.get(
-            `/v1/lessons/public/progress/${lessonId}?userId=${userId}`
+            `/v1/lessons/public/progress/${lessonId}`
           );
           const dbProgress: Progress = await response.data;
           const isSynced = localStorage.getItem(`synced_${lessonId}`);
@@ -41,15 +48,6 @@ export const useLessonProgress = (lessonId: string) => {
             setProgress(dbProgress);
             return;
           }
-          // 2. Fetch progress from localStorage (guest progress)
-          const localProgressRaw = localStorage.getItem(`lesson_${lessonId}`);
-          const localProgress = localProgressRaw
-            ? JSON.parse(localProgressRaw)
-            : {
-                completedPuzzles: [],
-                completedPuzzlesCount: 0,
-                completedAtVersion: 1,
-              };
 
           // 3. Merge localProgress with dbProgress
           const mergedPuzzles = Array.from(
@@ -73,7 +71,8 @@ export const useLessonProgress = (lessonId: string) => {
               `/v1/lessons/public/progress/${lessonId}`,
               {
                 userId,
-                completedPuzzles: [newPuzzles],
+                completedPuzzles: newPuzzles,
+                version,
               }
             );
           }
@@ -85,26 +84,20 @@ export const useLessonProgress = (lessonId: string) => {
           // 6. Update progress state with merged progress
           setProgress(mergedProgress);
         } else {
-          // Fetch progress from local storage
-          const localProgress = JSON.parse(
-            localStorage.getItem(`lesson_${lessonId}`) || 'null'
-          ) as Progress | null;
-
-          setProgress(
-            localProgress || {
-              completedPuzzles: [],
-              completedPuzzlesCount: 0,
-              completedAtVersion: 1,
-            }
-          );
+          setProgress(localProgress);
         }
-      } catch (err) {
-        console.error('Failed to fetch progress:', err);
+      } catch (err: any) {
+        if (err.response?.status === 404) {
+          console.error('Progress not found, defaulting to empty progress.');
+          setProgress(localProgress);
+        } else {
+          console.error('Unexpected error:', err);
+        }
       }
     };
 
     fetchProgress();
-  }, [lessonId, progress.completedAtVersion, userId]);
+  }, [lessonId, progress.completedAtVersion, userId, version]);
 
   // Save progress
   const saveProgress = async (puzzleId: string) => {
@@ -124,6 +117,7 @@ export const useLessonProgress = (lessonId: string) => {
         await axiosInstance.post(`/v1/lessons/public/progress/${lessonId}`, {
           userId,
           completedPuzzles: [puzzleId],
+          version,
         });
       } else {
         // Save progress to local storage

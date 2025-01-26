@@ -169,7 +169,7 @@ const ContentExplanations = ({ contentIndex }: { contentIndex: number }) => {
         (_, index) => (
           <Card
             key={index}
-            className="w-full p-4 shadow-sm border mb-3 hover:shadow-md transition duration-200"
+            className="w-full shadow-sm border mb-3 hover:shadow-md transition duration-200"
           >
             <div className="flex items-center gap-4 w-full">
               <div className="flex-grow grid grid-cols-2 gap-4">
@@ -599,7 +599,7 @@ export const LessonFormScreen = ({ lesson }: Props) => {
             </div>
           </div>
 
-          <div className="mb-4">
+          {/* <div className="mb-4">
             Puzzles:
             <div className="grid grid-cols-[45%_10%_25%_10%] mb-2 gap-4 place-items-center">
               <Label>Title</Label>
@@ -656,9 +656,11 @@ export const LessonFormScreen = ({ lesson }: Props) => {
                 <VscAdd className="text-[20px]" /> Add puzzle
               </Button>
             </div>
-          </div>
+          </div> */}
 
-          {courses && courses?.length > 0 && (
+          {/*  1 lesson only belongs 1 course for now, if we change this logic, 
+          we have to change the sync lesson progress also */}
+          {courses && courses?.length > 0 ? (
             <div className="mb-16">
               Courses:
               <div className="grid grid-cols-[70%_15%_15%] mb-2 gap-4">
@@ -666,16 +668,14 @@ export const LessonFormScreen = ({ lesson }: Props) => {
                 <Label className="font-bold">Difficulty</Label>
                 <Label className="font-bold">Status</Label>
               </div>
-              {courses.map((course, index) => (
-                <div
-                  key={`course-${index}`}
-                  className="grid grid-cols-[70%_15%_15%] mb-2 gap-4"
-                >
-                  <Label>{course.title[locale]}</Label>
-                  <Label>{course.difficulty}</Label>
-                  <Label>{course.status}</Label>
-                </div>
-              ))}
+              <div className="grid grid-cols-[70%_15%_15%] mb-2 gap-4">
+                <Label>{courses[0].title[locale]}</Label>
+                <Label>{courses[0].difficulty}</Label>
+                <Label>{courses[0].status}</Label>
+              </div>
+            </div>
+          ) : (
+            <>
               <Button
                 type="button"
                 outline
@@ -683,9 +683,9 @@ export const LessonFormScreen = ({ lesson }: Props) => {
                   setAddToCoursesPopup(true);
                 }}
               >
-                Add this lesson to another courses
+                Add this lesson to a course
               </Button>
-            </div>
+            </>
           )}
 
           <div className="flex mt-4">

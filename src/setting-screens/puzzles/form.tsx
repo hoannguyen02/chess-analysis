@@ -141,9 +141,7 @@ export const PuzzleFormScreen = ({ puzzle, onSaveSuccess }: Props) => {
               payload
             );
           } else {
-            return await axiosInstance.post(`${apiDomain}/v1/puzzles`, {
-              payload,
-            });
+            return await axiosInstance.post(`${apiDomain}/v1/puzzles`, payload);
           }
         },
         addToast, // Pass addToast to show toast notifications

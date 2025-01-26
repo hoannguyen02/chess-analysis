@@ -3,21 +3,22 @@ import { useAppContext } from '@/contexts/AppContext';
 import useDialog from '@/hooks/useDialog';
 import { LessonExpanded } from '@/types/lesson';
 import { Puzzle } from '@/types/puzzle';
+import { fetcher } from '@/utils/fetcher';
 import { getDifficultyColor } from '@/utils/getDifficultyColor';
 import { Accordion, Badge, Button, Card, Progress } from 'flowbite-react';
 import { useTranslations } from 'next-intl';
 import { useRouter } from 'next/router';
 import { useEffect, useMemo, useState } from 'react';
+import useSWR from 'swr';
 import { CongratsBanner } from './CongratsBanner';
 import { useLessonProgress } from './useLessonProgress';
 import { VersionNotificationBanner } from './VersionNotificationBanner';
 
 type Props = {
   data: LessonExpanded;
-  nextLessonSlug?: string;
 };
 
-export const LessonDetails = ({ data, nextLessonSlug }: Props) => {
+export const LessonDetails = ({ data }: Props) => {
   const { locale } = useAppContext();
   const router = useRouter();
   const courseSlug = useMemo(() => router.query.courseSlug, [router]);
@@ -28,32 +29,54 @@ export const LessonDetails = ({ data, nextLessonSlug }: Props) => {
     onOpenDialog,
   } = useDialog<Puzzle>();
   const t = useTranslations();
-  const { title, description, objectives, contents, difficulty, _id } = data;
-  const { progress, saveProgress } = useLessonProgress(_id!);
+  const { title, description, objectives, contents, difficulty, _id, version } =
+    data;
+  const { progress, saveProgress } = useLessonProgress(_id!, version);
   const [showBanner, setShowBanner] = useState(false);
   const [expandedContentIndex, setExpandedContentIndex] = useState<
     number | undefined
   >(undefined);
 
-  const completedProgress = useMemo(
-    () => (progress.completedPuzzlesCount / data.totalPuzzles) * 100,
-    [data, progress]
+  const { completedProgress, isCompleted } = useMemo(() => {
+    const progressInPercent =
+      (progress.completedPuzzlesCount / data.totalPuzzles) * 100;
+    return {
+      isCompleted: progressInPercent === 100,
+      completedProgress: progressInPercent,
+    };
+  }, [data, progress]);
+
+  const key = useMemo(
+    () =>
+      isCompleted ? `/v1/courses/public/next-lesson/${courseSlug}` : undefined,
+    [courseSlug, isCompleted]
   );
+
+  const { data: nextLessonSlug, isLoading: nextLessonSlugLoading } = useSWR(
+    key,
+    fetcher,
+    {
+      revalidateOnFocus: false,
+    }
+  );
+
+  // console.log('nextLessonSlug', nextLessonSlug);
+  // console.log('nextLessonSlugLoading', nextLessonSlugLoading);
 
   useEffect(() => {
     // Check if the lesson version has changed and notify the user
-    if (progress.completedAtVersion < data.version) {
+    if (isCompleted && progress.completedAtVersion < data.version) {
       setShowBanner(true);
     } else {
       setShowBanner(false);
     }
-  }, [progress.completedAtVersion, data.version]);
+  }, [progress.completedAtVersion, data.version, isCompleted]);
 
   const difficultyColor = getDifficultyColor(difficulty);
 
   const handleContinueOrStart = () => {
     // Start or review is expanded first content
-    if (progress.completedPuzzlesCount === 0 || completedProgress === 100) {
+    if (progress.completedPuzzlesCount === 0 || isCompleted) {
       // Expand the first content
       setExpandedContentIndex(0);
     } else if (progress.completedPuzzlesCount < data.totalPuzzles) {
@@ -91,7 +114,7 @@ export const LessonDetails = ({ data, nextLessonSlug }: Props) => {
           </Badge>
         </div>
         <Progress progress={completedProgress} size="lg" className="mb-4" />
-        {completedProgress === 100 ? (
+        {isCompleted ? (
           <div className="flex flex-col sm:flex-row gap-4 mt-6">
             <Button
               className="w-full sm:w-auto"

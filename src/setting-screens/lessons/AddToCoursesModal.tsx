@@ -186,7 +186,7 @@ export const AddToCoursesModal: React.FC<Props> = ({
                         />
                       </Table.Cell>
                       <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
-                        {item.title}
+                        {item.title[locale]}
                       </Table.Cell>
                       <Table.Cell>{item.difficulty}</Table.Cell>
                       <Table.Cell>{item.status}</Table.Cell>
