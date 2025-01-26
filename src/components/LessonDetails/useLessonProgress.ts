@@ -2,7 +2,7 @@ import { useAppContext } from '@/contexts/AppContext';
 import { useToast } from '@/contexts/ToastContext';
 import axiosInstance from '@/utils/axiosInstance';
 import { useTranslations } from 'next-intl';
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 
 interface Progress {
   completedPuzzles: string[];
@@ -10,12 +10,16 @@ interface Progress {
   completedAtVersion: number;
 }
 
-const DefaultProgress = {
+const DefaultProgress: Progress = {
   completedPuzzles: [],
   completedPuzzlesCount: 0,
   completedAtVersion: 1,
 };
-export const useLessonProgress = (lessonId: string, version: number) => {
+export const useLessonProgress = (
+  lessonId: string,
+  version: number,
+  currentPuzzles: string[] = []
+) => {
   const [progress, setProgress] = useState<Progress>(DefaultProgress);
 
   const { addToast } = useToast();
@@ -27,29 +31,55 @@ export const useLessonProgress = (lessonId: string, version: number) => {
   const userId = useMemo(() => session?.id, [session]);
 
   // Load progress on mount
+  const isFetching = useRef(false);
   useEffect(() => {
-    // Fetch progress from local storage
-    const localProgressRaw = JSON.parse(
-      localStorage.getItem(`lesson_${lessonId}`) || 'null'
-    ) as Progress | null;
-    const localProgress = localProgressRaw || DefaultProgress;
+    const loadLocalProgress = () => {
+      const localProgressRaw = JSON.parse(
+        localStorage.getItem(`lesson_${lessonId}`) || 'null'
+      ) as Progress | null;
 
-    const fetchProgress = async () => {
+      if (!localProgressRaw) return DefaultProgress;
+
+      const { completedAtVersion, completedPuzzles } = localProgressRaw;
+
+      if (completedAtVersion !== version) {
+        const currentPuzzleSet = new Set(currentPuzzles);
+        const filteredPuzzles = completedPuzzles.filter((id) =>
+          currentPuzzleSet.has(id)
+        );
+
+        return {
+          completedPuzzles: filteredPuzzles,
+          completedPuzzlesCount: filteredPuzzles.length,
+          completedAtVersion: version,
+        };
+      }
+
+      return localProgressRaw;
+    };
+
+    const fetchProgress = async (localProgress: Progress) => {
+      if (isFetching.current) return;
+      isFetching.current = true;
+
       try {
         if (userId) {
-          // 1. Fetch progress from the server
           const response = await axiosInstance.get(
             `/v1/lessons/public/progress/${lessonId}`
           );
-          const dbProgress: Progress = await response.data;
+          const dbProgress: Progress = response.data;
           const isSynced = localStorage.getItem(`synced_${lessonId}`);
-          // Check if user synced successfully previously
+
           if (isSynced) {
-            setProgress(dbProgress);
+            setProgress((prevProgress) => {
+              if (JSON.stringify(prevProgress) !== JSON.stringify(dbProgress)) {
+                return dbProgress;
+              }
+              return prevProgress;
+            });
             return;
           }
 
-          // 3. Merge localProgress with dbProgress
           const mergedPuzzles = Array.from(
             new Set([
               ...dbProgress.completedPuzzles,
@@ -59,45 +89,63 @@ export const useLessonProgress = (lessonId: string, version: number) => {
           const mergedProgress = {
             completedPuzzles: mergedPuzzles,
             completedPuzzlesCount: mergedPuzzles.length,
-            completedAtVersion: progress.completedAtVersion,
+            completedAtVersion: version,
           };
 
-          // 4. Update the database with merged progress if there are new puzzles
           const newPuzzles = mergedPuzzles.filter(
-            (puzzleId) => !dbProgress.completedPuzzles.includes(puzzleId)
+            (id) => !dbProgress.completedPuzzles.includes(id)
           );
+
           if (newPuzzles.length > 0) {
             await axiosInstance.post(
               `/v1/lessons/public/progress/${lessonId}`,
-              {
-                userId,
-                completedPuzzles: newPuzzles,
-                version,
-              }
+              { userId, completedPuzzles: newPuzzles, version }
             );
           }
 
-          // 5. Set sync & clear localStorage after syncing
           localStorage.setItem(`synced_${lessonId}`, 'true');
           localStorage.removeItem(`lesson_${lessonId}`);
 
-          // 6. Update progress state with merged progress
-          setProgress(mergedProgress);
+          setProgress((prevProgress) => {
+            if (
+              JSON.stringify(prevProgress) !== JSON.stringify(mergedProgress)
+            ) {
+              return mergedProgress;
+            }
+            return prevProgress;
+          });
         } else {
-          setProgress(localProgress);
+          setProgress((prevProgress) => {
+            if (
+              JSON.stringify(prevProgress) !== JSON.stringify(localProgress)
+            ) {
+              return localProgress;
+            }
+            return prevProgress;
+          });
         }
       } catch (err: any) {
         if (err.response?.status === 404) {
           console.error('Progress not found, defaulting to empty progress.');
-          setProgress(localProgress);
+          setProgress((prevProgress) => {
+            if (
+              JSON.stringify(prevProgress) !== JSON.stringify(localProgress)
+            ) {
+              return localProgress;
+            }
+            return prevProgress;
+          });
         } else {
           console.error('Unexpected error:', err);
         }
+      } finally {
+        isFetching.current = false;
       }
     };
 
-    fetchProgress();
-  }, [lessonId, progress.completedAtVersion, userId, version]);
+    const localProgress = loadLocalProgress();
+    fetchProgress(localProgress);
+  }, [currentPuzzles, lessonId, userId, version]);
 
   // Save progress
   const saveProgress = async (puzzleId: string) => {

@@ -31,7 +31,14 @@ export const LessonDetails = ({ data }: Props) => {
   const t = useTranslations();
   const { title, description, objectives, contents, difficulty, _id, version } =
     data;
-  const { progress, saveProgress } = useLessonProgress(_id!, version);
+
+  const { progress, saveProgress } = useLessonProgress(
+    _id!,
+    version,
+    contents?.flatMap((c) => {
+      return c.contentPuzzles?.map(({ puzzleId: puzzle }) => puzzle._id!) || [];
+    })
+  );
   const [showBanner, setShowBanner] = useState(false);
   const [expandedContentIndex, setExpandedContentIndex] = useState<
     number | undefined
