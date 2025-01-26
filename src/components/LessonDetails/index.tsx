@@ -8,11 +8,10 @@ import { getDifficultyColor } from '@/utils/getDifficultyColor';
 import { Accordion, Badge, Button, Card, Progress } from 'flowbite-react';
 import { useTranslations } from 'next-intl';
 import { useRouter } from 'next/router';
-import { useEffect, useMemo, useState } from 'react';
+import { useMemo, useState } from 'react';
 import useSWR from 'swr';
 import { CongratsBanner } from './CongratsBanner';
 import { useLessonProgress } from './useLessonProgress';
-import { VersionNotificationBanner } from './VersionNotificationBanner';
 
 type Props = {
   data: LessonExpanded;
@@ -32,14 +31,21 @@ export const LessonDetails = ({ data }: Props) => {
   const { title, description, objectives, contents, difficulty, _id, version } =
     data;
 
+  const contentPuzzleIds = useMemo(
+    () =>
+      contents?.flatMap((c) => {
+        return (
+          c.contentPuzzles?.map(({ puzzleId: puzzle }) => puzzle._id!) || []
+        );
+      }),
+    [contents]
+  );
+
   const { progress, saveProgress } = useLessonProgress(
     _id!,
     version,
-    contents?.flatMap((c) => {
-      return c.contentPuzzles?.map(({ puzzleId: puzzle }) => puzzle._id!) || [];
-    })
+    contentPuzzleIds
   );
-  const [showBanner, setShowBanner] = useState(false);
   const [expandedContentIndex, setExpandedContentIndex] = useState<
     number | undefined
   >(undefined);
@@ -59,25 +65,13 @@ export const LessonDetails = ({ data }: Props) => {
     [courseSlug, isCompleted]
   );
 
-  const { data: nextLessonSlug, isLoading: nextLessonSlugLoading } = useSWR(
+  const { data: nextLessonSlug, isLoading: isLoadingNextLesson } = useSWR(
     key,
     fetcher,
     {
       revalidateOnFocus: false,
     }
   );
-
-  // console.log('nextLessonSlug', nextLessonSlug);
-  // console.log('nextLessonSlugLoading', nextLessonSlugLoading);
-
-  useEffect(() => {
-    // Check if the lesson version has changed and notify the user
-    if (isCompleted && progress.completedAtVersion < data.version) {
-      setShowBanner(true);
-    } else {
-      setShowBanner(false);
-    }
-  }, [progress.completedAtVersion, data.version, isCompleted]);
 
   const difficultyColor = getDifficultyColor(difficulty);
 
@@ -104,13 +98,6 @@ export const LessonDetails = ({ data }: Props) => {
   return (
     <>
       <div className="container mx-auto p-4">
-        {showBanner && (
-          <VersionNotificationBanner
-            currentVersion={data.version}
-            completedAtVersion={progress.completedAtVersion}
-            onDismiss={() => setShowBanner(false)}
-          />
-        )}
         {/* Header Section */}
         <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-6">
           <h1 className="text-3xl font-bold text-gray-800 mb-2 sm:mb-0">
@@ -122,30 +109,27 @@ export const LessonDetails = ({ data }: Props) => {
         </div>
         <Progress progress={completedProgress} size="lg" className="mb-4" />
         {isCompleted ? (
-          <div className="flex flex-col sm:flex-row gap-4 mt-6">
-            <Button
-              className="w-full sm:w-auto"
-              color="blue"
-              onClick={handleContinueOrStart}
-            >
-              {t('common.button.review-lesson')}
-            </Button>
-            {nextLessonSlug ? (
-              <Button
-                className="w-full sm:w-auto"
-                color="green"
-                onClick={handleNextLesson}
-              >
-                {t('common.button.next-lesson')}
-              </Button>
-            ) : (
-              <CongratsBanner
-                onClick={() => {
-                  router.push(`/lessons/${courseSlug}`);
-                }}
-              />
-            )}
-          </div>
+          isLoadingNextLesson ? null : (
+            <div className="flex flex-col sm:flex-row gap-4 mt-6">
+              {nextLessonSlug ? (
+                <>
+                  <Button
+                    className="mb-6 w-full text-lg py-3"
+                    color="blue"
+                    onClick={handleNextLesson}
+                  >
+                    {t('common.button.next-lesson')}
+                  </Button>
+                </>
+              ) : (
+                <CongratsBanner
+                  onClick={() => {
+                    router.push(`/lessons/${courseSlug}`);
+                  }}
+                />
+              )}
+            </div>
+          )
         ) : (
           <Button
             className="mb-6 w-full text-lg py-3"
