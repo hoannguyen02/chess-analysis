@@ -5,10 +5,10 @@ import { LessonExpanded } from '@/types/lesson';
 import { Puzzle } from '@/types/puzzle';
 import { fetcher } from '@/utils/fetcher';
 import { getDifficultyColor } from '@/utils/getDifficultyColor';
-import { Accordion, Badge, Button, Card, Progress } from 'flowbite-react';
+import { Badge, Button, Card, Progress } from 'flowbite-react';
 import { useTranslations } from 'next-intl';
 import { useRouter } from 'next/router';
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import useSWR from 'swr';
 import { CongratsBanner } from './CongratsBanner';
 import { useLessonProgress } from './useLessonProgress';
@@ -46,10 +46,46 @@ export const LessonDetails = ({ data }: Props) => {
     version,
     contentPuzzleIds
   );
-  const [expandedContentIndex, setExpandedContentIndex] = useState<
-    number | undefined
-  >(undefined);
 
+  const [expandedContentIndex, setExpandedContentIndex] = useState<
+    number | null
+  >(null);
+  // Create refs for each panel
+  const panelRefs = useRef<(HTMLDivElement | null)[]>([]);
+
+  const handleScrollToPanel = (index: number) => {
+    const panel = panelRefs.current[index];
+    if (panel) {
+      // Delay scroll to ensure the layout is fully updated
+      setTimeout(() => {
+        const panelRect = panel.getBoundingClientRect();
+        const viewportHeight = window.innerHeight;
+        const offset = 45;
+
+        if (panelRect.top < 0 || panelRect.bottom > viewportHeight) {
+          const scrollPosition = window.scrollY + panelRect.top - offset;
+
+          window.scrollTo({
+            top: scrollPosition,
+            behavior: 'smooth',
+          });
+        }
+      }, 300); // Adjust delay based on your animation duration
+    }
+  };
+
+  // Scroll to the default index on initial render
+  useEffect(() => {
+    if (expandedContentIndex !== null) {
+      handleScrollToPanel(expandedContentIndex);
+    }
+  }, [expandedContentIndex]);
+
+  const togglePanel = (index: number) => {
+    setExpandedContentIndex((prevIndex) =>
+      prevIndex === index ? null : index
+    );
+  };
   const { completedProgress, isCompleted } = useMemo(() => {
     const progressInPercent =
       (progress.completedPuzzlesCount / data.totalPuzzles) * 100;
@@ -80,14 +116,17 @@ export const LessonDetails = ({ data }: Props) => {
     if (progress.completedPuzzlesCount === 0 || isCompleted) {
       // Expand the first content
       setExpandedContentIndex(0);
-    } else if (progress.completedPuzzlesCount < data.totalPuzzles) {
-      // Find the first uncompleted content
-      const index = data.contents?.findIndex((content) => {
-        return content.contentPuzzles.some(
-          (puzzle) => !progress.completedPuzzles.includes(puzzle.puzzleId._id!)
-        );
-      });
-      if (index !== -1) setExpandedContentIndex(index);
+    } else {
+      if (progress.completedPuzzlesCount < data.totalPuzzles) {
+        // Find the first uncompleted content
+        const index = data.contents?.findIndex((content) => {
+          return content.contentPuzzles.some(
+            (puzzle) =>
+              !progress.completedPuzzles.includes(puzzle.puzzleId._id!)
+          );
+        });
+        if (index !== -1) setExpandedContentIndex(index as number);
+      }
     }
   };
 
@@ -167,18 +206,41 @@ export const LessonDetails = ({ data }: Props) => {
             <h2 className="text-xl font-semibold mb-3">
               {t('common.title.lesson-contents')}
             </h2>
-            <Accordion>
-              {contents.map((content, idx) => (
-                <Accordion.Panel
-                  key={idx}
-                  isOpen={expandedContentIndex === idx}
+            {contents.map((content, idx) => (
+              <div
+                key={idx}
+                ref={(el) => {
+                  panelRefs.current[idx] = el;
+                }}
+                className="border rounded-lg shadow-sm mb-4"
+              >
+                {/* Accordion Header */}
+                <div
+                  onClick={() => togglePanel(idx)}
+                  className="cursor-pointer flex justify-between items-center p-4 bg-blue-100 hover:bg-blue-200 transition duration-200 rounded-t-lg"
                 >
-                  <Accordion.Title className="text-lg font-medium focus:outline-none focus:ring-0">
-                    <span className="flex items-center">
-                      {content.title[locale]}
-                    </span>
-                  </Accordion.Title>
-                  <Accordion.Content>
+                  <h3 className="font-semibold text-xl text-gray-800">
+                    {content.title[locale]}
+                  </h3>
+                  <span
+                    className={`transform transition-transform duration-300 ${
+                      expandedContentIndex === idx
+                        ? 'rotate-180 text-blue-600'
+                        : 'rotate-0 text-gray-500'
+                    }`}
+                  >
+                    ▼
+                  </span>
+                </div>
+
+                {/* Accordion Content */}
+                <div
+                  className={`overflow-hidden transition-[max-height] duration-500 ease-in-out ${
+                    expandedContentIndex === idx ? 'max-h-screen' : 'max-h-0'
+                  }`}
+                >
+                  <div className="p-4 bg-white rounded-b-lg">
+                    {/* Explanations */}
                     <ul className="list-inside list-decimal space-y-2 text-lg">
                       {content.explanations?.[locale]?.map((explanation, i) => (
                         <li key={i} className="text-gray-600">
@@ -196,9 +258,9 @@ export const LessonDetails = ({ data }: Props) => {
                           return (
                             <Card
                               key={index}
-                              className="hover:shadow-lg transition"
+                              className="hover:shadow-lg transition border"
                             >
-                              <p className="text-center text-lg font-semibold">
+                              <p className="text-center text-lg font-semibold text-gray-700">
                                 {t('common.title.example')} {index + 1}
                               </p>
                               <Button
@@ -218,10 +280,10 @@ export const LessonDetails = ({ data }: Props) => {
                         }
                       )}
                     </div>
-                  </Accordion.Content>
-                </Accordion.Panel>
-              ))}
-            </Accordion>
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
         )}
 

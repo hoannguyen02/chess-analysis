@@ -4,6 +4,16 @@ import { DifficultyType, StatusType } from './status';
 
 export type ContentType = 'text' | 'video' | 'image';
 
+export type ContentLesson = {
+  type: ContentType;
+  title: {
+    en: string;
+    vi: string;
+  };
+  explanations?: ExplanationType;
+  contentPuzzles: { puzzleId: Puzzle }[];
+};
+
 export type Lesson = {
   title: {
     en: string;
@@ -15,15 +25,7 @@ export type Lesson = {
   };
   objectives?: ObjectiveType;
   puzzles: { puzzleId: string }[];
-  contents?: {
-    type: ContentType;
-    title: {
-      en: string;
-      vi: string;
-    };
-    explanations?: ExplanationType;
-    contentPuzzles: { puzzleId: string }[];
-  }[];
+  contents?: ContentLesson[];
   difficulty?: DifficultyType;
   status: StatusType;
   _id?: string;
@@ -54,15 +56,7 @@ export type LessonExpanded = {
   };
   objectives?: ObjectiveType;
   puzzles: { puzzleId: Puzzle }[];
-  contents?: {
-    type: ContentType;
-    title: {
-      en: string;
-      vi: string;
-    };
-    explanations?: ExplanationType;
-    contentPuzzles: { puzzleId: Puzzle }[];
-  }[];
+  contents?: ContentLesson[];
   difficulty?: DifficultyType;
   status: StatusType;
   _id?: string;
