@@ -28,8 +28,16 @@ export const LessonDetails = ({ data }: Props) => {
     onOpenDialog,
   } = useDialog<Puzzle>();
   const t = useTranslations();
-  const { title, description, objectives, contents, difficulty, _id, version } =
-    data;
+  const {
+    title,
+    description,
+    objectives,
+    contents,
+    difficulty,
+    _id,
+    version,
+    totalPuzzles,
+  } = data;
 
   const contentPuzzleIds = useMemo(
     () =>
@@ -44,17 +52,18 @@ export const LessonDetails = ({ data }: Props) => {
   const { progress, saveProgress } = useLessonProgress(
     _id!,
     version,
-    contentPuzzleIds
+    contentPuzzleIds,
+    totalPuzzles
   );
 
   const { completedProgress, isCompleted } = useMemo(() => {
     const progressInPercent =
-      (progress.completedPuzzlesCount / data.totalPuzzles) * 100;
+      (progress.completedPuzzlesCount / totalPuzzles) * 100;
     return {
       isCompleted: progressInPercent === 100,
       completedProgress: progressInPercent,
     };
-  }, [data, progress]);
+  }, [progress.completedPuzzlesCount, totalPuzzles]);
 
   const [expandedContentIndex, setExpandedContentIndex] = useState<
     number | null

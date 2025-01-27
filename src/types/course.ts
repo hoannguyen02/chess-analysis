@@ -20,6 +20,8 @@ export type Course = {
   isPublic?: boolean;
   slug: string;
   priority?: number;
+  totalLessons: number; // Precomputed
+  version: number; // Track version changes
 };
 
 export type CourseExpanded = {
@@ -40,4 +42,6 @@ export type CourseExpanded = {
   lessons: { lessonId: Lesson }[];
   slug: string;
   priority?: number;
+  totalLessons: number; // Precomputed
+  version: number; // Track version changes
 };

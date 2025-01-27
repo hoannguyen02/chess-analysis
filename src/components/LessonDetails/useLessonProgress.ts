@@ -1,16 +1,11 @@
 import { useAppContext } from '@/contexts/AppContext';
 import { useToast } from '@/contexts/ToastContext';
+import { LessonProgress } from '@/types';
 import axiosInstance from '@/utils/axiosInstance';
 import { useTranslations } from 'next-intl';
 import { useEffect, useMemo, useRef, useState } from 'react';
 
-interface Progress {
-  completedPuzzles: string[];
-  completedPuzzlesCount: number;
-  completedAtVersion: number;
-}
-
-const DefaultProgress: Progress = {
+const DefaultProgress: LessonProgress = {
   completedPuzzles: [],
   completedPuzzlesCount: 0,
   completedAtVersion: 1,
@@ -18,9 +13,10 @@ const DefaultProgress: Progress = {
 export const useLessonProgress = (
   lessonId: string,
   version: number,
-  currentPuzzles: string[] = []
+  currentPuzzles: string[] = [],
+  totalPuzzles: number
 ) => {
-  const [progress, setProgress] = useState<Progress>(DefaultProgress);
+  const [progress, setProgress] = useState<LessonProgress>(DefaultProgress);
 
   const { addToast } = useToast();
 
@@ -36,7 +32,7 @@ export const useLessonProgress = (
     const loadLocalProgress = () => {
       const localProgressRaw = JSON.parse(
         localStorage.getItem(`lesson_${lessonId}`) || 'null'
-      ) as Progress | null;
+      ) as LessonProgress | null;
 
       if (!localProgressRaw) return DefaultProgress;
 
@@ -58,7 +54,7 @@ export const useLessonProgress = (
       return localProgressRaw;
     };
 
-    const fetchProgress = async (localProgress: Progress) => {
+    const fetchProgress = async (localProgress: LessonProgress) => {
       if (isFetching.current) return;
       isFetching.current = true;
 
@@ -67,16 +63,11 @@ export const useLessonProgress = (
           const response = await axiosInstance.get(
             `/v1/lessons/public/progress/${lessonId}`
           );
-          const dbProgress: Progress = response.data;
+          const dbProgress: LessonProgress = response.data;
           const isSynced = localStorage.getItem(`synced_${lessonId}`);
 
           if (isSynced) {
-            setProgress((prevProgress) => {
-              if (JSON.stringify(prevProgress) !== JSON.stringify(dbProgress)) {
-                return dbProgress;
-              }
-              return prevProgress;
-            });
+            setProgress(dbProgress);
             return;
           }
 
@@ -105,36 +96,14 @@ export const useLessonProgress = (
 
           localStorage.setItem(`synced_${lessonId}`, 'true');
           localStorage.removeItem(`lesson_${lessonId}`);
-
-          setProgress((prevProgress) => {
-            if (
-              JSON.stringify(prevProgress) !== JSON.stringify(mergedProgress)
-            ) {
-              return mergedProgress;
-            }
-            return prevProgress;
-          });
+          setProgress(mergedProgress);
         } else {
-          setProgress((prevProgress) => {
-            if (
-              JSON.stringify(prevProgress) !== JSON.stringify(localProgress)
-            ) {
-              return localProgress;
-            }
-            return prevProgress;
-          });
+          setProgress(localProgress);
         }
       } catch (err: any) {
         if (err.response?.status === 404) {
           console.error('Progress not found, defaulting to empty progress.');
-          setProgress((prevProgress) => {
-            if (
-              JSON.stringify(prevProgress) !== JSON.stringify(localProgress)
-            ) {
-              return localProgress;
-            }
-            return prevProgress;
-          });
+          setProgress(localProgress);
         } else {
           console.error('Unexpected error:', err);
         }
@@ -151,7 +120,7 @@ export const useLessonProgress = (
   const saveProgress = async (puzzleId: string) => {
     if (progress.completedPuzzles.includes(puzzleId)) return;
 
-    const updatedProgress: Progress = {
+    const updatedProgress: LessonProgress = {
       completedPuzzles: [...progress.completedPuzzles, puzzleId],
       completedPuzzlesCount: progress.completedPuzzlesCount + 1,
       completedAtVersion: progress.completedAtVersion,
@@ -166,6 +135,7 @@ export const useLessonProgress = (
           userId,
           completedPuzzles: [puzzleId],
           version,
+          totalPuzzles,
         });
       } else {
         // Save progress to local storage

@@ -2,6 +2,7 @@ import { CourseDetails } from '@/components/CourseDetails';
 import { ErrorBanner } from '@/components/ErrorBanner';
 import Layout from '@/components/Layout';
 import { withThemes } from '@/HOF/withThemes';
+import { LessonProgress } from '@/types';
 import { CourseExpanded } from '@/types/course';
 import { createServerAxios } from '@/utils/axiosInstance';
 import { GetServerSidePropsContext } from 'next';
@@ -10,14 +11,20 @@ type Props = {
   data: CourseExpanded;
   error: string | null;
   errorCode: number;
+  lessonProgresses: LessonProgress[];
 };
 
-const LessonDetailsPage = ({ data, error, errorCode }: Props) => {
+const LessonDetailsPage = ({
+  data,
+  error,
+  errorCode,
+  lessonProgresses,
+}: Props) => {
   if (error) return <ErrorBanner error={error} errorCode={errorCode} />;
 
   return (
     <Layout>
-      <CourseDetails data={data} />
+      <CourseDetails data={data} lessonProgresses={lessonProgresses} />
     </Layout>
   );
 };
@@ -51,8 +58,9 @@ export const getServerSideProps = withThemes(
       return {
         props: {
           messages,
-          data: response.data,
           error: null,
+          data: response.data?.course,
+          lessonProgresses: response.data?.lessonProgresses || [],
         },
       };
     } catch (error: any) {
