@@ -144,7 +144,7 @@ export const LessonDetails = ({ data }: Props) => {
           <h1 className="text-3xl font-bold text-gray-800 mb-2 sm:mb-0">
             {title[locale]}
           </h1>
-          <Badge color={difficultyColor} className="text-lg px-3 py-1">
+          <Badge color={difficultyColor} className="text-lg px-3 py-1 w-max">
             {difficulty}
           </Badge>
         </div>
