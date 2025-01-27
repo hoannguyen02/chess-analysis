@@ -1,9 +1,12 @@
-import { useTranslations } from 'next-intl';
 import { VscCheck } from 'react-icons/vsc';
 import ConfettiEffect from '../ConfettiEffect';
 
-export const CongratsBanner = ({ onClick }: { onClick: () => void }) => {
-  const t = useTranslations();
+type Props = {
+  onClick: () => void;
+  title: string;
+  buttonTitle: string;
+};
+export const CongratsBanner = ({ onClick, title, buttonTitle }: Props) => {
   return (
     <>
       <ConfettiEffect />
@@ -11,9 +14,7 @@ export const CongratsBanner = ({ onClick }: { onClick: () => void }) => {
         <div className="flex items-center">
           <VscCheck className="text-green-600 w-6 h-6 mr-3" />
           <div>
-            <p className="text-green-800 font-medium">
-              {t('common.title.congrats-course')}
-            </p>
+            <p className="text-green-800 font-medium">{title}</p>
           </div>
         </div>
         <div className="mt-3 flex space-x-2">
@@ -21,7 +22,7 @@ export const CongratsBanner = ({ onClick }: { onClick: () => void }) => {
             onClick={onClick}
             className="px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition"
           >
-            {t('common.button.review-course')}
+            {buttonTitle}
           </button>
         </div>
       </div>

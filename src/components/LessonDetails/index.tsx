@@ -47,6 +47,15 @@ export const LessonDetails = ({ data }: Props) => {
     contentPuzzleIds
   );
 
+  const { completedProgress, isCompleted } = useMemo(() => {
+    const progressInPercent =
+      (progress.completedPuzzlesCount / data.totalPuzzles) * 100;
+    return {
+      isCompleted: progressInPercent === 100,
+      completedProgress: progressInPercent,
+    };
+  }, [data, progress]);
+
   const [expandedContentIndex, setExpandedContentIndex] = useState<
     number | null
   >(null);
@@ -79,6 +88,7 @@ export const LessonDetails = ({ data }: Props) => {
     if (expandedContentIndex !== null) {
       handleScrollToPanel(expandedContentIndex);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [expandedContentIndex]);
 
   const togglePanel = (index: number) => {
@@ -86,14 +96,6 @@ export const LessonDetails = ({ data }: Props) => {
       prevIndex === index ? null : index
     );
   };
-  const { completedProgress, isCompleted } = useMemo(() => {
-    const progressInPercent =
-      (progress.completedPuzzlesCount / data.totalPuzzles) * 100;
-    return {
-      isCompleted: progressInPercent === 100,
-      completedProgress: progressInPercent,
-    };
-  }, [data, progress]);
 
   const key = useMemo(
     () =>
@@ -151,17 +153,15 @@ export const LessonDetails = ({ data }: Props) => {
           isLoadingNextLesson ? null : (
             <div className="flex flex-col sm:flex-row gap-4 mt-6">
               {nextLessonSlug ? (
-                <>
-                  <Button
-                    className="mb-6 w-full text-lg py-3"
-                    color="blue"
-                    onClick={handleNextLesson}
-                  >
-                    {t('common.button.next-lesson')}
-                  </Button>
-                </>
+                <CongratsBanner
+                  title={t('common.title.congrats-course')}
+                  buttonTitle={t('common.button.next-lesson')}
+                  onClick={handleNextLesson}
+                />
               ) : (
                 <CongratsBanner
+                  title={t('common.title.congrats-course')}
+                  buttonTitle={t('common.title.review-course')}
                   onClick={() => {
                     router.push(`/lessons/${courseSlug}`);
                   }}
@@ -293,6 +293,14 @@ export const LessonDetails = ({ data }: Props) => {
             onClose={onCloseDialog}
             onSolved={async () => {
               await saveProgress(puzzle._id!);
+              const totalCompletedPuzzles = progress.completedPuzzlesCount + 1;
+              if (totalCompletedPuzzles === data.totalPuzzles) {
+                // Scroll to the top of the page
+                window.scrollTo({
+                  top: 0,
+                  behavior: 'smooth',
+                });
+              }
             }}
           />
         )}
