@@ -169,26 +169,28 @@ export const ViewCourses: React.FC<Props> = ({
           ))}
         </div>
       )}
-      <div className="flex justify-center mt-6">
-        <Pagination
-          currentPage={currentPage}
-          totalPages={totalPages}
-          onPageChange={(page) => {
-            router.push(
-              {
-                pathname: '/',
-                query: { ...router.query, page },
-              },
-              undefined,
-              {
-                shallow: true,
-              }
-            );
-          }}
-          previousLabel={t('common.button.previous')}
-          nextLabel={t('common.button.next')}
-        />
-      </div>
+      {totalPages > 10 && (
+        <div className="flex justify-center mt-6">
+          <Pagination
+            currentPage={currentPage}
+            totalPages={totalPages}
+            onPageChange={(page) => {
+              router.push(
+                {
+                  pathname: '/',
+                  query: { ...router.query, page },
+                },
+                undefined,
+                {
+                  shallow: true,
+                }
+              );
+            }}
+            previousLabel={t('common.button.previous')}
+            nextLabel={t('common.button.next')}
+          />
+        </div>
+      )}
     </div>
   );
 };
