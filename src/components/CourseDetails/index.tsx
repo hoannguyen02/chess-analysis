@@ -114,25 +114,25 @@ export const CourseDetails = ({ data, lessonProgresses }: Props) => {
   ]);
 
   return (
-    <div className="max-w-4xl mx-auto p-4 sm:p-6">
+    <div className="container mx-auto p-4">
       <div className="flex items-center mb-2">
         <Button outline onClick={() => router.back()}>
           <VscArrowLeft />
         </Button>
       </div>
       {/* Header Section */}
-      <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-4">
-        <h1 className="text-2xl sm:text-3xl font-bold text-gray-800">
+      <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-6">
+        <h1 className="text-3xl font-bold text-gray-800 mb-2 sm:mb-0">
           {title[locale]}
         </h1>
-        <div className="flex space-x-2 mt-2 sm:mt-0">
-          <Badge color={difficultyColor}>{difficulty}</Badge>
-        </div>
+        <Badge color={difficultyColor} className="text-lg px-3 py-1 w-max">
+          {difficulty}
+        </Badge>
       </div>
-      <Progress progress={completedProgress} size="lg" />
+      <Progress progress={completedProgress} size="lg" className="mb-6" />
       {!isCompleted && (
         <Button
-          className="mt-4 w-full"
+          className="mb-6 w-full text-lg py-3"
           color="blue"
           onClick={handleOnContinueOrStart}
         >

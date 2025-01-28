@@ -19,7 +19,7 @@ type Props = {
 };
 
 export const LessonDetails = ({ data }: Props) => {
-  const { locale } = useAppContext();
+  const { locale, session } = useAppContext();
   const router = useRouter();
   const courseSlug = useMemo(() => router.query.courseSlug, [router]);
   const {
@@ -170,7 +170,7 @@ export const LessonDetails = ({ data }: Props) => {
         </div>
         <Progress progress={completedProgress} size="lg" className="mb-4" />
         {isCompleted ? (
-          isLoadingNextLesson ? null : (
+          isLoadingNextLesson || !session?.id ? null : (
             <div className="flex flex-col sm:flex-row gap-4 mt-6">
               {nextLessonSlug ? (
                 <CongratsBanner
@@ -181,7 +181,7 @@ export const LessonDetails = ({ data }: Props) => {
               ) : (
                 <CongratsBanner
                   title={t('common.title.congrats-course')}
-                  buttonTitle={t('common.title.review-course')}
+                  buttonTitle={t('common.button.review-course')}
                   onClick={() => {
                     router.push(`/lessons/${courseSlug}`);
                   }}
