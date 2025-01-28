@@ -6,13 +6,15 @@ import { Badge, Button, Progress } from 'flowbite-react';
 import { useTranslations } from 'next-intl';
 import { useParams } from 'next/navigation';
 import { useRouter } from 'next/router';
-import { useCallback, useMemo } from 'react';
+import { useCallback, useEffect, useMemo, useState } from 'react';
+import { VscArrowLeft } from 'react-icons/vsc';
 import { useCourseProgress } from './useCourseProgress';
 
 type Props = {
   data: CourseExpanded;
   lessonProgresses: LessonProgress[];
 };
+
 export const CourseDetails = ({ data, lessonProgresses }: Props) => {
   const { locale } = useAppContext();
   const t = useTranslations();
@@ -36,7 +38,6 @@ export const CourseDetails = ({ data, lessonProgresses }: Props) => {
   );
 
   const { progress } = useCourseProgress(_id!, version, lessonIds);
-
   const difficultyColor = getDifficultyColor(difficulty);
 
   const { completedProgress, isCompleted } = useMemo(() => {
@@ -48,23 +49,55 @@ export const CourseDetails = ({ data, lessonProgresses }: Props) => {
     };
   }, [progress.completedLessons.length, totalLessons]);
 
-  const LessonProgressMap: Record<string, LessonProgress> = useMemo(() => {
-    if (lessonProgresses?.length) {
-      return lessonProgresses.reduce((acc, progress) => {
-        return {
-          ...acc,
-          [progress.lessonId!]: progress,
-        };
-      }, {});
-    }
+  // ✅ Use lessonProgresses if available, otherwise use state
+  const [lessonProgressMap, setLessonProgressMap] = useState<
+    Record<string, LessonProgress>
+  >(() =>
+    lessonProgresses?.length
+      ? lessonProgresses.reduce((acc, progress) => {
+          return {
+            ...acc,
+            [progress.lessonId!]: progress,
+          };
+        }, {})
+      : {}
+  );
 
-    return {};
-  }, [lessonProgresses]);
+  // ✅ Load from localStorage only if lessonProgresses is empty
+  useEffect(() => {
+    if (!lessonProgresses?.length && typeof window !== 'undefined') {
+      const lessonEntries: LessonProgress[] = [];
+
+      for (let i = 0; i < localStorage.length; i++) {
+        const key = localStorage.key(i);
+        if (key && key.startsWith('lesson_')) {
+          const storedValue = localStorage.getItem(key);
+          try {
+            if (storedValue) {
+              lessonEntries.push(JSON.parse(storedValue) as LessonProgress);
+            }
+          } catch (error) {
+            console.error(`Error parsing JSON for key: ${key}`, error);
+          }
+        }
+      }
+
+      // ✅ Update state after fetching from localStorage
+      setLessonProgressMap(
+        lessonEntries.reduce((acc, progress) => {
+          return {
+            ...acc,
+            [progress.lessonId!]: progress,
+          };
+        }, {})
+      );
+    }
+  }, [lessonProgresses]); // Runs only when lessonProgresses is empty
 
   const handleOnContinueOrStart = useCallback(() => {
     if (completedProgress > 0) {
       const unCompletedLessons = lessons?.filter(
-        ({ lessonId: lesson }) => !LessonProgressMap[lesson._id!]
+        ({ lessonId: lesson }) => !lessonProgressMap[lesson._id!]
       );
       router.push(
         `/lessons/${params.courseSlug}/${unCompletedLessons[0].lessonId.slug}`
@@ -73,7 +106,7 @@ export const CourseDetails = ({ data, lessonProgresses }: Props) => {
       router.push(`/lessons/${params.courseSlug}/${lessons[0].lessonId.slug}`);
     }
   }, [
-    LessonProgressMap,
+    lessonProgressMap,
     completedProgress,
     lessons,
     params.courseSlug,
@@ -82,6 +115,11 @@ export const CourseDetails = ({ data, lessonProgresses }: Props) => {
 
   return (
     <div className="max-w-4xl mx-auto p-4 sm:p-6">
+      <div className="flex items-center mb-2">
+        <Button outline onClick={() => router.back()}>
+          <VscArrowLeft />
+        </Button>
+      </div>
       {/* Header Section */}
       <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-4">
         <h1 className="text-2xl sm:text-3xl font-bold text-gray-800">
@@ -103,7 +141,6 @@ export const CourseDetails = ({ data, lessonProgresses }: Props) => {
             : t('common.title.start')}
         </Button>
       )}
-
       {/* Description Section */}
       <div className="mt-6">
         <h2 className="text-xl sm:text-2xl font-semibold">
@@ -113,7 +150,6 @@ export const CourseDetails = ({ data, lessonProgresses }: Props) => {
           {description?.[locale]}
         </p>
       </div>
-
       {/* Objectives Section */}
       <div className="mt-6">
         <h3 className="text-lg sm:text-xl font-semibold">
@@ -125,7 +161,6 @@ export const CourseDetails = ({ data, lessonProgresses }: Props) => {
           ))}
         </ul>
       </div>
-
       {/* Lessons Section */}
       <div className="mt-6">
         <h3 className="text-lg sm:text-xl font-semibold mb-4">
@@ -135,17 +170,15 @@ export const CourseDetails = ({ data, lessonProgresses }: Props) => {
           {lessons.map(({ lessonId: lesson }) => {
             const totalPuzzles = lesson.totalPuzzles;
             const completedPuzzlesCount =
-              LessonProgressMap?.[lesson._id!]?.completedPuzzlesCount;
+              lessonProgressMap?.[lesson._id!]?.completedPuzzles?.length;
 
             // Determine lesson progress state
             let buttonTitle = t('common.title.start');
             let buttonColor = 'blue';
             if (completedPuzzlesCount === totalPuzzles) {
-              // No puzzles or all puzzles completed
               buttonTitle = t('common.button.completed');
               buttonColor = 'green';
             } else if (completedPuzzlesCount > 0) {
-              // Started but not completed
               buttonTitle = t('common.button.continue');
             }
 
@@ -165,9 +198,9 @@ export const CourseDetails = ({ data, lessonProgresses }: Props) => {
                 <Button
                   color={buttonColor}
                   className="mt-3 sm:mt-0 w-full sm:w-auto"
-                  onClick={() => {
-                    router.push(`/lessons/${params.courseSlug}/${lesson.slug}`);
-                  }}
+                  onClick={() =>
+                    router.push(`/lessons/${params.courseSlug}/${lesson.slug}`)
+                  }
                 >
                   {buttonTitle}
                 </Button>

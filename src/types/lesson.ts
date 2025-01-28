@@ -39,7 +39,6 @@ export type Lesson = {
     {
       userId: string;
       completedPuzzles: string[];
-      completedPuzzlesCount: number;
       completedAtVersion: number;
     },
   ];
@@ -69,7 +68,6 @@ export type LessonExpanded = {
     {
       userId: string;
       completedPuzzles: string[];
-      completedPuzzlesCount: number;
       completedAtVersion: number;
     },
   ];

@@ -12,7 +12,6 @@ export type PhaseType = 'Opening' | 'Middle' | 'Endgame';
 
 export type LessonProgress = {
   completedPuzzles: string[];
-  completedPuzzlesCount: number;
   completedAtVersion: number;
   lessonId?: string;
 };

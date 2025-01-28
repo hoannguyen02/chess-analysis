@@ -7,7 +7,6 @@ import { useEffect, useMemo, useRef, useState } from 'react';
 
 const DefaultProgress: LessonProgress = {
   completedPuzzles: [],
-  completedPuzzlesCount: 0,
   completedAtVersion: 1,
 };
 export const useLessonProgress = (
@@ -46,7 +45,6 @@ export const useLessonProgress = (
 
         return {
           completedPuzzles: filteredPuzzles,
-          completedPuzzlesCount: filteredPuzzles.length,
           completedAtVersion: version,
         };
       }
@@ -63,7 +61,7 @@ export const useLessonProgress = (
           const response = await axiosInstance.get(
             `/v1/lessons/public/progress/${lessonId}`
           );
-          const dbProgress: LessonProgress = response.data;
+          const dbProgress: LessonProgress = response.data || DefaultProgress;
           const isSynced = localStorage.getItem(`synced_${lessonId}`);
 
           if (isSynced) {
@@ -79,7 +77,6 @@ export const useLessonProgress = (
           );
           const mergedProgress = {
             completedPuzzles: mergedPuzzles,
-            completedPuzzlesCount: mergedPuzzles.length,
             completedAtVersion: version,
           };
 
@@ -122,8 +119,8 @@ export const useLessonProgress = (
 
     const updatedProgress: LessonProgress = {
       completedPuzzles: [...progress.completedPuzzles, puzzleId],
-      completedPuzzlesCount: progress.completedPuzzlesCount + 1,
       completedAtVersion: progress.completedAtVersion,
+      lessonId,
     };
 
     setProgress(updatedProgress);
@@ -143,6 +140,25 @@ export const useLessonProgress = (
           `lesson_${lessonId}`,
           JSON.stringify(updatedProgress)
         );
+
+        if (updatedProgress.completedPuzzles.length === totalPuzzles) {
+          // Retrieve the existing list from localStorage
+          const completedLessons = JSON.parse(
+            localStorage.getItem('completed_lessonIds') || '[]'
+          );
+
+          // Check if the lessonId is already in the list
+          if (!completedLessons.includes(lessonId)) {
+            // Add the new lessonId to the list
+            completedLessons.push(lessonId);
+
+            // Save the updated list back to localStorage
+            localStorage.setItem(
+              'completed_lessonIds',
+              JSON.stringify(completedLessons)
+            );
+          }
+        }
       }
     } catch (err) {
       console.error('Failed to save progress:', err);

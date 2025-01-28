@@ -9,6 +9,7 @@ import { Badge, Button, Card, Progress } from 'flowbite-react';
 import { useTranslations } from 'next-intl';
 import { useRouter } from 'next/router';
 import { useEffect, useMemo, useRef, useState } from 'react';
+import { VscArrowLeft } from 'react-icons/vsc';
 import useSWR from 'swr';
 import { CongratsBanner } from './CongratsBanner';
 import { useLessonProgress } from './useLessonProgress';
@@ -58,12 +59,12 @@ export const LessonDetails = ({ data }: Props) => {
 
   const { completedProgress, isCompleted } = useMemo(() => {
     const progressInPercent =
-      (progress.completedPuzzlesCount / totalPuzzles) * 100;
+      (progress.completedPuzzles?.length / totalPuzzles) * 100;
     return {
       isCompleted: progressInPercent === 100,
       completedProgress: progressInPercent,
     };
-  }, [progress.completedPuzzlesCount, totalPuzzles]);
+  }, [progress.completedPuzzles, totalPuzzles]);
 
   const [expandedContentIndex, setExpandedContentIndex] = useState<
     number | null
@@ -124,11 +125,11 @@ export const LessonDetails = ({ data }: Props) => {
 
   const handleContinueOrStart = () => {
     // Start or review is expanded first content
-    if (progress.completedPuzzlesCount === 0 || isCompleted) {
+    if (progress.completedPuzzles?.length === 0 || isCompleted) {
       // Expand the first content
       setExpandedContentIndex(0);
     } else {
-      if (progress.completedPuzzlesCount < data.totalPuzzles) {
+      if (progress.completedPuzzles?.length < data.totalPuzzles) {
         // Find the first uncompleted content
         const index = data.contents?.findIndex((content) => {
           return content.contentPuzzles.some(
@@ -148,6 +149,16 @@ export const LessonDetails = ({ data }: Props) => {
   return (
     <>
       <div className="container mx-auto p-4">
+        <div className="flex items-center mb-2">
+          <Button
+            outline
+            onClick={() => {
+              router.back();
+            }}
+          >
+            <VscArrowLeft />
+          </Button>
+        </div>
         {/* Header Section */}
         <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-6">
           <h1 className="text-3xl font-bold text-gray-800 mb-2 sm:mb-0">
@@ -302,7 +313,8 @@ export const LessonDetails = ({ data }: Props) => {
             onClose={onCloseDialog}
             onSolved={async () => {
               await saveProgress(puzzle._id!);
-              const totalCompletedPuzzles = progress.completedPuzzlesCount + 1;
+              const totalCompletedPuzzles =
+                progress.completedPuzzles?.length + 1;
               if (totalCompletedPuzzles === data.totalPuzzles) {
                 // Scroll to the top of the page
                 window.scrollTo({

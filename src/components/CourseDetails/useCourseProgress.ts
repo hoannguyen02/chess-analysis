@@ -26,27 +26,21 @@ export const useCourseProgress = (
   const isFetching = useRef(false);
   useEffect(() => {
     const loadLocalProgress = () => {
-      const localProgressRaw = JSON.parse(
-        localStorage.getItem(`course_${courseId}`) || 'null'
-      ) as Progress | null;
+      const completedLessons = JSON.parse(
+        localStorage.getItem('completed_lessonIds') || '[]'
+      );
 
-      if (!localProgressRaw) return DefaultProgress;
+      if (!completedLessons?.length) return DefaultProgress;
 
-      const { completedAtVersion, completedLessons } = localProgressRaw;
+      const currentLessonSet = new Set(currentLessons);
+      const filteredLessons = completedLessons.filter((id: string) =>
+        currentLessonSet.has(id)
+      );
 
-      if (completedAtVersion !== version) {
-        const currentLessonSet = new Set(currentLessons);
-        const filteredLessons = completedLessons.filter((id) =>
-          currentLessonSet.has(id)
-        );
-
-        return {
-          completedLessons: filteredLessons,
-          completedAtVersion: version,
-        };
-      }
-
-      return localProgressRaw;
+      return {
+        completedLessons: filteredLessons,
+        completedAtVersion: version,
+      };
     };
 
     const fetchProgress = async (localProgress: Progress) => {
@@ -58,39 +52,9 @@ export const useCourseProgress = (
           const response = await axiosInstance.get(
             `/v1/courses/public/progress/${courseId}`
           );
-          const dbProgress: Progress = response.data;
-          const isSynced = localStorage.getItem(`synced_${courseId}`);
+          const dbProgress: Progress = response.data || localProgress;
 
-          if (isSynced) {
-            setProgress(dbProgress);
-            return;
-          }
-
-          const mergedLessons = Array.from(
-            new Set([
-              ...dbProgress.completedLessons,
-              ...localProgress.completedLessons,
-            ])
-          );
-          const mergedProgress = {
-            completedLessons: mergedLessons,
-            completedAtVersion: version,
-          };
-
-          const newLessons = mergedLessons.filter(
-            (id) => !dbProgress.completedLessons.includes(id)
-          );
-
-          if (newLessons.length > 0) {
-            await axiosInstance.post(
-              `/v1/courses/public/progress/${courseId}`,
-              { userId, completedLessons: newLessons, version }
-            );
-          }
-
-          localStorage.setItem(`synced_${courseId}`, 'true');
-          localStorage.removeItem(`course_${courseId}`);
-          setProgress(mergedProgress);
+          setProgress(dbProgress);
         } else {
           setProgress(localProgress);
         }
