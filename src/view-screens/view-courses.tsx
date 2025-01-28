@@ -39,7 +39,7 @@ export const ViewCourses: React.FC<Props> = ({
 }) => {
   const t = useTranslations();
   const router = useRouter();
-  const { apiDomain, themes } = useAppContext();
+  const { apiDomain, themes, session } = useAppContext();
 
   const { theme, difficulty, search } = router.query;
 
@@ -156,14 +156,14 @@ export const ViewCourses: React.FC<Props> = ({
                     {course.description?.[locale] || ''}
                   </p>
                 </div>
-                <div className="mt-2 w-full">
-                  {course.lessons && (
+                {session?.id && (
+                  <div className="mt-2 w-full">
                     <Progress
-                      progress={(course.lessons.length / 10) * 100}
+                      progress={course.progress?.completionPercentage || 0}
                       size="sm"
                     />
-                  )}
-                </div>
+                  </div>
+                )}
               </Card>
             </Link>
           ))}

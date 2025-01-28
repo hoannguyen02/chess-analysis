@@ -22,6 +22,11 @@ export type Course = {
   priority?: number;
   totalLessons: number; // Precomputed
   version: number; // Track version changes
+  // Only available for logged in users
+  progress?: {
+    completedLessonsCount: number;
+    completionPercentage: number;
+  };
 };
 
 export type CourseExpanded = {
@@ -44,4 +49,9 @@ export type CourseExpanded = {
   priority?: number;
   totalLessons: number; // Precomputed
   version: number; // Track version changes
+  // Only available for logged in users
+  progress?: {
+    completedLessonsCount: number;
+    completionPercentage: number;
+  };
 };
