@@ -1,6 +1,7 @@
 // utils/withThemes.ts
 import axiosInstance from '@/utils/axiosInstance';
 import { getSession } from '@/utils/getSession';
+import isEmpty from 'lodash/isEmpty';
 import {
   GetServerSideProps,
   GetServerSidePropsContext,
@@ -64,18 +65,23 @@ export const withThemes =
 
     const session = await getSession(ctx.req, ctx.res);
 
-    const result = await handler(ctx, {
-      themes,
-      apiDomain,
-      tags,
-      isMobile,
-      session: {
+    let customSession = null;
+    if (!isEmpty(session)) {
+      customSession = {
         id: session.id,
         role: session.role,
         username: session.username,
         isManageCourses: session.permissions.write_courses,
         isManageUsers: session.permissions.user_accounts,
-      },
+      };
+    }
+
+    const result = await handler(ctx, {
+      themes,
+      apiDomain,
+      tags,
+      isMobile,
+      session: customSession,
     });
 
     if ('props' in result) {
@@ -87,13 +93,7 @@ export const withThemes =
           tags,
           apiDomain,
           isMobile,
-          session: {
-            id: session.id,
-            role: session.role,
-            username: session.username,
-            isManageCourses: session.permissions.write_courses,
-            isManageUsers: session.permissions.user_accounts,
-          },
+          session: customSession,
         },
       };
     }

@@ -17,7 +17,7 @@ export interface AppContextProps {
   themeMap: Partial<Record<string, PuzzleTheme>>;
   locale: LocaleType;
   isMobile: boolean;
-  session?: Session;
+  session?: Session | null;
 }
 
 const AppContext = createContext<AppContextProps | undefined>(undefined);
