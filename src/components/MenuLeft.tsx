@@ -68,7 +68,7 @@ export const MenuLeft = () => {
       <Link href="/traps" className="mb-6 hover:text-[var(--p-highlight)]">
         {t('navigation.traps')}
       </Link>
-      {session?.permissions?.write_courses && (
+      {session?.isManageCourses && (
         <>
           <hr className="mb-4" />
           {/*  Role: Teacher, Admin */}
@@ -98,7 +98,7 @@ export const MenuLeft = () => {
                 {t('navigation.puzzles')}
               </Link>
             </li>
-            {session?.permissions?.user_accounts && (
+            {session?.isManageUsers && (
               <li className="mb-2">
                 <Link
                   href="/settings/users"

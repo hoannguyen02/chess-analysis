@@ -145,11 +145,11 @@ export const LessonsListScreen = () => {
       </div>
       {/* Courses Table */}
       <DndProvider backend={HTML5Backend}>
-        <div className="grid grid-cols-4">
-          <Label>Title</Label>
-          <Label>Difficulty</Label>
-          <Label>Status</Label>
-          <Label>Actions</Label>
+        <div className="grid grid-cols-4 mb-4">
+          <Label className="font-bold">Title</Label>
+          <Label className="font-bold">Difficulty</Label>
+          <Label className="font-bold">Status</Label>
+          <Label className="font-bold">Actions</Label>
         </div>
         {isLoading ? (
           <div className="text-center">

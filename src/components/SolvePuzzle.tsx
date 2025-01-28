@@ -14,7 +14,7 @@ import { useTranslations } from 'next-intl';
 import { useRouter } from 'next/router';
 import React, { ReactNode, useEffect, useMemo, useRef, useState } from 'react';
 import { Chessboard } from 'react-chessboard';
-import { Piece, Square } from 'react-chessboard/dist/chessboard/types';
+import { Square } from 'react-chessboard/dist/chessboard/types';
 import {
   VscArrowLeft,
   VscCheckAll,
@@ -62,6 +62,8 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({
   const [currentStep, setCurrentStep] = useState<number>(0);
   const [moveFrom, setMoveFrom] = useState<Square | null>(null);
   const [moveTo, setMoveTo] = useState<Square | null>(null);
+  // We use moveToRef as a replacement for moveTo above incase setMoveTo not work well when promotion dialog show up
+  const moveToRef = useRef<Square | null>(null);
   const [showRetry, setShowRetry] = useState<boolean>(false);
   const [showPromotionDialog, setShowPromotionDialog] = useState(false);
   const [rightClickedSquares, setRightClickedSquares] = useState<
@@ -279,6 +281,7 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({
     }
 
     setMoveTo(square);
+    moveToRef.current = square;
 
     if (
       (foundMove.color === 'w' &&
@@ -287,6 +290,8 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({
       (foundMove.color === 'b' && foundMove.piece === 'p' && square[1] === '1')
     ) {
       setShowPromotionDialog(true);
+      // Not sure why after show promotion dialog, moveTo is null
+      setMoveTo(square);
       return;
     }
     const move = handleMove(moveFrom, square, 'q');
@@ -303,13 +308,12 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({
     setCurrentFen(game.fen());
   };
 
-  function onPromotionPieceSelect(
-    piece?: Piece,
-    promoteFromSquare?: Square,
-    promoteToSquare?: Square
-  ): boolean {
-    // If no piece or required squares are provided, reset and return false
-    if (!piece || !promoteFromSquare || !promoteToSquare) {
+  function onPromotionPieceSelect(playerPiece: string): boolean {
+    const promotionType = playerPiece?.charAt(1);
+
+    const promoteToSquare = moveToRef.current;
+
+    if (!promotionType || !moveFrom || !promoteToSquare) {
       setMoveFrom(null);
       setMoveTo(null);
       setShowPromotionDialog(false);
@@ -317,14 +321,11 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({
       return false;
     }
 
-    // Map the piece to valid promotion types
-    const promotionType: 'q' | 'r' | 'b' | 'n' | undefined =
-      piece[1]?.toLowerCase() as 'q' | 'r' | 'b' | 'n';
-
-    if (!promotionType) {
-      return false;
-    }
-    const move = handleMove(promoteFromSquare, promoteToSquare, promotionType);
+    const move = handleMove(
+      moveFrom,
+      promoteToSquare,
+      promotionType.toLowerCase() as PromotionType
+    );
     if (!move) {
       return false;
     }

@@ -69,7 +69,13 @@ export const withThemes =
       apiDomain,
       tags,
       isMobile,
-      session,
+      session: {
+        id: session.id,
+        role: session.role,
+        username: session.username,
+        isManageCourses: session.permissions.write_courses,
+        isManageUsers: session.permissions.user_accounts,
+      },
     });
 
     if ('props' in result) {
@@ -81,7 +87,13 @@ export const withThemes =
           tags,
           apiDomain,
           isMobile,
-          session,
+          session: {
+            id: session.id,
+            role: session.role,
+            username: session.username,
+            isManageCourses: session.permissions.write_courses,
+            isManageUsers: session.permissions.user_accounts,
+          },
         },
       };
     }

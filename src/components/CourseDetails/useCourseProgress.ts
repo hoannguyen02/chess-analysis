@@ -4,13 +4,11 @@ import { useEffect, useMemo, useRef, useState } from 'react';
 
 interface Progress {
   completedLessons: string[];
-  completedLessonsCount: number;
   completedAtVersion: number;
 }
 
 const DefaultProgress: Progress = {
   completedLessons: [],
-  completedLessonsCount: 0,
   completedAtVersion: 1,
 };
 export const useCourseProgress = (
@@ -44,7 +42,6 @@ export const useCourseProgress = (
 
         return {
           completedLessons: filteredLessons,
-          completedLessonsCount: filteredLessons.length,
           completedAtVersion: version,
         };
       }
@@ -77,7 +74,6 @@ export const useCourseProgress = (
           );
           const mergedProgress = {
             completedLessons: mergedLessons,
-            completedLessonsCount: mergedLessons.length,
             completedAtVersion: version,
           };
 

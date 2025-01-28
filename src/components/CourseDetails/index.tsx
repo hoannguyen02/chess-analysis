@@ -2,11 +2,11 @@ import { useAppContext } from '@/contexts/AppContext';
 import { LessonProgress } from '@/types';
 import { CourseExpanded } from '@/types/course';
 import { getDifficultyColor } from '@/utils/getDifficultyColor';
-import { Badge, Button } from 'flowbite-react';
+import { Badge, Button, Progress } from 'flowbite-react';
 import { useTranslations } from 'next-intl';
 import { useParams } from 'next/navigation';
 import { useRouter } from 'next/router';
-import { useMemo } from 'react';
+import { useCallback, useMemo } from 'react';
 import { useCourseProgress } from './useCourseProgress';
 
 type Props = {
@@ -61,6 +61,25 @@ export const CourseDetails = ({ data, lessonProgresses }: Props) => {
     return {};
   }, [lessonProgresses]);
 
+  const handleOnContinueOrStart = useCallback(() => {
+    if (completedProgress > 0) {
+      const unCompletedLessons = lessons?.filter(
+        ({ lessonId: lesson }) => !LessonProgressMap[lesson._id!]
+      );
+      router.push(
+        `/lessons/${params.courseSlug}/${unCompletedLessons[0].lessonId.slug}`
+      );
+    } else {
+      router.push(`/lessons/${params.courseSlug}/${lessons[0].lessonId.slug}`);
+    }
+  }, [
+    LessonProgressMap,
+    completedProgress,
+    lessons,
+    params.courseSlug,
+    router,
+  ]);
+
   return (
     <div className="max-w-4xl mx-auto p-4 sm:p-6">
       {/* Header Section */}
@@ -72,8 +91,13 @@ export const CourseDetails = ({ data, lessonProgresses }: Props) => {
           <Badge color={difficultyColor}>{difficulty}</Badge>
         </div>
       </div>
+      <Progress progress={completedProgress} size="lg" />
       {!isCompleted && (
-        <Button className="mt-4 w-full" color="blue">
+        <Button
+          className="mt-4 w-full"
+          color="blue"
+          onClick={handleOnContinueOrStart}
+        >
           {completedProgress > 0
             ? t('common.title.continue-learning')
             : t('common.title.start')}
@@ -104,14 +128,14 @@ export const CourseDetails = ({ data, lessonProgresses }: Props) => {
 
       {/* Lessons Section */}
       <div className="mt-6">
-        <h3 className="text-lg sm:text-xl font-semibold">
+        <h3 className="text-lg sm:text-xl font-semibold mb-4">
           {t('common.title.lessons')}
         </h3>
         <div className="grid gap-3 sm:gap-4">
           {lessons.map(({ lessonId: lesson }) => {
             const totalPuzzles = lesson.totalPuzzles;
             const completedPuzzlesCount =
-              LessonProgressMap?.[lesson._id!]?.completedPuzzlesCount || 0;
+              LessonProgressMap?.[lesson._id!]?.completedPuzzlesCount;
 
             // Determine lesson progress state
             let buttonTitle = t('common.title.start');
@@ -128,14 +152,7 @@ export const CourseDetails = ({ data, lessonProgresses }: Props) => {
             return (
               <div
                 key={lesson.id}
-                className={`p-3 sm:p-4 rounded-lg shadow-md flex flex-col sm:flex-row sm:justify-between sm:items-center cursor-pointer ${
-                  totalPuzzles === 0 || completedPuzzlesCount === totalPuzzles
-                    ? 'bg-green-100'
-                    : 'bg-gray-100'
-                }`}
-                onClick={() => {
-                  router.push(`/lessons/${params.courseSlug}/${lesson.slug}`);
-                }}
+                className="p-3 sm:p-4 bg-gray-100 rounded-lg shadow-md flex flex-col sm:flex-row sm:justify-between sm:items-center"
               >
                 <div>
                   <h4 className="text-base sm:text-lg font-semibold">
@@ -148,6 +165,9 @@ export const CourseDetails = ({ data, lessonProgresses }: Props) => {
                 <Button
                   color={buttonColor}
                   className="mt-3 sm:mt-0 w-full sm:w-auto"
+                  onClick={() => {
+                    router.push(`/lessons/${params.courseSlug}/${lesson.slug}`);
+                  }}
                 >
                   {buttonTitle}
                 </Button>
