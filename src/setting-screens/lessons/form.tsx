@@ -89,7 +89,7 @@ const ObjectivesSection = () => {
       {(watch('objectives.en') || []).map((_, index) => (
         <Card
           key={index}
-          className="w-full p-4 shadow-sm border mb-3 hover:shadow-md transition duration-200"
+          className="w-full shadow-sm border mb-3 hover:shadow-md transition duration-200"
         >
           <div className="flex items-center gap-4 w-full">
             <div className="flex-grow grid grid-cols-2 gap-4">
