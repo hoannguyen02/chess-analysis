@@ -732,7 +732,7 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({
               </div>
             )}
             {showRetry && (
-              <div className="flex justify-around">
+              <div className="flex justify-between w-full">
                 <Button color="primary" onClick={retry}>
                   {t('solve-puzzle.button.retry')}
                   <VscSync size={20} className="ml-1" />
