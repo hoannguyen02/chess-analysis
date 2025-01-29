@@ -51,6 +51,18 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({
   onNextClick,
   onSolved,
 }) => {
+  const moveSound = useRef<HTMLAudioElement | null>(null);
+  const captureSound = useRef<HTMLAudioElement | null>(null);
+  const checkSound = useRef<HTMLAudioElement | null>(null);
+  const failedSound = useRef<HTMLAudioElement | null>(null);
+
+  useEffect(() => {
+    moveSound.current = new Audio('/sounds/move.mp3');
+    captureSound.current = new Audio('/sounds/capture.mp3');
+    checkSound.current = new Audio('/sounds/check.mp3');
+    failedSound.current = new Audio('/sounds/failed.mp3');
+  }, []);
+
   const t = useTranslations();
   const { themeMap, isMobile, locale } = useAppContext();
   const router = useRouter();
@@ -150,6 +162,8 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({
     targetSquare: Square,
     promotion?: PromotionType
   ): boolean => {
+    const pieceOnTarget = game.get(targetSquare); // Check if there's a piece on the target square
+
     const userMove = game.move({
       from: sourceSquare,
       to: targetSquare,
@@ -157,6 +171,7 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({
     });
 
     if (!userMove) {
+      if (failedSound.current) failedSound.current.play(); // Play failed move sound
       return false;
     }
 
@@ -165,24 +180,41 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({
     const validMove =
       solution.moves.findIndex(({ move }) => move === userMove.san) >= 0;
 
-    setHistoryMoves((prev) => {
-      return [
-        ...prev,
-        {
-          player: 'user',
-          move: userMove.san,
-          from: sourceSquare,
-          to: targetSquare,
-        },
-      ];
-    });
+    setHistoryMoves((prev) => [
+      ...prev,
+      {
+        player: 'user',
+        move: userMove.san,
+        from: sourceSquare,
+        to: targetSquare,
+      },
+    ]);
+
+    // 🔊 **Play sound based on priority**
+    let soundPlayed = false;
+
+    if (game.in_check()) {
+      if (checkSound.current) {
+        checkSound.current.play();
+        soundPlayed = true;
+      }
+    } else if (pieceOnTarget) {
+      if (captureSound.current) {
+        captureSound.current.play();
+        soundPlayed = true;
+      }
+    }
+
+    // Play move sound **only if no other sound was played**
+    if (!soundPlayed && moveSound.current) {
+      moveSound.current.play();
+    }
 
     if (validMove) {
       const nextStep = currentStep + 1;
       if (nextStep === puzzle.solutions.length) {
-        // The puzzle is solved
         if (onSolved) {
-          onSolved(); // Trigger any callback or event when the puzzle is solved
+          onSolved(); // Trigger event when the puzzle is solved
         }
       }
       if (
@@ -190,7 +222,7 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({
         puzzle.solutions[nextStep].player === 'engine'
       ) {
         const solution = puzzle.solutions[nextStep];
-        const { move: engineMove, from, to } = solution.moves[0]; // Engine by 1 move by default
+        const { move: engineMove, from, to } = solution.moves[0];
 
         if (currentTimeout) {
           clearTimeout(currentTimeout);
@@ -201,24 +233,18 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({
           setCurrentStep((prev) => prev + 2);
           setCurrentFen(game.fen());
           setMoveSquareStyle({
-            [from]: {
-              background: 'var(--p-highlight)',
-            },
-            [to]: {
-              background: 'var(--p-highlight)',
-            },
+            [from]: { background: 'var(--p-highlight)' },
+            [to]: { background: 'var(--p-highlight)' },
           });
-          setHistoryMoves((prev) => {
-            return [
-              ...prev,
-              {
-                player: 'engine',
-                move: engineMove,
-                from,
-                to,
-              },
-            ];
-          });
+          setHistoryMoves((prev) => [
+            ...prev,
+            {
+              player: 'engine',
+              move: engineMove,
+              from,
+              to,
+            },
+          ]);
         }, DEFAULT_ENGINE_MOVE_DELAY_TIME);
 
         setCurrentTimeout(timeout);
@@ -228,21 +254,13 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({
 
       setCurrentFen(game.fen());
       setMoveSquareStyle({
-        [targetSquare]: {
-          background: 'var(--p-highlight)',
-        },
-        [sourceSquare]: {
-          background: 'var(--p-highlight)',
-        },
+        [targetSquare]: { background: 'var(--p-highlight)' },
+        [sourceSquare]: { background: 'var(--p-highlight)' },
       });
     } else {
       setMoveSquareStyle({
-        [targetSquare]: {
-          background: 'var(--p-warning)',
-        },
-        [sourceSquare]: {
-          background: 'var(--p-warning)',
-        },
+        [targetSquare]: { background: 'var(--p-warning)' },
+        [sourceSquare]: { background: 'var(--p-warning)' },
       });
       setCurrentFen(game.fen());
       setShowRetry(true);
@@ -649,7 +667,7 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({
               </div>
             </div>
           )}
-          <div className="fixed bottom-0 left-0 w-full px-4 py-4 bg-white shadow-lg border-t border-gray-300 rounded-t-lg flex justify-center items-center space-x-4">
+          <div className="fixed lg:absolute bottom-0 left-0 w-full px-4 py-4 bg-white shadow-lg border-t border-gray-300 rounded-t-lg flex justify-center items-center space-x-4">
             {!showRetry && currentStep !== puzzle.solutions.length && (
               <>
                 {hintMessage ? (
