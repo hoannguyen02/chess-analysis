@@ -27,7 +27,7 @@ import {
 import cloneDeep from 'lodash/cloneDeep';
 import { useTranslations } from 'next-intl';
 import { useRouter } from 'next/router';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { DndProvider } from 'react-dnd';
 import { HTML5Backend } from 'react-dnd-html5-backend';
 import {
@@ -408,9 +408,18 @@ export const LessonFormScreen = ({ lesson }: Props) => {
     setValue(`contents`, cloneDeep(watch('contents')), { shouldDirty: true });
   };
 
-  useEffect(() => {
-    console.log('Contents updated:', watch('contents'));
-  }, [watch]);
+  const moveContentUp = (index: number) => {
+    if (index > 0) {
+      reorderContents(index, index - 1);
+    }
+  };
+
+  const moveContentDown = (index: number) => {
+    const contents = watch('contents') || [];
+    if (index < contents.length - 1) {
+      reorderContents(index, index + 1);
+    }
+  };
 
   return (
     <div className="">
@@ -484,7 +493,7 @@ export const LessonFormScreen = ({ lesson }: Props) => {
                     key={field.id}
                     className="mb-4"
                   >
-                    <div className="grid grid-cols-[auto_50px] mb-2 gap-4 place-items-center">
+                    <div className="grid grid-cols-[auto_100px] mb-2 gap-4 place-items-center">
                       <div className="flex flex-col w-full">
                         <Textarea
                           rows={3}
@@ -563,14 +572,35 @@ export const LessonFormScreen = ({ lesson }: Props) => {
                           </Button>
                         </div>
                       </div>
-                      <div className="">
+                      <div className="flex flex-col justify-center">
+                        <Button
+                          outline
+                          size="xs"
+                          type="button"
+                          className="mb-2"
+                          onClick={() => moveContentUp(index)}
+                          disabled={index === 0} // Disable if it's the first item
+                        >
+                          ↑ Move Up
+                        </Button>
+                        <Button
+                          outline
+                          size="xs"
+                          type="button"
+                          className="mb-2"
+                          onClick={() => moveContentDown(index)}
+                          disabled={index === contentFields.length - 1} // Disable if it's the last item
+                        >
+                          ↓ Move Down
+                        </Button>
                         <Button
                           outline
                           size="sm"
+                          color="warning"
                           type="button"
                           onClick={() => removeContent(index)}
                         >
-                          -
+                          Delete content
                         </Button>
                       </div>
                     </div>
