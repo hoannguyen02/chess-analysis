@@ -726,7 +726,7 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({
                     onClick={onNextClick}
                     className="mt-2"
                   >
-                    Next
+                    {t('common.button.next')}
                   </Button>
                 )}
               </div>

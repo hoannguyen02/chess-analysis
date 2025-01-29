@@ -4,9 +4,11 @@ const useDialog = <T = null>() => {
   const [open, setOpen] = useState(false);
   const [data, setData] = useState<T | null>(null);
 
-  const onOpenDialog = (data: T | null = null) => {
+  const onOpenDialog = (newData: T | null = null) => {
     setOpen(true);
-    setData(data);
+    setData((prevData) => {
+      return prevData ? { ...prevData, ...newData } : newData;
+    });
   };
 
   const onCloseDialog = () => {

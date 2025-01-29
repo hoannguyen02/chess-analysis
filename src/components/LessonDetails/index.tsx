@@ -18,16 +18,20 @@ type Props = {
   data: LessonExpanded;
 };
 
+type ContentPuzzleDialogData = {
+  puzzle: Puzzle;
+  contentIndex: number;
+};
 export const LessonDetails = ({ data }: Props) => {
   const { locale, session } = useAppContext();
   const router = useRouter();
   const courseSlug = useMemo(() => router.query.courseSlug, [router]);
   const {
     open: isOpenSolvePuzzle,
-    data: puzzle,
+    data: contentPuzzle,
     onCloseDialog,
     onOpenDialog,
-  } = useDialog<Puzzle>();
+  } = useDialog<ContentPuzzleDialogData>();
   const t = useTranslations();
   const {
     title,
@@ -144,6 +148,41 @@ export const LessonDetails = ({ data }: Props) => {
 
   const handleNextLesson = () => {
     router.push(`/lessons/${courseSlug}/${nextLessonSlug}`);
+  };
+
+  const hasNextPuzzle = () => {
+    const allContents = data.contents || [];
+
+    if (!contentPuzzle) return false;
+
+    const { contentIndex } = contentPuzzle;
+    if (contentIndex === undefined) return false;
+
+    const currentContent = allContents[contentIndex];
+
+    // Check if there are any unsolved puzzles in this content section
+    return currentContent.contentPuzzles.some(
+      (p) => !progress.completedPuzzles.includes(p.puzzleId._id)
+    );
+  };
+
+  const handleNextPuzzle = () => {
+    debugger;
+    const allContents = data.contents || [];
+
+    const { contentIndex } = contentPuzzle as ContentPuzzleDialogData;
+
+    const currentContent = allContents[contentIndex];
+
+    // Find the next unsolved puzzle within the same content section
+    const unsolvedPuzzle = currentContent.contentPuzzles.find(
+      (p) => !progress.completedPuzzles.includes(p.puzzleId._id)
+    );
+    if (unsolvedPuzzle) {
+      onOpenDialog({ puzzle: unsolvedPuzzle.puzzleId, contentIndex });
+    } else {
+      onCloseDialog();
+    }
   };
 
   return (
@@ -288,7 +327,7 @@ export const LessonDetails = ({ data }: Props) => {
                                 size="sm"
                                 fullSized
                                 onClick={() => {
-                                  onOpenDialog(puzzle);
+                                  onOpenDialog({ puzzle, contentIndex: idx });
                                 }}
                               >
                                 {isCompleted
@@ -307,12 +346,12 @@ export const LessonDetails = ({ data }: Props) => {
           </div>
         )}
 
-        {isOpenSolvePuzzle && puzzle && (
+        {isOpenSolvePuzzle && contentPuzzle?.puzzle && (
           <SolvePuzzleDrawer
-            puzzle={puzzle}
+            puzzle={contentPuzzle.puzzle}
             onClose={onCloseDialog}
             onSolved={async () => {
-              await saveProgress(puzzle._id!);
+              await saveProgress(contentPuzzle.puzzle._id!);
               const totalCompletedPuzzles =
                 progress.completedPuzzles?.length + 1;
               if (totalCompletedPuzzles === data.totalPuzzles) {
@@ -323,6 +362,8 @@ export const LessonDetails = ({ data }: Props) => {
                 });
               }
             }}
+            showNextButton={hasNextPuzzle()}
+            onNextClick={handleNextPuzzle}
           />
         )}
       </div>
