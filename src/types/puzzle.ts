@@ -1,18 +1,6 @@
+import { DifficultyType } from '.';
 import { StatusType } from './status';
 
-/**
- * 0-800: Beginner
- * 800-1200: Easy
- * 1200-1600: Medium
- * 1600-2000: Hard
- * 2000+: Very hard
- */
-export type PuzzleDifficulty =
-  | 'Beginner'
-  | 'Easy'
-  | 'Medium'
-  | 'Hard'
-  | 'Very Hard';
 export type PuzzlePhase = 'Opening' | 'Middle' | 'Endgame';
 export type PuzzleSolutionMove = {
   player: 'user' | 'engine';
@@ -32,7 +20,7 @@ export type PuzzlePreMove = {
 export type Puzzle = {
   fen: string;
   status: StatusType;
-  difficulty: PuzzleDifficulty;
+  difficulty: DifficultyType;
   isPublic: boolean;
   themes: string[];
   solutions: PuzzleSolutionMove[];

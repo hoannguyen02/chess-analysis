@@ -72,7 +72,7 @@ export const PuzzleFormScreen = ({ puzzle, onSaveSuccess }: Props) => {
     defaultValues: puzzle || {
       fen: '8/8/8/8/8/8/8/8 w - - 0 1',
       isPublic: false,
-      status: 'Draft',
+      status: 'Active',
       difficulty: 'Beginner',
       phase: 'Middle',
       solutions: [],

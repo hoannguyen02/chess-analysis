@@ -3,8 +3,8 @@ import { DraggableItem } from '@/components/DraggableItem';
 import { TitlePage } from '@/components/TitlePage';
 import { LEVEL_RATING, Statues } from '@/constants';
 import { useAppContext } from '@/contexts/AppContext';
+import { DifficultyType } from '@/types';
 import { Lesson } from '@/types/lesson';
-import { PuzzleDifficulty } from '@/types/puzzle';
 import { StatusType } from '@/types/status';
 import axiosInstance from '@/utils/axiosInstance';
 import { filteredQuery } from '@/utils/filteredQuery';
@@ -22,7 +22,7 @@ export const LessonsListScreen = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [status, setStatus] = useState<StatusType | ''>('');
   const [title, setTitle] = useState<string | ''>('');
-  const [difficulty, setDifficulty] = useState<PuzzleDifficulty | ''>('');
+  const [difficulty, setDifficulty] = useState<DifficultyType | ''>('');
   const [lessons, setLessons] = useState<Lesson[]>([]);
   const [isReordered, setIsReordered] = useState(false);
   const queryString = useMemo(() => {
@@ -131,7 +131,7 @@ export const LessonsListScreen = () => {
           <Select
             value={difficulty}
             onChange={(event) =>
-              setDifficulty(event.target.value as PuzzleDifficulty)
+              setDifficulty(event.target.value as DifficultyType)
             }
           >
             <option value="">Select a rating</option>

@@ -272,8 +272,8 @@ export const LessonFormScreen = ({ lesson }: Props) => {
     defaultValues: lesson
       ? buildInitialLessonForm(lesson)
       : {
-          status: 'Draft',
-          difficulty: 'Easy',
+          status: 'Active',
+          difficulty: 'Beginner',
         },
   });
 
@@ -330,9 +330,7 @@ export const LessonFormScreen = ({ lesson }: Props) => {
             payload
           );
         } else {
-          return await axiosInstance.post(`${apiDomain}/v1/lessons`, {
-            payload,
-          });
+          return await axiosInstance.post(`${apiDomain}/v1/lessons`, payload);
         }
       },
       addToast, // Pass addToast to show toast notifications

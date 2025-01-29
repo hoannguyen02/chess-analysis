@@ -2,8 +2,8 @@ import DebouncedInput from '@/components/DebounceInput';
 import { TitlePage } from '@/components/TitlePage';
 import { PhaseOptions, RatingOptions, StatusOptions } from '@/constants';
 import { useAppContext } from '@/contexts/AppContext';
-import { PhaseType } from '@/types';
-import { Puzzle, PuzzleDifficulty, PuzzlePhase } from '@/types/puzzle';
+import { DifficultyType, PhaseType } from '@/types';
+import { Puzzle, PuzzlePhase } from '@/types/puzzle';
 import { StatusType } from '@/types/status';
 import axiosInstance from '@/utils/axiosInstance';
 import { filteredQuery } from '@/utils/filteredQuery';
@@ -21,7 +21,7 @@ export const PuzzleListScreen = () => {
   const [phase, setPhase] = useState<PuzzlePhase | ''>('');
   const [status, setStatus] = useState<StatusType | ''>('');
   const [themes, setThemes] = useState<string[]>([]);
-  const [difficulty, setDifficulty] = useState<PuzzleDifficulty | ''>('');
+  const [difficulty, setDifficulty] = useState<DifficultyType | ''>('');
   const [isPublic, setIsPublic] = useState<boolean | undefined>();
   const [title, setTitle] = useState<string | ''>('');
   const [loading, setLoading] = useState(false);
@@ -153,7 +153,7 @@ export const PuzzleListScreen = () => {
             options={RatingOptions}
             value={RatingOptions.find((option) => option.value === difficulty)}
             onChange={(selectedOption) =>
-              setDifficulty(selectedOption?.value as PuzzleDifficulty)
+              setDifficulty(selectedOption?.value as DifficultyType)
             }
             placeholder="Select rating..."
             isClearable

@@ -3,8 +3,8 @@ import { DraggableItem } from '@/components/DraggableItem';
 import { TitlePage } from '@/components/TitlePage';
 import { RatingOptions, StatusOptions } from '@/constants';
 import { useAppContext } from '@/contexts/AppContext';
+import { DifficultyType } from '@/types';
 import { Course } from '@/types/course';
-import { PuzzleDifficulty } from '@/types/puzzle';
 import { StatusType } from '@/types/status';
 import axiosInstance from '@/utils/axiosInstance';
 import { filteredQuery } from '@/utils/filteredQuery';
@@ -24,7 +24,7 @@ export const CourseListScreen = () => {
   const [status, setStatus] = useState<StatusType | ''>('');
   const [title, setTitle] = useState<string | ''>('');
   const [tags, setTags] = useState<string[]>([]);
-  const [difficulty, setDifficulty] = useState<PuzzleDifficulty | ''>('');
+  const [difficulty, setDifficulty] = useState<DifficultyType | ''>('');
   const [courses, setCourses] = useState<Course[]>([]);
   const [isReordered, setIsReordered] = useState(false);
 
@@ -139,7 +139,7 @@ export const CourseListScreen = () => {
             options={RatingOptions}
             value={RatingOptions.find((option) => option.value === difficulty)}
             onChange={(selectedOption) =>
-              setDifficulty(selectedOption?.value as PuzzleDifficulty)
+              setDifficulty(selectedOption?.value as DifficultyType)
             }
             placeholder="Select rating..."
             isClearable

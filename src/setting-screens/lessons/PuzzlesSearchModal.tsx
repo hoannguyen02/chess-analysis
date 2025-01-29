@@ -1,7 +1,8 @@
 import DebouncedInput from '@/components/DebounceInput';
 import { RatingOptions, StatusOptions } from '@/constants';
 import { useAppContext } from '@/contexts/AppContext';
-import { Puzzle, PuzzleDifficulty } from '@/types/puzzle';
+import { DifficultyType } from '@/types';
+import { Puzzle } from '@/types/puzzle';
 import { StatusType } from '@/types/status';
 import { fetcher } from '@/utils/fetcher';
 import { previewPuzzle } from '@/utils/previewPuzzle';
@@ -30,7 +31,7 @@ export const PuzzlesSearchModal: React.FC<PuzzlesSearchModalProps> = ({
 }) => {
   const { apiDomain, themes: themeOptions, locale } = useAppContext();
   const [selectedInModal, setSelectedInModal] = useState<Puzzle[]>([]);
-  const [difficulty, setDifficulty] = useState<PuzzleDifficulty | ''>('');
+  const [difficulty, setDifficulty] = useState<DifficultyType | ''>('');
   const [themes, setThemes] = useState<string[]>([]);
   const [title, setTitle] = useState<string | ''>('');
   const [currentPage, setCurrentPage] = useState(1);
@@ -144,7 +145,7 @@ export const PuzzlesSearchModal: React.FC<PuzzlesSearchModalProps> = ({
                   (option) => option.value === difficulty
                 )}
                 onChange={(selectedOption) =>
-                  setDifficulty(selectedOption?.value as PuzzleDifficulty)
+                  setDifficulty(selectedOption?.value as DifficultyType)
                 }
                 placeholder="Select rating..."
                 isClearable

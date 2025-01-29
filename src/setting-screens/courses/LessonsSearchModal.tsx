@@ -1,8 +1,8 @@
 import DebouncedInput from '@/components/DebounceInput';
 import { LEVEL_RATING, Statues } from '@/constants';
 import { useAppContext } from '@/contexts/AppContext';
+import { DifficultyType } from '@/types';
 import { Lesson } from '@/types/lesson';
-import { PuzzleDifficulty } from '@/types/puzzle';
 import { StatusType } from '@/types/status';
 import { fetcher } from '@/utils/fetcher';
 import {
@@ -30,7 +30,7 @@ const LessonSearchModal: React.FC<LessonSearchModalProps> = ({
 }) => {
   const { apiDomain, locale } = useAppContext();
   const [selectedInModal, setSelectedInModal] = useState<Lesson[]>([]);
-  const [difficulty, setDifficulty] = useState<PuzzleDifficulty | ''>('');
+  const [difficulty, setDifficulty] = useState<DifficultyType | ''>('');
   const [title, setTitle] = useState<string | ''>('');
   const [currentPage, setCurrentPage] = useState(1);
   const [status, setStatus] = useState<StatusType | ''>('');
@@ -123,7 +123,7 @@ const LessonSearchModal: React.FC<LessonSearchModalProps> = ({
               <Select
                 value={difficulty}
                 onChange={(event) =>
-                  setDifficulty(event.target.value as PuzzleDifficulty)
+                  setDifficulty(event.target.value as DifficultyType)
                 }
               >
                 <option value="">Select a rating</option>

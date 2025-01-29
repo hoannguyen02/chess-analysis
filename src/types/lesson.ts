@@ -1,6 +1,6 @@
-import { ExplanationType, ObjectiveType } from '.';
+import { DifficultyType, ExplanationType, ObjectiveType } from '.';
 import { Puzzle } from './puzzle';
-import { DifficultyType, StatusType } from './status';
+import { StatusType } from './status';
 
 export type ContentType = 'text' | 'video' | 'image';
 
