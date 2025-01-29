@@ -93,13 +93,13 @@ export const LessonDetails = ({ data }: Props) => {
     }
   };
 
-  // Scroll to the default index on initial render
   useEffect(() => {
-    if (expandedContentIndex !== null) {
+    if (contents?.length === 1) {
+      setExpandedContentIndex(0);
+    } else if (expandedContentIndex !== null) {
       handleScrollToPanel(expandedContentIndex);
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [expandedContentIndex]);
+  }, [contents, expandedContentIndex]);
 
   const togglePanel = (index: number) => {
     setExpandedContentIndex((prevIndex) =>
