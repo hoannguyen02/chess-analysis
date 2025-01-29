@@ -45,7 +45,7 @@ export type HistoryMove = {
 
 const SolvePuzzle: React.FC<PuzzleProps> = ({
   puzzle,
-  showBackButton = true,
+  showBackButton = false,
   highlightPossibleMoves = false,
   showNextButton = false,
   onNextClick,
@@ -649,7 +649,7 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({
               </div>
             </div>
           )}
-          <div className="fixed lg:absolute bottom-4 left-0 w-full px-4">
+          <div className="fixed bottom-0 left-0 w-full px-4 py-4 bg-white shadow-lg border-t border-gray-300 rounded-t-lg flex justify-center items-center space-x-4">
             {!showRetry && currentStep !== puzzle.solutions.length && (
               <>
                 {hintMessage ? (

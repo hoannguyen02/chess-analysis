@@ -1,18 +1,35 @@
 import Layout from '@/components/Layout';
+import { ShareFacebookButton } from '@/components/ShareFacebookButton';
 import SolvePuzzle from '@/components/SolvePuzzle';
 import { withThemes } from '@/HOF/withThemes';
 import { createServerAxios } from '@/utils/axiosInstance';
+import { Clipboard } from 'flowbite-react';
 import {
   GetServerSideProps,
   GetServerSidePropsContext,
   PreviewData,
 } from 'next';
+import { useRouter } from 'next/router';
 import { ParsedUrlQuery } from 'querystring';
+import { useMemo } from 'react';
 
 const SolvePuzzlePage = ({ puzzle }: any) => {
+  const router = useRouter();
+  const { locale, asPath } = router;
+  const fullUrl = useMemo(
+    () => `${process.env.NEXT_PUBLIC_BASE_URL}/${locale}${asPath}`,
+    [asPath, locale]
+  );
+
   return (
     <Layout>
-      <SolvePuzzle puzzle={puzzle} />
+      <div className="flex flex-col">
+        <div className="flex mb-6 justify-center">
+          <ShareFacebookButton url={fullUrl} />
+          <Clipboard valueToCopy={fullUrl} label="Copy link" className="ml-2" />
+        </div>
+        <SolvePuzzle puzzle={puzzle} />
+      </div>
     </Layout>
   );
 };
