@@ -1,36 +1,17 @@
 import { useAppContext } from '@/contexts/AppContext';
-import { useToast } from '@/contexts/ToastContext';
-import axiosInstance, { setAxiosLocale } from '@/utils/axiosInstance';
-import { handleSubmission } from '@/utils/handleSubmission';
-import { Dropdown } from 'flowbite-react';
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { useCallback, useMemo } from 'react';
+import { useMemo } from 'react';
 import LanguageSwitcher from './LanguageSwitcher';
 
 export const MenuLeft = () => {
   const t = useTranslations('common');
   const router = useRouter();
-  const { addToast } = useToast();
-  const { session, isMobile, locale, apiDomain } = useAppContext();
+  const { session, isMobile } = useAppContext();
   const currentPath = useMemo(() => {
     return router.asPath;
   }, [router]);
-
-  const handleLogout = useCallback(async () => {
-    const result = await handleSubmission(
-      async () => {
-        setAxiosLocale(locale);
-        return await axiosInstance.post(`${apiDomain}/v1/auth/logout`);
-      },
-      addToast, // Pass addToast to show toast notifications
-      t('title.logout-success') // Success message
-    );
-    if (result !== undefined) {
-      router.push('/');
-    }
-  }, [addToast, apiDomain, locale, router, t]);
 
   return (
     <nav
@@ -128,18 +109,6 @@ export const MenuLeft = () => {
       )}
       <div className="mt-auto">
         <LanguageSwitcher />
-        {session?.username && (
-          <div className="mt-4 flex justify-center">
-            <Dropdown label={t('title.profile')}>
-              <Dropdown.Item onClick={() => router.push('/change-password')}>
-                {t('navigation.change-password')}
-              </Dropdown.Item>
-              <Dropdown.Item onClick={handleLogout}>
-                {t('navigation.logout')}
-              </Dropdown.Item>
-            </Dropdown>
-          </div>
-        )}
       </div>
     </nav>
   );
