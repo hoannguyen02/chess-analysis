@@ -6,13 +6,20 @@ import {
 import { useAppContext } from '@/contexts/AppContext';
 import { useCustomBoard } from '@/hooks/useCustomBoard';
 import { PromotionType } from '@/types/promotion';
-import { Puzzle, PuzzlePreMove } from '@/types/puzzle';
+import { Puzzle, PuzzlePreMove, SolvedData } from '@/types/puzzle';
 import { getActivePlayerFromFEN } from '@/utils/get-player-name-from-fen';
 import { Chess } from 'chess.js';
 import { Button } from 'flowbite-react';
 import { useTranslations } from 'next-intl';
 import { useRouter } from 'next/router';
-import React, { ReactNode, useEffect, useMemo, useRef, useState } from 'react';
+import React, {
+  ReactNode,
+  useCallback,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+} from 'react';
 import { Chessboard } from 'react-chessboard';
 import { Square } from 'react-chessboard/dist/chessboard/types';
 import {
@@ -26,6 +33,7 @@ import {
   VscSync,
 } from 'react-icons/vsc';
 import ConfettiEffect from './ConfettiEffect';
+import ElapsedTimer from './ElapsedTimer';
 
 type PuzzleProps = {
   puzzle: Puzzle;
@@ -33,7 +41,7 @@ type PuzzleProps = {
   highlightPossibleMoves?: boolean;
   showNextButton?: boolean;
   onNextClick?(): void;
-  onSolved?(): void;
+  onSolved?(data?: SolvedData): void;
 };
 
 export type HistoryMove = {
@@ -41,6 +49,13 @@ export type HistoryMove = {
   player: 'user' | 'engine';
   from: string;
   to: string;
+};
+
+type AttemptHistory = {
+  correct: boolean;
+  usedHint: boolean;
+  timeTaken: number;
+  move: string;
 };
 
 const SolvePuzzle: React.FC<PuzzleProps> = ({
@@ -93,12 +108,81 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({
   const [hintMessage, setHintMessage] = useState<ReactNode | ''>('');
   const boardRef = useRef<HTMLDivElement>(null);
 
+  const [isRunning, setIsRunning] = useState(true);
+  const [startTime, setStartTime] = useState<number>(Date.now());
+  const [hintUsed, setHintUsed] = useState(false);
+  // attemptHistory adjust rating when puzzle is solved/quit
+  const [attemptHistory, setAttemptHistory] = useState<AttemptHistory[]>([]);
+
+  const startTimer = () => {
+    setStartTime(Date.now());
+    setIsRunning(true);
+  };
+
+  const handleOnSolved = useCallback(
+    (finalAttemptHistory: AttemptHistory[], finalStep: number) => {
+      setIsRunning(false);
+      if (
+        finalAttemptHistory.length > 0 &&
+        finalStep >= puzzle.solutions.length
+      ) {
+        const usedHint = finalAttemptHistory.some(
+          (attempt) => attempt.usedHint
+        );
+        const totalTimeTaken = finalAttemptHistory.reduce(
+          (acc, attempt) => acc + attempt.timeTaken,
+          0
+        );
+        const failedAttempts = finalAttemptHistory.filter(
+          (attempt) => !attempt.correct
+        ).length;
+
+        if (onSolved) {
+          onSolved({
+            usedHint,
+            timeTaken: totalTimeTaken,
+            failedAttempts,
+          });
+        }
+      }
+    },
+    [onSolved, puzzle.solutions.length]
+  );
+
+  useEffect(() => {
+    const handleBeforeUnload = (event: any) => {
+      event.preventDefault(); // Ensure event triggers properly
+      handleOnSolved(attemptHistory, currentStep);
+    };
+
+    window.addEventListener('beforeunload', handleBeforeUnload);
+
+    return () => {
+      window.removeEventListener('beforeunload', handleBeforeUnload);
+    };
+  }, [attemptHistory, currentStep, handleOnSolved]);
+
+  useEffect(() => {
+    if (puzzle) {
+      game.load(puzzle.fen);
+      setCurrentFen(puzzle.fen);
+      setCurrentStep(0);
+      setMoveSquareStyle({});
+      setIsBoardClickAble(true);
+      setHintUsed(false);
+      setAttemptHistory([]);
+      setHistoryMoves([]);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [puzzle]);
+
   useEffect(() => {
     if (currentStep === puzzle.solutions.length) {
       setIsBoardClickAble(false);
       setHistoryMoveCurrentIdx(puzzle.solutions.length);
+      handleOnSolved(attemptHistory, currentStep);
     }
-  }, [currentStep, puzzle.solutions.length]);
+  }, [attemptHistory, currentStep, handleOnSolved, puzzle.solutions.length]);
 
   const handlePreMove = (callback?: () => void) => {
     const { move, from, to } = (puzzle.preMove as PuzzlePreMove) || {};
@@ -111,6 +195,7 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({
           [from]: { background: 'var(--p-highlight)' },
           [to]: { background: 'var(--p-highlight)' },
         });
+        startTimer();
       }
       if (callback) {
         callback(); // Proceed to callback
@@ -210,13 +295,21 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({
       moveSound.current.play();
     }
 
+    setAttemptHistory((prev) => {
+      const newHistory = [
+        ...prev,
+        {
+          move: userMove.san,
+          correct: validMove,
+          usedHint: hintUsed,
+          timeTaken: Math.floor((Date.now() - startTime) / 1000),
+        },
+      ];
+      return newHistory;
+    });
+
     if (validMove) {
       const nextStep = currentStep + 1;
-      if (nextStep === puzzle.solutions.length) {
-        if (onSolved) {
-          onSolved(); // Trigger event when the puzzle is solved
-        }
-      }
       if (
         nextStep < puzzle.solutions.length &&
         puzzle.solutions[nextStep].player === 'engine'
@@ -245,6 +338,7 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({
               to,
             },
           ]);
+          startTimer();
         }, DEFAULT_ENGINE_MOVE_DELAY_TIME);
 
         setCurrentTimeout(timeout);
@@ -369,6 +463,7 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({
   };
 
   const showSolution = () => {
+    setHintUsed(false);
     setShowRetry(false);
     game.load(puzzle.fen); // Reset the board to the initial puzzle state
     setCurrentFen(puzzle.fen); // Render the initial FEN
@@ -405,6 +500,7 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({
   };
 
   const retry = () => {
+    setHintUsed(false);
     setShowRetry(false);
     game.undo();
     game.undo();
@@ -439,12 +535,14 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({
       } else {
         setMoveSquareStyle({});
       }
+      startTimer();
     }, DEFAULT_ENGINE_MOVE_DELAY_TIME);
 
     setCurrentTimeout(timeout);
   };
 
   const showHint = () => {
+    setHintUsed(true);
     const solution = puzzle.solutions[currentStep];
     const moves = solution.moves;
     const fromPositions = new Set(moves.map((move) => move.from));
@@ -604,9 +702,10 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({
         </div>
         <div className="relative rounded lg:border-[1px]">
           <div
-            className={`hidden lg:flex ${bgHeader} justify-center py-4 text-white font-bold`}
+            className={`hidden lg:flex lg:flex-col items-center ${bgHeader} justify-center py-4 text-white font-bold`}
           >
             {message}
+            <ElapsedTimer startTime={startTime} isRunning={isRunning} />
           </div>
           {currentStep === puzzle.solutions.length && (
             <div className="hidden lg:flex flex-col p-4">

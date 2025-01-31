@@ -37,3 +37,9 @@ export type Puzzle = {
   _id?: string;
   puzzleId?: any;
 };
+
+export type SolvedData = {
+  usedHint: boolean;
+  timeTaken: number;
+  failedAttempts: number;
+};

@@ -1,45 +1,127 @@
 import Layout from '@/components/Layout';
 import { ShareFacebookButton } from '@/components/ShareFacebookButton';
 import SolvePuzzle from '@/components/SolvePuzzle';
+import { TransitionContainer } from '@/components/TransitionContainer';
+import { useAppContext } from '@/contexts/AppContext';
 import { withThemes } from '@/HOF/withThemes';
-import { createServerAxios } from '@/utils/axiosInstance';
+import { SolvedData } from '@/types/puzzle';
+import axiosInstance from '@/utils/axiosInstance';
+import { fetcher } from '@/utils/fetcher';
 import { Clipboard } from 'flowbite-react';
+import isEmpty from 'lodash/isEmpty';
 import {
   GetServerSideProps,
   GetServerSidePropsContext,
   PreviewData,
 } from 'next';
+import { useTranslations } from 'next-intl';
 import { useRouter } from 'next/router';
 import { ParsedUrlQuery } from 'querystring';
-import { useMemo } from 'react';
+import { useCallback, useEffect, useMemo, useState } from 'react';
+import useSWR from 'swr';
 
-const SolvePuzzlePage = ({ puzzle }: any) => {
+const SolvePuzzlePage = () => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
+  const [isManualLoading, setIsManualLoading] = useState(false);
+  const [nextPuzzleId, setNextPuzzleId] = useState();
+  const { apiDomain, session } = useAppContext();
+  const t = useTranslations('common');
   const router = useRouter();
-  const { locale, asPath } = router;
+  const { locale, asPath, query } = router;
   const fullUrl = useMemo(
     () => `${process.env.NEXT_PUBLIC_BASE_URL}/${locale}${asPath}`,
     [asPath, locale]
   );
 
+  const queryKey = useMemo(
+    () => `${apiDomain}/v1/puzzles/${query.id}`,
+    [apiDomain, query.id]
+  );
+
+  const { data: puzzle, isLoading } = useSWR(queryKey, fetcher, {
+    dedupingInterval: 300,
+  });
+
+  useEffect(() => {
+    setIsVisible(false);
+    if (puzzle) {
+      setIsManualLoading(false);
+      setIsVisible(true);
+    }
+  }, [puzzle]);
+
+  const handleNextClick = () => {
+    setIsVisible(false);
+    setIsManualLoading(true);
+    router.push(`/solve-puzzles/${nextPuzzleId}`);
+  };
+
+  const handleSolvePuzzle = useCallback(
+    async (data: SolvedData) => {
+      setIsSubmitting(true);
+      try {
+        const { failedAttempts, timeTaken, usedHint } = data;
+
+        const submitResult = await axiosInstance.post(
+          `${apiDomain}/v1/solve-puzzle/solve/next`,
+
+          {
+            userId: session?.id,
+            puzzleId: puzzle._id,
+            failedAttempts,
+            timeTaken,
+            usedHint,
+          }
+        );
+        setNextPuzzleId(submitResult.data.nextPuzzleId);
+      } catch (error) {
+        console.log(error);
+      } finally {
+        setIsSubmitting(false);
+      }
+
+      setIsSubmitting(false);
+    },
+    [apiDomain, puzzle?._id, session?.id]
+  );
+
+  if (!session?.username) {
+    router.push(`/login`);
+    return;
+  }
+
   return (
     <Layout>
-      <div className="flex flex-col">
-        <div className="flex mb-6 justify-center">
-          <ShareFacebookButton url={fullUrl} />
-          <Clipboard valueToCopy={fullUrl} label="Copy link" className="ml-2" />
+      <TransitionContainer
+        key={query.id as string}
+        isLoading={isLoading || isManualLoading}
+        isVisible={isVisible}
+      >
+        <div className="flex flex-col">
+          <div className="flex mb-6 justify-center">
+            <ShareFacebookButton url={fullUrl} />
+            <Clipboard
+              valueToCopy={fullUrl}
+              label={t('button.copy-link')}
+              className="ml-2"
+            />
+          </div>
+          <SolvePuzzle
+            onSolved={handleSolvePuzzle}
+            onNextClick={handleNextClick}
+            puzzle={puzzle}
+            showNextButton={!isEmpty(nextPuzzleId)}
+          />
         </div>
-        <SolvePuzzle puzzle={puzzle} />
-      </div>
+      </TransitionContainer>
     </Layout>
   );
 };
 
 export const getServerSideProps: GetServerSideProps = withThemes(
-  async (
-    ctx: GetServerSidePropsContext<ParsedUrlQuery, PreviewData>,
-    { apiDomain }
-  ) => {
-    const { locale, params } = ctx;
+  async (ctx: GetServerSidePropsContext<ParsedUrlQuery, PreviewData>) => {
+    const { locale } = ctx;
     // Helper function to load localization messages
     const loadMessages = async (locale: string) => {
       try {
@@ -62,27 +144,18 @@ export const getServerSideProps: GetServerSideProps = withThemes(
 
     // Initialize props
     const messages = await loadMessages(locale || 'en');
-    const id = params?.id;
 
     try {
-      const serverAxios = createServerAxios(ctx);
-      const response = await serverAxios.get(`${apiDomain}/v1/puzzles/${id}`);
-
       return {
         props: {
           messages,
-          puzzle: response.data,
           error: null,
         },
       };
-    } catch (error: any) {
+    } catch {
       return {
         props: {
           messages,
-          error:
-            error.response?.data.message || error.response?.data.message?.error,
-          errorCode: error.response?.status,
-          puzzle: [],
         },
       };
     }
