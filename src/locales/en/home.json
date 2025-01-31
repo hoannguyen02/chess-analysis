@@ -1,5 +1,12 @@
 {
   "headline": "Become a chess master with only 199k",
+  "benefits": {
+    "heading": "Why Choose LIMA Chess?",
+    "learn-fast": "Improve quickly with world-class training methods.",
+    "lowest-price": "Master chess in the shortest time at the lowest cost.",
+    "support": "Weekly learning support with expert guidance.",
+    "easy-started": "Easy to learn, easy to practice, develop top-level skills."
+  },
   "button": {
     "get-started": "Get Started"
   }
