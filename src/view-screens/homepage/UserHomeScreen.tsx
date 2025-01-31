@@ -6,7 +6,9 @@ import { useCallback, useMemo } from 'react';
 import useSWR from 'swr';
 
 import { useToast } from '@/contexts/ToastContext';
+import { DifficultyType } from '@/types';
 import axiosInstance, { setAxiosLocale } from '@/utils/axiosInstance';
+import { filteredQuery } from '@/utils/filteredQuery';
 import { handleSubmission } from '@/utils/handleSubmission';
 import isEmpty from 'lodash/isEmpty';
 import { useTranslations } from 'next-intl';
@@ -26,6 +28,35 @@ export const UserHomeScreen = () => {
   const { data: user, isLoading: isLoadingUser } = useSWR(key, fetcher, {
     revalidateOnFocus: true,
   });
+
+  const nextPuzzleKey = useMemo(() => {
+    if (user) {
+      const { rating } = user;
+      let difficulties: DifficultyType[] = [];
+      if (rating < 1200) {
+        difficulties = ['Beginner', 'Easy'];
+      } else if (rating < 1600) {
+        difficulties = ['Easy', 'Medium'];
+      } else if (rating < 2000) {
+        difficulties = ['Medium', 'Hard'];
+      } else {
+        difficulties = ['Hard', 'Very Hard'];
+      }
+
+      return `${apiDomain}/v1/solve-puzzle/next?${filteredQuery({
+        difficulties: difficulties.join(','),
+      })}`;
+    }
+    return undefined;
+  }, [apiDomain, user]);
+
+  const { data: nextPuzzleId, isLoading: isLoadingNextPuzzle } = useSWR(
+    nextPuzzleKey,
+    fetcher,
+    {
+      revalidateOnFocus: true,
+    }
+  );
 
   const handleLogout = useCallback(async () => {
     const result = await handleSubmission(
@@ -65,17 +96,17 @@ export const UserHomeScreen = () => {
               <p className="text-sm text-gray-500 line-clamp-3 mt-2">
                 {t('home.current-rating')}: <strong>{user?.rating}</strong>
               </p>
-              {/* <p className="text-sm text-gray-500 line-clamp-3 mt-2">
-                {t('home.puzzle-streak')}:{' '}
-                <strong>{user?.currentStreak}</strong>
-              </p> */}
               {/* Buttons for Solve & Practice */}
               <div className="mt-8 flex space-x-4">
-                <Link href="/puzzles">
-                  <button className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">
-                    {t('home.solve-puzzles')}
-                  </button>
-                </Link>
+                <button
+                  disabled={isLoadingNextPuzzle || isEmpty(nextPuzzleId)}
+                  className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600"
+                  onClick={() => {
+                    router.push(`/solve-puzzles/${nextPuzzleId}`);
+                  }}
+                >
+                  {t('home.solve-puzzles')}
+                </button>
                 <Link href="/practice">
                   <button className="bg-purple-500 text-white px-4 py-2 rounded-md hover:bg-purple-600">
                     {t('home.practice-puzzles')}

@@ -17,11 +17,11 @@ export type LessonProgress = {
 };
 
 /**
- * 0-800: Easy
+ * 0-800: Beginner
  * 800-1200: Easy
  * 1200-1600: Medium
  * 1600-2000: Hard
- * 2000+: Very hard
+ * 2000+: Very Hard
  */
 export type DifficultyType =
   | 'Beginner'
