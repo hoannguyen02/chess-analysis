@@ -1,11 +1,11 @@
 import { DifficultyType } from '@/types';
 
 export const LEVEL_RATING: Record<DifficultyType, string> = {
-  Beginner: 'Beginner (Rating: 800)',
-  Easy: 'Easy (Rating: 0–1200)',
-  Medium: 'Medium (Rating: 1200-1600)',
-  Hard: 'Hard (Rating: 1600-2000)',
-  'Very Hard': 'Very hard (Rating: 2000+)',
+  Beginner: 'Beginner (Elo: 800)',
+  Easy: 'Easy (Elo: 0–1200)',
+  Medium: 'Medium (Elo: 1200-1600)',
+  Hard: 'Hard (Elo: 1600-2000)',
+  'Very Hard': 'Very hard (Elo: 2000+)',
 };
 
 export const RatingOptions = Object.entries(LEVEL_RATING).map(
