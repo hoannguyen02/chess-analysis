@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import { VscClose } from 'react-icons/vsc';
 import { Logo } from './Logo';
 import SolvePuzzle from './SolvePuzzle';
+import { TransitionContainer } from './TransitionContainer';
 
 type Props = {
   onClose(): void;
@@ -58,28 +59,16 @@ export const SolvePuzzleDrawer = ({
         }}
       />
       <Drawer.Items className="p-4">
-        {isLoading ? (
-          <div className="flex justify-center items-center h-48">
-            <div className="animate-spin rounded-full h-10 w-10 border-b-2 border-blue-500"></div>
-          </div>
-        ) : (
-          <div
-            className={`transition-opacity duration-500 ease-in-out transform ${
-              isVisible
-                ? 'opacity-100 translate-y-0'
-                : 'opacity-0 translate-y-4'
-            }`}
-          >
-            <SolvePuzzle
-              showNextButton={showNextButton}
-              highlightPossibleMoves
-              onNextClick={onNextClick}
-              showBackButton={false}
-              puzzle={displayedPuzzle}
-              onSolved={onSolved}
-            />
-          </div>
-        )}
+        <TransitionContainer isLoading={isLoading} isVisible={isVisible}>
+          <SolvePuzzle
+            showNextButton={showNextButton}
+            highlightPossibleMoves
+            onNextClick={onNextClick}
+            showBackButton={false}
+            puzzle={displayedPuzzle}
+            onSolved={onSolved}
+          />
+        </TransitionContainer>
       </Drawer.Items>
     </Drawer>
   );

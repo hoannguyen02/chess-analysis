@@ -167,7 +167,6 @@ export const LessonDetails = ({ data }: Props) => {
   };
 
   const handleNextPuzzle = () => {
-    debugger;
     const allContents = data.contents || [];
 
     const { contentIndex } = contentPuzzle as ContentPuzzleDialogData;
@@ -229,15 +228,20 @@ export const LessonDetails = ({ data }: Props) => {
             </div>
           )
         ) : (
-          <Button
-            className="mb-6 w-full text-lg py-3"
-            color="blue"
-            onClick={handleContinueOrStart}
-          >
-            {completedProgress > 0
-              ? t('common.title.continue-learning')
-              : t('common.title.start')}
-          </Button>
+          <>
+            {/* Don't display button if 1 content because we already expanded it */}
+            {contents && contents?.length > 1 && (
+              <Button
+                className="mb-6 w-full text-lg py-3"
+                color="blue"
+                onClick={handleContinueOrStart}
+              >
+                {completedProgress > 0
+                  ? t('common.title.continue-learning')
+                  : t('common.title.start')}
+              </Button>
+            )}
+          </>
         )}
 
         {/* Description */}
