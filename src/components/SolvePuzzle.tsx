@@ -665,9 +665,12 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({
 
       {/* Mobile message */}
       <div
-        className={`${bgHeader} flex justify-center py-4 text-white font-bold lg:hidden mb-4 rounded-lg`}
+        className={`${bgHeader} flex justify-between p-4 text-white font-bold lg:hidden mb-4 rounded-lg`}
       >
         {message}
+        {showTimer && (
+          <ElapsedTimer startTime={startTime} isRunning={isRunning} />
+        )}
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-[500px_auto] gap-2 lg:gap-16 mx-auto max-w-[900px]">
         <div ref={boardRef}>
@@ -707,8 +710,9 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({
           />
         </div>
         <div className="relative rounded lg:border-[1px]">
+          {/* Desktop message */}
           <div
-            className={`hidden lg:flex lg:flex-col items-center ${bgHeader} justify-center py-4 text-white font-bold`}
+            className={`hidden lg:flex items-center ${bgHeader} justify-between p-4 text-white font-bold`}
           >
             {message}
             {showTimer && (
@@ -718,10 +722,11 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({
           {currentStep === puzzle.solutions.length && (
             <div className="hidden lg:flex flex-col p-4">
               {t('common.title.theme')}:
-              {puzzle.themes.map((id) => {
+              {puzzle.themes.map((theme) => {
+                const puzzleId = typeof theme === 'string' ? theme : theme?._id;
                 return (
-                  <p className="mb-2 text-[14px]" key={id}>
-                    {themeMap[id]?.title?.[locale]}
+                  <p className="mb-2 text-[14px]" key={puzzleId}>
+                    {themeMap[puzzleId]?.title?.[locale]}
                   </p>
                 );
               })}
