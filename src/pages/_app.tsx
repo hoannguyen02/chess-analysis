@@ -4,7 +4,6 @@ import { AppProvider } from '@/contexts/AppContext';
 import { ToastProvider } from '@/contexts/ToastContext';
 import '@/styles/globals.css';
 import { LocaleType } from '@/types/locale';
-import { initializeAxiosLocale } from '@/utils/axiosInstance';
 import type { CustomFlowbiteTheme } from 'flowbite-react';
 import { Flowbite } from 'flowbite-react';
 import { NextIntlClientProvider } from 'next-intl';
@@ -38,7 +37,9 @@ const App = ({ Component, pageProps }: AppProps) => {
   const { locale } = useRouter();
 
   useEffect(() => {
-    initializeAxiosLocale(locale); // Ensures Axios gets the correct locale on app load
+    if (locale) {
+      localStorage.setItem('locale', locale); // ✅ Store locale in localStorage
+    }
   }, [locale]);
 
   // Determine the font based on the locale

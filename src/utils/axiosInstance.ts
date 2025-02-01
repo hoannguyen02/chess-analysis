@@ -6,18 +6,20 @@ const axiosInstance = axios.create({
   withCredentials: true, // Automatically include cookies for client-side requests
 });
 
-export const setAxiosLocale = (locale: string) => {
-  axiosInstance.defaults.headers.common['x-lang'] = locale;
+const getStoredLocale = (): string => {
+  if (typeof window !== 'undefined') {
+    return localStorage.getItem('locale') || 'en'; // Default to 'en'
+  }
+  return 'en';
 };
 
-// Wait for Next.js router to set the locale correctly
-export const initializeAxiosLocale = (nextLocale?: string) => {
-  const storedLocale =
-    typeof window !== 'undefined' ? localStorage.getItem('locale') : null;
-
-  const effectiveLocale = nextLocale || storedLocale || 'en'; // Use Next.js locale if available
-  setAxiosLocale(effectiveLocale);
-};
+axiosInstance.interceptors.request.use((config) => {
+  const locale = getStoredLocale();
+  if (locale) {
+    config.headers['x-lang'] = locale;
+  }
+  return config;
+});
 
 /**
  * A helper to create an Axios instance with server-side cookies.
