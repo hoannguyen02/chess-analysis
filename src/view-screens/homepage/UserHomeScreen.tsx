@@ -5,6 +5,7 @@ import { Button, Card, Dropdown } from 'flowbite-react';
 import { useCallback, useEffect, useMemo, useState } from 'react';
 import useSWR from 'swr';
 
+import { PrimaryButton } from '@/components/PrimaryButton';
 import { useToast } from '@/contexts/ToastContext';
 import { DifficultyType } from '@/types';
 import { User } from '@/types/user';
@@ -22,6 +23,17 @@ export const UserHomeScreen = () => {
   const router = useRouter();
   const { addToast } = useToast();
   const { session, apiDomain, locale } = useAppContext();
+  //
+  const nextCourseKey = useMemo(() => {
+    return user ? `/v1/courses/next-course/${user._id}` : undefined;
+  }, [user]);
+  const { data: nextCourse, isLoading: isLoadingNextCourse } = useSWR(
+    nextCourseKey,
+    fetcher,
+    {
+      revalidateOnFocus: true,
+    }
+  );
 
   useEffect(() => {
     if (locale) {
@@ -99,8 +111,9 @@ export const UserHomeScreen = () => {
           </Dropdown>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <Card className="h-full w-full flex flex-col items-start min-h-[200px] border border-gray-200">
+          <Card className="w-full flex flex-col items-start min-h-[200px] border border-gray-200">
             <div className="flex flex-col flex-grow items-start">
+              <h2 className="text-lg font-semibold">{t('home.performance')}</h2>
               <p
                 className="text-sm text-gray-500 line-clamp-3 mt-2"
                 dangerouslySetInnerHTML={{
@@ -134,19 +147,25 @@ export const UserHomeScreen = () => {
               </div>
             </div>
           </Card>
-
-          {/* Next Course Block */}
-          {/* <div className="bg-white shadow-lg p-6 rounded-lg">
+          <Card className="w-full flex flex-col items-start min-h-[200px] border border-gray-200">
             <h2 className="text-lg font-semibold">{t('home.next-course')}</h2>
-            <p className="text-gray-600">
-              {t('home.course-title')}: <strong>Intermediate Checkmates</strong>
-            </p>
-            <Link href="/courses">
-              <button className="mt-4 bg-green-500 text-white px-4 py-2 rounded-md hover:bg-green-600">
-                {t('home.continue-course')}
-              </button>
-            </Link>
-          </div> */}
+            {nextCourse ? (
+              <>
+                <p className="text-gray-600 mt-2">{nextCourse.title[locale]}</p>
+                <div className="mt-4">
+                  <PrimaryButton className="inline-flex">
+                    {t('home.continue-course')}
+                  </PrimaryButton>
+                </div>
+              </>
+            ) : (
+              <p>
+                🎉 "Congratulations! You've completed all available courses.
+                Stay tuned for new content!"
+                {/* 🎉 "Chúc mừng! Bạn đã hoàn thành tất cả các khóa học hiện có. Hãy chờ đón nội dung mới!" */}
+              </p>
+            )}
+          </Card>
         </div>
       </div>
     </TransitionContainer>
