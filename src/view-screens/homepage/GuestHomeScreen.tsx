@@ -8,7 +8,7 @@ export const GuestHomeScreen = () => {
   const router = useRouter();
   return (
     <div className="flex flex-col justify-center items-center mt-6 w-full px-4">
-      <h1 className="text-xl sm:text-2xl md:text-4xl lg:text-5xl font-extrabold text-center gradient-text">
+      <h1 className="sm:text-2xl md:text-4xl lg:text-5xl font-extrabold text-center gradient-text">
         {t('home.headline')}
       </h1>
       <h4 className="mt-6 text-lg font-semibold">🚀 {t('home.heading')}</h4>
