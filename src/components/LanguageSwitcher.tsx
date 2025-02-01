@@ -1,11 +1,14 @@
+import { setAxiosLocale } from '@/utils/axiosInstance';
 import { useRouter } from 'next/router';
 
 const LanguageSwitcher = () => {
   const router = useRouter();
-  const { locale, asPath } = router;
+  const { locale } = router;
 
   const switchLanguage = (lang: string) => {
-    router.push(asPath, asPath, { locale: lang });
+    setAxiosLocale(lang); // Update Axios locale immediately
+    localStorage.setItem('locale', lang); // Persist for refreshes
+    router.replace(router.asPath, undefined, { locale: lang }); // Faster language switch
   };
 
   return (

@@ -35,7 +35,7 @@ export const withThemes =
         // Store themes in cookies
         nookies.set(ctx, 'themes', JSON.stringify(themes), {
           httpOnly: false, // Accessible by JavaScript
-          maxAge: 60 * 60, // 1 hour
+          maxAge: 60 * 60 * 24, // 24 hour
           path: '/', // Available for all routes
         });
       } catch (error) {
@@ -51,7 +51,7 @@ export const withThemes =
         // Store tags in cookies
         nookies.set(ctx, 'tags', JSON.stringify(tags), {
           httpOnly: false, // Accessible by JavaScript
-          maxAge: 60 * 60, // 1 hour
+          maxAge: 60 * 60 * 24, // 24 hour
           path: '/', // Available for all routes
         });
       } catch (error) {

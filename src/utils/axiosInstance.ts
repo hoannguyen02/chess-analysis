@@ -1,4 +1,3 @@
-import { LocaleType } from '@/types/locale';
 import axios from 'axios';
 import { GetServerSidePropsContext } from 'next';
 
@@ -7,17 +6,17 @@ const axiosInstance = axios.create({
   withCredentials: true, // Automatically include cookies for client-side requests
 });
 
-export const setAxiosLocale = (locale: LocaleType) => {
-  axiosInstance.interceptors.request.use((config) => {
-    if (config.headers) {
-      config.headers['x-lang'] = locale || 'en'; // Add the locale dynamically
-    } else {
-      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-      // @ts-ignore
-      config.headers = { 'x-lang': locale || 'en' }; // Ensure headers exist
-    }
-    return config;
-  });
+export const setAxiosLocale = (locale: string) => {
+  axiosInstance.defaults.headers.common['x-lang'] = locale;
+};
+
+// Wait for Next.js router to set the locale correctly
+export const initializeAxiosLocale = (nextLocale?: string) => {
+  const storedLocale =
+    typeof window !== 'undefined' ? localStorage.getItem('locale') : null;
+
+  const effectiveLocale = nextLocale || storedLocale || 'en'; // Use Next.js locale if available
+  setAxiosLocale(effectiveLocale);
 };
 
 /**

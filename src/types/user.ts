@@ -9,6 +9,8 @@ export type User = {
   status: StatusType;
   role: string;
   _id?: string;
+  feedback: string;
+  rating: number;
 };
 
 export type Role = {

@@ -3,7 +3,7 @@ import { PrimaryButton } from '@/components/PrimaryButton';
 import { useAppContext } from '@/contexts/AppContext';
 import { useToast } from '@/contexts/ToastContext';
 import { withThemes } from '@/HOF/withThemes';
-import axiosInstance, { setAxiosLocale } from '@/utils/axiosInstance';
+import axiosInstance from '@/utils/axiosInstance';
 import { handleSubmission } from '@/utils/handleSubmission';
 import { Label, TextInput } from 'flowbite-react';
 import { GetServerSidePropsContext } from 'next';
@@ -50,7 +50,6 @@ const ChangePasswordPage = () => {
 
     const result = await handleSubmission(
       async () => {
-        setAxiosLocale(locale);
         return await axiosInstance.post(
           `${apiDomain}/v1/auth/change-password`,
           {

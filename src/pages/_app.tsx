@@ -4,12 +4,14 @@ import { AppProvider } from '@/contexts/AppContext';
 import { ToastProvider } from '@/contexts/ToastContext';
 import '@/styles/globals.css';
 import { LocaleType } from '@/types/locale';
+import { initializeAxiosLocale } from '@/utils/axiosInstance';
 import type { CustomFlowbiteTheme } from 'flowbite-react';
 import { Flowbite } from 'flowbite-react';
 import { NextIntlClientProvider } from 'next-intl';
 import type { AppProps } from 'next/app';
 import { Poppins, Roboto } from 'next/font/google'; // Import additional fonts
 import { useRouter } from 'next/router';
+import { useEffect } from 'react';
 
 // Load Poppins font
 const poppins = Poppins({
@@ -34,6 +36,10 @@ const customTheme: CustomFlowbiteTheme = {
 
 const App = ({ Component, pageProps }: AppProps) => {
   const { locale } = useRouter();
+
+  useEffect(() => {
+    initializeAxiosLocale(locale); // Ensures Axios gets the correct locale on app load
+  }, [locale]);
 
   // Determine the font based on the locale
   const fontClass = locale === 'vi' ? roboto.className : poppins.className;
