@@ -55,6 +55,7 @@ export const UserHomeScreen = () => {
     fetcher,
     {
       revalidateOnFocus: true,
+      dedupingInterval: 300,
     }
   );
 
