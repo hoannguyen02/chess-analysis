@@ -67,6 +67,7 @@ export const SolvePuzzleDrawer = ({
             showBackButton={false}
             puzzle={displayedPuzzle}
             onSolved={onSolved}
+            showTimer={false}
           />
         </TransitionContainer>
       </Drawer.Items>

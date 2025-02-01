@@ -42,6 +42,7 @@ type PuzzleProps = {
   showNextButton?: boolean;
   onNextClick?(): void;
   onSolved?(data?: SolvedData): void;
+  showTimer?: boolean;
 };
 
 export type HistoryMove = {
@@ -65,6 +66,7 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({
   showNextButton = false,
   onNextClick,
   onSolved,
+  showTimer = true,
 }) => {
   const moveSound = useRef<HTMLAudioElement | null>(null);
   const captureSound = useRef<HTMLAudioElement | null>(null);
@@ -705,7 +707,9 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({
             className={`hidden lg:flex lg:flex-col items-center ${bgHeader} justify-center py-4 text-white font-bold`}
           >
             {message}
-            <ElapsedTimer startTime={startTime} isRunning={isRunning} />
+            {showTimer && (
+              <ElapsedTimer startTime={startTime} isRunning={isRunning} />
+            )}
           </div>
           {currentStep === puzzle.solutions.length && (
             <div className="hidden lg:flex flex-col p-4">
