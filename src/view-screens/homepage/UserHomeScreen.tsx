@@ -1,7 +1,7 @@
 import { TransitionContainer } from '@/components/TransitionContainer';
 import { useAppContext } from '@/contexts/AppContext';
 import { fetcher } from '@/utils/fetcher';
-import { Card, Dropdown } from 'flowbite-react';
+import { Button, Card, Dropdown } from 'flowbite-react';
 import { useCallback, useMemo } from 'react';
 import useSWR from 'swr';
 
@@ -12,7 +12,6 @@ import { filteredQuery } from '@/utils/filteredQuery';
 import { handleSubmission } from '@/utils/handleSubmission';
 import isEmpty from 'lodash/isEmpty';
 import { useTranslations } from 'next-intl';
-import Link from 'next/link';
 import { useRouter } from 'next/router';
 
 export const UserHomeScreen = () => {
@@ -99,20 +98,28 @@ export const UserHomeScreen = () => {
               </p>
               {/* Buttons for Solve & Practice */}
               <div className="mt-8 flex space-x-4">
-                <button
+                <Button
+                  outline
+                  gradientDuoTone="tealToLime"
+                  size="lg"
                   disabled={isLoadingNextPuzzle || isEmpty(nextPuzzleId)}
-                  className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600"
                   onClick={() => {
                     router.push(`/solve-puzzles/${nextPuzzleId}`);
                   }}
                 >
                   {t('home.solve-puzzles')}
-                </button>
-                <Link href="/practice">
-                  <button className="bg-purple-500 text-white px-4 py-2 rounded-md hover:bg-purple-600">
-                    {t('home.practice-puzzles')}
-                  </button>
-                </Link>
+                </Button>
+                <Button
+                  outline
+                  gradientDuoTone="cyanToBlue"
+                  size="lg"
+                  // disabled={isLoadingNextPuzzle || isEmpty(nextPuzzleId)}
+                  onClick={() => {
+                    router.push(`/solve-puzzles/${nextPuzzleId}`);
+                  }}
+                >
+                  {t('home.practice-puzzles')}
+                </Button>
               </div>
             </div>
           </Card>
