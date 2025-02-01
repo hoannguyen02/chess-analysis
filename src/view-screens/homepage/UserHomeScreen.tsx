@@ -75,7 +75,10 @@ export const UserHomeScreen = () => {
   return (
     <TransitionContainer isLoading={isLoadingUser} isVisible={!isEmpty(user)}>
       <div className="flex flex-col">
-        <div className="my-4 flex justify-end">
+        <div className="my-4 flex justify-between">
+          <div>
+            <h1 className="font-semibold">{session?.username}</h1>
+          </div>
           <Dropdown label={t('common.title.profile')}>
             <Dropdown.Item onClick={() => router.push('/change-password')}>
               {t('common.navigation.change-password')}

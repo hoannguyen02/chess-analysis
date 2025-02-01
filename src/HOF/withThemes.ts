@@ -71,8 +71,6 @@ export const withThemes =
         id: session.id,
         role: session.role,
         username: session.username,
-        isManageCourses: session.permissions.write_courses,
-        isManageUsers: session.permissions.user_accounts,
       };
     }
 
