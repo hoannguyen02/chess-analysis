@@ -1,9 +1,12 @@
 import Layout from '@/components/Layout';
+import { NoPuzzleFound } from '@/components/NoPuzzleFound';
+import { RegisterDialog } from '@/components/RegisterDialog';
 import { ShareFacebookButton } from '@/components/ShareFacebookButton';
 import SolvePuzzle from '@/components/SolvePuzzle';
 import { TransitionContainer } from '@/components/TransitionContainer';
 import { useAppContext } from '@/contexts/AppContext';
 import { withThemes } from '@/HOF/withThemes';
+import useDialog from '@/hooks/useDialog';
 import { SolvedData } from '@/types/puzzle';
 import axiosInstance from '@/utils/axiosInstance';
 import { fetcher } from '@/utils/fetcher';
@@ -22,6 +25,7 @@ import useSWR from 'swr';
 
 const SolvePuzzlePage = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const { open, onOpenDialog, onCloseDialog } = useDialog();
   const [isVisible, setIsVisible] = useState(false);
   const [isManualLoading, setIsManualLoading] = useState(false);
   const [nextPuzzleId, setNextPuzzleId] = useState();
@@ -35,11 +39,15 @@ const SolvePuzzlePage = () => {
   );
 
   const queryKey = useMemo(
-    () => `${apiDomain}/v1/puzzles/${query.id}`,
+    () => `${apiDomain}/v1/puzzles/public/${query.id}`,
     [apiDomain, query.id]
   );
 
-  const { data: puzzle, isLoading } = useSWR(queryKey, fetcher, {
+  const {
+    data: puzzle,
+    isLoading,
+    error,
+  } = useSWR(queryKey, fetcher, {
     dedupingInterval: 300,
   });
 
@@ -48,10 +56,16 @@ const SolvePuzzlePage = () => {
     if (puzzle) {
       setIsManualLoading(false);
       setIsVisible(true);
+    } else {
+      setIsVisible(true);
     }
   }, [puzzle]);
 
   const handleNextClick = () => {
+    if (!session?.id) {
+      onOpenDialog();
+      return;
+    }
     setIsVisible(false);
     setIsManualLoading(true);
     router.push(`/solve-puzzles/${nextPuzzleId}`);
@@ -59,6 +73,9 @@ const SolvePuzzlePage = () => {
 
   const handleSolvePuzzle = useCallback(
     async (data: SolvedData) => {
+      if (!session?.id) {
+        return;
+      }
       setIsSubmitting(true);
       try {
         const { failedAttempts, timeTaken, usedHint } = data;
@@ -80,16 +97,10 @@ const SolvePuzzlePage = () => {
       } finally {
         setIsSubmitting(false);
       }
-
       setIsSubmitting(false);
     },
     [apiDomain, puzzle?._id, session?.id]
   );
-
-  if (!session?.username) {
-    router.push(`/login`);
-    return;
-  }
 
   return (
     <Layout>
@@ -98,23 +109,28 @@ const SolvePuzzlePage = () => {
         isLoading={isLoading || isManualLoading}
         isVisible={isVisible}
       >
-        <div className="flex flex-col">
-          <div className="flex mb-6 justify-center">
-            <ShareFacebookButton url={fullUrl} />
-            <Clipboard
-              valueToCopy={fullUrl}
-              label={t('button.copy-link')}
-              className="ml-2"
+        {puzzle || !isEmpty(error) ? (
+          <div className="flex flex-col">
+            <div className="flex mb-6 justify-center">
+              <ShareFacebookButton url={fullUrl} />
+              <Clipboard
+                valueToCopy={fullUrl}
+                label={t('button.copy-link')}
+                className="ml-2"
+              />
+            </div>
+            <SolvePuzzle
+              onSolved={handleSolvePuzzle}
+              onNextClick={handleNextClick}
+              puzzle={puzzle}
+              showNextButton={!isEmpty(nextPuzzleId) || isEmpty(session?.id)}
             />
           </div>
-          <SolvePuzzle
-            onSolved={handleSolvePuzzle}
-            onNextClick={handleNextClick}
-            puzzle={puzzle}
-            showNextButton={!isEmpty(nextPuzzleId)}
-          />
-        </div>
+        ) : (
+          <NoPuzzleFound />
+        )}
       </TransitionContainer>
+      {open && <RegisterDialog onClose={onCloseDialog} />}
     </Layout>
   );
 };

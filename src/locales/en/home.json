@@ -4,14 +4,5 @@
   "current-rating": "Current rating",
   "solve-puzzles": "Solve puzzles",
   "practice-puzzles": "Practice puzzles",
-  "benefits": {
-    "heading": "Why Choose LIMA Chess?",
-    "learn-fast": "Improve quickly with world-class training methods.",
-    "lowest-price": "Master chess in the shortest time at the lowest cost.",
-    "support": "Weekly learning support with expert guidance.",
-    "easy-started": "Easy to learn, easy to practice, develop top-level skills."
-  },
-  "button": {
-    "get-started": "Get Started"
-  }
+  "heading": "Why Choose LIMA Chess?"
 }

@@ -171,6 +171,21 @@ export const PuzzleFormScreen = ({ puzzle, onSaveSuccess }: Props) => {
     }
   };
 
+  const handleCopySolvePuzzleLink = () => {
+    if (isValidFormValues()) {
+      const isPublic = getValues('isPublic');
+      if (!isPublic) {
+        alert('Puzzle is not public. Link will not be copied');
+        return;
+      } else {
+        navigator.clipboard.writeText(
+          `${process.env.NEXT_PUBLIC_BASE_URL}/vi/solve-puzzles/${puzzle?._id}`
+        );
+        alert('Link copied successfully');
+      }
+    }
+  };
+
   return (
     <div className="">
       <TitlePage>Puzzle Form</TitlePage>
@@ -511,6 +526,16 @@ export const PuzzleFormScreen = ({ puzzle, onSaveSuccess }: Props) => {
           >
             {t('common.button.back')}
           </Button>
+          {puzzle?._id && (
+            <Button
+              type="button"
+              onClick={handleCopySolvePuzzleLink}
+              outline
+              className="mr-8"
+            >
+              Copy solve puzzle public link
+            </Button>
+          )}
           <Button
             type="button"
             onClick={handlePreview}

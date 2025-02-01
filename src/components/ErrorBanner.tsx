@@ -11,12 +11,14 @@ type ErrorBannerProps = {
   error: string;
   retryAction?: () => void;
   errorCode: number;
+  showLogo?: boolean;
 };
 
 export const ErrorBanner: React.FC<ErrorBannerProps> = ({
   error,
   errorCode,
   retryAction,
+  showLogo = true,
 }) => {
   const router = useRouter();
   const t = useTranslations();
@@ -27,9 +29,11 @@ export const ErrorBanner: React.FC<ErrorBannerProps> = ({
   return (
     <div className="flex justify-center items-center lg:px-4 py-6">
       <div className="w-full max-w-4xl flex flex-col">
-        <Link href="/" className="mb-6 flex mx-auto">
-          <Logo />
-        </Link>
+        {showLogo && (
+          <Link href="/" className="mb-6 flex mx-auto">
+            <Logo />
+          </Link>
+        )}
         <Alert
           color="failure"
           className="border border-red-300 shadow-lg rounded-lg p-6"

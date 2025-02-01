@@ -39,7 +39,7 @@
     "renew-subscription": "Gia Hạn Đăng Ký",
     "success": "Yêu Cầu Đã Được Xử Lý Thành Công",
     "logout-success": "Đăng xuất thành công",
-    "profile": "Tài khoản",
+    "profile": "Thông Tin Tài khoản",
     "congrats-course": "Xuất sắc! bạn đã hoàn thành khóa học. Hãy tiếp tục nỗ lực nhé!"
   },
   "button": {
@@ -61,8 +61,16 @@
     "review-lesson": "Xem lại bài học",
     "next-lesson": "Bài tiếp theo",
     "share-facebook": "Chia sẻ lên facebook",
-    "buy-now": "Mua Ngay",
+    "join-now": "Tham gia ngay",
     "copy-link": "Sao chép link",
     "close": "Close/Đóng"
+  },
+  "benefits": {
+    "title": "🚀 Chinh phục đỉnh cao cờ vua ngay hôm nay!",
+    "subtitle": " Bắt đầu hành trình của bạn cùng LIMA Chess – chỉ với 199k!",
+    "learn-fast": "Tiến bộ vượt bậc với phương pháp huấn luyện đẳng cấp thế giới.",
+    "lowest-price": "Chinh phục cờ vua nhanh nhất với chi phí rẻ nhất.",
+    "support": "Hỗ trợ học tập hàng tuần với hướng dẫn từ chuyên gia.",
+    "easy-started": "Dễ học, dễ luyện tập, phát triển kỹ năng đỉnh cao."
   }
 }

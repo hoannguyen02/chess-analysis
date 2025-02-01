@@ -76,10 +76,7 @@ export const UserHomeScreen = () => {
   return (
     <TransitionContainer isLoading={isLoadingUser} isVisible={!isEmpty(user)}>
       <div className="flex flex-col">
-        <div className="my-4 flex justify-between">
-          <div>
-            <h1 className="font-semibold">{session?.username}</h1>
-          </div>
+        <div className="my-4 flex">
           <Dropdown label={t('common.title.profile')}>
             <Dropdown.Item onClick={() => router.push('/change-password')}>
               {t('common.navigation.change-password')}
@@ -89,7 +86,7 @@ export const UserHomeScreen = () => {
             </Dropdown.Item>
           </Dropdown>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 p-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <Card className="h-full w-full flex flex-col items-start min-h-[200px] border border-gray-200">
             <div className="flex flex-col flex-grow items-start">
               <div className="grid grid-cols-[auto_100px] w-full">
