@@ -64,10 +64,11 @@ export const SolvePuzzleDrawer = ({
             showNextButton={showNextButton}
             highlightPossibleMoves
             onNextClick={onNextClick}
-            showBackButton={false}
             puzzle={displayedPuzzle}
             onSolved={onSolved}
             showTimer={false}
+            showCloseButton={!showNextButton}
+            onCloseClick={onClose}
           />
         </TransitionContainer>
       </Drawer.Items>

@@ -41,6 +41,8 @@ type PuzzleProps = {
   highlightPossibleMoves?: boolean;
   showNextButton?: boolean;
   onNextClick?(): void;
+  showCloseButton?: boolean;
+  onCloseClick?(): void;
   onSolved?(data?: SolvedData): void;
   showTimer?: boolean;
 };
@@ -66,6 +68,8 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({
   showNextButton = false,
   onNextClick,
   onSolved,
+  showCloseButton = false,
+  onCloseClick,
   showTimer = true,
 }) => {
   const moveSound = useRef<HTMLAudioElement | null>(null);
@@ -823,7 +827,7 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({
                     </Button>
                   </div>
                 </div>
-                {showNextButton && (
+                {showNextButton ? (
                   <Button
                     color="primary"
                     onClick={onNextClick}
@@ -831,6 +835,16 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({
                   >
                     {t('common.button.next')}
                   </Button>
+                ) : showCloseButton ? (
+                  <Button
+                    color="primary"
+                    onClick={onCloseClick}
+                    className="mt-2"
+                  >
+                    {t('common.button.close')}
+                  </Button>
+                ) : (
+                  <></>
                 )}
               </div>
             )}
