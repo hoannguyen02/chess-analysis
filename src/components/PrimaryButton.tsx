@@ -7,6 +7,15 @@ type Props = {
   children: ReactNode;
   disabled?: boolean;
   type?: 'button' | 'reset' | 'submit';
+  gradientMonochrome?:
+    | 'dark'
+    | 'failure'
+    | 'gray'
+    | 'info'
+    | 'light'
+    | 'purple'
+    | 'success'
+    | 'warning';
 };
 export const PrimaryButton = ({
   onClick,
@@ -14,13 +23,14 @@ export const PrimaryButton = ({
   disabled,
   children,
   type,
+  gradientMonochrome = 'info',
 }: Props) => {
   return (
     <Button
       onClick={onClick}
       disabled={disabled}
       className={`${className}`}
-      gradientMonochrome="info"
+      gradientMonochrome={gradientMonochrome}
       type={type}
     >
       {children}

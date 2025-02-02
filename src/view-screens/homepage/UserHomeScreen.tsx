@@ -5,7 +5,6 @@ import { Button, Card, Dropdown } from 'flowbite-react';
 import { useCallback, useEffect, useMemo, useState } from 'react';
 import useSWR from 'swr';
 
-import { PrimaryButton } from '@/components/PrimaryButton';
 import { useToast } from '@/contexts/ToastContext';
 import { DifficultyType } from '@/types';
 import { User } from '@/types/user';
@@ -100,7 +99,7 @@ export const UserHomeScreen = () => {
   return (
     <TransitionContainer isLoading={isLoadingUser} isVisible={!isEmpty(user)}>
       <div className="flex flex-col">
-        <div className="my-4 flex">
+        <div className="my-4 flex justify-end">
           <Dropdown label={t('common.title.profile')}>
             <Dropdown.Item onClick={() => router.push('/change-password')}>
               {t('common.navigation.change-password')}
@@ -124,7 +123,7 @@ export const UserHomeScreen = () => {
               <div className="mt-8 flex space-x-4">
                 <Button
                   outline
-                  gradientDuoTone="tealToLime"
+                  gradientDuoTone="cyanToBlue"
                   size="lg"
                   disabled={isLoadingNextPuzzle || isEmpty(nextPuzzleId)}
                   onClick={() => {
@@ -153,9 +152,17 @@ export const UserHomeScreen = () => {
               <>
                 <p className="text-gray-600 mt-2">{nextCourse.title[locale]}</p>
                 <div className="mt-4">
-                  <PrimaryButton className="inline-flex">
+                  <Button
+                    outline
+                    gradientDuoTone="cyanToBlue"
+                    size="lg"
+                    disabled={isLoadingNextPuzzle || isEmpty(nextPuzzleId)}
+                    onClick={() => {
+                      router.push(`/solve-puzzles/${nextPuzzleId}`);
+                    }}
+                  >
                     {t('home.continue-course')}
-                  </PrimaryButton>
+                  </Button>
                 </div>
               </>
             ) : (
