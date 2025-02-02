@@ -161,16 +161,12 @@ export const UserHomeScreen = () => {
                       router.push(`/solve-puzzles/${nextPuzzleId}`);
                     }}
                   >
-                    {t('home.continue-course')}
+                    {t('common.title.start')}
                   </Button>
                 </div>
               </>
             ) : (
-              <p>
-                🎉 "Congratulations! You've completed all available courses.
-                Stay tuned for new content!"
-                {/* 🎉 "Chúc mừng! Bạn đã hoàn thành tất cả các khóa học hiện có. Hãy chờ đón nội dung mới!" */}
-              </p>
+              <p>{t('home.no-course')}</p>
             )}
           </Card>
         </div>
