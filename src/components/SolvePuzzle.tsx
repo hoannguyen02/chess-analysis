@@ -725,56 +725,60 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({
               {puzzle.themes.map((theme) => {
                 const puzzleId = typeof theme === 'string' ? theme : theme?._id;
                 return (
-                  <p className="mb-2 text-[14px]" key={puzzleId}>
+                  <p className="text-[14px] italic" key={puzzleId}>
                     {themeMap[puzzleId]?.title?.[locale]}
                   </p>
                 );
               })}
-              {t('common.title.rating')}:
-              <p className="mb-2 text-[14px]">
-                {LEVEL_RATING[puzzle.difficulty]}
-              </p>
-              {t('solve-puzzle.title.moves')}: <hr />
-              <div className="mb-2 mt-4 grid grid-cols-2 gap-4">
-                <div>
-                  {preMove && (
-                    <p
-                      key={`prev-${preMove}`}
-                      className="mb-1 grid grid-cols-2 gap-2 text-[14px]"
-                    >
-                      1 <span className="ml-2 ">{preMove}</span>
-                    </p>
-                  )}
-                  {setupMoves.map((s, index) => (
-                    <p
-                      key={`first-${index}-${s.move}`}
-                      className="mb-1 grid grid-cols-2 gap-2 text-[14px]"
-                    >
-                      {preMove ? index + 2 : index + 1}
-                      {s.player === 'user' ? (
-                        <strong className="ml-2">{s.move}</strong>
-                      ) : (
-                        <span className="ml-2">{s.move}</span>
-                      )}
-                    </p>
-                  ))}
-                </div>
-                <div>
-                  {followUpMoves.map((s, index) => (
-                    <p
-                      key={`second-${index}-${s.move}`}
-                      className="mb-1 grid grid-cols-2 gap-2 text-[14px]"
-                    >
-                      {preMove
-                        ? splitIndex + index + 2
-                        : splitIndex + index + 1}
-                      {s.player === 'user' ? (
-                        <strong className="ml-2">{s.move}</strong>
-                      ) : (
-                        <span className="ml-2">{s.move}</span>
-                      )}
-                    </p>
-                  ))}
+              <div className="mt-4">
+                {t('common.title.rating')}:
+                <p className="mb-2 text-[14px]">
+                  {LEVEL_RATING[puzzle.difficulty]}
+                </p>
+              </div>
+              <div>
+                {t('solve-puzzle.title.moves')}: <hr />
+                <div className="mb-2 mt-4 grid grid-cols-2 gap-4">
+                  <div>
+                    {preMove && (
+                      <p
+                        key={`prev-${preMove}`}
+                        className="mb-1 grid grid-cols-2 gap-2 text-[14px]"
+                      >
+                        1 <span className="ml-2 ">{preMove}</span>
+                      </p>
+                    )}
+                    {setupMoves.map((s, index) => (
+                      <p
+                        key={`first-${index}-${s.move}`}
+                        className="mb-1 grid grid-cols-2 gap-2 text-[14px]"
+                      >
+                        {preMove ? index + 2 : index + 1}
+                        {s.player === 'user' ? (
+                          <strong className="ml-2">{s.move}</strong>
+                        ) : (
+                          <span className="ml-2">{s.move}</span>
+                        )}
+                      </p>
+                    ))}
+                  </div>
+                  <div className="mt-4">
+                    {followUpMoves.map((s, index) => (
+                      <p
+                        key={`second-${index}-${s.move}`}
+                        className="mb-1 grid grid-cols-2 gap-2 text-[14px]"
+                      >
+                        {preMove
+                          ? splitIndex + index + 2
+                          : splitIndex + index + 1}
+                        {s.player === 'user' ? (
+                          <strong className="ml-2">{s.move}</strong>
+                        ) : (
+                          <span className="ml-2">{s.move}</span>
+                        )}
+                      </p>
+                    ))}
+                  </div>
                 </div>
               </div>
             </div>
