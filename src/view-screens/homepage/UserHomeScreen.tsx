@@ -1,19 +1,18 @@
 import { TransitionContainer } from '@/components/TransitionContainer';
 import { useAppContext } from '@/contexts/AppContext';
 import { fetcher } from '@/utils/fetcher';
-import { Button, Card, Dropdown } from 'flowbite-react';
+import { Button, Card, Dropdown, Tabs } from 'flowbite-react';
 import { useCallback, useEffect, useMemo, useState } from 'react';
 import useSWR from 'swr';
 
 import { useToast } from '@/contexts/ToastContext';
-import { DifficultyType } from '@/types';
 import { User } from '@/types/user';
 import axiosInstance from '@/utils/axiosInstance';
-import { filteredQuery } from '@/utils/filteredQuery';
 import { handleSubmission } from '@/utils/handleSubmission';
 import isEmpty from 'lodash/isEmpty';
 import { useTranslations } from 'next-intl';
 import { useRouter } from 'next/router';
+import { SolvePuzzleHistories } from './SolvePuzzleHistories';
 
 export const UserHomeScreen = () => {
   const t = useTranslations();
@@ -22,6 +21,7 @@ export const UserHomeScreen = () => {
   const router = useRouter();
   const { addToast } = useToast();
   const { session, apiDomain, locale } = useAppContext();
+  const [activeTab, setActiveTab] = useState('rated');
   //
   const nextCourseKey = useMemo(() => {
     return user ? `/v1/courses/next-course/${user._id}` : undefined;
@@ -55,21 +55,7 @@ export const UserHomeScreen = () => {
 
   const nextPuzzleKey = useMemo(() => {
     if (user) {
-      const { rating } = user;
-      let difficulties: DifficultyType[] = [];
-      if (rating < 1200) {
-        difficulties = ['Beginner', 'Easy'];
-      } else if (rating < 1600) {
-        difficulties = ['Easy', 'Medium'];
-      } else if (rating < 2000) {
-        difficulties = ['Medium', 'Hard'];
-      } else {
-        difficulties = ['Hard', 'Very Hard'];
-      }
-
-      return `${apiDomain}/v1/solve-puzzle/next?${filteredQuery({
-        difficulties: difficulties.join(','),
-      })}`;
+      return `${apiDomain}/v1/solve-puzzle/next?rating=${user.rating}`;
     }
     return undefined;
   }, [apiDomain, user]);
@@ -170,6 +156,23 @@ export const UserHomeScreen = () => {
             )}
           </Card>
         </div>
+        <h3 className="mt-8 mb-2">{t('home.recent-puzzles')}</h3>
+        <Tabs aria-label={t('home.recent-puzzles')}>
+          <Tabs.Item
+            active={activeTab === 'rated'}
+            title={t('home.rated')}
+            onClick={() => setActiveTab('rated')}
+          >
+            <SolvePuzzleHistories />
+          </Tabs.Item>
+          <Tabs.Item
+            active={activeTab === 'custom'}
+            title={t('home.custom')}
+            onClick={() => setActiveTab('custom')}
+          >
+            {/* Show practice history here */}
+          </Tabs.Item>
+        </Tabs>
       </div>
     </TransitionContainer>
   );

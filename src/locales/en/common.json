@@ -40,7 +40,9 @@
     "success": "Request completed successfully",
     "logout-success": "Logout successfully",
     "profile": "Profile",
-    "congrats-course": "Fantastic! You’ve completed the course. Keep up the great work!"
+    "congrats-course": "Fantastic! You’ve completed the course. Keep up the great work!",
+    "solved": "Solved",
+    "failed": "failed"
   },
   "button": {
     "back": "Back",
@@ -71,6 +73,7 @@
     "learn-fast": "Improve quickly with world-class training methods.",
     "lowest-price": "Master chess in the shortest time at the lowest cost.",
     "support": "Weekly learning support with expert guidance.",
-    "easy-started": "Easy to learn, easy to practice, develop top-level skills."
+    "easy-started": "Easy to learn, easy to practice, develop top-level skills.",
+    "confident": "Confident to compete in any tournament online and offline."
   }
 }

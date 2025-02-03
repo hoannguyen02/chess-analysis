@@ -124,8 +124,8 @@ export const ViewCourses: React.FC<Props> = ({
             >
               <option value="">{t('common.title.all-themes')}</option>
               {themes.map((theme) => (
-                <option key={theme.code} label={theme.title[locale]}>
-                  {theme.code}
+                <option key={theme._id} label={theme.title[locale]}>
+                  {theme._id}
                 </option>
               ))}
             </Select>

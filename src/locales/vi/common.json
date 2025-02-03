@@ -40,7 +40,9 @@
     "success": "Yêu Cầu Đã Được Xử Lý Thành Công",
     "logout-success": "Đăng xuất thành công",
     "profile": "Thông Tin Tài khoản",
-    "congrats-course": "Xuất sắc! bạn đã hoàn thành khóa học. Hãy tiếp tục nỗ lực nhé!"
+    "congrats-course": "Xuất sắc! bạn đã hoàn thành khóa học. Hãy tiếp tục nỗ lực nhé!",
+    "solved": "Thành công",
+    "failed": "Thất bại"
   },
   "button": {
     "back": "Quay lại",
@@ -71,6 +73,7 @@
     "learn-fast": "Tiến bộ vượt bậc với phương pháp huấn luyện đẳng cấp thế giới.",
     "lowest-price": "Chinh phục cờ vua nhanh nhất với chi phí rẻ nhất.",
     "support": "Hỗ trợ học tập hàng tuần với hướng dẫn từ chuyên gia.",
-    "easy-started": "Dễ học, dễ luyện tập, phát triển kỹ năng đỉnh cao."
+    "easy-started": "Dễ học, dễ luyện tập, phát triển kỹ năng đỉnh cao.",
+    "confident": "Tự tin chinh chiến ở mọi giải đấu, cả online lẫn offline."
   }
 }

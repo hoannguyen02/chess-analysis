@@ -11,5 +11,15 @@
   "puzzle-difficulty": "Difficulty: 1600-2000",
   "lesson-title": "Learn Chess the Smart Way",
   "lesson-description": "Step-by-step lessons to help you master chess strategies with ease.",
-  "view-lessons": "View lessons"
+  "view-lessons": "View lessons",
+  "recent-puzzles": "Recent Puzzles",
+  "rated": "Rated",
+  "custom": "Custom",
+  "attempted-at": "Attempted At",
+  "rate": "Rate",
+  "time-taken": "Time Taken",
+  "outcome": "Outcome",
+  "select-outcome": "Select outcome...",
+  "themes": "Themes",
+  "select-themes": "Select themes..."
 }

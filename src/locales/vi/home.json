@@ -11,5 +11,15 @@
   "puzzle-difficulty": "Độ khó: 1600-2000",
   "lesson-title": "Học cờ vua một cách thông minh",
   "lesson-description": "Các bài học từng bước giúp bạn nắm vững chiến lược cờ vua một cách dễ dàng.",
-  "view-lessons": "Xem bài học"
+  "view-lessons": "Xem bài học",
+  "recent-puzzles": "Các thế cờ gần đây",
+  "rated": "Xếp hạng",
+  "custom": "Tùy chỉnh",
+  "attempted-at": "Ngày",
+  "rate": "Thứ hạng",
+  "time-taken": "Thời gian thực hiện",
+  "outcome": "Kết quả",
+  "select-outcome": "Chọn kết quả",
+  "themes": "Thế cờ",
+  "select-themes": "Chọn thế cờ..."
 }

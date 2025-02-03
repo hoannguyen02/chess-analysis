@@ -126,12 +126,9 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({
   };
 
   const handleOnSolved = useCallback(
-    (finalAttemptHistory: AttemptHistory[], finalStep: number) => {
+    (finalAttemptHistory: AttemptHistory[]) => {
       setIsRunning(false);
-      if (
-        finalAttemptHistory.length > 0 &&
-        finalStep >= puzzle.solutions.length
-      ) {
+      if (finalAttemptHistory.length > 0) {
         const usedHint = finalAttemptHistory.some(
           (attempt) => attempt.usedHint
         );
@@ -152,21 +149,41 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({
         }
       }
     },
-    [onSolved, puzzle.solutions.length]
+    [onSolved]
   );
 
   useEffect(() => {
-    const handleBeforeUnload = (event: any) => {
-      event.preventDefault(); // Ensure event triggers properly
-      handleOnSolved(attemptHistory, currentStep);
+    const handleRouteChange = (url: string) => {
+      if (url !== router.asPath) {
+        handleOnSolved(attemptHistory);
+      }
     };
 
+    const handleBeforeUnload = (event: BeforeUnloadEvent) => {
+      handleOnSolved(attemptHistory);
+      event.preventDefault();
+      event.returnValue = ''; // Required for Chrome
+    };
+
+    const handleVisibilityChange = () => {
+      debugger;
+      if (document.hidden) {
+        handleOnSolved(attemptHistory);
+      }
+    };
+
+    // Attach event listeners
+    router.events.on('routeChangeStart', handleRouteChange);
     window.addEventListener('beforeunload', handleBeforeUnload);
+    document.addEventListener('visibilitychange', handleVisibilityChange);
 
+    // Cleanup listeners on unmount
     return () => {
+      router.events.off('routeChangeStart', handleRouteChange);
       window.removeEventListener('beforeunload', handleBeforeUnload);
+      document.removeEventListener('visibilitychange', handleVisibilityChange);
     };
-  }, [attemptHistory, currentStep, handleOnSolved]);
+  }, [attemptHistory, currentStep, handleOnSolved, router]);
 
   useEffect(() => {
     if (puzzle) {
@@ -186,7 +203,7 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({
     if (currentStep === puzzle.solutions.length) {
       setIsBoardClickAble(false);
       setHistoryMoveCurrentIdx(puzzle.solutions.length);
-      handleOnSolved(attemptHistory, currentStep);
+      handleOnSolved(attemptHistory);
     }
   }, [attemptHistory, currentStep, handleOnSolved, puzzle.solutions.length]);
 
@@ -364,6 +381,7 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({
       });
       setCurrentFen(game.fen());
       setShowRetry(true);
+      setIsRunning(false);
     }
 
     setOptionSquares({});

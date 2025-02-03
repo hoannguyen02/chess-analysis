@@ -29,3 +29,5 @@ export type DifficultyType =
   | 'Medium'
   | 'Hard'
   | 'Very Hard';
+
+export type SolveStatusType = 'solved' | 'failed';

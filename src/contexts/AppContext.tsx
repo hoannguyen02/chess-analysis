@@ -49,7 +49,7 @@ export const AppProvider: React.FC<{
       locale,
       themes:
         (themes || []).map((theme) => ({
-          value: theme.code,
+          value: theme._id,
           label: theme.title[locale],
           _id: theme._id,
           code: theme.code,

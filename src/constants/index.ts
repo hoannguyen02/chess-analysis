@@ -22,6 +22,8 @@ export const StatusOptions = Statues.map((status) => ({
   label: status as string,
 }));
 
+export const SolveStatues = ['solved', 'failed'];
+
 export const Phases = ['Opening', 'Middle', 'Endgame'];
 
 export const PhaseOptions = Phases.map((status) => ({

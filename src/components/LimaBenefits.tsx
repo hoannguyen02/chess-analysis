@@ -8,6 +8,7 @@ export const LimaBenefits = () => {
       <li>✅ {t('benefits.lowest-price')}</li>
       <li>✅ {t('benefits.support')}</li>
       <li>✅ {t('benefits.easy-started')}</li>
+      <li>✅ {t('benefits.confident')}</li>
     </ul>
   );
 };
