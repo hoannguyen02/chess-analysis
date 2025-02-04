@@ -50,7 +50,8 @@
     "include-solved": "Bao gồm các bài đã luyện",
     "start-practice": "Bắt đầu",
     "no-puzzles": "Không tìm thấy dữ liệu, vui lòng thử lại!",
-    "select-rating": "Chọn trình độ (Elo)..."
+    "select-rating": "Chọn trình độ (Elo)...",
+    "search-theme": "Tìm nhanh chiến thuật..."
   },
   "button": {
     "back": "Quay lại",

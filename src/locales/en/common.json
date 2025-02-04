@@ -50,7 +50,8 @@
     "include-solved": "Include solved",
     "start-practice": "Start",
     "no-puzzles": "No puzzles found",
-    "select-rating": "Select rating..."
+    "select-rating": "Select rating...",
+    "search-theme": "Search theme..."
   },
   "button": {
     "back": "Back",

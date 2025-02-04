@@ -7,10 +7,12 @@ import axiosInstance from '@/utils/axiosInstance';
 import { Checkbox } from 'flowbite-react';
 import { useTranslations } from 'next-intl';
 import { useRouter } from 'next/router';
-import { useState } from 'react';
+import { useMemo, useState } from 'react';
+import { VscClose } from 'react-icons/vsc';
 import Select from 'react-select';
 
 export const PracticePuzzlesScreen = () => {
+  const [searchTerm, setSearchTerm] = useState('');
   const [difficulty, setDifficulty] = useState<DifficultyType | ''>('');
   const [isLoadingNextPuzzle, setSolveIsLoadingNextPuzzle] = useState(false);
   const t = useTranslations();
@@ -67,6 +69,12 @@ export const PracticePuzzlesScreen = () => {
     }
   };
 
+  const filteredThemes = useMemo(() => {
+    return themeOptions.filter((option) =>
+      option.label.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+  }, [searchTerm, themeOptions]);
+
   return (
     <div className="flex flex-col lg:p-6 bg-white lg:shadow-md lg:rounded-lg max-w-lg mx-auto">
       <h2 className="text-xl font-bold text-gray-800 mb-4">
@@ -108,6 +116,23 @@ export const PracticePuzzlesScreen = () => {
         </label>
       </div>
 
+      {/* Search Input with Clear Icon */}
+      <div className="relative mb-3">
+        <input
+          type="text"
+          placeholder={t('common.title.search-theme')}
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+          className="p-2 pr-10 border border-gray-300 rounded-lg w-full"
+        />
+        {searchTerm && (
+          <VscClose
+            className="w-5 h-5 absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500 cursor-pointer hover:text-gray-700"
+            onClick={() => setSearchTerm('')}
+          />
+        )}
+      </div>
+
       {/* Scrollable Theme List */}
       <div className="max-h-[300px] md:max-h-[400px] overflow-y-auto border border-gray-300 rounded-lg p-3 bg-gray-50 shadow-inner">
         {/* Header Row */}
@@ -119,7 +144,7 @@ export const PracticePuzzlesScreen = () => {
         </div>
 
         {/* Theme Rows */}
-        {themeOptions.map((option) => (
+        {filteredThemes.map((option) => (
           <div
             key={option.value}
             className="p-2 rounded-lg transition-all hover:bg-blue-100"
