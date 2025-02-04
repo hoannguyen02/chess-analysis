@@ -42,7 +42,15 @@
     "profile": "Thông Tin Tài khoản",
     "congrats-course": "Xuất sắc! bạn đã hoàn thành khóa học. Hãy tiếp tục nỗ lực nhé!",
     "solved": "Thành công",
-    "failed": "Thất bại"
+    "failed": "Thất bại",
+    "un_authorized": "Bạn cần đăng nhập để truy cập nội dung này.",
+    "practice-puzzles": "Luyện tập",
+    "practice-progress": "Tiến độ",
+    "select-all": "Tất cả chiến thuật",
+    "include-solved": "Bao gồm các bài đã luyện",
+    "start-practice": "Bắt đầu",
+    "no-puzzles": "Không tìm thấy dữ liệu, vui lòng thử lại!",
+    "select-rating": "Chọn trình độ (Elo)..."
   },
   "button": {
     "back": "Quay lại",
@@ -54,7 +62,6 @@
     "continue": "Tiếp tục",
     "completed": "Đã hoàn tất",
     "solve-now": "Giải ngay",
-    "try-it": "Thử Ngay",
     "view": "Xem",
     "solved": "đã giải",
     "retry": "Thử lại",

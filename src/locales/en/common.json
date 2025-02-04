@@ -42,7 +42,15 @@
     "profile": "Profile",
     "congrats-course": "Fantastic! You’ve completed the course. Keep up the great work!",
     "solved": "Solved",
-    "failed": "failed"
+    "failed": "failed",
+    "un_authorized": "You need to log in to access this content.",
+    "practice-puzzles": "Practice puzzles",
+    "practice-progress": "Progress",
+    "select-all": "All tactics",
+    "include-solved": "Include solved",
+    "start-practice": "Start",
+    "no-puzzles": "No puzzles found",
+    "select-rating": "Select rating..."
   },
   "button": {
     "back": "Back",
@@ -54,7 +62,6 @@
     "continue": "Continue",
     "completed": "Completed",
     "solve-now": "Solve Now",
-    "try-it": "Try It",
     "view": "View",
     "solved": "Solved",
     "retry": "Retry",

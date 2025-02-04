@@ -132,12 +132,11 @@ export const UserHomeScreen = () => {
                   outline
                   gradientDuoTone="cyanToBlue"
                   size="lg"
-                  // disabled={isLoadingNextPuzzle || isEmpty(nextPuzzleId)}
                   onClick={() => {
-                    router.push(`/solve-puzzles/${nextPuzzleId}`);
+                    router.push(`/practice-puzzles`);
                   }}
                 >
-                  {t('home.practice-puzzles')}
+                  {t('common.title.practice-puzzles')}
                 </Button>
               </div>
             </div>
@@ -154,7 +153,7 @@ export const UserHomeScreen = () => {
                     size="lg"
                     disabled={isLoadingNextPuzzle || isEmpty(nextPuzzleId)}
                     onClick={() => {
-                      router.push(`/solve-puzzles/${nextPuzzleId}`);
+                      router.push(`/lessons/${nextCourse.slug}`);
                     }}
                   >
                     {t('common.title.start')}

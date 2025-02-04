@@ -1,29 +1,15 @@
-import { CourseDetails } from '@/components/CourseDetails';
-import { ErrorBanner } from '@/components/ErrorBanner';
+import { AuthenticatedWrap } from '@/components/AuthenticatedWrap';
 import Layout from '@/components/Layout';
 import { withThemes } from '@/HOF/withThemes';
-import { LessonProgress } from '@/types';
-import { CourseExpanded } from '@/types/course';
+import { PracticePuzzlesScreen } from '@/view-screens/PracticePuzzlesScreen';
 import { GetServerSidePropsContext } from 'next';
 
-type Props = {
-  data: CourseExpanded;
-  error: string | null;
-  errorCode: number;
-  lessonProgresses: LessonProgress[];
-};
-
-const LessonDetailsPage = ({
-  data,
-  error,
-  errorCode,
-  lessonProgresses,
-}: Props) => {
-  if (error) return <ErrorBanner error={error} errorCode={errorCode} />;
-
+const PracticePuzzlesPage = () => {
   return (
     <Layout>
-      <CourseDetails data={data} lessonProgresses={lessonProgresses} />
+      <AuthenticatedWrap>
+        <PracticePuzzlesScreen />
+      </AuthenticatedWrap>
     </Layout>
   );
 };
@@ -58,4 +44,4 @@ export const getServerSideProps = withThemes(
   }
 );
 
-export default LessonDetailsPage;
+export default PracticePuzzlesPage;
