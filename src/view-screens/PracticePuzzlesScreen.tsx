@@ -1,15 +1,26 @@
 import { PrimaryButton } from '@/components/PrimaryButton';
+import { TransitionContainer } from '@/components/TransitionContainer';
 import { RatingOptions } from '@/constants';
 import { useAppContext } from '@/contexts/AppContext';
 import { useToast } from '@/contexts/ToastContext';
 import { DifficultyType } from '@/types';
 import axiosInstance from '@/utils/axiosInstance';
+import { fetcher } from '@/utils/fetcher';
 import { Checkbox } from 'flowbite-react';
 import { useTranslations } from 'next-intl';
 import { useRouter } from 'next/router';
 import { useMemo, useState } from 'react';
 import { VscClose } from 'react-icons/vsc';
 import Select from 'react-select';
+import useSWR from 'swr';
+
+type ThemeProgress = {
+  // totalPuzzlesAttempted: number;
+  // completedPuzzles: number;
+  // totalPuzzlesAvailable: number;
+  theme: string;
+  solvedPercentage: number;
+};
 
 export const PracticePuzzlesScreen = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -21,6 +32,35 @@ export const PracticePuzzlesScreen = () => {
   const [includeSolved, setIncludeSolved] = useState(false);
   const { addToast } = useToast();
   const router = useRouter();
+
+  const queryKey = useMemo(
+    () => `${apiDomain}/v1/practice-puzzle/history-progress/${session?.id}`,
+    [apiDomain, session?.id]
+  );
+
+  const {
+    data: themeProgresses,
+    isLoading,
+    error,
+  } = useSWR(queryKey, fetcher, {
+    dedupingInterval: 300,
+  });
+
+  const ThemeProgressesMap: Record<string, ThemeProgress> = useMemo(() => {
+    if (themeProgresses) {
+      return themeProgresses?.reduce(
+        (acc: any, cur: ThemeProgress) => {
+          return {
+            ...acc,
+            [cur.theme]: cur,
+          };
+        },
+        {} as { [theme: string]: ThemeProgress }
+      );
+    }
+
+    return {};
+  }, [themeProgresses]);
 
   const allSelected = selectedThemes.length === themeOptions.length;
 
@@ -76,103 +116,108 @@ export const PracticePuzzlesScreen = () => {
   }, [searchTerm, themeOptions]);
 
   return (
-    <div className="flex flex-col lg:p-6 bg-white lg:shadow-md lg:rounded-lg max-w-lg mx-auto">
-      <h2 className="text-xl font-bold text-gray-800 mb-4">
-        {t('common.title.practice-puzzles')}
-      </h2>
+    <TransitionContainer
+      isLoading={isLoading}
+      isVisible={themeProgresses !== undefined}
+    >
+      <div className="flex flex-col lg:p-6 bg-white lg:shadow-md lg:rounded-lg max-w-lg mx-auto">
+        <h2 className="text-xl font-bold text-gray-800 mb-4">
+          {t('common.title.practice-puzzles')}
+        </h2>
 
-      {/* Rating Filter */}
-      <div className="flex flex-col mb-4">
-        {t('common.title.rating')}
-        <Select
-          options={RatingOptions}
-          value={RatingOptions.find((option) => option.value === difficulty)}
-          onChange={(selectedOption) =>
-            setDifficulty(selectedOption?.value as DifficultyType)
-          }
-          placeholder={t('common.title.select-rating')}
-          isClearable
-        />
-      </div>
-
-      <div className="flex justify-between">
-        {/* Select All / Unselect All Button */}
-        <label className="flex items-center space-x-2 mb-3 cursor-pointer">
-          <Checkbox checked={allSelected} onChange={toggleSelectAll} />
-          <span className="text-gray-800 font-medium text-sm">
-            {t('common.title.select-all')}
-          </span>
-        </label>
-        <label className="flex items-center space-x-2 mb-3 cursor-pointer">
-          <Checkbox
-            checked={includeSolved}
-            onChange={() => {
-              setIncludeSolved(!includeSolved);
-            }}
+        {/* Rating Filter */}
+        <div className="flex flex-col mb-4">
+          {t('common.title.rating')}
+          <Select
+            options={RatingOptions}
+            value={RatingOptions.find((option) => option.value === difficulty)}
+            onChange={(selectedOption) =>
+              setDifficulty(selectedOption?.value as DifficultyType)
+            }
+            placeholder={t('common.title.select-rating')}
+            isClearable
           />
-          <span className="text-gray-800 font-medium text-sm">
-            {t('common.title.include-solved')}
-          </span>
-        </label>
-      </div>
-
-      {/* Search Input with Clear Icon */}
-      <div className="relative mb-3">
-        <input
-          type="text"
-          placeholder={t('common.title.search-theme')}
-          value={searchTerm}
-          onChange={(e) => setSearchTerm(e.target.value)}
-          className="p-2 pr-10 border border-gray-300 rounded-lg w-full"
-        />
-        {searchTerm && (
-          <VscClose
-            className="w-5 h-5 absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500 cursor-pointer hover:text-gray-700"
-            onClick={() => setSearchTerm('')}
-          />
-        )}
-      </div>
-
-      {/* Scrollable Theme List */}
-      <div className="max-h-[300px] md:max-h-[400px] overflow-y-auto border border-gray-300 rounded-lg p-3 bg-gray-50 shadow-inner">
-        {/* Header Row */}
-        <div className="grid grid-cols-[auto_100px] gap-2 px-2 py-2 border-b border-gray-300 font-semibold text-gray-700 text-sm">
-          <span>{t('common.title.theme')}</span>
-          <span className="text-center">
-            {t('common.title.practice-progress')}
-          </span>
         </div>
 
-        {/* Theme Rows */}
-        {filteredThemes.map((option) => (
-          <div
-            key={option.value}
-            className="p-2 rounded-lg transition-all hover:bg-blue-100"
-          >
-            <label className="grid grid-cols-[auto_100px] gap-2  cursor-pointer items-center py-2 px-2 rounded-lg transition-all hover:bg-blue-100">
-              {/* Checkbox & Title (1 Column) */}
-              <div className="flex items-center space-x-3">
-                <Checkbox
-                  value={option.value}
-                  checked={selectedThemes.includes(option.value)}
-                  onChange={() => toggleTheme(option.value)}
-                />
-                <span className="text-gray-800 text-sm font-medium">
-                  {option.label}
-                </span>
-              </div>
-              <div className="text-center">
-                <span className="text-gray-800 text-sm font-medium">50%</span>
-              </div>
-            </label>
-          </div>
-        ))}
-      </div>
+        <div className="flex justify-between">
+          {/* Select All / Unselect All Button */}
+          <label className="flex items-center space-x-2 mb-3 cursor-pointer">
+            <Checkbox checked={allSelected} onChange={toggleSelectAll} />
+            <span className="text-gray-800 font-medium text-sm">
+              {t('common.title.select-all')}
+            </span>
+          </label>
+          <label className="flex items-center space-x-2 mb-3 cursor-pointer">
+            <Checkbox
+              checked={includeSolved}
+              onChange={() => {
+                setIncludeSolved(!includeSolved);
+              }}
+            />
+            <span className="text-gray-800 font-medium text-sm">
+              {t('common.title.include-solved')}
+            </span>
+          </label>
+        </div>
 
-      {/* Practice Button */}
-      <PrimaryButton onClick={handlePractice} className="mt-4">
-        {t('common.title.start-practice')}
-      </PrimaryButton>
-    </div>
+        {/* Search Input with Clear Icon */}
+        <div className="relative mb-3">
+          <input
+            type="text"
+            placeholder={t('common.title.search-theme')}
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+            className="p-2 pr-10 border border-gray-300 rounded-lg w-full"
+          />
+          {searchTerm && (
+            <VscClose
+              className="w-5 h-5 absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500 cursor-pointer hover:text-gray-700"
+              onClick={() => setSearchTerm('')}
+            />
+          )}
+        </div>
+
+        {/* Scrollable Theme List */}
+        <div className="max-h-[300px] md:max-h-[400px] overflow-y-auto border border-gray-300 rounded-lg p-3 bg-gray-50 shadow-inner">
+          {/* Header Row */}
+          <div className="grid grid-cols-[auto_100px] gap-2 px-2 py-2 border-b border-gray-300 font-semibold text-gray-700 text-sm">
+            <span>{t('common.title.theme')}</span>
+            <span className="text-center">
+              {t('common.title.practice-progress')}
+            </span>
+          </div>
+
+          {/* Theme Rows */}
+          {filteredThemes.map((option) => (
+            <div
+              key={option.value}
+              className="p-2 rounded-lg transition-all hover:bg-blue-100"
+            >
+              <label className="grid grid-cols-[auto_100px] gap-2  cursor-pointer items-center py-2 px-2 rounded-lg transition-all hover:bg-blue-100">
+                {/* Checkbox & Title (1 Column) */}
+                <div className="flex items-center space-x-3">
+                  <Checkbox
+                    value={option.value}
+                    checked={selectedThemes.includes(option.value)}
+                    onChange={() => toggleTheme(option.value)}
+                  />
+                  <span className="text-gray-800 text-sm font-medium">
+                    {option.label}
+                  </span>
+                </div>
+                <div className="text-center">
+                  <span className="text-gray-800 text-sm font-medium">{`${ThemeProgressesMap[option.value]?.solvedPercentage || 0}%`}</span>
+                </div>
+              </label>
+            </div>
+          ))}
+        </div>
+
+        {/* Practice Button */}
+        <PrimaryButton onClick={handlePractice} className="mt-4">
+          {t('common.title.start-practice')}
+        </PrimaryButton>
+      </div>
+    </TransitionContainer>
   );
 };
