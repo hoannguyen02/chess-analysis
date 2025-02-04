@@ -15,7 +15,7 @@ import { VscCheck, VscChromeClose } from 'react-icons/vsc';
 import Select from 'react-select';
 import useSWR from 'swr';
 
-export const SolvePuzzleHistories = () => {
+export const PracticePuzzleHistories = () => {
   const t = useTranslations();
   const { session, apiDomain, themes: themeOptions } = useAppContext();
   const [currentPage, setCurrentPage] = useState(1);
@@ -37,7 +37,7 @@ export const SolvePuzzleHistories = () => {
     return filteredQuery(queryObject);
   }, [status, currentPage, themes]);
   const puzzleHistoryKey = session
-    ? `${apiDomain}/v1/solve-puzzle/history/${session.id}?${queryString}`
+    ? `${apiDomain}/v1/practice-puzzle/history/${session.id}?${queryString}`
     : undefined;
 
   const { data: puzzleHistory, isLoading: isLoadingPuzzleHistories } = useSWR(
@@ -82,13 +82,13 @@ export const SolvePuzzleHistories = () => {
           />
         </div>
       </div>
+
       <TransitionContainer
         isLoading={isLoadingPuzzleHistories}
         isVisible={!isEmpty(puzzleHistory)}
       >
-        <div className="grid grid-cols-4 mb-4 gap-2">
+        <div className="grid grid-cols-3 mb-4 gap-2">
           <Label className="font-bold">{t('home.attempted-at')}</Label>
-          <Label className="font-bold">{t('home.rate')}</Label>
           <Label className="font-bold">{t('home.time-taken')}</Label>
           <Label className="font-bold">{t('home.outcome')}</Label>
         </div>
@@ -103,7 +103,6 @@ export const SolvePuzzleHistories = () => {
             >
               {DateTime.fromISO(item.attemptedAt).toISODate()}
             </Link>
-            <Label>{item.userRatingAfter}</Label>
             <Label>
               {DateTime.fromSeconds(item.timeTaken).toFormat('mm:ss')}
             </Label>
@@ -112,11 +111,7 @@ export const SolvePuzzleHistories = () => {
                 <VscCheck className="mr-2" color="green" />
               ) : (
                 <VscChromeClose className="mr-2" color="red" />
-              )}{' '}
-              <small>
-                {item.userRatingAfter > item.userRatingBefore ? '+' : '-'}{' '}
-                {Math.abs(item.userRatingAfter - item.userRatingBefore)}
-              </small>
+              )}
             </Label>
           </div>
         ))}

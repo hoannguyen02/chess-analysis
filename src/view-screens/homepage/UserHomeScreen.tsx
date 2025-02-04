@@ -11,8 +11,18 @@ import axiosInstance from '@/utils/axiosInstance';
 import { handleSubmission } from '@/utils/handleSubmission';
 import isEmpty from 'lodash/isEmpty';
 import { useTranslations } from 'next-intl';
+import dynamic from 'next/dynamic';
 import { useRouter } from 'next/router';
-import { SolvePuzzleHistories } from './SolvePuzzleHistories';
+const SolvePuzzleHistories = dynamic(() =>
+  import('./SolvePuzzleHistories').then(
+    (components) => components.SolvePuzzleHistories
+  )
+);
+const PracticePuzzleHistories = dynamic(() =>
+  import('./PracticePuzzleHistories').then(
+    (components) => components.PracticePuzzleHistories
+  )
+);
 
 export const UserHomeScreen = () => {
   const t = useTranslations();
@@ -100,7 +110,7 @@ export const UserHomeScreen = () => {
             <div className="flex flex-col flex-grow items-start">
               <h2 className="text-lg font-semibold">{t('home.performance')}</h2>
               <p
-                className="text-sm text-gray-500 line-clamp-3 mt-2"
+                className="text-sm  line-clamp-3 mt-2"
                 dangerouslySetInnerHTML={{
                   __html: user?.feedback as string,
                 }}
@@ -156,7 +166,7 @@ export const UserHomeScreen = () => {
             )}
           </Card>
         </div>
-        <h3 className="mt-8 mb-2">{t('home.recent-puzzles')}</h3>
+        <h3 className="mt-8 mb-2 font-semibold">{t('home.recent-puzzles')}</h3>
         <Tabs aria-label={t('home.recent-puzzles')}>
           <Tabs.Item
             active={activeTab === 'rated'}
@@ -170,7 +180,7 @@ export const UserHomeScreen = () => {
             title={t('home.custom')}
             onClick={() => setActiveTab('custom')}
           >
-            {/* Show practice history here */}
+            <PracticePuzzleHistories />
           </Tabs.Item>
         </Tabs>
       </div>
