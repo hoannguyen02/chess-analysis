@@ -27,11 +27,13 @@ export const PracticePuzzlesScreen = () => {
   const [difficulty, setDifficulty] = useState<DifficultyType | ''>('');
   const [isLoadingNextPuzzle, setSolveIsLoadingNextPuzzle] = useState(false);
   const t = useTranslations();
-  const { session, themes: themeOptions, apiDomain } = useAppContext();
+  const { session, getFilteredThemes, apiDomain } = useAppContext();
   const [selectedThemes, setSelectedThemes] = useState<string[]>([]);
   const [includeSolved, setIncludeSolved] = useState(false);
   const { addToast } = useToast();
   const router = useRouter();
+
+  const { themeOptions, excludedThemeIds } = getFilteredThemes();
 
   const queryKey = useMemo(
     () => `${apiDomain}/v1/practice-puzzle/history-progress/${session?.id}`,
@@ -83,6 +85,7 @@ export const PracticePuzzlesScreen = () => {
         difficulty,
         themes: selectedThemes,
         includeSolved,
+        excludedThemeIds,
       };
       const nextPuzzleResult = await axiosInstance.post(
         `${apiDomain}/v1/practice-puzzle/next`,

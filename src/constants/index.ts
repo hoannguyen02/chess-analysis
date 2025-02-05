@@ -52,3 +52,8 @@ export const SolutionMovePlayerOptions = [
     label: 'Engine',
   },
 ];
+
+export const ExcludeThemeInFilter: Record<string, string> = {
+  OPENING: 'OPENING',
+  'BASIC-MOVES': 'BASIC-MOVES',
+} as const;

@@ -8,6 +8,7 @@ import { Loading } from '@/components/Loading';
 import { useToast } from '@/contexts/ToastContext';
 import { User } from '@/types/user';
 import axiosInstance from '@/utils/axiosInstance';
+import { filteredQuery } from '@/utils/filteredQuery';
 import { handleSubmission } from '@/utils/handleSubmission';
 import isEmpty from 'lodash/isEmpty';
 import { useTranslations } from 'next-intl';
@@ -30,7 +31,8 @@ export const UserHomeScreen = () => {
   const [isLoadingUser, setIsLoadingUser] = useState(false);
   const router = useRouter();
   const { addToast } = useToast();
-  const { session, apiDomain, locale } = useAppContext();
+  const { session, apiDomain, locale, getFilteredThemes } = useAppContext();
+  const { excludedThemeIds } = getFilteredThemes();
   const [activeTab, setActiveTab] = useState('rated');
   //
   const nextCourseKey = useMemo(() => {
@@ -63,12 +65,21 @@ export const UserHomeScreen = () => {
     }
   }, [apiDomain, locale, session?.id]);
 
+  const queryString = useMemo(() => {
+    const queryObject: Record<string, any> = {
+      rating: user?.rating,
+      excludedThemeIds: excludedThemeIds.join(','),
+    };
+
+    return filteredQuery(queryObject);
+  }, [excludedThemeIds, user?.rating]);
+
   const nextPuzzleKey = useMemo(() => {
     if (user) {
-      return `${apiDomain}/v1/solve-puzzle/next?rating=${user.rating}`;
+      return `${apiDomain}/v1/solve-puzzle/next?${queryString}`;
     }
     return undefined;
-  }, [apiDomain, user]);
+  }, [apiDomain, queryString, user]);
 
   const { data: nextPuzzleId, isLoading: isLoadingNextPuzzle } = useSWR(
     nextPuzzleKey,

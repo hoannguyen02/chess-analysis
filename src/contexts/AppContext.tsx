@@ -1,9 +1,11 @@
+import { ExcludeThemeInFilter } from '@/constants';
 import { LocaleType } from '@/types/locale';
 import { PuzzleTheme } from '@/types/puzzle-theme';
 import { Session } from '@/types/session';
 import { Tag } from '@/types/tag';
 import React, {
   createContext,
+  useCallback,
   useContext,
   useEffect,
   useMemo,
@@ -18,6 +20,10 @@ export interface AppContextProps {
   locale: LocaleType;
   isMobile: boolean;
   session?: Session | null;
+  getFilteredThemes(): {
+    themeOptions: PuzzleTheme[] | [];
+    excludedThemeIds: PuzzleTheme[] | [];
+  };
 }
 
 const AppContext = createContext<AppContextProps | undefined>(undefined);
@@ -44,17 +50,48 @@ export const AppProvider: React.FC<{
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
+  const allThemes = useMemo(() => {
+    return (
+      (themes || []).map((theme) => ({
+        value: theme._id,
+        label: theme.title[locale],
+        _id: theme._id,
+        code: theme.code,
+        title: theme.title,
+      })) || []
+    );
+  }, [locale, themes]);
+
+  const getFilteredThemes = useCallback(() => {
+    if (!allThemes)
+      return {
+        themeOptions: [],
+        excludedThemeIds: [],
+      };
+
+    const excludedThemeIds: string[] = [];
+
+    const themeOptions = allThemes.filter((theme) => {
+      const excludedTheme = ExcludeThemeInFilter[theme.code];
+
+      if (excludedTheme) {
+        excludedThemeIds.push(theme._id);
+        return false;
+      }
+
+      return true;
+    });
+
+    return {
+      themeOptions,
+      excludedThemeIds,
+    };
+  }, [allThemes]);
+
   const value = useMemo(
     () => ({
       locale,
-      themes:
-        (themes || []).map((theme) => ({
-          value: theme._id,
-          label: theme.title[locale],
-          _id: theme._id,
-          code: theme.code,
-          title: theme.title,
-        })) || [],
+      themes: allThemes,
       tags:
         (tags || []).map((tag) => ({
           value: tag.name,
@@ -69,11 +106,21 @@ export const AppProvider: React.FC<{
           [theme._id]: theme,
         };
       }, {}),
+      getFilteredThemes,
       apiDomain,
       isMobile,
       session,
     }),
-    [locale, themes, tags, apiDomain, isMobile, session]
+    [
+      locale,
+      allThemes,
+      tags,
+      themes,
+      getFilteredThemes,
+      apiDomain,
+      isMobile,
+      session,
+    ]
   );
 
   return <AppContext.Provider value={value}>{children}</AppContext.Provider>;

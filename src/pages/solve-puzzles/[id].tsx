@@ -29,7 +29,8 @@ const SolvePuzzlePage = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [isManualLoading, setIsManualLoading] = useState(false);
   const [nextPuzzleId, setNextPuzzleId] = useState();
-  const { apiDomain, session } = useAppContext();
+  const { apiDomain, session, getFilteredThemes } = useAppContext();
+  const { excludedThemeIds } = getFilteredThemes();
   const t = useTranslations('common');
   const router = useRouter();
   const { locale, asPath, query } = router;
@@ -89,6 +90,7 @@ const SolvePuzzlePage = () => {
             failedAttempts,
             timeTaken,
             usedHint,
+            excludedThemeIds,
           }
         );
         setNextPuzzleId(submitResult.data.nextPuzzleId);
@@ -99,7 +101,7 @@ const SolvePuzzlePage = () => {
       }
       setIsSubmitting(false);
     },
-    [apiDomain, puzzle?._id, session?.id]
+    [apiDomain, excludedThemeIds, puzzle._id, session?.id]
   );
 
   return (

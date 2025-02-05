@@ -24,10 +24,12 @@ const SolvePuzzleDrawer = dynamic(() =>
 
 export const PracticePuzzleHistories = () => {
   const t = useTranslations();
-  const { session, apiDomain, themes: themeOptions } = useAppContext();
+  const { session, apiDomain, getFilteredThemes } = useAppContext();
   const [currentPage, setCurrentPage] = useState(1);
   const [status, setStatus] = useState<SolveStatusType | ''>('');
   const [themes, setThemes] = useState<string[]>([]);
+
+  const { themeOptions } = getFilteredThemes();
 
   const {
     isOpenSolvePuzzle,
