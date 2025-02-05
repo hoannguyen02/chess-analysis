@@ -32,11 +32,15 @@ export const getServerSideProps = withThemes(
       .default;
     const homeMessages = (await import(`@/locales/${locale}/home.json`))
       .default;
+    const solvePuzzleMessages = (
+      await import(`@/locales/${locale}/solve-puzzle.json`)
+    ).default;
     return {
       props: {
         messages: {
           common: commonMessages,
           home: homeMessages,
+          'solve-puzzle': solvePuzzleMessages,
         },
       },
     };

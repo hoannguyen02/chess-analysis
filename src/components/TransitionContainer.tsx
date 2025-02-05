@@ -1,4 +1,5 @@
 import { ReactNode } from 'react';
+import { Loading } from './Loading';
 
 type Props = {
   isLoading: boolean;
@@ -11,9 +12,7 @@ export const TransitionContainer = ({
   children,
 }: Props) => {
   return isLoading ? (
-    <div className="flex justify-center items-center h-48">
-      <div className="animate-spin rounded-full h-10 w-10 border-b-2 border-blue-500"></div>
-    </div>
+    <Loading />
   ) : (
     <div
       className={`transition-opacity duration-500 ease-in-out lg:transform ${

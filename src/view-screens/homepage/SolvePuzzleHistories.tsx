@@ -1,3 +1,4 @@
+import { Loading } from '@/components/Loading';
 import { TransitionContainer } from '@/components/TransitionContainer';
 import { SolveStatues } from '@/constants';
 import { useAppContext } from '@/contexts/AppContext';
@@ -5,15 +6,22 @@ import { SolveStatusType } from '@/types';
 import { PuzzleHistory } from '@/types/puzzle-history';
 import { fetcher } from '@/utils/fetcher';
 import { filteredQuery } from '@/utils/filteredQuery';
-import { Label, Pagination } from 'flowbite-react';
+import { Button, Label, Pagination } from 'flowbite-react';
 import { isEmpty } from 'lodash';
 import { DateTime } from 'luxon';
 import { useTranslations } from 'next-intl';
-import Link from 'next/link';
+import dynamic from 'next/dynamic';
 import { useMemo, useState } from 'react';
 import { VscCheck, VscChromeClose } from 'react-icons/vsc';
 import Select from 'react-select';
 import useSWR from 'swr';
+import { useShowPuzzleDialog } from './useShowPuzzleDialog';
+
+const SolvePuzzleDrawer = dynamic(() =>
+  import('@/components/SolvePuzzleDrawer').then(
+    (components) => components.SolvePuzzleDrawer
+  )
+);
 
 export const SolvePuzzleHistories = () => {
   const t = useTranslations();
@@ -21,6 +29,16 @@ export const SolvePuzzleHistories = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [status, setStatus] = useState<SolveStatusType | ''>('');
   const [themes, setThemes] = useState<string[]>([]);
+
+  const {
+    isOpenSolvePuzzle,
+    puzzleDialogData,
+    onCloseDialog,
+    hasNextPuzzle,
+    handleNextPuzzle,
+    loadingPuzzle,
+    handleOpenPuzzle,
+  } = useShowPuzzleDialog();
 
   const SolveStatusOptions = SolveStatues.map((status) => ({
     value: status as SolveStatusType,
@@ -50,6 +68,10 @@ export const SolvePuzzleHistories = () => {
   );
 
   const onPageChange = (page: number) => setCurrentPage(page);
+
+  if (isLoadingPuzzleHistories) {
+    return <Loading />;
+  }
 
   return (
     <>
@@ -86,7 +108,7 @@ export const SolvePuzzleHistories = () => {
         isLoading={isLoadingPuzzleHistories}
         isVisible={!isEmpty(puzzleHistory)}
       >
-        <div className="grid grid-cols-4 mb-4 gap-2">
+        <div className="grid grid-cols-[120px_auto_auto_auto] lg:grid-cols-4 mb-4 gap-2">
           <Label className="font-bold">{t('home.attempted-at')}</Label>
           <Label className="font-bold">{t('home.rate')}</Label>
           <Label className="font-bold">{t('home.time-taken')}</Label>
@@ -94,15 +116,18 @@ export const SolvePuzzleHistories = () => {
         </div>
         {puzzleHistory?.items.map((item: PuzzleHistory, index: number) => (
           <div
-            className="grid grid-cols-4 items-center gap-2"
+            className="grid grid-cols-[120px_auto_auto_auto] lg:grid-cols-4 items-center gap-2 mt-2"
             key={`${item.puzzle}-${index}`}
           >
-            <Link
-              href={`/settings/users/${item.puzzle}`}
-              className="font-medium text-cyan-600 hover:underline dark:text-cyan-500"
+            <Button
+              className="w-[90%] lg:w-[70%]"
+              size="sm"
+              outline
+              isProcessing={loadingPuzzle?.[index] || false}
+              onClick={() => handleOpenPuzzle(item.puzzle, index)}
             >
               {DateTime.fromISO(item.attemptedAt).toISODate()}
-            </Link>
+            </Button>
             <Label>{item.userRatingAfter}</Label>
             <Label>
               {DateTime.fromSeconds(item.timeTaken).toFormat('mm:ss')}
@@ -130,6 +155,19 @@ export const SolvePuzzleHistories = () => {
           />
         </div>
       </TransitionContainer>
+      {isOpenSolvePuzzle && puzzleDialogData && (
+        <SolvePuzzleDrawer
+          puzzle={puzzleDialogData.puzzle}
+          onClose={onCloseDialog}
+          onSolved={() => {
+            // Do  nothing for now
+          }}
+          showNextButton={hasNextPuzzle(puzzleHistory?.items)}
+          onNextClick={() =>
+            handleNextPuzzle(puzzleHistory?.items, puzzleDialogData.index)
+          }
+        />
+      )}
     </>
   );
 };

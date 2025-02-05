@@ -1,10 +1,10 @@
-import { TransitionContainer } from '@/components/TransitionContainer';
 import { useAppContext } from '@/contexts/AppContext';
 import { fetcher } from '@/utils/fetcher';
 import { Button, Card, Dropdown, Tabs } from 'flowbite-react';
 import { useCallback, useEffect, useMemo, useState } from 'react';
 import useSWR from 'swr';
 
+import { Loading } from '@/components/Loading';
 import { useToast } from '@/contexts/ToastContext';
 import { User } from '@/types/user';
 import axiosInstance from '@/utils/axiosInstance';
@@ -92,97 +92,99 @@ export const UserHomeScreen = () => {
     }
   }, [addToast, apiDomain, router, t]);
 
+  if (isLoadingUser || isLoadingNextCourse) {
+    return <Loading />;
+  }
+
   return (
-    <TransitionContainer isLoading={isLoadingUser} isVisible={!isEmpty(user)}>
-      <div className="flex flex-col">
-        <div className="my-4 flex justify-end">
-          <Dropdown label={t('common.title.profile')}>
-            <Dropdown.Item onClick={() => router.push('/change-password')}>
-              {t('common.navigation.change-password')}
-            </Dropdown.Item>
-            <Dropdown.Item onClick={handleLogout}>
-              {t('common.navigation.logout')}
-            </Dropdown.Item>
-          </Dropdown>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <Card className="w-full flex flex-col items-start min-h-[200px] border border-gray-200">
-            <div className="flex flex-col flex-grow items-start">
-              <h2 className="text-lg font-semibold">{t('home.performance')}</h2>
-              <p
-                className="text-sm  line-clamp-3 mt-2"
-                dangerouslySetInnerHTML={{
-                  __html: user?.feedback as string,
+    <div className="flex flex-col">
+      <div className="my-4 flex justify-end">
+        <Dropdown label={t('common.title.profile')}>
+          <Dropdown.Item onClick={() => router.push('/change-password')}>
+            {t('common.navigation.change-password')}
+          </Dropdown.Item>
+          <Dropdown.Item onClick={handleLogout}>
+            {t('common.navigation.logout')}
+          </Dropdown.Item>
+        </Dropdown>
+      </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <Card className="w-full flex flex-col items-start min-h-[200px] border border-gray-200">
+          <div className="flex flex-col flex-grow items-start">
+            <h2 className="text-lg font-semibold">{t('home.performance')}</h2>
+            <p
+              className="text-sm  line-clamp-3 mt-2"
+              dangerouslySetInnerHTML={{
+                __html: user?.feedback as string,
+              }}
+            ></p>
+            {/* Buttons for Solve & Practice */}
+            <div className="mt-8 flex space-x-4">
+              <Button
+                outline
+                gradientDuoTone="cyanToBlue"
+                size="lg"
+                disabled={isLoadingNextPuzzle || isEmpty(nextPuzzleId)}
+                onClick={() => {
+                  router.push(`/solve-puzzles/${nextPuzzleId}`);
                 }}
-              ></p>
-              {/* Buttons for Solve & Practice */}
-              <div className="mt-8 flex space-x-4">
+              >
+                {t('home.solve-puzzles')}
+              </Button>
+              <Button
+                outline
+                gradientDuoTone="cyanToBlue"
+                size="lg"
+                onClick={() => {
+                  router.push(`/practice-puzzles`);
+                }}
+              >
+                {t('common.title.practice-puzzles')}
+              </Button>
+            </div>
+          </div>
+        </Card>
+        <Card className="w-full flex flex-col items-start min-h-[200px] border border-gray-200">
+          <h2 className="text-lg font-semibold">{t('home.next-course')}</h2>
+          {nextCourse ? (
+            <>
+              <p className="text-gray-600 mt-2">{nextCourse.title[locale]}</p>
+              <div className="mt-4">
                 <Button
                   outline
                   gradientDuoTone="cyanToBlue"
                   size="lg"
                   disabled={isLoadingNextPuzzle || isEmpty(nextPuzzleId)}
                   onClick={() => {
-                    router.push(`/solve-puzzles/${nextPuzzleId}`);
+                    router.push(`/lessons/${nextCourse.slug}`);
                   }}
                 >
-                  {t('home.solve-puzzles')}
-                </Button>
-                <Button
-                  outline
-                  gradientDuoTone="cyanToBlue"
-                  size="lg"
-                  onClick={() => {
-                    router.push(`/practice-puzzles`);
-                  }}
-                >
-                  {t('common.title.practice-puzzles')}
+                  {t('common.title.start')}
                 </Button>
               </div>
-            </div>
-          </Card>
-          <Card className="w-full flex flex-col items-start min-h-[200px] border border-gray-200">
-            <h2 className="text-lg font-semibold">{t('home.next-course')}</h2>
-            {nextCourse ? (
-              <>
-                <p className="text-gray-600 mt-2">{nextCourse.title[locale]}</p>
-                <div className="mt-4">
-                  <Button
-                    outline
-                    gradientDuoTone="cyanToBlue"
-                    size="lg"
-                    disabled={isLoadingNextPuzzle || isEmpty(nextPuzzleId)}
-                    onClick={() => {
-                      router.push(`/lessons/${nextCourse.slug}`);
-                    }}
-                  >
-                    {t('common.title.start')}
-                  </Button>
-                </div>
-              </>
-            ) : (
-              <p>{t('home.no-course')}</p>
-            )}
-          </Card>
-        </div>
-        <h3 className="mt-8 mb-2 font-semibold">{t('home.recent-puzzles')}</h3>
-        <Tabs aria-label={t('home.recent-puzzles')}>
-          <Tabs.Item
-            active={activeTab === 'rated'}
-            title={t('home.rated')}
-            onClick={() => setActiveTab('rated')}
-          >
-            <SolvePuzzleHistories />
-          </Tabs.Item>
-          <Tabs.Item
-            active={activeTab === 'custom'}
-            title={t('home.custom')}
-            onClick={() => setActiveTab('custom')}
-          >
-            <PracticePuzzleHistories />
-          </Tabs.Item>
-        </Tabs>
+            </>
+          ) : (
+            <p>{t('home.no-course')}</p>
+          )}
+        </Card>
       </div>
-    </TransitionContainer>
+      <h3 className="mt-8 mb-2 font-semibold">{t('home.recent-puzzles')}</h3>
+      <Tabs aria-label={t('home.recent-puzzles')}>
+        <Tabs.Item
+          active={activeTab === 'rated'}
+          title={t('home.rated')}
+          onClick={() => setActiveTab('rated')}
+        >
+          <SolvePuzzleHistories />
+        </Tabs.Item>
+        <Tabs.Item
+          active={activeTab === 'custom'}
+          title={t('home.custom')}
+          onClick={() => setActiveTab('custom')}
+        >
+          <PracticePuzzleHistories />
+        </Tabs.Item>
+      </Tabs>
+    </div>
   );
 };
