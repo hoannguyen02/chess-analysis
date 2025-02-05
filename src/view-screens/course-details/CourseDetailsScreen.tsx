@@ -15,7 +15,7 @@ type Props = {
   lessonProgresses: LessonProgress[];
 };
 
-export const CourseDetails = ({ data, lessonProgresses }: Props) => {
+export const CourseDetailsScreen = ({ data, lessonProgresses }: Props) => {
   const { locale } = useAppContext();
   const t = useTranslations();
   const router = useRouter();

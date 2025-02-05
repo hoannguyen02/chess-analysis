@@ -1,9 +1,9 @@
 import { ErrorBanner } from '@/components/ErrorBanner';
 import Layout from '@/components/Layout';
-import { LessonDetails } from '@/components/LessonDetails';
 import { withThemes } from '@/HOF/withThemes';
 import { LessonExpanded } from '@/types/lesson';
 import { createServerAxios } from '@/utils/axiosInstance';
+import { LessonDetailsScreen } from '@/view-screens/lesson-details/LessonDetailsScreen';
 import { GetServerSidePropsContext } from 'next';
 
 type Props = {
@@ -16,7 +16,7 @@ const LessonDetailsPage = ({ data, error, errorCode }: Props) => {
 
   return (
     <Layout>
-      <LessonDetails data={data} />
+      <LessonDetailsScreen data={data} />
     </Layout>
   );
 };

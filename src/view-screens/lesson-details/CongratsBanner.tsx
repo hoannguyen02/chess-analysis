@@ -1,5 +1,5 @@
+import ConfettiEffect from '@/components/ConfettiEffect';
 import { VscCheck } from 'react-icons/vsc';
-import ConfettiEffect from '../ConfettiEffect';
 
 type Props = {
   onClick: () => void;

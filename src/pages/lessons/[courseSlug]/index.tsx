@@ -1,10 +1,10 @@
-import { CourseDetails } from '@/components/CourseDetails';
 import { ErrorBanner } from '@/components/ErrorBanner';
 import Layout from '@/components/Layout';
 import { withThemes } from '@/HOF/withThemes';
 import { LessonProgress } from '@/types';
 import { CourseExpanded } from '@/types/course';
 import { createServerAxios } from '@/utils/axiosInstance';
+import { CourseDetailsScreen } from '@/view-screens/course-details/CourseDetailsScreen';
 import { GetServerSidePropsContext } from 'next';
 
 type Props = {
@@ -24,7 +24,7 @@ const LessonDetailsPage = ({
 
   return (
     <Layout>
-      <CourseDetails data={data} lessonProgresses={lessonProgresses} />
+      <CourseDetailsScreen data={data} lessonProgresses={lessonProgresses} />
     </Layout>
   );
 };

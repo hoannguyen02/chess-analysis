@@ -22,7 +22,7 @@ type ContentPuzzleDialogData = {
   puzzle: Puzzle;
   contentIndex: number;
 };
-export const LessonDetails = ({ data }: Props) => {
+export const LessonDetailsScreen = ({ data }: Props) => {
   const { locale, session } = useAppContext();
   const router = useRouter();
   const courseSlug = useMemo(() => router.query.courseSlug, [router]);
