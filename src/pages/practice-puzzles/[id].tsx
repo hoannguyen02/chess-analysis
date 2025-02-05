@@ -1,7 +1,7 @@
 import { AuthenticatedWrap } from '@/components/AuthenticatedWrap';
 import Layout from '@/components/Layout';
 import { withThemes } from '@/HOF/withThemes';
-import { SolvePracticePuzzleScreen } from '@/view-screens/homepage/SolvePracticePuzzleScreen';
+import { SolvePracticePuzzleScreen } from '@/view-screens/SolvePracticePuzzleScreen';
 import {
   GetServerSideProps,
   GetServerSidePropsContext,

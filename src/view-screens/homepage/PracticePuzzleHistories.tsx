@@ -94,7 +94,7 @@ export const PracticePuzzleHistories = () => {
         </div>
         {puzzleHistory?.items.map((item: PuzzleHistory, index: number) => (
           <div
-            className="grid grid-cols-4 items-center gap-2"
+            className="grid grid-cols-3 items-center gap-2"
             key={`${item.puzzle}-${index}`}
           >
             <Link
