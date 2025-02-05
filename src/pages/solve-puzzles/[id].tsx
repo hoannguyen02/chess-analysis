@@ -74,7 +74,7 @@ const SolvePuzzlePage = () => {
 
   const handleSolvePuzzle = useCallback(
     async (data: SolvedData) => {
-      if (!session?.id) {
+      if (!session?.id || isEmpty(puzzle)) {
         return;
       }
       setIsSubmitting(true);
@@ -101,8 +101,12 @@ const SolvePuzzlePage = () => {
       }
       setIsSubmitting(false);
     },
-    [apiDomain, excludedThemeIds, puzzle._id, session?.id]
+    [apiDomain, excludedThemeIds, puzzle, session?.id]
   );
+
+  const isShowNextButton = useMemo(() => {
+    return !isEmpty(nextPuzzleId) || isEmpty(session?.id);
+  }, [nextPuzzleId, session?.id]);
 
   return (
     <Layout>
@@ -125,7 +129,7 @@ const SolvePuzzlePage = () => {
               onSolved={handleSolvePuzzle}
               onNextClick={handleNextClick}
               puzzle={puzzle}
-              showNextButton={!isEmpty(nextPuzzleId) || isEmpty(session?.id)}
+              showNextButton={isShowNextButton}
             />
           </div>
         ) : (

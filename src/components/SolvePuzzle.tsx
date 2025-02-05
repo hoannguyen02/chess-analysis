@@ -117,6 +117,7 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({
   const [isRunning, setIsRunning] = useState(true);
   const [startTime, setStartTime] = useState<number>(Date.now());
   const [hintUsed, setHintUsed] = useState(false);
+  const hasCalledApi = useRef(false);
   // attemptHistory adjust rating when puzzle is solved/quit
   const [attemptHistory, setAttemptHistory] = useState<AttemptHistory[]>([]);
 
@@ -166,7 +167,6 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({
     };
 
     const handleVisibilityChange = () => {
-      debugger;
       if (document.hidden) {
         handleOnSolved(attemptHistory);
       }
@@ -200,7 +200,8 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({
   }, [puzzle]);
 
   useEffect(() => {
-    if (currentStep === puzzle.solutions.length) {
+    if (currentStep === puzzle.solutions.length && !hasCalledApi.current) {
+      hasCalledApi.current = true; // Prevents duplicate API calls
       setIsBoardClickAble(false);
       setHistoryMoveCurrentIdx(puzzle.solutions.length);
       handleOnSolved(attemptHistory);
