@@ -6,8 +6,10 @@ import { SolvedData } from '@/types/puzzle';
 import axiosInstance from '@/utils/axiosInstance';
 import { fetcher } from '@/utils/fetcher';
 import isEmpty from 'lodash/isEmpty';
+import { useTranslations } from 'next-intl';
 import { useRouter } from 'next/router';
 import { useCallback, useEffect, useMemo, useState } from 'react';
+import { VscArrowLeft } from 'react-icons/vsc';
 import useSWR from 'swr';
 
 export const SolvePracticePuzzleScreen = () => {
@@ -16,6 +18,7 @@ export const SolvePracticePuzzleScreen = () => {
   const [isManualLoading, setIsManualLoading] = useState(false);
   const [nextPuzzleId, setNextPuzzleId] = useState(null);
   const { apiDomain, session } = useAppContext();
+  const t = useTranslations();
   const router = useRouter();
   const { query } = router;
 
@@ -99,16 +102,26 @@ export const SolvePracticePuzzleScreen = () => {
       isVisible={isVisible}
     >
       {puzzle || !isEmpty(error) ? (
-        <SolvePuzzle
-          onSolved={handleSolvePuzzle}
-          onNextClick={handleNextClick}
-          puzzle={puzzle}
-          showNextButton={showNextButton}
-          showCloseButton={!showNextButton}
-          onCloseClick={() => {
-            router.push('/practice-puzzles');
-          }}
-        />
+        <div className="flex flex-col">
+          <button
+            className="mb-4 flex items-center"
+            onClick={() => {
+              router.push('/practice-puzzles');
+            }}
+          >
+            <VscArrowLeft /> {t('common.button.back')}
+          </button>
+          <SolvePuzzle
+            onSolved={handleSolvePuzzle}
+            onNextClick={handleNextClick}
+            puzzle={puzzle}
+            showNextButton={showNextButton}
+            showCloseButton={!showNextButton}
+            onCloseClick={() => {
+              router.push('/practice-puzzles');
+            }}
+          />
+        </div>
       ) : (
         <NoPuzzleFound />
       )}
