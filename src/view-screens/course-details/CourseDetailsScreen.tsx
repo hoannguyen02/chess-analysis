@@ -7,7 +7,7 @@ import { useTranslations } from 'next-intl';
 import { useParams } from 'next/navigation';
 import { useRouter } from 'next/router';
 import { useCallback, useEffect, useMemo, useState } from 'react';
-import { VscArrowLeft } from 'react-icons/vsc';
+import { VscArrowLeft, VscCheck, VscPlay } from 'react-icons/vsc';
 import { useCourseProgress } from './useCourseProgress';
 
 type Props = {
@@ -31,7 +31,6 @@ export const CourseDetailsScreen = ({ data, lessonProgresses }: Props) => {
     version,
     totalLessons,
   } = data;
-
   const lessonIds = useMemo(
     () => lessons?.map(({ lessonId: lesson }) => lesson._id!),
     [lessons]
@@ -49,25 +48,19 @@ export const CourseDetailsScreen = ({ data, lessonProgresses }: Props) => {
     };
   }, [progress.completedLessons.length, totalLessons]);
 
-  // ✅ Use lessonProgresses if available, otherwise use state
   const [lessonProgressMap, setLessonProgressMap] = useState<
     Record<string, LessonProgress>
   >(() =>
     lessonProgresses?.length
       ? lessonProgresses.reduce((acc, progress) => {
-          return {
-            ...acc,
-            [progress.lessonId!]: progress,
-          };
+          return { ...acc, [progress.lessonId!]: progress };
         }, {})
       : {}
   );
 
-  // ✅ Load from localStorage only if lessonProgresses is empty
   useEffect(() => {
     if (!lessonProgresses?.length && typeof window !== 'undefined') {
       const lessonEntries: LessonProgress[] = [];
-
       for (let i = 0; i < localStorage.length; i++) {
         const key = localStorage.key(i);
         if (key && key.startsWith('lesson_')) {
@@ -81,18 +74,13 @@ export const CourseDetailsScreen = ({ data, lessonProgresses }: Props) => {
           }
         }
       }
-
-      // ✅ Update state after fetching from localStorage
       setLessonProgressMap(
         lessonEntries.reduce((acc, progress) => {
-          return {
-            ...acc,
-            [progress.lessonId!]: progress,
-          };
+          return { ...acc, [progress.lessonId!]: progress };
         }, {})
       );
     }
-  }, [lessonProgresses]); // Runs only when lessonProgresses is empty
+  }, [lessonProgresses]);
 
   const handleOnContinueOrStart = useCallback(() => {
     if (completedProgress > 0) {
@@ -132,10 +120,11 @@ export const CourseDetailsScreen = ({ data, lessonProgresses }: Props) => {
       <Progress progress={completedProgress} size="lg" className="mb-6" />
       {!isCompleted && (
         <Button
-          className="mb-6 w-full text-lg py-3"
+          className="mb-6 w-full text-lg py-2 rounded-md shadow-md hover:shadow-lg transition hover:bg-blue-700"
           color="blue"
           onClick={handleOnContinueOrStart}
         >
+          <VscPlay size={18} />{' '}
           {completedProgress > 0
             ? t('common.title.continue-learning')
             : t('common.title.start')}
@@ -150,17 +139,6 @@ export const CourseDetailsScreen = ({ data, lessonProgresses }: Props) => {
           {description?.[locale]}
         </p>
       </div>
-      {/* Objectives Section */}
-      <div className="mt-6">
-        <h3 className="text-lg sm:text-xl font-semibold">
-          {t('common.title.objectives')}
-        </h3>
-        <ul className="list-disc list-inside text-gray-600 mt-2 text-sm sm:text-base">
-          {objectives?.[locale]?.map((obj, index) => (
-            <li key={index}>{obj}</li>
-          ))}
-        </ul>
-      </div>
       {/* Lessons Section */}
       <div className="mt-6">
         <h3 className="text-lg sm:text-xl font-semibold mb-4">
@@ -171,21 +149,21 @@ export const CourseDetailsScreen = ({ data, lessonProgresses }: Props) => {
             const totalPuzzles = lesson.totalPuzzles;
             const completedPuzzlesCount =
               lessonProgressMap?.[lesson._id!]?.completedPuzzles?.length;
-
-            // Determine lesson progress state
             let buttonTitle = t('common.title.start');
             let buttonColor = 'blue';
+            let buttonIcon = <VscPlay size={18} />;
             if (completedPuzzlesCount === totalPuzzles) {
               buttonTitle = t('common.button.completed');
               buttonColor = 'green';
+              buttonIcon = <VscCheck size={18} />;
             } else if (completedPuzzlesCount > 0) {
               buttonTitle = t('common.button.continue');
+              buttonColor = 'yellow';
             }
-
             return (
               <div
                 key={lesson.id}
-                className="p-3 sm:p-4 bg-gray-100 rounded-lg shadow-md flex flex-col sm:flex-row sm:justify-between sm:items-center"
+                className="p-4 bg-gray-200 rounded-lg shadow-md flex justify-between"
               >
                 <div>
                   <h4 className="text-base sm:text-lg font-semibold">
@@ -197,12 +175,12 @@ export const CourseDetailsScreen = ({ data, lessonProgresses }: Props) => {
                 </div>
                 <Button
                   color={buttonColor}
-                  className="mt-3 sm:mt-0 w-full sm:w-auto"
+                  className="mt-3 sm:mt-0 w-full sm:w-auto flex items-center gap-2 hover:shadow-lg transition"
                   onClick={() =>
                     router.push(`/lessons/${params.courseSlug}/${lesson.slug}`)
                   }
                 >
-                  {buttonTitle}
+                  {buttonIcon} {buttonTitle}
                 </Button>
               </div>
             );

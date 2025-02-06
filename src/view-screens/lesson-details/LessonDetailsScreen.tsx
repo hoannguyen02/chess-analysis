@@ -9,7 +9,7 @@ import { Badge, Button, Card, Progress } from 'flowbite-react';
 import { useTranslations } from 'next-intl';
 import { useRouter } from 'next/router';
 import { useEffect, useMemo, useRef, useState } from 'react';
-import { VscArrowLeft } from 'react-icons/vsc';
+import { VscArrowLeft, VscPlay } from 'react-icons/vsc';
 import useSWR from 'swr';
 import { CongratsBanner } from './CongratsBanner';
 import { useLessonProgress } from './useLessonProgress';
@@ -232,10 +232,11 @@ export const LessonDetailsScreen = ({ data }: Props) => {
             {/* Don't display button if 1 content because we already expanded it */}
             {contents && contents?.length > 1 && (
               <Button
-                className="mb-6 w-full text-lg py-3"
+                className="mb-6 w-full text-lg py-2 rounded-md shadow-md hover:shadow-lg transition hover:bg-blue-700"
                 color="blue"
                 onClick={handleContinueOrStart}
               >
+                <VscPlay size={18} />{' '}
                 {completedProgress > 0
                   ? t('common.title.continue-learning')
                   : t('common.title.start')}

@@ -165,7 +165,6 @@ export const UserHomeScreen = () => {
                   outline
                   gradientDuoTone="cyanToBlue"
                   size="lg"
-                  disabled={isLoadingNextPuzzle || isEmpty(nextPuzzleId)}
                   onClick={() => {
                     router.push(`/lessons/${nextCourse.slug}`);
                   }}
