@@ -15,10 +15,8 @@ export const TransitionContainer = ({
     <Loading />
   ) : (
     <div
-      className={`transition-opacity duration-500 ease-in-out lg:transform ${
-        isVisible
-          ? 'opacity-100 lg:translate-y-0'
-          : 'opacity-0 lg:translate-y-4'
+      className={`transition-opacity duration-500 ease-in-out ${
+        isVisible ? 'opacity-100' : 'opacity-0 '
       }`}
     >
       {children}
