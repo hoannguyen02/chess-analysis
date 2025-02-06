@@ -14,6 +14,7 @@ import useSWR from 'swr';
 
 export const SolvePracticePuzzleScreen = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [renderKey, setRenderKey] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
   const [isManualLoading, setIsManualLoading] = useState(false);
   const [nextPuzzleId, setNextPuzzleId] = useState(null);
@@ -41,6 +42,7 @@ export const SolvePracticePuzzleScreen = () => {
       setIsManualLoading(false);
       setIsVisible(true);
     } else {
+      setIsManualLoading(false);
       setIsVisible(true);
     }
   }, [puzzle]);
@@ -48,6 +50,16 @@ export const SolvePracticePuzzleScreen = () => {
   const handleNextClick = () => {
     setIsVisible(false);
     setIsManualLoading(true);
+    if (nextPuzzleId === puzzle?._id) {
+      console.log('Same puzzle ID detected, resetting manually...');
+      setTimeout(() => {
+        setIsManualLoading(false); // Manually reset loading state after delay
+        setIsVisible(true);
+        setRenderKey((prev) => prev + 1); // Trigger re-render after delay
+      }, 500); // Delay of 500ms (adjust as needed)
+
+      return;
+    }
     router.push(`/practice-puzzles/${nextPuzzleId}`);
   };
 
@@ -79,7 +91,8 @@ export const SolvePracticePuzzleScreen = () => {
             ...(!isEmpty(payload) && { filters: payload }),
           }
         );
-        setNextPuzzleId(submitResult.data);
+        const nextId = submitResult.data;
+        setNextPuzzleId(nextId);
       } catch (error) {
         console.log(error);
         setNextPuzzleId(null);
@@ -112,6 +125,7 @@ export const SolvePracticePuzzleScreen = () => {
             <VscArrowLeft /> {t('common.button.back')}
           </button>
           <SolvePuzzle
+            key={renderKey}
             onSolved={handleSolvePuzzle}
             onNextClick={handleNextClick}
             puzzle={puzzle}
