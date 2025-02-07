@@ -154,21 +154,28 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({
   );
 
   useEffect(() => {
-    const handleRouteChange = (url: string) => {
-      if (url !== router.asPath) {
+    const handleExitEvent = () => {
+      if (!hasCalledApi.current) {
+        hasCalledApi.current = true;
         handleOnSolved(attemptHistory);
       }
     };
 
+    const handleRouteChange = (url: string) => {
+      if (url !== router.asPath) {
+        handleExitEvent();
+      }
+    };
+
     const handleBeforeUnload = (event: BeforeUnloadEvent) => {
-      handleOnSolved(attemptHistory);
+      handleExitEvent();
       event.preventDefault();
       event.returnValue = ''; // Required for Chrome
     };
 
     const handleVisibilityChange = () => {
       if (document.hidden) {
-        handleOnSolved(attemptHistory);
+        handleExitEvent();
       }
     };
 
@@ -183,10 +190,11 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({
       window.removeEventListener('beforeunload', handleBeforeUnload);
       document.removeEventListener('visibilitychange', handleVisibilityChange);
     };
-  }, [attemptHistory, currentStep, handleOnSolved, router]);
+  }, [attemptHistory, handleOnSolved, router]);
 
   useEffect(() => {
     if (puzzle) {
+      hasCalledApi.current = false;
       game.load(puzzle.fen);
       setCurrentFen(puzzle.fen);
       setCurrentStep(0);
