@@ -7,6 +7,7 @@ import { fetcher } from '@/utils/fetcher';
 import { getDifficultyColor } from '@/utils/getDifficultyColor';
 import { Badge, Button, Card, Progress } from 'flowbite-react';
 import { useTranslations } from 'next-intl';
+import Head from 'next/head';
 import { useRouter } from 'next/router';
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { VscArrowLeft, VscPlay } from 'react-icons/vsc';
@@ -25,7 +26,13 @@ type ContentPuzzleDialogData = {
 export const LessonDetailsScreen = ({ data }: Props) => {
   const { locale, session } = useAppContext();
   const router = useRouter();
-  const courseSlug = useMemo(() => router.query.courseSlug, [router]);
+  const { courseSlug, lessonSlug } = useMemo(() => {
+    const { courseSlug, lessonSlug } = router.query;
+    return {
+      courseSlug,
+      lessonSlug,
+    };
+  }, [router]);
   const {
     open: isOpenSolvePuzzle,
     data: contentPuzzle,
@@ -184,8 +191,46 @@ export const LessonDetailsScreen = ({ data }: Props) => {
     }
   };
 
+  // Generate dynamic SEO title and description
+  const lessonTitle = title?.[locale] || 'LIMA Chess Lesson';
+  const lessonDescription =
+    description?.[locale] ||
+    'Học cờ vua một cách thông minh với LIMA Chess, các bài học từng bước giúp bạn nắm vững chiến lược, chiến thuật cờ vua một cách dễ dàng.';
+
+  const pageUrl = `https://limachess.com/lessons/${courseSlug}/${lessonSlug}`;
+
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'EducationalCourse',
+    name: lessonTitle,
+    description: lessonDescription,
+    educationalLevel: difficulty,
+    provider: {
+      '@type': 'Organization',
+      name: 'LIMA Chess',
+      url: 'https://limachess.com',
+    },
+    hasCourseInstance: {
+      '@type': 'CourseInstance',
+      courseMode: 'online',
+      courseWorkload: `${totalPuzzles} puzzles`,
+    },
+  };
+
   return (
     <>
+      {/* SEO Metadata */}
+      <Head>
+        <title>{lessonTitle} | LIMA Chess</title>
+        <meta name="description" content={lessonDescription} />
+        <meta property="og:title" content={lessonTitle} />
+        <meta property="og:description" content={lessonDescription} />
+        <meta property="og:url" content={pageUrl} />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:title" content={lessonTitle} />
+        <meta name="twitter:description" content={lessonDescription} />
+        <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
+      </Head>
       <div className="container mx-auto p-4">
         <div className="flex items-center mb-2">
           <Button

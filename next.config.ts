@@ -7,6 +7,14 @@ const nextConfig: NextConfig = {
     locales: ['en', 'vi'], // Supported locales
     defaultLocale: 'en', // Default locale
   },
+  async rewrites() {
+    return [
+      {
+        source: '/sitemap.xml',
+        destination: '/api/sitemap',
+      },
+    ];
+  },
 };
 
 export default nextConfig;

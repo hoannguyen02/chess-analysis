@@ -4,6 +4,7 @@ import { CourseExpanded } from '@/types/course';
 import { getDifficultyColor } from '@/utils/getDifficultyColor';
 import { Badge, Button, Progress } from 'flowbite-react';
 import { useTranslations } from 'next-intl';
+import Head from 'next/head';
 import { useParams } from 'next/navigation';
 import { useRouter } from 'next/router';
 import { useCallback, useEffect, useMemo, useState } from 'react';
@@ -101,92 +102,127 @@ export const CourseDetailsScreen = ({ data, lessonProgresses }: Props) => {
     router,
   ]);
 
+  const courseTitle = title[locale] || 'LIMA Chess Course';
+  const courseDescription =
+    description?.[locale] ||
+    'Học cờ vua một cách thông minh với LIMA Chess, các bài học từng bước giúp bạn nắm vững chiến lược, chiến thuật cờ vua một cách dễ dàng.';
+  const courseUrl = `https://limachess.com/lessons/${params.courseSlug}`;
+
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Course',
+    name: courseTitle,
+    description: courseDescription,
+    provider: {
+      '@type': 'Organization',
+      name: 'LIMA Chess',
+      url: 'https://limachess.com',
+    },
+    educationalLevel: difficulty,
+    numberOfLessons: totalLessons,
+  };
+
   return (
-    <div className="container mx-auto p-4">
-      <div className="flex items-center mb-2">
-        <Button outline onClick={() => router.back()}>
-          <VscArrowLeft />
-        </Button>
-      </div>
-      {/* Header Section */}
-      <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-6">
-        <h1 className="text-3xl font-bold text-gray-800 mb-2 sm:mb-0">
-          {title[locale]}
-        </h1>
-        <Badge color={difficultyColor} className="text-lg px-3 py-1 w-max">
-          {difficulty}
-        </Badge>
-      </div>
-      <Progress progress={completedProgress} size="lg" className="mb-6" />
-      {!isCompleted && (
-        <Button
-          className="mb-6 w-full text-lg py-2 rounded-md shadow-md hover:shadow-lg transition hover:bg-blue-700"
-          color="blue"
-          onClick={handleOnContinueOrStart}
-        >
-          <VscPlay size={18} />{' '}
-          {completedProgress > 0
-            ? t('common.title.continue-learning')
-            : t('common.title.start')}
-        </Button>
-      )}
-      {/* Description Section */}
-      <div className="mt-6">
-        <h2 className="text-xl sm:text-2xl font-semibold">
-          {t('common.title.course-overview')}
-        </h2>
-        <p className="mt-2 text-gray-600 text-sm sm:text-base">
-          {description?.[locale]}
-        </p>
-      </div>
-      {/* Lessons Section */}
-      <div className="mt-6">
-        <h3 className="text-lg sm:text-xl font-semibold mb-4">
-          {t('common.title.lessons')}
-        </h3>
-        <div className="grid gap-3 sm:gap-4">
-          {lessons.map(({ lessonId: lesson }) => {
-            const totalPuzzles = lesson.totalPuzzles;
-            const completedPuzzlesCount =
-              lessonProgressMap?.[lesson._id!]?.completedPuzzles?.length;
-            let buttonTitle = t('common.title.start');
-            let buttonColor = 'blue';
-            let buttonIcon = <VscPlay size={18} />;
-            if (completedPuzzlesCount === totalPuzzles) {
-              buttonTitle = t('common.button.completed');
-              buttonColor = 'green';
-              buttonIcon = <VscCheck size={18} />;
-            } else if (completedPuzzlesCount > 0) {
-              buttonTitle = t('common.button.continue');
-              buttonColor = 'yellow';
-            }
-            return (
-              <div
-                key={lesson.id}
-                className="p-4 bg-gray-200 rounded-lg shadow-md flex justify-between"
-              >
-                <div>
-                  <h4 className="text-base sm:text-lg font-semibold">
-                    {lesson.title[locale]}
-                  </h4>
-                  <p className="text-xs sm:text-sm text-gray-600">
-                    {totalPuzzles} {t('common.title.puzzles')}
-                  </p>
-                </div>
-                <Button
-                  color={buttonColor}
-                  className="mt-3 sm:mt-0 w-full sm:w-auto flex items-center gap-2 hover:shadow-lg transition"
-                  onClick={() =>
-                    router.push(`/lessons/${params.courseSlug}/${lesson.slug}`)
-                  }
+    <>
+      <Head>
+        <title>{courseTitle} | LIMA Chess</title>
+        <meta name="description" content={courseDescription} />
+        <meta property="og:title" content={courseTitle} />
+        <meta property="og:description" content={courseDescription} />
+        <meta property="og:url" content={courseUrl} />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:title" content={courseTitle} />
+        <meta name="twitter:description" content={courseDescription} />
+        <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
+      </Head>
+      <div className="container mx-auto p-4">
+        <div className="flex items-center mb-2">
+          <Button outline onClick={() => router.back()}>
+            <VscArrowLeft />
+          </Button>
+        </div>
+        {/* Header Section */}
+        <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-6">
+          <h1 className="text-3xl font-bold text-gray-800 mb-2 sm:mb-0">
+            {title[locale]}
+          </h1>
+          <Badge color={difficultyColor} className="text-lg px-3 py-1 w-max">
+            {difficulty}
+          </Badge>
+        </div>
+        <Progress progress={completedProgress} size="lg" className="mb-6" />
+        {!isCompleted && (
+          <Button
+            className="mb-6 w-full text-lg py-2 rounded-md shadow-md hover:shadow-lg transition hover:bg-blue-700"
+            color="blue"
+            onClick={handleOnContinueOrStart}
+          >
+            <VscPlay size={18} />{' '}
+            {completedProgress > 0
+              ? t('common.title.continue-learning')
+              : t('common.title.start')}
+          </Button>
+        )}
+        {/* Description Section */}
+        <div className="mt-6">
+          <h2 className="text-xl sm:text-2xl font-semibold">
+            {t('common.title.course-overview')}
+          </h2>
+          <p className="mt-2 text-gray-600 text-sm sm:text-base">
+            {description?.[locale]}
+          </p>
+        </div>
+        {/* Lessons Section */}
+        <div className="mt-6">
+          <h3 className="text-lg sm:text-xl font-semibold mb-4">
+            {t('common.title.lessons')}
+          </h3>
+          <div className="grid gap-3 sm:gap-4">
+            {lessons.map(({ lessonId: lesson }) => {
+              const totalPuzzles = lesson.totalPuzzles;
+              const completedPuzzlesCount =
+                lessonProgressMap?.[lesson._id!]?.completedPuzzles?.length;
+              let buttonTitle = t('common.title.start');
+              let buttonColor = 'blue';
+              let buttonIcon = <VscPlay size={18} />;
+              if (completedPuzzlesCount === totalPuzzles) {
+                buttonTitle = t('common.button.completed');
+                buttonColor = 'green';
+                buttonIcon = <VscCheck size={18} />;
+              } else if (completedPuzzlesCount > 0) {
+                buttonTitle = t('common.button.continue');
+                buttonColor = 'yellow';
+              }
+              return (
+                <div
+                  key={lesson.id}
+                  className="p-4 bg-gray-200 rounded-lg shadow-md flex justify-between"
                 >
-                  {buttonIcon} {buttonTitle}
-                </Button>
-              </div>
-            );
-          })}
+                  <div>
+                    <h4 className="text-base sm:text-lg font-semibold">
+                      {lesson.title[locale]}
+                    </h4>
+                    <p className="text-xs sm:text-sm text-gray-600">
+                      {totalPuzzles} {t('common.title.puzzles')}
+                    </p>
+                  </div>
+                  <Button
+                    color={buttonColor}
+                    className="mt-3 sm:mt-0 w-full sm:w-auto flex items-center gap-2 hover:shadow-lg transition"
+                    onClick={() =>
+                      router.push(
+                        `/lessons/${params.courseSlug}/${lesson.slug}`
+                      )
+                    }
+                  >
+                    {buttonIcon} {buttonTitle}
+                  </Button>
+                </div>
+              );
+            })}
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
