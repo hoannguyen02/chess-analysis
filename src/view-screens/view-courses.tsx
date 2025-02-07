@@ -65,7 +65,7 @@ export const ViewCourses: React.FC<Props> = ({
   ]);
 
   const queryKey = useMemo(
-    () => `${apiDomain}/v1/courses?${queryString}`,
+    () => `${apiDomain}/v1/courses/public?${queryString}`,
     [apiDomain, queryString]
   );
 
@@ -97,7 +97,7 @@ export const ViewCourses: React.FC<Props> = ({
           onChange={(value) => {
             router.push(
               {
-                pathname: '/',
+                pathname: router.pathname,
                 query: { ...router.query, page: 1, search: value },
               },
               undefined,
