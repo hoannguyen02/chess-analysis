@@ -51,11 +51,17 @@ export const GuestHomeScreen = () => {
           <h4 className="mt-6 text-lg font-semibold">🚀 {t('home.heading')}</h4>
           <LimaBenefits />
           <Button
+            id="homepage-register-button"
             outline
             gradientDuoTone="pinkToOrange"
             size="lg"
             className="mt-4 px-6 py-3 text-lg transition-transform transform hover:scale-105"
-            onClick={() => router.push('/register-guide')}
+            onClick={() => {
+              window.dataLayer?.push({
+                event: 'homepage-register-button',
+              });
+              router.push('/register-guide');
+            }}
           >
             {t('common.button.join-now')}
           </Button>
@@ -73,13 +79,17 @@ export const GuestHomeScreen = () => {
               🔥 {t('home.puzzle-difficulty', { level: 'Intermediate' })}
             </span>
             <Button
+              id="homepage-solve-puzzle-button"
               outline
               gradientDuoTone="cyanToBlue"
               size="lg"
               className="mt-4 px-6 py-3 text-lg transition-transform transform hover:scale-105"
-              onClick={() =>
-                router.push(`/solve-puzzles/679eecd1e162bcfe06b7dbd5`)
-              }
+              onClick={() => {
+                window.dataLayer?.push({
+                  event: 'homepage-solve-puzzle-button',
+                });
+                router.push(`/solve-puzzles/679eecd1e162bcfe06b7dbd5`);
+              }}
             >
               {t('home.solve-puzzles')}
             </Button>
@@ -105,11 +115,17 @@ export const GuestHomeScreen = () => {
               {t('home.lesson-description')}
             </p>
             <Button
+              id="homepage-view-lessons-button"
               outline
               gradientDuoTone="greenToBlue"
               size="lg"
               className="mt-4 px-6 py-3 text-lg transition-transform transform hover:scale-105"
-              onClick={() => router.push('/tactics')}
+              onClick={() => {
+                window.dataLayer?.push({
+                  event: 'homepage-view-lessons-button',
+                });
+                router.push('/tactics');
+              }}
             >
               {t('home.view-lessons')}
             </Button>

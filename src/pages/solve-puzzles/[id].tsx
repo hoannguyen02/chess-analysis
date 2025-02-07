@@ -64,6 +64,9 @@ const SolvePuzzlePage = () => {
 
   const handleNextClick = () => {
     if (!session?.id) {
+      window.dataLayer?.push({
+        event: 'solve-puzzle-guest-next-button',
+      });
       onOpenDialog();
       return;
     }

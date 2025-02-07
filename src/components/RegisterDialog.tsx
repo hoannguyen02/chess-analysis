@@ -9,6 +9,7 @@ import { LimaBenefits } from './LimaBenefits';
 type Props = {
   onClose: () => void;
 };
+
 export const RegisterDialog = ({ onClose }: Props) => {
   const t = useTranslations();
   const router = useRouter();
@@ -27,11 +28,17 @@ export const RegisterDialog = ({ onClose }: Props) => {
         <Modal.Footer>
           <div className="flex justify-center w-full">
             <Button
+              id="register-banner-button"
               outline
               gradientDuoTone="pinkToOrange"
               size="lg"
               className="mt-4 font-semibold flex"
-              onClick={() => router.push('/register-guide')}
+              onClick={() => {
+                window.dataLayer?.push({
+                  event: 'register-banner-button',
+                });
+                router.push('/register-guide');
+              }}
             >
               {t('common.button.join-now')}
             </Button>
