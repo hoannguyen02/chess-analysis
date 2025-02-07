@@ -8,6 +8,7 @@
     "courses": "Khóa học",
     "lessons": "Bài học",
     "puzzles": "Câu đố",
+    "puzzle-themes": "Chiến thuật",
     "users": "Tài khoản",
     "login": "Đăng nhập",
     "logout": "Đăng xuất",
@@ -82,6 +83,6 @@
     "lowest-price": "Chinh phục cờ vua nhanh nhất với chi phí rẻ nhất.",
     "support": "Hỗ trợ học tập hàng tuần với hướng dẫn từ chuyên gia.",
     "easy-started": "Dễ học, dễ luyện tập, phát triển kỹ năng đỉnh cao.",
-    "confident": "Tự tin chinh chiến ở mọi giải đấu, cả online lẫn offline."
+    "confident": "Tự tin chinh chiến ở mọi giải đấu trong nước và quốc tế."
   }
 }

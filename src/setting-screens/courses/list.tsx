@@ -8,7 +8,7 @@ import { Course } from '@/types/course';
 import { StatusType } from '@/types/status';
 import axiosInstance from '@/utils/axiosInstance';
 import { filteredQuery } from '@/utils/filteredQuery';
-import { Button, Label, Pagination, Spinner } from 'flowbite-react';
+import { Button, Label, Spinner } from 'flowbite-react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useEffect, useMemo, useState } from 'react';
@@ -201,15 +201,6 @@ export const CourseListScreen = () => {
       <Button disabled={!isReordered} onClick={handleSaveOrder}>
         Save courses
       </Button>
-
-      {/* Pagination */}
-      <div className="flex justify-center mt-4">
-        <Pagination
-          currentPage={currentPage}
-          totalPages={data?.lastPage || 1}
-          onPageChange={onPageChange}
-        />
-      </div>
     </>
   );
 };

@@ -3,9 +3,13 @@ export type PuzzleTheme = {
     en: string;
     vi: string;
   };
+  description: {
+    en: string;
+    vi: string;
+  };
   code: string;
   value: string;
   label: string;
-  description?: string;
   _id: string;
+  priority?: number;
 };

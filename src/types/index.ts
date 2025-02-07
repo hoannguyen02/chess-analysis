@@ -31,3 +31,14 @@ export type DifficultyType =
   | 'Very Hard';
 
 export type SolveStatusType = 'solved' | 'failed';
+
+export type PaginatedList<T> = {
+  items: T[];
+  total?: number;
+  hasNext?: boolean;
+  hasPrev?: boolean;
+  currentPage?: number;
+  nextPage?: number;
+  prevPage?: number;
+  lastPage: number;
+};

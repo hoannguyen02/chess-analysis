@@ -28,14 +28,16 @@ export const withThemes =
     if (!themes) {
       try {
         const { data } = await axiosInstance.get(
-          `${apiDomain}/v1/puzzle-themes`
+          `${apiDomain}/v1/puzzle-themes/public/all`
         );
         themes = data.items;
 
         // Store themes in cookies
         nookies.set(ctx, 'themes', JSON.stringify(themes), {
           httpOnly: false, // Accessible by JavaScript
-          maxAge: 60 * 60 * 24, // 24 hour
+          maxAge: 60 * 1 * 1, // 1 minute
+          // maxAge: 60 * 60 * 1, // 1 hour
+          // maxAge: 60 * 60 * 24, // 24 hour
           path: '/', // Available for all routes
         });
       } catch (error) {

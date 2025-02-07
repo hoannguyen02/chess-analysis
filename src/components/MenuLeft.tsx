@@ -79,6 +79,14 @@ export const MenuLeft = () => {
                 {t('navigation.puzzles')}
               </Link>
             </li>
+            <li className="mb-2">
+              <Link
+                href="/settings/puzzle-themes"
+                className="mb-6 hover:text-[var(--p-highlight)]"
+              >
+                {t('navigation.puzzle-themes')}
+              </Link>
+            </li>
             {session?.role === 'Admin' && (
               <li className="mb-2">
                 <Link

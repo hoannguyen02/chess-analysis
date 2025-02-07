@@ -58,6 +58,7 @@ export const AppProvider: React.FC<{
         _id: theme._id,
         code: theme.code,
         title: theme.title,
+        priority: theme.priority,
       })) || []
     );
   }, [locale, themes]);

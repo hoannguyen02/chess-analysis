@@ -1,17 +1,14 @@
 import { PrimaryButton } from '@/components/PrimaryButton';
 import { TransitionContainer } from '@/components/TransitionContainer';
-import { RatingOptions } from '@/constants';
 import { useAppContext } from '@/contexts/AppContext';
 import { useToast } from '@/contexts/ToastContext';
-import { DifficultyType } from '@/types';
 import axiosInstance from '@/utils/axiosInstance';
 import { fetcher } from '@/utils/fetcher';
 import { Checkbox } from 'flowbite-react';
 import { useTranslations } from 'next-intl';
 import { useRouter } from 'next/router';
 import { useMemo, useState } from 'react';
-import { VscClose } from 'react-icons/vsc';
-import Select from 'react-select';
+import { VscArrowUp, VscClose } from 'react-icons/vsc';
 import useSWR from 'swr';
 
 type ThemeProgress = {
@@ -24,12 +21,12 @@ type ThemeProgress = {
 
 export const PracticePuzzlesScreen = () => {
   const [searchTerm, setSearchTerm] = useState('');
-  const [difficulty, setDifficulty] = useState<DifficultyType | ''>('');
   const [isLoadingNextPuzzle, setSolveIsLoadingNextPuzzle] = useState(false);
   const t = useTranslations();
   const { session, getFilteredThemes, apiDomain } = useAppContext();
   const [selectedThemes, setSelectedThemes] = useState<string[]>([]);
   const [includeSolved, setIncludeSolved] = useState(false);
+  const [sortAsc, setSortAsc] = useState(true);
   const { addToast } = useToast();
   const router = useRouter();
 
@@ -82,7 +79,6 @@ export const PracticePuzzlesScreen = () => {
     try {
       setSolveIsLoadingNextPuzzle(true);
       const payload = {
-        difficulty,
         themes: selectedThemes,
         includeSolved,
         excludedThemeIds,
@@ -118,6 +114,15 @@ export const PracticePuzzlesScreen = () => {
     );
   }, [searchTerm, themeOptions]);
 
+  const sortedThemes = useMemo(() => {
+    return filteredThemes.sort((a, b) => {
+      const priorityA = a?.priority ?? 0;
+      const priorityB = b?.priority ?? 0;
+
+      return sortAsc ? priorityA - priorityB : priorityB - priorityA;
+    });
+  }, [sortAsc, filteredThemes]);
+
   return (
     <TransitionContainer
       isLoading={isLoading}
@@ -127,20 +132,6 @@ export const PracticePuzzlesScreen = () => {
         <h2 className="text-xl font-bold text-gray-800 mb-4">
           {t('common.title.practice-puzzles')}
         </h2>
-
-        {/* Rating Filter */}
-        <div className="flex flex-col mb-4">
-          {t('common.title.rating')}
-          <Select
-            options={RatingOptions}
-            value={RatingOptions.find((option) => option.value === difficulty)}
-            onChange={(selectedOption) =>
-              setDifficulty(selectedOption?.value as DifficultyType)
-            }
-            placeholder={t('common.title.select-rating')}
-            isClearable
-          />
-        </div>
 
         <div className="flex justify-between">
           {/* Select All / Unselect All Button */}
@@ -164,20 +155,31 @@ export const PracticePuzzlesScreen = () => {
         </div>
 
         {/* Search Input with Clear Icon */}
-        <div className="relative mb-3">
-          <input
-            type="text"
-            placeholder={t('common.title.search-theme')}
-            value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
-            className="p-2 pr-10 border border-gray-300 rounded-lg w-full"
-          />
-          {searchTerm && (
-            <VscClose
-              className="w-5 h-5 absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500 cursor-pointer hover:text-gray-700"
-              onClick={() => setSearchTerm('')}
+        <div className="flex items-center mb-3">
+          <div className="relative w-[80%]">
+            <input
+              type="text"
+              placeholder={t('common.title.search-theme')}
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+              className="p-2 pr-10 border border-gray-300 rounded-lg w-full"
             />
-          )}
+            {searchTerm && (
+              <VscClose
+                className="w-5 h-5 absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500 cursor-pointer hover:text-gray-700"
+                onClick={() => setSearchTerm('')}
+              />
+            )}
+          </div>
+          <div className="flex ml-4">
+            <Checkbox
+              checked={sortAsc}
+              onChange={() => {
+                setSortAsc((prev) => !prev);
+              }}
+            />
+            <VscArrowUp className="ml-2" />
+          </div>
         </div>
 
         {/* Scrollable Theme List */}
@@ -191,7 +193,7 @@ export const PracticePuzzlesScreen = () => {
           </div>
 
           {/* Theme Rows */}
-          {filteredThemes.map((option) => (
+          {sortedThemes.map((option) => (
             <div
               key={option.value}
               className="p-2 rounded-lg transition-all hover:bg-blue-100"
