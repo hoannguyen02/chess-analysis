@@ -465,6 +465,7 @@ export const PuzzleFormScreen = ({ puzzle, onSaveSuccess }: Props) => {
                 control={control}
                 register={register}
                 index={index}
+                watch={watch}
               />
             </div>
           ))}
