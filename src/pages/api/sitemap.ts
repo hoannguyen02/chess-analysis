@@ -28,6 +28,22 @@ export default async function handler(
       <priority>0.8</priority>
     </url>`,
   ]);
+  const menuUrls = ['openings', 'endgames', 'tactics', 'traps'].flatMap(
+    (menu: string) => [
+      `<url>
+      <loc>${siteUrl}/${menu}</loc>
+      <lastmod>${new Date().toISOString()}</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+    </url>`,
+      `<url>
+      <loc>${siteUrl}/vi/${menu}</loc>
+      <lastmod>${new Date().toISOString()}</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+    </url>`,
+    ]
+  );
 
   // Create the sitemap XML
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
@@ -38,6 +54,7 @@ export default async function handler(
       <changefreq>daily</changefreq>
       <priority>1.0</priority>
     </url>
+    ${menuUrls.join('\n')}
     ${courseUrls.join('\n')}
   </urlset>`;
 
