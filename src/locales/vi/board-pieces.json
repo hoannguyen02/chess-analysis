@@ -1,0 +1,11 @@
+{
+  "title": "Bàn cờ và quân cờ",
+  "board-description": "Bàn cờ vua có 64 ô (8 hàng với 8 ô mỗi hàng), và mỗi người chơi có một ô trắng ở góc phía dưới bên phải bàn cờ.",
+  "player-description": "Mỗi người chơi có 16 quân cờ. Hậu bắt đầu ở ô cùng màu với nó, và vua được đặt bên cạnh hậu.",
+  "king": "Vua",
+  "queen": "Hậu",
+  "rook": "Xe",
+  "bishop": "Tượng",
+  "knight": "Mã",
+  "pawn": "Tốt"
+}

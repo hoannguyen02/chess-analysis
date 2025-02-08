@@ -3,17 +3,19 @@ import { Chess } from 'chess.js';
 import { Button, Clipboard, TextInput } from 'flowbite-react';
 import { useMemo, useState } from 'react';
 import {
+  Chessboard,
   ChessboardDnDProvider,
   SparePiece,
-  Chessboard,
 } from 'react-chessboard';
 import { Piece, Square } from 'react-chessboard/dist/chessboard/types';
 
 type Props = {
   fen?: string;
+  isGuide?: boolean;
 };
 const DragDropSetupChessboard = ({
   fen = '8/8/8/8/8/8/8/8 w - - 0 1',
+  isGuide = false,
 }: Props) => {
   const { customPieces, bgDark, bgLight } = useCustomBoard();
   const game = useMemo(() => new Chess(fen), [fen]); // empty board
@@ -181,50 +183,59 @@ const DragDropSetupChessboard = ({
               Flip board
             </Button>
           </div>
-          <div className="flex flex-col items-start mt-4">
-            <label className="mb-2 font-semibold text-gray-700">
-              Select the next player to move:
-            </label>
-            <div className="flex items-center">
-              <Button
-                className={`flex items-center px-4 py-2 rounded-lg transition-all duration-200 ${
-                  game.turn() === 'w'
-                    ? 'bg-blue-500 text-white shadow-lg'
-                    : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
-                }`}
-                onClick={() => {
-                  setTurn('w');
-                }}
-              >
-                White
-              </Button>
-              <Button
-                className={`flex items-center px-4 py-2 ml-2 rounded-lg transition-all duration-200 ${
-                  game.turn() === 'b'
-                    ? 'bg-blue-500 text-white shadow-lg'
-                    : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
-                }`}
-                onClick={() => {
-                  setTurn('b');
-                }}
-              >
-                Black
-              </Button>
-            </div>
-            <p className="text-sm text-gray-500 mt-2">
-              Tip: Click on "White" or "Black" to set the next player to move.
-            </p>
-          </div>
+          {!isGuide && (
+            <>
+              <div className="flex flex-col items-start mt-4">
+                <label className="mb-2 font-semibold text-gray-700">
+                  Select the next player to move:
+                </label>
+                <div className="flex items-center">
+                  <Button
+                    className={`flex items-center px-4 py-2 rounded-lg transition-all duration-200 ${
+                      game.turn() === 'w'
+                        ? 'bg-blue-500 text-white shadow-lg'
+                        : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+                    }`}
+                    onClick={() => {
+                      setTurn('w');
+                    }}
+                  >
+                    White
+                  </Button>
+                  <Button
+                    className={`flex items-center px-4 py-2 ml-2 rounded-lg transition-all duration-200 ${
+                      game.turn() === 'b'
+                        ? 'bg-blue-500 text-white shadow-lg'
+                        : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+                    }`}
+                    onClick={() => {
+                      setTurn('b');
+                    }}
+                  >
+                    Black
+                  </Button>
+                </div>
+                <p className="text-sm text-gray-500 mt-2">
+                  Tip: Click on "White" or "Black" to set the next player to
+                  move.
+                </p>
+              </div>
 
-          <div className="flex items-center mt-4">
-            <TextInput
-              className="w-[400px] rounded"
-              value={fenPosition}
-              onChange={handleFenInputChange}
-              placeholder="Paste FEN position to start editing"
-            />
-            <Clipboard className="ml-4" valueToCopy={game.fen()} label="Copy" />
-          </div>
+              <div className="flex items-center mt-4">
+                <TextInput
+                  className="w-[400px] rounded"
+                  value={fenPosition}
+                  onChange={handleFenInputChange}
+                  placeholder="Paste FEN position to start editing"
+                />
+                <Clipboard
+                  className="ml-4"
+                  valueToCopy={game.fen()}
+                  label="Copy"
+                />
+              </div>
+            </>
+          )}
         </div>
       </div>
     </ChessboardDnDProvider>

@@ -1,0 +1,11 @@
+{
+  "title": "Chess Board and Pieces",
+  "board-description": "A chessboard contains 64 squares (8 rows of 8 squares), and each player has a white square in the right-hand corner.",
+  "player-description": "Each player has 16 pieces. The queen starts on a square of its own color, and the king is placed next to the queen.",
+  "king": "King",
+  "queen": "Queen",
+  "rook": "Rook",
+  "bishop": "Bishop",
+  "knight": "Knight",
+  "pawn": "Pawn"
+}
