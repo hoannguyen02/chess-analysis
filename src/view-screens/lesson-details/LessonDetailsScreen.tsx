@@ -344,7 +344,7 @@ export const LessonDetailsScreen = ({ data }: Props) => {
 
                 {/* Accordion Content */}
                 <div
-                  className={`overflow-hidden transition-[max-height] duration-500 ease-in-out ${
+                  className={`overflow-scroll transition-[max-height] duration-500 ease-in-out ${
                     expandedContentIndex === idx ? 'max-h-screen' : 'max-h-0'
                   }`}
                 >
