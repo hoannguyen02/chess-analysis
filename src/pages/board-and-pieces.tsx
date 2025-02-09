@@ -102,7 +102,7 @@ const BoardAndPiecesPage = () => {
               );
             }}
           >
-            {t('board-pieces.learn-moves')}
+            {t('common.title.learn-moves')}
           </Button>
         </div>
         <div className="flex justify-center w-full">
@@ -115,9 +115,6 @@ const BoardAndPiecesPage = () => {
           />
         </div>
       </div>
-
-      {/* Pieces like book */}
-      {/* Capture board with start positions */}
     </Layout>
   );
 };

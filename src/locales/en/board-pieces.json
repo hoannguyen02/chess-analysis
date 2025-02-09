@@ -7,6 +7,5 @@
   "rook": "Rook",
   "bishop": "Bishop",
   "knight": "Knight",
-  "pawn": "Pawn",
-  "learn-moves": "Learn basic moves & captures"
+  "pawn": "Pawn"
 }

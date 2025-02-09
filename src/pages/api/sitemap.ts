@@ -38,6 +38,7 @@ export default async function handler(
     'privacy-policy',
     'contact',
     'board-and-pieces',
+    'chess-notation',
   ].flatMap((menu: string) => [
     `<url>
       <loc>${siteUrl}/${menu}</loc>

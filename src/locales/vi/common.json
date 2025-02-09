@@ -17,7 +17,8 @@
     "contact": "Liên Hệ Chúng Tôi",
     "about": "Về Chúng Tôi",
     "change-password": "Đổi mật khẩu",
-    "board-pieces": "Bàn cờ và quân cờ"
+    "board-pieces": "Bàn cờ và quân cờ",
+    "chess-notation": "Cách ghi biên bản"
   },
   "title": {
     "manage": "Quản lý",
@@ -53,7 +54,8 @@
     "start-practice": "Bắt đầu",
     "no-puzzles": "Không tìm thấy dữ liệu, vui lòng thử lại!",
     "select-rating": "Chọn trình độ (Elo)...",
-    "search-theme": "Tìm nhanh chiến thuật..."
+    "search-theme": "Tìm nhanh chiến thuật...",
+    "learn-moves": "Tìm hiểu thêm"
   },
   "button": {
     "back": "Quay lại",

@@ -81,7 +81,7 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({
     moveSound.current = new Audio('/sounds/move.mp3');
     captureSound.current = new Audio('/sounds/capture.mp3');
     checkSound.current = new Audio('/sounds/check.mp3');
-    failedSound.current = new Audio('/sounds/failed.mp3');
+    failedSound.current = new Audio('/sounds/decline.mp3');
   }, []);
 
   const t = useTranslations();
@@ -288,7 +288,6 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({
     });
 
     if (!userMove) {
-      if (failedSound.current) failedSound.current.play(); // Play failed move sound
       return false;
     }
 
@@ -307,24 +306,20 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({
       },
     ]);
 
-    // 🔊 **Play sound based on priority**
-    let soundPlayed = false;
-
     if (game.in_check()) {
       if (checkSound.current) {
         checkSound.current.play();
-        soundPlayed = true;
       }
     } else if (pieceOnTarget) {
       if (captureSound.current) {
         captureSound.current.play();
-        soundPlayed = true;
       }
-    }
-
-    // Play move sound **only if no other sound was played**
-    if (!soundPlayed && moveSound.current) {
-      moveSound.current.play();
+    } else {
+      if (validMove) {
+        moveSound.current?.play();
+      } else {
+        failedSound.current?.play();
+      }
     }
 
     setAttemptHistory((prev) => {
@@ -454,6 +449,7 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({
   };
 
   function onPromotionPieceSelect(playerPiece: string): boolean {
+    console.log('onPromotionPieceSelect', playerPiece);
     const promotionType = playerPiece?.charAt(1);
 
     const promoteToSquare = moveToRef.current;

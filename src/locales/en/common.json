@@ -17,7 +17,8 @@
     "contact": "Contact",
     "about": "About Us",
     "change-password": "Change Password",
-    "board-pieces": "Board and Pieces"
+    "board-pieces": "Board and Pieces",
+    "chess-notation": "Chess Notation"
   },
   "title": {
     "manage": "Manage",
@@ -53,7 +54,8 @@
     "start-practice": "Start",
     "no-puzzles": "No puzzles found",
     "select-rating": "Select rating...",
-    "search-theme": "Search theme..."
+    "search-theme": "Search theme...",
+    "learn-moves": "Tìm hiểu thêm"
   },
   "button": {
     "back": "Back",
