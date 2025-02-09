@@ -37,6 +37,7 @@ export default async function handler(
     'terms-of-service',
     'privacy-policy',
     'contact',
+    'board-and-pieces',
   ].flatMap((menu: string) => [
     `<url>
       <loc>${siteUrl}/${menu}</loc>
