@@ -11,6 +11,7 @@ import { getActivePlayerFromFEN } from '@/utils/get-player-name-from-fen';
 import { Chess } from 'chess.js';
 import { Button } from 'flowbite-react';
 import { useTranslations } from 'next-intl';
+import Link from 'next/link';
 import { useRouter } from 'next/router';
 import React, {
   ReactNode,
@@ -760,7 +761,14 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({
                 </p>
               </div>
               <div>
-                {t('solve-puzzle.title.moves')}: <hr />
+                <Link
+                  href="/chess-notation"
+                  target="_blank"
+                  className="hover:text-[var(--s-bg)] underline"
+                >
+                  {t('solve-puzzle.title.moves')}:
+                </Link>
+                <hr />
                 <div className="mb-2 mt-4 grid grid-cols-2 gap-4">
                   <div>
                     {preMove && (

@@ -1,5 +1,5 @@
 ---
-title: "Ký Hiệu Cờ Vua"
+title: "Ký hiệu và cách viết biên bản"
 description: "Bàn cờ vua có kích thước 8x8, với cột dọc ký hiệu từ a-h và hàng ngang từ 1-8. Các quân cờ được viết bằng ký hiệu: Vua (K), Hậu (Q), Xe (R), Tượng (B), và Mã (N) — vì K đã dành cho vua. Riêng quân tốt không có ký hiệu."
 ---
 
