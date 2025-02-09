@@ -1,6 +1,7 @@
 // utils/withThemes.ts
 import axiosInstance from '@/utils/axiosInstance';
 import { getSession } from '@/utils/getSession';
+import { safelyParseJSON } from '@/utils/safelyParseJSON';
 import isEmpty from 'lodash/isEmpty';
 import {
   GetServerSideProps,
@@ -20,8 +21,8 @@ export const withThemes =
     // Get themes from cookies
     const cookies = nookies.get(ctx);
 
-    let themes = cookies.themes ? JSON.parse(cookies.themes) : null;
-    let tags = cookies.tags ? JSON.parse(cookies.tags) : null;
+    let themes = cookies.themes ? safelyParseJSON(cookies.themes) : null;
+    let tags = cookies.tags ? safelyParseJSON(cookies.tags) : null;
     const apiDomain = process.env.NEXT_PUBLIC_LIMA_BE_DOMAIN;
 
     // If themes are not available, fetch them
@@ -30,7 +31,7 @@ export const withThemes =
         const { data } = await axiosInstance.get(
           `${apiDomain}/v1/puzzle-themes/public/all`
         );
-        themes = data.items;
+        themes = data; // API only return array of themes, not return object { items: []}
 
         // Store themes in cookies
         nookies.set(ctx, 'themes', JSON.stringify(themes), {
@@ -77,7 +78,7 @@ export const withThemes =
     }
 
     const result = await handler(ctx, {
-      themes,
+      themes: themes || [],
       apiDomain,
       tags,
       isMobile,
@@ -89,7 +90,7 @@ export const withThemes =
         ...result,
         props: {
           ...result.props,
-          themes,
+          themes: themes || [],
           tags,
           apiDomain,
           isMobile,
