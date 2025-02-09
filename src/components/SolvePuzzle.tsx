@@ -793,7 +793,7 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({
                       </p>
                     ))}
                   </div>
-                  <div className="mt-4">
+                  <div>
                     {followUpMoves.map((s, index) => (
                       <p
                         key={`second-${index}-${s.move}`}
