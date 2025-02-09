@@ -196,11 +196,6 @@ export const CourseFormScreen = ({ course }: Props) => {
     }
   };
 
-  const handlePreview = () => {
-    const encodedData = encodeURIComponent(JSON.stringify(getValues()));
-    window.open(`/courses/preview?data=${encodedData}`, '_blank');
-  };
-
   const router = useRouter();
 
   const reOrderLessons = (fromIndex: number, toIndex: number) => {
@@ -390,14 +385,6 @@ export const CourseFormScreen = ({ course }: Props) => {
               }}
             >
               Back to the list
-            </Button>
-            <Button
-              type="button"
-              onClick={handlePreview}
-              outline
-              className="mr-8"
-            >
-              Preview
             </Button>
             <Button disabled={isSubmitting} color="primary" type="submit">
               Submit

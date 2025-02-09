@@ -727,18 +727,6 @@ export const LessonFormScreen = ({ lesson }: Props) => {
             >
               Back to the list
             </Button>
-            <Button
-              type="button"
-              onClick={() => {
-                // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-                // @ts-ignore
-                previewPuzzle(getValues() as Puzzle);
-              }}
-              outline
-              className="mr-8"
-            >
-              Preview
-            </Button>
             <Button disabled={isSubmitting} color="primary" type="submit">
               Submit
             </Button>
