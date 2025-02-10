@@ -66,7 +66,7 @@ export const AddToLessonsModal: React.FC<Props> = ({
     [apiDomain, queryString]
   );
 
-  const { data, error, isLoading } = useSWR<{
+  const { data, isLoading } = useSWR<{
     items: Lesson[];
     total: number;
     hasNext: boolean;

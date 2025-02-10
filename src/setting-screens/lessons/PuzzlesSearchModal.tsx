@@ -65,7 +65,7 @@ export const PuzzlesSearchModal: React.FC<PuzzlesSearchModalProps> = ({
     [apiDomain, queryString]
   );
 
-  const { data, error, isLoading } = useSWR<{
+  const { data, isLoading } = useSWR<{
     items: Puzzle[];
     total: number;
     hasNext: boolean;

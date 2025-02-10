@@ -26,7 +26,6 @@ export const CourseDetailsScreen = ({ data, lessonProgresses }: Props) => {
     title,
     difficulty,
     description,
-    objectives,
     lessons,
     _id,
     version,

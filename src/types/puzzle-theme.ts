@@ -3,7 +3,7 @@ export type PuzzleTheme = {
     en: string;
     vi: string;
   };
-  description: {
+  description?: {
     en: string;
     vi: string;
   };

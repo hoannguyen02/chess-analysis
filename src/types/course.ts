@@ -1,6 +1,6 @@
-import { ObjectiveType } from '.';
+import { DifficultyType, ObjectiveType } from '.';
 import { Lesson } from './lesson';
-import { DifficultyType, StatusType } from './status';
+import { StatusType } from './status';
 
 export type Course = {
   title: {

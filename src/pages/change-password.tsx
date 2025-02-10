@@ -27,7 +27,7 @@ const ChangePasswordPage = () => {
   const [showNewPassword, setShowNewPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const router = useRouter();
-  const { apiDomain, locale } = useAppContext();
+  const { apiDomain } = useAppContext();
   const t = useTranslations();
 
   const {

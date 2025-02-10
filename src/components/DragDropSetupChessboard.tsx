@@ -25,7 +25,7 @@ const DragDropSetupChessboard = ({
   const [boardWidth, setBoardWidth] = useState(360);
   const [fenPosition, setFenPosition] = useState(game.fen());
 
-  const handleSparePieceDrop = (piece, targetSquare) => {
+  const handleSparePieceDrop = (piece: any, targetSquare: any) => {
     const color = piece[0];
     const type = piece[1].toLowerCase();
 
@@ -42,7 +42,11 @@ const DragDropSetupChessboard = ({
     return success;
   };
 
-  const handlePieceDrop = (sourceSquare, targetSquare, piece) => {
+  const handlePieceDrop = (
+    sourceSquare: any,
+    targetSquare: any,
+    piece: any
+  ) => {
     const color = piece[0];
     const type = piece[1].toLowerCase();
 
@@ -61,7 +65,7 @@ const DragDropSetupChessboard = ({
     setFenPosition(game.fen());
   };
 
-  const handleFenInputChange = (e) => {
+  const handleFenInputChange = (e: any) => {
     const fen = e.target.value;
     const { valid } = game.validate_fen(fen);
 
@@ -216,8 +220,7 @@ const DragDropSetupChessboard = ({
                   </Button>
                 </div>
                 <p className="text-sm text-gray-500 mt-2">
-                  Tip: Click on "White" or "Black" to set the next player to
-                  move.
+                  Tip: Click on White or Black to set the next player to move.
                 </p>
               </div>
 

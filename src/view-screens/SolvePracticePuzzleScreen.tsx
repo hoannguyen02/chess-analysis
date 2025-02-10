@@ -13,7 +13,7 @@ import { VscArrowLeft } from 'react-icons/vsc';
 import useSWR from 'swr';
 
 export const SolvePracticePuzzleScreen = () => {
-  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [, setIsSubmitting] = useState(false);
   const [renderKey, setRenderKey] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
   const [isManualLoading, setIsManualLoading] = useState(false);

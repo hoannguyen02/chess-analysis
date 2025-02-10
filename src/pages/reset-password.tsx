@@ -21,7 +21,7 @@ type ResetPasswordFormValues = {
 
 const ResetPasswordPage = () => {
   const router = useRouter();
-  const { apiDomain, locale } = useAppContext();
+  const { apiDomain } = useAppContext();
   const { addToast } = useToast();
   const t = useTranslations();
   const [showPassword, setShowPassword] = useState(false);

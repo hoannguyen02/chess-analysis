@@ -15,7 +15,7 @@ export const getSession = async (
     permissions: Record<string, boolean>;
   }>(rq, res, {
     // Make sure it same as server side configuration
-    cookieName: 'lima-chess',
+    cookieName: process.env.COOKIE_NAME!,
     password: process.env.SESSION_SECRET!,
     cookieOptions: {
       secure: process.env.NODE_ENV === 'production', // Use secure cookies in production

@@ -34,7 +34,7 @@ export const RegisterDialog = ({ onClose }: Props) => {
               size="lg"
               className="mt-4 font-semibold flex"
               onClick={() => {
-                window.dataLayer?.push({
+                window?.dataLayer?.push({
                   event: 'register-banner-button',
                 });
                 router.push('/register-guide');

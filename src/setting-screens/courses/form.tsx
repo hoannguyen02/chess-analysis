@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
 import { DraggableItem } from '@/components/DraggableItem';
 import { TitlePage } from '@/components/TitlePage';
 import { RatingOptions, StatusOptions } from '@/constants';
@@ -51,7 +52,9 @@ const ObjectivesSection = () => {
   const addObjective = () => {
     const currentEn = watch('objectives.en') || [];
     const currentVi = watch('objectives.vi') || [];
+    // @ts-ignore
     setValue('objectives.en', [...currentEn, ''], { shouldDirty: true });
+    // @ts-ignore
     setValue('objectives.vi', [...currentVi, ''], { shouldDirty: true });
   };
 
@@ -62,47 +65,51 @@ const ObjectivesSection = () => {
     const updatedVi = [...currentVi];
     updatedEn.splice(index, 1);
     updatedVi.splice(index, 1);
+    // @ts-ignore
     setValue('objectives.en', updatedEn, { shouldDirty: true });
+    // @ts-ignore
     setValue('objectives.vi', updatedVi, { shouldDirty: true });
   };
 
   return (
     <div className="mb-4">
       <Label value="Objectives" className="text-lg font-semibold" />
-      {(watch('objectives.en') || []).map((_, index) => (
-        <Card
-          key={index}
-          className="w-full p-4 shadow-sm border mb-3 hover:shadow-md transition duration-200"
-        >
-          <div className="flex items-center gap-4 w-full">
-            <div className="flex-grow grid grid-cols-2 gap-4">
-              <Textarea
-                rows={2}
-                placeholder="English Objective"
-                {...register(`objectives.en.${index}`)}
-                defaultValue={watch(`objectives.en.${index}`)}
-                className="w-full"
-              />
-              <Textarea
-                rows={2}
-                placeholder="Vietnamese Objective"
-                {...register(`objectives.vi.${index}`)}
-                defaultValue={watch(`objectives.vi.${index}`)}
-                className="w-full"
-              />
+      {((watch('objectives.en') as any[]) || []).map(
+        (_: any, index: number) => (
+          <Card
+            key={index}
+            className="w-full p-4 shadow-sm border mb-3 hover:shadow-md transition duration-200"
+          >
+            <div className="flex items-center gap-4 w-full">
+              <div className="flex-grow grid grid-cols-2 gap-4">
+                <Textarea
+                  rows={2}
+                  placeholder="English Objective"
+                  {...register(`objectives.en.${index}`)}
+                  defaultValue={watch(`objectives.en.${index}`)}
+                  className="w-full"
+                />
+                <Textarea
+                  rows={2}
+                  placeholder="Vietnamese Objective"
+                  {...register(`objectives.vi.${index}`)}
+                  defaultValue={watch(`objectives.vi.${index}`)}
+                  className="w-full"
+                />
+              </div>
+              <Button
+                type="button"
+                color="failure"
+                size="xs"
+                onClick={() => removeObjective(index)}
+                className="p-2 hover:bg-red-600 hover:text-white transition duration-150"
+              >
+                <VscTrash className="h-5 w-5" />
+              </Button>
             </div>
-            <Button
-              type="button"
-              color="failure"
-              size="xs"
-              onClick={() => removeObjective(index)}
-              className="p-2 hover:bg-red-600 hover:text-white transition duration-150"
-            >
-              <VscTrash className="h-5 w-5" />
-            </Button>
-          </div>
-        </Card>
-      ))}
+          </Card>
+        )
+      )}
       <Button
         type="button"
         outline
@@ -146,11 +153,9 @@ export const CourseFormScreen = ({ course }: Props) => {
     register, // Register inputs
     control,
     handleSubmit, // Handle form submission
-    formState: { errors, isDirty }, // Access form errors
+    formState: { isDirty }, // Access form errors
     watch,
     setValue,
-    getValues,
-    reset,
   } = methods;
 
   // Warn on browser close/refresh
@@ -203,6 +208,7 @@ export const CourseFormScreen = ({ course }: Props) => {
     const updatedItems = [...lessons];
     const [movedItem] = updatedItems.splice(fromIndex, 1);
     updatedItems.splice(toIndex, 0, movedItem);
+    // @ts-ignore
     setValue('lessons', updatedItems, {
       shouldDirty: true,
     });
@@ -241,11 +247,12 @@ export const CourseFormScreen = ({ course }: Props) => {
                     id="tags"
                     isMulti
                     options={defaultTags}
-                    value={defaultTags.filter((option) =>
-                      field.value?.some(
+                    value={defaultTags.filter((option) => {
+                      return field.value?.some(
+                        // @ts-ignore
                         (selected) => selected._id === option._id
-                      )
-                    )}
+                      );
+                    })}
                     onChange={(selectedOptions) =>
                       field.onChange(selectedOptions)
                     }
@@ -400,7 +407,7 @@ export const CourseFormScreen = ({ course }: Props) => {
             onAddLessons={(lessons: Lesson[]) => {
               const currentLessons = watch('lessons');
               const updatedLessons = [...currentLessons, ...lessons];
-
+              // @ts-ignore
               setValue('lessons', updatedLessons, { shouldDirty: true });
             }}
           />

@@ -21,7 +21,7 @@ type ThemeProgress = {
 
 export const PracticePuzzlesScreen = () => {
   const [searchTerm, setSearchTerm] = useState('');
-  const [isLoadingNextPuzzle, setSolveIsLoadingNextPuzzle] = useState(false);
+  const [, setSolveIsLoadingNextPuzzle] = useState(false);
   const t = useTranslations();
   const { session, getFilteredThemes, apiDomain } = useAppContext();
   const [selectedThemes, setSelectedThemes] = useState<string[]>([]);
@@ -37,11 +37,7 @@ export const PracticePuzzlesScreen = () => {
     [apiDomain, session?.id]
   );
 
-  const {
-    data: themeProgresses,
-    isLoading,
-    error,
-  } = useSWR(queryKey, fetcher, {
+  const { data: themeProgresses, isLoading } = useSWR(queryKey, fetcher, {
     dedupingInterval: 300,
   });
 

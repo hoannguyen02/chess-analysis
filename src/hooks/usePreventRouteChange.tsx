@@ -5,7 +5,7 @@ const usePreventRouteChange = (message: string, shouldWarn: boolean) => {
   const router = useRouter();
 
   useEffect(() => {
-    const handleRouteChange = (url: string) => {
+    const handleRouteChange = () => {
       if (shouldWarn && !window.confirm(message)) {
         throw 'Route change aborted by user'; // Cancel the route change
       }

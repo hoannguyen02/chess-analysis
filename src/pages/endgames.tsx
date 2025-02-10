@@ -24,7 +24,7 @@ const EndgamesPage = (props: Props) => {
 };
 
 export const getServerSideProps = withThemes(
-  async (ctx: GetServerSidePropsContext, { apiDomain }) => {
+  async (ctx: GetServerSidePropsContext) => {
     const { locale, query } = ctx;
 
     try {

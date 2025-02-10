@@ -20,7 +20,6 @@ import { fetcher } from '../../utils/fetcher';
 
 export const CourseListScreen = () => {
   const { apiDomain, locale, tags: tagOptions } = useAppContext();
-  const [currentPage, setCurrentPage] = useState(1);
   const [status, setStatus] = useState<StatusType | ''>('');
   const [title, setTitle] = useState<string | ''>('');
   const [tags, setTags] = useState<string[]>([]);
@@ -34,12 +33,11 @@ export const CourseListScreen = () => {
       status,
       search: title,
       locale,
-      page: currentPage,
       tags: tags.join(','),
     };
 
     return filteredQuery(queryObject);
-  }, [difficulty, status, title, locale, currentPage, tags]);
+  }, [difficulty, status, title, locale, tags]);
 
   const queryKey = useMemo(
     () => `${apiDomain}/v1/courses?${queryString}`,
@@ -64,8 +62,6 @@ export const CourseListScreen = () => {
       setCourses(data.items);
     }
   }, [data?.items]);
-
-  const onPageChange = (page: number) => setCurrentPage(page);
 
   const reOrderCourses = (fromIndex: number, toIndex: number) => {
     const updatedItems = [...courses];

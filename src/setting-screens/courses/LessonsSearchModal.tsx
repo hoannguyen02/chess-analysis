@@ -62,7 +62,7 @@ const LessonSearchModal: React.FC<LessonSearchModalProps> = ({
     [apiDomain, queryString]
   );
 
-  const { data, error, isLoading } = useSWR<{
+  const { data, isLoading } = useSWR<{
     items: Lesson[];
     total: number;
     hasNext: boolean;

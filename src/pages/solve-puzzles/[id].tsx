@@ -24,7 +24,7 @@ import { useCallback, useEffect, useMemo, useState } from 'react';
 import useSWR from 'swr';
 
 const SolvePuzzlePage = () => {
-  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [, setIsSubmitting] = useState(false);
   const { open, onOpenDialog, onCloseDialog } = useDialog();
   const [isVisible, setIsVisible] = useState(false);
   const [isManualLoading, setIsManualLoading] = useState(false);

@@ -50,7 +50,7 @@ export const UserListScreen = ({ roles }: Props) => {
     [apiDomain, queryString]
   );
 
-  const { data, error, isLoading, mutate } = useSWR<{
+  const { data, error, isLoading } = useSWR<{
     items: User[];
     total: number;
     hasNext: boolean;

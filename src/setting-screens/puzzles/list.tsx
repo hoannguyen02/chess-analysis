@@ -24,7 +24,7 @@ export const PuzzleListScreen = () => {
   const [difficulty, setDifficulty] = useState<DifficultyType | ''>('');
   const [isPublic, setIsPublic] = useState<boolean | undefined>();
   const [title, setTitle] = useState<string | ''>('');
-  const [loading, setLoading] = useState(false);
+  const [, setLoading] = useState(false);
 
   const queryString = useMemo(() => {
     // Define your query parameters as an object
@@ -62,6 +62,7 @@ export const PuzzleListScreen = () => {
   const onPageChange = (page: number) => setCurrentPage(page);
 
   const duplicatePuzzle = async (puzzle: Puzzle) => {
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const { title, _id, ...rest } = puzzle;
     try {
       setLoading(true);

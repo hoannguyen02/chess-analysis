@@ -227,12 +227,7 @@ export const LessonFormScreen = ({ lesson }: Props) => {
   const { addToast } = useToast();
   const t = useTranslations();
 
-  const {
-    data: courses,
-    error,
-    isLoading,
-    mutate: refreshCourses,
-  } = useSWR<Course[]>(
+  const { data: courses, mutate: refreshCourses } = useSWR<Course[]>(
     lesson?._id ? `${apiDomain}/v1/lessons/${lesson?._id}/courses` : undefined,
     fetcher
   );
@@ -281,11 +276,9 @@ export const LessonFormScreen = ({ lesson }: Props) => {
     register, // Register inputs
     control,
     handleSubmit, // Handle form submission
-    formState: { errors, isDirty }, // Access form errors
+    formState: { isDirty }, // Access form errors
     watch,
     setValue,
-    getValues,
-    reset,
   } = methods;
 
   // Warn on browser close/refresh
@@ -294,10 +287,10 @@ export const LessonFormScreen = ({ lesson }: Props) => {
   // Warn on internal navigation
   usePreventRouteChange(ROUTE_CHANGE_MESSAGE, isDirty);
 
-  const { fields: puzzleFields, remove: removePuzzle } = useFieldArray({
-    control,
-    name: 'puzzles',
-  });
+  // const { fields: puzzleFields, remove: removePuzzle } = useFieldArray({
+  //   control,
+  //   name: 'puzzles',
+  // });
 
   const {
     fields: contentFields,
@@ -357,15 +350,15 @@ export const LessonFormScreen = ({ lesson }: Props) => {
     });
   };
 
-  const reOrderPuzzles = (fromIndex: number, toIndex: number) => {
-    const puzzles = watch('puzzles') || [];
-    const updatedItems = [...puzzles];
-    const [movedItem] = updatedItems.splice(fromIndex, 1);
-    updatedItems.splice(toIndex, 0, movedItem);
-    setValue('puzzles', updatedItems, {
-      shouldDirty: true,
-    });
-  };
+  // const reOrderPuzzles = (fromIndex: number, toIndex: number) => {
+  //   const puzzles = watch('puzzles') || [];
+  //   const updatedItems = [...puzzles];
+  //   const [movedItem] = updatedItems.splice(fromIndex, 1);
+  //   updatedItems.splice(toIndex, 0, movedItem);
+  //   setValue('puzzles', updatedItems, {
+  //     shouldDirty: true,
+  //   });
+  // };
 
   const removeContentPuzzle = (contentIndex: number, puzzleIndex: number) => {
     const contents = watch('contents') || [];

@@ -26,13 +26,8 @@ export const PuzzleThemeFormScreen = ({ puzzleTheme }: Props) => {
   const router = useRouter();
   const {
     register, // Register inputs
-    control,
     handleSubmit, // Handle form submission
-    formState: { errors, isDirty }, // Access form errors
-    watch,
-    setValue,
-    getValues,
-    reset,
+    formState: { isDirty }, // Access form errors
   } = useForm<PuzzleTheme>({
     defaultValues: puzzleTheme || {
       code: '',

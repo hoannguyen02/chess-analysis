@@ -22,7 +22,7 @@ export interface AppContextProps {
   session?: Session | null;
   getFilteredThemes(): {
     themeOptions: PuzzleTheme[] | [];
-    excludedThemeIds: PuzzleTheme[] | [];
+    excludedThemeIds: string[] | [];
   };
 }
 

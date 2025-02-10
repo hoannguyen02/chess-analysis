@@ -712,6 +712,8 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({
             }}
             boardWidth={isMobile ? boardRef.current?.clientWidth || 320 : 500}
             onSquareClick={onSquareClick}
+            // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+            // @ts-ignore
             onPromotionPieceSelect={onPromotionPieceSelect}
             customBoardStyle={{
               borderRadius: '4px',
@@ -747,6 +749,8 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({
             <div className="hidden lg:flex flex-col p-4">
               {t('common.title.theme')}:
               {puzzle.themes.map((theme) => {
+                // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+                // @ts-ignore
                 const puzzleId = typeof theme === 'string' ? theme : theme?._id;
                 return (
                   <p className="text-[14px] italic" key={puzzleId}>

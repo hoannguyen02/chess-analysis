@@ -24,7 +24,7 @@ const LoginPage = () => {
 
   const { addToast } = useToast();
   const router = useRouter();
-  const { apiDomain, locale } = useAppContext();
+  const { apiDomain } = useAppContext();
   const t = useTranslations();
   const [showPassword, setShowPassword] = useState(false);
   const {

@@ -49,12 +49,7 @@ export const PuzzleFormScreen = ({ puzzle, onSaveSuccess }: Props) => {
   const { addToast } = useToast();
   const [addToLessonsPopup, setAddToLessonsPopup] = useState(false);
 
-  const {
-    data: lessons,
-    error,
-    isLoading,
-    mutate: refreshLessons,
-  } = useSWR<Lesson[]>(
+  const { data: lessons, mutate: refreshLessons } = useSWR<Lesson[]>(
     puzzle?._id ? `${apiDomain}/v1/puzzles/${puzzle?._id}/lessons` : undefined,
     fetcher
   );
@@ -119,6 +114,8 @@ export const PuzzleFormScreen = ({ puzzle, onSaveSuccess }: Props) => {
     const { _id, preMove, themes, ...rest } = data;
     if (isValidFormValues()) {
       let payload: any = rest;
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+      // @ts-ignore
       const themeIds = themes?.map((theme: PuzzleTheme) => theme._id);
       if (!isEmpty(preMove?.move)) {
         payload = {
@@ -334,9 +331,11 @@ export const PuzzleFormScreen = ({ puzzle, onSaveSuccess }: Props) => {
                   isMulti
                   options={defaultThemes}
                   value={defaultThemes.filter((option) =>
-                    field.value?.some(
-                      (selected) => selected.code === option.code
-                    )
+                    field.value?.some((selected) => {
+                      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+                      // @ts-ignore
+                      return selected.code === option.code;
+                    })
                   )}
                   onChange={(selectedOptions) =>
                     field.onChange(selectedOptions)

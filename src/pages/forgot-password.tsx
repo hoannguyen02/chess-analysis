@@ -19,7 +19,7 @@ type ForgotPasswordFormValues = {
 
 const ForgotPasswordPage = () => {
   const router = useRouter();
-  const { apiDomain, locale } = useAppContext();
+  const { apiDomain } = useAppContext();
   const t = useTranslations();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { addToast } = useToast();
