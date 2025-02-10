@@ -9,5 +9,5 @@ description: "The chessboard is an 8x8 grid labeled a-h (files) and 1-8 (ranks).
 - **Check (`+`)**: Qh5+
 - **Checkmate (`#`)**: Qg7#
 - **Castling**: O-O (Kingside), O-O-O (Queenside)
-- **awn Promotion**: e8=Q (Pawn promotes to a queen)
+- **Pawn Promotion**: e8=Q (Pawn promotes to a queen)
 - **En Passant**: exd6 e.p. (Pawn on **e5** captures **d5 en passant**)

@@ -43,6 +43,7 @@ export const PuzzlesSearchModal: React.FC<PuzzlesSearchModalProps> = ({
       difficulty,
       status,
       title,
+      locale,
       page: currentPage,
       excludedIds: selectedPuzzles.map((l) => l._id).join(','),
       themes: themes.join(','),
@@ -57,7 +58,7 @@ export const PuzzlesSearchModal: React.FC<PuzzlesSearchModalProps> = ({
       .join('&');
 
     return filteredQuery;
-  }, [difficulty, status, title, currentPage, selectedPuzzles, themes]);
+  }, [difficulty, status, title, locale, currentPage, selectedPuzzles, themes]);
 
   const queryKey = useMemo(
     () => `${apiDomain}/v1/puzzles?${queryString}`,
