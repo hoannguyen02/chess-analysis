@@ -1,4 +1,4 @@
-// utils/withThemes.ts
+// utils/withThemes.ts => Actually should rename to withSession
 import axiosInstance from '@/utils/axiosInstance';
 import { getSession } from '@/utils/getSession';
 import { safelyParseJSON } from '@/utils/safelyParseJSON';
@@ -21,31 +21,8 @@ export const withThemes =
     // Get themes from cookies
     const cookies = nookies.get(ctx);
 
-    let themes = cookies.themes ? safelyParseJSON(cookies.themes) : null;
     let tags = cookies.tags ? safelyParseJSON(cookies.tags) : null;
     const apiDomain = process.env.NEXT_PUBLIC_LIMA_BE_DOMAIN;
-
-    // If themes are not available, fetch them
-    if (!themes) {
-      try {
-        const { data } = await axiosInstance.get(
-          `${apiDomain}/v1/puzzle-themes/public/all`
-        );
-        themes = data; // API only return array of themes, not return object { items: []}
-
-        // Store themes in cookies
-        nookies.set(ctx, 'themes', JSON.stringify(themes), {
-          httpOnly: false, // Accessible by JavaScript
-          maxAge: 60 * 1 * 1, // 1 minute
-          // maxAge: 60 * 60 * 1, // 1 hour
-          // maxAge: 60 * 60 * 24, // 24 hour
-          path: '/', // Available for all routes
-        });
-      } catch (error) {
-        console.error('Error fetching themes:', error);
-        themes = [];
-      }
-    }
 
     if (!tags) {
       try {
@@ -78,7 +55,6 @@ export const withThemes =
     }
 
     const result = await handler(ctx, {
-      themes: themes || [],
       apiDomain,
       tags,
       isMobile,
@@ -90,7 +66,6 @@ export const withThemes =
         ...result,
         props: {
           ...result.props,
-          themes: themes || [],
           tags,
           apiDomain,
           isMobile,

@@ -3,6 +3,7 @@ import { LocaleType } from '@/types/locale';
 import { PuzzleTheme } from '@/types/puzzle-theme';
 import { Session } from '@/types/session';
 import { Tag } from '@/types/tag';
+import { fetcher } from '@/utils/fetcher';
 import React, {
   createContext,
   useCallback,
@@ -11,6 +12,7 @@ import React, {
   useMemo,
   useState,
 } from 'react';
+import useSWR from 'swr';
 
 export interface AppContextProps {
   themes: PuzzleTheme[] | [];
@@ -30,14 +32,18 @@ const AppContext = createContext<AppContextProps | undefined>(undefined);
 
 export const AppProvider: React.FC<{
   children: React.ReactNode;
-  themes: PuzzleTheme[];
   apiDomain: string;
   locale: LocaleType;
   tags: Tag[];
   isMobileSSR: boolean;
   session?: Session;
-}> = ({ children, themes, apiDomain, locale, tags, isMobileSSR, session }) => {
+}> = ({ children, apiDomain, locale, tags, isMobileSSR, session }) => {
   const [isMobile, setIsMobile] = useState(isMobileSSR);
+
+  const { data: themes } = useSWR<PuzzleTheme[]>(
+    `${apiDomain}/v1/puzzle-themes/public/all`,
+    fetcher
+  );
 
   useEffect(() => {
     const handleResize = () => {
