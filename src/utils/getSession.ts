@@ -18,7 +18,6 @@ export const getSession = async (
     cookieName: process.env.COOKIE_NAME!,
     password: process.env.SESSION_SECRET!,
     cookieOptions: {
-      domain: process.env.NEXT_PUBLIC_BASE_URL,
       secure: process.env.NODE_ENV === 'production', // Use secure cookies in production
       httpOnly: true,
       sameSite: 'lax',
