@@ -72,7 +72,9 @@ const App = ({ Component, pageProps }: AppProps) => {
           })(window,document,'script','dataLayer','GTM-TFV27HSJ');
         `}
       </Script>
-      <ErrorBoundary>
+      <ErrorBoundary
+        msg={locale === 'vi' ? 'Đã xảy ra lỗi!' : 'Something went wrong!'}
+      >
         <Flowbite theme={{ theme: customTheme }}>
           <NextIntlClientProvider
             messages={pageProps.messages}

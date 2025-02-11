@@ -2,6 +2,7 @@ import React from 'react';
 
 interface ErrorBoundaryProps {
   children: React.ReactNode; // Specify that children is a React node
+  msg: string; // Error message to display in case of an error
 }
 
 interface ErrorBoundaryState {
@@ -24,7 +25,7 @@ class ErrorBoundary extends React.Component<
 
   render() {
     if (this.state.hasError) {
-      return <h1>Something went wrong!</h1>;
+      return <h1>{this.props.msg}</h1>;
     }
     return this.props.children;
   }
