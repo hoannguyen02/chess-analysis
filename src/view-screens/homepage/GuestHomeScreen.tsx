@@ -76,7 +76,7 @@ export const GuestHomeScreen = () => {
               {t('home.puzzle-description')}
             </p>
             <span className="mt-2 text-gray-500 text-sm">
-              🔥 {t('home.puzzle-difficulty', { level: 'Intermediate' })}
+              🔥 {t('home.puzzle-difficulty')}
             </span>
             <Button
               id="homepage-solve-puzzle-button"
