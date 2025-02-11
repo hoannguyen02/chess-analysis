@@ -12,7 +12,11 @@ export const AuthenticatedWrap = ({ children }: Props) => {
 
   if (!session?.id) {
     return (
-      <ErrorBanner error={t('common.title.un_authorized')} errorCode={401} />
+      <ErrorBanner
+        showLogo={false}
+        error={t('common.title.un_authorized')}
+        errorCode={401}
+      />
     );
   }
 
