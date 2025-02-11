@@ -98,7 +98,7 @@ export const GuestHomeScreen = () => {
           </div>
           <div className="flex justify-center w-full">
             <Image
-              src="/images/lima-chess-puzzle.svg"
+              src="/images/lima-chess-puzzle.png"
               alt="LIMA Chess Puzzle"
               width={400}
               height={400}
@@ -134,7 +134,7 @@ export const GuestHomeScreen = () => {
           </div>
           <div className="flex justify-center w-full">
             <Image
-              src="/images/lima-chess-lesson.svg"
+              src="/images/lima-chess-lesson.png"
               alt="LIMA Chess Lesson"
               width={400}
               height={400}
