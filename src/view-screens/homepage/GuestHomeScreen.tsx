@@ -126,7 +126,7 @@ export const GuestHomeScreen = () => {
                 window.dataLayer?.push({
                   event: 'homepage-view-lessons-button',
                 });
-                router.push(process.env.NEXT_PUBLIC_LEARN_MORE_LINK!);
+                router.push(process.env.NEXT_PUBLIC_VIEW_LESSONS!);
               }}
             >
               {t('home.view-lessons')}
