@@ -22,6 +22,8 @@ export const withThemes =
 
     const session = await getSession(ctx.req, ctx.res);
 
+    console.log('session', session);
+
     let customSession = null;
     if (!isEmpty(session)) {
       customSession = {
