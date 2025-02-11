@@ -84,7 +84,7 @@ const ChessNotationPage = ({ content, title, description, locale }: Props) => {
           </div>
           <div className="flex justify-center max-w-[300px] w-full">
             <Image
-              src="/images/board-and-pieces.svg"
+              src="/images/board-and-pieces.png"
               alt="LIMA Chess - Board and pieces"
               width={300}
               height={300}
