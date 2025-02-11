@@ -413,11 +413,8 @@ export const LessonDetailsScreen = ({ data }: Props) => {
               </p>
             )}
             {/* Objectives */}
-            {objectives?.[locale] && (
+            {objectives?.[locale] && objectives?.[locale]?.length > 0 && (
               <div className="mb-8">
-                <h2 className="text-xl font-semibold mb-3">
-                  {t('common.title.objectives')}
-                </h2>
                 <ul className="list-disc list-inside space-y-2 text-lg">
                   {objectives[locale].map((objective, idx) => (
                     <li key={idx}>{objective}</li>

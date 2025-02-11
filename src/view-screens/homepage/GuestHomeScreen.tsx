@@ -29,6 +29,14 @@ export const GuestHomeScreen = () => {
     },
     inLanguage: locale,
   };
+
+  const handleViewLessons = () => {
+    window.dataLayer?.push({
+      event: 'homepage-register-button',
+    });
+    router.push('/register-guide');
+  };
+
   return (
     <>
       {/* SEO Metadata */}
@@ -56,12 +64,7 @@ export const GuestHomeScreen = () => {
             gradientDuoTone="pinkToOrange"
             size="lg"
             className="mt-4 px-6 py-3 text-lg transition-transform transform hover:scale-105"
-            onClick={() => {
-              window.dataLayer?.push({
-                event: 'homepage-register-button',
-              });
-              router.push('/register-guide');
-            }}
+            onClick={handleViewLessons}
           >
             {t('common.button.join-now')}
           </Button>

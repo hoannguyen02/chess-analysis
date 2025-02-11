@@ -195,9 +195,9 @@ export const CourseDetailsScreen = ({ data, lessonProgresses }: Props) => {
               return (
                 <div
                   key={lesson.id}
-                  className="p-4 bg-gray-200 rounded-lg shadow-md flex justify-between"
+                  className="p-4 bg-gray-100 rounded-lg shadow-md flex flex-col sm:flex-row sm:items-center sm:justify-between"
                 >
-                  <div>
+                  <div className="flex flex-col">
                     <h4 className="text-base sm:text-lg font-semibold">
                       {lesson.title[locale]}
                     </h4>
@@ -207,7 +207,7 @@ export const CourseDetailsScreen = ({ data, lessonProgresses }: Props) => {
                   </div>
                   <Button
                     color={buttonColor}
-                    className="mt-3 sm:mt-0 w-full sm:w-auto flex items-center gap-2 hover:shadow-lg transition"
+                    className="mt-3 sm:mt-0 w-full sm:w-auto flex items-center gap-2 hover:shadow-lg transition text-sm sm:text-base px-4"
                     onClick={() =>
                       router.push(
                         `/lessons/${params.courseSlug}/${lesson.slug}`
