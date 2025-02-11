@@ -145,7 +145,7 @@ const BoardAndPiecesPage = () => {
           </div>
           <div className="flex justify-center w-full">
             <Image
-              src="/images/board-and-pieces.svg"
+              src="/images/board-and-pieces.png"
               alt="LIMA Chess - Board and pieces"
               width={400}
               height={400}
