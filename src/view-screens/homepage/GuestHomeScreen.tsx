@@ -43,9 +43,9 @@ export const GuestHomeScreen = () => {
         <meta name="twitter:description" content={pageDescription} />
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
       </Head>
-      <div className="flex flex-col mt-6 w-full px-4">
+      <div className="flex flex-col mt-6 w-full lg:px-4">
         <div className="flex flex-col items-center justify-center mb-4">
-          <h1 className="sm:text-2xl md:text-4xl lg:text-5xl font-extrabold text-center gradient-text">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-center gradient-text">
             {t('home.headline')}
           </h1>
           <h4 className="mt-6 text-lg font-semibold">🚀 {t('home.heading')}</h4>
@@ -88,7 +88,9 @@ export const GuestHomeScreen = () => {
                 window.dataLayer?.push({
                   event: 'homepage-solve-puzzle-button',
                 });
-                router.push(`/solve-puzzles/679eecd1e162bcfe06b7dbd5`);
+                router.push(
+                  `/solve-puzzles/${process.env.NEXT_PUBLIC_SOLVE_PUZZLE_ID}`
+                );
               }}
             >
               {t('home.solve-puzzles')}

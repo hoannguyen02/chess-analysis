@@ -34,14 +34,18 @@ export const AppProvider: React.FC<{
   children: React.ReactNode;
   apiDomain: string;
   locale: LocaleType;
-  tags: Tag[];
   isMobileSSR: boolean;
   session?: Session;
-}> = ({ children, apiDomain, locale, tags, isMobileSSR, session }) => {
+}> = ({ children, apiDomain, locale, isMobileSSR, session }) => {
   const [isMobile, setIsMobile] = useState(isMobileSSR);
 
   const { data: themes } = useSWR<PuzzleTheme[]>(
     `${apiDomain}/v1/puzzle-themes/public/all`,
+    fetcher
+  );
+
+  const { data: tags } = useSWR<Tag[]>(
+    `${apiDomain}/v1/tags/public/all`,
     fetcher
   );
 

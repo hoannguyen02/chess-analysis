@@ -76,9 +76,7 @@ const ChessNotationPage = ({ content, title, description, locale }: Props) => {
                 window.dataLayer?.push({
                   event: 'learn-movement-and-capture-button',
                 });
-                router.push(
-                  `/lessons/basic-about-chess-and-tactics/movement-and-capturing`
-                );
+                router.push(process.env.NEXT_PUBLIC_LEARN_MORE_LINK!);
               }}
             >
               {t('common.title.learn-moves')}

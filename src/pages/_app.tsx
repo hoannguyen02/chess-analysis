@@ -80,7 +80,6 @@ const App = ({ Component, pageProps }: AppProps) => {
             timeZone="Asia/Ho_Chi_Minh"
           >
             <AppProvider
-              tags={pageProps.tags}
               locale={locale as LocaleType}
               apiDomain={pageProps.apiDomain}
               isMobileSSR={pageProps.isMobileSSR}
