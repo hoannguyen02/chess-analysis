@@ -6,7 +6,7 @@ import { LessonExpanded } from '@/types/lesson';
 import { Puzzle } from '@/types/puzzle';
 import { fetcher } from '@/utils/fetcher';
 import { getDifficultyColor } from '@/utils/getDifficultyColor';
-import { Badge, Button, Card, Progress } from 'flowbite-react';
+import { Badge, Button, Card, Progress, Tabs } from 'flowbite-react';
 import { useTranslations } from 'next-intl';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
@@ -26,7 +26,13 @@ type ContentPuzzleDialogData = {
 };
 export const LessonDetailsScreen = ({ data }: Props) => {
   const { locale, session } = useAppContext();
+  const [activeTab, setActiveTab] = useState(0);
   const router = useRouter();
+
+  useEffect(() => {
+    setActiveTab(0);
+  }, []);
+
   const { courseSlug, lessonSlug } = useMemo(() => {
     const { courseSlug, lessonSlug } = router.query;
     return {
@@ -136,6 +142,7 @@ export const LessonDetailsScreen = ({ data }: Props) => {
   const difficultyColor = getDifficultyColor(difficulty);
 
   const handleContinueOrStart = () => {
+    // If the user has completed all puzzles, go to the next lesson
     // Start or review is expanded first content
     if (progress.completedPuzzles?.length === 0 || isCompleted) {
       // Expand the first content
@@ -292,113 +299,134 @@ export const LessonDetailsScreen = ({ data }: Props) => {
             )}
           </>
         )}
-
-        {/* Description */}
-        {description?.[locale] && (
-          <p className="text-gray-600 mb-6 text-lg">{description[locale]}</p>
-        )}
-
-        {/* Objectives */}
-        {objectives?.[locale] && (
-          <div className="mb-8">
-            <h2 className="text-xl font-semibold mb-3">
-              {t('common.title.objectives')}
-            </h2>
-            <ul className="list-disc list-inside space-y-2 text-lg">
-              {objectives[locale].map((objective, idx) => (
-                <li key={idx}>{objective}</li>
-              ))}
-            </ul>
-          </div>
-        )}
-
-        {/* Contents */}
-        {contents && (
-          <div className="mb-8">
-            <h2 className="text-xl font-semibold mb-3">
-              {t('common.title.lesson-contents')}
-            </h2>
-            {contents.map((content, idx) => (
-              <div
-                key={idx}
-                ref={(el) => {
-                  panelRefs.current[idx] = el;
-                }}
-                className="border rounded-lg shadow-sm mb-4"
-              >
-                {/* Accordion Header */}
-                <div
-                  onClick={() => togglePanel(idx)}
-                  className="cursor-pointer flex justify-between items-center p-4 bg-blue-100 hover:bg-blue-200 transition duration-200 rounded-t-lg"
-                >
-                  <h3 className="font-semibold text-xl text-gray-800">
-                    {content.title[locale]}
-                  </h3>
-                  <span
-                    className={`transform transition-transform duration-300 ${
-                      expandedContentIndex === idx
-                        ? 'rotate-180 text-blue-600'
-                        : 'rotate-0 text-gray-500'
-                    }`}
+        <Tabs
+          aria-label="Tabs with underline"
+          variant="fullWidth"
+          defaultValue={activeTab}
+          key={activeTab}
+        >
+          <Tabs.Item
+            active={activeTab === 0}
+            onClick={() => setActiveTab(0)}
+            title={t('common.title.learn-and-solve')}
+          >
+            {/* Contents */}
+            {contents && (
+              <div className="mb-8">
+                {contents.map((content, idx) => (
+                  <div
+                    key={idx}
+                    ref={(el) => {
+                      panelRefs.current[idx] = el;
+                    }}
+                    className="border rounded-lg shadow-sm mb-4"
                   >
-                    ▼
-                  </span>
-                </div>
+                    {/* Accordion Header */}
+                    <div
+                      onClick={() => togglePanel(idx)}
+                      className="cursor-pointer flex justify-between items-center p-4 bg-blue-100 hover:bg-blue-200 transition duration-200 rounded-t-lg"
+                    >
+                      <h3 className="font-semibold text-xl text-gray-800">
+                        {content.title[locale]}
+                      </h3>
+                      <span
+                        className={`transform transition-transform duration-300 ${
+                          expandedContentIndex === idx
+                            ? 'rotate-180 text-blue-600'
+                            : 'rotate-0 text-gray-500'
+                        }`}
+                      >
+                        ▼
+                      </span>
+                    </div>
 
-                {/* Accordion Content */}
-                <div
-                  className={`overflow-scroll transition-[max-height] duration-500 ease-in-out ${
-                    expandedContentIndex === idx ? 'max-h-screen' : 'max-h-0'
-                  }`}
-                >
-                  <div className="p-4 bg-white rounded-b-lg">
-                    {/* Explanations */}
-                    <ul className="list-inside list-decimal space-y-2 text-lg">
-                      {content.explanations?.[locale]?.map((explanation, i) => (
-                        <li key={i} className="text-gray-600">
-                          {explanation}
-                        </li>
-                      ))}
-                    </ul>
+                    {/* Accordion Content */}
+                    <div
+                      className={`overflow-scroll transition-[max-height] duration-500 ease-in-out ${
+                        expandedContentIndex === idx
+                          ? 'max-h-screen'
+                          : 'max-h-0'
+                      }`}
+                    >
+                      <div className="p-4 bg-white rounded-b-lg">
+                        {/* Explanations */}
+                        <ul className="list-inside list-decimal space-y-2 text-lg">
+                          {content.explanations?.[locale]?.map(
+                            (explanation, i) => (
+                              <li key={i} className="text-gray-600">
+                                {explanation}
+                              </li>
+                            )
+                          )}
+                        </ul>
 
-                    {/* Content Puzzles */}
-                    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4 mt-6">
-                      {content.contentPuzzles.map(
-                        ({ puzzleId: puzzle }, index) => {
-                          const isCompleted =
-                            progress.completedPuzzles.includes(puzzle._id!);
-                          return (
-                            <Card
-                              key={index}
-                              className="hover:shadow-lg transition border"
-                            >
-                              <p className="text-center text-lg font-semibold text-gray-700">
-                                {t('common.title.example')} {index + 1}
-                              </p>
-                              <Button
-                                color={isCompleted ? 'green' : 'blue'}
-                                size="sm"
-                                fullSized
-                                onClick={() => {
-                                  onOpenDialog({ puzzle, contentIndex: idx });
-                                }}
-                              >
-                                {isCompleted
-                                  ? t('common.button.solved')
-                                  : t('common.button.view')}
-                              </Button>
-                            </Card>
-                          );
-                        }
-                      )}
+                        {/* Content Puzzles */}
+                        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4 mt-6">
+                          {content.contentPuzzles.map(
+                            ({ puzzleId: puzzle }, index) => {
+                              const isCompleted =
+                                progress.completedPuzzles.includes(puzzle._id!);
+                              return (
+                                <Card
+                                  key={index}
+                                  className="hover:shadow-lg transition border"
+                                >
+                                  <p className="text-center text-lg font-semibold text-gray-700">
+                                    {t('common.title.example')} {index + 1}
+                                  </p>
+                                  <Button
+                                    color={isCompleted ? 'green' : 'blue'}
+                                    size="sm"
+                                    fullSized
+                                    onClick={() => {
+                                      onOpenDialog({
+                                        puzzle,
+                                        contentIndex: idx,
+                                      });
+                                    }}
+                                  >
+                                    {isCompleted
+                                      ? t('common.button.solved')
+                                      : t('common.button.view')}
+                                  </Button>
+                                </Card>
+                              );
+                            }
+                          )}
+                        </div>
+                      </div>
                     </div>
                   </div>
-                </div>
+                ))}
               </div>
-            ))}
-          </div>
-        )}
-
+            )}
+          </Tabs.Item>
+          <Tabs.Item
+            active={activeTab === 1}
+            onClick={() => setActiveTab(1)}
+            title={t('common.title.objectives')}
+          >
+            {/* Description */}
+            {description?.[locale] && (
+              <p className="text-gray-600 mb-6 text-lg">
+                {description[locale]}
+              </p>
+            )}
+            {/* Objectives */}
+            {objectives?.[locale] && (
+              <div className="mb-8">
+                <h2 className="text-xl font-semibold mb-3">
+                  {t('common.title.objectives')}
+                </h2>
+                <ul className="list-disc list-inside space-y-2 text-lg">
+                  {objectives[locale].map((objective, idx) => (
+                    <li key={idx}>{objective}</li>
+                  ))}
+                </ul>
+              </div>
+            )}
+          </Tabs.Item>
+        </Tabs>
         {isOpenSolvePuzzle && contentPuzzle?.puzzle && (
           <SolvePuzzleDrawer
             puzzle={contentPuzzle.puzzle}
