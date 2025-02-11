@@ -1,5 +1,7 @@
 import Layout from '@/components/Layout';
 import { withThemes } from '@/HOF/withThemes';
+import enCommon from '@/locales/en/common.json';
+import viCommon from '@/locales/vi/common.json';
 import { Course } from '@/types/course';
 import { LocaleType } from '@/types/locale';
 import { createServerAxios } from '@/utils/axiosInstance';
@@ -42,8 +44,13 @@ export const getServerSideProps = withThemes(
 
       const { items, lastPage, currentPage } = res.data || {};
 
-      const commonMessages = (await import(`@/locales/${locale}/common.json`))
-        .default;
+      // Use fallback translations if import fails
+      const translations: Record<LocaleType, any> = {
+        en: enCommon,
+        vi: viCommon,
+      };
+      const commonMessages = translations[locale as LocaleType];
+
       return {
         props: {
           messages: {
