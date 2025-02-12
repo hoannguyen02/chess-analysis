@@ -1,8 +1,12 @@
-import { useRouter } from 'next/router';
+export async function getStaticProps({ locale }: { locale: string }) {
+  return {
+    props: { locale },
+  };
+}
 
-const NotFoundPage = () => {
-  const router = useRouter();
-  const isVi = router.locale === 'vi';
+const NotFoundPage = ({ locale }: { locale: string }) => {
+  const isVi = locale === 'vi';
+
   return (
     <div className="flex items-center justify-center h-screen bg-black text-white">
       <div className="flex flex-col items-center">
