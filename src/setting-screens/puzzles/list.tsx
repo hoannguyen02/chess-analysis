@@ -35,11 +35,12 @@ export const PuzzleListScreen = () => {
       status,
       page: currentPage,
       isPublic,
-      search: title,
+      title,
+      locale,
     };
 
     return filteredQuery(queryObject);
-  }, [phase, themes, difficulty, status, currentPage, isPublic, title]);
+  }, [phase, themes, difficulty, status, currentPage, isPublic, title, locale]);
 
   const queryKey = useMemo(
     () => `${apiDomain}/v1/puzzles?${queryString}`,
