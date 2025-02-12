@@ -19,9 +19,6 @@ export const RegisterDialog = ({ onClose }: Props) => {
         <Modal.Header> {t('common.benefits.title')}</Modal.Header>
         <Modal.Body>
           <div className="space-y-6 lg:px-6">
-            <p className="text-base text-center leading-relaxed text-gray-500">
-              {t('common.benefits.subtitle')}
-            </p>
             <LimaBenefits />
           </div>
         </Modal.Body>

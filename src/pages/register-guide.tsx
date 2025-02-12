@@ -1,16 +1,20 @@
+import { Logo } from '@/components/Logo';
 import { withThemes } from '@/HOF/withThemes';
 import { Clipboard } from 'flowbite-react';
 import { GetServerSidePropsContext } from 'next';
 import { useTranslations } from 'next-intl';
+import Link from 'next/link';
 
 const PaymentGuidePage = () => {
   const t = useTranslations();
   return (
     <div className="min-h-screen flex flex-col items-center p-4">
       <div className="max-w-2xl w-full  mx-auto">
-        <h1 className="text-2xl font-bold mb-4 text-center text-blue-600">
-          {t('payment.title')}
-        </h1>
+        <div className="flex justify-center mt-8">
+          <Link href="/" className="mb-6">
+            <Logo />
+          </Link>
+        </div>
         <p className="text-gray-600 text-center mb-6">
           {t('payment.description')}
         </p>
@@ -47,7 +51,7 @@ const PaymentGuidePage = () => {
               <strong>{t('payment.payment-description')}</strong>{' '}
               {t('payment.payment-description-note')}
               {t('common.title.example')}{' '}
-              <strong>0912333224 nguyenvanhoan02@gmail.com</strong>
+              <strong>0912333224 limachess102@gmail.com</strong>
             </li>
           </ul>
         </div>
@@ -70,7 +74,7 @@ const PaymentGuidePage = () => {
               </a>
             </li>
             <li>
-              {t('payment.gmail')} <strong> nguyenvanhoan02@gmail.com</strong>
+              {t('payment.gmail')} <strong> limachess102@gmail.com</strong>
             </li>
             <li>
               {t('payment.phone')}
