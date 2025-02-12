@@ -34,4 +34,4 @@ We reserve the right to terminate accounts for violations of our terms, includin
 
 ## **Contact Us**
 
-For inquiries or further assistance, please reach out to us at **[contact@limachess.com](mailto:contact@limachess.com)**.
+For inquiries or further assistance, please reach out to us at **[limachess102@gmail.com](mailto:limachess102@gmail.com)**.

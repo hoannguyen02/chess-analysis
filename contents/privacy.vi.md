@@ -42,4 +42,4 @@ Bạn có thể:
 - Cập nhật hoặc chỉnh sửa thông tin cá nhân.
 - Xóa thông tin cá nhân của mình.
 
-Để thực hiện các quyền này, vui lòng liên hệ với chúng tôi qua email: **[contact@limachess.com](mailto:contact@limachess.com)**.
+Để thực hiện các quyền này, vui lòng liên hệ với chúng tôi qua email: **[limachess102@gmail.com](mailto:limachess102@gmail.com)**.

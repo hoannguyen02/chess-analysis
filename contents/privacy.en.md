@@ -42,4 +42,4 @@ You can:
 - Update or correct your personal details.
 - Delete your personal information.
 
-To exercise these rights, contact us at **[contact@limachess.com](mailto:contact@limachess.com)**.
+To exercise these rights, contact us at **[limachess102@gmail.com](mailto:limachess102@gmail.com)**.

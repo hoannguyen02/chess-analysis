@@ -32,4 +32,4 @@ Chúng tôi có quyền chấm dứt tài khoản trong trường hợp:
 
 ## **Liên Hệ**
 
-Nếu có bất kỳ thắc mắc nào, vui lòng liên hệ với chúng tôi qua email: **[contact@limachess.com](mailto:contact@limachess.com)**.
+Nếu có bất kỳ thắc mắc nào, vui lòng liên hệ với chúng tôi qua email: **[limachess102@gmail.com](mailto:limachess102@gmail.com)**.
