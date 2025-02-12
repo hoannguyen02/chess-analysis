@@ -64,7 +64,7 @@ export const getServerSideProps = withThemes(
       return {
         props: {
           messages,
-          error: error.message || error,
+          error: error.response?.data?.message || error.message || error,
           errorCode: error.response?.status,
           data: null,
         },

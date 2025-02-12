@@ -40,7 +40,7 @@ export const ErrorBanner: React.FC<ErrorBannerProps> = ({
           icon={() => <VscError className="w-6 h-6 mr-2 text-red-500" />}
         >
           <div className="flex flex-col sm:flex-row justify-between items-center">
-            <p className="text-sm sm:text-base font-medium text-red-800">
+            <p className="text-sm sm:text-base font-medium text-red-800 mr-2">
               {error}
             </p>
             {[401].includes(errorCode) || retryAction ? (
@@ -64,8 +64,9 @@ export const ErrorBanner: React.FC<ErrorBannerProps> = ({
                 onClick={() => {
                   router.push('/register-guide');
                 }}
+                className="mt-2 sm:mt-0"
               >
-                {'common.button.register'}
+                {t('common.button.register')}
               </Button>
             )}
           </div>
