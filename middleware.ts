@@ -1,9 +1,10 @@
+import { DefaultLocale } from '@/constants';
 import type { NextRequest } from 'next/server';
 import { NextResponse } from 'next/server';
 
 // List of supported locales
-const locales = ['en', 'vi'];
-const defaultLocale = 'en';
+const locales = ['vi', 'en'];
+const defaultLocale = DefaultLocale || 'vi';
 
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;

@@ -1,5 +1,6 @@
 import { ErrorBanner } from '@/components/ErrorBanner';
 import Layout from '@/components/Layout';
+import { DefaultLocale } from '@/constants';
 import { withThemes } from '@/HOF/withThemes';
 import { LessonFormScreen } from '@/setting-screens/lessons/form';
 import { LessonExpanded } from '@/types/lesson';
@@ -49,7 +50,7 @@ export const getServerSideProps: GetServerSideProps = withThemes(
     };
 
     // Initialize props
-    const messages = await loadMessages(locale || 'en');
+    const messages = await loadMessages(locale || DefaultLocale);
 
     try {
       const serverAxios = createServerAxios(ctx);

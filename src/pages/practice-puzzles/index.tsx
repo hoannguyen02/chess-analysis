@@ -1,5 +1,6 @@
 import { AuthenticatedWrap } from '@/components/AuthenticatedWrap';
 import Layout from '@/components/Layout';
+import { DefaultLocale } from '@/constants';
 import { withThemes } from '@/HOF/withThemes';
 import { PracticePuzzlesScreen } from '@/view-screens/PracticePuzzlesScreen';
 import { GetServerSidePropsContext } from 'next';
@@ -33,7 +34,7 @@ export const getServerSideProps = withThemes(
     };
 
     // Initialize props
-    const messages = await loadMessages(locale || 'en');
+    const messages = await loadMessages(locale || DefaultLocale);
 
     return {
       props: {

@@ -1,3 +1,4 @@
+import { DefaultLocale } from '@/constants';
 import axios from 'axios';
 import { GetServerSidePropsContext } from 'next';
 
@@ -8,9 +9,10 @@ const axiosInstance = axios.create({
 
 const getStoredLocale = (): string => {
   if (typeof window !== 'undefined') {
-    return localStorage.getItem('locale') || 'en'; // Default to 'en'
+    return localStorage.getItem('locale') || DefaultLocale;
   }
-  return 'en';
+
+  return DefaultLocale;
 };
 
 axiosInstance.interceptors.request.use((config) => {
@@ -32,7 +34,7 @@ export const createServerAxios = (ctx: GetServerSidePropsContext) => {
     withCredentials: true, // Automatically include cookies
     headers: {
       cookie: cookies, // Attach cookies for server-side requests
-      'x-lang': ctx.locale || 'en', // Add locale as a custom header
+      'x-lang': ctx.locale || DefaultLocale, // Add locale as a custom header
     },
   });
 };

@@ -57,3 +57,5 @@ export const ExcludeThemeInFilter: Record<string, string> = {
   OPENING: 'OPENING',
   'BASIC-MOVES': 'BASIC-MOVES',
 } as const;
+
+export const DefaultLocale = 'vi';

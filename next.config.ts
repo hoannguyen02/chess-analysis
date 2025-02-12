@@ -5,7 +5,8 @@ const nextConfig: NextConfig = {
   reactStrictMode: true,
   i18n: {
     locales: ['en', 'vi'], // Supported locales
-    defaultLocale: 'en', // Default locale
+    defaultLocale: 'vi', // Default locale
+    localeDetection: false,
   },
   async rewrites() {
     return [

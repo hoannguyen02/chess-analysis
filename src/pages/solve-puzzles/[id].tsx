@@ -4,6 +4,7 @@ import { RegisterDialog } from '@/components/RegisterDialog';
 import { ShareFacebookButton } from '@/components/ShareFacebookButton';
 import SolvePuzzle from '@/components/SolvePuzzle';
 import { TransitionContainer } from '@/components/TransitionContainer';
+import { DefaultLocale } from '@/constants';
 import { useAppContext } from '@/contexts/AppContext';
 import { withThemes } from '@/HOF/withThemes';
 import useDialog from '@/hooks/useDialog';
@@ -154,7 +155,7 @@ export const getServerSideProps: GetServerSideProps = withThemes(
           .default;
 
         const solvePuzzleMessages = (
-          await import(`@/locales/${locale || 'en'}/solve-puzzle.json`)
+          await import(`@/locales/${locale}/solve-puzzle.json`)
         ).default;
 
         return {
@@ -168,7 +169,7 @@ export const getServerSideProps: GetServerSideProps = withThemes(
     };
 
     // Initialize props
-    const messages = await loadMessages(locale || 'en');
+    const messages = await loadMessages(locale || DefaultLocale);
 
     try {
       return {

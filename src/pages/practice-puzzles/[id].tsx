@@ -1,5 +1,6 @@
 import { AuthenticatedWrap } from '@/components/AuthenticatedWrap';
 import Layout from '@/components/Layout';
+import { DefaultLocale } from '@/constants';
 import { withThemes } from '@/HOF/withThemes';
 import { SolvePracticePuzzleScreen } from '@/view-screens/SolvePracticePuzzleScreen';
 import {
@@ -29,7 +30,7 @@ export const getServerSideProps: GetServerSideProps = withThemes(
           .default;
 
         const solvePuzzleMessages = (
-          await import(`@/locales/${locale || 'en'}/solve-puzzle.json`)
+          await import(`@/locales/${locale}/solve-puzzle.json`)
         ).default;
 
         return {
@@ -43,7 +44,7 @@ export const getServerSideProps: GetServerSideProps = withThemes(
     };
 
     // Initialize props
-    const messages = await loadMessages(locale || 'en');
+    const messages = await loadMessages(locale || DefaultLocale);
 
     try {
       return {

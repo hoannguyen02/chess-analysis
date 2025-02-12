@@ -1,4 +1,5 @@
 import Layout from '@/components/Layout';
+import { DefaultLocale } from '@/constants';
 import { withThemes } from '@/HOF/withThemes';
 import { UserListScreen } from '@/setting-screens/users/list';
 import { Role } from '@/types/user';
@@ -33,7 +34,7 @@ export const getServerSideProps = withThemes(async (ctx) => {
   };
 
   // Initialize props
-  const messages = await loadMessages(locale || 'en');
+  const messages = await loadMessages(locale || DefaultLocale);
 
   try {
     const serverAxios = createServerAxios(ctx);

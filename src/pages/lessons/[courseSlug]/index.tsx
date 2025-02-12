@@ -1,5 +1,6 @@
 import { ErrorBanner } from '@/components/ErrorBanner';
 import Layout from '@/components/Layout';
+import { DefaultLocale } from '@/constants';
 import { withThemes } from '@/HOF/withThemes';
 import { LessonProgress } from '@/types';
 import { CourseExpanded } from '@/types/course';
@@ -48,7 +49,7 @@ export const getServerSideProps = withThemes(
     };
 
     // Initialize props
-    const messages = await loadMessages(locale || 'en');
+    const messages = await loadMessages(locale || DefaultLocale);
     const slug = params?.courseSlug;
 
     try {

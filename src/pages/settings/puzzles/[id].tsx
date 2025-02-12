@@ -1,4 +1,5 @@
 import Layout from '@/components/Layout';
+import { DefaultLocale } from '@/constants';
 import { useAppContext } from '@/contexts/AppContext';
 import { withThemes } from '@/HOF/withThemes';
 import { PuzzleFormScreen } from '@/setting-screens/puzzles/form';
@@ -48,7 +49,7 @@ export const getServerSideProps: GetServerSideProps = withThemes(
   }: GetServerSidePropsContext<ParsedUrlQuery, PreviewData>) => {
     try {
       const commonMessages = (
-        await import(`@/locales/${locale || 'en'}/common.json`)
+        await import(`@/locales/${locale || DefaultLocale}/common.json`)
       ).default;
 
       return {

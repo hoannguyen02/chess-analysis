@@ -1,5 +1,6 @@
 import Layout from '@/components/Layout';
 import SolvePuzzle from '@/components/SolvePuzzle';
+import { DefaultLocale } from '@/constants';
 import { withThemes } from '@/HOF/withThemes';
 import { useRouter } from 'next/router';
 
@@ -24,7 +25,7 @@ export const getServerSideProps = withThemes(async ({ locale }) => {
   const commonMessages = (await import(`@/locales/${locale}/common.json`))
     .default;
   const solvePuzzleMessages = (
-    await import(`@/locales/${locale || 'en'}/solve-puzzle.json`)
+    await import(`@/locales/${locale || DefaultLocale}/solve-puzzle.json`)
   ).default;
 
   return {

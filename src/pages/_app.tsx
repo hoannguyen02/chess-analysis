@@ -90,7 +90,7 @@ const App = ({ Component, pageProps }: AppProps) => {
               {/* Apply the font class dynamically */}
               <div className={fontClass}>
                 <ToastProvider>
-                  <Component {...pageProps} />
+                  <Component {...pageProps} locale={locale} />
                   <ToastContainer />
                 </ToastProvider>
               </div>

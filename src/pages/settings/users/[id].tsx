@@ -1,4 +1,5 @@
 import Layout from '@/components/Layout';
+import { DefaultLocale } from '@/constants';
 import { withThemes } from '@/HOF/withThemes';
 import { CreateUserForm } from '@/setting-screens/users/form';
 import { Role, UserExpanded } from '@/types/user';
@@ -41,7 +42,7 @@ export const getServerSideProps: GetServerSideProps = withThemes(
     };
 
     // Initialize props
-    const messages = await loadMessages(locale || 'en');
+    const messages = await loadMessages(locale || DefaultLocale);
 
     try {
       const { id } = params as { id: string };
