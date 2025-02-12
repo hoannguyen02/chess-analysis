@@ -20,5 +20,10 @@
   "outcome": "Kết quả",
   "select-outcome": "Chọn kết quả...",
   "themes": "Thế cờ",
-  "select-themes": "Chọn thế cờ..."
+  "select-themes": "Chọn thế cờ...",
+  "subscription": {
+    "expired-title": "Đăng ký của bạn đã hết hạn",
+    "expired-message": "Để tiếp tục vui lòng gia hạn đăng ký của bạn.",
+    "renew": "Gia hạn ngay"
+  }
 }

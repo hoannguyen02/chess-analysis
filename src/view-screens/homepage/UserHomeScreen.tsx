@@ -1,12 +1,11 @@
 import { useAppContext } from '@/contexts/AppContext';
 import { fetcher } from '@/utils/fetcher';
 import { Button, Card, Dropdown, Tabs } from 'flowbite-react';
-import { useCallback, useEffect, useMemo, useState } from 'react';
+import { useCallback, useMemo, useState } from 'react';
 import useSWR from 'swr';
 
 import { Loading } from '@/components/Loading';
 import { useToast } from '@/contexts/ToastContext';
-import { User } from '@/types/user';
 import axiosInstance from '@/utils/axiosInstance';
 import { filteredQuery } from '@/utils/filteredQuery';
 import { handleSubmission } from '@/utils/handleSubmission';
@@ -14,6 +13,7 @@ import isEmpty from 'lodash/isEmpty';
 import { useTranslations } from 'next-intl';
 import dynamic from 'next/dynamic';
 import { useRouter } from 'next/router';
+import { VscWarning } from 'react-icons/vsc';
 const SolvePuzzleHistories = dynamic(() =>
   import('./SolvePuzzleHistories').then(
     (components) => components.SolvePuzzleHistories
@@ -27,43 +27,27 @@ const PracticePuzzleHistories = dynamic(() =>
 
 export const UserHomeScreen = () => {
   const t = useTranslations();
-  const [user, setUser] = useState<User>();
-  const [isLoadingUser, setIsLoadingUser] = useState(false);
   const router = useRouter();
   const { addToast } = useToast();
-  const { session, apiDomain, locale, getFilteredThemes } = useAppContext();
+  const {
+    apiDomain,
+    locale,
+    getFilteredThemes,
+    user,
+    isLoadingUser,
+    isSubscriptionExpired,
+  } = useAppContext();
   const { excludedThemeIds } = getFilteredThemes();
   const [activeTab, setActiveTab] = useState('rated');
+
   //
   const nextCourseKey = useMemo(() => {
     return user ? `/v1/courses/next-course/${user._id}` : undefined;
   }, [user]);
   const { data: nextCourse, isLoading: isLoadingNextCourse } = useSWR(
     nextCourseKey,
-    fetcher,
-    {
-      revalidateOnFocus: true,
-    }
+    fetcher
   );
-
-  useEffect(() => {
-    if (locale) {
-      const fetchUser = async () => {
-        setIsLoadingUser(true);
-        try {
-          const userResponse = await axiosInstance.get<User>(
-            `${apiDomain}/v1/auth/user/${session?.id}`
-          );
-          setUser(userResponse.data);
-        } catch (error) {
-          console.log(error);
-        } finally {
-          setIsLoadingUser(false);
-        }
-      };
-      fetchUser();
-    }
-  }, [apiDomain, locale, session?.id]);
 
   const queryString = useMemo(() => {
     const queryObject: Record<string, any> = {
@@ -83,11 +67,7 @@ export const UserHomeScreen = () => {
 
   const { data: nextPuzzleId, isLoading: isLoadingNextPuzzle } = useSWR(
     nextPuzzleKey,
-    fetcher,
-    {
-      revalidateOnFocus: true,
-      dedupingInterval: 300,
-    }
+    fetcher
   );
 
   const handleLogout = useCallback(async () => {
@@ -109,6 +89,32 @@ export const UserHomeScreen = () => {
 
   return (
     <div className="flex flex-col">
+      {/* Subscription Expired Banner */}
+      {isSubscriptionExpired && (
+        <div className="bg-red-50 border-l-4 border-red-500 text-red-700 p-4 rounded-lg shadow-md flex flex-col lg:flex-row items-center justify-between mb-4 lg:max-w-lg mx-auto">
+          <div className="flex items-center space-x-3">
+            <VscWarning />
+            <div>
+              <strong className="font-semibold">
+                {t('home.subscription.expired-title')}
+              </strong>
+              <p className="text-sm mt-1">
+                {t('home.subscription.expired-message')}
+              </p>
+            </div>
+          </div>
+          <Button
+            outline
+            gradientDuoTone="redToOrange"
+            size="md"
+            className="mt-2 md:mt-0 md:ml-4"
+            onClick={() => router.push('/register-guide')}
+          >
+            {t('home.subscription.renew')}
+          </Button>
+        </div>
+      )}
+
       <div className="my-4 flex justify-end">
         <Dropdown label={t('common.title.profile')}>
           <Dropdown.Item onClick={() => router.push('/change-password')}>
@@ -146,6 +152,7 @@ export const UserHomeScreen = () => {
                 outline
                 gradientDuoTone="cyanToBlue"
                 size="lg"
+                disabled={isSubscriptionExpired}
                 onClick={() => {
                   router.push(`/practice-puzzles`);
                 }}

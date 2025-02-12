@@ -5,6 +5,7 @@ import { withThemes } from '@/HOF/withThemes';
 import { GetServerSidePropsContext } from 'next';
 
 import dynamic from 'next/dynamic';
+import { SWRConfig } from 'swr';
 
 const UserHomeScreen = dynamic(() =>
   import('@/view-screens/homepage/UserHomeScreen').then(
@@ -22,7 +23,19 @@ export default function Home() {
 
   return (
     <Layout>
-      {session?.username ? <UserHomeScreen /> : <GuestHomeScreen />}
+      {session?.username ? (
+        <SWRConfig
+          value={{
+            revalidateOnFocus: false,
+            dedupingInterval: 10000,
+            shouldRetryOnError: false,
+          }}
+        >
+          <UserHomeScreen />
+        </SWRConfig>
+      ) : (
+        <GuestHomeScreen />
+      )}
     </Layout>
   );
 }

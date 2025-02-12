@@ -142,7 +142,10 @@ export const CreateUserForm = ({ roles, user }: Props) => {
       </div>
 
       <div className="mb-4">
-        <Label htmlFor="subscriptionStart" value="Subscription Start Date" />
+        <Label
+          htmlFor="subscriptionStart"
+          value="Subscription Start Date (DD/MM/YYYY)"
+        />
         <TextInput
           id="subscriptionStart"
           type="date"
@@ -152,7 +155,10 @@ export const CreateUserForm = ({ roles, user }: Props) => {
       </div>
 
       <div className="mb-4">
-        <Label htmlFor="subscriptionEnd" value="Subscription End Date" />
+        <Label
+          htmlFor="subscriptionEnd"
+          value="Subscription End Date (DD/MM/YYYY)"
+        />
         <TextInput
           id="subscriptionEnd"
           type="date"

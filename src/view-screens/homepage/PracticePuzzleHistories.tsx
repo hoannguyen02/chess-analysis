@@ -24,7 +24,8 @@ const SolvePuzzleDrawer = dynamic(() =>
 
 export const PracticePuzzleHistories = () => {
   const t = useTranslations();
-  const { session, apiDomain, getFilteredThemes } = useAppContext();
+  const { session, apiDomain, getFilteredThemes, isSubscriptionExpired } =
+    useAppContext();
   const [currentPage, setCurrentPage] = useState(1);
   const [status, setStatus] = useState<SolveStatusType | ''>('');
   const [themes, setThemes] = useState<string[]>([]);
@@ -124,6 +125,7 @@ export const PracticePuzzleHistories = () => {
               className="w-[70%]"
               size="sm"
               outline
+              disabled={isSubscriptionExpired}
               isProcessing={loadingPuzzle?.[index] || false}
               onClick={() => handleOpenPuzzle(item.puzzle, index)}
             >

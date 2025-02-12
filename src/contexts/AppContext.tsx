@@ -3,6 +3,9 @@ import { LocaleType } from '@/types/locale';
 import { PuzzleTheme } from '@/types/puzzle-theme';
 import { Session } from '@/types/session';
 import { Tag } from '@/types/tag';
+import { User } from '@/types/user';
+import axiosInstance from '@/utils/axiosInstance';
+import { checkIsSubscriptionExpired } from '@/utils/checkIsSubscriptionExpired';
 import { fetcher } from '@/utils/fetcher';
 import React, {
   createContext,
@@ -22,6 +25,9 @@ export interface AppContextProps {
   locale: LocaleType;
   isMobile: boolean;
   session?: Session | null;
+  user?: User;
+  isLoadingUser?: boolean;
+  isSubscriptionExpired?: boolean;
   getFilteredThemes(): {
     themeOptions: PuzzleTheme[] | [];
     excludedThemeIds: string[] | [];
@@ -38,6 +44,8 @@ export const AppProvider: React.FC<{
   session?: Session;
 }> = ({ children, apiDomain, locale, isMobileSSR, session }) => {
   const [isMobile, setIsMobile] = useState(isMobileSSR);
+  const [user, setUser] = useState<User>();
+  const [isLoadingUser, setIsLoadingUser] = useState(false);
 
   const { data: themes } = useSWR<PuzzleTheme[]>(
     `${apiDomain}/v1/puzzle-themes/public/all`,
@@ -48,6 +56,34 @@ export const AppProvider: React.FC<{
     `${apiDomain}/v1/tags/public/all`,
     fetcher
   );
+
+  useEffect(() => {
+    const usedId = session?.id;
+    if (locale && usedId) {
+      const fetchUser = async () => {
+        setIsLoadingUser(true);
+        try {
+          const userResponse = await axiosInstance.get<User>(
+            `${apiDomain}/v1/auth/user/${usedId}`
+          );
+          setUser(userResponse.data);
+        } catch (error) {
+          console.log(error);
+        } finally {
+          setIsLoadingUser(false);
+        }
+      };
+      fetchUser();
+    }
+  }, [apiDomain, locale, session?.id]);
+
+  const isSubscriptionExpired = useMemo(() => {
+    if (user?.subscriptionEnd) {
+      return checkIsSubscriptionExpired(user.subscriptionEnd);
+    }
+
+    return false;
+  }, [user]);
 
   useEffect(() => {
     const handleResize = () => {
@@ -121,6 +157,9 @@ export const AppProvider: React.FC<{
       apiDomain,
       isMobile,
       session,
+      user,
+      isLoadingUser,
+      isSubscriptionExpired,
     }),
     [
       locale,
@@ -131,6 +170,9 @@ export const AppProvider: React.FC<{
       apiDomain,
       isMobile,
       session,
+      user,
+      isLoadingUser,
+      isSubscriptionExpired,
     ]
   );
 
