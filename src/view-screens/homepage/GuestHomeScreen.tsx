@@ -1,4 +1,3 @@
-import { LimaBenefits } from '@/components/LimaBenefits';
 import { useAppContext } from '@/contexts/AppContext';
 import { Button } from 'flowbite-react';
 import { useTranslations } from 'next-intl';
@@ -56,8 +55,6 @@ export const GuestHomeScreen = () => {
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-center gradient-text">
             {t('home.headline')}
           </h1>
-          <h4 className="mt-6 text-lg font-semibold">🚀 {t('home.heading')}</h4>
-          <LimaBenefits />
           <Button
             id="homepage-register-button"
             outline
@@ -66,7 +63,7 @@ export const GuestHomeScreen = () => {
             className="mt-4 px-6 py-3 text-lg transition-transform transform hover:scale-105"
             onClick={handleViewLessons}
           >
-            {t('common.button.join-now')}
+            {t('common.button.get-started')}
           </Button>
         </div>
         {/* Chess Puzzle Section */}
