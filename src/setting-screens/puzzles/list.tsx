@@ -65,7 +65,7 @@ export const PuzzleListScreen = () => {
 
   const duplicatePuzzle = async (puzzle: Puzzle) => {
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    const { title, _id, ...rest } = puzzle;
+    const { title, _id, created_at, updated_at, ...rest } = puzzle;
     try {
       setLoading(true);
       const newPuzzleResult = await axiosInstance.post(

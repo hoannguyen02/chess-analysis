@@ -36,6 +36,8 @@ export type Puzzle = {
   phase?: PuzzlePhase;
   _id?: string;
   puzzleId?: any;
+  created_at?: string;
+  updated_at?: string;
 };
 
 export type SolvedData = {
