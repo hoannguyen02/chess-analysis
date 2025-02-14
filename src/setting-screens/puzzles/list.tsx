@@ -7,6 +7,7 @@ import { Puzzle, PuzzlePhase } from '@/types/puzzle';
 import { StatusType } from '@/types/status';
 import axiosInstance from '@/utils/axiosInstance';
 import { filteredQuery } from '@/utils/filteredQuery';
+import { previewPuzzle } from '@/utils/previewPuzzle';
 import { Button, Checkbox, Pagination, Spinner, Table } from 'flowbite-react';
 import { useRouter } from 'next/router';
 import { useMemo, useState } from 'react';
@@ -198,17 +199,29 @@ export const PuzzleListScreen = () => {
                   <Table.Cell>
                     <Button
                       size="xs"
+                      gradientDuoTone="cyanToBlue"
+                      outline
+                      onClick={() => previewPuzzle(puzzle)}
+                    >
+                      {locale === 'vi' ? 'Xem thử' : 'Preview'}
+                    </Button>
+                  </Table.Cell>
+                  <Table.Cell>
+                    <Button
+                      size="xs"
                       outline
                       onClick={() => duplicatePuzzle(puzzle)}
-                      className="mb-2"
                     >
-                      <VscCopy />
+                      <VscCopy className="mr-2" />{' '}
+                      {locale === 'vi' ? 'Tạo mới bản sao' : 'Create new copy'}
                     </Button>
+                  </Table.Cell>
+                  <Table.Cell>
                     <a
                       href={`/settings/puzzles/${puzzle._id}`}
-                      className="font-medium text-cyan-600 hover:underline dark:text-cyan-500"
+                      className="flex font-medium text-cyan-600 hover:underline dark:text-cyan-500"
                     >
-                      Edit
+                      {locale === 'vi' ? 'Sửa thông tin' : 'Edit / Update'}
                     </a>
                   </Table.Cell>
                 </Table.Row>
