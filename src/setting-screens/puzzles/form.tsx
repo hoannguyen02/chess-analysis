@@ -59,7 +59,6 @@ export const PuzzleFormScreen = ({ puzzle, onSaveSuccess }: Props) => {
     handleSubmit, // Handle form submission
     formState: { errors, isDirty }, // Access form errors
     watch,
-    setValue,
     getValues,
     reset,
   } = useForm<Puzzle>({
