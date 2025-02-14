@@ -52,7 +52,7 @@ export const GuestHomeScreen = () => {
       </Head>
       <div className="flex flex-col mt-6 w-full lg:px-4">
         <div className="flex flex-col items-center justify-center mb-4">
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-center gradient-text">
+          <h1 className="text-3xl md:text-4xl font-extrabold text-center gradient-text">
             {t('home.headline')}
           </h1>
           <Button
