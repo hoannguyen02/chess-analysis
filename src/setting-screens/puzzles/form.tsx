@@ -1,7 +1,6 @@
 import { TitlePage } from '@/components/TitlePage';
 import {
   PhaseOptions,
-  PreMovePlayerOptions,
   RatingOptions,
   SolutionMovePlayerOptions,
   StatusOptions,
@@ -189,35 +188,39 @@ export const PuzzleFormScreen = ({ puzzle, onSaveSuccess }: Props) => {
       <form onSubmit={handleSubmit(onSubmit)} className="">
         <div className="mb-4">
           <Label htmlFor="title" value="Title" />
-          <TextInput
-            id="title"
-            type="text"
-            placeholder="English"
-            {...register('title.en')}
-          />
-          <TextInput
-            className="mt-2"
-            id="title"
-            type="text"
-            placeholder="Vietnamse"
-            {...register('title.vi')}
-          />
+          <div className="grid grid-cols-2">
+            <TextInput
+              id="title"
+              type="text"
+              placeholder="English"
+              {...register('title.en')}
+            />
+            <TextInput
+              className="ml-2"
+              id="title"
+              type="text"
+              placeholder="Vietnamse"
+              {...register('title.vi')}
+            />
+          </div>
         </div>
         <div className="mb-4">
           <Label htmlFor="hint" value="Hint" />
-          <TextInput
-            id="hint"
-            type="text"
-            placeholder="English"
-            {...register('hint.en')}
-          />
-          <TextInput
-            className="mt-2"
-            id="hint"
-            type="text"
-            placeholder="Vietnamse"
-            {...register('hint.vi')}
-          />
+          <div className="grid grid-cols-2">
+            <TextInput
+              id="hint"
+              type="text"
+              placeholder="English"
+              {...register('hint.en')}
+            />
+            <TextInput
+              className="ml-2"
+              id="hint"
+              type="text"
+              placeholder="Vietnamse"
+              {...register('hint.vi')}
+            />
+          </div>
         </div>
         <div className="grid grid-cols-3  place-content-start mb-4 gap-8">
           <div className="flex flex-col ">
@@ -349,42 +352,20 @@ export const PuzzleFormScreen = ({ puzzle, onSaveSuccess }: Props) => {
           </div>
         </div>
         <div>
-          <h2 className="mb-4">Solutions moves</h2>
-          <div className="grid grid-cols-5 mb-2 gap-4">
-            <Label className="font-semibold" value="Player" />
+          <label className="flex items-center text-[12px]">
+            <strong>Pre move: </strong>
+            <small className="ml-1">
+              Computer auto make first move, leave it empty if not need
+            </small>
+          </label>
+          <div className="grid grid-cols-5 gap-4">
             <Label className="font-semibold" value="Move" />
             <Label className="font-semibold" value="To Square" />
             <Label className="font-semibold" value="From Square" />
             <Label className="font-semibold" value="Actions" />
           </div>
-          <label className="flex items-center text-[12px]">
-            Pre move -{' '}
-            <small>
-              Computer auto make first move, leave it empty if not need
-            </small>
-          </label>
-          <div className="grid grid-cols-5 mb-4 gap-4">
-            <div className="">
-              <Controller
-                control={control}
-                name="preMove.player"
-                render={({ field }) => (
-                  <Select
-                    id="preMove.player"
-                    options={PreMovePlayerOptions}
-                    value={
-                      PreMovePlayerOptions.find(
-                        (option) => option.value === field.value
-                      ) || null
-                    }
-                    onChange={(selectedOption) =>
-                      field.onChange(selectedOption?.value)
-                    }
-                    className="w-full"
-                  />
-                )}
-              />
-            </div>
+
+          <div className="mt-2 grid grid-cols-5 mb-4 gap-4">
             <TextInput
               {...register(`preMove.move`)}
               placeholder="Move (e.g., e4)"
@@ -403,16 +384,16 @@ export const PuzzleFormScreen = ({ puzzle, onSaveSuccess }: Props) => {
                 size="sm"
                 type="button"
                 onClick={() => {
-                  setValue('preMove', undefined, {
-                    shouldDirty: true,
-                  });
+                  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+                  // @ts-ignore
+                  reset({ ...getValues(), preMove: null }, { keepDirty: true });
                 }}
               >
-                -
+                🗑️ Remove Pre Move
               </Button>
             </div>
           </div>
-          <h2 className="mb-4 text-xl font-bold">Solution Moves</h2>
+          <h2 className="mb-2 text-xl font-bold">Solution Moves</h2>
           {fields.map((field, index) => (
             <div
               key={field.id}

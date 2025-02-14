@@ -46,6 +46,7 @@ type PuzzleProps = {
   onCloseClick?(): void;
   onSolved?(data?: SolvedData): void;
   showTimer?: boolean;
+  isPreview?: boolean;
 };
 
 export type HistoryMove = {
@@ -72,6 +73,7 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({
   showCloseButton = false,
   onCloseClick,
   showTimer = true,
+  isPreview = false,
 }) => {
   const moveSound = useRef<HTMLAudioElement | null>(null);
   const captureSound = useRef<HTMLAudioElement | null>(null);
@@ -155,6 +157,8 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({
   );
 
   useEffect(() => {
+    if (isPreview) return;
+
     const handleExitEvent = () => {
       if (!hasCalledApi.current) {
         hasCalledApi.current = true;
@@ -191,7 +195,7 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({
       window.removeEventListener('beforeunload', handleBeforeUnload);
       document.removeEventListener('visibilitychange', handleVisibilityChange);
     };
-  }, [attemptHistory, handleOnSolved, router]);
+  }, [attemptHistory, handleOnSolved, isPreview, router]);
 
   useEffect(() => {
     if (puzzle) {

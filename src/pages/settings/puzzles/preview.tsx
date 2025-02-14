@@ -13,7 +13,7 @@ const PreviewPuzzlePage = () => {
   if (data) {
     return (
       <Layout>
-        <SolvePuzzle puzzle={data} highlightPossibleMoves />
+        <SolvePuzzle isPreview puzzle={data} highlightPossibleMoves />
       </Layout>
     );
   }
