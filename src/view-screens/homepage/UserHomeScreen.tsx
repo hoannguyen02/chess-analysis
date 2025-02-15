@@ -1,14 +1,11 @@
 import { useAppContext } from '@/contexts/AppContext';
 import { fetcher } from '@/utils/fetcher';
-import { Button, Card, Dropdown, Tabs } from 'flowbite-react';
-import { useCallback, useMemo, useState } from 'react';
+import { Button, Card, Tabs } from 'flowbite-react';
+import { useMemo, useState } from 'react';
 import useSWR from 'swr';
 
 import { Loading } from '@/components/Loading';
-import { useToast } from '@/contexts/ToastContext';
-import axiosInstance from '@/utils/axiosInstance';
 import { filteredQuery } from '@/utils/filteredQuery';
-import { handleSubmission } from '@/utils/handleSubmission';
 import isEmpty from 'lodash/isEmpty';
 import { useTranslations } from 'next-intl';
 import dynamic from 'next/dynamic';
@@ -28,7 +25,6 @@ const PracticePuzzleHistories = dynamic(() =>
 export const UserHomeScreen = () => {
   const t = useTranslations();
   const router = useRouter();
-  const { addToast } = useToast();
   const {
     apiDomain,
     locale,
@@ -70,19 +66,6 @@ export const UserHomeScreen = () => {
     fetcher
   );
 
-  const handleLogout = useCallback(async () => {
-    const result = await handleSubmission(
-      async () => {
-        return await axiosInstance.post(`${apiDomain}/v1/auth/logout`);
-      },
-      addToast,
-      t('common.title.logout-success')
-    );
-    if (result !== undefined) {
-      router.push('/');
-    }
-  }, [addToast, apiDomain, router, t]);
-
   if (isLoadingUser || isLoadingNextCourse) {
     return <Loading />;
   }
@@ -115,16 +98,6 @@ export const UserHomeScreen = () => {
         </div>
       )}
 
-      <div className="my-4 flex justify-end">
-        <Dropdown label={t('common.title.profile')}>
-          <Dropdown.Item onClick={() => router.push('/change-password')}>
-            {t('common.navigation.change-password')}
-          </Dropdown.Item>
-          <Dropdown.Item onClick={handleLogout}>
-            {t('common.navigation.logout')}
-          </Dropdown.Item>
-        </Dropdown>
-      </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <Card className="w-full flex flex-col items-start min-h-[200px] border border-gray-200">
           <div className="flex flex-col flex-grow items-start">

@@ -12,6 +12,8 @@ export type ContentLesson = {
   };
   explanations?: ExplanationType;
   contentPuzzles: { puzzleId: Puzzle }[];
+  tags?: string[];
+  _id?: string;
 };
 
 export type Lesson = {
@@ -23,6 +25,7 @@ export type Lesson = {
     en: string;
     vi: string;
   };
+  tags?: string[];
   objectives?: ObjectiveType;
   puzzles: { puzzleId: string }[];
   contents?: ContentLesson[];
@@ -53,6 +56,7 @@ export type LessonExpanded = {
     en: string;
     vi: string;
   };
+  tags?: string[];
   objectives?: ObjectiveType;
   puzzles: { puzzleId: Puzzle }[];
   contents?: ContentLesson[];

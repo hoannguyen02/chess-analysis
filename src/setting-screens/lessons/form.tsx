@@ -1,6 +1,6 @@
 import { DraggableItem } from '@/components/DraggableItem';
 import { TitlePage } from '@/components/TitlePage';
-import { LEVEL_RATING, Statues } from '@/constants';
+import { RatingOptions, StatusOptions } from '@/constants';
 import { ROUTE_CHANGE_MESSAGE } from '@/constants/route';
 import { useAppContext } from '@/contexts/AppContext';
 import { useToast } from '@/contexts/ToastContext';
@@ -11,6 +11,7 @@ import { ObjectiveType } from '@/types';
 import { Course } from '@/types/course';
 import { ContentType, Lesson, LessonExpanded } from '@/types/lesson';
 import { Puzzle } from '@/types/puzzle';
+import { Tag } from '@/types/tag';
 import axiosInstance from '@/utils/axiosInstance';
 import { fetcher } from '@/utils/fetcher';
 import { handleSubmission } from '@/utils/handleSubmission';
@@ -20,7 +21,6 @@ import {
   Card,
   Checkbox,
   Label,
-  Select,
   Textarea,
   TextInput,
 } from 'flowbite-react';
@@ -31,6 +31,7 @@ import { useState } from 'react';
 import { DndProvider } from 'react-dnd';
 import { HTML5Backend } from 'react-dnd-html5-backend';
 import {
+  Controller,
   FormProvider,
   SubmitHandler,
   useFieldArray,
@@ -38,6 +39,7 @@ import {
   useFormContext,
 } from 'react-hook-form';
 import { VscAdd, VscOpenPreview, VscTrash } from 'react-icons/vsc';
+import Select, { SingleValue } from 'react-select';
 import useSWR from 'swr';
 import { AddToCoursesModal } from './AddToCoursesModal';
 import { PuzzlesSearchModal } from './PuzzlesSearchModal';
@@ -60,6 +62,7 @@ type LessonForm = Lesson & {
   puzzles: Puzzle[];
   contents: LessonContent[];
   objectives?: ObjectiveType;
+  tags: Tag[];
 };
 
 const ObjectivesSection = () => {
@@ -222,7 +225,7 @@ const ContentExplanations = ({ contentIndex }: { contentIndex: number }) => {
   );
 };
 export const LessonFormScreen = ({ lesson }: Props) => {
-  const { apiDomain, locale } = useAppContext();
+  const { apiDomain, locale, tags: defaultTags } = useAppContext();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { addToast } = useToast();
   const t = useTranslations();
@@ -268,7 +271,7 @@ export const LessonFormScreen = ({ lesson }: Props) => {
       ? buildInitialLessonForm(lesson)
       : {
           status: 'Active',
-          difficulty: 'Beginner',
+          difficulty: 'Easy',
         },
   });
 
@@ -303,8 +306,9 @@ export const LessonFormScreen = ({ lesson }: Props) => {
 
   // Handle form submission
   const onSubmit: SubmitHandler<LessonForm> = async (data) => {
-    const { _id, puzzles, contents, ...rest } = data;
+    const { _id, puzzles, contents, tags, ...rest } = data;
     const puzzleIds = puzzles.map((p: Puzzle) => ({ puzzleId: p._id }));
+    const tagIds = tags?.map((tag: Tag) => tag._id);
     const newContents = contents.map((p) => ({
       ...p,
       // eslint-disable-next-line @typescript-eslint/ban-ts-comment
@@ -313,7 +317,12 @@ export const LessonFormScreen = ({ lesson }: Props) => {
         puzzleId: cp._id,
       })),
     }));
-    const payload = { ...rest, puzzles: puzzleIds, contents: newContents };
+    const payload = {
+      ...rest,
+      puzzles: puzzleIds,
+      contents: newContents,
+      tags: tagIds,
+    };
     setIsSubmitting(true);
     const result = await handleSubmission(
       async () => {
@@ -431,24 +440,79 @@ export const LessonFormScreen = ({ lesson }: Props) => {
               {...register('title.vi')}
             />
           </div>
-          <div className="mt-4 grid grid-cols-2  place-content-start mb-4 gap-8">
+          <div className="mt-4 grid grid-cols-3  place-content-start mb-4 gap-8">
+            <div className="flex flex-col">
+              <Label htmlFor="tags" value="Tags" />
+
+              <Controller
+                control={control}
+                name="tags"
+                render={({ field }) => (
+                  <Select
+                    id="themes"
+                    isMulti
+                    options={defaultTags}
+                    value={defaultTags.filter((option) =>
+                      field.value?.some((selected) => {
+                        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+                        // @ts-ignore
+                        return selected._id === option._id;
+                      })
+                    )}
+                    onChange={(selectedOptions) =>
+                      field.onChange(selectedOptions)
+                    }
+                    getOptionLabel={(e) => e.label}
+                    getOptionValue={(e) => e._id}
+                    className="w-full"
+                  />
+                )}
+              />
+            </div>
             <div className="flex flex-col">
               <Label htmlFor="status" value="Status" />
-              <Select id="status" required {...register('status')}>
-                {Statues.map((status) => (
-                  <option key={status}>{status}</option>
-                ))}
-              </Select>
+              <Controller
+                control={control}
+                name="status"
+                render={({ field }) => (
+                  <Select
+                    id="status"
+                    options={StatusOptions}
+                    value={StatusOptions.find(
+                      (option) => option.value === field.value
+                    )}
+                    onChange={(
+                      selectedOption: SingleValue<{
+                        value: string;
+                        label: string;
+                      }>
+                    ) => field.onChange(selectedOption?.value)}
+                    className="w-full"
+                  />
+                )}
+              />
             </div>
             <div className="flex flex-col">
               <Label htmlFor="difficulty" value="Difficulty" />
-              <Select id="difficulty" required {...register('difficulty')}>
-                {Object.entries(LEVEL_RATING).map(([rating, title]) => (
-                  <option key={rating} label={title}>
-                    {rating}
-                  </option>
-                ))}
-              </Select>
+              <Controller
+                control={control}
+                name="difficulty"
+                render={({ field }) => (
+                  <Select
+                    id="difficulty"
+                    options={RatingOptions}
+                    value={
+                      RatingOptions.find(
+                        (option) => option.value === field.value
+                      ) || null
+                    }
+                    onChange={(selectedOption) =>
+                      field.onChange(selectedOption?.value)
+                    }
+                    className="w-full"
+                  />
+                )}
+              />
             </div>
           </div>
           <div className="grid grid-cols-2  place-content-start mb-4 gap-8">
@@ -681,7 +745,7 @@ export const LessonFormScreen = ({ lesson }: Props) => {
 
           {/*  1 lesson only belongs 1 course for now, if we change this logic, 
           we have to change the sync lesson progress also */}
-          {courses && courses?.length > 0 ? (
+          {/* {courses && courses?.length > 0 ? (
             <div className="mb-16">
               Courses:
               <div className="grid grid-cols-[70%_15%_15%] mb-2 gap-4">
@@ -707,7 +771,7 @@ export const LessonFormScreen = ({ lesson }: Props) => {
                 Add this lesson to a course
               </Button>
             </>
-          )}
+          )} */}
 
           <div className="flex mt-4">
             <Button

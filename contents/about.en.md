@@ -12,7 +12,7 @@ Welcome to **LIMA Chess**, the world-class online chess training platform. Built
 
 ## Our Mission
 
-Develop strategic and tactical thinking, improve your skills, and confidently conquer national and international tournaments FASTEST at the LOWEST cost.
+Develop strategic and tactical thinking, improve your skills, and confidently conquer national and international tournaments **FASTEST** at the **LOWEST** cost.
 &nbsp;
 
 ---

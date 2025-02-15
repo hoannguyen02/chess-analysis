@@ -1,17 +1,10 @@
 import { useAppContext } from '@/contexts/AppContext';
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
-import { useRouter } from 'next/router';
-import { useMemo } from 'react';
-import LanguageSwitcher from './LanguageSwitcher';
 
 export const MenuLeft = () => {
   const t = useTranslations('common');
-  const router = useRouter();
-  const { session, isMobile } = useAppContext();
-  const currentPath = useMemo(() => {
-    return router.asPath;
-  }, [router]);
+  const { session } = useAppContext();
 
   return (
     <nav
@@ -112,24 +105,6 @@ export const MenuLeft = () => {
           </ul>
         </>
       )}
-      {!isMobile && !session?.username && (
-        <>
-          <hr className="mt-8 border-color-[red] mb-8" />
-          <Link
-            href={
-              currentPath !== '/'
-                ? `/login?redirect=${encodeURIComponent(currentPath)}`
-                : '/login'
-            }
-            className="mb-6 hover:text-[var(--p-highlight)] border text-center py-2 rounded"
-          >
-            {t('navigation.login')}
-          </Link>
-        </>
-      )}
-      <div className="mt-auto">
-        <LanguageSwitcher />
-      </div>
     </nav>
   );
 };

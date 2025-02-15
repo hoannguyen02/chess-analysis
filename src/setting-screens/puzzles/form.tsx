@@ -66,7 +66,7 @@ export const PuzzleFormScreen = ({ puzzle, onSaveSuccess }: Props) => {
       fen: '8/8/8/8/8/8/8/8 w - - 0 1',
       isPublic: false,
       status: 'Active',
-      difficulty: 'Beginner',
+      difficulty: 'Easy',
       phase: 'Middle',
       solutions: [],
       preMove: {

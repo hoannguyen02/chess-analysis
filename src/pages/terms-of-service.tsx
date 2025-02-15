@@ -1,7 +1,8 @@
 import Layout from '@/components/Layout';
+import { withThemes } from '@/HOF/withThemes';
 import fs from 'fs';
 import matter from 'gray-matter';
-import { GetStaticProps } from 'next';
+import { GetServerSideProps } from 'next';
 import path from 'path';
 import { remark } from 'remark';
 import html from 'remark-html';
@@ -20,28 +21,30 @@ const TermsOfService = ({ content, title }: AboutProps) => {
   );
 };
 
-export const getStaticProps: GetStaticProps = async ({ locale }) => {
-  // Load the correct Markdown file based on the locale
-  const filePath = path.join(process.cwd(), 'contents', `terms.${locale}.md`);
-  const fileContents = fs.readFileSync(filePath, 'utf8');
+export const getServerSideProps: GetServerSideProps = withThemes(
+  async ({ locale }) => {
+    // Load the correct Markdown file based on the locale
+    const filePath = path.join(process.cwd(), 'contents', `terms.${locale}.md`);
+    const fileContents = fs.readFileSync(filePath, 'utf8');
 
-  // Parse metadata and content
-  const { data, content } = matter(fileContents);
+    // Parse metadata and content
+    const { data, content } = matter(fileContents);
 
-  // Convert Markdown to HTML
-  const processedContent = await remark().use(html).process(content);
-  const contentHtml = processedContent.toString();
+    // Convert Markdown to HTML
+    const processedContent = await remark().use(html).process(content);
+    const contentHtml = processedContent.toString();
 
-  const commonMessages = (await import(`@/locales/${locale}/common.json`))
-    .default;
+    const commonMessages = (await import(`@/locales/${locale}/common.json`))
+      .default;
 
-  return {
-    props: {
-      messages: { common: commonMessages },
-      title: data.title,
-      content: contentHtml,
-    },
-  };
-};
+    return {
+      props: {
+        messages: { common: commonMessages },
+        title: data.title,
+        content: contentHtml,
+      },
+    };
+  }
+);
 
 export default TermsOfService;

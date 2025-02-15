@@ -1,7 +1,6 @@
 import { DifficultyType } from '@/types';
 
 export const LEVEL_RATING: Record<DifficultyType, string> = {
-  Beginner: 'Beginner (Elo: 800)',
   Easy: 'Easy (Elo: 0–1200)',
   Medium: 'Medium (Elo: 1200-1600)',
   Hard: 'Hard (Elo: 1600-2000)',

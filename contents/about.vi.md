@@ -11,7 +11,7 @@ Chào mừng bạn đến với **LIMA Chess**, nền tảng luyện tập cờ 
 
 ## Sứ Mệnh Của Chúng Tôi
 
-Phát triển tư duy chiến lược, chiến thuật, nâng cao trình độ, tự tin chinh phục mọi giải đấu trong nước và quốc tế NHANH NHẤT với chi phí RẺ NHẤT.
+Phát triển tư duy chiến lược, chiến thuật, nâng cao trình độ, tự tin chinh phục mọi giải đấu trong nước và quốc tế **NHANH NHẤT** với chi phí **RẺ NHẤT**.
 &nbsp;
 
 ---
