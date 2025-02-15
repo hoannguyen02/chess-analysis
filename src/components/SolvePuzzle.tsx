@@ -9,7 +9,7 @@ import { PromotionType } from '@/types/promotion';
 import { Puzzle, PuzzlePreMove, SolvedData } from '@/types/puzzle';
 import { getActivePlayerFromFEN } from '@/utils/get-player-name-from-fen';
 import { Chess } from 'chess.js';
-import { Button } from 'flowbite-react';
+import { Button, Tooltip } from 'flowbite-react';
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
@@ -700,7 +700,7 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({
           <ElapsedTimer startTime={startTime} isRunning={isRunning} />
         )}
       </div>
-      <div className="grid grid-cols-1 lg:grid-cols-[500px_auto] gap-2 lg:gap-16 mx-auto max-w-[900px]">
+      <div className="grid grid-cols-1 lg:grid-cols-[500px_auto] gap-2 lg:gap-4 mx-auto max-w-[900px]">
         <div ref={boardRef}>
           <Chessboard
             boardOrientation={playerName?.toLowerCase() as 'black' | 'white'}
@@ -848,14 +848,18 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({
               <div className="flex flex-col">
                 <div className="flex justify-between">
                   <div className="flex">
-                    <Button
-                      color="primary"
-                      onClick={resetPuzzle}
-                      className="mr-2"
+                    <Tooltip
+                      content={t('solve-puzzle.button.restart')}
+                      placement="top"
                     >
-                      {t('solve-puzzle.button.restart')}{' '}
-                      <VscSync size={20} className="ml-1" />
-                    </Button>
+                      <Button
+                        color="primary"
+                        onClick={resetPuzzle}
+                        className="mr-2"
+                      >
+                        <VscSync size={20} className="ml-1" />
+                      </Button>
+                    </Tooltip>
                   </div>
                   <div className="flex">
                     <Button

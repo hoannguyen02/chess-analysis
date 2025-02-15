@@ -1,5 +1,6 @@
 import { useAppContext } from '@/contexts/AppContext';
 import { useToast } from '@/contexts/ToastContext';
+import { LocaleType } from '@/types/locale';
 import axiosInstance from '@/utils/axiosInstance';
 import { handleSubmission } from '@/utils/handleSubmission';
 import { Drawer, Dropdown } from 'flowbite-react';
@@ -9,6 +10,11 @@ import { useRouter } from 'next/router';
 import { useCallback, useEffect, useMemo, useState } from 'react';
 import { VscMenu, VscMortarBoard } from 'react-icons/vsc';
 import { MenuLeft } from './MenuLeft';
+
+const LANG_MAP: Record<LocaleType, string> = {
+  vi: 'VIE',
+  en: 'ENG',
+};
 
 export default function Header() {
   const [isOpenDrawer, setIsOpenDrawer] = useState(false);
@@ -189,12 +195,12 @@ export default function Header() {
 
           {/* Right Side: Icons & Profile */}
           <div className="flex items-center ml-2">
-            <Dropdown label={locale} inline>
+            <Dropdown label={LANG_MAP[locale]} inline>
               <Dropdown.Item onClick={() => switchLanguage('vi')}>
-                vi
+                VIE
               </Dropdown.Item>
               <Dropdown.Item onClick={() => switchLanguage('en')}>
-                en
+                ENG
               </Dropdown.Item>
             </Dropdown>
           </div>
