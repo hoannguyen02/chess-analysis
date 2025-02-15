@@ -30,7 +30,7 @@ export default function Header() {
         return await axiosInstance.post(`${apiDomain}/v1/auth/logout`);
       },
       addToast,
-      t('common.title.logout-success')
+      t('title.logout-success')
     );
     if (result !== undefined) {
       router.push('/');
