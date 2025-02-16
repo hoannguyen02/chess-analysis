@@ -47,6 +47,7 @@ type PuzzleProps = {
   onSolved?(data?: SolvedData): void;
   showTimer?: boolean;
   isPreview?: boolean;
+  actionClass?: string;
 };
 
 export type HistoryMove = {
@@ -74,6 +75,7 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({
   onCloseClick,
   showTimer = true,
   isPreview = false,
+  actionClass = '',
 }) => {
   const moveSound = useRef<HTMLAudioElement | null>(null);
   const captureSound = useRef<HTMLAudioElement | null>(null);
@@ -822,7 +824,9 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({
               </div>
             </div>
           )}
-          <div className="fixed lg:absolute bottom-0 left-0 w-full px-4 py-4 bg-white shadow-lg border-t border-gray-300 rounded-t-lg flex justify-center items-center space-x-4">
+          <div
+            className={`fixed lg:absolute bottom-0 left-0 w-full px-4 py-4 bg-white shadow-lg border-t border-gray-300 rounded-t-lg flex justify-center items-center space-x-4 ${actionClass}`}
+          >
             {!showRetry && currentStep !== puzzle.solutions.length && (
               <>
                 {hintMessage ? (

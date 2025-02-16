@@ -4,9 +4,11 @@ import { TransitionContainer } from '@/components/TransitionContainer';
 import { useAppContext } from '@/contexts/AppContext';
 import { LessonExpanded } from '@/types/lesson';
 import { Puzzle } from '@/types/puzzle';
-import { Button, Tooltip } from 'flowbite-react';
-import { useEffect, useMemo, useRef, useState } from 'react';
-import { VscCheck, VscLayoutMenubar } from 'react-icons/vsc';
+import { Button } from 'flowbite-react';
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import { VscLayoutMenubar } from 'react-icons/vsc';
+import { MenuLesson } from './MenuLesson';
+import { MenuLessonDrawer } from './MenuLessonDrawer';
 import { useLessonProgress } from './useLessonProgress';
 
 type Props = {
@@ -14,6 +16,8 @@ type Props = {
 };
 
 export const LessonDetailsScreenV2 = ({ data }: Props) => {
+  const { isMobile } = useAppContext();
+  const [isOpenDrawer, setIsOpenDrawer] = useState(false);
   const { locale } = useAppContext();
 
   const [contentIndex, setContentIdx] = useState<number>();
@@ -34,30 +38,31 @@ export const LessonDetailsScreenV2 = ({ data }: Props) => {
     [contents]
   );
 
-  const { progress, saveProgress } = useLessonProgress(
+  const { progress, saveProgress, completedPuzzleMap } = useLessonProgress(
     _id!,
     version,
     contentPuzzleIds,
     totalPuzzles
   );
 
-  const CompletedPuzzleMap = useMemo(() => {
-    const map = new Map<string, boolean>();
-    progress.completedPuzzles.forEach((cur) => map.set(cur, true));
-    return map;
-  }, [progress.completedPuzzles]);
-
+  const hasRunOnce = useRef(false);
   useEffect(() => {
-    if (allContents?.length) {
+    if (allContents?.length && progress?.completedPuzzles?.length) {
+      if (hasRunOnce.current) return; // Prevent re-execution after first run
+      hasRunOnce.current = true; // Mark as executed
+
       // Find the first uncompleted content
-      const index = allContents?.findIndex((content) => {
-        return content.contentPuzzles.some(
+      const index = allContents?.findIndex((content) =>
+        content.contentPuzzles.some(
           (puzzle) => !progress.completedPuzzles.includes(puzzle.puzzleId._id!)
-        );
-      });
-      if (index !== -1) setContentIdx(index as number);
+        )
+      );
+
+      if (index !== -1) {
+        setContentIdx(index as number);
+      }
     }
-  }, [allContents, data.contents, progress.completedPuzzles]);
+  }, [allContents, progress.completedPuzzles]);
 
   useEffect(() => {
     if (contentIndex === undefined) return;
@@ -66,11 +71,20 @@ export const LessonDetailsScreenV2 = ({ data }: Props) => {
       // @ts-ignore
       return !progress.completedPuzzles.includes(p.puzzleId._id);
     });
-    if (unsolvedPuzzle) {
+
+    if (unsolvedPuzzle && activePuzzle?._id !== unsolvedPuzzle.puzzleId._id) {
       setActivePuzzle(unsolvedPuzzle.puzzleId);
       setExplanations(content?.explanations?.[locale] || []);
     }
-  }, [allContents, contentIndex, contents, locale, progress.completedPuzzles]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [
+    allContents,
+    contentIndex,
+    contents,
+    locale,
+    // progress.completedPuzzles, // Only run when first load component, don't include progress.completedPuzzles because it will automatically set index after solved puzzle, user cannot read information
+    activePuzzle,
+  ]);
 
   // Display menu
   const menuRef = useRef<HTMLDivElement>(null); // Reference for sidebar scrolling
@@ -111,37 +125,75 @@ export const LessonDetailsScreenV2 = ({ data }: Props) => {
     };
   }, [progress.completedPuzzles, totalPuzzles]);
 
-  const hasNextPuzzle = () => {
+  const hasNextPuzzle = useMemo(() => {
     if (contentIndex === undefined) return false;
+
+    // Check if the current content has any unsolved puzzles
+    const currentContentHasNext = allContents[contentIndex].contentPuzzles.some(
+      // @ts-ignore
+      (p) => !progress.completedPuzzles.includes(p.puzzleId._id)
+    );
+
+    if (currentContentHasNext) return true;
+
+    // Check if any future content has unsolved puzzles
+    return allContents.slice(contentIndex + 1).some((content) =>
+      content.contentPuzzles.some(
+        // @ts-ignore
+        (p) => !progress.completedPuzzles.includes(p.puzzleId._id)
+      )
+    );
+  }, [contentIndex, allContents, progress.completedPuzzles]);
+
+  const handleNextPuzzle = useCallback(() => {
+    if (contentIndex === undefined) return;
 
     const currentContent = allContents[contentIndex];
 
-    // Check if there are any unsolved puzzles in this content section
-    return currentContent.contentPuzzles.some((p) => {
+    // Find the next unsolved puzzle in the current content
+    const nextPuzzle = currentContent.contentPuzzles.find(
       // @ts-ignore
-      return !progress.completedPuzzles.includes(p.puzzleId._id);
-    });
-  };
+      (p) => !progress.completedPuzzles.includes(p.puzzleId._id)
+    );
 
-  const handleNextPuzzle = () => {
-    if (contentIndex === undefined) return false;
-
-    const currentContent = allContents[contentIndex];
-
-    // Find the next unsolved puzzle within the same content section
-    const unsolvedPuzzle = currentContent.contentPuzzles.find((p) => {
-      // @ts-ignore
-      return !progress.completedPuzzles.includes(p.puzzleId._id);
-    });
-    if (unsolvedPuzzle) {
-      setActivePuzzle(unsolvedPuzzle.puzzleId);
-    } else {
-      // Active next content if available
-      if (contentIndex < allContents.length) {
-        setContentIdx((prev) => prev! + 1);
-      }
+    if (nextPuzzle) {
+      setActivePuzzle(nextPuzzle.puzzleId);
+      return;
     }
+
+    // If no unsolved puzzles in current content, find the next content with an unsolved puzzle
+    const nextContentIndex = allContents.findIndex(
+      (content, idx) =>
+        idx > contentIndex &&
+        content.contentPuzzles.some(
+          // @ts-ignore
+          (p) => !progress.completedPuzzles.includes(p.puzzleId._id)
+        )
+    );
+
+    if (nextContentIndex !== -1) {
+      const nextContent = allContents[nextContentIndex];
+      const nextUnsolvedPuzzle = nextContent.contentPuzzles.find(
+        // @ts-ignore
+        (p) => !progress.completedPuzzles.includes(p.puzzleId._id)
+      );
+
+      if (nextUnsolvedPuzzle) {
+        setContentIdx(nextContentIndex);
+        setExplanations(nextContent?.explanations?.[locale] || []);
+        setActivePuzzle(nextUnsolvedPuzzle.puzzleId);
+      }
+      return;
+    }
+  }, [allContents, contentIndex, locale, progress.completedPuzzles]);
+
+  const handleOnItemClick = (puzzle: Puzzle, explanations: string[] = []) => {
+    setIsOpenDrawer(false);
+    setActivePuzzle(puzzle);
+    setExplanations(explanations);
   };
+
+  const drawerRef = useRef<HTMLDivElement>(null);
 
   // Display puzzle
   const [isLoading, setIsLoading] = useState(false);
@@ -164,131 +216,98 @@ export const LessonDetailsScreenV2 = ({ data }: Props) => {
   if (!data.contents || data.contents.length === 0) return null;
 
   return (
-    <div className="flex">
-      {/* Sidebar with navigation */}
-      <aside
-        ref={menuRef}
-        className="w-1/4 h-[calc(100vh-120px)] overflow-y-auto border-r border-l border-t rounded-md sticky top-0 hidden lg:flex lg:flex-col"
-      >
-        <div className="sticky top-0 z-20 border-b bg-white flex items-center justify-between p-4">
-          <h3>{title[locale]}</h3>
-          <div className="relative w-10 h-10 flex items-center justify-center">
-            <svg className="w-full h-full" viewBox="0 0 36 36">
-              {/* Background Circle */}
-              <circle
-                className="text-[#D6D6D6]"
-                stroke="currentColor"
-                strokeWidth="3"
-                fill="transparent"
-                r="15"
-                cx="18"
-                cy="18"
+    <>
+      <div className="flex">
+        {/* Sidebar with navigation */}
+        <aside
+          ref={menuRef}
+          className="w-1/4 h-[calc(100vh-120px)] overflow-y-auto border-r border-l border-t rounded-md sticky top-0 hidden lg:flex lg:flex-col"
+        >
+          <MenuLesson
+            contents={contents}
+            activePuzzleId={activePuzzle?._id}
+            title={title[locale]}
+            circumference={circumference}
+            completedProgress={completedProgress}
+            completedPuzzleMap={completedPuzzleMap}
+            strokeDashoffset={strokeDashoffset}
+            onItemClick={handleOnItemClick}
+          />
+        </aside>
+
+        {/* Main content */}
+        <div className="w-full lg:w-3/4 p-4 pb-[120px] lg:pb-4 lg:pl-8 overflow-y-auto h-[calc(100vh-120px)]">
+          <TransitionContainer isLoading={isLoading} isVisible={isVisible}>
+            {displayedPuzzle && (
+              <SolvePuzzle
+                showNextButton={hasNextPuzzle}
+                highlightPossibleMoves
+                onNextClick={handleNextPuzzle}
+                puzzle={displayedPuzzle}
+                onSolved={async () => {
+                  await saveProgress(displayedPuzzle._id!);
+                }}
+                showTimer={false}
+                actionClass={`${isMobile ? 'pl-20 min-h-[72px]' : ''} `}
               />
-
-              {/* Progress Circle */}
-              <circle
-                className="text-[#007BFF] transition-all duration-300"
-                stroke="currentColor"
-                strokeWidth="3"
-                fill="transparent"
-                r="15"
-                cx="18"
-                cy="18"
-                strokeDasharray={circumference}
-                strokeDashoffset={strokeDashoffset}
-                strokeLinecap="round"
-                transform="rotate(-90 18 18)" // Rotates progress to start from the top
-              />
-
-              {/* Text in the center */}
-              <text
-                x="50%"
-                y="50%"
-                dominantBaseline="middle"
-                textAnchor="middle"
-                className="text-[#2D3748] text-[10px] font-bold"
-              >
-                {completedProgress}%
-              </text>
-            </svg>
-          </div>
-        </div>
-
-        <ul className="space-y-2">
-          {data.contents.map((content, index) => (
-            <li key={content._id} className="mb-2">
-              <div className="sticky border-b flex justify-between items-center top-[70px] bg-white py-2 font-bold text-gray-700 z-10 p-4">
-                {`${index + 1}.`} {content.title[locale]}
-              </div>
-
-              <ul className="pl-0 text-sm">
-                {content.contentPuzzles.map(({ puzzleId: puzzle }) => (
-                  <li
-                    key={puzzle._id}
-                    data-menu-item={puzzle._id} // Identify menu item
-                    className={`${
-                      activePuzzle?._id === puzzle._id
-                        ? 'font-bold bg-blue-100 '
-                        : ''
-                    } hover:bg-blue-100`}
-                  >
-                    <button
-                      onClick={() => {
-                        setActivePuzzle(puzzle);
-                        setExplanations(content?.explanations?.[locale] || []);
-                      }}
-                      className="text-blue-500 hover:text-blue-700 transition w-full text-left px-4 py-2 flex justify-between"
-                    >
-                      {puzzle?.title?.[locale]}
-                      {CompletedPuzzleMap.get(puzzle._id!) && (
-                        <VscCheck className="text-[#28A745]" />
-                      )}
-                    </button>
-                  </li>
-                ))}
-              </ul>
-            </li>
-          ))}
-        </ul>
-      </aside>
-
-      {/* Main content */}
-      <div className="w-full lg:w-3/4 p-4 lg:pl-8 overflow-y-auto h-[calc(100vh-120px)]">
-        <TransitionContainer isLoading={isLoading} isVisible={isVisible}>
-          {displayedPuzzle && (
-            <SolvePuzzle
-              showNextButton={hasNextPuzzle()}
-              highlightPossibleMoves
-              onNextClick={handleNextPuzzle}
-              puzzle={displayedPuzzle}
-              onSolved={async () => {
-                await saveProgress(displayedPuzzle._id!);
-              }}
-              showTimer={false}
-            />
-          )}
-          <div className="mt-4">
-            {/* Mobile */}
-            <div className="lg:hidden">
-              <Tooltip
-                className="lg:hidden"
-                content="Show lesson menu"
-                placement="top"
-              >
-                <Button outline gradientDuoTone="tealToLime">
+            )}
+            <div className="mt-4">
+              {/* Mobile */}
+              <div className="fixed bottom-4 left-4 lg:hidden">
+                <Button
+                  outline
+                  gradientDuoTone="tealToLime"
+                  onClick={() => {
+                    setIsOpenDrawer(true);
+                  }}
+                >
                   <VscLayoutMenubar />
                 </Button>
-              </Tooltip>
+              </div>
+              <div className="flex flex-col mt-4">
+                {explanations?.map((e, index) => (
+                  <p key={`explanation-${index}`}>{e}</p>
+                ))}
+              </div>
             </div>
-            {/* Desktop */}
-            <div className="hidden lg:flex lg:flex-col mt-4">
-              {explanations?.map((e, index) => (
-                <p key={`explanation-${index}`}>{e}</p>
-              ))}
-            </div>
-          </div>
-        </TransitionContainer>
+          </TransitionContainer>
+        </div>
       </div>
-    </div>
+      {isOpenDrawer && (
+        <MenuLessonDrawer
+          ref={drawerRef} // Pass ref to the component
+          onClose={() => {
+            setIsOpenDrawer(false);
+          }}
+          onOpen={() => {
+            setTimeout(() => {
+              if (!drawerRef.current) return;
+
+              const activeItem = drawerRef.current.querySelector(
+                `[data-menu-item="${activePuzzle?._id}"]`
+              );
+
+              if (activeItem) {
+                activeItem.scrollIntoView({
+                  behavior: 'smooth',
+                  block: 'center',
+                });
+              }
+            }, 200);
+          }}
+        >
+          <MenuLesson
+            contents={contents}
+            activePuzzleId={activePuzzle?._id}
+            title={title[locale]}
+            circumference={circumference}
+            completedProgress={completedProgress}
+            completedPuzzleMap={completedPuzzleMap}
+            strokeDashoffset={strokeDashoffset}
+            onItemClick={handleOnItemClick}
+          />
+        </MenuLessonDrawer>
+      )}
+    </>
   );
 };

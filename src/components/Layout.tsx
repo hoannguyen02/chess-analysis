@@ -1,17 +1,13 @@
-import { Drawer } from 'flowbite-react';
 import { useRouter } from 'next/router';
-import React, { ReactNode, useMemo, useState } from 'react';
-import { VscMortarBoard } from 'react-icons/vsc';
+import React, { ReactNode, useMemo } from 'react';
 import { Footer } from './Footer';
 import Header from './Header';
-import { MenuLeft } from './MenuLeft';
 
 interface LayoutProps {
   children: ReactNode;
 }
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
-  const [isOpenDrawer, setIsOpenDrawer] = useState(false);
   const router = useRouter();
 
   const isLessonPath = useMemo(() => {
@@ -27,22 +23,6 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         </main>
         {!isLessonPath && <Footer />}
       </div>
-      <Drawer
-        theme={{
-          root: {
-            base: 'bg-[var(--p-bg)] fixed z-40 overflow-y-auto p-4 transition-transform ',
-          },
-        }}
-        open={isOpenDrawer}
-        onClose={() => {
-          setIsOpenDrawer(false);
-        }}
-      >
-        <Drawer.Header titleIcon={VscMortarBoard}></Drawer.Header>
-        <Drawer.Items className="h-[calc(100vh-4rem)] overflow-y-auto">
-          <MenuLeft />
-        </Drawer.Items>
-      </Drawer>
     </div>
   );
 };
