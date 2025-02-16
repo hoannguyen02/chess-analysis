@@ -7,6 +7,7 @@ import { User } from '@/types/user';
 import axiosInstance from '@/utils/axiosInstance';
 import { checkIsSubscriptionExpired } from '@/utils/checkIsSubscriptionExpired';
 import { fetcher } from '@/utils/fetcher';
+import isEmpty from 'lodash/isEmpty';
 import React, {
   createContext,
   useCallback,
@@ -26,6 +27,7 @@ export interface AppContextProps {
   isMobile: boolean;
   session?: Session | null;
   user?: User;
+  isLoggedIn?: boolean;
   isLoadingUser?: boolean;
   isSubscriptionExpired?: boolean;
   getFilteredThemes(): {
@@ -160,6 +162,7 @@ export const AppProvider: React.FC<{
       user,
       isLoadingUser,
       isSubscriptionExpired,
+      isLoggedIn: !isEmpty(session?.id),
     }),
     [
       locale,
@@ -171,6 +174,7 @@ export const AppProvider: React.FC<{
       isMobile,
       session,
       user,
+
       isLoadingUser,
       isSubscriptionExpired,
     ]

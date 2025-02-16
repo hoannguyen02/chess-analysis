@@ -5,7 +5,7 @@ import { VscCheck } from 'react-icons/vsc';
 
 type Props = {
   title: string;
-  onItemClick(puzzle: Puzzle, explanations: string[]): void;
+  onItemClick(contentIdx: number, puzzle: Puzzle, explanations: string[]): void;
   completedPuzzleMap: Map<string, boolean>;
   completedProgress: number;
   circumference: number;
@@ -90,6 +90,7 @@ export const MenuLesson = ({
                   <button
                     onClick={() => {
                       onItemClick(
+                        index,
                         puzzle,
                         content?.explanations?.[locale] || []
                       );

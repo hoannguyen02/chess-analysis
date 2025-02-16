@@ -1,7 +1,9 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
+import { RegisterDialog } from '@/components/RegisterDialog';
 import SolvePuzzle from '@/components/SolvePuzzle';
 import { TransitionContainer } from '@/components/TransitionContainer';
 import { useAppContext } from '@/contexts/AppContext';
+import useDialog from '@/hooks/useDialog';
 import { LessonExpanded } from '@/types/lesson';
 import { Puzzle } from '@/types/puzzle';
 import { Button } from 'flowbite-react';
@@ -16,7 +18,12 @@ type Props = {
 };
 
 export const LessonDetailsScreenV2 = ({ data }: Props) => {
-  const { isMobile } = useAppContext();
+  const {
+    open: isOpenRegisterDialog,
+    onOpenDialog: onOpenRegister,
+    onCloseDialog: onCloseRegister,
+  } = useDialog();
+  const { isMobile, isLoggedIn } = useAppContext();
   const [isOpenDrawer, setIsOpenDrawer] = useState(false);
   const { locale } = useAppContext();
 
@@ -60,6 +67,8 @@ export const LessonDetailsScreenV2 = ({ data }: Props) => {
 
       if (index !== -1) {
         setContentIdx(index as number);
+      } else {
+        setContentIdx(0);
       }
     }
   }, [allContents, progress.completedPuzzles]);
@@ -75,6 +84,11 @@ export const LessonDetailsScreenV2 = ({ data }: Props) => {
     if (unsolvedPuzzle && activePuzzle?._id !== unsolvedPuzzle.puzzleId._id) {
       setActivePuzzle(unsolvedPuzzle.puzzleId);
       setExplanations(content?.explanations?.[locale] || []);
+    } else {
+      if (contentIndex === 0) {
+        setActivePuzzle(content.contentPuzzles[0].puzzleId);
+        setExplanations(content?.explanations?.[locale] || []);
+      }
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [
@@ -184,10 +198,28 @@ export const LessonDetailsScreenV2 = ({ data }: Props) => {
         setActivePuzzle(nextUnsolvedPuzzle.puzzleId);
       }
       return;
+    } else {
+      // If solved all puzzles and not logged in yet, will show banner
+      if (!isLoggedIn) {
+        onOpenRegister();
+        return;
+      }
     }
-  }, [allContents, contentIndex, locale, progress.completedPuzzles]);
+  }, [
+    allContents,
+    contentIndex,
+    isLoggedIn,
+    locale,
+    onOpenRegister,
+    progress.completedPuzzles,
+  ]);
 
-  const handleOnItemClick = (puzzle: Puzzle, explanations: string[] = []) => {
+  const handleOnItemClick = (
+    index: number,
+    puzzle: Puzzle,
+    explanations: string[] = []
+  ) => {
+    setContentIdx(index);
     setIsOpenDrawer(false);
     setActivePuzzle(puzzle);
     setExplanations(explanations);
@@ -213,7 +245,7 @@ export const LessonDetailsScreenV2 = ({ data }: Props) => {
   }, [activePuzzle, displayedPuzzle?._id]);
   // End Display puzzle
 
-  if (!data.contents || data.contents.length === 0) return null;
+  if (allContents.length === 0) return null;
 
   return (
     <>
@@ -240,7 +272,7 @@ export const LessonDetailsScreenV2 = ({ data }: Props) => {
           <TransitionContainer isLoading={isLoading} isVisible={isVisible}>
             {displayedPuzzle && (
               <SolvePuzzle
-                showNextButton={hasNextPuzzle}
+                showNextButton={hasNextPuzzle || !isLoggedIn}
                 highlightPossibleMoves
                 onNextClick={handleNextPuzzle}
                 puzzle={displayedPuzzle}
@@ -308,6 +340,7 @@ export const LessonDetailsScreenV2 = ({ data }: Props) => {
           />
         </MenuLessonDrawer>
       )}
+      {isOpenRegisterDialog && <RegisterDialog onClose={onCloseRegister} />}
     </>
   );
 };
