@@ -134,6 +134,7 @@ const SolvePuzzlePage = () => {
               onNextClick={handleNextClick}
               puzzle={puzzle}
               showNextButton={isShowNextButton}
+              isPreview={false}
             />
           </div>
         ) : (

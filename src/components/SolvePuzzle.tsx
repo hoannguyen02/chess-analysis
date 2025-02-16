@@ -74,7 +74,7 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({
   showCloseButton = false,
   onCloseClick,
   showTimer = true,
-  isPreview = false,
+  isPreview = true,
   actionClass = '',
 }) => {
   const moveSound = useRef<HTMLAudioElement | null>(null);

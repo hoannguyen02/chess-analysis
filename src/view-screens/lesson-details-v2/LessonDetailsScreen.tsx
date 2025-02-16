@@ -82,13 +82,18 @@ export const LessonDetailsScreenV2 = ({ data }: Props) => {
     });
 
     if (unsolvedPuzzle && activePuzzle?._id !== unsolvedPuzzle.puzzleId._id) {
-      setActivePuzzle(unsolvedPuzzle.puzzleId);
-      setExplanations(content?.explanations?.[locale] || []);
+      // Check if user lick on item of first content
+      const idx = content.contentPuzzles.findIndex(
+        (p) => p.puzzleId._id === activePuzzle?._id
+      );
+      if (idx < 0) {
+        setActivePuzzle(unsolvedPuzzle.puzzleId);
+        setExplanations(content?.explanations?.[locale] || []);
+      }
     } else {
       // If all puzzle are solved, set default first puzzle of first item
       if (contentIndex === 0) {
-        // Check if user just click on first menu item
-        // User re visit and click on item of first content
+        // Check if user lick on item of first content
         const idx = content.contentPuzzles.findIndex(
           (p) => p.puzzleId._id === activePuzzle?._id
         );
