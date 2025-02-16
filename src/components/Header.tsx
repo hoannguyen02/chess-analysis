@@ -137,12 +137,6 @@ export default function Header() {
             >
               {t('navigation.board-pieces')}
             </Link>
-            <Link
-              href="/chess-notation"
-              className="ml-4 hover:text-[var(--p-highlight)]"
-            >
-              {t('navigation.chess-notation')}
-            </Link>
           </div>
           {/* Manage route */}
           {(session?.role === 'Teacher' || session?.role === 'Admin') && (

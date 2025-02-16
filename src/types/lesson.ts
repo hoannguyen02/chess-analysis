@@ -27,7 +27,6 @@ export type Lesson = {
   };
   tags?: string[];
   objectives?: ObjectiveType;
-  puzzles: { puzzleId: string }[];
   contents?: ContentLesson[];
   difficulty?: DifficultyType;
   status: StatusType;
@@ -58,7 +57,6 @@ export type LessonExpanded = {
   };
   tags?: string[];
   objectives?: ObjectiveType;
-  puzzles: { puzzleId: Puzzle }[];
   contents?: ContentLesson[];
   difficulty?: DifficultyType;
   status: StatusType;

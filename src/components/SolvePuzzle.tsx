@@ -456,7 +456,6 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({
   };
 
   function onPromotionPieceSelect(playerPiece: string): boolean {
-    console.log('onPromotionPieceSelect', playerPiece);
     const promotionType = playerPiece?.charAt(1);
 
     const promoteToSquare = moveToRef.current;

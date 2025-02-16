@@ -1,6 +1,7 @@
 import { TitlePage } from '@/components/TitlePage';
 import {
   PhaseOptions,
+  PreMovePlayerOptions,
   RatingOptions,
   SolutionMovePlayerOptions,
   StatusOptions,
@@ -70,7 +71,7 @@ export const PuzzleFormScreen = ({ puzzle, onSaveSuccess }: Props) => {
       phase: 'Middle',
       solutions: [],
       preMove: {
-        player: 'w',
+        player: 'b', // either w or b will works, computer auto play move
         move: '',
         from: '',
         to: '',
@@ -125,6 +126,7 @@ export const PuzzleFormScreen = ({ puzzle, onSaveSuccess }: Props) => {
         payload = {
           ...rest,
           themes: themeIds,
+          preMove: null,
         };
       }
       setIsSubmitting(true);
@@ -357,14 +359,34 @@ export const PuzzleFormScreen = ({ puzzle, onSaveSuccess }: Props) => {
               Computer auto make first move, leave it empty if not need
             </small>
           </label>
-          <div className="grid grid-cols-5 gap-4">
+          <div className="grid grid-cols-6 gap-4">
+            <Label className="font-semibold" value="Player" />
             <Label className="font-semibold" value="Move" />
             <Label className="font-semibold" value="To Square" />
             <Label className="font-semibold" value="From Square" />
             <Label className="font-semibold" value="Actions" />
           </div>
 
-          <div className="mt-2 grid grid-cols-5 mb-4 gap-4">
+          <div className="mt-2 grid grid-cols-6 mb-4 gap-4">
+            <Controller
+              control={control}
+              name="preMove.player"
+              render={({ field }) => (
+                <Select
+                  id="preMove.player"
+                  options={PreMovePlayerOptions}
+                  value={
+                    PreMovePlayerOptions.find(
+                      (option) => option.value === field.value
+                    ) || null
+                  }
+                  onChange={(selectedOption) =>
+                    field.onChange(selectedOption?.value)
+                  }
+                  className="w-full"
+                />
+              )}
+            />
             <TextInput
               {...register(`preMove.move`)}
               placeholder="Move (e.g., e4)"

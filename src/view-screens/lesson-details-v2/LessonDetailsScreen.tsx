@@ -31,7 +31,7 @@ export const LessonDetailsScreenV2 = ({ data }: Props) => {
   const [activePuzzle, setActivePuzzle] = useState<Puzzle>();
   const [explanations, setExplanations] = useState<string[]>([]);
 
-  const { title, contents, _id, version, totalPuzzles } = data;
+  const { title, contents, _id, version, totalPuzzles, description } = data;
 
   const allContents = useMemo(() => contents || [], [contents]);
 
@@ -279,6 +279,7 @@ export const LessonDetailsScreenV2 = ({ data }: Props) => {
             completedPuzzleMap={completedPuzzleMap}
             strokeDashoffset={strokeDashoffset}
             onItemClick={handleOnItemClick}
+            description={description?.[locale]}
           />
         </aside>
 

@@ -23,6 +23,7 @@ import {
   Label,
   Textarea,
   TextInput,
+  Tooltip,
 } from 'flowbite-react';
 import cloneDeep from 'lodash/cloneDeep';
 import { useTranslations } from 'next-intl';
@@ -38,7 +39,7 @@ import {
   useForm,
   useFormContext,
 } from 'react-hook-form';
-import { VscAdd, VscOpenPreview, VscTrash } from 'react-icons/vsc';
+import { VscAdd, VscEdit, VscOpenPreview, VscTrash } from 'react-icons/vsc';
 import Select, { SingleValue } from 'react-select';
 import useSWR from 'swr';
 import { AddToCoursesModal } from './AddToCoursesModal';
@@ -250,10 +251,6 @@ export const LessonFormScreen = ({ lesson }: Props) => {
   const buildInitialLessonForm = (lesson: LessonExpanded) => {
     return {
       ...lesson,
-      puzzles: lesson.puzzles.map((puzzle) => ({
-        ...puzzle.puzzleId,
-        puzzleId: puzzle.puzzleId._id,
-      })),
       contents: lesson.contents?.map((content) => ({
         ...content,
         contentPuzzles: content.contentPuzzles.map((p) => ({
@@ -306,20 +303,28 @@ export const LessonFormScreen = ({ lesson }: Props) => {
 
   // Handle form submission
   const onSubmit: SubmitHandler<LessonForm> = async (data) => {
-    const { _id, puzzles, contents, tags, ...rest } = data;
-    const puzzleIds = puzzles.map((p: Puzzle) => ({ puzzleId: p._id }));
+    const { _id, contents, tags, ...rest } = data;
     const tagIds = tags?.map((tag: Tag) => tag._id);
-    const newContents = contents.map((p) => ({
-      ...p,
-      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-      //@ts-ignore
-      contentPuzzles: p.contentPuzzles.map((cp: Puzzle) => ({
-        puzzleId: cp._id,
-      })),
-    }));
+
+    const newContents = contents.map((p) => {
+      if (!p.contentPuzzles || p.contentPuzzles.length === 0) {
+        alert(`Warning: Content with id ${p._id} is missing contentPuzzles`);
+        throw new Error(`Content with id ${p._id} is missing contentPuzzles`);
+      }
+
+      return {
+        ...p,
+        contentPuzzles: p.contentPuzzles
+          ? // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+            //@ts-ignore
+            p.contentPuzzles.map((cp: Puzzle) => ({
+              puzzleId: cp._id,
+            }))
+          : [],
+      };
+    });
     const payload = {
       ...rest,
-      puzzles: puzzleIds,
       contents: newContents,
       tags: tagIds,
     };
@@ -584,27 +589,49 @@ export const LessonFormScreen = ({ lesson }: Props) => {
                                   <Label>{puzzleIndex + 1}</Label>
                                   <Label>{puzzle.title?.[locale]}</Label>
                                   <Label>{puzzle.difficulty}</Label>
-                                  <div className="flex">
-                                    <Button
-                                      outline
-                                      size="sm"
-                                      onClick={() => {
-                                        previewPuzzle(puzzle);
-                                      }}
-                                      className="mr-2"
-                                    >
-                                      <VscOpenPreview />
-                                    </Button>
-                                    <Button
-                                      outline
-                                      size="sm"
-                                      type="button"
-                                      onClick={() =>
-                                        removeContentPuzzle(index, puzzleIndex)
-                                      }
-                                    >
-                                      -
-                                    </Button>
+                                  <div className="flex items-center">
+                                    <Tooltip content="Xem">
+                                      <Button
+                                        outline
+                                        size="sm"
+                                        onClick={() => {
+                                          previewPuzzle(puzzle);
+                                        }}
+                                        className="mr-2"
+                                      >
+                                        <VscOpenPreview />
+                                      </Button>
+                                    </Tooltip>
+                                    <Tooltip content="Sửa">
+                                      <Button
+                                        outline
+                                        size="sm"
+                                        onClick={() => {
+                                          window.open(
+                                            `/settings/puzzles/${puzzle._id}`,
+                                            '_blank'
+                                          );
+                                        }}
+                                        className="mr-2"
+                                      >
+                                        <VscEdit />
+                                      </Button>
+                                    </Tooltip>
+                                    <Tooltip content="xoá">
+                                      <Button
+                                        outline
+                                        size="sm"
+                                        type="button"
+                                        onClick={() =>
+                                          removeContentPuzzle(
+                                            index,
+                                            puzzleIndex
+                                          )
+                                        }
+                                      >
+                                        -
+                                      </Button>
+                                    </Tooltip>
                                   </div>
                                 </div>
                               </DraggableItem>
@@ -683,95 +710,6 @@ export const LessonFormScreen = ({ lesson }: Props) => {
               </Button>
             </div>
           </div>
-
-          {/* <div className="mb-4">
-            Puzzles:
-            <div className="grid grid-cols-[45%_10%_25%_10%] mb-2 gap-4 place-items-center">
-              <Label>Title</Label>
-              <Label>Difficulty</Label>
-              <Label>Status</Label>
-              <Label>Actions</Label>
-            </div>
-            <DndProvider backend={HTML5Backend}>
-              {puzzleFields.map((field, index) => {
-                return (
-                  <DraggableItem
-                    itemType="puzzles"
-                    index={index}
-                    moveItem={reOrderPuzzles}
-                    key={field._id}
-                    className="mb-4"
-                  >
-                    <div className="grid grid-cols-[45%_10%_25%_10%] mb-2 gap-4 place-items-center">
-                      <Label>{field?.title?.[locale]}</Label>
-                      <Label>{field.difficulty}</Label>
-                      <Label>{field.status}</Label>
-                      <div className="flex">
-                        <Button
-                          outline
-                          size="sm"
-                          onClick={() => previewPuzzle(field)}
-                          className="mr-2"
-                        >
-                          <VscOpenPreview />
-                        </Button>
-                        <Button
-                          outline
-                          size="sm"
-                          type="button"
-                          onClick={() => removePuzzle(index)}
-                        >
-                          -
-                        </Button>
-                      </div>
-                    </div>
-                  </DraggableItem>
-                );
-              })}
-            </DndProvider>
-            <div className="flex items-center">
-              <Button
-                type="button"
-                outline
-                className="w-full"
-                onClick={() => {
-                  setAddPuzzlePopup(true);
-                }}
-              >
-                <VscAdd className="text-[20px]" /> Add puzzle
-              </Button>
-            </div>
-          </div> */}
-
-          {/*  1 lesson only belongs 1 course for now, if we change this logic, 
-          we have to change the sync lesson progress also */}
-          {/* {courses && courses?.length > 0 ? (
-            <div className="mb-16">
-              Courses:
-              <div className="grid grid-cols-[70%_15%_15%] mb-2 gap-4">
-                <Label className="font-bold">Title</Label>
-                <Label className="font-bold">Difficulty</Label>
-                <Label className="font-bold">Status</Label>
-              </div>
-              <div className="grid grid-cols-[70%_15%_15%] mb-2 gap-4">
-                <Label>{courses[0].title[locale]}</Label>
-                <Label>{courses[0].difficulty}</Label>
-                <Label>{courses[0].status}</Label>
-              </div>
-            </div>
-          ) : (
-            <>
-              <Button
-                type="button"
-                outline
-                onClick={() => {
-                  setAddToCoursesPopup(true);
-                }}
-              >
-                Add this lesson to a course
-              </Button>
-            </>
-          )} */}
 
           <div className="flex mt-4">
             <Button
