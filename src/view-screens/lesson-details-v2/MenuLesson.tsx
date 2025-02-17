@@ -1,7 +1,6 @@
 import { useAppContext } from '@/contexts/AppContext';
 import { ContentLesson } from '@/types/lesson';
 import { Puzzle } from '@/types/puzzle';
-import { Tooltip } from 'flowbite-react';
 import { VscCheck } from 'react-icons/vsc';
 
 type Props = {
@@ -13,7 +12,6 @@ type Props = {
   strokeDashoffset: number;
   contents: ContentLesson[] | undefined;
   activePuzzleId?: string;
-  description?: string;
 };
 export const MenuLesson = ({
   title,
@@ -23,20 +21,13 @@ export const MenuLesson = ({
   completedPuzzleMap,
   contents,
   activePuzzleId,
-  description,
   onItemClick,
 }: Props) => {
   const { locale } = useAppContext();
   return (
     <>
       <div className="sticky top-0 z-20 border-b bg-white flex items-center justify-between p-4">
-        {description ? (
-          <Tooltip content={description} placement="bottom">
-            <h3>{title}</h3>
-          </Tooltip>
-        ) : (
-          <h3>{title}</h3>
-        )}
+        <h3>{title}</h3>
         <div className="relative w-10 h-10 flex items-center justify-center">
           <svg className="w-full h-full" viewBox="0 0 36 36">
             {/* Background Circle */}
