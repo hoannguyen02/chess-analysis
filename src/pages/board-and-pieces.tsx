@@ -91,7 +91,7 @@ const BoardAndPiecesPage = () => {
         <p className="mt-4">{t('board-pieces.board-description')}</p>
         <p className="mt-4">{t('board-pieces.player-description')}</p>
         <div className="flex flex-col md:flex-row gap-10 mt-6 items-center">
-          <div className="flex flex-col items-center ">
+          <div className="flex flex-col items-center lg:w-[30%] ">
             <div className="flex flex-col">
               <div className="grid grid-cols-[1fr_100px_1fr] gap-4 text-center mb-4">
                 <Label className="font-semibold">
@@ -147,7 +147,7 @@ const BoardAndPiecesPage = () => {
               {t('common.title.learn-moves')}
             </Button>
           </div>
-          <div className="flex justify-center w-full">
+          <div className="flex justify-center lg:w-[70%]">
             <Image
               src="/images/board-and-pieces.png"
               alt="LIMA Chess - Board and pieces"
