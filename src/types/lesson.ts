@@ -1,4 +1,4 @@
-import { DifficultyType, ExplanationType, ObjectiveType } from '.';
+import { DifficultyType, ExplanationType } from '.';
 import { Puzzle } from './puzzle';
 import { StatusType } from './status';
 
@@ -21,12 +21,12 @@ export type Lesson = {
     en: string;
     vi: string;
   };
-  description?: {
-    en: string;
-    vi: string;
-  };
+  // description?: {
+  //   en: string;
+  //   vi: string;
+  // };
   tags?: string[];
-  objectives?: ObjectiveType;
+  // objectives?: ObjectiveType;
   contents?: ContentLesson[];
   difficulty?: DifficultyType;
   status: StatusType;
@@ -51,12 +51,12 @@ export type LessonExpanded = {
     en: string;
     vi: string;
   };
-  description?: {
-    en: string;
-    vi: string;
-  };
+  // description?: {
+  //   en: string;
+  //   vi: string;
+  // };
   tags?: string[];
-  objectives?: ObjectiveType;
+  // objectives?: ObjectiveType;
   contents?: ContentLesson[];
   difficulty?: DifficultyType;
   status: StatusType;

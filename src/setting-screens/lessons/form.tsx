@@ -7,7 +7,6 @@ import { useToast } from '@/contexts/ToastContext';
 import useBeforeUnload from '@/hooks/useBeforeUnload';
 import useDialog from '@/hooks/useDialog';
 import usePreventRouteChange from '@/hooks/usePreventRouteChange';
-import { ObjectiveType } from '@/types';
 import { Course } from '@/types/course';
 import { ContentType, Lesson, LessonExpanded } from '@/types/lesson';
 import { Puzzle } from '@/types/puzzle';
@@ -19,7 +18,6 @@ import { previewPuzzle } from '@/utils/previewPuzzle';
 import {
   Button,
   Card,
-  Checkbox,
   Label,
   Textarea,
   TextInput,
@@ -62,79 +60,8 @@ type LessonContent = {
 type LessonForm = Lesson & {
   puzzles: Puzzle[];
   contents: LessonContent[];
-  objectives?: ObjectiveType;
+  // objectives?: ObjectiveType;
   tags: Tag[];
-};
-
-const ObjectivesSection = () => {
-  const { watch, setValue, register } = useFormContext<LessonForm>();
-
-  const addObjective = () => {
-    const currentEn = watch('objectives.en') || [];
-    const currentVi = watch('objectives.vi') || [];
-    setValue('objectives.en', [...currentEn, ''], { shouldDirty: true });
-    setValue('objectives.vi', [...currentVi, ''], { shouldDirty: true });
-  };
-
-  const removeObjective = (index: number) => {
-    const currentEn = watch('objectives.en') || [];
-    const currentVi = watch('objectives.vi') || [];
-    const updatedEn = [...currentEn];
-    const updatedVi = [...currentVi];
-    updatedEn.splice(index, 1);
-    updatedVi.splice(index, 1);
-    setValue('objectives.en', updatedEn, { shouldDirty: true });
-    setValue('objectives.vi', updatedVi, { shouldDirty: true });
-  };
-
-  return (
-    <div className="mb-4">
-      <Label value="Objectives" className="text-lg font-semibold" />
-      {(watch('objectives.en') || []).map((_, index) => (
-        <Card
-          key={index}
-          className="w-full shadow-sm border mb-3 hover:shadow-md transition duration-200"
-        >
-          <div className="flex items-center gap-4 w-full">
-            <div className="flex-grow grid grid-cols-2 gap-4">
-              <Textarea
-                rows={2}
-                placeholder="English Objective"
-                {...register(`objectives.en.${index}`)}
-                defaultValue={watch(`objectives.en.${index}`)}
-                className="w-full"
-              />
-              <Textarea
-                rows={2}
-                placeholder="Vietnamese Objective"
-                {...register(`objectives.vi.${index}`)}
-                defaultValue={watch(`objectives.vi.${index}`)}
-                className="w-full"
-              />
-            </div>
-            <Button
-              type="button"
-              color="failure"
-              size="xs"
-              onClick={() => removeObjective(index)}
-              className="p-2 hover:bg-red-600 hover:text-white transition duration-150"
-            >
-              <VscTrash className="h-5 w-5" />
-            </Button>
-          </div>
-        </Card>
-      ))}
-      <Button
-        type="button"
-        outline
-        size="sm"
-        onClick={addObjective}
-        className="mt-2 w-full flex items-center justify-center hover:bg-gray-100 transition duration-150"
-      >
-        <VscAdd className="h-5 w-5 mr-1" /> Add Objective
-      </Button>
-    </div>
-  );
 };
 
 const ContentExplanations = ({ contentIndex }: { contentIndex: number }) => {
@@ -308,8 +235,8 @@ export const LessonFormScreen = ({ lesson }: Props) => {
 
     const newContents = contents.map((p) => {
       if (!p.contentPuzzles || p.contentPuzzles.length === 0) {
-        alert(`Warning: Content with id ${p._id} is missing contentPuzzles`);
-        throw new Error(`Content with id ${p._id} is missing contentPuzzles`);
+        alert(`Missing puzzles for content, ${p.title[locale]}`);
+        throw new Error(`Missing puzzles for content, ${p.title[locale]}`);
       }
 
       return {
@@ -399,9 +326,9 @@ export const LessonFormScreen = ({ lesson }: Props) => {
 
     // Create a new array for updated puzzles
     const updatedPuzzles = [...newPuzzles];
-    console.log('Before splice:', newPuzzles, updatedPuzzles);
+    // console.log('Before splice:', newPuzzles, updatedPuzzles);
     const [movedPuzzle] = updatedPuzzles.splice(fromIndex, 1); // Remove the item
-    console.log('After splice:', updatedPuzzles);
+    // console.log('After splice:', updatedPuzzles);
     updatedPuzzles.splice(toIndex, 0, movedPuzzle); // Insert the item
 
     // Update the form state with the reordered puzzles
@@ -520,7 +447,7 @@ export const LessonFormScreen = ({ lesson }: Props) => {
               />
             </div>
           </div>
-          <div className="grid grid-cols-2  place-content-start mb-4 gap-8">
+          {/* <div className="grid grid-cols-2  place-content-start mb-4 gap-8">
             <div className="flex flex-col">
               <Label value="Description" />
               <Textarea
@@ -539,8 +466,8 @@ export const LessonFormScreen = ({ lesson }: Props) => {
               <Label className="mr-2" htmlFor="isPublic" value="Public" />
               <Checkbox id="isPublic" {...register('isPublic')} />
             </div>
-          </div>
-          <ObjectivesSection />
+          </div> */}
+          {/* <ObjectivesSection /> */}
           <div className="mb-4">
             Contents:
             <DndProvider backend={HTML5Backend}>
