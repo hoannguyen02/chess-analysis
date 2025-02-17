@@ -28,7 +28,7 @@ export const MenuLesson = ({
     <>
       <div className="sticky top-0 z-20 border-b bg-white flex items-center justify-between p-4">
         <h3>{title}</h3>
-        <div className="relative w-10 h-10 flex items-center justify-center">
+        <div className="relative w-14 h-14 flex items-center justify-center">
           <svg className="w-full h-full" viewBox="0 0 36 36">
             {/* Background Circle */}
             <circle

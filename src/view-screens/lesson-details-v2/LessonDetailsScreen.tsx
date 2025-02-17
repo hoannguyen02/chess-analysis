@@ -7,6 +7,8 @@ import useDialog from '@/hooks/useDialog';
 import { LessonExpanded } from '@/types/lesson';
 import { Puzzle } from '@/types/puzzle';
 import { Button } from 'flowbite-react';
+import Head from 'next/head';
+import { useRouter } from 'next/router';
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { VscLayoutMenubar } from 'react-icons/vsc';
 import { MenuLesson } from './MenuLesson';
@@ -31,7 +33,15 @@ export const LessonDetailsScreenV2 = ({ data }: Props) => {
   const [activePuzzle, setActivePuzzle] = useState<Puzzle>();
   const [explanations, setExplanations] = useState<string[]>([]);
 
-  const { title, contents, _id, version, totalPuzzles } = data;
+  const {
+    title,
+    contents,
+    _id,
+    version,
+    totalPuzzles,
+    difficulty,
+    description,
+  } = data;
 
   const allContents = useMemo(() => contents || [], [contents]);
 
@@ -260,10 +270,52 @@ export const LessonDetailsScreenV2 = ({ data }: Props) => {
   }, [activePuzzle, displayedPuzzle?._id]);
   // End Display puzzle
 
+  // Generate dynamic SEO title and description
+  const router = useRouter();
+  const lessonSlug = useMemo(() => {
+    return router.query.slug;
+  }, [router]);
+  const lessonTitle = title?.[locale] || 'LIMA Chess Lesson';
+  const lessonDescription =
+    description?.[locale] ||
+    'Học cờ vua một cách thông minh với LIMA Chess, các bài học từng bước giúp bạn nắm vững chiến lược, chiến thuật cờ vua một cách dễ dàng.';
+
+  const pageUrl = `https://limachess.com/lessons/${lessonSlug}`;
+
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'EducationalCourse',
+    name: lessonTitle,
+    description: lessonDescription,
+    educationalLevel: difficulty,
+    provider: {
+      '@type': 'Organization',
+      name: 'LIMA Chess',
+      url: 'https://limachess.com',
+    },
+    hasCourseInstance: {
+      '@type': 'CourseInstance',
+      courseMode: 'online',
+      courseWorkload: `${totalPuzzles} puzzles`,
+    },
+  };
+
   if (allContents.length === 0) return null;
 
   return (
     <>
+      {/* SEO Metadata */}
+      <Head>
+        <title>{lessonTitle} | LIMA Chess</title>
+        <meta name="description" content={lessonDescription} />
+        <meta property="og:title" content={lessonTitle} />
+        <meta property="og:description" content={lessonDescription} />
+        <meta property="og:url" content={pageUrl} />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:title" content={lessonTitle} />
+        <meta name="twitter:description" content={lessonDescription} />
+        <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
+      </Head>
       <div className="flex">
         {/* Sidebar with navigation */}
         <aside

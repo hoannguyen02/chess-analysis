@@ -18,6 +18,7 @@ import { previewPuzzle } from '@/utils/previewPuzzle';
 import {
   Button,
   Card,
+  Checkbox,
   Label,
   Textarea,
   TextInput,
@@ -447,9 +448,9 @@ export const LessonFormScreen = ({ lesson }: Props) => {
               />
             </div>
           </div>
-          {/* <div className="grid grid-cols-2  place-content-start mb-4 gap-8">
+          <div className="grid grid-cols-2  place-content-start mb-4 gap-8">
             <div className="flex flex-col">
-              <Label value="Description" />
+              <Label value="Description - Meta tag" />
               <Textarea
                 placeholder="English Description"
                 {...register('description.en')}
@@ -466,8 +467,7 @@ export const LessonFormScreen = ({ lesson }: Props) => {
               <Label className="mr-2" htmlFor="isPublic" value="Public" />
               <Checkbox id="isPublic" {...register('isPublic')} />
             </div>
-          </div> */}
-          {/* <ObjectivesSection /> */}
+          </div>
           <div className="mb-4">
             Contents:
             <DndProvider backend={HTML5Backend}>

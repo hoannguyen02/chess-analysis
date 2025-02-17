@@ -21,10 +21,10 @@ export type Lesson = {
     en: string;
     vi: string;
   };
-  // description?: {
-  //   en: string;
-  //   vi: string;
-  // };
+  description?: {
+    en: string;
+    vi: string;
+  };
   tags?: string[];
   // objectives?: ObjectiveType;
   contents?: ContentLesson[];
@@ -51,10 +51,10 @@ export type LessonExpanded = {
     en: string;
     vi: string;
   };
-  // description?: {
-  //   en: string;
-  //   vi: string;
-  // };
+  description?: {
+    en: string;
+    vi: string;
+  };
   tags?: string[];
   // objectives?: ObjectiveType;
   contents?: ContentLesson[];

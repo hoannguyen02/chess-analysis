@@ -49,13 +49,12 @@ export const LessonDetailsScreen = ({ data }: Props) => {
   const t = useTranslations();
   const {
     title,
-    description,
-    objectives,
     contents,
     difficulty,
     _id,
     version,
     totalPuzzles,
+    description,
   } = data;
 
   const contentPuzzleIds = useMemo(
@@ -411,16 +410,6 @@ export const LessonDetailsScreen = ({ data }: Props) => {
               <p className="text-gray-600 mb-6 text-lg">
                 {description[locale]}
               </p>
-            )}
-            {/* Objectives */}
-            {objectives?.[locale] && objectives?.[locale]?.length > 0 && (
-              <div className="mb-8">
-                <ul className="list-disc list-inside space-y-2 text-lg">
-                  {objectives[locale].map((objective, idx) => (
-                    <li key={idx}>{objective}</li>
-                  ))}
-                </ul>
-              </div>
             )}
           </Tabs.Item>
         </Tabs>
