@@ -94,9 +94,13 @@ const BoardAndPiecesPage = () => {
           <div className="flex flex-col items-center ">
             <div className="flex flex-col">
               <div className="grid grid-cols-[1fr_100px_1fr] gap-4 text-center mb-4">
-                <Label className="font-semibold">White</Label>
+                <Label className="font-semibold">
+                  {t('common.title.white')}
+                </Label>
                 <Label></Label>
-                <Label className="font-semibold">Black</Label>
+                <Label className="font-semibold">
+                  {t('common.title.black')}
+                </Label>
               </div>
               {pieces.map((p, index) => {
                 return (
