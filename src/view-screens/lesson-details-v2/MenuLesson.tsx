@@ -26,7 +26,7 @@ export const MenuLesson = ({
   const { locale } = useAppContext();
   return (
     <>
-      <div className="sticky top-0 z-20 border-b bg-white flex items-center justify-between p-4">
+      <div className="sticky top-0 z-20 border-b bg-white flex items-center justify-between p-4 h-[90px]">
         <h3>{title}</h3>
         <div className="relative w-14 h-14 flex items-center justify-center">
           <svg className="w-full h-full" viewBox="0 0 36 36">
@@ -72,7 +72,7 @@ export const MenuLesson = ({
       <ul className="space-y-2">
         {contents?.map((content, index) => (
           <li key={content._id} className="mb-2">
-            <div className="sticky border-b flex justify-between items-center top-[70px] bg-white py-2 font-bold text-gray-700 z-10 p-4">
+            <div className="sticky border-b flex justify-between items-center top-[90px] bg-white py-2 font-bold text-gray-700 z-10 p-4">
               {`${index + 1}.`} {content.title[locale]}
             </div>
 

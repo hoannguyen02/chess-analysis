@@ -80,6 +80,8 @@ export const LessonDetailsScreenV2 = ({ data }: Props) => {
       } else {
         setContentIdx(0);
       }
+    } else {
+      setContentIdx(0);
     }
   }, [allContents, progress.completedPuzzles]);
 
@@ -127,17 +129,28 @@ export const LessonDetailsScreenV2 = ({ data }: Props) => {
   const menuRef = useRef<HTMLDivElement>(null); // Reference for sidebar scrolling
   useEffect(() => {
     if (activePuzzle) {
-      // Scroll sidebar menu to keep the active puzzle visible
       const activeItem = document.querySelector(
         `[data-menu-item="${activePuzzle._id}"]`
       );
 
       if (activeItem && menuRef.current) {
+        const containerTop = menuRef.current.getBoundingClientRect().top;
+        const itemTop = activeItem.getBoundingClientRect().top;
+
+        // Increase the offset to ensure it's not hidden behind the sticky menu
+        const stickyHeader = menuRef.current.querySelector('.sticky');
+        const stickyHeaderHeight = stickyHeader
+          ? stickyHeader.getBoundingClientRect().height
+          : 90; // Default height if not found
+        const scrollOffset =
+          itemTop -
+          containerTop +
+          menuRef.current.scrollTop -
+          stickyHeaderHeight -
+          40; // 40 is item menu height
+
         menuRef.current.scrollTo({
-          top:
-            activeItem.getBoundingClientRect().top +
-            menuRef.current.scrollTop -
-            200, // Adjust offset
+          top: scrollOffset,
           behavior: 'smooth',
         });
       }
