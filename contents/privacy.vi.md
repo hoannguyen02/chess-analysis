@@ -14,7 +14,7 @@ Tại **LIMA Chess**, chúng tôi trân trọng quyền riêng tư của bạn. 
 
 ## Thông tin chúng tôi thu thập
 
-- **Thông tin cá nhân:** Tên, địa chỉ email và thông tin liên lạc khi bạn đăng ký sử dụng dịch vụ của chúng tôi.
+- **Thông tin cá nhân:** Địa chỉ email khi bạn đăng ký sử dụng dịch vụ của chúng tôi.
 - **Dữ liệu hoạt động:** Dữ liệu từ hoạt động của bạn trên trang web, bao gồm sở thích và phản hồi.
 
 &nbsp;

@@ -1,0 +1,13 @@
+{
+  "title": "Enter your email and password to log in from any device.",
+  "email-label": "Email Address",
+  "login": "Login",
+  "login-title": "Already have an account?",
+  "password": "Password",
+  "continue": "Continue",
+  "continue-title": "By continuing, you agree to our",
+  "success": "You're all set! Welcome to LIMA Chess.",
+  "password-required": "Password is required",
+  "email-required": "Email is required",
+  "email-invalid": "Invalid email address"
+}

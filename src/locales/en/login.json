@@ -3,6 +3,8 @@
   "password": "Password",
   "forgot-password": "Forgot Password?",
   "login": "Login",
+  "sign-up-title": " Don’t have an account?",
+  "sign-up": "Sign up",
   "success": "Login successful! Your next step towards mastery starts now.",
   "remember-me": "Remember Me",
   "login-attempts": "Too many login attempts. Please try again later.'",

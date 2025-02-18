@@ -209,16 +209,28 @@ export default function Header() {
                 </Dropdown.Item>
               </Dropdown>
             ) : (
-              <Link
-                href={
-                  currentPath !== '/'
-                    ? `/login?redirect=${encodeURIComponent(currentPath)}`
-                    : '/login'
-                }
-                className="hover:text-[var(--p-highlight)] text-center"
-              >
-                {t('navigation.login')}
-              </Link>
+              <>
+                <Link
+                  href={
+                    currentPath !== '/'
+                      ? `/login?redirect=${encodeURIComponent(currentPath)}`
+                      : '/login'
+                  }
+                  className="hover:text-[var(--p-highlight)] text-center border border-gray-500 rounded-md py-1 px-2"
+                >
+                  {t('navigation.login')}
+                </Link>
+                <Link
+                  href={
+                    currentPath !== '/'
+                      ? `/register?redirect=${encodeURIComponent(currentPath)}`
+                      : '/register'
+                  }
+                  className="ml-2 hover:text-[var(--p-highlight)] text-center border rounded-md py-1 px-2"
+                >
+                  {t('navigation.register')}
+                </Link>
+              </>
             )}
           </div>
         </div>

@@ -772,6 +772,7 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({
               <div>
                 <Link
                   href="/chess-notation"
+                  rel="noopener noreferrer"
                   target="_blank"
                   className="hover:text-[var(--s-bg)] underline"
                 >

@@ -14,7 +14,7 @@ At **LIMA Chess**, we value your privacy. This Privacy Policy outlines how we co
 
 ## Information We Collect
 
-- **Personal Information:** Name, email address, and contact details when you register for our services.
+- **Personal Information:** Email address when you register for our services.
 - **Usage Data:** Data from your activity on our website, including preferences and feedback.
 
 &nbsp;

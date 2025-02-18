@@ -5,21 +5,20 @@ import { useToast } from '@/contexts/ToastContext';
 import { withThemes } from '@/HOF/withThemes';
 import axiosInstance from '@/utils/axiosInstance';
 import { handleSubmission } from '@/utils/handleSubmission';
-import { Checkbox, Label, TextInput } from 'flowbite-react';
+import { Label, TextInput } from 'flowbite-react';
 import { GetServerSidePropsContext } from 'next';
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { useMemo, useState } from 'react';
+import { useState } from 'react';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import { VscEye, VscEyeClosed } from 'react-icons/vsc';
 
-type LoginFormValues = {
+type RegisterFormValues = {
   username: string;
   password: string;
-  rememberMe: boolean;
 };
-const LoginPage = () => {
+const RegisterPage = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const { addToast } = useToast();
@@ -27,43 +26,50 @@ const LoginPage = () => {
   const { apiDomain } = useAppContext();
   const t = useTranslations();
   const [showPassword, setShowPassword] = useState(false);
-  const redirect = useMemo(() => {
-    return router.query.redirect;
-  }, [router]);
-
-  const registerLink = useMemo(() => {
-    return redirect ? `/register?redirect=${redirect}` : '/register';
-  }, [redirect]);
-
   const {
     register, // Register inputs
     handleSubmit, // Handle form submission
     formState: { errors }, // Access form errors
-  } = useForm<LoginFormValues>();
+  } = useForm<RegisterFormValues>();
 
   // Handle form submission
-  const onSubmit: SubmitHandler<LoginFormValues> = async ({
+  const onSubmit: SubmitHandler<RegisterFormValues> = async ({
     username,
     password,
-    rememberMe,
   }) => {
     setIsSubmitting(true);
-    const result = await handleSubmission(
+    const registerResult = await handleSubmission(
       async () => {
-        return await axiosInstance.post(`${apiDomain}/v1/auth/login`, {
+        return await axiosInstance.post(`${apiDomain}/v1/auth/register`, {
           username,
           password,
-          rememberMe,
         });
       },
       addToast, // Pass addToast to show toast notifications
-      t('login.success') // Success message
+      t('register.success') // Success message
     );
 
-    setIsSubmitting(false);
+    if (registerResult) {
+      const loginResult = await handleSubmission(
+        async () => {
+          return await axiosInstance.post(`${apiDomain}/v1/auth/login`, {
+            username,
+            password,
+            rememberMe: true,
+          });
+        },
+        addToast, // Pass addToast to show toast notifications
+        t('login.success') // Success message
+      );
+      setIsSubmitting(false);
 
-    if (result !== undefined) {
-      router.push(redirect ? decodeURIComponent(redirect as string) : '/'); // Redirect manually
+      if (loginResult !== undefined) {
+        router.push(
+          router.query.redirect
+            ? decodeURIComponent(router.query.redirect as string)
+            : '/'
+        ); // Redirect manually
+      }
     }
   };
   return (
@@ -73,17 +79,18 @@ const LoginPage = () => {
           <Logo />
         </Link>
       </div>
+      <h3 className="mb-4 text-center">{t('register.title')}</h3>
       <div className="mb-4">
-        <Label htmlFor="username" value={t('login.email-label')} />
+        <Label htmlFor="username" value={t('register.email-label')} />
         <TextInput
           id="username"
           type="email"
           placeholder={`${t('common.title.example')}: limachess102@gmail.com`}
           {...register('username', {
-            required: t('login.email-required'),
+            required: t('register.email-required'),
             pattern: {
               value: /^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/,
-              message: t('login.email-invalid'),
+              message: t('register.email-invalid'),
             },
           })}
           color={errors.username ? 'failure' : undefined} // Error styling
@@ -95,14 +102,14 @@ const LoginPage = () => {
 
       {/* Password Input */}
       <div className="mb-4">
-        <Label htmlFor="password" value={t('login.password')} />
+        <Label htmlFor="password" value={t('register.password')} />
         <div className="positive">
           <TextInput
             id="password"
             type={showPassword ? 'text' : 'password'} // Toggle input type
             placeholder="******"
             {...register('password', {
-              required: t('login.password-required'),
+              required: t('register.password-required'),
             })}
             color={errors.password ? 'failure' : undefined} // Error styling
             className="flex items-center"
@@ -135,40 +142,37 @@ const LoginPage = () => {
           )}
         </div>
       </div>
-
-      <div className="flex items-center justify-between">
-        {/* Remember Me Checkbox */}
-        <div className="flex items-center">
-          <Checkbox
-            id="rememberMe"
-            {...register('rememberMe')}
-            defaultChecked
-          />
-          <Label htmlFor="rememberMe" className="ml-2">
-            {t('login.remember-me')}
-          </Label>
-        </div>
-        {/* Forgot Password Link */}
+      <p className="text-sm mt-16">
+        {t('register.continue-title')}
         <Link
-          href="/forgot-password"
-          className="text-blue-500 text-sm hover:underline"
+          href="/privacy-policy"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-blue-500 text-sm hover:underline ml-2"
         >
-          {t('login.forgot-password')}
+          {t('common.navigation.privacy')}
         </Link>
-      </div>
-
-      <div className="flex justify-center mt-16">
+        <Link
+          href="/terms-of-service"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-blue-500 text-sm hover:underline ml-2"
+        >
+          {t('common.navigation.terms')}
+        </Link>
+      </p>
+      <div className="flex justify-center">
         <PrimaryButton type="submit" disabled={isSubmitting}>
-          {isSubmitting ? t('common.button.sending') : t('login.login')}
+          {isSubmitting ? t('common.button.sending') : t('register.continue')}
         </PrimaryButton>
       </div>
       <div className="mt-16 text-center">
-        {t('login.sign-up-title')}
+        {t('register.login-title')}
         <Link
-          href={registerLink}
+          href="/login"
           className="text-blue-500 text-sm hover:underline ml-2"
         >
-          {t('login.sign-up')}
+          {t('register.login')}
         </Link>
       </div>
     </form>
@@ -180,6 +184,9 @@ export const getServerSideProps = withThemes(
     try {
       const commonMessages = (await import(`@/locales/${locale}/common.json`))
         .default;
+      const registerMessages = (
+        await import(`@/locales/${locale}/register.json`)
+      ).default;
       const loginMessages = (await import(`@/locales/${locale}/login.json`))
         .default;
 
@@ -187,6 +194,7 @@ export const getServerSideProps = withThemes(
         props: {
           messages: {
             common: commonMessages,
+            register: registerMessages,
             login: loginMessages,
           },
         },
@@ -200,4 +208,4 @@ export const getServerSideProps = withThemes(
   }
 );
 
-export default LoginPage;
+export default RegisterPage;

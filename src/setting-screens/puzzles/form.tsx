@@ -243,6 +243,7 @@ export const PuzzleFormScreen = ({ puzzle, onSaveSuccess }: Props) => {
                 href={`/settings/fen-builder?fen=${fen}`}
                 className="inline-flex items-center text-[12px]"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 Update FEN: <VscEdit className="ml-2" />
               </Link>
