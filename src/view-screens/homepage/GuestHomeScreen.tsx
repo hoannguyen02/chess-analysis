@@ -29,11 +29,11 @@ export const GuestHomeScreen = () => {
     inLanguage: locale,
   };
 
-  const handleViewLessons = () => {
+  const getStarted = () => {
     window.dataLayer?.push({
-      event: 'homepage-register-button',
+      event: 'homepage-get-started-button',
     });
-    router.push('/register-guide');
+    router.push(process.env.NEXT_PUBLIC_LEARN_MORE_LINK!);
   };
 
   return (
@@ -61,7 +61,7 @@ export const GuestHomeScreen = () => {
             gradientDuoTone="pinkToOrange"
             size="lg"
             className="mt-4 px-6 py-3 text-lg transition-transform transform hover:scale-105"
-            onClick={handleViewLessons}
+            onClick={getStarted}
           >
             {t('common.button.get-started')}
           </Button>
