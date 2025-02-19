@@ -8,9 +8,12 @@
     "courses": "Courses",
     "lessons": "Lessons",
     "puzzles": "Puzzles",
+    "learn": "Learn",
+    "practice": "Practice",
     "puzzle-themes": "Puzzle Themes",
     "users": "Users",
     "login": "Login",
+    "community": "Community",
     "register": "Register",
     "logout": "Logout",
     "privacy": "Privacy Policy",
@@ -19,7 +22,9 @@
     "about": "About Us",
     "change-password": "Change Password",
     "board-pieces": "Board and Pieces",
-    "chess-notation": "Chess Notation"
+    "chess-notation": "Chess Notation",
+    "facebook": "Join our Facebook Group",
+    "youtube": "Subscribe on YouTube"
   },
   "title": {
     "manage": "Manage",
@@ -56,7 +61,10 @@
     "no-puzzles": "No puzzles found",
     "select-rating": "Select rating...",
     "search-theme": "Search theme...",
-    "learn-moves": "Learn more"
+    "learn-moves": "Learn more",
+    "no-results": "No lessons found for the selected filters.",
+    "difficulty": "DIFFICULTY",
+    "tags": "TAGS"
   },
   "button": {
     "back": "Back",

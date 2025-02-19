@@ -11,10 +11,10 @@ export default async function handler(
     `${process.env.NEXT_PUBLIC_LIMA_BE_DOMAIN}/v1/courses/public/slug`
   );
 
-  const courseSlugs: string[] = slugResults.data || [];
+  const lessonSlugs: string[] = slugResults.data || [];
 
   // Generate URLs for both the default language (`/lessons/`) and Vietnamese (`/vi/lessons/`)
-  const courseUrls = courseSlugs.flatMap(({ slug }: any) => [
+  const courseUrls = lessonSlugs.flatMap(({ slug }: any) => [
     `<url>
       <loc>${siteUrl}/lessons/${slug}</loc>
       <lastmod>${new Date().toISOString()}</lastmod>
@@ -29,16 +29,12 @@ export default async function handler(
     </url>`,
   ]);
   const menuUrls = [
-    'openings',
-    'endgames',
-    'tactics',
-    'traps',
+    'lessons',
     'about',
     'terms-of-service',
     'privacy-policy',
     'contact',
     'board-and-pieces',
-    'chess-notation',
   ].flatMap((menu: string) => [
     `<url>
       <loc>${siteUrl}/${menu}</loc>

@@ -4,7 +4,7 @@ import { DefaultLocale } from '@/constants';
 import { withThemes } from '@/HOF/withThemes';
 import { LessonExpanded } from '@/types/lesson';
 import { createServerAxios } from '@/utils/axiosInstance';
-import { LessonDetailsScreenV2 } from '@/view-screens/lesson-details-v2/LessonDetailsScreen';
+import { LessonDetailsScreen } from '@/view-screens/lesson-details/LessonDetailsScreen';
 import { GetServerSidePropsContext } from 'next';
 
 type Props = {
@@ -17,7 +17,7 @@ const LessonDetailsPage = ({ data, error, errorCode }: Props) => {
 
   return (
     <Layout>
-      <LessonDetailsScreenV2 data={data} />
+      <LessonDetailsScreen data={data} />
     </Layout>
   );
 };

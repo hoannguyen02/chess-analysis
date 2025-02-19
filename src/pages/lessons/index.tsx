@@ -1,24 +1,24 @@
 import Layout from '@/components/Layout';
 import { withThemes } from '@/HOF/withThemes';
-import { Course } from '@/types/course';
+import enCommon from '@/locales/en/common.json';
+import viCommon from '@/locales/vi/common.json';
+import { Lesson } from '@/types/lesson';
 import { LocaleType } from '@/types/locale';
 import { createServerAxios } from '@/utils/axiosInstance';
 import { filteredQuery } from '@/utils/filteredQuery';
-import { ViewCourses } from '@/view-screens/view-courses';
+import { LessonsScreen } from '@/view-screens/lessons/LessonsScreen';
 import { GetServerSidePropsContext } from 'next';
 
 type Props = {
-  initialCourses: Course[];
+  initialLessons: Lesson[];
   locale: LocaleType;
   currentPage: number;
   totalPages: number;
-  tacticsOnly?: boolean;
-  initialTheme?: string;
 };
-const StrategiesPage = (props: Props) => {
+const LessonsPage = (props: Props) => {
   return (
     <Layout>
-      <ViewCourses {...props} />
+      <LessonsScreen {...props} />
     </Layout>
   );
 };
@@ -28,33 +28,36 @@ export const getServerSideProps = withThemes(
     const { locale, query } = ctx;
     try {
       const page = Number(query.page);
-      const { search, tags = 'Strategies', difficulty } = query;
+      const { search, difficulty } = query;
 
       const queryString = filteredQuery({
         difficulty,
         search,
         locale,
         page: page || 1,
-        tags,
       });
 
       const serverAxios = createServerAxios(ctx);
-      const res = await serverAxios.get(`/v1/courses/public?${queryString}`);
+      const res = await serverAxios.get(`/v1/lessons/public?${queryString}`);
 
       const { items, lastPage, currentPage } = res.data || {};
 
-      const commonMessages = (await import(`@/locales/${locale}/common.json`))
-        .default;
+      // Use fallback translations if import fails
+      const translations: Record<LocaleType, any> = {
+        en: enCommon,
+        vi: viCommon,
+      };
+      const commonMessages = translations[locale as LocaleType];
+
       return {
         props: {
           messages: {
             common: commonMessages,
           },
           locale,
-          initialCourses: items,
+          initialLessons: items,
           currentPage,
           totalPages: lastPage,
-          tags,
         },
       };
     } catch (error) {
@@ -66,4 +69,4 @@ export const getServerSideProps = withThemes(
   }
 );
 
-export default StrategiesPage;
+export default LessonsPage;

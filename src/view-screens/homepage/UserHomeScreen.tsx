@@ -125,9 +125,8 @@ export const UserHomeScreen = () => {
                 outline
                 gradientDuoTone="cyanToBlue"
                 size="lg"
-                disabled={isSubscriptionExpired}
                 onClick={() => {
-                  router.push(`/practice-puzzles`);
+                  router.push(`/practice`);
                 }}
               >
                 {t('common.title.practice-puzzles')}

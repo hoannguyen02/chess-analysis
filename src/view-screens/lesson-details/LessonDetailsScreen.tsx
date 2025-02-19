@@ -1,61 +1,49 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
-import { SolvePuzzleDrawer } from '@/components/SolvePuzzleDrawer';
+import { RegisterDialog } from '@/components/RegisterDialog';
+import SolvePuzzle from '@/components/SolvePuzzle';
+import { TransitionContainer } from '@/components/TransitionContainer';
 import { useAppContext } from '@/contexts/AppContext';
 import useDialog from '@/hooks/useDialog';
 import { LessonExpanded } from '@/types/lesson';
 import { Puzzle } from '@/types/puzzle';
-import { fetcher } from '@/utils/fetcher';
-import { getDifficultyColor } from '@/utils/getDifficultyColor';
-import { Badge, Button, Card, Progress, Tabs } from 'flowbite-react';
-import { useTranslations } from 'next-intl';
+import { Button } from 'flowbite-react';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
-import { useEffect, useMemo, useRef, useState } from 'react';
-import { VscArrowLeft, VscPlay } from 'react-icons/vsc';
-import useSWR from 'swr';
-import { CongratsBanner } from './CongratsBanner';
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import { VscLayoutMenubar } from 'react-icons/vsc';
+import { MenuLesson } from './MenuLesson';
+import { MenuLessonDrawer } from './MenuLessonDrawer';
 import { useLessonProgress } from './useLessonProgress';
 
 type Props = {
   data: LessonExpanded;
 };
 
-type ContentPuzzleDialogData = {
-  puzzle: Puzzle;
-  contentIndex: number;
-};
 export const LessonDetailsScreen = ({ data }: Props) => {
-  const { locale, session } = useAppContext();
-  const [activeTab, setActiveTab] = useState(0);
-  const router = useRouter();
-
-  useEffect(() => {
-    setActiveTab(0);
-  }, []);
-
-  const { courseSlug, lessonSlug } = useMemo(() => {
-    const { courseSlug, lessonSlug } = router.query;
-    return {
-      courseSlug,
-      lessonSlug,
-    };
-  }, [router]);
   const {
-    open: isOpenSolvePuzzle,
-    data: contentPuzzle,
-    onCloseDialog,
-    onOpenDialog,
-  } = useDialog<ContentPuzzleDialogData>();
-  const t = useTranslations();
+    open: isOpenRegisterDialog,
+    onOpenDialog: onOpenRegister,
+    onCloseDialog: onCloseRegister,
+  } = useDialog();
+  const { isMobile, isLoggedIn } = useAppContext();
+  const [isOpenDrawer, setIsOpenDrawer] = useState(false);
+  const { locale } = useAppContext();
+
+  const [contentIndex, setContentIdx] = useState<number>();
+  const [activePuzzle, setActivePuzzle] = useState<Puzzle>();
+  const [explanations, setExplanations] = useState<string[]>([]);
+
   const {
     title,
     contents,
-    difficulty,
     _id,
     version,
     totalPuzzles,
+    difficulty,
     description,
   } = data;
+
+  const allContents = useMemo(() => contents || [], [contents]);
 
   const contentPuzzleIds = useMemo(
     () =>
@@ -67,146 +55,245 @@ export const LessonDetailsScreen = ({ data }: Props) => {
     [contents]
   );
 
-  const { progress, saveProgress } = useLessonProgress(
+  const { progress, saveProgress, completedPuzzleMap } = useLessonProgress(
     _id!,
     version,
     contentPuzzleIds,
     totalPuzzles
   );
 
-  const { completedProgress, isCompleted } = useMemo(() => {
-    const progressInPercent =
-      (progress.completedPuzzles?.length / totalPuzzles) * 100;
+  const hasRunOnce = useRef(false);
+  useEffect(() => {
+    if (allContents?.length && progress?.completedPuzzles?.length) {
+      if (hasRunOnce.current) return; // Prevent re-execution after first run
+      hasRunOnce.current = true; // Mark as executed
+
+      // Find the first uncompleted content
+      const index = allContents?.findIndex((content) =>
+        content.contentPuzzles.some(
+          (puzzle) => !progress.completedPuzzles.includes(puzzle.puzzleId._id!)
+        )
+      );
+
+      if (index !== -1) {
+        setContentIdx(index as number);
+      } else {
+        setContentIdx(0);
+      }
+    } else {
+      setContentIdx(0);
+    }
+  }, [allContents, progress.completedPuzzles]);
+
+  useEffect(() => {
+    if (contentIndex === undefined) return;
+    const content = allContents[contentIndex];
+    const unsolvedPuzzle = content.contentPuzzles.find((p) => {
+      // @ts-ignore
+      return !progress.completedPuzzles.includes(p.puzzleId._id);
+    });
+
+    if (unsolvedPuzzle && activePuzzle?._id !== unsolvedPuzzle.puzzleId._id) {
+      // Check if user lick on item of first content
+      const idx = content.contentPuzzles.findIndex(
+        (p) => p.puzzleId._id === activePuzzle?._id
+      );
+      if (idx < 0) {
+        setActivePuzzle(unsolvedPuzzle.puzzleId);
+        setExplanations(content?.explanations?.[locale] || []);
+      }
+    } else {
+      // If all puzzle are solved, set default first puzzle of first item
+      if (contentIndex === 0) {
+        // Check if user lick on item of first content
+        const idx = content.contentPuzzles.findIndex(
+          (p) => p.puzzleId._id === activePuzzle?._id
+        );
+        if (idx < 0) {
+          setActivePuzzle(content.contentPuzzles[0].puzzleId);
+          setExplanations(content?.explanations?.[locale] || []);
+        }
+      }
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [
+    allContents,
+    contentIndex,
+    contents,
+    locale,
+    // progress.completedPuzzles, // Only run when first load component, don't include progress.completedPuzzles because it will automatically set index after solved puzzle, user cannot read information
+    activePuzzle,
+  ]);
+
+  // Display menu
+  const menuRef = useRef<HTMLDivElement>(null); // Reference for sidebar scrolling
+  useEffect(() => {
+    if (activePuzzle) {
+      const activeItem = document.querySelector(
+        `[data-menu-item="${activePuzzle._id}"]`
+      );
+
+      if (activeItem && menuRef.current) {
+        const containerTop = menuRef.current.getBoundingClientRect().top;
+        const itemTop = activeItem.getBoundingClientRect().top;
+
+        // Increase the offset to ensure it's not hidden behind the sticky menu
+        const stickyHeader = menuRef.current.querySelector('.sticky');
+        const stickyHeaderHeight = stickyHeader
+          ? stickyHeader.getBoundingClientRect().height
+          : 90; // Default height if not found
+        const scrollOffset =
+          itemTop -
+          containerTop +
+          menuRef.current.scrollTop -
+          stickyHeaderHeight -
+          40; // 40 is item menu height
+
+        menuRef.current.scrollTo({
+          top: scrollOffset,
+          behavior: 'smooth',
+        });
+      }
+    }
+  }, [activePuzzle]);
+
+  const { completedProgress, circumference, strokeDashoffset } = useMemo(() => {
+    const progressInPercent = totalPuzzles
+      ? Math.round(
+          ((progress.completedPuzzles?.length || 0) / totalPuzzles) * 100
+        )
+      : 0;
+
+    const _progress = Math.min(Math.max(progressInPercent, 0), 100);
+    const _circumference = 2 * Math.PI * 15; // 15 is the radius
+
     return {
       isCompleted: progressInPercent === 100,
       completedProgress: progressInPercent,
+      circumference: _circumference,
+      strokeDashoffset: _circumference - (_progress / 100) * _circumference,
     };
   }, [progress.completedPuzzles, totalPuzzles]);
 
-  const [expandedContentIndex, setExpandedContentIndex] = useState<
-    number | null
-  >(null);
-  // Create refs for each panel
-  const panelRefs = useRef<(HTMLDivElement | null)[]>([]);
-
-  const handleScrollToPanel = (index: number) => {
-    const panel = panelRefs.current[index];
-    if (panel) {
-      // Delay scroll to ensure the layout is fully updated
-      setTimeout(() => {
-        const panelRect = panel.getBoundingClientRect();
-        const viewportHeight = window.innerHeight;
-        const offset = 45;
-
-        if (panelRect.top < 0 || panelRect.bottom > viewportHeight) {
-          const scrollPosition = window.scrollY + panelRect.top - offset;
-
-          window.scrollTo({
-            top: scrollPosition,
-            behavior: 'smooth',
-          });
-        }
-      }, 300); // Adjust delay based on your animation duration
-    }
-  };
-
-  useEffect(() => {
-    if (contents?.length === 1) {
-      setExpandedContentIndex(0);
-    } else if (expandedContentIndex !== null) {
-      handleScrollToPanel(expandedContentIndex);
-    }
-  }, [contents, expandedContentIndex]);
-
-  const togglePanel = (index: number) => {
-    setExpandedContentIndex((prevIndex) =>
-      prevIndex === index ? null : index
-    );
-  };
-
-  const key = useMemo(
-    () =>
-      isCompleted ? `/v1/courses/public/next-lesson/${courseSlug}` : undefined,
-    [courseSlug, isCompleted]
-  );
-
-  const { data: nextLessonSlug, isLoading: isLoadingNextLesson } = useSWR(
-    key,
-    fetcher,
-    {
-      revalidateOnFocus: false,
-    }
-  );
-
-  const difficultyColor = getDifficultyColor(difficulty);
-
-  const handleContinueOrStart = () => {
-    // If the user has completed all puzzles, go to the next lesson
-    // Start or review is expanded first content
-    if (progress.completedPuzzles?.length === 0 || isCompleted) {
-      // Expand the first content
-      setExpandedContentIndex(0);
-    } else {
-      if (progress.completedPuzzles?.length < data.totalPuzzles) {
-        // Find the first uncompleted content
-        const index = data.contents?.findIndex((content) => {
-          return content.contentPuzzles.some(
-            (puzzle) =>
-              !progress.completedPuzzles.includes(puzzle.puzzleId._id!)
-          );
-        });
-        if (index !== -1) setExpandedContentIndex(index as number);
-      }
-    }
-  };
-
-  const handleNextLesson = () => {
-    router.push(`/lessons/${courseSlug}/${nextLessonSlug}`);
-  };
-
-  const hasNextPuzzle = () => {
-    const allContents = data.contents || [];
-
-    if (!contentPuzzle) return false;
-
-    const { contentIndex } = contentPuzzle;
+  const hasNextPuzzle = useMemo(() => {
     if (contentIndex === undefined) return false;
 
+    // Check if the current content has any unsolved puzzles
+    const currentContentHasNext = allContents[contentIndex].contentPuzzles.some(
+      // @ts-ignore
+      (p) => !progress.completedPuzzles.includes(p.puzzleId._id)
+    );
+
+    if (currentContentHasNext) return true;
+
+    // Check if any future content has unsolved puzzles
+    return allContents.slice(contentIndex + 1).some((content) =>
+      content.contentPuzzles.some(
+        // @ts-ignore
+        (p) => !progress.completedPuzzles.includes(p.puzzleId._id)
+      )
+    );
+  }, [contentIndex, allContents, progress.completedPuzzles]);
+
+  const handleNextPuzzle = useCallback(() => {
+    if (contentIndex === undefined) return;
+
     const currentContent = allContents[contentIndex];
 
-    // Check if there are any unsolved puzzles in this content section
-    return currentContent.contentPuzzles.some((p) => {
+    // Find the next unsolved puzzle in the current content
+    const nextPuzzle = currentContent.contentPuzzles.find(
       // @ts-ignore
-      return !progress.completedPuzzles.includes(p.puzzleId._id);
-    });
-  };
+      (p) => !progress.completedPuzzles.includes(p.puzzleId._id)
+    );
 
-  const handleNextPuzzle = () => {
-    const allContents = data.contents || [];
-
-    const { contentIndex } = contentPuzzle as ContentPuzzleDialogData;
-
-    const currentContent = allContents[contentIndex];
-
-    // Find the next unsolved puzzle within the same content section
-    const unsolvedPuzzle = currentContent.contentPuzzles.find((p) => {
-      // @ts-ignore
-      return !progress.completedPuzzles.includes(p.puzzleId._id);
-    });
-    if (unsolvedPuzzle) {
-      onOpenDialog({ puzzle: unsolvedPuzzle.puzzleId, contentIndex });
-    } else {
-      onCloseDialog();
+    if (nextPuzzle) {
+      setActivePuzzle(nextPuzzle.puzzleId);
+      return;
     }
+
+    // If no unsolved puzzles in current content, find the next content with an unsolved puzzle
+    const nextContentIndex = allContents.findIndex(
+      (content, idx) =>
+        idx > contentIndex &&
+        content.contentPuzzles.some(
+          // @ts-ignore
+          (p) => !progress.completedPuzzles.includes(p.puzzleId._id)
+        )
+    );
+
+    if (nextContentIndex !== -1) {
+      const nextContent = allContents[nextContentIndex];
+      const nextUnsolvedPuzzle = nextContent.contentPuzzles.find(
+        // @ts-ignore
+        (p) => !progress.completedPuzzles.includes(p.puzzleId._id)
+      );
+
+      if (nextUnsolvedPuzzle) {
+        setContentIdx(nextContentIndex);
+        setExplanations(nextContent?.explanations?.[locale] || []);
+        setActivePuzzle(nextUnsolvedPuzzle.puzzleId);
+      }
+      return;
+    } else {
+      // If solved all puzzles and not logged in yet, will show banner
+      if (!isLoggedIn) {
+        onOpenRegister();
+        return;
+      }
+    }
+  }, [
+    allContents,
+    contentIndex,
+    isLoggedIn,
+    locale,
+    onOpenRegister,
+    progress.completedPuzzles,
+  ]);
+
+  const handleOnItemClick = (
+    index: number,
+    puzzle: Puzzle,
+    explanations: string[] = []
+  ) => {
+    if (contentIndex !== index) {
+      setContentIdx(index);
+    }
+    setIsOpenDrawer(false);
+    setActivePuzzle(puzzle);
+    setExplanations(explanations);
   };
+
+  const drawerRef = useRef<HTMLDivElement>(null);
+
+  // Display puzzle
+  const [isLoading, setIsLoading] = useState(false);
+  const [displayedPuzzle, setDisplayedPuzzle] = useState(activePuzzle);
+  const [isVisible, setIsVisible] = useState(false); // For fade-in transition
+  useEffect(() => {
+    if (displayedPuzzle?._id !== activePuzzle?._id) {
+      setIsVisible(false);
+      setIsLoading(true);
+
+      setTimeout(() => {
+        setDisplayedPuzzle(activePuzzle);
+        setIsLoading(false);
+        setIsVisible(true);
+      }, 300);
+    }
+  }, [activePuzzle, displayedPuzzle?._id]);
+  // End Display puzzle
 
   // Generate dynamic SEO title and description
+  const router = useRouter();
+  const lessonSlug = useMemo(() => {
+    return router.query.slug;
+  }, [router]);
   const lessonTitle = title?.[locale] || 'LIMA Chess Lesson';
   const lessonDescription =
     description?.[locale] ||
     'Học cờ vua một cách thông minh với LIMA Chess, các bài học từng bước giúp bạn nắm vững chiến lược, chiến thuật cờ vua một cách dễ dàng.';
 
-  const pageUrl = `https://limachess.com/lessons/${courseSlug}/${lessonSlug}`;
+  const pageUrl = `https://limachess.com/lessons/${lessonSlug}`;
 
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -226,6 +313,8 @@ export const LessonDetailsScreen = ({ data }: Props) => {
     },
   };
 
+  if (allContents.length === 0) return null;
+
   return (
     <>
       {/* SEO Metadata */}
@@ -240,200 +329,98 @@ export const LessonDetailsScreen = ({ data }: Props) => {
         <meta name="twitter:description" content={lessonDescription} />
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
       </Head>
-      <div className="container mx-auto p-4">
-        <div className="flex items-center mb-2">
-          <Button
-            outline
-            onClick={() => {
-              router.back();
-            }}
-          >
-            <VscArrowLeft />
-          </Button>
-        </div>
-        {/* Header Section */}
-        <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-6">
-          <h1 className="text-3xl font-bold text-gray-800 mb-2 sm:mb-0">
-            {title[locale]}
-          </h1>
-          <Badge color={difficultyColor} className="text-lg px-3 py-1 w-max">
-            {difficulty}
-          </Badge>
-        </div>
-        <Progress progress={completedProgress} size="lg" className="mb-4" />
-        {isCompleted ? (
-          isLoadingNextLesson || !session?.id ? null : (
-            <div className="flex flex-col sm:flex-row gap-4 mt-6">
-              {nextLessonSlug ? (
-                <CongratsBanner
-                  title={t('common.title.congrats-course')}
-                  buttonTitle={t('common.button.next-lesson')}
-                  onClick={handleNextLesson}
-                />
-              ) : (
-                <CongratsBanner
-                  title={t('common.title.congrats-course')}
-                  buttonTitle={t('common.button.review-course')}
-                  onClick={() => {
-                    router.push(`/lessons/${courseSlug}`);
-                  }}
-                />
-              )}
-            </div>
-          )
-        ) : (
-          <>
-            {/* Don't display button if 1 content because we already expanded it */}
-            {contents && contents?.length > 1 && (
-              <Button
-                className="mb-6 w-full text-lg py-2 rounded-md shadow-md hover:shadow-lg transition hover:bg-blue-700"
-                color="blue"
-                onClick={handleContinueOrStart}
-              >
-                <VscPlay size={18} />{' '}
-                {completedProgress > 0
-                  ? t('common.title.continue-learning')
-                  : t('common.title.start')}
-              </Button>
-            )}
-          </>
-        )}
-        <Tabs
-          aria-label="Tabs with underline"
-          variant="fullWidth"
-          defaultValue={activeTab}
-          key={activeTab}
+      <div className="flex">
+        {/* Sidebar with navigation */}
+        <aside
+          ref={menuRef}
+          className="w-1/4 h-[calc(100vh-120px)] overflow-y-auto border-r border-l border-t rounded-md sticky top-0 hidden lg:flex lg:flex-col"
         >
-          <Tabs.Item
-            active={activeTab === 0}
-            onClick={() => setActiveTab(0)}
-            title={t('common.title.learn-and-solve')}
-          >
-            {/* Contents */}
-            {contents && (
-              <div className="mb-8">
-                {contents.map((content, idx) => (
-                  <div
-                    key={idx}
-                    ref={(el) => {
-                      panelRefs.current[idx] = el;
-                    }}
-                    className="border rounded-lg shadow-sm mb-4"
-                  >
-                    {/* Accordion Header */}
-                    <div
-                      onClick={() => togglePanel(idx)}
-                      className="cursor-pointer flex justify-between items-center p-4 bg-blue-100 hover:bg-blue-200 transition duration-200 rounded-t-lg"
-                    >
-                      <h3 className="font-semibold text-xl text-gray-800">
-                        {content.title[locale]}
-                      </h3>
-                      <span
-                        className={`transform transition-transform duration-300 ${
-                          expandedContentIndex === idx
-                            ? 'rotate-180 text-blue-600'
-                            : 'rotate-0 text-gray-500'
-                        }`}
-                      >
-                        ▼
-                      </span>
-                    </div>
+          <MenuLesson
+            contents={contents}
+            activePuzzleId={activePuzzle?._id}
+            title={title[locale]}
+            circumference={circumference}
+            completedProgress={completedProgress}
+            completedPuzzleMap={completedPuzzleMap}
+            strokeDashoffset={strokeDashoffset}
+            onItemClick={handleOnItemClick}
+          />
+        </aside>
 
-                    {/* Accordion Content */}
-                    <div
-                      className={`overflow-scroll transition-[max-height] duration-500 ease-in-out ${
-                        expandedContentIndex === idx
-                          ? 'max-h-screen'
-                          : 'max-h-0'
-                      }`}
-                    >
-                      <div className="p-4 bg-white rounded-b-lg">
-                        {/* Explanations */}
-                        <ul className="list-inside list-decimal space-y-2 text-lg">
-                          {content.explanations?.[locale]?.map(
-                            (explanation, i) => (
-                              <li key={i} className="text-gray-600">
-                                {explanation}
-                              </li>
-                            )
-                          )}
-                        </ul>
-
-                        {/* Content Puzzles */}
-                        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4 mt-6">
-                          {content.contentPuzzles.map(
-                            ({ puzzleId: puzzle }, index) => {
-                              const isCompleted =
-                                progress.completedPuzzles.includes(puzzle._id!);
-                              return (
-                                <Card
-                                  key={index}
-                                  className="hover:shadow-lg transition border"
-                                >
-                                  <p className="text-center text-lg font-semibold text-gray-700">
-                                    {t('common.title.example')} {index + 1}
-                                  </p>
-                                  <Button
-                                    color={isCompleted ? 'green' : 'blue'}
-                                    size="sm"
-                                    fullSized
-                                    onClick={() => {
-                                      onOpenDialog({
-                                        puzzle,
-                                        contentIndex: idx,
-                                      });
-                                    }}
-                                  >
-                                    {isCompleted
-                                      ? t('common.button.solved')
-                                      : t('common.button.view')}
-                                  </Button>
-                                </Card>
-                              );
-                            }
-                          )}
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+        {/* Main content */}
+        <div className="w-full lg:w-3/4 p-4 pb-[120px] lg:pb-4 lg:pl-8 overflow-y-auto h-[calc(100vh-120px)]">
+          <TransitionContainer isLoading={isLoading} isVisible={isVisible}>
+            {displayedPuzzle && (
+              <SolvePuzzle
+                showNextButton={hasNextPuzzle || !isLoggedIn}
+                highlightPossibleMoves
+                onNextClick={handleNextPuzzle}
+                puzzle={displayedPuzzle}
+                onSolved={async () => {
+                  await saveProgress(displayedPuzzle._id!);
+                }}
+                showTimer={false}
+                actionClass={`${isMobile ? 'pl-20 min-h-[72px]' : ''} `}
+              />
+            )}
+            <div className="mt-4">
+              {/* Mobile */}
+              <div className="fixed bottom-4 left-4 lg:hidden">
+                <Button
+                  outline
+                  gradientDuoTone="tealToLime"
+                  onClick={() => {
+                    setIsOpenDrawer(true);
+                  }}
+                >
+                  <VscLayoutMenubar />
+                </Button>
+              </div>
+              <div className="flex flex-col mt-4">
+                {explanations?.map((e, index) => (
+                  <p key={`explanation-${index}`}>{e}</p>
                 ))}
               </div>
-            )}
-          </Tabs.Item>
-          <Tabs.Item
-            active={activeTab === 1}
-            onClick={() => setActiveTab(1)}
-            title={t('common.title.objectives')}
-          >
-            {/* Description */}
-            {description?.[locale] && (
-              <p className="text-gray-600 mb-6 text-lg">
-                {description[locale]}
-              </p>
-            )}
-          </Tabs.Item>
-        </Tabs>
-        {isOpenSolvePuzzle && contentPuzzle?.puzzle && (
-          <SolvePuzzleDrawer
-            puzzle={contentPuzzle.puzzle}
-            onClose={onCloseDialog}
-            onSolved={async () => {
-              await saveProgress(contentPuzzle.puzzle._id!);
-              const totalCompletedPuzzles =
-                progress.completedPuzzles?.length + 1;
-              if (totalCompletedPuzzles === data.totalPuzzles) {
-                // Scroll to the top of the page
-                window.scrollTo({
-                  top: 0,
+            </div>
+          </TransitionContainer>
+        </div>
+      </div>
+      {isOpenDrawer && (
+        <MenuLessonDrawer
+          ref={drawerRef} // Pass ref to the component
+          onClose={() => {
+            setIsOpenDrawer(false);
+          }}
+          onOpen={() => {
+            setTimeout(() => {
+              if (!drawerRef.current) return;
+
+              const activeItem = drawerRef.current.querySelector(
+                `[data-menu-item="${activePuzzle?._id}"]`
+              );
+
+              if (activeItem) {
+                activeItem.scrollIntoView({
                   behavior: 'smooth',
+                  block: 'center',
                 });
               }
-            }}
-            showNextButton={hasNextPuzzle()}
-            onNextClick={handleNextPuzzle}
+            }, 200);
+          }}
+        >
+          <MenuLesson
+            contents={contents}
+            activePuzzleId={activePuzzle?._id}
+            title={title[locale]}
+            circumference={circumference}
+            completedProgress={completedProgress}
+            completedPuzzleMap={completedPuzzleMap}
+            strokeDashoffset={strokeDashoffset}
+            onItemClick={handleOnItemClick}
           />
-        )}
-      </div>
+        </MenuLessonDrawer>
+      )}
+      {isOpenRegisterDialog && <RegisterDialog onClose={onCloseRegister} />}
     </>
   );
 };

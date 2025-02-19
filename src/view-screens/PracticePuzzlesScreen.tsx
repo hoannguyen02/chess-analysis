@@ -92,7 +92,7 @@ export const PracticePuzzlesScreen = () => {
           'practice-puzzle-payload',
           JSON.stringify(payload)
         );
-        router.push(`/practice-puzzles/${nextPuzzleId}`);
+        router.push(`/practice/${nextPuzzleId}`);
       } else {
         addToast(t('common.title.no-puzzles'), 'error');
       }

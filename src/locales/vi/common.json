@@ -8,9 +8,12 @@
     "courses": "Khóa học",
     "lessons": "Bài học",
     "puzzles": "Câu đố",
+    "learn": "Học",
+    "practice": "Luyện tập",
     "puzzle-themes": "Chiến thuật",
     "users": "Tài khoản",
     "login": "Đăng nhập",
+    "community": "Cộng đồng",
     "register": "Đăng ký",
     "logout": "Đăng xuất",
     "privacy": "Chính sách bảo mật",
@@ -19,7 +22,9 @@
     "about": "Về Chúng Tôi",
     "change-password": "Đổi mật khẩu",
     "board-pieces": "Bàn cờ và quân cờ",
-    "chess-notation": "Cách viết biên bản"
+    "chess-notation": "Cách viết biên bản",
+    "facebook": "Tham gia nhóm Facebook",
+    "youtube": "Đăng ký kênh YouTube"
   },
   "title": {
     "manage": "Quản lý",
@@ -56,7 +61,10 @@
     "no-puzzles": "Không tìm thấy dữ liệu, vui lòng thử lại!",
     "select-rating": "Chọn trình độ (Elo)...",
     "search-theme": "Tìm nhanh chiến thuật...",
-    "learn-moves": "Tìm hiểu thêm"
+    "learn-moves": "Tìm hiểu thêm",
+    "no-results": "Không tìm thấy bài học nào phù hợp với bộ lọc đã chọn.",
+    "difficulty": "Độ khó",
+    "tags": "Từ khóa / Thẻ"
   },
   "button": {
     "back": "Quay lại",

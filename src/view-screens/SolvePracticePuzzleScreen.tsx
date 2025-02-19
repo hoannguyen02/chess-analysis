@@ -60,7 +60,7 @@ export const SolvePracticePuzzleScreen = () => {
 
       return;
     }
-    router.push(`/practice-puzzles/${nextPuzzleId}`);
+    router.push(`/practice/${nextPuzzleId}`);
   };
 
   const handleSolvePuzzle = useCallback(
@@ -119,7 +119,7 @@ export const SolvePracticePuzzleScreen = () => {
           <button
             className="mb-4 flex items-center"
             onClick={() => {
-              router.push('/practice-puzzles');
+              router.push('/practice');
             }}
           >
             <VscArrowLeft /> {t('common.button.back')}
@@ -132,7 +132,7 @@ export const SolvePracticePuzzleScreen = () => {
             showNextButton={showNextButton}
             showCloseButton={!showNextButton}
             onCloseClick={() => {
-              router.push('/practice-puzzles');
+              router.push('/practice');
             }}
           />
         </div>

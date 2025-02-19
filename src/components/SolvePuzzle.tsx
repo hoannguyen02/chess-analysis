@@ -662,7 +662,7 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({
     }
 
     return {
-      message: `${t(`common.title.${playerName}`)} ${t('common.title.move')}`,
+      message: `${t(`common.title.${playerName.toLocaleLowerCase()}`)} ${t('common.title.move')}`,
       bgHeader: 'bg-[var(--p-bg)]',
     };
   }, [currentStep, playerName, puzzle.solutions.length, showRetry, t]);

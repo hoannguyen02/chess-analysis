@@ -25,6 +25,12 @@ export const useLessonProgress = (
 
   const userId = useMemo(() => session?.id, [session]);
 
+  const completedPuzzleMap = useMemo(() => {
+    const map = new Map<string, boolean>();
+    progress.completedPuzzles.forEach((cur) => map.set(cur, true));
+    return map;
+  }, [progress.completedPuzzles]);
+
   // Load progress on mount
   const isFetching = useRef(false);
   useEffect(() => {
@@ -166,5 +172,5 @@ export const useLessonProgress = (
     }
   };
 
-  return { progress, saveProgress };
+  return { progress, saveProgress, completedPuzzleMap };
 };

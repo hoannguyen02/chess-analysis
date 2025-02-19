@@ -106,37 +106,39 @@ export default function Header() {
               </svg>
             )}
           </Link>
-          <div className="ml-4 hidden lg:flex">
+          <div className="ml-8 hidden lg:flex">
             <Link
-              href="/tactics"
+              href="/lessons"
               className="ml-4 hover:text-[var(--p-highlight)]"
             >
-              {t('navigation.tactics')}
+              {t('navigation.learn')}
             </Link>
             <Link
-              href="/openings"
+              href="/practice"
               className="ml-4 hover:text-[var(--p-highlight)]"
             >
-              {t('navigation.openings')}
+              {t('navigation.practice')}
             </Link>
-            <Link
-              href="/endgames"
-              className="ml-4 hover:text-[var(--p-highlight)]"
-            >
-              {t('navigation.endgames')}
-            </Link>
-            <Link
-              href="/traps"
-              className="ml-4 hover:text-[var(--p-highlight)]"
-            >
-              {t('navigation.traps')}
-            </Link>
-            <Link
-              href="/board-and-pieces"
-              className="ml-4 hover:text-[var(--p-highlight)]"
-            >
-              {t('navigation.board-pieces')}
-            </Link>
+            <div className="ml-4">
+              <Dropdown label={t('navigation.community')} inline>
+                <Dropdown.Item
+                  as={Link}
+                  href="https://www.facebook.com/limachess102"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {t('navigation.facebook')}
+                </Dropdown.Item>
+                <Dropdown.Item
+                  as={Link}
+                  href="https://www.youtube.com/@LIMAChess"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {t('navigation.youtube')}
+                </Dropdown.Item>
+              </Dropdown>
+            </div>
           </div>
           {/* Manage route */}
           {(session?.role === 'Teacher' || session?.role === 'Admin') && (
