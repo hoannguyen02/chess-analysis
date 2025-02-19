@@ -51,7 +51,7 @@ const PaymentGuidePage = () => {
               <strong>{t('payment.payment-description')}</strong>{' '}
               {t('payment.payment-description-note')}
               {t('common.title.example')}{' '}
-              <strong>0912333224 limachess102@gmail.com</strong>
+              <strong>limachess102@gmail.com</strong>
             </li>
           </ul>
         </div>
@@ -76,24 +76,12 @@ const PaymentGuidePage = () => {
             <li>
               {t('payment.gmail')} <strong> limachess102@gmail.com</strong>
             </li>
-            <li>
-              {t('payment.phone')}
-              <strong> 0912333224</strong>
-            </li>
           </ul>
         </div>
         <div className="mb-6">
           <h2 className="text-lg font-semibold"> {t('payment.step-3')}</h2>
           <p className="text-sm text-gray-600 mt-2">
             {t('payment.step-3-description')}
-            <a
-              href="#"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="ml-2 text-blue-600 hover:underline"
-            >
-              {t('payment.video-link')}
-            </a>
           </p>
         </div>
       </div>

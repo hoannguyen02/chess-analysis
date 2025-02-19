@@ -9,13 +9,12 @@
   "account-name": "Account Name:",
   "account-number": "Account Number: ",
   "payment-description": "Description: ",
-  "payment-description-note": "(phone + email): ",
+  "payment-description-note": "(email): ",
   "copy": "Copy",
   "phone": "Phone:",
   "gmail": "Gmail: ",
   "facebook": "Facebook: ",
   "facebook-button": "Click here to send on Messenger",
   "step-3": "Step 3: Set password and login",
-  "step-3-description": "We will send you an email to your account, you need to set your password and login. Refer",
-  "video-link": "this video"
+  "step-3-description": "We will send you an email to your account, you need to set your password and login"
 }

@@ -7,7 +7,7 @@
   "account-name": "Tên tài khoản:",
   "account-number": "Số tài khoản: ",
   "payment-description": "Nội dung",
-  "payment-description-note": "(điện thoại + email): ",
+  "payment-description-note": "(email): ",
   "copy": "Sao chép",
   "phone": "Điện thoại:",
   "gmail": "Email: ",
@@ -16,6 +16,5 @@
   "facebook": "Facebook: ",
   "facebook-button": "Nhấn vào đây để gửi qua messenger",
   "step-3": "Bước 3: Tạo mật khẩu trên hệ thống",
-  "step-3-description": "Chúng tôi sẽ gửi liên kết qua email để bạn đặt mật khẩu và đăng nhập vào hệ thống. Tìm hiểu thêm ở",
-  "video-link": "video này"
+  "step-3-description": "Chúng tôi sẽ gửi liên kết qua email để bạn đặt mật khẩu và đăng nhập vào hệ thống."
 }

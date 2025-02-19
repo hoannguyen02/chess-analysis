@@ -1,4 +1,3 @@
-import { AuthenticatedWrap } from '@/components/AuthenticatedWrap';
 import Layout from '@/components/Layout';
 import { DefaultLocale } from '@/constants';
 import { withThemes } from '@/HOF/withThemes';
@@ -8,9 +7,7 @@ import { GetServerSidePropsContext } from 'next';
 const PracticePuzzlesPage = () => {
   return (
     <Layout>
-      <AuthenticatedWrap>
-        <PracticePuzzlesScreen />
-      </AuthenticatedWrap>
+      <PracticePuzzlesScreen />
     </Layout>
   );
 };
