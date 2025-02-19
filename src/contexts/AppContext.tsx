@@ -177,7 +177,6 @@ export const AppProvider: React.FC<{
       isMobile,
       session,
       user,
-      hasSubscription,
       isLoadingUser,
       isSubscriptionExpired,
     ]
