@@ -41,13 +41,9 @@ export const PracticePuzzlesScreen = () => {
     [apiDomain, session?.id]
   );
 
-  const { data: themeProgresses, isLoading: isLoadingProgress } = useSWR(
-    queryKey,
-    fetcher,
-    {
-      dedupingInterval: 300,
-    }
-  );
+  const { data: themeProgresses } = useSWR(queryKey, fetcher, {
+    dedupingInterval: 300,
+  });
 
   const ThemeProgressesMap: Record<string, ThemeProgress> = useMemo(() => {
     if (themeProgresses) {
