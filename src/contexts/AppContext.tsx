@@ -146,6 +146,7 @@ export const AppProvider: React.FC<{
           value: tag.name,
           label: tag.title?.[locale] || tag.name,
           _id: tag._id,
+
           name: tag.name,
           type: tag.type,
         })) || [],

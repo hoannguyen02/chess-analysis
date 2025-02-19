@@ -37,13 +37,10 @@ export type Lesson = {
   priority?: number;
   totalPuzzles: number; // Precomputed
   version: number; // Track version changes
-  progress: [
-    {
-      userId: string;
-      completedPuzzles: string[];
-      completedAtVersion: number;
-    },
-  ];
+  progress?: {
+    completedPuzzlesCount: 2;
+    completionPercentage: 8;
+  };
 };
 
 export type LessonExpanded = {
@@ -66,11 +63,8 @@ export type LessonExpanded = {
   priority?: number;
   totalPuzzles: number; // Precomputed
   version: number; // Track version changes
-  progress: [
-    {
-      userId: string;
-      completedPuzzles: string[];
-      completedAtVersion: number;
-    },
-  ];
+  progress?: {
+    completedPuzzlesCount: 2;
+    completionPercentage: 8;
+  };
 };

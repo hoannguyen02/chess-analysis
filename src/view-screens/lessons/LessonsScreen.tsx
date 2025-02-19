@@ -6,7 +6,7 @@ import { LocaleType } from '@/types/locale';
 import { fetcher } from '@/utils/fetcher';
 import { filteredQuery } from '@/utils/filteredQuery';
 import { getDifficultyColor } from '@/utils/getDifficultyColor';
-import { Badge, Button, Card, Pagination } from 'flowbite-react';
+import { Badge, Button, Card, Pagination, Progress } from 'flowbite-react';
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
@@ -31,7 +31,7 @@ export const LessonsScreen = ({
   const drawerRef = useRef<HTMLDivElement>(null);
   const t = useTranslations();
   const router = useRouter();
-  const { apiDomain } = useAppContext();
+  const { apiDomain, isLoggedIn } = useAppContext();
 
   const { difficulty, search, tags } = router.query;
 
@@ -120,14 +120,16 @@ export const LessonsScreen = ({
                           {lesson.description?.[locale] || ''}
                         </p>
                       </div>
-                      {/* {session?.id && (
-                  <div className="mt-2 w-full">
-                    <Progress
-                      progress={course.progress?.completionPercentage || 0}
-                      size="sm"
-                    />
-                  </div>
-                )} */}
+                      {isLoggedIn && (
+                        <div className="flex flex-col mt-2 w-full">
+                          <Progress
+                            progress={
+                              lesson.progress?.completionPercentage || 0
+                            }
+                            size="sm"
+                          />
+                        </div>
+                      )}
                     </Card>
                   </Link>
                 ))

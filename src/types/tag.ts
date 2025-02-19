@@ -1,7 +1,7 @@
 export type TagType = 'Lesson' | 'Course' | 'Global';
 export type Tag = {
   name: string;
-  title: {
+  title?: {
     en: string;
     vi: string;
   };
