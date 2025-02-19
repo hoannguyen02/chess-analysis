@@ -11,8 +11,8 @@ import Head from 'next/head';
 import { useRouter } from 'next/router';
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { VscLayoutMenubar } from 'react-icons/vsc';
+import { MenuLessonDrawer } from '../../components/MenuLessonDrawer';
 import { MenuLesson } from './MenuLesson';
-import { MenuLessonDrawer } from './MenuLessonDrawer';
 import { useLessonProgress } from './useLessonProgress';
 
 type Props = {

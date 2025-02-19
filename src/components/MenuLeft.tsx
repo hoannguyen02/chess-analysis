@@ -27,26 +27,27 @@ export const MenuLeft = () => {
           </svg>
         </Link>
       </div>
-      <Link href="/openings" className="mb-6 hover:text-[var(--p-highlight)]">
-        {t('navigation.openings')}
+      <Link href="/lessons" className="mb-2 hover:text-[var(--p-highlight)]">
+        {t('navigation.learn')}
       </Link>
-      <Link href="/endgames" className="mb-6 hover:text-[var(--p-highlight)]">
-        {t('navigation.endgames')}
-      </Link>
-      <Link href="/strategies" className="mb-6 hover:text-[var(--p-highlight)]">
-        {t('navigation.strategy')}
-      </Link>
-      <Link href="/tactics" className="mb-6 hover:text-[var(--p-highlight)]">
-        {t('navigation.tactics')}
-      </Link>
-      <Link href="/traps" className="mb-6 hover:text-[var(--p-highlight)]">
-        {t('navigation.traps')}
+      <Link href="/practice" className="mb-2 hover:text-[var(--p-highlight)]">
+        {t('navigation.practice')}
       </Link>
       <Link
-        href="/board-and-pieces"
-        className="mb-6 hover:text-[var(--p-highlight)]"
+        className="mb-2 hover:text-[var(--p-highlight)]"
+        href="https://www.facebook.com/limachess102"
+        target="_blank"
+        rel="noopener noreferrer"
       >
-        {t('navigation.board-pieces')}
+        {t('navigation.facebook')}
+      </Link>
+      <Link
+        className="mb-6 hover:text-[var(--p-highlight)]"
+        href="https://www.youtube.com/@LIMAChess"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        {t('navigation.youtube')}
       </Link>
       {(session?.role === 'Teacher' || session?.role === 'Admin') && (
         <>
