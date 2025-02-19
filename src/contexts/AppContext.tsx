@@ -144,7 +144,7 @@ export const AppProvider: React.FC<{
       tags:
         (tags || []).map((tag) => ({
           value: tag.name,
-          label: tag.name,
+          label: tag.title?.[locale] || tag.name,
           _id: tag._id,
           name: tag.name,
           type: tag.type,
