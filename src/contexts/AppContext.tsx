@@ -80,11 +80,13 @@ export const AppProvider: React.FC<{
   }, [apiDomain, locale, session?.id]);
 
   const isSubscriptionExpired = useMemo(() => {
-    if (user?.subscriptionEnd) {
-      return checkIsSubscriptionExpired(user.subscriptionEnd);
-    }
+    return !user?.subscriptionEnd
+      ? true
+      : checkIsSubscriptionExpired(user.subscriptionEnd);
+  }, [user]);
 
-    return false;
+  const hasSubscription = useMemo(() => {
+    return user?.subscriptionEnd ? true : false;
   }, [user]);
 
   useEffect(() => {
@@ -175,7 +177,7 @@ export const AppProvider: React.FC<{
       isMobile,
       session,
       user,
-
+      hasSubscription,
       isLoadingUser,
       isSubscriptionExpired,
     ]

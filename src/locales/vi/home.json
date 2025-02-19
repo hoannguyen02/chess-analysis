@@ -22,8 +22,7 @@
   "themes": "Thế cờ",
   "select-themes": "Chọn thế cờ...",
   "subscription": {
-    "expired-title": "Đăng ký của bạn đã hết hạn",
-    "expired-message": "Để tiếp tục vui lòng gia hạn đăng ký của bạn.",
-    "renew": "Gia hạn ngay"
+    "expired-title": "Cần nâng cấp tài khoản",
+    "expired-message": "Hãy mua gói đăng ký để truy cập đầy đủ tất cả câu đố và bài học."
   }
 }

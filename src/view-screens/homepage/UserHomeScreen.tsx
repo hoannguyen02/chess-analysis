@@ -93,7 +93,7 @@ export const UserHomeScreen = () => {
             className="mt-2 md:mt-0 md:ml-4"
             onClick={() => router.push('/register-guide')}
           >
-            {t('home.subscription.renew')}
+            {t('common.button.subscribe-now')}
           </Button>
         </div>
       )}

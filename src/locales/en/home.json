@@ -22,8 +22,7 @@
   "themes": "Themes",
   "select-themes": "Select themes...",
   "subscription": {
-    "expired-title": "Your Subscription Has Expired",
-    "expired-message": "To continue accessing puzzles and lessons, please renew your subscription.",
-    "renew": "Renew Now"
+    "expired-title": "Subscription Required",
+    "expired-message": "Unlock full access to all puzzles and lessons by subscribing."
   }
 }
