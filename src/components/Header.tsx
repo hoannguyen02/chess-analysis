@@ -139,6 +139,12 @@ export default function Header() {
                 </Dropdown.Item>
               </Dropdown>
             </div>
+            <Link
+              href="/board-and-pieces"
+              className="ml-4 hover:text-[var(--p-highlight)]"
+            >
+              {t('navigation.board-pieces')}
+            </Link>
           </div>
           {/* Manage route */}
           {(session?.role === 'Teacher' || session?.role === 'Admin') && (

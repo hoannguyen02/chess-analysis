@@ -34,6 +34,12 @@ export const MenuLeft = () => {
         {t('navigation.practice')}
       </Link>
       <Link
+        href="/board-and-pieces"
+        className="mb-2 hover:text-[var(--p-highlight)]"
+      >
+        {t('navigation.board-pieces')}
+      </Link>
+      <Link
         className="mb-2 hover:text-[var(--p-highlight)]"
         href="https://www.facebook.com/limachess102"
         target="_blank"
