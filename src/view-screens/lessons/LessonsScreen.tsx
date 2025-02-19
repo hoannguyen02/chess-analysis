@@ -95,9 +95,9 @@ export const LessonsScreen = ({
         </aside>
         <div className="w-full lg:w-3/4 p-4 pb-[120px] lg:pb-4 lg:pl-8 overflow-y-auto h-[calc(100vh-120px)]">
           <TransitionContainer isLoading={isLoading} isVisible={isVisible}>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-              {displayedLessons && displayedLessons.length > 0 ? (
-                displayedLessons?.map((lesson: Lesson) => (
+            {displayedLessons && displayedLessons.length > 0 ? (
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                {displayedLessons?.map((lesson: Lesson) => (
                   <Link
                     key={lesson.title[locale]}
                     href={`/lessons/${lesson.slug}`}
@@ -132,15 +132,15 @@ export const LessonsScreen = ({
                       )}
                     </Card>
                   </Link>
-                ))
-              ) : (
-                <div className="flex justify-center items-center h-full">
-                  <p className="text-gray-500 text-lg">
-                    {t('common.title.no-results')}
-                  </p>
-                </div>
-              )}
-            </div>
+                ))}
+              </div>
+            ) : (
+              <div className="flex justify-center items-center h-full">
+                <p className="text-gray-500 text-lg">
+                  {t('common.title.no-results')}
+                </p>
+              </div>
+            )}
             {totalPages > 10 && (
               <div className="flex justify-center mt-6">
                 <Pagination
