@@ -12,4 +12,3 @@ Chúng tôi rất mong nhận được ý kiến từ bạn! Dù bạn có câu 
 ## Thông Tin Liên Hệ
 
 - **Email**: [limachess102@gmail.com](mailto:limachess102@gmail.com)
-- **Số điện thoại**: [0912 333 224](tel:0912333224)

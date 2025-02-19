@@ -13,7 +13,6 @@ We’d love to hear from you! Whether you have questions, need assistance, or wa
 ## Get in Touch
 
 - **Email**: [limachess102@gmail.com](mailto:limachess102@gmail.com)
-- **Phone**: [0912 333 224](tel:0912333224)
 
 
 &nbsp;
