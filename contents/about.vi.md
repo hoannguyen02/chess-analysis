@@ -21,7 +21,7 @@ Phát triển tư duy chiến lược, chiến thuật, nâng cao trình độ, 
 ## Tại Sao Chọn LIMA Chess?
 
 ✅ Tiến bộ vượt bậc với phương pháp huấn luyện đẳng cấp thế giới.
-✅ Chinh phục cờ vua nhanh nhất với chi phí rẻ nhất.
+✅ Chinh phục đỉnh cao cờ vua nhanh nhất với chi phí rẻ nhất.
 ✅ Hỗ trợ học tập hàng tuần với hướng dẫn từ chuyên gia.
 ✅ Dễ học, dễ luyện tập, phát triển kỹ năng đỉnh cao.
 ✅ Tự tin chinh chiến ở mọi giải đấu trong nước và quốc tế.
