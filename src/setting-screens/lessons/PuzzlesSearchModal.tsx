@@ -103,6 +103,7 @@ export const PuzzlesSearchModal: React.FC<PuzzlesSearchModalProps> = ({
                 placeholder="Enter a title"
                 initialValue={title}
                 onChange={(value) => {
+                  setCurrentPage(1);
                   setTitle(value);
                 }}
               />
@@ -113,9 +114,10 @@ export const PuzzlesSearchModal: React.FC<PuzzlesSearchModalProps> = ({
               <Select
                 options={StatusOptions}
                 value={StatusOptions.find((option) => option.value === status)}
-                onChange={(selectedOption) =>
-                  setStatus(selectedOption?.value as StatusType)
-                }
+                onChange={(selectedOption) => {
+                  setCurrentPage(1);
+                  setStatus(selectedOption?.value as StatusType);
+                }}
                 placeholder="Select status..."
                 isClearable
               />
@@ -131,9 +133,10 @@ export const PuzzlesSearchModal: React.FC<PuzzlesSearchModalProps> = ({
                 value={themeOptions.filter((option) =>
                   themes.includes(option.value)
                 )}
-                onChange={(selectedOptions) =>
-                  setThemes(selectedOptions.map((option) => option.value))
-                }
+                onChange={(selectedOptions) => {
+                  setCurrentPage(1);
+                  setThemes(selectedOptions.map((option) => option.value));
+                }}
                 placeholder="Select themes..."
               />
             </div>
@@ -145,9 +148,10 @@ export const PuzzlesSearchModal: React.FC<PuzzlesSearchModalProps> = ({
                 value={RatingOptions.find(
                   (option) => option.value === difficulty
                 )}
-                onChange={(selectedOption) =>
-                  setDifficulty(selectedOption?.value as DifficultyType)
-                }
+                onChange={(selectedOption) => {
+                  setCurrentPage(1);
+                  setDifficulty(selectedOption?.value as DifficultyType);
+                }}
                 placeholder="Select rating..."
                 isClearable
               />
