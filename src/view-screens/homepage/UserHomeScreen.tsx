@@ -5,12 +5,12 @@ import { useMemo, useState } from 'react';
 import useSWR from 'swr';
 
 import { Loading } from '@/components/Loading';
+import { SubscriptionBanner } from '@/components/SubscriptionBanner';
 import { filteredQuery } from '@/utils/filteredQuery';
 import isEmpty from 'lodash/isEmpty';
 import { useTranslations } from 'next-intl';
 import dynamic from 'next/dynamic';
 import { useRouter } from 'next/router';
-import { VscWarning } from 'react-icons/vsc';
 const SolvePuzzleHistories = dynamic(() =>
   import('./SolvePuzzleHistories').then(
     (components) => components.SolvePuzzleHistories
@@ -73,30 +73,7 @@ export const UserHomeScreen = () => {
   return (
     <div className="flex flex-col">
       {/* Subscription Expired Banner */}
-      {isSubscriptionExpired && (
-        <div className="bg-red-50 border-l-4 border-red-500 text-red-700 p-4 rounded-lg shadow-md flex flex-col lg:flex-row items-center justify-between mb-4 lg:max-w-lg mx-auto">
-          <div className="flex items-center space-x-3">
-            <VscWarning />
-            <div>
-              <strong className="font-semibold">
-                {t('home.subscription.expired-title')}
-              </strong>
-              <p className="text-sm mt-1">
-                {t('home.subscription.expired-message')}
-              </p>
-            </div>
-          </div>
-          <Button
-            outline
-            gradientDuoTone="redToOrange"
-            size="md"
-            className="mt-2 md:mt-0 md:ml-4"
-            onClick={() => router.push('/register-guide')}
-          >
-            {t('common.button.subscribe-now')}
-          </Button>
-        </div>
-      )}
+      {isSubscriptionExpired && <SubscriptionBanner />}
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <Card className="w-full flex flex-col items-start min-h-[200px] border border-gray-200">

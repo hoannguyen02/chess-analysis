@@ -24,10 +24,11 @@ import {
   TextInput,
   Tooltip,
 } from 'flowbite-react';
+import { isEmpty } from 'lodash';
 import cloneDeep from 'lodash/cloneDeep';
 import { useTranslations } from 'next-intl';
 import { useRouter } from 'next/router';
-import { useState } from 'react';
+import { useCallback, useState } from 'react';
 import { DndProvider } from 'react-dnd';
 import { HTML5Backend } from 'react-dnd-html5-backend';
 import {
@@ -353,6 +354,14 @@ export const LessonFormScreen = ({ lesson }: Props) => {
     }
   };
 
+  const handlePreviewLesson = useCallback(() => {
+    if (isEmpty(lesson)) {
+      alert('Need to save lesson as Draft status first then preview/xem');
+      return;
+    }
+    window.open(`/lessons/${lesson.slug}`, '_blank');
+  }, [lesson]);
+
   return (
     <div className="">
       <TitlePage>Lesson Form</TitlePage>
@@ -639,7 +648,6 @@ export const LessonFormScreen = ({ lesson }: Props) => {
 
           <div className="flex mt-4">
             <Button
-              className="mr-8"
               type="button"
               disabled={isSubmitting}
               onClick={() => {
@@ -647,6 +655,9 @@ export const LessonFormScreen = ({ lesson }: Props) => {
               }}
             >
               Back to the list
+            </Button>
+            <Button className="mx-8" onClick={handlePreviewLesson}>
+              Preview / Xem trước
             </Button>
             <Button disabled={isSubmitting} color="primary" type="submit">
               Submit

@@ -145,7 +145,7 @@ export const LessonsListScreen = () => {
       </div>
       {/* Courses Table */}
       <DndProvider backend={HTML5Backend}>
-        <div className="grid grid-cols-4 mb-4">
+        <div className="grid grid-cols-5 mb-4">
           <Label className="font-bold">Title</Label>
           <Label className="font-bold">Difficulty</Label>
           <Label className="font-bold">Status</Label>
@@ -164,10 +164,18 @@ export const LessonsListScreen = () => {
               key={`item-${index}`}
               className="mb-4"
             >
-              <div className="grid grid-cols-4">
+              <div className="grid grid-cols-5">
                 <Label>{item.title[locale]}</Label>
                 <Label>{item.difficulty}</Label>
                 <Label>{item.status}</Label>
+                <Link
+                  href={`/lessons/${item.slug}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-medium text-cyan-600 hover:underline dark:text-cyan-500"
+                >
+                  Preview / Xem
+                </Link>
                 <Link
                   href={`/settings/lessons/${item._id}`}
                   className="font-medium text-cyan-600 hover:underline dark:text-cyan-500"

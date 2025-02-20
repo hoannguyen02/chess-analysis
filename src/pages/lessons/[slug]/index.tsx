@@ -1,5 +1,6 @@
 import { ErrorBanner } from '@/components/ErrorBanner';
 import Layout from '@/components/Layout';
+import { RegisterDialog } from '@/components/RegisterDialog';
 import { DefaultLocale } from '@/constants';
 import { withThemes } from '@/HOF/withThemes';
 import { LessonExpanded } from '@/types/lesson';
@@ -14,6 +15,10 @@ type Props = {
 };
 const LessonDetailsPage = ({ data, error, errorCode }: Props) => {
   if (error) return <ErrorBanner error={error} errorCode={errorCode} />;
+
+  if (!data) {
+    return <RegisterDialog onClose={() => {}} />;
+  }
 
   return (
     <Layout>
@@ -53,10 +58,12 @@ export const getServerSideProps = withThemes(
       const serverAxios = createServerAxios(ctx);
       const response = await serverAxios.get(`/v1/lessons/public/slug/${slug}`);
 
+      const { data } = response.data;
+
       return {
         props: {
           messages,
-          data: response.data,
+          data,
           error: null,
         },
       };
