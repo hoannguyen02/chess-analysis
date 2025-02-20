@@ -164,7 +164,6 @@ export const LessonFormScreen = ({ lesson }: Props) => {
     fetcher
   );
 
-  const [addPuzzlesPopup, setAddPuzzlePopup] = useState(false);
   const [addToCoursesPopup, setAddToCoursesPopup] = useState(false);
   const {
     open: isOpenContentPuzzle,
@@ -655,23 +654,6 @@ export const LessonFormScreen = ({ lesson }: Props) => {
           </div>
         </form>
       </FormProvider>
-      {addPuzzlesPopup && (
-        <PuzzlesSearchModal
-          onClose={() => {
-            setAddPuzzlePopup(false);
-          }}
-          selectedPuzzles={watch('puzzles')}
-          onAddPuzzles={(puzzles: Puzzle[]) => {
-            const currentPuzzles = watch('puzzles');
-            const updatedPuzzles = [...currentPuzzles, ...puzzles];
-            // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-            // @ts-ignore
-            setValue('puzzles', updatedPuzzles, {
-              shouldDirty: true,
-            });
-          }}
-        />
-      )}
       {isOpenContentPuzzle && (
         <PuzzlesSearchModal
           onClose={() => {
