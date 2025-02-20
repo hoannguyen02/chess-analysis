@@ -85,10 +85,6 @@ export const AppProvider: React.FC<{
       : checkIsSubscriptionExpired(user.subscriptionEnd);
   }, [user]);
 
-  const hasSubscription = useMemo(() => {
-    return user?.subscriptionEnd ? true : false;
-  }, [user]);
-
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 768);
