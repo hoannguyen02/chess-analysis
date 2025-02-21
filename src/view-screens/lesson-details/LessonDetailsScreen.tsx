@@ -64,24 +64,26 @@ export const LessonDetailsScreen = ({ data }: Props) => {
 
   const hasRunOnce = useRef(false);
   useEffect(() => {
-    if (allContents?.length && progress?.completedPuzzles?.length) {
+    if (allContents?.length) {
       if (hasRunOnce.current) return; // Prevent re-execution after first run
       hasRunOnce.current = true; // Mark as executed
+      if (progress.completedPuzzles.length) {
+        // Find the first uncompleted content
+        const index = allContents?.findIndex((content) =>
+          content.contentPuzzles.some(
+            (puzzle) =>
+              !progress.completedPuzzles.includes(puzzle.puzzleId._id!)
+          )
+        );
 
-      // Find the first uncompleted content
-      const index = allContents?.findIndex((content) =>
-        content.contentPuzzles.some(
-          (puzzle) => !progress.completedPuzzles.includes(puzzle.puzzleId._id!)
-        )
-      );
-
-      if (index !== -1) {
-        setContentIdx(index as number);
+        if (index !== -1) {
+          setContentIdx(index as number);
+        } else {
+          setContentIdx(0);
+        }
       } else {
         setContentIdx(0);
       }
-    } else {
-      setContentIdx(0);
     }
   }, [allContents, progress.completedPuzzles]);
 
