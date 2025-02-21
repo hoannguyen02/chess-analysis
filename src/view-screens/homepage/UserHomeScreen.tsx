@@ -38,9 +38,9 @@ export const UserHomeScreen = () => {
 
   //
   const nextCourseKey = useMemo(() => {
-    return user ? `/v1/courses/next-course/${user._id}` : undefined;
+    return user ? `/v1/lessons/next-lesson/${user._id}` : undefined;
   }, [user]);
-  const { data: nextCourse, isLoading: isLoadingNextCourse } = useSWR(
+  const { data: nextLesson, isLoading: isLoadingNextLesson } = useSWR(
     nextCourseKey,
     fetcher
   );
@@ -66,7 +66,7 @@ export const UserHomeScreen = () => {
     fetcher
   );
 
-  if (isLoadingUser || isLoadingNextCourse) {
+  if (isLoadingUser || isLoadingNextLesson) {
     return <Loading />;
   }
 
@@ -113,16 +113,16 @@ export const UserHomeScreen = () => {
         </Card>
         <Card className="w-full flex flex-col items-start min-h-[200px] border border-gray-200">
           <h2 className="text-lg font-semibold">{t('home.next-course')}</h2>
-          {nextCourse ? (
+          {nextLesson ? (
             <>
-              <p className="text-gray-600 mt-2">{nextCourse.title[locale]}</p>
+              <p className="text-gray-600 mt-2">{nextLesson.title[locale]}</p>
               <div className="mt-4">
                 <Button
                   outline
                   gradientDuoTone="cyanToBlue"
                   size="lg"
                   onClick={() => {
-                    router.push(`/lessons/${nextCourse.slug}`);
+                    router.push(`/lessons/${nextLesson.slug}`);
                   }}
                 >
                   {t('common.title.start')}
