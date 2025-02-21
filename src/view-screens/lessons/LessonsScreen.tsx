@@ -58,6 +58,35 @@ export const LessonsScreen = ({
     revalidateOnFocus: false,
   });
 
+  const [guestProgressMap, setGuestProgressMap] = useState<
+    Record<string, string[]>
+  >({});
+  useEffect(() => {
+    if (!isLoggedIn) {
+      for (let i = 0; i < localStorage.length; i++) {
+        const key = localStorage.key(i);
+        if (key && key.startsWith('lesson_')) {
+          try {
+            const { completedPuzzles, lessonId } = JSON.parse(
+              localStorage.getItem(key) || '{}'
+            );
+            if (lessonId) {
+              setGuestProgressMap((prev) => ({
+                ...prev,
+                [lessonId]: completedPuzzles,
+              }));
+            }
+          } catch (error) {
+            console.error(
+              'Error parsing lesson progress from localStorage',
+              error
+            );
+          }
+        }
+      }
+    }
+  }, [isLoggedIn]);
+
   // Display puzzle
   const [isLoading, setIsLoading] = useState(false);
   const [displayedLessons, setDisplayedLessons] = useState<Lesson[]>([]);
@@ -97,42 +126,50 @@ export const LessonsScreen = ({
           <TransitionContainer isLoading={isLoading} isVisible={isVisible}>
             {displayedLessons && displayedLessons.length > 0 ? (
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                {displayedLessons?.map((lesson: Lesson) => (
-                  <Link
-                    key={lesson.title[locale]}
-                    href={`/lessons/${lesson.slug}`}
-                  >
-                    <Card className="h-full w-full flex flex-col items-start min-h-[230px] border border-gray-200 transition-transform transform hover:scale-105 hover:shadow-lg hover:border-blue-500">
-                      <div className="flex flex-col flex-grow items-start">
-                        <div className="grid grid-cols-[auto_100px] w-full">
-                          <h5 className="text-lg font-semibold">
-                            {lesson.title[locale]}
-                          </h5>
-                          <div className="flex justify-end">
-                            <Badge
-                              color={getDifficultyColor(lesson.difficulty)}
-                            >
-                              {lesson.difficulty || 'Unknown'}
-                            </Badge>
+                {displayedLessons?.map((lesson: Lesson) => {
+                  let progress = 0;
+                  if (isLoggedIn) {
+                    progress = lesson.progress?.completionPercentage || 0;
+                  } else {
+                    const getCompletedPuzzles = guestProgressMap[lesson._id!];
+                    if (getCompletedPuzzles?.length) {
+                      progress = Math.round(
+                        ((getCompletedPuzzles.length || 0) /
+                          lesson.totalPuzzles) *
+                          100
+                      );
+                    }
+                  }
+                  return (
+                    <Link
+                      key={lesson.title[locale]}
+                      href={`/lessons/${lesson.slug}`}
+                    >
+                      <Card className="h-full w-full flex flex-col items-start min-h-[230px] border border-gray-200 transition-transform transform hover:scale-105 hover:shadow-lg hover:border-blue-500">
+                        <div className="flex flex-col flex-grow items-start">
+                          <div className="grid grid-cols-[auto_100px] w-full">
+                            <h5 className="text-lg font-semibold">
+                              {lesson.title[locale]}
+                            </h5>
+                            <div className="flex justify-end">
+                              <Badge
+                                color={getDifficultyColor(lesson.difficulty)}
+                              >
+                                {lesson.difficulty || 'Unknown'}
+                              </Badge>
+                            </div>
                           </div>
+                          <p className="text-sm text-gray-500 line-clamp-3 mt-2">
+                            {lesson.description?.[locale] || ''}
+                          </p>
                         </div>
-                        <p className="text-sm text-gray-500 line-clamp-3 mt-2">
-                          {lesson.description?.[locale] || ''}
-                        </p>
-                      </div>
-                      {isLoggedIn && (
                         <div className="flex flex-col mt-2 w-full">
-                          <Progress
-                            progress={
-                              lesson.progress?.completionPercentage || 0
-                            }
-                            size="sm"
-                          />
+                          <Progress progress={progress} size="sm" />
                         </div>
-                      )}
-                    </Card>
-                  </Link>
-                ))}
+                      </Card>
+                    </Link>
+                  );
+                })}
               </div>
             ) : (
               <div className="flex justify-center items-center h-full">
