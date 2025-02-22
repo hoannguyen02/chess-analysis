@@ -1,13 +1,8 @@
-import Layout from '@/components/Layout';
 import { withThemes } from '@/HOF/withThemes';
 import { FenBuilderScreen } from '@/setting-screens/FenBuilder';
 
 const FenBuilderPage = () => {
-  return (
-    <Layout>
-      <FenBuilderScreen />
-    </Layout>
-  );
+  return <FenBuilderScreen />;
 };
 
 export const getServerSideProps = withThemes(async ({ locale }) => {
