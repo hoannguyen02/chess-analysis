@@ -70,12 +70,6 @@ export const PuzzleFormScreen = ({ puzzle, onSaveSuccess }: Props) => {
       difficulty: 'Easy',
       phase: 'Middle',
       solutions: [],
-      preMove: {
-        player: 'b', // either w or b will works, computer auto play move
-        move: '',
-        from: '',
-        to: '',
-      },
     },
   });
 
@@ -112,33 +106,38 @@ export const PuzzleFormScreen = ({ puzzle, onSaveSuccess }: Props) => {
   const onSubmit: SubmitHandler<Puzzle> = async (data) => {
     const { _id, preMove, themes, ...rest } = data;
     if (isValidFormValues()) {
-      let payload: any = rest;
       // eslint-disable-next-line @typescript-eslint/ban-ts-comment
       // @ts-ignore
       const themeIds = themes?.map((theme: PuzzleTheme) => theme._id);
-      if (!isEmpty(preMove?.move)) {
-        payload = {
-          ...rest,
-          themes: themeIds,
-          preMove,
-        };
-      } else {
-        payload = {
-          ...rest,
-          themes: themeIds,
-          preMove: null,
-        };
-      }
+
       setIsSubmitting(true);
       const result = await handleSubmission(
         async () => {
           if (_id) {
+            let payload: any = rest;
+            if (!isEmpty(preMove?.move)) {
+              payload = {
+                ...rest,
+                themes: themeIds,
+                preMove,
+              };
+            } else {
+              payload = {
+                ...rest,
+                themes: themeIds,
+                preMove: null,
+              };
+            }
             return await axiosInstance.put(
               `${apiDomain}/v1/puzzles/${_id}`,
               payload
             );
           } else {
-            return await axiosInstance.post(`${apiDomain}/v1/puzzles`, payload);
+            return await axiosInstance.post(`${apiDomain}/v1/puzzles`, {
+              themes: themeIds,
+              ...rest,
+              ...(!isEmpty(preMove?.move) && { preMove }),
+            });
           }
         },
         addToast, // Pass addToast to show toast notifications
