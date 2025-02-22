@@ -4,7 +4,6 @@ import { PuzzleTheme } from '@/types/puzzle-theme';
 import { Session } from '@/types/session';
 import { Tag } from '@/types/tag';
 import { User } from '@/types/user';
-import axiosInstance from '@/utils/axiosInstance';
 import { checkIsSubscriptionExpired } from '@/utils/checkIsSubscriptionExpired';
 import { fetcher } from '@/utils/fetcher';
 import isEmpty from 'lodash/isEmpty';
@@ -16,7 +15,7 @@ import React, {
   useMemo,
   useState,
 } from 'react';
-import useSWR from 'swr';
+import useSWR, { KeyedMutator } from 'swr';
 
 export interface AppContextProps {
   themes: PuzzleTheme[] | [];
@@ -29,6 +28,7 @@ export interface AppContextProps {
   user?: User;
   isLoggedIn?: boolean;
   isLoadingUser?: boolean;
+  mutateUser: KeyedMutator<any>;
   isSubscriptionExpired?: boolean;
   getFilteredThemes(): {
     themeOptions: PuzzleTheme[] | [];
@@ -46,8 +46,6 @@ export const AppProvider: React.FC<{
   session?: Session;
 }> = ({ children, apiDomain, locale, isMobileSSR, session }) => {
   const [isMobile, setIsMobile] = useState(isMobileSSR);
-  const [user, setUser] = useState<User>();
-  const [isLoadingUser, setIsLoadingUser] = useState(false);
 
   const { data: themes } = useSWR<PuzzleTheme[]>(
     `${apiDomain}/v1/puzzle-themes/public/all`,
@@ -59,25 +57,22 @@ export const AppProvider: React.FC<{
     fetcher
   );
 
+  const useKey = useMemo(
+    () => (session?.id ? `${apiDomain}/v1/auth/user/${session.id}` : null),
+    [apiDomain, session?.id]
+  );
+
+  const {
+    data: user,
+    mutate: mutateUser,
+    isLoading,
+    isValidating,
+  } = useSWR(useKey, fetcher);
+
+  // Make sure it get latest rating when back home
   useEffect(() => {
-    const usedId = session?.id;
-    if (locale && usedId) {
-      const fetchUser = async () => {
-        setIsLoadingUser(true);
-        try {
-          const userResponse = await axiosInstance.get<User>(
-            `${apiDomain}/v1/auth/user/${usedId}`
-          );
-          setUser(userResponse.data);
-        } catch (error) {
-          console.log(error);
-        } finally {
-          setIsLoadingUser(false);
-        }
-      };
-      fetchUser();
-    }
-  }, [apiDomain, locale, session?.id]);
+    mutateUser();
+  }, [locale, mutateUser]);
 
   const isSubscriptionExpired = useMemo(() => {
     return !user?.subscriptionEnd
@@ -159,9 +154,11 @@ export const AppProvider: React.FC<{
       isMobile,
       session,
       user,
-      isLoadingUser,
+      isLoadingUser: isLoading,
+      isValidating,
       isSubscriptionExpired,
       isLoggedIn: !isEmpty(session?.id),
+      mutateUser,
     }),
     [
       locale,
@@ -173,7 +170,9 @@ export const AppProvider: React.FC<{
       isMobile,
       session,
       user,
-      isLoadingUser,
+      mutateUser,
+      isLoading,
+      isValidating,
       isSubscriptionExpired,
     ]
   );

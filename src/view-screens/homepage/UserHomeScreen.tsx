@@ -1,7 +1,7 @@
 import { useAppContext } from '@/contexts/AppContext';
 import { fetcher } from '@/utils/fetcher';
 import { Button, Card, Tabs } from 'flowbite-react';
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import useSWR from 'swr';
 
 import { Loading } from '@/components/Loading';
@@ -32,7 +32,13 @@ export const UserHomeScreen = () => {
     user,
     isLoadingUser,
     isSubscriptionExpired,
+    mutateUser,
   } = useAppContext();
+
+  useEffect(() => {
+    mutateUser();
+  }, [mutateUser]);
+
   const { excludedThemeIds } = getFilteredThemes();
   const [activeTab, setActiveTab] = useState('rated');
 
