@@ -162,42 +162,49 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({
     if (isPreview) return;
 
     const handleExitEvent = () => {
-      if (!hasCalledApi.current) {
+      if (!hasCalledApi.current && currentStep < puzzle.solutions.length) {
         hasCalledApi.current = true;
         handleOnSolved(attemptHistory);
       }
     };
 
     const handleRouteChange = (url: string) => {
-      if (url !== router.asPath) {
+      if (url !== router.asPath && currentStep < puzzle.solutions.length) {
         handleExitEvent();
       }
     };
 
     const handleBeforeUnload = (event: BeforeUnloadEvent) => {
-      handleExitEvent();
-      event.preventDefault();
-      event.returnValue = ''; // Required for Chrome
+      if (currentStep < puzzle.solutions.length) {
+        handleExitEvent();
+        event.preventDefault();
+        event.returnValue = ''; // Required for Chrome
+      }
     };
 
     const handleVisibilityChange = () => {
-      if (document.hidden) {
+      if (document.hidden && currentStep < puzzle.solutions.length) {
         handleExitEvent();
       }
     };
 
-    // Attach event listeners
     router.events.on('routeChangeStart', handleRouteChange);
     window.addEventListener('beforeunload', handleBeforeUnload);
     document.addEventListener('visibilitychange', handleVisibilityChange);
 
-    // Cleanup listeners on unmount
     return () => {
       router.events.off('routeChangeStart', handleRouteChange);
       window.removeEventListener('beforeunload', handleBeforeUnload);
       document.removeEventListener('visibilitychange', handleVisibilityChange);
     };
-  }, [attemptHistory, handleOnSolved, isPreview, router]);
+  }, [
+    attemptHistory,
+    handleOnSolved,
+    isPreview,
+    router,
+    currentStep,
+    puzzle.solutions.length,
+  ]);
 
   useEffect(() => {
     if (puzzle) {
