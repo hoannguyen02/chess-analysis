@@ -222,7 +222,7 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({
   }, [puzzle]);
 
   useEffect(() => {
-    if (currentStep === puzzle.solutions.length && !hasCalledApi.current) {
+    if (currentStep === puzzle.solutions.length) {
       if (!hasCalledApi.current) {
         hasCalledApi.current = true; // Prevents duplicate API calls
         setIsBoardClickAble(false);
