@@ -216,10 +216,14 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({
 
   useEffect(() => {
     if (currentStep === puzzle.solutions.length && !hasCalledApi.current) {
-      hasCalledApi.current = true; // Prevents duplicate API calls
-      setIsBoardClickAble(false);
-      setHistoryMoveCurrentIdx(puzzle.solutions.length);
-      handleOnSolved(attemptHistory);
+      if (!hasCalledApi.current) {
+        hasCalledApi.current = true; // Prevents duplicate API calls
+        setIsBoardClickAble(false);
+        setHistoryMoveCurrentIdx(puzzle.solutions.length);
+        handleOnSolved(attemptHistory);
+      } else {
+        setIsRunning(false); // Need to stop timer if they reset puzzle & try again
+      }
     }
   }, [attemptHistory, currentStep, handleOnSolved, puzzle.solutions.length]);
 
