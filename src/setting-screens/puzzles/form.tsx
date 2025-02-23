@@ -34,6 +34,7 @@ import { VscEdit } from 'react-icons/vsc';
 import Select, { SingleValue } from 'react-select';
 import useSWR from 'swr';
 import { AddToLessonsModal } from './AddToLessonsModal';
+import { CustomArrowField } from './CustomArrowField';
 import { NestedMoveField } from './NestedMoveField';
 
 type Props = {
@@ -104,7 +105,8 @@ export const PuzzleFormScreen = ({ puzzle, onSaveSuccess }: Props) => {
 
   // Handle form submission
   const onSubmit: SubmitHandler<Puzzle> = async (data) => {
-    const { _id, preMove, themes, ...rest } = data;
+    const { _id, preMove, themes, customArrows, ...rest } = data;
+    const formattedArrows = customArrows?.map((arrow) => [arrow[0], arrow[1]]);
     if (isValidFormValues()) {
       // eslint-disable-next-line @typescript-eslint/ban-ts-comment
       // @ts-ignore
@@ -126,6 +128,7 @@ export const PuzzleFormScreen = ({ puzzle, onSaveSuccess }: Props) => {
                 ...rest,
                 themes: themeIds,
                 preMove: null,
+                customArrows: formattedArrows,
               };
             }
             return await axiosInstance.put(
@@ -135,6 +138,7 @@ export const PuzzleFormScreen = ({ puzzle, onSaveSuccess }: Props) => {
           } else {
             return await axiosInstance.post(`${apiDomain}/v1/puzzles`, {
               themes: themeIds,
+              customArrows: formattedArrows,
               ...rest,
               ...(!isEmpty(preMove?.move) && { preMove }),
             });
@@ -221,6 +225,10 @@ export const PuzzleFormScreen = ({ puzzle, onSaveSuccess }: Props) => {
               {...register('hint.vi')}
             />
           </div>
+        </div>
+        <div className="flex flex-col mb-2">
+          <Label>Custom arrows</Label>
+          <CustomArrowField control={control} register={register} />
         </div>
         <div className="grid grid-cols-3  place-content-start mb-4 gap-8">
           <div className="flex flex-col ">

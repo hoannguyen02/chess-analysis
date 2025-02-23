@@ -38,6 +38,7 @@ export type Puzzle = {
   puzzleId?: any;
   created_at?: string;
   updated_at?: string;
+  customArrows?: [string, string, string?][];
 };
 
 export type SolvedData = {

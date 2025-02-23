@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
 import { LEVEL_RATING } from '@/constants';
 import {
   DEFAULT_ENGINE_MOVE_DELAY_TIME,
@@ -88,6 +89,8 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({
     checkSound.current = new Audio('/sounds/check.mp3');
     failedSound.current = new Audio('/sounds/decline.mp3');
   }, []);
+
+  const [showCustomArrows, setShowCustomArrows] = useState(true);
 
   const t = useTranslations();
   const { themeMap, isMobile, locale } = useAppContext();
@@ -412,6 +415,7 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({
   };
 
   const onSquareClick = (square: Square) => {
+    setShowCustomArrows(false);
     if (hintMessage) {
       setHintMessage('');
     }
@@ -506,6 +510,7 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({
     setCurrentStep(0);
     setIsBoardClickAble(true);
     setHistoryMoves([]);
+    setShowCustomArrows(true);
   };
 
   const showSolution = () => {
@@ -690,6 +695,11 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({
 
   const preMove = useMemo(() => puzzle.preMove?.move, [puzzle]);
 
+  const customArrows = useMemo(
+    () => (showCustomArrows ? puzzle.customArrows : undefined),
+    [puzzle.customArrows, showCustomArrows]
+  );
+
   return (
     <div>
       {showBackButton && (
@@ -715,6 +725,9 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({
       <div className="grid grid-cols-1 lg:grid-cols-[500px_auto] gap-2 lg:gap-4 mx-auto max-w-[900px]">
         <div ref={boardRef}>
           <Chessboard
+            // @ts-ignore
+            customArrows={customArrows || []}
+            customArrowColor="#FFA500"
             boardOrientation={playerName?.toLowerCase() as 'black' | 'white'}
             position={currentFen}
             onPieceDrop={(sourceSquare, targetSquare) => {
@@ -728,7 +741,6 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({
             }}
             boardWidth={isMobile ? boardRef.current?.clientWidth || 320 : 500}
             onSquareClick={onSquareClick}
-            // eslint-disable-next-line @typescript-eslint/ban-ts-comment
             // @ts-ignore
             onPromotionPieceSelect={onPromotionPieceSelect}
             customBoardStyle={{
