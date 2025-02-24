@@ -111,10 +111,12 @@ export const PuzzleFormScreen = ({ puzzle, onSaveSuccess }: Props) => {
     const formattedCustomArrows = customArrows?.map((arrow) => [
       arrow[0],
       arrow[1],
+      arrow[2],
     ]);
     const formattedEndCustomArrows = endCustomArrows?.map((arrow) => [
       arrow[0],
       arrow[1],
+      arrow[2],
     ]);
     if (isValidFormValues()) {
       // eslint-disable-next-line @typescript-eslint/ban-ts-comment

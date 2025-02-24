@@ -828,7 +828,6 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({
             <div className="hidden lg:flex flex-col p-4">
               {t('common.title.theme')}:
               {puzzle.themes.map((theme) => {
-                // eslint-disable-next-line @typescript-eslint/ban-ts-comment
                 // @ts-ignore
                 const puzzleId = typeof theme === 'string' ? theme : theme?._id;
                 return (
