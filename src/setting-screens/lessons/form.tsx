@@ -188,7 +188,6 @@ export const LessonFormScreen = ({ lesson }: Props) => {
   };
 
   const methods = useForm<LessonForm>({
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-ignore
     defaultValues: lesson
       ? buildInitialLessonForm(lesson)
@@ -242,8 +241,7 @@ export const LessonFormScreen = ({ lesson }: Props) => {
       return {
         ...p,
         contentPuzzles: p.contentPuzzles
-          ? // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-            //@ts-ignore
+          ? //@ts-ignore
             p.contentPuzzles.map((cp: Puzzle) => ({
               puzzleId: cp._id,
             }))
@@ -422,7 +420,6 @@ export const LessonFormScreen = ({ lesson }: Props) => {
                     options={defaultTags}
                     value={defaultTags.filter((option) =>
                       field.value?.some((selected) => {
-                        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
                         // @ts-ignore
                         return selected._id === option._id;
                       })
@@ -605,7 +602,6 @@ export const LessonFormScreen = ({ lesson }: Props) => {
                             type="button"
                             onClick={() => {
                               openContentPuzzleDialog({
-                                // eslint-disable-next-line @typescript-eslint/ban-ts-comment
                                 // @ts-ignore
                                 puzzles: field.contentPuzzles,
                                 contentIdex: index,
@@ -703,10 +699,8 @@ export const LessonFormScreen = ({ lesson }: Props) => {
             const contents = watch('contents') || [];
             const newContents = [...contents];
             if (contentIdex !== undefined && newContents[contentIdex]) {
-              // eslint-disable-next-line @typescript-eslint/ban-ts-comment
               // @ts-ignore
               newContents[contentIdex].contentPuzzles = (puzzles || []).concat(
-                // eslint-disable-next-line @typescript-eslint/ban-ts-comment
                 // @ts-ignore
                 addedItems.map((p) => ({ ...p, puzzleId: p.puzzleId }))
               );
