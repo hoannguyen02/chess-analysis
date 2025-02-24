@@ -1,13 +1,15 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
-import { RegisterDialog } from '@/components/RegisterDialog';
+import { ShareFacebookButton } from '@/components/ShareFacebookButton';
 import SolvePuzzle from '@/components/SolvePuzzle';
 import { TransitionContainer } from '@/components/TransitionContainer';
 import { useAppContext } from '@/contexts/AppContext';
-import useDialog from '@/hooks/useDialog';
 import { LessonExpanded } from '@/types/lesson';
 import { Puzzle } from '@/types/puzzle';
-import { Button } from 'flowbite-react';
+import axiosInstance from '@/utils/axiosInstance';
+import { Button, Clipboard } from 'flowbite-react';
+import { useTranslations } from 'next-intl';
 import Head from 'next/head';
+import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { VscLayoutMenubar } from 'react-icons/vsc';
@@ -20,12 +22,13 @@ type Props = {
 };
 
 export const LessonDetailsScreen = ({ data }: Props) => {
-  const {
-    open: isOpenRegisterDialog,
-    onOpenDialog: onOpenRegister,
-    onCloseDialog: onCloseRegister,
-  } = useDialog();
-  const { isMobile, isLoggedIn } = useAppContext();
+  const [isLoadingPractice, setIsLoadingPractice] = useState(false);
+  const t = useTranslations('common');
+  const router = useRouter();
+
+  const { isMobile, isLoggedIn, getFilteredThemes, apiDomain, session } =
+    useAppContext();
+  const { excludedThemeIds } = getFilteredThemes();
   const [isOpenDrawer, setIsOpenDrawer] = useState(false);
   const { locale } = useAppContext();
 
@@ -41,6 +44,8 @@ export const LessonDetailsScreen = ({ data }: Props) => {
     totalPuzzles,
     difficulty,
     description,
+    isPublic,
+    themes,
   } = data;
 
   const allContents = useMemo(() => contents || [], [contents]);
@@ -236,21 +241,8 @@ export const LessonDetailsScreen = ({ data }: Props) => {
         setActivePuzzle(nextUnsolvedPuzzle.puzzleId);
       }
       return;
-    } else {
-      // If solved all puzzles and not logged in yet, will show banner
-      if (!isLoggedIn) {
-        onOpenRegister();
-        return;
-      }
     }
-  }, [
-    allContents,
-    contentIndex,
-    isLoggedIn,
-    locale,
-    onOpenRegister,
-    progress.completedPuzzles,
-  ]);
+  }, [allContents, contentIndex, locale, progress.completedPuzzles]);
 
   const handleOnItemClick = (
     index: number,
@@ -264,6 +256,37 @@ export const LessonDetailsScreen = ({ data }: Props) => {
     setActivePuzzle(puzzle);
     setExplanations(explanations);
   };
+
+  const handlePracticeNow = useCallback(async () => {
+    setIsLoadingPractice(true);
+    try {
+      const payload = {
+        themes,
+        excludedThemeIds,
+      };
+      const nextPuzzleResult = await axiosInstance.post(
+        `${apiDomain}/v1/practice-puzzle/next`,
+        {
+          ...payload,
+          userId: session?.id,
+        }
+      );
+      const nextPuzzleId = nextPuzzleResult.data;
+      if (nextPuzzleId) {
+        sessionStorage.setItem(
+          'practice-puzzle-payload',
+          JSON.stringify(payload)
+        );
+        router.push(`/practice/${nextPuzzleId}`);
+      } else {
+        router.push(`/practice`);
+      }
+    } catch (error) {
+      console.error(error);
+    } finally {
+      setIsLoadingPractice(false);
+    }
+  }, [apiDomain, excludedThemeIds, router, session?.id, themes]);
 
   const drawerRef = useRef<HTMLDivElement>(null);
 
@@ -285,8 +308,13 @@ export const LessonDetailsScreen = ({ data }: Props) => {
   }, [activePuzzle, displayedPuzzle?._id]);
   // End Display puzzle
 
+  const fullUrl = useMemo(
+    () => `${process.env.NEXT_PUBLIC_BASE_URL}/${locale}${router.asPath}`,
+    [router, locale]
+  );
+
   // Generate dynamic SEO title and description
-  const router = useRouter();
+
   const lessonSlug = useMemo(() => {
     return router.query.slug;
   }, [router]);
@@ -335,7 +363,7 @@ export const LessonDetailsScreen = ({ data }: Props) => {
         {/* Sidebar with navigation */}
         <aside
           ref={menuRef}
-          className="w-1/4 h-[calc(100vh-120px)] overflow-y-auto border-r border-l border-t rounded-md sticky top-0 hidden lg:flex lg:flex-col"
+          className="w-1/4 h-[calc(100vh-100px)] overflow-y-auto border-r border-l border-t rounded-md sticky top-0 hidden lg:flex lg:flex-col"
         >
           <MenuLesson
             contents={contents}
@@ -351,11 +379,11 @@ export const LessonDetailsScreen = ({ data }: Props) => {
         </aside>
 
         {/* Main content */}
-        <div className="w-full lg:w-3/4 p-4 pb-[120px] lg:pb-4 lg:pl-8 overflow-y-auto h-[calc(100vh-120px)]">
+        <div className="w-full lg:w-3/4 p-4 pb-[100px] lg:pb-4 lg:pl-8 overflow-y-auto h-[calc(100vh-100px)]">
           <TransitionContainer isLoading={isLoading} isVisible={isVisible}>
             {displayedPuzzle && (
               <SolvePuzzle
-                showNextButton={hasNextPuzzle || !isLoggedIn}
+                showNextButton={hasNextPuzzle}
                 highlightPossibleMoves
                 onNextClick={handleNextPuzzle}
                 puzzle={displayedPuzzle}
@@ -369,7 +397,7 @@ export const LessonDetailsScreen = ({ data }: Props) => {
             )}
             <div className="mt-4">
               {/* Mobile */}
-              <div className="fixed bottom-4 left-4 lg:hidden">
+              <div className="fixed z-10 bottom-4 left-4 lg:hidden">
                 <Button
                   outline
                   gradientDuoTone="tealToLime"
@@ -385,6 +413,45 @@ export const LessonDetailsScreen = ({ data }: Props) => {
                   <p key={`explanation-${index}`}>{e}</p>
                 ))}
               </div>
+              {progress.completedPuzzles.length === totalPuzzles && (
+                <div className="flex flex-col justify-center w-full items-center">
+                  <h3 className="text-xl font-bold text-center mb-4 flex items-center">
+                    🎉 Chúc mừng! Bạn đã hoàn thành bài học!{' '}
+                    {!isLoggedIn ? (
+                      <>
+                        <Link
+                          href="/register"
+                          className="text-blue-500 text-sm hover:underline ml-2"
+                        >
+                          {t('button.register-free')}
+                        </Link>
+                      </>
+                    ) : (
+                      <>
+                        <Button
+                          className="ml-4"
+                          gradientDuoTone="greenToBlue"
+                          outline
+                          isProcessing={isLoadingPractice}
+                          onClick={handlePracticeNow}
+                        >
+                          {t('button.practice-now')}
+                        </Button>
+                      </>
+                    )}
+                  </h3>
+                  {isPublic && (
+                    <div className="flex mb-6 justify-center">
+                      <ShareFacebookButton url={fullUrl} />
+                      <Clipboard
+                        valueToCopy={fullUrl}
+                        label={t('button.copy-link')}
+                        className="ml-2"
+                      />
+                    </div>
+                  )}
+                </div>
+              )}
             </div>
           </TransitionContainer>
         </div>
@@ -425,7 +492,6 @@ export const LessonDetailsScreen = ({ data }: Props) => {
           />
         </MenuLessonDrawer>
       )}
-      {isOpenRegisterDialog && <RegisterDialog onClose={onCloseRegister} />}
     </>
   );
 };

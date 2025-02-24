@@ -898,7 +898,7 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({
             </div>
           )}
           <div
-            className={`fixed lg:absolute bottom-0 left-0 w-full px-4 py-4 bg-white shadow-lg border-t border-gray-300 rounded-t-lg flex justify-center items-center space-x-4 ${actionClass}`}
+            className={`z-10 fixed lg:absolute bottom-0 left-0 w-full px-4 py-4 bg-white shadow-lg border-t border-gray-300 rounded-t-lg flex justify-center items-center space-x-4 ${actionClass}`}
           >
             {!showRetry && currentStep !== puzzle.solutions.length && (
               <>
