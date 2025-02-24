@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
 import { DraggableItem } from '@/components/DraggableItem';
 import { TitlePage } from '@/components/TitlePage';
 import { RatingOptions, StatusOptions } from '@/constants';
@@ -7,12 +8,11 @@ import { useToast } from '@/contexts/ToastContext';
 import useBeforeUnload from '@/hooks/useBeforeUnload';
 import useDialog from '@/hooks/useDialog';
 import usePreventRouteChange from '@/hooks/usePreventRouteChange';
-import { Course } from '@/types/course';
 import { ContentType, Lesson, LessonExpanded } from '@/types/lesson';
 import { Puzzle } from '@/types/puzzle';
+import { PuzzleTheme } from '@/types/puzzle-theme';
 import { Tag } from '@/types/tag';
 import axiosInstance from '@/utils/axiosInstance';
-import { fetcher } from '@/utils/fetcher';
 import { handleSubmission } from '@/utils/handleSubmission';
 import { previewPuzzle } from '@/utils/previewPuzzle';
 import {
@@ -41,8 +41,6 @@ import {
 } from 'react-hook-form';
 import { VscAdd, VscEdit, VscOpenPreview, VscTrash } from 'react-icons/vsc';
 import Select, { SingleValue } from 'react-select';
-import useSWR from 'swr';
-import { AddToCoursesModal } from './AddToCoursesModal';
 import { PuzzlesSearchModal } from './PuzzlesSearchModal';
 
 type Props = {
@@ -64,6 +62,7 @@ type LessonForm = Lesson & {
   contents: LessonContent[];
   // objectives?: ObjectiveType;
   tags: Tag[];
+  themes: PuzzleTheme[];
 };
 
 const ContentExplanations = ({ contentIndex }: { contentIndex: number }) => {
@@ -155,17 +154,16 @@ const ContentExplanations = ({ contentIndex }: { contentIndex: number }) => {
   );
 };
 export const LessonFormScreen = ({ lesson }: Props) => {
-  const { apiDomain, locale, tags: defaultTags } = useAppContext();
+  const {
+    apiDomain,
+    locale,
+    tags: defaultTags,
+    themes: defaultThemes,
+  } = useAppContext();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { addToast } = useToast();
   const t = useTranslations();
 
-  const { data: courses, mutate: refreshCourses } = useSWR<Course[]>(
-    lesson?._id ? `${apiDomain}/v1/lessons/${lesson?._id}/courses` : undefined,
-    fetcher
-  );
-
-  const [addToCoursesPopup, setAddToCoursesPopup] = useState(false);
   const {
     open: isOpenContentPuzzle,
     data: addContentPuzzleData,
@@ -231,8 +229,9 @@ export const LessonFormScreen = ({ lesson }: Props) => {
 
   // Handle form submission
   const onSubmit: SubmitHandler<LessonForm> = async (data) => {
-    const { _id, contents, tags, ...rest } = data;
+    const { _id, contents, tags, themes, ...rest } = data;
     const tagIds = tags?.map((tag: Tag) => tag._id);
+    const themeIds = themes?.map((theme: PuzzleTheme) => theme._id);
 
     const newContents = contents.map((p) => {
       if (!p.contentPuzzles || p.contentPuzzles.length === 0) {
@@ -255,6 +254,7 @@ export const LessonFormScreen = ({ lesson }: Props) => {
       ...rest,
       contents: newContents,
       tags: tagIds,
+      themes: themeIds,
     };
     setIsSubmitting(true);
     const result = await handleSubmission(
@@ -381,7 +381,34 @@ export const LessonFormScreen = ({ lesson }: Props) => {
               {...register('title.vi')}
             />
           </div>
-          <div className="mt-4 grid grid-cols-3  place-content-start mb-4 gap-8">
+          <div className="mt-4 grid grid-cols-4  place-content-start mb-4 gap-8">
+            <div className="flex flex-col">
+              <Label htmlFor="themes" value="Themes" />
+
+              <Controller
+                control={control}
+                name="themes"
+                render={({ field }) => (
+                  <Select
+                    id="themes"
+                    isMulti
+                    options={defaultThemes}
+                    value={defaultThemes.filter((option) =>
+                      field.value?.some((selected) => {
+                        // @ts-ignore
+                        return selected._id === option._id;
+                      })
+                    )}
+                    onChange={(selectedOptions) =>
+                      field.onChange(selectedOptions)
+                    }
+                    getOptionLabel={(e) => e.label}
+                    getOptionValue={(e) => e._id}
+                    className="w-full"
+                  />
+                )}
+              />
+            </div>
             <div className="flex flex-col">
               <Label htmlFor="tags" value="Tags" />
 
@@ -688,16 +715,6 @@ export const LessonFormScreen = ({ lesson }: Props) => {
               });
             }
           }}
-        />
-      )}
-      {lesson?._id && addToCoursesPopup && (
-        <AddToCoursesModal
-          onClose={() => {
-            setAddToCoursesPopup(false);
-          }}
-          selectedCourses={courses || []}
-          lessonId={lesson?._id}
-          onSaveSuccess={refreshCourses}
         />
       )}
     </div>

@@ -26,6 +26,7 @@ export type Lesson = {
     vi: string;
   };
   tags?: string[];
+  themes?: string[];
   // objectives?: ObjectiveType;
   contents?: ContentLesson[];
   difficulty?: DifficultyType;
@@ -53,6 +54,7 @@ export type LessonExpanded = {
     vi: string;
   };
   tags?: string[];
+  themes?: string[];
   // objectives?: ObjectiveType;
   contents?: ContentLesson[];
   difficulty?: DifficultyType;
