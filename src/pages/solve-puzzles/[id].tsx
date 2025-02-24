@@ -121,14 +121,16 @@ const SolvePuzzlePage = () => {
       >
         {puzzle || !isEmpty(error) ? (
           <div className="flex flex-col">
-            <div className="flex mb-6 justify-center">
-              <ShareFacebookButton url={fullUrl} />
-              <Clipboard
-                valueToCopy={fullUrl}
-                label={t('button.copy-link')}
-                className="ml-2"
-              />
-            </div>
+            {puzzle.isPublic && (
+              <div className="flex mb-6 justify-center">
+                <ShareFacebookButton url={fullUrl} />
+                <Clipboard
+                  valueToCopy={fullUrl}
+                  label={t('button.copy-link')}
+                  className="ml-2"
+                />
+              </div>
+            )}
             <SolvePuzzle
               onSolved={handleSolvePuzzle}
               onNextClick={handleNextClick}
