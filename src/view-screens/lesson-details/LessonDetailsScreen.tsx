@@ -260,24 +260,28 @@ export const LessonDetailsScreen = ({ data }: Props) => {
   const handlePracticeNow = useCallback(async () => {
     setIsLoadingPractice(true);
     try {
-      const payload = {
-        themes,
-        excludedThemeIds,
-      };
-      const nextPuzzleResult = await axiosInstance.post(
-        `${apiDomain}/v1/practice-puzzle/next`,
-        {
-          ...payload,
-          userId: session?.id,
-        }
-      );
-      const nextPuzzleId = nextPuzzleResult.data;
-      if (nextPuzzleId) {
-        sessionStorage.setItem(
-          'practice-puzzle-payload',
-          JSON.stringify(payload)
+      if (themes?.length) {
+        const payload = {
+          themes,
+          excludedThemeIds,
+        };
+        const nextPuzzleResult = await axiosInstance.post(
+          `${apiDomain}/v1/practice-puzzle/next`,
+          {
+            ...payload,
+            userId: session?.id,
+          }
         );
-        router.push(`/practice/${nextPuzzleId}`);
+        const nextPuzzleId = nextPuzzleResult.data;
+        if (nextPuzzleId) {
+          sessionStorage.setItem(
+            'practice-puzzle-payload',
+            JSON.stringify(payload)
+          );
+          router.push(`/practice/${nextPuzzleId}`);
+        } else {
+          router.push(`/practice`);
+        }
       } else {
         router.push(`/practice`);
       }
