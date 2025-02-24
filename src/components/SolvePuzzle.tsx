@@ -95,6 +95,8 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({
   const [isUserClickedOnAnySquare, setIsUserClickedOnAnySquare] =
     useState(false);
 
+  const [isPreMoveDone, setIsPreMoveDone] = useState(false);
+
   const t = useTranslations();
   const { themeMap, isMobile, locale } = useAppContext();
   const router = useRouter();
@@ -243,10 +245,23 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({
         setIsRunning(false); // Need to stop timer if they reset puzzle & try again
       }
     }
-  }, [attemptHistory, currentStep, handleOnSolved, puzzle.solutions.length]);
+  }, [
+    attemptHistory,
+    currentStep,
+    handleOnSolved,
+    isCurrentStepReachSolutionLength,
+    puzzle.solutions.length,
+  ]);
 
   const handlePreMove = (callback?: () => void) => {
     const { move, from, to } = (puzzle.preMove as PuzzlePreMove) || {};
+
+    if (!move) {
+      setIsPreMoveDone(true); // No pre-move, so we can immediately render arrows
+      return;
+    }
+
+    setIsPreMoveDone(false); // Hide arrows while pre-move is executing
 
     const timeout = setTimeout(() => {
       if (game && move) {
@@ -257,6 +272,7 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({
           [to]: { background: 'var(--p-highlight)' },
         });
         startTimer();
+        setIsPreMoveDone(true); // Pre-move is now finished, allow arrows to show
       }
       if (callback) {
         callback(); // Proceed to callback
@@ -706,19 +722,33 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({
   const customArrows = useMemo(() => {
     if (!showCustomArrows) return undefined;
 
+    // Case 1: If puzzle is solved, use end arrows
     if (isCurrentStepReachSolutionLength) {
       return puzzle.endCustomArrows || undefined;
     }
 
-    if (!isUserClickedOnAnySquare) {
+    // Case 2: If there's no pre-move, show custom arrows immediately
+    if (!puzzle.preMove && !isUserClickedOnAnySquare) {
       return puzzle.customArrows || undefined;
     }
+
+    // Case 3: If pre-move exists but isn't finished yet, don't render arrows
+    if (!isPreMoveDone) {
+      return undefined;
+    }
+
+    // Case 4: After pre-move is finished, render custom arrows
+    return !isUserClickedOnAnySquare
+      ? puzzle.customArrows || undefined
+      : undefined;
   }, [
+    showCustomArrows,
     isCurrentStepReachSolutionLength,
-    isUserClickedOnAnySquare,
+    puzzle.preMove,
     puzzle.customArrows,
     puzzle.endCustomArrows,
-    showCustomArrows,
+    isUserClickedOnAnySquare,
+    isPreMoveDone,
   ]);
 
   return (

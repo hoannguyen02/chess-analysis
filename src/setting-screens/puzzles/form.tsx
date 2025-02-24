@@ -105,6 +105,7 @@ export const PuzzleFormScreen = ({ puzzle, onSaveSuccess }: Props) => {
 
   // Handle form submission
   const onSubmit: SubmitHandler<Puzzle> = async (data) => {
+    debugger;
     const { _id, preMove, themes, customArrows, endCustomArrows, ...rest } =
       data;
     const formattedCustomArrows = customArrows?.map((arrow) => [
@@ -123,21 +124,25 @@ export const PuzzleFormScreen = ({ puzzle, onSaveSuccess }: Props) => {
       setIsSubmitting(true);
       const result = await handleSubmission(
         async () => {
+          const commonPayload = {
+            themes: themeIds,
+            customArrows: formattedCustomArrows,
+            endCustomArrows: formattedEndCustomArrows,
+          };
+
           if (_id) {
             let payload: any = rest;
             if (!isEmpty(preMove?.move)) {
               payload = {
                 ...rest,
-                themes: themeIds,
+                ...commonPayload,
                 preMove,
               };
             } else {
               payload = {
                 ...rest,
-                themes: themeIds,
                 preMove: null,
-                customArrows: formattedCustomArrows,
-                endCustomArrows: formattedEndCustomArrows,
+                ...commonPayload,
               };
             }
             return await axiosInstance.put(
@@ -146,9 +151,7 @@ export const PuzzleFormScreen = ({ puzzle, onSaveSuccess }: Props) => {
             );
           } else {
             return await axiosInstance.post(`${apiDomain}/v1/puzzles`, {
-              themes: themeIds,
-              customArrows: formattedCustomArrows,
-              endCustomArrows: formattedEndCustomArrows,
+              ...commonPayload,
               ...rest,
               ...(!isEmpty(preMove?.move) && { preMove }),
             });
