@@ -5,12 +5,13 @@ import { HiPlus, HiTrash } from 'react-icons/hi';
 type Props = {
   control: any;
   register: any;
+  name: string;
 };
 
-export const CustomArrowField = ({ control, register }: Props) => {
+export const CustomArrowField = ({ control, register, name }: Props) => {
   const { fields, append, remove } = useFieldArray({
     control,
-    name: 'customArrows',
+    name,
   });
 
   return (
@@ -18,11 +19,11 @@ export const CustomArrowField = ({ control, register }: Props) => {
       {fields.map((arrow, index) => (
         <div className="flex items-center space-x-2 mb-2" key={arrow.id}>
           <TextInput
-            {...register(`customArrows.${index}[0]`)}
+            {...register(`${name}.${index}[0]`)}
             placeholder="From (e.g., e2)"
           />
           <TextInput
-            {...register(`customArrows.${index}[1]`)}
+            {...register(`${name}.${index}[1]`)}
             placeholder="To (e.g., e4)"
           />
           <Button

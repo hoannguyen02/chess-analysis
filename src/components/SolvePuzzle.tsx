@@ -49,6 +49,7 @@ type PuzzleProps = {
   showTimer?: boolean;
   isPreview?: boolean;
   actionClass?: string;
+  showCustomArrows?: boolean;
 };
 
 export type HistoryMove = {
@@ -77,6 +78,7 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({
   showTimer = true,
   isPreview = true,
   actionClass = '',
+  showCustomArrows = false,
 }) => {
   const moveSound = useRef<HTMLAudioElement | null>(null);
   const captureSound = useRef<HTMLAudioElement | null>(null);
@@ -90,7 +92,8 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({
     failedSound.current = new Audio('/sounds/decline.mp3');
   }, []);
 
-  const [showCustomArrows, setShowCustomArrows] = useState(true);
+  const [isUserClickedOnAnySquare, setIsUserClickedOnAnySquare] =
+    useState(false);
 
   const t = useTranslations();
   const { themeMap, isMobile, locale } = useAppContext();
@@ -128,6 +131,11 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({
   const hasCalledApi = useRef(false);
   // attemptHistory adjust rating when puzzle is solved/quit
   const [attemptHistory, setAttemptHistory] = useState<AttemptHistory[]>([]);
+
+  const isCurrentStepReachSolutionLength = useMemo(
+    () => currentStep === puzzle.solutions.length,
+    [currentStep, puzzle.solutions.length]
+  );
 
   const startTimer = () => {
     setStartTime(Date.now());
@@ -225,7 +233,7 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({
   }, [puzzle]);
 
   useEffect(() => {
-    if (currentStep === puzzle.solutions.length) {
+    if (isCurrentStepReachSolutionLength) {
       if (!hasCalledApi.current) {
         hasCalledApi.current = true; // Prevents duplicate API calls
         setIsBoardClickAble(false);
@@ -415,7 +423,7 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({
   };
 
   const onSquareClick = (square: Square) => {
-    setShowCustomArrows(false);
+    setIsUserClickedOnAnySquare(true);
     if (hintMessage) {
       setHintMessage('');
     }
@@ -510,7 +518,7 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({
     setCurrentStep(0);
     setIsBoardClickAble(true);
     setHistoryMoves([]);
-    setShowCustomArrows(true);
+    setIsUserClickedOnAnySquare(false);
   };
 
   const showSolution = () => {
@@ -662,7 +670,7 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({
       };
     }
 
-    if (currentStep === puzzle.solutions.length) {
+    if (isCurrentStepReachSolutionLength) {
       return {
         bgHeader: 'bg-[var(--s-bg)]',
         message: (
@@ -681,7 +689,7 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({
       message: `${t(`common.title.${playerName.toLocaleLowerCase()}`)} ${t('common.title.move')}`,
       bgHeader: 'bg-[var(--p-bg)]',
     };
-  }, [currentStep, playerName, puzzle.solutions.length, showRetry, t]);
+  }, [isCurrentStepReachSolutionLength, playerName, showRetry, t]);
 
   const { setupMoves, followUpMoves, splitIndex } = useMemo(() => {
     const moves = historyMoves || [];
@@ -695,10 +703,23 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({
 
   const preMove = useMemo(() => puzzle.preMove?.move, [puzzle]);
 
-  const customArrows = useMemo(
-    () => (showCustomArrows ? puzzle.customArrows : undefined),
-    [puzzle.customArrows, showCustomArrows]
-  );
+  const customArrows = useMemo(() => {
+    if (!showCustomArrows) return undefined;
+
+    if (isCurrentStepReachSolutionLength) {
+      return puzzle.endCustomArrows || undefined;
+    }
+
+    if (!isUserClickedOnAnySquare) {
+      return puzzle.customArrows || undefined;
+    }
+  }, [
+    isCurrentStepReachSolutionLength,
+    isUserClickedOnAnySquare,
+    puzzle.customArrows,
+    puzzle.endCustomArrows,
+    showCustomArrows,
+  ]);
 
   return (
     <div>
@@ -773,7 +794,7 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({
               <ElapsedTimer startTime={startTime} isRunning={isRunning} />
             )}
           </div>
-          {currentStep === puzzle.solutions.length && (
+          {isCurrentStepReachSolutionLength && (
             <div className="hidden lg:flex flex-col p-4">
               {t('common.title.theme')}:
               {puzzle.themes.map((theme) => {
@@ -871,7 +892,7 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({
                 )}
               </>
             )}
-            {currentStep === puzzle.solutions.length && (
+            {isCurrentStepReachSolutionLength && (
               <div className="flex flex-col">
                 <div className="flex justify-between">
                   <div className="flex">

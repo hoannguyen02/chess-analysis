@@ -364,6 +364,7 @@ export const LessonDetailsScreen = ({ data }: Props) => {
                 }}
                 showTimer={false}
                 actionClass={`${isMobile ? 'pl-20 min-h-[72px]' : ''} `}
+                showCustomArrows
               />
             )}
             <div className="mt-4">
