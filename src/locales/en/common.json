@@ -64,7 +64,8 @@
     "learn-moves": "Learn more",
     "no-results": "No lessons found for the selected filters.",
     "difficulty": "DIFFICULTY",
-    "tags": "TAGS"
+    "tags": "TAGS",
+    "lesson-completion": "🎉 Congratulations! You have completed the lesson."
   },
   "button": {
     "back": "Back",

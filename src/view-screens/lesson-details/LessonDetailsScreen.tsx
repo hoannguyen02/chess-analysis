@@ -416,7 +416,7 @@ export const LessonDetailsScreen = ({ data }: Props) => {
               {progress.completedPuzzles.length === totalPuzzles && (
                 <div className="flex flex-col justify-center w-full items-center mt-2">
                   <h3 className="text-xl font-bold text-center mb-4 flex items-center">
-                    🎉 Chúc mừng! Bạn đã hoàn thành bài học!{' '}
+                    {t('title.lesson-completion')}{' '}
                     {!isLoggedIn ? (
                       <>
                         <Link

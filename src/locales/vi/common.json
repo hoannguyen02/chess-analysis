@@ -64,7 +64,8 @@
     "learn-moves": "Tìm hiểu thêm",
     "no-results": "Không tìm thấy bài học nào phù hợp với bộ lọc đã chọn.",
     "difficulty": "Độ khó",
-    "tags": "Từ khóa / Thẻ"
+    "tags": "Từ khóa / Thẻ",
+    "lesson-completion": "🎉 Chúc mừng! Bạn đã hoàn thành bài học!"
   },
   "button": {
     "back": "Quay lại",
