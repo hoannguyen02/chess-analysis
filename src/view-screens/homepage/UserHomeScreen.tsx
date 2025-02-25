@@ -21,6 +21,9 @@ const PracticePuzzleHistories = dynamic(() =>
     (components) => components.PracticePuzzleHistories
   )
 );
+const Bookmarks = dynamic(() =>
+  import('./Bookmarks').then((components) => components.Bookmarks)
+);
 
 export const UserHomeScreen = () => {
   const t = useTranslations();
@@ -155,6 +158,13 @@ export const UserHomeScreen = () => {
           onClick={() => setActiveTab('custom')}
         >
           <PracticePuzzleHistories />
+        </Tabs.Item>
+        <Tabs.Item
+          active={activeTab === 'bookmark'}
+          title={t('home.bookmark')}
+          onClick={() => setActiveTab('bookmark')}
+        >
+          <Bookmarks />
         </Tabs.Item>
       </Tabs>
     </div>

@@ -12,6 +12,7 @@ import { getActivePlayerFromFEN } from '@/utils/get-player-name-from-fen';
 import { Chess } from 'chess.js';
 import { Button, Tooltip } from 'flowbite-react';
 import { useTranslations } from 'next-intl';
+import dynamic from 'next/dynamic';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import React, {
@@ -37,6 +38,10 @@ import {
 import ConfettiEffect from './ConfettiEffect';
 import ElapsedTimer from './ElapsedTimer';
 
+const BookmarkButton = dynamic(() =>
+  import('./BookmarkButton').then((components) => components.BookmarkButton)
+);
+
 type PuzzleProps = {
   puzzle: Puzzle;
   showBackButton?: boolean;
@@ -50,6 +55,7 @@ type PuzzleProps = {
   isPreview?: boolean;
   actionClass?: string;
   showCustomArrows?: boolean;
+  showBookmark?: boolean;
 };
 
 export type HistoryMove = {
@@ -79,6 +85,7 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({
   isPreview = true,
   actionClass = '',
   showCustomArrows = false,
+  showBookmark = false,
 }) => {
   const moveSound = useRef<HTMLAudioElement | null>(null);
   const captureSound = useRef<HTMLAudioElement | null>(null);
@@ -98,7 +105,7 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({
   const [isPreMoveDone, setIsPreMoveDone] = useState(false);
 
   const t = useTranslations();
-  const { themeMap, isMobile, locale } = useAppContext();
+  const { themeMap, isMobile, locale, isLoggedIn } = useAppContext();
   const router = useRouter();
   const { customPieces, bgDark, bgLight } = useCustomBoard();
   const game = useMemo(() => new Chess(puzzle.fen), [puzzle.fen]);
@@ -956,24 +963,23 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({
                     </Button>
                   </div>
                 </div>
-                {showNextButton ? (
-                  <Button
-                    color="primary"
-                    onClick={onNextClick}
-                    className="mt-2"
-                  >
-                    {t('common.button.next')}
-                  </Button>
-                ) : showCloseButton ? (
-                  <Button
-                    color="primary"
-                    onClick={onCloseClick}
-                    className="mt-2"
-                  >
-                    {t('common.button.close')}
-                  </Button>
-                ) : (
-                  <></>
+                {(showNextButton || showCloseButton || showBookmark) && (
+                  <div className="flex items-center flex justify-between mt-2">
+                    {showBookmark && isLoggedIn && (
+                      <BookmarkButton puzzleId={puzzle._id!} />
+                    )}
+                    {showNextButton ? (
+                      <Button color="primary" onClick={onNextClick}>
+                        {t('common.button.next')}
+                      </Button>
+                    ) : showCloseButton ? (
+                      <Button color="primary" onClick={onCloseClick}>
+                        {t('common.button.close')}
+                      </Button>
+                    ) : (
+                      <></>
+                    )}
+                  </div>
                 )}
               </div>
             )}

@@ -134,6 +134,7 @@ export const SolvePracticePuzzleScreen = () => {
             onCloseClick={() => {
               router.push('/practice');
             }}
+            showBookmark
           />
         </div>
       ) : (

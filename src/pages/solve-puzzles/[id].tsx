@@ -137,6 +137,7 @@ const SolvePuzzlePage = () => {
               puzzle={puzzle}
               showNextButton={isShowNextButton}
               isPreview={false}
+              showBookmark
             />
           </div>
         ) : (

@@ -4,7 +4,9 @@
     "solution": "Solution",
     "restart": "Restart",
     "download-png": "Download png",
-    "hint": "Hint"
+    "hint": "Hint",
+    "bookmark": "Bookmark",
+    "un-bookmark": "Un bookmark"
   },
   "title": {
     "moves": "Move List",
@@ -13,6 +15,8 @@
   "message": {
     "invalid-move": "Oops! Try Again",
     "done": "Well Done",
-    "save-progress-failed": "Failed to save progress, please try again later"
+    "save-progress-failed": "Failed to save progress, please try again later",
+    "puzzle_bookmarked": "Puzzle bookmarked",
+    "puzzle_remove_bookmarked": "Puzzle removed from bookmarks"
   }
 }

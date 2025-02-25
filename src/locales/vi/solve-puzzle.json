@@ -4,7 +4,9 @@
     "solution": "Giải pháp",
     "restart": "Xoá, làm lại",
     "download-png": "Tải xuống PNG",
-    "hint": "Gợi ý"
+    "hint": "Gợi ý",
+    "bookmark": "Đánh dấu",
+    "un-bookmark": "Bỏ đánh dấu"
   },
   "title": {
     "moves": "Các nước đi",
@@ -13,6 +15,8 @@
   "message": {
     "invalid-move": "Ôi! Thử lại nhé",
     "done": "Tuyệt vời",
-    "save-progress-failed": "Không thể lưu được tiến độ, vui lòng thử lại sau"
+    "save-progress-failed": "Không thể lưu được tiến độ, vui lòng thử lại sau",
+    "puzzle_bookmarked": "Câu đố đã được đánh dấu",
+    "puzzle_remove_bookmarked": "Câu đố đã được gỡ khỏi dấu trang"
   }
 }

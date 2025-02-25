@@ -419,7 +419,7 @@ export const LessonDetailsScreen = ({ data }: Props) => {
               </div>
               {progress.completedPuzzles.length === totalPuzzles && (
                 <div className="flex flex-col justify-center w-full items-center mt-2">
-                  <h3 className="text-xl font-bold text-center mb-4 flex items-center">
+                  <h3 className="text-xl font-bold text-center mb-4 flex flex-col lg:flex-row items-center">
                     {t('title.lesson-completion')}{' '}
                     {!isLoggedIn ? (
                       <>

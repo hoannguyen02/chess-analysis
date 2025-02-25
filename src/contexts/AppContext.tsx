@@ -1,5 +1,6 @@
 import { ExcludeThemeInFilter } from '@/constants';
 import { LocaleType } from '@/types/locale';
+import { Puzzle } from '@/types/puzzle';
 import { PuzzleTheme } from '@/types/puzzle-theme';
 import { Session } from '@/types/session';
 import { Tag } from '@/types/tag';
@@ -30,6 +31,9 @@ export interface AppContextProps {
   isLoadingUser?: boolean;
   mutateUser: KeyedMutator<any>;
   isSubscriptionExpired?: boolean;
+  isLoadingBookMark?: boolean;
+  mutateBookmark: KeyedMutator<any>;
+  bookmarks: Puzzle[] | [];
   getFilteredThemes(): {
     themeOptions: PuzzleTheme[] | [];
     excludedThemeIds: string[] | [];
@@ -57,18 +61,27 @@ export const AppProvider: React.FC<{
     fetcher
   );
 
+  const bookmarkKey = useMemo(
+    () => (session?.id ? `${apiDomain}/v1/bookmarks` : null),
+    [apiDomain, session?.id]
+  );
+  const {
+    data: bookmarks,
+    mutate: mutateBookmark,
+    isLoading: isLoadingBookMark,
+    isValidating: isValidatingBookmark,
+  } = useSWR(bookmarkKey, fetcher);
+
   const useKey = useMemo(
     () => (session?.id ? `${apiDomain}/v1/auth/user/${session.id}` : null),
     [apiDomain, session?.id]
   );
-
   const {
     data: user,
     mutate: mutateUser,
     isLoading,
     isValidating,
   } = useSWR(useKey, fetcher);
-
   // Make sure it get latest rating when back home
   useEffect(() => {
     mutateUser();
@@ -159,6 +172,9 @@ export const AppProvider: React.FC<{
       isSubscriptionExpired,
       isLoggedIn: !isEmpty(session?.id),
       mutateUser,
+      mutateBookmark,
+      bookmarks: bookmarks || [],
+      isLoadingBookMark: isLoadingBookMark || isValidatingBookmark,
     }),
     [
       locale,
@@ -170,10 +186,14 @@ export const AppProvider: React.FC<{
       isMobile,
       session,
       user,
-      mutateUser,
       isLoading,
       isValidating,
       isSubscriptionExpired,
+      mutateUser,
+      mutateBookmark,
+      bookmarks,
+      isLoadingBookMark,
+      isValidatingBookmark,
     ]
   );
 

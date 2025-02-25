@@ -14,6 +14,7 @@
   "recent-puzzles": "Recent Puzzles",
   "rated": "Rated",
   "custom": "Custom",
+  "bookmark": "Bookmarks",
   "attempted-at": "Attempted At",
   "rate": "Rate",
   "time-taken": "Time Taken",
@@ -21,6 +22,7 @@
   "select-outcome": "Select outcome...",
   "themes": "Themes",
   "select-themes": "Select themes...",
+  "title": "Title",
   "subscription": {
     "expired-title": "Subscription Required",
     "expired-message": "Unlock full access to all puzzles and lessons by subscribing."
