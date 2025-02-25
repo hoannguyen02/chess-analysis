@@ -30,7 +30,7 @@ export const MenuLessonDrawer = forwardRef<HTMLDivElement, Props>(
         <Drawer.Header titleIcon={VscMortarBoard}></Drawer.Header>
         <Drawer.Items
           ref={ref} // Attach ref to scrolling container
-          className="h-[calc(100vh-4rem)] overflow-y-auto"
+          className="overflow-y-auto max-h-[calc(100dvh-50px)]"
         >
           {children}
         </Drawer.Items>

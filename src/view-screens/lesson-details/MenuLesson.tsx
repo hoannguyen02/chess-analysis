@@ -74,7 +74,7 @@ export const MenuLesson = ({
           </svg>
         </div>
       </div>
-      <ul className="space-y-2">
+      <ul className="space-y-2 pb-[env(safe-area-inset-bottom,20px)]">
         {contents?.map((content, index) => (
           <li key={content._id} className="mb-2">
             <div className="sticky border-b flex justify-between items-center top-[90px] bg-white py-2 font-bold text-gray-700 z-10 p-4">

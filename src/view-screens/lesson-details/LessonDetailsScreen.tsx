@@ -406,7 +406,7 @@ export const LessonDetailsScreen = ({ data }: Props) => {
         {/* Sidebar with navigation */}
         <aside
           ref={menuRef}
-          className="w-1/4 h-[calc(100vh-100px)] overflow-y-auto border-r border-l border-t rounded-md sticky top-0 hidden lg:flex lg:flex-col"
+          className="w-1/4 h-[calc(100dvh-100px)] overflow-y-auto border-r border-l border-t rounded-md sticky top-0 hidden lg:flex lg:flex-col"
         >
           <MenuLesson
             contents={contents}
@@ -422,7 +422,7 @@ export const LessonDetailsScreen = ({ data }: Props) => {
         </aside>
 
         {/* Main content */}
-        <div className="w-full lg:w-3/4 p-4 pb-[100px] lg:pb-4 lg:pl-8 overflow-y-auto h-[calc(100vh-100px)]">
+        <div className="w-full lg:w-3/4 p-4 pb-[100px] lg:pb-4 lg:pl-8 overflow-y-auto h-[calc(100dvh-100px)]">
           <TransitionContainer isLoading={isLoading} isVisible={isVisible}>
             {displayedPuzzle && (
               <SolvePuzzle
