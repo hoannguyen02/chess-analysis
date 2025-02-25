@@ -3,6 +3,7 @@ import { ShareFacebookButton } from '@/components/ShareFacebookButton';
 import SolvePuzzle from '@/components/SolvePuzzle';
 import { TransitionContainer } from '@/components/TransitionContainer';
 import { useAppContext } from '@/contexts/AppContext';
+import { useToast } from '@/contexts/ToastContext';
 import { LessonExpanded } from '@/types/lesson';
 import { Puzzle } from '@/types/puzzle';
 import axiosInstance from '@/utils/axiosInstance';
@@ -23,14 +24,21 @@ type Props = {
 
 export const LessonDetailsScreen = ({ data }: Props) => {
   const [isLoadingPractice, setIsLoadingPractice] = useState(false);
+  const [resetting, setResetting] = useState(false);
   const t = useTranslations('common');
   const router = useRouter();
+  const { addToast } = useToast();
 
-  const { isMobile, isLoggedIn, getFilteredThemes, apiDomain, session } =
-    useAppContext();
+  const {
+    isMobile,
+    isLoggedIn,
+    getFilteredThemes,
+    apiDomain,
+    session,
+    locale,
+  } = useAppContext();
   const { excludedThemeIds } = getFilteredThemes();
   const [isOpenDrawer, setIsOpenDrawer] = useState(false);
-  const { locale } = useAppContext();
 
   const [contentIndex, setContentIdx] = useState<number>();
   const [activePuzzle, setActivePuzzle] = useState<Puzzle>();
@@ -292,6 +300,24 @@ export const LessonDetailsScreen = ({ data }: Props) => {
     }
   }, [apiDomain, excludedThemeIds, router, session?.id, themes]);
 
+  const handleResetLesson = useCallback(async () => {
+    setResetting(true);
+    try {
+      await axiosInstance.post(`${apiDomain}/v1/lessons/public/reset-lesson`, {
+        lessonId: _id,
+        userId: session?.id,
+      });
+      addToast(t('title.reset-lesson-success'), 'success');
+      setTimeout(() => {
+        window.location.reload();
+      }, 300);
+    } catch (error) {
+      console.error(error);
+    } finally {
+      setResetting(false);
+    }
+  }, [_id, addToast, apiDomain, session?.id, t]);
+
   const drawerRef = useRef<HTMLDivElement>(null);
 
   // Display puzzle
@@ -431,17 +457,28 @@ export const LessonDetailsScreen = ({ data }: Props) => {
                         </Link>
                       </>
                     ) : (
-                      <>
+                      <div className="flex mt-2 lg:mt-0">
                         <Button
                           className="ml-4"
                           gradientDuoTone="greenToBlue"
                           outline
+                          size={isMobile ? 'sm' : 'lg'}
                           isProcessing={isLoadingPractice}
                           onClick={handlePracticeNow}
                         >
                           {t('button.practice-now')}
                         </Button>
-                      </>
+                        <Button
+                          className="ml-4"
+                          gradientDuoTone="purpleToBlue"
+                          outline
+                          isProcessing={resetting}
+                          size={isMobile ? 'sm' : 'lg'}
+                          onClick={handleResetLesson}
+                        >
+                          {t('button.restart-lesson')}
+                        </Button>
+                      </div>
                     )}
                   </h3>
                   {isPublic && (

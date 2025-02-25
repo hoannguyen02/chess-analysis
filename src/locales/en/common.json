@@ -65,7 +65,8 @@
     "no-results": "No lessons found for the selected filters.",
     "difficulty": "DIFFICULTY",
     "tags": "TAGS",
-    "lesson-completion": "🎉 Congratulations! You have completed the lesson."
+    "lesson-completion": "🎉 Congratulations! You have completed the lesson.",
+    "reset-lesson-success": "Lesson progress reset successfully"
   },
   "button": {
     "back": "Back",
@@ -91,7 +92,8 @@
     "close": "Close",
     "subscribe-now": "Subscribe Now",
     "practice-now": "Practice Now",
-    "register-free": "Sign up for free!"
+    "register-free": "Sign up for free!",
+    "restart-lesson": "Restart Lesson"
   },
   "benefits": {
     "title": "🚀 Reach the pinnacle of chess today!",

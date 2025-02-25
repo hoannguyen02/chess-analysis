@@ -951,7 +951,9 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({
                   </div>
                 </div>
                 {(showNextButton || showCloseButton || showBookmark) && (
-                  <div className="flex items-center flex justify-between mt-2">
+                  <div
+                    className={`flex items-center mt-2 ${showBookmark ? 'justify-between' : 'justify-end'}`}
+                  >
                     {showBookmark && isLoggedIn && (
                       <BookmarkButton puzzleId={puzzle._id!} />
                     )}
