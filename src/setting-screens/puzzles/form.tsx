@@ -83,15 +83,15 @@ export const PuzzleFormScreen = ({ puzzle, onSaveSuccess }: Props) => {
   const isValidFormValues = () => {
     const { fen, solutions, themes } = getValues();
     if (!fen) {
-      alert('Please enter a valid FEN position');
+      alert('Please enter a valid FEN position (Vui lòng nhập FEN)');
       return false;
     }
-    if (!themes.length) {
-      alert('Please enter themes');
+    if (!themes || !themes?.length) {
+      alert('Please enter themes (Vui lòng nhập chiến thuật)');
       return false;
     }
     if (!solutions.length) {
-      alert('Please enter solutions');
+      alert('Please enter solutions (Vui lòng nhập solutions)');
       return false;
     }
 
