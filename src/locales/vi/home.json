@@ -23,8 +23,8 @@
   "themes": "Thế cờ",
   "select-themes": "Chọn thế cờ...",
   "title": "Tiêu đề",
-  "subscription": {
-    "expired-title": "Cần nâng cấp tài khoản",
-    "expired-message": "Hãy mua gói đăng ký để truy cập đầy đủ tất cả câu đố và bài học."
+  "welcome": {
+    "title": "Chào mừng bạn đến với LIMA Chess! 🎉",
+    "message": "Hãy nâng cấp để trải nghiệm phương pháp huấn luyện chuyên sâu, rèn luyện kỹ năng với hệ thống tối ưu và chinh phục đỉnh cao cờ vua nhanh nhất! 🚀🏆"
   }
 }

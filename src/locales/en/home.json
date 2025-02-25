@@ -23,8 +23,8 @@
   "themes": "Themes",
   "select-themes": "Select themes...",
   "title": "Title",
-  "subscription": {
-    "expired-title": "Subscription Required",
-    "expired-message": "Unlock full access to all puzzles and lessons by subscribing."
+  "welcome": {
+    "title": "Welcome to LIMA Chess! 🎉",
+    "message": "Upgrade now to experience advanced training methods, sharpen your skills with an optimized system, and reach the pinnacle of chess mastery faster than ever! 🚀🏆"
   }
 }
