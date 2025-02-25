@@ -102,8 +102,7 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({
   const [isPreMoveDone, setIsPreMoveDone] = useState(false);
 
   const t = useTranslations();
-  const { themeMap, isMobile, locale, isLoggedIn, isManageRole } =
-    useAppContext();
+  const { themeMap, isMobile, locale, isLoggedIn } = useAppContext();
   const router = useRouter();
   const { customPieces, bgDark, bgLight } = useCustomBoard();
   const game = useMemo(() => new Chess(puzzle.fen), [puzzle.fen]);

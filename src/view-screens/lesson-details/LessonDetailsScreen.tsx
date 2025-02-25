@@ -302,21 +302,34 @@ export const LessonDetailsScreen = ({ data }: Props) => {
 
   const handleResetLesson = useCallback(async () => {
     setResetting(true);
-    try {
-      await axiosInstance.post(`${apiDomain}/v1/lessons/public/reset-lesson`, {
-        lessonId: _id,
-        userId: session?.id,
-      });
+    if (isLoggedIn) {
+      try {
+        await axiosInstance.post(
+          `${apiDomain}/v1/lessons/public/reset-lesson`,
+          {
+            lessonId: _id,
+            userId: session?.id,
+          }
+        );
+        addToast(t('title.reset-lesson-success'), 'success');
+        setTimeout(() => {
+          window.location.reload();
+        }, 300);
+      } catch (error) {
+        console.error(error);
+      } finally {
+        setResetting(false);
+      }
+    } else {
+      localStorage.removeItem(`synced_${_id}`);
+      localStorage.removeItem(`lesson_${_id}`);
+      setResetting(false);
       addToast(t('title.reset-lesson-success'), 'success');
       setTimeout(() => {
         window.location.reload();
       }, 300);
-    } catch (error) {
-      console.error(error);
-    } finally {
-      setResetting(false);
     }
-  }, [_id, addToast, apiDomain, session?.id, t]);
+  }, [_id, addToast, apiDomain, isLoggedIn, session?.id, t]);
 
   const drawerRef = useRef<HTMLDivElement>(null);
 
@@ -333,7 +346,7 @@ export const LessonDetailsScreen = ({ data }: Props) => {
         setDisplayedPuzzle(activePuzzle);
         setIsLoading(false);
         setIsVisible(true);
-      }, 300);
+      }, 100);
     }
   }, [activePuzzle, displayedPuzzle?._id]);
   // End Display puzzle
@@ -455,6 +468,16 @@ export const LessonDetailsScreen = ({ data }: Props) => {
                         >
                           {t('button.register-free')}
                         </Link>
+                        <Button
+                          className="ml-4"
+                          gradientDuoTone="purpleToBlue"
+                          outline
+                          isProcessing={resetting}
+                          size={isMobile ? 'sm' : 'lg'}
+                          onClick={handleResetLesson}
+                        >
+                          {t('button.restart-lesson')}
+                        </Button>
                       </>
                     ) : (
                       <div className="flex mt-2 lg:mt-0">
