@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 export const MenuLeft = () => {
   const t = useTranslations('common');
-  const { session } = useAppContext();
+  const { isAdminRole, isManageRole } = useAppContext();
 
   return (
     <nav
@@ -55,7 +55,7 @@ export const MenuLeft = () => {
       >
         {t('navigation.youtube')}
       </Link>
-      {(session?.role === 'Teacher' || session?.role === 'Admin') && (
+      {isManageRole && (
         <>
           <hr className="mb-4" />
           {/*  Role: Teacher, Admin */}
@@ -93,7 +93,7 @@ export const MenuLeft = () => {
                 {t('navigation.puzzle-themes')}
               </Link>
             </li>
-            {session?.role === 'Admin' && (
+            {isAdminRole && (
               <li className="mb-2">
                 <Link
                   href="/settings/users"

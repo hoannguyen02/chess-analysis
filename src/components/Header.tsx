@@ -20,7 +20,8 @@ export default function Header() {
   const [isOpenDrawer, setIsOpenDrawer] = useState(false);
   const t = useTranslations('common');
   const router = useRouter();
-  const { session, apiDomain, locale, isMobile } = useAppContext();
+  const { session, apiDomain, locale, isMobile, isAdminRole, isManageRole } =
+    useAppContext();
   const { addToast } = useToast();
   const currentPath = useMemo(() => {
     return router.asPath;
@@ -147,7 +148,7 @@ export default function Header() {
             </div>
           </div>
           {/* Manage route */}
-          {(session?.role === 'Teacher' || session?.role === 'Admin') && (
+          {isManageRole && (
             <div className="hidden lg:flex ml-4">
               <Dropdown label={t('title.manage')} inline>
                 <Dropdown.Item as={Link} href="/settings/puzzles">
@@ -159,7 +160,7 @@ export default function Header() {
                 <Dropdown.Item as={Link} href="/settings/puzzle-themes">
                   {t('navigation.puzzle-themes')}
                 </Dropdown.Item>
-                {session?.role === 'Admin' && (
+                {isAdminRole && (
                   <Dropdown.Item as={Link} href="/settings/users">
                     {t('navigation.users')}
                   </Dropdown.Item>

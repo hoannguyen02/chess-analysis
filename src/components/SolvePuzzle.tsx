@@ -26,7 +26,6 @@ import React, {
 import { Chessboard } from 'react-chessboard';
 import { Square } from 'react-chessboard/dist/chessboard/types';
 import {
-  VscArrowLeft,
   VscCheckAll,
   VscChevronLeft,
   VscChevronRight,
@@ -44,7 +43,6 @@ const BookmarkButton = dynamic(() =>
 
 type PuzzleProps = {
   puzzle: Puzzle;
-  showBackButton?: boolean;
   highlightPossibleMoves?: boolean;
   showNextButton?: boolean;
   onNextClick?(): void;
@@ -74,7 +72,6 @@ type AttemptHistory = {
 
 const SolvePuzzle: React.FC<PuzzleProps> = ({
   puzzle,
-  showBackButton = false,
   highlightPossibleMoves = false,
   showNextButton = false,
   onNextClick,
@@ -105,7 +102,8 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({
   const [isPreMoveDone, setIsPreMoveDone] = useState(false);
 
   const t = useTranslations();
-  const { themeMap, isMobile, locale, isLoggedIn } = useAppContext();
+  const { themeMap, isMobile, locale, isLoggedIn, isManageRole } =
+    useAppContext();
   const router = useRouter();
   const { customPieces, bgDark, bgLight } = useCustomBoard();
   const game = useMemo(() => new Chess(puzzle.fen), [puzzle.fen]);
@@ -760,17 +758,6 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({
 
   return (
     <div>
-      {showBackButton && (
-        <button
-          className="mb-4 flex items-center"
-          onClick={() => {
-            router.back();
-          }}
-        >
-          <VscArrowLeft /> {t('common.button.back')}
-        </button>
-      )}
-
       {/* Mobile message */}
       <div
         className={`${bgHeader} flex justify-between p-4 text-white font-bold lg:hidden mb-4 rounded-lg`}

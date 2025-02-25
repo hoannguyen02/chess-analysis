@@ -7,6 +7,7 @@ import axiosInstance from '@/utils/axiosInstance';
 import { fetcher } from '@/utils/fetcher';
 import isEmpty from 'lodash/isEmpty';
 import { useTranslations } from 'next-intl';
+import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useCallback, useEffect, useMemo, useState } from 'react';
 import { VscArrowLeft } from 'react-icons/vsc';
@@ -18,7 +19,7 @@ export const SolvePracticePuzzleScreen = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [isManualLoading, setIsManualLoading] = useState(false);
   const [nextPuzzleId, setNextPuzzleId] = useState(null);
-  const { apiDomain, session } = useAppContext();
+  const { apiDomain, session, isManageRole } = useAppContext();
   const t = useTranslations();
   const router = useRouter();
   const { query } = router;
@@ -124,6 +125,16 @@ export const SolvePracticePuzzleScreen = () => {
           >
             <VscArrowLeft /> {t('common.button.back')}
           </button>
+          {isManageRole && (
+            <Link
+              href={`/settings/puzzles/${puzzle._id}`}
+              rel="noopener noreferrer"
+              target="_blank"
+              className="hover:text-[var(--s-bg)] underline mb-4"
+            >
+              Update Puzzle (Sửa câu đố)
+            </Link>
+          )}
           <SolvePuzzle
             key={renderKey}
             onSolved={handleSolvePuzzle}

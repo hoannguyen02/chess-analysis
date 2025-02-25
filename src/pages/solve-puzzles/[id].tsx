@@ -19,6 +19,7 @@ import {
   PreviewData,
 } from 'next';
 import { useTranslations } from 'next-intl';
+import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { ParsedUrlQuery } from 'querystring';
 import { useCallback, useEffect, useMemo, useState } from 'react';
@@ -30,7 +31,8 @@ const SolvePuzzlePage = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [isManualLoading, setIsManualLoading] = useState(false);
   const [nextPuzzleId, setNextPuzzleId] = useState();
-  const { apiDomain, session, getFilteredThemes } = useAppContext();
+  const { apiDomain, session, getFilteredThemes, isManageRole } =
+    useAppContext();
   const { excludedThemeIds } = getFilteredThemes();
   const t = useTranslations('common');
   const router = useRouter();
@@ -121,14 +123,28 @@ const SolvePuzzlePage = () => {
       >
         {puzzle || !isEmpty(error) ? (
           <div className="flex flex-col">
-            {puzzle.isPublic && (
-              <div className="flex mb-6 justify-center">
-                <ShareFacebookButton url={fullUrl} />
-                <Clipboard
-                  valueToCopy={fullUrl}
-                  label={t('button.copy-link')}
-                  className="ml-2"
-                />
+            {(isManageRole || puzzle.isPublic) && (
+              <div className="flex mb-6 justify-center items-center">
+                {isManageRole && (
+                  <Link
+                    href={`/settings/puzzles/${puzzle._id}`}
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    className="hover:text-[var(--s-bg)] underline mr-2"
+                  >
+                    Update Puzzle (Sửa câu đố)
+                  </Link>
+                )}
+                {puzzle.isPublic && (
+                  <>
+                    <ShareFacebookButton url={fullUrl} />
+                    <Clipboard
+                      valueToCopy={fullUrl}
+                      label={t('button.copy-link')}
+                      className="ml-2"
+                    />
+                  </>
+                )}
               </div>
             )}
             <SolvePuzzle

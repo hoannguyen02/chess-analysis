@@ -38,6 +38,8 @@ export interface AppContextProps {
     themeOptions: PuzzleTheme[] | [];
     excludedThemeIds: string[] | [];
   };
+  isManageRole?: boolean; // Teacher or Admin
+  isAdminRole?: boolean;
 }
 
 const AppContext = createContext<AppContextProps | undefined>(undefined);
@@ -175,6 +177,8 @@ export const AppProvider: React.FC<{
       mutateBookmark,
       bookmarks: bookmarks || [],
       isLoadingBookMark: isLoadingBookMark || isValidatingBookmark,
+      isManageRole: session?.role === 'Teacher' || session?.role === 'Admin',
+      isAdminRole: session?.role === 'Admin',
     }),
     [
       locale,
