@@ -316,7 +316,15 @@ export const LessonDetailsScreen = ({ data }: Props) => {
     } finally {
       setIsLoadingPractice(false);
     }
-  }, [apiDomain, excludedThemeIds, router, session?.id, themes]);
+  }, [
+    apiDomain,
+    excludedThemeIds,
+    isSubscriptionExpired,
+    onOpenDialog,
+    router,
+    session?.id,
+    themes,
+  ]);
 
   const handleResetLesson = useCallback(async () => {
     setResetting(true);
