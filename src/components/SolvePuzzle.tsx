@@ -442,6 +442,16 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({
     return true;
   };
 
+  const onPieceDrop = (sourceSquare: Square, targetSquare: Square) => {
+    if (hintMessage) {
+      setHintMessage('');
+    }
+    if (!isBoardClickAble) {
+      return false;
+    }
+    return handleMove(sourceSquare, targetSquare);
+  };
+
   const onSquareClick = (square: Square) => {
     setIsUserClickedOnAnySquare(true);
     if (hintMessage) {
@@ -498,12 +508,20 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({
     setCurrentFen(game.fen());
   };
 
-  function onPromotionPieceSelect(playerPiece: string): boolean {
+  function onPromotionPieceSelect(
+    playerPiece: string,
+    from?: Square,
+    to?: Square
+  ): boolean {
     const promotionType = playerPiece?.charAt(1);
 
     const promoteToSquare = moveToRef.current;
 
-    if (!promotionType || !moveFrom || !promoteToSquare) {
+    const fromSquare = moveFrom || from;
+    const toSquare = promoteToSquare || to;
+
+    if (!promotionType || !fromSquare || !toSquare) {
+      console.log('Missing required parameters for promotion.');
       setMoveFrom(null);
       setMoveTo(null);
       setShowPromotionDialog(false);
@@ -512,10 +530,11 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({
     }
 
     const move = handleMove(
-      moveFrom,
-      promoteToSquare,
+      fromSquare,
+      toSquare,
       promotionType.toLowerCase() as PromotionType
     );
+
     if (!move) {
       return false;
     }
@@ -774,15 +793,7 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({
             customArrowColor="#FFA500"
             boardOrientation={playerName?.toLowerCase() as 'black' | 'white'}
             position={currentFen}
-            onPieceDrop={(sourceSquare, targetSquare) => {
-              if (hintMessage) {
-                setHintMessage('');
-              }
-              if (!isBoardClickAble) {
-                return false;
-              }
-              return handleMove(sourceSquare, targetSquare);
-            }}
+            onPieceDrop={onPieceDrop}
             boardWidth={isMobile ? boardRef.current?.clientWidth || 320 : 500}
             onSquareClick={onSquareClick}
             // @ts-ignore
