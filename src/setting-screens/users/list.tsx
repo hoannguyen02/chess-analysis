@@ -122,7 +122,6 @@ export const UserListScreen = ({ roles }: Props) => {
           <Label className="font-bold">Username</Label>
           <Label className="font-bold">Role</Label>
           <Label className="font-bold">Status</Label>
-          <Label className="font-bold">Location</Label>
           <Label className="font-bold">Actions</Label>
         </div>
         {isLoading ? (
@@ -131,11 +130,10 @@ export const UserListScreen = ({ roles }: Props) => {
           </div>
         ) : (
           data.items.map((item, index) => (
-            <div className="grid grid-cols-5" key={`${item.username}-${index}`}>
+            <div className="grid grid-cols-4" key={`${item.username}-${index}`}>
               <Label>{item.username}</Label>
               <Label>{RoleMap[item.role]?.label}</Label>
               <Label>{item.status}</Label>
-              <Label>{item.location}</Label>
               <Link
                 href={`/settings/users/${item._id}`}
                 className="font-medium text-cyan-600 hover:underline dark:text-cyan-500"

@@ -11,7 +11,6 @@ export type User = {
   _id?: string;
   feedback: string;
   rating: number;
-  location: string;
 };
 
 export type Role = {
