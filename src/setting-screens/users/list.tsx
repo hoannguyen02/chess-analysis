@@ -118,7 +118,7 @@ export const UserListScreen = ({ roles }: Props) => {
 
       {/* Courses Table */}
       <DndProvider backend={HTML5Backend}>
-        <div className="grid grid-cols-5 mb-4">
+        <div className="grid grid-cols-4 mb-4">
           <Label className="font-bold">Username</Label>
           <Label className="font-bold">Role</Label>
           <Label className="font-bold">Status</Label>

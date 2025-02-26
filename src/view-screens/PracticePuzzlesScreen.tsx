@@ -119,12 +119,20 @@ export const PracticePuzzlesScreen = () => {
   };
 
   const filteredThemes = useMemo(() => {
-    return themeOptions.filter((option) =>
-      option.label.toLowerCase().includes(searchTerm.toLowerCase())
-    );
-  }, [searchTerm, themeOptions]);
+    // Only recompute when themeOptions, searchTerm, or ThemeProgressesMap change
+    return themeOptions
+      .filter((option) =>
+        option.label.toLowerCase().includes(searchTerm.toLowerCase())
+      )
+      .map((option) => {
+        const solvedPercentage =
+          ThemeProgressesMap[option.value]?.solvedPercentage || 0;
+        return { ...option, solvedPercentage: `${solvedPercentage}%` };
+      });
+  }, [searchTerm, themeOptions, ThemeProgressesMap]);
 
   const sortedThemes = useMemo(() => {
+    // Now you can sort the already filtered themes directly
     return filteredThemes.sort((a, b) => {
       const priorityA = a?.priority ?? 0;
       const priorityB = b?.priority ?? 0;
@@ -133,26 +141,27 @@ export const PracticePuzzlesScreen = () => {
     });
   }, [sortAsc, filteredThemes]);
 
-  // Display
   const [isLoading, setIsLoading] = useState(false);
-  const [displayProgress, setDisplayedProgress] = useState(themeProgresses);
+  const [displaySortedThemes, setDisplaySortThemes] =
+    useState<any[]>(sortedThemes);
   const [isVisible, setIsVisible] = useState(false); // For fade-in transition
+
   useEffect(() => {
-    if (
-      !isEqual(themeProgresses, displayProgress) ||
-      themeProgresses === undefined // guest user or error from BE
-    ) {
+    if (!isEqual(sortedThemes, displaySortedThemes)) {
       setIsVisible(false);
       setIsLoading(true);
 
+      // Add a delay before setting data to allow for a smoother transition
       setTimeout(() => {
-        setDisplayedProgress(themeProgresses);
+        setDisplaySortThemes(sortedThemes);
         setIsLoading(false);
         setIsVisible(true);
       }, 300);
+    } else {
+      // Keep the data visible if it's the same
+      setIsVisible(true);
     }
-  }, [displayProgress, themeProgresses]);
-  // End Display
+  }, [displaySortedThemes, sortedThemes]); // Only trigger effect when sortedThemes change
 
   return (
     <>
@@ -222,7 +231,7 @@ export const PracticePuzzlesScreen = () => {
             </div>
 
             {/* Theme Rows */}
-            {sortedThemes.map((option) => (
+            {displaySortedThemes.map((option) => (
               <div
                 key={option.value}
                 className="p-2 rounded-lg transition-all hover:bg-blue-100"
@@ -240,7 +249,9 @@ export const PracticePuzzlesScreen = () => {
                     </span>
                   </div>
                   <div className="text-center">
-                    <span className="text-gray-800 text-sm font-medium">{`${ThemeProgressesMap[option.value]?.solvedPercentage || 0}%`}</span>
+                    <span className="text-gray-800 text-sm font-medium">
+                      {option.solvedPercentage}
+                    </span>
                   </div>
                 </label>
               </div>
