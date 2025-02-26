@@ -70,7 +70,7 @@
   },
   "promotion": {
     "title": "LIMA Chess chào bạn! 🎉",
-    "message": "Chỉ 199K/Năm – Phương pháp huấn luyện nâng cao, tối ưu kỹ năng và chinh phục đỉnh cao cờ vua nhanh nhất! 🚀🏆"
+    "message": "Chỉ 199,000 VND/năm – Phương pháp huấn luyện nâng cao, tối ưu kỹ năng và chinh phục đỉnh cao cờ vua nhanh nhất! 🚀🏆"
   },
   "button": {
     "back": "Quay lại",
@@ -94,18 +94,14 @@
     "get-started": "Bắt đầu ngay!",
     "copy-link": "Sao chép link",
     "close": "Close/Đóng",
-    "subscribe-now": "Nâng cấp ngay",
+    "subscribe-now": "Mua ngay",
     "register-now": "Đăng ký ngay",
     "practice-now": "Luyện tập ngay",
     "register-free": "Đăng ký miễn phí!",
     "restart-lesson": "Học lại từ đầu"
   },
-  "benefits": {
-    "title": "🚀 Chinh phục đỉnh cao cờ vua ngay hôm nay chỉ với 199k!",
-    "learn-fast": "Tiến bộ vượt bậc với phương pháp huấn luyện đẳng cấp thế giới.",
-    "lowest-price": "Chinh phục cờ vua nhanh nhất với chi phí rẻ nhất (199k).",
-    "support": "Hỗ trợ học tập hàng tuần với hướng dẫn từ chuyên gia.",
-    "easy-started": "Dễ học, dễ luyện tập, phát triển kỹ năng đỉnh cao.",
-    "confident": "Tự tin chinh chiến ở mọi giải đấu trong nước và quốc tế."
+  "register-dialog": {
+    "title": "Mở Khóa Tính Năng Cao Cấp",
+    "message": "Chỉ với 199,000 VND/năm, bạn sẽ có quyền truy cập vào các phương pháp huấn luyện nâng cao, giúp bạn rèn luyện kỹ năng cờ vua với hệ thống tối ưu."
   }
 }

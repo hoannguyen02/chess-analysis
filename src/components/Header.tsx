@@ -62,7 +62,7 @@ export default function Header() {
   }, []);
 
   return (
-    <>
+    <div className={isSticky ? 'pt-[70px]' : ''}>
       <nav
         className={`${
           isSticky
@@ -260,6 +260,6 @@ export default function Header() {
           <MenuLeft />
         </Drawer.Items>
       </Drawer>
-    </>
+    </div>
   );
 }

@@ -17,10 +17,10 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column' }} className="">
-      <div className="flex flex-col h-[100vh]">
+      <div className="flex flex-col min-h-screen">
         <PromoModal />
         <Header />
-        <main className="mx-auto max-w-[1172px] w-full py-4 flex-1 px-[1rem]">
+        <main className="mx-auto max-w-[1172px] w-full py-4 min-h-[85vh] flex-grow px-[1rem] pb-20">
           {children}
         </main>
         {!isLessonPath && <Footer />}

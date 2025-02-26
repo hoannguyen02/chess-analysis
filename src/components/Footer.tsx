@@ -3,36 +3,47 @@ import Link from 'next/link';
 
 export const Footer = () => {
   const t = useTranslations('common');
+
   return (
-    <footer className="py-[1rem] flex justify-center flex-col">
-      <div className="grid lg:grid-cols-2 lg:w-[60%] lg:mx-auto mb-4 lg:mt-8 lg:gap-4 gap-2">
-        <ul className="flex justify-around">
-          <li className="p-0">
-            <Link className="hover:text-[var(--s-bg)]" href="/privacy-policy">
-              {t('navigation.privacy')}
-            </Link>
-          </li>
-          <li className="">
-            <Link className="hover:text-[var(--s-bg)]" href="/terms-of-service">
-              {t('navigation.terms')}
-            </Link>
-          </li>
-        </ul>
-        <ul className="flex justify-around">
-          <li className="">
-            <Link className="hover:text-[var(--s-bg)]" href="/contact">
-              {t('navigation.contact')}
-            </Link>
-          </li>
-          <li className="">
-            <Link className="hover:text-[var(--s-bg)]" href="/about">
-              {t('navigation.about')}
-            </Link>
-          </li>
-        </ul>
+    <footer className="py-6 bg-gray-100 text-gray-700 text-sm mt-auto">
+      {/* Social Links */}
+      <div className="flex flex-col lg:flex-row items-center justify-center gap-4 mb-4 border-b pb-4 border-gray-300">
+        <a
+          href="https://www.facebook.com/limachess102"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hover:text-blue-600 flex items-center gap-2"
+        >
+          📘 {t('navigation.facebook')}
+        </a>
+        <a
+          href="https://www.youtube.com/@LIMAChess"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hover:text-red-600 flex items-center gap-2"
+        >
+          ▶️ {t('navigation.youtube')}
+        </a>
       </div>
-      <hr className="mb-2" />
-      <p className="text-center pt-2">
+
+      {/* Navigation Links */}
+      <div className="grid grid-cols-2 md:grid-cols-4 text-center gap-4 max-w-4xl mx-auto">
+        <Link href="/privacy-policy" className="hover:text-gray-900">
+          {t('navigation.privacy')}
+        </Link>
+        <Link href="/terms-of-service" className="hover:text-gray-900">
+          {t('navigation.terms')}
+        </Link>
+        <Link href="/contact" className="hover:text-gray-900">
+          {t('navigation.contact')}
+        </Link>
+        <Link href="/about" className="hover:text-gray-900">
+          {t('navigation.about')}
+        </Link>
+      </div>
+
+      {/* Copyright */}
+      <p className="text-center text-xs mt-6">
         © {new Date().getFullYear()} LIMA Chess. All Rights Reserved.
       </p>
     </footer>

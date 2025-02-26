@@ -5,7 +5,6 @@ import { useAppContext } from '@/contexts/AppContext';
 import { Button, Modal } from 'flowbite-react';
 import { useTranslations } from 'next-intl';
 import { useRouter } from 'next/router';
-import { LimaBenefits } from './LimaBenefits';
 
 type Props = {
   onClose: () => void;
@@ -18,11 +17,9 @@ export const RegisterDialog = ({ onClose }: Props) => {
   return (
     <>
       <Modal show position="center" onClose={onClose}>
-        <Modal.Header> {t('common.benefits.title')}</Modal.Header>
+        <Modal.Header> {t('common.register-dialog.title')}</Modal.Header>
         <Modal.Body>
-          <div className="space-y-6 lg:px-6">
-            <LimaBenefits />
-          </div>
+          <div className="space-y-6">{t('common.register-dialog.message')}</div>
         </Modal.Body>
         <Modal.Footer>
           <div className="flex justify-center w-full">

@@ -100,12 +100,8 @@
     "register-free": "Sign up for free!",
     "restart-lesson": "Restart Lesson"
   },
-  "benefits": {
-    "title": "🚀 Reach the pinnacle of chess today!",
-    "learn-fast": "Improve quickly with world-class training methods.",
-    "lowest-price": "Master chess in the shortest time at the lowest cost.",
-    "support": "Weekly learning support with expert guidance.",
-    "easy-started": "Easy to learn, easy to practice, develop top-level skills.",
-    "confident": "Confident to compete in any tournament online and offline."
+  "register-dialog": {
+    "title": "Unlock Premium Access",
+    "message": "For just $9, gain access to advanced training methods that will sharpen your chess skills with an optimized system."
   }
 }
