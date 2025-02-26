@@ -66,11 +66,11 @@
     "difficulty": "Độ khó",
     "tags": "Từ khóa / Thẻ",
     "lesson-completion": "🎉 Chúc mừng! Bạn đã hoàn thành bài học!",
-    "reset-lesson-success": "Đã đặt lại tiến trình bài học thành công",
-    "promotion": {
-      "title": "Truy cập không giới hạn chỉ 199k/năm!",
-      "content": "Phương pháp huấn luyện nâng cao, phân tích AI và tăng tốc hành trình thành cao thủ cờ vua! 🚀🏆"
-    }
+    "reset-lesson-success": "Đã đặt lại tiến trình bài học thành công"
+  },
+  "promotion": {
+    "title": "LIMA Chess chào bạn! 🎉",
+    "message": "Chỉ 199K/Năm – Phương pháp huấn luyện nâng cao, tối ưu kỹ năng và chinh phục đỉnh cao cờ vua nhanh nhất! 🚀🏆"
   },
   "button": {
     "back": "Quay lại",

@@ -28,10 +28,10 @@ export default function PromoModal() {
 
   return (
     <Modal show={openModal} size="md" onClose={() => setOpenModal(false)}>
-      <Modal.Header>{t('title.promotion.title')}</Modal.Header>
+      <Modal.Header>{t('promotion.title')}</Modal.Header>
       <Modal.Body>
         <div className="text-center">
-          <p className="text-gray-700">{t('title.promotion.content')}</p>
+          <p className="text-gray-700">{t('promotion.message')}</p>
           <div className="flex justify-center">
             <Button
               outline

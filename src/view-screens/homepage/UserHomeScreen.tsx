@@ -5,7 +5,6 @@ import { useEffect, useMemo, useState } from 'react';
 import useSWR from 'swr';
 
 import { Loading } from '@/components/Loading';
-import { SubscriptionBanner } from '@/components/SubscriptionBanner';
 import { filteredQuery } from '@/utils/filteredQuery';
 import isEmpty from 'lodash/isEmpty';
 import { useTranslations } from 'next-intl';
@@ -34,7 +33,6 @@ export const UserHomeScreen = () => {
     getFilteredThemes,
     user,
     isLoadingUser,
-    isSubscriptionExpired,
     mutateUser,
   } = useAppContext();
 
@@ -81,9 +79,6 @@ export const UserHomeScreen = () => {
 
   return (
     <div className="flex flex-col">
-      {/* Subscription Expired Banner */}
-      {isSubscriptionExpired && <SubscriptionBanner />}
-
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <Card className="w-full flex flex-col items-start min-h-[200px] border border-gray-200">
           <div className="flex flex-col flex-grow items-start">

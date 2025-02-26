@@ -22,9 +22,5 @@
   "select-outcome": "Select outcome...",
   "themes": "Themes",
   "select-themes": "Select themes...",
-  "title": "Title",
-  "welcome": {
-    "title": "Welcome to LIMA Chess! 🎉",
-    "message": "Only 199K - Upgrade now to experience advanced training methods, sharpen your skills with an optimized system, and reach the pinnacle of chess mastery faster than ever! 🚀🏆"
-  }
+  "title": "Title"
 }

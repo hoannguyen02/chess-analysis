@@ -66,11 +66,11 @@
     "difficulty": "DIFFICULTY",
     "tags": "TAGS",
     "lesson-completion": "🎉 Congratulations! You have completed the lesson.",
-    "reset-lesson-success": "Lesson progress reset successfully",
-    "promotion": {
-      "title": "Unlock Full Access for Just $9/year!",
-      "content": "Advanced training, improve your skills with AI analysis, and accelerate your journey to becoming a chess master! 🚀🏆"
-    }
+    "reset-lesson-success": "Lesson progress reset successfully"
+  },
+  "promotion": {
+    "title": "Welcome to LIMA Chess! 🎉",
+    "message": "Only 9$/Year - Advanced training methods, sharpen your skills with an optimized system, and reach the pinnacle of chess mastery faster than ever! 🚀🏆"
   },
   "button": {
     "back": "Back",
