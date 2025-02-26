@@ -2,6 +2,7 @@ import { useRouter } from 'next/router';
 import React, { ReactNode, useMemo } from 'react';
 import { Footer } from './Footer';
 import Header from './Header';
+import PromoModal from './PromoModal';
 
 interface LayoutProps {
   children: ReactNode;
@@ -17,6 +18,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
     <div style={{ display: 'flex', flexDirection: 'column' }} className="">
       <div className="flex flex-col h-[100vh]">
+        <PromoModal />
         <Header />
         <main className="mx-auto max-w-[1172px] w-full py-4 flex-1 px-[1rem]">
           {children}

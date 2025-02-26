@@ -66,7 +66,11 @@
     "difficulty": "DIFFICULTY",
     "tags": "TAGS",
     "lesson-completion": "🎉 Congratulations! You have completed the lesson.",
-    "reset-lesson-success": "Lesson progress reset successfully"
+    "reset-lesson-success": "Lesson progress reset successfully",
+    "promotion": {
+      "title": "Unlock Full Access for Just $9/year!",
+      "content": "Advanced training, improve your skills with AI analysis, and accelerate your journey to becoming a chess master! 🚀🏆"
+    }
   },
   "button": {
     "back": "Back",
@@ -91,6 +95,7 @@
     "copy-link": "Copy Link",
     "close": "Close",
     "subscribe-now": "Subscribe Now",
+    "register-now": "Register Now",
     "practice-now": "Practice Now",
     "register-free": "Sign up for free!",
     "restart-lesson": "Restart Lesson"

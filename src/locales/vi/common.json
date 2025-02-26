@@ -66,7 +66,11 @@
     "difficulty": "Độ khó",
     "tags": "Từ khóa / Thẻ",
     "lesson-completion": "🎉 Chúc mừng! Bạn đã hoàn thành bài học!",
-    "reset-lesson-success": "Đã đặt lại tiến trình bài học thành công"
+    "reset-lesson-success": "Đã đặt lại tiến trình bài học thành công",
+    "promotion": {
+      "title": "Truy cập không giới hạn chỉ 199k/năm!",
+      "content": "Phương pháp huấn luyện nâng cao, phân tích AI và tăng tốc hành trình thành cao thủ cờ vua! 🚀🏆"
+    }
   },
   "button": {
     "back": "Quay lại",
@@ -91,6 +95,7 @@
     "copy-link": "Sao chép link",
     "close": "Close/Đóng",
     "subscribe-now": "Nâng cấp ngay",
+    "register-now": "Đăng ký ngay",
     "practice-now": "Luyện tập ngay",
     "register-free": "Đăng ký miễn phí!",
     "restart-lesson": "Học lại từ đầu"
