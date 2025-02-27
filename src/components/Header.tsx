@@ -126,26 +126,22 @@ export default function Header() {
             >
               {t('navigation.board-pieces')}
             </Link>
-            <div className="ml-4">
-              <Dropdown label={t('navigation.community')} inline>
-                <Dropdown.Item
-                  as={Link}
-                  href="https://www.facebook.com/limachess102"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {t('navigation.facebook')}
-                </Dropdown.Item>
-                <Dropdown.Item
-                  as={Link}
-                  href="https://www.youtube.com/@LIMAChess"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {t('navigation.youtube')}
-                </Dropdown.Item>
-              </Dropdown>
-            </div>
+            <Link
+              href="https://www.facebook.com/limachess102"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="ml-4 hover:text-[var(--p-highlight)]"
+            >
+              {t('navigation.facebook')}
+            </Link>
+            <Link
+              href="https://www.youtube.com/@LIMAChess"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="ml-4 hover:text-[var(--p-highlight)]"
+            >
+              {t('navigation.youtube')}
+            </Link>
           </div>
           {/* Manage route */}
           {isManageRole && (
