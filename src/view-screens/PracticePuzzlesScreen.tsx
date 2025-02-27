@@ -1,3 +1,4 @@
+import DebouncedInput from '@/components/DebounceInput';
 import { PrimaryButton } from '@/components/PrimaryButton';
 import { RegisterDialog } from '@/components/RegisterDialog';
 import { TransitionContainer } from '@/components/TransitionContainer';
@@ -11,7 +12,7 @@ import isEqual from 'lodash/isEqual';
 import { useTranslations } from 'next-intl';
 import { useRouter } from 'next/router';
 import { useEffect, useMemo, useState } from 'react';
-import { VscArrowUp, VscClose } from 'react-icons/vsc';
+import { VscArrowUp } from 'react-icons/vsc';
 import useSWR from 'swr';
 
 type ThemeProgress = {
@@ -118,11 +119,19 @@ export const PracticePuzzlesScreen = () => {
     }
   };
 
+  const removeVietnameseDiacritics = (str: string) => {
+    return str
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, '')
+      .toLowerCase();
+  };
+
   const filteredThemes = useMemo(() => {
-    // Only recompute when themeOptions, searchTerm, or ThemeProgressesMap change
     return themeOptions
       .filter((option) =>
-        option.label.toLowerCase().includes(searchTerm.toLowerCase())
+        removeVietnameseDiacritics(option.label).includes(
+          removeVietnameseDiacritics(searchTerm)
+        )
       )
       .map((option) => {
         const solvedPercentage =
@@ -195,19 +204,11 @@ export const PracticePuzzlesScreen = () => {
           {/* Search Input with Clear Icon */}
           <div className="flex items-center mb-3">
             <div className="relative w-[80%]">
-              <input
-                type="text"
+              <DebouncedInput
                 placeholder={t('common.title.search-theme')}
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-                className="p-2 pr-10 border border-gray-300 rounded-lg w-full"
+                initialValue={searchTerm}
+                onChange={(value) => setSearchTerm(value)}
               />
-              {searchTerm && (
-                <VscClose
-                  className="w-5 h-5 absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500 cursor-pointer hover:text-gray-700"
-                  onClick={() => setSearchTerm('')}
-                />
-              )}
             </div>
             <div className="flex ml-4">
               <Checkbox

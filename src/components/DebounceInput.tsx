@@ -1,6 +1,7 @@
 import { TextInput } from 'flowbite-react';
 import debounce from 'lodash/debounce';
 import React, { useCallback, useEffect, useState } from 'react';
+import { VscClose } from 'react-icons/vsc';
 
 type Props = {
   onChange(value: string): void;
@@ -30,6 +31,11 @@ const DebouncedInput = ({ onChange, placeholder, initialValue }: Props) => {
     handleInputChange(newValue);
   };
 
+  const onClear = useCallback(() => {
+    setValue('');
+    handleInputChange('');
+  }, [handleInputChange]);
+
   // Cleanup the debounce function on component unmount
   useEffect(() => {
     return () => {
@@ -38,13 +44,19 @@ const DebouncedInput = ({ onChange, placeholder, initialValue }: Props) => {
   }, [handleInputChange]);
 
   return (
-    <div className="w-full">
+    <div className="w-full relative">
       <TextInput
         placeholder={placeholder || 'Search...'}
         type="text"
         value={value}
         onChange={handleChange}
       />
+      {value && (
+        <VscClose
+          className="w-5 h-5 absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500 cursor-pointer hover:text-gray-700"
+          onClick={onClear}
+        />
+      )}
     </div>
   );
 };
