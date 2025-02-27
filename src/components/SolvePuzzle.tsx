@@ -262,6 +262,9 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({
 
     if (!move) {
       setIsPreMoveDone(true); // No pre-move, so we can immediately render arrows
+      if (callback) {
+        callback(); // Proceed to callback
+      }
       return;
     }
 
@@ -561,6 +564,7 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({
   };
 
   const showSolution = () => {
+    debugger;
     setHintUsed(false);
     setShowRetry(false);
     game.load(puzzle.fen); // Reset the board to the initial puzzle state
