@@ -1,8 +1,10 @@
+import { ConfirmModal } from '@/components/ConfirmModal';
 import DebouncedInput from '@/components/DebounceInput';
 import { TitlePage } from '@/components/TitlePage';
 import { StatusOptions } from '@/constants';
 import { useAppContext } from '@/contexts/AppContext';
 import { useToast } from '@/contexts/ToastContext';
+import useDialog from '@/hooks/useDialog';
 import { StatusType } from '@/types/status';
 import { Role, User } from '@/types/user';
 import axiosInstance from '@/utils/axiosInstance';
@@ -12,8 +14,6 @@ import { Button, Label, Pagination, Spinner } from 'flowbite-react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useMemo, useState } from 'react';
-import { DndProvider } from 'react-dnd';
-import { HTML5Backend } from 'react-dnd-html5-backend';
 import Select from 'react-select';
 import useSWR from 'swr';
 import { fetcher } from '../../utils/fetcher';
@@ -21,12 +21,26 @@ import { fetcher } from '../../utils/fetcher';
 type Props = {
   roles: Role[];
 };
+
+type ConfirmData = {
+  userId: string;
+  username: string;
+  type: 'delete' | 'reset-practice' | 'reset-rating';
+};
+
 export const UserListScreen = ({ roles }: Props) => {
   const { apiDomain } = useAppContext();
   const [currentPage, setCurrentPage] = useState(1);
   const [status, setStatus] = useState<StatusType | ''>('');
   const [username, setUsername] = useState<string | ''>('');
   const [role, setRole] = useState<string>();
+
+  const {
+    open,
+    onOpenDialog,
+    onCloseDialog,
+    data: confirmData,
+  } = useDialog<ConfirmData>();
 
   const RoleMap: Partial<Record<string, Role>> = useMemo(() => {
     return roles?.reduce((acc, role) => {
@@ -53,7 +67,7 @@ export const UserListScreen = ({ roles }: Props) => {
     [apiDomain, queryString]
   );
 
-  const { data, error, isLoading } = useSWR<{
+  const { data, error, isLoading, mutate } = useSWR<{
     items: User[];
     total: number;
     hasNext: boolean;
@@ -69,29 +83,70 @@ export const UserListScreen = ({ roles }: Props) => {
   const onPageChange = (page: number) => setCurrentPage(page);
 
   const { addToast } = useToast();
-  const resetPracticeHistory = async (userId: string) => {
-    await handleSubmission(
-      async () => {
-        return await axiosInstance.delete(
-          `${apiDomain}/v1/practice-puzzle/history/reset/${userId}`
+
+  const handleOnOk = async () => {
+    if (!confirmData) return;
+    const { type, userId } = confirmData;
+    switch (type) {
+      case 'reset-practice':
+        await handleSubmission(
+          async () => {
+            return await axiosInstance.delete(
+              `${apiDomain}/v1/practice-puzzle/history/reset/${userId}`
+            );
+          },
+          addToast,
+          'Practice history reset successfully!'
         );
-      },
-      addToast,
-      'Practice history reset successfully!'
-    );
+        break;
+      case 'delete':
+        await handleSubmission(
+          async () => {
+            return await axiosInstance.delete(
+              `${apiDomain}/v1/users/${userId}`
+            );
+          },
+          addToast,
+          'User delete successfully!'
+        );
+
+        break;
+      case 'reset-rating':
+        await handleSubmission(
+          async () => {
+            return await axiosInstance.delete(
+              `${apiDomain}/v1/solve-puzzle/history/reset/${userId}`
+            );
+          },
+          addToast,
+          'Rating history reset successfully!'
+        );
+        break;
+
+      default:
+        break;
+    }
+
+    mutate();
+    onCloseDialog();
   };
 
-  const resetRatingHistory = async (userId: string) => {
-    await handleSubmission(
-      async () => {
-        return await axiosInstance.delete(
-          `${apiDomain}/v1/solve-puzzle/history/reset/${userId}`
-        );
-      },
-      addToast,
-      'Rating history reset successfully!'
-    );
-  };
+  const confirmContent = useMemo(() => {
+    if (!confirmData) return '';
+
+    const { type, username } = confirmData;
+    switch (type) {
+      case 'delete':
+        return `Are you sure you want to DELETE this user: ${username}`;
+      case 'reset-practice':
+        return `Are you sure you want to RESET PRACTICE this user: ${username}`;
+      case 'reset-rating':
+        return `Are you sure you want to RESET RATING HISTORY for this user: ${username}`;
+
+      default:
+        break;
+    }
+  }, [confirmData]);
 
   if (error || !data?.items?.length) return <div>Error occurred</div>;
 
@@ -144,15 +199,15 @@ export const UserListScreen = ({ roles }: Props) => {
         </div>
       </div>
 
-      {/* Courses Table */}
-      <DndProvider backend={HTML5Backend}>
-        <div className="grid grid-cols-6 mb-4">
+      <div className="">
+        <div className="grid grid-cols-[200px_120px_120px_120px_160px_160px_160px] mb-4 text-center">
           <Label className="font-bold">Username</Label>
           <Label className="font-bold">Role</Label>
           <Label className="font-bold">Status</Label>
           <Label className="font-bold">Edit</Label>
           <Label className="font-bold">Practice</Label>
           <Label className="font-bold">Rating</Label>
+          <Label className="font-bold">Remove</Label>
         </div>
         {isLoading ? (
           <div className="text-center">
@@ -161,7 +216,7 @@ export const UserListScreen = ({ roles }: Props) => {
         ) : (
           data.items.map((item, index) => (
             <div
-              className="grid grid-cols-6 mb-4"
+              className="grid grid-cols-[200px_120px_120px_120px_160px_160px_160px] mb-4 text-center"
               key={`${item.username}-${index}`}
             >
               <Label>{item.username}</Label>
@@ -173,28 +228,55 @@ export const UserListScreen = ({ roles }: Props) => {
               >
                 Edit
               </Link>
-              <div>
+              <div className="flex w-full justify-center">
                 <Button
                   size="xs"
                   outline
-                  onClick={() => resetPracticeHistory(item._id!)}
+                  onClick={() =>
+                    onOpenDialog({
+                      type: 'reset-practice',
+                      userId: item._id!,
+                      username: item.username,
+                    })
+                  }
                 >
                   Reset practice
                 </Button>
               </div>
-              <div>
+              <div className="flex w-full justify-center">
                 <Button
                   size="xs"
                   outline
-                  onClick={() => resetRatingHistory(item._id!)}
+                  onClick={() =>
+                    onOpenDialog({
+                      type: 'reset-rating',
+                      userId: item._id!,
+                      username: item.username,
+                    })
+                  }
                 >
                   Reset rating
+                </Button>
+              </div>
+              <div className="flex w-full justify-center">
+                <Button
+                  size="xs"
+                  outline
+                  onClick={() =>
+                    onOpenDialog({
+                      type: 'delete',
+                      userId: item._id!,
+                      username: item.username,
+                    })
+                  }
+                >
+                  Delete / Remove
                 </Button>
               </div>
             </div>
           ))
         )}
-      </DndProvider>
+      </div>
 
       {/* Pagination */}
       <div className="flex justify-center mt-4">
@@ -204,6 +286,11 @@ export const UserListScreen = ({ roles }: Props) => {
           onPageChange={onPageChange}
         />
       </div>
+      {open && (
+        <ConfirmModal onClose={onCloseDialog} onOk={handleOnOk}>
+          {confirmContent}
+        </ConfirmModal>
+      )}
     </>
   );
 };
