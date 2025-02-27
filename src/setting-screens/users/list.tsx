@@ -2,9 +2,12 @@ import DebouncedInput from '@/components/DebounceInput';
 import { TitlePage } from '@/components/TitlePage';
 import { StatusOptions } from '@/constants';
 import { useAppContext } from '@/contexts/AppContext';
+import { useToast } from '@/contexts/ToastContext';
 import { StatusType } from '@/types/status';
 import { Role, User } from '@/types/user';
+import axiosInstance from '@/utils/axiosInstance';
 import { filteredQuery } from '@/utils/filteredQuery';
+import { handleSubmission } from '@/utils/handleSubmission';
 import { Button, Label, Pagination, Spinner } from 'flowbite-react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
@@ -65,6 +68,31 @@ export const UserListScreen = ({ roles }: Props) => {
 
   const onPageChange = (page: number) => setCurrentPage(page);
 
+  const { addToast } = useToast();
+  const resetPracticeHistory = async (userId: string) => {
+    await handleSubmission(
+      async () => {
+        return await axiosInstance.delete(
+          `${apiDomain}/v1/practice-puzzle/history/reset/${userId}`
+        );
+      },
+      addToast,
+      'Practice history reset successfully!'
+    );
+  };
+
+  const resetRatingHistory = async (userId: string) => {
+    await handleSubmission(
+      async () => {
+        return await axiosInstance.delete(
+          `${apiDomain}/v1/solve-puzzle/history/reset/${userId}`
+        );
+      },
+      addToast,
+      'Rating history reset successfully!'
+    );
+  };
+
   if (error || !data?.items?.length) return <div>Error occurred</div>;
 
   return (
@@ -118,11 +146,13 @@ export const UserListScreen = ({ roles }: Props) => {
 
       {/* Courses Table */}
       <DndProvider backend={HTML5Backend}>
-        <div className="grid grid-cols-4 mb-4">
+        <div className="grid grid-cols-6 mb-4">
           <Label className="font-bold">Username</Label>
           <Label className="font-bold">Role</Label>
           <Label className="font-bold">Status</Label>
-          <Label className="font-bold">Actions</Label>
+          <Label className="font-bold">Edit</Label>
+          <Label className="font-bold">Practice</Label>
+          <Label className="font-bold">Rating</Label>
         </div>
         {isLoading ? (
           <div className="text-center">
@@ -130,7 +160,10 @@ export const UserListScreen = ({ roles }: Props) => {
           </div>
         ) : (
           data.items.map((item, index) => (
-            <div className="grid grid-cols-4" key={`${item.username}-${index}`}>
+            <div
+              className="grid grid-cols-6 mb-4"
+              key={`${item.username}-${index}`}
+            >
               <Label>{item.username}</Label>
               <Label>{RoleMap[item.role]?.label}</Label>
               <Label>{item.status}</Label>
@@ -140,6 +173,24 @@ export const UserListScreen = ({ roles }: Props) => {
               >
                 Edit
               </Link>
+              <div>
+                <Button
+                  size="xs"
+                  outline
+                  onClick={() => resetPracticeHistory(item._id!)}
+                >
+                  Reset practice
+                </Button>
+              </div>
+              <div>
+                <Button
+                  size="xs"
+                  outline
+                  onClick={() => resetRatingHistory(item._id!)}
+                >
+                  Reset rating
+                </Button>
+              </div>
             </div>
           ))
         )}
