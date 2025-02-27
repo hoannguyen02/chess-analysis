@@ -19,6 +19,8 @@ import useSWR from 'swr';
 type ThemeProgress = {
   theme: string;
   solvedPercentage: number;
+  totalPuzzlesAvailable: number;
+  completedPuzzles: number;
 };
 
 export const PracticePuzzlesScreen = () => {
@@ -32,6 +34,7 @@ export const PracticePuzzlesScreen = () => {
     apiDomain,
     isLoggedIn,
     isSubscriptionExpired,
+    isManageRole,
   } = useAppContext();
   const [selectedThemes, setSelectedThemes] = useState<string[]>([]);
   const [includeSolved, setIncludeSolved] = useState(false);
@@ -128,9 +131,15 @@ export const PracticePuzzlesScreen = () => {
         )
       )
       .map((option) => {
-        const solvedPercentage =
-          ThemeProgressesMap[option.value]?.solvedPercentage || 0;
-        return { ...option, solvedPercentage: `${solvedPercentage}%` };
+        const theme = ThemeProgressesMap[option.value];
+
+        const solvedPercentage = theme?.solvedPercentage || 0;
+        return {
+          ...option,
+          solvedPercentage: `${solvedPercentage}%`,
+          completed: theme?.completedPuzzles || 0,
+          total: theme?.totalPuzzlesAvailable || 0,
+        };
       });
   }, [searchTerm, themeOptions, ThemeProgressesMap]);
 
@@ -240,6 +249,8 @@ export const PracticePuzzlesScreen = () => {
                       onChange={() => toggleTheme(option.value)}
                     />
                     <span className="text-gray-800 text-sm font-medium">
+                      {isManageRole &&
+                        `(${option.completed}/${option.total || '*'})  - `}
                       {option.label}
                     </span>
                   </div>
