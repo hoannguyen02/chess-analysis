@@ -5,56 +5,64 @@ import { useAppContext } from '@/contexts/AppContext';
 import { Button, Modal } from 'flowbite-react';
 import { useTranslations } from 'next-intl';
 import { useRouter } from 'next/router';
+import { useMemo } from 'react';
+import { LimaBenefits } from './LimaBenefits';
 
 type Props = {
   onClose: () => void;
 };
 
 export const RegisterDialog = ({ onClose }: Props) => {
-  const t = useTranslations();
+  const t = useTranslations('common');
   const router = useRouter();
   const { isLoggedIn } = useAppContext();
+  const message = useMemo(() => {
+    return isLoggedIn ? t('promotion.message') : t('promotion.guest-message');
+  }, [isLoggedIn, t]);
   return (
     <>
       <Modal show position="center" onClose={onClose}>
-        <Modal.Header> {t('common.register-dialog.title')}</Modal.Header>
+        <Modal.Header> {t('promotion.title')}</Modal.Header>
         <Modal.Body>
-          <div className="space-y-6">{t('common.register-dialog.message')}</div>
+          <p className="text-gray-700 mb-4">{message}</p>
+          <LimaBenefits />
         </Modal.Body>
         <Modal.Footer>
-          <div className="flex justify-center w-full">
-            {!isLoggedIn ? (
+          <div className="w-full flex justify-center">
+            {' '}
+            {isLoggedIn ? (
               <Button
-                id="register-banner-button"
                 outline
                 gradientDuoTone="pinkToOrange"
-                size="lg"
-                className="mt-4 font-semibold flex"
+                className="mt-4"
                 onClick={() => {
-                  window?.dataLayer?.push({
-                    event: 'register-banner-button',
-                  });
-                  router.push('/register');
-                }}
-              >
-                {t('common.button.join-now')}
-              </Button>
-            ) : (
-              <Button
-                id="register-banner-button"
-                outline
-                gradientDuoTone="pinkToOrange"
-                size="lg"
-                className="mt-4 font-semibold flex"
-                onClick={() => {
-                  window?.dataLayer?.push({
-                    event: 'register-banner-button',
-                  });
                   router.push('/register-guide');
                 }}
               >
-                {t('common.button.subscribe-now')}
+                {t('button.subscribe-now')}
               </Button>
+            ) : (
+              <>
+                <Button
+                  outline
+                  gradientDuoTone="tealToLime"
+                  onClick={() => {
+                    router.push('/login');
+                  }}
+                >
+                  {t('navigation.login')}
+                </Button>
+                <Button
+                  outline
+                  gradientDuoTone="pinkToOrange"
+                  className="ml-4"
+                  onClick={() => {
+                    router.push('/register');
+                  }}
+                >
+                  {t('navigation.register')}
+                </Button>
+              </>
             )}
           </div>
         </Modal.Footer>

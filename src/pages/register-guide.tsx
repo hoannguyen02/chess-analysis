@@ -15,10 +15,6 @@ const PaymentGuidePage = () => {
             <Logo />
           </Link>
         </div>
-        <p className="text-gray-600 text-center mb-6">
-          {t('payment.description')}
-        </p>
-
         <div className="mb-6">
           <h2 className="text-lg font-semibold"> {t('payment.step-1')}</h2>
           <p className="text-sm text-gray-600 mt-2">
@@ -26,17 +22,17 @@ const PaymentGuidePage = () => {
           </p>
           <ul className="text-sm text-gray-800 mt-2">
             <li>
-              <strong>{t('payment.bank-name')}</strong> TP Bank
+              {t('payment.bank-name')} <strong>TP Bank</strong>
             </li>
             <li>
-              <strong>{t('payment.account-name')}</strong> Nguyen Van Hoan
+              {t('payment.account-name')} <strong>Nguyen Van Hoan</strong>
             </li>
             <li className="flex items-center">
               <div className="mr-2">
-                <strong>{t('payment.account-number')}</strong> 0912333224
+                {t('payment.account-number')} <strong>00004098236</strong>
               </div>
               <Clipboard
-                valueToCopy="0912333224"
+                valueToCopy="00004098236"
                 label={t('payment.copy')}
                 className="py-1 px-2"
                 theme={{
@@ -48,10 +44,8 @@ const PaymentGuidePage = () => {
               />
             </li>
             <li>
-              <strong>{t('payment.payment-description')}</strong>{' '}
-              {t('payment.payment-description-note')}
-              {t('common.title.example')}{' '}
-              <strong>limachess102@gmail.com</strong>
+              {t('payment.payment-description')}
+              <strong>{t('payment.payment-description-note')}</strong>
             </li>
           </ul>
         </div>
@@ -63,6 +57,9 @@ const PaymentGuidePage = () => {
           </p>
           <ul className="text-sm text-gray-800 mt-2">
             <li>
+              {t('payment.gmail')} <strong> limachess102@gmail.com</strong>
+            </li>
+            <li>
               {t('payment.facebook')}
               <a
                 href="https://m.me/limachess"
@@ -73,16 +70,7 @@ const PaymentGuidePage = () => {
                 {t('payment.facebook-button')}
               </a>
             </li>
-            <li>
-              {t('payment.gmail')} <strong> limachess102@gmail.com</strong>
-            </li>
           </ul>
-        </div>
-        <div className="mb-6">
-          <h2 className="text-lg font-semibold"> {t('payment.step-3')}</h2>
-          <p className="text-sm text-gray-600 mt-2">
-            {t('payment.step-3-description')}
-          </p>
         </div>
       </div>
     </div>

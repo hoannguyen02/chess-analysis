@@ -68,10 +68,6 @@
     "lesson-completion": "🎉 Congratulations! You have completed the lesson.",
     "reset-lesson-success": "Lesson progress reset successfully"
   },
-  "promotion": {
-    "title": "Welcome to LIMA Chess! 🎉",
-    "message": "Only 9$/Year - Advanced training methods, sharpen your skills with an optimized system, and reach the pinnacle of chess mastery faster than ever! 🚀🏆"
-  },
   "button": {
     "back": "Back",
     "preview": "Preview",
@@ -100,8 +96,14 @@
     "register-free": "Sign up for free!",
     "restart-lesson": "Restart Lesson"
   },
-  "register-dialog": {
-    "title": "Unlock Premium Access",
-    "message": "For just $9, gain access to advanced training methods that will sharpen your chess skills with an optimized system."
+  "promotion": {
+    "title": "Welcome to LIMA Chess! 🎉",
+    "guest-message": "You are not logged in! Join now to experience top-level chess! 🚀🏆",
+    "message": "💡 Only 199,000 VND/year to conquer the chess summit! 🚀🏆"
+  },
+  "benefits": {
+    "support": "Weekly support and coaching.",
+    "learn": "In-depth lessons and advanced training methods.",
+    "practice": "Effective practice with optimized techniques."
   }
 }

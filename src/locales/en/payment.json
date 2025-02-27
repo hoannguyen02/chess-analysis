@@ -1,6 +1,5 @@
 {
   "title": "Registration & login",
-  "description": "Follow the steps below to complete your registration and login.",
   "step-1": "Step 1: Make Your Payment",
   "step-1-description": "Transfer the payment to the following bank details:",
   "step-2": "Step 2: Send Payment Proof",
@@ -9,12 +8,10 @@
   "account-name": "Account Name:",
   "account-number": "Account Number: ",
   "payment-description": "Description: ",
-  "payment-description-note": "(email): ",
+  "payment-description-note": "[Your email] - Lima Chess payment",
   "copy": "Copy",
   "phone": "Phone:",
   "gmail": "Gmail: ",
   "facebook": "Facebook: ",
-  "facebook-button": "Click here to send on Messenger",
-  "step-3": "Step 3: Set password and login",
-  "step-3-description": "We will send you an email to your account, you need to set your password and login"
+  "facebook-button": "Click here to send on Messenger"
 }

@@ -68,10 +68,6 @@
     "lesson-completion": "🎉 Chúc mừng! Bạn đã hoàn thành bài học!",
     "reset-lesson-success": "Đã đặt lại tiến trình bài học thành công"
   },
-  "promotion": {
-    "title": "LIMA Chess chào bạn! 🎉",
-    "message": "Chỉ 199,000 VND/năm – Phương pháp huấn luyện nâng cao, tối ưu kỹ năng và chinh phục đỉnh cao cờ vua nhanh nhất! 🚀🏆"
-  },
   "button": {
     "back": "Quay lại",
     "preview": "Xem trước",
@@ -100,8 +96,14 @@
     "register-free": "Đăng ký miễn phí!",
     "restart-lesson": "Học lại từ đầu"
   },
-  "register-dialog": {
-    "title": "Mở Khóa Tính Năng Cao Cấp",
-    "message": "Chỉ với 199,000 VND/năm, bạn sẽ có quyền truy cập vào các phương pháp huấn luyện nâng cao, giúp bạn rèn luyện kỹ năng cờ vua với hệ thống tối ưu."
+  "promotion": {
+    "title": "LIMA Chess chào bạn! 🎉",
+    "guest-message": "Bạn chưa đăng nhập! Hãy tham gia ngay để trải nghiệm cờ vua đỉnh cao! 🚀🏆",
+    "message": "💡 Chỉ 199,000 VND/năm để chinh phục đỉnh cao cờ vua! 🚀🏆"
+  },
+  "benefits": {
+    "support": "Hỗ trợ và hướng dẫn hàng tuần.",
+    "learn": "Bài học chuyên sâu và phương pháp nâng cao.",
+    "practice": "Luyện tập hiệu quả với hệ thống tối ưu."
   }
 }
