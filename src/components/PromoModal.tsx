@@ -37,7 +37,8 @@ export default function PromoModal() {
       <Modal.Body>
         <div className="">
           <p className="text-gray-700 mb-4">{message}</p>
-          <LimaBenefits />
+          {isLoggedIn && <LimaBenefits />}
+
           {isLoggedIn ? (
             <div className="flex justify-center">
               <Button
