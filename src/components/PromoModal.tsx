@@ -38,9 +38,8 @@ export default function PromoModal() {
         <div className="">
           <p className="text-gray-700 mb-4">{message}</p>
           {isLoggedIn && <LimaBenefits />}
-
-          {isLoggedIn ? (
-            <div className="flex justify-center">
+          <div className="w-full flex justify-center mt-8">
+            {isLoggedIn ? (
               <Button
                 outline
                 gradientDuoTone="pinkToOrange"
@@ -51,30 +50,30 @@ export default function PromoModal() {
               >
                 {t('button.subscribe-now')}
               </Button>
-            </div>
-          ) : (
-            <div className="flex justify-center mt-4">
-              <Button
-                outline
-                gradientDuoTone="tealToLime"
-                onClick={() => {
-                  router.push('/login');
-                }}
-              >
-                {t('navigation.login')}
-              </Button>
-              <Button
-                outline
-                gradientDuoTone="pinkToOrange"
-                className="ml-4"
-                onClick={() => {
-                  router.push('/register');
-                }}
-              >
-                {t('navigation.register')}
-              </Button>
-            </div>
-          )}
+            ) : (
+              <>
+                <Button
+                  outline
+                  gradientDuoTone="tealToLime"
+                  onClick={() => {
+                    router.push('/login');
+                  }}
+                >
+                  {t('navigation.login')}
+                </Button>
+                <Button
+                  outline
+                  gradientDuoTone="pinkToOrange"
+                  className="ml-4"
+                  onClick={() => {
+                    router.push('/register');
+                  }}
+                >
+                  {t('navigation.register')}
+                </Button>
+              </>
+            )}
+          </div>
         </div>
       </Modal.Body>
     </Modal>

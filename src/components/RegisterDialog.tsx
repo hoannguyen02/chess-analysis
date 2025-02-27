@@ -28,8 +28,7 @@ export const RegisterDialog = ({ onClose }: Props) => {
           <LimaBenefits />
         </Modal.Body>
         <Modal.Footer>
-          <div className="w-full flex justify-center">
-            {' '}
+          <div className="w-full flex justify-center mt-8">
             {isLoggedIn ? (
               <Button
                 outline
