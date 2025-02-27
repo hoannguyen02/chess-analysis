@@ -7,6 +7,7 @@ import { useToast } from '@/contexts/ToastContext';
 import useDialog from '@/hooks/useDialog';
 import axiosInstance from '@/utils/axiosInstance';
 import { fetcher } from '@/utils/fetcher';
+import { removeVietnameseDiacritics } from '@/utils/removeVietnameseDiacritics';
 import { Checkbox } from 'flowbite-react';
 import isEqual from 'lodash/isEqual';
 import { useTranslations } from 'next-intl';
@@ -117,13 +118,6 @@ export const PracticePuzzlesScreen = () => {
     } finally {
       setSolveIsLoadingNextPuzzle(false);
     }
-  };
-
-  const removeVietnameseDiacritics = (str: string) => {
-    return str
-      .normalize('NFD')
-      .replace(/[\u0300-\u036f]/g, '')
-      .toLowerCase();
   };
 
   const filteredThemes = useMemo(() => {
