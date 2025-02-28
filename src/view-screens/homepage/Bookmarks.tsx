@@ -2,10 +2,12 @@ import { TransitionContainer } from '@/components/TransitionContainer';
 import { LEVEL_RATING } from '@/constants';
 import { useAppContext } from '@/contexts/AppContext';
 import { Puzzle } from '@/types/puzzle';
+import { previewPuzzle } from '@/utils/previewPuzzle';
 import { Button, Label, Pagination } from 'flowbite-react';
 import { useTranslations } from 'next-intl';
 import dynamic from 'next/dynamic';
 import { useEffect, useMemo, useState } from 'react';
+import { VscEdit, VscPreview } from 'react-icons/vsc';
 import Select from 'react-select';
 import { useShowPuzzleDialog } from './useShowPuzzleDialog';
 
@@ -17,8 +19,13 @@ const SolvePuzzleDrawer = dynamic(() =>
 
 export const Bookmarks = () => {
   const t = useTranslations();
-  const { getFilteredThemes, isSubscriptionExpired, bookmarks, locale } =
-    useAppContext();
+  const {
+    getFilteredThemes,
+    isSubscriptionExpired,
+    bookmarks,
+    locale,
+    isManageRole,
+  } = useAppContext();
 
   const [currentPage, setCurrentPage] = useState(1);
   const [themes, setThemes] = useState<string[]>([]);
@@ -82,14 +89,22 @@ export const Bookmarks = () => {
       </div>
 
       <TransitionContainer isLoading={isLoading} isVisible={isVisible}>
-        <div className="grid grid-cols-2 mb-4 gap-2">
+        <div
+          className={`grid ${isManageRole ? 'grid-cols-4' : 'grid-cols-2'} mb-4 gap-2`}
+        >
           <Label className="font-bold">{t('home.title')}</Label>
           <Label className="font-bold">{t('common.title.difficulty')}</Label>
+          {isManageRole && (
+            <>
+              <Label className="font-bold">{t('common.button.view')}</Label>
+              <Label className="font-bold">{t('common.button.update')}</Label>
+            </>
+          )}
         </div>
 
         {displayedBookmarks.map((item: Puzzle, index: number) => (
           <div
-            className="grid grid-cols-2 items-center gap-2 mt-2"
+            className={`grid ${isManageRole ? 'grid-cols-4' : 'grid-cols-2'} items-center gap-2 mt-2`}
             key={`bookmark-${index}`}
           >
             <Button
@@ -102,8 +117,26 @@ export const Bookmarks = () => {
             >
               {item.title?.[locale]}
             </Button>
-
             <Label> {LEVEL_RATING[item.difficulty]}</Label>
+            {isManageRole && (
+              <>
+                <div>
+                  <Button size="xs" outline onClick={() => previewPuzzle(item)}>
+                    <VscPreview />
+                  </Button>
+                </div>
+                <div>
+                  <a
+                    href={`/settings/puzzles/${item._id}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-green-700 inline-flex p-2 rounded-md font-medium text-cyan-600 hover:underline dark:text-cyan-500 border border-gray-300"
+                  >
+                    <VscEdit />
+                  </a>
+                </div>
+              </>
+            )}
           </div>
         ))}
 
