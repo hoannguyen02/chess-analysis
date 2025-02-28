@@ -55,12 +55,14 @@ export const AppProvider: React.FC<{
 
   const { data: themes } = useSWR<PuzzleTheme[]>(
     `${apiDomain}/v1/puzzle-themes/public/all`,
-    fetcher
+    fetcher,
+    { revalidateOnFocus: false }
   );
 
   const { data: tags } = useSWR<Tag[]>(
     `${apiDomain}/v1/tags/public/all`,
-    fetcher
+    fetcher,
+    { revalidateOnFocus: false }
   );
 
   const bookmarkKey = useMemo(
@@ -72,7 +74,7 @@ export const AppProvider: React.FC<{
     mutate: mutateBookmark,
     isLoading: isLoadingBookMark,
     isValidating: isValidatingBookmark,
-  } = useSWR(bookmarkKey, fetcher);
+  } = useSWR(bookmarkKey, fetcher, { revalidateOnFocus: false });
 
   const useKey = useMemo(
     () => (session?.id ? `${apiDomain}/v1/auth/user/${session.id}` : null),
@@ -83,7 +85,7 @@ export const AppProvider: React.FC<{
     mutate: mutateUser,
     isLoading,
     isValidating,
-  } = useSWR(useKey, fetcher);
+  } = useSWR(useKey, fetcher, { revalidateOnFocus: false });
   // Make sure it get latest rating when back home
   useEffect(() => {
     mutateUser();
