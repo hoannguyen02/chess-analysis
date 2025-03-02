@@ -68,8 +68,8 @@ export const LessonsListScreen = () => {
     const updatedItems = [...lessons];
     const [movedItem] = updatedItems.splice(fromIndex, 1);
     updatedItems.splice(toIndex, 0, movedItem);
-    const prioritizedLessons = updatedItems.map((course, index) => ({
-      ...course,
+    const prioritizedLessons = updatedItems.map((lesson, index) => ({
+      ...lesson,
       priority: index + 1,
     }));
     setLessons(prioritizedLessons);
@@ -85,7 +85,7 @@ export const LessonsListScreen = () => {
       mutate();
       setIsReordered(false);
     } catch (error) {
-      console.error('Failed to save course order', error);
+      console.error('Failed to save lesson order', error);
     }
   };
 
@@ -143,7 +143,7 @@ export const LessonsListScreen = () => {
           </Select>
         </div>
       </div>
-      {/* Courses Table */}
+      {/* Lessons Table */}
       <DndProvider backend={HTML5Backend}>
         <div className="grid grid-cols-5 mb-4 gap-2">
           <Label className="font-bold">Title</Label>

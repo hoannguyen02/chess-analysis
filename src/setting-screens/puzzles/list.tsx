@@ -232,6 +232,8 @@ export const PuzzleListScreen = () => {
                   <Table.Cell>
                     <a
                       href={`/settings/puzzles/${puzzle._id}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="flex font-medium text-cyan-600 hover:underline dark:text-cyan-500"
                     >
                       {locale === 'vi' ? 'Sửa thông tin' : 'Edit / Update'}

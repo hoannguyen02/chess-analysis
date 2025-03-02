@@ -1,4 +1,4 @@
-export type TagType = 'Lesson' | 'Course' | 'Global';
+export type TagType = 'Lesson' | 'Global';
 export type Tag = {
   name: string;
   title?: {

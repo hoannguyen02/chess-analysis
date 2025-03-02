@@ -8,7 +8,7 @@ import { createServerAxios } from '@/utils/axiosInstance';
 type Props = {
   roles: Role[];
 };
-const CoursesPage = ({ roles }: Props) => {
+const UsersPage = ({ roles }: Props) => {
   return (
     <Layout>
       <UserListScreen roles={roles} />
@@ -64,4 +64,4 @@ export const getServerSideProps = withThemes(async (ctx) => {
   }
 });
 
-export default CoursesPage;
+export default UsersPage;

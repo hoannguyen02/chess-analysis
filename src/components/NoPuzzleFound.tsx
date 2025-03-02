@@ -10,7 +10,7 @@ export const NoPuzzleFound = () => {
         <ul className="mt-4 text-gray-700 text-lg space-y-2">
           <li> 🔄 Tải lại trang?</li>
           <li>🎯 Thử một bài tập khác?</li>
-          <li>🏆 Xem một khóa học mới?</li>
+          <li>🏆 Xem một bài học mới?</li>
         </ul>
       </div>
     );
@@ -21,7 +21,7 @@ export const NoPuzzleFound = () => {
       <ul className="mt-4 text-gray-700 text-lg space-y-2">
         <li>🔄 Reload the page?</li>
         <li>🎯 Try another puzzle?</li>
-        <li>🏆 Explore a new course?</li>
+        <li>🏆 Explore a new lessons?</li>
       </ul>
     </div>
   );

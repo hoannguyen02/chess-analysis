@@ -15,7 +15,7 @@ type Props = {
   user: UserExpanded;
   roles: Role[];
 };
-const CoursePage = ({ user, roles }: Props) => {
+const UserPage = ({ user, roles }: Props) => {
   return (
     <Layout>
       <CreateUserForm user={user} roles={roles} />
@@ -75,4 +75,4 @@ export const getServerSideProps: GetServerSideProps = withThemes(
   }
 );
 
-export default CoursePage;
+export default UserPage;

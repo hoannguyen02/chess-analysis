@@ -189,8 +189,18 @@ export const PuzzlesSearchModal: React.FC<PuzzlesSearchModalProps> = ({
                       </Table.Cell>
                       <Table.Cell>
                         <Button onClick={() => previewPuzzle(item)}>
-                          View
+                          View / Xem
                         </Button>
+                      </Table.Cell>
+                      <Table.Cell>
+                        <a
+                          href={`/settings/puzzles/${item._id}`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex font-medium text-cyan-600 hover:underline dark:text-cyan-500"
+                        >
+                          {locale === 'vi' ? 'Sửa thông tin' : 'Edit / Update'}
+                        </a>
                       </Table.Cell>
                     </Table.Row>
                   );

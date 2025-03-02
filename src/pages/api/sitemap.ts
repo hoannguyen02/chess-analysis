@@ -8,13 +8,13 @@ export default async function handler(
   const siteUrl = 'https://limachess.com'; // Update with your actual domain
 
   const slugResults = await axios.get(
-    `${process.env.NEXT_PUBLIC_LIMA_BE_DOMAIN}/v1/courses/public/slug`
+    `${process.env.NEXT_PUBLIC_LIMA_BE_DOMAIN}/v1/lessons/public/slug`
   );
 
   const lessonSlugs: string[] = slugResults.data || [];
 
   // Generate URLs for both the default language (`/lessons/`) and Vietnamese (`/vi/lessons/`)
-  const courseUrls = lessonSlugs.flatMap(({ slug }: any) => [
+  const lessonUrls = lessonSlugs.flatMap(({ slug }: any) => [
     `<url>
       <loc>${siteUrl}/lessons/${slug}</loc>
       <lastmod>${new Date().toISOString()}</lastmod>
@@ -60,7 +60,7 @@ export default async function handler(
       <priority>1.0</priority>
     </url>
     ${menuUrls.join('\n')}
-    ${courseUrls.join('\n')}
+    ${lessonUrls.join('\n')}
   </urlset>`;
 
   res.setHeader('Content-Type', 'text/xml');

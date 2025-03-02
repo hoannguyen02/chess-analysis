@@ -61,14 +61,6 @@ export const MenuLeft = () => {
           {/*  Role: Teacher, Admin */}
           {t('title.manage')}
           <ul className="pl-4">
-            <li className="my-2">
-              <Link
-                href="/settings/courses"
-                className="mb-6 hover:text-[var(--p-highlight)]"
-              >
-                {t('navigation.courses')}
-              </Link>
-            </li>
             <li className="mb-2">
               <Link
                 href="/settings/lessons"

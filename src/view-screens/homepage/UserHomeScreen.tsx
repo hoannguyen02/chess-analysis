@@ -44,11 +44,11 @@ export const UserHomeScreen = () => {
   const [activeTab, setActiveTab] = useState('rated');
 
   //
-  const nextCourseKey = useMemo(() => {
+  const nextLessonKey = useMemo(() => {
     return user ? `/v1/lessons/next-lesson/${user._id}` : undefined;
   }, [user]);
   const { data: nextLesson, isLoading: isLoadingNextLesson } = useSWR(
-    nextCourseKey,
+    nextLessonKey,
     fetcher
   );
 
@@ -116,7 +116,7 @@ export const UserHomeScreen = () => {
           </div>
         </Card>
         <Card className="w-full flex flex-col items-start min-h-[200px] border border-gray-200">
-          <h2 className="text-lg font-semibold">{t('home.next-course')}</h2>
+          <h2 className="text-lg font-semibold">{t('home.next-lesson')}</h2>
           {nextLesson ? (
             <>
               <p className="text-gray-600 mt-2">{nextLesson.title[locale]}</p>
@@ -134,7 +134,7 @@ export const UserHomeScreen = () => {
               </div>
             </>
           ) : (
-            <p>{t('home.no-course')}</p>
+            <p>{t('home.no-lesson')}</p>
           )}
         </Card>
       </div>

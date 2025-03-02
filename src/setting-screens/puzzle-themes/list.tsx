@@ -51,11 +51,11 @@ export const PuzzleThemeListScreen = () => {
     const updatedItems = [...puzzleThemes];
     const [movedItem] = updatedItems.splice(fromIndex, 1);
     updatedItems.splice(toIndex, 0, movedItem);
-    const prioritizedCourses = updatedItems.map((course, index) => ({
-      ...course,
+    const prioritizedThemes = updatedItems.map((theme, index) => ({
+      ...theme,
       priority: index + 1,
     }));
-    setPuzzleThemes(prioritizedCourses);
+    setPuzzleThemes(prioritizedThemes);
     setIsReordered(true);
   };
 
