@@ -3,6 +3,7 @@ import { withThemes } from '@/HOF/withThemes';
 import { Clipboard } from 'flowbite-react';
 import { GetServerSidePropsContext } from 'next';
 import { useTranslations } from 'next-intl';
+import Image from 'next/image';
 import Link from 'next/link';
 
 const PaymentGuidePage = () => {
@@ -15,7 +16,7 @@ const PaymentGuidePage = () => {
             <Logo />
           </Link>
         </div>
-        <div className="mb-6">
+        <div className="mb-2">
           <h2 className="text-lg font-semibold"> {t('payment.step-1')}</h2>
           <p className="text-sm text-gray-600 mt-2">
             {t('payment.step-1-description')}
@@ -48,6 +49,13 @@ const PaymentGuidePage = () => {
               <strong>{t('payment.payment-description-note')}</strong>
             </li>
           </ul>
+          <Image
+            alt="LIMA Chess QR"
+            width={422}
+            height={420}
+            className="mt-1"
+            src={`/images/lima_chess_qr.png`}
+          />
         </div>
 
         <div className="mb-6">
