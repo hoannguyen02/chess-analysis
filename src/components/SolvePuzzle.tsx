@@ -102,7 +102,8 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({
   const [isPreMoveDone, setIsPreMoveDone] = useState(false);
 
   const t = useTranslations();
-  const { themeMap, isMobile, locale, isLoggedIn } = useAppContext();
+  const { themeMap, isMobile, locale, isLoggedIn, isAdminRole } =
+    useAppContext();
   const router = useRouter();
   const { customPieces, bgDark, bgLight } = useCustomBoard();
   const game = useMemo(() => new Chess(puzzle.fen), [puzzle.fen]);
@@ -747,29 +748,32 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({
   const preMove = useMemo(() => puzzle.preMove?.move, [puzzle]);
 
   const customArrows = useMemo(() => {
-    if (!showCustomArrows) return undefined;
+    if (showCustomArrows || isAdminRole) {
+      // Case 1: If puzzle is solved, use end arrows
+      if (isCurrentStepReachSolutionLength) {
+        return puzzle.endCustomArrows || undefined;
+      }
 
-    // Case 1: If puzzle is solved, use end arrows
-    if (isCurrentStepReachSolutionLength) {
-      return puzzle.endCustomArrows || undefined;
+      // Case 2: If there's no pre-move, show custom arrows immediately
+      if (!puzzle.preMove && !isUserClickedOnAnySquare) {
+        return puzzle.customArrows || undefined;
+      }
+
+      // Case 3: If pre-move exists but isn't finished yet, don't render arrows
+      if (!isPreMoveDone) {
+        return undefined;
+      }
+
+      // Case 4: After pre-move is finished, render custom arrows
+      return !isUserClickedOnAnySquare
+        ? puzzle.customArrows || undefined
+        : undefined;
     }
 
-    // Case 2: If there's no pre-move, show custom arrows immediately
-    if (!puzzle.preMove && !isUserClickedOnAnySquare) {
-      return puzzle.customArrows || undefined;
-    }
-
-    // Case 3: If pre-move exists but isn't finished yet, don't render arrows
-    if (!isPreMoveDone) {
-      return undefined;
-    }
-
-    // Case 4: After pre-move is finished, render custom arrows
-    return !isUserClickedOnAnySquare
-      ? puzzle.customArrows || undefined
-      : undefined;
+    return undefined;
   }, [
     showCustomArrows,
+    isAdminRole,
     isCurrentStepReachSolutionLength,
     puzzle.preMove,
     puzzle.customArrows,
