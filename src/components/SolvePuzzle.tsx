@@ -447,6 +447,7 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({
   };
 
   const onPieceDrop = (sourceSquare: Square, targetSquare: Square) => {
+    setIsUserClickedOnAnySquare(true);
     if (hintMessage) {
       setHintMessage('');
     }
