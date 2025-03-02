@@ -51,27 +51,35 @@ export default function PromoModal() {
                 {t('button.subscribe-now')}
               </Button>
             ) : (
-              <>
-                <Button
-                  outline
-                  gradientDuoTone="tealToLime"
-                  onClick={() => {
-                    router.push('/login');
-                  }}
-                >
-                  {t('navigation.login')}
-                </Button>
-                <Button
-                  outline
-                  gradientDuoTone="pinkToOrange"
-                  className="ml-4"
-                  onClick={() => {
-                    router.push('/register');
-                  }}
-                >
-                  {t('navigation.register')}
-                </Button>
-              </>
+              <div className="flex flex-col lg:flex-row">
+                <div className="flex">
+                  <Button
+                    outline
+                    gradientDuoTone="tealToLime"
+                    className="ml-2"
+                    onClick={() => {
+                      router.push('/login');
+                    }}
+                  >
+                    {t('navigation.login')}
+                  </Button>
+                  <Button
+                    outline
+                    gradientDuoTone="pinkToOrange"
+                    className="ml-4"
+                    onClick={() => {
+                      router.push('/register');
+                    }}
+                  >
+                    {t('navigation.register')}
+                  </Button>
+                </div>
+                <div className="flex justify-center mt-4 lg:mt-0 lg:ml-4">
+                  <Button outline onClick={() => setOpenModal(false)}>
+                    {t('button.skip')}
+                  </Button>
+                </div>
+              </div>
             )}
           </div>
         </div>
