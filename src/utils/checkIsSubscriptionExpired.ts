@@ -7,13 +7,13 @@ export const checkIsSubscriptionExpired = (subscriptionEnd: string | Date) => {
   const subscriptionEndDate = DateTime.fromISO(
     typeof subscriptionEnd === 'string'
       ? subscriptionEnd
-      : subscriptionEnd.toISOString()
+      : subscriptionEnd?.toISOString()
   ).setZone(DEFAULT_TIME_ZONE);
 
   const currentDate = getDateTimeNow();
 
   if (!subscriptionEndDate.isValid) {
-    return false;
+    return true;
   }
 
   return currentDate > subscriptionEndDate;

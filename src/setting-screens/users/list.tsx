@@ -8,9 +8,10 @@ import useDialog from '@/hooks/useDialog';
 import { StatusType } from '@/types/status';
 import { Role, User } from '@/types/user';
 import axiosInstance from '@/utils/axiosInstance';
+import { checkIsSubscriptionExpired } from '@/utils/checkIsSubscriptionExpired';
 import { filteredQuery } from '@/utils/filteredQuery';
 import { handleSubmission } from '@/utils/handleSubmission';
-import { Button, Label, Pagination, Spinner } from 'flowbite-react';
+import { Button, Label, Pagination, Spinner, Tooltip } from 'flowbite-react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useMemo, useState } from 'react';
@@ -25,7 +26,7 @@ type Props = {
 type ConfirmData = {
   userId: string;
   username: string;
-  type: 'delete' | 'reset-practice' | 'reset-rating';
+  type: 'delete' | 'reset-practice' | 'reset-rating' | 'make-subscription';
 };
 
 export const UserListScreen = ({ roles }: Props) => {
@@ -109,7 +110,20 @@ export const UserListScreen = ({ roles }: Props) => {
           addToast,
           'User delete successfully!'
         );
-
+        break;
+      case 'make-subscription':
+        await handleSubmission(
+          async () => {
+            return await axiosInstance.put(
+              `${apiDomain}/v1/users/make-subscription/${userId}`,
+              {
+                username,
+              }
+            );
+          },
+          addToast,
+          'User delete successfully!'
+        );
         break;
       case 'reset-rating':
         await handleSubmission(
@@ -136,6 +150,8 @@ export const UserListScreen = ({ roles }: Props) => {
 
     const { type, username } = confirmData;
     switch (type) {
+      case 'make-subscription':
+        return `Are you sure you want to MAKE SUBSCRIPTION this user: ${username}`;
       case 'delete':
         return `Are you sure you want to DELETE this user: ${username}`;
       case 'reset-practice':
@@ -200,7 +216,7 @@ export const UserListScreen = ({ roles }: Props) => {
       </div>
 
       <div className="">
-        <div className="grid grid-cols-[200px_120px_120px_120px_160px_160px_160px] mb-4 text-center">
+        <div className="grid grid-cols-[200px_120px_120px_120px_160px_160px_160px_160px] mb-4 text-center">
           <Label className="font-bold">Username</Label>
           <Label className="font-bold">Role</Label>
           <Label className="font-bold">Status</Label>
@@ -208,73 +224,99 @@ export const UserListScreen = ({ roles }: Props) => {
           <Label className="font-bold">Practice</Label>
           <Label className="font-bold">Rating</Label>
           <Label className="font-bold">Remove</Label>
+          <Label className="font-bold">Make subscription</Label>
         </div>
         {isLoading ? (
           <div className="text-center">
             <Spinner />
           </div>
         ) : (
-          data.items.map((item, index) => (
-            <div
-              className="grid grid-cols-[200px_120px_120px_120px_160px_160px_160px] mb-4 text-center"
-              key={`${item.username}-${index}`}
-            >
-              <Label>{item.username}</Label>
-              <Label>{RoleMap[item.role]?.label}</Label>
-              <Label>{item.status}</Label>
-              <Link
-                href={`/settings/users/${item._id}`}
-                className="font-medium text-cyan-600 hover:underline dark:text-cyan-500"
+          data.items.map((item, index) => {
+            const isExpired = checkIsSubscriptionExpired(item?.subscriptionEnd);
+            return (
+              <div
+                className="grid grid-cols-[200px_120px_120px_120px_160px_160px_160px_160px] mb-4 text-center"
+                key={`${item.username}-${index}`}
               >
-                Edit
-              </Link>
-              <div className="flex w-full justify-center">
-                <Button
-                  size="xs"
-                  outline
-                  onClick={() =>
-                    onOpenDialog({
-                      type: 'reset-practice',
-                      userId: item._id!,
-                      username: item.username,
-                    })
-                  }
+                <Label>{item.username}</Label>
+                <Label>{RoleMap[item.role]?.label}</Label>
+                <Label>{item.status}</Label>
+                <Link
+                  href={`/settings/users/${item._id}`}
+                  className="font-medium text-cyan-600 hover:underline dark:text-cyan-500"
                 >
-                  Reset practice
-                </Button>
+                  Edit
+                </Link>
+                <div className="flex w-full justify-center">
+                  <Button
+                    size="xs"
+                    outline
+                    onClick={() =>
+                      onOpenDialog({
+                        type: 'reset-practice',
+                        userId: item._id!,
+                        username: item.username,
+                      })
+                    }
+                  >
+                    Reset practice
+                  </Button>
+                </div>
+                <div className="flex w-full justify-center">
+                  <Button
+                    size="xs"
+                    outline
+                    onClick={() =>
+                      onOpenDialog({
+                        type: 'reset-rating',
+                        userId: item._id!,
+                        username: item.username,
+                      })
+                    }
+                  >
+                    Reset rating
+                  </Button>
+                </div>
+                <div className="flex w-full justify-center">
+                  <Button
+                    size="xs"
+                    outline
+                    onClick={() =>
+                      onOpenDialog({
+                        type: 'delete',
+                        userId: item._id!,
+                        username: item.username,
+                      })
+                    }
+                  >
+                    Delete / Remove
+                  </Button>
+                </div>
+                <div className="flex w-full justify-center">
+                  <Tooltip
+                    placement="top"
+                    content="Thưc hiện nút này sau khi user mua gói nâng cao"
+                  >
+                    <Button
+                      size="xs"
+                      outline
+                      gradientDuoTone="tealToLime"
+                      disabled={!isExpired}
+                      onClick={() =>
+                        onOpenDialog({
+                          type: 'make-subscription',
+                          userId: item._id!,
+                          username: item.username,
+                        })
+                      }
+                    >
+                      Make
+                    </Button>
+                  </Tooltip>
+                </div>
               </div>
-              <div className="flex w-full justify-center">
-                <Button
-                  size="xs"
-                  outline
-                  onClick={() =>
-                    onOpenDialog({
-                      type: 'reset-rating',
-                      userId: item._id!,
-                      username: item.username,
-                    })
-                  }
-                >
-                  Reset rating
-                </Button>
-              </div>
-              <div className="flex w-full justify-center">
-                <Button
-                  size="xs"
-                  outline
-                  onClick={() =>
-                    onOpenDialog({
-                      type: 'delete',
-                      userId: item._id!,
-                      username: item.username,
-                    })
-                  }
-                >
-                  Delete / Remove
-                </Button>
-              </div>
-            </div>
-          ))
+            );
+          })
         )}
       </div>
 
