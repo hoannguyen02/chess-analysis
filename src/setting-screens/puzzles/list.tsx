@@ -76,6 +76,7 @@ export const PuzzleListScreen = () => {
             en: `${title?.en} (Copy)`,
             vi: `${title?.vi} (Copy)`,
           },
+          status: 'Draft',
           solutions: [
             {
               player: 'user',
