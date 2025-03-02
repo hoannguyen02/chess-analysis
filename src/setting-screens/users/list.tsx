@@ -87,7 +87,7 @@ export const UserListScreen = ({ roles }: Props) => {
 
   const handleOnOk = async () => {
     if (!confirmData) return;
-    const { type, userId } = confirmData;
+    const { type, userId, username } = confirmData;
     switch (type) {
       case 'reset-practice':
         await handleSubmission(
@@ -122,7 +122,7 @@ export const UserListScreen = ({ roles }: Props) => {
             );
           },
           addToast,
-          'User delete successfully!'
+          'Make subscription successfully!'
         );
         break;
       case 'reset-rating':
