@@ -23,7 +23,7 @@ import { isEmpty } from 'lodash';
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { useState } from 'react';
+import { useCallback, useState } from 'react';
 import {
   Controller,
   SubmitHandler,
@@ -44,7 +44,12 @@ type Props = {
 };
 
 export const PuzzleFormScreen = ({ puzzle, onSaveSuccess }: Props) => {
-  const { themes: defaultThemes, apiDomain, locale } = useAppContext();
+  const {
+    themes: defaultThemes,
+    apiDomain,
+    locale,
+    isAdminRole,
+  } = useAppContext();
   const t = useTranslations();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { addToast } = useToast();
@@ -80,7 +85,7 @@ export const PuzzleFormScreen = ({ puzzle, onSaveSuccess }: Props) => {
   // Warn on internal navigation
   usePreventRouteChange(ROUTE_CHANGE_MESSAGE, isDirty);
 
-  const isValidFormValues = () => {
+  const isValidFormValues = useCallback(() => {
     const { fen, solutions, themes } = getValues();
     if (!fen) {
       alert('Please enter a valid FEN position (Vui lòng nhập FEN)');
@@ -96,7 +101,7 @@ export const PuzzleFormScreen = ({ puzzle, onSaveSuccess }: Props) => {
     }
 
     return true;
-  };
+  }, [getValues]);
 
   const { fields, append, remove } = useFieldArray({
     control,
@@ -180,13 +185,13 @@ export const PuzzleFormScreen = ({ puzzle, onSaveSuccess }: Props) => {
 
   const fen = watch('fen');
 
-  const handlePreview = () => {
+  const handlePreview = useCallback(() => {
     if (isValidFormValues()) {
       previewPuzzle(getValues());
     }
-  };
+  }, [getValues, isValidFormValues]);
 
-  const handleCopySolvePuzzleLink = () => {
+  const handleCopySolvePuzzleLink = useCallback(() => {
     if (isValidFormValues()) {
       const isPublic = getValues('isPublic');
       if (!isPublic) {
@@ -199,7 +204,45 @@ export const PuzzleFormScreen = ({ puzzle, onSaveSuccess }: Props) => {
         alert('Link copied successfully');
       }
     }
-  };
+  }, [getValues, isValidFormValues, puzzle?._id]);
+
+  const duplicatePuzzle = useCallback(async () => {
+    if (!puzzle) return;
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    const { title, _id, created_at, updated_at, solutions, ...rest } = puzzle;
+    try {
+      setIsSubmitting(true);
+      const newPuzzleResult = await axiosInstance.post(
+        `${apiDomain}/v1/puzzles`,
+        {
+          ...rest,
+          title: {
+            en: `${title?.en} (Copy)`,
+            vi: `${title?.vi} (Copy)`,
+          },
+          status: 'Draft',
+          solutions: [
+            {
+              player: 'user',
+              moves: [
+                {
+                  move: 'd5',
+                  from: 'c3',
+                  to: 'd5',
+                },
+              ],
+            },
+          ], // Just default solution
+        }
+      );
+
+      router.push(`/settings/puzzles/${newPuzzleResult.data._id}`);
+    } catch (error) {
+      console.error('Failed to duplicate puzzle', error);
+    } finally {
+      setIsSubmitting(false);
+    }
+  }, [apiDomain, puzzle, router]);
 
   return (
     <div className="">
@@ -569,14 +612,26 @@ export const PuzzleFormScreen = ({ puzzle, onSaveSuccess }: Props) => {
             {t('common.button.back')}
           </Button>
           {puzzle?._id && (
-            <Button
-              type="button"
-              onClick={handleCopySolvePuzzleLink}
-              outline
-              className="mr-8"
-            >
-              Copy solve puzzle public link
-            </Button>
+            <>
+              {isAdminRole && (
+                <Button
+                  type="button"
+                  onClick={duplicatePuzzle}
+                  outline
+                  className="mr-8"
+                >
+                  Duplicate
+                </Button>
+              )}
+              <Button
+                type="button"
+                onClick={handleCopySolvePuzzleLink}
+                outline
+                className="mr-8"
+              >
+                Copy solve puzzle public link
+              </Button>
+            </>
           )}
           <Button
             type="button"
