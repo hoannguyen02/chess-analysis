@@ -192,7 +192,7 @@ export const LessonFormScreen = ({ lesson }: Props) => {
     defaultValues: lesson
       ? buildInitialLessonForm(lesson)
       : {
-          status: 'Active',
+          status: 'Draft',
           difficulty: 'Easy',
         },
   });
