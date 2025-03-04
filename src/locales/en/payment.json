@@ -1,9 +1,7 @@
 {
-  "title": "Registration & login",
-  "step-1": "Step 1: Make Your Payment",
-  "step-1-description": "Transfer the payment to the following bank details:",
-  "step-2": "Step 2: Send Payment Proof",
-  "step-2-description": "After making the payment, send your payment proof through one of the following channels:",
+  "title": "Become a VIP Member for Only 199K",
+  "description": "Upgrade to a VIP membership by making a payment using the details below:",
+  "noted": "📌 Note: Your account will be activated quickly after payment. If you need any help, feel free to contact us:",
   "bank-name": "Bank Name: ",
   "account-name": "Account Name:",
   "account-number": "Account Number: ",

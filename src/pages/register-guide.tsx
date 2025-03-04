@@ -11,15 +11,15 @@ const PaymentGuidePage = () => {
   return (
     <div className="min-h-screen flex flex-col items-center p-4">
       <div className="max-w-2xl w-full  mx-auto">
-        <div className="flex justify-center mt-8">
-          <Link href="/" className="mb-6">
+        <div className="flex justify-center my-4">
+          <Link href="/">
             <Logo />
           </Link>
         </div>
         <div className="mb-2">
-          <h2 className="text-lg font-semibold"> {t('payment.step-1')}</h2>
+          <h2 className="text-lg font-semibold"> {t('payment.title')}</h2>
           <p className="text-sm text-gray-600 mt-2">
-            {t('payment.step-1-description')}
+            {t('payment.description')}
           </p>
           <ul className="text-sm text-gray-800 mt-2">
             <li>
@@ -51,15 +51,14 @@ const PaymentGuidePage = () => {
           </ul>
           <Image
             alt="LIMA Chess QR"
-            width={422}
-            height={420}
+            width={200}
+            height={200}
             className="mt-1"
             src={`/images/lima_chess_qr.png`}
           />
         </div>
 
         <div className="mb-6">
-          <h2 className="text-lg font-semibold"> {t('payment.step-2')}</h2>
           <p className="text-sm text-gray-600 mt-2">
             {t('payment.step-2-description')}
           </p>
