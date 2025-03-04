@@ -4,8 +4,7 @@ import Link from 'next/link';
 
 export const MenuLeft = () => {
   const t = useTranslations('common');
-  const { isAdminRole, isManageRole, isLoggedIn, isSubscriptionExpired } =
-    useAppContext();
+  const { isAdminRole, isManageRole, isShowRegisterGuide } = useAppContext();
 
   return (
     <nav
@@ -34,7 +33,7 @@ export const MenuLeft = () => {
       <Link href="/practice" className="mb-2 hover:text-[var(--p-highlight)]">
         {t('navigation.practice')}
       </Link>
-      {isLoggedIn && isSubscriptionExpired && (
+      {isShowRegisterGuide && (
         <Link
           href="/register-guide"
           target="_blank"

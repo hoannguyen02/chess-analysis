@@ -40,6 +40,7 @@ export interface AppContextProps {
   };
   isManageRole?: boolean; // Teacher or Admin
   isAdminRole?: boolean;
+  isShowRegisterGuide?: boolean;
 }
 
 const AppContext = createContext<AppContextProps | undefined>(undefined);
@@ -147,6 +148,8 @@ export const AppProvider: React.FC<{
     };
   }, [allThemes]);
 
+  const isLoggedIn = !isEmpty(session?.id);
+
   const value = useMemo(
     () => ({
       locale,
@@ -172,9 +175,12 @@ export const AppProvider: React.FC<{
       session,
       user,
       isLoadingUser: isLoading,
+      isShowRegisterGuide: isLoading
+        ? false
+        : isSubscriptionExpired && isLoggedIn,
       isValidating,
       isSubscriptionExpired,
-      isLoggedIn: !isEmpty(session?.id),
+      isLoggedIn,
       mutateUser,
       mutateBookmark,
       bookmarks: bookmarks || [],
@@ -193,8 +199,9 @@ export const AppProvider: React.FC<{
       session,
       user,
       isLoading,
-      isValidating,
       isSubscriptionExpired,
+      isLoggedIn,
+      isValidating,
       mutateUser,
       mutateBookmark,
       bookmarks,

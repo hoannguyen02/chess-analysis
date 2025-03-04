@@ -27,8 +27,7 @@ export default function Header() {
     isMobile,
     isAdminRole,
     isManageRole,
-    isSubscriptionExpired,
-    isLoggedIn,
+    isShowRegisterGuide,
   } = useAppContext();
   const { addToast } = useToast();
   const currentPath = useMemo(() => {
@@ -128,7 +127,7 @@ export default function Header() {
             >
               {t('navigation.practice')}
             </Link>
-            {isLoggedIn && isSubscriptionExpired && (
+            {isShowRegisterGuide && (
               <Link
                 href="/register-guide"
                 target="_blank"
