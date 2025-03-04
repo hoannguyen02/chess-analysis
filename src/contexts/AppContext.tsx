@@ -1,6 +1,6 @@
 import { ExcludeThemeInFilter } from '@/constants';
+import { Bookmark } from '@/types/bookmark';
 import { LocaleType } from '@/types/locale';
-import { Puzzle } from '@/types/puzzle';
 import { PuzzleTheme } from '@/types/puzzle-theme';
 import { Session } from '@/types/session';
 import { Tag } from '@/types/tag';
@@ -33,7 +33,7 @@ export interface AppContextProps {
   isSubscriptionExpired?: boolean;
   isLoadingBookMark?: boolean;
   mutateBookmark: KeyedMutator<any>;
-  bookmarks: Puzzle[] | [];
+  bookmarks: Bookmark[] | [];
   getFilteredThemes(): {
     themeOptions: PuzzleTheme[] | [];
     excludedThemeIds: string[] | [];

@@ -1,9 +1,10 @@
 import { TransitionContainer } from '@/components/TransitionContainer';
 import { LEVEL_RATING } from '@/constants';
 import { useAppContext } from '@/contexts/AppContext';
-import { Puzzle } from '@/types/puzzle';
+import { Bookmark } from '@/types/bookmark';
 import { previewPuzzle } from '@/utils/previewPuzzle';
 import { Button, Label, Pagination } from 'flowbite-react';
+import { DateTime } from 'luxon';
 import { useTranslations } from 'next-intl';
 import dynamic from 'next/dynamic';
 import { useEffect, useMemo, useState } from 'react';
@@ -19,13 +20,8 @@ const SolvePuzzleDrawer = dynamic(() =>
 
 export const Bookmarks = () => {
   const t = useTranslations();
-  const {
-    getFilteredThemes,
-    isSubscriptionExpired,
-    bookmarks,
-    locale,
-    isManageRole,
-  } = useAppContext();
+  const { getFilteredThemes, isSubscriptionExpired, bookmarks, isManageRole } =
+    useAppContext();
 
   const [currentPage, setCurrentPage] = useState(1);
   const [themes, setThemes] = useState<string[]>([]);
@@ -92,7 +88,7 @@ export const Bookmarks = () => {
         <div
           className={`grid ${isManageRole ? 'grid-cols-4' : 'grid-cols-2'} mb-4 gap-2`}
         >
-          <Label className="font-bold">{t('home.title')}</Label>
+          <Label className="font-bold">{t('home.attempted-at')}</Label>
           <Label className="font-bold">{t('common.title.difficulty')}</Label>
           {isManageRole && (
             <>
@@ -102,7 +98,7 @@ export const Bookmarks = () => {
           )}
         </div>
 
-        {displayedBookmarks.map((item: Puzzle, index: number) => (
+        {displayedBookmarks.map((item: Bookmark, index: number) => (
           <div
             className={`grid ${isManageRole ? 'grid-cols-4' : 'grid-cols-2'} items-center gap-2 mt-2`}
             key={`bookmark-${index}`}
@@ -115,7 +111,7 @@ export const Bookmarks = () => {
               isProcessing={loadingPuzzle?.[index] || false}
               onClick={() => handleOpenPuzzle(item._id!, index)}
             >
-              {item.title?.[locale]}
+              {DateTime.fromISO(item.bookmarkedAt).toISODate()}
             </Button>
             <Label> {LEVEL_RATING[item.difficulty]}</Label>
             {isManageRole && (
