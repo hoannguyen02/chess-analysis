@@ -20,8 +20,16 @@ export default function Header() {
   const [isOpenDrawer, setIsOpenDrawer] = useState(false);
   const t = useTranslations('common');
   const router = useRouter();
-  const { session, apiDomain, locale, isMobile, isAdminRole, isManageRole } =
-    useAppContext();
+  const {
+    session,
+    apiDomain,
+    locale,
+    isMobile,
+    isAdminRole,
+    isManageRole,
+    isSubscriptionExpired,
+    isLoggedIn,
+  } = useAppContext();
   const { addToast } = useToast();
   const currentPath = useMemo(() => {
     return router.asPath;
@@ -120,28 +128,16 @@ export default function Header() {
             >
               {t('navigation.practice')}
             </Link>
-            <Link
-              href="/board-and-pieces"
-              className="ml-4 hover:text-[var(--p-highlight)]"
-            >
-              {t('navigation.board-pieces')}
-            </Link>
-            <Link
-              href="https://www.facebook.com/limachess102"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="ml-4 hover:text-[var(--p-highlight)]"
-            >
-              {t('navigation.facebook')}
-            </Link>
-            <Link
-              href="https://www.youtube.com/@LIMAChess"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="ml-4 hover:text-[var(--p-highlight)]"
-            >
-              {t('navigation.youtube')}
-            </Link>
+            {isLoggedIn && isSubscriptionExpired && (
+              <Link
+                href="/register-guide"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="ml-4 hover:text-[var(--p-highlight)]"
+              >
+                {t('navigation.join-vip')}
+              </Link>
+            )}
           </div>
           {/* Manage route */}
           {isManageRole && (

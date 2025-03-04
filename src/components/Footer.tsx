@@ -24,6 +24,14 @@ export const Footer = () => {
         >
           ▶️ {t('navigation.youtube')}
         </a>
+        <a
+          href="https://www.youtube.com/@LIMAChess"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hover:text-red-600 flex items-center gap-2"
+        >
+          ♟ {t('navigation.board-pieces')}
+        </a>
       </div>
 
       {/* Navigation Links */}

@@ -4,7 +4,8 @@ import Link from 'next/link';
 
 export const MenuLeft = () => {
   const t = useTranslations('common');
-  const { isAdminRole, isManageRole } = useAppContext();
+  const { isAdminRole, isManageRole, isLoggedIn, isSubscriptionExpired } =
+    useAppContext();
 
   return (
     <nav
@@ -33,28 +34,16 @@ export const MenuLeft = () => {
       <Link href="/practice" className="mb-2 hover:text-[var(--p-highlight)]">
         {t('navigation.practice')}
       </Link>
-      <Link
-        href="/board-and-pieces"
-        className="mb-2 hover:text-[var(--p-highlight)]"
-      >
-        {t('navigation.board-pieces')}
-      </Link>
-      <Link
-        className="mb-2 hover:text-[var(--p-highlight)]"
-        href="https://www.facebook.com/limachess102"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        {t('navigation.facebook')}
-      </Link>
-      <Link
-        className="mb-6 hover:text-[var(--p-highlight)]"
-        href="https://www.youtube.com/@LIMAChess"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        {t('navigation.youtube')}
-      </Link>
+      {isLoggedIn && isSubscriptionExpired && (
+        <Link
+          href="/register-guide"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mb-2 hover:text-[var(--p-highlight)]"
+        >
+          {t('navigation.join-vip')}
+        </Link>
+      )}
       {isManageRole && (
         <>
           <hr className="mb-4" />
