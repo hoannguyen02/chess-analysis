@@ -40,8 +40,7 @@ export const LessonFilters = () => {
             page: 1,
           },
         },
-        undefined,
-        { shallow: true }
+        undefined
       );
     },
     [difficulties, router]

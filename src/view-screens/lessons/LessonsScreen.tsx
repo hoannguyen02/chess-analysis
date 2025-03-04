@@ -10,7 +10,7 @@ import { Badge, Button, Card, Pagination, Progress } from 'flowbite-react';
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { useEffect, useMemo, useRef, useState } from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { VscLayoutMenubar } from 'react-icons/vsc';
 import useSWR from 'swr';
 import { LessonFilters } from './LessonFilters';
@@ -20,11 +20,13 @@ type Props = {
   locale: LocaleType;
   currentPage: number;
   totalPages: number;
+  total: number;
 };
 export const LessonsScreen = ({
   initialLessons,
   locale,
   totalPages,
+  total,
   currentPage,
 }: Props) => {
   const [isOpenDrawer, setIsOpenDrawer] = useState(false);
@@ -86,6 +88,19 @@ export const LessonsScreen = ({
       }
     }
   }, [isLoggedIn]);
+
+  const onPageChange = useCallback(
+    (page: number) => {
+      router.push(
+        {
+          pathname: router.pathname,
+          query: { ...router.query, page },
+        },
+        undefined
+      );
+    },
+    [router]
+  );
 
   // Display puzzle
   const [isLoading, setIsLoading] = useState(false);
@@ -178,23 +193,12 @@ export const LessonsScreen = ({
                 </p>
               </div>
             )}
-            {totalPages > 10 && (
+            {total > 10 && (
               <div className="flex justify-center mt-6">
                 <Pagination
                   currentPage={currentPage}
                   totalPages={totalPages}
-                  onPageChange={(page) => {
-                    router.push(
-                      {
-                        pathname: '/',
-                        query: { ...router.query, page },
-                      },
-                      undefined,
-                      {
-                        shallow: true,
-                      }
-                    );
-                  }}
+                  onPageChange={onPageChange}
                   previousLabel={t('common.button.previous')}
                   nextLabel={t('common.button.next')}
                 />

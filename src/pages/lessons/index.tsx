@@ -14,6 +14,7 @@ type Props = {
   locale: LocaleType;
   currentPage: number;
   totalPages: number;
+  total: number;
 };
 const LessonsPage = (props: Props) => {
   return (
@@ -28,6 +29,7 @@ export const getServerSideProps = withThemes(
     const { locale, query } = ctx;
     try {
       const page = Number(query.page);
+
       const { search, difficulties } = query;
 
       const queryString = filteredQuery({
@@ -40,7 +42,7 @@ export const getServerSideProps = withThemes(
       const serverAxios = createServerAxios(ctx);
       const res = await serverAxios.get(`/v1/lessons/public?${queryString}`);
 
-      const { items, lastPage, currentPage } = res.data || {};
+      const { items, lastPage, total } = res.data || {};
 
       // Use fallback translations if import fails
       const translations: Record<LocaleType, any> = {
@@ -56,8 +58,9 @@ export const getServerSideProps = withThemes(
           },
           locale,
           initialLessons: items,
-          currentPage,
+          currentPage: page,
           totalPages: lastPage,
+          total,
         },
       };
     } catch (error) {
