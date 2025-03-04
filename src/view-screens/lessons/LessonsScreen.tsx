@@ -33,11 +33,11 @@ export const LessonsScreen = ({
   const router = useRouter();
   const { apiDomain, isLoggedIn } = useAppContext();
 
-  const { difficulty, search, tags } = router.query;
+  const { difficulties, search, tags } = router.query;
 
   const queryString = useMemo(() => {
     const queryObject: Record<string, any> = {
-      difficulty,
+      difficulties,
       search,
       locale,
       tags,
@@ -45,7 +45,7 @@ export const LessonsScreen = ({
     };
 
     return filteredQuery(queryObject);
-  }, [difficulty, search, locale, tags, currentPage]);
+  }, [difficulties, search, locale, tags, currentPage]);
 
   const queryKey = useMemo(
     () => `${apiDomain}/v1/lessons/public?${queryString}`,

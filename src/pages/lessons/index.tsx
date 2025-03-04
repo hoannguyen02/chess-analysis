@@ -28,10 +28,10 @@ export const getServerSideProps = withThemes(
     const { locale, query } = ctx;
     try {
       const page = Number(query.page);
-      const { search, difficulty } = query;
+      const { search, difficulties } = query;
 
       const queryString = filteredQuery({
-        difficulty,
+        difficulties,
         search,
         locale,
         page: page || 1,

@@ -4,6 +4,7 @@ import { useAppContext } from '@/contexts/AppContext';
 import { Label } from 'flowbite-react';
 import { useTranslations } from 'next-intl';
 import { useRouter } from 'next/router';
+import { useCallback } from 'react';
 
 const difficultyOptions = Object.entries(LEVEL_RATING).map(
   ([rating, title]) => ({
@@ -16,32 +17,63 @@ export const LessonFilters = () => {
   const router = useRouter();
   const { tags: initialTags } = useAppContext();
   const t = useTranslations();
-  const { difficulty, search } = router.query;
+  const { difficulties, search, tags } = router.query;
 
-  const handleDifficultyChange = (value: string) => {
-    const selectedDifficulties = new Set(
-      (difficulty as string)?.split(',').filter(Boolean)
-    );
+  const handleDifficultyChange = useCallback(
+    (value: string) => {
+      const selectedDifficulties = new Set(
+        (difficulties as string)?.split(',').filter(Boolean)
+      );
 
-    if (selectedDifficulties.has(value)) {
-      selectedDifficulties.delete(value);
-    } else {
-      selectedDifficulties.add(value);
-    }
+      if (selectedDifficulties.has(value)) {
+        selectedDifficulties.delete(value);
+      } else {
+        selectedDifficulties.add(value);
+      }
 
-    router.push(
-      {
-        pathname: router.pathname,
-        query: {
-          ...router.query,
-          difficulty: Array.from(selectedDifficulties).join(','),
-          page: 1,
+      router.push(
+        {
+          pathname: router.pathname,
+          query: {
+            ...router.query,
+            difficulties: Array.from(selectedDifficulties).join(','),
+            page: 1,
+          },
         },
-      },
-      undefined,
-      { shallow: true }
-    );
-  };
+        undefined,
+        { shallow: true }
+      );
+    },
+    [difficulties, router]
+  );
+
+  const handleTagChange = useCallback(
+    (value: string) => {
+      const selectedTags = new Set(
+        (tags as string)?.split(',').filter(Boolean)
+      );
+
+      if (selectedTags.has(value)) {
+        selectedTags.delete(value);
+      } else {
+        selectedTags.add(value);
+      }
+
+      router.push(
+        {
+          pathname: router.pathname,
+          query: {
+            ...router.query,
+            tags: Array.from(selectedTags).join(','),
+            page: 1,
+          },
+        },
+        undefined,
+        { shallow: true }
+      );
+    },
+    [router, tags]
+  );
 
   return (
     <div className="flex flex-col mb-8">
@@ -66,7 +98,7 @@ export const LessonFilters = () => {
             <input
               type="checkbox"
               value={option.value}
-              checked={(difficulty as string)
+              checked={(difficulties as string)
                 ?.split(',')
                 .includes(option.value)}
               onChange={() => handleDifficultyChange(option.value)}
@@ -83,10 +115,8 @@ export const LessonFilters = () => {
             <input
               type="checkbox"
               value={option.value}
-              checked={(difficulty as string)
-                ?.split(',')
-                .includes(option.value)}
-              onChange={() => handleDifficultyChange(option.value)}
+              checked={(tags as string)?.split(',').includes(option.value)}
+              onChange={() => handleTagChange(option.value)}
               className="form-checkbox text-blue-600"
             />
             <span>{option.label}</span>
