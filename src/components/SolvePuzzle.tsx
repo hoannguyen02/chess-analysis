@@ -439,6 +439,8 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({
       setCurrentFen(game.fen());
       setShowRetry(true);
       setIsRunning(false);
+      // Remove failed move out of history
+      setHistoryMoves((prevItems) => prevItems.slice(0, -1));
     }
 
     setOptionSquares({});
@@ -566,7 +568,6 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({
   };
 
   const showSolution = () => {
-    debugger;
     setHintUsed(false);
     setShowRetry(false);
     game.load(puzzle.fen); // Reset the board to the initial puzzle state
@@ -610,13 +611,11 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({
     game.undo();
     setCurrentFen(game.fen());
     let engineMove: PuzzlePreMove | HistoryMove;
-    let nextStep: number = 0;
     // First attempt failed
     if (currentStep === 0) {
       engineMove = puzzle.preMove as PuzzlePreMove;
     } else {
-      nextStep = currentStep - 1;
-      engineMove = historyMoves[nextStep];
+      engineMove = historyMoves[historyMoves.length - 1];
     }
 
     // Remake last move
@@ -865,7 +864,7 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({
                   {t('solve-puzzle.title.moves')}:
                 </Link>
                 <hr />
-                <div className="mb-2 mt-4 grid grid-cols-2 gap-4">
+                <div className="mb-2 mt-4 grid grid-cols-2 gap-4 max-h-[150px] overflow-y-auto">
                   <div>
                     {preMove && (
                       <p
