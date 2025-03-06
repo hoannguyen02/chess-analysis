@@ -28,17 +28,20 @@ export const AnalysisScreen = () => {
   const boardRef = useRef<HTMLDivElement>(null);
   const t = useTranslations();
   const [engine, setEngine] = useState<Worker | null>(null);
-  const [inputFen, setInputFen] = useState('');
-  const game = useMemo(() => new Chess(inputFen), [inputFen]);
-  const [chessBoardPosition, setChessBoardPosition] = useState('');
+  const queryFen = useMemo(
+    () => (router.query.fen as string) || DEFAULT_FEN,
+    [router]
+  );
+  const [currentFen, setCurrentFen] = useState(queryFen);
+  const game = useMemo(() => new Chess(queryFen), [queryFen]);
 
   const playerName: LowercasePlayerName = useMemo(() => {
-    return inputFen
+    return queryFen
       ? 'white'
       : (getActivePlayerFromFEN(
-          inputFen
+          queryFen
         )?.toLocaleLowerCase() as LowercasePlayerName);
-  }, [inputFen]);
+  }, [queryFen]);
 
   const [boardOrientation, setBoardOrientation] =
     useState<LowercasePlayerName>('white');
@@ -51,12 +54,6 @@ export const AnalysisScreen = () => {
   const [depth, setDepth] = useState(18);
   const [bestLine, setBestline] = useState('');
   const [possibleMate, setPossibleMate] = useState('');
-
-  useEffect(() => {
-    const fen = (router.query.fen as string) || DEFAULT_FEN;
-    setChessBoardPosition(fen);
-    setInputFen(fen);
-  }, [router]);
 
   useEffect(() => {
     try {
@@ -83,10 +80,19 @@ export const AnalysisScreen = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  // Run findBestMove only when the engine is set and currentFen changes
+  useEffect(() => {
+    if (engine && currentFen) {
+      console.log('Engine is ready. Finding best move...');
+      findBestMove();
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [engine, currentFen]);
+
   function findBestMove(depthChange?: number) {
     if (!engine) return;
 
-    engine.postMessage(`position fen ${chessBoardPosition}`);
+    engine.postMessage(`position fen ${currentFen}`);
     engine.postMessage(`go depth ${depthChange || depth}`);
 
     engine.onmessage = (event) => {
@@ -127,7 +133,8 @@ export const AnalysisScreen = () => {
       promotion: piece[1].toLowerCase() ?? 'q',
     });
     setPossibleMate('');
-    setChessBoardPosition(game.fen());
+    const fen = game.fen();
+    setCurrentFen(fen);
 
     // illegal move
     if (move === null) return false;
@@ -141,30 +148,21 @@ export const AnalysisScreen = () => {
     return true;
   }
 
-  useEffect(() => {
-    if (!game.game_over() && !game.in_draw()) {
-      console.log('Calling findBestMove()...');
-      findBestMove();
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [chessBoardPosition]);
-
   const bestMove = bestLine?.split(' ')?.[0];
 
   const handleFenInputChange = (value: string) => {
     const { valid } = game.validate_fen(value);
 
     if (valid) {
-      setInputFen(value);
-      game.load(value);
-      setChessBoardPosition(value || game.fen());
+      const fen = value || game.fen();
+      setCurrentFen(fen);
+      game.load(fen);
     }
   };
 
   const onResetBoard = () => {
-    const fen = inputFen || DEFAULT_FEN;
-    game.load(fen);
-    setChessBoardPosition(fen);
+    game.load(queryFen);
+    setCurrentFen(queryFen);
   };
 
   const handleCopy = useCallback((text: string) => {
@@ -182,12 +180,17 @@ export const AnalysisScreen = () => {
     findBestMove(value);
   };
 
+  const handleUndo = () => {
+    game.undo();
+    setCurrentFen(game.fen());
+  };
+
   return (
     <>
       <div className="flex max-w-[500px] w-full mx-auto mb-4">
         <DebouncedInput
           onChange={handleFenInputChange}
-          initialValue={inputFen}
+          initialValue={currentFen}
           placeholder="Paste FEN to start analysing custom position"
         />
       </div>
@@ -196,7 +199,7 @@ export const AnalysisScreen = () => {
           <Chessboard
             boardOrientation={boardOrientation}
             boardWidth={isMobile ? boardRef.current?.clientWidth || 320 : 500}
-            position={chessBoardPosition}
+            position={currentFen}
             onPieceDrop={onDrop}
             customPieces={customPieces}
             customDarkSquareStyle={{
@@ -275,13 +278,7 @@ export const AnalysisScreen = () => {
             </Tooltip>
 
             <Tooltip content={t('analysis.undo')} placement="top">
-              <Button
-                color="gray"
-                onClick={() => {
-                  game.undo();
-                  setChessBoardPosition(game.fen());
-                }}
-              >
+              <Button color="gray" onClick={handleUndo}>
                 <VscChevronLeft size={20} />
               </Button>
             </Tooltip>
