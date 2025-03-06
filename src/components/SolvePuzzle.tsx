@@ -938,7 +938,7 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({
                 <div className="flex justify-between">
                   <div className="flex">
                     <Tooltip
-                      content={t('solve-puzzle.button.restart')}
+                      content={t('common.button.restart')}
                       placement="top"
                     >
                       <Button

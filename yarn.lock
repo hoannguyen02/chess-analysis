@@ -3822,6 +3822,11 @@ stable-hash@^0.0.4:
   resolved "https://registry.yarnpkg.com/stable-hash/-/stable-hash-0.0.4.tgz#55ae7dadc13e4b3faed13601587cec41859b42f7"
   integrity sha512-LjdcbuBeLcdETCrPn9i8AYAZ1eCtu4ECAWtP7UleOiZ9LzVxRzzUZEoZ8zB24nhkQnDWyET0I+3sWokSDS3E7g==
 
+stockfish.wasm@^0.10.0:
+  version "0.10.0"
+  resolved "https://registry.yarnpkg.com/stockfish.wasm/-/stockfish.wasm-0.10.0.tgz#dc3ef4d98a2a79724c29510d39d89e4a5f0f1888"
+  integrity sha512-OTvOlz0ijCSmIb/YvOZ1Dn6vwZVS4Ge3N+RcV0d2b6LXUtCJ9UwmBHypRW3DZ+VXf8WNm7E3P+6jMTVvb3QaBg==
+
 streamsearch@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/streamsearch/-/streamsearch-1.1.0.tgz#404dd1e2247ca94af554e841a8ef0eaa238da764"

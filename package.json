@@ -35,6 +35,7 @@
     "remark": "^15.0.1",
     "remark-breaks": "^4.0.0",
     "remark-html": "^16.0.1",
+    "stockfish.wasm": "^0.10.0",
     "swr": "^2.3.0"
   },
   "devDependencies": {
