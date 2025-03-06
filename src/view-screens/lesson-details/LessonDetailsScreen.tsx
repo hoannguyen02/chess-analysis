@@ -495,12 +495,12 @@ export const LessonDetailsScreen = ({ data }: Props) => {
                       <>
                         <Link
                           href="/register"
-                          className="text-blue-500 text-sm hover:underline ml-2"
+                          className="text-blue-500 text-sm hover:underline mb-2 lg:mb-0"
                         >
                           {t('button.register-free')}
                         </Link>
                         <Button
-                          className="ml-4"
+                          className="ml-4 mb-2 lg:mb-0"
                           gradientDuoTone="purpleToBlue"
                           outline
                           isProcessing={resetting}
@@ -523,7 +523,7 @@ export const LessonDetailsScreen = ({ data }: Props) => {
                     ) : (
                       <div className="flex mt-2 lg:mt-0">
                         <Button
-                          className="ml-4"
+                          className="mb-2 lg:mb-0 lg:ml-4"
                           gradientDuoTone="greenToBlue"
                           outline
                           size={isMobile ? 'sm' : 'lg'}
@@ -533,7 +533,7 @@ export const LessonDetailsScreen = ({ data }: Props) => {
                           {t('button.practice-now')}
                         </Button>
                         <Button
-                          className="ml-4"
+                          className="mb-2 lg:mb-0 lg:ml-4"
                           gradientDuoTone="pinkToOrange"
                           outline
                           isProcessing={resetting}
@@ -543,7 +543,7 @@ export const LessonDetailsScreen = ({ data }: Props) => {
                           {t('navigation.other-lesson')}
                         </Button>
                         <Button
-                          className="ml-4"
+                          className="mb-2 lg:mb-0 lg:ml-4"
                           gradientDuoTone="purpleToBlue"
                           outline
                           isProcessing={resetting}

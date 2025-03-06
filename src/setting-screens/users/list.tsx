@@ -12,6 +12,7 @@ import { checkIsSubscriptionExpired } from '@/utils/checkIsSubscriptionExpired';
 import { filteredQuery } from '@/utils/filteredQuery';
 import { handleSubmission } from '@/utils/handleSubmission';
 import { Button, Label, Pagination, Spinner, Tooltip } from 'flowbite-react';
+import { DateTime } from 'luxon';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useMemo, useState } from 'react';
@@ -218,13 +219,13 @@ export const UserListScreen = ({ roles }: Props) => {
       <div className="">
         <div className="grid grid-cols-[200px_120px_120px_120px_160px_160px_160px_160px] mb-4 text-center">
           <Label className="font-bold">Username</Label>
+          <Label className="font-bold">Registered Date</Label>
           <Label className="font-bold">Role</Label>
-          <Label className="font-bold">Status</Label>
           <Label className="font-bold">Edit</Label>
           <Label className="font-bold">Practice</Label>
           <Label className="font-bold">Rating</Label>
           <Label className="font-bold">Remove</Label>
-          <Label className="font-bold">Make subscription</Label>
+          <Label className="font-bold">Make Subscription</Label>
         </div>
         {isLoading ? (
           <div className="text-center">
@@ -239,8 +240,8 @@ export const UserListScreen = ({ roles }: Props) => {
                 key={`${item.username}-${index}`}
               >
                 <Label>{item.username}</Label>
+                <Label>{DateTime.fromISO(item.created_at).toISODate()}</Label>
                 <Label>{RoleMap[item.role]?.label}</Label>
-                <Label>{item.status}</Label>
                 <Link
                   href={`/settings/users/${item._id}`}
                   className="font-medium text-cyan-600 hover:underline dark:text-cyan-500"
@@ -289,7 +290,7 @@ export const UserListScreen = ({ roles }: Props) => {
                       })
                     }
                   >
-                    Delete / Remove
+                    Remove
                   </Button>
                 </div>
                 <div className="flex w-full justify-center">

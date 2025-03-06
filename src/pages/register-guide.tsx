@@ -59,10 +59,11 @@ const PaymentGuidePage = () => {
         </div>
 
         <div className="mb-6">
-          <p className="text-sm text-gray-600 mt-2">
-            {t('payment.step-2-description')}
-          </p>
+          <p className="text-sm text-gray-600 mt-2">{t('payment.noted')}</p>
           <ul className="text-sm text-gray-800 mt-2">
+            <li>
+              {t('payment.phone')} <strong> 0912333224</strong>
+            </li>
             <li>
               {t('payment.gmail')} <strong> limachess102@gmail.com</strong>
             </li>
