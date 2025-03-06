@@ -17,7 +17,7 @@ const DEFAULT_FEN = 'rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1'; 
 export const AnalysisScreen = () => {
   const { customPieces, bgDark, bgLight } = useCustomBoard();
   const router = useRouter();
-  const { isMobile, isManageRole } = useAppContext();
+  const { isMobile } = useAppContext();
   const boardRef = useRef<HTMLDivElement>(null);
   const t = useTranslations();
   const [engine, setEngine] = useState<Worker | null>(null);
