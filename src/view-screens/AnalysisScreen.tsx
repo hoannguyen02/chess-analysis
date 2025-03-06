@@ -83,11 +83,11 @@ export const AnalysisScreen = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  function findBestMove() {
+  function findBestMove(depthChange?: number) {
     if (!engine) return;
 
     engine.postMessage(`position fen ${chessBoardPosition}`);
-    engine.postMessage(`go depth ${depth}`);
+    engine.postMessage(`go depth ${depthChange || depth}`);
 
     engine.onmessage = (event) => {
       const message = event.data;
@@ -177,6 +177,11 @@ export const AnalysisScreen = () => {
       .catch((err) => console.error('Failed to copy:', err));
   }, []);
 
+  const onDepthChange = (value: number) => {
+    setDepth(value);
+    findBestMove(value);
+  };
+
   return (
     <>
       <div className="flex max-w-[500px] w-full mx-auto mb-4">
@@ -220,7 +225,7 @@ export const AnalysisScreen = () => {
           <div className="flex items-center space-x-2">
             <Dropdown label={`${t('analysis.depth')} ${depth}`} inline>
               {[12, 14, 16, 18, 20, 25, 30].map((d) => (
-                <Dropdown.Item key={d} onClick={() => setDepth(d)}>
+                <Dropdown.Item key={d} onClick={() => onDepthChange(d)}>
                   {d}
                 </Dropdown.Item>
               ))}
