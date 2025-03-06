@@ -10,9 +10,14 @@ import { Chess, Square } from 'chess.js';
 import { Button, Dropdown, Tooltip } from 'flowbite-react';
 import { useTranslations } from 'next-intl';
 import { useRouter } from 'next/router';
-import { useEffect, useMemo, useRef, useState } from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { Chessboard } from 'react-chessboard';
-import { VscChevronLeft, VscLayoutPanel, VscSync } from 'react-icons/vsc';
+import {
+  VscChevronLeft,
+  VscCopy,
+  VscLayoutPanel,
+  VscSync,
+} from 'react-icons/vsc';
 
 const DEFAULT_FEN = 'rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1'; // Default starting position
 
@@ -162,6 +167,16 @@ export const AnalysisScreen = () => {
     setChessBoardPosition(fen);
   };
 
+  const handleCopy = useCallback((text: string) => {
+    navigator.clipboard
+      .writeText(text)
+      .then(() => {
+        console.log('Copied to clipboard:', text);
+        // Optionally, you can show a toast or some visual feedback here
+      })
+      .catch((err) => console.error('Failed to copy:', err));
+  }, []);
+
   return (
     <>
       <div className="flex max-w-[500px] w-full mx-auto mb-4">
@@ -231,6 +246,11 @@ export const AnalysisScreen = () => {
           </p>
 
           <div className="flex space-x-4 mt-6">
+            <Tooltip content={t('common.button.copy-fen')} placement="top">
+              <Button color="gray" onClick={() => handleCopy(game.fen())}>
+                <VscCopy size={20} />
+              </Button>
+            </Tooltip>
             <Tooltip content={t('common.button.flip-board')} placement="top">
               <Button
                 color="gray"
