@@ -4,13 +4,15 @@
 import DebouncedInput from '@/components/DebounceInput';
 import { useAppContext } from '@/contexts/AppContext';
 import { useCustomBoard } from '@/hooks/useCustomBoard';
+import { LowercasePlayerName } from '@/types/player-name';
+import { getActivePlayerFromFEN } from '@/utils/get-player-name-from-fen';
 import { Chess, Square } from 'chess.js';
 import { Button, Dropdown, Tooltip } from 'flowbite-react';
 import { useTranslations } from 'next-intl';
 import { useRouter } from 'next/router';
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { Chessboard } from 'react-chessboard';
-import { VscChevronLeft, VscSync } from 'react-icons/vsc';
+import { VscChevronLeft, VscLayoutPanel, VscSync } from 'react-icons/vsc';
 
 const DEFAULT_FEN = 'rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1'; // Default starting position
 
@@ -24,6 +26,21 @@ export const AnalysisScreen = () => {
   const [inputFen, setInputFen] = useState('');
   const game = useMemo(() => new Chess(inputFen), [inputFen]);
   const [chessBoardPosition, setChessBoardPosition] = useState('');
+
+  const playerName: LowercasePlayerName = useMemo(() => {
+    return inputFen
+      ? 'white'
+      : (getActivePlayerFromFEN(
+          inputFen
+        )?.toLocaleLowerCase() as LowercasePlayerName);
+  }, [inputFen]);
+
+  const [boardOrientation, setBoardOrientation] =
+    useState<LowercasePlayerName>('white');
+
+  useEffect(() => {
+    setBoardOrientation(playerName);
+  }, [playerName]);
 
   const [positionEvaluation, setPositionEvaluation] = useState(0);
   const [depth, setDepth] = useState(18);
@@ -157,6 +174,7 @@ export const AnalysisScreen = () => {
       <div className="grid grid-cols-1 lg:grid-cols-[500px_auto] gap-2 lg:gap-4 mx-auto max-w-[900px]">
         <div ref={boardRef}>
           <Chessboard
+            boardOrientation={boardOrientation}
             boardWidth={isMobile ? boardRef.current?.clientWidth || 320 : 500}
             position={chessBoardPosition}
             onPieceDrop={onDrop}
@@ -213,6 +231,18 @@ export const AnalysisScreen = () => {
           </p>
 
           <div className="flex space-x-4 mt-6">
+            <Tooltip content={t('common.button.flip-board')} placement="top">
+              <Button
+                color="gray"
+                onClick={() => {
+                  setBoardOrientation(
+                    boardOrientation === 'white' ? 'black' : 'white'
+                  );
+                }}
+              >
+                <VscLayoutPanel size={20} />
+              </Button>
+            </Tooltip>
             <Tooltip content={t('common.button.restart')} placement="top">
               <Button color="gray" onClick={onResetBoard}>
                 <VscSync size={20} />

@@ -955,7 +955,7 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({
                       </Button>
                     </Tooltip>
                     <Tooltip
-                      content={t('common.button.analysis')}
+                      content={t('common.navigation.analysis')}
                       placement="top"
                     >
                       <Button

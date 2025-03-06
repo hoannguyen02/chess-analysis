@@ -1,4 +1,5 @@
 import { useCustomBoard } from '@/hooks/useCustomBoard';
+import { LowercasePlayerName } from '@/types/player-name';
 import { Chess } from 'chess.js';
 import { Button, Clipboard, TextInput, Tooltip } from 'flowbite-react';
 import { useTranslations } from 'next-intl';
@@ -22,9 +23,8 @@ const DragDropSetupChessboard = ({
   const t = useTranslations();
   const { customPieces, bgDark, bgLight } = useCustomBoard();
   const game = useMemo(() => new Chess(fen), [fen]); // empty board
-  const [boardOrientation, setBoardOrientation] = useState<'white' | 'black'>(
-    'white'
-  );
+  const [boardOrientation, setBoardOrientation] =
+    useState<LowercasePlayerName>('white');
   const [boardWidth, setBoardWidth] = useState(360);
   const [fenPosition, setFenPosition] = useState(game.fen());
 
@@ -245,7 +245,10 @@ const DragDropSetupChessboard = ({
                 />
               </div>
               <div className="mt-4">
-                <Tooltip content={t('common.button.analysis')} placement="top">
+                <Tooltip
+                  content={t('common.navigation.analysis')}
+                  placement="top"
+                >
                   <Button color="primary" onClick={analysis} className="mr-2">
                     <VscSearchFuzzy size={20} className="ml-1" />
                   </Button>

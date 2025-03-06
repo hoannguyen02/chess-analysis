@@ -326,6 +326,10 @@ export const LessonDetailsScreen = ({ data }: Props) => {
     themes,
   ]);
 
+  const handleLearnOtherLesson = useCallback(() => {
+    router.push('/lessons');
+  }, [router]);
+
   const handleResetLesson = useCallback(async () => {
     setResetting(true);
     if (isLoggedIn) {
@@ -383,7 +387,6 @@ export const LessonDetailsScreen = ({ data }: Props) => {
   );
 
   // Generate dynamic SEO title and description
-
   const lessonSlug = useMemo(() => {
     return router.query.slug;
   }, [router]);
@@ -482,10 +485,12 @@ export const LessonDetailsScreen = ({ data }: Props) => {
                   <p key={`explanation-${index}`}>{e}</p>
                 ))}
               </div>
-              {progress.completedPuzzles.length === totalPuzzles && (
+              {progress.completedPuzzles.length >= totalPuzzles && (
                 <div className="flex flex-col justify-center w-full items-center mt-2">
-                  <h3 className="text-xl font-bold text-center mb-4 flex flex-col lg:flex-row items-center">
+                  <h3 className="text-xl font-bold text-center mb-4 flex ">
                     {t('title.lesson-completion')}{' '}
+                  </h3>
+                  <div className="flex flex-col lg:flex-row items-center mb-4">
                     {!isLoggedIn ? (
                       <>
                         <Link
@@ -494,6 +499,16 @@ export const LessonDetailsScreen = ({ data }: Props) => {
                         >
                           {t('button.register-free')}
                         </Link>
+                        <Button
+                          className="ml-4"
+                          gradientDuoTone="purpleToBlue"
+                          outline
+                          isProcessing={resetting}
+                          size={isMobile ? 'sm' : 'lg'}
+                          onClick={handleLearnOtherLesson}
+                        >
+                          {t('navigation.other-lesson')}
+                        </Button>
                         <Button
                           className="ml-4"
                           gradientDuoTone="purpleToBlue"
@@ -519,6 +534,16 @@ export const LessonDetailsScreen = ({ data }: Props) => {
                         </Button>
                         <Button
                           className="ml-4"
+                          gradientDuoTone="pinkToOrange"
+                          outline
+                          isProcessing={resetting}
+                          size={isMobile ? 'sm' : 'lg'}
+                          onClick={handleLearnOtherLesson}
+                        >
+                          {t('navigation.other-lesson')}
+                        </Button>
+                        <Button
+                          className="ml-4"
                           gradientDuoTone="purpleToBlue"
                           outline
                           isProcessing={resetting}
@@ -529,7 +554,7 @@ export const LessonDetailsScreen = ({ data }: Props) => {
                         </Button>
                       </div>
                     )}
-                  </h3>
+                  </div>
                   {isPublic && (
                     <div className="flex mb-6 justify-center">
                       <ShareFacebookButton url={fullUrl} />

@@ -24,7 +24,10 @@
     "chess-notation": "Cách viết biên bản",
     "facebook": "Tham gia nhóm Facebook",
     "youtube": "Đăng ký kênh YouTube",
-    "join-vip": "Chỉ 199K – Nâng cấp lên VIP ngay! 🚀✨"
+    "join-vip": "Chỉ 199K – Nâng cấp lên VIP ngay! 🚀✨",
+    "setup-board": "Tạo thế cờ",
+    "analysis": "Phân tích",
+    "other-lesson": "Học bài khác"
   },
   "title": {
     "manage": "Quản lý",
@@ -94,7 +97,7 @@
     "restart-lesson": "Học lại từ đầu",
     "skip": "Bỏ qua",
     "restart": "Xoá, làm lại",
-    "analysis": "Phân tích"
+    "flip-board": "Đảo ngược bàn cờ"
   },
   "promotion": {
     "title": "LIMA Chess chào bạn! 🎉",

@@ -322,7 +322,7 @@ export const PuzzleFormScreen = ({ puzzle, onSaveSuccess }: Props) => {
             </div>
             <div className="mt-2">
               <Link
-                href={`/settings/fen-builder?fen=${fen}`}
+                href={`/setup-board?fen=${fen}`}
                 className="inline-flex items-center text-[12px]"
                 target="_blank"
                 rel="noopener noreferrer"

@@ -34,8 +34,9 @@ export const MenuLeft = () => {
         {t('navigation.practice')}
       </Link>
       <Link href="/analysis" className="mb-2 hover:text-[var(--p-highlight)]">
-        {t('button.analysis')}
+        {t('navigation.analysis')}
       </Link>
+
       {isShowRegisterGuide && (
         <Link
           href="/register-guide"

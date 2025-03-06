@@ -24,7 +24,10 @@
     "chess-notation": "Chess Notation",
     "facebook": "Join our Facebook Group",
     "youtube": "Subscribe on YouTube",
-    "join-vip": "Only 199K – Upgrade to VIP now! 🚀✨"
+    "join-vip": "Only 199K – Upgrade to VIP now! 🚀✨",
+    "setup-board": "Setup Board",
+    "analysis": "Analysis",
+    "other-lesson": "Other Lessons"
   },
   "title": {
     "manage": "Manage",
@@ -94,7 +97,7 @@
     "restart-lesson": "Restart Lesson",
     "skip": "Skip",
     "restart": "Restart",
-    "analysis": "Analysis"
+    "flip-board": "Flip Board"
   },
   "promotion": {
     "title": "Welcome to LIMA Chess! 🎉",
