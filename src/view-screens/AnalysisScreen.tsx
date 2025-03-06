@@ -1,28 +1,40 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 'use client';
 
+import DebouncedInput from '@/components/DebounceInput';
 import { useAppContext } from '@/contexts/AppContext';
 import { useCustomBoard } from '@/hooks/useCustomBoard';
 import { Chess, Square } from 'chess.js';
-import { Button, Dropdown, TextInput, Tooltip } from 'flowbite-react';
+import { Button, Dropdown, Tooltip } from 'flowbite-react';
 import { useTranslations } from 'next-intl';
+import { useRouter } from 'next/router';
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { Chessboard } from 'react-chessboard';
 import { VscChevronLeft, VscSync } from 'react-icons/vsc';
 
+const DEFAULT_FEN = 'rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1'; // Default starting position
+
 export const AnalysisScreen = () => {
   const { customPieces, bgDark, bgLight } = useCustomBoard();
+  const router = useRouter();
   const { isMobile, isManageRole } = useAppContext();
   const boardRef = useRef<HTMLDivElement>(null);
   const t = useTranslations();
   const [engine, setEngine] = useState<Worker | null>(null);
-  const game = useMemo(() => new Chess(), []);
-  const inputRef = useRef<HTMLInputElement | null>(null);
-  const [chessBoardPosition, setChessBoardPosition] = useState(game.fen());
+  const [inputFen, setInputFen] = useState('');
+  const game = useMemo(() => new Chess(inputFen), [inputFen]);
+  const [chessBoardPosition, setChessBoardPosition] = useState('');
+
   const [positionEvaluation, setPositionEvaluation] = useState(0);
   const [depth, setDepth] = useState(18);
   const [bestLine, setBestline] = useState('');
   const [possibleMate, setPossibleMate] = useState('');
+
+  useEffect(() => {
+    const fen = (router.query.fen as string) || DEFAULT_FEN;
+    setChessBoardPosition(fen);
+    setInputFen(fen);
+  }, [router]);
 
   useEffect(() => {
     try {
@@ -117,31 +129,31 @@ export const AnalysisScreen = () => {
 
   const bestMove = bestLine?.split(' ')?.[0];
 
-  const handleFenInputChange = (e: any) => {
-    const { valid } = game.validate_fen(e.target.value);
+  const handleFenInputChange = (value: string) => {
+    const { valid } = game.validate_fen(value);
 
     if (valid) {
-      if (inputRef.current) {
-        inputRef.current.value = e.target.value;
-      }
-      game.load(e.target.value);
-      setChessBoardPosition(game.fen());
+      setInputFen(value);
+      game.load(value);
+      setChessBoardPosition(value || game.fen());
     }
+  };
+
+  const onResetBoard = () => {
+    const fen = inputFen || DEFAULT_FEN;
+    game.load(fen);
+    setChessBoardPosition(fen);
   };
 
   return (
     <>
-      {isManageRole && (
-        <div className="flex max-w-[500px] w-full mx-auto mb-4">
-          <TextInput
-            ref={inputRef}
-            onChange={handleFenInputChange}
-            className="w-full"
-            placeholder="Paste FEN to start analysing custom position"
-          />
-        </div>
-      )}
-
+      <div className="flex max-w-[500px] w-full mx-auto mb-4">
+        <DebouncedInput
+          onChange={handleFenInputChange}
+          initialValue={inputFen}
+          placeholder="Paste FEN to start analysing custom position"
+        />
+      </div>
       <div className="grid grid-cols-1 lg:grid-cols-[500px_auto] gap-2 lg:gap-4 mx-auto max-w-[900px]">
         <div ref={boardRef}>
           <Chessboard
@@ -202,13 +214,7 @@ export const AnalysisScreen = () => {
 
           <div className="flex space-x-4 mt-6">
             <Tooltip content={t('common.button.restart')} placement="top">
-              <Button
-                color="gray"
-                onClick={() => {
-                  game.reset();
-                  setChessBoardPosition(game.fen());
-                }}
-              >
+              <Button color="gray" onClick={onResetBoard}>
                 <VscSync size={20} />
               </Button>
             </Tooltip>

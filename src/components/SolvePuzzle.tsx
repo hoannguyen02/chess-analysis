@@ -32,6 +32,7 @@ import {
   VscError,
   VscLightbulbSparkle,
   VscPass,
+  VscSearchFuzzy,
   VscSync,
 } from 'react-icons/vsc';
 import ConfettiEffect from './ConfettiEffect';
@@ -567,6 +568,10 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({
     setIsUserClickedOnAnySquare(false);
   };
 
+  const analysis = useCallback(() => {
+    window.open(`/analysis?fen=${puzzle.fen}`, '_blank');
+  }, [puzzle.fen]);
+
   const showSolution = () => {
     setHintUsed(false);
     setShowRetry(false);
@@ -947,6 +952,18 @@ const SolvePuzzle: React.FC<PuzzleProps> = ({
                         className="mr-2"
                       >
                         <VscSync size={20} className="ml-1" />
+                      </Button>
+                    </Tooltip>
+                    <Tooltip
+                      content={t('common.button.analysis')}
+                      placement="top"
+                    >
+                      <Button
+                        color="primary"
+                        onClick={analysis}
+                        className="mr-2"
+                      >
+                        <VscSearchFuzzy size={20} className="ml-1" />
                       </Button>
                     </Tooltip>
                   </div>

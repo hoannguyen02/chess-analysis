@@ -1,13 +1,15 @@
 import { useCustomBoard } from '@/hooks/useCustomBoard';
 import { Chess } from 'chess.js';
-import { Button, Clipboard, TextInput } from 'flowbite-react';
-import { useMemo, useState } from 'react';
+import { Button, Clipboard, TextInput, Tooltip } from 'flowbite-react';
+import { useTranslations } from 'next-intl';
+import { useCallback, useMemo, useState } from 'react';
 import {
   Chessboard,
   ChessboardDnDProvider,
   SparePiece,
 } from 'react-chessboard';
 import { Piece, Square } from 'react-chessboard/dist/chessboard/types';
+import { VscSearchFuzzy } from 'react-icons/vsc';
 
 type Props = {
   fen?: string;
@@ -17,6 +19,7 @@ const DragDropSetupChessboard = ({
   fen = '8/8/8/8/8/8/8/8 w - - 0 1',
   isGuide = false,
 }: Props) => {
+  const t = useTranslations();
   const { customPieces, bgDark, bgLight } = useCustomBoard();
   const game = useMemo(() => new Chess(fen), [fen]); // empty board
   const [boardOrientation, setBoardOrientation] = useState<'white' | 'black'>(
@@ -100,6 +103,10 @@ const DragDropSetupChessboard = ({
       throw new Error('Failed to set turn. The resulting FEN is invalid.');
     }
   };
+
+  const analysis = useCallback(() => {
+    window.open(`/analysis?fen=${game.fen()}`, '_blank');
+  }, [game]);
 
   return (
     <ChessboardDnDProvider>
@@ -236,6 +243,13 @@ const DragDropSetupChessboard = ({
                   valueToCopy={game.fen()}
                   label="Copy"
                 />
+              </div>
+              <div className="mt-4">
+                <Tooltip content={t('common.button.analysis')} placement="top">
+                  <Button color="primary" onClick={analysis} className="mr-2">
+                    <VscSearchFuzzy size={20} className="ml-1" />
+                  </Button>
+                </Tooltip>
               </div>
             </>
           )}
