@@ -127,6 +127,12 @@ export default function Header() {
             >
               {t('navigation.practice')}
             </Link>
+            <Link
+              href="/analysis"
+              className="ml-4 hover:text-[var(--p-highlight)]"
+            >
+              {t('button.analysis')}
+            </Link>
             {isShowRegisterGuide && (
               <Link
                 href="/register-guide"
