@@ -62,7 +62,7 @@ const PaymentGuidePage = () => {
           <p className="text-sm text-gray-600 mt-2">{t('payment.noted')}</p>
           <ul className="text-sm text-gray-800 mt-2">
             <li>
-              {t('payment.phone')} <strong> 0912333224</strong>
+              {t('payment.phone')} <strong> 0963908507</strong>
             </li>
             <li>
               {t('payment.gmail')} <strong> limachess102@gmail.com</strong>
