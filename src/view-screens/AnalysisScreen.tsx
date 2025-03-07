@@ -36,7 +36,7 @@ export const AnalysisScreen = () => {
   const game = useMemo(() => new Chess(queryFen), [queryFen]);
 
   const playerName: LowercasePlayerName = useMemo(() => {
-    return queryFen
+    return !queryFen
       ? 'white'
       : (getActivePlayerFromFEN(
           queryFen
