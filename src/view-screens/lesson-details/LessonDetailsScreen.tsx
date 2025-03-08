@@ -446,7 +446,6 @@ export const LessonDetailsScreen = ({ data }: Props) => {
             completedPuzzleMap={completedPuzzleMap}
             strokeDashoffset={strokeDashoffset}
             onItemClick={handleOnItemClick}
-            description={description?.[locale] || ''}
           />
         </aside>
 
@@ -602,7 +601,6 @@ export const LessonDetailsScreen = ({ data }: Props) => {
             completedProgress={completedProgress}
             completedPuzzleMap={completedPuzzleMap}
             strokeDashoffset={strokeDashoffset}
-            description={description?.[locale] || ''}
             onItemClick={handleOnItemClick}
           />
         </MenuLessonDrawer>
