@@ -52,7 +52,6 @@ export const SolvePracticePuzzleScreen = () => {
     setIsVisible(false);
     setIsManualLoading(true);
     if (nextPuzzleId === puzzle?._id) {
-      console.log('Same puzzle ID detected, resetting manually...');
       setTimeout(() => {
         setIsManualLoading(false); // Manually reset loading state after delay
         setIsVisible(true);
@@ -117,24 +116,26 @@ export const SolvePracticePuzzleScreen = () => {
     >
       {puzzle || !isEmpty(error) ? (
         <div className="flex flex-col">
-          <button
-            className="mb-4 flex items-center"
-            onClick={() => {
-              router.push('/practice');
-            }}
-          >
-            <VscArrowLeft /> {t('common.button.back')}
-          </button>
-          {isManageRole && (
-            <Link
-              href={`/settings/puzzles/${puzzle._id}`}
-              rel="noopener noreferrer"
-              target="_blank"
-              className="hover:text-[var(--s-bg)] underline mb-4"
+          <div className="w-max flex flex-col items-center justify-start">
+            <button
+              className="mb-4 flex"
+              onClick={() => {
+                router.push('/practice');
+              }}
             >
-              Update Puzzle (Sửa câu đố)
-            </Link>
-          )}
+              <VscArrowLeft /> {t('common.button.back')}
+            </button>
+            {isManageRole && (
+              <Link
+                href={`/settings/puzzles/${puzzle._id}`}
+                rel="noopener noreferrer"
+                target="_blank"
+                className="hover:text-[var(--s-bg)] underline mb-4"
+              >
+                Update Puzzle (Sửa câu đố)
+              </Link>
+            )}
+          </div>
           <SolvePuzzle
             key={renderKey}
             onSolved={handleSolvePuzzle}

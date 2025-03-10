@@ -2,7 +2,6 @@ import { MenuLessonDrawer } from '@/components/MenuLessonDrawer';
 import { TransitionContainer } from '@/components/TransitionContainer';
 import { useAppContext } from '@/contexts/AppContext';
 import { Lesson } from '@/types/lesson';
-import { LocaleType } from '@/types/locale';
 import { fetcher } from '@/utils/fetcher';
 import { filteredQuery } from '@/utils/filteredQuery';
 import { getDifficultyColor } from '@/utils/getDifficultyColor';
@@ -15,39 +14,25 @@ import { VscLayoutMenubar } from 'react-icons/vsc';
 import useSWR from 'swr';
 import { LessonFilters } from './LessonFilters';
 
-type Props = {
-  initialLessons: Lesson[];
-  locale: LocaleType;
-  currentPage: number;
-  totalPages: number;
-  total: number;
-};
-export const LessonsScreen = ({
-  initialLessons,
-  locale,
-  totalPages,
-  total,
-  currentPage,
-}: Props) => {
+export const LessonsScreen = () => {
   const [isOpenDrawer, setIsOpenDrawer] = useState(false);
   const drawerRef = useRef<HTMLDivElement>(null);
   const t = useTranslations();
   const router = useRouter();
-  const { apiDomain, isLoggedIn } = useAppContext();
+  const { apiDomain, isLoggedIn, locale } = useAppContext();
 
-  const { difficulties, search, tags } = router.query;
+  const { difficulties, search, tags, page } = router.query;
 
   const queryString = useMemo(() => {
     const queryObject: Record<string, any> = {
       difficulties,
       search,
-      locale,
       tags,
-      page: currentPage,
+      page,
     };
 
     return filteredQuery(queryObject);
-  }, [difficulties, search, locale, tags, currentPage]);
+  }, [difficulties, search, tags, page]);
 
   const queryKey = useMemo(
     () => `${apiDomain}/v1/lessons/public?${queryString}`,
@@ -55,8 +40,6 @@ export const LessonsScreen = ({
   );
 
   const { data } = useSWR(queryKey, fetcher, {
-    fallbackData: { items: initialLessons, totalPages },
-    revalidateOnMount: false,
     revalidateOnFocus: false,
   });
 
@@ -106,17 +89,6 @@ export const LessonsScreen = ({
   const [isLoading, setIsLoading] = useState(false);
   const [displayedLessons, setDisplayedLessons] = useState<Lesson[]>([]);
   const [isVisible, setIsVisible] = useState(false); // For fade-in transition
-  // Initial
-  useEffect(() => {
-    setIsVisible(false);
-    setIsLoading(true);
-
-    setTimeout(() => {
-      setDisplayedLessons(initialLessons);
-      setIsLoading(false);
-      setIsVisible(true);
-    }, 300);
-  }, [initialLessons]);
 
   // When data items change
   useEffect(() => {
@@ -124,11 +96,11 @@ export const LessonsScreen = ({
     setIsLoading(true);
 
     setTimeout(() => {
-      setDisplayedLessons(data.items);
+      setDisplayedLessons(data?.items || []);
       setIsLoading(false);
       setIsVisible(true);
     }, 300);
-  }, [data.items]);
+  }, [data]);
   // End Display puzzle
 
   return (
@@ -193,11 +165,11 @@ export const LessonsScreen = ({
                 </p>
               </div>
             )}
-            {total > 10 && (
+            {data?.total > 10 && (
               <div className="flex justify-center mt-6">
                 <Pagination
-                  currentPage={currentPage}
-                  totalPages={totalPages}
+                  currentPage={data.currentPage}
+                  totalPages={data.lastPage}
                   onPageChange={onPageChange}
                   previousLabel={t('common.button.previous')}
                   nextLabel={t('common.button.next')}
