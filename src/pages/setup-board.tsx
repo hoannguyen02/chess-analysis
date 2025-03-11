@@ -12,11 +12,11 @@ import { ParsedUrlQuery } from 'querystring';
 
 const SetupBoardPage = () => {
   return (
-    <SubscriptionWrap>
-      <Layout>
+    <Layout>
+      <SubscriptionWrap>
         <FenBuilderScreen />
-      </Layout>
-    </SubscriptionWrap>
+      </SubscriptionWrap>
+    </Layout>
   );
 };
 

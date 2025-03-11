@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 export const MenuLeft = () => {
   const t = useTranslations('common');
-  const { isAdminRole, isManageRole, isShowRegisterGuide, isShowSetupBoard } =
+  const { isAdminRole, isManageRole, isShowRegisterGuide, isVipMember } =
     useAppContext();
 
   return (
@@ -37,7 +37,7 @@ export const MenuLeft = () => {
       <Link href="/analysis" className="mb-2 hover:text-[var(--p-highlight)]">
         {t('navigation.analysis')}
       </Link>
-      {isShowSetupBoard && (
+      {isVipMember && (
         <Link
           href="/setup-board"
           className="mb-2 hover:text-[var(--p-highlight)]"
