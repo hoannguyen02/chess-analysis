@@ -13,6 +13,21 @@ import {
 import { Piece, Square } from 'react-chessboard/dist/chessboard/types';
 import { VscSearchFuzzy } from 'react-icons/vsc';
 
+const pieces = [
+  'wP',
+  'wN',
+  'wB',
+  'wR',
+  'wQ',
+  'wK',
+  'bP',
+  'bN',
+  'bB',
+  'bR',
+  'bQ',
+  'bK',
+];
+
 type Props = {
   fen?: string;
   isGuide?: boolean;
@@ -81,20 +96,7 @@ const DragDropSetupChessboard = ({
       setFenPosition(game.fen());
     }
   };
-  const pieces = [
-    'wP',
-    'wN',
-    'wB',
-    'wR',
-    'wQ',
-    'wK',
-    'bP',
-    'bN',
-    'bB',
-    'bR',
-    'bQ',
-    'bK',
-  ];
+
   const setTurn = (turn: 'w' | 'b') => {
     let fen = game.fen();
     fen = fen.replace(/ [wb] /, ` ${turn} `);
@@ -111,6 +113,21 @@ const DragDropSetupChessboard = ({
     window.open(`/analysis?fen=${game.fen()}`, '_blank');
   }, [game]);
 
+  const onFlipBoard = useCallback(() => {
+    setBoardOrientation(boardOrientation === 'white' ? 'black' : 'white');
+  }, [boardOrientation]);
+
+  const whitePieces = useMemo(() => pieces.slice(0, 6), []);
+  const blackPieces = useMemo(() => pieces.slice(6, 12), []);
+  const topPieces = useMemo(
+    () => (boardOrientation === 'white' ? blackPieces : whitePieces),
+    [blackPieces, boardOrientation, whitePieces]
+  );
+  const bottomPieces = useMemo(
+    () => (boardOrientation === 'white' ? whitePieces : blackPieces),
+    [blackPieces, boardOrientation, whitePieces]
+  );
+
   return (
     <ChessboardDnDProvider>
       <div className="grid grid-cols-1 md:grid-cols-[400px_auto] lg:grid-cols-[500px_auto] gap-2 lg:gap-8 mx-auto max-w-[900px]">
@@ -121,7 +138,7 @@ const DragDropSetupChessboard = ({
               margin: `${boardWidth / 32}px ${boardWidth / 8}px`,
             }}
           >
-            {pieces.slice(6, 12).map((piece) => (
+            {topPieces.map((piece) => (
               <SparePiece
                 key={piece}
                 piece={piece as Piece}
@@ -158,7 +175,7 @@ const DragDropSetupChessboard = ({
               margin: `${boardWidth / 32}px ${boardWidth / 8}px`,
             }}
           >
-            {pieces.slice(0, 6).map((piece) => (
+            {bottomPieces.map((piece) => (
               <SparePiece
                 key={piece}
                 piece={piece as Piece}
@@ -193,11 +210,7 @@ const DragDropSetupChessboard = ({
               {t('setup-board.clear-board')}
             </Button>
             <Button
-              onClick={() => {
-                setBoardOrientation(
-                  boardOrientation === 'white' ? 'black' : 'white'
-                );
-              }}
+              onClick={onFlipBoard}
               outline
               gradientDuoTone="purpleToBlue"
             >
