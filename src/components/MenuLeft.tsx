@@ -4,7 +4,8 @@ import Link from 'next/link';
 
 export const MenuLeft = () => {
   const t = useTranslations('common');
-  const { isAdminRole, isManageRole, isShowRegisterGuide } = useAppContext();
+  const { isAdminRole, isManageRole, isShowRegisterGuide, isShowSetupBoard } =
+    useAppContext();
 
   return (
     <nav
@@ -36,6 +37,14 @@ export const MenuLeft = () => {
       <Link href="/analysis" className="mb-2 hover:text-[var(--p-highlight)]">
         {t('navigation.analysis')}
       </Link>
+      {isShowSetupBoard && (
+        <Link
+          href="/setup-board"
+          className="mb-2 hover:text-[var(--p-highlight)]"
+        >
+          {t('navigation.setup-board')}
+        </Link>
+      )}
 
       {isShowRegisterGuide && (
         <Link
@@ -55,18 +64,18 @@ export const MenuLeft = () => {
           <ul className="pl-4">
             <li className="mb-2">
               <Link
-                href="/settings/lessons"
-                className="mb-6 hover:text-[var(--p-highlight)]"
-              >
-                {t('navigation.lessons')}
-              </Link>
-            </li>
-            <li className="mb-2">
-              <Link
                 href="/settings/puzzles"
                 className="mb-6 hover:text-[var(--p-highlight)]"
               >
                 {t('navigation.puzzles')}
+              </Link>
+            </li>
+            <li className="mb-2">
+              <Link
+                href="/settings/lessons"
+                className="mb-6 hover:text-[var(--p-highlight)]"
+              >
+                {t('navigation.lessons')}
               </Link>
             </li>
             <li className="mb-2">

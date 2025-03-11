@@ -1,9 +1,10 @@
+import { useAppContext } from '@/contexts/AppContext';
 import { useCustomBoard } from '@/hooks/useCustomBoard';
 import { LowercasePlayerName } from '@/types/player-name';
 import { Chess } from 'chess.js';
 import { Button, Clipboard, TextInput, Tooltip } from 'flowbite-react';
 import { useTranslations } from 'next-intl';
-import { useCallback, useMemo, useState } from 'react';
+import { useCallback, useMemo, useRef, useState } from 'react';
 import {
   Chessboard,
   ChessboardDnDProvider,
@@ -20,6 +21,7 @@ const DragDropSetupChessboard = ({
   fen = '8/8/8/8/8/8/8/8 w - - 0 1',
   isGuide = false,
 }: Props) => {
+  const { isMobile } = useAppContext();
   const t = useTranslations();
   const { customPieces, bgDark, bgLight } = useCustomBoard();
   const game = useMemo(() => new Chess(fen), [fen]); // empty board
@@ -27,6 +29,7 @@ const DragDropSetupChessboard = ({
     useState<LowercasePlayerName>('white');
   const [boardWidth, setBoardWidth] = useState(360);
   const [fenPosition, setFenPosition] = useState(game.fen());
+  const boardRef = useRef<HTMLDivElement>(null);
 
   const handleSparePieceDrop = (piece: any, targetSquare: any) => {
     const color = piece[0];
@@ -110,8 +113,8 @@ const DragDropSetupChessboard = ({
 
   return (
     <ChessboardDnDProvider>
-      <div className="grid grid-cols-2 w-full gap-4">
-        <div className="w-[500px]">
+      <div className="grid grid-cols-1 md:grid-cols-[400px_auto] lg:grid-cols-[500px_auto] gap-2 lg:gap-8 mx-auto max-w-[900px]">
+        <div ref={boardRef}>
           <div
             style={{
               display: 'flex',
@@ -129,6 +132,7 @@ const DragDropSetupChessboard = ({
           </div>
           <Chessboard
             onBoardWidthChange={setBoardWidth}
+            boardWidth={isMobile ? boardRef.current?.clientWidth || 320 : 500}
             id="ManualBoardEditor"
             boardOrientation={boardOrientation}
             position={game.fen()}
@@ -172,8 +176,10 @@ const DragDropSetupChessboard = ({
                 setFenPosition(game.fen());
               }}
               className="mb-4"
+              outline
+              gradientDuoTone="cyanToBlue"
             >
-              Start position
+              {t('setup-board.start-position')}
             </Button>
             <Button
               onClick={() => {
@@ -181,8 +187,10 @@ const DragDropSetupChessboard = ({
                 setFenPosition(game.fen());
               }}
               className="mb-4"
+              outline
+              gradientDuoTone="pinkToOrange"
             >
-              Clear board
+              {t('setup-board.clear-board')}
             </Button>
             <Button
               onClick={() => {
@@ -190,15 +198,17 @@ const DragDropSetupChessboard = ({
                   boardOrientation === 'white' ? 'black' : 'white'
                 );
               }}
+              outline
+              gradientDuoTone="purpleToBlue"
             >
-              Flip board
+              {t('setup-board.flip-board')}
             </Button>
           </div>
           {!isGuide && (
             <>
-              <div className="flex flex-col items-start mt-4">
+              <div className="flex flex-col items-center mt-4">
                 <label className="mb-2 font-semibold text-gray-700">
-                  Select the next player to move:
+                  {t('setup-board.next-player-to-move')}
                 </label>
                 <div className="flex items-center">
                   <Button
@@ -211,7 +221,7 @@ const DragDropSetupChessboard = ({
                       setTurn('w');
                     }}
                   >
-                    White
+                    {t('common.title.white')}
                   </Button>
                   <Button
                     className={`flex items-center px-4 py-2 ml-2 rounded-lg transition-all duration-200 ${
@@ -223,36 +233,39 @@ const DragDropSetupChessboard = ({
                       setTurn('b');
                     }}
                   >
-                    Black
+                    {t('common.title.black')}
                   </Button>
                 </div>
-                <p className="text-sm text-gray-500 mt-2">
-                  Tip: Click on White or Black to set the next player to move.
-                </p>
               </div>
 
-              <div className="flex items-center mt-4">
+              <div className="flex flex-col items-center mt-4">
                 <TextInput
                   className="w-[400px] rounded"
                   value={fenPosition}
                   onChange={handleFenInputChange}
                   placeholder="Paste FEN position to start editing"
                 />
-                <Clipboard
-                  className="ml-4"
-                  valueToCopy={game.fen()}
-                  label="Copy"
-                />
-              </div>
-              <div className="mt-4">
-                <Tooltip
-                  content={t('common.navigation.analysis')}
-                  placement="top"
-                >
-                  <Button color="primary" onClick={analysis} className="mr-2">
-                    <VscSearchFuzzy size={20} className="ml-1" />
-                  </Button>
-                </Tooltip>
+                <div className="flex items-center mt-4">
+                  <Clipboard
+                    valueToCopy={game.fen()}
+                    label={t('common.button.copy-fen')}
+                    className="py-[10px] px-2"
+                    theme={{
+                      button: {
+                        base: 'bg-light',
+                        label: 'text-black',
+                      },
+                    }}
+                  />
+                  <Tooltip
+                    content={t('common.navigation.analysis')}
+                    placement="top"
+                  >
+                    <Button color="primary" onClick={analysis} className="ml-4">
+                      <VscSearchFuzzy size={20} className="ml-2" />
+                    </Button>
+                  </Tooltip>
+                </div>
               </div>
             </>
           )}

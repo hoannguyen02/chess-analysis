@@ -54,6 +54,7 @@
     "solved": "Solved",
     "failed": "failed",
     "un_authorized": "You need to log in to access this content.",
+    "vip_required": "You need to be a VIP member to access this content.",
     "practice-puzzles": "Practice puzzles",
     "practice-progress": "Progress",
     "select-all": "All tactics",

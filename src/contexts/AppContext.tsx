@@ -41,6 +41,7 @@ export interface AppContextProps {
   isManageRole?: boolean; // Teacher or Admin
   isAdminRole?: boolean;
   isShowRegisterGuide?: boolean;
+  isShowSetupBoard?: boolean;
 }
 
 const AppContext = createContext<AppContextProps | undefined>(undefined);
@@ -178,6 +179,9 @@ export const AppProvider: React.FC<{
       isShowRegisterGuide: isLoading
         ? false
         : isSubscriptionExpired && isLoggedIn,
+      isShowSetupBoard: isLoading
+        ? false
+        : isLoggedIn && !isSubscriptionExpired,
       isValidating,
       isSubscriptionExpired,
       isLoggedIn,

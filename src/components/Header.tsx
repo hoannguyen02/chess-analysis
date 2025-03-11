@@ -28,6 +28,7 @@ export default function Header() {
     isAdminRole,
     isManageRole,
     isShowRegisterGuide,
+    isShowSetupBoard,
   } = useAppContext();
   const { addToast } = useToast();
   const currentPath = useMemo(() => {
@@ -133,6 +134,14 @@ export default function Header() {
             >
               {t('navigation.analysis')}
             </Link>
+            {isShowSetupBoard && (
+              <Link
+                href="/setup-board"
+                className="ml-4 hover:text-[var(--p-highlight)]"
+              >
+                {t('navigation.setup-board')}
+              </Link>
+            )}
             {isShowRegisterGuide && (
               <Link
                 href="/register-guide"

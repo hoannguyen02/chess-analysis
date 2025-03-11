@@ -6,7 +6,7 @@ import { useEffect, useMemo, useState } from 'react';
 import { LimaBenefits } from './LimaBenefits';
 
 export default function PromoModal() {
-  const { isSubscriptionExpired, isLoggedIn } = useAppContext();
+  const { isSubscriptionExpired, isLoggedIn, isLoadingUser } = useAppContext();
   const [openModal, setOpenModal] = useState(false);
   const t = useTranslations('common');
   const router = useRouter();
@@ -30,6 +30,10 @@ export default function PromoModal() {
   const message = useMemo(() => {
     return isLoggedIn ? t('promotion.message') : t('promotion.guest-message');
   }, [isLoggedIn, t]);
+
+  if (isLoadingUser) {
+    return null;
+  }
 
   return (
     <Modal show={openModal} size="md" onClose={() => setOpenModal(false)}>
