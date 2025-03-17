@@ -4,8 +4,7 @@ import Link from 'next/link';
 
 export const MenuLeft = () => {
   const t = useTranslations('common');
-  const { isAdminRole, isManageRole, isShowRegisterGuide, isVipMember } =
-    useAppContext();
+  const { isAdminRole, isManageRole, isLoggedIn } = useAppContext();
 
   return (
     <nav
@@ -34,28 +33,40 @@ export const MenuLeft = () => {
       <Link href="/practice" className="mb-2 hover:text-[var(--p-highlight)]">
         {t('navigation.practice')}
       </Link>
-      <Link href="/analysis" className="mb-2 hover:text-[var(--p-highlight)]">
-        {t('navigation.analysis')}
+
+      <Link
+        href="https://www.facebook.com/limachess102"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="mb-2 hover:text-[var(--p-highlight)]"
+      >
+        {t('navigation.facebook')}
       </Link>
-      {isVipMember && (
-        <Link
-          href="/setup-board"
-          className="mb-2 hover:text-[var(--p-highlight)]"
-        >
-          {t('navigation.setup-board')}
-        </Link>
+      <Link
+        href="https://www.youtube.com/@LIMAChess"
+        rel="noopener noreferrer"
+        target="_blank"
+        className="mb-2 hover:text-[var(--p-highlight)]"
+      >
+        {t('navigation.youtube')}
+      </Link>
+      {isLoggedIn && (
+        <>
+          <Link
+            href="/analysis"
+            className="mb-2 hover:text-[var(--p-highlight)]"
+          >
+            {t('navigation.analysis')}
+          </Link>
+          <Link
+            href="/setup-board"
+            className="mb-2 hover:text-[var(--p-highlight)]"
+          >
+            {t('navigation.setup-board')}
+          </Link>
+        </>
       )}
 
-      {isShowRegisterGuide && (
-        <Link
-          href="/register-guide"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="mb-2 hover:text-[var(--p-highlight)]"
-        >
-          {t('navigation.join-vip')}
-        </Link>
-      )}
       {isManageRole && (
         <>
           <hr className="mb-4" />

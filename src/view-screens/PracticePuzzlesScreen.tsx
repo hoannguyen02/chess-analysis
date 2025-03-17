@@ -28,14 +28,8 @@ export const PracticePuzzlesScreen = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [, setSolveIsLoadingNextPuzzle] = useState(false);
   const t = useTranslations();
-  const {
-    session,
-    getFilteredThemes,
-    apiDomain,
-    isLoggedIn,
-    isSubscriptionExpired,
-    isManageRole,
-  } = useAppContext();
+  const { session, getFilteredThemes, apiDomain, isLoggedIn, isManageRole } =
+    useAppContext();
   const [selectedThemes, setSelectedThemes] = useState<string[]>([]);
   const [includeSolved, setIncludeSolved] = useState(false);
   const [sortAsc, setSortAsc] = useState(true);
@@ -87,7 +81,7 @@ export const PracticePuzzlesScreen = () => {
   };
 
   const handlePractice = async () => {
-    if (!isLoggedIn || isSubscriptionExpired) {
+    if (!isLoggedIn) {
       onOpenDialog();
       return;
     }

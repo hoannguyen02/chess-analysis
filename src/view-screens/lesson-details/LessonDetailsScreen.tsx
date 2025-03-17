@@ -4,7 +4,6 @@ import SolvePuzzle from '@/components/SolvePuzzle';
 import { TransitionContainer } from '@/components/TransitionContainer';
 import { useAppContext } from '@/contexts/AppContext';
 import { useToast } from '@/contexts/ToastContext';
-import useDialog from '@/hooks/useDialog';
 import { LessonExpanded } from '@/types/lesson';
 import { Puzzle } from '@/types/puzzle';
 import axiosInstance from '@/utils/axiosInstance';
@@ -19,11 +18,6 @@ import { VscLayoutMenubar } from 'react-icons/vsc';
 import { MenuLesson } from './MenuLesson';
 import { useLessonProgress } from './useLessonProgress';
 
-const RegisterDialog = dynamic(() =>
-  import('@/components/RegisterDialog').then(
-    (components) => components.RegisterDialog
-  )
-);
 const MenuLessonDrawer = dynamic(() =>
   import('../../components/MenuLessonDrawer').then(
     (components) => components.MenuLessonDrawer
@@ -48,7 +42,6 @@ export const LessonDetailsScreen = ({ data }: Props) => {
     apiDomain,
     session,
     locale,
-    isSubscriptionExpired,
   } = useAppContext();
   const { excludedThemeIds } = getFilteredThemes();
   const [isOpenDrawer, setIsOpenDrawer] = useState(false);
@@ -278,12 +271,7 @@ export const LessonDetailsScreen = ({ data }: Props) => {
     setExplanations(explanations);
   };
 
-  const { open, onOpenDialog, onCloseDialog } = useDialog();
   const handlePracticeNow = useCallback(async () => {
-    if (isSubscriptionExpired) {
-      onOpenDialog();
-      return;
-    }
     setIsLoadingPractice(true);
     try {
       if (themes?.length) {
@@ -316,15 +304,7 @@ export const LessonDetailsScreen = ({ data }: Props) => {
     } finally {
       setIsLoadingPractice(false);
     }
-  }, [
-    apiDomain,
-    excludedThemeIds,
-    isSubscriptionExpired,
-    onOpenDialog,
-    router,
-    session?.id,
-    themes,
-  ]);
+  }, [apiDomain, excludedThemeIds, router, session?.id, themes]);
 
   const handleLearnOtherLesson = useCallback(() => {
     router.push('/lessons');
@@ -605,7 +585,6 @@ export const LessonDetailsScreen = ({ data }: Props) => {
           />
         </MenuLessonDrawer>
       )}
-      {open && <RegisterDialog onClose={onCloseDialog} />}
     </>
   );
 };

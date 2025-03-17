@@ -6,13 +6,13 @@ import { useEffect, useMemo, useState } from 'react';
 import { LimaBenefits } from './LimaBenefits';
 
 export default function PromoModal() {
-  const { isSubscriptionExpired, isLoggedIn, isLoadingUser } = useAppContext();
+  const { isLoggedIn, isLoadingUser } = useAppContext();
   const [openModal, setOpenModal] = useState(false);
   const t = useTranslations('common');
   const router = useRouter();
 
   useEffect(() => {
-    if (isSubscriptionExpired || !isLoggedIn) {
+    if (!isLoggedIn) {
       const hasSeenModal = sessionStorage.getItem('promo_modal_shown');
 
       // Prevent showing the modal if the user navigated recently
@@ -25,7 +25,7 @@ export default function PromoModal() {
         return () => clearTimeout(timeout);
       }
     }
-  }, [isLoggedIn, isSubscriptionExpired]);
+  }, [isLoggedIn]);
 
   const message = useMemo(() => {
     return isLoggedIn ? t('promotion.message') : t('promotion.guest-message');

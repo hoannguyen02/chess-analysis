@@ -5,7 +5,6 @@ import { PuzzleTheme } from '@/types/puzzle-theme';
 import { Session } from '@/types/session';
 import { Tag } from '@/types/tag';
 import { User } from '@/types/user';
-import { checkIsSubscriptionExpired } from '@/utils/checkIsSubscriptionExpired';
 import { fetcher } from '@/utils/fetcher';
 import isEmpty from 'lodash/isEmpty';
 import React, {
@@ -30,7 +29,6 @@ export interface AppContextProps {
   isLoggedIn?: boolean;
   isLoadingUser?: boolean;
   mutateUser: KeyedMutator<any>;
-  isSubscriptionExpired?: boolean;
   isLoadingBookMark?: boolean;
   mutateBookmark: KeyedMutator<any>;
   bookmarks: Bookmark[] | [];
@@ -40,8 +38,6 @@ export interface AppContextProps {
   };
   isManageRole?: boolean; // Teacher or Admin
   isAdminRole?: boolean;
-  isShowRegisterGuide?: boolean;
-  isVipMember?: boolean;
 }
 
 const AppContext = createContext<AppContextProps | undefined>(undefined);
@@ -92,12 +88,6 @@ export const AppProvider: React.FC<{
   useEffect(() => {
     mutateUser();
   }, [locale, mutateUser]);
-
-  const isSubscriptionExpired = useMemo(() => {
-    return !user?.subscriptionEnd
-      ? true
-      : checkIsSubscriptionExpired(user.subscriptionEnd);
-  }, [user]);
 
   useEffect(() => {
     const handleResize = () => {
@@ -176,12 +166,7 @@ export const AppProvider: React.FC<{
       session,
       user,
       isLoadingUser: isLoading,
-      isShowRegisterGuide: isLoading
-        ? false
-        : isSubscriptionExpired && isLoggedIn,
-      isVipMember: !isSubscriptionExpired && isLoggedIn,
       isValidating,
-      isSubscriptionExpired,
       isLoggedIn,
       mutateUser,
       mutateBookmark,
@@ -201,7 +186,6 @@ export const AppProvider: React.FC<{
       session,
       user,
       isLoading,
-      isSubscriptionExpired,
       isLoggedIn,
       isValidating,
       mutateUser,

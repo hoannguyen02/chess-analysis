@@ -25,7 +25,7 @@ export const Footer = () => {
           ▶️ {t('navigation.youtube')}
         </a>
         <a
-          href="https://www.youtube.com/@LIMAChess"
+          href="/board-and-pieces"
           target="_blank"
           rel="noopener noreferrer"
           className="hover:text-red-600 flex items-center gap-2"

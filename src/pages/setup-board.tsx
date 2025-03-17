@@ -1,5 +1,5 @@
+import { AuthenticatedWrap } from '@/components/AuthenticatedWrap';
 import Layout from '@/components/Layout';
-import { SubscriptionWrap } from '@/components/SubscriptionWrap';
 import { DefaultLocale } from '@/constants';
 import { withThemes } from '@/HOF/withThemes';
 import { FenBuilderScreen } from '@/setting-screens/FenBuilder';
@@ -13,9 +13,9 @@ import { ParsedUrlQuery } from 'querystring';
 const SetupBoardPage = () => {
   return (
     <Layout>
-      <SubscriptionWrap>
+      <AuthenticatedWrap>
         <FenBuilderScreen />
-      </SubscriptionWrap>
+      </AuthenticatedWrap>
     </Layout>
   );
 };

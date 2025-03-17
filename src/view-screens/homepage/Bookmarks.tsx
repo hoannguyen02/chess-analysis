@@ -20,8 +20,7 @@ const SolvePuzzleDrawer = dynamic(() =>
 
 export const Bookmarks = () => {
   const t = useTranslations();
-  const { getFilteredThemes, isSubscriptionExpired, bookmarks, isManageRole } =
-    useAppContext();
+  const { getFilteredThemes, bookmarks, isManageRole } = useAppContext();
 
   const [currentPage, setCurrentPage] = useState(1);
   const [themes, setThemes] = useState<string[]>([]);
@@ -107,7 +106,6 @@ export const Bookmarks = () => {
               className="w-[70%]"
               size="sm"
               outline
-              disabled={isSubscriptionExpired}
               isProcessing={loadingPuzzle?.[index] || false}
               onClick={() => handleOpenPuzzle(item._id!, index)}
             >

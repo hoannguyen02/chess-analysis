@@ -27,8 +27,7 @@ export default function Header() {
     isMobile,
     isAdminRole,
     isManageRole,
-    isShowRegisterGuide,
-    isVipMember,
+    isLoggedIn,
   } = useAppContext();
   const { addToast } = useToast();
   const currentPath = useMemo(() => {
@@ -129,28 +128,32 @@ export default function Header() {
               {t('navigation.practice')}
             </Link>
             <Link
-              href="/analysis"
+              href="https://www.facebook.com/limachess102"
+              target="_blank"
+              rel="noopener noreferrer"
               className="ml-4 hover:text-[var(--p-highlight)]"
             >
-              {t('navigation.analysis')}
+              {t('navigation.facebook')}
             </Link>
-            {isVipMember && (
-              <Link
-                href="/setup-board"
-                className="ml-4 hover:text-[var(--p-highlight)]"
-              >
-                {t('navigation.setup-board')}
-              </Link>
-            )}
-            {isShowRegisterGuide && (
-              <Link
-                href="/register-guide"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="ml-4 hover:text-[var(--p-highlight)]"
-              >
-                {t('navigation.join-vip')}
-              </Link>
+            <Link
+              href="https://www.youtube.com/@LIMAChess"
+              rel="noopener noreferrer"
+              target="_blank"
+              className="ml-4 hover:text-[var(--p-highlight)]"
+            >
+              {t('navigation.youtube')}
+            </Link>
+            {isLoggedIn && (
+              <div className="ml-4">
+                <Dropdown label={t('title.tools')} inline>
+                  <Dropdown.Item as={Link} href="/analysis">
+                    {t('navigation.analysis')}
+                  </Dropdown.Item>
+                  <Dropdown.Item as={Link} href="/setup-board">
+                    {t('navigation.setup-board')}
+                  </Dropdown.Item>
+                </Dropdown>
+              </div>
             )}
           </div>
           {/* Manage route */}
