@@ -1,4 +1,3 @@
-import { AuthenticatedWrap } from '@/components/AuthenticatedWrap';
 import Layout from '@/components/Layout';
 import { DefaultLocale } from '@/constants';
 import { withThemes } from '@/HOF/withThemes';
@@ -13,9 +12,7 @@ import { ParsedUrlQuery } from 'querystring';
 const SetupBoardPage = () => {
   return (
     <Layout>
-      <AuthenticatedWrap>
-        <FenBuilderScreen />
-      </AuthenticatedWrap>
+      <FenBuilderScreen />
     </Layout>
   );
 };

@@ -1,4 +1,3 @@
-import { AuthenticatedWrap } from '@/components/AuthenticatedWrap';
 import Layout from '@/components/Layout';
 import { withThemes } from '@/HOF/withThemes';
 import { AnalysisScreen } from '@/view-screens/AnalysisScreen';
@@ -6,9 +5,7 @@ import { AnalysisScreen } from '@/view-screens/AnalysisScreen';
 const GuidePage = () => {
   return (
     <Layout>
-      <AuthenticatedWrap>
-        <AnalysisScreen />
-      </AuthenticatedWrap>
+      <AnalysisScreen />
     </Layout>
   );
 };

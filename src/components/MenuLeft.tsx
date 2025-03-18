@@ -50,22 +50,15 @@ export const MenuLeft = () => {
       >
         {t('navigation.youtube')}
       </Link>
-      {isLoggedIn && (
-        <>
-          <Link
-            href="/analysis"
-            className="mb-2 hover:text-[var(--p-highlight)]"
-          >
-            {t('navigation.analysis')}
-          </Link>
-          <Link
-            href="/setup-board"
-            className="mb-2 hover:text-[var(--p-highlight)]"
-          >
-            {t('navigation.setup-board')}
-          </Link>
-        </>
-      )}
+      <Link href="/analysis" className="mb-2 hover:text-[var(--p-highlight)]">
+        {t('navigation.analysis')}
+      </Link>
+      <Link
+        href="/setup-board"
+        className="mb-2 hover:text-[var(--p-highlight)]"
+      >
+        {t('navigation.setup-board')}
+      </Link>
 
       {isManageRole && (
         <>

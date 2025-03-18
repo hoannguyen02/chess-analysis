@@ -143,18 +143,16 @@ export default function Header() {
             >
               {t('navigation.youtube')}
             </Link>
-            {isLoggedIn && (
-              <div className="ml-4">
-                <Dropdown label={t('title.tools')} inline>
-                  <Dropdown.Item as={Link} href="/analysis">
-                    {t('navigation.analysis')}
-                  </Dropdown.Item>
-                  <Dropdown.Item as={Link} href="/setup-board">
-                    {t('navigation.setup-board')}
-                  </Dropdown.Item>
-                </Dropdown>
-              </div>
-            )}
+            <div className="ml-4">
+              <Dropdown label={t('title.tools')} inline>
+                <Dropdown.Item as={Link} href="/analysis">
+                  {t('navigation.analysis')}
+                </Dropdown.Item>
+                <Dropdown.Item as={Link} href="/setup-board">
+                  {t('navigation.setup-board')}
+                </Dropdown.Item>
+              </Dropdown>
+            </div>
           </div>
           {/* Manage route */}
           {isManageRole && (

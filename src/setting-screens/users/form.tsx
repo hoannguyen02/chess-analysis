@@ -16,6 +16,7 @@ import { useForm } from 'react-hook-form';
 type CreateUserFormValues = {
   username: string;
   role: string;
+  password?: string;
   subscriptionStart?: string | null;
   subscriptionEnd?: string | null;
   _id?: string;
@@ -56,8 +57,14 @@ export const CreateUserForm = ({ roles, user }: Props) => {
   });
 
   const onSubmit = async (values: CreateUserFormValues) => {
-    const { username, role, subscriptionEnd, subscriptionStart, status } =
-      values;
+    const {
+      username,
+      role,
+      subscriptionEnd,
+      subscriptionStart,
+      status,
+      password,
+    } = values;
     setIsSubmitting(true);
     const result = await handleSubmission(
       async () => {
@@ -71,6 +78,7 @@ export const CreateUserForm = ({ roles, user }: Props) => {
           const diff = getDiffBetweenTwoObjects(
             {
               username,
+              password,
               role,
               subscriptionStart,
               subscriptionEnd,
@@ -85,10 +93,10 @@ export const CreateUserForm = ({ roles, user }: Props) => {
             }
           );
 
-          return await axiosInstance.put(
-            `${apiDomain}/v1/users/${user._id}`,
-            diff.newValue
-          );
+          return await axiosInstance.put(`${apiDomain}/v1/users/${user._id}`, {
+            ...diff.newValue,
+            ...(password && { password }),
+          });
         } else {
           return await axiosInstance.post(`${apiDomain}/v1/users`, {
             username,
@@ -141,6 +149,16 @@ export const CreateUserForm = ({ roles, user }: Props) => {
         </Select>
       </div>
 
+      <div className="mb-4">
+        <Label htmlFor="password" value="Password" />
+        <TextInput
+          id="password"
+          type="text"
+          placeholder="Set value if wanna reset password for user"
+          {...register('password')}
+          color={errors.password ? 'failure' : undefined}
+        />
+      </div>
       <div className="mb-4">
         <Label
           htmlFor="subscriptionStart"
