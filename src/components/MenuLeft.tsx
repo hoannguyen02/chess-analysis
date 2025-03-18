@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 export const MenuLeft = () => {
   const t = useTranslations('common');
-  const { isAdminRole, isManageRole, isLoggedIn } = useAppContext();
+  const { isAdminRole, isManageRole } = useAppContext();
 
   return (
     <nav

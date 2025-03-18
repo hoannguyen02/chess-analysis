@@ -20,15 +20,8 @@ export default function Header() {
   const [isOpenDrawer, setIsOpenDrawer] = useState(false);
   const t = useTranslations('common');
   const router = useRouter();
-  const {
-    session,
-    apiDomain,
-    locale,
-    isMobile,
-    isAdminRole,
-    isManageRole,
-    isLoggedIn,
-  } = useAppContext();
+  const { session, apiDomain, locale, isMobile, isAdminRole, isManageRole } =
+    useAppContext();
   const { addToast } = useToast();
   const currentPath = useMemo(() => {
     return router.asPath;
