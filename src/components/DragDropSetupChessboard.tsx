@@ -2,7 +2,13 @@ import { useAppContext } from '@/contexts/AppContext';
 import { useCustomBoard } from '@/hooks/useCustomBoard';
 import { LowercasePlayerName } from '@/types/player-name';
 import { Chess } from 'chess.js';
-import { Button, Clipboard, TextInput, Tooltip } from 'flowbite-react';
+import {
+  Button,
+  Checkbox,
+  Clipboard,
+  TextInput,
+  Tooltip,
+} from 'flowbite-react';
 import { useTranslations } from 'next-intl';
 import { useCallback, useMemo, useRef, useState } from 'react';
 import {
@@ -36,6 +42,13 @@ const DragDropSetupChessboard = ({
   fen = '8/8/8/8/8/8/8/8 w - - 0 1',
   isGuide = false,
 }: Props) => {
+  const [castlingRights, setCastlingRights] = useState({
+    K: false, // White Kingside
+    Q: false, // White Queenside
+    k: false, // Black Kingside
+    q: false, // Black Queenside
+  });
+
   const { isMobile } = useAppContext();
   const t = useTranslations();
   const { customPieces, bgDark, bgLight } = useCustomBoard();
@@ -43,7 +56,7 @@ const DragDropSetupChessboard = ({
   const [boardOrientation, setBoardOrientation] =
     useState<LowercasePlayerName>('white');
   const [boardWidth, setBoardWidth] = useState(360);
-  const [fenPosition, setFenPosition] = useState(game.fen());
+  const [fenPosition, setFenPosition] = useState(fen);
   const boardRef = useRef<HTMLDivElement>(null);
 
   const handleSparePieceDrop = (piece: any, targetSquare: any) => {
@@ -117,6 +130,31 @@ const DragDropSetupChessboard = ({
     setBoardOrientation(boardOrientation === 'white' ? 'black' : 'white');
   }, [boardOrientation]);
 
+  const handleCastlingChange = (side: 'K' | 'Q' | 'k' | 'q') => {
+    setCastlingRights((prev) => {
+      const updatedRights = { ...prev, [side]: !prev[side] };
+
+      // Construct new castling rights string dynamically
+      const newCastlingRights =
+        (updatedRights.K ? 'K' : '') +
+        (updatedRights.Q ? 'Q' : '') +
+        (updatedRights.k ? 'k' : '') +
+        (updatedRights.q ? 'q' : '');
+
+      // Modify the FEN
+      const fenParts = fenPosition.split(' ');
+      fenParts[2] = newCastlingRights || '-'; // If no castling rights, use '-'
+      const newFen = fenParts.join(' ');
+
+      // Load into chess.js and update FEN
+      if (game.load(newFen)) {
+        setFenPosition(newFen);
+      }
+
+      return updatedRights;
+    });
+  };
+
   const whitePieces = useMemo(() => pieces.slice(0, 6), []);
   const blackPieces = useMemo(() => pieces.slice(6, 12), []);
   const topPieces = useMemo(
@@ -152,7 +190,7 @@ const DragDropSetupChessboard = ({
             boardWidth={isMobile ? boardRef.current?.clientWidth || 320 : 500}
             id="ManualBoardEditor"
             boardOrientation={boardOrientation}
-            position={game.fen()}
+            position={fenPosition}
             onSparePieceDrop={handleSparePieceDrop}
             onPieceDrop={handlePieceDrop}
             onPieceDropOffBoard={handlePieceDropOffBoard}
@@ -219,6 +257,43 @@ const DragDropSetupChessboard = ({
           </div>
           {!isGuide && (
             <>
+              <div className="flex flex-col items-center justify-center">
+                <div className="flex flex-col gap-2">
+                  <label className="font-semibold text-gray-700">
+                    White Castling:
+                  </label>
+                  <div className="flex items-center gap-2">
+                    <Checkbox
+                      checked={castlingRights.K}
+                      onChange={() => handleCastlingChange('K')}
+                    />
+                    <label>Kingside (O-O)</label>
+                    <Checkbox
+                      checked={castlingRights.Q}
+                      onChange={() => handleCastlingChange('Q')}
+                    />
+                    <label>Queenside (O-O-O)</label>
+                  </div>
+                </div>
+
+                <div className="flex flex-col gap-2 mt-2">
+                  <label className="font-semibold text-gray-700">
+                    Black Castling:
+                  </label>
+                  <div className="flex items-center gap-2">
+                    <Checkbox
+                      checked={castlingRights.k}
+                      onChange={() => handleCastlingChange('k')}
+                    />
+                    <label>Kingside (O-O)</label>
+                    <Checkbox
+                      checked={castlingRights.q}
+                      onChange={() => handleCastlingChange('q')}
+                    />
+                    <label>Queenside (O-O-O)</label>
+                  </div>
+                </div>
+              </div>
               <div className="flex flex-col items-center mt-4">
                 <label className="mb-2 font-semibold text-gray-700">
                   {t('setup-board.next-player-to-move')}
