@@ -2,5 +2,9 @@
   "start-position": "Vị trí ban đầu",
   "clear-board": "Xóa bàn cờ",
   "flip-board": "Lật (xoay) bàn cờ",
-  "next-player-to-move": "Chọn người chơi tiếp theo"
+  "next-player-to-move": "Chọn người chơi tiếp theo",
+  "white-castling": "Nhập thành Quân Trắng:",
+  "black-castling": "Nhập thành Quân Đen:",
+  "king-side": "Cánh Vua",
+  "queen-side": "Cánh Hậu"
 }

@@ -2,5 +2,9 @@
   "start-position": "Start Position ",
   "clear-board": "Clear Board",
   "flip-board": "Flip Board",
-  "next-player-to-move": "Select next player to move"
+  "next-player-to-move": "Select next player to move",
+  "white-castling": "White Castling:",
+  "black-castling": "Black Castling:",
+  "king-side": "Kingside",
+  "queen-side": "Queenside"
 }

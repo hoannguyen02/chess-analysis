@@ -260,37 +260,45 @@ const DragDropSetupChessboard = ({
               <div className="flex flex-col items-center justify-center">
                 <div className="flex flex-col gap-2">
                   <label className="font-semibold text-gray-700">
-                    White Castling:
+                    {t('setup-board.white-castling')}
                   </label>
                   <div className="flex items-center gap-2">
                     <Checkbox
                       checked={castlingRights.K}
                       onChange={() => handleCastlingChange('K')}
                     />
-                    <label>Kingside (O-O)</label>
+                    <label className="text-xs">
+                      {t('setup-board.king-side')} (O-O)
+                    </label>
                     <Checkbox
                       checked={castlingRights.Q}
                       onChange={() => handleCastlingChange('Q')}
                     />
-                    <label>Queenside (O-O-O)</label>
+                    <label className="text-xs">
+                      {t('setup-board.queen-side')} (O-O-O)
+                    </label>
                   </div>
                 </div>
 
                 <div className="flex flex-col gap-2 mt-2">
                   <label className="font-semibold text-gray-700">
-                    Black Castling:
+                    {t('setup-board.black-castling')}
                   </label>
                   <div className="flex items-center gap-2">
                     <Checkbox
                       checked={castlingRights.k}
                       onChange={() => handleCastlingChange('k')}
                     />
-                    <label>Kingside (O-O)</label>
+                    <label className="text-xs">
+                      {t('setup-board.king-side')} (O-O)
+                    </label>
                     <Checkbox
                       checked={castlingRights.q}
                       onChange={() => handleCastlingChange('q')}
                     />
-                    <label>Queenside (O-O-O)</label>
+                    <label className="text-xs">
+                      {t('setup-board.queen-side')} (O-O-O)
+                    </label>
                   </div>
                 </div>
               </div>
