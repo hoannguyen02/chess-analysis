@@ -100,7 +100,8 @@
     "restart-lesson": "Học lại từ đầu",
     "skip": "Bỏ qua",
     "restart": "Xoá, làm lại",
-    "flip-board": "Đảo ngược bàn cờ"
+    "flip-board": "Đảo ngược bàn cờ",
+    "pgn-file": "Pgn file"
   },
   "promotion": {
     "title": "LIMA Chess chào bạn! 🎉",

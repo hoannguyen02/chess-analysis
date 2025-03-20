@@ -100,7 +100,8 @@
     "restart-lesson": "Restart Lesson",
     "skip": "Skip",
     "restart": "Restart",
-    "flip-board": "Flip Board"
+    "flip-board": "Flip Board",
+    "pgn-file": "Pgn file"
   },
   "promotion": {
     "title": "Welcome to LIMA Chess! 🎉",

@@ -14,6 +14,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { Chessboard } from 'react-chessboard';
 import {
   VscChevronLeft,
+  VscCloudDownload,
   VscCopy,
   VscLayoutPanel,
   VscSync,
@@ -24,7 +25,7 @@ const DEFAULT_FEN = 'rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1'; 
 export const AnalysisScreen = () => {
   const { customPieces, bgDark, bgLight } = useCustomBoard();
   const router = useRouter();
-  const { isMobile } = useAppContext();
+  const { isMobile, isAdminRole } = useAppContext();
   const boardRef = useRef<HTMLDivElement>(null);
   const t = useTranslations();
   const [engine, setEngine] = useState<Worker | null>(null);
@@ -165,6 +166,28 @@ export const AnalysisScreen = () => {
     setCurrentFen(queryFen);
   };
 
+  const onDownloadPgn = () => {
+    const pgn = game.pgn(); // Get PGN from the game instance
+
+    if (!pgn) {
+      console.error('No PGN data available');
+      return;
+    }
+
+    const blob = new Blob([pgn], { type: 'text/plain' });
+    const url = URL.createObjectURL(blob);
+
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'chess_game.pgn';
+    document.body.appendChild(a);
+    a.click();
+
+    // Cleanup
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+  };
+
   const handleCopy = useCallback((text: string) => {
     navigator.clipboard
       .writeText(text)
@@ -274,6 +297,12 @@ export const AnalysisScreen = () => {
             <Tooltip content={t('common.button.restart')} placement="top">
               <Button color="gray" onClick={onResetBoard}>
                 <VscSync size={20} />
+              </Button>
+            </Tooltip>
+
+            <Tooltip content={t('common.button.pgn-file')} placement="top">
+              <Button color="gray" onClick={onDownloadPgn}>
+                <VscCloudDownload size={20} />
               </Button>
             </Tooltip>
 
