@@ -179,7 +179,7 @@ export const AnalysisScreen = () => {
 
     const a = document.createElement('a');
     a.href = url;
-    a.download = 'chess_game.pgn';
+    a.download = 'puzzle.pgn';
     document.body.appendChild(a);
     a.click();
 
