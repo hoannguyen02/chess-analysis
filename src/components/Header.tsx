@@ -121,14 +121,6 @@ export default function Header() {
               {t('navigation.practice')}
             </Link>
             <Link
-              href="https://www.facebook.com/limachess102"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="ml-4 hover:text-[var(--p-highlight)]"
-            >
-              {t('navigation.facebook')}
-            </Link>
-            <Link
               href="https://www.youtube.com/@LIMAChess"
               rel="noopener noreferrer"
               target="_blank"

@@ -33,15 +33,6 @@ export const MenuLeft = () => {
       <Link href="/practice" className="mb-2 hover:text-[var(--p-highlight)]">
         {t('navigation.practice')}
       </Link>
-
-      <Link
-        href="https://www.facebook.com/limachess102"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="mb-2 hover:text-[var(--p-highlight)]"
-      >
-        {t('navigation.facebook')}
-      </Link>
       <Link
         href="https://www.youtube.com/@LIMAChess"
         rel="noopener noreferrer"
