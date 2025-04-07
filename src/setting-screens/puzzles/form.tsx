@@ -30,7 +30,7 @@ import {
   useFieldArray,
   useForm,
 } from 'react-hook-form';
-import { VscEdit } from 'react-icons/vsc';
+import { VscEdit, VscSearchFuzzy } from 'react-icons/vsc';
 import Select, { SingleValue } from 'react-select';
 import useSWR from 'swr';
 import { AddToLessonsModal } from './AddToLessonsModal';
@@ -320,7 +320,7 @@ export const PuzzleFormScreen = ({ puzzle, onSaveSuccess }: Props) => {
                 <p className="text-red-500 text-sm">{errors.fen.message}</p>
               )}
             </div>
-            <div className="mt-2">
+            <div className="mt-2 flex justify-between">
               <Link
                 href={`/setup-board?fen=${fen}`}
                 className="inline-flex items-center text-[12px]"
@@ -328,6 +328,14 @@ export const PuzzleFormScreen = ({ puzzle, onSaveSuccess }: Props) => {
                 rel="noopener noreferrer"
               >
                 Update FEN: <VscEdit className="ml-2" />
+              </Link>
+              <Link
+                href={`/analysis?fen=${fen}`}
+                className="inline-flex items-center text-[12px]"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Analyze/Analysis: <VscSearchFuzzy size={20} className="ml-2" />
               </Link>
             </div>
           </div>
