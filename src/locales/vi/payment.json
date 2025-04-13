@@ -1,0 +1,13 @@
+{
+  "description": "Chuyển khoản đến thông tin ngân hàng sau:",
+  "bank-name": "Ngân hàng: ",
+  "account-name": "Tên tài khoản:",
+  "account-number": "Số tài khoản: ",
+  "payment-description": "Nội dung chuyển khoản:",
+  "payment-description-note": " [Email/Facebook của bạn] - LIMAChess",
+  "copy": "Sao chép",
+  "phone": "☏ Điện thoại / Zalo:",
+  "gmail": "📩 Email: ",
+  "facebook": "💬 Facebook: ",
+  "facebook-button": "Nhấn vào đây để gửi qua messenger"
+}

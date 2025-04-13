@@ -1,0 +1,12 @@
+{
+  "bank-name": "Bank Name: ",
+  "account-name": "Account Name:",
+  "account-number": "Account Number: ",
+  "payment-description": "Description: ",
+  "payment-description-note": "[Your email/facebook] - LIMAChess",
+  "copy": "Copy",
+  "phone": "Phone:",
+  "gmail": "Gmail: ",
+  "facebook": "Facebook: ",
+  "facebook-button": "Click here to send on Messenger"
+}
