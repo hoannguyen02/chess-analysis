@@ -5,7 +5,7 @@ const nextConfig: NextConfig = {
   reactStrictMode: true,
   i18n: {
     locales: ['en', 'vi'], // Supported locales
-    defaultLocale: 'vi', // Default locale
+    defaultLocale: 'en', // Default locale
     localeDetection: false,
   },
   async headers() {
@@ -22,14 +22,6 @@ const nextConfig: NextConfig = {
             value: 'require-corp',
           },
         ],
-      },
-    ];
-  },
-  async rewrites() {
-    return [
-      {
-        source: '/sitemap.xml',
-        destination: '/api/sitemap',
       },
     ];
   },
