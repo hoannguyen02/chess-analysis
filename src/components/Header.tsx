@@ -1,13 +1,10 @@
 import { useAppContext } from '@/contexts/AppContext';
-import { useToast } from '@/contexts/ToastContext';
 import { LocaleType } from '@/types/locale';
-import axiosInstance from '@/utils/axiosInstance';
-import { handleSubmission } from '@/utils/handleSubmission';
 import { Drawer, Dropdown } from 'flowbite-react';
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { useCallback, useEffect, useMemo, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { VscMenu, VscMortarBoard } from 'react-icons/vsc';
 import { MenuLeft } from './MenuLeft';
 
@@ -20,29 +17,11 @@ export default function Header() {
   const [isOpenDrawer, setIsOpenDrawer] = useState(false);
   const t = useTranslations('common');
   const router = useRouter();
-  const { session, apiDomain, locale, isMobile, isAdminRole, isManageRole } =
-    useAppContext();
-  const { addToast } = useToast();
-  const currentPath = useMemo(() => {
-    return router.asPath;
-  }, [router]);
+  const { locale, isMobile } = useAppContext();
 
   const switchLanguage = (lang: string) => {
     router.replace(router.asPath, undefined, { locale: lang }); // Faster language switch
   };
-
-  const handleLogout = useCallback(async () => {
-    const result = await handleSubmission(
-      async () => {
-        return await axiosInstance.post(`${apiDomain}/v1/auth/logout`);
-      },
-      addToast,
-      t('title.logout-success')
-    );
-    if (result !== undefined) {
-      router.push('/');
-    }
-  }, [addToast, apiDomain, router, t]);
 
   const [isSticky, setIsSticky] = useState(false);
 
@@ -109,85 +88,28 @@ export default function Header() {
           </Link>
           <div className="ml-8 hidden lg:flex">
             <Link
-              href="/lessons"
+              href="/setup-board"
               className="ml-4 hover:text-[var(--p-highlight)]"
             >
-              {t('navigation.learn')}
+              {t('navigation.setup-board')}
             </Link>
             <Link
-              href="/practice"
+              href="/analysis"
               className="ml-4 hover:text-[var(--p-highlight)]"
             >
-              {t('navigation.practice')}
+              {t('navigation.analysis')}
             </Link>
             <Link
-              href="https://www.youtube.com/@LIMAChess"
+              href="https://www.youtube.com/@LIMAChess?sub_confirmation=1"
               rel="noopener noreferrer"
               target="_blank"
               className="ml-4 hover:text-[var(--p-highlight)]"
             >
               {t('navigation.youtube')}
             </Link>
-            <div className="ml-4">
-              <Dropdown label={t('title.tools')} inline>
-                <Dropdown.Item as={Link} href="/analysis">
-                  {t('navigation.analysis')}
-                </Dropdown.Item>
-                <Dropdown.Item as={Link} href="/setup-board">
-                  {t('navigation.setup-board')}
-                </Dropdown.Item>
-              </Dropdown>
-            </div>
           </div>
-          {/* Manage route */}
-          {isManageRole && (
-            <div className="hidden lg:flex ml-4">
-              <Dropdown label={t('title.manage')} inline>
-                <Dropdown.Item as={Link} href="/settings/puzzles">
-                  {t('navigation.puzzles')}
-                </Dropdown.Item>
-                <Dropdown.Item as={Link} href="/settings/lessons">
-                  {t('navigation.lessons')}
-                </Dropdown.Item>
-                <Dropdown.Item as={Link} href="/settings/puzzle-themes">
-                  {t('navigation.puzzle-themes')}
-                </Dropdown.Item>
-                {isAdminRole && (
-                  <Dropdown.Item as={Link} href="/settings/users">
-                    {t('navigation.users')}
-                  </Dropdown.Item>
-                )}
-              </Dropdown>
-            </div>
-          )}
         </div>
         <div className="flex items-center ">
-          {/* Center: Search Bar */}
-          {/* <div className="w-[300px] relative hidden lg:flex">
-            <input
-              type="text"
-              value={search}
-              onChange={(e) => setSearch(e.target.value)}
-              placeholder="Search"
-              className="w-full px-4 py-2 rounded-lg text-black placeholder-gray-500"
-            />
-            <VscSearch
-              className="absolute right-3 top-2.5 text-gray-500"
-              size={20}
-            />
-          </div> */}
-          {/* Search mobile icon */}
-          {/* <svg
-            className="cursor-pointer lg:hidden mr-4"
-            xmlns="http://www.w3.org/2000/svg"
-            width="16"
-            height="16"
-            fill="currentColor"
-            viewBox="0 0 16 16"
-          >
-            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
-          </svg> */}
-
           {/* Right Side: Icons & Profile */}
           <div className="flex items-center ml-2">
             <Dropdown label={LANG_MAP[locale]} inline>
@@ -198,41 +120,6 @@ export default function Header() {
                 ENG
               </Dropdown.Item>
             </Dropdown>
-          </div>
-          <div className="flex items-center mx-2">
-            {session?.id ? (
-              <Dropdown label={t('title.profile')} inline>
-                <Dropdown.Item onClick={() => router.push('/change-password')}>
-                  {t('navigation.change-password')}
-                </Dropdown.Item>
-                <Dropdown.Item onClick={handleLogout}>
-                  {t('navigation.logout')}
-                </Dropdown.Item>
-              </Dropdown>
-            ) : (
-              <>
-                <Link
-                  href={
-                    currentPath !== '/'
-                      ? `/login?redirect=${encodeURIComponent(currentPath)}`
-                      : '/login'
-                  }
-                  className="hover:text-[var(--p-highlight)] text-center border border-gray-500 rounded-md py-1 px-2"
-                >
-                  {t('navigation.login')}
-                </Link>
-                <Link
-                  href={
-                    currentPath !== '/'
-                      ? `/register?redirect=${encodeURIComponent(currentPath)}`
-                      : '/register'
-                  }
-                  className="ml-2 hover:text-[var(--p-highlight)] text-center border rounded-md py-1 px-2"
-                >
-                  {t('navigation.register')}
-                </Link>
-              </>
-            )}
           </div>
         </div>
       </nav>

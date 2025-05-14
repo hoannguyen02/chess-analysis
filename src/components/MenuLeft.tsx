@@ -34,7 +34,7 @@ export const MenuLeft = () => {
         {t('navigation.practice')}
       </Link>
       <Link
-        href="https://www.youtube.com/@LIMAChess"
+        href="https://www.youtube.com/@LIMAChess?sub_confirmation=1"
         rel="noopener noreferrer"
         target="_blank"
         className="mb-2 hover:text-[var(--p-highlight)]"

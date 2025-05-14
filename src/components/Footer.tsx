@@ -1,5 +1,4 @@
 import { useTranslations } from 'next-intl';
-import Link from 'next/link';
 
 export const Footer = () => {
   const t = useTranslations('common');
@@ -17,25 +16,16 @@ export const Footer = () => {
           📘 {t('navigation.facebook')}
         </a>
         <a
-          href="https://www.youtube.com/@LIMAChess"
+          href="https://www.youtube.com/@LIMAChess?sub_confirmation=1"
           target="_blank"
           rel="noopener noreferrer"
           className="hover:text-red-600 flex items-center gap-2"
         >
           ▶️ {t('navigation.youtube')}
         </a>
-        <a
-          href="/board-and-pieces"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="hover:text-red-600 flex items-center gap-2"
-        >
-          ♟ {t('navigation.board-pieces')}
-        </a>
       </div>
 
-      {/* Navigation Links */}
-      <div className="grid grid-cols-2 md:grid-cols-4 text-center gap-4 max-w-4xl mx-auto">
+      {/* <div className="grid grid-cols-2 md:grid-cols-4 text-center gap-4 max-w-4xl mx-auto">
         <Link href="/privacy-policy" className="hover:text-gray-900">
           {t('navigation.privacy')}
         </Link>
@@ -48,7 +38,7 @@ export const Footer = () => {
         <Link href="/about" className="hover:text-gray-900">
           {t('navigation.about')}
         </Link>
-      </div>
+      </div> */}
 
       {/* Copyright */}
       <p className="text-center text-xs mt-6">

@@ -1,7 +1,7 @@
 import Layout from '@/components/Layout';
 import { DefaultLocale } from '@/constants';
 import { withThemes } from '@/HOF/withThemes';
-import { FenBuilderScreen } from '@/setting-screens/FenBuilder';
+import { FenBuilderScreen } from '@/view-screens/FenBuilder';
 import {
   GetServerSideProps,
   GetServerSidePropsContext,
