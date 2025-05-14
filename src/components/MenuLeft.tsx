@@ -1,10 +1,8 @@
-import { useAppContext } from '@/contexts/AppContext';
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 
 export const MenuLeft = () => {
   const t = useTranslations('common');
-  const { isAdminRole, isManageRole } = useAppContext();
 
   return (
     <nav
@@ -27,12 +25,6 @@ export const MenuLeft = () => {
           </svg>
         </Link>
       </div>
-      <Link href="/lessons" className="mb-2 hover:text-[var(--p-highlight)]">
-        {t('navigation.learn')}
-      </Link>
-      <Link href="/practice" className="mb-2 hover:text-[var(--p-highlight)]">
-        {t('navigation.practice')}
-      </Link>
       <Link
         href="https://www.youtube.com/@LIMAChess?sub_confirmation=1"
         rel="noopener noreferrer"
@@ -50,50 +42,6 @@ export const MenuLeft = () => {
       >
         {t('navigation.setup-board')}
       </Link>
-
-      {isManageRole && (
-        <>
-          <hr className="mb-4" />
-          {/*  Role: Teacher, Admin */}
-          {t('title.manage')}
-          <ul className="pl-4">
-            <li className="mb-2">
-              <Link
-                href="/settings/puzzles"
-                className="mb-6 hover:text-[var(--p-highlight)]"
-              >
-                {t('navigation.puzzles')}
-              </Link>
-            </li>
-            <li className="mb-2">
-              <Link
-                href="/settings/lessons"
-                className="mb-6 hover:text-[var(--p-highlight)]"
-              >
-                {t('navigation.lessons')}
-              </Link>
-            </li>
-            <li className="mb-2">
-              <Link
-                href="/settings/puzzle-themes"
-                className="mb-6 hover:text-[var(--p-highlight)]"
-              >
-                {t('navigation.puzzle-themes')}
-              </Link>
-            </li>
-            {isAdminRole && (
-              <li className="mb-2">
-                <Link
-                  href="/settings/users"
-                  className="mb-6 hover:text-[var(--p-highlight)]"
-                >
-                  {t('navigation.users')}
-                </Link>
-              </li>
-            )}
-          </ul>
-        </>
-      )}
     </nav>
   );
 };

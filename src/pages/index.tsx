@@ -5,7 +5,11 @@ import { GetServerSidePropsContext } from 'next';
 
 export default function Home() {
   return (
-    <Layout>Unleashing Chess Brilliance — Welcome to LIMA Analysis</Layout>
+    <Layout>
+      <div className="text-center">
+        Unleashing Chess Brilliance — Welcome to LIMA Analysis
+      </div>
+    </Layout>
   );
 }
 export const getServerSideProps = withThemes(
