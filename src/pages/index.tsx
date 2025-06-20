@@ -1,4 +1,5 @@
 // pages/index.tsx
+import { EvaluateMoves } from '@/components/EvaluateMoves';
 import Layout from '@/components/Layout';
 import { withThemes } from '@/HOF/withThemes';
 import { GetServerSidePropsContext } from 'next';
@@ -9,6 +10,7 @@ export default function Home() {
   return (
     <Layout>
       <div className="text-center">{t('common.title.heading')}</div>
+      <EvaluateMoves />
     </Layout>
   );
 }

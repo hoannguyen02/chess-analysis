@@ -358,7 +358,7 @@ const DragDropSetupChessboard = ({
                     placement="top"
                   >
                     <Button color="primary" onClick={analysis} className="ml-4">
-                      <VscSearchFuzzy size={20} className="ml-2" />
+                      <VscSearchFuzzy size={20} />
                     </Button>
                   </Tooltip>
                 </div>
