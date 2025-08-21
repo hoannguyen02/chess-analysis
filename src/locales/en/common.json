@@ -12,7 +12,7 @@
   },
   "button": {
     "copy-link": "Copy Link",
-    "copy-fen": "Copy Fen",
+    "copy-fen": "Copy fen/position",
     "close": "Close",
     "flip-board": "Flip Board",
     "pgn-file": "Pgn file",

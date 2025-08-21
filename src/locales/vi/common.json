@@ -12,7 +12,7 @@
   },
   "button": {
     "copy-link": "Sao chép link",
-    "copy-fen": "Sao chép Fen",
+    "copy-fen": "Sao chép Fen/vị trí",
     "restart": "Xoá, làm lại",
     "flip-board": "Đảo ngược bàn cờ",
     "pgn-file": "Pgn file"

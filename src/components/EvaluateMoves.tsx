@@ -6,7 +6,8 @@ import { useCustomBoard } from '@/hooks/useCustomBoard';
 import { LowercasePlayerName } from '@/types/player-name';
 import { getActivePlayerFromFEN } from '@/utils/get-player-name-from-fen';
 import { Chess, Move } from 'chess.js';
-import { Button, Textarea, ToggleSwitch } from 'flowbite-react';
+import { Button, Textarea, ToggleSwitch, Tooltip } from 'flowbite-react';
+import { useTranslations } from 'next-intl';
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { Chessboard } from 'react-chessboard';
 import {
@@ -14,6 +15,7 @@ import {
   VscArrowCircleRight,
   VscChevronLeft,
   VscChevronRight,
+  VscCopy,
   VscLayoutPanel,
   VscSearchFuzzy,
 } from 'react-icons/vsc';
@@ -35,6 +37,7 @@ export const EvaluateMoves = () => {
   const [currentMoveIndex, setCurrentMoveIndex] = useState<number>(0);
   const [pgnText, setPgnText] = useState<string>(DEFAULT_PGN);
   const [showPGNBox, setShowPGNBox] = useState<boolean>(true);
+  const t = useTranslations();
 
   const gameRef = useRef(new Chess());
 
@@ -118,6 +121,16 @@ export const EvaluateMoves = () => {
     window.open(`/analysis?fen=${gameRef.current.fen()}`, '_blank');
   }, [gameRef]);
 
+  const handleCopy = useCallback((text: string) => {
+    navigator.clipboard
+      .writeText(text)
+      .then(() => {
+        console.log('Copied to clipboard:', text);
+        // Optionally, you can show a toast or some visual feedback here
+      })
+      .catch((err) => console.error('Failed to copy:', err));
+  }, []);
+
   return (
     <div className="max-w-[900px] mx-auto p-4">
       <div className="grid grid-cols-1 lg:grid-cols-[500px_auto] gap-4">
@@ -168,16 +181,27 @@ export const EvaluateMoves = () => {
             />
           )}
           <div className="absolute bottom-4 left-0 w-full flex justify-center">
-            <Button
-              color="gray"
-              onClick={() => {
-                setBoardOrientation(
-                  boardOrientation === 'white' ? 'black' : 'white'
-                );
-              }}
-            >
-              <VscLayoutPanel size={20} />
-            </Button>
+            <Tooltip content={t('common.button.copy-fen')} placement="top">
+              <Button
+                color="gray"
+                onClick={() => handleCopy(gameRef.current.fen())}
+              >
+                <VscCopy size={20} />
+              </Button>
+            </Tooltip>
+            <Tooltip content={t('common.button.flip-board')} placement="top">
+              <Button
+                className="ml-4"
+                color="gray"
+                onClick={() => {
+                  setBoardOrientation(
+                    boardOrientation === 'white' ? 'black' : 'white'
+                  );
+                }}
+              >
+                <VscLayoutPanel size={20} />
+              </Button>
+            </Tooltip>
             <Button color="primary" onClick={analysis} className="ml-4">
               <VscSearchFuzzy size={20} />
             </Button>
