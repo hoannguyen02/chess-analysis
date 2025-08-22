@@ -10,16 +10,23 @@ const nextConfig: NextConfig = {
   },
   async headers() {
     return [
+      // Page-wide isolation (if you need SAB / threads)
       {
-        source: '/:path*',
+        source: '/(.*)',
         headers: [
+          { key: 'Cross-Origin-Opener-Policy', value: 'same-origin' },
+          { key: 'Cross-Origin-Embedder-Policy', value: 'require-corp' },
+        ],
+      },
+      // Worker script must ALSO carry COEP
+      {
+        source: '/stockfish/:path*',
+        headers: [
+          { key: 'Cross-Origin-Embedder-Policy', value: 'require-corp' },
+          { key: 'Cross-Origin-Resource-Policy', value: 'same-origin' }, // allow same-origin embedding
           {
-            key: 'Cross-Origin-Opener-Policy',
-            value: 'same-origin',
-          },
-          {
-            key: 'Cross-Origin-Embedder-Policy',
-            value: 'require-corp',
+            key: 'Access-Control-Allow-Origin',
+            value: 'https://www.limachess.com',
           },
         ],
       },
