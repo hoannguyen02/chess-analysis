@@ -59,7 +59,9 @@ export const AnalysisScreen = () => {
   useEffect(() => {
     try {
       console.log('Initializing Stockfish...');
-      const stockfish = new Worker('/stockfish/stockfish-17-lite.js');
+      // Use absolute URL for the worker
+      const workerUrl = `${window.location.origin}/stockfish/stockfish-17-lite.js`;
+      const stockfish = new Worker(workerUrl);
 
       stockfish.onmessage = (event) => {
         console.log('Stockfish message:', event.data);
