@@ -180,7 +180,7 @@ export const EvaluateMoves = () => {
               placeholder="Paste your PGN here"
             />
           )}
-          <div className="absolute bottom-4 left-0 w-full flex justify-center">
+          <div className="mt-4 lg:mt-0 lg:absolute bottom-4 left-0 w-full flex justify-center">
             <Tooltip content={t('common.button.copy-fen')} placement="top">
               <Button
                 color="gray"
