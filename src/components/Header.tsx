@@ -95,6 +95,7 @@ export default function Header() {
             </Link>
             <Link
               href="/analysis"
+              target="_blank"
               className="ml-4 hover:text-[var(--p-highlight)]"
             >
               {t('navigation.analysis')}

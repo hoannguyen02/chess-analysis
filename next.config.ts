@@ -28,6 +28,10 @@ const nextConfig: NextConfig = {
             key: 'Access-Control-Allow-Origin',
             value: 'https://www.limachess.com',
           },
+          {
+            key: 'Access-Control-Allow-Origin',
+            value: 'http://localhost:3000',
+          },
         ],
       },
     ];
