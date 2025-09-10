@@ -15,6 +15,7 @@ import {
   VscArrowCircleRight,
   VscChevronLeft,
   VscChevronRight,
+  VscCloudDownload,
   VscCopy,
   VscLayoutPanel,
   VscSearchFuzzy,
@@ -131,6 +132,28 @@ export const EvaluateMoves = () => {
       .catch((err) => console.error('Failed to copy:', err));
   }, []);
 
+  const onDownloadPgn = useCallback(() => {
+    const pgn = gameRef.current.pgn(); // Get PGN from the game instance
+
+    if (!pgn) {
+      console.error('No PGN data available');
+      return;
+    }
+
+    const blob = new Blob([pgn], { type: 'text/plain' });
+    const url = URL.createObjectURL(blob);
+
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'puzzle.pgn';
+    document.body.appendChild(a);
+    a.click();
+
+    // Cleanup
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+  }, [gameRef]);
+
   return (
     <div className="max-w-[900px] mx-auto p-4">
       <div className="grid grid-cols-1 lg:grid-cols-[500px_auto] gap-4">
@@ -200,6 +223,11 @@ export const EvaluateMoves = () => {
                 }}
               >
                 <VscLayoutPanel size={20} />
+              </Button>
+            </Tooltip>
+            <Tooltip content={t('common.button.pgn-file')} placement="top">
+              <Button className="ml-4" color="gray" onClick={onDownloadPgn}>
+                <VscCloudDownload size={20} />
               </Button>
             </Tooltip>
             <Button color="primary" onClick={analysis} className="ml-4">
