@@ -1,4 +1,5 @@
 import { DefaultLocale } from '@/constants';
+import { Analytics } from '@vercel/analytics/next';
 import { ThemeModeScript } from 'flowbite-react';
 import { Head, Html, Main, NextScript } from 'next/document';
 
@@ -11,6 +12,7 @@ export default function Document(props: any) {
       <body className="antialiased">
         <Main />
         <NextScript />
+        <Analytics />
       </body>
     </Html>
   );
