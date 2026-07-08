@@ -117,6 +117,17 @@ const parseRoundValue = (value: string): number | null => {
   return Number.isInteger(round) && round > 0 ? round : null;
 };
 
+const parseUrlLike = (raw: string, baseUrl: URL): URL | null => {
+  try {
+    const parsed = new URL(raw, baseUrl);
+    if (!/^https?:$/.test(parsed.protocol)) return null;
+    if (!isChessResultsHost(parsed.hostname)) return null;
+    return parsed;
+  } catch {
+    return null;
+  }
+};
+
 const detectLatestRound = (
   $: cheerio.CheerioAPI,
   baseUrl: URL
@@ -154,6 +165,39 @@ const detectLatestRound = (
   return latestRound > 0 ? latestRound : null;
 };
 
+const detectLatestCompletedRound = (
+  $: cheerio.CheerioAPI,
+  baseUrl: URL
+): number | null => {
+  let latestRound = 0;
+
+  const collect = (raw: string | undefined) => {
+    if (!raw) return;
+
+    const parsedUrl = parseUrlLike(raw, baseUrl);
+    if (!parsedUrl) return;
+
+    if (parsedUrl.searchParams.get('art') !== '1') {
+      return;
+    }
+
+    const round = Number(parsedUrl.searchParams.get('rd') || '');
+    if (Number.isInteger(round) && round > latestRound) {
+      latestRound = round;
+    }
+  };
+
+  $('a[href]').each((_, element) => {
+    collect($(element).attr('href'));
+  });
+
+  $('option[value]').each((_, element) => {
+    collect($(element).attr('value'));
+  });
+
+  return latestRound > 0 ? latestRound : null;
+};
+
 const toUniqueUrls = (urls: URL[]): URL[] => {
   const seen = new Set<string>();
   const unique: URL[] = [];
@@ -172,7 +216,8 @@ const toUniqueUrls = (urls: URL[]): URL[] => {
 const cloneUrl = (url: URL): URL => new URL(url.toString());
 
 const buildCandidateUrls = ($: cheerio.CheerioAPI, inputUrl: URL): URL[] => {
-  const latestRound = detectLatestRound($, inputUrl);
+  const latestCompletedRound =
+    detectLatestCompletedRound($, inputUrl) ?? detectLatestRound($, inputUrl);
   const candidates: URL[] = [];
 
   const base = cloneUrl(inputUrl);
@@ -182,13 +227,13 @@ const buildCandidateUrls = ($: cheerio.CheerioAPI, inputUrl: URL): URL[] => {
   artOne.searchParams.set('art', '1');
   candidates.push(artOne);
 
-  if (latestRound !== null) {
+  if (latestCompletedRound !== null) {
     const withRound = cloneUrl(base);
-    withRound.searchParams.set('rd', String(latestRound));
+    withRound.searchParams.set('rd', String(latestCompletedRound));
     candidates.push(withRound);
 
     const artOneWithRound = cloneUrl(artOne);
-    artOneWithRound.searchParams.set('rd', String(latestRound));
+    artOneWithRound.searchParams.set('rd', String(latestCompletedRound));
     candidates.push(artOneWithRound);
   }
 
@@ -202,9 +247,9 @@ const buildCandidateUrls = ($: cheerio.CheerioAPI, inputUrl: URL): URL[] => {
 
       candidates.push(candidate);
 
-      if (latestRound !== null && !candidate.searchParams.has('rd')) {
+      if (latestCompletedRound !== null && !candidate.searchParams.has('rd')) {
         const withRound = cloneUrl(candidate);
-        withRound.searchParams.set('rd', String(latestRound));
+        withRound.searchParams.set('rd', String(latestCompletedRound));
         candidates.push(withRound);
       }
     } catch {
@@ -579,7 +624,8 @@ const handler = async (
       : NaN;
     const resolvedRound = Number.isInteger(resolvedRoundFromUrl)
       ? resolvedRoundFromUrl
-      : detectLatestRound(effective$, effectiveUrl);
+      : (detectLatestCompletedRound(effective$, effectiveUrl) ??
+        detectLatestRound(effective$, effectiveUrl));
 
     const usedLatestRound =
       !parsedUrl.searchParams.has('rd') && resolvedRound !== null;
