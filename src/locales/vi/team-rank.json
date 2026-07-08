@@ -3,7 +3,7 @@
   "description": "Dán URL Chess-Results, chọn số thành viên tính điểm và tự động tạo bảng xếp hạng đồng đội.",
   "input": {
     "urlLabel": "URL Chess-Results",
-    "urlPlaceholder": "Dán link Chess-Results (ví dụ: {example})",
+    "urlPlaceholder": "ví dụ: {example}",
     "teamSize": "Số thành viên tính điểm",
     "sortMode": "Tiêu chí xếp hạng",
     "extract": "Trích xuất dữ liệu",
