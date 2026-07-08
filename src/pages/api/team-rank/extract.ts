@@ -32,6 +32,7 @@ type ApiResponse = {
   sortMode: SortMode;
   teams: TeamRow[];
   extractedPlayers: number;
+  parserNote: string;
 };
 
 type HeaderMap = {
