@@ -18,9 +18,14 @@ const resolveLocale = (request: NextRequest): Locale => {
   }
 
   // Geo header is available on most edge/CDN providers.
+  const geoFromObject = (
+    request as NextRequest & { geo?: { country?: string } }
+  ).geo?.country;
   const country =
+    geoFromObject ||
     request.headers.get('x-vercel-ip-country') ||
     request.headers.get('cf-ipcountry') ||
+    request.headers.get('x-country-code') ||
     '';
 
   if (country.toUpperCase() === 'VN') {
@@ -42,7 +47,6 @@ export function middleware(request: NextRequest) {
     return NextResponse.next();
   }
 
-  // Check if the pathname already has a locale
   const hasLocale = locales.some(
     (locale) => pathname === `/${locale}` || pathname.startsWith(`/${locale}/`)
   );
@@ -57,3 +61,7 @@ export function middleware(request: NextRequest) {
 
   return NextResponse.next();
 }
+
+export const config = {
+  matcher: ['/((?!_next/static|_next/image|favicon.ico).*)'],
+};
