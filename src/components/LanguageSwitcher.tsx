@@ -5,6 +5,13 @@ const LanguageSwitcher = () => {
   const { locale } = router;
 
   const switchLanguage = (lang: string) => {
+    document.cookie = [
+      'USER_SELECTED_LOCALE=1',
+      'Path=/',
+      'Max-Age=31536000',
+      'SameSite=Lax',
+    ].join('; ');
+
     router.replace(router.asPath, undefined, { locale: lang }); // Faster language switch
   };
 

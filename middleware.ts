@@ -9,9 +9,11 @@ const isSupportedLocale = (value: string): value is Locale => {
 };
 
 const resolveLocale = (request: NextRequest): Locale => {
-  // Keep explicit user choice when available.
+  // If user explicitly chose language from the UI, keep that choice.
+  const userSelectedLocale =
+    request.cookies.get('USER_SELECTED_LOCALE')?.value === '1';
   const cookieLocale = request.cookies.get('NEXT_LOCALE')?.value?.toLowerCase();
-  if (cookieLocale && isSupportedLocale(cookieLocale)) {
+  if (userSelectedLocale && cookieLocale && isSupportedLocale(cookieLocale)) {
     return cookieLocale;
   }
 
@@ -50,13 +52,7 @@ export function middleware(request: NextRequest) {
     const url = request.nextUrl.clone();
     url.pathname = `/${locale}${pathname}`;
 
-    const response = NextResponse.redirect(url);
-    response.cookies.set('NEXT_LOCALE', locale, {
-      path: '/',
-      maxAge: 60 * 60 * 24 * 365,
-      sameSite: 'lax',
-    });
-    return response;
+    return NextResponse.redirect(url);
   }
 
   return NextResponse.next();
