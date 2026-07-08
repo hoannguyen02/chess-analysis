@@ -1,0 +1,47 @@
+{
+  "title": "Tính hạng đội (Chess-Results)",
+  "description": "Dán URL Chess-Results, chọn số thành viên tính điểm và tự động tạo bảng xếp hạng đồng đội.",
+  "input": {
+    "urlLabel": "URL Chess-Results",
+    "teamSize": "Số thành viên tính điểm",
+    "sortMode": "Tiêu chí xếp hạng",
+    "extract": "Trích xuất dữ liệu",
+    "loading": "Đang trích xuất..."
+  },
+  "summary": {
+    "title": "Giải đấu",
+    "teams": "Số đội",
+    "players": "Số kỳ thủ trích xuất"
+  },
+  "table": {
+    "teamStandings": "BẢNG XẾP HẠNG ĐỒNG ĐỘI",
+    "standingsAfterRound": "BẢNG XẾP HẠNG ĐỒNG ĐỘI SAU VÁN {round}",
+    "rank": "Hạng",
+    "teamRank": "Hạng đội",
+    "teamName": "Tên đội",
+    "team": "Đội",
+    "teamScore": "Điểm đội",
+    "memberName": "Thành viên",
+    "playerName": "Tên kỳ thủ",
+    "individualRank": "Hạng cá nhân",
+    "individualScore": "Điểm cá nhân",
+    "totalRank": "Tổng hạng",
+    "totalScore": "Tổng điểm"
+  },
+  "export": {
+    "xls": "Xuất XLS"
+  },
+  "errors": {
+    "request-failed": "Không thể trích xuất dữ liệu từ URL.",
+    "network": "Lỗi mạng. Vui lòng thử lại."
+  },
+  "sortMode": {
+    "rank": "Theo tổng hạng",
+    "score": "Theo tổng điểm"
+  },
+  "medals": {
+    "gold": "HCV",
+    "silver": "HCB",
+    "bronze": "HCĐ"
+  }
+}

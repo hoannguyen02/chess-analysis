@@ -101,6 +101,12 @@ export default function Header() {
               {t('navigation.analysis')}
             </Link>
             <Link
+              href="/team-rank"
+              className="ml-4 hover:text-[var(--p-highlight)]"
+            >
+              {t('navigation.team-rank')}
+            </Link>
+            <Link
               href="https://www.youtube.com/@LIMAChess?sub_confirmation=1"
               rel="noopener noreferrer"
               target="_blank"

@@ -1,0 +1,47 @@
+{
+  "title": "Team Ranking Calculator (Chess-Results)",
+  "description": "Paste a Chess-Results URL, choose the number of scoring members, and generate team rankings automatically.",
+  "input": {
+    "urlLabel": "Chess-Results URL",
+    "teamSize": "Scoring members",
+    "sortMode": "Ranking method",
+    "extract": "Extract Data",
+    "loading": "Extracting..."
+  },
+  "summary": {
+    "title": "Tournament",
+    "teams": "Teams",
+    "players": "Players Extracted"
+  },
+  "table": {
+    "teamStandings": "TEAM STANDINGS",
+    "standingsAfterRound": "TEAM STANDINGS AFTER ROUND {round}",
+    "rank": "Rank",
+    "teamRank": "Team Rank",
+    "teamName": "Team Name",
+    "team": "Team",
+    "teamScore": "Team Score",
+    "memberName": "Member Name",
+    "playerName": "Player Name",
+    "individualRank": "Individual Rank",
+    "individualScore": "Individual Score",
+    "totalRank": "Rank Sum",
+    "totalScore": "Total Score"
+  },
+  "export": {
+    "xls": "Export XLS"
+  },
+  "errors": {
+    "request-failed": "Could not extract data from the URL.",
+    "network": "Network error. Please try again."
+  },
+  "sortMode": {
+    "rank": "By rank sum",
+    "score": "By total score"
+  },
+  "medals": {
+    "gold": "Gold",
+    "silver": "Silver",
+    "bronze": "Bronze"
+  }
+}

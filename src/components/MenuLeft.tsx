@@ -36,6 +36,9 @@ export const MenuLeft = () => {
       <Link href="/analysis" className="mb-2 hover:text-[var(--p-highlight)]">
         {t('navigation.analysis')}
       </Link>
+      <Link href="/team-rank" className="mb-2 hover:text-[var(--p-highlight)]">
+        {t('navigation.team-rank')}
+      </Link>
       <Link
         href="/setup-board"
         className="mb-2 hover:text-[var(--p-highlight)]"
