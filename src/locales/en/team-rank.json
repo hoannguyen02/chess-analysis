@@ -3,6 +3,7 @@
   "description": "Paste a Chess-Results URL, choose the number of scoring members, and generate team rankings automatically.",
   "input": {
     "urlLabel": "Chess-Results URL",
+    "urlPlaceholder": "Paste a Chess-Results link (e.g. {example})",
     "teamSize": "Scoring members",
     "sortMode": "Ranking method",
     "extract": "Extract Data",

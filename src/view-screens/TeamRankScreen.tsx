@@ -1,4 +1,4 @@
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import { useMemo, useState } from 'react';
 
 type SortMode = 'score' | 'rank';
@@ -39,8 +39,9 @@ const formatScore = (score: number) => {
 
 const TeamRankScreen = () => {
   const t = useTranslations('team-rank');
+  const locale = useLocale();
 
-  const [url, setUrl] = useState(SAMPLE_URL);
+  const [url, setUrl] = useState('');
   const [teamSize, setTeamSize] = useState(2);
   const [sortMode, setSortMode] = useState<SortMode>('rank');
   const [isLoading, setIsLoading] = useState(false);
@@ -85,7 +86,7 @@ const TeamRankScreen = () => {
       const response = await fetch('/api/team-rank/extract', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ url, teamSize, sortMode }),
+        body: JSON.stringify({ url, teamSize, sortMode, locale }),
       });
 
       const json = (await response.json()) as ExtractResponse & {
@@ -198,7 +199,7 @@ const TeamRankScreen = () => {
             <input
               value={url}
               onChange={(event) => setUrl(event.target.value)}
-              placeholder={SAMPLE_URL}
+              placeholder={t('input.urlPlaceholder', { example: SAMPLE_URL })}
               className="mt-1 w-full rounded-xl border border-gray-300 bg-white px-3 py-2 text-sm focus:border-[var(--p-bg)] focus:outline-none"
             />
           </div>
@@ -348,8 +349,6 @@ const TeamRankScreen = () => {
               </tbody>
             </table>
           </div>
-
-          <p className="text-xs text-gray-500">{data.parserNote}</p>
         </>
       )}
     </section>

@@ -42,6 +42,71 @@ type HeaderMap = {
   scoreIndex: number;
 };
 
+type SupportedLocale = 'vi' | 'en';
+
+type ErrorKey =
+  | 'methodNotAllowed'
+  | 'missingUrl'
+  | 'invalidUrl'
+  | 'invalidProtocol'
+  | 'unsupportedHost'
+  | 'fetchSourceFailed'
+  | 'tableNotFound'
+  | 'notEnoughPlayers'
+  | 'unexpectedError';
+
+const errorMessages: Record<SupportedLocale, Record<ErrorKey, string>> = {
+  en: {
+    methodNotAllowed: 'Method not allowed',
+    missingUrl: 'Please provide a chess-results URL.',
+    invalidUrl: 'Invalid URL format.',
+    invalidProtocol: 'URL must use http or https.',
+    unsupportedHost: 'Only chess-results.com URLs are supported.',
+    fetchSourceFailed: 'Cannot fetch source page, status {status}.',
+    tableNotFound:
+      'Could not detect player/team table on this page. Try a ranking page with team or club columns.',
+    notEnoughPlayers:
+      'No team has enough players (minimum {teamSize}) to calculate team standings.',
+    unexpectedError: 'Unexpected error while extracting chess result data.',
+  },
+  vi: {
+    methodNotAllowed: 'Phương thức không được hỗ trợ',
+    missingUrl: 'Vui lòng nhập URL Chess-Results.',
+    invalidUrl: 'Định dạng URL không hợp lệ.',
+    invalidProtocol: 'URL phải sử dụng http hoặc https.',
+    unsupportedHost: 'Chỉ hỗ trợ URL từ chess-results.com.',
+    fetchSourceFailed: 'Không thể tải trang nguồn, mã lỗi {status}.',
+    tableNotFound:
+      'Không tìm thấy bảng dữ liệu kỳ thủ/đội trên trang này. Hãy thử trang xếp hạng có cột đội hoặc câu lạc bộ.',
+    notEnoughPlayers: 'Không có đội nào đủ {teamSize} kỳ thủ để tính đồng đội.',
+    unexpectedError:
+      'Có lỗi không mong đợi khi trích xuất dữ liệu Chess-Results.',
+  },
+};
+
+const resolveLocale = (req: NextApiRequest): SupportedLocale => {
+  const bodyLocale = String(req.body?.locale || '').toLowerCase();
+  if (bodyLocale === 'vi') return 'vi';
+  if (bodyLocale === 'en') return 'en';
+
+  const acceptLanguage = req.headers['accept-language'] || '';
+  return acceptLanguage.toLowerCase().includes('vi') ? 'vi' : 'en';
+};
+
+const getErrorMessage = (
+  locale: SupportedLocale,
+  key: ErrorKey,
+  params?: Record<string, string | number>
+) => {
+  let message = errorMessages[locale][key];
+  if (!params) return message;
+
+  Object.entries(params).forEach(([paramKey, value]) => {
+    message = message.replace(`{${paramKey}}`, String(value));
+  });
+  return message;
+};
+
 const isChessResultsHost = (host: string): boolean =>
   /(^|\.)chess-results\.com$/i.test(host);
 
@@ -260,8 +325,12 @@ const handler = async (
   req: NextApiRequest,
   res: NextApiResponse<ApiResponse | { error: string }>
 ) => {
+  const locale = resolveLocale(req);
+
   if (req.method !== 'POST') {
-    res.status(405).json({ error: 'Method not allowed' });
+    res
+      .status(405)
+      .json({ error: getErrorMessage(locale, 'methodNotAllowed') });
     return;
   }
 
@@ -271,7 +340,7 @@ const handler = async (
   const sortMode: SortMode = req.body?.sortMode === 'score' ? 'score' : 'rank';
 
   if (!urlInput) {
-    res.status(400).json({ error: 'Please provide a chess-results URL.' });
+    res.status(400).json({ error: getErrorMessage(locale, 'missingUrl') });
     return;
   }
 
@@ -279,19 +348,17 @@ const handler = async (
   try {
     parsedUrl = new URL(urlInput);
   } catch {
-    res.status(400).json({ error: 'Invalid URL format.' });
+    res.status(400).json({ error: getErrorMessage(locale, 'invalidUrl') });
     return;
   }
 
   if (!/^https?:$/.test(parsedUrl.protocol)) {
-    res.status(400).json({ error: 'URL must use http or https.' });
+    res.status(400).json({ error: getErrorMessage(locale, 'invalidProtocol') });
     return;
   }
 
   if (!isChessResultsHost(parsedUrl.hostname)) {
-    res
-      .status(400)
-      .json({ error: 'Only chess-results.com URLs are supported.' });
+    res.status(400).json({ error: getErrorMessage(locale, 'unsupportedHost') });
     return;
   }
 
@@ -306,7 +373,9 @@ const handler = async (
 
     if (!response.ok) {
       res.status(400).json({
-        error: `Cannot fetch source page, status ${response.status}.`,
+        error: getErrorMessage(locale, 'fetchSourceFailed', {
+          status: response.status,
+        }),
       });
       return;
     }
@@ -317,8 +386,7 @@ const handler = async (
 
     if (players.length === 0) {
       res.status(422).json({
-        error:
-          'Could not detect player/team table on this page. Try a ranking page with team or club columns.',
+        error: getErrorMessage(locale, 'tableNotFound'),
       });
       return;
     }
@@ -327,7 +395,7 @@ const handler = async (
 
     if (teams.length === 0) {
       res.status(422).json({
-        error: `Không có đội nào đủ ${teamSize} kỳ thủ để tính đồng đội.`,
+        error: getErrorMessage(locale, 'notEnoughPlayers', { teamSize }),
       });
       return;
     }
@@ -348,7 +416,7 @@ const handler = async (
     });
   } catch {
     res.status(500).json({
-      error: 'Unexpected error while extracting chess result data.',
+      error: getErrorMessage(locale, 'unexpectedError'),
     });
   }
 };
