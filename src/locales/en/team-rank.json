@@ -12,7 +12,9 @@
   "summary": {
     "title": "Tournament",
     "teams": "Teams",
-    "players": "Players Extracted"
+    "players": "Players Extracted",
+    "roundDetected": "Round used: {round}",
+    "latestRoundUsed": "Latest round detected and used: {round}"
   },
   "table": {
     "teamStandings": "TEAM STANDINGS",

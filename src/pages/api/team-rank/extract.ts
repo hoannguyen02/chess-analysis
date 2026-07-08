@@ -33,6 +33,8 @@ type ApiResponse = {
   teams: TeamRow[];
   extractedPlayers: number;
   parserNote: string;
+  resolvedRound: number | null;
+  usedLatestRound: boolean;
 };
 
 type HeaderMap = {
@@ -107,11 +109,143 @@ const getErrorMessage = (
   return message;
 };
 
+const parseRoundValue = (value: string): number | null => {
+  const match = value.match(/(?:^|[?&])rd=(\d+)(?:&|$)/i);
+  if (!match) return null;
+
+  const round = Number(match[1]);
+  return Number.isInteger(round) && round > 0 ? round : null;
+};
+
+const detectLatestRound = (
+  $: cheerio.CheerioAPI,
+  baseUrl: URL
+): number | null => {
+  let latestRound = 0;
+
+  const collect = (raw: string | undefined) => {
+    if (!raw) return;
+
+    const directRound = parseRoundValue(raw);
+    if (directRound && directRound > latestRound) {
+      latestRound = directRound;
+      return;
+    }
+
+    try {
+      const absolute = new URL(raw, baseUrl);
+      const parsed = Number(absolute.searchParams.get('rd') || '');
+      if (Number.isInteger(parsed) && parsed > latestRound) {
+        latestRound = parsed;
+      }
+    } catch {
+      // Ignore malformed links.
+    }
+  };
+
+  $('a[href]').each((_, element) => {
+    collect($(element).attr('href'));
+  });
+
+  $('option[value]').each((_, element) => {
+    collect($(element).attr('value'));
+  });
+
+  return latestRound > 0 ? latestRound : null;
+};
+
+const toUniqueUrls = (urls: URL[]): URL[] => {
+  const seen = new Set<string>();
+  const unique: URL[] = [];
+
+  urls.forEach((url) => {
+    const key = url.toString();
+    if (!seen.has(key)) {
+      seen.add(key);
+      unique.push(url);
+    }
+  });
+
+  return unique;
+};
+
+const cloneUrl = (url: URL): URL => new URL(url.toString());
+
+const buildCandidateUrls = ($: cheerio.CheerioAPI, inputUrl: URL): URL[] => {
+  const latestRound = detectLatestRound($, inputUrl);
+  const candidates: URL[] = [];
+
+  const base = cloneUrl(inputUrl);
+  candidates.push(base);
+
+  const artOne = cloneUrl(base);
+  artOne.searchParams.set('art', '1');
+  candidates.push(artOne);
+
+  if (latestRound !== null) {
+    const withRound = cloneUrl(base);
+    withRound.searchParams.set('rd', String(latestRound));
+    candidates.push(withRound);
+
+    const artOneWithRound = cloneUrl(artOne);
+    artOneWithRound.searchParams.set('rd', String(latestRound));
+    candidates.push(artOneWithRound);
+  }
+
+  const collectFromRaw = (raw: string | undefined) => {
+    if (!raw) return;
+
+    try {
+      const candidate = new URL(raw, inputUrl);
+      if (!/^https?:$/.test(candidate.protocol)) return;
+      if (!isChessResultsHost(candidate.hostname)) return;
+
+      candidates.push(candidate);
+
+      if (latestRound !== null && !candidate.searchParams.has('rd')) {
+        const withRound = cloneUrl(candidate);
+        withRound.searchParams.set('rd', String(latestRound));
+        candidates.push(withRound);
+      }
+    } catch {
+      // Ignore malformed links.
+    }
+  };
+
+  $('a[href]').each((_, element) => {
+    const href = $(element).attr('href');
+    if (!href) return;
+
+    // Prioritize pages that are usually used for standings/player lists.
+    if (/art=1|rd=\d+/i.test(href)) {
+      collectFromRaw(href);
+    }
+  });
+
+  $('option[value]').each((_, element) => {
+    const value = $(element).attr('value');
+    if (!value) return;
+
+    if (/art=1|rd=\d+/i.test(value)) {
+      collectFromRaw(value);
+    }
+  });
+
+  return toUniqueUrls(candidates).slice(0, 20);
+};
+
 const isChessResultsHost = (host: string): boolean =>
   /(^|\.)chess-results\.com$/i.test(host);
 
 const normalizeCell = (value: string): string =>
   value.replace(/\s+/g, ' ').trim();
+
+const normalizeHeaderForMatch = (value: string): string =>
+  normalizeCell(value)
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/đ/g, 'd');
 
 const parseNumeric = (value: string): number | null => {
   const cleaned = value.replace(/\s+/g, '').replace(',', '.');
@@ -151,7 +285,7 @@ const isValidPlayerRow = (
 };
 
 const buildHeaderMap = (headers: string[]): HeaderMap | null => {
-  const normalized = headers.map((header) => header.toLowerCase());
+  const normalized = headers.map((header) => normalizeHeaderForMatch(header));
 
   const findIndex = (patterns: RegExp[]): number =>
     normalized.findIndex((header) =>
@@ -363,26 +497,65 @@ const handler = async (
   }
 
   try {
-    const response = await fetch(parsedUrl.toString(), {
+    const fetchHeaders = {
+      'User-Agent':
+        'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 Chrome/122 Safari/537.36',
+      'Accept-Language': 'en-US,en;q=0.8',
+    };
+
+    const baseResponse = await fetch(parsedUrl.toString(), {
       headers: {
-        'User-Agent':
-          'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 Chrome/122 Safari/537.36',
-        'Accept-Language': 'en-US,en;q=0.8',
+        ...fetchHeaders,
       },
     });
 
-    if (!response.ok) {
+    if (!baseResponse.ok) {
       res.status(400).json({
         error: getErrorMessage(locale, 'fetchSourceFailed', {
-          status: response.status,
+          status: baseResponse.status,
         }),
       });
       return;
     }
 
-    const html = await response.text();
-    const $ = cheerio.load(html);
-    const players = extractRowsFromBestTable($);
+    const initialHtml = await baseResponse.text();
+    const initial$ = cheerio.load(initialHtml);
+
+    let effectiveUrl = parsedUrl;
+    let effective$ = initial$;
+    let players = extractRowsFromBestTable(initial$);
+
+    const candidates = buildCandidateUrls(initial$, parsedUrl);
+
+    for (const candidateUrl of candidates) {
+      if (candidateUrl.toString() === parsedUrl.toString()) {
+        continue;
+      }
+
+      const candidateResponse = await fetch(candidateUrl.toString(), {
+        headers: {
+          ...fetchHeaders,
+        },
+      });
+
+      if (!candidateResponse.ok) {
+        continue;
+      }
+
+      const candidateHtml = await candidateResponse.text();
+      const candidate$ = cheerio.load(candidateHtml);
+      const candidatePlayers = extractRowsFromBestTable(candidate$);
+
+      if (candidatePlayers.length > players.length) {
+        players = candidatePlayers;
+        effective$ = candidate$;
+        effectiveUrl = candidateUrl;
+      }
+
+      if (players.length >= 20) {
+        break;
+      }
+    }
 
     if (players.length === 0) {
       res.status(422).json({
@@ -400,10 +573,22 @@ const handler = async (
       return;
     }
 
+    const resolvedRoundRaw = effectiveUrl.searchParams.get('rd');
+    const resolvedRoundFromUrl = resolvedRoundRaw
+      ? Number(resolvedRoundRaw)
+      : NaN;
+    const resolvedRound = Number.isInteger(resolvedRoundFromUrl)
+      ? resolvedRoundFromUrl
+      : detectLatestRound(effective$, effectiveUrl);
+
+    const usedLatestRound =
+      !parsedUrl.searchParams.has('rd') && resolvedRound !== null;
+
     res.status(200).json({
-      sourceUrl: parsedUrl.toString(),
+      sourceUrl: effectiveUrl.toString(),
       sourceTitle: (
-        normalizeCell($('title').first().text()) || 'Chess Results Tournament'
+        normalizeCell(effective$('title').first().text()) ||
+        'Chess Results Tournament'
       ).replace(/^Chess-Results Server Chess-results\.com\s*-\s*/i, ''),
       teamSize,
       sortMode,
@@ -413,6 +598,8 @@ const handler = async (
         sortMode === 'score'
           ? 'Xếp hạng theo tổng điểm trước, nếu bằng điểm thì xét tổng hạng.'
           : 'Xếp hạng theo tổng hạng trước, nếu bằng tổng hạng thì xét tổng điểm.',
+      resolvedRound,
+      usedLatestRound,
     });
   } catch {
     res.status(500).json({

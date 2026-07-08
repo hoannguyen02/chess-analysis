@@ -26,6 +26,8 @@ type ExtractResponse = {
   teams: TeamRow[];
   extractedPlayers: number;
   parserNote: string;
+  resolvedRound: number | null;
+  usedLatestRound: boolean;
 };
 
 const SAMPLE_URL =
@@ -67,7 +69,13 @@ const TeamRankScreen = () => {
   };
 
   const roundText = useMemo(() => {
-    if (!data?.sourceUrl) return '';
+    if (!data) return '';
+
+    if (data.resolvedRound !== null) {
+      return String(data.resolvedRound);
+    }
+
+    if (!data.sourceUrl) return '';
 
     try {
       return new URL(data.sourceUrl).searchParams.get('rd') || '';
@@ -256,6 +264,13 @@ const TeamRankScreen = () => {
         </div>
 
         {error && <p className="mt-3 text-sm text-red-600">{error}</p>}
+        {data && data.resolvedRound !== null && (
+          <p className="mt-3 text-sm text-slate-600">
+            {data.usedLatestRound
+              ? t('summary.latestRoundUsed', { round: data.resolvedRound })
+              : t('summary.roundDetected', { round: data.resolvedRound })}
+          </p>
+        )}
       </div>
 
       {data && (

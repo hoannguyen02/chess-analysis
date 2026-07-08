@@ -12,7 +12,9 @@
   "summary": {
     "title": "Giải đấu",
     "teams": "Số đội",
-    "players": "Số kỳ thủ trích xuất"
+    "players": "Số kỳ thủ trích xuất",
+    "roundDetected": "Ván đang dùng: {round}",
+    "latestRoundUsed": "Đã tự động dùng ván mới nhất: {round}"
   },
   "table": {
     "teamStandings": "BẢNG XẾP HẠNG ĐỒNG ĐỘI",
