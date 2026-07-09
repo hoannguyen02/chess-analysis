@@ -3,6 +3,7 @@ import { NextResponse } from 'next/server';
 
 const locales = ['vi', 'en'] as const;
 type Locale = (typeof locales)[number];
+const defaultLocale: Locale = 'en';
 
 const isSupportedLocale = (value: string): value is Locale => {
   return locales.includes(value as Locale);
@@ -56,7 +57,7 @@ const replaceLocaleInPath = (
 };
 
 export function middleware(request: NextRequest) {
-  const { pathname } = request.nextUrl;
+  const pathname = new URL(request.url).pathname;
 
   // Ignore next internal paths, API routes, and static files.
   if (
@@ -73,9 +74,11 @@ export function middleware(request: NextRequest) {
   const pathLocale = getPathLocale(pathname);
 
   if (pathLocale) {
-    // If locale was not explicitly selected by user, keep it aligned with geo default.
-    if (!userSelectedLocale && pathLocale !== preferredLocale) {
-      const url = request.nextUrl.clone();
+    const isLocaleRoot = pathname === `/${pathLocale}`;
+
+    // Only auto-correct root locale paths. Nested localized paths should stay accessible.
+    if (isLocaleRoot && !userSelectedLocale && pathLocale !== preferredLocale) {
+      const url = new URL(request.url);
       url.pathname = replaceLocaleInPath(pathname, pathLocale, preferredLocale);
       return NextResponse.redirect(url);
     }
@@ -84,8 +87,16 @@ export function middleware(request: NextRequest) {
   }
 
   if (!pathLocale) {
-    const url = request.nextUrl.clone();
+    if (preferredLocale === defaultLocale) {
+      return NextResponse.next();
+    }
+
+    const url = new URL(request.url);
     url.pathname = `/${preferredLocale}${pathname}`;
+
+    if (url.pathname === pathname) {
+      return NextResponse.next();
+    }
 
     return NextResponse.redirect(url);
   }
