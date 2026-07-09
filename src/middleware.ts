@@ -35,6 +35,26 @@ const resolveLocale = (request: NextRequest): Locale => {
   return 'en';
 };
 
+const getPathLocale = (pathname: string): Locale | null => {
+  const matched = locales.find(
+    (locale) => pathname === `/${locale}` || pathname.startsWith(`/${locale}/`)
+  );
+
+  return matched ?? null;
+};
+
+const replaceLocaleInPath = (
+  pathname: string,
+  fromLocale: Locale,
+  toLocale: Locale
+): string => {
+  if (pathname === `/${fromLocale}`) {
+    return `/${toLocale}`;
+  }
+
+  return pathname.replace(`/${fromLocale}/`, `/${toLocale}/`);
+};
+
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
@@ -47,14 +67,25 @@ export function middleware(request: NextRequest) {
     return NextResponse.next();
   }
 
-  const hasLocale = locales.some(
-    (locale) => pathname === `/${locale}` || pathname.startsWith(`/${locale}/`)
-  );
+  const preferredLocale = resolveLocale(request);
+  const userSelectedLocale =
+    request.cookies.get('USER_SELECTED_LOCALE')?.value === '1';
+  const pathLocale = getPathLocale(pathname);
 
-  if (!hasLocale) {
-    const locale = resolveLocale(request);
+  if (pathLocale) {
+    // If locale was not explicitly selected by user, keep it aligned with geo default.
+    if (!userSelectedLocale && pathLocale !== preferredLocale) {
+      const url = request.nextUrl.clone();
+      url.pathname = replaceLocaleInPath(pathname, pathLocale, preferredLocale);
+      return NextResponse.redirect(url);
+    }
+
+    return NextResponse.next();
+  }
+
+  if (!pathLocale) {
     const url = request.nextUrl.clone();
-    url.pathname = `/${locale}${pathname}`;
+    url.pathname = `/${preferredLocale}${pathname}`;
 
     return NextResponse.redirect(url);
   }
