@@ -37,6 +37,10 @@ type ApiResponse = {
   usedLatestRound: boolean;
 };
 
+type ErrorResponse = {
+  error: string;
+};
+
 type HeaderMap = {
   rankIndex: number;
   nameIndex: number;
@@ -117,6 +121,49 @@ const parseRoundValue = (value: string): number | null => {
   return Number.isInteger(round) && round > 0 ? round : null;
 };
 
+const detectRoundCountFromText = ($: cheerio.CheerioAPI): number | null => {
+  const bodyText = normalizeHeaderForMatch($('body').text());
+
+  const roundFromRow = $('tr')
+    .toArray()
+    .map((row) => {
+      const cells = $(row).find('td').toArray();
+      if (cells.length < 2) return null;
+
+      const label = normalizeHeaderForMatch($(cells[0]).text());
+      if (!/number of rounds|so van/.test(label)) return null;
+
+      const valueText = normalizeHeaderForMatch($(cells[1]).text());
+      const matched = valueText.match(/\b(\d{1,2})\b/);
+      return matched ? Number(matched[1]) : null;
+    })
+    .find((value) => Number.isInteger(value) && (value as number) > 0);
+
+  if (roundFromRow && roundFromRow <= 30) {
+    return roundFromRow;
+  }
+
+  const patterns = [
+    /number of rounds\s*(\d{1,2})/i,
+    /so van\s*(\d{1,2})/i,
+    /(\d{1,2})\s*rounds?/i,
+    /rd\.?\s*(\d{1,2})\s*\/\s*(\d{1,2})/i,
+    /rounds\s*(\d{1,2})/i,
+  ];
+
+  for (const pattern of patterns) {
+    const matched = bodyText.match(pattern);
+    if (!matched) continue;
+
+    const parsed = Number(matched[2] || matched[1]);
+    if (Number.isInteger(parsed) && parsed > 0 && parsed <= 30) {
+      return parsed;
+    }
+  }
+
+  return null;
+};
+
 const parseUrlLike = (raw: string, baseUrl: URL): URL | null => {
   try {
     const parsed = new URL(raw, baseUrl);
@@ -162,7 +209,9 @@ const detectLatestRound = (
     collect($(element).attr('value'));
   });
 
-  return latestRound > 0 ? latestRound : null;
+  if (latestRound > 0) return latestRound;
+
+  return detectRoundCountFromText($);
 };
 
 const detectLatestCompletedRound = (
@@ -337,7 +386,14 @@ const buildHeaderMap = (headers: string[]): HeaderMap | null => {
       patterns.some((pattern) => pattern.test(header))
     );
 
-  const rankIndex = findIndex([/^rk\.?$/, /^rank$/, /^#$/, /stt/, /place/]);
+  const rankIndex = findIndex([
+    /^rk\.?$/,
+    /^rank$/,
+    /^#$/,
+    /stt/,
+    /place/,
+    /hang/,
+  ]);
   const nameIndex = findIndex([/name/, /player/, /ten/]);
   const teamIndex = findIndex([/team/, /club/, /city/, /clb/, /doi/, /fed/]);
   const scoreIndex = findIndex([/pts/, /point/, /score/, /diem/]);
@@ -502,7 +558,7 @@ const rankTeams = (
 
 const handler = async (
   req: NextApiRequest,
-  res: NextApiResponse<ApiResponse | { error: string }>
+  res: NextApiResponse<ApiResponse | ErrorResponse>
 ) => {
   const locale = resolveLocale(req);
 
@@ -618,14 +674,19 @@ const handler = async (
       return;
     }
 
-    const resolvedRoundRaw = effectiveUrl.searchParams.get('rd');
-    const resolvedRoundFromUrl = resolvedRoundRaw
-      ? Number(resolvedRoundRaw)
-      : NaN;
-    const resolvedRound = Number.isInteger(resolvedRoundFromUrl)
-      ? resolvedRoundFromUrl
-      : (detectLatestCompletedRound(effective$, effectiveUrl) ??
-        detectLatestRound(effective$, effectiveUrl));
+    const inputRoundRaw = parsedUrl.searchParams.get('rd');
+    const inputRound = inputRoundRaw ? Number(inputRoundRaw) : NaN;
+    const candidateRoundRaw = effectiveUrl.searchParams.get('rd');
+    const candidateRound = candidateRoundRaw ? Number(candidateRoundRaw) : NaN;
+
+    const detectedLatestRound =
+      detectLatestCompletedRound(effective$, effectiveUrl) ??
+      detectLatestRound(effective$, effectiveUrl);
+
+    const resolvedRound = Number.isInteger(inputRound)
+      ? inputRound
+      : (detectedLatestRound ??
+        (Number.isInteger(candidateRound) ? candidateRound : null));
 
     const usedLatestRound =
       !parsedUrl.searchParams.has('rd') && resolvedRound !== null;

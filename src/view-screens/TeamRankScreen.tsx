@@ -84,6 +84,12 @@ const TeamRankScreen = () => {
     }
   }, [data]);
 
+  const standingsHeading = useMemo(() => {
+    return roundText
+      ? t('table.standingsAfterRound', { round: roundText })
+      : t('table.teamStandings');
+  }, [roundText, t]);
+
   const hasData = Boolean(data && data.teams.length > 0);
 
   const onExtract = async () => {
@@ -121,7 +127,7 @@ const TeamRankScreen = () => {
 
     const rows: Array<Array<string | number>> = [
       [data.sourceTitle],
-      [t('table.standingsAfterRound', { round: roundText })],
+      [standingsHeading],
       [''],
       [t('table.teamStandings')],
       [
@@ -291,7 +297,7 @@ const TeamRankScreen = () => {
                     colSpan={7}
                     className="border px-3 py-2 text-left text-base"
                   >
-                    {t('table.standingsAfterRound', { round: roundText })}
+                    {standingsHeading}
                   </th>
                 </tr>
                 <tr className="text-blue-700">
