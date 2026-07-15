@@ -16,6 +16,8 @@
     "copy-fen": "Copy fen/position",
     "close": "Close",
     "flip-board": "Flip Board",
+    "full-view": "Full view",
+    "exit-full-view": "Exit full view",
     "pgn-file": "Pgn file",
     "restart": "Restart"
   }

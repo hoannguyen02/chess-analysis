@@ -16,6 +16,8 @@
     "copy-fen": "Sao chép Fen/vị trí",
     "restart": "Xoá, làm lại",
     "flip-board": "Đảo ngược bàn cờ",
+    "full-view": "Toàn màn hình",
+    "exit-full-view": "Thoát toàn màn hình",
     "pgn-file": "Pgn file"
   }
 }

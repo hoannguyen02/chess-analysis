@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/ban-ts-comment */
 'use client';
 
 import { useAppContext } from '@/contexts/AppContext';
@@ -8,6 +7,8 @@ import { getActivePlayerFromFEN } from '@/utils/get-player-name-from-fen';
 import { Chess, Move } from 'chess.js';
 import { Button, Textarea, ToggleSwitch, Tooltip } from 'flowbite-react';
 import { useTranslations } from 'next-intl';
+import Image from 'next/image';
+import Link from 'next/link';
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { Chessboard } from 'react-chessboard';
 import {
@@ -18,6 +19,8 @@ import {
   VscCloudDownload,
   VscCopy,
   VscLayoutPanel,
+  VscScreenFull,
+  VscScreenNormal,
   VscSearchFuzzy,
 } from 'react-icons/vsc';
 
@@ -31,6 +34,7 @@ const DEFAULT_PGN = `1.Nf3 Nf6 2.c4 g6 3.Nc3 Bg7 4.d4 O-O 5.Bf4 d5 6.Qb3 dxc4 7.
 export const EvaluateMoves = () => {
   const { customPieces, bgDark, bgLight } = useCustomBoard();
   const { isMobile } = useAppContext();
+  const fullViewRef = useRef<HTMLDivElement>(null);
   const boardRef = useRef<HTMLDivElement>(null);
   const [currentFen, setCurrentFen] = useState('');
   const [startFen, setStartFen] = useState('');
@@ -38,6 +42,10 @@ export const EvaluateMoves = () => {
   const [currentMoveIndex, setCurrentMoveIndex] = useState<number>(0);
   const [pgnText, setPgnText] = useState<string>(DEFAULT_PGN);
   const [showPGNBox, setShowPGNBox] = useState<boolean>(true);
+  const [isFullViewMode, setIsFullViewMode] = useState(false);
+  const [isBrowserFullscreen, setIsBrowserFullscreen] = useState(false);
+  const [boardContainerWidth, setBoardContainerWidth] = useState(500);
+  const [viewportHeight, setViewportHeight] = useState(900);
   const t = useTranslations();
 
   const gameRef = useRef(new Chess());
@@ -54,6 +62,61 @@ export const EvaluateMoves = () => {
   useEffect(() => {
     setBoardOrientation(playerName);
   }, [playerName]);
+
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+
+    const syncFullscreenState = () => {
+      const inFullscreen = Boolean(document.fullscreenElement);
+      setIsBrowserFullscreen(inFullscreen);
+      if (!inFullscreen) {
+        setIsFullViewMode(false);
+      }
+    };
+
+    const updateViewportHeight = () => {
+      setViewportHeight(window.innerHeight);
+    };
+
+    syncFullscreenState();
+    updateViewportHeight();
+
+    document.addEventListener('fullscreenchange', syncFullscreenState);
+    window.addEventListener('resize', updateViewportHeight);
+
+    return () => {
+      document.removeEventListener('fullscreenchange', syncFullscreenState);
+      window.removeEventListener('resize', updateViewportHeight);
+    };
+  }, []);
+
+  useEffect(() => {
+    if (!boardRef.current || typeof ResizeObserver === 'undefined') return;
+
+    const observer = new ResizeObserver((entries) => {
+      const entry = entries[0];
+      if (!entry) return;
+      setBoardContainerWidth(
+        Math.max(280, Math.floor(entry.contentRect.width))
+      );
+    });
+
+    observer.observe(boardRef.current);
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    if (!isFullViewMode || isBrowserFullscreen) return;
+
+    const handleEsc = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        setIsFullViewMode(false);
+      }
+    };
+
+    window.addEventListener('keydown', handleEsc);
+    return () => window.removeEventListener('keydown', handleEsc);
+  }, [isBrowserFullscreen, isFullViewMode]);
 
   useEffect(() => {
     const game = gameRef.current;
@@ -154,13 +217,67 @@ export const EvaluateMoves = () => {
     URL.revokeObjectURL(url);
   }, [gameRef]);
 
+  const toggleFullView = useCallback(async () => {
+    if (typeof window === 'undefined') return;
+
+    const currentlyFullscreen = Boolean(document.fullscreenElement);
+
+    if (currentlyFullscreen) {
+      try {
+        await document.exitFullscreen();
+      } catch {
+        // Ignore and fallback to local mode state below.
+      }
+      setIsFullViewMode(false);
+      return;
+    }
+
+    setIsFullViewMode((current) => !current);
+
+    const target = fullViewRef.current;
+    if (!target?.requestFullscreen) return;
+
+    try {
+      await target.requestFullscreen();
+    } catch {
+      // If browser denies fullscreen, fallback still uses local expanded mode.
+    }
+  }, []);
+
+  const isFullViewActive = isFullViewMode || isBrowserFullscreen;
+  const boardWidth = useMemo(() => {
+    if (isFullViewActive) {
+      const maxSquareByHeight = Math.max(320, viewportHeight - 220);
+      return Math.max(280, Math.min(boardContainerWidth, maxSquareByHeight));
+    }
+
+    if (isMobile) {
+      return boardContainerWidth || 320;
+    }
+
+    return Math.min(boardContainerWidth || 500, 500);
+  }, [boardContainerWidth, isFullViewActive, isMobile, viewportHeight]);
+
   return (
-    <div className="max-w-[900px] mx-auto p-4">
-      <div className="grid grid-cols-1 lg:grid-cols-[500px_auto] gap-4">
+    <div
+      ref={fullViewRef}
+      className={
+        isFullViewActive
+          ? 'fixed inset-0 z-50 overflow-auto bg-slate-900 px-3 py-4 sm:p-6'
+          : 'mx-auto max-w-[900px] p-4'
+      }
+    >
+      <div
+        className={
+          isFullViewActive
+            ? 'mx-auto grid max-w-[1280px] grid-cols-1 gap-4 lg:grid-cols-[minmax(0,1fr)_380px] lg:items-start'
+            : 'grid grid-cols-1 gap-4 lg:grid-cols-[500px_auto]'
+        }
+      >
         <div ref={boardRef}>
           <Chessboard
             boardOrientation={boardOrientation}
-            boardWidth={isMobile ? boardRef.current?.clientWidth || 320 : 500}
+            boardWidth={boardWidth}
             position={currentFen}
             customPieces={customPieces}
             customDarkSquareStyle={{ backgroundColor: bgDark }}
@@ -183,57 +300,98 @@ export const EvaluateMoves = () => {
             <Button color="gray" onClick={onLast}>
               <VscArrowCircleRight size={20} />
             </Button>
+            <Tooltip
+              content={
+                isFullViewActive
+                  ? t('common.button.exit-full-view')
+                  : t('common.button.full-view')
+              }
+              placement="top"
+            >
+              <Button color="gray" onClick={toggleFullView}>
+                {isFullViewActive ? (
+                  <VscScreenNormal size={20} />
+                ) : (
+                  <VscScreenFull size={20} />
+                )}
+              </Button>
+            </Tooltip>
           </div>
         </div>
-        <div className="p-4 border rounded relative">
-          <div className="flex justify-between items-center mb-2">
-            <h2 className="text-lg font-semibold">PGN Viewer</h2>
-            <ToggleSwitch
-              checked={showPGNBox}
-              onChange={setShowPGNBox}
-              label="Show PGN Box"
-            />
+
+        <div className="flex flex-col gap-4">
+          <div className="rounded border bg-white p-4">
+            <div className="flex justify-between items-center mb-2">
+              <h2 className="text-lg font-semibold">PGN Viewer</h2>
+              <ToggleSwitch
+                checked={showPGNBox}
+                onChange={setShowPGNBox}
+                label="Show PGN Box"
+              />
+            </div>
+            {showPGNBox && (
+              <Textarea
+                className="w-full text-sm"
+                rows={15}
+                value={pgnText}
+                onChange={(e) => setPgnText(e.target.value)}
+                placeholder="Paste your PGN here"
+              />
+            )}
+            <div className="mt-4 flex w-full justify-center">
+              <Tooltip content={t('common.button.copy-fen')} placement="top">
+                <Button
+                  color="gray"
+                  onClick={() => handleCopy(gameRef.current.fen())}
+                >
+                  <VscCopy size={20} />
+                </Button>
+              </Tooltip>
+              <Tooltip content={t('common.button.flip-board')} placement="top">
+                <Button
+                  className="ml-4"
+                  color="gray"
+                  onClick={() => {
+                    setBoardOrientation(
+                      boardOrientation === 'white' ? 'black' : 'white'
+                    );
+                  }}
+                >
+                  <VscLayoutPanel size={20} />
+                </Button>
+              </Tooltip>
+              <Tooltip content={t('common.button.pgn-file')} placement="top">
+                <Button className="ml-4" color="gray" onClick={onDownloadPgn}>
+                  <VscCloudDownload size={20} />
+                </Button>
+              </Tooltip>
+              <Button color="primary" onClick={analysis} className="ml-4">
+                <VscSearchFuzzy size={20} />
+              </Button>
+            </div>
           </div>
-          {showPGNBox && (
-            <Textarea
-              className="w-full text-sm"
-              rows={15}
-              value={pgnText}
-              onChange={(e) => setPgnText(e.target.value)}
-              placeholder="Paste your PGN here"
-            />
+
+          {isFullViewActive && (
+            <div className="flex min-h-[320px] flex-1 items-center justify-center">
+              <Link
+                href="/"
+                aria-label="LIMA Chess home"
+                className="flex w-full max-w-[320px] flex-col items-center"
+              >
+                <Image
+                  src="/images/Logo_LIMA.svg"
+                  alt="LIMA Chess"
+                  width={520}
+                  height={156}
+                  priority
+                  className="h-40 w-auto"
+                />
+                <span className="text-center text-2xl font-semibold tracking-wide text-[var(--s-bg)]">
+                  LIMA Chess
+                </span>
+              </Link>
+            </div>
           )}
-          <div className="mt-4 lg:mt-0 lg:absolute bottom-4 left-0 w-full flex justify-center">
-            <Tooltip content={t('common.button.copy-fen')} placement="top">
-              <Button
-                color="gray"
-                onClick={() => handleCopy(gameRef.current.fen())}
-              >
-                <VscCopy size={20} />
-              </Button>
-            </Tooltip>
-            <Tooltip content={t('common.button.flip-board')} placement="top">
-              <Button
-                className="ml-4"
-                color="gray"
-                onClick={() => {
-                  setBoardOrientation(
-                    boardOrientation === 'white' ? 'black' : 'white'
-                  );
-                }}
-              >
-                <VscLayoutPanel size={20} />
-              </Button>
-            </Tooltip>
-            <Tooltip content={t('common.button.pgn-file')} placement="top">
-              <Button className="ml-4" color="gray" onClick={onDownloadPgn}>
-                <VscCloudDownload size={20} />
-              </Button>
-            </Tooltip>
-            <Button color="primary" onClick={analysis} className="ml-4">
-              <VscSearchFuzzy size={20} />
-            </Button>
-          </div>
         </div>
       </div>
     </div>
