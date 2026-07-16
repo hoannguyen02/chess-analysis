@@ -1,3 +1,4 @@
+import { BOARD_THEMES, BoardThemeId } from '@/constants/board-themes';
 import { useAppContext } from '@/contexts/AppContext';
 import { useCustomBoard } from '@/hooks/useCustomBoard';
 import { LowercasePlayerName } from '@/types/player-name';
@@ -55,7 +56,7 @@ const DragDropSetupChessboard = ({
     q: false, // Black Queenside
   });
 
-  const { isMobile } = useAppContext();
+  const { boardTheme, isMobile, setBoardTheme } = useAppContext();
   const t = useTranslations();
   const { customPieces, bgDark, bgLight } = useCustomBoard();
   const game = useMemo(() => new Chess(fen), [fen]); // empty board
@@ -296,63 +297,63 @@ const DragDropSetupChessboard = ({
         >
           <div ref={boardRef}>
             <div className="mx-auto flex w-fit flex-col items-center">
-            <div
-              className="rounded-2xl border border-slate-300 bg-slate-50 shadow-lg"
-              style={{
-                display: 'flex',
-                justifyContent: 'center',
-                marginBottom: `${spaceBetweenBoardAndPieces}px`,
-                width: `${chessboardWidth}px`,
-              }}
-            >
-              {topPieces.map((piece) => (
-                <SparePiece
-                  key={piece}
-                  piece={piece as Piece}
-                  width={chessboardWidth / 8}
-                  dndId="ManualBoardEditor"
-                />
-              ))}
-            </div>
-            <Chessboard
-              boardWidth={chessboardWidth}
-              id="ManualBoardEditor"
-              boardOrientation={boardOrientation}
-              position={fenPosition}
-              onSparePieceDrop={handleSparePieceDrop}
-              onPieceDrop={handlePieceDrop}
-              onPieceDropOffBoard={handlePieceDropOffBoard}
-              dropOffBoardAction="trash"
-              customBoardStyle={{
-                borderRadius: '4px',
-                boxShadow: '0 2px 10px rgba(0, 0, 0, 0.5)',
-              }}
-              customPieces={customPieces}
-              customDarkSquareStyle={{
-                backgroundColor: bgDark,
-              }}
-              customLightSquareStyle={{
-                backgroundColor: bgLight,
-              }}
-            />
-            <div
-              className="rounded-2xl border border-slate-300 bg-slate-50 shadow-lg"
-              style={{
-                display: 'flex',
-                justifyContent: 'center',
-                marginTop: `${spaceBetweenBoardAndPieces}px`,
-                width: `${chessboardWidth}px`,
-              }}
-            >
-              {bottomPieces.map((piece) => (
-                <SparePiece
-                  key={piece}
-                  piece={piece as Piece}
-                  width={chessboardWidth / 8}
-                  dndId="ManualBoardEditor"
-                />
-              ))}
-            </div>
+              <div
+                className="rounded-2xl border border-slate-300 bg-slate-50 shadow-lg"
+                style={{
+                  display: 'flex',
+                  justifyContent: 'center',
+                  marginBottom: `${spaceBetweenBoardAndPieces}px`,
+                  width: `${chessboardWidth}px`,
+                }}
+              >
+                {topPieces.map((piece) => (
+                  <SparePiece
+                    key={piece}
+                    piece={piece as Piece}
+                    width={chessboardWidth / 8}
+                    dndId="ManualBoardEditor"
+                  />
+                ))}
+              </div>
+              <Chessboard
+                boardWidth={chessboardWidth}
+                id="ManualBoardEditor"
+                boardOrientation={boardOrientation}
+                position={fenPosition}
+                onSparePieceDrop={handleSparePieceDrop}
+                onPieceDrop={handlePieceDrop}
+                onPieceDropOffBoard={handlePieceDropOffBoard}
+                dropOffBoardAction="trash"
+                customBoardStyle={{
+                  borderRadius: '4px',
+                  boxShadow: '0 2px 10px rgba(0, 0, 0, 0.5)',
+                }}
+                customPieces={customPieces}
+                customDarkSquareStyle={{
+                  backgroundColor: bgDark,
+                }}
+                customLightSquareStyle={{
+                  backgroundColor: bgLight,
+                }}
+              />
+              <div
+                className="rounded-2xl border border-slate-300 bg-slate-50 shadow-lg"
+                style={{
+                  display: 'flex',
+                  justifyContent: 'center',
+                  marginTop: `${spaceBetweenBoardAndPieces}px`,
+                  width: `${chessboardWidth}px`,
+                }}
+              >
+                {bottomPieces.map((piece) => (
+                  <SparePiece
+                    key={piece}
+                    piece={piece as Piece}
+                    width={chessboardWidth / 8}
+                    dndId="ManualBoardEditor"
+                  />
+                ))}
+              </div>
             </div>
           </div>
           <div className="flex flex-col gap-4">
@@ -395,6 +396,46 @@ const DragDropSetupChessboard = ({
 
               {!isGuide && (
                 <div className="mt-8 flex flex-col gap-6">
+                  <div className="flex flex-col gap-3">
+                    <label className="font-semibold text-gray-700">
+                      {t('setup-board.board-theme')}
+                    </label>
+                    <div className="grid grid-cols-3 gap-3">
+                      {BOARD_THEMES.map((theme) => {
+                        const isActive = boardTheme === theme.id;
+
+                        return (
+                          <button
+                            key={theme.id}
+                            type="button"
+                            className={`rounded-xl border p-2 text-left transition ${
+                              isActive
+                                ? 'border-slate-900 ring-2 ring-slate-300'
+                                : 'border-slate-200 hover:border-slate-400'
+                            }`}
+                            onClick={() =>
+                              setBoardTheme(theme.id as BoardThemeId)
+                            }
+                          >
+                            <div className="mb-2 flex overflow-hidden rounded-lg border border-slate-200">
+                              <span
+                                className="h-8 flex-1"
+                                style={{ backgroundColor: theme.light }}
+                              />
+                              <span
+                                className="h-8 flex-1"
+                                style={{ backgroundColor: theme.dark }}
+                              />
+                            </div>
+                            {/* <span className="text-sm font-medium text-slate-700">
+                              {t(theme.labelKey)}
+                            </span> */}
+                          </button>
+                        );
+                      })}
+                    </div>
+                  </div>
+
                   <div className="flex flex-col gap-4">
                     <div className="flex flex-col gap-2">
                       <label className="font-semibold text-gray-700">

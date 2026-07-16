@@ -1,3 +1,8 @@
+import {
+  BOARD_THEME_MAP,
+  BoardThemeId,
+  DEFAULT_BOARD_THEME,
+} from '@/constants/board-themes';
 import { LocaleType } from '@/types/locale';
 import React, {
   createContext,
@@ -10,6 +15,8 @@ import React, {
 export interface AppContextProps {
   locale: LocaleType;
   isMobile: boolean;
+  boardTheme: BoardThemeId;
+  setBoardTheme: React.Dispatch<React.SetStateAction<BoardThemeId>>;
 }
 
 const AppContext = createContext<AppContextProps | undefined>(undefined);
@@ -20,6 +27,8 @@ export const AppProvider: React.FC<{
   isMobileSSR: boolean;
 }> = ({ children, locale, isMobileSSR }) => {
   const [isMobile, setIsMobile] = useState(isMobileSSR);
+  const [boardTheme, setBoardTheme] =
+    useState<BoardThemeId>(DEFAULT_BOARD_THEME);
 
   useEffect(() => {
     const handleResize = () => {
@@ -32,13 +41,31 @@ export const AppProvider: React.FC<{
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+
+    const savedBoardTheme = window.localStorage.getItem('board-theme');
+    if (
+      savedBoardTheme &&
+      Object.prototype.hasOwnProperty.call(BOARD_THEME_MAP, savedBoardTheme)
+    ) {
+      setBoardTheme(savedBoardTheme as BoardThemeId);
+    }
+  }, []);
+
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+    window.localStorage.setItem('board-theme', boardTheme);
+  }, [boardTheme]);
+
   const value = useMemo(
     () => ({
       locale,
-
       isMobile,
+      boardTheme,
+      setBoardTheme,
     }),
-    [locale, isMobile]
+    [boardTheme, locale, isMobile]
   );
 
   return <AppContext.Provider value={value}>{children}</AppContext.Provider>;

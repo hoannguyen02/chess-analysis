@@ -1,3 +1,5 @@
+import { BOARD_THEME_MAP } from '@/constants/board-themes';
+import { useAppContext } from '@/contexts/AppContext';
 import { useMemo } from 'react';
 
 // Define the types for the custom piece components
@@ -25,6 +27,7 @@ const pieces = [
 ];
 
 export const useCustomBoard = () => {
+  const { boardTheme } = useAppContext();
   const customPieces = useMemo<PieceComponents>(() => {
     const pieceComponents: PieceComponents = {};
     pieces.forEach((piece) => {
@@ -42,9 +45,12 @@ export const useCustomBoard = () => {
     return pieceComponents;
   }, []);
 
+  const activeBoardTheme = BOARD_THEME_MAP[boardTheme];
+
   return {
     customPieces,
-    bgDark: 'var(--bg-dark)',
-    bgLight: 'var(--bg-light)',
+    bgDark: activeBoardTheme.dark,
+    bgLight: activeBoardTheme.light,
+    boardTheme,
   };
 };
