@@ -10,14 +10,20 @@ import {
   Tooltip,
 } from 'flowbite-react';
 import { useTranslations } from 'next-intl';
-import { useCallback, useMemo, useRef, useState } from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import {
   Chessboard,
   ChessboardDnDProvider,
   SparePiece,
 } from 'react-chessboard';
 import { Piece, Square } from 'react-chessboard/dist/chessboard/types';
-import { VscSearchFuzzy } from 'react-icons/vsc';
+import {
+  VscScreenFull,
+  VscScreenNormal,
+  VscSearchFuzzy,
+} from 'react-icons/vsc';
 
 const pieces = [
   'wP',
@@ -55,9 +61,68 @@ const DragDropSetupChessboard = ({
   const game = useMemo(() => new Chess(fen), [fen]); // empty board
   const [boardOrientation, setBoardOrientation] =
     useState<LowercasePlayerName>('white');
-  const [boardWidth, setBoardWidth] = useState(360);
   const [fenPosition, setFenPosition] = useState(fen);
+  const [isFullViewMode, setIsFullViewMode] = useState(false);
+  const [isBrowserFullscreen, setIsBrowserFullscreen] = useState(false);
+  const [boardContainerWidth, setBoardContainerWidth] = useState(500);
+  const [viewportHeight, setViewportHeight] = useState(900);
+  const fullViewRef = useRef<HTMLDivElement>(null);
   const boardRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+
+    const syncFullscreenState = () => {
+      const inFullscreen = Boolean(document.fullscreenElement);
+      setIsBrowserFullscreen(inFullscreen);
+      if (!inFullscreen) {
+        setIsFullViewMode(false);
+      }
+    };
+
+    const updateViewportHeight = () => {
+      setViewportHeight(window.innerHeight);
+    };
+
+    syncFullscreenState();
+    updateViewportHeight();
+
+    document.addEventListener('fullscreenchange', syncFullscreenState);
+    window.addEventListener('resize', updateViewportHeight);
+
+    return () => {
+      document.removeEventListener('fullscreenchange', syncFullscreenState);
+      window.removeEventListener('resize', updateViewportHeight);
+    };
+  }, []);
+
+  useEffect(() => {
+    if (!boardRef.current || typeof ResizeObserver === 'undefined') return;
+
+    const observer = new ResizeObserver((entries) => {
+      const entry = entries[0];
+      if (!entry) return;
+      setBoardContainerWidth(
+        Math.max(280, Math.floor(entry.contentRect.width))
+      );
+    });
+
+    observer.observe(boardRef.current);
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    if (!isFullViewMode || isBrowserFullscreen) return;
+
+    const handleEsc = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        setIsFullViewMode(false);
+      }
+    };
+
+    window.addEventListener('keydown', handleEsc);
+    return () => window.removeEventListener('keydown', handleEsc);
+  }, [isBrowserFullscreen, isFullViewMode]);
 
   const handleSparePieceDrop = (piece: any, targetSquare: any) => {
     const color = piece[0];
@@ -166,205 +231,327 @@ const DragDropSetupChessboard = ({
     [blackPieces, boardOrientation, whitePieces]
   );
 
+  const toggleFullView = useCallback(async () => {
+    if (typeof window === 'undefined') return;
+
+    const currentlyFullscreen = Boolean(document.fullscreenElement);
+
+    if (currentlyFullscreen) {
+      try {
+        await document.exitFullscreen();
+      } catch {
+        // Ignore and fallback to local mode state below.
+      }
+      setIsFullViewMode(false);
+      return;
+    }
+
+    setIsFullViewMode((current) => !current);
+
+    const target = fullViewRef.current;
+    if (!target?.requestFullscreen) return;
+
+    try {
+      await target.requestFullscreen();
+    } catch {
+      // If browser denies fullscreen, fallback still uses local expanded mode.
+    }
+  }, []);
+
+  const isFullViewActive = isFullViewMode || isBrowserFullscreen;
+  const chessboardWidth = useMemo(() => {
+    if (isFullViewActive) {
+      const maxSquareByHeight = Math.max(320, viewportHeight - 260);
+      return Math.max(280, Math.min(boardContainerWidth, maxSquareByHeight));
+    }
+
+    if (isMobile) {
+      return boardContainerWidth || 320;
+    }
+
+    return Math.min(boardContainerWidth || 500, 500);
+  }, [boardContainerWidth, isFullViewActive, isMobile, viewportHeight]);
+
+  const spaceBetweenBoardAndPieces = useMemo(
+    () => chessboardWidth / 48,
+    [chessboardWidth]
+  );
+
   return (
     <ChessboardDnDProvider>
-      <div className="grid grid-cols-1 md:grid-cols-[400px_auto] lg:grid-cols-[500px_auto] gap-2 lg:gap-8 mx-auto max-w-[900px]">
-        <div ref={boardRef}>
-          <div
-            style={{
-              display: 'flex',
-              margin: `${boardWidth / 32}px ${boardWidth / 8}px`,
-            }}
-          >
-            {topPieces.map((piece) => (
-              <SparePiece
-                key={piece}
-                piece={piece as Piece}
-                width={boardWidth / 8}
-                dndId="ManualBoardEditor"
-              />
-            ))}
-          </div>
-          <Chessboard
-            onBoardWidthChange={setBoardWidth}
-            boardWidth={isMobile ? boardRef.current?.clientWidth || 320 : 500}
-            id="ManualBoardEditor"
-            boardOrientation={boardOrientation}
-            position={fenPosition}
-            onSparePieceDrop={handleSparePieceDrop}
-            onPieceDrop={handlePieceDrop}
-            onPieceDropOffBoard={handlePieceDropOffBoard}
-            dropOffBoardAction="trash"
-            customBoardStyle={{
-              borderRadius: '4px',
-              boxShadow: '0 2px 10px rgba(0, 0, 0, 0.5)',
-            }}
-            customPieces={customPieces}
-            customDarkSquareStyle={{
-              backgroundColor: bgDark,
-            }}
-            customLightSquareStyle={{
-              backgroundColor: bgLight,
-            }}
-          />
-          <div
-            style={{
-              display: 'flex',
-              margin: `${boardWidth / 32}px ${boardWidth / 8}px`,
-            }}
-          >
-            {bottomPieces.map((piece) => (
-              <SparePiece
-                key={piece}
-                piece={piece as Piece}
-                width={boardWidth / 8}
-                dndId="ManualBoardEditor"
-              />
-            ))}
-          </div>
-        </div>
-        <div className="grid place-items-top">
-          <div className="flex flex-col mt-24 w-[50%] mx-auto">
-            <Button
-              onClick={() => {
-                game.reset();
-                setFenPosition(game.fen());
+      <div
+        ref={fullViewRef}
+        className={
+          isFullViewActive
+            ? 'fixed inset-0 z-50 overflow-auto bg-slate-900 px-3 py-4 sm:p-6'
+            : 'mx-auto max-w-[1100px] p-4'
+        }
+      >
+        <div
+          className={
+            isFullViewActive
+              ? 'mx-auto grid max-w-[1280px] grid-cols-1 gap-4 lg:grid-cols-[minmax(0,1fr)_420px] lg:items-start'
+              : 'grid grid-cols-1 gap-2 md:grid-cols-[400px_auto] lg:grid-cols-[500px_auto] lg:gap-8 mx-auto max-w-[1100px]'
+          }
+        >
+          <div ref={boardRef}>
+            <div className="mx-auto flex w-fit flex-col items-center">
+            <div
+              className="rounded-2xl border border-slate-300 bg-slate-50 shadow-lg"
+              style={{
+                display: 'flex',
+                justifyContent: 'center',
+                marginBottom: `${spaceBetweenBoardAndPieces}px`,
+                width: `${chessboardWidth}px`,
               }}
-              className="mb-4"
-              outline
-              gradientDuoTone="cyanToBlue"
             >
-              {t('setup-board.start-position')}
-            </Button>
-            <Button
-              onClick={() => {
-                game.clear();
-                setFenPosition(game.fen());
-              }}
-              className="mb-4"
-              outline
-              gradientDuoTone="pinkToOrange"
-            >
-              {t('setup-board.clear-board')}
-            </Button>
-            <Button
-              onClick={onFlipBoard}
-              outline
-              gradientDuoTone="purpleToBlue"
-            >
-              {t('setup-board.flip-board')}
-            </Button>
-          </div>
-          {!isGuide && (
-            <>
-              <div className="flex flex-col items-center justify-center">
-                <div className="flex flex-col gap-2">
-                  <label className="font-semibold text-gray-700">
-                    {t('setup-board.white-castling')}
-                  </label>
-                  <div className="flex items-center gap-2">
-                    <Checkbox
-                      checked={castlingRights.K}
-                      onChange={() => handleCastlingChange('K')}
-                    />
-                    <label className="text-xs">
-                      {t('setup-board.king-side')} (O-O)
-                    </label>
-                    <Checkbox
-                      checked={castlingRights.Q}
-                      onChange={() => handleCastlingChange('Q')}
-                    />
-                    <label className="text-xs">
-                      {t('setup-board.queen-side')} (O-O-O)
-                    </label>
-                  </div>
-                </div>
-
-                <div className="flex flex-col gap-2 mt-2">
-                  <label className="font-semibold text-gray-700">
-                    {t('setup-board.black-castling')}
-                  </label>
-                  <div className="flex items-center gap-2">
-                    <Checkbox
-                      checked={castlingRights.k}
-                      onChange={() => handleCastlingChange('k')}
-                    />
-                    <label className="text-xs">
-                      {t('setup-board.king-side')} (O-O)
-                    </label>
-                    <Checkbox
-                      checked={castlingRights.q}
-                      onChange={() => handleCastlingChange('q')}
-                    />
-                    <label className="text-xs">
-                      {t('setup-board.queen-side')} (O-O-O)
-                    </label>
-                  </div>
-                </div>
-              </div>
-              <div className="flex flex-col items-center mt-4">
-                <label className="mb-2 font-semibold text-gray-700">
-                  {t('setup-board.next-player-to-move')}
-                </label>
-                <div className="flex items-center">
-                  <Button
-                    className={`flex items-center px-4 py-2 rounded-lg transition-all duration-200 ${
-                      game.turn() === 'w'
-                        ? 'bg-blue-500 text-white shadow-lg'
-                        : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
-                    }`}
-                    onClick={() => {
-                      setTurn('w');
-                    }}
-                  >
-                    {t('common.title.white')}
-                  </Button>
-                  <Button
-                    className={`flex items-center px-4 py-2 ml-2 rounded-lg transition-all duration-200 ${
-                      game.turn() === 'b'
-                        ? 'bg-blue-500 text-white shadow-lg'
-                        : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
-                    }`}
-                    onClick={() => {
-                      setTurn('b');
-                    }}
-                  >
-                    {t('common.title.black')}
-                  </Button>
-                </div>
-              </div>
-
-              <div className="flex flex-col items-center mt-4">
-                <TextInput
-                  className="w-[400px] rounded"
-                  value={fenPosition}
-                  onChange={handleFenInputChange}
-                  placeholder="Paste FEN position to start editing"
+              {topPieces.map((piece) => (
+                <SparePiece
+                  key={piece}
+                  piece={piece as Piece}
+                  width={chessboardWidth / 8}
+                  dndId="ManualBoardEditor"
                 />
-                <div className="flex items-center mt-4">
-                  <Clipboard
-                    valueToCopy={game.fen()}
-                    label={t('common.button.copy-fen')}
-                    className="py-[10px] px-2"
-                    theme={{
-                      button: {
-                        base: 'bg-light',
-                        label: 'text-black',
-                      },
-                    }}
-                  />
-                  <Tooltip
-                    content={t('common.navigation.analysis')}
-                    placement="top"
-                  >
-                    <Button color="primary" onClick={analysis} className="ml-4">
-                      <VscSearchFuzzy size={20} />
-                    </Button>
-                  </Tooltip>
-                </div>
+              ))}
+            </div>
+            <Chessboard
+              boardWidth={chessboardWidth}
+              id="ManualBoardEditor"
+              boardOrientation={boardOrientation}
+              position={fenPosition}
+              onSparePieceDrop={handleSparePieceDrop}
+              onPieceDrop={handlePieceDrop}
+              onPieceDropOffBoard={handlePieceDropOffBoard}
+              dropOffBoardAction="trash"
+              customBoardStyle={{
+                borderRadius: '4px',
+                boxShadow: '0 2px 10px rgba(0, 0, 0, 0.5)',
+              }}
+              customPieces={customPieces}
+              customDarkSquareStyle={{
+                backgroundColor: bgDark,
+              }}
+              customLightSquareStyle={{
+                backgroundColor: bgLight,
+              }}
+            />
+            <div
+              className="rounded-2xl border border-slate-300 bg-slate-50 shadow-lg"
+              style={{
+                display: 'flex',
+                justifyContent: 'center',
+                marginTop: `${spaceBetweenBoardAndPieces}px`,
+                width: `${chessboardWidth}px`,
+              }}
+            >
+              {bottomPieces.map((piece) => (
+                <SparePiece
+                  key={piece}
+                  piece={piece as Piece}
+                  width={chessboardWidth / 8}
+                  dndId="ManualBoardEditor"
+                />
+              ))}
+            </div>
+            </div>
+          </div>
+          <div className="flex flex-col gap-4">
+            <div
+              className={
+                isFullViewActive
+                  ? 'rounded border bg-white p-4'
+                  : 'rounded p-4 lg:border'
+              }
+            >
+              <div className="mx-auto grid w-full max-w-[420px] grid-cols-3 gap-3">
+                <Button
+                  onClick={() => {
+                    game.reset();
+                    setFenPosition(game.fen());
+                  }}
+                  outline
+                  gradientDuoTone="cyanToBlue"
+                >
+                  {t('setup-board.start-position')}
+                </Button>
+                <Button
+                  onClick={() => {
+                    game.clear();
+                    setFenPosition(game.fen());
+                  }}
+                  outline
+                  gradientDuoTone="pinkToOrange"
+                >
+                  {t('setup-board.clear-board')}
+                </Button>
+                <Button
+                  onClick={onFlipBoard}
+                  outline
+                  gradientDuoTone="purpleToBlue"
+                >
+                  {t('setup-board.flip-board')}
+                </Button>
               </div>
-            </>
-          )}
+
+              {!isGuide && (
+                <div className="mt-8 flex flex-col gap-6">
+                  <div className="flex flex-col gap-4">
+                    <div className="flex flex-col gap-2">
+                      <label className="font-semibold text-gray-700">
+                        {t('setup-board.white-castling')}
+                      </label>
+                      <div className="flex flex-wrap items-center gap-2">
+                        <Checkbox
+                          checked={castlingRights.K}
+                          onChange={() => handleCastlingChange('K')}
+                        />
+                        <label className="text-xs">
+                          {t('setup-board.king-side')} (O-O)
+                        </label>
+                        <Checkbox
+                          checked={castlingRights.Q}
+                          onChange={() => handleCastlingChange('Q')}
+                        />
+                        <label className="text-xs">
+                          {t('setup-board.queen-side')} (O-O-O)
+                        </label>
+                      </div>
+                    </div>
+
+                    <div className="flex flex-col gap-2">
+                      <label className="font-semibold text-gray-700">
+                        {t('setup-board.black-castling')}
+                      </label>
+                      <div className="flex flex-wrap items-center gap-2">
+                        <Checkbox
+                          checked={castlingRights.k}
+                          onChange={() => handleCastlingChange('k')}
+                        />
+                        <label className="text-xs">
+                          {t('setup-board.king-side')} (O-O)
+                        </label>
+                        <Checkbox
+                          checked={castlingRights.q}
+                          onChange={() => handleCastlingChange('q')}
+                        />
+                        <label className="text-xs">
+                          {t('setup-board.queen-side')} (O-O-O)
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="flex flex-col">
+                    <label className="mb-2 font-semibold text-gray-700">
+                      {t('setup-board.next-player-to-move')}
+                    </label>
+                    <div className="flex items-center">
+                      <Button
+                        className={`flex items-center px-4 py-2 rounded-lg transition-all duration-200 ${
+                          game.turn() === 'w'
+                            ? 'bg-blue-500 text-white shadow-lg'
+                            : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+                        }`}
+                        onClick={() => {
+                          setTurn('w');
+                        }}
+                      >
+                        {t('common.title.white')}
+                      </Button>
+                      <Button
+                        className={`ml-2 flex items-center px-4 py-2 rounded-lg transition-all duration-200 ${
+                          game.turn() === 'b'
+                            ? 'bg-blue-500 text-white shadow-lg'
+                            : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+                        }`}
+                        onClick={() => {
+                          setTurn('b');
+                        }}
+                      >
+                        {t('common.title.black')}
+                      </Button>
+                    </div>
+                  </div>
+
+                  <div className="flex flex-col gap-4">
+                    <TextInput
+                      className="w-full rounded"
+                      value={fenPosition}
+                      onChange={handleFenInputChange}
+                      placeholder="Paste FEN position to start editing"
+                    />
+                    <div className="flex items-center justify-center">
+                      <Clipboard
+                        valueToCopy={game.fen()}
+                        label={t('common.button.copy-fen')}
+                        className="px-2 py-[10px]"
+                        theme={{
+                          button: {
+                            base: 'bg-light',
+                            label: 'text-black',
+                          },
+                        }}
+                      />
+                      <Tooltip
+                        content={t('common.navigation.analysis')}
+                        placement="top"
+                      >
+                        <Button
+                          color="primary"
+                          onClick={analysis}
+                          className="ml-4"
+                        >
+                          <VscSearchFuzzy size={20} />
+                        </Button>
+                      </Tooltip>
+                      <Tooltip
+                        content={
+                          isFullViewActive
+                            ? t('common.button.exit-full-view')
+                            : t('common.button.full-view')
+                        }
+                        placement="top"
+                      >
+                        <Button
+                          color="gray"
+                          onClick={toggleFullView}
+                          className="ml-4"
+                        >
+                          {isFullViewActive ? (
+                            <VscScreenNormal size={20} />
+                          ) : (
+                            <VscScreenFull size={20} />
+                          )}
+                        </Button>
+                      </Tooltip>
+                    </div>
+                  </div>
+                </div>
+              )}
+            </div>
+
+            {isFullViewActive && (
+              <div className="flex min-h-[320px] flex-1 items-center justify-center">
+                <Link
+                  href="/"
+                  aria-label="LIMA Chess home"
+                  className="flex w-full max-w-[320px] flex-col items-center"
+                >
+                  <Image
+                    src="/images/Logo_LIMA.svg"
+                    alt="LIMA Chess"
+                    width={520}
+                    height={156}
+                    priority
+                    className="h-40 w-auto"
+                  />
+                  <span className="text-center text-2xl font-semibold tracking-wide text-[var(--s-bg)]">
+                    LIMA Chess
+                  </span>
+                </Link>
+              </div>
+            )}
+          </div>
         </div>
       </div>
     </ChessboardDnDProvider>
