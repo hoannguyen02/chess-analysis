@@ -384,9 +384,9 @@ export const EvaluateMoves = () => {
                   width={520}
                   height={156}
                   priority
-                  className="h-40 w-auto"
+                  className="h-80 w-auto"
                 />
-                <span className="text-center text-2xl font-semibold tracking-wide text-[var(--s-bg)]">
+                <span className="text-center text-4xl font-semibold tracking-wide text-[var(--s-bg)]">
                   LIMA Chess
                 </span>
               </Link>
