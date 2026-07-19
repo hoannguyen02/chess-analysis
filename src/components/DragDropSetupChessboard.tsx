@@ -572,7 +572,7 @@ const DragDropSetupChessboard = ({
             </div>
 
             {isFullViewActive && (
-              <div className="flex min-h-[320px] flex-1 items-center justify-center">
+              <div className="flex min-h-[280px] flex-1 items-center justify-center">
                 <Link
                   href="/"
                   aria-label="LIMA Chess home"
