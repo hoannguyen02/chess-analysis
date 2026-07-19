@@ -3,6 +3,8 @@
   "clear-board": "Clear Board",
   "flip-board": "Flip Board",
   "board-theme": "Board theme",
+  "board-theme-settings": "Theme settings",
+  "active-theme": "Active",
   "theme-classic": "Classic",
   "theme-walnut": "Walnut",
   "theme-copper": "Copper",

@@ -7,6 +7,7 @@ import {
   Button,
   Checkbox,
   Clipboard,
+  Dropdown,
   TextInput,
   Tooltip,
 } from 'flowbite-react';
@@ -364,7 +365,7 @@ const DragDropSetupChessboard = ({
                   : 'rounded p-4 lg:border'
               }
             >
-              <div className="mx-auto grid w-full max-w-[420px] grid-cols-3 gap-3">
+              <div className="mx-auto grid w-full grid-cols-3 gap-2">
                 <Button
                   onClick={() => {
                     game.reset();
@@ -396,44 +397,60 @@ const DragDropSetupChessboard = ({
 
               {!isGuide && (
                 <div className="mt-8 flex flex-col gap-6">
-                  <div className="flex flex-col gap-3">
-                    <label className="font-semibold text-gray-700">
-                      {t('setup-board.board-theme')}
-                    </label>
-                    <div className="grid grid-cols-3 gap-3">
+                  <div className="flex items-center justify-between gap-4 rounded-xl border border-slate-200 bg-slate-50 px-4 py-3">
+                    <div>
+                      <p className="text-sm font-semibold text-gray-700">
+                        {t('setup-board.board-theme')}
+                      </p>
+                      <p className="text-sm text-slate-500">
+                        {BOARD_THEMES.find((theme) => theme.id === boardTheme)
+                          ?.labelKey
+                          ? t(
+                              BOARD_THEMES.find(
+                                (theme) => theme.id === boardTheme
+                              )!.labelKey
+                            )
+                          : ''}
+                      </p>
+                    </div>
+                    <Dropdown
+                      label={t('setup-board.board-theme-settings')}
+                      inline
+                    >
                       {BOARD_THEMES.map((theme) => {
                         const isActive = boardTheme === theme.id;
 
                         return (
-                          <button
+                          <Dropdown.Item
                             key={theme.id}
-                            type="button"
-                            className={`rounded-xl border p-2 text-left transition ${
-                              isActive
-                                ? 'border-slate-900 ring-2 ring-slate-300'
-                                : 'border-slate-200 hover:border-slate-400'
-                            }`}
                             onClick={() =>
                               setBoardTheme(theme.id as BoardThemeId)
                             }
                           >
-                            <div className="mb-2 flex overflow-hidden rounded-lg border border-slate-200">
-                              <span
-                                className="h-8 flex-1"
-                                style={{ backgroundColor: theme.light }}
-                              />
-                              <span
-                                className="h-8 flex-1"
-                                style={{ backgroundColor: theme.dark }}
-                              />
+                            <div className="flex min-w-[180px] items-center gap-3">
+                              <div className="flex w-16 overflow-hidden rounded border border-slate-200">
+                                <span
+                                  className="h-6 flex-1"
+                                  style={{ backgroundColor: theme.light }}
+                                />
+                                <span
+                                  className="h-6 flex-1"
+                                  style={{ backgroundColor: theme.dark }}
+                                />
+                              </div>
+                              <span className="text-sm text-slate-700">
+                                {t(theme.labelKey)}
+                              </span>
+                              {isActive && (
+                                <span className="ml-auto text-xs font-semibold text-slate-500">
+                                  {t('setup-board.active-theme')}
+                                </span>
+                              )}
                             </div>
-                            {/* <span className="text-sm font-medium text-slate-700">
-                              {t(theme.labelKey)}
-                            </span> */}
-                          </button>
+                          </Dropdown.Item>
                         );
                       })}
-                    </div>
+                    </Dropdown>
                   </div>
 
                   <div className="flex flex-col gap-4">
@@ -572,7 +589,7 @@ const DragDropSetupChessboard = ({
             </div>
 
             {isFullViewActive && (
-              <div className="flex min-h-[280px] flex-1 items-center justify-center">
+              <div className="flex min-h-[320px] flex-1 items-center justify-center">
                 <Link
                   href="/"
                   aria-label="LIMA Chess home"
