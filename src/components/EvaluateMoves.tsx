@@ -258,6 +258,17 @@ export const EvaluateMoves = () => {
     return Math.min(boardContainerWidth || 500, 500);
   }, [boardContainerWidth, isFullViewActive, isMobile, viewportHeight]);
 
+  const notationStyle = useMemo(
+    () =>
+      isFullViewActive
+        ? {
+            fontSize: boardWidth / 30,
+            fontWeight: 700,
+          }
+        : undefined,
+    [boardWidth, isFullViewActive]
+  );
+
   return (
     <div
       ref={fullViewRef}
@@ -280,6 +291,7 @@ export const EvaluateMoves = () => {
             boardWidth={boardWidth}
             position={currentFen}
             customPieces={customPieces}
+            customNotationStyle={notationStyle}
             customDarkSquareStyle={{ backgroundColor: bgDark }}
             customLightSquareStyle={{ backgroundColor: bgLight }}
             customBoardStyle={{

@@ -279,6 +279,17 @@ const DragDropSetupChessboard = ({
     [chessboardWidth]
   );
 
+  const notationStyle = useMemo(
+    () =>
+      isFullViewActive
+        ? {
+            fontSize: chessboardWidth / 30,
+            fontWeight: 700,
+          }
+        : undefined,
+    [chessboardWidth, isFullViewActive]
+  );
+
   return (
     <ChessboardDnDProvider>
       <div
@@ -321,6 +332,7 @@ const DragDropSetupChessboard = ({
                 id="ManualBoardEditor"
                 boardOrientation={boardOrientation}
                 position={fenPosition}
+                customNotationStyle={notationStyle}
                 onSparePieceDrop={handleSparePieceDrop}
                 onPieceDrop={handlePieceDrop}
                 onPieceDropOffBoard={handlePieceDropOffBoard}
