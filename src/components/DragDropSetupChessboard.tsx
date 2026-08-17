@@ -285,6 +285,8 @@ const DragDropSetupChessboard = ({
         ? {
             fontSize: chessboardWidth / 30,
             fontWeight: 700,
+            color: '#f8fafc',
+            textShadow: '0 1px 3px rgba(15, 23, 42, 0.85)',
           }
         : undefined,
     [chessboardWidth, isFullViewActive]
