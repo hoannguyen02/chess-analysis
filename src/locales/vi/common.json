@@ -19,5 +19,15 @@
     "full-view": "Toàn màn hình",
     "exit-full-view": "Thoát toàn màn hình",
     "pgn-file": "Pgn file"
+  },
+  "move-quality": {
+    "start": "Vị trí ban đầu",
+    "analyzing": "Đang phân tích nước đi...",
+    "brilliant": "Xuất sắc",
+    "great": "Rất hay",
+    "best": "Tốt nhất",
+    "inaccuracy": "Chưa chính xác",
+    "mistake": "Sai lầm",
+    "blunder": "Nước đi hỏng"
   }
 }

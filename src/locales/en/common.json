@@ -20,5 +20,15 @@
     "exit-full-view": "Exit full view",
     "pgn-file": "Pgn file",
     "restart": "Restart"
+  },
+  "move-quality": {
+    "start": "Start position",
+    "analyzing": "Analyzing moves...",
+    "brilliant": "Brilliant",
+    "great": "Great",
+    "best": "Best",
+    "inaccuracy": "Inaccuracy",
+    "mistake": "Mistake",
+    "blunder": "Blunder"
   }
 }

@@ -1,10 +1,21 @@
 'use client';
 
+'use client';
+
+import { MoveTagsDialog } from '@/components/MoveTagsDialog';
+import {
+  DEFAULT_MOVE_ANNOTATIONS,
+  MOVE_QUALITY_OPTIONS,
+  MOVE_QUALITY_STYLES,
+  MOVE_QUALITY_SYMBOLS,
+} from '@/constants/move-annotations';
 import { useAppContext } from '@/contexts/AppContext';
 import { useCustomBoard } from '@/hooks/useCustomBoard';
 import { LowercasePlayerName } from '@/types/player-name';
+import { MoveAnnotation, MoveQuality } from '@/types/move-annotation';
 import { getActivePlayerFromFEN } from '@/utils/get-player-name-from-fen';
 import { Chess, Move } from 'chess.js';
+import type { CustomSquareProps } from 'react-chessboard/dist/chessboard/types';
 import { Button, Textarea, ToggleSwitch, Tooltip } from 'flowbite-react';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
@@ -22,6 +33,7 @@ import {
   VscScreenFull,
   VscScreenNormal,
   VscSearchFuzzy,
+  VscTag,
 } from 'react-icons/vsc';
 
 const DEFAULT_PGN = `1.Nf3 Nf6 2.c4 g6 3.Nc3 Bg7 4.d4 O-O 5.Bf4 d5 6.Qb3 dxc4 7.Qxc4 c6 8.e4 Nbd7
@@ -30,6 +42,11 @@ const DEFAULT_PGN = `1.Nf3 Nf6 2.c4 g6 3.Nc3 Bg7 4.d4 O-O 5.Bf4 d5 6.Qb3 dxc4 7.
 22.Kf1 Nc3+ 23.Kg1 axb6 24.Qb4 Ra4 25.Qxb6 Nxd1 26.h3 Rxa2 27.Kh2 Nxf2 28.Re1 Rxe1
 29.Qd8+ Bf8 30.Nxe1 Bd5 31.Nf3 Ne4 32.Qb8 b5 33.h4 h5 34.Ne5 Kg7 35.Kg1 Bc5+
 36.Kf1 Ng3+ 37.Ke1 Bb4+ 38.Kd1 Bb3+ 39.Kc1 Ne2+ 40.Kb1 Nc3+ 41.Kc1 Rc2+  0-1`;
+
+const MOVE_ANIMATION_DELAY_MS = 450;
+const MOVE_ANNOTATION_LABEL_DURATION_MS = 2000;
+const MOVE_ANNOTATION_ICON_DELAY_MS =
+  MOVE_ANIMATION_DELAY_MS + MOVE_ANNOTATION_LABEL_DURATION_MS;
 
 export const EvaluateMoves = () => {
   const { customPieces, bgDark, bgLight } = useCustomBoard();
@@ -41,11 +58,19 @@ export const EvaluateMoves = () => {
   const [pgnMoves, setPgnMoves] = useState<Move[]>([]);
   const [currentMoveIndex, setCurrentMoveIndex] = useState<number>(0);
   const [pgnText, setPgnText] = useState<string>(DEFAULT_PGN);
+  const [moveAnnotations, setMoveAnnotations] = useState<MoveAnnotation[]>(
+    DEFAULT_MOVE_ANNOTATIONS
+  );
   const [showPGNBox, setShowPGNBox] = useState<boolean>(true);
+  const [isMoveTagsDialogOpen, setIsMoveTagsDialogOpen] = useState(false);
   const [isFullViewMode, setIsFullViewMode] = useState(false);
   const [isBrowserFullscreen, setIsBrowserFullscreen] = useState(false);
   const [boardContainerWidth, setBoardContainerWidth] = useState(500);
   const [viewportHeight, setViewportHeight] = useState(900);
+  const [showSquareAnnotationLabel, setShowSquareAnnotationLabel] =
+    useState(false);
+  const [showSquareAnnotationIcon, setShowSquareAnnotationIcon] =
+    useState(false);
   const t = useTranslations();
 
   const gameRef = useRef(new Chess());
@@ -143,6 +168,11 @@ export const EvaluateMoves = () => {
 
       setPgnMoves(allMoves);
       setCurrentMoveIndex(0);
+      setMoveAnnotations((currentAnnotations) =>
+        currentAnnotations.filter(
+          (annotation) => annotation.ply >= 1 && annotation.ply <= allMoves.length
+        )
+      );
     }
   }, [pgnText]);
 
@@ -271,6 +301,161 @@ export const EvaluateMoves = () => {
     [boardWidth, isFullViewActive]
   );
 
+  const currentMoveAnnotation = useMemo(() => {
+    if (currentMoveIndex <= 0) return null;
+    return moveAnnotations.find(
+      (annotation) => annotation.ply === currentMoveIndex
+    ) ?? null;
+  }, [currentMoveIndex, moveAnnotations]);
+
+  const currentMoveLabel = currentMoveAnnotation
+    ? t(`common.move-quality.${currentMoveAnnotation.quality}`)
+    : null;
+
+  const getMoveQualityLabel = useCallback(
+    (quality: MoveQuality) => t(`common.move-quality.${quality}`),
+    [t]
+  );
+
+  const currentMove = useMemo(() => {
+    if (currentMoveIndex <= 0) return null;
+    return pgnMoves[currentMoveIndex - 1] ?? null;
+  }, [currentMoveIndex, pgnMoves]);
+
+  const currentAnnotationSquare = currentMoveAnnotation ? currentMove?.to : null;
+
+  useEffect(() => {
+    if (!currentMoveAnnotation || !currentAnnotationSquare) {
+      setShowSquareAnnotationLabel(false);
+      setShowSquareAnnotationIcon(false);
+      return;
+    }
+
+    setShowSquareAnnotationLabel(false);
+    setShowSquareAnnotationIcon(false);
+
+    const labelTimeoutId = window.setTimeout(() => {
+      setShowSquareAnnotationLabel(true);
+    }, MOVE_ANIMATION_DELAY_MS);
+
+    const iconTimeoutId = window.setTimeout(() => {
+      setShowSquareAnnotationIcon(true);
+    }, MOVE_ANNOTATION_ICON_DELAY_MS);
+
+    const hideLabelTimeoutId = window.setTimeout(() => {
+      setShowSquareAnnotationLabel(false);
+    }, MOVE_ANIMATION_DELAY_MS + MOVE_ANNOTATION_LABEL_DURATION_MS);
+
+    return () => {
+      window.clearTimeout(labelTimeoutId);
+      window.clearTimeout(iconTimeoutId);
+      window.clearTimeout(hideLabelTimeoutId);
+    };
+  }, [currentAnnotationSquare, currentMoveAnnotation, currentMoveIndex]);
+
+  const moveOptions = useMemo(
+    () =>
+      pgnMoves.map((move, index) => ({
+        ply: index + 1,
+        label: `${Math.floor(index / 2) + 1}${index % 2 === 0 ? '.' : '...'} ${move.san}`,
+      })),
+    [pgnMoves]
+  );
+
+  const addMoveAnnotation = useCallback(() => {
+    setMoveAnnotations((currentAnnotations) => [
+      ...currentAnnotations,
+      {
+        ply: currentAnnotations.at(-1)?.ply ?? 1,
+        quality: 'brilliant',
+        note: '',
+      },
+    ]);
+  }, []);
+
+  const updateMoveAnnotation = useCallback(
+    (
+      index: number,
+      patch: Partial<MoveAnnotation>
+    ) => {
+      setMoveAnnotations((currentAnnotations) =>
+        currentAnnotations.map((annotation, annotationIndex) =>
+          annotationIndex === index
+            ? { ...annotation, ...patch }
+            : annotation
+        )
+      );
+    },
+    []
+  );
+
+  const removeMoveAnnotation = useCallback((index: number) => {
+    setMoveAnnotations((currentAnnotations) =>
+      currentAnnotations.filter(
+        (_annotation, annotationIndex) => annotationIndex !== index
+      )
+    );
+  }, []);
+
+  const CustomAnnotatedSquare = useCallback(
+    ({ children, ref, square, squareColor, style }: CustomSquareProps) => {
+      const isAnnotatedSquare =
+        Boolean(currentAnnotationSquare) && square === currentAnnotationSquare;
+      const annotationStyle = currentMoveAnnotation
+        ? MOVE_QUALITY_STYLES[currentMoveAnnotation.quality]
+        : null;
+      const showLabel =
+        isAnnotatedSquare &&
+        currentMoveAnnotation &&
+        currentMoveLabel &&
+        showSquareAnnotationLabel;
+
+      return (
+        <div
+          ref={ref}
+          style={style}
+          data-square={square}
+          data-square-color={squareColor}
+          className="relative"
+        >
+          {children}
+          {isAnnotatedSquare && currentMoveAnnotation && annotationStyle && (
+            <div
+              className={`pointer-events-none absolute -right-[10%] -top-[10%] z-20 transition-all duration-200 ${
+                showSquareAnnotationIcon
+                  ? 'translate-x-0 translate-y-0 opacity-100'
+                  : 'translate-x-1 -translate-y-1 opacity-0'
+              }`}
+            >
+              <div
+                className={`flex h-[26%] min-h-7 min-w-7 items-center justify-center rounded-full px-1.5 text-[clamp(0.7rem,1vw,0.9rem)] font-extrabold shadow-lg ring-2 ring-white/80 ${annotationStyle.square}`}
+              >
+                {MOVE_QUALITY_SYMBOLS[currentMoveAnnotation.quality]}
+              </div>
+            </div>
+          )}
+          {showLabel && annotationStyle && (
+            <div className="pointer-events-none absolute -top-[18%] left-1/2 z-10 flex -translate-x-1/2 justify-center">
+              <div
+                className={`whitespace-nowrap rounded-full px-3 py-1 text-[clamp(0.72rem,1vw,0.95rem)] font-extrabold shadow-lg ring-2 ring-white/80 ${annotationStyle.square}`}
+              >
+                {MOVE_QUALITY_SYMBOLS[currentMoveAnnotation.quality]}{' '}
+                {currentMoveLabel}
+              </div>
+            </div>
+          )}
+        </div>
+      );
+    },
+    [
+      currentAnnotationSquare,
+      currentMoveAnnotation,
+      currentMoveLabel,
+      showSquareAnnotationIcon,
+      showSquareAnnotationLabel,
+    ]
+  );
+
   return (
     <div
       ref={fullViewRef}
@@ -293,6 +478,7 @@ export const EvaluateMoves = () => {
             boardWidth={boardWidth}
             position={currentFen}
             customPieces={customPieces}
+            customSquare={CustomAnnotatedSquare}
             customNotationStyle={notationStyle}
             customDarkSquareStyle={{ backgroundColor: bgDark }}
             customLightSquareStyle={{ backgroundColor: bgLight }}
@@ -328,6 +514,11 @@ export const EvaluateMoves = () => {
                 ) : (
                   <VscScreenFull size={20} />
                 )}
+              </Button>
+            </Tooltip>
+            <Tooltip content="Move Tags" placement="top">
+              <Button color="gray" onClick={() => setIsMoveTagsDialogOpen(true)}>
+                <VscTag size={20} />
               </Button>
             </Tooltip>
           </div>
@@ -408,6 +599,17 @@ export const EvaluateMoves = () => {
           )}
         </div>
       </div>
+      <MoveTagsDialog
+        open={isMoveTagsDialogOpen}
+        onClose={() => setIsMoveTagsDialogOpen(false)}
+        moveAnnotations={moveAnnotations}
+        moveOptions={moveOptions}
+        onAddTag={addMoveAnnotation}
+        onUpdateAnnotation={updateMoveAnnotation}
+        onRemoveAnnotation={removeMoveAnnotation}
+        moveQualityOptions={MOVE_QUALITY_OPTIONS}
+        getMoveQualityLabel={getMoveQualityLabel}
+      />
     </div>
   );
 };
