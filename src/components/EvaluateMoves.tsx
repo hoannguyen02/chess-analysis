@@ -10,17 +10,17 @@ import {
 } from '@/constants/move-annotations';
 import { useAppContext } from '@/contexts/AppContext';
 import { useCustomBoard } from '@/hooks/useCustomBoard';
-import { LowercasePlayerName } from '@/types/player-name';
 import { MoveAnnotation, MoveQuality } from '@/types/move-annotation';
+import { LowercasePlayerName } from '@/types/player-name';
 import { getActivePlayerFromFEN } from '@/utils/get-player-name-from-fen';
 import { Chess, Move } from 'chess.js';
-import type { CustomSquareProps } from 'react-chessboard/dist/chessboard/types';
 import { Button, Textarea, ToggleSwitch, Tooltip } from 'flowbite-react';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { Chessboard } from 'react-chessboard';
+import type { CustomSquareProps } from 'react-chessboard/dist/chessboard/types';
 import {
   VscArrowCircleLeft,
   VscArrowCircleRight,
@@ -169,7 +169,8 @@ export const EvaluateMoves = () => {
       setCurrentMoveIndex(0);
       setMoveAnnotations((currentAnnotations) =>
         currentAnnotations.filter(
-          (annotation) => annotation.ply >= 1 && annotation.ply <= allMoves.length
+          (annotation) =>
+            annotation.ply >= 1 && annotation.ply <= allMoves.length
         )
       );
     }
@@ -302,9 +303,11 @@ export const EvaluateMoves = () => {
 
   const currentMoveAnnotation = useMemo(() => {
     if (currentMoveIndex <= 0) return null;
-    return moveAnnotations.find(
-      (annotation) => annotation.ply === currentMoveIndex
-    ) ?? null;
+    return (
+      moveAnnotations.find(
+        (annotation) => annotation.ply === currentMoveIndex
+      ) ?? null
+    );
   }, [currentMoveIndex, moveAnnotations]);
 
   const currentMoveLabel = currentMoveAnnotation
@@ -321,7 +324,9 @@ export const EvaluateMoves = () => {
     return pgnMoves[currentMoveIndex - 1] ?? null;
   }, [currentMoveIndex, pgnMoves]);
 
-  const currentAnnotationSquare = currentMoveAnnotation ? currentMove?.to : null;
+  const currentAnnotationSquare = currentMoveAnnotation
+    ? currentMove?.to
+    : null;
 
   useEffect(() => {
     if (!currentMoveAnnotation || !currentAnnotationSquare) {
@@ -373,15 +378,10 @@ export const EvaluateMoves = () => {
   }, []);
 
   const updateMoveAnnotation = useCallback(
-    (
-      index: number,
-      patch: Partial<MoveAnnotation>
-    ) => {
+    (index: number, patch: Partial<MoveAnnotation>) => {
       setMoveAnnotations((currentAnnotations) =>
         currentAnnotations.map((annotation, annotationIndex) =>
-          annotationIndex === index
-            ? { ...annotation, ...patch }
-            : annotation
+          annotationIndex === index ? { ...annotation, ...patch } : annotation
         )
       );
     },
@@ -516,7 +516,10 @@ export const EvaluateMoves = () => {
               </Button>
             </Tooltip>
             <Tooltip content="Move Tags" placement="top">
-              <Button color="gray" onClick={() => setIsMoveTagsDialogOpen(true)}>
+              <Button
+                color="gray"
+                onClick={() => setIsMoveTagsDialogOpen(true)}
+              >
                 <VscTag size={20} />
               </Button>
             </Tooltip>
@@ -578,7 +581,7 @@ export const EvaluateMoves = () => {
           <TeachingTimer compact />
 
           {isFullViewActive && (
-            <div className="flex min-h-[320px] flex-1 items-center justify-center">
+            <div className="flex min-h-[200px] flex-1 items-center justify-center">
               <Link
                 href="/"
                 aria-label="LIMA Chess home"
@@ -590,7 +593,7 @@ export const EvaluateMoves = () => {
                   width={520}
                   height={156}
                   priority
-                  className="h-80 w-auto"
+                  className="h-20 w-auto"
                 />
                 <span className="text-center text-4xl font-semibold tracking-wide text-[var(--s-bg)]">
                   LIMA Chess

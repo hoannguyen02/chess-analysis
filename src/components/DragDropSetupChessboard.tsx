@@ -1,5 +1,5 @@
-import { BOARD_THEMES, BoardThemeId } from '@/constants/board-themes';
 import { TeachingTimer } from '@/components/TeachingTimer';
+import { BOARD_THEMES, BoardThemeId } from '@/constants/board-themes';
 import { useAppContext } from '@/contexts/AppContext';
 import { useCustomBoard } from '@/hooks/useCustomBoard';
 import { LowercasePlayerName } from '@/types/player-name';
@@ -606,7 +606,7 @@ const DragDropSetupChessboard = ({
             </div>
 
             {isFullViewActive && (
-              <div className="flex min-h-[320px] flex-1 items-center justify-center">
+              <div className="flex min-h-[200px] flex-1 items-center justify-center">
                 <Link
                   href="/"
                   aria-label="LIMA Chess home"
@@ -618,7 +618,7 @@ const DragDropSetupChessboard = ({
                     width={520}
                     height={156}
                     priority
-                    className="h-40 w-auto"
+                    className="h-20 w-auto"
                   />
                   <span className="text-center text-2xl font-semibold tracking-wide text-[var(--s-bg)]">
                     LIMA Chess
