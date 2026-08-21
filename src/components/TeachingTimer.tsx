@@ -22,7 +22,7 @@ export const TeachingTimer = ({ compact = false }: TeachingTimerProps) => {
   const t = useTranslations();
   const defaultPresetSeconds = TIMER_PRESETS_MINUTES[1] * 60;
   const [selectedMinutes, setSelectedMinutes] = useState<number>(
-    TIMER_PRESETS_MINUTES[1]
+    TIMER_PRESETS_MINUTES[0]
   );
   const [remainingSeconds, setRemainingSeconds] =
     useState(defaultPresetSeconds);
@@ -41,8 +41,7 @@ export const TeachingTimer = ({ compact = false }: TeachingTimerProps) => {
 
     if (!AudioContextClass) return null;
 
-    const audioContext =
-      audioContextRef.current ?? new AudioContextClass();
+    const audioContext = audioContextRef.current ?? new AudioContextClass();
     audioContextRef.current = audioContext;
 
     if (audioContext.state === 'suspended') {
@@ -53,7 +52,11 @@ export const TeachingTimer = ({ compact = false }: TeachingTimerProps) => {
   }, []);
 
   const playTimesUpChime = useCallback(() => {
-    if (typeof window === 'undefined' || !soundEnabled || !isAudioUnlockedRef.current) {
+    if (
+      typeof window === 'undefined' ||
+      !soundEnabled ||
+      !isAudioUnlockedRef.current
+    ) {
       return;
     }
 
@@ -68,10 +71,34 @@ export const TeachingTimer = ({ compact = false }: TeachingTimerProps) => {
     masterGain.gain.exponentialRampToValueAtTime(0.0001, now + 1.8);
 
     [
-      { frequency: 880, offset: 0, duration: 0.62, gain: 0.92, type: 'triangle' as OscillatorType },
-      { frequency: 1174, offset: 0.08, duration: 0.58, gain: 0.76, type: 'sine' as OscillatorType },
-      { frequency: 1567, offset: 0.16, duration: 0.54, gain: 0.62, type: 'sine' as OscillatorType },
-      { frequency: 1760, offset: 0.22, duration: 0.5, gain: 0.5, type: 'triangle' as OscillatorType },
+      {
+        frequency: 880,
+        offset: 0,
+        duration: 0.62,
+        gain: 0.92,
+        type: 'triangle' as OscillatorType,
+      },
+      {
+        frequency: 1174,
+        offset: 0.08,
+        duration: 0.58,
+        gain: 0.76,
+        type: 'sine' as OscillatorType,
+      },
+      {
+        frequency: 1567,
+        offset: 0.16,
+        duration: 0.54,
+        gain: 0.62,
+        type: 'sine' as OscillatorType,
+      },
+      {
+        frequency: 1760,
+        offset: 0.22,
+        duration: 0.5,
+        gain: 0.5,
+        type: 'triangle' as OscillatorType,
+      },
     ].forEach(({ frequency, offset, duration, gain, type }) => {
       const oscillator = audioContext.createOscillator();
       const gainNode = audioContext.createGain();
