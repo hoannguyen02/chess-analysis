@@ -1,4 +1,5 @@
 import { BOARD_THEMES, BoardThemeId } from '@/constants/board-themes';
+import { TeachingTimer } from '@/components/TeachingTimer';
 import { useAppContext } from '@/contexts/AppContext';
 import { useCustomBoard } from '@/hooks/useCustomBoard';
 import { LowercasePlayerName } from '@/types/player-name';
@@ -411,6 +412,8 @@ const DragDropSetupChessboard = ({
 
               {!isGuide && (
                 <div className="mt-8 flex flex-col gap-6">
+                  <TeachingTimer compact />
+
                   <div className="flex items-center justify-between gap-4 rounded-xl border border-slate-200 bg-slate-50 px-4 py-3">
                     <div>
                       <p className="text-sm font-semibold text-gray-700">

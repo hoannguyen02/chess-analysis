@@ -30,5 +30,16 @@
     "inaccuracy": "Inaccuracy",
     "mistake": "Mistake",
     "blunder": "Blunder"
+  },
+  "timer": {
+    "title": "Teaching Timer",
+    "description": "Use a timed challenge before students share ideas.",
+    "minutes-short": "min",
+    "start": "Start",
+    "pause": "Pause",
+    "reset": "Reset",
+    "restart": "Restart",
+    "prompt": "When the timer ends, students can raise their hand and explain their idea.",
+    "times-up": "Time is up. Invite answers from the class."
   }
 }

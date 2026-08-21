@@ -1,8 +1,7 @@
 'use client';
 
-'use client';
-
 import { MoveTagsDialog } from '@/components/MoveTagsDialog';
+import { TeachingTimer } from '@/components/TeachingTimer';
 import {
   DEFAULT_MOVE_ANNOTATIONS,
   MOVE_QUALITY_OPTIONS,
@@ -575,6 +574,8 @@ export const EvaluateMoves = () => {
               </Button>
             </div>
           </div>
+
+          <TeachingTimer compact />
 
           {isFullViewActive && (
             <div className="flex min-h-[320px] flex-1 items-center justify-center">

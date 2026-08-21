@@ -29,5 +29,16 @@
     "inaccuracy": "Chưa chính xác",
     "mistake": "Sai lầm",
     "blunder": "Nước đi hỏng"
+  },
+  "timer": {
+    "title": "Bộ đếm giờ giảng dạy",
+    "description": "Dùng thử thách có giới hạn thời gian trước khi học viên chia sẻ ý tưởng.",
+    "minutes-short": "phút",
+    "start": "Bắt đầu",
+    "pause": "Tạm dừng",
+    "reset": "Đặt lại",
+    "restart": "Bắt đầu lại",
+    "prompt": "Khi hết giờ, học viên có thể giơ tay và trình bày ý tưởng của mình.",
+    "times-up": "Hết giờ. Mời học viên chia sẻ đáp án."
   }
 }
