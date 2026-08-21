@@ -38,6 +38,10 @@
     "pause": "Tạm dừng",
     "reset": "Đặt lại",
     "restart": "Bắt đầu lại",
+    "sound-on": "Bật âm thanh",
+    "sound-off": "Tắt âm thanh",
+    "mute-sound": "Tắt âm báo hẹn giờ",
+    "enable-sound": "Bật âm báo hẹn giờ",
     "prompt": "Khi hết giờ, học viên có thể giơ tay và trình bày ý tưởng của mình.",
     "times-up": "Hết giờ. Mời học viên chia sẻ đáp án."
   }

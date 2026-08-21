@@ -39,6 +39,10 @@
     "pause": "Pause",
     "reset": "Reset",
     "restart": "Restart",
+    "sound-on": "Sound on",
+    "sound-off": "Sound off",
+    "mute-sound": "Mute timer sound",
+    "enable-sound": "Enable timer sound",
     "prompt": "When the timer ends, students can raise their hand and explain their idea.",
     "times-up": "Time is up. Invite answers from the class."
   }
