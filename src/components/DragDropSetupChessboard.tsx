@@ -62,7 +62,8 @@ const DragDropSetupChessboard = ({
 
   const { boardTheme, isMobile, setBoardTheme } = useAppContext();
   const t = useTranslations();
-  const { customPieces, bgDark, bgLight } = useCustomBoard();
+  const { customPieces, bgDark, bgLight, notationColor, notationShadow } =
+    useCustomBoard();
   const game = useMemo(() => new Chess(fen), [fen]); // empty board
   const [boardOrientation, setBoardOrientation] =
     useState<LowercasePlayerName>('white');
@@ -294,16 +295,13 @@ const DragDropSetupChessboard = ({
   );
 
   const notationStyle = useMemo(
-    () =>
-      isFullViewActive
-        ? {
-            fontSize: chessboardWidth / 30,
-            fontWeight: 700,
-            color: '#F5A623',
-            textShadow: '0 1px 3px rgba(15, 23, 42, 0.85)',
-          }
-        : undefined,
-    [chessboardWidth, isFullViewActive]
+    () => ({
+      fontSize: isFullViewActive ? chessboardWidth / 30 : chessboardWidth / 42,
+      fontWeight: 700,
+      color: notationColor,
+      textShadow: notationShadow,
+    }),
+    [chessboardWidth, isFullViewActive, notationColor, notationShadow]
   );
 
   return (

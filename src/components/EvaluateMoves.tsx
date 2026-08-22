@@ -49,7 +49,8 @@ const MOVE_ANNOTATION_ICON_DELAY_MS =
   MOVE_ANIMATION_DELAY_MS + MOVE_ANNOTATION_LABEL_DURATION_MS;
 
 export const EvaluateMoves = () => {
-  const { customPieces, bgDark, bgLight } = useCustomBoard();
+  const { customPieces, bgDark, bgLight, notationColor, notationShadow } =
+    useCustomBoard();
   const { isMobile } = useAppContext();
   const fullViewRef = useRef<HTMLDivElement>(null);
   const boardRef = useRef<HTMLDivElement>(null);
@@ -300,16 +301,13 @@ export const EvaluateMoves = () => {
   }, [boardContainerWidth, isFullViewActive, isMobile, viewportHeight]);
 
   const notationStyle = useMemo(
-    () =>
-      isFullViewActive
-        ? {
-            fontSize: boardWidth / 30,
-            fontWeight: 700,
-            color: '#F5A623',
-            textShadow: '0 1px 3px rgba(15, 23, 42, 0.85)',
-          }
-        : undefined,
-    [boardWidth, isFullViewActive]
+    () => ({
+      fontSize: isFullViewActive ? boardWidth / 30 : boardWidth / 42,
+      fontWeight: 700,
+      color: notationColor,
+      textShadow: notationShadow,
+    }),
+    [boardWidth, isFullViewActive, notationColor, notationShadow]
   );
 
   const currentMoveAnnotation = useMemo(() => {

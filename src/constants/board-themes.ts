@@ -23,6 +23,8 @@ type BoardTheme = {
   labelKey: string;
   light: string;
   dark: string;
+  notationColor: string;
+  notationShadow: string;
   highlightColors: readonly TeachingHighlightColor[];
 };
 
@@ -125,6 +127,8 @@ export const BOARD_THEMES: readonly BoardTheme[] = [
     labelKey: 'setup-board.theme-fide-wood',
     light: '#f0d8b5',
     dark: '#b58863',
+    notationColor: '#f7f1df',
+    notationShadow: '0 1px 3px rgba(60, 33, 12, 0.72)',
     highlightColors: WOOD_HIGHLIGHT_COLORS,
   },
   {
@@ -132,6 +136,8 @@ export const BOARD_THEMES: readonly BoardTheme[] = [
     labelKey: 'setup-board.theme-fide-classic',
     light: '#f1d9b7',
     dark: '#a97a52',
+    notationColor: '#f8f0de',
+    notationShadow: '0 1px 3px rgba(73, 41, 18, 0.72)',
     highlightColors: WOOD_HIGHLIGHT_COLORS,
   },
   {
@@ -139,6 +145,8 @@ export const BOARD_THEMES: readonly BoardTheme[] = [
     labelKey: 'setup-board.theme-fide-arena',
     light: '#eed7b0',
     dark: '#8f6848',
+    notationColor: '#fbf3e4',
+    notationShadow: '0 1px 3px rgba(53, 31, 15, 0.74)',
     highlightColors: WOOD_HIGHLIGHT_COLORS,
   },
   {
@@ -146,6 +154,8 @@ export const BOARD_THEMES: readonly BoardTheme[] = [
     labelKey: 'setup-board.theme-fide-broadcast',
     light: '#f4dfbf',
     dark: '#9f6f44',
+    notationColor: '#fdf4e2',
+    notationShadow: '0 1px 4px rgba(56, 31, 12, 0.75)',
     highlightColors: WOOD_HIGHLIGHT_COLORS,
   },
   {
@@ -153,6 +163,8 @@ export const BOARD_THEMES: readonly BoardTheme[] = [
     labelKey: 'setup-board.theme-classic',
     light: '#edeed1',
     dark: '#779952',
+    notationColor: '#f5a623',
+    notationShadow: '0 1px 3px rgba(15, 23, 42, 0.85)',
     highlightColors: CLASSIC_HIGHLIGHT_COLORS,
   },
   {
@@ -160,6 +172,8 @@ export const BOARD_THEMES: readonly BoardTheme[] = [
     labelKey: 'setup-board.theme-walnut',
     light: '#f3e7c7',
     dark: '#6a5240',
+    notationColor: '#fff3d4',
+    notationShadow: '0 1px 4px rgba(20, 15, 10, 0.88)',
     highlightColors: DARK_HIGHLIGHT_COLORS,
   },
   {
@@ -167,6 +181,8 @@ export const BOARD_THEMES: readonly BoardTheme[] = [
     labelKey: 'setup-board.theme-copper',
     light: '#f3dfb8',
     dark: '#b97847',
+    notationColor: '#fff0d2',
+    notationShadow: '0 1px 4px rgba(72, 35, 18, 0.75)',
     highlightColors: WOOD_HIGHLIGHT_COLORS,
   },
   {
@@ -174,6 +190,8 @@ export const BOARD_THEMES: readonly BoardTheme[] = [
     labelKey: 'setup-board.theme-studio',
     light: '#f1ead8',
     dark: '#53657d',
+    notationColor: '#e9f2ff',
+    notationShadow: '0 1px 4px rgba(15, 23, 42, 0.88)',
     highlightColors: DARK_HIGHLIGHT_COLORS,
   },
   {
@@ -181,6 +199,8 @@ export const BOARD_THEMES: readonly BoardTheme[] = [
     labelKey: 'setup-board.theme-ocean',
     light: '#e8efe5',
     dark: '#2f6f78',
+    notationColor: '#e6fbff',
+    notationShadow: '0 1px 4px rgba(8, 31, 38, 0.86)',
     highlightColors: DARK_HIGHLIGHT_COLORS,
   },
   {
@@ -188,6 +208,8 @@ export const BOARD_THEMES: readonly BoardTheme[] = [
     labelKey: 'setup-board.theme-rosewood',
     light: '#f2ddcf',
     dark: '#8b5a46',
+    notationColor: '#fff0e7',
+    notationShadow: '0 1px 4px rgba(58, 29, 23, 0.76)',
     highlightColors: WOOD_HIGHLIGHT_COLORS,
   },
 ];
