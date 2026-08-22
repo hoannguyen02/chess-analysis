@@ -1,6 +1,7 @@
 'use client';
 
-import { HIGHLIGHT_COLORS } from '@/hooks/useTeachingHighlights';
+import { BOARD_THEME_MAP } from '@/constants/board-themes';
+import { useAppContext } from '@/contexts/AppContext';
 import { Button, Modal } from 'flowbite-react';
 import { useTranslations } from 'next-intl';
 
@@ -14,6 +15,8 @@ export const TeachingToolsDialog = ({
   onClose,
 }: TeachingToolsDialogProps) => {
   const t = useTranslations();
+  const { boardTheme } = useAppContext();
+  const highlightColors = BOARD_THEME_MAP[boardTheme].highlightColors;
 
   return (
     <Modal show={open} onClose={onClose} size="2xl" popup>
@@ -90,7 +93,7 @@ export const TeachingToolsDialog = ({
               {t('common.teaching-tools.colors')}
             </div>
             <div className="grid gap-2 sm:grid-cols-2">
-              {HIGHLIGHT_COLORS.map((color) => (
+              {highlightColors.map((color) => (
                 <div
                   key={color.key}
                   className="flex items-center gap-3 rounded-lg border border-slate-200 px-3 py-2"

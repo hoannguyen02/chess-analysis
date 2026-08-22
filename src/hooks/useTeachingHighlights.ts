@@ -1,5 +1,7 @@
 'use client';
 
+import { BOARD_THEME_MAP } from '@/constants/board-themes';
+import { useAppContext } from '@/contexts/AppContext';
 import { useCallback, useMemo, useRef, useState } from 'react';
 import type {
   Arrow,
@@ -9,37 +11,6 @@ import type {
 
 const FILES = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'] as const;
 const RANKS = ['1', '2', '3', '4', '5', '6', '7', '8'] as const;
-
-export const HIGHLIGHT_COLORS = [
-  {
-    key: '1',
-    labelKey: 'common.teaching-tools.color-yellow',
-    fill: 'rgba(245, 166, 35, 0.42)',
-    border: 'rgba(245, 166, 35, 0.95)',
-    arrow: '#F5A623',
-  },
-  {
-    key: '2',
-    labelKey: 'common.teaching-tools.color-red',
-    fill: 'rgba(239, 68, 68, 0.38)',
-    border: 'rgba(220, 38, 38, 0.95)',
-    arrow: '#EF4444',
-  },
-  {
-    key: '3',
-    labelKey: 'common.teaching-tools.color-blue',
-    fill: 'rgba(59, 130, 246, 0.34)',
-    border: 'rgba(37, 99, 235, 0.95)',
-    arrow: '#3B82F6',
-  },
-  {
-    key: '4',
-    labelKey: 'common.teaching-tools.color-green',
-    fill: 'rgba(34, 197, 94, 0.34)',
-    border: 'rgba(22, 163, 74, 0.95)',
-    arrow: '#22C55E',
-  },
-] as const;
 
 const getFileIndex = (square: Square) =>
   FILES.indexOf(square[0] as (typeof FILES)[number]);
@@ -96,6 +67,7 @@ type UseTeachingHighlightsArgs = {
 export const useTeachingHighlights = ({
   enabled = true,
 }: UseTeachingHighlightsArgs = {}) => {
+  const { boardTheme } = useAppContext();
   const [selectedColorIndex, setSelectedColorIndex] = useState(0);
   const [highlightSquares, setHighlightSquares] = useState<
     Record<Square, number>
@@ -108,6 +80,7 @@ export const useTeachingHighlights = ({
     alt: false,
   });
   const arrowsSnapshotRef = useRef<Arrow[]>([]);
+  const highlightColors = BOARD_THEME_MAP[boardTheme].highlightColors;
 
   const resetRightClickModifiers = useCallback(() => {
     rightClickModifiersRef.current = {
@@ -118,11 +91,12 @@ export const useTeachingHighlights = ({
     };
   }, []);
 
-  const selectedColor = HIGHLIGHT_COLORS[selectedColorIndex];
+  const selectedColor =
+    highlightColors[selectedColorIndex] ?? highlightColors[0];
 
   const customSquareStyles = useMemo<CustomSquareStyles>(() => {
     return Object.entries(highlightSquares).reduce((styles, [square, colorIndex]) => {
-      const color = HIGHLIGHT_COLORS[colorIndex];
+      const color = highlightColors[colorIndex] ?? highlightColors[0];
 
       styles[square as Square] = {
         backgroundColor: color.fill,
@@ -131,7 +105,7 @@ export const useTeachingHighlights = ({
 
       return styles;
     }, {} as CustomSquareStyles);
-  }, [highlightSquares]);
+  }, [highlightColors, highlightSquares]);
 
   const clearHighlights = useCallback(() => {
     setHighlightSquares({} as Record<Square, number>);
@@ -258,13 +232,13 @@ export const useTeachingHighlights = ({
         return;
       }
 
-      const colorIndex = HIGHLIGHT_COLORS.findIndex((item) => item.key === key);
+      const colorIndex = highlightColors.findIndex((item) => item.key === key);
       if (colorIndex >= 0) {
         setSelectedColorIndex(colorIndex);
         event.preventDefault();
       }
     },
-    [clearHighlights, enabled]
+    [clearHighlights, enabled, highlightColors]
   );
 
   const boardInteractionProps = {
@@ -288,6 +262,7 @@ export const useTeachingHighlights = ({
 
   return {
     boardRenderKey,
+    highlightColors,
     selectedColor,
     customSquareStyles,
     clearHighlights,
