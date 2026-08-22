@@ -1,7 +1,9 @@
 import { TeachingTimer } from '@/components/TeachingTimer';
+import { TeachingToolsDialog } from '@/components/TeachingToolsDialog';
 import { BOARD_THEMES, BoardThemeId } from '@/constants/board-themes';
 import { useAppContext } from '@/contexts/AppContext';
 import { useCustomBoard } from '@/hooks/useCustomBoard';
+import { useTeachingHighlights } from '@/hooks/useTeachingHighlights';
 import { LowercasePlayerName } from '@/types/player-name';
 import { Chess } from 'chess.js';
 import {
@@ -69,8 +71,19 @@ const DragDropSetupChessboard = ({
   const [isBrowserFullscreen, setIsBrowserFullscreen] = useState(false);
   const [boardContainerWidth, setBoardContainerWidth] = useState(500);
   const [viewportHeight, setViewportHeight] = useState(900);
+  const [isTeachingToolsDialogOpen, setIsTeachingToolsDialogOpen] =
+    useState(false);
   const fullViewRef = useRef<HTMLDivElement>(null);
   const boardRef = useRef<HTMLDivElement>(null);
+  const {
+    boardRenderKey,
+    selectedColor,
+    customSquareStyles,
+    handleSquareClick,
+    handleSquareRightClick,
+    handleArrowsChange,
+    boardInteractionProps,
+  } = useTeachingHighlights();
 
   useEffect(() => {
     if (typeof window === 'undefined') return;
@@ -311,7 +324,10 @@ const DragDropSetupChessboard = ({
           }
         >
           <div ref={boardRef}>
-            <div className="mx-auto flex w-fit flex-col items-center">
+            <div
+              {...boardInteractionProps}
+              className="mx-auto flex w-fit flex-col items-center outline-none"
+            >
               <div
                 className="rounded-2xl border border-slate-300 bg-slate-50 shadow-lg"
                 style={{
@@ -331,14 +347,20 @@ const DragDropSetupChessboard = ({
                 ))}
               </div>
               <Chessboard
+                key={boardRenderKey}
                 boardWidth={chessboardWidth}
                 id="ManualBoardEditor"
                 boardOrientation={boardOrientation}
                 position={fenPosition}
+                customSquareStyles={customSquareStyles}
+                customArrowColor={selectedColor.arrow}
                 customNotationStyle={notationStyle}
                 onSparePieceDrop={handleSparePieceDrop}
                 onPieceDrop={handlePieceDrop}
                 onPieceDropOffBoard={handlePieceDropOffBoard}
+                onSquareClick={handleSquareClick}
+                onSquareRightClick={handleSquareRightClick}
+                onArrowsChange={handleArrowsChange}
                 dropOffBoardAction="trash"
                 customBoardStyle={{
                   borderRadius: '4px',
@@ -628,6 +650,10 @@ const DragDropSetupChessboard = ({
             )}
           </div>
         </div>
+        <TeachingToolsDialog
+          open={isTeachingToolsDialogOpen}
+          onClose={() => setIsTeachingToolsDialogOpen(false)}
+        />
       </div>
     </ChessboardDnDProvider>
   );

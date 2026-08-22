@@ -45,5 +45,32 @@
     "enable-sound": "Enable timer sound",
     "prompt": "When the timer ends, students can raise their hand and explain their idea.",
     "times-up": "Time is up. Invite answers from the class."
+  },
+  "teaching-tools": {
+    "title": "Teaching Tools",
+    "description": "Use quick mouse actions for highlights, arrows, and diagonals while teaching.",
+    "action-right-click": "Right click highlight",
+    "action-multi": "Cmd/Ctrl + right click",
+    "action-rank": "Alt + right click rank",
+    "action-file": "Alt + Shift + right click file",
+    "action-arrow": "Right drag arrow",
+    "action-diagonal": "Shift + right drag diagonal",
+    "help-right-click": "Right click any square to highlight it. Right click the same square again to remove it.",
+    "help-multi": "Hold Command on Mac or Ctrl on Windows/Linux, then right click to add or remove more squares.",
+    "help-rank": "Hold Alt, then right click any square to highlight the whole rank.",
+    "help-file": "Hold Alt + Shift, then right click any square to highlight the whole file.",
+    "help-arrow": "Right drag from one square to another to draw or remove an arrow.",
+    "help-diagonal": "Hold Shift while right dragging between two diagonal squares to highlight that diagonal.",
+    "colors": "Colors",
+    "color": "Color",
+    "color-yellow": "Yellow",
+    "color-red": "Red",
+    "color-blue": "Blue",
+    "color-green": "Green",
+    "clear": "Clear",
+    "quick-clear": "Quick clear",
+    "help-clear": "Press C or Esc to clear all highlights and arrows.",
+    "click-board": "Click board for shortcuts",
+    "board-active": "Board shortcuts active"
   }
 }

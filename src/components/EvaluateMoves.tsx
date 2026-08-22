@@ -10,6 +10,7 @@ import {
 } from '@/constants/move-annotations';
 import { useAppContext } from '@/contexts/AppContext';
 import { useCustomBoard } from '@/hooks/useCustomBoard';
+import { useTeachingHighlights } from '@/hooks/useTeachingHighlights';
 import { MoveAnnotation, MoveQuality } from '@/types/move-annotation';
 import { LowercasePlayerName } from '@/types/player-name';
 import { getActivePlayerFromFEN } from '@/utils/get-player-name-from-fen';
@@ -70,7 +71,17 @@ export const EvaluateMoves = () => {
     useState(false);
   const [showSquareAnnotationIcon, setShowSquareAnnotationIcon] =
     useState(false);
+  useState(false);
   const t = useTranslations();
+  const {
+    boardRenderKey,
+    selectedColor,
+    customSquareStyles,
+    handleSquareClick,
+    handleSquareRightClick,
+    handleArrowsChange,
+    boardInteractionProps,
+  } = useTeachingHighlights();
 
   const gameRef = useRef(new Chess());
 
@@ -472,20 +483,28 @@ export const EvaluateMoves = () => {
         }
       >
         <div ref={boardRef}>
-          <Chessboard
-            boardOrientation={boardOrientation}
-            boardWidth={boardWidth}
-            position={currentFen}
-            customPieces={customPieces}
-            customSquare={CustomAnnotatedSquare}
-            customNotationStyle={notationStyle}
-            customDarkSquareStyle={{ backgroundColor: bgDark }}
-            customLightSquareStyle={{ backgroundColor: bgLight }}
-            customBoardStyle={{
-              borderRadius: '4px',
-              boxShadow: '0 2px 10px rgba(0, 0, 0, 0.5)',
-            }}
-          />
+          <div {...boardInteractionProps} className="outline-none">
+            <Chessboard
+              key={boardRenderKey}
+              boardOrientation={boardOrientation}
+              boardWidth={boardWidth}
+              position={currentFen}
+              customPieces={customPieces}
+              customSquare={CustomAnnotatedSquare}
+              customSquareStyles={customSquareStyles}
+              customArrowColor={selectedColor.arrow}
+              customNotationStyle={notationStyle}
+              customDarkSquareStyle={{ backgroundColor: bgDark }}
+              customLightSquareStyle={{ backgroundColor: bgLight }}
+              customBoardStyle={{
+                borderRadius: '4px',
+                boxShadow: '0 2px 10px rgba(0, 0, 0, 0.5)',
+              }}
+              onSquareClick={handleSquareClick}
+              onSquareRightClick={handleSquareRightClick}
+              onArrowsChange={handleArrowsChange}
+            />
+          </div>
           <div className="flex justify-center space-x-2 mt-4">
             <Button color="gray" onClick={onFirst}>
               <VscArrowCircleLeft size={20} />

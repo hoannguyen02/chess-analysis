@@ -20,9 +20,10 @@ type TeachingTimerProps = {
 
 export const TeachingTimer = ({ compact = false }: TeachingTimerProps) => {
   const t = useTranslations();
-  const defaultPresetSeconds = TIMER_PRESETS_MINUTES[1] * 60;
+  const defaultPresetMinutes = TIMER_PRESETS_MINUTES[0];
+  const defaultPresetSeconds = defaultPresetMinutes * 60;
   const [selectedMinutes, setSelectedMinutes] = useState<number>(
-    TIMER_PRESETS_MINUTES[0]
+    defaultPresetMinutes
   );
   const [remainingSeconds, setRemainingSeconds] =
     useState(defaultPresetSeconds);
