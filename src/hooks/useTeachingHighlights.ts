@@ -23,6 +23,73 @@ const getRankSquares = (rank: string) =>
 const getFileSquares = (file: string) =>
   RANKS.map((rank) => `${file}${rank}` as Square);
 
+const getSegmentSquares = (start: Square, end: Square) => {
+  const startFileIndex = getFileIndex(start);
+  const startRankIndex = getRankIndex(start);
+  const endFileIndex = getFileIndex(end);
+  const endRankIndex = getRankIndex(end);
+
+  if (
+    startFileIndex < 0 ||
+    startRankIndex < 0 ||
+    endFileIndex < 0 ||
+    endRankIndex < 0
+  ) {
+    return [];
+  }
+
+  if (startRankIndex === endRankIndex) {
+    const minFileIndex = Math.min(startFileIndex, endFileIndex);
+    const maxFileIndex = Math.max(startFileIndex, endFileIndex);
+
+    return FILES.slice(minFileIndex, maxFileIndex + 1).map(
+      (file) => `${file}${RANKS[startRankIndex]}` as Square
+    );
+  }
+
+  if (startFileIndex === endFileIndex) {
+    const minRankIndex = Math.min(startRankIndex, endRankIndex);
+    const maxRankIndex = Math.max(startRankIndex, endRankIndex);
+
+    return RANKS.slice(minRankIndex, maxRankIndex + 1).map(
+      (rank) => `${FILES[startFileIndex]}${rank}` as Square
+    );
+  }
+
+  return getDiagonalSquares(start, end);
+};
+
+const getRectangleSquares = (start: Square, end: Square) => {
+  const startFileIndex = getFileIndex(start);
+  const startRankIndex = getRankIndex(start);
+  const endFileIndex = getFileIndex(end);
+  const endRankIndex = getRankIndex(end);
+
+  if (
+    startFileIndex < 0 ||
+    startRankIndex < 0 ||
+    endFileIndex < 0 ||
+    endRankIndex < 0
+  ) {
+    return [];
+  }
+
+  const minFileIndex = Math.min(startFileIndex, endFileIndex);
+  const maxFileIndex = Math.max(startFileIndex, endFileIndex);
+  const minRankIndex = Math.min(startRankIndex, endRankIndex);
+  const maxRankIndex = Math.max(startRankIndex, endRankIndex);
+
+  const squares: Square[] = [];
+
+  for (let fileIndex = minFileIndex; fileIndex <= maxFileIndex; fileIndex += 1) {
+    for (let rankIndex = minRankIndex; rankIndex <= maxRankIndex; rankIndex += 1) {
+      squares.push(`${FILES[fileIndex]}${RANKS[rankIndex]}` as Square);
+    }
+  }
+
+  return squares;
+};
+
 const getDiagonalSquares = (start: Square, end: Square) => {
   const startFileIndex = getFileIndex(start);
   const startRankIndex = getRankIndex(start);
@@ -168,19 +235,61 @@ export const useTeachingHighlights = ({
     (nextArrows: Arrow[]) => {
       if (!enabled) return;
 
-      const isShiftDiagonal = rightClickModifiersRef.current.shift;
-      if (!isShiftDiagonal) {
-        arrowsSnapshotRef.current = nextArrows;
-        resetRightClickModifiers();
-        return;
-      }
-
       const addedArrow = nextArrows.find(
         (candidate) =>
           !arrowsSnapshotRef.current.some((existingArrow) =>
             areSameArrow(existingArrow, candidate)
           )
       );
+
+      const isSegmentHighlight =
+        (rightClickModifiersRef.current.meta ||
+          rightClickModifiersRef.current.ctrl) &&
+        !rightClickModifiersRef.current.alt &&
+        !rightClickModifiersRef.current.shift;
+      if (isSegmentHighlight && addedArrow) {
+        const segmentSquares = getSegmentSquares(addedArrow[0], addedArrow[1]);
+
+        if (segmentSquares.length > 0) {
+          setHighlightSquares((current) => {
+            const next = { ...current };
+            segmentSquares.forEach((segmentSquare) => {
+              next[segmentSquare] = selectedColorIndex;
+            });
+            return next;
+          });
+          arrowsSnapshotRef.current = [];
+          resetRightClickModifiers();
+          setBoardRenderKey((current) => current + 1);
+          return;
+        }
+      }
+
+      const isRectangleHighlight = rightClickModifiersRef.current.alt;
+      if (isRectangleHighlight && addedArrow) {
+        const rectangleSquares = getRectangleSquares(addedArrow[0], addedArrow[1]);
+
+        if (rectangleSquares.length > 0) {
+          setHighlightSquares((current) => {
+            const next = { ...current };
+            rectangleSquares.forEach((rectangleSquare) => {
+              next[rectangleSquare] = selectedColorIndex;
+            });
+            return next;
+          });
+          arrowsSnapshotRef.current = [];
+          resetRightClickModifiers();
+          setBoardRenderKey((current) => current + 1);
+          return;
+        }
+      }
+
+      const isShiftDiagonal = rightClickModifiersRef.current.shift;
+      if (!isShiftDiagonal) {
+        arrowsSnapshotRef.current = nextArrows;
+        resetRightClickModifiers();
+        return;
+      }
 
       if (!addedArrow) {
         arrowsSnapshotRef.current = nextArrows;
