@@ -9,6 +9,36 @@ import type {
   Square,
 } from 'react-chessboard/dist/chessboard/types';
 
+type BoardPieceCode =
+  | 'wP'
+  | 'wN'
+  | 'wB'
+  | 'wR'
+  | 'wQ'
+  | 'wK'
+  | 'bP'
+  | 'bN'
+  | 'bB'
+  | 'bR'
+  | 'bQ'
+  | 'bK';
+
+type HighlightVariant =
+  | 'default'
+  | 'pattern-origin'
+  | 'pattern-target'
+  | 'pattern-capture';
+
+type HighlightEntry = {
+  colorIndex: number;
+  variant: HighlightVariant;
+};
+
+type PatternHighlightEntry = {
+  square: Square;
+  variant: HighlightVariant;
+};
+
 const FILES = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'] as const;
 const RANKS = ['1', '2', '3', '4', '5', '6', '7', '8'] as const;
 
@@ -22,6 +52,19 @@ const getRankSquares = (rank: string) =>
 
 const getFileSquares = (file: string) =>
   RANKS.map((rank) => `${file}${rank}` as Square);
+
+const getSquareAt = (fileIndex: number, rankIndex: number) => {
+  if (
+    fileIndex < 0 ||
+    fileIndex >= FILES.length ||
+    rankIndex < 0 ||
+    rankIndex >= RANKS.length
+  ) {
+    return null;
+  }
+
+  return `${FILES[fileIndex]}${RANKS[rankIndex]}` as Square;
+};
 
 const getSegmentSquares = (start: Square, end: Square) => {
   const startFileIndex = getFileIndex(start);
@@ -124,21 +167,181 @@ const getDiagonalSquares = (start: Square, end: Square) => {
   });
 };
 
+const getRaySquares = (
+  start: Square,
+  fileStep: number,
+  rankStep: number,
+  pieceCode: BoardPieceCode,
+  getPieceAtSquare?: (square: Square) => BoardPieceCode | null | undefined
+) => {
+  const startFileIndex = getFileIndex(start);
+  const startRankIndex = getRankIndex(start);
+  const highlights: PatternHighlightEntry[] = [];
+  const pieceColor = pieceCode[0];
+
+  let currentFileIndex = startFileIndex + fileStep;
+  let currentRankIndex = startRankIndex + rankStep;
+
+  while (true) {
+    const square = getSquareAt(currentFileIndex, currentRankIndex);
+    if (!square) {
+      break;
+    }
+
+    const occupyingPiece = getPieceAtSquare?.(square) ?? null;
+    const isFriendlyOccupied = occupyingPiece?.[0] === pieceColor;
+
+    if (!isFriendlyOccupied) {
+      highlights.push({
+        square,
+        variant: occupyingPiece ? 'pattern-capture' : 'pattern-target',
+      });
+    }
+
+    if (occupyingPiece) {
+      break;
+    }
+
+    currentFileIndex += fileStep;
+    currentRankIndex += rankStep;
+  }
+
+  return highlights;
+};
+
+const getPiecePatternHighlights = (
+  square: Square,
+  pieceCode: BoardPieceCode,
+  getPieceAtSquare?: (square: Square) => BoardPieceCode | null | undefined
+) => {
+  const fileIndex = getFileIndex(square);
+  const rankIndex = getRankIndex(square);
+
+  if (fileIndex < 0 || rankIndex < 0) {
+    return [];
+  }
+
+  const type = pieceCode[1];
+  const color = pieceCode[0];
+  const highlights: PatternHighlightEntry[] = [
+    {
+      square,
+      variant: 'pattern-origin',
+    },
+  ];
+  const getAttackHighlight = (targetSquare: Square | null) => {
+    if (!targetSquare) {
+      return null;
+    }
+
+    const occupyingPiece = getPieceAtSquare?.(targetSquare) ?? null;
+    if (occupyingPiece && occupyingPiece[0] === color) {
+      return null;
+    }
+
+    return {
+      square: targetSquare,
+      variant: occupyingPiece ? 'pattern-capture' : 'pattern-target',
+    } satisfies PatternHighlightEntry;
+  };
+
+  if (type === 'P') {
+    const direction = color === 'w' ? 1 : -1;
+    return [
+      ...highlights,
+      ...[
+        getAttackHighlight(getSquareAt(fileIndex - 1, rankIndex + direction)),
+        getAttackHighlight(getSquareAt(fileIndex + 1, rankIndex + direction)),
+      ].filter(Boolean),
+    ] as PatternHighlightEntry[];
+  }
+
+  if (type === 'N') {
+    const offsets = [
+      [-2, -1],
+      [-2, 1],
+      [-1, -2],
+      [-1, 2],
+      [1, -2],
+      [1, 2],
+      [2, -1],
+      [2, 1],
+    ];
+
+    return [
+      ...highlights,
+      ...offsets
+        .map(([fileOffset, rankOffset]) =>
+          getAttackHighlight(
+            getSquareAt(fileIndex + fileOffset, rankIndex + rankOffset)
+          )
+        )
+        .filter(Boolean),
+    ] as PatternHighlightEntry[];
+  }
+
+  if (type === 'K') {
+    const offsets = [
+      [-1, -1],
+      [-1, 0],
+      [-1, 1],
+      [0, -1],
+      [0, 1],
+      [1, -1],
+      [1, 0],
+      [1, 1],
+    ];
+
+    return [
+      ...highlights,
+      ...offsets
+        .map(([fileOffset, rankOffset]) =>
+          getAttackHighlight(
+            getSquareAt(fileIndex + fileOffset, rankIndex + rankOffset)
+          )
+        )
+        .filter(Boolean),
+    ] as PatternHighlightEntry[];
+  }
+
+  if (type === 'B' || type === 'Q') {
+    highlights.push(
+      getRaySquares(square, -1, -1, pieceCode, getPieceAtSquare),
+      getRaySquares(square, -1, 1, pieceCode, getPieceAtSquare),
+      getRaySquares(square, 1, -1, pieceCode, getPieceAtSquare),
+      getRaySquares(square, 1, 1, pieceCode, getPieceAtSquare)
+    );
+  }
+
+  if (type === 'R' || type === 'Q') {
+    highlights.push(
+      getRaySquares(square, -1, 0, pieceCode, getPieceAtSquare),
+      getRaySquares(square, 1, 0, pieceCode, getPieceAtSquare),
+      getRaySquares(square, 0, -1, pieceCode, getPieceAtSquare),
+      getRaySquares(square, 0, 1, pieceCode, getPieceAtSquare)
+    );
+  }
+
+  return highlights.flat();
+};
+
 const areSameArrow = (first: Arrow, second: Arrow) =>
   first[0] === second[0] && first[1] === second[1] && first[2] === second[2];
 
 type UseTeachingHighlightsArgs = {
   enabled?: boolean;
+  getPieceAtSquare?: (square: Square) => BoardPieceCode | null | undefined;
 };
 
 export const useTeachingHighlights = ({
   enabled = true,
+  getPieceAtSquare,
 }: UseTeachingHighlightsArgs = {}) => {
   const { boardTheme } = useAppContext();
   const [selectedColorIndex, setSelectedColorIndex] = useState(0);
   const [highlightSquares, setHighlightSquares] = useState<
-    Record<Square, number>
-  >({} as Record<Square, number>);
+    Record<Square, HighlightEntry>
+  >({} as Record<Square, HighlightEntry>);
   const [boardRenderKey, setBoardRenderKey] = useState(0);
   const rightClickModifiersRef = useRef({
     shift: false,
@@ -162,20 +365,46 @@ export const useTeachingHighlights = ({
     highlightColors[selectedColorIndex] ?? highlightColors[0];
 
   const customSquareStyles = useMemo<CustomSquareStyles>(() => {
-    return Object.entries(highlightSquares).reduce((styles, [square, colorIndex]) => {
-      const color = highlightColors[colorIndex] ?? highlightColors[0];
+    return Object.entries(highlightSquares).reduce(
+      (styles, [square, entry]) => {
+        const color = highlightColors[entry.colorIndex] ?? highlightColors[0];
 
-      styles[square as Square] = {
-        backgroundColor: color.fill,
-        boxShadow: `inset 0 0 0 4px ${color.border}`,
-      };
+        if (entry.variant === 'pattern-origin') {
+          styles[square as Square] = {
+            boxShadow: `inset 0 0 0 5px ${color.border}, inset 0 0 0 10px rgba(255, 255, 255, 0.55)`,
+          };
+          return styles;
+        }
 
-      return styles;
-    }, {} as CustomSquareStyles);
+        if (entry.variant === 'pattern-capture') {
+          styles[square as Square] = {
+            backgroundColor: color.fill.replace(/[\d.]+\)$/, '0.3)'),
+            boxShadow: `inset 0 0 0 5px ${color.border}, inset 0 0 0 1px rgba(255, 255, 255, 0.75)`,
+          };
+          return styles;
+        }
+
+        if (entry.variant === 'pattern-target') {
+          styles[square as Square] = {
+            backgroundColor: color.fill.replace(/[\d.]+\)$/, '0.12)'),
+            boxShadow: `inset 0 0 0 4px ${color.border}`,
+          };
+          return styles;
+        }
+
+        styles[square as Square] = {
+          backgroundColor: color.fill,
+          boxShadow: `inset 0 0 0 4px ${color.border}`,
+        };
+
+        return styles;
+      },
+      {} as CustomSquareStyles
+    );
   }, [highlightColors, highlightSquares]);
 
   const clearHighlights = useCallback(() => {
-    setHighlightSquares({} as Record<Square, number>);
+    setHighlightSquares({} as Record<Square, HighlightEntry>);
     arrowsSnapshotRef.current = [];
     resetRightClickModifiers();
     setBoardRenderKey((current) => current + 1);
@@ -189,6 +418,34 @@ export const useTeachingHighlights = ({
         rightClickModifiersRef.current.alt && !rightClickModifiersRef.current.shift;
       const isFileHighlight =
         rightClickModifiersRef.current.alt && rightClickModifiersRef.current.shift;
+      const isPiecePatternHighlight =
+        (rightClickModifiersRef.current.meta ||
+          rightClickModifiersRef.current.ctrl) &&
+        rightClickModifiersRef.current.shift &&
+        !rightClickModifiersRef.current.alt;
+
+      if (isPiecePatternHighlight) {
+        const pieceCode = getPieceAtSquare?.(square);
+        if (pieceCode) {
+          const patternHighlights = getPiecePatternHighlights(
+            square,
+            pieceCode,
+            getPieceAtSquare
+          );
+          setHighlightSquares((current) => {
+            const next = { ...current };
+            patternHighlights.forEach((patternHighlight) => {
+              next[patternHighlight.square] = {
+                colorIndex: selectedColorIndex,
+                variant: patternHighlight.variant,
+              };
+            });
+            return next;
+          });
+        }
+        resetRightClickModifiers();
+        return;
+      }
 
       if (isRankHighlight) {
         const rankSquares = getRankSquares(square[1]);
@@ -196,7 +453,10 @@ export const useTeachingHighlights = ({
           const next = { ...current };
 
           rankSquares.forEach((rankSquare) => {
-            next[rankSquare] = selectedColorIndex;
+            next[rankSquare] = {
+              colorIndex: selectedColorIndex,
+              variant: 'default',
+            };
           });
 
           return next;
@@ -211,7 +471,10 @@ export const useTeachingHighlights = ({
           const next = { ...current };
 
           fileSquares.forEach((fileSquare) => {
-            next[fileSquare] = selectedColorIndex;
+            next[fileSquare] = {
+              colorIndex: selectedColorIndex,
+              variant: 'default',
+            };
           });
 
           return next;
@@ -223,12 +486,15 @@ export const useTeachingHighlights = ({
       setHighlightSquares((current) => {
         const next = { ...current };
 
-        next[square] = selectedColorIndex;
+        next[square] = {
+          colorIndex: selectedColorIndex,
+          variant: 'default',
+        };
         return next;
       });
       resetRightClickModifiers();
     },
-    [enabled, resetRightClickModifiers, selectedColorIndex]
+    [enabled, getPieceAtSquare, resetRightClickModifiers, selectedColorIndex]
   );
 
   const handleArrowsChange = useCallback(
@@ -254,7 +520,10 @@ export const useTeachingHighlights = ({
           setHighlightSquares((current) => {
             const next = { ...current };
             segmentSquares.forEach((segmentSquare) => {
-              next[segmentSquare] = selectedColorIndex;
+              next[segmentSquare] = {
+                colorIndex: selectedColorIndex,
+                variant: 'default',
+              };
             });
             return next;
           });
@@ -273,7 +542,10 @@ export const useTeachingHighlights = ({
           setHighlightSquares((current) => {
             const next = { ...current };
             rectangleSquares.forEach((rectangleSquare) => {
-              next[rectangleSquare] = selectedColorIndex;
+              next[rectangleSquare] = {
+                colorIndex: selectedColorIndex,
+                variant: 'default',
+              };
             });
             return next;
           });
@@ -307,7 +579,10 @@ export const useTeachingHighlights = ({
       setHighlightSquares((current) => {
         const next = { ...current };
         diagonalSquares.forEach((diagonalSquare) => {
-          next[diagonalSquare] = selectedColorIndex;
+          next[diagonalSquare] = {
+            colorIndex: selectedColorIndex,
+            variant: 'default',
+          };
         });
         return next;
       });

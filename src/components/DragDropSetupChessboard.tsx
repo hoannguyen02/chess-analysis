@@ -76,15 +76,25 @@ const DragDropSetupChessboard = ({
     useState(false);
   const fullViewRef = useRef<HTMLDivElement>(null);
   const boardRef = useRef<HTMLDivElement>(null);
+  const getPieceAtSquare = useCallback((square: Square) => {
+    const piece = game.get(square);
+
+    if (!piece) {
+      return null;
+    }
+
+    return `${piece.color}${piece.type.toUpperCase()}` as const;
+  }, [game]);
   const {
     boardRenderKey,
     selectedColor,
     customSquareStyles,
+    clearHighlights,
     handleSquareClick,
     handleSquareRightClick,
     handleArrowsChange,
     boardInteractionProps,
-  } = useTeachingHighlights();
+  } = useTeachingHighlights({ getPieceAtSquare });
 
   useEffect(() => {
     if (typeof window === 'undefined') return;
@@ -189,6 +199,7 @@ const DragDropSetupChessboard = ({
     if (valid) {
       game.load(fen);
       setFenPosition(game.fen());
+      clearHighlights();
     }
   };
 
@@ -405,6 +416,7 @@ const DragDropSetupChessboard = ({
                   onClick={() => {
                     game.reset();
                     setFenPosition(game.fen());
+                    clearHighlights();
                   }}
                   outline
                   gradientDuoTone="cyanToBlue"
@@ -415,6 +427,7 @@ const DragDropSetupChessboard = ({
                   onClick={() => {
                     game.clear();
                     setFenPosition(game.fen());
+                    clearHighlights();
                   }}
                   outline
                   gradientDuoTone="pinkToOrange"

@@ -21,7 +21,10 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { Chessboard } from 'react-chessboard';
-import type { CustomSquareProps } from 'react-chessboard/dist/chessboard/types';
+import type {
+  CustomSquareProps,
+  Square,
+} from 'react-chessboard/dist/chessboard/types';
 import {
   VscArrowCircleLeft,
   VscArrowCircleRight,
@@ -74,6 +77,15 @@ export const EvaluateMoves = () => {
     useState(false);
   useState(false);
   const t = useTranslations();
+  const getPieceAtSquare = useCallback((square: Square) => {
+    const piece = gameRef.current.get(square);
+
+    if (!piece) {
+      return null;
+    }
+
+    return `${piece.color}${piece.type.toUpperCase()}` as const;
+  }, []);
   const {
     boardRenderKey,
     selectedColor,
@@ -82,7 +94,7 @@ export const EvaluateMoves = () => {
     handleSquareRightClick,
     handleArrowsChange,
     boardInteractionProps,
-  } = useTeachingHighlights();
+  } = useTeachingHighlights({ getPieceAtSquare });
 
   const gameRef = useRef(new Chess());
 
