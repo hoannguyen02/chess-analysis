@@ -50,6 +50,7 @@ const MOVE_ANIMATION_DELAY_MS = 450;
 const MOVE_ANNOTATION_LABEL_DURATION_MS = 2000;
 const MOVE_ANNOTATION_ICON_DELAY_MS =
   MOVE_ANIMATION_DELAY_MS + MOVE_ANNOTATION_LABEL_DURATION_MS;
+const FILES = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'] as const;
 
 export const EvaluateMoves = () => {
   const { customPieces, bgDark, bgLight, notationColor, notationShadow } =
@@ -86,6 +87,24 @@ export const EvaluateMoves = () => {
 
     return `${piece.color}${piece.type.toUpperCase()}` as const;
   }, []);
+  const getAllPieces = useCallback(
+    () =>
+      gameRef.current.board().flatMap((rank, rankIndex) =>
+        rank.flatMap((piece, fileIndex) => {
+          if (!piece) {
+            return [];
+          }
+
+          return [
+            {
+              square: `${FILES[fileIndex]}${8 - rankIndex}` as Square,
+              pieceCode: `${piece.color}${piece.type.toUpperCase()}` as const,
+            },
+          ];
+        })
+      ),
+    []
+  );
   const getActiveTurn = useCallback(() => gameRef.current.turn(), []);
   const getLegalSquaresForPiece = useCallback((square: Square) => {
     const piece = gameRef.current.get(square);
@@ -122,6 +141,7 @@ export const EvaluateMoves = () => {
     boardInteractionProps,
   } = useTeachingHighlights({
     getPieceAtSquare,
+    getAllPieces,
     getActiveTurn,
     getLegalSquaresForPiece,
     getCheckSquaresForPiece,

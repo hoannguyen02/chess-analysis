@@ -45,6 +45,8 @@ const pieces = [
   'bK',
 ];
 
+const FILES = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'] as const;
+
 type Props = {
   fen?: string;
   isGuide?: boolean;
@@ -89,6 +91,24 @@ const DragDropSetupChessboard = ({
 
     return `${piece.color}${piece.type.toUpperCase()}` as const;
   }, [game]);
+  const getAllPieces = useCallback(
+    () =>
+      game.board().flatMap((rank, rankIndex) =>
+        rank.flatMap((piece, fileIndex) => {
+          if (!piece) {
+            return [];
+          }
+
+          return [
+            {
+              square: `${FILES[fileIndex]}${8 - rankIndex}` as Square,
+              pieceCode: `${piece.color}${piece.type.toUpperCase()}` as const,
+            },
+          ];
+        })
+      ),
+    [game]
+  );
   const getActiveTurn = useCallback(() => game.turn(), [game]);
   const getLegalSquaresForPiece = useCallback(
     (square: Square) => {
@@ -132,6 +152,7 @@ const DragDropSetupChessboard = ({
     boardInteractionProps,
   } = useTeachingHighlights({
     getPieceAtSquare,
+    getAllPieces,
     getActiveTurn,
     getLegalSquaresForPiece,
     getCheckSquaresForPiece,

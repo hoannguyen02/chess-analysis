@@ -40,6 +40,11 @@ type PatternHighlightEntry = {
   variant: HighlightVariant;
 };
 
+type PieceOnBoard = {
+  square: Square;
+  pieceCode: BoardPieceCode;
+};
+
 const FILES = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'] as const;
 const RANKS = ['1', '2', '3', '4', '5', '6', '7', '8'] as const;
 
@@ -47,12 +52,6 @@ const getFileIndex = (square: Square) =>
   FILES.indexOf(square[0] as (typeof FILES)[number]);
 const getRankIndex = (square: Square) =>
   RANKS.indexOf(square[1] as (typeof RANKS)[number]);
-
-const getRankSquares = (rank: string) =>
-  FILES.map((file) => `${file}${rank}` as Square);
-
-const getFileSquares = (file: string) =>
-  RANKS.map((rank) => `${file}${rank}` as Square);
 
 const getSquareAt = (fileIndex: number, rankIndex: number) => {
   if (
@@ -65,42 +64,6 @@ const getSquareAt = (fileIndex: number, rankIndex: number) => {
   }
 
   return `${FILES[fileIndex]}${RANKS[rankIndex]}` as Square;
-};
-
-const getSegmentSquares = (start: Square, end: Square) => {
-  const startFileIndex = getFileIndex(start);
-  const startRankIndex = getRankIndex(start);
-  const endFileIndex = getFileIndex(end);
-  const endRankIndex = getRankIndex(end);
-
-  if (
-    startFileIndex < 0 ||
-    startRankIndex < 0 ||
-    endFileIndex < 0 ||
-    endRankIndex < 0
-  ) {
-    return [];
-  }
-
-  if (startRankIndex === endRankIndex) {
-    const minFileIndex = Math.min(startFileIndex, endFileIndex);
-    const maxFileIndex = Math.max(startFileIndex, endFileIndex);
-
-    return FILES.slice(minFileIndex, maxFileIndex + 1).map(
-      (file) => `${file}${RANKS[startRankIndex]}` as Square
-    );
-  }
-
-  if (startFileIndex === endFileIndex) {
-    const minRankIndex = Math.min(startRankIndex, endRankIndex);
-    const maxRankIndex = Math.max(startRankIndex, endRankIndex);
-
-    return RANKS.slice(minRankIndex, maxRankIndex + 1).map(
-      (rank) => `${FILES[startFileIndex]}${rank}` as Square
-    );
-  }
-
-  return getDiagonalSquares(start, end);
 };
 
 const getRectangleSquares = (start: Square, end: Square) => {
@@ -132,40 +95,6 @@ const getRectangleSquares = (start: Square, end: Square) => {
   }
 
   return squares;
-};
-
-const getDiagonalSquares = (start: Square, end: Square) => {
-  const startFileIndex = getFileIndex(start);
-  const startRankIndex = getRankIndex(start);
-  const endFileIndex = getFileIndex(end);
-  const endRankIndex = getRankIndex(end);
-
-  if (
-    startFileIndex < 0 ||
-    startRankIndex < 0 ||
-    endFileIndex < 0 ||
-    endRankIndex < 0
-  ) {
-    return [];
-  }
-
-  const fileDiff = endFileIndex - startFileIndex;
-  const rankDiff = endRankIndex - startRankIndex;
-
-  if (Math.abs(fileDiff) !== Math.abs(rankDiff)) {
-    return [];
-  }
-
-  const fileStep = fileDiff > 0 ? 1 : -1;
-  const rankStep = rankDiff > 0 ? 1 : -1;
-  const length = Math.abs(fileDiff);
-
-  return Array.from({ length: length + 1 }, (_, index) => {
-    const file = FILES[startFileIndex + fileStep * index];
-    const rank = RANKS[startRankIndex + rankStep * index];
-
-    return `${file}${rank}` as Square;
-  });
 };
 
 const getRaySquares = (
@@ -208,6 +137,96 @@ const getRaySquares = (
   }
 
   return highlights;
+};
+
+const pieceAttacksSquare = (
+  source: Square,
+  pieceCode: BoardPieceCode,
+  target: Square,
+  getPieceAtSquare?: (square: Square) => BoardPieceCode | null | undefined
+) => {
+  if (source === target) {
+    return false;
+  }
+
+  const sourceFileIndex = getFileIndex(source);
+  const sourceRankIndex = getRankIndex(source);
+  const targetFileIndex = getFileIndex(target);
+  const targetRankIndex = getRankIndex(target);
+
+  if (
+    sourceFileIndex < 0 ||
+    sourceRankIndex < 0 ||
+    targetFileIndex < 0 ||
+    targetRankIndex < 0
+  ) {
+    return false;
+  }
+
+  const fileDiff = targetFileIndex - sourceFileIndex;
+  const rankDiff = targetRankIndex - sourceRankIndex;
+  const absFileDiff = Math.abs(fileDiff);
+  const absRankDiff = Math.abs(rankDiff);
+  const type = pieceCode[1];
+  const color = pieceCode[0];
+
+  if (type === 'P') {
+    const direction = color === 'w' ? 1 : -1;
+    return rankDiff === direction && absFileDiff === 1;
+  }
+
+  if (type === 'N') {
+    return (
+      (absFileDiff === 1 && absRankDiff === 2) ||
+      (absFileDiff === 2 && absRankDiff === 1)
+    );
+  }
+
+  if (type === 'K') {
+    return absFileDiff <= 1 && absRankDiff <= 1;
+  }
+
+  const isBishopLine = absFileDiff === absRankDiff && absFileDiff > 0;
+  const isRookLine =
+    (fileDiff === 0 && absRankDiff > 0) || (rankDiff === 0 && absFileDiff > 0);
+  const isQueenLine = isBishopLine || isRookLine;
+
+  if (
+    (type === 'B' && !isBishopLine) ||
+    (type === 'R' && !isRookLine) ||
+    (type === 'Q' && !isQueenLine)
+  ) {
+    return false;
+  }
+
+  if (type !== 'B' && type !== 'R' && type !== 'Q') {
+    return false;
+  }
+
+  const fileStep = fileDiff === 0 ? 0 : fileDiff / absFileDiff;
+  const rankStep = rankDiff === 0 ? 0 : rankDiff / absRankDiff;
+  let currentFileIndex = sourceFileIndex + fileStep;
+  let currentRankIndex = sourceRankIndex + rankStep;
+
+  while (
+    currentFileIndex !== targetFileIndex ||
+    currentRankIndex !== targetRankIndex
+  ) {
+    const currentSquare = getSquareAt(currentFileIndex, currentRankIndex);
+
+    if (!currentSquare) {
+      return false;
+    }
+
+    if (getPieceAtSquare?.(currentSquare)) {
+      return false;
+    }
+
+    currentFileIndex += fileStep;
+    currentRankIndex += rankStep;
+  }
+
+  return true;
 };
 
 const getPiecePatternHighlights = (
@@ -332,6 +351,7 @@ const areSameArrow = (first: Arrow, second: Arrow) =>
 type UseTeachingHighlightsArgs = {
   enabled?: boolean;
   getPieceAtSquare?: (square: Square) => BoardPieceCode | null | undefined;
+  getAllPieces?: () => PieceOnBoard[];
   getActiveTurn?: () => 'w' | 'b';
   getLegalSquaresForPiece?: (square: Square) => Square[];
   getCheckSquaresForPiece?: (square: Square) => Square[];
@@ -340,6 +360,7 @@ type UseTeachingHighlightsArgs = {
 export const useTeachingHighlights = ({
   enabled = true,
   getPieceAtSquare,
+  getAllPieces,
   getActiveTurn,
   getLegalSquaresForPiece,
   getCheckSquaresForPiece,
@@ -429,65 +450,39 @@ export const useTeachingHighlights = ({
     (square: Square) => {
       if (!enabled) return;
 
-      const isRankHighlight =
-        rightClickModifiersRef.current.alt && !rightClickModifiersRef.current.shift;
-      const isFileHighlight =
-        rightClickModifiersRef.current.alt && rightClickModifiersRef.current.shift;
+      const pieceCode = getPieceAtSquare?.(square) ?? null;
+      const activeTurn = getActiveTurn?.();
+      const isActivePiece = pieceCode
+        ? !activeTurn || pieceCode[0] === activeTurn
+        : false;
       const isPieceCaptureHighlight =
         (rightClickModifiersRef.current.meta ||
           rightClickModifiersRef.current.ctrl) &&
         rightClickModifiersRef.current.shift &&
+        !rightClickModifiersRef.current.alt;
+      const isPieceCheckHighlight =
+        !rightClickModifiersRef.current.meta &&
+        !rightClickModifiersRef.current.ctrl &&
+        !rightClickModifiersRef.current.shift &&
         rightClickModifiersRef.current.alt;
+      const isMultiSquareHighlight =
+        !rightClickModifiersRef.current.meta &&
+        !rightClickModifiersRef.current.ctrl &&
+        rightClickModifiersRef.current.shift &&
+        !rightClickModifiersRef.current.alt;
       const isPieceLegalMoveHighlight =
         (rightClickModifiersRef.current.meta ||
           rightClickModifiersRef.current.ctrl) &&
         !rightClickModifiersRef.current.shift &&
         !rightClickModifiersRef.current.alt;
-      const isPieceCheckHighlight =
-        (rightClickModifiersRef.current.meta ||
-          rightClickModifiersRef.current.ctrl) &&
-        rightClickModifiersRef.current.alt &&
-        !rightClickModifiersRef.current.shift;
-      const isPiecePatternHighlight =
+      const isSquareControlHighlight =
         (rightClickModifiersRef.current.meta ||
           rightClickModifiersRef.current.ctrl) &&
         rightClickModifiersRef.current.shift &&
         !rightClickModifiersRef.current.alt;
 
-      if (isPieceCheckHighlight) {
-        const pieceCode = getPieceAtSquare?.(square);
-        const activeTurn = getActiveTurn?.();
-
-        if (pieceCode && (!activeTurn || pieceCode[0] === activeTurn)) {
-          const checkSquares = getCheckSquaresForPiece?.(square) ?? [];
-
-          if (checkSquares.length > 0) {
-            setHighlightSquares((current) => {
-              const next = { ...current };
-              next[square] = {
-                colorIndex: selectedColorIndex,
-                variant: 'pattern-origin',
-              };
-              checkSquares.forEach((checkSquare) => {
-                next[checkSquare] = {
-                  colorIndex: selectedColorIndex,
-                  variant: 'pattern-check',
-                };
-              });
-              return next;
-            });
-          }
-        }
-
-        resetRightClickModifiers();
-        return;
-      }
-
       if (isPieceLegalMoveHighlight) {
-        const pieceCode = getPieceAtSquare?.(square);
-        const activeTurn = getActiveTurn?.();
-
-        if (pieceCode && (!activeTurn || pieceCode[0] === activeTurn)) {
+        if (pieceCode && isActivePiece) {
           const legalSquares = getLegalSquaresForPiece?.(square) ?? [];
 
           if (legalSquares.length > 0) {
@@ -511,36 +506,53 @@ export const useTeachingHighlights = ({
               return next;
             });
           }
-        }
+        } else {
+          const controllers =
+            getAllPieces?.().reduce(
+              (result, pieceOnBoard) => {
+                if (
+                  pieceAttacksSquare(
+                    pieceOnBoard.square,
+                    pieceOnBoard.pieceCode,
+                    square,
+                    getPieceAtSquare
+                  )
+                ) {
+                  if (pieceOnBoard.pieceCode[0] === 'w') {
+                    result.white.push(pieceOnBoard.square);
+                  } else {
+                    result.black.push(pieceOnBoard.square);
+                  }
+                }
 
-        resetRightClickModifiers();
-        return;
-      }
+                return result;
+              },
+              { white: [] as Square[], black: [] as Square[] }
+            ) ?? { white: [] as Square[], black: [] as Square[] };
 
-      if (isPieceCaptureHighlight) {
-        const pieceCode = getPieceAtSquare?.(square);
-        const activeTurn = getActiveTurn?.();
-
-        if (pieceCode && (!activeTurn || pieceCode[0] === activeTurn)) {
-          const captureHighlights = getPiecePatternHighlights(
-            square,
-            pieceCode,
-            getPieceAtSquare
-          ).filter(
-            (patternHighlight) =>
-              patternHighlight.variant === 'pattern-origin' ||
-              patternHighlight.variant === 'pattern-capture'
-          );
-
-          if (captureHighlights.length > 0) {
+          if (controllers.white.length > 0 || controllers.black.length > 0) {
             setHighlightSquares((current) => {
               const next = { ...current };
-              captureHighlights.forEach((captureHighlight) => {
-                next[captureHighlight.square] = {
-                  colorIndex: selectedColorIndex,
-                  variant: captureHighlight.variant,
+
+              next[square] = {
+                colorIndex: 0,
+                variant: 'default',
+              };
+
+              controllers.white.forEach((controllerSquare) => {
+                next[controllerSquare] = {
+                  colorIndex: Math.min(2, highlightColors.length - 1),
+                  variant: 'pattern-origin',
                 };
               });
+
+              controllers.black.forEach((controllerSquare) => {
+                next[controllerSquare] = {
+                  colorIndex: Math.min(1, highlightColors.length - 1),
+                  variant: 'pattern-origin',
+                };
+              });
+
               return next;
             });
           }
@@ -550,40 +562,125 @@ export const useTeachingHighlights = ({
         return;
       }
 
-      if (isPiecePatternHighlight) {
-        const pieceCode = getPieceAtSquare?.(square);
-        if (pieceCode) {
-          const patternHighlights = getPiecePatternHighlights(
-            square,
-            pieceCode,
-            getPieceAtSquare
-          );
+      if (isPieceCheckHighlight && pieceCode && isActivePiece) {
+        const checkSquares = getCheckSquaresForPiece?.(square) ?? [];
+
+        if (checkSquares.length > 0) {
           setHighlightSquares((current) => {
             const next = { ...current };
-            patternHighlights.forEach((patternHighlight) => {
-              next[patternHighlight.square] = {
+            next[square] = {
+              colorIndex: selectedColorIndex,
+              variant: 'pattern-origin',
+            };
+            checkSquares.forEach((checkSquare) => {
+              next[checkSquare] = {
                 colorIndex: selectedColorIndex,
-                variant: patternHighlight.variant,
+                variant: 'pattern-check',
               };
             });
             return next;
           });
         }
+
         resetRightClickModifiers();
         return;
       }
 
-      if (isRankHighlight) {
-        const rankSquares = getRankSquares(square[1]);
+      if (isSquareControlHighlight && (!pieceCode || !isActivePiece)) {
+        const controllers =
+          getAllPieces?.().reduce(
+            (result, pieceOnBoard) => {
+              if (
+                pieceAttacksSquare(
+                  pieceOnBoard.square,
+                  pieceOnBoard.pieceCode,
+                  square,
+                  getPieceAtSquare
+                )
+              ) {
+                if (pieceOnBoard.pieceCode[0] === 'w') {
+                  result.white.push(pieceOnBoard.square);
+                } else {
+                  result.black.push(pieceOnBoard.square);
+                }
+              }
+
+              return result;
+            },
+            { white: [] as Square[], black: [] as Square[] }
+          ) ?? { white: [] as Square[], black: [] as Square[] };
+
+        if (controllers.white.length > 0 || controllers.black.length > 0) {
+          setHighlightSquares((current) => {
+            const next = { ...current };
+
+            next[square] = {
+              colorIndex: 0,
+              variant: 'default',
+            };
+
+            controllers.white.forEach((controllerSquare) => {
+              next[controllerSquare] = {
+                colorIndex: Math.min(2, highlightColors.length - 1),
+                variant: 'pattern-origin',
+              };
+            });
+
+            controllers.black.forEach((controllerSquare) => {
+              next[controllerSquare] = {
+                colorIndex: Math.min(1, highlightColors.length - 1),
+                variant: 'pattern-origin',
+              };
+            });
+
+            return next;
+          });
+        }
+
+        resetRightClickModifiers();
+        return;
+      }
+
+      if (isPieceCaptureHighlight && pieceCode && isActivePiece) {
+        const captureHighlights = getPiecePatternHighlights(
+          square,
+          pieceCode,
+          getPieceAtSquare
+        ).filter(
+          (patternHighlight) =>
+            patternHighlight.variant === 'pattern-origin' ||
+            patternHighlight.variant === 'pattern-capture'
+        );
+
+        if (captureHighlights.length > 0) {
+          setHighlightSquares((current) => {
+            const next = { ...current };
+            captureHighlights.forEach((captureHighlight) => {
+              next[captureHighlight.square] = {
+                colorIndex: selectedColorIndex,
+                variant: captureHighlight.variant,
+              };
+            });
+            return next;
+          });
+        }
+
+        resetRightClickModifiers();
+        return;
+      }
+
+      if (isMultiSquareHighlight) {
         setHighlightSquares((current) => {
           const next = { ...current };
 
-          rankSquares.forEach((rankSquare) => {
-            next[rankSquare] = {
+          if (next[square]?.variant === 'default') {
+            delete next[square];
+          } else {
+            next[square] = {
               colorIndex: selectedColorIndex,
               variant: 'default',
             };
-          });
+          }
 
           return next;
         });
@@ -591,41 +688,22 @@ export const useTeachingHighlights = ({
         return;
       }
 
-      if (isFileHighlight) {
-        const fileSquares = getFileSquares(square[0]);
-        setHighlightSquares((current) => {
-          const next = { ...current };
-
-          fileSquares.forEach((fileSquare) => {
-            next[fileSquare] = {
-              colorIndex: selectedColorIndex,
-              variant: 'default',
-            };
-          });
-
-          return next;
-        });
-        resetRightClickModifiers();
-        return;
-      }
-
-      setHighlightSquares((current) => {
-        const next = { ...current };
-
-        next[square] = {
+      setHighlightSquares({
+        [square]: {
           colorIndex: selectedColorIndex,
           variant: 'default',
-        };
-        return next;
-      });
+        },
+      } as Record<Square, HighlightEntry>);
       resetRightClickModifiers();
     },
     [
       enabled,
       getActiveTurn,
+      getAllPieces,
       getCheckSquaresForPiece,
       getLegalSquaresForPiece,
       getPieceAtSquare,
+      highlightColors.length,
       resetRightClickModifiers,
       selectedColorIndex,
     ]
@@ -642,33 +720,15 @@ export const useTeachingHighlights = ({
           )
       );
 
-      const isSegmentHighlight =
-        (rightClickModifiersRef.current.meta ||
+      const isRectangleHighlight =
+        ((rightClickModifiersRef.current.meta ||
           rightClickModifiersRef.current.ctrl) &&
-        !rightClickModifiersRef.current.alt &&
-        !rightClickModifiersRef.current.shift;
-      if (isSegmentHighlight && addedArrow) {
-        const segmentSquares = getSegmentSquares(addedArrow[0], addedArrow[1]);
-
-        if (segmentSquares.length > 0) {
-          setHighlightSquares((current) => {
-            const next = { ...current };
-            segmentSquares.forEach((segmentSquare) => {
-              next[segmentSquare] = {
-                colorIndex: selectedColorIndex,
-                variant: 'default',
-              };
-            });
-            return next;
-          });
-          arrowsSnapshotRef.current = [];
-          resetRightClickModifiers();
-          setBoardRenderKey((current) => current + 1);
-          return;
-        }
-      }
-
-      const isRectangleHighlight = rightClickModifiersRef.current.alt;
+          !rightClickModifiersRef.current.shift &&
+          !rightClickModifiersRef.current.alt) ||
+        (rightClickModifiersRef.current.shift &&
+          !rightClickModifiersRef.current.meta &&
+          !rightClickModifiersRef.current.ctrl &&
+          !rightClickModifiersRef.current.alt);
       if (isRectangleHighlight && addedArrow) {
         const rectangleSquares = getRectangleSquares(addedArrow[0], addedArrow[1]);
 
@@ -689,40 +749,8 @@ export const useTeachingHighlights = ({
           return;
         }
       }
-
-      const isShiftDiagonal = rightClickModifiersRef.current.shift;
-      if (!isShiftDiagonal) {
-        arrowsSnapshotRef.current = nextArrows;
-        resetRightClickModifiers();
-        return;
-      }
-
-      if (!addedArrow) {
-        arrowsSnapshotRef.current = nextArrows;
-        resetRightClickModifiers();
-        return;
-      }
-
-      const diagonalSquares = getDiagonalSquares(addedArrow[0], addedArrow[1]);
-      if (diagonalSquares.length === 0) {
-        arrowsSnapshotRef.current = nextArrows;
-        resetRightClickModifiers();
-        return;
-      }
-
-      setHighlightSquares((current) => {
-        const next = { ...current };
-        diagonalSquares.forEach((diagonalSquare) => {
-          next[diagonalSquare] = {
-            colorIndex: selectedColorIndex,
-            variant: 'default',
-          };
-        });
-        return next;
-      });
-      arrowsSnapshotRef.current = [];
+      arrowsSnapshotRef.current = nextArrows;
       resetRightClickModifiers();
-      setBoardRenderKey((current) => current + 1);
     },
     [enabled, resetRightClickModifiers, selectedColorIndex]
   );

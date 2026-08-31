@@ -44,10 +44,10 @@ export const TeachingToolsDialog = ({
 
             <div className="rounded-xl border border-slate-200 p-3">
               <div className="text-sm font-semibold text-slate-900">
-                {t('common.teaching-tools.action-multi')}
+                {t('common.teaching-tools.action-multi-squares')}
               </div>
               <p className="mt-2 text-sm text-slate-500">
-                {t('common.teaching-tools.help-multi')}
+                {t('common.teaching-tools.help-multi-squares')}
               </p>
             </div>
 
@@ -62,19 +62,10 @@ export const TeachingToolsDialog = ({
 
             <div className="rounded-xl border border-slate-200 p-3">
               <div className="text-sm font-semibold text-slate-900">
-                {t('common.teaching-tools.action-rank')}
+                {t('common.teaching-tools.action-piece-control')}
               </div>
               <p className="mt-2 text-sm text-slate-500">
-                {t('common.teaching-tools.help-rank')}
-              </p>
-            </div>
-
-            <div className="rounded-xl border border-slate-200 p-3">
-              <div className="text-sm font-semibold text-slate-900">
-                {t('common.teaching-tools.action-file')}
-              </div>
-              <p className="mt-2 text-sm text-slate-500">
-                {t('common.teaching-tools.help-file')}
+                {t('common.teaching-tools.help-piece-control')}
               </p>
             </div>
 
@@ -89,37 +80,10 @@ export const TeachingToolsDialog = ({
 
             <div className="rounded-xl border border-slate-200 p-3">
               <div className="text-sm font-semibold text-slate-900">
-                {t('common.teaching-tools.action-diagonal')}
-              </div>
-              <p className="mt-2 text-sm text-slate-500">
-                {t('common.teaching-tools.help-diagonal')}
-              </p>
-            </div>
-
-            <div className="rounded-xl border border-slate-200 p-3">
-              <div className="text-sm font-semibold text-slate-900">
                 {t('common.teaching-tools.action-rectangle')}
               </div>
               <p className="mt-2 text-sm text-slate-500">
                 {t('common.teaching-tools.help-rectangle')}
-              </p>
-            </div>
-
-            <div className="rounded-xl border border-slate-200 p-3">
-              <div className="text-sm font-semibold text-slate-900">
-                {t('common.teaching-tools.action-segment')}
-              </div>
-              <p className="mt-2 text-sm text-slate-500">
-                {t('common.teaching-tools.help-segment')}
-              </p>
-            </div>
-
-            <div className="rounded-xl border border-slate-200 p-3">
-              <div className="text-sm font-semibold text-slate-900">
-                {t('common.teaching-tools.action-piece-pattern')}
-              </div>
-              <p className="mt-2 text-sm text-slate-500">
-                {t('common.teaching-tools.help-piece-pattern')}
               </p>
             </div>
 
