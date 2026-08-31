@@ -53,6 +53,15 @@ export const TeachingToolsDialog = ({
 
             <div className="rounded-xl border border-slate-200 p-3">
               <div className="text-sm font-semibold text-slate-900">
+                {t('common.teaching-tools.action-piece-legal')}
+              </div>
+              <p className="mt-2 text-sm text-slate-500">
+                {t('common.teaching-tools.help-piece-legal')}
+              </p>
+            </div>
+
+            <div className="rounded-xl border border-slate-200 p-3">
+              <div className="text-sm font-semibold text-slate-900">
                 {t('common.teaching-tools.action-rank')}
               </div>
               <p className="mt-2 text-sm text-slate-500">

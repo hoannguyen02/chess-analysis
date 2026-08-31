@@ -333,6 +333,7 @@ type UseTeachingHighlightsArgs = {
   enabled?: boolean;
   getPieceAtSquare?: (square: Square) => BoardPieceCode | null | undefined;
   getActiveTurn?: () => 'w' | 'b';
+  getLegalSquaresForPiece?: (square: Square) => Square[];
   getCheckSquaresForPiece?: (square: Square) => Square[];
 };
 
@@ -340,6 +341,7 @@ export const useTeachingHighlights = ({
   enabled = true,
   getPieceAtSquare,
   getActiveTurn,
+  getLegalSquaresForPiece,
   getCheckSquaresForPiece,
 }: UseTeachingHighlightsArgs = {}) => {
   const { boardTheme } = useAppContext();
@@ -436,6 +438,11 @@ export const useTeachingHighlights = ({
           rightClickModifiersRef.current.ctrl) &&
         rightClickModifiersRef.current.shift &&
         rightClickModifiersRef.current.alt;
+      const isPieceLegalMoveHighlight =
+        (rightClickModifiersRef.current.meta ||
+          rightClickModifiersRef.current.ctrl) &&
+        !rightClickModifiersRef.current.shift &&
+        !rightClickModifiersRef.current.alt;
       const isPieceCheckHighlight =
         (rightClickModifiersRef.current.meta ||
           rightClickModifiersRef.current.ctrl) &&
@@ -465,6 +472,40 @@ export const useTeachingHighlights = ({
                 next[checkSquare] = {
                   colorIndex: selectedColorIndex,
                   variant: 'pattern-check',
+                };
+              });
+              return next;
+            });
+          }
+        }
+
+        resetRightClickModifiers();
+        return;
+      }
+
+      if (isPieceLegalMoveHighlight) {
+        const pieceCode = getPieceAtSquare?.(square);
+        const activeTurn = getActiveTurn?.();
+
+        if (pieceCode && (!activeTurn || pieceCode[0] === activeTurn)) {
+          const legalSquares = getLegalSquaresForPiece?.(square) ?? [];
+
+          if (legalSquares.length > 0) {
+            setHighlightSquares((current) => {
+              const next = { ...current };
+              next[square] = {
+                colorIndex: selectedColorIndex,
+                variant: 'pattern-origin',
+              };
+              legalSquares.forEach((legalSquare) => {
+                const occupyingPiece = getPieceAtSquare?.(legalSquare) ?? null;
+
+                next[legalSquare] = {
+                  colorIndex: selectedColorIndex,
+                  variant:
+                    occupyingPiece && occupyingPiece[0] !== pieceCode[0]
+                      ? 'pattern-capture'
+                      : 'pattern-target',
                 };
               });
               return next;
@@ -583,6 +624,7 @@ export const useTeachingHighlights = ({
       enabled,
       getActiveTurn,
       getCheckSquaresForPiece,
+      getLegalSquaresForPiece,
       getPieceAtSquare,
       resetRightClickModifiers,
       selectedColorIndex,

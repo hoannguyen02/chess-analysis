@@ -90,6 +90,19 @@ const DragDropSetupChessboard = ({
     return `${piece.color}${piece.type.toUpperCase()}` as const;
   }, [game]);
   const getActiveTurn = useCallback(() => game.turn(), [game]);
+  const getLegalSquaresForPiece = useCallback(
+    (square: Square) => {
+      const piece = game.get(square);
+      if (!piece || piece.color !== game.turn()) {
+        return [];
+      }
+
+      return game
+        .moves({ square, verbose: true })
+        .map((move: any) => move.to as Square);
+    },
+    [game]
+  );
   const getCheckSquaresForPiece = useCallback(
     (square: Square) => {
       const piece = game.get(square);
@@ -120,6 +133,7 @@ const DragDropSetupChessboard = ({
   } = useTeachingHighlights({
     getPieceAtSquare,
     getActiveTurn,
+    getLegalSquaresForPiece,
     getCheckSquaresForPiece,
   });
 

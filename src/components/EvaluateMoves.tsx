@@ -87,6 +87,16 @@ export const EvaluateMoves = () => {
     return `${piece.color}${piece.type.toUpperCase()}` as const;
   }, []);
   const getActiveTurn = useCallback(() => gameRef.current.turn(), []);
+  const getLegalSquaresForPiece = useCallback((square: Square) => {
+    const piece = gameRef.current.get(square);
+    if (!piece || piece.color !== gameRef.current.turn()) {
+      return [];
+    }
+
+    return gameRef.current
+      .moves({ square, verbose: true })
+      .map((move: any) => move.to as Square);
+  }, []);
   const getCheckSquaresForPiece = useCallback((square: Square) => {
     const piece = gameRef.current.get(square);
     if (!piece || piece.color !== gameRef.current.turn()) {
@@ -113,6 +123,7 @@ export const EvaluateMoves = () => {
   } = useTeachingHighlights({
     getPieceAtSquare,
     getActiveTurn,
+    getLegalSquaresForPiece,
     getCheckSquaresForPiece,
   });
 
