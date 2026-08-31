@@ -60,6 +60,10 @@ export const AnalysisScreen = () => {
   const [boardContainerWidth, setBoardContainerWidth] = useState(500);
   const [viewportHeight, setViewportHeight] = useState(900);
 
+  const syncBoardOrientationToTurn = useCallback(() => {
+    setBoardOrientation(game.turn() === 'w' ? 'white' : 'black');
+  }, [game]);
+
   useEffect(() => {
     setBoardOrientation(playerName);
   }, [playerName]);
@@ -228,12 +232,14 @@ export const AnalysisScreen = () => {
       const fen = value || game.fen();
       setCurrentFen(fen);
       game.load(fen);
+      syncBoardOrientationToTurn();
     }
   };
 
   const onResetBoard = () => {
     game.load(queryFen);
     setCurrentFen(queryFen);
+    syncBoardOrientationToTurn();
   };
 
   const onDownloadPgn = () => {

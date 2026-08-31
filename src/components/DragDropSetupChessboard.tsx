@@ -65,8 +65,12 @@ const DragDropSetupChessboard = ({
   const { customPieces, bgDark, bgLight, notationColor, notationShadow } =
     useCustomBoard();
   const game = useMemo(() => new Chess(fen), [fen]); // empty board
+  const getOrientationFromTurn = useCallback(
+    () => (game.turn() === 'w' ? 'white' : 'black'),
+    [game]
+  );
   const [boardOrientation, setBoardOrientation] =
-    useState<LowercasePlayerName>('white');
+    useState<LowercasePlayerName>(getOrientationFromTurn);
   const [fenPosition, setFenPosition] = useState(fen);
   const [isFullViewMode, setIsFullViewMode] = useState(false);
   const [isBrowserFullscreen, setIsBrowserFullscreen] = useState(false);
@@ -95,6 +99,10 @@ const DragDropSetupChessboard = ({
     handleArrowsChange,
     boardInteractionProps,
   } = useTeachingHighlights({ getPieceAtSquare });
+
+  useEffect(() => {
+    setBoardOrientation(getOrientationFromTurn());
+  }, [getOrientationFromTurn]);
 
   useEffect(() => {
     if (typeof window === 'undefined') return;
@@ -199,6 +207,7 @@ const DragDropSetupChessboard = ({
     if (valid) {
       game.load(fen);
       setFenPosition(game.fen());
+      setBoardOrientation(getOrientationFromTurn());
       clearHighlights();
     }
   };
@@ -210,6 +219,7 @@ const DragDropSetupChessboard = ({
     const isValid = game.load(fen);
     if (isValid) {
       setFenPosition(game.fen());
+      setBoardOrientation(getOrientationFromTurn());
     } else {
       throw new Error('Failed to set turn. The resulting FEN is invalid.');
     }
@@ -416,6 +426,7 @@ const DragDropSetupChessboard = ({
                   onClick={() => {
                     game.reset();
                     setFenPosition(game.fen());
+                    setBoardOrientation(getOrientationFromTurn());
                     clearHighlights();
                   }}
                   outline
@@ -427,6 +438,7 @@ const DragDropSetupChessboard = ({
                   onClick={() => {
                     game.clear();
                     setFenPosition(game.fen());
+                    setBoardOrientation(getOrientationFromTurn());
                     clearHighlights();
                   }}
                   outline
