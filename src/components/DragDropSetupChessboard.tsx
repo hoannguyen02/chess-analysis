@@ -89,6 +89,25 @@ const DragDropSetupChessboard = ({
 
     return `${piece.color}${piece.type.toUpperCase()}` as const;
   }, [game]);
+  const getActiveTurn = useCallback(() => game.turn(), [game]);
+  const getCheckSquaresForPiece = useCallback(
+    (square: Square) => {
+      const piece = game.get(square);
+      if (!piece || piece.color !== game.turn()) {
+        return [];
+      }
+
+      return game
+        .moves({ square, verbose: true })
+        .filter((move: any) => {
+          const nextGame = new Chess(game.fen());
+          nextGame.move(move);
+          return nextGame.in_check();
+        })
+        .map((move: any) => move.to as Square);
+    },
+    [game]
+  );
   const {
     boardRenderKey,
     selectedColor,
@@ -98,7 +117,11 @@ const DragDropSetupChessboard = ({
     handleSquareRightClick,
     handleArrowsChange,
     boardInteractionProps,
-  } = useTeachingHighlights({ getPieceAtSquare });
+  } = useTeachingHighlights({
+    getPieceAtSquare,
+    getActiveTurn,
+    getCheckSquaresForPiece,
+  });
 
   useEffect(() => {
     setBoardOrientation(getOrientationFromTurn());

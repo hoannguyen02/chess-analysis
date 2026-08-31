@@ -27,7 +27,8 @@ type HighlightVariant =
   | 'default'
   | 'pattern-origin'
   | 'pattern-target'
-  | 'pattern-capture';
+  | 'pattern-capture'
+  | 'pattern-check';
 
 type HighlightEntry = {
   colorIndex: number;
@@ -331,11 +332,15 @@ const areSameArrow = (first: Arrow, second: Arrow) =>
 type UseTeachingHighlightsArgs = {
   enabled?: boolean;
   getPieceAtSquare?: (square: Square) => BoardPieceCode | null | undefined;
+  getActiveTurn?: () => 'w' | 'b';
+  getCheckSquaresForPiece?: (square: Square) => Square[];
 };
 
 export const useTeachingHighlights = ({
   enabled = true,
   getPieceAtSquare,
+  getActiveTurn,
+  getCheckSquaresForPiece,
 }: UseTeachingHighlightsArgs = {}) => {
   const { boardTheme } = useAppContext();
   const [selectedColorIndex, setSelectedColorIndex] = useState(0);
@@ -384,6 +389,14 @@ export const useTeachingHighlights = ({
           return styles;
         }
 
+        if (entry.variant === 'pattern-check') {
+          styles[square as Square] = {
+            backgroundColor: color.fill.replace(/[\d.]+\)$/, '0.26)'),
+            boxShadow: `inset 0 0 0 5px ${color.border}, inset 0 0 0 10px rgba(255, 255, 255, 0.35)`,
+          };
+          return styles;
+        }
+
         if (entry.variant === 'pattern-target') {
           styles[square as Square] = {
             backgroundColor: color.fill.replace(/[\d.]+\)$/, '0.12)'),
@@ -418,11 +431,83 @@ export const useTeachingHighlights = ({
         rightClickModifiersRef.current.alt && !rightClickModifiersRef.current.shift;
       const isFileHighlight =
         rightClickModifiersRef.current.alt && rightClickModifiersRef.current.shift;
+      const isPieceCaptureHighlight =
+        (rightClickModifiersRef.current.meta ||
+          rightClickModifiersRef.current.ctrl) &&
+        rightClickModifiersRef.current.shift &&
+        rightClickModifiersRef.current.alt;
+      const isPieceCheckHighlight =
+        (rightClickModifiersRef.current.meta ||
+          rightClickModifiersRef.current.ctrl) &&
+        rightClickModifiersRef.current.alt &&
+        !rightClickModifiersRef.current.shift;
       const isPiecePatternHighlight =
         (rightClickModifiersRef.current.meta ||
           rightClickModifiersRef.current.ctrl) &&
         rightClickModifiersRef.current.shift &&
         !rightClickModifiersRef.current.alt;
+
+      if (isPieceCheckHighlight) {
+        const pieceCode = getPieceAtSquare?.(square);
+        const activeTurn = getActiveTurn?.();
+
+        if (pieceCode && (!activeTurn || pieceCode[0] === activeTurn)) {
+          const checkSquares = getCheckSquaresForPiece?.(square) ?? [];
+
+          if (checkSquares.length > 0) {
+            setHighlightSquares((current) => {
+              const next = { ...current };
+              next[square] = {
+                colorIndex: selectedColorIndex,
+                variant: 'pattern-origin',
+              };
+              checkSquares.forEach((checkSquare) => {
+                next[checkSquare] = {
+                  colorIndex: selectedColorIndex,
+                  variant: 'pattern-check',
+                };
+              });
+              return next;
+            });
+          }
+        }
+
+        resetRightClickModifiers();
+        return;
+      }
+
+      if (isPieceCaptureHighlight) {
+        const pieceCode = getPieceAtSquare?.(square);
+        const activeTurn = getActiveTurn?.();
+
+        if (pieceCode && (!activeTurn || pieceCode[0] === activeTurn)) {
+          const captureHighlights = getPiecePatternHighlights(
+            square,
+            pieceCode,
+            getPieceAtSquare
+          ).filter(
+            (patternHighlight) =>
+              patternHighlight.variant === 'pattern-origin' ||
+              patternHighlight.variant === 'pattern-capture'
+          );
+
+          if (captureHighlights.length > 0) {
+            setHighlightSquares((current) => {
+              const next = { ...current };
+              captureHighlights.forEach((captureHighlight) => {
+                next[captureHighlight.square] = {
+                  colorIndex: selectedColorIndex,
+                  variant: captureHighlight.variant,
+                };
+              });
+              return next;
+            });
+          }
+        }
+
+        resetRightClickModifiers();
+        return;
+      }
 
       if (isPiecePatternHighlight) {
         const pieceCode = getPieceAtSquare?.(square);
@@ -494,7 +579,14 @@ export const useTeachingHighlights = ({
       });
       resetRightClickModifiers();
     },
-    [enabled, getPieceAtSquare, resetRightClickModifiers, selectedColorIndex]
+    [
+      enabled,
+      getActiveTurn,
+      getCheckSquaresForPiece,
+      getPieceAtSquare,
+      resetRightClickModifiers,
+      selectedColorIndex,
+    ]
   );
 
   const handleArrowsChange = useCallback(

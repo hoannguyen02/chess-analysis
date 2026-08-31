@@ -86,6 +86,22 @@ export const EvaluateMoves = () => {
 
     return `${piece.color}${piece.type.toUpperCase()}` as const;
   }, []);
+  const getActiveTurn = useCallback(() => gameRef.current.turn(), []);
+  const getCheckSquaresForPiece = useCallback((square: Square) => {
+    const piece = gameRef.current.get(square);
+    if (!piece || piece.color !== gameRef.current.turn()) {
+      return [];
+    }
+
+    return gameRef.current
+      .moves({ square, verbose: true })
+      .filter((move: any) => {
+        const nextGame = new Chess(gameRef.current.fen());
+        nextGame.move(move);
+        return nextGame.in_check();
+      })
+      .map((move: any) => move.to as Square);
+  }, []);
   const {
     boardRenderKey,
     selectedColor,
@@ -94,7 +110,11 @@ export const EvaluateMoves = () => {
     handleSquareRightClick,
     handleArrowsChange,
     boardInteractionProps,
-  } = useTeachingHighlights({ getPieceAtSquare });
+  } = useTeachingHighlights({
+    getPieceAtSquare,
+    getActiveTurn,
+    getCheckSquaresForPiece,
+  });
 
   const gameRef = useRef(new Chess());
 

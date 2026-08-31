@@ -113,6 +113,24 @@ export const TeachingToolsDialog = ({
                 {t('common.teaching-tools.help-piece-pattern')}
               </p>
             </div>
+
+            <div className="rounded-xl border border-slate-200 p-3">
+              <div className="text-sm font-semibold text-slate-900">
+                {t('common.teaching-tools.action-piece-captures')}
+              </div>
+              <p className="mt-2 text-sm text-slate-500">
+                {t('common.teaching-tools.help-piece-captures')}
+              </p>
+            </div>
+
+            <div className="rounded-xl border border-slate-200 p-3">
+              <div className="text-sm font-semibold text-slate-900">
+                {t('common.teaching-tools.action-piece-checks')}
+              </div>
+              <p className="mt-2 text-sm text-slate-500">
+                {t('common.teaching-tools.help-piece-checks')}
+              </p>
+            </div>
           </div>
 
           <div className="space-y-3">
