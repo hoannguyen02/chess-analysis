@@ -116,6 +116,18 @@ const persistLessonPositionsToStorage = (
   );
 };
 
+const sanitizeLessonExportFileName = (value: string) => {
+  const cleaned = value
+    .trim()
+    .replace(/\.json$/i, '')
+    .replace(/[<>:"/\\|?*\u0000-\u001F]/g, '-')
+    .replace(/\s+/g, '-')
+    .replace(/-+/g, '-')
+    .replace(/^-|-$/g, '');
+
+  return cleaned || 'lima-lesson-positions';
+};
+
 const DragDropSetupChessboard = ({
   fen = '8/8/8/8/8/8/8/8 w - - 0 1',
   isGuide = false,
@@ -664,16 +676,26 @@ const DragDropSetupChessboard = ({
       activeLessonPositionId,
     };
     persistLessonPositionsToStorage(payload);
+    const requestedFileName = window.prompt(
+      t('setup-board.export-file-name-prompt'),
+      'lima-lesson-positions'
+    );
+
+    if (requestedFileName === null) {
+      return;
+    }
+
+    const fileName = `${sanitizeLessonExportFileName(requestedFileName)}.json`;
     const blob = new Blob([JSON.stringify(payload, null, 2)], {
       type: 'application/json',
     });
     const url = window.URL.createObjectURL(blob);
     const link = document.createElement('a');
     link.href = url;
-    link.download = 'lima-lesson-positions.json';
+    link.download = fileName;
     link.click();
     window.URL.revokeObjectURL(url);
-  }, [activeLessonPositionId, lessonPositions]);
+  }, [activeLessonPositionId, lessonPositions, t]);
 
   const importLessonPositions = useCallback(
     async (event: ChangeEvent<HTMLInputElement>) => {

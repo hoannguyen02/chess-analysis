@@ -8,6 +8,7 @@
   "add-current-position": "Add current position",
   "import-positions": "Import JSON list",
   "export-positions": "Export JSON list",
+  "export-file-name-prompt": "Enter a file name for this lesson export",
   "import-invalid": "That JSON list is invalid or contains no valid FEN positions.",
   "load-position": "Load position {number}",
   "edit-position-fen": "Edit FEN for position {number}",

@@ -8,6 +8,7 @@
   "add-current-position": "Thêm vị trí hiện tại",
   "import-positions": "Nhập danh sách JSON",
   "export-positions": "Xuất danh sách JSON",
+  "export-file-name-prompt": "Nhập tên file cho lesson này",
   "import-invalid": "Danh sách JSON không hợp lệ hoặc không có vị trí FEN hợp lệ.",
   "load-position": "Mở vị trí {number}",
   "edit-position-fen": "Sửa FEN cho vị trí {number}",
