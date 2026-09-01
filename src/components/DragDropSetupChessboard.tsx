@@ -8,7 +8,6 @@ import { LowercasePlayerName } from '@/types/player-name';
 import { Chess } from 'chess.js';
 import {
   Button,
-  Checkbox,
   Clipboard,
   Dropdown,
   TextInput,
@@ -28,6 +27,8 @@ import {
   VscScreenFull,
   VscScreenNormal,
   VscSearchFuzzy,
+  VscSettingsGear,
+  VscSymbolColor,
 } from 'react-icons/vsc';
 
 const pieces = [
@@ -71,8 +72,9 @@ const DragDropSetupChessboard = ({
     () => (game.turn() === 'w' ? 'white' : 'black'),
     [game]
   );
-  const [boardOrientation, setBoardOrientation] =
-    useState<LowercasePlayerName>(getOrientationFromTurn);
+  const [boardOrientation, setBoardOrientation] = useState<LowercasePlayerName>(
+    getOrientationFromTurn
+  );
   const [fenPosition, setFenPosition] = useState(fen);
   const [isFullViewMode, setIsFullViewMode] = useState(false);
   const [isBrowserFullscreen, setIsBrowserFullscreen] = useState(false);
@@ -82,15 +84,18 @@ const DragDropSetupChessboard = ({
     useState(false);
   const fullViewRef = useRef<HTMLDivElement>(null);
   const boardRef = useRef<HTMLDivElement>(null);
-  const getPieceAtSquare = useCallback((square: Square) => {
-    const piece = game.get(square);
+  const getPieceAtSquare = useCallback(
+    (square: Square) => {
+      const piece = game.get(square);
 
-    if (!piece) {
-      return null;
-    }
+      if (!piece) {
+        return null;
+      }
 
-    return `${piece.color}${piece.type.toUpperCase()}` as const;
-  }, [game]);
+      return `${piece.color}${piece.type.toUpperCase()}` as const;
+    },
+    [game]
+  );
   const getAllPieces = useCallback(
     () =>
       game.board().flatMap((rank, rankIndex) =>
@@ -382,6 +387,26 @@ const DragDropSetupChessboard = ({
     }),
     [chessboardWidth, isFullViewActive, notationColor, notationShadow]
   );
+  const activeBoardTheme = useMemo(
+    () => BOARD_THEMES.find((theme) => theme.id === boardTheme),
+    [boardTheme]
+  );
+  const castlingSummary = useMemo(
+    () =>
+      t('setup-board.castling-summary', {
+        white:
+          [castlingRights.K ? 'O-O' : null, castlingRights.Q ? 'O-O-O' : null]
+            .filter(Boolean)
+            .join(' ')
+            .trim() || '-',
+        black:
+          [castlingRights.k ? 'O-O' : null, castlingRights.q ? 'O-O-O' : null]
+            .filter(Boolean)
+            .join(' ')
+            .trim() || '-',
+      }),
+    [castlingRights.K, castlingRights.Q, castlingRights.k, castlingRights.q, t]
+  );
 
   return (
     <ChessboardDnDProvider>
@@ -517,24 +542,33 @@ const DragDropSetupChessboard = ({
                 <div className="mt-8 flex flex-col gap-6">
                   <TeachingTimer compact />
 
-                  <div className="flex items-center justify-between gap-4 rounded-xl border border-slate-200 bg-slate-50 px-4 py-3">
-                    <div>
-                      <p className="text-sm font-semibold text-gray-700">
-                        {t('setup-board.board-theme')}
-                      </p>
-                      <p className="text-sm text-slate-500">
-                        {BOARD_THEMES.find((theme) => theme.id === boardTheme)
-                          ?.labelKey
-                          ? t(
-                              BOARD_THEMES.find(
-                                (theme) => theme.id === boardTheme
-                              )!.labelKey
-                            )
-                          : ''}
-                      </p>
-                    </div>
+                  <div className="rounded-xl border flex justify-between border-slate-200 bg-slate-50 px-4 py-2.5">
                     <Dropdown
-                      label={t('setup-board.board-theme-settings')}
+                      label={
+                        <div className="flex min-w-0 items-center gap-3">
+                          <div className="flex w-10 shrink-0 overflow-hidden rounded-lg border border-slate-200">
+                            <span
+                              className="h-7 flex-1"
+                              style={{
+                                backgroundColor:
+                                  activeBoardTheme?.light ?? '#ffffff',
+                              }}
+                            />
+                            <span
+                              className="h-7 flex-1"
+                              style={{
+                                backgroundColor:
+                                  activeBoardTheme?.dark ?? '#cbd5e1',
+                              }}
+                            />
+                          </div>
+                          <span className="truncate text-sm text-slate-500">
+                            {activeBoardTheme?.labelKey
+                              ? t(activeBoardTheme.labelKey)
+                              : ''}
+                          </span>
+                        </div>
+                      }
                       inline
                     >
                       {BOARD_THEMES.map((theme) => {
@@ -571,93 +605,152 @@ const DragDropSetupChessboard = ({
                         );
                       })}
                     </Dropdown>
+                    <Dropdown
+                      label={
+                        <div className="flex min-w-0 items-center gap-3">
+                          <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-lg border border-slate-200 bg-white text-slate-500">
+                            <VscSettingsGear size={15} />
+                          </div>
+                          <span className="truncate text-sm text-slate-500">
+                            {castlingSummary}
+                          </span>
+                        </div>
+                      }
+                      inline
+                    >
+                      <div className="space-y-4 px-2 py-1">
+                        <div className="space-y-2">
+                          <p className="text-xs font-semibold uppercase tracking-[0.16em] text-slate-500">
+                            {t('common.title.white')}
+                          </p>
+                          <div className="flex flex-wrap items-center gap-2">
+                            <button
+                              type="button"
+                              onClick={() => handleCastlingChange('K')}
+                              className={`rounded-lg border px-3 py-1.5 text-sm font-semibold transition ${
+                                castlingRights.K
+                                  ? 'border-amber-400 bg-amber-50 text-amber-700'
+                                  : 'border-slate-200 bg-white text-slate-500 hover:border-slate-300'
+                              }`}
+                              aria-pressed={castlingRights.K}
+                              aria-label={`${t('common.title.white')} ${t('setup-board.king-side')} castling`}
+                            >
+                              O-O
+                            </button>
+                            <button
+                              type="button"
+                              onClick={() => handleCastlingChange('Q')}
+                              className={`rounded-lg border px-3 py-1.5 text-sm font-semibold transition ${
+                                castlingRights.Q
+                                  ? 'border-amber-400 bg-amber-50 text-amber-700'
+                                  : 'border-slate-200 bg-white text-slate-500 hover:border-slate-300'
+                              }`}
+                              aria-pressed={castlingRights.Q}
+                              aria-label={`${t('common.title.white')} ${t('setup-board.queen-side')} castling`}
+                            >
+                              O-O-O
+                            </button>
+                          </div>
+                        </div>
+
+                        <div className="space-y-2">
+                          <p className="text-xs font-semibold uppercase tracking-[0.16em] text-slate-500">
+                            {t('common.title.black')}
+                          </p>
+                          <div className="flex flex-wrap items-center gap-2">
+                            <button
+                              type="button"
+                              onClick={() => handleCastlingChange('k')}
+                              className={`rounded-lg border px-3 py-1.5 text-sm font-semibold transition ${
+                                castlingRights.k
+                                  ? 'border-amber-400 bg-amber-50 text-amber-700'
+                                  : 'border-slate-200 bg-white text-slate-500 hover:border-slate-300'
+                              }`}
+                              aria-pressed={castlingRights.k}
+                              aria-label={`${t('common.title.black')} ${t('setup-board.king-side')} castling`}
+                            >
+                              O-O
+                            </button>
+                            <button
+                              type="button"
+                              onClick={() => handleCastlingChange('q')}
+                              className={`rounded-lg border px-3 py-1.5 text-sm font-semibold transition ${
+                                castlingRights.q
+                                  ? 'border-amber-400 bg-amber-50 text-amber-700'
+                                  : 'border-slate-200 bg-white text-slate-500 hover:border-slate-300'
+                              }`}
+                              aria-pressed={castlingRights.q}
+                              aria-label={`${t('common.title.black')} ${t('setup-board.queen-side')} castling`}
+                            >
+                              O-O-O
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </Dropdown>
                   </div>
 
                   <div className="flex flex-col gap-4">
-                    <div className="flex flex-col gap-2">
-                      <label className="font-semibold text-gray-700">
-                        {t('setup-board.white-castling')}
-                      </label>
-                      <div className="flex flex-wrap items-center gap-2">
-                        <Checkbox
-                          checked={castlingRights.K}
-                          onChange={() => handleCastlingChange('K')}
-                        />
-                        <label className="text-xs">
-                          {t('setup-board.king-side')} (O-O)
-                        </label>
-                        <Checkbox
-                          checked={castlingRights.Q}
-                          onChange={() => handleCastlingChange('Q')}
-                        />
-                        <label className="text-xs">
-                          {t('setup-board.queen-side')} (O-O-O)
-                        </label>
+                    <div className="flex items-center gap-3">
+                      <div className="flex shrink-0 items-center rounded-xl border border-slate-200 bg-slate-50 p-1">
+                        <Tooltip
+                          content={t('common.title.white')}
+                          placement="top"
+                        >
+                          <button
+                            type="button"
+                            onClick={() => {
+                              setTurn('w');
+                            }}
+                            className={`flex h-10 w-10 items-center justify-center rounded-lg transition-all duration-200 ${
+                              game.turn() === 'w'
+                                ? 'bg-blue-500 text-white shadow-lg'
+                                : 'bg-white text-slate-500 hover:bg-slate-100'
+                            }`}
+                            aria-label={t('common.title.white')}
+                            aria-pressed={game.turn() === 'w'}
+                          >
+                            <span className="h-4 w-4 rounded-full border border-slate-300 bg-white" />
+                          </button>
+                        </Tooltip>
+                        <Tooltip
+                          content={t('common.title.black')}
+                          placement="top"
+                        >
+                          <button
+                            type="button"
+                            onClick={() => {
+                              setTurn('b');
+                            }}
+                            className={`flex h-10 w-10 items-center justify-center rounded-lg transition-all duration-200 ${
+                              game.turn() === 'b'
+                                ? 'bg-blue-500 text-white shadow-lg'
+                                : 'bg-white text-slate-500 hover:bg-slate-100'
+                            }`}
+                            aria-label={t('common.title.black')}
+                            aria-pressed={game.turn() === 'b'}
+                          >
+                            <span className="h-4 w-4 rounded-full border border-slate-500 bg-slate-900" />
+                          </button>
+                        </Tooltip>
+                        <Tooltip
+                          content={t('setup-board.to-move')}
+                          placement="top"
+                        >
+                          <span className="ml-1 flex h-10 w-10 items-center justify-center rounded-lg text-slate-400">
+                            <VscSymbolColor size={18} />
+                          </span>
+                        </Tooltip>
                       </div>
+
+                      <TextInput
+                        className="w-full rounded"
+                        value={fenPosition}
+                        onChange={handleFenInputChange}
+                        placeholder="Paste FEN position to start editing"
+                      />
                     </div>
 
-                    <div className="flex flex-col gap-2">
-                      <label className="font-semibold text-gray-700">
-                        {t('setup-board.black-castling')}
-                      </label>
-                      <div className="flex flex-wrap items-center gap-2">
-                        <Checkbox
-                          checked={castlingRights.k}
-                          onChange={() => handleCastlingChange('k')}
-                        />
-                        <label className="text-xs">
-                          {t('setup-board.king-side')} (O-O)
-                        </label>
-                        <Checkbox
-                          checked={castlingRights.q}
-                          onChange={() => handleCastlingChange('q')}
-                        />
-                        <label className="text-xs">
-                          {t('setup-board.queen-side')} (O-O-O)
-                        </label>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="flex flex-col">
-                    <label className="mb-2 font-semibold text-gray-700">
-                      {t('setup-board.next-player-to-move')}
-                    </label>
-                    <div className="flex items-center">
-                      <Button
-                        className={`flex items-center px-4 py-2 rounded-lg transition-all duration-200 ${
-                          game.turn() === 'w'
-                            ? 'bg-blue-500 text-white shadow-lg'
-                            : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
-                        }`}
-                        onClick={() => {
-                          setTurn('w');
-                        }}
-                      >
-                        {t('common.title.white')}
-                      </Button>
-                      <Button
-                        className={`ml-2 flex items-center px-4 py-2 rounded-lg transition-all duration-200 ${
-                          game.turn() === 'b'
-                            ? 'bg-blue-500 text-white shadow-lg'
-                            : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
-                        }`}
-                        onClick={() => {
-                          setTurn('b');
-                        }}
-                      >
-                        {t('common.title.black')}
-                      </Button>
-                    </div>
-                  </div>
-
-                  <div className="flex flex-col gap-4">
-                    <TextInput
-                      className="w-full rounded"
-                      value={fenPosition}
-                      onChange={handleFenInputChange}
-                      placeholder="Paste FEN position to start editing"
-                    />
                     <div className="flex items-center justify-center">
                       <Clipboard
                         valueToCopy={game.fen()}
