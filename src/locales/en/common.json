@@ -13,7 +13,7 @@
   },
   "button": {
     "copy-link": "Copy Link",
-    "copy-fen": "Copy fen/position",
+    "copy-fen": "FEN",
     "close": "Close",
     "flip-board": "Flip Board",
     "full-view": "Full view",

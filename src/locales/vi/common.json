@@ -13,7 +13,7 @@
   },
   "button": {
     "copy-link": "Sao chép link",
-    "copy-fen": "Sao chép Fen/vị trí",
+    "copy-fen": "FEN",
     "restart": "Xoá, làm lại",
     "flip-board": "Đảo ngược bàn cờ",
     "full-view": "Toàn màn hình",
