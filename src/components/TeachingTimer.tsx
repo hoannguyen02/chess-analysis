@@ -12,7 +12,12 @@ import {
   VscPrimitiveSquare,
 } from 'react-icons/vsc';
 
-const TIMER_PRESETS_MINUTES = [1, 3, 5, 7] as const;
+const TIMER_PRESETS = [
+  { valueSeconds: 30, labelKey: 'common.timer.thirty-seconds' },
+  { valueSeconds: 60, labelKey: 'common.timer.one-minute' },
+  { valueSeconds: 180, labelKey: 'common.timer.three-minutes' },
+] as const;
+const DEFAULT_CUSTOM_MINUTES = 10;
 
 type TeachingTimerProps = {
   compact?: boolean;
@@ -20,10 +25,14 @@ type TeachingTimerProps = {
 
 export const TeachingTimer = ({ compact = false }: TeachingTimerProps) => {
   const t = useTranslations();
-  const defaultPresetMinutes = TIMER_PRESETS_MINUTES[0];
-  const defaultPresetSeconds = defaultPresetMinutes * 60;
-  const [selectedMinutes, setSelectedMinutes] = useState<number>(
-    defaultPresetMinutes
+  const defaultPresetSeconds = TIMER_PRESETS[0].valueSeconds;
+  const [selectedSeconds, setSelectedSeconds] =
+    useState<number>(defaultPresetSeconds);
+  const [customMinutes, setCustomMinutes] = useState<number>(
+    DEFAULT_CUSTOM_MINUTES
+  );
+  const [customMinutesInput, setCustomMinutesInput] = useState<string>(
+    String(DEFAULT_CUSTOM_MINUTES)
   );
   const [remainingSeconds, setRemainingSeconds] =
     useState(defaultPresetSeconds);
@@ -31,6 +40,7 @@ export const TeachingTimer = ({ compact = false }: TeachingTimerProps) => {
   const [soundEnabled, setSoundEnabled] = useState(true);
   const audioContextRef = useRef<AudioContext | null>(null);
   const isAudioUnlockedRef = useRef(false);
+  const customInputRef = useRef<HTMLInputElement | null>(null);
 
   const ensureAudioContext = useCallback(async () => {
     if (typeof window === 'undefined') return null;
@@ -152,16 +162,29 @@ export const TeachingTimer = ({ compact = false }: TeachingTimerProps) => {
     return `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
   }, [remainingSeconds]);
 
-  const selectPreset = (minutes: number) => {
+  const selectPreset = (valueSeconds: number) => {
     void unlockAudio();
-    setSelectedMinutes(minutes);
-    setRemainingSeconds(minutes * 60);
+    setSelectedSeconds(valueSeconds);
+    setRemainingSeconds(valueSeconds);
     setIsRunning(false);
   };
 
+  const commitCustomMinutes = useCallback(() => {
+    const parsedMinutes = Number.parseInt(customMinutesInput, 10);
+    const nextMinutes = Number.isNaN(parsedMinutes)
+      ? customMinutes
+      : Math.min(99, Math.max(1, parsedMinutes));
+
+    setCustomMinutes(nextMinutes);
+    setCustomMinutesInput(String(nextMinutes));
+    setSelectedSeconds(nextMinutes * 60);
+    setRemainingSeconds(nextMinutes * 60);
+    setIsRunning(false);
+  }, [customMinutes, customMinutesInput]);
+
   const handleReset = () => {
     void unlockAudio();
-    setRemainingSeconds(selectedMinutes * 60);
+    setRemainingSeconds(selectedSeconds);
     setIsRunning(false);
   };
 
@@ -169,13 +192,24 @@ export const TeachingTimer = ({ compact = false }: TeachingTimerProps) => {
     await unlockAudio();
 
     if (remainingSeconds === 0) {
-      setRemainingSeconds(selectedMinutes * 60);
+      setRemainingSeconds(selectedSeconds);
       setIsRunning(true);
       return;
     }
 
     setIsRunning((current) => !current);
   };
+
+  useEffect(() => {
+    if (!TIMER_PRESETS.some((preset) => preset.valueSeconds === selectedSeconds)) {
+      customInputRef.current?.focus();
+      customInputRef.current?.select();
+    }
+  }, [selectedSeconds]);
+
+  const isCustomSelected = !TIMER_PRESETS.some(
+    (preset) => preset.valueSeconds === selectedSeconds
+  );
 
   return (
     <div
@@ -265,15 +299,15 @@ export const TeachingTimer = ({ compact = false }: TeachingTimerProps) => {
         </div>
       )}
 
-      <div className={`grid grid-cols-4 gap-2 ${compact ? 'mt-2' : 'mt-4'}`}>
-        {TIMER_PRESETS_MINUTES.map((minutes) => {
-          const isActive = minutes === selectedMinutes;
+      <div className={`grid grid-cols-5 gap-2 ${compact ? 'mt-2' : 'mt-4'}`}>
+        {TIMER_PRESETS.map((preset) => {
+          const isActive = preset.valueSeconds === selectedSeconds;
 
           return (
             <button
-              key={minutes}
+              key={preset.valueSeconds}
               type="button"
-              onClick={() => selectPreset(minutes)}
+              onClick={() => selectPreset(preset.valueSeconds)}
               className={`rounded-lg border px-3 ${
                 compact ? 'py-1.5 text-xs' : 'py-2 text-sm'
               } font-semibold transition ${
@@ -282,10 +316,53 @@ export const TeachingTimer = ({ compact = false }: TeachingTimerProps) => {
                   : 'border-slate-200 bg-white text-slate-600 hover:border-slate-300 hover:bg-slate-50'
               }`}
             >
-              {minutes} {t('common.timer.minutes-short')}
+              {t(preset.labelKey)}
             </button>
           );
         })}
+        <div
+          className={`flex min-w-0 items-center justify-center rounded-lg border px-2 ${
+            compact ? 'py-1.5 text-xs' : 'py-2 text-sm'
+          } ${
+            isCustomSelected
+              ? 'border-[var(--s-bg)] bg-[#f5a623]/10 text-[#b87400]'
+              : 'border-slate-200 bg-white text-slate-600'
+          }`}
+        >
+          <input
+            ref={customInputRef}
+            type="text"
+            inputMode="numeric"
+            pattern="[0-9]*"
+            value={customMinutesInput}
+            onFocus={() => {
+              void unlockAudio();
+              setSelectedSeconds(customMinutes * 60);
+            }}
+            onChange={(event) => {
+              setCustomMinutesInput(
+                event.target.value.replace(/\D/g, '').slice(0, 2)
+              );
+            }}
+            onBlur={commitCustomMinutes}
+            onKeyDown={(event) => {
+              if (event.key === 'Enter') {
+                commitCustomMinutes();
+              }
+            }}
+            className={`w-10 border-0 bg-transparent p-0 text-center font-semibold tabular-nums outline-none ${
+              isCustomSelected ? 'text-[#b87400]' : 'text-slate-600'
+            } ${compact ? 'text-xs leading-none' : 'text-sm leading-none'}`}
+            aria-label={t('common.timer.custom')}
+          />
+          <span
+            className={`ml-1 shrink-0 font-semibold ${
+              isCustomSelected ? 'text-[#b87400]' : 'text-slate-600'
+            } ${compact ? 'text-xs' : 'text-sm'}`}
+          >
+            {t('common.timer.minutes-short')}
+          </span>
+        </div>
       </div>
 
       {!compact && (

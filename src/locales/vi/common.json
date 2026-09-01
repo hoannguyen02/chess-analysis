@@ -33,7 +33,12 @@
   "timer": {
     "title": "Bộ đếm giờ giảng dạy",
     "description": "Dùng thử thách có giới hạn thời gian trước khi học viên chia sẻ ý tưởng.",
+    "thirty-seconds": "30 giây",
+    "one-minute": "1 phút",
+    "three-minutes": "3 phút",
+    "five-minutes": "5 phút",
     "minutes-short": "phút",
+    "custom": "Tùy chỉnh",
     "start": "Bắt đầu",
     "pause": "Tạm dừng",
     "reset": "Đặt lại",

@@ -34,7 +34,12 @@
   "timer": {
     "title": "Teaching Timer",
     "description": "Use a timed challenge before students share ideas.",
+    "thirty-seconds": "30 sec",
+    "one-minute": "1 min",
+    "three-minutes": "3 min",
+    "five-minutes": "5 min",
     "minutes-short": "min",
+    "custom": "Custom",
     "start": "Start",
     "pause": "Pause",
     "reset": "Reset",
