@@ -8,6 +8,7 @@ import { LowercasePlayerName } from '@/types/player-name';
 import { Chess } from 'chess.js';
 import {
   Button,
+  Checkbox,
   Clipboard,
   Dropdown,
   TextInput,
@@ -83,6 +84,7 @@ const DragDropSetupChessboard = ({
   const [isBrowserFullscreen, setIsBrowserFullscreen] = useState(false);
   const [boardContainerWidth, setBoardContainerWidth] = useState(500);
   const [viewportHeight, setViewportHeight] = useState(900);
+  const [showSparePieces, setShowSparePieces] = useState(false);
   const [isTeachingToolsDialogOpen, setIsTeachingToolsDialogOpen] =
     useState(false);
   const fullViewRef = useRef<HTMLDivElement>(null);
@@ -436,7 +438,7 @@ const DragDropSetupChessboard = ({
               <div
                 className="rounded-2xl border border-slate-300 bg-slate-50 shadow-lg"
                 style={{
-                  display: 'flex',
+                  display: showSparePieces ? 'flex' : 'none',
                   justifyContent: 'center',
                   marginBottom: `${spaceBetweenBoardAndPieces}px`,
                   width: `${chessboardWidth}px`,
@@ -482,7 +484,7 @@ const DragDropSetupChessboard = ({
               <div
                 className="rounded-2xl border border-slate-300 bg-slate-50 shadow-lg"
                 style={{
-                  display: 'flex',
+                  display: showSparePieces ? 'flex' : 'none',
                   justifyContent: 'center',
                   marginTop: `${spaceBetweenBoardAndPieces}px`,
                   width: `${chessboardWidth}px`,
@@ -507,7 +509,8 @@ const DragDropSetupChessboard = ({
                   : 'rounded p-4 lg:border'
               }
             >
-              <div className="mx-auto flex w-full items-center justify-center gap-2">
+              <div className="mx-auto flex w-full items-center justify-between gap-3">
+                <div className="flex items-center gap-2">
                 <Tooltip
                   content={t('setup-board.start-position')}
                   placement="top"
@@ -551,6 +554,20 @@ const DragDropSetupChessboard = ({
                     <VscArrowSwap size={22} />
                   </button>
                 </Tooltip>
+                </div>
+                <label
+                  htmlFor="show-spare-pieces"
+                  className="flex shrink-0 cursor-pointer items-center gap-2 rounded-lg border border-slate-200 bg-slate-50 px-3 py-2 text-sm font-medium text-slate-500 transition hover:border-slate-300 hover:bg-white"
+                >
+                  <Checkbox
+                    id="show-spare-pieces"
+                    checked={showSparePieces}
+                    onChange={(event) =>
+                      setShowSparePieces(event.target.checked)
+                    }
+                  />
+                  <span>{t('setup-board.show-pieces')}</span>
+                </label>
               </div>
 
               {!isGuide && (
