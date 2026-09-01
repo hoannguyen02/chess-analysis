@@ -1,4 +1,3 @@
-import { TeachingToolsDialog } from '@/components/TeachingToolsDialog';
 import { BOARD_THEMES, BoardThemeId } from '@/constants/board-themes';
 import { useAppContext } from '@/contexts/AppContext';
 import { useCustomBoard } from '@/hooks/useCustomBoard';
@@ -16,7 +15,14 @@ import {
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import {
+  ChangeEvent,
+  useCallback,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+} from 'react';
 import {
   Chessboard,
   ChessboardDnDProvider,
@@ -32,6 +38,8 @@ import {
   VscChevronDown,
   VscChevronUp,
   VscChromeRestore,
+  VscCloudDownload,
+  VscCloudUpload,
   VscCopy,
   VscListOrdered,
   VscScreenFull,
@@ -71,6 +79,14 @@ type LessonPosition = {
   fen: string;
 };
 
+type LessonPositionsStoragePayload = {
+  version: 1;
+  positions: LessonPosition[];
+  activeLessonPositionId: string | null;
+};
+
+const LESSON_POSITIONS_STORAGE_KEY = 'lima-setup-board-lesson-positions';
+
 const castlingRightsFromFen = (fen: string) => {
   const castlingPart = fen.split(' ')[2] ?? '-';
 
@@ -84,6 +100,19 @@ const castlingRightsFromFen = (fen: string) => {
 
 const createLessonPositionId = () =>
   `lesson-${Date.now()}-${Math.random().toString(36).slice(2, 8)}`;
+
+const persistLessonPositionsToStorage = (
+  payload: LessonPositionsStoragePayload
+) => {
+  if (typeof window === 'undefined') {
+    return;
+  }
+
+  window.localStorage.setItem(
+    LESSON_POSITIONS_STORAGE_KEY,
+    JSON.stringify(payload)
+  );
+};
 
 const DragDropSetupChessboard = ({
   fen = '8/8/8/8/8/8/8/8 w - - 0 1',
@@ -118,10 +147,11 @@ const DragDropSetupChessboard = ({
   const [activeLessonPositionId, setActiveLessonPositionId] = useState<
     string | null
   >(null);
-  const [isTeachingToolsDialogOpen, setIsTeachingToolsDialogOpen] =
+  const [hasHydratedLessonPositions, setHasHydratedLessonPositions] =
     useState(false);
   const fullViewRef = useRef<HTMLDivElement>(null);
   const boardRef = useRef<HTMLDivElement>(null);
+  const lessonImportInputRef = useRef<HTMLInputElement | null>(null);
   const getPieceAtSquare = useCallback(
     (square: Square) => {
       const piece = game.get(square);
@@ -248,6 +278,73 @@ const DragDropSetupChessboard = ({
       return next;
     });
   }, [lessonPositions]);
+
+  useEffect(() => {
+    if (typeof window === 'undefined') {
+      return;
+    }
+
+    const stored = window.localStorage.getItem(LESSON_POSITIONS_STORAGE_KEY);
+    if (!stored) {
+      return;
+    }
+
+    try {
+      const parsed = JSON.parse(stored) as LessonPositionsStoragePayload;
+      if (!Array.isArray(parsed.positions)) {
+        return;
+      }
+
+      const validPositions = parsed.positions.filter((position) => {
+        if (
+          !position ||
+          typeof position.id !== 'string' ||
+          typeof position.title !== 'string' ||
+          typeof position.fen !== 'string'
+        ) {
+          return false;
+        }
+
+        return game.validate_fen(position.fen).valid;
+      });
+
+      const nextActiveLessonPositionId = validPositions.some(
+        (position) => position.id === parsed.activeLessonPositionId
+      )
+        ? parsed.activeLessonPositionId
+        : (validPositions[0]?.id ?? null);
+
+      setLessonPositions(validPositions);
+      setActiveLessonPositionId(nextActiveLessonPositionId);
+
+      const initialPosition =
+        validPositions.find(
+          (position) => position.id === nextActiveLessonPositionId
+        ) ?? validPositions[0];
+
+      if (initialPosition) {
+        applyFenPosition(initialPosition.fen);
+      }
+    } catch {
+      // Ignore corrupted local storage payloads.
+    } finally {
+      setHasHydratedLessonPositions(true);
+    }
+  }, [applyFenPosition, game]);
+
+  useEffect(() => {
+    if (!hasHydratedLessonPositions) {
+      return;
+    }
+
+    const payload: LessonPositionsStoragePayload = {
+      version: 1,
+      positions: lessonPositions,
+      activeLessonPositionId,
+    };
+
+    persistLessonPositionsToStorage(payload);
+  }, [activeLessonPositionId, hasHydratedLessonPositions, lessonPositions]);
 
   useEffect(() => {
     if (typeof window === 'undefined') return;
@@ -557,6 +654,85 @@ const DragDropSetupChessboard = ({
       }
     },
     [activeLessonPositionId, applyFenPosition, lessonPositionFenDrafts]
+  );
+
+  const exportLessonPositions = useCallback(() => {
+    if (typeof window === 'undefined' || lessonPositions.length === 0) {
+      return;
+    }
+
+    const payload: LessonPositionsStoragePayload = {
+      version: 1,
+      positions: lessonPositions,
+      activeLessonPositionId,
+    };
+    persistLessonPositionsToStorage(payload);
+    const blob = new Blob([JSON.stringify(payload, null, 2)], {
+      type: 'application/json',
+    });
+    const url = window.URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = 'lima-lesson-positions.json';
+    link.click();
+    window.URL.revokeObjectURL(url);
+  }, [activeLessonPositionId, lessonPositions]);
+
+  const importLessonPositions = useCallback(
+    async (event: ChangeEvent<HTMLInputElement>) => {
+      const file = event.target.files?.[0];
+      if (!file) {
+        return;
+      }
+
+      try {
+        const text = await file.text();
+        const parsed = JSON.parse(text) as LessonPositionsStoragePayload;
+
+        if (!Array.isArray(parsed.positions)) {
+          throw new Error('Invalid lesson positions payload');
+        }
+
+        const validPositions = parsed.positions.filter((position) => {
+          if (
+            !position ||
+            typeof position.id !== 'string' ||
+            typeof position.title !== 'string' ||
+            typeof position.fen !== 'string'
+          ) {
+            return false;
+          }
+
+          return game.validate_fen(position.fen).valid;
+        });
+
+        setLessonPositions(validPositions);
+        const nextActiveLessonPositionId = validPositions.some(
+          (position) => position.id === parsed.activeLessonPositionId
+        )
+          ? parsed.activeLessonPositionId
+          : (validPositions[0]?.id ?? null);
+        setActiveLessonPositionId(nextActiveLessonPositionId);
+        persistLessonPositionsToStorage({
+          version: 1,
+          positions: validPositions,
+          activeLessonPositionId: nextActiveLessonPositionId,
+        });
+
+        if (validPositions[0]) {
+          loadLessonPosition(
+            validPositions.find(
+              (position) => position.id === nextActiveLessonPositionId
+            ) ?? validPositions[0]
+          );
+        }
+      } catch {
+        alert(t('setup-board.import-invalid'));
+      } finally {
+        event.target.value = '';
+      }
+    },
+    [game, loadLessonPosition, t]
   );
 
   const whitePieces = useMemo(() => pieces.slice(0, 6), []);
@@ -1027,6 +1203,13 @@ const DragDropSetupChessboard = ({
                     </div>
 
                     <div className="rounded-xl border border-slate-200 bg-slate-50 p-3">
+                      <input
+                        ref={lessonImportInputRef}
+                        type="file"
+                        accept="application/json,.json"
+                        onChange={importLessonPositions}
+                        className="hidden"
+                      />
                       <div className="flex items-center justify-between gap-3">
                         <div className="flex min-w-0 items-center gap-2">
                           <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border border-slate-200 bg-white text-slate-500">
@@ -1042,19 +1225,50 @@ const DragDropSetupChessboard = ({
                             </p>
                           </div>
                         </div>
-                        <Tooltip
-                          content={t('setup-board.add-current-position')}
-                          placement="top"
-                        >
-                          <button
-                            type="button"
-                            onClick={addLessonPosition}
-                            className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg border border-slate-200 bg-white text-slate-600 transition hover:border-slate-300 hover:bg-slate-100"
-                            aria-label={t('setup-board.add-current-position')}
+                        <div className="flex shrink-0 items-center gap-2">
+                          <Tooltip
+                            content={t('setup-board.import-positions')}
+                            placement="top"
                           >
-                            <VscAdd size={18} />
-                          </button>
-                        </Tooltip>
+                            <button
+                              type="button"
+                              onClick={() =>
+                                lessonImportInputRef.current?.click()
+                              }
+                              className="flex h-10 w-10 items-center justify-center rounded-lg border border-slate-200 bg-white text-slate-600 transition hover:border-slate-300 hover:bg-slate-100"
+                              aria-label={t('setup-board.import-positions')}
+                            >
+                              <VscCloudUpload size={18} />
+                            </button>
+                          </Tooltip>
+                          <Tooltip
+                            content={t('setup-board.export-positions')}
+                            placement="top"
+                          >
+                            <button
+                              type="button"
+                              onClick={exportLessonPositions}
+                              disabled={lessonPositions.length === 0}
+                              className="flex h-10 w-10 items-center justify-center rounded-lg border border-slate-200 bg-white text-slate-600 transition hover:border-slate-300 hover:bg-slate-100 disabled:cursor-not-allowed disabled:opacity-40"
+                              aria-label={t('setup-board.export-positions')}
+                            >
+                              <VscCloudDownload size={18} />
+                            </button>
+                          </Tooltip>
+                          <Tooltip
+                            content={t('setup-board.add-current-position')}
+                            placement="top"
+                          >
+                            <button
+                              type="button"
+                              onClick={addLessonPosition}
+                              className="flex h-10 w-10 items-center justify-center rounded-lg border border-slate-200 bg-white text-slate-600 transition hover:border-slate-300 hover:bg-slate-100"
+                              aria-label={t('setup-board.add-current-position')}
+                            >
+                              <VscAdd size={18} />
+                            </button>
+                          </Tooltip>
+                        </div>
                       </div>
 
                       {lessonPositions.length === 0 ? (
@@ -1382,10 +1596,6 @@ const DragDropSetupChessboard = ({
             )}
           </div>
         </div>
-        <TeachingToolsDialog
-          open={isTeachingToolsDialogOpen}
-          onClose={() => setIsTeachingToolsDialogOpen(false)}
-        />
       </div>
     </ChessboardDnDProvider>
   );
