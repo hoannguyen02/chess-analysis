@@ -24,11 +24,14 @@ import {
 } from 'react-chessboard';
 import { Piece, Square } from 'react-chessboard/dist/chessboard/types';
 import {
+  VscArrowSwap,
+  VscChromeRestore,
   VscScreenFull,
   VscScreenNormal,
   VscSearchFuzzy,
   VscSettingsGear,
   VscSymbolColor,
+  VscTrash,
 } from 'react-icons/vsc';
 
 const pieces = [
@@ -504,38 +507,50 @@ const DragDropSetupChessboard = ({
                   : 'rounded p-4 lg:border'
               }
             >
-              <div className="mx-auto grid w-full grid-cols-3 gap-2">
-                <Button
-                  onClick={() => {
-                    game.reset();
-                    setFenPosition(game.fen());
-                    setBoardOrientation(getOrientationFromTurn());
-                    clearHighlights();
-                  }}
-                  outline
-                  gradientDuoTone="cyanToBlue"
+              <div className="mx-auto flex w-full items-center justify-center gap-2">
+                <Tooltip
+                  content={t('setup-board.start-position')}
+                  placement="top"
                 >
-                  {t('setup-board.start-position')}
-                </Button>
-                <Button
-                  onClick={() => {
-                    game.clear();
-                    setFenPosition(game.fen());
-                    setBoardOrientation(getOrientationFromTurn());
-                    clearHighlights();
-                  }}
-                  outline
-                  gradientDuoTone="pinkToOrange"
-                >
-                  {t('setup-board.clear-board')}
-                </Button>
-                <Button
-                  onClick={onFlipBoard}
-                  outline
-                  gradientDuoTone="purpleToBlue"
-                >
-                  {t('setup-board.flip-board')}
-                </Button>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      game.reset();
+                      setFenPosition(game.fen());
+                      setBoardOrientation(getOrientationFromTurn());
+                      clearHighlights();
+                    }}
+                    className="flex h-12 w-12 items-center justify-center rounded-xl border border-cyan-300 bg-white text-cyan-600 transition hover:bg-cyan-50"
+                    aria-label={t('setup-board.start-position')}
+                  >
+                    <VscChromeRestore size={22} />
+                  </button>
+                </Tooltip>
+                <Tooltip content={t('setup-board.clear-board')} placement="top">
+                  <button
+                    type="button"
+                    onClick={() => {
+                      game.clear();
+                      setFenPosition(game.fen());
+                      setBoardOrientation(getOrientationFromTurn());
+                      clearHighlights();
+                    }}
+                    className="flex h-12 w-12 items-center justify-center rounded-xl border border-rose-300 bg-white text-rose-500 transition hover:bg-rose-50"
+                    aria-label={t('setup-board.clear-board')}
+                  >
+                    <VscTrash size={22} />
+                  </button>
+                </Tooltip>
+                <Tooltip content={t('setup-board.flip-board')} placement="top">
+                  <button
+                    type="button"
+                    onClick={onFlipBoard}
+                    className="flex h-12 w-12 items-center justify-center rounded-xl border border-indigo-300 bg-white text-indigo-500 transition hover:bg-indigo-50"
+                    aria-label={t('setup-board.flip-board')}
+                  >
+                    <VscArrowSwap size={22} />
+                  </button>
+                </Tooltip>
               </div>
 
               {!isGuide && (
