@@ -51,6 +51,19 @@ const MOVE_ANNOTATION_LABEL_DURATION_MS = 2000;
 const MOVE_ANNOTATION_ICON_DELAY_MS =
   MOVE_ANIMATION_DELAY_MS + MOVE_ANNOTATION_LABEL_DURATION_MS;
 const FILES = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'] as const;
+type BoardPieceCode =
+  | 'wP'
+  | 'wN'
+  | 'wB'
+  | 'wR'
+  | 'wQ'
+  | 'wK'
+  | 'bP'
+  | 'bN'
+  | 'bB'
+  | 'bR'
+  | 'bQ'
+  | 'bK';
 
 export const EvaluateMoves = () => {
   const { customPieces, bgDark, bgLight, notationColor, notationShadow } =
@@ -78,15 +91,18 @@ export const EvaluateMoves = () => {
     useState(false);
   useState(false);
   const t = useTranslations();
-  const getPieceAtSquare = useCallback((square: Square) => {
-    const piece = gameRef.current.get(square);
+  const getPieceAtSquare = useCallback(
+    (square: Square): BoardPieceCode | null => {
+      const piece = gameRef.current.get(square);
 
-    if (!piece) {
-      return null;
-    }
+      if (!piece) {
+        return null;
+      }
 
-    return `${piece.color}${piece.type.toUpperCase()}` as const;
-  }, []);
+      return `${piece.color}${piece.type.toUpperCase()}` as BoardPieceCode;
+    },
+    []
+  );
   const getAllPieces = useCallback(
     () =>
       gameRef.current.board().flatMap((rank, rankIndex) =>
@@ -98,7 +114,7 @@ export const EvaluateMoves = () => {
           return [
             {
               square: `${FILES[fileIndex]}${8 - rankIndex}` as Square,
-              pieceCode: `${piece.color}${piece.type.toUpperCase()}` as const,
+              pieceCode: `${piece.color}${piece.type.toUpperCase()}` as BoardPieceCode,
             },
           ];
         })

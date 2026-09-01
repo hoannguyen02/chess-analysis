@@ -18,6 +18,14 @@ html, body {
   height: 100%;
 }
 
+.font-en {
+  font-family: Poppins, "Avenir Next", Avenir, "Segoe UI", sans-serif;
+}
+
+.font-vi {
+  font-family: Roboto, "Helvetica Neue", Helvetica, Arial, "Segoe UI", sans-serif;
+}
+
 @keyframes gradientShift {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }

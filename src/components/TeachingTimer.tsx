@@ -25,7 +25,7 @@ type TeachingTimerProps = {
 
 export const TeachingTimer = ({ compact = false }: TeachingTimerProps) => {
   const t = useTranslations();
-  const defaultPresetSeconds = TIMER_PRESETS[0].valueSeconds;
+  const defaultPresetSeconds: number = TIMER_PRESETS[0].valueSeconds;
   const [selectedSeconds, setSelectedSeconds] =
     useState<number>(defaultPresetSeconds);
   const [customMinutes, setCustomMinutes] = useState<number>(
@@ -35,7 +35,7 @@ export const TeachingTimer = ({ compact = false }: TeachingTimerProps) => {
     String(DEFAULT_CUSTOM_MINUTES)
   );
   const [remainingSeconds, setRemainingSeconds] =
-    useState(defaultPresetSeconds);
+    useState<number>(defaultPresetSeconds);
   const [isRunning, setIsRunning] = useState(false);
   const [soundEnabled, setSoundEnabled] = useState(true);
   const audioContextRef = useRef<AudioContext | null>(null);

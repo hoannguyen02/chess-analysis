@@ -326,23 +326,23 @@ const getPiecePatternHighlights = (
 
   if (type === 'B' || type === 'Q') {
     highlights.push(
-      getRaySquares(square, -1, -1, pieceCode, getPieceAtSquare),
-      getRaySquares(square, -1, 1, pieceCode, getPieceAtSquare),
-      getRaySquares(square, 1, -1, pieceCode, getPieceAtSquare),
-      getRaySquares(square, 1, 1, pieceCode, getPieceAtSquare)
+      ...getRaySquares(square, -1, -1, pieceCode, getPieceAtSquare),
+      ...getRaySquares(square, -1, 1, pieceCode, getPieceAtSquare),
+      ...getRaySquares(square, 1, -1, pieceCode, getPieceAtSquare),
+      ...getRaySquares(square, 1, 1, pieceCode, getPieceAtSquare)
     );
   }
 
   if (type === 'R' || type === 'Q') {
     highlights.push(
-      getRaySquares(square, -1, 0, pieceCode, getPieceAtSquare),
-      getRaySquares(square, 1, 0, pieceCode, getPieceAtSquare),
-      getRaySquares(square, 0, -1, pieceCode, getPieceAtSquare),
-      getRaySquares(square, 0, 1, pieceCode, getPieceAtSquare)
+      ...getRaySquares(square, -1, 0, pieceCode, getPieceAtSquare),
+      ...getRaySquares(square, 1, 0, pieceCode, getPieceAtSquare),
+      ...getRaySquares(square, 0, -1, pieceCode, getPieceAtSquare),
+      ...getRaySquares(square, 0, 1, pieceCode, getPieceAtSquare)
     );
   }
 
-  return highlights.flat();
+  return highlights;
 };
 
 const areSameArrow = (first: Arrow, second: Arrow) =>

@@ -64,7 +64,9 @@ const pieces = [
   'bR',
   'bQ',
   'bK',
-];
+] as const;
+
+type BoardPieceCode = (typeof pieces)[number];
 
 const FILES = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'] as const;
 
@@ -153,14 +155,14 @@ const DragDropSetupChessboard = ({
   const boardRef = useRef<HTMLDivElement>(null);
   const lessonImportInputRef = useRef<HTMLInputElement | null>(null);
   const getPieceAtSquare = useCallback(
-    (square: Square) => {
+    (square: Square): BoardPieceCode | null => {
       const piece = game.get(square);
 
       if (!piece) {
         return null;
       }
 
-      return `${piece.color}${piece.type.toUpperCase()}` as const;
+      return `${piece.color}${piece.type.toUpperCase()}` as BoardPieceCode;
     },
     [game]
   );
@@ -175,7 +177,7 @@ const DragDropSetupChessboard = ({
           return [
             {
               square: `${FILES[fileIndex]}${8 - rankIndex}` as Square,
-              pieceCode: `${piece.color}${piece.type.toUpperCase()}` as const,
+              pieceCode: `${piece.color}${piece.type.toUpperCase()}` as BoardPieceCode,
             },
           ];
         })
@@ -533,36 +535,29 @@ const DragDropSetupChessboard = ({
 
   const duplicateLessonPosition = useCallback(
     (id: string) => {
-      let cloneToLoad: LessonPosition | null = null;
-
-      setLessonPositions((current) => {
-        const index = current.findIndex((position) => position.id === id);
-        if (index === -1) {
-          return current;
-        }
-
-        const source = current[index];
-        const clone: LessonPosition = {
-          ...source,
-          id: createLessonPositionId(),
-          title: `${source.title} Copy`,
-        };
-        cloneToLoad = clone;
-
-        const next = [...current];
-        next.splice(index + 1, 0, clone);
-        return next;
-      });
-
-      if (cloneToLoad) {
-        setLessonPositionFenDrafts((current) => ({
-          ...current,
-          [cloneToLoad.id]: cloneToLoad.fen,
-        }));
-        loadLessonPosition(cloneToLoad);
+      const index = lessonPositions.findIndex((position) => position.id === id);
+      if (index === -1) {
+        return;
       }
+
+      const source = lessonPositions[index];
+      const clone: LessonPosition = {
+        ...source,
+        id: createLessonPositionId(),
+        title: `${source.title} Copy`,
+      };
+
+      const next = [...lessonPositions];
+      next.splice(index + 1, 0, clone);
+
+      setLessonPositions(next);
+      setLessonPositionFenDrafts((current) => ({
+        ...current,
+        [clone.id]: clone.fen,
+      }));
+      loadLessonPosition(clone);
     },
-    [loadLessonPosition]
+    [lessonPositions, loadLessonPosition]
   );
 
   const moveLessonPosition = useCallback((id: string, direction: -1 | 1) => {
@@ -583,17 +578,19 @@ const DragDropSetupChessboard = ({
 
   const removeLessonPosition = useCallback(
     (id: string) => {
-      let fallback: LessonPosition | null = null;
+      const index = lessonPositions.findIndex((position) => position.id === id);
+      if (index === -1) {
+        return;
+      }
 
-      setLessonPositions((current) => {
-        const index = current.findIndex((position) => position.id === id);
-        if (index === -1) {
-          return current;
-        }
+      const next = lessonPositions.filter((position) => position.id !== id);
+      const fallback = next[Math.min(index, next.length - 1)] ?? null;
 
-        const next = current.filter((position) => position.id !== id);
-        fallback = next[Math.min(index, next.length - 1)] ?? null;
-        return next;
+      setLessonPositions(next);
+      setLessonPositionFenDrafts((current) => {
+        const updated = { ...current };
+        delete updated[id];
+        return updated;
       });
 
       if (activeLessonPositionId === id) {
@@ -603,7 +600,7 @@ const DragDropSetupChessboard = ({
         }
       }
     },
-    [activeLessonPositionId, loadLessonPosition]
+    [activeLessonPositionId, lessonPositions, loadLessonPosition]
   );
 
   const updateLessonPositionTitle = useCallback((id: string, title: string) => {
