@@ -754,6 +754,26 @@ const DragDropSetupChessboard = ({
     [game, loadLessonPosition, t]
   );
 
+  const clearLessonPositions = useCallback(() => {
+    if (typeof window === 'undefined' || lessonPositions.length === 0) {
+      return;
+    }
+
+    const shouldClear = window.confirm(t('setup-board.clear-positions-confirm'));
+    if (!shouldClear) {
+      return;
+    }
+
+    setLessonPositions([]);
+    setLessonPositionFenDrafts({});
+    setActiveLessonPositionId(null);
+    persistLessonPositionsToStorage({
+      version: 1,
+      positions: [],
+      activeLessonPositionId: null,
+    });
+  }, [lessonPositions.length, t]);
+
   const whitePieces = useMemo(() => pieces.slice(0, 6), []);
   const blackPieces = useMemo(() => pieces.slice(6, 12), []);
   const topPieces = useMemo(
@@ -1285,6 +1305,20 @@ const DragDropSetupChessboard = ({
                               aria-label={t('setup-board.add-current-position')}
                             >
                               <VscAdd size={18} />
+                            </button>
+                          </Tooltip>
+                          <Tooltip
+                            content={t('setup-board.clear-positions')}
+                            placement="top"
+                          >
+                            <button
+                              type="button"
+                              onClick={clearLessonPositions}
+                              disabled={lessonPositions.length === 0}
+                              className="flex h-10 w-10 items-center justify-center rounded-lg border border-rose-200 bg-white text-rose-500 transition hover:border-rose-300 hover:bg-rose-50 disabled:cursor-not-allowed disabled:opacity-40"
+                              aria-label={t('setup-board.clear-positions')}
+                            >
+                              <VscTrash size={18} />
                             </button>
                           </Tooltip>
                         </div>

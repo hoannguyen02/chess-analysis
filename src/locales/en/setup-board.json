@@ -6,6 +6,8 @@
   "lesson-positions": "LIMA Lesson",
   "positions-count": "saved",
   "add-current-position": "Add current position",
+  "clear-positions": "Clear lesson list",
+  "clear-positions-confirm": "Clear the whole lesson list and start fresh?",
   "import-positions": "Import JSON list",
   "export-positions": "Export JSON list",
   "export-file-name-prompt": "Enter a file name for this lesson export",

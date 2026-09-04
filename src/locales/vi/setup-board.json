@@ -6,6 +6,8 @@
   "lesson-positions": "LIMA Lesson",
   "positions-count": "vị trí",
   "add-current-position": "Thêm vị trí hiện tại",
+  "clear-positions": "Xóa toàn bộ lesson",
+  "clear-positions-confirm": "Xóa toàn bộ danh sách lesson để bắt đầu lại?",
   "import-positions": "Nhập danh sách JSON",
   "export-positions": "Xuất danh sách JSON",
   "export-file-name-prompt": "Nhập tên file cho lesson này",
