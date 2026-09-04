@@ -166,6 +166,10 @@ const DragDropSetupChessboard = ({
   const fullViewRef = useRef<HTMLDivElement>(null);
   const boardRef = useRef<HTMLDivElement>(null);
   const lessonImportInputRef = useRef<HTMLInputElement | null>(null);
+  const lessonListContainerRef = useRef<HTMLDivElement | null>(null);
+  const lessonPositionRowRefs = useRef<Record<string, HTMLDivElement | null>>(
+    {}
+  );
   const getPieceAtSquare = useCallback(
     (square: Square): BoardPieceCode | null => {
       const piece = game.get(square);
@@ -359,6 +363,23 @@ const DragDropSetupChessboard = ({
 
     persistLessonPositionsToStorage(payload);
   }, [activeLessonPositionId, hasHydratedLessonPositions, lessonPositions]);
+
+  useEffect(() => {
+    if (!activeLessonPositionId) {
+      return;
+    }
+
+    const activeRow = lessonPositionRowRefs.current[activeLessonPositionId];
+    if (!activeRow) {
+      return;
+    }
+
+    activeRow.scrollIntoView({
+      behavior: 'smooth',
+      block: 'nearest',
+      inline: 'nearest',
+    });
+  }, [activeLessonPositionId, boardOrientation, fenPosition, lessonPositions]);
 
   useEffect(() => {
     if (typeof window === 'undefined') return;
@@ -1327,7 +1348,10 @@ const DragDropSetupChessboard = ({
                       {lessonPositions.length === 0 ? (
                         '' // Display nothing
                       ) : (
-                        <div className="mt-3 max-h-36 space-y-2 overflow-auto pr-1">
+                        <div
+                          ref={lessonListContainerRef}
+                          className="mt-3 max-h-36 space-y-2 overflow-auto pr-1"
+                        >
                           {lessonPositions.map((position, index) => {
                             const isActive =
                               position.id === activeLessonPositionId;
@@ -1345,6 +1369,10 @@ const DragDropSetupChessboard = ({
                             return (
                               <div
                                 key={position.id}
+                                ref={(node) => {
+                                  lessonPositionRowRefs.current[position.id] =
+                                    node;
+                                }}
                                 className={`group flex items-center gap-2 rounded-xl border px-2 py-2 text-left transition ${
                                   isActive
                                     ? 'border-blue-300 bg-blue-50 shadow-sm'
