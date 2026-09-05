@@ -42,6 +42,7 @@ import {
   VscCloudUpload,
   VscCopy,
   VscListOrdered,
+  VscDiscard,
   VscScreenFull,
   VscScreenNormal,
   VscSearchFuzzy,
@@ -193,7 +194,8 @@ const DragDropSetupChessboard = ({
           return [
             {
               square: `${FILES[fileIndex]}${8 - rankIndex}` as Square,
-              pieceCode: `${piece.color}${piece.type.toUpperCase()}` as BoardPieceCode,
+              pieceCode:
+                `${piece.color}${piece.type.toUpperCase()}` as BoardPieceCode,
             },
           ];
         })
@@ -271,19 +273,8 @@ const DragDropSetupChessboard = ({
     setBoardOrientation(getOrientationFromTurn());
   }, [getOrientationFromTurn]);
 
-  useEffect(() => {
-    if (!activeLessonPositionId) {
-      return;
-    }
-
-    setLessonPositions((current) =>
-      current.map((position) =>
-        position.id === activeLessonPositionId && position.fen !== fenPosition
-          ? { ...position, fen: fenPosition }
-          : position
-      )
-    );
-  }, [activeLessonPositionId, fenPosition]);
+  // Saved lesson FENs are checkpoints. Board edits stay temporary until the
+  // user adds a position or explicitly saves an edited FEN in the lesson list.
 
   useEffect(() => {
     setLessonPositionFenDrafts((current) => {
@@ -566,6 +557,52 @@ const DragDropSetupChessboard = ({
     [applyFenPosition]
   );
 
+  useEffect(() => {
+    const handleLessonShortcut = (event: KeyboardEvent) => {
+      if (
+        event.defaultPrevented ||
+        event.repeat ||
+        event.isComposing ||
+        event.ctrlKey ||
+        event.metaKey ||
+        event.altKey ||
+        event.shiftKey ||
+        !['r', 'ArrowLeft', 'ArrowRight'].includes(
+          event.key.length === 1 ? event.key.toLowerCase() : event.key
+        )
+      ) {
+        return;
+      }
+
+      const target = event.target;
+      if (
+        target instanceof HTMLElement &&
+        (target.isContentEditable ||
+          target.closest(
+            'input, textarea, select, [role="textbox"], [role="combobox"], [role="dialog"], [role="menu"]'
+          ))
+      ) {
+        return;
+      }
+
+      const index = lessonPositions.findIndex(
+        (entry) => entry.id === activeLessonPositionId
+      );
+      if (index === -1) return;
+
+      const offset =
+        event.key === 'ArrowLeft' ? -1 : event.key === 'ArrowRight' ? 1 : 0;
+      const position = lessonPositions[index + offset];
+      if (!position || (offset === 0 && position.fen === fenPosition)) return;
+
+      event.preventDefault();
+      loadLessonPosition(position);
+    };
+
+    window.addEventListener('keydown', handleLessonShortcut);
+    return () => window.removeEventListener('keydown', handleLessonShortcut);
+  }, [activeLessonPositionId, fenPosition, lessonPositions, loadLessonPosition]);
+
   const duplicateLessonPosition = useCallback(
     (id: string) => {
       const index = lessonPositions.findIndex((position) => position.id === id);
@@ -780,7 +817,9 @@ const DragDropSetupChessboard = ({
       return;
     }
 
-    const shouldClear = window.confirm(t('setup-board.clear-positions-confirm'));
+    const shouldClear = window.confirm(
+      t('setup-board.clear-positions-confirm')
+    );
     if (!shouldClear) {
       return;
     }
@@ -1355,6 +1394,8 @@ const DragDropSetupChessboard = ({
                           {lessonPositions.map((position, index) => {
                             const isActive =
                               position.id === activeLessonPositionId;
+                            const isExploring =
+                              isActive && fenPosition !== position.fen;
                             const draftFen =
                               lessonPositionFenDrafts[position.id] ??
                               position.fen;
@@ -1489,10 +1530,35 @@ const DragDropSetupChessboard = ({
                                 </button>
                                 {isActive && (
                                   <span className="hidden rounded-full bg-blue-100 px-2 py-1 text-[11px] font-semibold text-blue-700 sm:inline-flex">
-                                    {t('setup-board.current-position')}
+                                    {t(
+                                      isExploring
+                                        ? 'setup-board.exploring-variation'
+                                        : 'setup-board.current-position'
+                                    )}
                                   </span>
                                 )}
                                 <div className="flex shrink-0 items-center gap-1">
+                                  {isActive && (
+                                    <Tooltip
+                                      content={t('setup-board.reset-position')}
+                                      placement="top"
+                                    >
+                                      <button
+                                        type="button"
+                                        aria-keyshortcuts="r"
+                                        onClick={() =>
+                                          loadLessonPosition(position)
+                                        }
+                                        disabled={!isExploring}
+                                        className="flex h-8 w-8 items-center justify-center rounded-lg text-blue-600 transition hover:bg-blue-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-blue-500 disabled:cursor-not-allowed disabled:opacity-40"
+                                        aria-label={t(
+                                          'setup-board.reset-position'
+                                        )}
+                                      >
+                                        <VscDiscard size={16} />
+                                      </button>
+                                    </Tooltip>
+                                  )}
                                   <Tooltip
                                     content={t('setup-board.move-up')}
                                     placement="top"
@@ -1589,6 +1655,8 @@ const DragDropSetupChessboard = ({
                             );
                           }}
                           disabled={!canGoToPreviousLesson}
+                          aria-label={t('setup-board.previous-position')}
+                          aria-keyshortcuts="ArrowLeft"
                         >
                           <VscArrowLeft size={18} />
                         </Button>
@@ -1606,6 +1674,8 @@ const DragDropSetupChessboard = ({
                             );
                           }}
                           disabled={!canGoToNextLesson}
+                          aria-label={t('setup-board.next-position')}
+                          aria-keyshortcuts="ArrowRight"
                         >
                           <VscArrowRight size={18} />
                         </Button>
