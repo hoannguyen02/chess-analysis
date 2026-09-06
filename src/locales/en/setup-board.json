@@ -1,8 +1,8 @@
 {
   "start-position": "Start Position ",
   "clear-board": "Clear Board",
-  "flip-board": "Flip Board",
-  "show-pieces": "Pieces",
+  "flip-board": "Flip Board (F)",
+  "show-pieces": "Pieces (P)",
   "lesson-positions": "LIMA Lesson",
   "positions-count": "saved",
   "add-current-position": "Add current position",

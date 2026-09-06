@@ -497,8 +497,8 @@ const DragDropSetupChessboard = ({
   }, [game]);
 
   const onFlipBoard = useCallback(() => {
-    setBoardOrientation(boardOrientation === 'white' ? 'black' : 'white');
-  }, [boardOrientation]);
+    setBoardOrientation((current) => (current === 'white' ? 'black' : 'white'));
+  }, []);
 
   const handleCastlingChange = (side: 'K' | 'Q' | 'k' | 'q') => {
     setCastlingRights((prev) => {
@@ -567,7 +567,7 @@ const DragDropSetupChessboard = ({
         event.metaKey ||
         event.altKey ||
         event.shiftKey ||
-        !['r', 'ArrowLeft', 'ArrowRight'].includes(
+        !['f', 'p', 'r', 'ArrowLeft', 'ArrowRight'].includes(
           event.key.length === 1 ? event.key.toLowerCase() : event.key
         )
       ) {
@@ -582,6 +582,18 @@ const DragDropSetupChessboard = ({
             'input, textarea, select, [role="textbox"], [role="combobox"], [role="dialog"], [role="menu"]'
           ))
       ) {
+        return;
+      }
+
+      if (event.key.toLowerCase() === 'p') {
+        event.preventDefault();
+        setShowSparePieces((current) => !current);
+        return;
+      }
+
+      if (event.key.toLowerCase() === 'f') {
+        event.preventDefault();
+        onFlipBoard();
         return;
       }
 
@@ -601,7 +613,13 @@ const DragDropSetupChessboard = ({
 
     window.addEventListener('keydown', handleLessonShortcut);
     return () => window.removeEventListener('keydown', handleLessonShortcut);
-  }, [activeLessonPositionId, fenPosition, lessonPositions, loadLessonPosition]);
+  }, [
+    activeLessonPositionId,
+    fenPosition,
+    lessonPositions,
+    loadLessonPosition,
+    onFlipBoard,
+  ]);
 
   const duplicateLessonPosition = useCallback(
     (id: string) => {
@@ -1068,6 +1086,7 @@ const DragDropSetupChessboard = ({
                     <button
                       type="button"
                       onClick={onFlipBoard}
+                      aria-keyshortcuts="f"
                       className="flex h-12 w-12 items-center justify-center rounded-xl border border-indigo-300 bg-white text-indigo-500 transition hover:bg-indigo-50"
                       aria-label={t('setup-board.flip-board')}
                     >
@@ -1081,6 +1100,7 @@ const DragDropSetupChessboard = ({
                 >
                   <Checkbox
                     id="show-spare-pieces"
+                    aria-keyshortcuts="p"
                     checked={showSparePieces}
                     onChange={(event) =>
                       setShowSparePieces(event.target.checked)
