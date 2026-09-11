@@ -51,6 +51,7 @@ import {
   VscTrash,
 } from 'react-icons/vsc';
 import { TeachingTimer } from './TeachingTimer';
+import { SetupBoardPaintLayer } from './SetupBoardPaintLayer';
 
 const pieces = [
   'wP',
@@ -155,6 +156,10 @@ const DragDropSetupChessboard = ({
   const [boardContainerWidth, setBoardContainerWidth] = useState(500);
   const [viewportHeight, setViewportHeight] = useState(900);
   const [showSparePieces, setShowSparePieces] = useState(false);
+  const [isDraggingPiece, setIsDraggingPiece] = useState(false);
+  const [placementTool, setPlacementTool] = useState<BoardPieceCode | null>(
+    null
+  );
   const [lessonPositions, setLessonPositions] = useState<LessonPosition[]>([]);
   const [lessonPositionFenDrafts, setLessonPositionFenDrafts] = useState<
     Record<string, string>
@@ -415,7 +420,7 @@ const DragDropSetupChessboard = ({
   }, []);
 
   useEffect(() => {
-    if (!isFullViewMode || isBrowserFullscreen) return;
+    if (!isFullViewMode || isBrowserFullscreen || placementTool) return;
 
     const handleEsc = (event: KeyboardEvent) => {
       if (event.key === 'Escape') {
@@ -425,7 +430,90 @@ const DragDropSetupChessboard = ({
 
     window.addEventListener('keydown', handleEsc);
     return () => window.removeEventListener('keydown', handleEsc);
-  }, [isBrowserFullscreen, isFullViewMode]);
+  }, [isBrowserFullscreen, isFullViewMode, placementTool]);
+
+  useEffect(() => {
+    if (!showSparePieces) setPlacementTool(null);
+  }, [showSparePieces]);
+
+  useEffect(() => {
+    if (!placementTool) return;
+    const exitPlacement = (event: KeyboardEvent) => {
+      if (
+        event.defaultPrevented ||
+        event.repeat ||
+        event.isComposing ||
+        event.ctrlKey ||
+        event.metaKey ||
+        event.altKey ||
+        event.shiftKey
+      )
+        return;
+      const target = event.target;
+      if (
+        target instanceof HTMLElement &&
+        (target.isContentEditable ||
+          target.closest(
+            'input, textarea, select, [role="textbox"], [role="combobox"], [role="dialog"], [role="menu"]'
+          ))
+      )
+        return;
+      if (event.key === 'Escape' || event.key.toLowerCase() === 'd') {
+        event.preventDefault();
+        setPlacementTool(null);
+      }
+    };
+    window.addEventListener('keydown', exitPlacement);
+    return () => window.removeEventListener('keydown', exitPlacement);
+  }, [placementTool]);
+
+  const paintSquare = (square: Square) => {
+    if (!placementTool) return;
+    const color = placementTool[0] as 'w' | 'b';
+    const type = placementTool[1].toLowerCase() as
+      | 'p'
+      | 'n'
+      | 'b'
+      | 'r'
+      | 'q'
+      | 'k';
+    // Relocate the existing king instead of attempting to create a second one.
+    if (type === 'k') {
+      const existing = getAllPieces().find(
+        (entry) => entry.pieceCode === placementTool
+      );
+      if (existing) game.remove(existing.square);
+    }
+    game.remove(square);
+    game.put({ type, color }, square);
+    setFenPosition(game.fen());
+  };
+
+  const renderSparePiece = (piece: BoardPieceCode) => (
+    <button
+      key={piece}
+      type="button"
+      aria-label={t('setup-board.select-piece', {
+        piece: t(`setup-board.piece-${piece}`),
+      })}
+      aria-pressed={placementTool === piece}
+      aria-keyshortcuts={placementTool === piece ? 'd' : undefined}
+      title={
+        placementTool === piece ? t('setup-board.deselect-piece') : undefined
+      }
+      onClick={() => {
+        setPlacementTool((current) => (current === piece ? null : piece));
+        clearHighlights();
+      }}
+      className={`rounded-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-blue-500 ${placementTool === piece ? 'bg-blue-200 ring-2 ring-inset ring-blue-500' : 'hover:bg-slate-200'}`}
+    >
+      <SparePiece
+        piece={piece as Piece}
+        width={chessboardWidth / 8}
+        dndId="ManualBoardEditor"
+      />
+    </button>
+  );
 
   const handleSparePieceDrop = (piece: any, targetSquare: any) => {
     const color = piece[0];
@@ -435,6 +523,8 @@ const DragDropSetupChessboard = ({
 
     if (success) {
       setFenPosition(game.fen());
+      // A tray drop also selects the piece for subsequent click placement.
+      setPlacementTool(piece as BoardPieceCode);
     } else {
       alert(
         `The board already contains ${color === 'w' ? 'WHITE' : 'BLACK'} KING`
@@ -953,6 +1043,8 @@ const DragDropSetupChessboard = ({
     <ChessboardDnDProvider>
       <div
         ref={fullViewRef}
+        onDragStartCapture={() => setIsDraggingPiece(true)}
+        onDragEndCapture={() => setIsDraggingPiece(false)}
         className={
           isFullViewActive
             ? 'fixed inset-0 z-50 overflow-auto bg-slate-900 px-3 py-4 sm:p-6'
@@ -967,10 +1059,7 @@ const DragDropSetupChessboard = ({
           }
         >
           <div ref={boardRef}>
-            <div
-              {...boardInteractionProps}
-              className="mx-auto flex w-fit flex-col items-center outline-none"
-            >
+            <div className="mx-auto flex w-fit flex-col items-center outline-none">
               <div
                 className="rounded-2xl border border-slate-300 bg-slate-50 shadow-lg"
                 style={{
@@ -980,43 +1069,56 @@ const DragDropSetupChessboard = ({
                   width: `${chessboardWidth}px`,
                 }}
               >
-                {topPieces.map((piece) => (
-                  <SparePiece
-                    key={piece}
-                    piece={piece as Piece}
-                    width={chessboardWidth / 8}
-                    dndId="ManualBoardEditor"
-                  />
-                ))}
+                {topPieces.map(renderSparePiece)}
               </div>
-              <Chessboard
-                key={boardRenderKey}
-                boardWidth={chessboardWidth}
-                id="ManualBoardEditor"
-                boardOrientation={boardOrientation}
-                position={fenPosition}
-                customSquareStyles={customSquareStyles}
-                customArrowColor={selectedColor.arrow}
-                customNotationStyle={notationStyle}
-                onSparePieceDrop={handleSparePieceDrop}
-                onPieceDrop={handlePieceDrop}
-                onPieceDropOffBoard={handlePieceDropOffBoard}
-                onSquareClick={handleSquareClick}
-                onSquareRightClick={handleSquareRightClick}
-                onArrowsChange={handleArrowsChange}
-                dropOffBoardAction="trash"
-                customBoardStyle={{
-                  borderRadius: '4px',
-                  boxShadow: '0 2px 10px rgba(0, 0, 0, 0.5)',
-                }}
-                customPieces={customPieces}
-                customDarkSquareStyle={{
-                  backgroundColor: bgDark,
-                }}
-                customLightSquareStyle={{
-                  backgroundColor: bgLight,
-                }}
-              />
+              <div
+                {...(placementTool ? {} : boardInteractionProps)}
+                className="relative outline-none"
+              >
+                <Chessboard
+                  key={boardRenderKey}
+                  boardWidth={chessboardWidth}
+                  id="ManualBoardEditor"
+                  boardOrientation={boardOrientation}
+                  position={fenPosition}
+                  customSquareStyles={customSquareStyles}
+                  customArrowColor={selectedColor.arrow}
+                  customNotationStyle={notationStyle}
+                  onSparePieceDrop={handleSparePieceDrop}
+                  onPieceDrop={handlePieceDrop}
+                  onPieceDragBegin={() => setIsDraggingPiece(true)}
+                  onPieceDragEnd={() => setIsDraggingPiece(false)}
+                  onPieceDropOffBoard={handlePieceDropOffBoard}
+                  onSquareClick={handleSquareClick}
+                  onSquareRightClick={handleSquareRightClick}
+                  onArrowsChange={handleArrowsChange}
+                  dropOffBoardAction="trash"
+                  customBoardStyle={{
+                    borderRadius: '4px',
+                    boxShadow: '0 2px 10px rgba(0, 0, 0, 0.5)',
+                  }}
+                  customPieces={customPieces}
+                  customDarkSquareStyle={{
+                    backgroundColor: bgDark,
+                  }}
+                  customLightSquareStyle={{
+                    backgroundColor: bgLight,
+                  }}
+                />
+                {placementTool && showSparePieces && (
+                  <SetupBoardPaintLayer
+                    orientation={boardOrientation}
+                    occupiedSquares={
+                      new Set(getAllPieces().map(({ square }) => square))
+                    }
+                    isDraggingPiece={isDraggingPiece}
+                    onPaint={paintSquare}
+                    label={(square) =>
+                      t('setup-board.place-square', { square })
+                    }
+                  />
+                )}
+              </div>
               <div
                 className="rounded-2xl border border-slate-300 bg-slate-50 shadow-lg"
                 style={{
@@ -1026,14 +1128,7 @@ const DragDropSetupChessboard = ({
                   width: `${chessboardWidth}px`,
                 }}
               >
-                {bottomPieces.map((piece) => (
-                  <SparePiece
-                    key={piece}
-                    piece={piece as Piece}
-                    width={chessboardWidth / 8}
-                    dndId="ManualBoardEditor"
-                  />
-                ))}
+                {bottomPieces.map(renderSparePiece)}
               </div>
             </div>
           </div>

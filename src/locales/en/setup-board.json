@@ -46,5 +46,20 @@
   "white-castling": "White Castling:",
   "black-castling": "Black Castling:",
   "king-side": "Kingside",
-  "queen-side": "Queenside"
+  "queen-side": "Queenside",
+  "select-piece": "Select {piece}",
+  "place-square": "Place piece on {square}",
+  "piece-wP": "White pawn",
+  "piece-wN": "White knight",
+  "piece-wB": "White bishop",
+  "piece-wR": "White rook",
+  "piece-wQ": "White queen",
+  "piece-wK": "White king",
+  "piece-bP": "Black pawn",
+  "piece-bN": "Black knight",
+  "piece-bB": "Black bishop",
+  "piece-bR": "Black rook",
+  "piece-bQ": "Black queen",
+  "piece-bK": "Black king",
+  "deselect-piece": "Click again or press D to deselect"
 }

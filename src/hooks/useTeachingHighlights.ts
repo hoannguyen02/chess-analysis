@@ -88,8 +88,16 @@ const getRectangleSquares = (start: Square, end: Square) => {
 
   const squares: Square[] = [];
 
-  for (let fileIndex = minFileIndex; fileIndex <= maxFileIndex; fileIndex += 1) {
-    for (let rankIndex = minRankIndex; rankIndex <= maxRankIndex; rankIndex += 1) {
+  for (
+    let fileIndex = minFileIndex;
+    fileIndex <= maxFileIndex;
+    fileIndex += 1
+  ) {
+    for (
+      let rankIndex = minRankIndex;
+      rankIndex <= maxRankIndex;
+      rankIndex += 1
+    ) {
       squares.push(`${FILES[fileIndex]}${RANKS[rankIndex]}` as Square);
     }
   }
@@ -439,12 +447,31 @@ export const useTeachingHighlights = ({
     );
   }, [highlightColors, highlightSquares]);
 
-  const clearHighlights = useCallback(() => {
-    setHighlightSquares({} as Record<Square, HighlightEntry>);
-    arrowsSnapshotRef.current = [];
+  const clearSquareHighlights = useCallback(() => {
+    setHighlightSquares((current) =>
+      Object.keys(current).length === 0
+        ? current
+        : ({} as Record<Square, HighlightEntry>)
+    );
     resetRightClickModifiers();
-    setBoardRenderKey((current) => current + 1);
   }, [resetRightClickModifiers]);
+
+  const clearHighlights = useCallback(() => {
+    clearSquareHighlights();
+    // Only reset the board when its internal arrows actually need clearing.
+    // Recreating it on every click interrupts drags and flashes default pieces.
+    if (arrowsSnapshotRef.current.length > 0) {
+      setBoardRenderKey((current) => current + 1);
+    }
+    arrowsSnapshotRef.current = [];
+  }, [clearSquareHighlights]);
+
+  const handleSquareClick = useCallback(() => {
+    clearSquareHighlights();
+    arrowsSnapshotRef.current = [];
+    // react-chessboard clears its own arrows after onSquareClick returns.
+    // Keep the board mounted, including when clicking an occupied square.
+  }, [clearSquareHighlights]);
 
   const handleSquareRightClick = useCallback(
     (square: Square) => {
@@ -507,28 +534,27 @@ export const useTeachingHighlights = ({
             });
           }
         } else {
-          const controllers =
-            getAllPieces?.().reduce(
-              (result, pieceOnBoard) => {
-                if (
-                  pieceAttacksSquare(
-                    pieceOnBoard.square,
-                    pieceOnBoard.pieceCode,
-                    square,
-                    getPieceAtSquare
-                  )
-                ) {
-                  if (pieceOnBoard.pieceCode[0] === 'w') {
-                    result.white.push(pieceOnBoard.square);
-                  } else {
-                    result.black.push(pieceOnBoard.square);
-                  }
+          const controllers = getAllPieces?.().reduce(
+            (result, pieceOnBoard) => {
+              if (
+                pieceAttacksSquare(
+                  pieceOnBoard.square,
+                  pieceOnBoard.pieceCode,
+                  square,
+                  getPieceAtSquare
+                )
+              ) {
+                if (pieceOnBoard.pieceCode[0] === 'w') {
+                  result.white.push(pieceOnBoard.square);
+                } else {
+                  result.black.push(pieceOnBoard.square);
                 }
+              }
 
-                return result;
-              },
-              { white: [] as Square[], black: [] as Square[] }
-            ) ?? { white: [] as Square[], black: [] as Square[] };
+              return result;
+            },
+            { white: [] as Square[], black: [] as Square[] }
+          ) ?? { white: [] as Square[], black: [] as Square[] };
 
           if (controllers.white.length > 0 || controllers.black.length > 0) {
             setHighlightSquares((current) => {
@@ -587,28 +613,27 @@ export const useTeachingHighlights = ({
       }
 
       if (isSquareControlHighlight && (!pieceCode || !isActivePiece)) {
-        const controllers =
-          getAllPieces?.().reduce(
-            (result, pieceOnBoard) => {
-              if (
-                pieceAttacksSquare(
-                  pieceOnBoard.square,
-                  pieceOnBoard.pieceCode,
-                  square,
-                  getPieceAtSquare
-                )
-              ) {
-                if (pieceOnBoard.pieceCode[0] === 'w') {
-                  result.white.push(pieceOnBoard.square);
-                } else {
-                  result.black.push(pieceOnBoard.square);
-                }
+        const controllers = getAllPieces?.().reduce(
+          (result, pieceOnBoard) => {
+            if (
+              pieceAttacksSquare(
+                pieceOnBoard.square,
+                pieceOnBoard.pieceCode,
+                square,
+                getPieceAtSquare
+              )
+            ) {
+              if (pieceOnBoard.pieceCode[0] === 'w') {
+                result.white.push(pieceOnBoard.square);
+              } else {
+                result.black.push(pieceOnBoard.square);
               }
+            }
 
-              return result;
-            },
-            { white: [] as Square[], black: [] as Square[] }
-          ) ?? { white: [] as Square[], black: [] as Square[] };
+            return result;
+          },
+          { white: [] as Square[], black: [] as Square[] }
+        ) ?? { white: [] as Square[], black: [] as Square[] };
 
         if (controllers.white.length > 0 || controllers.black.length > 0) {
           setHighlightSquares((current) => {
@@ -730,7 +755,10 @@ export const useTeachingHighlights = ({
           !rightClickModifiersRef.current.ctrl &&
           !rightClickModifiersRef.current.alt);
       if (isRectangleHighlight && addedArrow) {
-        const rectangleSquares = getRectangleSquares(addedArrow[0], addedArrow[1]);
+        const rectangleSquares = getRectangleSquares(
+          addedArrow[0],
+          addedArrow[1]
+        );
 
         if (rectangleSquares.length > 0) {
           setHighlightSquares((current) => {
@@ -812,7 +840,7 @@ export const useTeachingHighlights = ({
     selectedColor,
     customSquareStyles,
     clearHighlights,
-    handleSquareClick: clearHighlights,
+    handleSquareClick,
     handleSquareRightClick,
     handleArrowsChange,
     boardInteractionProps,

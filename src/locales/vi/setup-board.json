@@ -46,5 +46,20 @@
   "white-castling": "Nhập thành Quân Trắng:",
   "black-castling": "Nhập thành Quân Đen:",
   "king-side": "Cánh Vua",
-  "queen-side": "Cánh Hậu"
+  "queen-side": "Cánh Hậu",
+  "select-piece": "Chọn {piece}",
+  "place-square": "Đặt quân vào ô {square}",
+  "piece-wP": "Tốt trắng",
+  "piece-wN": "Mã trắng",
+  "piece-wB": "Tượng trắng",
+  "piece-wR": "Xe trắng",
+  "piece-wQ": "Hậu trắng",
+  "piece-wK": "Vua trắng",
+  "piece-bP": "Tốt đen",
+  "piece-bN": "Mã đen",
+  "piece-bB": "Tượng đen",
+  "piece-bR": "Xe đen",
+  "piece-bQ": "Hậu đen",
+  "piece-bK": "Vua đen",
+  "deselect-piece": "Nhấp lần nữa hoặc nhấn D để bỏ chọn"
 }
