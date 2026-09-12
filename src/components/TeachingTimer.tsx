@@ -13,9 +13,9 @@ import {
 } from 'react-icons/vsc';
 
 const TIMER_PRESETS = [
+  { valueSeconds: 15, labelKey: 'common.timer.fifteen-seconds' },
   { valueSeconds: 30, labelKey: 'common.timer.thirty-seconds' },
   { valueSeconds: 60, labelKey: 'common.timer.one-minute' },
-  { valueSeconds: 180, labelKey: 'common.timer.three-minutes' },
 ] as const;
 const DEFAULT_CUSTOM_MINUTES = 10;
 
@@ -201,7 +201,9 @@ export const TeachingTimer = ({ compact = false }: TeachingTimerProps) => {
   };
 
   useEffect(() => {
-    if (!TIMER_PRESETS.some((preset) => preset.valueSeconds === selectedSeconds)) {
+    if (
+      !TIMER_PRESETS.some((preset) => preset.valueSeconds === selectedSeconds)
+    ) {
       customInputRef.current?.focus();
       customInputRef.current?.select();
     }
@@ -299,7 +301,7 @@ export const TeachingTimer = ({ compact = false }: TeachingTimerProps) => {
         </div>
       )}
 
-      <div className={`grid grid-cols-5 gap-2 ${compact ? 'mt-2' : 'mt-4'}`}>
+      <div className={`grid grid-cols-4 gap-2 ${compact ? 'mt-2' : 'mt-4'}`}>
         {TIMER_PRESETS.map((preset) => {
           const isActive = preset.valueSeconds === selectedSeconds;
 
@@ -308,7 +310,7 @@ export const TeachingTimer = ({ compact = false }: TeachingTimerProps) => {
               key={preset.valueSeconds}
               type="button"
               onClick={() => selectPreset(preset.valueSeconds)}
-              className={`rounded-lg border px-3 ${
+              className={`min-w-0 whitespace-nowrap rounded-lg border px-2 ${
                 compact ? 'py-1.5 text-xs' : 'py-2 text-sm'
               } font-semibold transition ${
                 isActive
@@ -350,7 +352,7 @@ export const TeachingTimer = ({ compact = false }: TeachingTimerProps) => {
                 commitCustomMinutes();
               }
             }}
-            className={`w-10 border-0 bg-transparent p-0 text-center font-semibold tabular-nums outline-none ${
+            className={`w-[2ch] min-w-0 border-0 bg-transparent p-0 text-center font-semibold tabular-nums outline-none ${
               isCustomSelected ? 'text-[#b87400]' : 'text-slate-600'
             } ${compact ? 'text-xs leading-none' : 'text-sm leading-none'}`}
             aria-label={t('common.timer.custom')}
