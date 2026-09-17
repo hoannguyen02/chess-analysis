@@ -1,0 +1,63 @@
+import {
+  createContext,
+  ReactNode,
+  useContext,
+  useEffect,
+  useState,
+} from 'react';
+import { useRouter } from 'next/router';
+import vi from '@/lib/english/learner-vi.json';
+import s from './EnglishStudio.module.css';
+
+type Language = 'en' | 'vi';
+const LanguageContext = createContext<{
+  language: Language;
+  change: (value: Language) => void;
+}>({ language: 'en', change: () => {} });
+const LANGUAGE_KEY = 'lima-english-learner-language-v1';
+export function LearnerLanguageProvider({ children }: { children: ReactNode }) {
+  const router = useRouter();
+  const [language, setLanguage] = useState<Language>(
+    router.locale === 'vi' ? 'vi' : 'en'
+  );
+  useEffect(() => {
+    try {
+      const saved = localStorage.getItem(LANGUAGE_KEY);
+      if (saved === 'en' || saved === 'vi') setLanguage(saved);
+    } catch {}
+  }, []);
+  return (
+    <LanguageContext.Provider
+      value={{
+        language,
+        change: (value) => {
+          setLanguage(value);
+          try {
+            localStorage.setItem(LANGUAGE_KEY, value);
+          } catch {}
+        },
+      }}
+    >
+      <div lang={language}>{children}</div>
+    </LanguageContext.Provider>
+  );
+}
+export function useLearnerText() {
+  const { language } = useContext(LanguageContext);
+  return (text: string) =>
+    language === 'vi' ? (vi as Record<string, string>)[text] || text : text;
+}
+export function LearnerLanguagePicker() {
+  const { language, change } = useContext(LanguageContext);
+  return (
+    <select
+      className={s.learnerLanguage}
+      aria-label="Interface language / Ngôn ngữ giao diện"
+      value={language}
+      onChange={(e) => change(e.target.value as Language)}
+    >
+      <option value="en">English</option>
+      <option value="vi">Tiếng Việt</option>
+    </select>
+  );
+}

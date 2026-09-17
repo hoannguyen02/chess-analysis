@@ -1,0 +1,166 @@
+{
+  "version": 1,
+  "lessons": [
+    {
+      "id": "hello-name",
+      "title": "Hello, nice to meet you",
+      "topic": "Introductions & me",
+      "level": "A1",
+      "goal": "Introduce yourself and ask someone their name.",
+      "vocabulary": [
+        {
+          "word": "hello",
+          "meaning": "xin chào",
+          "example": "Hello! My name is Mai."
+        },
+        {
+          "word": "meet",
+          "meaning": "gặp gỡ",
+          "example": "Nice to meet you."
+        },
+        {
+          "word": "friend",
+          "meaning": "bạn bè",
+          "example": "This is my friend, Tom."
+        },
+        {
+          "word": "morning",
+          "meaning": "buổi sáng",
+          "example": "Good morning, everyone."
+        }
+      ],
+      "activities": [
+        {
+          "id": "hello-listen",
+          "kind": "dictation",
+          "prompt": "Listen, then write the sentence you hear.",
+          "text": "Hello, my name is Mai. Nice to meet you.",
+          "answers": ["Hello, my name is Mai. Nice to meet you."],
+          "explanation": "Use “My name is…” to introduce yourself."
+        },
+        {
+          "id": "hello-speak",
+          "kind": "repeat",
+          "prompt": "Listen to the model, then record yourself saying the same sentence.",
+          "text": "Good morning. How are you today?",
+          "answers": ["Good morning. How are you today?"],
+          "explanation": "Try saying “How are you” as one natural phrase."
+        },
+        {
+          "id": "hello-order",
+          "kind": "word-order",
+          "prompt": "Arrange the words to introduce yourself.",
+          "text": "",
+          "answers": ["My name is Mai"],
+          "explanation": "Use this order: My name + is + your name."
+        },
+        {
+          "id": "hello-gap",
+          "kind": "gap-fill",
+          "prompt": "Fill in the missing word: Nice to ___ you.",
+          "text": "",
+          "answers": ["meet"],
+          "explanation": "“Nice to meet you” is a greeting when you meet someone for the first time."
+        },
+        {
+          "id": "hello-grammar",
+          "kind": "correction",
+          "prompt": "Correct this sentence: She are my friend.",
+          "text": "",
+          "answers": ["She is my friend"],
+          "explanation": "Use “is” with he, she, and it."
+        },
+        {
+          "id": "hello-read",
+          "kind": "comprehension",
+          "prompt": "What is the name of Mai’s friend? Write the name.",
+          "text": "Hello! My name is Mai. I live in Hanoi. This is my friend Tom. We are students. We like playing chess after school.",
+          "answers": ["Tom"],
+          "explanation": "The passage says, “This is my friend Tom.”"
+        },
+        {
+          "id": "hello-aloud",
+          "kind": "read-aloud",
+          "prompt": "Read this introduction aloud. Then compare your recording with the model.",
+          "text": "My name is Mai. I live in Hanoi. I like playing chess.",
+          "answers": ["My name is Mai. I live in Hanoi. I like playing chess."],
+          "explanation": "Pause briefly at the end of each sentence."
+        }
+      ]
+    },
+    {
+      "id": "family-home",
+      "title": "My family, my home",
+      "topic": "Family & people",
+      "level": "A1",
+      "goal": "Talk about your family and where you live.",
+      "vocabulary": [
+        {
+          "word": "sister",
+          "meaning": "chị / em gái",
+          "example": "I have one sister."
+        },
+        {
+          "word": "parents",
+          "meaning": "bố mẹ",
+          "example": "I live with my parents."
+        },
+        {
+          "word": "house",
+          "meaning": "ngôi nhà",
+          "example": "Our house is small."
+        }
+      ],
+      "activities": [
+        {
+          "id": "family-listen",
+          "kind": "dictation",
+          "prompt": "Listen and write the sentence.",
+          "text": "I live with my parents and my sister.",
+          "answers": ["I live with my parents and my sister."],
+          "explanation": "“Live with” tells us who shares your home."
+        },
+        {
+          "id": "family-speak",
+          "kind": "repeat",
+          "prompt": "Record yourself saying this sentence.",
+          "text": "There are four people in my family.",
+          "answers": ["There are four people in my family."],
+          "explanation": "Use “There are” when talking about more than one person."
+        },
+        {
+          "id": "family-order",
+          "kind": "word-order",
+          "prompt": "Put the words in order.",
+          "text": "",
+          "answers": ["I have one younger sister"],
+          "explanation": "“Younger” comes before “sister”."
+        },
+        {
+          "id": "family-grammar",
+          "kind": "correction",
+          "prompt": "Correct this sentence: He live in a small house.",
+          "text": "",
+          "answers": ["He lives in a small house"],
+          "explanation": "Add -s to the verb with he, she, and it in the present simple."
+        },
+        {
+          "id": "family-read",
+          "kind": "comprehension",
+          "prompt": "How many sisters does Linh have? Write a number or word.",
+          "text": "My name is Linh. There are four people in my family: my parents, my sister, and me. My sister is younger than me. We live in a small house.",
+          "answers": ["one", "1"],
+          "explanation": "Linh mentions one sister."
+        },
+        {
+          "id": "family-aloud",
+          "kind": "read-aloud",
+          "prompt": "Read the sentences aloud.",
+          "text": "This is my family. We live in a small house.",
+          "answers": ["This is my family. We live in a small house."],
+          "explanation": "Keep the words connected within each sentence."
+        }
+      ]
+    }
+  ]
+}

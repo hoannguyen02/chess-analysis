@@ -2,9 +2,16 @@ import { DefaultLocale } from '@/constants';
 import { schemaData } from '@/utils/schemaData';
 import { Analytics } from '@vercel/analytics/next';
 import { ThemeModeScript } from 'flowbite-react';
-import { Head, Html, Main, NextScript } from 'next/document';
+import NextDocument, {
+  Head,
+  Html,
+  Main,
+  NextScript,
+  type DocumentContext,
+  type DocumentProps,
+} from 'next/document';
 
-export default function Document(props: any) {
+export default function Document(props: DocumentProps) {
   return (
     <Html lang={props.locale || DefaultLocale}>
       <Head>
@@ -28,8 +35,8 @@ export default function Document(props: any) {
   );
 }
 
-Document.getInitialProps = async (ctx: any) => {
-  const initialProps = await ctx.renderPage();
-  const locale = ctx.req.locale as string; // Getting locale from request
+Document.getInitialProps = async (ctx: DocumentContext) => {
+  const initialProps = await NextDocument.getInitialProps(ctx);
+  const locale = ctx.locale || ctx.defaultLocale || DefaultLocale;
   return { ...initialProps, locale };
 };

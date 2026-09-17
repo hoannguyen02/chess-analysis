@@ -52,7 +52,7 @@ export default function Header() {
         {/* Left Side: Logo & Navigation */}
         <div className="flex items-center">
           <VscMenu
-            className="pointer text-white mx-2 lg:hidden"
+            className="pointer text-white mx-2 xl:hidden"
             onClick={() => {
               setIsOpenDrawer((prev) => !prev);
             }}
@@ -86,7 +86,7 @@ export default function Header() {
               </svg>
             )}
           </Link>
-          <div className="ml-8 hidden lg:flex">
+          <div className="ml-8 hidden xl:flex">
             <Link
               href="/setup-board"
               className="ml-4 hover:text-[var(--p-highlight)]"
@@ -113,6 +113,12 @@ export default function Header() {
               className="ml-4 hover:text-[var(--p-highlight)]"
             >
               {t('navigation.youtube')}
+            </Link>
+            <Link
+              href="/english-practice"
+              className="ml-4 hover:text-[var(--p-highlight)]"
+            >
+              {t('navigation.english-practice')}
             </Link>
           </div>
         </div>

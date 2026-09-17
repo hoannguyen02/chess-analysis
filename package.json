@@ -4,10 +4,11 @@
   "private": true,
   "packageManager": "yarn@1.22.22",
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev -p 3000",
     "build": "next build",
     "start": "dotenv -e .env.production -- next start",
     "lint": "next lint",
+    "test:english": "node --test scripts/test-english.cjs",
     "format": "prettier --write \"**/*.{js,ts,jsx,tsx,json}\""
   },
   "dependencies": {

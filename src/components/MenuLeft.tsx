@@ -45,6 +45,12 @@ export const MenuLeft = () => {
       >
         {t('navigation.setup-board')}
       </Link>
+      <Link
+        href="/english-practice"
+        className="mb-2 hover:text-[var(--p-highlight)]"
+      >
+        {t('navigation.english-practice')}
+      </Link>
     </nav>
   );
 };
