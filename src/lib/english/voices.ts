@@ -29,3 +29,30 @@ export function chooseVoice<T extends Voice>(
     english[0]
   );
 }
+
+export type SpeechLine = { text: string; speaker?: 'A' | 'B' };
+
+export function conversationLine(line: string): SpeechLine {
+  const match = line.trim().match(/^([AB]):\s*(.*)$/i);
+  return {
+    text: line.trim().replace(/^[^:\n]{1,30}:\s*/, ''),
+    speaker: match ? (match[1].toUpperCase() as 'A' | 'B') : undefined,
+  };
+}
+
+export function chooseConversationVoice<T extends Voice>(
+  voices: T[],
+  speaker: SpeechLine['speaker'],
+  choice: string
+): T | undefined {
+  const preferred =
+    speaker === 'A'
+      ? 'Google UK English Male'
+      : speaker === 'B'
+        ? 'Google UK English Female'
+        : undefined;
+  return (
+    englishVoices(voices).find((voice) => voice.name === preferred) ||
+    chooseVoice(voices, choice)
+  );
+}

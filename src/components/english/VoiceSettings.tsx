@@ -1,7 +1,20 @@
 import { useLearnerText } from './LearnerLanguage';
 import { VscPlay, VscDebugStop } from 'react-icons/vsc';
-import { createContext, useContext, useEffect, useState } from 'react';
-import { chooseVoice, englishVoices, voiceKey } from '@/lib/english/voices';
+import {
+  createContext,
+  useContext,
+  useEffect,
+  useState,
+  useRef,
+  useCallback,
+} from 'react';
+import {
+  chooseVoice,
+  chooseConversationVoice,
+  SpeechLine,
+  englishVoices,
+  voiceKey,
+} from '@/lib/english/voices';
 import s from './EnglishStudio.module.css';
 
 export const VoiceContext = createContext<{
@@ -98,48 +111,85 @@ export function VoicePicker({ disabled = false }: { disabled?: boolean }) {
   );
 }
 
+// Only one reader owns browser speech at a time, including between sentences.
+let cancelActiveReader: (() => void) | undefined;
+
 export function useReadText(preference?: string) {
   const settings = useContext(VoiceContext);
   const choice = preference ?? settings.value;
   const [error, setError] = useState('');
   const [playing, setPlaying] = useState(false);
-  useEffect(
-    () => () => {
+  const [activeIndex, setActiveIndex] = useState<number | null>(null);
+  const generation = useRef(0);
+  const timer = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
+  const stop = useCallback(() => {
+    generation.current++;
+    clearTimeout(timer.current);
+    if (cancelActiveReader === stop) {
+      cancelActiveReader = undefined;
       window.speechSynthesis?.cancel();
-    },
-    [choice]
-  );
-  const read = (text: string, rate = 1) => {
+    }
+    setPlaying(false);
+    setActiveIndex(null);
+  }, []);
+  useEffect(() => stop, [choice, stop]);
+
+  const readSequence = (texts: (string | SpeechLine)[], rate = 1) => {
+    cancelActiveReader?.();
+    stop();
     setError('');
-    if (!('speechSynthesis' in window)) {
+    if (!window.speechSynthesis) {
       setError(
         'Audio playback is unavailable in this browser. Try a browser with speech synthesis support.'
       );
       return;
     }
-    window.speechSynthesis.cancel();
-    const utterance = new SpeechSynthesisUtterance(text);
-    utterance.lang = 'en-US';
-    utterance.rate = rate;
-    const voice = chooseVoice(window.speechSynthesis.getVoices(), choice);
-    if (voice) {
-      utterance.voice = voice;
-      utterance.lang = voice.lang;
-    }
-    utterance.onstart = () => setPlaying(true);
-    utterance.onend = () => setPlaying(false);
-    utterance.onerror = (e) => {
-      setPlaying(false);
-      if (!['interrupted', 'canceled'].includes(e.error))
-        setError(
-          'Audio could not play. Check that an English voice is installed in your browser or device.'
-        );
+    if (!texts.length) return;
+    const synth = window.speechSynthesis;
+    synth.cancel();
+    cancelActiveReader = stop;
+    const run = generation.current;
+    setPlaying(true);
+    const speak = (index: number) => {
+      if (run !== generation.current) return;
+      const line = texts[index];
+      const utterance = new SpeechSynthesisUtterance(
+        typeof line === 'string' ? line : line.text
+      );
+      utterance.lang = 'en-US';
+      utterance.rate = rate;
+      const voice = chooseConversationVoice(
+        synth.getVoices(),
+        typeof line === 'string' ? undefined : line.speaker,
+        choice
+      );
+      if (voice) {
+        utterance.voice = voice;
+        utterance.lang = voice.lang;
+      }
+      utterance.onstart = () => {
+        if (run === generation.current) setActiveIndex(index);
+      };
+      utterance.onend = () => {
+        if (run !== generation.current) return;
+        setActiveIndex(null);
+        if (index + 1 < texts.length) {
+          timer.current = setTimeout(() => speak(index + 1), 300);
+        } else stop();
+      };
+      utterance.onerror = (event) => {
+        if (run !== generation.current) return;
+        stop();
+        if (!['interrupted', 'canceled'].includes(event.error)) {
+          setError(
+            'Audio could not play. Check that an English voice is installed in your browser or device.'
+          );
+        }
+      };
+      synth.speak(utterance);
     };
-    window.speechSynthesis.speak(utterance);
+    speak(0);
   };
-  const stop = () => {
-    window.speechSynthesis?.cancel();
-    setPlaying(false);
-  };
-  return { read, stop, playing, error };
+  const read = (text: string, rate = 1) => readSequence([text], rate);
+  return { read, readSequence, stop, playing, activeIndex, error };
 }

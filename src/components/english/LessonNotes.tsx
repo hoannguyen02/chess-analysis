@@ -1,3 +1,5 @@
+import { useEffect, useState } from 'react';
+import { conversationLine } from '@/lib/english/voices';
 import { Lesson, NOTE_LABELS } from '@/lib/english/lessons';
 import { useLearnerText } from './LearnerLanguage';
 import { useReadText } from './VoiceSettings';
@@ -11,8 +13,22 @@ export default function LessonNotes({
   audio?: boolean;
 }) {
   const t = useLearnerText();
-  const { read, stop, playing, error } = useReadText();
+  const { read, readSequence, stop, playing, activeIndex, error } =
+    useReadText();
+  const [conversationPlaying, setConversationPlaying] = useState(false);
+  const [replayIndex, setReplayIndex] = useState<number | null>(null);
+  const [rate, setRate] = useState(1);
   const notes = lesson.notes || {};
+  useEffect(() => stop, [lesson.id, notes.dialogue, stop]);
+  const lines = (notes.dialogue || '')
+    .split(/\n+/)
+    .map((line) => line.trim())
+    .filter(Boolean);
+  const spokenLines = lines.map(conversationLine);
+  const highlighted =
+    conversationPlaying && playing && activeIndex !== null
+      ? (replayIndex ?? activeIndex)
+      : null;
   if (!Object.values(notes).some(Boolean) && !lesson.reviewLesson) return null;
   const sections = (
     [
@@ -48,25 +64,93 @@ export default function LessonNotes({
             }}
           >
             <summary>{t(NOTE_LABELS[key])}</summary>
-            <p className={s.lessonNoteText}>{notes[key]}</p>
+            {key === 'dialogue' && audio ? (
+              <>
+                <div className={s.actions}>
+                  <button
+                    type="button"
+                    className={s.secondary}
+                    onClick={() => {
+                      if (conversationPlaying && playing) stop();
+                      else {
+                        setConversationPlaying(true);
+                        setReplayIndex(null);
+                        readSequence(spokenLines, rate);
+                      }
+                    }}
+                  >
+                    {conversationPlaying && playing
+                      ? `■ ${t('Stop')}`
+                      : `▶ ${t('Play conversation')}`}
+                  </button>
+                  <label className={s.conversationSpeed}>
+                    {t('Speed')}
+                    <select
+                      value={rate}
+                      onChange={(event) => {
+                        stop();
+                        setRate(Number(event.target.value));
+                      }}
+                    >
+                      <option value={1}>{t('Normal')}</option>
+                      <option value={0.7}>{t('Slow')}</option>
+                    </select>
+                  </label>
+                </div>
+                <p className={s.muted}>
+                  {t(
+                    'A: Google UK Male · B: Google UK Female (when available)'
+                  )}
+                </p>
+                <div className={s.conversationLines} lang="en">
+                  {lines.map((line, index) => (
+                    <button
+                      type="button"
+                      key={index}
+                      className={`${s.conversationLine} ${highlighted === index ? s.conversationActive : ''}`}
+                      aria-label={`${t('Play sentence')}: ${line}`}
+                      aria-current={highlighted === index ? 'true' : undefined}
+                      onClick={() => {
+                        setConversationPlaying(true);
+                        setReplayIndex(index);
+                        readSequence([spokenLines[index]], rate);
+                      }}
+                    >
+                      <span aria-hidden="true" className={s.conversationPlay}>
+                        ▶
+                      </span>
+                      {line}
+                    </button>
+                  ))}
+                </div>
+              </>
+            ) : (
+              <p className={s.lessonNoteText}>{notes[key]}</p>
+            )}
             {key === 'pronunciation' && model && (
               <p className={s.lessonNoteText} lang="en">
                 {model}
               </p>
             )}
-            {audio && model && (
+            {audio && model && key !== 'dialogue' && (
               <div className={s.actions}>
                 <button
                   type="button"
                   className={s.secondary}
-                  onClick={() => read(model)}
+                  onClick={() => {
+                    setConversationPlaying(false);
+                    read(model);
+                  }}
                 >
                   {t('Play model')}
                 </button>
                 <button
                   type="button"
                   className={s.quiet}
-                  onClick={() => read(model, 0.7)}
+                  onClick={() => {
+                    setConversationPlaying(false);
+                    read(model, 0.7);
+                  }}
                 >
                   {t('Play slowly')}
                 </button>

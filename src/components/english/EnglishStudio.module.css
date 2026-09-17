@@ -1022,3 +1022,51 @@
   line-height: 1.65;
   margin: 8px 0 14px;
 }
+
+.conversationSpeed {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+}
+.conversationSpeed select {
+  padding: 8px 12px;
+  border: 1px solid #dce5df;
+  border-radius: 8px;
+  background: white;
+  color: inherit;
+}
+.conversationLines {
+  margin: 12px 0;
+}
+.conversationLine {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  width: 100%;
+  border: 0;
+  border-radius: 8px;
+  padding: 8px 10px;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+  cursor: pointer;
+}
+.conversationLine:hover {
+  background: #edf2e8;
+}
+.conversationLine:focus-visible {
+  outline: 2px solid #8fa878;
+  outline-offset: 2px;
+}
+.conversationActive {
+  background: #e4eddb;
+  box-shadow: inset 3px 0 #8fa878;
+}
+.conversationPlay {
+  font-size: 0.7em;
+  color: #6b8071;
+}

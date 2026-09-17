@@ -307,7 +307,7 @@ export default function PracticeSession({
           ← {t(exitLabel)}
         </button>
       </div>
-      <LessonNotes lesson={lesson} audio={false} />
+      <LessonNotes lesson={lesson} />
       {!reviewIds && (
         <div className={s.actions} style={{ marginBottom: 16 }}>
           {(['core', 'extra', 'challenge'] as const)

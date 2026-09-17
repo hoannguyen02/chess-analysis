@@ -511,7 +511,7 @@ test('downloadable Week 1 workbook imports seven complete lessons with four-skil
       path.join(__dirname, '../public/templates/english-lessons.xlsx')
     )
   );
-  assert.equal(lessons.length, 10);
+  assert.equal(lessons.length, 14);
   const week = lessons.filter((lesson) => lesson.title.startsWith('Day '));
   assert.equal(week.length, 7);
   assert.equal(
@@ -520,7 +520,7 @@ test('downloadable Week 1 workbook imports seven complete lessons with four-skil
   );
   assert.equal(
     week.reduce((n, l) => n + l.activities.length, 0),
-    99
+    309
   );
   for (const [i, lesson] of week.entries()) {
     assert.ok(lesson.title.startsWith(`Day ${i + 1}`));
@@ -726,14 +726,19 @@ test('old shared bookmarks retain their legacy identity through format migration
   );
 });
 
-test('revised template has seven core activities per lesson and separate teaching fields', () => {
+test('revised template has content-driven core practice and separate teaching fields', () => {
   const lessons = importLessonWorkbook(
     fs.readFileSync(
       path.join(__dirname, '../public/templates/english-lessons.xlsx')
     )
   );
-  for (const l of lessons) {
-    assert.equal(l.activities.filter((a) => a.tier !== 'extra').length, 7);
+  for (const l of lessons.filter((l) => !l.title.startsWith('Start '))) {
+    assert.ok(l.activities.filter((a) => a.tier !== 'extra').length >= 30);
+    assert.equal(
+      l.activities.filter((a) => a.prompt.includes('Understanding check'))
+        .length,
+      4
+    );
     assert.ok(l.activities.some((a) => a.tier === 'extra'));
     assert.ok(l.teacherNotes && l.challenge);
     assert.ok(!l.goal.includes('Family challenge:'));
@@ -810,15 +815,19 @@ test('foundation lessons cover alphabet, numbers and calendar with reusable shor
   const foundations = lessons.filter((l) => l.title.startsWith('Foundation '));
   assert.equal(foundations.length, 3);
   assert.equal(
-    lessons.reduce((n, l) => n + l.vocabulary.length, 0),
+    lessons
+      .filter((l) => !l.title.startsWith('Start '))
+      .reduce((n, l) => n + l.vocabulary.length, 0),
     215
   );
   assert.equal(
-    lessons.reduce((n, l) => n + l.activities.length, 0),
-    126
+    lessons
+      .filter((l) => !l.title.startsWith('Start '))
+      .reduce((n, l) => n + l.activities.length, 0),
+    451
   );
   for (const l of foundations) {
-    assert.equal(l.activities.length, 9);
+    assert.ok(l.activities.length >= 35);
     assert.equal(
       new Set(l.activities.map((a) => target.exports.KIND_SKILL[a.kind])).size,
       4
@@ -847,4 +856,103 @@ test('foundation lessons cover alphabet, numbers and calendar with reusable shor
   ])
     assert.ok(foundations[2].vocabulary.some((v) => v.word === month));
   assert.match(foundations[2].notes.grammar, /thirty-first/);
+});
+
+test('template core practice includes retrieval for every vocabulary entry and fresh checks', () => {
+  const lessons = importLessonWorkbook(
+    fs.readFileSync(
+      path.join(__dirname, '../public/templates/english-lessons.xlsx')
+    )
+  );
+  for (const lesson of lessons) {
+    const core = lesson.activities.filter((a) => a.tier !== 'extra');
+    for (const word of lesson.vocabulary) {
+      assert.ok(
+        core.some(
+          (a) => a.kind === 'gap-fill' && a.answers.includes(word.word)
+        ),
+        `${lesson.title}: missing retrieval for ${word.word}`
+      );
+    }
+    const checks = core.filter((a) =>
+      a.prompt.includes(
+        lesson.title.startsWith('Start ')
+          ? 'Try yourself:'
+          : 'Understanding check'
+      )
+    );
+    assert.equal(checks.length, 4);
+    for (const check of checks)
+      assert.equal(scoreAnswer(check.answers[0], check.answers).score, 100);
+    assert.ok(lesson.activities.length <= 100);
+  }
+});
+
+test('start lessons teach instructions, questions, help and app practice with Vietnamese scaffolding', async () => {
+  const lessons = importLessonWorkbook(
+    fs.readFileSync(
+      path.join(__dirname, '../public/templates/english-lessons.xlsx')
+    )
+  );
+  const start = lessons.filter((l) => l.title.startsWith('Start '));
+  assert.equal(start.length, 4);
+  assert.deepEqual(
+    lessons.slice(0, 4).map((l) => l.id),
+    start.map((l) => l.id)
+  );
+  assert.equal(
+    lessons.reduce((sum, l) => sum + l.activities.length, 0),
+    565
+  );
+  for (const lesson of start) {
+    assert.ok(lesson.goal.includes('/'));
+    assert.ok(
+      lesson.notes.beforeYouStart &&
+        lesson.notes.quickCheck &&
+        lesson.teacherNotes &&
+        lesson.challenge
+    );
+    for (const a of lesson.activities) {
+      assert.match(
+        a.prompt,
+        /[À-ỹ]/u,
+        `${lesson.title}: instructions need Vietnamese support`
+      );
+      if (['dictation', 'repeat', 'read-aloud'].includes(a.kind))
+        assert.ok(!/[À-ỹ]/u.test(a.text), 'Audio model must stay in English');
+      assert.equal(scoreAnswer(a.answers[0], a.answers).score, 100);
+    }
+    assert.equal(
+      (await decodeSharedLesson(await encodeSharedLesson(lesson))).teacherNotes,
+      undefined
+    );
+  }
+  assert.equal(new Set(start[3].activities.map((a) => a.kind)).size, 7);
+  for (const word of [
+    'listen',
+    'repeat',
+    'read',
+    'write',
+    'choose',
+    'match',
+    'arrange',
+    'complete',
+    'check',
+    'try again',
+  ])
+    assert.ok(start[0].vocabulary.some((v) => v.word === word));
+  for (const word of [
+    'what',
+    'who',
+    'where',
+    'when',
+    'why',
+    'which',
+    'how',
+    'how old',
+    'how many',
+    'how much',
+    'what time',
+  ])
+    assert.ok(start[1].vocabulary.some((v) => v.word === word));
 });
