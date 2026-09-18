@@ -329,7 +329,7 @@ function EnglishStudioContent() {
               <div className={s.tabs} aria-label="LIMA English sections">
                 <button
                   type="button"
-                  aria-pressed={tab === t('lessons')}
+                  aria-pressed={tab === 'lessons'}
                   onClick={() => {
                     setTab('lessons');
                     setPreview(null);
@@ -561,7 +561,7 @@ function EnglishStudioContent() {
               </section>
             </div>
           </>
-        ) : tab === t('lessons') ? (
+        ) : tab === 'lessons' ? (
           <>
             <section className={s.hero}>
               <div>

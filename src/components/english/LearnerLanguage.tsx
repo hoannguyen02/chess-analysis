@@ -1,10 +1,4 @@
-import {
-  createContext,
-  ReactNode,
-  useContext,
-  useEffect,
-  useState,
-} from 'react';
+import { createContext, ReactNode, useContext, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import vi from '@/lib/english/learner-vi.json';
 import s from './EnglishStudio.module.css';
@@ -17,24 +11,24 @@ const LanguageContext = createContext<{
 const LANGUAGE_KEY = 'lima-english-learner-language-v1';
 export function LearnerLanguageProvider({ children }: { children: ReactNode }) {
   const router = useRouter();
-  const [language, setLanguage] = useState<Language>(
-    router.locale === 'vi' ? 'vi' : 'en'
-  );
+  // The route is the single source of truth for both language pickers.
+  const language: Language = router.locale === 'vi' ? 'vi' : 'en';
   useEffect(() => {
     try {
-      const saved = localStorage.getItem(LANGUAGE_KEY);
-      if (saved === 'en' || saved === 'vi') setLanguage(saved);
+      localStorage.setItem(LANGUAGE_KEY, language);
     } catch {}
-  }, []);
+  }, [language]);
   return (
     <LanguageContext.Provider
       value={{
         language,
         change: (value) => {
-          setLanguage(value);
-          try {
-            localStorage.setItem(LANGUAGE_KEY, value);
-          } catch {}
+          if (value !== language) {
+            void router.replace(router.asPath, undefined, {
+              locale: value,
+              scroll: false,
+            });
+          }
         },
       }}
     >
