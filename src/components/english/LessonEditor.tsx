@@ -329,7 +329,13 @@ export default function LessonEditor({
                     update({
                       vocabulary: draft.vocabulary.map((entry, index) =>
                         index === i
-                          ? { ...entry, [key]: e.target.value }
+                          ? {
+                              ...entry,
+                              [key]: e.target.value,
+                              ...(key === 'word' || key === 'example'
+                                ? { pronunciations: undefined }
+                                : {}),
+                            }
                           : entry
                       ),
                     })

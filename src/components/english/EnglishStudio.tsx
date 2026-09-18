@@ -1,3 +1,10 @@
+import QuickLessonEdit from './QuickLessonEdit';
+import {
+  enrichPronunciations,
+  PronunciationReport,
+  PronunciationProgress,
+} from '@/lib/english/enrich-pronunciations';
+import WordPronunciation from './WordPronunciation';
 import {
   FAMILY_KEY,
   FamilyNotebook,
@@ -86,6 +93,23 @@ function EnglishStudioContent() {
     reviewIds?: string[];
   } | null>(null);
   const [preview, setPreview] = useState<Lesson | null>(null);
+  const [pronunciationBusy, setPronunciationBusy] = useState(false);
+  const [pronunciationProgress, setPronunciationProgress] =
+    useState<PronunciationProgress | null>(null);
+  const [pronunciationReport, setPronunciationReport] =
+    useState<PronunciationReport | null>(null);
+  const pronunciationController = useRef<AbortController | null>(null);
+  useEffect(() => () => pronunciationController.current?.abort(), []);
+  const preparePronunciations = (items: Lesson[]) => {
+    pronunciationController.current = new AbortController();
+    setPronunciationReport(null);
+    return enrichPronunciations(items, {
+      signal: pronunciationController.current.signal,
+      onProgress: setPronunciationProgress,
+    });
+  };
+  const currentLessons = useRef(lessons);
+  currentLessons.current = lessons;
   const [imported, setImported] = useState<Lesson[] | null>(null);
   const [importTargets, setImportTargets] = useState<Record<string, string>>(
     {}
@@ -158,6 +182,7 @@ function EnglishStudioContent() {
         LESSON_KEY,
         JSON.stringify({ version: 2, lessons: next })
       );
+      currentLessons.current = next;
       setLessons(next);
       setError('');
       return true;
@@ -167,6 +192,27 @@ function EnglishStudioContent() {
       );
       return false;
     }
+  };
+  const saveDuringSession = (incoming: Lesson) => {
+    const current = currentLessons.current.find(
+      (item) => item.id === incoming.id
+    );
+    if (!current) return false;
+    const next = { ...incoming, revision: (current.revision || 1) + 1 };
+    if (
+      !saveLessons(
+        currentLessons.current.map((item) =>
+          item.id === next.id ? next : item
+        )
+      )
+    )
+      return false;
+    setPreview((active) => (active?.id === next.id ? next : active));
+    setTeaching((active) => (active?.id === next.id ? next : active));
+    setPractice((active) =>
+      active?.lesson.id === next.id ? { ...active, lesson: next } : active
+    );
+    return true;
   };
   const saveFamily = (next: FamilyNotebook) => {
     try {
@@ -413,6 +459,7 @@ function EnglishStudioContent() {
           <TeachSession
             lesson={teaching}
             profiles={family.profiles}
+            onSave={saveDuringSession}
             onExit={() => setTeaching(null)}
           />
         ) : practice ? (
@@ -420,6 +467,7 @@ function EnglishStudioContent() {
             key={practice.lesson.id + (practice.reviewIds ? '-review' : '')}
             lesson={practice.lesson}
             reviewIds={practice.reviewIds}
+            onSave={saveDuringSession}
             onAttempt={addAttempt}
             onExit={() => setPractice(null)}
           />
@@ -465,7 +513,16 @@ function EnglishStudioContent() {
                 </button>
               </div>
             </div>
-            <LessonNotes lesson={preview} />
+            <LessonNotes
+              lesson={preview}
+              renderEdit={(note) => (
+                <QuickLessonEdit
+                  lesson={preview}
+                  target={{ note }}
+                  onSave={saveDuringSession}
+                />
+              )}
+            />
             {preview.teacherNotes && (
               <details className={s.lessonNotes}>
                 <summary>{t('Teacher notes')}</summary>
@@ -496,7 +553,12 @@ function EnglishStudioContent() {
                       }}
                     >
                       <div className={s.sectionHead} style={{ margin: 0 }}>
-                        <strong>{v.word}</strong>
+                        <strong>
+                          <WordPronunciation
+                            word={v.word}
+                            pronunciations={v.pronunciations}
+                          />
+                        </strong>
                         <button
                           className={s.quiet}
                           aria-label={`Listen to ${v.word}`}
@@ -633,10 +695,48 @@ function EnglishStudioContent() {
                 />
                 <button
                   className={s.secondary}
+                  disabled={pronunciationBusy}
                   onClick={() => input.current?.click()}
                 >
                   <VscCloudUpload />
                   {t('Import lessons')}{' '}
+                </button>
+                <button
+                  className={s.secondary}
+                  disabled={pronunciationBusy || !lessons.length}
+                  onClick={async () => {
+                    setPronunciationBusy(true);
+                    try {
+                      const result = await preparePronunciations(lessons);
+                      setPronunciationReport(result);
+                      // Only merge pronunciation into current entries; preserve edits made while waiting.
+                      const next = currentLessons.current.map((l) => ({
+                        ...l,
+                        vocabulary: l.vocabulary.map((v) => {
+                          const match = result.lessons
+                            .find((item) => item.id === l.id)
+                            ?.vocabulary.find(
+                              (item) =>
+                                item.word === v.word &&
+                                item.example === v.example
+                            );
+                          return match?.pronunciations
+                            ? { ...v, pronunciations: match.pronunciations }
+                            : v;
+                        }),
+                      }));
+                      if (saveLessons(next))
+                        setMessage(t('Pronunciations updated.'));
+                    } finally {
+                      setPronunciationBusy(false);
+                    }
+                  }}
+                >
+                  {t(
+                    pronunciationBusy
+                      ? 'Looking up pronunciations…'
+                      : 'Update pronunciations'
+                  )}
                 </button>
                 {/* <a
                   className={s.quiet}
@@ -659,6 +759,35 @@ function EnglishStudioContent() {
                 </button>
               </div>
             </div>
+            {pronunciationBusy && (
+              <div className={s.notice} role="status">
+                {t('Looking up pronunciations…')}{' '}
+                {pronunciationProgress?.completed || 0} /{' '}
+                {pronunciationProgress?.total || 0}
+                <button
+                  className={s.quiet}
+                  onClick={() => pronunciationController.current?.abort()}
+                >
+                  {t('Stop lookup and keep results')}
+                </button>
+              </div>
+            )}
+            {!pronunciationBusy && pronunciationReport && (
+              <div className={s.notice} role="status">
+                {t('Saved IPA')}: {pronunciationReport.found} ·{' '}
+                {t('Needs context')}: {pronunciationReport.needsContext} ·{' '}
+                {t('Not found')}: {pronunciationReport.notFound} ·{' '}
+                {t('Not checked yet')}: {pronunciationReport.unchecked} ·{' '}
+                {t('Phrases (audio only)')}: {pronunciationReport.unsupported}
+                {pronunciationReport.unchecked > 0 && (
+                  <p>
+                    {t(
+                      'Run Update pronunciations to resume unfinished lookups.'
+                    )}
+                  </p>
+                )}
+              </div>
+            )}
             {imported && (
               <section className={s.notice} aria-label={t('Import preview')}>
                 <strong>
@@ -671,6 +800,7 @@ function EnglishStudioContent() {
                       <label className={s.field}>
                         {t('Import action')}
                         <select
+                          disabled={pronunciationBusy}
                           value={importTargets[l.id] || ''}
                           onChange={(e) =>
                             setImportTargets((current) => ({
@@ -699,29 +829,75 @@ function EnglishStudioContent() {
                 <div className={s.actions} style={{ marginTop: 14 }}>
                   <button
                     className={s.primary}
-                    onClick={() => {
+                    disabled={pronunciationBusy}
+                    onClick={async () => {
+                      setPronunciationBusy(true);
                       try {
+                        const previous = currentLessons.current;
                         const next = applyLessonImport(
-                          lessons,
+                          previous,
                           imported,
                           importTargets
                         );
-                        if (saveLessons(next)) {
-                          setMessage('Import complete.');
-                          setImported(null);
-                        }
+                        if (!saveLessons(next)) return;
+                        setImported(null);
+                        setMessage(
+                          t(
+                            'Lessons imported. Preparing pronunciations in the background.'
+                          )
+                        );
+                        const changed = next.filter(
+                          (item) => !previous.includes(item)
+                        );
+                        const enriched = await preparePronunciations(changed);
+                        setPronunciationReport(enriched);
+                        const byId = new Map(
+                          enriched.lessons.map((item) => [item.id, item])
+                        );
+                        const updated = currentLessons.current.map((lesson) => {
+                          const ready = byId.get(lesson.id);
+                          if (!ready) return lesson;
+                          return {
+                            ...lesson,
+                            vocabulary: lesson.vocabulary.map((entry) => {
+                              const match = ready.vocabulary.find(
+                                (item) =>
+                                  item.word === entry.word &&
+                                  item.example === entry.example
+                              );
+                              return match?.pronunciations
+                                ? {
+                                    ...entry,
+                                    pronunciations: match.pronunciations,
+                                  }
+                                : entry;
+                            }),
+                          };
+                        });
+                        if (saveLessons(updated))
+                          setMessage(t('Import complete.'));
                       } catch (error) {
                         setError(
                           error instanceof Error
                             ? error.message
                             : 'Import failed.'
                         );
+                      } finally {
+                        setPronunciationBusy(false);
                       }
                     }}
                   >
-                    {t('Confirm import')}{' '}
+                    {t(
+                      pronunciationBusy
+                        ? 'Looking up pronunciations…'
+                        : 'Confirm import'
+                    )}{' '}
                   </button>
-                  <button className={s.quiet} onClick={() => setImported(null)}>
+                  <button
+                    className={s.quiet}
+                    disabled={pronunciationBusy}
+                    onClick={() => setImported(null)}
+                  >
                     {t('Cancel')}{' '}
                   </button>
                 </div>
@@ -975,7 +1151,7 @@ function EnglishStudioContent() {
             <div className={s.sectionHead}>
               <h2>{t('Recent practice')}</h2>
             </div>
-            {currentAttempts.length ? (
+            {attempts.length ? (
               <div className={s.card} style={{ overflowX: 'auto' }}>
                 <table className={s.table}>
                   <thead>
@@ -988,18 +1164,28 @@ function EnglishStudioContent() {
                     </tr>
                   </thead>
                   <tbody>
-                    {currentAttempts
+                    {attempts
                       .slice(-15)
                       .reverse()
                       .map((a) => (
                         <tr key={a.id}>
                           <td>
-                            {lessons.find((l) => l.id === a.lessonId)?.title}
+                            {lessons.find((l) => l.id === a.lessonId)?.title ||
+                              t('Removed lesson')}
                           </td>
                           <td style={{ textTransform: 'capitalize' }}>
                             {t(a.skill)}
                           </td>
-                          <td>{a.score}%</td>
+                          <td>
+                            {a.score}%{' '}
+                            {!currentAttempts.some(
+                              (current) => current.id === a.id
+                            ) && (
+                              <span className={s.badge}>
+                                {t('Earlier version')}
+                              </span>
+                            )}
+                          </td>
                           <td>
                             {a.assisted ? t('Hint / retry') : t('Unassisted')}
                           </td>

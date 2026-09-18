@@ -1,35 +1,86 @@
-import { useEffect, useState } from 'react';
+import { PronunciationLabels } from './WordPronunciation';
+import { useEffect, useState, type ReactNode } from 'react';
 import { conversationLine } from '@/lib/english/voices';
 import { Lesson, NOTE_LABELS } from '@/lib/english/lessons';
 import { useLearnerText } from './LearnerLanguage';
 import { useReadText } from './VoiceSettings';
 import s from './EnglishStudio.module.css';
 
+// Match the complete example, never manufacture sentence IPA from its words.
+export function examplePronunciations(
+  line: string,
+  vocabulary: Lesson['vocabulary']
+) {
+  const key = (value: string) =>
+    value
+      .trim()
+      .replace(/[.!?]+$/, '')
+      .trim()
+      .replace(/\s+/g, ' ')
+      .toLowerCase();
+  const matches = vocabulary.filter(
+    (entry) => key(entry.word) === key(line) && entry.pronunciations
+  );
+  if (!matches.length) return undefined;
+  const first = matches[0].pronunciations;
+  // Duplicate vocabulary with different readings requires context.
+  if (
+    matches.some(
+      (entry) => JSON.stringify(entry.pronunciations) !== JSON.stringify(first)
+    )
+  )
+    return undefined;
+  return first;
+}
+
+// Respect explicit line breaks; sentence segmentation preserves abbreviations.
+export function splitPronunciationExamples(text: string): string[] {
+  if (!text.trim()) return [];
+  // Older browsers still offer per-line playback without guessing abbreviations.
+  if (typeof Intl.Segmenter !== 'function')
+    return text
+      .split(/\n+/)
+      .map((line) => line.trim())
+      .filter(Boolean);
+  const segmenter = new Intl.Segmenter('en', { granularity: 'sentence' });
+  return text
+    .split(/\n+/)
+    .flatMap((line) =>
+      Array.from(segmenter.segment(line), (item) => item.segment.trim()).filter(
+        Boolean
+      )
+    );
+}
+
 export default function LessonNotes({
   lesson,
   audio = true,
+  renderEdit,
+  expand = false,
 }: {
   lesson: Lesson;
   audio?: boolean;
+  renderEdit?: (section: keyof typeof NOTE_LABELS) => ReactNode;
+  expand?: boolean;
 }) {
   const t = useLearnerText();
-  const { read, readSequence, stop, playing, activeIndex, error } =
-    useReadText();
-  const [conversationPlaying, setConversationPlaying] = useState(false);
+  const { readSequence, stop, playing, activeIndex, error } = useReadText();
+  const [activeSection, setActiveSection] = useState<
+    'dialogue' | 'pronunciation' | null
+  >(null);
   const [replayIndex, setReplayIndex] = useState<number | null>(null);
   const [rate, setRate] = useState(1);
   const notes = lesson.notes || {};
-  useEffect(() => stop, [lesson.id, notes.dialogue, stop]);
-  const lines = (notes.dialogue || '')
-    .split(/\n+/)
-    .map((line) => line.trim())
-    .filter(Boolean);
-  const spokenLines = lines.map(conversationLine);
-  const highlighted =
-    conversationPlaying && playing && activeIndex !== null
-      ? (replayIndex ?? activeIndex)
-      : null;
-  if (!Object.values(notes).some(Boolean) && !lesson.reviewLesson) return null;
+  useEffect(
+    () => stop,
+    [lesson.id, notes.dialogue, notes.pronunciationModel, audio, stop]
+  );
+  if (
+    !renderEdit &&
+    !Object.values(notes).some(Boolean) &&
+    !lesson.reviewLesson
+  )
+    return null;
   const sections = (
     [
       'beforeYouStart',
@@ -41,7 +92,10 @@ export default function LessonNotes({
       'dialogue',
     ] as const
   ).filter(
-    (key) => notes[key] || (key === 'pronunciation' && notes.pronunciationModel)
+    (key) =>
+      renderEdit ||
+      notes[key] ||
+      (key === 'pronunciation' && notes.pronunciationModel)
   );
   return (
     <section
@@ -51,37 +105,54 @@ export default function LessonNotes({
       <h3>{t('Learn before you practise')}</h3>
       {sections.map((key) => {
         const model =
-          key === 'pronunciation'
-            ? notes.pronunciationModel
-            : key === 'dialogue'
-              ? notes.dialogue?.replace(/^[^:\n]{1,30}:\s*/gm, '')
-              : undefined;
+          key === 'pronunciation' ? notes.pronunciationModel : undefined;
+        const playable =
+          audio && (key === 'dialogue' || (key === 'pronunciation' && !!model));
+        const lines =
+          key === 'dialogue'
+            ? (notes.dialogue || '')
+                .split(/\n+/)
+                .map((line) => line.trim())
+                .filter(Boolean)
+            : splitPronunciationExamples(model || '');
+        const spokenLines =
+          key === 'dialogue' ? lines.map(conversationLine) : lines;
+        const sectionPlaying = activeSection === key && playing;
+        const highlighted =
+          sectionPlaying && activeIndex !== null
+            ? (replayIndex ?? activeIndex)
+            : null;
         return (
           <details
             key={key}
+            open={expand || undefined}
             onToggle={(event) => {
-              if (!event.currentTarget.open && playing) stop();
+              if (!event.currentTarget.open && sectionPlaying) stop();
             }}
           >
             <summary>{t(NOTE_LABELS[key])}</summary>
-            {key === 'dialogue' && audio ? (
+            {renderEdit?.(key)}
+            {key === 'pronunciation' && notes.pronunciation && (
+              <p className={s.lessonNoteText}>{notes.pronunciation}</p>
+            )}
+            {playable ? (
               <>
                 <div className={s.actions}>
                   <button
                     type="button"
                     className={s.secondary}
                     onClick={() => {
-                      if (conversationPlaying && playing) stop();
+                      if (sectionPlaying) stop();
                       else {
-                        setConversationPlaying(true);
+                        setActiveSection(key as 'dialogue' | 'pronunciation');
                         setReplayIndex(null);
                         readSequence(spokenLines, rate);
                       }
                     }}
                   >
-                    {conversationPlaying && playing
+                    {sectionPlaying
                       ? `■ ${t('Stop')}`
-                      : `▶ ${t('Play conversation')}`}
+                      : `▶ ${t(key === 'dialogue' ? 'Play conversation' : 'Play all')}`}
                   </button>
                   <label className={s.conversationSpeed}>
                     {t('Speed')}
@@ -97,69 +168,59 @@ export default function LessonNotes({
                     </select>
                   </label>
                 </div>
-                <p className={s.muted}>
-                  {t(
-                    'A: Google UK Male · B: Google UK Female (when available)'
-                  )}
-                </p>
+                {key === 'dialogue' && (
+                  <p className={s.muted}>
+                    {t(
+                      'A: Google UK Male · B: Google UK Female (when available)'
+                    )}
+                  </p>
+                )}
                 <div className={s.conversationLines} lang="en">
                   {lines.map((line, index) => (
-                    <button
-                      type="button"
+                    <div
                       key={index}
-                      className={`${s.conversationLine} ${highlighted === index ? s.conversationActive : ''}`}
-                      aria-label={`${t('Play sentence')}: ${line}`}
-                      aria-current={highlighted === index ? 'true' : undefined}
-                      onClick={() => {
-                        setConversationPlaying(true);
-                        setReplayIndex(index);
-                        readSequence([spokenLines[index]], rate);
-                      }}
+                      className={`${s.pronunciationExampleRow} ${highlighted === index ? s.conversationActive : ''}`}
                     >
-                      <span aria-hidden="true" className={s.conversationPlay}>
-                        ▶
-                      </span>
-                      {line}
-                    </button>
+                      <button
+                        type="button"
+                        key={index}
+                        className={s.conversationLine}
+                        aria-label={`${t('Play sentence')}: ${line}`}
+                        aria-current={
+                          highlighted === index ? 'true' : undefined
+                        }
+                        onClick={() => {
+                          setActiveSection(key as 'dialogue' | 'pronunciation');
+                          setReplayIndex(index);
+                          readSequence([spokenLines[index]], rate);
+                        }}
+                      >
+                        <span aria-hidden="true" className={s.conversationPlay}>
+                          ▶
+                        </span>
+                        {line}
+                      </button>
+                      {key === 'pronunciation' && (
+                        <PronunciationLabels
+                          pronunciations={examplePronunciations(
+                            line,
+                            lesson.vocabulary
+                          )}
+                        />
+                      )}
+                    </div>
                   ))}
                 </div>
               </>
             ) : (
-              <p className={s.lessonNoteText}>{notes[key]}</p>
+              key !== 'pronunciation' && (
+                <p className={s.lessonNoteText}>{notes[key]}</p>
+              )
             )}
-            {key === 'pronunciation' && model && (
+            {key === 'pronunciation' && model && !audio && (
               <p className={s.lessonNoteText} lang="en">
                 {model}
               </p>
-            )}
-            {audio && model && key !== 'dialogue' && (
-              <div className={s.actions}>
-                <button
-                  type="button"
-                  className={s.secondary}
-                  onClick={() => {
-                    setConversationPlaying(false);
-                    read(model);
-                  }}
-                >
-                  {t('Play model')}
-                </button>
-                <button
-                  type="button"
-                  className={s.quiet}
-                  onClick={() => {
-                    setConversationPlaying(false);
-                    read(model, 0.7);
-                  }}
-                >
-                  {t('Play slowly')}
-                </button>
-                {playing && (
-                  <button type="button" className={s.quiet} onClick={stop}>
-                    {t('Stop')}
-                  </button>
-                )}
-              </div>
             )}
           </details>
         );

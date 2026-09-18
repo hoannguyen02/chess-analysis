@@ -45,7 +45,14 @@ export type Lesson = {
   topic: string;
   level: string;
   goal: string;
-  vocabulary: { word: string; meaning: string; example: string }[];
+  vocabulary: {
+    word: string;
+    meaning: string;
+    example: string;
+    pronunciations?: Partial<
+      Record<'UK' | 'US' | 'IPA', { ipa: string; source: string }>
+    >;
+  }[];
   activities: Activity[];
   notes?: LessonNotes;
   teacherNotes?: string;
@@ -242,7 +249,31 @@ export function parseLessonPack(value: unknown): LessonPack {
       goal,
       vocabulary: raw.vocabulary.map((v) => {
         if (!obj(v)) throw new Error('Invalid vocabulary entry.');
+        const pronunciations: NonNullable<
+          Lesson['vocabulary'][number]['pronunciations']
+        > = {};
+        if (v.pronunciations !== undefined) {
+          if (!obj(v.pronunciations))
+            throw new Error('Invalid pronunciations.');
+          for (const accent of ['UK', 'US', 'IPA'] as const) {
+            const entry = v.pronunciations[accent];
+            if (entry === undefined) continue;
+            if (!obj(entry)) throw new Error('Invalid pronunciation entry.');
+            const ipa = text(entry.ipa, 'IPA', 120);
+            const source = text(entry.source, 'Pronunciation source', 500);
+            let url: URL;
+            try {
+              url = new URL(source);
+            } catch {
+              throw new Error('Invalid pronunciation source.');
+            }
+            if (url.protocol !== 'https:' || url.username || url.password)
+              throw new Error('Pronunciation source must use HTTPS.');
+            pronunciations[accent] = { ipa, source };
+          }
+        }
         return {
+          ...(Object.keys(pronunciations).length ? { pronunciations } : {}),
           word: text(v.word, 'Word', 100),
           meaning: text(v.meaning, 'Meaning', 300),
           example: text(v.example, 'Example', 500, true),

@@ -1,3 +1,5 @@
+import { Tooltip } from 'flowbite-react';
+import { VscInfo } from 'react-icons/vsc';
 import { useLearnerText } from './LearnerLanguage';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import s from './EnglishStudio.module.css';
@@ -36,7 +38,16 @@ export default function SpeechRecorder({
   const t = useLearnerText();
   const [available, setAvailable] = useState(false);
   const [canRecognize, setCanRecognize] = useState(false);
-  const [transcribe, setTranscribe] = useState(false);
+  const [transcribe, setTranscribe] = useState(true);
+  const recordButton = useRef<HTMLButtonElement>(null);
+  const wasDisabled = useRef(disabled);
+  useEffect(() => {
+    if (wasDisabled.current && !disabled) {
+      recordButton.current?.focus({ preventScroll: true });
+      recordButton.current?.scrollIntoView({ block: 'nearest' });
+    }
+    wasDisabled.current = disabled;
+  }, [disabled]);
   const [recording, setRecording] = useState(false);
   const [starting, setStarting] = useState(false);
   const [recognizing, setRecognizing] = useState(false);
@@ -178,12 +189,7 @@ export default function SpeechRecorder({
     }
   };
   return (
-    <div className={s.stack}>
-      <p className={s.muted}>
-        {t(
-          'Record up to 60 seconds. Your recording stays in this session and is discarded when you leave this activity.'
-        )}
-      </p>
+    <div className={s.compactRecorder}>
       {!available && (
         <p className={s.notice}>
           {t(
@@ -191,28 +197,9 @@ export default function SpeechRecorder({
           )}
         </p>
       )}
-      {allowTranscription &&
-        (canRecognize ? (
-          <label className={`${s.row} ${s.muted}`}>
-            <input
-              type="checkbox"
-              checked={transcribe}
-              disabled={recording || starting || recognizing || disabled}
-              onChange={(e) => setTranscribe(e.target.checked)}
-            />
-            {t(
-              'Enable browser transcription for a word-match score. Your browser may send audio to its speech service.'
-            )}
-          </label>
-        ) : (
-          <p className={s.muted}>
-            {t(
-              'This browser does not support speech transcription. Record and compare by listening; automatic speech scores are unavailable.'
-            )}
-          </p>
-        ))}
       <div className={s.actions}>
         <button
+          ref={recordButton}
           type="button"
           className={recording ? s.danger : s.primary}
           disabled={
@@ -226,6 +213,35 @@ export default function SpeechRecorder({
               ? t('■ Stop recording')
               : t('● Record my voice')}
         </button>
+        <Tooltip
+          trigger="click"
+          placement="top"
+          style="light"
+          content={
+            <div className={s.recordingHelp}>
+              <strong>{t('Recording & scoring details')}</strong>
+              <p>
+                {t(
+                  'Record up to 60 seconds. Your recording stays in this session and is discarded when you leave this activity.'
+                )}
+              </p>
+              <p>{t('Your browser may send audio to its speech service.')}</p>
+              <p className={s.muted}>
+                {t(
+                  'Word match compares recognized words with the lesson text. It is not a pronunciation or fluency assessment. Recognition errors can affect the result.'
+                )}
+              </p>
+            </div>
+          }
+        >
+          <button
+            type="button"
+            className={s.preferenceIcon}
+            aria-label={t('Recording & scoring details')}
+          >
+            <VscInfo size={20} aria-hidden="true" />
+          </button>
+        </Tooltip>
         {recording && (
           <span role="status" className={s.recording}>
             {t('Recording…')}
@@ -236,31 +252,43 @@ export default function SpeechRecorder({
             {t('Finishing transcript…')}
           </span>
         )}
+        {audio && (
+          <audio
+            aria-label={t('Your recording')}
+            controls
+            src={audio}
+            className={s.recordingPlayback}
+          />
+        )}
       </div>
-      {audio && (
-        <audio
-          aria-label={t('Your recording')}
-          controls
-          src={audio}
-          style={{ width: '100%' }}
-        />
-      )}
+      {allowTranscription &&
+        (canRecognize ? (
+          <label className={`${s.row} ${s.muted}`}>
+            <input
+              type="checkbox"
+              checked={transcribe}
+              disabled={recording || starting || recognizing || disabled}
+              onChange={(e) => setTranscribe(e.target.checked)}
+            />
+            {t('Transcription & word-match score')}
+          </label>
+        ) : (
+          <p className={s.muted}>
+            {t(
+              'This browser does not support speech transcription. Record and compare by listening; automatic speech scores are unavailable.'
+            )}
+          </p>
+        ))}
       {transcript && (
-        <div className={s.notice}>
-          <p className={s.eyebrow}>{t('What the browser heard')}</p>
-          <p style={{ marginTop: 8 }}>{transcript}</p>
-        </div>
+        <p className={s.compactTranscript}>
+          <strong>{t('What the browser heard')}:</strong> {transcript}
+        </p>
       )}
       {error && (
         <p role="alert" className={`${s.notice} ${s.error}`}>
           {t(error)}
         </p>
       )}
-      <p className={s.muted}>
-        {t(
-          'Word match compares recognized words with the lesson text. It is not a pronunciation or fluency assessment. Recognition errors can affect the result.'
-        )}
-      </p>
     </div>
   );
 }

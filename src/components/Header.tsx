@@ -44,6 +44,7 @@ export default function Header() {
   return (
     <div className={isSticky ? 'pt-[70px]' : ''}>
       <nav
+        data-site-header
         className={`${
           isSticky
             ? 'fixed top-0 z-50 left-1/2 transform -translate-x-1/2'

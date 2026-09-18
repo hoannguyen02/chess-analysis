@@ -1,3 +1,5 @@
+import QuickLessonEdit from './QuickLessonEdit';
+import WordPronunciation from './WordPronunciation';
 import LessonNotes from './LessonNotes';
 import { useLearnerText } from './LearnerLanguage';
 import { LearnerProfile } from '@/lib/english/family';
@@ -7,6 +9,20 @@ import s from './EnglishStudio.module.css';
 import { kindLabels } from './LessonEditor';
 import SentenceBuilder from './SentenceBuilder';
 import { useReadText, VoicePicker } from './VoiceSettings';
+
+function teachingTips(text: string): string[] {
+  const lines = text
+    .split(/\n+/)
+    .map((line) => line.trim().replace(/^[•*-]\s+/, ''))
+    .filter(Boolean);
+  if (typeof Intl.Segmenter !== 'function') return lines;
+  const segmenter = new Intl.Segmenter('en', { granularity: 'sentence' });
+  return lines.flatMap((line) =>
+    Array.from(segmenter.segment(line), (part) => part.segment.trim()).filter(
+      Boolean
+    )
+  );
+}
 
 type Slide =
   | { type: 'intro'; title: string }
@@ -39,7 +55,16 @@ function TeachingSlide({
       <span className={s.badge}>
         {word ? t('Discover a word') : t(kindLabels[activity!.kind])}
       </span>
-      <h2 className={s.teachPrompt}>{word ? word.word : activity!.prompt}</h2>
+      <h2 className={s.teachPrompt}>
+        {word ? (
+          <WordPronunciation
+            word={word.word}
+            pronunciations={word.pronunciations}
+          />
+        ) : (
+          activity!.prompt
+        )}
+      </h2>
       {word?.example && <p className={s.teachPassage}>{word.example}</p>}
       {activity &&
         ['repeat', 'read-aloud', 'comprehension'].includes(activity.kind) && (
@@ -152,9 +177,11 @@ export default function TeachSession({
   profiles,
   onExit,
   learner = false,
+  onSave,
 }: {
   lesson: Lesson;
   profiles: LearnerProfile[];
+  onSave?: (lesson: Lesson) => boolean;
   onExit: () => void;
   learner?: boolean;
 }) {
@@ -316,10 +343,35 @@ export default function TeachSession({
           </>
         )}
         {!learner && !clean && lesson.teacherNotes && (
-          <details className={s.lessonNotes}>
-            <summary>{t('Teacher notes')}</summary>
-            <p className={s.lessonNoteText}>{lesson.teacherNotes}</p>
+          <details key={lesson.id} className={s.teachingTips}>
+            <summary>{t('Teaching tips')}</summary>
+            <ul>
+              {teachingTips(lesson.teacherNotes).map((tip, index) => (
+                <li key={index}>{tip}</li>
+              ))}
+            </ul>
           </details>
+        )}
+        {!learner && !clean && onSave && (
+          <QuickLessonEdit
+            lesson={lesson}
+            onSave={onSave}
+            target={
+              index === 0 || finished
+                ? { lesson: true }
+                : index <= lesson.vocabulary.length
+                  ? { word: index - 1 }
+                  : {
+                      activity:
+                        lesson.activities[
+                          Math.min(
+                            index - lesson.vocabulary.length - 1,
+                            lesson.activities.length - 1
+                          )
+                        ]?.id || '',
+                    }
+            }
+          />
         )}
         <div className={s.teachStage}>
           <p className={s.eyebrow}>LIMA English · {lesson.topic}</p>
@@ -339,10 +391,23 @@ export default function TeachSession({
                 )}
               </p>
             </>
-          ) : slides[index].type === 'intro' ? (
+          ) : slides[Math.min(index, slides.length - 1)].type === 'intro' ? (
             <>
               <h1 className={s.teachPrompt}>{lesson.title}</h1>
-              <LessonNotes lesson={lesson} />
+              <LessonNotes
+                lesson={lesson}
+                renderEdit={
+                  !learner && !clean && onSave
+                    ? (note) => (
+                        <QuickLessonEdit
+                          lesson={lesson}
+                          target={{ note }}
+                          onSave={onSave}
+                        />
+                      )
+                    : undefined
+                }
+              />
               <p className={s.teachPassage}>{lesson.goal}</p>
               <div className={s.skillDots}>
                 <span>{t('Listen')}</span>
@@ -358,8 +423,8 @@ export default function TeachSession({
             </>
           ) : (
             <TeachingSlide
-              key={index}
-              slide={slides[index]}
+              key={`${index}-${JSON.stringify(slides[Math.min(index, slides.length - 1)])}`}
+              slide={slides[Math.min(index, slides.length - 1)]}
               learner={learner}
             />
           )}

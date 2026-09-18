@@ -1,7 +1,8 @@
+import QuickLessonEdit from './QuickLessonEdit';
 import PersonalChallenge from './PersonalChallenge';
 import LessonNotes from './LessonNotes';
 import { useLearnerText } from './LearnerLanguage';
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import {
   Activity,
   Attempt,
@@ -28,22 +29,50 @@ function Exercise({
   onAttempt,
   onNext,
   last,
+  onBusyChange,
 }: {
   activity: Activity;
   lessonId: string;
   onAttempt: (a: Attempt) => void;
   onNext: () => void;
   last: boolean;
+  onBusyChange: (busy: boolean) => void;
 }) {
   const t = useLearnerText();
   const [answer, setAnswer] = useState('');
   const [result, setResult] = useState<ReturnType<typeof scoreAnswer> | null>(
     null
   );
+  const resultPanel = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    if (!result) return;
+    const frame = requestAnimationFrame(() => {
+      const panel = resultPanel.current;
+      if (!panel) return;
+      // Leave space for the site navigation when it becomes sticky on scroll.
+      const header = document.querySelector('[data-site-header]');
+      const top = (header?.getBoundingClientRect().height || 0) + 16;
+      const bounds = panel.getBoundingClientRect();
+      if (bounds.top >= top && bounds.bottom <= window.innerHeight - 16) return;
+      panel.style.scrollMarginTop = `${top}px`;
+      panel.scrollIntoView({
+        behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches
+          ? 'instant'
+          : 'smooth',
+        block: 'start',
+        inline: 'nearest',
+      });
+    });
+    return () => cancelAnimationFrame(frame);
+  }, [result]);
   const [revealed, setRevealed] = useState(false);
   const [assisted, setAssisted] = useState(false);
   const [picked, setPicked] = useState<number[]>([]);
   const [speechBusy, setSpeechBusy] = useState(false);
+  useEffect(() => {
+    onBusyChange(speechBusy);
+    return () => onBusyChange(false);
+  }, [speechBusy, onBusyChange]);
   const { read, stop, playing, error } = useReadText();
   const speech = ['repeat', 'read-aloud'].includes(activity.kind);
   const order = activity.kind === 'word-order';
@@ -84,7 +113,7 @@ function Exercise({
     });
   };
   return (
-    <div className={`${s.card} ${s.exercise}`}>
+    <div className={`${s.card} ${s.exercise} ${speech ? s.compactSpeech : ''}`}>
       <span className={s.badge}>{t(kindLabels[activity.kind])}</span>
       <h2>{activity.prompt}</h2>
       {['comprehension', 'read-aloud', 'repeat'].includes(activity.kind) && (
@@ -97,17 +126,19 @@ function Exercise({
             type="button"
             className={s.primary}
             disabled={speechBusy}
+            aria-label={playing ? t('■ Stop audio') : t('▶ Listen to the model')}
             onClick={() => (playing ? stop() : read(activity.text))}
           >
-            {playing ? t('■ Stop audio') : t('▶ Listen to the model')}
+            {playing ? t('■ Stop audio') : `▶ ${t('Listen')}`}
           </button>
           <button
             type="button"
             className={s.secondary}
             disabled={speechBusy}
+            aria-label={t('Listen slowly')}
             onClick={() => read(activity.text, 0.75)}
           >
-            {t('Listen slowly')}
+            {t('Slow')}
           </button>
           {activity.kind === 'dictation' && !result && (
             <button
@@ -131,133 +162,137 @@ function Exercise({
       {revealed && activity.kind === 'dictation' && !result && (
         <p className={s.passage}>{activity.text}</p>
       )}
-      {speech ? (
-        <SpeechRecorder
-          disabled={!!result}
-          onTranscript={setAnswer}
-          onBusyChange={setSpeechBusy}
-        />
-      ) : order ? (
-        <SentenceBuilder
-          words={words}
-          picked={picked}
-          disabled={!!result}
-          onChange={(next) => {
-            setPicked(next);
-            setAnswer(next.map((id) => words[id].word).join(' '));
-          }}
-        />
-      ) : (
-        <label className={s.field}>
-          {t('Your answer')}
-          <textarea
-            className={s.answer}
-            maxLength={2000}
-            value={answer}
+      <div
+        className={!speech && !order && result ? s.answerResultRow : undefined}
+      >
+        {speech ? (
+          <SpeechRecorder
             disabled={!!result}
-            autoComplete="off"
-            spellCheck={false}
-            placeholder={
-              activity.kind === 'dictation'
-                ? t('Type what you hear…')
-                : t('Write your answer…')
-            }
-            onChange={(e) => setAnswer(e.target.value)}
-            onKeyDown={(e) => {
-              if ((e.ctrlKey || e.metaKey) && e.key === 'Enter') {
-                e.preventDefault();
-                check();
-              }
+            onTranscript={setAnswer}
+            onBusyChange={setSpeechBusy}
+          />
+        ) : order ? (
+          <SentenceBuilder
+            words={words}
+            picked={picked}
+            disabled={!!result}
+            onChange={(next) => {
+              setPicked(next);
+              setAnswer(next.map((id) => words[id].word).join(' '));
             }}
           />
-        </label>
-      )}
-      {!result && (
-        <div className={s.actions} style={{ marginTop: 22 }}>
-          <button
-            type="button"
-            className={s.primary}
-            disabled={!normalize(answer).length || speechBusy}
-            onClick={check}
-          >
-            {speech ? t('Check word match') : t('Check answer')}
-          </button>
-          <span className={s.muted}>
-            {speech
-              ? t('Record with transcription enabled to check.')
-              : t('Capitalization and punctuation do not affect your score.')}
-          </span>
-        </div>
-      )}
-      {result && (
-        <div className={s.result} role="status">
-          <div className={s.row}>
-            <strong className={s.score}>{result.score}%</strong>
-            <div>
-              <strong>
-                {result.score === 100
-                  ? t('You got it!')
-                  : t('A little practice goes a long way.')}
-              </strong>
-              <p className={s.muted}>
-                {speech ? t('Transcript word match') : t('Answer word match')}
-                {assisted ? t(' · with a hint / retry') : t(' · first try')}
-              </p>
-            </div>
-          </div>
-          <div className={s.diff}>
-            {result.changes.map((change, i) => (
-              <span
-                key={i}
-                className={s[change.kind]}
-                title={
-                  change.kind === 'changed'
-                    ? `You said/wrote: ${change.actual}`
-                    : change.kind
+        ) : (
+          <label className={s.field}>
+            {t('Your answer')}
+            <textarea
+              className={s.answer}
+              maxLength={2000}
+              value={answer}
+              disabled={!!result}
+              autoComplete="off"
+              spellCheck={false}
+              placeholder={
+                activity.kind === 'dictation'
+                  ? t('Type what you hear…')
+                  : t('Write your answer…')
+              }
+              onChange={(e) => setAnswer(e.target.value)}
+              onKeyDown={(e) => {
+                if ((e.ctrlKey || e.metaKey) && e.key === 'Enter') {
+                  e.preventDefault();
+                  check();
                 }
-              >
-                {change.kind === 'extra'
-                  ? change.actual
-                  : change.kind === 'missing'
-                    ? `+ ${change.expected}`
-                    : change.kind === 'changed'
-                      ? `${change.actual} → ${change.expected}`
-                      : change.expected}
-              </span>
-            ))}
-          </div>
-          <p className={s.muted}>
-            {t(
-              'Green: matched · Gold: missing or changed · Crossed out: extra'
-            )}
-          </p>
-          <p style={{ marginTop: 12 }}>
-            <strong>{t('Accepted answer:')}</strong> {result.reference}
-          </p>
-          {activity.explanation && (
-            <p className={s.muted} style={{ marginTop: 8 }}>
-              {activity.explanation}
-            </p>
-          )}
-          <div className={s.actions} style={{ marginTop: 18 }}>
-            <button type="button" className={s.primary} onClick={onNext}>
-              {last ? t('See session results') : t('Next activity →')}
-            </button>
+              }}
+            />
+          </label>
+        )}
+        {!result && (
+          <div className={s.actions} style={{ marginTop: speech ? 12 : 22 }}>
             <button
               type="button"
-              className={s.secondary}
-              onClick={() => {
-                setResult(null);
-                setAssisted(true);
-                setAnswer('');
-                setPicked([]);
-              }}
+              className={s.primary}
+              disabled={!normalize(answer).length || speechBusy}
+              onClick={check}
             >
-              {t('Try again')}
+              {speech ? t('Check word match') : t('Check answer')}
             </button>
+            <span className={s.muted}>
+              {speech
+                ? !answer && t('Record with transcription enabled to check.')
+                : t('Capitalization and punctuation do not affect your score.')}
+            </span>
           </div>
-        </div>
-      )}
+        )}
+        {result && (
+          <div ref={resultPanel} className={s.result} role="status">
+            <div className={s.row}>
+              <strong className={s.score}>{result.score}%</strong>
+              <div>
+                <strong>
+                  {result.score === 100
+                    ? t('You got it!')
+                    : t('A little practice goes a long way.')}
+                </strong>
+                <p className={s.muted}>
+                  {speech ? t('Transcript word match') : t('Answer word match')}
+                  {assisted ? t(' · with a hint / retry') : t(' · first try')}
+                </p>
+              </div>
+            </div>
+            <div className={s.actions} style={{ marginTop: 18 }}>
+              <button type="button" className={s.primary} onClick={onNext}>
+                {last ? t('See session results') : t('Next activity →')}
+              </button>
+              <button
+                type="button"
+                className={s.secondary}
+                onClick={() => {
+                  setResult(null);
+                  setAssisted(true);
+                  setAnswer('');
+                  setPicked([]);
+                }}
+              >
+                {t('Try again')}
+              </button>
+            </div>
+            <div className={s.diff}>
+              {result.changes.map((change, i) => (
+                <span
+                  key={i}
+                  className={s[change.kind]}
+                  title={
+                    change.kind === 'changed'
+                      ? `You said/wrote: ${change.actual}`
+                      : change.kind
+                  }
+                >
+                  {change.kind === 'extra'
+                    ? change.actual
+                    : change.kind === 'missing'
+                      ? `+ ${change.expected}`
+                      : change.kind === 'changed'
+                        ? `${change.actual} → ${change.expected}`
+                        : change.expected}
+                </span>
+              ))}
+            </div>
+            <p className={s.muted}>
+              {t(
+                'Green: matched · Gold: missing or changed · Crossed out: extra'
+              )}
+            </p>
+            <p style={{ marginTop: 12 }}>
+              <strong>{t('Accepted answer:')}</strong> {result.reference}
+            </p>
+            {activity.explanation && (
+              <p className={s.muted} style={{ marginTop: 8 }}>
+                {activity.explanation}
+              </p>
+            )}
+          </div>
+        )}
+      </div>
     </div>
   );
 }
@@ -268,12 +303,14 @@ export default function PracticeSession({
   onAttempt,
   onExit,
   exitLabel = 'Back to lessons',
+  onSave,
 }: {
   lesson: Lesson;
   reviewIds?: string[];
   onAttempt: (a: Attempt) => void;
   onExit: () => void;
   exitLabel?: string;
+  onSave?: (lesson: Lesson) => boolean;
 }) {
   const t = useLearnerText();
   const [skill, setSkill] = useState<Skill | 'all'>('all');
@@ -283,13 +320,20 @@ export default function PracticeSession({
   const [index, setIndex] = useState(0);
   const [finished, setFinished] = useState(false);
   const [session, setSession] = useState<Attempt[]>([]);
+  const [audioBusy, setAudioBusy] = useState(false);
+  const currentSession = session.filter((attempt) =>
+    lesson.activities.some(
+      (a) =>
+        a.id === attempt.activityId && fingerprint(a) === attempt.fingerprint
+    )
+  );
   const activities = lesson.activities.filter(
     (a) =>
       (skill === 'all' || KIND_SKILL[a.kind] === skill) &&
       (reviewIds || (a.tier || 'core') === section) &&
       (!reviewIds || reviewIds.includes(a.id))
   );
-  const activity = activities[index];
+  const activity = activities[Math.min(index, activities.length - 1)];
   const record = (attempt: Attempt) => {
     setSession((current) => [...current, attempt]);
     onAttempt(attempt);
@@ -307,7 +351,21 @@ export default function PracticeSession({
           ← {t(exitLabel)}
         </button>
       </div>
-      <LessonNotes lesson={lesson} />
+      <LessonNotes
+        lesson={lesson}
+        renderEdit={
+          onSave
+            ? (note) => (
+                <QuickLessonEdit
+                  lesson={lesson}
+                  target={{ note }}
+                  onSave={onSave}
+                  disabled={audioBusy}
+                />
+              )
+            : undefined
+        }
+      />
       {!reviewIds && (
         <div className={s.actions} style={{ marginBottom: 16 }}>
           {(['core', 'extra', 'challenge'] as const)
@@ -386,17 +444,17 @@ export default function PracticeSession({
                 <span className={s.badge}>{t('Session complete')}</span>
                 <h3>{t('Small steps. Real progress.')}</h3>
                 <p className={s.muted}>
-                  {t('You checked')} {session.length}{' '}
+                  {t('You checked')} {currentSession.length}{' '}
                   {t(
                     'answers in this session. Your results are saved on this device.'
                   )}
                 </p>
                 <div className={s.passage}>
                   <strong>
-                    {session.length
+                    {currentSession.length
                       ? Math.round(
-                          session.reduce((sum, a) => sum + a.score, 0) /
-                            session.length
+                          currentSession.reduce((sum, a) => sum + a.score, 0) /
+                            currentSession.length
                         )
                       : 0}
                     %
@@ -477,11 +535,20 @@ export default function PracticeSession({
                     style={{ width: `${(index / activities.length) * 100}%` }}
                   />
                 </div>
+                {onSave && (
+                  <QuickLessonEdit
+                    lesson={lesson}
+                    target={{ activity: activity.id }}
+                    disabled={audioBusy}
+                    onSave={onSave}
+                  />
+                )}
                 <Exercise
-                  key={`${activity.id}-${skill}`}
+                  key={`${fingerprint(activity)}-${skill}`}
                   activity={activity}
                   lessonId={lesson.id}
                   onAttempt={record}
+                  onBusyChange={setAudioBusy}
                   last={index === activities.length - 1}
                   onNext={() =>
                     index + 1 < activities.length

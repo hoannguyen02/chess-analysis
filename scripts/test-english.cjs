@@ -956,3 +956,59 @@ test('start lessons teach instructions, questions, help and app practice with Vi
   ])
     assert.ok(start[1].vocabulary.some((v) => v.word === word));
 });
+
+test('reviewed template uses clear instructions, constrained blanks and relevant answer variants', () => {
+  const lessons = importLessonWorkbook(
+    fs.readFileSync(
+      path.join(__dirname, '../public/templates/english-lessons.xlsx')
+    )
+  );
+  const find = (prefix) => lessons.find((l) => l.title.startsWith(prefix));
+  assert.match(
+    find('Start 1').notes.mistakes,
+    /Listen = nghe\. Write = viết\./
+  );
+  assert.doesNotMatch(
+    find('Start 1').notes.mistakes,
+    /không có nghĩa là viết|dùng mắt/
+  );
+  const lan = find('Start 2').activities.find((a) =>
+    a.prompt.includes('Where does Lan live?')
+  );
+  assert.equal(scoreAnswer('Lan lives in Hue.', lan.answers).score, 100);
+  assert.ok(!lan.answers.includes('I live in Hue.'));
+  const help = find('Start 3').activities.find((a) =>
+    a.prompt.includes('Ask using example')
+  );
+  assert.equal(
+    scoreAnswer('Can you give me an example?', help.answers).score,
+    100
+  );
+  const repeat = find('Start 1').activities.find(
+    (a) => a.kind === 'gap-fill' && a.prompt.includes('Listen and ___.')
+  );
+  assert.match(repeat.prompt, /nhắc lại/);
+  const readingBlanks = find('Day 4').activities.filter((a) =>
+    a.prompt.includes('I enjoy ___ books.')
+  );
+  assert.equal(readingBlanks.length, 2);
+  for (const activity of readingBlanks) {
+    assert.match(activity.prompt, /read/);
+    assert.equal(scoreAnswer('reading', activity.answers).score, 100);
+  }
+  assert.match(
+    find('Day 2').activities.find((a) => a.kind === 'dictation').prompt,
+    /ten as a word/
+  );
+  assert.match(find('Day 3').notes.grammar, /in a house/);
+  assert.match(find('Day 4').notes.grammar, /like to read/);
+  assert.match(find('Foundation 3').notes.mistakes, /Thursday/);
+  for (const lesson of lessons) {
+    for (const activity of lesson.activities) {
+      assert.ok(activity.answers.length >= 1 && activity.answers.length <= 10);
+      if (['dictation', 'repeat', 'read-aloud'].includes(activity.kind)) {
+        assert.doesNotMatch(activity.text, /___|[À-ỹ]/u);
+      }
+    }
+  }
+});
