@@ -1,3 +1,4 @@
+import { changeLanguage } from '@/lib/changeLanguage';
 import { createContext, ReactNode, useContext, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import vi from '@/lib/english/learner-vi.json';
@@ -24,10 +25,7 @@ export function LearnerLanguageProvider({ children }: { children: ReactNode }) {
         language,
         change: (value) => {
           if (value !== language) {
-            void router.replace(router.asPath, undefined, {
-              locale: value,
-              scroll: false,
-            });
+            void changeLanguage(router, value);
           }
         },
       }}

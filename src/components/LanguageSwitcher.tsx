@@ -1,18 +1,12 @@
+import { changeLanguage, SiteLanguage } from '@/lib/changeLanguage';
 import { useRouter } from 'next/router';
 
 const LanguageSwitcher = () => {
   const router = useRouter();
   const { locale } = router;
 
-  const switchLanguage = (lang: string) => {
-    document.cookie = [
-      'USER_SELECTED_LOCALE=1',
-      'Path=/',
-      'Max-Age=31536000',
-      'SameSite=Lax',
-    ].join('; ');
-
-    router.replace(router.asPath, undefined, { locale: lang }); // Faster language switch
+  const switchLanguage = (lang: SiteLanguage) => {
+    void changeLanguage(router, lang);
   };
 
   return (

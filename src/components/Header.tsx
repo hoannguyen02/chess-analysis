@@ -1,3 +1,4 @@
+import { changeLanguage, SiteLanguage } from '@/lib/changeLanguage';
 import { useAppContext } from '@/contexts/AppContext';
 import { LocaleType } from '@/types/locale';
 import { Drawer, Dropdown } from 'flowbite-react';
@@ -19,8 +20,8 @@ export default function Header() {
   const router = useRouter();
   const { locale, isMobile } = useAppContext();
 
-  const switchLanguage = (lang: string) => {
-    router.replace(router.asPath, undefined, { locale: lang }); // Faster language switch
+  const switchLanguage = (lang: SiteLanguage) => {
+    void changeLanguage(router, lang);
   };
 
   const [isSticky, setIsSticky] = useState(false);
