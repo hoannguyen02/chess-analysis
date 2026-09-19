@@ -23,11 +23,7 @@ import {
   useRef,
   useState,
 } from 'react';
-import {
-  Chessboard,
-  ChessboardDnDProvider,
-  SparePiece,
-} from 'react-chessboard';
+import { Chessboard, SparePiece } from 'react-chessboard';
 import { Piece, Square } from 'react-chessboard/dist/chessboard/types';
 import {
   VscAdd,
@@ -52,6 +48,7 @@ import {
 } from 'react-icons/vsc';
 import { TeachingTimer } from './TeachingTimer';
 import { SetupBoardPaintLayer } from './SetupBoardPaintLayer';
+import { SetupBoardDnDProvider } from './SetupBoardDnDProvider';
 
 const pieces = [
   'wP',
@@ -156,7 +153,6 @@ const DragDropSetupChessboard = ({
   const [boardContainerWidth, setBoardContainerWidth] = useState(500);
   const [viewportHeight, setViewportHeight] = useState(900);
   const [showSparePieces, setShowSparePieces] = useState(false);
-  const [isDraggingPiece, setIsDraggingPiece] = useState(false);
   const [placementTool, setPlacementTool] = useState<BoardPieceCode | null>(
     null
   );
@@ -467,20 +463,14 @@ const DragDropSetupChessboard = ({
     return () => window.removeEventListener('keydown', exitPlacement);
   }, [placementTool]);
 
-  const paintSquare = (square: Square) => {
-    if (!placementTool) return;
-    const color = placementTool[0] as 'w' | 'b';
-    const type = placementTool[1].toLowerCase() as
-      | 'p'
-      | 'n'
-      | 'b'
-      | 'r'
-      | 'q'
-      | 'k';
+  const paintSquare = (square: Square, piece = placementTool) => {
+    if (!piece) return;
+    const color = piece[0] as 'w' | 'b';
+    const type = piece[1].toLowerCase() as 'p' | 'n' | 'b' | 'r' | 'q' | 'k';
     // Relocate the existing king instead of attempting to create a second one.
     if (type === 'k') {
       const existing = getAllPieces().find(
-        (entry) => entry.pieceCode === placementTool
+        (entry) => entry.pieceCode === piece
       );
       if (existing) game.remove(existing.square);
     }
@@ -516,22 +506,9 @@ const DragDropSetupChessboard = ({
   );
 
   const handleSparePieceDrop = (piece: any, targetSquare: any) => {
-    const color = piece[0];
-    const type = piece[1].toLowerCase();
-
-    const success = game.put({ type, color }, targetSquare);
-
-    if (success) {
-      setFenPosition(game.fen());
-      // A tray drop also selects the piece for subsequent click placement.
-      setPlacementTool(piece as BoardPieceCode);
-    } else {
-      alert(
-        `The board already contains ${color === 'w' ? 'WHITE' : 'BLACK'} KING`
-      );
-    }
-
-    return success;
+    paintSquare(targetSquare, piece as BoardPieceCode);
+    setPlacementTool(piece as BoardPieceCode);
+    return true;
   };
 
   const handlePieceDrop = (
@@ -1040,11 +1017,9 @@ const DragDropSetupChessboard = ({
   );
 
   return (
-    <ChessboardDnDProvider>
+    <SetupBoardDnDProvider>
       <div
         ref={fullViewRef}
-        onDragStartCapture={() => setIsDraggingPiece(true)}
-        onDragEndCapture={() => setIsDraggingPiece(false)}
         className={
           isFullViewActive
             ? 'fixed inset-0 z-50 overflow-auto bg-slate-900 px-3 py-4 sm:p-6'
@@ -1086,8 +1061,6 @@ const DragDropSetupChessboard = ({
                   customNotationStyle={notationStyle}
                   onSparePieceDrop={handleSparePieceDrop}
                   onPieceDrop={handlePieceDrop}
-                  onPieceDragBegin={() => setIsDraggingPiece(true)}
-                  onPieceDragEnd={() => setIsDraggingPiece(false)}
                   onPieceDropOffBoard={handlePieceDropOffBoard}
                   onSquareClick={handleSquareClick}
                   onSquareRightClick={handleSquareRightClick}
@@ -1105,13 +1078,13 @@ const DragDropSetupChessboard = ({
                     backgroundColor: bgLight,
                   }}
                 />
-                {placementTool && showSparePieces && (
+                {showSparePieces && (
                   <SetupBoardPaintLayer
                     orientation={boardOrientation}
                     occupiedSquares={
                       new Set(getAllPieces().map(({ square }) => square))
                     }
-                    isDraggingPiece={isDraggingPiece}
+                    enabled={Boolean(placementTool)}
                     onPaint={paintSquare}
                     label={(square) =>
                       t('setup-board.place-square', { square })
@@ -1863,7 +1836,7 @@ const DragDropSetupChessboard = ({
           </div>
         </div>
       </div>
-    </ChessboardDnDProvider>
+    </SetupBoardDnDProvider>
   );
 };
 

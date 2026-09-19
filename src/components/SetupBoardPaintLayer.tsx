@@ -1,20 +1,24 @@
 import { useRef } from 'react';
+import { useDragLayer } from 'react-dnd';
 import type { Square } from 'react-chessboard/dist/chessboard/types';
 
 /** Paint empty squares while leaving existing pieces available for dragging. */
 export function SetupBoardPaintLayer({
   orientation,
   occupiedSquares,
-  isDraggingPiece,
+  enabled,
   onPaint,
   label,
 }: {
   orientation: 'white' | 'black';
   occupiedSquares: Set<Square>;
-  isDraggingPiece: boolean;
+  enabled: boolean;
   onPaint: (square: Square) => void;
   label: (square: Square) => string;
 }) {
+  // Observe drag state only: tray and existing-piece drags place on drop.
+  // Painting starts exclusively with a pointer press on an empty square.
+  const isDragging = useDragLayer((monitor) => monitor.isDragging());
   const stroke = useRef<{
     pointerId: number;
     x: number;
@@ -61,7 +65,8 @@ export function SetupBoardPaintLayer({
     <div
       className="pointer-events-none absolute inset-0 z-10 grid touch-none grid-cols-8 grid-rows-8"
       onPointerDown={(event) => {
-        if (event.button !== 0 || stroke.current) return;
+        if (!enabled || isDragging || event.button !== 0 || stroke.current)
+          return;
         event.preventDefault();
         event.currentTarget.setPointerCapture(event.pointerId);
         stroke.current = {
@@ -93,7 +98,8 @@ export function SetupBoardPaintLayer({
     >
       {Array.from({ length: 64 }, (_, index) => {
         const square = squareAt(index % 8, Math.floor(index / 8));
-        const passThrough = isDraggingPiece || occupiedSquares.has(square);
+        const passThrough =
+          !enabled || isDragging || occupiedSquares.has(square);
         return (
           <button
             key={square}
