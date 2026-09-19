@@ -1,0 +1,239 @@
+.studio {
+  color: #17243e;
+  font:
+    16px/1.65 system-ui,
+    sans-serif;
+}
+.studio h1 {
+  font-size: clamp(28px, 4vw, 38px);
+  font-weight: 750;
+  letter-spacing: -0.8px;
+  line-height: 1.25;
+}
+.studio h2 {
+  font-size: 23px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+.studio h3 {
+  font-size: 17px;
+  font-weight: 650;
+}
+.toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin: 24px 0;
+}
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 16px 0;
+}
+.studio button,
+.link {
+  border: 1px solid #bdcbea;
+  background: white;
+  border-radius: 8px;
+  padding: 10px 15px;
+  color: #164bdb;
+  cursor: pointer;
+  font: inherit;
+  text-decoration: none;
+}
+.studio button:disabled {
+  opacity: 0.45;
+  cursor: default;
+}
+.studio .primary {
+  background: #164bdb;
+  color: white;
+  border-color: #164bdb;
+}
+.studio .danger {
+  color: #a52c32;
+}
+.studio :is(button, input, textarea, select, a, summary):focus-visible {
+  outline: 3px solid #ec8b30;
+  outline-offset: 3px;
+}
+.panel {
+  border: 1px solid #dce3ef;
+  border-radius: 12px;
+  padding: 24px;
+  background: white;
+  margin: 18px 0;
+}
+.panel summary {
+  cursor: pointer;
+  font-weight: 700;
+  margin-bottom: 18px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin: 18px 0;
+}
+.studio label {
+  display: grid;
+  gap: 7px;
+  font-size: 14px;
+  font-weight: 550;
+}
+.studio input,
+.studio select,
+.studio textarea {
+  border: 1px solid #bdcbea;
+  border-radius: 7px;
+  padding: 10px 12px;
+  background: white;
+  color: #17243e;
+  width: 100%;
+  min-width: 0;
+  font:
+    16px/1.5 system-ui,
+    sans-serif;
+}
+.studio textarea {
+  resize: vertical;
+}
+.studio small,
+.muted {
+  color: #5b6880;
+  font-weight: 400;
+}
+.muted {
+  margin: 10px 0;
+}
+.eyebrow {
+  color: #164bdb;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+.lessonCard {
+  border: 1px solid #dce3ef;
+  border-radius: 12px;
+  padding: 24px;
+  background: #f8faff;
+  display: flex;
+  flex-direction: column;
+}
+.lessonCard p {
+  margin: 12px 0;
+}
+.lessonCard .actions {
+  margin-top: auto;
+  padding-top: 15px;
+}
+.badge {
+  display: inline-block;
+  color: #164bdb;
+  font-size: 13px;
+  background: #eaf0ff;
+  border-radius: 5px;
+  padding: 4px 8px;
+  margin-bottom: 14px;
+}
+.notice,
+.error {
+  border-left: 3px solid #164bdb;
+  background: #edf2ff;
+  padding: 15px 20px;
+  border-radius: 0 8px 8px 0;
+  margin: 16px 0;
+}
+.error {
+  border-color: #a52c32;
+  background: #fff0ed;
+  color: #852126;
+}
+.filters {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 16px;
+  margin: 25px 0;
+}
+.mathPreview {
+  padding: 14px;
+  background: #f5f7fc;
+  border-radius: 6px;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  margin: 14px 0;
+}
+.studio .checkbox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.checkbox input {
+  width: auto;
+}
+.empty {
+  text-align: center;
+  padding: 55px 20px;
+  border: 1px dashed #bdcbea;
+  border-radius: 12px;
+}
+.history {
+  display: grid;
+  gap: 14px;
+}
+.history a {
+  color: #164bdb;
+  text-decoration: underline;
+  overflow-wrap: anywhere;
+}
+.shared {
+  max-width: 1172px;
+  margin: 0 auto;
+  padding: 24px 16px;
+}
+@media (max-width: 720px) {
+  .cards,
+  .grid,
+  .filters {
+    grid-template-columns: 1fr;
+  }
+  .panel,
+  .lessonCard {
+    padding: 18px;
+  }
+  .toolbar {
+    gap: 12px;
+  }
+  .studio button,
+  .link {
+    font-size: 14px;
+  }
+}
+
+.quickEditPanel {
+  position: fixed;
+  inset: 0 0 0 auto;
+  margin: 0;
+  width: min(820px, 100vw);
+  max-width: 100vw;
+  height: 100dvh;
+  max-height: 100dvh;
+  overflow-y: auto;
+  border: 0;
+  padding: 24px;
+  background: #fff;
+  color: #182640;
+  box-shadow: -8px 0 40px #10182733;
+}
+.quickEditPanel::backdrop {
+  background: #10182780;
+}

@@ -1,3 +1,5 @@
+import Header from '@/components/Header';
+import { BrandHeader } from '@/components/Brand';
 import ErrorBoundary from '@/components/ErrorBoundary';
 import { AppProvider } from '@/contexts/AppContext';
 import '@/styles/globals.css';
@@ -47,6 +49,7 @@ const App = ({ Component, pageProps }: AppProps) => {
               isMobileSSR={pageProps.isMobileSSR}
             >
               <div className={fontClass}>
+                {pageProps.messages?.common ? <Header /> : <BrandHeader />}
                 <Component {...pageProps} locale={locale} />
               </div>
             </AppProvider>

@@ -1,0 +1,42 @@
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  color: #f6a71f;
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 1;
+  white-space: nowrap;
+  text-decoration: none;
+}
+.brand:focus-visible {
+  outline: 2px solid #f6a71f;
+  outline-offset: 5px;
+  border-radius: 4px;
+}
+.symbol {
+  width: 50px;
+  height: 42px;
+  object-fit: contain;
+}
+.header {
+  min-height: 70px;
+  background: #101827;
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+}
+@media (max-width: 600px) {
+  .brand {
+    gap: 7px;
+    font-size: 20px;
+  }
+  .symbol {
+    width: 42px;
+    height: 36px;
+  }
+  .header {
+    padding: 12px 16px;
+  }
+}

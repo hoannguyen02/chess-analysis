@@ -9,6 +9,7 @@
     "start": "dotenv -e .env.production -- next start",
     "lint": "next lint",
     "test:english": "node --test scripts/test-english.cjs",
+    "test:math": "node --test scripts/test-math.cjs",
     "format": "prettier --write \"**/*.{js,ts,jsx,tsx,json}\""
   },
   "dependencies": {
