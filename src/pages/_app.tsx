@@ -1,4 +1,5 @@
 import Header from '@/components/Header';
+import { Footer } from '@/components/Footer';
 import { BrandHeader } from '@/components/Brand';
 import ErrorBoundary from '@/components/ErrorBoundary';
 import { AppProvider } from '@/contexts/AppContext';
@@ -51,6 +52,7 @@ const App = ({ Component, pageProps }: AppProps) => {
               <div className={fontClass}>
                 {pageProps.messages?.common ? <Header /> : <BrandHeader />}
                 <Component {...pageProps} locale={locale} />
+                <Footer />
               </div>
             </AppProvider>
           </NextIntlClientProvider>

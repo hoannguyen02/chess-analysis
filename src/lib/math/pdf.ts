@@ -1,4 +1,5 @@
 import { LIMA_LOGO_PDF } from '../brand/logo';
+import { LIMA_CONTACT } from '../brand/contact';
 import { wholeNumberFraction } from './format';
 import {
   EXTRA_GROUPS,
@@ -315,7 +316,8 @@ export function createPracticePdf(
   pages.forEach((p, i) => {
     page = p;
     line(M, 807, W - M);
-    draw('A learning resource by LIMA Chess', M, 813, 8);
+    draw(`${LIMA_CONTACT.name} · ${LIMA_CONTACT.address}`, M, 811, 7);
+    draw(`${LIMA_CONTACT.email} · ${LIMA_CONTACT.phone}`, M, 823, 7);
     draw(`${i + 1} / ${pages.length}`, W - M - 40, 813, 8);
   });
   const objects: Uint8Array[] = [enc.encode(''), enc.encode('')];

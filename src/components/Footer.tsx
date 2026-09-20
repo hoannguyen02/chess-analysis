@@ -1,49 +1,39 @@
-import { useTranslations } from 'next-intl';
+import { LIMA_CONTACT } from '@/lib/brand/contact';
 
-export const Footer = () => {
-  const t = useTranslations('common');
-
-  return (
-    <footer className="py-6 bg-gray-100 text-gray-700 text-sm mt-auto">
-      {/* Social Links */}
-      <div className="flex flex-col lg:flex-row items-center justify-center gap-4 mb-4 border-b pb-4 border-gray-300">
+export const Footer = () => (
+  <footer className="mt-auto border-t border-gray-200 bg-gray-50 px-4 py-6 text-center text-sm text-gray-600 print:hidden">
+    <p className="font-semibold text-gray-900">{LIMA_CONTACT.name}</p>
+    <address className="mt-2 not-italic">
+      <p>{LIMA_CONTACT.address}</p>
+      <div className="mt-2 flex flex-wrap justify-center gap-x-5 gap-y-2">
         <a
-          href="https://www.facebook.com/limachess102"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="hover:text-blue-600 flex items-center gap-2"
+          className="break-all hover:underline"
+          href={`mailto:${LIMA_CONTACT.email}`}
         >
-          📘 {t('navigation.facebook')}
-        </a>
-        <a
-          href="https://www.youtube.com/@LIMAChess?sub_confirmation=1"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="hover:text-red-600 flex items-center gap-2"
-        >
-          ▶️ {t('navigation.youtube')}
+          {LIMA_CONTACT.email}
         </a>
       </div>
-
-      {/* <div className="grid grid-cols-2 md:grid-cols-4 text-center gap-4 max-w-4xl mx-auto">
-        <Link href="/privacy-policy" className="hover:text-gray-900">
-          {t('navigation.privacy')}
-        </Link>
-        <Link href="/terms-of-service" className="hover:text-gray-900">
-          {t('navigation.terms')}
-        </Link>
-        <Link href="/contact" className="hover:text-gray-900">
-          {t('navigation.contact')}
-        </Link>
-        <Link href="/about" className="hover:text-gray-900">
-          {t('navigation.about')}
-        </Link>
-      </div> */}
-
-      {/* Copyright */}
-      <p className="text-center text-xs mt-6">
-        © {new Date().getFullYear()} LIMA Chess. All Rights Reserved.
-      </p>
-    </footer>
-  );
-};
+    </address>
+    <div className="mt-3 flex justify-center gap-5">
+      <a
+        href="https://www.facebook.com/profile.php?id=61593257410387"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="hover:underline"
+      >
+        Facebook
+      </a>
+      <a
+        href="https://www.youtube.com/@LIMAChess?sub_confirmation=1"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="hover:underline"
+      >
+        YouTube
+      </a>
+    </div>
+    <p className="mt-4 text-xs">
+      © {new Date().getFullYear()} LIMA Chess
+    </p>
+  </footer>
+);

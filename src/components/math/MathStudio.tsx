@@ -40,6 +40,7 @@ export default function MathStudio() {
     lesson: MathLessonData;
     preview: boolean;
     practice: boolean;
+    review?: boolean;
   } | null>(null);
   const [sharing, setSharing] = useState<MathLessonData | null>(null),
     [removed, setRemoved] = useState<MathLessonData | null>(null);
@@ -162,6 +163,7 @@ export default function MathStudio() {
         lesson={view.lesson}
         practiceOnly={view.practice}
         preview={view.preview}
+        initialReviewMode={view.review}
         onBack={() => setView(null)}
         onSave={
           !view.preview && writable
@@ -439,6 +441,19 @@ export default function MathStudio() {
                     }
                   >
                     Luyện tập
+                  </button>
+                  <button
+                    disabled={!writable}
+                    onClick={() =>
+                      setView({
+                        lesson,
+                        preview: false,
+                        practice: false,
+                        review: true,
+                      })
+                    }
+                  >
+                    Rà soát bài học
                   </button>
                   <button
                     onClick={() => {

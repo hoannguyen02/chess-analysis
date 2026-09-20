@@ -107,12 +107,14 @@ export default function MathLesson({
   lesson,
   practiceOnly = false,
   preview = false,
+  initialReviewMode = false,
   onBack,
   onSave,
 }: {
   lesson: MathLessonData;
   practiceOnly?: boolean;
   preview?: boolean;
+  initialReviewMode?: boolean;
   onBack: () => void;
   onSave?: (lesson: MathLessonData) => boolean;
 }) {
@@ -123,13 +125,15 @@ export default function MathLesson({
     practiceOnly ? 'practice' : 'foundation'
   );
   const [revealed, setRevealed] = useState(1);
+  const [reviewMode, setReviewMode] = useState(initialReviewMode);
+  const canEdit = Boolean(onSave) && !preview && reviewMode;
   const [editing, setEditing] = useState<{ target?: MathEditTarget } | null>(
     null
   );
   const [previous, setPrevious] = useState<MathLessonData | null>(null);
   const [editNotice, setEditNotice] = useState('');
   const editButton = (target: MathEditTarget, label: string) =>
-    onSave && !preview ? (
+    canEdit ? (
       <button
         type="button"
         onClick={() => setEditing({ target })}
@@ -235,8 +239,12 @@ export default function MathLesson({
       <div className={s.brand}>
         <span>LIMA Math</span>
         {onSave && !preview && (
-          <button type="button" onClick={() => setEditing({})}>
-            ✎ Sửa nhanh bài học
+          <button
+            type="button"
+            aria-pressed={reviewMode}
+            onClick={() => setReviewMode((active) => !active)}
+          >
+            {reviewMode ? 'Kết thúc rà soát' : 'Rà soát bài học'}
           </button>
         )}
         {preview && <small>XEM TRƯỚC</small>}
@@ -244,6 +252,14 @@ export default function MathLesson({
           {preview ? '← Quay lại soạn bài' : '← Thư viện'}
         </button>
       </div>
+      {canEdit && (
+        <div className={s.reviewBar}>
+          <p>Chế độ rà soát · Chọn “Sửa nhanh” tại phần muốn chỉnh sửa.</p>
+          <button type="button" onClick={() => setEditing({})}>
+            ✎ Sửa toàn bộ bài học
+          </button>
+        </div>
+      )}
       {editNotice && (
         <p role="status" className={s.feedback}>
           {editNotice}{' '}
@@ -313,7 +329,7 @@ export default function MathLesson({
               lesson={lesson}
               preview={preview}
               onEdit={
-                onSave && !preview
+                canEdit
                   ? (id) => setEditing({ target: { exercise: id } })
                   : undefined
               }

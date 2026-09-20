@@ -37,6 +37,7 @@
   border-color: #164bdb;
 }
 .brand {
+  flex-wrap: wrap;
   display: flex;
   align-items: center;
   gap: 12px;
@@ -431,4 +432,19 @@
   .questionGrid {
     grid-template-columns: repeat(5, minmax(0, 1fr));
   }
+}
+
+.reviewBar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 28px;
+  background: #edf2ff;
+  border-bottom: 1px solid #dce3ef;
+  color: #164bdb;
+}
+.reviewBar p {
+  margin: 0;
 }
