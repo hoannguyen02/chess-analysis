@@ -1,3 +1,4 @@
+import { rationalLesson } from './rational-example';
 import { fractionExtraExercises } from './extra-examples';
 import { MathBlock, MathExercise, MathLessonData } from './lessons';
 const b = (
@@ -410,4 +411,5 @@ export const exampleLessons: MathLessonData[] = [
       ),
     ],
   },
+  rationalLesson,
 ];

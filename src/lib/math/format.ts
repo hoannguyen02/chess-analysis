@@ -12,3 +12,19 @@ export function wholeNumberFraction(
     bottom = BigInt(denominator);
   return bottom === BigInt(1) ? String(top) : null;
 }
+
+// A factor enclosed in ~ marks is cancelled, e.g. (~5~ × ~4~)/(~4~ × 2 × ~5~ × 3).
+export function cancellationParts(value: string) {
+  return value
+    .split(/(~[^~]+~)/g)
+    .filter(Boolean)
+    .map((part) => ({
+      text:
+        part.startsWith('~') && part.endsWith('~') ? part.slice(1, -1) : part,
+      cancelled: part.startsWith('~') && part.endsWith('~'),
+    }));
+}
+export const cancellationText = (value: string) =>
+  cancellationParts(value)
+    .map((part) => part.text)
+    .join('');

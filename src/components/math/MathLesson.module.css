@@ -198,11 +198,11 @@
   min-width: 24px;
   margin: 0 5px;
 }
-.fraction span:first-child {
+.fraction > span:first-child {
   border-bottom: 1.5px solid currentColor;
   padding: 0 4px 3px;
 }
-.fraction span:last-child {
+.fraction > span:last-child {
   padding: 3px 4px 0;
 }
 .visual {
@@ -447,4 +447,19 @@
 }
 .reviewBar p {
   margin: 0;
+}
+
+.cancelledFactor {
+  display: inline-block;
+  position: relative;
+}
+.cancelledFactor::after {
+  content: '';
+  position: absolute;
+  left: -8%;
+  top: 50%;
+  width: 116%;
+  border-top: 1px solid currentColor;
+  opacity: 0.5;
+  transform: rotate(55deg);
 }

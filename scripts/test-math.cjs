@@ -317,3 +317,20 @@ test('quick edit validates drafts and keeps them open after failed storage', () 
   assert.equal(writes, 2);
   assert.equal(closes, 1);
 });
+
+test('rational lesson is added once and preserves existing teacher edits', () => {
+  const { addBuiltInRationalLesson } = load('migrations');
+  const { rationalLesson } = load('rational-example');
+  const existing = structuredClone(exampleLessons[0]);
+  existing.title = 'Teacher custom title';
+  const upgraded = addBuiltInRationalLesson([existing]);
+  assert.equal(upgraded.length, 2);
+  assert.equal(upgraded[0], existing);
+  assert.equal(upgraded[1].id, rationalLesson.id);
+  upgraded[1].title = 'Edited rational lesson';
+  assert.equal(addBuiltInRationalLesson(upgraded), upgraded);
+  assert.notEqual(rationalLesson.title, upgraded[1].title);
+  assert.equal(rationalLesson.exercises.filter(e => e.section === 'extra').length, 20);
+  const full = Array.from({length: 100}, (_, i) => ({...existing, id: `custom-${i}`}));
+  assert.equal(addBuiltInRationalLesson(full), full);
+});

@@ -16,6 +16,7 @@ export const SECTION_LABELS: Record<MathSection, string> = {
 export const TOPICS = [
   'Số học',
   'Phân số',
+  'Số hữu tỉ',
   'Đại số',
   'Hình học',
   'Đo lường',

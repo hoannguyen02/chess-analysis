@@ -1,6 +1,10 @@
 import { LIMA_LOGO_PDF } from '../brand/logo';
 import { LIMA_CONTACT } from '../brand/contact';
-import { wholeNumberFraction } from './format';
+import {
+  cancellationParts,
+  cancellationText,
+  wholeNumberFraction,
+} from './format';
 import {
   EXTRA_GROUPS,
   MathLessonData,
@@ -143,10 +147,25 @@ export function createPracticePdf(
       `${color} RG 0.6 w ${num(x1)} ${num(H - top)} m ${num(x2)} ${num(H - top)} l S`
     );
   }
+  function drawFactors(value: string, x: number, top: number, size: number) {
+    for (const part of cancellationParts(value)) {
+      const width = measure(part.text, size);
+      draw(part.text, x, top, size);
+      if (part.cancelled) {
+        page.push(
+          `0.55 0.57 0.62 RG 0.3 w ${num(x)} ${num(H - top)} m ${num(x + width)} ${num(H - top - size)} l S`
+        );
+      }
+      x += width;
+    }
+  }
   const tokenWidth = (t: Token, size: number) =>
     'text' in t
       ? measure(t.text, size)
-      : Math.max(measure(t.n, size * 0.88), measure(t.d, size * 0.88)) + 10;
+      : Math.max(
+          measure(cancellationText(t.n), size * 0.88),
+          measure(cancellationText(t.d), size * 0.88)
+        ) + 10;
   function layout(text: string, size: number, width = W - 2 * M) {
     const lines: Token[][] = [[]];
     let occupied = 0;
@@ -203,6 +222,11 @@ export function createPracticePdf(
       first ? 21 : 14,
       '0.0627 0.0863 0.1020'
     );
+    if (!first && mode === 'solutions') {
+      line(M, 70, W - M);
+      y = 84;
+      return;
+    }
     const titleY = first ? 91 : 70;
     draw(
       mode === 'worksheet' ? 'PHIẾU BÀI TẬP' : 'ĐÁP ÁN & HƯỚNG DẪN GIẢI',
@@ -227,9 +251,19 @@ export function createPracticePdf(
         if ('text' in t) draw(t.text, x, y + (frac ? size * 0.48 : 0), size);
         else {
           const fs = size * 0.88;
-          draw(t.n, x + (width - measure(t.n, fs)) / 2, y, fs);
+          drawFactors(
+            t.n,
+            x + (width - measure(cancellationText(t.n), fs)) / 2,
+            y,
+            fs
+          );
           line(x + 2, y + size * 1.18, x + width - 2, '0.09 0.14 0.24');
-          draw(t.d, x + (width - measure(t.d, fs)) / 2, y + size * 1.38, fs);
+          drawFactors(
+            t.d,
+            x + (width - measure(cancellationText(t.d), fs)) / 2,
+            y + size * 1.38,
+            fs
+          );
         }
         x += width;
       }
@@ -271,7 +305,6 @@ export function createPracticePdf(
             .map((o, index) => `${String.fromCharCode(65 + index)}. ${o}`)
             .join('\n')
         : '';
-    const instruction = e.simplified ? 'Yêu cầu: viết phân số tối giản.' : '';
     const work =
       mode === 'worksheet'
         ? { small: 36, medium: 72, large: 108 }[e.workspace || 'medium']
@@ -281,7 +314,6 @@ export function createPracticePdf(
       (options
         ? layout(options, 11).reduce((n, l) => n + l.height, 0) + 7
         : 0) +
-      (instruction ? 24 : 0) +
       32;
     const groupHeight = groupLabel !== group ? 35 : 0;
     if (y + headHeight + work + groupHeight > BOTTOM && y > 100) newPage();
@@ -291,7 +323,6 @@ export function createPracticePdf(
     }
     paragraph(prompt, 11, 8, true);
     if (options) paragraph(options, 11, 6, true);
-    if (instruction) paragraph(instruction, 10, 7, true);
     if (mode === 'solutions') {
       paragraph(
         e.kind === 'written'

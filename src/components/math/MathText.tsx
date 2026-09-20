@@ -1,14 +1,42 @@
-import { wholeNumberFraction } from '@/lib/math/format';
+import { cancellationParts, wholeNumberFraction } from '@/lib/math/format';
 import { ReactNode } from 'react';
 import styles from './MathLesson.module.css';
+
+function Factors({ value }: { value: number | string }) {
+  return (
+    <>
+      {cancellationParts(String(value)).map((part, i) =>
+        part.cancelled ? (
+          <span key={i} className={styles.cancelledFactor}>
+            {part.text}
+          </span>
+        ) : (
+          part.text
+        )
+      )}
+    </>
+  );
+}
 
 export function Fraction({ n, d }: { n: number | string; d: number | string }) {
   const whole = wholeNumberFraction(n, d);
   if (whole !== null) return <span>{whole}</span>;
   return (
-    <span className={styles.fraction} role="img" aria-label={`${n} phần ${d}`}>
-      <span aria-hidden="true">{n}</span>
-      <span aria-hidden="true">{d}</span>
+    <span
+      className={styles.fraction}
+      role="img"
+      aria-label={`${cancellationParts(String(n))
+        .map((p) => (p.cancelled ? `${p.text} được rút gọn` : p.text))
+        .join('')} phần ${cancellationParts(String(d))
+        .map((p) => (p.cancelled ? `${p.text} được rút gọn` : p.text))
+        .join('')}`}
+    >
+      <span aria-hidden="true">
+        <Factors value={n} />
+      </span>
+      <span aria-hidden="true">
+        <Factors value={d} />
+      </span>
     </span>
   );
 }

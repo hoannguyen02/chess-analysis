@@ -7,7 +7,12 @@ import {
   packLessons,
   parseMathPack,
 } from '@/lib/math/lessons';
-import { addBuiltInFractionPractice } from '@/lib/math/migrations';
+import {
+  addBuiltInFractionPractice,
+  addBuiltInRationalLesson,
+  updateRationalFoundationWording,
+  updateRationalMultiplication,
+} from '@/lib/math/migrations';
 import Link from 'next/link';
 import { useEffect, useRef, useState } from 'react';
 import LessonEditor from './LessonEditor';
@@ -15,6 +20,7 @@ import MathLesson from './MathLesson';
 import s from './MathStudio.module.css';
 import ShareLesson from './ShareLesson';
 const KEY = 'lima-math-lessons-v1';
+const RATIONAL_MIGRATION_KEY = 'lima-math-rational-migration-v1';
 const EXTRA_MIGRATION_KEY = 'lima-math-extra-migration-v1';
 function download(lessons: MathLessonData[]) {
   const url = URL.createObjectURL(
@@ -53,6 +59,10 @@ export default function MathStudio() {
     [message, setMessage] = useState(''),
     [busy, setBusy] = useState(false);
   const file = useRef<HTMLInputElement>(null);
+  const openLessonId = view?.lesson.id;
+  useEffect(() => {
+    if (openLessonId) window.scrollTo({ top: 0, behavior: 'auto' });
+  }, [openLessonId]);
   useEffect(() => {
     try {
       const raw = localStorage.getItem(KEY);
@@ -62,11 +72,21 @@ export default function MathStudio() {
           : parseMathPack(JSON.parse(raw)).lessons;
       const needsUpgrade = localStorage.getItem(EXTRA_MIGRATION_KEY) !== 'done';
       if (needsUpgrade) loaded = addBuiltInFractionPractice(loaded);
+      const needsRational =
+        localStorage.getItem(RATIONAL_MIGRATION_KEY) !== 'done';
+      if (needsRational) loaded = addBuiltInRationalLesson(loaded);
+      const updatedWording = updateRationalMultiplication(
+        updateRationalFoundationWording(loaded)
+      );
+      const wordingChanged =
+        JSON.stringify(updatedWording) !== JSON.stringify(loaded);
+      loaded = updatedWording;
       // Show the upgraded lesson even when storage is unavailable.
       setLessons(loaded);
-      if (raw === null || needsUpgrade)
+      if (raw === null || needsUpgrade || needsRational || wordingChanged)
         localStorage.setItem(KEY, JSON.stringify(packLessons(loaded)));
       if (needsUpgrade) localStorage.setItem(EXTRA_MIGRATION_KEY, 'done');
+      if (needsRational) localStorage.setItem(RATIONAL_MIGRATION_KEY, 'done');
     } catch {
       setWritable(false);
       setError(
