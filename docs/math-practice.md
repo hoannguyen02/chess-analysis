@@ -98,3 +98,31 @@ the split for existing libraries.
 Teaching references (consulted 2026-09-21; examples are independently authored):
 - https://hoc24.vn/ly-thuyet/bai-11-uoc-chung-uoc-chung-lon-nhat.85320
 - https://olm.vn/chu-de/boi-chung-va-boi-chung-nho-nhat-3781020575
+
+### Grade 6 fraction sequence
+
+Five additional lessons in `fraction-lessons.ts` cover foundations and reduction,
+common denominators and comparison, subtraction, multiplication/division, and the
+two basic fraction word-problem types. Each has 4 regular exercises, 20 extra
+exercises, worked examples and an explicit PDF knowledge summary. The existing
+addition lesson remains independent. The one-time `lima-math-fraction-lessons-v1`
+migration adds missing lessons without replacing existing teacher edits.
+
+### Grade 4 versus Grade 6 fraction scope
+
+Five Grade 4 lessons in `primary-fraction-lessons.ts` cover introduction/reduction,
+common denominators/comparison, addition/subtraction, multiplication/division, and
+finding a fraction of a known quantity. Each has 20 extra exercises. Addition,
+subtraction and common-denominator comparisons use equal denominators or one
+that divides the other; subtraction stays nonnegative. Grade 4 does not require
+negative integers, GCD or LCM, or finding the whole from a known fraction.
+
+Grade 6 titles and introductions distinguish review from extension to signed
+fractions and finding an original quantity. The earlier addition lesson remains
+at Grade 6 as review and practice with arbitrary denominators.
+`lima-math-fraction-levels-v1` adds the Grade 4 lessons and updates only exact
+original Grade 6 wording; custom edits and existing lessons are retained.
+
+Scope reference: Ministry of Education and Training mathematics curriculum,
+Grade 4 and Grade 6 sections, PDF pages 116–117 and 124 in the reproduced document:
+https://static3.luatvietnam.vn/genfile/contentmix/2018/12/26/noi-dung-mix-thong-tu-so-32-2018-tt-bgddt-110829.pdf

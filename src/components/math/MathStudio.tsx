@@ -1,3 +1,4 @@
+import { updateFractionLevels, updateFractionNames } from '@/lib/math/fraction-level-migration';
 import { exampleLessons } from '@/lib/math/examples';
 import { withKnowledgeSummary } from '@/lib/math/knowledge-summary';
 import {
@@ -10,6 +11,7 @@ import {
 } from '@/lib/math/lessons';
 import {
   addBuiltInFractionPractice,
+  addFractionLessons,
   addBuiltInRationalLesson,
   addBuiltInIntegerLesson,
   addBuiltInNaturalLesson,
@@ -28,6 +30,8 @@ import LessonEditor from './LessonEditor';
 import MathLesson from './MathLesson';
 import s from './MathStudio.module.css';
 import ShareLesson from './ShareLesson';
+const FRACTION_LEVELS_KEY = 'lima-math-fraction-levels-v1';
+const FRACTION_LESSONS_KEY = 'lima-math-fraction-lessons-v1';
 const KEY = 'lima-math-lessons-v1';
 const INPUT_INSTRUCTION_MIGRATION_KEY = 'lima-math-input-instructions-v1';
 const SETS_MIGRATION_KEY = 'lima-math-sets-v1';
@@ -89,6 +93,10 @@ export default function MathStudio() {
         raw === null
           ? parseMathPack(packLessons(exampleLessons)).lessons
           : parseMathPack(JSON.parse(raw)).lessons;
+      const needsFractionLessons = localStorage.getItem(FRACTION_LESSONS_KEY) !== 'done';
+      if (needsFractionLessons) loaded = addFractionLessons(loaded);
+      const needsFractionLevels = localStorage.getItem(FRACTION_LEVELS_KEY) !== 'done';
+      if (needsFractionLevels) loaded = updateFractionLevels(loaded);
       const needsUpgrade = localStorage.getItem(EXTRA_MIGRATION_KEY) !== 'done';
       const needsInputInstructions =
         localStorage.getItem(INPUT_INSTRUCTION_MIGRATION_KEY) !== 'done';
@@ -114,9 +122,9 @@ export default function MathStudio() {
       if (needsBrackets) loaded = addIntegerBracketRules(loaded);
       const needsSets = localStorage.getItem(SETS_MIGRATION_KEY) !== 'done';
       if (needsSets) loaded = addSetContent(loaded);
-      const updatedWording = updateNaturalTerminology(updateIntegerComparisonWording(
+      const updatedWording = updateFractionNames(updateNaturalTerminology(updateIntegerComparisonWording(
         updateRationalMultiplication(updateRationalFoundationWording(loaded))
-      ));
+      )));
       const wordingChanged =
         JSON.stringify(updatedWording) !== JSON.stringify(loaded);
       loaded = updatedWording;
@@ -125,6 +133,8 @@ export default function MathStudio() {
       if (
         raw === null ||
         needsUpgrade ||
+        needsFractionLessons ||
+        needsFractionLevels ||
         needsRational ||
         needsInteger ||
         needsNatural ||
@@ -136,6 +146,8 @@ export default function MathStudio() {
         wordingChanged
       )
         localStorage.setItem(KEY, JSON.stringify(packLessons(loaded)));
+      if (needsFractionLevels) localStorage.setItem(FRACTION_LEVELS_KEY, 'done');
+      if (needsFractionLessons) localStorage.setItem(FRACTION_LESSONS_KEY, 'done');
       if (needsUpgrade) localStorage.setItem(EXTRA_MIGRATION_KEY, 'done');
       if (needsRational) localStorage.setItem(RATIONAL_MIGRATION_KEY, 'done');
       if (needsInteger) localStorage.setItem(INTEGER_MIGRATION_KEY, 'done');

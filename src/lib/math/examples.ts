@@ -1,3 +1,5 @@
+import { primaryFractionLessons } from './primary-fraction-lessons';
+import { fractionLessons } from './fraction-lessons';
 import { naturalLesson, divisibilityLesson } from './natural-example';
 import { integerLesson } from './integer-example';
 import { rationalLesson } from './rational-example';
@@ -42,8 +44,8 @@ export const exampleLessons: MathLessonData[] = [
     id: 'math-fractions-6',
     title: 'Cộng hai phân số khác mẫu số',
     grade: 6,
-    topic: 'Phân số',
-    goal: 'Hiểu vì sao cần quy đồng, cộng phân số và trình bày từng bước.',
+    topic: 'Phân số mở rộng',
+    goal: 'Ôn phép cộng phân số đã học ở tiểu học; luyện quy đồng các mẫu bất kì ở lớp 6.',
     textbook,
     teacherNotes:
       'Cho học sinh giải thích ý nghĩa của mẫu số bằng hình trước khi học quy tắc.',
@@ -102,7 +104,7 @@ export const exampleLessons: MathLessonData[] = [
         'f-common',
         'foundation',
         'number',
-        'Số nhỏ nhất chia hết cho cả 2 và 3 là?',
+        'Số tự nhiên nhỏ nhất khác 0 chia hết cho cả 2 và 3 là?',
         '6',
         'Liệt kê bội của 2 và bội của 3.',
         '6 : 2 = 3 và 6 : 3 = 2.'
@@ -417,4 +419,6 @@ export const exampleLessons: MathLessonData[] = [
   integerLesson,
   naturalLesson,
   divisibilityLesson,
+  ...fractionLessons,
+  ...primaryFractionLessons,
 ];

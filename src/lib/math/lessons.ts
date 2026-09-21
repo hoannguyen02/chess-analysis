@@ -20,6 +20,7 @@ export const TOPICS = [
   'Số tự nhiên',
   'Số nguyên',
   'Phân số',
+  'Phân số mở rộng',
   'Số hữu tỉ',
   'Đại số',
   'Hình học',

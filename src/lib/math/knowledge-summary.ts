@@ -120,7 +120,7 @@ export function getKnowledgeSummary(
         (item) =>
           item.grade === lesson.grade &&
           item.title === lesson.title &&
-          item.topic === lesson.topic
+          (item.topic === lesson.topic || (lesson.grade === 6 && lesson.topic === 'Phân số mở rộng' && item.topic === 'Phân số'))
       )
       ?.lines.join('\n') || ''
   );

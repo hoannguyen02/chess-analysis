@@ -419,7 +419,7 @@ test('knowledge summaries have sample defaults, preserve edits and do not guess 
     assert.equal(getKnowledgeSummary({ ...saved, title: 'Tên mới' }), summary);
     assert.equal(getKnowledgeSummary({ ...lesson, knowledgeSummary: '' }), '');
     assert.equal(getKnowledgeSummary({ ...lesson, knowledgeSummary: 'Nội dung riêng.' }), 'Nội dung riêng.');
-    assert.equal(getKnowledgeSummary({ ...lesson, title: 'Bài tự soạn khác' }), '');
+    assert.equal(getKnowledgeSummary({ ...lesson, knowledgeSummary: undefined, title: 'Bài tự soạn khác' }), '');
   }
 });
 
@@ -1075,4 +1075,86 @@ test('natural-number terminology updates stored content and PDF summaries only i
   assert.equal(result[1], unrelated);
   assert.deepEqual(updateNaturalTerminology(result), result);
   assert.match(old.blocks[0].text, /ước dương/);
+});
+
+test('fraction sequence adds five lessons without overwriting edits and exports all practice', () => {
+  const { fractionLessons } = load('fraction-lessons');
+  const { addFractionLessons } = load('migrations');
+  assert.equal(fractionLessons.length, 5);
+  const custom = {...structuredClone(fractionLessons[0]), title: 'Teacher title'};
+  const updated = addFractionLessons([exampleLessons[0], custom]);
+  assert.equal(updated.length, 6);
+  assert.equal(updated[0], exampleLessons[0]);
+  assert.equal(updated[1], custom);
+  assert.equal(addFractionLessons(updated), updated);
+  const full = Array.from({length: 100}, (_, i) => ({...custom, id: `custom-${i}`}));
+  assert.equal(addFractionLessons(full), full);
+  const font = fs.readFileSync(path.join(__dirname, '../public/fonts/DejaVuSans.ttf'));
+  for (const lesson of fractionLessons) {
+    assert.equal(lesson.exercises.filter(e => e.section === 'extra').length, 20);
+    for (const mode of ['worksheet', 'solutions']) {
+      const bytes = load('pdf').createPracticePdf(lesson, mode, font);
+      assert.equal(Buffer.from(bytes).subarray(0, 8).toString(), '%PDF-1.7');
+      if (process.env.MATH_PDF_QA_DIR) {
+        fs.mkdirSync(process.env.MATH_PDF_QA_DIR, {recursive: true});
+        fs.writeFileSync(path.join(process.env.MATH_PDF_QA_DIR, `${lesson.id}-${mode}.pdf`), bytes);
+      }
+    }
+  }
+  // Independently calculate the authored arithmetic questions.
+  for (const lesson of fractionLessons) for (const e of lesson.exercises) {
+    const m = e.prompt.match(/^Tính \((-?\d+)\/(\d+)\) ([×:−]) \((-?\d+)\/(\d+)\)\.$/);
+    if (!m) continue;
+    const a = Number(m[1])/Number(m[2]), b = Number(m[4])/Number(m[5]);
+    const expected = m[3] === '×' ? a*b : m[3] === ':' ? a/b : a-b;
+    const parts = e.answer.split('/').map(Number);
+    assert.ok(Math.abs(expected - parts[0]/(parts[1] || 1)) < 1e-12, e.id);
+  }
+});
+
+test('grade 4 fractions respect curriculum scope and grade upgrades preserve teacher edits', () => {
+  const { primaryFractionLessons } = load('primary-fraction-lessons');
+  const { fractionLessons } = load('fraction-lessons');
+  const { updateFractionLevels } = load('fraction-level-migration');
+  assert.equal(primaryFractionLessons.length, 5);
+  for (const lesson of primaryFractionLessons) {
+    assert.equal(lesson.grade, 4);
+    assert.equal(lesson.exercises.filter(e => e.section === 'extra').length, 20);
+    const visible = JSON.stringify([lesson.blocks, lesson.exercises, lesson.knowledgeSummary]);
+    assert.doesNotMatch(visible, /ƯCLN|BCNN|số nguyên|âm|-(?:[1-9]\d*)\//);
+    for (const e of lesson.exercises) {
+      const m = e.prompt.match(/^Tính (\d+)\/(\d+) ([+−×:]) (\d+)\/(\d+)\.$/);
+      if (!m) continue;
+      const [a,b,c,d] = [m[1],m[2],m[4],m[5]].map(Number);
+      const op = m[3];
+      if (op === '+' || op === '−') assert.ok(b%d === 0 || d%b === 0, e.id);
+      const expected = op === '+' ? a/b+c/d : op === '−' ? a/b-c/d : op === '×' ? a/b*c/d : (a/b)/(c/d);
+      assert.ok(expected >= 0, e.id);
+      const answer = e.answer.split('/').map(Number);
+      assert.ok(Math.abs(answer[0]/(answer[1] || 1)-expected) < 1e-12, e.id);
+    }
+  }
+  const old = structuredClone(fractionLessons[0]);
+  old.title = 'Phân số: khái niệm, tính chất và rút gọn';
+  old.goal = 'Nhận biết tử, mẫu; viết phân số bằng nhau và rút gọn.';
+  old.blocks[0].text = 'Teacher custom text';
+  const result = updateFractionLevels([old]);
+  assert.equal(result.length, 6);
+  assert.equal(result[0].title, fractionLessons[0].title);
+  assert.equal(result[0].blocks[0].text, 'Teacher custom text');
+  assert.deepEqual(updateFractionLevels(result), result);
+  const custom = {...old, title: 'Teacher title', goal: 'Teacher goal'};
+  assert.equal(updateFractionLevels([custom])[0].title, 'Teacher title');
+  assert.equal(updateFractionLevels([custom])[0].goal, 'Teacher goal');
+  const full = Array.from({length: 100}, (_, i) => ({...custom, id: `full-${i}`}));
+  assert.equal(updateFractionLevels(full).length, 100);
+  const font = fs.readFileSync(path.join(__dirname, '../public/fonts/DejaVuSans.ttf'));
+  for (const lesson of primaryFractionLessons) for (const mode of ['worksheet', 'solutions']) {
+    const bytes = load('pdf').createPracticePdf(lesson, mode, font);
+    assert.equal(Buffer.from(bytes).subarray(0,8).toString(), '%PDF-1.7');
+    if (process.env.MATH_PDF_QA_DIR) {
+      fs.mkdirSync(process.env.MATH_PDF_QA_DIR, {recursive: true});
+      fs.writeFileSync(path.join(process.env.MATH_PDF_QA_DIR, `${lesson.id}-${mode}.pdf`), bytes);
+    }
+  }
 });

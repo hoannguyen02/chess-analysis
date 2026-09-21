@@ -1,3 +1,4 @@
+import { fractionLessons } from './fraction-lessons';
 import { commonFactorBlocks, commonFactorExercises } from './gcd-lcm-content';
 import { naturalLesson, combinedNaturalLesson, divisibilityLesson, isDivisibilityBlock, isDivisibilityExercise } from './natural-example';
 import {
@@ -18,7 +19,7 @@ export function addBuiltInFractionPractice(lessons: MathLessonData[]) {
     if (
       lesson.id !== 'math-fractions-6' ||
       lesson.grade !== 6 ||
-      lesson.topic !== 'Phân số' ||
+      !['Phân số', 'Phân số mở rộng'].includes(lesson.topic) ||
       lesson.exercises.some((exercise) => exercise.section === 'extra') ||
       lesson.exercises.length + fractionExtraExercises.length > 100
     )
@@ -417,4 +418,11 @@ export function updateNaturalTerminology(lessons: MathLessonData[]) {
       exercises: lesson.exercises.map(exercise => ({...exercise, prompt: wording(exercise.prompt), hint: wording(exercise.hint), solution: wording(exercise.solution)})),
     };
   });
+}
+
+
+export function addFractionLessons(lessons: MathLessonData[]) {
+  const missing = fractionLessons.filter(sample => !lessons.some(l => l.id === sample.id));
+  if (!missing.length || lessons.length + missing.length > 100) return lessons;
+  return [...lessons, ...structuredClone(missing)];
 }
