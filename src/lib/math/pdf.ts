@@ -1,13 +1,16 @@
 import { LIMA_LOGO_PDF } from '../brand/logo';
 import { LIMA_CONTACT } from '../brand/contact';
+import { getKnowledgeSummary } from './knowledge-summary';
+import { waitForPdfTask } from './pdf-task';
 import {
   cancellationParts,
   cancellationText,
   wholeNumberFraction,
 } from './format';
 import {
-  EXTRA_GROUPS,
+  MathExercise,
   MathLessonData,
+  checkAnswer,
   parseMathPack,
   packLessons,
 } from './lessons';
@@ -101,10 +104,114 @@ function tokens(text: string): Token[] {
   words(text.slice(last));
   return out;
 }
+
+export function printableWordProblemSolution(exercise: MathExercise) {
+  if (!['number', 'fraction'].includes(exercise.kind)) return null;
+  const prompt = exercise.prompt.normalize('NFC');
+  const questionEnd = prompt.indexOf('?');
+  if (questionEnd < 0 || questionEnd !== prompt.lastIndexOf('?')) return null;
+  const question = prompt
+    .slice(0, questionEnd)
+    .split(/[.!]\s+/u)
+    .at(-1)!
+    .trim()
+    .replace(/^Hỏi\s+/iu, '')
+    .replace(/^Sau [^,]+,\s*/iu, '');
+  let statement: string;
+  const quantity = question.match(/^(.+?) (?:bằng|là) bao nhiêu(?: .+)?$/iu);
+  const count = question.match(/^(.+?) bao nhiêu (.+)$/iu);
+  if (quantity) statement = `${quantity[1]} là:`;
+  else if (count) {
+    statement = /^Còn$/iu.test(count[1])
+      ? `Số ${count[2]} còn lại là:`
+      : `${count[1]} số ${count[2]} là:`;
+  } else return null;
+  statement = statement[0].toLocaleUpperCase('vi') + statement.slice(1);
+
+  // Only shorten a single numeric equality chain. Explanations, algebra and
+  // separate calculations need their authored steps and are left intact.
+  const steps = exercise.solution
+    .normalize('NFC')
+    .trim()
+    .replace(/\.$/u, '')
+    .split('=')
+    .map((part) => part.trim());
+  if (
+    steps.length < 2 ||
+    !steps
+      .slice(0, -1)
+      .every((part) => /^(?:\d+(?:[.,]\d+)?|[+−×÷*/:()[\]\s-])+$/u.test(part))
+  )
+    return null;
+  const final = steps
+    .at(-1)!
+    .match(/^([+-]?\d+(?:[.,]\d+)?(?:\/\d+)?)\s*(?:\(([^()]+)\)|([^()]*))$/u);
+  if (!final || !checkAnswer(exercise, final[1], exercise.unit).correct)
+    return null;
+  const unit = (final[2] || final[3] || exercise.unit).trim();
+  if (!unit || !/^[\p{L}°²³%]+(?:[ /][\p{L}°²³%]+){0,2}$/u.test(unit))
+    return null;
+  if (exercise.unit && unit !== exercise.unit) return null;
+  const value = final[1].replace('.', ',');
+  const result = `${value} (${unit})`;
+  const calculation = steps[0].replace(/(\d)\.(?=\d)/g, '$1,');
+  return `${statement}\n${calculation} = ${result}\nĐáp số: ${value} ${unit}`;
+}
+
+type SolutionAlignment = 'left' | 'center';
+type WordProblemRow = {
+  text: string;
+  role: 'heading' | 'explanation' | 'calculation' | 'answer';
+  align: SolutionAlignment;
+};
+
+export function printableWordProblemRows(
+  exercise: MathExercise
+): WordProblemRow[] | null {
+  if (exercise.kind === 'choice') return null;
+  const text = printableWordProblemSolution(exercise) || exercise.solution;
+  const lines = text
+    .normalize('NFC')
+    .replace(/^(?:Lời giải(?: mẫu)?|Bài giải)\s*:\s*/iu, '')
+    .split(/\r?\n/u)
+    .map((line) => line.trim())
+    .filter(Boolean);
+  const body: WordProblemRow[] = lines.map((line) => {
+    if (/^Đáp số\s*:/iu.test(line))
+      return { text: line, role: 'answer', align: 'left' };
+    // Distinguish equations from explanations for page-break grouping. Both
+    // are centered, and authored multi-step working is never shortened here.
+    const expression = line.replace(
+      /\s*\([\p{L}°²³%]+(?:[ /][\p{L}°²³%]+)*\)\s*\.?$/u,
+      ''
+    );
+    const calculation =
+      expression.includes('=') &&
+      /^(?:[\d\s.,;+−×÷*/:()[\]{}=⁰¹²³⁴⁵⁶⁷⁸⁹^%-]|ƯCLN|BCNN|ƯC|BC)+$/u.test(
+        expression
+      );
+    return {
+      text: line,
+      role: calculation ? 'calculation' : 'explanation',
+      align: 'center',
+    };
+  });
+  if (
+    body.at(-1)?.role !== 'answer' ||
+    !body.some((row) => row.role === 'explanation') ||
+    !body.some((row) => row.role === 'calculation')
+  )
+    return null;
+  return [{ text: 'Bài giải:', role: 'heading', align: 'center' }, ...body];
+}
+
+export type PracticePdfOptions = { includeKnowledgeSummary?: boolean };
+
 export function createPracticePdf(
   input: MathLessonData,
   mode: 'worksheet' | 'solutions',
-  fontBytes: Uint8Array
+  fontBytes: Uint8Array,
+  options: PracticePdfOptions = {}
 ): Uint8Array {
   const lesson = parseMathPack(packLessons([input])).lessons[0],
     exercises = lesson.exercises.filter((e) => e.section === 'extra');
@@ -238,38 +345,90 @@ export function createPracticePdf(
     y = titleY + 42;
   }
 
-  function paragraph(text: string, size = 11, gap = 7, keep = false) {
-    const lines = layout(text, size),
+  function drawRow(
+    items: Token[],
+    x: number,
+    size: number,
+    frac = items.some((t) => !('text' in t))
+  ) {
+    for (const t of items) {
+      const width = tokenWidth(t, size);
+      if ('text' in t) draw(t.text, x, y + (frac ? size * 0.48 : 0), size);
+      else {
+        const fs = size * 0.88;
+        drawFactors(
+          t.n,
+          x + (width - measure(cancellationText(t.n), fs)) / 2,
+          y,
+          fs
+        );
+        line(x + 2, y + size * 1.18, x + width - 2, '0.09 0.14 0.24');
+        drawFactors(
+          t.d,
+          x + (width - measure(cancellationText(t.d), fs)) / 2,
+          y + size * 1.38,
+          fs
+        );
+      }
+      x += width;
+    }
+  }
+  function trimRow(items: Token[]) {
+    let end = items.length;
+    while (end) {
+      const last = items[end - 1];
+      if (!('text' in last) || !/^\s+$/u.test(last.text)) break;
+      end--;
+    }
+    return items.slice(0, end);
+  }
+  function paragraph(
+    text: string,
+    size = 11,
+    gap = 7,
+    keep = false,
+    align: SolutionAlignment = 'left',
+    leftEdge = M
+  ) {
+    const lines = layout(text, size, W - M - leftEdge),
       height = lines.reduce((sum, l) => sum + l.height, 0);
     if (keep && height <= BOTTOM - 133 && y + height > BOTTOM) newPage();
     for (const row of lines) {
       if (y + row.height > BOTTOM) newPage();
-      let x = M;
-      const frac = row.items.some((t) => !('text' in t));
-      for (const t of row.items) {
-        const width = tokenWidth(t, size);
-        if ('text' in t) draw(t.text, x, y + (frac ? size * 0.48 : 0), size);
-        else {
-          const fs = size * 0.88;
-          drawFactors(
-            t.n,
-            x + (width - measure(cancellationText(t.n), fs)) / 2,
-            y,
-            fs
-          );
-          line(x + 2, y + size * 1.18, x + width - 2, '0.09 0.14 0.24');
-          drawFactors(
-            t.d,
-            x + (width - measure(cancellationText(t.d), fs)) / 2,
-            y + size * 1.38,
-            fs
-          );
-        }
-        x += width;
-      }
+      const items = align === 'left' ? row.items : trimRow(row.items);
+      const width = items.reduce(
+        (sum, item) => sum + tokenWidth(item, size),
+        0
+      );
+      const x = align === 'center' ? (W - width) / 2 : leftEdge;
+      drawRow(items, x, size);
       y += row.height;
     }
     y += gap;
+  }
+  function knowledgeSummary(text: string) {
+    const rows = layout(text, 10.5);
+    const heading = (continued: boolean, rowHeight: number) => {
+      if (y + 28 + rowHeight > BOTTOM) newPage();
+      draw(
+        continued ? 'KIẾN THỨC CẦN NHỚ (tiếp theo)' : 'KIẾN THỨC CẦN NHỚ',
+        M,
+        y,
+        12
+      );
+      line(M, y + 20, W - M);
+      y += 28;
+    };
+    heading(false, rows[0].height);
+    for (const row of rows) {
+      if (y + row.height > BOTTOM) {
+        newPage();
+        heading(true, row.height);
+      }
+      drawRow(row.items, M, 10.5);
+      y += row.height;
+    }
+    y += 18;
   }
   newPage();
   paragraph(lesson.title, 16, 8, true);
@@ -284,6 +443,9 @@ export function createPracticePdf(
       10,
       12
     );
+    const review = getKnowledgeSummary(lesson).trim();
+    if (options.includeKnowledgeSummary !== false && review)
+      knowledgeSummary(review);
     paragraph(
       'Làm bài theo thứ tự hoặc chọn câu cần ôn. Trình bày các bước giải; chú ý đơn vị và yêu cầu tối giản.',
       10,
@@ -291,49 +453,162 @@ export function createPracticePdf(
     );
   } else
     paragraph(
-      'Dùng sau khi tự làm bài. Bài tự luận có lời giải mẫu và tiêu chí để tự đối chiếu.',
+      'Dùng sau khi tự làm bài. Bài tự luận có lời giải mẫu để tham khảo.',
       10,
       14
     );
-  let group = '';
+  function choiceRows(options: string[]) {
+    const labels = options.map(
+      (option, index) => `${String.fromCharCode(65 + index)}. ${option}`
+    );
+    const items = labels.map((label) => tokens(label));
+    const widths = items.map((row) =>
+      row.reduce((sum, token) => sum + tokenWidth(token, 11), 0)
+    );
+    const available = W - 2 * M;
+    let columns = Math.min(4, labels.length);
+    while (
+      columns > 1 &&
+      (labels.some((label) => label.includes('\n')) ||
+        widths.some((width) => width > available / columns - 16))
+    )
+      columns--;
+    const rows = [];
+    for (let i = 0; i < labels.length; i += columns) {
+      const cells = labels
+        .slice(i, i + columns)
+        .map((label) =>
+          layout(label, 11, available / columns - (columns > 1 ? 16 : 0))
+        );
+      const lineCount = Math.max(...cells.map((cell) => cell.length));
+      const heights = Array.from({ length: lineCount }, (_, j) =>
+        Math.max(...cells.map((cell) => cell[j]?.height || 0))
+      );
+      rows.push({
+        startIndex: i,
+        cells,
+        heights,
+        columns,
+        height: heights.reduce((sum, height) => sum + height, 0),
+      });
+    }
+    return rows;
+  }
+  function drawChoices(
+    rows: ReturnType<typeof choiceRows>,
+    correctIndex: number
+  ) {
+    for (const row of rows) {
+      if (row.height <= BOTTOM - 133 && y + row.height > BOTTOM) newPage();
+      row.heights.forEach((height, index) => {
+        if (y + height > BOTTOM) newPage();
+        const hasFraction = row.cells.some((cell) =>
+          cell[index]?.items.some((token) => !('text' in token))
+        );
+        row.cells.forEach((cell, column) => {
+          const x = M + (column * (W - 2 * M)) / row.columns;
+          if (index === 0 && row.startIndex + column === correctIndex) {
+            const label = `${String.fromCharCode(65 + correctIndex)}.`;
+            const cx = x + measure(label, 11) / 2;
+            const cy = H - (y + (hasFraction ? 11 * 0.48 : 0) + 7);
+            const r = 8;
+            const k = r * 0.5522847498;
+            page.push(
+              `q 0.09 0.14 0.24 RG 0.8 w ${num(cx + r)} ${num(cy)} m ` +
+                `${num(cx + r)} ${num(cy + k)} ${num(cx + k)} ${num(cy + r)} ${num(cx)} ${num(cy + r)} c ` +
+                `${num(cx - k)} ${num(cy + r)} ${num(cx - r)} ${num(cy + k)} ${num(cx - r)} ${num(cy)} c ` +
+                `${num(cx - r)} ${num(cy - k)} ${num(cx - k)} ${num(cy - r)} ${num(cx)} ${num(cy - r)} c ` +
+                `${num(cx + k)} ${num(cy - r)} ${num(cx + r)} ${num(cy - k)} ${num(cx + r)} ${num(cy)} c S Q`
+            );
+          }
+          if (cell[index]) drawRow(cell[index].items, x, 11, hasFraction);
+        });
+        y += height;
+      });
+    }
+    y += 6;
+  }
   exercises.forEach((e, i) => {
-    const groupLabel = EXTRA_GROUPS[e.group || 'skills'];
-    const prompt = `Bài ${i + 1}. ${e.prompt}`;
-    const options =
-      e.kind === 'choice'
-        ? e.options
-            .map((o, index) => `${String.fromCharCode(65 + index)}. ${o}`)
-            .join('\n')
-        : '';
+    const prompt = `Bài ${i + 1}. ${e.prompt.trim()}`;
+    const options = e.kind === 'choice' ? choiceRows(e.options) : [];
+    const wordRows = mode === 'solutions' ? printableWordProblemRows(e) : null;
+    // Every calculation line is centered, so its halfway point is W / 2,
+    // including wrapped lines and stacked fractions. The answer starts below it.
+    const calculationMidpoint = W / 2;
+    const solutionRows = wordRows?.map((row) => {
+      let left = M;
+      if (row.role === 'answer') {
+        const width = Math.min(
+          W - 2 * M,
+          tokens(row.text).reduce((sum, item) => sum + tokenWidth(item, 11), 0)
+        );
+        // Shift left only when necessary to keep the answer on the page;
+        // answers wider than the full content area wrap at the page margins.
+        left = Math.max(M, Math.min(calculationMidpoint, W - M - width));
+      }
+      const gap = row.role === 'heading' ? 6 : 0;
+      return {
+        ...row,
+        left,
+        gap,
+        height: layout(row.text, 11, W - M - left).reduce(
+          (sum, line) => sum + line.height,
+          gap
+        ),
+      };
+    });
     const work =
-      mode === 'worksheet'
+      mode === 'worksheet' && e.kind !== 'choice'
         ? { small: 36, medium: 72, large: 108 }[e.workspace || 'medium']
         : 0;
     const headHeight =
       layout(prompt, 11).reduce((n, l) => n + l.height, 0) +
-      (options
-        ? layout(options, 11).reduce((n, l) => n + l.height, 0) + 7
-        : 0) +
+      (options.length ? options.reduce((n, row) => n + row.height, 0) + 7 : 0) +
       32;
-    const groupHeight = groupLabel !== group ? 35 : 0;
-    if (y + headHeight + work + groupHeight > BOTTOM && y > 100) newPage();
-    if (groupLabel !== group) {
-      paragraph(groupLabel.toLocaleUpperCase('vi'), 11, 9, true);
-      group = groupLabel;
-    }
+    const solutionHeight =
+      solutionRows?.reduce((n, row) => n + row.height, 0) || 0;
+    const blockHeight = headHeight + solutionHeight + work;
+    // Keep an ordinary word problem together. An oversized authored solution
+    // must flow across pages instead of leaving the first page empty.
+    const reservedHeight =
+      solutionRows && blockHeight > BOTTOM - 84
+        ? headHeight + solutionRows[0].height + solutionRows[1].height
+        : blockHeight;
+    if (y + reservedHeight > BOTTOM && y > 100) newPage();
     paragraph(prompt, 11, 8, true);
-    if (options) paragraph(options, 11, 6, true);
-    if (mode === 'solutions') {
-      paragraph(
-        e.kind === 'written'
-          ? `Lời giải mẫu: ${e.solution}`
-          : `Lời giải: ${e.solution}`,
-        11,
-        8
+    if (options.length)
+      drawChoices(
+        options,
+        mode === 'solutions' ? e.options.indexOf(e.answer) : -1
       );
-      if (e.kind === 'written')
-        for (const criterion of e.criteria || [])
-          paragraph(`- ${criterion}`, 10, 4);
+    if (mode === 'solutions') {
+      if (solutionRows) {
+        for (let start = 0; start < solutionRows.length; ) {
+          let end = start + 1;
+          while (
+            end < solutionRows.length &&
+            (solutionRows[end - 1].role === 'heading' ||
+              (solutionRows[end - 1].role === 'explanation' &&
+                solutionRows[end].role === 'calculation') ||
+              solutionRows[end].role === 'answer')
+          )
+            end++;
+          const rows = solutionRows.slice(start, end);
+          const height = rows.reduce((n, row) => n + row.height, 0);
+          if (height <= BOTTOM - 84 && y + height > BOTTOM) newPage();
+          for (const row of rows)
+            paragraph(row.text, 11, row.gap, false, row.align, row.left);
+          start = end;
+        }
+        y += 8;
+      } else
+        paragraph(
+          e.kind === 'written'
+            ? `Lời giải mẫu: ${e.solution}`
+            : `Lời giải: ${e.solution}`,
+          11,
+          8
+        );
       y += 8;
     } else {
       for (let space = 0; space < work; space += 18) {
@@ -422,23 +697,58 @@ export function createPracticePdf(
   );
   return join(chunks);
 }
-export async function downloadPracticePdf(
-  lesson: MathLessonData,
+export function practicePdfFilename(
+  lesson: Pick<MathLessonData, 'grade' | 'title' | 'topic'>,
   mode: 'worksheet' | 'solutions'
 ) {
-  const response = await fetch('/fonts/DejaVuSans.ttf');
-  if (!response.ok) throw new Error('Không tải được phông chữ. Hãy thử lại.');
-  const bytes = createPracticePdf(
-    lesson,
-    mode,
-    new Uint8Array(await response.arrayBuffer())
+  const clean = (value: string) =>
+    value
+      .normalize('NFC')
+      .replace(/:/g, ' - ')
+      .replace(/[<>"/\\|?*\p{Cc}\p{Cf}]/gu, ' ')
+      .replace(/\s+/gu, ' ')
+      .replace(/^[.\s-]+|[.\s-]+$/gu, '');
+  let title = clean(lesson.title) || clean(lesson.topic) || 'Bài học';
+  const prefix = `LIMAMath - Lớp ${lesson.grade} - `;
+  const suffix = ` - ${mode === 'worksheet' ? 'Bài tập' : 'Lời giải'}.pdf`;
+  // Bound the complete UTF-8 filename, retaining the grade, type and extension.
+  const available = 240 - enc.encode(prefix + suffix).length;
+  if (enc.encode(title).length > available) {
+    let shortened = '',
+      length = 0;
+    for (const char of title) {
+      const size = enc.encode(char).length;
+      if (length + size > available - enc.encode('…').length) break;
+      shortened += char;
+      length += size;
+    }
+    title = `${shortened.replace(/[.\s-]+$/gu, '')}…`;
+  }
+  return `${prefix}${title}${suffix}`;
+}
+
+export async function downloadPracticePdf(
+  lesson: MathLessonData,
+  mode: 'worksheet' | 'solutions',
+  options: PracticePdfOptions = {},
+  signal: AbortSignal = new AbortController().signal
+) {
+  signal.throwIfAborted();
+  const response = await waitForPdfTask(
+    fetch('/fonts/DejaVuSans.ttf', { signal }),
+    signal
   );
+  if (!response.ok) throw new Error('Không tải được phông chữ. Hãy thử lại.');
+  const font = await waitForPdfTask(response.arrayBuffer(), signal);
+  signal.throwIfAborted();
+  const bytes = createPracticePdf(lesson, mode, new Uint8Array(font), options);
+  signal.throwIfAborted();
   const url = URL.createObjectURL(
     new Blob([bytes as BlobPart], { type: 'application/pdf' })
   );
   const a = document.createElement('a');
   a.href = url;
-  a.download = `toan-lop-${lesson.grade}-${mode === 'worksheet' ? 'bai-tap' : 'loi-giai'}.pdf`;
+  a.download = practicePdfFilename(lesson, mode);
   document.body.appendChild(a);
   a.click();
   a.remove();

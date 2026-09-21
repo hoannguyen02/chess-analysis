@@ -1,15 +1,18 @@
 import * as XLSX from 'xlsx';
 import { MathLessonData, packLessons, parseMathPack } from './lessons';
+import { withKnowledgeSummary } from './knowledge-summary';
 export function exportMathWorkbook(lessons: MathLessonData[]) {
   const book = XLSX.utils.book_new();
   XLSX.utils.book_append_sheet(
     book,
     XLSX.utils.json_to_sheet(
-      lessons.map(({ blocks, exercises, ...lesson }) => {
-        void blocks;
-        void exercises;
-        return lesson;
-      })
+      lessons
+        .map(withKnowledgeSummary)
+        .map(({ blocks, exercises, ...lesson }) => {
+          void blocks;
+          void exercises;
+          return lesson;
+        })
     ),
     'Lessons'
   );
@@ -82,6 +85,7 @@ export function importMathWorkbook(data: ArrayBuffer) {
               ...e,
               group: e.group || undefined,
               skill: e.skill || undefined,
+              inputInstruction: e.inputInstruction || undefined,
               difficulty: e.difficulty || undefined,
               workspace: e.workspace || undefined,
               criteria: e.criteria ? json(e.criteria, '[]') : undefined,

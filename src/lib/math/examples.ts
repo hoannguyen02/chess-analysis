@@ -1,3 +1,5 @@
+import { naturalLesson, divisibilityLesson } from './natural-example';
+import { integerLesson } from './integer-example';
 import { rationalLesson } from './rational-example';
 import { fractionExtraExercises } from './extra-examples';
 import { MathBlock, MathExercise, MathLessonData } from './lessons';
@@ -412,4 +414,7 @@ export const exampleLessons: MathLessonData[] = [
     ],
   },
   rationalLesson,
+  integerLesson,
+  naturalLesson,
+  divisibilityLesson,
 ];

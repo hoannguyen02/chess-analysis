@@ -10,6 +10,10 @@ import {
   blankExercise,
 } from '@/lib/math/lessons';
 import { MathText } from './MathText';
+import {
+  getKnowledgeSummary,
+  withKnowledgeSummary,
+} from '@/lib/math/knowledge-summary';
 import s from './MathStudio.module.css';
 export type MathEditTarget =
   | { metadata: true }
@@ -31,7 +35,7 @@ export default function LessonEditor({
   onCancel: () => void;
 }) {
   const update = (patch: Partial<MathLessonData>) =>
-    onChange({ ...draft, ...patch });
+    onChange({ ...withKnowledgeSummary(draft), ...patch });
   const block = (id: string, patch: Partial<MathBlock>) =>
     update({
       blocks: draft.blocks.map((b) => (b.id === id ? { ...b, ...patch } : b)),
@@ -138,6 +142,28 @@ export default function LessonEditor({
               </small>
             </label>
           </div>
+          <label>
+            Kiến thức cần nhớ (đầu phiếu bài tập PDF)
+            <textarea
+              rows={8}
+              maxLength={4000}
+              value={getKnowledgeSummary(draft)}
+              onChange={(event) =>
+                update({ knowledgeSummary: event.target.value })
+              }
+              placeholder="Các quy tắc, công thức chính; một ví dụ ngắn; lỗi cần tránh."
+            />
+            <small>
+              Gợi ý khoảng nửa trang, mỗi ý một dòng. Dùng ví dụ khác bài tập;
+              không đưa đáp án vào đây. Có thể viết phân số như 1/2. Để trống
+              nếu không cần; phần này không in trong PDF lời giải.
+            </small>
+          </label>
+          {getKnowledgeSummary(draft).trim() && (
+            <div className={s.mathPreview}>
+              <MathText>{getKnowledgeSummary(draft)}</MathText>
+            </div>
+          )}
         </section>
       )}
       {!focus && (
@@ -465,22 +491,24 @@ export default function LessonEditor({
                       <option value="hard">Nâng cao</option>
                     </select>
                   </label>
-                  <label>
-                    Chỗ làm bài trong PDF
-                    <select
-                      value={e.workspace || 'medium'}
-                      onChange={(event) =>
-                        exercise(e.id, {
-                          workspace: event.target
-                            .value as MathExercise['workspace'],
-                        })
-                      }
-                    >
-                      <option value="small">Ít — 2 dòng</option>
-                      <option value="medium">Vừa — 4 dòng</option>
-                      <option value="large">Nhiều — 6 dòng</option>
-                    </select>
-                  </label>
+                  {e.kind !== 'choice' && (
+                    <label>
+                      Chỗ làm bài trong PDF
+                      <select
+                        value={e.workspace || 'medium'}
+                        onChange={(event) =>
+                          exercise(e.id, {
+                            workspace: event.target
+                              .value as MathExercise['workspace'],
+                          })
+                        }
+                      >
+                        <option value="small">Ít — 2 dòng</option>
+                        <option value="medium">Vừa — 4 dòng</option>
+                        <option value="large">Nhiều — 6 dòng</option>
+                      </select>
+                    </label>
+                  )}
                   {e.kind === 'written' && (
                     <label>
                       Tiêu chí tự đánh giá (mỗi dòng một ý)
@@ -498,7 +526,7 @@ export default function LessonEditor({
                 </div>
               )}
               <label>
-                Câu hỏi
+                Câu hỏi (nội dung in trên PDF)
                 <textarea
                   required
                   maxLength={2000}
@@ -511,6 +539,21 @@ export default function LessonEditor({
               <div className={s.mathPreview}>
                 <MathText>{e.prompt}</MathText>
               </div>
+              <label>
+                Hướng dẫn nhập đáp án (chỉ hiện trên web)
+                <textarea
+                  maxLength={1000}
+                  value={e.inputInstruction || ''}
+                  placeholder="Ví dụ: Nhập tử số và mẫu số vào hai ô."
+                  onChange={(event) =>
+                    exercise(e.id, { inputInstruction: event.target.value })
+                  }
+                />
+                <small>
+                  Không in trên phiếu bài tập hoặc lời giải PDF. Các yêu cầu
+                  toán học như tối giản phân số cần ghi trong câu hỏi.
+                </small>
+              </label>
               <div className={s.grid}>
                 {e.kind === 'choice' && (
                   <label>

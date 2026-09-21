@@ -1,4 +1,5 @@
 import { exampleLessons } from '@/lib/math/examples';
+import { withKnowledgeSummary } from '@/lib/math/knowledge-summary';
 import {
   applyImport,
   blankLesson,
@@ -10,6 +11,14 @@ import {
 import {
   addBuiltInFractionPractice,
   addBuiltInRationalLesson,
+  addBuiltInIntegerLesson,
+  addBuiltInNaturalLesson,
+  addNaturalCommonFactors,
+  splitNaturalDivisibility,
+  updateNaturalTerminology,
+  addIntegerBracketRules,
+  addSetContent,
+  updateIntegerComparisonWording,
   updateRationalFoundationWording,
   updateRationalMultiplication,
 } from '@/lib/math/migrations';
@@ -20,13 +29,23 @@ import MathLesson from './MathLesson';
 import s from './MathStudio.module.css';
 import ShareLesson from './ShareLesson';
 const KEY = 'lima-math-lessons-v1';
+const INPUT_INSTRUCTION_MIGRATION_KEY = 'lima-math-input-instructions-v1';
+const SETS_MIGRATION_KEY = 'lima-math-sets-v1';
+const BRACKET_MIGRATION_KEY = 'lima-math-integer-brackets-v1';
+const DIVISIBILITY_SPLIT_KEY = 'lima-math-divisibility-split-v1';
+const COMMON_FACTORS_MIGRATION_KEY = 'lima-math-common-factors-v1';
+const NATURAL_MIGRATION_KEY = 'lima-math-natural-v1';
+const INTEGER_MIGRATION_KEY = 'lima-math-integer-migration-v1';
 const RATIONAL_MIGRATION_KEY = 'lima-math-rational-migration-v1';
 const EXTRA_MIGRATION_KEY = 'lima-math-extra-migration-v1';
 function download(lessons: MathLessonData[]) {
   const url = URL.createObjectURL(
-    new Blob([JSON.stringify(packLessons(lessons), null, 2)], {
-      type: 'application/json',
-    })
+    new Blob(
+      [JSON.stringify(packLessons(lessons.map(withKnowledgeSummary)), null, 2)],
+      {
+        type: 'application/json',
+      }
+    )
   );
   const a = document.createElement('a');
   a.href = url;
@@ -71,22 +90,63 @@ export default function MathStudio() {
           ? parseMathPack(packLessons(exampleLessons)).lessons
           : parseMathPack(JSON.parse(raw)).lessons;
       const needsUpgrade = localStorage.getItem(EXTRA_MIGRATION_KEY) !== 'done';
+      const needsInputInstructions =
+        localStorage.getItem(INPUT_INSTRUCTION_MIGRATION_KEY) !== 'done';
       if (needsUpgrade) loaded = addBuiltInFractionPractice(loaded);
       const needsRational =
         localStorage.getItem(RATIONAL_MIGRATION_KEY) !== 'done';
       if (needsRational) loaded = addBuiltInRationalLesson(loaded);
-      const updatedWording = updateRationalMultiplication(
-        updateRationalFoundationWording(loaded)
-      );
+      const needsInteger =
+        localStorage.getItem(INTEGER_MIGRATION_KEY) !== 'done';
+      if (needsInteger) loaded = addBuiltInIntegerLesson(loaded);
+      const needsNatural =
+        localStorage.getItem(NATURAL_MIGRATION_KEY) !== 'done';
+      if (needsNatural) loaded = addBuiltInNaturalLesson(loaded);
+      const needsCommonFactors =
+        localStorage.getItem(COMMON_FACTORS_MIGRATION_KEY) !== 'done';
+      if (needsCommonFactors && raw !== null)
+        loaded = addNaturalCommonFactors(loaded);
+      const needsSplit =
+        localStorage.getItem(DIVISIBILITY_SPLIT_KEY) !== 'done';
+      if (needsSplit) loaded = splitNaturalDivisibility(loaded);
+      const needsBrackets =
+        localStorage.getItem(BRACKET_MIGRATION_KEY) !== 'done';
+      if (needsBrackets) loaded = addIntegerBracketRules(loaded);
+      const needsSets = localStorage.getItem(SETS_MIGRATION_KEY) !== 'done';
+      if (needsSets) loaded = addSetContent(loaded);
+      const updatedWording = updateNaturalTerminology(updateIntegerComparisonWording(
+        updateRationalMultiplication(updateRationalFoundationWording(loaded))
+      ));
       const wordingChanged =
         JSON.stringify(updatedWording) !== JSON.stringify(loaded);
       loaded = updatedWording;
       // Show the upgraded lesson even when storage is unavailable.
       setLessons(loaded);
-      if (raw === null || needsUpgrade || needsRational || wordingChanged)
+      if (
+        raw === null ||
+        needsUpgrade ||
+        needsRational ||
+        needsInteger ||
+        needsNatural ||
+        needsCommonFactors ||
+        needsSplit ||
+        needsBrackets ||
+        needsSets ||
+        needsInputInstructions ||
+        wordingChanged
+      )
         localStorage.setItem(KEY, JSON.stringify(packLessons(loaded)));
       if (needsUpgrade) localStorage.setItem(EXTRA_MIGRATION_KEY, 'done');
       if (needsRational) localStorage.setItem(RATIONAL_MIGRATION_KEY, 'done');
+      if (needsInteger) localStorage.setItem(INTEGER_MIGRATION_KEY, 'done');
+      if (needsSplit) localStorage.setItem(DIVISIBILITY_SPLIT_KEY, 'done');
+      if (needsCommonFactors)
+        localStorage.setItem(COMMON_FACTORS_MIGRATION_KEY, 'done');
+      if (needsNatural) localStorage.setItem(NATURAL_MIGRATION_KEY, 'done');
+      if (needsBrackets) localStorage.setItem(BRACKET_MIGRATION_KEY, 'done');
+      if (needsSets) localStorage.setItem(SETS_MIGRATION_KEY, 'done');
+      if (needsInputInstructions)
+        localStorage.setItem(INPUT_INSTRUCTION_MIGRATION_KEY, 'done');
     } catch {
       setWritable(false);
       setError(

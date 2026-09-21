@@ -2,7 +2,10 @@ import { LIMA_CONTACT } from '@/lib/brand/contact';
 
 export const Footer = () => (
   <footer className="mt-auto border-t border-gray-200 bg-gray-50 px-4 py-6 text-center text-sm text-gray-600 print:hidden">
-    <p className="font-semibold text-gray-900">{LIMA_CONTACT.name}</p>
+    <p className="font-semibold uppercase tracking-wide text-gray-900">
+      {LIMA_CONTACT.name}
+    </p>
+    <p className="mt-2 font-medium text-gray-700">{LIMA_CONTACT.subjects}</p>
     <address className="mt-2 not-italic">
       <p>{LIMA_CONTACT.address}</p>
       <div className="mt-2 flex flex-wrap justify-center gap-x-5 gap-y-2">
@@ -33,7 +36,7 @@ export const Footer = () => (
       </a>
     </div>
     <p className="mt-4 text-xs">
-      © {new Date().getFullYear()} LIMA Chess
+      © {new Date().getFullYear()} {LIMA_CONTACT.name}
     </p>
   </footer>
 );

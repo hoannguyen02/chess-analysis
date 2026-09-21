@@ -112,6 +112,11 @@ export default function Exercise({
       <h3>
         <MathText>{exercise.prompt}</MathText>
       </h3>
+      {exercise.inputInstruction && (
+        <p id={label('instruction')} className={s.footer}>
+          <MathText>{exercise.inputInstruction}</MathText>
+        </p>
+      )}
       {exercise.kind === 'choice' ? (
         <div className={s.actions}>
           {exercise.options.map((option) => (
@@ -120,6 +125,9 @@ export default function Exercise({
               type="button"
               disabled={solved}
               aria-pressed={answer === option}
+              aria-describedby={
+                exercise.inputInstruction ? label('instruction') : undefined
+              }
               onClick={() => {
                 setAnswer(option);
                 check(option);
@@ -153,6 +161,9 @@ export default function Exercise({
               {exercise.kind === 'fraction' ? 'Tử số' : 'Đáp án'}
               <input
                 id={label('answer')}
+                aria-describedby={
+                  exercise.inputInstruction ? label('instruction') : undefined
+                }
                 required
                 disabled={solved}
                 inputMode={exercise.kind === 'fraction' ? 'numeric' : 'decimal'}
@@ -177,6 +188,11 @@ export default function Exercise({
                   Mẫu số
                   <input
                     id={label('denominator')}
+                    aria-describedby={
+                      exercise.inputInstruction
+                        ? label('instruction')
+                        : undefined
+                    }
                     inputMode="numeric"
                     required
                     disabled={solved}

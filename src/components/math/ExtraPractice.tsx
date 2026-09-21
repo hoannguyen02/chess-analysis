@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import {
   checkAnswer,
   EXTRA_GROUPS,
@@ -6,6 +6,8 @@ import {
   MathLessonData,
 } from '@/lib/math/lessons';
 import Exercise, { Result } from './Exercise';
+import { getKnowledgeSummary } from '@/lib/math/knowledge-summary';
+import { startPdfTask, waitForPdfTask } from '@/lib/math/pdf-task';
 import { MathText } from './MathText';
 import s from './MathLesson.module.css';
 type ExtraResult = Result & {
@@ -43,9 +45,17 @@ function WrittenExercise({
       <h3>
         <MathText>{exercise.prompt}</MathText>
       </h3>
+      {exercise.inputInstruction && (
+        <p id={`${exercise.id}-instruction`} className={s.footer}>
+          <MathText>{exercise.inputInstruction}</MathText>
+        </p>
+      )}
       <label className={s.writtenLabel}>
         Cách giải của em
         <textarea
+          aria-describedby={
+            exercise.inputInstruction ? `${exercise.id}-instruction` : undefined
+          }
           rows={6}
           maxLength={4000}
           value={answer}
@@ -146,9 +156,40 @@ export default function ExtraPractice({
     [notice, setNotice] = useState(''),
     [writable, setWritable] = useState(true);
   const [summary, setSummary] = useState(false),
+    [includeKnowledgeSummary, setIncludeKnowledgeSummary] = useState(true),
     [review, setReview] = useState<string[] | null>(null),
     [busy, setBusy] = useState(false),
-    [attempt, setAttempt] = useState(0);
+    [attempt, setAttempt] = useState(0),
+    [stickyTop, setStickyTop] = useState(8);
+  const pdfTask = useRef<ReturnType<typeof startPdfTask> | null>(null);
+  const questionGrid = useRef<HTMLElement>(null);
+  const questionBody = useRef<HTMLDivElement>(null);
+  const summaryBody = useRef<HTMLElement>(null);
+  const [pdfStage, setPdfStage] = useState('');
+  useEffect(() => {
+    const header = document.querySelector<HTMLElement>('[data-site-header]');
+    if (!header) return;
+    const updateStickyTop = () =>
+      setStickyTop(Math.ceil(header.getBoundingClientRect().height) + 8);
+    updateStickyTop();
+    const observer =
+      typeof ResizeObserver === 'undefined'
+        ? null
+        : new ResizeObserver(updateStickyTop);
+    observer?.observe(header);
+    window.addEventListener('resize', updateStickyTop);
+    return () => {
+      observer?.disconnect();
+      window.removeEventListener('resize', updateStickyTop);
+    };
+  }, []);
+  useEffect(() => {
+    setBusy(false);
+    return () => {
+      pdfTask.current?.cancel();
+      pdfTask.current = null;
+    };
+  }, [lesson.id]);
   useEffect(() => {
     let next: Notebook = { content, current: 0, results: {} };
     try {
@@ -251,16 +292,72 @@ export default function ExtraPractice({
   const visible = review
     ? questions.filter((e) => review.includes(e.id))
     : questions;
-  const current = questions[notebook.current] || questions[0];
+  const currentIndex = notebook.current;
+  const current = questions[currentIndex] || questions[0];
+  useEffect(() => {
+    const navigation = questionGrid.current;
+    const active = navigation?.querySelector<HTMLElement>(
+      '[aria-current="step"]'
+    );
+    if (!navigation || !active) return;
+    const navigationBounds = navigation.getBoundingClientRect();
+    const activeBounds = active.getBoundingClientRect();
+    if (activeBounds.left < navigationBounds.left + 8)
+      navigation.scrollLeft -= navigationBounds.left + 8 - activeBounds.left;
+    else if (activeBounds.right > navigationBounds.right - 8)
+      navigation.scrollLeft += activeBounds.right - navigationBounds.right + 8;
+  }, [currentIndex, summary]);
+  function revealPracticeBody() {
+    requestAnimationFrame(() => {
+      const body = questionBody.current || summaryBody.current;
+      if (!body) return;
+      const navigationHeight =
+        questionGrid.current?.getBoundingClientRect().height || 52;
+      body.style.scrollMarginTop = `${stickyTop + navigationHeight + 8}px`;
+      body.scrollIntoView({
+        behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches
+          ? 'auto'
+          : 'smooth',
+        block: 'start',
+        inline: 'nearest',
+      });
+    });
+  }
+  function selectQuestion(index: number, clearReview = false) {
+    setSummary(false);
+    if (clearReview) setReview(null);
+    save({ ...notebook, current: index });
+    revealPracticeBody();
+  }
   async function pdf(mode: 'worksheet' | 'solutions') {
+    if (pdfTask.current) return;
     setBusy(true);
     setNotice('');
+    setPdfStage('Đang tải bộ tạo PDF…');
+    const task = startPdfTask(async (signal) => {
+      const exporter = await waitForPdfTask(import('@/lib/math/pdf'), signal);
+      signal.throwIfAborted();
+      setPdfStage('Đang tải phông chữ và tạo PDF…');
+      await exporter.downloadPracticePdf(
+        lesson,
+        mode,
+        { includeKnowledgeSummary },
+        signal
+      );
+    });
+    pdfTask.current = task;
     try {
-      await (await import('@/lib/math/pdf')).downloadPracticePdf(lesson, mode);
+      await task.promise;
     } catch (error) {
-      setNotice((error as Error).message || 'Không tạo được PDF. Hãy thử lại.');
+      if (pdfTask.current === task)
+        setNotice(
+          (error as Error).message || 'Không tạo được PDF. Hãy thử lại.'
+        );
     } finally {
-      setBusy(false);
+      if (pdfTask.current === task) {
+        pdfTask.current = null;
+        setBusy(false);
+      }
     }
   }
   if (!ready) return <p role="status">Đang mở luyện tập thêm…</p>;
@@ -272,35 +369,73 @@ export default function ExtraPractice({
       </div>
     );
   return (
-    <div className={s.card}>
-      <p className={s.eyebrow}>LUYỆN TẬP THÊM</p>
-      <h2>Luyện từng câu, hiểu từng bước</h2>
-      <p>
-        {questions.length} bài tập · Đã hoàn thành {completed}/
-        {questions.length}
-      </p>
-      <div className={s.actions}>
-        <button disabled={busy} onClick={() => void pdf('worksheet')}>
-          Tải phiếu bài tập PDF
-        </button>
-        <button disabled={busy} onClick={() => void pdf('solutions')}>
-          Tải đáp án PDF
-        </button>
-        <button onClick={() => setSummary(!summary)}>
+    <div className={`${s.card} ${s.extraPractice}`}>
+      <header className={s.practiceHeader}>
+        <div>
+          <p className={s.eyebrow}>LUYỆN TẬP THÊM</p>
+          <h2>Luyện từng câu, hiểu từng bước</h2>
+          <p className={s.practiceProgress}>
+            {questions.length} bài tập · Đã hoàn thành {completed}/
+            {questions.length}
+          </p>
+        </div>
+        <button
+          onClick={() => {
+            setSummary(!summary);
+            revealPracticeBody();
+          }}
+        >
           {summary ? 'Tiếp tục luyện tập' : 'Xem tiến độ'}
         </button>
-      </div>
-      {busy && <p role="status">Đang tạo PDF…</p>}
+      </header>
+      <details className={s.pdfTools}>
+        <summary>Tải PDF và đáp án</summary>
+        <div className={s.pdfControls}>
+          <div className={s.pdfActions}>
+            <button disabled={busy} onClick={() => void pdf('worksheet')}>
+              Tải phiếu bài tập
+            </button>
+            <button disabled={busy} onClick={() => void pdf('solutions')}>
+              Tải đáp án
+            </button>
+          </div>
+          <label className={s.pdfOption}>
+            <input
+              type="checkbox"
+              checked={
+                includeKnowledgeSummary && !!getKnowledgeSummary(lesson).trim()
+              }
+              disabled={busy || !getKnowledgeSummary(lesson).trim()}
+              onChange={(event) =>
+                setIncludeKnowledgeSummary(event.target.checked)
+              }
+            />
+            Kèm kiến thức cần nhớ trong phiếu bài tập
+          </label>
+        </div>
+        <p className={s.pdfHint}>
+          {getKnowledgeSummary(lesson).trim()
+            ? 'PDF dùng cùng câu hỏi và số thứ tự như trên web. Các bài tự luận được tự đánh giá.'
+            : 'Chưa có tóm tắt. Có thể thêm ở phần Thông tin bài học khi soạn bài.'}
+        </p>
+      </details>
+      {busy && (
+        <div className={s.pdfStatus}>
+          <p role="status">{pdfStage}</p>
+          <button onClick={() => pdfTask.current?.cancel()}>Hủy tạo PDF</button>
+        </div>
+      )}
       {notice && (
         <p role="status" className={s.feedback}>
           {notice}
         </p>
       )}
-      <p className={s.footer}>
-        PDF dùng cùng câu hỏi và số thứ tự như trên web. Các bài tự luận được tự
-        đánh giá.
-      </p>
-      <nav className={s.questionGrid} aria-label="Chọn bài tập thêm">
+      <nav
+        ref={questionGrid}
+        className={s.questionGrid}
+        aria-label="Chọn bài tập thêm"
+        style={{ top: stickyTop }}
+      >
         {questions.map((e, i) => (
           <button
             key={e.id}
@@ -314,11 +449,7 @@ export default function ExtraPractice({
             }
             aria-label={`Bài ${i + 1} · ${status(e)}`}
             title={status(e)}
-            onClick={() => {
-              setSummary(false);
-              setReview(null);
-              save({ ...notebook, current: i });
-            }}
+            onClick={() => selectQuestion(i, true)}
           >
             <span>{i + 1}</span>
             <small>
@@ -335,7 +466,7 @@ export default function ExtraPractice({
         ))}
       </nav>
       {summary ? (
-        <section aria-label="Tiến độ luyện tập">
+        <section ref={summaryBody} aria-label="Tiến độ luyện tập">
           <h3>Kết quả của em</h3>
           <ul className={s.criteria}>
             <li>
@@ -400,26 +531,27 @@ export default function ExtraPractice({
                 current: questions.findIndex((e) => e.id === needs[0].id),
               });
               setSummary(false);
+              revealPracticeBody();
             }}
           >
             Làm lại các câu cần ôn
           </button>
         </section>
       ) : (
-        <>
+        <div ref={questionBody} className={s.questionBody}>
           {review && (
             <p className={s.callout}>
               Đang ôn lại {review.length} câu. Kết quả lượt mới thay thế kết quả
               cũ của các câu này.
             </p>
           )}
-          <p className={s.eyebrow}>
-            Bài {notebook.current + 1}/{questions.length} ·{' '}
-            {EXTRA_GROUPS[current.group || 'skills']}
+          <p className={s.questionMeta}>
+            <strong>
+              Bài {notebook.current + 1}/{questions.length} ·{' '}
+              {EXTRA_GROUPS[current.group || 'skills']}
+            </strong>
+            {current.skill && <span>Kỹ năng: {current.skill}</span>}
           </p>
-          {current.skill && (
-            <p className={s.footer}>Kỹ năng: {current.skill}</p>
-          )}
           {onEdit && (
             <button
               type="button"
@@ -457,17 +589,14 @@ export default function ExtraPractice({
           <div className={s.bottom}>
             <button
               disabled={visible.findIndex((e) => e.id === current.id) <= 0}
-              onClick={() =>
-                save({
-                  ...notebook,
-                  current: questions.findIndex(
-                    (e) =>
-                      e.id ===
-                      visible[visible.findIndex((q) => q.id === current.id) - 1]
-                        .id
-                  ),
-                })
-              }
+              onClick={() => {
+                const previous =
+                  visible[visible.findIndex((q) => q.id === current.id) - 1];
+                if (previous)
+                  selectQuestion(
+                    questions.findIndex((e) => e.id === previous.id)
+                  );
+              }}
             >
               ← Câu trước
             </button>
@@ -477,11 +606,11 @@ export default function ExtraPractice({
                 const next =
                   visible[visible.findIndex((e) => e.id === current.id) + 1];
                 if (next)
-                  save({
-                    ...notebook,
-                    current: questions.findIndex((e) => e.id === next.id),
-                  });
-                else setSummary(true);
+                  selectQuestion(questions.findIndex((e) => e.id === next.id));
+                else {
+                  setSummary(true);
+                  revealPracticeBody();
+                }
               }}
             >
               {visible.at(-1)?.id === current.id
@@ -489,7 +618,7 @@ export default function ExtraPractice({
                 : 'Câu tiếp theo →'}
             </button>
           </div>
-        </>
+        </div>
       )}
     </div>
   );

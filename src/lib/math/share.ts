@@ -4,6 +4,7 @@ import {
   packLessons,
   parseMathPack,
 } from './lessons';
+import { withKnowledgeSummary } from './knowledge-summary';
 const MAX_LINK = 16000,
   MAX_BYTES = 256000;
 async function boundedBytes(stream: ReadableStream<Uint8Array>) {
@@ -32,7 +33,9 @@ async function boundedBytes(stream: ReadableStream<Uint8Array>) {
   return bytes;
 }
 export async function encodeMathLesson(lesson: MathLessonData) {
-  const pack = parseMathPack(packLessons([learnerCopy(lesson)]));
+  const pack = parseMathPack(
+    packLessons([withKnowledgeSummary(learnerCopy(lesson))])
+  );
   const bytes = new TextEncoder().encode(JSON.stringify(pack));
   if (bytes.length > MAX_BYTES)
     throw new Error('Bài quá lớn. Hãy tách thành các bài ngắn hơn.');

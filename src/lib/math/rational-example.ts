@@ -1,4 +1,6 @@
+import { rationalSetBlocks, rationalSetExercises } from './set-content';
 import { MathLessonData } from './lessons';
+import { builtInExercisePrompts } from './exercise-content';
 
 export const rationalLesson: MathLessonData = {
   id: 'math-rational-7',
@@ -11,6 +13,7 @@ export const rationalLesson: MathLessonData = {
   teacherNotes:
     'Có thể chia thành hai buổi: nhận biết và so sánh; bốn phép tính và vận dụng. Nhấn mạnh mẫu khác 0, mẫu dương khi so sánh và dấu khi tính. Bài chưa bao gồm lũy thừa.',
   blocks: [
+    ...rationalSetBlocks,
     {
       id: 'r-block-1',
       section: 'foundation',
@@ -439,8 +442,7 @@ export const rationalLesson: MathLessonData = {
       id: 'r-ex-21',
       section: 'extra',
       kind: 'number',
-      prompt:
-        'Nhiệt độ ban đầu là -2,5 °C, sau đó tăng 3,75 °C. Nhiệt độ mới bằng bao nhiêu °C? Chỉ nhập số.',
+      ...builtInExercisePrompts.rationalTemperature,
       answer: '1.25',
       hint: 'Tăng nhiệt độ nghĩa là cộng.',
       solution: '-2,5 + 3,75 = 1,25 °C.',
@@ -450,8 +452,7 @@ export const rationalLesson: MathLessonData = {
       tolerance: 0,
       mistakes: [],
       group: 'application',
-      skill:
-        'Nhiệt độ ban đầu là -2,5 °C, sau đó tăng 3,75 °C. Nhiệt độ mới bằng bao nhiêu °C? Chỉ nhập số.',
+      skill: builtInExercisePrompts.rationalTemperature.prompt,
       difficulty: 'medium',
       workspace: 'medium',
     },
@@ -459,8 +460,7 @@ export const rationalLesson: MathLessonData = {
       id: 'r-ex-22',
       section: 'extra',
       kind: 'fraction',
-      prompt:
-        'Bình có 3/4 lít nước. Rót ra 1/3 lít rồi thêm 1/6 lít. Còn bao nhiêu lít? Nhập phân số.',
+      ...builtInExercisePrompts.rationalWater,
       answer: '7/12',
       hint: 'Lấy lượng ban đầu trừ lượng rót ra, cộng lượng thêm vào.',
       solution: '3/4 − 1/3 + 1/6 = 9/12 − 4/12 + 2/12 = 7/12 lít.',
@@ -470,8 +470,7 @@ export const rationalLesson: MathLessonData = {
       tolerance: 0,
       mistakes: [],
       group: 'application',
-      skill:
-        'Bình có 3/4 lít nước. Rót ra 1/3 lít rồi thêm 1/6 lít. Còn bao nhiêu lít? Nhập phân số.',
+      skill: builtInExercisePrompts.rationalWater.prompt,
       difficulty: 'medium',
       workspace: 'medium',
     },
@@ -479,8 +478,7 @@ export const rationalLesson: MathLessonData = {
       id: 'r-ex-23',
       section: 'extra',
       kind: 'fraction',
-      prompt:
-        'Một bạn đi 2/5 km rồi đi thêm 3/4 km. Tổng quãng đường là bao nhiêu km? Nhập phân số.',
+      ...builtInExercisePrompts.rationalDistance,
       answer: '23/20',
       hint: 'Cộng hai quãng đường.',
       solution: '2/5 + 3/4 = 8/20 + 15/20 = 23/20 km.',
@@ -490,8 +488,7 @@ export const rationalLesson: MathLessonData = {
       tolerance: 0,
       mistakes: [],
       group: 'application',
-      skill:
-        'Một bạn đi 2/5 km rồi đi thêm 3/4 km. Tổng quãng đường là bao nhiêu km? Nhập phân số.',
+      skill: builtInExercisePrompts.rationalDistance.prompt,
       difficulty: 'medium',
       workspace: 'medium',
     },
@@ -499,8 +496,7 @@ export const rationalLesson: MathLessonData = {
       id: 'r-ex-24',
       section: 'extra',
       kind: 'number',
-      prompt:
-        'Tài khoản có 150 nghìn đồng, chi 62,5 nghìn rồi nhận 20 nghìn. Còn bao nhiêu nghìn đồng? Chỉ nhập số.',
+      ...builtInExercisePrompts.rationalMoney,
       answer: '107.5',
       hint: 'Lấy 150 trừ 62,5 rồi cộng 20.',
       solution: '150 − 62,5 + 20 = 107,5 nghìn đồng.',
@@ -510,8 +506,7 @@ export const rationalLesson: MathLessonData = {
       tolerance: 0,
       mistakes: [],
       group: 'application',
-      skill:
-        'Tài khoản có 150 nghìn đồng, chi 62,5 nghìn rồi nhận 20 nghìn. Còn bao nhiêu nghìn đồng? Chỉ nhập số.',
+      skill: builtInExercisePrompts.rationalMoney.prompt,
       difficulty: 'medium',
       workspace: 'medium',
     },
@@ -552,5 +547,6 @@ export const rationalLesson: MathLessonData = {
       difficulty: 'hard',
       workspace: 'medium',
     },
+    ...rationalSetExercises,
   ],
 };

@@ -1,3 +1,5 @@
+import { migrateLegacyExerciseContent } from './exercise-content';
+
 export type MathSection =
   | 'foundation'
   | 'explore'
@@ -15,6 +17,8 @@ export const SECTION_LABELS: Record<MathSection, string> = {
 };
 export const TOPICS = [
   'Số học',
+  'Số tự nhiên',
+  'Số nguyên',
   'Phân số',
   'Số hữu tỉ',
   'Đại số',
@@ -42,6 +46,7 @@ export type MathExercise = {
   workspace?: 'small' | 'medium' | 'large';
   criteria?: string[];
   prompt: string;
+  inputInstruction?: string;
   answer: string;
   options: string[];
   unit: string;
@@ -59,6 +64,7 @@ export type MathLessonData = {
   goal: string;
   textbook: string;
   teacherNotes: string;
+  knowledgeSummary?: string;
   blocks: MathBlock[];
   exercises: MathExercise[];
 };
@@ -308,6 +314,14 @@ export function parseMathPack(value: unknown): MathPack {
             }
             if (e.skill !== undefined)
               extra.skill = text(e.skill, 'Kỹ năng', 150, true);
+            if (e.inputInstruction !== undefined) {
+              const instruction = text(
+                e.inputInstruction,
+                'Hướng dẫn nhập đáp án',
+                1000
+              );
+              if (instruction) extra.inputInstruction = instruction;
+            }
             if (e.criteria !== undefined)
               extra.criteria = list(e.criteria, 8).map((c) =>
                 text(c, 'Tiêu chí', 500, true)
@@ -316,7 +330,7 @@ export function parseMathPack(value: unknown): MathPack {
               throw new Error(
                 'Bài tự luận cần ít nhất một tiêu chí tự đánh giá.'
               );
-            return {
+            return migrateLegacyExerciseContent({
               ...extra,
               id: idText(e.id),
               section: e.section as MathExercise['section'],
@@ -336,7 +350,7 @@ export function parseMathPack(value: unknown): MathPack {
                   feedback: text(m.feedback, 'Phản hồi', 2000, true),
                 };
               }),
-            };
+            });
           }
         );
         unique(blocks);
@@ -351,6 +365,15 @@ export function parseMathPack(value: unknown): MathPack {
           goal: text(raw.goal, 'Mục tiêu', 1000, true),
           textbook: text(raw.textbook, 'Tham chiếu sách', 1000),
           teacherNotes: text(raw.teacherNotes ?? '', 'Ghi chú riêng'),
+          ...(raw.knowledgeSummary !== undefined
+            ? {
+                knowledgeSummary: text(
+                  raw.knowledgeSummary,
+                  'Kiến thức cần nhớ',
+                  4000
+                ),
+              }
+            : {}),
           blocks,
           exercises,
         };
