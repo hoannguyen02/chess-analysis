@@ -111,6 +111,73 @@ export function updateFractionLevels(lessons: MathLessonData[]) {
   return updated.length + missing.length <= 100 ? [...updated, ...structuredClone(missing)] : updated;
 }
 
+const previousPrimaryOrderingExercises = [
+  {
+    id: 'math-fraction-compare-4-q23',
+    kind: 'choice',
+    prompt: 'Chọn dãy phân số theo thứ tự tăng dần.',
+    answer: '1/4 < 1/2 < 3/4',
+    hint: 'Đưa về mẫu 4.',
+    solution: '1/4 < 2/4 < 3/4.',
+    options: [
+      '1/4 < 1/2 < 3/4',
+      '1/2 < 1/4 < 3/4',
+      '3/4 < 1/2 < 1/4',
+    ],
+  },
+  {
+    id: 'math-fraction-compare-4-q24',
+    kind: 'number',
+    prompt: 'Điền số tự nhiên vào ô trống: 2/7 < □/7 < 4/7.',
+    answer: '3',
+    hint: 'So sánh các tử số.',
+    solution: '2 < 3 < 4 nên số cần điền là 3.',
+    options: [],
+  },
+] as const;
+
+// Refresh only the two unchanged sample challenges in saved Grade 4 libraries.
+// Teacher-edited question content is left untouched.
+export function updatePrimaryFractionOrdering(lessons: MathLessonData[]) {
+  const sample = primaryFractionLessons.find(
+    (lesson) => lesson.id === 'math-fraction-compare-4'
+  );
+  if (!sample) return lessons;
+  return lessons.map((lesson) => {
+    if (lesson.id !== sample.id) return lesson;
+    return {
+      ...lesson,
+      exercises: lesson.exercises.map((exercise) => {
+        const previous = previousPrimaryOrderingExercises.find(
+          (item) => item.id === exercise.id
+        );
+        const replacement = sample.exercises.find(
+          (item) => item.id === exercise.id
+        );
+        if (
+          !previous ||
+          !replacement ||
+          exercise.kind !== previous.kind ||
+          exercise.prompt !== previous.prompt ||
+          exercise.answer !== previous.answer ||
+          exercise.hint !== previous.hint ||
+          exercise.solution !== previous.solution ||
+          JSON.stringify(exercise.options) !== JSON.stringify(previous.options)
+        )
+          return exercise;
+        return {
+          ...exercise,
+          kind: replacement.kind,
+          prompt: replacement.prompt,
+          answer: replacement.answer,
+          hint: replacement.hint,
+          solution: replacement.solution,
+          options: [...replacement.options],
+        };
+      }),
+    };
+  });
+}
 
 export function updateFractionNames(lessons: MathLessonData[]) {
   const titles: Record<string, string> = {

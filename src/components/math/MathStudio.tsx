@@ -1,5 +1,10 @@
-import { updateFractionLevels, updateFractionNames } from '@/lib/math/fraction-level-migration';
-import { exampleLessons } from '@/lib/math/examples';
+import { consolidateFractionLessons } from '@/lib/math/fraction-consolidation';
+import {
+  updateFractionLevels,
+  updateFractionNames,
+  updatePrimaryFractionOrdering,
+} from '@/lib/math/fraction-level-migration';
+import { exampleLessons, legacyExampleLessons } from '@/lib/math/examples';
 import { withKnowledgeSummary } from '@/lib/math/knowledge-summary';
 import {
   applyImport,
@@ -30,7 +35,9 @@ import LessonEditor from './LessonEditor';
 import MathLesson from './MathLesson';
 import s from './MathStudio.module.css';
 import ShareLesson from './ShareLesson';
+const FRACTION_CONSOLIDATION_KEY = 'lima-math-fraction-consolidation-v1';
 const FRACTION_LEVELS_KEY = 'lima-math-fraction-levels-v1';
+const PRIMARY_FRACTION_ORDERING_KEY = 'lima-math-primary-fraction-ordering-v1';
 const FRACTION_LESSONS_KEY = 'lima-math-fraction-lessons-v1';
 const KEY = 'lima-math-lessons-v1';
 const INPUT_INSTRUCTION_MIGRATION_KEY = 'lima-math-input-instructions-v1';
@@ -94,9 +101,13 @@ export default function MathStudio() {
           ? parseMathPack(packLessons(exampleLessons)).lessons
           : parseMathPack(JSON.parse(raw)).lessons;
       const needsFractionLessons = localStorage.getItem(FRACTION_LESSONS_KEY) !== 'done';
-      if (needsFractionLessons) loaded = addFractionLessons(loaded);
+      if (needsFractionLessons && raw !== null) loaded = addFractionLessons(loaded);
       const needsFractionLevels = localStorage.getItem(FRACTION_LEVELS_KEY) !== 'done';
       if (needsFractionLevels) loaded = updateFractionLevels(loaded);
+      const needsPrimaryFractionOrdering =
+        localStorage.getItem(PRIMARY_FRACTION_ORDERING_KEY) !== 'done';
+      if (needsPrimaryFractionOrdering)
+        loaded = updatePrimaryFractionOrdering(loaded);
       const needsUpgrade = localStorage.getItem(EXTRA_MIGRATION_KEY) !== 'done';
       const needsInputInstructions =
         localStorage.getItem(INPUT_INSTRUCTION_MIGRATION_KEY) !== 'done';
@@ -128,6 +139,8 @@ export default function MathStudio() {
       const wordingChanged =
         JSON.stringify(updatedWording) !== JSON.stringify(loaded);
       loaded = updatedWording;
+      const needsConsolidation = localStorage.getItem(FRACTION_CONSOLIDATION_KEY) !== 'done';
+      if (needsConsolidation) loaded = consolidateFractionLessons(loaded, legacyExampleLessons);
       // Show the upgraded lesson even when storage is unavailable.
       setLessons(loaded);
       if (
@@ -135,6 +148,7 @@ export default function MathStudio() {
         needsUpgrade ||
         needsFractionLessons ||
         needsFractionLevels ||
+        needsPrimaryFractionOrdering ||
         needsRational ||
         needsInteger ||
         needsNatural ||
@@ -143,10 +157,14 @@ export default function MathStudio() {
         needsBrackets ||
         needsSets ||
         needsInputInstructions ||
-        wordingChanged
+        wordingChanged ||
+        needsConsolidation
       )
         localStorage.setItem(KEY, JSON.stringify(packLessons(loaded)));
+      if (needsConsolidation) localStorage.setItem(FRACTION_CONSOLIDATION_KEY, 'done');
       if (needsFractionLevels) localStorage.setItem(FRACTION_LEVELS_KEY, 'done');
+      if (needsPrimaryFractionOrdering)
+        localStorage.setItem(PRIMARY_FRACTION_ORDERING_KEY, 'done');
       if (needsFractionLessons) localStorage.setItem(FRACTION_LESSONS_KEY, 'done');
       if (needsUpgrade) localStorage.setItem(EXTRA_MIGRATION_KEY, 'done');
       if (needsRational) localStorage.setItem(RATIONAL_MIGRATION_KEY, 'done');

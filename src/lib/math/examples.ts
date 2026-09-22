@@ -1,3 +1,4 @@
+import { consolidateFractionLessons } from './fraction-consolidation';
 import { primaryFractionLessons } from './primary-fraction-lessons';
 import { fractionLessons } from './fraction-lessons';
 import { naturalLesson, divisibilityLesson } from './natural-example';
@@ -39,7 +40,7 @@ const e = (
 });
 const textbook =
   'Bài mẫu tự biên soạn. Chưa đối chiếu số bài, trang và ấn bản; cần giáo viên thẩm định trước khi dùng chính thức.';
-export const exampleLessons: MathLessonData[] = [
+export const legacyExampleLessons: MathLessonData[] = [
   {
     id: 'math-fractions-6',
     title: 'Cộng hai phân số khác mẫu số',
@@ -422,3 +423,5 @@ export const exampleLessons: MathLessonData[] = [
   ...fractionLessons,
   ...primaryFractionLessons,
 ];
+
+export const exampleLessons = consolidateFractionLessons(legacyExampleLessons, legacyExampleLessons);

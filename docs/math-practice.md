@@ -126,3 +126,16 @@ original Grade 6 wording; custom edits and existing lessons are retained.
 Scope reference: Ministry of Education and Training mathematics curriculum,
 Grade 4 and Grade 6 sections, PDF pages 116–117 and 124 in the reproduced document:
 https://static3.luatvietnam.vn/genfile/contentmix/2018/12/26/noi-dung-mix-thong-tu-so-32-2018-tt-bgddt-110829.pdf
+
+### Consolidated Grade 6 fraction library
+
+The visible built-in Grade 6 fraction library now contains exactly three lessons:
+Cộng trừ phân số; Nhân chia phân số; Hai bài toán cơ bản về phân số.
+`fraction-consolidation.ts` combines introduction, reduction, comparison, addition
+and subtraction content under the original addition ID. All 98 exercises (80
+extra) are retained. Duplicate stock prerequisite/guided blocks are omitted;
+teacher-edited blocks, exercises and summaries are retained. The applications
+lesson is unchanged. The one-time `lima-math-fraction-consolidation-v1` migration
+runs after older migrations. If customized content exceeds model limits, source
+lessons remain intact instead of losing content. Legacy sample data remains
+available for identifying edits and upgrading older libraries.

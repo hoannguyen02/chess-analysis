@@ -157,12 +157,12 @@ test('extra practice covers four groups and both PDF variants export', () => {
   const extra = exampleLessons[0].exercises.filter(
     (e) => e.section === 'extra'
   );
-  assert.equal(extra.length, 20);
+  assert.equal(extra.length, 80);
   assert.deepEqual(
     ['foundation', 'skills', 'application', 'challenge'].map(
       (group) => extra.filter((e) => e.group === group).length
     ),
-    [4, 8, 6, 2]
+    [16, 32, 24, 8]
   );
   const font = fs.readFileSync(
     path.join(__dirname, '../public/fonts/DejaVuSans.ttf')
@@ -1134,6 +1134,31 @@ test('grade 4 fractions respect curriculum scope and grade upgrades preserve tea
       assert.ok(Math.abs(answer[0]/(answer[1] || 1)-expected) < 1e-12, e.id);
     }
   }
+  const ordering = primaryFractionLessons
+    .find(lesson => lesson.id === 'math-fraction-compare-4')
+    .exercises.filter(exercise => exercise.section === 'extra')
+    .slice(-2);
+  assert.deepEqual(ordering.map(exercise => exercise.id), [
+    'math-fraction-compare-4-q23',
+    'math-fraction-compare-4-q24',
+  ]);
+  assert.deepEqual(ordering.map(exercise => exercise.answer), [
+    '1/2 < 1 < 3/2 < 2',
+    '2 > 3/2 > 5/4 > 7/8',
+  ]);
+  const value = text => {
+    const [numerator, denominator = '1'] = text.split('/');
+    return Number(numerator) / Number(denominator);
+  };
+  for (const exercise of ordering) {
+    assert.equal(exercise.kind, 'choice');
+    assert.ok(exercise.options.includes(exercise.answer));
+    const values = exercise.answer.split(/ [<>] /).map(value);
+    const ascending = exercise.answer.includes(' < ');
+    assert.ok(values.slice(1).every((current, index) =>
+      ascending ? values[index] < current : values[index] > current
+    ), exercise.id);
+  }
   const old = structuredClone(fractionLessons[0]);
   old.title = 'Phân số: khái niệm, tính chất và rút gọn';
   old.goal = 'Nhận biết tử, mẫu; viết phân số bằng nhau và rút gọn.';
@@ -1157,4 +1182,85 @@ test('grade 4 fractions respect curriculum scope and grade upgrades preserve tea
       fs.writeFileSync(path.join(process.env.MATH_PDF_QA_DIR, `${lesson.id}-${mode}.pdf`), bytes);
     }
   }
+});
+
+test('saved Grade 4 ordering challenges update without overwriting teacher edits', () => {
+  const { primaryFractionLessons } = load('primary-fraction-lessons');
+  const { updatePrimaryFractionOrdering } = load('fraction-level-migration');
+  const original = structuredClone(
+    primaryFractionLessons.find(lesson => lesson.id === 'math-fraction-compare-4')
+  );
+  Object.assign(
+    original.exercises.find(exercise => exercise.id === 'math-fraction-compare-4-q23'),
+    {
+      kind: 'choice',
+      prompt: 'Chọn dãy phân số theo thứ tự tăng dần.',
+      answer: '1/4 < 1/2 < 3/4',
+      hint: 'Đưa về mẫu 4.',
+      solution: '1/4 < 2/4 < 3/4.',
+      options: [
+        '1/4 < 1/2 < 3/4',
+        '1/2 < 1/4 < 3/4',
+        '3/4 < 1/2 < 1/4',
+      ],
+    }
+  );
+  Object.assign(
+    original.exercises.find(exercise => exercise.id === 'math-fraction-compare-4-q24'),
+    {
+      kind: 'number',
+      prompt: 'Điền số tự nhiên vào ô trống: 2/7 < □/7 < 4/7.',
+      answer: '3',
+      hint: 'So sánh các tử số.',
+      solution: '2 < 3 < 4 nên số cần điền là 3.',
+      options: [],
+    }
+  );
+  const customized = structuredClone(original);
+  customized.exercises.find(
+    exercise => exercise.id === 'math-fraction-compare-4-q23'
+  ).hint = 'Teacher hint';
+  const migrated = updatePrimaryFractionOrdering([original, customized]);
+  assert.deepEqual(migrated[0].exercises.slice(-2).map(exercise => exercise.answer), [
+    '1/2 < 1 < 3/2 < 2',
+    '2 > 3/2 > 5/4 > 7/8',
+  ]);
+  const customChallenge = migrated[1].exercises.find(
+    exercise => exercise.id === 'math-fraction-compare-4-q23'
+  );
+  assert.equal(customChallenge.hint, 'Teacher hint');
+  assert.equal(customChallenge.answer, '1/4 < 1/2 < 3/4');
+  assert.equal(
+    migrated[1].exercises.find(
+      exercise => exercise.id === 'math-fraction-compare-4-q24'
+    ).answer,
+    '2 > 3/2 > 5/4 > 7/8'
+  );
+  assert.deepEqual(updatePrimaryFractionOrdering(migrated), migrated);
+});
+
+test('Grade 6 fractions consolidate into three lessons while preserving saved work', () => {
+  const {legacyExampleLessons, exampleLessons} = load('examples');
+  const {consolidateFractionLessons} = load('fraction-consolidation');
+  const scope = exampleLessons.filter(l => l.grade === 6 && l.topic === 'Phân số mở rộng');
+  assert.deepEqual(scope.map(l => l.title), ['Cộng trừ phân số', 'Nhân chia phân số', 'Hai bài toán cơ bản về phân số']);
+  const app = legacyExampleLessons.find(l => l.id === 'math-fraction-applications-6');
+  assert.equal(scope[2], app);
+  assert.equal(scope[0].exercises.length, 98);
+  assert.deepEqual(consolidateFractionLessons(exampleLessons, legacyExampleLessons), exampleLessons);
+  const saved = structuredClone(legacyExampleLessons);
+  const compare = saved.find(l => l.id === 'math-fraction-compare-6');
+  compare.blocks[0].text = 'Teacher prerequisite';
+  compare.exercises[0].hint = 'Teacher hint';
+  compare.knowledgeSummary = 'Teacher summary';
+  const result = consolidateFractionLessons(saved, legacyExampleLessons);
+  const merged = result.find(l => l.id === 'math-fractions-6');
+  assert.ok(merged.blocks.some(b => b.text === 'Teacher prerequisite'));
+  assert.equal(merged.exercises.find(e => e.id === compare.exercises[0].id).hint, 'Teacher hint');
+  assert.equal(merged.knowledgeSummary, 'Teacher summary');
+  assert.equal(result.find(l => l.id === app.id), saved.find(l => l.id === app.id));
+  const full = structuredClone(saved);
+  const source = full.find(l => l.id === 'math-fractions-6');
+  source.exercises.push(...Array.from({length: 3}, (_, i) => ({...source.exercises[0], id: `custom-${i}`})));
+  assert.ok(consolidateFractionLessons(full, legacyExampleLessons).some(l => l.id === compare.id));
 });
