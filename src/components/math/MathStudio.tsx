@@ -1,3 +1,4 @@
+import { addFractionOrderLesson, clarifyFractionComparison } from '@/lib/math/fraction-order-lesson';
 import { consolidateFractionLessons } from '@/lib/math/fraction-consolidation';
 import {
   updateFractionLevels,
@@ -35,6 +36,7 @@ import LessonEditor from './LessonEditor';
 import MathLesson from './MathLesson';
 import s from './MathStudio.module.css';
 import ShareLesson from './ShareLesson';
+const FRACTION_ORDER_KEY = 'lima-math-fraction-order-v1';
 const FRACTION_CONSOLIDATION_KEY = 'lima-math-fraction-consolidation-v1';
 const FRACTION_LEVELS_KEY = 'lima-math-fraction-levels-v1';
 const PRIMARY_FRACTION_ORDERING_KEY = 'lima-math-primary-fraction-ordering-v1';
@@ -133,14 +135,16 @@ export default function MathStudio() {
       if (needsBrackets) loaded = addIntegerBracketRules(loaded);
       const needsSets = localStorage.getItem(SETS_MIGRATION_KEY) !== 'done';
       if (needsSets) loaded = addSetContent(loaded);
-      const updatedWording = updateFractionNames(updateNaturalTerminology(updateIntegerComparisonWording(
+      const updatedWording = clarifyFractionComparison(updateFractionNames(updateNaturalTerminology(updateIntegerComparisonWording(
         updateRationalMultiplication(updateRationalFoundationWording(loaded))
-      )));
+      ))));
       const wordingChanged =
         JSON.stringify(updatedWording) !== JSON.stringify(loaded);
       loaded = updatedWording;
       const needsConsolidation = localStorage.getItem(FRACTION_CONSOLIDATION_KEY) !== 'done';
       if (needsConsolidation) loaded = consolidateFractionLessons(loaded, legacyExampleLessons);
+      const needsFractionOrder = localStorage.getItem(FRACTION_ORDER_KEY) !== 'done';
+      if (needsFractionOrder) loaded = addFractionOrderLesson(loaded);
       // Show the upgraded lesson even when storage is unavailable.
       setLessons(loaded);
       if (
@@ -158,9 +162,11 @@ export default function MathStudio() {
         needsSets ||
         needsInputInstructions ||
         wordingChanged ||
-        needsConsolidation
+        needsConsolidation ||
+        needsFractionOrder
       )
         localStorage.setItem(KEY, JSON.stringify(packLessons(loaded)));
+      if (needsFractionOrder) localStorage.setItem(FRACTION_ORDER_KEY, 'done');
       if (needsConsolidation) localStorage.setItem(FRACTION_CONSOLIDATION_KEY, 'done');
       if (needsFractionLevels) localStorage.setItem(FRACTION_LEVELS_KEY, 'done');
       if (needsPrimaryFractionOrdering)

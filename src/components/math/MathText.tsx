@@ -1,4 +1,8 @@
-import { cancellationParts, wholeNumberFraction } from '@/lib/math/format';
+import {
+  cancellationParts,
+  stripRedundantFractionParentheses,
+  wholeNumberFraction,
+} from '@/lib/math/format';
 import { ReactNode } from 'react';
 import styles from './MathLesson.module.css';
 
@@ -18,8 +22,8 @@ function Factors({ value }: { value: number | string }) {
   );
 }
 
-export function Fraction({ n, d }: { n: number | string; d: number | string }) {
-  const whole = wholeNumberFraction(n, d);
+export function Fraction({ n, d, precedingText = '' }: { n: number | string; d: number | string; precedingText?: string }) {
+  const whole = wholeNumberFraction(n, d, precedingText);
   if (whole !== null) return <span>{whole}</span>;
   return (
     <span
@@ -43,19 +47,25 @@ export function Fraction({ n, d }: { n: number | string; d: number | string }) {
 
 // Format lesson copy only; navigation and progress counts are not fractions.
 export function MathText({ children }: { children: string }) {
+  const text = stripRedundantFractionParentheses(children);
   const parts: ReactNode[] = [];
   const pattern = /(\([^()]+\)|-?\d+|□)\s*\/\s*(\([^()]+\)|-?\d+|□)/g;
   let cursor = 0;
-  for (const match of children.matchAll(pattern)) {
+  for (const match of text.matchAll(pattern)) {
     const index = match.index!;
-    parts.push(children.slice(cursor, index));
+    parts.push(text.slice(cursor, index));
     const unwrap = (value: string) =>
       value.startsWith('(') ? value.slice(1, -1) : value;
     parts.push(
-      <Fraction key={index} n={unwrap(match[1])} d={unwrap(match[2])} />
+      <Fraction
+        key={index}
+        n={unwrap(match[1])}
+        d={unwrap(match[2])}
+        precedingText={text.slice(0, index)}
+      />
     );
     cursor = index + match[0].length;
   }
-  parts.push(children.slice(cursor));
+  parts.push(text.slice(cursor));
   return <>{parts}</>;
 }

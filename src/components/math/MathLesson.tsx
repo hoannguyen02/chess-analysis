@@ -2,7 +2,7 @@ import QuickLessonEdit from './QuickLessonEdit';
 import { MathEditTarget } from './LessonEditor';
 import Exercise, { Result } from './Exercise';
 import ExtraPractice from './ExtraPractice';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import {
   checkAnswer,
   learnerCopy,
@@ -125,6 +125,7 @@ export default function MathLesson({
     practiceOnly ? 'practice' : 'foundation'
   );
   const [revealed, setRevealed] = useState(1);
+  const sectionStart = useRef<HTMLDivElement>(null);
   const [reviewMode, setReviewMode] = useState(initialReviewMode);
   const canEdit = Boolean(onSave) && !preview && reviewMode;
   const [editing, setEditing] = useState<{ target?: MathEditTarget } | null>(
@@ -207,6 +208,21 @@ export default function MathLesson({
           'Tiến độ chỉ được giữ trong lượt này vì trình duyệt không lưu được.'
         );
       }
+  }
+  function openSection(next: MathSection) {
+    setSection(next);
+    setRevealed(1);
+    requestAnimationFrame(() => {
+      const target = sectionStart.current;
+      if (!target) return;
+      const header = document.querySelector<HTMLElement>('[data-site-header]');
+      target.style.scrollMarginTop = `${Math.ceil(header?.getBoundingClientRect().height || 0) + 8}px`;
+      target.scrollIntoView({
+        behavior: 'auto',
+        block: 'start',
+        inline: 'nearest',
+      });
+    });
   }
   const blocks = lesson.blocks.filter((b) => b.section === section),
     exercises = lesson.exercises.filter((e) => e.section === section);
@@ -293,10 +309,7 @@ export default function MathLesson({
                 key={value}
                 className={section === value ? s.active : ''}
                 aria-current={section === value ? 'step' : undefined}
-                onClick={() => {
-                  setSection(value);
-                  setRevealed(1);
-                }}
+                onClick={() => openSection(value)}
               >
                 <span>{complete(value) ? '✓' : `0${i + 1}`}</span>
                 {SECTION_LABELS[value]}
@@ -324,21 +337,24 @@ export default function MathLesson({
           <p className={s.intro}>
             <MathText>{lesson.goal}</MathText>
           </p>
-          {section === 'extra' ? (
-            <ExtraPractice
-              lesson={lesson}
-              preview={preview}
-              onEdit={
-                canEdit
-                  ? (id) => setEditing({ target: { exercise: id } })
-                  : undefined
-              }
-            />
-          ) : (
-            <section className={s.card} aria-label={SECTION_LABELS[section]}>
-              <p className={s.eyebrow}>{SECTION_LABELS[section]}</p>
-              {(section === 'example' ? blocks.slice(0, revealed) : blocks).map(
-                (block) => (
+          <div ref={sectionStart} data-lesson-section-start>
+            {section === 'extra' ? (
+              <ExtraPractice
+                lesson={lesson}
+                preview={preview}
+                onEdit={
+                  canEdit
+                    ? (id) => setEditing({ target: { exercise: id } })
+                    : undefined
+                }
+              />
+            ) : (
+              <section className={s.card} aria-label={SECTION_LABELS[section]}>
+                <p className={s.eyebrow}>{SECTION_LABELS[section]}</p>
+                {(section === 'example'
+                  ? blocks.slice(0, revealed)
+                  : blocks
+                ).map((block) => (
                   <div key={block.id}>
                     {editButton({ block: block.id }, block.title)}
                     <h2>
@@ -349,73 +365,75 @@ export default function MathLesson({
                     </p>
                     <Diagram block={block} />
                   </div>
-                )
-              )}
-              {section === 'example' && revealed < blocks.length && (
-                <button
-                  className={s.primary}
-                  onClick={() => setRevealed(revealed + 1)}
-                >
-                  Xem bước tiếp theo →
-                </button>
-              )}
-              {!blocks.length && !exercises.length && (
-                <p>
-                  Phần này chưa có nội dung. Em có thể chuyển sang phần tiếp
-                  theo.
-                </p>
-              )}
-              {exercises.map((exercise) => (
-                <div key={exercise.id}>
-                  {editButton({ exercise: exercise.id }, exercise.prompt)}
-                  <Exercise
-                    key={JSON.stringify(exercise)}
-                    exercise={exercise}
-                    result={progress.results[exercise.id]}
-                    onChange={(result) =>
-                      save({
-                        ...progress,
-                        results: { ...progress.results, [exercise.id]: result },
-                      })
-                    }
-                  />
-                </div>
-              ))}
-              {section === 'practice' &&
-                practice.length > 0 &&
-                practice.every((e) => progress.results[e.id]?.solved) && (
-                  <div className={s.success}>
-                    <h2>Em đã hoàn thành!</h2>
-                    <p>
-                      {
-                        practice.filter(
-                          (e) => !progress.results[e.id]?.assisted
-                        ).length
-                      }{' '}
-                      trong {practice.length} câu đúng ngay lần đầu, không dùng
-                      gợi ý.
-                    </p>
-                    <button
-                      onClick={() => {
-                        const results = { ...progress.results };
-                        practice.forEach((e) => delete results[e.id]);
-                        save({ ...progress, results });
-                        setSection('example');
-                      }}
-                    >
-                      Ôn lại rồi thử tiếp
-                    </button>
-                  </div>
+                ))}
+                {section === 'example' && revealed < blocks.length && (
+                  <button
+                    className={s.primary}
+                    onClick={() => setRevealed(revealed + 1)}
+                  >
+                    Xem bước tiếp theo →
+                  </button>
                 )}
-            </section>
-          )}
+                {!blocks.length && !exercises.length && (
+                  <p>
+                    Phần này chưa có nội dung. Em có thể chuyển sang phần tiếp
+                    theo.
+                  </p>
+                )}
+                {exercises.map((exercise) => (
+                  <div key={exercise.id}>
+                    {editButton({ exercise: exercise.id }, exercise.prompt)}
+                    <Exercise
+                      key={JSON.stringify(exercise)}
+                      exercise={exercise}
+                      result={progress.results[exercise.id]}
+                      onChange={(result) =>
+                        save({
+                          ...progress,
+                          results: {
+                            ...progress.results,
+                            [exercise.id]: result,
+                          },
+                        })
+                      }
+                    />
+                  </div>
+                ))}
+                {section === 'practice' &&
+                  practice.length > 0 &&
+                  practice.every((e) => progress.results[e.id]?.solved) && (
+                    <div className={s.success}>
+                      <h2>Em đã hoàn thành!</h2>
+                      <p>
+                        {
+                          practice.filter(
+                            (e) => !progress.results[e.id]?.assisted
+                          ).length
+                        }{' '}
+                        trong {practice.length} câu đúng ngay lần đầu, không
+                        dùng gợi ý.
+                      </p>
+                      <button
+                        onClick={() => {
+                          const results = { ...progress.results };
+                          practice.forEach((e) => delete results[e.id]);
+                          save({ ...progress, results });
+                          openSection('example');
+                        }}
+                      >
+                        Ôn lại rồi thử tiếp
+                      </button>
+                    </div>
+                  )}
+              </section>
+            )}
+          </div>
           <div className={s.bottom}>
             <button
               disabled={section === 'foundation'}
-              onClick={() => {
-                setSection(sections[sections.indexOf(section) - 1]);
-                setRevealed(1);
-              }}
+              onClick={() =>
+                openSection(sections[sections.indexOf(section) - 1])
+              }
             >
               ← Quay lại
             </button>
@@ -434,10 +452,9 @@ export default function MathLesson({
                     ...progress,
                     read: Array.from(new Set([...progress.read, section])),
                   });
-                setSection(
+                openSection(
                   sections[(sections.indexOf(section) + 1) % sections.length]
                 );
-                setRevealed(1);
               }}
             >
               {section === sections.at(-1) ? 'Về đầu bài' : 'Tiếp tục →'}

@@ -81,8 +81,8 @@ export const rationalLesson: MathLessonData = {
     {
       id: 'r-block-9',
       section: 'example',
-      title: '4. Chia bằng cách nhân nghịch đảo',
-      text: '(-3/4) : (9/8) = (-3/4) × (8/9) = (-~3~ × ~4~ × 2)/(~4~ × ~3~ × 3) = -2/3.',
+      title: '4. Chia bằng cách nhân với số nghịch đảo',
+      text: 'Số nghịch đảo của 9/8 là 8/9. Vì vậy:\n(-3/4) : (9/8) = (-3/4) × (8/9) = (-~3~ × ~4~ × 2)/(~4~ × ~3~ × 3) = -2/3.',
       visual: 'none',
       values: [],
     },

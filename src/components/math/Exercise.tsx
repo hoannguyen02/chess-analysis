@@ -270,7 +270,13 @@ export default function Exercise({
                 </strong>
               </p>
             )}
-            <MathText>{message}</MathText>
+            {showSolution ? (
+              <div className={s.prose}>
+                <MathText>{message}</MathText>
+              </div>
+            ) : (
+              <MathText>{message}</MathText>
+            )}
           </>
         ) : null}
       </div>

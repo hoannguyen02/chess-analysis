@@ -5,6 +5,7 @@ import { waitForPdfTask } from './pdf-task';
 import {
   cancellationParts,
   cancellationText,
+  stripRedundantFractionParentheses,
   wholeNumberFraction,
 } from './format';
 import {
@@ -83,7 +84,7 @@ function fontMetrics(bytes: Uint8Array) {
 }
 type Token = { text: string } | { n: string; d: string };
 function tokens(text: string): Token[] {
-  text = text.normalize('NFC');
+  text = stripRedundantFractionParentheses(text.normalize('NFC'));
   const out: Token[] = [],
     re = /(\([^()]+\)|-?\d+|□)\s*\/\s*(\([^()]+\)|-?\d+|□)/g;
   let last = 0;
@@ -92,12 +93,12 @@ function tokens(text: string): Token[] {
       .split(/(\n|[ \t]+)/)
       .filter(Boolean)
       .forEach((text) => out.push({ text }));
-  for (const match of text.normalize('NFC').matchAll(re)) {
+  for (const match of text.matchAll(re)) {
     words(text.slice(last, match.index));
     const clean = (v: string) => (v.startsWith('(') ? v.slice(1, -1) : v);
     const n = clean(match[1]),
       d = clean(match[2]);
-    const whole = wholeNumberFraction(n, d);
+    const whole = wholeNumberFraction(n, d, text.slice(0, match.index));
     out.push(whole === null ? { n, d } : { text: whole });
     last = match.index! + match[0].length;
   }
@@ -165,6 +166,37 @@ type WordProblemRow = {
   align: SolutionAlignment;
 };
 
+const wordProblemUnit = /\s*\(([\p{L}°²³%]+(?:[ /][\p{L}°²³%]+)*)\)(\s*\.?)$/u;
+
+function wordProblemCalculation(line: string): string | null {
+  // Use the same visible cancellation text as the renderer. Presentation marks
+  // must not make a numeric calculation look like prose.
+  const expression = cancellationText(line.replace(wordProblemUnit, ''));
+  if (
+    !expression.includes('=') ||
+    !/^(?:[\d\s.,;+−×÷*/:()[\]{}=⁰¹²³⁴⁵⁶⁷⁸⁹^%-]|ƯCLN|BCNN|ƯC|BC)+$/u.test(
+      expression
+    )
+  )
+    return null;
+
+  const steps = expression.replace(/\.$/u, '').split('=');
+  // A word problem shows each calculation directly, as in the Grade 4
+  // reference. Keep separate calculations and prose; only elide intermediate
+  // numeric equalities, never symbolic working or a remainder explanation.
+  if (
+    steps.length > 2 &&
+    steps.every((part) =>
+      /^(?:\d+(?:[.,]\d+)?|[+−×÷*/:()[\]\s-])+$/u.test(part)
+    ) &&
+    /^[+−-]?\d+(?:[.,]\d+)?(?:\s*\/\s*\d+)?$/u.test(steps.at(-1)!.trim())
+  ) {
+    const authored = line.split('=').map((part) => part.trim());
+    return `${authored[0]} = ${authored.at(-1)}`;
+  }
+  return line;
+}
+
 export function printableWordProblemRows(
   exercise: MathExercise
 ): WordProblemRow[] | null {
@@ -172,36 +204,32 @@ export function printableWordProblemRows(
   const text = printableWordProblemSolution(exercise) || exercise.solution;
   const lines = text
     .normalize('NFC')
+    .trim()
     .replace(/^(?:Lời giải(?: mẫu)?|Bài giải)\s*:\s*/iu, '')
     .split(/\r?\n/u)
     .map((line) => line.trim())
     .filter(Boolean);
   const body: WordProblemRow[] = lines.map((line) => {
     if (/^Đáp số\s*:/iu.test(line))
-      return { text: line, role: 'answer', align: 'left' };
-    // Distinguish equations from explanations for page-break grouping. Both
-    // are centered, and authored multi-step working is never shortened here.
-    const expression = line.replace(
-      /\s*\([\p{L}°²³%]+(?:[ /][\p{L}°²³%]+)*\)\s*\.?$/u,
-      ''
-    );
-    const calculation =
-      expression.includes('=') &&
-      /^(?:[\d\s.,;+−×÷*/:()[\]{}=⁰¹²³⁴⁵⁶⁷⁸⁹^%-]|ƯCLN|BCNN|ƯC|BC)+$/u.test(
-        expression
-      );
+      return {
+        text: line
+          .replace(/^Đáp số\s*:\s*/iu, 'Đáp số: ')
+          .replace(wordProblemUnit, ' $1$2'),
+        role: 'answer',
+        align: 'left',
+      };
+    // Classification is only for page-break grouping, not an eligibility gate:
+    // future notation and prose still use the shared workbook layout.
+    const calculation = wordProblemCalculation(line);
     return {
-      text: line,
-      role: calculation ? 'calculation' : 'explanation',
+      text: calculation ?? line,
+      role: calculation !== null ? 'calculation' : 'explanation',
       align: 'center',
     };
   });
-  if (
-    body.at(-1)?.role !== 'answer' ||
-    !body.some((row) => row.role === 'explanation') ||
-    !body.some((row) => row.role === 'calculation')
-  )
-    return null;
+  // An explicit answer following working identifies the solution structure,
+  // independent of lesson ID, grade, question wording or arithmetic symbols.
+  if (body.length < 2 || body.at(-1)?.role !== 'answer') return null;
   return [{ text: 'Bài giải:', role: 'heading', align: 'center' }, ...body];
 }
 
@@ -532,6 +560,11 @@ export function createPracticePdf(
     const prompt = `Bài ${i + 1}. ${e.prompt.trim()}`;
     const options = e.kind === 'choice' ? choiceRows(e.options) : [];
     const wordRows = mode === 'solutions' ? printableWordProblemRows(e) : null;
+    const plainSolution =
+      !wordRows && mode === 'solutions'
+        ? `${e.kind === 'written' ? 'Lời giải mẫu' : 'Lời giải'}: ${e.solution}`
+        : null;
+    const plainSolutionLines = plainSolution ? layout(plainSolution, 11) : [];
     // Every calculation line is centered, so its halfway point is W / 2,
     // including wrapped lines and stacked fractions. The answer starts below it.
     const calculationMidpoint = W / 2;
@@ -566,13 +599,17 @@ export function createPracticePdf(
       (options.length ? options.reduce((n, row) => n + row.height, 0) + 7 : 0) +
       32;
     const solutionHeight =
-      solutionRows?.reduce((n, row) => n + row.height, 0) || 0;
+      solutionRows?.reduce((n, row) => n + row.height, 0) ??
+      plainSolutionLines.reduce((n, row) => n + row.height, 0);
     const blockHeight = headHeight + solutionHeight + work;
-    // Keep an ordinary word problem together. An oversized authored solution
+    // Keep a question and its solution together. An oversized authored solution
     // must flow across pages instead of leaving the first page empty.
     const reservedHeight =
-      solutionRows && blockHeight > BOTTOM - 84
-        ? headHeight + solutionRows[0].height + solutionRows[1].height
+      mode === 'solutions' && blockHeight > BOTTOM - 84
+        ? headHeight +
+          (solutionRows
+            ? solutionRows[0].height + solutionRows[1].height
+            : plainSolutionLines[0]?.height || 0)
         : blockHeight;
     if (y + reservedHeight > BOTTOM && y > 100) newPage();
     paragraph(prompt, 11, 8, true);
@@ -601,14 +638,7 @@ export function createPracticePdf(
           start = end;
         }
         y += 8;
-      } else
-        paragraph(
-          e.kind === 'written'
-            ? `Lời giải mẫu: ${e.solution}`
-            : `Lời giải: ${e.solution}`,
-          11,
-          8
-        );
+      } else if (plainSolution) paragraph(plainSolution, 11, 8);
       y += 8;
     } else {
       for (let space = 0; space < work; space += 18) {

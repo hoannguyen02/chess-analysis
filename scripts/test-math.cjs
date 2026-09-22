@@ -651,6 +651,67 @@ test('word-problem PDF rows preserve authored steps and select workbook alignmen
   assert.equal(printableWordProblemRows({ ...single, solution: '48 : 6 = 8.' }), null);
 });
 
+test('all lessons share the Grade 4 word-problem format, including fraction cancellation', () => {
+  const { printableWordProblemRows } = load('pdf');
+  const before = structuredClone(exampleLessons);
+  const reference = exampleLessons.find(l => l.id === 'math-fraction-of-number-4')
+    .exercises.find(e => e.id === 'math-fraction-of-number-4-q17');
+  const shape = printableWordProblemRows(reference).map(({ role, align }) => ({ role, align }));
+  const lesson = exampleLessons.find(l => l.id === 'math-fraction-multiply-6');
+  const cases = [
+    ['q19', '(3/4) × (2/3) = 1/2 (cốc).', 'Đáp số: 1/2 cốc.'],
+    ['q20', '(3/4) : (1/8) = 6 (chai).', 'Đáp số: 6 chai.'],
+    ['q21', '(5/6) × (3/5) = 1/2 (ha).', 'Đáp số: 1/2 ha.'],
+    ['q22', '(7/8) : (7/32) = 4 (đoạn).', 'Đáp số: 4 đoạn.'],
+  ];
+  for (const [id, calculation, answer] of cases) {
+    const e = lesson.exercises.find(e => e.id === `${lesson.id}-${id}`);
+    const rows = printableWordProblemRows(e);
+    assert.deepEqual(rows.map(({ role, align }) => ({ role, align })), shape, id);
+    assert.equal(rows[1].text, e.solution.split('\n')[0]);
+    assert.equal(rows[2].text, calculation, id);
+    assert.equal(rows[3].text, answer, id);
+  }
+  for (const l of exampleLessons) for (const e of l.exercises) {
+    if (e.section !== 'extra' || e.kind === 'choice' || !/\nĐáp số:/u.test(e.solution)) continue;
+    const rows = printableWordProblemRows(e);
+    assert.ok(rows, e.id);
+    assert.equal(rows[0].text, 'Bài giải:', e.id);
+    assert.equal(rows.at(-1).align, 'left', e.id);
+    assert.ok(rows.slice(0, -1).every(row => row.align === 'center'), e.id);
+  }
+  assert.deepEqual(exampleLessons, before, 'formatting must not change stored or online working');
+});
+
+test('future authored solutions opt into workbook layout by structure, not arithmetic notation', () => {
+  const { printableWordProblemRows } = load('pdf');
+  const exercise = { ...exampleLessons[0].exercises[0], kind: 'written', id: 'future-word-problem' };
+  for (const working of [
+    'Cạnh hình vuông là:\n√64 = 8 (m).',
+    'Cạnh hình vuông là:\nx = 24 : 3 = 8 (m).',
+    '24 : 3 = 8 (m).',
+    'Đếm trên hình có tám đoạn bằng nhau.',
+  ]) {
+    const rows = printableWordProblemRows({ ...exercise,
+      solution: `  Bài giải:\n${working}\nĐÁP SỐ: 8 (m).\n`,
+    });
+    assert.equal(rows[0].text, 'Bài giải:');
+    assert.equal(rows.slice(1, -1).map(row => row.text).join('\n'), working);
+    assert.ok(rows.slice(0, -1).every(row => row.align === 'center'));
+    assert.deepEqual(rows.at(-1), { text: 'Đáp số: 8 m.', role: 'answer', align: 'left' });
+  }
+  const multiple = {
+    ...exercise,
+    solution: 'Số bút ban đầu là:\n12 × 5 = 12 + 12 + 12 + 12 + 12 = 60 (chiếc).\nSố bút còn lại là:\n60 − 18 = 60 − 10 − 8 = 42 (chiếc).\nĐáp số: 42 chiếc bút.',
+  };
+  assert.deepEqual(printableWordProblemRows(multiple).map(row => row.text), [
+    'Bài giải:', 'Số bút ban đầu là:', '12 × 5 = 60 (chiếc).',
+    'Số bút còn lại là:', '60 − 18 = 42 (chiếc).', 'Đáp số: 42 chiếc bút.',
+  ]);
+  assert.equal(printableWordProblemRows({ ...exercise, solution: 'Đáp số: 8 m.' }), null);
+  assert.equal(printableWordProblemRows({ ...multiple, kind: 'choice' }), null);
+});
+
 // Decode our uncompressed PDF text operators to test physical alignment, not
 // just the formatting metadata. Fractions also receive visual render checks.
 function pdfTextRows(bytes) {
@@ -682,6 +743,81 @@ function pdfTextRows(bytes) {
   }
   return rows;
 }
+
+test('exported fraction word problems physically match the reference workbook layout', () => {
+  const { createPracticePdf } = load('pdf');
+  const font = fs.readFileSync(path.join(__dirname, '../public/fonts/DejaVuSans.ttf'));
+  const lesson = structuredClone(exampleLessons.find(l => l.id === 'math-fraction-multiply-6'));
+  lesson.id = 'future-fraction-word-problems';
+  lesson.title = 'Bài toán có lời văn';
+  lesson.grade = 5;
+  lesson.exercises = lesson.exercises.filter(e => /-q(19|20|21|22)$/u.test(e.id));
+  const rows = pdfTextRows(createPracticePdf(lesson, 'solutions', font));
+  assert.equal(rows.filter(row => row.text === 'Bài giải:').length, 4);
+  assert.ok(!rows.some(row => row.text.startsWith('Lời giải:')));
+  const answers = rows.filter(row => row.text.startsWith('Đáp số:'));
+  assert.equal(answers.length, 4);
+  for (const answer of answers) {
+    const calculation = rows.slice(0, rows.indexOf(answer)).findLast(row => row.text.includes(' = '));
+    assert.ok(Math.abs(answer.left - 595.28 / 2) < 0.02, answer.text);
+    assert.ok(answer.y < calculation.y);
+    assert.equal(answer.page, calculation.page);
+    assert.equal((calculation.text.match(/=/gu) || []).length, 1);
+  }
+  for (const row of rows.filter(row => row.text === 'Bài giải:' || row.text.endsWith('là:'))) {
+    assert.ok(Math.abs((row.left + row.right) / 2 - 595.28 / 2) < 0.02, row.text);
+  }
+  const worksheet = pdfTextRows(createPracticePdf(lesson, 'worksheet', font));
+  assert.ok(!worksheet.some(row => /Bài giải:|Lời giải:|Đáp số:/u.test(row.text)));
+  assert.equal(worksheet.filter(row => /^Bài \d+\./u.test(row.text)).length, 4);
+});
+
+test('mixed solution PDFs keep the next calculation question with its working', () => {
+  const { createPracticePdf } = load('pdf');
+  const font = fs.readFileSync(path.join(__dirname, '../public/fonts/DejaVuSans.ttf'));
+  const lesson = exampleLessons.find(l => l.id === 'math-fraction-multiply-6');
+  const rows = pdfTextRows(createPracticePdf(lesson, 'solutions', font));
+  const promptIndex = rows.findIndex(row => row.text.startsWith('Bài 19.'));
+  const solution = rows.slice(promptIndex + 1).find(row => row.text.startsWith('Lời giải:'));
+  assert.ok(promptIndex >= 0 && solution);
+  assert.equal(rows[promptIndex].page, solution.page);
+});
+
+test('PDF omits redundant fraction parentheses but keeps negative operands grouped', () => {
+  const { createPracticePdf } = load('pdf');
+  const font = fs.readFileSync(path.join(__dirname, '../public/fonts/DejaVuSans.ttf'));
+  const lesson = structuredClone(
+    load('fraction-lessons').fractionLessons.find(
+      item => item.id === 'math-fraction-multiply-6'
+    )
+  );
+  lesson.knowledgeSummary = '';
+  lesson.exercises = lesson.exercises.filter(e =>
+    ['math-fraction-multiply-6-q5', 'math-fraction-multiply-6-q7'].includes(e.id)
+  );
+  for (const mode of ['worksheet', 'solutions']) {
+    const bytes = createPracticePdf(lesson, mode, font);
+    const rows = pdfTextRows(bytes);
+    const positive = rows.find(row => row.text.startsWith('Bài 1. Tính'));
+    const negative = rows.find(row => row.text.startsWith('Bài 2. Tính'));
+    assert.ok(positive && negative, mode);
+    assert.doesNotMatch(positive.text, /[()]/u, mode);
+    assert.equal((negative.text.match(/\(/gu) || []).length, 1, mode);
+    assert.equal((negative.text.match(/\)/gu) || []).length, 1, mode);
+    if (mode === 'solutions') {
+      const solution = rows.find(row => row.text.startsWith('Lời giải:'));
+      assert.ok(solution, mode);
+      assert.doesNotMatch(solution.text, /[()]/u, mode);
+    }
+    if (process.env.MATH_PDF_QA_DIR) {
+      fs.mkdirSync(process.env.MATH_PDF_QA_DIR, { recursive: true });
+      fs.writeFileSync(
+        path.join(process.env.MATH_PDF_QA_DIR, `fraction-parentheses-${mode}.pdf`),
+        bytes
+      );
+    }
+  }
+});
 
 test('solution PDF centers working and starts the answer below the midpoint of the final calculation', () => {
   const { createPracticePdf } = load('pdf');
@@ -834,6 +970,30 @@ test('fraction formatting hides denominator one and preserves intermediate ratio
     ['□', '3'],
   ])
     assert.equal(format(n, d), null);
+});
+
+test('fraction formatting removes only redundant unsigned operand parentheses', () => {
+  const { stripRedundantFractionParentheses: format } = load('format');
+  for (const [source, expected] of [
+    ['(2/3) × (3/5)', '2/3 × 3/5'],
+    ['20 × (3/4)', '20 × 3/4'],
+    ['(3/5) : (9/10)', '3/5 : 9/10'],
+    ['(5/6) − (1/4)', '5/6 − 1/4'],
+    ['(-3/4) × (2/9)', '(-3/4) × 2/9'],
+    ['(0/1) × (2/5)', '0/1 × 2/5'],
+    ['(1/0) × (2/3)', '(1/0) × 2/3'],
+  ])
+    assert.equal(format(source), expected);
+  for (const source of [
+    '(-3/4)',
+    '(2 × 3)/(3 × 5)',
+    '(1/2 + 1/3)',
+    '1/(2/3)',
+    'f(2/3)',
+    '(2/3)^2',
+    '(2/3)²',
+  ])
+    assert.equal(format(source), source);
 });
 
 test('quick edit validates drafts and keeps them open after failed storage', () => {
@@ -1265,7 +1425,7 @@ test('Grade 6 fractions consolidate into three lessons while preserving saved wo
   const {legacyExampleLessons, exampleLessons} = load('examples');
   const {consolidateFractionLessons} = load('fraction-consolidation');
   const scope = exampleLessons.filter(l => l.grade === 6 && l.topic === 'Phân số mở rộng');
-  assert.deepEqual(scope.map(l => l.title), ['Cộng trừ phân số', 'Nhân chia phân số', 'Hai bài toán cơ bản về phân số']);
+  assert.deepEqual(scope.map(l => l.title), ['Cộng trừ phân số', 'Nhân chia phân số', 'Hai bài toán cơ bản về phân số', 'So sánh và sắp xếp các số']);
   const app = legacyExampleLessons.find(l => l.id === 'math-fraction-applications-6');
   assert.equal(scope[2], app);
   assert.equal(scope[0].exercises.length, 98);
@@ -1285,4 +1445,62 @@ test('Grade 6 fractions consolidate into three lessons while preserving saved wo
   const source = full.find(l => l.id === 'math-fractions-6');
   source.exercises.push(...Array.from({length: 3}, (_, i) => ({...source.exercises[0], id: `custom-${i}`})));
   assert.ok(consolidateFractionLessons(full, legacyExampleLessons).some(l => l.id === compare.id));
+});
+
+test('mixed-format comparison and ordering lesson has mathematically correct unique choices', () => {
+  const {fractionOrderLesson: lesson, addFractionOrderLesson} = load('fraction-order-lesson');
+  const value = text => {
+    const s = text.trim();
+    if (s.includes(' ')) { const [whole, part] = s.split(' '); return Number(whole) + value(part); }
+    if (s.includes('/')) { const [a,b] = s.split('/').map(Number); return a/b; }
+    return Number(s.replace(',', '.'));
+  };
+  const extra = lesson.exercises.filter(e => e.section === 'extra');
+  assert.equal(extra.length, 20);
+  assert.equal(extra.filter(e => e.prompt.includes('tăng dần')).length, 4);
+  assert.equal(extra.filter(e => e.prompt.includes('giảm dần')).length, 4);
+  for (const e of lesson.exercises) {
+    let valid;
+    if (e.prompt.startsWith('Điền dấu')) {
+      const [a,b] = e.prompt.replace('Điền dấu thích hợp: ', '').replace(/\.$/, '').split(' □ ').map(value);
+      valid = e.options.filter(op => op === '<' ? a < b : op === '>' ? a > b : a === b);
+    } else if (e.prompt.startsWith('Sắp xếp')) {
+      const input = e.prompt.split(': ')[1].replace(/\.$/, '').split('; ').sort();
+      const asc = e.prompt.includes('tăng dần');
+      valid = e.options.filter(option => {
+        assert.deepEqual(option.split('; ').sort(), input);
+        const nums = option.split('; ').map(value);
+        return nums.every((n,i) => !i || (asc ? nums[i-1] <= n : nums[i-1] >= n));
+      });
+    } else {
+      const min = Math.min(...e.options.map(value));
+      valid = e.options.filter(o => value(o) === min);
+    }
+    assert.deepEqual(valid, [e.answer], e.id);
+  }
+  const saved = {...structuredClone(lesson), title: 'Edited title'};
+  const items = [saved];
+  assert.equal(addFractionOrderLesson(items), items);
+  assert.equal(addFractionOrderLesson([]).length, 1);
+  const full = Array.from({length:100}, (_,i) => ({...saved, id: `custom-${i}`}));
+  assert.equal(addFractionOrderLesson(full), full);
+  const font = fs.readFileSync(path.join(__dirname, '../public/fonts/DejaVuSans.ttf'));
+  for (const mode of ['worksheet', 'solutions']) {
+    const bytes = load('pdf').createPracticePdf(lesson, mode, font);
+    assert.equal(Buffer.from(bytes).subarray(0,8).toString(), '%PDF-1.7');
+    if (process.env.MATH_PDF_QA_DIR) {
+      fs.mkdirSync(process.env.MATH_PDF_QA_DIR, {recursive:true});
+      fs.writeFileSync(path.join(process.env.MATH_PDF_QA_DIR, `order-${mode}.pdf`), bytes);
+    }
+  }
+});
+
+test('integer-to-fraction examples retain denominator one without changing final simplification', () => {
+  const {wholeNumberFraction: format} = load('format');
+  assert.equal(format('-2', '1', 'Số nguyên có thể viết thành phân số: -2 = '), null);
+  assert.equal(format('3', '1', '3 = '), null);
+  assert.equal(format('0', '1', '0 = '), null);
+  assert.equal(format('1', '1', '6/6 = '), '1');
+  assert.equal(format('-2', '1', '-4/2 = '), '-2');
+  assert.equal(format('1', '1'), '1');
 });

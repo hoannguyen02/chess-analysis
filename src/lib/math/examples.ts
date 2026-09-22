@@ -1,3 +1,4 @@
+import { fractionOrderLesson } from './fraction-order-lesson';
 import { consolidateFractionLessons } from './fraction-consolidation';
 import { primaryFractionLessons } from './primary-fraction-lessons';
 import { fractionLessons } from './fraction-lessons';
@@ -422,6 +423,7 @@ export const legacyExampleLessons: MathLessonData[] = [
   divisibilityLesson,
   ...fractionLessons,
   ...primaryFractionLessons,
+  fractionOrderLesson,
 ];
 
 export const exampleLessons = consolidateFractionLessons(legacyExampleLessons, legacyExampleLessons);

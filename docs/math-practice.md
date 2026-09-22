@@ -57,13 +57,13 @@ Extra progress uses `lima-math-extra-v1:<lessonId>` and an exact question-conten
 
 Both worksheet and solutions PDFs omit the practice-group headings (Củng cố kiến thức, Luyện kỹ năng, Vận dụng, Thử thách) and their reserved height. Question order and numbering are unchanged. Saved groups and browser practice remain intact; the worksheet's separate Kiến thức cần nhớ summary is also preserved.
 
-Solutions PDFs present supported Vietnamese word problems under a centered `Bài giải:` heading on its own line. Explanatory sentences and calculations are centered; `Đáp số: ...` starts on the next row beneath the midpoint of the final calculation, while question prompts stay left-aligned. Single-step examples retain the three body lines: `An được số điểm là:` / `4 × 5 + 3 × (-2) = 14 (điểm)` / `Đáp số: 14 điểm`. Authored multi-step solutions ending with an explicit `Đáp số:` retain every explanation and calculation, including prose containing an equation. The question and solution stay together when they fit on a page. Longer solutions wrap within the margins and keep the heading with the first step, explanation/calculation pairs together, and the answer with the final calculation where possible. Decimals in generated solutions use a comma, with parentheses around the unit only on the calculation line.
+Solutions PDFs use the Grade 4 **Tìm phân số của một số** workbook layout as the shared word-problem standard, for every grade and both existing and future lessons. A centered `Bài giải:` heading occupies its own line. Explanatory sentences and calculations are centered; `Đáp số: ...` starts on the next row beneath the midpoint of the final calculation, while question prompts stay left-aligned. Single-step examples retain the three body lines: `An được số điểm là:` / `4 × 5 + 3 × (-2) = 14 (điểm)` / `Đáp số: 14 điểm`. Each purely numeric equality chain displays its original expression and final result directly, e.g. `3/4 : 1/8 = 6 (chai).` Separate calculation steps and all explanations are retained, including prose containing an equation. The question and solution stay together when they fit on a page. Longer solutions wrap within the margins and keep the heading with the first step, explanation/calculation pairs together, and the answer with the final calculation where possible. Decimals in generated solutions use a comma, with parentheses around the unit only on the calculation line.
 
 The left edge of `Đáp số` is anchored halfway across the preceding calculation's last rendered line, not at its right end or the page margin. Since calculations are centered, this midpoint stays consistent for stacked fractions and wrapped lines. The answer remains on its own row and extends to the right; it shifts left only enough to avoid the right margin when necessary. Answers wider than the available page content wrap at the page margins.
 
 The heading and statement/calculation/answer sequence follow the worked examples in [Trường Tiểu học Lê Quý Đôn's teaching guide](https://c1lequydon-cubao.daklak.edu.vn/ren-luyen-ki-nang-giai-toan-co-loi-van-cho-hoc-sinh-lop-3.html). The exact left/center/right alignment follows the requested LIMA worksheet style, rather than claiming a universal textbook requirement. Choice explanations, pure calculations and unrecognized solution structures keep their existing presentation.
 
-The formatter recognizes a single `bao nhiêu` question and a numeric equality chain whose final value matches the exercise answer. It preserves authored explanations, separate calculations, algebra, multiple questions and unrecognized formats. This is a PDF presentation change; saved lesson content and browser feedback retain their full working.
+An authored non-choice solution with working followed by an explicit `Đáp số:` row uses this layout based on that structure, not a lesson ID, grade, question phrase or list of arithmetic symbols. Cancellation marks and future notation cannot force it back to the inline `Lời giải:` layout. Equation classification only controls page-break grouping and safe compaction of numeric equality chains; algebra and prose remain unchanged. For legacy solutions consisting of a single numeric equality chain, the formatter can also derive the statement and answer from a single `bao nhiêu` question when the final value matches the exercise answer. Saved lesson content and browser feedback retain their full working, including intermediate cancellation steps. Existing downloaded PDFs must be downloaded again to receive the new layout.
 
 PDF downloads use `LIMAMath - Lớp {grade} - {lesson title} - Bài tập.pdf` or `LIMAMath - Lớp {grade} - {lesson title} - Lời giải.pdf`. The specific lesson title distinguishes lessons within the same broad topic. Vietnamese accents are preserved; colons become separators and filename-unsafe/control characters are removed. Long titles are shortened so the complete UTF-8 filename stays within 240 bytes, preserving the grade, document type and `.pdf` extension. Repeated downloads of the same lesson may still receive a browser-added counter; no date or timestamp is added automatically.
 
@@ -142,3 +142,21 @@ lesson is unchanged. The one-time `lima-math-fraction-consolidation-v1` migratio
 runs after older migrations. If customized content exceeds model limits, source
 lessons remain intact instead of losing content. Legacy sample data remains
 available for identifying edits and upgrading older libraries.
+
+### Comparing and ordering mixed number formats (Grade 6)
+
+`fraction-order-lesson.ts` adds **So sánh và sắp xếp các số** under Phân số mở rộng.
+It combines fractions, integers, positive mixed numbers and finite decimals,
+including negative integers/fractions/decimals. It includes 4 regular questions
+and 20 extra questions: 10 comparisons, 4 ascending sequences, 4 descending
+sequences and 2 minimum-selection questions. Sequence answers retain the original
+number formats, with one correct multiple-choice ordering. Equivalent forms and
+the danger of rounding before comparison are explicitly covered.
+
+`lima-math-fraction-order-v1` adds the lesson once without overwriting saved edits.
+It does not participate in the older three-lesson consolidation.
+
+Research reference (consulted 2026-09-22): Mathematics curriculum, Grade 6 fraction
+and decimal requirements, PDF pages 124–125. This lesson combines those skills;
+it does not claim to be a verbatim textbook lesson.
+https://static3.luatvietnam.vn/genfile/contentmix/2018/12/26/noi-dung-mix-thong-tu-so-32-2018-tt-bgddt-110829.pdf
