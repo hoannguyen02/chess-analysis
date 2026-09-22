@@ -1,6 +1,7 @@
 import Brand from './Brand';
 import { changeLanguage, SiteLanguage } from '@/lib/changeLanguage';
 import { useAppContext } from '@/contexts/AppContext';
+import { isMathPracticeEnabled } from '@/lib/math/availability';
 import { LocaleType } from '@/types/locale';
 import { Drawer, Dropdown } from 'flowbite-react';
 import { useTranslations } from 'next-intl';
@@ -95,12 +96,14 @@ export default function Header() {
             >
               {t('navigation.english-practice')}
             </Link>
-            <Link
-              href="/math-practice"
-              className="ml-4 hover:text-[var(--p-highlight)]"
-            >
-              {t('navigation.math-practice')}
-            </Link>
+            {isMathPracticeEnabled() && (
+              <Link
+                href="/math-practice"
+                className="ml-4 hover:text-[var(--p-highlight)]"
+              >
+                {t('navigation.math-practice')}
+              </Link>
+            )}
           </div>
         </div>
         <div className="flex items-center ">

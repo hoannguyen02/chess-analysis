@@ -1,5 +1,8 @@
 # Math Practice
 
+- The math navigation and both math routes are available in local development,
+  but return 404 in production by default. Set
+  `NEXT_PUBLIC_ENABLE_MATH_PRACTICE=true` at build time to publish them later.
 - `/math-practice`: browser-local lesson library, editor, learner preview, practice, import/export, sharing.
 - `/math-practice/learn#lesson=…`: standalone student snapshot; no account required.
 - `/math-practice/learn`: received lesson history in this browser.

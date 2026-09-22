@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import SharedMathLesson from '@/components/math/SharedMathLesson';
+import { isMathPracticeEnabled } from '@/lib/math/availability';
 export default function SharedMathPage() {
   return (
     <>
@@ -11,4 +12,8 @@ export default function SharedMathPage() {
       <SharedMathLesson />
     </>
   );
+}
+
+export async function getServerSideProps() {
+  return isMathPracticeEnabled() ? { props: {} } : { notFound: true };
 }

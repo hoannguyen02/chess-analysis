@@ -32,8 +32,30 @@ function load(name) {
 const { parseMathPack, packLessons, checkAnswer, applyImport } =
   load('lessons');
 const { exampleLessons } = load('examples');
+const { isMathPracticeEnabled } = load('availability');
 const { encodeMathLesson, decodeMathLesson } = load('share');
 const clone = () => structuredClone(packLessons(exampleLessons));
+test('math practice is local-only unless production explicitly opts in', () => {
+  const originalNodeEnv = process.env.NODE_ENV;
+  const originalFlag = process.env.NEXT_PUBLIC_ENABLE_MATH_PRACTICE;
+  try {
+    process.env.NODE_ENV = 'development';
+    delete process.env.NEXT_PUBLIC_ENABLE_MATH_PRACTICE;
+    assert.equal(isMathPracticeEnabled(), true);
+
+    process.env.NODE_ENV = 'production';
+    assert.equal(isMathPracticeEnabled(), false);
+
+    process.env.NEXT_PUBLIC_ENABLE_MATH_PRACTICE = 'true';
+    assert.equal(isMathPracticeEnabled(), true);
+  } finally {
+    if (originalNodeEnv === undefined) delete process.env.NODE_ENV;
+    else process.env.NODE_ENV = originalNodeEnv;
+    if (originalFlag === undefined)
+      delete process.env.NEXT_PUBLIC_ENABLE_MATH_PRACTICE;
+    else process.env.NEXT_PUBLIC_ENABLE_MATH_PRACTICE = originalFlag;
+  }
+});
 test('all example lessons validate and have correct model answers', () => {
   assert.deepEqual(parseMathPack(clone()), clone());
   for (const lesson of exampleLessons)

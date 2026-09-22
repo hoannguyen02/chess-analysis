@@ -1,4 +1,5 @@
 import Brand from './Brand';
+import { isMathPracticeEnabled } from '@/lib/math/availability';
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 
@@ -39,12 +40,14 @@ export const MenuLeft = () => {
       >
         {t('navigation.english-practice')}
       </Link>
-      <Link
-        href="/math-practice"
-        className="mb-2 hover:text-[var(--p-highlight)]"
-      >
-        {t('navigation.math-practice')}
-      </Link>
+      {isMathPracticeEnabled() && (
+        <Link
+          href="/math-practice"
+          className="mb-2 hover:text-[var(--p-highlight)]"
+        >
+          {t('navigation.math-practice')}
+        </Link>
+      )}
     </nav>
   );
 };
