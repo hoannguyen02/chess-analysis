@@ -6,16 +6,38 @@ import {
 import { ReactNode } from 'react';
 import styles from './MathLesson.module.css';
 
+// Keep the stored □ marker unchanged; only its presentation gets a question mark.
+function Placeholders({ children }: { children: string }) {
+  return (
+    <>
+      {children.split(/(□)/u).map((part, index) =>
+        part === '□' ? (
+          <span
+            key={index}
+            className={styles.questionBox}
+            role="img"
+            aria-label="Ô trống cần điền"
+          >
+            <span aria-hidden="true">?</span>
+          </span>
+        ) : (
+          part
+        )
+      )}
+    </>
+  );
+}
+
 function Factors({ value }: { value: number | string }) {
   return (
     <>
       {cancellationParts(String(value)).map((part, i) =>
         part.cancelled ? (
           <span key={i} className={styles.cancelledFactor}>
-            {part.text}
+            <Placeholders>{part.text}</Placeholders>
           </span>
         ) : (
-          part.text
+          <Placeholders key={i}>{part.text}</Placeholders>
         )
       )}
     </>
@@ -31,9 +53,9 @@ export function Fraction({ n, d, precedingText = '' }: { n: number | string; d: 
       role="img"
       aria-label={`${cancellationParts(String(n))
         .map((p) => (p.cancelled ? `${p.text} được rút gọn` : p.text))
-        .join('')} phần ${cancellationParts(String(d))
+        .join('').replaceAll('□', 'ô trống cần điền')} phần ${cancellationParts(String(d))
         .map((p) => (p.cancelled ? `${p.text} được rút gọn` : p.text))
-        .join('')}`}
+        .join('').replaceAll('□', 'ô trống cần điền')}`}
     >
       <span aria-hidden="true">
         <Factors value={n} />
@@ -53,7 +75,7 @@ export function MathText({ children }: { children: string }) {
   let cursor = 0;
   for (const match of text.matchAll(pattern)) {
     const index = match.index!;
-    parts.push(text.slice(cursor, index));
+    parts.push(<Placeholders key={`text-${cursor}`}>{text.slice(cursor, index)}</Placeholders>);
     const unwrap = (value: string) =>
       value.startsWith('(') ? value.slice(1, -1) : value;
     parts.push(
@@ -66,6 +88,6 @@ export function MathText({ children }: { children: string }) {
     );
     cursor = index + match[0].length;
   }
-  parts.push(text.slice(cursor));
+  parts.push(<Placeholders key={`text-${cursor}`}>{text.slice(cursor)}</Placeholders>);
   return <>{parts}</>;
 }

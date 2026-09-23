@@ -1,12 +1,17 @@
+import SegmentDiagram from './SegmentDiagram';
+import UnitFraction from './UnitFraction';
+import { semesterLabel } from '@/lib/math/placement';
+import NumberLine from './NumberLine';
 import QuickLessonEdit from './QuickLessonEdit';
 import { MathEditTarget } from './LessonEditor';
 import Exercise, { Result } from './Exercise';
 import ExtraPractice from './ExtraPractice';
-import { useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import {
   checkAnswer,
   learnerCopy,
   MathBlock,
+  MathExercise,
   MathLessonData,
   MathSection,
   SECTION_LABELS,
@@ -27,6 +32,12 @@ function gcd(a: number, b: number): number {
 }
 function Diagram({ block }: { block: MathBlock }) {
   const [split, setSplit] = useState(false);
+  if (block.visual === 'segment')
+    return <SegmentDiagram values={block.values} />;
+  if (block.visual === 'unit-fraction')
+    return <UnitFraction values={block.values} />;
+  if (block.visual === 'number-line')
+    return <NumberLine values={block.values} />;
   if (block.visual === 'rectangle')
     return (
       <figure className={s.visual}>
@@ -118,14 +129,21 @@ export default function MathLesson({
   onBack: () => void;
   onSave?: (lesson: MathLessonData) => boolean;
 }) {
-  const sections = lesson.exercises.some((e) => e.section === 'extra')
-    ? [...coreSections, 'extra' as const]
-    : coreSections;
+  const sections = useMemo(
+    () =>
+      lesson.exercises.some((e) => e.section === 'extra')
+        ? [...coreSections, 'extra' as const]
+        : coreSections,
+    [lesson.exercises]
+  );
   const [section, setSection] = useState<MathSection>(
     practiceOnly ? 'practice' : 'foundation'
   );
   const [revealed, setRevealed] = useState(1);
+  const [teachingMode, setTeachingMode] = useState(false);
+  const [teachingIndex, setTeachingIndex] = useState(0);
   const sectionStart = useRef<HTMLDivElement>(null);
+  const mainScroll = useRef<HTMLDivElement>(null);
   const [reviewMode, setReviewMode] = useState(initialReviewMode);
   const canEdit = Boolean(onSave) && !preview && reviewMode;
   const [editing, setEditing] = useState<{ target?: MathEditTarget } | null>(
@@ -148,6 +166,8 @@ export default function MathLesson({
     results: {},
     read: [],
   });
+  const progressRef = useRef(progress);
+  progressRef.current = progress;
   const [ready, setReady] = useState(false),
     [notice, setNotice] = useState(''),
     [writable, setWritable] = useState(true);
@@ -197,22 +217,38 @@ export default function MathLesson({
     }
     setReady(true);
   }, [content, key, lesson.exercises, preview]);
-  function save(next: Progress) {
-    setProgress(next);
-    if (!preview && writable)
-      try {
-        localStorage.setItem(key, JSON.stringify(next));
-      } catch {
-        setWritable(false);
-        setNotice(
-          'Tiến độ chỉ được giữ trong lượt này vì trình duyệt không lưu được.'
-        );
-      }
-  }
-  function openSection(next: MathSection) {
-    setSection(next);
-    setRevealed(1);
+  const save = useCallback(
+    (next: Progress) => {
+      progressRef.current = next;
+      setProgress(next);
+      if (!preview && writable)
+        try {
+          localStorage.setItem(key, JSON.stringify(next));
+        } catch {
+          setWritable(false);
+          setNotice(
+            'Tiến độ chỉ được giữ trong lượt này vì trình duyệt không lưu được.'
+          );
+        }
+    },
+    [key, preview, writable]
+  );
+  const saveResult = useCallback(
+    (id: string, result: Result) => {
+      const current = progressRef.current;
+      save({
+        ...current,
+        results: { ...current.results, [id]: result },
+      });
+    },
+    [save]
+  );
+  const revealSectionStart = useCallback(() => {
     requestAnimationFrame(() => {
+      if (teachingMode) {
+        mainScroll.current?.scrollTo({ top: 0, behavior: 'auto' });
+        return;
+      }
       const target = sectionStart.current;
       if (!target) return;
       const header = document.querySelector<HTMLElement>('[data-site-header]');
@@ -223,9 +259,50 @@ export default function MathLesson({
         inline: 'nearest',
       });
     });
-  }
+  }, [teachingMode]);
+  const openSection = useCallback(
+    (next: MathSection, item = 0) => {
+      setSection(next);
+      setRevealed(1);
+      setTeachingIndex(item);
+      revealSectionStart();
+    },
+    [revealSectionStart]
+  );
   const blocks = lesson.blocks.filter((b) => b.section === section),
     exercises = lesson.exercises.filter((e) => e.section === section);
+  const teachingItems: Array<
+    | { type: 'block'; block: MathBlock }
+    | { type: 'exercise'; exercise: MathExercise }
+  > =
+    section === 'extra'
+      ? []
+      : [
+          ...blocks.map((block) => ({ type: 'block' as const, block })),
+          ...exercises.map((exercise) => ({
+            type: 'exercise' as const,
+            exercise,
+          })),
+        ];
+  const teachingItemCount = Math.max(1, teachingItems.length);
+  const teachingItem = teachingItems[teachingIndex];
+  const renderedBlocks = teachingMode
+    ? blocks
+    : section === 'example'
+      ? blocks.slice(0, revealed)
+      : blocks;
+  const teachingItemCountFor = useCallback(
+    (value: MathSection) =>
+      value === 'extra'
+        ? 1
+        : Math.max(
+            1,
+            lesson.blocks.filter((block) => block.section === value).length +
+              lesson.exercises.filter((exercise) => exercise.section === value)
+                .length
+          ),
+    [lesson.blocks, lesson.exercises]
+  );
   const complete = (value: MathSection) => {
     const tasks = lesson.exercises.filter((e) => e.section === value);
     return tasks.length
@@ -234,9 +311,109 @@ export default function MathLesson({
   };
   const count = coreSections.filter(complete).length;
   const practice = lesson.exercises.filter((e) => e.section === 'practice');
+  const sectionIndex = sections.indexOf(section);
+  const firstTeachingStep = sectionIndex === 0 && teachingIndex === 0;
+  const lastTeachingStep =
+    sectionIndex === sections.length - 1 &&
+    teachingIndex >= teachingItemCount - 1;
+  const teachingStepLabel =
+    section === 'extra'
+      ? 'Luyện từng câu'
+      : teachingItem?.type === 'exercise'
+        ? `Câu ${teachingIndex - blocks.length + 1}/${exercises.length}`
+        : teachingItem?.type === 'block'
+          ? `Nội dung ${teachingIndex + 1}/${blocks.length}`
+          : 'Nội dung';
+  const moveTeaching = useCallback(
+    (direction: -1 | 1) => {
+      if (direction < 0) {
+        if (teachingIndex > 0) {
+          setTeachingIndex((index) => index - 1);
+          revealSectionStart();
+          return;
+        }
+        const previousSection = sections[sectionIndex - 1];
+        if (previousSection)
+          openSection(
+            previousSection,
+            teachingItemCountFor(previousSection) - 1
+          );
+        return;
+      }
+      if (teachingIndex < teachingItemCount - 1) {
+        setTeachingIndex((index) => index + 1);
+        revealSectionStart();
+        return;
+      }
+      const nextSection = sections[sectionIndex + 1];
+      if (nextSection) openSection(nextSection);
+    },
+    [
+      openSection,
+      revealSectionStart,
+      sectionIndex,
+      sections,
+      teachingIndex,
+      teachingItemCount,
+      teachingItemCountFor,
+    ]
+  );
+  useEffect(() => {
+    setTeachingIndex((index) => Math.min(index, teachingItemCount - 1));
+  }, [teachingItemCount]);
+  useEffect(() => {
+    if (!teachingMode) return;
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    mainScroll.current?.scrollTo({ top: 0, behavior: 'auto' });
+    return () => {
+      document.body.style.overflow = previousOverflow;
+    };
+  }, [teachingMode]);
+  useEffect(() => {
+    if (!teachingMode) return;
+    const handleKey = (event: KeyboardEvent) => {
+      if (
+        event.defaultPrevented ||
+        event.repeat ||
+        event.ctrlKey ||
+        event.metaKey ||
+        event.altKey ||
+        event.shiftKey
+      )
+        return;
+      const target = event.target;
+      if (
+        target instanceof HTMLElement &&
+        (target.isContentEditable ||
+          (target.closest(
+            'input,textarea,select,button,dialog,[role="dialog"]'
+          ) &&
+            !target.closest('[data-teaching-navigation]')))
+      )
+        return;
+      if (event.key === 'ArrowRight' && !lastTeachingStep) {
+        event.preventDefault();
+        moveTeaching(1);
+      }
+      if (event.key === 'ArrowLeft' && !firstTeachingStep) {
+        event.preventDefault();
+        moveTeaching(-1);
+      }
+      if (event.key === 'Escape') {
+        event.preventDefault();
+        setTeachingMode(false);
+      }
+    };
+    window.addEventListener('keydown', handleKey);
+    return () => window.removeEventListener('keydown', handleKey);
+  }, [firstTeachingStep, lastTeachingStep, moveTeaching, teachingMode]);
   if (!ready) return <p role="status">Đang mở bài học…</p>;
   return (
-    <div className={s.lesson} lang="vi">
+    <div
+      className={`${s.lesson} ${teachingMode ? s.teachingMode : ''}`}
+      lang="vi"
+    >
       {editing && onSave && (
         <QuickLessonEdit
           lesson={lesson}
@@ -253,20 +430,51 @@ export default function MathLesson({
         />
       )}
       <div className={s.brand}>
-        <span>LIMA Math</span>
-        {onSave && !preview && (
+        <span className={s.brandName}>LIMA Math</span>
+        {teachingMode && (
+          <span className={s.teachingTitle}>
+            <strong>
+              <MathText>{lesson.title}</MathText>
+            </strong>
+            <small>
+              {SECTION_LABELS[section]} · {teachingStepLabel}
+            </small>
+          </span>
+        )}
+        {preview && !teachingMode && <small>XEM TRƯỚC</small>}
+        <div className={s.brandActions}>
           <button
             type="button"
-            aria-pressed={reviewMode}
-            onClick={() => setReviewMode((active) => !active)}
+            className={teachingMode ? s.primary : s.teachingToggle}
+            aria-pressed={teachingMode}
+            onClick={() => {
+              if (!teachingMode) {
+                setReviewMode(false);
+                setEditing(null);
+                setTeachingIndex(0);
+                requestAnimationFrame(() => {
+                  if (document.activeElement instanceof HTMLElement)
+                    document.activeElement.blur();
+                });
+              }
+              setTeachingMode((active) => !active);
+            }}
           >
-            {reviewMode ? 'Kết thúc rà soát' : 'Rà soát bài học'}
+            {teachingMode ? 'Thoát giảng bài' : 'Giảng bài'}
           </button>
-        )}
-        {preview && <small>XEM TRƯỚC</small>}
-        <button onClick={onBack}>
-          {preview ? '← Quay lại soạn bài' : '← Thư viện'}
-        </button>
+          {!teachingMode && onSave && !preview && (
+            <button
+              type="button"
+              aria-pressed={reviewMode}
+              onClick={() => setReviewMode((active) => !active)}
+            >
+              {reviewMode ? 'Kết thúc rà soát' : 'Rà soát bài học'}
+            </button>
+          )}
+          <button onClick={onBack}>
+            {preview ? '← Quay lại soạn bài' : '← Thư viện'}
+          </button>
+        </div>
       </div>
       {canEdit && (
         <div className={s.reviewBar}>
@@ -327,122 +535,156 @@ export default function MathLesson({
           </p>
         </aside>
         <div className={s.content}>
-          <p className={s.breadcrumb}>
-            Lớp {lesson.grade} / {lesson.topic}
-          </p>
-          {editButton({ metadata: true }, 'Thông tin bài học')}
-          <h1>
-            <MathText>{lesson.title}</MathText>
-          </h1>
-          <p className={s.intro}>
-            <MathText>{lesson.goal}</MathText>
-          </p>
-          <div ref={sectionStart} data-lesson-section-start>
-            {section === 'extra' ? (
-              <ExtraPractice
-                lesson={lesson}
-                preview={preview}
-                onEdit={
-                  canEdit
-                    ? (id) => setEditing({ target: { exercise: id } })
-                    : undefined
-                }
-              />
-            ) : (
-              <section className={s.card} aria-label={SECTION_LABELS[section]}>
-                <p className={s.eyebrow}>{SECTION_LABELS[section]}</p>
-                {(section === 'example'
-                  ? blocks.slice(0, revealed)
-                  : blocks
-                ).map((block) => (
-                  <div key={block.id}>
-                    {editButton({ block: block.id }, block.title)}
-                    <h2>
-                      <MathText>{block.title}</MathText>
-                    </h2>
-                    <p className={s.prose}>
-                      <MathText>{block.text}</MathText>
-                    </p>
-                    <Diagram block={block} />
-                  </div>
-                ))}
-                {section === 'example' && revealed < blocks.length && (
-                  <button
-                    className={s.primary}
-                    onClick={() => setRevealed(revealed + 1)}
-                  >
-                    Xem bước tiếp theo →
-                  </button>
-                )}
-                {!blocks.length && !exercises.length && (
-                  <p>
-                    Phần này chưa có nội dung. Em có thể chuyển sang phần tiếp
-                    theo.
-                  </p>
-                )}
-                {exercises.map((exercise) => (
-                  <div key={exercise.id}>
-                    {editButton({ exercise: exercise.id }, exercise.prompt)}
-                    <Exercise
-                      key={JSON.stringify(exercise)}
-                      exercise={exercise}
-                      result={progress.results[exercise.id]}
-                      onChange={(result) =>
-                        save({
-                          ...progress,
-                          results: {
-                            ...progress.results,
-                            [exercise.id]: result,
-                          },
-                        })
+          <div ref={mainScroll} className={s.mainScroll}>
+            <p className={s.breadcrumb}>
+              Lớp {lesson.grade} / {semesterLabel(lesson.semester)} /{' '}
+              {lesson.topic}
+            </p>
+            {editButton({ metadata: true }, 'Thông tin bài học')}
+            <h1>
+              <MathText>{lesson.title}</MathText>
+            </h1>
+            <p className={s.intro}>
+              <MathText>{lesson.goal}</MathText>
+            </p>
+            <div ref={sectionStart} data-lesson-section-start>
+              {section === 'extra' ? (
+                <ExtraPractice
+                  lesson={lesson}
+                  preview={preview}
+                  teachingMode={teachingMode}
+                  onEdit={
+                    canEdit
+                      ? (id) => setEditing({ target: { exercise: id } })
+                      : undefined
+                  }
+                />
+              ) : (
+                <section
+                  className={s.card}
+                  aria-label={SECTION_LABELS[section]}
+                >
+                  <p className={s.eyebrow}>{SECTION_LABELS[section]}</p>
+                  {renderedBlocks.map((block) => (
+                    <div
+                      className={s.teachingItem}
+                      key={block.id}
+                      hidden={
+                        teachingMode &&
+                        (teachingItem?.type !== 'block' ||
+                          teachingItem.block.id !== block.id)
                       }
-                    />
-                  </div>
-                ))}
-                {section === 'practice' &&
-                  practice.length > 0 &&
-                  practice.every((e) => progress.results[e.id]?.solved) && (
-                    <div className={s.success}>
-                      <h2>Em đã hoàn thành!</h2>
-                      <p>
-                        {
-                          practice.filter(
-                            (e) => !progress.results[e.id]?.assisted
-                          ).length
-                        }{' '}
-                        trong {practice.length} câu đúng ngay lần đầu, không
-                        dùng gợi ý.
+                    >
+                      {editButton({ block: block.id }, block.title)}
+                      <h2>
+                        <MathText>{block.title}</MathText>
+                      </h2>
+                      <p className={s.prose}>
+                        <MathText>{block.text}</MathText>
                       </p>
-                      <button
-                        onClick={() => {
-                          const results = { ...progress.results };
-                          practice.forEach((e) => delete results[e.id]);
-                          save({ ...progress, results });
-                          openSection('example');
-                        }}
-                      >
-                        Ôn lại rồi thử tiếp
-                      </button>
+                      <Diagram block={block} />
                     </div>
+                  ))}
+                  {!teachingMode &&
+                    section === 'example' &&
+                    revealed < blocks.length && (
+                      <button
+                        className={s.primary}
+                        onClick={() => setRevealed(revealed + 1)}
+                      >
+                        Xem bước tiếp theo →
+                      </button>
+                    )}
+                  {!blocks.length && !exercises.length && (
+                    <p>
+                      Phần này chưa có nội dung. Em có thể chuyển sang phần tiếp
+                      theo.
+                    </p>
                   )}
-              </section>
-            )}
+                  {exercises.map((exercise) => (
+                    <div
+                      className={s.teachingItem}
+                      key={exercise.id}
+                      hidden={
+                        teachingMode &&
+                        (teachingItem?.type !== 'exercise' ||
+                          teachingItem.exercise.id !== exercise.id)
+                      }
+                    >
+                      {editButton({ exercise: exercise.id }, exercise.prompt)}
+                      <Exercise
+                        key={JSON.stringify(exercise)}
+                        exercise={exercise}
+                        result={progress.results[exercise.id]}
+                        onChange={(result) => saveResult(exercise.id, result)}
+                      />
+                    </div>
+                  ))}
+                  {section === 'practice' &&
+                    practice.length > 0 &&
+                    (!teachingMode ||
+                      teachingIndex === teachingItemCount - 1) &&
+                    practice.every((e) => progress.results[e.id]?.solved) && (
+                      <div className={s.success}>
+                        <h2>Em đã hoàn thành!</h2>
+                        <p>
+                          {
+                            practice.filter(
+                              (e) => !progress.results[e.id]?.assisted
+                            ).length
+                          }{' '}
+                          trong {practice.length} câu đúng ngay lần đầu, không
+                          dùng gợi ý.
+                        </p>
+                        <button
+                          onClick={() => {
+                            const results = { ...progress.results };
+                            practice.forEach((e) => delete results[e.id]);
+                            save({ ...progress, results });
+                            openSection('example');
+                          }}
+                        >
+                          Ôn lại rồi thử tiếp
+                        </button>
+                      </div>
+                    )}
+                </section>
+              )}
+            </div>
           </div>
-          <div className={s.bottom}>
+          <div
+            className={s.bottom}
+            data-teaching-navigation={teachingMode || undefined}
+          >
             <button
-              disabled={section === 'foundation'}
-              onClick={() =>
-                openSection(sections[sections.indexOf(section) - 1])
+              disabled={
+                teachingMode ? firstTeachingStep : section === 'foundation'
               }
+              onClick={() => {
+                if (teachingMode) moveTeaching(-1);
+                else openSection(sections[sections.indexOf(section) - 1]);
+              }}
             >
-              ← Quay lại
+              {teachingMode ? '← Trước' : '← Quay lại'}
             </button>
-            <span>
-              Phần {sections.indexOf(section) + 1}/{sections.length}
-            </span>
+            {teachingMode ? (
+              <span className={s.teachingStatus} aria-live="polite">
+                <strong>{SECTION_LABELS[section]}</strong> · {teachingStepLabel}
+                <small>← → để chuyển · Esc để thoát</small>
+              </span>
+            ) : (
+              <span>
+                Phần {sections.indexOf(section) + 1}/{sections.length}
+              </span>
+            )}
             <button
               className={s.primary}
+              disabled={teachingMode && lastTeachingStep}
               onClick={() => {
+                if (teachingMode) {
+                  moveTeaching(1);
+                  return;
+                }
                 if (
                   section !== 'extra' &&
                   !exercises.length &&
@@ -457,7 +699,11 @@ export default function MathLesson({
                 );
               }}
             >
-              {section === sections.at(-1) ? 'Về đầu bài' : 'Tiếp tục →'}
+              {teachingMode
+                ? 'Tiếp →'
+                : section === sections.at(-1)
+                  ? 'Về đầu bài'
+                  : 'Tiếp tục →'}
             </button>
           </div>
         </div>

@@ -66,6 +66,51 @@ test('all example lessons validate and have correct model answers', () => {
         e.id
       );
 });
+test('math text renders centered question boxes for blanks without changing punctuation or fractions', () => {
+  const React = require('react');
+  const { renderToStaticMarkup } = require('react-dom/server');
+  const source = ts.transpileModule(
+    fs.readFileSync(path.join(__dirname, '../src/components/math/MathText.tsx'), 'utf8'),
+    { compilerOptions: { module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2022, jsx: ts.JsxEmit.ReactJSX } }
+  ).outputText;
+  const module = { exports: {} };
+  new Function('exports', 'module', 'require', source)(module.exports, module, name => {
+    if (name === '@/lib/math/format') return load('format');
+    if (name === './MathLesson.module.css') return { default: new Proxy({}, { get: (_, key) => key }) };
+    return require(name);
+  });
+  const { MathText } = module.exports;
+  const render = text => renderToStaticMarkup(React.createElement(MathText, null, text));
+  const marker = '<span class="questionBox" role="img" aria-label="Ô trống cần điền"><span aria-hidden="true">?</span></span>';
+  for (const text of ['□ × 7 = 42.', '□ : 5 = 8.', '54 : □ = 6.', '□ + □ = 12.', '2 □ 3']) {
+    const html = render(text);
+    assert.equal(html, text.replaceAll('□', marker));
+  }
+  assert.equal(render('Có bao nhiêu số?'), 'Có bao nhiêu số?');
+  assert.equal(render('6 × 7 = 42.'), '6 × 7 = 42.');
+  const fraction = render('3/5 = □/20; 1/□; (□ + 1)/3');
+  assert.equal((fraction.match(/class="questionBox"/g) || []).length, 3);
+  assert.equal((fraction.match(/class="fraction"/g) || []).length, 4);
+  assert.match(fraction, /aria-label="ô trống cần điền phần 20"/);
+  assert.match(fraction, /aria-label="1 phần ô trống cần điền"/);
+  assert.match(fraction, /aria-label="ô trống cần điền \+ 1 phần 3"/);
+  assert.match(render('(~□~ × 2)/3'), /class="cancelledFactor"><span class="questionBox"/);
+  for (const lesson of [
+    load('addition-subtraction-lesson').additionSubtractionLesson,
+    load('multiplication-division-lesson').multiplicationDivisionLesson,
+  ]) {
+    const before = structuredClone(lesson);
+    const texts = [
+      ...lesson.blocks.map(block => block.text),
+      ...lesson.exercises.flatMap(exercise => [exercise.prompt, exercise.solution]),
+    ].filter(text => text.includes('□'));
+    assert.ok(texts.length > 0, lesson.id);
+    for (const text of texts)
+      assert.equal((render(text).match(/class="questionBox"/g) || []).length, text.split('□').length - 1);
+    assert.deepEqual(lesson, before, 'previous lessons use the shared rendering without data migrations');
+  }
+});
+
 test('fraction equivalence, simplification, invalid denominator, and tailored mistakes', () => {
   const e = exampleLessons[0].exercises[3];
   assert.equal(checkAnswer(e, '3/6').correct, true);
@@ -79,7 +124,7 @@ test('fraction equivalence, simplification, invalid denominator, and tailored mi
 });
 test('decimal commas, tolerance and units are checked', () => {
   const e = {
-    ...exampleLessons[2].exercises[2],
+    ...exampleLessons.find(l => l.id === 'math-rectangle-4').exercises[2],
     answer: '2.5',
     tolerance: 0.01,
   };
@@ -200,6 +245,157 @@ test('extra practice covers four groups and both PDF variants export', () => {
       );
     }
   }
+});
+
+test('every worksheet and solution page has the approved light background watermark, including custom lessons', () => {
+  const { createPracticePdf } = load('pdf');
+  const { numberLineLesson } = load('number-line-lesson');
+  const font = fs.readFileSync(path.join(__dirname, '../public/fonts/DejaVuSans.ttf'));
+  const custom = {
+    ...structuredClone(numberLineLesson),
+    id: 'future-custom-lesson',
+    title: 'Bài học mới của giáo viên',
+    knowledgeSummary: 'Ghi nhớ: Các đoạn đơn vị bằng nhau.\n'.repeat(70),
+  };
+  const before = structuredClone(custom);
+  for (const lesson of [numberLineLesson, custom]) {
+    for (const mode of ['worksheet', 'solutions']) {
+      for (const includeKnowledgeSummary of [true, false]) {
+        const bytes = createPracticePdf(lesson, mode, font, { includeKnowledgeSummary });
+        const source = Buffer.from(bytes).toString('latin1');
+        const pageCount = Number(source.match(/\/Type \/Pages[^\n]+\/Count (\d+)/)[1]);
+        assert.ok(pageCount > 1, 'exercise both first and continuation pages');
+        const streams = [...source.matchAll(/\d+ 0 obj\n<< \/Length \d+\s+>>\nstream\n([\s\S]*?)\nendstream/g)]
+          .map(m => m[1]).filter(s => s.includes('BT /F1'));
+        assert.equal(streams.length, pageCount);
+        const unicode = new Map();
+        for (const block of source.matchAll(/beginbfchar\n([\s\S]*?)endbfchar/g))
+          for (const pair of block[1].matchAll(/<([0-9a-f]+)> <([0-9a-f]+)>/g))
+            unicode.set(pair[1], String.fromCodePoint(parseInt(pair[2], 16)));
+        let positions;
+        for (const stream of streams) {
+          const background = stream.match(/^\/Artifact << \/Type \/Pagination \/Subtype \/Watermark >> BDC\nq\n([\s\S]*?)\nQ\nEMC\n/);
+          assert.ok(background, 'watermark comes before every foreground object, in isolated graphics state');
+          const marks = [...background[1].matchAll(/BT \/F1 36 Tf 0\.95 0\.95 0\.95 rg 0\.866025 0\.5 -0\.5 0\.866025 ([\d.]+) ([\d.]+) Tm <([0-9a-f]+)> Tj ET/g)];
+          assert.equal(marks.length, 6);
+          assert.equal(background[1].split('\n').length, 6);
+          for (const mark of marks)
+            assert.equal(mark[3].match(/.{4}/g).map(g => unicode.get(g)).join(''), 'LIMA Math');
+          const current = marks.map(m => [Number(m[1]), Number(m[2])]);
+          if (positions) assert.deepEqual(current, positions, 'same approved placement on continuation pages');
+          positions = current;
+          assert.ok(Math.abs(current[1][0] - current[0][0] - 275) < 0.01);
+          assert.ok(Math.abs(current[0][1] - current[2][1] - 215) < 0.01);
+          assert.ok(Math.abs(current[2][1] - current[4][1] - 215) < 0.01);
+          assert.ok(current.every(([x, y]) => x > 44 && y > 100 && y < 700));
+        }
+      }
+    }
+  }
+  assert.deepEqual(custom, before, 'watermark never changes lesson content');
+});
+
+test('PDF placeholders use centered vector question boxes in equations, fractions, summaries and solutions', () => {
+  const { createPracticePdf } = load('pdf');
+  const { multiplicationDivisionLesson } = load('multiplication-division-lesson');
+  const font = fs.readFileSync(path.join(__dirname, '../public/fonts/DejaVuSans.ttf'));
+  const base = multiplicationDivisionLesson.exercises.find(e => e.section === 'extra');
+  const lesson = {
+    ...multiplicationDivisionLesson,
+    knowledgeSummary: 'Ví dụ: □ + 18 = 45.',
+    exercises: [{ ...base, prompt: 'Điền số: □/20 = 3/5; 1/□ = 2/8. Vì sao?', solution: '□ = 12; □ = 4.' }],
+  };
+  const before = structuredClone(lesson);
+  for (const mode of ['worksheet', 'solutions']) {
+    const bytes = createPracticePdf(lesson, mode, font);
+    const source = Buffer.from(bytes).toString('latin1');
+    const boxes = [...source.matchAll(/\/Span << \/ActualText <FEFF25A1> >> BDC\nq [\d. ]+ RG [\d.]+ w ([\d.]+) ([\d.]+) ([\d.]+) ([\d.]+) re S Q\nBT \/F1 ([\d.]+) Tf [\d. ]+ rg 1 0 0 1 ([\d.]+) ([\d.]+) Tm <([0-9a-f]+)> Tj ET\nEMC/g)];
+    assert.equal(boxes.length, mode === 'worksheet' ? 3 : 4);
+    const spans = pdfTextRows(bytes, true);
+    for (const match of boxes) {
+      const [, x, y, width, height, size, tx, ty] = match.map((v, i) => i === 0 ? v : Number(v));
+      assert.equal(width, height, 'square, not rectangular');
+      const question = spans.find(s => s.text === '?' && Math.abs(s.left - tx) < 0.01 && Math.abs(s.y - ty) < 0.01);
+      assert.ok(question, 'question mark is real embedded-font text');
+      assert.ok(Math.abs((question.left + question.right) / 2 - (x + width / 2)) < 0.02, 'horizontally centered');
+      assert.ok(Math.abs(ty + size * 0.365 - (y + height / 2)) < 0.02, 'vertically centered');
+    }
+    assert.ok(spans.some(s => s.text === 'sao?'), 'ordinary question punctuation is not boxed');
+  }
+  assert.deepEqual(lesson, before);
+});
+
+test('PDF missing-value answers precede the preserved method and never leak into worksheets', () => {
+  const { createPracticePdf } = load('pdf');
+  const { additionSubtractionLesson } = load('addition-subtraction-lesson');
+  const { multiplicationDivisionLesson } = load('multiplication-division-lesson');
+  const font = fs.readFileSync(path.join(__dirname, '../public/fonts/DejaVuSans.ttf'));
+  for (const source of [additionSubtractionLesson, multiplicationDivisionLesson]) {
+    for (const exercise of source.exercises.filter(e => e.section === 'extra' && e.prompt.includes('□') && !e.table)) {
+      const lesson = { ...source, exercises: [exercise] };
+      const before = structuredClone(lesson);
+      const rows = pdfTextRows(createPracticePdf(lesson, 'solutions', font));
+      const answer = rows.findIndex(row => row.text === `Đáp án: ${exercise.answer}`);
+      const method = rows.findIndex(row => row.text.startsWith('Cách làm:'));
+      assert.ok(answer >= 0 && method > answer, exercise.prompt);
+      assert.ok(rows[answer].page === rows[method].page && rows[answer].y > rows[method].y);
+      assert.ok(rows.some(row => row.text.startsWith('Thử lại:')));
+      const worksheet = pdfTextRows(createPracticePdf(lesson, 'worksheet', font));
+      assert.ok(!worksheet.some(row => row.text.startsWith('Đáp án:') || row.text.startsWith('Cách làm:')));
+      assert.deepEqual(lesson, before);
+    }
+  }
+});
+
+test('all lessons share answer-first PDF formatting for choices and short answers', () => {
+  const { createPracticePdf, printableShortSolution, printableWordProblemRows } = load('pdf');
+  const font = fs.readFileSync(path.join(__dirname, '../public/fonts/DejaVuSans.ttf'));
+  const before = structuredClone(exampleLessons);
+  for (const lesson of exampleLessons) {
+    if (!lesson.exercises.some(e => e.section === 'extra')) continue;
+    const eligible = lesson.exercises.filter(e => e.section === 'extra' && !e.table && e.kind !== 'written' && !printableWordProblemRows(e));
+    for (const e of eligible) {
+      const answer = e.kind === 'choice' ? String.fromCharCode(65 + e.options.indexOf(e.answer)) : `${e.answer}${e.unit ? ` ${e.unit}` : ''}`;
+      const text = printableShortSolution(e);
+      assert.ok(text.startsWith(`Đáp án: ${answer}`));
+      if (e.solutionStyle !== 'answer-only' && text.includes('\n')) assert.ok(text.endsWith(e.solution));
+    }
+    const rows = pdfTextRows(createPracticePdf(lesson, 'solutions', font));
+    assert.equal(rows.filter(r => r.text.startsWith('Đáp án:')).length, eligible.length, lesson.id);
+    assert.equal(rows.filter(r => /^(Cách làm|Giải thích):/u.test(r.text)).length, eligible.filter(e => printableShortSolution(e).includes('\n')).length, lesson.id);
+    const worksheet = pdfTextRows(createPracticePdf(lesson, 'worksheet', font));
+    assert.ok(!worksheet.some(r => /^(Đáp án|Cách làm|Giải thích):/u.test(r.text)), lesson.id);
+  }
+  const custom = { ...exampleLessons[0].exercises[0], kind: 'choice', table: undefined, options: ['3/4', '4/6', '2/6', '4/3'], answer: '4/6', solution: '2/3 = 4/6.' };
+  assert.equal(printableShortSolution(custom), 'Đáp án: B\nCách làm: 2/3 = 4/6.');
+  assert.ok(printableShortSolution({ ...custom, options: ['4/6', '3/4'] }).startsWith('Đáp án: A\n'));
+  assert.deepEqual(exampleLessons, before);
+});
+
+test('conceptual solutions explain why, reading answers omit repetition, and upgrades preserve edits', async () => {
+  const { unitFractionLesson, upgradeUnitFractionSolutions } = load('unit-fraction-lesson');
+  const { printableShortSolution } = load('pdf');
+  const lesson = structuredClone(unitFractionLesson);
+  const pizza = lesson.exercises.find(e => e.id === 'unit-3-e11');
+  const reading = lesson.exercises.find(e => e.id === 'unit-3-e13');
+  assert.match(printableShortSolution(pizza), /\nGiải thích:.*8 miếng bằng nhau/u);
+  assert.equal(printableShortSolution(reading), 'Đáp án: B. Một phần tư');
+  assert.equal(printableShortSolution({ ...reading, solutionStyle: undefined, solution: 'Một phần tư.' }), 'Đáp án: B. Một phần tư');
+  assert.match(printableShortSolution({ ...pizza, solutionStyle: 'method' }), /\nCách làm:/u);
+  assert.equal(parseMathPack(packLessons([lesson])).lessons[0].exercises.find(e => e.id === reading.id).solutionStyle, 'answer-only');
+  assert.equal((await decodeMathLesson(await encodeMathLesson(lesson))).exercises.find(e => e.id === reading.id).solutionStyle, 'answer-only');
+  const invalid = structuredClone(packLessons([lesson]));
+  invalid.lessons[0].exercises[0].solutionStyle = 'invalid';
+  assert.throws(() => parseMathPack(invalid), /trình bày/u);
+  pizza.solution = 'Nam đã ăn 1/8 chiếc pizza.';
+  delete reading.solutionStyle;
+  const upgraded = upgradeUnitFractionSolutions([lesson]);
+  assert.match(upgraded[0].exercises.find(e => e.id === pizza.id).solution, /8 miếng bằng nhau/u);
+  assert.equal(upgraded[0].exercises.find(e => e.id === reading.id).solutionStyle, 'answer-only');
+  assert.deepEqual(upgradeUnitFractionSolutions(upgraded), upgraded);
+  assert.equal(pizza.solution, 'Nam đã ăn 1/8 chiếc pizza.', 'input not mutated');
+  pizza.solution = 'Giáo viên giải thích theo hình minh họa.';
+  assert.deepEqual(upgradeUnitFractionSolutions([lesson])[0].exercises.find(e => e.id === pizza.id), pizza);
 });
 
 test('worksheet choices omit ruled lines and reserved workspace for every saved size', () => {
@@ -714,7 +910,7 @@ test('future authored solutions opt into workbook layout by structure, not arith
 
 // Decode our uncompressed PDF text operators to test physical alignment, not
 // just the formatting metadata. Fractions also receive visual render checks.
-function pdfTextRows(bytes) {
+function pdfTextRows(bytes, separateSpans = false) {
   const source = Buffer.from(bytes).toString('latin1');
   const unicode = new Map();
   for (const block of source.matchAll(/beginbfchar\n([\s\S]*?)endbfchar/g))
@@ -732,6 +928,10 @@ function pdfTextRows(bytes) {
       const glyphs = hex.match(/.{4}/g);
       const text = glyphs.map(glyph => unicode.get(glyph)).join('');
       const width = glyphs.reduce((sum, glyph) => sum + widths.get(parseInt(glyph, 16)) * Number(size) / 1000, 0);
+      if (separateSpans) {
+        rows.push({ text, left: Number(x), right: Number(x) + width, y: Number(y), page });
+        continue;
+      }
       const row = baselines.get(y) || { text: '', left: Number(x), right: Number(x), y: Number(y), page };
       row.text += text;
       row.left = Math.min(row.left, Number(x));
@@ -778,7 +978,7 @@ test('mixed solution PDFs keep the next calculation question with its working', 
   const lesson = exampleLessons.find(l => l.id === 'math-fraction-multiply-6');
   const rows = pdfTextRows(createPracticePdf(lesson, 'solutions', font));
   const promptIndex = rows.findIndex(row => row.text.startsWith('Bài 19.'));
-  const solution = rows.slice(promptIndex + 1).find(row => row.text.startsWith('Lời giải:'));
+  const solution = rows.slice(promptIndex + 1).find(row => row.text.startsWith('Cách làm:'));
   assert.ok(promptIndex >= 0 && solution);
   assert.equal(rows[promptIndex].page, solution.page);
 });
@@ -805,7 +1005,7 @@ test('PDF omits redundant fraction parentheses but keeps negative operands group
     assert.equal((negative.text.match(/\(/gu) || []).length, 1, mode);
     assert.equal((negative.text.match(/\)/gu) || []).length, 1, mode);
     if (mode === 'solutions') {
-      const solution = rows.find(row => row.text.startsWith('Lời giải:'));
+      const solution = rows.find(row => row.text.startsWith('Cách làm:'));
       assert.ok(solution, mode);
       assert.doesNotMatch(solution.text, /[()]/u, mode);
     }
@@ -1503,4 +1703,1013 @@ test('integer-to-fraction examples retain denominator one without changing final
   assert.equal(format('1', '1', '6/6 = '), '1');
   assert.equal(format('-2', '1', '-4/2 = '), '-2');
   assert.equal(format('1', '1'), '1');
+});
+
+test('number-line lesson validates diagrams, preserves saves and round-trips through sharing', async () => {
+  const {numberLineLesson: lesson, addNumberLineLesson} = load('number-line-lesson');
+  assert.equal(lesson.grade, 7);
+  assert.equal(lesson.exercises.filter(e => e.section === 'extra').length, 20);
+  const diagrams = lesson.blocks.filter(b => b.visual === 'number-line');
+  assert.equal(diagrams.length, 6);
+  assert.deepEqual(parseMathPack(packLessons([lesson])).lessons[0], lesson);
+  const saved = {...structuredClone(lesson), title: 'Teacher title'};
+  const items = [saved];
+  assert.equal(addNumberLineLesson(items), items);
+  assert.equal(addNumberLineLesson([]).length, 1);
+  const full = Array.from({length:100}, (_,i) => ({...saved, id:`custom-${i}`}));
+  assert.equal(addNumberLineLesson(full), full);
+  for (const values of [[-1,1,0,0], [-1,1,13,0], [-10,10,12,0], [1,3,2,2], [-1,1,4,2], [-1,1,4,0.3], [0,0,1,0]]) {
+    const bad = structuredClone(lesson);
+    bad.blocks[1].values = values;
+    assert.throws(() => parseMathPack(packLessons([bad])));
+  }
+  const decoded = await decodeMathLesson(await encodeMathLesson(lesson));
+  assert.deepEqual(decoded.blocks, lesson.blocks);
+  const font = fs.readFileSync(path.join(__dirname, '../public/fonts/DejaVuSans.ttf'));
+  for (const mode of ['worksheet','solutions']) {
+    const bytes = load('pdf').createPracticePdf(lesson, mode, font);
+    assert.equal(Buffer.from(bytes).subarray(0,8).toString(), '%PDF-1.7');
+  }
+});
+
+test('solution number lines validate numeric labels and use a uniform mathematical scale', () => {
+  const { numberLineValue, parseSolutionNumberLine, numberLineGeometry } = load('solution-number-line');
+  for (const [text, value] of [['-3/2', -1.5], ['1 1/2', 1.5], ['-1 1/2', -1.5], ['−3/4', -0.75], ['0,5', 0.5], ['0', 0]])
+    assert.equal(numberLineValue(text), value);
+  for (const text of ['1/0', '1/-2', '1 3/2', 'NaN', '1+2', '']) assert.equal(numberLineValue(text), null);
+  const base = { min: -2, max: 2, divisions: 4, points: [{ value: '-3/2' }, { value: '1 1/2' }] };
+  assert.deepEqual(parseSolutionNumberLine(base), base);
+  assert.equal(parseSolutionNumberLine(null), null);
+  const geometry = numberLineGeometry(base);
+  assert.equal(geometry.ticks.length, 17);
+  assert.deepEqual(geometry.points.map(p => p.position), [1/8, 7/8]);
+  assert.equal(geometry.ticks.find(t => t.value === 0).position, 0.5);
+  for (let i = 1; i < geometry.ticks.length; i++)
+    assert.equal(geometry.ticks[i].position - geometry.ticks[i-1].position, 1/16);
+  for (const patch of [
+    { min: 1 }, { max: -1 }, { max: Infinity }, { min: -1.5 }, { divisions: 0 },
+    { divisions: 13 }, { min: -10, max: 10, divisions: 4 }, { points: [] },
+    { points: [{value: '3'}] }, { points: [{value: '1/3'}] },
+    { points: [{value: '1/0'}] }, { points: [{value: 'NaN'}] },
+    { points: [{value: '1/2'}, {value: '2/4'}] },
+    { points: [{value: '1/2', emphasis: 'true'}] },
+    { points: [{value: '1/2', name: 'A\nB'}] }, { caption: 123 },
+  ]) assert.throws(() => parseSolutionNumberLine({...base, ...patch}), /Trục số lời giải/);
+  const sixths = numberLineGeometry({min: 0, max: 1, divisions: 6, points: [{value:'1/2'}, {value:'2/3'}]});
+  assert.equal(sixths.ticks.length, 7, 'six intervals, not six ticks');
+  assert.deepEqual(sixths.points.map(p => p.position), [0.5, 2/3]);
+});
+
+test('number-line solution metadata survives sharing and saved-copy defaults preserve teacher edits', async () => {
+  const { numberLineLesson, withNumberLineSolution } = load('number-line-lesson');
+  const lesson = structuredClone(numberLineLesson);
+  const before = structuredClone(lesson);
+  const supported = lesson.exercises.filter(e => e.solutionNumberLine);
+  assert.equal(supported.length, 5);
+  for (const exercise of supported) {
+    const saved = {...exercise};
+    delete saved.solutionNumberLine;
+    assert.deepEqual(withNumberLineSolution(saved), exercise);
+    assert.equal(saved.solutionNumberLine, undefined);
+    for (const change of [{ prompt: 'Đề khác' }, { solution: 'Lời giải khác' }, { answer: '8' }, { id: 'custom-id' }]) {
+      const custom = {...saved, ...change};
+      assert.equal(withNumberLineSolution(custom), custom);
+    }
+    const hidden = {...exercise, solutionNumberLine: null};
+    assert.equal(withNumberLineSolution(hidden), hidden);
+  }
+  assert.deepEqual(lesson, before);
+  const decoded = await decodeMathLesson(await encodeMathLesson(lesson));
+  assert.deepEqual(decoded.exercises, lesson.exercises);
+  const bad = structuredClone(lesson);
+  bad.exercises.find(e => e.solutionNumberLine).solutionNumberLine.points[0].value = '999';
+  assert.throws(() => parseMathPack(packLessons([bad])), /Trục số lời giải/);
+});
+
+test('PDF solution diagrams plot all five tasks without exposing answers in worksheets', () => {
+  const { createPracticePdf } = load('pdf');
+  const { numberLineLesson } = load('number-line-lesson');
+  const { numberLineGeometry } = load('solution-number-line');
+  const font = fs.readFileSync(path.join(__dirname, '../public/fonts/DejaVuSans.ttf'));
+  const lesson = structuredClone(numberLineLesson);
+  const before = structuredClone(lesson);
+  const bytes = createPracticePdf(lesson, 'solutions', font);
+  const rows = pdfTextRows(bytes);
+  const points = [...Buffer.from(bytes).toString('latin1').matchAll(/q [\d. ]+ RG [\d. ]+ rg 0\.9 w ([\d.]+) ([\d.]+) m [^\n]+ c f Q/gu)]
+    .map(match => ({x: Number(match[1]) - 2.8, y: Number(match[2])}));
+  assert.equal(points.length, 17);
+  const diagrams = lesson.exercises.filter(e => e.solutionNumberLine);
+  let at = 0;
+  for (const e of diagrams) {
+    const geometry = numberLineGeometry(e.solutionNumberLine);
+    const actual = points.slice(at, at + geometry.points.length);
+    for (const [index, point] of geometry.points.entries()) {
+      const expectedX = 44 + 24 + point.position * (595.28 - 2 * (44 + 24));
+      assert.ok(Math.abs(actual[index].x - expectedX) < 0.02, `${e.id}: ${point.value}`);
+      assert.equal(actual[index].y, actual[0].y, 'points share one axis');
+    }
+    at += geometry.points.length;
+  }
+  const axes = rows.filter(row => row.text === 'x');
+  assert.equal(axes.length, 5);
+  axes.forEach((axis, index) => {
+    const prompt = rows.find(row => row.text.startsWith(`Bài ${16 + index}.`));
+    assert.equal(prompt.page, axis.page, 'ordinary question and diagram stay together');
+    assert.ok(prompt.y > axis.y);
+  });
+  for (const row of rows) {
+    assert.ok(row.left >= 43.98, row.text);
+    assert.ok(row.right <= 595.28 - 44 + 0.02, row.text);
+  }
+  const old = structuredClone(lesson);
+  old.exercises.forEach(e => delete e.solutionNumberLine);
+  assert.deepEqual(createPracticePdf(old, 'solutions', font), bytes, 'old saved built-ins also get diagrams');
+  const hidden = structuredClone(lesson);
+  hidden.exercises.forEach(e => { e.solutionNumberLine = null; });
+  assert.deepEqual(createPracticePdf(hidden, 'worksheet', font), createPracticePdf(lesson, 'worksheet', font));
+  assert.equal(pdfTextRows(createPracticePdf(hidden, 'solutions', font)).filter(row => row.text === 'x').length, 0);
+  const custom = {...lesson, id: 'custom-number-line', exercises: diagrams.map(e => ({...e, id:`copy-${e.id}`}))};
+  assert.equal(pdfTextRows(createPracticePdf(custom, 'solutions', font)).filter(row => row.text === 'x').length, 5);
+  assert.deepEqual(lesson, before);
+});
+
+test('PDF number-line values sit below the axis and point names align above their coordinates', () => {
+  const { createPracticePdf } = load('pdf');
+  const { numberLineLesson } = load('number-line-lesson');
+  const font = fs.readFileSync(path.join(__dirname, '../public/fonts/DejaVuSans.ttf'));
+  const cases = numberLineLesson.exercises.filter(e => e.solutionNumberLine);
+  for (const exercise of cases) {
+    const e = { ...exercise, solution: 'Quan sát trục số.', solutionNumberLine: {
+      ...exercise.solutionNumberLine, caption: 'Hết hình.',
+    }};
+    const bytes = createPracticePdf({ ...numberLineLesson, exercises: [e] }, 'solutions', font);
+    const spans = pdfTextRows(bytes, true);
+    const dots = [...Buffer.from(bytes).toString('latin1').matchAll(/q [\d. ]+ RG [\d. ]+ rg 0\.9 w ([\d.]+) ([\d.]+) m [^\n]+ c f Q/gu)]
+      .map(match => ({ x: Number(match[1]) - 2.8, y: Number(match[2]) }));
+    const axisY = dots[0].y;
+    const endY = spans.find(span => span.text === 'Hết').y;
+    const startY = spans.find(span => span.text === 'Quan').y;
+    const diagramSpans = spans.filter(span => span.y < startY && span.y > endY);
+    const numeric = diagramSpans.filter(span => /^[+-]?\d+$/u.test(span.text));
+    assert.ok(numeric.length > 0, exercise.id);
+    assert.ok(numeric.every(span => span.y < axisY), `${exercise.id}: all numbers below`);
+    assert.ok(!diagramSpans.some(span => span.text.includes('=')), 'no A = value labels');
+    for (const point of e.solutionNumberLine.points.filter(point => point.name)) {
+      const name = diagramSpans.find(span => span.text === point.name);
+      assert.ok(name && name.y > axisY, point.name);
+      const center = (name.left + name.right) / 2;
+      assert.ok(dots.some(dot => Math.abs(dot.x - center) < 0.02), point.name);
+      for (const token of point.value.split('/')) {
+        assert.ok(numeric.some(span => span.text === token && Math.abs((span.left + span.right) / 2 - center) < 0.02), `${point.name}: ${token} aligned below`);
+      }
+    }
+    for (const value of ['-1', '0']) {
+      const { min, max } = e.solutionNumberLine;
+      const tickX = 68 + (Number(value) - min) / (max - min) * (595.28 - 136);
+      // A fraction numerator may also read "-1" at a different coordinate.
+      assert.ok(numeric.filter(span => span.text === value && Math.abs((span.left + span.right) / 2 - tickX) < 0.02).length <= 1, `${exercise.id}: no duplicate ${value}`);
+    }
+  }
+});
+
+test('crowded number-line labels stay below, separated and within the page margins', () => {
+  const { createPracticePdf } = load('pdf');
+  const { numberLineLesson } = load('number-line-lesson');
+  const font = fs.readFileSync(path.join(__dirname, '../public/fonts/DejaVuSans.ttf'));
+  const base = numberLineLesson.exercises.at(-1);
+  for (const diagram of [
+    { min: 0, max: 5, divisions: 12, points: [
+      {value:'1/12', name:'A'}, {value:'1/6', name:'B'}, {value:'1/4', name:'C'},
+      {value:'1/3', name:'D'}, {value:'5/12', name:'E'},
+    ] },
+    { min: -2, max: 2, divisions: 2, points: [
+      {value:'-2', name:'WWWWWWWWWWWWWWWW'}, {value:'2', name:'MMMMMMMMMMMMMMMM'},
+    ] },
+  ]) {
+    const e = { ...base, solution: 'Quan sát.', solutionNumberLine: {...diagram, caption:'Hết hình.'} };
+    const bytes = createPracticePdf({...numberLineLesson, exercises:[e]}, 'solutions', font);
+    const spans = pdfTextRows(bytes, true);
+    const startY = spans.find(span => span.text === 'Quan').y;
+    const endY = spans.find(span => span.text === 'Hết').y;
+    const labels = spans.filter(span => span.y < startY && span.y > endY);
+    const axisY = Number(Buffer.from(bytes).toString('latin1').match(/q [\d. ]+ RG [\d. ]+ rg 0\.9 w ([\d.]+) ([\d.]+) m [^\n]+ c f Q/u)[2]);
+    assert.ok(labels.filter(span => /^[+-]?\d+$/u.test(span.text)).every(span => span.y < axisY));
+    for (const span of labels) {
+      assert.ok(span.left >= 43.98 && span.right <= 595.28 - 44 + 0.02, span.text);
+      const sameRow = labels.filter(other => other !== span && other.y === span.y);
+      assert.ok(sameRow.every(other => other.right <= span.left || other.left >= span.right), span.text);
+    }
+  }
+});
+
+test('grade 3 replacement preserves other lessons and existing edits', () => {
+  const { additionSubtractionLesson: lesson, replaceGradeThreeLesson: replace } = load('addition-subtraction-lesson');
+  const other = { ...exampleLessons[0], id: 'custom-grade-3', grade: 3 };
+  const old = { ...other, id: 'math-arithmetic-3' };
+  const original = [other, old];
+  const updated = replace(original);
+  assert.equal(updated[0], other);
+  assert.equal(updated[1].id, lesson.id);
+  assert.equal(original[1], old);
+  const edited = { ...lesson, title: 'Teacher edited title' };
+  assert.deepEqual(replace([old, edited, other]), [edited, other]);
+  assert.equal(replace([edited])[0], edited);
+  const full = Array.from({ length: 100 }, (_, i) => ({ ...other, id: `custom-${i}` }));
+  assert.equal(replace(full), full);
+  assert.equal(replace([...full.slice(0, 99), old]).length, 100);
+  assert.equal(exampleLessons.some(l => l.id === old.id), false);
+  assert.equal(lesson.exercises.length, 24);
+  assert.equal(lesson.exercises.filter(e => e.section === 'extra').length, 20);
+  // Independently substitute every missing-number answer into its equation.
+  for (const exercise of lesson.exercises) {
+    const match = exercise.prompt.match(/(□|\d+) ([+−]) (□|\d+) = (\d+)/);
+    if (!match) continue;
+    const left = match[1] === '□' ? Number(exercise.answer) : Number(match[1]);
+    const right = match[3] === '□' ? Number(exercise.answer) : Number(match[3]);
+    assert.equal(match[2] === '+' ? left + right : left - right, Number(match[4]), exercise.id);
+  }
+});
+
+test('semester placement validates and round trips without changing lesson identity', async () => {
+  const { matchesPlacement, semesterLabel } = load('placement');
+  const original = { ...exampleLessons[1] };
+  delete original.semester;
+  const moved = { ...original, grade: 4, semester: '2' };
+  const parsed = parseMathPack(packLessons([moved])).lessons[0];
+  assert.equal(parsed.id, original.id);
+  assert.deepEqual(parsed.exercises, original.exercises);
+  assert.equal(parsed.semester, '2');
+  const shared = await decodeMathLesson(await encodeMathLesson(moved));
+  assert.equal(shared.semester, '2');
+  assert.equal(shared.grade, 4);
+  assert.equal(matchesPlacement(moved, '4', '2'), true);
+  assert.equal(matchesPlacement(moved, '3', '2'), false);
+  assert.equal(matchesPlacement(moved, '4', '1'), false);
+  assert.equal(matchesPlacement(moved, '', 'unassigned'), false);
+  assert.equal(matchesPlacement(original, '', 'unassigned'), true);
+  assert.equal(matchesPlacement(original, '', ''), true);
+  assert.equal(semesterLabel(undefined), 'Chưa phân loại');
+  assert.equal(parseMathPack(packLessons([original])).lessons[0].semester, undefined);
+  assert.equal(parseMathPack(packLessons([{ ...moved, semester: '' }])).lessons[0].semester, undefined);
+  for (const invalid of ['3', 1, null, 'Học kỳ 1']) {
+    assert.throws(() => parseMathPack(packLessons([{ ...original, semester: invalid }])), /Học kỳ/);
+  }
+  const XLSX = require('xlsx');
+  const write = XLSX.writeFile;
+  let book;
+  XLSX.writeFile = value => { book = value; };
+  try { load('workbook').exportMathWorkbook([moved, { ...original, id: 'legacy-unclassified' }]); }
+  finally { XLSX.writeFile = write; }
+  const imported = load('workbook').importMathWorkbook(XLSX.write(book, { bookType: 'xlsx', type: 'array' }));
+  assert.equal(imported.lessons[0].semester, '2');
+  assert.equal(imported.lessons[1].semester, undefined);
+});
+
+test('component tables replace challenges before word problems and export', async () => {
+  const { additionSubtractionLesson: lesson, addComponentTables } = load('addition-subtraction-lesson');
+  const extra = lesson.exercises.filter(e => e.section === 'extra');
+  assert.equal(extra.length, 20);
+  assert.equal(extra[12].id, 'components-3-table-addition');
+  assert.equal(extra[13].id, 'components-3-table-subtraction');
+  assert.equal(extra[14].id, 'components-3-e17');
+  for (const [i, e] of extra.slice(12, 14).entries()) {
+    for (let c = 1; c < e.table.rows[0].length; c++) {
+      const [a,b,total] = e.table.solution.map(row => Number(row[c]));
+      assert.equal(i === 0 ? a+b : a-b, total);
+      assert.equal(e.table.rows.filter(row => row[c] === '?').length, 1);
+    }
+  }
+  const old = { ...lesson, title: 'Edited', exercises: [...lesson.exercises.filter(e => !e.table), { ...extra[0], id: 'components-3-e23' }, { ...extra[0], id: 'components-3-e24' }] };
+  const migrated = addComponentTables([old])[0];
+  assert.equal(migrated.title, 'Edited');
+  assert.deepEqual(migrated.exercises, lesson.exercises);
+  assert.deepEqual(addComponentTables([migrated]), [migrated]);
+  assert.deepEqual((await decodeMathLesson(await encodeMathLesson(lesson))).exercises, lesson.exercises);
+  const malformed = structuredClone(lesson);
+  malformed.exercises.find(e => e.table).table.solution[0].pop();
+  assert.throws(() => parseMathPack(packLessons([malformed])), /Bảng/);
+  const font = fs.readFileSync(path.join(__dirname, '../public/fonts/DejaVuSans.ttf'));
+  for (const mode of ['worksheet', 'solutions']) {
+    const pdf = load('pdf').createPracticePdf(lesson, mode, font);
+    assert.ok(Buffer.from(pdf).includes(Buffer.from(' re S')));
+    if (process.env.MATH_PDF_QA_DIR) {
+      fs.mkdirSync(process.env.MATH_PDF_QA_DIR, { recursive: true });
+      fs.writeFileSync(path.join(process.env.MATH_PDF_QA_DIR, `tables-${mode}.pdf`), pdf);
+    }
+  }
+});
+
+test('grade 3 multiplication and division components have correct answers and safe insertion', () => {
+  const { multiplicationDivisionLesson: lesson, addMultiplicationDivisionLesson: add } = load('multiplication-division-lesson');
+  assert.equal(lesson.grade, 3);
+  assert.equal(lesson.semester, '1');
+  const extra = lesson.exercises.filter(e => e.section === 'extra');
+  assert.equal(extra.length, 20);
+  assert.ok(extra[12].table);
+  assert.ok(extra[13].table);
+  for (const e of lesson.exercises) {
+    const match = e.prompt.match(/(□|\d+) ([×:]) (□|\d+) = (\d+)/);
+    if (match) {
+      const a = Number(match[1] === '□' ? e.answer : match[1]);
+      const b = Number(match[3] === '□' ? e.answer : match[3]);
+      if (match[2] === ':') assert.notEqual(b, 0);
+      assert.equal(match[2] === '×' ? a*b : a/b, Number(match[4]), e.id);
+    }
+  }
+  extra.slice(12, 14).forEach((e, index) => {
+    for (let c = 1; c < e.table.rows[0].length; c++) {
+      const [a,b,result] = e.table.solution.map(row => Number(row[c]));
+      assert.equal(index === 0 ? a*b : a/b, result);
+      assert.equal(e.table.rows.filter(row => row[c] === '?').length, 1);
+    }
+  });
+  const existing = { ...lesson, title: 'Edited lesson' };
+  assert.equal(add([existing])[0], existing);
+  const addition = exampleLessons.find(l => l.id === 'math-add-subtract-components-3');
+  const original = [addition];
+  assert.deepEqual(add(original).map(l => l.id), [addition.id, lesson.id]);
+  assert.equal(original.length, 1);
+  const full = Array.from({ length: 100 }, (_, i) => ({ ...addition, id: `custom-${i}` }));
+  assert.equal(add(full), full);
+  const font = fs.readFileSync(path.join(__dirname, '../public/fonts/DejaVuSans.ttf'));
+  for (const mode of ['worksheet', 'solutions']) {
+    const bytes = load('pdf').createPracticePdf(lesson, mode, font);
+    assert.equal(Buffer.from(bytes).subarray(0,8).toString(), '%PDF-1.7');
+  }
+});
+
+test('grade 3 unit fractions cover equal parts and preserve saved lessons', () => {
+  const { unitFractionLesson: lesson, addUnitFractionLesson: add } = load('unit-fraction-lesson');
+  assert.equal(lesson.grade, 3);
+  assert.equal(lesson.semester, '1');
+  assert.equal(lesson.exercises.length, 22);
+  assert.equal(lesson.exercises.filter(e => e.section === 'extra').length, 18);
+  assert.deepEqual(lesson.blocks.filter(b => b.section === 'explore' && b.values[1] === 0).map(b => b.values[0]), [2,3,4,5,6,7,8,9]);
+  const parsed = parseMathPack(packLessons([lesson])).lessons[0];
+  assert.deepEqual(parsed, lesson);
+  for (const values of [[1,0], [10,0], [3,10], [3,-1], [3.5,0], [3]]) {
+    const invalid = structuredClone(lesson);
+    invalid.blocks.find(b => b.visual === 'unit-fraction').values = values;
+    assert.throws(() => parseMathPack(packLessons([invalid])));
+  }
+  const edited = { ...lesson, title: 'Edited' };
+  assert.equal(add([edited])[0], edited);
+  const before = exampleLessons.filter(l => l.id !== lesson.id);
+  const after = add(before);
+  assert.equal(after.filter(l => l.id === lesson.id).length, 1);
+  assert.equal(before.some(l => l.id === lesson.id), false);
+  assert.equal(add(after), after);
+  const full = Array.from({ length: 100 }, (_, i) => ({ ...edited, id: `custom-${i}` }));
+  assert.equal(add(full), full);
+  for (const e of lesson.exercises.filter(e => e.group === 'application')) {
+    const [total, groups] = e.prompt.match(/\d+/g).map(Number);
+    assert.equal(Number(e.answer), total / groups);
+  }
+  const font = fs.readFileSync(path.join(__dirname, '../public/fonts/DejaVuSans.ttf'));
+  for (const mode of ['worksheet', 'solutions']) {
+    const pdf = load('pdf').createPracticePdf(lesson, mode, font);
+    assert.equal(Buffer.from(pdf).subarray(0, 8).toString(), '%PDF-1.7');
+  }
+});
+
+test('grade 3 measurement placement, conversions and library updates', () => {
+  const { measurementLesson: lesson, addMeasurementLesson: add } = load('measurement-lesson');
+  assert.equal(lesson.grade, 3);
+  assert.equal(lesson.semester, '1');
+  assert.equal(lesson.exercises.length, 38);
+  assert.equal(lesson.exercises.filter(e => e.section === 'extra').length, 34);
+  assert.deepEqual(parseMathPack(packLessons([lesson])).lessons[0], lesson);
+  const factors = { mm: 1, cm: 10, dm: 100, m: 1000, km: 1000000, g: 1, kg: 1000, ml: 1, l: 1000 };
+  for (const e of lesson.exercises.filter(e => e.group === 'foundation')) {
+    const match = e.prompt.match(/^Điền số: ([\d ]+) (mm|cm|dm|km|m|kg|g|ml|l) =/);
+    assert.ok(match, e.id);
+    const expected = Number(match[1].replaceAll(' ', '')) * factors[match[2]] / factors[e.unit];
+    assert.equal(Number(e.answer), expected, e.id);
+  }
+  const edited = { ...lesson, title: 'Edited' };
+  assert.equal(add([edited])[0], edited);
+  const unit = load('unit-fraction-lesson').unitFractionLesson;
+  const original = [unit];
+  assert.deepEqual(add(original).map(l => l.id), [unit.id, lesson.id]);
+  assert.equal(original.length, 1);
+  const full = Array.from({ length: 100 }, (_, i) => ({ ...edited, id: `custom-${i}` }));
+  assert.equal(add(full), full);
+  const { removeUnitFractionDrawingQuestions: remove } = load('unit-fraction-lesson');
+  const old = { ...unit, exercises: [...unit.exercises, ...['unit-3-e23','unit-3-e24'].map(id => ({ ...unit.exercises[0], id }))] };
+  const cleaned = remove([old, edited]);
+  assert.deepEqual(cleaned[0].exercises, unit.exercises);
+  assert.equal(cleaned[1], edited);
+  assert.deepEqual(remove(cleaned), cleaned);
+  const font = fs.readFileSync(path.join(__dirname, '../public/fonts/DejaVuSans.ttf'));
+  for (const mode of ['worksheet','solutions']) {
+    const pdf = load('pdf').createPracticePdf(lesson, mode, font);
+    assert.equal(Buffer.from(pdf).subarray(0,8).toString(), '%PDF-1.7');
+  }
+});
+
+test('measurement arithmetic and revision preserve placement and custom questions', () => {
+  const { measurementLesson: lesson, reviseMeasurementPractice: revise } = load('measurement-lesson');
+  const calculations = lesson.exercises.filter(e => e.group === 'skills');
+  assert.equal(calculations.length, 12);
+  for (const e of calculations) {
+    const terms = e.prompt.replace(/^Tính: /, '').replace(/\.$/, '').replace(/mm|ml|g/g, '').trim().split(/\s+/);
+    let result = Number(terms[0]);
+    for (let i=1; i<terms.length; i+=2) {
+      const n=Number(terms[i+1]);
+      result = terms[i] === '+' ? result+n : terms[i] === '−' ? result-n : terms[i] === '×' ? result*n : result/n;
+    }
+    assert.equal(Number(e.answer), result, e.id);
+  }
+  const custom = { ...lesson.exercises[0], id: 'teacher-custom' };
+  const old = { ...lesson, grade: 4, semester: '2', title: 'Teacher title', blocks: [], exercises: [{ ...custom, id: 'measure-3-e1' }, custom] };
+  const updated = revise([old])[0];
+  assert.equal(updated.grade, 4);
+  assert.equal(updated.semester, '2');
+  assert.equal(updated.title, 'Teacher title');
+  assert.equal(updated.exercises.at(-1), custom);
+  assert.equal(updated.exercises.some(e => e.id === 'measure-3-e1'), false);
+  assert.deepEqual(revise([updated]), [updated]);
+});
+
+test('measurement word problems include worked answers and migrate once without duplication', () => {
+  const { measurementLesson: lesson, addMeasurementWordProblems: add } = load('measurement-lesson');
+  const words = lesson.exercises.filter(e => e.id.startsWith('measure-word-'));
+  assert.equal(words.length, 6);
+  for (const unit of ['mm','g','ml']) assert.equal(words.filter(e => e.unit === unit).length, 2);
+  for (const e of words) {
+    assert.match(e.solution, /^Bài giải:/);
+    assert.match(e.solution, /Đáp số:/);
+    const rows = load('pdf').printableWordProblemRows(e);
+    assert.ok(rows, e.id);
+    assert.equal(rows.filter(r => r.role === 'heading').length, 1);
+    assert.equal(rows.at(-1).role, 'answer');
+  }
+  const old = { ...lesson, exercises: lesson.exercises.filter(e => !e.id.startsWith('measure-word-')) };
+  assert.deepEqual(add([old])[0].exercises, lesson.exercises);
+  assert.equal(add([lesson])[0], lesson);
+  const edited = { ...words[0], prompt: 'Teacher edited question' };
+  assert.equal(add([{ ...old, exercises: [...old.exercises, edited] }])[0].exercises.find(e => e.id === edited.id), edited);
+});
+
+test('grade 3 midpoint diagrams distinguish between and midpoint and survive exports', async () => {
+  const { midpointLesson: lesson, addMidpointLesson: add } = load('midpoint-lesson');
+  const { parseSegment, segmentGeometry } = load('segment');
+  assert.equal(lesson.grade, 3);
+  assert.equal(lesson.semester, '1');
+  assert.equal(lesson.exercises.length, 24);
+  assert.equal(lesson.exercises.filter(e => e.section === 'extra').length, 20);
+  assert.equal(segmentGeometry([3,3,0,1]).middle, 240);
+  assert.ok(segmentGeometry([2,4,0,1]).middle < 240);
+  for (const values of [[0,2,0,0], [2,2,1,1], [2,2,2,0], [2,2,0], [2,Infinity,0,0]]) assert.throws(() => parseSegment(values));
+  for (const e of lesson.exercises.filter(e => e.segment && e.segment[3] && e.kind === 'choice')) {
+    assert.equal(e.answer, e.segment[0] === e.segment[1] ? 'Có' : 'Không');
+  }
+  assert.deepEqual((await decodeMathLesson(await encodeMathLesson(lesson))).exercises, lesson.exercises);
+  const edited = { ...lesson, title: 'Edited' };
+  assert.equal(add([edited])[0], edited);
+  const original = [exampleLessons[0]];
+  assert.equal(add(original).length, 2);
+  assert.equal(original.length, 1);
+  const full = Array.from({ length: 100 }, (_, i) => ({ ...edited, id: `custom-${i}` }));
+  assert.equal(add(full), full);
+  const font = fs.readFileSync(path.join(__dirname, '../public/fonts/DejaVuSans.ttf'));
+  for (const mode of ['worksheet','solutions']) {
+    const pdf = load('pdf').createPracticePdf(lesson, mode, font);
+    assert.equal(Buffer.from(pdf).subarray(0,8).toString(), '%PDF-1.7');
+    if (process.env.MATH_PDF_QA_DIR) {
+      fs.mkdirSync(process.env.MATH_PDF_QA_DIR, { recursive: true });
+      fs.writeFileSync(path.join(process.env.MATH_PDF_QA_DIR, `midpoint-${mode}.pdf`), pdf);
+    }
+  }
+});
+
+function createMathComponentHooks() {
+  const slots = [];
+  let cursor = 0;
+  let pendingEffects = [];
+  let dirty = false;
+  const sameDependencies = (left, right) =>
+    left !== undefined &&
+    right !== undefined &&
+    left.length === right.length &&
+    left.every((value, index) => Object.is(value, right[index]));
+  const hooks = {
+    useState(initial) {
+      const index = cursor++;
+      if (!slots[index])
+        slots[index] = {
+          kind: 'state',
+          value: typeof initial === 'function' ? initial() : initial,
+        };
+      const slot = slots[index];
+      return [
+        slot.value,
+        (next) => {
+          const value = typeof next === 'function' ? next(slot.value) : next;
+          if (!Object.is(value, slot.value)) {
+            slot.value = value;
+            dirty = true;
+          }
+        },
+      ];
+    },
+    useRef(initial) {
+      const index = cursor++;
+      if (!slots[index]) slots[index] = { kind: 'ref', current: initial };
+      return slots[index];
+    },
+    useMemo(factory, dependencies) {
+      const index = cursor++;
+      const previous = slots[index];
+      if (
+        !previous ||
+        !sameDependencies(previous.dependencies, dependencies)
+      )
+        slots[index] = {
+          kind: 'memo',
+          dependencies,
+          value: factory(),
+        };
+      return slots[index].value;
+    },
+    useCallback(callback, dependencies) {
+      return hooks.useMemo(() => callback, dependencies);
+    },
+    useEffect(effect, dependencies) {
+      const index = cursor++;
+      const previous = slots[index];
+      if (
+        !previous ||
+        !sameDependencies(previous.dependencies, dependencies)
+      )
+        pendingEffects.push(() => {
+          previous?.cleanup?.();
+          const cleanup = effect();
+          slots[index] = {
+            kind: 'effect',
+            dependencies,
+            cleanup: typeof cleanup === 'function' ? cleanup : undefined,
+          };
+        });
+    },
+  };
+  return {
+    hooks,
+    render(component) {
+      for (let attempts = 0; attempts < 20; attempts++) {
+        cursor = 0;
+        pendingEffects = [];
+        dirty = false;
+        const tree = component();
+        for (const run of pendingEffects) run();
+        if (!dirty) return tree;
+      }
+      throw new Error('Math component harness did not settle.');
+    },
+    unmount() {
+      for (const slot of slots) slot?.cleanup?.();
+    },
+  };
+}
+
+function loadMathComponent(file, hooks) {
+  const module = { exports: {} };
+  const jsx = (type, props) => ({ type, props: props || {} });
+  const styles = new Proxy({}, { get: (_, key) => String(key) });
+  const code = ts.transpileModule(
+    fs.readFileSync(
+      path.join(__dirname, '../src/components/math', file),
+      'utf8'
+    ),
+    {
+      compilerOptions: {
+        module: ts.ModuleKind.CommonJS,
+        target: ts.ScriptTarget.ES2022,
+        jsx: ts.JsxEmit.ReactJSX,
+      },
+    }
+  ).outputText;
+  new Function('require', 'module', 'exports', code)(
+    (name) => {
+      if (name === 'react') return hooks;
+      if (name === 'react/jsx-runtime')
+        return { jsx, jsxs: jsx, Fragment: 'Fragment' };
+      if (name === '@/lib/math/lessons') return load('lessons');
+      if (name === '@/lib/math/placement') return load('placement');
+      if (name === './MathLesson.module.css') return { default: styles };
+      if (name === './MathText')
+        return { MathText: 'MathText', Fraction: 'Fraction' };
+      return { default: name.replace(/^\.\//, '') };
+    },
+    module,
+    module.exports
+  );
+  return module.exports.default;
+}
+
+function mathComponentNodes(node, type) {
+  if (!node) return [];
+  if (Array.isArray(node))
+    return node.flatMap((child) => mathComponentNodes(child, type));
+  if (typeof node !== 'object') return [];
+  return [
+    ...(node.type === type ? [node] : []),
+    ...mathComponentNodes(node.props?.children, type),
+  ];
+}
+
+function mathComponentText(node) {
+  if (typeof node === 'string' || typeof node === 'number')
+    return String(node);
+  if (Array.isArray(node)) return node.map(mathComponentText).join('');
+  return node?.props ? mathComponentText(node.props.children) : '';
+}
+
+function teachingModeFixture() {
+  const block = (id, section, title) => ({
+    id,
+    section,
+    title,
+    text: `${title} text`,
+    visual: 'none',
+    values: [],
+  });
+  return {
+    id: 'teaching-mode-fixture',
+    title: 'Teaching mode fixture',
+    grade: 3,
+    semester: '1',
+    topic: 'Hình học',
+    goal: 'Move through one item at a time.',
+    textbook: '',
+    teacherNotes: 'Private',
+    blocks: [
+      block('foundation-block', 'foundation', 'Foundation block'),
+      block('explore-block-1', 'explore', 'Explore block one'),
+      block('explore-block-2', 'explore', 'Explore block two'),
+    ],
+    exercises: [
+      {
+        id: 'foundation-draft',
+        section: 'foundation',
+        kind: 'number',
+        prompt: 'Core draft question',
+        answer: '12',
+        options: [],
+        unit: 'cm',
+        hint: 'Try again.',
+        solution: '12 cm.',
+        simplified: false,
+        tolerance: 0,
+        mistakes: [],
+      },
+    ],
+  };
+}
+
+function createTeachingModeHarness(options = {}) {
+  const runtime = createMathComponentHooks();
+  const listeners = new Map();
+  const data = { ...(options.storage || {}) };
+  const writes = [];
+  let blurCount = 0;
+  class HarnessElement {
+    constructor({ contentEditable = false, interactive = false, navigation = false } = {}) {
+      this.isContentEditable = contentEditable;
+      this.interactive = interactive;
+      this.navigation = navigation;
+    }
+    blur() {
+      blurCount++;
+    }
+    closest(selector) {
+      if (selector === '[data-teaching-navigation]')
+        return this.navigation ? this : null;
+      return this.interactive ? this : null;
+    }
+  }
+  const body = { style: { overflow: 'clip' } };
+  const activeElement = new HarnessElement({ interactive: true });
+  const fakeWindow = {
+    addEventListener(type, listener) {
+      listeners.set(type, listener);
+    },
+    removeEventListener(type, listener) {
+      if (listeners.get(type) === listener) listeners.delete(type);
+    },
+  };
+  const fakeDocument = {
+    body,
+    activeElement,
+    querySelector() {
+      return null;
+    },
+  };
+  const fakeStorage = {
+    getItem(key) {
+      return Object.hasOwn(data, key) ? data[key] : null;
+    },
+    setItem(key, value) {
+      data[key] = value;
+      writes.push([key, value]);
+    },
+  };
+  const replacements = {
+    window: fakeWindow,
+    document: fakeDocument,
+    localStorage: fakeStorage,
+    HTMLElement: HarnessElement,
+    requestAnimationFrame(callback) {
+      callback();
+      return 1;
+    },
+  };
+  const originals = new Map();
+  for (const [name, value] of Object.entries(replacements)) {
+    originals.set(name, Object.getOwnPropertyDescriptor(globalThis, name));
+    Object.defineProperty(globalThis, name, {
+      configurable: true,
+      writable: true,
+      value,
+    });
+  }
+  const Component = loadMathComponent('MathLesson.tsx', runtime.hooks);
+  const props = {
+    lesson: options.lesson || teachingModeFixture(),
+    preview: options.preview || false,
+    initialReviewMode: options.initialReviewMode || false,
+    onBack() {},
+    ...(options.withSave ? { onSave: () => true } : {}),
+  };
+  const render = () => runtime.render(() => Component(props));
+  const button = (label) =>
+    mathComponentNodes(render(), 'button').find((node) =>
+      mathComponentText(node).includes(label)
+    );
+  const click = (label) => {
+    const target = button(label);
+    assert.ok(target, `Missing button: ${label}`);
+    target.props.onClick({ preventDefault() {} });
+    return render();
+  };
+  render();
+  return {
+    body,
+    button,
+    click,
+    data,
+    writes,
+    element: (attributes) => new HarnessElement(attributes),
+    get blurCount() {
+      return blurCount;
+    },
+    render,
+    dispatchKey(key, attributes = {}) {
+      const event = {
+        key,
+        defaultPrevented: false,
+        repeat: false,
+        ctrlKey: false,
+        metaKey: false,
+        altKey: false,
+        shiftKey: false,
+        target: new HarnessElement(),
+        ...attributes,
+        preventDefault() {
+          this.defaultPrevented = true;
+        },
+      };
+      listeners.get('keydown')?.(event);
+      render();
+      return event;
+    },
+    hasKeyListener: () => listeners.has('keydown'),
+    restore() {
+      runtime.unmount();
+      for (const [name, descriptor] of originals) {
+        if (descriptor)
+          Object.defineProperty(globalThis, name, descriptor);
+        else delete globalThis[name];
+      }
+    },
+  };
+}
+
+test('teaching mode toggles review chrome and moves one active item across sections', () => {
+  const harness = createTeachingModeHarness({
+    initialReviewMode: true,
+    withSave: true,
+  });
+  const activeItems = () =>
+    mathComponentNodes(harness.render(), 'div').filter(
+      (node) =>
+        node.props.className === 'teachingItem' && !node.props.hidden
+    );
+  try {
+    assert.equal(harness.button('Giảng bài').props['aria-pressed'], false);
+    assert.ok(harness.button('Kết thúc rà soát'));
+    assert.equal(activeItems().length, 2);
+
+    let tree = harness.click('Giảng bài');
+    assert.equal(harness.button('Thoát giảng bài').props['aria-pressed'], true);
+    assert.match(tree.props.className, /\bteachingMode\b/);
+    assert.equal(harness.button('Kết thúc rà soát'), undefined);
+    assert.equal(harness.body.style.overflow, 'hidden');
+    assert.equal(harness.blurCount, 1);
+    assert.equal(activeItems().length, 1);
+    assert.match(mathComponentText(activeItems()[0]), /Foundation block/);
+
+    harness.click('Tiếp →');
+    assert.equal(activeItems().length, 1);
+    assert.equal(mathComponentNodes(activeItems()[0], 'Exercise').length, 1);
+    assert.match(mathComponentText(harness.render()), /Câu 1\/1/);
+
+    harness.click('Tiếp →');
+    assert.equal(activeItems().length, 1);
+    assert.match(mathComponentText(activeItems()[0]), /Explore block one/);
+    assert.match(mathComponentText(harness.render()), /Nội dung 1\/2/);
+
+    harness.click('← Trước');
+    assert.equal(mathComponentNodes(activeItems()[0], 'Exercise').length, 1);
+    harness.click('Thoát giảng bài');
+    tree = harness.render();
+    assert.doesNotMatch(tree.props.className, /\bteachingMode\b/);
+    assert.equal(harness.body.style.overflow, 'clip');
+    assert.ok(harness.button('Rà soát bài học'));
+    assert.equal(activeItems().length, 2);
+  } finally {
+    harness.restore();
+  }
+});
+
+test('teaching keyboard navigation respects boundaries, modifiers and editable controls', () => {
+  const harness = createTeachingModeHarness();
+  const activeItem = () =>
+    mathComponentNodes(harness.render(), 'div').find(
+      (node) => node.props.className === 'teachingItem' && !node.props.hidden
+    );
+  const activeText = () => mathComponentText(activeItem());
+  try {
+    harness.click('Giảng bài');
+    assert.equal(harness.hasKeyListener(), true);
+    assert.match(activeText(), /Foundation block/);
+
+    let event = harness.dispatchKey('ArrowLeft');
+    assert.equal(event.defaultPrevented, false);
+    assert.match(activeText(), /Foundation block/);
+
+    event = harness.dispatchKey('ArrowRight', { ctrlKey: true });
+    assert.equal(event.defaultPrevented, false);
+    assert.match(activeText(), /Foundation block/);
+
+    event = harness.dispatchKey('ArrowRight', {
+      target: harness.element({ interactive: true }),
+    });
+    assert.equal(event.defaultPrevented, false);
+    assert.match(activeText(), /Foundation block/);
+
+    event = harness.dispatchKey('ArrowRight', {
+      target: harness.element({ contentEditable: true }),
+    });
+    assert.equal(event.defaultPrevented, false);
+    assert.match(activeText(), /Foundation block/);
+
+    event = harness.dispatchKey('ArrowRight', {
+      target: harness.element({ interactive: true, navigation: true }),
+    });
+    assert.equal(event.defaultPrevented, true);
+    assert.equal(
+      mathComponentNodes(activeItem(), 'Exercise').some(
+        (node) => node.props.exercise.id === 'foundation-draft'
+      ),
+      true
+    );
+
+    event = harness.dispatchKey('ArrowLeft', { repeat: true });
+    assert.equal(event.defaultPrevented, false);
+    assert.match(mathComponentText(harness.render()), /Câu 1\/1/);
+    event = harness.dispatchKey('ArrowLeft');
+    assert.equal(event.defaultPrevented, true);
+    assert.match(activeText(), /Foundation block/);
+
+    harness.click('Tự kiểm tra');
+    assert.equal(harness.button('Tiếp →').props.disabled, true);
+    event = harness.dispatchKey('ArrowRight');
+    assert.equal(event.defaultPrevented, false);
+    assert.match(mathComponentText(harness.render()), /Tự kiểm tra · Nội dung/);
+
+    event = harness.dispatchKey('Escape', {
+      target: harness.element({ interactive: true }),
+    });
+    assert.equal(event.defaultPrevented, false);
+    assert.ok(harness.button('Thoát giảng bài'));
+    event = harness.dispatchKey('Escape');
+    assert.equal(event.defaultPrevented, true);
+    assert.ok(harness.button('Giảng bài'));
+    assert.equal(harness.hasKeyListener(), false);
+  } finally {
+    harness.restore();
+  }
+});
+
+test('unfinished core answers emit immediately and survive teaching navigation and reload', () => {
+  const changes = [];
+  const timers = [];
+  const cleared = [];
+  const originalSetTimeout = globalThis.setTimeout;
+  const originalClearTimeout = globalThis.clearTimeout;
+  globalThis.setTimeout = (callback, delay) => {
+    assert.equal(delay, 800);
+    const timer = { callback };
+    timers.push(timer);
+    return timer;
+  };
+  globalThis.clearTimeout = (timer) => cleared.push(timer);
+  const exerciseRuntime = createMathComponentHooks();
+  const Exercise = loadMathComponent('Exercise.tsx', exerciseRuntime.hooks);
+  const exercise = teachingModeFixture().exercises[0];
+  try {
+    const tree = exerciseRuntime.render(() =>
+      Exercise({
+        exercise,
+        result: {
+          answer: '1',
+          unit: 'cm',
+          assisted: true,
+          solved: false,
+          attempted: true,
+        },
+        onChange: (result) => changes.push(result),
+      })
+    );
+    const input = mathComponentNodes(tree, 'input').find(
+      (node) => node.props.id === 'foundation-draft-answer'
+    );
+    input.props.onChange({ target: { value: '12' } });
+    assert.deepEqual(changes, [
+      {
+        answer: '12',
+        unit: 'cm',
+        assisted: true,
+        solved: false,
+        attempted: true,
+      },
+    ]);
+    assert.equal(timers.length, 1);
+  } finally {
+    exerciseRuntime.unmount();
+    globalThis.setTimeout = originalSetTimeout;
+    globalThis.clearTimeout = originalClearTimeout;
+  }
+  assert.deepEqual(cleared, timers);
+
+  const first = createTeachingModeHarness();
+  let saved;
+  try {
+    first.click('Giảng bài');
+    first.click('Tiếp →');
+    const exerciseNode = mathComponentNodes(first.render(), 'Exercise').find(
+      (node) => node.props.exercise.id === 'foundation-draft'
+    );
+    const draft = {
+      answer: '12',
+      unit: 'cm',
+      assisted: true,
+      solved: false,
+      attempted: true,
+    };
+    exerciseNode.props.onChange(draft);
+    first.render();
+    first.click('Tiếp →');
+    first.click('← Trước');
+    assert.deepEqual(
+      mathComponentNodes(first.render(), 'Exercise').find(
+        (node) => node.props.exercise.id === 'foundation-draft'
+      ).props.result,
+      draft
+    );
+    const key = 'lima-math-progress-v1:teaching-mode-fixture';
+    saved = { [key]: first.data[key] };
+    assert.deepEqual(JSON.parse(first.data[key]).results['foundation-draft'], draft);
+  } finally {
+    first.restore();
+  }
+
+  const reloaded = createTeachingModeHarness({ storage: saved });
+  try {
+    assert.deepEqual(
+      mathComponentNodes(reloaded.render(), 'Exercise').find(
+        (node) => node.props.exercise.id === 'foundation-draft'
+      ).props.result,
+      {
+        answer: '12',
+        unit: 'cm',
+        assisted: true,
+        solved: false,
+        attempted: true,
+      }
+    );
+  } finally {
+    reloaded.restore();
+  }
 });

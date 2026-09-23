@@ -1,3 +1,9 @@
+import { midpointLesson } from './midpoint-lesson';
+import { measurementLesson } from './measurement-lesson';
+import { unitFractionLesson } from './unit-fraction-lesson';
+import { multiplicationDivisionLesson } from './multiplication-division-lesson';
+import { additionSubtractionLesson } from './addition-subtraction-lesson';
+import { numberLineLesson } from './number-line-lesson';
 import { fractionOrderLesson } from './fraction-order-lesson';
 import { consolidateFractionLessons } from './fraction-consolidation';
 import { primaryFractionLessons } from './primary-fraction-lessons';
@@ -159,92 +165,11 @@ export const legacyExampleLessons: MathLessonData[] = [
       ...fractionExtraExercises,
     ],
   },
-  {
-    id: 'math-arithmetic-3',
-    title: 'Nhân số có hai chữ số với số có một chữ số',
-    grade: 3,
-    topic: 'Số học',
-    goal: 'Tách chục và đơn vị để hiểu phép nhân có nhớ.',
-    textbook,
-    teacherNotes:
-      'Cho học sinh thử giải thích vì sao 18 đơn vị bằng 1 chục và 8 đơn vị.',
-    blocks: [
-      b(
-        'a-pre',
-        'foundation',
-        'Ôn bảng nhân',
-        'Em cần nhớ bảng nhân 3 và cách tách số thành chục, đơn vị.'
-      ),
-      b(
-        'a-discover',
-        'explore',
-        'Tách số để tính dễ hơn',
-        'Có 3 hộp bút, mỗi hộp 26 chiếc. Tổng số bút là 26 × 3.\n26 gồm 2 chục và 6 đơn vị.'
-      ),
-      b(
-        'a-step1',
-        'example',
-        '1. Nhân phần đơn vị',
-        '6 × 3 = 18. Ta được 18 đơn vị.'
-      ),
-      b(
-        'a-step2',
-        'example',
-        '2. Nhân phần chục',
-        '20 × 3 = 60. Ta được 6 chục.'
-      ),
-      b(
-        'a-step3',
-        'example',
-        '3. Gộp lại',
-        '26 × 3 = 60 + 18 = 78.\nĐáp số: 78 chiếc bút.'
-      ),
-      b(
-        'a-guide',
-        'guided',
-        'Cùng tính 24 × 3',
-        '20 × 3 = 60 và 4 × 3 = 12. Hãy cộng hai kết quả.'
-      ),
-    ],
-    exercises: [
-      e(
-        'a-check',
-        'foundation',
-        'number',
-        '6 × 3 bằng bao nhiêu?',
-        '18',
-        '6 + 6 + 6.',
-        '6 × 3 = 18.'
-      ),
-      e(
-        'a-try',
-        'guided',
-        'number',
-        '24 × 3 = ?',
-        '72',
-        'Cộng 60 với 12.',
-        '24 × 3 = 60 + 12 = 72.'
-      ),
-      e(
-        'a-q1',
-        'practice',
-        'number',
-        '32 × 2 = ?',
-        '64',
-        'Tách 32 thành 30 + 2.',
-        '30 × 2 + 2 × 2 = 60 + 4 = 64.'
-      ),
-      e(
-        'a-q2',
-        'practice',
-        'number',
-        '18 × 4 = ?',
-        '72',
-        'Tách 18 thành 10 + 8.',
-        '10 × 4 + 8 × 4 = 40 + 32 = 72.'
-      ),
-    ],
-  },
+  additionSubtractionLesson,
+  multiplicationDivisionLesson,
+  unitFractionLesson,
+  measurementLesson,
+  midpointLesson,
   {
     id: 'math-rectangle-4',
     title: 'Chu vi và diện tích hình chữ nhật',
@@ -424,6 +349,7 @@ export const legacyExampleLessons: MathLessonData[] = [
   ...fractionLessons,
   ...primaryFractionLessons,
   fractionOrderLesson,
+  numberLineLesson,
 ];
 
 export const exampleLessons = consolidateFractionLessons(legacyExampleLessons, legacyExampleLessons);

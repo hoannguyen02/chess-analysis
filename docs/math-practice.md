@@ -19,7 +19,17 @@ Old built-in examples with combined question/guidance text are upgraded at the d
 
 Write `1/2` or `(1 × 3)/(2 × 3)` in lesson text; the student renderer shows stacked fractions. This renderer is for fractions, not arbitrary LaTeX or symbolic algebra. Equation exercises currently ask for a numeric solution. There is no automatic proof grading.
 
+In web lesson text, the stored `□` placeholder renders as a small square with a centered `?`, including numerator/denominator blanks and worked examples. The shared style vertically centers the box with digits/operators in both regular examples and bold question headings, including earlier addition/subtraction lessons. Screen readers announce “Ô trống cần điền”. Worksheet and solutions PDFs also draw a vector square with a centered question mark, including fraction blanks, summaries and solutions. PDF boxes retain the original marker's text width and carry `ActualText` for the stored `□`; ordinary question punctuation is unchanged. This is presentation only: saved/imported/shared question text, answer checking and progress fingerprints are unchanged.
+
+In solution PDFs, the shared `printableShortSolution` formatter shows `Đáp án: …` first for numeric, fraction and multiple-choice exercises. By default, working containing an equality uses `Cách làm`; other reasoning uses `Giải thích`. Authors can override this with optional `solutionStyle` (`method`, `explanation`, `answer-only`) in the lesson editor, JSON or workbook. Only explicit answer-only content or an exact duplicate of the stored answer is omitted; other authored reasoning is preserved. Answer-only choices include the option text, for example `Đáp án: B. Một phần tư`. The setting survives saving, sharing and Excel round trips. Untouched historical unit-fraction examples receive meaningful equal-parts explanations; teacher edits are preserved. Tables and written tasks retain their model solutions; word problems retain the approved `Bài giải`/`Đáp số` layout. Worksheets never show this answer block.
+
 Save is explicit. Preview returns to the draft. Duplication gets new identifiers. Deletion has confirmation and one-level undo. Existing shared copies are independent of edits/deletion.
+
+## Teaching mode
+
+Open a lesson and choose **Giảng bài** to use the full-viewport teaching view. It removes the surrounding site chrome, keeps section and Previous/Next navigation visible, and presents one teaching block or core exercise at a time. Use the left section rail, the persistent buttons, or the Left/Right arrow keys to change steps; Escape exits teaching mode. Form fields, exercise buttons and dialogs retain their own keyboard behavior. Returning to an earlier step preserves its current hint, solution and draft answer.
+
+Teaching navigation does not mark content as read or change completion by itself. Answering an exercise still uses the lesson's normal progress storage. Extra practice keeps its existing one-question-at-a-time numbered navigation while the teaching shell stays compact; PDF controls are hidden until teaching mode is closed.
 
 ## Storage and sharing
 
@@ -57,6 +67,8 @@ Extra progress uses `lima-math-extra-v1:<lessonId>` and an exact question-conten
 
 Both worksheet and solutions PDFs omit the practice-group headings (Củng cố kiến thức, Luyện kỹ năng, Vận dụng, Thử thách) and their reserved height. Question order and numbering are unchanged. Saved groups and browser practice remain intact; the worksheet's separate Kiến thức cần nhớ summary is also preserved.
 
+Every newly exported worksheet and solutions PDF includes the approved light `LIMA Math` watermark by default, for all grades and custom/imported/future lessons. Each page has six repeated 36 pt labels rotated 30 degrees, in 5% grey (RGB 0.95 on white), drawn behind the content and marked as decorative PDF artifacts. The embedded font, selectable question text, vector diagrams, header/footer, spacing and page breaks are unchanged; no external service or image conversion is used. This is a branding deterrent, not a guarantee against editing or removal. Existing downloaded PDFs need to be exported again to receive the watermark.
+
 Solutions PDFs use the Grade 4 **Tìm phân số của một số** workbook layout as the shared word-problem standard, for every grade and both existing and future lessons. A centered `Bài giải:` heading occupies its own line. Explanatory sentences and calculations are centered; `Đáp số: ...` starts on the next row beneath the midpoint of the final calculation, while question prompts stay left-aligned. Single-step examples retain the three body lines: `An được số điểm là:` / `4 × 5 + 3 × (-2) = 14 (điểm)` / `Đáp số: 14 điểm`. Each purely numeric equality chain displays its original expression and final result directly, e.g. `3/4 : 1/8 = 6 (chai).` Separate calculation steps and all explanations are retained, including prose containing an equation. The question and solution stay together when they fit on a page. Longer solutions wrap within the margins and keep the heading with the first step, explanation/calculation pairs together, and the answer with the final calculation where possible. Decimals in generated solutions use a comma, with parentheses around the unit only on the calculation line.
 
 The left edge of `Đáp số` is anchored halfway across the preceding calculation's last rendered line, not at its right end or the page margin. Since calculations are centered, this midpoint stays consistent for stacked fractions and wrapped lines. The answer remains on its own row and extends to the right; it shifts left only enough to avoid the right margin when necessary. Answers wider than the available page content wrap at the page margins.
@@ -88,6 +100,7 @@ Owned library lessons have **Sửa nhanh** beside metadata, each teaching block,
 ### Natural numbers and divisibility lessons
 
 Grade 6 content is split into two built-in lessons:
+
 - Số tự nhiên: tập hợp và phép tính — 5 regular and 15 extra exercises.
 - Tính chia hết, số nguyên tố, ƯCLN và BCNN — 8 regular and 17 extra exercises,
   with independent practice, sharing, editing and worksheet/solution exports.
@@ -99,6 +112,7 @@ the move, the source stays intact. The earlier common-factor migration runs befo
 the split for existing libraries.
 
 Teaching references (consulted 2026-09-21; examples are independently authored):
+
 - https://hoc24.vn/ly-thuyet/bai-11-uoc-chung-uoc-chung-lon-nhat.85320
 - https://olm.vn/chu-de/boi-chung-va-boi-chung-nho-nhat-3781020575
 
@@ -160,3 +174,142 @@ Research reference (consulted 2026-09-22): Mathematics curriculum, Grade 6 fract
 and decimal requirements, PDF pages 124–125. This lesson combines those skills;
 it does not claim to be a verbatim textbook lesson.
 https://static3.luatvietnam.vn/genfile/contentmix/2018/12/26/noi-dung-mix-thong-tu-so-32-2018-tt-bgddt-110829.pdf
+
+### Grade 7 number line
+
+`number-line-lesson.ts` adds **Biểu diễn số trên trục số** under Số hữu tỉ, with
+6 SVG number-line examples, 4 regular exercises and 20 extra exercises (including
+one self-assessed drawing task). Online diagrams are editable using the new
+`number-line` block visual. Its values are `[left, right, divisionsPerUnit, point]`:
+integer endpoints include zero; 1–12 subdivisions per unit; at most 60 intervals;
+the marked point must lie on a subdivision within the range. PDF practice uses
+self-contained textual instructions; the drawing task is completed on paper.
+The `lima-math-number-line-v1` migration adds the lesson once and preserves edits.
+
+Solution PDFs now include vector number lines for exercises 16–20: reflection
+through zero, leftmost/rightmost values, common subdivisions, and plotting a set
+of numbers. Text explanations stay visible above each diagram. Tick spacing is
+uniform, fraction/mixed-number labels retain their written form, and the selected
+answer has a double-ring point so it remains identifiable in black-and-white.
+All numeric labels sit below the axis. Point names such as A and A′ sit above,
+centered on the same x-coordinate as their point and value; they are not printed
+as `A = value`. A plotted integer replaces the corresponding ordinary tick label
+so values such as -1 and 0 appear only once. Tick and point labels share collision
+layout, with close numeric labels staggered only below the axis.
+Diagrams are never printed in the worksheet. The exporter reserves room for the
+question, explanation and diagram together when they fit on a page.
+
+The optional exercise field `solutionNumberLine` is reusable in JSON/Excel packs:
+`{ min: -2, max: 2, divisions: 2, points: [{ value: "-3/2", name: "A" },
+{ value: "3/2", name: "A′", emphasis: true }], caption: "..." }`.
+Point values may be integers, finite decimals, fractions or mixed numbers. The
+validated range includes zero, has integer endpoints, 1–12 divisions per unit,
+at most 60 intervals and 1–12 distinct points on ticks. Labels are positioned
+from their numeric value, not a separate coordinate that could disagree.
+Closely spaced labels use separate rows with leader lines. The field survives
+JSON, Excel and sharing; `null` explicitly disables the diagram. Existing saved
+copies without this field receive defaults only when their ID, prompt, answer,
+options and solution still match the built-in exercise, without changing storage.
+No diagram is guessed from question phrases or applied to edited questions.
+
+Reference: OLM Grade 7, Biểu diễn số hữu tỉ trên trục số (reviewed 2026-09-22):
+https://olm.vn/chu-de/bieu-dien-so-huu-ti-tren-truc-so-1487903
+
+### Grade 3: addition and subtraction components
+
+The default multiplication sample `math-arithmetic-3` is replaced by
+`math-add-subtract-components-3` (Tìm thành phần trong phép cộng, phép trừ).
+It includes missing addends, minuends and subtrahends, checking by substitution,
+and 24 exercises (20 extra practice). Content uses whole numbers within 1,000.
+Reference: [Toán 3 Kết nối tri thức teacher training material](https://api.iseebooks.vn/upload/Tap%20huan/Bo%20ket%20noi/Lop%203/Toan/SGV3.pdf).
+The one-time browser migration replaces only the old sample ID; other lessons
+and any existing edited copy of the new lesson are preserved.
+
+### Semester placement
+
+Lesson metadata has an optional `semester` field (`"1"` or `"2"`). Missing or
+blank values mean **Chưa phân loại**, so older libraries require no migration.
+Edit **Lớp** and **Học kỳ** under lesson information. Placement changes retain
+lesson and exercise IDs, preserving progress. Library filters combine grade,
+semester, topic and search; changing grade or semester clears the topic filter
+and updates its options. JSON, shared lessons and Excel preserve semester;
+PDFs include it when assigned. Existing shared links remain snapshots of the
+lesson at the time they were created, so share again to distribute a new placement.
+
+Grade 3 extra practice now replaces the two former challenge questions with
+addition and subtraction component tables at positions 13 and 14, before the
+word problems. Each table has five independent calculations with one `?` per
+column. Tables are written exercises: learners record answers and compare with
+the filled solution table. `table.rows` and `table.solution` round trip through
+JSON, sharing and Excel; both can be edited in the exercise editor (one row per
+line, cells separated by `|`). PDFs keep each table together and omit extra
+writing lines for these fill-in exercises. A one-time upgrade removes only the
+two specified exercise IDs and preserves existing table edits and other content.
+Reference: Toán 3 Kết nối tri thức, Bài 3, “Tìm thành phần trong phép cộng,
+phép trừ” (pages 11–13); new table values are independently authored.
+
+### Grade 3, semester 1: multiplication and division components
+
+`math-multiply-divide-components-3` adds **Tìm thành phần trong phép nhân,
+phép chia** next to the addition/subtraction lesson. It covers missing factors,
+dividends and divisors with exact division, worked examples and substitution
+checks. There are 4 lesson exercises and 20 extra exercises: 12 short questions,
+2 component tables, then 6 word problems. It uses multiplication tables up to 9,
+includes a zero product with a nonzero known factor, and avoids division by zero
+or indeterminate missing divisors. A one-time library update adds the lesson
+without replacing existing copies or their edits.
+
+### Grade 3, semester 1: Một phần mấy
+
+`math-unit-fractions-3` introduces 1/2 through 1/9 as one of equal parts of a
+shape, and 1/2 through 1/5 of equal groups of objects. Source: Toán 3 Kết nối
+tri thức teacher guide, Bài 14 (tập 1):
+https://api.iseebooks.vn/upload/Tap%20huan/Bo%20ket%20noi/Lop%203/Toan/TLGV.pdf.
+The 22 exercises include reading/writing, recognizing equal parts and grouping.
+The two former drawing exercises are removed from defaults and saved libraries. No fraction arithmetic is introduced. The new
+`unit-fraction` block visual uses `[parts, objectsPerGroup]`: 2–9 equal parts,
+0 for a shaded strip or 1–9 dots per group. It is editable and survives all
+lesson import/export formats. Existing libraries receive the lesson once;
+existing edited copies are preserved. PDF exercises are self-contained text
+and drawing tasks; the online teaching illustrations remain in lesson blocks.
+
+### Grade 3, semester 1: measurement units
+
+`math-measurement-units-3` adds **Một số đơn vị đo độ dài, khối lượng, dung tích**,
+covering mm, g and ml with explicit connections to cm, dm, m, km, kg and l.
+Source: [OLM Toán 3, Chủ đề 5, Bài 30–32](https://olm.vn/bg/toan-3), aligned to
+Kết nối tri thức tập 1. The authored lesson has 10 teaching blocks and 24
+exercises (4 lesson checks plus 20 extra questions), including unit selection,
+conversion, comparison and varied word problems. It avoids decimals and
+conversions between unlike quantities. A one-time migration adds it without
+replacing an existing edited copy. A separate one-time migration removes the
+two requested drawing exercise IDs from saved copies of Một phần mấy.
+
+The measurement lesson now focuses on direct practice: 8 fill-in equalities,
+12 same-unit calculations (including left-to-right addition/subtraction), and
+8 multiple-choice estimates, plus 4 lesson checks (32 exercises total).
+Mixed-unit word problems are replaced. The one-time revision keeps lesson
+identity, grade/semester placement and custom exercise IDs; new built-in
+exercise IDs avoid inheriting results from replaced questions.
+
+The measurement lesson additionally includes six word problems (two each for
+mm, g and ml), appended after the direct practice: 34 extra exercises and 38
+overall. Worked answers explicitly include “Bài giải”, a calculation with units
+and “Đáp số”; PDF layout recognizes these as structured word-problem solutions.
+A one-time migration appends missing questions without overwriting edited copies.
+
+### Grade 3, semester 1: points and midpoints
+
+`math-midpoint-3` adds **Điểm ở giữa, trung điểm của đoạn thẳng** with 10 teaching
+blocks and 24 exercises (20 extra), including six word problems with worked
+solutions and final answers. It explicitly distinguishes collinearity,
+betweenness and equal halves; equal distance alone is insufficient.
+Reference: [OLM, Điểm ở giữa. Trung điểm của đoạn thẳng](https://olm.vn/chu-de/diem-o-giua-trung-diem-cua-doan-thang-2061561479), Toán 3 Kết nối tri thức Bài 16.
+
+Segment diagrams use four values: left/right relative lengths (1–20), whether
+M is off AB (0/1), and whether to show lengths in cm (0/1). Off-line diagrams
+cannot display length labels. They are supported in teaching blocks and optional
+exercise `segment` metadata, with validation, editor controls, JSON/Excel/share
+round trips and worksheet/answer PDF drawing. Displayed diagrams are illustrative,
+not physical rulers; questions use supplied lengths. A one-time library update
+adds the lesson while preserving existing edited copies.

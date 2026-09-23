@@ -98,6 +98,17 @@ export default function LessonEditor({
               </select>
             </label>
             <label>
+              Học kỳ
+              <select
+                value={draft.semester ?? ''}
+                onChange={(e) => update({ semester: (e.target.value || undefined) as MathLessonData['semester'] })}
+              >
+                <option value="">Chưa phân loại</option>
+                <option value="1">Học kỳ 1</option>
+                <option value="2">Học kỳ 2</option>
+              </select>
+            </label>
+            <label>
               Chủ đề
               <input
                 list="math-topics"
@@ -244,7 +255,9 @@ export default function LessonEditor({
                       block(b.id, {
                         visual: e.target.value as MathBlock['visual'],
                         values:
-                          e.target.value === 'fractions'
+                          e.target.value === 'segment' ? [3, 3, 0, 1] : e.target.value === 'unit-fraction' ? [4, 0] : e.target.value === 'number-line'
+                            ? [-2, 2, 4, -0.75]
+                            : e.target.value === 'fractions'
                             ? [1, 2, 1, 3]
                             : e.target.value === 'rectangle'
                               ? [8, 5]
@@ -253,13 +266,18 @@ export default function LessonEditor({
                     }
                   >
                     <option value="none">Không có</option>
+                    <option value="segment">Điểm ở giữa / trung điểm (A, M, B)</option>
+                    <option value="unit-fraction">Một phần mấy (băng giấy / nhóm đồ vật)</option>
                     <option value="fractions">Hai thanh phân số</option>
+                    <option value="number-line">Trục số</option>
                     <option value="rectangle">Hình chữ nhật (cm)</option>
                   </select>
                 </label>
                 {b.values.map((value, i) => (
                   <label key={i}>
-                    {b.visual === 'rectangle'
+                    {b.visual === 'segment' ? ['AM (cm)', 'MB (cm)', 'M lệch hàng (0/1)', 'Hiện độ dài (0/1)'][i] : b.visual === 'unit-fraction' ? ['Số phần bằng nhau', 'Số đồ vật mỗi nhóm (0: băng giấy)'][i] : b.visual === 'number-line'
+                      ? ['Đầu trái', 'Đầu phải', 'Số phần mỗi đơn vị', 'Giá trị điểm A'][i]
+                      : b.visual === 'rectangle'
                       ? ['Chiều dài', 'Chiều rộng'][i]
                       : [
                           'Tử số thứ nhất',
@@ -269,9 +287,9 @@ export default function LessonEditor({
                         ][i]}
                     <input
                       type="number"
-                      min={b.visual === 'rectangle' || i % 2 ? 1 : 0}
-                      max={b.visual === 'fractions' ? 24 : 1000}
-                      step={b.visual === 'rectangle' ? 'any' : 1}
+                      min={b.visual === 'segment' ? (i < 2 ? 1 : 0) : b.visual === 'unit-fraction' ? (i === 0 ? 2 : 0) : b.visual === 'number-line' ? (i === 2 ? 1 : -1000) : b.visual === 'rectangle' || i % 2 ? 1 : 0}
+                      max={b.visual === 'segment' ? (i < 2 ? 20 : 1) : b.visual === 'unit-fraction' ? 9 : b.visual === 'fractions' ? 24 : 1000}
+                      step={b.visual === 'rectangle' || (b.visual === 'number-line' && i === 3) ? 'any' : 1}
                       required
                       value={value}
                       onChange={(e) =>
@@ -642,6 +660,18 @@ export default function LessonEditor({
                     }
                   />
                 </label>
+                {e.segment && <label>
+                  Hình A, M, B: AM; MB; lệch hàng (0/1); hiện độ dài (0/1)
+                  <input value={e.segment.join('; ')} onChange={event => exercise(e.id, { segment: event.target.value.split(';').map(Number) })} />
+                </label>}
+                {e.table && (['rows', 'solution'] as const).map(field => (
+                  <label key={field}>
+                    {field === 'rows' ? 'Bảng đề bài (dùng ? cho ô trống)' : 'Bảng đáp án'}
+                    <small>Mỗi dòng là một hàng; ngăn các ô bằng dấu |.</small>
+                    <textarea rows={3} value={e.table![field].map(row => row.join(' | ')).join('\n')}
+                      onChange={event => exercise(e.id, { table: { ...e.table!, [field]: event.target.value.split('\n').map(row => row.split('|').map(cell => cell.trim())) } })} />
+                  </label>
+                ))}
                 <label>
                   Lời giải sau khi kiểm tra
                   <textarea
@@ -654,6 +684,15 @@ export default function LessonEditor({
                     }
                   />
                 </label>
+                {e.kind !== 'written' && !e.table && <label>
+                  Trình bày lời giải ngắn trong PDF
+                  <select value={e.solutionStyle || ''} onChange={event => exercise(e.id, { solutionStyle: (event.target.value || undefined) as MathExercise['solutionStyle'] })}>
+                    <option value="">Tự động: phép tính hoặc giải thích</option>
+                    <option value="method">Cách làm</option>
+                    <option value="explanation">Giải thích</option>
+                    <option value="answer-only">Chỉ đáp án (không lặp lời giải)</option>
+                  </select>
+                </label>}
               </div>
               <h3>Lỗi thường gặp</h3>
               {e.mistakes.map((mistake, i) => (

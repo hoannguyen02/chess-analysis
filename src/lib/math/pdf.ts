@@ -1,7 +1,11 @@
+import { segmentGeometry } from './segment';
 import { LIMA_LOGO_PDF } from '../brand/logo';
+import { upgradeUnitFractionSolutions } from './unit-fraction-lesson';
 import { LIMA_CONTACT } from '../brand/contact';
 import { getKnowledgeSummary } from './knowledge-summary';
 import { waitForPdfTask } from './pdf-task';
+import { withNumberLineSolution } from './number-line-lesson';
+import { numberLineGeometry, SolutionNumberLine } from './solution-number-line';
 import {
   cancellationParts,
   cancellationText,
@@ -235,13 +239,42 @@ export function printableWordProblemRows(
 
 export type PracticePdfOptions = { includeKnowledgeSummary?: boolean };
 
+/** Shared answer-first presentation for short-answer and choice exercises.
+ * Word problems keep their dedicated workbook rows; tables/written tasks have
+ * model solutions rather than a single automatically checked answer.
+ */
+export function printableShortSolution(exercise: MathExercise): string {
+  if (exercise.table || exercise.kind === 'written')
+    return `${exercise.kind === 'written' ? 'Lời giải mẫu' : 'Lời giải'}: ${exercise.solution}`;
+  const optionIndex = exercise.options.indexOf(exercise.answer);
+  const normalized = (text: string) => text.trim().replace(/[.!。]+$/u, '').toLocaleLowerCase('vi');
+  const answerOnly = exercise.solutionStyle === 'answer-only' || normalized(exercise.solution) === normalized(exercise.answer);
+  const answer = exercise.kind === 'choice'
+    ? (optionIndex >= 0 ? `${String.fromCharCode(65 + optionIndex)}${answerOnly ? `. ${exercise.answer}` : ''}` : exercise.answer)
+    : `${exercise.answer}${exercise.unit ? ` ${exercise.unit}` : ''}`;
+  const heading = `Đáp án: ${answer}`;
+  // Only an explicit author decision (or exact duplicate) can hide working.
+  if (answerOnly)
+    return heading;
+  const style = exercise.solutionStyle ?? (/=/u.test(exercise.solution) ? 'method' : 'explanation');
+  return `${heading}\n${style === 'method' ? 'Cách làm' : 'Giải thích'}: ${exercise.solution}`;
+}
+
 export function createPracticePdf(
   input: MathLessonData,
   mode: 'worksheet' | 'solutions',
   fontBytes: Uint8Array,
   options: PracticePdfOptions = {}
 ): Uint8Array {
-  const lesson = parseMathPack(packLessons([input])).lessons[0],
+  input = upgradeUnitFractionSolutions([input])[0];
+  const lesson = parseMathPack(
+      packLessons([
+        {
+          ...input,
+          exercises: input.exercises.map(withNumberLineSolution),
+        },
+      ])
+    ).lessons[0],
     exercises = lesson.exercises.filter((e) => e.section === 'extra');
   if (!exercises.length) throw new Error('Bài học chưa có bài tập thêm.');
   const font = fontMetrics(fontBytes),
@@ -270,6 +303,32 @@ export function createPracticePdf(
     color = '0.09 0.14 0.24'
   ) {
     measure(text, size);
+    if (text.includes('□')) {
+      for (const part of text.split(/(□)/u)) {
+        const advance = measure(part, size);
+        if (part === '□') {
+          // Keep the original placeholder's advance so wrapping is unchanged.
+          // Center on the digit/capital height, not on the text baseline.
+          const side = Math.min(size * 0.95, advance - size * 0.08);
+          const centerTop = top + size * 0.635;
+          const questionSize = size * 0.7;
+          page.push(
+            '/Span << /ActualText <FEFF25A1> >> BDC',
+            `q ${color} RG ${num(size * 0.06)} w ${num(x + (advance - side) / 2)} ${num(H - centerTop - side / 2)} ${num(side)} ${num(side)} re S Q`
+          );
+          draw(
+            '?',
+            x + (advance - measure('?', questionSize)) / 2,
+            centerTop - questionSize * 0.635,
+            questionSize,
+            color
+          );
+          page.push('EMC');
+        } else if (part) draw(part, x, top, size, color);
+        x += advance;
+      }
+      return;
+    }
     const glyphs = Array.from(text.normalize('NFC'), (c) =>
       hex(font.glyph(c.codePointAt(0)!))
     ).join('');
@@ -342,6 +401,25 @@ export function createPracticePdf(
   function newPage() {
     page = [];
     pages.push(page);
+    // Approved preview: six 36 pt marks, rotated 30°, at 5% grey on white.
+    // Paint behind all content without advancing y or changing pagination.
+    // Mark as a decorative artifact; this is branding, not edit protection.
+    const watermark = 'LIMA Math';
+    const watermarkSize = 36;
+    const halfWidth = measure(watermark, watermarkSize) / 2;
+    const glyphs = Array.from(watermark, (c) =>
+      hex(font.glyph(c.codePointAt(0)!))
+    ).join('');
+    const cosine = Math.cos(Math.PI / 6);
+    page.push('/Artifact << /Type /Pagination /Subtype /Watermark >> BDC', 'q');
+    for (const baseline of [635, 420, 205]) {
+      for (const center of [160, 435]) {
+        page.push(
+          `BT /F1 ${watermarkSize} Tf 0.95 0.95 0.95 rg ${cosine.toFixed(6)} 0.5 -0.5 ${cosine.toFixed(6)} ${num(center - halfWidth * cosine)} ${num(baseline - halfWidth * 0.5)} Tm <${glyphs}> Tj ET`
+        );
+      }
+    }
+    page.push('Q', 'EMC');
     const first = pages.length === 1;
     const size = first ? 58 : 35;
     const top = 23;
@@ -434,6 +512,180 @@ export function createPracticePdf(
     }
     y += gap;
   }
+  function solutionNumberLineLayout(diagram: SolutionNumberLine) {
+    const geometry = numberLineGeometry(diagram);
+    const label = (text: string, position: number, name = false) => {
+      const items: Token[] = name ? [{ text }] : tokens(text);
+      return {
+        position,
+        items,
+        width: items.reduce((sum, item) => sum + tokenWidth(item, 10), 0),
+      };
+    };
+    const integerStride = Math.max(
+      1,
+      Math.ceil((diagram.max - diagram.min) / 10)
+    );
+    // A plotted integer replaces its tick label instead of printing it twice.
+    // Pack all numeric labels together so points cannot overlap nearby ticks.
+    const values = [
+      ...geometry.points.map((point) => label(point.value, point.position)),
+      ...geometry.ticks
+        .filter(
+          (tick) =>
+            tick.major &&
+            (tick.value === 0 || tick.value % integerStride === 0) &&
+            !geometry.points.some(
+              (point) => Math.abs(point.position - tick.position) < 1e-8
+            )
+        )
+        .map((tick) => label(String(tick.value), tick.position)),
+    ].sort((a, b) => a.position - b.position);
+    const names = geometry.points
+      .filter((point) => point.name)
+      .map((point) => label(point.name!, point.position, true));
+    // Keep every label centered on its point, even for long custom labels at
+    // the endpoints: inset the whole axis, rather than shifting just the text.
+    const inset = Math.max(
+      24,
+      ...[...values, ...names].map((item) => item.width / 2 + 4)
+    );
+    const left = M + inset,
+      right = W - M - inset;
+    const x = (position: number) => left + position * (right - left);
+    const packLabels = (labels: ReturnType<typeof label>[]) => {
+      const laneEnds: number[] = [];
+      const fractions: boolean[] = [];
+      const placed = labels.map((item) => {
+        const labelLeft = x(item.position) - item.width / 2;
+        let lane = laneEnds.findIndex((end) => end + 10 <= labelLeft);
+        if (lane < 0) lane = laneEnds.length;
+        laneEnds[lane] = labelLeft + item.width;
+        fractions[lane] ||= item.items.some((token) => !('text' in token));
+        return { ...item, x: x(item.position), labelLeft, lane };
+      });
+      return { labels: placed, count: laneEnds.length, fractions };
+    };
+    const valueRows = packLabels(values),
+      nameRows = packLabels(names);
+    const axisTop = 12 + nameRows.count * 24;
+    const captionTop = axisTop + 12 + valueRows.count * 32 + 8;
+    const caption = diagram.caption ? layout(diagram.caption, 9.5) : [];
+    return {
+      left,
+      right,
+      points: geometry.points.map((point) => ({
+        ...point,
+        x: x(point.position),
+      })),
+      valueRows,
+      nameRows,
+      axisTop,
+      captionTop,
+      caption,
+      ticks: geometry.ticks.map((tick) => ({ ...tick, x: x(tick.position) })),
+      height:
+        captionTop + caption.reduce((sum, row) => sum + row.height, 0) + 8,
+    };
+  }
+  function drawSolutionNumberLine(
+    figure: ReturnType<typeof solutionNumberLineLayout>
+  ) {
+    if (y + figure.height > BOTTOM) newPage();
+    const top = y,
+      axisY = top + figure.axisTop;
+    const ink = '0.09 0.14 0.24',
+      accent = '0.08 0.25 0.60';
+    const segment = (
+      x1: number,
+      y1: number,
+      x2: number,
+      y2: number,
+      color = ink,
+      width = 0.8
+    ) =>
+      page.push(
+        `q ${color} RG ${num(width)} w ${num(x1)} ${num(H - y1)} m ${num(x2)} ${num(H - y2)} l S Q`
+      );
+    const circle = (
+      x: number,
+      radius: number,
+      filled: boolean,
+      color: string
+    ) => {
+      const cy = H - axisY,
+        k = radius * 0.5522847498;
+      page.push(
+        `q ${color} RG ${color} rg 0.9 w ` +
+          `${num(x + radius)} ${num(cy)} m ` +
+          `${num(x + radius)} ${num(cy + k)} ${num(x + k)} ${num(cy + radius)} ${num(x)} ${num(cy + radius)} c ` +
+          `${num(x - k)} ${num(cy + radius)} ${num(x - radius)} ${num(cy + k)} ${num(x - radius)} ${num(cy)} c ` +
+          `${num(x - radius)} ${num(cy - k)} ${num(x - k)} ${num(cy - radius)} ${num(x)} ${num(cy - radius)} c ` +
+          `${num(x + k)} ${num(cy - radius)} ${num(x + radius)} ${num(cy - k)} ${num(x + radius)} ${num(cy)} c ${filled ? 'f' : 'S'} Q`
+      );
+    };
+    // The arrow points in the increasing direction; equal numeric intervals
+    // always occupy equal widths, including across zero.
+    segment(figure.left - 16, axisY, figure.right + 16, axisY);
+    segment(figure.right + 10, axisY - 3, figure.right + 16, axisY);
+    segment(figure.right + 10, axisY + 3, figure.right + 16, axisY);
+    draw('x', figure.right + 16, axisY + 9, 9);
+    for (const tick of figure.ticks) {
+      const halfHeight = tick.major ? 5 : 3;
+      segment(
+        tick.x,
+        axisY - halfHeight,
+        tick.x,
+        axisY + halfHeight,
+        ink,
+        tick.major ? 0.9 : 0.55
+      );
+    }
+    const labels = [
+      ...figure.nameRows.labels.map((item) => ({
+        ...item,
+        top: axisY - 28 - item.lane * 24,
+        fraction: false,
+        above: true,
+      })),
+      ...figure.valueRows.labels.map((item) => ({
+        ...item,
+        top: axisY + 12 + item.lane * 32,
+        fraction: figure.valueRows.fractions[item.lane],
+        above: false,
+      })),
+    ];
+    // Draw guides first, then label backgrounds: a guide to a staggered label
+    // must never cross the digits of another label closer to the axis.
+    for (const item of labels)
+      if (item.lane > 0)
+        segment(
+          item.x,
+          axisY + (item.above ? -7 : 7),
+          item.x,
+          item.top + (item.above ? 14 : -3),
+          '0.55 0.60 0.68',
+          0.45
+        );
+    for (const item of labels) {
+      const height = item.fraction ? 27 : 16;
+      page.push(
+        `q 1 1 1 rg ${num(item.labelLeft - 2)} ${num(H - item.top - height)} ${num(item.width + 4)} ${num(height + 1)} re f Q`
+      );
+      y = item.top;
+      drawRow(item.items, item.labelLeft, 10, item.fraction);
+    }
+    for (const point of figure.points) {
+      circle(point.x, 2.8, true, point.emphasis ? accent : ink);
+      if (point.emphasis) circle(point.x, 4.7, false, accent);
+    }
+    y = top + figure.captionTop;
+    for (const row of figure.caption) {
+      drawRow(row.items, M, 9.5);
+      y += row.height;
+    }
+    y = top + figure.height;
+  }
   function knowledgeSummary(text: string) {
     const rows = layout(text, 10.5);
     const heading = (continued: boolean, rowHeight: number) => {
@@ -461,7 +713,7 @@ export function createPracticePdf(
   newPage();
   paragraph(lesson.title, 16, 8, true);
   paragraph(
-    `Lớp ${lesson.grade} · ${lesson.topic} · ${exercises.length} bài tập`,
+    `Lớp ${lesson.grade}${lesson.semester ? ` · Học kỳ ${lesson.semester}` : ''} · ${lesson.topic} · ${exercises.length} bài tập`,
     10,
     10
   );
@@ -556,15 +808,52 @@ export function createPracticePdf(
     }
     y += 6;
   }
+  function drawExerciseTable(rows: string[][]) {
+    const height = 28, labelWidth = 110;
+    const cellWidth = (W - 2 * M - labelWidth) / (rows[0].length - 1);
+    rows.forEach((row) => {
+      let x = M;
+      row.forEach((cell, j) => {
+        const width = j === 0 ? labelWidth : cellWidth;
+        page.push(`0.65 0.70 0.79 RG 0.6 w ${num(x)} ${num(H - y - height)} ${num(width)} ${height} re S`);
+        draw(cell, j === 0 ? x + 8 : x + (width - measure(cell, 11)) / 2, y + 7, 11);
+        x += width;
+      });
+      y += height;
+    });
+    y += 10;
+  }
+  function drawSegment(values: number[]) {
+    const g = segmentGeometry(values), scale = (W - 2 * M) / 480;
+    const px = (x: number) => M + x * scale;
+    const py = (top: number) => y + top * 0.75;
+    const edge = (x1: number, y1: number, x2: number, y2: number) =>
+      page.push(`0.14 0.21 0.33 RG 1 w ${num(px(x1))} ${num(H-py(y1))} m ${num(px(x2))} ${num(H-py(y2))} l S`);
+    edge(30,70,450,70);
+    if (g.lift) { page.push('q [4 3] 0 d'); edge(30,70,g.middle,g.y); edge(g.middle,g.y,450,70); page.push('Q'); }
+    for (const [x, top, label] of [[30,70,'A'],[g.middle,g.y,'M'],[450,70,'B']] as const) {
+      page.push(`0.14 0.21 0.33 rg ${num(px(x)-2)} ${num(H-py(top)-2)} 4 4 re f`);
+      draw(label, px(x)-4, py(top)+6, 11);
+    }
+    if (g.show) {
+      draw(`${g.left} cm`, px((30+g.middle)/2)-12, py(45), 10);
+      draw(`${g.right} cm`, px((450+g.middle)/2)-12, py(45), 10);
+    }
+    y += 90;
+  }
   exercises.forEach((e, i) => {
     const prompt = `Bài ${i + 1}. ${e.prompt.trim()}`;
     const options = e.kind === 'choice' ? choiceRows(e.options) : [];
     const wordRows = mode === 'solutions' ? printableWordProblemRows(e) : null;
     const plainSolution =
       !wordRows && mode === 'solutions'
-        ? `${e.kind === 'written' ? 'Lời giải mẫu' : 'Lời giải'}: ${e.solution}`
+        ? printableShortSolution(e)
         : null;
     const plainSolutionLines = plainSolution ? layout(plainSolution, 11) : [];
+    const solutionFigure =
+      mode === 'solutions' && e.solutionNumberLine
+        ? solutionNumberLineLayout(e.solutionNumberLine)
+        : null;
     // Every calculation line is centered, so its halfway point is W / 2,
     // including wrapped lines and stacked fractions. The answer starts below it.
     const calculationMidpoint = W / 2;
@@ -591,7 +880,7 @@ export function createPracticePdf(
       };
     });
     const work =
-      mode === 'worksheet' && e.kind !== 'choice'
+      mode === 'worksheet' && e.kind !== 'choice' && !e.table
         ? { small: 36, medium: 72, large: 108 }[e.workspace || 'medium']
         : 0;
     const headHeight =
@@ -601,7 +890,8 @@ export function createPracticePdf(
     const solutionHeight =
       solutionRows?.reduce((n, row) => n + row.height, 0) ??
       plainSolutionLines.reduce((n, row) => n + row.height, 0);
-    const blockHeight = headHeight + solutionHeight + work;
+    const blockHeight =
+      headHeight + solutionHeight + work + (solutionFigure?.height || 0) + (e.table ? 94 : 0) + (e.segment ? 90 : 0);
     // Keep a question and its solution together. An oversized authored solution
     // must flow across pages instead of leaving the first page empty.
     const reservedHeight =
@@ -613,6 +903,8 @@ export function createPracticePdf(
         : blockHeight;
     if (y + reservedHeight > BOTTOM && y > 100) newPage();
     paragraph(prompt, 11, 8, true);
+    if (e.segment) drawSegment(e.segment);
+    if (e.table) drawExerciseTable(mode === 'solutions' ? e.table.solution : e.table.rows);
     if (options.length)
       drawChoices(
         options,
@@ -639,6 +931,7 @@ export function createPracticePdf(
         }
         y += 8;
       } else if (plainSolution) paragraph(plainSolution, 11, 8);
+      if (solutionFigure) drawSolutionNumberLine(solutionFigure);
       y += 8;
     } else {
       for (let space = 0; space < work; space += 18) {

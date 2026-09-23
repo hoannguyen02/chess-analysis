@@ -1,3 +1,4 @@
+import SegmentDiagram from './SegmentDiagram';
 import { checkAnswer, MathExercise } from '@/lib/math/lessons';
 import { useEffect, useRef, useState } from 'react';
 import s from './MathLesson.module.css';
@@ -49,14 +50,13 @@ export default function Exercise({
     setMessage('');
     if (!composing.current)
       timer.current = setTimeout(() => check(value, nextUnit), 800);
-    if (exercise.section === 'extra')
-      onChange({
-        answer: value,
-        unit: nextUnit,
-        assisted: !!result?.assisted,
-        solved: false,
-        attempted: result?.attempted,
-      });
+    onChange({
+      answer: value,
+      unit: nextUnit,
+      assisted: !!result?.assisted,
+      solved: false,
+      attempted: result?.attempted,
+    });
   }
   function check(value = rawAnswer, nextUnit = unit) {
     cancelCheck();
@@ -112,6 +112,7 @@ export default function Exercise({
       <h3>
         <MathText>{exercise.prompt}</MathText>
       </h3>
+      {exercise.segment && <SegmentDiagram values={exercise.segment} />}
       {exercise.inputInstruction && (
         <p id={label('instruction')} className={s.footer}>
           <MathText>{exercise.inputInstruction}</MathText>

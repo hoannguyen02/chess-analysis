@@ -1,3 +1,10 @@
+import { addMidpointLesson } from '@/lib/math/midpoint-lesson';
+import { addMeasurementWordProblems, reviseMeasurementPractice, addMeasurementLesson } from '@/lib/math/measurement-lesson';
+import { removeUnitFractionDrawingQuestions, upgradeUnitFractionSolutions, varyUnitFractionContexts, addUnitFractionLesson } from '@/lib/math/unit-fraction-lesson';
+import { addMultiplicationDivisionLesson } from '@/lib/math/multiplication-division-lesson';
+import { matchesPlacement, semesterLabel } from '@/lib/math/placement';
+import { assignComponentSemester, addComponentTables, replaceGradeThreeLesson } from '@/lib/math/addition-subtraction-lesson';
+import { addNumberLineLesson } from '@/lib/math/number-line-lesson';
 import { addFractionOrderLesson, clarifyFractionComparison } from '@/lib/math/fraction-order-lesson';
 import { consolidateFractionLessons } from '@/lib/math/fraction-consolidation';
 import {
@@ -36,6 +43,18 @@ import LessonEditor from './LessonEditor';
 import MathLesson from './MathLesson';
 import s from './MathStudio.module.css';
 import ShareLesson from './ShareLesson';
+const MIDPOINT_KEY = 'lima-math-midpoint-3-v1';
+const MEASUREMENT_WORD_KEY = 'lima-math-measurement-words-v1';
+const MEASUREMENT_PRACTICE_KEY = 'lima-math-measurement-direct-v1';
+const MEASUREMENT_KEY = 'lima-math-measurement-3-v1';
+const UNIT_DRAWING_REMOVAL_KEY = 'lima-math-unit-drawing-removal-v1';
+const UNIT_FRACTION_CONTEXT_KEY = 'lima-math-unit-fraction-context-v1';
+const UNIT_FRACTION_KEY = 'lima-math-unit-fractions-3-v1';
+const MULTIPLICATION_DIVISION_KEY = 'lima-math-multiply-divide-components-3-v1';
+const COMPONENT_SEMESTER_KEY = 'lima-math-component-semester-v1';
+const COMPONENT_TABLES_KEY = 'lima-math-component-tables-v1';
+const GRADE_THREE_KEY = 'lima-math-add-subtract-components-3-v1';
+const NUMBER_LINE_KEY = 'lima-math-number-line-v1';
 const FRACTION_ORDER_KEY = 'lima-math-fraction-order-v1';
 const FRACTION_CONSOLIDATION_KEY = 'lima-math-fraction-consolidation-v1';
 const FRACTION_LEVELS_KEY = 'lima-math-fraction-levels-v1';
@@ -86,6 +105,7 @@ export default function MathStudio() {
     [targets, setTargets] = useState<Record<string, string>>({});
   const [query, setQuery] = useState(''),
     [grade, setGrade] = useState(''),
+    [semester, setSemester] = useState(''),
     [topic, setTopic] = useState('');
   const [error, setError] = useState(''),
     [message, setMessage] = useState(''),
@@ -145,6 +165,31 @@ export default function MathStudio() {
       if (needsConsolidation) loaded = consolidateFractionLessons(loaded, legacyExampleLessons);
       const needsFractionOrder = localStorage.getItem(FRACTION_ORDER_KEY) !== 'done';
       if (needsFractionOrder) loaded = addFractionOrderLesson(loaded);
+      const needsNumberLine = localStorage.getItem(NUMBER_LINE_KEY) !== 'done';
+      if (needsNumberLine) loaded = addNumberLineLesson(loaded);
+      const needsGradeThree = localStorage.getItem(GRADE_THREE_KEY) !== 'done';
+      if (needsGradeThree) loaded = replaceGradeThreeLesson(loaded);
+      const needsComponentTables = localStorage.getItem(COMPONENT_TABLES_KEY) !== 'done';
+      if (needsComponentTables) loaded = addComponentTables(loaded);
+      const needsComponentSemester = localStorage.getItem(COMPONENT_SEMESTER_KEY) !== 'done';
+      if (needsComponentSemester) loaded = assignComponentSemester(loaded);
+      const needsMultiplicationDivision = localStorage.getItem(MULTIPLICATION_DIVISION_KEY) !== 'done';
+      if (needsMultiplicationDivision) loaded = addMultiplicationDivisionLesson(loaded);
+      const needsUnitFraction = localStorage.getItem(UNIT_FRACTION_KEY) !== 'done';
+      if (needsUnitFraction) loaded = addUnitFractionLesson(loaded);
+      const needsUnitContexts = localStorage.getItem(UNIT_FRACTION_CONTEXT_KEY) !== 'done';
+      if (needsUnitContexts) loaded = varyUnitFractionContexts(loaded);
+      loaded = upgradeUnitFractionSolutions(loaded);
+      const needsMeasurement = localStorage.getItem(MEASUREMENT_KEY) !== 'done';
+      if (needsMeasurement) loaded = addMeasurementLesson(loaded);
+      const needsDrawingRemoval = localStorage.getItem(UNIT_DRAWING_REMOVAL_KEY) !== 'done';
+      if (needsDrawingRemoval) loaded = removeUnitFractionDrawingQuestions(loaded);
+      const needsMeasurementPractice = localStorage.getItem(MEASUREMENT_PRACTICE_KEY) !== 'done';
+      if (needsMeasurementPractice) loaded = reviseMeasurementPractice(loaded);
+      const needsMeasurementWords = localStorage.getItem(MEASUREMENT_WORD_KEY) !== 'done';
+      if (needsMeasurementWords) loaded = addMeasurementWordProblems(loaded);
+      const needsMidpoint = localStorage.getItem(MIDPOINT_KEY) !== 'done';
+      if (needsMidpoint) loaded = addMidpointLesson(loaded);
       // Show the upgraded lesson even when storage is unavailable.
       setLessons(loaded);
       if (
@@ -163,9 +208,33 @@ export default function MathStudio() {
         needsInputInstructions ||
         wordingChanged ||
         needsConsolidation ||
-        needsFractionOrder
+        needsFractionOrder ||
+        needsNumberLine ||
+        needsGradeThree ||
+        needsComponentTables ||
+        needsComponentSemester ||
+        needsMultiplicationDivision ||
+        needsUnitFraction ||
+        needsUnitContexts ||
+        needsMeasurement ||
+        needsDrawingRemoval ||
+        needsMeasurementPractice ||
+        needsMeasurementWords ||
+        needsMidpoint
       )
         localStorage.setItem(KEY, JSON.stringify(packLessons(loaded)));
+      if (needsMidpoint) localStorage.setItem(MIDPOINT_KEY, 'done');
+      if (needsMeasurementWords) localStorage.setItem(MEASUREMENT_WORD_KEY, 'done');
+      if (needsMeasurementPractice) localStorage.setItem(MEASUREMENT_PRACTICE_KEY, 'done');
+      if (needsMeasurement) localStorage.setItem(MEASUREMENT_KEY, 'done');
+      if (needsDrawingRemoval) localStorage.setItem(UNIT_DRAWING_REMOVAL_KEY, 'done');
+      if (needsUnitContexts) localStorage.setItem(UNIT_FRACTION_CONTEXT_KEY, 'done');
+      if (needsUnitFraction) localStorage.setItem(UNIT_FRACTION_KEY, 'done');
+      if (needsMultiplicationDivision) localStorage.setItem(MULTIPLICATION_DIVISION_KEY, 'done');
+      if (needsComponentSemester) localStorage.setItem(COMPONENT_SEMESTER_KEY, 'done');
+      if (needsComponentTables) localStorage.setItem(COMPONENT_TABLES_KEY, 'done');
+      if (needsGradeThree) localStorage.setItem(GRADE_THREE_KEY, 'done');
+      if (needsNumberLine) localStorage.setItem(NUMBER_LINE_KEY, 'done');
       if (needsFractionOrder) localStorage.setItem(FRACTION_ORDER_KEY, 'done');
       if (needsConsolidation) localStorage.setItem(FRACTION_CONSOLIDATION_KEY, 'done');
       if (needsFractionLevels) localStorage.setItem(FRACTION_LEVELS_KEY, 'done');
@@ -301,7 +370,7 @@ export default function MathStudio() {
     );
   const filtered = lessons.filter(
     (l) =>
-      (!grade || l.grade === Number(grade)) &&
+      matchesPlacement(l, grade, semester) &&
       (!topic || l.topic === topic) &&
       `${l.title} ${l.topic} ${l.goal}`
         .toLocaleLowerCase('vi')
@@ -443,7 +512,7 @@ export default function MathStudio() {
                 <div className={s.panel} key={lesson.id}>
                   <h3>{lesson.title}</h3>
                   <p className={s.muted}>
-                    Lớp {lesson.grade} · {lesson.topic} · {lesson.blocks.length}{' '}
+                    Lớp {lesson.grade} · {semesterLabel(lesson.semester)} · {lesson.topic} · {lesson.blocks.length}{' '}
                     phần giảng · {lesson.exercises.length} bài tập
                   </p>
                   <label>
@@ -508,7 +577,7 @@ export default function MathStudio() {
             </label>
             <label>
               Lớp
-              <select value={grade} onChange={(e) => setGrade(e.target.value)}>
+              <select value={grade} onChange={(e) => { setGrade(e.target.value); setTopic(''); }}>
                 <option value="">Tất cả lớp</option>
                 {Array.from({ length: 12 }, (_, i) => (
                   <option key={i} value={i + 1}>
@@ -518,10 +587,19 @@ export default function MathStudio() {
               </select>
             </label>
             <label>
+              Học kỳ
+              <select value={semester} onChange={(e) => { setSemester(e.target.value); setTopic(''); }}>
+                <option value="">Tất cả học kỳ</option>
+                <option value="1">Học kỳ 1</option>
+                <option value="2">Học kỳ 2</option>
+                <option value="unassigned">Chưa phân loại</option>
+              </select>
+            </label>
+            <label>
               Chủ đề
               <select value={topic} onChange={(e) => setTopic(e.target.value)}>
                 <option value="">Tất cả chủ đề</option>
-                {Array.from(new Set(lessons.map((l) => l.topic))).map((t) => (
+                {Array.from(new Set(lessons.filter((l) => matchesPlacement(l, grade, semester)).map((l) => l.topic))).map((t) => (
                   <option key={t}>{t}</option>
                 ))}
               </select>
@@ -533,7 +611,7 @@ export default function MathStudio() {
               <article className={s.lessonCard} key={lesson.id}>
                 <div>
                   <span className={s.badge}>
-                    Lớp {lesson.grade} · {lesson.topic}
+                    Lớp {lesson.grade} · {semesterLabel(lesson.semester)} · {lesson.topic}
                   </span>
                   <h2>{lesson.title}</h2>
                   <p>{lesson.goal}</p>

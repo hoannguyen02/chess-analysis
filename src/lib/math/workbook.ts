@@ -36,9 +36,15 @@ export function exportMathWorkbook(lessons: MathLessonData[]) {
         l.exercises.map((e) => ({
           lessonId: l.id,
           ...e,
+          segment: e.segment ? JSON.stringify(e.segment) : undefined,
+          table: e.table ? JSON.stringify(e.table) : undefined,
           options: JSON.stringify(e.options),
           mistakes: JSON.stringify(e.mistakes),
           criteria: e.criteria ? JSON.stringify(e.criteria) : undefined,
+          solutionNumberLine:
+            e.solutionNumberLine !== undefined
+              ? JSON.stringify(e.solutionNumberLine)
+              : undefined,
         }))
       )
     ),
@@ -71,6 +77,7 @@ export function importMathWorkbook(data: ArrayBuffer) {
       lessons.map((l) => ({
         ...l,
         grade: Number(l.grade),
+        semester: l.semester || undefined,
         blocks: blocks
           .filter((b) => b.lessonId === l.id)
           .map((b) => ({ ...b, values: json(b.values, '[]') })),
@@ -83,12 +90,18 @@ export function importMathWorkbook(data: ArrayBuffer) {
               throw new Error('simplified cần TRUE hoặc FALSE.');
             return {
               ...e,
+              segment: e.segment ? json(e.segment, '[]') : undefined,
+          table: e.table ? json(e.table, 'null') : undefined,
               group: e.group || undefined,
               skill: e.skill || undefined,
               inputInstruction: e.inputInstruction || undefined,
+              solutionStyle: e.solutionStyle || undefined,
               difficulty: e.difficulty || undefined,
               workspace: e.workspace || undefined,
               criteria: e.criteria ? json(e.criteria, '[]') : undefined,
+              solutionNumberLine: e.solutionNumberLine
+                ? json(e.solutionNumberLine, 'null')
+                : undefined,
               tolerance: Number(e.tolerance),
               simplified: String(e.simplified).toLowerCase() === 'true',
               answer: String(e.answer),

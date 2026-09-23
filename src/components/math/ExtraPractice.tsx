@@ -1,3 +1,5 @@
+import SegmentDiagram from './SegmentDiagram';
+import ExerciseTable from './ExerciseTable';
 import { useEffect, useMemo, useRef, useState } from 'react';
 import {
   checkAnswer,
@@ -45,6 +47,8 @@ function WrittenExercise({
       <h3>
         <MathText>{exercise.prompt}</MathText>
       </h3>
+      {exercise.table && <ExerciseTable table={exercise.table} />}
+      {exercise.segment && <SegmentDiagram values={exercise.segment} />}
       {exercise.inputInstruction && (
         <p id={`${exercise.id}-instruction`} className={s.footer}>
           <MathText>{exercise.inputInstruction}</MathText>
@@ -99,6 +103,7 @@ function WrittenExercise({
       {revealed && (
         <div className={s.callout}>
           <h3>Lời giải mẫu</h3>
+          {exercise.table && <ExerciseTable table={exercise.table} solved />}
           <p className={s.prose}>
             <MathText>{exercise.solution}</MathText>
           </p>
@@ -136,10 +141,12 @@ export default function ExtraPractice({
   lesson,
   preview,
   onEdit,
+  teachingMode = false,
 }: {
   lesson: MathLessonData;
   preview: boolean;
   onEdit?: (id: string) => void;
+  teachingMode?: boolean;
 }) {
   const questions = useMemo(
     () => lesson.exercises.filter((e) => e.section === 'extra'),
@@ -167,6 +174,10 @@ export default function ExtraPractice({
   const summaryBody = useRef<HTMLElement>(null);
   const [pdfStage, setPdfStage] = useState('');
   useEffect(() => {
+    if (teachingMode) {
+      setStickyTop(0);
+      return;
+    }
     const header = document.querySelector<HTMLElement>('[data-site-header]');
     if (!header) return;
     const updateStickyTop = () =>
@@ -182,7 +193,7 @@ export default function ExtraPractice({
       observer?.disconnect();
       window.removeEventListener('resize', updateStickyTop);
     };
-  }, []);
+  }, [teachingMode]);
   useEffect(() => {
     setBusy(false);
     return () => {

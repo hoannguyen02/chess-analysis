@@ -190,6 +190,26 @@
   background: #edf8f2;
   color: #145e43;
 }
+.questionBox {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 0.95em;
+  height: 0.95em;
+  box-sizing: border-box;
+  border: 0.075em solid currentColor;
+  border-radius: 0.1em;
+  vertical-align: middle;
+  position: relative;
+  /* CSS middle uses the x-height; lift slightly to match digits/operators. */
+  top: -0.1em;
+  line-height: 1;
+}
+.questionBox > span {
+  font-size: 0.7em;
+  font-weight: 600;
+  line-height: 1;
+}
 .fraction {
   display: inline-flex;
   flex-direction: column;
@@ -594,4 +614,216 @@
   border-top: 1px solid currentColor;
   opacity: 0.5;
   transform: rotate(55deg);
+}
+
+.exerciseTableScroll { overflow-x: auto; margin: 16px 0; }
+.exerciseTable { border-collapse: collapse; width: 100%; min-width: 420px; table-layout: fixed; }
+.exerciseTable th, .exerciseTable td { border: 1px solid #aab5cb; padding: 12px 6px; text-align: center; }
+.exerciseTable th { width: 120px; text-align: left; background: #eef2ff; }
+
+.brandName {
+  white-space: nowrap;
+}
+.brandActions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: auto;
+}
+.brandActions button {
+  margin-left: 0;
+}
+.lesson .teachingToggle {
+  background: #edf2ff;
+  border-color: #9eb4ed;
+  font-weight: 650;
+}
+.teachingTitle {
+  display: grid;
+  min-width: 0;
+  margin-left: 10px;
+  line-height: 1.3;
+}
+.teachingTitle strong {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 16px;
+  font-weight: 700;
+}
+.teachingTitle small {
+  overflow: hidden;
+  color: #5b6880;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0;
+}
+.teachingStatus {
+  min-width: 180px;
+  text-align: center;
+}
+.teachingStatus strong {
+  color: #17243e;
+}
+.teachingStatus small {
+  display: block;
+  margin-top: 2px;
+  color: #7a869c;
+  font-size: 11px;
+}
+
+.teachingMode {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 0;
+  border-radius: 0;
+}
+.teachingMode .brand {
+  position: relative;
+  z-index: 40;
+  flex: 0 0 auto;
+  flex-wrap: nowrap;
+  min-height: 64px;
+  padding: 8px 18px;
+  box-shadow: 0 3px 12px rgb(23 36 62 / 8%);
+}
+.lesson.teachingMode .brandActions .primary {
+  border-color: #164bdb;
+  background: #164bdb;
+  color: white;
+}
+.teachingMode .shell {
+  flex: 1 1 auto;
+  min-height: 0;
+  grid-template-columns: 200px minmax(0, 1fr);
+}
+.teachingMode .sidebar {
+  min-height: 0;
+  overflow: auto;
+  padding: 16px 12px;
+}
+.teachingMode .sidebar > p:first-child,
+.teachingMode .sidebar > h2 {
+  display: none;
+}
+.teachingMode .sidebar nav {
+  gap: 5px;
+}
+.teachingMode .sidebar nav button {
+  padding: 9px 7px;
+}
+.teachingMode .progress {
+  margin-top: 22px;
+}
+.teachingMode .sidebar > .footer {
+  display: none;
+}
+.teachingMode .content {
+  display: grid;
+  grid-template-rows: minmax(0, 1fr) auto;
+  min-height: 0;
+  overflow: hidden;
+  padding: 0;
+}
+.teachingMode .mainScroll {
+  min-height: 0;
+  overflow: auto;
+  overscroll-behavior: contain;
+  padding: 18px 24px;
+}
+.teachingMode .mainScroll > .breadcrumb,
+.teachingMode .mainScroll > h1,
+.teachingMode .mainScroll > .intro,
+.teachingMode .mainScroll > button {
+  display: none;
+}
+.teachingMode .card {
+  min-height: calc(100dvh - 165px);
+  padding: 24px 28px;
+}
+.teachingMode .card > .eyebrow {
+  margin-bottom: 8px;
+}
+.teachingMode .content > .bottom {
+  position: relative;
+  z-index: 35;
+  min-height: 68px;
+  margin: 0;
+  padding: 9px 24px;
+  border-top: 1px solid #dce3ef;
+  background: rgb(255 255 255 / 97%);
+  box-shadow: 0 -5px 16px rgb(23 36 62 / 7%);
+}
+.teachingMode .pdfTools,
+.teachingMode .practiceHeader > button {
+  display: none;
+}
+.teachingMode .questionGrid {
+  top: 0 !important;
+}
+
+@media (max-width: 700px) {
+  .teachingMode .brand {
+    gap: 10px;
+    min-height: 58px;
+    padding: 7px 10px;
+  }
+  .teachingMode .brandName,
+  .teachingMode .brandActions button:last-child {
+    display: none;
+  }
+  .teachingMode .teachingTitle {
+    margin-left: 0;
+  }
+  .teachingMode .brandActions {
+    gap: 6px;
+  }
+  .teachingMode .brandActions button {
+    padding: 8px 10px;
+    white-space: nowrap;
+  }
+  .teachingMode .shell {
+    display: grid;
+    grid-template-rows: auto minmax(0, 1fr);
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .teachingMode .sidebar {
+    min-width: 0;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 7px 10px;
+  }
+  .teachingMode .sidebar nav {
+    display: flex;
+  }
+  .teachingMode .sidebar nav button {
+    min-width: 44px;
+  }
+  .teachingMode .progress,
+  .teachingMode .sidebar > .footer {
+    display: none;
+  }
+  .teachingMode .mainScroll {
+    padding: 10px;
+  }
+  .teachingMode .card {
+    min-height: calc(100dvh - 185px);
+    padding: 18px 16px;
+  }
+  .teachingMode .content > .bottom {
+    min-height: 62px;
+    padding: 7px 10px;
+  }
+  .teachingMode .teachingStatus {
+    min-width: 0;
+  }
+  .teachingMode .teachingStatus small {
+    display: none;
+  }
 }
