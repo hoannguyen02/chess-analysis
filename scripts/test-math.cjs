@@ -110,6 +110,22 @@ test('math text renders centered question boxes for blanks without changing punc
   }
   assert.equal(render('Có bao nhiêu số?'), 'Có bao nhiêu số?');
   assert.equal(render('6 × 7 = 42.'), '6 × 7 = 42.');
+  assert.equal(
+    render('(-3/5)^4'),
+    '<span class="fractionPower"><span class="fractionGroup"><span aria-hidden="true" class="fractionBracket">(</span><span class="fraction" role="img" aria-label="-3 phần 5"><span aria-hidden="true">-3</span><span aria-hidden="true">5</span></span><span aria-hidden="true" class="fractionBracket">)</span></span><sup class="exponent">4</sup></span>'
+  );
+  assert.match(
+    render('[(-1/2)^2]^2'),
+    /class="nestedFractionPower"[\s\S]*class="outerFractionBracket">\[[\s\S]*<sup class="exponent">2<\/sup><\/span>/
+  );
+  assert.equal(
+    render('a^m × a^n = a^(m + n).'),
+    'a<sup class="exponent">m</sup> × a<sup class="exponent">n</sup> = a<sup class="exponent">m + n</sup>.'
+  );
+  assert.equal(
+    render('(a^m)^n = a^(m × n).'),
+    '(a<sup class="exponent">m</sup>)<sup class="exponent">n</sup> = a<sup class="exponent">m × n</sup>.'
+  );
   const fraction = render('3/5 = □/20; 1/□; (□ + 1)/3');
   assert.equal((fraction.match(/class="questionBox"/g) || []).length, 3);
   assert.equal((fraction.match(/class="fraction"/g) || []).length, 4);
@@ -3538,6 +3554,7 @@ function loadMathComponent(file, hooks) {
         return { jsx, jsxs: jsx, Fragment: 'Fragment' };
       if (name === '@/lib/math/lessons') return load('lessons');
       if (name === '@/lib/math/placement') return load('placement');
+      if (name === 'next/dynamic') return { default: () => 'TeachingTimer' };
       if (name === './MathLesson.module.css') return { default: styles };
       if (name === './MathText')
         return { MathText: 'MathText', Fraction: 'Fraction' };

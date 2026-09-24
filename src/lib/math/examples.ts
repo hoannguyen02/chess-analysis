@@ -1,18 +1,19 @@
-import { midpointLesson } from './midpoint-lesson';
-import { measurementLesson } from './measurement-lesson';
-import { unitFractionLesson } from './unit-fraction-lesson';
-import { multiplicationDivisionLesson } from './multiplication-division-lesson';
 import { additionSubtractionLesson } from './addition-subtraction-lesson';
-import { numberLineLesson } from './number-line-lesson';
-import { fractionOrderLesson } from './fraction-order-lesson';
-import { consolidateFractionLessons } from './fraction-consolidation';
-import { primaryFractionLessons } from './primary-fraction-lessons';
-import { fractionLessons } from './fraction-lessons';
-import { naturalLesson, divisibilityLesson } from './natural-example';
-import { integerLesson } from './integer-example';
-import { rationalLesson } from './rational-example';
 import { fractionExtraExercises } from './extra-examples';
+import { consolidateFractionLessons } from './fraction-consolidation';
+import { fractionLessons } from './fraction-lessons';
+import { fractionOrderLesson } from './fraction-order-lesson';
+import { integerLesson } from './integer-example';
 import { MathBlock, MathExercise, MathLessonData } from './lessons';
+import { measurementLesson } from './measurement-lesson';
+import { midpointLesson } from './midpoint-lesson';
+import { multiplicationDivisionLesson } from './multiplication-division-lesson';
+import { divisibilityLesson, naturalLesson } from './natural-example';
+import { numberLineLesson } from './number-line-lesson';
+import { primaryFractionLessons } from './primary-fraction-lessons';
+import { rationalLesson } from './rational-example';
+import { rationalExponentsLesson } from './rational-exponents-lesson';
+import { unitFractionLesson } from './unit-fraction-lesson';
 const b = (
   id: string,
   section: MathBlock['section'],
@@ -343,6 +344,7 @@ export const legacyExampleLessons: MathLessonData[] = [
     ],
   },
   rationalLesson,
+  rationalExponentsLesson,
   integerLesson,
   naturalLesson,
   divisibilityLesson,
@@ -352,4 +354,7 @@ export const legacyExampleLessons: MathLessonData[] = [
   numberLineLesson,
 ];
 
-export const exampleLessons = consolidateFractionLessons(legacyExampleLessons, legacyExampleLessons);
+export const exampleLessons = consolidateFractionLessons(
+  legacyExampleLessons,
+  legacyExampleLessons
+);

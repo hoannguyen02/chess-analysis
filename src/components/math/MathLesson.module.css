@@ -157,10 +157,23 @@
 .card > p {
   margin-bottom: 16px;
 }
+.prose {
+  white-space: pre-line;
+}
 .eyebrow {
   font-size: 13px;
   color: #164bdb;
   font-weight: 650;
+}
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+.sectionHeader .eyebrow {
+  margin: 0;
 }
 .question {
   padding: 18px 0;
@@ -225,6 +238,64 @@
 }
 .fraction > span:last-child {
   padding: 3px 4px 0;
+}
+.fractionGroup {
+  display: inline-flex;
+  align-items: stretch;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+.fractionPower {
+  display: inline-flex;
+  align-items: flex-start;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+.nestedFractionPower {
+  display: inline-flex;
+  align-items: stretch;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+.fractionBracket {
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0.45em;
+  font-family: Cambria Math, STIX Two Math, Times New Roman, serif;
+  font-size: 1.35em;
+  line-height: 0.8;
+  transform: scaleY(1.85);
+  transform-origin: center;
+}
+.outerFractionBracket {
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0.45em;
+  font-family: Cambria Math, STIX Two Math, Times New Roman, serif;
+  font-size: 1.45em;
+  line-height: 0.8;
+  transform: scaleY(2.35);
+  transform-origin: center;
+}
+.exponent {
+  margin-left: 1px;
+  font-size: 0.72em;
+  line-height: 0;
+}
+.fractionPower .exponent {
+  position: relative;
+  top: -0.18em;
+  line-height: 1;
+}
+.nestedFractionPower > .exponent {
+  align-self: flex-start;
+  position: relative;
+  top: -0.28em;
+  line-height: 1;
 }
 .visual {
   padding: 20px;
@@ -486,6 +557,11 @@
 .practiceHeader h2 {
   margin-top: 2px;
 }
+.practiceActions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
 .practiceProgress {
   color: #5b6880;
   font-size: 14px;
@@ -576,7 +652,10 @@
     grid-template-columns: 1fr;
     align-items: start;
   }
-  .practiceHeader > button {
+  .practiceActions {
+    justify-self: start;
+  }
+  .practiceActions > button {
     justify-self: start;
     padding-block: 8px;
   }
@@ -761,7 +840,7 @@
   box-shadow: 0 -5px 16px rgb(23 36 62 / 7%);
 }
 .teachingMode .pdfTools,
-.teachingMode .practiceHeader > button {
+.teachingMode .practiceActions > button {
   display: none;
 }
 .teachingMode .questionGrid {

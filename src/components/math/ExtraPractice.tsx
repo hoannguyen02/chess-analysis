@@ -6,7 +6,7 @@ import {
   MathLessonData,
 } from '@/lib/math/lessons';
 import { startPdfTask, waitForPdfTask } from '@/lib/math/pdf-task';
-import { useEffect, useMemo, useRef, useState } from 'react';
+import { ReactNode, useEffect, useMemo, useRef, useState } from 'react';
 import Exercise, { Result } from './Exercise';
 import ExerciseTable from './ExerciseTable';
 import s from './MathLesson.module.css';
@@ -147,11 +147,13 @@ export default function ExtraPractice({
   preview,
   onEdit,
   teachingMode = false,
+  timer,
 }: {
   lesson: MathLessonData;
   preview: boolean;
   onEdit?: (id: string) => void;
   teachingMode?: boolean;
+  timer?: ReactNode;
 }) {
   const questions = useMemo(
     () => lesson.exercises.filter((e) => e.section === 'extra'),
@@ -395,14 +397,17 @@ export default function ExtraPractice({
             {questions.length}
           </p>
         </div>
-        <button
-          onClick={() => {
-            setSummary(!summary);
-            revealPracticeBody();
-          }}
-        >
-          {summary ? 'Tiếp tục luyện tập' : 'Xem tiến độ'}
-        </button>
+        <div className={s.practiceActions}>
+          {timer}
+          <button
+            onClick={() => {
+              setSummary(!summary);
+              revealPracticeBody();
+            }}
+          >
+            {summary ? 'Tiếp tục luyện tập' : 'Xem tiến độ'}
+          </button>
+        </div>
       </header>
       <details className={s.pdfTools}>
         <summary>Tải PDF và đáp án</summary>

@@ -6,6 +6,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import {
   VscBell,
   VscBellSlash,
+  VscChevronDown,
   VscDashboard,
   VscDebugRestart,
   VscPlay,
@@ -21,9 +22,13 @@ const DEFAULT_CUSTOM_MINUTES = 10;
 
 type TeachingTimerProps = {
   compact?: boolean;
+  minimal?: boolean;
 };
 
-export const TeachingTimer = ({ compact = false }: TeachingTimerProps) => {
+export const TeachingTimer = ({
+  compact = false,
+  minimal = false,
+}: TeachingTimerProps) => {
   const t = useTranslations();
   const defaultPresetSeconds: number = TIMER_PRESETS[0].valueSeconds;
   const [selectedSeconds, setSelectedSeconds] =
@@ -38,6 +43,7 @@ export const TeachingTimer = ({ compact = false }: TeachingTimerProps) => {
     useState<number>(defaultPresetSeconds);
   const [isRunning, setIsRunning] = useState(false);
   const [soundEnabled, setSoundEnabled] = useState(true);
+  const [settingsOpen, setSettingsOpen] = useState(false);
   const audioContextRef = useRef<AudioContext | null>(null);
   const isAudioUnlockedRef = useRef(false);
   const customInputRef = useRef<HTMLInputElement | null>(null);
@@ -212,6 +218,139 @@ export const TeachingTimer = ({ compact = false }: TeachingTimerProps) => {
   const isCustomSelected = !TIMER_PRESETS.some(
     (preset) => preset.valueSeconds === selectedSeconds
   );
+
+  if (minimal)
+    return (
+      <div className="relative inline-flex items-center gap-1 rounded-lg border border-slate-200 bg-white p-1 shadow-sm">
+        <output
+          className={`min-w-12 px-2 text-center text-sm font-semibold tabular-nums text-slate-700 ${
+            remainingSeconds === 0 ? 'text-rose-600' : ''
+          }`}
+          aria-label={t('common.timer.title')}
+        >
+          {formattedTime}
+        </output>
+        <button
+          type="button"
+          className="grid size-8 shrink-0 place-items-center rounded-md bg-[var(--s-bg)] text-slate-900 hover:bg-[#df9412] focus:outline-none focus:ring-2 focus:ring-[#f5a623]/40"
+          style={{ padding: 0, border: 0, lineHeight: 1 }}
+          onClick={handlePrimaryAction}
+          aria-label={
+            remainingSeconds === 0
+              ? t('common.timer.restart')
+              : isRunning
+                ? t('common.timer.pause')
+                : t('common.timer.start')
+          }
+        >
+          {remainingSeconds === 0 ? (
+            <VscDebugRestart size={16} />
+          ) : isRunning ? (
+            <VscPrimitiveSquare size={14} />
+          ) : (
+            <VscPlay size={16} />
+          )}
+        </button>
+        <button
+          type="button"
+          className="grid size-8 shrink-0 place-items-center rounded-md text-slate-600 hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-slate-300"
+          style={{ padding: 0, border: 0, lineHeight: 1 }}
+          onClick={() => {
+            void unlockAudio();
+            setSettingsOpen((open) => !open);
+          }}
+          aria-label={t('common.timer.title')}
+          aria-expanded={settingsOpen}
+        >
+          <VscChevronDown
+            size={18}
+            className={
+              settingsOpen
+                ? 'rotate-180 transition-transform'
+                : 'transition-transform'
+            }
+          />
+        </button>
+        {settingsOpen && (
+          <div className="absolute right-0 top-full z-20 mt-2 w-60 rounded-lg border border-slate-200 bg-white p-2 shadow-lg">
+            <div className="grid grid-cols-3 gap-1">
+              {TIMER_PRESETS.map((preset) => (
+                <button
+                  key={preset.valueSeconds}
+                  type="button"
+                  onClick={() => {
+                    selectPreset(preset.valueSeconds);
+                    setSettingsOpen(false);
+                  }}
+                  className={`rounded-md border px-2 py-1.5 text-xs font-semibold ${
+                    preset.valueSeconds === selectedSeconds
+                      ? 'border-[var(--s-bg)] bg-[#f5a623]/10 text-[#b87400]'
+                      : 'border-slate-200 text-slate-600 hover:bg-slate-50'
+                  }`}
+                >
+                  {t(preset.labelKey)}
+                </button>
+              ))}
+            </div>
+            <div className="mt-2 flex items-center justify-between gap-2 border-t border-slate-100 pt-2">
+              <label className="flex items-center gap-1 text-xs font-medium text-slate-600">
+                <span>{t('common.timer.custom')}</span>
+                <input
+                  ref={customInputRef}
+                  type="text"
+                  inputMode="numeric"
+                  pattern="[0-9]*"
+                  value={customMinutesInput}
+                  onFocus={() => setSelectedSeconds(customMinutes * 60)}
+                  onChange={(event) =>
+                    setCustomMinutesInput(
+                      event.target.value.replace(/\D/g, '').slice(0, 2)
+                    )
+                  }
+                  onBlur={commitCustomMinutes}
+                  onKeyDown={(event) => {
+                    if (event.key === 'Enter') commitCustomMinutes();
+                  }}
+                  className="w-8 rounded border border-slate-200 px-1 py-0.5 text-center tabular-nums outline-none focus:border-[#f5a623]"
+                />
+                <span>{t('common.timer.minutes-short')}</span>
+              </label>
+              <div className="flex gap-1">
+                <button
+                  type="button"
+                  className="grid size-7 shrink-0 place-items-center rounded text-slate-600 hover:bg-slate-100"
+                  style={{ padding: 0, border: 0, lineHeight: 1 }}
+                  onClick={handleReset}
+                  aria-label={t('common.timer.reset')}
+                >
+                  <VscDebugRestart size={16} />
+                </button>
+                <button
+                  type="button"
+                  className="grid size-7 shrink-0 place-items-center rounded text-slate-600 hover:bg-slate-100"
+                  style={{ padding: 0, border: 0, lineHeight: 1 }}
+                  onClick={async () => {
+                    await unlockAudio();
+                    setSoundEnabled((enabled) => !enabled);
+                  }}
+                  aria-label={
+                    soundEnabled
+                      ? t('common.timer.mute-sound')
+                      : t('common.timer.enable-sound')
+                  }
+                >
+                  {soundEnabled ? (
+                    <VscBell size={16} />
+                  ) : (
+                    <VscBellSlash size={16} />
+                  )}
+                </button>
+              </div>
+            </div>
+          </div>
+        )}
+      </div>
+    );
 
   return (
     <div

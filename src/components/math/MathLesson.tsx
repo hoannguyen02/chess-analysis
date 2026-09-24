@@ -8,6 +8,7 @@ import {
   SECTION_LABELS,
 } from '@/lib/math/lessons';
 import { semesterLabel } from '@/lib/math/placement';
+import dynamic from 'next/dynamic';
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import Exercise, { Result } from './Exercise';
 import ExtraPractice from './ExtraPractice';
@@ -18,6 +19,11 @@ import NumberLine from './NumberLine';
 import QuickLessonEdit from './QuickLessonEdit';
 import SegmentDiagram from './SegmentDiagram';
 import UnitFraction from './UnitFraction';
+
+const TeachingTimer = dynamic(
+  () => import('../TeachingTimer').then((module) => module.TeachingTimer),
+  { ssr: false }
+);
 
 type Progress = {
   content: string;
@@ -555,6 +561,7 @@ export default function MathLesson({
                   lesson={lesson}
                   preview={preview}
                   teachingMode={teachingMode}
+                  timer={<TeachingTimer minimal />}
                   onEdit={
                     canEdit
                       ? (id) => setEditing({ target: { exercise: id } })
@@ -566,7 +573,12 @@ export default function MathLesson({
                   className={s.card}
                   aria-label={SECTION_LABELS[section]}
                 >
-                  <p className={s.eyebrow}>{SECTION_LABELS[section]}</p>
+                  <div className={s.sectionHeader}>
+                    <p className={s.eyebrow}>{SECTION_LABELS[section]}</p>
+                    {['guided', 'practice'].includes(section) && (
+                      <TeachingTimer minimal />
+                    )}
+                  </div>
                   {renderedBlocks.map((block) => (
                     <div
                       className={s.teachingItem}

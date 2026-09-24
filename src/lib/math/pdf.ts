@@ -86,11 +86,21 @@ function fontMetrics(bytes: Uint8Array) {
     descent: Math.round((v.getInt16(tables.hhea + 6) / units) * 1000),
   };
 }
-type Token = { text: string } | { n: string; d: string };
+type Token =
+  | { text: string }
+  | {
+      n: string;
+      d: string;
+      parenthesized?: boolean;
+      exponent?: string;
+      nested?: boolean;
+      outerExponent?: string;
+    };
 function tokens(text: string): Token[] {
   text = stripRedundantFractionParentheses(text.normalize('NFC'));
   const out: Token[] = [],
-    re = /(\([^()]+\)|-?\d+|□)\s*\/\s*(\([^()]+\)|-?\d+|□)/g;
+    re =
+      /(?:\[\s*\(\s*(\([^()]+\)|-?\d+|□)\s*\/\s*(\([^()]+\)|-?\d+|□)\s*\)\s*\^(\([^()]*\)|[+-]?(?:\d+|[a-zA-Z]))\s*\]\s*\^(\([^()]*\)|[+-]?(?:\d+|[a-zA-Z])))|(?:\(\s*(\([^()]+\)|-?\d+|□)\s*\/\s*(\([^()]+\)|-?\d+|□)\s*\)\s*\^(\([^()]*\)|[+-]?(?:\d+|[a-zA-Z])))|(?:(\([^()]+\)|-?\d+|□)\s*\/\s*(\([^()]+\)|-?\d+|□))/g;
   let last = 0;
   const words = (s: string) =>
     s
@@ -100,10 +110,19 @@ function tokens(text: string): Token[] {
   for (const match of text.matchAll(re)) {
     words(text.slice(last, match.index));
     const clean = (v: string) => (v.startsWith('(') ? v.slice(1, -1) : v);
-    const n = clean(match[1]),
-      d = clean(match[2]);
+    const nested = Boolean(match[1]);
+    const parenthesized = nested || Boolean(match[5]);
+    const offset = nested ? 0 : parenthesized ? 4 : 7;
+    const n = clean(match[offset + 1]),
+      d = clean(match[offset + 2]),
+      exponent = parenthesized ? clean(match[offset + 3]) : undefined,
+      outerExponent = nested ? clean(match[4]) : undefined;
     const whole = wholeNumberFraction(n, d, text.slice(0, match.index));
-    out.push(whole === null ? { n, d } : { text: whole });
+    out.push(
+      whole === null
+        ? { n, d, parenthesized, exponent, nested, outerExponent }
+        : { text: whole }
+    );
     last = match.index! + match[0].length;
   }
   words(text.slice(last));
@@ -363,13 +382,27 @@ export function createPracticePdf(
       x += width;
     }
   }
-  const tokenWidth = (t: Token, size: number) =>
-    'text' in t
-      ? measure(t.text, size)
-      : Math.max(
-          measure(cancellationText(t.n), size * 0.88),
-          measure(cancellationText(t.d), size * 0.88)
-        ) + 10;
+  const fractionWidth = (t: Exclude<Token, { text: string }>, size: number) =>
+    Math.max(
+      measure(cancellationText(t.n), size * 0.88),
+      measure(cancellationText(t.d), size * 0.88)
+    ) + 10;
+  const tokenWidth = (t: Token, size: number) => {
+    if ('text' in t) return measure(t.text, size);
+    const innerBracket = t.parenthesized ? measure('(', size * 2.1) * 2 : 0;
+    const outerBracket = t.nested ? measure('[', size * 2.5) * 2 : 0;
+    const innerExponent = t.exponent ? measure(t.exponent, size * 0.68) : 0;
+    const outerExponent = t.outerExponent
+      ? measure(t.outerExponent, size * 0.68)
+      : 0;
+    return (
+      fractionWidth(t, size) +
+      innerBracket +
+      outerBracket +
+      innerExponent +
+      outerExponent
+    );
+  };
   function layout(text: string, size: number, width = W - 2 * M) {
     const lines: Token[][] = [[]];
     let occupied = 0;
@@ -470,19 +503,66 @@ export function createPracticePdf(
       if ('text' in t) draw(t.text, x, y + (frac ? size * 0.48 : 0), size);
       else {
         const fs = size * 0.88;
+        const baseWidth = fractionWidth(t, size);
+        const innerBracketSize = size * 2.1;
+        const innerBracketWidth = t.parenthesized
+          ? measure('(', innerBracketSize)
+          : 0;
+        const outerBracketSize = size * 2.5;
+        const outerBracketWidth = t.nested ? measure('[', outerBracketSize) : 0;
+        const innerExponentWidth = t.exponent
+          ? measure(t.exponent, size * 0.68)
+          : 0;
+        const fractionX = x + outerBracketWidth + innerBracketWidth;
         drawFactors(
           t.n,
-          x + (width - measure(cancellationText(t.n), fs)) / 2,
+          fractionX + (baseWidth - measure(cancellationText(t.n), fs)) / 2,
           y,
           fs
         );
-        line(x + 2, y + size * 1.18, x + width - 2, '0.09 0.14 0.24');
+        line(
+          fractionX + 2,
+          y + size * 1.18,
+          fractionX + baseWidth - 2,
+          '0.09 0.14 0.24'
+        );
         drawFactors(
           t.d,
-          x + (width - measure(cancellationText(t.d), fs)) / 2,
+          fractionX + (baseWidth - measure(cancellationText(t.d), fs)) / 2,
           y + size * 1.38,
           fs
         );
+        if (t.parenthesized) {
+          draw('(', x + outerBracketWidth, y - size * 0.08, innerBracketSize);
+          draw(')', fractionX + baseWidth, y - size * 0.08, innerBracketSize);
+        }
+        if (t.exponent)
+          draw(
+            t.exponent,
+            fractionX + baseWidth + innerBracketWidth,
+            y - size * 0.12,
+            size * 0.68
+          );
+        if (t.nested) {
+          draw('[', x, y - size * 0.22, outerBracketSize);
+          draw(
+            ']',
+            fractionX + baseWidth + innerBracketWidth + innerExponentWidth,
+            y - size * 0.22,
+            outerBracketSize
+          );
+        }
+        if (t.outerExponent)
+          draw(
+            t.outerExponent,
+            fractionX +
+              baseWidth +
+              innerBracketWidth +
+              innerExponentWidth +
+              outerBracketWidth,
+            y - size * 0.25,
+            size * 0.68
+          );
       }
       x += width;
     }
