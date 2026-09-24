@@ -1154,10 +1154,27 @@ export function createPracticePdf(
           };
         })
       : null;
-    const work =
-      mode === 'worksheet' && e.kind !== 'choice' && !e.table
-        ? { small: 36, medium: 72, large: 108 }[e.workspace || 'medium']
-        : 0;
+    // Measure the student's working, not the answer-key labels or repeated answer.
+    // Fraction rows and wrapped prose need more vertical room than plain text.
+    const work = (() => {
+      if (mode !== 'worksheet' || e.kind === 'choice' || e.table) return 0;
+      const workbookRows = printableWordProblemRows(e);
+      const working = e.solutionStyle === 'answer-only'
+        ? e.answer
+        : workbookRows
+          ? workbookRows.filter(row => row.role !== 'heading').map(row => row.text).join('\n')
+          : formatCalculationSteps(e.solution);
+      // This text is measured only, never printed. Unsupported answer glyphs
+      // must not prevent exporting an otherwise valid question sheet.
+      const measurable = Array.from(working.normalize('NFC'), char =>
+        /\s/u.test(char) || font.glyph(char.codePointAt(0)!) ? char : '?'
+      ).join('');
+      const height = layout(measurable, 11).reduce((sum, row) => sum + row.height, 0);
+      // One spare row for handwriting; retain room for drawing tasks as well.
+      const lines = Math.max(2, Math.ceil(height / 18) + 1,
+        e.solutionNumberLine ? 5 : 0);
+      return lines * 18;
+    })();
     const headHeight =
       layout(prompt, 11).reduce((n, l) => n + l.height, 0) +
       (options.length ? options.reduce((n, row) => n + row.height, 0) + 7 : 0) +
@@ -1175,11 +1192,11 @@ export function createPracticePdf(
     // Keep a question and its solution together. An oversized authored solution
     // must flow across pages instead of leaving the first page empty.
     const reservedHeight =
-      mode === 'solutions' && blockHeight > BOTTOM - 84
+      blockHeight > BOTTOM - 84
         ? headHeight +
           (solutionRows
             ? solutionRows[0].height + solutionRows[1].height
-            : plainSolutionLines[0]?.height || 0)
+            : mode === 'worksheet' ? 18 : plainSolutionLines[0]?.height || 0)
         : blockHeight;
     if (y + reservedHeight > BOTTOM && y > 100) newPage();
     paragraph(prompt, 11, 8, true);
@@ -1221,7 +1238,8 @@ export function createPracticePdf(
     } else {
       for (let space = 0; space < work; space += 18) {
         if (y + 18 > BOTTOM) newPage();
-        line(M, y + 16, W - M, '0.85 0.88 0.92');
+        // Round-capped zero-length dashes form dots; q/Q keeps all other rules solid.
+        page.push(`q 0.65 0.70 0.79 RG 0.7 w 1 J [0 3] 0 d ${num(M)} ${num(H - y - 16)} m ${num(W - M)} ${num(H - y - 16)} l S Q`);
         y += 18;
       }
       y += 14;

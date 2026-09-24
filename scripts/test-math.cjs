@@ -677,7 +677,7 @@ test('worksheet choices omit ruled lines and reserved workspace for every saved 
   }
 });
 
-test('mixed worksheets keep configured writing lines for number, fraction and written questions', () => {
+test('worksheets use solution-sized dotted writing rows, not saved fixed workspace sizes', () => {
   const { createPracticePdf } = load('pdf');
   const font = fs.readFileSync(
     path.join(__dirname, '../public/fonts/DejaVuSans.ttf')
@@ -702,10 +702,17 @@ test('mixed worksheets keep configured writing lines for number, fraction and wr
     (
       Buffer.from(createPracticePdf(lesson, mode, font))
         .toString('latin1')
-        .match(/0\.85 0\.88 0\.92 RG/g) || []
+        .match(/1 J \[0 3\] 0 d/g) || []
     ).length;
-  assert.equal(lineCount('worksheet'), 2 + 4 + 6);
+  assert.ok(lineCount('worksheet') >= 6);
   assert.equal(lineCount('solutions'), 0);
+  const base = lesson.exercises[1];
+  const count = (solution, extra = {}) => (Buffer.from(createPracticePdf({ ...lesson, exercises: [{ ...base, ...extra, solution }] }, 'worksheet', font)).toString('latin1').match(/1 J \[0 3\] 0 d/g) || []).length;
+  assert.equal(count('2 + 3 = 5.'), 2);
+  assert.ok(count('2 + 3 = 5.\n5 + 4 = 9.\n9 + 1 = 10.') > count('2 + 3 = 5.'));
+  assert.ok(count('1/2 + 1/3 = 5/6.') > count('2 + 3 = 5.'));
+  assert.ok(count('Giải thích dài. '.repeat(50)) > count('2 + 3 = 5.'));
+  assert.equal(count('2 + 3 = 5.', { workspace: 'small' }), count('2 + 3 = 5.', { workspace: 'large' }));
 });
 
 test('both PDF exports omit practice-group headings and reserved space without changing question order', () => {
@@ -1107,7 +1114,9 @@ test('PDF summaries are worksheet-only, optional, independent of answers and saf
       solution: 'Lời giải không in 🧮',
     })),
   };
-  assert.deepEqual(createPracticePdf(privateEdit, 'worksheet', font), reviewed);
+  // Solution length may now change writing space, but its content stays hidden.
+  const privateRows = pdfTextRows(createPracticePdf(privateEdit, 'worksheet', font));
+  assert.ok(!privateRows.some(row => /Riêng tư|Lời giải không in/u.test(row.text)));
   const longSummary = {
     ...lesson,
     knowledgeSummary: 'Ghi nhớ quy tắc.\n'.repeat(180),
@@ -2831,10 +2840,9 @@ test('PDF solution diagrams plot all five tasks without exposing answers in work
   hidden.exercises.forEach((e) => {
     e.solutionNumberLine = null;
   });
-  assert.deepEqual(
-    createPracticePdf(hidden, 'worksheet', font),
-    createPracticePdf(lesson, 'worksheet', font)
-  );
+  for (const worksheetLesson of [hidden, lesson]) {
+    assert.equal(pdfTextRows(createPracticePdf(worksheetLesson, 'worksheet', font)).filter(row => row.text === 'x').length, 0);
+  }
   assert.equal(
     pdfTextRows(createPracticePdf(hidden, 'solutions', font)).filter(
       (row) => row.text === 'x'

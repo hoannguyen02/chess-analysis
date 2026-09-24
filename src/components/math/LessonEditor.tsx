@@ -510,22 +510,7 @@ export default function LessonEditor({
                     </select>
                   </label>
                   {e.kind !== 'choice' && (
-                    <label>
-                      Chỗ làm bài trong PDF
-                      <select
-                        value={e.workspace || 'medium'}
-                        onChange={(event) =>
-                          exercise(e.id, {
-                            workspace: event.target
-                              .value as MathExercise['workspace'],
-                          })
-                        }
-                      >
-                        <option value="small">Ít — 2 dòng</option>
-                        <option value="medium">Vừa — 4 dòng</option>
-                        <option value="large">Nhiều — 6 dòng</option>
-                      </select>
-                    </label>
+                    <p>Chỗ làm bài trong PDF: tự động thêm dòng chấm theo độ dài lời giải, kể cả các bước tính và phân số.</p>
                   )}
                   {e.kind === 'written' && (
                     <label>
