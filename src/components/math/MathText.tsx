@@ -147,11 +147,35 @@ function NestedFractionPower({
   );
 }
 
+function GroupedExpressionPower({
+  expression,
+  exponent,
+}: {
+  expression: string;
+  exponent: string;
+}) {
+  return (
+    <span className={styles.groupedExpressionPower}>
+      <span className={styles.groupedExpressionGroup}>
+        <span aria-hidden="true" className={styles.fractionBracket}>
+          (
+        </span>
+        <MathTextContent>{expression}</MathTextContent>
+        <span aria-hidden="true" className={styles.fractionBracket}>
+          )
+        </span>
+      </span>
+      <sup className={styles.exponent}>{exponent}</sup>
+    </span>
+  );
+}
+
 // Format lesson copy only; navigation and progress counts are not fractions.
-export function MathText({ children }: { children: string }) {
+function MathTextContent({ children }: { children: string }) {
   const text = stripRedundantFractionParentheses(children);
   const parts: ReactNode[] = [];
-  const pattern = /(\([^()]+\)|-?\d+|□)\s*\/\s*(\([^()]+\)|-?\d+|□)/g;
+  const pattern =
+    /(\([^()]+\)|~[^~]+~|-?\d+|□)\s*\/\s*(\([^()]+\)|~[^~]+~|-?\d+|□)/g;
   let cursor = 0;
   for (const match of text.matchAll(pattern)) {
     const index = match.index!;
@@ -213,4 +237,62 @@ export function MathText({ children }: { children: string }) {
     <Placeholders key={`text-${cursor}`}>{text.slice(cursor)}</Placeholders>
   );
   return <>{parts}</>;
+}
+
+function MathTextLine({ children }: { children: string }) {
+  const parts: ReactNode[] = [];
+  const pattern = /\(([^()]+)\)\^(\([^()]*\)|[+-]?(?:\d+|[a-zA-Z]))/gu;
+  let cursor = 0;
+  for (const match of children.matchAll(pattern)) {
+    const expression = match[1];
+    if (!/\s[+\-−]\s/u.test(expression)) continue;
+    const index = match.index!;
+    parts.push(
+      <MathTextContent key={`text-${cursor}`}>
+        {children.slice(cursor, index)}
+      </MathTextContent>
+    );
+    parts.push(
+      <GroupedExpressionPower
+        key={index}
+        expression={expression}
+        exponent={match[2].replace(/^\(|\)$/gu, '')}
+      />
+    );
+    cursor = index + match[0].length;
+  }
+  parts.push(
+    <MathTextContent key={`text-${cursor}`}>
+      {children.slice(cursor)}
+    </MathTextContent>
+  );
+  return <>{parts}</>;
+}
+
+export function MathText({ children }: { children: string }) {
+  if (!children.includes('\n')) return <MathTextLine>{children}</MathTextLine>;
+  return (
+    <>
+      {children.split('\n').map((line, index) => {
+        const continuation = index > 0 && line.startsWith('= ');
+        return (
+          <span
+            key={`${index}-${line}`}
+            className={
+              continuation
+                ? `${styles.mathCalculationLine} ${styles.mathCalculationContinuation}`
+                : styles.mathCalculationLine
+            }
+          >
+            {continuation && (
+              <span className={styles.mathCalculationEquals}>=</span>
+            )}
+            <span>
+              <MathTextLine>{continuation ? line.slice(2) : line}</MathTextLine>
+            </span>
+          </span>
+        );
+      })}
+    </>
+  );
 }

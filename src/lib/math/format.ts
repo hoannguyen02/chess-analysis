@@ -53,7 +53,8 @@ export function wholeNumberFraction(
     bottom = BigInt(denominator);
   // Keep the fraction in explicit integer-to-fraction conversions (e.g. -2 = -2/1).
   const conversion = precedingText.match(/(?:^|[^\d/])([+-]?\d+)\s*=\s*$/);
-  if (bottom === BigInt(1) && conversion && BigInt(conversion[1]) === top) return null;
+  if (bottom === BigInt(1) && conversion && BigInt(conversion[1]) === top)
+    return null;
   return bottom === BigInt(1) ? String(top) : null;
 }
 
@@ -72,3 +73,16 @@ export const cancellationText = (value: string) =>
   cancellationParts(value)
     .map((part) => part.text)
     .join('');
+
+// Keep authored prose and word-problem solutions intact. Pure calculation
+// chains become one equality step per line in the learner view and PDF.
+export function formatCalculationSteps(value: string): string {
+  if (value.includes('\n')) return value;
+  const parts = value.split(/\s*=\s*/u);
+  if (
+    parts.length < 3 ||
+    !/^[\d\s+\-−×÷*/:().,[\]~□=^₀-₉⁰¹²³⁴⁵⁶⁷⁸⁹a-zA-Z]+$/u.test(value)
+  )
+    return value;
+  return parts.join('\n= ');
+}

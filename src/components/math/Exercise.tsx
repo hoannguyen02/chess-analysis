@@ -1,4 +1,6 @@
+import { formatCalculationSteps } from '@/lib/math/format';
 import { checkAnswer, MathExercise } from '@/lib/math/lessons';
+import { wordProblemRows } from '@/lib/math/word-problem-format';
 import { useEffect, useRef, useState } from 'react';
 import s from './MathLesson.module.css';
 import { MathText } from './MathText';
@@ -10,6 +12,29 @@ export type Result = {
   solved: boolean;
   attempted?: boolean;
 };
+
+function SolutionContent({ solution }: { solution: string }) {
+  const rows = wordProblemRows(solution);
+  if (!rows)
+    return (
+      <div className={s.prose}>
+        <MathText>{formatCalculationSteps(solution)}</MathText>
+      </div>
+    );
+  return (
+    <div className={s.wordProblemSolution}>
+      {rows.map((row, index) => (
+        <div
+          key={`${row.role}-${index}`}
+          className={`${s.wordProblemRow} ${s[`wordProblem${row.role[0].toUpperCase()}${row.role.slice(1)}`]}`}
+        >
+          <MathText>{row.text}</MathText>
+        </div>
+      ))}
+    </div>
+  );
+}
+
 export default function Exercise({
   exercise,
   result,
@@ -96,7 +121,7 @@ export default function Exercise({
     setShowSolution(solution);
     setMessage(
       solution
-        ? exercise.solution
+        ? formatCalculationSteps(exercise.solution)
         : exercise.hint || 'Xem lại ví dụ từng bước trước khi trả lời.'
     );
   }
@@ -263,9 +288,7 @@ export default function Exercise({
           <>
             <strong>Đúng rồi! Em làm tốt lắm!</strong>
             <p>Lời giải</p>
-            <div className={s.prose}>
-              <MathText>{exercise.solution}</MathText>
-            </div>
+            <SolutionContent solution={exercise.solution} />
           </>
         ) : message ? (
           <>
@@ -277,9 +300,7 @@ export default function Exercise({
               </p>
             )}
             {showSolution ? (
-              <div className={s.prose}>
-                <MathText>{message}</MathText>
-              </div>
+              <SolutionContent solution={exercise.solution} />
             ) : (
               <MathText>{message}</MathText>
             )}

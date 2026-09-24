@@ -3,6 +3,7 @@ import { LIMA_LOGO_PDF } from '../brand/logo';
 import {
   cancellationParts,
   cancellationText,
+  formatCalculationSteps,
   stripRedundantFractionParentheses,
   wholeNumberFraction,
 } from './format';
@@ -19,9 +20,12 @@ import { waitForPdfTask } from './pdf-task';
 import { segmentGeometry } from './segment';
 import { numberLineGeometry, SolutionNumberLine } from './solution-number-line';
 import { upgradeUnitFractionSolutions } from './unit-fraction-lesson';
+import {
+  WordProblemRow as SharedWordProblemRow,
+  wordProblemRows,
+} from './word-problem-format';
 
 // Small, self-contained A4 exporter: embedded TrueType outlines and searchable
-// Unicode text. No network service, browser print dialog, or Python runtime.
 const enc = new TextEncoder();
 const W = 595.28,
   H = 841.89,
@@ -86,36 +90,90 @@ function fontMetrics(bytes: Uint8Array) {
     descent: Math.round((v.getInt16(tables.hhea + 6) / units) * 1000),
   };
 }
-type Token =
-  | { text: string }
-  | {
-      n: string;
-      d: string;
-      parenthesized?: boolean;
-      exponent?: string;
-      nested?: boolean;
-      outerExponent?: string;
-    };
+type TextToken = {
+  text: string;
+  exponent?: string;
+  innerExponent?: string;
+  parenthesized?: boolean;
+};
+type FractionToken = {
+  n: string;
+  d: string;
+  parenthesized?: boolean;
+  exponent?: string;
+  nested?: boolean;
+  outerExponent?: string;
+};
+type GroupedExpressionToken = {
+  items: Token[];
+  exponent: string;
+};
+type Token = TextToken | FractionToken | GroupedExpressionToken;
 function tokens(text: string): Token[] {
   text = stripRedundantFractionParentheses(text.normalize('NFC'));
+  const grouped = /\(([^()]+)\)\^(\([^()]*\)|[+-]?(?:\d+|[a-zA-Z]))/gu;
+  const groupedMatches = [...text.matchAll(grouped)].filter((match) =>
+    /\s[+\-−]\s/u.test(match[1])
+  );
+  if (groupedMatches.length) {
+    const out: Token[] = [];
+    let last = 0;
+    for (const match of groupedMatches) {
+      const index = match.index!;
+      out.push(...tokens(text.slice(last, index)));
+      out.push({
+        items: tokens(match[1]),
+        exponent: match[2].replace(/^\(|\)$/gu, ''),
+      });
+      last = index + match[0].length;
+    }
+    out.push(...tokens(text.slice(last)));
+    return out;
+  }
   const out: Token[] = [],
     re =
-      /(?:\[\s*\(\s*(\([^()]+\)|-?\d+|□)\s*\/\s*(\([^()]+\)|-?\d+|□)\s*\)\s*\^(\([^()]*\)|[+-]?(?:\d+|[a-zA-Z]))\s*\]\s*\^(\([^()]*\)|[+-]?(?:\d+|[a-zA-Z])))|(?:\(\s*(\([^()]+\)|-?\d+|□)\s*\/\s*(\([^()]+\)|-?\d+|□)\s*\)\s*\^(\([^()]*\)|[+-]?(?:\d+|[a-zA-Z])))|(?:(\([^()]+\)|-?\d+|□)\s*\/\s*(\([^()]+\)|-?\d+|□))/g;
+      /(?:(?:\[|\()\s*\(\s*(\([^()]+\)|~[^~]+~|-?\d+|□)\s*\/\s*(\([^()]+\)|~[^~]+~|-?\d+|□)\s*\)\s*\^(\([^()]*\)|[+-]?(?:\d+|[a-zA-Z]))\s*(?:\]|\))\s*\^(\([^()]*\)|[+-]?(?:\d+|[a-zA-Z])))|(?:\(\s*(\([^()]+\)|~[^~]+~|-?\d+|□)\s*\/\s*(\([^()]+\)|~[^~]+~|-?\d+|□)\s*\)\s*\^(\([^()]*\)|[+-]?(?:\d+|[a-zA-Z])))|(?:\(\s*(\([^()]+\)|~[^~]+~|-?\d+|□)\s*\/\s*(\([^()]+\)|~[^~]+~|-?\d+|□)\s*\))|(?:(\([^()]+\)|~[^~]+~|-?\d+|□)\s*\/\s*(\([^()]+\)|~[^~]+~|-?\d+|□))/g;
   let last = 0;
-  const words = (s: string) =>
+  const plainWords = (s: string) =>
     s
       .split(/(\n|[ \t]+)/)
       .filter(Boolean)
       .forEach((text) => out.push({ text }));
+  const words = (s: string) => {
+    const power =
+      /\(\s*([a-zA-Z]|-?\d+)\s*\^(\([^()]*\)|[+-]?(?:\d+|[a-zA-Z]))\s*\)\s*\^(\([^()]*\)|[+-]?(?:\d+|[a-zA-Z]))|(\([^()]+\)|[a-zA-Z]|-?\d+)\s*\^(\([^()]*\)|[+-]?(?:\d+|[a-zA-Z]))/g;
+    let powerLast = 0;
+    const clean = (value: string) =>
+      value.startsWith('(') ? value.slice(1, -1) : value;
+    for (const match of s.matchAll(power)) {
+      plainWords(s.slice(powerLast, match.index));
+      if (match[1])
+        out.push({
+          text: match[1],
+          innerExponent: clean(match[2]),
+          exponent: clean(match[3]),
+          parenthesized: true,
+        });
+      else
+        out.push({
+          text: clean(match[4]),
+          exponent: clean(match[5]),
+          parenthesized: match[4].startsWith('('),
+        });
+      powerLast = match.index! + match[0].length;
+    }
+    plainWords(s.slice(powerLast));
+  };
   for (const match of text.matchAll(re)) {
     words(text.slice(last, match.index));
     const clean = (v: string) => (v.startsWith('(') ? v.slice(1, -1) : v);
     const nested = Boolean(match[1]);
-    const parenthesized = nested || Boolean(match[5]);
-    const offset = nested ? 0 : parenthesized ? 4 : 7;
+    const powered = Boolean(match[5]);
+    const parenthesized = nested || powered || Boolean(match[8]);
+    const offset = nested ? 0 : powered ? 4 : parenthesized ? 7 : 9;
     const n = clean(match[offset + 1]),
       d = clean(match[offset + 2]),
-      exponent = parenthesized ? clean(match[offset + 3]) : undefined,
+      exponent = nested || powered ? clean(match[offset + 3]) : undefined,
       outerExponent = nested ? clean(match[4]) : undefined;
     const whole = wholeNumberFraction(n, d, text.slice(0, match.index));
     out.push(
@@ -183,77 +241,31 @@ export function printableWordProblemSolution(exercise: MathExercise) {
 }
 
 type SolutionAlignment = 'left' | 'center';
-type WordProblemRow = {
-  text: string;
-  role: 'heading' | 'explanation' | 'calculation' | 'answer';
+type PdfWordProblemRow = SharedWordProblemRow & {
   align: SolutionAlignment;
 };
-
-const wordProblemUnit = /\s*\(([\p{L}°²³%]+(?:[ /][\p{L}°²³%]+)*)\)(\s*\.?)$/u;
-
-function wordProblemCalculation(line: string): string | null {
-  // Use the same visible cancellation text as the renderer. Presentation marks
-  // must not make a numeric calculation look like prose.
-  const expression = cancellationText(line.replace(wordProblemUnit, ''));
-  if (
-    !expression.includes('=') ||
-    !/^(?:[\d\s.,;+−×÷*/:()[\]{}=⁰¹²³⁴⁵⁶⁷⁸⁹^%-]|ƯCLN|BCNN|ƯC|BC)+$/u.test(
-      expression
-    )
-  )
-    return null;
-
-  const steps = expression.replace(/\.$/u, '').split('=');
-  // A word problem shows each calculation directly, as in the Grade 4
-  // reference. Keep separate calculations and prose; only elide intermediate
-  // numeric equalities, never symbolic working or a remainder explanation.
-  if (
-    steps.length > 2 &&
-    steps.every((part) =>
-      /^(?:\d+(?:[.,]\d+)?|[+−×÷*/:()[\]\s-])+$/u.test(part)
-    ) &&
-    /^[+−-]?\d+(?:[.,]\d+)?(?:\s*\/\s*\d+)?$/u.test(steps.at(-1)!.trim())
-  ) {
-    const authored = line.split('=').map((part) => part.trim());
-    return `${authored[0]} = ${authored.at(-1)}`;
-  }
-  return line;
-}
+type LaidOutWordProblemRow = PdfWordProblemRow & {
+  left: number;
+  gap: number;
+  height: number;
+};
 
 export function printableWordProblemRows(
   exercise: MathExercise
-): WordProblemRow[] | null {
+): PdfWordProblemRow[] | null {
   if (exercise.kind === 'choice') return null;
-  const text = printableWordProblemSolution(exercise) || exercise.solution;
-  const lines = text
-    .normalize('NFC')
-    .trim()
-    .replace(/^(?:Lời giải(?: mẫu)?|Bài giải)\s*:\s*/iu, '')
-    .split(/\r?\n/u)
-    .map((line) => line.trim())
-    .filter(Boolean);
-  const body: WordProblemRow[] = lines.map((line) => {
-    if (/^Đáp số\s*:/iu.test(line))
-      return {
-        text: line
-          .replace(/^Đáp số\s*:\s*/iu, 'Đáp số: ')
-          .replace(wordProblemUnit, ' $1$2'),
-        role: 'answer',
-        align: 'left',
-      };
-    // Classification is only for page-break grouping, not an eligibility gate:
-    // future notation and prose still use the shared workbook layout.
-    const calculation = wordProblemCalculation(line);
-    return {
-      text: calculation ?? line,
-      role: calculation !== null ? 'calculation' : 'explanation',
-      align: 'center',
-    };
-  });
-  // An explicit answer following working identifies the solution structure,
-  // independent of lesson ID, grade, question wording or arithmetic symbols.
-  if (body.length < 2 || body.at(-1)?.role !== 'answer') return null;
-  return [{ text: 'Bài giải:', role: 'heading', align: 'center' }, ...body];
+  const rows = wordProblemRows(
+    printableWordProblemSolution(exercise) || exercise.solution
+  );
+  if (!rows) return null;
+  return (
+    rows.map(
+      (row): PdfWordProblemRow => ({
+        ...row,
+        align: row.role === 'answer' ? 'left' : 'center',
+      })
+    ) || null
+  );
 }
 
 export type PracticePdfOptions = { includeKnowledgeSummary?: boolean };
@@ -286,7 +298,7 @@ export function printableShortSolution(exercise: MathExercise): string {
   const style =
     exercise.solutionStyle ??
     (/=/u.test(exercise.solution) ? 'method' : 'explanation');
-  return `${heading}\n${style === 'method' ? 'Cách làm' : 'Giải thích'}: ${exercise.solution}`;
+  return `${heading}\n${style === 'method' ? 'Cách làm' : 'Giải thích'}: ${formatCalculationSteps(exercise.solution)}`;
 }
 
 export function createPracticePdf(
@@ -365,6 +377,21 @@ export function createPracticePdf(
       `BT /F1 ${size} Tf ${color} rg 1 0 0 1 ${num(x)} ${num(H - top - size)} Tm <${glyphs}> Tj ET`
     );
   }
+  function drawTallDelimiter(
+    text: '(' | ')' | '[' | ']',
+    x: number,
+    top: number,
+    size: number,
+    scaleY: number
+  ) {
+    const glyphs = Array.from(text, (char) =>
+      hex(font.glyph(char.codePointAt(0)!))
+    ).join('');
+    measure(text, size);
+    page.push(
+      `BT /F1 ${size} Tf 0.09 0.14 0.24 rg 1 0 0 ${scaleY} ${num(x)} ${num(H - top - size * scaleY)} Tm <${glyphs}> Tj ET`
+    );
+  }
   function line(x1: number, top: number, x2: number, color = '0.75 0.80 0.87') {
     page.push(
       `${color} RG 0.6 w ${num(x1)} ${num(H - top)} m ${num(x2)} ${num(H - top)} l S`
@@ -382,27 +409,56 @@ export function createPracticePdf(
       x += width;
     }
   }
-  const fractionWidth = (t: Exclude<Token, { text: string }>, size: number) =>
+  const fractionWidth = (t: FractionToken, size: number) =>
     Math.max(
       measure(cancellationText(t.n), size * 0.88),
       measure(cancellationText(t.d), size * 0.88)
     ) + 10;
-  const tokenWidth = (t: Token, size: number) => {
-    if ('text' in t) return measure(t.text, size);
-    const innerBracket = t.parenthesized ? measure('(', size * 2.1) * 2 : 0;
-    const outerBracket = t.nested ? measure('[', size * 2.5) * 2 : 0;
+  function ordinaryTokenWidth(
+    t: TextToken | FractionToken,
+    size: number
+  ): number {
+    if ('text' in t) {
+      if (!t.exponent) return measure(t.text, size);
+      const baseWidth = measure(t.text, size);
+      const bracketWidth = t.parenthesized ? measure('(', size) * 2 : 0;
+      const innerExponentWidth = t.innerExponent
+        ? measure(t.innerExponent, size * 0.68)
+        : 0;
+      return (
+        baseWidth +
+        bracketWidth +
+        innerExponentWidth +
+        measure(t.exponent, size * 0.68)
+      );
+    }
+    const innerBracket = t.parenthesized ? measure('(', size) * 2 : 0;
+    const outerBracket = t.nested ? measure('[', size) * 2 : 0;
     const innerExponent = t.exponent ? measure(t.exponent, size * 0.68) : 0;
     const outerExponent = t.outerExponent
       ? measure(t.outerExponent, size * 0.68)
       : 0;
+    const outerGap = t.nested ? size * 0.18 : 0;
     return (
       fractionWidth(t, size) +
       innerBracket +
       outerBracket +
       innerExponent +
-      outerExponent
+      outerExponent +
+      outerGap * 3
     );
-  };
+  }
+  function tokenWidth(t: Token, size: number): number {
+    if (!('items' in t)) return ordinaryTokenWidth(t, size);
+    const contentWidth = t.items.reduce(
+      (sum, item) =>
+        sum + ordinaryTokenWidth(item as TextToken | FractionToken, size),
+      0
+    );
+    return (
+      measure('(', size) * 2 + contentWidth + measure(t.exponent, size * 0.68)
+    );
+  }
   function layout(text: string, size: number, width = W - 2 * M) {
     const lines: Token[][] = [[]];
     let occupied = 0;
@@ -500,20 +556,79 @@ export function createPracticePdf(
   ) {
     for (const t of items) {
       const width = tokenWidth(t, size);
-      if ('text' in t) draw(t.text, x, y + (frac ? size * 0.48 : 0), size);
-      else {
+      if ('items' in t) {
+        const contentWidth = t.items.reduce(
+          (sum, item) => sum + tokenWidth(item, size),
+          0
+        );
+        const hasFraction = t.items.some((item) => !('text' in item));
+        const bracketWidth = measure('(', size);
+        const baseline = y + (hasFraction ? size * 0.48 : 0);
+        if (hasFraction) {
+          drawTallDelimiter('(', x, y - size * 0.08, size, 2.1);
+          drawTallDelimiter(
+            ')',
+            x + bracketWidth + contentWidth,
+            y - size * 0.08,
+            size,
+            2.1
+          );
+        } else {
+          draw('(', x, baseline, size);
+          draw(')', x + bracketWidth + contentWidth, baseline, size);
+        }
+        drawRow(t.items, x + bracketWidth, size, hasFraction);
+        draw(
+          t.exponent,
+          x + bracketWidth * 2 + contentWidth,
+          hasFraction ? y - size * 0.12 : baseline - size * 0.38,
+          size * 0.68
+        );
+      } else if ('text' in t) {
+        const baseline = y + (frac ? size * 0.48 : 0);
+        if (!t.exponent) draw(t.text, x, baseline, size);
+        else {
+          const bracketWidth = t.parenthesized ? measure('(', size) : 0;
+          const baseX = x + bracketWidth;
+          if (t.parenthesized) draw('(', x, baseline, size);
+          draw(t.text, baseX, baseline, size);
+          const baseEnd = baseX + measure(t.text, size);
+          if (t.innerExponent) {
+            draw(t.innerExponent, baseEnd, baseline - size * 0.38, size * 0.68);
+            draw(
+              ')',
+              baseEnd + measure(t.innerExponent, size * 0.68),
+              baseline,
+              size
+            );
+          } else if (t.parenthesized) draw(')', baseEnd, baseline, size);
+          const outerX =
+            baseEnd +
+            (t.innerExponent
+              ? measure(t.innerExponent, size * 0.68) + measure(')', size)
+              : t.parenthesized
+                ? measure(')', size)
+                : 0);
+          draw(t.exponent, outerX, baseline - size * 0.38, size * 0.68);
+        }
+      } else {
         const fs = size * 0.88;
         const baseWidth = fractionWidth(t, size);
-        const innerBracketSize = size * 2.1;
+        const innerBracketSize = size;
+        const innerBracketScaleY = 2.1;
         const innerBracketWidth = t.parenthesized
           ? measure('(', innerBracketSize)
           : 0;
-        const outerBracketSize = size * 2.5;
+        const outerBracketSize = size;
+        const outerBracketScaleY = innerBracketScaleY * (2.35 / 1.85);
+        const outerBracketTop =
+          y - size * (0.08 + (outerBracketScaleY - innerBracketScaleY) / 2);
         const outerBracketWidth = t.nested ? measure('[', outerBracketSize) : 0;
+        const outerGap = t.nested ? size * 0.18 : 0;
         const innerExponentWidth = t.exponent
           ? measure(t.exponent, size * 0.68)
           : 0;
-        const fractionX = x + outerBracketWidth + innerBracketWidth;
+        const fractionX = x + outerBracketWidth + outerGap + innerBracketWidth;
         drawFactors(
           t.n,
           fractionX + (baseWidth - measure(cancellationText(t.n), fs)) / 2,
@@ -533,8 +648,20 @@ export function createPracticePdf(
           fs
         );
         if (t.parenthesized) {
-          draw('(', x + outerBracketWidth, y - size * 0.08, innerBracketSize);
-          draw(')', fractionX + baseWidth, y - size * 0.08, innerBracketSize);
+          drawTallDelimiter(
+            '(',
+            x + outerBracketWidth + outerGap,
+            y - size * 0.08,
+            innerBracketSize,
+            innerBracketScaleY
+          );
+          drawTallDelimiter(
+            ')',
+            fractionX + baseWidth,
+            y - size * 0.08,
+            innerBracketSize,
+            innerBracketScaleY
+          );
         }
         if (t.exponent)
           draw(
@@ -544,12 +671,23 @@ export function createPracticePdf(
             size * 0.68
           );
         if (t.nested) {
-          draw('[', x, y - size * 0.22, outerBracketSize);
-          draw(
+          drawTallDelimiter(
+            '[',
+            x,
+            outerBracketTop,
+            outerBracketSize,
+            outerBracketScaleY
+          );
+          drawTallDelimiter(
             ']',
-            fractionX + baseWidth + innerBracketWidth + innerExponentWidth,
-            y - size * 0.22,
-            outerBracketSize
+            fractionX +
+              baseWidth +
+              innerBracketWidth +
+              innerExponentWidth +
+              outerGap,
+            outerBracketTop,
+            outerBracketSize,
+            outerBracketScaleY
           );
         }
         if (t.outerExponent)
@@ -559,6 +697,7 @@ export function createPracticePdf(
               baseWidth +
               innerBracketWidth +
               innerExponentWidth +
+              outerGap * 2 +
               outerBracketWidth,
             y - size * 0.25,
             size * 0.68
@@ -961,7 +1100,26 @@ export function createPracticePdf(
     const wordRows = mode === 'solutions' ? printableWordProblemRows(e) : null;
     const plainSolution =
       !wordRows && mode === 'solutions' ? printableShortSolution(e) : null;
-    const plainSolutionLines = plainSolution ? layout(plainSolution, 11) : [];
+    const plainSolutionRows = (() => {
+      if (!plainSolution || !plainSolution.includes('\nCách làm: '))
+        return null;
+      const [heading, method] = plainSolution.split('\nCách làm: ', 2);
+      const [first, ...continuations] = method.split('\n');
+      const calculationLeft = M + measure('Cách làm: ', 11);
+      const continuationLeft = calculationLeft - measure('= ', 11);
+      return [
+        { text: heading, left: M },
+        { text: `Cách làm: ${first}`, left: M },
+        ...continuations.map((text) => ({ text, left: continuationLeft })),
+      ];
+    })();
+    const plainSolutionLines = plainSolutionRows
+      ? plainSolutionRows.flatMap((row) =>
+          layout(row.text, 11, W - M - row.left)
+        )
+      : plainSolution
+        ? layout(plainSolution, 11)
+        : [];
     const solutionFigure =
       mode === 'solutions' && e.solutionNumberLine
         ? solutionNumberLineLayout(e.solutionNumberLine)
@@ -969,28 +1127,33 @@ export function createPracticePdf(
     // Every calculation line is centered, so its halfway point is W / 2,
     // including wrapped lines and stacked fractions. The answer starts below it.
     const calculationMidpoint = W / 2;
-    const solutionRows = wordRows?.map((row) => {
-      let left = M;
-      if (row.role === 'answer') {
-        const width = Math.min(
-          W - 2 * M,
-          tokens(row.text).reduce((sum, item) => sum + tokenWidth(item, 11), 0)
-        );
-        // Shift left only when necessary to keep the answer on the page;
-        // answers wider than the full content area wrap at the page margins.
-        left = Math.max(M, Math.min(calculationMidpoint, W - M - width));
-      }
-      const gap = row.role === 'heading' ? 6 : 0;
-      return {
-        ...row,
-        left,
-        gap,
-        height: layout(row.text, 11, W - M - left).reduce(
-          (sum, line) => sum + line.height,
-          gap
-        ),
-      };
-    });
+    const solutionRows: LaidOutWordProblemRow[] | null = wordRows
+      ? wordRows.map((row) => {
+          let left = M;
+          if (row.role === 'answer') {
+            const width = Math.min(
+              W - 2 * M,
+              tokens(row.text).reduce(
+                (sum, item) => sum + tokenWidth(item, 11),
+                0
+              )
+            );
+            // Shift left only when necessary to keep the answer on the page;
+            // answers wider than the full content area wrap at the page margins.
+            left = Math.max(M, Math.min(calculationMidpoint, W - M - width));
+          }
+          const gap = row.role === 'heading' ? 6 : 0;
+          return {
+            ...row,
+            left,
+            gap,
+            height: layout(row.text, 11, W - M - left).reduce(
+              (sum, line) => sum + line.height,
+              gap
+            ),
+          };
+        })
+      : null;
     const work =
       mode === 'worksheet' && e.kind !== 'choice' && !e.table
         ? { small: 36, medium: 72, large: 108 }[e.workspace || 'medium']
@@ -1047,6 +1210,10 @@ export function createPracticePdf(
             paragraph(row.text, 11, row.gap, false, row.align, row.left);
           start = end;
         }
+        y += 8;
+      } else if (plainSolutionRows) {
+        for (const row of plainSolutionRows)
+          paragraph(row.text, 11, 0, false, 'left', row.left);
         y += 8;
       } else if (plainSolution) paragraph(plainSolution, 11, 8);
       if (solutionFigure) drawSolutionNumberLine(solutionFigure);

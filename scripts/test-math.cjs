@@ -31,6 +31,7 @@ function load(name) {
 }
 const { parseMathPack, packLessons, checkAnswer, applyImport } =
   load('lessons');
+const { formatCalculationSteps } = load('format');
 const { exampleLessons } = load('examples');
 const { isMathPracticeEnabled } = load('availability');
 const { encodeMathLesson, decodeMathLesson } = load('share');
@@ -55,6 +56,16 @@ test('math practice is local-only unless production explicitly opts in', () => {
       delete process.env.NEXT_PUBLIC_ENABLE_MATH_PRACTICE;
     else process.env.NEXT_PUBLIC_ENABLE_MATH_PRACTICE = originalFlag;
   }
+});
+test('pure calculation chains use aligned continuation steps without changing prose', () => {
+  assert.equal(
+    formatCalculationSteps('1/2 + 1/4 = 2/4 + 1/4 = 3/4.'),
+    '1/2 + 1/4\n= 2/4 + 1/4\n= 3/4.'
+  );
+  assert.equal(
+    formatCalculationSteps('Vậy 1/2 = 2/4 = 0,5.'),
+    'Vậy 1/2 = 2/4 = 0,5.'
+  );
 });
 test('all example lessons validate and have correct model answers', () => {
   assert.deepEqual(parseMathPack(clone()), clone());
@@ -126,6 +137,14 @@ test('math text renders centered question boxes for blanks without changing punc
     render('(a^m)^n = a^(m × n).'),
     '(a<sup class="exponent">m</sup>)<sup class="exponent">n</sup> = a<sup class="exponent">m × n</sup>.'
   );
+  assert.match(
+    render('(1 + 1/2)^2 × 4/9.'),
+    /class="groupedExpressionPower"><span class="groupedExpressionGroup"><span aria-hidden="true" class="fractionBracket">\([\s\S]*<span aria-hidden="true" class="fractionBracket">\)<\/span><\/span><sup class="exponent">2<\/sup><\/span> × <span class="fraction"/
+  );
+  assert.match(
+    render('4 × (1/2 - 1/4)^2.'),
+    /class="groupedExpressionPower"><span class="groupedExpressionGroup"><span aria-hidden="true" class="fractionBracket">\(<\/span><span class="fraction"[\s\S]* - <span class="fraction"[\s\S]*class="fractionBracket">\)<\/span><\/span><sup class="exponent">2<\/sup><\/span>/
+  );
   const fraction = render('3/5 = □/20; 1/□; (□ + 1)/3');
   assert.equal((fraction.match(/class="questionBox"/g) || []).length, 3);
   assert.equal((fraction.match(/class="fraction"/g) || []).length, 4);
@@ -135,6 +154,16 @@ test('math text renders centered question boxes for blanks without changing punc
   assert.match(
     render('(~□~ × 2)/3'),
     /class="cancelledFactor"><span class="questionBox"/
+  );
+  const reciprocalCancellation = render('1/~4~ × (~4~ × 4)/1');
+  assert.equal(
+    (reciprocalCancellation.match(/class="cancelledFactor"/g) || []).length,
+    2
+  );
+  assert.doesNotMatch(reciprocalCancellation, /~4~/);
+  assert.match(
+    render('4 × (1/4)^2\n= 1/4.'),
+    /class="mathCalculationLine"><span>4 × [\s\S]*class="mathCalculationLine mathCalculationContinuation"><span class="mathCalculationEquals">=<\/span><span><span class="fraction"/
   );
   for (const lesson of [
     load('addition-subtraction-lesson').additionSubtractionLesson,
@@ -510,7 +539,7 @@ test('all lessons share answer-first PDF formatting for choices and short answer
       const text = printableShortSolution(e);
       assert.ok(text.startsWith(`Đáp án: ${answer}`));
       if (e.solutionStyle !== 'answer-only' && text.includes('\n'))
-        assert.ok(text.endsWith(e.solution));
+        assert.ok(text.endsWith(formatCalculationSteps(e.solution)));
     }
     const rows = pdfTextRows(createPracticePdf(lesson, 'solutions', font));
     assert.equal(
@@ -1616,8 +1645,9 @@ test('PDF omits redundant fraction parentheses but keeps negative operands group
     const negative = rows.find((row) => row.text.startsWith('Bài 2. Tính'));
     assert.ok(positive && negative, mode);
     assert.doesNotMatch(positive.text, /[()]/u, mode);
-    assert.equal((negative.text.match(/\(/gu) || []).length, 1, mode);
-    assert.equal((negative.text.match(/\)/gu) || []).length, 1, mode);
+    // Tall delimiters use a vertically transformed text matrix, which this
+    // lightweight extractor intentionally does not include in its text rows.
+    assert.equal((negative.text.match(/[()]/gu) || []).length, 0, mode);
     if (mode === 'solutions') {
       const solution = rows.find((row) => row.text.startsWith('Cách làm:'));
       assert.ok(solution, mode);

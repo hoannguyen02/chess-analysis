@@ -160,6 +160,36 @@
 .prose {
   white-space: pre-line;
 }
+.wordProblemSolution {
+  display: grid;
+  gap: 0.35em;
+  margin-block: 0.25em;
+  text-align: center;
+}
+.wordProblemRow {
+  margin: 0;
+}
+.wordProblemHeading {
+  font-weight: 700;
+  font-size: 1.1em;
+}
+.wordProblemAnswer {
+  font-weight: 650;
+}
+.mathCalculationLine {
+  display: block;
+}
+.mathCalculationLine + .mathCalculationLine {
+  margin-top: 0.3em;
+}
+.mathCalculationContinuation {
+  display: flex;
+  align-items: baseline;
+}
+.mathCalculationEquals {
+  flex: 0 0 1em;
+  margin-left: -1em;
+}
 .eyebrow {
   font-size: 13px;
   color: #164bdb;
@@ -257,6 +287,16 @@
   vertical-align: middle;
   white-space: nowrap;
 }
+.groupedExpressionPower {
+  display: inline-flex;
+  align-items: flex-start;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+.groupedExpressionGroup {
+  display: inline-flex;
+  align-items: center;
+}
 .fractionBracket {
   align-self: stretch;
   display: flex;
@@ -295,6 +335,11 @@
   align-self: flex-start;
   position: relative;
   top: -0.28em;
+  line-height: 1;
+}
+.groupedExpressionPower > .exponent {
+  position: relative;
+  top: -0.1em;
   line-height: 1;
 }
 .visual {

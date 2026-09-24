@@ -1,3 +1,4 @@
+import { formatCalculationSteps } from '@/lib/math/format';
 import { getKnowledgeSummary } from '@/lib/math/knowledge-summary';
 import {
   checkAnswer,
@@ -110,7 +111,7 @@ function WrittenExercise({
           <h3>Lời giải mẫu</h3>
           {exercise.table && <ExerciseTable table={exercise.table} solved />}
           <p className={s.prose}>
-            <MathText>{exercise.solution}</MathText>
+            <MathText>{formatCalculationSteps(exercise.solution)}</MathText>
           </p>
           <h3>Tự kiểm tra</h3>
           <ul className={s.criteria}>
