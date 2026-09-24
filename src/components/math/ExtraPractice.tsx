@@ -1,17 +1,17 @@
-import SegmentDiagram from './SegmentDiagram';
-import ExerciseTable from './ExerciseTable';
-import { useEffect, useMemo, useRef, useState } from 'react';
+import { getKnowledgeSummary } from '@/lib/math/knowledge-summary';
 import {
   checkAnswer,
   EXTRA_GROUPS,
   MathExercise,
   MathLessonData,
 } from '@/lib/math/lessons';
-import Exercise, { Result } from './Exercise';
-import { getKnowledgeSummary } from '@/lib/math/knowledge-summary';
 import { startPdfTask, waitForPdfTask } from '@/lib/math/pdf-task';
-import { MathText } from './MathText';
+import { useEffect, useMemo, useRef, useState } from 'react';
+import Exercise, { Result } from './Exercise';
+import ExerciseTable from './ExerciseTable';
 import s from './MathLesson.module.css';
+import { MathText } from './MathText';
+import SegmentDiagram from './SegmentDiagram';
 type ExtraResult = Result & {
   reviewed?: boolean;
   selfRating?: 'understood' | 'review';
@@ -48,7 +48,12 @@ function WrittenExercise({
         <MathText>{exercise.prompt}</MathText>
       </h3>
       {exercise.table && <ExerciseTable table={exercise.table} />}
-      {exercise.segment && <SegmentDiagram values={exercise.segment} />}
+      {exercise.segment && (
+        <SegmentDiagram
+          values={exercise.segment}
+          labels={exercise.segmentLabels}
+        />
+      )}
       {exercise.inputInstruction && (
         <p id={`${exercise.id}-instruction`} className={s.footer}>
           <MathText>{exercise.inputInstruction}</MathText>

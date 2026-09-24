@@ -1,8 +1,8 @@
-import SegmentDiagram from './SegmentDiagram';
 import { checkAnswer, MathExercise } from '@/lib/math/lessons';
 import { useEffect, useRef, useState } from 'react';
 import s from './MathLesson.module.css';
 import { MathText } from './MathText';
+import SegmentDiagram from './SegmentDiagram';
 export type Result = {
   answer: string;
   unit: string;
@@ -112,7 +112,12 @@ export default function Exercise({
       <h3>
         <MathText>{exercise.prompt}</MathText>
       </h3>
-      {exercise.segment && <SegmentDiagram values={exercise.segment} />}
+      {exercise.segment && (
+        <SegmentDiagram
+          values={exercise.segment}
+          labels={exercise.segmentLabels}
+        />
+      )}
       {exercise.inputInstruction && (
         <p id={label('instruction')} className={s.footer}>
           <MathText>{exercise.inputInstruction}</MathText>

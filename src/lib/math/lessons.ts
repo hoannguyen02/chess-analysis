@@ -1,6 +1,9 @@
-import { parseSegment } from './segment';
 import { migrateLegacyExerciseContent } from './exercise-content';
-import { parseSolutionNumberLine, SolutionNumberLine } from './solution-number-line';
+import { parseSegment } from './segment';
+import {
+  parseSolutionNumberLine,
+  SolutionNumberLine,
+} from './solution-number-line';
 
 export type MathSection =
   | 'foundation'
@@ -36,8 +39,15 @@ export type MathBlock = {
   section: MathSection;
   title: string;
   text: string;
-  visual: 'none' | 'fractions' | 'rectangle' | 'number-line' | 'unit-fraction' | 'segment';
+  visual:
+    | 'none'
+    | 'fractions'
+    | 'rectangle'
+    | 'number-line'
+    | 'unit-fraction'
+    | 'segment';
   values: number[];
+  segmentLabels?: [string, string, string];
 };
 export type MathExercise = {
   id: string;
@@ -56,6 +66,7 @@ export type MathExercise = {
   hint: string;
   solution: string;
   segment?: number[];
+  segmentLabels?: [string, string, string];
   solutionStyle?: 'method' | 'explanation' | 'answer-only';
   solutionNumberLine?: SolutionNumberLine | null;
   table?: { rows: string[][]; solution: string[][] };
@@ -132,6 +143,14 @@ const idText = (value: unknown) => {
 const unique = (items: { id: string }[]) => {
   if (new Set(items.map((item) => item.id)).size !== items.length)
     throw new Error('Có ID trùng lặp.');
+};
+const segmentLabels = (value: unknown): [string, string, string] => {
+  const labels = list(value, 3).map((label) =>
+    text(label, 'Nhãn điểm', 10, true)
+  );
+  if (labels.length !== 3 || new Set(labels).size !== 3)
+    throw new Error('Hình đoạn thẳng cần ba nhãn điểm khác nhau.');
+  return labels as [string, string, string];
 };
 export function fraction(value: string): [number, number] | null {
   const match = value.trim().match(/^(-?\d+)\s*\/\s*([1-9]\d*)$/);
@@ -222,8 +241,12 @@ export function parseMathPack(value: unknown): MathPack {
         const raw = record(entry);
         const grade = finite(raw.grade, 1, 12);
         if (!Number.isInteger(grade)) throw new Error('Lớp phải là số nguyên.');
-        if (raw.semester !== undefined && raw.semester !== '' &&
-            raw.semester !== '1' && raw.semester !== '2')
+        if (
+          raw.semester !== undefined &&
+          raw.semester !== '' &&
+          raw.semester !== '1' &&
+          raw.semester !== '2'
+        )
           throw new Error('Học kỳ phải là 1, 2 hoặc để trống.');
         const blocks = list(raw.blocks, 50).map((entry): MathBlock => {
           const b = record(entry);
@@ -232,9 +255,20 @@ export function parseMathPack(value: unknown): MathPack {
             !Object.hasOwn(SECTION_LABELS, String(b.section))
           )
             throw new Error('Phần học không hợp lệ.');
-          if (!['none', 'fractions', 'rectangle', 'number-line', 'unit-fraction', 'segment'].includes(String(b.visual)))
+          if (
+            ![
+              'none',
+              'fractions',
+              'rectangle',
+              'number-line',
+              'unit-fraction',
+              'segment',
+            ].includes(String(b.visual))
+          )
             throw new Error('Hình minh họa không hợp lệ.');
-          const values = list(b.values, 4).map((v) => finite(v, b.visual === 'number-line' ? -1000 : 0, 1000));
+          const values = list(b.values, 4).map((v) =>
+            finite(v, b.visual === 'number-line' ? -1000 : 0, 1000)
+          );
           if (
             b.visual === 'fractions' &&
             (values.length !== 4 ||
@@ -250,18 +284,39 @@ export function parseMathPack(value: unknown): MathPack {
               'Thanh phân số cần 4 số: tử, mẫu, tử, mẫu; mẫu từ 1–24, tử không lớn hơn mẫu.'
             );
           if (b.visual === 'segment') parseSegment(values);
-          if (b.visual === 'unit-fraction' && (values.length !== 2 ||
-              values.some(v => !Number.isInteger(v)) || values[0] < 2 || values[0] > 9 ||
-              values[1] < 0 || values[1] > 9))
-            throw new Error('Một phần mấy cần 2–9 phần, mỗi nhóm 0–9 đồ vật (0 để vẽ băng giấy).');
-          if (b.visual === 'number-line' && (
-            values.length !== 4 || !Number.isInteger(values[0]) || !Number.isInteger(values[1]) ||
-            values[0] >= values[1] || values[0] > 0 || values[1] < 0 ||
-            !Number.isInteger(values[2]) || values[2] < 1 || values[2] > 12 ||
-            (values[1] - values[0]) * values[2] > 60 ||
-            values[3] < values[0] || values[3] > values[1] ||
-            Math.abs(values[3] * values[2] - Math.round(values[3] * values[2])) > 1e-8
-          )) throw new Error('Trục số cần hai đầu nguyên bao gồm 0, từ 1–12 phần mỗi đơn vị, tối đa 60 khoảng; điểm nằm trên một vạch trong trục.');
+          if (
+            b.visual === 'unit-fraction' &&
+            (values.length !== 2 ||
+              values.some((v) => !Number.isInteger(v)) ||
+              values[0] < 2 ||
+              values[0] > 9 ||
+              values[1] < 0 ||
+              values[1] > 9)
+          )
+            throw new Error(
+              'Một phần mấy cần 2–9 phần, mỗi nhóm 0–9 đồ vật (0 để vẽ băng giấy).'
+            );
+          if (
+            b.visual === 'number-line' &&
+            (values.length !== 4 ||
+              !Number.isInteger(values[0]) ||
+              !Number.isInteger(values[1]) ||
+              values[0] >= values[1] ||
+              values[0] > 0 ||
+              values[1] < 0 ||
+              !Number.isInteger(values[2]) ||
+              values[2] < 1 ||
+              values[2] > 12 ||
+              (values[1] - values[0]) * values[2] > 60 ||
+              values[3] < values[0] ||
+              values[3] > values[1] ||
+              Math.abs(
+                values[3] * values[2] - Math.round(values[3] * values[2])
+              ) > 1e-8)
+          )
+            throw new Error(
+              'Trục số cần hai đầu nguyên bao gồm 0, từ 1–12 phần mỗi đơn vị, tối đa 60 khoảng; điểm nằm trên một vạch trong trục.'
+            );
           if (
             b.visual === 'rectangle' &&
             (values.length !== 2 || values.some((v) => v <= 0))
@@ -274,6 +329,9 @@ export function parseMathPack(value: unknown): MathPack {
             text: text(b.text, 'Nội dung', 8000),
             visual: b.visual as MathBlock['visual'],
             values,
+            ...(b.segmentLabels !== undefined
+              ? { segmentLabels: segmentLabels(b.segmentLabels) }
+              : {}),
           };
         });
         const exercises = list(raw.exercises, 100).map(
@@ -325,23 +383,48 @@ export function parseMathPack(value: unknown): MathPack {
             if (e.kind === 'written' && e.section !== 'extra')
               throw new Error('Bài tự luận được hỗ trợ trong Luyện tập thêm.');
             const extra: Partial<MathExercise> = {};
-            if (e.segment !== undefined) extra.segment = parseSegment(e.segment);
+            if (e.segment !== undefined)
+              extra.segment = parseSegment(e.segment);
+            if (e.segmentLabels !== undefined)
+              extra.segmentLabels = segmentLabels(e.segmentLabels);
             if (e.table !== undefined) {
-              if (e.kind !== 'written') throw new Error('Bảng cần bài tự luận.');
+              if (e.kind !== 'written')
+                throw new Error('Bảng cần bài tự luận.');
               const table = record(e.table);
-              const readRows = (value: unknown) => list(value, 3).map(row =>
-                list(row, 7).map(cell => text(cell, 'Ô trong bảng', 20, true)));
-              const rows = readRows(table.rows), solution = readRows(table.solution);
-              if (rows.length !== 3 || rows[0].length < 2 || solution.length !== rows.length ||
-                  rows.some((row, i) => row.length !== rows[0].length || solution[i].length !== row.length ||
-                    row.some((cell, j) => j === 0 ? cell !== solution[i][j] :
-                      !/^\d+$/.test(solution[i][j]) || (cell !== '?' && cell !== solution[i][j]))))
-                throw new Error('Bảng cần 3 hàng cùng số cột, các ô số hoặc ? và lời giải tương ứng.');
+              const readRows = (value: unknown) =>
+                list(value, 3).map((row) =>
+                  list(row, 7).map((cell) =>
+                    text(cell, 'Ô trong bảng', 20, true)
+                  )
+                );
+              const rows = readRows(table.rows),
+                solution = readRows(table.solution);
+              if (
+                rows.length !== 3 ||
+                rows[0].length < 2 ||
+                solution.length !== rows.length ||
+                rows.some(
+                  (row, i) =>
+                    row.length !== rows[0].length ||
+                    solution[i].length !== row.length ||
+                    row.some((cell, j) =>
+                      j === 0
+                        ? cell !== solution[i][j]
+                        : !/^\d+$/.test(solution[i][j]) ||
+                          (cell !== '?' && cell !== solution[i][j])
+                    )
+                )
+              )
+                throw new Error(
+                  'Bảng cần 3 hàng cùng số cột, các ô số hoặc ? và lời giải tương ứng.'
+                );
               extra.table = { rows, solution };
             }
 
             if (e.solutionNumberLine !== undefined)
-              extra.solutionNumberLine = parseSolutionNumberLine(e.solutionNumberLine);
+              extra.solutionNumberLine = parseSolutionNumberLine(
+                e.solutionNumberLine
+              );
             for (const [field, allowed] of Object.entries({
               group: ['foundation', 'skills', 'application', 'challenge'],
               difficulty: ['easy', 'medium', 'hard'],
@@ -371,10 +454,20 @@ export function parseMathPack(value: unknown): MathPack {
               throw new Error(
                 'Bài tự luận cần ít nhất một tiêu chí tự đánh giá.'
               );
-            if (e.solutionStyle !== undefined && !['method', 'explanation', 'answer-only'].includes(String(e.solutionStyle)))
+            if (
+              e.solutionStyle !== undefined &&
+              !['method', 'explanation', 'answer-only'].includes(
+                String(e.solutionStyle)
+              )
+            )
               throw new Error('Kiểu trình bày lời giải không hợp lệ.');
             return migrateLegacyExerciseContent({
-              ...(e.solutionStyle !== undefined ? { solutionStyle: e.solutionStyle as MathExercise['solutionStyle'] } : {}),
+              ...(e.solutionStyle !== undefined
+                ? {
+                    solutionStyle:
+                      e.solutionStyle as MathExercise['solutionStyle'],
+                  }
+                : {}),
               ...extra,
               id: idText(e.id),
               section: e.section as MathExercise['section'],

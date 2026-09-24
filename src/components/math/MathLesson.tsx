@@ -1,12 +1,3 @@
-import SegmentDiagram from './SegmentDiagram';
-import UnitFraction from './UnitFraction';
-import { semesterLabel } from '@/lib/math/placement';
-import NumberLine from './NumberLine';
-import QuickLessonEdit from './QuickLessonEdit';
-import { MathEditTarget } from './LessonEditor';
-import Exercise, { Result } from './Exercise';
-import ExtraPractice from './ExtraPractice';
-import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import {
   checkAnswer,
   learnerCopy,
@@ -16,8 +7,17 @@ import {
   MathSection,
   SECTION_LABELS,
 } from '@/lib/math/lessons';
-import { Fraction, MathText } from './MathText';
+import { semesterLabel } from '@/lib/math/placement';
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import Exercise, { Result } from './Exercise';
+import ExtraPractice from './ExtraPractice';
+import { MathEditTarget } from './LessonEditor';
 import s from './MathLesson.module.css';
+import { Fraction, MathText } from './MathText';
+import NumberLine from './NumberLine';
+import QuickLessonEdit from './QuickLessonEdit';
+import SegmentDiagram from './SegmentDiagram';
+import UnitFraction from './UnitFraction';
 
 type Progress = {
   content: string;
@@ -33,7 +33,9 @@ function gcd(a: number, b: number): number {
 function Diagram({ block }: { block: MathBlock }) {
   const [split, setSplit] = useState(false);
   if (block.visual === 'segment')
-    return <SegmentDiagram values={block.values} />;
+    return (
+      <SegmentDiagram values={block.values} labels={block.segmentLabels} />
+    );
   if (block.visual === 'unit-fraction')
     return <UnitFraction values={block.values} />;
   if (block.visual === 'number-line')

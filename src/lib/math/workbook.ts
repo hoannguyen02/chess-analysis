@@ -1,6 +1,6 @@
 import * as XLSX from 'xlsx';
-import { MathLessonData, packLessons, parseMathPack } from './lessons';
 import { withKnowledgeSummary } from './knowledge-summary';
+import { MathLessonData, packLessons, parseMathPack } from './lessons';
 export function exportMathWorkbook(lessons: MathLessonData[]) {
   const book = XLSX.utils.book_new();
   XLSX.utils.book_append_sheet(
@@ -24,6 +24,9 @@ export function exportMathWorkbook(lessons: MathLessonData[]) {
           lessonId: l.id,
           ...b,
           values: JSON.stringify(b.values),
+          segmentLabels: b.segmentLabels
+            ? JSON.stringify(b.segmentLabels)
+            : undefined,
         }))
       )
     ),
@@ -37,6 +40,9 @@ export function exportMathWorkbook(lessons: MathLessonData[]) {
           lessonId: l.id,
           ...e,
           segment: e.segment ? JSON.stringify(e.segment) : undefined,
+          segmentLabels: e.segmentLabels
+            ? JSON.stringify(e.segmentLabels)
+            : undefined,
           table: e.table ? JSON.stringify(e.table) : undefined,
           options: JSON.stringify(e.options),
           mistakes: JSON.stringify(e.mistakes),
@@ -80,7 +86,13 @@ export function importMathWorkbook(data: ArrayBuffer) {
         semester: l.semester || undefined,
         blocks: blocks
           .filter((b) => b.lessonId === l.id)
-          .map((b) => ({ ...b, values: json(b.values, '[]') })),
+          .map((b) => ({
+            ...b,
+            values: json(b.values, '[]'),
+            segmentLabels: b.segmentLabels
+              ? json(b.segmentLabels, '[]')
+              : undefined,
+          })),
         exercises: exercises
           .filter((e) => e.lessonId === l.id)
           .map((e) => {
@@ -91,7 +103,10 @@ export function importMathWorkbook(data: ArrayBuffer) {
             return {
               ...e,
               segment: e.segment ? json(e.segment, '[]') : undefined,
-          table: e.table ? json(e.table, 'null') : undefined,
+              segmentLabels: e.segmentLabels
+                ? json(e.segmentLabels, '[]')
+                : undefined,
+              table: e.table ? json(e.table, 'null') : undefined,
               group: e.group || undefined,
               skill: e.skill || undefined,
               inputInstruction: e.inputInstruction || undefined,

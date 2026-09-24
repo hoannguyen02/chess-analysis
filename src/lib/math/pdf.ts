@@ -1,24 +1,24 @@
-import { segmentGeometry } from './segment';
-import { LIMA_LOGO_PDF } from '../brand/logo';
-import { upgradeUnitFractionSolutions } from './unit-fraction-lesson';
 import { LIMA_CONTACT } from '../brand/contact';
-import { getKnowledgeSummary } from './knowledge-summary';
-import { waitForPdfTask } from './pdf-task';
-import { withNumberLineSolution } from './number-line-lesson';
-import { numberLineGeometry, SolutionNumberLine } from './solution-number-line';
+import { LIMA_LOGO_PDF } from '../brand/logo';
 import {
   cancellationParts,
   cancellationText,
   stripRedundantFractionParentheses,
   wholeNumberFraction,
 } from './format';
+import { getKnowledgeSummary } from './knowledge-summary';
 import {
+  checkAnswer,
   MathExercise,
   MathLessonData,
-  checkAnswer,
-  parseMathPack,
   packLessons,
+  parseMathPack,
 } from './lessons';
+import { withNumberLineSolution } from './number-line-lesson';
+import { waitForPdfTask } from './pdf-task';
+import { segmentGeometry } from './segment';
+import { numberLineGeometry, SolutionNumberLine } from './solution-number-line';
+import { upgradeUnitFractionSolutions } from './unit-fraction-lesson';
 
 // Small, self-contained A4 exporter: embedded TrueType outlines and searchable
 // Unicode text. No network service, browser print dialog, or Python runtime.
@@ -247,16 +247,26 @@ export function printableShortSolution(exercise: MathExercise): string {
   if (exercise.table || exercise.kind === 'written')
     return `${exercise.kind === 'written' ? 'Lời giải mẫu' : 'Lời giải'}: ${exercise.solution}`;
   const optionIndex = exercise.options.indexOf(exercise.answer);
-  const normalized = (text: string) => text.trim().replace(/[.!。]+$/u, '').toLocaleLowerCase('vi');
-  const answerOnly = exercise.solutionStyle === 'answer-only' || normalized(exercise.solution) === normalized(exercise.answer);
-  const answer = exercise.kind === 'choice'
-    ? (optionIndex >= 0 ? `${String.fromCharCode(65 + optionIndex)}${answerOnly ? `. ${exercise.answer}` : ''}` : exercise.answer)
-    : `${exercise.answer}${exercise.unit ? ` ${exercise.unit}` : ''}`;
+  const normalized = (text: string) =>
+    text
+      .trim()
+      .replace(/[.!。]+$/u, '')
+      .toLocaleLowerCase('vi');
+  const answerOnly =
+    exercise.solutionStyle === 'answer-only' ||
+    normalized(exercise.solution) === normalized(exercise.answer);
+  const answer =
+    exercise.kind === 'choice'
+      ? optionIndex >= 0
+        ? `${String.fromCharCode(65 + optionIndex)}${answerOnly ? `. ${exercise.answer}` : ''}`
+        : exercise.answer
+      : `${exercise.answer}${exercise.unit ? ` ${exercise.unit}` : ''}`;
   const heading = `Đáp án: ${answer}`;
   // Only an explicit author decision (or exact duplicate) can hide working.
-  if (answerOnly)
-    return heading;
-  const style = exercise.solutionStyle ?? (/=/u.test(exercise.solution) ? 'method' : 'explanation');
+  if (answerOnly) return heading;
+  const style =
+    exercise.solutionStyle ??
+    (/=/u.test(exercise.solution) ? 'method' : 'explanation');
   return `${heading}\n${style === 'method' ? 'Cách làm' : 'Giải thích'}: ${exercise.solution}`;
 }
 
@@ -401,24 +411,22 @@ export function createPracticePdf(
   function newPage() {
     page = [];
     pages.push(page);
-    // Approved preview: six 36 pt marks, rotated 30°, at 5% grey on white.
+    // A single, faint mark preserves attribution without competing with print text.
     // Paint behind all content without advancing y or changing pagination.
     // Mark as a decorative artifact; this is branding, not edit protection.
     const watermark = 'LIMA Math';
-    const watermarkSize = 36;
+    const watermarkSize = 30;
     const halfWidth = measure(watermark, watermarkSize) / 2;
     const glyphs = Array.from(watermark, (c) =>
       hex(font.glyph(c.codePointAt(0)!))
     ).join('');
     const cosine = Math.cos(Math.PI / 6);
     page.push('/Artifact << /Type /Pagination /Subtype /Watermark >> BDC', 'q');
-    for (const baseline of [635, 420, 205]) {
-      for (const center of [160, 435]) {
-        page.push(
-          `BT /F1 ${watermarkSize} Tf 0.95 0.95 0.95 rg ${cosine.toFixed(6)} 0.5 -0.5 ${cosine.toFixed(6)} ${num(center - halfWidth * cosine)} ${num(baseline - halfWidth * 0.5)} Tm <${glyphs}> Tj ET`
-        );
-      }
-    }
+    const center = 300,
+      baseline = 420;
+    page.push(
+      `BT /F1 ${watermarkSize} Tf 0.975 0.975 0.975 rg ${cosine.toFixed(6)} 0.5 -0.5 ${cosine.toFixed(6)} ${num(center - halfWidth * cosine)} ${num(baseline - halfWidth * 0.5)} Tm <${glyphs}> Tj ET`
+    );
     page.push('Q', 'EMC');
     const first = pages.length === 1;
     const size = first ? 58 : 35;
@@ -809,35 +817,61 @@ export function createPracticePdf(
     y += 6;
   }
   function drawExerciseTable(rows: string[][]) {
-    const height = 28, labelWidth = 110;
+    const height = 28,
+      labelWidth = 110;
     const cellWidth = (W - 2 * M - labelWidth) / (rows[0].length - 1);
     rows.forEach((row) => {
       let x = M;
       row.forEach((cell, j) => {
         const width = j === 0 ? labelWidth : cellWidth;
-        page.push(`0.65 0.70 0.79 RG 0.6 w ${num(x)} ${num(H - y - height)} ${num(width)} ${height} re S`);
-        draw(cell, j === 0 ? x + 8 : x + (width - measure(cell, 11)) / 2, y + 7, 11);
+        page.push(
+          `0.65 0.70 0.79 RG 0.6 w ${num(x)} ${num(H - y - height)} ${num(width)} ${height} re S`
+        );
+        draw(
+          cell,
+          j === 0 ? x + 8 : x + (width - measure(cell, 11)) / 2,
+          y + 7,
+          11
+        );
         x += width;
       });
       y += height;
     });
     y += 10;
   }
-  function drawSegment(values: number[]) {
-    const g = segmentGeometry(values), scale = (W - 2 * M) / 480;
+  function drawSegment(
+    values: number[],
+    labels: [string, string, string] = ['A', 'M', 'B']
+  ) {
+    const g = segmentGeometry(values),
+      scale = (W - 2 * M) / 480;
+    const [start, middle, end] = labels;
     const px = (x: number) => M + x * scale;
     const py = (top: number) => y + top * 0.75;
     const edge = (x1: number, y1: number, x2: number, y2: number) =>
-      page.push(`0.14 0.21 0.33 RG 1 w ${num(px(x1))} ${num(H-py(y1))} m ${num(px(x2))} ${num(H-py(y2))} l S`);
-    edge(30,70,450,70);
-    if (g.lift) { page.push('q [4 3] 0 d'); edge(30,70,g.middle,g.y); edge(g.middle,g.y,450,70); page.push('Q'); }
-    for (const [x, top, label] of [[30,70,'A'],[g.middle,g.y,'M'],[450,70,'B']] as const) {
-      page.push(`0.14 0.21 0.33 rg ${num(px(x)-2)} ${num(H-py(top)-2)} 4 4 re f`);
-      draw(label, px(x)-4, py(top)+6, 11);
+      page.push(
+        `0.14 0.21 0.33 RG 1 w ${num(px(x1))} ${num(H - py(y1))} m ${num(px(x2))} ${num(H - py(y2))} l S`
+      );
+    edge(30, 70, 450, 70);
+    if (g.lift) {
+      page.push('q [4 3] 0 d');
+      edge(30, 70, g.middle, g.y);
+      edge(g.middle, g.y, 450, 70);
+      page.push('Q');
+    }
+    for (const [x, top, label] of [
+      [30, 70, start],
+      [g.middle, g.y, middle],
+      [450, 70, end],
+    ] as const) {
+      page.push(
+        `0.14 0.21 0.33 rg ${num(px(x) - 2)} ${num(H - py(top) - 2)} 4 4 re f`
+      );
+      draw(label, px(x) - 4, py(top) + 6, 11);
     }
     if (g.show) {
-      draw(`${g.left} cm`, px((30+g.middle)/2)-12, py(45), 10);
-      draw(`${g.right} cm`, px((450+g.middle)/2)-12, py(45), 10);
+      draw(`${g.left} cm`, px((30 + g.middle) / 2) - 12, py(45), 10);
+      draw(`${g.right} cm`, px((450 + g.middle) / 2) - 12, py(45), 10);
     }
     y += 90;
   }
@@ -846,9 +880,7 @@ export function createPracticePdf(
     const options = e.kind === 'choice' ? choiceRows(e.options) : [];
     const wordRows = mode === 'solutions' ? printableWordProblemRows(e) : null;
     const plainSolution =
-      !wordRows && mode === 'solutions'
-        ? printableShortSolution(e)
-        : null;
+      !wordRows && mode === 'solutions' ? printableShortSolution(e) : null;
     const plainSolutionLines = plainSolution ? layout(plainSolution, 11) : [];
     const solutionFigure =
       mode === 'solutions' && e.solutionNumberLine
@@ -891,7 +923,12 @@ export function createPracticePdf(
       solutionRows?.reduce((n, row) => n + row.height, 0) ??
       plainSolutionLines.reduce((n, row) => n + row.height, 0);
     const blockHeight =
-      headHeight + solutionHeight + work + (solutionFigure?.height || 0) + (e.table ? 94 : 0) + (e.segment ? 90 : 0);
+      headHeight +
+      solutionHeight +
+      work +
+      (solutionFigure?.height || 0) +
+      (e.table ? 94 : 0) +
+      (e.segment ? 90 : 0);
     // Keep a question and its solution together. An oversized authored solution
     // must flow across pages instead of leaving the first page empty.
     const reservedHeight =
@@ -903,8 +940,9 @@ export function createPracticePdf(
         : blockHeight;
     if (y + reservedHeight > BOTTOM && y > 100) newPage();
     paragraph(prompt, 11, 8, true);
-    if (e.segment) drawSegment(e.segment);
-    if (e.table) drawExerciseTable(mode === 'solutions' ? e.table.solution : e.table.rows);
+    if (e.segment) drawSegment(e.segment, e.segmentLabels);
+    if (e.table)
+      drawExerciseTable(mode === 'solutions' ? e.table.solution : e.table.rows);
     if (options.length)
       drawChoices(
         options,
