@@ -1,3 +1,4 @@
+import { exerciseLabels, sameExerciseContent } from '@/lib/math/exercise-groups';
 import { formatCalculationSteps } from '@/lib/math/format';
 import { getKnowledgeSummary } from '@/lib/math/knowledge-summary';
 import {
@@ -160,6 +161,7 @@ export default function ExtraPractice({
     () => lesson.exercises.filter((e) => e.section === 'extra'),
     [lesson.exercises]
   );
+  const labels = useMemo(() => exerciseLabels(questions), [questions]);
   const content = JSON.stringify(questions),
     storageKey = `lima-math-extra-v1:${lesson.id}`;
   const [notebook, setNotebook] = useState<Notebook>({
@@ -214,7 +216,7 @@ export default function ExtraPractice({
     try {
       const raw = preview ? null : localStorage.getItem(storageKey);
       const saved = raw ? JSON.parse(raw) : null;
-      if (saved?.content === content) {
+      if (sameExerciseContent(saved?.content, questions)) {
         const results: Record<string, ExtraResult> = {};
         for (const e of questions) {
           const r = saved.results?.[e.id];
@@ -469,11 +471,11 @@ export default function ExtraPractice({
             aria-current={
               notebook.current === i && !summary ? 'step' : undefined
             }
-            aria-label={`Bài ${i + 1} · ${status(e)}`}
+            aria-label={`${labels[i].label} · ${status(e)}`}
             title={status(e)}
             onClick={() => selectQuestion(i, true)}
           >
-            <span>{i + 1}</span>
+            <span>{labels[i].shortLabel}</span>
             <small>
               {notebook.results[e.id]?.solved
                 ? '✓'
@@ -525,7 +527,7 @@ export default function ExtraPractice({
           </ul>
           {questions.map((e, i) => (
             <p key={e.id}>
-              Bài {i + 1}: {status(e)}
+              {labels[i].label}: {status(e)}
             </p>
           ))}
           <button
@@ -569,7 +571,7 @@ export default function ExtraPractice({
           )}
           <p className={s.questionMeta}>
             <strong>
-              Bài {notebook.current + 1}/{questions.length} ·{' '}
+              {labels[currentIndex].label} · Câu {currentIndex + 1}/{questions.length} ·{' '}
               {EXTRA_GROUPS[current.group || 'skills']}
             </strong>
             {current.skill && <span>Kỹ năng: {current.skill}</span>}
@@ -578,15 +580,16 @@ export default function ExtraPractice({
             <button
               type="button"
               onClick={() => onEdit(current.id)}
-              aria-label={`Sửa nhanh: Bài ${notebook.current + 1}`}
+              aria-label={`Sửa nhanh: ${labels[currentIndex].label}`}
             >
               ✎ Sửa nhanh bài này
             </button>
           )}
+          {current.task && <h3>{`Bài ${labels[currentIndex].number}. ${current.task}`}</h3>}
           {current.kind === 'written' ? (
             <WrittenExercise
               key={`${JSON.stringify(current)}-${attempt}`}
-              exercise={current}
+              exercise={current.task ? { ...current, prompt: labels[currentIndex].prompt } : current}
               result={notebook.results[current.id]}
               onChange={(result) =>
                 save({
@@ -598,7 +601,7 @@ export default function ExtraPractice({
           ) : (
             <Exercise
               key={`${JSON.stringify(current)}-${attempt}`}
-              exercise={current}
+              exercise={current.task ? { ...current, prompt: labels[currentIndex].prompt } : current}
               result={notebook.results[current.id]}
               onChange={(result) =>
                 save({

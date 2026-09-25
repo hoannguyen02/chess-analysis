@@ -1,9 +1,13 @@
+import { exerciseLabels } from './exercise-groups';
+import { mathXPdfPath, mathXStrokeWidth } from './math-variable-glyph';
 import { LIMA_CONTACT } from '../brand/contact';
 import { LIMA_LOGO_PDF } from '../brand/logo';
 import {
   cancellationParts,
   cancellationText,
   formatCalculationSteps,
+  formatMultiplicationNotation,
+  variableParts,
   stripRedundantFractionParentheses,
   wholeNumberFraction,
 } from './format';
@@ -20,6 +24,7 @@ import { waitForPdfTask } from './pdf-task';
 import { segmentGeometry } from './segment';
 import { numberLineGeometry, SolutionNumberLine } from './solution-number-line';
 import { upgradeUnitFractionSolutions } from './unit-fraction-lesson';
+import { updateExponentCoefficientNotation } from './rational-exponent-equations';
 import {
   WordProblemRow as SharedWordProblemRow,
   wordProblemRows,
@@ -109,7 +114,11 @@ type GroupedExpressionToken = {
   exponent: string;
 };
 type Token = TextToken | FractionToken | GroupedExpressionToken;
-function tokens(text: string): Token[] {
+function containsFraction(token: Token): boolean {
+  return 'items' in token ? token.items.some(containsFraction) : 'n' in token;
+}
+function tokens(text: string, grade = 0): Token[] {
+  text = formatMultiplicationNotation(text, grade);
   text = stripRedundantFractionParentheses(text.normalize('NFC'));
   const grouped = /\(([^()]+)\)\^(\([^()]*\)|[+-]?(?:\d+|[a-zA-Z]))/gu;
   const groupedMatches = [...text.matchAll(grouped)].filter((match) =>
@@ -308,6 +317,7 @@ export function createPracticePdf(
   options: PracticePdfOptions = {}
 ): Uint8Array {
   input = upgradeUnitFractionSolutions([input])[0];
+  input = updateExponentCoefficientNotation([input])[0];
   const lesson = parseMathPack(
       packLessons([
         {
@@ -341,9 +351,18 @@ export function createPracticePdf(
     x: number,
     top: number,
     size: number,
-    color = '0.09 0.14 0.24'
+    color = '0.09 0.14 0.24',
+    italic = false
   ) {
     measure(text, size);
+    const parts = variableParts(text);
+    if (!italic && parts.includes('x')) {
+      for (const part of parts) {
+        if (part) draw(part, x, top, size, color, part === 'x');
+        x += measure(part, size);
+      }
+      return;
+    }
     if (text.includes('□')) {
       for (const part of text.split(/(□)/u)) {
         const advance = measure(part, size);
@@ -373,6 +392,15 @@ export function createPracticePdf(
     const glyphs = Array.from(text.normalize('NFC'), (c) =>
       hex(font.glyph(c.codePointAt(0)!))
     ).join('');
+    if (italic) {
+      // Invisible searchable ASCII x plus the same true math outline used on web.
+      page.push(`q BT 3 Tr ET`,
+        `BT /F1 ${size} Tf ${color} rg 1 0 0 1 ${num(x)} ${num(H - top - size)} Tm <${glyphs}> Tj ET`,
+        'Q',
+        `q ${color} rg ${(measure('x', size) / 559).toFixed(6)} 0 0 ${(size * 1.14 / 1000).toFixed(6)} ${num(x)} ${num(H - top - size)} cm`,
+        `${color} RG ${mathXStrokeWidth} w 1 j`, mathXPdfPath, 'B Q');
+      return;
+    }
     page.push(
       `BT /F1 ${size} Tf ${color} rg 1 0 0 1 ${num(x)} ${num(H - top - size)} Tm <${glyphs}> Tj ET`
     );
@@ -462,7 +490,7 @@ export function createPracticePdf(
   function layout(text: string, size: number, width = W - 2 * M) {
     const lines: Token[][] = [[]];
     let occupied = 0;
-    for (const t of tokens(text)) {
+    for (const t of tokens(text, lesson.grade)) {
       if ('text' in t && t.text === '\n') {
         lines.push([]);
         occupied = 0;
@@ -494,7 +522,7 @@ export function createPracticePdf(
     }
     return lines.map((items) => ({
       items,
-      height: items.some((t) => !('text' in t)) ? size * 2.7 : size * 1.55,
+      height: items.some(containsFraction) ? size * 2.7 : size * 1.55,
     }));
   }
   function newPage() {
@@ -552,7 +580,7 @@ export function createPracticePdf(
     items: Token[],
     x: number,
     size: number,
-    frac = items.some((t) => !('text' in t))
+    frac = items.some(containsFraction)
   ) {
     for (const t of items) {
       const width = tokenWidth(t, size);
@@ -561,9 +589,9 @@ export function createPracticePdf(
           (sum, item) => sum + tokenWidth(item, size),
           0
         );
-        const hasFraction = t.items.some((item) => !('text' in item));
+        const hasFraction = t.items.some(containsFraction);
         const bracketWidth = measure('(', size);
-        const baseline = y + (hasFraction ? size * 0.48 : 0);
+        const baseline = y + (frac ? size * 0.48 : 0);
         if (hasFraction) {
           drawTallDelimiter('(', x, y - size * 0.08, size, 2.1);
           drawTallDelimiter(
@@ -577,7 +605,9 @@ export function createPracticePdf(
           draw('(', x, baseline, size);
           draw(')', x + bracketWidth + contentWidth, baseline, size);
         }
-        drawRow(t.items, x + bracketWidth, size, hasFraction);
+        // A text-only group inherits the surrounding row's math baseline.
+        // A group containing real fractions keeps the fraction's top origin.
+        drawRow(t.items, x + bracketWidth, size, frac);
         draw(
           t.exponent,
           x + bracketWidth * 2 + contentWidth,
@@ -742,7 +772,7 @@ export function createPracticePdf(
   function solutionNumberLineLayout(diagram: SolutionNumberLine) {
     const geometry = numberLineGeometry(diagram);
     const label = (text: string, position: number, name = false) => {
-      const items: Token[] = name ? [{ text }] : tokens(text);
+      const items: Token[] = name ? [{ text }] : tokens(text, lesson.grade);
       return {
         position,
         items,
@@ -788,7 +818,7 @@ export function createPracticePdf(
         let lane = laneEnds.findIndex((end) => end + 10 <= labelLeft);
         if (lane < 0) lane = laneEnds.length;
         laneEnds[lane] = labelLeft + item.width;
-        fractions[lane] ||= item.items.some((token) => !('text' in token));
+        fractions[lane] ||= item.items.some(containsFraction);
         return { ...item, x: x(item.position), labelLeft, lane };
       });
       return { labels: placed, count: laneEnds.length, fractions };
@@ -968,7 +998,7 @@ export function createPracticePdf(
     const labels = options.map(
       (option, index) => `${String.fromCharCode(65 + index)}. ${option}`
     );
-    const items = labels.map((label) => tokens(label));
+    const items = labels.map((label) => tokens(label, lesson.grade));
     const widths = items.map((row) =>
       row.reduce((sum, token) => sum + tokenWidth(token, 11), 0)
     );
@@ -1010,7 +1040,7 @@ export function createPracticePdf(
       row.heights.forEach((height, index) => {
         if (y + height > BOTTOM) newPage();
         const hasFraction = row.cells.some((cell) =>
-          cell[index]?.items.some((token) => !('text' in token))
+          cell[index]?.items.some(containsFraction)
         );
         row.cells.forEach((cell, column) => {
           const x = M + (column * (W - 2 * M)) / row.columns;
@@ -1094,8 +1124,105 @@ export function createPracticePdf(
     }
     y += 90;
   }
+  function writingHeight(e: MathExercise, width = W - 2 * M) {
+    if (e.kind === 'choice' || e.table) return 0;
+    const workbookRows = printableWordProblemRows(e);
+    const working = e.solutionStyle === 'answer-only' ? e.answer : workbookRows
+      ? workbookRows.filter(row => row.role !== 'heading').map(row => row.text).join('\n')
+      : formatCalculationSteps(e.solution);
+    const measurable = Array.from(working.normalize('NFC'), char =>
+      /\s/u.test(char) || font.glyph(char.codePointAt(0)!) ? char : '?'
+    ).join('');
+    const height = layout(measurable, 11, width).reduce((sum, row) => sum + row.height, 0);
+    return Math.max(2, Math.ceil(height / 18) + 1, e.solutionNumberLine ? 5 : 0) * 18;
+  }
+  function dottedRows(left: number, width: number, height: number) {
+    for (let space = 0; space < height; space += 18) {
+      if (y + 18 > BOTTOM) newPage();
+      page.push(`q 0.65 0.70 0.79 RG 0.7 w 1 J [0 3] 0 d ${num(left)} ${num(H - y - 16)} m ${num(left + width)} ${num(H - y - 16)} l S Q`);
+      y += 18;
+    }
+  }
+  const labels = exerciseLabels(exercises);
+  const columnGap = 22;
+  function compactCell(e: MathExercise, index: number, columns: number) {
+    // Keep complex structures in their established full-width renderer.
+    if (e.kind === 'choice' || e.kind === 'written' || e.table || e.segment ||
+        e.solutionNumberLine || printableWordProblemRows(e)) return null;
+    const width = (W - 2 * M - columnGap * (columns - 1)) / columns;
+    const promptRows = layout(labels[index].prompt, 11, width);
+    const rawSolution = printableShortSolution(e);
+    const solution = mode === 'worksheet' ? Array.from(rawSolution.normalize('NFC'), char =>
+      /\s/u.test(char) || font.glyph(char.codePointAt(0)!) ? char : '?'
+    ).join('') : rawSolution;
+    const methodIndex = solution.indexOf('\nCách làm: ');
+    const methodLine = methodIndex < 0 ? -1 : solution.slice(0, methodIndex).split('\n').length;
+    const solutionRows = solution ? solution.split('\n').flatMap((text, index) => {
+      const inset = methodLine >= 0 && index > methodLine
+        ? measure('Cách làm: ', 11) - (/^=\s/u.test(text) ? measure('= ', 11) : 0) : 0;
+      return layout(text, 11, width - inset).map(row => ({ ...row, inset }));
+    }) : [];
+    // Reject unbreakable expressions and excessively wrapped question text.
+    const fits = [...promptRows.map(row => ({ ...row, inset: 0 })), ...solutionRows].every(row =>
+      row.inset + row.items.reduce((sum, token) => sum + tokenWidth(token, 11), 0) <= width + 0.01);
+    if (!fits || promptRows.length > (columns === 3 ? 2 : 3)) return null;
+    // Students need the same room to work as the printed solution requires.
+    const solutionHeight = [...promptRows, ...solutionRows].reduce((sum, row) => sum + row.height, 0) + 24;
+    const pageCapacity = BOTTOM - (mode === 'worksheet' ? 112 : 84);
+    if (solutionHeight > (columns === 3 ? 130 : pageCapacity)) return null;
+    const answerRows = mode === 'solutions' ? solutionRows : [];
+    const work = mode === 'worksheet' ? writingHeight(e, width) : 0;
+    const height = [...promptRows, ...answerRows].reduce((sum, row) => sum + row.height, 0) + work + 24;
+    if (height > (columns === 3 ? 130 : pageCapacity)) return null;
+    return { width, promptRows, answerRows, work, height };
+  }
+  const compactConsumed = new Set<number>();
   exercises.forEach((e, i) => {
-    const prompt = `Bài ${i + 1}. ${e.prompt.trim()}`;
+    if (compactConsumed.has(i)) return;
+    const taskHeading = labels[i].title && labels[i].first
+      ? `Bài ${labels[i].number}. ${labels[i].title}` : null;
+    const taskHeadingHeight = taskHeading
+      ? layout(taskHeading, 12).reduce((sum, row) => sum + row.height, 12) : 0;
+    for (const columns of [3, 2]) {
+      if (i + columns > exercises.length) continue;
+      if (exercises.slice(i, i + columns).some((item, offset) => item.task !== e.task || (e.task && labels[i + offset].number !== labels[i].number))) continue;
+      const cells = exercises.slice(i, i + columns).map((item, offset) => compactCell(item, i + offset, columns));
+      if (cells.some(cell => !cell)) continue;
+      const promptHeight = Math.max(...cells.map(cell => cell!.promptRows.reduce((sum, row) => sum + row.height, 0)));
+      const sharedWork = Math.max(...cells.map(cell => cell!.work));
+      const rowHeight = mode === 'worksheet'
+        ? promptHeight + sharedWork + 24
+        : Math.max(...cells.map(cell => cell!.height));
+      if (rowHeight + taskHeadingHeight > BOTTOM - (mode === 'worksheet' ? 112 : 84)) continue;
+      if (y + rowHeight + taskHeadingHeight > BOTTOM) newPage();
+      if (taskHeading) paragraph(taskHeading, 12, 12, true);
+      const top = y;
+      cells.forEach((cell, column) => {
+        const { width, promptRows, answerRows } = cell!;
+        const left = M + column * (width + columnGap);
+        y = top;
+        // Mark each independent reading block for extraction and QA.
+        page.push('/Exercise BMC');
+        for (const row of promptRows) {
+          drawRow(row.items, left, 11);
+          y += row.height;
+        }
+        y += 8;
+        for (const row of answerRows) {
+          drawRow(row.items, left + row.inset, 11);
+          y += row.height;
+        }
+        if (mode === 'worksheet') {
+          y = top + promptHeight + 8;
+          dottedRows(left, width, sharedWork);
+        }
+        page.push('EMC');
+        compactConsumed.add(i + column);
+      });
+      y = top + rowHeight;
+      return;
+    }
+    const prompt = labels[i].prompt;
     const options = e.kind === 'choice' ? choiceRows(e.options) : [];
     const wordRows = mode === 'solutions' ? printableWordProblemRows(e) : null;
     const plainSolution =
@@ -1110,7 +1237,7 @@ export function createPracticePdf(
       return [
         { text: heading, left: M },
         { text: `Cách làm: ${first}`, left: M },
-        ...continuations.map((text) => ({ text, left: continuationLeft })),
+        ...continuations.map((text) => ({ text, left: /^=\s/u.test(text) ? continuationLeft : calculationLeft })),
       ];
     })();
     const plainSolutionLines = plainSolutionRows
@@ -1133,7 +1260,7 @@ export function createPracticePdf(
           if (row.role === 'answer') {
             const width = Math.min(
               W - 2 * M,
-              tokens(row.text).reduce(
+              tokens(row.text, lesson.grade).reduce(
                 (sum, item) => sum + tokenWidth(item, 11),
                 0
               )
@@ -1156,25 +1283,7 @@ export function createPracticePdf(
       : null;
     // Measure the student's working, not the answer-key labels or repeated answer.
     // Fraction rows and wrapped prose need more vertical room than plain text.
-    const work = (() => {
-      if (mode !== 'worksheet' || e.kind === 'choice' || e.table) return 0;
-      const workbookRows = printableWordProblemRows(e);
-      const working = e.solutionStyle === 'answer-only'
-        ? e.answer
-        : workbookRows
-          ? workbookRows.filter(row => row.role !== 'heading').map(row => row.text).join('\n')
-          : formatCalculationSteps(e.solution);
-      // This text is measured only, never printed. Unsupported answer glyphs
-      // must not prevent exporting an otherwise valid question sheet.
-      const measurable = Array.from(working.normalize('NFC'), char =>
-        /\s/u.test(char) || font.glyph(char.codePointAt(0)!) ? char : '?'
-      ).join('');
-      const height = layout(measurable, 11).reduce((sum, row) => sum + row.height, 0);
-      // One spare row for handwriting; retain room for drawing tasks as well.
-      const lines = Math.max(2, Math.ceil(height / 18) + 1,
-        e.solutionNumberLine ? 5 : 0);
-      return lines * 18;
-    })();
+    const work = mode === 'worksheet' ? writingHeight(e) : 0;
     const headHeight =
       layout(prompt, 11).reduce((n, l) => n + l.height, 0) +
       (options.length ? options.reduce((n, row) => n + row.height, 0) + 7 : 0) +
@@ -1198,7 +1307,8 @@ export function createPracticePdf(
             ? solutionRows[0].height + solutionRows[1].height
             : mode === 'worksheet' ? 18 : plainSolutionLines[0]?.height || 0)
         : blockHeight;
-    if (y + reservedHeight > BOTTOM && y > 100) newPage();
+    if (y + reservedHeight + taskHeadingHeight > BOTTOM && y > 100) newPage();
+    if (taskHeading) paragraph(taskHeading, 12, 12, true);
     paragraph(prompt, 11, 8, true);
     if (e.segment) drawSegment(e.segment, e.segmentLabels);
     if (e.table)
@@ -1236,12 +1346,7 @@ export function createPracticePdf(
       if (solutionFigure) drawSolutionNumberLine(solutionFigure);
       y += 8;
     } else {
-      for (let space = 0; space < work; space += 18) {
-        if (y + 18 > BOTTOM) newPage();
-        // Round-capped zero-length dashes form dots; q/Q keeps all other rules solid.
-        page.push(`q 0.65 0.70 0.79 RG 0.7 w 1 J [0 3] 0 d ${num(M)} ${num(H - y - 16)} m ${num(W - M)} ${num(H - y - 16)} l S Q`);
-        y += 18;
-      }
+      dottedRows(M, W - 2 * M, work);
       y += 14;
     }
   });

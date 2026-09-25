@@ -160,9 +160,65 @@
 }
 .filters {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1fr;
+  grid-template-columns: 2fr 1fr 1fr;
   gap: 16px;
   margin: 25px 0;
+}
+.gradeFilter {
+  min-width: 0;
+  margin: 0 0 16px;
+  padding: 0;
+  border: 0;
+}
+.gradeFilter legend {
+  margin-bottom: 10px;
+  font-size: 14px;
+  font-weight: 550;
+}
+.gradeOptions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.studio .gradeOption {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 8px 12px;
+  border: 1px solid #bdcbea;
+  border-radius: 8px;
+  background: white;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.studio .gradeSelected {
+  color: #164bdb;
+  background: #eaf0ff;
+  border-color: #164bdb;
+}
+.gradeOption input[type='checkbox'] {
+  width: 18px;
+  height: 18px;
+  margin: 0;
+  padding: 0;
+  flex-shrink: 0;
+  accent-color: #164bdb;
+  cursor: pointer;
+}
+.gradeHelp {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+  margin-top: 8px;
+}
+.gradeHelp .muted {
+  margin: 0;
+  font-size: 14px;
+}
+.gradeHelp button {
+  min-height: 44px;
 }
 .mathPreview {
   padding: 14px;

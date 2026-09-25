@@ -1,4 +1,198 @@
-import type { MathLessonData } from './lessons';
+import type { MathExercise, MathLessonData } from './lessons';
+import { rationalExponentEquations } from './rational-exponent-equations';
+
+export const rationalExponentReview: MathExercise[] = [
+  {
+    id: 're-review-1',
+    section: 'extra',
+    task: 'Tính — ôn nền tảng',
+    group: 'foundation',
+    skill: 'Ôn nền tảng về lũy thừa',
+    difficulty: 'easy',
+    workspace: 'small',
+    kind: 'number',
+    prompt: 'Tính 2^0.',
+    answer: '1',
+    hint: 'Với cơ số khác 0, lũy thừa có số mũ 0 bằng 1.',
+    solution: '2^0 = 1.',
+    unit: '',
+    options: [],
+    simplified: false,
+    tolerance: 0,
+    mistakes: [],
+  },
+  {
+    id: 're-review-2',
+    section: 'extra',
+    task: 'Tính — ôn nền tảng',
+    group: 'foundation',
+    skill: 'Ôn nền tảng về lũy thừa',
+    difficulty: 'easy',
+    workspace: 'small',
+    kind: 'number',
+    prompt: 'Tính 2^1.',
+    answer: '2',
+    hint: 'Lũy thừa có số mũ 1 bằng chính cơ số.',
+    solution: '2^1 = 2.',
+    unit: '',
+    options: [],
+    simplified: false,
+    tolerance: 0,
+    mistakes: [],
+  },
+  {
+    id: 're-review-3',
+    section: 'extra',
+    task: 'Tính — ôn nền tảng',
+    group: 'foundation',
+    skill: 'Ôn nền tảng về lũy thừa',
+    difficulty: 'easy',
+    workspace: 'small',
+    kind: 'number',
+    prompt: 'Tính 2^4.',
+    answer: '16',
+    hint: 'Viết thành tích của bốn thừa số 2.',
+    solution: '2^4 = 2 × 2 × 2 × 2 = 16.',
+    unit: '',
+    options: [],
+    simplified: false,
+    tolerance: 0,
+    mistakes: [],
+  },
+  {
+    id: 're-review-4',
+    section: 'extra',
+    task: 'Tính — ôn nền tảng',
+    group: 'foundation',
+    skill: 'Ôn nền tảng về lũy thừa',
+    difficulty: 'easy',
+    workspace: 'small',
+    kind: 'number',
+    prompt: 'Tính (-2)^2.',
+    answer: '4',
+    hint: 'Số mũ chẵn: tích hai số âm là số dương.',
+    solution: '(-2)^2 = (-2) × (-2) = 4.',
+    unit: '',
+    options: [],
+    simplified: false,
+    tolerance: 0,
+    mistakes: [],
+  },
+  {
+    id: 're-review-5',
+    section: 'extra',
+    task: 'Tính — ôn nền tảng',
+    group: 'foundation',
+    skill: 'Ôn nền tảng về lũy thừa',
+    difficulty: 'easy',
+    workspace: 'small',
+    kind: 'number',
+    prompt: 'Tính (-2)^3.',
+    answer: '-8',
+    hint: 'Số mũ lẻ: kết quả mang dấu âm.',
+    solution: '(-2)^3 = (-2) × (-2) × (-2) = -8.',
+    unit: '',
+    options: [],
+    simplified: false,
+    tolerance: 0,
+    mistakes: [],
+  },
+  {
+    id: 're-review-6',
+    section: 'extra',
+    task: 'Tính — ôn các quy tắc lũy thừa',
+    group: 'foundation',
+    skill: 'Ôn nền tảng về lũy thừa',
+    difficulty: 'easy',
+    workspace: 'small',
+    kind: 'number',
+    prompt: 'Tính 2^2 × 2^3.',
+    answer: '32',
+    hint: 'Nhân hai lũy thừa cùng cơ số: cộng các số mũ.',
+    solution: '2^2 × 2^3 = 2^(2 + 3) = 2^5 = 32.',
+    unit: '',
+    options: [],
+    simplified: false,
+    tolerance: 0,
+    mistakes: [],
+  },
+  {
+    id: 're-review-7',
+    section: 'extra',
+    task: 'Tính — ôn các quy tắc lũy thừa',
+    group: 'foundation',
+    skill: 'Ôn nền tảng về lũy thừa',
+    difficulty: 'easy',
+    workspace: 'small',
+    kind: 'number',
+    prompt: 'Tính (2^3)^2.',
+    answer: '64',
+    hint: 'Lũy thừa của lũy thừa: nhân các số mũ.',
+    solution: '(2^3)^2 = 2^(3 × 2) = 2^6 = 64.',
+    unit: '',
+    options: [],
+    simplified: false,
+    tolerance: 0,
+    mistakes: [],
+  },
+  {
+    id: 're-review-8',
+    section: 'extra',
+    task: 'Tính — ôn các quy tắc lũy thừa',
+    group: 'foundation',
+    skill: 'Ôn nền tảng về lũy thừa',
+    difficulty: 'easy',
+    workspace: 'small',
+    kind: 'number',
+    prompt: 'Tính (2^2)^3.',
+    answer: '64',
+    hint: 'Nhân số mũ 2 với 3.',
+    solution: '(2^2)^3 = 2^(2 × 3) = 2^6 = 64.',
+    unit: '',
+    options: [],
+    simplified: false,
+    tolerance: 0,
+    mistakes: [],
+  },
+  {
+    id: 're-review-9',
+    section: 'extra',
+    task: 'Tính — ôn các quy tắc lũy thừa',
+    group: 'foundation',
+    skill: 'Ôn nền tảng về lũy thừa',
+    difficulty: 'easy',
+    workspace: 'small',
+    kind: 'number',
+    prompt: 'Tính 2^3 : 2^2.',
+    answer: '2',
+    hint: 'Chia hai lũy thừa cùng cơ số khác 0: trừ các số mũ.',
+    solution: '2^3 : 2^2 = 2^(3 - 2) = 2^1 = 2.',
+    unit: '',
+    options: [],
+    simplified: false,
+    tolerance: 0,
+    mistakes: [],
+  },
+  {
+    id: 're-review-10',
+    section: 'extra',
+    task: 'Tính — ôn các quy tắc lũy thừa',
+    group: 'foundation',
+    skill: 'Ôn nền tảng về lũy thừa',
+    difficulty: 'easy',
+    workspace: 'small',
+    kind: 'fraction',
+    prompt: 'Tính (1/2)^2.',
+    answer: '1/4',
+    hint: 'Bình phương cả tử và mẫu.',
+    solution: '(1/2)^2 = 1/2 × 1/2 = 1/4.',
+    unit: '',
+    options: [],
+    simplified: true,
+    tolerance: 0,
+    mistakes: [],
+  },
+];
 
 export const rationalExponentsLesson: MathLessonData = {
   id: 'math-rational-exponents-7',
@@ -12,7 +206,7 @@ export const rationalExponentsLesson: MathLessonData = {
   teacherNotes:
     'Bắt đầu bằng tích các thừa số bằng nhau. Với mỗi quy tắc mới, cho học sinh khai triển một ví dụ rồi mới nêu quy tắc. Khi chia, chỉ dùng cơ số khác 0 và số mũ của số bị chia không nhỏ hơn số mũ của số chia.',
   knowledgeSummary:
-    '- Với số hữu tỉ x và số tự nhiên n khác 0: x^n = x × x × ... × x (n thừa số x). x là cơ số, n là số mũ.\n- Với x khác 0, x^0 = 1. Riêng 0^0 không xác định.\n- Cơ số âm: số mũ chẵn cho kết quả dương, số mũ lẻ cho kết quả âm.\n- Nhân cùng cơ số: a^m × a^n = a^(m + n). Chia cùng cơ số khác 0, với m ≥ n: a^m : a^n = a^(m - n).\n- Lũy thừa của lũy thừa: (a^m)^n = a^(m × n).\n- Ví dụ: (2/3)^2 × (2/3)^3 = (2/3)^5; [(-1/2)^2]^3 = (-1/2)^6.\n- Lưu ý: Khi nhân thì cộng số mũ, khi chia thì trừ số mũ, còn lũy thừa của lũy thừa thì nhân số mũ.',
+    '- Với số hữu tỉ x và số tự nhiên n khác 0: x^n = x × x × ... × x (n thừa số x). x là cơ số, n là số mũ.\n- Với x khác 0, x^0 = 1. Riêng 0^0 không xác định.\n- Cơ số âm: số mũ chẵn cho kết quả dương, số mũ lẻ cho kết quả âm.\n- Nhân cùng cơ số: a^m × a^n = a^(m + n). Chia cùng cơ số khác 0, với m ≥ n: a^m : a^n = a^(m - n).\n- Lũy thừa của lũy thừa: (a^m)^n = a^(m × n).\n- Ví dụ: (2^2)^3 = 2^(2 × 3) = 2^6 = 64.\n- Ví dụ với phân số: (1/2)^2 × (1/2)^3 = (1/2)^5 = 1/32; [(-1/2)^2]^3 = (-1/2)^6 = 1/64.\n- Lưu ý: Khi nhân thì cộng số mũ, khi chia thì trừ số mũ, còn lũy thừa của lũy thừa thì nhân số mũ.',
   blocks: [
     {
       id: 're-foundation',
@@ -112,6 +306,7 @@ export const rationalExponentsLesson: MathLessonData = {
     },
   ],
   exercises: [
+    ...rationalExponentReview,
     {
       id: 're-ex-1',
       section: 'foundation',
@@ -199,6 +394,7 @@ export const rationalExponentsLesson: MathLessonData = {
     {
       id: 're-ex-7',
       section: 'extra',
+      task: 'Tính giá trị biểu thức',
       kind: 'number',
       prompt: 'Tính 1 - (-2)^3.',
       answer: '9',
@@ -213,6 +409,7 @@ export const rationalExponentsLesson: MathLessonData = {
     {
       id: 're-ex-8',
       section: 'extra',
+      task: 'Tính giá trị biểu thức',
       kind: 'fraction',
       prompt: 'Tính (-1/3)^2 × (-1/3).',
       answer: '-1/27',
@@ -367,6 +564,7 @@ export const rationalExponentsLesson: MathLessonData = {
     {
       id: 're-ex-19',
       section: 'extra',
+      task: 'Tính — phối hợp các quy tắc',
       kind: 'fraction',
       prompt: 'Tính [(-1/2)^3]^2.',
       answer: '1/64',
@@ -381,6 +579,7 @@ export const rationalExponentsLesson: MathLessonData = {
     {
       id: 're-ex-20',
       section: 'extra',
+      task: 'Tính — phối hợp các quy tắc',
       kind: 'number',
       prompt: 'Tính 2^3 × 2^5 : 2^4.',
       answer: '16',
@@ -395,6 +594,7 @@ export const rationalExponentsLesson: MathLessonData = {
     {
       id: 're-ex-21',
       section: 'extra',
+      task: 'Tính — phối hợp các quy tắc',
       kind: 'fraction',
       prompt: 'Tính (2/3)^2 × (2/3)^3 : (2/3)^4.',
       answer: '2/3',
@@ -410,6 +610,7 @@ export const rationalExponentsLesson: MathLessonData = {
     {
       id: 're-ex-22',
       section: 'extra',
+      task: 'Tính — phối hợp các quy tắc',
       kind: 'number',
       prompt: 'Tính (2^2)^3 : 2^4.',
       answer: '4',
@@ -425,6 +626,7 @@ export const rationalExponentsLesson: MathLessonData = {
     {
       id: 're-ex-23',
       section: 'extra',
+      task: 'Tính — phối hợp các quy tắc',
       kind: 'choice',
       prompt:
         'Điều kiện nào cần có để áp dụng a^m : a^n = a^(m - n) trong bài học này?',
@@ -445,6 +647,7 @@ export const rationalExponentsLesson: MathLessonData = {
     {
       id: 're-ex-24',
       section: 'extra',
+      task: 'Tính — luyện tập với số hữu tỉ',
       kind: 'number',
       prompt: 'Tính 3^2 × 3^3 : 3^4.',
       answer: '3',
@@ -459,6 +662,7 @@ export const rationalExponentsLesson: MathLessonData = {
     {
       id: 're-ex-25',
       section: 'extra',
+      task: 'Tính — luyện tập với số hữu tỉ',
       kind: 'number',
       prompt: 'Tính (-2)^4 : (-2)^2.',
       answer: '4',
@@ -473,6 +677,7 @@ export const rationalExponentsLesson: MathLessonData = {
     {
       id: 're-ex-26',
       section: 'extra',
+      task: 'Tính — luyện tập với số hữu tỉ',
       kind: 'fraction',
       prompt: 'Tính (1/2)^2 × (1/2)^3 : (1/2)^4.',
       answer: '1/2',
@@ -488,6 +693,7 @@ export const rationalExponentsLesson: MathLessonData = {
     {
       id: 're-ex-27',
       section: 'extra',
+      task: 'Tính — luyện tập với số hữu tỉ',
       kind: 'fraction',
       prompt: 'Tính 4 × (1/2)^3.',
       answer: '1/2',
@@ -502,6 +708,7 @@ export const rationalExponentsLesson: MathLessonData = {
     {
       id: 're-ex-28',
       section: 'extra',
+      task: 'Tính — luyện tập với số hữu tỉ',
       kind: 'number',
       prompt: 'Tính (3/2)^2 × (2/3)^2.',
       answer: '1',
@@ -516,6 +723,7 @@ export const rationalExponentsLesson: MathLessonData = {
     {
       id: 're-ex-29',
       section: 'extra',
+      task: 'Tính — luyện tập với số hữu tỉ',
       kind: 'fraction',
       prompt: 'Tính [(-1/2)^2]^3.',
       answer: '1/64',
@@ -530,6 +738,7 @@ export const rationalExponentsLesson: MathLessonData = {
     {
       id: 're-ex-30',
       section: 'extra',
+      task: 'Tính — luyện tập với số hữu tỉ',
       kind: 'number',
       prompt: 'Tính 1 - (-2)^4.',
       answer: '-15',
@@ -558,6 +767,7 @@ export const rationalExponentsLesson: MathLessonData = {
     {
       id: 're-ex-32',
       section: 'extra',
+      task: 'Tính dựa vào lũy thừa đã biết',
       kind: 'number',
       prompt: 'Biết (-2)^5 = -32. Tính (-2)^6.',
       answer: '64',
@@ -572,6 +782,7 @@ export const rationalExponentsLesson: MathLessonData = {
     {
       id: 're-ex-33',
       section: 'extra',
+      task: 'Tính dựa vào lũy thừa đã biết',
       kind: 'fraction',
       prompt: 'Biết (-1/2)^4 = 1/16. Tính (-1/2)^5.',
       answer: '-1/32',
@@ -600,6 +811,7 @@ export const rationalExponentsLesson: MathLessonData = {
     {
       id: 're-ex-35',
       section: 'extra',
+      task: 'Tính biểu thức',
       kind: 'number',
       prompt: 'Tính (1 + 1/2)^2 × 4/9.',
       answer: '1',
@@ -615,6 +827,7 @@ export const rationalExponentsLesson: MathLessonData = {
     {
       id: 're-ex-36',
       section: 'extra',
+      task: 'Tính biểu thức',
       kind: 'fraction',
       prompt: 'Tính 4 × (1/2 - 1/4)^2.',
       answer: '1/4',
@@ -629,6 +842,7 @@ export const rationalExponentsLesson: MathLessonData = {
     {
       id: 're-ex-37',
       section: 'extra',
+      task: 'Tính biểu thức',
       kind: 'number',
       prompt: 'Tính (1/2)^2 : (1/4)^2.',
       answer: '4',
@@ -644,6 +858,7 @@ export const rationalExponentsLesson: MathLessonData = {
     {
       id: 're-ex-38',
       section: 'extra',
+      task: 'Tính một cách hợp lí',
       kind: 'number',
       prompt: 'Tính một cách hợp lí: 4,75 + (-1/2)^3 + 0,5^2 - 3 × (-3/8).',
       answer: '6',
@@ -659,6 +874,7 @@ export const rationalExponentsLesson: MathLessonData = {
     {
       id: 're-ex-39',
       section: 'extra',
+      task: 'Tính một cách hợp lí',
       kind: 'fraction',
       prompt: 'Tính một cách hợp lí: 5/4 + (-1/2)^3 - (1/2)^2.',
       answer: '7/8',
@@ -674,6 +890,7 @@ export const rationalExponentsLesson: MathLessonData = {
     {
       id: 're-ex-40',
       section: 'extra',
+      task: 'Tính một cách hợp lí',
       kind: 'fraction',
       prompt: 'Tính một cách hợp lí: (3/2)^2 - 2 × (1/2)^2.',
       answer: '7/4',
@@ -689,6 +906,7 @@ export const rationalExponentsLesson: MathLessonData = {
     {
       id: 're-ex-41',
       section: 'extra',
+      task: 'Tính một cách hợp lí',
       kind: 'fraction',
       prompt: 'Tính một cách hợp lí: 1 - (-1/2)^2 - 3 × (-1/2)^3.',
       answer: '9/8',
@@ -704,6 +922,7 @@ export const rationalExponentsLesson: MathLessonData = {
     {
       id: 're-ex-42',
       section: 'extra',
+      task: 'Tính một cách hợp lí',
       kind: 'fraction',
       prompt: 'Tính một cách hợp lí: 2,5 - 4 × (1/2)^2 + (-1/2)^3.',
       answer: '11/8',
@@ -719,6 +938,7 @@ export const rationalExponentsLesson: MathLessonData = {
     {
       id: 're-ex-43',
       section: 'extra',
+      task: 'Giải bài toán thực tế',
       kind: 'number',
       prompt:
         'Ước tính khoảng cách từ Sao Hỏa đến Mặt Trời là 2,4 × 10^8 km, còn khoảng cách từ Trái Đất đến Mặt Trời là 1,5 × 10^8 km. Hỏi khoảng cách từ Sao Hỏa đến Mặt Trời gấp bao nhiêu lần khoảng cách từ Trái Đất đến Mặt Trời?',
@@ -735,6 +955,7 @@ export const rationalExponentsLesson: MathLessonData = {
     {
       id: 're-ex-44',
       section: 'extra',
+      task: 'Giải bài toán thực tế',
       kind: 'number',
       prompt:
         'Ước tính khoảng cách từ Sao Thổ đến Mặt Trời là 1,5 × 10^9 km, còn khoảng cách từ Sao Mộc đến Mặt Trời là 7,5 × 10^8 km. Hỏi khoảng cách từ Sao Thổ đến Mặt Trời gấp bao nhiêu lần khoảng cách từ Sao Mộc đến Mặt Trời?',
@@ -751,6 +972,7 @@ export const rationalExponentsLesson: MathLessonData = {
     {
       id: 're-ex-45',
       section: 'extra',
+      task: 'Giải bài toán thực tế',
       kind: 'number',
       prompt:
         'Ước tính khoảng cách từ Sao Hải Vương đến Mặt Trời là 4,5 × 10^9 km, còn khoảng cách từ Sao Thiên Vương đến Mặt Trời là 3 × 10^9 km. Hỏi khoảng cách từ Sao Hải Vương đến Mặt Trời gấp bao nhiêu lần khoảng cách từ Sao Thiên Vương đến Mặt Trời?',
@@ -764,5 +986,76 @@ export const rationalExponentsLesson: MathLessonData = {
       tolerance: 0,
       mistakes: [],
     },
+    ...rationalExponentEquations,
   ],
 };
+
+export function addRationalExponentReview(
+  lessons: MathLessonData[]
+): MathLessonData[] {
+  return lessons.map((lesson) => {
+    if (lesson.id !== rationalExponentsLesson.id) return lesson;
+    const ids = new Set(rationalExponentReview.map((e) => e.id));
+    const missing = rationalExponentReview.filter(
+      (e) => !lesson.exercises.some((old) => old.id === e.id)
+    );
+    if (lesson.exercises.length + missing.length > 100) return lesson;
+    const review = rationalExponentReview.map(
+      (e) =>
+        lesson.exercises.find((old) => old.id === e.id) ?? structuredClone(e)
+    );
+    return {
+      ...lesson,
+      exercises: [...review, ...lesson.exercises.filter((e) => !ids.has(e.id))],
+    };
+  });
+}
+
+export function groupRationalExponentExercises(
+  lessons: MathLessonData[]
+): MathLessonData[] {
+  return lessons.map((lesson) =>
+    lesson.id !== rationalExponentsLesson.id
+      ? lesson
+      : {
+          ...lesson,
+          exercises: lesson.exercises.map((e) => {
+            const source = rationalExponentsLesson.exercises.find(
+              (item) => item.id === e.id
+            );
+            return e.task === undefined &&
+              source?.task &&
+              source.prompt === e.prompt
+              ? { ...e, task: source.task }
+              : e;
+          }),
+        }
+  );
+}
+
+export function addExponentSummaryExample(
+  lessons: MathLessonData[]
+): MathLessonData[] {
+  const summary = rationalExponentsLesson.knowledgeSummary!;
+  const previousSummary = summary.replace(
+    '(1/2)^2 × (1/2)^3 = (1/2)^5 = 1/32;',
+    '(2/3)^2 × (2/3)^3 = (2/3)^5 = 32/243;'
+  );
+  const withoutFractionResults = previousSummary
+    .replace('(2/3)^5 = 32/243;', '(2/3)^5;')
+    .replace('(-1/2)^6 = 1/64.', '(-1/2)^6.');
+  const previous = new Set([
+    previousSummary,
+    withoutFractionResults,
+    withoutFractionResults.replace('2^6 = 64.', '2^6.'),
+    withoutFractionResults
+      .replace('- Ví dụ: (2^2)^3 = 2^(2 × 3) = 2^6 = 64.\n', '')
+      .replace('- Ví dụ với phân số:', '- Ví dụ:'),
+  ]);
+  return lessons.map((lesson) =>
+    lesson.id === rationalExponentsLesson.id &&
+    previous.has(lesson.knowledgeSummary ?? '')
+      ? { ...lesson, knowledgeSummary: summary }
+      : lesson
+  );
+}

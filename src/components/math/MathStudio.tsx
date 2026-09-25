@@ -1,18 +1,20 @@
-import { addMidpointLesson } from '@/lib/math/midpoint-lesson';
-import { addMeasurementWordProblems, reviseMeasurementPractice, addMeasurementLesson } from '@/lib/math/measurement-lesson';
-import { removeUnitFractionDrawingQuestions, upgradeUnitFractionSolutions, varyUnitFractionContexts, addUnitFractionLesson } from '@/lib/math/unit-fraction-lesson';
-import { addMultiplicationDivisionLesson } from '@/lib/math/multiplication-division-lesson';
-import { matchesPlacement, semesterLabel } from '@/lib/math/placement';
-import { assignComponentSemester, addComponentTables, replaceGradeThreeLesson } from '@/lib/math/addition-subtraction-lesson';
-import { addNumberLineLesson } from '@/lib/math/number-line-lesson';
-import { addFractionOrderLesson, clarifyFractionComparison } from '@/lib/math/fraction-order-lesson';
+import {
+  addComponentTables,
+  assignComponentSemester,
+  replaceGradeThreeLesson,
+} from '@/lib/math/addition-subtraction-lesson';
+import { upgradeExampleExerciseGroups } from '@/lib/math/example-exercise-groups';
+import { exampleLessons, legacyExampleLessons } from '@/lib/math/examples';
 import { consolidateFractionLessons } from '@/lib/math/fraction-consolidation';
 import {
   updateFractionLevels,
   updateFractionNames,
   updatePrimaryFractionOrdering,
 } from '@/lib/math/fraction-level-migration';
-import { exampleLessons, legacyExampleLessons } from '@/lib/math/examples';
+import {
+  addFractionOrderLesson,
+  clarifyFractionComparison,
+} from '@/lib/math/fraction-order-lesson';
 import { withKnowledgeSummary } from '@/lib/math/knowledge-summary';
 import {
   applyImport,
@@ -23,26 +25,56 @@ import {
   parseMathPack,
 } from '@/lib/math/lessons';
 import {
+  addMeasurementLesson,
+  addMeasurementWordProblems,
+  reviseMeasurementPractice,
+} from '@/lib/math/measurement-lesson';
+import { addMidpointLesson } from '@/lib/math/midpoint-lesson';
+import {
   addBuiltInFractionPractice,
-  addFractionLessons,
-  addBuiltInRationalLesson,
   addBuiltInIntegerLesson,
   addBuiltInNaturalLesson,
-  addNaturalCommonFactors,
-  splitNaturalDivisibility,
-  updateNaturalTerminology,
+  addBuiltInRationalLesson,
+  addFractionLessons,
   addIntegerBracketRules,
+  addNaturalCommonFactors,
   addSetContent,
+  splitNaturalDivisibility,
   updateIntegerComparisonWording,
+  updateNaturalTerminology,
   updateRationalFoundationWording,
   updateRationalMultiplication,
 } from '@/lib/math/migrations';
+import { addMultiplicationDivisionLesson } from '@/lib/math/multiplication-division-lesson';
+import { addNumberLineLesson } from '@/lib/math/number-line-lesson';
+import { matchesPlacement, semesterLabel } from '@/lib/math/placement';
+import {
+  addRationalExponentEquations,
+  updateExponentCoefficientNotation,
+} from '@/lib/math/rational-exponent-equations';
+import {
+  addExponentSummaryExample,
+  addRationalExponentReview,
+  groupRationalExponentExercises,
+} from '@/lib/math/rational-exponents-lesson';
+import {
+  addUnitFractionLesson,
+  removeUnitFractionDrawingQuestions,
+  upgradeUnitFractionSolutions,
+  varyUnitFractionContexts,
+} from '@/lib/math/unit-fraction-lesson';
 import Link from 'next/link';
 import { useEffect, useRef, useState } from 'react';
 import LessonEditor from './LessonEditor';
 import MathLesson from './MathLesson';
 import s from './MathStudio.module.css';
 import ShareLesson from './ShareLesson';
+const EXAMPLE_GROUPS_KEY = 'lima-math-example-groups-v1';
+const EXPONENT_GROUPS_KEY = 'lima-math-exponent-groups-v1';
+const EXPONENT_SUMMARY_KEY = 'lima-math-exponent-summary-example-v3';
+const EXPONENT_NOTATION_KEY = 'lima-math-exponent-coefficients-v3';
+const EXPONENT_EQUATIONS_KEY = 'lima-math-exponent-equations-v1';
+const EXPONENT_REVIEW_KEY = 'lima-math-exponent-review-v1';
 const MIDPOINT_KEY = 'lima-math-midpoint-3-v1';
 const MEASUREMENT_WORD_KEY = 'lima-math-measurement-words-v1';
 const MEASUREMENT_PRACTICE_KEY = 'lima-math-measurement-direct-v1';
@@ -104,7 +136,7 @@ export default function MathStudio() {
   const [incoming, setIncoming] = useState<MathLessonData[] | null>(null),
     [targets, setTargets] = useState<Record<string, string>>({});
   const [query, setQuery] = useState(''),
-    [grade, setGrade] = useState(''),
+    [grades, setGrades] = useState<string[]>([]),
     [semester, setSemester] = useState(''),
     [topic, setTopic] = useState('');
   const [error, setError] = useState(''),
@@ -122,9 +154,12 @@ export default function MathStudio() {
         raw === null
           ? parseMathPack(packLessons(exampleLessons)).lessons
           : parseMathPack(JSON.parse(raw)).lessons;
-      const needsFractionLessons = localStorage.getItem(FRACTION_LESSONS_KEY) !== 'done';
-      if (needsFractionLessons && raw !== null) loaded = addFractionLessons(loaded);
-      const needsFractionLevels = localStorage.getItem(FRACTION_LEVELS_KEY) !== 'done';
+      const needsFractionLessons =
+        localStorage.getItem(FRACTION_LESSONS_KEY) !== 'done';
+      if (needsFractionLessons && raw !== null)
+        loaded = addFractionLessons(loaded);
+      const needsFractionLevels =
+        localStorage.getItem(FRACTION_LEVELS_KEY) !== 'done';
       if (needsFractionLevels) loaded = updateFractionLevels(loaded);
       const needsPrimaryFractionOrdering =
         localStorage.getItem(PRIMARY_FRACTION_ORDERING_KEY) !== 'done';
@@ -155,41 +190,82 @@ export default function MathStudio() {
       if (needsBrackets) loaded = addIntegerBracketRules(loaded);
       const needsSets = localStorage.getItem(SETS_MIGRATION_KEY) !== 'done';
       if (needsSets) loaded = addSetContent(loaded);
-      const updatedWording = clarifyFractionComparison(updateFractionNames(updateNaturalTerminology(updateIntegerComparisonWording(
-        updateRationalMultiplication(updateRationalFoundationWording(loaded))
-      ))));
+      const updatedWording = clarifyFractionComparison(
+        updateFractionNames(
+          updateNaturalTerminology(
+            updateIntegerComparisonWording(
+              updateRationalMultiplication(
+                updateRationalFoundationWording(loaded)
+              )
+            )
+          )
+        )
+      );
       const wordingChanged =
         JSON.stringify(updatedWording) !== JSON.stringify(loaded);
       loaded = updatedWording;
-      const needsConsolidation = localStorage.getItem(FRACTION_CONSOLIDATION_KEY) !== 'done';
-      if (needsConsolidation) loaded = consolidateFractionLessons(loaded, legacyExampleLessons);
-      const needsFractionOrder = localStorage.getItem(FRACTION_ORDER_KEY) !== 'done';
+      const needsConsolidation =
+        localStorage.getItem(FRACTION_CONSOLIDATION_KEY) !== 'done';
+      if (needsConsolidation)
+        loaded = consolidateFractionLessons(loaded, legacyExampleLessons);
+      const needsFractionOrder =
+        localStorage.getItem(FRACTION_ORDER_KEY) !== 'done';
       if (needsFractionOrder) loaded = addFractionOrderLesson(loaded);
       const needsNumberLine = localStorage.getItem(NUMBER_LINE_KEY) !== 'done';
       if (needsNumberLine) loaded = addNumberLineLesson(loaded);
       const needsGradeThree = localStorage.getItem(GRADE_THREE_KEY) !== 'done';
       if (needsGradeThree) loaded = replaceGradeThreeLesson(loaded);
-      const needsComponentTables = localStorage.getItem(COMPONENT_TABLES_KEY) !== 'done';
+      const needsComponentTables =
+        localStorage.getItem(COMPONENT_TABLES_KEY) !== 'done';
       if (needsComponentTables) loaded = addComponentTables(loaded);
-      const needsComponentSemester = localStorage.getItem(COMPONENT_SEMESTER_KEY) !== 'done';
+      const needsComponentSemester =
+        localStorage.getItem(COMPONENT_SEMESTER_KEY) !== 'done';
       if (needsComponentSemester) loaded = assignComponentSemester(loaded);
-      const needsMultiplicationDivision = localStorage.getItem(MULTIPLICATION_DIVISION_KEY) !== 'done';
-      if (needsMultiplicationDivision) loaded = addMultiplicationDivisionLesson(loaded);
-      const needsUnitFraction = localStorage.getItem(UNIT_FRACTION_KEY) !== 'done';
+      const needsMultiplicationDivision =
+        localStorage.getItem(MULTIPLICATION_DIVISION_KEY) !== 'done';
+      if (needsMultiplicationDivision)
+        loaded = addMultiplicationDivisionLesson(loaded);
+      const needsUnitFraction =
+        localStorage.getItem(UNIT_FRACTION_KEY) !== 'done';
       if (needsUnitFraction) loaded = addUnitFractionLesson(loaded);
-      const needsUnitContexts = localStorage.getItem(UNIT_FRACTION_CONTEXT_KEY) !== 'done';
+      const needsUnitContexts =
+        localStorage.getItem(UNIT_FRACTION_CONTEXT_KEY) !== 'done';
       if (needsUnitContexts) loaded = varyUnitFractionContexts(loaded);
       loaded = upgradeUnitFractionSolutions(loaded);
       const needsMeasurement = localStorage.getItem(MEASUREMENT_KEY) !== 'done';
       if (needsMeasurement) loaded = addMeasurementLesson(loaded);
-      const needsDrawingRemoval = localStorage.getItem(UNIT_DRAWING_REMOVAL_KEY) !== 'done';
-      if (needsDrawingRemoval) loaded = removeUnitFractionDrawingQuestions(loaded);
-      const needsMeasurementPractice = localStorage.getItem(MEASUREMENT_PRACTICE_KEY) !== 'done';
+      const needsDrawingRemoval =
+        localStorage.getItem(UNIT_DRAWING_REMOVAL_KEY) !== 'done';
+      if (needsDrawingRemoval)
+        loaded = removeUnitFractionDrawingQuestions(loaded);
+      const needsMeasurementPractice =
+        localStorage.getItem(MEASUREMENT_PRACTICE_KEY) !== 'done';
       if (needsMeasurementPractice) loaded = reviseMeasurementPractice(loaded);
-      const needsMeasurementWords = localStorage.getItem(MEASUREMENT_WORD_KEY) !== 'done';
+      const needsMeasurementWords =
+        localStorage.getItem(MEASUREMENT_WORD_KEY) !== 'done';
       if (needsMeasurementWords) loaded = addMeasurementWordProblems(loaded);
       const needsMidpoint = localStorage.getItem(MIDPOINT_KEY) !== 'done';
       if (needsMidpoint) loaded = addMidpointLesson(loaded);
+      const needsExponentReview =
+        localStorage.getItem(EXPONENT_REVIEW_KEY) !== 'done';
+      if (needsExponentReview) loaded = addRationalExponentReview(loaded);
+      const needsExponentGroups =
+        localStorage.getItem(EXPONENT_GROUPS_KEY) !== 'done';
+      if (needsExponentGroups) loaded = groupRationalExponentExercises(loaded);
+      const needsExampleGroups =
+        localStorage.getItem(EXAMPLE_GROUPS_KEY) !== 'done';
+      if (needsExampleGroups)
+        loaded = upgradeExampleExerciseGroups(loaded, exampleLessons);
+      const needsExponentEquations =
+        localStorage.getItem(EXPONENT_EQUATIONS_KEY) !== 'done';
+      if (needsExponentEquations) loaded = addRationalExponentEquations(loaded);
+      const needsExponentNotation =
+        localStorage.getItem(EXPONENT_NOTATION_KEY) !== 'done';
+      if (needsExponentNotation)
+        loaded = updateExponentCoefficientNotation(loaded);
+      const needsExponentSummary =
+        localStorage.getItem(EXPONENT_SUMMARY_KEY) !== 'done';
+      if (needsExponentSummary) loaded = addExponentSummaryExample(loaded);
       // Show the upgraded lesson even when storage is unavailable.
       setLessons(loaded);
       if (
@@ -220,27 +296,54 @@ export default function MathStudio() {
         needsDrawingRemoval ||
         needsMeasurementPractice ||
         needsMeasurementWords ||
-        needsMidpoint
+        needsMidpoint ||
+        needsExponentReview ||
+        needsExponentGroups ||
+        needsExampleGroups ||
+        needsExponentEquations ||
+        needsExponentNotation ||
+        needsExponentSummary
       )
         localStorage.setItem(KEY, JSON.stringify(packLessons(loaded)));
+      if (needsExponentSummary)
+        localStorage.setItem(EXPONENT_SUMMARY_KEY, 'done');
+      if (needsExponentNotation)
+        localStorage.setItem(EXPONENT_NOTATION_KEY, 'done');
+      if (needsExponentEquations)
+        localStorage.setItem(EXPONENT_EQUATIONS_KEY, 'done');
+      if (needsExampleGroups) localStorage.setItem(EXAMPLE_GROUPS_KEY, 'done');
+      if (needsExponentGroups)
+        localStorage.setItem(EXPONENT_GROUPS_KEY, 'done');
+      if (needsExponentReview)
+        localStorage.setItem(EXPONENT_REVIEW_KEY, 'done');
       if (needsMidpoint) localStorage.setItem(MIDPOINT_KEY, 'done');
-      if (needsMeasurementWords) localStorage.setItem(MEASUREMENT_WORD_KEY, 'done');
-      if (needsMeasurementPractice) localStorage.setItem(MEASUREMENT_PRACTICE_KEY, 'done');
+      if (needsMeasurementWords)
+        localStorage.setItem(MEASUREMENT_WORD_KEY, 'done');
+      if (needsMeasurementPractice)
+        localStorage.setItem(MEASUREMENT_PRACTICE_KEY, 'done');
       if (needsMeasurement) localStorage.setItem(MEASUREMENT_KEY, 'done');
-      if (needsDrawingRemoval) localStorage.setItem(UNIT_DRAWING_REMOVAL_KEY, 'done');
-      if (needsUnitContexts) localStorage.setItem(UNIT_FRACTION_CONTEXT_KEY, 'done');
+      if (needsDrawingRemoval)
+        localStorage.setItem(UNIT_DRAWING_REMOVAL_KEY, 'done');
+      if (needsUnitContexts)
+        localStorage.setItem(UNIT_FRACTION_CONTEXT_KEY, 'done');
       if (needsUnitFraction) localStorage.setItem(UNIT_FRACTION_KEY, 'done');
-      if (needsMultiplicationDivision) localStorage.setItem(MULTIPLICATION_DIVISION_KEY, 'done');
-      if (needsComponentSemester) localStorage.setItem(COMPONENT_SEMESTER_KEY, 'done');
-      if (needsComponentTables) localStorage.setItem(COMPONENT_TABLES_KEY, 'done');
+      if (needsMultiplicationDivision)
+        localStorage.setItem(MULTIPLICATION_DIVISION_KEY, 'done');
+      if (needsComponentSemester)
+        localStorage.setItem(COMPONENT_SEMESTER_KEY, 'done');
+      if (needsComponentTables)
+        localStorage.setItem(COMPONENT_TABLES_KEY, 'done');
       if (needsGradeThree) localStorage.setItem(GRADE_THREE_KEY, 'done');
       if (needsNumberLine) localStorage.setItem(NUMBER_LINE_KEY, 'done');
       if (needsFractionOrder) localStorage.setItem(FRACTION_ORDER_KEY, 'done');
-      if (needsConsolidation) localStorage.setItem(FRACTION_CONSOLIDATION_KEY, 'done');
-      if (needsFractionLevels) localStorage.setItem(FRACTION_LEVELS_KEY, 'done');
+      if (needsConsolidation)
+        localStorage.setItem(FRACTION_CONSOLIDATION_KEY, 'done');
+      if (needsFractionLevels)
+        localStorage.setItem(FRACTION_LEVELS_KEY, 'done');
       if (needsPrimaryFractionOrdering)
         localStorage.setItem(PRIMARY_FRACTION_ORDERING_KEY, 'done');
-      if (needsFractionLessons) localStorage.setItem(FRACTION_LESSONS_KEY, 'done');
+      if (needsFractionLessons)
+        localStorage.setItem(FRACTION_LESSONS_KEY, 'done');
       if (needsUpgrade) localStorage.setItem(EXTRA_MIGRATION_KEY, 'done');
       if (needsRational) localStorage.setItem(RATIONAL_MIGRATION_KEY, 'done');
       if (needsInteger) localStorage.setItem(INTEGER_MIGRATION_KEY, 'done');
@@ -368,9 +471,13 @@ export default function MathStudio() {
         }
       />
     );
+  const matchesSelectedPlacement = (lesson: MathLessonData) =>
+    grades.length
+      ? grades.some((grade) => matchesPlacement(lesson, grade, semester))
+      : matchesPlacement(lesson, '', semester);
   const filtered = lessons.filter(
     (l) =>
-      matchesPlacement(l, grade, semester) &&
+      matchesSelectedPlacement(l) &&
       (!topic || l.topic === topic) &&
       `${l.title} ${l.topic} ${l.goal}`
         .toLocaleLowerCase('vi')
@@ -512,8 +619,9 @@ export default function MathStudio() {
                 <div className={s.panel} key={lesson.id}>
                   <h3>{lesson.title}</h3>
                   <p className={s.muted}>
-                    Lớp {lesson.grade} · {semesterLabel(lesson.semester)} · {lesson.topic} · {lesson.blocks.length}{' '}
-                    phần giảng · {lesson.exercises.length} bài tập
+                    Lớp {lesson.grade} · {semesterLabel(lesson.semester)} ·{' '}
+                    {lesson.topic} · {lesson.blocks.length} phần giảng ·{' '}
+                    {lesson.exercises.length} bài tập
                   </p>
                   <label>
                     Thao tác
@@ -576,19 +684,14 @@ export default function MathStudio() {
               />
             </label>
             <label>
-              Lớp
-              <select value={grade} onChange={(e) => { setGrade(e.target.value); setTopic(''); }}>
-                <option value="">Tất cả lớp</option>
-                {Array.from({ length: 12 }, (_, i) => (
-                  <option key={i} value={i + 1}>
-                    Lớp {i + 1}
-                  </option>
-                ))}
-              </select>
-            </label>
-            <label>
               Học kỳ
-              <select value={semester} onChange={(e) => { setSemester(e.target.value); setTopic(''); }}>
+              <select
+                value={semester}
+                onChange={(e) => {
+                  setSemester(e.target.value);
+                  setTopic('');
+                }}
+              >
                 <option value="">Tất cả học kỳ</option>
                 <option value="1">Học kỳ 1</option>
                 <option value="2">Học kỳ 2</option>
@@ -599,19 +702,71 @@ export default function MathStudio() {
               Chủ đề
               <select value={topic} onChange={(e) => setTopic(e.target.value)}>
                 <option value="">Tất cả chủ đề</option>
-                {Array.from(new Set(lessons.filter((l) => matchesPlacement(l, grade, semester)).map((l) => l.topic))).map((t) => (
+                {Array.from(
+                  new Set(
+                    lessons.filter(matchesSelectedPlacement).map((l) => l.topic)
+                  )
+                ).map((t) => (
                   <option key={t}>{t}</option>
                 ))}
               </select>
             </label>
           </div>
-          <p className={s.muted}>{filtered.length} bài học</p>
+          <fieldset
+            className={s.gradeFilter}
+            aria-describedby="grade-filter-hint"
+          >
+            <legend>Lớp</legend>
+            <div className={s.gradeOptions}>
+              {Array.from({ length: 12 }, (_, i) => {
+                const value = String(i + 1);
+                const selected = grades.includes(value);
+                return (
+                  <label
+                    key={value}
+                    className={`${s.gradeOption} ${selected ? s.gradeSelected : ''}`}
+                  >
+                    <input
+                      type="checkbox"
+                      checked={selected}
+                      onChange={(event) => {
+                        const checked = event.target.checked;
+                        setGrades((current) =>
+                          checked
+                            ? [...current, value]
+                            : current.filter((grade) => grade !== value)
+                        );
+                        setTopic('');
+                      }}
+                    />
+                    {value}
+                  </label>
+                );
+              })}
+            </div>
+            <div className={s.gradeHelp}>
+              {grades.length > 0 && (
+                <button
+                  onClick={() => {
+                    setGrades([]);
+                    setTopic('');
+                  }}
+                >
+                  Bỏ chọn lớp
+                </button>
+              )}
+            </div>
+          </fieldset>
+          <p className={s.muted} role="status">
+            {filtered.length} bài học
+          </p>
           <div className={s.cards}>
             {filtered.map((lesson) => (
               <article className={s.lessonCard} key={lesson.id}>
                 <div>
                   <span className={s.badge}>
-                    Lớp {lesson.grade} · {semesterLabel(lesson.semester)} · {lesson.topic}
+                    Lớp {lesson.grade} · {semesterLabel(lesson.semester)} ·{' '}
+                    {lesson.topic}
                   </span>
                   <h2>{lesson.title}</h2>
                   <p>{lesson.goal}</p>

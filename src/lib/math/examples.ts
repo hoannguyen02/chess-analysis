@@ -1,3 +1,4 @@
+import { groupExampleExercises } from './example-exercise-groups';
 import { additionSubtractionLesson } from './addition-subtraction-lesson';
 import { fractionExtraExercises } from './extra-examples';
 import { consolidateFractionLessons } from './fraction-consolidation';
@@ -354,7 +355,7 @@ export const legacyExampleLessons: MathLessonData[] = [
   numberLineLesson,
 ];
 
-export const exampleLessons = consolidateFractionLessons(
+export const exampleLessons = groupExampleExercises(consolidateFractionLessons(
   legacyExampleLessons,
   legacyExampleLessons
-);
+));

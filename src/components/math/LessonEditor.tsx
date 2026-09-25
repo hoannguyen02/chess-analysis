@@ -483,6 +483,13 @@ export default function LessonEditor({
                     </select>
                   </label>
                   <label>
+                    Nhóm bài (yêu cầu chung)
+                    <input maxLength={200} value={e.task || ''}
+                      onChange={event => exercise(e.id, { task: event.target.value || undefined })}
+                      placeholder="Ví dụ: Tính — ôn nền tảng" />
+                    <small>Các câu liền nhau cùng tên nhóm được đánh a), b), c). Để trống để dùng một bài riêng.</small>
+                  </label>
+                  <label>
                     Kỹ năng cần luyện
                     <input
                       maxLength={150}

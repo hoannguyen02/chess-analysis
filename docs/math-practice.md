@@ -31,6 +31,10 @@ Open a lesson and choose **Giảng bài** to use the full-viewport teaching view
 
 Teaching navigation does not mark content as read or change completion by itself. Answering an exercise still uses the lesson's normal progress storage. Extra practice keeps its existing one-question-at-a-time numbered navigation while the teaching shell stays compact; PDF controls are hidden until teaching mode is closed.
 
+PDF exports pack consecutive short numeric/fraction exercises into three columns when their measured content fits, then try two columns, otherwise retain full width. Worksheet and solution layouts are selected independently at the original 11pt size, with 22pt gutters and left-to-right numbering. Writing space is remeasured at the selected width. Rows stay together across page breaks. Choice questions, written tasks, tables, diagrams and structured word problems retain their existing full-width layout; no lesson-name or practice-group matching is used.
+
+Two-column blocks may be tall as long as the whole row fits on a fresh page; they no longer have a fixed 200pt height limit. Worksheet columns share the tallest prompt height and the largest required writing area in their row, so all dotted baselines align. Three-column blocks retain the compact height limit. Task headings stay with their first row.
+
 ## Storage and sharing
 
 Library key: `lima-math-lessons-v1`. Progress is stored by lesson ID with an exact learner-content fingerprint. Changing learner content starts a new progress record; changing teacher notes does not. Older snapshots remain readable but switching between different revisions of the same lesson does not retain separate progress records. Results are local, not submitted to teachers. Preview never saves progress.
@@ -313,3 +317,80 @@ exercise `segment` metadata, with validation, editor controls, JSON/Excel/share
 round trips and worksheet/answer PDF drawing. Displayed diagrams are illustrative,
 not physical rulers; questions use supplied lengths. A one-time library update
 adds the lesson while preserving existing edited copies.
+
+The rational-exponents lesson now starts extra practice with ten foundation
+review questions: exponents 0 and 1, repeated multiplication, negative bases,
+product/quotient rules, powers of powers, and a simple rational base. They precede
+all existing extra exercises in web and PDF order. A one-time migration prepends
+them while retaining existing exercise IDs, edits and the order of later questions.
+
+### Numbered tasks with lettered parts
+
+Extra exercises may set an optional `task` string (Nhóm bài / yêu cầu chung).
+Adjacent exercises with the same task become one numbered task with a), b), c)
+parts. Ungrouped exercises remain independently numbered; non-adjacent groups
+start new tasks. The editor exposes the heading on each extra exercise. Lesson,
+exercise IDs and answers are unchanged; grouping-only metadata changes preserve
+saved practice results. JSON, sharing and Excel preserve the heading.
+
+The rational-exponents lesson opts into groups for foundation review, rules,
+calculations, known-power questions and applications. Web navigation and both PDF
+variants use the same labels. PDF multi-column rows never cross task boundaries;
+common leading “Tính” is omitted from subquestions under a “Tính…” heading.
+Other lessons retain their current numbering until explicitly grouped.
+
+
+### Grouped exercises across the lesson library
+
+The 19 other built-in lessons with extra practice now use reviewed `task` metadata in
+`example-exercise-groups.ts`, alongside the existing exponent groups. Adjacent
+questions share a numbered instruction (for example, **Điền số thích hợp**, **Tính**,
+**Tìm x**, **So sánh các phân số**, or **Giải bài toán**) and individual lettered
+parts. Repeated command prefixes are omitted only in the displayed part when the
+shared instruction carries that requirement. Conditions, units, original prompts,
+answers, exercise order and identifiers are preserved.
+
+The presentation follows the shared-instruction/lettered-part convention illustrated
+in [Toán 3, bài tập trang 79](https://loigiaihay.com/bai-1-bai-2-bai-3-tiet-78-trang-79-sgk-toan-3-c113a15808.html).
+This is a presentation reference, not a change to curriculum placement or content.
+
+`lima-math-example-groups-v1` applies the groups once to saved built-in lessons,
+matching exercise ID, prompt, kind and answer. Teacher-authored questions and existing
+groups are left intact. The progress comparison ignores grouping metadata. New
+custom lessons use the existing **Nhóm bài (yêu cầu chung)** editor field.
+
+All grouped lessons use the common measured PDF layout: short questions may share
+columns, writing baselines align within each row, and content that does not fit
+uses full width. Tables, diagrams, choices and structured word problems retain
+full-width rendering. Both PDF variants are checked across the whole built-in
+library for complete ordered labels and page bounds.
+
+### Finding x with rational exponents
+
+The exponent lesson adds 33 extra questions in six lettered task groups: basic
+powers (including exponents 0 and 1), same-base products/quotients, powers of powers,
+fraction/decimal bases, mixed operations, and expressions in the base or exponent.
+The final group compares expressions such as `(x + 1)^2 = 2^2` with `x ∈ ℕ`,
+and `2^(2 × x) = 2` with rational x and a natural-number exponent. No root-finding
+questions such as `x^2 = 9` are included. Every question has an explicit domain,
+a single numeric/fraction answer, a hint and worked reasoning.
+
+`rational-exponent-equations.ts` owns these questions. The one-time migration
+`lima-math-exponent-equations-v1` appends missing IDs to saved exponent lessons,
+preserves existing questions and edits, and respects the 100-question limit.
+
+### Multiplication and unknown-number notation
+
+Web lesson text and PDF exports share `formatMultiplicationNotation`. Grades 1–5
+retain `×`; grades 6+ use `·` only for explicit multiplication directly beside
+the unknown `x`. Numeric arithmetic retains `×` at every grade. The variable is
+italicized in both renderers, including exponents. Existing `□` placeholders
+remain boxed question marks, while explicitly authored “Tìm x” questions keep
+their variable. These are presentation rules, not edits to stored questions,
+answers, or progress. Do not globally replace `x` with a box based on grade.
+
+The variable x uses the actual STIX Two Math italic-x outline, not a sheared
+sans-serif letter. `math-variable-glyph.ts` shares the outline between web SVG
+and PDF vector paths. Both retain plain ASCII x for accessibility/copying;
+the PDF uses invisible searchable text under the outline. The glyph is licensed
+under SIL OFL 1.1; the accompanying notice is in `public/fonts/LICENSE-STIX.txt`.

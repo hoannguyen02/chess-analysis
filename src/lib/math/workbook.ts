@@ -109,6 +109,7 @@ export function importMathWorkbook(data: ArrayBuffer) {
               table: e.table ? json(e.table, 'null') : undefined,
               group: e.group || undefined,
               skill: e.skill || undefined,
+              task: e.task || undefined,
               inputInstruction: e.inputInstruction || undefined,
               solutionStyle: e.solutionStyle || undefined,
               difficulty: e.difficulty || undefined,

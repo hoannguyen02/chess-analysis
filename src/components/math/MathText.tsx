@@ -1,10 +1,25 @@
 import {
   cancellationParts,
+  formatMultiplicationNotation,
+  variableParts,
   stripRedundantFractionParentheses,
   wholeNumberFraction,
 } from '@/lib/math/format';
-import { ReactNode } from 'react';
+import { createContext, useContext, ReactNode } from 'react';
 import styles from './MathLesson.module.css';
+import { mathXPath, mathXStrokeWidth } from '@/lib/math/math-variable-glyph';
+
+export const MathNotationGrade = createContext(0);
+
+function Variables({ children }: { children: string }) {
+  return <>{variableParts(children).map((part, index) => part === 'x'
+    ? <span key={index} className={styles.variable}>
+        <span className={styles.variableText}>x</span>
+        <svg aria-hidden="true" viewBox="0 0 559 877" preserveAspectRatio="none" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', fill: 'currentColor' }}>
+          <path d={mathXPath} stroke="currentColor" strokeWidth={mathXStrokeWidth} strokeLinejoin="round" transform="translate(0 720) scale(1 -1)" />
+        </svg>
+      </span> : part)}</>;
+}
 
 // Keep the stored □ marker unchanged; only its presentation gets a question mark.
 function Placeholders({ children }: { children: string }) {
@@ -24,10 +39,10 @@ function Placeholders({ children }: { children: string }) {
             </span>
           ) : part.startsWith('^') ? (
             <sup key={index} className={styles.exponent}>
-              {part.startsWith('^(') ? part.slice(2, -1) : part.slice(1)}
+              <Variables>{part.startsWith('^(') ? part.slice(2, -1) : part.slice(1)}</Variables>
             </sup>
           ) : (
-            part
+            <Variables key={index}>{part}</Variables>
           )
         )}
     </>
@@ -110,7 +125,7 @@ function ParenthesizedFraction({
           )
         </span>
       </span>
-      {exponentText && <sup className={styles.exponent}>{exponentText}</sup>}
+      {exponentText && <sup className={styles.exponent}><Variables>{exponentText}</Variables></sup>}
     </span>
   );
 }
@@ -142,7 +157,7 @@ function NestedFractionPower({
       <span aria-hidden="true" className={styles.outerFractionBracket}>
         ]
       </span>
-      <sup className={styles.exponent}>{outerExponent}</sup>
+      <sup className={styles.exponent}><Variables>{outerExponent}</Variables></sup>
     </span>
   );
 }
@@ -160,12 +175,12 @@ function GroupedExpressionPower({
         <span aria-hidden="true" className={styles.fractionBracket}>
           (
         </span>
-        <MathTextContent>{expression}</MathTextContent>
+        <span><MathTextContent>{expression}</MathTextContent></span>
         <span aria-hidden="true" className={styles.fractionBracket}>
           )
         </span>
       </span>
-      <sup className={styles.exponent}>{exponent}</sup>
+      <sup className={styles.exponent}><Variables>{exponent}</Variables></sup>
     </span>
   );
 }
@@ -270,6 +285,8 @@ function MathTextLine({ children }: { children: string }) {
 }
 
 export function MathText({ children }: { children: string }) {
+  const grade = useContext(MathNotationGrade);
+  children = formatMultiplicationNotation(children, grade);
   if (!children.includes('\n')) return <MathTextLine>{children}</MathTextLine>;
   return (
     <>

@@ -14,7 +14,7 @@ import Exercise, { Result } from './Exercise';
 import ExtraPractice from './ExtraPractice';
 import { MathEditTarget } from './LessonEditor';
 import s from './MathLesson.module.css';
-import { Fraction, MathText } from './MathText';
+import { Fraction, MathText, MathNotationGrade } from './MathText';
 import NumberLine from './NumberLine';
 import QuickLessonEdit from './QuickLessonEdit';
 import SegmentDiagram from './SegmentDiagram';
@@ -422,6 +422,7 @@ export default function MathLesson({
       className={`${s.lesson} ${teachingMode ? s.teachingMode : ''}`}
       lang="vi"
     >
+      <MathNotationGrade.Provider value={lesson.grade}>
       {editing && onSave && (
         <QuickLessonEdit
           lesson={lesson}
@@ -722,6 +723,7 @@ export default function MathLesson({
           </div>
         </div>
       </div>
+      </MathNotationGrade.Provider>
     </div>
   );
 }

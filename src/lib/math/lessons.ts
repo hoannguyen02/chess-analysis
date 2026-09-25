@@ -55,6 +55,7 @@ export type MathExercise = {
   kind: 'number' | 'fraction' | 'choice' | 'written';
   group?: 'foundation' | 'skills' | 'application' | 'challenge';
   skill?: string;
+  task?: string;
   difficulty?: 'easy' | 'medium' | 'hard';
   workspace?: 'small' | 'medium' | 'large';
   criteria?: string[];
@@ -383,6 +384,10 @@ export function parseMathPack(value: unknown): MathPack {
             if (e.kind === 'written' && e.section !== 'extra')
               throw new Error('Bài tự luận được hỗ trợ trong Luyện tập thêm.');
             const extra: Partial<MathExercise> = {};
+            if (e.task !== undefined && e.task !== '') {
+              if (e.section !== 'extra') throw new Error('Nhóm bài chỉ dùng trong luyện tập thêm.');
+              extra.task = text(e.task, 'Nhóm bài', 200, true);
+            }
             if (e.segment !== undefined)
               extra.segment = parseSegment(e.segment);
             if (e.segmentLabels !== undefined)

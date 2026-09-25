@@ -99,6 +99,7 @@ test('math text renders centered question boxes for blanks without changing punc
     module,
     (name) => {
       if (name === '@/lib/math/format') return load('format');
+      if (name === '@/lib/math/math-variable-glyph') return load('math-variable-glyph');
       if (name === './MathLesson.module.css')
         return { default: new Proxy({}, { get: (_, key) => key }) };
       return require(name);
@@ -121,6 +122,12 @@ test('math text renders centered question boxes for blanks without changing punc
   }
   assert.equal(render('Có bao nhiêu số?'), 'Có bao nhiêu số?');
   assert.equal(render('6 × 7 = 42.'), '6 × 7 = 42.');
+  const variableHtml = render('6 × x = 2^x');
+  assert.equal((variableHtml.match(/<svg /g) || []).length, 2);
+  assert.ok(variableHtml.includes(load('math-variable-glyph').mathXPath));
+  assert.ok(variableHtml.includes(`stroke-width="${load('math-variable-glyph').mathXStrokeWidth}"`));
+  assert.ok(variableHtml.includes('>x</span>'));
+  assert.equal(render('xe xanh'), 'xe xanh');
   assert.equal(
     render('(-3/5)^4'),
     '<span class="fractionPower"><span class="fractionGroup"><span aria-hidden="true" class="fractionBracket">(</span><span class="fraction" role="img" aria-label="-3 phần 5"><span aria-hidden="true">-3</span><span aria-hidden="true">5</span></span><span aria-hidden="true" class="fractionBracket">)</span></span><sup class="exponent">4</sup></span>'
@@ -143,7 +150,7 @@ test('math text renders centered question boxes for blanks without changing punc
   );
   assert.match(
     render('4 × (1/2 - 1/4)^2.'),
-    /class="groupedExpressionPower"><span class="groupedExpressionGroup"><span aria-hidden="true" class="fractionBracket">\(<\/span><span class="fraction"[\s\S]* - <span class="fraction"[\s\S]*class="fractionBracket">\)<\/span><\/span><sup class="exponent">2<\/sup><\/span>/
+    /class="groupedExpressionPower"><span class="groupedExpressionGroup"><span aria-hidden="true" class="fractionBracket">\(<\/span><span><span class="fraction"[\s\S]* - <span class="fraction"[\s\S]*class="fractionBracket">\)<\/span><\/span><sup class="exponent">2<\/sup><\/span>/
   );
   const fraction = render('3/5 = □/20; 1/□; (□ + 1)/3');
   assert.equal((fraction.match(/class="questionBox"/g) || []).length, 3);
@@ -644,6 +651,50 @@ test('conceptual solutions explain why, reading answers omit repetition, and upg
   );
 });
 
+test('adaptive PDF columns preserve numbering, gutters, page bounds and full-width word problems', () => {
+  const { createPracticePdf } = load('pdf');
+  const font = fs.readFileSync(path.join(__dirname, '../public/fonts/DejaVuSans.ttf'));
+  const base = exampleLessons.flatMap(l => l.exercises).find(e => e.section === 'extra' && e.kind === 'number');
+  const exercises = Array.from({ length: 24 }, (_, i) => ({ ...base, task: undefined, id: `compact-${i}`, prompt: 'Tính 2 + 3.', answer: '5', solution: '2 + 3 = 5.', options: [], unit: '' }));
+  exercises.push({ ...base, task: undefined, id: 'full-word', prompt: 'Có 10 quyển vở, chia đều cho 2 bạn. Mỗi bạn nhận bao nhiêu quyển?', answer: '5', solution: 'Số vở mỗi bạn nhận là:\n10 : 2 = 5 (quyển).\nĐáp số: 5 quyển.' });
+  const lesson = { ...exampleLessons[0], exercises, knowledgeSummary: '' };
+  for (const mode of ['worksheet', 'solutions']) {
+    const rows = pdfTextRows(createPracticePdf(lesson, mode, font));
+    const prompts = rows.filter(row => /^Bài \d+\./u.test(row.text));
+    assert.deepEqual(prompts.map(r => Number(r.text.match(/^Bài (\d+)/u)[1])), exercises.map((_, i) => i + 1));
+    assert.equal(prompts[0].y, prompts[1].y);
+    assert.equal(prompts[1].y, prompts[2].y);
+    assert.ok(prompts[0].right + 10 < prompts[1].left);
+    assert.ok(prompts[1].right + 10 < prompts[2].left);
+    assert.equal(prompts.at(-1).left, 44);
+    for (const row of rows) {
+      assert.ok(row.left >= 43.98 && row.right <= 551.3, row.text);
+      assert.ok(row.y > 0 && row.y < 842, row.text);
+    }
+  }
+});
+
+test('grouped powers share the label and equation baseline with and without real fractions', () => {
+  const { createPracticePdf } = load('pdf');
+  const font = fs.readFileSync(path.join(__dirname, '../public/fonts/DejaVuSans.ttf'));
+  const base = exampleLessons.flatMap(l => l.exercises).find(e => e.section === 'extra' && e.kind === 'number');
+  for (const prompt of ['(x + 1)^2 = 2^2.', '(x - 2)^3 = 3^3.', '(x + 1)^2 = 1/2.', '(x + 1/2)^2 = 2.']) {
+    const lesson = { ...exampleLessons[0], exercises: [{ ...base, task: undefined, prompt, solution: '1 = 1.', answer: '1' }], knowledgeSummary: '' };
+    for (const mode of ['worksheet', 'solutions']) {
+      const spans = pdfTextRows(createPracticePdf(lesson, mode, font), true);
+      const start = spans.findIndex(row => row.text === 'Bài' && row.left === 44);
+      const equals = spans.findIndex((row, i) => i > start && row.text === '=');
+      const label = spans[start];
+      const x = spans.slice(start, equals).find(row => row.text === 'x');
+      assert.ok(x && equals > start, prompt);
+      assert.ok(Math.abs(label.y - x.y) < 0.01, `${prompt}: base and label ${JSON.stringify(spans.slice(start, equals + 1))}`);
+      assert.ok(Math.abs(label.y - spans[equals].y) < 0.01, `${prompt}: equals sign`);
+      const exponent = spans.slice(start, equals).find(row => (row.text === '2' || row.text === '3') && row.y > label.y);
+      assert.ok(exponent, 'exponent remains raised');
+    }
+  }
+});
+
 test('worksheet choices omit ruled lines and reserved workspace for every saved size', () => {
   const { createPracticePdf } = load('pdf');
   const { naturalLesson } = load('natural-example');
@@ -724,7 +775,7 @@ test('both PDF exports omit practice-group headings and reserved space without c
   const lesson = structuredClone(exampleLessons[0]);
   lesson.exercises = lesson.exercises
     .filter((e) => e.section === 'extra')
-    .map((e, i) => ({ ...e, group: groups[i % groups.length] }));
+    .map((e, i) => ({ ...e, task: undefined, group: groups[i % groups.length] }));
   const before = structuredClone(lesson);
   const withoutGroups = {
     ...lesson,
@@ -1530,7 +1581,7 @@ function pdfTextRows(bytes, separateSpans = false) {
     if (!stream[1].includes('BT /F1')) continue;
     const baselines = new Map();
     for (const op of stream[1].matchAll(
-      /BT \/F1 ([\d.]+) Tf [\d. ]+ rg 1 0 0 1 ([\d.-]+) ([\d.-]+) Tm <([0-9a-f]+)> Tj ET/g
+      /BT \/F1 ([\d.]+) Tf [\d. ]+ rg 1 0 (?:0|0\.2) 1 ([\d.-]+) ([\d.-]+) Tm <([0-9a-f]+)> Tj ET/g
     )) {
       const [, size, x, y, hex] = op;
       const glyphs = hex.match(/.{4}/g);
@@ -1550,7 +1601,10 @@ function pdfTextRows(bytes, separateSpans = false) {
         });
         continue;
       }
-      const row = baselines.get(y) || {
+      // Independent column cells can share a baseline but are separate text rows.
+      const block = stream[1].slice(0, op.index).split('/Exercise BMC').length;
+      const baselineKey = `${block}:${y}`;
+      const row = baselines.get(baselineKey) || {
         text: '',
         left: Number(x),
         right: Number(x),
@@ -1560,7 +1614,7 @@ function pdfTextRows(bytes, separateSpans = false) {
       row.text += text;
       row.left = Math.min(row.left, Number(x));
       row.right = Math.max(row.right, Number(x) + width);
-      baselines.set(y, row);
+      baselines.set(baselineKey, row);
     }
     rows.push(...baselines.values());
     page++;
@@ -1581,7 +1635,7 @@ test('exported fraction word problems physically match the reference workbook la
   lesson.grade = 5;
   lesson.exercises = lesson.exercises.filter((e) =>
     /-q(19|20|21|22)$/u.test(e.id)
-  );
+  ).map(({ task, ...e }) => e);
   const rows = pdfTextRows(createPracticePdf(lesson, 'solutions', font));
   assert.equal(rows.filter((row) => row.text === 'Bài giải:').length, 4);
   assert.ok(!rows.some((row) => row.text.startsWith('Lời giải:')));
@@ -1623,7 +1677,9 @@ test('mixed solution PDFs keep the next calculation question with its working', 
     (l) => l.id === 'math-fraction-multiply-6'
   );
   const rows = pdfTextRows(createPracticePdf(lesson, 'solutions', font));
-  const promptIndex = rows.findIndex((row) => row.text.startsWith('Bài 19.'));
+  const { exerciseLabels } = load('exercise-groups');
+  const expected = exerciseLabels(lesson.exercises.filter(e => e.section === 'extra'))[18].prompt;
+  const promptIndex = rows.findIndex((row) => row.text.startsWith(expected.slice(0, 12)));
   const solution = rows
     .slice(promptIndex + 1)
     .find((row) => row.text.startsWith('Cách làm:'));
@@ -2503,7 +2559,7 @@ test('Grade 6 fractions consolidate into three lessons while preserving saved wo
   const app = legacyExampleLessons.find(
     (l) => l.id === 'math-fraction-applications-6'
   );
-  assert.equal(scope[2], app);
+  assert.deepEqual({ ...scope[2], exercises: scope[2].exercises.map(({ task, ...e }) => e) }, app);
   assert.equal(scope[0].exercises.length, 98);
   assert.deepEqual(
     consolidateFractionLessons(exampleLessons, legacyExampleLessons),
@@ -3595,7 +3651,7 @@ function loadMathComponent(file, hooks) {
       if (name === 'next/dynamic') return { default: () => 'TeachingTimer' };
       if (name === './MathLesson.module.css') return { default: styles };
       if (name === './MathText')
-        return { MathText: 'MathText', Fraction: 'Fraction' };
+        return { MathText: 'MathText', Fraction: 'Fraction', MathNotationGrade: { Provider: 'MathNotationGrade' } };
       return { default: name.replace(/^\.\//, '') };
     },
     module,
@@ -4012,5 +4068,238 @@ test('unfinished core answers emit immediately and survive teaching navigation a
     );
   } finally {
     reloaded.restore();
+  }
+});
+
+test('exponent review precedes application questions and preserves saved work', () => {
+  const { rationalExponentsLesson: lesson, rationalExponentReview: review, addRationalExponentReview: add } = load('rational-exponents-lesson');
+  assert.equal(review.length, 10);
+  const values = [2**0,2**1,2**4,(-2)**2,(-2)**3,2**2*2**3,(2**3)**2,(2**2)**3,2**3/2**2,1/4];
+  review.forEach((e,i) => {
+    const value = e.kind === 'fraction' ? e.answer.split('/').map(Number).reduce((a,b) => a/b) : Number(e.answer);
+    assert.equal(value, values[i]);
+  });
+  const rest = lesson.exercises.filter(e => !e.id.startsWith('re-review-'));
+  const edited = { ...review[0], hint: 'Teacher hint' };
+  const original = { ...lesson, exercises: [...rest, edited] };
+  const updated = add([original])[0];
+  assert.equal(updated.exercises[0], edited);
+  assert.deepEqual(updated.exercises.slice(10), rest);
+  assert.deepEqual(add([updated]), [updated]);
+  assert.equal(original.exercises.length, rest.length + 1);
+  assert.deepEqual(lesson.exercises.filter(e => e.section === 'extra').slice(0,10), review);
+  assert.doesNotThrow(() => parseMathPack(packLessons([updated])));
+});
+
+test('grouped exercises keep independent IDs, labels, progress and PDF exports', () => {
+  const { exerciseLabels, sameExerciseContent } = load('exercise-groups');
+  const { rationalExponentsLesson: lesson, groupRationalExponentExercises: group } = load('rational-exponents-lesson');
+  const exercises = lesson.exercises.filter(e => e.section === 'extra');
+  const labels = exerciseLabels(exercises);
+  assert.equal(labels[0].label, 'Bài 1(a)');
+  assert.equal(labels[4].label, 'Bài 1(e)');
+  assert.equal(labels[5].label, 'Bài 2(a)');
+  assert.equal(labels[0].prompt, 'a) 2^0.');
+  const old = exercises.map(({ task, ...e }) => e);
+  assert.ok(sameExerciseContent(JSON.stringify(old), exercises));
+  assert.equal(sameExerciseContent(JSON.stringify(old), exercises.map((e,i) => i ? e : { ...e, answer: '99' })), false);
+  const grouped = group([{ ...lesson, exercises: old }])[0];
+  assert.deepEqual(grouped.exercises, exercises);
+  assert.deepEqual(group([grouped]), [grouped]);
+  const custom = { ...old[0], prompt: 'Teacher custom prompt' };
+  assert.equal(group([{ ...lesson, exercises: [custom] }])[0].exercises[0], custom);
+  const mixed = exerciseLabels([exercises[0], {...exercises[1],task:undefined}, exercises[2]]);
+  assert.deepEqual(mixed.map(e => e.label), ['Bài 1(a)','Bài 2','Bài 3(a)']);
+  assert.equal(exerciseLabels(Array.from({ length: 28 }, () => exercises[0]))[26].part, 'aa');
+  const font = fs.readFileSync(path.join(__dirname, '../public/fonts/DejaVuSans.ttf'));
+  for (const mode of ['worksheet','solutions']) {
+    const bytes = load('pdf').createPracticePdf(lesson, mode, font);
+    if (process.env.MATH_PDF_QA_DIR) {
+      fs.mkdirSync(process.env.MATH_PDF_QA_DIR, { recursive: true });
+      fs.writeFileSync(path.join(process.env.MATH_PDF_QA_DIR, `grouped-${mode}.pdf`), bytes);
+    }
+  }
+});
+
+
+test('tall exponent workings share two columns and the taller writing area', () => {
+  const { rationalExponentsLesson: source } = load('rational-exponents-lesson');
+  const lesson = { ...source, knowledgeSummary: '', exercises: source.exercises.filter(e => ['re-ex-35', 're-ex-36'].includes(e.id)) };
+  const font = fs.readFileSync(path.join(__dirname, '../public/fonts/DejaVuSans.ttf'));
+  for (const mode of ['worksheet', 'solutions']) {
+    const bytes = load('pdf').createPracticePdf(lesson, mode, font);
+    const rows = pdfTextRows(bytes);
+    const prompts = rows.filter(row => /^[ab]\)/u.test(row.text));
+    assert.equal(prompts.length, 2);
+    assert.equal(prompts[0].left, 44);
+    assert.ok(prompts[1].left > 290);
+    assert.equal(prompts[0].page, prompts[1].page);
+    assert.equal(prompts[0].y, prompts[1].y);
+    if (mode === 'worksheet') {
+      const dots = [...Buffer.from(bytes).toString('latin1').matchAll(/1 J \[0 3\] 0 d ([\d.]+) ([\d.]+) m ([\d.]+) ([\d.]+) l S Q/g)];
+      const left = dots.filter(d => Number(d[1]) === 44).map(d => d[2]);
+      const right = dots.filter(d => Number(d[1]) > 290).map(d => d[2]);
+      assert.equal(left.length, 9);
+      assert.deepEqual(right, left, 'both columns have identical dotted row baselines');
+    }
+    if (mode === 'worksheet') assert.ok(rows.every(row => !/Đáp án:|Cách làm:/u.test(row.text)));
+  }
+});
+
+
+test('reviewed task groups cover other lessons without changing questions or saved progress', () => {
+  const { legacyExampleLessons } = load('examples');
+  const { consolidateFractionLessons } = load('fraction-consolidation');
+  const { groupExampleExercises, upgradeExampleExerciseGroups } = load('example-exercise-groups');
+  const { sameExerciseContent, exerciseLabels } = load('exercise-groups');
+  const before = consolidateFractionLessons(legacyExampleLessons, legacyExampleLessons);
+  const after = groupExampleExercises(before);
+  assert.deepEqual(after, exampleLessons);
+  assert.deepEqual(groupExampleExercises(after), after);
+  for (const lesson of after) {
+    const source = before.find(l => l.id === lesson.id);
+    assert.ok(sameExerciseContent(JSON.stringify(source.exercises), lesson.exercises), lesson.id);
+    assert.deepEqual(lesson.exercises.map(e => e.id), source.exercises.map(e => e.id));
+    if (lesson.exercises.some(e => e.section === 'extra'))
+      assert.ok(lesson.exercises.some(e => e.task), lesson.id);
+  }
+  const source = after.find(l => l.id === 'math-measurement-units-3');
+  const old = { ...source, exercises: source.exercises.map(({ task, ...e }) => e) };
+  const updated = upgradeExampleExerciseGroups([old], after)[0];
+  assert.deepEqual(updated, source);
+  assert.deepEqual(upgradeExampleExerciseGroups([updated], after), [updated]);
+  const index = old.exercises.findIndex(e => e.section === 'extra');
+  for (const edit of [{ prompt: 'Custom question' }, { task: 'Custom group' }, { answer: '999' }]) {
+    const custom = { ...old, exercises: old.exercises.map((e, i) => i === index ? { ...e, ...edit } : e) };
+    assert.equal(upgradeExampleExerciseGroups([custom], after)[0].exercises[index], custom.exercises[index]);
+  }
+  const customLesson = { ...old, id: 'teacher-lesson' };
+  assert.equal(upgradeExampleExerciseGroups([customLesson], after)[0], customLesson);
+  const labels = exerciseLabels(source.exercises.filter(e => e.section === 'extra'));
+  assert.equal(labels[0].prompt, 'a) 1 cm = … mm.');
+  assert.equal(labels[8].prompt, 'a) 250 mm + 100 mm.');
+  const components = after.find(l => l.id === 'math-add-subtract-components-3');
+  assert.equal(exerciseLabels(components.exercises.filter(e => e.section === 'extra'))[0].prompt, 'a) □ + 18 = 45.');
+});
+
+test('all grouped lesson PDFs retain every part in order and stay within page bounds', () => {
+  const { exerciseLabels } = load('exercise-groups');
+  const { createPracticePdf } = load('pdf');
+  const font = fs.readFileSync(path.join(__dirname, '../public/fonts/DejaVuSans.ttf'));
+  for (const lesson of exampleLessons) {
+    const extra = lesson.exercises.filter(e => e.section === 'extra');
+    if (!extra.length) continue;
+    const labels = exerciseLabels(extra);
+    for (const mode of ['worksheet', 'solutions']) {
+      const bytes = createPracticePdf(lesson, mode, font);
+      const rows = pdfTextRows(bytes);
+      const actual = rows.filter(r => /^(?:Bài \d+\.|[a-z]+\))/u.test(r.text));
+      const expected = labels.flatMap(l => [
+        ...(l.title && l.first ? [`Bài ${l.number}.`] : []),
+        l.part ? `${l.part})` : `Bài ${l.number}.`,
+      ]);
+      assert.deepEqual(actual.map(r => r.text.match(/^(?:Bài \d+\.|[a-z]+\))/u)[0]), expected, `${lesson.id}: ${mode}`);
+      for (const row of rows) {
+        assert.ok(row.left >= 43.9 && row.right <= 551.4 && row.y > 0 && row.y < 842, `${lesson.id}: ${row.text}`);
+      }
+      if (mode === 'worksheet') assert.ok(!rows.some(r => /^(?:Đáp án:|Cách làm:|Bài giải:|Đáp số:)/u.test(r.text)), lesson.id);
+    }
+  }
+});
+
+test('find-x exponent questions cover the rules and have correct unique or complete answers', () => {
+  const { rationalExponentEquations: questions, addRationalExponentEquations: add } = load('rational-exponent-equations');
+  const { rationalExponentsLesson: lesson } = load('rational-exponents-lesson');
+  assert.equal(questions.length, 33);
+  const value = text => text.split('/').map(Number).reduce((a,b) => a/b);
+  const checks = [
+    x=>x===2**0, x=>x===(-3/5)**0, x=>x===-2/3, x=>2**x===1, x=>2**x===16, x=>2**x===2, x=>3**x===3**2,
+    x=>2**x*2**3===2**7, x=>3**2*3**x===3**5, x=>x>=2&&5**x/5**2===5**3,
+    x=>x<=6&&7**6/7**x===7**2, x=>(1/2)**x*(1/2)**2===(1/2)**5, x=>(-2)**x*(-2)**3===(-2)**7,
+    x=>(2**x)**3===2**12, x=>(3**2)**x===3**6, x=>((-.5)**2)**x===(-.5)**8,
+    x=>x>=1&&(5**x)**2/5**2===5**4,
+    x=>Math.abs((2/3)**x-8/27)<1e-12, x=>(-.5)**x===1/16, x=>.5**x===.125, x=>(-.5)**x===(-.5)**3,
+    x=>x+2**3===11, x=>x-(-2)**3===5, x=>.5**2*x===3/8, x=>x/(-2)**3===1/4,
+    x=>2**(x+1)===32, x=>4**x===2**6,
+    x=>Number.isInteger(x)&&x>=0&&(x+1)**2===2**2,
+    x=>Number.isInteger(x)&&x>=2&&(x-2)**3===3**3,
+    x=>Number.isInteger(x)&&x>=0&&(2*x)**2===4**2,
+    x=>Number.isInteger(2*x)&&2*x>=0&&2**(2*x)===2,
+    x=>Number.isInteger(x)&&x>=0&&3**(x+2)===3**5,
+    x=>Number.isInteger(3*x)&&3*x>=0&&.5**(3*x)===.5**2,
+  ];
+  checks.forEach((check,i)=> {
+    const q=questions[i]; const answer=value(q.answer);
+    assert.ok(check(answer), q.id);
+    assert.ok(checkAnswer(q, q.answer, '').correct, q.id);
+    const candidates=[...new Set([answer,...Array.from({length:41},(_,j)=>(j-20)/2)])];
+    assert.deepEqual(candidates.filter(check), [answer], q.id);
+  });
+  assert.ok(questions.every(q=>q.kind !== 'choice'));
+  assert.ok(lesson.exercises.length<=100);
+  assert.doesNotThrow(()=>parseMathPack(packLessons([lesson])));
+  const old={...lesson,exercises:lesson.exercises.filter(e=>!e.id.startsWith('re-find-x-'))};
+  const upgraded=add([old])[0];
+  assert.deepEqual(upgraded.exercises.slice(0,old.exercises.length),old.exercises);
+  assert.deepEqual(upgraded,lesson);
+  assert.deepEqual(add([upgraded]),[upgraded]);
+  const edited={...questions[0],prompt:'Custom prompt'};
+  const partial={...old,exercises:[...old.exercises,edited]};
+  assert.equal(add([partial])[0].exercises.find(e=>e.id===edited.id),edited);
+  const full={...old,exercises:Array.from({length:100},(_,i)=>({...old.exercises[0],id:`custom-${i}`}))};
+  assert.equal(add([full])[0],full);
+});
+
+test('find-x solutions use authored equation rows and safely upgrade saved examples', () => {
+  const { rationalExponentEquations: questions, updateExponentCoefficientNotation: upgrade } = load('rational-exponent-equations');
+  const { rationalExponentsLesson: lesson } = load('rational-exponents-lesson');
+  const q = questions.find(e => e.id === 're-find-x-1-3');
+  assert.equal(q.solution, 'x^1 = -2/3\nx^1 = (-2/3)^1\nx = -2/3');
+  for (const e of questions) {
+    assert.ok(e.solution.includes('\n'), e.id);
+    assert.equal(formatCalculationSteps(e.solution), e.solution);
+    assert.equal(e.solution.split('\n').at(-1), `x = ${e.answer}`, e.id);
+    assert.ok(e.solution.split('\n').every(line => line.includes('=') || line.startsWith('Vì ')), e.id);
+    const x = e.answer.split('/').map(Number).reduce((a, b) => a / b);
+    const evaluate = expression => Function('x', `return ${expression.replace(/(\d)x/g, '$1*x').replace(/,/g, '.').replace(/×/g, '*').replace(/:/g, '/').replace(/\^/g, '**').replace(/\[/g, '(').replace(/\]/g, ')')}`)(x);
+    for (const line of e.solution.split('\n').filter(line => !line.startsWith('Vì '))) {
+      const [left, right] = line.split('=');
+      assert.ok(Math.abs(evaluate(left) - evaluate(right)) < 1e-10, `${e.id}: ${line}`);
+    }
+  }
+  const old = { ...q, solution: 'x^1 = x nên x = -2/3.' };
+  assert.equal(upgrade([{ ...lesson, exercises: [old] }])[0].exercises[0].solution, q.solution);
+  for (const edit of [{ solution: 'Teacher explanation' }, { prompt: 'Teacher question' }, { answer: '2' }]) {
+    const custom = { ...old, ...edit };
+    assert.equal(upgrade([{ ...lesson, exercises: [custom] }])[0].exercises[0].solution, custom.solution);
+  }
+  assert.deepEqual(upgrade(upgrade([lesson])), upgrade([lesson]));
+});
+
+test('multiplication notation follows grade while preserving authored unknowns', () => {
+  const { formatMultiplicationNotation: format, variableParts } = load('format');
+  for (let grade = 1; grade <= 5; grade++) {
+    assert.equal(format('□ × 7 = 42', grade), '□ × 7 = 42');
+    assert.equal(format('Tìm x: 6 × x = 42', grade), 'Tìm x: 6 × x = 42');
+  }
+  for (const grade of [6, 7]) {
+    assert.equal(format('(1/2)^2 × x = 3/8', grade), '(1/2)^2 · x = 3/8');
+    assert.equal(format('x × 6 = 42', grade), 'x · 6 = 42');
+    assert.equal(format('6 × 7 = 42; □ × 7 = 42; xe xanh', grade), '6 × 7 = 42; □ × 7 = 42; xe xanh');
+  }
+  assert.deepEqual(variableParts('xe xanh; 2x; x^2'), ['xe xanh; 2', 'x', '; ', 'x', '^2']);
+  const { createPracticePdf } = load('pdf');
+  const { rationalExponentsLesson: lesson } = load('rational-exponents-lesson');
+  const font = fs.readFileSync(path.join(__dirname, '../public/fonts/DejaVuSans.ttf'));
+  const source = lesson.exercises.find(e => e.id === 're-find-x-5-3');
+  for (const grade of [3, 5, 6, 7]) {
+    const exercise = { ...source, id: 'notation-test', task: undefined, prompt: 'Tìm x: 6 × x = 42.', answer: '7', kind: 'number', solution: 'x = 42 : 6\nx = 7' };
+    const bytes = createPracticePdf({ ...lesson, grade, exercises: [exercise] }, 'solutions', font, { includeKnowledgeSummary: false });
+    const text = pdfTextRows(bytes).map(row => row.text).join(' ');
+    assert.ok(text.includes(grade < 6 ? '×' : '·'), `grade ${grade}`);
+    assert.match(Buffer.from(bytes).toString('latin1'), /q BT 3 Tr ET/);
+    assert.ok(Buffer.from(bytes).toString('latin1').includes(load('math-variable-glyph').mathXPdfPath));
+    assert.ok(Buffer.from(bytes).toString('latin1').includes(`${load('math-variable-glyph').mathXStrokeWidth} w 1 j`));
+    assert.equal(exercise.prompt, 'Tìm x: 6 × x = 42.');
   }
 });

@@ -321,6 +321,19 @@
   transform: scaleY(2.35);
   transform-origin: center;
 }
+.variable {
+  display: inline-block;
+  position: relative;
+  width: 0.592em;
+  height: 1em;
+  /* With no in-flow text, the box baseline is its bottom edge. The SVG's
+     baseline is at 720/877 of its height, leaving 157/877 below it. */
+  vertical-align: -0.17902em;
+}
+.variableText {
+  position: absolute;
+  opacity: 0;
+}
 .exponent {
   margin-left: 1px;
   font-size: 0.72em;

@@ -1,6 +1,18 @@
 // Parentheses add no meaning around an unsigned fraction used as an explicit
 // arithmetic operand. Keep them when they group a nested fraction, exponent,
 // function argument, implicit product, negative value, or invalid denominator.
+export function formatMultiplicationNotation(text: string, grade: number): string {
+  if (grade < 6) return text;
+  // Only explicit multiplication directly beside the unknown. Do not replace
+  // numeric arithmetic, prose, or reinterpret an authored unknown as a box.
+  return text
+    .replace(/×(?=\s*x(?![\p{L}\p{N}_]))/gu, '·')
+    .replace(/(?<![\p{L}_])x\s*×/gu, match => match.replace('×', '·'));
+}
+
+export const variableParts = (text: string) =>
+  text.split(/((?<![\p{L}_])x(?![\p{L}\p{N}_]))/gu);
+
 export function stripRedundantFractionParentheses(text: string): string {
   return text.replace(
     /\(\s*(\d+)\s*\/\s*(\d+)\s*\)/gu,
@@ -30,7 +42,7 @@ export function stripRedundantFractionParentheses(text: string): string {
           /[\p{L}\p{N}_([{]/u.test(immediateAfter))
       )
         return match;
-      const arithmeticOperator = /^[+\-−×*:÷=<>≤≥≠]$/u;
+      const arithmeticOperator = /^[+\-−×·*:÷=<>≤≥≠]$/u;
       if (!arithmeticOperator.test(previous) && !arithmeticOperator.test(next))
         return match;
       return `${numerator}/${denominator}`;
