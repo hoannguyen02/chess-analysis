@@ -5,6 +5,7 @@ import DebouncedInput from '@/components/DebounceInput';
 import { useAppContext } from '@/contexts/AppContext';
 import { useCustomBoard } from '@/hooks/useCustomBoard';
 import { LowercasePlayerName } from '@/types/player-name';
+import { createAnalysisEngine } from '@/utils/analysis-engine';
 import { getActivePlayerFromFEN } from '@/utils/get-player-name-from-fen';
 import { Chess, Square } from 'chess.js';
 import { Button, Dropdown, Tooltip } from 'flowbite-react';
@@ -33,7 +34,11 @@ export const AnalysisScreen = () => {
   const fullViewRef = useRef<HTMLDivElement>(null);
   const boardRef = useRef<HTMLDivElement>(null);
   const t = useTranslations();
-  const [engine, setEngine] = useState<Worker | null>(null);
+  const engineRef = useRef<ReturnType<typeof createAnalysisEngine> | null>(
+    null
+  );
+  const [engineError, setEngineError] = useState(false);
+  const [isSearching, setIsSearching] = useState(true);
   const queryFen = useMemo(
     () => (router.query.fen as string) || DEFAULT_FEN,
     [router]
@@ -124,82 +129,51 @@ export const AnalysisScreen = () => {
   }, [isBrowserFullscreen, isFullViewMode]);
 
   useEffect(() => {
+    let engine: ReturnType<typeof createAnalysisEngine> | null = null;
+    setEngineError(false);
     try {
-      console.log('Initializing Stockfish...');
-      // Use absolute URL for the worker
-      const workerUrl = new URL(
-        '/stockfish/stockfish-17-lite.js',
-        window.location.origin
+      const worker = new Worker('/stockfish/stockfish-17-lite.js');
+      engine = createAnalysisEngine(
+        worker,
+        (message, fen) => {
+          const evalMatch = message.match(/score cp (-?\d+)/);
+          if (evalMatch) {
+            const evaluation = Number(evalMatch[1]) / 100;
+            setPositionEvaluation(
+              fen.split(' ')[1] === 'w' ? evaluation : -evaluation
+            );
+            setPossibleMate('');
+          }
+          const mateMatch = message.match(/score mate (-?\d+)/);
+          if (mateMatch) setPossibleMate(mateMatch[1]);
+          const pvMatch = message.match(/ pv (.+)/);
+          if (pvMatch) setBestline(pvMatch[1]);
+          if (message.startsWith('bestmove ')) setIsSearching(false);
+        },
+        () => {
+          setEngineError(true);
+          setIsSearching(false);
+        }
       );
-      const stockfish = new Worker(workerUrl, {
-        /* type: 'classic' */
-      });
-
-      stockfish.onmessage = (event) => {
-        console.log('Stockfish message:', event.data);
-      };
-
-      stockfish.postMessage('uci'); // Send a test command
-      setEngine(stockfish);
-      console.log('Stockfish initialized:', stockfish);
+      engineRef.current = engine;
     } catch (error) {
       console.error('Failed to initialize Stockfish:', error);
+      setEngineError(true);
+      setIsSearching(false);
     }
-
     return () => {
-      if (engine) {
-        engine.terminate();
-        console.log('Stockfish worker terminated.');
-      }
+      engine?.dispose();
+      engineRef.current = null;
     };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  // Run findBestMove only when the engine is set and currentFen changes
   useEffect(() => {
-    if (engine && currentFen) {
-      console.log('Engine is ready. Finding best move...');
-      findBestMove();
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [engine, currentFen]);
-
-  function findBestMove(depthChange?: number) {
-    if (!engine) return;
-
-    engine.postMessage(`position fen ${currentFen}`);
-    engine.postMessage(`go depth ${depthChange || depth}`);
-
-    engine.onmessage = (event) => {
-      const message = event.data;
-      console.log('Stockfish response:', message);
-
-      // Extract depth
-      const depthMatch = message.match(/depth (\d+)/);
-      if (depthMatch) {
-        setDepth(Number(depthMatch[1]));
-      }
-
-      // Extract position evaluation (Score)
-      const evalMatch = message.match(/score cp (-?\d+)/);
-      if (evalMatch) {
-        const evaluation = Number(evalMatch[1]) / 100; // Convert centipawns to standard evaluation
-        setPositionEvaluation(game.turn() === 'w' ? evaluation : -evaluation); // Flip for black
-      }
-
-      // Handle mate in X moves
-      const mateMatch = message.match(/score mate (-?\d+)/);
-      if (mateMatch) {
-        setPossibleMate(mateMatch[1]); // Set mate in X moves
-      }
-
-      // Capture best line (PV)
-      const pvMatch = message.match(/ pv (.+)/);
-      if (pvMatch) {
-        setBestline(pvMatch[1]);
-      }
-    };
-  }
+    setBestline('');
+    setPossibleMate('');
+    setPositionEvaluation(0);
+    setIsSearching(true);
+    engineRef.current?.search(currentFen, depth);
+  }, [currentFen, depth]);
 
   function onDrop(sourceSquare: Square, targetSquare: Square, piece: any) {
     const move = game.move({
@@ -213,8 +187,6 @@ export const AnalysisScreen = () => {
 
     // illegal move
     if (move === null) return false;
-
-    engine?.postMessage('stop');
 
     setBestline('');
 
@@ -276,7 +248,6 @@ export const AnalysisScreen = () => {
 
   const onDepthChange = (value: number) => {
     setDepth(value);
-    findBestMove(value);
   };
 
   const handleUndo = () => {
@@ -441,7 +412,15 @@ export const AnalysisScreen = () => {
             <p className="mt-2 text-gray-700 dark:text-gray-300">
               {t('analysis.best-line')}{' '}
               <span className="font-mono text-blue-600 dark:text-blue-400">
-                {bestLine.slice(0, 40)}...
+                {engineError
+                  ? t('analysis.engine-error')
+                  : bestLine
+                    ? `${bestLine.slice(0, 40)}${bestLine.length > 40 ? '...' : ''}`
+                    : t(
+                        isSearching
+                          ? 'analysis.calculating'
+                          : 'analysis.no-line'
+                      )}
               </span>
             </p>
 

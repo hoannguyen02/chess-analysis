@@ -1,0 +1,4 @@
+# Netlify serves public assets directly, bypassing Next.js response headers.
+/stockfish/*
+  Cross-Origin-Embedder-Policy: require-corp
+  Cross-Origin-Resource-Policy: same-origin

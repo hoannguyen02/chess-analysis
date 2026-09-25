@@ -2,5 +2,8 @@
   "depth": "Độ sâu: ",
   "best-line": "Phương án tốt nhất:",
   "position-evaluation": "Đánh giá thế cờ:",
-  "undo": "Quay lại"
+  "undo": "Quay lại",
+  "engine-error": "Không thể khởi động phân tích. Vui lòng tải lại trang.",
+  "calculating": "Đang tính toán…",
+  "no-line": "Không có nước đi hợp lệ."
 }

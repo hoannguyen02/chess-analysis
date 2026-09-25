@@ -2,5 +2,8 @@
   "depth": "Depth: ",
   "best-line": "Best line:",
   "position-evaluation": "Position Evaluation:",
-  "undo": "Undo"
+  "undo": "Undo",
+  "engine-error": "Analysis could not start. Please reload the page.",
+  "calculating": "Calculating…",
+  "no-line": "No legal moves."
 }
