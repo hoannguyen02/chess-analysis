@@ -439,7 +439,7 @@ export default function MathLesson({
         />
       )}
       <div className={s.brand}>
-        <span className={s.brandName}>LIMA Math</span>
+        <span className={s.brandName}>LIMA</span>
         {teachingMode && (
           <span className={s.teachingTitle}>
             <strong>

@@ -7,7 +7,7 @@ export default function EnglishPracticePage() {
   return (
     <Layout>
       <Head>
-        <title>LIMA English · LIMA</title>
+        <title>English practice · LIMA</title>
         <meta
           name="description"
           content="Create your own English lessons and practice listening, speaking, writing, and reading."

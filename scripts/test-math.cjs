@@ -36,6 +36,15 @@ const { exampleLessons } = load('examples');
 const { isMathPracticeEnabled } = load('availability');
 const { encodeMathLesson, decodeMathLesson } = load('share');
 const clone = () => structuredClone(packLessons(exampleLessons));
+test('calculation continuations omit only a repeated question expression', () => {
+  const { calculationContinuation: continuation } = load('format');
+  assert.equal(continuation('Tính (-2)^2.', '(-2)^2 = (-2) × (-2) = 4.'), '= (-2) × (-2)\n= 4.');
+  assert.equal(continuation('Tính (1/2)^2.', '(1/2)^2\n= 1/2 × 1/2\n= 1/4.'), '= 1/2 × 1/2\n= 1/4.');
+  assert.equal(continuation('Tính 2^0.', '2^0 = 1.'), '= 1.');
+  assert.equal(continuation('Tính 2^3 : 2^2.', '2^(3 - 2) = 2.'), '2^(3 - 2) = 2.');
+  assert.equal(continuation('Tính (-2)^2.', '2^2 = 4.'), '2^2 = 4.');
+  assert.equal(continuation('Tính 2^3.', 'Vì 2^3 = 8.'), 'Vì 2^3 = 8.');
+});
 test('math practice is local-only unless production explicitly opts in', () => {
   const originalNodeEnv = process.env.NODE_ENV;
   const originalFlag = process.env.NEXT_PUBLIC_ENABLE_MATH_PRACTICE;
@@ -396,7 +405,7 @@ test('every worksheet and solution page has the approved light background waterm
                 .match(/.{4}/g)
                 .map((g) => unicode.get(g))
                 .join(''),
-              'LIMA Math'
+              'LIMA'
             );
           const current = marks.map((m) => [Number(m[1]), Number(m[2])]);
           if (positions)
@@ -519,7 +528,7 @@ test('PDF missing-value answers precede the preserved method and never leak into
   }
 });
 
-test('all lessons share answer-first PDF formatting for choices and short answers', () => {
+test('all lessons share answer-first formatting except calculation-only working', () => {
   const {
     createPracticePdf,
     printableShortSolution,
@@ -544,19 +553,21 @@ test('all lessons share answer-first PDF formatting for choices and short answer
           ? String.fromCharCode(65 + e.options.indexOf(e.answer))
           : `${e.answer}${e.unit ? ` ${e.unit}` : ''}`;
       const text = printableShortSolution(e);
-      assert.ok(text.startsWith(`Đáp án: ${answer}`));
-      if (e.solutionStyle !== 'answer-only' && text.includes('\n'))
+      if (load('format').isCalculationOnlySolution(text))
+        assert.equal(text, load('format').calculationContinuation(e.prompt, e.solution));
+      else assert.ok(text.startsWith(`Đáp án: ${answer}`));
+      if (e.solutionStyle !== 'answer-only' && text.includes('\n') && !load('format').isCalculationOnlySolution(text))
         assert.ok(text.endsWith(formatCalculationSteps(e.solution)));
     }
     const rows = pdfTextRows(createPracticePdf(lesson, 'solutions', font));
     assert.equal(
       rows.filter((r) => r.text.startsWith('Đáp án:')).length,
-      eligible.length,
+      eligible.filter(e => printableShortSolution(e).startsWith('Đáp án:')).length,
       lesson.id
     );
     assert.equal(
       rows.filter((r) => /^(Cách làm|Giải thích):/u.test(r.text)).length,
-      eligible.filter((e) => printableShortSolution(e).includes('\n')).length,
+      eligible.filter((e) => /\n(Cách làm|Giải thích):/u.test(printableShortSolution(e))).length,
       lesson.id
     );
     const worksheet = pdfTextRows(createPracticePdf(lesson, 'worksheet', font));
@@ -759,11 +770,26 @@ test('worksheets use solution-sized dotted writing rows, not saved fixed workspa
   assert.equal(lineCount('solutions'), 0);
   const base = lesson.exercises[1];
   const count = (solution, extra = {}) => (Buffer.from(createPracticePdf({ ...lesson, exercises: [{ ...base, ...extra, solution }] }, 'worksheet', font)).toString('latin1').match(/1 J \[0 3\] 0 d/g) || []).length;
-  assert.equal(count('2 + 3 = 5.'), 2);
+  assert.equal(count('2 + 3 = 5.'), 1);
   assert.ok(count('2 + 3 = 5.\n5 + 4 = 9.\n9 + 1 = 10.') > count('2 + 3 = 5.'));
   assert.ok(count('1/2 + 1/3 = 5/6.') > count('2 + 3 = 5.'));
   assert.ok(count('Giải thích dài. '.repeat(50)) > count('2 + 3 = 5.'));
   assert.equal(count('2 + 3 = 5.', { workspace: 'small' }), count('2 + 3 = 5.', { workspace: 'large' }));
+});
+
+test('basic powers reserve only continuation steps and share the longest row', () => {
+  const { rationalExponentsLesson: source } = load('rational-exponents-lesson');
+  const exercises = source.exercises.filter(e => /^re-review-[1-5]$/.test(e.id));
+  const font = fs.readFileSync(path.join(__dirname, '../public/fonts/DejaVuSans.ttf'));
+  const exportWorksheet = items => load('pdf').createPracticePdf({ ...source, exercises: items }, 'worksheet', font, { includeKnowledgeSummary: false });
+  const dots = bytes => [...Buffer.from(bytes).toString('latin1').matchAll(/1 J \[0 3\] 0 d ([\d.]+) ([\d.]+) m/g)];
+  assert.deepEqual(exercises.map(e => dots(exportWorksheet([e])).length), [1, 1, 2, 2, 2]);
+  const shared = dots(exportWorksheet(exercises.slice(0, 3)));
+  assert.equal(shared.length, 6);
+  const baselines = new Map();
+  for (const [, left, y] of shared) baselines.set(left, [...(baselines.get(left) || []), y]);
+  assert.equal(baselines.size, 3);
+  for (const rows of baselines.values()) assert.deepEqual(rows, [...baselines.values()][0]);
 });
 
 test('both PDF exports omit practice-group headings and reserved space without changing question order', () => {
@@ -808,11 +834,11 @@ test('PDF filenames identify the brand, grade, specific lesson and document type
   };
   assert.equal(
     practicePdfFilename(lesson, 'worksheet'),
-    'LIMAMath - Lớp 6 - Số nguyên - nhận biết, so sánh và tính toán - Bài tập.pdf'
+    'LIMA - Lớp 6 - Số nguyên - nhận biết, so sánh và tính toán - Bài tập.pdf'
   );
   assert.equal(
     practicePdfFilename(lesson, 'solutions'),
-    'LIMAMath - Lớp 6 - Số nguyên - nhận biết, so sánh và tính toán - Lời giải.pdf'
+    'LIMA - Lớp 6 - Số nguyên - nhận biết, so sánh và tính toán - Lời giải.pdf'
   );
   assert.notEqual(
     practicePdfFilename(lesson, 'worksheet'),
@@ -834,7 +860,7 @@ test('PDF filenames normalize Vietnamese and remain safe and bounded for custom 
     topic: 'Số học',
     title: '  .. Đếm: ước / bội \\ "nâng cao" <>?*|\u0000\u202E\n..  ',
   };
-  const expected = 'LIMAMath - Lớp 6 - Đếm - ước bội nâng cao - Bài tập.pdf';
+  const expected = 'LIMA - Lớp 6 - Đếm - ước bội nâng cao - Bài tập.pdf';
   assert.equal(practicePdfFilename(lesson, 'worksheet'), expected);
   assert.equal(
     practicePdfFilename(
@@ -845,11 +871,11 @@ test('PDF filenames normalize Vietnamese and remain safe and bounded for custom 
   );
   assert.equal(
     practicePdfFilename({ ...lesson, title: ' /:*? ' }, 'worksheet'),
-    'LIMAMath - Lớp 6 - Số học - Bài tập.pdf'
+    'LIMA - Lớp 6 - Số học - Bài tập.pdf'
   );
   assert.equal(
     practicePdfFilename({ ...lesson, title: '', topic: '' }, 'solutions'),
-    'LIMAMath - Lớp 6 - Bài học - Lời giải.pdf'
+    'LIMA - Lớp 6 - Bài học - Lời giải.pdf'
   );
   for (const mode of ['worksheet', 'solutions']) {
     const filename = practicePdfFilename(
@@ -857,7 +883,7 @@ test('PDF filenames normalize Vietnamese and remain safe and bounded for custom 
       mode
     );
     assert.ok(Buffer.byteLength(filename, 'utf8') <= 240);
-    assert.match(filename, /^LIMAMath - Lớp 12 - /u);
+    assert.match(filename, /^LIMA - Lớp 12 - /u);
     assert.ok(
       filename.endsWith(
         `… - ${mode === 'worksheet' ? 'Bài tập' : 'Lời giải'}.pdf`
@@ -1680,9 +1706,7 @@ test('mixed solution PDFs keep the next calculation question with its working', 
   const { exerciseLabels } = load('exercise-groups');
   const expected = exerciseLabels(lesson.exercises.filter(e => e.section === 'extra'))[18].prompt;
   const promptIndex = rows.findIndex((row) => row.text.startsWith(expected.slice(0, 12)));
-  const solution = rows
-    .slice(promptIndex + 1)
-    .find((row) => row.text.startsWith('Cách làm:'));
+  const solution = rows[promptIndex + 1];
   assert.ok(promptIndex >= 0 && solution);
   assert.equal(rows[promptIndex].page, solution.page);
 });
@@ -1714,7 +1738,7 @@ test('PDF omits redundant fraction parentheses but keeps negative operands group
     // lightweight extractor intentionally does not include in its text rows.
     assert.equal((negative.text.match(/[()]/gu) || []).length, 0, mode);
     if (mode === 'solutions') {
-      const solution = rows.find((row) => row.text.startsWith('Cách làm:'));
+      const solution = rows[rows.indexOf(positive) + 1];
       assert.ok(solution, mode);
       assert.doesNotMatch(solution.text, /[()]/u, mode);
     }
@@ -4139,7 +4163,7 @@ test('tall exponent workings share two columns and the taller writing area', () 
       const dots = [...Buffer.from(bytes).toString('latin1').matchAll(/1 J \[0 3\] 0 d ([\d.]+) ([\d.]+) m ([\d.]+) ([\d.]+) l S Q/g)];
       const left = dots.filter(d => Number(d[1]) === 44).map(d => d[2]);
       const right = dots.filter(d => Number(d[1]) > 290).map(d => d[2]);
-      assert.equal(left.length, 9);
+      assert.equal(left.length, 6);
       assert.deepEqual(right, left, 'both columns have identical dotted row baselines');
     }
     if (mode === 'worksheet') assert.ok(rows.every(row => !/Đáp án:|Cách làm:/u.test(row.text)));

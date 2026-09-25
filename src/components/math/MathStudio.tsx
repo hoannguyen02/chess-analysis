@@ -534,7 +534,7 @@ export default function MathStudio() {
         <>
           <div className={s.toolbar}>
             <div>
-              <p className={s.eyebrow}>LIMA Math</p>
+              <p className={s.eyebrow}>LIMA</p>
               <h1>Thư viện bài học</h1>
               <p className={s.muted}>
                 Soạn bài, hướng dẫn từng bước và chia sẻ cho học sinh.

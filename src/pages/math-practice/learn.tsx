@@ -5,7 +5,7 @@ export default function SharedMathPage() {
   return (
     <>
       <Head>
-        <title>Bài học được chia sẻ · LIMA Math</title>
+        <title>Bài học được chia sẻ · LIMA</title>
         <meta name="robots" content="noindex, nofollow" />
         <meta name="referrer" content="no-referrer" />
       </Head>
