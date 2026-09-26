@@ -180,9 +180,9 @@ function SharedLessonContent() {
               <Link
                 href="/english-practice"
                 className={s.brandHome}
-                aria-label={t('Open LIMA English home')}
+                aria-label={t('Open LIMA home')}
               >
-                LIMA English
+                LIMA
               </Link>
               <p className={s.eyebrow}>Learn a little, every day</p>
             </div>

@@ -6,6 +6,8 @@ import {
   cancellationParts,
   cancellationText,
   formatCalculationSteps,
+  calculationContinuation,
+  isCalculationOnlySolution,
   formatMultiplicationNotation,
   variableParts,
   stripRedundantFractionParentheses,
@@ -286,6 +288,9 @@ export type PracticePdfOptions = { includeKnowledgeSummary?: boolean };
 export function printableShortSolution(exercise: MathExercise): string {
   if (exercise.table || exercise.kind === 'written')
     return `${exercise.kind === 'written' ? 'Lời giải mẫu' : 'Lời giải'}: ${exercise.solution}`;
+  if ((exercise.kind === 'number' || exercise.kind === 'fraction') &&
+      !exercise.unit && !exercise.solutionStyle && isCalculationOnlySolution(exercise.solution))
+    return calculationContinuation(exercise.prompt, exercise.solution);
   const optionIndex = exercise.options.indexOf(exercise.answer);
   const normalized = (text: string) =>
     text
@@ -531,7 +536,7 @@ export function createPracticePdf(
     // A single, faint mark preserves attribution without competing with print text.
     // Paint behind all content without advancing y or changing pagination.
     // Mark as a decorative artifact; this is branding, not edit protection.
-    const watermark = 'LIMA Math';
+    const watermark = 'LIMA';
     const watermarkSize = 30;
     const halfWidth = measure(watermark, watermarkSize) / 2;
     const glyphs = Array.from(watermark, (c) =>
@@ -554,7 +559,7 @@ export function createPracticePdf(
       `q ${scale} 0 0 ${-scale} ${M} ${H - top + 40 * scale} cm ${LIMA_LOGO_PDF} Q`
     );
     draw(
-      'LIMA Math',
+      'LIMA',
       M + size + 10,
       first ? 36 : 30,
       first ? 21 : 14,
@@ -1129,12 +1134,12 @@ export function createPracticePdf(
     const workbookRows = printableWordProblemRows(e);
     const working = e.solutionStyle === 'answer-only' ? e.answer : workbookRows
       ? workbookRows.filter(row => row.role !== 'heading').map(row => row.text).join('\n')
-      : formatCalculationSteps(e.solution);
+      : calculationContinuation(e.prompt, e.solution);
     const measurable = Array.from(working.normalize('NFC'), char =>
       /\s/u.test(char) || font.glyph(char.codePointAt(0)!) ? char : '?'
     ).join('');
     const height = layout(measurable, 11, width).reduce((sum, row) => sum + row.height, 0);
-    return Math.max(2, Math.ceil(height / 18) + 1, e.solutionNumberLine ? 5 : 0) * 18;
+    return Math.max(1, Math.ceil(height / 18), e.solutionNumberLine ? 5 : 0) * 18;
   }
   function dottedRows(left: number, width: number, height: number) {
     for (let space = 0; space < height; space += 18) {
@@ -1158,7 +1163,9 @@ export function createPracticePdf(
     const methodIndex = solution.indexOf('\nCách làm: ');
     const methodLine = methodIndex < 0 ? -1 : solution.slice(0, methodIndex).split('\n').length;
     const solutionRows = solution ? solution.split('\n').flatMap((text, index) => {
-      const inset = methodLine >= 0 && index > methodLine
+      const inset = methodLine < 0 && isCalculationOnlySolution(solution)
+        ? (/^=\s/u.test(text) ? 0 : measure('= ', 11))
+        : methodLine >= 0 && index > methodLine
         ? measure('Cách làm: ', 11) - (/^=\s/u.test(text) ? measure('= ', 11) : 0) : 0;
       return layout(text, 11, width - inset).map(row => ({ ...row, inset }));
     }) : [];
@@ -1228,6 +1235,8 @@ export function createPracticePdf(
     const plainSolution =
       !wordRows && mode === 'solutions' ? printableShortSolution(e) : null;
     const plainSolutionRows = (() => {
+      if (plainSolution && isCalculationOnlySolution(plainSolution))
+        return plainSolution.split('\n').map(text => ({ text, left: M + (/^=\s/u.test(text) ? 0 : measure('= ', 11)) }));
       if (!plainSolution || !plainSolution.includes('\nCách làm: '))
         return null;
       const [heading, method] = plainSolution.split('\nCách làm: ', 2);
@@ -1440,7 +1449,7 @@ export function practicePdfFilename(
       .replace(/\s+/gu, ' ')
       .replace(/^[.\s-]+|[.\s-]+$/gu, '');
   let title = clean(lesson.title) || clean(lesson.topic) || 'Bài học';
-  const prefix = `LIMAMath - Lớp ${lesson.grade} - `;
+  const prefix = `LIMA - Lớp ${lesson.grade} - `;
   const suffix = ` - ${mode === 'worksheet' ? 'Bài tập' : 'Lời giải'}.pdf`;
   // Bound the complete UTF-8 filename, retaining the grade, type and extension.
   const available = 240 - enc.encode(prefix + suffix).length;

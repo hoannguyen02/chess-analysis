@@ -534,7 +534,7 @@ export default function MathStudio() {
         <>
           <div className={s.toolbar}>
             <div>
-              <p className={s.eyebrow}>LIMA Math</p>
+              <p className={s.eyebrow}>LIMA</p>
               <h1>Thư viện bài học</h1>
               <p className={s.muted}>
                 Soạn bài, hướng dẫn từng bước và chia sẻ cho học sinh.
@@ -673,91 +673,104 @@ export default function MathStudio() {
               </div>
             </section>
           )}
-          <div className={s.filters}>
-            <label>
-              Tìm bài học
-              <input
-                type="search"
-                value={query}
-                onChange={(e) => setQuery(e.target.value)}
-                placeholder="Tên bài, chủ đề hoặc mục tiêu…"
-              />
-            </label>
-            <label>
-              Học kỳ
-              <select
-                value={semester}
-                onChange={(e) => {
-                  setSemester(e.target.value);
-                  setTopic('');
-                }}
-              >
-                <option value="">Tất cả học kỳ</option>
-                <option value="1">Học kỳ 1</option>
-                <option value="2">Học kỳ 2</option>
-                <option value="unassigned">Chưa phân loại</option>
-              </select>
-            </label>
-            <label>
-              Chủ đề
-              <select value={topic} onChange={(e) => setTopic(e.target.value)}>
-                <option value="">Tất cả chủ đề</option>
-                {Array.from(
-                  new Set(
-                    lessons.filter(matchesSelectedPlacement).map((l) => l.topic)
-                  )
-                ).map((t) => (
-                  <option key={t}>{t}</option>
-                ))}
-              </select>
-            </label>
-          </div>
-          <fieldset
-            className={s.gradeFilter}
-            aria-describedby="grade-filter-hint"
-          >
-            <legend>Lớp</legend>
-            <div className={s.gradeOptions}>
-              {Array.from({ length: 12 }, (_, i) => {
-                const value = String(i + 1);
-                const selected = grades.includes(value);
-                return (
-                  <label
-                    key={value}
-                    className={`${s.gradeOption} ${selected ? s.gradeSelected : ''}`}
-                  >
-                    <input
-                      type="checkbox"
-                      checked={selected}
-                      onChange={(event) => {
-                        const checked = event.target.checked;
-                        setGrades((current) =>
-                          checked
-                            ? [...current, value]
-                            : current.filter((grade) => grade !== value)
-                        );
-                        setTopic('');
-                      }}
-                    />
-                    {value}
-                  </label>
-                );
-              })}
-            </div>
-            <div className={s.gradeHelp}>
-              {grades.length > 0 && (
-                <button
-                  onClick={() => {
-                    setGrades([]);
+          <section className={s.filterPanel} aria-label="Lọc bài học">
+            <div className={s.filters}>
+              <label>
+                Tìm bài học
+                <input
+                  type="search"
+                  value={query}
+                  onChange={(e) => setQuery(e.target.value)}
+                  placeholder="Tên bài, chủ đề hoặc mục tiêu…"
+                />
+              </label>
+              <label>
+                Học kỳ
+                <select
+                  value={semester}
+                  onChange={(e) => {
+                    setSemester(e.target.value);
                     setTopic('');
                   }}
                 >
-                  Bỏ chọn lớp
-                </button>
-              )}
+                  <option value="">Tất cả học kỳ</option>
+                  <option value="1">Học kỳ 1</option>
+                  <option value="2">Học kỳ 2</option>
+                  <option value="unassigned">Chưa phân loại</option>
+                </select>
+              </label>
+              <label>
+                Chủ đề
+                <select
+                  value={topic}
+                  onChange={(e) => setTopic(e.target.value)}
+                >
+                  <option value="">Tất cả chủ đề</option>
+                  {Array.from(
+                    new Set(
+                      lessons
+                        .filter(matchesSelectedPlacement)
+                        .map((l) => l.topic)
+                    )
+                  ).map((t) => (
+                    <option key={t}>{t}</option>
+                  ))}
+                </select>
+              </label>
             </div>
-          </fieldset>
-          <p className={s.muted} role="status">
+            <fieldset
+              className={s.gradeFilter}
+              aria-describedby="grade-filter-hint"
+            >
+              <legend>
+                Lớp{' '}
+                <span className={s.gradeHint} id="grade-filter-hint">
+                  Có thể chọn nhiều lớp
+                </span>
+              </legend>
+              <div className={s.gradeRow}>
+                <div className={s.gradeOptions}>
+                  {Array.from({ length: 12 }, (_, i) => {
+                    const value = String(i + 1);
+                    const selected = grades.includes(value);
+                    return (
+                      <label
+                        key={value}
+                        className={`${s.gradeOption} ${selected ? s.gradeSelected : ''}`}
+                      >
+                        <input
+                          type="checkbox"
+                          checked={selected}
+                          onChange={(event) => {
+                            const checked = event.target.checked;
+                            setGrades((current) =>
+                              checked
+                                ? [...current, value]
+                                : current.filter((grade) => grade !== value)
+                            );
+                            setTopic('');
+                          }}
+                        />
+                        {value}
+                      </label>
+                    );
+                  })}
+                </div>
+                {grades.length > 0 && (
+                  <button
+                    className={s.clearGrades}
+                    onClick={() => {
+                      setGrades([]);
+                      setTopic('');
+                    }}
+                  >
+                    Bỏ chọn lớp
+                  </button>
+                )}
+              </div>
+            </fieldset>
+          </section>
+          <p className={s.resultCount} role="status">
             {filtered.length} bài học
           </p>
           <div className={s.cards}>

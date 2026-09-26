@@ -86,6 +86,25 @@ export const cancellationText = (value: string) =>
     .map((part) => part.text)
     .join('');
 
+// Recognize numeric working only; prose, variables and units keep their labels.
+export function isCalculationOnlySolution(value: string): boolean {
+  return value.includes('=') && /\d/u.test(value) &&
+    /^[\d\s+\-−×·÷*/:().,[\]~□=^₀-₉⁰¹²³⁴⁵⁶⁷⁸⁹]+$/u.test(value);
+}
+
+// Only omit a literal repeat of the displayed question. Never drop a first
+// transformation or infer mathematical equivalence between different expressions.
+export function calculationContinuation(prompt: string, solution: string): string {
+  const steps = formatCalculationSteps(solution);
+  if (!isCalculationOnlySolution(solution)) return steps;
+  const equals = steps.indexOf('=');
+  const expression = prompt.trim().replace(/^Tính(?: giá trị(?: của)? biểu thức)?\s*:?\s*/u, '');
+  const normalize = (text: string) => stripRedundantFractionParentheses(text.normalize('NFC'))
+    .trim().replace(/[.。]$/u, '').replace(/−/gu, '-').replace(/\s/gu, '');
+  return equals > 0 && normalize(expression) === normalize(steps.slice(0, equals))
+    ? steps.slice(equals).trim() : steps;
+}
+
 // Keep authored prose and word-problem solutions intact. Pure calculation
 // chains become one equality step per line in the learner view and PDF.
 export function formatCalculationSteps(value: string): string {
