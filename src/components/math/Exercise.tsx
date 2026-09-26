@@ -1,7 +1,7 @@
 import { formatCalculationSteps } from '@/lib/math/format';
 import { checkAnswer, MathExercise } from '@/lib/math/lessons';
 import { wordProblemRows } from '@/lib/math/word-problem-format';
-import { useEffect, useRef, useState } from 'react';
+import { useRef, useState } from 'react';
 import s from './MathLesson.module.css';
 import { MathText } from './MathText';
 import SegmentDiagram from './SegmentDiagram';
@@ -53,28 +53,14 @@ export default function Exercise({
   const [incorrect, setIncorrect] = useState(false);
   const [showSolution, setShowSolution] = useState(false);
   const solved = !!result?.solved;
-  const timer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const composing = useRef(false);
-  function cancelCheck() {
-    if (timer.current !== null) clearTimeout(timer.current);
-    timer.current = null;
-  }
-  useEffect(
-    () => () => {
-      if (timer.current !== null) clearTimeout(timer.current);
-    },
-    []
-  );
   const rawAnswer =
     exercise.kind === 'fraction'
       ? `${answer.split('/')[0]}/${denominator}`
       : answer;
   function saveDraft(value: string, nextUnit = unit) {
-    cancelCheck();
     setIncorrect(false);
     setMessage('');
-    if (!composing.current)
-      timer.current = setTimeout(() => check(value, nextUnit), 800);
     onChange({
       answer: value,
       unit: nextUnit,
@@ -84,7 +70,6 @@ export default function Exercise({
     });
   }
   function check(value = rawAnswer, nextUnit = unit) {
-    cancelCheck();
     if (
       composing.current ||
       solved ||
@@ -109,7 +94,6 @@ export default function Exercise({
     });
   }
   function help(solution: boolean) {
-    cancelCheck();
     onChange({
       answer: rawAnswer,
       unit,
@@ -179,7 +163,6 @@ export default function Exercise({
           }}
           onCompositionStart={() => {
             composing.current = true;
-            cancelCheck();
           }}
           onCompositionEnd={() => {
             composing.current = false;
@@ -259,14 +242,29 @@ export default function Exercise({
       )}
       {exercise.kind !== 'choice' && (
         <p className={s.footer}>
-          Kết quả tự hiện sau khi em ngừng nhập 0,8 giây. Điền đủ tử số, mẫu số
-          và đơn vị nếu có; nhấn Enter để kiểm tra ngay.
+          Điền đủ đáp án rồi nhấn “Kiểm tra” hoặc Enter. Em có thể sửa trước khi
+          gửi.
         </p>
       )}
       {exercise.kind === 'fraction' && exercise.simplified && (
         <p>Viết kết quả dưới dạng tối giản.</p>
       )}
       <div className={s.actions}>
+        {exercise.kind !== 'choice' && (
+          <button
+            type="submit"
+            className={s.primary}
+            disabled={
+              solved ||
+              !rawAnswer.trim() ||
+              (exercise.kind === 'fraction' &&
+                rawAnswer.split('/').some((part) => !part.trim())) ||
+              Boolean(exercise.unit && !unit.trim())
+            }
+          >
+            Kiểm tra
+          </button>
+        )}
         <button type="button" disabled={solved} onClick={() => help(false)}>
           Gợi ý
         </button>

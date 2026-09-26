@@ -1,3 +1,4 @@
+import { interactiveLabFor, LAB_LABELS, InteractiveLabKind } from '@/lib/math/interactive-lab';
 import {
   EXTRA_GROUPS,
   MathBlock,
@@ -153,6 +154,13 @@ export default function LessonEditor({
               </small>
             </label>
           </div>
+          <label>
+            Hoạt động khám phá tương tác
+            <select value={interactiveLabFor(draft)} onChange={(event) => update({ interactiveLab: event.target.value as InteractiveLabKind })}>
+              {Object.entries(LAB_LABELS).map(([value, label]) => <option key={value} value={value}>{label}</option>)}
+            </select>
+            <small>Xuất hiện trong Khám phá. Các lượt thử không tính vào kết quả tự kiểm tra.</small>
+          </label>
           <label>
             Kiến thức cần nhớ (đầu phiếu bài tập PDF)
             <textarea

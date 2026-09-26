@@ -2042,7 +2042,7 @@ test('quick edit validates drafts and keeps them open after failed storage', () 
       : Array.isArray(node)
         ? node.flatMap((child) => all(child, type))
         : [
-            ...(node.type === type ? [node] : []),
+            ...(!type || node.type === type ? [node] : []),
             ...all(node.props?.children, type),
           ];
   const render = () => {
@@ -3670,7 +3670,7 @@ function loadMathComponent(file, hooks) {
       if (name === 'react') return hooks;
       if (name === 'react/jsx-runtime')
         return { jsx, jsxs: jsx, Fragment: 'Fragment' };
-      if (name === '@/lib/math/lessons') return load('lessons');
+      if (name.startsWith('@/lib/math/')) return load(name.slice('@/lib/math/'.length));
       if (name === '@/lib/math/placement') return load('placement');
       if (name === 'next/dynamic') return { default: () => 'TeachingTimer' };
       if (name === './MathLesson.module.css') return { default: styles };
@@ -3690,7 +3690,7 @@ function mathComponentNodes(node, type) {
     return node.flatMap((child) => mathComponentNodes(child, type));
   if (typeof node !== 'object') return [];
   return [
-    ...(node.type === type ? [node] : []),
+    ...(!type || node.type === type ? [node] : []),
     ...mathComponentNodes(node.props?.children, type),
   ];
 }
@@ -4033,7 +4033,7 @@ test('unfinished core answers emit immediately and survive teaching navigation a
         attempted: true,
       },
     ]);
-    assert.equal(timers.length, 1);
+    assert.equal(timers.length, 0, 'typing a draft must not schedule grading');
   } finally {
     exerciseRuntime.unmount();
     globalThis.setTimeout = originalSetTimeout;
@@ -4325,5 +4325,277 @@ test('multiplication notation follows grade while preserving authored unknowns',
     assert.ok(Buffer.from(bytes).toString('latin1').includes(load('math-variable-glyph').mathXPdfPath));
     assert.ok(Buffer.from(bytes).toString('latin1').includes(`${load('math-variable-glyph').mathXStrokeWidth} w 1 j`));
     assert.equal(exercise.prompt, 'Tìm x: 6 × x = 42.');
+  }
+});
+
+test('interactive labs preserve legacy lessons and survive cloning, import and sharing', async () => {
+  const { interactiveLabFor } = load('interactive-lab');
+  const { duplicateLesson } = load('lessons');
+  for (const [id, kind] of [['math-unit-fractions-3', 'sharing'], ['math-number-line-7', 'number-line'], ['math-rational-exponents-7', 'powers']]) {
+    const lesson = exampleLessons.find(l => l.id === id);
+    const before = JSON.stringify(lesson);
+    assert.equal(interactiveLabFor(lesson), kind);
+    assert.equal(JSON.stringify(lesson), before, 'opening the lab must not change the progress fingerprint');
+    const copied = duplicateLesson(lesson);
+    assert.notEqual(copied.id, id);
+    assert.equal(interactiveLabFor(copied), kind);
+    const parsed = parseMathPack(packLessons([copied])).lessons[0];
+    assert.equal(parsed.interactiveLab, kind);
+    const shared = await decodeMathLesson(await encodeMathLesson(parsed));
+    assert.equal(shared.interactiveLab, kind);
+    assert.equal(shared.teacherNotes, '');
+    assert.equal(interactiveLabFor({ ...lesson, interactiveLab: 'none' }), 'none');
+    assert.equal(interactiveLabFor({ ...lesson, grade: 12 }), 'none');
+  }
+  const invalid = { ...exampleLessons[0], interactiveLab: 'unknown' };
+  assert.throws(() => parseMathPack(packLessons([invalid])), /Hoạt động tương tác/);
+});
+
+test('interactive checkpoints assess mathematical relationships across fresh rounds', () => {
+  const { SHARING_ROUNDS, LINE_ROUNDS, checkSharing, checkPlacement, fractionLabel } = load('interactive-lab');
+  for (const { total, groups } of SHARING_ROUNDS) {
+    assert.equal(checkSharing(Array(groups).fill(total / groups), total).correct, true);
+    assert.equal(checkSharing(Array(groups).fill(0), total).correct, false);
+    assert.equal(checkSharing([total, ...Array(groups - 1).fill(0)], total).correct, false);
+  }
+  for (const { numerator, denominator } of LINE_ROUNDS) {
+    assert.equal(checkPlacement(numerator, numerator, denominator).correct, true);
+    assert.equal(checkPlacement(-numerator, numerator, denominator).correct, false);
+    assert.match(checkPlacement(-numerator, numerator, denominator).message, /Khoảng cách/);
+    assert.equal(checkPlacement(numerator + 1, numerator, denominator).correct, false);
+  }
+  assert.equal(fractionLabel(-2, 4), '-1/2');
+  assert.equal(fractionLabel(-8, 4), '-2');
+  assert.equal(fractionLabel(0, 3), '0');
+});
+
+test('number placement waits for a pause, replaces pending checks, and cancels on leaving', () => {
+  const shell = createMathComponentHooks();
+  const runtime = createMathComponentHooks();
+  let activeRuntime = shell;
+  const hooks = Object.fromEntries(Object.keys(shell.hooks).map(name => [name, (...args) => activeRuntime.hooks[name](...args)]));
+  hooks.useId = () => 'placement-test';
+  const Lab = loadMathComponent('InteractiveLab.tsx', hooks);
+  const outer = shell.render(() => Lab({ kind: 'number-line' }));
+  const Placement = mathComponentNodes(outer).find(n => typeof n.type === 'function' && n.type.name === 'NumberPlacement').type;
+  activeRuntime = runtime;
+  const originalSet = globalThis.setTimeout;
+  const originalClear = globalThis.clearTimeout;
+  const pending = new Map();
+  let id = 0;
+  let completed = 0;
+  globalThis.setTimeout = (callback, delay) => {
+    assert.equal(delay, 650);
+    pending.set(++id, callback);
+    return id;
+  };
+  globalThis.clearTimeout = timer => pending.delete(timer);
+  const render = () => runtime.render(() => Placement({ round: 0, onComplete: () => completed++ }));
+  const feedback = tree => mathComponentNodes(tree).find(n => typeof n.type === 'function' && n.type.name === 'FeedbackMessage').props.value;
+  try {
+    let tree = render();
+    assert.equal(pending.size, 0);
+    assert.equal(feedback(tree), null);
+    assert.ok(!mathComponentText(tree).includes('Kiểm tra vị trí'));
+    assert.equal(mathComponentText(mathComponentNodes(tree, 'label')[0]), 'Di chuyển điểm A');
+    mathComponentNodes(tree, 'input')[0].props.onChange({ target: { value: '-2' } });
+    tree = render();
+    assert.equal(feedback(tree), null);
+    mathComponentNodes(tree, 'button').find(n => n.props['aria-label'].startsWith('Sang trái')).props.onClick();
+    tree = render();
+    assert.equal(pending.size, 1);
+    const callback = [...pending.values()][0];
+    pending.clear();
+    callback();
+    tree = render();
+    assert.equal(feedback(tree).correct, true);
+    assert.match(feedback(tree).message, /Em đặt A tại -3\/4/);
+    assert.equal(feedback(tree).title, 'Đúng rồi!');
+    assert.equal(completed, 1);
+    mathComponentNodes(tree, 'input')[0].props.onChange({ target: { value: '0' } });
+    tree = render();
+    assert.equal(feedback(tree), null);
+    assert.equal(pending.size, 1);
+    const incorrectCheck = [...pending.values()][0];
+    pending.clear();
+    incorrectCheck();
+    tree = render();
+    assert.equal(feedback(tree).correct, false);
+    assert.equal(feedback(tree).title, 'Chưa đúng — thử lại nhé.');
+    mathComponentNodes(tree, 'input')[0].props.onChange({ target: { value: '1' } });
+    render();
+    runtime.unmount();
+    assert.equal(pending.size, 0);
+  } finally {
+    runtime.unmount();
+    shell.unmount();
+    globalThis.setTimeout = originalSet;
+    globalThis.clearTimeout = originalClear;
+  }
+});
+
+test('powers warmup waits for an attempt before explaining and supports correction', () => {
+  const runtime = createMathComponentHooks();
+  const Warmup = loadMathComponent('FoundationWarmup.tsx', runtime.hooks);
+  const render = () => runtime.render(() => Warmup({ kind: 'powers' }));
+  try {
+    let tree = render();
+    const status = () => mathComponentNodes(tree).find(n => n.props?.role === 'status');
+    assert.equal(mathComponentText(status()), '');
+    for (const choice of ['3^2', '2 × 3', '2^3']) {
+      mathComponentNodes(tree, 'button').find(n => mathComponentText(n) === choice).props.onClick();
+      tree = render();
+      assert.match(mathComponentText(status()), choice === '2^3' ? /Đúng rồi!/ : /Chưa đúng/);
+      assert.equal(mathComponentNodes(tree, 'button').filter(n => n.props['aria-pressed']).length, 1);
+    }
+    assert.match(mathComponentText(status()), /Cơ số 2/);
+  } finally { runtime.unmount(); }
+});
+
+test('typed answers remain drafts until explicit submission and composition does not submit', () => {
+  const runtime = createMathComponentHooks();
+  const Exercise = loadMathComponent('Exercise.tsx', runtime.hooks);
+  const exercise = { ...teachingModeFixture().exercises[0], unit: '', answer: '12' };
+  let result;
+  const render = () => runtime.render(() => Exercise({ exercise, result, onChange: r => { result = r; } }));
+  try {
+    let tree = render();
+    mathComponentNodes(tree, 'input')[0].props.onChange({ target: { value: '1' } });
+    tree = render();
+    assert.equal(result.solved, false);
+    assert.equal(result.attempted, undefined);
+    assert.equal(result.assisted, false);
+    mathComponentNodes(tree, 'input')[0].props.onChange({ target: { value: '12' } });
+    tree = render();
+    assert.equal(result.solved, false);
+    const inputs = mathComponentNodes(tree, 'div').find(n => n.props.onCompositionStart);
+    inputs.props.onCompositionStart();
+    tree.props.onSubmit({ preventDefault() {} });
+    assert.equal(result.solved, false);
+    inputs.props.onCompositionEnd();
+    tree = render();
+    tree.props.onSubmit({ preventDefault() {} });
+    assert.equal(result.solved, true);
+    assert.equal(result.assisted, false);
+    assert.equal(result.attempted, true);
+  } finally { runtime.unmount(); }
+});
+
+test('teaching mode sequences a lab before explanations without rewriting saved lesson content', () => {
+  const lesson = { ...teachingModeFixture(), interactiveLab: 'number-line' };
+  const harness = createTeachingModeHarness({ lesson });
+  try {
+    harness.click('Giảng bài');
+    harness.click('Khám phá');
+    let tree = harness.render();
+    const lab = mathComponentNodes(tree, 'InteractiveLab')[0];
+    assert.equal(lab.props.kind, 'number-line');
+    assert.match(mathComponentText(tree), /Khám phá tương tác/);
+    harness.click('Tiếp →');
+    tree = harness.render();
+    assert.match(mathComponentText(tree), /Nội dung 1\//);
+    assert.equal(mathComponentNodes(tree, 'div').find(n => n.props.children?.type === 'InteractiveLab').props.hidden, true);
+    harness.click('← Trước');
+    tree = harness.render();
+    assert.equal(mathComponentNodes(tree, 'div').find(n => n.props.children?.type === 'InteractiveLab').props.hidden, false);
+  } finally { harness.restore(); }
+});
+
+test('remaining Grade 3 and Grade 7 lessons resolve interactive activities without changing saved content', async () => {
+  const { interactiveLabFor } = load('interactive-lab');
+  const { duplicateLesson } = load('lessons');
+  const presets = {
+    'math-add-subtract-components-3': 'missing-parts',
+    'math-multiply-divide-components-3': 'equal-groups',
+    'math-measurement-units-3': 'measurement',
+    'math-midpoint-3': 'midpoint',
+    'math-rational-7': 'rational',
+  };
+  for (const [id, kind] of Object.entries(presets)) {
+    const source = exampleLessons.find(l => l.id === id);
+    const before = JSON.stringify(source);
+    assert.equal(interactiveLabFor(source), kind);
+    assert.equal(JSON.stringify(source), before);
+    assert.equal(interactiveLabFor({ ...source, interactiveLab: 'none' }), 'none');
+    const clone = duplicateLesson(source);
+    assert.equal(clone.interactiveLab, kind);
+    const shared = await decodeMathLesson(await encodeMathLesson(clone));
+    assert.equal(shared.interactiveLab, kind);
+  }
+});
+
+test('new models distinguish whole/part, group count/size, and both midpoint conditions', () => {
+  const { partResult, groupResult, isMidpoint, RATIONAL_ROUNDS } = load('concept-labs');
+  [24, 39, 15].forEach((answer, round) => {
+    assert.equal(partResult(round, answer).correct, true);
+    assert.equal(partResult(round, answer + 1).correct, false);
+  });
+  [6, 4, 20].forEach((answer, round) => {
+    assert.equal(groupResult(round, answer).correct, true);
+    assert.equal(groupResult(round, answer + 1).correct, false);
+  });
+  assert.equal(groupResult(0, 4).total, 16);
+  assert.equal(groupResult(1, 6).total, 36);
+  assert.equal(isMidpoint(8, 4, true), true);
+  assert.equal(isMidpoint(8, 3, true), false);
+  assert.equal(isMidpoint(8, 4, false), false);
+  assert.equal(isMidpoint(8, 0, true), false);
+  const expected = [1/2, -2/3, -1/2+3/4];
+  RATIONAL_ROUNDS.forEach((r, i) => assert.equal(r.values[r.choices.indexOf(r.answer)], expected[i]));
+});
+
+test('rational comparison keeps both fractions visible before and after either answer', () => {
+  const runtime = createMathComponentHooks();
+  const Component = loadMathComponent('ConceptLab.tsx', runtime.hooks);
+  let completions = 0;
+  const render = () => runtime.render(() => {
+    const child = Component({ kind: 'rational', round: 1, onComplete: () => completions++ });
+    return child.type(child.props);
+  });
+  try {
+    let tree = render();
+    const diagram = () => mathComponentNodes(tree).find(n => n.props?.role === 'img');
+    const initialDiagram = mathComponentText(diagram());
+    const highlighted = () => mathComponentNodes(diagram()).filter(n => n.props?.['data-selected'] === true);
+    assert.equal(highlighted().length, 0);
+    assert.match(initialDiagram, /-3\/4 = -9\/12/);
+    assert.match(initialDiagram, /-2\/3 = -8\/12/);
+    for (const choice of ['-3/4', '-2/3']) {
+      mathComponentNodes(tree, 'button').find(n => mathComponentText(n) === choice).props.onClick();
+      tree = render();
+      assert.equal(mathComponentText(diagram()), initialDiagram);
+      assert.equal(highlighted().length, 1);
+      assert.ok(mathComponentText(highlighted()[0]).startsWith(choice));
+      const feedback = mathComponentNodes(tree).find(n => typeof n.type === 'function' && n.type.name === 'Feedback');
+      assert.equal(feedback.props.correct, choice === '-2/3');
+    }
+    assert.equal(completions, 1);
+  } finally { runtime.unmount(); }
+});
+
+test('new choice activities give feedback on selection and permit correction immediately', () => {
+  for (const [kind, incorrect, correct] of [['missing-parts', 54, 24], ['equal-groups', 4, 6], ['measurement', 8, 6]]) {
+    const runtime = createMathComponentHooks();
+    const Component = loadMathComponent('ConceptLab.tsx', runtime.hooks);
+    let completions = 0;
+    const render = () => runtime.render(() => {
+      const child = Component({ kind, round: 0, onComplete: () => completions++ });
+      return child.type(child.props);
+    });
+    try {
+      let tree = render();
+      let choices = mathComponentNodes(tree).find(n => typeof n.type === 'function' && n.type.name === 'Choices');
+      choices.props.onChoose(incorrect);
+      tree = render();
+      let feedback = mathComponentNodes(tree).find(n => typeof n.type === 'function' && n.type.name === 'Feedback');
+      assert.equal(feedback.props.correct, false, kind);
+      assert.equal(completions, 0);
+      choices = mathComponentNodes(tree).find(n => typeof n.type === 'function' && n.type.name === 'Choices');
+      choices.props.onChoose(correct);
+      tree = render();
+      feedback = mathComponentNodes(tree).find(n => typeof n.type === 'function' && n.type.name === 'Feedback');
+      assert.equal(feedback.props.correct, true, kind);
+      assert.equal(completions, 1);
+    } finally { runtime.unmount(); }
   }
 });

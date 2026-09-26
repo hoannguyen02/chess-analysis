@@ -400,3 +400,15 @@ labels. They display the expression and equality steps directly, with aligned
 continuation equals signs in both full-width and compact layouts. Choice answers,
 word problems, authored prose, and explicit solution-style overrides retain
 their existing presentation.
+
+## Interactive exploration
+
+Number-line and powers activities also have a short interactive foundation warm-up: place −2 on an integer number line, or choose the power representing 2 × 2 × 2. Feedback appears after an attempt (650 ms after number-line movement). Original foundation explanations are collapsed in learner mode; the existing questions still record foundation progress. Teaching mode presents the warm-up before the original explanations and questions. Warm-up attempts are temporary and do not modify saved exercise results.
+
+Eight built-in lessons now open an interactive activity in **Khám phá**. Grade 3 covers missing addition/subtraction components, multiplication/division groups, unit fractions, measurement and midpoints. Grade 7 covers rational numbers, number lines and powers. Students can change quantities, distribute objects, fill a jug, combine weights, move a point and compare positions on a number line. Each activity has three situations, explanatory feedback, keyboard/touch controls and a short reasoning prompt. Answer choices check immediately, and measurement controls update the model and feedback together. Existing explanations remain available through **Xem giải thích và ví dụ tham khảo**; teaching mode treats the activity as the first exploration item before the original blocks.
+
+Teachers can choose or disable an activity through **Hoạt động khám phá tương tác** in lesson metadata. The optional `interactiveLab` field accepts `none`, `sharing`, `number-line`, `powers`, `missing-parts`, `equal-groups`, `measurement`, `midpoint` or `rational`, and survives JSON import/export, duplication and sharing. Older built-in lessons resolve a default by ID and grade at render time, so simply opening them does not rewrite saved lessons or invalidate progress. Duplicates store their resolved choice explicitly. These activities are online exploration tools; PDF practice continues to use the authored exercises.
+
+Exploration completion is temporary for the open activity and does not certify independent mastery or change exercise scores. Returning to a round starts its workspace again. Use **Em thử làm** and **Tự kiểm tra** for independent work.
+
+Typed exercise answers now remain drafts until **Kiểm tra** or Enter; pausing while typing no longer triggers grading. Choice buttons still check immediately. The existing `assisted` field continues to mean “not correct on the first attempt without help,” including an incorrect submitted answer; it is not a count of hints used.

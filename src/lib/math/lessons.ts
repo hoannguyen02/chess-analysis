@@ -1,3 +1,4 @@
+import { interactiveLabFor, LAB_LABELS, InteractiveLabKind } from './interactive-lab';
 import { migrateLegacyExerciseContent } from './exercise-content';
 import { parseSegment } from './segment';
 import {
@@ -85,6 +86,7 @@ export type MathLessonData = {
   textbook: string;
   teacherNotes: string;
   knowledgeSummary?: string;
+  interactiveLab?: InteractiveLabKind;
   blocks: MathBlock[];
   exercises: MathExercise[];
 };
@@ -499,7 +501,10 @@ export function parseMathPack(value: unknown): MathPack {
         unique(exercises);
         if (!blocks.length || !exercises.length)
           throw new Error('Cần ít nhất một phần giảng và một bài tập.');
+        if (raw.interactiveLab !== undefined && !Object.hasOwn(LAB_LABELS, String(raw.interactiveLab)))
+          throw new Error('Hoạt động tương tác không hợp lệ.');
         return {
+          ...(raw.interactiveLab !== undefined ? { interactiveLab: raw.interactiveLab as InteractiveLabKind } : {}),
           id: idText(raw.id),
           title: text(raw.title, 'Tên bài', 200, true),
           grade,
@@ -535,6 +540,7 @@ export function duplicateLesson(lesson: MathLessonData): MathLessonData {
   return {
     ...lesson,
     id: uid(),
+    interactiveLab: interactiveLabFor(lesson),
     blocks: lesson.blocks.map((b) => ({ ...b, id: uid() })),
     exercises: lesson.exercises.map((e) => ({ ...e, id: uid() })),
   };

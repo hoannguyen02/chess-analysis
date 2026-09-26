@@ -1,3 +1,7 @@
+import { interactiveLabFor } from '@/lib/math/interactive-lab';
+import InteractiveLab from './InteractiveLab';
+import FoundationWarmup from './FoundationWarmup';
+import MixedNumberExample from './MixedNumberExample';
 import {
   checkAnswer,
   learnerCopy,
@@ -148,6 +152,11 @@ export default function MathLesson({
     practiceOnly ? 'practice' : 'foundation'
   );
   const [revealed, setRevealed] = useState(1);
+  const lab = interactiveLabFor(lesson);
+  const hasLab = lab !== 'none';
+  const warmup = lab === 'number-line' || lab === 'powers' ? lab : null;
+  const interactiveSection = (hasLab && section === 'explore') || (warmup !== null && section === 'foundation');
+  const [showReference, setShowReference] = useState(false);
   const [teachingMode, setTeachingMode] = useState(false);
   const [teachingIndex, setTeachingIndex] = useState(0);
   const sectionStart = useRef<HTMLDivElement>(null);
@@ -280,12 +289,14 @@ export default function MathLesson({
   const blocks = lesson.blocks.filter((b) => b.section === section),
     exercises = lesson.exercises.filter((e) => e.section === section);
   const teachingItems: Array<
+    | { type: 'lab' }
     | { type: 'block'; block: MathBlock }
     | { type: 'exercise'; exercise: MathExercise }
   > =
     section === 'extra'
       ? []
       : [
+          ...(interactiveSection ? [{ type: 'lab' as const }] : []),
           ...blocks.map((block) => ({ type: 'block' as const, block })),
           ...exercises.map((exercise) => ({
             type: 'exercise' as const,
@@ -305,11 +316,12 @@ export default function MathLesson({
         ? 1
         : Math.max(
             1,
-            lesson.blocks.filter((block) => block.section === value).length +
+            ((hasLab && value === 'explore') || (warmup !== null && value === 'foundation') ? 1 : 0) +
+              lesson.blocks.filter((block) => block.section === value).length +
               lesson.exercises.filter((exercise) => exercise.section === value)
                 .length
           ),
-    [lesson.blocks, lesson.exercises]
+    [hasLab, warmup, lesson.blocks, lesson.exercises]
   );
   const complete = (value: MathSection) => {
     const tasks = lesson.exercises.filter((e) => e.section === value);
@@ -327,10 +339,12 @@ export default function MathLesson({
   const teachingStepLabel =
     section === 'extra'
       ? 'Luyện từng câu'
+      : teachingItem?.type === 'lab'
+        ? section === 'foundation' ? 'Khởi động tương tác' : 'Khám phá tương tác'
       : teachingItem?.type === 'exercise'
-        ? `Câu ${teachingIndex - blocks.length + 1}/${exercises.length}`
+        ? `Câu ${teachingIndex - blocks.length + 1 - (hasLab && section === 'explore' ? 1 : 0)}/${exercises.length}`
         : teachingItem?.type === 'block'
-          ? `Nội dung ${teachingIndex + 1}/${blocks.length}`
+          ? `Nội dung ${teachingIndex + 1 - (hasLab && section === 'explore' ? 1 : 0)}/${blocks.length}`
           : 'Nội dung';
   const moveTeaching = useCallback(
     (direction: -1 | 1) => {
@@ -580,14 +594,29 @@ export default function MathLesson({
                       <TeachingTimer minimal />
                     )}
                   </div>
+                  {interactiveSection && (
+                    <>
+                      <div hidden={teachingMode && teachingItem?.type !== 'lab'}>
+                        {section === 'foundation' && warmup
+                          ? <FoundationWarmup key={`${lesson.id}-${warmup}`} kind={warmup} />
+                          : lab !== 'none' && <InteractiveLab key={`${lesson.id}-${lab}`} kind={lab} />}
+                      </div>
+                      {!teachingMode && blocks.length > 0 && (
+                        <button type="button" aria-expanded={showReference} onClick={() => setShowReference(!showReference)}>
+                          {showReference ? 'Ẩn nội dung tham khảo' : 'Xem giải thích và ví dụ tham khảo'}
+                        </button>
+                      )}
+                    </>
+                  )}
                   {renderedBlocks.map((block) => (
                     <div
                       className={s.teachingItem}
                       key={block.id}
                       hidden={
-                        teachingMode &&
+                        (!teachingMode && interactiveSection && !showReference) ||
+                        (teachingMode &&
                         (teachingItem?.type !== 'block' ||
-                          teachingItem.block.id !== block.id)
+                          teachingItem.block.id !== block.id))
                       }
                     >
                       {editButton({ block: block.id }, block.title)}
@@ -598,6 +627,10 @@ export default function MathLesson({
                         <MathText>{block.text}</MathText>
                       </p>
                       <Diagram block={block} />
+                      {block.id === 'math-number-line-7-pre' &&
+                        block.section === 'foundation' &&
+                        block.text === 'Nhớ thứ tự số nguyên, cách rút gọn phân số và đổi hỗn số thành phân số.' &&
+                        <MixedNumberExample />}
                     </div>
                   ))}
                   {!teachingMode &&
