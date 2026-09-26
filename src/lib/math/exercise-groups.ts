@@ -1,4 +1,5 @@
 import type { MathExercise } from './lessons';
+import { calculationExpression } from './format';
 
 function letter(index: number): string {
   let result = '';
@@ -18,7 +19,7 @@ export function exerciseLabels(exercises: MathExercise[]) {
     if (e.task?.startsWith('Tính')) {
       const given = prompt.match(/^Biết (.+)\. Tính (.+)\.$/u);
       if (given) prompt = `${given[2]}, biết ${given[1]}.`;
-      prompt = prompt.replace(/^Luyện tập \d+\.\s*/u, '').replace(/^Tính(?:(?: một cách)? hợp lí)?\s*:?\s*/u, '');
+      prompt = calculationExpression(prompt);
     }
     if (e.task?.startsWith('Tìm x, biết')) prompt = prompt.replace(/^Tìm x, biết:\s*/u, '');
     // Lift only the repeated instruction; retain conditions and units in each part.

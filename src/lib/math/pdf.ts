@@ -288,6 +288,13 @@ export type PracticePdfOptions = { includeKnowledgeSummary?: boolean };
 export function printableShortSolution(exercise: MathExercise): string {
   if (exercise.table || exercise.kind === 'written')
     return `${exercise.kind === 'written' ? 'Lời giải mẫu' : 'Lời giải'}: ${exercise.solution}`;
+  // Find-x workings already end in the answer. Preserve all authored equations
+  // and explanations, without adding a duplicate answer or method label.
+  if ((exercise.kind === 'number' || exercise.kind === 'fraction') &&
+      !exercise.unit && !exercise.solutionStyle &&
+      /^Tìm\s+x\b/iu.test(exercise.prompt.trim()) &&
+      exercise.solution.includes('=') && variableParts(exercise.solution).includes('x'))
+    return calculationContinuation(exercise.prompt, exercise.solution);
   if ((exercise.kind === 'number' || exercise.kind === 'fraction') &&
       !exercise.unit && !exercise.solutionStyle && isCalculationOnlySolution(exercise.solution))
     return calculationContinuation(exercise.prompt, exercise.solution);

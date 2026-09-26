@@ -5,6 +5,7 @@ export const LAB_LABELS = {
   sharing: 'Chia quà công bằng',
   'number-line': 'Định vị trên trục số',
   powers: 'Khám phá lũy thừa',
+  equality: 'Cân bằng và chuyển vế',
   'missing-parts': 'Tìm phần còn thiếu',
   'equal-groups': 'Xưởng đóng hộp',
   measurement: 'Phòng đo lường',

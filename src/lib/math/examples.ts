@@ -14,6 +14,7 @@ import { numberLineLesson } from './number-line-lesson';
 import { primaryFractionLessons } from './primary-fraction-lessons';
 import { rationalLesson } from './rational-example';
 import { rationalExponentsLesson } from './rational-exponents-lesson';
+import { equalityLesson } from './equality-lesson';
 import { unitFractionLesson } from './unit-fraction-lesson';
 const b = (
   id: string,
@@ -346,6 +347,7 @@ export const legacyExampleLessons: MathLessonData[] = [
   },
   rationalLesson,
   rationalExponentsLesson,
+  equalityLesson,
   integerLesson,
   naturalLesson,
   divisibilityLesson,

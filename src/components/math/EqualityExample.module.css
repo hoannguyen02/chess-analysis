@@ -1,0 +1,57 @@
+.solution {
+  padding: 20px;
+  background: #fff8eb;
+  border-left: 4px solid #d89535;
+  border-radius: 0 12px 12px 0;
+}
+.row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  align-items: center;
+  gap: 16px;
+  padding: 12px 0;
+}
+.clean {
+  grid-template-columns: minmax(0, 1fr);
+}
+.equation {
+  font-size: 1.3em;
+  line-height: 2;
+  overflow-wrap: anywhere;
+}
+.equation mark {
+  color: inherit;
+  background: #ffe2a0;
+  border-radius: 4px;
+  padding: 3px 0;
+}
+.explanation {
+  color: #48566c;
+  line-height: 1.8;
+}
+.explanation summary {
+  cursor: pointer;
+  color: #194be0;
+  margin-top: 8px;
+}
+.explanation p {
+  margin: 8px 0 0;
+}
+.check {
+  padding: 16px;
+  background: #eef8f3;
+  border-left: 4px solid #398469;
+}
+.status {
+  font-size: 0.875em;
+  color: #59687e;
+}
+@media (max-width: 640px) {
+  .row {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 4px;
+  }
+  .solution {
+    padding: 14px;
+  }
+}

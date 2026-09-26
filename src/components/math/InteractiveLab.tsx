@@ -1,4 +1,6 @@
+import { EQUALITY_ROUND_COUNT } from '@/lib/math/equality-lab';
 import ConceptLab from './ConceptLab';
+import EqualityLab from './EqualityLab';
 import { CONCEPT_PROMPTS, ConceptLabKind } from '@/lib/math/concept-labs';
 import { useEffect, useId, useRef, useState } from 'react';
 import {
@@ -381,6 +383,7 @@ export default function InteractiveLab({
 }: {
   kind: Exclude<InteractiveLabKind, 'none'>;
 }) {
+  const roundCount = kind === 'equality' ? EQUALITY_ROUND_COUNT : 3;
   const [round, setRound] = useState(0);
   const [completed, setCompleted] = useState<number[]>([]);
   const [restart, setRestart] = useState(0);
@@ -397,6 +400,8 @@ export default function InteractiveLab({
           <NumberPlacement round={round} onComplete={complete} />
         ) : kind === 'powers' ? (
           <Powers round={round} onComplete={complete} />
+        ) : kind === 'equality' ? (
+          <EqualityLab round={round} onComplete={complete} />
         ) : (
           <ConceptLab kind={kind} round={round} onComplete={complete} />
         )}
@@ -419,7 +424,7 @@ export default function InteractiveLab({
         >
           ← Lượt trước
         </button>
-        {round < 2 ? (
+        {round < roundCount - 1 ? (
           <button
             type="button"
             onClick={() => {
@@ -451,12 +456,14 @@ export default function InteractiveLab({
               ? 'Em chọn chiều nào từ 0? Mỗi khoảng nhỏ có giá trị bao nhiêu? Em đếm khoảng hay đếm vạch?'
               : kind === 'powers'
                 ? 'Số mũ đếm điều gì? Nếu thêm một thừa số âm, dấu của tích sẽ thay đổi thế nào?'
-                : CONCEPT_PROMPTS[kind as ConceptLabKind]}
+                : kind === 'equality'
+                  ? 'x là số hạng, thừa số, số chia, cơ số hay số mũ? Phép biến đổi nào phù hợp? Có điều kiện khác 0 hoặc điều kiện x thuộc tập số nào không? Thay kết quả vào đẳng thức ban đầu để kiểm tra.'
+                  : CONCEPT_PROMPTS[kind as ConceptLabKind]}
         </p>
       )}
       <p className={s.note} role="status">
-        Đã khám phá thành công {completed.length}/3 tình huống.{' '}
-        {completed.length === 3 &&
+        Đã khám phá thành công {completed.length}/{roundCount} tình huống.{' '}
+        {completed.length === roundCount &&
           'Hãy đến “Em thử làm” để vận dụng với câu hỏi mới.'}
       </p>
     </div>

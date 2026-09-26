@@ -84,6 +84,8 @@ export function importMathWorkbook(data: ArrayBuffer) {
         ...l,
         grade: Number(l.grade),
         semester: l.semester || undefined,
+        interactiveLab: (l.interactiveLab ||
+          undefined) as MathLessonData['interactiveLab'],
         blocks: blocks
           .filter((b) => b.lessonId === l.id)
           .map((b) => ({

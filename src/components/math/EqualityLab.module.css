@@ -1,0 +1,25 @@
+.equation {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin: 18px 0;
+  font-size: clamp(23px, 4vw, 32px);
+}
+.scale {
+  display: block;
+  width: min(100%, 440px);
+  margin: 0 auto;
+}
+.balanceControls {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin-bottom: 22px;
+}
+@media (max-width: 540px) {
+  .balanceControls {
+    grid-template-columns: 1fr;
+  }
+}

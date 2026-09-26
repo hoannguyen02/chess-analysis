@@ -1,0 +1,166 @@
+export const TRANSFER_ROUNDS = [
+  {
+    equation: 'x + 5 = 12',
+    term: '+5',
+    right: '12',
+    magnitude: '5',
+    sign: '−',
+    operation: 'Trừ 5 ở cả hai vế',
+    expanded: 'x + 5 - 5 = 12 - 5',
+    simplified: 'x = 12 - 5',
+    choices: ['17', '7', '-7'],
+    answer: '7',
+    working: '12 - 5 = 7',
+    check: '7 + 5 = 12',
+    hint: 'Chuyển số hạng +5 sang vế phải thành -5. Tính 12 - 5.',
+  },
+  {
+    equation: 'x - 2/3 = -1/4',
+    term: '-2/3',
+    right: '-1/4',
+    magnitude: '2/3',
+    sign: '+',
+    operation: 'Cộng 2/3 ở cả hai vế',
+    expanded: 'x - 2/3 + 2/3 = -1/4 + 2/3',
+    simplified: 'x = -1/4 + 2/3',
+    choices: ['-11/12', '11/12', '5/12'],
+    answer: '5/12',
+    working: '-1/4 + 2/3 = -3/12 + 8/12 = 5/12',
+    check: '5/12 - 2/3 = 5/12 - 8/12 = -3/12 = -1/4',
+    hint: 'Giữ dấu âm của -1/4: -1/4 = -3/12 và 2/3 = 8/12. Cộng hai tử -3 và 8, giữ mẫu 12.',
+  },
+] as const;
+
+export function balanceState(left: number, right: number) {
+  return {
+    equal: left === right,
+    complete: left === 5 && right === 5,
+    relation: left === right ? '=' : left < right ? '<' : '>',
+    // SVG's y axis points down, so the heavier pan must move down.
+    tilt: left === right ? 0 : left > right ? -8 : 8,
+  };
+}
+
+// Each activity asks for a transformation before revealing the calculation.
+export const OPERATION_ROUNDS = [
+  {
+    title: 'Phép nhân: tìm thừa số chưa biết',
+    equation: '3x = 12',
+    prompt: 'Làm gì ở cả hai vế để x đứng một mình?',
+    options: ['Chia cho 3', 'Trừ 3', 'Nhân với 3'],
+    operation: 'Chia cho 3',
+    explanation: '3 đang nhân với x. Chia cả hai vế cho 3: 3x : 3 = 12 : 3.',
+    working: 'x = 12 : 3',
+    choices: ['9', '4', '36'],
+    answer: '4',
+    hint: 'Tính 12 : 3, không phải 12 - 3.',
+    check: '3 × 4 = 12.',
+  },
+  {
+    title: 'Phép chia: tìm số bị chia',
+    equation: 'x : 4 = -2',
+    prompt: 'Chọn phép biến đổi để bỏ phép chia cho 4.',
+    options: [
+      'Chia cả hai vế cho 4',
+      'Nhân cả hai vế với 4',
+      'Cộng 4 vào hai vế',
+    ],
+    operation: 'Nhân cả hai vế với 4',
+    explanation: 'Nhân cả hai vế với 4: (x : 4) × 4 = -2 × 4.',
+    working: 'x = -2 × 4',
+    choices: ['-8', '-1/2', '2'],
+    answer: '-8',
+    hint: 'Một số âm nhân với một số dương cho kết quả âm.',
+    check: '-8 : 4 = -2.',
+  },
+  {
+    title: 'Phép chia: x là số chia',
+    equation: '12 : x = 3',
+    prompt: 'Biết x ≠ 0. Nhân cả hai vế với x, ta được dòng nào?',
+    options: ['12 = 3x', 'x = 3 : 12', '12 - x = 3'],
+    operation: '12 = 3x',
+    explanation:
+      'Vì x ≠ 0, nhân hai vế với x được 12 = 3x. Sau đó chia hai vế cho 3.',
+    working: 'x = 12 : 3',
+    choices: ['1/4', '4', '0'],
+    answer: '4',
+    hint: 'Tìm số chia bằng số bị chia chia cho thương. x không được bằng 0.',
+    check: '12 : 4 = 3; 4 ≠ 0.',
+  },
+  {
+    title: 'Phân số: chia cho một phân số',
+    equation: '(1/2) × x = 3/4',
+    prompt: 'Chọn phép biến đổi để tìm x.',
+    options: ['x = 3/4 - 1/2', 'x = (3/4) : (1/2)', 'x = (3/4) × (1/2)'],
+    operation: 'x = (3/4) : (1/2)',
+    explanation:
+      'Chia cả hai vế cho 1/2. Chia cho 1/2 là nhân với số nghịch đảo 2.',
+    working: 'x = (3/4) × 2',
+    choices: ['3/8', '1/4', '3/2'],
+    answer: '3/2',
+    hint: 'Nhân tử số với 2 rồi rút gọn: (3 × 2)/4.',
+    check: '(1/2) × (3/2) = 3/4.',
+  },
+  {
+    title: 'Lũy thừa đã biết: tính trước',
+    equation: 'x + 2^3 = 11',
+    prompt: 'Tính lũy thừa trước. Dòng nào đúng?',
+    options: ['x + 6 = 11', 'x + 8 = 11', 'x = 11 : 8'],
+    operation: 'x + 8 = 11',
+    explanation:
+      '2^3 = 2 × 2 × 2 = 8. Sau đó chuyển số hạng +8 sang vế phải thành -8.',
+    working: 'x = 11 - 8',
+    choices: ['3', '5', '19'],
+    answer: '3',
+    hint: 'Số mũ 3 cho biết có ba thừa số 2; không phải 2 × 3.',
+    check: '3 + 2^3 = 3 + 8 = 11.',
+  },
+  {
+    title: 'x ở số mũ: đưa về cùng cơ số',
+    equation: '2^(x + 1) = 32',
+    prompt: 'Với x ∈ ℕ, viết 32 thành lũy thừa của 2. Ta được điều gì?',
+    options: ['x + 1 = 5', 'x + 1 = 16', 'x = 32 - 2'],
+    operation: 'x + 1 = 5',
+    explanation:
+      '32 = 2^5. Với các số mũ tự nhiên, hai lũy thừa cơ số 2 bằng nhau khi số mũ bằng nhau: x + 1 = 5.',
+    working: 'x = 5 - 1',
+    choices: ['5', '4', '6'],
+    answer: '4',
+    hint: 'Đã tìm được x + 1 = 5. Cần trừ tiếp 1 để tìm x.',
+    check: '2^(4 + 1) = 2^5 = 32; 4 ∈ ℕ.',
+  },
+  {
+    title: 'x ở cơ số: tìm đủ các giá trị',
+    equation: 'x^2 = 9',
+    prompt: 'Với x ∈ ℚ, nhận xét nào đúng?',
+    options: [
+      'Chỉ 3 có bình phương bằng 9',
+      'Cả 3 và -3 có bình phương bằng 9',
+      'x = 9 : 2',
+    ],
+    operation: 'Cả 3 và -3 có bình phương bằng 9',
+    explanation:
+      '3 × 3 = 9 và (-3) × (-3) = 9. Hai số đối nhau có cùng bình phương.',
+    working: '3^2 = 9; (-3)^2 = 9',
+    choices: ['x = 3', 'x = -3', 'x = 3 hoặc x = -3'],
+    answer: 'x = 3 hoặc x = -3',
+    hint: 'Đề cho x là số hữu tỉ. Cần giữ cả hai giá trị đã tìm được.',
+    check: '3^2 = 9 và (-3)^2 = 9. Cả hai giá trị đều thuộc ℚ.',
+  },
+  {
+    title: 'Điều kiện của x quyết định đáp án',
+    equation: 'x^2 = 9',
+    prompt: 'Lần này x ∈ ℕ. Giá trị nào được giữ lại?',
+    options: ['Giữ cả 3 và -3', 'Chỉ giữ 3', 'Chỉ giữ -3'],
+    operation: 'Chỉ giữ 3',
+    explanation:
+      '3 và -3 đều có bình phương bằng 9, nhưng -3 không phải số tự nhiên.',
+    working: '3^2 = 9',
+    choices: ['3', '-3', '9/2'],
+    answer: '3',
+    hint: 'Đáp án vừa phải thỏa mãn đẳng thức, vừa phải thuộc ℕ.',
+    check: '3^2 = 9 và 3 ∈ ℕ.',
+  },
+];
+export const EQUALITY_ROUND_COUNT =
+  1 + TRANSFER_ROUNDS.length + OPERATION_ROUNDS.length;

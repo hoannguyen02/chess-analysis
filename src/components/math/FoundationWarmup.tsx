@@ -1,14 +1,16 @@
 import { useState } from 'react';
 import { NumberPlacement } from './InteractiveLab';
+import { EqualityWarmup } from './EqualityLab';
 import { MathText } from './MathText';
 import s from './InteractiveLab.module.css';
 
 export default function FoundationWarmup({
   kind,
 }: {
-  kind: 'number-line' | 'powers';
+  kind: 'number-line' | 'powers' | 'equality';
 }) {
   const [choice, setChoice] = useState<string | null>(null);
+  if (kind === 'equality') return <EqualityWarmup />;
   if (kind === 'number-line') {
     return (
       <div className={s.lab}>

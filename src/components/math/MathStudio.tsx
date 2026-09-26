@@ -47,11 +47,14 @@ import {
 } from '@/lib/math/migrations';
 import { addMultiplicationDivisionLesson } from '@/lib/math/multiplication-division-lesson';
 import { addNumberLineLesson } from '@/lib/math/number-line-lesson';
-import { matchesPlacement, semesterLabel } from '@/lib/math/placement';
 import {
-  addRationalExponentEquations,
-  updateExponentCoefficientNotation,
-} from '@/lib/math/rational-exponent-equations';
+  addEqualityLesson,
+  refreshEqualityExplanation,
+  addEqualityPowerExample,
+  expandEqualitySummary,
+} from '@/lib/math/equality-lesson';
+import { matchesPlacement, semesterLabel } from '@/lib/math/placement';
+import { updateExponentCoefficientNotation } from '@/lib/math/rational-exponent-equations';
 import {
   addExponentSummaryExample,
   addRationalExponentReview,
@@ -73,7 +76,6 @@ const EXAMPLE_GROUPS_KEY = 'lima-math-example-groups-v1';
 const EXPONENT_GROUPS_KEY = 'lima-math-exponent-groups-v1';
 const EXPONENT_SUMMARY_KEY = 'lima-math-exponent-summary-example-v3';
 const EXPONENT_NOTATION_KEY = 'lima-math-exponent-coefficients-v3';
-const EXPONENT_EQUATIONS_KEY = 'lima-math-exponent-equations-v1';
 const EXPONENT_REVIEW_KEY = 'lima-math-exponent-review-v1';
 const MIDPOINT_KEY = 'lima-math-midpoint-3-v1';
 const MEASUREMENT_WORD_KEY = 'lima-math-measurement-words-v1';
@@ -87,6 +89,10 @@ const COMPONENT_SEMESTER_KEY = 'lima-math-component-semester-v1';
 const COMPONENT_TABLES_KEY = 'lima-math-component-tables-v1';
 const GRADE_THREE_KEY = 'lima-math-add-subtract-components-3-v1';
 const NUMBER_LINE_KEY = 'lima-math-number-line-v1';
+const EQUALITY_EXPLANATION_KEY = 'lima-math-equality-explanation-v1';
+const EQUALITY_SUMMARY_KEY = 'lima-math-equality-operations-summary-v1';
+const EQUALITY_EXAMPLES_KEY = 'lima-math-equality-worked-examples-v1';
+const EQUALITY_KEY = 'lima-math-equality-v1';
 const FRACTION_ORDER_KEY = 'lima-math-fraction-order-v1';
 const FRACTION_CONSOLIDATION_KEY = 'lima-math-fraction-consolidation-v1';
 const FRACTION_LEVELS_KEY = 'lima-math-fraction-levels-v1';
@@ -213,6 +219,11 @@ export default function MathStudio() {
       if (needsFractionOrder) loaded = addFractionOrderLesson(loaded);
       const needsNumberLine = localStorage.getItem(NUMBER_LINE_KEY) !== 'done';
       if (needsNumberLine) loaded = addNumberLineLesson(loaded);
+      const needsEquality = localStorage.getItem(EQUALITY_KEY) !== 'done';
+      if (needsEquality) loaded = addEqualityLesson(loaded);
+      const needsEqualityExplanation =
+        localStorage.getItem(EQUALITY_EXPLANATION_KEY) !== 'done';
+      if (needsEqualityExplanation) loaded = refreshEqualityExplanation(loaded);
       const needsGradeThree = localStorage.getItem(GRADE_THREE_KEY) !== 'done';
       if (needsGradeThree) loaded = replaceGradeThreeLesson(loaded);
       const needsComponentTables =
@@ -256,9 +267,6 @@ export default function MathStudio() {
         localStorage.getItem(EXAMPLE_GROUPS_KEY) !== 'done';
       if (needsExampleGroups)
         loaded = upgradeExampleExerciseGroups(loaded, exampleLessons);
-      const needsExponentEquations =
-        localStorage.getItem(EXPONENT_EQUATIONS_KEY) !== 'done';
-      if (needsExponentEquations) loaded = addRationalExponentEquations(loaded);
       const needsExponentNotation =
         localStorage.getItem(EXPONENT_NOTATION_KEY) !== 'done';
       if (needsExponentNotation)
@@ -266,6 +274,29 @@ export default function MathStudio() {
       const needsExponentSummary =
         localStorage.getItem(EXPONENT_SUMMARY_KEY) !== 'done';
       if (needsExponentSummary) loaded = addExponentSummaryExample(loaded);
+      const needsEqualityExamples =
+        localStorage.getItem(EQUALITY_EXAMPLES_KEY) !== 'done';
+      if (needsEqualityExamples) loaded = addEqualityPowerExample(loaded);
+      const needsEqualitySummary =
+        localStorage.getItem(EQUALITY_SUMMARY_KEY) !== 'done';
+      if (needsEqualitySummary) loaded = expandEqualitySummary(loaded);
+      // During development, these built-in exercise sets come directly from source.
+      // This avoids retaining obsolete questions in the browser between edits.
+      if (process.env.NODE_ENV === 'development') {
+        loaded = loaded.map((lesson) => {
+          if (
+            ![
+              'math-equality-transposition-7',
+              'math-rational-exponents-7',
+            ].includes(lesson.id)
+          )
+            return lesson;
+          const source = exampleLessons.find((item) => item.id === lesson.id);
+          return source
+            ? { ...lesson, exercises: structuredClone(source.exercises) }
+            : lesson;
+        });
+      }
       // Show the upgraded lesson even when storage is unavailable.
       setLessons(loaded);
       if (
@@ -286,6 +317,10 @@ export default function MathStudio() {
         needsConsolidation ||
         needsFractionOrder ||
         needsNumberLine ||
+        needsEquality ||
+        needsEqualityExamples ||
+        needsEqualitySummary ||
+        needsEqualityExplanation ||
         needsGradeThree ||
         needsComponentTables ||
         needsComponentSemester ||
@@ -300,7 +335,6 @@ export default function MathStudio() {
         needsExponentReview ||
         needsExponentGroups ||
         needsExampleGroups ||
-        needsExponentEquations ||
         needsExponentNotation ||
         needsExponentSummary
       )
@@ -309,8 +343,6 @@ export default function MathStudio() {
         localStorage.setItem(EXPONENT_SUMMARY_KEY, 'done');
       if (needsExponentNotation)
         localStorage.setItem(EXPONENT_NOTATION_KEY, 'done');
-      if (needsExponentEquations)
-        localStorage.setItem(EXPONENT_EQUATIONS_KEY, 'done');
       if (needsExampleGroups) localStorage.setItem(EXAMPLE_GROUPS_KEY, 'done');
       if (needsExponentGroups)
         localStorage.setItem(EXPONENT_GROUPS_KEY, 'done');
@@ -335,6 +367,13 @@ export default function MathStudio() {
         localStorage.setItem(COMPONENT_TABLES_KEY, 'done');
       if (needsGradeThree) localStorage.setItem(GRADE_THREE_KEY, 'done');
       if (needsNumberLine) localStorage.setItem(NUMBER_LINE_KEY, 'done');
+      if (needsEquality) localStorage.setItem(EQUALITY_KEY, 'done');
+      if (needsEqualitySummary)
+        localStorage.setItem(EQUALITY_SUMMARY_KEY, 'done');
+      if (needsEqualityExamples)
+        localStorage.setItem(EQUALITY_EXAMPLES_KEY, 'done');
+      if (needsEqualityExplanation)
+        localStorage.setItem(EQUALITY_EXPLANATION_KEY, 'done');
       if (needsFractionOrder) localStorage.setItem(FRACTION_ORDER_KEY, 'done');
       if (needsConsolidation)
         localStorage.setItem(FRACTION_CONSOLIDATION_KEY, 'done');

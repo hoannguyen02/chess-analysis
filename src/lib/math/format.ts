@@ -92,15 +92,34 @@ export function isCalculationOnlySolution(value: string): boolean {
     /^[\d\s+\-−×·÷*/:().,[\]~□=^₀-₉⁰¹²³⁴⁵⁶⁷⁸⁹]+$/u.test(value);
 }
 
+// Shared by grouped question labels and solution matching. A colon-delimited
+// instruction may use new wording, but must contain only words, never conditions
+// or mathematical operands. Unknown non-delimited wording stays intact.
+export function calculationExpression(prompt: string): string {
+  return prompt.normalize('NFC').trim()
+    .replace(/^Luyện tập\s+\d+\.\s*/iu, '')
+    .replace(/^Tính\b(?:[\p{L}\s]*:\s*|(?:(?: một cách)? hợp l[íý]| nhanh| giá trị(?: của)? biểu thức)?\s*:?\s*)/iu, '');
+}
+
 // Only omit a literal repeat of the displayed question. Never drop a first
 // transformation or infer mathematical equivalence between different expressions.
 export function calculationContinuation(prompt: string, solution: string): string {
+  const normalize = (text: string) => stripRedundantFractionParentheses(text.normalize('NFC'))
+    .trim().replace(/[.。]$/u, '').replace(/−/gu, '-').replace(/\s/gu, '');
+  if (/^Tìm\s+x\b/iu.test(prompt.trim())) {
+    const equation = prompt.trim().replace(/^Tìm\s+x\s*(?:,\s*biết\s*)?:\s*/iu, '')
+      .replace(/\s*\(x\s*∈[^()]*\)\s*[.。]?$/u, '');
+    const rows = solution.trim().split(/\r?\n/u);
+    // Compare the whole equation, not merely its left-hand side. Keep a lone
+    // answer and never discard a transformed equation or an explanatory note.
+    if (rows.length > 1 && equation.includes('=') && normalize(equation) === normalize(rows[0]))
+      return rows.slice(1).join('\n');
+    return solution;
+  }
   const steps = formatCalculationSteps(solution);
   if (!isCalculationOnlySolution(solution)) return steps;
   const equals = steps.indexOf('=');
-  const expression = prompt.trim().replace(/^Tính(?: giá trị(?: của)? biểu thức)?\s*:?\s*/u, '');
-  const normalize = (text: string) => stripRedundantFractionParentheses(text.normalize('NFC'))
-    .trim().replace(/[.。]$/u, '').replace(/−/gu, '-').replace(/\s/gu, '');
+  const expression = calculationExpression(prompt);
   return equals > 0 && normalize(expression) === normalize(steps.slice(0, equals))
     ? steps.slice(equals).trim() : steps;
 }
