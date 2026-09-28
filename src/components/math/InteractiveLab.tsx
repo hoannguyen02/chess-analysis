@@ -1,3 +1,5 @@
+import CrossingAngleLab from './CrossingAngleLab';
+import AngleLab from './AngleLab';
 import { EQUALITY_ROUND_COUNT } from '@/lib/math/equality-lab';
 import ConceptLab from './ConceptLab';
 import EqualityLab from './EqualityLab';
@@ -383,7 +385,8 @@ export default function InteractiveLab({
 }: {
   kind: Exclude<InteractiveLabKind, 'none'>;
 }) {
-  const roundCount = kind === 'equality' ? EQUALITY_ROUND_COUNT : 3;
+  const roundCount =
+    kind === 'equality' ? EQUALITY_ROUND_COUNT : kind === 'angles' ? 6 : 3;
   const [round, setRound] = useState(0);
   const [completed, setCompleted] = useState<number[]>([]);
   const [restart, setRestart] = useState(0);
@@ -400,6 +403,12 @@ export default function InteractiveLab({
           <NumberPlacement round={round} onComplete={complete} />
         ) : kind === 'powers' ? (
           <Powers round={round} onComplete={complete} />
+        ) : kind === 'angles' ? (
+          round < 4 ? (
+            <AngleLab round={round} onComplete={complete} />
+          ) : (
+            <CrossingAngleLab round={round} onComplete={complete} />
+          )
         ) : kind === 'equality' ? (
           <EqualityLab round={round} onComplete={complete} />
         ) : (
@@ -456,9 +465,11 @@ export default function InteractiveLab({
               ? 'Em chọn chiều nào từ 0? Mỗi khoảng nhỏ có giá trị bao nhiêu? Em đếm khoảng hay đếm vạch?'
               : kind === 'powers'
                 ? 'Số mũ đếm điều gì? Nếu thêm một thừa số âm, dấu của tích sẽ thay đổi thế nào?'
-                : kind === 'equality'
-                  ? 'x là số hạng, thừa số, số chia, cơ số hay số mũ? Phép biến đổi nào phù hợp? Có điều kiện khác 0 hoặc điều kiện x thuộc tập số nào không? Thay kết quả vào đẳng thức ban đầu để kiểm tra.'
-                  : CONCEPT_PROMPTS[kind as ConceptLabKind]}
+                : kind === 'angles'
+                  ? 'Tia có nằm trong góc không? Hai góc nhỏ có bằng nhau không? Biết cả góc thì chia 2; biết một nửa thì nhân 2.'
+                  : kind === 'equality'
+                    ? 'x là số hạng, thừa số, số chia, cơ số hay số mũ? Phép biến đổi nào phù hợp? Có điều kiện khác 0 hoặc điều kiện x thuộc tập số nào không? Thay kết quả vào đẳng thức ban đầu để kiểm tra.'
+                    : CONCEPT_PROMPTS[kind as ConceptLabKind]}
         </p>
       )}
       <p className={s.note} role="status">

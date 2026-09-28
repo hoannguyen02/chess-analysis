@@ -283,9 +283,19 @@ export default function MathStudio() {
       // During development, these built-in exercise sets come directly from source.
       // This avoids retaining obsolete questions in the browser between edits.
       if (process.env.NODE_ENV === 'development') {
+        const angleSource = exampleLessons.find(
+          (lesson) => lesson.id === 'math-angle-bisector-7'
+        );
+        if (
+          angleSource &&
+          !loaded.some((lesson) => lesson.id === angleSource.id) &&
+          loaded.length < 100
+        )
+          loaded.push(structuredClone(angleSource));
         loaded = loaded.map((lesson) => {
           if (
             ![
+              'math-number-line-7',
               'math-equality-transposition-7',
               'math-rational-exponents-7',
             ].includes(lesson.id)

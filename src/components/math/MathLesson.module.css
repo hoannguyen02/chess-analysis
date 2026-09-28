@@ -964,3 +964,8 @@
     display: none;
   }
 }
+
+.angleEquationBlock { display: block; margin: 16px 0; text-align: center; overflow-x: auto; }
+.angleEquationGrid { display: inline-grid; grid-template-columns: max-content max-content max-content; column-gap: 0.35em; row-gap: 0.25em; text-align: left; }
+.angleEquationRow { display: contents; }
+.angleEquationLeft { text-align: right; }

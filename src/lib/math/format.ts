@@ -13,6 +13,10 @@ export function formatMultiplicationNotation(text: string, grade: number): strin
 export const variableParts = (text: string) =>
   text.split(/((?<![\p{L}_])x(?![\p{L}\p{N}_]))/gu);
 
+// Shared textbook angle-name detection for web and PDF (vertex O in the middle).
+export const angleNameParts = (text: string) => text.split(/(\b[a-z][′']?O[a-z][′']?)/u);
+export const isAngleName = (text: string) => /^[a-z][′']?O[a-z][′']?$/u.test(text);
+
 export function stripRedundantFractionParentheses(text: string): string {
   return text.replace(
     /\(\s*(\d+)\s*\/\s*(\d+)\s*\)/gu,
@@ -127,7 +131,22 @@ export function calculationContinuation(prompt: string, solution: string): strin
 // Keep authored prose and word-problem solutions intact. Pure calculation
 // chains become one equality step per line in the learner view and PDF.
 export function formatCalculationSteps(value: string): string {
-  if (value.includes('\n')) return value;
+  if (value.includes('\n')) {
+    let previousAngle = '';
+    return value.split('\n').map(line => {
+      const match = line.match(/^(?:Góc\s+)?([a-z][′']?O[a-z][′']?)\s*=\s*(.+)$/u);
+      if (!match) { previousAngle = ''; return line; }
+      const [, angle, right] = match;
+      const expression = right.replace(/(?:góc\s+)?[a-z][′']?O[a-z][′']?/giu, '0');
+      // Only continue actual calculations, never prose or a new angle relation.
+      if (!/^[\d\s°+−\-×÷:*/=().,]+$/u.test(expression)) {
+        previousAngle = ''; return line;
+      }
+      const repeat = angle === previousAngle;
+      previousAngle = angle;
+      return `${repeat ? '' : `${angle} `}= ${right.replace(/góc\s+(?=[a-z][′']?O[a-z][′']?)/giu, '')}`;
+    }).join('\n');
+  }
   const parts = value.split(/\s*=\s*/u);
   if (
     parts.length < 3 ||
@@ -135,4 +154,20 @@ export function formatCalculationSteps(value: string): string {
   )
     return value;
   return parts.join('\n= ');
+}
+
+/** Separate angle equality chains from surrounding reasons and conclusions. */
+export function angleSolutionGroups(value: string): Array<{ text: string } | { equations: { left: string; right: string }[] }> {
+  const groups: Array<{ text: string } | { equations: { left: string; right: string }[] }> = [];
+  for (const line of formatCalculationSteps(value).split('\n')) {
+    const first = line.match(/^([a-z][′']?O[a-z][′']?)\s*=\s*(.+)$/u);
+    const previous = groups[groups.length - 1];
+    const continuation = line.match(/^=\s*(.+)$/u);
+    if (continuation && previous && 'equations' in previous) {
+      previous.equations.push({ left: '', right: continuation[1] });
+    } else if (first && /^[\d\s°+−\-×÷:*/=().,]+$/u.test(first[2].replace(/[a-z][′']?O[a-z][′']?/gu, '0'))) {
+      groups.push({ equations: [{ left: first[1], right: first[2] }] });
+    } else groups.push({ text: line });
+  }
+  return groups;
 }

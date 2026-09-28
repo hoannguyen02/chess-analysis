@@ -5,6 +5,7 @@ import { useEffect, useRef, useState } from 'react';
 import s from './MathLesson.module.css';
 import { MathText } from './MathText';
 import SegmentDiagram from './SegmentDiagram';
+import AngleExerciseDiagram from './AngleExerciseDiagram';
 export type Result = {
   answer: string;
   unit: string;
@@ -37,11 +38,13 @@ function SolutionContent({ solution }: { solution: string }) {
 
 export default function Exercise({
   exercise,
+  displayPrompt,
   result,
   onChange,
   active = true,
 }: {
   exercise: MathExercise;
+  displayPrompt?: string;
   active?: boolean;
   result?: Result;
   onChange: (result: Result) => void;
@@ -159,8 +162,12 @@ export default function Exercise({
       className={s.question}
     >
       <h3>
-        <MathText>{exercise.prompt}</MathText>
+        <MathText>{displayPrompt ?? exercise.prompt}</MathText>
       </h3>
+      <AngleExerciseDiagram
+        exercise={exercise}
+        reveal={solved || showSolution}
+      />
       {exercise.segment && (
         <SegmentDiagram
           values={exercise.segment}

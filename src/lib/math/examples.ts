@@ -1,3 +1,4 @@
+import { angleLesson } from './angle-lesson';
 import { groupExampleExercises } from './example-exercise-groups';
 import { additionSubtractionLesson } from './addition-subtraction-lesson';
 import { fractionExtraExercises } from './extra-examples';
@@ -348,6 +349,7 @@ export const legacyExampleLessons: MathLessonData[] = [
   rationalLesson,
   rationalExponentsLesson,
   equalityLesson,
+  angleLesson,
   integerLesson,
   naturalLesson,
   divisibilityLesson,
@@ -357,7 +359,6 @@ export const legacyExampleLessons: MathLessonData[] = [
   numberLineLesson,
 ];
 
-export const exampleLessons = groupExampleExercises(consolidateFractionLessons(
-  legacyExampleLessons,
-  legacyExampleLessons
-));
+export const exampleLessons = groupExampleExercises(
+  consolidateFractionLessons(legacyExampleLessons, legacyExampleLessons)
+);

@@ -36,6 +36,43 @@ const { exampleLessons } = load('examples');
 const { isMathPracticeEnabled } = load('availability');
 const { encodeMathLesson, decodeMathLesson } = load('share');
 const clone = () => structuredClone(packLessons(exampleLessons));
+test('PDF angle hats match web names while rays and variables stay unchanged', () => {
+  const { angleNameParts, isAngleName } = load('format');
+  assert.deepEqual(angleNameParts("Góc x'Oy′ và aOt." ).filter(isAngleName), ["x'Oy′", 'aOt']);
+  assert.ok(!angleNameParts('Ox Oy x = 2').some(isAngleName));
+  const font = fs.readFileSync(path.join(__dirname, '../public/fonts/DejaVuSans.ttf'));
+  const base = load('angle-lesson').angleLesson;
+  const exercise = { ...base.exercises.find(e => e.section === 'extra'), id: 'angle-hat-test', task: undefined, kind: 'number', options: [], prompt: "Tính góc x'Oy′.", answer: '40', solution: 'Góc xOy = 40°.' };
+  for (const mode of ['worksheet', 'solutions']) {
+    const bytes = load('pdf').createPracticePdf({ ...base, exercises: [exercise] }, mode, font, { includeKnowledgeSummary: false });
+    assert.equal((Buffer.from(bytes).toString('latin1').match(/\/AngleHat BMC/g) || []).length, mode === 'worksheet' ? 1 : 2);
+    assert.ok(pdfTextRows(bytes).some(row => row.text.includes("x'Oy′")), 'angle text remains searchable');
+  }
+});
+test('angle diagrams share web data and export question and answer values safely', () => {
+  const { angleLesson: lesson } = load('angle-lesson');
+  const { exerciseAngleDiagram: figure } = load('angle-diagram');
+  const extras = lesson.exercises.filter(e => e.section === 'extra');
+  const illustrated = extras.filter(e => figure(e));
+  assert.ok(illustrated.length >= 7);
+  for (const exercise of illustrated) {
+    assert.equal(figure({ ...exercise, prompt: exercise.prompt + ' edited' }), null);
+    assert.equal(figure({ ...exercise, answer: '999' }), null);
+  }
+  const font = fs.readFileSync(path.join(__dirname, '../public/fonts/DejaVuSans.ttf'));
+  for (const mode of ['worksheet', 'solutions']) {
+    const bytes = load('pdf').createPracticePdf(lesson, mode, font);
+    const raw = Buffer.from(bytes).toString('latin1');
+    assert.equal((raw.match(/\/AngleDiagram BMC/g) || []).length, illustrated.length);
+    const rows = pdfTextRows(bytes);
+    assert.equal(rows.some(row => row.text === '?'), mode === 'worksheet');
+  }
+  const exercise = extras.find(e => e.id === 'angle-e1');
+  const question = pdfTextRows(load('pdf').createPracticePdf({ ...lesson, exercises: [exercise] }, 'worksheet', font));
+  assert.ok(!question.some(row => row.text === '80°'), 'worksheet does not reveal the bisected angle');
+  const answer = pdfTextRows(load('pdf').createPracticePdf({ ...lesson, exercises: [exercise] }, 'solutions', font));
+  assert.ok(answer.some(row => row.text.includes('80°')));
+});
 test('calculation continuations omit only a repeated question expression', () => {
   const { calculationContinuation: continuation } = load('format');
   assert.equal(continuation('Tính (-2)^2.', '(-2)^2 = (-2) × (-2) = 4.'), '= (-2) × (-2)\n= 4.');
@@ -573,7 +610,7 @@ test('PDF missing-value answers precede the preserved method and never leak into
   }
 });
 
-test('all lessons share answer-first formatting except calculation-only working', () => {
+test('Grade 7 keeps worked solutions and uses answer-first formatting for conceptual questions', () => {
   const {
     createPracticePdf,
     printableShortSolution,
@@ -596,8 +633,15 @@ test('all lessons share answer-first formatting except calculation-only working'
       const answer =
         e.kind === 'choice'
           ? String.fromCharCode(65 + e.options.indexOf(e.answer))
-          : `${e.answer}${e.unit ? ` ${e.unit}` : ''}`;
-      const text = printableShortSolution(e);
+          : `${e.answer}${e.unit === '°' ? '°' : e.unit ? ` ${e.unit}` : ''}`;
+      const text = printableShortSolution(e, lesson.grade);
+      if (lesson.grade === 7 && e.kind !== 'choice' &&
+          e.solutionStyle !== 'explanation' && e.solutionStyle !== 'answer-only') {
+        assert.ok(text.startsWith('Bài giải:\n'));
+        assert.ok(!text.startsWith('Đáp án:'));
+        assert.ok(text.includes(formatCalculationSteps(e.solution)));
+        continue;
+      }
       if (load('format').isCalculationOnlySolution(text))
         assert.equal(text, load('format').calculationContinuation(e.prompt, e.solution));
       else if (/^Tìm\s+x\b/iu.test(e.prompt) && !e.solutionStyle && e.kind !== 'choice')
@@ -609,12 +653,12 @@ test('all lessons share answer-first formatting except calculation-only working'
     const rows = pdfTextRows(createPracticePdf(lesson, 'solutions', font));
     assert.equal(
       rows.filter((r) => r.text.startsWith('Đáp án:')).length,
-      eligible.filter(e => printableShortSolution(e).startsWith('Đáp án:')).length,
+      eligible.filter(e => printableShortSolution(e, lesson.grade).startsWith('Đáp án:')).length,
       lesson.id
     );
     assert.equal(
       rows.filter((r) => /^(Cách làm|Giải thích):/u.test(r.text)).length,
-      eligible.filter((e) => /\n(Cách làm|Giải thích):/u.test(printableShortSolution(e))).length,
+      eligible.filter((e) => /\n(Cách làm|Giải thích):/u.test(printableShortSolution(e, lesson.grade))).length,
       lesson.id
     );
     const worksheet = pdfTextRows(createPracticePdf(lesson, 'worksheet', font));
@@ -641,6 +685,19 @@ test('all lessons share answer-first formatting except calculation-only working'
     )
   );
   assert.deepEqual(exampleLessons, before);
+});
+
+test('angle recognition answers include the choice or unit and explain the reason', () => {
+  const { printableShortSolution } = load('pdf');
+  const { anglePractice } = load('angle-practice');
+  const byId = id => anglePractice.find(e => e.id === `angle-more-${id}`);
+  assert.equal(printableShortSolution(byId('b2'), 7),
+    'Đáp án: A. Góc nhọn\nGiải thích: 0° < 38° < 90° nên đây là góc nhọn.');
+  assert.equal(printableShortSolution(byId('b3'), 7),
+    'Đáp án: 180°\nGiải thích: Góc xOy là góc bẹt nên bằng 180°.');
+  assert.match(printableShortSolution(byId('b6'), 7), /^Đáp án: B\. Chưa đủ\nGiải thích:/u);
+  assert.match(printableShortSolution(byId('m1'), 7), /^Bài giải:\n/u);
+  assert.equal(printableShortSolution({ ...byId('b3'), solutionStyle: 'answer-only' }, 7), 'Đáp án: 180°');
 });
 
 test('conceptual solutions explain why, reading answers omit repetition, and upgrades preserve edits', async () => {
@@ -4519,24 +4576,30 @@ test('typed answers remain drafts before checking and composition does not submi
   } finally { runtime.unmount(); }
 });
 
-test('teaching mode sequences a lab before explanations without rewriting saved lesson content', () => {
-  const lesson = { ...teachingModeFixture(), interactiveLab: 'number-line' };
-  const harness = createTeachingModeHarness({ lesson });
-  try {
-    harness.click('Giảng bài');
-    harness.click('Khám phá');
-    let tree = harness.render();
-    const lab = mathComponentNodes(tree, 'InteractiveLab')[0];
-    assert.equal(lab.props.kind, 'number-line');
-    assert.match(mathComponentText(tree), /Khám phá tương tác/);
-    harness.click('Tiếp →');
-    tree = harness.render();
-    assert.match(mathComponentText(tree), /Nội dung 1\//);
-    assert.equal(mathComponentNodes(tree, 'div').find(n => n.props.children?.type === 'InteractiveLab').props.hidden, true);
-    harness.click('← Trước');
-    tree = harness.render();
-    assert.equal(mathComponentNodes(tree, 'div').find(n => n.props.children?.type === 'InteractiveLab').props.hidden, false);
-  } finally { harness.restore(); }
+test('teaching and normal modes keep interactive reference text optional', () => {
+  for (const lesson of [{ ...teachingModeFixture(), interactiveLab: 'number-line' }, load('angle-lesson').angleLesson]) {
+    const harness = createTeachingModeHarness({ lesson });
+    try {
+      harness.click('Khám phá');
+      harness.click('Giảng bài');
+      let tree = harness.render();
+      const labContainer = () => mathComponentNodes(harness.render(), 'div').find(n => n.props.children?.type === 'InteractiveLab');
+      assert.equal(labContainer().props.hidden, false);
+      assert.match(mathComponentText(tree), /Khám phá tương tác/);
+      const reference = () => mathComponentNodes(harness.render(), 'div').find(n => n.props.className === 'teachingItem');
+      assert.equal(reference().props.hidden, true);
+      harness.click('Xem giải thích và ví dụ tham khảo');
+      assert.equal(reference().props.hidden, false);
+      assert.equal(labContainer().props.hidden, false);
+      harness.click('Thoát giảng bài');
+      assert.equal(reference().props.hidden, false);
+      harness.click('Giảng bài');
+      harness.click('Tiếp →');
+      assert.ok(!mathComponentText(harness.render()).includes('Khám phá · Nội dung'));
+      harness.click('← Trước');
+      assert.equal(labContainer().props.hidden, false);
+    } finally { harness.restore(); }
+  }
 });
 
 test('remaining Grade 3 and Grade 7 lessons resolve interactive activities without changing saved content', async () => {
@@ -4829,4 +4892,184 @@ test('equality exploration covers inverse operations and powers with gated autom
     assert.equal(mathComponentNodes(tree,'button').length,activity.options.length);
     runtime.unmount();
   });
+});
+
+test('angle lesson validates and bisector feedback waits until movement settles', () => {
+  const {angleLesson:lesson}=load('angle-lesson');
+  assert.equal(lesson.exercises.length,34);
+  assert.deepEqual(parseMathPack(packLessons([lesson])).lessons[0],lesson);
+  assert.equal(load('interactive-lab').interactiveLabFor(lesson),'angles');
+  const oldSet=globalThis.setTimeout, oldClear=globalThis.clearTimeout;
+  const timers=new Map();let id=0;
+  globalThis.setTimeout=(cb,delay)=>{assert.equal(delay,650);timers.set(++id,cb);return id;};
+  globalThis.clearTimeout=id=>timers.delete(id);
+  try {
+    for(const [round,target] of [[1,40],[2,65]]) {
+      const runtime=createMathComponentHooks();const Lab=loadMathComponent('AngleLab.tsx',runtime.hooks);let complete=0;
+      const render=()=>runtime.render(()=>Lab({round,onComplete:()=>complete++}));let tree=render();
+      assert.equal(timers.size,0);
+      mathComponentNodes(tree,'input')[0].props.onChange({target:{value:String(target)}});tree=render();
+      assert.equal(complete,0);assert.equal(timers.size,1);
+      mathComponentNodes(tree,'input')[0].props.onPointerDown();tree=render();assert.equal(timers.size,0);
+      mathComponentNodes(tree,'input')[0].props.onPointerUp();tree=render();
+      const callbacks=[...timers.values()];timers.clear();callbacks.forEach(cb=>cb());tree=render();
+      assert.equal(complete,1);assert.match(mathComponentText(tree),/Đúng rồi/);
+      mathComponentNodes(tree,'input')[0].props.onChange({target:{value:'20'}});tree=render();assert.ok(!mathComponentText(tree).includes('Đúng rồi'));
+      runtime.unmount();assert.equal(timers.size,0);
+    }
+  }finally{globalThis.setTimeout=oldSet;globalThis.clearTimeout=oldClear;}
+});
+
+test('angle exercise diagrams show givens and hide unknown measurements until revealed', () => {
+  const Diagram = loadMathComponent('AngleExerciseDiagram.tsx', {});
+  const lesson = load('angle-lesson').angleLesson;
+  const exercise = id => lesson.exercises.find(q => q.id === id);
+  const first = Diagram({ exercise: exercise('angle-g1'), reveal: false });
+  assert.deepEqual(first.props.labels, ['?', '?']);
+  assert.match(first.props.caption, /84°/);
+  assert.ok(!first.props.caption.includes('42'));
+  const reverse = Diagram({ exercise: exercise('angle-g2'), reveal: false });
+  assert.deepEqual(reverse.props.labels, ['32°', '']);
+  assert.equal(reverse.props.totalLabel, 'Cả góc aOb = ?');
+  assert.ok(!reverse.props.caption.includes('64'));
+  const unequal = Diagram({ exercise: exercise('angle-p3'), reveal: false });
+  assert.equal(unequal.props.equal, false);
+  assert.deepEqual(unequal.props.labels, ['43°', '?']);
+  for (const id of ['angle-g1', 'angle-g2', 'angle-p2', 'angle-p3', 'angle-e1', 'angle-e2', 'angle-e3', 'angle-e4', 'angle-e5', 'angle-e6']) {
+    const revealed = Diagram({ exercise: exercise(id), reveal: true });
+    assert.ok(revealed);
+    assert.ok(!revealed.props.caption.includes('?'));
+  }
+  assert.equal(Diagram({ exercise: { ...exercise('angle-g1'), prompt: 'Changed question' }, reveal: false }), null);
+  assert.equal(Diagram({ exercise: exercise('angle-f1'), reveal: false }), null);
+});
+
+ test('reverse bisector exploration marks the whole angle, not the unknown half', () => {
+  const runtime = createMathComponentHooks();
+  const Lab = loadMathComponent('AngleLab.tsx', runtime.hooks);
+  const tree = runtime.render(() => Lab({round: 3, onComplete() {}}));
+  const diagram = mathComponentNodes(tree, 'AngleDiagram')[0];
+  assert.deepEqual(diagram.props.labels, ['35°', '']);
+  assert.equal(diagram.props.totalLabel, 'Cả góc xOy = ?');
+  assert.equal(diagram.props.equal, true);
+  runtime.unmount();
+});
+
+test('crossing angles have correct answers and diagrams hide unknown values', () => {
+  const { angleLesson } = load('angle-lesson');
+  const Diagram = loadMathComponent('CrossingAngleDiagram.tsx', {});
+  for (const [angle, target, answer] of [[72, 'opposite', 72], [72, 'adjacent', 108], [118, 'adjacent', 62]]) {
+    const hidden = Diagram({ angle, target });
+    assert.ok(mathComponentNodes(hidden, 'text').some(n => mathComponentText(n) === '?'));
+    const solved = Diagram({ angle, target, reveal: true });
+    assert.ok(mathComponentNodes(solved, 'text').some(n => mathComponentText(n) === `${answer}°`));
+    assert.ok(!mathComponentNodes(solved, 'text').some(n => mathComponentText(n) === '?'));
+  }
+  for (const [id, answer] of [['cross-g1', '72'], ['cross-g2', '108'], ['cross-p1', '118'], ['cross-p2', '62'], ['cross-e1', '133']]) {
+    assert.equal(angleLesson.exercises.find(q => q.id === `angle-${id}`).answer, answer);
+  }
+});
+
+test('crossing angle activities give immediate feedback for both relationships', () => {
+  for (const [round, answer] of [[4, '65°'], [5, '115°']]) {
+    const runtime = createMathComponentHooks();
+    const Lab = loadMathComponent('CrossingAngleLab.tsx', runtime.hooks);
+    let complete = 0;
+    const render = () => runtime.render(() => Lab({ round, onComplete() { complete++; } }));
+    let tree = render();
+    mathComponentNodes(tree, 'button').find(n => mathComponentText(n) === '180°').props.onClick();
+    assert.match(mathComponentText(render()), /Chưa đúng/);
+    assert.equal(complete, 0);
+    tree = render();
+    mathComponentNodes(tree, 'button').find(n => mathComponentText(n) === answer).props.onClick();
+    assert.match(mathComponentText(render()), /Đúng rồi/);
+    assert.equal(complete, 1);
+    runtime.unmount();
+  }
+});
+
+test('angle extension balances tiers and verifies multi-step numerical answers', () => {
+  const { anglePractice } = load('angle-practice');
+  const { checkAnswer } = load('lessons');
+  assert.equal(new Set(anglePractice.map(q => q.id)).size, 15);
+  for (const [tier, count] of [['easy', 5], ['medium', 4], ['hard', 6]]) assert.equal(anglePractice.filter(q => q.difficulty === tier).length, count);
+  for (const id of ['b4', 'm5', 'm6']) assert.ok(!anglePractice.some(q => q.id === `angle-more-${id}`));
+  const expected = {
+    m1: 28 + 46, m2: 137 - 59, m4: 180 / 4,
+    h1: (180 - 64) / 2, h2: 180 / 2, h3: 132 / 2, h4: 144 / 4 + 144 / 2,
+    h5: 150 / 3 + (150 * 2 / 3) / 2, h6: 180 - 54,
+  };
+  for (const [id, answer] of Object.entries(expected)) {
+    const exercise = anglePractice.find(q => q.id === `angle-more-${id}`);
+    assert.equal(Number(exercise.answer), answer);
+    assert.equal(checkAnswer(exercise, String(answer), '').correct, true);
+    assert.ok(exercise.hint && exercise.solution);
+  }
+  const source = load('angle-lesson').angleLesson;
+  assert.equal(new Set(source.exercises.map(q => q.prompt)).size, source.exercises.length);
+  const { exerciseAngleDiagram } = load('angle-diagram');
+  assert.equal(exerciseAngleDiagram(anglePractice.find(q => q.id === 'angle-more-m1')).findWhole, true);
+});
+
+test('angle calculations omit consecutive repeated names without merging different angles or prose', () => {
+  const original = 'Vì Oz nằm trong góc xOy nên:\nxOy = xOz + zOy\nxOy = 28° + 46°\nxOy = 74°.\nVậy góc xOy bằng 74°.';
+  const formatted = formatCalculationSteps(original);
+  assert.equal(formatted, 'Vì Oz nằm trong góc xOy nên:\nxOy = xOz + zOy\n= 28° + 46°\n= 74°.\nVậy góc xOy bằng 74°.');
+  assert.equal(formatCalculationSteps(formatted), formatted);
+  assert.equal(formatCalculationSteps('Góc xOz = 60°\nGóc zOy = 40°\nGóc zOy = 100° − 60°'), 'xOz = 60°\nzOy = 40°\n= 100° − 60°');
+  assert.equal(formatCalculationSteps('xOy = 80°\nKiểm tra:\nxOy = 40° + 40°'), 'xOy = 80°\nKiểm tra:\nxOy = 40° + 40°');
+});
+
+test('multi-ray figures label only givens before revealing the requested angle', () => {
+  const { angleConstruction } = load('angle-construction');
+  for (const [id, answer] of [['h1',58],['h2',90],['h3',66],['h4',108],['h5',100]]) {
+    const question = angleConstruction(id, false);
+    const solution = angleConstruction(id, true);
+    const labels = question.items.filter(p => 'text' in p).map(p => p.text);
+    assert.ok(labels.some(s => s.endsWith('= ?')));
+    assert.ok(!labels.some(s => s.endsWith(`= ${answer}°`)));
+    assert.ok(solution.items.some(p => 'text' in p && p.text.endsWith(`= ${answer}°`)));
+    for(const item of question.items) for(const [x,y] of ('points' in item ? item.points : [item.at])) {
+      assert.ok(x >= 0 && x <= 440 && y >= 0 && y <= 305);
+    }
+  }
+  const protractor = angleConstruction('b4', false);
+  assert.ok(protractor.items.some(p => 'text' in p && p.text === '50'));
+  assert.ok(protractor.items.some(p => 'text' in p && p.text === '130'));
+});
+
+test('angle solution grouping separates prose and aligns continuation rows', () => {
+  const { angleSolutionGroups } = load('format');
+  assert.deepEqual(angleSolutionGroups('Vì Oz nằm trong góc xOy nên:\nxOy = xOz + zOy\nxOy = 28° + 46°\nxOy = 74°.\nVậy xOy = 74°.'), [
+    {text: 'Vì Oz nằm trong góc xOy nên:'},
+    {equations: [{left:'xOy',right:'xOz + zOy'}, {left:'',right:'28° + 46°'}, {left:'',right:'74°.'}]},
+    {text:'Vậy xOy = 74°.'},
+  ]);
+});
+
+test('grouped practice labels preserve original exercise identity for diagrams', () => {
+  const runtime = createMathComponentHooks();
+  const Exercise = loadMathComponent('Exercise.tsx', runtime.hooks);
+  const exercise = load('angle-lesson').angleLesson.exercises.find(q => q.id === 'angle-more-m1');
+  const tree = runtime.render(() => Exercise({ exercise, displayPrompt: `a) ${exercise.prompt}`, onChange() {} }));
+  assert.ok(mathComponentText(tree).includes(`a) ${exercise.prompt}`));
+  const diagram = mathComponentNodes(tree, 'AngleExerciseDiagram')[0];
+  assert.equal(diagram.props.exercise, exercise);
+  assert.ok(load('angle-diagram').exerciseAngleDiagram(diagram.props.exercise));
+  runtime.unmount();
+});
+
+test('all current angle extra practice groups 2 through 4 have question and solution figures', () => {
+  const { exerciseAngleDiagram } = load('angle-diagram');
+  const { angleConstruction } = load('angle-construction');
+  const exercises = load('angle-lesson').angleLesson.exercises.filter(q =>
+    /^angle-more-[mh]/.test(q.id) || /^angle-(cross-e|e\d)/.test(q.id));
+  assert.equal(exercises.length, 18);
+  for (const exercise of exercises) assert.ok(exerciseAngleDiagram(exercise), exercise.id);
+  const labels = reveal => angleConstruction('m4', reveal).items.filter(p => 'text' in p).map(p => p.text);
+  assert.ok(labels(false).includes('3a'));
+  assert.ok(!labels(false).includes('45°'));
+  assert.ok(labels(true).includes('45°'));
+  assert.ok(labels(true).includes('135°'));
+  assert.ok(angleConstruction('equal-angles', true).items.some(p => p.text === 'Bằng nhau nhưng không đối đỉnh'));
 });

@@ -1,3 +1,5 @@
+import { formatCalculationSteps } from '@/lib/math/format';
+import AngleExampleDiagram from './AngleExampleDiagram';
 import EqualityExample from './EqualityExample';
 import { equalityExamples } from '@/lib/math/equality-examples';
 import { equalityLesson } from '@/lib/math/equality-lesson';
@@ -319,7 +321,9 @@ export default function MathLesson({
       ? []
       : [
           ...(interactiveSection ? [{ type: 'lab' as const }] : []),
-          ...blocks.map((block) => ({ type: 'block' as const, block })),
+          ...(interactiveSection
+            ? []
+            : blocks.map((block) => ({ type: 'block' as const, block }))),
           ...exercises.map((exercise) => ({
             type: 'exercise' as const,
             exercise,
@@ -344,7 +348,11 @@ export default function MathLesson({
             (warmup !== null && value === 'foundation')
               ? 1
               : 0) +
-              lesson.blocks.filter((block) => block.section === value).length +
+              ((hasLab && value === 'explore') ||
+              (warmup !== null && value === 'foundation')
+                ? 0
+                : lesson.blocks.filter((block) => block.section === value)
+                    .length) +
               lesson.exercises.filter((exercise) => exercise.section === value)
                 .length
           ),
@@ -371,9 +379,9 @@ export default function MathLesson({
           ? 'Khởi động tương tác'
           : 'Khám phá tương tác'
         : teachingItem?.type === 'exercise'
-          ? `Câu ${teachingIndex - blocks.length + 1 - (hasLab && section === 'explore' ? 1 : 0)}/${exercises.length}`
+          ? `Câu ${exercises.findIndex((exercise) => exercise.id === teachingItem.exercise.id) + 1}/${exercises.length}`
           : teachingItem?.type === 'block'
-            ? `Nội dung ${teachingIndex + 1 - (hasLab && section === 'explore' ? 1 : 0)}/${blocks.length}`
+            ? `Nội dung ${blocks.findIndex((block) => block.id === teachingItem.block.id) + 1}/${blocks.length}`
             : 'Nội dung';
   const moveTeaching = useCallback(
     (direction: -1 | 1) => {
@@ -642,17 +650,18 @@ export default function MathLesson({
                             )
                           )}
                         </div>
-                        {!teachingMode && blocks.length > 0 && (
-                          <button
-                            type="button"
-                            aria-expanded={showReference}
-                            onClick={() => setShowReference(!showReference)}
-                          >
-                            {showReference
-                              ? 'Ẩn nội dung tham khảo'
-                              : 'Xem giải thích và ví dụ tham khảo'}
-                          </button>
-                        )}
+                        {blocks.length > 0 &&
+                          (!teachingMode || teachingItem?.type === 'lab') && (
+                            <button
+                              type="button"
+                              aria-expanded={showReference}
+                              onClick={() => setShowReference(!showReference)}
+                            >
+                              {showReference
+                                ? 'Ẩn nội dung tham khảo'
+                                : 'Xem giải thích và ví dụ tham khảo'}
+                            </button>
+                          )}
                       </>
                     )}
                     {renderedBlocks.map((block) => (
@@ -660,12 +669,12 @@ export default function MathLesson({
                         className={s.teachingItem}
                         key={block.id}
                         hidden={
-                          (!teachingMode &&
-                            interactiveSection &&
-                            !showReference) ||
-                          (teachingMode &&
-                            (teachingItem?.type !== 'block' ||
-                              teachingItem.block.id !== block.id))
+                          interactiveSection
+                            ? !showReference ||
+                              (teachingMode && teachingItem?.type !== 'lab')
+                            : teachingMode &&
+                              (teachingItem?.type !== 'block' ||
+                                teachingItem.block.id !== block.id)
                         }
                       >
                         {editButton({ block: block.id }, block.title)}
@@ -687,8 +696,9 @@ export default function MathLesson({
                           />
                         ) : (
                           <>
+                            <AngleExampleDiagram block={block} />
                             <p className={s.prose}>
-                              <MathText>{block.text}</MathText>
+                              <MathText>{formatCalculationSteps(block.text)}</MathText>
                             </p>
                             <Diagram block={block} />
                           </>
@@ -745,7 +755,11 @@ export default function MathLesson({
                         <Exercise
                           key={JSON.stringify(exercise)}
                           exercise={exercise}
-                          active={!teachingMode || (teachingItem?.type === 'exercise' && teachingItem.exercise.id === exercise.id)}
+                          active={
+                            !teachingMode ||
+                            (teachingItem?.type === 'exercise' &&
+                              teachingItem.exercise.id === exercise.id)
+                          }
                           result={progress.results[exercise.id]}
                           onChange={(result) => saveResult(exercise.id, result)}
                         />
