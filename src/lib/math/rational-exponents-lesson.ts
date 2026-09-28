@@ -1,5 +1,4 @@
 import type { MathExercise, MathLessonData } from './lessons';
-import { rationalExponentEquations } from './rational-exponent-equations';
 
 export const rationalExponentReview: MathExercise[] = [
   {
@@ -986,7 +985,6 @@ export const rationalExponentsLesson: MathLessonData = {
       tolerance: 0,
       mistakes: [],
     },
-    ...rationalExponentEquations,
   ],
 };
 

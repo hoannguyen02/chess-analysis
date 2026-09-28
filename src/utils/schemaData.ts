@@ -3,7 +3,7 @@ export const schemaData = {
   logo: 'https://www.limachess.com/images/logo.svg',
   '@type': 'HealthAndBeautyBusiness',
   image: ['https://www.limachess.com/images/logo.svg'],
-  name: 'LIMA CHESS',
+  name: 'LIMA',
   address: {
     '@type': 'PostalAddress',
     streetAddress:

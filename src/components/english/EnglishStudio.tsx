@@ -365,14 +365,14 @@ function EnglishStudioContent() {
               <VscBook size={22} />
             </span>
             <div>
-              LIMA English
+              LIMA
               <p className={s.eyebrow}>A little better, every day</p>
             </div>
           </div>
           <div className={s.actions}>
             <LearnerLanguagePicker />
             {!editing && !practice && !teaching && (
-              <div className={s.tabs} aria-label="LIMA English sections">
+              <div className={s.tabs} aria-label="LIMA sections">
                 <button
                   type="button"
                   aria-pressed={tab === 'lessons'}

@@ -374,7 +374,7 @@ export default function TeachSession({
           />
         )}
         <div className={s.teachStage}>
-          <p className={s.eyebrow}>LIMA English · {lesson.topic}</p>
+          <p className={s.eyebrow}>LIMA · {lesson.topic}</p>
           {finished ? (
             <>
               <h2 className={s.teachPrompt}>{t('What did we learn today?')}</h2>

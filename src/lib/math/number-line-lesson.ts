@@ -178,10 +178,10 @@ export const numberLineLesson: MathLessonData = {
       "id": "math-number-line-7-q5",
       "section": "extra",
       "kind": "choice",
-      "prompt": "Điểm biểu diễn -2 nằm phía nào so với 0?",
-      "answer": "Bên trái",
-      "hint": "Số âm nằm bên trái 0.",
-      "solution": "-2 < 0 nên điểm biểu diễn -2 ở bên trái 0.",
+      "prompt": "Điểm biểu diễn 4 nằm phía nào so với 0?",
+      "answer": "Bên phải",
+      "hint": "Số dương nằm bên phải 0.",
+      "solution": "4 > 0 nên điểm biểu diễn 4 ở bên phải 0.",
       "options": [
         "Bên trái",
         "Bên phải",
@@ -254,10 +254,10 @@ export const numberLineLesson: MathLessonData = {
       "id": "math-number-line-7-q9",
       "section": "extra",
       "kind": "fraction",
-      "prompt": "Mỗi đơn vị chia thành 5 phần bằng nhau. A ở vạch thứ ba bên phải 0. A biểu diễn số nào?",
-      "answer": "3/5",
-      "hint": "Mỗi khoảng nhỏ dài 1/5.",
-      "solution": "A cách 0 ba khoảng về bên phải nên biểu diễn 3/5.",
+      "prompt": "Mỗi đơn vị chia thành 7 phần bằng nhau. A cách 0 năm khoảng nhỏ về bên phải. A biểu diễn số nào?",
+      "answer": "5/7",
+      "hint": "Mỗi khoảng nhỏ dài 1/7 đơn vị.",
+      "solution": "A cách 0 năm khoảng về bên phải nên biểu diễn 5/7.",
       "options": [],
       "unit": "",
       "simplified": true,
@@ -272,10 +272,10 @@ export const numberLineLesson: MathLessonData = {
       "id": "math-number-line-7-q10",
       "section": "extra",
       "kind": "fraction",
-      "prompt": "Mỗi đơn vị chia thành 4 phần bằng nhau. B ở vạch thứ ba bên trái 0. B biểu diễn số nào?",
-      "answer": "-3/4",
-      "hint": "Chú ý dấu âm.",
-      "solution": "B ở bên trái 0, cách 0 ba khoảng 1/4 nên biểu diễn -3/4.",
+      "prompt": "Mỗi đơn vị chia thành 5 phần bằng nhau. B cách 0 bốn khoảng nhỏ về bên trái. B biểu diễn số nào?",
+      "answer": "-4/5",
+      "hint": "Đi sang trái 0 nên số cần tìm là số âm.",
+      "solution": "B ở bên trái 0, cách 0 bốn khoảng 1/5 nên biểu diễn -4/5.",
       "options": [],
       "unit": "",
       "simplified": true,
@@ -326,10 +326,10 @@ export const numberLineLesson: MathLessonData = {
       "id": "math-number-line-7-q13",
       "section": "extra",
       "kind": "fraction",
-      "prompt": "Viết hỗn số 1 2/3 thành phân số để biểu diễn trên trục số.",
-      "answer": "5/3",
-      "hint": "Nhân phần nguyên với mẫu rồi cộng tử.",
-      "solution": "1 2/3 = (1 × 3 + 2)/3 = 5/3.",
+      "prompt": "Viết hỗn số 3 2/5 thành phân số để biểu diễn trên trục số.",
+      "answer": "17/5",
+      "hint": "Nhân 3 với mẫu 5 rồi cộng tử 2.",
+      "solution": "3 2/5 = (3 × 5 + 2)/5 = 17/5.",
       "options": [],
       "unit": "",
       "simplified": true,
@@ -362,10 +362,10 @@ export const numberLineLesson: MathLessonData = {
       "id": "math-number-line-7-q15",
       "section": "extra",
       "kind": "choice",
-      "prompt": "Điểm biểu diễn 7/3 nằm giữa hai số nguyên liên tiếp nào?",
+      "prompt": "Điểm biểu diễn 11/4 nằm giữa hai số nguyên liên tiếp nào?",
       "answer": "2 và 3",
-      "hint": "7/3 = 2 1/3.",
-      "solution": "2 = 6/3 < 7/3 < 9/3 = 3.",
+      "hint": "So sánh 11/4 với 8/4 và 12/4.",
+      "solution": "2 = 8/4 < 11/4 < 12/4 = 3.",
       "options": [
         "1 và 2",
         "2 và 3",
@@ -384,14 +384,14 @@ export const numberLineLesson: MathLessonData = {
       "id": "math-number-line-7-q16",
       "section": "extra",
       "kind": "choice",
-      "prompt": "Điểm biểu diễn -5/4 nằm giữa hai số nguyên liên tiếp nào?",
-      "answer": "-2 và -1",
-      "hint": "So sánh với -8/4 và -4/4.",
-      "solution": "-2 = -8/4 < -5/4 < -4/4 = -1.",
+      "prompt": "Điểm biểu diễn -8/3 nằm giữa hai số nguyên liên tiếp nào?",
+      "answer": "-3 và -2",
+      "hint": "So sánh -8/3 với -9/3 và -6/3.",
+      "solution": "-3 = -9/3 < -8/3 < -6/3 = -2.",
       "options": [
+        "-3 và -2",
         "-2 và -1",
-        "-1 và 0",
-        "1 và 2"
+        "2 và 3"
       ],
       "unit": "",
       "simplified": false,
@@ -406,10 +406,10 @@ export const numberLineLesson: MathLessonData = {
       "id": "math-number-line-7-q17",
       "section": "extra",
       "kind": "fraction",
-      "prompt": "Mỗi đơn vị chia thành 4 phần. Từ -1 đi sang phải một khoảng nhỏ, em đến số nào?",
-      "answer": "-3/4",
-      "hint": "-1 = -4/4.",
-      "solution": "-1 + 1/4 = -4/4 + 1/4 = -3/4.",
+      "prompt": "Mỗi đơn vị chia thành 5 phần bằng nhau. Từ -1 đi sang phải hai khoảng nhỏ, em đến số nào?",
+      "answer": "-3/5",
+      "hint": "-1 = -5/5. Đi sang phải là cộng thêm 2/5.",
+      "solution": "-1 + 2/5 = -5/5 + 2/5 = -3/5.",
       "options": [],
       "unit": "",
       "simplified": true,
@@ -442,14 +442,14 @@ export const numberLineLesson: MathLessonData = {
       "id": "math-number-line-7-q19",
       "section": "extra",
       "kind": "choice",
-      "prompt": "Số nào có cùng điểm biểu diễn với 1 1/2?",
-      "answer": "6/4",
-      "hint": "Rút gọn từng phân số.",
-      "solution": "6/4 = 3/2 = 1 1/2.",
+      "prompt": "Số nào có cùng điểm biểu diễn với 2 2/5?",
+      "answer": "24/10",
+      "hint": "Đổi hỗn số thành phân số rồi so sánh các giá trị.",
+      "solution": "2 2/5 = 12/5 = 24/10.",
       "options": [
-        "6/4",
-        "2/3",
-        "4/6"
+        "24/10",
+        "12/10",
+        "10/24"
       ],
       "unit": "",
       "simplified": false,
@@ -464,14 +464,26 @@ export const numberLineLesson: MathLessonData = {
       "id": "math-number-line-7-q20",
       "section": "extra",
       "kind": "fraction",
-      "prompt": "A biểu diễn -3/2. Điểm đối xứng với A qua 0 biểu diễn số nào?",
-      "answer": "3/2",
+      "prompt": "A biểu diễn -5/3. Điểm đối xứng với A qua 0 biểu diễn số nào?",
+      "answer": "5/3",
       "hint": "Hai điểm đối xứng qua 0 biểu diễn hai số đối nhau.",
-      "solution": "Số đối của -3/2 là 3/2.",
+      "solution": "Số đối của -5/3 là 5/3.",
       "solutionNumberLine": {
-        "min": -2, "max": 2, "divisions": 2,
-        "points": [{ "value": "-3/2", "name": "A" }, { "value": "3/2", "name": "A′", "emphasis": true }],
-        "caption": "A và A′ nằm ở hai phía của 0, cùng cách 0 một khoảng bằng 3/2 đơn vị."
+        "min": -2,
+        "max": 2,
+        "divisions": 3,
+        "points": [
+          {
+            "value": "-5/3",
+            "name": "A"
+          },
+          {
+            "value": "5/3",
+            "name": "A′",
+            "emphasis": true
+          }
+        ],
+        "caption": "A và A′ nằm ở hai phía của 0, cùng cách 0 một khoảng bằng 5/3 đơn vị."
       },
       "options": [],
       "unit": "",
@@ -492,8 +504,24 @@ export const numberLineLesson: MathLessonData = {
       "hint": "Số nhỏ nhất ở bên trái nhất.",
       "solution": "-1 < -3/4 < 0 < 1 1/2.",
       "solutionNumberLine": {
-        "min": -2, "max": 2, "divisions": 4,
-        "points": [{ "value": "-1", "emphasis": true }, { "value": "-3/4" }, { "value": "0" }, { "value": "1 1/2" }],
+        "min": -2,
+        "max": 2,
+        "divisions": 4,
+        "points": [
+          {
+            "value": "-1",
+            "emphasis": true
+          },
+          {
+            "value": "-3/4"
+          },
+          {
+            "value": "0"
+          },
+          {
+            "value": "1 1/2"
+          }
+        ],
         "caption": "Điểm biểu diễn -1 nằm ngoài cùng bên trái trong các điểm đã cho."
       },
       "options": [
@@ -520,8 +548,24 @@ export const numberLineLesson: MathLessonData = {
       "hint": "Số lớn nhất ở bên phải nhất.",
       "solution": "-1/2 < 7/4 < 2 < 2 1/4.",
       "solutionNumberLine": {
-        "min": -1, "max": 3, "divisions": 4,
-        "points": [{ "value": "2" }, { "value": "7/4" }, { "value": "2 1/4", "emphasis": true }, { "value": "-1/2" }],
+        "min": -1,
+        "max": 3,
+        "divisions": 4,
+        "points": [
+          {
+            "value": "2"
+          },
+          {
+            "value": "7/4"
+          },
+          {
+            "value": "2 1/4",
+            "emphasis": true
+          },
+          {
+            "value": "-1/2"
+          }
+        ],
         "caption": "Điểm biểu diễn 2 1/4 nằm ngoài cùng bên phải trong các điểm đã cho."
       },
       "options": [
@@ -543,14 +587,23 @@ export const numberLineLesson: MathLessonData = {
       "id": "math-number-line-7-q23",
       "section": "extra",
       "kind": "number",
-      "prompt": "Chọn số phần bằng nhau ít nhất để chia mỗi đơn vị sao cho cả 1/2 và 2/3 đều nằm trên các vạch chia.",
-      "answer": "6",
-      "hint": "Tìm BCNN của 2 và 3.",
-      "solution": "BCNN(2, 3) = 6. Khi đó 1/2 = 3/6 và 2/3 = 4/6.",
+      "prompt": "Chọn số phần bằng nhau ít nhất để chia mỗi đơn vị sao cho cả 1/3 và 3/4 đều nằm trên các vạch chia.",
+      "answer": "12",
+      "hint": "Tìm BCNN của 3 và 4.",
+      "solution": "BCNN(3, 4) = 12. Khi đó 1/3 = 4/12 và 3/4 = 9/12.",
       "solutionNumberLine": {
-        "min": 0, "max": 1, "divisions": 6,
-        "points": [{ "value": "1/2" }, { "value": "2/3" }],
-        "caption": "Đoạn từ 0 đến 1 chia thành 6 phần bằng nhau; hai điểm ở vạch thứ 3 và thứ 4."
+        "min": 0,
+        "max": 1,
+        "divisions": 12,
+        "points": [
+          {
+            "value": "1/3"
+          },
+          {
+            "value": "3/4"
+          }
+        ],
+        "caption": "Đoạn từ 0 đến 1 chia thành 12 phần bằng nhau; hai điểm ở vạch thứ 4 và thứ 9."
       },
       "options": [],
       "unit": "",
@@ -571,8 +624,26 @@ export const numberLineLesson: MathLessonData = {
       "hint": "Chia mỗi đơn vị thành hai phần bằng nhau.",
       "solution": "Chia mỗi đơn vị thành 2 phần. Từ 0: -3/2 ở 3 khoảng bên trái; -1 ở 2 khoảng bên trái; 1/2 ở 1 khoảng bên phải; 1 1/2 = 3/2 ở 3 khoảng bên phải. Thứ tự từ trái sang phải: -3/2 < -1 < 0 < 1/2 < 1 1/2.",
       "solutionNumberLine": {
-        "min": -2, "max": 2, "divisions": 2,
-        "points": [{ "value": "-3/2" }, { "value": "-1" }, { "value": "0" }, { "value": "1/2" }, { "value": "1 1/2" }],
+        "min": -2,
+        "max": 2,
+        "divisions": 2,
+        "points": [
+          {
+            "value": "-3/2"
+          },
+          {
+            "value": "-1"
+          },
+          {
+            "value": "0"
+          },
+          {
+            "value": "1/2"
+          },
+          {
+            "value": "1 1/2"
+          }
+        ],
         "caption": "Mỗi đoạn đơn vị được chia thành 2 phần bằng nhau."
       },
       "options": [],

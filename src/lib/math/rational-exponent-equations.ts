@@ -149,12 +149,3 @@ export function updateExponentCoefficientNotation(lessons: MathLessonData[]): Ma
     }) };
   });
 }
-
-export function addRationalExponentEquations(lessons: MathLessonData[]): MathLessonData[] {
-  return lessons.map(lesson => {
-    if (lesson.id !== 'math-rational-exponents-7') return lesson;
-    const missing = rationalExponentEquations.filter(e => !lesson.exercises.some(old => old.id === e.id));
-    if (!missing.length || lesson.exercises.length + missing.length > 100) return lesson;
-    return { ...lesson, exercises: [...lesson.exercises, ...structuredClone(missing)] };
-  });
-}

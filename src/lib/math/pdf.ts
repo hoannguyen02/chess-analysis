@@ -1,13 +1,20 @@
+import { angleConstruction } from './angle-construction';
 import { exerciseLabels } from './exercise-groups';
+import { exerciseAngleDiagram } from './angle-diagram';
 import { mathXPdfPath, mathXStrokeWidth } from './math-variable-glyph';
 import { LIMA_CONTACT } from '../brand/contact';
 import { LIMA_LOGO_PDF } from '../brand/logo';
 import {
+  angleSolutionGroups,
   cancellationParts,
   cancellationText,
   formatCalculationSteps,
+  calculationContinuation,
+  isCalculationOnlySolution,
   formatMultiplicationNotation,
   variableParts,
+  angleNameParts,
+  isAngleName,
   stripRedundantFractionParentheses,
   wholeNumberFraction,
 } from './format';
@@ -283,9 +290,24 @@ export type PracticePdfOptions = { includeKnowledgeSummary?: boolean };
  * Word problems keep their dedicated workbook rows; tables/written tasks have
  * model solutions rather than a single automatically checked answer.
  */
-export function printableShortSolution(exercise: MathExercise): string {
+export function printableShortSolution(exercise: MathExercise, grade?: number): string {
+  if (grade === 7 && exercise.kind !== 'choice' &&
+      exercise.solutionStyle !== 'explanation' && exercise.solutionStyle !== 'answer-only') {
+    const working = exercise.solution.trim().replace(/^(?:Bài giải|Lời giải(?: mẫu)?|Cách làm)\s*:\s*/iu, '');
+    return `Bài giải:\n${formatCalculationSteps(working)}`;
+  }
   if (exercise.table || exercise.kind === 'written')
     return `${exercise.kind === 'written' ? 'Lời giải mẫu' : 'Lời giải'}: ${exercise.solution}`;
+  // Find-x workings already end in the answer. Preserve all authored equations
+  // and explanations, without adding a duplicate answer or method label.
+  if ((exercise.kind === 'number' || exercise.kind === 'fraction') &&
+      !exercise.unit && !exercise.solutionStyle &&
+      /^Tìm\s+x\b/iu.test(exercise.prompt.trim()) &&
+      exercise.solution.includes('=') && variableParts(exercise.solution).includes('x'))
+    return calculationContinuation(exercise.prompt, exercise.solution);
+  if ((exercise.kind === 'number' || exercise.kind === 'fraction') &&
+      !exercise.unit && !exercise.solutionStyle && isCalculationOnlySolution(exercise.solution))
+    return calculationContinuation(exercise.prompt, exercise.solution);
   const optionIndex = exercise.options.indexOf(exercise.answer);
   const normalized = (text: string) =>
     text
@@ -298,15 +320,16 @@ export function printableShortSolution(exercise: MathExercise): string {
   const answer =
     exercise.kind === 'choice'
       ? optionIndex >= 0
-        ? `${String.fromCharCode(65 + optionIndex)}${answerOnly ? `. ${exercise.answer}` : ''}`
+        ? `${String.fromCharCode(65 + optionIndex)}${answerOnly || grade === 7 ? `. ${exercise.answer}` : ''}`
         : exercise.answer
-      : `${exercise.answer}${exercise.unit ? ` ${exercise.unit}` : ''}`;
+      : `${exercise.answer}${exercise.unit === '°' ? '°' : exercise.unit ? ` ${exercise.unit}` : ''}`;
   const heading = `Đáp án: ${answer}`;
   // Only an explicit author decision (or exact duplicate) can hide working.
   if (answerOnly) return heading;
   const style =
     exercise.solutionStyle ??
-    (/=/u.test(exercise.solution) ? 'method' : 'explanation');
+    (grade === 7 && exercise.kind === 'choice' ? 'explanation' :
+      /=/u.test(exercise.solution) ? 'method' : 'explanation');
   return `${heading}\n${style === 'method' ? 'Cách làm' : 'Giải thích'}: ${formatCalculationSteps(exercise.solution)}`;
 }
 
@@ -352,9 +375,24 @@ export function createPracticePdf(
     top: number,
     size: number,
     color = '0.09 0.14 0.24',
-    italic = false
+    italic = false,
+    angleDrawn = false
   ) {
     measure(text, size);
+    const angles = angleNameParts(text);
+    if (!angleDrawn && angles.some(isAngleName)) {
+      for (const part of angles) {
+        const width = measure(part, size);
+        if (part) draw(part, x, top, size, color, false, true);
+        if (isAngleName(part)) {
+          page.push('/AngleHat BMC',
+            `q ${color} RG ${num(size * 0.055)} w 1 j ${num(x + width * 0.01)} ${num(H - top - size * 0.10)} m ${num(x + width * 0.5)} ${num(H - top + size * 0.10)} l ${num(x + width * 0.99)} ${num(H - top - size * 0.10)} l S Q`,
+            'EMC');
+        }
+        x += width;
+      }
+      return;
+    }
     const parts = variableParts(text);
     if (!italic && parts.includes('x')) {
       for (const part of parts) {
@@ -531,7 +569,7 @@ export function createPracticePdf(
     // A single, faint mark preserves attribution without competing with print text.
     // Paint behind all content without advancing y or changing pagination.
     // Mark as a decorative artifact; this is branding, not edit protection.
-    const watermark = 'LIMA Math';
+    const watermark = 'LIMA';
     const watermarkSize = 30;
     const halfWidth = measure(watermark, watermarkSize) / 2;
     const glyphs = Array.from(watermark, (c) =>
@@ -554,7 +592,7 @@ export function createPracticePdf(
       `q ${scale} 0 0 ${-scale} ${M} ${H - top + 40 * scale} cm ${LIMA_LOGO_PDF} Q`
     );
     draw(
-      'LIMA Math',
+      'LIMA',
       M + size + 10,
       first ? 36 : 30,
       first ? 21 : 14,
@@ -567,7 +605,7 @@ export function createPracticePdf(
     }
     const titleY = first ? 91 : 70;
     draw(
-      mode === 'worksheet' ? 'PHIẾU BÀI TẬP' : 'ĐÁP ÁN & HƯỚNG DẪN GIẢI',
+      mode === 'worksheet' ? 'PHIẾU BÀI TẬP' : lesson.grade === 7 ? 'BÀI GIẢI' : 'ĐÁP ÁN & HƯỚNG DẪN GIẢI',
       M,
       titleY,
       17
@@ -984,7 +1022,9 @@ export function createPracticePdf(
     if (options.includeKnowledgeSummary !== false && review)
       knowledgeSummary(review);
     paragraph(
-      'Làm bài theo thứ tự hoặc chọn câu cần ôn. Trình bày các bước giải; chú ý đơn vị và yêu cầu tối giản.',
+      lesson.interactiveLab === 'angles'
+        ? 'Làm bài theo thứ tự hoặc chọn câu cần ôn. Trình bày các bước giải và nêu tính chất góc được sử dụng. Ghi kí hiệu độ (°) sau số đo góc.'
+        : 'Làm bài theo thứ tự hoặc chọn câu cần ôn. Trình bày các bước giải; chú ý đơn vị và yêu cầu tối giản.',
       10,
       14
     );
@@ -1124,17 +1164,97 @@ export function createPracticePdf(
     }
     y += 90;
   }
+  function drawAngleFigure(figure: NonNullable<ReturnType<typeof exerciseAngleDiagram>>) {
+    const reveal = mode === 'solutions';
+    const scale = 0.62, left = (W - 440 * scale) / 2, top = y + 12;
+    if (figure.kind === 'construction') {
+      const { items } = angleConstruction(figure.id, reveal);
+      page.push('/AngleDiagram BMC');
+      for (const item of items) {
+        if ('points' in item) {
+          const path = item.points.map(([x, yy], i) => `${num(left+x*scale)} ${num(H-top-yy*scale)} ${i ? 'l' : 'm'}`).join(' ');
+          page.push(`q 0.20 0.25 0.33 RG 0.8 w ${item.dashed ? '[3 2] 0 d' : ''} ${path} S Q`);
+        } else {
+          const size=item.size*scale;
+          draw(item.text,left+item.at[0]*scale-measure(item.text,size)/2,top+item.at[1]*scale-size/2,size);
+        }
+      }
+      page.push('EMC');
+      y += 305 * scale + 20;
+      return;
+    }
+    const cy = figure.kind === 'crossing' ? 180 : 230;
+    const point = (angle: number, radius: number): [number, number] => [
+      left + (220 + radius * Math.cos(angle * Math.PI / 180)) * scale,
+      top + (cy - radius * Math.sin(angle * Math.PI / 180)) * scale,
+    ];
+    const center = point(0, 0);
+    const pathPoint = ([x, top]: [number, number]) => `${num(x)} ${num(H - top)}`;
+    const stroke = (a: [number, number], b: [number, number], color = '0.20 0.25 0.33') =>
+      page.push(`q ${color} RG 1 w ${pathPoint(a)} m ${pathPoint(b)} l S Q`);
+    const label = (text: string, p: [number, number], size = 10) =>
+      draw(text, p[0] - measure(text, size) / 2, p[1] - size / 2, size);
+    const value = (n: number, known: boolean) => known || reveal ? `${String(n).replace('.', ',')}°` : '?';
+    // Short vector segments keep the arcs crisp at any print resolution.
+    const arc = (from: number, to: number, radius: number, color: string, fill = false, dashed = false) => {
+      const points = Array.from({ length: 61 }, (_, i) => point(from + (to - from) * i / 60, radius));
+      const path = `${pathPoint(points[0])} m ` + points.slice(1).map(p => `${pathPoint(p)} l`).join(' ');
+      if (fill) page.push(`q 0.94 0.96 0.98 rg ${pathPoint(center)} m ${points.map(p => `${pathPoint(p)} l`).join(' ')} h f Q`);
+      page.push(`q ${color} RG 0.8 w ${dashed ? '[3 2] 0 d' : ''} ${path} S Q`);
+    };
+    page.push('/AngleDiagram BMC');
+    let rays: number[], names: string[];
+    if (figure.kind === 'crossing') {
+      const { angle, target } = figure;
+      const from = target === 'opposite' ? 180 : angle;
+      const to = target === 'opposite' ? 180 + angle : 180;
+      arc(0, angle, 45, '0.20 0.25 0.33', true);
+      arc(from, to, 45, '0.10 0.29 0.70', true);
+      label(`${angle}°`, point(angle / 2, 78));
+      label(value(to - from, false), point((from + to) / 2, 78));
+      rays = [0, angle, 180, 180 + angle];
+      names = ['x', 'y', 'x′', 'y′'];
+    } else {
+      const { total, split, given, bisector } = figure;
+      rays = [0, split, total];
+      names = figure.names || ['x', 'z', 'y'];
+      const equal = bisector || (reveal && split === total - split);
+      [[0, split, 60, 95], [split, total, 105, 138]].forEach(([from, to, radius, textRadius], i) => {
+        arc(from, to, radius, '0.10 0.29 0.70', true);
+        const mid = (from + to) / 2;
+        if (equal) stroke(point(mid, radius - 5), point(mid, radius + 5));
+        if (!figure.findWhole || reveal || given[i + 1])
+          label(value(to - from, given[i + 1]), point(mid, textRadius));
+      });
+      if (figure.findWhole) arc(0, total, 165, '0.35 0.20 0.55', false, true);
+      label(`Góc ${names[0]}O${names[2]} = ${value(total, given[0])}`, [W / 2, top - 2], 10);
+    }
+    rays.forEach((angle, i) => {
+      const radius = figure.kind === 'crossing' ? 145 : 180;
+      stroke(center, point(angle, radius));
+      if (figure.kind === 'split') {
+        const end = point(angle, radius), base = point(angle, radius - 10);
+        const dx = 3 * Math.sin(angle * Math.PI / 180), dy = 3 * Math.cos(angle * Math.PI / 180);
+        stroke(end, [base[0] + dx, base[1] + dy]);
+        stroke(end, [base[0] - dx, base[1] - dy]);
+      }
+      label(names[i], point(angle, radius + 22));
+    });
+    label('O', [center[0] - 7, center[1] + 12]);
+    page.push('EMC');
+    y += (figure.kind === 'crossing' ? 360 : 275) * scale + 20;
+  }
   function writingHeight(e: MathExercise, width = W - 2 * M) {
     if (e.kind === 'choice' || e.table) return 0;
     const workbookRows = printableWordProblemRows(e);
     const working = e.solutionStyle === 'answer-only' ? e.answer : workbookRows
       ? workbookRows.filter(row => row.role !== 'heading').map(row => row.text).join('\n')
-      : formatCalculationSteps(e.solution);
+      : calculationContinuation(e.prompt, e.solution);
     const measurable = Array.from(working.normalize('NFC'), char =>
       /\s/u.test(char) || font.glyph(char.codePointAt(0)!) ? char : '?'
     ).join('');
     const height = layout(measurable, 11, width).reduce((sum, row) => sum + row.height, 0);
-    return Math.max(2, Math.ceil(height / 18) + 1, e.solutionNumberLine ? 5 : 0) * 18;
+    return Math.max(1, Math.ceil(height / 18), e.solutionNumberLine ? 5 : 0) * 18;
   }
   function dottedRows(left: number, width: number, height: number) {
     for (let space = 0; space < height; space += 18) {
@@ -1148,17 +1268,19 @@ export function createPracticePdf(
   function compactCell(e: MathExercise, index: number, columns: number) {
     // Keep complex structures in their established full-width renderer.
     if (e.kind === 'choice' || e.kind === 'written' || e.table || e.segment ||
-        e.solutionNumberLine || printableWordProblemRows(e)) return null;
+        e.solutionNumberLine || exerciseAngleDiagram(e) || angleSolutionGroups(e.solution).some(group => 'equations' in group) || printableWordProblemRows(e)) return null;
     const width = (W - 2 * M - columnGap * (columns - 1)) / columns;
     const promptRows = layout(labels[index].prompt, 11, width);
-    const rawSolution = printableShortSolution(e);
+    const rawSolution = printableShortSolution(e, lesson.grade);
     const solution = mode === 'worksheet' ? Array.from(rawSolution.normalize('NFC'), char =>
       /\s/u.test(char) || font.glyph(char.codePointAt(0)!) ? char : '?'
     ).join('') : rawSolution;
     const methodIndex = solution.indexOf('\nCách làm: ');
     const methodLine = methodIndex < 0 ? -1 : solution.slice(0, methodIndex).split('\n').length;
     const solutionRows = solution ? solution.split('\n').flatMap((text, index) => {
-      const inset = methodLine >= 0 && index > methodLine
+      const inset = methodLine < 0 && isCalculationOnlySolution(solution)
+        ? (/^=\s/u.test(text) ? 0 : measure('= ', 11))
+        : methodLine >= 0 && index > methodLine
         ? measure('Cách làm: ', 11) - (/^=\s/u.test(text) ? measure('= ', 11) : 0) : 0;
       return layout(text, 11, width - inset).map(row => ({ ...row, inset }));
     }) : [];
@@ -1223,11 +1345,26 @@ export function createPracticePdf(
       return;
     }
     const prompt = labels[i].prompt;
+    const angleFigure = exerciseAngleDiagram(e);
+    const angleHeight = angleFigure ? (angleFigure.kind === 'crossing' ? 360 : angleFigure.kind === 'construction' ? 305 : 275) * 0.62 + 20 : 0;
     const options = e.kind === 'choice' ? choiceRows(e.options) : [];
     const wordRows = mode === 'solutions' ? printableWordProblemRows(e) : null;
     const plainSolution =
-      !wordRows && mode === 'solutions' ? printableShortSolution(e) : null;
+      !wordRows && mode === 'solutions' ? printableShortSolution(e, lesson.grade) : null;
     const plainSolutionRows = (() => {
+      if (plainSolution) {
+        const groups = angleSolutionGroups(plainSolution);
+        if (groups.some(group => 'equations' in group)) return groups.flatMap(group => {
+          if ('text' in group) return [{ text: group.text, left: M }];
+          const lhs = Math.max(...group.equations.map(row => measure(row.left, 11)));
+          const rhs = Math.max(...group.equations.map(row => measure(` = ${row.right}`, 11)));
+          const start = Math.max(M, (W - lhs - rhs) / 2);
+          return group.equations.map(row => ({ text: `${row.left} = ${row.right}`, left: start + lhs - measure(row.left, 11) }));
+        });
+      }
+
+      if (plainSolution && isCalculationOnlySolution(plainSolution))
+        return plainSolution.split('\n').map(text => ({ text, left: M + (/^=\s/u.test(text) ? 0 : measure('= ', 11)) }));
       if (!plainSolution || !plainSolution.includes('\nCách làm: '))
         return null;
       const [heading, method] = plainSolution.split('\nCách làm: ', 2);
@@ -1292,7 +1429,7 @@ export function createPracticePdf(
       solutionRows?.reduce((n, row) => n + row.height, 0) ??
       plainSolutionLines.reduce((n, row) => n + row.height, 0);
     const blockHeight =
-      headHeight +
+      headHeight + angleHeight +
       solutionHeight +
       work +
       (solutionFigure?.height || 0) +
@@ -1310,6 +1447,7 @@ export function createPracticePdf(
     if (y + reservedHeight + taskHeadingHeight > BOTTOM && y > 100) newPage();
     if (taskHeading) paragraph(taskHeading, 12, 12, true);
     paragraph(prompt, 11, 8, true);
+    if (angleFigure) drawAngleFigure(angleFigure);
     if (e.segment) drawSegment(e.segment, e.segmentLabels);
     if (e.table)
       drawExerciseTable(mode === 'solutions' ? e.table.solution : e.table.rows);
@@ -1440,8 +1578,8 @@ export function practicePdfFilename(
       .replace(/\s+/gu, ' ')
       .replace(/^[.\s-]+|[.\s-]+$/gu, '');
   let title = clean(lesson.title) || clean(lesson.topic) || 'Bài học';
-  const prefix = `LIMAMath - Lớp ${lesson.grade} - `;
-  const suffix = ` - ${mode === 'worksheet' ? 'Bài tập' : 'Lời giải'}.pdf`;
+  const prefix = `LIMA - Lớp ${lesson.grade} - `;
+  const suffix = ` - ${mode === 'worksheet' ? 'Bài tập' : lesson.grade === 7 ? 'Bài giải' : 'Lời giải'}.pdf`;
   // Bound the complete UTF-8 filename, retaining the grade, type and extension.
   const available = 240 - enc.encode(prefix + suffix).length;
   if (enc.encode(title).length > available) {

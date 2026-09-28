@@ -5,6 +5,7 @@ import { useEffect, useRef, useState } from 'react';
 import s from './MathLesson.module.css';
 import { MathText } from './MathText';
 import SegmentDiagram from './SegmentDiagram';
+import AngleExerciseDiagram from './AngleExerciseDiagram';
 export type Result = {
   answer: string;
   unit: string;
@@ -37,10 +38,14 @@ function SolutionContent({ solution }: { solution: string }) {
 
 export default function Exercise({
   exercise,
+  displayPrompt,
   result,
   onChange,
+  active = true,
 }: {
   exercise: MathExercise;
+  displayPrompt?: string;
+  active?: boolean;
   result?: Result;
   onChange: (result: Result) => void;
 }) {
@@ -53,28 +58,48 @@ export default function Exercise({
   const [incorrect, setIncorrect] = useState(false);
   const [showSolution, setShowSolution] = useState(false);
   const solved = !!result?.solved;
-  const timer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const composing = useRef(false);
+  const pending = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const latestCheck = useRef(check);
+  latestCheck.current = check;
   function cancelCheck() {
-    if (timer.current !== null) clearTimeout(timer.current);
-    timer.current = null;
+    if (pending.current !== null) clearTimeout(pending.current);
+    pending.current = null;
   }
-  useEffect(
-    () => () => {
-      if (timer.current !== null) clearTimeout(timer.current);
-    },
-    []
-  );
+  useEffect(() => {
+    if (!active || solved) cancelCheck();
+    return cancelCheck;
+  }, [active, solved, exercise.id]);
+  function scheduleCheck(value: string, nextUnit: string) {
+    cancelCheck();
+    if (!active || composing.current || solved || exercise.kind === 'choice')
+      return;
+    // A sign, decimal separator, or unfinished fraction is still being typed.
+    const parts = value.split('/');
+    if (
+      parts.some(
+        (part) =>
+          !part.trim() ||
+          /^[+−-]$/.test(part.trim()) ||
+          /[.,]$/.test(part.trim())
+      ) ||
+      (exercise.unit && !nextUnit.trim())
+    )
+      return;
+    pending.current = setTimeout(() => {
+      pending.current = null;
+      latestCheck.current(value, nextUnit);
+    }, 800);
+  }
   const rawAnswer =
     exercise.kind === 'fraction'
       ? `${answer.split('/')[0]}/${denominator}`
       : answer;
   function saveDraft(value: string, nextUnit = unit) {
-    cancelCheck();
     setIncorrect(false);
+    setShowSolution(false);
     setMessage('');
-    if (!composing.current)
-      timer.current = setTimeout(() => check(value, nextUnit), 800);
+    scheduleCheck(value, nextUnit);
     onChange({
       answer: value,
       unit: nextUnit,
@@ -86,6 +111,7 @@ export default function Exercise({
   function check(value = rawAnswer, nextUnit = unit) {
     cancelCheck();
     if (
+      !active ||
       composing.current ||
       solved ||
       !value.trim() ||
@@ -97,6 +123,7 @@ export default function Exercise({
       value.split('/').some((part) => !part.trim())
     )
       return;
+    setShowSolution(false);
     const checked = checkAnswer(exercise, value, nextUnit);
     setIncorrect(!checked.correct);
     setMessage(checked.correct ? '' : checked.message);
@@ -135,8 +162,12 @@ export default function Exercise({
       className={s.question}
     >
       <h3>
-        <MathText>{exercise.prompt}</MathText>
+        <MathText>{displayPrompt ?? exercise.prompt}</MathText>
       </h3>
+      <AngleExerciseDiagram
+        exercise={exercise}
+        reveal={solved || showSolution}
+      />
       {exercise.segment && (
         <SegmentDiagram
           values={exercise.segment}
@@ -259,8 +290,8 @@ export default function Exercise({
       )}
       {exercise.kind !== 'choice' && (
         <p className={s.footer}>
-          Kết quả tự hiện sau khi em ngừng nhập 0,8 giây. Điền đủ tử số, mẫu số
-          và đơn vị nếu có; nhấn Enter để kiểm tra ngay.
+          Điền đủ đáp án. Kết quả sẽ tự kiểm tra khi em dừng nhập một chút. Nhấn
+          Enter nếu muốn kiểm tra ngay.
         </p>
       )}
       {exercise.kind === 'fraction' && exercise.simplified && (
