@@ -144,7 +144,7 @@ export default function TournamentGuide() {
             <aside className={styles.pitfalls} aria-labelledby="loi-sai-luat">
               <h3 id="loi-sai-luat">Khi nào tính lỗi đi sai luật?</h3>
               <p>
-                Theo Điều 7.5.1 FIDE:{' '}
+                <strong>Khi thi đấu có đồng hồ:</strong> Theo Điều 7.5.1 FIDE,{' '}
                 <mark className={styles.highlight}>
                   Đi sai luật rồi bấm đồng hồ → bị tính lỗi đi sai luật.
                 </mark>
@@ -158,7 +158,13 @@ export default function TournamentGuide() {
                 (chiếu) sau nước đi: Bỏ qua nước chiếu, đưa Vua vào ô bị tấn
                 công hoặc dời quân làm Vua bị tấn công.
               </p>
-              <p className="mt-3 font-semibold">Ví dụ cụ thể:</p>
+              <p className="mt-3">
+                <strong>Nếu không dùng đồng hồ:</strong> Thấy đối thủ đi sai
+                luật, con giữ nguyên bàn cờ, giơ tay và gọi rõ “Trọng tài ơi!”
+                trước khi đi tiếp. Trọng tài sẽ hướng dẫn sửa nước đi và tính
+                lỗi theo quy định của giải.
+              </p>
+              <p className="mt-3 font-semibold">Ví dụ cụ thể khi có đồng hồ:</p>
               <ul className="mt-2">
                 <li>
                   <strong>Ví dụ 1 — Bỏ Vua rồi bấm đồng hồ:</strong> Vua đang bị
@@ -192,9 +198,10 @@ export default function TournamentGuide() {
                 </li>
               </ul>
               <p className="mt-3">
-                <strong>Con làm gì?</strong> Dừng đồng hồ, gọi trọng tài trước
-                khi đi tiếp. Trọng tài sẽ hướng dẫn khôi phục thế cờ và đi lại
-                đúng luật; không tự xếp lại bàn cờ khi đang tranh chấp.
+                <strong>Con làm gì?</strong> Dừng đồng hồ (nếu có), gọi trọng
+                tài trước khi đi tiếp. Trọng tài sẽ hướng dẫn khôi phục thế cờ
+                và đi lại đúng luật; không tự xếp lại bàn cờ khi đang tranh
+                chấp.
               </p>
               <details className="mt-3">
                 <summary className="cursor-pointer font-semibold">
@@ -221,13 +228,11 @@ export default function TournamentGuide() {
               </details>
               <details className="mt-3">
                 <summary className="cursor-pointer font-semibold">
-                  Nếu không nhớ thế cờ hoặc không dùng đồng hồ
+                  Nếu không nhớ thế cờ trước lỗi
                 </summary>
                 <p className="mt-2">
                   Nếu không xác định được thế cờ ngay trước lỗi, trọng tài cho
-                  tiếp tục từ thế cờ gần nhất trước đó có thể xác định được. Với
-                  giải không dùng đồng hồ, hỏi trọng tài về thời điểm ghi nhận
-                  lỗi theo quy định giải.
+                  tiếp tục từ thế cờ gần nhất trước đó có thể xác định được.
                 </p>
               </details>
             </aside>
