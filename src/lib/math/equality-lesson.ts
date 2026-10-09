@@ -1,3 +1,4 @@
+import { equalityFractionNotation } from './equality-notation';
 import { equalityExamples } from './equality-examples';
 import { rationalExponentEquations } from './rational-exponent-equations';
 import type { MathBlock, MathExercise, MathLessonData } from './lessons';
@@ -75,7 +76,7 @@ function exercise(
   };
 }
 
-export const equalityLesson: MathLessonData = {
+const originalEqualityLesson: MathLessonData = {
   id: 'math-equality-transposition-7',
   title: 'Đẳng thức và quy tắc chuyển vế',
   grade: 7,
@@ -88,7 +89,7 @@ export const equalityLesson: MathLessonData = {
   teacherNotes:
     'Bắt đầu bằng cân số có giá trị không âm. Cho học sinh thử thay đổi một vế rồi sửa bằng cách thay đổi vế còn lại. Với số âm và phân số, dùng đẳng thức ký hiệu thay vì khối lượng âm. Giải thích chuyển vế là cách viết gọn của cộng/trừ cùng một số ở hai vế. Tham khảo phạm vi: kế hoạch Toán 7 CTST của Hội đồng bộ môn TP Bà Rịa; cách tiếp cận cân bằng: Khan Academy, Same thing to both sides of equations.',
   knowledgeSummary:
-    '1. Giữ hai vế bằng nhau\nĐẳng thức đúng khi hai vế có cùng giá trị. Nếu a = b thì b = a. Cộng hoặc trừ cùng một số ở hai vế vẫn được đẳng thức đúng. Nhân hoặc chia cả hai vế cho cùng một số khác 0 giúp tìm x mà giữ nguyên nghiệm.\n2. Phép cộng và phép trừ: chuyển số hạng, đổi dấu\nx + a = b → x = b - a; x - a = b → x = b + a.\nVí dụ: x + 5 = 12 → x = 12 - 5 = 7. Với a - x = b: x = a - b. Ví dụ: 5 - x = 8 → x = 5 - 8 = -3.\n3. Phép nhân và phép chia: dùng phép tính ngược\na × x = b → x = b : a (a ≠ 0). Ví dụ: 3x = 12 → x = 12 : 3 = 4.\nx : a = b → x = b × a (a ≠ 0). Ví dụ: x : 4 = -2 → x = -2 × 4 = -8.\na : x = b → x = a : b (x ≠ 0, b ≠ 0). Ví dụ: 12 : x = 3 → x = 12 : 3 = 4.\n4. Phân số: quy đồng khi cộng, trừ; đảo phân số khi chia\nx - 2/3 = -1/4 → x = -1/4 + 2/3 = -3/12 + 8/12 = 5/12.\n(1/2) × x = 3/4 → x = (3/4) : (1/2) = (3/4) × 2 = 3/2.\n5. Lũy thừa: xác định x nằm ở đâu\nNếu lũy thừa là số đã biết, tính trước: x + 2^3 = 11 → x + 8 = 11 → x = 3.\nNếu x ở số mũ, đưa về cùng cơ số phù hợp rồi so sánh số mũ. Ví dụ với x ∈ ℕ: 2^(x + 1) = 32 → 2^(x + 1) = 2^5 → x + 1 = 5 → x = 4.\nNếu x ở cơ số, tìm các giá trị phù hợp với số mũ và điều kiện đề bài. Ví dụ: x^2 = 9 có x = 3 hoặc x = -3; nếu x ∈ ℕ thì chỉ nhận x = 3.\nLưu ý: “Chuyển vế, đổi dấu” dùng cho số hạng trong phép cộng, trừ. Với nhân, chia và lũy thừa, dùng cách biến đổi tương ứng ở trên. Không chia cho 0. Cuối cùng, thay x vào đẳng thức ban đầu để kiểm tra.',
+    '1. Giữ hai vế bằng nhau\nĐẳng thức đúng khi hai vế có cùng giá trị. Nếu a = b thì b = a. Cộng hoặc trừ cùng một số ở hai vế vẫn được đẳng thức đúng. Nhân hoặc chia cả hai vế cho cùng một số khác 0 giúp tìm x mà giữ nguyên nghiệm.\n2. Phép cộng và phép trừ: chuyển số hạng, đổi dấu\nx + a = b → x = b - a; x - a = b → x = b + a.\nVí dụ: x + 5 = 12 → x = 12 - 5 = 7. Với a - x = b: x = a - b. Ví dụ: 5 - x = 8 → x = 5 - 8 = -3.\n3. Phép nhân và phép chia: dùng phép tính ngược\na × x = b → x = b : a (a ≠ 0). Ví dụ: 3x = 12 → x = 12 : 3 = 4.\nx : a = b → x = b × a (a ≠ 0). Ví dụ: x : 4 = -2 → x = -2 × 4 = -8.\na : x = b → x = a : b (x ≠ 0, b ≠ 0). Ví dụ: 12 : x = 3 → x = 12 : 3 = 4.\n4. Phân số: quy đồng khi cộng, trừ; đảo phân số khi chia\nx - 2/3 = -1/4 → x = -1/4 + 2/3 = -3/12 + 8/12 = 5/12.\n(1/2) × x = 3/4 → x = (3/4) : (1/2) = (3/4) × 2 = 3/2.\n5. Lũy thừa: xác định x nằm ở đâu\nNếu lũy thừa là số đã biết, tính trước: x + 2^3 = 11 → x + 8 = 11 → x = 3.\nNếu x ở số mũ, đưa về cùng cơ số phù hợp rồi so sánh số mũ. Ví dụ với x ∈ ℕ: 2^(x + 1) = 32 → 2^(x + 1) = 2^5 → x + 1 = 5 → x = 4.\nNhân lũy thừa cùng cơ số: giữ cơ số, cộng số mũ. Ví dụ với x ∈ ℕ: 2^x × 2^3 = 2^7 → 2^(x + 3) = 2^7 → x + 3 = 7 → x = 7 - 3 = 4. Thử lại: 2^4 × 2^3 = 2^7.\nChia lũy thừa cùng cơ số khác 0: giữ cơ số, trừ số mũ. Ví dụ với x ∈ ℕ, x ≥ 3: 2^x : 2^3 = 2^4 → 2^(x - 3) = 2^4 → x - 3 = 4 → x = 4 + 3 = 7. Thử lại: 2^7 : 2^3 = 2^4.\n6. Tìm x qua nhiều bước\n2x + 3 = 11 → 2x = 11 - 3 = 8 → x = 8 : 2 = 4.\n3 × (x + 2) = 15 → x + 2 = 15 : 3 = 5 → x = 5 - 2 = 3.\n7. Dấu âm và dấu ngoặc\n5 - x = 8 → -x = 3 → x = -3. Với hệ số âm: -2x = 6 → x = 6 : (-2) = -3.\nDấu trừ trước ngoặc đổi dấu từng số hạng: 10 - (x + 2) = 3 → 10 - x - 2 = 3 → 8 - x = 3 → x = 5.\nLưu ý: “Chuyển vế, đổi dấu” dùng cho số hạng trong phép cộng, trừ. Với nhân, chia và lũy thừa, dùng cách biến đổi tương ứng ở trên. Không chia cho 0. Cuối cùng, thay x vào đẳng thức ban đầu để kiểm tra.',
   blocks: [
     block(
       'foundation',
@@ -132,14 +133,18 @@ export const equalityLesson: MathLessonData = {
       'Ví dụ 4: phân biệt số hạng và thừa số',
       'Tìm x: 3x + 2 = 14.\nChuyển số hạng +2: 3x = 14 - 2 = 12.\nSố 3 đang NHÂN với x, nên chia cả hai vế cho 3: x = 12 : 3 = 4.\nKhông viết x = 12 - 3. Thử lại: 3 × 4 + 2 = 14.'
     ),
-    block(
-      'example-power',
-      'example',
-      equalityExamples[4].title,
-      equalityExamples[4].rows.map((row) => row.equation).join('\n') +
-        '\nThử lại: ' +
-        equalityExamples[4].check
-    ),
+    ...equalityExamples
+      .slice(4)
+      .map((example) =>
+        block(
+          example.id.slice(3),
+          'example',
+          example.title,
+          example.rows.map((row) => row.equation).join('\n') +
+            '\nThử lại: ' +
+            example.check
+        )
+      ),
     block(
       'guided',
       'guided',
@@ -292,9 +297,119 @@ export const equalityLesson: MathLessonData = {
       [],
       'challenge'
     ),
+    exercise(
+      'coverage-g-subtrahend',
+      'guided',
+      'Từ 5 - x = 8, chuyển số hạng +5 sang vế phải. Dòng nào đúng?',
+      '-x = 8 - 5',
+      '-x = 3 nghĩa là số đối của x bằng 3, nên x = -3.',
+      'Trừ 5 ở cả hai vế được -x = 3. Nhân cả hai vế với -1 để tìm x.',
+      ['x = 8 - 5', '-x = 8 - 5', '-x = 8 + 5']
+    ),
+    exercise(
+      'coverage-g-negative-factor',
+      'guided',
+      'Từ -2x = 6, chọn phép biến đổi để x đứng một mình.',
+      'x = 6 : (-2)',
+      'Giữ dấu âm của hệ số khi chia: 6 : (-2) = -3.',
+      '-2 đang nhân với x. Chia cả hai vế cho -2; số dương chia số âm cho kết quả âm.',
+      ['x = 6 + 2', 'x = 6 : 2', 'x = 6 : (-2)']
+    ),
+    exercise(
+      'coverage-g-minus-brackets',
+      'guided',
+      'Từ 10 - (x + 2) = 3, bỏ ngoặc sau dấu trừ. Dòng nào đúng?',
+      '10 - x - 2 = 3',
+      'Cả x và +2 đều đổi dấu khi bỏ ngoặc. Từ -x = -5, nhân hai vế với -1.',
+      'Dấu trừ trước ngoặc đổi dấu từng số hạng trong ngoặc: -(x + 2) = -x - 2. Thu gọn được 8 - x = 3, nên -x = -5.',
+      ['10 - x + 2 = 3', '10 - x - 2 = 3', '10 + x - 2 = 3']
+    ),
+
+    exercise(
+      'coverage-p-subtrahend',
+      'practice',
+      'Tìm x: 7 - x = 12.',
+      '-5',
+      'Trừ 7 ở hai vế rồi nhân với -1.',
+      '7 - x = 12\n-x = 12 - 7\n-x = 5\nx = -5\nThử lại: 7 - (-5) = 12.'
+    ),
+    exercise(
+      'coverage-p-negative-factor',
+      'practice',
+      'Tìm x: -3x = 12.',
+      '-4',
+      'Chia cả hai vế cho -3.',
+      '-3x = 12\nx = 12 : (-3)\nx = -4\nThử lại: (-3) × (-4) = 12.'
+    ),
+    exercise(
+      'coverage-p-minus-brackets',
+      'practice',
+      'Tìm x: 12 - (x + 3) = 4.',
+      '5',
+      'Đổi dấu từng số hạng trong ngoặc.',
+      '12 - (x + 3) = 4\n12 - x - 3 = 4\n9 - x = 4\n-x = 4 - 9\n-x = -5\nx = 5\nThử lại: 12 - (5 + 3) = 4.'
+    ),
+
     ...rationalExponentEquations,
   ],
 };
+
+export const equalityLesson: MathLessonData = {
+  ...originalEqualityLesson,
+  knowledgeSummary: equalityFractionNotation(
+    originalEqualityLesson.knowledgeSummary!
+  ),
+  blocks: originalEqualityLesson.blocks.map((block) => ({
+    ...block,
+    text: equalityFractionNotation(block.text),
+  })),
+  exercises: originalEqualityLesson.exercises.map((item) => ({
+    ...item,
+    answer: equalityFractionNotation(item.answer),
+    hint: equalityFractionNotation(item.hint),
+    solution: equalityFractionNotation(item.solution),
+    options: item.options.map(equalityFractionNotation),
+  })),
+};
+
+// Upgrade only text that matches the current default after notation conversion.
+export function updateEqualityFractionNotation(lessons: MathLessonData[]) {
+  return lessons.map((lesson) => {
+    if (lesson.id !== equalityLesson.id) return lesson;
+    return {
+      ...lesson,
+      knowledgeSummary:
+        equalityFractionNotation(lesson.knowledgeSummary ?? '') ===
+        equalityLesson.knowledgeSummary
+          ? equalityLesson.knowledgeSummary
+          : lesson.knowledgeSummary,
+      blocks: lesson.blocks.map((block) => {
+        const source = equalityLesson.blocks.find(
+          (item) => item.id === block.id
+        );
+        return source && equalityFractionNotation(block.text) === source.text
+          ? { ...block, text: source.text }
+          : block;
+      }),
+      exercises: lesson.exercises.map((item) => {
+        const source = equalityLesson.exercises.find(
+          (entry) => entry.id === item.id
+        );
+        if (!source) return item;
+        const updated = { ...item };
+        for (const field of ['answer', 'hint', 'solution'] as const)
+          if (equalityFractionNotation(item[field]) === source[field])
+            updated[field] = source[field];
+        if (
+          JSON.stringify(item.options.map(equalityFractionNotation)) ===
+          JSON.stringify(source.options)
+        )
+          updated.options = source.options;
+        return updated;
+      }),
+    };
+  });
+}
 
 export function addEqualityLesson(lessons: MathLessonData[]) {
   if (lessons.length >= 100 || lessons.some((l) => l.id === equalityLesson.id))
@@ -322,35 +437,77 @@ const OLD_EQUALITY_EXPLANATION =
 
 export function addEqualityPowerExample(lessons: MathLessonData[]) {
   return lessons.map((lesson) => {
-    if (
-      lesson.id !== equalityLesson.id ||
-      lesson.blocks.some((b) => b.id === 'eq-example-power') ||
-      lesson.blocks.length >= 100
-    )
-      return lesson;
-    const example = equalityLesson.blocks.find(
-      (b) => b.id === 'eq-example-power'
-    )!;
-    const after = lesson.blocks.findIndex((b) => b.id === 'eq-example-factor');
-    if (after < 0) return lesson;
-    return {
-      ...lesson,
-      blocks: [
-        ...lesson.blocks.slice(0, after + 1),
-        structuredClone(example),
-        ...lesson.blocks.slice(after + 1),
-      ],
-    };
+    if (lesson.id !== equalityLesson.id) return lesson;
+    const blocks = lesson.blocks.filter(
+      (item) => item.id !== 'eq-example-both-sides'
+    );
+    for (let index = 4; index < equalityExamples.length; index++) {
+      const id = equalityExamples[index].id;
+      if (blocks.some((item) => item.id === id) || blocks.length >= 100)
+        continue;
+      const after = blocks.findIndex(
+        (item) => item.id === equalityExamples[index - 1].id
+      );
+      if (after < 0) continue;
+      const example = equalityLesson.blocks.find((item) => item.id === id)!;
+      blocks.splice(after + 1, 0, structuredClone(example));
+    }
+    const exercises = lesson.exercises.filter(
+      (item) =>
+        !['eq-coverage-g-both-sides', 'eq-coverage-p-both-sides'].includes(
+          item.id
+        )
+    );
+    for (const item of equalityLesson.exercises) {
+      if (
+        item.id.startsWith('eq-coverage-') &&
+        exercises.length < 100 &&
+        !exercises.some((saved) => saved.id === item.id)
+      )
+        exercises.push(structuredClone(item));
+    }
+    return blocks.length === lesson.blocks.length &&
+      blocks.every((item, index) => item === lesson.blocks[index]) &&
+      exercises.length === lesson.exercises.length &&
+      exercises.every((item, index) => item === lesson.exercises[index])
+      ? lesson
+      : { ...lesson, blocks, exercises };
   });
 }
 
 const PREVIOUS_EQUALITY_SUMMARY =
   'Đẳng thức là hai biểu thức nối với nhau bằng dấu =. Đẳng thức đúng khi hai vế có cùng giá trị.\nNếu a = b thì a + c = b + c và a - c = b - c. Nếu a = b thì b = a.\nChuyển một SỐ HẠNG sang vế kia phải đổi dấu: x + a = b thì x = b - a; x - a = b thì x = b + a.\nVí dụ: x + 5 = 12 → x = 12 - 5 = 7. Thử lại: 7 + 5 = 12.\nVới phân số: x - 2/3 = -1/4 → x = -1/4 + 2/3 = -3/12 + 8/12 = 5/12.\nLưu ý: Không áp dụng đổi dấu cho thừa số: 3x = 12 thì chia hai vế cho 3, được x = 4; không viết x = 12 - 3. Không chia cho 0.';
 
+const PREVIOUS_EXPANDED_EQUALITY_SUMMARY =
+  '1. Giữ hai vế bằng nhau\nĐẳng thức đúng khi hai vế có cùng giá trị. Nếu a = b thì b = a. Cộng hoặc trừ cùng một số ở hai vế vẫn được đẳng thức đúng. Nhân hoặc chia cả hai vế cho cùng một số khác 0 giúp tìm x mà giữ nguyên nghiệm.\n2. Phép cộng và phép trừ: chuyển số hạng, đổi dấu\nx + a = b → x = b - a; x - a = b → x = b + a.\nVí dụ: x + 5 = 12 → x = 12 - 5 = 7. Với a - x = b: x = a - b. Ví dụ: 5 - x = 8 → x = 5 - 8 = -3.\n3. Phép nhân và phép chia: dùng phép tính ngược\na × x = b → x = b : a (a ≠ 0). Ví dụ: 3x = 12 → x = 12 : 3 = 4.\nx : a = b → x = b × a (a ≠ 0). Ví dụ: x : 4 = -2 → x = -2 × 4 = -8.\na : x = b → x = a : b (x ≠ 0, b ≠ 0). Ví dụ: 12 : x = 3 → x = 12 : 3 = 4.\n4. Phân số: quy đồng khi cộng, trừ; đảo phân số khi chia\nx - 2/3 = -1/4 → x = -1/4 + 2/3 = -3/12 + 8/12 = 5/12.\n(1/2) × x = 3/4 → x = (3/4) : (1/2) = (3/4) × 2 = 3/2.\n5. Lũy thừa: xác định x nằm ở đâu\nNếu lũy thừa là số đã biết, tính trước: x + 2^3 = 11 → x + 8 = 11 → x = 3.\nNếu x ở số mũ, đưa về cùng cơ số phù hợp rồi so sánh số mũ. Ví dụ với x ∈ ℕ: 2^(x + 1) = 32 → 2^(x + 1) = 2^5 → x + 1 = 5 → x = 4.\nNếu x ở cơ số, tìm các giá trị phù hợp với số mũ và điều kiện đề bài. Ví dụ: x^2 = 9 có x = 3 hoặc x = -3; nếu x ∈ ℕ thì chỉ nhận x = 3.\nLưu ý: “Chuyển vế, đổi dấu” dùng cho số hạng trong phép cộng, trừ. Với nhân, chia và lũy thừa, dùng cách biến đổi tương ứng ở trên. Không chia cho 0. Cuối cùng, thay x vào đẳng thức ban đầu để kiểm tra.';
+
+const PREVIOUS_MULTIPLICATION_EQUALITY_SUMMARY =
+  '1. Giữ hai vế bằng nhau\nĐẳng thức đúng khi hai vế có cùng giá trị. Nếu a = b thì b = a. Cộng hoặc trừ cùng một số ở hai vế vẫn được đẳng thức đúng. Nhân hoặc chia cả hai vế cho cùng một số khác 0 giúp tìm x mà giữ nguyên nghiệm.\n2. Phép cộng và phép trừ: chuyển số hạng, đổi dấu\nx + a = b → x = b - a; x - a = b → x = b + a.\nVí dụ: x + 5 = 12 → x = 12 - 5 = 7. Với a - x = b: x = a - b. Ví dụ: 5 - x = 8 → x = 5 - 8 = -3.\n3. Phép nhân và phép chia: dùng phép tính ngược\na × x = b → x = b : a (a ≠ 0). Ví dụ: 3x = 12 → x = 12 : 3 = 4.\nx : a = b → x = b × a (a ≠ 0). Ví dụ: x : 4 = -2 → x = -2 × 4 = -8.\na : x = b → x = a : b (x ≠ 0, b ≠ 0). Ví dụ: 12 : x = 3 → x = 12 : 3 = 4.\n4. Phân số: quy đồng khi cộng, trừ; đảo phân số khi chia\nx - 2/3 = -1/4 → x = -1/4 + 2/3 = -3/12 + 8/12 = 5/12.\n(1/2) × x = 3/4 → x = (3/4) : (1/2) = (3/4) × 2 = 3/2.\n5. Lũy thừa: xác định x nằm ở đâu\nNếu lũy thừa là số đã biết, tính trước: x + 2^3 = 11 → x + 8 = 11 → x = 3.\nNếu x ở số mũ, đưa về cùng cơ số phù hợp rồi so sánh số mũ. Ví dụ với x ∈ ℕ: 2^(x + 1) = 32 → 2^(x + 1) = 2^5 → x + 1 = 5 → x = 4.\nNhân lũy thừa cùng cơ số: giữ cơ số, cộng số mũ. Ví dụ với x ∈ ℕ: 2^x × 2^3 = 2^7 → 2^(x + 3) = 2^7 → x + 3 = 7 → x = 7 - 3 = 4. Thử lại: 2^4 × 2^3 = 2^7.\nNếu x ở cơ số, tìm các giá trị phù hợp với số mũ và điều kiện đề bài. Ví dụ: x^2 = 9 có x = 3 hoặc x = -3; nếu x ∈ ℕ thì chỉ nhận x = 3.\nLưu ý: “Chuyển vế, đổi dấu” dùng cho số hạng trong phép cộng, trừ. Với nhân, chia và lũy thừa, dùng cách biến đổi tương ứng ở trên. Không chia cho 0. Cuối cùng, thay x vào đẳng thức ban đầu để kiểm tra.';
+
+const PREVIOUS_DIVISION_EQUALITY_SUMMARY =
+  '1. Giữ hai vế bằng nhau\nĐẳng thức đúng khi hai vế có cùng giá trị. Nếu a = b thì b = a. Cộng hoặc trừ cùng một số ở hai vế vẫn được đẳng thức đúng. Nhân hoặc chia cả hai vế cho cùng một số khác 0 giúp tìm x mà giữ nguyên nghiệm.\n2. Phép cộng và phép trừ: chuyển số hạng, đổi dấu\nx + a = b → x = b - a; x - a = b → x = b + a.\nVí dụ: x + 5 = 12 → x = 12 - 5 = 7. Với a - x = b: x = a - b. Ví dụ: 5 - x = 8 → x = 5 - 8 = -3.\n3. Phép nhân và phép chia: dùng phép tính ngược\na × x = b → x = b : a (a ≠ 0). Ví dụ: 3x = 12 → x = 12 : 3 = 4.\nx : a = b → x = b × a (a ≠ 0). Ví dụ: x : 4 = -2 → x = -2 × 4 = -8.\na : x = b → x = a : b (x ≠ 0, b ≠ 0). Ví dụ: 12 : x = 3 → x = 12 : 3 = 4.\n4. Phân số: quy đồng khi cộng, trừ; đảo phân số khi chia\nx - 2/3 = -1/4 → x = -1/4 + 2/3 = -3/12 + 8/12 = 5/12.\n(1/2) × x = 3/4 → x = (3/4) : (1/2) = (3/4) × 2 = 3/2.\n5. Lũy thừa: xác định x nằm ở đâu\nNếu lũy thừa là số đã biết, tính trước: x + 2^3 = 11 → x + 8 = 11 → x = 3.\nNếu x ở số mũ, đưa về cùng cơ số phù hợp rồi so sánh số mũ. Ví dụ với x ∈ ℕ: 2^(x + 1) = 32 → 2^(x + 1) = 2^5 → x + 1 = 5 → x = 4.\nNhân lũy thừa cùng cơ số: giữ cơ số, cộng số mũ. Ví dụ với x ∈ ℕ: 2^x × 2^3 = 2^7 → 2^(x + 3) = 2^7 → x + 3 = 7 → x = 7 - 3 = 4. Thử lại: 2^4 × 2^3 = 2^7.\nChia lũy thừa cùng cơ số khác 0: giữ cơ số, trừ số mũ. Ví dụ với x ∈ ℕ, x ≥ 3: 2^x : 2^3 = 2^4 → 2^(x - 3) = 2^4 → x - 3 = 4 → x = 4 + 3 = 7. Thử lại: 2^7 : 2^3 = 2^4.\nNếu x ở cơ số, tìm các giá trị phù hợp với số mũ và điều kiện đề bài. Ví dụ: x^2 = 9 có x = 3 hoặc x = -3; nếu x ∈ ℕ thì chỉ nhận x = 3.\nLưu ý: “Chuyển vế, đổi dấu” dùng cho số hạng trong phép cộng, trừ. Với nhân, chia và lũy thừa, dùng cách biến đổi tương ứng ở trên. Không chia cho 0. Cuối cùng, thay x vào đẳng thức ban đầu để kiểm tra.';
+
+const PREVIOUS_LINEAR_EQUALITY_SUMMARY =
+  '1. Giữ hai vế bằng nhau\nĐẳng thức đúng khi hai vế có cùng giá trị. Nếu a = b thì b = a. Cộng hoặc trừ cùng một số ở hai vế vẫn được đẳng thức đúng. Nhân hoặc chia cả hai vế cho cùng một số khác 0 giúp tìm x mà giữ nguyên nghiệm.\n2. Phép cộng và phép trừ: chuyển số hạng, đổi dấu\nx + a = b → x = b - a; x - a = b → x = b + a.\nVí dụ: x + 5 = 12 → x = 12 - 5 = 7. Với a - x = b: x = a - b. Ví dụ: 5 - x = 8 → x = 5 - 8 = -3.\n3. Phép nhân và phép chia: dùng phép tính ngược\na × x = b → x = b : a (a ≠ 0). Ví dụ: 3x = 12 → x = 12 : 3 = 4.\nx : a = b → x = b × a (a ≠ 0). Ví dụ: x : 4 = -2 → x = -2 × 4 = -8.\na : x = b → x = a : b (x ≠ 0, b ≠ 0). Ví dụ: 12 : x = 3 → x = 12 : 3 = 4.\n4. Phân số: quy đồng khi cộng, trừ; đảo phân số khi chia\nx - 2/3 = -1/4 → x = -1/4 + 2/3 = -3/12 + 8/12 = 5/12.\n(1/2) × x = 3/4 → x = (3/4) : (1/2) = (3/4) × 2 = 3/2.\n5. Lũy thừa: xác định x nằm ở đâu\nNếu lũy thừa là số đã biết, tính trước: x + 2^3 = 11 → x + 8 = 11 → x = 3.\nNếu x ở số mũ, đưa về cùng cơ số phù hợp rồi so sánh số mũ. Ví dụ với x ∈ ℕ: 2^(x + 1) = 32 → 2^(x + 1) = 2^5 → x + 1 = 5 → x = 4.\nNhân lũy thừa cùng cơ số: giữ cơ số, cộng số mũ. Ví dụ với x ∈ ℕ: 2^x × 2^3 = 2^7 → 2^(x + 3) = 2^7 → x + 3 = 7 → x = 7 - 3 = 4. Thử lại: 2^4 × 2^3 = 2^7.\nChia lũy thừa cùng cơ số khác 0: giữ cơ số, trừ số mũ. Ví dụ với x ∈ ℕ, x ≥ 3: 2^x : 2^3 = 2^4 → 2^(x - 3) = 2^4 → x - 3 = 4 → x = 4 + 3 = 7. Thử lại: 2^7 : 2^3 = 2^4.\n6. Tìm x qua nhiều bước\n2x + 3 = 11 → 2x = 11 - 3 = 8 → x = 8 : 2 = 4.\n3 × (x + 2) = 15 → x + 2 = 15 : 3 = 5 → x = 5 - 2 = 3.\nLưu ý: “Chuyển vế, đổi dấu” dùng cho số hạng trong phép cộng, trừ. Với nhân, chia và lũy thừa, dùng cách biến đổi tương ứng ở trên. Không chia cho 0. Cuối cùng, thay x vào đẳng thức ban đầu để kiểm tra.';
+
+const PREVIOUS_BOTH_SIDES_EQUALITY_SUMMARY =
+  '1. Giữ hai vế bằng nhau\nĐẳng thức đúng khi hai vế có cùng giá trị. Nếu a = b thì b = a. Cộng hoặc trừ cùng một số ở hai vế vẫn được đẳng thức đúng. Nhân hoặc chia cả hai vế cho cùng một số khác 0 giúp tìm x mà giữ nguyên nghiệm.\n2. Phép cộng và phép trừ: chuyển số hạng, đổi dấu\nx + a = b → x = b - a; x - a = b → x = b + a.\nVí dụ: x + 5 = 12 → x = 12 - 5 = 7. Với a - x = b: x = a - b. Ví dụ: 5 - x = 8 → x = 5 - 8 = -3.\n3. Phép nhân và phép chia: dùng phép tính ngược\na × x = b → x = b : a (a ≠ 0). Ví dụ: 3x = 12 → x = 12 : 3 = 4.\nx : a = b → x = b × a (a ≠ 0). Ví dụ: x : 4 = -2 → x = -2 × 4 = -8.\na : x = b → x = a : b (x ≠ 0, b ≠ 0). Ví dụ: 12 : x = 3 → x = 12 : 3 = 4.\n4. Phân số: quy đồng khi cộng, trừ; đảo phân số khi chia\nx - 2/3 = -1/4 → x = -1/4 + 2/3 = -3/12 + 8/12 = 5/12.\n(1/2) × x = 3/4 → x = (3/4) : (1/2) = (3/4) × 2 = 3/2.\n5. Lũy thừa: xác định x nằm ở đâu\nNếu lũy thừa là số đã biết, tính trước: x + 2^3 = 11 → x + 8 = 11 → x = 3.\nNếu x ở số mũ, đưa về cùng cơ số phù hợp rồi so sánh số mũ. Ví dụ với x ∈ ℕ: 2^(x + 1) = 32 → 2^(x + 1) = 2^5 → x + 1 = 5 → x = 4.\nNhân lũy thừa cùng cơ số: giữ cơ số, cộng số mũ. Ví dụ với x ∈ ℕ: 2^x × 2^3 = 2^7 → 2^(x + 3) = 2^7 → x + 3 = 7 → x = 7 - 3 = 4. Thử lại: 2^4 × 2^3 = 2^7.\nChia lũy thừa cùng cơ số khác 0: giữ cơ số, trừ số mũ. Ví dụ với x ∈ ℕ, x ≥ 3: 2^x : 2^3 = 2^4 → 2^(x - 3) = 2^4 → x - 3 = 4 → x = 4 + 3 = 7. Thử lại: 2^7 : 2^3 = 2^4.\n6. Tìm x qua nhiều bước\n2x + 3 = 11 → 2x = 11 - 3 = 8 → x = 8 : 2 = 4.\n3 × (x + 2) = 15 → x + 2 = 15 : 3 = 5 → x = 5 - 2 = 3.\n7. Dấu âm, ngoặc và x ở hai vế\n5 - x = 8 → -x = 3 → x = -3. Với hệ số âm: -2x = 6 → x = 6 : (-2) = -3.\nDấu trừ trước ngoặc đổi dấu từng số hạng: 10 - (x + 2) = 3 → 10 - x - 2 = 3 → 8 - x = 3 → x = 5.\n3x + 2 = x + 10 → 3x - x = 10 - 2 → 2x = 8 → x = 4. Chuyển số hạng chứa x cũng phải đổi dấu.\nLưu ý: “Chuyển vế, đổi dấu” dùng cho số hạng trong phép cộng, trừ. Với nhân, chia và lũy thừa, dùng cách biến đổi tương ứng ở trên. Không chia cho 0. Cuối cùng, thay x vào đẳng thức ban đầu để kiểm tra.';
+
 export function expandEqualitySummary(lessons: MathLessonData[]) {
   return lessons.map((lesson) =>
     lesson.id === equalityLesson.id &&
-    lesson.knowledgeSummary === PREVIOUS_EQUALITY_SUMMARY
+    (equalityFractionNotation(lesson.knowledgeSummary ?? '') ===
+      equalityFractionNotation(PREVIOUS_EQUALITY_SUMMARY) ||
+      equalityFractionNotation(lesson.knowledgeSummary ?? '') ===
+        equalityFractionNotation(PREVIOUS_EXPANDED_EQUALITY_SUMMARY) ||
+      equalityFractionNotation(lesson.knowledgeSummary ?? '') ===
+        equalityFractionNotation(PREVIOUS_MULTIPLICATION_EQUALITY_SUMMARY) ||
+      equalityFractionNotation(lesson.knowledgeSummary ?? '') ===
+        equalityFractionNotation(PREVIOUS_DIVISION_EQUALITY_SUMMARY) ||
+      equalityFractionNotation(lesson.knowledgeSummary ?? '') ===
+        equalityFractionNotation(PREVIOUS_LINEAR_EQUALITY_SUMMARY) ||
+      equalityFractionNotation(lesson.knowledgeSummary ?? '') ===
+        equalityFractionNotation(PREVIOUS_BOTH_SIDES_EQUALITY_SUMMARY))
       ? { ...lesson, knowledgeSummary: equalityLesson.knowledgeSummary }
       : lesson
   );

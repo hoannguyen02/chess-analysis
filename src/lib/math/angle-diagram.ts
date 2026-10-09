@@ -1,3 +1,4 @@
+import { parallelFigureFor } from './parallel-lesson';
 import type { ConstructionId } from './angle-construction';
 import type { MathExercise } from './lessons';
 import { angleLesson } from './angle-lesson';
@@ -95,6 +96,8 @@ const diagrams: Record<string, Diagram> = {
 };
 
 export function exerciseAngleDiagram(exercise: MathExercise) {
+  const parallel = parallelFigureFor(exercise);
+  if (parallel) return {kind: 'parallel' as const, config: parallel};
   if (
     !angleLesson.exercises.some(
       (original) =>

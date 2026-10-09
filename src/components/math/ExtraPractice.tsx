@@ -1,3 +1,4 @@
+import AngleExerciseDiagram from './AngleExerciseDiagram';
 import {
   exerciseLabels,
   sameExerciseContent,
@@ -54,6 +55,7 @@ function WrittenExercise({
       <h3>
         <MathText>{displayPrompt ?? exercise.prompt}</MathText>
       </h3>
+      <AngleExerciseDiagram exercise={exercise} reveal={revealed} />
       {exercise.table && <ExerciseTable table={exercise.table} />}
       {exercise.segment && (
         <SegmentDiagram

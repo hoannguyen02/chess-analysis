@@ -1,3 +1,4 @@
+import { parallelLesson } from './parallel-lesson';
 import { angleLesson } from './angle-lesson';
 import { groupExampleExercises } from './example-exercise-groups';
 import { additionSubtractionLesson } from './addition-subtraction-lesson';
@@ -350,6 +351,7 @@ export const legacyExampleLessons: MathLessonData[] = [
   rationalExponentsLesson,
   equalityLesson,
   angleLesson,
+  parallelLesson,
   integerLesson,
   naturalLesson,
   divisibilityLesson,

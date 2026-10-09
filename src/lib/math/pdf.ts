@@ -1,3 +1,4 @@
+import { parallelGeometry } from './parallel-geometry';
 import { angleConstruction } from './angle-construction';
 import { exerciseLabels } from './exercise-groups';
 import { exerciseAngleDiagram } from './angle-diagram';
@@ -1022,7 +1023,7 @@ export function createPracticePdf(
     if (options.includeKnowledgeSummary !== false && review)
       knowledgeSummary(review);
     paragraph(
-      lesson.interactiveLab === 'angles'
+      (lesson.interactiveLab === 'angles' || lesson.interactiveLab === 'parallel')
         ? 'Làm bài theo thứ tự hoặc chọn câu cần ôn. Trình bày các bước giải và nêu tính chất góc được sử dụng. Ghi kí hiệu độ (°) sau số đo góc.'
         : 'Làm bài theo thứ tự hoặc chọn câu cần ôn. Trình bày các bước giải; chú ý đơn vị và yêu cầu tối giản.',
       10,
@@ -1167,8 +1168,8 @@ export function createPracticePdf(
   function drawAngleFigure(figure: NonNullable<ReturnType<typeof exerciseAngleDiagram>>) {
     const reveal = mode === 'solutions';
     const scale = 0.62, left = (W - 440 * scale) / 2, top = y + 12;
-    if (figure.kind === 'construction') {
-      const { items } = angleConstruction(figure.id, reveal);
+    if (figure.kind === 'construction' || figure.kind === 'parallel') {
+      const { items } = figure.kind === 'parallel' ? parallelGeometry(figure.config, reveal) : angleConstruction(figure.id, reveal);
       page.push('/AngleDiagram BMC');
       for (const item of items) {
         if ('points' in item) {
@@ -1346,7 +1347,7 @@ export function createPracticePdf(
     }
     const prompt = labels[i].prompt;
     const angleFigure = exerciseAngleDiagram(e);
-    const angleHeight = angleFigure ? (angleFigure.kind === 'crossing' ? 360 : angleFigure.kind === 'construction' ? 305 : 275) * 0.62 + 20 : 0;
+    const angleHeight = angleFigure ? (angleFigure.kind === 'crossing' ? 360 : (angleFigure.kind === 'construction' || angleFigure.kind === 'parallel') ? 305 : 275) * 0.62 + 20 : 0;
     const options = e.kind === 'choice' ? choiceRows(e.options) : [];
     const wordRows = mode === 'solutions' ? printableWordProblemRows(e) : null;
     const plainSolution =

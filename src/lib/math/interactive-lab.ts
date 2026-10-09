@@ -6,6 +6,7 @@ export const LAB_LABELS = {
   'number-line': 'Định vị trên trục số',
   powers: 'Khám phá lũy thừa',
   angles: 'Góc và tia phân giác',
+  parallel: 'Hai đường thẳng song song',
   equality: 'Cân bằng và chuyển vế',
   'missing-parts': 'Tìm phần còn thiếu',
   'equal-groups': 'Xưởng đóng hộp',

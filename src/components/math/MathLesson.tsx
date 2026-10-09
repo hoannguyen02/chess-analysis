@@ -1,3 +1,4 @@
+import ParallelBlockDiagram from './ParallelBlockDiagram';
 import { formatCalculationSteps } from '@/lib/math/format';
 import AngleExampleDiagram from './AngleExampleDiagram';
 import EqualityExample from './EqualityExample';
@@ -697,6 +698,7 @@ export default function MathLesson({
                         ) : (
                           <>
                             <AngleExampleDiagram block={block} />
+                            <ParallelBlockDiagram block={block} />
                             <p className={s.prose}>
                               <MathText>{formatCalculationSteps(block.text)}</MathText>
                             </p>

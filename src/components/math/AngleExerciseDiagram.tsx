@@ -1,3 +1,4 @@
+import ParallelDiagram from './ParallelDiagram';
 import AngleConstructionDiagram from './AngleConstructionDiagram';
 import CrossingAngleDiagram from './CrossingAngleDiagram';
 import type { MathExercise } from '@/lib/math/lessons';
@@ -13,6 +14,7 @@ export default function AngleExerciseDiagram({
 }) {
   const diagram = exerciseAngleDiagram(exercise);
   if (!diagram) return null;
+  if (diagram.kind === 'parallel') return <ParallelDiagram config={diagram.config} reveal={reveal} />;
   if (diagram.kind === 'construction')
     return <AngleConstructionDiagram id={diagram.id} reveal={reveal} />;
   if (diagram.kind === 'crossing')

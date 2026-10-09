@@ -52,6 +52,7 @@ import {
   refreshEqualityExplanation,
   addEqualityPowerExample,
   expandEqualitySummary,
+  updateEqualityFractionNotation,
 } from '@/lib/math/equality-lesson';
 import { matchesPlacement, semesterLabel } from '@/lib/math/placement';
 import { updateExponentCoefficientNotation } from '@/lib/math/rational-exponent-equations';
@@ -90,8 +91,8 @@ const COMPONENT_TABLES_KEY = 'lima-math-component-tables-v1';
 const GRADE_THREE_KEY = 'lima-math-add-subtract-components-3-v1';
 const NUMBER_LINE_KEY = 'lima-math-number-line-v1';
 const EQUALITY_EXPLANATION_KEY = 'lima-math-equality-explanation-v1';
-const EQUALITY_SUMMARY_KEY = 'lima-math-equality-operations-summary-v1';
-const EQUALITY_EXAMPLES_KEY = 'lima-math-equality-worked-examples-v1';
+const EQUALITY_SUMMARY_KEY = 'lima-math-equality-operations-summary-v7';
+const EQUALITY_EXAMPLES_KEY = 'lima-math-equality-worked-examples-v4';
 const EQUALITY_KEY = 'lima-math-equality-v1';
 const FRACTION_ORDER_KEY = 'lima-math-fraction-order-v1';
 const FRACTION_CONSOLIDATION_KEY = 'lima-math-fraction-consolidation-v1';
@@ -279,10 +280,67 @@ export default function MathStudio() {
       if (needsEqualityExamples) loaded = addEqualityPowerExample(loaded);
       const needsEqualitySummary =
         localStorage.getItem(EQUALITY_SUMMARY_KEY) !== 'done';
-      if (needsEqualitySummary) loaded = expandEqualitySummary(loaded);
+      if (needsEqualitySummary)
+        loaded = updateEqualityFractionNotation(expandEqualitySummary(loaded));
       // During development, these built-in exercise sets come directly from source.
       // This avoids retaining obsolete questions in the browser between edits.
       if (process.env.NODE_ENV === 'development') {
+        const parallelSource = exampleLessons.find(
+          (lesson) => lesson.id === 'math-parallel-lines-7'
+        );
+        if (
+          parallelSource &&
+          !loaded.some((lesson) => lesson.id === parallelSource.id) &&
+          loaded.length < 100
+        )
+          loaded.push(structuredClone(parallelSource));
+        // Refresh the two revised introductory blocks during development only.
+        // Move the original angle-pair question after its introduction. Preserve other edits.
+        if (parallelSource)
+          loaded = loaded.map((lesson) => {
+            if (lesson.id !== parallelSource.id) return lesson;
+            const revised = parallelSource.blocks.filter((block) =>
+              ['parallel-pre', 'parallel-definition'].includes(block.id)
+            );
+            const blocks = lesson.blocks.map((block) =>
+              structuredClone(
+                revised.find((source) => source.id === block.id) ?? block
+              )
+            );
+            const definition = revised.find(
+              (block) => block.id === 'parallel-definition'
+            );
+            if (
+              definition &&
+              !blocks.some((block) => block.id === definition.id)
+            ) {
+              const index = blocks.findIndex(
+                (block) => block.section === 'explore'
+              );
+              blocks.splice(
+                index < 0 ? blocks.length : index,
+                0,
+                structuredClone(definition)
+              );
+            }
+            const exercises = lesson.exercises.flatMap((exercise) => {
+              if (
+                exercise.id !== 'parallel-f2' ||
+                exercise.prompt !== 'Trong hình, A4 và B2 là cặp góc nào?'
+              )
+                return [exercise];
+              const foundation = parallelSource.exercises.find(
+                (item) => item.id === 'parallel-f2'
+              )!;
+              const guided = parallelSource.exercises.find(
+                (item) => item.id === 'parallel-g0'
+              )!;
+              return lesson.exercises.some((item) => item.id === guided.id)
+                ? [structuredClone(foundation)]
+                : [structuredClone(foundation), structuredClone(guided)];
+            });
+            return { ...lesson, blocks, exercises };
+          });
         const angleSource = exampleLessons.find(
           (lesson) => lesson.id === 'math-angle-bisector-7'
         );

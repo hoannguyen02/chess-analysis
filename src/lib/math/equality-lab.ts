@@ -1,3 +1,4 @@
+import { equalityFractionNotation } from './equality-notation';
 export const TRANSFER_ROUNDS = [
   {
     equation: 'x + 5 = 12',
@@ -42,7 +43,7 @@ export function balanceState(left: number, right: number) {
 }
 
 // Each activity asks for a transformation before revealing the calculation.
-export const OPERATION_ROUNDS = [
+const originalOPERATION_ROUNDS = [
   {
     title: 'Phép nhân: tìm thừa số chưa biết',
     equation: '3x = 12',
@@ -130,37 +131,111 @@ export const OPERATION_ROUNDS = [
     check: '2^(4 + 1) = 2^5 = 32; 4 ∈ ℕ.',
   },
   {
-    title: 'x ở cơ số: tìm đủ các giá trị',
-    equation: 'x^2 = 9',
-    prompt: 'Với x ∈ ℚ, nhận xét nào đúng?',
-    options: [
-      'Chỉ 3 có bình phương bằng 9',
-      'Cả 3 và -3 có bình phương bằng 9',
-      'x = 9 : 2',
-    ],
-    operation: 'Cả 3 và -3 có bình phương bằng 9',
+    title: 'Nhân lũy thừa cùng cơ số: cộng số mũ',
+    equation: '2^x × 2^3 = 2^7',
+    prompt: 'Với x ∈ ℕ, gộp hai lũy thừa ở vế trái. Dòng nào đúng?',
+    options: ['2^(3x) = 2^7', '2^(x + 3) = 2^7', '4^(x + 3) = 2^7'],
+    operation: '2^(x + 3) = 2^7',
     explanation:
-      '3 × 3 = 9 và (-3) × (-3) = 9. Hai số đối nhau có cùng bình phương.',
-    working: '3^2 = 9; (-3)^2 = 9',
-    choices: ['x = 3', 'x = -3', 'x = 3 hoặc x = -3'],
-    answer: 'x = 3 hoặc x = -3',
-    hint: 'Đề cho x là số hữu tỉ. Cần giữ cả hai giá trị đã tìm được.',
-    check: '3^2 = 9 và (-3)^2 = 9. Cả hai giá trị đều thuộc ℚ.',
+      'Nhân hai lũy thừa cùng cơ số: giữ cơ số, cộng số mũ. Vì vậy 2^x × 2^3 = 2^(x + 3). Hai lũy thừa cơ số 2 bằng nhau nên x + 3 = 7.',
+    working: 'x = 7 - 3',
+    choices: ['10', '4', '7/3'],
+    answer: '4',
+    hint: 'Từ x + 3 = 7, chuyển +3 sang vế phải thành -3: x = 7 - 3.',
+    check: '2^4 × 2^3 = 2^(4 + 3) = 2^7; 4 ∈ ℕ.',
   },
   {
-    title: 'Điều kiện của x quyết định đáp án',
-    equation: 'x^2 = 9',
-    prompt: 'Lần này x ∈ ℕ. Giá trị nào được giữ lại?',
-    options: ['Giữ cả 3 và -3', 'Chỉ giữ 3', 'Chỉ giữ -3'],
-    operation: 'Chỉ giữ 3',
+    title: 'Chia lũy thừa cùng cơ số: trừ số mũ',
+    equation: '2^x : 2^3 = 2^4',
+    prompt: 'Với x ∈ ℕ, x ≥ 3, gộp hai lũy thừa ở vế trái. Dòng nào đúng?',
+    options: ['2^(x + 3) = 2^4', '2^(x : 3) = 2^4', '2^(x - 3) = 2^4'],
+    operation: '2^(x - 3) = 2^4',
     explanation:
-      '3 và -3 đều có bình phương bằng 9, nhưng -3 không phải số tự nhiên.',
-    working: '3^2 = 9',
-    choices: ['3', '-3', '9/2'],
+      'Chia hai lũy thừa cùng cơ số khác 0: giữ cơ số, lấy số mũ của số bị chia trừ số mũ của số chia. Vì vậy 2^x : 2^3 = 2^(x - 3). Hai lũy thừa cơ số 2 bằng nhau nên x - 3 = 4.',
+    working: 'x = 4 + 3',
+    choices: ['1', '7', '12'],
+    answer: '7',
+    hint: 'Từ x - 3 = 4, chuyển -3 sang vế phải thành +3: x = 4 + 3.',
+    check: '2^7 : 2^3 = 2^(7 - 3) = 2^4; 7 ∈ ℕ và 7 ≥ 3.',
+  },
+  {
+    title: 'Tìm x qua hai bước: chuyển vế rồi chia',
+    equation: '2x + 3 = 11',
+    prompt: 'Trước hết, chuyển số hạng +3 sang vế phải. Dòng nào đúng?',
+    options: ['2x = 11 + 3', '2x = 11 - 3', 'x = 11 - 3'],
+    operation: '2x = 11 - 3',
+    explanation:
+      'Chuyển +3 sang vế phải thành -3: 2x = 11 - 3 = 8. Số 2 đang nhân với x, nên tiếp theo chia cả hai vế cho 2.',
+    working: 'x = 8 : 2',
+    choices: ['8', '4', '6'],
+    answer: '4',
+    hint: 'Sau khi chuyển vế, ta mới tìm được 2x = 8. Cần chia tiếp cho 2 để tìm x.',
+    check: '2 × 4 + 3 = 8 + 3 = 11. Hai vế bằng nhau.',
+  },
+  {
+    title: 'Tìm x trong ngoặc: chia trước, chuyển vế sau',
+    equation: '3 × (x + 2) = 15',
+    prompt: 'Chia cả hai vế cho 3 để tìm giá trị trong ngoặc. Dòng nào đúng?',
+    options: ['x + 2 = 15 - 3', 'x = 15 : 3', 'x + 2 = 15 : 3'],
+    operation: 'x + 2 = 15 : 3',
+    explanation:
+      'Cả biểu thức x + 2 đang nhân với 3. Chia hai vế cho 3 được x + 2 = 5. Sau đó chuyển +2 sang vế phải thành -2.',
+    working: 'x = 5 - 2',
+    choices: ['5', '3', '7'],
     answer: '3',
-    hint: 'Đáp án vừa phải thỏa mãn đẳng thức, vừa phải thuộc ℕ.',
-    check: '3^2 = 9 và 3 ∈ ℕ.',
+    hint: '5 là giá trị của x + 2. Trừ tiếp 2 để tìm x.',
+    check: '3 × (3 + 2) = 3 × 5 = 15. Hai vế bằng nhau.',
+  },
+  {
+    title: 'Tìm x khi đứng sau dấu trừ',
+    equation: '5 - x = 8',
+    prompt: 'Chuyển số hạng +5 sang vế phải. Dòng nào đúng?',
+    options: ['x = 8 - 5', '-x = 8 - 5', '-x = 8 + 5'],
+    operation: '-x = 8 - 5',
+    explanation:
+      'Trừ 5 ở cả hai vế được -x = 3. Nhân cả hai vế với -1 để tìm x.',
+    working: 'x = -3',
+    choices: ['3', '-3', '13'],
+    answer: '-3',
+    hint: '-x = 3 nghĩa là số đối của x bằng 3, nên x = -3.',
+    check: '5 - (-3) = 5 + 3 = 8.',
+  },
+  {
+    title: 'Chia cho hệ số âm',
+    equation: '-2x = 6',
+    prompt: 'Chọn phép biến đổi để x đứng một mình.',
+    options: ['x = 6 + 2', 'x = 6 : 2', 'x = 6 : (-2)'],
+    operation: 'x = 6 : (-2)',
+    explanation:
+      '-2 đang nhân với x. Chia cả hai vế cho -2; số dương chia số âm cho kết quả âm.',
+    working: 'x = 6 : (-2)',
+    choices: ['3', '-3', '8'],
+    answer: '-3',
+    hint: 'Giữ dấu âm của hệ số khi chia: 6 : (-2) = -3.',
+    check: '(-2) × (-3) = 6.',
+  },
+  {
+    title: 'Dấu trừ trước ngoặc',
+    equation: '10 - (x + 2) = 3',
+    prompt: 'Bỏ ngoặc sau dấu trừ. Dòng nào đúng?',
+    options: ['10 - x + 2 = 3', '10 - x - 2 = 3', '10 + x - 2 = 3'],
+    operation: '10 - x - 2 = 3',
+    explanation:
+      'Dấu trừ trước ngoặc đổi dấu từng số hạng trong ngoặc: -(x + 2) = -x - 2. Thu gọn được 8 - x = 3, nên -x = -5.',
+    working: 'x = 8 - 3',
+    choices: ['9', '-5', '5'],
+    answer: '5',
+    hint: 'Cả x và +2 đều đổi dấu khi bỏ ngoặc. Từ -x = -5, nhân hai vế với -1.',
+    check: '10 - (5 + 2) = 10 - 7 = 3.',
   },
 ];
+export const OPERATION_ROUNDS = originalOPERATION_ROUNDS.map((round) => ({
+  ...round,
+  options: round.options.map(equalityFractionNotation),
+  operation: equalityFractionNotation(round.operation),
+  explanation: equalityFractionNotation(round.explanation),
+  working: equalityFractionNotation(round.working),
+  hint: equalityFractionNotation(round.hint),
+}));
 export const EQUALITY_ROUND_COUNT =
   1 + TRANSFER_ROUNDS.length + OPERATION_ROUNDS.length;

@@ -1,3 +1,4 @@
+import ParallelLab from './ParallelLab';
 import CrossingAngleLab from './CrossingAngleLab';
 import AngleLab from './AngleLab';
 import { EQUALITY_ROUND_COUNT } from '@/lib/math/equality-lab';
@@ -386,7 +387,11 @@ export default function InteractiveLab({
   kind: Exclude<InteractiveLabKind, 'none'>;
 }) {
   const roundCount =
-    kind === 'equality' ? EQUALITY_ROUND_COUNT : kind === 'angles' ? 6 : 3;
+    kind === 'equality'
+      ? EQUALITY_ROUND_COUNT
+      : kind === 'angles' || kind === 'parallel'
+        ? 6
+        : 3;
   const [round, setRound] = useState(0);
   const [completed, setCompleted] = useState<number[]>([]);
   const [restart, setRestart] = useState(0);
@@ -409,6 +414,8 @@ export default function InteractiveLab({
           ) : (
             <CrossingAngleLab round={round} onComplete={complete} />
           )
+        ) : kind === 'parallel' ? (
+          <ParallelLab round={round} onComplete={complete} />
         ) : kind === 'equality' ? (
           <EqualityLab round={round} onComplete={complete} />
         ) : (
@@ -467,9 +474,11 @@ export default function InteractiveLab({
                 ? 'Số mũ đếm điều gì? Nếu thêm một thừa số âm, dấu của tích sẽ thay đổi thế nào?'
                 : kind === 'angles'
                   ? 'Tia có nằm trong góc không? Hai góc nhỏ có bằng nhau không? Biết cả góc thì chia 2; biết một nửa thì nhân 2.'
-                  : kind === 'equality'
-                    ? 'x là số hạng, thừa số, số chia, cơ số hay số mũ? Phép biến đổi nào phù hợp? Có điều kiện khác 0 hoặc điều kiện x thuộc tập số nào không? Thay kết quả vào đẳng thức ban đầu để kiểm tra.'
-                    : CONCEPT_PROMPTS[kind as ConceptLabKind]}
+                  : kind === 'parallel'
+                    ? 'Đã biết hai đường song song hay cần chứng minh song song? Cặp góc ở vị trí nào? Mỗi bước lập luận có căn cứ gì?'
+                    : kind === 'equality'
+                      ? 'x là số hạng, thừa số, số chia, cơ số hay số mũ? Phép biến đổi nào phù hợp? Có điều kiện khác 0 hoặc điều kiện x thuộc tập số nào không? Thay kết quả vào đẳng thức ban đầu để kiểm tra.'
+                      : CONCEPT_PROMPTS[kind as ConceptLabKind]}
         </p>
       )}
       <p className={s.note} role="status">
