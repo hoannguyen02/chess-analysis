@@ -1,0 +1,25 @@
+# Góc và tia phân giác của góc
+
+Grade 7, semester 1, Hình học. Original Vietnamese content; lesson ID `math-angle-bisector-7`, activity kind `angles`.
+
+Four exploration rounds cover reading a 70° angle, bisecting 80° and 130° angles, and reconstructing a 70° angle from a 35° half. The SVG uses a shared vertex, accurate ray angles, arrowheads and angle arcs. Sliders and 5° buttons work with keyboard and touch. Feedback appears after 650 ms without movement; dragging cancels pending checks. No feedback or preselected answer appears initially. Values appear in feedback after an attempt, so matching a live number is not the activity.
+
+Seven teaching blocks include three worked examples. Thirteen exercises cover vertex notation, classification, forward/reverse bisector calculations, rejecting unequal splits, straight angles and decimal measures. Examples and exercises use different numerical cases. Shared exercises check answers automatically. The existing lesson editor, JSON sharing and workbook field handling support the new activity through LAB_LABELS. The development library adds this source lesson without a data migration.
+
+All three worked examples include responsive labelled SVG diagrams: 120° split into 60° + 60°, 50° into 25° + 25°, and the non-bisector 110° split into 40° + 70°. Equal arcs have matching tick marks; captions identify the total and conclusion. Diagrams appear before the calculations and are omitted when the original example text has been edited.
+
+Ten angle calculation and bisector exercises share the example SVG renderer in guided practice, self-check and extra practice. Only given measurements appear initially; unknown angles show “?”. Missing measurements are revealed after a correct answer or opening the solution, including in the accessible caption. Equal-angle ticks appear only when a bisector is given (or after revealing an equal split). Edited questions omit the original diagram. The shared geometry leaves room for both rays of a straight angle.
+
+For reverse bisector questions, the target is explicitly labelled “Cả góc … = ?” with an outer dashed arc spanning both halves. The other half has no question mark; matching arc ticks convey equal halves. This convention is shared by the exploration and reverse-calculation exercises.
+
+
+Added vertically opposite angles (góc đối đỉnh) and linear pairs (góc kề bù), based on the supplied textbook example and Khan Academy's vertical angles review: https://www.khanacademy.org/math/geometry-home/geometry-angles/geometry-vert-comp-supp/a/vertical-angles-review . Six exploration rounds now include 65° opposite/115° adjacent cases. A fourth worked example covers the supplied 60°/120° configuration; six additional exercises use 72°, 118°, 47° and a conceptual counterexample. Totals: nine blocks and nineteen exercises. Crossing diagrams are shared across exploration, examples and exercises; unknown measures appear only on the requested sector and are revealed after success or opening the solution. MathText renders three-letter angle names with a hat, including primed rays. Normal and teaching modes use the same components. Development loads the current source lesson directly, without migration code.
+# PDF diagrams
+
+Angle names such as xOy and x′Oy′ use a vector hat in PDF questions, solutions and diagram captions. Web and PDF share `angleNameParts`/`isAngleName`; ray names (Ox, Oy) and algebraic variables are unchanged, and PDF angle text remains searchable.
+
+Worksheet and solution exports use the same guarded diagram data as the web in `src/lib/math/angle-diagram.ts`. Matching angle exercises include vector rays, angle arcs, labels and bisector marks; crossing-line exercises show the requested adjacent or opposite angle. Worksheets conceal unknown values with `?`; solutions reveal them. Edited prompts or answers do not inherit stale diagrams. Figures are measured in pagination and excluded from compact question columns.
+
+Extended practice now contains 18 additional questions (37 total in the lesson): six foundation questions on rays, angle types, choosing the protractor scale, and distinguishing supplementary from adjacent supplementary angles; six intermediate questions on angle addition, missing angles, bisector conditions, ratios and equations; and six challenges combining linear pairs, two bisectors, nested bisectors, ratios and error analysis. All are in extra practice, with easy/medium/hard metadata, hints and worked solutions. Four new numerical configurations reuse the shared web/PDF diagram model. Multi-step answers are checked independently using the relationships in their statements.
+
+The two-scale protractor exercise and all five multi-step bisector constructions now have shared vector figures for web and PDF. Diagrams use named rays, given measurements, one/two matching tick marks for equal angles, and a dashed arc for the requested angle. Numerical target answers are hidden until reveal; unspecified subdivisions in the two-bisector problems carry no invented measure labels. Six worksheet pages were rendered and visually checked.

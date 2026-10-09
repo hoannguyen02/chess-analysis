@@ -1,4 +1,8 @@
-import { exerciseLabels, sameExerciseContent } from '@/lib/math/exercise-groups';
+import AngleExerciseDiagram from './AngleExerciseDiagram';
+import {
+  exerciseLabels,
+  sameExerciseContent,
+} from '@/lib/math/exercise-groups';
 import { formatCalculationSteps } from '@/lib/math/format';
 import { getKnowledgeSummary } from '@/lib/math/knowledge-summary';
 import {
@@ -25,10 +29,12 @@ type Notebook = {
 };
 function WrittenExercise({
   exercise,
+  displayPrompt,
   result,
   onChange,
 }: {
   exercise: MathExercise;
+  displayPrompt?: string;
   result?: ExtraResult;
   onChange: (result: ExtraResult) => void;
 }) {
@@ -47,8 +53,9 @@ function WrittenExercise({
   return (
     <div className={s.question}>
       <h3>
-        <MathText>{exercise.prompt}</MathText>
+        <MathText>{displayPrompt ?? exercise.prompt}</MathText>
       </h3>
+      <AngleExerciseDiagram exercise={exercise} reveal={revealed} />
       {exercise.table && <ExerciseTable table={exercise.table} />}
       {exercise.segment && (
         <SegmentDiagram
@@ -571,8 +578,8 @@ export default function ExtraPractice({
           )}
           <p className={s.questionMeta}>
             <strong>
-              {labels[currentIndex].label} · Câu {currentIndex + 1}/{questions.length} ·{' '}
-              {EXTRA_GROUPS[current.group || 'skills']}
+              {labels[currentIndex].label} · Câu {currentIndex + 1}/
+              {questions.length} · {EXTRA_GROUPS[current.group || 'skills']}
             </strong>
             {current.skill && <span>Kỹ năng: {current.skill}</span>}
           </p>
@@ -585,11 +592,16 @@ export default function ExtraPractice({
               ✎ Sửa nhanh bài này
             </button>
           )}
-          {current.task && <h3>{`Bài ${labels[currentIndex].number}. ${current.task}`}</h3>}
+          {current.task && (
+            <h3>{`Bài ${labels[currentIndex].number}. ${current.task}`}</h3>
+          )}
           {current.kind === 'written' ? (
             <WrittenExercise
               key={`${JSON.stringify(current)}-${attempt}`}
-              exercise={current.task ? { ...current, prompt: labels[currentIndex].prompt } : current}
+              exercise={current}
+              displayPrompt={
+                current.task ? labels[currentIndex].prompt : undefined
+              }
               result={notebook.results[current.id]}
               onChange={(result) =>
                 save({
@@ -601,7 +613,10 @@ export default function ExtraPractice({
           ) : (
             <Exercise
               key={`${JSON.stringify(current)}-${attempt}`}
-              exercise={current.task ? { ...current, prompt: labels[currentIndex].prompt } : current}
+              exercise={current}
+              displayPrompt={
+                current.task ? labels[currentIndex].prompt : undefined
+              }
               result={notebook.results[current.id]}
               onChange={(result) =>
                 save({

@@ -15,10 +15,10 @@ export default function Document(props: DocumentProps) {
   return (
     <Html lang={props.locale || DefaultLocale}>
       <Head>
-        <meta name="title" content="A dedicated chess academy | LIMA Chess" />
+        <meta name="title" content="A dedicated chess academy | LIMA" />
         <meta
           name="description"
-          content="LIMA Chess is a dedicated chess academy focused on helping students develop strong thinking skills, confidence, and discipline through structured training. We offer engaging lessons for all levels, from beginners to advanced players, with a focus on tactics, strategy, and real-game improvement. Our programs combine practical learning, puzzle training, and guided coaching to help students achieve consistent progress and success in tournaments."
+          content="LIMA is a dedicated chess academy focused on helping students develop strong thinking skills, confidence, and discipline through structured training. We offer engaging lessons for all levels, from beginners to advanced players, with a focus on tactics, strategy, and real-game improvement. Our programs combine practical learning, puzzle training, and guided coaching to help students achieve consistent progress and success in tournaments."
         />
         <script
           type="application/ld+json"

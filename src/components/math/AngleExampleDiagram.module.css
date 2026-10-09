@@ -1,0 +1,22 @@
+.figure {
+  margin: 16px 0 24px;
+  padding: 16px;
+  border: 1px solid #dbe3f1;
+  border-radius: 16px;
+  background: #f8faff;
+}
+.figure svg {
+  display: block;
+  width: 100%;
+  max-width: 560px;
+  margin: auto;
+}
+.figure figcaption {
+  text-align: center;
+  color: #334155;
+  line-height: 1.8;
+}
+.figure figcaption span {
+  display: block;
+  font-size: 0.9em;
+}

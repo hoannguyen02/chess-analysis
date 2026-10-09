@@ -1815,19 +1815,19 @@ const DragDropSetupChessboard = ({
                 <div className="flex min-h-[200px] flex-1 items-center justify-center">
                   <Link
                     href="/"
-                    aria-label="LIMA Chess home"
+                    aria-label="LIMA home"
                     className="flex w-full max-w-[320px] flex-col items-center"
                   >
                     <Image
                       src="/images/Logo_LIMA.svg"
-                      alt="LIMA Chess"
+                      alt="LIMA"
                       width={520}
                       height={156}
                       priority
                       className="h-20 w-auto"
                     />
                     <span className="text-center text-2xl font-semibold tracking-wide text-[var(--s-bg)]">
-                      LIMA Chess
+                      LIMA
                     </span>
                   </Link>
                 </div>

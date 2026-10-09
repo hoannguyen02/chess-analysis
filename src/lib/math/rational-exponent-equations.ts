@@ -1,3 +1,4 @@
+import { equalityFractionNotation } from './equality-notation';
 import type { MathExercise, MathLessonData } from './lessons';
 
 type Item = [equation: string, domain: string, answer: string, hint: string, solution: string];
@@ -126,7 +127,7 @@ const steppedSolutions = new Map<string, string>(sections.flatMap((section, grou
 ));
 export const rationalExponentEquations: MathExercise[] = originalEquations.map(e => ({
   ...e, prompt: simplifyDomain(compactCoefficient(e.prompt)), hint: compactCoefficient(e.hint),
-  solution: steppedSolutions.get(e.id)!,
+  solution: equalityFractionNotation(steppedSolutions.get(e.id)!),
 }));
 
 export function updateExponentCoefficientNotation(lessons: MathLessonData[]): MathLessonData[] {
@@ -147,14 +148,5 @@ export function updateExponentCoefficientNotation(lessons: MathLessonData[]): Ma
         updated.solution = steppedSolutions.get(e.id)!;
       return updated;
     }) };
-  });
-}
-
-export function addRationalExponentEquations(lessons: MathLessonData[]): MathLessonData[] {
-  return lessons.map(lesson => {
-    if (lesson.id !== 'math-rational-exponents-7') return lesson;
-    const missing = rationalExponentEquations.filter(e => !lesson.exercises.some(old => old.id === e.id));
-    if (!missing.length || lesson.exercises.length + missing.length > 100) return lesson;
-    return { ...lesson, exercises: [...lesson.exercises, ...structuredClone(missing)] };
   });
 }

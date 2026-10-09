@@ -48,6 +48,15 @@ export const MenuLeft = () => {
           {t('navigation.math-practice')}
         </Link>
       )}
+      <div className="mt-4 border-t border-white/20 pt-4">
+        <p className="mb-2 text-sm text-gray-400">{t('navigation.learning')}</p>
+        <Link
+          href="/goc-hoc-tap/co-vua"
+          className="block py-2 hover:text-[var(--p-highlight)]"
+        >
+          {t('navigation.learning-chess')}
+        </Link>
+      </div>
     </nav>
   );
 };

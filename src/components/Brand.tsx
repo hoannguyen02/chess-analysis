@@ -4,7 +4,7 @@ import s from './Brand.module.css';
 
 export default function Brand() {
   return (
-    <Link href="/" className={s.brand} aria-label="LIMA Chess — Home">
+    <Link href="/" className={s.brand} aria-label="LIMA — Home">
       <Image
         src="/brand/lima-symbol.svg"
         width={50}
@@ -13,7 +13,7 @@ export default function Brand() {
         priority
         className={s.symbol}
       />
-      <span>LIMA Chess</span>
+      <span>LIMA</span>
     </Link>
   );
 }

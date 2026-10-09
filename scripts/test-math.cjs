@@ -36,6 +36,97 @@ const { exampleLessons } = load('examples');
 const { isMathPracticeEnabled } = load('availability');
 const { encodeMathLesson, decodeMathLesson } = load('share');
 const clone = () => structuredClone(packLessons(exampleLessons));
+test('PDF angle hats match web names while rays and variables stay unchanged', () => {
+  const { angleNameParts, isAngleName } = load('format');
+  assert.deepEqual(angleNameParts("Góc x'Oy′ và aOt." ).filter(isAngleName), ["x'Oy′", 'aOt']);
+  assert.ok(!angleNameParts('Ox Oy x = 2').some(isAngleName));
+  const font = fs.readFileSync(path.join(__dirname, '../public/fonts/DejaVuSans.ttf'));
+  const base = load('angle-lesson').angleLesson;
+  const exercise = { ...base.exercises.find(e => e.section === 'extra'), id: 'angle-hat-test', task: undefined, kind: 'number', options: [], prompt: "Tính góc x'Oy′.", answer: '40', solution: 'Góc xOy = 40°.' };
+  for (const mode of ['worksheet', 'solutions']) {
+    const bytes = load('pdf').createPracticePdf({ ...base, exercises: [exercise] }, mode, font, { includeKnowledgeSummary: false });
+    assert.equal((Buffer.from(bytes).toString('latin1').match(/\/AngleHat BMC/g) || []).length, mode === 'worksheet' ? 1 : 2);
+    assert.ok(pdfTextRows(bytes).some(row => row.text.includes("x'Oy′")), 'angle text remains searchable');
+  }
+});
+test('angle diagrams share web data and export question and answer values safely', () => {
+  const { angleLesson: lesson } = load('angle-lesson');
+  const { exerciseAngleDiagram: figure } = load('angle-diagram');
+  const extras = lesson.exercises.filter(e => e.section === 'extra');
+  const illustrated = extras.filter(e => figure(e));
+  assert.ok(illustrated.length >= 7);
+  for (const exercise of illustrated) {
+    assert.equal(figure({ ...exercise, prompt: exercise.prompt + ' edited' }), null);
+    assert.equal(figure({ ...exercise, answer: '999' }), null);
+  }
+  const font = fs.readFileSync(path.join(__dirname, '../public/fonts/DejaVuSans.ttf'));
+  for (const mode of ['worksheet', 'solutions']) {
+    const bytes = load('pdf').createPracticePdf(lesson, mode, font);
+    const raw = Buffer.from(bytes).toString('latin1');
+    assert.equal((raw.match(/\/AngleDiagram BMC/g) || []).length, illustrated.length);
+    const rows = pdfTextRows(bytes);
+    assert.equal(rows.some(row => row.text === '?'), mode === 'worksheet');
+  }
+  const exercise = extras.find(e => e.id === 'angle-e1');
+  const question = pdfTextRows(load('pdf').createPracticePdf({ ...lesson, exercises: [exercise] }, 'worksheet', font));
+  assert.ok(!question.some(row => row.text === '80°'), 'worksheet does not reveal the bisected angle');
+  const answer = pdfTextRows(load('pdf').createPracticePdf({ ...lesson, exercises: [exercise] }, 'solutions', font));
+  assert.ok(answer.some(row => row.text.includes('80°')));
+});
+test('calculation continuations omit only a repeated question expression', () => {
+  const { calculationContinuation: continuation } = load('format');
+  assert.equal(continuation('Tính (-2)^2.', '(-2)^2 = (-2) × (-2) = 4.'), '= (-2) × (-2)\n= 4.');
+  assert.equal(continuation('Tính (1/2)^2.', '(1/2)^2\n= 1/2 × 1/2\n= 1/4.'), '= 1/2 × 1/2\n= 1/4.');
+  assert.equal(continuation('Tính 2^0.', '2^0 = 1.'), '= 1.');
+  assert.equal(continuation('Tính 2^3 : 2^2.', '2^(3 - 2) = 2.'), '2^(3 - 2) = 2.');
+  assert.equal(continuation('Tính (-2)^2.', '2^2 = 4.'), '2^2 = 4.');
+  assert.equal(continuation('Tính 2^3.', 'Vì 2^3 = 8.'), 'Vì 2^3 = 8.');
+  const { calculationExpression } = load('format');
+  const { exerciseLabels } = load('exercise-groups');
+  for (const prefix of ['Tính', 'Tính một cách hợp lí:', 'Tính hợp lý', 'Tính nhanh:', 'Tính giá trị của biểu thức:', 'Luyện tập 3. Tính một cách hợp lí:', 'Tính bằng phương pháp thuận tiện:']) {
+    const prompt = `${prefix} 5/4 + (-1/2)^3 - (1/2)^2.`;
+    const solution = '5/4 + (-1/2)^3 - (1/2)^2\n= 5/4 - 1/8 - 1/4\n= 7/8.';
+    assert.equal(continuation(prompt, solution), '= 5/4 - 1/8 - 1/4\n= 7/8.', prefix);
+    assert.equal(exerciseLabels([{ task: 'Tính', prompt }])[0].prompt, `a) ${calculationExpression(prompt)}`);
+    assert.equal(continuation(prompt, '10/8 - 1/8 - 2/8\n= 7/8.'), '10/8 - 1/8 - 2/8\n= 7/8.', 'keep a distinct first transformation');
+  }
+  assert.equal(continuation('Tính 2^3 khi x = 1.', '2^3 = 8.'), '2^3 = 8.');
+});
+test('reasonable calculation lessons omit repeated expressions in shared PDF solutions', () => {
+  const { rationalExponentsLesson } = load('rational-exponents-lesson');
+  const exercises = rationalExponentsLesson.exercises.filter(e => e.task === 'Tính một cách hợp lí');
+  assert.ok(exercises.length >= 5);
+  for (const exercise of exercises) {
+    const result = load('pdf').printableShortSolution(exercise);
+    assert.ok(result.startsWith('= '), exercise.id);
+    assert.equal(result, exercise.solution.slice(exercise.solution.indexOf('=')).trim());
+  }
+});
+test('find-x PDF solutions retain equations and explanations without answer or method labels', () => {
+  const { calculationContinuation: continuation } = load('format');
+  assert.equal(continuation('Tìm x: x + 9 = 2.', 'x + 9 = 2\nx = 2 - 9\nx = -7'), 'x = 2 - 9\nx = -7');
+  assert.equal(continuation('Tìm x, biết: x^1 = -2/3 (x ∈ ℚ).', 'x^1 = -2/3\nx^1 = (-2/3)^1\nx = -2/3'), 'x^1 = (-2/3)^1\nx = -2/3');
+  assert.equal(continuation('Tìm x: x + 9 = 2.', 'x = 2 - 9\nx = -7'), 'x = 2 - 9\nx = -7');
+  assert.equal(continuation('Tìm x: x = 1.', 'x = 1'), 'x = 1');
+  assert.equal(continuation('Tìm x: x + 9 = 2.', 'Trừ 9 ở hai vế.\nx = -7'), 'Trừ 9 ở hai vế.\nx = -7');
+  const { rationalExponentEquations: exercises } = load('rational-exponent-equations');
+  const { printableShortSolution, createPracticePdf } = load('pdf');
+  assert.equal(exercises.length, 33);
+  for (const exercise of exercises) assert.equal(printableShortSolution(exercise), load('format').calculationContinuation(exercise.prompt, exercise.solution));
+  const font = fs.readFileSync(path.join(__dirname, '../public/fonts/DejaVuSans.ttf'));
+  for (const items of [exercises.slice(0, 7), [{ ...exercises[0], task: undefined }]]) {
+    const rows = pdfTextRows(createPracticePdf({ ...exampleLessons[0], grade: 7, exercises: items }, 'solutions', font));
+    assert.ok(!rows.some(row => /Đáp án:|Cách làm:/u.test(row.text)));
+    assert.ok(rows.some(row => row.text.includes('x = 1')));
+  }
+  const sample = { ...exercises[0], prompt: 'Tìm x: x + 9 = 2.', solution: 'x + 9 = 2\nx = 2 - 9\nx = -7', answer: '-7' };
+  const lesson = { ...exampleLessons[0], exercises: [sample] };
+  assert.equal(printableShortSolution(sample), 'x = 2 - 9\nx = -7');
+  const worksheet = Buffer.from(createPracticePdf(lesson, 'worksheet', font)).toString('latin1');
+  assert.equal((worksheet.match(/1 J \[0 3\] 0 d/g) || []).length, 2);
+  assert.match(printableShortSolution({ ...exercises[0], solutionStyle: 'answer-only' }), /^Đáp án:/u);
+  assert.match(printableShortSolution({ ...exercises[0], kind: 'choice', options: ['1', '2'] }), /^Đáp án: A/u);
+});
 test('math practice is local-only unless production explicitly opts in', () => {
   const originalNodeEnv = process.env.NODE_ENV;
   const originalFlag = process.env.NEXT_PUBLIC_ENABLE_MATH_PRACTICE;
@@ -152,6 +243,9 @@ test('math text renders centered question boxes for blanks without changing punc
     render('4 × (1/2 - 1/4)^2.'),
     /class="groupedExpressionPower"><span class="groupedExpressionGroup"><span aria-hidden="true" class="fractionBracket">\(<\/span><span><span class="fraction"[\s\S]* - <span class="fraction"[\s\S]*class="fractionBracket">\)<\/span><\/span><sup class="exponent">2<\/sup><\/span>/
   );
+  for (const [text, label] of [['x = 8/2', '8 phần 2'], ['x + 2 = 15/3', '15 phần 3'], ['x = 1/2', '1 phần 2'], ['x = 6/(-2)', '6 phần -2']]) {
+    assert.ok(render(text).includes(`aria-label="${label}"`));
+  }
   const fraction = render('3/5 = □/20; 1/□; (□ + 1)/3');
   assert.equal((fraction.match(/class="questionBox"/g) || []).length, 3);
   assert.equal((fraction.match(/class="fraction"/g) || []).length, 4);
@@ -396,7 +490,7 @@ test('every worksheet and solution page has the approved light background waterm
                 .match(/.{4}/g)
                 .map((g) => unicode.get(g))
                 .join(''),
-              'LIMA Math'
+              'LIMA'
             );
           const current = marks.map((m) => [Number(m[1]), Number(m[2])]);
           if (positions)
@@ -519,7 +613,7 @@ test('PDF missing-value answers precede the preserved method and never leak into
   }
 });
 
-test('all lessons share answer-first PDF formatting for choices and short answers', () => {
+test('Grade 7 keeps worked solutions and uses answer-first formatting for conceptual questions', () => {
   const {
     createPracticePdf,
     printableShortSolution,
@@ -542,21 +636,32 @@ test('all lessons share answer-first PDF formatting for choices and short answer
       const answer =
         e.kind === 'choice'
           ? String.fromCharCode(65 + e.options.indexOf(e.answer))
-          : `${e.answer}${e.unit ? ` ${e.unit}` : ''}`;
-      const text = printableShortSolution(e);
-      assert.ok(text.startsWith(`Đáp án: ${answer}`));
-      if (e.solutionStyle !== 'answer-only' && text.includes('\n'))
+          : `${e.answer}${e.unit === '°' ? '°' : e.unit ? ` ${e.unit}` : ''}`;
+      const text = printableShortSolution(e, lesson.grade);
+      if (lesson.grade === 7 && e.kind !== 'choice' &&
+          e.solutionStyle !== 'explanation' && e.solutionStyle !== 'answer-only') {
+        assert.ok(text.startsWith('Bài giải:\n'));
+        assert.ok(!text.startsWith('Đáp án:'));
+        assert.ok(text.includes(formatCalculationSteps(e.solution)));
+        continue;
+      }
+      if (load('format').isCalculationOnlySolution(text))
+        assert.equal(text, load('format').calculationContinuation(e.prompt, e.solution));
+      else if (/^Tìm\s+x\b/iu.test(e.prompt) && !e.solutionStyle && e.kind !== 'choice')
+        assert.equal(text, load('format').calculationContinuation(e.prompt, e.solution));
+      else assert.ok(text.startsWith(`Đáp án: ${answer}`));
+      if (e.solutionStyle !== 'answer-only' && text.includes('\n') && !load('format').isCalculationOnlySolution(text) && !/^Tìm\s+x\b/iu.test(e.prompt))
         assert.ok(text.endsWith(formatCalculationSteps(e.solution)));
     }
     const rows = pdfTextRows(createPracticePdf(lesson, 'solutions', font));
     assert.equal(
       rows.filter((r) => r.text.startsWith('Đáp án:')).length,
-      eligible.length,
+      eligible.filter(e => printableShortSolution(e, lesson.grade).startsWith('Đáp án:')).length,
       lesson.id
     );
     assert.equal(
       rows.filter((r) => /^(Cách làm|Giải thích):/u.test(r.text)).length,
-      eligible.filter((e) => printableShortSolution(e).includes('\n')).length,
+      eligible.filter((e) => /\n(Cách làm|Giải thích):/u.test(printableShortSolution(e, lesson.grade))).length,
       lesson.id
     );
     const worksheet = pdfTextRows(createPracticePdf(lesson, 'worksheet', font));
@@ -583,6 +688,19 @@ test('all lessons share answer-first PDF formatting for choices and short answer
     )
   );
   assert.deepEqual(exampleLessons, before);
+});
+
+test('angle recognition answers include the choice or unit and explain the reason', () => {
+  const { printableShortSolution } = load('pdf');
+  const { anglePractice } = load('angle-practice');
+  const byId = id => anglePractice.find(e => e.id === `angle-more-${id}`);
+  assert.equal(printableShortSolution(byId('b2'), 7),
+    'Đáp án: A. Góc nhọn\nGiải thích: 0° < 38° < 90° nên đây là góc nhọn.');
+  assert.equal(printableShortSolution(byId('b3'), 7),
+    'Đáp án: 180°\nGiải thích: Góc xOy là góc bẹt nên bằng 180°.');
+  assert.match(printableShortSolution(byId('b6'), 7), /^Đáp án: B\. Chưa đủ\nGiải thích:/u);
+  assert.match(printableShortSolution(byId('m1'), 7), /^Bài giải:\n/u);
+  assert.equal(printableShortSolution({ ...byId('b3'), solutionStyle: 'answer-only' }, 7), 'Đáp án: 180°');
 });
 
 test('conceptual solutions explain why, reading answers omit repetition, and upgrades preserve edits', async () => {
@@ -759,11 +877,26 @@ test('worksheets use solution-sized dotted writing rows, not saved fixed workspa
   assert.equal(lineCount('solutions'), 0);
   const base = lesson.exercises[1];
   const count = (solution, extra = {}) => (Buffer.from(createPracticePdf({ ...lesson, exercises: [{ ...base, ...extra, solution }] }, 'worksheet', font)).toString('latin1').match(/1 J \[0 3\] 0 d/g) || []).length;
-  assert.equal(count('2 + 3 = 5.'), 2);
+  assert.equal(count('2 + 3 = 5.'), 1);
   assert.ok(count('2 + 3 = 5.\n5 + 4 = 9.\n9 + 1 = 10.') > count('2 + 3 = 5.'));
   assert.ok(count('1/2 + 1/3 = 5/6.') > count('2 + 3 = 5.'));
   assert.ok(count('Giải thích dài. '.repeat(50)) > count('2 + 3 = 5.'));
   assert.equal(count('2 + 3 = 5.', { workspace: 'small' }), count('2 + 3 = 5.', { workspace: 'large' }));
+});
+
+test('basic powers reserve only continuation steps and share the longest row', () => {
+  const { rationalExponentsLesson: source } = load('rational-exponents-lesson');
+  const exercises = source.exercises.filter(e => /^re-review-[1-5]$/.test(e.id));
+  const font = fs.readFileSync(path.join(__dirname, '../public/fonts/DejaVuSans.ttf'));
+  const exportWorksheet = items => load('pdf').createPracticePdf({ ...source, exercises: items }, 'worksheet', font, { includeKnowledgeSummary: false });
+  const dots = bytes => [...Buffer.from(bytes).toString('latin1').matchAll(/1 J \[0 3\] 0 d ([\d.]+) ([\d.]+) m/g)];
+  assert.deepEqual(exercises.map(e => dots(exportWorksheet([e])).length), [1, 1, 2, 2, 2]);
+  const shared = dots(exportWorksheet(exercises.slice(0, 3)));
+  assert.equal(shared.length, 6);
+  const baselines = new Map();
+  for (const [, left, y] of shared) baselines.set(left, [...(baselines.get(left) || []), y]);
+  assert.equal(baselines.size, 3);
+  for (const rows of baselines.values()) assert.deepEqual(rows, [...baselines.values()][0]);
 });
 
 test('both PDF exports omit practice-group headings and reserved space without changing question order', () => {
@@ -808,11 +941,11 @@ test('PDF filenames identify the brand, grade, specific lesson and document type
   };
   assert.equal(
     practicePdfFilename(lesson, 'worksheet'),
-    'LIMAMath - Lớp 6 - Số nguyên - nhận biết, so sánh và tính toán - Bài tập.pdf'
+    'LIMA - Lớp 6 - Số nguyên - nhận biết, so sánh và tính toán - Bài tập.pdf'
   );
   assert.equal(
     practicePdfFilename(lesson, 'solutions'),
-    'LIMAMath - Lớp 6 - Số nguyên - nhận biết, so sánh và tính toán - Lời giải.pdf'
+    'LIMA - Lớp 6 - Số nguyên - nhận biết, so sánh và tính toán - Lời giải.pdf'
   );
   assert.notEqual(
     practicePdfFilename(lesson, 'worksheet'),
@@ -834,7 +967,7 @@ test('PDF filenames normalize Vietnamese and remain safe and bounded for custom 
     topic: 'Số học',
     title: '  .. Đếm: ước / bội \\ "nâng cao" <>?*|\u0000\u202E\n..  ',
   };
-  const expected = 'LIMAMath - Lớp 6 - Đếm - ước bội nâng cao - Bài tập.pdf';
+  const expected = 'LIMA - Lớp 6 - Đếm - ước bội nâng cao - Bài tập.pdf';
   assert.equal(practicePdfFilename(lesson, 'worksheet'), expected);
   assert.equal(
     practicePdfFilename(
@@ -845,11 +978,11 @@ test('PDF filenames normalize Vietnamese and remain safe and bounded for custom 
   );
   assert.equal(
     practicePdfFilename({ ...lesson, title: ' /:*? ' }, 'worksheet'),
-    'LIMAMath - Lớp 6 - Số học - Bài tập.pdf'
+    'LIMA - Lớp 6 - Số học - Bài tập.pdf'
   );
   assert.equal(
     practicePdfFilename({ ...lesson, title: '', topic: '' }, 'solutions'),
-    'LIMAMath - Lớp 6 - Bài học - Lời giải.pdf'
+    'LIMA - Lớp 6 - Bài học - Lời giải.pdf'
   );
   for (const mode of ['worksheet', 'solutions']) {
     const filename = practicePdfFilename(
@@ -857,7 +990,7 @@ test('PDF filenames normalize Vietnamese and remain safe and bounded for custom 
       mode
     );
     assert.ok(Buffer.byteLength(filename, 'utf8') <= 240);
-    assert.match(filename, /^LIMAMath - Lớp 12 - /u);
+    assert.match(filename, /^LIMA - Lớp 12 - /u);
     assert.ok(
       filename.endsWith(
         `… - ${mode === 'worksheet' ? 'Bài tập' : 'Lời giải'}.pdf`
@@ -1048,7 +1181,7 @@ test('knowledge summaries have sample defaults, preserve edits and do not guess 
     const summary = getKnowledgeSummary(lesson);
     assert.ok(summary.includes('Ví dụ:'));
     assert.ok(summary.includes('Lưu ý:'));
-    assert.ok(summary.length < 1100);
+    assert.ok(summary.length < (lesson.id === 'math-equality-transposition-7' ? 3200 : lesson.id === 'math-parallel-lines-7' ? 2600 : 1100));
     const saved = withKnowledgeSummary(lesson);
     assert.equal(getKnowledgeSummary({ ...saved, title: 'Tên mới' }), summary);
     assert.equal(getKnowledgeSummary({ ...lesson, knowledgeSummary: '' }), '');
@@ -1680,9 +1813,7 @@ test('mixed solution PDFs keep the next calculation question with its working', 
   const { exerciseLabels } = load('exercise-groups');
   const expected = exerciseLabels(lesson.exercises.filter(e => e.section === 'extra'))[18].prompt;
   const promptIndex = rows.findIndex((row) => row.text.startsWith(expected.slice(0, 12)));
-  const solution = rows
-    .slice(promptIndex + 1)
-    .find((row) => row.text.startsWith('Cách làm:'));
+  const solution = rows[promptIndex + 1];
   assert.ok(promptIndex >= 0 && solution);
   assert.equal(rows[promptIndex].page, solution.page);
 });
@@ -1714,7 +1845,7 @@ test('PDF omits redundant fraction parentheses but keeps negative operands group
     // lightweight extractor intentionally does not include in its text rows.
     assert.equal((negative.text.match(/[()]/gu) || []).length, 0, mode);
     if (mode === 'solutions') {
-      const solution = rows.find((row) => row.text.startsWith('Cách làm:'));
+      const solution = rows[rows.indexOf(positive) + 1];
       assert.ok(solution, mode);
       assert.doesNotMatch(solution.text, /[()]/u, mode);
     }
@@ -2018,7 +2149,7 @@ test('quick edit validates drafts and keeps them open after failed storage', () 
       : Array.isArray(node)
         ? node.flatMap((child) => all(child, type))
         : [
-            ...(node.type === type ? [node] : []),
+            ...(!type || node.type === type ? [node] : []),
             ...all(node.props?.children, type),
           ];
   const render = () => {
@@ -3646,7 +3777,7 @@ function loadMathComponent(file, hooks) {
       if (name === 'react') return hooks;
       if (name === 'react/jsx-runtime')
         return { jsx, jsxs: jsx, Fragment: 'Fragment' };
-      if (name === '@/lib/math/lessons') return load('lessons');
+      if (name.startsWith('@/lib/math/')) return load(name.slice('@/lib/math/'.length));
       if (name === '@/lib/math/placement') return load('placement');
       if (name === 'next/dynamic') return { default: () => 'TeachingTimer' };
       if (name === './MathLesson.module.css') return { default: styles };
@@ -3666,7 +3797,7 @@ function mathComponentNodes(node, type) {
     return node.flatMap((child) => mathComponentNodes(child, type));
   if (typeof node !== 'object') return [];
   return [
-    ...(node.type === type ? [node] : []),
+    ...(!type || node.type === type ? [node] : []),
     ...mathComponentNodes(node.props?.children, type),
   ];
 }
@@ -4009,7 +4140,7 @@ test('unfinished core answers emit immediately and survive teaching navigation a
         attempted: true,
       },
     ]);
-    assert.equal(timers.length, 1);
+    assert.equal(timers.length, 1, 'complete drafts schedule checking after a pause');
   } finally {
     exerciseRuntime.unmount();
     globalThis.setTimeout = originalSetTimeout;
@@ -4139,7 +4270,7 @@ test('tall exponent workings share two columns and the taller writing area', () 
       const dots = [...Buffer.from(bytes).toString('latin1').matchAll(/1 J \[0 3\] 0 d ([\d.]+) ([\d.]+) m ([\d.]+) ([\d.]+) l S Q/g)];
       const left = dots.filter(d => Number(d[1]) === 44).map(d => d[2]);
       const right = dots.filter(d => Number(d[1]) > 290).map(d => d[2]);
-      assert.equal(left.length, 9);
+      assert.equal(left.length, 6);
       assert.deepEqual(right, left, 'both columns have identical dotted row baselines');
     }
     if (mode === 'worksheet') assert.ok(rows.every(row => !/Đáp án:|Cách làm:/u.test(row.text)));
@@ -4208,7 +4339,7 @@ test('all grouped lesson PDFs retain every part in order and stay within page bo
 });
 
 test('find-x exponent questions cover the rules and have correct unique or complete answers', () => {
-  const { rationalExponentEquations: questions, addRationalExponentEquations: add } = load('rational-exponent-equations');
+  const { rationalExponentEquations: questions } = load('rational-exponent-equations');
   const { rationalExponentsLesson: lesson } = load('rational-exponents-lesson');
   assert.equal(questions.length, 33);
   const value = text => text.split('/').map(Number).reduce((a,b) => a/b);
@@ -4238,16 +4369,7 @@ test('find-x exponent questions cover the rules and have correct unique or compl
   assert.ok(questions.every(q=>q.kind !== 'choice'));
   assert.ok(lesson.exercises.length<=100);
   assert.doesNotThrow(()=>parseMathPack(packLessons([lesson])));
-  const old={...lesson,exercises:lesson.exercises.filter(e=>!e.id.startsWith('re-find-x-'))};
-  const upgraded=add([old])[0];
-  assert.deepEqual(upgraded.exercises.slice(0,old.exercises.length),old.exercises);
-  assert.deepEqual(upgraded,lesson);
-  assert.deepEqual(add([upgraded]),[upgraded]);
-  const edited={...questions[0],prompt:'Custom prompt'};
-  const partial={...old,exercises:[...old.exercises,edited]};
-  assert.equal(add([partial])[0].exercises.find(e=>e.id===edited.id),edited);
-  const full={...old,exercises:Array.from({length:100},(_,i)=>({...old.exercises[0],id:`custom-${i}`}))};
-  assert.equal(add([full])[0],full);
+
 });
 
 test('find-x solutions use authored equation rows and safely upgrade saved examples', () => {
@@ -4291,7 +4413,7 @@ test('multiplication notation follows grade while preserving authored unknowns',
   const { createPracticePdf } = load('pdf');
   const { rationalExponentsLesson: lesson } = load('rational-exponents-lesson');
   const font = fs.readFileSync(path.join(__dirname, '../public/fonts/DejaVuSans.ttf'));
-  const source = lesson.exercises.find(e => e.id === 're-find-x-5-3');
+  const source = load('equality-lesson').equalityLesson.exercises.find(e => e.id === 're-find-x-5-3');
   for (const grade of [3, 5, 6, 7]) {
     const exercise = { ...source, id: 'notation-test', task: undefined, prompt: 'Tìm x: 6 × x = 42.', answer: '7', kind: 'number', solution: 'x = 42 : 6\nx = 7' };
     const bytes = createPracticePdf({ ...lesson, grade, exercises: [exercise] }, 'solutions', font, { includeKnowledgeSummary: false });
@@ -4302,4 +4424,827 @@ test('multiplication notation follows grade while preserving authored unknowns',
     assert.ok(Buffer.from(bytes).toString('latin1').includes(`${load('math-variable-glyph').mathXStrokeWidth} w 1 j`));
     assert.equal(exercise.prompt, 'Tìm x: 6 × x = 42.');
   }
+});
+
+test('interactive labs preserve legacy lessons and survive cloning, import and sharing', async () => {
+  const { interactiveLabFor } = load('interactive-lab');
+  const { duplicateLesson } = load('lessons');
+  for (const [id, kind] of [['math-unit-fractions-3', 'sharing'], ['math-number-line-7', 'number-line'], ['math-rational-exponents-7', 'powers']]) {
+    const lesson = exampleLessons.find(l => l.id === id);
+    const before = JSON.stringify(lesson);
+    assert.equal(interactiveLabFor(lesson), kind);
+    assert.equal(JSON.stringify(lesson), before, 'opening the lab must not change the progress fingerprint');
+    const copied = duplicateLesson(lesson);
+    assert.notEqual(copied.id, id);
+    assert.equal(interactiveLabFor(copied), kind);
+    const parsed = parseMathPack(packLessons([copied])).lessons[0];
+    assert.equal(parsed.interactiveLab, kind);
+    const shared = await decodeMathLesson(await encodeMathLesson(parsed));
+    assert.equal(shared.interactiveLab, kind);
+    assert.equal(shared.teacherNotes, '');
+    assert.equal(interactiveLabFor({ ...lesson, interactiveLab: 'none' }), 'none');
+    assert.equal(interactiveLabFor({ ...lesson, grade: 12 }), 'none');
+  }
+  const invalid = { ...exampleLessons[0], interactiveLab: 'unknown' };
+  assert.throws(() => parseMathPack(packLessons([invalid])), /Hoạt động tương tác/);
+});
+
+test('interactive checkpoints assess mathematical relationships across fresh rounds', () => {
+  const { SHARING_ROUNDS, LINE_ROUNDS, checkSharing, checkPlacement, fractionLabel } = load('interactive-lab');
+  for (const { total, groups } of SHARING_ROUNDS) {
+    assert.equal(checkSharing(Array(groups).fill(total / groups), total).correct, true);
+    assert.equal(checkSharing(Array(groups).fill(0), total).correct, false);
+    assert.equal(checkSharing([total, ...Array(groups - 1).fill(0)], total).correct, false);
+  }
+  for (const { numerator, denominator } of LINE_ROUNDS) {
+    assert.equal(checkPlacement(numerator, numerator, denominator).correct, true);
+    assert.equal(checkPlacement(-numerator, numerator, denominator).correct, false);
+    assert.match(checkPlacement(-numerator, numerator, denominator).message, /Khoảng cách/);
+    assert.equal(checkPlacement(numerator + 1, numerator, denominator).correct, false);
+  }
+  assert.equal(fractionLabel(-2, 4), '-1/2');
+  assert.equal(fractionLabel(-8, 4), '-2');
+  assert.equal(fractionLabel(0, 3), '0');
+});
+
+test('number placement waits for a pause, replaces pending checks, and cancels on leaving', () => {
+  const shell = createMathComponentHooks();
+  const runtime = createMathComponentHooks();
+  let activeRuntime = shell;
+  const hooks = Object.fromEntries(Object.keys(shell.hooks).map(name => [name, (...args) => activeRuntime.hooks[name](...args)]));
+  hooks.useId = () => 'placement-test';
+  const Lab = loadMathComponent('InteractiveLab.tsx', hooks);
+  const outer = shell.render(() => Lab({ kind: 'number-line' }));
+  const Placement = mathComponentNodes(outer).find(n => typeof n.type === 'function' && n.type.name === 'NumberPlacement').type;
+  activeRuntime = runtime;
+  const originalSet = globalThis.setTimeout;
+  const originalClear = globalThis.clearTimeout;
+  const pending = new Map();
+  let id = 0;
+  let completed = 0;
+  globalThis.setTimeout = (callback, delay) => {
+    assert.equal(delay, 650);
+    pending.set(++id, callback);
+    return id;
+  };
+  globalThis.clearTimeout = timer => pending.delete(timer);
+  const render = () => runtime.render(() => Placement({ round: 0, onComplete: () => completed++ }));
+  const feedback = tree => mathComponentNodes(tree).find(n => typeof n.type === 'function' && n.type.name === 'FeedbackMessage').props.value;
+  try {
+    let tree = render();
+    assert.equal(pending.size, 0);
+    assert.equal(feedback(tree), null);
+    assert.ok(!mathComponentText(tree).includes('Kiểm tra vị trí'));
+    assert.equal(mathComponentText(mathComponentNodes(tree, 'label')[0]), 'Di chuyển điểm A');
+    mathComponentNodes(tree, 'input')[0].props.onChange({ target: { value: '-2' } });
+    tree = render();
+    assert.equal(feedback(tree), null);
+    mathComponentNodes(tree, 'button').find(n => n.props['aria-label'].startsWith('Sang trái')).props.onClick();
+    tree = render();
+    assert.equal(pending.size, 1);
+    const callback = [...pending.values()][0];
+    pending.clear();
+    callback();
+    tree = render();
+    assert.equal(feedback(tree).correct, true);
+    assert.match(feedback(tree).message, /Em đặt A tại -3\/4/);
+    assert.equal(feedback(tree).title, 'Đúng rồi!');
+    assert.equal(completed, 1);
+    mathComponentNodes(tree, 'input')[0].props.onChange({ target: { value: '0' } });
+    tree = render();
+    assert.equal(feedback(tree), null);
+    assert.equal(pending.size, 1);
+    const incorrectCheck = [...pending.values()][0];
+    pending.clear();
+    incorrectCheck();
+    tree = render();
+    assert.equal(feedback(tree).correct, false);
+    assert.equal(feedback(tree).title, 'Chưa đúng — thử lại nhé.');
+    mathComponentNodes(tree, 'input')[0].props.onChange({ target: { value: '1' } });
+    render();
+    runtime.unmount();
+    assert.equal(pending.size, 0);
+  } finally {
+    runtime.unmount();
+    shell.unmount();
+    globalThis.setTimeout = originalSet;
+    globalThis.clearTimeout = originalClear;
+  }
+});
+
+test('powers warmup waits for an attempt before explaining and supports correction', () => {
+  const runtime = createMathComponentHooks();
+  const Warmup = loadMathComponent('FoundationWarmup.tsx', runtime.hooks);
+  const render = () => runtime.render(() => Warmup({ kind: 'powers' }));
+  try {
+    let tree = render();
+    const status = () => mathComponentNodes(tree).find(n => n.props?.role === 'status');
+    assert.equal(mathComponentText(status()), '');
+    for (const choice of ['3^2', '2 × 3', '2^3']) {
+      mathComponentNodes(tree, 'button').find(n => mathComponentText(n) === choice).props.onClick();
+      tree = render();
+      assert.match(mathComponentText(status()), choice === '2^3' ? /Đúng rồi!/ : /Chưa đúng/);
+      assert.equal(mathComponentNodes(tree, 'button').filter(n => n.props['aria-pressed']).length, 1);
+    }
+    assert.match(mathComponentText(status()), /Cơ số 2/);
+  } finally { runtime.unmount(); }
+});
+
+test('typed answers remain drafts before checking and composition does not submit', () => {
+  const runtime = createMathComponentHooks();
+  const Exercise = loadMathComponent('Exercise.tsx', runtime.hooks);
+  const exercise = { ...teachingModeFixture().exercises[0], unit: '', answer: '12' };
+  let result;
+  const render = () => runtime.render(() => Exercise({ exercise, result, onChange: r => { result = r; } }));
+  try {
+    let tree = render();
+    mathComponentNodes(tree, 'input')[0].props.onChange({ target: { value: '1' } });
+    tree = render();
+    assert.equal(result.solved, false);
+    assert.equal(result.attempted, undefined);
+    assert.equal(result.assisted, false);
+    mathComponentNodes(tree, 'input')[0].props.onChange({ target: { value: '12' } });
+    tree = render();
+    assert.equal(result.solved, false);
+    const inputs = mathComponentNodes(tree, 'div').find(n => n.props.onCompositionStart);
+    inputs.props.onCompositionStart();
+    tree.props.onSubmit({ preventDefault() {} });
+    assert.equal(result.solved, false);
+    inputs.props.onCompositionEnd();
+    tree = render();
+    tree.props.onSubmit({ preventDefault() {} });
+    assert.equal(result.solved, true);
+    assert.equal(result.assisted, false);
+    assert.equal(result.attempted, true);
+  } finally { runtime.unmount(); }
+});
+
+test('teaching and normal modes keep interactive reference text optional', () => {
+  for (const lesson of [{ ...teachingModeFixture(), interactiveLab: 'number-line' }, load('angle-lesson').angleLesson]) {
+    const harness = createTeachingModeHarness({ lesson });
+    try {
+      harness.click('Khám phá');
+      harness.click('Giảng bài');
+      let tree = harness.render();
+      const labContainer = () => mathComponentNodes(harness.render(), 'div').find(n => n.props.children?.type === 'InteractiveLab');
+      assert.equal(labContainer().props.hidden, false);
+      assert.match(mathComponentText(tree), /Khám phá tương tác/);
+      const reference = () => mathComponentNodes(harness.render(), 'div').find(n => n.props.className === 'teachingItem');
+      assert.equal(reference().props.hidden, true);
+      harness.click('Xem giải thích và ví dụ tham khảo');
+      assert.equal(reference().props.hidden, false);
+      assert.equal(labContainer().props.hidden, false);
+      harness.click('Thoát giảng bài');
+      assert.equal(reference().props.hidden, false);
+      harness.click('Giảng bài');
+      harness.click('Tiếp →');
+      assert.ok(!mathComponentText(harness.render()).includes('Khám phá · Nội dung'));
+      harness.click('← Trước');
+      assert.equal(labContainer().props.hidden, false);
+    } finally { harness.restore(); }
+  }
+});
+
+test('remaining Grade 3 and Grade 7 lessons resolve interactive activities without changing saved content', async () => {
+  const { interactiveLabFor } = load('interactive-lab');
+  const { duplicateLesson } = load('lessons');
+  const presets = {
+    'math-add-subtract-components-3': 'missing-parts',
+    'math-multiply-divide-components-3': 'equal-groups',
+    'math-measurement-units-3': 'measurement',
+    'math-midpoint-3': 'midpoint',
+    'math-rational-7': 'rational',
+  };
+  for (const [id, kind] of Object.entries(presets)) {
+    const source = exampleLessons.find(l => l.id === id);
+    const before = JSON.stringify(source);
+    assert.equal(interactiveLabFor(source), kind);
+    assert.equal(JSON.stringify(source), before);
+    assert.equal(interactiveLabFor({ ...source, interactiveLab: 'none' }), 'none');
+    const clone = duplicateLesson(source);
+    assert.equal(clone.interactiveLab, kind);
+    const shared = await decodeMathLesson(await encodeMathLesson(clone));
+    assert.equal(shared.interactiveLab, kind);
+  }
+});
+
+test('new models distinguish whole/part, group count/size, and both midpoint conditions', () => {
+  const { partResult, groupResult, isMidpoint, RATIONAL_ROUNDS } = load('concept-labs');
+  [24, 39, 15].forEach((answer, round) => {
+    assert.equal(partResult(round, answer).correct, true);
+    assert.equal(partResult(round, answer + 1).correct, false);
+  });
+  [6, 4, 20].forEach((answer, round) => {
+    assert.equal(groupResult(round, answer).correct, true);
+    assert.equal(groupResult(round, answer + 1).correct, false);
+  });
+  assert.equal(groupResult(0, 4).total, 16);
+  assert.equal(groupResult(1, 6).total, 36);
+  assert.equal(isMidpoint(8, 4, true), true);
+  assert.equal(isMidpoint(8, 3, true), false);
+  assert.equal(isMidpoint(8, 4, false), false);
+  assert.equal(isMidpoint(8, 0, true), false);
+  const expected = [1/2, -2/3, -1/2+3/4];
+  RATIONAL_ROUNDS.forEach((r, i) => assert.equal(r.values[r.choices.indexOf(r.answer)], expected[i]));
+});
+
+test('rational comparison keeps both fractions visible before and after either answer', () => {
+  const runtime = createMathComponentHooks();
+  const Component = loadMathComponent('ConceptLab.tsx', runtime.hooks);
+  let completions = 0;
+  const render = () => runtime.render(() => {
+    const child = Component({ kind: 'rational', round: 1, onComplete: () => completions++ });
+    return child.type(child.props);
+  });
+  try {
+    let tree = render();
+    const diagram = () => mathComponentNodes(tree).find(n => n.props?.role === 'img');
+    const initialDiagram = mathComponentText(diagram());
+    const highlighted = () => mathComponentNodes(diagram()).filter(n => n.props?.['data-selected'] === true);
+    assert.equal(highlighted().length, 0);
+    assert.match(initialDiagram, /-3\/4 = -9\/12/);
+    assert.match(initialDiagram, /-2\/3 = -8\/12/);
+    for (const choice of ['-3/4', '-2/3']) {
+      mathComponentNodes(tree, 'button').find(n => mathComponentText(n) === choice).props.onClick();
+      tree = render();
+      assert.equal(mathComponentText(diagram()), initialDiagram);
+      assert.equal(highlighted().length, 1);
+      assert.ok(mathComponentText(highlighted()[0]).startsWith(choice));
+      const feedback = mathComponentNodes(tree).find(n => typeof n.type === 'function' && n.type.name === 'Feedback');
+      assert.equal(feedback.props.correct, choice === '-2/3');
+    }
+    assert.equal(completions, 1);
+  } finally { runtime.unmount(); }
+});
+
+test('new choice activities give feedback on selection and permit correction immediately', () => {
+  for (const [kind, incorrect, correct] of [['missing-parts', 54, 24], ['equal-groups', 4, 6], ['measurement', 8, 6]]) {
+    const runtime = createMathComponentHooks();
+    const Component = loadMathComponent('ConceptLab.tsx', runtime.hooks);
+    let completions = 0;
+    const render = () => runtime.render(() => {
+      const child = Component({ kind, round: 0, onComplete: () => completions++ });
+      return child.type(child.props);
+    });
+    try {
+      let tree = render();
+      let choices = mathComponentNodes(tree).find(n => typeof n.type === 'function' && n.type.name === 'Choices');
+      choices.props.onChoose(incorrect);
+      tree = render();
+      let feedback = mathComponentNodes(tree).find(n => typeof n.type === 'function' && n.type.name === 'Feedback');
+      assert.equal(feedback.props.correct, false, kind);
+      assert.equal(completions, 0);
+      choices = mathComponentNodes(tree).find(n => typeof n.type === 'function' && n.type.name === 'Choices');
+      choices.props.onChoose(correct);
+      tree = render();
+      feedback = mathComponentNodes(tree).find(n => typeof n.type === 'function' && n.type.name === 'Feedback');
+      assert.equal(feedback.props.correct, true, kind);
+      assert.equal(completions, 1);
+    } finally { runtime.unmount(); }
+  }
+});
+
+test('equality lesson validates, adds once, preserves edits, and shares its activity', async () => {
+  const { equalityLesson: lesson, addEqualityLesson: add } = load('equality-lesson');
+  assert.equal(lesson.grade, 7);
+  assert.equal(lesson.semester, '1');
+  assert.equal(lesson.exercises.length, 55);
+  assert.deepEqual(parseMathPack(packLessons([lesson])).lessons[0], lesson);
+  assert.equal(add([])[0].id, lesson.id);
+  const edited = [{ ...lesson, title: 'Teacher edited title' }];
+  assert.equal(add(edited), edited);
+  const full = Array.from({ length: 100 }, (_, i) => ({ ...lesson, id: `custom-${i}` }));
+  assert.equal(add(full), full);
+  const shared = await decodeMathLesson(await encodeMathLesson(lesson));
+  assert.equal(shared.interactiveLab, 'equality');
+  assert.equal(load('lessons').duplicateLesson(lesson).interactiveLab, 'equality');
+  const numeric = value => value.includes('/') ? value.split('/').map(Number).reduce((n, d) => n / d) : Number(value);
+  const equations = {
+    g2: [1, -5, -2], g3: [1, 1/3, 5/6],
+    p1: [1, 7, -4], p2: [1, -3/5, 1/10], p3: [1, 8, 5], p4: [2, -3, 9],
+    e1: [1, 9, 2], e2: [1, -4, 6], e3: [1, 3/4, -1/2], e4: [1, -5/6, -1/3],
+    e7: [3, 1/2, 2], e8: [-1, 5, 8],
+  };
+  for (const [id, [a, b, c]] of Object.entries(equations)) {
+    const task = lesson.exercises.find(e => e.id === `eq-${id}`);
+    assert.ok(Math.abs(a * numeric(task.answer) + b - c) < 1e-9, task.id);
+  }
+});
+
+test('equality balance reflects heavier side and both-side changes', () => {
+  const { balanceState } = load('equality-lab');
+  assert.equal(balanceState(8, 8).equal, true);
+  assert.equal(balanceState(8, 8).complete, false);
+  assert.equal(balanceState(7, 8).relation, '<');
+  assert.ok(balanceState(7, 8).tilt > 0);
+  assert.ok(balanceState(8, 7).tilt < 0);
+  assert.equal(balanceState(5, 5).complete, true);
+  for (let i = 0; i <= 12; i++) assert.equal(balanceState(i, i).equal, true);
+});
+
+test('transposition activities require a correct sign and answer before completing', () => {
+  const { TRANSFER_ROUNDS } = load('equality-lab');
+  for (const round of [1, 2]) {
+    const runtime = createMathComponentHooks();
+    const Lab = loadMathComponent('EqualityLab.tsx', runtime.hooks);
+    let completed = 0;
+    const render = () => runtime.render(() => {
+      const child = Lab({ round, onComplete: () => completed++ });
+      return child.type(child.props);
+    });
+    const r = TRANSFER_ROUNDS[round - 1];
+    try {
+      let tree = render();
+      const select = label => {
+        mathComponentNodes(tree, 'button').find(n => mathComponentText(n) === label).props.onClick();
+        tree = render();
+      };
+      assert.equal(mathComponentNodes(tree, 'button').length, 2);
+      assert.ok(mathComponentNodes(tree, 'button').every(n => n.props['aria-pressed'] === false));
+      select(r.sign === '+' ? '−' : '+');
+      assert.equal(completed, 0);
+      assert.equal(mathComponentNodes(tree, 'button').length, 2);
+      select(r.sign);
+      assert.equal(mathComponentNodes(tree, 'button').length, 5);
+      select(r.choices.find(c => c !== r.answer));
+      assert.equal(completed, 0);
+      select(r.answer);
+      assert.equal(completed, 1);
+      const messages = mathComponentNodes(tree).filter(n => typeof n.type === 'function' && n.type.name === 'Message');
+      assert.equal(messages.at(-1).props.value.correct, true);
+      assert.ok(messages.at(-1).props.value.text.includes(r.check));
+    } finally { runtime.unmount(); }
+  }
+});
+
+
+test('equality omits application questions and powers omits find-x questions', () => {
+  const { equalityLesson } = load('equality-lesson');
+  const { rationalExponentsLesson } = load('rational-exponents-lesson');
+  assert.equal(equalityLesson.exercises.length, 55);
+  assert.ok(!equalityLesson.exercises.some(e => ['eq-e5','eq-e6'].includes(e.id)));
+  assert.equal(equalityLesson.exercises.filter(e => e.id.startsWith('re-find-x-')).length, 33);
+  assert.ok(!rationalExponentsLesson.exercises.some(e => e.id.startsWith('re-find-x-') || /tìm x/i.test(e.prompt)));
+});
+
+test('worked equality examples reveal one equation at a time and keep identical clean solutions', () => {
+  const { equalityExamples } = load('equality-examples');
+  assert.equal(equalityExamples.length, 10);
+  for (const example of equalityExamples) {
+    const runtime = createMathComponentHooks();
+    const Example = loadMathComponent('EqualityExample.tsx', runtime.hooks);
+    let completed = 0;
+    const render = () => runtime.render(() => Example({example, onComplete: () => completed++}));
+    let tree = render();
+    const click = label => {
+      mathComponentNodes(tree, 'button').find(n => mathComponentText(n) === label).props.onClick();
+      tree = render();
+    };
+    for (let i = 1; i < example.rows.length; i++) {
+      assert.ok(!mathComponentText(tree).includes(example.check));
+      assert.equal(completed, 0);
+      click('Xem bước tiếp theo →');
+    }
+    assert.equal(completed, 1);
+    assert.ok(mathComponentText(tree).includes(example.check));
+    click('Xem cách trình bày');
+    assert.equal(mathComponentNodes(tree, 'details').length, 0);
+    assert.equal(mathComponentNodes(tree, 'mark').length, 0);
+    assert.ok(!mathComponentText(tree).includes(example.check));
+    for (const row of example.rows) assert.ok(mathComponentText(tree).includes(row.equation));
+    click('Xem giải thích từng bước');
+    assert.ok(mathComponentText(tree).includes(example.check));
+    runtime.unmount();
+  }
+});
+
+test('power worked example migration preserves edits and is idempotent', () => {
+  const { equalityLesson, addEqualityPowerExample: add } = load('equality-lesson');
+  const old = {...equalityLesson, blocks:equalityLesson.blocks.filter(b => !b.id.startsWith('eq-example-power'))};
+  const updated = add([old]);
+  assert.deepEqual(updated[0], equalityLesson);
+  assert.deepEqual(add(updated), updated);
+  const edited = {...equalityLesson, blocks:equalityLesson.blocks.map(b => b.id === 'eq-example-power' ? {...b, text:'Teacher example'} : b)};
+  assert.deepEqual(add([edited]), [edited]);
+  const previous = {...edited, blocks:edited.blocks.filter(b => !['eq-example-power-product', 'eq-example-power-quotient'].includes(b.id))};
+  assert.deepEqual(add([previous]), [edited]);
+  const partial = {...edited, blocks:edited.blocks.filter(b => b.id !== 'eq-example-power-quotient')};
+  assert.deepEqual(add([partial]), [edited]);
+});
+
+
+test('shared exercises debounce complete answers and cancel on editing, help, navigation and unmount', () => {
+  const originalSet = globalThis.setTimeout, originalClear = globalThis.clearTimeout;
+  const timers = new Map(); let counter = 0;
+  globalThis.setTimeout = (callback, delay) => { assert.equal(delay, 800); timers.set(++counter, callback); return counter; };
+  globalThis.clearTimeout = id => timers.delete(id);
+  const runtime = createMathComponentHooks();
+  const Exercise = loadMathComponent('Exercise.tsx', runtime.hooks);
+  let result, active = true;
+  const exercise = {...teachingModeFixture().exercises[0], kind:'fraction', answer:'3/4', unit:'cm'};
+  const render = () => runtime.render(() => Exercise({exercise, active, result, onChange:r=>{result=r;}}));
+  let tree;
+  const type = (part,value) => { mathComponentNodes(tree,'input').find(n=>n.props.id===`${exercise.id}-${part}`).props.onChange({target:{value}}); tree=render(); };
+  const flush = () => { const callbacks=[...timers.values()]; timers.clear(); callbacks.forEach(cb=>cb()); tree=render(); };
+  try {
+    tree=render(); assert.equal(timers.size,0);
+    assert.ok(!mathComponentNodes(tree,'button').some(n=>mathComponentText(n)==='Kiểm tra'));
+    type('answer','-'); assert.equal(timers.size,0);
+    type('answer','3'); assert.equal(timers.size,0);
+    type('denominator','4'); assert.equal(timers.size,0);
+    type('unit','c'); assert.equal(timers.size,1);
+    type('unit','cm'); assert.equal(timers.size,1);
+    const composition = mathComponentNodes(tree,'div').find(n=>n.props.onCompositionStart);
+    composition.props.onCompositionStart(); assert.equal(timers.size,0);
+    composition.props.onCompositionEnd(); tree=render(); assert.equal(timers.size,1);
+    active=false; tree=render(); assert.equal(timers.size,0);
+    active=true; tree=render(); assert.equal(timers.size,0);
+    type('answer','2'); flush(); assert.equal(result.solved,false); assert.equal(result.attempted,true);
+    type('answer','3'); assert.ok(!mathComponentText(tree).includes('Chưa đúng lần này'));
+    mathComponentNodes(tree,'button').find(n=>mathComponentText(n)==='Gợi ý').props.onClick(); tree=render(); assert.equal(timers.size,0);
+    type('answer','3'); flush(); assert.equal(result.solved,true); assert.equal(timers.size,0);
+  } finally { runtime.unmount(); globalThis.setTimeout=originalSet; globalThis.clearTimeout=originalClear; }
+});
+
+test('equality exploration covers inverse operations and powers with gated automatic feedback', () => {
+  const { OPERATION_ROUNDS, EQUALITY_ROUND_COUNT } = load('equality-lab');
+  assert.equal(EQUALITY_ROUND_COUNT, 16);
+  const expected = ['4','-8','4','3/2','3','4','4','7','4','3','-3','-3','5'];
+  OPERATION_ROUNDS.forEach((activity, index) => {
+    assert.equal(activity.answer, expected[index]);
+    const runtime = createMathComponentHooks();
+    const Lab = loadMathComponent('EqualityLab.tsx', runtime.hooks);
+    let completed = 0;
+    const render = () => runtime.render(() => {
+      const child = Lab({round:index+3,onComplete:()=>completed++});
+      return child.type(child.props);
+    });
+    let tree=render();
+    const click = label => {
+      mathComponentNodes(tree,'button').find(n=>mathComponentText(n)===label).props.onClick();
+      tree=render();
+    };
+    assert.equal(mathComponentNodes(tree,'button').length,activity.options.length);
+    assert.ok(mathComponentNodes(tree,'button').every(n=>!n.props['aria-pressed']));
+    click(activity.options.find(o=>o!==activity.operation));
+    assert.equal(completed,0);
+    assert.equal(mathComponentNodes(tree,'button').length,activity.options.length);
+    click(activity.operation);
+    assert.equal(mathComponentNodes(tree,'button').length,activity.options.length+activity.choices.length);
+    click(activity.choices.find(c=>c!==activity.answer)); assert.equal(completed,0);
+    click(activity.answer); assert.equal(completed,1);
+    const messages=mathComponentNodes(tree).filter(n=>typeof n.type==='function' && n.type.name==='Message');
+    assert.equal(messages.at(-1).props.value.text,activity.check);
+    click(activity.options.find(o=>o!==activity.operation));
+    assert.equal(mathComponentNodes(tree,'button').length,activity.options.length);
+    runtime.unmount();
+  });
+});
+
+test('angle lesson validates and bisector feedback waits until movement settles', () => {
+  const {angleLesson:lesson}=load('angle-lesson');
+  assert.equal(lesson.exercises.length,34);
+  assert.deepEqual(parseMathPack(packLessons([lesson])).lessons[0],lesson);
+  assert.equal(load('interactive-lab').interactiveLabFor(lesson),'angles');
+  const oldSet=globalThis.setTimeout, oldClear=globalThis.clearTimeout;
+  const timers=new Map();let id=0;
+  globalThis.setTimeout=(cb,delay)=>{assert.equal(delay,650);timers.set(++id,cb);return id;};
+  globalThis.clearTimeout=id=>timers.delete(id);
+  try {
+    for(const [round,target] of [[1,40],[2,65]]) {
+      const runtime=createMathComponentHooks();const Lab=loadMathComponent('AngleLab.tsx',runtime.hooks);let complete=0;
+      const render=()=>runtime.render(()=>Lab({round,onComplete:()=>complete++}));let tree=render();
+      assert.equal(timers.size,0);
+      mathComponentNodes(tree,'input')[0].props.onChange({target:{value:String(target)}});tree=render();
+      assert.equal(complete,0);assert.equal(timers.size,1);
+      mathComponentNodes(tree,'input')[0].props.onPointerDown();tree=render();assert.equal(timers.size,0);
+      mathComponentNodes(tree,'input')[0].props.onPointerUp();tree=render();
+      const callbacks=[...timers.values()];timers.clear();callbacks.forEach(cb=>cb());tree=render();
+      assert.equal(complete,1);assert.match(mathComponentText(tree),/Đúng rồi/);
+      mathComponentNodes(tree,'input')[0].props.onChange({target:{value:'20'}});tree=render();assert.ok(!mathComponentText(tree).includes('Đúng rồi'));
+      runtime.unmount();assert.equal(timers.size,0);
+    }
+  }finally{globalThis.setTimeout=oldSet;globalThis.clearTimeout=oldClear;}
+});
+
+test('angle exercise diagrams show givens and hide unknown measurements until revealed', () => {
+  const Diagram = loadMathComponent('AngleExerciseDiagram.tsx', {});
+  const lesson = load('angle-lesson').angleLesson;
+  const exercise = id => lesson.exercises.find(q => q.id === id);
+  const first = Diagram({ exercise: exercise('angle-g1'), reveal: false });
+  assert.deepEqual(first.props.labels, ['?', '?']);
+  assert.match(first.props.caption, /84°/);
+  assert.ok(!first.props.caption.includes('42'));
+  const reverse = Diagram({ exercise: exercise('angle-g2'), reveal: false });
+  assert.deepEqual(reverse.props.labels, ['32°', '']);
+  assert.equal(reverse.props.totalLabel, 'Cả góc aOb = ?');
+  assert.ok(!reverse.props.caption.includes('64'));
+  const unequal = Diagram({ exercise: exercise('angle-p3'), reveal: false });
+  assert.equal(unequal.props.equal, false);
+  assert.deepEqual(unequal.props.labels, ['43°', '?']);
+  for (const id of ['angle-g1', 'angle-g2', 'angle-p2', 'angle-p3', 'angle-e1', 'angle-e2', 'angle-e3', 'angle-e4', 'angle-e5', 'angle-e6']) {
+    const revealed = Diagram({ exercise: exercise(id), reveal: true });
+    assert.ok(revealed);
+    assert.ok(!revealed.props.caption.includes('?'));
+  }
+  assert.equal(Diagram({ exercise: { ...exercise('angle-g1'), prompt: 'Changed question' }, reveal: false }), null);
+  assert.equal(Diagram({ exercise: exercise('angle-f1'), reveal: false }), null);
+});
+
+ test('reverse bisector exploration marks the whole angle, not the unknown half', () => {
+  const runtime = createMathComponentHooks();
+  const Lab = loadMathComponent('AngleLab.tsx', runtime.hooks);
+  const tree = runtime.render(() => Lab({round: 3, onComplete() {}}));
+  const diagram = mathComponentNodes(tree, 'AngleDiagram')[0];
+  assert.deepEqual(diagram.props.labels, ['35°', '']);
+  assert.equal(diagram.props.totalLabel, 'Cả góc xOy = ?');
+  assert.equal(diagram.props.equal, true);
+  runtime.unmount();
+});
+
+test('crossing angles have correct answers and diagrams hide unknown values', () => {
+  const { angleLesson } = load('angle-lesson');
+  const Diagram = loadMathComponent('CrossingAngleDiagram.tsx', {});
+  for (const [angle, target, answer] of [[72, 'opposite', 72], [72, 'adjacent', 108], [118, 'adjacent', 62]]) {
+    const hidden = Diagram({ angle, target });
+    assert.ok(mathComponentNodes(hidden, 'text').some(n => mathComponentText(n) === '?'));
+    const solved = Diagram({ angle, target, reveal: true });
+    assert.ok(mathComponentNodes(solved, 'text').some(n => mathComponentText(n) === `${answer}°`));
+    assert.ok(!mathComponentNodes(solved, 'text').some(n => mathComponentText(n) === '?'));
+  }
+  for (const [id, answer] of [['cross-g1', '72'], ['cross-g2', '108'], ['cross-p1', '118'], ['cross-p2', '62'], ['cross-e1', '133']]) {
+    assert.equal(angleLesson.exercises.find(q => q.id === `angle-${id}`).answer, answer);
+  }
+});
+
+test('crossing angle activities give immediate feedback for both relationships', () => {
+  for (const [round, answer] of [[4, '65°'], [5, '115°']]) {
+    const runtime = createMathComponentHooks();
+    const Lab = loadMathComponent('CrossingAngleLab.tsx', runtime.hooks);
+    let complete = 0;
+    const render = () => runtime.render(() => Lab({ round, onComplete() { complete++; } }));
+    let tree = render();
+    mathComponentNodes(tree, 'button').find(n => mathComponentText(n) === '180°').props.onClick();
+    assert.match(mathComponentText(render()), /Chưa đúng/);
+    assert.equal(complete, 0);
+    tree = render();
+    mathComponentNodes(tree, 'button').find(n => mathComponentText(n) === answer).props.onClick();
+    assert.match(mathComponentText(render()), /Đúng rồi/);
+    assert.equal(complete, 1);
+    runtime.unmount();
+  }
+});
+
+test('angle extension balances tiers and verifies multi-step numerical answers', () => {
+  const { anglePractice } = load('angle-practice');
+  const { checkAnswer } = load('lessons');
+  assert.equal(new Set(anglePractice.map(q => q.id)).size, 15);
+  for (const [tier, count] of [['easy', 5], ['medium', 4], ['hard', 6]]) assert.equal(anglePractice.filter(q => q.difficulty === tier).length, count);
+  for (const id of ['b4', 'm5', 'm6']) assert.ok(!anglePractice.some(q => q.id === `angle-more-${id}`));
+  const expected = {
+    m1: 28 + 46, m2: 137 - 59, m4: 180 / 4,
+    h1: (180 - 64) / 2, h2: 180 / 2, h3: 132 / 2, h4: 144 / 4 + 144 / 2,
+    h5: 150 / 3 + (150 * 2 / 3) / 2, h6: 180 - 54,
+  };
+  for (const [id, answer] of Object.entries(expected)) {
+    const exercise = anglePractice.find(q => q.id === `angle-more-${id}`);
+    assert.equal(Number(exercise.answer), answer);
+    assert.equal(checkAnswer(exercise, String(answer), '').correct, true);
+    assert.ok(exercise.hint && exercise.solution);
+  }
+  const source = load('angle-lesson').angleLesson;
+  assert.equal(new Set(source.exercises.map(q => q.prompt)).size, source.exercises.length);
+  const { exerciseAngleDiagram } = load('angle-diagram');
+  assert.equal(exerciseAngleDiagram(anglePractice.find(q => q.id === 'angle-more-m1')).findWhole, true);
+});
+
+test('angle calculations omit consecutive repeated names without merging different angles or prose', () => {
+  const original = 'Vì Oz nằm trong góc xOy nên:\nxOy = xOz + zOy\nxOy = 28° + 46°\nxOy = 74°.\nVậy góc xOy bằng 74°.';
+  const formatted = formatCalculationSteps(original);
+  assert.equal(formatted, 'Vì Oz nằm trong góc xOy nên:\nxOy = xOz + zOy\n= 28° + 46°\n= 74°.\nVậy góc xOy bằng 74°.');
+  assert.equal(formatCalculationSteps(formatted), formatted);
+  assert.equal(formatCalculationSteps('Góc xOz = 60°\nGóc zOy = 40°\nGóc zOy = 100° − 60°'), 'xOz = 60°\nzOy = 40°\n= 100° − 60°');
+  assert.equal(formatCalculationSteps('xOy = 80°\nKiểm tra:\nxOy = 40° + 40°'), 'xOy = 80°\nKiểm tra:\nxOy = 40° + 40°');
+});
+
+test('multi-ray figures label only givens before revealing the requested angle', () => {
+  const { angleConstruction } = load('angle-construction');
+  for (const [id, answer] of [['h1',58],['h2',90],['h3',66],['h4',108],['h5',100]]) {
+    const question = angleConstruction(id, false);
+    const solution = angleConstruction(id, true);
+    const labels = question.items.filter(p => 'text' in p).map(p => p.text);
+    assert.ok(labels.some(s => s.endsWith('= ?')));
+    assert.ok(!labels.some(s => s.endsWith(`= ${answer}°`)));
+    assert.ok(solution.items.some(p => 'text' in p && p.text.endsWith(`= ${answer}°`)));
+    for(const item of question.items) for(const [x,y] of ('points' in item ? item.points : [item.at])) {
+      assert.ok(x >= 0 && x <= 440 && y >= 0 && y <= 305);
+    }
+  }
+  const protractor = angleConstruction('b4', false);
+  assert.ok(protractor.items.some(p => 'text' in p && p.text === '50'));
+  assert.ok(protractor.items.some(p => 'text' in p && p.text === '130'));
+});
+
+test('angle solution grouping separates prose and aligns continuation rows', () => {
+  const { angleSolutionGroups } = load('format');
+  assert.deepEqual(angleSolutionGroups('Vì Oz nằm trong góc xOy nên:\nxOy = xOz + zOy\nxOy = 28° + 46°\nxOy = 74°.\nVậy xOy = 74°.'), [
+    {text: 'Vì Oz nằm trong góc xOy nên:'},
+    {equations: [{left:'xOy',right:'xOz + zOy'}, {left:'',right:'28° + 46°'}, {left:'',right:'74°.'}]},
+    {text:'Vậy xOy = 74°.'},
+  ]);
+});
+
+test('grouped practice labels preserve original exercise identity for diagrams', () => {
+  const runtime = createMathComponentHooks();
+  const Exercise = loadMathComponent('Exercise.tsx', runtime.hooks);
+  const exercise = load('angle-lesson').angleLesson.exercises.find(q => q.id === 'angle-more-m1');
+  const tree = runtime.render(() => Exercise({ exercise, displayPrompt: `a) ${exercise.prompt}`, onChange() {} }));
+  assert.ok(mathComponentText(tree).includes(`a) ${exercise.prompt}`));
+  const diagram = mathComponentNodes(tree, 'AngleExerciseDiagram')[0];
+  assert.equal(diagram.props.exercise, exercise);
+  assert.ok(load('angle-diagram').exerciseAngleDiagram(diagram.props.exercise));
+  runtime.unmount();
+});
+
+test('all current angle extra practice groups 2 through 4 have question and solution figures', () => {
+  const { exerciseAngleDiagram } = load('angle-diagram');
+  const { angleConstruction } = load('angle-construction');
+  const exercises = load('angle-lesson').angleLesson.exercises.filter(q =>
+    /^angle-more-[mh]/.test(q.id) || /^angle-(cross-e|e\d)/.test(q.id));
+  assert.equal(exercises.length, 18);
+  for (const exercise of exercises) assert.ok(exerciseAngleDiagram(exercise), exercise.id);
+  const labels = reveal => angleConstruction('m4', reveal).items.filter(p => 'text' in p).map(p => p.text);
+  assert.ok(labels(false).includes('3a'));
+  assert.ok(!labels(false).includes('45°'));
+  assert.ok(labels(true).includes('45°'));
+  assert.ok(labels(true).includes('135°'));
+  assert.ok(angleConstruction('equal-angles', true).items.some(p => p.text === 'Bằng nhau nhưng không đối đỉnh'));
+});
+
+test('parallel lesson covers all stages, validates and has independent numeric answers', () => {
+ const {parallelLesson:l,parallelFigureFor}=load('parallel-lesson');
+ assert.deepEqual(parseMathPack(packLessons([l])).lessons[0],l);
+ assert.equal(l.exercises.length,30);
+ const foundation=l.exercises.filter(e=>e.section==='foundation');
+ assert.ok(foundation.every(e=>! /so le trong|đồng vị|trong cùng phía/i.test([e.prompt,e.solution,...e.options].join(' '))));
+ assert.equal(parallelFigureFor(foundation.find(e=>e.id==='parallel-f2')).mode,'intersection');
+ assert.equal(l.exercises.find(e=>e.id==='parallel-g0').section,'guided');
+ assert.equal(l.exercises.filter(e=>e.kind==='written').length,4);
+ for(const section of ['foundation','explore','example','guided','practice','extra']) assert.ok([...l.blocks,...l.exercises].some(e=>e.section===section));
+ const expected={f1:112,g1:72,g2:73,p1:1,p2:83,n1:64,n2:76,n3:68,n4:123,n5:125,h1:50,h2:25};
+ for(const [id,answer] of Object.entries(expected)) assert.equal(Number(l.exercises.find(e=>e.id===`parallel-${id}`).answer),answer,id);
+ for(const e of l.exercises) {
+  assert.ok(e.solution && e.hint);
+  if(e.kind==='written') assert.equal(e.criteria.length,3);
+  if(parallelFigureFor(e)) assert.equal(parallelFigureFor({...e,prompt:e.prompt+' changed'}),null);
+ }
+});
+
+test('parallel figures preserve givens, hide results and fit screen/print bounds', () => {
+ const {parallelFigures}=load('parallel-lesson');
+ const {parallelGeometry,parallelAngleValue}=load('parallel-geometry');
+ for(let angle=55;angle<=115;angle++) {
+  assert.equal(parallelAngleValue(angle,4)+parallelAngleValue(angle,1),180);
+  assert.equal(parallelAngleValue(angle,3),parallelAngleValue(angle,1));
+ }
+ for(const config of Object.values(parallelFigures)) for(const reveal of [false,true]) {
+  const scene=parallelGeometry(config,reveal);
+  for(const item of scene.items) for(const [x,y] of ('points' in item?item.points:[item.at])) assert.ok(Number.isFinite(x)&&Number.isFinite(y)&&x>=0&&x<=440&&y>=0&&y<=305,JSON.stringify({config,x,y}));
+  if(config.answers) for(const value of Object.values(config.answers)) if(!Object.values(config.labels||{}).includes(value)) assert.equal(scene.items.some(p=>p.text===value),reveal);
+ }
+ const scene=parallelGeometry(parallelFigures['parallel-d2']);
+ assert.notEqual(scene.items[1].points[0][1],scene.items[1].points[1][1], 'unequal alternate angles must not be drawn parallel');
+});
+
+test('parallel lab requires a correct Euclid construction and each proof reason', () => {
+ const run=round=>{const runtime=createMathComponentHooks();const Lab=loadMathComponent('ParallelLab.tsx',runtime.hooks);let count=0;const render=()=>runtime.render(()=>Lab({round,onComplete:()=>count++}));return {runtime,render,count:()=>count};};
+ const e=run(1);let tree=e.render();
+ const click=(tree,label)=>mathComponentNodes(tree,'button').find(b=>mathComponentText(b)===label).props.onClick();
+ click(tree,'Duy nhất một'); assert.equal(e.count(),0);
+ tree=e.render(); mathComponentNodes(tree,'input')[0].props.onChange({target:{value:'0'}});
+ tree=e.render();click(tree,'Duy nhất một');assert.equal(e.count(),1);assert.ok(mathComponentText(e.render()).includes('Đúng rồi!'));e.runtime.unmount();
+ const p=run(5);tree=p.render();click(tree,'Hai góc kề bù');assert.equal(p.count(),0);
+ tree=p.render();click(tree,'Định nghĩa hai đường thẳng vuông góc');assert.equal(p.count(),0);
+ tree=p.render();click(tree,'Hai góc đồng vị tạo bởi hai đường thẳng song song');assert.equal(p.count(),0);
+ tree=p.render();click(tree,'Định nghĩa hai đường thẳng vuông góc');assert.equal(p.count(),1);assert.ok(mathComponentText(p.render()).includes('Vậy')||mathComponentText(p.render()).includes('vậy'));p.runtime.unmount();
+});
+
+
+test('equality same-base example upgrades default summaries and preserves teacher edits', () => {
+  const { equalityLesson, expandEqualitySummary } = load('equality-lesson');
+  const summary = equalityLesson.knowledgeSummary;
+  assert.ok(summary.includes('2^x × 2^3 = 2^7 → 2^(x + 3) = 2^7 → x + 3 = 7 → x = 7 - 3 = 4'));
+  assert.ok(summary.includes('2^x : 2^3 = 2^4 → 2^(x - 3) = 2^4 → x - 3 = 4 → x = 4 + 3 = 7'));
+  assert.ok(!summary.includes('x^2 = 9'));
+  const linearSummary = summary.replace('\n7. Dấu âm và dấu ngoặc\n5 - x = 8 → -x = 3 → x = -3. Với hệ số âm: -2x = 6 → x = 6/(-2) = -3.\nDấu trừ trước ngoặc đổi dấu từng số hạng: 10 - (x + 2) = 3 → 10 - x - 2 = 3 → 8 - x = 3 → x = 5.', '');
+  assert.equal(expandEqualitySummary([{ ...equalityLesson, knowledgeSummary: linearSummary }])[0].knowledgeSummary, summary);
+  const earlierSummary = linearSummary.replace('6. Tìm x qua nhiều bước\n2x + 3 = 11 → 2x = 11 - 3 = 8 → x = 8/2 = 4.\n3 × (x + 2) = 15 → x + 2 = 15/3 = 5 → x = 5 - 2 = 3.', 'Nếu x ở cơ số, tìm các giá trị phù hợp với số mũ và điều kiện đề bài. Ví dụ: x^2 = 9 có x = 3 hoặc x = -3; nếu x ∈ ℕ thì chỉ nhận x = 3.');
+  assert.equal(expandEqualitySummary([{ ...equalityLesson, knowledgeSummary: earlierSummary }])[0].knowledgeSummary, summary);
+  const multiplicationSummary = earlierSummary.split('\n').filter(line => !line.startsWith('Chia lũy thừa cùng cơ số')).join('\n');
+  assert.equal(expandEqualitySummary([{ ...equalityLesson, knowledgeSummary: multiplicationSummary }])[0].knowledgeSummary, summary);
+  const previous = multiplicationSummary.split('\n').filter(line => !line.startsWith('Nhân lũy thừa cùng cơ số:')).join('\n');
+  const oldLesson = { ...equalityLesson, knowledgeSummary: previous };
+  const edited = { ...oldLesson, knowledgeSummary: previous + '\nGhi chú của giáo viên.' };
+  const unrelated = { ...oldLesson, id: 'custom-equality' };
+  const upgraded = expandEqualitySummary([oldLesson, edited, unrelated, equalityLesson]);
+  assert.equal(upgraded[0].knowledgeSummary, summary);
+  assert.equal(upgraded[1], edited);
+  assert.equal(upgraded[2], unrelated);
+  assert.equal(upgraded[3], equalityLesson);
+  assert.deepEqual(expandEqualitySummary(upgraded), upgraded);
+});
+
+
+test('equality coverage checks solve their equations and saved upgrades preserve edits and limits', () => {
+  const { equalityLesson, addEqualityPowerExample: upgrade } = load('equality-lesson');
+  const checks = {
+    subtrahend: x => 7 - x === 12,
+    'negative-factor': x => -3 * x === 12,
+    'minus-brackets': x => 12 - (x + 3) === 4,
+  };
+  for (const [id, satisfies] of Object.entries(checks)) {
+    const item = equalityLesson.exercises.find(e => e.id === `eq-coverage-p-${id}`);
+    assert.ok(satisfies(Number(item.answer)), id);
+    assert.ok(item.solution.includes('Thử lại:'));
+    const guided = equalityLesson.exercises.find(e => e.id === `eq-coverage-g-${id}`);
+    assert.equal(guided.options.filter(o => o === guided.answer).length, 1);
+  }
+  const ids = Object.keys(checks).map(id => `eq-example-${id}`);
+  const saved = {...equalityLesson,
+    blocks: equalityLesson.blocks.filter(b => !ids.includes(b.id)),
+    exercises: equalityLesson.exercises.filter(e => !e.id.startsWith('eq-coverage-')),
+  };
+  const updated = upgrade([saved]);
+  assert.deepEqual(updated[0], {...equalityLesson, exercises: updated[0].exercises});
+  assert.deepEqual(new Set(updated[0].exercises.map(e => e.id)), new Set(equalityLesson.exercises.map(e => e.id)));
+  assert.equal(updated[0].exercises.length, 55);
+  assert.deepEqual(upgrade(updated), updated);
+  const custom = {...updated[0], exercises: updated[0].exercises.map(e => e.id === 'eq-coverage-p-subtrahend' ? {...e, hint: 'Teacher hint'} : e)};
+  assert.deepEqual(upgrade([custom]), [custom]);
+  const full = {...saved,
+    blocks: Array.from({length: 50}, (_, i) => ({...saved.blocks[0], id: `custom-block-${i}`})),
+    exercises: Array.from({length: 100}, (_, i) => ({...saved.exercises[0], id: `custom-exercise-${i}`})),
+  };
+  assert.equal(upgrade([full])[0], full);
+  const unrelated = {...saved, id: 'teacher-lesson'};
+  assert.equal(upgrade([unrelated])[0], unrelated);
+});
+
+
+test('Grade 7 removes the retired both-sides content from saved lessons', () => {
+  const { equalityLesson: lesson, addEqualityPowerExample: upgrade, expandEqualitySummary } = load('equality-lesson');
+  assert.ok(!load('equality-examples').equalityExamples.some(e => e.id.endsWith('both-sides')));
+  assert.ok(!load('equality-lab').OPERATION_ROUNDS.some(e => e.equation === '3x + 2 = x + 10'));
+  assert.ok(!lesson.knowledgeSummary.includes('3x + 2 = x + 10'));
+  const oldSummary = lesson.knowledgeSummary
+    .replace('7. Dấu âm và dấu ngoặc', '7. Dấu âm, ngoặc và x ở hai vế')
+    .replace('\nLưu ý:', '\n3x + 2 = x + 10 → 3x - x = 10 - 2 → 2x = 8 → x = 4. Chuyển số hạng chứa x cũng phải đổi dấu.\nLưu ý:');
+  const saved = {...lesson, knowledgeSummary: oldSummary,
+    blocks: [...lesson.blocks, {...lesson.blocks[0], id: 'eq-example-both-sides'}],
+    exercises: [...lesson.exercises, ...['g', 'p'].map(section => ({...lesson.exercises[0], id: `eq-coverage-${section}-both-sides`}))],
+  };
+  const result = expandEqualitySummary(upgrade([saved]));
+  assert.deepEqual(result[0], lesson);
+  assert.deepEqual(expandEqualitySummary(upgrade(result)), result);
+  const partial = {...saved,
+    blocks: saved.blocks.filter(b => b.id !== 'eq-example-minus-brackets'),
+    exercises: saved.exercises.filter(e => !['eq-coverage-g-minus-brackets', 'eq-coverage-p-minus-brackets'].includes(e.id)),
+  };
+  const restored = upgrade([partial])[0];
+  assert.ok(!restored.blocks.some(b => b.id.endsWith('both-sides')));
+  assert.ok(restored.blocks.some(b => b.id === 'eq-example-minus-brackets'));
+  assert.ok(!restored.exercises.some(e => e.id.endsWith('both-sides')));
+  assert.equal(restored.exercises.length, lesson.exercises.length);
+  const unrelated = {...saved, id: 'custom-lesson'};
+  assert.equal(expandEqualitySummary(upgrade([unrelated]))[0], unrelated);
+  const editedSummary = {...lesson, knowledgeSummary: oldSummary + '\nTeacher note.'};
+  assert.equal(expandEqualitySummary([editedSummary])[0], editedSummary);
+});
+
+
+test('equality uses fraction isolation steps and upgrades only matching saved text', () => {
+  const { equalityLesson: lesson, updateEqualityFractionNotation: upgrade } = load('equality-lesson');
+  const { OPERATION_ROUNDS } = load('equality-lab');
+  assert.equal(OPERATION_ROUNDS.find(r => r.equation === '2x + 3 = 11').working, 'x = 8/2');
+  assert.equal(OPERATION_ROUNDS.find(r => r.equation === '3 × (x + 2) = 15').operation, 'x + 2 = 15/3');
+  assert.equal(lesson.exercises.find(e => e.id === 're-find-x-6-4').solution, '2^(2x) = 2\n2^(2x) = 2^1\n2x = 1\nx = 1/2');
+  const saved = {...lesson,
+    knowledgeSummary: lesson.knowledgeSummary.replace('x = 8/2', 'x = 8 : 2'),
+    blocks: lesson.blocks.map(b => ({...b, text:b.text.replace('x = 12/3', 'x = 12 : 3')})),
+    exercises: lesson.exercises.map(e => e.id === 're-find-x-6-4'
+      ? {...e, solution:'2^(2x) = 2\n2^(2x) = 2^1\n2x = 1\nx = 1 : 2\nx = 1/2'}
+      : e.id === 'eq-g4' ? {...e, answer:'x = 20 : 4', options:e.options.map(o => o.replace('20/4', '20 : 4'))} : e),
+  };
+  assert.deepEqual(upgrade([saved])[0], lesson);
+  assert.deepEqual(upgrade(upgrade([saved])), upgrade([saved]));
+  const edited = {...saved, knowledgeSummary:'Teacher summary',
+    blocks:saved.blocks.map(b => ({...b, text:'Teacher example'})),
+    exercises:saved.exercises.map(e => ({...e, solution:'Teacher solution'})),
+  };
+  const result = upgrade([edited])[0];
+  assert.equal(result.knowledgeSummary, 'Teacher summary');
+  assert.ok(result.blocks.every(b => b.text === 'Teacher example'));
+  assert.ok(result.exercises.every(e => e.solution === 'Teacher solution'));
+  const unrelated = {...saved, id:'custom'};
+  assert.equal(upgrade([unrelated])[0], unrelated);
 });

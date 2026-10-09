@@ -26,6 +26,12 @@ export default function Header() {
     void changeLanguage(router, lang);
   };
 
+  useEffect(() => {
+    const closeDrawer = () => setIsOpenDrawer(false);
+    router.events.on('routeChangeComplete', closeDrawer);
+    return () => router.events.off('routeChangeComplete', closeDrawer);
+  }, [router.events]);
+
   const [isSticky, setIsSticky] = useState(false);
 
   useEffect(() => {
@@ -104,6 +110,13 @@ export default function Header() {
                 {t('navigation.math-practice')}
               </Link>
             )}
+            <div className="ml-4">
+              <Dropdown label={t('navigation.learning')} inline>
+                <Dropdown.Item as={Link} href="/goc-hoc-tap/co-vua">
+                  {t('navigation.learning-chess')}
+                </Dropdown.Item>
+              </Dropdown>
+            </div>
           </div>
         </div>
         <div className="flex items-center ">

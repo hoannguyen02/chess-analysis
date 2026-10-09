@@ -92,7 +92,7 @@ export default function SharedMathLesson() {
     <main className={`${s.studio} ${s.shared}`} lang="vi">
       <div className={s.toolbar}>
         <Link className={s.link} href="/math-practice">
-          LIMA Math
+          LIMA
         </Link>
         <a className={s.link} href="#" onClick={() => setShowHistory(true)}>
           Bài học đã nhận

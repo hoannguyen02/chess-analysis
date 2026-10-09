@@ -1,7 +1,10 @@
 import {
+  angleSolutionGroups,
   cancellationParts,
   formatMultiplicationNotation,
   variableParts,
+  angleNameParts,
+  isAngleName,
   stripRedundantFractionParentheses,
   wholeNumberFraction,
 } from '@/lib/math/format';
@@ -11,14 +14,89 @@ import { mathXPath, mathXStrokeWidth } from '@/lib/math/math-variable-glyph';
 
 export const MathNotationGrade = createContext(0);
 
+function PlainVariables({ children }: { children: string }) {
+  return (
+    <>
+      {variableParts(children).map((part, index) =>
+        part === 'x' ? (
+          <span key={index} className={styles.variable}>
+            <span className={styles.variableText}>x</span>
+            <svg
+              aria-hidden="true"
+              viewBox="0 0 559 877"
+              preserveAspectRatio="none"
+              style={{
+                position: 'absolute',
+                inset: 0,
+                width: '100%',
+                height: '100%',
+                fill: 'currentColor',
+              }}
+            >
+              <path
+                d={mathXPath}
+                stroke="currentColor"
+                strokeWidth={mathXStrokeWidth}
+                strokeLinejoin="round"
+                transform="translate(0 720) scale(1 -1)"
+              />
+            </svg>
+          </span>
+        ) : (
+          part
+        )
+      )}
+    </>
+  );
+}
+
+// Textbook angle notation: the vertex stays in the middle, including primed rays.
 function Variables({ children }: { children: string }) {
-  return <>{variableParts(children).map((part, index) => part === 'x'
-    ? <span key={index} className={styles.variable}>
-        <span className={styles.variableText}>x</span>
-        <svg aria-hidden="true" viewBox="0 0 559 877" preserveAspectRatio="none" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', fill: 'currentColor' }}>
-          <path d={mathXPath} stroke="currentColor" strokeWidth={mathXStrokeWidth} strokeLinejoin="round" transform="translate(0 720) scale(1 -1)" />
-        </svg>
-      </span> : part)}</>;
+  return (
+    <>
+      {angleNameParts(children).map((part, index) =>
+        isAngleName(part) ? (
+          <span
+            key={index}
+            role="img"
+            aria-label={`góc ${part}`}
+            style={{
+              display: 'inline-block',
+              position: 'relative',
+              paddingTop: '0.22em',
+              whiteSpace: 'nowrap',
+              lineHeight: 1.25,
+            }}
+          >
+            <svg
+              aria-hidden="true"
+              viewBox="0 0 100 12"
+              preserveAspectRatio="none"
+              style={{
+                position: 'absolute',
+                top: 0,
+                left: 0,
+                width: '100%',
+                height: '0.2em',
+                overflow: 'visible',
+              }}
+            >
+              <path
+                d="M1 11 L50 1 L99 11"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.3"
+                vectorEffect="non-scaling-stroke"
+              />
+            </svg>
+            <span aria-hidden="true">{part.replaceAll("'", '′')}</span>
+          </span>
+        ) : (
+          <PlainVariables key={index}>{part}</PlainVariables>
+        )
+      )}
+    </>
+  );
 }
 
 // Keep the stored □ marker unchanged; only its presentation gets a question mark.
@@ -39,7 +117,9 @@ function Placeholders({ children }: { children: string }) {
             </span>
           ) : part.startsWith('^') ? (
             <sup key={index} className={styles.exponent}>
-              <Variables>{part.startsWith('^(') ? part.slice(2, -1) : part.slice(1)}</Variables>
+              <Variables>
+                {part.startsWith('^(') ? part.slice(2, -1) : part.slice(1)}
+              </Variables>
             </sup>
           ) : (
             <Variables key={index}>{part}</Variables>
@@ -125,7 +205,11 @@ function ParenthesizedFraction({
           )
         </span>
       </span>
-      {exponentText && <sup className={styles.exponent}><Variables>{exponentText}</Variables></sup>}
+      {exponentText && (
+        <sup className={styles.exponent}>
+          <Variables>{exponentText}</Variables>
+        </sup>
+      )}
     </span>
   );
 }
@@ -157,7 +241,9 @@ function NestedFractionPower({
       <span aria-hidden="true" className={styles.outerFractionBracket}>
         ]
       </span>
-      <sup className={styles.exponent}><Variables>{outerExponent}</Variables></sup>
+      <sup className={styles.exponent}>
+        <Variables>{outerExponent}</Variables>
+      </sup>
     </span>
   );
 }
@@ -175,12 +261,16 @@ function GroupedExpressionPower({
         <span aria-hidden="true" className={styles.fractionBracket}>
           (
         </span>
-        <span><MathTextContent>{expression}</MathTextContent></span>
+        <span>
+          <MathTextContent>{expression}</MathTextContent>
+        </span>
         <span aria-hidden="true" className={styles.fractionBracket}>
           )
         </span>
       </span>
-      <sup className={styles.exponent}><Variables>{exponent}</Variables></sup>
+      <sup className={styles.exponent}>
+        <Variables>{exponent}</Variables>
+      </sup>
     </span>
   );
 }
@@ -288,6 +378,17 @@ export function MathText({ children }: { children: string }) {
   const grade = useContext(MathNotationGrade);
   children = formatMultiplicationNotation(children, grade);
   if (!children.includes('\n')) return <MathTextLine>{children}</MathTextLine>;
+  const groups = angleSolutionGroups(children);
+  if (groups.some(group => 'equations' in group)) return <>{groups.map((group, index) =>
+    'text' in group ? <span key={index} className={styles.mathCalculationLine}><MathTextLine>{group.text}</MathTextLine></span>
+      : <span key={index} className={styles.angleEquationBlock}><span className={styles.angleEquationGrid}>
+        {group.equations.map((row, i) => <span key={i} className={styles.angleEquationRow}>
+          <span className={styles.angleEquationLeft}><MathTextLine>{row.left}</MathTextLine></span>
+          <span>=</span><span><MathTextLine>{row.right}</MathTextLine></span>
+        </span>)}
+      </span></span>
+  )}</>;
+
   return (
     <>
       {children.split('\n').map((line, index) => {

@@ -8,7 +8,7 @@ export default function MathPracticePage() {
   return (
     <Layout>
       <Head>
-        <title>LIMA Math · LIMA Chess</title>
+        <title>Toán học · LIMA</title>
         <meta
           name="description"
           content="Học cộng phân số qua hình ảnh, hướng dẫn từng bước và bài tập tự kiểm tra bằng tiếng Việt."
