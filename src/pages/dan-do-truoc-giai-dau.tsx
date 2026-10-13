@@ -1,28 +1,110 @@
 import styles from '@/styles/TournamentNotice.module.css';
+import type { GetStaticProps } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
-import type { GetStaticProps } from 'next';
 
-const topics = [
-  ['Chiếu hết 1 nước', 'mateIn1'],
-  ['Tấn công quân treo', 'hangingPiece'],
-  ['Tấn công đôi', 'fork'],
-  ['Ghim quân', 'pin'],
-  ['Đòn xiên', 'skewer'],
-  ['Tấn Công Mở', 'discoveredAttack'],
-  ['Loại bỏ quân phòng thủ', 'capturingDefender'],
-  ['Đòn thu hút quân', 'attraction'],
-  ['Đòn đánh lạc hướng quân', 'deflection'],
-  ['Chiếu hết hàng ngang cuối', 'backRankMate'],
-  ['Chiếu hết 2 nước', 'mateIn2'],
+const topicGroups = [
+  {
+    title: 'Cơ bản · Bắt đầu ở đây',
+    topics: [
+      ['Chiếu hết 1 nước', 'mateIn1'],
+      ['Tấn công quân treo', 'hangingPiece'],
+      ['Tấn công đôi', 'fork'],
+      ['Ghim quân', 'pin'],
+      ['Đòn xiên', 'skewer'],
+      ['Chiếu hết hàng ngang cuối', 'backRankMate'],
+      ['Chiếu hết 2 nước', 'mateIn2'],
+    ],
+  },
+  {
+    title: 'Tiếp theo · Phối hợp quân',
+    topics: [
+      ['Tấn công mở', 'discoveredAttack'],
+      ['Chiếu mở', 'discoveredCheck'],
+      ['Chiếu đôi', 'doubleCheck'],
+      ['Loại bỏ quân phòng thủ', 'capturingDefender'],
+      ['Bẫy quân', 'trappedPiece'],
+      ['Thu hút quân', 'attraction'],
+      ['Đánh lạc hướng quân', 'deflection'],
+      ['Tốt sắp phong cấp', 'advancedPawn'],
+      ['Tấn công Vua yếu', 'exposedKing'],
+      ['Tấn công f2 / f7', 'attackingF2F7'],
+      ['Tấn công cánh Vua', 'kingsideAttack'],
+      ['Tấn công cánh Hậu', 'queensideAttack'],
+    ],
+  },
+  {
+    title: 'Nâng cao · Tính toán sâu',
+    topics: [
+      ['Thí quân', 'sacrifice'],
+      ['Giải phóng ô / đường', 'clearance'],
+      ['Ngắt mối liên kết', 'interference'],
+      ['Nước xen giữa (Zwischenzug)', 'intermezzo'],
+      ['Nước đi tĩnh', 'quietMove'],
+      ['Tấn công xuyên tia (X-ray)', 'xRayAttack'],
+      ['Nước phòng thủ', 'defensiveMove'],
+      ['Buộc đối thủ phải đi (Zugzwang)', 'zugzwang'],
+      ['Di chuyển dọc đường đối công (Collinear move)', 'collinearMove'],
+      ['Chiếu hết 3 nước', 'mateIn3'],
+      ['Chiếu hết 4 nước', 'mateIn4'],
+      ['Chiếu hết từ 5 nước', 'mateIn5'],
+    ],
+  },
+  {
+    title: 'Mở rộng · Các mẫu chiếu hết',
+    topics: [
+      ['Chiếu hết tổng hợp', 'mate'],
+      ['Chiếu nghộp', 'smotheredMate'],
+      ['Chiếu hết Anastasia', 'anastasiaMate'],
+      ['Chiếu hết Ả Rập (Arabian)', 'arabianMate'],
+      ['Chiếu hết Balestra', 'balestraMate'],
+      ['Chiếu hết hai Xe (Blind Swine)', 'blindSwineMate'],
+      ['Chiếu hết Boden', 'bodenMate'],
+      ['Chiếu hết ở góc (Corner)', 'cornerMate'],
+      ['Chiếu hết hai Tượng', 'doubleBishopMate'],
+      ['Chiếu hết Dovetail', 'dovetailMate'],
+      ['Chiếu hết Epaulette', 'epauletteMate'],
+      ['Chiếu hết Hook', 'hookMate'],
+      ['Chiếu hết Kill Box', 'killBoxMate'],
+      ['Chiếu hết Pillsbury', 'pillsburysMate'],
+      ['Chiếu hết Morphy', 'morphysMate'],
+      ['Chiếu hết Opera', 'operaMate'],
+      ['Chiếu hết Swallow’s Tail', 'swallowstailMate'],
+      ['Chiếu hết Triangle', 'triangleMate'],
+      ['Chiếu hết Vuković', 'vukovicMate'],
+    ],
+  },
+  {
+    title: 'Mở rộng · Nước đi đặc biệt',
+    topics: [
+      ['Nhập thành', 'castling'],
+      ['Bắt Tốt qua đường', 'enPassant'],
+      ['Phong cấp', 'promotion'],
+      ['Phong cấp thành Xe, Tượng hoặc Mã', 'underPromotion'],
+    ],
+  },
+  {
+    title: 'Ôn thêm · Khai cuộc, trung cuộc và tàn cuộc',
+    topics: [
+      ['Chiến thuật trong khai cuộc', 'opening'],
+      ['Chiến thuật trong trung cuộc', 'middlegame'],
+      ['Tàn cuộc tổng hợp', 'endgame'],
+      ['Tàn cuộc Tốt', 'pawnEndgame'],
+      ['Tàn cuộc Xe', 'rookEndgame'],
+      ['Tàn cuộc Tượng', 'bishopEndgame'],
+      ['Tàn cuộc Mã', 'knightEndgame'],
+      ['Tàn cuộc Hậu', 'queenEndgame'],
+      ['Tàn cuộc Hậu và Xe', 'queenRookEndgame'],
+    ],
+  },
 ];
 
 const sections = [
   ['the-thuc', 'Trước giờ thi'],
   ['trong-tai', 'Luật & trọng tài'],
   ['ghi-nho', 'Cách suy nghĩ'],
-  ['luyen-tap', 'Luyện chiến thuật'],
   ['tinh-than', 'Thời gian & tinh thần'],
+  ['luyen-tap', 'Luyện chiến thuật'],
 ];
 
 export default function TournamentGuide() {
@@ -40,7 +122,7 @@ export default function TournamentGuide() {
         />
         <meta
           property="og:description"
-          content="Những điều cần nhớ trước mỗi giải đấu, kèm 11 chủ đề luyện chiến thuật trên Lichess."
+          content="Những điều cần nhớ trước mỗi giải đấu, kèm bài tập chiến thuật từ cơ bản đến nâng cao trên Lichess."
         />
         <meta property="og:type" content="article" />
         <meta property="og:locale" content="vi_VN" />
@@ -142,79 +224,55 @@ export default function TournamentGuide() {
               </ul>
             </aside>
             <aside className={styles.pitfalls} aria-labelledby="loi-sai-luat">
-              <h3 id="loi-sai-luat">Khi nào tính lỗi đi sai luật?</h3>
-              <p>
-                <strong>Khi thi đấu có đồng hồ:</strong> Theo Điều 7.5.1 FIDE,{' '}
+              <h3 id="loi-sai-luat">
+                Nếu đối thủ đi sai luật:{' '}
                 <mark className={styles.highlight}>
-                  Đi sai luật rồi bấm đồng hồ → bị tính lỗi đi sai luật.
+                  Gọi trọng tài ngay, trước khi con đi nước tiếp theo!
                 </mark>
-              </p>
+              </h3>
+
               <p className="mt-2">
-                <strong>Đi sai luật nhưng chưa bấm đồng hồ:</strong> Con phải đi
-                lại cho đúng luật, đồng thời tuân thủ luật chạm quân.
+                <strong>Dừng đồng hồ nếu có</strong>, giữ nguyên bàn cờ, rồi giơ
+                tay gọi to và rõ “Trọng tài ơi!”. Tiếp tục giơ tay và chờ trọng
+                tài đến, không tự đi tiếp.
               </p>
               <p className="mt-3">
-                <strong>“Bỏ Vua”:</strong> Không được để Vua mình bị tấn công
-                (chiếu) sau nước đi: Bỏ qua nước chiếu, đưa Vua vào ô bị tấn
-                công hoặc dời quân làm Vua bị tấn công.
+                <strong>Ví dụ:</strong> Đối thủ đi Mã thẳng 2 ô, hoặc không giải
+                chiếu mà đi quân khác, để Vua vẫn bị chiếu.
               </p>
-              <p className="mt-3">
-                <strong>Nếu không dùng đồng hồ:</strong> Thấy đối thủ đi sai
-                luật, con giữ nguyên bàn cờ, giơ tay và gọi rõ “Trọng tài ơi!”
-                trước khi đi tiếp. Trọng tài sẽ hướng dẫn sửa nước đi và tính
-                lỗi theo quy định của giải.
-              </p>
-              <p className="mt-3 font-semibold">Ví dụ cụ thể khi có đồng hồ:</p>
+              <p className="mt-3 font-semibold">Lỗi được xử lý thế nào?</p>
               <ul className="mt-2">
                 <li>
-                  <strong>Ví dụ 1 — Bỏ Vua rồi bấm đồng hồ:</strong> Vua đang bị
-                  chiếu, con đi quân khác hoặc bắt quân mà không thoát khỏi nước
-                  chiếu rồi bấm đồng hồ → bị tính lỗi đi sai luật.
+                  <strong>Đối thủ chưa bấm đồng hồ:</strong> Phải sửa nước đi
+                  theo luật chạm quân phía trên (chưa bị tính là 1 lỗi).
                 </li>
                 <li>
-                  <strong>Ví dụ 2 — Đi sai cách rồi bấm đồng hồ:</strong> Con đi
-                  Mã thẳng 2 ô rồi bấm đồng hồ → bị tính lỗi đi sai luật.
+                  <strong>Đối thủ đã bấm đồng hồ:</strong> Trọng tài ghi nhận và
+                  xử lý 1 lỗi.
                 </li>
                 <li>
-                  <strong>Ví dụ 3 — Đi sai nhưng chưa bấm đồng hồ:</strong> Con
-                  đi quân Mã sai ô, chưa bấm đồng hồ → chưa bị tính lỗi đi sai
-                  luật; phải đi lại quân theo luật chạm quân phía trên.
-                </li>
-                <li>
-                  <strong>
-                    Ví dụ 4 — Trọng tài phát hiện trước khi bấm đồng hồ:
-                  </strong>{' '}
-                  Con đi Mã thẳng 2 ô, đối thủ không khiếu nại nhưng trọng tài
-                  nhìn thấy. Chưa bấm đồng hồ thì chưa bị tính lỗi đi sai luật;
-                  con phải sửa nước đi (theo luật chạm quân phía trên).
-                </li>
-                <li>
-                  <strong>
-                    Ví dụ 5 — Trọng tài phát hiện sau khi bấm đồng hồ:
-                  </strong>{' '}
-                  Con bỏ Vua rồi bấm đồng hồ. Trọng tài chứng kiến, đối thủ chưa
-                  đi tiếp → trọng tài xử lý lỗi, không cần chờ đối thủ khiếu
-                  nại.
+                  <strong>Giải không dùng đồng hồ:</strong> Trọng tài xử lý 1
+                  lỗi (hoặc theo quy định riêng của giải).
                 </li>
               </ul>
-              <p className="mt-3">
-                <strong>Con làm gì?</strong> Dừng đồng hồ (nếu có), gọi trọng
-                tài trước khi đi tiếp. Trọng tài sẽ hướng dẫn khôi phục thế cờ
-                và đi lại đúng luật; không tự xếp lại bàn cờ khi đang tranh
-                chấp.
-              </p>
               <details className="mt-3">
                 <summary className="cursor-pointer font-semibold">
-                  Thời điểm trọng tài can thiệp
+                  Nếu trọng tài tự phát hiện thì sao?
                 </summary>
                 <p className="mt-2">
-                  Với luật cờ tiêu chuẩn, trọng tài can thiệp khi thấy thế cờ
-                  sai luật, nhưng chưa bấm đồng hồ thì chưa phạt như nước sai
-                  luật đã hoàn thành. Với cờ nhanh/cờ chớp áp dụng A.5, trọng
-                  tài xử lý nước sai luật đã hoàn thành khi đối thủ chưa đi nước
-                  tiếp theo. Nếu không ai khiếu nại, trọng tài không can thiệp
-                  và đối thủ đã đi tiếp, áp dụng giới hạn sửa lỗi tại A.5.2.
+                  Ví dụ: đối thủ đi Mã thẳng 2 ô, con chưa khiếu nại nhưng trọng
+                  tài nhìn thấy.
                 </p>
+                <ul className="mt-2">
+                  <li>
+                    <strong>Trước khi bấm đồng hồ:</strong> Đối thủ phải sửa
+                    nước đi theo luật chạm quân; chưa bị tính 1 lỗi.
+                  </li>
+                  <li>
+                    <strong>Sau khi bấm đồng hồ:</strong> Nếu con chưa đi tiếp,
+                    trọng tài xử lý 1 lỗi, không cần chờ khiếu nại.
+                  </li>
+                </ul>
                 <p className="mt-2">
                   <a
                     className="underline"
@@ -308,8 +366,9 @@ export default function TournamentGuide() {
                   không.
                 </li>
                 <li>
-                  Khi đối thủ vừa đi, con nhìn lại cả bàn cờ. Có khi quân vừa đi
-                  chỉ để mở đường cho Xe, Tượng hoặc Hậu phía sau tấn công.
+                  Sau mỗi nước đi của đối thủ, con nhìn lại cả bàn cờ, đừng chỉ
+                  nhìn quân vừa đi. Ví dụ: đối thủ dời Mã đang chắn trước Xe,
+                  khiến Xe có đường bắt Hậu của con.
                 </li>
               </ul>
             </aside>
@@ -330,64 +389,105 @@ export default function TournamentGuide() {
             </div>
           </section>
 
-          <section id="luyen-tap" className={styles.section}>
-            <p className={styles.kicker}>04 · ÔN LẠI CÁC CHIẾN THUẬT ĐÃ HỌC</p>
-            <div className={styles.topics}>
-              {topics.map(([label, theme], index) => (
-                <a
-                  key={theme}
-                  href={`https://lichess.org/training/${theme}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <span className={styles.topicNumber}>
-                    {String(index + 1).padStart(2, '0')}
-                  </span>
-                  <span>{label}</span>
-                  <span aria-hidden="true">↗</span>
-                </a>
-              ))}
-            </div>
-          </section>
-
           <section id="tinh-than" className={styles.section}>
-            <p className={styles.kicker}>05 · THỜI GIAN & TINH THẦN THI ĐẤU</p>
+            <p className={styles.kicker}>04 · THỜI GIAN & TINH THẦN THI ĐẤU</p>
             <h2>Bình tĩnh đến hết ván</h2>
             <aside className={styles.pitfalls} aria-label="Lỗi đồng hồ hay mắc">
               <h3>Đi xong, nhớ bấm đồng hồ</h3>
               <p>
-                Quên bấm thì giờ mình vẫn chạy.{' '}
-                <strong>Đi quân và bấm đồng hồ bằng cùng một tay.</strong> Không
-                bấm trước khi đi quân.
+                Chỉ dùng <strong>một tay</strong> để đi quân, kể cả khi bắt
+                quân, nhập thành hoặc phong cấp.{' '}
+                <strong>Đi xong, dùng chính tay đó bấm đồng hồ.</strong> Không
+                bấm khi chưa đi xong; quên bấm thì thời gian của con vẫn chạy.
               </p>
             </aside>
             <ul className={styles.list}>
               <li>
-                Đối thủ đi nhanh thì con cũng đừng vội đi theo. Nhớ nhìn thời
-                gian còn lại; khi đối thủ đang nghĩ, con cũng tranh thủ tính
-                nước tiếp theo.
+                Đối thủ đi nhanh, con cũng đừng vội. Nhớ xem thời gian còn lại
+                và tranh thủ suy nghĩ khi đối thủ đang tính nước đi.
               </li>
               <li>
                 <strong>Giữa các ván:</strong> Uống nước, đi vệ sinh, nghỉ ngơi
                 và trở lại đúng giờ.
               </li>
               <li>
-                Dù thắng hay thua, con hãy tập trung cho ván tiếp theo. Đừng mải
-                tiếc nuối ván vừa rồi mà mất tập trung ở ván sau. Đợi thi đấu
-                xong mình mới xem lại để rút kinh nghiệm. Nhớ cư xử lịch sự với
-                đối thủ nhé.
+                <strong>
+                  Dù thắng hay thua, hãy chuẩn bị cho ván tiếp theo.
+                </strong>{' '}
+                Đừng để sự tiếc nuối ở ván trước ảnh hưởng đến con. Luôn tôn
+                trọng và cư xử lịch sự với đối thủ.
               </li>
             </ul>
           </section>
-          <footer className={styles.closing}>
-            <span className={styles.trophy} aria-hidden="true">
-              🏆
-            </span>
-            <h2>Mỗi ván đấu là một cơ hội tiến bộ</h2>
-            <p className={styles.reminder}>
-              Quan sát kỹ – Suy nghĩ cẩn thận – Kiểm tra trước khi đi quân!
+
+          <section id="luyen-tap" className={styles.section}>
+            <aside
+              className={`${styles.closing} mb-6`}
+              aria-label="Lời nhắc trước khi luyện tập"
+            >
+              <span className={styles.trophy} aria-hidden="true">
+                🏆
+              </span>
+              <h2>Mỗi ván đấu là một cơ hội tiến bộ</h2>
+              <p className={styles.reminder}>
+                Quan sát cả bàn cờ – Suy nghĩ cẩn thận – Kiểm tra trước khi chạm
+                quân!
+              </p>
+            </aside>
+            <p className={styles.kicker}>05 · ÔN LẠI CÁC CHIẾN THUẬT ĐÃ HỌC</p>
+            <p>
+              Con ôn nhóm cơ bản trước, rồi chọn thêm chủ đề đã học. Đây là thứ
+              tự ôn gợi ý; mỗi chủ đề vẫn có bài dễ và khó.
             </p>
-          </footer>
+            {topicGroups.map((group, groupIndex) => (
+              <details
+                key={group.title}
+                className={styles.topicGroup}
+                open={groupIndex === 0}
+              >
+                <summary>
+                  {group.title}
+                  <span className={styles.topicCount}>
+                    {' '}
+                    · {group.topics.length} chủ đề
+                  </span>
+                </summary>
+                <div className={styles.topics}>
+                  {group.topics.map(([label, theme]) => (
+                    <a
+                      key={theme}
+                      href={`https://lichess.org/training/${theme}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <span>{label}</span>
+                      <span aria-hidden="true">↗</span>
+                    </a>
+                  ))}
+                </div>
+              </details>
+            ))}
+            <p className="mt-5 text-sm">
+              Nguồn bài tập:{' '}
+              <a
+                className="underline"
+                href="https://lichess.org/training/themes"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Danh mục chủ đề Lichess
+              </a>
+              {' · '}
+              <a
+                className="underline"
+                href="https://lichess.org/training"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Luyện tổng hợp
+              </a>
+            </p>
+          </section>
         </article>
       </main>
     </>
