@@ -1,3 +1,5 @@
+import { LessonPosition, resolveLessonPosition } from '@/lib/lesson-import';
+import { LessonSpreadsheetImport } from './LessonSpreadsheetImport';
 import { BOARD_THEMES, BoardThemeId } from '@/constants/board-themes';
 import { useAppContext } from '@/contexts/AppContext';
 import { useCustomBoard } from '@/hooks/useCustomBoard';
@@ -32,6 +34,8 @@ import {
   VscArrowSwap,
   VscCheck,
   VscChevronDown,
+  VscDebugStepBack,
+  VscDebugStepOver,
   VscChevronUp,
   VscChromeRestore,
   VscCloudDownload,
@@ -45,6 +49,7 @@ import {
   VscSettingsGear,
   VscSymbolColor,
   VscTrash,
+  VscTable,
 } from 'react-icons/vsc';
 import { TeachingTimer } from './TeachingTimer';
 import { SetupBoardPaintLayer } from './SetupBoardPaintLayer';
@@ -72,12 +77,6 @@ const FILES = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'] as const;
 type Props = {
   fen?: string;
   isGuide?: boolean;
-};
-
-type LessonPosition = {
-  id: string;
-  title: string;
-  fen: string;
 };
 
 type LessonPositionsStoragePayload = {
@@ -137,8 +136,14 @@ const DragDropSetupChessboard = ({
 
   const { boardTheme, isMobile, setBoardTheme } = useAppContext();
   const t = useTranslations();
-  const { customPieces, bgDark, bgLight, notationColor, notationShadow } =
-    useCustomBoard();
+  const {
+    customPieces,
+    bgDark,
+    bgLight,
+    notationColor,
+    notationShadow,
+    lastMoveColor,
+  } = useCustomBoard();
   const game = useMemo(() => new Chess(fen), [fen]); // empty board
   const getOrientationFromTurn = useCallback(
     () => (game.turn() === 'w' ? 'white' : 'black'),
@@ -148,6 +153,12 @@ const DragDropSetupChessboard = ({
     getOrientationFromTurn
   );
   const [fenPosition, setFenPosition] = useState(fen);
+  const [lessonMove, setLessonMove] = useState<{
+    fen: string;
+    from: Square;
+    to: Square;
+  } | null>(null);
+  const [lessonCheckpoint, setLessonCheckpoint] = useState<string | null>(null);
   const [isFullViewMode, setIsFullViewMode] = useState(false);
   const [isBrowserFullscreen, setIsBrowserFullscreen] = useState(false);
   const [boardContainerWidth, setBoardContainerWidth] = useState(500);
@@ -156,6 +167,7 @@ const DragDropSetupChessboard = ({
   const [placementTool, setPlacementTool] = useState<BoardPieceCode | null>(
     null
   );
+  const [showSpreadsheetImport, setShowSpreadsheetImport] = useState(false);
   const [lessonPositions, setLessonPositions] = useState<LessonPosition[]>([]);
   const [lessonPositionFenDrafts, setLessonPositionFenDrafts] = useState<
     Record<string, string>
@@ -260,6 +272,7 @@ const DragDropSetupChessboard = ({
       }
 
       const normalizedFen = game.fen();
+      setLessonMove(null);
       setFenPosition(normalizedFen);
       setBoardOrientation(game.turn() === 'w' ? 'white' : 'black');
       setCastlingRights(castlingRightsFromFen(normalizedFen));
@@ -268,6 +281,50 @@ const DragDropSetupChessboard = ({
       return normalizedFen;
     },
     [clearHighlights, game]
+  );
+
+  const loadLessonPosition = useCallback(
+    (position: LessonPosition) => {
+      try {
+        const resolved = resolveLessonPosition(position);
+        if (!applyFenPosition(resolved.fen)) return;
+        setLessonCheckpoint(resolved.fen);
+        setLessonMove(
+          resolved.move
+            ? {
+                fen: resolved.fen,
+                from: resolved.move.from as Square,
+                to: resolved.move.to as Square,
+              }
+            : null
+        );
+        setActiveLessonPositionId(position.id);
+      } catch {
+        alert(t('setup-board.lesson-invalid-move'));
+      }
+    },
+    [applyFenPosition, t]
+  );
+
+  const showLessonMove = useCallback(
+    (position: LessonPosition, before: boolean) => {
+      if (!position.previousMove) return;
+      if (before) {
+        if (!applyFenPosition(position.fen)) return;
+        setLessonCheckpoint(resolveLessonPosition(position).fen);
+        setActiveLessonPositionId(position.id);
+      } else {
+        loadLessonPosition(position);
+      }
+      if (position.id === activeLessonPositionId)
+        setBoardOrientation(boardOrientation);
+    },
+    [
+      activeLessonPositionId,
+      applyFenPosition,
+      boardOrientation,
+      loadLessonPosition,
+    ]
   );
 
   useEffect(() => {
@@ -296,6 +353,7 @@ const DragDropSetupChessboard = ({
 
     const stored = window.localStorage.getItem(LESSON_POSITIONS_STORAGE_KEY);
     if (!stored) {
+      setHasHydratedLessonPositions(true);
       return;
     }
 
@@ -315,7 +373,17 @@ const DragDropSetupChessboard = ({
           return false;
         }
 
-        return game.validate_fen(position.fen).valid;
+        try {
+          if (
+            position.previousMove !== undefined &&
+            typeof position.previousMove !== 'string'
+          )
+            return false;
+          resolveLessonPosition(position);
+          return true;
+        } catch {
+          return false;
+        }
       });
 
       const nextActiveLessonPositionId = validPositions.some(
@@ -333,14 +401,14 @@ const DragDropSetupChessboard = ({
         ) ?? validPositions[0];
 
       if (initialPosition) {
-        applyFenPosition(initialPosition.fen);
+        loadLessonPosition(initialPosition);
       }
     } catch {
       // Ignore corrupted local storage payloads.
     } finally {
       setHasHydratedLessonPositions(true);
     }
-  }, [applyFenPosition, game]);
+  }, [loadLessonPosition, game]);
 
   useEffect(() => {
     if (!hasHydratedLessonPositions) {
@@ -610,19 +678,8 @@ const DragDropSetupChessboard = ({
       [nextPosition.id]: currentFen,
     }));
     setActiveLessonPositionId(nextPosition.id);
+    setLessonCheckpoint(nextPosition.fen);
   }, [game, lessonPositions.length, t]);
-
-  const loadLessonPosition = useCallback(
-    (position: LessonPosition) => {
-      const loadedFen = applyFenPosition(position.fen);
-      if (!loadedFen) {
-        return;
-      }
-
-      setActiveLessonPositionId(position.id);
-    },
-    [applyFenPosition]
-  );
 
   useEffect(() => {
     const handleLessonShortcut = (event: KeyboardEvent) => {
@@ -634,7 +691,7 @@ const DragDropSetupChessboard = ({
         event.metaKey ||
         event.altKey ||
         event.shiftKey ||
-        !['f', 'p', 'r', 'ArrowLeft', 'ArrowRight'].includes(
+        !['f', 'p', 'r', 'b', 'n', 'ArrowLeft', 'ArrowRight'].includes(
           event.key.length === 1 ? event.key.toLowerCase() : event.key
         )
       ) {
@@ -668,11 +725,23 @@ const DragDropSetupChessboard = ({
         (entry) => entry.id === activeLessonPositionId
       );
       if (index === -1) return;
+      const key = event.key.toLowerCase();
+      if (key === 'b' || key === 'n') {
+        const activePosition = lessonPositions[index];
+        if (!activePosition.previousMove) return;
+        event.preventDefault();
+        showLessonMove(activePosition, key === 'b');
+        return;
+      }
 
       const offset =
         event.key === 'ArrowLeft' ? -1 : event.key === 'ArrowRight' ? 1 : 0;
       const position = lessonPositions[index + offset];
-      if (!position || (offset === 0 && position.fen === fenPosition)) return;
+      if (
+        !position ||
+        (offset === 0 && (lessonCheckpoint ?? position.fen) === fenPosition)
+      )
+        return;
 
       event.preventDefault();
       loadLessonPosition(position);
@@ -685,6 +754,8 @@ const DragDropSetupChessboard = ({
     fenPosition,
     lessonPositions,
     loadLessonPosition,
+    lessonCheckpoint,
+    showLessonMove,
     onFlipBoard,
   ]);
 
@@ -790,6 +861,15 @@ const DragDropSetupChessboard = ({
       }
 
       const normalizedFen = previewGame.fen();
+      const existing = lessonPositions.find((position) => position.id === id);
+      if (!existing) return;
+      const updated = { ...existing, fen: normalizedFen };
+      try {
+        resolveLessonPosition(updated);
+      } catch {
+        alert(t('setup-board.lesson-invalid-move'));
+        return;
+      }
 
       setLessonPositions((current) =>
         current.map((position) =>
@@ -802,10 +882,16 @@ const DragDropSetupChessboard = ({
       }));
 
       if (activeLessonPositionId === id) {
-        applyFenPosition(normalizedFen);
+        loadLessonPosition(updated);
       }
     },
-    [activeLessonPositionId, applyFenPosition, lessonPositionFenDrafts]
+    [
+      activeLessonPositionId,
+      loadLessonPosition,
+      lessonPositionFenDrafts,
+      lessonPositions,
+      t,
+    ]
   );
 
   const exportLessonPositions = useCallback(() => {
@@ -865,9 +951,20 @@ const DragDropSetupChessboard = ({
             return false;
           }
 
-          return game.validate_fen(position.fen).valid;
+          try {
+            if (
+              position.previousMove !== undefined &&
+              typeof position.previousMove !== 'string'
+            )
+              return false;
+            resolveLessonPosition(position);
+            return true;
+          } catch {
+            return false;
+          }
         });
 
+        if (!validPositions.length) throw new Error('No valid positions');
         setLessonPositions(validPositions);
         const nextActiveLessonPositionId = validPositions.some(
           (position) => position.id === parsed.activeLessonPositionId
@@ -894,7 +991,7 @@ const DragDropSetupChessboard = ({
         event.target.value = '';
       }
     },
-    [game, loadLessonPosition, t]
+    [loadLessonPosition, t]
   );
 
   const clearLessonPositions = useCallback(() => {
@@ -1056,7 +1153,19 @@ const DragDropSetupChessboard = ({
                   id="ManualBoardEditor"
                   boardOrientation={boardOrientation}
                   position={fenPosition}
-                  customSquareStyles={customSquareStyles}
+                  customSquareStyles={{
+                    ...(lessonMove?.fen === fenPosition
+                      ? {
+                          [lessonMove.from]: {
+                            backgroundColor: lastMoveColor,
+                          },
+                          [lessonMove.to]: {
+                            backgroundColor: lastMoveColor,
+                          },
+                        }
+                      : {}),
+                    ...customSquareStyles,
+                  }}
                   customArrowColor={selectedColor.arrow}
                   customNotationStyle={notationStyle}
                   onSparePieceDrop={handleSparePieceDrop}
@@ -1413,6 +1522,18 @@ const DragDropSetupChessboard = ({
                           </div>
                         </div>
                         <div className="flex shrink-0 items-center gap-2">
+                          <button
+                            type="button"
+                            aria-label={t('setup-board.spreadsheet-import')}
+                            aria-expanded={showSpreadsheetImport}
+                            aria-controls="lesson-spreadsheet-import"
+                            onClick={() =>
+                              setShowSpreadsheetImport((open) => !open)
+                            }
+                            className={`flex h-10 w-10 items-center justify-center rounded-lg border transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-blue-500 ${showSpreadsheetImport ? 'border-blue-300 bg-blue-50 text-blue-600' : 'border-slate-200 bg-white text-slate-600 hover:border-slate-300 hover:bg-slate-100'}`}
+                          >
+                            <VscTable size={18} />
+                          </button>
                           <Tooltip
                             content={t('setup-board.import-positions')}
                             placement="top"
@@ -1472,6 +1593,22 @@ const DragDropSetupChessboard = ({
                         </div>
                       </div>
 
+                      <LessonSpreadsheetImport
+                        open={showSpreadsheetImport}
+                        onClose={() => setShowSpreadsheetImport(false)}
+                        onImport={(positions) => {
+                          const imported = positions.map((position) => ({
+                            ...position,
+                            id: createLessonPositionId(),
+                          }));
+                          setLessonPositions((current) => [
+                            ...current,
+                            ...imported,
+                          ]);
+                          if (imported[0]) loadLessonPosition(imported[0]);
+                        }}
+                      />
+
                       {lessonPositions.length === 0 ? (
                         '' // Display nothing
                       ) : (
@@ -1482,8 +1619,21 @@ const DragDropSetupChessboard = ({
                           {lessonPositions.map((position, index) => {
                             const isActive =
                               position.id === activeLessonPositionId;
+                            const isBeforeMove =
+                              isActive &&
+                              Boolean(position.previousMove) &&
+                              fenPosition ===
+                                resolveLessonPosition({ fen: position.fen })
+                                  .fen;
+                            const isAfterMove =
+                              isActive &&
+                              fenPosition ===
+                                resolveLessonPosition(position).fen;
                             const isExploring =
-                              isActive && fenPosition !== position.fen;
+                              isActive &&
+                              !isBeforeMove &&
+                              fenPosition !==
+                                (lessonCheckpoint ?? position.fen);
                             const draftFen =
                               lessonPositionFenDrafts[position.id] ??
                               position.fen;
@@ -1491,7 +1641,9 @@ const DragDropSetupChessboard = ({
                               game.validate_fen(draftFen).valid;
                             const hasFenChanges = draftFen !== position.fen;
                             const turn =
-                              position.fen.split(' ')[1] === 'b'
+                              resolveLessonPosition(position).fen.split(
+                                ' '
+                              )[1] === 'b'
                                 ? 'black'
                                 : 'white';
 
@@ -1508,15 +1660,15 @@ const DragDropSetupChessboard = ({
                                     : 'border-slate-200 bg-white hover:border-slate-300'
                                 }`}
                               >
-                                <button
-                                  type="button"
+                                <div
                                   onClick={() => loadLessonPosition(position)}
                                   className="flex min-w-0 flex-1 items-center gap-2 text-left"
-                                  aria-label={t('setup-board.load-position', {
-                                    number: index + 1,
-                                  })}
                                 >
-                                  <span
+                                  <button
+                                    type="button"
+                                    aria-label={t('setup-board.load-position', {
+                                      number: index + 1,
+                                    })}
                                     className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-lg text-xs font-semibold ${
                                       isActive
                                         ? 'bg-blue-500 text-white'
@@ -1524,7 +1676,7 @@ const DragDropSetupChessboard = ({
                                     }`}
                                   >
                                     {index + 1}
-                                  </span>
+                                  </button>
                                   <span
                                     className={`h-3 w-3 shrink-0 rounded-full border ${
                                       turn === 'white'
@@ -1561,6 +1713,50 @@ const DragDropSetupChessboard = ({
                                         }
                                       )}
                                     />
+                                    {position.previousMove && (
+                                      <div className="mt-1 flex items-center gap-1 text-xs font-medium text-amber-700">
+                                        <span className="min-w-0 truncate">
+                                          {position.previousMove}
+                                        </span>
+                                        <span className="inline-flex shrink-0 items-center rounded-md border border-slate-200 bg-white text-blue-600">
+                                          <button
+                                            type="button"
+                                            aria-label={t(
+                                              'setup-board.before-previous-move'
+                                            )}
+                                            disabled={isBeforeMove}
+                                            className="flex h-7 w-7 items-center justify-center rounded-l-md hover:bg-blue-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-blue-500 disabled:opacity-35"
+                                            aria-keyshortcuts={
+                                              isActive ? 'b' : undefined
+                                            }
+                                            onClick={(event) => {
+                                              event.stopPropagation();
+                                              showLessonMove(position, true);
+                                            }}
+                                          >
+                                            <VscDebugStepBack size={16} />
+                                          </button>
+
+                                          <button
+                                            type="button"
+                                            aria-label={t(
+                                              'setup-board.replay-previous-move'
+                                            )}
+                                            disabled={isAfterMove}
+                                            className="flex h-7 w-7 items-center justify-center rounded-r-md border-l border-slate-200 hover:bg-blue-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-blue-500 disabled:opacity-35"
+                                            aria-keyshortcuts={
+                                              isActive ? 'n' : undefined
+                                            }
+                                            onClick={(event) => {
+                                              event.stopPropagation();
+                                              showLessonMove(position, false);
+                                            }}
+                                          >
+                                            <VscDebugStepOver size={16} />
+                                          </button>
+                                        </span>
+                                      </div>
+                                    )}
                                     <div className="mt-1 flex items-center gap-2">
                                       <input
                                         value={draftFen}
@@ -1615,16 +1811,7 @@ const DragDropSetupChessboard = ({
                                       </Tooltip>
                                     </div>
                                   </div>
-                                </button>
-                                {isActive && (
-                                  <span className="hidden rounded-full bg-blue-100 px-2 py-1 text-[11px] font-semibold text-blue-700 sm:inline-flex">
-                                    {t(
-                                      isExploring
-                                        ? 'setup-board.exploring-variation'
-                                        : 'setup-board.current-position'
-                                    )}
-                                  </span>
-                                )}
+                                </div>
                                 <div className="flex shrink-0 items-center gap-1">
                                   {isActive && (
                                     <Tooltip

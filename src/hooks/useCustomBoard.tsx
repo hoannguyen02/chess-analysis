@@ -51,6 +51,7 @@ export const useCustomBoard = () => {
     customPieces,
     bgDark: activeBoardTheme.dark,
     bgLight: activeBoardTheme.light,
+    lastMoveColor: activeBoardTheme.lastMoveColor,
     notationColor: activeBoardTheme.notationColor,
     notationShadow: activeBoardTheme.notationShadow,
     boardTheme,
