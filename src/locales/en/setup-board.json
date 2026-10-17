@@ -61,5 +61,19 @@
   "piece-bR": "Black rook",
   "piece-bQ": "Black queen",
   "piece-bK": "Black king",
-  "deselect-piece": "Click again or press D to deselect"
+  "deselect-piece": "Click again or press D to deselect",
+  "spreadsheet-import": "Import from spreadsheet",
+  "spreadsheet-help": "Paste pairs of FEN and optional previous move columns from your spreadsheet. Level headings are optional. Each FEN must be BEFORE its move. Moves play automatically when loading. Imported positions are added to this lesson.",
+  "spreadsheet-paste": "Paste spreadsheet cells here",
+  "spreadsheet-count": "{count} valid positions",
+  "spreadsheet-error": "Row {row}, column {column}: {reason}. This entry will be skipped.",
+  "spreadsheet-invalid-fen": "Invalid FEN",
+  "spreadsheet-invalid-move": "Move cannot be played from this FEN",
+  "spreadsheet-add": "Add {count} positions",
+  "spreadsheet-add-valid": "Add {count} valid positions only",
+  "lesson-invalid-move": "This position or its previous move is invalid. Check that the FEN is before the move.",
+  "previous-move-label": "Previous move: {move}",
+  "before-previous-move": "Show position before previous move",
+  "replay-previous-move": "Replay previous move",
+  "before-move-state": "Before move"
 }

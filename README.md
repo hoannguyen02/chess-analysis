@@ -19,3 +19,6 @@ yarn dev
 
 
 
+## User guides
+
+- [Setup Board: lesson import and keyboard shortcuts](docs/setup-board.md) — **B** before the move, **N** replay; **←/→** switch positions.

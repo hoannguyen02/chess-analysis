@@ -52,26 +52,28 @@ const topicGroups = [
   },
   {
     title: 'Mở rộng · Các mẫu chiếu hết',
+    description:
+      'Ôn theo số thứ tự: mẫu dễ nhận biết trước, phối hợp phức tạp sau; cuối cùng luyện tổng hợp. Chiếu hết 1–2 nước và hàng ngang cuối nằm ở nhóm cơ bản.',
     topics: [
-      ['Chiếu hết tổng hợp', 'mate'],
-      ['Chiếu nghộp', 'smotheredMate'],
-      ['Chiếu hết Anastasia', 'anastasiaMate'],
-      ['Chiếu hết Ả Rập (Arabian)', 'arabianMate'],
-      ['Chiếu hết Balestra', 'balestraMate'],
       ['Chiếu hết hai Xe (Blind Swine)', 'blindSwineMate'],
-      ['Chiếu hết Boden', 'bodenMate'],
-      ['Chiếu hết ở góc (Corner)', 'cornerMate'],
+      ['Chiếu hết Opera', 'operaMate'],
+      ['Chiếu hết Pillsbury', 'pillsburysMate'],
+      ['Chiếu hết Ả Rập (Arabian)', 'arabianMate'],
+      ['Chiếu ngạt', 'smotheredMate'],
+      ['Chiếu hết Anastasia', 'anastasiaMate'],
+      ['Chiếu hết Morphy', 'morphysMate'],
       ['Chiếu hết hai Tượng', 'doubleBishopMate'],
+      ['Chiếu hết Boden', 'bodenMate'],
       ['Chiếu hết Dovetail', 'dovetailMate'],
       ['Chiếu hết Epaulette', 'epauletteMate'],
+      ['Chiếu hết ở góc (Corner)', 'cornerMate'],
       ['Chiếu hết Hook', 'hookMate'],
-      ['Chiếu hết Kill Box', 'killBoxMate'],
-      ['Chiếu hết Pillsbury', 'pillsburysMate'],
-      ['Chiếu hết Morphy', 'morphysMate'],
-      ['Chiếu hết Opera', 'operaMate'],
-      ['Chiếu hết Swallow’s Tail', 'swallowstailMate'],
       ['Chiếu hết Triangle', 'triangleMate'],
+      ['Chiếu hết Kill Box', 'killBoxMate'],
+      ['Chiếu hết Balestra', 'balestraMate'],
+      ['Chiếu hết Swallow’s Tail', 'swallowstailMate'],
       ['Chiếu hết Vuković', 'vukovicMate'],
+      ['Chiếu hết tổng hợp', 'mate'],
     ],
   },
   {
@@ -452,14 +454,20 @@ export default function TournamentGuide() {
                     · {group.topics.length} chủ đề
                   </span>
                 </summary>
+                {group.description && (
+                  <p className="mt-3 text-sm">{group.description}</p>
+                )}
                 <div className={styles.topics}>
-                  {group.topics.map(([label, theme]) => (
+                  {group.topics.map(([label, theme], topicIndex) => (
                     <a
                       key={theme}
                       href={`https://lichess.org/training/${theme}`}
                       target="_blank"
                       rel="noopener noreferrer"
                     >
+                      <span className={styles.topicNumber}>
+                        {String(topicIndex + 1).padStart(2, '0')}
+                      </span>
                       <span>{label}</span>
                       <span aria-hidden="true">↗</span>
                     </a>

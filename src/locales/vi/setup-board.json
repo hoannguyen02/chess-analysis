@@ -61,5 +61,19 @@
   "piece-bR": "Xe đen",
   "piece-bQ": "Hậu đen",
   "piece-bK": "Vua đen",
-  "deselect-piece": "Nhấp lần nữa hoặc nhấn D để bỏ chọn"
+  "deselect-piece": "Nhấp lần nữa hoặc nhấn D để bỏ chọn",
+  "spreadsheet-import": "Nhập từ bảng tính",
+  "spreadsheet-help": "Dán các cặp cột FEN và nước đi trước (không bắt buộc). Có thể kèm tiêu đề cấp độ. FEN phải là thế cờ TRƯỚC nước đi. Nước đi tự động được thực hiện khi tải. Các thế cờ được thêm vào bài học.",
+  "spreadsheet-paste": "Dán các ô bảng tính vào đây",
+  "spreadsheet-count": "{count} thế cờ hợp lệ",
+  "spreadsheet-error": "Hàng {row}, cột {column}: {reason}. Mục này sẽ được bỏ qua.",
+  "spreadsheet-invalid-fen": "FEN không hợp lệ",
+  "spreadsheet-invalid-move": "Không thể thực hiện nước đi từ FEN này",
+  "spreadsheet-add": "Thêm {count} thế cờ",
+  "spreadsheet-add-valid": "Chỉ thêm {count} thế cờ hợp lệ",
+  "lesson-invalid-move": "Thế cờ hoặc nước đi trước không hợp lệ. Kiểm tra FEN là thế cờ trước nước đi.",
+  "previous-move-label": "Nước đi trước: {move}",
+  "before-previous-move": "Xem thế cờ trước nước đi",
+  "replay-previous-move": "Chơi lại nước đi trước",
+  "before-move-state": "Trước nước đi"
 }
