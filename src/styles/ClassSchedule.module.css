@@ -138,6 +138,123 @@
   background: #eaf0e2;
   scroll-margin-top: 12px;
 }
+.support {
+  margin-top: 12px;
+  padding: 12px;
+  border-radius: 8px;
+  background: #eef3e7;
+  font-size: 13px;
+}
+.support h3 {
+  font-size: 14px;
+  font-weight: 700;
+}
+.support p {
+  margin-top: 6px;
+}
+.support a {
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.payment {
+  container-type: inline-size;
+  margin-top: 10px;
+  border-top: 1px solid #e5e9e1;
+}
+.payment summary {
+  font-weight: 600;
+}
+.paymentContent {
+  display: grid;
+  gap: 12px;
+  align-items: start;
+}
+.bankDetails {
+  display: grid;
+  gap: 6px;
+  margin: 0;
+}
+.bankDetails dt {
+  color: #4d6258;
+}
+.bankDetails dd {
+  margin: 2px 0 0;
+  font-weight: 600;
+  color: #193c32;
+  overflow-wrap: anywhere;
+}
+.bankDetails .accountNumber {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px;
+  font-size: 19px;
+  font-variant-numeric: tabular-nums;
+}
+.accountNumber span {
+  user-select: all;
+}
+.copyButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  border-radius: 8px;
+  background: #eef3e7;
+  color: #193c32;
+  cursor: pointer;
+}
+.copyButton:hover {
+  background: #d5eb9c;
+}
+.copyButton:focus-visible {
+  outline: 3px solid #bd7019;
+  outline-offset: 3px;
+}
+.bankDetails .copyStatus {
+  font-size: 12px;
+  font-weight: 400;
+}
+.copyStatus:empty {
+  display: none;
+}
+.bankQr {
+  margin: 0;
+  text-align: center;
+}
+.bankQr img {
+  display: block;
+  width: min(100%, 200px);
+  height: auto;
+  margin: 0 auto;
+  border: 8px solid white;
+}
+.bankQr figcaption {
+  margin-top: 4px;
+  font-size: 12px;
+}
+@container (min-width: 390px) {
+  .paymentContent {
+    grid-template-columns: minmax(0, 1fr) 180px;
+    gap: 14px;
+  }
+  .bankQr img {
+    width: 180px;
+  }
+  .bankDetails .accountNumber {
+    font-size: 17px;
+  }
+}
+.downloadQr {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
 .actions {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));

@@ -1,5 +1,9 @@
 import styles from '@/styles/ClassSchedule.module.css';
 import Head from 'next/head';
+import Image from 'next/image';
+import { useEffect, useRef, useState } from 'react';
+
+const bankAccountNumber = '6800000963908507';
 
 const sessions = [
   { day: 'Thứ 6', slots: [['Ca chiều', '15:00 – 17:00']] },
@@ -14,6 +18,35 @@ const sessions = [
 ];
 
 export default function ClassSchedule() {
+  const accountRef = useRef<HTMLSpanElement>(null);
+  const [copyStatus, setCopyStatus] = useState('');
+  const copyTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const copied = copyStatus === 'Đã sao chép số tài khoản';
+
+  useEffect(
+    () => () => {
+      if (copyTimer.current) clearTimeout(copyTimer.current);
+    },
+    []
+  );
+
+  async function copyAccountNumber() {
+    if (copyTimer.current) clearTimeout(copyTimer.current);
+    try {
+      await navigator.clipboard.writeText(bankAccountNumber);
+      setCopyStatus('Đã sao chép số tài khoản');
+      copyTimer.current = setTimeout(() => setCopyStatus(''), 2000);
+    } catch {
+      if (accountRef.current) {
+        const range = document.createRange();
+        range.selectNodeContents(accountRef.current);
+        const selection = window.getSelection();
+        selection?.removeAllRanges();
+        selection?.addRange(range);
+      }
+      setCopyStatus('Chọn Sao chép hoặc nhấn Ctrl+C / ⌘C để sao chép.');
+    }
+  }
   return (
     <>
       <Head>
@@ -117,6 +150,114 @@ export default function ClassSchedule() {
                     <dd>1.000.000đ</dd>
                   </div>
                 </dl>
+                <aside
+                  className={styles.support}
+                  aria-labelledby="support-title"
+                >
+                  <h3 id="support-title">Hỗ trợ học phí</h3>
+                  <p>
+                    LIMA Chess hỗ trợ miễn, giảm học phí cho trẻ em khuyết tật
+                    và trẻ em có hoàn cảnh khó khăn.
+                  </p>
+                  <p>
+                    Phụ huynh vui lòng{' '}
+                    <a href="#dang-ky">liên hệ riêng với thầy cô</a> để được tư
+                    vấn mức hỗ trợ phù hợp.
+                  </p>
+                </aside>
+                <details className={`${styles.details} ${styles.payment}`}>
+                  <summary>Chuyển khoản học phí · Xem tài khoản và QR</summary>
+                  <div className={styles.paymentContent}>
+                    <dl className={styles.bankDetails}>
+                      <div>
+                        <dt>Ngân hàng</dt>
+                        <dd>Co-opBank · Ngân hàng Hợp tác xã Việt Nam</dd>
+                      </div>
+                      <div>
+                        <dt>Chủ tài khoản</dt>
+                        <dd>HO KINH DOANH TRAN THI NGOC SAO</dd>
+                      </div>
+                      <div>
+                        <dt>Số tài khoản</dt>
+                        <dd className={styles.accountNumber}>
+                          <span ref={accountRef}>{bankAccountNumber}</span>
+                          <button
+                            type="button"
+                            className={styles.copyButton}
+                            onClick={copyAccountNumber}
+                            aria-label="Sao chép số tài khoản"
+                            title={
+                              copied ? 'Đã sao chép' : 'Sao chép số tài khoản'
+                            }
+                          >
+                            <svg
+                              width="18"
+                              height="18"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              strokeWidth="1.8"
+                              aria-hidden="true"
+                            >
+                              {copied ? (
+                                <path d="m5 12 4 4L19 6" />
+                              ) : (
+                                <>
+                                  <rect
+                                    x="8"
+                                    y="8"
+                                    width="12"
+                                    height="13"
+                                    rx="2"
+                                  />
+                                  <path d="M16 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h3" />
+                                </>
+                              )}
+                            </svg>
+                          </button>
+                        </dd>
+                        <dd
+                          className={
+                            copied || !copyStatus
+                              ? 'sr-only'
+                              : styles.copyStatus
+                          }
+                          role="status"
+                        >
+                          {copyStatus}
+                        </dd>
+                      </div>
+                      <div>
+                        <dt>Nội dung chuyển khoản</dt>
+                        <dd>[Tên Học Sinh] + [Năm Sinh]</dd>
+                      </div>
+                    </dl>
+                    <figure className={styles.bankQr}>
+                      <a
+                        href="/images/BankQR.svg"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Mở ảnh QR chuyển khoản học phí kích thước đầy đủ"
+                      >
+                        <Image
+                          src="/images/BankQR.svg"
+                          alt="Mã QR chuyển khoản học phí LIMA Chess"
+                          width={400}
+                          height={407}
+                          unoptimized
+                        />
+                      </a>
+                      <figcaption>Quét bằng ứng dụng ngân hàng</figcaption>
+                      <a
+                        className={styles.downloadQr}
+                        href="/images/BankQR.svg"
+                        download="LIMA-Chess-BankQR.svg"
+                      >
+                        Tải mã QR
+                      </a>
+                    </figure>
+                  </div>
+                </details>
               </section>
 
               <section
