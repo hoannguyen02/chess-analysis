@@ -249,12 +249,12 @@ export default function TournamentGuide() {
                   theo luật chạm quân phía trên (chưa bị tính là 1 lỗi).
                 </li>
                 <li>
-                  <strong>Đối thủ đã bấm đồng hồ:</strong> Trọng tài ghi nhận và
-                  xử lý 1 lỗi.
+                  <strong>Đối thủ đã bấm đồng hồ:</strong> Trọng tài xác minh và
+                  xử lý theo luật.
                 </li>
                 <li>
-                  <strong>Giải không dùng đồng hồ:</strong> Trọng tài xử lý 1
-                  lỗi (hoặc theo quy định riêng của giải).
+                  <strong>Giải không dùng đồng hồ:</strong> Trọng tài xử lý theo
+                  quy định của giải.
                 </li>
               </ul>
               <details className="mt-3">
@@ -262,29 +262,88 @@ export default function TournamentGuide() {
                   Nếu trọng tài tự phát hiện thì sao?
                 </summary>
                 <p className="mt-2">
-                  Ví dụ: đối thủ đi Mã thẳng 2 ô, con chưa khiếu nại nhưng trọng
-                  tài nhìn thấy.
+                  Trọng tài xử lý tùy theo thể thức áp dụng và thời điểm phát
+                  hiện lỗi. Các trường hợp dưới đây giải thích cách xử lý theo
+                  luật FIDE, áp dụng như nhau cho cả hai người chơi.
                 </p>
                 <ul className="mt-2">
                   <li>
-                    <strong>Trước khi bấm đồng hồ:</strong> Đối thủ phải sửa
-                    nước đi theo luật chạm quân; chưa bị tính 1 lỗi.
+                    <strong>Người đi sai chưa bấm đồng hồ:</strong> Trọng tài
+                    yêu cầu sửa nước đi theo luật chạm quân; chưa tính là một
+                    lỗi đã hoàn thành.
                   </li>
                   <li>
-                    <strong>Sau khi bấm đồng hồ:</strong> Nếu con chưa đi tiếp,
-                    trọng tài xử lý 1 lỗi, không cần chờ khiếu nại.
+                    <strong>Người đi sai đã bấm đồng hồ:</strong>
+                    <ul className="mt-2">
+                      <li>
+                        <strong>Cờ tiêu chuẩn:</strong> Trọng tài phải khôi phục
+                        thế cờ, yêu cầu sửa nước đi và xử lý lỗi theo luật,{' '}
+                        <strong>kể cả khi bên kia đã đi tiếp</strong>.
+                      </li>
+                      <li>
+                        <strong>Cờ nhanh/cờ chớp áp dụng A.5:</strong> Nếu trọng
+                        tài trực tiếp thấy nước đi sai được hoàn thành:
+                        <p className="mt-2">
+                          <strong>Bên kia chưa đi nước tiếp theo:</strong> Trọng
+                          tài phải yêu cầu sửa nước đi và xử lý lỗi, không cần
+                          chờ khiếu nại.
+                        </p>
+                        <p className="mt-2">
+                          <strong>Bên kia đã đi nước tiếp theo</strong> mà trước
+                          đó chưa khiếu nại và trọng tài chưa can thiệp: trọng
+                          tài{' '}
+                          <strong>
+                            không xử lý lại nước đi trái luật trước đó theo Điều
+                            A.5.2
+                          </strong>
+                          , mà cho ván đấu tiếp tục với nước sai được giữ
+                          nguyên.
+                        </p>
+                      </li>
+                    </ul>
                   </li>
                 </ul>
-                <p className="mt-2">
-                  <a
-                    className="underline"
-                    href="https://arbiters.fide.com/wp-content/uploads/Publications/Manual/Arbiters_Manual_2025.pdf"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Sổ tay trọng tài FIDE 2025: Điều 3.10, 7.5.1 và A.5.2
-                  </a>
-                </p>
+                <details className="mt-3">
+                  <summary className="cursor-pointer font-semibold">
+                    Chi tiết luật & nguồn tham khảo
+                  </summary>
+                  <p className="mt-2">
+                    <strong>Luật FIDE và điều lệ giải:</strong> Với giải phong
+                    trào có quy định riêng, cần đọc điều lệ hoặc hỏi trọng tài
+                    trưởng trước giải.
+                  </p>
+                  <p className="mt-2">
+                    <strong>Ngoại lệ:</strong> Cờ nhanh/cờ chớp đủ điều kiện
+                    giám sát và ghi chép theo Điều A.4/B.2 áp dụng cách xử lý
+                    như cờ tiêu chuẩn nêu trên.
+                  </p>
+                  <p className="mt-2">
+                    <strong>Sửa nước sai sau khi đã đi tiếp (A.5.2):</strong>{' '}
+                    Chỉ được sửa nếu hai người chơi cùng đồng ý, không có sự can
+                    thiệp của trọng tài.{' '}
+                    <strong>
+                      Nếu một người không đồng ý, nước sai được giữ nguyên và
+                      ván đấu tiếp tục.
+                    </strong>
+                  </p>
+                  <p className="mt-2">
+                    <strong>Trường hợp đặc biệt (A.5.4):</strong> Nếu trọng tài
+                    thấy cả hai Vua cùng bị chiếu hoặc một Tốt còn ở hàng cuối
+                    chưa phong cấp, trọng tài chờ nước tiếp theo hoàn thành. Nếu
+                    thế cờ vẫn bất hợp lệ, trọng tài tuyên bố hòa.
+                  </p>
+                  <p className="mt-2">
+                    <a
+                      className="underline"
+                      href="https://arbiters.fide.com/wp-content/uploads/Publications/Manual/Arbiters_Manual_2025.pdf"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Sổ tay trọng tài FIDE 2025: Điều 3.10, 7.5.1, A.4–A.5 và
+                      B.2–B.3
+                    </a>
+                  </p>
+                </details>
               </details>
               <details className="mt-3">
                 <summary className="cursor-pointer font-semibold">
@@ -298,8 +357,8 @@ export default function TournamentGuide() {
             </aside>
             <div className={styles.note}>
               <p>
-                <strong>Giải phong trào áp dụng mốc 3 lỗi:</strong> Phạm đủ{' '}
-                <strong>3 lỗi kỹ thuật trong một ván sẽ bị xử thua.</strong>
+                <strong>Mốc 3 lỗi ở một số giải phong trào:</strong> Loại lỗi
+                được tính và cách xử lý theo điều lệ của giải.
               </p>
               <details className="mt-3">
                 <summary className="cursor-pointer font-semibold">
