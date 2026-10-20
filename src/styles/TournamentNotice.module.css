@@ -59,6 +59,55 @@
 .navigation a:hover {
   border-color: #486b42;
 }
+.hero.guideHero {
+  padding: 32px 36px;
+  border-radius: 18px 18px 0 0;
+}
+.guideHero h1 {
+  font-size: clamp(28px, 4vw, 38px);
+  margin: 12px 0;
+}
+.guideNavigation {
+  padding: 20px 36px 24px;
+  background: #fff;
+  border: 1px solid #dce4db;
+  border-top: 0;
+  border-radius: 0 0 18px 18px;
+}
+.navigationLabel {
+  color: #617269;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  margin-bottom: 10px;
+}
+.navigationGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 32px;
+}
+.navigationGrid a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px solid #edf0e9;
+  font-size: 14px;
+  line-height: 1.5;
+}
+.navigationGrid a:last-child {
+  grid-column: 1 / -1;
+  border-bottom: 0;
+}
+.navigationGrid a span {
+  color: #718770;
+}
+.navigationGrid a:hover {
+  color: #486b42;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
 .section {
   padding-top: 38px;
   scroll-margin-top: 24px;
@@ -216,6 +265,15 @@
     padding: 28px 22px;
     border-radius: 18px;
   }
+  .hero.guideHero {
+    padding: 26px 22px;
+  }
+  .guideNavigation {
+    padding: 16px 22px;
+  }
+  .navigationGrid {
+    grid-template-columns: 1fr;
+  }
   .eyebrow {
     font-size: 10px;
   }
@@ -250,6 +308,12 @@
   }
   .navigation {
     display: none;
+  }
+  .guideNavigation {
+    display: none;
+  }
+  .hero.guideHero {
+    padding: 0;
   }
   .section,
   .format,

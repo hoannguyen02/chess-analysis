@@ -3,128 +3,29 @@ import type { GetStaticProps } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
 
-const topicGroups = [
-  {
-    title: 'Cơ bản · Bắt đầu ở đây',
-    topics: [
-      ['Chiếu hết 1 nước', 'mateIn1'],
-      ['Tấn công quân treo', 'hangingPiece'],
-      ['Tấn công đôi', 'fork'],
-      ['Ghim quân', 'pin'],
-      ['Đòn xiên', 'skewer'],
-      ['Chiếu hết hàng ngang cuối', 'backRankMate'],
-      ['Chiếu hết 2 nước', 'mateIn2'],
-    ],
-  },
-  {
-    title: 'Tiếp theo · Phối hợp quân',
-    topics: [
-      ['Tấn công mở', 'discoveredAttack'],
-      ['Chiếu mở', 'discoveredCheck'],
-      ['Chiếu đôi', 'doubleCheck'],
-      ['Loại bỏ quân phòng thủ', 'capturingDefender'],
-      ['Bẫy quân', 'trappedPiece'],
-      ['Thu hút quân', 'attraction'],
-      ['Đánh lạc hướng quân', 'deflection'],
-      ['Tốt sắp phong cấp', 'advancedPawn'],
-      ['Tấn công Vua yếu', 'exposedKing'],
-      ['Tấn công f2 / f7', 'attackingF2F7'],
-      ['Tấn công cánh Vua', 'kingsideAttack'],
-      ['Tấn công cánh Hậu', 'queensideAttack'],
-    ],
-  },
-  {
-    title: 'Nâng cao · Tính toán sâu',
-    topics: [
-      ['Thí quân', 'sacrifice'],
-      ['Giải phóng ô / đường', 'clearance'],
-      ['Ngắt mối liên kết', 'interference'],
-      ['Nước xen giữa (Zwischenzug)', 'intermezzo'],
-      ['Nước đi tĩnh', 'quietMove'],
-      ['Tấn công xuyên tia (X-ray)', 'xRayAttack'],
-      ['Nước phòng thủ', 'defensiveMove'],
-      ['Buộc đối thủ phải đi (Zugzwang)', 'zugzwang'],
-      ['Di chuyển dọc đường đối công (Collinear move)', 'collinearMove'],
-      ['Chiếu hết 3 nước', 'mateIn3'],
-      ['Chiếu hết 4 nước', 'mateIn4'],
-      ['Chiếu hết từ 5 nước', 'mateIn5'],
-    ],
-  },
-  {
-    title: 'Mở rộng · Các mẫu chiếu hết',
-    description:
-      'Ôn theo số thứ tự: mẫu dễ nhận biết trước, phối hợp phức tạp sau; cuối cùng luyện tổng hợp. Chiếu hết 1–2 nước và hàng ngang cuối nằm ở nhóm cơ bản.',
-    topics: [
-      ['Chiếu hết hai Xe (Blind Swine)', 'blindSwineMate'],
-      ['Chiếu hết Opera', 'operaMate'],
-      ['Chiếu hết Pillsbury', 'pillsburysMate'],
-      ['Chiếu hết Ả Rập (Arabian)', 'arabianMate'],
-      ['Chiếu ngạt', 'smotheredMate'],
-      ['Chiếu hết Anastasia', 'anastasiaMate'],
-      ['Chiếu hết Morphy', 'morphysMate'],
-      ['Chiếu hết hai Tượng', 'doubleBishopMate'],
-      ['Chiếu hết Boden', 'bodenMate'],
-      ['Chiếu hết Dovetail', 'dovetailMate'],
-      ['Chiếu hết Epaulette', 'epauletteMate'],
-      ['Chiếu hết ở góc (Corner)', 'cornerMate'],
-      ['Chiếu hết Hook', 'hookMate'],
-      ['Chiếu hết Triangle', 'triangleMate'],
-      ['Chiếu hết Kill Box', 'killBoxMate'],
-      ['Chiếu hết Balestra', 'balestraMate'],
-      ['Chiếu hết Swallow’s Tail', 'swallowstailMate'],
-      ['Chiếu hết Vuković', 'vukovicMate'],
-      ['Chiếu hết tổng hợp', 'mate'],
-    ],
-  },
-  {
-    title: 'Mở rộng · Nước đi đặc biệt',
-    topics: [
-      ['Nhập thành', 'castling'],
-      ['Bắt Tốt qua đường', 'enPassant'],
-      ['Phong cấp', 'promotion'],
-      ['Phong cấp thành Xe, Tượng hoặc Mã', 'underPromotion'],
-    ],
-  },
-  {
-    title: 'Ôn thêm · Khai cuộc, trung cuộc và tàn cuộc',
-    topics: [
-      ['Chiến thuật trong khai cuộc', 'opening'],
-      ['Chiến thuật trong trung cuộc', 'middlegame'],
-      ['Tàn cuộc tổng hợp', 'endgame'],
-      ['Tàn cuộc Tốt', 'pawnEndgame'],
-      ['Tàn cuộc Xe', 'rookEndgame'],
-      ['Tàn cuộc Tượng', 'bishopEndgame'],
-      ['Tàn cuộc Mã', 'knightEndgame'],
-      ['Tàn cuộc Hậu', 'queenEndgame'],
-      ['Tàn cuộc Hậu và Xe', 'queenRookEndgame'],
-    ],
-  },
-];
-
 const sections = [
   ['the-thuc', 'Trước giờ thi'],
   ['trong-tai', 'Luật & trọng tài'],
+  ['tam-dung-dong-ho', 'Tạm dừng đồng hồ'],
+  ['di-ve-sinh', 'Đi vệ sinh & rời bàn'],
   ['ghi-nho', 'Cách suy nghĩ'],
   ['tinh-than', 'Thời gian & tinh thần'],
-  ['luyen-tap', 'Luyện chiến thuật'],
+  ['ket-thuc-van', 'Kết thúc ván'],
 ];
 
 export default function TournamentGuide() {
   return (
     <>
       <Head>
-        <title>Cẩm nang thi đấu cờ vua cho người mới | LIMA</title>
+        <title>Cẩm nang thi đấu cờ vua | LIMA</title>
         <meta
           name="description"
-          content="Cẩm nang cho kỳ thủ mới: chuẩn bị trước giải, xử lý tình huống với trọng tài, quy trình suy nghĩ trước mỗi nước đi và bài tập chiến thuật."
+          content="Cẩm nang dành cho người chơi, phụ huynh, HLV và trọng tài: chuẩn bị trước giải, xử lý tình huống với trọng tài, quy trình suy nghĩ trước mỗi nước đi và quản lý thời gian."
         />
-        <meta
-          property="og:title"
-          content="♟️ Cẩm nang thi đấu cờ vua cho người mới"
-        />
+        <meta property="og:title" content="♟️ Cẩm nang thi đấu cờ vua" />
         <meta
           property="og:description"
-          content="Những điều cần nhớ trước mỗi giải đấu, kèm bài tập chiến thuật từ cơ bản đến nâng cao trên Lichess."
+          content="Những điều cần nhớ trước mỗi giải đấu: luật thi đấu, xử lý tình huống và quản lý thời gian."
         />
         <meta property="og:type" content="article" />
         <meta property="og:locale" content="vi_VN" />
@@ -137,27 +38,26 @@ export default function TournamentGuide() {
           >
             ← Góc học tập · Cờ vua
           </Link>
-          <header className={styles.hero}>
-            <p className={styles.eyebrow}>
-              LIMA CHESS · CẨM NANG CHO KỲ THỦ MỚI
-            </p>
-            <h1>
-              Tự tin bước vào
-              <br />
-              bàn thi đấu
-            </h1>
+          <header className={`${styles.hero} ${styles.guideHero}`}>
+            <p className={styles.eyebrow}>LIMA CHESS · TÀI LIỆU THAM KHẢO</p>
+            <h1>Cẩm nang thi đấu cờ vua</h1>
             <p className={styles.intro}>
-              Chơi đúng luật · Giữ quân an toàn · Suy nghĩ trước khi đi
+              Chuẩn bị trước giải, nắm rõ luật và xử lý tình huống tại bàn đấu.
             </p>
-            <nav className={styles.navigation} aria-label="Nội dung hướng dẫn">
-              {sections.map(([id, label], index) => (
+          </header>
+          <nav
+            className={styles.guideNavigation}
+            aria-label="Nội dung hướng dẫn"
+          >
+            <div className={styles.navigationGrid}>
+              {sections.map(([id, label]) => (
                 <a key={id} href={`#${id}`}>
-                  <span>0{index + 1}</span>
                   {label}
+                  <span aria-hidden="true">↗</span>
                 </a>
               ))}
-            </nav>
-          </header>
+            </div>
+          </nav>
 
           <section id="the-thuc" className={styles.section}>
             <p className={styles.kicker}>01 · CHUẨN BỊ TRƯỚC GIỜ THI</p>
@@ -185,10 +85,58 @@ export default function TournamentGuide() {
                 đầu theo hiệu lệnh.
               </li>
               <li>
+                <strong>Điện thoại và đồng hồ thông minh:</strong> Kiểm tra quy
+                định thiết bị của giải trước khi vào thi đấu. Không mang thiết
+                bị chưa được trọng tài cho phép trên người; chỉ tắt tiếng là
+                chưa đủ. Nếu giải cho phép cất trong túi, phải tắt hoàn toàn và
+                đặt túi ở nơi được chấp thuận; không tự mở túi trong ván.
+              </li>
+              <li>
+                <strong>Đến muộn hoặc bị ốm giữa hai ván:</strong> Kiểm tra giờ
+                bắt đầu và thời gian được phép đến muộn theo điều lệ. Nếu không
+                thể về bàn đúng giờ, báo trọng tài sớm; phụ huynh hoặc HLV có
+                thể báo giúp.{' '}
+                <strong>
+                  Đồng hồ vẫn chạy khi đến lượt người chơi vắng mặt
+                </strong>
+                , trừ khi trọng tài quyết định khác. Việc báo ốm không tự động
+                được hoãn ván hoặc bù giờ.{' '}
+                <strong>
+                  Quá thời gian được phép đến muộn có thể bị xử thua dù đồng hồ
+                  chưa hết giờ.
+                </strong>
+              </li>
+              <li>
                 <strong>Không có đồng hồ:</strong> Bình tĩnh suy nghĩ. Nếu được
                 bổ sung đồng hồ, nghe hướng dẫn của trọng tài.
               </li>
             </ul>
+            <details className="mt-3">
+              <summary className="cursor-pointer font-semibold">
+                Điều lệ cần kiểm tra & nguồn tham khảo
+              </summary>
+              <p className="mt-2">
+                Đến sau thời hạn có mặt sẽ bị xử thua, trừ khi trọng tài quyết
+                định khác. Theo FIDE, nếu điều lệ không quy định thời hạn này,
+                mặc định là 0 phút. Có thể bị xử thua do đến muộn dù đồng hồ
+                chưa hết giờ (6.7.1).
+              </p>
+              <p className="mt-2">
+                Mang thiết bị điện tử không được phép trên người trong địa điểm
+                thi đấu có thể dẫn đến xử thua. FIDE quy định xử thua, nhưng
+                điều lệ giải có thể quy định mức phạt nhẹ hơn (11.3.2).
+              </p>
+              <p className="mt-2">
+                <a
+                  className="underline"
+                  href="https://handbook.fide.com/chapter/E012023"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Luật FIDE: Điều 6.6–6.7 và 11.3.2
+                </a>
+              </p>
+            </details>
           </section>
 
           <section id="trong-tai" className={styles.section}>
@@ -229,7 +177,7 @@ export default function TournamentGuide() {
               <h3 id="loi-sai-luat">
                 Nếu đối thủ đi sai luật:{' '}
                 <mark className={styles.highlight}>
-                  Gọi trọng tài ngay, trước khi con đi nước tiếp theo!
+                  Gọi trọng tài ngay, trước khi đi nước tiếp theo!
                 </mark>
               </h3>
 
@@ -350,8 +298,9 @@ export default function TournamentGuide() {
                   Nếu không nhớ thế cờ trước lỗi
                 </summary>
                 <p className="mt-2">
-                  Nếu không xác định được thế cờ ngay trước lỗi, trọng tài cho
-                  tiếp tục từ thế cờ gần nhất trước đó có thể xác định được.
+                  Khi luật cho phép khôi phục thế cờ, nếu không xác định được
+                  thế cờ ngay trước lỗi, trọng tài cho tiếp tục từ thế cờ gần
+                  nhất trước đó có thể xác định được.
                 </p>
               </details>
             </aside>
@@ -365,10 +314,10 @@ export default function TournamentGuide() {
                   Chi tiết & nguồn tham khảo
                 </summary>
                 <p className="mt-2">
-                  Theo FIDE, hoàn thành nước đi không hợp lệ lần thứ 2 trong
-                  cùng một ván sẽ bị xử thua; xử hòa nếu đối phương không thể
-                  chiếu hết bằng bất kỳ chuỗi nước đi hợp lệ nào. Mốc 3 lỗi là
-                  quy định riêng của một số giải phong trào.
+                  Theo FIDE, người chơi hoàn thành nước đi không hợp lệ lần thứ
+                  2 của mình trong cùng một ván sẽ bị xử thua; xử hòa nếu đối
+                  phương không thể chiếu hết bằng bất kỳ chuỗi nước đi hợp lệ
+                  nào. Mốc 3 lỗi là quy định riêng của một số giải phong trào.
                 </p>
                 <ul className="mt-2 list-disc space-y-2 pl-5">
                   <li>
@@ -393,7 +342,233 @@ export default function TournamentGuide() {
                 </ul>
               </details>
             </div>
+            <aside
+              className={styles.pitfalls}
+              aria-labelledby="tam-dung-dong-ho"
+            >
+              <h3 id="tam-dung-dong-ho">Khi nào được tạm dừng đồng hồ?</h3>
+              <p className="mt-2">
+                Tạm dừng ở đây là dừng cả hai bên đồng hồ, khác với bấm chuyển
+                lượt sau khi đi quân. Người chơi có thể tạm dừng để gọi trọng
+                tài khi có lý do chính đáng, dù đang chạy thời gian của mình hay
+                của đối thủ. Việc dừng khi đang chạy giờ đối thủ không tự động
+                dẫn đến xử thua; nếu dừng không chính đáng, trọng tài xử phạt
+                theo Điều 12.9, trong đó có thể có hình thức xử thua.
+              </p>
+              <details className="mt-3">
+                <summary className="cursor-pointer font-semibold">
+                  Các tình huống thường gặp & nguồn tham khảo
+                </summary>
+
+                <p className="mt-3 font-semibold">Được dừng để gọi trọng tài</p>
+                <ul className="mt-2">
+                  <li>
+                    <strong>Thiếu quân phong cấp:</strong> Tốt đến hàng cuối
+                    nhưng không có quân cần dùng (6.11.2).
+                  </li>
+                  <li>
+                    <strong>Đồng hồ bị hỏng:</strong> Ví dụ màn hình tắt hoặc
+                    đồng hồ không hoạt động; dừng để gọi trọng tài kiểm tra,
+                    không tự sửa (6.10.1, 6.11.2).
+                  </li>
+                  <li>
+                    <strong>Đồng hồ cài sai thời gian:</strong> Báo trọng tài
+                    ngay, không tự chỉnh (6.10.2). Với cờ nhanh/cờ chớp áp dụng
+                    A.5, sau khi mỗi bên hoàn thành 10 nước, không được thay đổi
+                    cài đặt, trừ khi việc giữ nguyên sẽ ảnh hưởng bất lợi đến
+                    lịch thi đấu của giải (A.5.1.1). Trọng tài quyết định việc
+                    điều chỉnh.
+                  </li>
+                  <li>
+                    <strong>Đối thủ đi trái luật:</strong> Dừng để yêu cầu xử
+                    lý; với A.5, phải báo trước khi đi nước tiếp theo (A.5.2).
+                  </li>
+                  <li>
+                    <strong>Quân bị xô lệch cần trọng tài hỗ trợ:</strong> Được
+                    dừng theo 7.4.2; không bấm chuyển sang giờ đối thủ.
+                  </li>
+                  <li>
+                    <strong>Yêu cầu hòa ba lần lặp lại hoặc 50 nước:</strong>{' '}
+                    Người chơi hoặc trọng tài phải dừng đồng hồ khi tiếp nhận
+                    yêu cầu theo đúng thủ tục (9.2–9.5). Yêu cầu sai vẫn bị
+                    phạt.
+                  </li>
+                  <li>
+                    <strong>Báo đối thủ hết giờ:</strong> Có thể dừng để gọi
+                    trọng tài xác nhận; không tự kết luận thắng (6.8–6.9,
+                    A.5.3).
+                  </li>
+                </ul>
+                <p className="mt-3 font-semibold">
+                  Các tình huống cần trọng tài xem xét cụ thể
+                </p>
+                <ul className="mt-2">
+                  <li>
+                    <strong>Bị làm phiền:</strong> Ví dụ đối thủ hoặc khán giả
+                    liên tục nói chuyện gây cản trở thi đấu.
+                  </li>
+                  <li>
+                    <strong>Sự cố sức khỏe:</strong> Ví dụ đột ngột bị ốm, cần
+                    hỗ trợ. Đi vệ sinh do bệnh hoặc nhu cầu liên quan đến khuyết
+                    tật có thể được xem xét riêng.
+                  </li>
+                </ul>
+                <p className="mt-3 font-semibold">
+                  Các trường hợp không được tự dừng đồng hồ
+                </p>
+                <ul className="mt-2">
+                  <li>
+                    <strong>
+                      Dừng để suy nghĩ, nghỉ, uống nước hoặc đi vệ sinh thông
+                      thường: Không được.
+                    </strong>{' '}
+                    Trọng tài xử phạt người tự dừng và cho ván tiếp tục. Sự cố
+                    sức khỏe được xem xét riêng.
+                  </li>
+                  <li>
+                    <strong>
+                      Dừng để tự nhặt quân mình làm đổ: Không được.
+                    </strong>{' '}
+                    Trọng tài yêu cầu sửa bằng thời gian của người làm đổ và xử
+                    lý việc dừng sai. Nếu cần trọng tài hỗ trợ, được dừng để gọi
+                    (7.4.1–7.4.2).
+                  </li>
+                  <li>
+                    <strong>
+                      Dừng để chờ trả lời đề nghị hòa: Không được.
+                    </strong>{' '}
+                    Trọng tài xử phạt việc dừng sai và cho đồng hồ chạy đúng
+                    lượt; không buộc đối thủ trả lời ngay.
+                  </li>
+                  <li>
+                    <strong>Dừng để tự ghi bù biên bản: Không được.</strong>{' '}
+                    Trọng tài xử phạt và cho đồng hồ chạy lại. Khôi phục biên
+                    bản theo Điều 8.5 thực hiện theo hướng dẫn của trọng tài.
+                  </li>
+                  <li>
+                    <strong>
+                      Dừng để chờ đối thủ đi vệ sinh về: Không được.
+                    </strong>{' '}
+                    Trọng tài xử lý người tự dừng và cho đồng hồ chạy đúng lượt;
+                    không phạt người vắng mặt chỉ vì đối thủ dừng hộ.
+                  </li>
+                  <li>
+                    <strong>
+                      Hai bên tự thỏa thuận dừng để nghỉ: Không được.
+                    </strong>{' '}
+                    Trọng tài xác định trách nhiệm từng người, xử phạt và cho
+                    ván tiếp tục.
+                  </li>
+                </ul>
+                <div className={styles.note}>
+                  <p>
+                    <strong>Phạt thế nào?</strong> Áp dụng cho cờ tiêu chuẩn,
+                    nhanh và chớp: nếu lần đầu dừng sai do hiểu nhầm và ít ảnh
+                    hưởng, hướng xử lý đề xuất là cảnh cáo; nếu cố tình hoặc tái
+                    phạm, trọng tài thống nhất với trọng tài trưởng về mức phạt
+                    thời gian, vì FIDE không quy định số phút cố định cho lỗi
+                    này.
+                  </p>
+                  <p className="mt-2">
+                    <a
+                      className="underline"
+                      href="https://handbook.fide.com/chapter/E012023"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Luật FIDE: Điều 6.11.3–6.11.4 và 12.9
+                    </a>
+                  </p>
+                </div>
+                <p className="mt-2">
+                  <a
+                    className="underline"
+                    href="https://arbiters.fide.com/wp-content/uploads/Publications/Manual/Arbiters_Manual_2025.pdf#page=34"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Sổ tay trọng tài FIDE 2025, trang in 25–26: lý do dừng đồng
+                    hồ và xử lý quân bị xô lệch
+                  </a>
+                </p>
+              </details>
+            </aside>
+            <details className={styles.pitfalls}>
+              <summary
+                id="nguoi-di-cung"
+                className="cursor-pointer font-semibold"
+              >
+                Dành cho phụ huynh và HLV
+              </summary>
+              <p className="mt-2">
+                Trong ván đấu, không nhắc nước, ra hiệu hoặc trao đổi về thế cờ
+                với người chơi. Nếu thấy sai phạm, báo riêng cho trọng tài;
+                không tự can thiệp vào ván đấu. Phân tích và góp ý sau khi ván
+                đã kết thúc, ở nơi không làm phiền các bàn còn thi đấu.
+              </p>
+              <p className="mt-2">
+                <a
+                  className="underline"
+                  href="https://handbook.fide.com/chapter/E012023"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Luật FIDE: Điều 11.3.1 và 12.7
+                </a>
+              </p>
+            </details>
           </section>
+
+          <aside className={styles.pitfalls} aria-labelledby="di-ve-sinh">
+            <h3 id="di-ve-sinh">Đi vệ sinh & rời bàn trong ván đấu</h3>
+            <p className="mt-2">
+              Áp dụng cho cả cờ tiêu chuẩn, cờ nhanh và cờ chớp; tuân thủ thêm
+              quy định riêng của giải.
+            </p>
+            <ul className="mt-2">
+              <li>
+                <strong>Đang đến lượt mình:</strong> Phải được trọng tài cho
+                phép trước khi rời khu vực đặt bàn thi đấu.
+              </li>
+              <li>
+                <strong>Đang đến lượt đối thủ:</strong> Tuân thủ quy định báo
+                trọng tài của giải; nếu chưa rõ, hãy hỏi trước khi đi.
+              </li>
+              <li>
+                <strong>Đồng hồ:</strong> Không tự dừng đồng hồ để đi vệ sinh
+                thông thường. Được trọng tài cho phép đi vệ sinh không có nghĩa
+                là được dừng đồng hồ. Nếu đến lượt người chơi đang vắng mặt,
+                thời gian của người đó vẫn chạy.
+              </li>
+              <li>
+                <strong>Đúng nơi quy định:</strong> Dùng nhà vệ sinh thuộc địa
+                điểm thi đấu. Muốn ra ngoài địa điểm thi đấu phải được trọng tài
+                cho phép, dù đang đến lượt ai.
+              </li>
+            </ul>
+
+            <details className="mt-3">
+              <summary className="cursor-pointer font-semibold">
+                Chi tiết luật & nguồn tham khảo
+              </summary>
+              <p className="mt-2">
+                FIDE phân biệt khu vực đặt bàn thi đấu với toàn bộ địa điểm thi
+                đấu, bao gồm nhà vệ sinh được chỉ định. Điều lệ giải có thể yêu
+                cầu báo trọng tài cả khi đang đến lượt đối thủ.
+              </p>
+              <p className="mt-2">
+                <a
+                  className="underline"
+                  href="https://handbook.fide.com/chapter/E012023"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Luật FIDE: Điều 6.2, 6.8–6.11, 7.4, 8.1, 8.5, 9.1–9.5, 11.2,
+                  12.9 và A.5
+                </a>
+              </p>
+            </details>
+          </aside>
 
           <section id="ghi-nho" className={styles.section}>
             <p className={styles.kicker}>03 · SUY NGHĨ TRƯỚC MỖI NƯỚC ĐI</p>
@@ -419,32 +594,32 @@ export default function TournamentGuide() {
               className={styles.pitfalls}
               aria-label="Lỗi quan sát hay mắc"
             >
-              <h3>Hai điều con cần nhớ</h3>
+              <h3>Hai điểm cần kiểm tra</h3>
               <ul>
                 <li>
-                  Thấy ăn được quân, con đừng vội ăn. Xem đối thủ có bắt lại
-                  được không, đổi như vậy mình có bị thiệt quân hay bị chiếu hết
-                  không.
+                  Thấy có thể bắt quân, đừng vội thực hiện. Xem đối thủ có bắt
+                  lại được không, đổi như vậy mình có bị thiệt quân hay bị chiếu
+                  hết không.
                 </li>
                 <li>
-                  Sau mỗi nước đi của đối thủ, con nhìn lại cả bàn cờ, đừng chỉ
+                  Sau mỗi nước đi của đối thủ, hãy nhìn lại cả bàn cờ, đừng chỉ
                   nhìn quân vừa đi. Ví dụ: đối thủ dời Mã đang chắn trước Xe,
-                  khiến Xe có đường bắt Hậu của con.
+                  khiến Xe có đường bắt Hậu của mình.
                 </li>
               </ul>
             </aside>
             <div className={styles.note}>
               <p>
-                <strong>Đầu ván,</strong> con đưa Mã và Tượng ra để cùng kiểm
+                <strong>Đầu ván,</strong> phát triển Mã và Tượng ra để cùng kiểm
                 soát trung tâm, tìm lúc nhập thành cho Vua an toàn rồi đưa hai
                 Xe vào phối hợp. Đừng mải đi Hậu hoặc đi lại một quân nhiều lần
                 khi các quân khác còn chưa ra, trừ khi cần tránh một đe dọa.
               </p>
               <p className="mt-3">
-                <strong>Khi đang hơn quân,</strong> con cứ chơi chắc, giữ quân
+                <strong>Khi đang hơn quân,</strong> ưu tiên chơi chắc, giữ quân
                 cẩn thận và đổi quân nếu có lợi. Gần cuối ván, nhớ xem đối thủ
                 còn nước đi không: nếu đến lượt họ mà không quân nào đi được hợp
-                lệ, Vua cũng không bị chiếu thì chỉ hòa (pat), dù con hơn nhiều
+                lệ, Vua cũng không bị chiếu thì chỉ hòa (pat), dù đang hơn nhiều
                 quân.
               </p>
             </div>
@@ -459,13 +634,13 @@ export default function TournamentGuide() {
                 Chỉ dùng <strong>một tay</strong> để đi quân, kể cả khi bắt
                 quân, nhập thành hoặc phong cấp.{' '}
                 <strong>Đi xong, dùng chính tay đó bấm đồng hồ.</strong> Không
-                bấm khi chưa đi xong; quên bấm thì thời gian của con vẫn chạy.
+                bấm khi chưa đi xong; quên bấm thì thời gian của mình vẫn chạy.
               </p>
             </aside>
             <ul className={styles.list}>
               <li>
-                Đối thủ đi nhanh, con cũng đừng vội. Nhớ xem thời gian còn lại
-                và tranh thủ suy nghĩ khi đối thủ đang tính nước đi.
+                Không cần đi vội theo tốc độ của đối thủ. Nhớ xem thời gian còn
+                lại và tranh thủ suy nghĩ khi đối thủ đang tính nước đi.
               </li>
               <li>
                 <strong>Giữa các ván:</strong> Uống nước, đi vệ sinh, nghỉ ngơi
@@ -475,86 +650,67 @@ export default function TournamentGuide() {
                 <strong>
                   Dù thắng hay thua, hãy chuẩn bị cho ván tiếp theo.
                 </strong>{' '}
-                Đừng để sự tiếc nuối ở ván trước ảnh hưởng đến con. Luôn tôn
-                trọng và cư xử lịch sự với đối thủ.
+                Tránh để kết quả ván trước ảnh hưởng đến sự tập trung ở ván sau.
+                Luôn tôn trọng và cư xử lịch sự với đối thủ.
               </li>
             </ul>
           </section>
 
-          <section id="luyen-tap" className={styles.section}>
-            <aside
-              className={`${styles.closing} mb-6`}
-              aria-label="Lời nhắc trước khi luyện tập"
-            >
-              <span className={styles.trophy} aria-hidden="true">
-                🏆
-              </span>
-              <h2>Mỗi ván đấu là một cơ hội tiến bộ</h2>
-              <p className={styles.reminder}>
-                Quan sát cả bàn cờ – Suy nghĩ cẩn thận – Kiểm tra trước khi chạm
-                quân!
+          <section id="ket-thuc-van" className={styles.section}>
+            <p className={styles.kicker}>05 · KẾT THÚC VÁN</p>
+            <h2>Xác nhận kết quả trước khi rời bàn</h2>
+            <ul className={styles.list}>
+              <li>
+                <strong>Nếu chưa thống nhất kết quả:</strong> Giữ nguyên bàn cờ
+                và gọi trọng tài. Không vội xếp lại quân khi còn tranh chấp.
+              </li>
+              <li>
+                <strong>Kiểm tra trước khi ký:</strong> Đọc đúng tên, màu quân
+                và kết quả trên biên bản hoặc phiếu kết quả nếu giải sử dụng.
+                1–0 là Trắng thắng, 0–1 là Đen thắng, ½–½ là hòa. Thấy ghi sai,
+                báo để sửa trước khi ký.
+              </li>
+              <li>
+                <strong>Báo kết quả:</strong> Làm theo hướng dẫn của giải, xác
+                nhận đã ghi nhận kết quả rồi mới xếp lại quân. Rời bàn nhẹ
+                nhàng, kiểm tra giờ và bảng bốc thăm ván tiếp theo.
+              </li>
+            </ul>
+            <details className="mt-3">
+              <summary className="cursor-pointer font-semibold">
+                Chi tiết luật & nguồn tham khảo
+              </summary>
+              <p className="mt-2">
+                Theo Điều 8.7, kết quả đã ký được giữ nguyên dù ghi sai, trừ khi
+                trọng tài quyết định khác. Nếu phát hiện sai sau khi ký, báo
+                trọng tài ngay; không tự sửa phiếu đã nộp.
               </p>
-            </aside>
-            <p className={styles.kicker}>05 · ÔN LẠI CÁC CHIẾN THUẬT ĐÃ HỌC</p>
-            <p>
-              Con ôn nhóm cơ bản trước, rồi chọn thêm chủ đề đã học. Đây là thứ
-              tự ôn gợi ý; mỗi chủ đề vẫn có bài dễ và khó.
-            </p>
-            {topicGroups.map((group, groupIndex) => (
-              <details
-                key={group.title}
-                className={styles.topicGroup}
-                open={groupIndex === 0}
-              >
-                <summary>
-                  {group.title}
-                  <span className={styles.topicCount}>
-                    {' '}
-                    · {group.topics.length} chủ đề
-                  </span>
-                </summary>
-                {group.description && (
-                  <p className="mt-3 text-sm">{group.description}</p>
-                )}
-                <div className={styles.topics}>
-                  {group.topics.map(([label, theme], topicIndex) => (
-                    <a
-                      key={theme}
-                      href={`https://lichess.org/training/${theme}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <span className={styles.topicNumber}>
-                        {String(topicIndex + 1).padStart(2, '0')}
-                      </span>
-                      <span>{label}</span>
-                      <span aria-hidden="true">↗</span>
-                    </a>
-                  ))}
-                </div>
-              </details>
-            ))}
-            <p className="mt-5 text-sm">
-              Nguồn bài tập:{' '}
-              <a
-                className="underline"
-                href="https://lichess.org/training/themes"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Danh mục chủ đề Lichess
-              </a>
-              {' · '}
-              <a
-                className="underline"
-                href="https://lichess.org/training"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Luyện tổng hợp
-              </a>
-            </p>
+              <p className="mt-2">
+                <a
+                  className="underline"
+                  href="https://handbook.fide.com/chapter/E012023"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Luật FIDE: Điều 8.7
+                </a>
+              </p>
+            </details>
           </section>
+
+          <aside
+            className={`${styles.closing} mb-6`}
+            aria-label="Lời nhắc khi thi đấu"
+          >
+            <span className={styles.trophy} aria-hidden="true">
+              🏆
+            </span>
+            <h2>Mỗi ván đấu là một cơ hội tiến bộ</h2>
+            <p className={styles.reminder}>
+              Quan sát cả bàn cờ – Suy nghĩ cẩn thận – Kiểm tra trước khi chạm
+              quân!
+            </p>
+          </aside>
         </article>
       </main>
     </>
