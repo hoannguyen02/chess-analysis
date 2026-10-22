@@ -23,11 +23,15 @@ const DEFAULT_CUSTOM_MINUTES = 10;
 type TeachingTimerProps = {
   compact?: boolean;
   minimal?: boolean;
+  paused?: boolean;
+  resetKey?: string | number;
 };
 
 export const TeachingTimer = ({
   compact = false,
   minimal = false,
+  paused = false,
+  resetKey,
 }: TeachingTimerProps) => {
   const t = useTranslations();
   const defaultPresetSeconds: number = TIMER_PRESETS[0].valueSeconds;
@@ -47,6 +51,18 @@ export const TeachingTimer = ({
   const audioContextRef = useRef<AudioContext | null>(null);
   const isAudioUnlockedRef = useRef(false);
   const customInputRef = useRef<HTMLInputElement | null>(null);
+
+  const previousResetKey = useRef(resetKey);
+  useEffect(() => {
+    if (paused) setIsRunning(false);
+  }, [paused]);
+  useEffect(() => {
+    if (previousResetKey.current === resetKey) return;
+    previousResetKey.current = resetKey;
+    setRemainingSeconds(selectedSeconds);
+    setIsRunning(false);
+    setSettingsOpen(false);
+  }, [resetKey, selectedSeconds]);
 
   const ensureAudioContext = useCallback(async () => {
     if (typeof window === 'undefined') return null;
@@ -195,6 +211,7 @@ export const TeachingTimer = ({
   };
 
   const handlePrimaryAction = async () => {
+    if (paused) return;
     await unlockAudio();
 
     if (remainingSeconds === 0) {
@@ -235,6 +252,7 @@ export const TeachingTimer = ({
           className="grid size-8 shrink-0 place-items-center rounded-md bg-[var(--s-bg)] text-slate-900 hover:bg-[#df9412] focus:outline-none focus:ring-2 focus:ring-[#f5a623]/40"
           style={{ padding: 0, border: 0, lineHeight: 1 }}
           onClick={handlePrimaryAction}
+          disabled={paused}
           aria-label={
             remainingSeconds === 0
               ? t('common.timer.restart')
@@ -372,6 +390,7 @@ export const TeachingTimer = ({
               color="gray"
               className="border-0 bg-[var(--s-bg)] text-slate-900 hover:bg-[#df9412] focus:ring-2 focus:ring-[#f5a623]/40"
               onClick={handlePrimaryAction}
+              disabled={paused}
               aria-label={
                 remainingSeconds === 0
                   ? t('common.timer.restart')
@@ -512,6 +531,7 @@ export const TeachingTimer = ({
             color="gray"
             className="border-0 bg-[var(--s-bg)] text-slate-900 hover:bg-[#df9412] focus:ring-2 focus:ring-[#f5a623]/40"
             onClick={handlePrimaryAction}
+            disabled={paused}
           >
             {remainingSeconds === 0
               ? t('common.timer.restart')

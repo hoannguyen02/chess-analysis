@@ -116,7 +116,7 @@ export default function TacticsPractice() {
           <header className={styles.hero}>
             <p className={styles.eyebrow}>LIMA CHESS · LUYỆN TẬP</p>
             <h1>Luyện chiến thuật</h1>
-            <p className={styles.intro}>Bài tập theo chủ đề trên Lichess</p>
+            <p className={styles.intro}>Bài tập theo chủ đề · Lichess</p>
           </header>
           <section
             className={styles.section}

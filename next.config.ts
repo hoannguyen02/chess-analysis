@@ -9,6 +9,20 @@ const nextConfig: NextConfig = {
     defaultLocale: 'en', // Default locale
     localeDetection: false,
   },
+  async redirects() {
+    return [
+      {
+        source: '/luyen-chien-thuat',
+        destination: '/chien-thuat',
+        permanent: true,
+      },
+      {
+        source: '/luyen-cuu-hoa',
+        destination: '/hoa-co',
+        permanent: true,
+      },
+    ];
+  },
   async headers() {
     return [
       // Page-wide isolation (if you need SAB / threads)
