@@ -1,0 +1,194 @@
+[
+  {
+    "title": "Xiên Hậu · 1",
+    "beginner": true,
+    "beginnerKind": "queen",
+    "mode": "interactive",
+    "outcome": "skewer",
+    "fen": "r5nr/pppk3p/2n2q2/5p1B/3P1B2/2P5/P1P3PP/R2Q1RK1 w - - 1 14",
+    "prompt": "Tìm đòn xiên và giải thích quân nào bảo vệ Tượng.",
+    "moves": [
+      "Be5",
+      "Qh6",
+      "Bxh8"
+    ],
+    "alternativeLines": [],
+    "hints": [
+      "Tìm Hậu và Xe trên cùng đường chéo.",
+      "Tốt d4 bảo vệ ô nào mà Tượng có thể đến?"
+    ],
+    "solution": "Tốt d4 bảo vệ e5; vị trí của Tốt quyết định Tượng có thể tiến lên an toàn hay không. Trong biến này, bạn lời 5 điểm quân (Tốt 1, Tượng/Mã 3, Xe 5, Hậu 9).",
+    "source": "https://www.pgnmentor.com/players/Blackburne.zip",
+    "gameReference": {
+      "id": "1171d868e56fd2ba",
+      "kind": "game",
+      "ply": 26,
+      "branch": 0,
+      "collection": "skewer"
+    },
+    "previousMove": {
+      "fen": "r5nr/pppk3p/2n5/5pqB/3P1B2/2P5/P1P3PP/R2Q1RK1 b - - 0 13",
+      "move": "Qf6"
+    }
+  },
+  {
+    "title": "Xiên Hậu · 2",
+    "beginner": true,
+    "beginnerKind": "queen",
+    "mode": "interactive",
+    "outcome": "skewer",
+    "fen": "3n1rn1/pppkq3/5b2/1P1p1Pp1/P2P4/2PQ1NN1/5K2/R1B5 w - - 1 22",
+    "prompt": "Tìm đòn xiên. Hậu tránh đi nhưng vẫn bảo vệ Xe thì sao?",
+    "moves": [
+      "Ba3",
+      "Qe8",
+      "Bxf8",
+      "Qxf8"
+    ],
+    "alternativeLines": [],
+    "hints": [
+      "Quan sát đường chéo a3–f8.",
+      "Xe a1 bảo vệ a3; hãy tính cả nước Hậu bắt lại."
+    ],
+    "solution": "Xe a1 bảo vệ a3. Sau khi đổi Tượng lấy Xe, cần tính đủ nước Hậu bắt lại. Trong biến này, bạn lời 2 điểm quân (Tốt 1, Tượng/Mã 3, Xe 5, Hậu 9).",
+    "source": "https://www.pgnmentor.com/players/Anderssen.zip",
+    "gameReference": {
+      "id": "071295b639b49091",
+      "kind": "game",
+      "ply": 42,
+      "branch": 0,
+      "collection": "skewer"
+    },
+    "previousMove": {
+      "fen": "5rn1/pppkq3/2n2b2/1P1p1Pp1/P2P4/2PQ1NN1/5K2/R1B5 b - - 0 21",
+      "move": "Nd8"
+    }
+  },
+  {
+    "title": "Xiên Hậu · 3",
+    "beginner": true,
+    "beginnerKind": "queen",
+    "mode": "interactive",
+    "outcome": "skewer",
+    "fen": "k6r/p5qb/1np3pp/2Q1pp2/2P5/2B3PB/PP3P1P/6K1 w - - 0 31",
+    "prompt": "Có thể bắt Tốt và đồng thời tạo đòn xiên không?",
+    "moves": [
+      "Bxe5",
+      "Qd7",
+      "Bxh8"
+    ],
+    "alternativeLines": [],
+    "hints": [
+      "Tìm đường chéo đi qua g7 và h8.",
+      "Ai bảo vệ Tượng nếu Tượng bắt Tốt e5?"
+    ],
+    "solution": "Hậu c5 bảo vệ e5. Nước bắt Tốt cũng đưa Tượng lên đường chéo g7–h8. Trong biến này, bạn lời 6 điểm quân (Tốt 1, Tượng/Mã 3, Xe 5, Hậu 9).",
+    "source": "https://www.pgnmentor.com/players/Euwe.zip",
+    "gameReference": {
+      "id": "5e6922faa5542c14",
+      "kind": "game",
+      "ply": 60,
+      "branch": 0,
+      "collection": "skewer"
+    },
+    "previousMove": {
+      "fen": "k6r/p5Rb/1np2qpp/2Q1pp2/2P5/2B3PB/PP3P1P/6K1 b - - 0 30",
+      "move": "Qxg7"
+    }
+  },
+  {
+    "title": "Xiên Hậu · 4",
+    "beginner": true,
+    "beginnerKind": "queen",
+    "mode": "interactive",
+    "outcome": "skewer",
+    "fen": "3r4/1p1q3k/p1nbR1pp/P1BQ4/1P3P2/6P1/7P/7K w - - 0 40",
+    "prompt": "Tìm đòn xiên bằng Xe. So sánh với nước bắt bằng Tượng.",
+    "moves": [
+      "Rxd6",
+      "Qe8",
+      "Rxd8",
+      "Nxd8"
+    ],
+    "alternativeLines": [
+      [
+        "Bxd6",
+        "Qf7"
+      ]
+    ],
+    "hints": [
+      "Tìm Hậu và Xe trên cột d.",
+      "So sánh Rxd6 và Bxd6, rồi tính đủ các nước bắt lại."
+    ],
+    "solution": "Tượng c5 và Hậu d5 cùng bảo vệ d6. Bxd6 cũng là ứng viên mạnh; không xem đó là nước sai chỉ vì không phải đòn xiên. Trong biến này, bạn lời 3 điểm quân (Tốt 1, Tượng/Mã 3, Xe 5, Hậu 9).",
+    "source": "https://www.pgnmentor.com/players/Bologan.zip",
+    "gameReference": {
+      "id": "93dc2177f15c691f",
+      "kind": "game",
+      "ply": 78,
+      "branch": 0,
+      "collection": "skewer"
+    },
+    "previousMove": {
+      "fen": "3r1b2/1p1q3k/p1nNR1pp/P1BQ4/1P3P2/6P1/7P/7K b - - 8 39",
+      "move": "Bxd6"
+    }
+  },
+  {
+    "title": "Xiên Hậu · 5",
+    "beginner": true,
+    "beginnerKind": "queen",
+    "mode": "interactive",
+    "outcome": "skewer",
+    "fen": "r6q/8/8/8/8/8/5Q1N/k2K4 b - - 0 1",
+    "prompt": "Tìm đòn xiên trên cùng hàng. Vua có thể bảo vệ Xe không?",
+    "moves": [
+      "Ra2",
+      "Qxa2+",
+      "Kxa2"
+    ],
+    "alternativeLines": [],
+    "hints": [
+      "Quan sát Hậu và Mã trên hàng 2.",
+      "Nếu Hậu bắt Xe ở a2, Vua có thể bắt lại không?"
+    ],
+    "solution": "Vua có thể bảo vệ Xe nếu nước bắt lại không đưa Vua vào ô bị tấn công. Hãy kiểm tra nước Hậu bắt Xe trước khi quyết định. Trong biến này, bạn lời 4 điểm quân (Tốt 1, Tượng/Mã 3, Xe 5, Hậu 9).",
+    "source": "original-composition"
+  },
+  {
+    "title": "Xiên Hậu · 6",
+    "beginner": true,
+    "beginnerKind": "queen",
+    "mode": "interactive",
+    "outcome": "skewer",
+    "fen": "3n1rn1/pppkq3/5b2/1P1p1Pp1/P2P4/2PQ1NN1/5K2/1RB5 w - - 1 22",
+    "prompt": "Nếu Xe ở b1 thay vì a1, Ba3 còn là đòn xiên có lợi không? Vì sao?",
+    "moves": [
+      "Ba3",
+      "Qxa3",
+      "Ne5+",
+      "Kc8"
+    ],
+    "alternativeLines": [],
+    "hints": [
+      "Xe ở b1 có bảo vệ a3 không?",
+      "Sau Ba3, Hậu có thể bắt Tượng không?"
+    ],
+    "solution": "Xe b1 không bảo vệ a3. Sau Ba3, Hậu có thể bắt Tượng bằng Qxa3. Hình dạng đòn xiên vẫn còn, nhưng quân hỗ trợ đã thay đổi.",
+    "source": "modified-comparison",
+    "decision": {
+      "options": [
+        {
+          "id": "works",
+          "label": "Có lợi"
+        },
+        {
+          "id": "fails",
+          "label": "Không có lợi"
+        }
+      ],
+      "correctOption": "fails",
+      "retryMessage": "Kiểm tra quân bảo vệ a3: Hậu có bắt được Tượng không?"
+    }
+  }
+]

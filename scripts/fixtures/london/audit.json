@@ -1,0 +1,1354 @@
+{
+  "engine": "Stockfish 17",
+  "rootNodes": 1000000,
+  "continuationNodes": 250000,
+  "games": [
+    {
+      "id": "ding-nepo-2023",
+      "source": "https://classicchess.com/games/ding-liren-vs-nepomniachtchi-ian-20230416/",
+      "pgnSha256": "440c61b4851d8673412f7bb2f36440eacafa741a1fc4db5db3f0988eba9d1d36"
+    },
+    {
+      "id": "carlsen-aronian-2019",
+      "source": "https://www.365chess.com/game.php?gid=4211879",
+      "pgnSha256": "66a07678281297edb94c06e9e1eea654e276037205b0dcdc047b50eb5bca6ed8"
+    },
+    {
+      "id": "keres-fischer-1959",
+      "source": "https://www.365chess.com/game.php?gid=2547917",
+      "pgnSha256": "2069d9633f1e6c3139bc2ca87115cdb07e8f8c5a3ff2a2a4f72b98d14c199ea1"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "london-1-white",
+      "fen": "rnbqkb1r/ppp1pppp/5n2/3p4/3P4/5N2/PPP1PPPP/RNBQKB1R w KQkq - 0 3",
+      "bestScoreLearner": 22,
+      "checks": [
+        {
+          "rootScoreLearner": 14,
+          "depth": 16,
+          "nodes": []
+        },
+        {
+          "rootScoreLearner": 22,
+          "depth": 16,
+          "nodes": []
+        },
+        {
+          "rootScoreLearner": 13,
+          "depth": 16,
+          "nodes": []
+        }
+      ],
+      "lines": [
+        [
+          "Bf4"
+        ],
+        [
+          "c4"
+        ],
+        [
+          "e3"
+        ]
+      ]
+    },
+    {
+      "id": "london-1-black",
+      "fen": "rnbqkb1r/ppp1pppp/5n2/3p4/3P1B2/5N2/PPP1PPPP/RN1QKB1R b KQkq - 1 3",
+      "bestScoreLearner": -17,
+      "checks": [
+        {
+          "rootScoreLearner": -17,
+          "depth": 16,
+          "nodes": []
+        },
+        {
+          "rootScoreLearner": -18,
+          "depth": 16,
+          "nodes": []
+        },
+        {
+          "rootScoreLearner": -21,
+          "depth": 16,
+          "nodes": []
+        }
+      ],
+      "lines": [
+        [
+          "e6"
+        ],
+        [
+          "c5"
+        ],
+        [
+          "g6"
+        ]
+      ]
+    },
+    {
+      "id": "london-2-white",
+      "fen": "r3k2r/pp3ppp/2nqpn2/1B1p1b2/3P4/2P2N2/PP1N1PPP/R2QK2R w KQkq - 0 10",
+      "bestScoreLearner": 6,
+      "checks": [
+        {
+          "rootScoreLearner": 6,
+          "depth": 16,
+          "nodes": []
+        },
+        {
+          "rootScoreLearner": 4,
+          "depth": 16,
+          "nodes": []
+        },
+        {
+          "rootScoreLearner": 3,
+          "depth": 16,
+          "nodes": []
+        }
+      ],
+      "lines": [
+        [
+          "O-O"
+        ],
+        [
+          "Bxc6+"
+        ],
+        [
+          "Ne5"
+        ]
+      ]
+    },
+    {
+      "id": "london-2-black",
+      "fen": "rnbqk2r/ppp2ppp/3bpn2/3p4/3P4/4PNB1/PPP2PPP/RN1QKB1R b KQkq - 2 5",
+      "bestScoreLearner": -19,
+      "checks": [
+        {
+          "rootScoreLearner": -19,
+          "depth": 16,
+          "nodes": []
+        },
+        {
+          "rootScoreLearner": -20,
+          "depth": 16,
+          "nodes": []
+        },
+        {
+          "rootScoreLearner": -26,
+          "depth": 16,
+          "nodes": []
+        }
+      ],
+      "lines": [
+        [
+          "O-O"
+        ],
+        [
+          "c5"
+        ],
+        [
+          "h6"
+        ]
+      ]
+    },
+    {
+      "id": "london-3-white",
+      "fen": "r1bqkb1r/pp2pppp/2n2n2/3p4/3p1B2/4PN2/PPPN1PPP/R2QKB1R w KQkq - 0 6",
+      "bestScoreLearner": 12,
+      "checks": [
+        {
+          "rootScoreLearner": 12,
+          "depth": 17,
+          "nodes": []
+        },
+        {
+          "rootScoreLearner": 5,
+          "depth": 17,
+          "nodes": []
+        }
+      ],
+      "lines": [
+        [
+          "exd4"
+        ],
+        [
+          "Nxd4"
+        ]
+      ]
+    },
+    {
+      "id": "london-3-black",
+      "fen": "rBbqk2r/pp2ppbp/5np1/3p4/3P4/5N2/PP1NPPPP/R2QKB1R b KQkq - 0 7",
+      "bestScoreLearner": 24,
+      "checks": [
+        {
+          "rootScoreLearner": 24,
+          "depth": 20,
+          "nodes": []
+        }
+      ],
+      "lines": [
+        [
+          "Rxb8"
+        ]
+      ]
+    },
+    {
+      "id": "london-4-white",
+      "fen": "r2qk2r/pp3ppp/2nbpn2/1B1p1b2/3P1B2/2P2N2/PP1N1PPP/R2QK2R w KQkq - 2 9",
+      "bestScoreLearner": 9,
+      "checks": [
+        {
+          "rootScoreLearner": 9,
+          "depth": 16,
+          "nodes": []
+        },
+        {
+          "rootScoreLearner": 2,
+          "depth": 16,
+          "nodes": []
+        },
+        {
+          "rootScoreLearner": -4,
+          "depth": 16,
+          "nodes": []
+        }
+      ],
+      "lines": [
+        [
+          "Bxd6"
+        ],
+        [
+          "Bxc6+"
+        ],
+        [
+          "Bg3"
+        ]
+      ]
+    },
+    {
+      "id": "london-4-black",
+      "fen": "rnbqkb1r/ppp2ppp/4pn2/3p4/3P1B2/4PN2/PPP2PPP/RN1QKB1R b KQkq - 0 4",
+      "bestScoreLearner": -16,
+      "checks": [
+        {
+          "rootScoreLearner": -22,
+          "depth": 16,
+          "nodes": []
+        },
+        {
+          "rootScoreLearner": -16,
+          "depth": 16,
+          "nodes": []
+        },
+        {
+          "rootScoreLearner": -26,
+          "depth": 16,
+          "nodes": []
+        }
+      ],
+      "lines": [
+        [
+          "Bd6"
+        ],
+        [
+          "c5"
+        ],
+        [
+          "Be7"
+        ]
+      ]
+    },
+    {
+      "id": "london-5-white",
+      "fen": "1r1qk2r/Qp1bppbp/6p1/3p4/3Pn3/5N2/PP1NPPPP/R3KB1R w KQk - 1 10",
+      "bestScoreLearner": -15,
+      "checks": [
+        {
+          "rootScoreLearner": -15,
+          "depth": 16,
+          "nodes": []
+        }
+      ],
+      "lines": [
+        [
+          "e3"
+        ]
+      ]
+    },
+    {
+      "id": "london-5-black",
+      "fen": "1r1q1rk1/1p1b1pbp/6p1/2Qpp3/3P4/1N2P3/PP3PPP/R3KB1R b KQ - 3 13",
+      "bestScoreLearner": 150,
+      "checks": [
+        {
+          "rootScoreLearner": 150,
+          "depth": 15,
+          "nodes": []
+        }
+      ],
+      "lines": [
+        [
+          "Rc8"
+        ]
+      ]
+    },
+    {
+      "id": "london-6-white",
+      "fen": "r2q1rk1/pbpn1ppp/1p2pn2/3p4/3P4/2PBPNb1/PPQN1PPP/R3K2R w KQ - 0 10",
+      "bestScoreLearner": 39,
+      "checks": [
+        {
+          "rootScoreLearner": 39,
+          "depth": 18,
+          "nodes": []
+        }
+      ],
+      "lines": [
+        [
+          "hxg3"
+        ]
+      ]
+    },
+    {
+      "id": "london-6-black",
+      "fen": "1rbqk2r/pp2ppbp/5np1/3p4/Q2P4/5N2/PP1NPPPP/R3KB1R b KQk - 1 8",
+      "bestScoreLearner": 25,
+      "checks": [
+        {
+          "rootScoreLearner": 25,
+          "depth": 17,
+          "nodes": []
+        },
+        {
+          "rootScoreLearner": 12,
+          "depth": 17,
+          "nodes": []
+        }
+      ],
+      "lines": [
+        [
+          "Bd7"
+        ],
+        [
+          "b5"
+        ]
+      ]
+    },
+    {
+      "id": "london-7-white",
+      "fen": "r4rk1/pp3pp1/2nqpn1p/1B1p1b2/3P4/2P2N2/PP1N1PPP/R2QR1K1 w - - 0 12",
+      "bestScoreLearner": 6,
+      "checks": [
+        {
+          "rootScoreLearner": 6,
+          "depth": 17,
+          "nodes": [
+            {
+              "fen": "r4rk1/pp3pp1/2nqpn1p/1B1pNb2/3P4/2P5/PP1N1PPP/R2QR1K1 b - - 1 12",
+              "scoreWhite": 5,
+              "depth": 18
+            },
+            {
+              "fen": "r4rk1/1p3pp1/2nqpn1p/pB1pNb2/3P4/2P5/PP1N1PPP/R2QR1K1 w - - 0 13",
+              "scoreWhite": 8,
+              "depth": 18
+            }
+          ]
+        },
+        {
+          "rootScoreLearner": 1,
+          "depth": 17,
+          "nodes": [
+            {
+              "fen": "r4rk1/pp3pp1/2nqpn1p/1B1p1b2/P2P4/2P2N2/1P1N1PPP/R2QR1K1 b - - 0 12",
+              "scoreWhite": 0,
+              "depth": 21
+            },
+            {
+              "fen": "r4rk1/1p3pp1/p1nqpn1p/1B1p1b2/P2P4/2P2N2/1P1N1PPP/R2QR1K1 w - - 0 13",
+              "scoreWhite": 0,
+              "depth": 21
+            }
+          ]
+        },
+        {
+          "rootScoreLearner": -1,
+          "depth": 17,
+          "nodes": [
+            {
+              "fen": "r4rk1/pp3pp1/2nqpn1p/1B1p1b2/3P4/2P2N2/PP1N1PPP/2RQR1K1 b - - 1 12",
+              "scoreWhite": -2,
+              "depth": 17
+            },
+            {
+              "fen": "r4rk1/ppq2pp1/2n1pn1p/1B1p1b2/3P4/2P2N2/PP1N1PPP/2RQR1K1 w - - 2 13",
+              "scoreWhite": -6,
+              "depth": 17
+            }
+          ]
+        }
+      ],
+      "lines": [
+        [
+          "Ne5",
+          "a5",
+          "Bxc6"
+        ],
+        [
+          "a4",
+          "a6",
+          "Bf1"
+        ],
+        [
+          "Rc1",
+          "Qc7",
+          "c4"
+        ]
+      ]
+    },
+    {
+      "id": "london-7-black",
+      "fen": "r2q1rk1/pbpn1pp1/1p2pn1p/3p4/3P3R/2PBPNP1/PPQN1PP1/R3K3 b Q - 1 11",
+      "bestScoreLearner": -15,
+      "checks": [
+        {
+          "rootScoreLearner": -15,
+          "depth": 16,
+          "nodes": [
+            {
+              "fen": "r2q1rk1/pb1n1pp1/1p2pn1p/2pp4/3P3R/2PBPNP1/PPQN1PP1/R3K3 w Q - 0 12",
+              "scoreWhite": 20,
+              "depth": 18
+            },
+            {
+              "fen": "r2q1rk1/pb1n1pp1/1p2pn1p/2pp4/3P2PR/2PBPN2/PPQN1PP1/R3K3 b Q - 0 12",
+              "scoreWhite": 15,
+              "depth": 18
+            }
+          ]
+        }
+      ],
+      "lines": [
+        [
+          "c5",
+          "g4",
+          "c4"
+        ]
+      ]
+    },
+    {
+      "id": "london-8-white",
+      "fen": "r4rk1/1p1qnpp1/p3p2p/3p1b2/P2P4/2P5/1P1N1PPP/R2QRBK1 w - - 0 16",
+      "bestScoreLearner": 35,
+      "checks": [
+        {
+          "rootScoreLearner": 35,
+          "depth": 16,
+          "nodes": [
+            {
+              "fen": "r4rk1/1p1qnpp1/p3p2p/P2p1b2/3P4/2P5/1P1N1PPP/R2QRBK1 b - - 0 16",
+              "scoreWhite": 34,
+              "depth": 17
+            },
+            {
+              "fen": "r4rk1/1pq1npp1/p3p2p/P2p1b2/3P4/2P5/1P1N1PPP/R2QRBK1 w - - 1 17",
+              "scoreWhite": 54,
+              "depth": 17
+            }
+          ]
+        },
+        {
+          "rootScoreLearner": 7,
+          "depth": 16,
+          "nodes": [
+            {
+              "fen": "r4rk1/1p1qnpp1/p3p2p/3p1b2/P2P4/2P2N2/1P3PPP/R2QRBK1 b - - 1 16",
+              "scoreWhite": 0,
+              "depth": 17
+            },
+            {
+              "fen": "r4rk1/1p1qnpp1/4p2p/p2p1b2/P2P4/2P2N2/1P3PPP/R2QRBK1 w - - 0 17",
+              "scoreWhite": 14,
+              "depth": 17
+            }
+          ]
+        },
+        {
+          "rootScoreLearner": 4,
+          "depth": 15,
+          "nodes": [
+            {
+              "fen": "r4rk1/1p1qnpp1/p3p2p/3p1b2/P2P2P1/2P5/1P1N1P1P/R2QRBK1 b - - 0 16",
+              "scoreWhite": 0,
+              "depth": 18
+            },
+            {
+              "fen": "r4rk1/1p1qnppb/p3p2p/3p4/P2P2P1/2P5/1P1N1P1P/R2QRBK1 w - - 1 17",
+              "scoreWhite": 8,
+              "depth": 18
+            }
+          ]
+        }
+      ],
+      "lines": [
+        [
+          "a5",
+          "Qc7",
+          "Qf3"
+        ],
+        [
+          "Nf3",
+          "a5",
+          "Ne5"
+        ],
+        [
+          "g4",
+          "Bh7",
+          "Nb3"
+        ]
+      ]
+    },
+    {
+      "id": "london-8-black",
+      "fen": "2rq1rk1/1b1n1pp1/pp2p2p/3pP3/P2P3R/2PB1NP1/1PQ3P1/R3K3 b Q - 2 17",
+      "bestScoreLearner": -87,
+      "checks": [
+        {
+          "rootScoreLearner": -87,
+          "depth": 15,
+          "nodes": [
+            {
+              "fen": "2rq1rk1/1b1n2p1/pp2pp1p/3pP3/P2P3R/2PB1NP1/1PQ3P1/R3K3 w Q - 0 18",
+              "scoreWhite": 72,
+              "depth": 17
+            },
+            {
+              "fen": "2rq1rk1/1b1n2p1/pp2pp1p/3pP3/P2P3R/2PB1NP1/1P2Q1P1/R3K3 b Q - 1 18",
+              "scoreWhite": 67,
+              "depth": 17
+            }
+          ]
+        }
+      ],
+      "lines": [
+        [
+          "f6",
+          "Qe2",
+          "fxe5"
+        ]
+      ]
+    },
+    {
+      "id": "london-9-white",
+      "fen": "r1r3k1/1pq1npp1/p3p1bp/P2p4/3P4/R1P2Q2/1P1N1PPP/4RBK1 w - - 5 19",
+      "bestScoreLearner": 55,
+      "checks": [
+        {
+          "rootScoreLearner": 55,
+          "depth": 15,
+          "nodes": [
+            {
+              "fen": "r1r3k1/1pq1npp1/p3p1bp/P2p4/3P4/RNP2Q2/1P3PPP/4RBK1 b - - 6 19",
+              "scoreWhite": 69,
+              "depth": 16
+            },
+            {
+              "fen": "r1r3k1/2q1npp1/p3p1bp/Pp1p4/3P4/RNP2Q2/1P3PPP/4RBK1 w - b6 0 20",
+              "scoreWhite": 69,
+              "depth": 18
+            }
+          ]
+        },
+        {
+          "rootScoreLearner": 40,
+          "depth": 15,
+          "nodes": [
+            {
+              "fen": "r1r3k1/1pq1npp1/p3p1bp/P2p4/3P4/R1P3Q1/1P1N1PPP/4RBK1 b - - 6 19",
+              "scoreWhite": 37,
+              "depth": 17
+            },
+            {
+              "fen": "r1rq2k1/1p2npp1/p3p1bp/P2p4/3P4/R1P3Q1/1P1N1PPP/4RBK1 w - - 7 20",
+              "scoreWhite": 40,
+              "depth": 17
+            }
+          ]
+        },
+        {
+          "rootScoreLearner": 30,
+          "depth": 15,
+          "nodes": [
+            {
+              "fen": "r1r3k1/1pq1npp1/p3p1bp/P2p4/3P4/R1P2Q2/1P1N1PPP/R4BK1 b - - 6 19",
+              "scoreWhite": 31,
+              "depth": 19
+            },
+            {
+              "fen": "r1r3k1/1pq2pp1/p1n1p1bp/P2p4/3P4/R1P2Q2/1P1N1PPP/R4BK1 w - - 7 20",
+              "scoreWhite": 30,
+              "depth": 19
+            }
+          ]
+        }
+      ],
+      "lines": [
+        [
+          "Nb3",
+          "b5",
+          "Nc5"
+        ],
+        [
+          "Qg3",
+          "Qd8",
+          "Qf4"
+        ],
+        [
+          "Rea1",
+          "Nc6",
+          "Qg3"
+        ]
+      ]
+    },
+    {
+      "id": "london-9-black",
+      "fen": "r2q1rk1/pb1n1pp1/1p2pn1p/2ppN3/3P3R/2PBP1P1/PPQN1PP1/R3K3 b Q - 1 12",
+      "bestScoreLearner": -11,
+      "checks": [
+        {
+          "rootScoreLearner": -18,
+          "depth": 16,
+          "nodes": [
+            {
+              "fen": "r2q1rk1/pb1n1pp1/1p2pn1p/3pN3/2pP3R/2PBP1P1/PPQN1PP1/R3K3 w Q - 0 13",
+              "scoreWhite": 25,
+              "depth": 16
+            },
+            {
+              "fen": "r2q1rk1/pb1N1pp1/1p2pn1p/3p4/2pP3R/2PBP1P1/PPQN1PP1/R3K3 b Q - 0 13",
+              "scoreWhite": 28,
+              "depth": 16
+            }
+          ]
+        },
+        {
+          "rootScoreLearner": -11,
+          "depth": 16,
+          "nodes": [
+            {
+              "fen": "r2q1rk1/pb3pp1/1p2pn1p/2ppn3/3P3R/2PBP1P1/PPQN1PP1/R3K3 w Q - 0 13",
+              "scoreWhite": 11,
+              "depth": 20
+            },
+            {
+              "fen": "r2q1rk1/pb3pp1/1p2pn1p/2ppP3/7R/2PBP1P1/PPQN1PP1/R3K3 b Q - 0 13",
+              "scoreWhite": 14,
+              "depth": 19
+            }
+          ]
+        },
+        {
+          "rootScoreLearner": -33,
+          "depth": 15,
+          "nodes": [
+            {
+              "fen": "r2q1rk1/pb1n1pp1/1p2pn1p/3pN3/3p3R/2PBP1P1/PPQN1PP1/R3K3 w Q - 0 13",
+              "scoreWhite": 33,
+              "depth": 17
+            },
+            {
+              "fen": "r2q1rk1/pb1n1pp1/1p2pn1p/3pN3/3P3R/2PB2P1/PPQN1PP1/R3K3 b Q - 0 13",
+              "scoreWhite": 36,
+              "depth": 18
+            }
+          ]
+        }
+      ],
+      "lines": [
+        [
+          "c4",
+          "Nxd7",
+          "Nxd7"
+        ],
+        [
+          "Nxe5",
+          "dxe5",
+          "c4"
+        ],
+        [
+          "cxd4",
+          "exd4",
+          "Nxe5"
+        ]
+      ]
+    },
+    {
+      "id": "london-10-white",
+      "fen": "rnbqk2r/pp2ppbp/5np1/3p4/3P1B2/5N2/PP1NPPPP/R2QKB1R w KQkq - 0 7",
+      "bestScoreLearner": 23,
+      "checks": [
+        {
+          "rootScoreLearner": 23,
+          "depth": 17,
+          "nodes": [
+            {
+              "fen": "rnbqk2r/pp2ppbp/5np1/3p4/3P1B2/4PN2/PP1N1PPP/R2QKB1R b KQkq - 0 7",
+              "scoreWhite": 23,
+              "depth": 20
+            },
+            {
+              "fen": "r1bqk2r/pp2ppbp/2n2np1/3p4/3P1B2/4PN2/PP1N1PPP/R2QKB1R w KQkq - 1 8",
+              "scoreWhite": 20,
+              "depth": 19
+            }
+          ]
+        },
+        {
+          "rootScoreLearner": 23,
+          "depth": 17,
+          "nodes": [
+            {
+              "fen": "rnbqk2r/pp2ppbp/5np1/3p4/3P1B2/5N1P/PP1NPPP1/R2QKB1R b KQkq - 0 7",
+              "scoreWhite": 23,
+              "depth": 19
+            },
+            {
+              "fen": "rnbq1rk1/pp2ppbp/5np1/3p4/3P1B2/5N1P/PP1NPPP1/R2QKB1R w KQ - 1 8",
+              "scoreWhite": 24,
+              "depth": 19
+            }
+          ]
+        },
+        {
+          "rootScoreLearner": 13,
+          "depth": 17,
+          "nodes": [
+            {
+              "fen": "rnbqk2r/pp2ppbp/5np1/3p4/3P1B2/5N2/PP1NPPPP/2RQKB1R b Kkq - 1 7",
+              "scoreWhite": 14,
+              "depth": 18
+            },
+            {
+              "fen": "r1bqk2r/pp2ppbp/2n2np1/3p4/3P1B2/5N2/PP1NPPPP/2RQKB1R w Kkq - 2 8",
+              "scoreWhite": 7,
+              "depth": 20
+            }
+          ]
+        }
+      ],
+      "lines": [
+        [
+          "e3",
+          "Nc6",
+          "h3"
+        ],
+        [
+          "h3",
+          "O-O",
+          "e3"
+        ],
+        [
+          "Rc1",
+          "Nc6",
+          "e3"
+        ]
+      ]
+    },
+    {
+      "id": "london-10-black",
+      "fen": "1r1qk2r/Qp1bppbp/6p1/3p4/3P4/4P3/PP1N1PPP/R3KB1R b KQk - 0 11",
+      "bestScoreLearner": 29,
+      "checks": [
+        {
+          "rootScoreLearner": 29,
+          "depth": 16,
+          "nodes": [
+            {
+              "fen": "1r1qk2r/Qp1b1pbp/6p1/3pp3/3P4/4P3/PP1N1PPP/R3KB1R w KQk - 0 12",
+              "scoreWhite": -27,
+              "depth": 18
+            },
+            {
+              "fen": "1r1qk2r/1p1b1pbp/6p1/2Qpp3/3P4/4P3/PP1N1PPP/R3KB1R b KQk - 1 12",
+              "scoreWhite": -31,
+              "depth": 18
+            }
+          ]
+        },
+        {
+          "rootScoreLearner": -2,
+          "depth": 16,
+          "nodes": [
+            {
+              "fen": "1r1qk2r/Qp1b1pbp/4p1p1/3p4/3P4/4P3/PP1N1PPP/R3KB1R w KQk - 0 12",
+              "scoreWhite": 0,
+              "depth": 18
+            },
+            {
+              "fen": "1r1qk2r/1p1b1pbp/4p1p1/3p4/3P4/Q3P3/PP1N1PPP/R3KB1R b KQk - 1 12",
+              "scoreWhite": 4,
+              "depth": 20
+            }
+          ]
+        }
+      ],
+      "lines": [
+        [
+          "e5",
+          "Qc5",
+          "exd4"
+        ],
+        [
+          "e6",
+          "Qa3",
+          "Ra8"
+        ]
+      ]
+    },
+    {
+      "id": "london-11-white",
+      "fen": "r4rk1/1p2npp1/p2qpn1p/1B1pNb2/P2P4/2P5/1P1N1PPP/R2QR1K1 w - - 0 14",
+      "bestScoreLearner": 19,
+      "checks": [
+        {
+          "rootScoreLearner": 19,
+          "depth": 17,
+          "nodes": [
+            {
+              "fen": "r4rk1/1p2npp1/p2qpn1p/3pNb2/P2P4/2P5/1P1N1PPP/R2QRBK1 b - - 1 14",
+              "scoreWhite": 22,
+              "depth": 18
+            },
+            {
+              "fen": "r4rk1/1p2npp1/3qpn1p/p2pNb2/P2P4/2P5/1P1N1PPP/R2QRBK1 w - - 0 15",
+              "scoreWhite": 25,
+              "depth": 19
+            }
+          ]
+        },
+        {
+          "rootScoreLearner": 16,
+          "depth": 17,
+          "nodes": [
+            {
+              "fen": "r4rk1/1p2npp1/p2qpn1p/3pNb2/P2P4/2P5/1P1NBPPP/R2QR1K1 b - - 1 14",
+              "scoreWhite": 16,
+              "depth": 18
+            },
+            {
+              "fen": "r4rk1/1p2npp1/3qpn1p/p2pNb2/P2P4/2P5/1P1NBPPP/R2QR1K1 w - - 0 15",
+              "scoreWhite": 16,
+              "depth": 19
+            }
+          ]
+        },
+        {
+          "rootScoreLearner": 11,
+          "depth": 17,
+          "nodes": [
+            {
+              "fen": "r4rk1/1p2npp1/p2qpn1p/3pNb2/P2P4/2PB4/1P1N1PPP/R2QR1K1 b - - 1 14",
+              "scoreWhite": 20,
+              "depth": 16
+            },
+            {
+              "fen": "r4rk1/1p2npp1/p2qpn1p/3pN3/P2P4/2Pb4/1P1N1PPP/R2QR1K1 w - - 0 15",
+              "scoreWhite": 16,
+              "depth": 17
+            }
+          ]
+        }
+      ],
+      "lines": [
+        [
+          "Bf1",
+          "a5",
+          "Nb1"
+        ],
+        [
+          "Be2",
+          "a5",
+          "Rc1"
+        ],
+        [
+          "Bd3",
+          "Bxd3",
+          "Nxd3"
+        ]
+      ]
+    },
+    {
+      "id": "london-11-black",
+      "fen": "2r2rk1/1b1n2p1/pp2pq1p/3p4/P2P1R2/2PB1NP1/1PQ3P1/R3K3 b Q - 1 19",
+      "bestScoreLearner": -109,
+      "checks": [
+        {
+          "rootScoreLearner": -109,
+          "depth": 19,
+          "nodes": [
+            {
+              "fen": "2r2rk1/1b1nq1p1/pp2p2p/3p4/P2P1R2/2PB1NP1/1PQ3P1/R3K3 w Q - 2 20",
+              "scoreWhite": 111,
+              "depth": 19
+            },
+            {
+              "fen": "2r2rk1/1b1nq1p1/pp2p2p/3p4/P2P1R2/2PB1NP1/1P2Q1P1/R3K3 b Q - 3 20",
+              "scoreWhite": 111,
+              "depth": 18
+            }
+          ]
+        },
+        {
+          "rootScoreLearner": -143,
+          "depth": 19,
+          "nodes": [
+            {
+              "fen": "2rq1rk1/1b1n2p1/pp2p2p/3p4/P2P1R2/2PB1NP1/1PQ3P1/R3K3 w Q - 2 20",
+              "scoreWhite": 144,
+              "depth": 18
+            },
+            {
+              "fen": "2rq1rk1/1b1n2p1/pp2p2p/3p4/P2P1R2/2PB1NP1/1P2Q1P1/R3K3 b Q - 3 20",
+              "scoreWhite": 149,
+              "depth": 18
+            }
+          ]
+        }
+      ],
+      "lines": [
+        [
+          "Qe7",
+          "Qe2",
+          "Rfe8"
+        ],
+        [
+          "Qd8",
+          "Qe2",
+          "Qe7"
+        ]
+      ]
+    },
+    {
+      "id": "london-12-white",
+      "fen": "2r2r1k/1b1nq1pB/pp2p2p/3p4/P2P1R2/2P2NP1/1PQ3P1/R3K3 w Q - 4 21",
+      "bestScoreLearner": 55,
+      "checks": [
+        {
+          "rootScoreLearner": 55,
+          "depth": 16,
+          "nodes": [
+            {
+              "fen": "2r2r1k/1b1nq1pB/pp2p2p/3p4/P2P1R2/2P2NP1/1PQ3P1/2KR4 b - - 5 21",
+              "scoreWhite": 45,
+              "depth": 17
+            },
+            {
+              "fen": "2r2r1k/1b1n2pB/pp1qp2p/3p4/P2P1R2/2P2NP1/1PQ3P1/2KR4 w - - 6 22",
+              "scoreWhite": 41,
+              "depth": 18
+            }
+          ]
+        },
+        {
+          "rootScoreLearner": 44,
+          "depth": 15,
+          "nodes": [
+            {
+              "fen": "2r2r1k/1b1nq1p1/pp2p2p/3p4/P2P1R2/2PB1NP1/1PQ3P1/R3K3 b Q - 5 21",
+              "scoreWhite": 30,
+              "depth": 22
+            },
+            {
+              "fen": "2r2r1k/1b1nq1p1/pp5p/3pp3/P2P1R2/2PB1NP1/1PQ3P1/R3K3 w Q - 0 22",
+              "scoreWhite": 34,
+              "depth": 18
+            }
+          ]
+        },
+        {
+          "rootScoreLearner": 32,
+          "depth": 15,
+          "nodes": [
+            {
+              "fen": "2r2R1k/1b1nq1pB/pp2p2p/3p4/P2P4/2P2NP1/1PQ3P1/R3K3 b Q - 0 21",
+              "scoreWhite": 43,
+              "depth": 17
+            },
+            {
+              "fen": "2r2q1k/1b1n2pB/pp2p2p/3p4/P2P4/2P2NP1/1PQ3P1/R3K3 w Q - 0 22",
+              "scoreWhite": 46,
+              "depth": 19
+            }
+          ]
+        }
+      ],
+      "lines": [
+        [
+          "O-O-O",
+          "Qd6",
+          "Kb1"
+        ],
+        [
+          "Bd3",
+          "e5",
+          "dxe5"
+        ],
+        [
+          "Rxf8+",
+          "Qxf8",
+          "Bd3"
+        ]
+      ]
+    },
+    {
+      "id": "london-12-black",
+      "fen": "2r2r1k/1b1nq1pB/pp2p2p/3p4/P2P1R1N/2P3P1/1PQ3P1/R3K3 b Q - 5 21",
+      "bestScoreLearner": 183,
+      "checks": [
+        {
+          "rootScoreLearner": 183,
+          "depth": 19,
+          "nodes": [
+            {
+              "fen": "2r4k/1b1nq1pB/pp2p2p/3p4/P2P1r1N/2P3P1/1PQ3P1/R3K3 w Q - 0 22",
+              "scoreWhite": -182,
+              "depth": 18
+            },
+            {
+              "fen": "2r4k/1b1nq1pB/pp2p1Np/3p4/P2P1r2/2P3P1/1PQ3P1/R3K3 b Q - 1 22",
+              "scoreWhite": -182,
+              "depth": 15
+            }
+          ]
+        }
+      ],
+      "lines": [
+        [
+          "Rxf4",
+          "Ng6+",
+          "Kxh7"
+        ]
+      ]
+    },
+    {
+      "id": "london-13-white",
+      "fen": "5r2/R1Q1N1pk/5p1p/3P3P/8/2P5/p4PPK/1bq5 w - - 2 43",
+      "bestScoreLearner": 821,
+      "checks": [
+        {
+          "rootScoreLearner": 821,
+          "depth": 19,
+          "nodes": [
+            {
+              "fen": "5r2/R1Q3pk/5pNp/3P3P/8/2P5/p4PPK/1bq5 b - - 3 43",
+              "scoreWhite": 899,
+              "depth": 16
+            },
+            {
+              "fen": "6r1/R1Q3pk/5pNp/3P3P/8/2P5/p4PPK/1bq5 w - - 4 44",
+              "scoreWhite": 1043,
+              "depth": 17
+            },
+            {
+              "fen": "6r1/R4Qpk/5pNp/3P3P/8/2P5/p4PPK/1bq5 b - - 5 44",
+              "scoreWhite": 1071,
+              "depth": 16
+            },
+            {
+              "fen": "6r1/R4Qpk/5pNp/3P3P/5q2/2P5/p4PPK/1b6 w - - 6 45",
+              "scoreWhite": 1197,
+              "depth": 18
+            }
+          ]
+        }
+      ],
+      "lines": [
+        [
+          "Ng6",
+          "Rg8",
+          "Qf7",
+          "Qf4+",
+          "Nxf4"
+        ]
+      ]
+    },
+    {
+      "id": "london-13-black",
+      "fen": "2r5/1b1nN1pk/pp2p2p/3p4/P2P1r2/2P3P1/1PQ3P1/R3K3 b Q - 0 23",
+      "bestScoreLearner": 207,
+      "checks": [
+        {
+          "rootScoreLearner": 207,
+          "depth": 21,
+          "nodes": [
+            {
+              "fen": "2r5/1b1nN1pk/pp2p2p/3p4/P2Pr3/2P3P1/1PQ3P1/R3K3 w Q - 1 24",
+              "scoreWhite": -201,
+              "depth": 18
+            },
+            {
+              "fen": "2r5/1b1nN1pk/pp2p2p/3p4/P2PQ3/2P3P1/1P4P1/R3K3 b Q - 0 24",
+              "scoreWhite": -212,
+              "depth": 19
+            },
+            {
+              "fen": "2r5/1b1nN1pk/pp2p2p/8/P2Pp3/2P3P1/1P4P1/R3K3 w Q - 0 25",
+              "scoreWhite": -211,
+              "depth": 19
+            },
+            {
+              "fen": "2N5/1b1n2pk/pp2p2p/8/P2Pp3/2P3P1/1P4P1/R3K3 b Q - 0 25",
+              "scoreWhite": -204,
+              "depth": 18
+            }
+          ]
+        }
+      ],
+      "lines": [
+        [
+          "Re4+",
+          "Qxe4+",
+          "dxe4",
+          "Nxc8",
+          "Bxc8"
+        ]
+      ]
+    },
+    {
+      "id": "london-14-white",
+      "fen": "2r1r1k1/5p1p/6p1/8/3P2Q1/2b3P1/q3BP1P/3R1K1R w - - 0 24",
+      "bestScoreLearner": -5,
+      "checks": [
+        {
+          "rootScoreLearner": -14,
+          "depth": 16,
+          "nodes": [
+            {
+              "fen": "2r1r1k1/5p1p/6p1/8/3P2Q1/2b2BP1/q4P1P/3R1K1R b - - 1 24",
+              "scoreWhite": -17,
+              "depth": 18
+            },
+            {
+              "fen": "2r1r1k1/5p2/6p1/7p/3P2Q1/2b2BP1/q4P1P/3R1K1R w - - 0 25",
+              "scoreWhite": -11,
+              "depth": 19
+            },
+            {
+              "fen": "2r1r1k1/5p2/6p1/7p/3P1Q2/2b2BP1/q4P1P/3R1K1R b - - 1 25",
+              "scoreWhite": -13,
+              "depth": 18
+            },
+            {
+              "fen": "2r1r1k1/5p2/6p1/b6p/3P1Q2/5BP1/q4P1P/3R1K1R w - - 2 26",
+              "scoreWhite": -17,
+              "depth": 20
+            }
+          ]
+        },
+        {
+          "rootScoreLearner": -5,
+          "depth": 16,
+          "nodes": [
+            {
+              "fen": "2r1r1k1/5p1p/6p1/3P4/6Q1/2b3P1/q3BP1P/3R1K1R b - - 0 24",
+              "scoreWhite": -5,
+              "depth": 17
+            },
+            {
+              "fen": "2r1r1k1/5p1p/6p1/b2P4/6Q1/6P1/q3BP1P/3R1K1R w - - 1 25",
+              "scoreWhite": 0,
+              "depth": 24
+            },
+            {
+              "fen": "2r1r1k1/5p1p/3P2p1/b7/6Q1/6P1/q3BP1P/3R1K1R b - - 0 25",
+              "scoreWhite": 0,
+              "depth": 18
+            },
+            {
+              "fen": "4r1k1/5p1p/3P2p1/b7/6Q1/6P1/q1r1BP1P/3R1K1R w - - 1 26",
+              "scoreWhite": 0,
+              "depth": 28
+            }
+          ]
+        },
+        {
+          "rootScoreLearner": -20,
+          "depth": 15,
+          "nodes": [
+            {
+              "fen": "2r1r1k1/5p1p/6p1/8/3P4/2b2QP1/q3BP1P/3R1K1R b - - 1 24",
+              "scoreWhite": -16,
+              "depth": 17
+            },
+            {
+              "fen": "1r2r1k1/5p1p/6p1/8/3P4/2b2QP1/q3BP1P/3R1K1R w - - 2 25",
+              "scoreWhite": -7,
+              "depth": 17
+            },
+            {
+              "fen": "1r2r1k1/5p1p/6p1/8/3P4/2bR1QP1/q3BP1P/5K1R b - - 3 25",
+              "scoreWhite": -5,
+              "depth": 15
+            },
+            {
+              "fen": "4r1k1/5p1p/6p1/8/3P4/2bR1QP1/qr2BP1P/5K1R w - - 4 26",
+              "scoreWhite": -3,
+              "depth": 16
+            }
+          ]
+        }
+      ],
+      "lines": [
+        [
+          "Bf3",
+          "h5",
+          "Qf4",
+          "Ba5",
+          "Kg2"
+        ],
+        [
+          "d5",
+          "Ba5",
+          "d6",
+          "Rc2",
+          "d7"
+        ],
+        [
+          "Qf3",
+          "Rb8",
+          "Rd3",
+          "Rb2",
+          "Re3"
+        ]
+      ]
+    },
+    {
+      "id": "london-14-black",
+      "fen": "2r1r1k1/5p1p/6p1/1B6/3P2Q1/2b3P1/q4P1P/3R1K1R b - - 1 24",
+      "bestScoreLearner": 414,
+      "checks": [
+        {
+          "rootScoreLearner": 414,
+          "depth": 18,
+          "nodes": [
+            {
+              "fen": "2r1r1k1/5p1p/6p1/1B1q4/3P2Q1/2b3P1/5P1P/3R1K1R w - - 2 25",
+              "scoreWhite": -436,
+              "depth": 18
+            },
+            {
+              "fen": "2r1r1k1/5p1p/6p1/1B1q4/3P2Q1/2b3P1/5P1P/3R1KR1 b - - 3 25",
+              "scoreWhite": -427,
+              "depth": 18
+            },
+            {
+              "fen": "2r1r1k1/5p1p/6p1/1q6/3P2Q1/2b3P1/5P1P/3R1KR1 w - - 0 26",
+              "scoreWhite": -431,
+              "depth": 17
+            },
+            {
+              "fen": "2r1r1k1/5p1p/6p1/1q6/3P2Q1/2b3P1/5PKP/3R2R1 b - - 1 26",
+              "scoreWhite": -440,
+              "depth": 19
+            }
+          ]
+        }
+      ],
+      "lines": [
+        [
+          "Qd5",
+          "Rg1",
+          "Qxb5+",
+          "Kg2",
+          "Rcd8"
+        ]
+      ]
+    },
+    {
+      "id": "london-15-white",
+      "fen": "r7/6pk/5p1p/2R4P/p2P4/2P1N1Q1/5PPK/1bq5 w - - 2 37",
+      "bestScoreLearner": 220,
+      "checks": [
+        {
+          "rootScoreLearner": 220,
+          "depth": 17,
+          "nodes": [
+            {
+              "fen": "r7/2R3pk/5p1p/7P/p2P4/2P1N1Q1/5PPK/1bq5 b - - 3 37",
+              "scoreWhite": 231,
+              "depth": 19
+            },
+            {
+              "fen": "6r1/2R3pk/5p1p/7P/p2P4/2P1N1Q1/5PPK/1bq5 w - - 4 38",
+              "scoreWhite": 258,
+              "depth": 19
+            },
+            {
+              "fen": "6r1/2R3pk/5p1p/3N3P/p2P4/2P3Q1/5PPK/1bq5 b - - 5 38",
+              "scoreWhite": 254,
+              "depth": 20
+            },
+            {
+              "fen": "6rk/2R3p1/5p1p/3N3P/p2P4/2P3Q1/5PPK/1bq5 w - - 6 39",
+              "scoreWhite": 267,
+              "depth": 20
+            }
+          ]
+        }
+      ],
+      "lines": [
+        [
+          "Rc7",
+          "Rg8",
+          "Nd5",
+          "Kh8",
+          "Ne7"
+        ]
+      ]
+    },
+    {
+      "id": "london-15-black",
+      "fen": "2b5/5kp1/1p5p/pP2n3/P1PRp3/6P1/6P1/4K3 b - - 1 31",
+      "bestScoreLearner": 358,
+      "checks": [
+        {
+          "rootScoreLearner": 358,
+          "depth": 18,
+          "nodes": [
+            {
+              "fen": "8/5kp1/1p2b2p/pP2n3/P1PRp3/6P1/6P1/4K3 w - - 2 32",
+              "scoreWhite": -348,
+              "depth": 21
+            },
+            {
+              "fen": "8/5kp1/1p2b2p/pP2n3/P1P1R3/6P1/6P1/4K3 b - - 0 32",
+              "scoreWhite": -350,
+              "depth": 22
+            },
+            {
+              "fen": "8/5kp1/1p2b2p/pP6/P1n1R3/6P1/6P1/4K3 w - - 0 33",
+              "scoreWhite": -364,
+              "depth": 18
+            },
+            {
+              "fen": "8/5kp1/1p2b2p/pP6/P1n1R3/6P1/6P1/3K4 b - - 1 33",
+              "scoreWhite": -370,
+              "depth": 16
+            }
+          ]
+        }
+      ],
+      "lines": [
+        [
+          "Be6",
+          "Rxe4",
+          "Nxc4",
+          "Kd1",
+          "Nd6"
+        ]
+      ]
+    }
+  ]
+}

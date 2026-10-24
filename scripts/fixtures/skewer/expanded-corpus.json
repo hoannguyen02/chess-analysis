@@ -1,0 +1,122 @@
+[
+  {
+    "archive": "Ivanchuk",
+    "url": "https://www.pgnmentor.com/players/Ivanchuk.zip",
+    "sha256": "cd9085bd626232d6d12b8fc129a3521fbd3dc1900b497307bdfdaec1d668cf9d",
+    "bytes": 3558069
+  },
+  {
+    "archive": "Topalov",
+    "url": "https://www.pgnmentor.com/players/Topalov.zip",
+    "sha256": "496767693c18547e0b51482000325ca9918e61c442709a4a962c4d7786b8914a",
+    "bytes": 1849908
+  },
+  {
+    "archive": "Kramnik",
+    "url": "https://www.pgnmentor.com/players/Kramnik.zip",
+    "sha256": "22dc638c4ad28db51afb68a8805da85d32066783eefae27de187f40bb07ac455",
+    "bytes": 3020139
+  },
+  {
+    "archive": "Shirov",
+    "url": "https://www.pgnmentor.com/players/Shirov.zip",
+    "sha256": "0b9922ab40beeb2b1bcc8b34c0b0849cd6a921452a475ee47c320ae3270297a2",
+    "bytes": 4032436
+  },
+  {
+    "archive": "Morozevich",
+    "url": "https://www.pgnmentor.com/players/Morozevich.zip",
+    "sha256": "89b31b9ed3acf4d5328e8e9bbdfd14a8f38109cfe51072484c1ede869467142f",
+    "bytes": 1933550
+  },
+  {
+    "archive": "Nakamura",
+    "url": "https://www.pgnmentor.com/players/Nakamura.zip",
+    "sha256": "3ff7a8eac999be668e8be72de7517b76b5634e94bac900b6bf59c3c1b4b709af",
+    "bytes": 7774589
+  },
+  {
+    "archive": "Mamedyarov",
+    "url": "https://www.pgnmentor.com/players/Mamedyarov.zip",
+    "sha256": "7e451fdac92fcf5ff478c6acf074d07a3d795829b8486ad760f220df98747f8f",
+    "bytes": 3481824
+  },
+  {
+    "archive": "Aronian",
+    "url": "https://www.pgnmentor.com/players/Aronian.zip",
+    "sha256": "fac0122d3c55f8a2b09cb79dc00b1e9a906a059267fe6f5dafa0a7416898c430",
+    "bytes": 4061200
+  },
+  {
+    "archive": "Grischuk",
+    "url": "https://www.pgnmentor.com/players/Grischuk.zip",
+    "sha256": "c35259da5498e83778f5221dbd183aeda863a53226aabadf927679cbe3532383",
+    "bytes": 4781821
+  },
+  {
+    "archive": "Svidler",
+    "url": "https://www.pgnmentor.com/players/Svidler.zip",
+    "sha256": "49792a5f02cdb923855cb6a33ad50c2808f313659b32f3a646432d58fe2df108",
+    "bytes": 2866022
+  },
+  {
+    "archive": "Caruana",
+    "url": "https://www.pgnmentor.com/players/Caruana.zip",
+    "sha256": "e87e0b36f5b1084434735118e26be6f764785a2eafea3f5de5445b7b5dd33465",
+    "bytes": 4926730
+  },
+  {
+    "archive": "So",
+    "url": "https://www.pgnmentor.com/players/So.zip",
+    "sha256": "09977c96474f144db2d496b2d99e78b0628460a60656a4c99ab860d239520d85",
+    "bytes": 3619127
+  },
+  {
+    "archive": "Giri",
+    "url": "https://www.pgnmentor.com/players/Giri.zip",
+    "sha256": "dd5146c08ab583693e13104ec271aae69ae73ef8f53b0fe3b1f6d84ff2ac8a6b",
+    "bytes": 3329014
+  },
+  {
+    "archive": "VachierLagrave",
+    "url": "https://www.pgnmentor.com/players/VachierLagrave.zip",
+    "sha256": "dbe18bcb7900bff41ce614d0fef2f073f4dda274444adcca7b93c9e51cfa1f87",
+    "bytes": 4227915
+  },
+  {
+    "archive": "Adams",
+    "url": "https://www.pgnmentor.com/players/Adams.zip",
+    "sha256": "1ea8d184bd1c3223ca92eb885377e3e1d3b7cb3e2516c19019e6818cc1340cbb",
+    "bytes": 2562250
+  },
+  {
+    "archive": "Short",
+    "url": "https://www.pgnmentor.com/players/Short.zip",
+    "sha256": "cb37d6ebb0bf5343c239c21ed083ef58a8028624bc8c57e43a5fac8e46309fc8",
+    "bytes": 2221260
+  },
+  {
+    "archive": "Leko",
+    "url": "https://www.pgnmentor.com/players/Leko.zip",
+    "sha256": "83a5edfbe2457c714a4908ef0e6064b8e4b5db19179139755de3f89fabc3e654",
+    "bytes": 1857042
+  },
+  {
+    "archive": "Gelfand",
+    "url": "https://www.pgnmentor.com/players/Gelfand.zip",
+    "sha256": "d6270736defc691e5b3ca6db21b2b939aeda2255c3cab79964756d11b7a0698c",
+    "bytes": 2799535
+  },
+  {
+    "archive": "Nepomniachtchi",
+    "url": "https://www.pgnmentor.com/players/Nepomniachtchi.zip",
+    "sha256": "fffe7d8fa1078e8c0f2dff1d67531bca018c488e3c2e18d87439e3a97c314588",
+    "bytes": 3834936
+  },
+  {
+    "archive": "Kamsky",
+    "url": "https://www.pgnmentor.com/players/Kamsky.zip",
+    "sha256": "4741237ead6dd42614026c4fac5758fd5c023591b4f31e726402be495e8f8cda",
+    "bytes": 5166307
+  }
+]

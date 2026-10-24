@@ -1,0 +1,486 @@
+{
+  "games": 228,
+  "results": {
+    "1-0": 68,
+    "0-1": 72,
+    "1/2-1/2": 88
+  },
+  "lessons": 31,
+  "exercises": 255,
+  "topics": [
+    {
+      "id": "lesson-1",
+      "track": "classical",
+      "level": "A",
+      "title": "Phát triển có mục đích",
+      "games": 9,
+      "positionsBySide": {
+        "white": 4,
+        "black": 5
+      },
+      "results": {
+        "0-1": 5,
+        "1-0": 4
+      }
+    },
+    {
+      "id": "lesson-2",
+      "track": "classical",
+      "level": "A",
+      "title": "Đưa vua đến nơi an toàn",
+      "games": 9,
+      "positionsBySide": {
+        "white": 4,
+        "black": 5
+      },
+      "results": {
+        "0-1": 5,
+        "1-0": 4
+      }
+    },
+    {
+      "id": "lesson-3",
+      "track": "classical",
+      "level": "A",
+      "title": "Bắt lại và đọc cấu trúc",
+      "games": 9,
+      "positionsBySide": {
+        "white": 4,
+        "black": 5
+      },
+      "results": {
+        "1-0": 4,
+        "0-1": 5
+      }
+    },
+    {
+      "id": "lesson-4",
+      "track": "classical",
+      "level": "B",
+      "title": "Đối thoại giữa hai tượng",
+      "games": 10,
+      "positionsBySide": {
+        "white": 5,
+        "black": 5
+      },
+      "results": {
+        "1-0": 5,
+        "0-1": 5
+      }
+    },
+    {
+      "id": "lesson-5",
+      "track": "classical",
+      "level": "B",
+      "title": "Hậu và nhịp phát triển",
+      "games": 9,
+      "positionsBySide": {
+        "white": 5,
+        "black": 5
+      },
+      "results": {
+        "0-1": 5,
+        "1-0": 4
+      }
+    },
+    {
+      "id": "lesson-6",
+      "track": "classical",
+      "level": "B",
+      "title": "Cột mở là cơ hội cho cả hai",
+      "games": 6,
+      "positionsBySide": {
+        "white": 5,
+        "black": 1
+      },
+      "results": {
+        "1-0": 4,
+        "0-1": 2
+      }
+    },
+    {
+      "id": "lesson-7",
+      "track": "classical",
+      "level": "C",
+      "title": "Điểm tựa và đòn phá trung tâm",
+      "games": 10,
+      "positionsBySide": {
+        "white": 5,
+        "black": 5
+      },
+      "results": {
+        "1-0": 5,
+        "0-1": 5
+      }
+    },
+    {
+      "id": "lesson-8",
+      "track": "classical",
+      "level": "C",
+      "title": "Hạn chế và phá vỡ",
+      "games": 10,
+      "positionsBySide": {
+        "white": 5,
+        "black": 5
+      },
+      "results": {
+        "0-1": 5,
+        "1-0": 5
+      }
+    },
+    {
+      "id": "lesson-9",
+      "track": "classical",
+      "level": "C",
+      "title": "Đưa quân đến ô hữu ích",
+      "games": 7,
+      "positionsBySide": {
+        "white": 5,
+        "black": 2
+      },
+      "results": {
+        "1-0": 5,
+        "0-1": 2
+      }
+    },
+    {
+      "id": "lesson-10",
+      "track": "classical",
+      "level": "C*",
+      "title": "Gặp tượng g7",
+      "games": 10,
+      "positionsBySide": {
+        "white": 5,
+        "black": 6
+      },
+      "results": {
+        "1-0": 4,
+        "0-1": 6
+      }
+    },
+    {
+      "id": "lesson-11",
+      "track": "classical",
+      "level": "C*",
+      "title": "Rút lui để phối hợp",
+      "games": 11,
+      "positionsBySide": {
+        "white": 5,
+        "black": 6
+      },
+      "results": {
+        "1-0": 5,
+        "0-1": 6
+      }
+    },
+    {
+      "id": "lesson-12",
+      "track": "classical",
+      "level": "C*",
+      "title": "Khi cuộc tấn công đi quá xa",
+      "games": 1,
+      "positionsBySide": {
+        "white": 1,
+        "black": 1
+      },
+      "results": {
+        "0-1": 1
+      }
+    },
+    {
+      "id": "lesson-13",
+      "track": "classical",
+      "level": "D",
+      "title": "Nước chiếu và phối hợp",
+      "games": 11,
+      "positionsBySide": {
+        "white": 5,
+        "black": 6
+      },
+      "results": {
+        "0-1": 6,
+        "1-0": 5
+      }
+    },
+    {
+      "id": "lesson-14",
+      "track": "classical",
+      "level": "D",
+      "title": "Sửa sai và trừng phạt",
+      "games": 1,
+      "positionsBySide": {
+        "white": 1,
+        "black": 1
+      },
+      "results": {
+        "0-1": 1
+      }
+    },
+    {
+      "id": "lesson-15",
+      "track": "classical",
+      "level": "D",
+      "title": "Chuyển hóa ưu thế",
+      "games": 10,
+      "positionsBySide": {
+        "white": 5,
+        "black": 5
+      },
+      "results": {
+        "1-0": 5,
+        "0-1": 5
+      }
+    },
+    {
+      "id": "classical-qb6",
+      "track": "classical",
+      "level": "B",
+      "title": "Đối phó hậu b6",
+      "games": 8,
+      "positionsBySide": {
+        "white": 4,
+        "black": 4
+      },
+      "results": {
+        "1/2-1/2": 8
+      }
+    },
+    {
+      "id": "classical-nh5",
+      "track": "classical",
+      "level": "B",
+      "title": "Đổi hay giữ tượng trước ...Nh5?",
+      "games": 8,
+      "positionsBySide": {
+        "white": 4,
+        "black": 4
+      },
+      "results": {
+        "0-1": 2,
+        "1/2-1/2": 6
+      }
+    },
+    {
+      "id": "classical-bf5",
+      "track": "classical",
+      "level": "C",
+      "title": "Khi Đen cũng đưa tượng ra f5",
+      "games": 8,
+      "positionsBySide": {
+        "white": 4,
+        "black": 4
+      },
+      "results": {
+        "1/2-1/2": 8
+      }
+    },
+    {
+      "id": "classical-e4",
+      "track": "classical",
+      "level": "C",
+      "title": "Chuẩn bị đòn e4",
+      "games": 8,
+      "positionsBySide": {
+        "white": 4,
+        "black": 4
+      },
+      "results": {
+        "1-0": 1,
+        "1/2-1/2": 7
+      }
+    },
+    {
+      "id": "classical-c4",
+      "track": "classical",
+      "level": "C*",
+      "title": "Thoát khỏi đội hình bằng c4",
+      "games": 8,
+      "positionsBySide": {
+        "white": 4,
+        "black": 4
+      },
+      "results": {
+        "1/2-1/2": 8
+      }
+    },
+    {
+      "id": "classical-draw",
+      "track": "classical",
+      "level": "D",
+      "title": "Giữ cân bằng và chuyển sang tàn cuộc",
+      "games": 8,
+      "positionsBySide": {
+        "white": 4,
+        "black": 4
+      },
+      "results": {
+        "1/2-1/2": 8
+      }
+    },
+    {
+      "id": "jobava-setup",
+      "track": "jobava",
+      "level": "A",
+      "title": "Nc3 và Bf4: nhận diện Jobava",
+      "games": 8,
+      "positionsBySide": {
+        "white": 4,
+        "black": 4
+      },
+      "results": {
+        "1/2-1/2": 5,
+        "0-1": 2,
+        "1-0": 1
+      }
+    },
+    {
+      "id": "jobava-development",
+      "track": "jobava",
+      "level": "A",
+      "title": "Hoàn tất phát triển",
+      "games": 8,
+      "positionsBySide": {
+        "white": 4,
+        "black": 4
+      },
+      "results": {
+        "0-1": 3,
+        "1/2-1/2": 4,
+        "1-0": 1
+      }
+    },
+    {
+      "id": "jobava-nb5",
+      "track": "jobava",
+      "level": "B",
+      "title": "Nb5 và cách ngăn sức ép c7",
+      "games": 8,
+      "positionsBySide": {
+        "white": 4,
+        "black": 4
+      },
+      "results": {
+        "0-1": 2,
+        "1/2-1/2": 4,
+        "1-0": 2
+      }
+    },
+    {
+      "id": "jobava-bf5",
+      "track": "jobava",
+      "level": "B",
+      "title": "Đối mặt với tượng f5",
+      "games": 8,
+      "positionsBySide": {
+        "white": 4,
+        "black": 4
+      },
+      "results": {
+        "0-1": 3,
+        "1/2-1/2": 2,
+        "1-0": 3
+      }
+    },
+    {
+      "id": "jobava-center",
+      "track": "jobava",
+      "level": "C",
+      "title": "e4 và phản công ...c5",
+      "games": 8,
+      "positionsBySide": {
+        "white": 4,
+        "black": 4
+      },
+      "results": {
+        "1/2-1/2": 4,
+        "1-0": 2,
+        "0-1": 2
+      }
+    },
+    {
+      "id": "jobava-castling",
+      "track": "jobava",
+      "level": "C",
+      "title": "Chọn cánh nhập thành",
+      "games": 8,
+      "positionsBySide": {
+        "white": 4,
+        "black": 4
+      },
+      "results": {
+        "1/2-1/2": 4,
+        "0-1": 2,
+        "1-0": 2
+      }
+    },
+    {
+      "id": "jobava-g7",
+      "track": "jobava",
+      "level": "C*",
+      "title": "Thích nghi với tượng g7",
+      "games": 8,
+      "positionsBySide": {
+        "white": 4,
+        "black": 4
+      },
+      "results": {
+        "1/2-1/2": 6,
+        "1-0": 1,
+        "0-1": 1
+      }
+    },
+    {
+      "id": "jobava-retreat",
+      "track": "jobava",
+      "level": "C*",
+      "title": "Giữ tượng và đổi hướng phối hợp",
+      "games": 8,
+      "positionsBySide": {
+        "white": 4,
+        "black": 4
+      },
+      "results": {
+        "1/2-1/2": 5,
+        "0-1": 1,
+        "1-0": 2
+      }
+    },
+    {
+      "id": "jobava-tactics",
+      "track": "jobava",
+      "level": "D",
+      "title": "Tính toán khi các đường mở",
+      "games": 8,
+      "positionsBySide": {
+        "white": 4,
+        "black": 4
+      },
+      "results": {
+        "1/2-1/2": 4,
+        "0-1": 2,
+        "1-0": 2
+      }
+    },
+    {
+      "id": "jobava-endgame",
+      "track": "jobava",
+      "level": "D",
+      "title": "Sau khi đổi hậu",
+      "games": 8,
+      "positionsBySide": {
+        "white": 4,
+        "black": 4
+      },
+      "results": {
+        "1/2-1/2": 5,
+        "1-0": 1,
+        "0-1": 2
+      }
+    }
+  ],
+  "remainingTopics": [
+    "Dedicated Dutch/Stonewall move orders",
+    "Dedicated early ...c6 systems",
+    "Deeper forcing sidelines and additional annotated decision points"
+  ]
+}

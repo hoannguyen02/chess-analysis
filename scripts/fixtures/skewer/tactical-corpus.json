@@ -1,0 +1,110 @@
+[
+  {
+    "archive": "Jobava",
+    "url": "https://www.pgnmentor.com/players/Jobava.zip",
+    "sha256": "7c6867c1df06e1e9b021b4e014174d8bb9cd6127d191184d0f99632dbd018066",
+    "bytes": 3230237
+  },
+  {
+    "archive": "Rapport",
+    "url": "https://www.pgnmentor.com/players/Rapport.zip",
+    "sha256": "fe6cc6fd20be47beea9ec7bb2c0328e91472b4217492fed69cd9d7518c70e82a",
+    "bytes": 1621752
+  },
+  {
+    "archive": "Shabalov",
+    "url": "https://www.pgnmentor.com/players/Shabalov.zip",
+    "sha256": "e8c0ce3d22f9f971575e219ccf5a4a718406a057f140783e3edbd8d202070e00",
+    "bytes": 1839281
+  },
+  {
+    "archive": "Beliavsky",
+    "url": "https://www.pgnmentor.com/players/Beliavsky.zip",
+    "sha256": "b40afffc0846a4ac97b60dd9661f71aa87306094f53d573732d4f0324de6981e",
+    "bytes": 2300398
+  },
+  {
+    "archive": "Smirin",
+    "url": "https://www.pgnmentor.com/players/Smirin.zip",
+    "sha256": "116552f932a001f8e1f38d0909d7dd221355783edbfb9299b58968d5425eab9f",
+    "bytes": 1821802
+  },
+  {
+    "archive": "Sutovsky",
+    "url": "https://www.pgnmentor.com/players/Sutovsky.zip",
+    "sha256": "b4bd546d20f8f9736d6f62952942d48ab6c908f25f8a12b86b256aef91bac2b2",
+    "bytes": 931075
+  },
+  {
+    "archive": "Volokitin",
+    "url": "https://www.pgnmentor.com/players/Volokitin.zip",
+    "sha256": "aae0379cdac75ccb1af29341199c4f00dcf1b0c3cd3a4a1f6a5b81ceaf5cf49d",
+    "bytes": 1380578
+  },
+  {
+    "archive": "Rublevsky",
+    "url": "https://www.pgnmentor.com/players/Rublevsky.zip",
+    "sha256": "6f4684fb837c9283d57a897fdf933bda7366c7815689b50a22e5cf249f27738a",
+    "bytes": 1205237
+  },
+  {
+    "archive": "VanWely",
+    "url": "https://www.pgnmentor.com/players/VanWely.zip",
+    "sha256": "51318690507662346cd1bc32c8379288bdd05e83dc241c00249a52df4946720b",
+    "bytes": 2919233
+  },
+  {
+    "archive": "Milov",
+    "url": "https://www.pgnmentor.com/players/Milov.zip",
+    "sha256": "9b327bf686d4c35c542a3f0c1e7daf69885c3c782906ed87bc97b540d8641b9e",
+    "bytes": 956211
+  },
+  {
+    "archive": "Sokolov",
+    "url": "https://www.pgnmentor.com/players/Sokolov.zip",
+    "sha256": "8d73857babaa5b625faf1c674024480e890375d7ac561803e0cce3a1da7dc22d",
+    "bytes": 2129589
+  },
+  {
+    "archive": "Gashimov",
+    "url": "https://www.pgnmentor.com/players/Gashimov.zip",
+    "sha256": "57152d7786d1262e4402271ef144d85213f8acd852bea5b16bdce096adc71189",
+    "bytes": 650557
+  },
+  {
+    "archive": "Bologan",
+    "url": "https://www.pgnmentor.com/players/Bologan.zip",
+    "sha256": "81048910e901a6d0a6ab943acfa9c21c8b00ddb9c156b16608682b7680933f11",
+    "bytes": 2510987
+  },
+  {
+    "archive": "Radjabov",
+    "url": "https://www.pgnmentor.com/players/Radjabov.zip",
+    "sha256": "d12051afab971dd65c7e39c91e0d09844a265902be09437a0e5371512451ab98",
+    "bytes": 1886381
+  },
+  {
+    "archive": "Ponomariov",
+    "url": "https://www.pgnmentor.com/players/Ponomariov.zip",
+    "sha256": "d0bd822809e25bd4ecf41f4f451ca9c669cf3c65ad725c5e517d4ddee0d523c7",
+    "bytes": 1905769
+  },
+  {
+    "archive": "Navara",
+    "url": "https://www.pgnmentor.com/players/Navara.zip",
+    "sha256": "64ccb2e0a4dc3f9768497c2d2d89a41569c3f59d640125e5ebd3756bfbd91fda",
+    "bytes": 2981932
+  },
+  {
+    "archive": "Movsesian",
+    "url": "https://www.pgnmentor.com/players/Movsesian.zip",
+    "sha256": "2def4477d4d5fcd154612d25ed2354464efc592e5f77c5809d979118402fd595",
+    "bytes": 2292504
+  },
+  {
+    "archive": "Motylev",
+    "url": "https://www.pgnmentor.com/players/Motylev.zip",
+    "sha256": "c2faa3fd04c887feca96b4aca770c4993c8f8d0d9e5d2e5bd32c633e728c7be7",
+    "bytes": 1790558
+  }
+]

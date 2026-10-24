@@ -1,0 +1,1867 @@
+{
+  "engine": "Stockfish 17",
+  "rootNodes": 1000000,
+  "continuation": "principal variation from the same root search",
+  "exercises": [
+    {
+      "id": "library-london-fdfedae5ab718c0c",
+      "fen": "rnbqk2r/ppppppbp/5np1/8/3P1B2/5N2/PPP1PPPP/RN1QKB1R w KQkq - 2 4",
+      "bestScoreLearner": 15,
+      "checks": [
+        {
+          "rootScoreLearner": 15,
+          "depth": 18
+        }
+      ],
+      "lines": [
+        [
+          "e3",
+          "c5",
+          "h3"
+        ]
+      ],
+      "playedMove": "e3",
+      "pgnSha256": "d06971c03bc72b5632c5b1c0a503b32ab06824e990bf627a562d47da525a1025"
+    },
+    {
+      "id": "library-london-6473e0b7d10b0cab",
+      "fen": "r2q1rk1/1bp1ppbp/1p1p2p1/p1nP4/PnP1PB2/2N2N1P/1P1QBPP1/3R1RK1 b - - 4 14",
+      "bestScoreLearner": 111,
+      "checks": [
+        {
+          "rootScoreLearner": 111,
+          "depth": 17
+        }
+      ],
+      "lines": [
+        [
+          "e5",
+          "dxe6",
+          "fxe6"
+        ]
+      ],
+      "playedMove": "e5",
+      "pgnSha256": "3ed9bb24e8f42597365f00453e49002885b515e179518a6bb73446fc2e3fc079"
+    },
+    {
+      "id": "library-london-1a1988bbe0636542",
+      "fen": "rnbq1rk1/ppp1ppb1/3p2pp/6Bn/3P4/4PN2/PPP1BPPP/RN1Q1RK1 w - - 0 8",
+      "bestScoreLearner": -12,
+      "checks": [
+        {
+          "rootScoreLearner": -12,
+          "depth": 19
+        }
+      ],
+      "lines": [
+        [
+          "Bh4",
+          "g5",
+          "Bg3"
+        ]
+      ],
+      "playedMove": "Bh4",
+      "pgnSha256": "a388193cd8aabcb9445f22a4de277f7af2ecf700e9688c9100011d396a5dc238"
+    },
+    {
+      "id": "library-london-430f71a6dcc42a73",
+      "fen": "rn1q1rk1/p4ppp/1p1bpn2/2pp4/Q2P4/3PPNB1/PP1N1PPP/2R1K2R b K - 1 10",
+      "bestScoreLearner": 4,
+      "checks": [
+        {
+          "rootScoreLearner": 4,
+          "depth": 18
+        }
+      ],
+      "lines": [
+        [
+          "Be7",
+          "Bh4",
+          "Nbd7"
+        ]
+      ],
+      "playedMove": "Be7",
+      "pgnSha256": "b7853bf4042059e08027315139e5d685f0a9863f7f4c182c9274018c501e3e94"
+    },
+    {
+      "id": "library-london-9e40f0e262e5509d",
+      "fen": "5r1k/1p3qb1/p6p/P2p4/3Np2R/2P1Q2R/1P3rP1/6K1 w - - 0 30",
+      "bestScoreLearner": 355,
+      "checks": [
+        {
+          "rootScoreLearner": 355,
+          "depth": 21
+        }
+      ],
+      "lines": [
+        [
+          "Rxh6+",
+          "Kg8",
+          "Qg3",
+          "Rf1+",
+          "Kh2"
+        ]
+      ],
+      "playedMove": "Rxh6+",
+      "pgnSha256": "4a48f7a7a01f15a81acdd1b533498b2741e2ea3f40549f53bd3febaa79ec1794"
+    },
+    {
+      "id": "library-london-9d8fa9c5ff1c74cc",
+      "fen": "7k/1bq1n1p1/5n1p/8/R2NPP2/1Q5P/6P1/2R3K1 b - - 0 34",
+      "bestScoreLearner": 76,
+      "checks": [
+        {
+          "rootScoreLearner": 76,
+          "depth": 19
+        }
+      ],
+      "lines": [
+        [
+          "Qxc1+",
+          "Kh2",
+          "Qxf4+",
+          "Qg3",
+          "Qxe4"
+        ]
+      ],
+      "playedMove": "Qxc1+",
+      "pgnSha256": "1599ff618e0e67db6c6e5b67358c1bf7d6afd6c9c9cd434eef28a1209700e200"
+    },
+    {
+      "id": "library-london-5e77824fdecaff40",
+      "fen": "3r4/1p2kp2/p7/P2P1p2/4N3/2P5/1P1KR3/7r w - - 0 38",
+      "bestScoreLearner": 309,
+      "checks": [
+        {
+          "rootScoreLearner": 306,
+          "depth": 20
+        }
+      ],
+      "lines": [
+        [
+          "Nf2+",
+          "Kf6",
+          "Nxh1",
+          "Rxd5+",
+          "Ke3"
+        ]
+      ],
+      "playedMove": "Nf2+",
+      "pgnSha256": "0ff3b64f85ef70a32c5d4e497a6c938b6448ae5158b64a9f2000691736004736"
+    },
+    {
+      "id": "library-london-06b5d8c800a295e5",
+      "fen": "6k1/5pp1/bq1Np3/1P2n3/4P3/Q4PPp/5R1P/2r2BK1 b - - 4 36",
+      "bestScoreLearner": 99995,
+      "checks": [
+        {
+          "rootScoreLearner": 99995,
+          "depth": 25
+        }
+      ],
+      "lines": [
+        [
+          "Rc2",
+          "Qc5",
+          "Qxc5",
+          "Be2",
+          "Rxe2"
+        ]
+      ],
+      "playedMove": "Rc2",
+      "pgnSha256": "aecc615c444bdc40ab9e9449c3906f2722ee666a833f5b60c4abb2f2231d8242"
+    },
+    {
+      "id": "library-london-3288fc934d07c448",
+      "fen": "r3r1k1/5pb1/p1nqp1p1/1p1p3p/5P1P/2PB1QP1/PP1N1P2/3RR1K1 w - - 0 20",
+      "bestScoreLearner": 23,
+      "checks": [
+        {
+          "rootScoreLearner": 23,
+          "depth": 16
+        }
+      ],
+      "lines": [
+        [
+          "Ne4"
+        ]
+      ],
+      "playedMove": "Ne4",
+      "pgnSha256": "40d554f09b57ed06d8bbcabf51f687829266aac831780b652405b53a8f2dfb2d"
+    },
+    {
+      "id": "library-london-8866f4e4d5af0782",
+      "fen": "r2qk2r/1p2bppp/p1n1pn2/P2pN3/3P1Bb1/1N6/1PP1BPPP/R2Q1RK1 b kq - 2 12",
+      "bestScoreLearner": -15,
+      "checks": [
+        {
+          "rootScoreLearner": -15,
+          "depth": 18
+        }
+      ],
+      "lines": [
+        [
+          "Bxe2"
+        ]
+      ],
+      "playedMove": "Bxe2",
+      "pgnSha256": "da90a8793c9dd32a785c6552daa9a64b8470a73b499743f0873f8353950970bf"
+    },
+    {
+      "id": "library-london-6f15ed9f05d2287a",
+      "fen": "r1b2rk1/pp2ppb1/1qn4p/2pp2p1/3P4/2P1PNn1/PP1NBPPP/R1Q2RK1 w - - 0 13",
+      "bestScoreLearner": -31,
+      "checks": [
+        {
+          "rootScoreLearner": -31,
+          "depth": 20
+        }
+      ],
+      "lines": [
+        [
+          "hxg3"
+        ]
+      ],
+      "playedMove": "hxg3",
+      "pgnSha256": "3d87d9395aeafa683ff02ee69db7c1081fade04672374dcc6142f047c87c2e07"
+    },
+    {
+      "id": "library-london-ce2a40c91d3de3a5",
+      "fen": "r1b1kb1r/pp2pppp/1qn2n2/3p4/3P1B2/5N2/PPPN1PPP/R2QKB1R w KQkq - 1 7",
+      "bestScoreLearner": 17,
+      "checks": [
+        {
+          "rootScoreLearner": 17,
+          "depth": 17
+        }
+      ],
+      "lines": [
+        [
+          "Nb3",
+          "Bg4",
+          "a4"
+        ]
+      ],
+      "playedMove": "Nb3",
+      "pgnSha256": "cfa97010146a770ecd7f52ef4926bb70301cc54c727d8bc143992bb06e717484"
+    },
+    {
+      "id": "library-london-412bdf76844e2e2e",
+      "fen": "r1r1b1k1/p3qp1p/4pnpP/2ppN3/1P1P4/3BPQ2/PP3PP1/R4RK1 b - - 0 18",
+      "bestScoreLearner": -94,
+      "checks": [
+        {
+          "rootScoreLearner": -94,
+          "depth": 19
+        }
+      ],
+      "lines": [
+        [
+          "c4",
+          "Bc2",
+          "Nd7"
+        ]
+      ],
+      "playedMove": "c4",
+      "pgnSha256": "b94e7a560b4c750ccba089cb2d7121483d7f56be18f270691b91074f727bed86"
+    },
+    {
+      "id": "library-london-e5d828ffaf156dce",
+      "fen": "2r2b1r/3q1kp1/p1p1ppp1/8/Pn1P3P/4N1B1/1P2QPP1/2R1R1K1 w - - 4 21",
+      "bestScoreLearner": 41,
+      "checks": [
+        {
+          "rootScoreLearner": 30,
+          "depth": 18
+        }
+      ],
+      "lines": [
+        [
+          "a5"
+        ]
+      ],
+      "playedMove": "a5",
+      "pgnSha256": "a2152cafebc37885019fd1132b60fb752ebf25a806301e9246578fc4290eb386"
+    },
+    {
+      "id": "library-london-ee4e80db7e7c5608",
+      "fen": "r1bqkb1r/pp3ppp/2n1p3/1BppB2n/3P4/4PN2/PPPN1PPP/R2QK2R b KQkq - 1 7",
+      "bestScoreLearner": -4,
+      "checks": [
+        {
+          "rootScoreLearner": -4,
+          "depth": 18
+        }
+      ],
+      "lines": [
+        [
+          "f6",
+          "Bg3",
+          "Nxg3"
+        ]
+      ],
+      "playedMove": "f6",
+      "pgnSha256": "5c487dc8c7b9ed22f5da3ab735b39becf601e982f4f4d89b3a85cd47d0cd493f"
+    },
+    {
+      "id": "library-london-7c029cb2c4c0f4c9",
+      "fen": "r4rk1/pb3pp1/1p1qpnp1/2pp4/3P4/2P1PN1P/PP1NQPP1/3RR1K1 w - - 0 15",
+      "bestScoreLearner": 52,
+      "checks": [
+        {
+          "rootScoreLearner": 52,
+          "depth": 17
+        }
+      ],
+      "lines": [
+        [
+          "Ne5",
+          "Bc6",
+          "h4"
+        ]
+      ],
+      "playedMove": "Ne5",
+      "pgnSha256": "4e8f858bcaaa29a043d74e3f041dd79b40d863b9e71b6bbdd602b48c2c06dd3a"
+    },
+    {
+      "id": "library-london-c95b662eafae721e",
+      "fen": "rnbqkb1r/ppp1pppp/5n2/3p4/3P1B2/4P3/PPP2PPP/RN1QKBNR b KQkq - 0 3",
+      "bestScoreLearner": -12,
+      "checks": [
+        {
+          "rootScoreLearner": -12,
+          "depth": 17
+        }
+      ],
+      "lines": [
+        [
+          "c5",
+          "Nf3",
+          "Nc6"
+        ]
+      ],
+      "playedMove": "c5",
+      "pgnSha256": "844f58398e9b9399203d0cc863be7f3495d57b03fdac0e0d6919fd69bede82ff"
+    },
+    {
+      "id": "library-london-75266ce0cce81df1",
+      "fen": "r1bqk2r/p4ppp/2pbpn2/2pp4/3P1B2/4PN2/PPPN1PPP/R2QK2R w KQkq - 0 8",
+      "bestScoreLearner": 5,
+      "checks": [
+        {
+          "rootScoreLearner": 5,
+          "depth": 18
+        }
+      ],
+      "lines": [
+        [
+          "Bxd6"
+        ]
+      ],
+      "playedMove": "Bxd6",
+      "pgnSha256": "8296ef91d7e7e36cd2cf5885c140ed8de91fb697b1923207810aad7219850344"
+    },
+    {
+      "id": "library-london-474a13be7d69a6e2",
+      "fen": "rnbqkb1r/ppp2ppp/4pn2/3p4/3P1B2/5N2/PPPNPPPP/R2QKB1R b KQkq - 1 4",
+      "bestScoreLearner": -14,
+      "checks": [
+        {
+          "rootScoreLearner": -18,
+          "depth": 18
+        }
+      ],
+      "lines": [
+        [
+          "Bd6"
+        ]
+      ],
+      "playedMove": "Bd6",
+      "pgnSha256": "fcbbd0c28576e1bbb6eb07a0799db80d5d49fee75fd3857128f935918ae32d77"
+    },
+    {
+      "id": "library-london-a131e35b5f960ba8",
+      "fen": "rn1q1rk1/pb1pbppp/1p2pn2/8/3p1B2/2PBPN1P/PP1N1PP1/R2QK2R w KQ - 0 9",
+      "bestScoreLearner": 31,
+      "checks": [
+        {
+          "rootScoreLearner": 31,
+          "depth": 18
+        }
+      ],
+      "lines": [
+        [
+          "exd4"
+        ]
+      ],
+      "playedMove": "exd4",
+      "pgnSha256": "b452d206358395fbb7fc84b1c5ea8040fc25016abbd5c202022327ad67ac6c50"
+    },
+    {
+      "id": "library-london-23579503002f84d5",
+      "fen": "r2Qkb1r/pp4pp/2n2pb1/2n1p3/8/NNP1P1B1/PP3PPP/R3KB1R b KQkq - 0 14",
+      "bestScoreLearner": -8,
+      "checks": [
+        {
+          "rootScoreLearner": -8,
+          "depth": 18
+        }
+      ],
+      "lines": [
+        [
+          "Rxd8"
+        ]
+      ],
+      "playedMove": "Rxd8",
+      "pgnSha256": "ae99cb2a46c31bdfaeff3d85eb9f5e13b50b8381493f2f3d0da371416c781194"
+    },
+    {
+      "id": "library-london-2de2b1a32bac7695",
+      "fen": "r1b1r1k1/4Ppbp/p1p2np1/q1P1B3/8/5N2/P1PN1PPP/1R1QK2R w K - 1 15",
+      "bestScoreLearner": 52,
+      "checks": [
+        {
+          "rootScoreLearner": 52,
+          "depth": 17
+        }
+      ],
+      "lines": [
+        [
+          "O-O"
+        ]
+      ],
+      "playedMove": "O-O",
+      "pgnSha256": "789a05ef3ceada35b112e64e7f3e30c81a5cc00ee8f68e4caf0255d34e02b513"
+    },
+    {
+      "id": "library-london-3f194a591c350ca6",
+      "fen": "rnbqk2r/ppp1ppbp/3p1np1/8/3P1B2/4PN1P/PPP2PP1/RN1QKB1R b KQkq - 0 5",
+      "bestScoreLearner": -10,
+      "checks": [
+        {
+          "rootScoreLearner": -18,
+          "depth": 17
+        }
+      ],
+      "lines": [
+        [
+          "O-O"
+        ]
+      ],
+      "playedMove": "O-O",
+      "pgnSha256": "da79ee6b9b0cc57d10f8a5f220d362930aaeb11375d232cb2fbdf039be1456c9"
+    },
+    {
+      "id": "library-london-6e896b5cf5c580da",
+      "fen": "rnbqkb1r/ppp1pppp/5n2/3p4/3P4/5N2/PPP1PPPP/RNBQKB1R w KQkq - 0 3",
+      "bestScoreLearner": 25,
+      "checks": [
+        {
+          "rootScoreLearner": 11,
+          "depth": 19
+        }
+      ],
+      "lines": [
+        [
+          "Bf4"
+        ]
+      ],
+      "playedMove": "Bf4",
+      "pgnSha256": "45cc37e7fff5b8c1d7a8c9eedbd3ad04139ecb9455388cd742e770fed22363a0"
+    },
+    {
+      "id": "library-london-9c595a8554bf1b40",
+      "fen": "rnbqkb1r/ppp1pppp/5n2/3p4/3P1B2/4P3/PPP2PPP/RN1QKBNR b KQkq - 0 3",
+      "bestScoreLearner": -9,
+      "checks": [
+        {
+          "rootScoreLearner": -9,
+          "depth": 20
+        }
+      ],
+      "lines": [
+        [
+          "e6"
+        ]
+      ],
+      "playedMove": "e6",
+      "pgnSha256": "70a139449a5000728818dfe13579bd0bf75f536ccd7d6ed4f1723e8f1b3752e5"
+    },
+    {
+      "id": "library-london-265e801b8faa1cd2",
+      "fen": "rnbqk2r/ppppppbp/5np1/8/3P1B2/5N2/PPP1PPPP/RN1QKB1R w KQkq - 2 4",
+      "bestScoreLearner": 16,
+      "checks": [
+        {
+          "rootScoreLearner": 16,
+          "depth": 18
+        }
+      ],
+      "lines": [
+        [
+          "e3",
+          "d6",
+          "c3"
+        ]
+      ],
+      "playedMove": "e3",
+      "pgnSha256": "4a4a8e7626534c1e84372f1712800bf0e38fc8a26df81cd3fd132a775cc5f41f"
+    },
+    {
+      "id": "library-london-22d6ff440dc61911",
+      "fen": "r1bq1rk1/pp1nppbp/2pp2p1/8/2PPnB2/4PN1P/PPQ1BPP1/RN3RK1 b - - 2 9",
+      "bestScoreLearner": -43,
+      "checks": [
+        {
+          "rootScoreLearner": -56,
+          "depth": 17
+        }
+      ],
+      "lines": [
+        [
+          "e5",
+          "Qxe4",
+          "Nf6"
+        ]
+      ],
+      "playedMove": "e5",
+      "pgnSha256": "a3f9828c6a028d1f2f1d285ff83b991fd00e211e288826c48459b65a9a6b3d59"
+    },
+    {
+      "id": "library-london-cf79b9495244046a",
+      "fen": "rnbq1rk1/pp2ppbp/5np1/3p4/2BP1B2/5N2/PPPN1PPP/R2Q1RK1 w - - 0 9",
+      "bestScoreLearner": 49,
+      "checks": [
+        {
+          "rootScoreLearner": 47,
+          "depth": 18
+        }
+      ],
+      "lines": [
+        [
+          "Bd3"
+        ]
+      ],
+      "playedMove": "Bd3",
+      "pgnSha256": "ba6c10316226228c45fa5c4dfbbae497974b96610515bf871c67d9b68de63c0e"
+    },
+    {
+      "id": "library-london-9dc83ae225ef2847",
+      "fen": "2r1k2r/1p3ppp/pqn1pn2/1B6/P1NP4/8/1P1Q1PPP/R3K2R b KQk - 0 16",
+      "bestScoreLearner": 37,
+      "checks": [
+        {
+          "rootScoreLearner": 37,
+          "depth": 20
+        }
+      ],
+      "lines": [
+        [
+          "Qc7"
+        ]
+      ],
+      "playedMove": "Qc7",
+      "pgnSha256": "43f04cef33645957191d7397f41532cd4587a540f6a95a89593f7dcc1e201931"
+    },
+    {
+      "id": "library-london-24b170bbe1f4c86e",
+      "fen": "4Q3/6p1/5kp1/p2r4/pn4pP/5PK1/1P6/8 w - - 0 44",
+      "bestScoreLearner": 344,
+      "checks": [
+        {
+          "rootScoreLearner": 344,
+          "depth": 20
+        }
+      ],
+      "lines": [
+        [
+          "Qf8+",
+          "Ke6",
+          "Qxg7",
+          "gxf3",
+          "Qxg6+"
+        ]
+      ],
+      "playedMove": "Qf8+",
+      "pgnSha256": "b9d970367e00ad9990e751417066adfc98d79219049f6293da6ccb4453050816"
+    },
+    {
+      "id": "library-london-47230335ca931780",
+      "fen": "2r5/1Q3pk1/3Np1p1/8/P2P4/5n1n/2r2B2/5R1K b - - 0 43",
+      "bestScoreLearner": 425,
+      "checks": [
+        {
+          "rootScoreLearner": 425,
+          "depth": 20
+        }
+      ],
+      "lines": [
+        [
+          "Nxf2+",
+          "Kg2",
+          "Ne4+",
+          "Kxf3",
+          "Nxd6"
+        ]
+      ],
+      "playedMove": "Nxf2+",
+      "pgnSha256": "278e2c4d1c6468b8b12e40f4fa8611704b693e3d738e4e7b8bbe647a9c2b8fd2"
+    },
+    {
+      "id": "library-london-5387a5ee8d9385fc",
+      "fen": "8/r7/P1p4R/2N2k2/1rbP2RK/7P/8/8 w - - 19 60",
+      "bestScoreLearner": 99998,
+      "checks": [
+        {
+          "rootScoreLearner": 99998,
+          "depth": 21
+        }
+      ],
+      "lines": [
+        [
+          "Ne4",
+          "Be2",
+          "Rf6#"
+        ]
+      ],
+      "playedMove": "Ne4",
+      "pgnSha256": "64f057fd1ae5f46bfd50f26b3b716a6f5b6f731932971654ee58b0b2596735a6"
+    },
+    {
+      "id": "library-london-f226bff43b264363",
+      "fen": "1k1r4/pp5r/5p2/3Nb3/7p/1PP4R/1P6/K2R4 b - - 1 42",
+      "bestScoreLearner": 300,
+      "checks": [
+        {
+          "rootScoreLearner": 300,
+          "depth": 19
+        }
+      ],
+      "lines": [
+        [
+          "Bg3",
+          "Rd3",
+          "f5",
+          "b4",
+          "Rf7"
+        ]
+      ],
+      "playedMove": "Bg3",
+      "pgnSha256": "422e534b153631c0d1ffa59644826154adbc603594971bc23a6477806767954c"
+    },
+    {
+      "id": "library-london-170e582949ea8e4d",
+      "fen": "r2q1rk1/1p2bppp/p7/3p4/5B2/1Q6/PP3PPP/3R1RK1 w - - 2 19",
+      "bestScoreLearner": 28,
+      "checks": [
+        {
+          "rootScoreLearner": 28,
+          "depth": 17
+        }
+      ],
+      "lines": [
+        [
+          "Rxd5"
+        ]
+      ],
+      "playedMove": "Rxd5",
+      "pgnSha256": "c62f938edb8fd02d4369f6f821a4a0f125fe5685231d9b26f957ed4d41d3de1e"
+    },
+    {
+      "id": "library-london-ad6f14a020e3f264",
+      "fen": "r3r1k1/pp3ppp/2nqpn2/3p1b2/3P4/2PB1N1P/PP1N1PP1/RQ3RK1 b - - 2 13",
+      "bestScoreLearner": 1,
+      "checks": [
+        {
+          "rootScoreLearner": 1,
+          "depth": 18
+        }
+      ],
+      "lines": [
+        [
+          "Bxd3"
+        ]
+      ],
+      "playedMove": "Bxd3",
+      "pgnSha256": "3a6b8ad37d8378c3c6c5f4ab5799df078b8c7bbbeb9d64e0bef1792db8c4ed36"
+    },
+    {
+      "id": "library-london-eea935a6b65d0ad9",
+      "fen": "rnbqk2r/ppp1p1bp/5pp1/3p4/3P4/4PNn1/PPPN1PPP/R2QKB1R w KQkq - 0 8",
+      "bestScoreLearner": 32,
+      "checks": [
+        {
+          "rootScoreLearner": 32,
+          "depth": 19
+        }
+      ],
+      "lines": [
+        [
+          "hxg3"
+        ]
+      ],
+      "playedMove": "hxg3",
+      "pgnSha256": "9fef193f029c0fbc65a8835ac8b36d768563f2a499795a6993c2fed9994fc05b"
+    },
+    {
+      "id": "library-london-40160b39cad57888",
+      "fen": "2r1r1k1/p4ppp/p1n1pb2/3pN3/3P1P2/2P5/PP1N2PP/1R3R1K w - - 0 18",
+      "bestScoreLearner": 13,
+      "checks": [
+        {
+          "rootScoreLearner": 13,
+          "depth": 17
+        }
+      ],
+      "lines": [
+        [
+          "Nb3",
+          "h5",
+          "g3"
+        ]
+      ],
+      "playedMove": "Nb3",
+      "pgnSha256": "af8b3bf085bf54195aa32fd04b1d13a589f78fc26c99f562c7e6ff7f83615ae1"
+    },
+    {
+      "id": "library-london-291adce651c41bc7",
+      "fen": "r4rk1/1p2bppp/pqn1pn2/3p1b2/P2P1B2/1NP2N2/1P2BPPP/R2Q1RK1 w - - 0 12",
+      "bestScoreLearner": 14,
+      "checks": [
+        {
+          "rootScoreLearner": 12,
+          "depth": 16
+        }
+      ],
+      "lines": [
+        [
+          "a5",
+          "Qd8",
+          "Ne5"
+        ]
+      ],
+      "playedMove": "a5",
+      "pgnSha256": "5507f094e9856067f0d7d271239211f367262b2c1c92064677e41ee3ec79744c"
+    },
+    {
+      "id": "library-london-8a7dcaa84e5c523a",
+      "fen": "r2q1rk1/ppp2ppp/2n1p1b1/1N2P3/Q1Pn1BP1/5P2/PP5P/2KR1B1R b - - 5 14",
+      "bestScoreLearner": 91,
+      "checks": [
+        {
+          "rootScoreLearner": 91,
+          "depth": 18
+        }
+      ],
+      "lines": [
+        [
+          "f6",
+          "Nxd4",
+          "Nxd4"
+        ]
+      ],
+      "playedMove": "f6",
+      "pgnSha256": "8fece75c117d4a3355b969048dc4e4f423534b4ae969088542c7f16c78f08ec9"
+    },
+    {
+      "id": "library-london-d17d198488939374",
+      "fen": "rnbq1rk1/p3ppbp/1p3np1/2pp4/3P1B1P/4PN2/PPPNBPP1/R2QK2R w KQ - 0 8",
+      "bestScoreLearner": 27,
+      "checks": [
+        {
+          "rootScoreLearner": 27,
+          "depth": 17
+        }
+      ],
+      "lines": [
+        [
+          "Ne5",
+          "Ba6",
+          "c3"
+        ]
+      ],
+      "playedMove": "Ne5",
+      "pgnSha256": "04089a7cce9affab7f9c02ca469c1a11c5e39bc2accca330277d1550a215a9e1"
+    },
+    {
+      "id": "library-london-760bb7246daa8a96",
+      "fen": "rnbqkb1r/ppp1pppp/5n2/3p4/3P1B2/5N2/PPP1PPPP/RN1QKB1R b KQkq - 2 3",
+      "bestScoreLearner": -8,
+      "checks": [
+        {
+          "rootScoreLearner": -8,
+          "depth": 18
+        }
+      ],
+      "lines": [
+        [
+          "c5",
+          "e3",
+          "Nc6"
+        ]
+      ],
+      "playedMove": "c5",
+      "pgnSha256": "bbc019ed1a5d1bb590e622745496c3af097e0df3f77b96c96f80f7cbe583b8c3"
+    },
+    {
+      "id": "library-london-c8dae4566f834e08",
+      "fen": "r1bqk1nr/pp3ppp/2nbp3/3p4/5B2/P3PN2/1PPN1PPP/R2QKB1R w KQkq - 1 8",
+      "bestScoreLearner": 25,
+      "checks": [
+        {
+          "rootScoreLearner": 25,
+          "depth": 20
+        }
+      ],
+      "lines": [
+        [
+          "Bxd6"
+        ]
+      ],
+      "playedMove": "Bxd6",
+      "pgnSha256": "180ce4ec545b69d984e74ee7d83470f6794801c7dc533fc3e821cdc1c8a1de5d"
+    },
+    {
+      "id": "library-london-6918a249d07478fb",
+      "fen": "rnbqkb1r/ppp2ppp/4pn2/3p4/3P1B2/4PN2/PPP2PPP/RN1QKB1R b KQkq - 0 4",
+      "bestScoreLearner": -9,
+      "checks": [
+        {
+          "rootScoreLearner": -12,
+          "depth": 17
+        }
+      ],
+      "lines": [
+        [
+          "Bd6"
+        ]
+      ],
+      "playedMove": "Bd6",
+      "pgnSha256": "b7255ba4455e0f7dc29bf6c2b3d6a94aaf8f07ca0fe3fb0bc8b5345bca9aadb3"
+    },
+    {
+      "id": "library-london-4142f114f3ddabba",
+      "fen": "rn1qkb1r/ppp2ppp/4pn2/3pN3/3P1B2/3bP3/PPP2PPP/RN1QK2R w KQkq - 0 7",
+      "bestScoreLearner": 9,
+      "checks": [
+        {
+          "rootScoreLearner": 8,
+          "depth": 19
+        }
+      ],
+      "lines": [
+        [
+          "cxd3"
+        ]
+      ],
+      "playedMove": "cxd3",
+      "pgnSha256": "5d3101aea48761b58e0a639c33e4b814559261a96872c4cbd650df6cfffd6286"
+    },
+    {
+      "id": "library-london-7feb7418cd42e34e",
+      "fen": "rn1qk2r/ppp2ppp/3bpn2/3p1B2/3P1B2/4PN2/PPP2PPP/RN1QK2R b KQkq - 0 6",
+      "bestScoreLearner": -8,
+      "checks": [
+        {
+          "rootScoreLearner": -8,
+          "depth": 20
+        }
+      ],
+      "lines": [
+        [
+          "exf5"
+        ]
+      ],
+      "playedMove": "exf5",
+      "pgnSha256": "2545092f6273795e73b5d02118769eb768e8c6c66cbf87eec8c5250fb98fff55"
+    },
+    {
+      "id": "library-london-68cf42788c79874b",
+      "fen": "r1bqk2r/1p2bppp/2n1p3/pB1p4/P4P2/1N3N2/1PP2PPP/R2QK2R w KQkq - 2 11",
+      "bestScoreLearner": 27,
+      "checks": [
+        {
+          "rootScoreLearner": 28,
+          "depth": 19
+        }
+      ],
+      "lines": [
+        [
+          "O-O"
+        ]
+      ],
+      "playedMove": "O-O",
+      "pgnSha256": "c8833db21542143ce9fa7522b872feb61c73eac305f491a0f27ff3f705234540"
+    },
+    {
+      "id": "library-london-9284d0efaa340d23",
+      "fen": "r1b1k2r/pp3pbp/2nqp1p1/3p4/1PP2P2/PQ3NP1/3N1P1P/2R1KB1R b Kkq - 3 13",
+      "bestScoreLearner": 16,
+      "checks": [
+        {
+          "rootScoreLearner": 16,
+          "depth": 18
+        }
+      ],
+      "lines": [
+        [
+          "O-O"
+        ]
+      ],
+      "playedMove": "O-O",
+      "pgnSha256": "0a5db5cfc15d3fb18b2735ed2931d6765cff845345734d9db35f366bf49e4a11"
+    },
+    {
+      "id": "library-london-385ca3786dbb279a",
+      "fen": "rnbqkb1r/ppp1pppp/5n2/3p4/3P4/5N2/PPP1PPPP/RNBQKB1R w KQkq - 2 3",
+      "bestScoreLearner": 26,
+      "checks": [
+        {
+          "rootScoreLearner": 11,
+          "depth": 19
+        }
+      ],
+      "lines": [
+        [
+          "Bf4"
+        ]
+      ],
+      "playedMove": "Bf4",
+      "pgnSha256": "add544e5e44981c2854351c790ad3a7addba071763e7ba78e4f5f5af088ab761"
+    },
+    {
+      "id": "library-london-6aac85a1b683dabf",
+      "fen": "rnbqkb1r/ppp1pppp/5n2/3p4/3P1B2/5N2/PPP1PPPP/RN1QKB1R b KQkq - 1 3",
+      "bestScoreLearner": -9,
+      "checks": [
+        {
+          "rootScoreLearner": -12,
+          "depth": 19
+        }
+      ],
+      "lines": [
+        [
+          "e6"
+        ]
+      ],
+      "playedMove": "e6",
+      "pgnSha256": "08bea41bd38778131dcda9700ef2e088367fdca675591d442dde3965b98894bc"
+    },
+    {
+      "id": "library-london-16f4c0220b7d39c5",
+      "fen": "rnbqk2r/ppppppbp/5np1/8/3P1B2/5N2/PPP1PPPP/RN1QKB1R w KQkq - 2 4",
+      "bestScoreLearner": 14,
+      "checks": [
+        {
+          "rootScoreLearner": 13,
+          "depth": 19
+        }
+      ],
+      "lines": [
+        [
+          "e3"
+        ]
+      ],
+      "playedMove": "e3",
+      "pgnSha256": "cf6fed0ed8903b3afe713f04d49061dfb800c7c90feb8ef85a197319e2f63ba0"
+    },
+    {
+      "id": "library-london-61c9fc74895be705",
+      "fen": "r2qr1k1/1bpnppbp/pp1p1np1/8/P2P4/2P1PN1P/1P1NBPPB/R2Q1RK1 b - - 3 11",
+      "bestScoreLearner": -14,
+      "checks": [
+        {
+          "rootScoreLearner": -14,
+          "depth": 17
+        }
+      ],
+      "lines": [
+        [
+          "e5",
+          "b4",
+          "Qe7"
+        ]
+      ],
+      "playedMove": "e5",
+      "pgnSha256": "8b44b89a2d00eb825889114ba1d8bf8fa6d09c6e9a2e481fa1853f543c00092e"
+    },
+    {
+      "id": "library-london-9ce38ebfe1e9477c",
+      "fen": "r1bqkb1r/pp4pp/2n1pp2/1BppB2n/3P4/4PN2/PPPN1PPP/R2QK2R w KQkq - 0 8",
+      "bestScoreLearner": 10,
+      "checks": [
+        {
+          "rootScoreLearner": 10,
+          "depth": 17
+        }
+      ],
+      "lines": [
+        [
+          "Bg3",
+          "Nxg3",
+          "hxg3"
+        ]
+      ],
+      "playedMove": "Bg3",
+      "pgnSha256": "8e7264e4898263ad6523a66fd61d0d81af10b5b1d07d519fc57f7ef7f7dbbc19"
+    },
+    {
+      "id": "library-london-16228a7d1e25e5dc",
+      "fen": "4brk1/p1qnpp2/Bp4p1/3p3p/P2b3P/2PN1P2/1PQ3P1/2KR3R b - - 1 20",
+      "bestScoreLearner": 2,
+      "checks": [
+        {
+          "rootScoreLearner": 2,
+          "depth": 16
+        }
+      ],
+      "lines": [
+        [
+          "Bg7",
+          "Kb1",
+          "e6"
+        ]
+      ],
+      "playedMove": "Bg7",
+      "pgnSha256": "631e6292b788fda1d64edcfc4bd997b20a8fed03f81b480607f280cb77cf4431"
+    },
+    {
+      "id": "library-london-ff18082f04172678",
+      "fen": "4r3/q4pkp/p3bn2/8/5Q2/4P1P1/P3BPP1/3R2K1 w - - 0 31",
+      "bestScoreLearner": 454,
+      "checks": [
+        {
+          "rootScoreLearner": 454,
+          "depth": 20
+        }
+      ],
+      "lines": [
+        [
+          "Qg5+",
+          "Kf8",
+          "Qxf6",
+          "Qc5",
+          "Bxa6"
+        ]
+      ],
+      "playedMove": "Qg5+",
+      "pgnSha256": "6be208c9c385fce8450de62cd5f197d5c08316c25154481a569da8e4d1db2dbe"
+    },
+    {
+      "id": "library-london-d761f46dc8c4df77",
+      "fen": "1r6/3k4/p2p3N/P3p3/3pP2B/3K4/6P1/8 b - - 0 43",
+      "bestScoreLearner": 128,
+      "checks": [
+        {
+          "rootScoreLearner": 128,
+          "depth": 19
+        }
+      ],
+      "lines": [
+        [
+          "Rb3+"
+        ]
+      ],
+      "playedMove": "Rb3+",
+      "pgnSha256": "41a80ff4b9acb16f9a17bab3f54c43ef2dab36b3dcdeb9afb0aa1e77ee60a8e9"
+    },
+    {
+      "id": "library-london-939ee9cc94417800",
+      "fen": "1r3k2/5p2/3q1b2/3BrPp1/p1P5/1P3Q1R/1P1p1PK1/3R4 w - - 0 37",
+      "bestScoreLearner": 316,
+      "checks": [
+        {
+          "rootScoreLearner": 316,
+          "depth": 19
+        }
+      ],
+      "lines": [
+        [
+          "Rh7"
+        ]
+      ],
+      "playedMove": "Rh7",
+      "pgnSha256": "b5085a5dfa17c15b9e637f2576c1165e48fb1e05507442e345e74c8800f2ca1c"
+    },
+    {
+      "id": "library-london-2f8b6c4ba964c171",
+      "fen": "8/1Nb1kp2/R3p1p1/1n6/N3PP1r/P3K1p1/1P4P1/8 b - - 0 34",
+      "bestScoreLearner": 455,
+      "checks": [
+        {
+          "rootScoreLearner": 455,
+          "depth": 19
+        }
+      ],
+      "lines": [
+        [
+          "Bxf4+",
+          "Ke2",
+          "Nd4+",
+          "Kd3",
+          "Rh2"
+        ]
+      ],
+      "playedMove": "Bxf4+",
+      "pgnSha256": "ade1f328a8c57f6cd7cef453f7a2220e1637c7d1267e506ec9a74f2be49c3254"
+    },
+    {
+      "id": "library-london-3b797819b3b26278",
+      "fen": "r2qk2r/pb1nbppp/1p2p3/2pp2B1/P2Pn3/2PBPN2/1P1N1PPP/R2Q1RK1 w kq - 1 11",
+      "bestScoreLearner": 14,
+      "checks": [
+        {
+          "rootScoreLearner": 14,
+          "depth": 16
+        }
+      ],
+      "lines": [
+        [
+          "Bxe7"
+        ]
+      ],
+      "playedMove": "Bxe7",
+      "pgnSha256": "056c9c90443c79c7c21cec6b5aac06d7c9029940fbfd384400a86bbbc03dbc1d"
+    },
+    {
+      "id": "library-london-aae2a9d61b4eb11b",
+      "fen": "3r1rk1/pp1n1ppp/1b2p3/qB1p2B1/6Q1/4P3/P1P2PPP/1R3RK1 b - - 5 17",
+      "bestScoreLearner": 50,
+      "checks": [
+        {
+          "rootScoreLearner": 50,
+          "depth": 19
+        }
+      ],
+      "lines": [
+        [
+          "Ne5"
+        ]
+      ],
+      "playedMove": "Ne5",
+      "pgnSha256": "1e668006057600d14aacab14337dcde61d5dbf86e330ed73dc0cb4a5f16324e9"
+    },
+    {
+      "id": "library-london-de32f1fb819d926d",
+      "fen": "rn1q1rk1/1bpp1pp1/pp2pn1p/8/P2PP3/3B1Nb1/1PPN1PPP/R2QK2R w KQ - 0 10",
+      "bestScoreLearner": 95,
+      "checks": [
+        {
+          "rootScoreLearner": 95,
+          "depth": 19
+        }
+      ],
+      "lines": [
+        [
+          "hxg3"
+        ]
+      ],
+      "playedMove": "hxg3",
+      "pgnSha256": "7c25ca18b36860ddb20d459e5af5c60b4dd77469e3282714c8342327ba3d2698"
+    },
+    {
+      "id": "library-london-0526dfc720ac45ab",
+      "fen": "r1b1kb1r/pp2pppp/1qn2n2/3p4/3P1B2/5N2/PPPN1PPP/R2QKB1R w KQkq - 1 7",
+      "bestScoreLearner": 36,
+      "checks": [
+        {
+          "rootScoreLearner": 36,
+          "depth": 16
+        }
+      ],
+      "lines": [
+        [
+          "Nb3",
+          "Bf5",
+          "a4"
+        ]
+      ],
+      "playedMove": "Nb3",
+      "pgnSha256": "3c86c099d3d6913b30a7d70cd1a65428a152215a25a1e5a6e2b3d631c04cef3b"
+    },
+    {
+      "id": "library-london-d4bc6ea8de0d7e38",
+      "fen": "r2qr1k1/1b1nbppp/pp1ppn2/8/P2P4/3B1N1P/1PPN1PPB/R2QR1K1 w - - 4 13",
+      "bestScoreLearner": 33,
+      "checks": [
+        {
+          "rootScoreLearner": 32,
+          "depth": 18
+        }
+      ],
+      "lines": [
+        [
+          "a5"
+        ]
+      ],
+      "playedMove": "a5",
+      "pgnSha256": "3a2c132f7ee3aad9e846701d0f6114e21644c042db58961b8330117ae93ccb82"
+    },
+    {
+      "id": "library-london-f45cb7942a219777",
+      "fen": "3r1rk1/ppqn1pbp/2p1p1p1/P2pN3/1P1P1P2/2PB3P/5PP1/R1Q2RK1 b - - 0 16",
+      "bestScoreLearner": -9,
+      "checks": [
+        {
+          "rootScoreLearner": -9,
+          "depth": 17
+        }
+      ],
+      "lines": [
+        [
+          "f6"
+        ]
+      ],
+      "playedMove": "f6",
+      "pgnSha256": "e815d947e970b77b6f242ad1e8f2819d9eef8f175af1e3c455dbe7366e0059f9"
+    },
+    {
+      "id": "library-london-d442ea4696597c45",
+      "fen": "r2qkb1r/pp3ppp/2n1pn2/1B1p1b2/3P1B2/5N2/PPPN1PPP/R2QK2R w KQkq - 0 8",
+      "bestScoreLearner": 15,
+      "checks": [
+        {
+          "rootScoreLearner": 15,
+          "depth": 18
+        }
+      ],
+      "lines": [
+        [
+          "Ne5",
+          "Qb6",
+          "c4"
+        ]
+      ],
+      "playedMove": "Ne5",
+      "pgnSha256": "b16d306a603544bb06e6ac2fe6137aa93c4dfe279b268aadd12dd8ccae06b318"
+    },
+    {
+      "id": "library-london-ab90345f49bdf97f",
+      "fen": "rnbq1rk1/ppp1ppbp/3p1np1/8/P2P1B2/4PN1P/1PP2PP1/RN1QKB1R b KQ - 0 6",
+      "bestScoreLearner": 38,
+      "checks": [
+        {
+          "rootScoreLearner": 38,
+          "depth": 17
+        }
+      ],
+      "lines": [
+        [
+          "c5",
+          "Nc3",
+          "Qb6"
+        ]
+      ],
+      "playedMove": "c5",
+      "pgnSha256": "1daefe585b1dc44ade45ecb014dab38b7d290818dd12fd123770f2aa82ff44bd"
+    },
+    {
+      "id": "library-london-42d5f2ec84e469f5",
+      "fen": "rn1qk2r/pbpp1pp1/1p1bpn1p/8/3P1B2/3BPN1P/PPP2PP1/RN1QK2R w KQkq - 2 7",
+      "bestScoreLearner": 24,
+      "checks": [
+        {
+          "rootScoreLearner": 24,
+          "depth": 16
+        }
+      ],
+      "lines": [
+        [
+          "Bxd6"
+        ]
+      ],
+      "playedMove": "Bxd6",
+      "pgnSha256": "f372053a9437cc0c7c13805e744bb94aa32e2391c49947cab4ccffa068f47d8b"
+    },
+    {
+      "id": "library-london-18222929d43e4b33",
+      "fen": "rnbqkb1r/ppp2ppp/4pn2/3p4/3P1B2/4PN2/PPP2PPP/RN1QKB1R b KQkq - 0 4",
+      "bestScoreLearner": -9,
+      "checks": [
+        {
+          "rootScoreLearner": -13,
+          "depth": 18
+        }
+      ],
+      "lines": [
+        [
+          "Bd6"
+        ]
+      ],
+      "playedMove": "Bd6",
+      "pgnSha256": "7c377da93cea08b2b875f08198cb5fe6ea1228e2469b20d28156552a65ce6489"
+    },
+    {
+      "id": "library-london-dbdaa31bb1819b08",
+      "fen": "r2q1rk1/pb1pbppp/1pn1pn2/8/P2p1B2/2PBPN1P/1P1N1PP1/R2QK2R w KQ - 0 10",
+      "bestScoreLearner": 48,
+      "checks": [
+        {
+          "rootScoreLearner": 48,
+          "depth": 18
+        }
+      ],
+      "lines": [
+        [
+          "exd4"
+        ]
+      ],
+      "playedMove": "exd4",
+      "pgnSha256": "df6c944ba6c3cdd43ad501ffb9ef5cf9368c813fa4a99990629299ac1842143c"
+    },
+    {
+      "id": "library-london-a4fcbca2140e29c0",
+      "fen": "r1bqk2r/pppn1pbp/3p2pn/4P3/8/4PN1P/PPP2PPB/RN1QKB1R b KQkq - 0 7",
+      "bestScoreLearner": -13,
+      "checks": [
+        {
+          "rootScoreLearner": -13,
+          "depth": 18
+        }
+      ],
+      "lines": [
+        [
+          "dxe5"
+        ]
+      ],
+      "playedMove": "dxe5",
+      "pgnSha256": "39b6f578a39b2565be52889327bf92077fd7523529f62963d26f47b048ded144"
+    },
+    {
+      "id": "library-london-e5bf80c1b2506044",
+      "fen": "r3kb1r/1bpnqp1p/1p1ppnp1/pB6/P2P4/4PN1P/1PPN1PPB/R2QK2R w KQkq - 0 10",
+      "bestScoreLearner": 41,
+      "checks": [
+        {
+          "rootScoreLearner": 33,
+          "depth": 16
+        }
+      ],
+      "lines": [
+        [
+          "O-O"
+        ]
+      ],
+      "playedMove": "O-O",
+      "pgnSha256": "babf7b4ece5a993b389b82944a87c9d293f661e7170dcee872a722750b2bb5e6"
+    },
+    {
+      "id": "library-london-50723dfb37b54ddf",
+      "fen": "rn1qk2r/pb1pbppp/1p2pn2/8/3P1B2/5N1P/PPP1BPP1/RN1Q1RK1 b kq - 2 8",
+      "bestScoreLearner": -25,
+      "checks": [
+        {
+          "rootScoreLearner": -25,
+          "depth": 16
+        }
+      ],
+      "lines": [
+        [
+          "O-O"
+        ]
+      ],
+      "playedMove": "O-O",
+      "pgnSha256": "c7368721fd95f3b8d9d2cb56960f2995fae6402273c1e24ad8ab70aed6ad8df8"
+    },
+    {
+      "id": "library-london-9a8465198cba7c5c",
+      "fen": "rnbqkb1r/ppp1pppp/5n2/3p4/3P4/5N2/PPP1PPPP/RNBQKB1R w KQkq - 0 3",
+      "bestScoreLearner": 25,
+      "checks": [
+        {
+          "rootScoreLearner": 11,
+          "depth": 20
+        }
+      ],
+      "lines": [
+        [
+          "Bf4"
+        ]
+      ],
+      "playedMove": "Bf4",
+      "pgnSha256": "983b8d4459560c81a84f90ba0fd2fddb7f61d99e90e16e1c087a1507f7507b98"
+    },
+    {
+      "id": "library-london-157e479f260d2d14",
+      "fen": "rn1qkb1r/ppp1pppp/5n2/3p1b2/3P1B2/4PN2/PPP2PPP/RN1QKB1R b KQkq - 0 4",
+      "bestScoreLearner": -12,
+      "checks": [
+        {
+          "rootScoreLearner": -12,
+          "depth": 18
+        }
+      ],
+      "lines": [
+        [
+          "e6"
+        ]
+      ],
+      "playedMove": "e6",
+      "pgnSha256": "45247c1cfab3bc26b2dc3f30f6cc0774182fb5be4367b22cf776a42e3c0db2fd"
+    },
+    {
+      "id": "library-london-019b57430143e1f3",
+      "fen": "rnbqk2r/ppppppbp/5np1/8/3P1B2/5N2/PPP1PPPP/RN1QKB1R w KQkq - 2 4",
+      "bestScoreLearner": 15,
+      "checks": [
+        {
+          "rootScoreLearner": 15,
+          "depth": 17
+        }
+      ],
+      "lines": [
+        [
+          "e3",
+          "c5",
+          "Be2"
+        ]
+      ],
+      "playedMove": "e3",
+      "pgnSha256": "c8f8b061a453defcba7134eee5c39ad4ee228edf38a5b0397bfcc07dce62aee2"
+    },
+    {
+      "id": "library-london-ab1235d15a433f3c",
+      "fen": "r2q1rk1/pbpnppb1/1p1p2pp/7n/3PP3/3BBN1P/PPPN1PP1/R2Q1RK1 b - - 1 11",
+      "bestScoreLearner": 14,
+      "checks": [
+        {
+          "rootScoreLearner": 14,
+          "depth": 18
+        }
+      ],
+      "lines": [
+        [
+          "e5"
+        ]
+      ],
+      "playedMove": "e5",
+      "pgnSha256": "253642b1abbda830089d836167169267fe0bbdf8d9e78e65fbe9b13edcb58249"
+    },
+    {
+      "id": "library-london-8da1520c6056a0c9",
+      "fen": "r2q1rk1/1b2bppp/1p1ppn2/pN6/PnPP4/3B1N1P/1P3PPB/2RQR1K1 w - - 8 18",
+      "bestScoreLearner": 78,
+      "checks": [
+        {
+          "rootScoreLearner": 78,
+          "depth": 16
+        }
+      ],
+      "lines": [
+        [
+          "Bb1",
+          "g6",
+          "h4"
+        ]
+      ],
+      "playedMove": "Bb1",
+      "pgnSha256": "9edb9e456e224d6ae3f2087f0aa2c6ef3f32e8f21f977da78d961d4359d5d02d"
+    },
+    {
+      "id": "library-london-17743bc294af1847",
+      "fen": "r1b1kb1r/pp2pppp/2n2n2/2Pp4/5B2/4PN2/PqPN1PPP/1R1QKB1R b Kkq - 1 7",
+      "bestScoreLearner": -15,
+      "checks": [
+        {
+          "rootScoreLearner": -15,
+          "depth": 17
+        }
+      ],
+      "lines": [
+        [
+          "Qc3",
+          "Bb5",
+          "e6"
+        ]
+      ],
+      "playedMove": "Qc3",
+      "pgnSha256": "3dce43b26a8b0256781cc7e34dc7c7c56aa605302ab85f61e257850bfeb565bc"
+    },
+    {
+      "id": "library-london-f9dabc379eb93bf7",
+      "fen": "r3nbk1/pq1r3p/6p1/3p2B1/p2PN2Q/2P4P/1P6/4RRK1 w - - 0 25",
+      "bestScoreLearner": 560,
+      "checks": [
+        {
+          "rootScoreLearner": 560,
+          "depth": 19
+        }
+      ],
+      "lines": [
+        [
+          "Rxf8+",
+          "Kxf8",
+          "Nc5",
+          "Kg8",
+          "Nxb7"
+        ]
+      ],
+      "playedMove": "Rxf8+",
+      "pgnSha256": "440e78fd45f2725561caea14c2f6497c637f5c69778505c1e27ecb774cc84b0c"
+    },
+    {
+      "id": "library-london-6f99ee1af5e66bdc",
+      "fen": "r4rk1/p3q2p/1p1n2p1/PPpPNp2/4p3/4P2P/2Q1BPPK/1R3R2 b - - 0 23",
+      "bestScoreLearner": 89,
+      "checks": [
+        {
+          "rootScoreLearner": 89,
+          "depth": 19
+        }
+      ],
+      "lines": [
+        [
+          "Qxe5+"
+        ]
+      ],
+      "playedMove": "Qxe5+",
+      "pgnSha256": "e1f9df27d1356cc8d95a45cd5d8bda963d56b18b690f221673188375e454d9c7"
+    },
+    {
+      "id": "library-london-b2499b6af457b0b6",
+      "fen": "5k2/3Rb2p/p4pp1/1p2BPn1/6r1/2P5/PP2KP2/1B6 w - - 0 40",
+      "bestScoreLearner": 165,
+      "checks": [
+        {
+          "rootScoreLearner": 165,
+          "depth": 18
+        }
+      ],
+      "lines": [
+        [
+          "Bd6",
+          "Bxd6",
+          "Rxd6",
+          "Kg7",
+          "Rxa6"
+        ]
+      ],
+      "playedMove": "Bd6",
+      "pgnSha256": "7f7c1bec62b29a8581941f00bff35a38dc8c85e15097a99be869e17efe2208eb"
+    },
+    {
+      "id": "library-london-f345be9eca6ebe5a",
+      "fen": "2R5/5pkp/6p1/2Np2P1/3Pp3/3n3P/1P3PK1/r7 b - - 0 44",
+      "bestScoreLearner": 346,
+      "checks": [
+        {
+          "rootScoreLearner": 346,
+          "depth": 18
+        }
+      ],
+      "lines": [
+        [
+          "Nf4+",
+          "Kg3",
+          "Ne2+",
+          "Kh2",
+          "Rf1"
+        ]
+      ],
+      "playedMove": "Nf4+",
+      "pgnSha256": "cc3b160d97e73bf478979e329f14f20029b3af8d27fa32422d927de3f65dbbf6"
+    },
+    {
+      "id": "library-london-f469d8f14213db43",
+      "fen": "3r2k1/pb1r1ppp/1p1q1n2/2p2Q2/8/2P1PN1P/PP1N1PP1/R4RK1 w - - 8 20",
+      "bestScoreLearner": 10,
+      "checks": [
+        {
+          "rootScoreLearner": 10,
+          "depth": 17
+        }
+      ],
+      "lines": [
+        [
+          "Nc4"
+        ]
+      ],
+      "playedMove": "Nc4",
+      "pgnSha256": "7f8e0f7af406b27cd1fb1f637cde3100295bb44f36e57d9b5f059a8b391f3098"
+    },
+    {
+      "id": "library-london-c0a98894e5dcc516",
+      "fen": "r4rk1/1pq2pbp/2n1p1p1/1NPp4/5P2/1PP2BP1/5P1P/R2Q1RK1 b - - 2 18",
+      "bestScoreLearner": -35,
+      "checks": [
+        {
+          "rootScoreLearner": -40,
+          "depth": 17
+        }
+      ],
+      "lines": [
+        [
+          "Rxa1"
+        ]
+      ],
+      "playedMove": "Rxa1",
+      "pgnSha256": "3d5639ece6590e8ceccc70c1db7929a4cc34a7dc4ac8d05b55d2ed483014a6dd"
+    },
+    {
+      "id": "library-london-f2a96d3108e68342",
+      "fen": "rn1qk2r/1bppbpp1/1p2p2p/p3N3/P2P4/3BP1n1/1PPN1PPP/R2QK2R w KQkq - 0 10",
+      "bestScoreLearner": 0,
+      "checks": [
+        {
+          "rootScoreLearner": 0,
+          "depth": 18
+        }
+      ],
+      "lines": [
+        [
+          "hxg3"
+        ]
+      ],
+      "playedMove": "hxg3",
+      "pgnSha256": "44cbb1c64ae2c0dd316dfe1a68e7eb6a432e7ee543968b064ae3b148a4edb5f2"
+    },
+    {
+      "id": "library-london-ec3276b6b11e3f99",
+      "fen": "rnb1k2r/pp3ppp/1q2pn2/3p4/5P2/3B1NP1/PPPN1P1P/R2QK2R w KQkq - 2 10",
+      "bestScoreLearner": 37,
+      "checks": [
+        {
+          "rootScoreLearner": 37,
+          "depth": 19
+        }
+      ],
+      "lines": [
+        [
+          "Nb3",
+          "a5",
+          "a4"
+        ]
+      ],
+      "playedMove": "Nb3",
+      "pgnSha256": "ca5cbcd942600068487704c3608ce04f4ea87d158c5851f7c24d573fb39defcb"
+    },
+    {
+      "id": "library-london-f69d5548ebad3158",
+      "fen": "r3k2r/1p2bppp/pqn1pn2/3p1b2/P2P1B2/1N3N2/1PP1BPPP/R2Q1RK1 w kq - 0 11",
+      "bestScoreLearner": 19,
+      "checks": [
+        {
+          "rootScoreLearner": 19,
+          "depth": 18
+        }
+      ],
+      "lines": [
+        [
+          "a5",
+          "Qd8",
+          "Nc5"
+        ]
+      ],
+      "playedMove": "a5",
+      "pgnSha256": "385a9324de45bffb52096736da76aaa673ae1665f984aa9b74533ec47ae51816"
+    },
+    {
+      "id": "library-london-435fd3f8c252a118",
+      "fen": "rnbqk2r/ppppppbp/6p1/4B2n/3P4/5N2/PPPNPPPP/R2QKB1R b KQkq - 5 5",
+      "bestScoreLearner": -9,
+      "checks": [
+        {
+          "rootScoreLearner": -9,
+          "depth": 17
+        }
+      ],
+      "lines": [
+        [
+          "f6",
+          "Bg3",
+          "O-O"
+        ]
+      ],
+      "playedMove": "f6",
+      "pgnSha256": "c55b02b257f987ab5bf810350d549a9556aaf6c3fe9f071568dea50c461cc3e7"
+    },
+    {
+      "id": "library-london-755d15f856913461",
+      "fen": "r2r2k1/4np1p/1ppqpnp1/p7/Q2P1P2/5NP1/PP3P1P/2RR1BK1 w - - 0 18",
+      "bestScoreLearner": 0,
+      "checks": [
+        {
+          "rootScoreLearner": 1,
+          "depth": 19
+        }
+      ],
+      "lines": [
+        [
+          "Ne5",
+          "Rac8",
+          "Bg2"
+        ]
+      ],
+      "playedMove": "Ne5",
+      "pgnSha256": "387b42bb0329b2867072b3d72c3e16c7e3b6ffb8db04cee1989b5d6c4d942579"
+    },
+    {
+      "id": "library-london-d4036ec63b7070fd",
+      "fen": "rn1q1rk1/pbp1ppbp/1p1p1np1/8/2BP1B2/4PN2/PPPNQPPP/R4RK1 b - - 3 8",
+      "bestScoreLearner": 19,
+      "checks": [
+        {
+          "rootScoreLearner": 6,
+          "depth": 17
+        }
+      ],
+      "lines": [
+        [
+          "c5"
+        ]
+      ],
+      "playedMove": "c5",
+      "pgnSha256": "10b2cbff7d00f1ebd63c422b2d2ad6e8e0e67fa164c546f2018e7417211f61cd"
+    },
+    {
+      "id": "library-london-3595961a5c08b0a1",
+      "fen": "r2qk2r/pp3ppp/2nbpn2/1B1p1b2/3P1B2/5N2/PPPN1PPP/R2Q1RK1 w kq - 2 9",
+      "bestScoreLearner": 6,
+      "checks": [
+        {
+          "rootScoreLearner": 2,
+          "depth": 18
+        }
+      ],
+      "lines": [
+        [
+          "Bxd6"
+        ]
+      ],
+      "playedMove": "Bxd6",
+      "pgnSha256": "eba53380abe1664524e5dac30780add52f4b13dc39fb85ba3c8ff3ae7a12fc88"
+    },
+    {
+      "id": "library-london-53a7e080fd088ac1",
+      "fen": "rnbqkb1r/ppp2ppp/4pn2/3p4/3P1B2/4PN2/PPP2PPP/RN1QKB1R b KQkq - 1 4",
+      "bestScoreLearner": -12,
+      "checks": [
+        {
+          "rootScoreLearner": -17,
+          "depth": 18
+        }
+      ],
+      "lines": [
+        [
+          "Bd6"
+        ]
+      ],
+      "playedMove": "Bd6",
+      "pgnSha256": "82c186484c1f2d2ed73854d7e65ff17f997578255c80306dc0fc5439a296ab28"
+    },
+    {
+      "id": "library-london-91b908c8d4e5b8a5",
+      "fen": "r1b2rk1/pppnq1bp/3p2p1/4Pp2/2P1n3/4PN1P/PPQ1BPPB/RN3RK1 b - - 0 11",
+      "bestScoreLearner": 26,
+      "checks": [
+        {
+          "rootScoreLearner": 26,
+          "depth": 18
+        }
+      ],
+      "lines": [
+        [
+          "dxe5"
+        ]
+      ],
+      "playedMove": "dxe5",
+      "pgnSha256": "8f66cf7671a1fd36808f0f4fe6896e2f66a1aac34c0c61afd8aeea8459f18403"
+    },
+    {
+      "id": "library-london-97a977718fc112b4",
+      "fen": "rnbqk2r/ppppppbp/5np1/8/3P1B2/4PN2/PPP2PPP/RN1QKB1R b KQkq - 0 4",
+      "bestScoreLearner": -15,
+      "checks": [
+        {
+          "rootScoreLearner": -23,
+          "depth": 16
+        }
+      ],
+      "lines": [
+        [
+          "O-O"
+        ]
+      ],
+      "playedMove": "O-O",
+      "pgnSha256": "fb76276246f615f92ff37428fa1ab84e6b0427b31322475df190df4eb87c3431"
+    },
+    {
+      "id": "library-london-db4a998745044da8",
+      "fen": "r1bqkb1r/pp2pppp/2n5/2ppB2n/3P4/4PN2/PPPN1PPP/R2QKB1R b KQkq - 4 6",
+      "bestScoreLearner": -3,
+      "checks": [
+        {
+          "rootScoreLearner": -8,
+          "depth": 18
+        }
+      ],
+      "lines": [
+        [
+          "e6"
+        ]
+      ],
+      "playedMove": "e6",
+      "pgnSha256": "3f7d7a8452210755120469b0c1bd40c0f6c9ed1ce6ae69b1a57420fa059e9b8f"
+    },
+    {
+      "id": "library-london-904160125349fb6d",
+      "fen": "r1bq1rk1/ppp1p1bp/2np2p1/5p1n/2PP4/4PN1P/PP2BPPB/RN1Q1RK1 b - - 0 9",
+      "bestScoreLearner": -62,
+      "checks": [
+        {
+          "rootScoreLearner": -62,
+          "depth": 17
+        }
+      ],
+      "lines": [
+        [
+          "e5",
+          "dxe5",
+          "dxe5"
+        ]
+      ],
+      "playedMove": "e5",
+      "pgnSha256": "c540a4a3a1dd9e46a72cdb419bf85204475abaae2f8012839bd7a7656cb53c53"
+    },
+    {
+      "id": "library-london-ea338e6773a67131",
+      "fen": "r1b1kb1r/pp2pppp/2n2n2/2Pp4/5B2/4PN2/PqPN1PPP/1R1QKB1R b Kkq - 1 7",
+      "bestScoreLearner": -14,
+      "checks": [
+        {
+          "rootScoreLearner": -14,
+          "depth": 18
+        }
+      ],
+      "lines": [
+        [
+          "Qc3"
+        ]
+      ],
+      "playedMove": "Qc3",
+      "pgnSha256": "0bf977feca5c3475fe94838caffc06ed73c1bb3c2455ef98f80ae15afab4a8ea"
+    },
+    {
+      "id": "library-london-1aafc49a3a286d8b",
+      "fen": "2r1r1k1/4ppBp/p2q2p1/3p4/6n1/1N1PR3/PQ3PPP/4R1K1 b - - 0 24",
+      "bestScoreLearner": 483,
+      "checks": [
+        {
+          "rootScoreLearner": 483,
+          "depth": 20
+        }
+      ],
+      "lines": [
+        [
+          "Qxh2+",
+          "Kf1",
+          "Qh1+",
+          "Ke2",
+          "Qxg2"
+        ]
+      ],
+      "playedMove": "Qxh2+",
+      "pgnSha256": "9bedf428341577fb14da3d3da6d5ce9fec83468330cc4c511905401d44e48c9a"
+    }
+  ]
+}

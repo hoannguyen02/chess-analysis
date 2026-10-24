@@ -1,0 +1,750 @@
+[
+  {
+    "exercise": {
+      "title": "Xiên Hậu · 1",
+      "beginner": true,
+      "beginnerKind": "queen",
+      "mode": "interactive",
+      "outcome": "skewer",
+      "fen": "8/8/4Q1K1/r3B3/1q6/8/1P6/3k4 w - - 0 1",
+      "moves": [
+        "Bc3",
+        "Qb5",
+        "Bxa5",
+        "Qxb2"
+      ],
+      "alternativeLines": [],
+      "prompt": "Tìm đòn xiên Hậu và tính nước bắt tiếp theo.",
+      "hints": [
+        "Quan sát Hậu và quân phía sau trên cùng đường chéo.",
+        "Tốt ở b2 bảo vệ ô c3."
+      ],
+      "solution": "Tốt ở b2 bảo vệ ô c3. Hậu rời đường xiên; Tượng bắt Xe phía sau. Tính cả các nước bắt lại: biến mẫu lời 4 điểm quân (Tốt 1, Tượng/Mã 3, Xe 5, Hậu 9).",
+      "source": "original-composition"
+    },
+    "axis": "diagonal",
+    "support": "pawn",
+    "attacker": "bishop",
+    "pieceCount": 7,
+    "rootBest": 0,
+    "rootSelected": 0,
+    "nodeBudget": 400000,
+    "rootCandidates": [
+      {
+        "move": "Bc3",
+        "scoreCp": 0,
+        "mate": null
+      },
+      {
+        "move": "Bf6",
+        "scoreCp": -24,
+        "mate": null
+      },
+      {
+        "move": "Qd7+",
+        "scoreCp": -27,
+        "mate": null
+      }
+    ],
+    "rootNodeBudget": 600000,
+    "checks": [
+      {
+        "fen": "8/8/4Q1K1/r7/1q6/2B5/1P6/3k4 b - - 1 1",
+        "move": "Qb5",
+        "scoreCp": 0,
+        "depth": 30,
+        "nodes": 400118
+      },
+      {
+        "fen": "8/8/4Q1K1/rq6/8/2B5/1P6/3k4 w - - 2 2",
+        "move": "Bxa5",
+        "scoreCp": 0,
+        "depth": 35,
+        "nodes": 400576
+      },
+      {
+        "fen": "8/8/4Q1K1/Bq6/8/8/1P6/3k4 b - - 0 2",
+        "move": "Qxb2",
+        "scoreCp": 0,
+        "depth": 40,
+        "nodes": 400105
+      }
+    ],
+    "finalFen": "8/8/4Q1K1/B7/8/8/1q6/3k4 w - - 0 3",
+    "gain": 4,
+    "engine": {
+      "name": "Stockfish 17",
+      "author": "the Stockfish developers (see AUTHORS file)"
+    }
+  },
+  {
+    "exercise": {
+      "title": "Xiên Hậu · 2",
+      "beginner": true,
+      "beginnerKind": "queen",
+      "mode": "interactive",
+      "outcome": "skewer",
+      "fen": "3K4/1q1N4/3Q4/8/8/1r2k3/8/8 b - - 0 1",
+      "moves": [
+        "Rd3",
+        "Qxd3+",
+        "Kxd3"
+      ],
+      "alternativeLines": [],
+      "prompt": "Tìm đòn xiên Hậu và tính nước bắt tiếp theo.",
+      "hints": [
+        "Quan sát Hậu và quân phía sau trên cùng cột.",
+        "Vua ở e3 bảo vệ ô d3."
+      ],
+      "solution": "Vua ở e3 bảo vệ ô d3. Hậu bắt quân tấn công; Vua bắt lại Hậu. Tính cả các nước bắt lại: biến mẫu lời 4 điểm quân (Tốt 1, Tượng/Mã 3, Xe 5, Hậu 9).",
+      "source": "original-composition"
+    },
+    "axis": "file",
+    "support": "king",
+    "attacker": "rook",
+    "pieceCount": 6,
+    "rootBest": 42,
+    "rootSelected": 36,
+    "nodeBudget": 400000,
+    "rootCandidates": [
+      {
+        "move": "Qa8+",
+        "scoreCp": 42,
+        "mate": null
+      },
+      {
+        "move": "Rd3",
+        "scoreCp": 36,
+        "mate": null
+      },
+      {
+        "move": "Ke2",
+        "scoreCp": 35,
+        "mate": null
+      }
+    ],
+    "rootNodeBudget": 600000,
+    "checks": [
+      {
+        "fen": "3K4/1q1N4/3Q4/8/8/3rk3/8/8 w - - 1 2",
+        "move": "Qxd3+",
+        "scoreCp": 11,
+        "depth": 22,
+        "nodes": 400194
+      },
+      {
+        "fen": "3K4/1q1N4/8/8/8/3Qk3/8/8 b - - 0 2",
+        "move": "Kxd3",
+        "scoreCp": -17,
+        "depth": 24,
+        "nodes": 400245
+      }
+    ],
+    "finalFen": "3K4/1q1N4/8/8/8/3k4/8/8 w - - 0 3",
+    "gain": 4,
+    "engine": {
+      "name": "Stockfish 17",
+      "author": "the Stockfish developers (see AUTHORS file)"
+    }
+  },
+  {
+    "exercise": {
+      "title": "Xiên Hậu · 3",
+      "beginner": true,
+      "beginnerKind": "queen",
+      "mode": "interactive",
+      "outcome": "skewer",
+      "fen": "7R/2k5/8/2Knq3/8/8/8/2Q4R w - - 0 1",
+      "moves": [
+        "R1h5",
+        "Nf4+",
+        "Rxe5"
+      ],
+      "alternativeLines": [],
+      "prompt": "Tìm đòn xiên Hậu và tính nước bắt tiếp theo.",
+      "hints": [
+        "Quan sát Hậu và quân phía sau trên cùng hàng.",
+        "Xe ở h8 bảo vệ ô h5."
+      ],
+      "solution": "Xe ở h8 bảo vệ ô h5. Trong biến mẫu, Hậu ở lại và Xe bắt Hậu. Tính cả các nước bắt lại: biến mẫu lời 9 điểm quân (Tốt 1, Tượng/Mã 3, Xe 5, Hậu 9).",
+      "source": "original-composition"
+    },
+    "axis": "rank",
+    "support": "rook",
+    "attacker": "rook",
+    "pieceCount": 7,
+    "rootBest": 1219,
+    "rootSelected": 1219,
+    "nodeBudget": 400000,
+    "rootCandidates": [
+      {
+        "move": "R1h5",
+        "scoreCp": 1219,
+        "mate": null
+      },
+      {
+        "move": "R8h5",
+        "scoreCp": 1012,
+        "mate": null
+      },
+      {
+        "move": "R1h7+",
+        "scoreCp": 665,
+        "mate": null
+      }
+    ],
+    "rootNodeBudget": 600000,
+    "checks": [
+      {
+        "fen": "7R/2k5/8/2Knq2R/8/8/8/2Q5 b - - 1 1",
+        "move": "Nf4+",
+        "scoreCp": -99994,
+        "depth": 46,
+        "nodes": 387854
+      },
+      {
+        "fen": "7R/2k5/8/2K1q2R/5n2/8/8/2Q5 w - - 2 2",
+        "move": "Rxe5",
+        "scoreCp": 99994,
+        "depth": 55,
+        "nodes": 400023
+      }
+    ],
+    "finalFen": "7R/2k5/8/2K1R3/5n2/8/8/2Q5 b - - 0 2",
+    "gain": 9,
+    "engine": {
+      "name": "Stockfish 17",
+      "author": "the Stockfish developers (see AUTHORS file)"
+    }
+  },
+  {
+    "exercise": {
+      "title": "Xiên Hậu · 4",
+      "beginner": true,
+      "beginnerKind": "queen",
+      "mode": "interactive",
+      "outcome": "skewer",
+      "fen": "2k5/8/2bq4/8/8/1QK5/R7/8 b - - 0 1",
+      "moves": [
+        "Bd5",
+        "Qa4",
+        "Bxa2",
+        "Qxa2"
+      ],
+      "alternativeLines": [],
+      "prompt": "Tìm đòn xiên Hậu và tính nước bắt tiếp theo.",
+      "hints": [
+        "Quan sát Hậu và quân phía sau trên cùng đường chéo.",
+        "Hậu ở d6 bảo vệ ô d5."
+      ],
+      "solution": "Hậu ở d6 bảo vệ ô d5. Hậu rời đường xiên; Tượng bắt Xe phía sau. Tính cả các nước bắt lại: biến mẫu lời 2 điểm quân (Tốt 1, Tượng/Mã 3, Xe 5, Hậu 9).",
+      "source": "original-composition"
+    },
+    "axis": "diagonal",
+    "support": "queen",
+    "attacker": "bishop",
+    "pieceCount": 6,
+    "rootBest": 0,
+    "rootSelected": 0,
+    "nodeBudget": 400000,
+    "rootCandidates": [
+      {
+        "move": "Bd5",
+        "scoreCp": 0,
+        "mate": null
+      },
+      {
+        "move": "Qg3+",
+        "scoreCp": 0,
+        "mate": null
+      },
+      {
+        "move": "Qf6+",
+        "scoreCp": 0,
+        "mate": null
+      }
+    ],
+    "rootNodeBudget": 600000,
+    "checks": [
+      {
+        "fen": "2k5/8/3q4/3b4/8/1QK5/R7/8 w - - 1 2",
+        "move": "Qa4",
+        "scoreCp": 0,
+        "depth": 32,
+        "nodes": 400363
+      },
+      {
+        "fen": "2k5/8/3q4/3b4/Q7/2K5/R7/8 b - - 2 2",
+        "move": "Bxa2",
+        "scoreCp": 0,
+        "depth": 38,
+        "nodes": 400381
+      },
+      {
+        "fen": "2k5/8/3q4/8/Q7/2K5/b7/8 w - - 0 3",
+        "move": "Qxa2",
+        "scoreCp": 0,
+        "depth": 40,
+        "nodes": 400295
+      }
+    ],
+    "finalFen": "2k5/8/3q4/8/8/2K5/Q7/8 b - - 0 3",
+    "gain": 2,
+    "engine": {
+      "name": "Stockfish 17",
+      "author": "the Stockfish developers (see AUTHORS file)"
+    }
+  },
+  {
+    "exercise": {
+      "title": "Xiên Hậu · 5",
+      "beginner": true,
+      "beginnerKind": "queen",
+      "mode": "interactive",
+      "outcome": "skewer",
+      "fen": "8/3K4/2r5/8/3k4/RQ1q4/4n3/8 b - - 0 1",
+      "moves": [
+        "Rc3",
+        "Qe6",
+        "Rxa3"
+      ],
+      "alternativeLines": [],
+      "prompt": "Tìm đòn xiên Hậu và tính nước bắt tiếp theo.",
+      "hints": [
+        "Quan sát Hậu và quân phía sau trên cùng hàng.",
+        "Mã ở e2 bảo vệ ô c3."
+      ],
+      "solution": "Mã ở e2 bảo vệ ô c3. Hậu rời đường xiên; Xe bắt Xe phía sau. Tính cả các nước bắt lại: biến mẫu lời 5 điểm quân (Tốt 1, Tượng/Mã 3, Xe 5, Hậu 9).",
+      "source": "original-composition"
+    },
+    "axis": "rank",
+    "support": "knight",
+    "attacker": "rook",
+    "pieceCount": 7,
+    "rootBest": 565,
+    "rootSelected": 565,
+    "nodeBudget": 400000,
+    "rootCandidates": [
+      {
+        "move": "Rc3",
+        "scoreCp": 565,
+        "mate": null
+      },
+      {
+        "move": "Qxb3",
+        "scoreCp": 51,
+        "mate": null
+      },
+      {
+        "move": "Nc3",
+        "scoreCp": 0,
+        "mate": null
+      }
+    ],
+    "rootNodeBudget": 600000,
+    "checks": [
+      {
+        "fen": "8/3K4/8/8/3k4/RQrq4/4n3/8 w - - 1 2",
+        "move": "Qe6",
+        "scoreCp": -572,
+        "depth": 20,
+        "nodes": 400527
+      },
+      {
+        "fen": "8/3K4/4Q3/8/3k4/R1rq4/4n3/8 b - - 2 2",
+        "move": "Rxa3",
+        "scoreCp": 562,
+        "depth": 22,
+        "nodes": 400410
+      }
+    ],
+    "finalFen": "8/3K4/4Q3/8/3k4/r2q4/4n3/8 w - - 0 3",
+    "gain": 5,
+    "engine": {
+      "name": "Stockfish 17",
+      "author": "the Stockfish developers (see AUTHORS file)"
+    }
+  },
+  {
+    "exercise": {
+      "title": "Xiên Hậu · 6",
+      "beginner": true,
+      "beginnerKind": "queen",
+      "mode": "interactive",
+      "outcome": "skewer",
+      "fen": "2r5/8/3kq3/8/8/8/1Q5K/5B2 w - - 0 1",
+      "moves": [
+        "Bh3",
+        "Qc4",
+        "Bxc8",
+        "Qxc8"
+      ],
+      "alternativeLines": [],
+      "prompt": "Tìm đòn xiên Hậu và tính nước bắt tiếp theo.",
+      "hints": [
+        "Quan sát Hậu và quân phía sau trên cùng đường chéo.",
+        "Vua ở h2 bảo vệ ô h3."
+      ],
+      "solution": "Vua ở h2 bảo vệ ô h3. Hậu rời đường xiên; Tượng bắt Xe phía sau. Tính cả các nước bắt lại: biến mẫu lời 2 điểm quân (Tốt 1, Tượng/Mã 3, Xe 5, Hậu 9).",
+      "source": "original-composition"
+    },
+    "axis": "diagonal",
+    "support": "king",
+    "attacker": "bishop",
+    "pieceCount": 6,
+    "rootBest": 4,
+    "rootSelected": 0,
+    "nodeBudget": 400000,
+    "checks": [
+      {
+        "fen": "2r5/8/3kq3/8/8/7B/1Q5K/8 b - - 1 1",
+        "move": "Qc4",
+        "scoreCp": 0,
+        "depth": 29,
+        "nodes": 400065
+      },
+      {
+        "fen": "2r5/8/3k4/8/2q5/7B/1Q5K/8 w - - 2 2",
+        "move": "Bxc8",
+        "scoreCp": 0,
+        "depth": 32,
+        "nodes": 400041
+      },
+      {
+        "fen": "2B5/8/3k4/8/2q5/8/1Q5K/8 b - - 0 2",
+        "move": "Qxc8",
+        "scoreCp": 0,
+        "depth": 35,
+        "nodes": 400139
+      }
+    ],
+    "finalFen": "2q5/8/3k4/8/8/8/1Q5K/8 w - - 0 3",
+    "gain": 2,
+    "rootCandidates": [
+      {
+        "move": "Bh3",
+        "scoreCp": 17,
+        "mate": null
+      },
+      {
+        "move": "Qd4+",
+        "scoreCp": -11,
+        "mate": null
+      },
+      {
+        "move": "Qb6+",
+        "scoreCp": -31,
+        "mate": null
+      }
+    ],
+    "rootNodeBudget": 600000,
+    "engine": {
+      "name": "Stockfish 17",
+      "author": "the Stockfish developers (see AUTHORS file)"
+    }
+  },
+  {
+    "exercise": {
+      "title": "Xiên Hậu · 7",
+      "beginner": true,
+      "beginnerKind": "queen",
+      "mode": "interactive",
+      "outcome": "skewer",
+      "fen": "q3N2K/4Q3/8/r4r2/8/8/8/5k2 b - - 0 1",
+      "moves": [
+        "Rae5",
+        "Qd7",
+        "Rxe8+",
+        "Kh7"
+      ],
+      "alternativeLines": [],
+      "prompt": "Tìm đòn xiên Hậu và tính nước bắt tiếp theo.",
+      "hints": [
+        "Quan sát Hậu và quân phía sau trên cùng cột.",
+        "Xe ở f5 bảo vệ ô e5."
+      ],
+      "solution": "Xe ở f5 bảo vệ ô e5. Hậu rời đường xiên; Xe bắt Mã phía sau. Tính cả các nước bắt lại: biến mẫu lời 3 điểm quân (Tốt 1, Tượng/Mã 3, Xe 5, Hậu 9).",
+      "source": "original-composition"
+    },
+    "axis": "file",
+    "support": "rook",
+    "attacker": "rook",
+    "pieceCount": 7,
+    "rootBest": 99994,
+    "rootSelected": 99994,
+    "nodeBudget": 400000,
+    "rootCandidates": [
+      {
+        "move": "Ra7",
+        "scoreCp": null,
+        "mate": 6
+      },
+      {
+        "move": "Rae5",
+        "scoreCp": null,
+        "mate": 6
+      },
+      {
+        "move": "Qh1+",
+        "scoreCp": null,
+        "mate": 8
+      }
+    ],
+    "rootNodeBudget": 600000,
+    "checks": [
+      {
+        "fen": "q3N2K/4Q3/8/4rr2/8/8/8/5k2 w - - 1 2",
+        "move": "Qd7",
+        "scoreCp": -99995,
+        "depth": 46,
+        "nodes": 378851
+      },
+      {
+        "fen": "q3N2K/3Q4/8/4rr2/8/8/8/5k2 b - - 2 2",
+        "move": "Rxe8+",
+        "scoreCp": 99995,
+        "depth": 53,
+        "nodes": 400217
+      },
+      {
+        "fen": "q3r2K/3Q4/8/5r2/8/8/8/5k2 w - - 0 3",
+        "move": "Kh7",
+        "scoreCp": -99996,
+        "depth": 78,
+        "nodes": 391252
+      }
+    ],
+    "finalFen": "q3r3/3Q3K/8/5r2/8/8/8/5k2 b - - 1 3",
+    "gain": 3,
+    "engine": {
+      "name": "Stockfish 17",
+      "author": "the Stockfish developers (see AUTHORS file)"
+    }
+  },
+  {
+    "exercise": {
+      "title": "Xiên Hậu · 8",
+      "beginner": true,
+      "beginnerKind": "queen",
+      "mode": "interactive",
+      "outcome": "skewer",
+      "fen": "3R4/1K5k/1Q6/5q2/8/2b5/8/8 b - - 0 1",
+      "moves": [
+        "Ba5",
+        "Qd6",
+        "Bxd8",
+        "Qxd8"
+      ],
+      "alternativeLines": [],
+      "prompt": "Tìm đòn xiên Hậu và tính nước bắt tiếp theo.",
+      "hints": [
+        "Quan sát Hậu và quân phía sau trên cùng đường chéo.",
+        "Hậu ở f5 bảo vệ ô a5."
+      ],
+      "solution": "Hậu ở f5 bảo vệ ô a5. Hậu rời đường xiên; Tượng bắt Xe phía sau. Tính cả các nước bắt lại: biến mẫu lời 2 điểm quân (Tốt 1, Tượng/Mã 3, Xe 5, Hậu 9).",
+      "source": "original-composition"
+    },
+    "axis": "diagonal",
+    "support": "queen",
+    "attacker": "bishop",
+    "pieceCount": 6,
+    "rootBest": 0,
+    "rootSelected": 0,
+    "nodeBudget": 400000,
+    "rootCandidates": [
+      {
+        "move": "Ba5",
+        "scoreCp": 0,
+        "mate": null
+      },
+      {
+        "move": "Bf6",
+        "scoreCp": -43,
+        "mate": null
+      },
+      {
+        "move": "Qf7+",
+        "scoreCp": -49,
+        "mate": null
+      }
+    ],
+    "rootNodeBudget": 600000,
+    "checks": [
+      {
+        "fen": "3R4/1K5k/1Q6/b4q2/8/8/8/8 w - - 1 2",
+        "move": "Qd6",
+        "scoreCp": 0,
+        "depth": 22,
+        "nodes": 400234
+      },
+      {
+        "fen": "3R4/1K5k/3Q4/b4q2/8/8/8/8 b - - 2 2",
+        "move": "Bxd8",
+        "scoreCp": 0,
+        "depth": 29,
+        "nodes": 400422
+      },
+      {
+        "fen": "3b4/1K5k/3Q4/5q2/8/8/8/8 w - - 0 3",
+        "move": "Qxd8",
+        "scoreCp": 0,
+        "depth": 34,
+        "nodes": 400043
+      }
+    ],
+    "finalFen": "3Q4/1K5k/8/5q2/8/8/8/8 b - - 0 3",
+    "gain": 2,
+    "engine": {
+      "name": "Stockfish 17",
+      "author": "the Stockfish developers (see AUTHORS file)"
+    }
+  },
+  {
+    "exercise": {
+      "title": "Xiên Hậu · 9",
+      "beginner": true,
+      "beginnerKind": "queen",
+      "mode": "interactive",
+      "outcome": "skewer",
+      "fen": "3K4/4N3/8/R7/8/5q2/Q4b1k/8 w - - 0 1",
+      "moves": [
+        "Rf5",
+        "Kg2",
+        "Rxf3",
+        "Kxf3"
+      ],
+      "alternativeLines": [],
+      "prompt": "Tìm đòn xiên Hậu và tính nước bắt tiếp theo.",
+      "hints": [
+        "Quan sát Hậu và quân phía sau trên cùng cột.",
+        "Mã ở e7 bảo vệ ô f5."
+      ],
+      "solution": "Mã ở e7 bảo vệ ô f5. Trong biến mẫu, Hậu ở lại và Xe bắt Hậu. Tính cả các nước bắt lại: biến mẫu lời 4 điểm quân (Tốt 1, Tượng/Mã 3, Xe 5, Hậu 9).",
+      "source": "original-composition"
+    },
+    "axis": "file",
+    "support": "knight",
+    "attacker": "rook",
+    "pieceCount": 7,
+    "rootBest": 574,
+    "rootSelected": 574,
+    "nodeBudget": 400000,
+    "rootCandidates": [
+      {
+        "move": "Rf5",
+        "scoreCp": 574,
+        "mate": null
+      },
+      {
+        "move": "Rg5",
+        "scoreCp": 422,
+        "mate": null
+      },
+      {
+        "move": "Ke8",
+        "scoreCp": 401,
+        "mate": null
+      }
+    ],
+    "rootNodeBudget": 600000,
+    "checks": [
+      {
+        "fen": "3K4/4N3/8/5R2/8/5q2/Q4b1k/8 b - - 1 1",
+        "move": "Kg2",
+        "scoreCp": -621,
+        "depth": 19,
+        "nodes": 400464
+      },
+      {
+        "fen": "3K4/4N3/8/5R2/8/5q2/Q4bk1/8 w - - 2 2",
+        "move": "Rxf3",
+        "scoreCp": 657,
+        "depth": 20,
+        "nodes": 400184
+      },
+      {
+        "fen": "3K4/4N3/8/8/8/5R2/Q4bk1/8 b - - 0 2",
+        "move": "Kxf3",
+        "scoreCp": -1013,
+        "depth": 21,
+        "nodes": 400211
+      }
+    ],
+    "finalFen": "3K4/4N3/8/8/8/5k2/Q4b2/8 w - - 0 3",
+    "gain": 4,
+    "engine": {
+      "name": "Stockfish 17",
+      "author": "the Stockfish developers (see AUTHORS file)"
+    }
+  },
+  {
+    "exercise": {
+      "title": "Xiên Hậu · 10",
+      "beginner": true,
+      "beginnerKind": "queen",
+      "mode": "interactive",
+      "outcome": "skewer",
+      "fen": "1r6/1kq3B1/4R3/8/8/5K2/6Q1/8 w - - 0 1",
+      "moves": [
+        "Be5",
+        "Qxe5",
+        "Rxe5"
+      ],
+      "alternativeLines": [],
+      "prompt": "Tìm đòn xiên Hậu và tính nước bắt tiếp theo.",
+      "hints": [
+        "Quan sát Hậu và quân phía sau trên cùng đường chéo.",
+        "Xe ở e6 bảo vệ ô e5."
+      ],
+      "solution": "Xe ở e6 bảo vệ ô e5. Hậu bắt quân tấn công; Xe bắt lại Hậu. Tính cả các nước bắt lại: biến mẫu lời 6 điểm quân (Tốt 1, Tượng/Mã 3, Xe 5, Hậu 9).",
+      "source": "original-composition"
+    },
+    "axis": "diagonal",
+    "support": "rook",
+    "attacker": "bishop",
+    "pieceCount": 7,
+    "rootBest": 945,
+    "rootSelected": 945,
+    "nodeBudget": 400000,
+    "rootCandidates": [
+      {
+        "move": "Be5",
+        "scoreCp": 945,
+        "mate": null
+      },
+      {
+        "move": "Kf2+",
+        "scoreCp": 581,
+        "mate": null
+      },
+      {
+        "move": "Ke2+",
+        "scoreCp": 570,
+        "mate": null
+      }
+    ],
+    "rootNodeBudget": 600000,
+    "checks": [
+      {
+        "fen": "1r6/1kq5/4R3/4B3/8/5K2/6Q1/8 b - - 1 1",
+        "move": "Qxe5",
+        "scoreCp": -99985,
+        "depth": 25,
+        "nodes": 359868
+      },
+      {
+        "fen": "1r6/1k6/4R3/4q3/8/5K2/6Q1/8 w - - 0 2",
+        "move": "Rxe5",
+        "scoreCp": 99992,
+        "depth": 31,
+        "nodes": 400420
+      }
+    ],
+    "finalFen": "1r6/1k6/8/4R3/8/5K2/6Q1/8 b - - 0 2",
+    "gain": 6,
+    "engine": {
+      "name": "Stockfish 17",
+      "author": "the Stockfish developers (see AUTHORS file)"
+    }
+  }
+]

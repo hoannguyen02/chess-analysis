@@ -1,6 +1,6 @@
 'use client';
 
-import { Button } from 'flowbite-react';
+import { Button, Tooltip } from 'flowbite-react';
 import { useTranslations } from 'next-intl';
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import {
@@ -23,11 +23,16 @@ const DEFAULT_CUSTOM_MINUTES = 10;
 type TeachingTimerProps = {
   compact?: boolean;
   minimal?: boolean;
+  /** Pause on entry into a review mode; manual Start remains available. */
+  paused?: boolean;
+  resetKey?: string | number;
 };
 
 export const TeachingTimer = ({
   compact = false,
   minimal = false,
+  paused = false,
+  resetKey,
 }: TeachingTimerProps) => {
   const t = useTranslations();
   const defaultPresetSeconds: number = TIMER_PRESETS[0].valueSeconds;
@@ -47,6 +52,18 @@ export const TeachingTimer = ({
   const audioContextRef = useRef<AudioContext | null>(null);
   const isAudioUnlockedRef = useRef(false);
   const customInputRef = useRef<HTMLInputElement | null>(null);
+
+  const previousResetKey = useRef(resetKey);
+  useEffect(() => {
+    if (paused) setIsRunning(false);
+  }, [paused]);
+  useEffect(() => {
+    if (previousResetKey.current === resetKey) return;
+    previousResetKey.current = resetKey;
+    setRemainingSeconds(selectedSeconds);
+    setIsRunning(false);
+    setSettingsOpen(false);
+  }, [resetKey, selectedSeconds]);
 
   const ensureAudioContext = useCallback(async () => {
     if (typeof window === 'undefined') return null;
@@ -136,10 +153,14 @@ export const TeachingTimer = ({
   }, [soundEnabled]);
 
   const unlockAudio = useCallback(async () => {
-    const audioContext = await ensureAudioContext();
-    if (!audioContext) return;
-
-    isAudioUnlockedRef.current = true;
+    try {
+      const audioContext = await ensureAudioContext();
+      if (!audioContext) return;
+      isAudioUnlockedRef.current = true;
+    } catch {
+      // Audio availability must never block the timer controls.
+      isAudioUnlockedRef.current = false;
+    }
   }, [ensureAudioContext]);
 
   useEffect(() => {
@@ -194,8 +215,8 @@ export const TeachingTimer = ({
     setIsRunning(false);
   };
 
-  const handlePrimaryAction = async () => {
-    await unlockAudio();
+  const handlePrimaryAction = () => {
+    void unlockAudio();
 
     if (remainingSeconds === 0) {
       setRemainingSeconds(selectedSeconds);
@@ -230,47 +251,71 @@ export const TeachingTimer = ({
         >
           {formattedTime}
         </output>
-        <button
-          type="button"
-          className="grid size-8 shrink-0 place-items-center rounded-md bg-[var(--s-bg)] text-slate-900 hover:bg-[#df9412] focus:outline-none focus:ring-2 focus:ring-[#f5a623]/40"
-          style={{ padding: 0, border: 0, lineHeight: 1 }}
-          onClick={handlePrimaryAction}
-          aria-label={
+        <Tooltip
+          content={
             remainingSeconds === 0
               ? t('common.timer.restart')
               : isRunning
                 ? t('common.timer.pause')
                 : t('common.timer.start')
           }
+          placement="bottom"
         >
-          {remainingSeconds === 0 ? (
-            <VscDebugRestart size={16} />
-          ) : isRunning ? (
-            <VscPrimitiveSquare size={14} />
-          ) : (
-            <VscPlay size={16} />
-          )}
-        </button>
-        <button
-          type="button"
-          className="grid size-8 shrink-0 place-items-center rounded-md text-slate-600 hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-slate-300"
-          style={{ padding: 0, border: 0, lineHeight: 1 }}
-          onClick={() => {
-            void unlockAudio();
-            setSettingsOpen((open) => !open);
-          }}
-          aria-label={t('common.timer.title')}
-          aria-expanded={settingsOpen}
-        >
-          <VscChevronDown
-            size={18}
-            className={
-              settingsOpen
-                ? 'rotate-180 transition-transform'
-                : 'transition-transform'
+          <button
+            type="button"
+            className="grid size-11 shrink-0 place-items-center rounded-md bg-[var(--s-bg)] text-slate-900 hover:bg-[#df9412] focus:outline-none focus:ring-2 focus:ring-[#f5a623]/40"
+            style={{ padding: 0, border: 0, lineHeight: 1 }}
+            onClick={handlePrimaryAction}
+            aria-label={
+              remainingSeconds === 0
+                ? t('common.timer.restart')
+                : isRunning
+                  ? t('common.timer.pause')
+                  : t('common.timer.start')
             }
-          />
-        </button>
+          >
+            {remainingSeconds === 0 ? (
+              <VscDebugRestart size={16} />
+            ) : isRunning ? (
+              <VscPrimitiveSquare size={14} />
+            ) : (
+              <VscPlay size={16} />
+            )}
+          </button>
+        </Tooltip>
+        <Tooltip content={t('common.timer.reset')} placement="bottom">
+          <button
+            type="button"
+            className="grid size-11 shrink-0 place-items-center rounded-md text-slate-600 hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-slate-300"
+            style={{ padding: 0, border: 0, lineHeight: 1 }}
+            onClick={handleReset}
+            aria-label={t('common.timer.reset')}
+          >
+            <VscDebugRestart size={18} aria-hidden="true" />
+          </button>
+        </Tooltip>
+        <Tooltip content={t('common.timer.title')} placement="bottom">
+          <button
+            type="button"
+            className="grid size-11 shrink-0 place-items-center rounded-md text-slate-600 hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-slate-300"
+            style={{ padding: 0, border: 0, lineHeight: 1 }}
+            onClick={() => {
+              void unlockAudio();
+              setSettingsOpen((open) => !open);
+            }}
+            aria-label={t('common.timer.title')}
+            aria-expanded={settingsOpen}
+          >
+            <VscChevronDown
+              size={18}
+              className={
+                settingsOpen
+                  ? 'rotate-180 transition-transform'
+                  : 'transition-transform'
+              }
+            />
+          </button>
+        </Tooltip>
         {settingsOpen && (
           <div className="absolute right-0 top-full z-20 mt-2 w-60 rounded-lg border border-slate-200 bg-white p-2 shadow-lg">
             <div className="grid grid-cols-3 gap-1">
@@ -318,21 +363,17 @@ export const TeachingTimer = ({
               <div className="flex gap-1">
                 <button
                   type="button"
-                  className="grid size-7 shrink-0 place-items-center rounded text-slate-600 hover:bg-slate-100"
+                  className="grid size-11 shrink-0 place-items-center rounded text-slate-600 hover:bg-slate-100"
                   style={{ padding: 0, border: 0, lineHeight: 1 }}
-                  onClick={handleReset}
-                  aria-label={t('common.timer.reset')}
-                >
-                  <VscDebugRestart size={16} />
-                </button>
-                <button
-                  type="button"
-                  className="grid size-7 shrink-0 place-items-center rounded text-slate-600 hover:bg-slate-100"
-                  style={{ padding: 0, border: 0, lineHeight: 1 }}
-                  onClick={async () => {
-                    await unlockAudio();
+                  onClick={() => {
+                    void unlockAudio();
                     setSoundEnabled((enabled) => !enabled);
                   }}
+                  title={
+                    soundEnabled
+                      ? t('common.timer.mute-sound')
+                      : t('common.timer.enable-sound')
+                  }
                   aria-label={
                     soundEnabled
                       ? t('common.timer.mute-sound')
@@ -397,8 +438,8 @@ export const TeachingTimer = ({
             </Button>
             <Button
               color="gray"
-              onClick={async () => {
-                await unlockAudio();
+              onClick={() => {
+                void unlockAudio();
                 setSoundEnabled((current) => !current);
               }}
               aria-label={
@@ -524,8 +565,8 @@ export const TeachingTimer = ({
           </Button>
           <Button
             color="gray"
-            onClick={async () => {
-              await unlockAudio();
+            onClick={() => {
+              void unlockAudio();
               setSoundEnabled((current) => !current);
             }}
           >

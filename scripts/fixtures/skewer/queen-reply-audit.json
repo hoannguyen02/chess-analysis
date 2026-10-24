@@ -1,0 +1,1826 @@
+{
+  "nodesPerPosition": 1000000,
+  "multiPV": 3,
+  "positions": [
+    {
+      "fen": "B7/8/8/7r/3k2q1/8/5P2/5KN1 w - - 0 1",
+      "branchDigest": "95df0808d6e09aecf602bfcbec1bac29ab8e9b08f7c794c9d0ca48cf35051d22",
+      "defences": [
+        {
+          "prefix": [
+            "Bf3"
+          ],
+          "fen": "8/8/8/7r/3k2q1/5B2/5P2/5KN1 b - - 1 1",
+          "selected": "Qg5",
+          "candidates": [
+            {
+              "move": "Qg5",
+              "scoreCp": 557,
+              "mate": null,
+              "depth": 20,
+              "nodes": 1000429
+            },
+            {
+              "move": "Qh4",
+              "scoreCp": 548,
+              "mate": null,
+              "depth": 20,
+              "nodes": 1000429
+            },
+            {
+              "move": "Qg6",
+              "scoreCp": 548,
+              "mate": null,
+              "depth": 20,
+              "nodes": 1000429
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "fen": "8/1r2k2B/2q5/8/8/8/2PN4/2K5 w - - 0 1",
+      "branchDigest": "77c3b4ebbd6659f1c5504087cbcec2e75e952fb9d60039da335d7eb0bce12bb6",
+      "defences": [
+        {
+          "prefix": [
+            "Be4"
+          ],
+          "fen": "8/1r2k3/2q5/8/4B3/8/2PN4/2K5 b - - 1 1",
+          "selected": "Qe6",
+          "candidates": [
+            {
+              "move": "Qe6",
+              "scoreCp": 523,
+              "mate": null,
+              "depth": 22,
+              "nodes": 1000240
+            },
+            {
+              "move": "Qd7",
+              "scoreCp": 423,
+              "mate": null,
+              "depth": 22,
+              "nodes": 1000240
+            },
+            {
+              "move": "Qb6",
+              "scoreCp": 421,
+              "mate": null,
+              "depth": 22,
+              "nodes": 1000240
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "fen": "2K5/6k1/5np1/8/8/8/6Q1/1b5R b - - 0 1",
+      "branchDigest": "ce037153bc6c0080a150a9de2146bb5d246e3bf3dbfcd8e80b1bfcd478e94a5e",
+      "defences": [
+        {
+          "prefix": [
+            "Be4"
+          ],
+          "fen": "2K5/6k1/5np1/8/4b3/8/6Q1/7R w - - 1 2",
+          "selected": "Qe2",
+          "candidates": [
+            {
+              "move": "Qe2",
+              "scoreCp": 484,
+              "mate": null,
+              "depth": 20,
+              "nodes": 1000599
+            },
+            {
+              "move": "Qh2",
+              "scoreCp": 442,
+              "mate": null,
+              "depth": 20,
+              "nodes": 1000599
+            },
+            {
+              "move": "Qf1",
+              "scoreCp": 439,
+              "mate": null,
+              "depth": 20,
+              "nodes": 1000599
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "fen": "8/6r1/6q1/2k2N2/8/7R/6P1/5NK1 w - - 0 1",
+      "branchDigest": "0ce3412bf0bfc8efa95aec759f6ff6181248bf90d4d42769a05b5e4f2f2adc33",
+      "defences": [
+        {
+          "prefix": [
+            "Rg3"
+          ],
+          "fen": "8/6r1/6q1/2k2N2/8/6R1/6P1/5NK1 b - - 1 1",
+          "selected": "Qxg3",
+          "candidates": [
+            {
+              "move": "Qxg3",
+              "scoreCp": 2,
+              "mate": null,
+              "depth": 19,
+              "nodes": 1000134
+            },
+            {
+              "move": "Qxf5",
+              "scoreCp": -1,
+              "mate": null,
+              "depth": 19,
+              "nodes": 1000134
+            },
+            {
+              "move": "Rg8",
+              "scoreCp": 0,
+              "mate": null,
+              "depth": 18,
+              "nodes": 1000134
+            }
+          ]
+        },
+        {
+          "prefix": [
+            "Rg3",
+            "Qxf5",
+            "Rxg7"
+          ],
+          "fen": "8/6R1/8/2k2q2/8/8/6P1/5NK1 b - - 0 2",
+          "selected": "Qe4",
+          "candidates": [
+            {
+              "move": "Qe4",
+              "scoreCp": 0,
+              "mate": null,
+              "depth": 20,
+              "nodes": 1000297
+            },
+            {
+              "move": "Qe5",
+              "scoreCp": 0,
+              "mate": null,
+              "depth": 20,
+              "nodes": 1000297
+            },
+            {
+              "move": "Qd3",
+              "scoreCp": -2,
+              "mate": null,
+              "depth": 19,
+              "nodes": 1000297
+            }
+          ]
+        },
+        {
+          "prefix": [
+            "Rg3",
+            "Qxg3",
+            "N5xg3"
+          ],
+          "fen": "8/6r1/8/2k5/8/6N1/6P1/5NK1 b - - 0 2",
+          "selected": "Kd5",
+          "candidates": [
+            {
+              "move": "Kd5",
+              "scoreCp": -2,
+              "mate": null,
+              "depth": 21,
+              "nodes": 1000087
+            },
+            {
+              "move": "Kc6",
+              "scoreCp": -2,
+              "mate": null,
+              "depth": 20,
+              "nodes": 1000087
+            },
+            {
+              "move": "Rg8",
+              "scoreCp": -2,
+              "mate": null,
+              "depth": 20,
+              "nodes": 1000087
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "fen": "8/6k1/8/8/8/2N1R3/r1q4P/6NK w - - 0 1",
+      "branchDigest": "1211f9bab70e937d311a1aa7f2d8b752a93207d3f93928ee3c0728cfd48c13e6",
+      "defences": [
+        {
+          "prefix": [
+            "Re2"
+          ],
+          "fen": "8/6k1/8/8/8/2N5/r1q1R2P/6NK b - - 1 1",
+          "selected": "Qxc3",
+          "candidates": [
+            {
+              "move": "Qxc3",
+              "scoreCp": -4,
+              "mate": null,
+              "depth": 18,
+              "nodes": 1000268
+            },
+            {
+              "move": "Qxe2",
+              "scoreCp": -12,
+              "mate": null,
+              "depth": 17,
+              "nodes": 1000268
+            },
+            {
+              "move": "Rb2",
+              "scoreCp": -15,
+              "mate": null,
+              "depth": 17,
+              "nodes": 1000268
+            }
+          ]
+        },
+        {
+          "prefix": [
+            "Re2",
+            "Qxe2",
+            "Ncxe2"
+          ],
+          "fen": "8/6k1/8/8/8/8/r3N2P/6NK b - - 0 2",
+          "selected": "Kf6",
+          "candidates": [
+            {
+              "move": "Kf6",
+              "scoreCp": -6,
+              "mate": null,
+              "depth": 17,
+              "nodes": 1000163
+            },
+            {
+              "move": "Ra6",
+              "scoreCp": -15,
+              "mate": null,
+              "depth": 17,
+              "nodes": 1000163
+            },
+            {
+              "move": "Kf7",
+              "scoreCp": -21,
+              "mate": null,
+              "depth": 17,
+              "nodes": 1000163
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "fen": "8/3b2k1/5np1/4K3/8/8/4Q3/3R4 b - - 0 1",
+      "branchDigest": "d163edcb5a614b9dad362b9ebac99aa961a4df8c45a6e7e3215fd4a85eb8fc2c",
+      "defences": [
+        {
+          "prefix": [
+            "Bg4"
+          ],
+          "fen": "8/6k1/5np1/4K3/6b1/8/4Q3/3R4 w - - 1 2",
+          "selected": "Qa6",
+          "candidates": [
+            {
+              "move": "Qa6",
+              "scoreCp": 1215,
+              "mate": null,
+              "depth": 21,
+              "nodes": 1000189
+            },
+            {
+              "move": "Qc4",
+              "scoreCp": 1075,
+              "mate": null,
+              "depth": 21,
+              "nodes": 1000189
+            },
+            {
+              "move": "Qb2",
+              "scoreCp": 899,
+              "mate": null,
+              "depth": 20,
+              "nodes": 1000189
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "fen": "8/2k3B1/8/r7/1q6/1P6/1K6/1N6 w - - 0 1",
+      "branchDigest": "26d1229262b2bad98bd175e6421c2882d204697fe68fcbe2904a3893f6c3f27b",
+      "defences": [
+        {
+          "prefix": [
+            "Bc3"
+          ],
+          "fen": "8/2k5/8/r7/1q6/1PB5/1K6/1N6 b - - 1 1",
+          "selected": "Qc5",
+          "candidates": [
+            {
+              "move": "Qc5",
+              "scoreCp": 508,
+              "mate": null,
+              "depth": 21,
+              "nodes": 1000687
+            },
+            {
+              "move": "Qb5",
+              "scoreCp": 503,
+              "mate": null,
+              "depth": 20,
+              "nodes": 1000687
+            },
+            {
+              "move": "Qb6",
+              "scoreCp": 493,
+              "mate": null,
+              "depth": 20,
+              "nodes": 1000687
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "fen": "8/8/r7/1q3Bk1/8/8/1P6/1KN5 w - - 0 1",
+      "branchDigest": "8d9be813a6886b6409baedec99aaf4114267bd34015750bc658f20b8d917c24b",
+      "defences": [
+        {
+          "prefix": [
+            "Bd3"
+          ],
+          "fen": "8/8/r7/1q4k1/8/3B4/1P6/1KN5 b - - 1 1",
+          "selected": "Qa5",
+          "candidates": [
+            {
+              "move": "Qa5",
+              "scoreCp": 527,
+              "mate": null,
+              "depth": 21,
+              "nodes": 1000083
+            },
+            {
+              "move": "Qc6",
+              "scoreCp": 527,
+              "mate": null,
+              "depth": 21,
+              "nodes": 1000083
+            },
+            {
+              "move": "Qa4",
+              "scoreCp": 526,
+              "mate": null,
+              "depth": 21,
+              "nodes": 1000083
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "fen": "6nk/7p/7r/8/1K6/8/4n1Q1/6R1 b - - 0 1",
+      "branchDigest": "da152bee9b81cefb55afd27718934ded6c9ab5185a1d4335547ce4f900859535",
+      "defences": [
+        {
+          "prefix": [
+            "Rg6"
+          ],
+          "fen": "6nk/7p/6r1/8/1K6/8/4n1Q1/6R1 w - - 1 2",
+          "selected": "Qxg6",
+          "candidates": [
+            {
+              "move": "Qxg6",
+              "scoreCp": 44,
+              "mate": null,
+              "depth": 18,
+              "nodes": 1000510
+            },
+            {
+              "move": "Qxe2",
+              "scoreCp": -2,
+              "mate": null,
+              "depth": 18,
+              "nodes": 1000510
+            },
+            {
+              "move": "Qf1",
+              "scoreCp": -193,
+              "mate": null,
+              "depth": 18,
+              "nodes": 1000510
+            }
+          ]
+        },
+        {
+          "prefix": [
+            "Rg6",
+            "Qh1",
+            "Rxg1"
+          ],
+          "fen": "6nk/7p/8/8/1K6/8/4n3/6rQ w - - 0 3",
+          "selected": "Qe4",
+          "candidates": [
+            {
+              "move": "Qe4",
+              "scoreCp": -2,
+              "mate": null,
+              "depth": 19,
+              "nodes": 1000631
+            },
+            {
+              "move": "Qh5",
+              "scoreCp": -6,
+              "mate": null,
+              "depth": 18,
+              "nodes": 1000631
+            },
+            {
+              "move": "Qf3",
+              "scoreCp": -254,
+              "mate": null,
+              "depth": 18,
+              "nodes": 1000631
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "fen": "8/8/8/6k1/8/4q1r1/P1R1N3/KN6 w - - 0 1",
+      "branchDigest": "21bb99366489e1688d74036f299fb1a65ce82b1bca8fd0b24a15646d8bd33bf9",
+      "defences": [
+        {
+          "prefix": [
+            "Rc3"
+          ],
+          "fen": "8/8/8/6k1/8/2R1q1r1/P3N3/KN6 b - - 1 1",
+          "selected": "Qxe2",
+          "candidates": [
+            {
+              "move": "Qxe2",
+              "scoreCp": 0,
+              "mate": null,
+              "depth": 18,
+              "nodes": 1000054
+            },
+            {
+              "move": "Qxc3+",
+              "scoreCp": -4,
+              "mate": null,
+              "depth": 17,
+              "nodes": 1000054
+            },
+            {
+              "move": "Rh3",
+              "scoreCp": -19,
+              "mate": null,
+              "depth": 17,
+              "nodes": 1000054
+            }
+          ]
+        },
+        {
+          "prefix": [
+            "Rc3",
+            "Qe5",
+            "Nxg3"
+          ],
+          "fen": "8/8/8/4q1k1/8/2R3N1/P7/KN6 b - - 0 2",
+          "selected": "Qe1",
+          "candidates": [
+            {
+              "move": "Qe1",
+              "scoreCp": -298,
+              "mate": null,
+              "depth": 18,
+              "nodes": 1000311
+            },
+            {
+              "move": "Kf6",
+              "scoreCp": -346,
+              "mate": null,
+              "depth": 18,
+              "nodes": 1000311
+            },
+            {
+              "move": "Kg6",
+              "scoreCp": -356,
+              "mate": null,
+              "depth": 18,
+              "nodes": 1000311
+            }
+          ]
+        },
+        {
+          "prefix": [
+            "Rc3",
+            "Qf2",
+            "Rxg3+"
+          ],
+          "fen": "8/8/8/6k1/8/6R1/P3Nq2/KN6 b - - 0 2",
+          "selected": "Kf6",
+          "candidates": [
+            {
+              "move": "Kf6",
+              "scoreCp": -320,
+              "mate": null,
+              "depth": 19,
+              "nodes": 1000351
+            },
+            {
+              "move": "Kh5",
+              "scoreCp": -370,
+              "mate": null,
+              "depth": 19,
+              "nodes": 1000351
+            },
+            {
+              "move": "Kh4",
+              "scoreCp": -372,
+              "mate": null,
+              "depth": 18,
+              "nodes": 1000351
+            }
+          ]
+        },
+        {
+          "prefix": [
+            "Rc3",
+            "Qxc3+",
+            "Nexc3"
+          ],
+          "fen": "8/8/8/6k1/8/2N3r1/P7/KN6 b - - 0 2",
+          "selected": "Kh6",
+          "candidates": [
+            {
+              "move": "Kh6",
+              "scoreCp": 27,
+              "mate": null,
+              "depth": 19,
+              "nodes": 1000242
+            },
+            {
+              "move": "Kf5",
+              "scoreCp": 16,
+              "mate": null,
+              "depth": 19,
+              "nodes": 1000242
+            },
+            {
+              "move": "Kh5",
+              "scoreCp": 18,
+              "mate": null,
+              "depth": 18,
+              "nodes": 1000242
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "fen": "B7/7r/8/5q2/8/2k5/5NP1/6K1 w - - 0 1",
+      "branchDigest": "4f160b7daf6afd9fd4b3f26d10e590352ce2ce009bb7963ef7d1e51a9aa5eb4c",
+      "defences": [
+        {
+          "prefix": [
+            "Be4"
+          ],
+          "fen": "8/7r/8/5q2/4B3/2k5/5NP1/6K1 b - - 1 1",
+          "selected": "Qe5",
+          "candidates": [
+            {
+              "move": "Qe5",
+              "scoreCp": 582,
+              "mate": null,
+              "depth": 20,
+              "nodes": 1000268
+            },
+            {
+              "move": "Qe6",
+              "scoreCp": 539,
+              "mate": null,
+              "depth": 19,
+              "nodes": 1000268
+            },
+            {
+              "move": "Qh5",
+              "scoreCp": 435,
+              "mate": null,
+              "depth": 19,
+              "nodes": 1000268
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "fen": "1kn5/1p6/8/1QK5/R7/8/6b1/8 b - - 0 1",
+      "branchDigest": "6aea14bd15259f1bea573f970320426d559e651186edd4405645d2c2244d8733",
+      "defences": [
+        {
+          "prefix": [
+            "Bc6"
+          ],
+          "fen": "1kn5/1p6/2b5/1QK5/R7/8/8/8 w - - 1 2",
+          "selected": "Qf1",
+          "candidates": [
+            {
+              "move": "Qf1",
+              "scoreCp": null,
+              "mate": 10,
+              "depth": 35,
+              "nodes": 1000284
+            },
+            {
+              "move": "Qc4",
+              "scoreCp": null,
+              "mate": 10,
+              "depth": 35,
+              "nodes": 1000284
+            },
+            {
+              "move": "Qb4",
+              "scoreCp": null,
+              "mate": 10,
+              "depth": 35,
+              "nodes": 1000284
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "fen": "8/7r/k1B5/5q2/8/8/2PN4/2K5 w - - 0 1",
+      "branchDigest": "828f0ddf52420692befdc558af739895a9034c1e1807098c0c82a46e1e2da050",
+      "defences": [
+        {
+          "prefix": [
+            "Be4"
+          ],
+          "fen": "8/7r/k7/5q2/4B3/8/2PN4/2K5 b - - 1 1",
+          "selected": "Qe5",
+          "candidates": [
+            {
+              "move": "Qe5",
+              "scoreCp": 524,
+              "mate": null,
+              "depth": 20,
+              "nodes": 1000263
+            },
+            {
+              "move": "Qf2",
+              "scoreCp": 516,
+              "mate": null,
+              "depth": 20,
+              "nodes": 1000263
+            },
+            {
+              "move": "Qe6",
+              "scoreCp": 457,
+              "mate": null,
+              "depth": 19,
+              "nodes": 1000263
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "fen": "5r2/3N4/k7/5q2/8/3R4/6P1/5NK1 w - - 0 1",
+      "branchDigest": "8b30144eddf402b8428c14edf1233519f36a12e47707a5ebd0c8d90974ad0e3d",
+      "defences": [
+        {
+          "prefix": [
+            "Rf3"
+          ],
+          "fen": "5r2/3N4/k7/5q2/8/5R2/6P1/5NK1 b - - 1 1",
+          "selected": "Qxf3",
+          "candidates": [
+            {
+              "move": "Qxf3",
+              "scoreCp": 49,
+              "mate": null,
+              "depth": 18,
+              "nodes": 1000467
+            },
+            {
+              "move": "Qxd7",
+              "scoreCp": 1,
+              "mate": null,
+              "depth": 18,
+              "nodes": 1000467
+            },
+            {
+              "move": "Rf7",
+              "scoreCp": -14,
+              "mate": null,
+              "depth": 18,
+              "nodes": 1000467
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "fen": "6nk/R1Q4p/2n5/8/8/4r3/8/5K2 b - - 0 1",
+      "branchDigest": "4822e7e7438b8345100ea79496981d9d1d93a80921ca5db691d326035eb96fb1",
+      "defences": [
+        {
+          "prefix": [
+            "Re7"
+          ],
+          "fen": "6nk/R1Q1r2p/2n5/8/8/8/8/5K2 w - - 1 2",
+          "selected": "Qxc6",
+          "candidates": [
+            {
+              "move": "Qxc6",
+              "scoreCp": 0,
+              "mate": null,
+              "depth": 18,
+              "nodes": 1000279
+            },
+            {
+              "move": "Qxe7",
+              "scoreCp": -9,
+              "mate": null,
+              "depth": 18,
+              "nodes": 1000279
+            },
+            {
+              "move": "Rb7",
+              "scoreCp": -12,
+              "mate": null,
+              "depth": 18,
+              "nodes": 1000279
+            }
+          ]
+        },
+        {
+          "prefix": [
+            "Re7",
+            "Qxe7",
+            "Ncxe7"
+          ],
+          "fen": "6nk/R3n2p/8/8/8/8/8/5K2 w - - 0 3",
+          "selected": "Ra3",
+          "candidates": [
+            {
+              "move": "Ra3",
+              "scoreCp": -1,
+              "mate": null,
+              "depth": 18,
+              "nodes": 1000438
+            },
+            {
+              "move": "Ra2",
+              "scoreCp": 8,
+              "mate": null,
+              "depth": 17,
+              "nodes": 1000438
+            },
+            {
+              "move": "Ra6",
+              "scoreCp": 5,
+              "mate": null,
+              "depth": 17,
+              "nodes": 1000438
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "fen": "8/6r1/5q2/5k2/8/8/3BNP2/5K2 w - - 0 1",
+      "branchDigest": "97c7e863296c8bf138faf004af5c45441c5f23f7ee92dbea20d56aae4f21e3fe",
+      "defences": [
+        {
+          "prefix": [
+            "Bc3"
+          ],
+          "fen": "8/6r1/5q2/5k2/8/2B5/4NP2/5K2 b - - 1 1",
+          "selected": "Qd6",
+          "candidates": [
+            {
+              "move": "Qd6",
+              "scoreCp": 589,
+              "mate": null,
+              "depth": 20,
+              "nodes": 1000426
+            },
+            {
+              "move": "Qd8",
+              "scoreCp": 537,
+              "mate": null,
+              "depth": 20,
+              "nodes": 1000426
+            },
+            {
+              "move": "Qf7",
+              "scoreCp": 474,
+              "mate": null,
+              "depth": 20,
+              "nodes": 1000426
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "fen": "8/8/r3k3/8/2q1B3/8/1P6/1KN5 w - - 0 1",
+      "branchDigest": "a807277aa15e0f21cb1ddb74c8de1bde9e2b901c03dc74e990e487e260d01276",
+      "defences": [
+        {
+          "prefix": [
+            "Bd3"
+          ],
+          "fen": "8/8/r3k3/8/2q5/3B4/1P6/1KN5 b - - 1 1",
+          "selected": "Qa4",
+          "candidates": [
+            {
+              "move": "Qa4",
+              "scoreCp": 512,
+              "mate": null,
+              "depth": 21,
+              "nodes": 1000671
+            },
+            {
+              "move": "Qc6",
+              "scoreCp": 509,
+              "mate": null,
+              "depth": 21,
+              "nodes": 1000671
+            },
+            {
+              "move": "Ra1+",
+              "scoreCp": 497,
+              "mate": null,
+              "depth": 21,
+              "nodes": 1000671
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "fen": "2k5/2pnb3/8/8/8/2Q4K/1R6/8 b - - 0 1",
+      "branchDigest": "de3a948fd0ca2a0699851f2384b4b44d258f886382adfd3d28cb1e0b710d97b0",
+      "defences": [
+        {
+          "prefix": [
+            "Bf6"
+          ],
+          "fen": "2k5/2pn4/5b2/8/8/2Q4K/1R6/8 w - - 1 2",
+          "selected": "Qe3",
+          "candidates": [
+            {
+              "move": "Qe3",
+              "scoreCp": 540,
+              "mate": null,
+              "depth": 21,
+              "nodes": 1000313
+            },
+            {
+              "move": "Qe1",
+              "scoreCp": 502,
+              "mate": null,
+              "depth": 21,
+              "nodes": 1000313
+            },
+            {
+              "move": "Qb4",
+              "scoreCp": 333,
+              "mate": null,
+              "depth": 21,
+              "nodes": 1000313
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "fen": "8/8/2r3k1/2q5/3N4/5R2/1P6/NK6 w - - 0 1",
+      "branchDigest": "10358d12893f81cb166d9409f48be37af7273f018bf66b4c48aa561e9ea5fd20",
+      "defences": [
+        {
+          "prefix": [
+            "Rc3"
+          ],
+          "fen": "8/8/2r3k1/2q5/3N4/2R5/1P6/NK6 b - - 1 1",
+          "selected": "Qxc3",
+          "candidates": [
+            {
+              "move": "Qxc3",
+              "scoreCp": 54,
+              "mate": null,
+              "depth": 18,
+              "nodes": 1000272
+            },
+            {
+              "move": "Qxd4",
+              "scoreCp": -9,
+              "mate": null,
+              "depth": 18,
+              "nodes": 1000272
+            },
+            {
+              "move": "Rc7",
+              "scoreCp": -10,
+              "mate": null,
+              "depth": 17,
+              "nodes": 1000272
+            }
+          ]
+        },
+        {
+          "prefix": [
+            "Rc3",
+            "Qb6",
+            "Rxc6+"
+          ],
+          "fen": "8/8/1qR3k1/8/3N4/8/1P6/NK6 b - - 0 2",
+          "selected": "Qxc6",
+          "candidates": [
+            {
+              "move": "Qxc6",
+              "scoreCp": -843,
+              "mate": null,
+              "depth": 23,
+              "nodes": 1000419
+            },
+            {
+              "move": "Kf7",
+              "scoreCp": null,
+              "mate": -15,
+              "depth": 23,
+              "nodes": 1000419
+            },
+            {
+              "move": "Kh7",
+              "scoreCp": null,
+              "mate": -15,
+              "depth": 23,
+              "nodes": 1000419
+            }
+          ]
+        },
+        {
+          "prefix": [
+            "Rc3",
+            "Qd5",
+            "Rxc6+"
+          ],
+          "fen": "8/8/2R3k1/3q4/3N4/8/1P6/NK6 b - - 0 2",
+          "selected": "Kg5",
+          "candidates": [
+            {
+              "move": "Kg5",
+              "scoreCp": -406,
+              "mate": null,
+              "depth": 19,
+              "nodes": 1000187
+            },
+            {
+              "move": "Kh5",
+              "scoreCp": -408,
+              "mate": null,
+              "depth": 18,
+              "nodes": 1000187
+            },
+            {
+              "move": "Kf7",
+              "scoreCp": -416,
+              "mate": null,
+              "depth": 18,
+              "nodes": 1000187
+            }
+          ]
+        },
+        {
+          "prefix": [
+            "Rc3",
+            "Qd6",
+            "Rxc6"
+          ],
+          "fen": "8/8/2Rq2k1/8/3N4/8/1P6/NK6 b - - 0 2",
+          "selected": "Qxc6",
+          "candidates": [
+            {
+              "move": "Qxc6",
+              "scoreCp": -604,
+              "mate": null,
+              "depth": 23,
+              "nodes": 1000536
+            },
+            {
+              "move": "Qf6",
+              "scoreCp": -667,
+              "mate": null,
+              "depth": 22,
+              "nodes": 1000536
+            },
+            {
+              "move": "Kf6",
+              "scoreCp": -1179,
+              "mate": null,
+              "depth": 22,
+              "nodes": 1000536
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "fen": "8/8/k7/8/8/r2q4/2N1R1P1/5NK1 w - - 0 1",
+      "branchDigest": "2907346061ecbc2e60f37afd0b83ca8c96b21e51115ac16082a53eba930cde11",
+      "defences": [
+        {
+          "prefix": [
+            "Re3"
+          ],
+          "fen": "8/8/k7/8/8/r2qR3/2N3P1/5NK1 b - - 1 1",
+          "selected": "Qxe3+",
+          "candidates": [
+            {
+              "move": "Qxe3+",
+              "scoreCp": 1,
+              "mate": null,
+              "depth": 20,
+              "nodes": 1000396
+            },
+            {
+              "move": "Qxc2",
+              "scoreCp": 0,
+              "mate": null,
+              "depth": 20,
+              "nodes": 1000396
+            },
+            {
+              "move": "Qc3",
+              "scoreCp": -315,
+              "mate": null,
+              "depth": 20,
+              "nodes": 1000396
+            }
+          ]
+        },
+        {
+          "prefix": [
+            "Re3",
+            "Qd6",
+            "Rxa3+"
+          ],
+          "fen": "8/8/k2q4/8/8/R7/2N3P1/5NK1 b - - 0 2",
+          "selected": "Kb5",
+          "candidates": [
+            {
+              "move": "Kb5",
+              "scoreCp": -383,
+              "mate": null,
+              "depth": 17,
+              "nodes": 1000169
+            },
+            {
+              "move": "Kb6",
+              "scoreCp": -389,
+              "mate": null,
+              "depth": 17,
+              "nodes": 1000169
+            },
+            {
+              "move": "Kb7",
+              "scoreCp": -389,
+              "mate": null,
+              "depth": 16,
+              "nodes": 1000169
+            }
+          ]
+        },
+        {
+          "prefix": [
+            "Re3",
+            "Qxe3+",
+            "Ncxe3"
+          ],
+          "fen": "8/8/k7/8/8/r3N3/6P1/5NK1 b - - 0 2",
+          "selected": "Kb7",
+          "candidates": [
+            {
+              "move": "Kb7",
+              "scoreCp": 16,
+              "mate": null,
+              "depth": 18,
+              "nodes": 1000445
+            },
+            {
+              "move": "Ra2",
+              "scoreCp": 13,
+              "mate": null,
+              "depth": 18,
+              "nodes": 1000445
+            },
+            {
+              "move": "Ra5",
+              "scoreCp": 17,
+              "mate": null,
+              "depth": 17,
+              "nodes": 1000445
+            }
+          ]
+        },
+        {
+          "prefix": [
+            "Re3",
+            "Qxf1+",
+            "Kxf1"
+          ],
+          "fen": "8/8/k7/8/8/r3R3/2N3P1/5K2 b - - 0 2",
+          "selected": "Ra5",
+          "candidates": [
+            {
+              "move": "Ra5",
+              "scoreCp": -643,
+              "mate": null,
+              "depth": 22,
+              "nodes": 1000344
+            },
+            {
+              "move": "Rxe3",
+              "scoreCp": -595,
+              "mate": null,
+              "depth": 21,
+              "nodes": 1000344
+            },
+            {
+              "move": "Ra4",
+              "scoreCp": -595,
+              "mate": null,
+              "depth": 21,
+              "nodes": 1000344
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "fen": "6K1/1k6/1pn2b2/8/8/4Q3/8/6R1 b - - 0 1",
+      "branchDigest": "3dc13cccc26e646503e8e31b8e50d18d7a0d362e6212f98581bb7456b14371c3",
+      "defences": [
+        {
+          "prefix": [
+            "Bd4"
+          ],
+          "fen": "6K1/1k6/1pn5/8/3b4/4Q3/8/6R1 w - - 1 2",
+          "selected": "Qe8",
+          "candidates": [
+            {
+              "move": "Qe8",
+              "scoreCp": 543,
+              "mate": null,
+              "depth": 20,
+              "nodes": 1000582
+            },
+            {
+              "move": "Qe6",
+              "scoreCp": 526,
+              "mate": null,
+              "depth": 20,
+              "nodes": 1000582
+            },
+            {
+              "move": "Qd3",
+              "scoreCp": 511,
+              "mate": null,
+              "depth": 19,
+              "nodes": 1000582
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "fen": "1r6/2q5/8/2k5/7B/8/6P1/5NK1 w - - 0 1",
+      "branchDigest": "c4399ace29cb0344b19c534986c9196e311a66eb2fc1cbb3ca0630228a8932f3",
+      "defences": [
+        {
+          "prefix": [
+            "Bg3"
+          ],
+          "fen": "1r6/2q5/8/2k5/8/6B1/6P1/5NK1 b - - 1 1",
+          "selected": "Qd8",
+          "candidates": [
+            {
+              "move": "Qd8",
+              "scoreCp": 503,
+              "mate": null,
+              "depth": 22,
+              "nodes": 1000427
+            },
+            {
+              "move": "Qc8",
+              "scoreCp": 483,
+              "mate": null,
+              "depth": 21,
+              "nodes": 1000427
+            },
+            {
+              "move": "Qb7",
+              "scoreCp": 480,
+              "mate": null,
+              "depth": 21,
+              "nodes": 1000427
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "fen": "8/8/7r/4k1q1/8/8/P7/KN2B3 w - - 0 1",
+      "branchDigest": "e044b1829626e5bab8c00f7e1991a3494a5bbeb512ece30a9cea28dc86b6b027",
+      "defences": [
+        {
+          "prefix": [
+            "Bd2"
+          ],
+          "fen": "8/8/7r/4k1q1/8/8/P2B4/KN6 b - - 1 1",
+          "selected": "Qg6",
+          "candidates": [
+            {
+              "move": "Qg6",
+              "scoreCp": 728,
+              "mate": null,
+              "depth": 20,
+              "nodes": 1000431
+            },
+            {
+              "move": "Qh4",
+              "scoreCp": 638,
+              "mate": null,
+              "depth": 20,
+              "nodes": 1000431
+            },
+            {
+              "move": "Qg1",
+              "scoreCp": 599,
+              "mate": null,
+              "depth": 20,
+              "nodes": 1000431
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "fen": "5nk1/6p1/4r3/7K/8/8/3n1Q2/5R2 b - - 0 1",
+      "branchDigest": "644ef2ba8d8f4fed9ce1d3347d9e024c75455562a39260dddc647e159eac5164",
+      "defences": [
+        {
+          "prefix": [
+            "Rf6"
+          ],
+          "fen": "5nk1/6p1/5r2/7K/8/8/3n1Q2/5R2 w - - 1 2",
+          "selected": "Qxf6",
+          "candidates": [
+            {
+              "move": "Qxf6",
+              "scoreCp": 53,
+              "mate": null,
+              "depth": 20,
+              "nodes": 1000154
+            },
+            {
+              "move": "Qxd2",
+              "scoreCp": 0,
+              "mate": null,
+              "depth": 20,
+              "nodes": 1000154
+            },
+            {
+              "move": "Kh4",
+              "scoreCp": -293,
+              "mate": null,
+              "depth": 20,
+              "nodes": 1000154
+            }
+          ]
+        },
+        {
+          "prefix": [
+            "Rf6",
+            "Qg1",
+            "Rxf1"
+          ],
+          "fen": "5nk1/6p1/8/7K/8/8/3n4/5rQ1 w - - 0 3",
+          "selected": "Qe3",
+          "candidates": [
+            {
+              "move": "Qe3",
+              "scoreCp": -331,
+              "mate": null,
+              "depth": 19,
+              "nodes": 1000440
+            },
+            {
+              "move": "Qc5",
+              "scoreCp": -334,
+              "mate": null,
+              "depth": 19,
+              "nodes": 1000440
+            },
+            {
+              "move": "Qg2",
+              "scoreCp": -338,
+              "mate": null,
+              "depth": 18,
+              "nodes": 1000440
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "fen": "8/1k6/8/8/5R2/1rq5/3N3P/6NK w - - 0 1",
+      "branchDigest": "e04a9b41f344411356926deb9db06d0e8d24b29543df5fa7704758a0f05071ef",
+      "defences": [
+        {
+          "prefix": [
+            "Rf3"
+          ],
+          "fen": "8/1k6/8/8/8/1rq2R2/3N3P/6NK b - - 1 1",
+          "selected": "Qxd2",
+          "candidates": [
+            {
+              "move": "Qxd2",
+              "scoreCp": 2,
+              "mate": null,
+              "depth": 18,
+              "nodes": 1000235
+            },
+            {
+              "move": "Qxf3+",
+              "scoreCp": 0,
+              "mate": null,
+              "depth": 18,
+              "nodes": 1000235
+            },
+            {
+              "move": "Ra3",
+              "scoreCp": 18,
+              "mate": null,
+              "depth": 17,
+              "nodes": 1000235
+            }
+          ]
+        },
+        {
+          "prefix": [
+            "Rf3",
+            "Qb2",
+            "Rxb3+"
+          ],
+          "fen": "8/1k6/8/8/8/1R6/1q1N3P/6NK b - - 0 2",
+          "selected": "Qxb3",
+          "candidates": [
+            {
+              "move": "Qxb3",
+              "scoreCp": -877,
+              "mate": null,
+              "depth": 21,
+              "nodes": 1000404
+            },
+            {
+              "move": "Kc6",
+              "scoreCp": -1174,
+              "mate": null,
+              "depth": 20,
+              "nodes": 1000404
+            },
+            {
+              "move": "Kc8",
+              "scoreCp": -1208,
+              "mate": null,
+              "depth": 20,
+              "nodes": 1000404
+            }
+          ]
+        },
+        {
+          "prefix": [
+            "Rf3",
+            "Qb4",
+            "Rxb3"
+          ],
+          "fen": "8/1k6/8/8/1q6/1R6/3N3P/6NK b - - 0 2",
+          "selected": "Qxb3",
+          "candidates": [
+            {
+              "move": "Qxb3",
+              "scoreCp": -622,
+              "mate": null,
+              "depth": 22,
+              "nodes": 1000496
+            },
+            {
+              "move": "Qb6",
+              "scoreCp": -829,
+              "mate": null,
+              "depth": 22,
+              "nodes": 1000496
+            },
+            {
+              "move": "Qb5",
+              "scoreCp": null,
+              "mate": -17,
+              "depth": 22,
+              "nodes": 1000496
+            }
+          ]
+        },
+        {
+          "prefix": [
+            "Rf3",
+            "Qc2",
+            "Rxb3+"
+          ],
+          "fen": "8/1k6/8/8/8/1R6/2qN3P/6NK b - - 0 2",
+          "selected": "Kc6",
+          "candidates": [
+            {
+              "move": "Kc6",
+              "scoreCp": -343,
+              "mate": null,
+              "depth": 19,
+              "nodes": 1000192
+            },
+            {
+              "move": "Kc8",
+              "scoreCp": -345,
+              "mate": null,
+              "depth": 19,
+              "nodes": 1000192
+            },
+            {
+              "move": "Kc7",
+              "scoreCp": -345,
+              "mate": null,
+              "depth": 19,
+              "nodes": 1000192
+            }
+          ]
+        },
+        {
+          "prefix": [
+            "Rf3",
+            "Qc6",
+            "Nxb3"
+          ],
+          "fen": "8/1k6/2q5/8/8/1N3R2/7P/6NK b - - 0 2",
+          "selected": "Kc7",
+          "candidates": [
+            {
+              "move": "Kc7",
+              "scoreCp": -363,
+              "mate": null,
+              "depth": 18,
+              "nodes": 1000623
+            },
+            {
+              "move": "Kc8",
+              "scoreCp": -363,
+              "mate": null,
+              "depth": 18,
+              "nodes": 1000623
+            },
+            {
+              "move": "Qd6",
+              "scoreCp": -366,
+              "mate": null,
+              "depth": 17,
+              "nodes": 1000623
+            }
+          ]
+        },
+        {
+          "prefix": [
+            "Rf3",
+            "Qxf3+",
+            "Ndxf3"
+          ],
+          "fen": "8/1k6/8/8/8/1r3N2/7P/6NK b - - 0 2",
+          "selected": "Kc8",
+          "candidates": [
+            {
+              "move": "Kc8",
+              "scoreCp": -15,
+              "mate": null,
+              "depth": 18,
+              "nodes": 1000156
+            },
+            {
+              "move": "Kb8",
+              "scoreCp": -15,
+              "mate": null,
+              "depth": 18,
+              "nodes": 1000156
+            },
+            {
+              "move": "Rb2",
+              "scoreCp": -7,
+              "mate": null,
+              "depth": 17,
+              "nodes": 1000156
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "fen": "1r6/2q5/8/6B1/8/8/4NP2/3k1K2 w - - 0 1",
+      "branchDigest": "1005c4ffd8639efe541f9129293015d3b0982431e1032600cf4428f309f475d0",
+      "defences": [
+        {
+          "prefix": [
+            "Bf4"
+          ],
+          "fen": "1r6/2q5/8/8/5B2/8/4NP2/3k1K2 b - - 1 1",
+          "selected": "Qc2",
+          "candidates": [
+            {
+              "move": "Qc2",
+              "scoreCp": null,
+              "mate": 10,
+              "depth": 34,
+              "nodes": 1000124
+            },
+            {
+              "move": "Qc4",
+              "scoreCp": null,
+              "mate": 10,
+              "depth": 34,
+              "nodes": 1000124
+            },
+            {
+              "move": "Qc8",
+              "scoreCp": null,
+              "mate": 11,
+              "depth": 33,
+              "nodes": 1000124
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "fen": "n7/1k6/1p6/8/1QK5/R7/5b2/8 b - - 0 1",
+      "branchDigest": "ea3c35d97c8a538ff93c4c2b3c2c857f2ff9957d16fa56eaa8302371a9363077",
+      "defences": [
+        {
+          "prefix": [
+            "Bc5"
+          ],
+          "fen": "n7/1k6/1p6/2b5/1QK5/R7/8/8 w - - 1 2",
+          "selected": "Qb3",
+          "candidates": [
+            {
+              "move": "Qb3",
+              "scoreCp": 685,
+              "mate": null,
+              "depth": 20,
+              "nodes": 1000376
+            },
+            {
+              "move": "Qc3",
+              "scoreCp": 605,
+              "mate": null,
+              "depth": 19,
+              "nodes": 1000376
+            },
+            {
+              "move": "Qb2",
+              "scoreCp": 597,
+              "mate": null,
+              "depth": 19,
+              "nodes": 1000376
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "fen": "1r6/8/3q3B/3k4/8/6P1/5NK1/8 w - - 0 1",
+      "branchDigest": "bfb6e6a97c51edf10ee567f8249afb7a1883e8771e7e0f10fbb505a7961446dd",
+      "defences": [
+        {
+          "prefix": [
+            "Bf4"
+          ],
+          "fen": "1r6/8/3q4/3k4/5B2/6P1/5NK1/8 b - - 1 1",
+          "selected": "Qb4",
+          "candidates": [
+            {
+              "move": "Qb4",
+              "scoreCp": 562,
+              "mate": null,
+              "depth": 19,
+              "nodes": 1000220
+            },
+            {
+              "move": "Qb6",
+              "scoreCp": 534,
+              "mate": null,
+              "depth": 19,
+              "nodes": 1000220
+            },
+            {
+              "move": "Qd8",
+              "scoreCp": 502,
+              "mate": null,
+              "depth": 19,
+              "nodes": 1000220
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "fen": "8/2r5/2q5/1N1k4/8/5R2/P7/KN6 w - - 0 1",
+      "branchDigest": "132eeea825bf8756a97c7d97fcd44fdb5668c50755caa1ce0d796a4ccf91ba40",
+      "defences": [
+        {
+          "prefix": [
+            "Rc3"
+          ],
+          "fen": "8/2r5/2q5/1N1k4/8/2R5/P7/KN6 b - - 1 1",
+          "selected": "Qxb5",
+          "candidates": [
+            {
+              "move": "Qxb5",
+              "scoreCp": -5,
+              "mate": null,
+              "depth": 18,
+              "nodes": 1000637
+            },
+            {
+              "move": "Rh7",
+              "scoreCp": -11,
+              "mate": null,
+              "depth": 18,
+              "nodes": 1000637
+            },
+            {
+              "move": "Rg7",
+              "scoreCp": -11,
+              "mate": null,
+              "depth": 17,
+              "nodes": 1000637
+            }
+          ]
+        },
+        {
+          "prefix": [
+            "Rc3",
+            "Qxb5",
+            "Rxc7"
+          ],
+          "fen": "8/2R5/8/1q1k4/8/8/P7/KN6 b - - 0 2",
+          "selected": "Ke6",
+          "candidates": [
+            {
+              "move": "Ke6",
+              "scoreCp": -3,
+              "mate": null,
+              "depth": 18,
+              "nodes": 1000634
+            },
+            {
+              "move": "Qb6",
+              "scoreCp": -7,
+              "mate": null,
+              "depth": 18,
+              "nodes": 1000634
+            },
+            {
+              "move": "Qb8",
+              "scoreCp": -6,
+              "mate": null,
+              "depth": 17,
+              "nodes": 1000634
+            }
+          ]
+        },
+        {
+          "prefix": [
+            "Rc3",
+            "Qxc3+",
+            "N5xc3+"
+          ],
+          "fen": "8/2r5/8/3k4/8/2N5/P7/KN6 b - - 0 2",
+          "selected": "Ke5",
+          "candidates": [
+            {
+              "move": "Ke5",
+              "scoreCp": 4,
+              "mate": null,
+              "depth": 19,
+              "nodes": 1000431
+            },
+            {
+              "move": "Kc6",
+              "scoreCp": 1,
+              "mate": null,
+              "depth": 19,
+              "nodes": 1000431
+            },
+            {
+              "move": "Ke6",
+              "scoreCp": -5,
+              "mate": null,
+              "depth": 18,
+              "nodes": 1000431
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "fen": "kn6/p4Q1R/5n2/3r4/5K2/8/8/8 b - - 0 1",
+      "branchDigest": "9b850091fe6a08510c0a0517ae783ceeee5e5ed0e753a899b397201df3df4617",
+      "defences": [
+        {
+          "prefix": [
+            "Rd7"
+          ],
+          "fen": "kn6/p2r1Q1R/5n2/8/5K2/8/8/8 w - - 1 2",
+          "selected": "Qxd7",
+          "candidates": [
+            {
+              "move": "Qxd7",
+              "scoreCp": 3,
+              "mate": null,
+              "depth": 19,
+              "nodes": 1000097
+            },
+            {
+              "move": "Qxf6",
+              "scoreCp": 0,
+              "mate": null,
+              "depth": 18,
+              "nodes": 1000097
+            },
+            {
+              "move": "Rg7",
+              "scoreCp": -7,
+              "mate": null,
+              "depth": 18,
+              "nodes": 1000097
+            }
+          ]
+        },
+        {
+          "prefix": [
+            "Rd7",
+            "Qxd7",
+            "Nfxd7"
+          ],
+          "fen": "kn6/p2n3R/8/8/5K2/8/8/8 w - - 0 3",
+          "selected": "Rg7",
+          "candidates": [
+            {
+              "move": "Rg7",
+              "scoreCp": 0,
+              "mate": null,
+              "depth": 18,
+              "nodes": 1000174
+            },
+            {
+              "move": "Ke3",
+              "scoreCp": 22,
+              "mate": null,
+              "depth": 17,
+              "nodes": 1000174
+            },
+            {
+              "move": "Rh1",
+              "scoreCp": 8,
+              "mate": null,
+              "depth": 17,
+              "nodes": 1000174
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "engine": {
+    "name": "Stockfish 17",
+    "author": "the Stockfish developers (see AUTHORS file)"
+  }
+}

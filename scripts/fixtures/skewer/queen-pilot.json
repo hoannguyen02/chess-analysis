@@ -1,0 +1,2652 @@
+{
+  "status": "review-sample-not-live",
+  "engine": {
+    "name": "Stockfish 17",
+    "author": "the Stockfish developers (see AUTHORS file)"
+  },
+  "exercises": [
+    {
+      "id": "pawn",
+      "kind": "positive",
+      "origin": "recorded-game",
+      "sourceTitle": "Blackburne, Joseph Henry — MacLeod, Nicholas",
+      "source": "https://www.pgnmentor.com/players/Blackburne.zip",
+      "gameReference": {
+        "id": "1171d868e56fd2ba",
+        "kind": "game",
+        "ply": 26,
+        "branch": 0,
+        "collection": "skewer"
+      },
+      "previousMove": {
+        "fen": "r5nr/pppk3p/2n5/5pqB/3P1B2/2P5/P1P3PP/R2Q1RK1 b - - 0 13",
+        "move": "Qf6"
+      },
+      "fen": "r5nr/pppk3p/2n2q2/5p1B/3P1B2/2P5/P1P3PP/R2Q1RK1 w - - 1 14",
+      "intendedMove": "Be5",
+      "prompt": "Tìm đòn xiên và giải thích quân nào bảo vệ Tượng.",
+      "objective": "Tốt bảo vệ ô tấn công",
+      "explanation": "Tốt d4 bảo vệ e5; vị trí của Tốt quyết định Tượng có thể tiến lên an toàn hay không.",
+      "rootChecks": [
+        {
+          "fen": "r5nr/pppk3p/2n2q2/5p1B/3P1B2/2P5/P1P3PP/R2Q1RK1 w - - 1 14",
+          "turn": "white",
+          "nodeBudget": 1000000,
+          "candidates": [
+            {
+              "move": "Be5",
+              "pv": [
+                "Be5",
+                "Qh6",
+                "Bxh8",
+                "Nge7",
+                "Be5",
+                "Rg8",
+                "Bf4",
+                "Qg7",
+                "Bf3",
+                "Ng6"
+              ],
+              "scoreCp": 694,
+              "mate": null,
+              "depth": 21,
+              "nodes": 1000656
+            },
+            {
+              "move": "Qe2",
+              "pv": [
+                "Qe2",
+                "Nge7",
+                "d5",
+                "Nxd5",
+                "Rad1",
+                "Rag8",
+                "Rxd5+",
+                "Kc8",
+                "Rd3",
+                "Rg7"
+              ],
+              "scoreCp": 589,
+              "mate": null,
+              "depth": 21,
+              "nodes": 1000656
+            },
+            {
+              "move": "Re1",
+              "pv": [
+                "Re1",
+                "Nge7",
+                "d5",
+                "Rad8",
+                "dxc6+",
+                "Kc8",
+                "Qf3",
+                "Ng6",
+                "Rab1",
+                "b6"
+              ],
+              "scoreCp": 558,
+              "mate": null,
+              "depth": 21,
+              "nodes": 1000656
+            }
+          ]
+        },
+        {
+          "fen": "r5nr/pppk3p/2n2q2/5p1B/3P1B2/2P5/P1P3PP/R2Q1RK1 w - - 1 14",
+          "turn": "white",
+          "nodeBudget": 3000000,
+          "candidates": [
+            {
+              "move": "Be5",
+              "pv": [
+                "Be5",
+                "Qg5",
+                "Bxh8",
+                "Rf8",
+                "Be5",
+                "Nxe5",
+                "dxe5+",
+                "Kc8",
+                "Kh1",
+                "Ne7"
+              ],
+              "scoreCp": 694,
+              "mate": null,
+              "depth": 23,
+              "nodes": 3000200
+            },
+            {
+              "move": "Qe2",
+              "pv": [
+                "Qe2",
+                "Nge7",
+                "d5",
+                "Nxd5",
+                "Rad1",
+                "Rag8",
+                "Rxd5+",
+                "Kc8",
+                "Rc5",
+                "Rg7"
+              ],
+              "scoreCp": 596,
+              "mate": null,
+              "depth": 23,
+              "nodes": 3000200
+            },
+            {
+              "move": "Re1",
+              "pv": [
+                "Re1",
+                "Rd8",
+                "Be5",
+                "Qg5",
+                "Bxh8",
+                "Nge7",
+                "Be5",
+                "Nxe5",
+                "dxe5+",
+                "Kc8"
+              ],
+              "scoreCp": 573,
+              "mate": null,
+              "depth": 22,
+              "nodes": 3000200
+            }
+          ]
+        }
+      ],
+      "attacker": "bishop",
+      "landing": "e5",
+      "supporters": [
+        {
+          "square": "d4",
+          "piece": "pawn"
+        }
+      ],
+      "line": [
+        "Be5",
+        "Qh6",
+        "Bxh8"
+      ],
+      "continuationChecks": [
+        {
+          "fen": "r5nr/pppk3p/2n2q2/4Bp1B/3P4/2P5/P1P3PP/R2Q1RK1 b - - 2 14",
+          "turn": "black",
+          "nodeBudget": 1000000,
+          "candidates": [
+            {
+              "move": "Qh6",
+              "pv": [
+                "Qh6",
+                "Bxh8",
+                "Rf8",
+                "Be5",
+                "Nxe5",
+                "dxe5+",
+                "Kc8",
+                "Kh1",
+                "Ne7",
+                "Rb1"
+              ],
+              "scoreCp": -686,
+              "mate": null,
+              "depth": 20,
+              "nodes": 1000036
+            },
+            {
+              "move": "Qg5",
+              "pv": [
+                "Qg5",
+                "Bxh8",
+                "Nh6",
+                "Be5",
+                "Rg8",
+                "Bg3",
+                "Qe3+",
+                "Kh1",
+                "Rxg3",
+                "hxg3"
+              ],
+              "scoreCp": -698,
+              "mate": null,
+              "depth": 20,
+              "nodes": 1000036
+            },
+            {
+              "move": "Qe6",
+              "pv": [
+                "Qe6",
+                "Bxh8",
+                "Nge7",
+                "Re1",
+                "Qh6",
+                "d5",
+                "Na5",
+                "Bd4",
+                "Rg8",
+                "Qf3"
+              ],
+              "scoreCp": -705,
+              "mate": null,
+              "depth": 19,
+              "nodes": 1000036
+            }
+          ]
+        },
+        {
+          "fen": "r5nr/pppk3p/2n4q/4Bp1B/3P4/2P5/P1P3PP/R2Q1RK1 w - - 3 15",
+          "turn": "white",
+          "nodeBudget": 1000000,
+          "candidates": [
+            {
+              "move": "Bxh8",
+              "pv": [
+                "Bxh8",
+                "Rf8",
+                "d5",
+                "Nce7",
+                "Rf2",
+                "Kc8",
+                "Qf3",
+                "Nxd5",
+                "Qxd5",
+                "Ne7"
+              ],
+              "scoreCp": 688,
+              "mate": null,
+              "depth": 22,
+              "nodes": 1000565
+            },
+            {
+              "move": "Rxf5",
+              "pv": [
+                "Rxf5",
+                "Nge7",
+                "Bf4",
+                "Nxf5",
+                "Bxh6",
+                "Nxh6",
+                "Qc1",
+                "Nf5",
+                "Bg4",
+                "Raf8"
+              ],
+              "scoreCp": 622,
+              "mate": null,
+              "depth": 22,
+              "nodes": 1000565
+            },
+            {
+              "move": "Bf4",
+              "pv": [
+                "Bf4",
+                "Qg7",
+                "d5",
+                "Na5",
+                "Qe2",
+                "Rf8",
+                "Qe6+",
+                "Kd8",
+                "d6",
+                "c5"
+              ],
+              "scoreCp": 585,
+              "mate": null,
+              "depth": 22,
+              "nodes": 1000565
+            }
+          ]
+        },
+        {
+          "fen": "r5nB/pppk3p/2n4q/5p1B/3P4/2P5/P1P3PP/R2Q1RK1 b - - 0 15",
+          "turn": "black",
+          "nodeBudget": 1000000,
+          "candidates": [
+            {
+              "move": "Rf8",
+              "pv": [
+                "Rf8",
+                "d5",
+                "Nce7",
+                "Rf2",
+                "Kc8",
+                "Qf3",
+                "Nf6",
+                "Bxf6",
+                "Qxf6",
+                "Re1"
+              ],
+              "scoreCp": -692,
+              "mate": null,
+              "depth": 21,
+              "nodes": 1000215
+            },
+            {
+              "move": "Nge7",
+              "pv": [
+                "Nge7",
+                "Be5",
+                "Rg8",
+                "Bf4",
+                "Qg7",
+                "Qf3",
+                "Ng6",
+                "Bxg6",
+                "hxg6",
+                "Rae1"
+              ],
+              "scoreCp": -717,
+              "mate": null,
+              "depth": 21,
+              "nodes": 1000215
+            },
+            {
+              "move": "Rd8",
+              "pv": [
+                "Rd8",
+                "Rxf5",
+                "Nge7",
+                "Qg4",
+                "Nxf5",
+                "Qxf5+",
+                "Qe6",
+                "Qxe6+",
+                "Kxe6",
+                "Bg7"
+              ],
+              "scoreCp": -737,
+              "mate": null,
+              "depth": 21,
+              "nodes": 1000215
+            }
+          ]
+        }
+      ],
+      "finalFen": "r5nB/pppk3p/2n4q/5p1B/3P4/2P5/P1P3PP/R2Q1RK1 b - - 0 15",
+      "materialChange": 5,
+      "finalAssessment": {
+        "fen": "r5nB/pppk3p/2n4q/5p1B/3P4/2P5/P1P3PP/R2Q1RK1 b - - 0 15",
+        "turn": "black",
+        "nodeBudget": 3000000,
+        "candidates": [
+          {
+            "move": "Rf8",
+            "pv": [
+              "Rf8",
+              "Be5",
+              "Nxe5",
+              "dxe5+",
+              "Kc8",
+              "Rb1",
+              "Ne7",
+              "Bf3",
+              "Nc6",
+              "Rf2"
+            ],
+            "scoreCp": -711,
+            "mate": null,
+            "depth": 23,
+            "nodes": 3000421
+          },
+          {
+            "move": "Nge7",
+            "pv": [
+              "Nge7",
+              "Be5",
+              "Rg8",
+              "Bf4",
+              "Qg7",
+              "Qf3",
+              "Nd8",
+              "g3",
+              "Ne6",
+              "Rae1"
+            ],
+            "scoreCp": -727,
+            "mate": null,
+            "depth": 23,
+            "nodes": 3000421
+          },
+          {
+            "move": "Rd8",
+            "pv": [
+              "Rd8",
+              "Rxf5",
+              "Nge7",
+              "Qg4",
+              "Nxf5",
+              "Qxf5+",
+              "Qe6",
+              "Qxe6+",
+              "Kxe6",
+              "Bg7"
+            ],
+            "scoreCp": -750,
+            "mate": null,
+            "depth": 22,
+            "nodes": 3000421
+          }
+        ]
+      }
+    },
+    {
+      "id": "rook",
+      "kind": "positive",
+      "origin": "recorded-game",
+      "sourceTitle": "Anderssen, Adolf — Neumann, Gustav Richard",
+      "source": "https://www.pgnmentor.com/players/Anderssen.zip",
+      "gameReference": {
+        "id": "071295b639b49091",
+        "kind": "game",
+        "ply": 42,
+        "branch": 0,
+        "collection": "skewer"
+      },
+      "previousMove": {
+        "fen": "5rn1/pppkq3/2n2b2/1P1p1Pp1/P2P4/2PQ1NN1/5K2/R1B5 b - - 0 21",
+        "move": "Nd8"
+      },
+      "fen": "3n1rn1/pppkq3/5b2/1P1p1Pp1/P2P4/2PQ1NN1/5K2/R1B5 w - - 1 22",
+      "intendedMove": "Ba3",
+      "prompt": "Tìm đòn xiên. Hậu tránh đi nhưng vẫn bảo vệ Xe thì sao?",
+      "objective": "Xe hỗ trợ từ xa",
+      "explanation": "Xe a1 bảo vệ a3. Sau khi đổi Tượng lấy Xe, cần tính đủ nước Hậu bắt lại.",
+      "rootChecks": [
+        {
+          "fen": "3n1rn1/pppkq3/5b2/1P1p1Pp1/P2P4/2PQ1NN1/5K2/R1B5 w - - 1 22",
+          "turn": "white",
+          "nodeBudget": 1000000,
+          "candidates": [
+            {
+              "move": "Ba3",
+              "pv": [
+                "Ba3",
+                "Qf7",
+                "Bxf8",
+                "Qxf8",
+                "Ne5+",
+                "Kc8",
+                "Kg2",
+                "Qe7",
+                "Ng4",
+                "Bg7"
+              ],
+              "scoreCp": 410,
+              "mate": null,
+              "depth": 21,
+              "nodes": 1000561
+            },
+            {
+              "move": "b6",
+              "pv": [
+                "b6",
+                "axb6",
+                "Ba3",
+                "c5",
+                "dxc5",
+                "Qf7",
+                "cxb6",
+                "Re8",
+                "a5",
+                "g4"
+              ],
+              "scoreCp": 243,
+              "mate": null,
+              "depth": 21,
+              "nodes": 1000561
+            },
+            {
+              "move": "Ra2",
+              "pv": [
+                "Ra2",
+                "Qh7",
+                "Re2",
+                "Kc8",
+                "Kg1",
+                "Qh3",
+                "Ne5",
+                "Bxe5",
+                "dxe5",
+                "Ne7"
+              ],
+              "scoreCp": 95,
+              "mate": null,
+              "depth": 21,
+              "nodes": 1000561
+            }
+          ]
+        },
+        {
+          "fen": "3n1rn1/pppkq3/5b2/1P1p1Pp1/P2P4/2PQ1NN1/5K2/R1B5 w - - 1 22",
+          "turn": "white",
+          "nodeBudget": 3000000,
+          "candidates": [
+            {
+              "move": "Ba3",
+              "pv": [
+                "Ba3",
+                "Qf7",
+                "Bxf8",
+                "Qxf8",
+                "Ne5+",
+                "Kc8",
+                "Kg2",
+                "Nh6",
+                "Rh1",
+                "Ndf7"
+              ],
+              "scoreCp": 413,
+              "mate": null,
+              "depth": 25,
+              "nodes": 3000298
+            },
+            {
+              "move": "b6",
+              "pv": [
+                "b6",
+                "axb6",
+                "Ba3",
+                "Qg7",
+                "Bxf8",
+                "Qxf8",
+                "Ne5+",
+                "Kc8",
+                "a5",
+                "bxa5"
+              ],
+              "scoreCp": 284,
+              "mate": null,
+              "depth": 25,
+              "nodes": 3000298
+            },
+            {
+              "move": "Ra2",
+              "pv": [
+                "Ra2",
+                "Qh7",
+                "Re2",
+                "Ne7",
+                "Ba3",
+                "g4",
+                "Ne5+",
+                "Bxe5",
+                "Rxe5",
+                "Rf7"
+              ],
+              "scoreCp": 125,
+              "mate": null,
+              "depth": 25,
+              "nodes": 3000298
+            }
+          ]
+        }
+      ],
+      "attacker": "bishop",
+      "landing": "a3",
+      "supporters": [
+        {
+          "square": "a1",
+          "piece": "rook"
+        }
+      ],
+      "line": [
+        "Ba3",
+        "Qe8",
+        "Bxf8",
+        "Qxf8"
+      ],
+      "continuationChecks": [
+        {
+          "fen": "3n1rn1/pppkq3/5b2/1P1p1Pp1/P2P4/B1PQ1NN1/5K2/R7 b - - 2 22",
+          "turn": "black",
+          "nodeBudget": 1000000,
+          "candidates": [
+            {
+              "move": "Qe8",
+              "pv": [
+                "Qe8",
+                "Bxf8",
+                "Qxf8",
+                "Ne5+",
+                "Kc8",
+                "Kg2",
+                "Nh6",
+                "Rh1",
+                "Bg7",
+                "Qf3"
+              ],
+              "scoreCp": -418,
+              "mate": null,
+              "depth": 20,
+              "nodes": 1000613
+            },
+            {
+              "move": "Qf7",
+              "pv": [
+                "Qf7",
+                "Bxf8",
+                "Qxf8",
+                "Ne5+",
+                "Kc8",
+                "Kg2",
+                "g4",
+                "Qe2",
+                "Nh6",
+                "Rh1"
+              ],
+              "scoreCp": -419,
+              "mate": null,
+              "depth": 20,
+              "nodes": 1000613
+            },
+            {
+              "move": "Qg7",
+              "pv": [
+                "Qg7",
+                "Bxf8",
+                "Qxf8",
+                "Ne5+",
+                "Kc8",
+                "Kg2",
+                "Nh6",
+                "Qe2",
+                "Qe7",
+                "Rf1"
+              ],
+              "scoreCp": -413,
+              "mate": null,
+              "depth": 19,
+              "nodes": 1000613
+            }
+          ]
+        },
+        {
+          "fen": "3nqrn1/pppk4/5b2/1P1p1Pp1/P2P4/B1PQ1NN1/5K2/R7 w - - 3 23",
+          "turn": "white",
+          "nodeBudget": 1000000,
+          "candidates": [
+            {
+              "move": "Bxf8",
+              "pv": [
+                "Bxf8",
+                "Qxf8",
+                "Ne5+",
+                "Kc8",
+                "Kg2",
+                "Be7",
+                "Re1",
+                "Bd6",
+                "Nh5",
+                "Qh6"
+              ],
+              "scoreCp": 417,
+              "mate": null,
+              "depth": 20,
+              "nodes": 1000550
+            },
+            {
+              "move": "Re1",
+              "pv": [
+                "Re1"
+              ],
+              "scoreCp": 398,
+              "mate": null,
+              "depth": 20,
+              "nodes": 1000550
+            },
+            {
+              "move": "Kg2",
+              "pv": [
+                "Kg2",
+                "Be7",
+                "Re1",
+                "g4",
+                "Ne5+",
+                "Kc8",
+                "Ng6",
+                "Bxa3",
+                "Rxe8",
+                "Rxe8"
+              ],
+              "scoreCp": 372,
+              "mate": null,
+              "depth": 20,
+              "nodes": 1000550
+            }
+          ]
+        },
+        {
+          "fen": "3nqBn1/pppk4/5b2/1P1p1Pp1/P2P4/2PQ1NN1/5K2/R7 b - - 0 23",
+          "turn": "black",
+          "nodeBudget": 1000000,
+          "candidates": [
+            {
+              "move": "Qxf8",
+              "pv": [
+                "Qxf8",
+                "Ne5+",
+                "Kc8",
+                "Kg2",
+                "Be7",
+                "Re1",
+                "Bd6",
+                "Qe3",
+                "Qh6",
+                "Rh1"
+              ],
+              "scoreCp": -405,
+              "mate": null,
+              "depth": 21,
+              "nodes": 1000201
+            },
+            {
+              "move": "g4",
+              "pv": [
+                "g4",
+                "Ne5+",
+                "Kc8",
+                "Ba3",
+                "Bh4",
+                "Rh1",
+                "Bxg3+",
+                "Kxg3",
+                "Nf6",
+                "Kg2"
+              ],
+              "scoreCp": -486,
+              "mate": null,
+              "depth": 21,
+              "nodes": 1000201
+            },
+            {
+              "move": "Kc8",
+              "pv": [
+                "Kc8",
+                "Bc5",
+                "Nh6",
+                "Kg2",
+                "b6",
+                "Re1",
+                "Qg8",
+                "Ba3",
+                "g4",
+                "Ne5"
+              ],
+              "scoreCp": -509,
+              "mate": null,
+              "depth": 21,
+              "nodes": 1000201
+            }
+          ]
+        },
+        {
+          "fen": "3n1qn1/pppk4/5b2/1P1p1Pp1/P2P4/2PQ1NN1/5K2/R7 w - - 0 24",
+          "turn": "white",
+          "nodeBudget": 1000000,
+          "candidates": [
+            {
+              "move": "Ne5+",
+              "pv": [
+                "Ne5+",
+                "Kc8",
+                "Kg2",
+                "Bg7",
+                "Nh5",
+                "Qe7",
+                "Re1",
+                "Nf6",
+                "Nxf6",
+                "Bxf6"
+              ],
+              "scoreCp": 421,
+              "mate": null,
+              "depth": 21,
+              "nodes": 1000423
+            },
+            {
+              "move": "Kg2",
+              "pv": [
+                "Kg2",
+                "Nf7",
+                "Re1",
+                "Nd6",
+                "Ne5+",
+                "Kc8",
+                "Qf3",
+                "Ne7",
+                "Ng4",
+                "Bg7"
+              ],
+              "scoreCp": 401,
+              "mate": null,
+              "depth": 21,
+              "nodes": 1000423
+            },
+            {
+              "move": "Re1",
+              "pv": [
+                "Re1",
+                "Kc8",
+                "Kg2",
+                "g4",
+                "Ne5",
+                "Bh4",
+                "Ng6",
+                "Qf6",
+                "Re5",
+                "Kb8"
+              ],
+              "scoreCp": 393,
+              "mate": null,
+              "depth": 21,
+              "nodes": 1000423
+            }
+          ]
+        }
+      ],
+      "finalFen": "3n1qn1/pppk4/5b2/1P1p1Pp1/P2P4/2PQ1NN1/5K2/R7 w - - 0 24",
+      "materialChange": 2,
+      "finalAssessment": {
+        "fen": "3n1qn1/pppk4/5b2/1P1p1Pp1/P2P4/2PQ1NN1/5K2/R7 w - - 0 24",
+        "turn": "white",
+        "nodeBudget": 3000000,
+        "candidates": [
+          {
+            "move": "Kg2",
+            "pv": [
+              "Kg2",
+              "Kc8",
+              "Ne5",
+              "Qe7",
+              "Ng4",
+              "Bg7",
+              "Qe2",
+              "Qxe2+",
+              "Nxe2",
+              "Nf6"
+            ],
+            "scoreCp": 419,
+            "mate": null,
+            "depth": 23,
+            "nodes": 3000358
+          },
+          {
+            "move": "Ne5+",
+            "pv": [
+              "Ne5+",
+              "Kc8",
+              "Kg2",
+              "Qe7",
+              "Qe2",
+              "Nh6",
+              "Rh1",
+              "Ndf7",
+              "Nxf7",
+              "Qxe2+"
+            ],
+            "scoreCp": 412,
+            "mate": null,
+            "depth": 23,
+            "nodes": 3000358
+          },
+          {
+            "move": "Re1",
+            "pv": [
+              "Re1",
+              "Kc8",
+              "Ne5",
+              "Nh6",
+              "Kg2",
+              "g4",
+              "Qe3",
+              "Bxe5",
+              "dxe5",
+              "Nxf5"
+            ],
+            "scoreCp": 402,
+            "mate": null,
+            "depth": 23,
+            "nodes": 3000358
+          }
+        ]
+      }
+    },
+    {
+      "id": "queen",
+      "kind": "positive",
+      "origin": "recorded-game",
+      "sourceTitle": "Smyslov, Vassily — Euwe, Max",
+      "source": "https://www.pgnmentor.com/players/Euwe.zip",
+      "gameReference": {
+        "id": "5e6922faa5542c14",
+        "kind": "game",
+        "ply": 60,
+        "branch": 0,
+        "collection": "skewer"
+      },
+      "previousMove": {
+        "fen": "k6r/p5Rb/1np2qpp/2Q1pp2/2P5/2B3PB/PP3P1P/6K1 b - - 0 30",
+        "move": "Qxg7"
+      },
+      "fen": "k6r/p5qb/1np3pp/2Q1pp2/2P5/2B3PB/PP3P1P/6K1 w - - 0 31",
+      "intendedMove": "Bxe5",
+      "prompt": "Có thể bắt Tốt và đồng thời tạo đòn xiên không?",
+      "objective": "Hậu bảo vệ Tượng",
+      "explanation": "Hậu c5 bảo vệ e5. Nước bắt Tốt cũng đưa Tượng lên đường chéo g7–h8.",
+      "rootChecks": [
+        {
+          "fen": "k6r/p5qb/1np3pp/2Q1pp2/2P5/2B3PB/PP3P1P/6K1 w - - 0 31",
+          "turn": "white",
+          "nodeBudget": 1000000,
+          "candidates": [
+            {
+              "move": "Bxe5",
+              "pv": [
+                "Bxe5",
+                "Qd7",
+                "Bxh8",
+                "Kb7",
+                "Qb4",
+                "Qd1+",
+                "Bf1",
+                "Bg8",
+                "b3",
+                "f4"
+              ],
+              "scoreCp": 376,
+              "mate": null,
+              "depth": 20,
+              "nodes": 1000165
+            },
+            {
+              "move": "Bg2",
+              "pv": [
+                "Bg2",
+                "Rc8",
+                "Bxc6+",
+                "Rxc6",
+                "Qxc6+",
+                "Qb7",
+                "Qf6",
+                "Bg8",
+                "b3",
+                "Bf7"
+              ],
+              "scoreCp": -89,
+              "mate": null,
+              "depth": 20,
+              "nodes": 1000165
+            },
+            {
+              "move": "Qxc6+",
+              "pv": [
+                "Qxc6+",
+                "Qb7"
+              ],
+              "scoreCp": -108,
+              "mate": null,
+              "depth": 20,
+              "nodes": 1000165
+            }
+          ]
+        },
+        {
+          "fen": "k6r/p5qb/1np3pp/2Q1pp2/2P5/2B3PB/PP3P1P/6K1 w - - 0 31",
+          "turn": "white",
+          "nodeBudget": 3000000,
+          "candidates": [
+            {
+              "move": "Bxe5",
+              "pv": [
+                "Bxe5",
+                "Qd7",
+                "Bxh8",
+                "Kb7",
+                "Qb4",
+                "Bg8",
+                "Bf1",
+                "a5",
+                "Qxa5",
+                "Bxc4"
+              ],
+              "scoreCp": 406,
+              "mate": null,
+              "depth": 23,
+              "nodes": 3000123
+            },
+            {
+              "move": "Bg2",
+              "pv": [
+                "Bg2",
+                "Rc8",
+                "Bxc6+",
+                "Rxc6",
+                "Qxc6+",
+                "Qb7",
+                "Qf6",
+                "Qd7",
+                "b3",
+                "g5"
+              ],
+              "scoreCp": -72,
+              "mate": null,
+              "depth": 23,
+              "nodes": 3000123
+            },
+            {
+              "move": "Qxc6+",
+              "pv": [
+                "Qxc6+",
+                "Qb7",
+                "Bg2",
+                "Rb8",
+                "Bxe5",
+                "Qxc6",
+                "Bxc6+",
+                "Rb7",
+                "b3",
+                "g5"
+              ],
+              "scoreCp": -122,
+              "mate": null,
+              "depth": 23,
+              "nodes": 3000123
+            }
+          ]
+        }
+      ],
+      "attacker": "bishop",
+      "landing": "e5",
+      "supporters": [
+        {
+          "square": "c5",
+          "piece": "queen"
+        }
+      ],
+      "line": [
+        "Bxe5",
+        "Qd7",
+        "Bxh8"
+      ],
+      "continuationChecks": [
+        {
+          "fen": "k6r/p5qb/1np3pp/2Q1Bp2/2P5/6PB/PP3P1P/6K1 b - - 0 31",
+          "turn": "black",
+          "nodeBudget": 1000000,
+          "candidates": [
+            {
+              "move": "Qd7",
+              "pv": [
+                "Qd7",
+                "Bxh8",
+                "Kb7",
+                "b3",
+                "g5",
+                "Bd4",
+                "Bg6",
+                "Qe5",
+                "Nc8",
+                "Bg2"
+              ],
+              "scoreCp": -378,
+              "mate": null,
+              "depth": 20,
+              "nodes": 1000451
+            },
+            {
+              "move": "Qb7",
+              "pv": [
+                "Qb7",
+                "Bxh8",
+                "Qc8",
+                "Bg7",
+                "Qe6",
+                "Bf1",
+                "h5",
+                "Bd4",
+                "Kb7",
+                "a4"
+              ],
+              "scoreCp": -431,
+              "mate": null,
+              "depth": 20,
+              "nodes": 1000451
+            },
+            {
+              "move": "Qxe5",
+              "pv": [
+                "Qxe5",
+                "Qxe5",
+                "Rc8",
+                "Qe7",
+                "Bg8",
+                "b3",
+                "Nxc4",
+                "bxc4",
+                "Bxc4",
+                "Qd7"
+              ],
+              "scoreCp": -591,
+              "mate": null,
+              "depth": 20,
+              "nodes": 1000451
+            }
+          ]
+        },
+        {
+          "fen": "k6r/p2q3b/1np3pp/2Q1Bp2/2P5/6PB/PP3P1P/6K1 w - - 1 32",
+          "turn": "white",
+          "nodeBudget": 1000000,
+          "candidates": [
+            {
+              "move": "Bxh8",
+              "pv": [
+                "Bxh8",
+                "Kb7",
+                "Bd4",
+                "Bg8",
+                "b3",
+                "Be6",
+                "f4",
+                "Nc8",
+                "Kf2",
+                "Qd6"
+              ],
+              "scoreCp": 382,
+              "mate": null,
+              "depth": 23,
+              "nodes": 1000287
+            },
+            {
+              "move": "Bxf5",
+              "pv": [
+                "Bxf5",
+                "gxf5",
+                "Bxh8",
+                "f4",
+                "Bd4",
+                "fxg3",
+                "fxg3",
+                "Bg6",
+                "h4",
+                "h5"
+              ],
+              "scoreCp": -232,
+              "mate": null,
+              "depth": 23,
+              "nodes": 1000287
+            },
+            {
+              "move": "b3",
+              "pv": [
+                "b3",
+                "Qd1+",
+                "Bf1",
+                "Rc8",
+                "Qa3",
+                "Bg8",
+                "Qa6",
+                "Be6",
+                "Bf4",
+                "Qd8"
+              ],
+              "scoreCp": -323,
+              "mate": null,
+              "depth": 23,
+              "nodes": 1000287
+            }
+          ]
+        },
+        {
+          "fen": "k6B/p2q3b/1np3pp/2Q2p2/2P5/6PB/PP3P1P/6K1 b - - 0 32",
+          "turn": "black",
+          "nodeBudget": 1000000,
+          "candidates": [
+            {
+              "move": "g5",
+              "pv": [
+                "g5",
+                "Bd4",
+                "Qe8",
+                "Bg2",
+                "Kb7",
+                "Qb4",
+                "Kc7",
+                "h3",
+                "f4",
+                "gxf4"
+              ],
+              "scoreCp": -386,
+              "mate": null,
+              "depth": 20,
+              "nodes": 1000255
+            },
+            {
+              "move": "Qe6",
+              "pv": [
+                "Qe6",
+                "Qf8+",
+                "Kb7",
+                "Bc3",
+                "g5",
+                "Qg7+",
+                "Qd7",
+                "Qxh6",
+                "Na4",
+                "Qg7"
+              ],
+              "scoreCp": -394,
+              "mate": null,
+              "depth": 20,
+              "nodes": 1000255
+            },
+            {
+              "move": "Kb7",
+              "pv": [
+                "Kb7",
+                "Qb4",
+                "Bg8",
+                "Bf1",
+                "a5",
+                "Qxa5",
+                "Bxc4",
+                "Bxc4",
+                "Nxc4",
+                "Qb4+"
+              ],
+              "scoreCp": -412,
+              "mate": null,
+              "depth": 20,
+              "nodes": 1000255
+            }
+          ]
+        }
+      ],
+      "finalFen": "k6B/p2q3b/1np3pp/2Q2p2/2P5/6PB/PP3P1P/6K1 b - - 0 32",
+      "materialChange": 6,
+      "finalAssessment": {
+        "fen": "k6B/p2q3b/1np3pp/2Q2p2/2P5/6PB/PP3P1P/6K1 b - - 0 32",
+        "turn": "black",
+        "nodeBudget": 3000000,
+        "candidates": [
+          {
+            "move": "Qe6",
+            "pv": [
+              "Qe6",
+              "Bf1",
+              "Bg8",
+              "Bd4",
+              "Kb7",
+              "b3",
+              "f4",
+              "Qb4",
+              "fxg3",
+              "hxg3"
+            ],
+            "scoreCp": -399,
+            "mate": null,
+            "depth": 22,
+            "nodes": 3000300
+          },
+          {
+            "move": "Bg8",
+            "pv": [
+              "Bg8",
+              "b3",
+              "Be6",
+              "Bf1",
+              "f4",
+              "Qf8+",
+              "Kb7",
+              "Be5",
+              "fxg3",
+              "Bxg3"
+            ],
+            "scoreCp": -425,
+            "mate": null,
+            "depth": 22,
+            "nodes": 3000300
+          },
+          {
+            "move": "g5",
+            "pv": [
+              "g5",
+              "Bd4",
+              "Qe8",
+              "Bg2",
+              "Kb7",
+              "Qb4",
+              "Kc7",
+              "Qa5",
+              "Kb7",
+              "c5"
+            ],
+            "scoreCp": -408,
+            "mate": null,
+            "depth": 21,
+            "nodes": 3000300
+          }
+        ]
+      }
+    },
+    {
+      "id": "bishop",
+      "kind": "positive",
+      "origin": "recorded-game",
+      "sourceTitle": "Bologan,V — Vovk,A",
+      "source": "https://www.pgnmentor.com/players/Bologan.zip",
+      "gameReference": {
+        "id": "93dc2177f15c691f",
+        "kind": "game",
+        "ply": 78,
+        "branch": 0,
+        "collection": "skewer"
+      },
+      "previousMove": {
+        "fen": "3r1b2/1p1q3k/p1nNR1pp/P1BQ4/1P3P2/6P1/7P/7K b - - 8 39",
+        "move": "Bxd6"
+      },
+      "fen": "3r4/1p1q3k/p1nbR1pp/P1BQ4/1P3P2/6P1/7P/7K w - - 0 40",
+      "intendedMove": "Rxd6",
+      "prompt": "Tìm đòn xiên bằng Xe. So sánh với nước bắt bằng Tượng.",
+      "objective": "Tượng và Hậu phối hợp với Xe",
+      "explanation": "Tượng c5 và Hậu d5 cùng bảo vệ d6. Bxd6 cũng là ứng viên mạnh; không xem đó là nước sai chỉ vì không phải đòn xiên.",
+      "rootChecks": [
+        {
+          "fen": "3r4/1p1q3k/p1nbR1pp/P1BQ4/1P3P2/6P1/7P/7K w - - 0 40",
+          "turn": "white",
+          "nodeBudget": 1000000,
+          "candidates": [
+            {
+              "move": "Rxd6",
+              "pv": [
+                "Rxd6"
+              ],
+              "scoreCp": 275,
+              "mate": null,
+              "depth": 22,
+              "nodes": 1000338
+            },
+            {
+              "move": "Bxd6",
+              "pv": [
+                "Bxd6",
+                "Qf7",
+                "Qe4",
+                "h5",
+                "Bc5",
+                "Rd7",
+                "Kg2",
+                "Nd8",
+                "Re5",
+                "Kg7"
+              ],
+              "scoreCp": 238,
+              "mate": null,
+              "depth": 22,
+              "nodes": 1000338
+            },
+            {
+              "move": "Rf6",
+              "pv": [
+                "Rf6",
+                "Be7",
+                "Qf7+",
+                "Kh8",
+                "Rxg6",
+                "Qd1+",
+                "Kg2",
+                "Rd2+",
+                "Bf2",
+                "Rxf2+"
+              ],
+              "scoreCp": 0,
+              "mate": null,
+              "depth": 22,
+              "nodes": 1000338
+            }
+          ]
+        },
+        {
+          "fen": "3r4/1p1q3k/p1nbR1pp/P1BQ4/1P3P2/6P1/7P/7K w - - 0 40",
+          "turn": "white",
+          "nodeBudget": 3000000,
+          "candidates": [
+            {
+              "move": "Bxd6",
+              "pv": [
+                "Bxd6"
+              ],
+              "scoreCp": 278,
+              "mate": null,
+              "depth": 25,
+              "nodes": 3000272
+            },
+            {
+              "move": "Rxd6",
+              "pv": [
+                "Rxd6",
+                "Qe8",
+                "Rxd8",
+                "Nxd8",
+                "Kg2",
+                "Qe2+",
+                "Bf2",
+                "Qe7",
+                "Kf3",
+                "Ne6"
+              ],
+              "scoreCp": 270,
+              "mate": null,
+              "depth": 25,
+              "nodes": 3000272
+            },
+            {
+              "move": "Rf6",
+              "pv": [
+                "Rf6",
+                "Be7",
+                "Qf7+",
+                "Kh8",
+                "Rxg6",
+                "Qd1+",
+                "Kg2",
+                "Rd2+",
+                "Bf2",
+                "Rxf2+"
+              ],
+              "scoreCp": 0,
+              "mate": null,
+              "depth": 24,
+              "nodes": 3000272
+            }
+          ]
+        }
+      ],
+      "attacker": "rook",
+      "landing": "d6",
+      "supporters": [
+        {
+          "square": "c5",
+          "piece": "bishop"
+        },
+        {
+          "square": "d5",
+          "piece": "queen"
+        }
+      ],
+      "line": [
+        "Rxd6",
+        "Qe8",
+        "Rxd8",
+        "Nxd8"
+      ],
+      "continuationChecks": [
+        {
+          "fen": "3r4/1p1q3k/p1nR2pp/P1BQ4/1P3P2/6P1/7P/7K b - - 0 40",
+          "turn": "black",
+          "nodeBudget": 1000000,
+          "candidates": [
+            {
+              "move": "Qe8",
+              "pv": [
+                "Qe8",
+                "Rxd8",
+                "Nxd8",
+                "Kg2",
+                "Nc6",
+                "Kf3",
+                "Kg7",
+                "Bd4+",
+                "Nxd4+",
+                "Qxd4+"
+              ],
+              "scoreCp": -271,
+              "mate": null,
+              "depth": 21,
+              "nodes": 1000184
+            },
+            {
+              "move": "Qc7",
+              "pv": [
+                "Qc7",
+                "Rxd8"
+              ],
+              "scoreCp": -299,
+              "mate": null,
+              "depth": 21,
+              "nodes": 1000184
+            },
+            {
+              "move": "Qe7",
+              "pv": [
+                "Qe7",
+                "Rxd8",
+                "Qxd8",
+                "Qf7+",
+                "Kh8",
+                "Qxg6",
+                "Qd5+",
+                "Kg1",
+                "h5",
+                "Qd6"
+              ],
+              "scoreCp": -369,
+              "mate": null,
+              "depth": 20,
+              "nodes": 1000184
+            }
+          ]
+        },
+        {
+          "fen": "3rq3/1p5k/p1nR2pp/P1BQ4/1P3P2/6P1/7P/7K w - - 1 41",
+          "turn": "white",
+          "nodeBudget": 1000000,
+          "candidates": [
+            {
+              "move": "Rxd8",
+              "pv": [
+                "Rxd8",
+                "Nxd8",
+                "Kg2",
+                "Nc6",
+                "Kf3",
+                "Kg7",
+                "Bd4+",
+                "Nxd4+",
+                "Qxd4+",
+                "Kh7"
+              ],
+              "scoreCp": 267,
+              "mate": null,
+              "depth": 20,
+              "nodes": 1000071
+            },
+            {
+              "move": "Qe6",
+              "pv": [
+                "Qe6"
+              ],
+              "scoreCp": 172,
+              "mate": null,
+              "depth": 20,
+              "nodes": 1000071
+            },
+            {
+              "move": "Re6",
+              "pv": [
+                "Re6",
+                "Rxd5",
+                "Rxe8",
+                "g5",
+                "fxg5",
+                "hxg5",
+                "Rc8",
+                "Ne5",
+                "h3",
+                "Rd2"
+              ],
+              "scoreCp": 98,
+              "mate": null,
+              "depth": 19,
+              "nodes": 1000071
+            }
+          ]
+        },
+        {
+          "fen": "3Rq3/1p5k/p1n3pp/P1BQ4/1P3P2/6P1/7P/7K b - - 0 41",
+          "turn": "black",
+          "nodeBudget": 1000000,
+          "candidates": [
+            {
+              "move": "Nxd8",
+              "pv": [
+                "Nxd8",
+                "Kg2",
+                "Qe2+",
+                "Bf2",
+                "Qe7",
+                "Kf3",
+                "Ne6",
+                "Bc5",
+                "Nxc5",
+                "Qxc5"
+              ],
+              "scoreCp": -240,
+              "mate": null,
+              "depth": 20,
+              "nodes": 1000357
+            },
+            {
+              "move": "Qxd8",
+              "pv": [
+                "Qxd8",
+                "Qf7+",
+                "Kh8",
+                "Qxg6",
+                "Qd5+",
+                "Kg1",
+                "h5",
+                "Qd6",
+                "Qf3",
+                "Qh6+"
+              ],
+              "scoreCp": -414,
+              "mate": null,
+              "depth": 20,
+              "nodes": 1000357
+            },
+            {
+              "move": "Qe1+",
+              "pv": [
+                "Qe1+",
+                "Kg2"
+              ],
+              "scoreCp": -583,
+              "mate": null,
+              "depth": 20,
+              "nodes": 1000357
+            }
+          ]
+        },
+        {
+          "fen": "3nq3/1p5k/p5pp/P1BQ4/1P3P2/6P1/7P/7K w - - 0 42",
+          "turn": "white",
+          "nodeBudget": 1000000,
+          "candidates": [
+            {
+              "move": "Kg2",
+              "pv": [
+                "Kg2",
+                "Qe2+",
+                "Bf2",
+                "Qe7",
+                "f5",
+                "Qe8",
+                "Kf3",
+                "Nc6",
+                "fxg6+",
+                "Kxg6"
+              ],
+              "scoreCp": 271,
+              "mate": null,
+              "depth": 21,
+              "nodes": 1000226
+            },
+            {
+              "move": "Kg1",
+              "pv": [
+                "Kg1",
+                "Nc6",
+                "Kf2",
+                "Kh8",
+                "g4",
+                "Qc8",
+                "Kg3",
+                "Qe8",
+                "Kf3",
+                "Qe1"
+              ],
+              "scoreCp": 254,
+              "mate": null,
+              "depth": 21,
+              "nodes": 1000226
+            },
+            {
+              "move": "Bd4",
+              "pv": [
+                "Bd4",
+                "Nc6"
+              ],
+              "scoreCp": 208,
+              "mate": null,
+              "depth": 21,
+              "nodes": 1000226
+            }
+          ]
+        }
+      ],
+      "finalFen": "3nq3/1p5k/p5pp/P1BQ4/1P3P2/6P1/7P/7K w - - 0 42",
+      "materialChange": 3,
+      "finalAssessment": {
+        "fen": "3nq3/1p5k/p5pp/P1BQ4/1P3P2/6P1/7P/7K w - - 0 42",
+        "turn": "white",
+        "nodeBudget": 3000000,
+        "candidates": [
+          {
+            "move": "Kg2",
+            "pv": [
+              "Kg2",
+              "Qe2+",
+              "Bf2",
+              "Qe8",
+              "Kf3",
+              "Nc6",
+              "Bc5",
+              "Kg7",
+              "g4",
+              "Kh8"
+            ],
+            "scoreCp": 301,
+            "mate": null,
+            "depth": 25,
+            "nodes": 3000392
+          },
+          {
+            "move": "Bd4",
+            "pv": [
+              "Bd4",
+              "Nc6",
+              "Bc3",
+              "h5",
+              "f5",
+              "Kh6",
+              "Qd3",
+              "Qf7",
+              "fxg6",
+              "Qxg6"
+            ],
+            "scoreCp": 258,
+            "mate": null,
+            "depth": 24,
+            "nodes": 3000392
+          },
+          {
+            "move": "f5",
+            "pv": [
+              "f5",
+              "Nc6",
+              "f6",
+              "g5",
+              "b5",
+              "axb5",
+              "a6",
+              "bxa6",
+              "f7",
+              "Qe1+"
+            ],
+            "scoreCp": 226,
+            "mate": null,
+            "depth": 24,
+            "nodes": 3000392
+          }
+        ]
+      }
+    },
+    {
+      "id": "king",
+      "kind": "positive",
+      "origin": "original-composition",
+      "fen": "r6q/8/8/8/8/8/5Q1N/k2K4 b - - 0 1",
+      "intendedMove": "Ra2",
+      "prompt": "Tìm đòn xiên trên cùng hàng. Vua có thể bảo vệ Xe không?",
+      "objective": "Vua hỗ trợ trong thế cờ ít quân",
+      "explanation": "Vua có thể bảo vệ Xe nếu nước bắt lại không đưa Vua vào ô bị tấn công. Hãy kiểm tra nước Hậu bắt Xe trước khi quyết định.",
+      "rootChecks": [
+        {
+          "fen": "r6q/8/8/8/8/8/5Q1N/k2K4 b - - 0 1",
+          "turn": "black",
+          "nodeBudget": 1000000,
+          "candidates": [
+            {
+              "move": "Qc3",
+              "pv": [
+                "Qc3",
+                "Nf3",
+                "Rd8+",
+                "Nd2",
+                "Qb3+",
+                "Ke1",
+                "Re8+",
+                "Qe2",
+                "Qg3+",
+                "Kd1"
+              ],
+              "scoreCp": 458,
+              "mate": null,
+              "depth": 20,
+              "nodes": 1000602
+            },
+            {
+              "move": "Rd8+",
+              "pv": [
+                "Rd8+",
+                "Ke1",
+                "Qc3+",
+                "Kf1",
+                "Qc1+",
+                "Kg2",
+                "Rd2",
+                "Nf1",
+                "Qc6+",
+                "Kg1"
+              ],
+              "scoreCp": 441,
+              "mate": null,
+              "depth": 20,
+              "nodes": 1000602
+            },
+            {
+              "move": "Ra2",
+              "pv": [
+                "Ra2",
+                "Qxa2+",
+                "Kxa2",
+                "Nf1",
+                "Qb2",
+                "Ke1",
+                "Qb1+",
+                "Ke2"
+              ],
+              "scoreCp": 441,
+              "mate": null,
+              "depth": 19,
+              "nodes": 1000602
+            }
+          ]
+        },
+        {
+          "fen": "r6q/8/8/8/8/8/5Q1N/k2K4 b - - 0 1",
+          "turn": "black",
+          "nodeBudget": 3000000,
+          "candidates": [
+            {
+              "move": "Qc3",
+              "pv": [
+                "Qc3",
+                "Nf3",
+                "Rd8+",
+                "Nd2",
+                "Qb3+",
+                "Ke1",
+                "Re8+",
+                "Qe2",
+                "Qg3+",
+                "Kd1"
+              ],
+              "scoreCp": 509,
+              "mate": null,
+              "depth": 23,
+              "nodes": 3000652
+            },
+            {
+              "move": "Rd8+",
+              "pv": [
+                "Rd8+",
+                "Ke1",
+                "Qc3+",
+                "Kf1",
+                "Qc1+",
+                "Kg2",
+                "Rd2",
+                "Nf1",
+                "Rxf2+",
+                "Kxf2"
+              ],
+              "scoreCp": 465,
+              "mate": null,
+              "depth": 22,
+              "nodes": 3000652
+            },
+            {
+              "move": "Ra2",
+              "pv": [
+                "Ra2",
+                "Qxa2+",
+                "Kxa2",
+                "Nf3",
+                "Kb3",
+                "Ke2",
+                "Kc4",
+                "Ke3",
+                "Qe8+",
+                "Kf4"
+              ],
+              "scoreCp": 456,
+              "mate": null,
+              "depth": 22,
+              "nodes": 3000652
+            }
+          ]
+        },
+        {
+          "fen": "r6q/8/8/8/8/8/5Q1N/k2K4 b - - 0 1",
+          "turn": "black",
+          "nodeBudget": 12000000,
+          "candidates": [
+            {
+              "move": "Ra2",
+              "pv": [
+                "Ra2",
+                "Qxa2+",
+                "Kxa2",
+                "Nf3",
+                "Qc3",
+                "Ke2",
+                "Kb2",
+                "Kf2",
+                "Kc2",
+                "Ke2"
+              ],
+              "scoreCp": null,
+              "mate": 21,
+              "depth": 37,
+              "nodes": 12000177
+            },
+            {
+              "move": "Qc3",
+              "pv": [
+                "Qc3",
+                "Nf3",
+                "Rd8+",
+                "Nd2",
+                "Qb3+",
+                "Ke1",
+                "Re8+",
+                "Qe2",
+                "Rxe2+",
+                "Kxe2"
+              ],
+              "scoreCp": null,
+              "mate": 28,
+              "depth": 37,
+              "nodes": 12000177
+            },
+            {
+              "move": "Rd8+",
+              "pv": [
+                "Rd8+",
+                "Ke2",
+                "Qb2+",
+                "Kf1",
+                "Qc1+",
+                "Kg2",
+                "Rd2",
+                "Nf1",
+                "Rxf2+",
+                "Kxf2"
+              ],
+              "scoreCp": null,
+              "mate": 28,
+              "depth": 37,
+              "nodes": 12000177
+            }
+          ]
+        }
+      ],
+      "reviewNote": "Deepened to 12 million nodes because the 3-million-node root did not pass the near-best-move gate.",
+      "attacker": "rook",
+      "landing": "a2",
+      "supporters": [
+        {
+          "square": "a1",
+          "piece": "king"
+        }
+      ],
+      "line": [
+        "Ra2",
+        "Qxa2+",
+        "Kxa2"
+      ],
+      "continuationChecks": [
+        {
+          "fen": "7q/8/8/8/8/8/r4Q1N/k2K4 w - - 1 2",
+          "turn": "white",
+          "nodeBudget": 1000000,
+          "candidates": [
+            {
+              "move": "Qxa2+",
+              "pv": [
+                "Qxa2+",
+                "Kxa2",
+                "Nf1",
+                "Kb3",
+                "Kd2",
+                "Qe8",
+                "Ne3",
+                "Kb4",
+                "Nc2+",
+                "Kc5"
+              ],
+              "scoreCp": -460,
+              "mate": null,
+              "depth": 20,
+              "nodes": 1000583
+            },
+            {
+              "move": "Qe3",
+              "pv": [
+                "Qe3",
+                "Qb2",
+                "Qd3",
+                "Qxh2",
+                "Qd4+",
+                "Kb1",
+                "Qd3+",
+                "Qc2+",
+                "Ke1",
+                "Rb2"
+              ],
+              "scoreCp": null,
+              "mate": -16,
+              "depth": 20,
+              "nodes": 1000583
+            },
+            {
+              "move": "Qg3",
+              "pv": [
+                "Qg3",
+                "Qxh2",
+                "Qc3+",
+                "Qb2",
+                "Qxb2+",
+                "Rxb2",
+                "Ke1",
+                "Kb1",
+                "Kf1",
+                "Kc2"
+              ],
+              "scoreCp": null,
+              "mate": -15,
+              "depth": 20,
+              "nodes": 1000583
+            }
+          ]
+        },
+        {
+          "fen": "7q/8/8/8/8/8/Q6N/k2K4 b - - 0 2",
+          "turn": "black",
+          "nodeBudget": 1000000,
+          "candidates": [
+            {
+              "move": "Kxa2",
+              "pv": [
+                "Kxa2",
+                "Nf3",
+                "Kb3",
+                "Ke2",
+                "Kc4",
+                "Ke3",
+                "Kd5",
+                "Kf4",
+                "Qf8+",
+                "Kg4"
+              ],
+              "scoreCp": 456,
+              "mate": null,
+              "depth": 24,
+              "nodes": 1000280
+            }
+          ]
+        },
+        {
+          "fen": "7q/8/8/8/8/8/k6N/3K4 w - - 0 3",
+          "turn": "white",
+          "nodeBudget": 1000000,
+          "candidates": [
+            {
+              "move": "Nf1",
+              "pv": [
+                "Nf1",
+                "Kb3",
+                "Kd2",
+                "Kb4",
+                "Ne3",
+                "Qe8",
+                "Kd3",
+                "Kc5",
+                "Nf5",
+                "Kd5"
+              ],
+              "scoreCp": -439,
+              "mate": null,
+              "depth": 20,
+              "nodes": 1000311
+            },
+            {
+              "move": "Nf3",
+              "pv": [
+                "Nf3",
+                "Kb3",
+                "Kd2",
+                "Kc4",
+                "Ke3",
+                "Kc5",
+                "Kd3",
+                "Kd5",
+                "Nd2",
+                "Qd8"
+              ],
+              "scoreCp": -442,
+              "mate": null,
+              "depth": 20,
+              "nodes": 1000311
+            },
+            {
+              "move": "Ke2",
+              "pv": [
+                "Ke2",
+                "Qxh2+",
+                "Ke3",
+                "Qh4",
+                "Kf3",
+                "Kb3",
+                "Ke3",
+                "Kc2",
+                "Ke2",
+                "Kc3"
+              ],
+              "scoreCp": -711,
+              "mate": null,
+              "depth": 20,
+              "nodes": 1000311
+            }
+          ]
+        }
+      ],
+      "finalFen": "7q/8/8/8/8/8/k6N/3K4 w - - 0 3",
+      "materialChange": 4,
+      "finalAssessment": {
+        "fen": "7q/8/8/8/8/8/k6N/3K4 w - - 0 3",
+        "turn": "white",
+        "nodeBudget": 3000000,
+        "candidates": [
+          {
+            "move": "Nf1",
+            "pv": [
+              "Nf1",
+              "Kb3"
+            ],
+            "scoreCp": -626,
+            "mate": null,
+            "depth": 26,
+            "nodes": 3000365
+          },
+          {
+            "move": "Nf3",
+            "pv": [
+              "Nf3",
+              "Qe8",
+              "Ng1",
+              "Kb3",
+              "Ne2",
+              "Qd7+",
+              "Ke1",
+              "Kc2",
+              "Kf2",
+              "Kd3"
+            ],
+            "scoreCp": -577,
+            "mate": null,
+            "depth": 25,
+            "nodes": 3000365
+          },
+          {
+            "move": "Ke2",
+            "pv": [
+              "Ke2",
+              "Qxh2+",
+              "Kf3",
+              "Qh4",
+              "Ke3",
+              "Kb3",
+              "Kf3",
+              "Kc4",
+              "Ke3",
+              "Qg4"
+            ],
+            "scoreCp": null,
+            "mate": -9,
+            "depth": 25,
+            "nodes": 3000365
+          }
+        ]
+      }
+    },
+    {
+      "id": "contrast",
+      "kind": "negative",
+      "origin": "modified-comparison",
+      "derivedFrom": "rook",
+      "change": "White rook moved from a1 to b1; not a recorded game position.",
+      "fen": "3n1rn1/pppkq3/5b2/1P1p1Pp1/P2P4/2PQ1NN1/5K2/1RB5 w - - 1 22",
+      "intendedMove": "Ba3",
+      "prompt": "Nếu Xe ở b1 thay vì a1, Ba3 còn là đòn xiên có lợi không? Vì sao?",
+      "objective": "Nhận ra đòn xiên không hiệu quả",
+      "explanation": "Xe b1 không bảo vệ a3. Sau Ba3, Hậu có thể bắt Tượng bằng Qxa3. Hình dạng đòn xiên vẫn còn, nhưng quân hỗ trợ đã thay đổi.",
+      "rootChecks": [
+        {
+          "fen": "3n1rn1/pppkq3/5b2/1P1p1Pp1/P2P4/2PQ1NN1/5K2/1RB5 w - - 1 22",
+          "turn": "white",
+          "nodeBudget": 1000000,
+          "candidates": [
+            {
+              "move": "Bd2",
+              "pv": [
+                "Bd2",
+                "Kc8",
+                "Re1",
+                "Qh7",
+                "Rh1",
+                "Qe7",
+                "Kg2",
+                "Nf7",
+                "Re1",
+                "Qd8"
+              ],
+              "scoreCp": 86,
+              "mate": null,
+              "depth": 18,
+              "nodes": 1000063
+            },
+            {
+              "move": "Ra1",
+              "pv": [
+                "Ra1",
+                "Qg7"
+              ],
+              "scoreCp": 45,
+              "mate": null,
+              "depth": 18,
+              "nodes": 1000063
+            },
+            {
+              "move": "Rb2",
+              "pv": [
+                "Rb2",
+                "Qa3",
+                "Ne5+",
+                "Kc8",
+                "Rc2",
+                "Qxa4",
+                "Re2",
+                "a6",
+                "bxa6",
+                "bxa6"
+              ],
+              "scoreCp": 38,
+              "mate": null,
+              "depth": 17,
+              "nodes": 1000063
+            }
+          ]
+        },
+        {
+          "fen": "3n1rn1/pppkq3/5b2/1P1p1Pp1/P2P4/2PQ1NN1/5K2/1RB5 w - - 1 22",
+          "turn": "white",
+          "nodeBudget": 3000000,
+          "candidates": [
+            {
+              "move": "Bd2",
+              "pv": [
+                "Bd2",
+                "Kc8",
+                "Re1",
+                "Qh7",
+                "Kg2",
+                "g4",
+                "Ng5",
+                "Bxg5",
+                "Bxg5",
+                "Qh3+"
+              ],
+              "scoreCp": 78,
+              "mate": null,
+              "depth": 21,
+              "nodes": 3000419
+            },
+            {
+              "move": "c4",
+              "pv": [
+                "c4",
+                "dxc4"
+              ],
+              "scoreCp": 41,
+              "mate": null,
+              "depth": 21,
+              "nodes": 3000419
+            },
+            {
+              "move": "Rb2",
+              "pv": [
+                "Rb2",
+                "Qa3",
+                "Rc2",
+                "Qxa4",
+                "Ne5+",
+                "Kc8",
+                "Re2",
+                "Re8",
+                "Ng4",
+                "Rxe2+"
+              ],
+              "scoreCp": 38,
+              "mate": null,
+              "depth": 20,
+              "nodes": 3000419
+            }
+          ]
+        }
+      ],
+      "attacker": "bishop",
+      "landing": "a3",
+      "supporters": [],
+      "line": [
+        "Ba3",
+        "Qxa3",
+        "Ne5+",
+        "Kc8"
+      ],
+      "continuationChecks": [
+        {
+          "fen": "3n1rn1/pppkq3/5b2/1P1p1Pp1/P2P4/B1PQ1NN1/5K2/1R6 b - - 2 22",
+          "turn": "black",
+          "nodeBudget": 1000000,
+          "candidates": [
+            {
+              "move": "Qxa3",
+              "pv": [
+                "Qxa3",
+                "Re1",
+                "Kc8",
+                "Kg2",
+                "Qxa4",
+                "Ne5",
+                "Re8",
+                "Qb1",
+                "Bxe5",
+                "dxe5"
+              ],
+              "scoreCp": 339,
+              "mate": null,
+              "depth": 21,
+              "nodes": 1000358
+            },
+            {
+              "move": "Qg7",
+              "pv": [
+                "Qg7",
+                "Bxf8",
+                "Qxf8",
+                "Ne5+",
+                "Kc8",
+                "Kg2",
+                "Nh6",
+                "Rh1",
+                "Ndf7",
+                "Nxf7"
+              ],
+              "scoreCp": -400,
+              "mate": null,
+              "depth": 21,
+              "nodes": 1000358
+            },
+            {
+              "move": "Qf7",
+              "pv": [
+                "Qf7",
+                "Bxf8",
+                "Qxf8",
+                "Ne5+",
+                "Kc8",
+                "Kg2",
+                "Nh6",
+                "Re1",
+                "Qe7",
+                "Re2"
+              ],
+              "scoreCp": -409,
+              "mate": null,
+              "depth": 21,
+              "nodes": 1000358
+            }
+          ]
+        },
+        {
+          "fen": "3n1rn1/pppk4/5b2/1P1p1Pp1/P2P4/q1PQ1NN1/5K2/1R6 w - - 0 23",
+          "turn": "white",
+          "nodeBudget": 1000000,
+          "candidates": [
+            {
+              "move": "Ne5+",
+              "pv": [
+                "Ne5+",
+                "Kc8",
+                "Kg1",
+                "Qd6",
+                "Re1",
+                "Re8",
+                "Qe2",
+                "Nf7",
+                "Qh5",
+                "Rf8"
+              ],
+              "scoreCp": -357,
+              "mate": null,
+              "depth": 19,
+              "nodes": 1000534
+            },
+            {
+              "move": "Re1",
+              "pv": [
+                "Re1",
+                "Kc8",
+                "Kg1",
+                "Be7",
+                "a5",
+                "Bd6",
+                "Ne5",
+                "Nf6",
+                "a6",
+                "g4"
+              ],
+              "scoreCp": -360,
+              "mate": null,
+              "depth": 19,
+              "nodes": 1000534
+            },
+            {
+              "move": "a5",
+              "pv": [
+                "a5",
+                "Qxa5",
+                "Ne5+",
+                "Kc8",
+                "Ng4",
+                "Bh8",
+                "Kg2",
+                "Nf6",
+                "Ne5",
+                "Re8"
+              ],
+              "scoreCp": -373,
+              "mate": null,
+              "depth": 18,
+              "nodes": 1000534
+            }
+          ]
+        },
+        {
+          "fen": "3n1rn1/pppk4/5b2/1P1pNPp1/P2P4/q1PQ2N1/5K2/1R6 b - - 1 23",
+          "turn": "black",
+          "nodeBudget": 1000000,
+          "candidates": [
+            {
+              "move": "Kc8",
+              "pv": [
+                "Kc8",
+                "Kg2",
+                "Re8",
+                "Ng4",
+                "Bxd4",
+                "Rd1",
+                "Bh8",
+                "a5",
+                "Nf6",
+                "Nxf6"
+              ],
+              "scoreCp": 369,
+              "mate": null,
+              "depth": 20,
+              "nodes": 1000448
+            },
+            {
+              "move": "Bxe5",
+              "pv": [
+                "Bxe5",
+                "dxe5",
+                "Kc8",
+                "Kg1",
+                "Qxa4",
+                "Rb4",
+                "Qa2",
+                "Nh5",
+                "Kb8",
+                "Ng7"
+              ],
+              "scoreCp": 308,
+              "mate": null,
+              "depth": 20,
+              "nodes": 1000448
+            },
+            {
+              "move": "Ke8",
+              "pv": [
+                "Ke8",
+                "Ng6",
+                "Rf7",
+                "Re1+",
+                "Kd7",
+                "Ne5+",
+                "Bxe5",
+                "dxe5",
+                "Kc8",
+                "Kg2"
+              ],
+              "scoreCp": 189,
+              "mate": null,
+              "depth": 19,
+              "nodes": 1000448
+            }
+          ]
+        },
+        {
+          "fen": "2kn1rn1/ppp5/5b2/1P1pNPp1/P2P4/q1PQ2N1/5K2/1R6 w - - 2 24",
+          "turn": "white",
+          "nodeBudget": 1000000,
+          "candidates": [
+            {
+              "move": "Kg1",
+              "pv": [
+                "Kg1",
+                "Re8",
+                "Ng4",
+                "Bh8",
+                "a5",
+                "Nf6",
+                "Nxf6",
+                "Bxf6",
+                "a6",
+                "Qd6"
+              ],
+              "scoreCp": -371,
+              "mate": null,
+              "depth": 19,
+              "nodes": 1000530
+            },
+            {
+              "move": "Kg2",
+              "pv": [
+                "Kg2",
+                "Qa2+"
+              ],
+              "scoreCp": -396,
+              "mate": null,
+              "depth": 19,
+              "nodes": 1000530
+            },
+            {
+              "move": "Re1",
+              "pv": [
+                "Re1",
+                "Bxe5"
+              ],
+              "scoreCp": -412,
+              "mate": null,
+              "depth": 19,
+              "nodes": 1000530
+            }
+          ]
+        }
+      ],
+      "finalFen": "2kn1rn1/ppp5/5b2/1P1pNPp1/P2P4/q1PQ2N1/5K2/1R6 w - - 2 24",
+      "materialChange": -3,
+      "finalAssessment": {
+        "fen": "2kn1rn1/ppp5/5b2/1P1pNPp1/P2P4/q1PQ2N1/5K2/1R6 w - - 2 24",
+        "turn": "white",
+        "nodeBudget": 3000000,
+        "candidates": [
+          {
+            "move": "Kg1",
+            "pv": [
+              "Kg1",
+              "Nf7",
+              "Nc6",
+              "Nd6",
+              "Nxa7+",
+              "Kd7",
+              "b6",
+              "Qxa4",
+              "Nh5",
+              "Re8"
+            ],
+            "scoreCp": -379,
+            "mate": null,
+            "depth": 21,
+            "nodes": 3000275
+          },
+          {
+            "move": "a5",
+            "pv": [
+              "a5",
+              "Nh6",
+              "Re1",
+              "Bxe5",
+              "dxe5",
+              "Ne6",
+              "f6",
+              "Ng4+",
+              "Kf3",
+              "Nh2+"
+            ],
+            "scoreCp": -392,
+            "mate": null,
+            "depth": 21,
+            "nodes": 3000275
+          },
+          {
+            "move": "Re1",
+            "pv": [
+              "Re1",
+              "Bxe5",
+              "dxe5",
+              "Ne6",
+              "Qxd5",
+              "Nf4",
+              "Qf3",
+              "Qxa4",
+              "Kg1",
+              "Qxb5"
+            ],
+            "scoreCp": -405,
+            "mate": null,
+            "depth": 21,
+            "nodes": 3000275
+          }
+        ]
+      }
+    }
+  ]
+}

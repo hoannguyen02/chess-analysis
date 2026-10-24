@@ -1,0 +1,86 @@
+[
+  {
+    "archive": "Lasker",
+    "url": "https://www.pgnmentor.com/players/Lasker.zip",
+    "sha256": "ee09c8284e60dfc4df43b19cec3a9b9bfabd11f59c1099da3613b7a160b0688c",
+    "bytes": 576410
+  },
+  {
+    "archive": "Anderssen",
+    "url": "https://www.pgnmentor.com/players/Anderssen.zip",
+    "sha256": "97927f56a2f85a01d66e2f747fc86aa61a1aaab3de45ffb8d44b3eee640cffc0",
+    "bytes": 411393
+  },
+  {
+    "archive": "Blackburne",
+    "url": "https://www.pgnmentor.com/players/Blackburne.zip",
+    "sha256": "a8220aa740d6d27db4b5978df741ecaa10ffa2efa27e071000129ece01415723",
+    "bytes": 500992
+  },
+  {
+    "archive": "Nimzowitsch",
+    "url": "https://www.pgnmentor.com/players/Nimzowitsch.zip",
+    "sha256": "4c395f1f0201cdb668697c55c6b99a5d0eee6c20953eec325ea443ad12da62b2",
+    "bytes": 345596
+  },
+  {
+    "archive": "Tarrasch",
+    "url": "https://www.pgnmentor.com/players/Tarrasch.zip",
+    "sha256": "fb9211b29538c1ce1665cfd65839ba9d4e06a39e59ecfa431f9eade0e2e1b291",
+    "bytes": 484288
+  },
+  {
+    "archive": "Teichmann",
+    "url": "https://www.pgnmentor.com/players/Teichmann.zip",
+    "sha256": "5c7ae2e3d9e129b3b6056d45ad61815da3e074633a0b2b037654772a274066b7",
+    "bytes": 338708
+  },
+  {
+    "archive": "Schlechter",
+    "url": "https://www.pgnmentor.com/players/Schlechter.zip",
+    "sha256": "a265cea84cf80bbd7098193e4225387ba3cb104923bc18564c53d4a6a3864724",
+    "bytes": 466497
+  },
+  {
+    "archive": "Janowski",
+    "url": "https://www.pgnmentor.com/players/Janowski.zip",
+    "sha256": "aa178ee2414b9d03c289f483eac702d16c656a67828fb7309fc64d10903adf44",
+    "bytes": 578631
+  },
+  {
+    "archive": "Bogoljubow",
+    "url": "https://www.pgnmentor.com/players/Bogoljubow.zip",
+    "sha256": "1de8fa5dfbeb5e0d60518feab49666aa9f8ba2ae9de9c1a2433f9d1b475a414e",
+    "bytes": 676135
+  },
+  {
+    "archive": "Steinitz",
+    "url": "https://www.pgnmentor.com/players/Steinitz.zip",
+    "sha256": "8b5fc26da97d4937cb4634a77a355f43226fc9f7e0989dd98de36ffd1144cceb",
+    "bytes": 382472
+  },
+  {
+    "archive": "Pillsbury",
+    "url": "https://www.pgnmentor.com/players/Pillsbury.zip",
+    "sha256": "7cad875b46a45d439ca3725e6bbdb2c07a56a030b08838853a879de7dc4f0ce4",
+    "bytes": 276146
+  },
+  {
+    "archive": "Maroczy",
+    "url": "https://www.pgnmentor.com/players/Maroczy.zip",
+    "sha256": "c7fa4331e5f1f991edcf386f5fb79df5f04fd0a24f6fdcc07558a63e843ccf4b",
+    "bytes": 480079
+  },
+  {
+    "archive": "Larsen",
+    "url": "https://www.pgnmentor.com/players/Larsen.zip",
+    "sha256": "1abaf5765ea688adb445e35d6bfbc340c6013aa4945774c823a94b38847ad34b",
+    "bytes": 1655074
+  },
+  {
+    "archive": "Ljubojevic",
+    "url": "https://www.pgnmentor.com/players/Ljubojevic.zip",
+    "sha256": "bc137126afa60f12f80653efd2019ec7b417a9243e92da30fa33681828ff8124",
+    "bytes": 1277346
+  }
+]

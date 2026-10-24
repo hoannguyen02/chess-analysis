@@ -1,0 +1,632 @@
+.practice {
+  margin-top: 18px;
+}
+.categories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 18px 0 24px;
+}
+.categories button {
+  border: 1px solid #b9c9ad;
+  border-radius: 20px;
+  padding: 8px 14px;
+  background: #edf3e3;
+  font-size: 14px;
+  font-weight: 600;
+}
+.categories span {
+  white-space: nowrap;
+  font-weight: 400;
+}
+.category {
+  margin-top: 28px;
+  scroll-margin-top: 90px;
+}
+.category h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.category > p {
+  font-size: 14px;
+}
+.exercises {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 14px;
+}
+.exercise {
+  background: #fff;
+  border: 1px solid #dde4d9;
+  border-radius: 12px;
+  padding: 18px;
+  min-width: 0;
+}
+.exercise h4 {
+  font-weight: 700;
+  font-size: 17px;
+  margin: 8px 0;
+}
+.exercise p {
+  font-size: 14px;
+  line-height: 1.65;
+}
+.exercise .kind,
+.exercise .source {
+  color: #606957;
+  font-size: 12px;
+}
+.exercise .source {
+  margin-top: 12px;
+}
+.open {
+  display: inline-block;
+  margin-top: 14px;
+  color: #355b29;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.solution {
+  margin-top: 16px;
+  border-top: 1px solid #e4e9df;
+  padding-top: 12px;
+}
+.solution summary {
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+}
+.solution p {
+  margin-top: 10px;
+}
+.note,
+.mixed {
+  margin-top: 20px;
+  font-size: 13px;
+}
+.note a {
+  text-decoration: underline;
+}
+.notationLegend summary {
+  cursor: pointer;
+}
+.notationLegend summary:focus-visible {
+  outline: 3px solid #b78725;
+  outline-offset: 4px;
+}
+.notationLegend p {
+  margin-top: 8px;
+}
+.practice a:focus-visible,
+.practice button:focus-visible,
+.solution summary:focus-visible {
+  outline: 3px solid #b78725;
+  outline-offset: 4px;
+}
+@media (max-width: 640px) {
+  .exercises {
+    grid-template-columns: 1fr;
+  }
+  .exercise {
+    padding: 14px;
+  }
+}
+
+.categories button {
+  cursor: pointer;
+  text-align: left;
+}
+.categories button[aria-pressed='true'] {
+  background: #355b29;
+  border-color: #355b29;
+  color: #fff;
+}
+.pagination {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 18px;
+  font-size: 14px;
+}
+.pagination > div {
+  display: flex;
+  gap: 8px;
+}
+.pagination button {
+  padding: 8px 12px;
+  border: 1px solid #b9c9ad;
+  border-radius: 8px;
+  background: #fff;
+  cursor: pointer;
+}
+.pagination button:disabled {
+  opacity: 0.45;
+  cursor: default;
+}
+.trainerAnchor {
+  scroll-margin-top: 90px;
+  margin-top: 22px;
+}
+.trainer {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 22px;
+  margin-top: 12px;
+  padding: 18px;
+  border: 1px solid #b9c9ad;
+  border-radius: 12px;
+  background: #fff;
+}
+.board {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  aspect-ratio: 1;
+}
+.trainerInfo {
+  min-width: 0;
+}
+.trainerInfo h4,
+.libraryTitle {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+.trainerInfo p {
+  font-size: 14px;
+  line-height: 1.6;
+}
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  margin: 12px 0;
+}
+.trainer button,
+.controls button,
+.controls a {
+  border: 1px solid #b9c9ad;
+  border-radius: 8px;
+  padding: 8px 12px;
+  background: #edf3e3;
+  font-size: 14px;
+}
+.trainer button:disabled,
+.controls button:disabled {
+  opacity: 0.45;
+  cursor: default;
+}
+.controls button[aria-pressed='true'] {
+  background: #355b29;
+  color: white;
+}
+.moveFeedback {
+  position: absolute;
+  width: 12.5%;
+  height: 12.5%;
+  z-index: 5;
+  pointer-events: none;
+}
+.moveFeedback > span {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  display: grid;
+  place-items: center;
+  width: clamp(18px, 3vw, 24px);
+  height: clamp(18px, 3vw, 24px);
+  border: 2px solid white;
+  border-radius: 50%;
+  background: #438138;
+  color: white;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+.moveFeedback[data-kind='error'] > span {
+  background: #b42318;
+}
+.moveFeedback[data-kind='retry'] > span {
+  background: #946200;
+}
+.feedbackAnnouncement {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+.hintFeedback:not(:empty) {
+  margin-top: 12px;
+  color: #263f36;
+  font-size: 14px;
+  line-height: 1.5;
+}
+.moves {
+  margin-top: 12px;
+  overflow-wrap: anywhere;
+}
+.explanation {
+  margin-top: 14px;
+  padding: 12px;
+  background: #edf3e3;
+  border-radius: 8px;
+}
+.libraryTitle {
+  margin-top: 24px;
+}
+@media (max-width: 760px) {
+  .trainer {
+    grid-template-columns: minmax(0, 1fr);
+    padding: 12px;
+  }
+  .board {
+    margin: auto;
+  }
+}
+
+.toolbar,
+.sessionActions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.sessionActions > button {
+  border: 1px solid #b9c9ad;
+  border-radius: 8px;
+  padding: 8px 12px;
+  background: #edf3e3;
+  font-size: 14px;
+}
+.sessionActions > button[aria-pressed='true'] {
+  background: #355b29;
+  color: #fff;
+}
+.expanded {
+  --practice-coordinate-scale: 1.6;
+  --practice-coordinate-weight: 700;
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  width: 100%;
+  height: 100dvh;
+  margin: 0;
+  padding: 16px;
+  background: #f5f7f1;
+  overflow: auto;
+  overscroll-behavior: contain;
+}
+.expanded .toolbar {
+  position: relative;
+  z-index: 2;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+.expanded .trainer {
+  grid-template-columns: minmax(0, 1.6fr) minmax(280px, 1fr);
+  max-width: 1500px;
+  margin: 8px auto 0;
+}
+/* Leave room for the session toolbar, move navigation and wrapped actions. */
+.expanded .board,
+.expanded .moveNavigation,
+.expanded .boardActions,
+.expanded .historyNote {
+  max-width: min(900px, max(200px, calc(100dvh - 280px)));
+  margin-left: auto;
+  margin-right: auto;
+}
+.expanded .boardActions {
+  justify-content: center;
+  gap: 6px;
+  margin-top: 6px;
+  margin-bottom: 0;
+}
+.expanded .boardActions button,
+.expanded .boardActions a {
+  padding: 6px 9px;
+  font-size: 13px;
+}
+.expanded .moveNavigation {
+  margin-top: 6px;
+}
+.expanded .historyNote {
+  text-align: center;
+}
+@media (max-width: 760px) {
+  .expanded {
+    padding: 8px;
+  }
+  .expanded .trainer {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .expanded .board,
+  .expanded .moveNavigation,
+  .expanded .boardActions,
+  .expanded .historyNote {
+    max-width: 500px;
+  }
+}
+
+.titleRow {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+.titleRow h4 {
+  flex: 1;
+}
+.titleRow button {
+  flex-shrink: 0;
+  min-width: 44px;
+  min-height: 44px;
+  display: grid;
+  place-items: center;
+  background: transparent;
+}
+
+.filterPanel {
+  display: grid;
+  gap: 16px;
+  padding: 18px;
+  border: 1px solid #dde4d9;
+  border-radius: 14px;
+  background: #fff;
+}
+.filterGroup {
+  display: grid;
+  grid-template-columns: 72px minmax(0, 1fr);
+  align-items: start;
+  gap: 12px;
+}
+.filterPanel .filterLabel {
+  margin: 0;
+  padding-top: 12px;
+  color: #606957;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 20px;
+}
+.levels {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0;
+}
+.levels button,
+.emptyLevel button {
+  padding: 8px 14px;
+  min-height: 44px;
+  border: 1px solid #b9c9ad;
+  border-radius: 8px;
+  background: white;
+  font-size: 14px;
+  cursor: pointer;
+}
+.levels button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 8px 12px;
+  color: #243b35;
+  font-weight: 600;
+  line-height: 1.4;
+  white-space: nowrap;
+  border-color: #dde4d9;
+}
+.levels button:hover {
+  background: #f0f4eb;
+  border-color: #829b74;
+}
+.levels button[aria-pressed='true'] {
+  background: #355b29;
+  color: white;
+  border-color: #355b29;
+}
+.levels span {
+  min-width: 24px;
+  padding: 2px 6px;
+  border-radius: 5px;
+  background: #f0f3ed;
+  color: #606957;
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 1.5;
+  text-align: center;
+}
+.levels button[aria-pressed='true'] span {
+  background: #ffffff26;
+  color: #fff;
+}
+@media (max-width: 640px) {
+  .filterPanel {
+    padding: 14px;
+    gap: 14px;
+  }
+  .filterGroup {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 8px;
+  }
+  .filterPanel .filterLabel {
+    padding-top: 0;
+  }
+  .levels {
+    gap: 6px;
+  }
+}
+.levelHelp {
+  font-size: 13px;
+  color: #606957;
+  margin-top: 10px;
+}
+.levelBadge {
+  display: inline-block;
+  margin-left: 8px;
+  padding: 2px 8px;
+  border-radius: 6px;
+  border: 1px solid #b9c9ad;
+  background: #edf3e3;
+  color: #355b29;
+  font-size: 12px;
+  font-weight: 700;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+.emptyLevel {
+  margin-top: 22px;
+  padding: 24px;
+  background: white;
+  border: 1px solid #dde4d9;
+  border-radius: 12px;
+}
+.emptyLevel button {
+  margin-top: 12px;
+}
+
+.explorationSelect {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin-top: 16px;
+}
+.explorationSelect select {
+  max-width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #bccdad;
+  border-radius: 8px;
+  background: white;
+  color: #263f36;
+}
+.explorationMoves {
+  max-height: 300px;
+  overflow-y: auto;
+  padding: 4px;
+}
+
+.exercise .kind {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.kind .levelBadge {
+  flex-shrink: 0;
+  margin-left: 0;
+}
+.gameCaption {
+  min-width: 0;
+  max-width: 32ch;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.trainerInfo .trainerCaption {
+  max-width: min(100%, 48ch);
+  margin-top: 4px;
+  color: #606957;
+  font-size: 13px;
+}
+
+.moveNavigation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  max-width: 500px;
+  margin-top: 8px;
+  font-size: 13px;
+  color: #606957;
+}
+.moveNavigation button {
+  display: grid;
+  place-items: center;
+  padding: 6px;
+}
+.historyNote {
+  margin-top: 6px;
+  font-size: 12px;
+  color: #606957;
+}
+
+.controls.iconActions {
+  flex-wrap: nowrap;
+  justify-content: center;
+  gap: 6px;
+  max-width: 500px;
+}
+.controls.iconActions button,
+.controls.iconActions a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 36px;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+}
+.expanded .iconActions {
+  max-width: min(900px, max(200px, calc(100dvh - 280px)));
+}
+@media (max-width: 760px) {
+  .expanded .iconActions {
+    max-width: 500px;
+  }
+}
+
+.titleRow h4 {
+  min-width: 0;
+}
+.titleRow > .levelBadge {
+  flex-shrink: 0;
+  margin-left: 0;
+}
+
+.decisionControls button {
+  min-height: 44px;
+}
+
+.brandedTrainerInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.practiceBrand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-top: auto;
+  padding: 20px 0 12px;
+  color: #f6a71f;
+  font-size: clamp(18px, 2vw, 24px);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+.practiceBrand img {
+  width: 60px;
+  height: 50px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+@media (max-width: 760px) {
+  .practiceBrand {
+    padding: 12px 0 4px;
+  }
+  .practiceBrand img {
+    width: 48px;
+    height: 40px;
+  }
+}
