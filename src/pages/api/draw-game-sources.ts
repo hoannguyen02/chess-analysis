@@ -1,10 +1,11 @@
+import { requirePracticeAccess } from '@/lib/server/practice-access';
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
-  res.setHeader('X-Robots-Tag', 'noindex, nofollow');
+  if (!requirePracticeAccess(req, res)) return;
   if (req.method !== 'GET') {
     res.setHeader('Allow', 'GET');
     res.status(405).end();

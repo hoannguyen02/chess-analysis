@@ -157,3 +157,31 @@
     max-height: 220px;
   }
 }
+
+.info .gameCaption {
+  max-width: min(100%, 48ch);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.gameNavigation {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin-left: auto;
+}
+.gameNavigation span {
+  font-size: 13px;
+  white-space: nowrap;
+}
+@media (max-width: 640px) {
+  .header {
+    flex-wrap: wrap;
+  }
+  .gameNavigation {
+    order: 3;
+    width: 100%;
+  }
+}

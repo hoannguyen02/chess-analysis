@@ -39,7 +39,7 @@ export default function TournamentGuide() {
             ← Góc học tập · Cờ vua
           </Link>
           <header className={`${styles.hero} ${styles.guideHero}`}>
-            <p className={styles.eyebrow}>LIMA CHESS · TÀI LIỆU THAM KHẢO</p>
+            <p className={styles.eyebrow}>LIMA Chess · TÀI LIỆU THAM KHẢO</p>
             <h1>Cẩm nang thi đấu cờ vua</h1>
             <p className={styles.intro}>
               Chuẩn bị trước giải, nắm rõ luật và xử lý tình huống tại bàn đấu.

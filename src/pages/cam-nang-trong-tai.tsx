@@ -1,7 +1,7 @@
+import styles from '@/styles/ArbiterGuide.module.css';
 import type { GetStaticProps } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
-import styles from '@/styles/ArbiterGuide.module.css';
 
 const laws = 'https://handbook.fide.com/chapter/e012023';
 const manual =
@@ -270,7 +270,7 @@ export default function ArbiterGuide() {
             ← Góc học tập · Cờ vua
           </Link>
           <header className={styles.header}>
-            <p className={styles.eyebrow}>LIMA CHESS · DÀNH CHO TRỌNG TÀI</p>
+            <p className={styles.eyebrow}>LIMA Chess · DÀNH CHO TRỌNG TÀI</p>
             <h1>Cẩm nang trọng tài cờ vua</h1>
             <p>
               Đọc trước giải, tra cứu khi cần xử lý tình huống. Tập trung vào

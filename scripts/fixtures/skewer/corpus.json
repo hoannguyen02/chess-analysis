@@ -1,0 +1,57 @@
+[
+  {
+    "archive": "Alekhine.pgn",
+    "sha256": "d3fd8dcd9fb308d7636856c6538b386191f87738d8908ebe85fa064f48b5a8a0",
+    "source": "https://www.pgnmentor.com/players/Alekhine.zip"
+  },
+  {
+    "archive": "Anand.pgn",
+    "sha256": "3f2aa841ebdfffb33ba81f3a46ab97987efb06d29b8b4cda635f35a2240c7f9a",
+    "source": "https://www.pgnmentor.com/players/Anand.zip"
+  },
+  {
+    "archive": "Capablanca.pgn",
+    "sha256": "fb5d46cd1ce78665b2d2ea3df03b5bbea72b6ddb643a0c930f66a686a8723a8a",
+    "source": "https://www.pgnmentor.com/players/Capablanca.zip"
+  },
+  {
+    "archive": "Carlsen.pgn",
+    "sha256": "ba4591237a43c27fa19a9b3539ba5ce136ea93b65a9800418865b1d0a8090853",
+    "source": "https://www.pgnmentor.com/players/Carlsen.zip"
+  },
+  {
+    "archive": "Fischer.pgn",
+    "sha256": "1d8afba5a95ed42588e3714af173f8dcf2cd56e06c9814373aa773064e53edf3",
+    "source": "https://www.pgnmentor.com/players/Fischer.zip"
+  },
+  {
+    "archive": "Karpov.pgn",
+    "sha256": "57586ab136c38ac02bf9b745a037533ffbad0aa252e4f667632a3e7b3bc91a13",
+    "source": "https://www.pgnmentor.com/players/Karpov.zip"
+  },
+  {
+    "archive": "Kasparov.pgn",
+    "sha256": "02d021df5ea2b2896f89ec752eb0f9db8af61f2726a6d4e75a7bb1ced9aa9a80",
+    "source": "https://www.pgnmentor.com/players/Kasparov.zip"
+  },
+  {
+    "archive": "Tal.pgn",
+    "sha256": "da7d473f53ac933c3a14ca4aff872bc50fe64385234f3635094cc500c0b0ad59",
+    "source": "https://www.pgnmentor.com/players/Tal.zip"
+  },
+  {
+    "archive": "Bronstein.pgn",
+    "sha256": "881f83eb2e6efb3c233ec62261b54f493dc5821b962384352e1403e8fcf42ae0",
+    "source": "https://www.pgnmentor.com/players/Bronstein.zip"
+  },
+  {
+    "archive": "Keres.pgn",
+    "sha256": "b67e137b27e05d0a3921e98f01e2be34e01a2b3206bdbb35889b797824932822",
+    "source": "https://www.pgnmentor.com/players/Keres.zip"
+  },
+  {
+    "archive": "Spassky.pgn",
+    "sha256": "9c495f1f8cb252d7a543d2d3ec07d9a17e0ac05c0829c4780fb1fef992edcf1b",
+    "source": "https://www.pgnmentor.com/players/Spassky.zip"
+  }
+]

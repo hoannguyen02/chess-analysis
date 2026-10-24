@@ -7,6 +7,12 @@ export type MoveInput =
   | string
   | { from: Square; to: Square; promotion?: PromotionPiece };
 
+export function evaluateDrawDecision(exercise: DrawExercise, option: string) {
+  if (!exercise.decision?.options.some((choice) => choice.id === option))
+    return null;
+  return option === exercise.decision.correctOption;
+}
+
 export function replayDrawExercise(
   exercise: DrawExercise,
   moves: string[] = []
@@ -42,12 +48,18 @@ export function tryDrawMove(
   played: string[],
   input: MoveInput
 ) {
+  // Decision examples retain a review line, but it is not a solution to play.
+  if (exercise.decision)
+    return { status: 'unrecorded' as const, played, complete: false };
   const game = replayDrawExercise(exercise, played);
-  if (played.length >= exercise.moves.length || game.game_over()) {
+  const branches = [exercise.moves, ...(exercise.alternativeLines ?? [])];
+  const matches = branches.filter((branch) =>
+    played.every((move, i) => move === branch[i])
+  );
+  const active = matches[0] ?? exercise.moves;
+  if (played.length >= active.length || game.game_over()) {
     return { status: 'finished' as const, played, complete: true };
   }
-  const expectedGame = new Chess(game.fen());
-  const expected = expectedGame.move(exercise.moves[played.length]);
   const normalized =
     typeof input === 'string' && /^[a-h][1-8][a-h][1-8][qrbn]?$/i.test(input)
       ? {
@@ -56,13 +68,20 @@ export function tryDrawMove(
           promotion: input[4]?.toLowerCase() as PromotionPiece | undefined,
         }
       : input;
+  const positionBeforeMove = game.fen();
   const move = game.move(normalized);
   if (!move) return { status: 'illegal' as const, played, complete: false };
-  const sameMove =
-    expected &&
-    move.from === expected.from &&
-    move.to === expected.to &&
-    move.promotion === expected.promotion;
+  const selected = matches.find((branch) => {
+    const expected = new Chess(positionBeforeMove).move(branch[played.length]);
+    return (
+      expected &&
+      move.from === expected.from &&
+      move.to === expected.to &&
+      move.promotion === expected.promotion
+    );
+  });
+  const sameMove = Boolean(selected);
+  const selectedLine = selected ?? active;
   // Accept alternative moves that demonstrably achieve the requested draw.
   const terminalDraw =
     exercise.outcome !== 'fortress' &&
@@ -71,8 +90,8 @@ export function tryDrawMove(
     return { status: 'unrecorded' as const, played, complete: false };
   }
   const next = [...played, move.san];
-  if (!terminalDraw && next.length < exercise.moves.length) {
-    const reply = game.move(exercise.moves[next.length]);
+  if (!terminalDraw && next.length < selectedLine.length) {
+    const reply = game.move(selectedLine[next.length]);
     if (!reply) throw new Error('Invalid stored opponent reply');
     next.push(reply.san);
   }
@@ -80,7 +99,7 @@ export function tryDrawMove(
     status: 'accepted' as const,
     played: next,
     complete:
-      next.length >= exercise.moves.length ||
+      next.length >= selectedLine.length ||
       game.game_over() ||
       drawPositionOutcome(game) === exercise.outcome,
   };

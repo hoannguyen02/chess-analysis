@@ -1,3 +1,5 @@
+import GamePlayerNames from './GamePlayerNames';
+import { gamePlayers } from '@/lib/chess/game-player-title';
 import { useEffect, useMemo, useRef, useState } from 'react';
 import Link from 'next/link';
 import { Chessboard } from 'react-chessboard';
@@ -5,6 +7,8 @@ import { FiStar } from 'react-icons/fi';
 import { useCustomBoard } from '@/hooks/useCustomBoard';
 import {
   GameReference,
+  ReferenceGame,
+  referenceGameList,
   GameSource,
   gameFrames,
   loadGameSource,
@@ -12,22 +16,44 @@ import {
 import styles from '@/styles/DrawGameViewer.module.css';
 
 export default function DrawGameViewer({
-  reference,
+  reference: initialReference,
   onClose,
+  source: initialSource,
+  referenceGames,
+  orientation = 'white',
 }: {
   reference: GameReference;
+  referenceGames?: ReferenceGame[];
+  source?: GameSource;
+  orientation?: 'white' | 'black';
   onClose: () => void;
 }) {
+  const playlist = useMemo(
+    () =>
+      referenceGameList(referenceGames ?? [], {
+        reference: initialReference,
+        source: initialSource,
+      }),
+    [referenceGames, initialReference, initialSource]
+  );
+  const [gameIndex, setGameIndex] = useState(() =>
+    playlist.findIndex(
+      (item) =>
+        item.reference.id === initialReference.id &&
+        item.reference.collection === initialReference.collection
+    )
+  );
+  const { reference, source: providedSource } = playlist[gameIndex];
   const dialog = useRef<HTMLDialogElement>(null);
   const board = useRef<HTMLDivElement>(null);
   const activeMove = useRef<HTMLButtonElement>(null);
-  const [source, setSource] = useState<GameSource>();
+  const [source, setSource] = useState<GameSource | undefined>(providedSource);
   const [error, setError] = useState(false);
   const [attempt, setAttempt] = useState(0);
   const [branch, setBranch] = useState(reference.branch);
   const [ply, setPly] = useState(reference.ply);
   const [playing, setPlaying] = useState(false);
-  const [flipped, setFlipped] = useState(false);
+  const [flipped, setFlipped] = useState(orientation === 'black');
   const [width, setWidth] = useState(360);
   const theme = useCustomBoard();
   const frames = useMemo(
@@ -36,6 +62,16 @@ export default function DrawGameViewer({
   );
   const frame = frames[ply];
   const title = reference.kind === 'game' ? 'Ván gốc' : 'Bài nghiên cứu';
+  const gameCaption = source
+    ? [
+        source.headers.Date?.match(/^\d{4}/)?.[0] ??
+          source.headers.UTCDate?.match(/^\d{4}/)?.[0],
+        source.headers.Event,
+        source.kind === 'game' ? source.headers.Result : null,
+      ]
+        .filter((value) => value && !/^\?+$/.test(value))
+        .join(' · ')
+    : '';
 
   useEffect(() => {
     const element = dialog.current!;
@@ -50,9 +86,14 @@ export default function DrawGameViewer({
     };
   }, []);
   useEffect(() => {
+    if (providedSource) {
+      setSource(providedSource);
+      return;
+    }
     let cancelled = false;
+    setSource(undefined);
     setError(false);
-    loadGameSource(reference.id)
+    loadGameSource(reference.id, reference.collection)
       .then((data) => {
         if (!cancelled) setSource(data);
       })
@@ -62,7 +103,7 @@ export default function DrawGameViewer({
     return () => {
       cancelled = true;
     };
-  }, [reference.id, attempt]);
+  }, [reference.id, reference.collection, attempt, providedSource]);
   useEffect(() => {
     if (!board.current) return;
     const observer = new ResizeObserver(([entry]) =>
@@ -97,6 +138,16 @@ export default function DrawGameViewer({
     document.addEventListener('visibilitychange', pause);
     return () => document.removeEventListener('visibilitychange', pause);
   }, []);
+  function changeGame(next: number) {
+    if (next < 0 || next >= playlist.length) return;
+    const item = playlist[next];
+    setPlaying(false);
+    setError(false);
+    setSource(item.source);
+    setBranch(item.reference.branch);
+    setPly(item.reference.ply);
+    setGameIndex(next);
+  }
   function jump(next: number) {
     setPlaying(false);
     setPly(Math.max(0, Math.min(frames.length - 1, next)));
@@ -123,8 +174,33 @@ export default function DrawGameViewer({
       <header className={styles.header}>
         <div>
           <h2 id="draw-game-title">{title}</h2>
-          <p>{title} có chứa lời giải.</p>
         </div>
+        {playlist.length > 1 && (
+          <nav
+            className={styles.gameNavigation}
+            aria-label="Chuyển ván tham khảo"
+          >
+            <button
+              type="button"
+              disabled={gameIndex === 0}
+              onClick={() => changeGame(gameIndex - 1)}
+              aria-label="Ván trước"
+            >
+              ← Ván trước
+            </button>
+            <span aria-live="polite">
+              Ván {gameIndex + 1}/{playlist.length}
+            </span>
+            <button
+              type="button"
+              disabled={gameIndex === playlist.length - 1}
+              onClick={() => changeGame(gameIndex + 1)}
+              aria-label="Ván tiếp"
+            >
+              Ván tiếp →
+            </button>
+          </nav>
+        )}
         <button
           type="button"
           onClick={onClose}
@@ -253,20 +329,17 @@ export default function DrawGameViewer({
           </div>
           <div className={styles.info}>
             <h3>
-              {source.kind === 'game'
-                ? `${source.headers.White} — ${source.headers.Black}`
-                : source.headers.ChapterName || source.headers.Event}
+              {source.kind === 'game' ? (
+                <GamePlayerNames
+                  players={gamePlayers(source.headers)}
+                  fallback={`${source.headers.White} — ${source.headers.Black}`}
+                />
+              ) : (
+                source.headers.ChapterName || source.headers.Event
+              )}
             </h3>
-            <p>
-              {[
-                source.headers.Event,
-                source.headers.Date?.includes('?')
-                  ? source.headers.UTCDate
-                  : source.headers.Date || source.headers.UTCDate,
-                source.kind === 'game' ? source.headers.Result : null,
-              ]
-                .filter((v) => v && v !== '?')
-                .join(' · ')}
+            <p className={styles.gameCaption} title={gameCaption}>
+              {gameCaption}
             </p>
             {source.kind === 'study' && source.lines.length > 1 && (
               <label className={styles.variation}>

@@ -1,23 +1,25 @@
+import { scheduleData, type ScheduleData } from '@/lib/server/private-schedule';
 import styles from '@/styles/ClassSchedule.module.css';
 import Head from 'next/head';
 import Image from 'next/image';
 import { useEffect, useRef, useState } from 'react';
 
-const bankAccountNumber = '6800000963908507';
-
-const sessions = [
-  { day: 'Thứ 6', slots: [['Ca chiều', '15:00 – 17:00']] },
-  {
-    day: 'Thứ 7 và CN',
-    slots: [
-      ['Ca 1', '07:30 – 09:00'],
-      ['Ca 2', '09:30 – 11:00'],
-      ['Ca 3', '15:00 – 17:00'],
-    ],
-  },
-];
-
 export default function ClassSchedule() {
+  return (
+    <main className={styles.page} lang="vi">
+      <Head>
+        <title>Lịch học | LIMA Chess</title>
+        <meta name="robots" content="noindex, nofollow" />
+      </Head>
+      <div className={styles.container}>
+        <ClassScheduleContent schedule={scheduleData} />
+      </div>
+    </main>
+  );
+}
+
+function ClassScheduleContent({ schedule }: { schedule: ScheduleData }) {
+  const { bankAccountNumber, sessions } = schedule;
   const accountRef = useRef<HTMLSpanElement>(null);
   const [copyStatus, setCopyStatus] = useState('');
   const copyTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -57,7 +59,7 @@ export default function ClassSchedule() {
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
-      <main className={styles.page} lang="vi">
+      <div>
         <div className={styles.container}>
           <header className={styles.header}>
             <div>
@@ -68,6 +70,25 @@ export default function ClassSchedule() {
               Đăng ký học thử miễn phí ↗
             </a>
           </header>
+
+          <section
+            id="dia-diem"
+            className={`${styles.panel} ${styles.location}`}
+            aria-labelledby="location-title"
+          >
+            <div>
+              <h2 id="location-title">📍 Địa điểm học · LIMA Chess</h2>
+              <address>
+                Hẻm 29, Lê Thị Hồng Gấm, Đức Trọng, Lâm Đồng
+              </address>
+            </div>
+            <a
+              className={styles.directions}
+              href="https://maps.app.goo.gl/mQCP1vTJWgFwLp3q6"
+            >
+              Mở Google Maps · Chỉ đường ↗
+            </a>
+          </section>
 
           <div className={styles.overview}>
             <section className={styles.panel} aria-labelledby="schedule-title">
@@ -98,16 +119,16 @@ export default function ClassSchedule() {
               </table>
               <div className={styles.advancedHeading}>
                 <h2>Lớp tăng cường</h2>
-                <span>19:00 – 20:30</span>
+                <span>{schedule.advancedTime}</span>
               </div>
               <dl className={styles.rows}>
                 <div>
                   <dt>Nâng cao</dt>
-                  <dd>Thứ 2, Thứ 4</dd>
+                  <dd>{schedule.advancedDays}</dd>
                 </div>
                 <div>
                   <dt>Chuyên sâu</dt>
-                  <dd>Thứ 3, Thứ 5, Thứ 6</dd>
+                  <dd>{schedule.intensiveDays}</dd>
                 </div>
               </dl>
               <details className={styles.details}>
@@ -139,15 +160,15 @@ export default function ClassSchedule() {
                   </div>
                   <div>
                     <dt>
-                      8 buổi <small>50.000đ/buổi</small>
+                      8 buổi <small>{schedule.perSession}</small>
                     </dt>
-                    <dd>400.000đ</dd>
+                    <dd>{schedule.eightSessions}</dd>
                   </div>
                   <div>
                     <dt>
-                      24 buổi <small>Giảm 200.000đ</small>
+                      24 buổi <small>{schedule.discount}</small>
                     </dt>
-                    <dd>1.000.000đ</dd>
+                    <dd>{schedule.twentyFourSessions}</dd>
                   </div>
                 </dl>
                 <aside
@@ -171,11 +192,11 @@ export default function ClassSchedule() {
                     <dl className={styles.bankDetails}>
                       <div>
                         <dt>Ngân hàng</dt>
-                        <dd>Co-opBank · Ngân hàng Hợp tác xã Việt Nam</dd>
+                        <dd>{schedule.bankName}</dd>
                       </div>
                       <div>
                         <dt>Chủ tài khoản</dt>
-                        <dd>HO KINH DOANH TRAN THI NGOC SAO</dd>
+                        <dd>{schedule.accountName}</dd>
                       </div>
                       <div>
                         <dt>Số tài khoản</dt>
@@ -287,7 +308,7 @@ export default function ClassSchedule() {
             </div>
           </div>
         </div>
-      </main>
+      </div>
     </>
   );
 }

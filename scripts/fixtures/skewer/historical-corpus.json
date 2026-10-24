@@ -1,0 +1,122 @@
+[
+  {
+    "archive": "Spielmann",
+    "url": "https://www.pgnmentor.com/players/Spielmann.zip",
+    "sha256": "7b8f0a33088786a7904210c0a6147e4ef1d18b4cf7402d1234dc54ff228066d3",
+    "bytes": 652817
+  },
+  {
+    "archive": "Marshall",
+    "url": "https://www.pgnmentor.com/players/Marshall.zip",
+    "sha256": "07357fd22eec4d30ea0d3c95b27eec7cf1809f7987dda2d5cebbe4a6547af2b0",
+    "bytes": 693137
+  },
+  {
+    "archive": "Chigorin",
+    "url": "https://www.pgnmentor.com/players/Chigorin.zip",
+    "sha256": "2417f6cd5cc94ec88a07b529c0b610ac9b06de5673db0f72d56670f4a2b166d0",
+    "bytes": 477203
+  },
+  {
+    "archive": "Nunn",
+    "url": "https://www.pgnmentor.com/players/Nunn.zip",
+    "sha256": "1d63ef8fb43f104117239713cec1620f92a7aa5997f54fedac2daf0b96eb49cb",
+    "bytes": 1101342
+  },
+  {
+    "archive": "Polugaevsky",
+    "url": "https://www.pgnmentor.com/players/Polugaevsky.zip",
+    "sha256": "040924ac7d2061b25dc3b4bc599c3aace6863a498b070acb13b1ea747c162f39",
+    "bytes": 1163745
+  },
+  {
+    "archive": "Korchnoi",
+    "url": "https://www.pgnmentor.com/players/Korchnoi.zip",
+    "sha256": "f271760a057cb4a1fc106daca89b263c9b13db85bc40667c046926529ea24a42",
+    "bytes": 3064974
+  },
+  {
+    "archive": "PolgarJ",
+    "url": "https://www.pgnmentor.com/players/PolgarJ.zip",
+    "sha256": "1206d56d5ed4ce665e17638cec9c6676a4cc761da4d3adda115b6f9e6fdf14c8",
+    "bytes": 1277519
+  },
+  {
+    "archive": "Geller",
+    "url": "https://www.pgnmentor.com/players/Geller.zip",
+    "sha256": "532c2072214c90e932459f681bfab29ac3ca760442bff09886331c3b62fa75b0",
+    "bytes": 1346332
+  },
+  {
+    "archive": "Stein",
+    "url": "https://www.pgnmentor.com/players/Stein.zip",
+    "sha256": "9a2b1440812501b7d82eb8aa905a7736193c462287f56a9f737c8769d4455747",
+    "bytes": 440391
+  },
+  {
+    "archive": "Smyslov",
+    "url": "https://www.pgnmentor.com/players/Smyslov.zip",
+    "sha256": "6cc76694cd2d4a3b5d0bca9ea09518db21911a5b4bd9d2a0809aec69efac60b2",
+    "bytes": 1660039
+  },
+  {
+    "archive": "Taimanov",
+    "url": "https://www.pgnmentor.com/players/Taimanov.zip",
+    "sha256": "bfda5813e8fa8492ef417de75eaf7a73c4d74b01be71c41957fcb9f95a5f8be8",
+    "bytes": 1359830
+  },
+  {
+    "archive": "Timman",
+    "url": "https://www.pgnmentor.com/players/Timman.zip",
+    "sha256": "e3fd7d0efaf60f5f3d11435061659764406e6758248e4b916393a200e2fa3bb5",
+    "bytes": 2373601
+  },
+  {
+    "archive": "Portisch",
+    "url": "https://www.pgnmentor.com/players/Portisch.zip",
+    "sha256": "e67c5dd185e4fdad7fa4f23fa4cae4b2b20781ab0e89f90c6508df31b1b130eb",
+    "bytes": 1936653
+  },
+  {
+    "archive": "Gligoric",
+    "url": "https://www.pgnmentor.com/players/Gligoric.zip",
+    "sha256": "2c259a057fc344ff348fef4139bffd09e0e59d79f56610ac2ab744de109bfd20",
+    "bytes": 1854920
+  },
+  {
+    "archive": "Petrosian",
+    "url": "https://www.pgnmentor.com/players/Petrosian.zip",
+    "sha256": "df416f7b51d52f29a93020f9ca574eb3b3597c4e62c832846f34dc75337c4733",
+    "bytes": 1130944
+  },
+  {
+    "archive": "Botvinnik",
+    "url": "https://www.pgnmentor.com/players/Botvinnik.zip",
+    "sha256": "e3c691869be7792e15c7f821f437ad14efd2fe56d118d8750438f7556a43e7f1",
+    "bytes": 601380
+  },
+  {
+    "archive": "Reshevsky",
+    "url": "https://www.pgnmentor.com/players/Reshevsky.zip",
+    "sha256": "c3b85b7440fe7975db121db255449beb91794705aa3e208cf554c964a460d18b",
+    "bytes": 809874
+  },
+  {
+    "archive": "Rubinstein",
+    "url": "https://www.pgnmentor.com/players/Rubinstein.zip",
+    "sha256": "d7aba2fadcb6c3ee19a58bcc40ce9223b24cc47f48255930be4ae8ae17ad9925",
+    "bytes": 530320
+  },
+  {
+    "archive": "Tartakower",
+    "url": "https://www.pgnmentor.com/players/Tartakower.zip",
+    "sha256": "8504dc59b66e8a6749019f4a0ef186269f840f663af51d9ea93fcc0109e7d203",
+    "bytes": 858357
+  },
+  {
+    "archive": "Euwe",
+    "url": "https://www.pgnmentor.com/players/Euwe.zip",
+    "sha256": "3bc5b403eed3ea5bb8a5c5f7f0d5e5b3ef5afbdc41b24e45b6cb8739de407a0f",
+    "bytes": 697955
+  }
+]

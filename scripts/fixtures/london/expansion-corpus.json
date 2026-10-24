@@ -1,0 +1,128 @@
+[
+  {
+    "archive": "Kamsky.pgn",
+    "sha256": "5adaefa30f42e0a4efee0f8ebb9181a273136b0646abff77a3d68e27e538cc3f",
+    "catalog": "https://www.pgnmentor.com/files.html",
+    "reference": "https://www.pgnmentor.com/players/Kamsky/"
+  },
+  {
+    "archive": "Carlsen.pgn",
+    "sha256": "6c8398374e7ac4e373c91750f795d0b4298f21c3a47e8660a1a31f2eebd960d9",
+    "catalog": "https://www.pgnmentor.com/files.html",
+    "reference": "https://www.pgnmentor.com/players/Carlsen/"
+  },
+  {
+    "archive": "Aronian.pgn",
+    "sha256": "20b6c6c220149c0b77b91287d86b295a035d60226eb4e0f1c9ee4172c3bb55d1",
+    "catalog": "https://www.pgnmentor.com/files.html",
+    "reference": "https://www.pgnmentor.com/players/Aronian/"
+  },
+  {
+    "archive": "Kramnik.pgn",
+    "sha256": "b6dafbc1548032626798ce8609819fa3a4466fabd73d8805c17f2fc229d27915",
+    "catalog": "https://www.pgnmentor.com/files.html",
+    "reference": "https://www.pgnmentor.com/players/Kramnik/"
+  },
+  {
+    "archive": "Grischuk.pgn",
+    "sha256": "23e955cb4f6b281d90d24c02902cb702d2bbaa3c5d10d0331ad6da094fe7a321",
+    "catalog": "https://www.pgnmentor.com/files.html",
+    "reference": "https://www.pgnmentor.com/players/Grischuk/"
+  },
+  {
+    "archive": "Nakamura.pgn",
+    "sha256": "7f7966a1265d7309a1cea3537d50c89c848a78835c8e0cb42fd7872a8c87db16",
+    "catalog": "https://www.pgnmentor.com/files.html",
+    "reference": "https://www.pgnmentor.com/players/Nakamura/"
+  },
+  {
+    "archive": "So.pgn",
+    "sha256": "bd8de2c17211cb548509d301e99c37d880438f0e31b0b707a2283ae522c4a917",
+    "catalog": "https://www.pgnmentor.com/files.html",
+    "reference": "https://www.pgnmentor.com/players/So/"
+  },
+  {
+    "archive": "Rapport.pgn",
+    "sha256": "c0a7d708c21f5df04805adff3b7a61df27598f8cf7d07f051eb0ed5f75e8d415",
+    "catalog": "https://www.pgnmentor.com/files.html",
+    "reference": "https://www.pgnmentor.com/players/Rapport/"
+  },
+  {
+    "archive": "Jobava.pgn",
+    "sha256": "d591e7ecbde5b0a61fcf87753b4ec5d127356511dd96745be2e4db4775dbb7f3",
+    "catalog": "https://www.pgnmentor.com/files.html",
+    "reference": "https://www.pgnmentor.com/players/Jobava/"
+  },
+  {
+    "archive": "Ding.pgn",
+    "sha256": "4e7265a1279b035eedce11864971172ef02b19b97ab8733abf358bc7d81a131e",
+    "catalog": "https://www.pgnmentor.com/files.html",
+    "reference": "https://www.pgnmentor.com/players/Ding/"
+  },
+  {
+    "archive": "Adams.pgn",
+    "sha256": "0eaa82ea44b9bd5ae4862405adbfc5025b3e67e043bafe3cb331df82cc8487d0",
+    "catalog": "https://www.pgnmentor.com/files.html",
+    "reference": "https://www.pgnmentor.com/players/Adams/"
+  },
+  {
+    "archive": "Short.pgn",
+    "sha256": "31f4ad1dbde502c33192bfb9f615a1a2c535e19962d3ff96dc060418fd461cb6",
+    "catalog": "https://www.pgnmentor.com/files.html",
+    "reference": "https://www.pgnmentor.com/players/Short/"
+  },
+  {
+    "archive": "Gelfand.pgn",
+    "sha256": "1bbdacad7744cfcfd3fb50e5e880dc00694c229afce1f21fede9a53692e03e1b",
+    "catalog": "https://www.pgnmentor.com/files.html",
+    "reference": "https://www.pgnmentor.com/players/Gelfand/"
+  },
+  {
+    "archive": "Ivanchuk.pgn",
+    "sha256": "e4b974c576f7a3999ea70aa5378e114079d4cebcebb854294c57e12841a7f094",
+    "catalog": "https://www.pgnmentor.com/files.html",
+    "reference": "https://www.pgnmentor.com/players/Ivanchuk/"
+  },
+  {
+    "archive": "Keres.pgn",
+    "sha256": "b67e137b27e05d0a3921e98f01e2be34e01a2b3206bdbb35889b797824932822",
+    "catalog": "https://www.pgnmentor.com/files.html",
+    "reference": "https://www.pgnmentor.com/players/Keres/"
+  },
+  {
+    "archive": "Fischer.pgn",
+    "sha256": "1d8afba5a95ed42588e3714af173f8dcf2cd56e06c9814373aa773064e53edf3",
+    "catalog": "https://www.pgnmentor.com/files.html",
+    "reference": "https://www.pgnmentor.com/players/Fischer/"
+  },
+  {
+    "archive": "VachierLagrave.pgn",
+    "sha256": "5e06a95059d0b72ae60f90ed59734e6e79a83621c967b4689b5473debb2b628c",
+    "catalog": "https://www.pgnmentor.com/files.html",
+    "reference": "https://www.pgnmentor.com/players/VachierLagrave/"
+  },
+  {
+    "archive": "Giri.pgn",
+    "sha256": "892c70ff8644ede45419d6b6d0e8de6b36396a2806d848de3e854f194cfe6653",
+    "catalog": "https://www.pgnmentor.com/files.html",
+    "reference": "https://www.pgnmentor.com/players/Giri/"
+  },
+  {
+    "archive": "Mamedyarov.pgn",
+    "sha256": "b3d75234b270af80243f3bb0ef20b8622ed191aa45c9f621a7d952b3d7aa07da",
+    "catalog": "https://www.pgnmentor.com/files.html",
+    "reference": "https://www.pgnmentor.com/players/Mamedyarov/"
+  },
+  {
+    "archive": "Caruana.pgn",
+    "sha256": "d06a6feec77863ca70593ef811585ce8e235f8a54a3f4564681bc233b83ffd53",
+    "catalog": "https://www.pgnmentor.com/files.html",
+    "reference": "https://www.pgnmentor.com/players/Caruana/"
+  },
+  {
+    "archive": "Radjabov.pgn",
+    "sha256": "666ace851e5bfd1cd493dc316495d752d6edb200bfa7c78d8a2ae8605254e245",
+    "catalog": "https://www.pgnmentor.com/files.html",
+    "reference": "https://www.pgnmentor.com/players/Radjabov/"
+  }
+]

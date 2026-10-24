@@ -1,6 +1,8 @@
+import { practiceAccessHeaders, readPracticeToken } from '../practice-access';
 import { Chess } from 'chess.js';
 
 export type GameReference = {
+  collection?: 'skewer';
   id: string;
   kind: string;
   ply: number;
@@ -12,6 +14,22 @@ export type GameSource = {
   fen: string;
   lines: string[][];
 };
+export type ReferenceGame = { reference: GameReference; source?: GameSource };
+
+/** One entry per original game, retaining the active exercise's exact marker. */
+export function referenceGameList(
+  items: ReferenceGame[],
+  active: ReferenceGame
+) {
+  const key = (item: ReferenceGame) =>
+    `${item.reference.collection ?? 'draw'}:${item.reference.id}`;
+  const unique = new Map<string, ReferenceGame>();
+  for (const item of items)
+    if (!unique.has(key(item))) unique.set(key(item), item);
+  unique.set(key(active), active);
+  return Array.from(unique.values());
+}
+
 // Replay once per selected variation, not on every playback tick.
 export function gameFrames(source: GameSource, branch: number) {
   const game = new Chess(source.fen);
@@ -30,17 +48,32 @@ export function gameFrames(source: GameSource, branch: number) {
   }
   return frames;
 }
-let sources: Promise<Record<string, GameSource>> | undefined;
-export async function loadGameSource(id: string): Promise<GameSource> {
-  sources ??= fetch('/api/draw-game-sources', { cache: 'no-store' })
-    .then((response) => {
-      if (!response.ok) throw new Error('Source unavailable');
-      return response.json();
+const collections = new Map<string, Promise<Record<string, GameSource>>>();
+export async function loadGameSource(
+  id: string,
+  collection?: 'skewer'
+): Promise<GameSource> {
+  const endpoint =
+    collection === 'skewer'
+      ? '/api/skewer-game-sources'
+      : '/api/draw-game-sources';
+  const cacheKey = `${endpoint}:${readPracticeToken()}`;
+  let sources = collections.get(cacheKey);
+  if (!sources) {
+    sources = fetch(endpoint, {
+      cache: 'no-store',
+      headers: practiceAccessHeaders(),
     })
-    .catch((error) => {
-      sources = undefined;
-      throw error;
-    });
+      .then((response) => {
+        if (!response.ok) throw new Error('Source unavailable');
+        return response.json();
+      })
+      .catch((error) => {
+        collections.delete(cacheKey);
+        throw error;
+      });
+    collections.set(cacheKey, sources);
+  }
   const source = (await sources)[id];
   if (!source) throw new Error('Missing source');
   return source;

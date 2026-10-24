@@ -1,0 +1,132 @@
+[
+  {
+    "id": "bishop",
+    "fen": "3r4/1p1q3k/p1nbR1pp/P1BQ4/1P3P2/6P1/7P/7K w - - 0 40",
+    "line": [
+      "Bxd6",
+      "Qf7"
+    ],
+    "checks": [
+      {
+        "fen": "3r4/1p1q3k/p1nBR1pp/P2Q4/1P3P2/6P1/7P/7K b - - 0 40",
+        "turn": "black",
+        "nodeBudget": 1000000,
+        "candidates": [
+          {
+            "move": "Qf7",
+            "pv": [
+              "Qf7",
+              "Qe4",
+              "Rd7",
+              "Kg2",
+              "h5",
+              "Bc5",
+              "Rd2+",
+              "Kh3",
+              "Rd7",
+              "Kh4"
+            ],
+            "scoreCp": -237,
+            "mate": null,
+            "depth": 20,
+            "nodes": 1000398
+          },
+          {
+            "move": "Re8",
+            "pv": [
+              "Re8",
+              "Rf6"
+            ],
+            "scoreCp": -296,
+            "mate": null,
+            "depth": 20,
+            "nodes": 1000398
+          },
+          {
+            "move": "Nd4",
+            "pv": [
+              "Nd4",
+              "Rf6",
+              "Qc6",
+              "Qxc6",
+              "Nxc6",
+              "Kg2",
+              "g5",
+              "Kf3",
+              "gxf4",
+              "gxf4"
+            ],
+            "scoreCp": -304,
+            "mate": null,
+            "depth": 19,
+            "nodes": 1000398
+          }
+        ]
+      },
+      {
+        "fen": "3r4/1p3q1k/p1nBR1pp/P2Q4/1P3P2/6P1/7P/7K w - - 1 41",
+        "turn": "white",
+        "nodeBudget": 1000000,
+        "candidates": [
+          {
+            "move": "Qe4",
+            "pv": [
+              "Qe4",
+              "Rd7",
+              "Kg2",
+              "Qf5",
+              "Qxf5",
+              "gxf5",
+              "Rf6",
+              "Kg8",
+              "Bc5",
+              "Rd5"
+            ],
+            "scoreCp": 249,
+            "mate": null,
+            "depth": 21,
+            "nodes": 1000149
+          },
+          {
+            "move": "f5",
+            "pv": [
+              "f5",
+              "Qxf5",
+              "Qxf5",
+              "gxf5",
+              "Kg2",
+              "Rd7",
+              "Kh3",
+              "Nd8",
+              "Rf6",
+              "Rf7"
+            ],
+            "scoreCp": 38,
+            "mate": null,
+            "depth": 21,
+            "nodes": 1000149
+          },
+          {
+            "move": "Kg2",
+            "pv": [
+              "Kg2",
+              "Nd4",
+              "f5",
+              "Nxe6",
+              "fxe6",
+              "Qe7",
+              "Bxe7",
+              "Rxd5",
+              "Bc5",
+              "Kg7"
+            ],
+            "scoreCp": -143,
+            "mate": null,
+            "depth": 21,
+            "nodes": 1000149
+          }
+        ]
+      }
+    ]
+  }
+]

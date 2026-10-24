@@ -1,10 +1,24 @@
+import type { GamePlayer } from './game-player-title';
+import type { GameReference } from './draw-game-viewer';
 import type { DrawDifficulty } from './draw-levels';
 import { drawLevelRatings } from './draw-level-ratings';
 import { expandedDrawExercises } from './draw-expansion';
 import { realRepetitionExercises } from './real-repetition';
 
 export type DrawExercise = {
-  gameReference?: { id: string; kind: string; ply: number; branch: number };
+  decision?: {
+    options: { id: string; label: string }[];
+    correctOption: string;
+    retryMessage: string;
+  };
+  beginner?: boolean;
+  beginnerKind?: 'queen';
+  gameReference?: GameReference;
+  gameCaption?: string;
+  playerTitle?: string;
+  players?: GamePlayer[];
+  alternativeLines?: string[][];
+  hints?: string[];
   difficulty?: DrawDifficulty;
   // Only populate when the source provides the actual preceding position/move.
   // fen remains the position at which the student starts solving.
@@ -15,7 +29,14 @@ export type DrawExercise = {
   prompt: string;
   fen: string;
   moves: string[];
-  outcome: 'repetition' | 'stalemate' | 'material' | 'checkmate' | 'fortress';
+  outcome:
+    | 'repetition'
+    | 'stalemate'
+    | 'material'
+    | 'checkmate'
+    | 'fortress'
+    | 'skewer'
+    | 'opening';
   solution: string;
   url?: string;
   source?: string;

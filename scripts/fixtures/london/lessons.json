@@ -1,0 +1,452 @@
+[
+  {
+    "id": "lesson-1",
+    "level": "A",
+    "title": "Phát triển có mục đích",
+    "goal": "Hiểu vai trò của tượng f4 và trung tâm.",
+    "white": "Đưa tượng c1 ra ngoài trước e3; vẫn quan sát nước đi của Đen.",
+    "black": "Phát triển quân và tranh chấp d4, e5 thay vì chờ Trắng dựng đội hình.",
+    "error": "Thuộc thứ tự nước đi nhưng không biết quân đang kiểm soát ô nào.",
+    "takeaway": "Mỗi nước phát triển phải có một nhiệm vụ.",
+    "exercises": [
+      {
+        "id": "london-1-white",
+        "side": "white",
+        "gameId": "ding-nepo-2023",
+        "ply": 4,
+        "preferred": "Bf4",
+        "prompt": "Phát triển tượng c1 ra ô chủ động trước khi đi e3.",
+        "explanation": "Bf4 đưa tượng ra ngoài chuỗi tốt và kiểm soát e5. Đây là điểm nhận diện của London."
+      },
+      {
+        "id": "london-1-black",
+        "side": "black",
+        "gameId": "carlsen-aronian-2019",
+        "ply": 5,
+        "preferred": "e6",
+        "prompt": "Củng cố d5 và mở đường phát triển tượng f8.",
+        "explanation": "e6 giữ trung tâm và chuẩn bị ...Bd6 để đối thoại trực tiếp với tượng f4."
+      }
+    ]
+  },
+  {
+    "id": "lesson-2",
+    "level": "A",
+    "title": "Đưa vua đến nơi an toàn",
+    "goal": "Hoàn tất phát triển trước khi mở cuộc tấn công.",
+    "white": "Khi đủ điều kiện, nhập thành giúp đưa vua khỏi trung tâm và nối các xe.",
+    "black": "Chọn thời điểm nhập thành phù hợp; không trì hoãn chỉ để đuổi tượng.",
+    "error": "Đẩy nhiều tốt cánh vua khi quân nhẹ và vua chưa sẵn sàng.",
+    "takeaway": "Kiểm tra an toàn vua trước khi tấn công.",
+    "exercises": [
+      {
+        "id": "london-2-white",
+        "side": "white",
+        "gameId": "ding-nepo-2023",
+        "ply": 18,
+        "preferred": "O-O",
+        "prompt": "Đưa vua ra khỏi trung tâm và đưa xe vào cuộc.",
+        "explanation": "O-O hoàn tất một phần phát triển. Từ đây Trắng có thể đưa xe tới e1."
+      },
+      {
+        "id": "london-2-black",
+        "side": "black",
+        "gameId": "carlsen-aronian-2019",
+        "ply": 9,
+        "preferred": "O-O",
+        "prompt": "Hoàn tất bước bảo vệ vua trước khi phản công trung tâm.",
+        "explanation": "O-O cho Đen một vị trí vua an toàn hơn để chuẩn bị ...c5."
+      }
+    ]
+  },
+  {
+    "id": "lesson-3",
+    "level": "A",
+    "title": "Bắt lại và đọc cấu trúc",
+    "goal": "Nhìn cấu trúc tốt sau mỗi lần đổi quân.",
+    "white": "Bắt lại có thể thay đổi cột mở và điểm tựa; không phải lúc nào London cũng giữ nguyên tam giác tốt.",
+    "black": "Bắt lại quân trước khi tiếp tục kế hoạch; nhận ra cột vừa được mở.",
+    "error": "Cứ dựng e3–d4–c3 dù trung tâm đã thay đổi.",
+    "takeaway": "Sau đổi quân, đánh giá lại cấu trúc.",
+    "exercises": [
+      {
+        "id": "london-3-white",
+        "side": "white",
+        "gameId": "ding-nepo-2023",
+        "ply": 10,
+        "preferred": "exd4",
+        "prompt": "Bắt lại tốt d4 và quan sát cột e vừa mở.",
+        "explanation": "exd4 giữ tốt ở d4 và mở cột e cho xe. Nxd4 cũng là một lựa chọn khác cần xem xét."
+      },
+      {
+        "id": "london-3-black",
+        "side": "black",
+        "gameId": "keres-fischer-1959",
+        "ply": 13,
+        "preferred": "Rxb8",
+        "prompt": "Trắng vừa đổi tượng lấy mã b8. Hãy bắt lại.",
+        "explanation": "Rxb8 khôi phục quân và đặt xe trên cột b; sau đó Đen tiếp tục phát triển."
+      }
+    ]
+  },
+  {
+    "id": "lesson-4",
+    "level": "B",
+    "title": "Đối thoại giữa hai tượng",
+    "goal": "Quyết định giữ, đổi hay rút tượng.",
+    "white": "Sau ...Bd6, cân nhắc Bxd6 hoặc rút tượng dựa trên cấu trúc và nhịp phát triển.",
+    "black": "...Bd6 thách thức tượng f4, nhưng không tự động giải quyết mọi vấn đề.",
+    "error": "Giữ tượng bằng mọi giá, hoặc đổi tượng mà không nhìn quân bắt lại.",
+    "takeaway": "Hỏi ai hưởng lợi sau đổi tượng.",
+    "exercises": [
+      {
+        "id": "london-4-white",
+        "side": "white",
+        "gameId": "ding-nepo-2023",
+        "ply": 16,
+        "preferred": "Bxd6",
+        "prompt": "Giải quyết đối đầu giữa hai tượng rồi hoàn tất phát triển.",
+        "explanation": "Bxd6 đổi tượng chủ động của Đen. Trong ván gốc, ...Qxd6 được tiếp nối bằng O-O."
+      },
+      {
+        "id": "london-4-black",
+        "side": "black",
+        "gameId": "carlsen-aronian-2019",
+        "ply": 7,
+        "preferred": "Bd6",
+        "prompt": "Phát triển tượng đồng thời thách thức tượng London.",
+        "explanation": "Bd6 buộc Trắng chọn cách xử lý tượng f4; Đen phát triển quân với một mục đích cụ thể."
+      }
+    ]
+  },
+  {
+    "id": "lesson-5",
+    "level": "B",
+    "title": "Hậu và nhịp phát triển",
+    "goal": "Nhận ra nhịp tấn công hậu và cái giá của việc đưa hậu đi xa.",
+    "white": "Phát triển quân với nhịp tấn công hậu khi có thể; nếu hậu mình đi xa, đừng bỏ quên an toàn vua.",
+    "black": "Dùng quân nhẹ hoặc xe tạo sức ép lên hậu, đồng thời hoàn tất phát triển.",
+    "error": "Cho rằng hơn một tốt nghĩa là đã hơn thế.",
+    "takeaway": "Đếm cả nhịp phát triển, không chỉ đếm tốt.",
+    "exercises": [
+      {
+        "id": "london-5-white",
+        "side": "white",
+        "gameId": "keres-fischer-1959",
+        "ply": 18,
+        "preferred": "e3",
+        "prompt": "Hậu Trắng đang ở a7. Hãy mở đường cho tượng f1 và hỗ trợ d4.",
+        "explanation": "e3 giúp Trắng phát triển các quân còn lại. Không nên suy ra rằng mọi nước ăn tốt trước đó đều là sai lầm quyết định."
+      },
+      {
+        "id": "london-5-black",
+        "side": "black",
+        "gameId": "keres-fischer-1959",
+        "ply": 25,
+        "preferred": "Rc8",
+        "prompt": "Phát triển xe với nhịp tấn công hậu đang ở c5.",
+        "explanation": "Rc8 đưa xe vào cột c và buộc hậu Trắng giải quyết đe dọa; một ví dụ về hoạt động quân bù đắp vật chất."
+      }
+    ]
+  },
+  {
+    "id": "lesson-6",
+    "level": "B",
+    "title": "Cột mở là cơ hội cho cả hai",
+    "goal": "Đọc lại bàn cờ sau khi tượng bị đổi.",
+    "white": "Sau ...Bxg3, hxg3 có thể mở cột h; vẫn phải hoàn tất phát triển.",
+    "black": "Khi bị chiếu, tìm cách đáp trả đồng thời phát triển quân.",
+    "error": "Thấy cột h mở là lập tức tấn công, bất kể vua mình.",
+    "takeaway": "Cột mở chỉ hữu ích khi các quân phối hợp.",
+    "exercises": [
+      {
+        "id": "london-6-white",
+        "side": "white",
+        "gameId": "carlsen-aronian-2019",
+        "ply": 18,
+        "preferred": "hxg3",
+        "prompt": "Bắt lại tượng và mở cột h.",
+        "explanation": "hxg3 tạo một hướng chơi cho xe h1. Ván này cũng cho thấy có cột mở không đảm bảo tấn công thành công."
+      },
+      {
+        "id": "london-6-black",
+        "side": "black",
+        "gameId": "keres-fischer-1959",
+        "ply": 15,
+        "preferred": "Bd7",
+        "prompt": "Chặn chiếu từ a4 đồng thời phát triển tượng.",
+        "explanation": "Bd7 xử lý nước chiếu và phát triển quân. Đây là một đáp án hợp lý, không phải cách duy nhất."
+      }
+    ]
+  },
+  {
+    "id": "lesson-7",
+    "level": "C",
+    "title": "Điểm tựa và đòn phá trung tâm",
+    "goal": "Kết nối Ne5 với phản ứng ...c5 của Đen.",
+    "white": "Ne5 hữu ích khi được hỗ trợ và không bị đổi với bất lợi.",
+    "black": "Tấn công d4 bằng ...c5 để thử độ vững của trung tâm Trắng.",
+    "error": "Chỉ nhìn cánh vua, bỏ qua trung tâm.",
+    "takeaway": "Trung tâm quyết định tốc độ tấn công ở cánh.",
+    "exercises": [
+      {
+        "id": "london-7-white",
+        "side": "white",
+        "gameId": "ding-nepo-2023",
+        "ply": 22,
+        "preferred": "Ne5",
+        "prompt": "Đặt mã vào trung tâm và tiếp tục phối hợp quân.",
+        "explanation": "Ne5 dùng điểm tựa được tốt d4 hỗ trợ. Các biến tiếp theo phụ thuộc phản ứng của Đen."
+      },
+      {
+        "id": "london-7-black",
+        "side": "black",
+        "gameId": "carlsen-aronian-2019",
+        "ply": 21,
+        "preferred": "c5",
+        "prompt": "Trắng vừa nâng xe lên h4. Hãy phản công vào trung tâm.",
+        "explanation": "c5 thách thức d4 trong lúc Trắng dành nhịp cho cánh vua. Đây là phản công có cơ sở, không phải một mẹo bắt buộc thắng."
+      }
+    ]
+  },
+  {
+    "id": "lesson-8",
+    "level": "C",
+    "title": "Hạn chế và phá vỡ",
+    "goal": "Chọn giữa giữ không gian và đánh vào chuỗi tốt.",
+    "white": "a5 có thể hạn chế ...b6 khi cấu trúc cho phép; không phải nước mặc định của London.",
+    "black": "...f6 có thể đánh vào e5, nhưng cần kiểm tra các đường mở về vua mình.",
+    "error": "Đẩy tốt chỉ vì thấy người khác đã chơi nước đó.",
+    "takeaway": "Nêu rõ ô hoặc tốt mục tiêu trước khi đẩy tốt.",
+    "exercises": [
+      {
+        "id": "london-8-white",
+        "side": "white",
+        "gameId": "ding-nepo-2023",
+        "ply": 30,
+        "preferred": "a5",
+        "prompt": "Giữ không gian cánh hậu và hạn chế sự mở rộng của Đen.",
+        "explanation": "a5 cố định không gian cánh hậu trong cấu trúc này. Trắng vẫn cần cải thiện các quân phía sau."
+      },
+      {
+        "id": "london-8-black",
+        "side": "black",
+        "gameId": "carlsen-aronian-2019",
+        "ply": 33,
+        "preferred": "f6",
+        "prompt": "Đánh vào tốt e5 để làm lung lay trung tâm Trắng.",
+        "explanation": "f6 tạo phản công cần thiết. Nó không chứng minh Đen đã hơn: Trắng vẫn có cơ hội chơi tốt."
+      }
+    ]
+  },
+  {
+    "id": "lesson-9",
+    "level": "C",
+    "title": "Đưa quân đến ô hữu ích",
+    "goal": "Cải thiện quân trước khi tìm đòn quyết định.",
+    "white": "Mã b3 có thể hướng đến c5 khi cấu trúc tạo điểm tựa.",
+    "black": "Đẩy ...c4 đúng lúc có thể giành không gian và đuổi tượng d3.",
+    "error": "Tìm tổ hợp ở vị trí chưa có đủ quân tham gia.",
+    "takeaway": "Cải thiện quân kém hoạt động nhất.",
+    "exercises": [
+      {
+        "id": "london-9-white",
+        "side": "white",
+        "gameId": "ding-nepo-2023",
+        "ply": 36,
+        "preferred": "Nb3",
+        "prompt": "Tìm đường mới cho mã d2 để gây sức ép cánh hậu.",
+        "explanation": "Nb3 hướng mã về c5; đây là kế hoạch nhiều nước, không phải một đòn thắng quân ngay."
+      },
+      {
+        "id": "london-9-black",
+        "side": "black",
+        "gameId": "carlsen-aronian-2019",
+        "ply": 23,
+        "preferred": "c4",
+        "prompt": "Giành không gian với nhịp tấn công tượng d3.",
+        "explanation": "c4 là phương án phân tích tại vị trí thật. Trong ván gốc Đen chơi Rc8; hai kế hoạch cần được phân biệt."
+      }
+    ]
+  },
+  {
+    "id": "lesson-10",
+    "level": "C*",
+    "title": "Gặp tượng g7",
+    "goal": "Thích nghi với cách bố trí fianchetto.",
+    "white": "Hoàn tất phát triển và giữ trung tâm trước khi săn tốt cánh hậu.",
+    "black": "Chuẩn bị ...e5 để mở trung tâm khi Trắng chậm phát triển.",
+    "error": "Dùng cùng một kế hoạch trước ...g6 và trước ...e6.",
+    "takeaway": "Nhìn đường chéo của tượng g7 khi chọn cấu trúc.",
+    "exercises": [
+      {
+        "id": "london-10-white",
+        "side": "white",
+        "gameId": "keres-fischer-1959",
+        "ply": 12,
+        "preferred": "e3",
+        "prompt": "Thay cho đổi tượng ngay, hãy củng cố và phát triển.",
+        "explanation": "e3 là phương án phân tích giúp Trắng giữ tượng và mở đường cho tượng f1. Ván gốc tiếp tục Bxb8."
+      },
+      {
+        "id": "london-10-black",
+        "side": "black",
+        "gameId": "keres-fischer-1959",
+        "ply": 21,
+        "preferred": "e5",
+        "prompt": "Trắng chưa nhập thành. Hãy tranh chấp trung tâm.",
+        "explanation": "e5 mở cuộc đấu ở trung tâm. Phải tính cả dxe5 của Trắng; Đen chưa có chiến thắng bắt buộc."
+      }
+    ]
+  },
+  {
+    "id": "lesson-11",
+    "level": "C*",
+    "title": "Rút lui để phối hợp",
+    "goal": "Hiểu nước lùi có ích và phòng thủ chủ động.",
+    "white": "Rút tượng khỏi đòn tấn công có thể duy trì cấu trúc và chừa chỗ cho các quân khác.",
+    "black": "Khi quân bị tấn công, chọn ô rút lui vẫn giữ được liên kết với đồng đội.",
+    "error": "Coi mọi nước lùi là mất thời gian.",
+    "takeaway": "Đánh giá nhiệm vụ mới của quân sau khi lùi.",
+    "exercises": [
+      {
+        "id": "london-11-white",
+        "side": "white",
+        "gameId": "ding-nepo-2023",
+        "ply": 26,
+        "preferred": "Bf1",
+        "prompt": "Tượng b5 bị tốt a6 tấn công. Hãy giữ quân và phối hợp lại.",
+        "explanation": "Bf1 giữ tượng, để xe e1 hoạt động và chuẩn bị kế hoạch cánh hậu."
+      },
+      {
+        "id": "london-11-black",
+        "side": "black",
+        "gameId": "carlsen-aronian-2019",
+        "ply": 37,
+        "preferred": "Qe7",
+        "prompt": "Hậu f6 bị xe f4 tấn công. Tìm ô rút lui phù hợp.",
+        "explanation": "Qe7 giữ hậu và kết nối với trung tâm. Đen đang phòng thủ một vị trí khó, không phải đã hóa giải hoàn toàn London."
+      }
+    ]
+  },
+  {
+    "id": "lesson-12",
+    "level": "C*",
+    "title": "Khi cuộc tấn công đi quá xa",
+    "goal": "Sửa sai từ một ván Đen thắng.",
+    "white": "Trước Nh4, kiểm tra các quân bị treo và cân nhắc đưa vua đến nơi an toàn.",
+    "black": "Khi đối thủ bỏ sót chiến thuật, tính nước bắt quân cùng các nước trung gian.",
+    "error": "Chỉ tính đòn dọa của mình mà không kiểm tra nước bắt của đối thủ.",
+    "takeaway": "Trước mỗi nước: chiếu, bắt quân, đe dọa của cả hai bên.",
+    "exercises": [
+      {
+        "id": "london-12-white",
+        "side": "white",
+        "gameId": "carlsen-aronian-2019",
+        "ply": 40,
+        "preferred": "O-O-O",
+        "prompt": "Tìm phương án cải thiện thay cho Nh4 của ván gốc.",
+        "explanation": "O-O-O là cách sửa sai: đưa vua ra khỏi trung tâm và xe a1 vào cuộc. Ván gốc Nh4 cho phép ...Rxf4."
+      },
+      {
+        "id": "london-12-black",
+        "side": "black",
+        "gameId": "carlsen-aronian-2019",
+        "ply": 41,
+        "preferred": "Rxf4",
+        "prompt": "Trắng vừa chơi Nh4. Hãy khai thác ngay.",
+        "explanation": "Rxf4 bắt xe. Đen phải thấy trước Ng6+ và nguồn lực ...Re4+ sau khi mã lấy hậu."
+      }
+    ]
+  },
+  {
+    "id": "lesson-13",
+    "level": "D",
+    "title": "Nước chiếu và phối hợp",
+    "goal": "Tìm nước chiếu và tính tiếp các đáp trả.",
+    "white": "Phối hợp quân để tạo đe dọa lên vua; kiểm tra nước chiếu trước khi bắt lại theo thói quen.",
+    "black": "Kiểm tra nước chiếu trong chuỗi đổi quân; đôi khi có nước trung gian mạnh hơn bắt lại ngay.",
+    "error": "Dừng tính ngay sau nước chĩa đôi hoặc bắt hậu.",
+    "takeaway": "Luôn kiểm tra nước chiếu trung gian.",
+    "exercises": [
+      {
+        "id": "london-13-white",
+        "side": "white",
+        "gameId": "ding-nepo-2023",
+        "ply": 84,
+        "preferred": "Ng6",
+        "prompt": "Phối hợp mã với hậu để tăng sức ép lên vua Đen.",
+        "explanation": "Ng6 tạo đe dọa mạnh lên vua. Đây là bài tính toán cuối trung cuộc, không phải một bẫy khai cuộc London."
+      },
+      {
+        "id": "london-13-black",
+        "side": "black",
+        "gameId": "carlsen-aronian-2019",
+        "ply": 45,
+        "preferred": "Re4+",
+        "prompt": "Hậu Đen vừa bị mã bắt. Tìm nguồn lực chiến thuật.",
+        "explanation": "Re4+ là nước trung gian quan trọng: buộc Trắng giải quyết chiếu trước khi thu hoạch thêm vật chất."
+      }
+    ]
+  },
+  {
+    "id": "lesson-14",
+    "level": "D",
+    "title": "Sửa sai và trừng phạt",
+    "goal": "So sánh vị trí trước và sau một sai lầm.",
+    "white": "Hoạt động quân và bảo vệ vua quan trọng hơn việc cố giữ mọi tốt.",
+    "black": "Chỉ kết luận có đòn thắng khi tính được các đáp trả chính.",
+    "error": "Gọi cả khai cuộc là sai chỉ vì kết quả cuối cùng là thua.",
+    "takeaway": "Xác định đúng thời điểm thế cờ thay đổi.",
+    "exercises": [
+      {
+        "id": "london-14-white",
+        "side": "white",
+        "gameId": "keres-fischer-1959",
+        "ply": 46,
+        "preferred": "Bf3",
+        "prompt": "Tìm cách phối hợp quân thay cho Bb5 trong ván gốc.",
+        "explanation": "Bf3 là phương án sửa sai tại vị trí này. Bb5 của ván gốc cho Đen cơ hội ...Qd5."
+      },
+      {
+        "id": "london-14-black",
+        "side": "black",
+        "gameId": "keres-fischer-1959",
+        "ply": 47,
+        "preferred": "Qd5",
+        "prompt": "Trắng vừa chơi Bb5. Tìm đòn phối hợp hậu và tượng.",
+        "explanation": "Qd5 tấn công tượng b5 và khai thác đường chéo d5–h1. Phải tính cả nước Bxe8 của Trắng."
+      }
+    ]
+  },
+  {
+    "id": "lesson-15",
+    "level": "D",
+    "title": "Chuyển hóa ưu thế",
+    "goal": "Giữ quân hoạt động và hạn chế phản công.",
+    "white": "Xe vào hàng bảy tạo áp lực nhưng vẫn phải tính tốt thông nguy hiểm của đối thủ.",
+    "black": "Trong tàn cuộc, phối hợp quân nhẹ với vua và kiểm soát các tốt.",
+    "error": "Cho rằng thắng chiến thuật đồng nghĩa đã thắng ván.",
+    "takeaway": "Sau mỗi đòn: đánh giá lại vật chất, vua và tốt thông.",
+    "exercises": [
+      {
+        "id": "london-15-white",
+        "side": "white",
+        "gameId": "ding-nepo-2023",
+        "ply": 72,
+        "preferred": "Rc7",
+        "prompt": "Đưa xe vào hàng bảy để tiếp tục gây sức ép.",
+        "explanation": "Rc7 tăng hoạt động xe và phối hợp với mã. Trắng vẫn phải theo dõi tốt thông a của Đen."
+      },
+      {
+        "id": "london-15-black",
+        "side": "black",
+        "gameId": "carlsen-aronian-2019",
+        "ply": 61,
+        "preferred": "Be6",
+        "prompt": "Phối hợp tượng với mã để chuyển hóa ưu thế.",
+        "explanation": "Be6 phát triển tượng vào ô chủ động và hỗ trợ việc khai thác các tốt yếu. Kết quả ván là thắng Đen, không phải chiếu hết ngay."
+      }
+    ]
+  }
+]

@@ -1,0 +1,41 @@
+.matchup {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 6px 10px;
+  min-width: 0;
+}
+.player {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 6px;
+  max-width: 100%;
+  min-width: 0;
+  white-space: nowrap;
+}
+.name {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.title {
+  flex-shrink: 0;
+  border-radius: 4px;
+  padding: 2px 5px;
+  background: #8d3830;
+  color: white;
+  font-size: 0.6em;
+  font-weight: 700;
+  line-height: 1.4;
+}
+.rating {
+  flex-shrink: 0;
+  font-size: 0.78em;
+  font-weight: 500;
+  color: #606957;
+}
+.separator {
+  flex-shrink: 0;
+  color: #606957;
+  font-weight: 400;
+}

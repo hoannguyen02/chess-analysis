@@ -1,0 +1,2302 @@
+[
+  {
+    "title": "Xe: chiếu rồi bắt quân · 1",
+    "beginner": true,
+    "prompt": "Dùng xe chiếu Vua, rồi bắt quân phía sau.",
+    "mode": "interactive",
+    "outcome": "skewer",
+    "fen": "3q4/8/8/3k3K/8/8/8/7R w - - 0 1",
+    "moves": [
+      "Rd1+",
+      "Ke6",
+      "Rxd8"
+    ],
+    "alternativeLines": [
+      [
+        "Rd1+",
+        "Kc6",
+        "Rxd8"
+      ],
+      [
+        "Rd1+",
+        "Ke5",
+        "Rxd8"
+      ],
+      [
+        "Rd1+",
+        "Kc5",
+        "Rxd8"
+      ],
+      [
+        "Rd1+",
+        "Ke4",
+        "Rxd8"
+      ],
+      [
+        "Rd1+",
+        "Kc4",
+        "Rxd8"
+      ]
+    ],
+    "hints": [
+      "Tìm đường thẳng hoặc đường chéo có Vua và quân đối phương đứng nối nhau."
+    ],
+    "solution": "Xe chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Hậu phía sau mà không bị bắt lại. Đây là bài tập thắng quân, không phải mọi thế cuối đều thắng ván cờ.",
+    "source": "original-composition"
+  },
+  {
+    "title": "Tượng: chiếu rồi bắt quân · 1",
+    "beginner": true,
+    "prompt": "Dùng tượng chiếu Vua, rồi bắt quân phía sau.",
+    "mode": "interactive",
+    "outcome": "skewer",
+    "fen": "1B4K1/8/4P3/8/8/2k5/8/q7 w - - 0 1",
+    "moves": [
+      "Be5+",
+      "Kc4",
+      "Bxa1"
+    ],
+    "alternativeLines": [
+      [
+        "Be5+",
+        "Kb4",
+        "Bxa1"
+      ],
+      [
+        "Be5+",
+        "Kd3",
+        "Bxa1"
+      ],
+      [
+        "Be5+",
+        "Kb3",
+        "Bxa1"
+      ],
+      [
+        "Be5+",
+        "Kd2",
+        "Bxa1"
+      ],
+      [
+        "Be5+",
+        "Kc2",
+        "Bxa1"
+      ]
+    ],
+    "hints": [
+      "Tìm đường thẳng hoặc đường chéo có Vua và quân đối phương đứng nối nhau."
+    ],
+    "solution": "Tượng chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Hậu phía sau mà không bị bắt lại. Bạn còn Tượng và Tốt để tiếp tục ván cờ.",
+    "source": "original-composition"
+  },
+  {
+    "title": "Hậu: chiếu rồi bắt quân · 1",
+    "beginner": true,
+    "prompt": "Dùng hậu chiếu Vua, rồi bắt quân phía sau.",
+    "mode": "interactive",
+    "outcome": "skewer",
+    "fen": "1q6/8/8/6K1/8/1k6/8/2Q5 w - - 0 1",
+    "moves": [
+      "Qb1+",
+      "Kc4",
+      "Qxb8"
+    ],
+    "alternativeLines": [
+      [
+        "Qb1+",
+        "Ka4",
+        "Qxb8"
+      ],
+      [
+        "Qb1+",
+        "Kc3",
+        "Qxb8"
+      ],
+      [
+        "Qb1+",
+        "Ka3",
+        "Qxb8"
+      ]
+    ],
+    "hints": [
+      "Tìm đường thẳng hoặc đường chéo có Vua và quân đối phương đứng nối nhau."
+    ],
+    "solution": "Hậu chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Hậu phía sau mà không bị bắt lại. Đây là bài tập thắng quân, không phải mọi thế cuối đều thắng ván cờ.",
+    "source": "original-composition"
+  },
+  {
+    "title": "Xe: chiếu rồi bắt quân · 2",
+    "beginner": true,
+    "prompt": "Dùng xe chiếu Vua, rồi bắt quân phía sau.",
+    "mode": "interactive",
+    "outcome": "skewer",
+    "fen": "8/8/8/8/4K2R/8/2k5/1r6 b - - 0 1",
+    "moves": [
+      "Rb4+",
+      "Kf5",
+      "Rxh4"
+    ],
+    "alternativeLines": [
+      [
+        "Rb4+",
+        "Ke5",
+        "Rxh4"
+      ],
+      [
+        "Rb4+",
+        "Kd5",
+        "Rxh4"
+      ],
+      [
+        "Rb4+",
+        "Kf3",
+        "Rxh4"
+      ],
+      [
+        "Rb4+",
+        "Ke3",
+        "Rxh4"
+      ]
+    ],
+    "hints": [
+      "Tìm đường thẳng hoặc đường chéo có Vua và quân đối phương đứng nối nhau."
+    ],
+    "solution": "Xe chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Xe phía sau mà không bị bắt lại. Đây là bài tập thắng quân, không phải mọi thế cuối đều thắng ván cờ.",
+    "source": "original-composition"
+  },
+  {
+    "title": "Tượng: chiếu rồi bắt quân · 2",
+    "beginner": true,
+    "prompt": "Dùng tượng chiếu Vua, rồi bắt quân phía sau.",
+    "mode": "interactive",
+    "outcome": "skewer",
+    "fen": "8/2k5/1p6/2b5/5K2/8/7R/8 b - - 0 1",
+    "moves": [
+      "Bd6+",
+      "Kg5",
+      "Bxh2"
+    ],
+    "alternativeLines": [
+      [
+        "Bd6+",
+        "Kf5",
+        "Bxh2"
+      ],
+      [
+        "Bd6+",
+        "Kg4",
+        "Bxh2"
+      ],
+      [
+        "Bd6+",
+        "Ke4",
+        "Bxh2"
+      ],
+      [
+        "Bd6+",
+        "Kf3",
+        "Bxh2"
+      ],
+      [
+        "Bd6+",
+        "Ke3",
+        "Bxh2"
+      ]
+    ],
+    "hints": [
+      "Tìm đường thẳng hoặc đường chéo có Vua và quân đối phương đứng nối nhau."
+    ],
+    "solution": "Tượng chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Xe phía sau mà không bị bắt lại. Bạn còn Tượng và Tốt để tiếp tục ván cờ.",
+    "source": "original-composition"
+  },
+  {
+    "title": "Hậu: chiếu rồi bắt quân · 2",
+    "beginner": true,
+    "prompt": "Dùng hậu chiếu Vua, rồi bắt quân phía sau.",
+    "mode": "interactive",
+    "outcome": "skewer",
+    "fen": "6k1/8/8/R2K4/8/8/8/6q1 b - - 0 1",
+    "moves": [
+      "Qg5+",
+      "Ke6",
+      "Qxa5"
+    ],
+    "alternativeLines": [
+      [
+        "Qg5+",
+        "Kd6",
+        "Qxa5"
+      ],
+      [
+        "Qg5+",
+        "Kc6",
+        "Qxa5"
+      ],
+      [
+        "Qg5+",
+        "Ke4",
+        "Qxa5"
+      ],
+      [
+        "Qg5+",
+        "Kd4",
+        "Qxa5"
+      ],
+      [
+        "Qg5+",
+        "Kc4",
+        "Qxa5"
+      ]
+    ],
+    "hints": [
+      "Tìm đường thẳng hoặc đường chéo có Vua và quân đối phương đứng nối nhau."
+    ],
+    "solution": "Hậu chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Xe phía sau mà không bị bắt lại. Đây là bài tập thắng quân, không phải mọi thế cuối đều thắng ván cờ.",
+    "source": "original-composition"
+  },
+  {
+    "title": "Xe: chiếu rồi bắt quân · 3",
+    "beginner": true,
+    "prompt": "Dùng xe chiếu Vua, rồi bắt quân phía sau.",
+    "mode": "interactive",
+    "outcome": "skewer",
+    "fen": "1b6/8/K7/8/8/1k6/8/3R4 w - - 0 1",
+    "moves": [
+      "Rb1+",
+      "Kc4",
+      "Rxb8"
+    ],
+    "alternativeLines": [
+      [
+        "Rb1+",
+        "Ka4",
+        "Rxb8"
+      ],
+      [
+        "Rb1+",
+        "Kc3",
+        "Rxb8"
+      ],
+      [
+        "Rb1+",
+        "Ka3",
+        "Rxb8"
+      ],
+      [
+        "Rb1+",
+        "Kc2",
+        "Rxb8"
+      ],
+      [
+        "Rb1+",
+        "Ka2",
+        "Rxb8"
+      ]
+    ],
+    "hints": [
+      "Tìm đường thẳng hoặc đường chéo có Vua và quân đối phương đứng nối nhau."
+    ],
+    "solution": "Xe chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Tượng phía sau mà không bị bắt lại. Đây là bài tập thắng quân, không phải mọi thế cuối đều thắng ván cờ.",
+    "source": "original-composition"
+  },
+  {
+    "title": "Tượng: chiếu rồi bắt quân · 3",
+    "beginner": true,
+    "prompt": "Dùng tượng chiếu Vua, rồi bắt quân phía sau.",
+    "mode": "interactive",
+    "outcome": "skewer",
+    "fen": "2K1B3/8/1P6/8/8/5k2/8/3n4 w - - 0 1",
+    "moves": [
+      "Bh5+",
+      "Kf4",
+      "Bxd1"
+    ],
+    "alternativeLines": [
+      [
+        "Bh5+",
+        "Ke4",
+        "Bxd1"
+      ],
+      [
+        "Bh5+",
+        "Kg3",
+        "Bxd1"
+      ],
+      [
+        "Bh5+",
+        "Ke3",
+        "Bxd1"
+      ],
+      [
+        "Bh5+",
+        "Kg2",
+        "Bxd1"
+      ],
+      [
+        "Bh5+",
+        "Kf2",
+        "Bxd1"
+      ]
+    ],
+    "hints": [
+      "Tìm đường thẳng hoặc đường chéo có Vua và quân đối phương đứng nối nhau."
+    ],
+    "solution": "Tượng chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Mã phía sau mà không bị bắt lại. Bạn còn Tượng và Tốt để tiếp tục ván cờ.",
+    "source": "original-composition"
+  },
+  {
+    "title": "Hậu: chiếu rồi bắt quân · 3",
+    "beginner": true,
+    "prompt": "Dùng hậu chiếu Vua, rồi bắt quân phía sau.",
+    "mode": "interactive",
+    "outcome": "skewer",
+    "fen": "7b/1K6/8/4k3/8/8/8/3Q4 w - - 0 1",
+    "moves": [
+      "Qa1+",
+      "Ke6",
+      "Qxh8"
+    ],
+    "alternativeLines": [
+      [
+        "Qa1+",
+        "Kd6",
+        "Qxh8"
+      ],
+      [
+        "Qa1+",
+        "Kf5",
+        "Qxh8"
+      ],
+      [
+        "Qa1+",
+        "Kd5",
+        "Qxh8"
+      ],
+      [
+        "Qa1+",
+        "Kf4",
+        "Qxh8"
+      ],
+      [
+        "Qa1+",
+        "Ke4",
+        "Qxh8"
+      ]
+    ],
+    "hints": [
+      "Tìm đường thẳng hoặc đường chéo có Vua và quân đối phương đứng nối nhau."
+    ],
+    "solution": "Hậu chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Tượng phía sau mà không bị bắt lại. Đây là bài tập thắng quân, không phải mọi thế cuối đều thắng ván cờ.",
+    "source": "original-composition"
+  },
+  {
+    "title": "Xe: chiếu rồi bắt quân · 4",
+    "beginner": true,
+    "prompt": "Dùng xe chiếu Vua, rồi bắt quân phía sau.",
+    "mode": "interactive",
+    "outcome": "skewer",
+    "fen": "2K2N2/8/5k2/8/8/8/8/r7 b - - 0 1",
+    "moves": [
+      "Ra8+",
+      "Kd7",
+      "Rxf8"
+    ],
+    "alternativeLines": [
+      [
+        "Ra8+",
+        "Kc7",
+        "Rxf8"
+      ],
+      [
+        "Ra8+",
+        "Kb7",
+        "Rxf8"
+      ]
+    ],
+    "hints": [
+      "Tìm đường thẳng hoặc đường chéo có Vua và quân đối phương đứng nối nhau."
+    ],
+    "solution": "Xe chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Mã phía sau mà không bị bắt lại. Đây là bài tập thắng quân, không phải mọi thế cuối đều thắng ván cờ.",
+    "source": "original-composition"
+  },
+  {
+    "title": "Tượng: chiếu rồi bắt quân · 4",
+    "beginner": true,
+    "prompt": "Dùng tượng chiếu Vua, rồi bắt quân phía sau.",
+    "mode": "interactive",
+    "outcome": "skewer",
+    "fen": "1Q6/8/4p3/8/5K2/7k/8/4b3 b - - 0 1",
+    "moves": [
+      "Bg3+",
+      "Kg5",
+      "Bxb8"
+    ],
+    "alternativeLines": [
+      [
+        "Bg3+",
+        "Ke4",
+        "Bxb8"
+      ],
+      [
+        "Bg3+",
+        "Kf3",
+        "Bxb8"
+      ],
+      [
+        "Bg3+",
+        "Ke3",
+        "Bxb8"
+      ]
+    ],
+    "hints": [
+      "Tìm đường thẳng hoặc đường chéo có Vua và quân đối phương đứng nối nhau."
+    ],
+    "solution": "Tượng chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Hậu phía sau mà không bị bắt lại. Bạn còn Tượng và Tốt để tiếp tục ván cờ.",
+    "source": "original-composition"
+  },
+  {
+    "title": "Hậu: chiếu rồi bắt quân · 4",
+    "beginner": true,
+    "prompt": "Dùng hậu chiếu Vua, rồi bắt quân phía sau.",
+    "mode": "interactive",
+    "outcome": "skewer",
+    "fen": "8/1N6/8/1k6/8/5K2/8/4q3 b - - 0 1",
+    "moves": [
+      "Qh1+",
+      "Kg4",
+      "Qxb7"
+    ],
+    "alternativeLines": [
+      [
+        "Qh1+",
+        "Kf4",
+        "Qxb7"
+      ],
+      [
+        "Qh1+",
+        "Kg3",
+        "Qxb7"
+      ],
+      [
+        "Qh1+",
+        "Ke3",
+        "Qxb7"
+      ],
+      [
+        "Qh1+",
+        "Kf2",
+        "Qxb7"
+      ],
+      [
+        "Qh1+",
+        "Ke2",
+        "Qxb7"
+      ]
+    ],
+    "hints": [
+      "Tìm đường thẳng hoặc đường chéo có Vua và quân đối phương đứng nối nhau."
+    ],
+    "solution": "Hậu chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Mã phía sau mà không bị bắt lại. Đây là bài tập thắng quân, không phải mọi thế cuối đều thắng ván cờ.",
+    "source": "original-composition"
+  },
+  {
+    "title": "Xe: chiếu rồi bắt quân · 5",
+    "beginner": true,
+    "prompt": "Dùng xe chiếu Vua, rồi bắt quân phía sau.",
+    "mode": "interactive",
+    "outcome": "skewer",
+    "fen": "8/8/K7/3k2q1/8/8/R7/8 w - - 0 1",
+    "moves": [
+      "Ra5+",
+      "Ke6",
+      "Rxg5"
+    ],
+    "alternativeLines": [
+      [
+        "Ra5+",
+        "Kd6",
+        "Rxg5"
+      ],
+      [
+        "Ra5+",
+        "Kc6",
+        "Rxg5"
+      ],
+      [
+        "Ra5+",
+        "Ke4",
+        "Rxg5"
+      ],
+      [
+        "Ra5+",
+        "Kd4",
+        "Rxg5"
+      ],
+      [
+        "Ra5+",
+        "Kc4",
+        "Rxg5"
+      ]
+    ],
+    "hints": [
+      "Tìm đường thẳng hoặc đường chéo có Vua và quân đối phương đứng nối nhau."
+    ],
+    "solution": "Xe chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Hậu phía sau mà không bị bắt lại. Đây là bài tập thắng quân, không phải mọi thế cuối đều thắng ván cờ.",
+    "source": "original-composition"
+  },
+  {
+    "title": "Tượng: chiếu rồi bắt quân · 5",
+    "beginner": true,
+    "prompt": "Dùng tượng chiếu Vua, rồi bắt quân phía sau.",
+    "mode": "interactive",
+    "outcome": "skewer",
+    "fen": "2K2B2/8/1P6/8/5k2/8/7r/8 w - - 0 1",
+    "moves": [
+      "Bd6+",
+      "Kg5",
+      "Bxh2"
+    ],
+    "alternativeLines": [
+      [
+        "Bd6+",
+        "Kf5",
+        "Bxh2"
+      ],
+      [
+        "Bd6+",
+        "Kg4",
+        "Bxh2"
+      ],
+      [
+        "Bd6+",
+        "Ke4",
+        "Bxh2"
+      ],
+      [
+        "Bd6+",
+        "Kf3",
+        "Bxh2"
+      ],
+      [
+        "Bd6+",
+        "Ke3",
+        "Bxh2"
+      ]
+    ],
+    "hints": [
+      "Tìm đường thẳng hoặc đường chéo có Vua và quân đối phương đứng nối nhau."
+    ],
+    "solution": "Tượng chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Xe phía sau mà không bị bắt lại. Bạn còn Tượng và Tốt để tiếp tục ván cờ.",
+    "source": "original-composition"
+  },
+  {
+    "title": "Hậu: chiếu rồi bắt quân · 5",
+    "beginner": true,
+    "prompt": "Dùng hậu chiếu Vua, rồi bắt quân phía sau.",
+    "mode": "interactive",
+    "outcome": "skewer",
+    "fen": "3Q3K/8/8/2k2q2/8/8/8/8 w - - 0 1",
+    "moves": [
+      "Qa5+",
+      "Kd6",
+      "Qxf5"
+    ],
+    "alternativeLines": [
+      [
+        "Qa5+",
+        "Kc6",
+        "Qxf5"
+      ],
+      [
+        "Qa5+",
+        "Kd4",
+        "Qxf5"
+      ],
+      [
+        "Qa5+",
+        "Kc4",
+        "Qxf5"
+      ]
+    ],
+    "hints": [
+      "Tìm đường thẳng hoặc đường chéo có Vua và quân đối phương đứng nối nhau."
+    ],
+    "solution": "Hậu chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Hậu phía sau mà không bị bắt lại. Đây là bài tập thắng quân, không phải mọi thế cuối đều thắng ván cờ.",
+    "source": "original-composition"
+  },
+  {
+    "title": "Xe: chiếu rồi bắt quân · 6",
+    "beginner": true,
+    "prompt": "Dùng xe chiếu Vua, rồi bắt quân phía sau.",
+    "mode": "interactive",
+    "outcome": "skewer",
+    "fen": "8/r7/8/3K4/8/8/5k2/3R4 b - - 0 1",
+    "moves": [
+      "Rd7+",
+      "Ke6",
+      "Rxd1"
+    ],
+    "alternativeLines": [
+      [
+        "Rd7+",
+        "Kc6",
+        "Rxd1"
+      ],
+      [
+        "Rd7+",
+        "Ke5",
+        "Rxd1"
+      ],
+      [
+        "Rd7+",
+        "Kc5",
+        "Rxd1"
+      ],
+      [
+        "Rd7+",
+        "Ke4",
+        "Rxd1"
+      ],
+      [
+        "Rd7+",
+        "Kc4",
+        "Rxd1"
+      ]
+    ],
+    "hints": [
+      "Tìm đường thẳng hoặc đường chéo có Vua và quân đối phương đứng nối nhau."
+    ],
+    "solution": "Xe chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Xe phía sau mà không bị bắt lại. Đây là bài tập thắng quân, không phải mọi thế cuối đều thắng ván cờ.",
+    "source": "original-composition"
+  },
+  {
+    "title": "Hậu: chiếu rồi bắt quân · 6",
+    "beginner": true,
+    "prompt": "Dùng hậu chiếu Vua, rồi bắt quân phía sau.",
+    "mode": "interactive",
+    "outcome": "skewer",
+    "fen": "6R1/8/8/k2K4/1q6/8/8/8 b - - 0 1",
+    "moves": [
+      "Qb3+",
+      "Kd6",
+      "Qxg8"
+    ],
+    "alternativeLines": [
+      [
+        "Qb3+",
+        "Kc6",
+        "Qxg8"
+      ],
+      [
+        "Qb3+",
+        "Ke5",
+        "Qxg8"
+      ],
+      [
+        "Qb3+",
+        "Kc5",
+        "Qxg8"
+      ],
+      [
+        "Qb3+",
+        "Ke4",
+        "Qxg8"
+      ],
+      [
+        "Qb3+",
+        "Kd4",
+        "Qxg8"
+      ]
+    ],
+    "hints": [
+      "Tìm đường thẳng hoặc đường chéo có Vua và quân đối phương đứng nối nhau."
+    ],
+    "solution": "Hậu chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Xe phía sau mà không bị bắt lại. Đây là bài tập thắng quân, không phải mọi thế cuối đều thắng ván cờ.",
+    "source": "original-composition"
+  },
+  {
+    "title": "Xe: chiếu rồi bắt quân · 7",
+    "beginner": true,
+    "prompt": "Dùng xe chiếu Vua, rồi bắt quân phía sau.",
+    "mode": "interactive",
+    "outcome": "skewer",
+    "fen": "8/8/2R5/4k2b/8/8/8/1K6 w - - 0 1",
+    "moves": [
+      "Rc5+",
+      "Kf6",
+      "Rxh5"
+    ],
+    "alternativeLines": [
+      [
+        "Rc5+",
+        "Ke6",
+        "Rxh5"
+      ],
+      [
+        "Rc5+",
+        "Kd6",
+        "Rxh5"
+      ],
+      [
+        "Rc5+",
+        "Kf4",
+        "Rxh5"
+      ],
+      [
+        "Rc5+",
+        "Ke4",
+        "Rxh5"
+      ],
+      [
+        "Rc5+",
+        "Kd4",
+        "Rxh5"
+      ]
+    ],
+    "hints": [
+      "Tìm đường thẳng hoặc đường chéo có Vua và quân đối phương đứng nối nhau."
+    ],
+    "solution": "Xe chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Tượng phía sau mà không bị bắt lại. Đây là bài tập thắng quân, không phải mọi thế cuối đều thắng ván cờ.",
+    "source": "original-composition"
+  },
+  {
+    "title": "Tượng: chiếu rồi bắt quân · 6",
+    "beginner": true,
+    "prompt": "Dùng tượng chiếu Vua, rồi bắt quân phía sau.",
+    "mode": "interactive",
+    "outcome": "skewer",
+    "fen": "8/8/B6K/8/4k3/1P6/6q1/8 w - - 0 1",
+    "moves": [
+      "Bb7+",
+      "Kf5",
+      "Bxg2"
+    ],
+    "alternativeLines": [
+      [
+        "Bb7+",
+        "Ke5",
+        "Bxg2"
+      ],
+      [
+        "Bb7+",
+        "Kf4",
+        "Bxg2"
+      ],
+      [
+        "Bb7+",
+        "Kd4",
+        "Bxg2"
+      ],
+      [
+        "Bb7+",
+        "Ke3",
+        "Bxg2"
+      ],
+      [
+        "Bb7+",
+        "Kd3",
+        "Bxg2"
+      ]
+    ],
+    "hints": [
+      "Tìm đường thẳng hoặc đường chéo có Vua và quân đối phương đứng nối nhau."
+    ],
+    "solution": "Tượng chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Hậu phía sau mà không bị bắt lại. Bạn còn Tượng và Tốt để tiếp tục ván cờ.",
+    "source": "original-composition"
+  },
+  {
+    "title": "Hậu: chiếu rồi bắt quân · 7",
+    "beginner": true,
+    "prompt": "Dùng hậu chiếu Vua, rồi bắt quân phía sau.",
+    "mode": "interactive",
+    "outcome": "skewer",
+    "fen": "b7/5Q2/2k5/8/K7/8/8/8 w - - 0 1",
+    "moves": [
+      "Qf3+",
+      "Kd7",
+      "Qxa8"
+    ],
+    "alternativeLines": [
+      [
+        "Qf3+",
+        "Kc7",
+        "Qxa8"
+      ],
+      [
+        "Qf3+",
+        "Kd6",
+        "Qxa8"
+      ],
+      [
+        "Qf3+",
+        "Kb6",
+        "Qxa8"
+      ],
+      [
+        "Qf3+",
+        "Kc5",
+        "Qxa8"
+      ]
+    ],
+    "hints": [
+      "Tìm đường thẳng hoặc đường chéo có Vua và quân đối phương đứng nối nhau."
+    ],
+    "solution": "Hậu chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Tượng phía sau mà không bị bắt lại. Đây là bài tập thắng quân, không phải mọi thế cuối đều thắng ván cờ.",
+    "source": "original-composition"
+  },
+  {
+    "title": "Xe: chiếu rồi bắt quân · 8",
+    "beginner": true,
+    "prompt": "Dùng xe chiếu Vua, rồi bắt quân phía sau.",
+    "mode": "interactive",
+    "outcome": "skewer",
+    "fen": "6N1/8/8/8/1k4K1/8/8/4r3 b - - 0 1",
+    "moves": [
+      "Rg1+",
+      "Kh5",
+      "Rxg8"
+    ],
+    "alternativeLines": [
+      [
+        "Rg1+",
+        "Kf5",
+        "Rxg8"
+      ],
+      [
+        "Rg1+",
+        "Kh4",
+        "Rxg8"
+      ],
+      [
+        "Rg1+",
+        "Kf4",
+        "Rxg8"
+      ],
+      [
+        "Rg1+",
+        "Kh3",
+        "Rxg8"
+      ],
+      [
+        "Rg1+",
+        "Kf3",
+        "Rxg8"
+      ]
+    ],
+    "hints": [
+      "Tìm đường thẳng hoặc đường chéo có Vua và quân đối phương đứng nối nhau."
+    ],
+    "solution": "Xe chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Mã phía sau mà không bị bắt lại. Đây là bài tập thắng quân, không phải mọi thế cuối đều thắng ván cờ.",
+    "source": "original-composition"
+  },
+  {
+    "title": "Tượng: chiếu rồi bắt quân · 7",
+    "beginner": true,
+    "prompt": "Dùng tượng chiếu Vua, rồi bắt quân phía sau.",
+    "mode": "interactive",
+    "outcome": "skewer",
+    "fen": "6R1/8/4K3/1b6/8/4p3/5k2/8 b - - 0 1",
+    "moves": [
+      "Bc4+",
+      "Ke7",
+      "Bxg8"
+    ],
+    "alternativeLines": [
+      [
+        "Bc4+",
+        "Kd7",
+        "Bxg8"
+      ],
+      [
+        "Bc4+",
+        "Kf6",
+        "Bxg8"
+      ],
+      [
+        "Bc4+",
+        "Kd6",
+        "Bxg8"
+      ],
+      [
+        "Bc4+",
+        "Kf5",
+        "Bxg8"
+      ],
+      [
+        "Bc4+",
+        "Ke5",
+        "Bxg8"
+      ]
+    ],
+    "hints": [
+      "Tìm đường thẳng hoặc đường chéo có Vua và quân đối phương đứng nối nhau."
+    ],
+    "solution": "Tượng chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Xe phía sau mà không bị bắt lại. Bạn còn Tượng và Tốt để tiếp tục ván cờ.",
+    "source": "original-composition"
+  },
+  {
+    "title": "Hậu: chiếu rồi bắt quân · 8",
+    "beginner": true,
+    "prompt": "Dùng hậu chiếu Vua, rồi bắt quân phía sau.",
+    "mode": "interactive",
+    "outcome": "skewer",
+    "fen": "8/k7/6K1/8/8/8/q7/6N1 b - - 0 1",
+    "moves": [
+      "Qg8+",
+      "Kh6",
+      "Qxg1"
+    ],
+    "alternativeLines": [
+      [
+        "Qg8+",
+        "Kf6",
+        "Qxg1"
+      ],
+      [
+        "Qg8+",
+        "Kh5",
+        "Qxg1"
+      ],
+      [
+        "Qg8+",
+        "Kf5",
+        "Qxg1"
+      ]
+    ],
+    "hints": [
+      "Tìm đường thẳng hoặc đường chéo có Vua và quân đối phương đứng nối nhau."
+    ],
+    "solution": "Hậu chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Mã phía sau mà không bị bắt lại. Đây là bài tập thắng quân, không phải mọi thế cuối đều thắng ván cờ.",
+    "source": "original-composition"
+  },
+  {
+    "title": "Xe: chiếu rồi bắt quân · 9",
+    "beginner": true,
+    "prompt": "Dùng xe chiếu Vua, rồi bắt quân phía sau.",
+    "mode": "interactive",
+    "outcome": "skewer",
+    "fen": "5R2/8/1k6/8/8/1q6/5K2/8 w - - 0 1",
+    "moves": [
+      "Rb8+",
+      "Kc7",
+      "Rxb3"
+    ],
+    "alternativeLines": [
+      [
+        "Rb8+",
+        "Ka7",
+        "Rxb3"
+      ],
+      [
+        "Rb8+",
+        "Kc6",
+        "Rxb3"
+      ],
+      [
+        "Rb8+",
+        "Ka6",
+        "Rxb3"
+      ],
+      [
+        "Rb8+",
+        "Kc5",
+        "Rxb3"
+      ],
+      [
+        "Rb8+",
+        "Ka5",
+        "Rxb3"
+      ]
+    ],
+    "hints": [
+      "Tìm đường thẳng hoặc đường chéo có Vua và quân đối phương đứng nối nhau."
+    ],
+    "solution": "Xe chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Hậu phía sau mà không bị bắt lại. Đây là bài tập thắng quân, không phải mọi thế cuối đều thắng ván cờ.",
+    "source": "original-composition"
+  },
+  {
+    "title": "Hậu: chiếu rồi bắt quân · 9",
+    "beginner": true,
+    "prompt": "Dùng hậu chiếu Vua, rồi bắt quân phía sau.",
+    "mode": "interactive",
+    "outcome": "skewer",
+    "fen": "4K3/8/3Q4/8/8/4k3/8/2q5 w - - 0 1",
+    "moves": [
+      "Qh6+",
+      "Ke4",
+      "Qxc1"
+    ],
+    "alternativeLines": [
+      [
+        "Qh6+",
+        "Kd4",
+        "Qxc1"
+      ],
+      [
+        "Qh6+",
+        "Kf3",
+        "Qxc1"
+      ],
+      [
+        "Qh6+",
+        "Kd3",
+        "Qxc1"
+      ],
+      [
+        "Qh6+",
+        "Kf2",
+        "Qxc1"
+      ],
+      [
+        "Qh6+",
+        "Ke2",
+        "Qxc1"
+      ]
+    ],
+    "hints": [
+      "Tìm đường thẳng hoặc đường chéo có Vua và quân đối phương đứng nối nhau."
+    ],
+    "solution": "Hậu chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Hậu phía sau mà không bị bắt lại. Đây là bài tập thắng quân, không phải mọi thế cuối đều thắng ván cờ.",
+    "source": "original-composition"
+  },
+  {
+    "title": "Xe: chiếu rồi bắt quân · 10",
+    "beginner": true,
+    "prompt": "Dùng xe chiếu Vua, rồi bắt quân phía sau.",
+    "mode": "interactive",
+    "outcome": "skewer",
+    "fen": "8/k7/8/8/8/1r6/3K3R/8 b - - 0 1",
+    "moves": [
+      "Rb2+",
+      "Ke3",
+      "Rxh2"
+    ],
+    "alternativeLines": [
+      [
+        "Rb2+",
+        "Kd3",
+        "Rxh2"
+      ],
+      [
+        "Rb2+",
+        "Kc3",
+        "Rxh2"
+      ],
+      [
+        "Rb2+",
+        "Ke1",
+        "Rxh2"
+      ],
+      [
+        "Rb2+",
+        "Kd1",
+        "Rxh2"
+      ],
+      [
+        "Rb2+",
+        "Kc1",
+        "Rxh2"
+      ]
+    ],
+    "hints": [
+      "Tìm đường thẳng hoặc đường chéo có Vua và quân đối phương đứng nối nhau."
+    ],
+    "solution": "Xe chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Xe phía sau mà không bị bắt lại. Đây là bài tập thắng quân, không phải mọi thế cuối đều thắng ván cờ.",
+    "source": "original-composition"
+  },
+  {
+    "title": "Tượng: chiếu rồi bắt quân · 8",
+    "beginner": true,
+    "prompt": "Dùng tượng chiếu Vua, rồi bắt quân phía sau.",
+    "mode": "interactive",
+    "outcome": "skewer",
+    "fen": "8/3pk3/8/4K3/8/b5Q1/8/8 b - - 0 1",
+    "moves": [
+      "Bd6+",
+      "Kf5",
+      "Bxg3"
+    ],
+    "alternativeLines": [
+      [
+        "Bd6+",
+        "Kd5",
+        "Bxg3"
+      ],
+      [
+        "Bd6+",
+        "Ke4",
+        "Bxg3"
+      ],
+      [
+        "Bd6+",
+        "Kd4",
+        "Bxg3"
+      ]
+    ],
+    "hints": [
+      "Tìm đường thẳng hoặc đường chéo có Vua và quân đối phương đứng nối nhau."
+    ],
+    "solution": "Tượng chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Hậu phía sau mà không bị bắt lại. Bạn còn Tượng và Tốt để tiếp tục ván cờ.",
+    "source": "original-composition"
+  },
+  {
+    "title": "Hậu: chiếu rồi bắt quân · 10",
+    "beginner": true,
+    "prompt": "Dùng hậu chiếu Vua, rồi bắt quân phía sau.",
+    "mode": "interactive",
+    "outcome": "skewer",
+    "fen": "4k1q1/8/2R5/8/4K3/8/8/8 b - - 0 1",
+    "moves": [
+      "Qg2+",
+      "Kf5",
+      "Qxc6"
+    ],
+    "alternativeLines": [
+      [
+        "Qg2+",
+        "Ke5",
+        "Qxc6"
+      ],
+      [
+        "Qg2+",
+        "Kf4",
+        "Qxc6"
+      ],
+      [
+        "Qg2+",
+        "Kd4",
+        "Qxc6"
+      ],
+      [
+        "Qg2+",
+        "Ke3",
+        "Qxc6"
+      ],
+      [
+        "Qg2+",
+        "Kd3",
+        "Qxc6"
+      ]
+    ],
+    "hints": [
+      "Tìm đường thẳng hoặc đường chéo có Vua và quân đối phương đứng nối nhau."
+    ],
+    "solution": "Hậu chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Xe phía sau mà không bị bắt lại. Đây là bài tập thắng quân, không phải mọi thế cuối đều thắng ván cờ.",
+    "source": "original-composition"
+  },
+  {
+    "title": "Xe: chiếu rồi bắt quân · 11",
+    "beginner": true,
+    "prompt": "Dùng xe chiếu Vua, rồi bắt quân phía sau.",
+    "mode": "interactive",
+    "outcome": "skewer",
+    "fen": "8/5b2/8/8/8/5k2/1K6/2R5 w - - 0 1",
+    "moves": [
+      "Rf1+",
+      "Kg4",
+      "Rxf7"
+    ],
+    "alternativeLines": [
+      [
+        "Rf1+",
+        "Ke4",
+        "Rxf7"
+      ],
+      [
+        "Rf1+",
+        "Kg3",
+        "Rxf7"
+      ],
+      [
+        "Rf1+",
+        "Ke3",
+        "Rxf7"
+      ],
+      [
+        "Rf1+",
+        "Kg2",
+        "Rxf7"
+      ],
+      [
+        "Rf1+",
+        "Ke2",
+        "Rxf7"
+      ]
+    ],
+    "hints": [
+      "Tìm đường thẳng hoặc đường chéo có Vua và quân đối phương đứng nối nhau."
+    ],
+    "solution": "Xe chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Tượng phía sau mà không bị bắt lại. Đây là bài tập thắng quân, không phải mọi thế cuối đều thắng ván cờ.",
+    "source": "original-composition"
+  },
+  {
+    "title": "Tượng: chiếu rồi bắt quân · 9",
+    "beginner": true,
+    "prompt": "Dùng tượng chiếu Vua, rồi bắt quân phía sau.",
+    "mode": "interactive",
+    "outcome": "skewer",
+    "fen": "8/8/6B1/3k4/7K/6P1/r7/8 w - - 0 1",
+    "moves": [
+      "Bf7+",
+      "Kd6",
+      "Bxa2"
+    ],
+    "alternativeLines": [
+      [
+        "Bf7+",
+        "Kc6",
+        "Bxa2"
+      ],
+      [
+        "Bf7+",
+        "Ke5",
+        "Bxa2"
+      ],
+      [
+        "Bf7+",
+        "Kc5",
+        "Bxa2"
+      ],
+      [
+        "Bf7+",
+        "Ke4",
+        "Bxa2"
+      ],
+      [
+        "Bf7+",
+        "Kd4",
+        "Bxa2"
+      ]
+    ],
+    "hints": [
+      "Tìm đường thẳng hoặc đường chéo có Vua và quân đối phương đứng nối nhau."
+    ],
+    "solution": "Tượng chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Xe phía sau mà không bị bắt lại. Bạn còn Tượng và Tốt để tiếp tục ván cờ.",
+    "source": "original-composition"
+  },
+  {
+    "title": "Hậu: chiếu rồi bắt quân · 11",
+    "beginner": true,
+    "prompt": "Dùng hậu chiếu Vua, rồi bắt quân phía sau.",
+    "mode": "interactive",
+    "outcome": "skewer",
+    "fen": "3b4/8/7Q/8/3k4/5K2/8/8 w - - 0 1",
+    "moves": [
+      "Qd2+",
+      "Ke5",
+      "Qxd8"
+    ],
+    "alternativeLines": [
+      [
+        "Qd2+",
+        "Kc5",
+        "Qxd8"
+      ],
+      [
+        "Qd2+",
+        "Kc4",
+        "Qxd8"
+      ]
+    ],
+    "hints": [
+      "Tìm đường thẳng hoặc đường chéo có Vua và quân đối phương đứng nối nhau."
+    ],
+    "solution": "Hậu chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Tượng phía sau mà không bị bắt lại. Đây là bài tập thắng quân, không phải mọi thế cuối đều thắng ván cờ.",
+    "source": "original-composition"
+  },
+  {
+    "title": "Xe: chiếu rồi bắt quân · 12",
+    "beginner": true,
+    "prompt": "Dùng xe chiếu Vua, rồi bắt quân phía sau.",
+    "mode": "interactive",
+    "outcome": "skewer",
+    "fen": "4K2N/8/r7/5k2/8/8/8/8 b - - 0 1",
+    "moves": [
+      "Ra8+",
+      "Kf7",
+      "Rxh8"
+    ],
+    "alternativeLines": [
+      [
+        "Ra8+",
+        "Ke7",
+        "Rxh8"
+      ],
+      [
+        "Ra8+",
+        "Kd7",
+        "Rxh8"
+      ]
+    ],
+    "hints": [
+      "Tìm đường thẳng hoặc đường chéo có Vua và quân đối phương đứng nối nhau."
+    ],
+    "solution": "Xe chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Mã phía sau mà không bị bắt lại. Đây là bài tập thắng quân, không phải mọi thế cuối đều thắng ván cờ.",
+    "source": "original-composition"
+  },
+  {
+    "title": "Hậu: chiếu rồi bắt quân · 12",
+    "beginner": true,
+    "prompt": "Dùng hậu chiếu Vua, rồi bắt quân phía sau.",
+    "mode": "interactive",
+    "outcome": "skewer",
+    "fen": "8/8/8/1q6/5k2/8/3K3N/8 b - - 0 1",
+    "moves": [
+      "Qb2+",
+      "Kd3",
+      "Qxh2"
+    ],
+    "alternativeLines": [
+      [
+        "Qb2+",
+        "Ke1",
+        "Qxh2"
+      ],
+      [
+        "Qb2+",
+        "Kd1",
+        "Qxh2"
+      ]
+    ],
+    "hints": [
+      "Tìm đường thẳng hoặc đường chéo có Vua và quân đối phương đứng nối nhau."
+    ],
+    "solution": "Hậu chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Mã phía sau mà không bị bắt lại. Đây là bài tập thắng quân, không phải mọi thế cuối đều thắng ván cờ.",
+    "source": "original-composition"
+  },
+  {
+    "title": "Xe: chiếu rồi bắt quân · 13",
+    "beginner": true,
+    "prompt": "Dùng xe chiếu Vua, rồi bắt quân phía sau.",
+    "mode": "interactive",
+    "outcome": "skewer",
+    "fen": "q2k4/8/8/6R1/1K6/8/8/8 w - - 0 1",
+    "moves": [
+      "Rg8+",
+      "Ke7",
+      "Rxa8"
+    ],
+    "alternativeLines": [
+      [
+        "Rg8+",
+        "Kd7",
+        "Rxa8"
+      ],
+      [
+        "Rg8+",
+        "Kc7",
+        "Rxa8"
+      ]
+    ],
+    "hints": [
+      "Tìm đường thẳng hoặc đường chéo có Vua và quân đối phương đứng nối nhau."
+    ],
+    "solution": "Xe chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Hậu phía sau mà không bị bắt lại. Đây là bài tập thắng quân, không phải mọi thế cuối đều thắng ván cờ.",
+    "source": "original-composition"
+  },
+  {
+    "title": "Tượng: chiếu rồi bắt quân · 10",
+    "beginner": true,
+    "prompt": "Dùng tượng chiếu Vua, rồi bắt quân phía sau.",
+    "mode": "interactive",
+    "outcome": "skewer",
+    "fen": "8/B7/8/8/3K1k2/2P5/7q/8 w - - 0 1",
+    "moves": [
+      "Bb8+",
+      "Kg5",
+      "Bxh2"
+    ],
+    "alternativeLines": [
+      [
+        "Bb8+",
+        "Kf5",
+        "Bxh2"
+      ],
+      [
+        "Bb8+",
+        "Kg4",
+        "Bxh2"
+      ],
+      [
+        "Bb8+",
+        "Kf3",
+        "Bxh2"
+      ]
+    ],
+    "hints": [
+      "Tìm đường thẳng hoặc đường chéo có Vua và quân đối phương đứng nối nhau."
+    ],
+    "solution": "Tượng chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Hậu phía sau mà không bị bắt lại. Bạn còn Tượng và Tốt để tiếp tục ván cờ.",
+    "source": "original-composition"
+  },
+  {
+    "title": "Hậu: chiếu rồi bắt quân · 13",
+    "beginner": true,
+    "prompt": "Dùng hậu chiếu Vua, rồi bắt quân phía sau.",
+    "mode": "interactive",
+    "outcome": "skewer",
+    "fen": "2q5/8/8/5k2/8/7K/6Q1/8 w - - 0 1",
+    "moves": [
+      "Qg4+",
+      "Kf6",
+      "Qxc8"
+    ],
+    "alternativeLines": [
+      [
+        "Qg4+",
+        "Ke5",
+        "Qxc8"
+      ]
+    ],
+    "hints": [
+      "Tìm đường thẳng hoặc đường chéo có Vua và quân đối phương đứng nối nhau."
+    ],
+    "solution": "Hậu chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Hậu phía sau mà không bị bắt lại. Đây là bài tập thắng quân, không phải mọi thế cuối đều thắng ván cờ.",
+    "source": "original-composition"
+  },
+  {
+    "title": "Xe: chiếu rồi bắt quân · 14",
+    "beginner": true,
+    "prompt": "Dùng xe chiếu Vua, rồi bắt quân phía sau.",
+    "mode": "interactive",
+    "outcome": "skewer",
+    "fen": "7r/8/3K4/8/8/6k1/3R4/8 b - - 0 1",
+    "moves": [
+      "Rd8+",
+      "Ke7",
+      "Rxd2"
+    ],
+    "alternativeLines": [
+      [
+        "Rd8+",
+        "Kc7",
+        "Rxd2"
+      ],
+      [
+        "Rd8+",
+        "Ke6",
+        "Rxd2"
+      ],
+      [
+        "Rd8+",
+        "Kc6",
+        "Rxd2"
+      ],
+      [
+        "Rd8+",
+        "Ke5",
+        "Rxd2"
+      ],
+      [
+        "Rd8+",
+        "Kc5",
+        "Rxd2"
+      ]
+    ],
+    "hints": [
+      "Tìm đường thẳng hoặc đường chéo có Vua và quân đối phương đứng nối nhau."
+    ],
+    "solution": "Xe chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Xe phía sau mà không bị bắt lại. Đây là bài tập thắng quân, không phải mọi thế cuối đều thắng ván cờ.",
+    "source": "original-composition"
+  },
+  {
+    "title": "Tượng: chiếu rồi bắt quân · 11",
+    "beginner": true,
+    "prompt": "Dùng tượng chiếu Vua, rồi bắt quân phía sau.",
+    "mode": "interactive",
+    "outcome": "skewer",
+    "fen": "2k1b3/2p5/8/8/8/3K4/8/1R6 b - - 0 1",
+    "moves": [
+      "Bg6+",
+      "Kd4",
+      "Bxb1"
+    ],
+    "alternativeLines": [
+      [
+        "Bg6+",
+        "Kc4",
+        "Bxb1"
+      ],
+      [
+        "Bg6+",
+        "Ke3",
+        "Bxb1"
+      ],
+      [
+        "Bg6+",
+        "Kc3",
+        "Bxb1"
+      ],
+      [
+        "Bg6+",
+        "Ke2",
+        "Bxb1"
+      ],
+      [
+        "Bg6+",
+        "Kd2",
+        "Bxb1"
+      ]
+    ],
+    "hints": [
+      "Tìm đường thẳng hoặc đường chéo có Vua và quân đối phương đứng nối nhau."
+    ],
+    "solution": "Tượng chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Xe phía sau mà không bị bắt lại. Bạn còn Tượng và Tốt để tiếp tục ván cờ.",
+    "source": "original-composition"
+  },
+  {
+    "title": "Hậu: chiếu rồi bắt quân · 14",
+    "beginner": true,
+    "prompt": "Dùng hậu chiếu Vua, rồi bắt quân phía sau.",
+    "mode": "interactive",
+    "outcome": "skewer",
+    "fen": "4R3/8/8/7k/4K3/8/8/2q5 b - - 0 1",
+    "moves": [
+      "Qe1+",
+      "Kf5",
+      "Qxe8"
+    ],
+    "alternativeLines": [
+      [
+        "Qe1+",
+        "Kd5",
+        "Qxe8"
+      ],
+      [
+        "Qe1+",
+        "Kf4",
+        "Qxe8"
+      ],
+      [
+        "Qe1+",
+        "Kd4",
+        "Qxe8"
+      ],
+      [
+        "Qe1+",
+        "Kf3",
+        "Qxe8"
+      ],
+      [
+        "Qe1+",
+        "Kd3",
+        "Qxe8"
+      ]
+    ],
+    "hints": [
+      "Tìm đường thẳng hoặc đường chéo có Vua và quân đối phương đứng nối nhau."
+    ],
+    "solution": "Hậu chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Xe phía sau mà không bị bắt lại. Đây là bài tập thắng quân, không phải mọi thế cuối đều thắng ván cờ.",
+    "source": "original-composition"
+  },
+  {
+    "title": "Xe: chiếu rồi bắt quân · 15",
+    "beginner": true,
+    "prompt": "Dùng xe chiếu Vua, rồi bắt quân phía sau.",
+    "mode": "interactive",
+    "outcome": "skewer",
+    "fen": "8/7K/6R1/8/b3k3/8/8/8 w - - 0 1",
+    "moves": [
+      "Rg4+",
+      "Kf5",
+      "Rxa4"
+    ],
+    "alternativeLines": [
+      [
+        "Rg4+",
+        "Ke5",
+        "Rxa4"
+      ],
+      [
+        "Rg4+",
+        "Kd5",
+        "Rxa4"
+      ],
+      [
+        "Rg4+",
+        "Kf3",
+        "Rxa4"
+      ],
+      [
+        "Rg4+",
+        "Ke3",
+        "Rxa4"
+      ],
+      [
+        "Rg4+",
+        "Kd3",
+        "Rxa4"
+      ]
+    ],
+    "hints": [
+      "Tìm đường thẳng hoặc đường chéo có Vua và quân đối phương đứng nối nhau."
+    ],
+    "solution": "Xe chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Tượng phía sau mà không bị bắt lại. Đây là bài tập thắng quân, không phải mọi thế cuối đều thắng ván cờ.",
+    "source": "original-composition"
+  },
+  {
+    "title": "Tượng: chiếu rồi bắt quân · 12",
+    "beginner": true,
+    "prompt": "Dùng tượng chiếu Vua, rồi bắt quân phía sau.",
+    "mode": "interactive",
+    "outcome": "skewer",
+    "fen": "1B6/8/6K1/6P1/3k4/8/8/6n1 w - - 0 1",
+    "moves": [
+      "Ba7+",
+      "Ke5",
+      "Bxg1"
+    ],
+    "alternativeLines": [
+      [
+        "Ba7+",
+        "Kd5",
+        "Bxg1"
+      ],
+      [
+        "Ba7+",
+        "Ke4",
+        "Bxg1"
+      ],
+      [
+        "Ba7+",
+        "Kc4",
+        "Bxg1"
+      ],
+      [
+        "Ba7+",
+        "Kd3",
+        "Bxg1"
+      ],
+      [
+        "Ba7+",
+        "Kc3",
+        "Bxg1"
+      ]
+    ],
+    "hints": [
+      "Tìm đường thẳng hoặc đường chéo có Vua và quân đối phương đứng nối nhau."
+    ],
+    "solution": "Tượng chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Mã phía sau mà không bị bắt lại. Bạn còn Tượng và Tốt để tiếp tục ván cờ.",
+    "source": "original-composition"
+  },
+  {
+    "title": "Hậu: chiếu rồi bắt quân · 15",
+    "beginner": true,
+    "prompt": "Dùng hậu chiếu Vua, rồi bắt quân phía sau.",
+    "mode": "interactive",
+    "outcome": "skewer",
+    "fen": "8/8/8/5Q2/7K/8/8/b2k4 w - - 0 1",
+    "moves": [
+      "Qf1+",
+      "Kd2",
+      "Qxa1"
+    ],
+    "alternativeLines": [
+      [
+        "Qf1+",
+        "Kc2",
+        "Qxa1"
+      ]
+    ],
+    "hints": [
+      "Tìm đường thẳng hoặc đường chéo có Vua và quân đối phương đứng nối nhau."
+    ],
+    "solution": "Hậu chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Tượng phía sau mà không bị bắt lại. Đây là bài tập thắng quân, không phải mọi thế cuối đều thắng ván cờ.",
+    "source": "original-composition"
+  },
+  {
+    "title": "Xe: chiếu rồi bắt quân · 16",
+    "beginner": true,
+    "prompt": "Dùng xe chiếu Vua, rồi bắt quân phía sau.",
+    "mode": "interactive",
+    "outcome": "skewer",
+    "fen": "6r1/1k6/8/4K3/8/8/8/4N3 b - - 0 1",
+    "moves": [
+      "Re8+",
+      "Kf6",
+      "Rxe1"
+    ],
+    "alternativeLines": [
+      [
+        "Re8+",
+        "Kd6",
+        "Rxe1"
+      ],
+      [
+        "Re8+",
+        "Kf5",
+        "Rxe1"
+      ],
+      [
+        "Re8+",
+        "Kd5",
+        "Rxe1"
+      ],
+      [
+        "Re8+",
+        "Kf4",
+        "Rxe1"
+      ],
+      [
+        "Re8+",
+        "Kd4",
+        "Rxe1"
+      ]
+    ],
+    "hints": [
+      "Tìm đường thẳng hoặc đường chéo có Vua và quân đối phương đứng nối nhau."
+    ],
+    "solution": "Xe chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Mã phía sau mà không bị bắt lại. Đây là bài tập thắng quân, không phải mọi thế cuối đều thắng ván cờ.",
+    "source": "original-composition"
+  },
+  {
+    "title": "Tượng: chiếu rồi bắt quân · 13",
+    "beginner": true,
+    "prompt": "Dùng tượng chiếu Vua, rồi bắt quân phía sau.",
+    "mode": "interactive",
+    "outcome": "skewer",
+    "fen": "6Q1/8/4K3/8/4k3/3p4/8/1b6 b - - 0 1",
+    "moves": [
+      "Ba2+",
+      "Ke7",
+      "Bxg8"
+    ],
+    "alternativeLines": [
+      [
+        "Ba2+",
+        "Kd7",
+        "Bxg8"
+      ],
+      [
+        "Ba2+",
+        "Kf6",
+        "Bxg8"
+      ],
+      [
+        "Ba2+",
+        "Kd6",
+        "Bxg8"
+      ]
+    ],
+    "hints": [
+      "Tìm đường thẳng hoặc đường chéo có Vua và quân đối phương đứng nối nhau."
+    ],
+    "solution": "Tượng chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Hậu phía sau mà không bị bắt lại. Bạn còn Tượng và Tốt để tiếp tục ván cờ.",
+    "source": "original-composition"
+  },
+  {
+    "title": "Hậu: chiếu rồi bắt quân · 16",
+    "beginner": true,
+    "prompt": "Dùng hậu chiếu Vua, rồi bắt quân phía sau.",
+    "mode": "interactive",
+    "outcome": "skewer",
+    "fen": "5k2/8/8/4K3/8/8/1N6/7q b - - 0 1",
+    "moves": [
+      "Qh8+",
+      "Ke6",
+      "Qxb2"
+    ],
+    "alternativeLines": [
+      [
+        "Qh8+",
+        "Kd6",
+        "Qxb2"
+      ],
+      [
+        "Qh8+",
+        "Kf5",
+        "Qxb2"
+      ],
+      [
+        "Qh8+",
+        "Kd5",
+        "Qxb2"
+      ],
+      [
+        "Qh8+",
+        "Kf4",
+        "Qxb2"
+      ],
+      [
+        "Qh8+",
+        "Ke4",
+        "Qxb2"
+      ]
+    ],
+    "hints": [
+      "Tìm đường thẳng hoặc đường chéo có Vua và quân đối phương đứng nối nhau."
+    ],
+    "solution": "Hậu chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Mã phía sau mà không bị bắt lại. Đây là bài tập thắng quân, không phải mọi thế cuối đều thắng ván cờ.",
+    "source": "original-composition"
+  },
+  {
+    "title": "Xe: chiếu rồi bắt quân · 17",
+    "beginner": true,
+    "prompt": "Dùng xe chiếu Vua, rồi bắt quân phía sau.",
+    "mode": "interactive",
+    "outcome": "skewer",
+    "fen": "2q5/8/7K/8/2k5/8/8/4R3 w - - 0 1",
+    "moves": [
+      "Rc1+",
+      "Kd5",
+      "Rxc8"
+    ],
+    "alternativeLines": [
+      [
+        "Rc1+",
+        "Kb5",
+        "Rxc8"
+      ],
+      [
+        "Rc1+",
+        "Kd4",
+        "Rxc8"
+      ],
+      [
+        "Rc1+",
+        "Kb4",
+        "Rxc8"
+      ],
+      [
+        "Rc1+",
+        "Kd3",
+        "Rxc8"
+      ],
+      [
+        "Rc1+",
+        "Kb3",
+        "Rxc8"
+      ]
+    ],
+    "hints": [
+      "Tìm đường thẳng hoặc đường chéo có Vua và quân đối phương đứng nối nhau."
+    ],
+    "solution": "Xe chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Hậu phía sau mà không bị bắt lại. Đây là bài tập thắng quân, không phải mọi thế cuối đều thắng ván cờ.",
+    "source": "original-composition"
+  },
+  {
+    "title": "Tượng: chiếu rồi bắt quân · 14",
+    "beginner": true,
+    "prompt": "Dùng tượng chiếu Vua, rồi bắt quân phía sau.",
+    "mode": "interactive",
+    "outcome": "skewer",
+    "fen": "5r2/8/3k4/KP6/8/8/1B6/8 w - - 0 1",
+    "moves": [
+      "Ba3+",
+      "Kd7",
+      "Bxf8"
+    ],
+    "alternativeLines": [
+      [
+        "Ba3+",
+        "Kc7",
+        "Bxf8"
+      ],
+      [
+        "Ba3+",
+        "Ke6",
+        "Bxf8"
+      ],
+      [
+        "Ba3+",
+        "Ke5",
+        "Bxf8"
+      ],
+      [
+        "Ba3+",
+        "Kd5",
+        "Bxf8"
+      ]
+    ],
+    "hints": [
+      "Tìm đường thẳng hoặc đường chéo có Vua và quân đối phương đứng nối nhau."
+    ],
+    "solution": "Tượng chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Xe phía sau mà không bị bắt lại. Bạn còn Tượng và Tốt để tiếp tục ván cờ.",
+    "source": "original-composition"
+  },
+  {
+    "title": "Hậu: chiếu rồi bắt quân · 17",
+    "beginner": true,
+    "prompt": "Dùng hậu chiếu Vua, rồi bắt quân phía sau.",
+    "mode": "interactive",
+    "outcome": "skewer",
+    "fen": "Q7/7q/8/8/K6k/8/8/8 w - - 0 1",
+    "moves": [
+      "Qh1+",
+      "Kg5",
+      "Qxh7"
+    ],
+    "alternativeLines": [
+      [
+        "Qh1+",
+        "Kg4",
+        "Qxh7"
+      ],
+      [
+        "Qh1+",
+        "Kg3",
+        "Qxh7"
+      ]
+    ],
+    "hints": [
+      "Tìm đường thẳng hoặc đường chéo có Vua và quân đối phương đứng nối nhau."
+    ],
+    "solution": "Hậu chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Hậu phía sau mà không bị bắt lại. Đây là bài tập thắng quân, không phải mọi thế cuối đều thắng ván cờ.",
+    "source": "original-composition"
+  },
+  {
+    "title": "Xe: chiếu rồi bắt quân · 18",
+    "beginner": true,
+    "prompt": "Dùng xe chiếu Vua, rồi bắt quân phía sau.",
+    "mode": "interactive",
+    "outcome": "skewer",
+    "fen": "2r5/6k1/8/8/8/8/8/4K2R b - - 0 1",
+    "moves": [
+      "Rc1+",
+      "Kf2",
+      "Rxh1"
+    ],
+    "alternativeLines": [
+      [
+        "Rc1+",
+        "Ke2",
+        "Rxh1"
+      ],
+      [
+        "Rc1+",
+        "Kd2",
+        "Rxh1"
+      ]
+    ],
+    "hints": [
+      "Tìm đường thẳng hoặc đường chéo có Vua và quân đối phương đứng nối nhau."
+    ],
+    "solution": "Xe chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Xe phía sau mà không bị bắt lại. Đây là bài tập thắng quân, không phải mọi thế cuối đều thắng ván cờ.",
+    "source": "original-composition"
+  },
+  {
+    "title": "Tượng: chiếu rồi bắt quân · 15",
+    "beginner": true,
+    "prompt": "Dùng tượng chiếu Vua, rồi bắt quân phía sau.",
+    "mode": "interactive",
+    "outcome": "skewer",
+    "fen": "2N5/8/4K3/1k6/1p6/8/8/5b2 b - - 0 1",
+    "moves": [
+      "Bh3+",
+      "Kf7",
+      "Bxc8"
+    ],
+    "alternativeLines": [
+      [
+        "Bh3+",
+        "Ke7",
+        "Bxc8"
+      ],
+      [
+        "Bh3+",
+        "Kf6",
+        "Bxc8"
+      ],
+      [
+        "Bh3+",
+        "Kd6",
+        "Bxc8"
+      ],
+      [
+        "Bh3+",
+        "Ke5",
+        "Bxc8"
+      ],
+      [
+        "Bh3+",
+        "Kd5",
+        "Bxc8"
+      ]
+    ],
+    "hints": [
+      "Tìm đường thẳng hoặc đường chéo có Vua và quân đối phương đứng nối nhau."
+    ],
+    "solution": "Tượng chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Mã phía sau mà không bị bắt lại. Bạn còn Tượng và Tốt để tiếp tục ván cờ.",
+    "source": "original-composition"
+  },
+  {
+    "title": "Hậu: chiếu rồi bắt quân · 18",
+    "beginner": true,
+    "prompt": "Dùng hậu chiếu Vua, rồi bắt quân phía sau.",
+    "mode": "interactive",
+    "outcome": "skewer",
+    "fen": "8/8/R4K2/8/8/4q3/8/1k6 b - - 0 1",
+    "moves": [
+      "Qh6+",
+      "Kf7",
+      "Qxa6"
+    ],
+    "alternativeLines": [
+      [
+        "Qh6+",
+        "Ke7",
+        "Qxa6"
+      ],
+      [
+        "Qh6+",
+        "Kf5",
+        "Qxa6"
+      ],
+      [
+        "Qh6+",
+        "Ke5",
+        "Qxa6"
+      ]
+    ],
+    "hints": [
+      "Tìm đường thẳng hoặc đường chéo có Vua và quân đối phương đứng nối nhau."
+    ],
+    "solution": "Hậu chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Xe phía sau mà không bị bắt lại. Đây là bài tập thắng quân, không phải mọi thế cuối đều thắng ván cờ.",
+    "source": "original-composition"
+  },
+  {
+    "title": "Xe: chiếu rồi bắt quân · 19",
+    "beginner": true,
+    "prompt": "Dùng xe chiếu Vua, rồi bắt quân phía sau.",
+    "mode": "interactive",
+    "outcome": "skewer",
+    "fen": "8/5K2/p7/8/8/k7/8/2R5 w - - 0 1",
+    "moves": [
+      "Ra1+",
+      "Kb4",
+      "Rxa6"
+    ],
+    "alternativeLines": [
+      [
+        "Ra1+",
+        "Kb3",
+        "Rxa6"
+      ],
+      [
+        "Ra1+",
+        "Kb2",
+        "Rxa6"
+      ]
+    ],
+    "hints": [
+      "Tìm đường thẳng hoặc đường chéo có Vua và quân đối phương đứng nối nhau."
+    ],
+    "solution": "Xe chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Tốt phía sau mà không bị bắt lại. Đây là bài tập thắng quân, không phải mọi thế cuối đều thắng ván cờ.",
+    "source": "original-composition"
+  },
+  {
+    "title": "Tượng: chiếu rồi bắt quân · 16",
+    "beginner": true,
+    "prompt": "Dùng tượng chiếu Vua, rồi bắt quân phía sau.",
+    "mode": "interactive",
+    "outcome": "skewer",
+    "fen": "7K/6B1/3k2P1/8/8/p7/8/8 w - - 0 1",
+    "moves": [
+      "Bf8+",
+      "Kd7",
+      "Bxa3"
+    ],
+    "alternativeLines": [
+      [
+        "Bf8+",
+        "Kc7",
+        "Bxa3"
+      ],
+      [
+        "Bf8+",
+        "Ke6",
+        "Bxa3"
+      ],
+      [
+        "Bf8+",
+        "Kc6",
+        "Bxa3"
+      ],
+      [
+        "Bf8+",
+        "Ke5",
+        "Bxa3"
+      ],
+      [
+        "Bf8+",
+        "Kd5",
+        "Bxa3"
+      ]
+    ],
+    "hints": [
+      "Tìm đường thẳng hoặc đường chéo có Vua và quân đối phương đứng nối nhau."
+    ],
+    "solution": "Tượng chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Tốt phía sau mà không bị bắt lại. Bạn còn Tượng và Tốt để tiếp tục ván cờ.",
+    "source": "original-composition"
+  },
+  {
+    "title": "Hậu: chiếu rồi bắt quân · 19",
+    "beginner": true,
+    "prompt": "Dùng hậu chiếu Vua, rồi bắt quân phía sau.",
+    "mode": "interactive",
+    "outcome": "skewer",
+    "fen": "5K2/3Q4/8/4k3/8/8/1p6/8 w - - 0 1",
+    "moves": [
+      "Qg7+",
+      "Ke6",
+      "Qxb2"
+    ],
+    "alternativeLines": [
+      [
+        "Qg7+",
+        "Kd6",
+        "Qxb2"
+      ],
+      [
+        "Qg7+",
+        "Kf5",
+        "Qxb2"
+      ],
+      [
+        "Qg7+",
+        "Kd5",
+        "Qxb2"
+      ],
+      [
+        "Qg7+",
+        "Kf4",
+        "Qxb2"
+      ],
+      [
+        "Qg7+",
+        "Ke4",
+        "Qxb2"
+      ]
+    ],
+    "hints": [
+      "Tìm đường thẳng hoặc đường chéo có Vua và quân đối phương đứng nối nhau."
+    ],
+    "solution": "Hậu chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Tốt phía sau mà không bị bắt lại. Đây là bài tập thắng quân, không phải mọi thế cuối đều thắng ván cờ.",
+    "source": "original-composition"
+  },
+  {
+    "title": "Xe: chiếu rồi bắt quân · 20",
+    "beginner": true,
+    "prompt": "Dùng xe chiếu Vua, rồi bắt quân phía sau.",
+    "mode": "interactive",
+    "outcome": "skewer",
+    "fen": "8/8/k7/8/r7/8/3K2P1/8 b - - 0 1",
+    "moves": [
+      "Ra2+",
+      "Ke3",
+      "Rxg2"
+    ],
+    "alternativeLines": [
+      [
+        "Ra2+",
+        "Kd3",
+        "Rxg2"
+      ],
+      [
+        "Ra2+",
+        "Kc3",
+        "Rxg2"
+      ],
+      [
+        "Ra2+",
+        "Ke1",
+        "Rxg2"
+      ],
+      [
+        "Ra2+",
+        "Kd1",
+        "Rxg2"
+      ],
+      [
+        "Ra2+",
+        "Kc1",
+        "Rxg2"
+      ]
+    ],
+    "hints": [
+      "Tìm đường thẳng hoặc đường chéo có Vua và quân đối phương đứng nối nhau."
+    ],
+    "solution": "Xe chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Tốt phía sau mà không bị bắt lại. Đây là bài tập thắng quân, không phải mọi thế cuối đều thắng ván cờ.",
+    "source": "original-composition"
+  },
+  {
+    "title": "Tượng: chiếu rồi bắt quân · 17",
+    "beginner": true,
+    "prompt": "Dùng tượng chiếu Vua, rồi bắt quân phía sau.",
+    "mode": "interactive",
+    "outcome": "skewer",
+    "fen": "3b4/8/8/8/5K2/2p5/4k2P/8 b - - 0 1",
+    "moves": [
+      "Bc7+",
+      "Kg5",
+      "Bxh2"
+    ],
+    "alternativeLines": [
+      [
+        "Bc7+",
+        "Kf5",
+        "Bxh2"
+      ],
+      [
+        "Bc7+",
+        "Kg4",
+        "Bxh2"
+      ],
+      [
+        "Bc7+",
+        "Ke4",
+        "Bxh2"
+      ]
+    ],
+    "hints": [
+      "Tìm đường thẳng hoặc đường chéo có Vua và quân đối phương đứng nối nhau."
+    ],
+    "solution": "Tượng chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Tốt phía sau mà không bị bắt lại. Bạn còn Tượng và Tốt để tiếp tục ván cờ.",
+    "source": "original-composition"
+  },
+  {
+    "title": "Hậu: chiếu rồi bắt quân · 20",
+    "beginner": true,
+    "prompt": "Dùng hậu chiếu Vua, rồi bắt quân phía sau.",
+    "mode": "interactive",
+    "outcome": "skewer",
+    "fen": "8/8/1P6/5q2/3K4/8/8/7k b - - 0 1",
+    "moves": [
+      "Qf2+",
+      "Ke5",
+      "Qxb6"
+    ],
+    "alternativeLines": [
+      [
+        "Qf2+",
+        "Kd5",
+        "Qxb6"
+      ],
+      [
+        "Qf2+",
+        "Ke4",
+        "Qxb6"
+      ],
+      [
+        "Qf2+",
+        "Kc4",
+        "Qxb6"
+      ],
+      [
+        "Qf2+",
+        "Kd3",
+        "Qxb6"
+      ],
+      [
+        "Qf2+",
+        "Kc3",
+        "Qxb6"
+      ]
+    ],
+    "hints": [
+      "Tìm đường thẳng hoặc đường chéo có Vua và quân đối phương đứng nối nhau."
+    ],
+    "solution": "Hậu chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Tốt phía sau mà không bị bắt lại. Đây là bài tập thắng quân, không phải mọi thế cuối đều thắng ván cờ.",
+    "source": "original-composition"
+  }
+]
