@@ -30,6 +30,7 @@ test('private endpoint puts 10 compositions before the six preserved pilot exerc
     if (name.endsWith('practice-game-caption'))
       return {
         practiceGameCaption: () => undefined,
+        practiceGameOpening: () => undefined,
         practicePlayerTitle: () => undefined,
         practicePlayers: () => undefined,
       };

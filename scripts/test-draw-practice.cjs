@@ -19,7 +19,7 @@ const { drawCategories, drawExerciseUrl } = loadTS(
   'src/lib/chess/draw-practice.ts'
 );
 
-test('library has unique positions and links, with a substantial collection in every category', () => {
+test('curated library has unique positions and preserved full-game links', () => {
   const positions = new Set();
   const links = new Set();
   const viewerIndex = JSON.parse(
@@ -29,24 +29,34 @@ test('library has unique positions and links, with a substantial collection in e
     fs.readFileSync('src/lib/server/draw-game-sources.json', 'utf8')
   );
   for (const category of drawCategories) {
-    assert.ok(
-      category.exercises.length >= 100,
-      `${category.id} needs at least 100 distinct positions`
-    );
     for (const exercise of category.exercises) {
       const key = exercise.fen.split(' ').slice(0, 4).join(' ');
       assert.ok(!positions.has(key), `duplicate position: ${exercise.title}`);
       positions.add(key);
       const reference = viewerIndex[key];
-      assert.ok(reference, 'every exercise has a local full-game viewer');
-      assert.equal(reference.kind, 'game');
-      assert.equal(viewerSources[reference.id].headers.Result, '1/2-1/2');
+      if (exercise.source === 'original-composition') {
+        assert.match(exercise.title, /Thế cờ biên soạn/);
+      } else {
+        assert.ok(reference, 'sourced exercises have a local viewer');
+        if (reference.kind === 'game')
+          assert.equal(viewerSources[reference.id].headers.Result, '1/2-1/2');
+        else assert.match(exercise.title, /Thế cờ nghiên cứu/);
+      }
       const url = drawExerciseUrl(exercise);
       assert.ok(!links.has(url), `duplicate link: ${url}`);
       links.add(url);
     }
   }
-  assert.ok(positions.size >= 90);
+  assert.equal(positions.size, 157);
+  assert.equal(
+    drawCategories.find((c) => c.id === 'repetition').exercises.length,
+    1
+  );
+  assert.equal(
+    drawCategories.find((c) => c.id === 'repetition').exercises[0].difficulty
+      .level,
+    'C*'
+  );
 });
 
 for (const category of drawCategories) {
@@ -62,7 +72,11 @@ for (const category of drawCategories) {
           assert.deepEqual(chess.moves(), [move], 'defensive reply is forced');
         }
         assert.ok(chess.move(move), `legal solution move: ${move}`);
-        if (category.id === 'perpetual-check' && index % 2 === 0) {
+        if (
+          category.id === 'perpetual-check' &&
+          index % 2 === 0 &&
+          index >= exercise.moves.length - 4
+        ) {
           assert.equal(chess.in_check(), true, 'perpetual line keeps checking');
         }
       }

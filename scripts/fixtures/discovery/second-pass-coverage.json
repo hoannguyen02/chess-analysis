@@ -1,0 +1,1332 @@
+{
+  "date": "2026-10-29",
+  "scope": "B, C, C*, D individually; these mappings do not infer coverage from another level.",
+  "method": "Legal replay of actual discoveries throughout each saved line. Preparatory king moves do not count as King clearance. Promotion in a solution is distinguished from promotion that itself uncovers an attack. Geometric tags do not by themselves justify retaining near-duplicates.",
+  "levels": {
+    "B": {
+      "count": 19,
+      "missingPositions": 5,
+      "aspects": {
+        "mover-P": {
+          "status": "represented",
+          "exerciseIds": [
+            "1f95e7caefa9237a",
+            "df7a27315904a833",
+            "8f195eb5e17e51f6",
+            "bfef9477bba315c3",
+            "2c941c0fca87f625",
+            "605db1bbb1fa9cc2"
+          ],
+          "assessment": "Verified by legal replay of the saved solution; this tag alone does not establish instructional quality."
+        },
+        "mover-N": {
+          "status": "represented",
+          "exerciseIds": [
+            "b715e1b3cb3644a1",
+            "a0d2e9b76703f002",
+            "a9948e12cc09c940",
+            "4c42ad8f14a0d069",
+            "80360d633653b13a",
+            "c32aeb86261d79e1",
+            "a47aeafddfb1266b",
+            "bfb60242f4cc9115",
+            "a1ad9410f81616a3"
+          ],
+          "assessment": "Verified by legal replay of the saved solution; this tag alone does not establish instructional quality."
+        },
+        "mover-B": {
+          "status": "gap",
+          "exerciseIds": [],
+          "assessment": "No retained example verified at this level. Coverage gap; do not fill with an incidental motif or a position outside the level definition."
+        },
+        "mover-R": {
+          "status": "represented",
+          "exerciseIds": [
+            "4acf9d2a4534e6dc",
+            "eb90320742dca76e",
+            "59d867196a5f620d",
+            "22a9700eeb011cca"
+          ],
+          "assessment": "Verified by legal replay of the saved solution; this tag alone does not establish instructional quality."
+        },
+        "mover-Q": {
+          "status": "gap",
+          "exerciseIds": [],
+          "assessment": "No retained example verified at this level. Coverage gap; do not fill with an incidental motif or a position outside the level definition."
+        },
+        "mover-K": {
+          "status": "gap",
+          "exerciseIds": [],
+          "assessment": "No retained example verified at this level. Coverage gap; do not fill with an incidental motif or a position outside the level definition."
+        },
+        "slider-B": {
+          "status": "represented",
+          "exerciseIds": [
+            "b715e1b3cb3644a1",
+            "4acf9d2a4534e6dc",
+            "59d867196a5f620d",
+            "22a9700eeb011cca",
+            "a47aeafddfb1266b",
+            "bfb60242f4cc9115"
+          ],
+          "assessment": "Verified by legal replay of the saved solution; this tag alone does not establish instructional quality."
+        },
+        "slider-R": {
+          "status": "represented",
+          "exerciseIds": [
+            "1f95e7caefa9237a",
+            "a0d2e9b76703f002",
+            "a9948e12cc09c940",
+            "8f195eb5e17e51f6",
+            "bfef9477bba315c3",
+            "2c941c0fca87f625",
+            "a47aeafddfb1266b"
+          ],
+          "assessment": "Verified by legal replay of the saved solution; this tag alone does not establish instructional quality."
+        },
+        "slider-Q": {
+          "status": "represented",
+          "exerciseIds": [
+            "b715e1b3cb3644a1",
+            "df7a27315904a833",
+            "eb90320742dca76e",
+            "4c42ad8f14a0d069",
+            "80360d633653b13a",
+            "c32aeb86261d79e1",
+            "605db1bbb1fa9cc2",
+            "a1ad9410f81616a3"
+          ],
+          "assessment": "Verified by legal replay of the saved solution; this tag alone does not establish instructional quality."
+        },
+        "target-P": {
+          "status": "represented",
+          "exerciseIds": [
+            "b715e1b3cb3644a1",
+            "a47aeafddfb1266b"
+          ],
+          "assessment": "Verified by legal replay of the saved solution; this tag alone does not establish instructional quality."
+        },
+        "target-N": {
+          "status": "represented",
+          "exerciseIds": [
+            "a9948e12cc09c940",
+            "59d867196a5f620d"
+          ],
+          "assessment": "Verified by legal replay of the saved solution; this tag alone does not establish instructional quality."
+        },
+        "target-B": {
+          "status": "represented",
+          "exerciseIds": [
+            "b715e1b3cb3644a1"
+          ],
+          "assessment": "Verified by legal replay of the saved solution; this tag alone does not establish instructional quality."
+        },
+        "target-R": {
+          "status": "represented",
+          "exerciseIds": [
+            "a0d2e9b76703f002",
+            "22a9700eeb011cca"
+          ],
+          "assessment": "Verified by legal replay of the saved solution; this tag alone does not establish instructional quality."
+        },
+        "target-Q": {
+          "status": "represented",
+          "exerciseIds": [
+            "4c42ad8f14a0d069"
+          ],
+          "assessment": "Verified by legal replay of the saved solution; this tag alone does not establish instructional quality."
+        },
+        "target-K": {
+          "status": "represented",
+          "exerciseIds": [
+            "1f95e7caefa9237a",
+            "4acf9d2a4534e6dc",
+            "df7a27315904a833",
+            "eb90320742dca76e",
+            "8f195eb5e17e51f6",
+            "bfef9477bba315c3",
+            "80360d633653b13a",
+            "c32aeb86261d79e1",
+            "2c941c0fca87f625",
+            "a47aeafddfb1266b",
+            "605db1bbb1fa9cc2",
+            "bfb60242f4cc9115",
+            "a1ad9410f81616a3"
+          ],
+          "assessment": "Verified by legal replay of the saved solution; this tag alone does not establish instructional quality."
+        },
+        "white": {
+          "status": "represented",
+          "exerciseIds": [
+            "1f95e7caefa9237a",
+            "b715e1b3cb3644a1",
+            "a0d2e9b76703f002",
+            "8f195eb5e17e51f6",
+            "4c42ad8f14a0d069",
+            "bfef9477bba315c3",
+            "80360d633653b13a",
+            "22a9700eeb011cca",
+            "2c941c0fca87f625",
+            "a47aeafddfb1266b",
+            "605db1bbb1fa9cc2",
+            "bfb60242f4cc9115",
+            "a1ad9410f81616a3"
+          ],
+          "assessment": "Verified by legal replay of the saved solution; this tag alone does not establish instructional quality."
+        },
+        "black": {
+          "status": "represented",
+          "exerciseIds": [
+            "4acf9d2a4534e6dc",
+            "df7a27315904a833",
+            "a9948e12cc09c940",
+            "eb90320742dca76e",
+            "59d867196a5f620d",
+            "c32aeb86261d79e1"
+          ],
+          "assessment": "Verified by legal replay of the saved solution; this tag alone does not establish instructional quality."
+        },
+        "quiet-move": {
+          "status": "represented",
+          "exerciseIds": [
+            "4acf9d2a4534e6dc",
+            "a0d2e9b76703f002",
+            "df7a27315904a833",
+            "a9948e12cc09c940",
+            "4c42ad8f14a0d069",
+            "22a9700eeb011cca",
+            "605db1bbb1fa9cc2",
+            "bfb60242f4cc9115"
+          ],
+          "assessment": "Verified by legal replay of the saved solution; this tag alone does not establish instructional quality."
+        },
+        "capture": {
+          "status": "represented",
+          "exerciseIds": [
+            "1f95e7caefa9237a",
+            "b715e1b3cb3644a1",
+            "df7a27315904a833",
+            "eb90320742dca76e",
+            "8f195eb5e17e51f6",
+            "bfef9477bba315c3",
+            "59d867196a5f620d",
+            "80360d633653b13a",
+            "c32aeb86261d79e1",
+            "2c941c0fca87f625",
+            "a47aeafddfb1266b",
+            "a1ad9410f81616a3"
+          ],
+          "assessment": "Verified by legal replay of the saved solution; this tag alone does not establish instructional quality."
+        },
+        "pawn-one-step": {
+          "status": "represented",
+          "exerciseIds": [
+            "df7a27315904a833",
+            "605db1bbb1fa9cc2"
+          ],
+          "assessment": "Verified by legal replay of the saved solution; this tag alone does not establish instructional quality."
+        },
+        "pawn-two-step": {
+          "status": "gap",
+          "exerciseIds": [],
+          "assessment": "No retained example verified at this level. Coverage gap; do not fill with an incidental motif or a position outside the level definition."
+        },
+        "pawn-capture": {
+          "status": "represented",
+          "exerciseIds": [
+            "1f95e7caefa9237a",
+            "df7a27315904a833",
+            "8f195eb5e17e51f6",
+            "bfef9477bba315c3",
+            "2c941c0fca87f625"
+          ],
+          "assessment": "Verified by legal replay of the saved solution; this tag alone does not establish instructional quality."
+        },
+        "check": {
+          "status": "represented",
+          "exerciseIds": [
+            "1f95e7caefa9237a",
+            "4acf9d2a4534e6dc",
+            "df7a27315904a833",
+            "eb90320742dca76e",
+            "8f195eb5e17e51f6",
+            "bfef9477bba315c3",
+            "80360d633653b13a",
+            "c32aeb86261d79e1",
+            "2c941c0fca87f625",
+            "a47aeafddfb1266b",
+            "605db1bbb1fa9cc2",
+            "bfb60242f4cc9115",
+            "a1ad9410f81616a3"
+          ],
+          "assessment": "Verified by legal replay of the saved solution; this tag alone does not establish instructional quality."
+        },
+        "double-check": {
+          "status": "represented",
+          "exerciseIds": [
+            "1f95e7caefa9237a",
+            "df7a27315904a833",
+            "c32aeb86261d79e1",
+            "bfb60242f4cc9115"
+          ],
+          "assessment": "Verified by legal replay of the saved solution; this tag alone does not establish instructional quality."
+        },
+        "nonchecking-attack": {
+          "status": "represented",
+          "exerciseIds": [
+            "59d867196a5f620d",
+            "a47aeafddfb1266b"
+          ],
+          "assessment": "Verified by legal replay of the saved solution; this tag alone does not establish instructional quality."
+        },
+        "file": {
+          "status": "represented",
+          "exerciseIds": [
+            "1f95e7caefa9237a",
+            "b715e1b3cb3644a1",
+            "a0d2e9b76703f002",
+            "df7a27315904a833",
+            "a9948e12cc09c940",
+            "8f195eb5e17e51f6",
+            "bfef9477bba315c3",
+            "a47aeafddfb1266b",
+            "a1ad9410f81616a3"
+          ],
+          "assessment": "Verified by legal replay of the saved solution; this tag alone does not establish instructional quality."
+        },
+        "rank": {
+          "status": "represented",
+          "exerciseIds": [
+            "df7a27315904a833",
+            "2c941c0fca87f625"
+          ],
+          "assessment": "Verified by legal replay of the saved solution; this tag alone does not establish instructional quality."
+        },
+        "diagonal": {
+          "status": "represented",
+          "exerciseIds": [
+            "b715e1b3cb3644a1",
+            "4acf9d2a4534e6dc",
+            "eb90320742dca76e",
+            "4c42ad8f14a0d069",
+            "59d867196a5f620d",
+            "80360d633653b13a",
+            "22a9700eeb011cca",
+            "c32aeb86261d79e1",
+            "a47aeafddfb1266b",
+            "605db1bbb1fa9cc2",
+            "bfb60242f4cc9115"
+          ],
+          "assessment": "Verified by legal replay of the saved solution; this tag alone does not establish instructional quality."
+        },
+        "recapture-prevented": {
+          "status": "represented",
+          "exerciseIds": [
+            "1f95e7caefa9237a",
+            "df7a27315904a833",
+            "8f195eb5e17e51f6",
+            "bfef9477bba315c3",
+            "80360d633653b13a",
+            "c32aeb86261d79e1",
+            "2c941c0fca87f625",
+            "a47aeafddfb1266b",
+            "bfb60242f4cc9115",
+            "a1ad9410f81616a3"
+          ],
+          "assessment": "Verified by legal replay of the saved solution; this tag alone does not establish instructional quality. Legal recapture becomes possible when the exposed checking slider is removed; this counterfactual is distinct from exhaustive tactical verification."
+        },
+        "new-absolute-pin": {
+          "status": "gap",
+          "exerciseIds": [],
+          "assessment": "No retained example verified at this level. Coverage gap; do not fill with an incidental motif or a position outside the level definition. A geometric pin is not proof of a pin-dependent payoff; its teaching benefit requires separate review."
+        },
+        "en-passant": {
+          "status": "gap",
+          "exerciseIds": [],
+          "assessment": "No retained example verified at this level. Coverage gap; do not fill with an incidental motif or a position outside the level definition."
+        },
+        "promotion-uncover": {
+          "status": "represented",
+          "exerciseIds": [
+            "df7a27315904a833"
+          ],
+          "assessment": "Verified by legal replay of the saved solution; this tag alone does not establish instructional quality."
+        },
+        "promotion-in-line": {
+          "status": "represented",
+          "exerciseIds": [
+            "df7a27315904a833",
+            "605db1bbb1fa9cc2"
+          ],
+          "assessment": "Verified by legal replay of the saved solution; this tag alone does not establish instructional quality."
+        },
+        "castling-uncover": {
+          "status": "gap",
+          "exerciseIds": [],
+          "assessment": "No retained example verified at this level. Coverage gap; do not fill with an incidental motif or a position outside the level definition."
+        }
+      }
+    },
+    "C": {
+      "count": 22,
+      "missingPositions": 2,
+      "aspects": {
+        "mover-P": {
+          "status": "represented",
+          "exerciseIds": [
+            "6e399180d48ad8bd",
+            "d1a0bb978be3430a",
+            "c0209e56ab19cf19"
+          ],
+          "assessment": "Verified by legal replay of the saved solution; this tag alone does not establish instructional quality."
+        },
+        "mover-N": {
+          "status": "represented",
+          "exerciseIds": [
+            "2528e321fb2808ab",
+            "d45cd7a63d7f0cae",
+            "45e5b79b37ee52d3",
+            "89edd5609c6b96d5",
+            "aabef71fc713b171",
+            "ee1a0c1a5f6fcfad",
+            "e156b41271bd5b4d"
+          ],
+          "assessment": "Verified by legal replay of the saved solution; this tag alone does not establish instructional quality."
+        },
+        "mover-B": {
+          "status": "represented",
+          "exerciseIds": [
+            "0ee13b73848ee956",
+            "433d9e0e49657550",
+            "66af3848641ad16b",
+            "33c9d5b087ad109b",
+            "808ff4b820ad89be",
+            "05b127856d986ac1",
+            "7dc5f1cef07069b8",
+            "f597cd96e9f20a30"
+          ],
+          "assessment": "Verified by legal replay of the saved solution; this tag alone does not establish instructional quality."
+        },
+        "mover-R": {
+          "status": "represented",
+          "exerciseIds": [
+            "7176e5ef6a35f0c0",
+            "9b9c8f7961db0a4b",
+            "edc75c8164ac66f8",
+            "65e28198bca55561"
+          ],
+          "assessment": "Verified by legal replay of the saved solution; this tag alone does not establish instructional quality."
+        },
+        "mover-Q": {
+          "status": "represented",
+          "exerciseIds": [
+            "e156b41271bd5b4d"
+          ],
+          "assessment": "Verified by legal replay of the saved solution; this tag alone does not establish instructional quality."
+        },
+        "mover-K": {
+          "status": "gap",
+          "exerciseIds": [],
+          "assessment": "No retained example verified at this level. Coverage gap; do not fill with an incidental motif or a position outside the level definition."
+        },
+        "slider-B": {
+          "status": "represented",
+          "exerciseIds": [
+            "9b9c8f7961db0a4b",
+            "ee1a0c1a5f6fcfad",
+            "c0209e56ab19cf19",
+            "65e28198bca55561"
+          ],
+          "assessment": "Verified by legal replay of the saved solution; this tag alone does not establish instructional quality."
+        },
+        "slider-R": {
+          "status": "represented",
+          "exerciseIds": [
+            "0ee13b73848ee956",
+            "2528e321fb2808ab",
+            "d45cd7a63d7f0cae",
+            "d1a0bb978be3430a",
+            "33c9d5b087ad109b",
+            "808ff4b820ad89be",
+            "05b127856d986ac1",
+            "7dc5f1cef07069b8",
+            "e156b41271bd5b4d"
+          ],
+          "assessment": "Verified by legal replay of the saved solution; this tag alone does not establish instructional quality."
+        },
+        "slider-Q": {
+          "status": "represented",
+          "exerciseIds": [
+            "0ee13b73848ee956",
+            "6e399180d48ad8bd",
+            "433d9e0e49657550",
+            "d45cd7a63d7f0cae",
+            "66af3848641ad16b",
+            "45e5b79b37ee52d3",
+            "7176e5ef6a35f0c0",
+            "89edd5609c6b96d5",
+            "aabef71fc713b171",
+            "edc75c8164ac66f8",
+            "e156b41271bd5b4d",
+            "f597cd96e9f20a30"
+          ],
+          "assessment": "Verified by legal replay of the saved solution; this tag alone does not establish instructional quality."
+        },
+        "target-P": {
+          "status": "represented",
+          "exerciseIds": [
+            "0ee13b73848ee956"
+          ],
+          "assessment": "Verified by legal replay of the saved solution; this tag alone does not establish instructional quality."
+        },
+        "target-N": {
+          "status": "represented",
+          "exerciseIds": [
+            "c0209e56ab19cf19"
+          ],
+          "assessment": "Verified by legal replay of the saved solution; this tag alone does not establish instructional quality."
+        },
+        "target-B": {
+          "status": "represented",
+          "exerciseIds": [
+            "d45cd7a63d7f0cae",
+            "aabef71fc713b171"
+          ],
+          "assessment": "Verified by legal replay of the saved solution; this tag alone does not establish instructional quality."
+        },
+        "target-R": {
+          "status": "represented",
+          "exerciseIds": [
+            "2528e321fb2808ab",
+            "433d9e0e49657550",
+            "66af3848641ad16b",
+            "33c9d5b087ad109b",
+            "808ff4b820ad89be",
+            "9b9c8f7961db0a4b",
+            "05b127856d986ac1",
+            "edc75c8164ac66f8",
+            "7dc5f1cef07069b8"
+          ],
+          "assessment": "Verified by legal replay of the saved solution; this tag alone does not establish instructional quality."
+        },
+        "target-Q": {
+          "status": "represented",
+          "exerciseIds": [
+            "0ee13b73848ee956",
+            "45e5b79b37ee52d3",
+            "7176e5ef6a35f0c0",
+            "89edd5609c6b96d5",
+            "ee1a0c1a5f6fcfad",
+            "e156b41271bd5b4d",
+            "65e28198bca55561",
+            "f597cd96e9f20a30"
+          ],
+          "assessment": "Verified by legal replay of the saved solution; this tag alone does not establish instructional quality."
+        },
+        "target-K": {
+          "status": "represented",
+          "exerciseIds": [
+            "6e399180d48ad8bd",
+            "d45cd7a63d7f0cae",
+            "d1a0bb978be3430a"
+          ],
+          "assessment": "Verified by legal replay of the saved solution; this tag alone does not establish instructional quality."
+        },
+        "white": {
+          "status": "represented",
+          "exerciseIds": [
+            "0ee13b73848ee956",
+            "6e399180d48ad8bd",
+            "2528e321fb2808ab",
+            "433d9e0e49657550",
+            "d1a0bb978be3430a",
+            "7176e5ef6a35f0c0",
+            "89edd5609c6b96d5",
+            "9b9c8f7961db0a4b",
+            "05b127856d986ac1",
+            "edc75c8164ac66f8",
+            "7dc5f1cef07069b8",
+            "f597cd96e9f20a30"
+          ],
+          "assessment": "Verified by legal replay of the saved solution; this tag alone does not establish instructional quality."
+        },
+        "black": {
+          "status": "represented",
+          "exerciseIds": [
+            "d45cd7a63d7f0cae",
+            "66af3848641ad16b",
+            "45e5b79b37ee52d3",
+            "33c9d5b087ad109b",
+            "808ff4b820ad89be",
+            "aabef71fc713b171",
+            "ee1a0c1a5f6fcfad",
+            "c0209e56ab19cf19",
+            "e156b41271bd5b4d",
+            "65e28198bca55561"
+          ],
+          "assessment": "Verified by legal replay of the saved solution; this tag alone does not establish instructional quality."
+        },
+        "quiet-move": {
+          "status": "represented",
+          "exerciseIds": [
+            "6e399180d48ad8bd",
+            "2528e321fb2808ab",
+            "45e5b79b37ee52d3",
+            "89edd5609c6b96d5",
+            "ee1a0c1a5f6fcfad",
+            "c0209e56ab19cf19",
+            "e156b41271bd5b4d",
+            "65e28198bca55561",
+            "f597cd96e9f20a30"
+          ],
+          "assessment": "Verified by legal replay of the saved solution; this tag alone does not establish instructional quality."
+        },
+        "capture": {
+          "status": "represented",
+          "exerciseIds": [
+            "0ee13b73848ee956",
+            "433d9e0e49657550",
+            "d45cd7a63d7f0cae",
+            "66af3848641ad16b",
+            "d1a0bb978be3430a",
+            "33c9d5b087ad109b",
+            "7176e5ef6a35f0c0",
+            "808ff4b820ad89be",
+            "9b9c8f7961db0a4b",
+            "aabef71fc713b171",
+            "05b127856d986ac1",
+            "edc75c8164ac66f8",
+            "7dc5f1cef07069b8",
+            "e156b41271bd5b4d"
+          ],
+          "assessment": "Verified by legal replay of the saved solution; this tag alone does not establish instructional quality."
+        },
+        "pawn-one-step": {
+          "status": "represented",
+          "exerciseIds": [
+            "6e399180d48ad8bd",
+            "c0209e56ab19cf19"
+          ],
+          "assessment": "Verified by legal replay of the saved solution; this tag alone does not establish instructional quality."
+        },
+        "pawn-two-step": {
+          "status": "gap",
+          "exerciseIds": [],
+          "assessment": "No retained example verified at this level. Coverage gap; do not fill with an incidental motif or a position outside the level definition."
+        },
+        "pawn-capture": {
+          "status": "represented",
+          "exerciseIds": [
+            "d1a0bb978be3430a"
+          ],
+          "assessment": "Verified by legal replay of the saved solution; this tag alone does not establish instructional quality."
+        },
+        "check": {
+          "status": "represented",
+          "exerciseIds": [
+            "6e399180d48ad8bd",
+            "d45cd7a63d7f0cae",
+            "d1a0bb978be3430a"
+          ],
+          "assessment": "Verified by legal replay of the saved solution; this tag alone does not establish instructional quality."
+        },
+        "double-check": {
+          "status": "gap",
+          "exerciseIds": [],
+          "assessment": "No retained example verified at this level. Coverage gap; do not fill with an incidental motif or a position outside the level definition."
+        },
+        "nonchecking-attack": {
+          "status": "represented",
+          "exerciseIds": [
+            "d45cd7a63d7f0cae"
+          ],
+          "assessment": "Verified by legal replay of the saved solution; this tag alone does not establish instructional quality."
+        },
+        "file": {
+          "status": "represented",
+          "exerciseIds": [
+            "0ee13b73848ee956",
+            "2528e321fb2808ab",
+            "d45cd7a63d7f0cae",
+            "66af3848641ad16b",
+            "d1a0bb978be3430a",
+            "33c9d5b087ad109b",
+            "05b127856d986ac1",
+            "7dc5f1cef07069b8",
+            "e156b41271bd5b4d",
+            "f597cd96e9f20a30"
+          ],
+          "assessment": "Verified by legal replay of the saved solution; this tag alone does not establish instructional quality."
+        },
+        "rank": {
+          "status": "represented",
+          "exerciseIds": [
+            "433d9e0e49657550",
+            "808ff4b820ad89be"
+          ],
+          "assessment": "Verified by legal replay of the saved solution; this tag alone does not establish instructional quality."
+        },
+        "diagonal": {
+          "status": "represented",
+          "exerciseIds": [
+            "0ee13b73848ee956",
+            "6e399180d48ad8bd",
+            "d45cd7a63d7f0cae",
+            "45e5b79b37ee52d3",
+            "7176e5ef6a35f0c0",
+            "89edd5609c6b96d5",
+            "9b9c8f7961db0a4b",
+            "aabef71fc713b171",
+            "edc75c8164ac66f8",
+            "ee1a0c1a5f6fcfad",
+            "c0209e56ab19cf19",
+            "65e28198bca55561"
+          ],
+          "assessment": "Verified by legal replay of the saved solution; this tag alone does not establish instructional quality."
+        },
+        "recapture-prevented": {
+          "status": "represented",
+          "exerciseIds": [
+            "6e399180d48ad8bd",
+            "d45cd7a63d7f0cae",
+            "d1a0bb978be3430a"
+          ],
+          "assessment": "Verified by legal replay of the saved solution; this tag alone does not establish instructional quality. Legal recapture becomes possible when the exposed checking slider is removed; this counterfactual is distinct from exhaustive tactical verification."
+        },
+        "new-absolute-pin": {
+          "status": "gap",
+          "exerciseIds": [],
+          "assessment": "No retained example verified at this level. Coverage gap; do not fill with an incidental motif or a position outside the level definition. A geometric pin is not proof of a pin-dependent payoff; its teaching benefit requires separate review."
+        },
+        "en-passant": {
+          "status": "gap",
+          "exerciseIds": [],
+          "assessment": "No retained example verified at this level. Coverage gap; do not fill with an incidental motif or a position outside the level definition."
+        },
+        "promotion-uncover": {
+          "status": "gap",
+          "exerciseIds": [],
+          "assessment": "No retained example verified at this level. Coverage gap; do not fill with an incidental motif or a position outside the level definition."
+        },
+        "promotion-in-line": {
+          "status": "represented",
+          "exerciseIds": [
+            "6e399180d48ad8bd"
+          ],
+          "assessment": "Verified by legal replay of the saved solution; this tag alone does not establish instructional quality."
+        },
+        "castling-uncover": {
+          "status": "gap",
+          "exerciseIds": [],
+          "assessment": "No retained example verified at this level. Coverage gap; do not fill with an incidental motif or a position outside the level definition."
+        }
+      }
+    },
+    "C*": {
+      "count": 4,
+      "missingPositions": 20,
+      "aspects": {
+        "mover-P": {
+          "status": "represented",
+          "exerciseIds": [
+            "7411f04447e3aaec"
+          ],
+          "assessment": "Verified by legal replay of the saved solution; this tag alone does not establish instructional quality."
+        },
+        "mover-N": {
+          "status": "represented",
+          "exerciseIds": [
+            "9a6890d28d1fda55"
+          ],
+          "assessment": "Verified by legal replay of the saved solution; this tag alone does not establish instructional quality."
+        },
+        "mover-B": {
+          "status": "represented",
+          "exerciseIds": [
+            "4a44ccadcb4b7d83"
+          ],
+          "assessment": "Verified by legal replay of the saved solution; this tag alone does not establish instructional quality."
+        },
+        "mover-R": {
+          "status": "gap",
+          "exerciseIds": [],
+          "assessment": "No retained example verified at this level. Coverage gap; do not fill with an incidental motif or a position outside the level definition."
+        },
+        "mover-Q": {
+          "status": "represented",
+          "exerciseIds": [
+            "67984d20afcafdb2"
+          ],
+          "assessment": "Verified by legal replay of the saved solution; this tag alone does not establish instructional quality."
+        },
+        "mover-K": {
+          "status": "gap",
+          "exerciseIds": [],
+          "assessment": "No retained example verified at this level. Coverage gap; do not fill with an incidental motif or a position outside the level definition."
+        },
+        "slider-B": {
+          "status": "gap",
+          "exerciseIds": [],
+          "assessment": "No retained example verified at this level. Coverage gap; do not fill with an incidental motif or a position outside the level definition."
+        },
+        "slider-R": {
+          "status": "represented",
+          "exerciseIds": [
+            "9a6890d28d1fda55",
+            "67984d20afcafdb2"
+          ],
+          "assessment": "Verified by legal replay of the saved solution; this tag alone does not establish instructional quality."
+        },
+        "slider-Q": {
+          "status": "represented",
+          "exerciseIds": [
+            "7411f04447e3aaec",
+            "4a44ccadcb4b7d83"
+          ],
+          "assessment": "Verified by legal replay of the saved solution; this tag alone does not establish instructional quality."
+        },
+        "target-P": {
+          "status": "gap",
+          "exerciseIds": [],
+          "assessment": "No retained example verified at this level. Coverage gap; do not fill with an incidental motif or a position outside the level definition."
+        },
+        "target-N": {
+          "status": "gap",
+          "exerciseIds": [],
+          "assessment": "No retained example verified at this level. Coverage gap; do not fill with an incidental motif or a position outside the level definition."
+        },
+        "target-B": {
+          "status": "gap",
+          "exerciseIds": [],
+          "assessment": "No retained example verified at this level. Coverage gap; do not fill with an incidental motif or a position outside the level definition."
+        },
+        "target-R": {
+          "status": "represented",
+          "exerciseIds": [
+            "9a6890d28d1fda55"
+          ],
+          "assessment": "Verified by legal replay of the saved solution; this tag alone does not establish instructional quality."
+        },
+        "target-Q": {
+          "status": "represented",
+          "exerciseIds": [
+            "67984d20afcafdb2"
+          ],
+          "assessment": "Verified by legal replay of the saved solution; this tag alone does not establish instructional quality."
+        },
+        "target-K": {
+          "status": "represented",
+          "exerciseIds": [
+            "7411f04447e3aaec",
+            "4a44ccadcb4b7d83"
+          ],
+          "assessment": "Verified by legal replay of the saved solution; this tag alone does not establish instructional quality."
+        },
+        "white": {
+          "status": "gap",
+          "exerciseIds": [],
+          "assessment": "No retained example verified at this level. Coverage gap; do not fill with an incidental motif or a position outside the level definition."
+        },
+        "black": {
+          "status": "represented",
+          "exerciseIds": [
+            "9a6890d28d1fda55",
+            "7411f04447e3aaec",
+            "67984d20afcafdb2",
+            "4a44ccadcb4b7d83"
+          ],
+          "assessment": "Verified by legal replay of the saved solution; this tag alone does not establish instructional quality."
+        },
+        "quiet-move": {
+          "status": "represented",
+          "exerciseIds": [
+            "9a6890d28d1fda55",
+            "67984d20afcafdb2",
+            "4a44ccadcb4b7d83"
+          ],
+          "assessment": "Verified by legal replay of the saved solution; this tag alone does not establish instructional quality."
+        },
+        "capture": {
+          "status": "represented",
+          "exerciseIds": [
+            "7411f04447e3aaec"
+          ],
+          "assessment": "Verified by legal replay of the saved solution; this tag alone does not establish instructional quality."
+        },
+        "pawn-one-step": {
+          "status": "gap",
+          "exerciseIds": [],
+          "assessment": "No retained example verified at this level. Coverage gap; do not fill with an incidental motif or a position outside the level definition."
+        },
+        "pawn-two-step": {
+          "status": "gap",
+          "exerciseIds": [],
+          "assessment": "No retained example verified at this level. Coverage gap; do not fill with an incidental motif or a position outside the level definition."
+        },
+        "pawn-capture": {
+          "status": "represented",
+          "exerciseIds": [
+            "7411f04447e3aaec"
+          ],
+          "assessment": "Verified by legal replay of the saved solution; this tag alone does not establish instructional quality."
+        },
+        "check": {
+          "status": "represented",
+          "exerciseIds": [
+            "7411f04447e3aaec",
+            "4a44ccadcb4b7d83"
+          ],
+          "assessment": "Verified by legal replay of the saved solution; this tag alone does not establish instructional quality."
+        },
+        "double-check": {
+          "status": "gap",
+          "exerciseIds": [],
+          "assessment": "No retained example verified at this level. Coverage gap; do not fill with an incidental motif or a position outside the level definition."
+        },
+        "nonchecking-attack": {
+          "status": "gap",
+          "exerciseIds": [],
+          "assessment": "No retained example verified at this level. Coverage gap; do not fill with an incidental motif or a position outside the level definition."
+        },
+        "file": {
+          "status": "represented",
+          "exerciseIds": [
+            "67984d20afcafdb2"
+          ],
+          "assessment": "Verified by legal replay of the saved solution; this tag alone does not establish instructional quality."
+        },
+        "rank": {
+          "status": "represented",
+          "exerciseIds": [
+            "9a6890d28d1fda55",
+            "4a44ccadcb4b7d83"
+          ],
+          "assessment": "Verified by legal replay of the saved solution; this tag alone does not establish instructional quality."
+        },
+        "diagonal": {
+          "status": "represented",
+          "exerciseIds": [
+            "7411f04447e3aaec"
+          ],
+          "assessment": "Verified by legal replay of the saved solution; this tag alone does not establish instructional quality."
+        },
+        "recapture-prevented": {
+          "status": "represented",
+          "exerciseIds": [
+            "7411f04447e3aaec",
+            "4a44ccadcb4b7d83"
+          ],
+          "assessment": "Verified by legal replay of the saved solution; this tag alone does not establish instructional quality. Legal recapture becomes possible when the exposed checking slider is removed; this counterfactual is distinct from exhaustive tactical verification."
+        },
+        "new-absolute-pin": {
+          "status": "gap",
+          "exerciseIds": [],
+          "assessment": "No retained example verified at this level. Coverage gap; do not fill with an incidental motif or a position outside the level definition. A geometric pin is not proof of a pin-dependent payoff; its teaching benefit requires separate review."
+        },
+        "en-passant": {
+          "status": "gap",
+          "exerciseIds": [],
+          "assessment": "No retained example verified at this level. Coverage gap; do not fill with an incidental motif or a position outside the level definition."
+        },
+        "promotion-uncover": {
+          "status": "gap",
+          "exerciseIds": [],
+          "assessment": "No retained example verified at this level. Coverage gap; do not fill with an incidental motif or a position outside the level definition."
+        },
+        "promotion-in-line": {
+          "status": "gap",
+          "exerciseIds": [],
+          "assessment": "No retained example verified at this level. Coverage gap; do not fill with an incidental motif or a position outside the level definition."
+        },
+        "castling-uncover": {
+          "status": "gap",
+          "exerciseIds": [],
+          "assessment": "No retained example verified at this level. Coverage gap; do not fill with an incidental motif or a position outside the level definition."
+        }
+      }
+    },
+    "D": {
+      "count": 22,
+      "missingPositions": 2,
+      "aspects": {
+        "mover-P": {
+          "status": "gap",
+          "exerciseIds": [],
+          "assessment": "No retained example verified at this level. Coverage gap; do not fill with an incidental motif or a position outside the level definition."
+        },
+        "mover-N": {
+          "status": "represented",
+          "exerciseIds": [
+            "c0c8a7bcd849e8c3",
+            "fd4d98272e4bb135",
+            "1394114c147bc393",
+            "cb5ba1a9d8ff4109",
+            "2ae44fd20a10f740",
+            "7b685ad76ae3f6b7",
+            "8b460007cc657492",
+            "ec35c8b6a2c0000d",
+            "034aa99ac986e10b",
+            "c089371fd50c21ea",
+            "23332751c87ee49b"
+          ],
+          "assessment": "Verified by legal replay of the saved solution; this tag alone does not establish instructional quality."
+        },
+        "mover-B": {
+          "status": "represented",
+          "exerciseIds": [
+            "036003deb06597b9",
+            "4c8e80c2775ab2d7",
+            "1f10b7ae58f714b3",
+            "cb5ba1a9d8ff4109",
+            "c7efa26b018fdac9",
+            "7b685ad76ae3f6b7",
+            "202e45c6e308912b"
+          ],
+          "assessment": "Verified by legal replay of the saved solution; this tag alone does not establish instructional quality."
+        },
+        "mover-R": {
+          "status": "represented",
+          "exerciseIds": [
+            "036003deb06597b9",
+            "e65dea1262d6bb5e",
+            "055e26cb67e8920a",
+            "6c8bc0aafbdeb42e",
+            "ba8f859e6302aa98",
+            "77209c493fea4c1e",
+            "3cddc8c370f51027"
+          ],
+          "assessment": "Verified by legal replay of the saved solution; this tag alone does not establish instructional quality."
+        },
+        "mover-Q": {
+          "status": "represented",
+          "exerciseIds": [
+            "202e45c6e308912b",
+            "8b460007cc657492",
+            "ec35c8b6a2c0000d"
+          ],
+          "assessment": "Verified by legal replay of the saved solution; this tag alone does not establish instructional quality."
+        },
+        "mover-K": {
+          "status": "gap",
+          "exerciseIds": [],
+          "assessment": "No retained example verified at this level. Coverage gap; do not fill with an incidental motif or a position outside the level definition."
+        },
+        "slider-B": {
+          "status": "represented",
+          "exerciseIds": [
+            "036003deb06597b9",
+            "e65dea1262d6bb5e",
+            "fd4d98272e4bb135",
+            "cb5ba1a9d8ff4109",
+            "2ae44fd20a10f740",
+            "3cddc8c370f51027",
+            "ec35c8b6a2c0000d"
+          ],
+          "assessment": "Verified by legal replay of the saved solution; this tag alone does not establish instructional quality."
+        },
+        "slider-R": {
+          "status": "represented",
+          "exerciseIds": [
+            "036003deb06597b9",
+            "1f10b7ae58f714b3",
+            "1394114c147bc393",
+            "cb5ba1a9d8ff4109",
+            "3cddc8c370f51027",
+            "202e45c6e308912b",
+            "8b460007cc657492"
+          ],
+          "assessment": "Verified by legal replay of the saved solution; this tag alone does not establish instructional quality."
+        },
+        "slider-Q": {
+          "status": "represented",
+          "exerciseIds": [
+            "4c8e80c2775ab2d7",
+            "c0c8a7bcd849e8c3",
+            "055e26cb67e8920a",
+            "6c8bc0aafbdeb42e",
+            "ba8f859e6302aa98",
+            "c7efa26b018fdac9",
+            "77209c493fea4c1e",
+            "7b685ad76ae3f6b7",
+            "202e45c6e308912b",
+            "ec35c8b6a2c0000d",
+            "034aa99ac986e10b",
+            "c089371fd50c21ea",
+            "23332751c87ee49b"
+          ],
+          "assessment": "Verified by legal replay of the saved solution; this tag alone does not establish instructional quality."
+        },
+        "target-P": {
+          "status": "represented",
+          "exerciseIds": [
+            "cb5ba1a9d8ff4109",
+            "7b685ad76ae3f6b7",
+            "3cddc8c370f51027",
+            "202e45c6e308912b",
+            "8b460007cc657492",
+            "ec35c8b6a2c0000d"
+          ],
+          "assessment": "Verified by legal replay of the saved solution; this tag alone does not establish instructional quality."
+        },
+        "target-N": {
+          "status": "represented",
+          "exerciseIds": [
+            "cb5ba1a9d8ff4109"
+          ],
+          "assessment": "Verified by legal replay of the saved solution; this tag alone does not establish instructional quality."
+        },
+        "target-B": {
+          "status": "gap",
+          "exerciseIds": [],
+          "assessment": "No retained example verified at this level. Coverage gap; do not fill with an incidental motif or a position outside the level definition."
+        },
+        "target-R": {
+          "status": "represented",
+          "exerciseIds": [
+            "c089371fd50c21ea"
+          ],
+          "assessment": "Verified by legal replay of the saved solution; this tag alone does not establish instructional quality."
+        },
+        "target-Q": {
+          "status": "represented",
+          "exerciseIds": [
+            "4c8e80c2775ab2d7",
+            "c0c8a7bcd849e8c3",
+            "055e26cb67e8920a",
+            "6c8bc0aafbdeb42e",
+            "1394114c147bc393",
+            "cb5ba1a9d8ff4109",
+            "2ae44fd20a10f740",
+            "7b685ad76ae3f6b7",
+            "202e45c6e308912b",
+            "ec35c8b6a2c0000d",
+            "23332751c87ee49b"
+          ],
+          "assessment": "Verified by legal replay of the saved solution; this tag alone does not establish instructional quality."
+        },
+        "target-K": {
+          "status": "represented",
+          "exerciseIds": [
+            "036003deb06597b9",
+            "e65dea1262d6bb5e",
+            "1f10b7ae58f714b3",
+            "fd4d98272e4bb135",
+            "ba8f859e6302aa98",
+            "c7efa26b018fdac9",
+            "77209c493fea4c1e",
+            "3cddc8c370f51027",
+            "8b460007cc657492",
+            "034aa99ac986e10b"
+          ],
+          "assessment": "Verified by legal replay of the saved solution; this tag alone does not establish instructional quality."
+        },
+        "white": {
+          "status": "represented",
+          "exerciseIds": [
+            "036003deb06597b9",
+            "e65dea1262d6bb5e",
+            "c0c8a7bcd849e8c3",
+            "055e26cb67e8920a",
+            "fd4d98272e4bb135",
+            "6c8bc0aafbdeb42e",
+            "ba8f859e6302aa98",
+            "cb5ba1a9d8ff4109",
+            "c7efa26b018fdac9",
+            "77209c493fea4c1e",
+            "7b685ad76ae3f6b7",
+            "3cddc8c370f51027",
+            "8b460007cc657492",
+            "034aa99ac986e10b",
+            "23332751c87ee49b"
+          ],
+          "assessment": "Verified by legal replay of the saved solution; this tag alone does not establish instructional quality."
+        },
+        "black": {
+          "status": "represented",
+          "exerciseIds": [
+            "4c8e80c2775ab2d7",
+            "1f10b7ae58f714b3",
+            "1394114c147bc393",
+            "2ae44fd20a10f740",
+            "202e45c6e308912b",
+            "ec35c8b6a2c0000d",
+            "c089371fd50c21ea"
+          ],
+          "assessment": "Verified by legal replay of the saved solution; this tag alone does not establish instructional quality."
+        },
+        "quiet-move": {
+          "status": "represented",
+          "exerciseIds": [
+            "036003deb06597b9",
+            "e65dea1262d6bb5e",
+            "1f10b7ae58f714b3",
+            "055e26cb67e8920a",
+            "6c8bc0aafbdeb42e",
+            "1394114c147bc393",
+            "cb5ba1a9d8ff4109",
+            "2ae44fd20a10f740",
+            "77209c493fea4c1e",
+            "7b685ad76ae3f6b7",
+            "3cddc8c370f51027",
+            "202e45c6e308912b",
+            "ec35c8b6a2c0000d",
+            "034aa99ac986e10b",
+            "c089371fd50c21ea",
+            "23332751c87ee49b"
+          ],
+          "assessment": "Verified by legal replay of the saved solution; this tag alone does not establish instructional quality."
+        },
+        "capture": {
+          "status": "represented",
+          "exerciseIds": [
+            "036003deb06597b9",
+            "4c8e80c2775ab2d7",
+            "c0c8a7bcd849e8c3",
+            "fd4d98272e4bb135",
+            "ba8f859e6302aa98",
+            "cb5ba1a9d8ff4109",
+            "c7efa26b018fdac9",
+            "7b685ad76ae3f6b7",
+            "8b460007cc657492"
+          ],
+          "assessment": "Verified by legal replay of the saved solution; this tag alone does not establish instructional quality."
+        },
+        "pawn-one-step": {
+          "status": "gap",
+          "exerciseIds": [],
+          "assessment": "No retained example verified at this level. Coverage gap; do not fill with an incidental motif or a position outside the level definition."
+        },
+        "pawn-two-step": {
+          "status": "gap",
+          "exerciseIds": [],
+          "assessment": "No retained example verified at this level. Coverage gap; do not fill with an incidental motif or a position outside the level definition."
+        },
+        "pawn-capture": {
+          "status": "gap",
+          "exerciseIds": [],
+          "assessment": "No retained example verified at this level. Coverage gap; do not fill with an incidental motif or a position outside the level definition."
+        },
+        "check": {
+          "status": "represented",
+          "exerciseIds": [
+            "036003deb06597b9",
+            "e65dea1262d6bb5e",
+            "1f10b7ae58f714b3",
+            "fd4d98272e4bb135",
+            "ba8f859e6302aa98",
+            "c7efa26b018fdac9",
+            "77209c493fea4c1e",
+            "3cddc8c370f51027",
+            "8b460007cc657492",
+            "034aa99ac986e10b"
+          ],
+          "assessment": "Verified by legal replay of the saved solution; this tag alone does not establish instructional quality."
+        },
+        "double-check": {
+          "status": "represented",
+          "exerciseIds": [
+            "ba8f859e6302aa98"
+          ],
+          "assessment": "Verified by legal replay of the saved solution; this tag alone does not establish instructional quality."
+        },
+        "nonchecking-attack": {
+          "status": "represented",
+          "exerciseIds": [
+            "7b685ad76ae3f6b7",
+            "202e45c6e308912b",
+            "8b460007cc657492",
+            "ec35c8b6a2c0000d"
+          ],
+          "assessment": "Verified by legal replay of the saved solution; this tag alone does not establish instructional quality."
+        },
+        "file": {
+          "status": "represented",
+          "exerciseIds": [
+            "036003deb06597b9",
+            "4c8e80c2775ab2d7",
+            "1f10b7ae58f714b3",
+            "1394114c147bc393",
+            "cb5ba1a9d8ff4109",
+            "c7efa26b018fdac9",
+            "7b685ad76ae3f6b7",
+            "202e45c6e308912b",
+            "8b460007cc657492",
+            "c089371fd50c21ea"
+          ],
+          "assessment": "Verified by legal replay of the saved solution; this tag alone does not establish instructional quality."
+        },
+        "rank": {
+          "status": "represented",
+          "exerciseIds": [
+            "c0c8a7bcd849e8c3",
+            "7b685ad76ae3f6b7",
+            "3cddc8c370f51027",
+            "202e45c6e308912b",
+            "8b460007cc657492",
+            "23332751c87ee49b"
+          ],
+          "assessment": "Verified by legal replay of the saved solution; this tag alone does not establish instructional quality."
+        },
+        "diagonal": {
+          "status": "represented",
+          "exerciseIds": [
+            "036003deb06597b9",
+            "e65dea1262d6bb5e",
+            "055e26cb67e8920a",
+            "fd4d98272e4bb135",
+            "6c8bc0aafbdeb42e",
+            "ba8f859e6302aa98",
+            "cb5ba1a9d8ff4109",
+            "2ae44fd20a10f740",
+            "77209c493fea4c1e",
+            "3cddc8c370f51027",
+            "ec35c8b6a2c0000d",
+            "034aa99ac986e10b"
+          ],
+          "assessment": "Verified by legal replay of the saved solution; this tag alone does not establish instructional quality."
+        },
+        "recapture-prevented": {
+          "status": "represented",
+          "exerciseIds": [
+            "036003deb06597b9",
+            "1f10b7ae58f714b3",
+            "ba8f859e6302aa98",
+            "c7efa26b018fdac9",
+            "77209c493fea4c1e",
+            "3cddc8c370f51027",
+            "8b460007cc657492",
+            "034aa99ac986e10b"
+          ],
+          "assessment": "Verified by legal replay of the saved solution; this tag alone does not establish instructional quality. Legal recapture becomes possible when the exposed checking slider is removed; this counterfactual is distinct from exhaustive tactical verification."
+        },
+        "new-absolute-pin": {
+          "status": "gap",
+          "exerciseIds": [],
+          "assessment": "No retained example verified at this level. Coverage gap; do not fill with an incidental motif or a position outside the level definition. A geometric pin is not proof of a pin-dependent payoff; its teaching benefit requires separate review."
+        },
+        "en-passant": {
+          "status": "gap",
+          "exerciseIds": [],
+          "assessment": "No retained example verified at this level. Coverage gap; do not fill with an incidental motif or a position outside the level definition."
+        },
+        "promotion-uncover": {
+          "status": "gap",
+          "exerciseIds": [],
+          "assessment": "No retained example verified at this level. Coverage gap; do not fill with an incidental motif or a position outside the level definition."
+        },
+        "promotion-in-line": {
+          "status": "represented",
+          "exerciseIds": [
+            "fd4d98272e4bb135"
+          ],
+          "assessment": "Verified by legal replay of the saved solution; this tag alone does not establish instructional quality."
+        },
+        "castling-uncover": {
+          "status": "gap",
+          "exerciseIds": [],
+          "assessment": "No retained example verified at this level. Coverage gap; do not fill with an incidental motif or a position outside the level definition."
+        }
+      }
+    }
+  }
+}

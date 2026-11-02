@@ -1,0 +1,63 @@
+{
+  "gameId": "ad9d5eb9012f97c5",
+  "fen": "1k1r4/1ppn4/p3b3/8/1P1qPp2/P2P1P2/4B1rR/2Q1KN1R b K - 5 27",
+  "moves": [
+    "Qf2+",
+    "Kd2",
+    "Qxe2+",
+    "Kc3",
+    "Qxd3+",
+    "Kxd3",
+    "Ne5+",
+    "Kc3",
+    "Rd3#"
+  ],
+  "solverMoves": 5,
+  "nodes": {
+    "1k1r4/1ppn4/p3b3/8/1P1qPp2/P2P1P2/4B1rR/2Q1KN1R b K - 5 27|5": {
+      "move": "d4f2"
+    },
+    "1k1r4/1ppn4/p3b3/8/1P2Pp2/P2P1P2/4BqrR/2Q1KN1R w K - 6 28|4": {
+      "replies": [
+        "e1d2",
+        "e1d1"
+      ]
+    },
+    "1k1r4/1ppn4/p3b3/8/1P2Pp2/P2P1P2/3KBqrR/2Q2N1R b - - 7 28|4": {
+      "move": "f2e2"
+    },
+    "1k1r4/1ppn4/p3b3/8/1P2Pp2/P2P1P2/3Kq1rR/2Q2N1R w - - 0 29|3": {
+      "replies": [
+        "d2c3"
+      ]
+    },
+    "1k1r4/1ppn4/p3b3/8/1P2Pp2/P1KP1P2/4q1rR/2Q2N1R b - - 1 29|3": {
+      "move": "e2d3"
+    },
+    "1k1r4/1ppn4/p3b3/8/1P2Pp2/P1Kq1P2/6rR/2Q2N1R w - - 0 30|2": {
+      "replies": [
+        "c3d3"
+      ]
+    },
+    "1k1r4/1ppn4/p3b3/8/1P2Pp2/P2K1P2/6rR/2Q2N1R b - - 0 30|2": {
+      "move": "d7e5"
+    },
+    "1k1r4/1pp5/p3b3/4n3/1P2Pp2/P2K1P2/6rR/2Q2N1R w - - 1 31|1": {
+      "replies": [
+        "d3c3"
+      ]
+    },
+    "1k1r4/1pp5/p3b3/4n3/1P2Pp2/P1K2P2/6rR/2Q2N1R b - - 2 31|1": {
+      "move": "d8d3"
+    },
+    "1k6/1pp5/p3b3/4n3/1P2Pp2/P1Kr1P2/6rR/2Q2N1R w - - 3 32|0": {
+      "mate": true
+    },
+    "1k1r4/1ppn4/p3b3/8/1P2Pp2/P2P1P2/4BqrR/2QK1N1R b - - 7 28|4": {
+      "move": "f2e2"
+    },
+    "1k1r4/1ppn4/p3b3/8/1P2Pp2/P2P1P2/4q1rR/2QK1N1R w - - 0 29|3": {
+      "mate": true
+    }
+  }
+}

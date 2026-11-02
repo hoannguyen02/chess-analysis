@@ -1,0 +1,26 @@
+{
+  "savedGamesScanned": 522,
+  "actualMatingGames": 323,
+  "masterPositions": 13,
+  "composedPositions": 131,
+  "counts": {
+    "Beginner": 24,
+    "A": 24,
+    "B": 24,
+    "C": 24,
+    "C*": 24,
+    "D": 24
+  },
+  "objectives": {
+    "material": 8,
+    "checkmate": 136
+  },
+  "verification": "All-defence mate certificates for longer mate lines, immediate alternatives enumerated, deeper finite root review. Direct three-piece material tasks enumerate every legal opponent reply and reject stalemate, dead positions and capture of the promoted piece.",
+  "gaps": [
+    "Drawing-resource exercises are not included in this selection.",
+    "Knight underpromotion in C/C*/D and Bishop promotion in A/B/C/D: no suitable accepted position in this research scope; not represented by relabeled easy exercises.",
+    "No castling or en passant preparatory example selected.",
+    "Beginner examples are sparse practice drills; reaching 24 is not a claim of 24 different mechanisms.",
+    "Finite engine root review is not an exhaustive shortest-mate proof."
+  ]
+}

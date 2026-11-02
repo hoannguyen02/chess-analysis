@@ -1,0 +1,84 @@
+[
+  {
+    "title": "Phong cấp · Bài 1",
+    "prompt": "Phong cấp ngay và giữ lợi thế vật chất.",
+    "mode": "interactive",
+    "goal": "material",
+    "outcome": "promotion",
+    "beginner": true,
+    "fen": "8/1P6/k7/8/1K6/8/8/8 w - - 0 1",
+    "moves": [
+      "b8=R",
+      "Ka7"
+    ],
+    "alternativeLines": [],
+    "source": "Thế cờ biên soạn.",
+    "hints": [
+      "Kiểm tra ô phong cấp và các quân có thể bắt quân mới.",
+      "Xét Hậu, Xe, Tượng và Mã; chọn quân đạt mục tiêu của bài."
+    ],
+    "solution": "b8=R — Tốt từ b7 đến b8, phong cấp thành Xe. Quân mới không bị bắt trong nước đáp. Phong Hậu dẫn đến hòa do hết nước đi (pat); phong Xe giữ được lợi thế vật chất.",
+    "promotionMaterial": {
+      "minimumGain": 4
+    },
+    "id": "promotion-beginner-avoid-stalemate"
+  },
+  {
+    "title": "Phong cấp · Bài 2",
+    "prompt": "Phong cấp ngay và giữ lợi thế vật chất.",
+    "mode": "interactive",
+    "goal": "material",
+    "outcome": "promotion",
+    "beginner": true,
+    "fen": "8/8/K7/8/2k5/8/2p5/8 b - - 0 1",
+    "moves": [
+      "c1=Q",
+      "Kb7"
+    ],
+    "alternativeLines": [
+      [
+        "c1=R",
+        "Kb7"
+      ]
+    ],
+    "source": "Thế cờ biên soạn.",
+    "hints": [
+      "Kiểm tra ô phong cấp và các quân có thể bắt quân mới.",
+      "Xét Hậu, Xe, Tượng và Mã; chọn quân đạt mục tiêu của bài."
+    ],
+    "solution": "c1=Q — Tốt từ c2 đến c1, phong cấp thành Hậu. Quân mới không bị bắt trong nước đáp.",
+    "promotionMaterial": {
+      "minimumGain": 4
+    },
+    "id": "promotion-beginner-safe-advance"
+  },
+  {
+    "id": "promotion-beginner-capture-defender",
+    "title": "Bắt quân để phong cấp",
+    "prompt": "Phong cấp và giữ lợi thế vật chất.",
+    "mode": "interactive",
+    "goal": "material",
+    "outcome": "promotion",
+    "beginner": true,
+    "fen": "1r6/P7/7k/8/8/8/8/K7 w - - 0 1",
+    "moves": [
+      "axb8=Q",
+      "Kg5"
+    ],
+    "alternativeLines": [
+      [
+        "axb8=R",
+        "Kg5"
+      ]
+    ],
+    "source": "Thế cờ biên soạn.",
+    "hints": [
+      "So sánh a8 và axb8: Xe đen có thể bắt quân mới ở ô nào?",
+      "Bắt Xe trên b8 đồng thời phong cấp."
+    ],
+    "solution": "axb8=Q — Tốt từ a7 bắt Xe ở b8 và phong cấp thành Hậu. Nếu đi a8=Q, Đen có thể bắt Hậu bằng Rxa8+. Phong Xe trên b8 cũng đạt mục tiêu.",
+    "promotionMaterial": {
+      "minimumGain": 4
+    }
+  }
+]

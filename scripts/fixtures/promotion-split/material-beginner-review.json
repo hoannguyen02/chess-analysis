@@ -1,0 +1,1418 @@
+{
+  "positions": [
+    {
+      "id": "promotion-beginner-avoid-stalemate",
+      "fen": "8/1P6/k7/8/1K6/8/8/8 w - - 0 1",
+      "moves": [
+        "b8=R",
+        "Ka7"
+      ],
+      "roots": [
+        {
+          "move": "Kc5",
+          "promotion": false,
+          "capture": false,
+          "replies": [
+            {
+              "move": "Kxb7",
+              "gain": -1,
+              "terminal": true
+            },
+            {
+              "move": "Ka7",
+              "gain": 0,
+              "terminal": false
+            },
+            {
+              "move": "Ka5",
+              "gain": 0,
+              "terminal": false
+            }
+          ],
+          "terminal": false
+        },
+        {
+          "move": "Kc4",
+          "promotion": false,
+          "capture": false,
+          "replies": [
+            {
+              "move": "Kxb7",
+              "gain": -1,
+              "terminal": true
+            },
+            {
+              "move": "Ka7",
+              "gain": 0,
+              "terminal": false
+            },
+            {
+              "move": "Kb6",
+              "gain": 0,
+              "terminal": false
+            },
+            {
+              "move": "Ka5",
+              "gain": 0,
+              "terminal": false
+            }
+          ],
+          "terminal": false
+        },
+        {
+          "move": "Ka4",
+          "promotion": false,
+          "capture": false,
+          "replies": [
+            {
+              "move": "Kxb7",
+              "gain": -1,
+              "terminal": true
+            },
+            {
+              "move": "Ka7",
+              "gain": 0,
+              "terminal": false
+            },
+            {
+              "move": "Kb6",
+              "gain": 0,
+              "terminal": false
+            }
+          ],
+          "terminal": false
+        },
+        {
+          "move": "Kc3",
+          "promotion": false,
+          "capture": false,
+          "replies": [
+            {
+              "move": "Kxb7",
+              "gain": -1,
+              "terminal": true
+            },
+            {
+              "move": "Ka7",
+              "gain": 0,
+              "terminal": false
+            },
+            {
+              "move": "Kb6",
+              "gain": 0,
+              "terminal": false
+            },
+            {
+              "move": "Kb5",
+              "gain": 0,
+              "terminal": false
+            },
+            {
+              "move": "Ka5",
+              "gain": 0,
+              "terminal": false
+            }
+          ],
+          "terminal": false
+        },
+        {
+          "move": "Kb3",
+          "promotion": false,
+          "capture": false,
+          "replies": [
+            {
+              "move": "Kxb7",
+              "gain": -1,
+              "terminal": true
+            },
+            {
+              "move": "Ka7",
+              "gain": 0,
+              "terminal": false
+            },
+            {
+              "move": "Kb6",
+              "gain": 0,
+              "terminal": false
+            },
+            {
+              "move": "Kb5",
+              "gain": 0,
+              "terminal": false
+            },
+            {
+              "move": "Ka5",
+              "gain": 0,
+              "terminal": false
+            }
+          ],
+          "terminal": false
+        },
+        {
+          "move": "Ka3",
+          "promotion": false,
+          "capture": false,
+          "replies": [
+            {
+              "move": "Kxb7",
+              "gain": -1,
+              "terminal": true
+            },
+            {
+              "move": "Ka7",
+              "gain": 0,
+              "terminal": false
+            },
+            {
+              "move": "Kb6",
+              "gain": 0,
+              "terminal": false
+            },
+            {
+              "move": "Kb5",
+              "gain": 0,
+              "terminal": false
+            },
+            {
+              "move": "Ka5",
+              "gain": 0,
+              "terminal": false
+            }
+          ],
+          "terminal": false
+        },
+        {
+          "move": "b8=Q",
+          "promotion": true,
+          "capture": false,
+          "replies": [],
+          "terminal": true
+        },
+        {
+          "move": "b8=R",
+          "promotion": true,
+          "capture": false,
+          "replies": [
+            {
+              "move": "Ka7",
+              "gain": 4,
+              "terminal": false
+            }
+          ],
+          "terminal": false
+        },
+        {
+          "move": "b8=B",
+          "promotion": true,
+          "capture": false,
+          "replies": [
+            {
+              "move": "Kb7",
+              "gain": 2,
+              "terminal": true
+            },
+            {
+              "move": "Kb6",
+              "gain": 2,
+              "terminal": true
+            }
+          ],
+          "terminal": true
+        },
+        {
+          "move": "b8=N+",
+          "promotion": true,
+          "capture": false,
+          "replies": [
+            {
+              "move": "Kb7",
+              "gain": 2,
+              "terminal": true
+            },
+            {
+              "move": "Ka7",
+              "gain": 2,
+              "terminal": true
+            },
+            {
+              "move": "Kb6",
+              "gain": 2,
+              "terminal": true
+            }
+          ],
+          "terminal": true
+        }
+      ]
+    },
+    {
+      "id": "promotion-beginner-safe-advance",
+      "fen": "8/8/K7/8/2k5/8/2p5/8 b - - 0 1",
+      "moves": [
+        "c1=Q",
+        "Kb7"
+      ],
+      "roots": [
+        {
+          "move": "Kd5",
+          "promotion": false,
+          "capture": false,
+          "replies": [
+            {
+              "move": "Kb7",
+              "gain": 0,
+              "terminal": false
+            },
+            {
+              "move": "Ka7",
+              "gain": 0,
+              "terminal": false
+            },
+            {
+              "move": "Kb6",
+              "gain": 0,
+              "terminal": false
+            },
+            {
+              "move": "Kb5",
+              "gain": 0,
+              "terminal": false
+            },
+            {
+              "move": "Ka5",
+              "gain": 0,
+              "terminal": false
+            }
+          ],
+          "terminal": false
+        },
+        {
+          "move": "Kc5",
+          "promotion": false,
+          "capture": false,
+          "replies": [
+            {
+              "move": "Kb7",
+              "gain": 0,
+              "terminal": false
+            },
+            {
+              "move": "Ka7",
+              "gain": 0,
+              "terminal": false
+            },
+            {
+              "move": "Ka5",
+              "gain": 0,
+              "terminal": false
+            }
+          ],
+          "terminal": false
+        },
+        {
+          "move": "Kd4",
+          "promotion": false,
+          "capture": false,
+          "replies": [
+            {
+              "move": "Kb7",
+              "gain": 0,
+              "terminal": false
+            },
+            {
+              "move": "Ka7",
+              "gain": 0,
+              "terminal": false
+            },
+            {
+              "move": "Kb6",
+              "gain": 0,
+              "terminal": false
+            },
+            {
+              "move": "Kb5",
+              "gain": 0,
+              "terminal": false
+            },
+            {
+              "move": "Ka5",
+              "gain": 0,
+              "terminal": false
+            }
+          ],
+          "terminal": false
+        },
+        {
+          "move": "Kb4",
+          "promotion": false,
+          "capture": false,
+          "replies": [
+            {
+              "move": "Kb7",
+              "gain": 0,
+              "terminal": false
+            },
+            {
+              "move": "Ka7",
+              "gain": 0,
+              "terminal": false
+            },
+            {
+              "move": "Kb6",
+              "gain": 0,
+              "terminal": false
+            }
+          ],
+          "terminal": false
+        },
+        {
+          "move": "Kd3",
+          "promotion": false,
+          "capture": false,
+          "replies": [
+            {
+              "move": "Kb7",
+              "gain": 0,
+              "terminal": false
+            },
+            {
+              "move": "Ka7",
+              "gain": 0,
+              "terminal": false
+            },
+            {
+              "move": "Kb6",
+              "gain": 0,
+              "terminal": false
+            },
+            {
+              "move": "Kb5",
+              "gain": 0,
+              "terminal": false
+            },
+            {
+              "move": "Ka5",
+              "gain": 0,
+              "terminal": false
+            }
+          ],
+          "terminal": false
+        },
+        {
+          "move": "Kc3",
+          "promotion": false,
+          "capture": false,
+          "replies": [
+            {
+              "move": "Kb7",
+              "gain": 0,
+              "terminal": false
+            },
+            {
+              "move": "Ka7",
+              "gain": 0,
+              "terminal": false
+            },
+            {
+              "move": "Kb6",
+              "gain": 0,
+              "terminal": false
+            },
+            {
+              "move": "Kb5",
+              "gain": 0,
+              "terminal": false
+            },
+            {
+              "move": "Ka5",
+              "gain": 0,
+              "terminal": false
+            }
+          ],
+          "terminal": false
+        },
+        {
+          "move": "Kb3",
+          "promotion": false,
+          "capture": false,
+          "replies": [
+            {
+              "move": "Kb7",
+              "gain": 0,
+              "terminal": false
+            },
+            {
+              "move": "Ka7",
+              "gain": 0,
+              "terminal": false
+            },
+            {
+              "move": "Kb6",
+              "gain": 0,
+              "terminal": false
+            },
+            {
+              "move": "Kb5",
+              "gain": 0,
+              "terminal": false
+            },
+            {
+              "move": "Ka5",
+              "gain": 0,
+              "terminal": false
+            }
+          ],
+          "terminal": false
+        },
+        {
+          "move": "c1=Q",
+          "promotion": true,
+          "capture": false,
+          "replies": [
+            {
+              "move": "Kb7",
+              "gain": 8,
+              "terminal": false
+            },
+            {
+              "move": "Ka7",
+              "gain": 8,
+              "terminal": false
+            },
+            {
+              "move": "Kb6",
+              "gain": 8,
+              "terminal": false
+            },
+            {
+              "move": "Ka5",
+              "gain": 8,
+              "terminal": false
+            }
+          ],
+          "terminal": false
+        },
+        {
+          "move": "c1=R",
+          "promotion": true,
+          "capture": false,
+          "replies": [
+            {
+              "move": "Kb7",
+              "gain": 4,
+              "terminal": false
+            },
+            {
+              "move": "Ka7",
+              "gain": 4,
+              "terminal": false
+            },
+            {
+              "move": "Kb6",
+              "gain": 4,
+              "terminal": false
+            },
+            {
+              "move": "Ka5",
+              "gain": 4,
+              "terminal": false
+            }
+          ],
+          "terminal": false
+        },
+        {
+          "move": "c1=B",
+          "promotion": true,
+          "capture": false,
+          "replies": [
+            {
+              "move": "Kb7",
+              "gain": 2,
+              "terminal": true
+            },
+            {
+              "move": "Ka7",
+              "gain": 2,
+              "terminal": true
+            },
+            {
+              "move": "Kb6",
+              "gain": 2,
+              "terminal": true
+            },
+            {
+              "move": "Ka5",
+              "gain": 2,
+              "terminal": true
+            }
+          ],
+          "terminal": true
+        },
+        {
+          "move": "c1=N",
+          "promotion": true,
+          "capture": false,
+          "replies": [
+            {
+              "move": "Kb7",
+              "gain": 2,
+              "terminal": true
+            },
+            {
+              "move": "Ka7",
+              "gain": 2,
+              "terminal": true
+            },
+            {
+              "move": "Kb6",
+              "gain": 2,
+              "terminal": true
+            },
+            {
+              "move": "Ka5",
+              "gain": 2,
+              "terminal": true
+            }
+          ],
+          "terminal": true
+        }
+      ]
+    },
+    {
+      "id": "promotion-beginner-capture-defender",
+      "fen": "1r6/P7/7k/8/8/8/8/K7 w - - 0 1",
+      "moves": [
+        "axb8=Q",
+        "Kg5"
+      ],
+      "roots": [
+        {
+          "move": "Ka2",
+          "promotion": false,
+          "capture": false,
+          "replies": [
+            {
+              "move": "Rh8",
+              "gain": 0,
+              "terminal": false
+            },
+            {
+              "move": "Rg8",
+              "gain": 0,
+              "terminal": false
+            },
+            {
+              "move": "Rf8",
+              "gain": 0,
+              "terminal": false
+            },
+            {
+              "move": "Re8",
+              "gain": 0,
+              "terminal": false
+            },
+            {
+              "move": "Rd8",
+              "gain": 0,
+              "terminal": false
+            },
+            {
+              "move": "Rc8",
+              "gain": 0,
+              "terminal": false
+            },
+            {
+              "move": "Ra8",
+              "gain": 0,
+              "terminal": false
+            },
+            {
+              "move": "Rb7",
+              "gain": 0,
+              "terminal": false
+            },
+            {
+              "move": "Rb6",
+              "gain": 0,
+              "terminal": false
+            },
+            {
+              "move": "Rb5",
+              "gain": 0,
+              "terminal": false
+            },
+            {
+              "move": "Rb4",
+              "gain": 0,
+              "terminal": false
+            },
+            {
+              "move": "Rb3",
+              "gain": 0,
+              "terminal": false
+            },
+            {
+              "move": "Rb2+",
+              "gain": 0,
+              "terminal": false
+            },
+            {
+              "move": "Rb1",
+              "gain": 0,
+              "terminal": false
+            },
+            {
+              "move": "Kh7",
+              "gain": 0,
+              "terminal": false
+            },
+            {
+              "move": "Kg7",
+              "gain": 0,
+              "terminal": false
+            },
+            {
+              "move": "Kg6",
+              "gain": 0,
+              "terminal": false
+            },
+            {
+              "move": "Kh5",
+              "gain": 0,
+              "terminal": false
+            },
+            {
+              "move": "Kg5",
+              "gain": 0,
+              "terminal": false
+            }
+          ],
+          "terminal": false
+        },
+        {
+          "move": "axb8=Q",
+          "promotion": true,
+          "capture": true,
+          "replies": [
+            {
+              "move": "Kh7",
+              "gain": 13,
+              "terminal": false
+            },
+            {
+              "move": "Kg7",
+              "gain": 13,
+              "terminal": false
+            },
+            {
+              "move": "Kg6",
+              "gain": 13,
+              "terminal": false
+            },
+            {
+              "move": "Kh5",
+              "gain": 13,
+              "terminal": false
+            },
+            {
+              "move": "Kg5",
+              "gain": 13,
+              "terminal": false
+            }
+          ],
+          "terminal": false
+        },
+        {
+          "move": "axb8=R",
+          "promotion": true,
+          "capture": true,
+          "replies": [
+            {
+              "move": "Kh7",
+              "gain": 9,
+              "terminal": false
+            },
+            {
+              "move": "Kg7",
+              "gain": 9,
+              "terminal": false
+            },
+            {
+              "move": "Kg6",
+              "gain": 9,
+              "terminal": false
+            },
+            {
+              "move": "Kh5",
+              "gain": 9,
+              "terminal": false
+            },
+            {
+              "move": "Kg5",
+              "gain": 9,
+              "terminal": false
+            }
+          ],
+          "terminal": false
+        },
+        {
+          "move": "axb8=B",
+          "promotion": true,
+          "capture": true,
+          "replies": [
+            {
+              "move": "Kh7",
+              "gain": 7,
+              "terminal": true
+            },
+            {
+              "move": "Kg7",
+              "gain": 7,
+              "terminal": true
+            },
+            {
+              "move": "Kg6",
+              "gain": 7,
+              "terminal": true
+            },
+            {
+              "move": "Kh5",
+              "gain": 7,
+              "terminal": true
+            },
+            {
+              "move": "Kg5",
+              "gain": 7,
+              "terminal": true
+            }
+          ],
+          "terminal": true
+        },
+        {
+          "move": "axb8=N",
+          "promotion": true,
+          "capture": true,
+          "replies": [
+            {
+              "move": "Kh7",
+              "gain": 7,
+              "terminal": true
+            },
+            {
+              "move": "Kg7",
+              "gain": 7,
+              "terminal": true
+            },
+            {
+              "move": "Kg6",
+              "gain": 7,
+              "terminal": true
+            },
+            {
+              "move": "Kh5",
+              "gain": 7,
+              "terminal": true
+            },
+            {
+              "move": "Kg5",
+              "gain": 7,
+              "terminal": true
+            }
+          ],
+          "terminal": true
+        },
+        {
+          "move": "a8=Q",
+          "promotion": true,
+          "capture": false,
+          "replies": [
+            {
+              "move": "Rh8",
+              "gain": 8,
+              "terminal": false
+            },
+            {
+              "move": "Rg8",
+              "gain": 8,
+              "terminal": false
+            },
+            {
+              "move": "Rf8",
+              "gain": 8,
+              "terminal": false
+            },
+            {
+              "move": "Re8",
+              "gain": 8,
+              "terminal": false
+            },
+            {
+              "move": "Rd8",
+              "gain": 8,
+              "terminal": false
+            },
+            {
+              "move": "Rc8",
+              "gain": 8,
+              "terminal": false
+            },
+            {
+              "move": "Rxa8+",
+              "gain": -1,
+              "terminal": false
+            },
+            {
+              "move": "Rb7",
+              "gain": 8,
+              "terminal": false
+            },
+            {
+              "move": "Rb6",
+              "gain": 8,
+              "terminal": false
+            },
+            {
+              "move": "Rb5",
+              "gain": 8,
+              "terminal": false
+            },
+            {
+              "move": "Rb4",
+              "gain": 8,
+              "terminal": false
+            },
+            {
+              "move": "Rb3",
+              "gain": 8,
+              "terminal": false
+            },
+            {
+              "move": "Rb2",
+              "gain": 8,
+              "terminal": false
+            },
+            {
+              "move": "Rb1+",
+              "gain": 8,
+              "terminal": false
+            },
+            {
+              "move": "Kh7",
+              "gain": 8,
+              "terminal": false
+            },
+            {
+              "move": "Kg7",
+              "gain": 8,
+              "terminal": false
+            },
+            {
+              "move": "Kg6",
+              "gain": 8,
+              "terminal": false
+            },
+            {
+              "move": "Kh5",
+              "gain": 8,
+              "terminal": false
+            },
+            {
+              "move": "Kg5",
+              "gain": 8,
+              "terminal": false
+            }
+          ],
+          "terminal": false
+        },
+        {
+          "move": "a8=R",
+          "promotion": true,
+          "capture": false,
+          "replies": [
+            {
+              "move": "Rh8",
+              "gain": 4,
+              "terminal": false
+            },
+            {
+              "move": "Rg8",
+              "gain": 4,
+              "terminal": false
+            },
+            {
+              "move": "Rf8",
+              "gain": 4,
+              "terminal": false
+            },
+            {
+              "move": "Re8",
+              "gain": 4,
+              "terminal": false
+            },
+            {
+              "move": "Rd8",
+              "gain": 4,
+              "terminal": false
+            },
+            {
+              "move": "Rc8",
+              "gain": 4,
+              "terminal": false
+            },
+            {
+              "move": "Rxa8+",
+              "gain": -1,
+              "terminal": false
+            },
+            {
+              "move": "Rb7",
+              "gain": 4,
+              "terminal": false
+            },
+            {
+              "move": "Rb6",
+              "gain": 4,
+              "terminal": false
+            },
+            {
+              "move": "Rb5",
+              "gain": 4,
+              "terminal": false
+            },
+            {
+              "move": "Rb4",
+              "gain": 4,
+              "terminal": false
+            },
+            {
+              "move": "Rb3",
+              "gain": 4,
+              "terminal": false
+            },
+            {
+              "move": "Rb2",
+              "gain": 4,
+              "terminal": false
+            },
+            {
+              "move": "Rb1+",
+              "gain": 4,
+              "terminal": false
+            },
+            {
+              "move": "Kh7",
+              "gain": 4,
+              "terminal": false
+            },
+            {
+              "move": "Kg7",
+              "gain": 4,
+              "terminal": false
+            },
+            {
+              "move": "Kg6",
+              "gain": 4,
+              "terminal": false
+            },
+            {
+              "move": "Kh5",
+              "gain": 4,
+              "terminal": false
+            },
+            {
+              "move": "Kg5",
+              "gain": 4,
+              "terminal": false
+            }
+          ],
+          "terminal": false
+        },
+        {
+          "move": "a8=B",
+          "promotion": true,
+          "capture": false,
+          "replies": [
+            {
+              "move": "Rh8",
+              "gain": 2,
+              "terminal": false
+            },
+            {
+              "move": "Rg8",
+              "gain": 2,
+              "terminal": false
+            },
+            {
+              "move": "Rf8",
+              "gain": 2,
+              "terminal": false
+            },
+            {
+              "move": "Re8",
+              "gain": 2,
+              "terminal": false
+            },
+            {
+              "move": "Rd8",
+              "gain": 2,
+              "terminal": false
+            },
+            {
+              "move": "Rc8",
+              "gain": 2,
+              "terminal": false
+            },
+            {
+              "move": "Rxa8+",
+              "gain": -1,
+              "terminal": false
+            },
+            {
+              "move": "Rb7",
+              "gain": 2,
+              "terminal": false
+            },
+            {
+              "move": "Rb6",
+              "gain": 2,
+              "terminal": false
+            },
+            {
+              "move": "Rb5",
+              "gain": 2,
+              "terminal": false
+            },
+            {
+              "move": "Rb4",
+              "gain": 2,
+              "terminal": false
+            },
+            {
+              "move": "Rb3",
+              "gain": 2,
+              "terminal": false
+            },
+            {
+              "move": "Rb2",
+              "gain": 2,
+              "terminal": false
+            },
+            {
+              "move": "Rb1+",
+              "gain": 2,
+              "terminal": false
+            },
+            {
+              "move": "Kh7",
+              "gain": 2,
+              "terminal": false
+            },
+            {
+              "move": "Kg7",
+              "gain": 2,
+              "terminal": false
+            },
+            {
+              "move": "Kg6",
+              "gain": 2,
+              "terminal": false
+            },
+            {
+              "move": "Kh5",
+              "gain": 2,
+              "terminal": false
+            },
+            {
+              "move": "Kg5",
+              "gain": 2,
+              "terminal": false
+            }
+          ],
+          "terminal": false
+        },
+        {
+          "move": "a8=N",
+          "promotion": true,
+          "capture": false,
+          "replies": [
+            {
+              "move": "Rh8",
+              "gain": 2,
+              "terminal": false
+            },
+            {
+              "move": "Rg8",
+              "gain": 2,
+              "terminal": false
+            },
+            {
+              "move": "Rf8",
+              "gain": 2,
+              "terminal": false
+            },
+            {
+              "move": "Re8",
+              "gain": 2,
+              "terminal": false
+            },
+            {
+              "move": "Rd8",
+              "gain": 2,
+              "terminal": false
+            },
+            {
+              "move": "Rc8",
+              "gain": 2,
+              "terminal": false
+            },
+            {
+              "move": "Rxa8+",
+              "gain": -1,
+              "terminal": false
+            },
+            {
+              "move": "Rb7",
+              "gain": 2,
+              "terminal": false
+            },
+            {
+              "move": "Rb6",
+              "gain": 2,
+              "terminal": false
+            },
+            {
+              "move": "Rb5",
+              "gain": 2,
+              "terminal": false
+            },
+            {
+              "move": "Rb4",
+              "gain": 2,
+              "terminal": false
+            },
+            {
+              "move": "Rb3",
+              "gain": 2,
+              "terminal": false
+            },
+            {
+              "move": "Rb2",
+              "gain": 2,
+              "terminal": false
+            },
+            {
+              "move": "Rb1+",
+              "gain": 2,
+              "terminal": false
+            },
+            {
+              "move": "Kh7",
+              "gain": 2,
+              "terminal": false
+            },
+            {
+              "move": "Kg7",
+              "gain": 2,
+              "terminal": false
+            },
+            {
+              "move": "Kg6",
+              "gain": 2,
+              "terminal": false
+            },
+            {
+              "move": "Kh5",
+              "gain": 2,
+              "terminal": false
+            },
+            {
+              "move": "Kg5",
+              "gain": 2,
+              "terminal": false
+            }
+          ],
+          "terminal": false
+        }
+      ]
+    }
+  ],
+  "exclusions": [
+    {
+      "fen": "8/6P1/8/6K1/8/8/8/1k6 w - - 0 1",
+      "moves": [
+        "g8=Q",
+        "Kc2"
+      ],
+      "reason": "Equivalent unopposed safe promotion; shifted kings or reversed colors add no distinct decision."
+    },
+    {
+      "fen": "8/8/8/5K2/8/8/1p6/5k2 b - - 0 1",
+      "moves": [
+        "b1=Q+",
+        "Kf6"
+      ],
+      "reason": "Equivalent unopposed safe promotion; shifted kings or reversed colors add no distinct decision."
+    },
+    {
+      "fen": "8/1P1k4/8/1K6/8/8/8/8 w - - 0 1",
+      "moves": [
+        "b8=Q",
+        "Ke7"
+      ],
+      "reason": "Equivalent unopposed safe promotion; shifted kings or reversed colors add no distinct decision."
+    },
+    {
+      "fen": "8/4K3/8/8/8/8/3p4/k7 b - - 0 1",
+      "moves": [
+        "d1=Q",
+        "Kf8"
+      ],
+      "reason": "Equivalent unopposed safe promotion; shifted kings or reversed colors add no distinct decision."
+    },
+    {
+      "fen": "8/3P4/8/8/3k4/8/8/2K5 w - - 0 1",
+      "moves": [
+        "d8=Q+",
+        "Ke5"
+      ],
+      "reason": "Equivalent unopposed safe promotion; shifted kings or reversed colors add no distinct decision."
+    },
+    {
+      "fen": "8/5k2/8/8/4K3/8/p7/8 b - - 0 1",
+      "moves": [
+        "a1=Q",
+        "Kf5"
+      ],
+      "reason": "Equivalent unopposed safe promotion; shifted kings or reversed colors add no distinct decision."
+    },
+    {
+      "fen": "8/2P5/8/2K5/8/k7/8/8 w - - 0 1",
+      "moves": [
+        "c8=Q",
+        "Ka4"
+      ],
+      "reason": "Equivalent unopposed safe promotion; shifted kings or reversed colors add no distinct decision."
+    },
+    {
+      "fen": "1K6/8/8/8/6k1/8/6p1/8 b - - 0 1",
+      "moves": [
+        "g1=Q",
+        "Kc8"
+      ],
+      "reason": "Equivalent unopposed safe promotion; shifted kings or reversed colors add no distinct decision."
+    },
+    {
+      "fen": "5K2/1P6/8/8/5k2/8/8/8 w - - 0 1",
+      "moves": [
+        "b8=Q+",
+        "Kg5"
+      ],
+      "reason": "Equivalent unopposed safe promotion; shifted kings or reversed colors add no distinct decision."
+    },
+    {
+      "fen": "8/8/8/8/1k6/8/1p1K4/8 b - - 0 1",
+      "moves": [
+        "b1=Q",
+        "Ke3"
+      ],
+      "reason": "Equivalent unopposed safe promotion; shifted kings or reversed colors add no distinct decision."
+    },
+    {
+      "fen": "K7/3P4/8/8/8/8/4k3/8 w - - 0 1",
+      "moves": [
+        "d8=Q",
+        "Kf3"
+      ],
+      "reason": "Equivalent unopposed safe promotion; shifted kings or reversed colors add no distinct decision."
+    },
+    {
+      "fen": "2k5/8/8/3K4/8/8/3p4/8 b - - 0 1",
+      "moves": [
+        "d1=Q+",
+        "Ke6"
+      ],
+      "reason": "Equivalent unopposed safe promotion; shifted kings or reversed colors add no distinct decision."
+    },
+    {
+      "fen": "8/P7/8/4k3/8/8/5K2/8 w - - 0 1",
+      "moves": [
+        "a8=Q",
+        "Kf6"
+      ],
+      "reason": "Equivalent unopposed safe promotion; shifted kings or reversed colors add no distinct decision."
+    },
+    {
+      "fen": "8/8/8/8/2K5/8/4k1p1/8 b - - 0 1",
+      "moves": [
+        "g1=Q",
+        "Kd5"
+      ],
+      "reason": "Equivalent unopposed safe promotion; shifted kings or reversed colors add no distinct decision."
+    },
+    {
+      "fen": "8/3k1P2/8/4K3/8/8/8/8 w - - 0 1",
+      "moves": [
+        "f8=Q",
+        "Kc7"
+      ],
+      "reason": "Equivalent unopposed safe promotion; shifted kings or reversed colors add no distinct decision."
+    },
+    {
+      "fen": "8/8/8/8/4K3/2k5/6p1/8 b - - 0 1",
+      "moves": [
+        "g1=Q",
+        "Kf5"
+      ],
+      "reason": "Equivalent unopposed safe promotion; shifted kings or reversed colors add no distinct decision."
+    },
+    {
+      "fen": "8/P7/8/8/1K6/8/4k3/8 w - - 0 1",
+      "moves": [
+        "a8=Q",
+        "Ke3"
+      ],
+      "reason": "Equivalent unopposed safe promotion; shifted kings or reversed colors add no distinct decision."
+    },
+    {
+      "fen": "8/8/8/5k2/8/8/5p2/2K5 b - - 0 1",
+      "moves": [
+        "f1=Q+",
+        "Kd2"
+      ],
+      "reason": "Equivalent unopposed safe promotion; shifted kings or reversed colors add no distinct decision."
+    },
+    {
+      "fen": "8/6P1/6k1/8/8/8/8/4K3 w - - 0 1",
+      "moves": [
+        "g8=Q+",
+        "Kh6"
+      ],
+      "reason": "Equivalent unopposed safe promotion; shifted kings or reversed colors add no distinct decision."
+    },
+    {
+      "fen": "8/8/8/3K4/8/8/5pk1/8 b - - 0 1",
+      "moves": [
+        "f1=Q",
+        "Ke6"
+      ],
+      "reason": "Equivalent unopposed safe promotion; shifted kings or reversed colors add no distinct decision."
+    },
+    {
+      "fen": "8/1P6/3K4/8/8/8/2k5/8 w - - 0 1",
+      "moves": [
+        "b8=Q",
+        "Kd3"
+      ],
+      "reason": "Equivalent unopposed safe promotion; shifted kings or reversed colors add no distinct decision."
+    },
+    {
+      "fen": "3K4/8/8/8/8/8/6p1/k7 b - - 0 1",
+      "moves": [
+        "g1=Q",
+        "Ke8"
+      ],
+      "reason": "Equivalent unopposed safe promotion; shifted kings or reversed colors add no distinct decision."
+    }
+  ],
+  "target": 24,
+  "count": 3
+}

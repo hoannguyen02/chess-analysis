@@ -1,0 +1,6516 @@
+[
+  {
+    "id": "queen-beginner-king-01",
+    "fen": "6K1/8/6k1/8/3q4/8/8/8 b - - 0 1",
+    "mateIn": 1,
+    "moves": [
+      "Qd8#"
+    ],
+    "method": "Exhaustive legal starting moves and replies; essential queen and non-king support checked by removal.",
+    "support": "g6",
+    "piece": "K",
+    "role": "escape-control",
+    "matingMoves": [
+      "Qd8#",
+      "Qg7#"
+    ],
+    "startingMoves": [
+      {
+        "move": "Kh6",
+        "checkmate": false,
+        "legalReplies": [
+          "Kf8",
+          "Kf7"
+        ]
+      },
+      {
+        "move": "Kf6",
+        "checkmate": false,
+        "legalReplies": [
+          "Kh8",
+          "Kf8",
+          "Kh7"
+        ]
+      },
+      {
+        "move": "Kh5",
+        "checkmate": false,
+        "legalReplies": [
+          "Kf8",
+          "Kh7",
+          "Kf7"
+        ]
+      },
+      {
+        "move": "Kg5",
+        "checkmate": false,
+        "legalReplies": [
+          "Kf8",
+          "Kh7",
+          "Kf7"
+        ]
+      },
+      {
+        "move": "Kf5",
+        "checkmate": false,
+        "legalReplies": [
+          "Kf8",
+          "Kh7",
+          "Kf7"
+        ]
+      },
+      {
+        "move": "Qh8+",
+        "checkmate": false,
+        "legalReplies": [
+          "Kxh8"
+        ]
+      },
+      {
+        "move": "Qd8#",
+        "checkmate": true,
+        "legalReplies": []
+      },
+      {
+        "move": "Qg7#",
+        "checkmate": true,
+        "legalReplies": []
+      },
+      {
+        "move": "Qd7",
+        "checkmate": false,
+        "legalReplies": [
+          "Kh8",
+          "Kf8"
+        ]
+      },
+      {
+        "move": "Qa7",
+        "checkmate": false,
+        "legalReplies": [
+          "Kh8",
+          "Kf8"
+        ]
+      },
+      {
+        "move": "Qf6",
+        "checkmate": false,
+        "legalReplies": []
+      },
+      {
+        "move": "Qd6",
+        "checkmate": false,
+        "legalReplies": [
+          "Kh8"
+        ]
+      },
+      {
+        "move": "Qb6",
+        "checkmate": false,
+        "legalReplies": [
+          "Kh8",
+          "Kf8"
+        ]
+      },
+      {
+        "move": "Qe5",
+        "checkmate": false,
+        "legalReplies": [
+          "Kf8"
+        ]
+      },
+      {
+        "move": "Qd5+",
+        "checkmate": false,
+        "legalReplies": [
+          "Kh8",
+          "Kf8"
+        ]
+      },
+      {
+        "move": "Qc5",
+        "checkmate": false,
+        "legalReplies": [
+          "Kh8"
+        ]
+      },
+      {
+        "move": "Qh4",
+        "checkmate": false,
+        "legalReplies": [
+          "Kf8"
+        ]
+      },
+      {
+        "move": "Qg4",
+        "checkmate": false,
+        "legalReplies": [
+          "Kh8",
+          "Kf8"
+        ]
+      },
+      {
+        "move": "Qf4",
+        "checkmate": false,
+        "legalReplies": [
+          "Kh8"
+        ]
+      },
+      {
+        "move": "Qe4",
+        "checkmate": false,
+        "legalReplies": [
+          "Kh8",
+          "Kf8"
+        ]
+      },
+      {
+        "move": "Qc4+",
+        "checkmate": false,
+        "legalReplies": [
+          "Kh8",
+          "Kf8"
+        ]
+      },
+      {
+        "move": "Qb4",
+        "checkmate": false,
+        "legalReplies": [
+          "Kh8"
+        ]
+      },
+      {
+        "move": "Qa4",
+        "checkmate": false,
+        "legalReplies": [
+          "Kh8",
+          "Kf8"
+        ]
+      },
+      {
+        "move": "Qe3",
+        "checkmate": false,
+        "legalReplies": [
+          "Kh8",
+          "Kf8"
+        ]
+      },
+      {
+        "move": "Qd3",
+        "checkmate": false,
+        "legalReplies": [
+          "Kh8",
+          "Kf8"
+        ]
+      },
+      {
+        "move": "Qc3",
+        "checkmate": false,
+        "legalReplies": [
+          "Kf8"
+        ]
+      },
+      {
+        "move": "Qf2",
+        "checkmate": false,
+        "legalReplies": [
+          "Kh8"
+        ]
+      },
+      {
+        "move": "Qd2",
+        "checkmate": false,
+        "legalReplies": [
+          "Kh8",
+          "Kf8"
+        ]
+      },
+      {
+        "move": "Qb2",
+        "checkmate": false,
+        "legalReplies": [
+          "Kf8"
+        ]
+      },
+      {
+        "move": "Qg1",
+        "checkmate": false,
+        "legalReplies": [
+          "Kh8",
+          "Kf8"
+        ]
+      },
+      {
+        "move": "Qd1",
+        "checkmate": false,
+        "legalReplies": [
+          "Kh8",
+          "Kf8"
+        ]
+      },
+      {
+        "move": "Qa1",
+        "checkmate": false,
+        "legalReplies": [
+          "Kf8"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "queen-beginner-king-02",
+    "fen": "8/8/8/8/8/2Q5/k1K5/8 w - - 0 1",
+    "mateIn": 1,
+    "moves": [
+      "Qb2#"
+    ],
+    "method": "Exhaustive legal starting moves and replies; essential queen and non-king support checked by removal.",
+    "support": "c2",
+    "piece": "K",
+    "role": "escape-control",
+    "matingMoves": [
+      "Qa5#",
+      "Qb2#"
+    ],
+    "startingMoves": [
+      {
+        "move": "Qh8",
+        "checkmate": false,
+        "legalReplies": [
+          "Ka3"
+        ]
+      },
+      {
+        "move": "Qc8",
+        "checkmate": false,
+        "legalReplies": [
+          "Ka3",
+          "Ka1"
+        ]
+      },
+      {
+        "move": "Qg7",
+        "checkmate": false,
+        "legalReplies": [
+          "Ka3"
+        ]
+      },
+      {
+        "move": "Qc7",
+        "checkmate": false,
+        "legalReplies": [
+          "Ka3",
+          "Ka1"
+        ]
+      },
+      {
+        "move": "Qf6",
+        "checkmate": false,
+        "legalReplies": [
+          "Ka3"
+        ]
+      },
+      {
+        "move": "Qc6",
+        "checkmate": false,
+        "legalReplies": [
+          "Ka3",
+          "Ka1"
+        ]
+      },
+      {
+        "move": "Qe5",
+        "checkmate": false,
+        "legalReplies": [
+          "Ka3"
+        ]
+      },
+      {
+        "move": "Qc5",
+        "checkmate": false,
+        "legalReplies": [
+          "Ka1"
+        ]
+      },
+      {
+        "move": "Qa5#",
+        "checkmate": true,
+        "legalReplies": []
+      },
+      {
+        "move": "Qd4",
+        "checkmate": false,
+        "legalReplies": [
+          "Ka3"
+        ]
+      },
+      {
+        "move": "Qc4+",
+        "checkmate": false,
+        "legalReplies": [
+          "Ka3",
+          "Ka1"
+        ]
+      },
+      {
+        "move": "Qb4",
+        "checkmate": false,
+        "legalReplies": [
+          "Ka1"
+        ]
+      },
+      {
+        "move": "Qh3",
+        "checkmate": false,
+        "legalReplies": [
+          "Ka1"
+        ]
+      },
+      {
+        "move": "Qg3",
+        "checkmate": false,
+        "legalReplies": [
+          "Ka1"
+        ]
+      },
+      {
+        "move": "Qf3",
+        "checkmate": false,
+        "legalReplies": [
+          "Ka1"
+        ]
+      },
+      {
+        "move": "Qe3",
+        "checkmate": false,
+        "legalReplies": [
+          "Ka1"
+        ]
+      },
+      {
+        "move": "Qd3",
+        "checkmate": false,
+        "legalReplies": [
+          "Ka1"
+        ]
+      },
+      {
+        "move": "Qb3+",
+        "checkmate": false,
+        "legalReplies": [
+          "Ka1"
+        ]
+      },
+      {
+        "move": "Qa3+",
+        "checkmate": false,
+        "legalReplies": [
+          "Kxa3"
+        ]
+      },
+      {
+        "move": "Qd2",
+        "checkmate": false,
+        "legalReplies": [
+          "Ka3",
+          "Ka1"
+        ]
+      },
+      {
+        "move": "Qb2#",
+        "checkmate": true,
+        "legalReplies": []
+      },
+      {
+        "move": "Qe1",
+        "checkmate": false,
+        "legalReplies": [
+          "Ka3"
+        ]
+      },
+      {
+        "move": "Qa1+",
+        "checkmate": false,
+        "legalReplies": [
+          "Kxa1"
+        ]
+      },
+      {
+        "move": "Kd3",
+        "checkmate": false,
+        "legalReplies": [
+          "Kb1"
+        ]
+      },
+      {
+        "move": "Kd2",
+        "checkmate": false,
+        "legalReplies": [
+          "Kb1"
+        ]
+      },
+      {
+        "move": "Kd1",
+        "checkmate": false,
+        "legalReplies": [
+          "Kb1"
+        ]
+      },
+      {
+        "move": "Kc1",
+        "checkmate": false,
+        "legalReplies": []
+      }
+    ]
+  },
+  {
+    "id": "queen-beginner-king-04",
+    "fen": "8/8/8/1Q6/8/3K4/8/3k4 w - - 0 1",
+    "mateIn": 1,
+    "moves": [
+      "Qb1#"
+    ],
+    "method": "Exhaustive legal starting moves and replies; essential queen and non-king support checked by removal.",
+    "support": "d3",
+    "piece": "K",
+    "role": "escape-control",
+    "matingMoves": [
+      "Qb1#"
+    ],
+    "startingMoves": [
+      {
+        "move": "Qe8",
+        "checkmate": false,
+        "legalReplies": [
+          "Kc1"
+        ]
+      },
+      {
+        "move": "Qb8",
+        "checkmate": false,
+        "legalReplies": [
+          "Ke1",
+          "Kc1"
+        ]
+      },
+      {
+        "move": "Qd7",
+        "checkmate": false,
+        "legalReplies": [
+          "Ke1",
+          "Kc1"
+        ]
+      },
+      {
+        "move": "Qb7",
+        "checkmate": false,
+        "legalReplies": [
+          "Ke1",
+          "Kc1"
+        ]
+      },
+      {
+        "move": "Qc6",
+        "checkmate": false,
+        "legalReplies": [
+          "Ke1"
+        ]
+      },
+      {
+        "move": "Qb6",
+        "checkmate": false,
+        "legalReplies": [
+          "Ke1",
+          "Kc1"
+        ]
+      },
+      {
+        "move": "Qa6",
+        "checkmate": false,
+        "legalReplies": [
+          "Ke1",
+          "Kc1"
+        ]
+      },
+      {
+        "move": "Qh5+",
+        "checkmate": false,
+        "legalReplies": [
+          "Ke1",
+          "Kc1"
+        ]
+      },
+      {
+        "move": "Qg5",
+        "checkmate": false,
+        "legalReplies": [
+          "Ke1"
+        ]
+      },
+      {
+        "move": "Qf5",
+        "checkmate": false,
+        "legalReplies": [
+          "Ke1",
+          "Kc1"
+        ]
+      },
+      {
+        "move": "Qe5",
+        "checkmate": false,
+        "legalReplies": [
+          "Kc1"
+        ]
+      },
+      {
+        "move": "Qd5",
+        "checkmate": false,
+        "legalReplies": [
+          "Ke1",
+          "Kc1"
+        ]
+      },
+      {
+        "move": "Qc5",
+        "checkmate": false,
+        "legalReplies": [
+          "Ke1"
+        ]
+      },
+      {
+        "move": "Qa5",
+        "checkmate": false,
+        "legalReplies": [
+          "Kc1"
+        ]
+      },
+      {
+        "move": "Qc4",
+        "checkmate": false,
+        "legalReplies": [
+          "Ke1"
+        ]
+      },
+      {
+        "move": "Qb4",
+        "checkmate": false,
+        "legalReplies": [
+          "Kc1"
+        ]
+      },
+      {
+        "move": "Qa4+",
+        "checkmate": false,
+        "legalReplies": [
+          "Ke1",
+          "Kc1"
+        ]
+      },
+      {
+        "move": "Qb3+",
+        "checkmate": false,
+        "legalReplies": [
+          "Ke1",
+          "Kc1"
+        ]
+      },
+      {
+        "move": "Qb2",
+        "checkmate": false,
+        "legalReplies": [
+          "Ke1"
+        ]
+      },
+      {
+        "move": "Qb1#",
+        "checkmate": true,
+        "legalReplies": []
+      },
+      {
+        "move": "Ke4",
+        "checkmate": false,
+        "legalReplies": [
+          "Kd2",
+          "Kc2",
+          "Ke1",
+          "Kc1"
+        ]
+      },
+      {
+        "move": "Kd4",
+        "checkmate": false,
+        "legalReplies": [
+          "Kd2",
+          "Kc2",
+          "Ke1",
+          "Kc1"
+        ]
+      },
+      {
+        "move": "Kc4",
+        "checkmate": false,
+        "legalReplies": [
+          "Ke2",
+          "Kd2",
+          "Kc2",
+          "Ke1",
+          "Kc1"
+        ]
+      },
+      {
+        "move": "Ke3",
+        "checkmate": false,
+        "legalReplies": [
+          "Kc2",
+          "Ke1",
+          "Kc1"
+        ]
+      },
+      {
+        "move": "Kc3",
+        "checkmate": false,
+        "legalReplies": [
+          "Ke1",
+          "Kc1"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "queen-beginner-king-06",
+    "fen": "4K3/8/5k2/8/8/8/8/2q5 b - - 0 1",
+    "mateIn": 1,
+    "moves": [
+      "Qc8#"
+    ],
+    "method": "Exhaustive legal starting moves and replies; essential queen and non-king support checked by removal.",
+    "support": "f6",
+    "piece": "K",
+    "role": "escape-control",
+    "matingMoves": [
+      "Qc8#"
+    ],
+    "startingMoves": [
+      {
+        "move": "Kg7",
+        "checkmate": false,
+        "legalReplies": [
+          "Kd8",
+          "Ke7",
+          "Kd7"
+        ]
+      },
+      {
+        "move": "Kg6",
+        "checkmate": false,
+        "legalReplies": [
+          "Kf8",
+          "Kd8",
+          "Ke7",
+          "Kd7"
+        ]
+      },
+      {
+        "move": "Ke6",
+        "checkmate": false,
+        "legalReplies": [
+          "Kf8",
+          "Kd8"
+        ]
+      },
+      {
+        "move": "Kg5",
+        "checkmate": false,
+        "legalReplies": [
+          "Kf8",
+          "Kd8",
+          "Kf7",
+          "Ke7",
+          "Kd7"
+        ]
+      },
+      {
+        "move": "Kf5",
+        "checkmate": false,
+        "legalReplies": [
+          "Kf8",
+          "Kd8",
+          "Kf7",
+          "Ke7",
+          "Kd7"
+        ]
+      },
+      {
+        "move": "Ke5",
+        "checkmate": false,
+        "legalReplies": [
+          "Kf8",
+          "Kd8",
+          "Kf7",
+          "Ke7",
+          "Kd7"
+        ]
+      },
+      {
+        "move": "Qc8#",
+        "checkmate": true,
+        "legalReplies": []
+      },
+      {
+        "move": "Qc7",
+        "checkmate": false,
+        "legalReplies": [
+          "Kf8"
+        ]
+      },
+      {
+        "move": "Qh6",
+        "checkmate": false,
+        "legalReplies": [
+          "Kd8",
+          "Kd7"
+        ]
+      },
+      {
+        "move": "Qc6+",
+        "checkmate": false,
+        "legalReplies": [
+          "Kf8",
+          "Kd8"
+        ]
+      },
+      {
+        "move": "Qg5",
+        "checkmate": false,
+        "legalReplies": [
+          "Kf8",
+          "Kd8",
+          "Kd7"
+        ]
+      },
+      {
+        "move": "Qc5",
+        "checkmate": false,
+        "legalReplies": [
+          "Kd8",
+          "Kd7"
+        ]
+      },
+      {
+        "move": "Qf4",
+        "checkmate": false,
+        "legalReplies": [
+          "Kf8",
+          "Kd8",
+          "Kd7"
+        ]
+      },
+      {
+        "move": "Qc4",
+        "checkmate": false,
+        "legalReplies": [
+          "Kf8",
+          "Kd8",
+          "Kd7"
+        ]
+      },
+      {
+        "move": "Qe3+",
+        "checkmate": false,
+        "legalReplies": [
+          "Kf8",
+          "Kd8",
+          "Kd7"
+        ]
+      },
+      {
+        "move": "Qc3",
+        "checkmate": false,
+        "legalReplies": [
+          "Kf8",
+          "Kd8",
+          "Kd7"
+        ]
+      },
+      {
+        "move": "Qa3",
+        "checkmate": false,
+        "legalReplies": [
+          "Kd8",
+          "Kd7"
+        ]
+      },
+      {
+        "move": "Qd2",
+        "checkmate": false,
+        "legalReplies": [
+          "Kf8"
+        ]
+      },
+      {
+        "move": "Qc2",
+        "checkmate": false,
+        "legalReplies": [
+          "Kf8",
+          "Kd8",
+          "Kd7"
+        ]
+      },
+      {
+        "move": "Qb2",
+        "checkmate": false,
+        "legalReplies": [
+          "Kf8",
+          "Kd8",
+          "Kd7"
+        ]
+      },
+      {
+        "move": "Qh1",
+        "checkmate": false,
+        "legalReplies": [
+          "Kf8",
+          "Kd8",
+          "Kd7"
+        ]
+      },
+      {
+        "move": "Qg1",
+        "checkmate": false,
+        "legalReplies": [
+          "Kf8",
+          "Kd8",
+          "Kd7"
+        ]
+      },
+      {
+        "move": "Qf1",
+        "checkmate": false,
+        "legalReplies": [
+          "Kf8",
+          "Kd8",
+          "Kd7"
+        ]
+      },
+      {
+        "move": "Qe1+",
+        "checkmate": false,
+        "legalReplies": [
+          "Kf8",
+          "Kd8",
+          "Kd7"
+        ]
+      },
+      {
+        "move": "Qd1",
+        "checkmate": false,
+        "legalReplies": [
+          "Kf8"
+        ]
+      },
+      {
+        "move": "Qb1",
+        "checkmate": false,
+        "legalReplies": [
+          "Kf8",
+          "Kd8",
+          "Kd7"
+        ]
+      },
+      {
+        "move": "Qa1",
+        "checkmate": false,
+        "legalReplies": [
+          "Kf8",
+          "Kd8",
+          "Kd7"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "queen-beginner-king-09",
+    "fen": "8/5K1k/8/8/8/5Q2/8/8 w - - 0 1",
+    "mateIn": 1,
+    "moves": [
+      "Qh3#"
+    ],
+    "method": "Exhaustive legal starting moves and replies; essential queen and non-king support checked by removal.",
+    "support": "f7",
+    "piece": "K",
+    "role": "escape-control",
+    "matingMoves": [
+      "Qh5#",
+      "Qh3#",
+      "Qh1#"
+    ],
+    "startingMoves": [
+      {
+        "move": "Kf8",
+        "checkmate": false,
+        "legalReplies": [
+          "Kh8",
+          "Kh6",
+          "Kg6"
+        ]
+      },
+      {
+        "move": "Ke8",
+        "checkmate": false,
+        "legalReplies": [
+          "Kh8",
+          "Kg8",
+          "Kg7",
+          "Kh6",
+          "Kg6"
+        ]
+      },
+      {
+        "move": "Ke7",
+        "checkmate": false,
+        "legalReplies": [
+          "Kh8",
+          "Kg8",
+          "Kg7",
+          "Kh6",
+          "Kg6"
+        ]
+      },
+      {
+        "move": "Kf6",
+        "checkmate": false,
+        "legalReplies": [
+          "Kh8",
+          "Kg8",
+          "Kh6"
+        ]
+      },
+      {
+        "move": "Ke6",
+        "checkmate": false,
+        "legalReplies": [
+          "Kh8",
+          "Kg8",
+          "Kg7",
+          "Kh6",
+          "Kg6"
+        ]
+      },
+      {
+        "move": "Qa8",
+        "checkmate": false,
+        "legalReplies": [
+          "Kh6"
+        ]
+      },
+      {
+        "move": "Qb7",
+        "checkmate": false,
+        "legalReplies": [
+          "Kh8",
+          "Kh6"
+        ]
+      },
+      {
+        "move": "Qf6",
+        "checkmate": false,
+        "legalReplies": []
+      },
+      {
+        "move": "Qc6",
+        "checkmate": false,
+        "legalReplies": [
+          "Kh8"
+        ]
+      },
+      {
+        "move": "Qh5#",
+        "checkmate": true,
+        "legalReplies": []
+      },
+      {
+        "move": "Qf5+",
+        "checkmate": false,
+        "legalReplies": [
+          "Kh8",
+          "Kh6"
+        ]
+      },
+      {
+        "move": "Qd5",
+        "checkmate": false,
+        "legalReplies": [
+          "Kh8",
+          "Kh6"
+        ]
+      },
+      {
+        "move": "Qg4",
+        "checkmate": false,
+        "legalReplies": [
+          "Kh8",
+          "Kh6"
+        ]
+      },
+      {
+        "move": "Qf4",
+        "checkmate": false,
+        "legalReplies": [
+          "Kh8"
+        ]
+      },
+      {
+        "move": "Qe4+",
+        "checkmate": false,
+        "legalReplies": [
+          "Kh8",
+          "Kh6"
+        ]
+      },
+      {
+        "move": "Qh3#",
+        "checkmate": true,
+        "legalReplies": []
+      },
+      {
+        "move": "Qg3",
+        "checkmate": false,
+        "legalReplies": [
+          "Kh8",
+          "Kh6"
+        ]
+      },
+      {
+        "move": "Qe3",
+        "checkmate": false,
+        "legalReplies": [
+          "Kh8"
+        ]
+      },
+      {
+        "move": "Qd3+",
+        "checkmate": false,
+        "legalReplies": [
+          "Kh8",
+          "Kh6"
+        ]
+      },
+      {
+        "move": "Qc3",
+        "checkmate": false,
+        "legalReplies": [
+          "Kh6"
+        ]
+      },
+      {
+        "move": "Qb3",
+        "checkmate": false,
+        "legalReplies": [
+          "Kh8",
+          "Kh6"
+        ]
+      },
+      {
+        "move": "Qa3",
+        "checkmate": false,
+        "legalReplies": [
+          "Kh8",
+          "Kh6"
+        ]
+      },
+      {
+        "move": "Qg2",
+        "checkmate": false,
+        "legalReplies": [
+          "Kh8",
+          "Kh6"
+        ]
+      },
+      {
+        "move": "Qf2",
+        "checkmate": false,
+        "legalReplies": [
+          "Kh8",
+          "Kh6"
+        ]
+      },
+      {
+        "move": "Qe2",
+        "checkmate": false,
+        "legalReplies": [
+          "Kh8",
+          "Kh6"
+        ]
+      },
+      {
+        "move": "Qh1#",
+        "checkmate": true,
+        "legalReplies": []
+      },
+      {
+        "move": "Qf1",
+        "checkmate": false,
+        "legalReplies": [
+          "Kh8",
+          "Kh6"
+        ]
+      },
+      {
+        "move": "Qd1",
+        "checkmate": false,
+        "legalReplies": [
+          "Kh8",
+          "Kh6"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "queen-beginner-king-12",
+    "fen": "8/8/5q2/8/8/7k/8/7K b - - 0 1",
+    "mateIn": 1,
+    "moves": [
+      "Qa1#"
+    ],
+    "method": "Exhaustive legal starting moves and replies; essential queen and non-king support checked by removal.",
+    "support": "h3",
+    "piece": "K",
+    "role": "escape-control",
+    "matingMoves": [
+      "Qf1#",
+      "Qa1#"
+    ],
+    "startingMoves": [
+      {
+        "move": "Qh8",
+        "checkmate": false,
+        "legalReplies": [
+          "Kg1"
+        ]
+      },
+      {
+        "move": "Qf8",
+        "checkmate": false,
+        "legalReplies": [
+          "Kg1"
+        ]
+      },
+      {
+        "move": "Qd8",
+        "checkmate": false,
+        "legalReplies": [
+          "Kg1"
+        ]
+      },
+      {
+        "move": "Qg7",
+        "checkmate": false,
+        "legalReplies": []
+      },
+      {
+        "move": "Qf7",
+        "checkmate": false,
+        "legalReplies": [
+          "Kg1"
+        ]
+      },
+      {
+        "move": "Qe7",
+        "checkmate": false,
+        "legalReplies": [
+          "Kg1"
+        ]
+      },
+      {
+        "move": "Qh6",
+        "checkmate": false,
+        "legalReplies": [
+          "Kg1"
+        ]
+      },
+      {
+        "move": "Qg6",
+        "checkmate": false,
+        "legalReplies": []
+      },
+      {
+        "move": "Qe6",
+        "checkmate": false,
+        "legalReplies": [
+          "Kg1"
+        ]
+      },
+      {
+        "move": "Qd6",
+        "checkmate": false,
+        "legalReplies": [
+          "Kg1"
+        ]
+      },
+      {
+        "move": "Qc6+",
+        "checkmate": false,
+        "legalReplies": [
+          "Kg1"
+        ]
+      },
+      {
+        "move": "Qb6",
+        "checkmate": false,
+        "legalReplies": []
+      },
+      {
+        "move": "Qa6",
+        "checkmate": false,
+        "legalReplies": [
+          "Kg1"
+        ]
+      },
+      {
+        "move": "Qg5",
+        "checkmate": false,
+        "legalReplies": []
+      },
+      {
+        "move": "Qf5",
+        "checkmate": false,
+        "legalReplies": [
+          "Kg1"
+        ]
+      },
+      {
+        "move": "Qe5",
+        "checkmate": false,
+        "legalReplies": [
+          "Kg1"
+        ]
+      },
+      {
+        "move": "Qh4",
+        "checkmate": false,
+        "legalReplies": [
+          "Kg1"
+        ]
+      },
+      {
+        "move": "Qf4",
+        "checkmate": false,
+        "legalReplies": [
+          "Kg1"
+        ]
+      },
+      {
+        "move": "Qd4",
+        "checkmate": false,
+        "legalReplies": []
+      },
+      {
+        "move": "Qf3+",
+        "checkmate": false,
+        "legalReplies": [
+          "Kg1"
+        ]
+      },
+      {
+        "move": "Qc3",
+        "checkmate": false,
+        "legalReplies": [
+          "Kg1"
+        ]
+      },
+      {
+        "move": "Qf2",
+        "checkmate": false,
+        "legalReplies": []
+      },
+      {
+        "move": "Qb2",
+        "checkmate": false,
+        "legalReplies": [
+          "Kg1"
+        ]
+      },
+      {
+        "move": "Qf1#",
+        "checkmate": true,
+        "legalReplies": []
+      },
+      {
+        "move": "Qa1#",
+        "checkmate": true,
+        "legalReplies": []
+      },
+      {
+        "move": "Kh4",
+        "checkmate": false,
+        "legalReplies": [
+          "Kh2",
+          "Kg2",
+          "Kg1"
+        ]
+      },
+      {
+        "move": "Kg4",
+        "checkmate": false,
+        "legalReplies": [
+          "Kh2",
+          "Kg2",
+          "Kg1"
+        ]
+      },
+      {
+        "move": "Kg3",
+        "checkmate": false,
+        "legalReplies": [
+          "Kg1"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "queen-beginner-king-19",
+    "fen": "8/8/8/K7/2kq4/8/8/8 b - - 0 1",
+    "mateIn": 1,
+    "moves": [
+      "Qa7#"
+    ],
+    "method": "Exhaustive legal starting moves and replies; essential queen and non-king support checked by removal.",
+    "support": "c4",
+    "piece": "K",
+    "role": "escape-control",
+    "matingMoves": [
+      "Qa7#"
+    ],
+    "startingMoves": [
+      {
+        "move": "Qh8",
+        "checkmate": false,
+        "legalReplies": [
+          "Kb6",
+          "Ka6",
+          "Ka4"
+        ]
+      },
+      {
+        "move": "Qd8+",
+        "checkmate": false,
+        "legalReplies": [
+          "Ka6",
+          "Ka4"
+        ]
+      },
+      {
+        "move": "Qg7",
+        "checkmate": false,
+        "legalReplies": [
+          "Kb6",
+          "Ka6",
+          "Ka4"
+        ]
+      },
+      {
+        "move": "Qd7",
+        "checkmate": false,
+        "legalReplies": [
+          "Kb6",
+          "Ka6"
+        ]
+      },
+      {
+        "move": "Qa7#",
+        "checkmate": true,
+        "legalReplies": []
+      },
+      {
+        "move": "Qf6",
+        "checkmate": false,
+        "legalReplies": [
+          "Ka4"
+        ]
+      },
+      {
+        "move": "Qd6",
+        "checkmate": false,
+        "legalReplies": [
+          "Ka4"
+        ]
+      },
+      {
+        "move": "Qb6+",
+        "checkmate": false,
+        "legalReplies": [
+          "Kxb6",
+          "Ka4"
+        ]
+      },
+      {
+        "move": "Qe5+",
+        "checkmate": false,
+        "legalReplies": [
+          "Kb6",
+          "Ka6",
+          "Ka4"
+        ]
+      },
+      {
+        "move": "Qd5+",
+        "checkmate": false,
+        "legalReplies": [
+          "Kb6",
+          "Ka6",
+          "Ka4"
+        ]
+      },
+      {
+        "move": "Qc5+",
+        "checkmate": false,
+        "legalReplies": [
+          "Ka6",
+          "Ka4"
+        ]
+      },
+      {
+        "move": "Qh4",
+        "checkmate": false,
+        "legalReplies": [
+          "Kb6",
+          "Ka6",
+          "Ka4"
+        ]
+      },
+      {
+        "move": "Qg4",
+        "checkmate": false,
+        "legalReplies": [
+          "Kb6",
+          "Ka6",
+          "Ka4"
+        ]
+      },
+      {
+        "move": "Qf4",
+        "checkmate": false,
+        "legalReplies": [
+          "Kb6",
+          "Ka6",
+          "Ka4"
+        ]
+      },
+      {
+        "move": "Qe4",
+        "checkmate": false,
+        "legalReplies": [
+          "Kb6",
+          "Ka6",
+          "Ka4"
+        ]
+      },
+      {
+        "move": "Qe3",
+        "checkmate": false,
+        "legalReplies": [
+          "Ka6",
+          "Ka4"
+        ]
+      },
+      {
+        "move": "Qd3",
+        "checkmate": false,
+        "legalReplies": [
+          "Kb6",
+          "Ka6",
+          "Ka4"
+        ]
+      },
+      {
+        "move": "Qc3+",
+        "checkmate": false,
+        "legalReplies": [
+          "Kb6",
+          "Ka6",
+          "Ka4"
+        ]
+      },
+      {
+        "move": "Qf2",
+        "checkmate": false,
+        "legalReplies": [
+          "Ka6",
+          "Ka4"
+        ]
+      },
+      {
+        "move": "Qd2+",
+        "checkmate": false,
+        "legalReplies": [
+          "Kb6",
+          "Ka6",
+          "Ka4"
+        ]
+      },
+      {
+        "move": "Qb2",
+        "checkmate": false,
+        "legalReplies": [
+          "Ka6",
+          "Ka4"
+        ]
+      },
+      {
+        "move": "Qg1",
+        "checkmate": false,
+        "legalReplies": [
+          "Ka6",
+          "Ka4"
+        ]
+      },
+      {
+        "move": "Qd1",
+        "checkmate": false,
+        "legalReplies": [
+          "Kb6",
+          "Ka6"
+        ]
+      },
+      {
+        "move": "Qa1+",
+        "checkmate": false,
+        "legalReplies": [
+          "Kb6"
+        ]
+      },
+      {
+        "move": "Kd5",
+        "checkmate": false,
+        "legalReplies": [
+          "Ka6",
+          "Kb5"
+        ]
+      },
+      {
+        "move": "Kc5",
+        "checkmate": false,
+        "legalReplies": [
+          "Ka6"
+        ]
+      },
+      {
+        "move": "Kd3",
+        "checkmate": false,
+        "legalReplies": [
+          "Ka6",
+          "Kb5"
+        ]
+      },
+      {
+        "move": "Kc3",
+        "checkmate": false,
+        "legalReplies": [
+          "Ka6",
+          "Kb5"
+        ]
+      },
+      {
+        "move": "Kb3",
+        "checkmate": false,
+        "legalReplies": [
+          "Ka6",
+          "Kb5"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "queen-beginner-king-20",
+    "fen": "8/4Q3/8/8/k7/2K5/8/8 w - - 0 1",
+    "mateIn": 1,
+    "moves": [
+      "Qb4#"
+    ],
+    "method": "Exhaustive legal starting moves and replies; essential queen and non-king support checked by removal.",
+    "support": "c3",
+    "piece": "K",
+    "role": "escape-control",
+    "matingMoves": [
+      "Qb4#"
+    ],
+    "startingMoves": [
+      {
+        "move": "Qf8",
+        "checkmate": false,
+        "legalReplies": [
+          "Kb5",
+          "Ka5"
+        ]
+      },
+      {
+        "move": "Qe8+",
+        "checkmate": false,
+        "legalReplies": [
+          "Ka5",
+          "Ka3"
+        ]
+      },
+      {
+        "move": "Qd8",
+        "checkmate": false,
+        "legalReplies": [
+          "Kb5",
+          "Ka3"
+        ]
+      },
+      {
+        "move": "Qh7",
+        "checkmate": false,
+        "legalReplies": [
+          "Kb5",
+          "Ka5",
+          "Ka3"
+        ]
+      },
+      {
+        "move": "Qg7",
+        "checkmate": false,
+        "legalReplies": [
+          "Kb5",
+          "Ka5",
+          "Ka3"
+        ]
+      },
+      {
+        "move": "Qf7",
+        "checkmate": false,
+        "legalReplies": [
+          "Kb5",
+          "Ka5",
+          "Ka3"
+        ]
+      },
+      {
+        "move": "Qd7+",
+        "checkmate": false,
+        "legalReplies": [
+          "Ka5",
+          "Ka3"
+        ]
+      },
+      {
+        "move": "Qc7",
+        "checkmate": false,
+        "legalReplies": [
+          "Kb5",
+          "Ka3"
+        ]
+      },
+      {
+        "move": "Qb7",
+        "checkmate": false,
+        "legalReplies": [
+          "Ka5",
+          "Ka3"
+        ]
+      },
+      {
+        "move": "Qa7+",
+        "checkmate": false,
+        "legalReplies": [
+          "Kb5"
+        ]
+      },
+      {
+        "move": "Qf6",
+        "checkmate": false,
+        "legalReplies": [
+          "Kb5",
+          "Ka5",
+          "Ka3"
+        ]
+      },
+      {
+        "move": "Qe6",
+        "checkmate": false,
+        "legalReplies": [
+          "Kb5",
+          "Ka5",
+          "Ka3"
+        ]
+      },
+      {
+        "move": "Qd6",
+        "checkmate": false,
+        "legalReplies": [
+          "Kb5",
+          "Ka5"
+        ]
+      },
+      {
+        "move": "Qg5",
+        "checkmate": false,
+        "legalReplies": [
+          "Ka3"
+        ]
+      },
+      {
+        "move": "Qe5",
+        "checkmate": false,
+        "legalReplies": [
+          "Ka3"
+        ]
+      },
+      {
+        "move": "Qc5",
+        "checkmate": false,
+        "legalReplies": []
+      },
+      {
+        "move": "Qh4+",
+        "checkmate": false,
+        "legalReplies": [
+          "Kb5",
+          "Ka5",
+          "Ka3"
+        ]
+      },
+      {
+        "move": "Qe4+",
+        "checkmate": false,
+        "legalReplies": [
+          "Kb5",
+          "Ka5",
+          "Ka3"
+        ]
+      },
+      {
+        "move": "Qb4#",
+        "checkmate": true,
+        "legalReplies": []
+      },
+      {
+        "move": "Qe3",
+        "checkmate": false,
+        "legalReplies": [
+          "Kb5",
+          "Ka5",
+          "Ka3"
+        ]
+      },
+      {
+        "move": "Qa3+",
+        "checkmate": false,
+        "legalReplies": [
+          "Kb5",
+          "Kxa3"
+        ]
+      },
+      {
+        "move": "Qe2",
+        "checkmate": false,
+        "legalReplies": [
+          "Ka5",
+          "Ka3"
+        ]
+      },
+      {
+        "move": "Qe1",
+        "checkmate": false,
+        "legalReplies": [
+          "Kb5",
+          "Ka5",
+          "Ka3"
+        ]
+      },
+      {
+        "move": "Kd4",
+        "checkmate": false,
+        "legalReplies": [
+          "Kb5",
+          "Ka5",
+          "Kb3"
+        ]
+      },
+      {
+        "move": "Kc4",
+        "checkmate": false,
+        "legalReplies": [
+          "Ka5"
+        ]
+      },
+      {
+        "move": "Kd3",
+        "checkmate": false,
+        "legalReplies": [
+          "Kb5",
+          "Ka5",
+          "Kb3"
+        ]
+      },
+      {
+        "move": "Kd2",
+        "checkmate": false,
+        "legalReplies": [
+          "Kb5",
+          "Ka5",
+          "Kb3"
+        ]
+      },
+      {
+        "move": "Kc2",
+        "checkmate": false,
+        "legalReplies": [
+          "Kb5",
+          "Ka5"
+        ]
+      },
+      {
+        "move": "Kb2",
+        "checkmate": false,
+        "legalReplies": [
+          "Kb5",
+          "Ka5"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "queen-beginner-r-1",
+    "fen": "7k/4Q3/8/8/8/6R1/8/K7 w - - 0 1",
+    "mateIn": 1,
+    "moves": [
+      "Qg7#"
+    ],
+    "method": "Exhaustive legal starting moves and replies; essential queen and non-king support checked by removal.",
+    "support": "g3",
+    "piece": "R",
+    "role": "queen-protection",
+    "matingMoves": [
+      "Qg7#",
+      "Qh4#"
+    ],
+    "startingMoves": [
+      {
+        "move": "Qf8+",
+        "checkmate": false,
+        "legalReplies": [
+          "Kh7"
+        ]
+      },
+      {
+        "move": "Qe8+",
+        "checkmate": false,
+        "legalReplies": [
+          "Kh7"
+        ]
+      },
+      {
+        "move": "Qd8+",
+        "checkmate": false,
+        "legalReplies": [
+          "Kh7"
+        ]
+      },
+      {
+        "move": "Qh7+",
+        "checkmate": false,
+        "legalReplies": [
+          "Kxh7"
+        ]
+      },
+      {
+        "move": "Qg7#",
+        "checkmate": true,
+        "legalReplies": [],
+        "withoutSupportReplies": [
+          "Kxg7"
+        ]
+      },
+      {
+        "move": "Qf7",
+        "checkmate": false,
+        "legalReplies": []
+      },
+      {
+        "move": "Qd7",
+        "checkmate": false,
+        "legalReplies": []
+      },
+      {
+        "move": "Qc7",
+        "checkmate": false,
+        "legalReplies": []
+      },
+      {
+        "move": "Qb7",
+        "checkmate": false,
+        "legalReplies": []
+      },
+      {
+        "move": "Qa7",
+        "checkmate": false,
+        "legalReplies": []
+      },
+      {
+        "move": "Qf6+",
+        "checkmate": false,
+        "legalReplies": [
+          "Kh7"
+        ]
+      },
+      {
+        "move": "Qe6",
+        "checkmate": false,
+        "legalReplies": [
+          "Kh7"
+        ]
+      },
+      {
+        "move": "Qd6",
+        "checkmate": false,
+        "legalReplies": [
+          "Kh7"
+        ]
+      },
+      {
+        "move": "Qg5",
+        "checkmate": false,
+        "legalReplies": [
+          "Kh7"
+        ]
+      },
+      {
+        "move": "Qe5+",
+        "checkmate": false,
+        "legalReplies": [
+          "Kh7"
+        ]
+      },
+      {
+        "move": "Qc5",
+        "checkmate": false,
+        "legalReplies": [
+          "Kh7"
+        ]
+      },
+      {
+        "move": "Qh4#",
+        "checkmate": true,
+        "legalReplies": [],
+        "withoutSupportReplies": [
+          "Kg8",
+          "Kg7"
+        ]
+      },
+      {
+        "move": "Qe4",
+        "checkmate": false,
+        "legalReplies": []
+      },
+      {
+        "move": "Qb4",
+        "checkmate": false,
+        "legalReplies": [
+          "Kh7"
+        ]
+      },
+      {
+        "move": "Qe3",
+        "checkmate": false,
+        "legalReplies": [
+          "Kh7"
+        ]
+      },
+      {
+        "move": "Qa3",
+        "checkmate": false,
+        "legalReplies": [
+          "Kh7"
+        ]
+      },
+      {
+        "move": "Qe2",
+        "checkmate": false,
+        "legalReplies": [
+          "Kh7"
+        ]
+      },
+      {
+        "move": "Qe1",
+        "checkmate": false,
+        "legalReplies": [
+          "Kh7"
+        ]
+      },
+      {
+        "move": "Rg8+",
+        "checkmate": false,
+        "legalReplies": [
+          "Kxg8"
+        ]
+      },
+      {
+        "move": "Rg7",
+        "checkmate": false,
+        "legalReplies": []
+      },
+      {
+        "move": "Rg6",
+        "checkmate": false,
+        "legalReplies": []
+      },
+      {
+        "move": "Rg5",
+        "checkmate": false,
+        "legalReplies": []
+      },
+      {
+        "move": "Rg4",
+        "checkmate": false,
+        "legalReplies": []
+      },
+      {
+        "move": "Rh3+",
+        "checkmate": false,
+        "legalReplies": [
+          "Kg8"
+        ]
+      },
+      {
+        "move": "Rf3",
+        "checkmate": false,
+        "legalReplies": [
+          "Kg8"
+        ]
+      },
+      {
+        "move": "Re3",
+        "checkmate": false,
+        "legalReplies": [
+          "Kg8"
+        ]
+      },
+      {
+        "move": "Rd3",
+        "checkmate": false,
+        "legalReplies": [
+          "Kg8"
+        ]
+      },
+      {
+        "move": "Rc3",
+        "checkmate": false,
+        "legalReplies": [
+          "Kg8"
+        ]
+      },
+      {
+        "move": "Rb3",
+        "checkmate": false,
+        "legalReplies": [
+          "Kg8"
+        ]
+      },
+      {
+        "move": "Ra3",
+        "checkmate": false,
+        "legalReplies": [
+          "Kg8"
+        ]
+      },
+      {
+        "move": "Rg2",
+        "checkmate": false,
+        "legalReplies": []
+      },
+      {
+        "move": "Rg1",
+        "checkmate": false,
+        "legalReplies": []
+      },
+      {
+        "move": "Kb2",
+        "checkmate": false,
+        "legalReplies": []
+      },
+      {
+        "move": "Ka2",
+        "checkmate": false,
+        "legalReplies": []
+      },
+      {
+        "move": "Kb1",
+        "checkmate": false,
+        "legalReplies": []
+      }
+    ]
+  },
+  {
+    "id": "queen-beginner-b-1",
+    "fen": "k7/8/3b4/8/8/6q1/8/7K b - - 0 1",
+    "mateIn": 1,
+    "moves": [
+      "Qh2#"
+    ],
+    "method": "Exhaustive legal starting moves and replies; essential queen and non-king support checked by removal.",
+    "support": "d6",
+    "piece": "B",
+    "role": "queen-protection",
+    "matingMoves": [
+      "Qh2#"
+    ],
+    "startingMoves": [
+      {
+        "move": "Kb8",
+        "checkmate": false,
+        "legalReplies": []
+      },
+      {
+        "move": "Kb7",
+        "checkmate": false,
+        "legalReplies": []
+      },
+      {
+        "move": "Ka7",
+        "checkmate": false,
+        "legalReplies": []
+      },
+      {
+        "move": "Bf8",
+        "checkmate": false,
+        "legalReplies": []
+      },
+      {
+        "move": "Bb8",
+        "checkmate": false,
+        "legalReplies": []
+      },
+      {
+        "move": "Be7",
+        "checkmate": false,
+        "legalReplies": []
+      },
+      {
+        "move": "Bc7",
+        "checkmate": false,
+        "legalReplies": []
+      },
+      {
+        "move": "Be5",
+        "checkmate": false,
+        "legalReplies": []
+      },
+      {
+        "move": "Bc5",
+        "checkmate": false,
+        "legalReplies": []
+      },
+      {
+        "move": "Bf4",
+        "checkmate": false,
+        "legalReplies": []
+      },
+      {
+        "move": "Bb4",
+        "checkmate": false,
+        "legalReplies": []
+      },
+      {
+        "move": "Ba3",
+        "checkmate": false,
+        "legalReplies": []
+      },
+      {
+        "move": "Qg8",
+        "checkmate": false,
+        "legalReplies": []
+      },
+      {
+        "move": "Qg7",
+        "checkmate": false,
+        "legalReplies": []
+      },
+      {
+        "move": "Qg6",
+        "checkmate": false,
+        "legalReplies": []
+      },
+      {
+        "move": "Qg5",
+        "checkmate": false,
+        "legalReplies": []
+      },
+      {
+        "move": "Qe5",
+        "checkmate": false,
+        "legalReplies": [
+          "Kg2",
+          "Kg1"
+        ]
+      },
+      {
+        "move": "Qh4+",
+        "checkmate": false,
+        "legalReplies": [
+          "Kg2",
+          "Kg1"
+        ]
+      },
+      {
+        "move": "Qg4",
+        "checkmate": false,
+        "legalReplies": []
+      },
+      {
+        "move": "Qf4",
+        "checkmate": false,
+        "legalReplies": [
+          "Kg2",
+          "Kg1"
+        ]
+      },
+      {
+        "move": "Qh3+",
+        "checkmate": false,
+        "legalReplies": [
+          "Kg1"
+        ]
+      },
+      {
+        "move": "Qf3+",
+        "checkmate": false,
+        "legalReplies": [
+          "Kg1"
+        ]
+      },
+      {
+        "move": "Qe3",
+        "checkmate": false,
+        "legalReplies": [
+          "Kg2"
+        ]
+      },
+      {
+        "move": "Qd3",
+        "checkmate": false,
+        "legalReplies": [
+          "Kg2",
+          "Kg1"
+        ]
+      },
+      {
+        "move": "Qc3",
+        "checkmate": false,
+        "legalReplies": [
+          "Kg2",
+          "Kg1"
+        ]
+      },
+      {
+        "move": "Qb3",
+        "checkmate": false,
+        "legalReplies": [
+          "Kg2",
+          "Kg1"
+        ]
+      },
+      {
+        "move": "Qa3",
+        "checkmate": false,
+        "legalReplies": [
+          "Kg2",
+          "Kg1"
+        ]
+      },
+      {
+        "move": "Qh2#",
+        "checkmate": true,
+        "legalReplies": [],
+        "withoutSupportReplies": [
+          "Kxh2"
+        ]
+      },
+      {
+        "move": "Qg2+",
+        "checkmate": false,
+        "legalReplies": [
+          "Kxg2"
+        ]
+      },
+      {
+        "move": "Qf2",
+        "checkmate": false,
+        "legalReplies": []
+      },
+      {
+        "move": "Qg1+",
+        "checkmate": false,
+        "legalReplies": [
+          "Kxg1"
+        ]
+      },
+      {
+        "move": "Qe1+",
+        "checkmate": false,
+        "legalReplies": [
+          "Kg2"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "queen-beginner-n-1",
+    "fen": "7k/8/8/1q6/8/3n4/8/K7 b - - 0 1",
+    "mateIn": 1,
+    "moves": [
+      "Qb2#"
+    ],
+    "method": "Exhaustive legal starting moves and replies; essential queen and non-king support checked by removal.",
+    "support": "d3",
+    "piece": "N",
+    "role": "queen-protection",
+    "matingMoves": [
+      "Qb2#"
+    ],
+    "startingMoves": [
+      {
+        "move": "Kg8",
+        "checkmate": false,
+        "legalReplies": [
+          "Ka2"
+        ]
+      },
+      {
+        "move": "Kh7",
+        "checkmate": false,
+        "legalReplies": [
+          "Ka2"
+        ]
+      },
+      {
+        "move": "Kg7",
+        "checkmate": false,
+        "legalReplies": [
+          "Ka2"
+        ]
+      },
+      {
+        "move": "Qe8",
+        "checkmate": false,
+        "legalReplies": [
+          "Ka2",
+          "Kb1"
+        ]
+      },
+      {
+        "move": "Qb8",
+        "checkmate": false,
+        "legalReplies": [
+          "Ka2"
+        ]
+      },
+      {
+        "move": "Qd7",
+        "checkmate": false,
+        "legalReplies": [
+          "Ka2",
+          "Kb1"
+        ]
+      },
+      {
+        "move": "Qb7",
+        "checkmate": false,
+        "legalReplies": [
+          "Ka2"
+        ]
+      },
+      {
+        "move": "Qc6",
+        "checkmate": false,
+        "legalReplies": [
+          "Ka2",
+          "Kb1"
+        ]
+      },
+      {
+        "move": "Qb6",
+        "checkmate": false,
+        "legalReplies": [
+          "Ka2"
+        ]
+      },
+      {
+        "move": "Qa6+",
+        "checkmate": false,
+        "legalReplies": [
+          "Kb1"
+        ]
+      },
+      {
+        "move": "Qh5",
+        "checkmate": false,
+        "legalReplies": [
+          "Ka2",
+          "Kb1"
+        ]
+      },
+      {
+        "move": "Qg5",
+        "checkmate": false,
+        "legalReplies": [
+          "Ka2",
+          "Kb1"
+        ]
+      },
+      {
+        "move": "Qf5",
+        "checkmate": false,
+        "legalReplies": [
+          "Ka2",
+          "Kb1"
+        ]
+      },
+      {
+        "move": "Qe5+",
+        "checkmate": false,
+        "legalReplies": [
+          "Ka2",
+          "Kb1"
+        ]
+      },
+      {
+        "move": "Qd5",
+        "checkmate": false,
+        "legalReplies": [
+          "Kb1"
+        ]
+      },
+      {
+        "move": "Qc5",
+        "checkmate": false,
+        "legalReplies": [
+          "Ka2",
+          "Kb1"
+        ]
+      },
+      {
+        "move": "Qa5+",
+        "checkmate": false,
+        "legalReplies": [
+          "Kb1"
+        ]
+      },
+      {
+        "move": "Qc4",
+        "checkmate": false,
+        "legalReplies": [
+          "Kb1"
+        ]
+      },
+      {
+        "move": "Qb4",
+        "checkmate": false,
+        "legalReplies": [
+          "Ka2"
+        ]
+      },
+      {
+        "move": "Qa4+",
+        "checkmate": false,
+        "legalReplies": [
+          "Kb1"
+        ]
+      },
+      {
+        "move": "Qb3",
+        "checkmate": false,
+        "legalReplies": []
+      },
+      {
+        "move": "Qb2#",
+        "checkmate": true,
+        "legalReplies": [],
+        "withoutSupportReplies": [
+          "Kxb2"
+        ]
+      },
+      {
+        "move": "Qb1+",
+        "checkmate": false,
+        "legalReplies": [
+          "Kxb1"
+        ]
+      },
+      {
+        "move": "Ne5",
+        "checkmate": false,
+        "legalReplies": [
+          "Ka2"
+        ]
+      },
+      {
+        "move": "Nc5",
+        "checkmate": false,
+        "legalReplies": [
+          "Ka2"
+        ]
+      },
+      {
+        "move": "Nf4",
+        "checkmate": false,
+        "legalReplies": [
+          "Ka2"
+        ]
+      },
+      {
+        "move": "Nb4",
+        "checkmate": false,
+        "legalReplies": [
+          "Kb2",
+          "Kb1"
+        ]
+      },
+      {
+        "move": "Nf2",
+        "checkmate": false,
+        "legalReplies": [
+          "Ka2"
+        ]
+      },
+      {
+        "move": "Nb2",
+        "checkmate": false,
+        "legalReplies": [
+          "Ka2",
+          "Kb1"
+        ]
+      },
+      {
+        "move": "Ne1",
+        "checkmate": false,
+        "legalReplies": [
+          "Ka2"
+        ]
+      },
+      {
+        "move": "Nc1",
+        "checkmate": false,
+        "legalReplies": []
+      }
+    ]
+  },
+  {
+    "id": "queen-beginner-p-1",
+    "fen": "7k/4Q3/5P2/8/8/8/8/K7 w - - 0 1",
+    "mateIn": 1,
+    "moves": [
+      "Qg7#"
+    ],
+    "method": "Exhaustive legal starting moves and replies; essential queen and non-king support checked by removal.",
+    "support": "f6",
+    "piece": "P",
+    "role": "queen-protection",
+    "matingMoves": [
+      "Qg7#"
+    ],
+    "startingMoves": [
+      {
+        "move": "Qf8+",
+        "checkmate": false,
+        "legalReplies": [
+          "Kh7"
+        ]
+      },
+      {
+        "move": "Qe8+",
+        "checkmate": false,
+        "legalReplies": [
+          "Kh7"
+        ]
+      },
+      {
+        "move": "Qd8+",
+        "checkmate": false,
+        "legalReplies": [
+          "Kh7"
+        ]
+      },
+      {
+        "move": "Qh7+",
+        "checkmate": false,
+        "legalReplies": [
+          "Kxh7"
+        ]
+      },
+      {
+        "move": "Qg7#",
+        "checkmate": true,
+        "legalReplies": [],
+        "withoutSupportReplies": [
+          "Kxg7"
+        ]
+      },
+      {
+        "move": "Qf7",
+        "checkmate": false,
+        "legalReplies": []
+      },
+      {
+        "move": "Qd7",
+        "checkmate": false,
+        "legalReplies": [
+          "Kg8"
+        ]
+      },
+      {
+        "move": "Qc7",
+        "checkmate": false,
+        "legalReplies": [
+          "Kg8"
+        ]
+      },
+      {
+        "move": "Qb7",
+        "checkmate": false,
+        "legalReplies": [
+          "Kg8"
+        ]
+      },
+      {
+        "move": "Qa7",
+        "checkmate": false,
+        "legalReplies": [
+          "Kg8"
+        ]
+      },
+      {
+        "move": "Qe6",
+        "checkmate": false,
+        "legalReplies": [
+          "Kh7"
+        ]
+      },
+      {
+        "move": "Qd6",
+        "checkmate": false,
+        "legalReplies": [
+          "Kg8",
+          "Kh7"
+        ]
+      },
+      {
+        "move": "Qe5",
+        "checkmate": false,
+        "legalReplies": [
+          "Kg8",
+          "Kh7"
+        ]
+      },
+      {
+        "move": "Qc5",
+        "checkmate": false,
+        "legalReplies": [
+          "Kg8",
+          "Kh7"
+        ]
+      },
+      {
+        "move": "Qe4",
+        "checkmate": false,
+        "legalReplies": [
+          "Kg8"
+        ]
+      },
+      {
+        "move": "Qb4",
+        "checkmate": false,
+        "legalReplies": [
+          "Kg8",
+          "Kh7"
+        ]
+      },
+      {
+        "move": "Qe3",
+        "checkmate": false,
+        "legalReplies": [
+          "Kg8",
+          "Kh7"
+        ]
+      },
+      {
+        "move": "Qa3",
+        "checkmate": false,
+        "legalReplies": [
+          "Kg8",
+          "Kh7"
+        ]
+      },
+      {
+        "move": "Qe2",
+        "checkmate": false,
+        "legalReplies": [
+          "Kg8",
+          "Kh7"
+        ]
+      },
+      {
+        "move": "Qe1",
+        "checkmate": false,
+        "legalReplies": [
+          "Kg8",
+          "Kh7"
+        ]
+      },
+      {
+        "move": "Kb2",
+        "checkmate": false,
+        "legalReplies": [
+          "Kg8"
+        ]
+      },
+      {
+        "move": "Ka2",
+        "checkmate": false,
+        "legalReplies": [
+          "Kg8"
+        ]
+      },
+      {
+        "move": "Kb1",
+        "checkmate": false,
+        "legalReplies": [
+          "Kg8"
+        ]
+      },
+      {
+        "move": "f7",
+        "checkmate": false,
+        "legalReplies": [
+          "Kh7",
+          "Kg7"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "queen-beginner-r-2",
+    "fen": "4k3/R7/8/6Q1/8/8/8/K7 w - - 0 1",
+    "mateIn": 1,
+    "moves": [
+      "Qe7#"
+    ],
+    "method": "Exhaustive legal starting moves and replies; essential queen and non-king support checked by removal.",
+    "support": "a7",
+    "piece": "R",
+    "role": "queen-protection",
+    "matingMoves": [
+      "Qg8#",
+      "Qe7#"
+    ],
+    "startingMoves": [
+      {
+        "move": "Ra8+",
+        "checkmate": false,
+        "legalReplies": [
+          "Kf7",
+          "Kd7"
+        ]
+      },
+      {
+        "move": "Rh7",
+        "checkmate": false,
+        "legalReplies": [
+          "Kf8"
+        ]
+      },
+      {
+        "move": "Rg7",
+        "checkmate": false,
+        "legalReplies": [
+          "Kf8"
+        ]
+      },
+      {
+        "move": "Rf7",
+        "checkmate": false,
+        "legalReplies": [
+          "Kxf7"
+        ]
+      },
+      {
+        "move": "Re7+",
+        "checkmate": false,
+        "legalReplies": [
+          "Kf8",
+          "Kd8"
+        ]
+      },
+      {
+        "move": "Rd7",
+        "checkmate": false,
+        "legalReplies": [
+          "Kf8",
+          "Kxd7"
+        ]
+      },
+      {
+        "move": "Rc7",
+        "checkmate": false,
+        "legalReplies": [
+          "Kf8"
+        ]
+      },
+      {
+        "move": "Rb7",
+        "checkmate": false,
+        "legalReplies": [
+          "Kf8"
+        ]
+      },
+      {
+        "move": "Ra6",
+        "checkmate": false,
+        "legalReplies": [
+          "Kf8",
+          "Kf7",
+          "Kd7"
+        ]
+      },
+      {
+        "move": "Ra5",
+        "checkmate": false,
+        "legalReplies": [
+          "Kf8",
+          "Kf7",
+          "Kd7"
+        ]
+      },
+      {
+        "move": "Ra4",
+        "checkmate": false,
+        "legalReplies": [
+          "Kf8",
+          "Kf7",
+          "Kd7"
+        ]
+      },
+      {
+        "move": "Ra3",
+        "checkmate": false,
+        "legalReplies": [
+          "Kf8",
+          "Kf7",
+          "Kd7"
+        ]
+      },
+      {
+        "move": "Ra2",
+        "checkmate": false,
+        "legalReplies": [
+          "Kf8",
+          "Kf7",
+          "Kd7"
+        ]
+      },
+      {
+        "move": "Qg8#",
+        "checkmate": true,
+        "legalReplies": [],
+        "withoutSupportReplies": [
+          "Ke7",
+          "Kd7"
+        ]
+      },
+      {
+        "move": "Qd8+",
+        "checkmate": false,
+        "legalReplies": [
+          "Kxd8"
+        ]
+      },
+      {
+        "move": "Qg7",
+        "checkmate": false,
+        "legalReplies": [
+          "Kd8"
+        ]
+      },
+      {
+        "move": "Qe7#",
+        "checkmate": true,
+        "legalReplies": [],
+        "withoutSupportReplies": [
+          "Kxe7"
+        ]
+      },
+      {
+        "move": "Qh6",
+        "checkmate": false,
+        "legalReplies": [
+          "Kd8"
+        ]
+      },
+      {
+        "move": "Qg6+",
+        "checkmate": false,
+        "legalReplies": [
+          "Kf8",
+          "Kd8"
+        ]
+      },
+      {
+        "move": "Qf6",
+        "checkmate": false,
+        "legalReplies": []
+      },
+      {
+        "move": "Qh5+",
+        "checkmate": false,
+        "legalReplies": [
+          "Kf8",
+          "Kd8"
+        ]
+      },
+      {
+        "move": "Qf5",
+        "checkmate": false,
+        "legalReplies": [
+          "Kd8"
+        ]
+      },
+      {
+        "move": "Qe5+",
+        "checkmate": false,
+        "legalReplies": [
+          "Kf8",
+          "Kd8"
+        ]
+      },
+      {
+        "move": "Qd5",
+        "checkmate": false,
+        "legalReplies": [
+          "Kf8"
+        ]
+      },
+      {
+        "move": "Qc5",
+        "checkmate": false,
+        "legalReplies": [
+          "Kd8"
+        ]
+      },
+      {
+        "move": "Qb5+",
+        "checkmate": false,
+        "legalReplies": [
+          "Kf8",
+          "Kd8"
+        ]
+      },
+      {
+        "move": "Qa5",
+        "checkmate": false,
+        "legalReplies": [
+          "Kf8"
+        ]
+      },
+      {
+        "move": "Qh4",
+        "checkmate": false,
+        "legalReplies": [
+          "Kf8"
+        ]
+      },
+      {
+        "move": "Qg4",
+        "checkmate": false,
+        "legalReplies": [
+          "Kf8",
+          "Kd8"
+        ]
+      },
+      {
+        "move": "Qf4",
+        "checkmate": false,
+        "legalReplies": [
+          "Kd8"
+        ]
+      },
+      {
+        "move": "Qg3",
+        "checkmate": false,
+        "legalReplies": [
+          "Kf8",
+          "Kd8"
+        ]
+      },
+      {
+        "move": "Qe3+",
+        "checkmate": false,
+        "legalReplies": [
+          "Kf8",
+          "Kd8"
+        ]
+      },
+      {
+        "move": "Qg2",
+        "checkmate": false,
+        "legalReplies": [
+          "Kf8",
+          "Kd8"
+        ]
+      },
+      {
+        "move": "Qd2",
+        "checkmate": false,
+        "legalReplies": [
+          "Kf8"
+        ]
+      },
+      {
+        "move": "Qg1",
+        "checkmate": false,
+        "legalReplies": [
+          "Kf8",
+          "Kd8"
+        ]
+      },
+      {
+        "move": "Qc1",
+        "checkmate": false,
+        "legalReplies": [
+          "Kf8",
+          "Kd8"
+        ]
+      },
+      {
+        "move": "Kb2",
+        "checkmate": false,
+        "legalReplies": [
+          "Kf8"
+        ]
+      },
+      {
+        "move": "Ka2",
+        "checkmate": false,
+        "legalReplies": [
+          "Kf8"
+        ]
+      },
+      {
+        "move": "Kb1",
+        "checkmate": false,
+        "legalReplies": [
+          "Kf8"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "queen-beginner-b-2",
+    "fen": "7k/8/8/6b1/1q6/8/8/3K4 b - - 0 1",
+    "mateIn": 1,
+    "moves": [
+      "Qd2#"
+    ],
+    "method": "Exhaustive legal starting moves and replies; essential queen and non-king support checked by removal.",
+    "support": "g5",
+    "piece": "B",
+    "role": "queen-protection",
+    "matingMoves": [
+      "Qd2#"
+    ],
+    "startingMoves": [
+      {
+        "move": "Kg8",
+        "checkmate": false,
+        "legalReplies": [
+          "Ke2",
+          "Kc2"
+        ]
+      },
+      {
+        "move": "Kh7",
+        "checkmate": false,
+        "legalReplies": [
+          "Ke2",
+          "Kc2"
+        ]
+      },
+      {
+        "move": "Kg7",
+        "checkmate": false,
+        "legalReplies": [
+          "Ke2",
+          "Kc2"
+        ]
+      },
+      {
+        "move": "Bd8",
+        "checkmate": false,
+        "legalReplies": [
+          "Ke2",
+          "Kc2",
+          "Kc1"
+        ]
+      },
+      {
+        "move": "Be7",
+        "checkmate": false,
+        "legalReplies": [
+          "Ke2",
+          "Kc2",
+          "Kc1"
+        ]
+      },
+      {
+        "move": "Bh6",
+        "checkmate": false,
+        "legalReplies": [
+          "Ke2",
+          "Kc2"
+        ]
+      },
+      {
+        "move": "Bf6",
+        "checkmate": false,
+        "legalReplies": [
+          "Ke2",
+          "Kc2",
+          "Kc1"
+        ]
+      },
+      {
+        "move": "Bh4",
+        "checkmate": false,
+        "legalReplies": [
+          "Ke2",
+          "Kc2",
+          "Kc1"
+        ]
+      },
+      {
+        "move": "Bf4",
+        "checkmate": false,
+        "legalReplies": [
+          "Ke2",
+          "Kc2"
+        ]
+      },
+      {
+        "move": "Be3",
+        "checkmate": false,
+        "legalReplies": [
+          "Ke2",
+          "Kc2"
+        ]
+      },
+      {
+        "move": "Bd2",
+        "checkmate": false,
+        "legalReplies": [
+          "Ke2",
+          "Kc2"
+        ]
+      },
+      {
+        "move": "Bc1",
+        "checkmate": false,
+        "legalReplies": [
+          "Ke2",
+          "Kc2",
+          "Kxc1"
+        ]
+      },
+      {
+        "move": "Qf8",
+        "checkmate": false,
+        "legalReplies": [
+          "Ke2",
+          "Kc2",
+          "Ke1"
+        ]
+      },
+      {
+        "move": "Qb8",
+        "checkmate": false,
+        "legalReplies": [
+          "Ke2",
+          "Kc2",
+          "Ke1"
+        ]
+      },
+      {
+        "move": "Qe7",
+        "checkmate": false,
+        "legalReplies": [
+          "Kc2"
+        ]
+      },
+      {
+        "move": "Qb7",
+        "checkmate": false,
+        "legalReplies": [
+          "Ke2",
+          "Kc2",
+          "Ke1"
+        ]
+      },
+      {
+        "move": "Qd6+",
+        "checkmate": false,
+        "legalReplies": [
+          "Ke2",
+          "Kc2",
+          "Ke1"
+        ]
+      },
+      {
+        "move": "Qb6",
+        "checkmate": false,
+        "legalReplies": [
+          "Ke2",
+          "Kc2",
+          "Ke1"
+        ]
+      },
+      {
+        "move": "Qc5",
+        "checkmate": false,
+        "legalReplies": [
+          "Ke2",
+          "Ke1"
+        ]
+      },
+      {
+        "move": "Qb5",
+        "checkmate": false,
+        "legalReplies": [
+          "Kc2",
+          "Ke1"
+        ]
+      },
+      {
+        "move": "Qa5",
+        "checkmate": false,
+        "legalReplies": [
+          "Ke2",
+          "Kc2"
+        ]
+      },
+      {
+        "move": "Qh4",
+        "checkmate": false,
+        "legalReplies": [
+          "Ke2",
+          "Kc2"
+        ]
+      },
+      {
+        "move": "Qg4+",
+        "checkmate": false,
+        "legalReplies": [
+          "Kc2",
+          "Ke1"
+        ]
+      },
+      {
+        "move": "Qf4",
+        "checkmate": false,
+        "legalReplies": [
+          "Ke2",
+          "Kc2",
+          "Ke1"
+        ]
+      },
+      {
+        "move": "Qe4",
+        "checkmate": false,
+        "legalReplies": []
+      },
+      {
+        "move": "Qd4+",
+        "checkmate": false,
+        "legalReplies": [
+          "Ke2",
+          "Kc2",
+          "Ke1"
+        ]
+      },
+      {
+        "move": "Qc4",
+        "checkmate": false,
+        "legalReplies": [
+          "Ke1"
+        ]
+      },
+      {
+        "move": "Qa4+",
+        "checkmate": false,
+        "legalReplies": [
+          "Ke2",
+          "Ke1"
+        ]
+      },
+      {
+        "move": "Qc3",
+        "checkmate": false,
+        "legalReplies": [
+          "Ke2"
+        ]
+      },
+      {
+        "move": "Qb3+",
+        "checkmate": false,
+        "legalReplies": [
+          "Ke2",
+          "Ke1"
+        ]
+      },
+      {
+        "move": "Qa3",
+        "checkmate": false,
+        "legalReplies": [
+          "Ke2",
+          "Kc2",
+          "Ke1"
+        ]
+      },
+      {
+        "move": "Qd2#",
+        "checkmate": true,
+        "legalReplies": [],
+        "withoutSupportReplies": [
+          "Kxd2"
+        ]
+      },
+      {
+        "move": "Qb2",
+        "checkmate": false,
+        "legalReplies": [
+          "Ke1"
+        ]
+      },
+      {
+        "move": "Qe1+",
+        "checkmate": false,
+        "legalReplies": [
+          "Kc2",
+          "Kxe1"
+        ]
+      },
+      {
+        "move": "Qb1+",
+        "checkmate": false,
+        "legalReplies": [
+          "Ke2"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "queen-beginner-n-2",
+    "fen": "k7/8/8/8/6q1/2n5/8/4K3 b - - 0 1",
+    "mateIn": 1,
+    "moves": [
+      "Qe2#"
+    ],
+    "method": "Exhaustive legal starting moves and replies; essential queen and non-king support checked by removal.",
+    "support": "c3",
+    "piece": "N",
+    "role": "queen-protection",
+    "matingMoves": [
+      "Qe2#"
+    ],
+    "startingMoves": [
+      {
+        "move": "Kb8",
+        "checkmate": false,
+        "legalReplies": [
+          "Kf2",
+          "Kd2",
+          "Kf1"
+        ]
+      },
+      {
+        "move": "Kb7",
+        "checkmate": false,
+        "legalReplies": [
+          "Kf2",
+          "Kd2",
+          "Kf1"
+        ]
+      },
+      {
+        "move": "Ka7",
+        "checkmate": false,
+        "legalReplies": [
+          "Kf2",
+          "Kd2",
+          "Kf1"
+        ]
+      },
+      {
+        "move": "Qg8",
+        "checkmate": false,
+        "legalReplies": [
+          "Kf2",
+          "Kd2",
+          "Kf1"
+        ]
+      },
+      {
+        "move": "Qc8",
+        "checkmate": false,
+        "legalReplies": [
+          "Kf2",
+          "Kd2",
+          "Kf1"
+        ]
+      },
+      {
+        "move": "Qg7",
+        "checkmate": false,
+        "legalReplies": [
+          "Kf2",
+          "Kd2",
+          "Kf1"
+        ]
+      },
+      {
+        "move": "Qd7",
+        "checkmate": false,
+        "legalReplies": [
+          "Kf2",
+          "Kf1"
+        ]
+      },
+      {
+        "move": "Qg6",
+        "checkmate": false,
+        "legalReplies": [
+          "Kf2",
+          "Kd2",
+          "Kf1"
+        ]
+      },
+      {
+        "move": "Qe6+",
+        "checkmate": false,
+        "legalReplies": [
+          "Kf2",
+          "Kd2",
+          "Kf1"
+        ]
+      },
+      {
+        "move": "Qh5",
+        "checkmate": false,
+        "legalReplies": [
+          "Kf2",
+          "Kd2",
+          "Kf1"
+        ]
+      },
+      {
+        "move": "Qg5",
+        "checkmate": false,
+        "legalReplies": [
+          "Kf2",
+          "Kf1"
+        ]
+      },
+      {
+        "move": "Qf5",
+        "checkmate": false,
+        "legalReplies": [
+          "Kd2"
+        ]
+      },
+      {
+        "move": "Qh4+",
+        "checkmate": false,
+        "legalReplies": [
+          "Kd2",
+          "Kf1"
+        ]
+      },
+      {
+        "move": "Qf4",
+        "checkmate": false,
+        "legalReplies": []
+      },
+      {
+        "move": "Qe4+",
+        "checkmate": false,
+        "legalReplies": [
+          "Kf2",
+          "Kd2",
+          "Kf1"
+        ]
+      },
+      {
+        "move": "Qd4",
+        "checkmate": false,
+        "legalReplies": [
+          "Kf1"
+        ]
+      },
+      {
+        "move": "Qc4",
+        "checkmate": false,
+        "legalReplies": [
+          "Kf2",
+          "Kd2"
+        ]
+      },
+      {
+        "move": "Qb4",
+        "checkmate": false,
+        "legalReplies": [
+          "Kf2",
+          "Kd2",
+          "Kf1"
+        ]
+      },
+      {
+        "move": "Qa4",
+        "checkmate": false,
+        "legalReplies": [
+          "Kf2",
+          "Kd2",
+          "Kf1"
+        ]
+      },
+      {
+        "move": "Qh3",
+        "checkmate": false,
+        "legalReplies": [
+          "Kf2",
+          "Kd2"
+        ]
+      },
+      {
+        "move": "Qg3+",
+        "checkmate": false,
+        "legalReplies": [
+          "Kd2",
+          "Kf1"
+        ]
+      },
+      {
+        "move": "Qf3",
+        "checkmate": false,
+        "legalReplies": [
+          "Kd2"
+        ]
+      },
+      {
+        "move": "Qg2",
+        "checkmate": false,
+        "legalReplies": []
+      },
+      {
+        "move": "Qe2#",
+        "checkmate": true,
+        "legalReplies": [],
+        "withoutSupportReplies": [
+          "Kxe2"
+        ]
+      },
+      {
+        "move": "Qg1+",
+        "checkmate": false,
+        "legalReplies": [
+          "Kd2"
+        ]
+      },
+      {
+        "move": "Qd1+",
+        "checkmate": false,
+        "legalReplies": [
+          "Kf2"
+        ]
+      },
+      {
+        "move": "Nd5",
+        "checkmate": false,
+        "legalReplies": [
+          "Kf2",
+          "Kd2",
+          "Kf1"
+        ]
+      },
+      {
+        "move": "Nb5",
+        "checkmate": false,
+        "legalReplies": [
+          "Kf2",
+          "Kd2",
+          "Kf1"
+        ]
+      },
+      {
+        "move": "Ne4",
+        "checkmate": false,
+        "legalReplies": [
+          "Kf1"
+        ]
+      },
+      {
+        "move": "Na4",
+        "checkmate": false,
+        "legalReplies": [
+          "Kf2",
+          "Kd2",
+          "Kf1"
+        ]
+      },
+      {
+        "move": "Ne2",
+        "checkmate": false,
+        "legalReplies": [
+          "Kf2",
+          "Kd2",
+          "Kf1",
+          "Kd1"
+        ]
+      },
+      {
+        "move": "Na2",
+        "checkmate": false,
+        "legalReplies": [
+          "Kf2",
+          "Kd2",
+          "Kf1"
+        ]
+      },
+      {
+        "move": "Nd1",
+        "checkmate": false,
+        "legalReplies": [
+          "Kd2",
+          "Kf1"
+        ]
+      },
+      {
+        "move": "Nb1",
+        "checkmate": false,
+        "legalReplies": [
+          "Kf2",
+          "Kf1"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "queen-beginner-p-2",
+    "fen": "4k3/8/3P4/6Q1/8/8/8/K7 w - - 0 1",
+    "mateIn": 1,
+    "moves": [
+      "Qe7#"
+    ],
+    "method": "Exhaustive legal starting moves and replies; essential queen and non-king support checked by removal.",
+    "support": "d6",
+    "piece": "P",
+    "role": "queen-protection",
+    "matingMoves": [
+      "Qe7#"
+    ],
+    "startingMoves": [
+      {
+        "move": "Qg8+",
+        "checkmate": false,
+        "legalReplies": [
+          "Kd7"
+        ]
+      },
+      {
+        "move": "Qd8+",
+        "checkmate": false,
+        "legalReplies": [
+          "Kxd8",
+          "Kf7"
+        ]
+      },
+      {
+        "move": "Qg7",
+        "checkmate": false,
+        "legalReplies": [
+          "Kd8"
+        ]
+      },
+      {
+        "move": "Qe7#",
+        "checkmate": true,
+        "legalReplies": [],
+        "withoutSupportReplies": [
+          "Kxe7"
+        ]
+      },
+      {
+        "move": "Qh6",
+        "checkmate": false,
+        "legalReplies": [
+          "Kd8",
+          "Kf7",
+          "Kd7"
+        ]
+      },
+      {
+        "move": "Qg6+",
+        "checkmate": false,
+        "legalReplies": [
+          "Kf8",
+          "Kd8",
+          "Kd7"
+        ]
+      },
+      {
+        "move": "Qf6",
+        "checkmate": false,
+        "legalReplies": [
+          "Kd7"
+        ]
+      },
+      {
+        "move": "Qh5+",
+        "checkmate": false,
+        "legalReplies": [
+          "Kf8",
+          "Kd8",
+          "Kd7"
+        ]
+      },
+      {
+        "move": "Qf5",
+        "checkmate": false,
+        "legalReplies": [
+          "Kd8"
+        ]
+      },
+      {
+        "move": "Qe5+",
+        "checkmate": false,
+        "legalReplies": [
+          "Kf8",
+          "Kd8",
+          "Kf7",
+          "Kd7"
+        ]
+      },
+      {
+        "move": "Qd5",
+        "checkmate": false,
+        "legalReplies": [
+          "Kf8",
+          "Kd8",
+          "Kd7"
+        ]
+      },
+      {
+        "move": "Qc5",
+        "checkmate": false,
+        "legalReplies": [
+          "Kf8",
+          "Kd8",
+          "Kf7",
+          "Kd7"
+        ]
+      },
+      {
+        "move": "Qb5+",
+        "checkmate": false,
+        "legalReplies": [
+          "Kf8",
+          "Kd8",
+          "Kf7"
+        ]
+      },
+      {
+        "move": "Qa5",
+        "checkmate": false,
+        "legalReplies": [
+          "Kf8",
+          "Kf7",
+          "Kd7"
+        ]
+      },
+      {
+        "move": "Qh4",
+        "checkmate": false,
+        "legalReplies": [
+          "Kf8",
+          "Kf7",
+          "Kd7"
+        ]
+      },
+      {
+        "move": "Qg4",
+        "checkmate": false,
+        "legalReplies": [
+          "Kf8",
+          "Kd8",
+          "Kf7"
+        ]
+      },
+      {
+        "move": "Qf4",
+        "checkmate": false,
+        "legalReplies": [
+          "Kd8",
+          "Kd7"
+        ]
+      },
+      {
+        "move": "Qg3",
+        "checkmate": false,
+        "legalReplies": [
+          "Kf8",
+          "Kd8",
+          "Kf7",
+          "Kd7"
+        ]
+      },
+      {
+        "move": "Qe3+",
+        "checkmate": false,
+        "legalReplies": [
+          "Kf8",
+          "Kd8",
+          "Kf7",
+          "Kd7"
+        ]
+      },
+      {
+        "move": "Qg2",
+        "checkmate": false,
+        "legalReplies": [
+          "Kf8",
+          "Kd8",
+          "Kf7",
+          "Kd7"
+        ]
+      },
+      {
+        "move": "Qd2",
+        "checkmate": false,
+        "legalReplies": [
+          "Kf8",
+          "Kd8",
+          "Kf7",
+          "Kd7"
+        ]
+      },
+      {
+        "move": "Qg1",
+        "checkmate": false,
+        "legalReplies": [
+          "Kf8",
+          "Kd8",
+          "Kf7",
+          "Kd7"
+        ]
+      },
+      {
+        "move": "Qc1",
+        "checkmate": false,
+        "legalReplies": [
+          "Kf8",
+          "Kd8",
+          "Kf7",
+          "Kd7"
+        ]
+      },
+      {
+        "move": "Kb2",
+        "checkmate": false,
+        "legalReplies": [
+          "Kf8",
+          "Kf7",
+          "Kd7"
+        ]
+      },
+      {
+        "move": "Ka2",
+        "checkmate": false,
+        "legalReplies": [
+          "Kf8",
+          "Kf7",
+          "Kd7"
+        ]
+      },
+      {
+        "move": "Kb1",
+        "checkmate": false,
+        "legalReplies": [
+          "Kf8",
+          "Kf7",
+          "Kd7"
+        ]
+      },
+      {
+        "move": "d7+",
+        "checkmate": false,
+        "legalReplies": [
+          "Kf8",
+          "Kf7",
+          "Kxd7"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "queen-beginner-r-3",
+    "fen": "7k/1r6/3q4/8/8/8/8/K7 b - - 0 1",
+    "mateIn": 1,
+    "moves": [
+      "Qa3#"
+    ],
+    "method": "Exhaustive legal starting moves and replies; essential queen and non-king support checked by removal.",
+    "support": "b7",
+    "piece": "R",
+    "role": "escape-control",
+    "matingMoves": [
+      "Qa6#",
+      "Qa3#"
+    ],
+    "startingMoves": [
+      {
+        "move": "Kg8",
+        "checkmate": false,
+        "legalReplies": [
+          "Ka2"
+        ]
+      },
+      {
+        "move": "Kh7",
+        "checkmate": false,
+        "legalReplies": [
+          "Ka2"
+        ]
+      },
+      {
+        "move": "Kg7",
+        "checkmate": false,
+        "legalReplies": [
+          "Ka2"
+        ]
+      },
+      {
+        "move": "Rb8",
+        "checkmate": false,
+        "legalReplies": [
+          "Ka2"
+        ]
+      },
+      {
+        "move": "Rh7",
+        "checkmate": false,
+        "legalReplies": [
+          "Kb2",
+          "Ka2",
+          "Kb1"
+        ]
+      },
+      {
+        "move": "Rg7",
+        "checkmate": false,
+        "legalReplies": [
+          "Kb2",
+          "Ka2",
+          "Kb1"
+        ]
+      },
+      {
+        "move": "Rf7",
+        "checkmate": false,
+        "legalReplies": [
+          "Kb2",
+          "Ka2",
+          "Kb1"
+        ]
+      },
+      {
+        "move": "Re7",
+        "checkmate": false,
+        "legalReplies": [
+          "Kb2",
+          "Ka2",
+          "Kb1"
+        ]
+      },
+      {
+        "move": "Rd7",
+        "checkmate": false,
+        "legalReplies": [
+          "Kb2",
+          "Ka2",
+          "Kb1"
+        ]
+      },
+      {
+        "move": "Rc7",
+        "checkmate": false,
+        "legalReplies": [
+          "Kb2",
+          "Ka2",
+          "Kb1"
+        ]
+      },
+      {
+        "move": "Ra7+",
+        "checkmate": false,
+        "legalReplies": [
+          "Kb2",
+          "Kb1"
+        ]
+      },
+      {
+        "move": "Rb6",
+        "checkmate": false,
+        "legalReplies": [
+          "Ka2"
+        ]
+      },
+      {
+        "move": "Rb5",
+        "checkmate": false,
+        "legalReplies": [
+          "Ka2"
+        ]
+      },
+      {
+        "move": "Rb4",
+        "checkmate": false,
+        "legalReplies": [
+          "Ka2"
+        ]
+      },
+      {
+        "move": "Rb3",
+        "checkmate": false,
+        "legalReplies": [
+          "Ka2"
+        ]
+      },
+      {
+        "move": "Rb2",
+        "checkmate": false,
+        "legalReplies": [
+          "Kxb2"
+        ]
+      },
+      {
+        "move": "Rb1+",
+        "checkmate": false,
+        "legalReplies": [
+          "Ka2",
+          "Kxb1"
+        ]
+      },
+      {
+        "move": "Qf8",
+        "checkmate": false,
+        "legalReplies": [
+          "Ka2"
+        ]
+      },
+      {
+        "move": "Qd8",
+        "checkmate": false,
+        "legalReplies": [
+          "Ka2"
+        ]
+      },
+      {
+        "move": "Qb8",
+        "checkmate": false,
+        "legalReplies": [
+          "Ka2"
+        ]
+      },
+      {
+        "move": "Qe7",
+        "checkmate": false,
+        "legalReplies": [
+          "Ka2"
+        ]
+      },
+      {
+        "move": "Qd7",
+        "checkmate": false,
+        "legalReplies": [
+          "Ka2"
+        ]
+      },
+      {
+        "move": "Qc7",
+        "checkmate": false,
+        "legalReplies": [
+          "Ka2"
+        ]
+      },
+      {
+        "move": "Qh6",
+        "checkmate": false,
+        "legalReplies": [
+          "Ka2"
+        ]
+      },
+      {
+        "move": "Qg6",
+        "checkmate": false,
+        "legalReplies": [
+          "Ka2"
+        ]
+      },
+      {
+        "move": "Qf6+",
+        "checkmate": false,
+        "legalReplies": [
+          "Ka2"
+        ]
+      },
+      {
+        "move": "Qe6",
+        "checkmate": false,
+        "legalReplies": []
+      },
+      {
+        "move": "Qc6",
+        "checkmate": false,
+        "legalReplies": [
+          "Ka2"
+        ]
+      },
+      {
+        "move": "Qb6",
+        "checkmate": false,
+        "legalReplies": [
+          "Ka2"
+        ]
+      },
+      {
+        "move": "Qa6#",
+        "checkmate": true,
+        "legalReplies": [],
+        "withoutSupportReplies": [
+          "Kb2",
+          "Kb1"
+        ]
+      },
+      {
+        "move": "Qe5+",
+        "checkmate": false,
+        "legalReplies": [
+          "Ka2"
+        ]
+      },
+      {
+        "move": "Qd5",
+        "checkmate": false,
+        "legalReplies": []
+      },
+      {
+        "move": "Qc5",
+        "checkmate": false,
+        "legalReplies": [
+          "Ka2"
+        ]
+      },
+      {
+        "move": "Qf4",
+        "checkmate": false,
+        "legalReplies": [
+          "Ka2"
+        ]
+      },
+      {
+        "move": "Qd4+",
+        "checkmate": false,
+        "legalReplies": [
+          "Ka2"
+        ]
+      },
+      {
+        "move": "Qb4",
+        "checkmate": false,
+        "legalReplies": [
+          "Ka2"
+        ]
+      },
+      {
+        "move": "Qg3",
+        "checkmate": false,
+        "legalReplies": [
+          "Ka2"
+        ]
+      },
+      {
+        "move": "Qd3",
+        "checkmate": false,
+        "legalReplies": [
+          "Ka2"
+        ]
+      },
+      {
+        "move": "Qa3#",
+        "checkmate": true,
+        "legalReplies": [],
+        "withoutSupportReplies": [
+          "Kb1"
+        ]
+      },
+      {
+        "move": "Qh2",
+        "checkmate": false,
+        "legalReplies": []
+      },
+      {
+        "move": "Qd2",
+        "checkmate": false,
+        "legalReplies": []
+      },
+      {
+        "move": "Qd1+",
+        "checkmate": false,
+        "legalReplies": [
+          "Ka2"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "queen-beginner-b-3",
+    "fen": "7k/8/8/8/2B5/4Q3/8/K7 w - - 0 1",
+    "mateIn": 1,
+    "moves": [
+      "Qh6#"
+    ],
+    "method": "Exhaustive legal starting moves and replies; essential queen and non-king support checked by removal.",
+    "support": "c4",
+    "piece": "B",
+    "role": "escape-control",
+    "matingMoves": [
+      "Qh6#"
+    ],
+    "startingMoves": [
+      {
+        "move": "Bg8",
+        "checkmate": false,
+        "legalReplies": [
+          "Kxg8",
+          "Kg7"
+        ]
+      },
+      {
+        "move": "Bf7",
+        "checkmate": false,
+        "legalReplies": [
+          "Kh7",
+          "Kg7"
+        ]
+      },
+      {
+        "move": "Be6",
+        "checkmate": false,
+        "legalReplies": [
+          "Kh7",
+          "Kg7"
+        ]
+      },
+      {
+        "move": "Ba6",
+        "checkmate": false,
+        "legalReplies": [
+          "Kg8",
+          "Kh7",
+          "Kg7"
+        ]
+      },
+      {
+        "move": "Bd5",
+        "checkmate": false,
+        "legalReplies": [
+          "Kh7",
+          "Kg7"
+        ]
+      },
+      {
+        "move": "Bb5",
+        "checkmate": false,
+        "legalReplies": [
+          "Kg8",
+          "Kh7",
+          "Kg7"
+        ]
+      },
+      {
+        "move": "Bd3",
+        "checkmate": false,
+        "legalReplies": [
+          "Kg8",
+          "Kg7"
+        ]
+      },
+      {
+        "move": "Bb3",
+        "checkmate": false,
+        "legalReplies": [
+          "Kh7",
+          "Kg7"
+        ]
+      },
+      {
+        "move": "Be2",
+        "checkmate": false,
+        "legalReplies": [
+          "Kg8",
+          "Kh7",
+          "Kg7"
+        ]
+      },
+      {
+        "move": "Ba2",
+        "checkmate": false,
+        "legalReplies": [
+          "Kh7",
+          "Kg7"
+        ]
+      },
+      {
+        "move": "Bf1",
+        "checkmate": false,
+        "legalReplies": [
+          "Kg8",
+          "Kh7",
+          "Kg7"
+        ]
+      },
+      {
+        "move": "Qe8+",
+        "checkmate": false,
+        "legalReplies": [
+          "Kh7",
+          "Kg7"
+        ]
+      },
+      {
+        "move": "Qe7",
+        "checkmate": false,
+        "legalReplies": []
+      },
+      {
+        "move": "Qa7",
+        "checkmate": false,
+        "legalReplies": []
+      },
+      {
+        "move": "Qh6#",
+        "checkmate": true,
+        "legalReplies": [],
+        "withoutSupportReplies": [
+          "Kg8"
+        ]
+      },
+      {
+        "move": "Qe6",
+        "checkmate": false,
+        "legalReplies": [
+          "Kh7",
+          "Kg7"
+        ]
+      },
+      {
+        "move": "Qb6",
+        "checkmate": false,
+        "legalReplies": [
+          "Kh7",
+          "Kg7"
+        ]
+      },
+      {
+        "move": "Qg5",
+        "checkmate": false,
+        "legalReplies": [
+          "Kh7"
+        ]
+      },
+      {
+        "move": "Qe5+",
+        "checkmate": false,
+        "legalReplies": [
+          "Kh7"
+        ]
+      },
+      {
+        "move": "Qc5",
+        "checkmate": false,
+        "legalReplies": [
+          "Kh7",
+          "Kg7"
+        ]
+      },
+      {
+        "move": "Qf4",
+        "checkmate": false,
+        "legalReplies": [
+          "Kh7",
+          "Kg7"
+        ]
+      },
+      {
+        "move": "Qe4",
+        "checkmate": false,
+        "legalReplies": [
+          "Kg7"
+        ]
+      },
+      {
+        "move": "Qd4+",
+        "checkmate": false,
+        "legalReplies": [
+          "Kh7"
+        ]
+      },
+      {
+        "move": "Qh3+",
+        "checkmate": false,
+        "legalReplies": [
+          "Kg7"
+        ]
+      },
+      {
+        "move": "Qg3",
+        "checkmate": false,
+        "legalReplies": [
+          "Kh7"
+        ]
+      },
+      {
+        "move": "Qf3",
+        "checkmate": false,
+        "legalReplies": [
+          "Kh7",
+          "Kg7"
+        ]
+      },
+      {
+        "move": "Qd3",
+        "checkmate": false,
+        "legalReplies": [
+          "Kg7"
+        ]
+      },
+      {
+        "move": "Qc3+",
+        "checkmate": false,
+        "legalReplies": [
+          "Kh7"
+        ]
+      },
+      {
+        "move": "Qb3",
+        "checkmate": false,
+        "legalReplies": [
+          "Kh7",
+          "Kg7"
+        ]
+      },
+      {
+        "move": "Qa3",
+        "checkmate": false,
+        "legalReplies": [
+          "Kh7",
+          "Kg7"
+        ]
+      },
+      {
+        "move": "Qf2",
+        "checkmate": false,
+        "legalReplies": [
+          "Kh7",
+          "Kg7"
+        ]
+      },
+      {
+        "move": "Qe2",
+        "checkmate": false,
+        "legalReplies": [
+          "Kh7",
+          "Kg7"
+        ]
+      },
+      {
+        "move": "Qd2",
+        "checkmate": false,
+        "legalReplies": [
+          "Kh7",
+          "Kg7"
+        ]
+      },
+      {
+        "move": "Qg1",
+        "checkmate": false,
+        "legalReplies": [
+          "Kh7"
+        ]
+      },
+      {
+        "move": "Qe1",
+        "checkmate": false,
+        "legalReplies": [
+          "Kh7",
+          "Kg7"
+        ]
+      },
+      {
+        "move": "Qc1",
+        "checkmate": false,
+        "legalReplies": [
+          "Kh7",
+          "Kg7"
+        ]
+      },
+      {
+        "move": "Kb2",
+        "checkmate": false,
+        "legalReplies": [
+          "Kh7",
+          "Kg7"
+        ]
+      },
+      {
+        "move": "Ka2",
+        "checkmate": false,
+        "legalReplies": [
+          "Kh7",
+          "Kg7"
+        ]
+      },
+      {
+        "move": "Kb1",
+        "checkmate": false,
+        "legalReplies": [
+          "Kh7",
+          "Kg7"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "queen-beginner-n-3",
+    "fen": "7k/4N3/8/8/8/4Q3/8/K7 w - - 0 1",
+    "mateIn": 1,
+    "moves": [
+      "Qh6#"
+    ],
+    "method": "Exhaustive legal starting moves and replies; essential queen and non-king support checked by removal.",
+    "support": "e7",
+    "piece": "N",
+    "role": "escape-control",
+    "matingMoves": [
+      "Qh6#"
+    ],
+    "startingMoves": [
+      {
+        "move": "Ng8",
+        "checkmate": false,
+        "legalReplies": [
+          "Kxg8",
+          "Kh7",
+          "Kg7"
+        ]
+      },
+      {
+        "move": "Nc8",
+        "checkmate": false,
+        "legalReplies": [
+          "Kg8",
+          "Kh7",
+          "Kg7"
+        ]
+      },
+      {
+        "move": "Ng6+",
+        "checkmate": false,
+        "legalReplies": [
+          "Kg8",
+          "Kh7",
+          "Kg7"
+        ]
+      },
+      {
+        "move": "Nc6",
+        "checkmate": false,
+        "legalReplies": [
+          "Kg8",
+          "Kh7",
+          "Kg7"
+        ]
+      },
+      {
+        "move": "Nf5",
+        "checkmate": false,
+        "legalReplies": [
+          "Kg8",
+          "Kh7"
+        ]
+      },
+      {
+        "move": "Nd5",
+        "checkmate": false,
+        "legalReplies": [
+          "Kg8",
+          "Kh7",
+          "Kg7"
+        ]
+      },
+      {
+        "move": "Qa7",
+        "checkmate": false,
+        "legalReplies": [
+          "Kh7",
+          "Kg7"
+        ]
+      },
+      {
+        "move": "Qh6#",
+        "checkmate": true,
+        "legalReplies": [],
+        "withoutSupportReplies": [
+          "Kg8"
+        ]
+      },
+      {
+        "move": "Qe6",
+        "checkmate": false,
+        "legalReplies": [
+          "Kh7",
+          "Kg7"
+        ]
+      },
+      {
+        "move": "Qb6",
+        "checkmate": false,
+        "legalReplies": [
+          "Kh7",
+          "Kg7"
+        ]
+      },
+      {
+        "move": "Qg5",
+        "checkmate": false,
+        "legalReplies": [
+          "Kh7"
+        ]
+      },
+      {
+        "move": "Qe5+",
+        "checkmate": false,
+        "legalReplies": [
+          "Kh7"
+        ]
+      },
+      {
+        "move": "Qc5",
+        "checkmate": false,
+        "legalReplies": [
+          "Kh7",
+          "Kg7"
+        ]
+      },
+      {
+        "move": "Qf4",
+        "checkmate": false,
+        "legalReplies": [
+          "Kh7",
+          "Kg7"
+        ]
+      },
+      {
+        "move": "Qe4",
+        "checkmate": false,
+        "legalReplies": [
+          "Kg7"
+        ]
+      },
+      {
+        "move": "Qd4+",
+        "checkmate": false,
+        "legalReplies": [
+          "Kh7"
+        ]
+      },
+      {
+        "move": "Qh3+",
+        "checkmate": false,
+        "legalReplies": [
+          "Kg7"
+        ]
+      },
+      {
+        "move": "Qg3",
+        "checkmate": false,
+        "legalReplies": [
+          "Kh7"
+        ]
+      },
+      {
+        "move": "Qf3",
+        "checkmate": false,
+        "legalReplies": [
+          "Kh7",
+          "Kg7"
+        ]
+      },
+      {
+        "move": "Qd3",
+        "checkmate": false,
+        "legalReplies": [
+          "Kg7"
+        ]
+      },
+      {
+        "move": "Qc3+",
+        "checkmate": false,
+        "legalReplies": [
+          "Kh7"
+        ]
+      },
+      {
+        "move": "Qb3",
+        "checkmate": false,
+        "legalReplies": [
+          "Kh7",
+          "Kg7"
+        ]
+      },
+      {
+        "move": "Qa3",
+        "checkmate": false,
+        "legalReplies": [
+          "Kh7",
+          "Kg7"
+        ]
+      },
+      {
+        "move": "Qf2",
+        "checkmate": false,
+        "legalReplies": [
+          "Kh7",
+          "Kg7"
+        ]
+      },
+      {
+        "move": "Qe2",
+        "checkmate": false,
+        "legalReplies": [
+          "Kh7",
+          "Kg7"
+        ]
+      },
+      {
+        "move": "Qd2",
+        "checkmate": false,
+        "legalReplies": [
+          "Kh7",
+          "Kg7"
+        ]
+      },
+      {
+        "move": "Qg1",
+        "checkmate": false,
+        "legalReplies": [
+          "Kh7"
+        ]
+      },
+      {
+        "move": "Qe1",
+        "checkmate": false,
+        "legalReplies": [
+          "Kh7",
+          "Kg7"
+        ]
+      },
+      {
+        "move": "Qc1",
+        "checkmate": false,
+        "legalReplies": [
+          "Kh7",
+          "Kg7"
+        ]
+      },
+      {
+        "move": "Kb2",
+        "checkmate": false,
+        "legalReplies": [
+          "Kh7",
+          "Kg7"
+        ]
+      },
+      {
+        "move": "Ka2",
+        "checkmate": false,
+        "legalReplies": [
+          "Kh7",
+          "Kg7"
+        ]
+      },
+      {
+        "move": "Kb1",
+        "checkmate": false,
+        "legalReplies": [
+          "Kh7",
+          "Kg7"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "queen-beginner-p-3",
+    "fen": "7k/8/3q4/8/8/8/2p5/K7 b - - 0 1",
+    "mateIn": 1,
+    "moves": [
+      "Qa3#"
+    ],
+    "method": "Exhaustive legal starting moves and replies; essential queen and non-king support checked by removal.",
+    "support": "c2",
+    "piece": "P",
+    "role": "escape-control",
+    "matingMoves": [
+      "Qa3#"
+    ],
+    "startingMoves": [
+      {
+        "move": "Kg8",
+        "checkmate": false,
+        "legalReplies": [
+          "Kb2",
+          "Ka2"
+        ]
+      },
+      {
+        "move": "Kh7",
+        "checkmate": false,
+        "legalReplies": [
+          "Kb2",
+          "Ka2"
+        ]
+      },
+      {
+        "move": "Kg7",
+        "checkmate": false,
+        "legalReplies": [
+          "Kb2",
+          "Ka2"
+        ]
+      },
+      {
+        "move": "Qf8",
+        "checkmate": false,
+        "legalReplies": [
+          "Kb2",
+          "Ka2"
+        ]
+      },
+      {
+        "move": "Qd8",
+        "checkmate": false,
+        "legalReplies": [
+          "Kb2",
+          "Ka2"
+        ]
+      },
+      {
+        "move": "Qb8",
+        "checkmate": false,
+        "legalReplies": [
+          "Ka2"
+        ]
+      },
+      {
+        "move": "Qe7",
+        "checkmate": false,
+        "legalReplies": [
+          "Kb2",
+          "Ka2"
+        ]
+      },
+      {
+        "move": "Qd7",
+        "checkmate": false,
+        "legalReplies": [
+          "Kb2",
+          "Ka2"
+        ]
+      },
+      {
+        "move": "Qc7",
+        "checkmate": false,
+        "legalReplies": [
+          "Kb2",
+          "Ka2"
+        ]
+      },
+      {
+        "move": "Qh6",
+        "checkmate": false,
+        "legalReplies": [
+          "Kb2",
+          "Ka2"
+        ]
+      },
+      {
+        "move": "Qg6",
+        "checkmate": false,
+        "legalReplies": [
+          "Kb2",
+          "Ka2"
+        ]
+      },
+      {
+        "move": "Qf6+",
+        "checkmate": false,
+        "legalReplies": [
+          "Ka2"
+        ]
+      },
+      {
+        "move": "Qe6",
+        "checkmate": false,
+        "legalReplies": [
+          "Kb2"
+        ]
+      },
+      {
+        "move": "Qc6",
+        "checkmate": false,
+        "legalReplies": [
+          "Kb2",
+          "Ka2"
+        ]
+      },
+      {
+        "move": "Qb6",
+        "checkmate": false,
+        "legalReplies": [
+          "Ka2"
+        ]
+      },
+      {
+        "move": "Qa6+",
+        "checkmate": false,
+        "legalReplies": [
+          "Kb2"
+        ]
+      },
+      {
+        "move": "Qe5+",
+        "checkmate": false,
+        "legalReplies": [
+          "Ka2"
+        ]
+      },
+      {
+        "move": "Qd5",
+        "checkmate": false,
+        "legalReplies": [
+          "Kb2"
+        ]
+      },
+      {
+        "move": "Qc5",
+        "checkmate": false,
+        "legalReplies": [
+          "Kb2",
+          "Ka2"
+        ]
+      },
+      {
+        "move": "Qf4",
+        "checkmate": false,
+        "legalReplies": [
+          "Kb2",
+          "Ka2"
+        ]
+      },
+      {
+        "move": "Qd4+",
+        "checkmate": false,
+        "legalReplies": [
+          "Ka2"
+        ]
+      },
+      {
+        "move": "Qb4",
+        "checkmate": false,
+        "legalReplies": [
+          "Ka2"
+        ]
+      },
+      {
+        "move": "Qg3",
+        "checkmate": false,
+        "legalReplies": [
+          "Kb2",
+          "Ka2"
+        ]
+      },
+      {
+        "move": "Qd3",
+        "checkmate": false,
+        "legalReplies": [
+          "Kb2",
+          "Ka2"
+        ]
+      },
+      {
+        "move": "Qa3#",
+        "checkmate": true,
+        "legalReplies": [],
+        "withoutSupportReplies": [
+          "Kb1"
+        ]
+      },
+      {
+        "move": "Qh2",
+        "checkmate": false,
+        "legalReplies": [
+          "Kb2",
+          "Ka2"
+        ]
+      },
+      {
+        "move": "Qd2",
+        "checkmate": false,
+        "legalReplies": [
+          "Kb2",
+          "Ka2"
+        ]
+      },
+      {
+        "move": "Qd1+",
+        "checkmate": false,
+        "legalReplies": [
+          "Kb2",
+          "Ka2"
+        ]
+      },
+      {
+        "move": "c1=Q+",
+        "checkmate": false,
+        "legalReplies": [
+          "Ka2"
+        ]
+      },
+      {
+        "move": "c1=R+",
+        "checkmate": false,
+        "legalReplies": [
+          "Kb2",
+          "Ka2"
+        ]
+      },
+      {
+        "move": "c1=B",
+        "checkmate": false,
+        "legalReplies": [
+          "Ka2",
+          "Kb1"
+        ]
+      },
+      {
+        "move": "c1=N",
+        "checkmate": false,
+        "legalReplies": [
+          "Kb2",
+          "Kb1"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "queen-beginner-r-4",
+    "fen": "4q2k/8/8/K7/8/8/1r6/8 b - - 0 1",
+    "mateIn": 1,
+    "moves": [
+      "Qb5#"
+    ],
+    "method": "Exhaustive legal starting moves and replies; essential queen and non-king support checked by removal.",
+    "support": "b2",
+    "piece": "R",
+    "role": "queen-protection",
+    "matingMoves": [
+      "Qa8#",
+      "Qb5#"
+    ],
+    "startingMoves": [
+      {
+        "move": "Kg8",
+        "checkmate": false,
+        "legalReplies": [
+          "Ka6"
+        ]
+      },
+      {
+        "move": "Kh7",
+        "checkmate": false,
+        "legalReplies": [
+          "Ka6"
+        ]
+      },
+      {
+        "move": "Kg7",
+        "checkmate": false,
+        "legalReplies": [
+          "Ka6"
+        ]
+      },
+      {
+        "move": "Qg8",
+        "checkmate": false,
+        "legalReplies": [
+          "Ka6",
+          "Ka4"
+        ]
+      },
+      {
+        "move": "Qf8",
+        "checkmate": false,
+        "legalReplies": [
+          "Ka6",
+          "Ka4"
+        ]
+      },
+      {
+        "move": "Qd8+",
+        "checkmate": false,
+        "legalReplies": [
+          "Ka6",
+          "Ka4"
+        ]
+      },
+      {
+        "move": "Qc8",
+        "checkmate": false,
+        "legalReplies": [
+          "Ka4"
+        ]
+      },
+      {
+        "move": "Qb8",
+        "checkmate": false,
+        "legalReplies": [
+          "Ka6",
+          "Ka4"
+        ]
+      },
+      {
+        "move": "Qa8#",
+        "checkmate": true,
+        "legalReplies": [],
+        "withoutSupportReplies": [
+          "Kb6",
+          "Kb5",
+          "Kb4"
+        ]
+      },
+      {
+        "move": "Qf7",
+        "checkmate": false,
+        "legalReplies": [
+          "Ka6",
+          "Ka4"
+        ]
+      },
+      {
+        "move": "Qe7",
+        "checkmate": false,
+        "legalReplies": [
+          "Ka6",
+          "Ka4"
+        ]
+      },
+      {
+        "move": "Qd7",
+        "checkmate": false,
+        "legalReplies": [
+          "Ka6"
+        ]
+      },
+      {
+        "move": "Qg6",
+        "checkmate": false,
+        "legalReplies": [
+          "Ka4"
+        ]
+      },
+      {
+        "move": "Qe6",
+        "checkmate": false,
+        "legalReplies": [
+          "Ka4"
+        ]
+      },
+      {
+        "move": "Qc6",
+        "checkmate": false,
+        "legalReplies": []
+      },
+      {
+        "move": "Qh5+",
+        "checkmate": false,
+        "legalReplies": [
+          "Ka6",
+          "Ka4"
+        ]
+      },
+      {
+        "move": "Qe5+",
+        "checkmate": false,
+        "legalReplies": [
+          "Ka6",
+          "Ka4"
+        ]
+      },
+      {
+        "move": "Qb5#",
+        "checkmate": true,
+        "legalReplies": [],
+        "withoutSupportReplies": [
+          "Kxb5"
+        ]
+      },
+      {
+        "move": "Qe4",
+        "checkmate": false,
+        "legalReplies": [
+          "Ka6"
+        ]
+      },
+      {
+        "move": "Qa4+",
+        "checkmate": false,
+        "legalReplies": [
+          "Kxa4"
+        ]
+      },
+      {
+        "move": "Qe3",
+        "checkmate": false,
+        "legalReplies": [
+          "Ka6",
+          "Ka4"
+        ]
+      },
+      {
+        "move": "Qe2",
+        "checkmate": false,
+        "legalReplies": [
+          "Ka4"
+        ]
+      },
+      {
+        "move": "Qe1+",
+        "checkmate": false,
+        "legalReplies": [
+          "Ka6",
+          "Ka4"
+        ]
+      },
+      {
+        "move": "Rb8",
+        "checkmate": false,
+        "legalReplies": [
+          "Ka6"
+        ]
+      },
+      {
+        "move": "Rb7",
+        "checkmate": false,
+        "legalReplies": [
+          "Ka6"
+        ]
+      },
+      {
+        "move": "Rb6",
+        "checkmate": false,
+        "legalReplies": [
+          "Kxb6"
+        ]
+      },
+      {
+        "move": "Rb5+",
+        "checkmate": false,
+        "legalReplies": [
+          "Ka6",
+          "Ka4"
+        ]
+      },
+      {
+        "move": "Rb4",
+        "checkmate": false,
+        "legalReplies": [
+          "Ka6",
+          "Kxb4"
+        ]
+      },
+      {
+        "move": "Rb3",
+        "checkmate": false,
+        "legalReplies": [
+          "Ka6"
+        ]
+      },
+      {
+        "move": "Rh2",
+        "checkmate": false,
+        "legalReplies": [
+          "Kb6",
+          "Ka6",
+          "Kb4"
+        ]
+      },
+      {
+        "move": "Rg2",
+        "checkmate": false,
+        "legalReplies": [
+          "Kb6",
+          "Ka6",
+          "Kb4"
+        ]
+      },
+      {
+        "move": "Rf2",
+        "checkmate": false,
+        "legalReplies": [
+          "Kb6",
+          "Ka6",
+          "Kb4"
+        ]
+      },
+      {
+        "move": "Re2",
+        "checkmate": false,
+        "legalReplies": [
+          "Kb6",
+          "Ka6",
+          "Kb4"
+        ]
+      },
+      {
+        "move": "Rd2",
+        "checkmate": false,
+        "legalReplies": [
+          "Kb6",
+          "Ka6",
+          "Kb4"
+        ]
+      },
+      {
+        "move": "Rc2",
+        "checkmate": false,
+        "legalReplies": [
+          "Kb6",
+          "Ka6",
+          "Kb4"
+        ]
+      },
+      {
+        "move": "Ra2+",
+        "checkmate": false,
+        "legalReplies": [
+          "Kb6",
+          "Kb4"
+        ]
+      },
+      {
+        "move": "Rb1",
+        "checkmate": false,
+        "legalReplies": [
+          "Ka6"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "queen-beginner-b-4",
+    "fen": "8/8/8/7k/8/8/3B2Q1/K7 w - - 0 1",
+    "mateIn": 1,
+    "moves": [
+      "Qg5#"
+    ],
+    "method": "Exhaustive legal starting moves and replies; essential queen and non-king support checked by removal.",
+    "support": "d2",
+    "piece": "B",
+    "role": "queen-protection",
+    "matingMoves": [
+      "Qg5#"
+    ],
+    "startingMoves": [
+      {
+        "move": "Qg8",
+        "checkmate": false,
+        "legalReplies": [
+          "Kh4"
+        ]
+      },
+      {
+        "move": "Qa8",
+        "checkmate": false,
+        "legalReplies": [
+          "Kg6",
+          "Kh4",
+          "Kg4"
+        ]
+      },
+      {
+        "move": "Qg7",
+        "checkmate": false,
+        "legalReplies": [
+          "Kh4"
+        ]
+      },
+      {
+        "move": "Qb7",
+        "checkmate": false,
+        "legalReplies": [
+          "Kg6",
+          "Kh4",
+          "Kg4"
+        ]
+      },
+      {
+        "move": "Qg6+",
+        "checkmate": false,
+        "legalReplies": [
+          "Kxg6",
+          "Kh4"
+        ]
+      },
+      {
+        "move": "Qc6",
+        "checkmate": false,
+        "legalReplies": [
+          "Kh4",
+          "Kg4"
+        ]
+      },
+      {
+        "move": "Qg5#",
+        "checkmate": true,
+        "legalReplies": [],
+        "withoutSupportReplies": [
+          "Kxg5"
+        ]
+      },
+      {
+        "move": "Qd5+",
+        "checkmate": false,
+        "legalReplies": [
+          "Kg6",
+          "Kh4",
+          "Kg4"
+        ]
+      },
+      {
+        "move": "Qg4+",
+        "checkmate": false,
+        "legalReplies": [
+          "Kxg4"
+        ]
+      },
+      {
+        "move": "Qe4",
+        "checkmate": false,
+        "legalReplies": []
+      },
+      {
+        "move": "Qh3+",
+        "checkmate": false,
+        "legalReplies": [
+          "Kg6"
+        ]
+      },
+      {
+        "move": "Qg3",
+        "checkmate": false,
+        "legalReplies": []
+      },
+      {
+        "move": "Qf3+",
+        "checkmate": false,
+        "legalReplies": [
+          "Kg6",
+          "Kh4"
+        ]
+      },
+      {
+        "move": "Qh2+",
+        "checkmate": false,
+        "legalReplies": [
+          "Kg6",
+          "Kg4"
+        ]
+      },
+      {
+        "move": "Qf2",
+        "checkmate": false,
+        "legalReplies": [
+          "Kg6",
+          "Kg4"
+        ]
+      },
+      {
+        "move": "Qe2+",
+        "checkmate": false,
+        "legalReplies": [
+          "Kg6",
+          "Kh4"
+        ]
+      },
+      {
+        "move": "Qh1+",
+        "checkmate": false,
+        "legalReplies": [
+          "Kg6",
+          "Kg4"
+        ]
+      },
+      {
+        "move": "Qg1",
+        "checkmate": false,
+        "legalReplies": [
+          "Kh4"
+        ]
+      },
+      {
+        "move": "Qf1",
+        "checkmate": false,
+        "legalReplies": [
+          "Kg6",
+          "Kh4",
+          "Kg4"
+        ]
+      },
+      {
+        "move": "Bh6",
+        "checkmate": false,
+        "legalReplies": [
+          "Kxh6",
+          "Kh4"
+        ]
+      },
+      {
+        "move": "Bg5",
+        "checkmate": false,
+        "legalReplies": [
+          "Kg6"
+        ]
+      },
+      {
+        "move": "Ba5",
+        "checkmate": false,
+        "legalReplies": [
+          "Kh6",
+          "Kh4"
+        ]
+      },
+      {
+        "move": "Bf4",
+        "checkmate": false,
+        "legalReplies": [
+          "Kh4"
+        ]
+      },
+      {
+        "move": "Bb4",
+        "checkmate": false,
+        "legalReplies": [
+          "Kh6",
+          "Kh4"
+        ]
+      },
+      {
+        "move": "Be3",
+        "checkmate": false,
+        "legalReplies": [
+          "Kh4"
+        ]
+      },
+      {
+        "move": "Bc3",
+        "checkmate": false,
+        "legalReplies": [
+          "Kh6",
+          "Kh4"
+        ]
+      },
+      {
+        "move": "Be1",
+        "checkmate": false,
+        "legalReplies": [
+          "Kh6"
+        ]
+      },
+      {
+        "move": "Bc1",
+        "checkmate": false,
+        "legalReplies": [
+          "Kh4"
+        ]
+      },
+      {
+        "move": "Kb2",
+        "checkmate": false,
+        "legalReplies": [
+          "Kh4"
+        ]
+      },
+      {
+        "move": "Ka2",
+        "checkmate": false,
+        "legalReplies": [
+          "Kh4"
+        ]
+      },
+      {
+        "move": "Kb1",
+        "checkmate": false,
+        "legalReplies": [
+          "Kh4"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "queen-beginner-n-4",
+    "fen": "7k/8/8/8/q7/4n3/8/2K5 b - - 0 1",
+    "mateIn": 1,
+    "moves": [
+      "Qc2#"
+    ],
+    "method": "Exhaustive legal starting moves and replies; essential queen and non-king support checked by removal.",
+    "support": "e3",
+    "piece": "N",
+    "role": "queen-protection",
+    "matingMoves": [
+      "Qc2#"
+    ],
+    "startingMoves": [
+      {
+        "move": "Kg8",
+        "checkmate": false,
+        "legalReplies": [
+          "Kd2",
+          "Kb2",
+          "Kb1"
+        ]
+      },
+      {
+        "move": "Kh7",
+        "checkmate": false,
+        "legalReplies": [
+          "Kd2",
+          "Kb2",
+          "Kb1"
+        ]
+      },
+      {
+        "move": "Kg7",
+        "checkmate": false,
+        "legalReplies": [
+          "Kd2",
+          "Kb2",
+          "Kb1"
+        ]
+      },
+      {
+        "move": "Qe8",
+        "checkmate": false,
+        "legalReplies": [
+          "Kd2",
+          "Kb2",
+          "Kb1"
+        ]
+      },
+      {
+        "move": "Qa8",
+        "checkmate": false,
+        "legalReplies": [
+          "Kd2",
+          "Kb2",
+          "Kb1"
+        ]
+      },
+      {
+        "move": "Qd7",
+        "checkmate": false,
+        "legalReplies": [
+          "Kb2",
+          "Kb1"
+        ]
+      },
+      {
+        "move": "Qa7",
+        "checkmate": false,
+        "legalReplies": [
+          "Kd2",
+          "Kb2",
+          "Kb1"
+        ]
+      },
+      {
+        "move": "Qc6+",
+        "checkmate": false,
+        "legalReplies": [
+          "Kd2",
+          "Kb2",
+          "Kb1"
+        ]
+      },
+      {
+        "move": "Qa6",
+        "checkmate": false,
+        "legalReplies": [
+          "Kd2",
+          "Kb2",
+          "Kb1"
+        ]
+      },
+      {
+        "move": "Qb5",
+        "checkmate": false,
+        "legalReplies": [
+          "Kd2"
+        ]
+      },
+      {
+        "move": "Qa5",
+        "checkmate": false,
+        "legalReplies": [
+          "Kb2",
+          "Kb1"
+        ]
+      },
+      {
+        "move": "Qh4",
+        "checkmate": false,
+        "legalReplies": [
+          "Kd2",
+          "Kb2",
+          "Kb1"
+        ]
+      },
+      {
+        "move": "Qg4",
+        "checkmate": false,
+        "legalReplies": [
+          "Kd2",
+          "Kb2",
+          "Kb1"
+        ]
+      },
+      {
+        "move": "Qf4",
+        "checkmate": false,
+        "legalReplies": [
+          "Kd2",
+          "Kb2",
+          "Kb1"
+        ]
+      },
+      {
+        "move": "Qe4",
+        "checkmate": false,
+        "legalReplies": [
+          "Kd2",
+          "Kb2"
+        ]
+      },
+      {
+        "move": "Qd4",
+        "checkmate": false,
+        "legalReplies": [
+          "Kb1"
+        ]
+      },
+      {
+        "move": "Qc4+",
+        "checkmate": false,
+        "legalReplies": [
+          "Kd2",
+          "Kb2",
+          "Kb1"
+        ]
+      },
+      {
+        "move": "Qb4",
+        "checkmate": false,
+        "legalReplies": []
+      },
+      {
+        "move": "Qb3",
+        "checkmate": false,
+        "legalReplies": [
+          "Kd2"
+        ]
+      },
+      {
+        "move": "Qa3+",
+        "checkmate": false,
+        "legalReplies": [
+          "Kd2",
+          "Kb1"
+        ]
+      },
+      {
+        "move": "Qc2#",
+        "checkmate": true,
+        "legalReplies": [],
+        "withoutSupportReplies": [
+          "Kxc2"
+        ]
+      },
+      {
+        "move": "Qa2",
+        "checkmate": false,
+        "legalReplies": []
+      },
+      {
+        "move": "Qd1+",
+        "checkmate": false,
+        "legalReplies": [
+          "Kb2"
+        ]
+      },
+      {
+        "move": "Qa1+",
+        "checkmate": false,
+        "legalReplies": [
+          "Kd2"
+        ]
+      },
+      {
+        "move": "Nf5",
+        "checkmate": false,
+        "legalReplies": [
+          "Kd2",
+          "Kb2",
+          "Kb1"
+        ]
+      },
+      {
+        "move": "Nd5",
+        "checkmate": false,
+        "legalReplies": [
+          "Kd2",
+          "Kb2",
+          "Kb1"
+        ]
+      },
+      {
+        "move": "Ng4",
+        "checkmate": false,
+        "legalReplies": [
+          "Kd2",
+          "Kb2",
+          "Kb1"
+        ]
+      },
+      {
+        "move": "Nc4",
+        "checkmate": false,
+        "legalReplies": [
+          "Kb1"
+        ]
+      },
+      {
+        "move": "Ng2",
+        "checkmate": false,
+        "legalReplies": [
+          "Kd2",
+          "Kb2",
+          "Kb1"
+        ]
+      },
+      {
+        "move": "Nc2",
+        "checkmate": false,
+        "legalReplies": [
+          "Kd2",
+          "Kb2",
+          "Kd1",
+          "Kb1"
+        ]
+      },
+      {
+        "move": "Nf1",
+        "checkmate": false,
+        "legalReplies": [
+          "Kb2",
+          "Kb1"
+        ]
+      },
+      {
+        "move": "Nd1",
+        "checkmate": false,
+        "legalReplies": [
+          "Kd2",
+          "Kb1"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "queen-beginner-p-4",
+    "fen": "8/8/k7/2P5/8/8/1Q6/7K w - - 0 1",
+    "mateIn": 1,
+    "moves": [
+      "Qb6#"
+    ],
+    "method": "Exhaustive legal starting moves and replies; essential queen and non-king support checked by removal.",
+    "support": "c5",
+    "piece": "P",
+    "role": "queen-protection",
+    "matingMoves": [
+      "Qb6#"
+    ],
+    "startingMoves": [
+      {
+        "move": "Qh8",
+        "checkmate": false,
+        "legalReplies": [
+          "Kb7",
+          "Ka7",
+          "Kb5",
+          "Ka5"
+        ]
+      },
+      {
+        "move": "Qb8",
+        "checkmate": false,
+        "legalReplies": [
+          "Ka5"
+        ]
+      },
+      {
+        "move": "Qg7",
+        "checkmate": false,
+        "legalReplies": [
+          "Kb5",
+          "Ka5"
+        ]
+      },
+      {
+        "move": "Qb7+",
+        "checkmate": false,
+        "legalReplies": [
+          "Kxb7",
+          "Ka5"
+        ]
+      },
+      {
+        "move": "Qf6+",
+        "checkmate": false,
+        "legalReplies": [
+          "Kb7",
+          "Ka7",
+          "Kb5",
+          "Ka5"
+        ]
+      },
+      {
+        "move": "Qb6#",
+        "checkmate": true,
+        "legalReplies": [],
+        "withoutSupportReplies": [
+          "Kxb6"
+        ]
+      },
+      {
+        "move": "Qe5",
+        "checkmate": false,
+        "legalReplies": [
+          "Kb7",
+          "Ka7",
+          "Kb5",
+          "Ka5"
+        ]
+      },
+      {
+        "move": "Qb5+",
+        "checkmate": false,
+        "legalReplies": [
+          "Ka7",
+          "Kxb5"
+        ]
+      },
+      {
+        "move": "Qd4",
+        "checkmate": false,
+        "legalReplies": [
+          "Kb7",
+          "Ka7",
+          "Kb5",
+          "Ka5"
+        ]
+      },
+      {
+        "move": "Qb4",
+        "checkmate": false,
+        "legalReplies": [
+          "Ka7"
+        ]
+      },
+      {
+        "move": "Qc3",
+        "checkmate": false,
+        "legalReplies": [
+          "Kb7",
+          "Ka7",
+          "Kb5"
+        ]
+      },
+      {
+        "move": "Qb3",
+        "checkmate": false,
+        "legalReplies": [
+          "Ka7",
+          "Ka5"
+        ]
+      },
+      {
+        "move": "Qa3+",
+        "checkmate": false,
+        "legalReplies": [
+          "Kb7",
+          "Kb5"
+        ]
+      },
+      {
+        "move": "Qh2",
+        "checkmate": false,
+        "legalReplies": [
+          "Kb7",
+          "Ka7",
+          "Kb5",
+          "Ka5"
+        ]
+      },
+      {
+        "move": "Qg2",
+        "checkmate": false,
+        "legalReplies": [
+          "Ka7",
+          "Kb5",
+          "Ka5"
+        ]
+      },
+      {
+        "move": "Qf2",
+        "checkmate": false,
+        "legalReplies": [
+          "Kb7",
+          "Ka7",
+          "Kb5",
+          "Ka5"
+        ]
+      },
+      {
+        "move": "Qe2+",
+        "checkmate": false,
+        "legalReplies": [
+          "Kb7",
+          "Ka7",
+          "Ka5"
+        ]
+      },
+      {
+        "move": "Qd2",
+        "checkmate": false,
+        "legalReplies": [
+          "Kb7",
+          "Ka7",
+          "Kb5"
+        ]
+      },
+      {
+        "move": "Qc2",
+        "checkmate": false,
+        "legalReplies": [
+          "Kb7",
+          "Ka7",
+          "Kb5",
+          "Ka5"
+        ]
+      },
+      {
+        "move": "Qa2+",
+        "checkmate": false,
+        "legalReplies": [
+          "Kb7",
+          "Kb5"
+        ]
+      },
+      {
+        "move": "Qc1",
+        "checkmate": false,
+        "legalReplies": [
+          "Kb7",
+          "Ka7",
+          "Kb5",
+          "Ka5"
+        ]
+      },
+      {
+        "move": "Qb1",
+        "checkmate": false,
+        "legalReplies": [
+          "Ka7",
+          "Ka5"
+        ]
+      },
+      {
+        "move": "Qa1+",
+        "checkmate": false,
+        "legalReplies": [
+          "Kb7",
+          "Kb5"
+        ]
+      },
+      {
+        "move": "Kh2",
+        "checkmate": false,
+        "legalReplies": [
+          "Ka7",
+          "Ka5"
+        ]
+      },
+      {
+        "move": "Kg2",
+        "checkmate": false,
+        "legalReplies": [
+          "Ka7",
+          "Ka5"
+        ]
+      },
+      {
+        "move": "Kg1",
+        "checkmate": false,
+        "legalReplies": [
+          "Ka7",
+          "Ka5"
+        ]
+      },
+      {
+        "move": "c6",
+        "checkmate": false,
+        "legalReplies": [
+          "Ka7",
+          "Ka5"
+        ]
+      }
+    ]
+  },
+  {
+    "fen": "1k1K4/8/8/6Q1/8/8/8/8 w - - 0 1",
+    "mateIn": 3,
+    "nodes": 150000,
+    "engine": {
+      "name": "Stockfish 17",
+      "author": "the Stockfish developers (see AUTHORS file)"
+    },
+    "moves": [
+      "Qb5+",
+      "Ka7",
+      "Kc7",
+      "Ka8",
+      "Qb8#"
+    ]
+  },
+  {
+    "fen": "6k1/8/8/6K1/6Q1/8/8/8 w - - 0 1",
+    "mateIn": 2,
+    "nodes": 150000,
+    "engine": {
+      "name": "Stockfish 17",
+      "author": "the Stockfish developers (see AUTHORS file)"
+    },
+    "moves": [
+      "Kf6+",
+      "Kh7",
+      "Qg7#"
+    ]
+  },
+  {
+    "fen": "6K1/8/8/5k2/4q3/8/8/8 b - - 0 1",
+    "mateIn": 3,
+    "nodes": 150000,
+    "engine": {
+      "name": "Stockfish 17",
+      "author": "the Stockfish developers (see AUTHORS file)"
+    },
+    "moves": [
+      "Qe7",
+      "Kh8",
+      "Kf6",
+      "Kg8",
+      "Qg7#"
+    ]
+  },
+  {
+    "fen": "7K/8/8/1q3k2/8/8/8/8 b - - 0 1",
+    "mateIn": 2,
+    "nodes": 150000,
+    "engine": {
+      "name": "Stockfish 17",
+      "author": "the Stockfish developers (see AUTHORS file)"
+    },
+    "moves": [
+      "Kg6",
+      "Kg8",
+      "Qb8#"
+    ]
+  },
+  {
+    "fen": "8/8/8/7Q/1K6/8/k7/8 w - - 0 1",
+    "mateIn": 3,
+    "nodes": 150000,
+    "engine": {
+      "name": "Stockfish 17",
+      "author": "the Stockfish developers (see AUTHORS file)"
+    },
+    "moves": [
+      "Qh2+",
+      "Ka1",
+      "Kb3",
+      "Kb1",
+      "Qg1#"
+    ]
+  },
+  {
+    "fen": "6Q1/8/8/8/8/4K3/8/5k2 w - - 0 1",
+    "mateIn": 2,
+    "nodes": 150000,
+    "engine": {
+      "name": "Stockfish 17",
+      "author": "the Stockfish developers (see AUTHORS file)"
+    },
+    "moves": [
+      "Qg4",
+      "Ke1",
+      "Qg1#"
+    ]
+  },
+  {
+    "fen": "7K/4q3/8/4k3/8/8/8/8 b - - 0 1",
+    "mateIn": 2,
+    "nodes": 150000,
+    "engine": {
+      "name": "Stockfish 17",
+      "author": "the Stockfish developers (see AUTHORS file)"
+    },
+    "moves": [
+      "Kf6",
+      "Kg8",
+      "Qg7#"
+    ]
+  },
+  {
+    "fen": "8/8/8/1Q6/8/8/7k/5K2 w - - 0 1",
+    "mateIn": 2,
+    "nodes": 150000,
+    "engine": {
+      "name": "Stockfish 17",
+      "author": "the Stockfish developers (see AUTHORS file)"
+    },
+    "moves": [
+      "Qd3",
+      "Kh1",
+      "Qh3#"
+    ]
+  },
+  {
+    "fen": "4q3/8/8/8/7K/8/4k3/8 b - - 0 1",
+    "mateIn": 3,
+    "nodes": 150000,
+    "engine": {
+      "name": "Stockfish 17",
+      "author": "the Stockfish developers (see AUTHORS file)"
+    },
+    "moves": [
+      "Qg6",
+      "Kh3",
+      "Kf3",
+      "Kh4",
+      "Qg4#"
+    ]
+  },
+  {
+    "fen": "8/8/8/4q3/8/8/3k4/1K6 b - - 0 1",
+    "mateIn": 3,
+    "nodes": 150000,
+    "engine": {
+      "name": "Stockfish 17",
+      "author": "the Stockfish developers (see AUTHORS file)"
+    },
+    "moves": [
+      "Qb5+",
+      "Ka1",
+      "Kc3",
+      "Ka2",
+      "Qb2#"
+    ]
+  },
+  {
+    "fen": "2q5/8/8/8/6k1/8/8/6K1 b - - 0 1",
+    "mateIn": 3,
+    "nodes": 150000,
+    "engine": {
+      "name": "Stockfish 17",
+      "author": "the Stockfish developers (see AUTHORS file)"
+    },
+    "moves": [
+      "Kf3",
+      "Kh1",
+      "Kg3",
+      "Kg1",
+      "Qc1#"
+    ]
+  },
+  {
+    "fen": "3K4/1q3k2/8/8/8/8/8/8 b - - 0 1",
+    "mateIn": 2,
+    "nodes": 150000,
+    "engine": {
+      "name": "Stockfish 17",
+      "author": "the Stockfish developers (see AUTHORS file)"
+    },
+    "moves": [
+      "Ke6",
+      "Ke8",
+      "Qe7#"
+    ]
+  },
+  {
+    "fen": "8/8/8/8/8/4k3/6K1/4q3 b - - 0 1",
+    "mateIn": 3,
+    "nodes": 150000,
+    "engine": {
+      "name": "Stockfish 17",
+      "author": "the Stockfish developers (see AUTHORS file)"
+    },
+    "moves": [
+      "Qh4",
+      "Kg1",
+      "Kf3",
+      "Kf1",
+      "Qf2#"
+    ]
+  },
+  {
+    "fen": "8/8/8/8/8/8/3K3Q/1k6 w - - 0 1",
+    "mateIn": 2,
+    "nodes": 150000,
+    "engine": {
+      "name": "Stockfish 17",
+      "author": "the Stockfish developers (see AUTHORS file)"
+    },
+    "moves": [
+      "Kc3",
+      "Kc1",
+      "Qc2#"
+    ]
+  },
+  {
+    "fen": "6k1/8/6K1/8/8/8/8/5Q2 w - - 0 1",
+    "mateIn": 2,
+    "nodes": 150000,
+    "engine": {
+      "name": "Stockfish 17",
+      "author": "the Stockfish developers (see AUTHORS file)"
+    },
+    "moves": [
+      "Qf7+",
+      "Kh8",
+      "Qg7#"
+    ]
+  },
+  {
+    "fen": "6K1/8/8/5k2/8/8/4q3/8 b - - 0 1",
+    "mateIn": 3,
+    "nodes": 150000,
+    "engine": {
+      "name": "Stockfish 17",
+      "author": "the Stockfish developers (see AUTHORS file)"
+    },
+    "moves": [
+      "Qe7",
+      "Kh8",
+      "Kf6",
+      "Kg8",
+      "Qg7#"
+    ]
+  },
+  {
+    "fen": "8/6q1/8/8/8/4k3/8/3K4 b - - 0 1",
+    "mateIn": 2,
+    "nodes": 150000,
+    "engine": {
+      "name": "Stockfish 17",
+      "author": "the Stockfish developers (see AUTHORS file)"
+    },
+    "moves": [
+      "Kd3",
+      "Kc1",
+      "Qa1#"
+    ]
+  },
+  {
+    "fen": "2Q5/8/8/8/8/8/7k/4K3 w - - 0 1",
+    "mateIn": 2,
+    "nodes": 150000,
+    "engine": {
+      "name": "Stockfish 17",
+      "author": "the Stockfish developers (see AUTHORS file)"
+    },
+    "moves": [
+      "Kf2",
+      "Kh1",
+      "Qh8#"
+    ]
+  },
+  {
+    "fen": "8/K1k5/8/1Q6/8/8/8/8 w - - 0 1",
+    "mateIn": 3,
+    "nodes": 150000,
+    "engine": {
+      "name": "Stockfish 17",
+      "author": "the Stockfish developers (see AUTHORS file)"
+    },
+    "moves": [
+      "Qd5",
+      "Kc8",
+      "Kb6",
+      "Kb8",
+      "Qd8#"
+    ]
+  },
+  {
+    "fen": "8/8/8/5q2/4k3/8/8/7K b - - 0 1",
+    "mateIn": 3,
+    "nodes": 150000,
+    "engine": {
+      "name": "Stockfish 17",
+      "author": "the Stockfish developers (see AUTHORS file)"
+    },
+    "moves": [
+      "Qg4",
+      "Kh2",
+      "Kf3",
+      "Kh1",
+      "Qg2#"
+    ]
+  }
+]

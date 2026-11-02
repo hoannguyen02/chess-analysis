@@ -1,7 +1,7 @@
 # Skewer practice
 
 `/skewer` (Vietnamese: `/vi/skewer`) is an unlisted, password-free page,
-with `noindex, nofollow`, matching `/hoa-co`. It reuses the practice board,
+with `noindex, nofollow`, matching `/draw`. It reuses the practice board,
 timer, fullscreen layout, promotion picker, previous-move context, original-game
 viewer and analysis links. Levels are exactly **A, B, C, C*, D**, initially A.
 The current route is `/skewer`; the legacy redirect is disabled in `next.config.ts`.
@@ -182,7 +182,7 @@ page, retaining the original destination for the next login.
 
 ## Additional private pages
 
-The hub also includes `/hoa-co`, `/chien-thuat`, and `/lich-hoc`. Each uses
+The hub also includes `/draw`, `/chien-thuat`, and `/lich-hoc`. Each uses
 PrivateContent and the shared login/return flow. Draw exercises and source games
 are served by authenticated `/api/draw-exercises` and `/api/draw-game-sources`.
 Tactics topics and schedule data are served by `/api/private-tactics` and

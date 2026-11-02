@@ -1,0 +1,257 @@
+[
+  {
+    "source": "https://www.pgnmentor.com/players/Akobian.zip",
+    "archive": "Akobian.zip",
+    "sha256": "a78a0989c2e45c5f7056c8c2c68f5c606c5745a504169a2a3afcbcc81cc24950"
+  },
+  {
+    "source": "https://www.pgnmentor.com/players/Alekhine.zip",
+    "archive": "Alekhine.zip",
+    "sha256": "59f4c4e46a8bc2d9b4c7798e75a91b6a1676c30ebbc71ab04959fb86fed35b3f"
+  },
+  {
+    "source": "https://www.pgnmentor.com/players/Anand.zip",
+    "archive": "Anand.zip",
+    "sha256": "9f7227690c26ed05688cf1c118c46585c8d6a69a054764f5ef2649c47aeb292f"
+  },
+  {
+    "source": "https://www.pgnmentor.com/players/Anderssen.zip",
+    "archive": "Anderssen.zip",
+    "sha256": "a7b44e18652e06058dd36f32d10e3f425bf645a1aa71703714494209f01175d4"
+  },
+  {
+    "source": "https://www.pgnmentor.com/players/Aronian.zip",
+    "archive": "Aronian.zip",
+    "sha256": "d9fa17c7a3dab9c76627e93d00bf0c6f70dbe6deb12289b71a4c34ec4601fcc5"
+  },
+  {
+    "source": "https://www.pgnmentor.com/players/Bacrot.zip",
+    "archive": "Bacrot.zip",
+    "sha256": "46791559f23170dcbbcdd6859ae5d39052f7b20d19870f6d38e2ec920b099371"
+  },
+  {
+    "source": "https://www.pgnmentor.com/players/Blackburne.zip",
+    "archive": "Blackburne.zip",
+    "sha256": "93a78e2b9c9b99231ecdd929334aa50f0db63630401ffb9bf4d25f4d845771da"
+  },
+  {
+    "source": "https://www.pgnmentor.com/players/Bologan.zip",
+    "archive": "Bologan.zip",
+    "sha256": "2b5ac5b317e5133aa7b6f67de5006856cdb6375f3a3515d96323c3da85fc74bc"
+  },
+  {
+    "source": "https://www.pgnmentor.com/players/Bronstein.zip",
+    "archive": "Bronstein.zip",
+    "sha256": "5dcf17209b50426987076853e113527182cf4faeb30441e47f1e10aee1413c90"
+  },
+  {
+    "source": "https://www.pgnmentor.com/players/Carlsen.zip",
+    "archive": "Carlsen.zip",
+    "sha256": "29347942a512b260814717592c82cf6f3cd5975925a0b1732ef60f734651553d"
+  },
+  {
+    "source": "https://www.pgnmentor.com/players/Caruana.zip",
+    "archive": "Caruana.zip",
+    "sha256": "d63c0e697c2dab0b65247cc29f8f03c3b7c1f06d50a48da4f28cf971d89318f9"
+  },
+  {
+    "source": "https://www.pgnmentor.com/players/Chigorin.zip",
+    "archive": "Chigorin.zip",
+    "sha256": "a0f2d72830ae1b94bb16e5ea293f5347f6ec6f56080fdaa80ac246918c4c43df"
+  },
+  {
+    "source": "https://www.pgnmentor.com/players/Dreev.zip",
+    "archive": "Dreev.zip",
+    "sha256": "cefebcf086426c49db7ce8547a810d518fd616c31cb3f5c319bce373bc70a240"
+  },
+  {
+    "source": "https://www.pgnmentor.com/players/Ehlvest.zip",
+    "archive": "Ehlvest.zip",
+    "sha256": "cc466f113b6ecc2f1e61698c1d83e68676314cd1db112ceeef1314d6240e0f3b"
+  },
+  {
+    "source": "https://www.pgnmentor.com/players/Euwe.zip",
+    "archive": "Euwe.zip",
+    "sha256": "25322c989b0d7914a734feb0163c03a775a03b9f2b3bc453a65c21560fb9525c"
+  },
+  {
+    "source": "https://www.pgnmentor.com/players/Geller.zip",
+    "archive": "Geller.zip",
+    "sha256": "a5867d50e7a82bec799f3c0512f6be56e6511d69af83ee9210a2d3561f69987e"
+  },
+  {
+    "source": "https://www.pgnmentor.com/players/Giri.zip",
+    "archive": "Giri.zip",
+    "sha256": "a0649419c055a45849d000baec27f4008dda69194d99c3524426466dd100aa63"
+  },
+  {
+    "source": "https://www.pgnmentor.com/players/Gligoric.zip",
+    "archive": "Gligoric.zip",
+    "sha256": "05683605cc135db62bc252aa28d3e2fc61203cb4b314da38ea88157f36a7cb22"
+  },
+  {
+    "source": "https://www.pgnmentor.com/players/Grischuk.zip",
+    "archive": "Grischuk.zip",
+    "sha256": "b31b5f6541299ccea3c769c521a1f7b03699bdd87ffb251831baae72f2a99828"
+  },
+  {
+    "source": "https://www.pgnmentor.com/players/GurevichD.zip",
+    "archive": "GurevichD.zip",
+    "sha256": "ef0363bd32d218e20ef54a66a2ce99b569d3bb9a05ca10020bc5dca45baf24cd"
+  },
+  {
+    "source": "https://www.pgnmentor.com/players/GurevichM.zip",
+    "archive": "GurevichM.zip",
+    "sha256": "c6d2f949d25f3c292056eba66fdef0e1cd8bbb4a7ccbffd00827b3668f242e71"
+  },
+  {
+    "source": "https://www.pgnmentor.com/players/Ivanchuk.zip",
+    "archive": "Ivanchuk.zip",
+    "sha256": "7ec014b95ad9d5c2540287ad7c53ef1ad8cc7fed76d34ad4ae4a5a6fd31f21d6"
+  },
+  {
+    "source": "https://www.pgnmentor.com/players/Ivkov.zip",
+    "archive": "Ivkov.zip",
+    "sha256": "1bd7238a25ac96c3c0e3a44bcfaa6a18ae8e0226eef969d6f3d658d5d9cd2bd8"
+  },
+  {
+    "source": "https://www.pgnmentor.com/players/Jobava.zip",
+    "archive": "Jobava.zip",
+    "sha256": "85f33104263dde240688ea339515bdc7a801125ef82308ac9019d19b9840c958"
+  },
+  {
+    "source": "https://www.pgnmentor.com/players/Jussupow.zip",
+    "archive": "Jussupow.zip",
+    "sha256": "ecdbddc68403551dc9fc7496696e1f4785f8c5d2559ee3ba5c4ca0b079bce09c"
+  },
+  {
+    "source": "https://www.pgnmentor.com/players/Kamsky.zip",
+    "archive": "Kamsky.zip",
+    "sha256": "86d5680a18b7847d34bda67fff05f801ee96341dedfcd99b01dfcb087961d742"
+  },
+  {
+    "source": "https://www.pgnmentor.com/players/Kasparov.zip",
+    "archive": "Kasparov.zip",
+    "sha256": "c5acd2fa3175af0a32a3b45fc57282b21aaeda973a47b1e126668166a34a5702"
+  },
+  {
+    "source": "https://www.pgnmentor.com/players/Kholmov.zip",
+    "archive": "Kholmov.zip",
+    "sha256": "c43abc255793ab4aca8e88dc1971cd6fcd0ada39f899fbfc6eebe928b9df3ff0"
+  },
+  {
+    "source": "https://www.pgnmentor.com/players/Krasenkow.zip",
+    "archive": "Krasenkow.zip",
+    "sha256": "12df934dbe1573cf2b1a9951ef3b1ba1a53037944ae44fa2982a5698fbe7dc55"
+  },
+  {
+    "source": "https://www.pgnmentor.com/players/Larsen.zip",
+    "archive": "Larsen.zip",
+    "sha256": "2ddae2fd943200dbba048361c5b944a3f15457eee6b1437cbcfaed6996515fa1"
+  },
+  {
+    "source": "https://www.pgnmentor.com/players/Marshall.zip",
+    "archive": "Marshall.zip",
+    "sha256": "01280153412a1bc4c1967c4b0a2ee75897ecbda09caffe740bfc1a8082b7ac68"
+  },
+  {
+    "source": "https://www.pgnmentor.com/players/Morozevich.zip",
+    "archive": "Morozevich.zip",
+    "sha256": "6a5afeb1a4fb3fa7e255cb7327f3de63249d86fd2e166877da0add97d5f57f6d"
+  },
+  {
+    "source": "https://www.pgnmentor.com/players/Navara.zip",
+    "archive": "Navara.zip",
+    "sha256": "0cc52d2ab3ce1e14f42c46f86243489e682064d53dd661552bd0975316fae723"
+  },
+  {
+    "source": "https://www.pgnmentor.com/players/Nepomniachtchi.zip",
+    "archive": "Nepomniachtchi.zip",
+    "sha256": "eb409fd7d72575dfacd0bc7dddd40046adcebad46181c0684aeb30c859b1971c"
+  },
+  {
+    "source": "https://www.pgnmentor.com/players/Nimzowitsch.zip",
+    "archive": "Nimzowitsch.zip",
+    "sha256": "e2c16a97456985391927246392130849f01e5581b55556f48e6d152107641b19"
+  },
+  {
+    "source": "https://www.pgnmentor.com/players/Nunn.zip",
+    "archive": "Nunn.zip",
+    "sha256": "b1104d57b963429b95487b15be8b783df041fcdbeaf2372900f3445cc8e71589"
+  },
+  {
+    "source": "https://www.pgnmentor.com/players/PolgarJ.zip",
+    "archive": "PolgarJ.zip",
+    "sha256": "93d9ea786c536d718ae1845867ff0b045b8dd343c94211c9467dfe39eb3342c1"
+  },
+  {
+    "source": "https://www.pgnmentor.com/players/Radjabov.zip",
+    "archive": "Radjabov.zip",
+    "sha256": "5bf5297789df24213197cee7d8e2c80939bd78a470856907e53df0189cb72a00"
+  },
+  {
+    "source": "https://www.pgnmentor.com/players/Rublevsky.zip",
+    "archive": "Rublevsky.zip",
+    "sha256": "3d2403ce848b1345a5991be67ac6cb4438049c497dba4708b708ddacf95aebe4"
+  },
+  {
+    "source": "https://www.pgnmentor.com/players/Sasikiran.zip",
+    "archive": "Sasikiran.zip",
+    "sha256": "50d888f497d374c0e938fde7e4fc00c1d9aaa1b798f86109e2a1d34d9c59eeb9"
+  },
+  {
+    "source": "https://www.pgnmentor.com/players/Shabalov.zip",
+    "archive": "Shabalov.zip",
+    "sha256": "bfd3f7cca47cb54774b54bbc35956e50e470511de11bdfb169a2a2e427e8ad6a"
+  },
+  {
+    "source": "https://www.pgnmentor.com/players/Shirov.zip",
+    "archive": "Shirov.zip",
+    "sha256": "b2d9883ee1489c06f4aa0f7743b4f1f30674d4e76e3742715a2f5a62d19831b4"
+  },
+  {
+    "source": "https://www.pgnmentor.com/players/So.zip",
+    "archive": "So.zip",
+    "sha256": "82aeecf48ecacb07cdb44f95cb6dd07badfa2e177f7a0693d67a7a5b3fd224aa"
+  },
+  {
+    "source": "https://www.pgnmentor.com/players/Spassky.zip",
+    "archive": "Spassky.zip",
+    "sha256": "a533e447443f37b7e5c32bce77e5f5f22e7c2c8b392feb758377e7c01c50f467"
+  },
+  {
+    "source": "https://www.pgnmentor.com/players/Svidler.zip",
+    "archive": "Svidler.zip",
+    "sha256": "489b60a662de85411ccade42dfe20c57686681b1836aaa93a28c230eaca14383"
+  },
+  {
+    "source": "https://www.pgnmentor.com/players/Tal.zip",
+    "archive": "Tal.zip",
+    "sha256": "4fef900575a39450bfe953fd60ede363c2d72994fdf388494374d68708588afd"
+  },
+  {
+    "source": "https://www.pgnmentor.com/players/Topalov.zip",
+    "archive": "Topalov.zip",
+    "sha256": "77b824a291d8e13325a1c5b7e6b32248c3828a43ea0e7cfba76aecac438fb183"
+  },
+  {
+    "source": "https://www.pgnmentor.com/players/Uhlmann.zip",
+    "archive": "Uhlmann.zip",
+    "sha256": "9992b6840e0d63405e2e138d37062849778b9e45cadd58ceff7c30fe9f92eafb"
+  },
+  {
+    "source": "https://www.pgnmentor.com/players/VachierLagrave.zip",
+    "archive": "VachierLagrave.zip",
+    "sha256": "095e47f4c8e2fb3e64a68e2ee01fe801c62380fc3be8fcee07275b08b3175f3b"
+  },
+  {
+    "source": "https://www.pgnmentor.com/players/Vaganian.zip",
+    "archive": "Vaganian.zip",
+    "sha256": "f59221f0248eb806fff8e7d4cb0cc114dfade876057950e422e78740f19445e3"
+  },
+  {
+    "source": "https://www.pgnmentor.com/players/VanWely.zip",
+    "archive": "VanWely.zip",
+    "sha256": "032b57aaa96f266cc94818bdfdd998809ed6a2dac3fd783140f991aa06079f9a"
+  }
+]

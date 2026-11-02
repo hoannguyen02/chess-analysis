@@ -1,0 +1,176 @@
+{
+  "gameId": "df290b0fb51485e1",
+  "fen": "3brrk1/3R3p/p4p2/6p1/1p1B2Q1/6P1/qP3P1P/4R1K1 w - - 4 26",
+  "moves": [
+    "Qxg5+",
+    "fxg5",
+    "Rg7+",
+    "Kh8",
+    "Rxg5+",
+    "Re5",
+    "Bxe5+",
+    "Bf6",
+    "Bxf6+",
+    "Rxf6",
+    "Re8+",
+    "Rf8",
+    "Rxf8+",
+    "Qg8",
+    "Rgxg8#"
+  ],
+  "solverMoves": 8,
+  "nodes": {
+    "3brrk1/3R3p/p4p2/6p1/1p1B2Q1/6P1/qP3P1P/4R1K1 w - - 4 26|8": {
+      "move": "g4g5"
+    },
+    "3brrk1/3R3p/p4p2/6Q1/1p1B4/6P1/qP3P1P/4R1K1 b - - 0 26|7": {
+      "replies": [
+        "g8h8",
+        "f6g5"
+      ]
+    },
+    "3brr1k/3R3p/p4p2/6Q1/1p1B4/6P1/qP3P1P/4R1K1 w - - 1 27|7": {
+      "move": "g5g7"
+    },
+    "3brr1k/3R2Qp/p4p2/8/1p1B4/6P1/qP3P1P/4R1K1 b - - 2 27|6": {
+      "mate": true
+    },
+    "3brrk1/3R3p/p7/6p1/1p1B4/6P1/qP3P1P/4R1K1 w - - 0 27|7": {
+      "move": "d7g7"
+    },
+    "3brrk1/6Rp/p7/6p1/1p1B4/6P1/qP3P1P/4R1K1 b - - 1 27|6": {
+      "replies": [
+        "g8h8"
+      ]
+    },
+    "3brr1k/6Rp/p7/6p1/1p1B4/6P1/qP3P1P/4R1K1 w - - 2 28|6": {
+      "move": "g7g5"
+    },
+    "3brr1k/7p/p7/6R1/1p1B4/6P1/qP3P1P/4R1K1 b - - 0 28|5": {
+      "replies": [
+        "f8f6",
+        "e8e5",
+        "d8f6"
+      ]
+    },
+    "3br2k/7p/p4r2/6R1/1p1B4/6P1/qP3P1P/4R1K1 w - - 1 29|5": {
+      "move": "e1e8"
+    },
+    "3bR2k/7p/p4r2/6R1/1p1B4/6P1/qP3P1P/6K1 b - - 0 29|4": {
+      "replies": [
+        "a2g8"
+      ]
+    },
+    "3bR1qk/7p/p4r2/6R1/1p1B4/6P1/1P3P1P/6K1 w - - 1 30|4": {
+      "move": "g5g8"
+    },
+    "3bR1Rk/7p/p4r2/8/1p1B4/6P1/1P3P1P/6K1 b - - 0 30|3": {
+      "mate": true
+    },
+    "3b1r1k/7p/p7/4r1R1/1p1B4/6P1/qP3P1P/4R1K1 w - - 1 29|5": {
+      "move": "d4e5"
+    },
+    "3b1r1k/7p/p7/4B1R1/1p6/6P1/qP3P1P/4R1K1 b - - 0 29|4": {
+      "replies": [
+        "f8f6",
+        "d8f6"
+      ]
+    },
+    "3b3k/7p/p4r2/4B1R1/1p6/6P1/qP3P1P/4R1K1 w - - 1 30|4": {
+      "move": "e5f6"
+    },
+    "3b3k/7p/p4B2/6R1/1p6/6P1/qP3P1P/4R1K1 b - - 0 30|3": {
+      "replies": [
+        "d8f6"
+      ]
+    },
+    "7k/7p/p4b2/6R1/1p6/6P1/qP3P1P/4R1K1 w - - 0 31|3": {
+      "move": "e1e8"
+    },
+    "4R2k/7p/p4b2/6R1/1p6/6P1/qP3P1P/6K1 b - - 1 31|2": {
+      "replies": [
+        "a2g8"
+      ]
+    },
+    "4R1qk/7p/p4b2/6R1/1p6/6P1/1P3P1P/6K1 w - - 2 32|2": {
+      "move": "g5g8"
+    },
+    "4R1Rk/7p/p4b2/8/1p6/6P1/1P3P1P/6K1 b - - 0 32|1": {
+      "mate": true
+    },
+    "5r1k/7p/p4b2/4B1R1/1p6/6P1/qP3P1P/4R1K1 w - - 1 30|4": {
+      "move": "e5f6"
+    },
+    "5r1k/7p/p4B2/6R1/1p6/6P1/qP3P1P/4R1K1 b - - 0 30|3": {
+      "replies": [
+        "f8f6"
+      ]
+    },
+    "7k/7p/p4r2/6R1/1p6/6P1/qP3P1P/4R1K1 w - - 0 31|3": {
+      "move": "e1e8"
+    },
+    "4R2k/7p/p4r2/6R1/1p6/6P1/qP3P1P/6K1 b - - 1 31|2": {
+      "replies": [
+        "f6f8",
+        "a2g8"
+      ]
+    },
+    "4Rr1k/7p/p7/6R1/1p6/6P1/qP3P1P/6K1 w - - 2 32|2": {
+      "move": "e8f8"
+    },
+    "5R1k/7p/p7/6R1/1p6/6P1/qP3P1P/6K1 b - - 0 32|1": {
+      "replies": [
+        "a2g8"
+      ]
+    },
+    "5Rqk/7p/p7/6R1/1p6/6P1/1P3P1P/6K1 w - - 1 33|1": {
+      "move": "g5g8"
+    },
+    "5RRk/7p/p7/8/1p6/6P1/1P3P1P/6K1 b - - 0 33|0": {
+      "mate": true
+    },
+    "4R1qk/7p/p4r2/6R1/1p6/6P1/1P3P1P/6K1 w - - 2 32|2": {
+      "move": "g5g8"
+    },
+    "4R1Rk/7p/p4r2/8/1p6/6P1/1P3P1P/6K1 b - - 0 32|1": {
+      "mate": true
+    },
+    "4rr1k/7p/p4b2/6R1/1p1B4/6P1/qP3P1P/4R1K1 w - - 1 29|5": {
+      "move": "d4f6"
+    },
+    "4rr1k/7p/p4B2/6R1/1p6/6P1/qP3P1P/4R1K1 b - - 0 29|4": {
+      "replies": [
+        "f8f6"
+      ]
+    },
+    "4r2k/7p/p4r2/6R1/1p6/6P1/qP3P1P/4R1K1 w - - 0 30|4": {
+      "move": "e1e8"
+    },
+    "4R2k/7p/p4r2/6R1/1p6/6P1/qP3P1P/6K1 b - - 0 30|3": {
+      "replies": [
+        "f6f8",
+        "a2g8"
+      ]
+    },
+    "4Rr1k/7p/p7/6R1/1p6/6P1/qP3P1P/6K1 w - - 1 31|3": {
+      "move": "e8f8"
+    },
+    "5R1k/7p/p7/6R1/1p6/6P1/qP3P1P/6K1 b - - 0 31|2": {
+      "replies": [
+        "a2g8"
+      ]
+    },
+    "5Rqk/7p/p7/6R1/1p6/6P1/1P3P1P/6K1 w - - 1 32|2": {
+      "move": "g5g8"
+    },
+    "5RRk/7p/p7/8/1p6/6P1/1P3P1P/6K1 b - - 0 32|1": {
+      "mate": true
+    },
+    "4R1qk/7p/p4r2/6R1/1p6/6P1/1P3P1P/6K1 w - - 1 31|3": {
+      "move": "g5g8"
+    },
+    "4R1Rk/7p/p4r2/8/1p6/6P1/1P3P1P/6K1 b - - 0 31|2": {
+      "mate": true
+    }
+  }
+}

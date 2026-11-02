@@ -1,0 +1,3987 @@
+[
+  {
+    "id": "queen-rook-mate",
+    "title": "Chiếu hết bằng Hậu và Xe",
+    "description": "Phối hợp Hậu và Xe: bảo vệ quân chiếu, cắt đường thoát và tạo thế chiếu hết.",
+    "exercises": [
+      {
+        "title": "Hậu và Xe phối hợp · Bài 1",
+        "prompt": "Phối hợp Hậu và Xe để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "8/8/k2q4/8/8/8/5r2/1K6 b - - 0 1",
+        "moves": [
+          "Qd1#"
+        ],
+        "hints": [
+          "Tìm ô Hậu có thể chiếu, đồng thời được Xe bảo vệ hoặc được Xe hỗ trợ khóa đường thoát.",
+          "Kiểm tra mọi ô thoát và xem Vua đối phương có thể bắt Hậu không."
+        ],
+        "solution": "Hậu chiếu hết với Xe hỗ trợ ở f2. Nhánh mẫu: Qd1#."
+      },
+      {
+        "title": "Hậu và Xe phối hợp · Bài 2",
+        "prompt": "Phối hợp Hậu và Xe để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "8/8/8/2q5/8/1K1k4/r7/8 b - - 0 1",
+        "moves": [
+          "Qa3#"
+        ],
+        "hints": [
+          "Tìm ô Hậu có thể chiếu, đồng thời được Xe bảo vệ hoặc được Xe hỗ trợ khóa đường thoát.",
+          "Kiểm tra mọi ô thoát và xem Vua đối phương có thể bắt Hậu không."
+        ],
+        "solution": "Hậu chiếu hết với Xe hỗ trợ ở a2. Nhánh mẫu: Qa3#."
+      },
+      {
+        "title": "Hậu và Xe phối hợp · Bài 3",
+        "prompt": "Phối hợp Hậu và Xe để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "6q1/8/8/6r1/3k4/7K/8/8 b - - 0 1",
+        "moves": [
+          "Qh7#"
+        ],
+        "hints": [
+          "Tìm ô Hậu có thể chiếu, đồng thời được Xe bảo vệ hoặc được Xe hỗ trợ khóa đường thoát.",
+          "Kiểm tra mọi ô thoát và xem Vua đối phương có thể bắt Hậu không."
+        ],
+        "solution": "Hậu chiếu hết với Xe hỗ trợ ở g5. Nhánh mẫu: Qh7#."
+      },
+      {
+        "title": "Hậu và Xe phối hợp · Bài 4",
+        "prompt": "Phối hợp Hậu và Xe để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "8/1q6/8/K7/8/8/1r5k/8 b - - 0 1",
+        "moves": [
+          "Qb5#"
+        ],
+        "hints": [
+          "Tìm ô Hậu có thể chiếu, đồng thời được Xe bảo vệ hoặc được Xe hỗ trợ khóa đường thoát.",
+          "Kiểm tra mọi ô thoát và xem Vua đối phương có thể bắt Hậu không."
+        ],
+        "solution": "Hậu chiếu hết với Xe hỗ trợ ở b2. Nhánh mẫu: Qb5#."
+      },
+      {
+        "title": "Hậu và Xe phối hợp · Bài 5",
+        "prompt": "Phối hợp Hậu và Xe để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "5k2/R7/4Q3/4K3/8/8/8/8 w - - 0 1",
+        "moves": [
+          "Qf7#"
+        ],
+        "hints": [
+          "Tìm ô Hậu có thể chiếu, đồng thời được Xe bảo vệ hoặc được Xe hỗ trợ khóa đường thoát.",
+          "Kiểm tra mọi ô thoát và xem Vua đối phương có thể bắt Hậu không."
+        ],
+        "solution": "Hậu chiếu hết với Xe hỗ trợ ở a7. Nhánh mẫu: Qf7#."
+      },
+      {
+        "title": "Hậu và Xe phối hợp · Bài 6",
+        "prompt": "Phối hợp Hậu và Xe để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "8/8/8/4Q3/3R4/K7/8/k7 w - - 0 1",
+        "moves": [
+          "Rb4#"
+        ],
+        "hints": [
+          "Tìm ô Hậu có thể chiếu, đồng thời được Xe bảo vệ hoặc được Xe hỗ trợ khóa đường thoát.",
+          "Kiểm tra mọi ô thoát và xem Vua đối phương có thể bắt Hậu không."
+        ],
+        "solution": "Hậu chiếu hết với Xe hỗ trợ ở b4. Nhánh mẫu: Rb4#."
+      },
+      {
+        "title": "Hậu và Xe phối hợp · Bài 7",
+        "prompt": "Phối hợp Hậu và Xe để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "1k6/6r1/6q1/8/7K/8/8/8 b - - 0 1",
+        "moves": [
+          "Qg4#"
+        ],
+        "hints": [
+          "Tìm ô Hậu có thể chiếu, đồng thời được Xe bảo vệ hoặc được Xe hỗ trợ khóa đường thoát.",
+          "Kiểm tra mọi ô thoát và xem Vua đối phương có thể bắt Hậu không."
+        ],
+        "solution": "Hậu chiếu hết với Xe hỗ trợ ở g7. Nhánh mẫu: Qg4#."
+      },
+      {
+        "title": "Hậu và Xe phối hợp · Bài 8",
+        "prompt": "Phối hợp Hậu và Xe để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "8/8/3Q4/2K5/8/8/7R/5k2 w - - 0 1",
+        "moves": [
+          "Qd1#"
+        ],
+        "hints": [
+          "Tìm ô Hậu có thể chiếu, đồng thời được Xe bảo vệ hoặc được Xe hỗ trợ khóa đường thoát.",
+          "Kiểm tra mọi ô thoát và xem Vua đối phương có thể bắt Hậu không."
+        ],
+        "solution": "Hậu chiếu hết với Xe hỗ trợ ở h2. Nhánh mẫu: Qd1#."
+      },
+      {
+        "title": "Hậu và Xe phối hợp · Bài 9",
+        "prompt": "Phối hợp Hậu và Xe để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "8/5QR1/K6k/8/8/8/8/8 w - - 0 1",
+        "moves": [
+          "Qg6#"
+        ],
+        "hints": [
+          "Tìm ô Hậu có thể chiếu, đồng thời được Xe bảo vệ hoặc được Xe hỗ trợ khóa đường thoát.",
+          "Kiểm tra mọi ô thoát và xem Vua đối phương có thể bắt Hậu không."
+        ],
+        "solution": "Hậu chiếu hết với Xe hỗ trợ ở g7. Nhánh mẫu: Qg6#."
+      },
+      {
+        "title": "Hậu và Xe phối hợp · Bài 10",
+        "prompt": "Phối hợp Hậu và Xe để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "5K1k/r7/8/8/8/8/8/7q b - - 0 1",
+        "moves": [
+          "Qa8#"
+        ],
+        "hints": [
+          "Tìm ô Hậu có thể chiếu, đồng thời được Xe bảo vệ hoặc được Xe hỗ trợ khóa đường thoát.",
+          "Kiểm tra mọi ô thoát và xem Vua đối phương có thể bắt Hậu không."
+        ],
+        "solution": "Hậu chiếu hết với Xe hỗ trợ ở a7. Nhánh mẫu: Qa8#."
+      },
+      {
+        "title": "Hậu và Xe phối hợp · Bài 11",
+        "prompt": "Phối hợp Hậu và Xe để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "3K4/8/8/k7/8/1R6/4Q3/8 w - - 0 1",
+        "moves": [
+          "Qa2#"
+        ],
+        "hints": [
+          "Tìm ô Hậu có thể chiếu, đồng thời được Xe bảo vệ hoặc được Xe hỗ trợ khóa đường thoát.",
+          "Kiểm tra mọi ô thoát và xem Vua đối phương có thể bắt Hậu không."
+        ],
+        "solution": "Hậu chiếu hết với Xe hỗ trợ ở b3. Nhánh mẫu: Qa2#."
+      },
+      {
+        "title": "Hậu và Xe phối hợp · Bài 12",
+        "prompt": "Phối hợp Hậu và Xe để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "4k3/6K1/8/8/5q2/8/8/7r b - - 0 1",
+        "moves": [
+          "Qg5#"
+        ],
+        "hints": [
+          "Tìm ô Hậu có thể chiếu, đồng thời được Xe bảo vệ hoặc được Xe hỗ trợ khóa đường thoát.",
+          "Kiểm tra mọi ô thoát và xem Vua đối phương có thể bắt Hậu không."
+        ],
+        "solution": "Hậu chiếu hết với Xe hỗ trợ ở h1. Nhánh mẫu: Qg5#."
+      },
+      {
+        "title": "Hậu và Xe phối hợp · Bài 13",
+        "prompt": "Phối hợp Hậu và Xe để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "8/5q2/8/6r1/8/1k6/8/7K b - - 0 1",
+        "moves": [
+          "Qh5#"
+        ],
+        "hints": [
+          "Tìm ô Hậu có thể chiếu, đồng thời được Xe bảo vệ hoặc được Xe hỗ trợ khóa đường thoát.",
+          "Kiểm tra mọi ô thoát và xem Vua đối phương có thể bắt Hậu không."
+        ],
+        "solution": "Hậu chiếu hết với Xe hỗ trợ ở g5. Nhánh mẫu: Qh5#."
+      },
+      {
+        "title": "Hậu và Xe phối hợp · Bài 14",
+        "prompt": "Phối hợp Hậu và Xe để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "8/4q1r1/7K/8/8/1k6/8/8 b - - 0 1",
+        "moves": [
+          "Qg5#"
+        ],
+        "hints": [
+          "Tìm ô Hậu có thể chiếu, đồng thời được Xe bảo vệ hoặc được Xe hỗ trợ khóa đường thoát.",
+          "Kiểm tra mọi ô thoát và xem Vua đối phương có thể bắt Hậu không."
+        ],
+        "solution": "Hậu chiếu hết với Xe hỗ trợ ở g7. Nhánh mẫu: Qg5#."
+      },
+      {
+        "title": "Hậu và Xe phối hợp · Bài 15",
+        "prompt": "Phối hợp Hậu và Xe để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "Q7/8/4R3/5k2/7K/8/8/8 w - - 0 1",
+        "moves": [
+          "Qe4#"
+        ],
+        "hints": [
+          "Tìm ô Hậu có thể chiếu, đồng thời được Xe bảo vệ hoặc được Xe hỗ trợ khóa đường thoát.",
+          "Kiểm tra mọi ô thoát và xem Vua đối phương có thể bắt Hậu không."
+        ],
+        "solution": "Hậu chiếu hết với Xe hỗ trợ ở e6. Nhánh mẫu: Qe4#."
+      },
+      {
+        "title": "Hậu và Xe phối hợp · Bài 16",
+        "prompt": "Phối hợp Hậu và Xe để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "4K3/7r/8/8/k7/7q/8/8 b - - 0 1",
+        "moves": [
+          "Qc8#"
+        ],
+        "hints": [
+          "Tìm ô Hậu có thể chiếu, đồng thời được Xe bảo vệ hoặc được Xe hỗ trợ khóa đường thoát.",
+          "Kiểm tra mọi ô thoát và xem Vua đối phương có thể bắt Hậu không."
+        ],
+        "solution": "Hậu chiếu hết với Xe hỗ trợ ở h7. Nhánh mẫu: Qc8#."
+      },
+      {
+        "title": "Hậu và Xe phối hợp · Bài 17",
+        "prompt": "Phối hợp Hậu và Xe để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "4R3/8/5k2/7K/8/8/6Q1/8 w - - 0 1",
+        "moves": [
+          "Qg6#"
+        ],
+        "hints": [
+          "Tìm ô Hậu có thể chiếu, đồng thời được Xe bảo vệ hoặc được Xe hỗ trợ khóa đường thoát.",
+          "Kiểm tra mọi ô thoát và xem Vua đối phương có thể bắt Hậu không."
+        ],
+        "solution": "Hậu chiếu hết với Xe hỗ trợ ở e8. Nhánh mẫu: Qg6#."
+      },
+      {
+        "title": "Hậu và Xe phối hợp · Bài 18",
+        "prompt": "Phối hợp Hậu và Xe để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "5K2/8/8/2Q5/7k/6R1/8/8 w - - 0 1",
+        "moves": [
+          "Qg5#"
+        ],
+        "hints": [
+          "Tìm ô Hậu có thể chiếu, đồng thời được Xe bảo vệ hoặc được Xe hỗ trợ khóa đường thoát.",
+          "Kiểm tra mọi ô thoát và xem Vua đối phương có thể bắt Hậu không."
+        ],
+        "solution": "Hậu chiếu hết với Xe hỗ trợ ở g3. Nhánh mẫu: Qg5#."
+      },
+      {
+        "title": "Hậu và Xe phối hợp · Bài 19",
+        "prompt": "Phối hợp Hậu và Xe để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "7k/R3Q3/8/8/8/8/K7/8 w - - 0 1",
+        "moves": [
+          "Qg7#"
+        ],
+        "hints": [
+          "Tìm ô Hậu có thể chiếu, đồng thời được Xe bảo vệ hoặc được Xe hỗ trợ khóa đường thoát.",
+          "Kiểm tra mọi ô thoát và xem Vua đối phương có thể bắt Hậu không."
+        ],
+        "solution": "Hậu chiếu hết với Xe hỗ trợ ở a7. Nhánh mẫu: Qg7#."
+      },
+      {
+        "title": "Hậu và Xe phối hợp · Bài 20",
+        "prompt": "Phối hợp Hậu và Xe để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "8/8/8/1Q6/8/8/3R4/k4K2 w - - 0 1",
+        "moves": [
+          "Qb2#"
+        ],
+        "hints": [
+          "Tìm ô Hậu có thể chiếu, đồng thời được Xe bảo vệ hoặc được Xe hỗ trợ khóa đường thoát.",
+          "Kiểm tra mọi ô thoát và xem Vua đối phương có thể bắt Hậu không."
+        ],
+        "solution": "Hậu chiếu hết với Xe hỗ trợ ở d2. Nhánh mẫu: Qb2#."
+      },
+      {
+        "title": "Geller, Efim P — Kortschnoj, Viktor",
+        "prompt": "Phối hợp Hậu và Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "4R3/5kqp/1p4p1/3p4/3P3Q/3n2P1/5PKP/r7 w - - 2 41",
+        "moves": [
+          "Qe7#"
+        ],
+        "previousMove": {
+          "fen": "4R1k1/6qp/1p4p1/3p4/3P3Q/3n2P1/5PKP/r7 b - - 1 40",
+          "move": "Kf7"
+        },
+        "source": "https://www.pgnmentor.com/players/Geller.zip",
+        "gameReference": {
+          "collection": "queen-rook-mate",
+          "kind": "game",
+          "id": "1e200af2d8f1b99f",
+          "ply": 80,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 1,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Hậu có thể chiếu trên hàng, cột hoặc đường chéo nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Hậu; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở e8 hỗ trợ khống chế các ô thoát hoặc bảo vệ Hậu. Hậu ở e7 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Qe7#."
+      },
+      {
+        "title": "Morozevich,A — Khanin,S",
+        "prompt": "Phối hợp Hậu và Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "6k1/2p2R2/6p1/P5Np/bpq4P/8/P1PK1Q2/4r3 b - - 1 41",
+        "moves": [
+          "Qc3#"
+        ],
+        "previousMove": {
+          "fen": "6k1/2p2R2/6p1/P5Np/bpq4P/8/P1P2Q2/2K1r3 w - - 0 41",
+          "move": "Kd2"
+        },
+        "source": "https://www.pgnmentor.com/players/Morozevich.zip",
+        "gameReference": {
+          "collection": "queen-rook-mate",
+          "kind": "game",
+          "id": "27650fcb7216c2c8",
+          "ply": 81,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 1,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Hậu có thể chiếu trên hàng, cột hoặc đường chéo nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Hậu; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở e1 hỗ trợ khống chế các ô thoát hoặc bảo vệ Hậu. Hậu ở c3 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Qc3#."
+      },
+      {
+        "title": "Morozevich,A — Ivanisevic,I",
+        "prompt": "Phối hợp Hậu và Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/R7/1pk1p3/2p1q3/8/3Q4/KN6/7r w - - 3 49",
+        "moves": [
+          "Qd7#"
+        ],
+        "previousMove": {
+          "fen": "8/R7/1pk1p3/2p5/5q2/3Q4/KN6/7r b - - 2 48",
+          "move": "Qe5"
+        },
+        "source": "https://www.pgnmentor.com/players/Morozevich.zip",
+        "gameReference": {
+          "collection": "queen-rook-mate",
+          "kind": "game",
+          "id": "2f2743d175e82c44",
+          "ply": 96,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 1,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Hậu có thể chiếu trên hàng, cột hoặc đường chéo nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Hậu; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở a7 hỗ trợ khống chế các ô thoát hoặc bảo vệ Hậu. Hậu ở d7 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Qd7#."
+      },
+      {
+        "title": "Marshall, Frank James — Rubinstein, Akiba",
+        "prompt": "Phối hợp Hậu và Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/3r3k/2bqQ2p/1p6/8/6R1/5PPK/8 w - - 0 47",
+        "moves": [
+          "Qg8#"
+        ],
+        "previousMove": {
+          "fen": "8/3r3k/2bPQ2p/1p6/8/6R1/5PPK/3q4 b - - 2 46",
+          "move": "Qxd6"
+        },
+        "source": "https://www.pgnmentor.com/players/Marshall.zip",
+        "gameReference": {
+          "collection": "queen-rook-mate",
+          "kind": "game",
+          "id": "315584a5b000f74f",
+          "ply": 92,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 1,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Hậu có thể chiếu trên hàng, cột hoặc đường chéo nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Hậu; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở g3 hỗ trợ khống chế các ô thoát hoặc bảo vệ Hậu. Hậu ở g8 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Qg8#."
+      },
+      {
+        "title": "Usmanov,V — Morozevich,A",
+        "prompt": "Phối hợp Hậu và Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "k5r1/pb5p/1p6/4qp1P/1P1p4/P1nB1n2/2R2KP1/4RQ2 b - - 6 37",
+        "moves": [
+          "Qg3#"
+        ],
+        "previousMove": {
+          "fen": "k5r1/pb5p/1p6/4qp1P/1P1p4/P1nB1n2/2R3P1/4RQK1 w - - 5 37",
+          "move": "Kf2"
+        },
+        "source": "https://www.pgnmentor.com/players/Morozevich.zip",
+        "gameReference": {
+          "collection": "queen-rook-mate",
+          "kind": "game",
+          "id": "31594b773ee18563",
+          "ply": 73,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 1,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Hậu có thể chiếu trên hàng, cột hoặc đường chéo nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Hậu; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở g8 hỗ trợ khống chế các ô thoát hoặc bảo vệ Hậu. Hậu ở g3 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Qg3#."
+      },
+      {
+        "title": "Volkov,S1 — Morozevich,A",
+        "prompt": "Phối hợp Hậu và Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "6k1/6p1/2p4q/2P2P2/3P4/6Q1/4rn2/3R1RK1 b - - 1 40",
+        "moves": [
+          "Qh1#"
+        ],
+        "previousMove": {
+          "fen": "6k1/6p1/2p4q/2P2P2/3P4/6Q1/4rn1K/3R1R2 w - - 0 40",
+          "move": "Kg1"
+        },
+        "source": "https://www.pgnmentor.com/players/Morozevich.zip",
+        "gameReference": {
+          "collection": "queen-rook-mate",
+          "kind": "game",
+          "id": "32877dd3839e0b81",
+          "ply": 79,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 1,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Hậu có thể chiếu trên hàng, cột hoặc đường chéo nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Hậu; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở e2 hỗ trợ khống chế các ô thoát hoặc bảo vệ Hậu. Hậu ở h1 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Qh1#."
+      },
+      {
+        "title": "Alekhine, Alexander — NN",
+        "prompt": "Phối hợp Hậu và Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "r2q2n1/pbp1b1p1/1pnpk3/6B1/2PP4/3Q4/PP4PP/R4RK1 w - - 1 22",
+        "moves": [
+          "Qf5#"
+        ],
+        "previousMove": {
+          "fen": "r2q2n1/pbp1b1p1/1pnp4/3k2B1/2PP4/3Q4/PP4PP/R4RK1 b - c3 0 21",
+          "move": "Ke6"
+        },
+        "source": "https://www.pgnmentor.com/players/Alekhine.zip",
+        "gameReference": {
+          "collection": "queen-rook-mate",
+          "kind": "game",
+          "id": "442711a7a4f1a354",
+          "ply": 42,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 1,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Hậu có thể chiếu trên hàng, cột hoặc đường chéo nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Hậu; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở f1 hỗ trợ khống chế các ô thoát hoặc bảo vệ Hậu. Hậu ở f5 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Qf5#."
+      },
+      {
+        "title": "Manukian,Ar — Morozevich,A",
+        "prompt": "Phối hợp Hậu và Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "2Q5/1R6/8/3K4/k7/8/8/8 w - - 3 73",
+        "moves": [
+          "Qa8#"
+        ],
+        "previousMove": {
+          "fen": "2Q5/1R6/8/k2K4/8/8/8/8 b - - 2 72",
+          "move": "Ka4"
+        },
+        "source": "https://www.pgnmentor.com/players/Morozevich.zip",
+        "gameReference": {
+          "collection": "queen-rook-mate",
+          "kind": "game",
+          "id": "4ceb257e1bef3210",
+          "ply": 144,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 1,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Hậu có thể chiếu trên hàng, cột hoặc đường chéo nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Hậu; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở b7 hỗ trợ khống chế các ô thoát hoặc bảo vệ Hậu. Hậu ở a8 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Qa8#."
+      },
+      {
+        "title": "Marshall, Frank James — Rubinstein, Akiba",
+        "prompt": "Phối hợp Hậu và Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "r7/ppR4Q/4pk1p/3pn3/8/P3P1q1/1P1KNr2/1B6 w - - 0 25",
+        "moves": [
+          "Qe7#"
+        ],
+        "previousMove": {
+          "fen": "r7/ppR3pQ/4pk1R/3pn3/8/P3P1q1/1P1KNr2/1B6 b - - 0 24",
+          "move": "gxh6"
+        },
+        "source": "https://www.pgnmentor.com/players/Marshall.zip",
+        "gameReference": {
+          "collection": "queen-rook-mate",
+          "kind": "game",
+          "id": "4de2bf4c25210a6b",
+          "ply": 48,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 1,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Hậu có thể chiếu trên hàng, cột hoặc đường chéo nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Hậu; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở c7 hỗ trợ khống chế các ô thoát hoặc bảo vệ Hậu. Hậu ở e7 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Qe7#."
+      },
+      {
+        "title": "Morozevich,A — Kozak,Adam",
+        "prompt": "Phối hợp Hậu và Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/6pk/K1p4p/1rP5/7P/8/8/3q4 b - - 1 50",
+        "moves": [
+          "Qa1#"
+        ],
+        "previousMove": {
+          "fen": "8/K5pk/2p4p/1rP5/7P/8/8/3q4 w - - 0 50",
+          "move": "Ka6"
+        },
+        "source": "https://www.pgnmentor.com/players/Morozevich.zip",
+        "gameReference": {
+          "collection": "queen-rook-mate",
+          "kind": "game",
+          "id": "58726c2fc7347db1",
+          "ply": 99,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 1,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Hậu có thể chiếu trên hàng, cột hoặc đường chéo nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Hậu; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở b5 hỗ trợ khống chế các ô thoát hoặc bảo vệ Hậu. Hậu ở a1 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Qa1#."
+      },
+      {
+        "title": "Giri,A — Ivanchuk,V",
+        "prompt": "Phối hợp Hậu và Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "4r3/pbQ2Nkp/6p1/1p6/8/1P4P1/P4K1P/q7 b - - 5 37",
+        "moves": [
+          "Qe1#"
+        ],
+        "previousMove": {
+          "fen": "4r3/pb3Nkp/6p1/1p6/8/1P4P1/P1Q2K1P/q7 w - - 4 37",
+          "move": "Qc7"
+        },
+        "source": "https://www.pgnmentor.com/players/Ivanchuk.zip",
+        "gameReference": {
+          "collection": "queen-rook-mate",
+          "kind": "game",
+          "id": "67984d20afcafdb2",
+          "ply": 73,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 1,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Hậu có thể chiếu trên hàng, cột hoặc đường chéo nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Hậu; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở e8 hỗ trợ khống chế các ô thoát hoặc bảo vệ Hậu. Hậu ở e1 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Qe1#."
+      },
+      {
+        "title": "Geller, Efim P — Benko, Pal C",
+        "prompt": "Phối hợp Hậu và Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "r1bn2k1/1p2bN2/p5q1/3pp3/3P4/2P5/PP5Q/5R1K w - - 2 36",
+        "moves": [
+          "Qh8#"
+        ],
+        "previousMove": {
+          "fen": "r1bn3k/1p2bN2/p5q1/3pp3/3P4/2P5/PP5Q/5R1K b - - 1 35",
+          "move": "Kg8"
+        },
+        "source": "https://www.pgnmentor.com/players/Geller.zip",
+        "gameReference": {
+          "collection": "queen-rook-mate",
+          "kind": "game",
+          "id": "869be18d36f12ff5",
+          "ply": 70,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 1,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Hậu có thể chiếu trên hàng, cột hoặc đường chéo nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Hậu; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở f1 hỗ trợ khống chế các ô thoát hoặc bảo vệ Hậu. Hậu ở h8 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Qh8#."
+      },
+      {
+        "title": "Stein, Leonid — Janosevic, Dragoljub",
+        "prompt": "Phối hợp Hậu và Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "3rnk2/5r1B/1p1p4/4R3/1Pq2pQ1/5P2/6PP/3R3K w - - 1 37",
+        "moves": [
+          "Qg8#"
+        ],
+        "previousMove": {
+          "fen": "3r1k2/5rnB/1p1p4/4R3/1Pq2pQ1/5P2/6PP/3R3K b - - 0 36",
+          "move": "Ne8"
+        },
+        "source": "https://www.pgnmentor.com/players/Stein.zip",
+        "gameReference": {
+          "collection": "queen-rook-mate",
+          "kind": "game",
+          "id": "9569de895fdc4aa5",
+          "ply": 72,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 1,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Hậu có thể chiếu trên hàng, cột hoặc đường chéo nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Hậu; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở e5 hỗ trợ khống chế các ô thoát hoặc bảo vệ Hậu. Hậu ở g8 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Qg8#."
+      },
+      {
+        "title": "Gurevich,M — Ivanchuk,V",
+        "prompt": "Phối hợp Hậu và Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/2R5/5K2/3k4/Pb6/4Q3/8/1q6 w - - 9 66",
+        "moves": [
+          "Qe5#"
+        ],
+        "previousMove": {
+          "fen": "8/2R5/5K2/8/Pbk5/4Q3/8/1q6 b - - 8 65",
+          "move": "Kd5"
+        },
+        "source": "https://www.pgnmentor.com/players/Ivanchuk.zip",
+        "gameReference": {
+          "collection": "queen-rook-mate",
+          "kind": "game",
+          "id": "9f1f62645b829de3",
+          "ply": 130,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 1,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Hậu có thể chiếu trên hàng, cột hoặc đường chéo nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Hậu; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở c7 hỗ trợ khống chế các ô thoát hoặc bảo vệ Hậu. Hậu ở e5 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Qe5#."
+      },
+      {
+        "title": "Skold, Kristian — Keres, Paul",
+        "prompt": "Phối hợp Hậu và Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/2p4p/4Q3/2P5/3P1qp1/1Rnk1N2/2r1RKPP/8 w - - 0 42",
+        "moves": [
+          "Qa6#"
+        ],
+        "previousMove": {
+          "fen": "8/2p4p/4Q3/2P3p1/3P1q2/1Rnk1N2/2r1RKPP/8 b - - 0 41",
+          "move": "g4"
+        },
+        "source": "https://www.pgnmentor.com/players/Keres.zip",
+        "gameReference": {
+          "collection": "queen-rook-mate",
+          "kind": "game",
+          "id": "bbe27a633685bc41",
+          "ply": 82,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 1,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Hậu có thể chiếu trên hàng, cột hoặc đường chéo nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Hậu; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở e2, b3 hỗ trợ khống chế các ô thoát hoặc bảo vệ Hậu. Hậu ở a6 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Qa6#."
+      },
+      {
+        "title": "Kais,Kaarel — Morozevich,A",
+        "prompt": "Phối hợp Hậu và Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "1r6/p7/8/8/2pPkp2/K3p3/P1R5/4q3 b - - 3 56",
+        "moves": [
+          "Qa5#"
+        ],
+        "previousMove": {
+          "fen": "1r6/p7/8/8/2pPkp2/4p3/PKR5/4q3 w - - 2 56",
+          "move": "Ka3"
+        },
+        "source": "https://www.pgnmentor.com/players/Morozevich.zip",
+        "gameReference": {
+          "collection": "queen-rook-mate",
+          "kind": "game",
+          "id": "d35e8b299ff77366",
+          "ply": 111,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 1,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Hậu có thể chiếu trên hàng, cột hoặc đường chéo nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Hậu; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở b8 hỗ trợ khống chế các ô thoát hoặc bảo vệ Hậu. Hậu ở a5 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Qa5#."
+      },
+      {
+        "title": "Morozevich,A — Giri,A",
+        "prompt": "Phối hợp Hậu và Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/b7/4k3/p4NP1/5K2/r7/8/3q4 b - - 0 53",
+        "moves": [
+          "Qf3#"
+        ],
+        "previousMove": {
+          "fen": "8/b7/4k3/p4NP1/5nK1/r7/8/3q4 w - - 2 53",
+          "move": "Kxf4"
+        },
+        "source": "https://www.pgnmentor.com/players/Morozevich.zip",
+        "gameReference": {
+          "collection": "queen-rook-mate",
+          "kind": "game",
+          "id": "f6ecbdc7aaa6e6fe",
+          "ply": 105,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 1,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Hậu có thể chiếu trên hàng, cột hoặc đường chéo nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Hậu; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở a3 hỗ trợ khống chế các ô thoát hoặc bảo vệ Hậu. Hậu ở f3 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Qf3#."
+      },
+      {
+        "title": "Morozevich,A — Solak,D",
+        "prompt": "Phối hợp Hậu và Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "r5k1/3b4/p1p1N2Q/3n1p2/6q1/1B5R/PP3Pr1/4R2K w - - 1 38",
+        "moves": [
+          "Qh7#"
+        ],
+        "previousMove": {
+          "fen": "r3b1k1/8/p1p1N2Q/3n1p2/6q1/1B5R/PP3Pr1/4R2K b - - 0 37",
+          "move": "Bd7"
+        },
+        "source": "https://www.pgnmentor.com/players/Morozevich.zip",
+        "gameReference": {
+          "collection": "queen-rook-mate",
+          "kind": "game",
+          "id": "ffd628976818a3d9",
+          "ply": 74,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 1,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Hậu có thể chiếu trên hàng, cột hoặc đường chéo nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Hậu; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở h3 hỗ trợ khống chế các ô thoát hoặc bảo vệ Hậu. Hậu ở h7 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Qh7#."
+      },
+      {
+        "title": "Leko,P — Morozevich,A",
+        "prompt": "Phối hợp Hậu và Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/5p1p/p2rqpk1/8/5Q1R/6P1/1P3PKP/8 w - - 15 34",
+        "moves": [
+          "Qh6+",
+          "Kf5",
+          "Qh5#"
+        ],
+        "previousMove": {
+          "fen": "8/5p1p/p2rqp2/7k/5Q1R/6P1/1P3PKP/8 b - - 14 33",
+          "move": "Kg6"
+        },
+        "source": "https://www.pgnmentor.com/players/Morozevich.zip",
+        "gameReference": {
+          "collection": "queen-rook-mate",
+          "kind": "game",
+          "id": "2b0f3c12d7ddd74c",
+          "ply": 66,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Hậu có thể chiếu trên hàng, cột hoặc đường chéo nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Hậu; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở h4 hỗ trợ khống chế các ô thoát hoặc bảo vệ Hậu. Hậu ở h5 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Qh6+ · Kf5 · Qh5#."
+      },
+      {
+        "title": "Rakotomaharo,Fy Antenaina — Morozevich,A",
+        "prompt": "Phối hợp Hậu và Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/2Q5/1R6/1K6/8/k7/8/8 w - - 5 64",
+        "moves": [
+          "Kc4",
+          "Ka2",
+          "Qa7#"
+        ],
+        "previousMove": {
+          "fen": "8/2Q5/1R6/1K6/8/1k6/8/8 b - - 4 63",
+          "move": "Ka3"
+        },
+        "source": "https://www.pgnmentor.com/players/Morozevich.zip",
+        "gameReference": {
+          "collection": "queen-rook-mate",
+          "kind": "game",
+          "id": "892500150a40ce9b",
+          "ply": 126,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Hậu có thể chiếu trên hàng, cột hoặc đường chéo nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Hậu; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở b6 hỗ trợ khống chế các ô thoát hoặc bảo vệ Hậu. Hậu ở a7 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Kc4 · Ka2 · Qa7#."
+      },
+      {
+        "title": "Shabalov,A — Bartholomew,J",
+        "prompt": "Phối hợp Hậu và Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "1r4k1/p6p/1n2pQp1/1p2P3/2r5/2P1q3/PP3RB1/3R2K1 w - - 1 31",
+        "moves": [
+          "Rd8+",
+          "Rxd8",
+          "Qxd8+",
+          "Kg7",
+          "Qf8#"
+        ],
+        "previousMove": {
+          "fen": "1r5k/p6p/1n2pQp1/1p2P3/2r5/2P1q3/PP3RB1/3R2K1 b - - 0 30",
+          "move": "Kg8"
+        },
+        "source": "https://www.pgnmentor.com/players/Shabalov.zip",
+        "gameReference": {
+          "collection": "queen-rook-mate",
+          "kind": "game",
+          "id": "0128858ddcc0a33e",
+          "ply": 60,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Hậu có thể chiếu trên hàng, cột hoặc đường chéo nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Hậu; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở f2 hỗ trợ khống chế các ô thoát hoặc bảo vệ Hậu. Hậu ở f8 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Rd8+ · Rxd8 · Qxd8+ · Kg7 · Qf8#."
+      },
+      {
+        "title": "Bernadskiy,V — Jobava,Ba",
+        "prompt": "Phối hợp Hậu và Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "3q1k2/p2b1p1R/1p3nP1/3pPB2/3P1Q2/4PK2/1r6/8 w - - 3 43",
+        "moves": [
+          "Qh6+",
+          "Ke7",
+          "Rxf7+",
+          "Ke8",
+          "Qf8#"
+        ],
+        "previousMove": {
+          "fen": "3q1kn1/p2b1p1R/1p4P1/3pPB2/3P1Q2/4PK2/1r6/8 b - - 2 42",
+          "move": "Nf6"
+        },
+        "source": "https://www.pgnmentor.com/players/Jobava.zip",
+        "gameReference": {
+          "collection": "queen-rook-mate",
+          "kind": "game",
+          "id": "059cfa68c293e53c",
+          "ply": 84,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Hậu có thể chiếu trên hàng, cột hoặc đường chéo nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Hậu; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở f7 hỗ trợ khống chế các ô thoát hoặc bảo vệ Hậu. Hậu ở f8 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Qh6+ · Ke7 · Rxf7+ · Ke8 · Qf8#."
+      },
+      {
+        "title": "Boruchovsky,A — Jobava,Ba",
+        "prompt": "Phối hợp Hậu và Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "4r3/pk2r3/1p4q1/8/P6p/5P1P/Q5P1/3R3K b - - 1 39",
+        "moves": [
+          "Re1+",
+          "Rxe1",
+          "Rxe1+",
+          "Kh2",
+          "Qg3#"
+        ],
+        "previousMove": {
+          "fen": "4r3/pk2r3/1p4q1/8/P6p/5P1P/Q5P1/4R2K w - - 0 39",
+          "move": "Rd1"
+        },
+        "source": "https://www.pgnmentor.com/players/Jobava.zip",
+        "gameReference": {
+          "collection": "queen-rook-mate",
+          "kind": "game",
+          "id": "12fb0f779ee319ef",
+          "ply": 77,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Hậu có thể chiếu trên hàng, cột hoặc đường chéo nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Hậu; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở e1 hỗ trợ khống chế các ô thoát hoặc bảo vệ Hậu. Hậu ở g3 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Re1+ · Rxe1 · Rxe1+ · Kh2 · Qg3#."
+      },
+      {
+        "title": "Madan,A — Aronian,L",
+        "prompt": "Phối hợp Hậu và Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "4r1k1/p4p2/1p6/3Q3p/P1Pp1B2/1P4PP/2q5/5K2 b - - 5 39",
+        "moves": [
+          "Qd1+",
+          "Kf2",
+          "Re2+",
+          "Kf3",
+          "Qf1#"
+        ],
+        "previousMove": {
+          "fen": "4r1k1/p4p2/1p6/3Q3p/P1Pp1B2/1P4PP/2q2K2/8 w - - 4 39",
+          "move": "Kf1"
+        },
+        "source": "https://www.pgnmentor.com/players/Aronian.zip",
+        "gameReference": {
+          "collection": "queen-rook-mate",
+          "kind": "game",
+          "id": "293e45e70e1a0aa9",
+          "ply": 77,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Hậu có thể chiếu trên hàng, cột hoặc đường chéo nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Hậu; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở e2 hỗ trợ khống chế các ô thoát hoặc bảo vệ Hậu. Hậu ở f1 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Qd1+ · Kf2 · Re2+ · Kf3 · Qf1#."
+      },
+      {
+        "title": "Jobava,Ba — Papasimakopoulos,Alexandros",
+        "prompt": "Phối hợp Hậu và Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "5R2/8/1p1kP3/6Qp/2P5/6PK/4r3/8 w - - 1 54",
+        "moves": [
+          "Qd5+",
+          "Ke7",
+          "Rf7+",
+          "Ke8",
+          "Qa8#"
+        ],
+        "previousMove": {
+          "fen": "5R2/8/1p2P3/4k1Qp/2P5/6PK/4r3/8 b - - 0 53",
+          "move": "Kd6"
+        },
+        "source": "https://www.pgnmentor.com/players/Jobava.zip",
+        "gameReference": {
+          "collection": "queen-rook-mate",
+          "kind": "game",
+          "id": "5e735b9259aabdc8",
+          "ply": 106,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Hậu có thể chiếu trên hàng, cột hoặc đường chéo nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Hậu; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở f7 hỗ trợ khống chế các ô thoát hoặc bảo vệ Hậu. Hậu ở a8 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Qd5+ · Ke7 · Rf7+ · Ke8 · Qa8#."
+      },
+      {
+        "title": "Perigal, George — Anderssen, Adolf",
+        "prompt": "Phối hợp Hậu và Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "5r1k/1p4pp/p4n2/5q2/1P1Rp3/P6P/2r3p1/B2RK1Q1 b - - 3 31",
+        "moves": [
+          "Nd5",
+          "Qxg2",
+          "Rxg2",
+          "Rxd5",
+          "Qf1#"
+        ],
+        "previousMove": {
+          "fen": "5r1k/1p4pp/p4n2/5q2/1P1Rp3/P3Q2P/2r3p1/B2RK3 w - - 2 31",
+          "move": "Qg1"
+        },
+        "source": "https://www.pgnmentor.com/players/Anderssen.zip",
+        "gameReference": {
+          "collection": "queen-rook-mate",
+          "kind": "game",
+          "id": "6e0cc6ec8ede84e4",
+          "ply": 61,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Hậu có thể chiếu trên hàng, cột hoặc đường chéo nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Hậu; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở g2, f8 hỗ trợ khống chế các ô thoát hoặc bảo vệ Hậu. Hậu ở f1 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Nd5 · Qxg2 · Rxg2 · Rxd5 · Qf1#."
+      },
+      {
+        "title": "Jobava,Ba — Zemlyanskii,Ivan",
+        "prompt": "Phối hợp Hậu và Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "R7/2r2k2/1p1qr2p/2b1p1pP/2PpQ1P1/3P1P2/2P5/R4K2 w - - 0 37",
+        "moves": [
+          "Qh7+",
+          "Kf6",
+          "Qg6+",
+          "Ke7",
+          "Qg7#"
+        ],
+        "previousMove": {
+          "fen": "R4k2/2r2P2/1p1qr2p/2b1p1pP/2PpQ1P1/3P1P2/2P5/R4K2 b - - 1 36",
+          "move": "Kxf7"
+        },
+        "source": "https://www.pgnmentor.com/players/Jobava.zip",
+        "gameReference": {
+          "collection": "queen-rook-mate",
+          "kind": "game",
+          "id": "7edf9011c194f45b",
+          "ply": 72,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Hậu có thể chiếu trên hàng, cột hoặc đường chéo nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Hậu; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở a8 hỗ trợ khống chế các ô thoát hoặc bảo vệ Hậu. Hậu ở g7 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Qh7+ · Kf6 · Qg6+ · Ke7 · Qg7#."
+      },
+      {
+        "title": "Andreikin,D — Jobava,Ba",
+        "prompt": "Phối hợp Hậu và Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "4QB2/p1p2ppk/1n6/7p/3PN3/P4q2/2K5/3r4 b - - 6 35",
+        "moves": [
+          "Qd3+",
+          "Kb2",
+          "Rb1+",
+          "Ka2",
+          "Qc2#"
+        ],
+        "previousMove": {
+          "fen": "4QB2/p1p2ppk/1n6/7p/3PN3/P4q2/3K4/3r4 w - - 5 35",
+          "move": "Kc2"
+        },
+        "source": "https://www.pgnmentor.com/players/Jobava.zip",
+        "gameReference": {
+          "collection": "queen-rook-mate",
+          "kind": "game",
+          "id": "7fb230696f892885",
+          "ply": 69,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Hậu có thể chiếu trên hàng, cột hoặc đường chéo nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Hậu; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở b1 hỗ trợ khống chế các ô thoát hoặc bảo vệ Hậu. Hậu ở c2 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Qd3+ · Kb2 · Rb1+ · Ka2 · Qc2#."
+      },
+      {
+        "title": "Geller, Efim P — Tukmakov, Vladimir B",
+        "prompt": "Phối hợp Hậu và Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "1Q1R4/5qpk/p3r2p/P4p2/3B3P/8/1P3P1K/5b2 w - - 7 35",
+        "moves": [
+          "Rh8+",
+          "Kg6",
+          "Qg3+",
+          "Kh5",
+          "Qg5#"
+        ],
+        "previousMove": {
+          "fen": "1Q1R4/5qpk/p1r4p/P4p2/3B3P/8/1P3P1K/5b2 b - - 6 34",
+          "move": "Re6"
+        },
+        "source": "https://www.pgnmentor.com/players/Geller.zip",
+        "gameReference": {
+          "collection": "queen-rook-mate",
+          "kind": "game",
+          "id": "8428b8a192ec14ce",
+          "ply": 68,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Hậu có thể chiếu trên hàng, cột hoặc đường chéo nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Hậu; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở h8 hỗ trợ khống chế các ô thoát hoặc bảo vệ Hậu. Hậu ở g5 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Rh8+ · Kg6 · Qg3+ · Kh5 · Qg5#."
+      },
+      {
+        "title": "Blackburne, Joseph Henry — NN",
+        "prompt": "Phối hợp Hậu và Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "3rk2r/1p3pp1/1Q6/p5qp/P7/B1P5/5PPP/3R2K1 w k - 0 26",
+        "moves": [
+          "Re1+",
+          "Qe5",
+          "Rxe5+",
+          "Kd7",
+          "Qxb7#"
+        ],
+        "previousMove": {
+          "fen": "r2Rk2r/1p3pp1/1Q6/p5qp/P7/B1P5/5PPP/3R2K1 b kq - 0 25",
+          "move": "Rxd8"
+        },
+        "source": "https://www.pgnmentor.com/players/Blackburne.zip",
+        "gameReference": {
+          "collection": "queen-rook-mate",
+          "kind": "game",
+          "id": "9542789c903a3e3e",
+          "ply": 50,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Hậu có thể chiếu trên hàng, cột hoặc đường chéo nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Hậu; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở e5 hỗ trợ khống chế các ô thoát hoặc bảo vệ Hậu. Hậu ở b7 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Re1+ · Qe5 · Rxe5+ · Kd7 · Qxb7#."
+      },
+      {
+        "title": "Eichborn, Louis — Anderssen, Adolf",
+        "prompt": "Phối hợp Hậu và Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "5R2/p5p1/Qr2k2p/2Bpn1q1/8/2P4P/P1P2PP1/6K1 w - - 7 31",
+        "moves": [
+          "Qc8+",
+          "Nd7",
+          "Qe8+",
+          "Qe7",
+          "Qxe7#"
+        ],
+        "previousMove": {
+          "fen": "5R2/pr4p1/Q3k2p/2Bpn1q1/8/2P4P/P1P2PP1/6K1 b - - 6 30",
+          "move": "Rb6"
+        },
+        "source": "https://www.pgnmentor.com/players/Anderssen.zip",
+        "gameReference": {
+          "collection": "queen-rook-mate",
+          "kind": "game",
+          "id": "97ac0d74010f6774",
+          "ply": 60,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Hậu có thể chiếu trên hàng, cột hoặc đường chéo nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Hậu; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở f8 hỗ trợ khống chế các ô thoát hoặc bảo vệ Hậu. Hậu ở e7 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Qc8+ · Nd7 · Qe8+ · Qe7 · Qxe7#."
+      },
+      {
+        "title": "Morozevich,A — Balog,I1",
+        "prompt": "Phối hợp Hậu và Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "4R3/1r6/3K4/1q6/4p3/4k3/8/8 b - - 7 64",
+        "moves": [
+          "Qa6+",
+          "Kd5",
+          "Rb5+",
+          "Kc4",
+          "Qc6#"
+        ],
+        "previousMove": {
+          "fen": "4R3/1r6/8/1qK5/4p3/4k3/8/8 w - - 6 64",
+          "move": "Kd6"
+        },
+        "source": "https://www.pgnmentor.com/players/Morozevich.zip",
+        "gameReference": {
+          "collection": "queen-rook-mate",
+          "kind": "game",
+          "id": "9e731d43c273f7f3",
+          "ply": 127,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Hậu có thể chiếu trên hàng, cột hoặc đường chéo nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Hậu; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở b5 hỗ trợ khống chế các ô thoát hoặc bảo vệ Hậu. Hậu ở c6 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Qa6+ · Kd5 · Rb5+ · Kc4 · Qc6#."
+      },
+      {
+        "title": "Jobava,Ba — Gunina,V",
+        "prompt": "Phối hợp Hậu và Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "5r2/1b3pkN/p3pNpp/8/6P1/5qQ1/PPr2P1P/R2R1K2 b - - 5 25",
+        "moves": [
+          "Qh1+",
+          "Qg1",
+          "Bg2+",
+          "Ke1",
+          "Qxg1#"
+        ],
+        "previousMove": {
+          "fen": "5r2/1b3pkN/p3pNpp/8/6PQ/5q2/PPr2P1P/R2R1K2 w - - 4 25",
+          "move": "Qg3"
+        },
+        "source": "https://www.pgnmentor.com/players/Jobava.zip",
+        "gameReference": {
+          "collection": "queen-rook-mate",
+          "kind": "game",
+          "id": "ad967a7e98b232b4",
+          "ply": 49,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Hậu có thể chiếu trên hàng, cột hoặc đường chéo nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Hậu; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở c2 hỗ trợ khống chế các ô thoát hoặc bảo vệ Hậu. Hậu ở g1 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Qh1+ · Qg1 · Bg2+ · Ke1 · Qxg1#."
+      },
+      {
+        "title": "Aronian,L — Bartel,Mat",
+        "prompt": "Phối hợp Hậu và Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "3r3k/pq5r/1n2p3/4Pp2/1P3Q2/2B2PP1/8/3R2K1 w - - 0 38",
+        "moves": [
+          "Rxd8+",
+          "Kg7",
+          "Qg5+",
+          "Kf7",
+          "Qf6#"
+        ],
+        "previousMove": {
+          "fen": "2rR3k/pq5r/1n2p3/4Pp2/1P3Q2/2B2PP1/8/3R2K1 b - - 4 37",
+          "move": "Rxd8"
+        },
+        "source": "https://www.pgnmentor.com/players/Aronian.zip",
+        "gameReference": {
+          "collection": "queen-rook-mate",
+          "kind": "game",
+          "id": "be4b8df7a062687d",
+          "ply": 74,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Hậu có thể chiếu trên hàng, cột hoặc đường chéo nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Hậu; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở d8 hỗ trợ khống chế các ô thoát hoặc bảo vệ Hậu. Hậu ở f6 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Rxd8+ · Kg7 · Qg5+ · Kf7 · Qf6#."
+      },
+      {
+        "title": "Jobava,Ba — Averjanov,A",
+        "prompt": "Phối hợp Hậu và Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "2r5/1b5k/pq1P1Qp1/7p/1p1P3R/8/PP3PpP/4R1K1 w - - 4 33",
+        "moves": [
+          "Re7+",
+          "Kh6",
+          "Qf4+",
+          "g5",
+          "Qf6#"
+        ],
+        "previousMove": {
+          "fen": "r7/1b5k/pq1P1Qp1/7p/1p1P3R/8/PP3PpP/4R1K1 b - - 3 32",
+          "move": "Rc8"
+        },
+        "source": "https://www.pgnmentor.com/players/Jobava.zip",
+        "gameReference": {
+          "collection": "queen-rook-mate",
+          "kind": "game",
+          "id": "c0ca22ecd4a9e842",
+          "ply": 64,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Hậu có thể chiếu trên hàng, cột hoặc đường chéo nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Hậu; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở e7 hỗ trợ khống chế các ô thoát hoặc bảo vệ Hậu. Hậu ở f6 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Re7+ · Kh6 · Qf4+ · g5 · Qf6#."
+      },
+      {
+        "title": "Kasparov, Gary — Alvaro, Raul",
+        "prompt": "Phối hợp Hậu và Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "5rk1/3R2p1/1p1Pp2p/1P1rb2P/2p3R1/2B2Q1P/5P2/6K1 w - - 0 30",
+        "moves": [
+          "Rgxg7+",
+          "Bxg7",
+          "Rxg7+",
+          "Kh8",
+          "Qxf8#"
+        ],
+        "previousMove": {
+          "fen": "5rk1/3R2p1/1p1Ppb1p/1P1rN2P/2p3R1/2B2Q1P/5P2/6K1 b - - 2 29",
+          "move": "Bxe5"
+        },
+        "source": "https://www.pgnmentor.com/players/Kasparov.zip",
+        "gameReference": {
+          "collection": "queen-rook-mate",
+          "kind": "game",
+          "id": "c8374ce4df7c56e6",
+          "ply": 58,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Hậu có thể chiếu trên hàng, cột hoặc đường chéo nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Hậu; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở g7 hỗ trợ khống chế các ô thoát hoặc bảo vệ Hậu. Hậu ở f8 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Rgxg7+ · Bxg7 · Rxg7+ · Kh8 · Qxf8#."
+      },
+      {
+        "title": "Travadon,Loic — Jobava,Ba",
+        "prompt": "Phối hợp Hậu và Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "7k/ppR3Rp/7P/1B2n3/4p3/KP6/3r4/4q3 b - - 6 36",
+        "moves": [
+          "Qa1+",
+          "Kb4",
+          "a5+",
+          "Kc5",
+          "Qd4#"
+        ],
+        "previousMove": {
+          "fen": "7k/ppR3Rp/7P/1B2n3/4p3/1P6/1K1r4/4q3 w - - 5 36",
+          "move": "Ka3"
+        },
+        "source": "https://www.pgnmentor.com/players/Jobava.zip",
+        "gameReference": {
+          "collection": "queen-rook-mate",
+          "kind": "game",
+          "id": "dad4711f90b81267",
+          "ply": 71,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Hậu có thể chiếu trên hàng, cột hoặc đường chéo nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Hậu; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở d2 hỗ trợ khống chế các ô thoát hoặc bảo vệ Hậu. Hậu ở d4 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Qa1+ · Kb4 · a5+ · Kc5 · Qd4#."
+      },
+      {
+        "title": "Alekhine, Alexander — Yates, Frederick",
+        "prompt": "Phối hợp Hậu và Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "4rk2/2p2r2/1p4R1/2qP1B2/p3PP2/PnQ4P/KP6/8 w - - 3 66",
+        "moves": [
+          "Qh8+",
+          "Ke7",
+          "Re6+",
+          "Kd7",
+          "Qxe8#"
+        ],
+        "previousMove": {
+          "fen": "4r3/2p2rk1/1p4R1/2qP1B2/p3PP2/PnQ4P/KP6/8 b - - 2 65",
+          "move": "Kf8"
+        },
+        "source": "https://www.pgnmentor.com/players/Alekhine.zip",
+        "gameReference": {
+          "collection": "queen-rook-mate",
+          "kind": "game",
+          "id": "dcf49c490f153c0f",
+          "ply": 130,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Hậu có thể chiếu trên hàng, cột hoặc đường chéo nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Hậu; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở e6 hỗ trợ khống chế các ô thoát hoặc bảo vệ Hậu. Hậu ở e8 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Qh8+ · Ke7 · Re6+ · Kd7 · Qxe8#."
+      },
+      {
+        "title": "Aronian,L — Goltsev,Dmitry",
+        "prompt": "Phối hợp Hậu và Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "3Q4/R1K2k2/4p3/3b1p1p/p4P1P/6P1/8/4q3 w - - 0 46",
+        "moves": [
+          "Kb8+",
+          "Bb7",
+          "Rxb7+",
+          "Kg6",
+          "Qg5#"
+        ],
+        "previousMove": {
+          "fen": "3Q4/R1K2k2/4p3/3b1p1p/p4P1P/6P1/4p3/8 b - - 0 45",
+          "move": "e1=Q"
+        },
+        "source": "https://www.pgnmentor.com/players/Aronian.zip",
+        "gameReference": {
+          "collection": "queen-rook-mate",
+          "kind": "game",
+          "id": "f97180115c0efb2b",
+          "ply": 90,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Hậu có thể chiếu trên hàng, cột hoặc đường chéo nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Hậu; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở b7 hỗ trợ khống chế các ô thoát hoặc bảo vệ Hậu. Hậu ở g5 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Kb8+ · Bb7 · Rxb7+ · Kg6 · Qg5#."
+      },
+      {
+        "title": "Kasparov, Gary — Michaud, Luois",
+        "prompt": "Phối hợp Hậu và Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "r1bq1rk1/pp4pp/2p1pb2/6BQ/8/7R/PPB2PPP/R5K1 w - - 0 20",
+        "moves": [
+          "Bxh7+",
+          "Kh8",
+          "Bg6+",
+          "Kg8",
+          "Qh8#"
+        ],
+        "previousMove": {
+          "fen": "r1bq1rk1/pp4pp/2p1pN2/6BQ/3b4/7R/PPB2PPP/R5K1 b - - 0 19",
+          "move": "Bxf6"
+        },
+        "source": "https://www.pgnmentor.com/players/Kasparov.zip",
+        "gameReference": {
+          "collection": "queen-rook-mate",
+          "kind": "game",
+          "id": "fd6a6daaeda2a523",
+          "ply": 38,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Hậu có thể chiếu trên hàng, cột hoặc đường chéo nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Hậu; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở h3 hỗ trợ khống chế các ô thoát hoặc bảo vệ Hậu. Hậu ở h8 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Bxh7+ · Kh8 · Bg6+ · Kg8 · Qh8#."
+      },
+      {
+        "title": "Mason, James — Chigorin, Mikhail",
+        "prompt": "Phối hợp Hậu và Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "1r4k1/2p2ppp/8/1qP5/R3Q3/1rP2P2/4N1PP/K6R b - - 4 27",
+        "moves": [
+          "Ra3+",
+          "Rxa3",
+          "Qb2#"
+        ],
+        "previousMove": {
+          "fen": "1r4k1/2p2ppp/8/1qP5/R2Q4/1rP2P2/4N1PP/K6R w - - 3 27",
+          "move": "Qe4"
+        },
+        "source": "https://www.pgnmentor.com/players/Chigorin.zip",
+        "gameReference": {
+          "collection": "queen-rook-mate",
+          "kind": "game",
+          "id": "162305916803d943",
+          "ply": 53,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Hậu có thể chiếu trên hàng, cột hoặc đường chéo nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Hậu; tính cả các cách phòng thủ."
+        ],
+        "solution": "Hy sinh Xe trên a3 để mở đường cho đòn phối hợp. Xe ở b8 hỗ trợ khống chế các ô thoát hoặc bảo vệ Hậu. Hậu ở b2 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Ra3+ · Rxa3 · Qb2#."
+      },
+      {
+        "title": "Blackburne, Joseph Henry — Steinitz, William",
+        "prompt": "Phối hợp Hậu và Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "r1n3k1/pp2q2p/2ppr1pQ/4p3/8/2N4R/PPP3PP/5RK1 w - - 4 26",
+        "moves": [
+          "Rf8+",
+          "Qxf8",
+          "Qxh7#"
+        ],
+        "previousMove": {
+          "fen": "r1n5/pp2q1kp/2ppr1pQ/4p3/8/2N4R/PPP3PP/5RK1 b - - 3 25",
+          "move": "Kg8"
+        },
+        "source": "https://www.pgnmentor.com/players/Blackburne.zip",
+        "gameReference": {
+          "collection": "queen-rook-mate",
+          "kind": "game",
+          "id": "6aa50908406eaec6",
+          "ply": 50,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Hậu có thể chiếu trên hàng, cột hoặc đường chéo nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Hậu; tính cả các cách phòng thủ."
+        ],
+        "solution": "Hy sinh Xe trên f8 để mở đường cho đòn phối hợp. Xe ở h3 hỗ trợ khống chế các ô thoát hoặc bảo vệ Hậu. Hậu ở h7 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Rf8+ · Qxf8 · Qxh7#."
+      },
+      {
+        "title": "Spassky, Boris V — Gilquin, G.",
+        "prompt": "Phối hợp Hậu và Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "r3kb1r/q5pp/p1p1Bnn1/1p2Q3/8/2N2PBP/PPP5/2KRR3 w kq - 4 22",
+        "moves": [
+          "Bf7+",
+          "Kxf7",
+          "Qe6#"
+        ],
+        "previousMove": {
+          "fen": "r3kb1r/q3n1pp/p1p1Bn2/1p2Q3/8/2N2PBP/PPP5/2KRR3 b kq - 3 21",
+          "move": "Ng6"
+        },
+        "source": "https://www.pgnmentor.com/players/Spassky.zip",
+        "gameReference": {
+          "collection": "queen-rook-mate",
+          "kind": "game",
+          "id": "799a835f3c3b5e62",
+          "ply": 42,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Hậu có thể chiếu trên hàng, cột hoặc đường chéo nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Hậu; tính cả các cách phòng thủ."
+        ],
+        "solution": "Hy sinh Tượng trên f7 để mở đường cho đòn phối hợp. Xe ở e1 hỗ trợ khống chế các ô thoát hoặc bảo vệ Hậu. Hậu ở e6 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Bf7+ · Kxf7 · Qe6#."
+      },
+      {
+        "title": "Akobian,V — Schekachikhin,Maksim",
+        "prompt": "Phối hợp Hậu và Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "2r1r1k1/4PRp1/pp5R/8/1P2Q3/P5P1/5PK1/3q4 w - - 1 42",
+        "moves": [
+          "Rxg7+",
+          "Kxg7",
+          "Qh7#"
+        ],
+        "previousMove": {
+          "fen": "2r1r2k/4PRp1/pp5R/8/1P2Q3/P5P1/5PK1/3q4 b - - 0 41",
+          "move": "Kg8"
+        },
+        "source": "https://www.pgnmentor.com/players/Akobian.zip",
+        "gameReference": {
+          "collection": "queen-rook-mate",
+          "kind": "game",
+          "id": "9673fff0da3d6518",
+          "ply": 82,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Hậu có thể chiếu trên hàng, cột hoặc đường chéo nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Hậu; tính cả các cách phòng thủ."
+        ],
+        "solution": "Hy sinh Xe trên g7 để mở đường cho đòn phối hợp. Xe ở h6 hỗ trợ khống chế các ô thoát hoặc bảo vệ Hậu. Hậu ở h7 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Rxg7+ · Kxg7 · Qh7#."
+      },
+      {
+        "title": "Topalov,V — Ponomariov,R",
+        "prompt": "Phối hợp Hậu và Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "rn1Q4/p6R/b1k1p3/2p1q3/2P5/1Pp3P1/P4P2/1B3K2 w - - 8 30",
+        "moves": [
+          "Be4+",
+          "Qxe4",
+          "Qc7#"
+        ],
+        "previousMove": {
+          "fen": "rn1Q4/p6R/bk2p3/2p1q3/2P5/1Pp3P1/P4P2/1B3K2 b - - 7 29",
+          "move": "Kc6"
+        },
+        "source": "https://www.pgnmentor.com/players/Topalov.zip",
+        "gameReference": {
+          "collection": "queen-rook-mate",
+          "kind": "game",
+          "id": "ad629be6bd830c70",
+          "ply": 58,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Hậu có thể chiếu trên hàng, cột hoặc đường chéo nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Hậu; tính cả các cách phòng thủ."
+        ],
+        "solution": "Hy sinh Tượng trên e4 để mở đường cho đòn phối hợp. Xe ở h7 hỗ trợ khống chế các ô thoát hoặc bảo vệ Hậu. Hậu ở c7 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Be4+ · Qxe4 · Qc7#."
+      },
+      {
+        "title": "Topuz,Mirac Melih — Ehlvest,J",
+        "prompt": "Phối hợp Hậu và Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "1r3r1k/4R2p/p2n2R1/2pP4/P1P3P1/6qP/2Q3B1/6K1 w - - 1 31",
+        "moves": [
+          "Rg8+",
+          "Rxg8",
+          "Qxh7#"
+        ],
+        "previousMove": {
+          "fen": "1r3rk1/4R2p/p2n2R1/2pP4/P1P3P1/6qP/2Q3B1/6K1 b - - 0 30",
+          "move": "Kh8"
+        },
+        "source": "https://www.pgnmentor.com/players/Ehlvest.zip",
+        "gameReference": {
+          "collection": "queen-rook-mate",
+          "kind": "game",
+          "id": "bfa981c6668945f5",
+          "ply": 60,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Hậu có thể chiếu trên hàng, cột hoặc đường chéo nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Hậu; tính cả các cách phòng thủ."
+        ],
+        "solution": "Hy sinh Xe trên g8 để mở đường cho đòn phối hợp. Xe ở e7 hỗ trợ khống chế các ô thoát hoặc bảo vệ Hậu. Hậu ở h7 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Rg8+ · Rxg8 · Qxh7#."
+      },
+      {
+        "title": "Nepomniachtchi,I — Nigalidze,G",
+        "prompt": "Phối hợp Hậu và Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "2r1r1k1/3Q1pb1/3p2p1/1p1Np3/4Pn2/1B3R2/PP3Pq1/1K5R w - - 8 35",
+        "moves": [
+          "Nf6+",
+          "Bxf6",
+          "Qxf7#"
+        ],
+        "previousMove": {
+          "fen": "2r1r1k1/3Q1pb1/3p2p1/1p1Np1q1/4Pn2/1B3R2/PP3P2/1K5R b - - 7 34",
+          "move": "Qg2"
+        },
+        "source": "https://www.pgnmentor.com/players/Nepomniachtchi.zip",
+        "gameReference": {
+          "collection": "queen-rook-mate",
+          "kind": "game",
+          "id": "e33e6fd304f94a03",
+          "ply": 68,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Hậu có thể chiếu trên hàng, cột hoặc đường chéo nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Hậu; tính cả các cách phòng thủ."
+        ],
+        "solution": "Hy sinh Mã trên f6 để mở đường cho đòn phối hợp. Xe ở h1 hỗ trợ khống chế các ô thoát hoặc bảo vệ Hậu. Hậu ở f7 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Nf6+ · Bxf6 · Qxf7#."
+      },
+      {
+        "title": "Godzwon,Iwo — Bacrot,E",
+        "prompt": "Phối hợp Hậu và Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "6rk/7p/p2p3r/3Npp2/1P6/3Q1P1P/P2R2PK/4q3 b - - 6 37",
+        "moves": [
+          "Rxh3+",
+          "gxh3",
+          "Qg1#"
+        ],
+        "previousMove": {
+          "fen": "6rk/7p/p2p3r/3Npp2/1P6/3Q1P1P/P2R2P1/4q1K1 w - - 5 37",
+          "move": "Kh2"
+        },
+        "source": "https://www.pgnmentor.com/players/Bacrot.zip",
+        "gameReference": {
+          "collection": "queen-rook-mate",
+          "kind": "game",
+          "id": "ece231db5269d179",
+          "ply": 73,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Hậu có thể chiếu trên hàng, cột hoặc đường chéo nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Hậu; tính cả các cách phòng thủ."
+        ],
+        "solution": "Hy sinh Xe trên h3 để mở đường cho đòn phối hợp. Xe ở g8 hỗ trợ khống chế các ô thoát hoặc bảo vệ Hậu. Hậu ở g1 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Rxh3+ · gxh3 · Qg1#."
+      },
+      {
+        "title": "Keres, Paul — Karner, Hillar",
+        "prompt": "Phối hợp Hậu và Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "2bkr3/5Q1R/p2pp1N1/1p6/8/2q3P1/P4P1K/8 w - - 0 45",
+        "moves": [
+          "Ne5",
+          "dxe5",
+          "Qf6+",
+          "Re7",
+          "Qxe7#"
+        ],
+        "previousMove": {
+          "fen": "2bkr3/p4Q1R/3pp1N1/1p6/8/2q3P1/P4P1K/8 b - - 1 44",
+          "move": "a6"
+        },
+        "source": "https://www.pgnmentor.com/players/Keres.zip",
+        "gameReference": {
+          "collection": "queen-rook-mate",
+          "kind": "game",
+          "id": "0a6fb3e223bf6c1e",
+          "ply": 88,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Hậu có thể chiếu trên hàng, cột hoặc đường chéo nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Hậu; tính cả các cách phòng thủ."
+        ],
+        "solution": "Hy sinh Mã trên e5 để mở đường cho đòn phối hợp. Xe ở h7 hỗ trợ khống chế các ô thoát hoặc bảo vệ Hậu. Hậu ở e7 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Ne5 · dxe5 · Qf6+ · Re7 · Qxe7#."
+      },
+      {
+        "title": "Gireman,J — Giri,A",
+        "prompt": "Phối hợp Hậu và Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "1Q6/7p/5qp1/1P3k2/4bn2/P4P1P/3r4/5R1K b - - 2 41",
+        "moves": [
+          "Bxf3+",
+          "Rxf3",
+          "Qa1+",
+          "Rf1",
+          "Qxf1#"
+        ],
+        "previousMove": {
+          "fen": "1Q6/7p/5qp1/1P3k2/4bn2/P4P1P/3r3K/5R2 w - - 1 41",
+          "move": "Kh1"
+        },
+        "source": "https://www.pgnmentor.com/players/Giri.zip",
+        "gameReference": {
+          "collection": "queen-rook-mate",
+          "kind": "game",
+          "id": "2c851109cd0a47fd",
+          "ply": 81,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Hậu có thể chiếu trên hàng, cột hoặc đường chéo nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Hậu; tính cả các cách phòng thủ."
+        ],
+        "solution": "Hy sinh Tượng trên f3 để mở đường cho đòn phối hợp. Xe ở d2 hỗ trợ khống chế các ô thoát hoặc bảo vệ Hậu. Hậu ở f1 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Bxf3+ · Rxf3 · Qa1+ · Rf1 · Qxf1#."
+      },
+      {
+        "title": "Dijkhuis,Tycho — Van Wely,L",
+        "prompt": "Phối hợp Hậu và Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "4qk1r/p4pp1/8/2pN4/2P1b1P1/5P2/PP5b/R1BQ3K b - - 0 27",
+        "moves": [
+          "Bxf3+",
+          "Qxf3",
+          "Qe1+",
+          "Kg2",
+          "Qg1#"
+        ],
+        "previousMove": {
+          "fen": "4qk1r/p4pp1/8/2pN4/2P1b1P1/8/PP3P1b/R1BQ3K w - - 2 27",
+          "move": "f3"
+        },
+        "source": "https://www.pgnmentor.com/players/VanWely.zip",
+        "gameReference": {
+          "collection": "queen-rook-mate",
+          "kind": "game",
+          "id": "2d151da41603877f",
+          "ply": 53,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Hậu có thể chiếu trên hàng, cột hoặc đường chéo nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Hậu; tính cả các cách phòng thủ."
+        ],
+        "solution": "Hy sinh Tượng trên f3 để mở đường cho đòn phối hợp. Xe ở h8 hỗ trợ khống chế các ô thoát hoặc bảo vệ Hậu. Hậu ở g1 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Bxf3+ · Qxf3 · Qe1+ · Kg2 · Qg1#."
+      },
+      {
+        "title": "Svidler,P — Morozevich,A",
+        "prompt": "Phối hợp Hậu và Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "3Q2R1/5p1k/6pp/8/4B2P/4q1PK/4P3/2r5 w - - 7 48",
+        "moves": [
+          "Bxg6+",
+          "fxg6",
+          "Rh8+",
+          "Kg7",
+          "Qf8#"
+        ],
+        "previousMove": {
+          "fen": "3Q2R1/5pk1/6pp/8/4B2P/4q1PK/4P3/2r5 b - - 6 47",
+          "move": "Kh7"
+        },
+        "source": "https://www.pgnmentor.com/players/Morozevich.zip",
+        "gameReference": {
+          "collection": "queen-rook-mate",
+          "kind": "game",
+          "id": "73ba0b30f9039e6e",
+          "ply": 94,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Hậu có thể chiếu trên hàng, cột hoặc đường chéo nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Hậu; tính cả các cách phòng thủ."
+        ],
+        "solution": "Hy sinh Tượng trên g6 để mở đường cho đòn phối hợp. Xe ở h8 hỗ trợ khống chế các ô thoát hoặc bảo vệ Hậu. Hậu ở f8 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Bxg6+ · fxg6 · Rh8+ · Kg7 · Qf8#."
+      },
+      {
+        "title": "Navara,D — Michiels,B",
+        "prompt": "Phối hợp Hậu và Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "r4r1k/1RQ3R1/4p3/3p4/3Pbp2/P5Pq/5P2/6K1 w - - 2 36",
+        "moves": [
+          "Rg8+",
+          "Rxg8",
+          "Qe5+",
+          "Rg7",
+          "Qxg7#"
+        ],
+        "previousMove": {
+          "fen": "r4r1k/1RQ3Rb/4p3/3p4/3P1p2/P5Pq/5P2/6K1 b - - 1 35",
+          "move": "Be4"
+        },
+        "source": "https://www.pgnmentor.com/players/Navara.zip",
+        "gameReference": {
+          "collection": "queen-rook-mate",
+          "kind": "game",
+          "id": "8e6562b13084e80e",
+          "ply": 70,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Hậu có thể chiếu trên hàng, cột hoặc đường chéo nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Hậu; tính cả các cách phòng thủ."
+        ],
+        "solution": "Hy sinh Xe trên g8 để mở đường cho đòn phối hợp. Xe ở b7 hỗ trợ khống chế các ô thoát hoặc bảo vệ Hậu. Hậu ở g7 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Rg8+ · Rxg8 · Qe5+ · Rg7 · Qxg7#."
+      },
+      {
+        "title": "Rubinstein, Akiba — Tartakower, Saviely",
+        "prompt": "Phối hợp Hậu và Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/1Q3ppk/1p5p/4qP2/P3P3/2R3PP/1P2b2K/3r4 b - - 0 34",
+        "moves": [
+          "Bf3",
+          "Rxf3",
+          "Qxb2+",
+          "Rf2",
+          "Qxf2#"
+        ],
+        "previousMove": {
+          "fen": "8/1Q3ppk/1p5p/4qP2/P3P3/2R4P/1P2b1PK/3r4 w - - 7 34",
+          "move": "g3"
+        },
+        "source": "https://www.pgnmentor.com/players/Rubinstein.zip",
+        "gameReference": {
+          "collection": "queen-rook-mate",
+          "kind": "game",
+          "id": "94594b1fd6e9102c",
+          "ply": 67,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Hậu có thể chiếu trên hàng, cột hoặc đường chéo nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Hậu; tính cả các cách phòng thủ."
+        ],
+        "solution": "Hy sinh Tượng trên f3 để mở đường cho đòn phối hợp. Xe ở d1 hỗ trợ khống chế các ô thoát hoặc bảo vệ Hậu. Hậu ở f2 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Bf3 · Rxf3 · Qxb2+ · Rf2 · Qxf2#."
+      },
+      {
+        "title": "Larsen, Bent — Kortschnoj, Viktor",
+        "prompt": "Phối hợp Hậu và Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "1Q6/5p1k/4p1p1/8/4B2q/8/r2r2P1/2R1R1K1 b - - 0 37",
+        "moves": [
+          "Rxg2+",
+          "Bxg2",
+          "Qf2+",
+          "Kh1",
+          "Qxg2#"
+        ],
+        "previousMove": {
+          "fen": "1Q6/5p1k/2B1p1p1/8/4b2q/8/r2r2P1/2R1R1K1 w - - 7 37",
+          "move": "Bxe4"
+        },
+        "source": "https://www.pgnmentor.com/players/Korchnoi.zip",
+        "gameReference": {
+          "collection": "queen-rook-mate",
+          "kind": "game",
+          "id": "a5ed1e8cbf370b06",
+          "ply": 73,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Hậu có thể chiếu trên hàng, cột hoặc đường chéo nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Hậu; tính cả các cách phòng thủ."
+        ],
+        "solution": "Hy sinh Xe trên g2 để mở đường cho đòn phối hợp. Xe ở a2 hỗ trợ khống chế các ô thoát hoặc bảo vệ Hậu. Hậu ở g2 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Rxg2+ · Bxg2 · Qf2+ · Kh1 · Qxg2#."
+      },
+      {
+        "title": "Kramnik,V — Ljubojevic,L",
+        "prompt": "Phối hợp Hậu và Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "7r/Q3R3/2qP1Rbk/6pp/2p2P1b/2P4P/P5P1/7K w - - 2 37",
+        "moves": [
+          "Rxg6+",
+          "Kxg6",
+          "Re6+",
+          "Kf5",
+          "Qf7#"
+        ],
+        "previousMove": {
+          "fen": "7r/Q3R3/2qP1R1k/5bpp/2p2P1b/2P4P/P5P1/7K b - - 1 36",
+          "move": "Bg6"
+        },
+        "source": "https://www.pgnmentor.com/players/Kramnik.zip",
+        "gameReference": {
+          "collection": "queen-rook-mate",
+          "kind": "game",
+          "id": "b472a84b53ee3376",
+          "ply": 72,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Hậu có thể chiếu trên hàng, cột hoặc đường chéo nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Hậu; tính cả các cách phòng thủ."
+        ],
+        "solution": "Hy sinh Xe trên g6 để mở đường cho đòn phối hợp. Xe ở e6 hỗ trợ khống chế các ô thoát hoặc bảo vệ Hậu. Hậu ở f7 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Rxg6+ · Kxg6 · Re6+ · Kf5 · Qf7#."
+      },
+      {
+        "title": "Jobava,Ba — Matinian,N",
+        "prompt": "Phối hợp Hậu và Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "7k/bp5p/p1p1R3/P3n2q/1R2P1r1/1NQ4P/1PP2r2/2B3NK b - - 2 32",
+        "moves": [
+          "Rxg1+",
+          "Kxg1",
+          "Qd1+",
+          "Qe1",
+          "Qxe1#"
+        ],
+        "previousMove": {
+          "fen": "7k/bp5p/p1p1R3/P3n2q/1R2P1r1/1NQ4P/1PP2r1K/2B3N1 w - - 1 32",
+          "move": "Kh1"
+        },
+        "source": "https://www.pgnmentor.com/players/Jobava.zip",
+        "gameReference": {
+          "collection": "queen-rook-mate",
+          "kind": "game",
+          "id": "c68125b31b0c75e4",
+          "ply": 63,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Hậu có thể chiếu trên hàng, cột hoặc đường chéo nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Hậu; tính cả các cách phòng thủ."
+        ],
+        "solution": "Hy sinh Xe trên g1 để mở đường cho đòn phối hợp. Xe ở f2 hỗ trợ khống chế các ô thoát hoặc bảo vệ Hậu. Hậu ở e1 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Rxg1+ · Kxg1 · Qd1+ · Qe1 · Qxe1#."
+      },
+      {
+        "title": "Blackburne, Joseph Henry — Witton",
+        "prompt": "Phối hợp Hậu và Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "r4r1k/3R2p1/6Rp/8/p4Q1P/8/5PPK/q7 w - - 4 31",
+        "moves": [
+          "Rxh6+",
+          "gxh6",
+          "Qxh6+",
+          "Kg8",
+          "Qh7#"
+        ],
+        "previousMove": {
+          "fen": "r5rk/3R2p1/6Rp/8/p4Q1P/8/5PPK/q7 b - - 3 30",
+          "move": "Rgf8"
+        },
+        "source": "https://www.pgnmentor.com/players/Blackburne.zip",
+        "gameReference": {
+          "collection": "queen-rook-mate",
+          "kind": "game",
+          "id": "c89d5160ea4bf8a4",
+          "ply": 60,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Hậu có thể chiếu trên hàng, cột hoặc đường chéo nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Hậu; tính cả các cách phòng thủ."
+        ],
+        "solution": "Hy sinh Xe trên h6 để mở đường cho đòn phối hợp. Xe ở d7 hỗ trợ khống chế các ô thoát hoặc bảo vệ Hậu. Hậu ở h7 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Rxh6+ · gxh6 · Qxh6+ · Kg8 · Qh7#."
+      },
+      {
+        "title": "Kamsky,G — Annaberdiyev,B",
+        "prompt": "Phối hợp Hậu và Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "4r3/RR6/4p1bk/2qpQpN1/5P1p/2p1P1pP/6P1/6K1 w - - 0 50",
+        "moves": [
+          "Rh7+",
+          "Bxh7",
+          "Rxh7+",
+          "Kg6",
+          "Qg7#"
+        ],
+        "previousMove": {
+          "fen": "4r3/RR6/4p1bk/2qpQpN1/2p2P1p/4P1pP/6P1/6K1 b - - 0 49",
+          "move": "c3"
+        },
+        "source": "https://www.pgnmentor.com/players/Kamsky.zip",
+        "gameReference": {
+          "collection": "queen-rook-mate",
+          "kind": "game",
+          "id": "cec69ab29e8f2a53",
+          "ply": 98,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Hậu có thể chiếu trên hàng, cột hoặc đường chéo nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Hậu; tính cả các cách phòng thủ."
+        ],
+        "solution": "Hy sinh Xe trên h7 để mở đường cho đòn phối hợp. Xe ở h7 hỗ trợ khống chế các ô thoát hoặc bảo vệ Hậu. Hậu ở g7 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Rh7+ · Bxh7 · Rxh7+ · Kg6 · Qg7#."
+      },
+      {
+        "title": "NN — Anderssen, Adolf",
+        "prompt": "Phối hợp Hậu và Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "2k3r1/ppp2pr1/2n4p/2P1p3/4n3/2PBBqP1/PP3P2/3R1RK1 b - - 0 21",
+        "moves": [
+          "Rxg3+",
+          "fxg3",
+          "Qxg3+",
+          "Kh1",
+          "Qg2#"
+        ],
+        "previousMove": {
+          "fen": "2k3r1/ppp2pr1/2n4p/2P1p3/4n3/2PBBq2/PP3PP1/3R1RK1 w - - 0 21",
+          "move": "g3"
+        },
+        "source": "https://www.pgnmentor.com/players/Anderssen.zip",
+        "gameReference": {
+          "collection": "queen-rook-mate",
+          "kind": "game",
+          "id": "db08d6506dbc13c1",
+          "ply": 41,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Hậu có thể chiếu trên hàng, cột hoặc đường chéo nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Hậu; tính cả các cách phòng thủ."
+        ],
+        "solution": "Hy sinh Xe trên g3 để mở đường cho đòn phối hợp. Xe ở g8 hỗ trợ khống chế các ô thoát hoặc bảo vệ Hậu. Hậu ở g2 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Rxg3+ · fxg3 · Qxg3+ · Kh1 · Qg2#."
+      },
+      {
+        "title": "Nepomniachtchi,I — Le Tuan Minh",
+        "prompt": "Phối hợp Hậu và Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "1Q6/6pk/1Rp4p/2Pp4/4q3/7r/1P3B2/5K2 b - - 1 38",
+        "moves": [
+          "Rh1+",
+          "Bg1",
+          "Qf3+",
+          "Ke1",
+          "Rxg1+",
+          "Kd2",
+          "Rg2+",
+          "Kc1",
+          "Qf1#"
+        ],
+        "previousMove": {
+          "fen": "1Q6/6pk/1Rp4p/2Pp4/4q3/7r/1P3B2/6K1 w - - 0 38",
+          "move": "Kf1"
+        },
+        "source": "https://www.pgnmentor.com/players/Nepomniachtchi.zip",
+        "gameReference": {
+          "collection": "queen-rook-mate",
+          "kind": "game",
+          "id": "0ff38d994b0261c3",
+          "ply": 75,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Hậu có thể chiếu trên hàng, cột hoặc đường chéo nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Hậu; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở g2 hỗ trợ khống chế các ô thoát hoặc bảo vệ Hậu. Hậu ở f1 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Rh1+ · Bg1 · Qf3+ · Ke1 · Rxg1+ · Kd2 · Rg2+ · Kc1 · Qf1#."
+      },
+      {
+        "title": "Jobava,Ba — Elsness,F",
+        "prompt": "Phối hợp Hậu và Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "2q1r3/8/2r1pk2/5N1Q/8/2p3P1/P4P1P/4R1K1 w - - 1 39",
+        "moves": [
+          "Qh6+",
+          "Kxf5",
+          "g4+",
+          "Kxg4",
+          "Qg6+",
+          "Kf4",
+          "Re4+",
+          "Kf3",
+          "Qg2#"
+        ],
+        "previousMove": {
+          "fen": "2q1r3/6k1/2r1p3/5N1Q/8/2p3P1/P4P1P/4R1K1 b - - 0 38",
+          "move": "Kf6"
+        },
+        "source": "https://www.pgnmentor.com/players/Jobava.zip",
+        "gameReference": {
+          "collection": "queen-rook-mate",
+          "kind": "game",
+          "id": "11b0ae85525f9e80",
+          "ply": 76,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Hậu có thể chiếu trên hàng, cột hoặc đường chéo nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Hậu; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở e4 hỗ trợ khống chế các ô thoát hoặc bảo vệ Hậu. Hậu ở g2 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Qh6+ · Kxf5 · g4+ · Kxg4 · Qg6+ · Kf4 · Re4+ · Kf3 · Qg2#."
+      },
+      {
+        "title": "Kramnik,V — Arias,Juan Cruz",
+        "prompt": "Phối hợp Hậu và Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "5k2/5p2/3b1N1p/3P3r/q7/8/rQ4PP/4R1BK w - - 0 34",
+        "moves": [
+          "Nd7+",
+          "Kg8",
+          "Re8+",
+          "Bf8",
+          "Rxf8+",
+          "Kh7",
+          "Rxf7+",
+          "Kg6",
+          "Qf6#"
+        ],
+        "previousMove": {
+          "fen": "5k2/5p2/3b1N1p/3P3r/q7/r7/PQ4PP/4R1BK b - - 2 33",
+          "move": "Rxa2"
+        },
+        "source": "https://www.pgnmentor.com/players/Kramnik.zip",
+        "gameReference": {
+          "collection": "queen-rook-mate",
+          "kind": "game",
+          "id": "14188a704fcb66fc",
+          "ply": 66,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Hậu có thể chiếu trên hàng, cột hoặc đường chéo nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Hậu; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở f7 hỗ trợ khống chế các ô thoát hoặc bảo vệ Hậu. Hậu ở f6 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Nd7+ · Kg8 · Re8+ · Bf8 · Rxf8+ · Kh7 · Rxf7+ · Kg6 · Qf6#."
+      },
+      {
+        "title": "Dyachuk,Artem — Grischuk,A",
+        "prompt": "Phối hợp Hậu và Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "2k1K3/8/1P2p3/4p3/2q5/2P1r3/4n3/8 b - - 0 54",
+        "moves": [
+          "Rf3",
+          "b7+",
+          "Kxb7",
+          "Kd7",
+          "Qd5+",
+          "Ke7",
+          "Kc6",
+          "c4",
+          "Qd7#"
+        ],
+        "previousMove": {
+          "fen": "2k1K3/8/4p3/1P2p3/2q5/2P1r3/4n3/8 w - - 1 54",
+          "move": "b6"
+        },
+        "source": "https://www.pgnmentor.com/players/Grischuk.zip",
+        "gameReference": {
+          "collection": "queen-rook-mate",
+          "kind": "game",
+          "id": "175918456038d538",
+          "ply": 107,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Hậu có thể chiếu trên hàng, cột hoặc đường chéo nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Hậu; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở f3 hỗ trợ khống chế các ô thoát hoặc bảo vệ Hậu. Hậu ở d7 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Rf3 · b7+ · Kxb7 · Kd7 · Qd5+ · Ke7 · Kc6 · c4 · Qd7#."
+      },
+      {
+        "title": "Socko,B — Svidler,P",
+        "prompt": "Phối hợp Hậu và Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "6k1/5p1p/p5p1/2pPbPB1/2Q1p1P1/6qP/P5B1/1r3RK1 b - - 6 35",
+        "moves": [
+          "Rb2",
+          "Qc2",
+          "Rxc2",
+          "Bd2",
+          "Rxd2",
+          "Rf2",
+          "Qxf2+",
+          "Kh1",
+          "Qxg2#"
+        ],
+        "previousMove": {
+          "fen": "6k1/5p1p/p5p1/2pPbPB1/2Q1p1P1/6qP/P5B1/1r3R1K w - - 5 35",
+          "move": "Kg1"
+        },
+        "source": "https://www.pgnmentor.com/players/Svidler.zip",
+        "gameReference": {
+          "collection": "queen-rook-mate",
+          "kind": "game",
+          "id": "225de17821e1cebd",
+          "ply": 69,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Hậu có thể chiếu trên hàng, cột hoặc đường chéo nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Hậu; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở d2 hỗ trợ khống chế các ô thoát hoặc bảo vệ Hậu. Hậu ở g2 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Rb2 · Qc2 · Rxc2 · Bd2 · Rxd2 · Rf2 · Qxf2+ · Kh1 · Qxg2#."
+      },
+      {
+        "title": "Morgan, M. — Lasker, Emanuel",
+        "prompt": "Phối hợp Hậu và Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "6k1/1QR2pp1/p6p/P3pP2/8/4K3/1R5P/3r1q2 b - - 2 41",
+        "moves": [
+          "Rd3+",
+          "Ke4",
+          "Qf3+",
+          "Kxe5",
+          "Qe3+",
+          "Qe4",
+          "f6+",
+          "Ke6",
+          "Qxe4#"
+        ],
+        "previousMove": {
+          "fen": "6k1/1QR2pp1/p6p/P3pP2/8/8/1R3K1P/3r1q2 w - - 1 41",
+          "move": "Ke3"
+        },
+        "source": "https://www.pgnmentor.com/players/Lasker.zip",
+        "gameReference": {
+          "collection": "queen-rook-mate",
+          "kind": "game",
+          "id": "5ba335b819486d66",
+          "ply": 81,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Hậu có thể chiếu trên hàng, cột hoặc đường chéo nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Hậu; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở d3 hỗ trợ khống chế các ô thoát hoặc bảo vệ Hậu. Hậu ở e4 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Rd3+ · Ke4 · Qf3+ · Kxe5 · Qe3+ · Qe4 · f6+ · Ke6 · Qxe4#."
+      },
+      {
+        "title": "Aronian,L — Steinberg,N",
+        "prompt": "Phối hợp Hậu và Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "1r5k/3n1r2/2bq2p1/1pp1p1B1/2B1P3/2PPP3/Q7/5RK1 w - - 0 34",
+        "moves": [
+          "Rxf7",
+          "Nf6",
+          "Bxf6+",
+          "Qxf6",
+          "Qh2+",
+          "Qh4",
+          "Qxh4+",
+          "Kg8",
+          "Qh7#"
+        ],
+        "previousMove": {
+          "fen": "1r3r1k/3n1R2/2bq2p1/1pp1p1B1/2B1P3/2PPP3/Q7/5RK1 b - - 3 33",
+          "move": "Rxf7"
+        },
+        "source": "https://www.pgnmentor.com/players/Aronian.zip",
+        "gameReference": {
+          "collection": "queen-rook-mate",
+          "kind": "game",
+          "id": "693b2125366d9559",
+          "ply": 66,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Hậu có thể chiếu trên hàng, cột hoặc đường chéo nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Hậu; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở f7 hỗ trợ khống chế các ô thoát hoặc bảo vệ Hậu. Hậu ở h7 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Rxf7 · Nf6 · Bxf6+ · Qxf6 · Qh2+ · Qh4 · Qxh4+ · Kg8 · Qh7#."
+      },
+      {
+        "title": "Duda,J — Grischuk,A",
+        "prompt": "Phối hợp Hậu và Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "6Q1/p3qP2/8/P2K4/8/4P3/5r2/1k6 b - - 12 87",
+        "moves": [
+          "Rd2+",
+          "Kc4",
+          "Qc7+",
+          "Kb5",
+          "Rb2+",
+          "Ka4",
+          "Qc4+",
+          "Ka3",
+          "Qa2#"
+        ],
+        "previousMove": {
+          "fen": "6Q1/p3qP2/8/P3K3/8/4P3/5r2/1k6 w - - 11 87",
+          "move": "Kd5"
+        },
+        "source": "https://www.pgnmentor.com/players/Grischuk.zip",
+        "gameReference": {
+          "collection": "queen-rook-mate",
+          "kind": "game",
+          "id": "7ab8c3ad92b8a1dc",
+          "ply": 173,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Hậu có thể chiếu trên hàng, cột hoặc đường chéo nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Hậu; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở b2 hỗ trợ khống chế các ô thoát hoặc bảo vệ Hậu. Hậu ở a2 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Rd2+ · Kc4 · Qc7+ · Kb5 · Rb2+ · Ka4 · Qc4+ · Ka3 · Qa2#."
+      },
+      {
+        "title": "Paravyan,D — Aronian,L",
+        "prompt": "Phối hợp Hậu và Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/1b2rk1p/8/2P2p2/5P2/3Q2Pq/1PR4n/R5K1 b - - 5 35",
+        "moves": [
+          "Nf3+",
+          "Qxf3",
+          "Bxf3",
+          "Rh2",
+          "Qxg3+",
+          "Kf1",
+          "Qxh2",
+          "c6",
+          "Qg2#"
+        ],
+        "previousMove": {
+          "fen": "8/1b1Qrk1p/8/2P2p2/5P2/6Pq/1PR4n/R5K1 w - - 4 35",
+          "move": "Qd3"
+        },
+        "source": "https://www.pgnmentor.com/players/Aronian.zip",
+        "gameReference": {
+          "collection": "queen-rook-mate",
+          "kind": "game",
+          "id": "939fd1fc056962a6",
+          "ply": 69,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Hậu có thể chiếu trên hàng, cột hoặc đường chéo nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Hậu; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở e7 hỗ trợ khống chế các ô thoát hoặc bảo vệ Hậu. Hậu ở g2 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Nf3+ · Qxf3 · Bxf3 · Rh2 · Qxg3+ · Kf1 · Qxh2 · c6 · Qg2#."
+      },
+      {
+        "title": "Grischuk,A — Pakleza,Z",
+        "prompt": "Phối hợp Hậu và Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "1q6/8/4n1p1/p3P2p/1r2Q3/3p1R1P/2k3PK/8 w - - 0 66",
+        "moves": [
+          "Qxd3+",
+          "Kc1",
+          "Rf1+",
+          "Kb2",
+          "Rf2+",
+          "Ka1",
+          "Qd1+",
+          "Rb1",
+          "Qa4#"
+        ],
+        "previousMove": {
+          "fen": "1q6/8/4n1p1/p3P2p/1r1pQ3/5R1P/2k3PK/8 b - - 3 65",
+          "move": "d3"
+        },
+        "source": "https://www.pgnmentor.com/players/Grischuk.zip",
+        "gameReference": {
+          "collection": "queen-rook-mate",
+          "kind": "game",
+          "id": "9ba2569171f92264",
+          "ply": 130,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Hậu có thể chiếu trên hàng, cột hoặc đường chéo nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Hậu; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở f2 hỗ trợ khống chế các ô thoát hoặc bảo vệ Hậu. Hậu ở a4 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Qxd3+ · Kc1 · Rf1+ · Kb2 · Rf2+ · Ka1 · Qd1+ · Rb1 · Qa4#."
+      },
+      {
+        "title": "Andriasian,Z — Caruana,F",
+        "prompt": "Phối hợp Hậu và Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "r5k1/P1r3b1/1K1N4/1b1P3B/2pPpp1p/2P4P/1q6/R2Q2R1 b - - 5 38",
+        "moves": [
+          "Ba4+",
+          "Qb3",
+          "Qxb3+",
+          "Nb5",
+          "Qxb5+",
+          "Kxc7",
+          "Qd7+",
+          "Kb6",
+          "Qxa7#"
+        ],
+        "previousMove": {
+          "fen": "r5k1/P1r3b1/3N4/1bKP3B/2pPpp1p/2P4P/1q6/R2Q2R1 w - - 4 38",
+          "move": "Kb6"
+        },
+        "source": "https://www.pgnmentor.com/players/Caruana.zip",
+        "gameReference": {
+          "collection": "queen-rook-mate",
+          "kind": "game",
+          "id": "b33890d5dcf402f8",
+          "ply": 75,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Hậu có thể chiếu trên hàng, cột hoặc đường chéo nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Hậu; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở a8 hỗ trợ khống chế các ô thoát hoặc bảo vệ Hậu. Hậu ở a7 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Ba4+ · Qb3 · Qxb3+ · Nb5 · Qxb5+ · Kxc7 · Qd7+ · Kb6 · Qxa7#."
+      },
+      {
+        "title": "Nepomniachtchi,I — Kramnik,V",
+        "prompt": "Phối hợp Hậu và Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/6qp/3p3k/2p3p1/5Q1P/5R2/4B1K1/8 w - - 0 39",
+        "moves": [
+          "Qxd6+",
+          "Qg6",
+          "hxg5+",
+          "Kxg5",
+          "Rg3+",
+          "Kh6",
+          "Qf8+",
+          "Qg7",
+          "Qxg7#"
+        ],
+        "previousMove": {
+          "fen": "8/6qp/3p2pk/2p5/5Q1P/5R2/4B1K1/8 b - - 0 38",
+          "move": "g5"
+        },
+        "source": "https://www.pgnmentor.com/players/Nepomniachtchi.zip",
+        "gameReference": {
+          "collection": "queen-rook-mate",
+          "kind": "game",
+          "id": "ca21bf424491595c",
+          "ply": 76,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Hậu có thể chiếu trên hàng, cột hoặc đường chéo nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Hậu; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở g3 hỗ trợ khống chế các ô thoát hoặc bảo vệ Hậu. Hậu ở g7 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Qxd6+ · Qg6 · hxg5+ · Kxg5 · Rg3+ · Kh6 · Qf8+ · Qg7 · Qxg7#."
+      },
+      {
+        "title": "Nepomniachtchi,I — Rustemov,A",
+        "prompt": "Phối hợp Hậu và Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/R6P/1p1k4/8/2B5/4K3/6r1/5q2 b - - 0 61",
+        "moves": [
+          "Qf2+",
+          "Ke4",
+          "Rg4+",
+          "Kd3",
+          "Rg3+",
+          "Ke4",
+          "Qe3+",
+          "Kf5",
+          "Qf3#"
+        ],
+        "previousMove": {
+          "fen": "8/R6P/1p1k4/8/2B5/4n3/4K1r1/5q2 w - - 0 61",
+          "move": "Kxe3"
+        },
+        "source": "https://www.pgnmentor.com/players/Nepomniachtchi.zip",
+        "gameReference": {
+          "collection": "queen-rook-mate",
+          "kind": "game",
+          "id": "d80d26ca5ca1d728",
+          "ply": 121,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Hậu có thể chiếu trên hàng, cột hoặc đường chéo nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Hậu; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở g3 hỗ trợ khống chế các ô thoát hoặc bảo vệ Hậu. Hậu ở f3 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Qf2+ · Ke4 · Rg4+ · Kd3 · Rg3+ · Ke4 · Qe3+ · Kf5 · Qf3#."
+      },
+      {
+        "title": "Nepomniachtchi,I — Pranesh,M",
+        "prompt": "Phối hợp Hậu và Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "6Q1/6n1/2p2pk1/p1B5/P5p1/6P1/4qPKN/3r4 b - - 9 41",
+        "moves": [
+          "Qe1",
+          "Qxg7+",
+          "Kxg7",
+          "Bf8+",
+          "Kxf8",
+          "Nf1",
+          "Qxf1+",
+          "Kh2",
+          "Qxf2#"
+        ],
+        "previousMove": {
+          "fen": "6Q1/6n1/2p2pk1/p1B5/P5p1/6P1/4qPK1/3r1N2 w - - 8 41",
+          "move": "Nh2"
+        },
+        "source": "https://www.pgnmentor.com/players/Nepomniachtchi.zip",
+        "gameReference": {
+          "collection": "queen-rook-mate",
+          "kind": "game",
+          "id": "e40ec9a9283e59d0",
+          "ply": 81,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Hậu có thể chiếu trên hàng, cột hoặc đường chéo nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Hậu; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở d1 hỗ trợ khống chế các ô thoát hoặc bảo vệ Hậu. Hậu ở f2 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Qe1 · Qxg7+ · Kxg7 · Bf8+ · Kxf8 · Nf1 · Qxf1+ · Kh2 · Qxf2#."
+      },
+      {
+        "title": "Jobava,Ba — Sipila,V",
+        "prompt": "Phối hợp Hậu và Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/pp3p2/1n2k3/2Q4R/7P/1P2P3/P2q4/6K1 w - - 0 38",
+        "moves": [
+          "Re5+",
+          "Kf6",
+          "Qe7+",
+          "Kg7",
+          "Rg5+",
+          "Kh6",
+          "Qf8+",
+          "Kh7",
+          "Qg7#"
+        ],
+        "previousMove": {
+          "fen": "8/pp3p2/1n2k3/q1Q4R/7P/1P2P3/P2P4/6K1 b - - 0 37",
+          "move": "Qxd2"
+        },
+        "source": "https://www.pgnmentor.com/players/Jobava.zip",
+        "gameReference": {
+          "collection": "queen-rook-mate",
+          "kind": "game",
+          "id": "e6661aef980973e2",
+          "ply": 74,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Hậu có thể chiếu trên hàng, cột hoặc đường chéo nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Hậu; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở g5 hỗ trợ khống chế các ô thoát hoặc bảo vệ Hậu. Hậu ở g7 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Re5+ · Kf6 · Qe7+ · Kg7 · Rg5+ · Kh6 · Qf8+ · Kh7 · Qg7#."
+      },
+      {
+        "title": "Giri,A — Laddha,Shubh Jayesh",
+        "prompt": "Phối hợp Hậu và Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "3r4/3P2k1/P2R1pp1/1q5p/3Q3P/6P1/5PK1/8 w - - 3 75",
+        "moves": [
+          "Qxf6+",
+          "Kg8",
+          "Qxg6+",
+          "Kh8",
+          "Qh6+",
+          "Kg8",
+          "Rg6+",
+          "Kf7",
+          "Qg7#"
+        ],
+        "previousMove": {
+          "fen": "3r4/3P2k1/P2R1pp1/7p/2qQ3P/6P1/5PK1/8 b - - 2 74",
+          "move": "Qb5"
+        },
+        "source": "https://www.pgnmentor.com/players/Giri.zip",
+        "gameReference": {
+          "collection": "queen-rook-mate",
+          "kind": "game",
+          "id": "e680446fce7488f5",
+          "ply": 148,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Hậu có thể chiếu trên hàng, cột hoặc đường chéo nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Hậu; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở g6 hỗ trợ khống chế các ô thoát hoặc bảo vệ Hậu. Hậu ở g7 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Qxf6+ · Kg8 · Qxg6+ · Kh8 · Qh6+ · Kg8 · Rg6+ · Kf7 · Qg7#."
+      },
+      {
+        "title": "Materia,Marco — Nepomniachtchi,I",
+        "prompt": "Phối hợp Hậu và Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "2Q5/p4pkp/6p1/7q/3R1K2/1P3PP1/P3r3/8 b - - 6 35",
+        "moves": [
+          "h6",
+          "Qh8+",
+          "Kxh8",
+          "Rd8+",
+          "Kh7",
+          "Rh8+",
+          "Kxh8",
+          "a3",
+          "Qf5#"
+        ],
+        "previousMove": {
+          "fen": "2Q5/p4pkp/6p1/7q/3R2K1/1P3PP1/P3r3/8 w - - 5 35",
+          "move": "Kf4"
+        },
+        "source": "https://www.pgnmentor.com/players/Nepomniachtchi.zip",
+        "gameReference": {
+          "collection": "queen-rook-mate",
+          "kind": "game",
+          "id": "e984f7da2f50efe4",
+          "ply": 69,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Hậu có thể chiếu trên hàng, cột hoặc đường chéo nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Hậu; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở e2 hỗ trợ khống chế các ô thoát hoặc bảo vệ Hậu. Hậu ở f5 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: h6 · Qh8+ · Kxh8 · Rd8+ · Kh7 · Rh8+ · Kxh8 · a3 · Qf5#."
+      },
+      {
+        "title": "Kasparov, Gary — Pribyl, Josef",
+        "prompt": "Phối hợp Hậu và Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "5r1k/p1nR3p/qp3bp1/2p5/5Q2/8/P4PPP/1R4K1 w - - 8 31",
+        "moves": [
+          "Qh6",
+          "Qf1+",
+          "Kxf1",
+          "Be7",
+          "Rxe7",
+          "Rf7",
+          "Rxf7",
+          "c4",
+          "Qxh7#"
+        ],
+        "previousMove": {
+          "fen": "5r1k/pqnR3p/1p3bp1/2p5/5Q2/8/P4PPP/1R4K1 b - - 7 30",
+          "move": "Qa6"
+        },
+        "source": "https://www.pgnmentor.com/players/Kasparov.zip",
+        "gameReference": {
+          "collection": "queen-rook-mate",
+          "kind": "game",
+          "id": "f4af9f581941e5c1",
+          "ply": 60,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Hậu có thể chiếu trên hàng, cột hoặc đường chéo nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Hậu; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở f7 hỗ trợ khống chế các ô thoát hoặc bảo vệ Hậu. Hậu ở h7 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Qh6 · Qf1+ · Kxf1 · Be7 · Rxe7 · Rf7 · Rxf7 · c4 · Qxh7#."
+      },
+      {
+        "title": "Caruana,F — Dasgupta,Avyukt",
+        "prompt": "Phối hợp Hậu và Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "1r4n1/1Bkb4/2n1p3/1QNpPp2/1P1P4/7P/1BP2q2/1K4R1 w - - 6 38",
+        "moves": [
+          "Nxe6+",
+          "Bxe6",
+          "Qxc6+",
+          "Kd8",
+          "Qd6+",
+          "Ke8",
+          "Qxe6+",
+          "Kd8",
+          "Rxg8+",
+          "Kc7",
+          "Qc6#"
+        ],
+        "previousMove": {
+          "fen": "1r4n1/1Bkb4/2n1p3/1QNpPp2/1P1P1q2/7P/1BP5/1K4R1 b - - 5 37",
+          "move": "Qf2"
+        },
+        "source": "https://www.pgnmentor.com/players/Caruana.zip",
+        "gameReference": {
+          "collection": "queen-rook-mate",
+          "kind": "game",
+          "id": "1a6d38121a0a0847",
+          "ply": 74,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 6,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Hậu có thể chiếu trên hàng, cột hoặc đường chéo nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Hậu; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở g8 hỗ trợ khống chế các ô thoát hoặc bảo vệ Hậu. Hậu ở c6 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Nxe6+ · Bxe6 · Qxc6+ · Kd8 · Qd6+ · Ke8 · Qxe6+ · Kd8 · Rxg8+ · Kc7 · Qc6#."
+      },
+      {
+        "title": "Kramnik,V — Martinez Ramirez,L",
+        "prompt": "Phối hợp Hậu và Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "1Q6/1R3p2/4rk2/3K4/8/8/8/8 w - - 7 58",
+        "moves": [
+          "Qf4+",
+          "Kg6",
+          "Qxf7+",
+          "Kg5",
+          "Qxe6",
+          "Kf4",
+          "Rf7+",
+          "Kg5",
+          "Rg7+",
+          "Kh5",
+          "Qh3#"
+        ],
+        "previousMove": {
+          "fen": "1Q6/1R2kp2/4r3/3K4/8/8/8/8 b - - 6 57",
+          "move": "Kf6"
+        },
+        "source": "https://www.pgnmentor.com/players/Kramnik.zip",
+        "gameReference": {
+          "collection": "queen-rook-mate",
+          "kind": "game",
+          "id": "61f5c9a0ad41c954",
+          "ply": 114,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 6,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Hậu có thể chiếu trên hàng, cột hoặc đường chéo nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Hậu; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở g7 hỗ trợ khống chế các ô thoát hoặc bảo vệ Hậu. Hậu ở h3 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Qf4+ · Kg6 · Qxf7+ · Kg5 · Qxe6 · Kf4 · Rf7+ · Kg5 · Rg7+ · Kh5 · Qh3#."
+      },
+      {
+        "title": "Nunn, John DM — Short, Nigel D",
+        "prompt": "Phối hợp Hậu và Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "1r3rk1/1nqb2n1/6R1/1p1Pp3/1Pp3p1/2P4P/2B2QP1/2B2RK1 w - - 1 30",
+        "moves": [
+          "Rxg7+",
+          "Kxg7",
+          "Bh6+",
+          "Kxh6",
+          "Qh4+",
+          "Kg7",
+          "Qh7#"
+        ],
+        "previousMove": {
+          "fen": "1r3rk1/1nqb4/6R1/1p1Ppn2/1Pp3p1/2P4P/2B2QP1/2B2RK1 b - - 0 29",
+          "move": "Ng7"
+        },
+        "source": "https://www.pgnmentor.com/players/Nunn.zip",
+        "gameReference": {
+          "collection": "queen-rook-mate",
+          "kind": "game",
+          "id": "1ec01b3efb432b9e",
+          "ply": 58,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "D",
+          "status": "suggested",
+          "solverMoves": 4,
+          "sacrificeCount": 2,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Hậu có thể chiếu trên hàng, cột hoặc đường chéo nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Hậu; tính cả các cách phòng thủ."
+        ],
+        "solution": "Hy sinh Xe trên g7, Tượng trên h6 để mở đường cho đòn phối hợp. Xe ở f1 hỗ trợ khống chế các ô thoát hoặc bảo vệ Hậu. Hậu ở h7 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Rxg7+ · Kxg7 · Bh6+ · Kxh6 · Qh4+ · Kg7 · Qh7#."
+      },
+      {
+        "title": "Akobian,V — Shavkatov,Temur",
+        "prompt": "Phối hợp Hậu và Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "3r3k/1p1P2p1/1q3pQp/5P2/1p1R4/7P/P5P1/3R3K w - - 4 36",
+        "moves": [
+          "Rg4",
+          "Rg8",
+          "d8=Q",
+          "Qc7",
+          "Qxh6+",
+          "gxh6",
+          "Qxg8#"
+        ],
+        "previousMove": {
+          "fen": "3r4/1p1P2pk/1q3pQp/5P2/1p1R4/7P/P5P1/3R3K b - - 3 35",
+          "move": "Kh8"
+        },
+        "source": "https://www.pgnmentor.com/players/Akobian.zip",
+        "gameReference": {
+          "collection": "queen-rook-mate",
+          "kind": "game",
+          "id": "f4c73ebb0eb498df",
+          "ply": 70,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "D",
+          "status": "suggested",
+          "solverMoves": 4,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Hậu có thể chiếu trên hàng, cột hoặc đường chéo nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Hậu; tính cả các cách phòng thủ."
+        ],
+        "solution": "Hy sinh Hậu trên h6 để mở đường cho đòn phối hợp. Xe ở g4 hỗ trợ khống chế các ô thoát hoặc bảo vệ Hậu. Hậu ở g8 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Rg4 · Rg8 · d8=Q · Qc7 · Qxh6+ · gxh6 · Qxg8#."
+      },
+      {
+        "title": "Morozevich,A — Remizov,Yaroslav",
+        "prompt": "Phối hợp Hậu và Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "r2qrk2/pp6/2p2B2/4bb1Q/3P3p/3R4/PPP2P1P/2K3R1 w - - 1 24",
+        "moves": [
+          "Rg7",
+          "Bf4+",
+          "Re3",
+          "Bxe3+",
+          "fxe3",
+          "Qd5",
+          "Qh8+",
+          "Qg8",
+          "Qxg8#"
+        ],
+        "previousMove": {
+          "fen": "r2qr1k1/pp6/2p2B2/4bb1Q/3P3p/3R4/PPP2P1P/2K3R1 b - - 0 23",
+          "move": "Kf8"
+        },
+        "source": "https://www.pgnmentor.com/players/Morozevich.zip",
+        "gameReference": {
+          "collection": "queen-rook-mate",
+          "kind": "game",
+          "id": "081ee4595ebf20ff",
+          "ply": 46,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "D",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Hậu có thể chiếu trên hàng, cột hoặc đường chéo nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Hậu; tính cả các cách phòng thủ."
+        ],
+        "solution": "Hy sinh Xe trên e3 để mở đường cho đòn phối hợp. Xe ở g7 hỗ trợ khống chế các ô thoát hoặc bảo vệ Hậu. Hậu ở g8 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Rg7 · Bf4+ · Re3 · Bxe3+ · fxe3 · Qd5 · Qh8+ · Qg8 · Qxg8#."
+      },
+      {
+        "title": "Almasi,Z — Salgado Lopez,I",
+        "prompt": "Phối hợp Hậu và Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "3r3r/1b1qbk1p/p7/1p2Q3/2p1pB2/3P4/PP5P/K2R2R1 w - - 14 36",
+        "moves": [
+          "Rg7+",
+          "Kf8",
+          "Bg5",
+          "Bxg5",
+          "Rf1+",
+          "Bf6",
+          "Rxf6+",
+          "Kxg7",
+          "Qg5#"
+        ],
+        "previousMove": {
+          "fen": "3r3r/1b1qb2p/p3k3/1p2Q3/2p1pB2/3P4/PP5P/K2R2R1 b - - 13 35",
+          "move": "Kf7"
+        },
+        "source": "https://www.pgnmentor.com/players/Almasi.zip",
+        "gameReference": {
+          "collection": "queen-rook-mate",
+          "kind": "game",
+          "id": "1214702638d27a10",
+          "ply": 70,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "D",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 2,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Hậu có thể chiếu trên hàng, cột hoặc đường chéo nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Hậu; tính cả các cách phòng thủ."
+        ],
+        "solution": "Hy sinh Tượng trên g5, Xe trên g7 để mở đường cho đòn phối hợp. Xe ở f6 hỗ trợ khống chế các ô thoát hoặc bảo vệ Hậu. Hậu ở g5 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Rg7+ · Kf8 · Bg5 · Bxg5 · Rf1+ · Bf6 · Rxf6+ · Kxg7 · Qg5#."
+      },
+      {
+        "title": "Jakovenko,D — Jobava,Ba",
+        "prompt": "Phối hợp Hậu và Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "rqr1nk2/1b2b1pB/pp2Pp2/2n1p3/2PN4/1PN5/PB2Q1PP/3R1RK1 w - - 1 19",
+        "moves": [
+          "Qh5",
+          "Nd6",
+          "Bg6",
+          "Bd8",
+          "Nf5",
+          "Nxf5",
+          "Qh8+",
+          "Ke7",
+          "Qe8#"
+        ],
+        "previousMove": {
+          "fen": "rqr1n1k1/1b2b1pB/pp2Pp2/2n1p3/2PN4/1PN5/PB2Q1PP/3R1RK1 b - - 0 18",
+          "move": "Kf8"
+        },
+        "source": "https://www.pgnmentor.com/players/Jobava.zip",
+        "gameReference": {
+          "collection": "queen-rook-mate",
+          "kind": "game",
+          "id": "237d2d0d202abff9",
+          "ply": 36,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "D",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Hậu có thể chiếu trên hàng, cột hoặc đường chéo nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Hậu; tính cả các cách phòng thủ."
+        ],
+        "solution": "Hy sinh Mã trên f5 để mở đường cho đòn phối hợp. Xe ở d1 hỗ trợ khống chế các ô thoát hoặc bảo vệ Hậu. Hậu ở e8 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Qh5 · Nd6 · Bg6 · Bd8 · Nf5 · Nxf5 · Qh8+ · Ke7 · Qe8#."
+      },
+      {
+        "title": "Bronstein, David I — Makogonov, Vladimir Andreevich",
+        "prompt": "Phối hợp Hậu và Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "k6r/p4R2/1p2p1pP/N2pP1q1/1Q6/P7/KPr5/8 w - - 2 47",
+        "moves": [
+          "Nc6",
+          "Rxc6",
+          "Qa4",
+          "Rc7",
+          "Rxc7",
+          "a5",
+          "Qc6+",
+          "Kb8",
+          "Qb7#"
+        ],
+        "previousMove": {
+          "fen": "k1r4r/p4R2/1p2p1pP/N2pP1q1/1Q6/P7/KP6/8 b - - 1 46",
+          "move": "Rc2"
+        },
+        "source": "https://www.pgnmentor.com/players/Bronstein.zip",
+        "gameReference": {
+          "collection": "queen-rook-mate",
+          "kind": "game",
+          "id": "3d7a2815c00f9d75",
+          "ply": 92,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "D",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Hậu có thể chiếu trên hàng, cột hoặc đường chéo nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Hậu; tính cả các cách phòng thủ."
+        ],
+        "solution": "Hy sinh Mã trên c6 để mở đường cho đòn phối hợp. Xe ở c7 hỗ trợ khống chế các ô thoát hoặc bảo vệ Hậu. Hậu ở b7 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Nc6 · Rxc6 · Qa4 · Rc7 · Rxc7 · a5 · Qc6+ · Kb8 · Qb7#."
+      },
+      {
+        "title": "Smeets,J — Ivanchuk,V",
+        "prompt": "Phối hợp Hậu và Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "3r4/4kp2/3p1p2/P3pPb1/4P1B1/KN5P/2q3P1/Q7 b - - 0 36",
+        "moves": [
+          "Rb8",
+          "Qb1",
+          "Qxb1",
+          "Bd1",
+          "Bc1+",
+          "Nxc1",
+          "Qb4+",
+          "Ka2",
+          "Qb2#"
+        ],
+        "previousMove": {
+          "fen": "3r4/4kp2/3p1p2/r3pPb1/1P2P1B1/KN5P/2q3P1/Q7 w - - 0 36",
+          "move": "bxa5"
+        },
+        "source": "https://www.pgnmentor.com/players/Ivanchuk.zip",
+        "gameReference": {
+          "collection": "queen-rook-mate",
+          "kind": "game",
+          "id": "6e7a295c9890087c",
+          "ply": 71,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "D",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Hậu có thể chiếu trên hàng, cột hoặc đường chéo nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Hậu; tính cả các cách phòng thủ."
+        ],
+        "solution": "Hy sinh Tượng trên c1 để mở đường cho đòn phối hợp. Xe ở b8 hỗ trợ khống chế các ô thoát hoặc bảo vệ Hậu. Hậu ở b2 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Rb8 · Qb1 · Qxb1 · Bd1 · Bc1+ · Nxc1 · Qb4+ · Ka2 · Qb2#."
+      },
+      {
+        "title": "Willow,Jonah B — Smirin,I",
+        "prompt": "Phối hợp Hậu và Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "4r2k/b3r2P/p2Nq1p1/4p3/3pP3/1Q6/PPP5/1K3R1R w - - 1 31",
+        "moves": [
+          "Nxe8",
+          "Qf7",
+          "Rxf7",
+          "Rxe8",
+          "Qe6",
+          "Rxe6",
+          "Rf8+",
+          "Kg7",
+          "h8=Q#"
+        ],
+        "previousMove": {
+          "fen": "4r2k/b3r2P/p2N2p1/4p3/3pP1q1/1Q6/PPP5/1K3R1R b - - 0 30",
+          "move": "Qe6"
+        },
+        "source": "https://www.pgnmentor.com/players/Smirin.zip",
+        "gameReference": {
+          "collection": "queen-rook-mate",
+          "kind": "game",
+          "id": "701cef44f6a1e23b",
+          "ply": 60,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "D",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Hậu có thể chiếu trên hàng, cột hoặc đường chéo nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Hậu; tính cả các cách phòng thủ."
+        ],
+        "solution": "Hy sinh Hậu trên e6 để mở đường cho đòn phối hợp. Xe ở f8 hỗ trợ khống chế các ô thoát hoặc bảo vệ Hậu. Hậu ở h8 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Nxe8 · Qf7 · Rxf7 · Rxe8 · Qe6 · Rxe6 · Rf8+ · Kg7 · h8=Q#."
+      },
+      {
+        "title": "Duda,J — Kanarek,M",
+        "prompt": "Phối hợp Hậu và Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/6pk/b7/p5p1/P7/5Q1P/1pq1r1P1/3R2K1 b - - 1 55",
+        "moves": [
+          "Qxd1+",
+          "Kh2",
+          "Qd6+",
+          "Qg3",
+          "Bb7",
+          "Qxd6",
+          "Rxg2+",
+          "Kh1",
+          "b1=Q+",
+          "Qd1",
+          "Qxd1#"
+        ],
+        "previousMove": {
+          "fen": "8/6pk/b7/p5p1/P7/1Q5P/1pq1r1P1/3R2K1 w - - 0 55",
+          "move": "Qf3"
+        },
+        "source": "https://www.pgnmentor.com/players/Duda.zip",
+        "gameReference": {
+          "collection": "queen-rook-mate",
+          "kind": "game",
+          "id": "ecd83a11709997f4",
+          "ply": 109,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "D",
+          "status": "suggested",
+          "solverMoves": 6,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Hậu có thể chiếu trên hàng, cột hoặc đường chéo nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Hậu; tính cả các cách phòng thủ."
+        ],
+        "solution": "Hy sinh Hậu trên d6 để mở đường cho đòn phối hợp. Xe ở g2 hỗ trợ khống chế các ô thoát hoặc bảo vệ Hậu. Hậu ở d1 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Qxd1+ · Kh2 · Qd6+ · Qg3 · Bb7 · Qxd6 · Rxg2+ · Kh1 · b1=Q+ · Qd1 · Qxd1#."
+      },
+      {
+        "title": "Lazavik,Denis — Erigaisi,Arjun",
+        "prompt": "Phối hợp Hậu và Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "4r1k1/2Q2pb1/p5p1/p2P1q1p/5P2/5N2/4r2B/3R1R1K b - - 9 38",
+        "moves": [
+          "Qg4",
+          "Qxf7+",
+          "Kxf7",
+          "Ng5+",
+          "Kg8",
+          "Rf2",
+          "Rxf2",
+          "Rg1",
+          "Re1",
+          "Bg3",
+          "Qxg3",
+          "Rxe1",
+          "Qg2#"
+        ],
+        "previousMove": {
+          "fen": "4r1k1/2Q2pb1/p5p1/p2P1q1p/5P2/8/4r2B/3RNR1K w - - 8 38",
+          "move": "Nf3"
+        },
+        "source": "https://www.pgnmentor.com/players/Erigaisi.zip",
+        "gameReference": {
+          "collection": "queen-rook-mate",
+          "kind": "game",
+          "id": "16af538f65db7da4",
+          "ply": 75,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "D",
+          "status": "suggested",
+          "solverMoves": 7,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Hậu có thể chiếu trên hàng, cột hoặc đường chéo nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Hậu; tính cả các cách phòng thủ."
+        ],
+        "solution": "Hy sinh Xe trên e1 để mở đường cho đòn phối hợp. Xe ở f2 hỗ trợ khống chế các ô thoát hoặc bảo vệ Hậu. Hậu ở g2 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Qg4 · Qxf7+ · Kxf7 · Ng5+ · Kg8 · Rf2 · Rxf2 · Rg1 · Re1 · Bg3 · Qxg3 · Rxe1 · Qg2#."
+      },
+      {
+        "title": "Ding Liren — Urkedal,F",
+        "prompt": "Phối hợp Hậu và Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "4n3/3R1pk1/p3p1q1/2r1P1Q1/1p6/1P4P1/5P2/3R2K1 w - - 0 44",
+        "moves": [
+          "Rxf7+",
+          "Kxf7",
+          "Rd7+",
+          "Kf8",
+          "Qxg6",
+          "Rc1+",
+          "Kg2",
+          "Rg1+",
+          "Kxg1",
+          "Nd6",
+          "Qg7+",
+          "Ke8",
+          "Qe7#"
+        ],
+        "previousMove": {
+          "fen": "4n3/3R1pk1/p3p1P1/2r1P1Q1/1p2q3/1P4P1/5P2/3R2K1 b - - 0 43",
+          "move": "Qxg6"
+        },
+        "source": "https://www.pgnmentor.com/players/Ding.zip",
+        "gameReference": {
+          "collection": "queen-rook-mate",
+          "kind": "game",
+          "id": "a2d4bac67cac79d7",
+          "ply": 86,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "D",
+          "status": "suggested",
+          "solverMoves": 7,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Hậu có thể chiếu trên hàng, cột hoặc đường chéo nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Hậu; tính cả các cách phòng thủ."
+        ],
+        "solution": "Hy sinh Xe trên f7 để mở đường cho đòn phối hợp. Xe ở d7 hỗ trợ khống chế các ô thoát hoặc bảo vệ Hậu. Hậu ở e7 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Rxf7+ · Kxf7 · Rd7+ · Kf8 · Qxg6 · Rc1+ · Kg2 · Rg1+ · Kxg1 · Nd6 · Qg7+ · Ke8 · Qe7#."
+      },
+      {
+        "title": "Suleymanli,Aydin — Gukesh,D",
+        "prompt": "Phối hợp Hậu và Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "r3r2k/4bRpB/p6p/1q2P2P/1nRP2P1/1p1Q4/1P2N3/6K1 w - - 1 33",
+        "moves": [
+          "Qg6",
+          "Qxe5",
+          "dxe5",
+          "Rg8",
+          "Bxg8",
+          "Rxg8",
+          "Rxe7",
+          "Nc6",
+          "Rxc6",
+          "a5",
+          "Rc8",
+          "Rxc8",
+          "Qxg7#"
+        ],
+        "previousMove": {
+          "fen": "r3r2k/4bRpB/p6p/1q2P2P/2RP2P1/1p1Q4/nP2N3/6K1 b - - 0 32",
+          "move": "Nb4"
+        },
+        "source": "https://www.pgnmentor.com/players/Gukesh.zip",
+        "gameReference": {
+          "collection": "queen-rook-mate",
+          "kind": "game",
+          "id": "edcaed0f29b64690",
+          "ply": 64,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "D",
+          "status": "suggested",
+          "solverMoves": 7,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Hậu có thể chiếu trên hàng, cột hoặc đường chéo nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Hậu; tính cả các cách phòng thủ."
+        ],
+        "solution": "Hy sinh Xe trên c8 để mở đường cho đòn phối hợp. Xe ở e7 hỗ trợ khống chế các ô thoát hoặc bảo vệ Hậu. Hậu ở g7 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Qg6 · Qxe5 · dxe5 · Rg8 · Bxg8 · Rxg8 · Rxe7 · Nc6 · Rxc6 · a5 · Rc8 · Rxc8 · Qxg7#."
+      }
+    ]
+  }
+]

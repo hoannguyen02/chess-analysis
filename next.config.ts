@@ -18,7 +18,7 @@ const nextConfig: NextConfig = {
   //     },
   //     {
   //       source: '/luyen-cuu-hoa',
-  //       destination: '/hoa-co',
+  //       destination: '/draw',
   //       permanent: true,
   //     },
   //   ];

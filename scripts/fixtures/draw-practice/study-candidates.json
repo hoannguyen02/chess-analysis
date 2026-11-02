@@ -1,0 +1,458 @@
+{
+  "records": [
+    {
+      "id": "draw-study-a8e5cbbe890b1b5f",
+      "gameId": "draw-study-a8e5cbbe890b1b5f",
+      "headers": {
+        "White": "Thế cờ nghiên cứu",
+        "Black": "",
+        "Event": "Monkey_King · Exercise # 1"
+      },
+      "sourceUrl": "https://lichess.org/study/7QPTiMpa/bWpMfPOt",
+      "sourceKind": "study",
+      "fen": "3kb3/8/3P2r1/P1Q2p2/5P2/8/7P/7K b - - 0 1",
+      "moves": [
+        "Bc6+",
+        "Qxc6",
+        "Rg1+",
+        "Kxg1"
+      ],
+      "actualGamePlies": 0,
+      "solverDecisions": 2,
+      "sacrifices": [
+        {
+          "ply": 0,
+          "move": "Bc6+",
+          "loss": 3
+        },
+        {
+          "ply": 2,
+          "move": "Rg1+",
+          "loss": 5
+        }
+      ],
+      "proposedLevel": "C",
+      "category": "stalemate",
+      "studyCredit": "Monkey_King · Exercise # 1"
+    },
+    {
+      "id": "draw-study-17d1fd840cdec0e6",
+      "gameId": "draw-study-17d1fd840cdec0e6",
+      "headers": {
+        "White": "Thế cờ nghiên cứu",
+        "Black": "",
+        "Event": "Monkey_King · Exercise # 2"
+      },
+      "sourceUrl": "https://lichess.org/study/7QPTiMpa/krJV90ll",
+      "sourceKind": "study",
+      "fen": "6k1/4Rppp/8/5NK1/b1r5/8/8/8 w - - 0 1",
+      "moves": [
+        "Re8+",
+        "Bxe8",
+        "Ne7+",
+        "Kf8",
+        "Ng6+",
+        "Kg8",
+        "Ne7+",
+        "Kh8",
+        "Ng6+",
+        "hxg6"
+      ],
+      "actualGamePlies": 0,
+      "solverDecisions": 5,
+      "sacrifices": [
+        {
+          "ply": 0,
+          "move": "Re8+",
+          "loss": 5
+        },
+        {
+          "ply": 8,
+          "move": "Ng6+",
+          "loss": 3
+        }
+      ],
+      "proposedLevel": "D",
+      "category": "stalemate",
+      "studyCredit": "Monkey_King · Exercise # 2"
+    },
+    {
+      "id": "draw-study-c655985f67697a02",
+      "gameId": "draw-study-c655985f67697a02",
+      "headers": {
+        "White": "Thế cờ nghiên cứu",
+        "Black": "",
+        "Event": "Monkey_King · Exercise # 3"
+      },
+      "sourceUrl": "https://lichess.org/study/7QPTiMpa/33BMHllc",
+      "sourceKind": "study",
+      "fen": "2Q5/5Rpk/8/1p2p2p/1P2Pn1P/5Pq1/4r3/7K w - - 0 1",
+      "moves": [
+        "Qg8+",
+        "Kxg8",
+        "Rxg7+",
+        "Kf8",
+        "Rf7+",
+        "Ke8",
+        "Re7+",
+        "Kxe7"
+      ],
+      "actualGamePlies": 0,
+      "solverDecisions": 4,
+      "sacrifices": [
+        {
+          "ply": 0,
+          "move": "Qg8+",
+          "loss": 9
+        },
+        {
+          "ply": 6,
+          "move": "Re7+",
+          "loss": 5
+        }
+      ],
+      "proposedLevel": "D",
+      "category": "stalemate",
+      "studyCredit": "Monkey_King · Exercise # 3"
+    },
+    {
+      "id": "draw-study-e098faf10d0ac907",
+      "gameId": "draw-study-e098faf10d0ac907",
+      "headers": {
+        "White": "Thế cờ nghiên cứu",
+        "Black": "",
+        "Event": "Monkey_King · Exercise # 4"
+      },
+      "sourceUrl": "https://lichess.org/study/7QPTiMpa/BTc4Y0dw",
+      "sourceKind": "study",
+      "fen": "1R6/8/8/5k2/5p2/7r/1p2K3/8 w - - 0 1",
+      "moves": [
+        "Rxb2",
+        "Rh2+",
+        "Kf3",
+        "Rxb2"
+      ],
+      "actualGamePlies": 0,
+      "solverDecisions": 2,
+      "sacrifices": [
+        {
+          "ply": 2,
+          "move": "Kf3",
+          "loss": 5
+        }
+      ],
+      "proposedLevel": "C",
+      "category": "stalemate",
+      "studyCredit": "Monkey_King · Exercise # 4"
+    },
+    {
+      "id": "draw-study-dddf6de2ca96ec84",
+      "gameId": "draw-study-dddf6de2ca96ec84",
+      "headers": {
+        "White": "Thế cờ nghiên cứu",
+        "Black": "",
+        "Event": "Monkey_King · Exercise # 5"
+      },
+      "sourceUrl": "https://lichess.org/study/7QPTiMpa/51hGKjd3",
+      "sourceKind": "study",
+      "fen": "8/3b4/pkp4B/1p6/P2qp3/8/7Q/7K w - - 0 1",
+      "moves": [
+        "Be3",
+        "Qxe3",
+        "Qf2",
+        "Qxf2",
+        "a5+",
+        "Kxa5"
+      ],
+      "actualGamePlies": 0,
+      "solverDecisions": 3,
+      "sacrifices": [
+        {
+          "ply": 0,
+          "move": "Be3",
+          "loss": 3
+        },
+        {
+          "ply": 2,
+          "move": "Qf2",
+          "loss": 9
+        },
+        {
+          "ply": 4,
+          "move": "a5+",
+          "loss": 1
+        }
+      ],
+      "proposedLevel": "C",
+      "category": "stalemate",
+      "studyCredit": "Monkey_King · Exercise # 5"
+    },
+    {
+      "id": "draw-study-8a5405cd22378726",
+      "gameId": "draw-study-8a5405cd22378726",
+      "headers": {
+        "White": "Thế cờ nghiên cứu",
+        "Black": "",
+        "Event": "Monkey_King · Exercise # 6"
+      },
+      "sourceUrl": "https://lichess.org/study/7QPTiMpa/vcCbq1yr",
+      "sourceKind": "study",
+      "fen": "1r6/R6p/5p1k/5Qp1/4n1B1/4P2P/2q2PP1/6K1 b - - 0 1",
+      "moves": [
+        "Rb1+",
+        "Kh2",
+        "Rh1+",
+        "Kxh1",
+        "Ng3+",
+        "fxg3",
+        "Qxg2+",
+        "Kxg2"
+      ],
+      "actualGamePlies": 0,
+      "solverDecisions": 4,
+      "sacrifices": [
+        {
+          "ply": 2,
+          "move": "Rh1+",
+          "loss": 5
+        },
+        {
+          "ply": 4,
+          "move": "Ng3+",
+          "loss": 3
+        },
+        {
+          "ply": 6,
+          "move": "Qxg2+",
+          "loss": 8
+        }
+      ],
+      "proposedLevel": "D",
+      "category": "stalemate",
+      "studyCredit": "Monkey_King · Exercise # 6"
+    },
+    {
+      "id": "draw-study-1f4736ceb5187931",
+      "gameId": "draw-study-1f4736ceb5187931",
+      "headers": {
+        "White": "Thế cờ nghiên cứu",
+        "Black": "",
+        "Event": "Monkey_King · Exercise # 7"
+      },
+      "sourceUrl": "https://lichess.org/study/7QPTiMpa/AtDC4W43",
+      "sourceKind": "study",
+      "fen": "4k3/3p2p1/2pK4/5P2/8/8/2P5/8 w - - 0 1",
+      "moves": [
+        "c3",
+        "Kd8",
+        "c4",
+        "Ke8",
+        "c5",
+        "Kd8",
+        "f6",
+        "gxf6"
+      ],
+      "actualGamePlies": 0,
+      "solverDecisions": 4,
+      "sacrifices": [
+        {
+          "ply": 6,
+          "move": "f6",
+          "loss": 1
+        }
+      ],
+      "proposedLevel": "C",
+      "category": "stalemate",
+      "studyCredit": "Monkey_King · Exercise # 7"
+    },
+    {
+      "id": "draw-study-b71aff4d0ff3f83d",
+      "gameId": "draw-study-b71aff4d0ff3f83d",
+      "headers": {
+        "White": "Thế cờ nghiên cứu",
+        "Black": "",
+        "Event": "Monkey_King · Exercise # 8"
+      },
+      "sourceUrl": "https://lichess.org/study/7QPTiMpa/fLiEycMK",
+      "sourceKind": "study",
+      "fen": "R7/P7/8/5P2/7p/5k2/r7/7K b - - 0 1",
+      "moves": [
+        "Kg3",
+        "Rg8+",
+        "Kh3",
+        "a8=Q",
+        "Ra1+",
+        "Qxa1"
+      ],
+      "actualGamePlies": 0,
+      "solverDecisions": 3,
+      "sacrifices": [
+        {
+          "ply": 2,
+          "move": "Kh3",
+          "loss": 8
+        },
+        {
+          "ply": 4,
+          "move": "Ra1+",
+          "loss": 5
+        }
+      ],
+      "proposedLevel": "C",
+      "category": "stalemate",
+      "studyCredit": "Monkey_King · Exercise # 8"
+    },
+    {
+      "id": "draw-study-3799d2267e5c81c2",
+      "gameId": "draw-study-3799d2267e5c81c2",
+      "headers": {
+        "White": "Thế cờ nghiên cứu",
+        "Black": "",
+        "Event": "Monkey_King · Exercise # 9"
+      },
+      "sourceUrl": "https://lichess.org/study/7QPTiMpa/jIYQyivu",
+      "sourceKind": "study",
+      "fen": "3q4/1k4b1/1p6/p7/2Q1Np2/2n2P2/7r/2K1R3 w - - 0 1",
+      "moves": [
+        "Nd6+",
+        "Qxd6",
+        "Re7+",
+        "Qxe7",
+        "Qc8+",
+        "Ka7",
+        "Qa8+",
+        "Kxa8"
+      ],
+      "actualGamePlies": 0,
+      "solverDecisions": 4,
+      "sacrifices": [
+        {
+          "ply": 0,
+          "move": "Nd6+",
+          "loss": 3
+        },
+        {
+          "ply": 2,
+          "move": "Re7+",
+          "loss": 5
+        },
+        {
+          "ply": 6,
+          "move": "Qa8+",
+          "loss": 9
+        }
+      ],
+      "proposedLevel": "D",
+      "category": "stalemate",
+      "studyCredit": "Monkey_King · Exercise # 9"
+    },
+    {
+      "id": "draw-study-c66c689f88e4acec",
+      "gameId": "draw-study-c66c689f88e4acec",
+      "headers": {
+        "White": "Thế cờ nghiên cứu",
+        "Black": "",
+        "Event": "Monkey_King · Exercise # 10"
+      },
+      "sourceUrl": "https://lichess.org/study/7QPTiMpa/yvGzDHOn",
+      "sourceKind": "study",
+      "fen": "8/4Q3/p2pn1kp/6p1/2q2pP1/5B1K/7P/8 w - - 0 1",
+      "moves": [
+        "Be4+",
+        "Qxe4",
+        "Qg7+",
+        "Kxg7"
+      ],
+      "actualGamePlies": 0,
+      "solverDecisions": 2,
+      "sacrifices": [
+        {
+          "ply": 0,
+          "move": "Be4+",
+          "loss": 3
+        },
+        {
+          "ply": 2,
+          "move": "Qg7+",
+          "loss": 9
+        }
+      ],
+      "proposedLevel": "C",
+      "category": "stalemate",
+      "studyCredit": "Monkey_King · Exercise # 10"
+    },
+    {
+      "id": "draw-study-7aab2d71fea39d6b",
+      "gameId": "draw-study-7aab2d71fea39d6b",
+      "headers": {
+        "White": "Thế cờ nghiên cứu",
+        "Black": "",
+        "Event": "Monkey_King · Exercise # 11"
+      },
+      "sourceUrl": "https://lichess.org/study/7QPTiMpa/jMnjaxPa",
+      "sourceKind": "study",
+      "fen": "4r3/6R1/8/8/6p1/7k/6p1/6K1 w - - 0 1",
+      "moves": [
+        "Rh7+",
+        "Kg3",
+        "Re7",
+        "Rd8",
+        "Rd7",
+        "Rb8",
+        "Rb7",
+        "Rxb7"
+      ],
+      "actualGamePlies": 0,
+      "solverDecisions": 4,
+      "sacrifices": [
+        {
+          "ply": 6,
+          "move": "Rb7",
+          "loss": 5
+        }
+      ],
+      "proposedLevel": "C",
+      "category": "stalemate",
+      "studyCredit": "Monkey_King · Exercise # 11"
+    },
+    {
+      "id": "draw-study-47e1a02aa37f0f51",
+      "gameId": "draw-study-47e1a02aa37f0f51",
+      "headers": {
+        "White": "Thế cờ nghiên cứu",
+        "Black": "",
+        "Event": "Monkey_King · Exercise # 12"
+      },
+      "sourceUrl": "https://lichess.org/study/7QPTiMpa/WNzOccrc",
+      "sourceKind": "study",
+      "fen": "r7/1k6/1P6/6p1/6P1/8/p5P1/R4K2 w - - 0 1",
+      "moves": [
+        "g3",
+        "Kxb6",
+        "Kg2",
+        "Kb5",
+        "Kh3",
+        "Kb4",
+        "Rxa2",
+        "Rxa2"
+      ],
+      "actualGamePlies": 0,
+      "solverDecisions": 4,
+      "sacrifices": [
+        {
+          "ply": 0,
+          "move": "g3",
+          "loss": 1
+        },
+        {
+          "ply": 6,
+          "move": "Rxa2",
+          "loss": 4
+        }
+      ],
+      "proposedLevel": "D",
+      "category": "stalemate",
+      "studyCredit": "Monkey_King · Exercise # 12"
+    }
+  ]
+}

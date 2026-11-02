@@ -1,0 +1,167 @@
+{
+  "reviewDate": "2026-10-29",
+  "records": [
+    {
+      "id": "draw-master-1e9a4693bf13ff85-94",
+      "status": "withheld",
+      "level": "A",
+      "fen": "8/4k3/1R2Ppp1/2KBr3/1P6/4n3/8/8 w - - 5 48",
+      "candidateMove": "Rb7+",
+      "drawingRootMoves": [
+        "Rb7+",
+        "Rd6"
+      ],
+      "reason": "Same-game sibling to an existing B example; its A-level rook checking loop does not add a distinct learner decision."
+    },
+    {
+      "id": "draw-master-2c16bd6538b6cc9f-97",
+      "status": "withheld",
+      "level": "A",
+      "fen": "8/R5Rp/8/4pkPP/6r1/1r3P2/5K2/8 b - - 2 49",
+      "candidateMove": "Rb2+",
+      "drawingRootMoves": [
+        "Rb2+",
+        "Rxg5"
+      ],
+      "reason": "Near-duplicate rook checks on adjacent squares; no additional defensive mechanism beyond the selected A rook cycles."
+    },
+    {
+      "id": "draw-master-35abbba63aab3211-66",
+      "status": "withheld",
+      "level": "A",
+      "fen": "2Q5/4k2p/p2p1p2/8/8/3K2P1/1PP4q/8 w - - 2 34",
+      "candidateMove": "Qc7+",
+      "drawingRootMoves": [
+        "Qb7+",
+        "Qc7+",
+        "Qg4",
+        "g4"
+      ],
+      "reason": "Near-duplicate queen checking cycle; the route already contains direct queen checks with the same king response."
+    },
+    {
+      "id": "draw-master-3f0a7025553f7b3d-106",
+      "status": "withheld",
+      "level": "A",
+      "fen": "5k2/7Q/5r2/3p1p2/4q3/7P/7P/5RK1 w - - 8 54",
+      "candidateMove": "Qh8+",
+      "drawingRootMoves": [
+        "Qh8+",
+        "Kf2"
+      ],
+      "reason": "Near-duplicate queen checking cycle; no distinct setup or defensive mechanism for A."
+    },
+    {
+      "id": "draw-master-4e0c9928689b7ebe-109",
+      "status": "withheld",
+      "level": "A",
+      "fen": "4k3/8/3RPP2/4K3/8/2n5/5r2/8 b - - 2 55",
+      "candidateMove": "Re2+",
+      "drawingRootMoves": [
+        "Re2+",
+        "Rxf6"
+      ],
+      "reason": "Near-duplicate rook check cycle on adjacent files; same A-level decision as selected rook loops."
+    },
+    {
+      "id": "draw-master-584fed24c12c1803-85",
+      "status": "withheld",
+      "level": "A",
+      "fen": "8/8/p4Rp1/2pk1PPp/r7/4K2P/8/8 b - - 0 43",
+      "candidateMove": "Ra3+",
+      "drawingRootMoves": [
+        "gxf5",
+        "Ra3+",
+        "Re4+"
+      ],
+      "reason": "Repeated lateral rook checks; the candidate does not add a distinct A-level decision."
+    },
+    {
+      "id": "draw-master-5968a8f76ebbec9d-113",
+      "status": "withheld",
+      "level": "A",
+      "fen": "8/p7/8/P4k2/1P1P4/5K2/1r4R1/8 b - - 0 57",
+      "candidateMove": "Rb3+",
+      "drawingRootMoves": [
+        "Rb3+",
+        "Rxb4"
+      ],
+      "reason": "Near-duplicate lateral rook checking cycle; no additional defensive mechanism."
+    },
+    {
+      "id": "draw-master-788a30d306e24730-130",
+      "status": "withheld",
+      "level": "A",
+      "fen": "5R2/8/6k1/5r1p/1p6/1PnN1p1P/5K2/8 w - - 3 66",
+      "candidateMove": "Nf4+",
+      "drawingRootMoves": [
+        "Nf4+",
+        "Rxf5",
+        "Rg8+"
+      ],
+      "reason": "Knight checking cycle repeats selected A knight examples without a new setup decision."
+    },
+    {
+      "id": "draw-master-2a595fb4ffa62193-51",
+      "status": "withheld",
+      "level": "C",
+      "fen": "6k1/pp5p/3pP3/4np2/2rq4/4Qp1P/PP6/RKB2B2 b - - 1 26",
+      "candidateMove": "Rxc1+",
+      "drawingRootMoves": [
+        "Rxc1+",
+        "Qe4+"
+      ],
+      "reason": "The legal alternative Qe4+ gives a simpler drawing check, bypassing the C-level rook sacrifice."
+    },
+    {
+      "id": "draw-master-21c02179d1a79185-46",
+      "status": "withheld",
+      "level": "C",
+      "fen": "4rbk1/2pq2pp/2p2B2/2n1pN1P/r3P3/Pp1b1N2/1P2QP2/2KR2R1 w - - 0 24",
+      "candidateMove": "Rxd3",
+      "drawingRootMoves": [
+        "Rxd3",
+        "Nh6+"
+      ],
+      "reason": "The legal alternative Nh6+ offers a direct drawing check and bypasses the C-level exchange sacrifice."
+    },
+    {
+      "id": "draw-master-c2f3a0cdab4098b7-34",
+      "status": "withheld",
+      "level": "D",
+      "fen": "r1b2rk1/ppq1b2p/4ppp1/2p1N3/3PB3/2P1P3/P1Q2PPP/2R2RK1 w - - 0 18",
+      "candidateMove": "Nxg6",
+      "drawingRootMoves": [
+        "Nxg6",
+        "Nc4",
+        "Nf3",
+        "Nd3"
+      ],
+      "reason": "The screened alternatives Nc4, Nf3 and Nd3 preserve the draw without the two sacrifices or D-level coordination."
+    },
+    {
+      "id": "draw-master-034a84968393e128-68",
+      "status": "withheld",
+      "level": "C*",
+      "fen": "8/6kp/5pp1/3q4/Q1p1pP2/2Pr4/PP4PP/K3R3 w - - 1 35",
+      "candidateMove": "g4",
+      "drawingRootMoves": [
+        "a3",
+        "g4",
+        "Qa7+"
+      ],
+      "reason": "The screened alternatives a3 and Qa7+ preserve the draw without the six-move C* preparation."
+    },
+    {
+      "id": "draw-master-983781f01eddd377-49",
+      "status": "withheld",
+      "level": "C",
+      "fen": "r3k1r1/1p3p1p/p3pp2/1b5P/3RPP1q/4KB2/P2Q2P1/R5N1 b q - 4 25",
+      "candidateMove": "e5",
+      "drawingRootMoves": [
+        "e5"
+      ],
+      "reason": "Same source game as the selected D exercise draw-master-983781f01eddd377-43; this shifted start is not counted as an additional real-game example."
+    }
+  ]
+}

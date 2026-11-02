@@ -1,0 +1,798 @@
+{
+  "scope": "Original level A exercises 51–93, before the 28 screenshot exclusions.",
+  "method": "Editorial review of the published line and piece placement, with python-chess checking immediate recapture candidates and legality. These checks establish local tactical relationships, not a fresh engine proof of the whole game. Recapture candidates can also be illegal for reasons other than discovered check; reasons are assessed individually.",
+  "reviewed": 43,
+  "removed": 18,
+  "kept": 25,
+  "reviews": [
+    {
+      "gameId": "a4128f10b102f750",
+      "title": "Taylor, Peter — Kasparov, Gary",
+      "fen": "6k1/6b1/2q3p1/1p3p2/4p2P/3P2P1/1P2NPK1/3Q4 b - - 0 33",
+      "moves": [
+        "exd3+"
+      ],
+      "originalLevel": "A",
+      "originalExerciseNumber": 51,
+      "decision": "keep",
+      "reason": "exd3+ prevents Qxd3; the discovered bishop check makes the pawn capture safe.",
+      "recaptureCandidatesAfterDiscovery": [
+        "d1d3"
+      ],
+      "legalRecapturesAfterDiscovery": []
+    },
+    {
+      "gameId": "a58bc7c64507a40b",
+      "title": "Chigorin, Mikhail — Marco, Georg",
+      "fen": "1RN2k2/2r2n1p/B2p1np1/3Pp3/P3P3/4P2P/6PK/8 w - - 13 49",
+      "moves": [
+        "Nxd6+"
+      ],
+      "originalLevel": "A",
+      "originalExerciseNumber": 52,
+      "decision": "keep",
+      "reason": "Nxd6+ prevents Nfxd6 and gives the knight time to take f7.",
+      "recaptureCandidatesAfterDiscovery": [
+        "f7d6"
+      ],
+      "legalRecapturesAfterDiscovery": []
+    },
+    {
+      "gameId": "a78f08a2ef875f55",
+      "title": "Shirov,A — Zaichikov,Andrey",
+      "fen": "r1bqk2r/1pp2ppp/p1N5/8/B3p3/8/PPP2PPb/RNB4K w kq - 0 13",
+      "moves": [
+        "Nxd8+"
+      ],
+      "originalLevel": "A",
+      "originalExerciseNumber": 53,
+      "decision": "remove",
+      "reason": "Nxd8+ takes a queen for a knight, and Kxd8 is still legal. The favorable exchange does not demonstrate a discovery-dependent gain.",
+      "recaptureCandidatesAfterDiscovery": [
+        "e8d8"
+      ],
+      "legalRecapturesAfterDiscovery": [
+        "e8d8"
+      ]
+    },
+    {
+      "gameId": "af482d45d12fb2cc",
+      "title": "Kasparov, Gary — Thiruchelvam, Thirumurugan",
+      "fen": "5k2/3q4/p3p1p1/1p3P2/2pb4/P3Q3/6PP/5RK1 w - - 0 34",
+      "moves": [
+        "fxe6+"
+      ],
+      "originalLevel": "A",
+      "originalExerciseNumber": 54,
+      "decision": "keep",
+      "reason": "fxe6+ prevents Qxe6 and threatens the queen on d7.",
+      "recaptureCandidatesAfterDiscovery": [
+        "d7e6"
+      ],
+      "legalRecapturesAfterDiscovery": []
+    },
+    {
+      "gameId": "affc170d626a56c4",
+      "title": "Stein, Leonid — Furman, Semen Abramovich",
+      "fen": "rn2kb1r/1bq2ppp/p2p1n2/3p4/Pp1NP3/6P1/1PP2PBP/R1BQR1K1 w kq - 0 12",
+      "moves": [
+        "exd5+"
+      ],
+      "originalLevel": "A",
+      "originalExerciseNumber": 55,
+      "decision": "remove",
+      "reason": "User-requested removal in the follow-up 12-screenshot review; excluded from discovered check/attack practice regardless of the earlier automated editorial decision.",
+      "recaptureCandidatesAfterDiscovery": [
+        "b7d5",
+        "f6d5"
+      ],
+      "legalRecapturesAfterDiscovery": [],
+      "previousDecision": {
+        "decision": "keep",
+        "reason": "exd5+ prevents both Bxd5 and Nxd5."
+      },
+      "supersededBy": "follow-up-12-screenshots"
+    },
+    {
+      "gameId": "be47f97ecc78e7ea",
+      "title": "Flamberg, Aleksander Dawidow — Chigorin, Mikhail",
+      "fen": "2bb1rrk/5ppp/p4n2/2q2P2/3pP3/1BP2RNP/P2Q2PN/R5K1 b - - 0 31",
+      "moves": [
+        "dxc3+"
+      ],
+      "originalLevel": "A",
+      "originalExerciseNumber": 56,
+      "decision": "keep",
+      "reason": "dxc3+ prevents Rxc3 and Qxc3.",
+      "recaptureCandidatesAfterDiscovery": [
+        "f3c3",
+        "d2c3"
+      ],
+      "legalRecapturesAfterDiscovery": []
+    },
+    {
+      "gameId": "c16b8e6366600ce5",
+      "title": "Petursson,Mar — Shirov,A",
+      "fen": "2r5/4nkbp/p3b1p1/N1Bn1p2/2KPp3/1P2P1P1/P4PBP/R6R b - - 2 22",
+      "moves": [
+        "Nxe3+"
+      ],
+      "originalLevel": "A",
+      "originalExerciseNumber": 57,
+      "decision": "keep",
+      "reason": "Nxe3+ prevents fxe3.",
+      "recaptureCandidatesAfterDiscovery": [
+        "f2e3"
+      ],
+      "legalRecapturesAfterDiscovery": []
+    },
+    {
+      "gameId": "c4383629d303e6ac",
+      "title": "Stein, Leonid — Eropov, Ivan M",
+      "fen": "n3qb1r/1k3p2/1p1p1P1p/pPr1pb2/P3P2P/2N2Q2/1P5B/1K1R2R1 w - - 0 30",
+      "moves": [
+        "exf5+"
+      ],
+      "originalLevel": "A",
+      "originalExerciseNumber": 58,
+      "decision": "remove",
+      "reason": "exf5+ captures an undefended bishop; there is no immediate recapture for the discovery to prevent.",
+      "recaptureCandidatesAfterDiscovery": [],
+      "legalRecapturesAfterDiscovery": []
+    },
+    {
+      "gameId": "c455234ed16fcda1",
+      "title": "Pinedo, J. — Anderssen, Adolf",
+      "fen": "3r2kr/p1p2ppp/b7/4P3/2pbB3/BPN5/P5PP/R4K1R b - - 2 16",
+      "moves": [
+        "cxb3+"
+      ],
+      "originalLevel": "A",
+      "originalExerciseNumber": 59,
+      "decision": "remove",
+      "reason": "User-requested removal in the follow-up 12-screenshot review; excluded from discovered check/attack practice regardless of the earlier automated editorial decision.",
+      "recaptureCandidatesAfterDiscovery": [
+        "a2b3"
+      ],
+      "legalRecapturesAfterDiscovery": [],
+      "previousDecision": {
+        "decision": "keep",
+        "reason": "cxb3+ prevents axb3."
+      },
+      "supersededBy": "follow-up-12-screenshots"
+    },
+    {
+      "gameId": "cbf71d014a2d3e76",
+      "title": "Rotlewi, Georg A — Spielmann, Rudolf",
+      "fen": "8/4k3/3b4/3P2Kp/7B/7P/8/8 w - - 5 48",
+      "moves": [
+        "Kxh5+"
+      ],
+      "originalLevel": "A",
+      "originalExerciseNumber": 60,
+      "decision": "remove",
+      "reason": "Kxh5+ takes an undefended pawn; the discovery is incidental to that capture.",
+      "recaptureCandidatesAfterDiscovery": [],
+      "legalRecapturesAfterDiscovery": []
+    },
+    {
+      "gameId": "da14cf201d6ec6e9",
+      "title": "Nikitin, Aleksander S — Stein, Leonid",
+      "fen": "5rk1/p5bp/Np1p4/1P1Pp3/4Pn2/2R5/1P5P/2B2K2 b - - 0 44",
+      "moves": [
+        "Nxd5+"
+      ],
+      "originalLevel": "A",
+      "originalExerciseNumber": 61,
+      "decision": "keep",
+      "reason": "Nxd5+ prevents exd5 and gives the knight time to take c3.",
+      "recaptureCandidatesAfterDiscovery": [
+        "e4d5"
+      ],
+      "legalRecapturesAfterDiscovery": []
+    },
+    {
+      "gameId": "e8a211b7a26540ab",
+      "title": "Kasparov, Gary — Mughreblian, Ben",
+      "fen": "6rr/npq1kp2/p1bp3p/3n4/PP2P1p1/8/2QN1PPP/3RRBK1 w - - 0 24",
+      "moves": [
+        "exd5+"
+      ],
+      "originalLevel": "A",
+      "originalExerciseNumber": 62,
+      "decision": "keep",
+      "reason": "exd5+ prevents Bxd5 and threatens the bishop on c6.",
+      "recaptureCandidatesAfterDiscovery": [
+        "c6d5"
+      ],
+      "legalRecapturesAfterDiscovery": []
+    },
+    {
+      "gameId": "ef11e37c769c554a",
+      "title": "Keres, Paul — Taimanov, Mark E",
+      "fen": "2kr3r/1bp5/1p1pNq2/p3nB2/Q3P2p/2P2P2/P4KP1/1R5R w - - 2 24",
+      "moves": [
+        "Nxd8+"
+      ],
+      "originalLevel": "A",
+      "originalExerciseNumber": 63,
+      "decision": "remove",
+      "reason": "Nxd8+ wins the exchange, but Kxd8 remains legal. The rook-for-knight gain does not rely on preventing a recapture.",
+      "recaptureCandidatesAfterDiscovery": [
+        "h8d8",
+        "c8d8",
+        "f6d8"
+      ],
+      "legalRecapturesAfterDiscovery": [
+        "c8d8"
+      ]
+    },
+    {
+      "gameId": "f4c398024432d470",
+      "title": "Gusev, Yuri S — Tal, Mihail",
+      "fen": "6k1/p4pp1/1q6/4Pb1p/1Ppr1P2/2Bp1B2/P2P2PP/R4RK1 b - - 2 25",
+      "moves": [
+        "Rxf4+"
+      ],
+      "originalLevel": "A",
+      "originalExerciseNumber": 64,
+      "decision": "remove",
+      "reason": "Rxf4+ takes an undefended pawn; the discovery is incidental to that capture.",
+      "recaptureCandidatesAfterDiscovery": [],
+      "legalRecapturesAfterDiscovery": []
+    },
+    {
+      "gameId": "f6c21b1e6014c0ae",
+      "title": "Gelfand,B — Shirov,A",
+      "fen": "3r4/pp3k1p/4qNb1/2p5/3BP3/3nQ3/PP4PP/5RK1 w - c6 0 29",
+      "moves": [
+        "Nxh7+"
+      ],
+      "originalLevel": "A",
+      "originalExerciseNumber": 65,
+      "decision": "remove",
+      "reason": "User-requested removal in the follow-up 12-screenshot review; excluded from discovered check/attack practice regardless of the earlier automated editorial decision.",
+      "recaptureCandidatesAfterDiscovery": [
+        "g6h7"
+      ],
+      "legalRecapturesAfterDiscovery": [],
+      "previousDecision": {
+        "decision": "keep",
+        "reason": "Nxh7+ prevents Bxh7."
+      },
+      "supersededBy": "follow-up-12-screenshots"
+    },
+    {
+      "gameId": "f725668f52ee83b8",
+      "title": "Blackburne, Joseph Henry — Martin",
+      "fen": "1r2r3/Nbpkn1pp/1b6/8/8/3B1P2/Pq3P1P/3RR1K1 w - - 0 23",
+      "moves": [
+        "Bf5#"
+      ],
+      "originalLevel": "A",
+      "originalExerciseNumber": 66,
+      "decision": "keep",
+      "reason": "Bf5# is a discovered-check mate; the checking rook prevents Nxf5 from being a defence.",
+      "recaptureCandidatesAfterDiscovery": [
+        "e7f5"
+      ],
+      "legalRecapturesAfterDiscovery": []
+    },
+    {
+      "gameId": "f752d170c415a807",
+      "title": "Geller, Efim P — Mikadze, Zurab",
+      "fen": "2rq1r2/ppn1b1kp/2n1b3/4N3/4N3/4P1P1/1B3PBP/2R2RK1 w - - 0 22",
+      "moves": [
+        "Nxc6+"
+      ],
+      "originalLevel": "A",
+      "originalExerciseNumber": 67,
+      "decision": "keep",
+      "reason": "Nxc6+ prevents bxc6 and threatens the queen on d8.",
+      "recaptureCandidatesAfterDiscovery": [
+        "b7c6"
+      ],
+      "legalRecapturesAfterDiscovery": []
+    },
+    {
+      "gameId": "fb25398c406ea4d2",
+      "title": "Anderssen, Adolf — Flechsig, Ernst",
+      "fen": "r1b2r2/pp4pk/1q1bp3/3p4/6n1/P4NNP/1P2Q1P1/R1B1K2R w KQ - 0 18",
+      "moves": [
+        "hxg4+"
+      ],
+      "originalLevel": "A",
+      "originalExerciseNumber": 68,
+      "decision": "remove",
+      "reason": "hxg4+ takes an undefended knight; the discovery is incidental to that capture.",
+      "recaptureCandidatesAfterDiscovery": [],
+      "legalRecapturesAfterDiscovery": []
+    },
+    {
+      "gameId": "fbd79a47303e7f04",
+      "title": "Chigorin, Mikhail — Sellman, Alexander",
+      "fen": "2bq3k/2r1r1b1/2n1p1p1/p1ppPp1B/Pp6/1P2P1RQ/1BPP3P/6RK w - - 0 27",
+      "moves": [
+        "Bxg6+"
+      ],
+      "originalLevel": "A",
+      "originalExerciseNumber": 69,
+      "decision": "remove",
+      "reason": "Bxg6+ takes an undefended pawn. The published one-move lesson stops before any further king attack and does not demonstrate a discovery-dependent material gain.",
+      "recaptureCandidatesAfterDiscovery": [],
+      "legalRecapturesAfterDiscovery": []
+    },
+    {
+      "gameId": "061caf86b9d3313d",
+      "title": "Wittek, Alexander — Chigorin, Mikhail",
+      "fen": "4r1k1/2p1r3/1p1p1b2/3Ppb1q/2P2pP1/2BP4/PP2Q1pP/1B1R2RK w - - 0 28",
+      "moves": [
+        "Rxg2",
+        "Qh7",
+        "gxf5+"
+      ],
+      "originalLevel": "A",
+      "originalExerciseNumber": 70,
+      "decision": "remove",
+      "reason": "User-requested removal in the follow-up 12-screenshot review; excluded from discovered check/attack practice regardless of the earlier automated editorial decision.",
+      "recaptureCandidatesAfterDiscovery": [
+        "h7f5"
+      ],
+      "legalRecapturesAfterDiscovery": [],
+      "previousDecision": {
+        "decision": "keep",
+        "reason": "After Rxg2 Qh7, gxf5+ prevents Qxf5."
+      },
+      "supersededBy": "follow-up-12-screenshots"
+    },
+    {
+      "gameId": "2dd61c74a114fd5f",
+      "title": "Marshall, Frank James — Liebenstein, H.",
+      "fen": "4k2r/p3npp1/3b4/2p1n2p/8/2PBBP1P/PP3P2/3RR1K1 w k - 1 23",
+      "moves": [
+        "Bb5+",
+        "Kd8",
+        "Rxd6+"
+      ],
+      "originalLevel": "A",
+      "originalExerciseNumber": 71,
+      "decision": "keep",
+      "reason": "Bb5+ reveals the rook attack on d6 while forcing a check response, then Rxd6+ wins the bishop.",
+      "recaptureCandidatesAfterDiscovery": [],
+      "legalRecapturesAfterDiscovery": []
+    },
+    {
+      "gameId": "341dda784774b85b",
+      "title": "Charousek, Rudolf Rezso — Blackburne, Joseph Henry",
+      "fen": "6k1/Q1Rr2pp/p2P4/Pp1p1p2/3P1P2/5q2/5P1K/8 w - - 0 40",
+      "moves": [
+        "Rc8+",
+        "Kf7",
+        "Qxd7+"
+      ],
+      "originalLevel": "A",
+      "originalExerciseNumber": 72,
+      "decision": "remove",
+      "reason": "User-requested removal in the follow-up 12-screenshot review; excluded from discovered check/attack practice regardless of the earlier automated editorial decision.",
+      "recaptureCandidatesAfterDiscovery": [],
+      "legalRecapturesAfterDiscovery": [],
+      "previousDecision": {
+        "decision": "keep",
+        "reason": "Rc8+ reveals the queen attack on d7 while forcing a king response, then Qxd7+ wins the rook."
+      },
+      "supersededBy": "follow-up-12-screenshots"
+    },
+    {
+      "gameId": "3e38e528389a6e05",
+      "title": "Anderssen, Adolf — Kolisch, Ignatz",
+      "fen": "7k/ppb3p1/5p1p/3P1q2/1P2rP2/P2QB2P/7K/5R2 b - - 0 33",
+      "moves": [
+        "Rxf4",
+        "Qxf5",
+        "Rxf5+"
+      ],
+      "originalLevel": "A",
+      "originalExerciseNumber": 73,
+      "decision": "keep",
+      "reason": "Rxf4 reveals the queen attack on d3; Qxf5 is answered by Rxf5+, and taking the moving rook instead exposes the queen.",
+      "recaptureCandidatesAfterDiscovery": [
+        "e3f4",
+        "f1f4"
+      ],
+      "legalRecapturesAfterDiscovery": [
+        "e3f4",
+        "f1f4"
+      ]
+    },
+    {
+      "gameId": "4d73cc7fb0e14287",
+      "title": "Shirov,A — Quinones,Cen",
+      "fen": "4rnk1/pr3R2/6p1/6P1/3p3P/4b1BK/B7/8 w - - 0 40",
+      "moves": [
+        "Re7+",
+        "Ne6",
+        "Rxe8+"
+      ],
+      "originalLevel": "A",
+      "originalExerciseNumber": 74,
+      "decision": "keep",
+      "reason": "Re7+ prevents either black rook from taking the moving rook and allows Rxe8+.",
+      "recaptureCandidatesAfterDiscovery": [
+        "e8e7",
+        "b7e7"
+      ],
+      "legalRecapturesAfterDiscovery": []
+    },
+    {
+      "gameId": "4ea03afbd8874d1f",
+      "title": "Chigorin, Mikhail — Wolf, Heinrich",
+      "fen": "5rk1/1pp4p/1p2pn1Q/8/8/1N6/P4K1P/4R3 b - - 0 28",
+      "moves": [
+        "Ng4+",
+        "Kg3",
+        "Nxh6"
+      ],
+      "originalLevel": "A",
+      "originalExerciseNumber": 75,
+      "decision": "keep",
+      "reason": "Ng4+ uses the revealed rook check to gain a tempo for the knight attack on h6, winning the queen.",
+      "recaptureCandidatesAfterDiscovery": [],
+      "legalRecapturesAfterDiscovery": []
+    },
+    {
+      "gameId": "61ba465494b03015",
+      "title": "Shirov,A — Westerberg,J",
+      "fen": "rnb4r/pp2kppp/3N1n2/3qp3/8/P1B5/1P2PPPP/R2QKB1R w KQ - 1 12",
+      "moves": [
+        "Bb4",
+        "Nc6",
+        "Nxc8+"
+      ],
+      "originalLevel": "A",
+      "originalExerciseNumber": 76,
+      "decision": "remove",
+      "reason": "User-requested removal in the follow-up 12-screenshot review; excluded from discovered check/attack practice regardless of the earlier automated editorial decision.",
+      "recaptureCandidatesAfterDiscovery": [
+        "h8c8",
+        "a8c8"
+      ],
+      "legalRecapturesAfterDiscovery": [],
+      "previousDecision": {
+        "decision": "keep",
+        "reason": "After Bb4 Nc6, Nxc8+ prevents either rook from recapturing on c8."
+      },
+      "supersededBy": "follow-up-12-screenshots"
+    },
+    {
+      "gameId": "6e399180d48ad8bd",
+      "title": "Chigorin, Mikhail — Hruby, Vincenz",
+      "fen": "rnbqkb1r/pppp3p/5nP1/7Q/5p2/8/PPPP2PP/RNB1KBNR w KQkq - 1 6",
+      "moves": [
+        "g7+",
+        "Nxh5",
+        "gxh8=Q"
+      ],
+      "originalLevel": "A",
+      "originalExerciseNumber": 77,
+      "decision": "keep",
+      "reason": "g7+ prevents Bxg7 and forces Black to answer the revealed queen check, allowing promotion on h8.",
+      "recaptureCandidatesAfterDiscovery": [
+        "f8g7"
+      ],
+      "legalRecapturesAfterDiscovery": []
+    },
+    {
+      "gameId": "7c963840d429d8ab",
+      "title": "Yankovich, Boris — Chigorin, Mikhail",
+      "fen": "3R1r1k/ppp5/1bn4p/4P1pq/8/1Q3NBb/P3NPPK/5R2 b - - 0 25",
+      "moves": [
+        "Be6+",
+        "Kg1",
+        "Bxb3"
+      ],
+      "originalLevel": "A",
+      "originalExerciseNumber": 78,
+      "decision": "keep",
+      "reason": "Be6+ reveals the queen check, prevents Qxe6 and gains a tempo to attack and capture the queen on b3.",
+      "recaptureCandidatesAfterDiscovery": [
+        "b3e6"
+      ],
+      "legalRecapturesAfterDiscovery": []
+    },
+    {
+      "gameId": "8042b968ea20feab",
+      "title": "Spielmann, Rudolf — Forgacs, Leo",
+      "fen": "r2r1q2/1pR2Qpk/p3p3/nP2p1p1/P3P3/8/6PP/5R1K w - - 1 25",
+      "moves": [
+        "Qh5+",
+        "Kg8",
+        "Rxf8+"
+      ],
+      "originalLevel": "A",
+      "originalExerciseNumber": 79,
+      "decision": "keep",
+      "reason": "Qh5+ reveals the rook attack on f8 while forcing a king response, allowing Rxf8+ to win the queen for a rook.",
+      "recaptureCandidatesAfterDiscovery": [],
+      "legalRecapturesAfterDiscovery": []
+    },
+    {
+      "gameId": "85d1276d7be883e4",
+      "title": "De Riviere, Jules Arnous — Anderssen, Adolf",
+      "fen": "4rr2/ppp3k1/7p/q2PN3/2P1bP2/5N2/P1P1K2P/Q7 w - - 0 25",
+      "moves": [
+        "Nc6+",
+        "Kh7",
+        "Nxa5"
+      ],
+      "originalLevel": "A",
+      "originalExerciseNumber": 80,
+      "decision": "keep",
+      "reason": "Nc6+ prevents bxc6 and gains a tempo for Nxa5, winning the queen.",
+      "recaptureCandidatesAfterDiscovery": [
+        "b7c6"
+      ],
+      "legalRecapturesAfterDiscovery": []
+    },
+    {
+      "gameId": "8b1b9e0cfc0f2840",
+      "title": "Falkbeer, Ernst Karl — Anderssen, Adolf",
+      "fen": "r4q1k/pp4R1/2p3p1/4B2b/2B1P3/5r2/PPP4P/1K5R w - - 3 28",
+      "moves": [
+        "Rf7+",
+        "Kg8",
+        "Rxf3+"
+      ],
+      "originalLevel": "A",
+      "originalExerciseNumber": 81,
+      "decision": "keep",
+      "reason": "Rf7+ prevents either queen or rook from taking on f7; Rxf3+ repeats the discovery and prevents recapture of that rook.",
+      "recaptureCandidatesAfterDiscovery": [
+        "f8f7",
+        "f3f7"
+      ],
+      "legalRecapturesAfterDiscovery": []
+    },
+    {
+      "gameId": "8fdba4904a952ed2",
+      "title": "Solovtsov, A. — Chigorin, Mikhail",
+      "fen": "N4rk1/p5pp/P7/2P5/3P3q/2B1P1nn/3N2QK/R3R3 b - - 2 46",
+      "moves": [
+        "Nf4+",
+        "Kg1",
+        "Nxg2"
+      ],
+      "originalLevel": "A",
+      "originalExerciseNumber": 82,
+      "decision": "keep",
+      "reason": "Nf4+ prevents exf4 and gains a tempo for Nxg2, winning the queen for a knight.",
+      "recaptureCandidatesAfterDiscovery": [
+        "e3f4"
+      ],
+      "legalRecapturesAfterDiscovery": []
+    },
+    {
+      "gameId": "91293e0b7c7e17ab",
+      "title": "Golmayo Zupide, Celso — Blackburne, Joseph Henry",
+      "fen": "6kr/p4Rpp/4B3/4r3/2P5/7P/P1P3P1/6K1 w - - 1 27",
+      "moves": [
+        "Rf6+",
+        "Rxe6",
+        "Rxe6"
+      ],
+      "originalLevel": "A",
+      "originalExerciseNumber": 83,
+      "decision": "keep",
+      "reason": "Rf6+ prevents gxf6. Answering the revealed bishop check with Rxe6 allows Rxe6, winning the exchange.",
+      "recaptureCandidatesAfterDiscovery": [
+        "g7f6"
+      ],
+      "legalRecapturesAfterDiscovery": []
+    },
+    {
+      "gameId": "92398b7ec63f4a5b",
+      "title": "Spielmann, Rudolf — Nimzowitsch, Aaron ",
+      "fen": "2Q5/r3b1R1/1kn1p3/p2pP3/qppP1B2/2P2P2/P7/R3K3 b - - 0 37",
+      "moves": [
+        "Bh4+",
+        "Rg3",
+        "Bxg3+"
+      ],
+      "originalLevel": "A",
+      "originalExerciseNumber": 84,
+      "decision": "keep",
+      "reason": "Bh4+ reveals the rook attack on g7 while checking; blocking with Rg3 allows Bxg3+ and wins the exchange.",
+      "recaptureCandidatesAfterDiscovery": [],
+      "legalRecapturesAfterDiscovery": []
+    },
+    {
+      "gameId": "9541ef02df89a369",
+      "title": "Anand,V — Shirov,A",
+      "fen": "r6r/pp1bkp2/4pN2/q2p2QP/6p1/2pP4/P3KPP1/R6R w - - 0 23",
+      "moves": [
+        "h6",
+        "Qa4",
+        "Nxg4+"
+      ],
+      "originalLevel": "A",
+      "originalExerciseNumber": 85,
+      "decision": "remove",
+      "reason": "User-requested removal in the follow-up 12-screenshot review; excluded from discovered check/attack practice regardless of the earlier automated editorial decision.",
+      "recaptureCandidatesAfterDiscovery": [
+        "a4g4"
+      ],
+      "legalRecapturesAfterDiscovery": [],
+      "previousDecision": {
+        "decision": "keep",
+        "reason": "After h6 Qa4, Nxg4+ prevents Qxg4."
+      },
+      "supersededBy": "follow-up-12-screenshots"
+    },
+    {
+      "gameId": "a01efbc6f0b6cfd7",
+      "title": "Stein, Leonid — Rocha, Antonio",
+      "fen": "2kN1Q2/p3p2p/2ppP1p1/1q6/1p1P1P2/1N2n3/PPP3PP/1K1nR3 w - - 1 25",
+      "moves": [
+        "Nf7+",
+        "Kb7",
+        "Qxe7+"
+      ],
+      "originalLevel": "A",
+      "originalExerciseNumber": 86,
+      "decision": "remove",
+      "reason": "Nf7+ Kb7 Qxe7+ ends with the queen taking an undefended pawn. The short published line does not clearly demonstrate a prevented recapture or a second material threat enabled by the discovery; omit as a weak introductory example.",
+      "recaptureCandidatesAfterDiscovery": [],
+      "legalRecapturesAfterDiscovery": []
+    },
+    {
+      "gameId": "a103c03001126932",
+      "title": "Cohn, Wilhelm — Blackburne, Joseph Henry",
+      "fen": "r5k1/pp1b2b1/3N2B1/2pP4/2Pp1rP1/6qP/PP4Q1/R4RK1 b - - 2 22",
+      "moves": [
+        "Rxf1+",
+        "Rxf1",
+        "Qxd6"
+      ],
+      "originalLevel": "A",
+      "originalExerciseNumber": 87,
+      "decision": "remove",
+      "reason": "User-requested removal in the follow-up 12-screenshot review; excluded from discovered check/attack practice regardless of the earlier automated editorial decision.",
+      "recaptureCandidatesAfterDiscovery": [
+        "g2f1",
+        "g1f1",
+        "a1f1"
+      ],
+      "legalRecapturesAfterDiscovery": [
+        "g1f1",
+        "a1f1"
+      ],
+      "previousDecision": {
+        "decision": "keep",
+        "reason": "Rxf1+ reveals the queen attack on d6 while forcing a check response; after the rook exchange Qxd6 wins the knight."
+      },
+      "supersededBy": "follow-up-12-screenshots"
+    },
+    {
+      "gameId": "a406ea076875d829",
+      "title": "Shirov,A — Kurajica,B",
+      "fen": "rn3rk1/p3Rpbp/2p5/2P3p1/3P1qn1/2N2Q2/PP2BP1P/2KR4 w - - 0 20",
+      "moves": [
+        "Qxf4",
+        "gxf4",
+        "Bxg4"
+      ],
+      "originalLevel": "A",
+      "originalExerciseNumber": 88,
+      "decision": "keep",
+      "reason": "Qxf4 reveals the bishop attack on g4; after the queen exchange gxf4, Bxg4 wins the knight.",
+      "recaptureCandidatesAfterDiscovery": [
+        "g5f4"
+      ],
+      "legalRecapturesAfterDiscovery": [
+        "g5f4"
+      ]
+    },
+    {
+      "gameId": "b43581a39ba725d7",
+      "title": "Tal, Mihail — Mukhin, Mikhail A",
+      "fen": "r2qkb1r/1n3ppp/p2p1n2/3p2B1/1p1NP3/8/PPP2PPP/R2QR1K1 w kq - 0 14",
+      "moves": [
+        "Nc6",
+        "Qb6",
+        "exd5+"
+      ],
+      "originalLevel": "A",
+      "originalExerciseNumber": 89,
+      "decision": "remove",
+      "reason": "User-requested removal in the follow-up 12-screenshot review; excluded from discovered check/attack practice regardless of the earlier automated editorial decision.",
+      "recaptureCandidatesAfterDiscovery": [
+        "f6d5"
+      ],
+      "legalRecapturesAfterDiscovery": [],
+      "previousDecision": {
+        "decision": "keep",
+        "reason": "After Nc6 Qb6, exd5+ prevents Nxd5."
+      },
+      "supersededBy": "follow-up-12-screenshots"
+    },
+    {
+      "gameId": "c0b208644f84bd31",
+      "title": "Tal, Mihail — Akopian, Vladimir",
+      "fen": "2r4k/5prp/2b1P3/4Qp2/1PpR1P2/2q5/P4K1P/4R3 w - - 2 33",
+      "moves": [
+        "Rd8+",
+        "Rxd8",
+        "Qxc3"
+      ],
+      "originalLevel": "A",
+      "originalExerciseNumber": 90,
+      "decision": "keep",
+      "reason": "Rd8+ reveals the queen attack on c3 while forcing a response to check; Rxd8 allows Qxc3, winning the queen for a rook.",
+      "recaptureCandidatesAfterDiscovery": [
+        "c8d8"
+      ],
+      "legalRecapturesAfterDiscovery": [
+        "c8d8"
+      ]
+    },
+    {
+      "gameId": "ce45959a1f6aa98c",
+      "title": "Kasparov, Gary — Baude, H.",
+      "fen": "5r1k/1pr4p/p1n1pN1P/P1RpP1P1/3P4/2PK4/3B4/8 b - - 1 42",
+      "moves": [
+        "Nxe5+",
+        "Kc2",
+        "Rxc5"
+      ],
+      "originalLevel": "A",
+      "originalExerciseNumber": 91,
+      "decision": "keep",
+      "reason": "Nxe5+ reveals the rook attack on c5. A king move allows Rxc5; dxe5 also gives up the defence of c5, allowing the rook capture.",
+      "recaptureCandidatesAfterDiscovery": [
+        "d4e5"
+      ],
+      "legalRecapturesAfterDiscovery": [
+        "d4e5"
+      ]
+    },
+    {
+      "gameId": "e956070db28ffefe",
+      "title": "Chigorin, Mikhail — Napier, William Ewart",
+      "fen": "1k1rr3/pp2qnb1/2n2p2/2pp2p1/5PPQ/2NPB2P/PPP3B1/4RRK1 w - - 0 23",
+      "moves": [
+        "Qg3",
+        "f5",
+        "fxg5+"
+      ],
+      "originalLevel": "A",
+      "originalExerciseNumber": 92,
+      "decision": "remove",
+      "reason": "User-requested removal in the follow-up 12-screenshot review; excluded from discovered check/attack practice regardless of the earlier automated editorial decision.",
+      "recaptureCandidatesAfterDiscovery": [
+        "f7g5",
+        "e7g5"
+      ],
+      "legalRecapturesAfterDiscovery": [],
+      "previousDecision": {
+        "decision": "keep",
+        "reason": "After Qg3 f5, fxg5+ prevents Nxg5 and Qxg5."
+      },
+      "supersededBy": "follow-up-12-screenshots"
+    },
+    {
+      "gameId": "ee7b7c555bb9df80",
+      "title": "Paulsen, Louis — Blackburne, Joseph Henry",
+      "fen": "4rrk1/p1p3pp/2p5/5p2/2PP2b1/2NQ1p1q/PP1B1R1b/5R1K b - - 1 22",
+      "moves": [
+        "Bg3+",
+        "Kg1",
+        "Bxf2+"
+      ],
+      "originalLevel": "A",
+      "originalExerciseNumber": 93,
+      "decision": "keep",
+      "reason": "Bg3+ reveals the queen check and gains a tempo for Bxf2+, winning the exchange.",
+      "recaptureCandidatesAfterDiscovery": [],
+      "legalRecapturesAfterDiscovery": []
+    }
+  ]
+}

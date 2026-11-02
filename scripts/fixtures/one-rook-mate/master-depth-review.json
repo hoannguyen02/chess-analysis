@@ -1,0 +1,29 @@
+[
+  {
+    "gameId": "07cd314d5d3f4c63",
+    "fen": "2r3k1/N4p1p/6p1/R2bQ3/1p5q/8/1P4PP/5R1K b - - 0 27",
+    "moves": [
+      "Qf2",
+      "Rg1",
+      "Qxg2+",
+      "Rxg2",
+      "Rc1+",
+      "Qe1",
+      "Rxe1#"
+    ],
+    "nodes": 1200000,
+    "depth": 88,
+    "mate": 4,
+    "principalVariation": [
+      "h4f2",
+      "f1g1",
+      "f2g2",
+      "g1g2",
+      "c8c1",
+      "e5e1",
+      "c1e1"
+    ],
+    "decision": "verified",
+    "finalLevel": "D"
+  }
+]

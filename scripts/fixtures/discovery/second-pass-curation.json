@@ -1,0 +1,2686 @@
+{
+  "date": "2026-10-29",
+  "reviewed": 95,
+  "scope": "Entire published B, C, C*, D collection after the user exclusion of Muradli–Aronian. Beginner and A unchanged.",
+  "targetPerLevel": 24,
+  "counts": {
+    "B": 19,
+    "C": 22,
+    "C*": 4,
+    "D": 22
+  },
+  "missingPositions": {
+    "B": 5,
+    "C": 2,
+    "C*": 20,
+    "D": 2
+  },
+  "reviews": [
+    {
+      "gameId": "1f95e7caefa9237a",
+      "level": "B",
+      "originalExerciseNumber": 1,
+      "fen": "3rr3/p2kq1b1/2p1pn2/1Q3pBp/3P2p1/8/PPP2PPP/R2R2K1 w - - 0 24",
+      "moves": [
+        "Qb7+",
+        "Kd6",
+        "Bf4+",
+        "e5",
+        "dxe5+"
+      ],
+      "decision": "keep",
+      "reason": "B: Qb7+ Kd6 Bf4+ e5 dxe5+. P d4–e5 uncovers R d1 against K d6; checking tempo links preparation to the final material capture. Second pass replayed every solver position, immediate defensive material responses and the complete payoff; no new tactical screening flag. Retained within the level after comparison of preparation and defensive mechanism.",
+      "previousReason": "B: Qb7+ Kd6 Bf4+ e5 dxe5+. P d4–e5 uncovers R d1 against K d6; checking tempo links preparation to the final material capture.",
+      "solverMoves": 3,
+      "aspects": [
+        "capture",
+        "check",
+        "double-check",
+        "file",
+        "mover-P",
+        "pawn-capture",
+        "slider-R",
+        "target-K",
+        "white"
+      ]
+    },
+    {
+      "gameId": "b715e1b3cb3644a1",
+      "level": "B",
+      "originalExerciseNumber": 2,
+      "fen": "4k2r/1p1bppbp/p4np1/q7/3Q2P1/1PN4P/P1P2PB1/2KR3R w k - 1 17",
+      "moves": [
+        "Nd5",
+        "O-O",
+        "Nxf6+",
+        "exf6",
+        "Qxd7"
+      ],
+      "decision": "keep",
+      "reason": "B: Nd5 O-O Nxf6+ exf6 Qxd7. N d5–f6 uncovers Q d4 against B d7; the revealed attack and the moving piece create competing threats before the payoff capture. Second pass replayed every solver position, immediate defensive material responses and the complete payoff; no new tactical screening flag. Retained within the level after comparison of preparation and defensive mechanism.",
+      "previousReason": "B: Nd5 O-O Nxf6+ exf6 Qxd7. N d5–f6 uncovers Q d4 against B d7; the revealed attack and the moving piece create competing threats before the payoff capture.",
+      "solverMoves": 3,
+      "aspects": [
+        "attack",
+        "capture",
+        "diagonal",
+        "file",
+        "mover-N",
+        "slider-B",
+        "slider-Q",
+        "target-B",
+        "target-P",
+        "white"
+      ]
+    },
+    {
+      "gameId": "4acf9d2a4534e6dc",
+      "level": "B",
+      "originalExerciseNumber": 3,
+      "fen": "5rk1/p2Q4/6P1/6p1/1ppp4/1P3b2/P6K/1B4r1 b - - 2 41",
+      "moves": [
+        "Rg2+",
+        "Kh1",
+        "Rb2+",
+        "Kg1",
+        "Rxb1+"
+      ],
+      "decision": "keep",
+      "reason": "B: Rg2+ Kh1 Rb2+ Kg1 Rxb1+. R g2–b2 uncovers B f3 against K h1; checking tempo links preparation to the final material capture. Second pass replayed every solver position, immediate defensive material responses and the complete payoff; no new tactical screening flag. Retained within the level after comparison of preparation and defensive mechanism.",
+      "previousReason": "B: Rg2+ Kh1 Rb2+ Kg1 Rxb1+. R g2–b2 uncovers B f3 against K h1; checking tempo links preparation to the final material capture.",
+      "solverMoves": 3,
+      "aspects": [
+        "black",
+        "check",
+        "diagonal",
+        "mover-R",
+        "quiet-move",
+        "slider-B",
+        "target-K"
+      ]
+    },
+    {
+      "gameId": "a0d2e9b76703f002",
+      "level": "B",
+      "originalExerciseNumber": 4,
+      "fen": "4r2k/p1p3bp/3nq1p1/3QN3/8/8/P4PPP/2R1R1K1 w - - 0 26",
+      "moves": [
+        "Qxe6",
+        "Rxe6",
+        "Nf7+",
+        "Kg8",
+        "Rxe6"
+      ],
+      "decision": "keep",
+      "reason": "B: Qxe6 Rxe6 Nf7+ Kg8 Rxe6. N e5–f7 uncovers R e1 against R e6; the revealed attack and the moving piece create competing threats before the payoff capture. Second pass replayed every solver position, immediate defensive material responses and the complete payoff; no new tactical screening flag. Retained within the level after comparison of preparation and defensive mechanism.",
+      "previousReason": "B: Qxe6 Rxe6 Nf7+ Kg8 Rxe6. N e5–f7 uncovers R e1 against R e6; the revealed attack and the moving piece create competing threats before the payoff capture.",
+      "solverMoves": 3,
+      "aspects": [
+        "attack",
+        "file",
+        "mover-N",
+        "quiet-move",
+        "slider-R",
+        "target-R",
+        "white"
+      ]
+    },
+    {
+      "gameId": "ad058a144c3b1cb1",
+      "level": "B",
+      "originalExerciseNumber": 5,
+      "fen": "1r4k1/2n1r1pp/6p1/N2p2P1/3Kp1BP/b3P3/5P2/3R1R2 b - - 1 32",
+      "moves": [
+        "Rb4+",
+        "Kc5",
+        "Rb5+",
+        "Kc6",
+        "Rxa5"
+      ],
+      "decision": "remove",
+      "reason": "Redundant with 4acf9d2a4534e6dc: a direct Rook check, a Rook move uncovering Bishop check, then collection of a target on the Rook rank. A different king location and target do not add a distinct learner decision.",
+      "previousReason": "B: Rb4+ Kc5 Rb5+ Kc6 Rxa5. R b4–b5 uncovers B a3 against K c5; checking tempo links preparation to the final material capture.",
+      "solverMoves": 3,
+      "aspects": [
+        "black",
+        "check",
+        "diagonal",
+        "double-check",
+        "mover-R",
+        "quiet-move",
+        "slider-B",
+        "target-K"
+      ]
+    },
+    {
+      "gameId": "a9948e12cc09c940",
+      "level": "B",
+      "originalExerciseNumber": 6,
+      "fen": "5rk1/6p1/6p1/6Np/PR4n1/4r3/8/R5K1 b - - 4 40",
+      "moves": [
+        "Rg3+",
+        "Kh1",
+        "Nf2+",
+        "Kh2",
+        "Rxg5"
+      ],
+      "decision": "keep",
+      "reason": "B: Rg3+ Kh1 Nf2+ Kh2 Rxg5. N g4–f2 uncovers R g3 against N g5; the revealed attack and the moving piece create competing threats before the payoff capture. Second pass replayed every solver position, immediate defensive material responses and the complete payoff; no new tactical screening flag. Retained within the level after comparison of preparation and defensive mechanism.",
+      "previousReason": "B: Rg3+ Kh1 Nf2+ Kh2 Rxg5. N g4–f2 uncovers R g3 against N g5; the revealed attack and the moving piece create competing threats before the payoff capture.",
+      "solverMoves": 3,
+      "aspects": [
+        "attack",
+        "black",
+        "file",
+        "mover-N",
+        "quiet-move",
+        "slider-R",
+        "target-N"
+      ]
+    },
+    {
+      "gameId": "df7a27315904a833",
+      "level": "B",
+      "originalExerciseNumber": 7,
+      "fen": "r3k1r1/1p1Rbp2/2p1p3/p3Pp2/2P1n1q1/3QBNp1/1P3P1P/3R2K1 b q - 1 27",
+      "moves": [
+        "gxf2+",
+        "Kf1",
+        "Qg2+",
+        "Ke2",
+        "f1=Q#"
+      ],
+      "decision": "keep",
+      "reason": "B: gxf2+ Kf1 Qg2+ Ke2 f1=Q#. P f2–f1 uncovers Q g2 against K e2; checking tempo links preparation to the final mate. Second pass replayed every solver position, immediate defensive material responses and the complete payoff; no new tactical screening flag. Retained within the level after comparison of preparation and defensive mechanism.",
+      "previousReason": "B: gxf2+ Kf1 Qg2+ Ke2 f1=Q#. P f2–f1 uncovers Q g2 against K e2; checking tempo links preparation to the final mate.",
+      "solverMoves": 3,
+      "aspects": [
+        "black",
+        "capture",
+        "check",
+        "double-check",
+        "file",
+        "mover-P",
+        "pawn-capture",
+        "pawn-one-step",
+        "promotion",
+        "quiet-move",
+        "rank",
+        "slider-Q",
+        "target-K"
+      ]
+    },
+    {
+      "gameId": "59d867196a5f620d",
+      "level": "B",
+      "originalExerciseNumber": 8,
+      "fen": "2r3k1/3b1pb1/p5p1/3Pr2p/2p1N1nP/2N3P1/P7/2KRRB2 b - - 0 30",
+      "moves": [
+        "f5",
+        "Ng5",
+        "Rxe1",
+        "Rxe1",
+        "Bxc3"
+      ],
+      "decision": "keep",
+      "reason": "B: f5 Ng5 Rxe1 Rxe1 Bxc3. R e5–e1 uncovers B g7 against N c3; the revealed attack and the moving piece create competing threats before the payoff capture. Second pass replayed every solver position, immediate defensive material responses and the complete payoff; no new tactical screening flag. Retained within the level after comparison of preparation and defensive mechanism.",
+      "previousReason": "B: f5 Ng5 Rxe1 Rxe1 Bxc3. R e5–e1 uncovers B g7 against N c3; the revealed attack and the moving piece create competing threats before the payoff capture.",
+      "solverMoves": 3,
+      "aspects": [
+        "attack",
+        "black",
+        "capture",
+        "diagonal",
+        "mover-R",
+        "nonchecking-attack",
+        "slider-B",
+        "target-N"
+      ]
+    },
+    {
+      "gameId": "80360d633653b13a",
+      "level": "B",
+      "originalExerciseNumber": 9,
+      "fen": "5r1k/1q3p2/4nNp1/3RQ2p/p3P2P/6P1/5P2/1rR3K1 w - - 4 37",
+      "moves": [
+        "Rxb1",
+        "Qxb1+",
+        "Kg2",
+        "Qb6",
+        "Nxh5+"
+      ],
+      "decision": "keep",
+      "reason": "B: Rxb1 Qxb1+ Kg2 Qb6 Nxh5+. N f6–h5 uncovers Q e5 against K h8; checking tempo links preparation to the final material capture. Second pass replayed every solver position, immediate defensive material responses and the complete payoff; no new tactical screening flag. Retained within the level after comparison of preparation and defensive mechanism.",
+      "previousReason": "B: Rxb1 Qxb1+ Kg2 Qb6 Nxh5+. N f6–h5 uncovers Q e5 against K h8; checking tempo links preparation to the final material capture.",
+      "solverMoves": 3,
+      "aspects": [
+        "capture",
+        "check",
+        "diagonal",
+        "mover-N",
+        "slider-Q",
+        "target-K",
+        "white"
+      ]
+    },
+    {
+      "gameId": "22a9700eeb011cca",
+      "level": "B",
+      "originalExerciseNumber": 10,
+      "fen": "8/8/2k5/2P1b3/1PK5/3B1R1P/8/7r w - - 3 78",
+      "moves": [
+        "Be4+",
+        "Kd7",
+        "Rd3+",
+        "Kc7",
+        "Bxh1"
+      ],
+      "decision": "keep",
+      "reason": "B: Be4+ Kd7 Rd3+ Kc7 Bxh1. R f3–d3 uncovers B e4 against R h1; the revealed attack and the moving piece create competing threats before the payoff capture. Second pass replayed every solver position, immediate defensive material responses and the complete payoff; no new tactical screening flag. Retained within the level after comparison of preparation and defensive mechanism.",
+      "previousReason": "B: Be4+ Kd7 Rd3+ Kc7 Bxh1. R f3–d3 uncovers B e4 against R h1; the revealed attack and the moving piece create competing threats before the payoff capture.",
+      "solverMoves": 3,
+      "aspects": [
+        "attack",
+        "diagonal",
+        "mover-R",
+        "quiet-move",
+        "slider-B",
+        "target-R",
+        "white"
+      ]
+    },
+    {
+      "gameId": "8f195eb5e17e51f6",
+      "level": "B",
+      "originalExerciseNumber": 11,
+      "fen": "3r1rk1/1p3p2/p1b2q1p/5ppn/6RP/1BN1Q3/PPP2P2/2K3R1 w - - 0 26",
+      "moves": [
+        "hxg5",
+        "Qd6",
+        "Rh4",
+        "Rfe8",
+        "gxh6+"
+      ],
+      "decision": "keep",
+      "reason": "B: hxg5 Qd6 Rh4 Rfe8 gxh6+. P g5–h6 uncovers R g1 against K g8; checking tempo links preparation to the final material capture. Second pass replayed every solver position, immediate defensive material responses and the complete payoff; no new tactical screening flag. Retained within the level after comparison of preparation and defensive mechanism.",
+      "previousReason": "B: hxg5 Qd6 Rh4 Rfe8 gxh6+. P g5–h6 uncovers R g1 against K g8; checking tempo links preparation to the final material capture.",
+      "solverMoves": 3,
+      "aspects": [
+        "capture",
+        "check",
+        "file",
+        "mover-P",
+        "pawn-capture",
+        "slider-R",
+        "target-K",
+        "white"
+      ]
+    },
+    {
+      "gameId": "4c42ad8f14a0d069",
+      "level": "B",
+      "originalExerciseNumber": 12,
+      "fen": "5Q2/p7/1p2Npk1/4p2p/2q1b3/6P1/PP3P1P/6K1 w - - 1 33",
+      "moves": [
+        "Qg8+",
+        "Kf5",
+        "Ng7+",
+        "Kg6",
+        "Qxc4"
+      ],
+      "decision": "keep",
+      "reason": "B: Qg8+ Kf5 Ng7+ Kg6 Qxc4. N e6–g7 uncovers Q g8 against Q c4; the revealed attack and the moving piece create competing threats before the payoff capture. Second pass replayed every solver position, immediate defensive material responses and the complete payoff; no new tactical screening flag. Retained within the level after comparison of preparation and defensive mechanism.",
+      "previousReason": "B: Qg8+ Kf5 Ng7+ Kg6 Qxc4. N e6–g7 uncovers Q g8 against Q c4; the revealed attack and the moving piece create competing threats before the payoff capture.",
+      "solverMoves": 3,
+      "aspects": [
+        "attack",
+        "diagonal",
+        "mover-N",
+        "quiet-move",
+        "slider-Q",
+        "target-Q",
+        "white"
+      ]
+    },
+    {
+      "gameId": "bfef9477bba315c3",
+      "level": "B",
+      "originalExerciseNumber": 13,
+      "fen": "r1b1r3/pp3k2/2pq2pB/8/4p1PQ/2Nn4/PP3P1P/3R1RK1 w - - 1 20",
+      "moves": [
+        "Be3",
+        "Qe5",
+        "f3",
+        "Rh8",
+        "fxe4+"
+      ],
+      "decision": "keep",
+      "reason": "B: Be3 Qe5 f3 Rh8 fxe4+. P f3–e4 uncovers R f1 against K f7; checking tempo links preparation to the final material capture. Second pass replayed every solver position, immediate defensive material responses and the complete payoff; no new tactical screening flag. Retained within the level after comparison of preparation and defensive mechanism.",
+      "previousReason": "B: Be3 Qe5 f3 Rh8 fxe4+. P f3–e4 uncovers R f1 against K f7; checking tempo links preparation to the final material capture.",
+      "solverMoves": 3,
+      "aspects": [
+        "capture",
+        "check",
+        "file",
+        "mover-P",
+        "pawn-capture",
+        "slider-R",
+        "target-K",
+        "white"
+      ]
+    },
+    {
+      "gameId": "a47aeafddfb1266b",
+      "level": "B",
+      "originalExerciseNumber": 14,
+      "fen": "1r3r1k/6bp/1n1pB3/p1pPp1P1/2N5/8/1P3P2/2R1R1K1 w - - 2 32",
+      "moves": [
+        "Nxd6",
+        "c4",
+        "Nf7+",
+        "Kg8",
+        "Nxe5+"
+      ],
+      "decision": "keep",
+      "reason": "B: Nxd6 c4 Nf7+ Kg8 Nxe5+. N f7–e5 uncovers B e6 against K g8; checking tempo links preparation to the final material capture. Second pass replayed every solver position, immediate defensive material responses and the complete payoff; no new tactical screening flag. Retained within the level after comparison of preparation and defensive mechanism.",
+      "previousReason": "B: Nxd6 c4 Nf7+ Kg8 Nxe5+. N f7–e5 uncovers B e6 against K g8; checking tempo links preparation to the final material capture.",
+      "solverMoves": 3,
+      "aspects": [
+        "attack",
+        "capture",
+        "check",
+        "diagonal",
+        "file",
+        "mover-N",
+        "nonchecking-attack",
+        "slider-B",
+        "slider-R",
+        "target-K",
+        "target-P",
+        "white"
+      ]
+    },
+    {
+      "gameId": "eb90320742dca76e",
+      "level": "B",
+      "originalExerciseNumber": 15,
+      "fen": "5nk1/3b1p1p/3p1Q2/2pP2PN/2P2P1p/R4N1q/4K3/5r2 b - - 3 40",
+      "moves": [
+        "Qg2+",
+        "Ke3",
+        "Rxf3+",
+        "Ke4",
+        "Rxa3#"
+      ],
+      "decision": "keep",
+      "reason": "B: Qg2+ Ke3 Rxf3+ Ke4 Rxa3#. R f3–a3 uncovers Q g2 against K e4; checking tempo links preparation to the final mate. Second pass replayed every solver position, immediate defensive material responses and the complete payoff; no new tactical screening flag. Retained within the level after comparison of preparation and defensive mechanism.",
+      "previousReason": "B: Qg2+ Ke3 Rxf3+ Ke4 Rxa3#. R f3–a3 uncovers Q g2 against K e4; checking tempo links preparation to the final mate.",
+      "solverMoves": 3,
+      "aspects": [
+        "black",
+        "capture",
+        "check",
+        "diagonal",
+        "mover-R",
+        "slider-Q",
+        "target-K"
+      ]
+    },
+    {
+      "gameId": "bfb60242f4cc9115",
+      "level": "B",
+      "originalExerciseNumber": 16,
+      "fen": "8/2krR2p/2N5/1B6/8/5n1n/1P6/1K6 w - - 8 47",
+      "moves": [
+        "Rxd7+",
+        "Kxd7",
+        "Ne5+",
+        "Kd6",
+        "Nxf3"
+      ],
+      "decision": "keep",
+      "reason": "B: Rxd7+ Kxd7 Ne5+ Kd6 Nxf3. N c6–e5 uncovers B b5 against K d7; checking tempo links preparation to the final material capture. Second pass replayed every solver position, immediate defensive material responses and the complete payoff; no new tactical screening flag. Retained within the level after comparison of preparation and defensive mechanism.",
+      "previousReason": "B: Rxd7+ Kxd7 Ne5+ Kd6 Nxf3. N c6–e5 uncovers B b5 against K d7; checking tempo links preparation to the final material capture.",
+      "solverMoves": 3,
+      "aspects": [
+        "check",
+        "diagonal",
+        "double-check",
+        "mover-N",
+        "quiet-move",
+        "slider-B",
+        "target-K",
+        "white"
+      ]
+    },
+    {
+      "gameId": "66e89386a921a0f6",
+      "level": "B",
+      "originalExerciseNumber": 17,
+      "fen": "6k1/5p2/b2Q2p1/P2P1P1p/3b4/1R4KP/1P4P1/5q2 b - - 0 36",
+      "moves": [
+        "Bf2+",
+        "Kf4",
+        "Bc5+",
+        "Kg5",
+        "Bxd6"
+      ],
+      "decision": "remove",
+      "reason": "The Bishop windmill repeats the retained Rook windmill decision; changing the moving piece alone does not justify another lesson. The deeper root search also reports a mating lead, so its material objective remains unresolved.",
+      "previousReason": "B: Bf2+ Kf4 Bc5+ Kg5 Bxd6. B f2–c5 uncovers Q f1 against K f4; checking tempo links preparation to the final material capture.",
+      "solverMoves": 3,
+      "aspects": [
+        "black",
+        "check",
+        "file",
+        "mover-B",
+        "quiet-move",
+        "slider-Q",
+        "target-K"
+      ]
+    },
+    {
+      "gameId": "2c941c0fca87f625",
+      "level": "B",
+      "originalExerciseNumber": 18,
+      "fen": "7Q/5p2/6p1/2r3kp/3pR3/2qP3P/5PK1/8 w - - 0 39",
+      "moves": [
+        "f4+",
+        "Kh4",
+        "Qf6+",
+        "g5",
+        "fxg5#"
+      ],
+      "decision": "keep",
+      "reason": "B: f4+ Kh4 Qf6+ g5 fxg5#. P f4–g5 uncovers R e4 against K h4; checking tempo links preparation to the final mate. Second pass replayed every solver position, immediate defensive material responses and the complete payoff; no new tactical screening flag. Retained within the level after comparison of preparation and defensive mechanism.",
+      "previousReason": "B: f4+ Kh4 Qf6+ g5 fxg5#. P f4–g5 uncovers R e4 against K h4; checking tempo links preparation to the final mate.",
+      "solverMoves": 3,
+      "aspects": [
+        "capture",
+        "check",
+        "mover-P",
+        "pawn-capture",
+        "rank",
+        "slider-R",
+        "target-K",
+        "white"
+      ]
+    },
+    {
+      "gameId": "c32aeb86261d79e1",
+      "level": "B",
+      "originalExerciseNumber": 19,
+      "fen": "2brr1k1/pp3pp1/2pR4/4nP2/4n2Q/1Nq1R2P/P1P3PB/5B1K b - - 0 25",
+      "moves": [
+        "Qxe3",
+        "Rxd8",
+        "Nf2+",
+        "Kg1",
+        "Nxh3+"
+      ],
+      "decision": "keep",
+      "reason": "B: Qxe3 Rxd8 Nf2+ Kg1 Nxh3+. N f2–h3 uncovers Q e3 against K g1; checking tempo links preparation to the final material capture. Second pass replayed every solver position, immediate defensive material responses and the complete payoff; no new tactical screening flag. Retained within the level after comparison of preparation and defensive mechanism.",
+      "previousReason": "B: Qxe3 Rxd8 Nf2+ Kg1 Nxh3+. N f2–h3 uncovers Q e3 against K g1; checking tempo links preparation to the final material capture.",
+      "solverMoves": 3,
+      "aspects": [
+        "black",
+        "capture",
+        "check",
+        "diagonal",
+        "double-check",
+        "mover-N",
+        "slider-Q",
+        "target-K"
+      ]
+    },
+    {
+      "gameId": "605db1bbb1fa9cc2",
+      "level": "B",
+      "originalExerciseNumber": 20,
+      "fen": "2q1r2k/7p/p2R1P2/1p2Q3/4p3/1PP2p2/P4P1P/7K w - - 3 41",
+      "moves": [
+        "Qd4",
+        "h5",
+        "f7+",
+        "Kh7",
+        "fxe8=Q"
+      ],
+      "decision": "keep",
+      "reason": "B: Qd4 h5 f7+ Kh7 fxe8=Q. P f6–f7 uncovers Q d4 against K h8; checking tempo links preparation to the final material capture. Second pass replayed every solver position, immediate defensive material responses and the complete payoff; no new tactical screening flag. Retained within the level after comparison of preparation and defensive mechanism.",
+      "previousReason": "B: Qd4 h5 f7+ Kh7 fxe8=Q. P f6–f7 uncovers Q d4 against K h8; checking tempo links preparation to the final material capture.",
+      "solverMoves": 3,
+      "aspects": [
+        "check",
+        "diagonal",
+        "mover-P",
+        "pawn-one-step",
+        "quiet-move",
+        "slider-Q",
+        "target-K",
+        "white"
+      ]
+    },
+    {
+      "gameId": "cab376705247c2bd",
+      "level": "B",
+      "originalExerciseNumber": 21,
+      "fen": "r1rbq1k1/1p4pp/p1n2p2/3N1N2/3np3/6BP/PP2QPP1/2RR2K1 w - - 5 27",
+      "moves": [
+        "Qc4",
+        "b5",
+        "Nxf6+",
+        "Kh8",
+        "Nxe8"
+      ],
+      "decision": "remove",
+      "reason": "Redundant Queen preparation followed by Knight clearance with check and capture of a back-rank Rook. Retain a1ad9410f81616a3 for this decision; the capture on f6 does not establish an additional instructional mechanism.",
+      "previousReason": "B: Qc4 b5 Nxf6+ Kh8 Nxe8. N d5–f6 uncovers Q c4 against K g8; checking tempo links preparation to the final material capture.",
+      "solverMoves": 3,
+      "aspects": [
+        "capture",
+        "check",
+        "diagonal",
+        "double-check",
+        "mover-N",
+        "slider-Q",
+        "target-K",
+        "white"
+      ]
+    },
+    {
+      "gameId": "fa4ca9731fccb3d4",
+      "level": "B",
+      "originalExerciseNumber": 22,
+      "fen": "2r2r2/p2n1pp1/1q2p2k/n2pP1N1/3P3P/8/P2Q1PP1/R3RK2 w - - 3 22",
+      "moves": [
+        "Qf4",
+        "g6",
+        "Nxe6+",
+        "Kh7",
+        "Nxf8+"
+      ],
+      "decision": "remove",
+      "reason": "Redundant with a1ad9410f81616a3: Queen alignment, Knight clearance with check, then a back-rank Rook capture. Different files and the captured intermediate target do not justify a separate exercise.",
+      "previousReason": "B: Qf4 g6 Nxe6+ Kh7 Nxf8+. N g5–e6 uncovers Q f4 against K h6; checking tempo links preparation to the final material capture.",
+      "solverMoves": 3,
+      "aspects": [
+        "capture",
+        "check",
+        "diagonal",
+        "mover-N",
+        "slider-Q",
+        "target-K",
+        "white"
+      ]
+    },
+    {
+      "gameId": "a1ad9410f81616a3",
+      "level": "B",
+      "originalExerciseNumber": 23,
+      "fen": "4r1k1/pn6/1p4pB/2qP4/6N1/7P/P4QP1/7K w - - 11 38",
+      "moves": [
+        "Qf1",
+        "Qe7",
+        "Nf6+",
+        "Kf7",
+        "Nxe8+"
+      ],
+      "decision": "keep",
+      "reason": "B: Qf1 Qe7 Nf6+ Kf7 Nxe8+. N f6–e8 uncovers Q f1 against K f7; checking tempo links preparation to the final material capture. Second pass replayed every solver position, immediate defensive material responses and the complete payoff; no new tactical screening flag. Retained within the level after comparison of preparation and defensive mechanism.",
+      "previousReason": "B: Qf1 Qe7 Nf6+ Kf7 Nxe8+. N f6–e8 uncovers Q f1 against K f7; checking tempo links preparation to the final material capture.",
+      "solverMoves": 3,
+      "aspects": [
+        "capture",
+        "check",
+        "file",
+        "mover-N",
+        "slider-Q",
+        "target-K",
+        "white"
+      ]
+    },
+    {
+      "gameId": "0ee13b73848ee956",
+      "level": "C",
+      "originalExerciseNumber": 1,
+      "fen": "r4rk1/1b3pbp/p1qp2p1/P3P3/2B1n3/1NR5/1P1BQ1PP/4R2K w - - 0 26",
+      "moves": [
+        "Bxf7+",
+        "Rxf7",
+        "Rxc6"
+      ],
+      "decision": "keep",
+      "reason": "C: Bxf7+ Rxf7 Rxc6. B c4–f7 uncovers R c3 against Q c6; the revealed attack and the moving piece create competing threats before the payoff capture. Second pass replayed every solver position, immediate defensive material responses and the complete payoff; no new tactical screening flag. Retained within the level after comparison of preparation and defensive mechanism.",
+      "previousReason": "C: Bxf7+ Rxf7 Rxc6. B c4–f7 uncovers R c3 against Q c6; the revealed attack and the moving piece create competing threats before the payoff capture.",
+      "solverMoves": 2,
+      "aspects": [
+        "attack",
+        "capture",
+        "diagonal",
+        "file",
+        "mover-B",
+        "slider-Q",
+        "slider-R",
+        "target-P",
+        "target-Q",
+        "white"
+      ]
+    },
+    {
+      "gameId": "6e399180d48ad8bd",
+      "level": "C",
+      "originalExerciseNumber": 2,
+      "fen": "rnbqkb1r/pppp3p/5nP1/7Q/5p2/8/PPPP2PP/RNB1KBNR w KQkq - 1 6",
+      "moves": [
+        "g7+",
+        "Nxh5",
+        "gxh8=Q"
+      ],
+      "decision": "keep",
+      "reason": "C: g7+ Nxh5 gxh8=Q. P g6–g7 uncovers Q h5 against K e8; checking tempo links preparation to the final material capture. Second pass replayed every solver position, immediate defensive material responses and the complete payoff; no new tactical screening flag. Retained within the level after comparison of preparation and defensive mechanism.",
+      "previousReason": "C: g7+ Nxh5 gxh8=Q. P g6–g7 uncovers Q h5 against K e8; checking tempo links preparation to the final material capture.",
+      "solverMoves": 2,
+      "aspects": [
+        "check",
+        "diagonal",
+        "mover-P",
+        "pawn-one-step",
+        "quiet-move",
+        "slider-Q",
+        "target-K",
+        "white"
+      ]
+    },
+    {
+      "gameId": "2528e321fb2808ab",
+      "level": "C",
+      "originalExerciseNumber": 3,
+      "fen": "3r1k2/5b2/1p3p1p/p5p1/2BN4/PPn5/5PPP/3R2K1 w - - 4 28",
+      "moves": [
+        "Ne6+",
+        "Bxe6",
+        "Rxd8+"
+      ],
+      "decision": "keep",
+      "reason": "C: Ne6+ Bxe6 Rxd8+. N d4–e6 uncovers R d1 against R d8; the revealed attack and the moving piece create competing threats before the payoff capture. Second pass replayed every solver position, immediate defensive material responses and the complete payoff; no new tactical screening flag. Retained within the level after comparison of preparation and defensive mechanism.",
+      "previousReason": "C: Ne6+ Bxe6 Rxd8+. N d4–e6 uncovers R d1 against R d8; the revealed attack and the moving piece create competing threats before the payoff capture.",
+      "solverMoves": 2,
+      "aspects": [
+        "attack",
+        "file",
+        "mover-N",
+        "quiet-move",
+        "slider-R",
+        "target-R",
+        "white"
+      ]
+    },
+    {
+      "gameId": "433d9e0e49657550",
+      "level": "C",
+      "originalExerciseNumber": 4,
+      "fen": "3qb1r1/2n2pbk/p4npp/2BPN3/8/2N4P/1rBQ1PP1/3RR1K1 w - - 1 25",
+      "moves": [
+        "Bxg6+",
+        "fxg6",
+        "Qxb2"
+      ],
+      "decision": "keep",
+      "reason": "C: Bxg6+ fxg6 Qxb2. B c2–g6 uncovers Q d2 against R b2; the revealed attack and the moving piece create competing threats before the payoff capture. Second pass replayed every solver position, immediate defensive material responses and the complete payoff; no new tactical screening flag. Retained within the level after comparison of preparation and defensive mechanism.",
+      "previousReason": "C: Bxg6+ fxg6 Qxb2. B c2–g6 uncovers Q d2 against R b2; the revealed attack and the moving piece create competing threats before the payoff capture.",
+      "solverMoves": 2,
+      "aspects": [
+        "attack",
+        "capture",
+        "mover-B",
+        "rank",
+        "slider-Q",
+        "target-R",
+        "white"
+      ]
+    },
+    {
+      "gameId": "d45cd7a63d7f0cae",
+      "level": "C",
+      "originalExerciseNumber": 5,
+      "fen": "r1bq2k1/pp3pp1/2p2n2/4r1B1/3nP2P/P1N5/BPP5/R2QK1R1 b Q - 0 17",
+      "moves": [
+        "Nxe4",
+        "Bxd8",
+        "Nxc3+",
+        "Kf2",
+        "Nxd1+"
+      ],
+      "decision": "keep",
+      "reason": "C: Nxe4 Bxd8 Nxc3+ Kf2 Nxd1+. N e4–c3 uncovers R e5 against K e1; checking tempo links preparation to the final material capture. Nxe4 allows Bxd8, sacrificing the stationary Queen before Nxc3+ and recovery of the opposing Queen. Second pass replayed every solver position, immediate defensive material responses and the complete payoff; no new tactical screening flag. Retained within the level after comparison of preparation and defensive mechanism.",
+      "previousReason": "C: Nxe4 Bxd8 Nxc3+ Kf2 Nxd1+. N e4–c3 uncovers R e5 against K e1; checking tempo links preparation to the final material capture. Nxe4 allows Bxd8, sacrificing the stationary Queen before Nxc3+ and recovery of the opposing Queen.",
+      "solverMoves": 3,
+      "aspects": [
+        "attack",
+        "black",
+        "capture",
+        "check",
+        "diagonal",
+        "file",
+        "mover-N",
+        "nonchecking-attack",
+        "slider-Q",
+        "slider-R",
+        "target-B",
+        "target-K"
+      ]
+    },
+    {
+      "gameId": "66af3848641ad16b",
+      "level": "C",
+      "originalExerciseNumber": 6,
+      "fen": "5rk1/6rp/1p4p1/3pq3/Q1p1b3/2N1R3/PPP5/1K1R4 b - - 1 35",
+      "moves": [
+        "Bxc2+",
+        "Qxc2",
+        "Qxe3"
+      ],
+      "decision": "keep",
+      "reason": "C: Bxc2+ Qxc2 Qxe3. B e4–c2 uncovers Q e5 against R e3; the revealed attack and the moving piece create competing threats before the payoff capture. Second pass replayed every solver position, immediate defensive material responses and the complete payoff; no new tactical screening flag. Retained within the level after comparison of preparation and defensive mechanism.",
+      "previousReason": "C: Bxc2+ Qxc2 Qxe3. B e4–c2 uncovers Q e5 against R e3; the revealed attack and the moving piece create competing threats before the payoff capture.",
+      "solverMoves": 2,
+      "aspects": [
+        "attack",
+        "black",
+        "capture",
+        "file",
+        "mover-B",
+        "slider-Q",
+        "target-R"
+      ]
+    },
+    {
+      "gameId": "d1a0bb978be3430a",
+      "level": "C",
+      "originalExerciseNumber": 7,
+      "fen": "r1r3k1/pp1n1pbp/n2q2p1/1Bp1p3/5P2/1Q2B2P/PP1N2P1/2R2RK1 w - - 0 21",
+      "moves": [
+        "Qxf7+",
+        "Kxf7",
+        "fxe5+",
+        "Kg8",
+        "exd6"
+      ],
+      "decision": "keep",
+      "reason": "C: Qxf7+ Kxf7 fxe5+ Kg8 exd6. P f4–e5 uncovers R f1 against K f7; checking tempo links preparation to the final material capture. Second pass replayed every solver position, immediate defensive material responses and the complete payoff; no new tactical screening flag. Retained within the level after comparison of preparation and defensive mechanism.",
+      "previousReason": "C: Qxf7+ Kxf7 fxe5+ Kg8 exd6. P f4–e5 uncovers R f1 against K f7; checking tempo links preparation to the final material capture.",
+      "solverMoves": 3,
+      "aspects": [
+        "capture",
+        "check",
+        "file",
+        "mover-P",
+        "pawn-capture",
+        "slider-R",
+        "target-K",
+        "white"
+      ]
+    },
+    {
+      "gameId": "45e5b79b37ee52d3",
+      "level": "C",
+      "originalExerciseNumber": 8,
+      "fen": "2r4k/6p1/p6p/5R2/1p2q3/3nPR1P/1P1B2K1/1Q6 b - - 0 33",
+      "moves": [
+        "Nf4+",
+        "Rxf4",
+        "Qxb1"
+      ],
+      "decision": "keep",
+      "reason": "C: Nf4+ Rxf4 Qxb1. N d3–f4 uncovers Q e4 against Q b1; the revealed attack and the moving piece create competing threats before the payoff capture. Second pass replayed every solver position, immediate defensive material responses and the complete payoff; no new tactical screening flag. Retained within the level after comparison of preparation and defensive mechanism.",
+      "previousReason": "C: Nf4+ Rxf4 Qxb1. N d3–f4 uncovers Q e4 against Q b1; the revealed attack and the moving piece create competing threats before the payoff capture.",
+      "solverMoves": 2,
+      "aspects": [
+        "attack",
+        "black",
+        "diagonal",
+        "mover-N",
+        "quiet-move",
+        "slider-Q",
+        "target-Q"
+      ]
+    },
+    {
+      "gameId": "33c9d5b087ad109b",
+      "level": "C",
+      "originalExerciseNumber": 9,
+      "fen": "2krr3/2p2bpp/p2b4/1p6/2pRP3/1P2NPP1/P1P2K1P/R3N3 b - - 0 23",
+      "moves": [
+        "Bxg3+",
+        "hxg3",
+        "Rxd4"
+      ],
+      "decision": "keep",
+      "reason": "C: Bxg3+ hxg3 Rxd4. B d6–g3 uncovers R d8 against R d4; the revealed attack and the moving piece create competing threats before the payoff capture. Second pass replayed every solver position, immediate defensive material responses and the complete payoff; no new tactical screening flag. Retained within the level after comparison of preparation and defensive mechanism.",
+      "previousReason": "C: Bxg3+ hxg3 Rxd4. B d6–g3 uncovers R d8 against R d4; the revealed attack and the moving piece create competing threats before the payoff capture.",
+      "solverMoves": 2,
+      "aspects": [
+        "attack",
+        "black",
+        "capture",
+        "file",
+        "mover-B",
+        "slider-R",
+        "target-R"
+      ]
+    },
+    {
+      "gameId": "7176e5ef6a35f0c0",
+      "level": "C",
+      "originalExerciseNumber": 10,
+      "fen": "2bqn1rk/4R2p/p2p3P/2pP1pQ1/2P5/2N2BP1/1P3P2/6K1 w - - 1 31",
+      "moves": [
+        "Rxh7+",
+        "Kxh7",
+        "Qxd8"
+      ],
+      "decision": "keep",
+      "reason": "C: Rxh7+ Kxh7 Qxd8. R e7–h7 uncovers Q g5 against Q d8; the revealed attack and the moving piece create competing threats before the payoff capture. Second pass replayed every solver position, immediate defensive material responses and the complete payoff; no new tactical screening flag. Retained within the level after comparison of preparation and defensive mechanism.",
+      "previousReason": "C: Rxh7+ Kxh7 Qxd8. R e7–h7 uncovers Q g5 against Q d8; the revealed attack and the moving piece create competing threats before the payoff capture.",
+      "solverMoves": 2,
+      "aspects": [
+        "attack",
+        "capture",
+        "diagonal",
+        "mover-R",
+        "slider-Q",
+        "target-Q",
+        "white"
+      ]
+    },
+    {
+      "gameId": "808ff4b820ad89be",
+      "level": "C",
+      "originalExerciseNumber": 11,
+      "fen": "Rb1r4/1p1k4/1P2p3/4Pp2/3B1Kp1/6P1/5P2/8 b - - 8 53",
+      "moves": [
+        "Bxe5+",
+        "Kxe5",
+        "Rxa8"
+      ],
+      "decision": "keep",
+      "reason": "C: Bxe5+ Kxe5 Rxa8. B b8–e5 uncovers R d8 against R a8; the revealed attack and the moving piece create competing threats before the payoff capture. Second pass replayed every solver position, immediate defensive material responses and the complete payoff; no new tactical screening flag. Retained within the level after comparison of preparation and defensive mechanism.",
+      "previousReason": "C: Bxe5+ Kxe5 Rxa8. B b8–e5 uncovers R d8 against R a8; the revealed attack and the moving piece create competing threats before the payoff capture.",
+      "solverMoves": 2,
+      "aspects": [
+        "attack",
+        "black",
+        "capture",
+        "mover-B",
+        "rank",
+        "slider-R",
+        "target-R"
+      ]
+    },
+    {
+      "gameId": "89edd5609c6b96d5",
+      "level": "C",
+      "originalExerciseNumber": 12,
+      "fen": "3b1rk1/1b1q2pp/5pn1/1p2rN2/2p1p3/2P1B2Q/1PB2PPP/R5K1 w - - 0 25",
+      "moves": [
+        "Nh6+",
+        "gxh6",
+        "Qxd7"
+      ],
+      "decision": "keep",
+      "reason": "C: Nh6+ gxh6 Qxd7. N f5–h6 uncovers Q h3 against Q d7; the revealed attack and the moving piece create competing threats before the payoff capture. Second pass replayed every solver position, immediate defensive material responses and the complete payoff; no new tactical screening flag. Retained within the level after comparison of preparation and defensive mechanism.",
+      "previousReason": "C: Nh6+ gxh6 Qxd7. N f5–h6 uncovers Q h3 against Q d7; the revealed attack and the moving piece create competing threats before the payoff capture.",
+      "solverMoves": 2,
+      "aspects": [
+        "attack",
+        "diagonal",
+        "mover-N",
+        "quiet-move",
+        "slider-Q",
+        "target-Q",
+        "white"
+      ]
+    },
+    {
+      "gameId": "9b9c8f7961db0a4b",
+      "level": "C",
+      "originalExerciseNumber": 13,
+      "fen": "8/p3b2p/1p4k1/3BPp2/P3nP1p/1R2B3/r5PP/4K3 w - - 1 43",
+      "moves": [
+        "Rxb6+",
+        "axb6",
+        "Bxa2"
+      ],
+      "decision": "keep",
+      "reason": "C: Rxb6+ axb6 Bxa2. R b3–b6 uncovers B d5 against R a2; the revealed attack and the moving piece create competing threats before the payoff capture. Second pass replayed every solver position, immediate defensive material responses and the complete payoff; no new tactical screening flag. Retained within the level after comparison of preparation and defensive mechanism.",
+      "previousReason": "C: Rxb6+ axb6 Bxa2. R b3–b6 uncovers B d5 against R a2; the revealed attack and the moving piece create competing threats before the payoff capture.",
+      "solverMoves": 2,
+      "aspects": [
+        "attack",
+        "capture",
+        "diagonal",
+        "mover-R",
+        "slider-B",
+        "target-R",
+        "white"
+      ]
+    },
+    {
+      "gameId": "aabef71fc713b171",
+      "level": "C",
+      "originalExerciseNumber": 14,
+      "fen": "r2q1r2/5Bk1/2pp1nPp/pp2p3/4P1bB/P1bP4/2P1NK1P/1R1Q3R b - - 3 18",
+      "moves": [
+        "Nxe4+",
+        "dxe4",
+        "Qxh4+"
+      ],
+      "decision": "keep",
+      "reason": "C: Nxe4+ dxe4 Qxh4+. N f6–e4 uncovers Q d8 against B h4; the revealed attack and the moving piece create competing threats before the payoff capture. Second pass replayed every solver position, immediate defensive material responses and the complete payoff; no new tactical screening flag. Retained within the level after comparison of preparation and defensive mechanism.",
+      "previousReason": "C: Nxe4+ dxe4 Qxh4+. N f6–e4 uncovers Q d8 against B h4; the revealed attack and the moving piece create competing threats before the payoff capture.",
+      "solverMoves": 2,
+      "aspects": [
+        "attack",
+        "black",
+        "capture",
+        "diagonal",
+        "mover-N",
+        "slider-Q",
+        "target-B"
+      ]
+    },
+    {
+      "gameId": "05b127856d986ac1",
+      "level": "C",
+      "originalExerciseNumber": 15,
+      "fen": "5r2/5B1k/p5pP/1p2p3/4b2N/3q2QP/Pb4P1/5R1K w - - 1 33",
+      "moves": [
+        "Qxd3",
+        "Bxd3",
+        "Bxg6+",
+        "Bxg6",
+        "Rxf8"
+      ],
+      "decision": "keep",
+      "reason": "C: Qxd3 Bxd3 Bxg6+ Bxg6 Rxf8. B f7–g6 uncovers R f1 against R f8; the revealed attack and the moving piece create competing threats before the payoff capture. Bxg6+ gives a Bishop for a pawn to expose the Rook target; the later Rxf8 is not a recapture of that Bishop. Second pass replayed every solver position, immediate defensive material responses and the complete payoff; no new tactical screening flag. Retained within the level after comparison of preparation and defensive mechanism.",
+      "previousReason": "C: Qxd3 Bxd3 Bxg6+ Bxg6 Rxf8. B f7–g6 uncovers R f1 against R f8; the revealed attack and the moving piece create competing threats before the payoff capture. Bxg6+ gives a Bishop for a pawn to expose the Rook target; the later Rxf8 is not a recapture of that Bishop.",
+      "solverMoves": 3,
+      "aspects": [
+        "attack",
+        "capture",
+        "file",
+        "mover-B",
+        "slider-R",
+        "target-R",
+        "white"
+      ]
+    },
+    {
+      "gameId": "97cfd524a574d28c",
+      "level": "C",
+      "originalExerciseNumber": 16,
+      "fen": "8/p3kp2/4pp1p/1pN2q2/6r1/2P4Q/PP3P1P/3R1K2 b - - 0 29",
+      "moves": [
+        "Rg1+",
+        "Kxg1",
+        "Qxh3"
+      ],
+      "decision": "remove",
+      "reason": "Repeats 7176e5ef6a35f0c0: a checking Rook offer draws the King away while uncovering the Queen attack on the enemy Queen. Color reversal and different geometry alone do not justify another lesson.",
+      "previousReason": "C: Rg1+ Kxg1 Qxh3. R g4–g1 uncovers Q f5 against Q h3; the revealed attack and the moving piece create competing threats before the payoff capture.",
+      "solverMoves": 2,
+      "aspects": [
+        "attack",
+        "black",
+        "diagonal",
+        "mover-R",
+        "quiet-move",
+        "slider-Q",
+        "target-Q"
+      ]
+    },
+    {
+      "gameId": "ee1a0c1a5f6fcfad",
+      "level": "C",
+      "originalExerciseNumber": 17,
+      "fen": "r4rk1/pp1bppbp/3p1np1/8/3QP3/N5PP/PP3PBK/R4R2 b - - 0 14",
+      "moves": [
+        "Ng4+",
+        "hxg4",
+        "Bxd4"
+      ],
+      "decision": "keep",
+      "reason": "C: Ng4+ hxg4 Bxd4. N f6–g4 uncovers B g7 against Q d4; the revealed attack and the moving piece create competing threats before the payoff capture. Second pass replayed every solver position, immediate defensive material responses and the complete payoff; no new tactical screening flag. Retained within the level after comparison of preparation and defensive mechanism.",
+      "previousReason": "C: Ng4+ hxg4 Bxd4. N f6–g4 uncovers B g7 against Q d4; the revealed attack and the moving piece create competing threats before the payoff capture.",
+      "solverMoves": 2,
+      "aspects": [
+        "attack",
+        "black",
+        "diagonal",
+        "mover-N",
+        "quiet-move",
+        "slider-B",
+        "target-Q"
+      ]
+    },
+    {
+      "gameId": "c6ec3ce0bc83a3d8",
+      "level": "C",
+      "originalExerciseNumber": 18,
+      "fen": "7r/pb3kpp/2nBp3/2p5/2P5/8/P5PP/qB1Q2K1 w - - 0 21",
+      "moves": [
+        "Bg6+",
+        "hxg6",
+        "Qxa1"
+      ],
+      "decision": "remove",
+      "reason": "Repeats the checking Bishop offer, pawn acceptance and revealed Queen capture taught by 433d9e0e49657550. Changing the file and prize alone does not establish a distinct decision.",
+      "previousReason": "C: Bg6+ hxg6 Qxa1. B b1–g6 uncovers Q d1 against Q a1; the revealed attack and the moving piece create competing threats before the payoff capture.",
+      "solverMoves": 2,
+      "aspects": [
+        "attack",
+        "mover-B",
+        "quiet-move",
+        "rank",
+        "slider-Q",
+        "target-Q",
+        "white"
+      ]
+    },
+    {
+      "gameId": "c0209e56ab19cf19",
+      "level": "C",
+      "originalExerciseNumber": 19,
+      "fen": "8/5k1p/4p1p1/3p1bP1/2pPpP1P/1p4K1/4PBB1/1N2b3 b - - 3 38",
+      "moves": [
+        "Bxf2+",
+        "Kxf2",
+        "e3+",
+        "Kxe3",
+        "Bxb1"
+      ],
+      "decision": "keep",
+      "reason": "C: Bxf2+ Kxf2 e3+ Kxe3 Bxb1. P e4–e3 uncovers B f5 against N b1; the revealed attack and the moving piece create competing threats before the payoff capture. e3+ deliberately offers a pawn to the King before Bxb1; the preceding Bishop exchange is equal. Second pass replayed every solver position, immediate defensive material responses and the complete payoff; no new tactical screening flag. Retained within the level after comparison of preparation and defensive mechanism.",
+      "previousReason": "C: Bxf2+ Kxf2 e3+ Kxe3 Bxb1. P e4–e3 uncovers B f5 against N b1; the revealed attack and the moving piece create competing threats before the payoff capture. e3+ deliberately offers a pawn to the King before Bxb1; the preceding Bishop exchange is equal.",
+      "solverMoves": 3,
+      "aspects": [
+        "attack",
+        "black",
+        "diagonal",
+        "mover-P",
+        "pawn-one-step",
+        "quiet-move",
+        "slider-B",
+        "target-N"
+      ]
+    },
+    {
+      "gameId": "edc75c8164ac66f8",
+      "level": "C",
+      "originalExerciseNumber": 20,
+      "fen": "2r5/3R2bk/p1b1Qpq1/Pp3npp/8/7P/1B3PP1/R5K1 w - - 5 37",
+      "moves": [
+        "Rxg7+",
+        "Nxg7",
+        "Qxc8"
+      ],
+      "decision": "keep",
+      "reason": "C: Rxg7+ Nxg7 Qxc8. R d7–g7 uncovers Q e6 against R c8; the revealed attack and the moving piece create competing threats before the payoff capture. Second pass replayed every solver position, immediate defensive material responses and the complete payoff; no new tactical screening flag. Retained within the level after comparison of preparation and defensive mechanism.",
+      "previousReason": "C: Rxg7+ Nxg7 Qxc8. R d7–g7 uncovers Q e6 against R c8; the revealed attack and the moving piece create competing threats before the payoff capture.",
+      "solverMoves": 2,
+      "aspects": [
+        "attack",
+        "capture",
+        "diagonal",
+        "mover-R",
+        "slider-Q",
+        "target-R",
+        "white"
+      ]
+    },
+    {
+      "gameId": "7dc5f1cef07069b8",
+      "level": "C",
+      "originalExerciseNumber": 21,
+      "fen": "3r2k1/5ppp/4n3/3B4/1p2R3/1Pr3P1/5P1P/3R2K1 w - - 4 32",
+      "moves": [
+        "Rxe6",
+        "fxe6",
+        "Bxe6+",
+        "Kf8",
+        "Rxd8+"
+      ],
+      "decision": "keep",
+      "reason": "C: Rxe6 fxe6 Bxe6+ Kf8 Rxd8+. B d5–e6 uncovers R d1 against R d8; the revealed attack and the moving piece create competing threats before the payoff capture. Second pass replayed every solver position, immediate defensive material responses and the complete payoff; no new tactical screening flag. Retained within the level after comparison of preparation and defensive mechanism.",
+      "previousReason": "C: Rxe6 fxe6 Bxe6+ Kf8 Rxd8+. B d5–e6 uncovers R d1 against R d8; the revealed attack and the moving piece create competing threats before the payoff capture.",
+      "solverMoves": 3,
+      "aspects": [
+        "attack",
+        "capture",
+        "file",
+        "mover-B",
+        "slider-R",
+        "target-R",
+        "white"
+      ]
+    },
+    {
+      "gameId": "65e28198bca55561",
+      "level": "C",
+      "originalExerciseNumber": 22,
+      "fen": "7Q/8/5pp1/4b2k/4P3/6r1/5K1p/8 b - - 1 53",
+      "moves": [
+        "Kg5",
+        "Qxh2",
+        "Rf3+",
+        "Kxf3",
+        "Bxh2"
+      ],
+      "decision": "keep",
+      "reason": "C: Kg5 Qxh2 Rf3+ Kxf3 Bxh2. R g3–f3 uncovers B e5 against Q h2; the revealed attack and the moving piece create competing threats before the payoff capture. Second pass replayed every solver position, immediate defensive material responses and the complete payoff; no new tactical screening flag. Retained within the level after comparison of preparation and defensive mechanism.",
+      "previousReason": "C: Kg5 Qxh2 Rf3+ Kxf3 Bxh2. R g3–f3 uncovers B e5 against Q h2; the revealed attack and the moving piece create competing threats before the payoff capture.",
+      "solverMoves": 3,
+      "aspects": [
+        "attack",
+        "black",
+        "diagonal",
+        "mover-R",
+        "quiet-move",
+        "slider-B",
+        "target-Q"
+      ]
+    },
+    {
+      "gameId": "e156b41271bd5b4d",
+      "level": "C",
+      "originalExerciseNumber": 23,
+      "fen": "3r1rk1/ppp2ppp/1n1q4/8/3n4/2B2P2/PP2N1PP/R2QR1K1 b - - 3 17",
+      "moves": [
+        "Nxf3+",
+        "gxf3",
+        "Qg6+",
+        "Ng3",
+        "Rxd1"
+      ],
+      "decision": "keep",
+      "reason": "C: Nxf3+ gxf3 Qg6+ Ng3 Rxd1. Q d6–g6 uncovers R d8 against Q d1; the revealed attack and the moving piece create competing threats before the payoff capture. Second pass replayed every solver position, immediate defensive material responses and the complete payoff; no new tactical screening flag. Retained within the level after comparison of preparation and defensive mechanism.",
+      "previousReason": "C: Nxf3+ gxf3 Qg6+ Ng3 Rxd1. Q d6–g6 uncovers R d8 against Q d1; the revealed attack and the moving piece create competing threats before the payoff capture.",
+      "solverMoves": 3,
+      "aspects": [
+        "attack",
+        "black",
+        "capture",
+        "file",
+        "mover-N",
+        "mover-Q",
+        "quiet-move",
+        "slider-Q",
+        "slider-R",
+        "target-Q"
+      ]
+    },
+    {
+      "gameId": "f597cd96e9f20a30",
+      "level": "C",
+      "originalExerciseNumber": 24,
+      "fen": "5rk1/p1q4p/bpB1R1p1/8/5P2/2Q3P1/P6P/6K1 w - - 4 35",
+      "moves": [
+        "Rxg6+",
+        "hxg6",
+        "Bd5+",
+        "Qf7",
+        "Bxf7+"
+      ],
+      "decision": "keep",
+      "reason": "C: Rxg6+ hxg6 Bd5+ Qf7 Bxf7+. B c6–d5 uncovers Q c3 against Q c7; the revealed attack and the moving piece create competing threats before the payoff capture. Second pass replayed every solver position, immediate defensive material responses and the complete payoff; no new tactical screening flag. Retained within the level after comparison of preparation and defensive mechanism.",
+      "previousReason": "C: Rxg6+ hxg6 Bd5+ Qf7 Bxf7+. B c6–d5 uncovers Q c3 against Q c7; the revealed attack and the moving piece create competing threats before the payoff capture.",
+      "solverMoves": 3,
+      "aspects": [
+        "attack",
+        "file",
+        "mover-B",
+        "quiet-move",
+        "slider-Q",
+        "target-Q",
+        "white"
+      ]
+    },
+    {
+      "gameId": "05909e59766aa959",
+      "level": "C*",
+      "originalExerciseNumber": 1,
+      "fen": "2k4r/5p2/2n1pP2/2B1b3/6q1/3Q2P1/5P1P/1R4K1 w - - 3 34",
+      "moves": [
+        "Rd1",
+        "Nb8",
+        "Rc1",
+        "Qa4",
+        "Bd6+",
+        "Nc6",
+        "Bxe5"
+      ],
+      "decision": "remove",
+      "reason": "The saved line requires four solver moves, only one beyond the current three-move B set. The required two-to-three-move increase in calculation has not been established. Withhold from C* rather than pad the line or automatically relabel it.",
+      "previousReason": "C*: Rd1 Nb8 Rc1 Qa4 Bd6+ Nc6 Bxe5. B c5–d6 uncovers R c1 against K c8; checking tempo links preparation to the final material capture.",
+      "solverMoves": 4,
+      "aspects": [
+        "check",
+        "file",
+        "mover-B",
+        "quiet-move",
+        "slider-R",
+        "target-K",
+        "white"
+      ]
+    },
+    {
+      "gameId": "e2f3d9ba540b9b31",
+      "level": "C*",
+      "originalExerciseNumber": 2,
+      "fen": "8/8/1p5k/pP1Pp2b/P3Pprp/5R2/8/2q1QK1R b - - 5 44",
+      "moves": [
+        "Qc4+",
+        "Qe2",
+        "Qxe2+",
+        "Kxe2",
+        "Rg2+",
+        "Kd3",
+        "Bxf3"
+      ],
+      "decision": "remove",
+      "reason": "The saved line requires four solver moves, only one beyond the current three-move B set. The required two-to-three-move increase in calculation has not been established. Withhold from C* rather than pad the line or automatically relabel it.",
+      "previousReason": "C*: Qc4+ Qe2 Qxe2+ Kxe2 Rg2+ Kd3 Bxf3. R g4–g2 uncovers B h5 against R f3; the revealed attack and the moving piece create competing threats before the payoff capture.",
+      "solverMoves": 4,
+      "aspects": [
+        "attack",
+        "black",
+        "diagonal",
+        "mover-R",
+        "quiet-move",
+        "slider-B",
+        "target-R"
+      ]
+    },
+    {
+      "gameId": "3575140c6717a5b9",
+      "level": "C*",
+      "originalExerciseNumber": 3,
+      "fen": "2kr3r/pp2bpp1/3pb2p/2p5/1nP1NB2/P7/1P1KPPPP/R4B1R b - - 0 14",
+      "moves": [
+        "Nc6",
+        "e3",
+        "g5",
+        "Bg3",
+        "d5",
+        "Nc3",
+        "dxc4+"
+      ],
+      "decision": "remove",
+      "reason": "The saved line requires four solver moves, only one beyond the current three-move B set. The required two-to-three-move increase in calculation has not been established. Withhold from C* rather than pad the line or automatically relabel it.",
+      "previousReason": "C*: Nc6 e3 g5 Bg3 d5 Nc3 dxc4+. P d5–c4 uncovers R d8 against K d2; checking tempo links preparation to the final material capture.",
+      "solverMoves": 4,
+      "aspects": [
+        "black",
+        "capture",
+        "check",
+        "file",
+        "mover-P",
+        "pawn-capture",
+        "slider-R",
+        "target-K"
+      ]
+    },
+    {
+      "gameId": "9454bbb50e959995",
+      "level": "C*",
+      "originalExerciseNumber": 4,
+      "fen": "8/5p2/p4rpk/p2Bp2p/P1QbP2P/6P1/2R2PK1/3q4 b - - 2 42",
+      "moves": [
+        "Qf3+",
+        "Kh2",
+        "Bxf2",
+        "Qf1",
+        "Bxg3+",
+        "Kh3",
+        "Qxf1+"
+      ],
+      "decision": "remove",
+      "reason": "Bxg3+ is a direct Bishop check that already secures pawn gains before the revealed Queen target is collected. The discovered Queen attack is an extra gain, not essential to the stated material objective. The deeper root probe also finds an unresolved mating lead. The saved line requires four solver moves, only one beyond the current three-move B set. The required two-to-three-move increase in calculation has not been established. Withhold from C* rather than pad the line or automatically relabel it.",
+      "previousReason": "C*: Qf3+ Kh2 Bxf2 Qf1 Bxg3+ Kh3 Qxf1+. B f2–g3 uncovers Q f3 against Q f1; the revealed attack and the moving piece create competing threats before the payoff capture.",
+      "solverMoves": 4,
+      "aspects": [
+        "attack",
+        "black",
+        "capture",
+        "file",
+        "mover-B",
+        "slider-Q",
+        "target-Q"
+      ]
+    },
+    {
+      "gameId": "0c849880ee8bcf5e",
+      "level": "C*",
+      "originalExerciseNumber": 5,
+      "fen": "4rrk1/3b2bp/3p2p1/2pPP2n/4B3/N1N3PP/1q1BQ2K/R4R2 b - - 0 24",
+      "moves": [
+        "Bxe5",
+        "Rxf8+",
+        "Rxf8",
+        "Ra2",
+        "Nxg3",
+        "Rxb2",
+        "Nxe2+"
+      ],
+      "decision": "remove",
+      "reason": "The saved line requires four solver moves, only one beyond the current three-move B set. The required two-to-three-move increase in calculation has not been established. Withhold from C* rather than pad the line or automatically relabel it.",
+      "previousReason": "C*: Bxe5 Rxf8+ Rxf8 Ra2 Nxg3 Rxb2 Nxe2+. N g3–e2 uncovers B e5 against K h2; checking tempo links preparation to the final material capture.",
+      "solverMoves": 4,
+      "aspects": [
+        "black",
+        "capture",
+        "check",
+        "diagonal",
+        "mover-N",
+        "slider-B",
+        "target-K"
+      ]
+    },
+    {
+      "gameId": "0bd02a2c706e15bd",
+      "level": "C*",
+      "originalExerciseNumber": 6,
+      "fen": "3r1rk1/1p3ppp/p1b2b2/3p4/1P3P2/P3PB2/3Q2PP/3R2K1 w - - 5 25",
+      "moves": [
+        "Qa2",
+        "Rfe8",
+        "Bxd5",
+        "Rxe3",
+        "Bxf7+",
+        "Kh8",
+        "Rxd8+"
+      ],
+      "decision": "remove",
+      "reason": "Bxf7+ is a direct Bishop check that already gives a net pawn gain after either legal King reply; Rxd8 adds the revealed target. This does not establish the discovery as essential to the stated material objective. The saved line requires four solver moves, only one beyond the current three-move B set. The required two-to-three-move increase in calculation has not been established. Withhold from C* rather than pad the line or automatically relabel it.",
+      "previousReason": "C*: Qa2 Rfe8 Bxd5 Rxe3 Bxf7+ Kh8 Rxd8+. B d5–f7 uncovers R d1 against R d8; the revealed attack and the moving piece create competing threats before the payoff capture.",
+      "solverMoves": 4,
+      "aspects": [
+        "attack",
+        "capture",
+        "file",
+        "mover-B",
+        "mover-Q",
+        "nonchecking-attack",
+        "quiet-move",
+        "slider-R",
+        "target-P",
+        "target-R",
+        "white"
+      ]
+    },
+    {
+      "gameId": "58074b148c0b41b6",
+      "level": "C*",
+      "originalExerciseNumber": 7,
+      "fen": "r2k1b1r/ppp1q1pp/1nb1B2n/6N1/3P4/8/PPP2PPP/R1BQR1K1 w - - 3 13",
+      "moves": [
+        "Bh3",
+        "Qb4",
+        "a3",
+        "Qb5",
+        "Ne6+",
+        "Kc8",
+        "Nxf8+"
+      ],
+      "decision": "remove",
+      "reason": "The saved line requires four solver moves, only one beyond the current three-move B set. The required two-to-three-move increase in calculation has not been established. Withhold from C* rather than pad the line or automatically relabel it.",
+      "previousReason": "C*: Bh3 Qb4 a3 Qb5 Ne6+ Kc8 Nxf8+. N e6–f8 uncovers B h3 against K c8; checking tempo links preparation to the final material capture.",
+      "solverMoves": 4,
+      "aspects": [
+        "attack",
+        "capture",
+        "check",
+        "diagonal",
+        "file",
+        "mover-B",
+        "mover-N",
+        "nonchecking-attack",
+        "quiet-move",
+        "slider-B",
+        "slider-R",
+        "target-K",
+        "target-N",
+        "target-Q",
+        "white"
+      ]
+    },
+    {
+      "gameId": "67984d20afcafdb2",
+      "level": "C*",
+      "originalExerciseNumber": 8,
+      "fen": "4r1k1/pb5p/6pN/1p6/8/1P4P1/P1Q2K1P/q7 b - - 1 35",
+      "moves": [
+        "Kh8",
+        "Qd2",
+        "Qf6+",
+        "Kg1",
+        "Rf8",
+        "Qf4",
+        "Qa1+",
+        "Kf2",
+        "Rxf4+"
+      ],
+      "decision": "keep",
+      "reason": "C*: Kh8 Qd2 Qf6+ Kg1 Rf8 Qf4 Qa1+ Kf2 Rxf4+. Q f6–a1 uncovers R f8 against Q f4; the revealed attack and the moving piece create competing threats before the payoff capture. Second pass replayed every solver position, immediate defensive material responses and the complete payoff; no new tactical screening flag. Retained within the level after comparison of preparation and defensive mechanism.",
+      "previousReason": "C*: Kh8 Qd2 Qf6+ Kg1 Rf8 Qf4 Qa1+ Kf2 Rxf4+. Q f6–a1 uncovers R f8 against Q f4; the revealed attack and the moving piece create competing threats before the payoff capture.",
+      "solverMoves": 5,
+      "aspects": [
+        "attack",
+        "black",
+        "file",
+        "mover-Q",
+        "quiet-move",
+        "slider-R",
+        "target-Q"
+      ]
+    },
+    {
+      "gameId": "793424f34e852d9f",
+      "level": "C*",
+      "originalExerciseNumber": 9,
+      "fen": "rnbk1r2/pppp2bp/5n2/3N3Q/3q3B/8/PPP3PP/4RRK1 w - - 0 18",
+      "moves": [
+        "Kh1",
+        "c6",
+        "Rxf6",
+        "cxd5",
+        "Rf4+",
+        "Kc7",
+        "Rxd4"
+      ],
+      "decision": "remove",
+      "reason": "The saved line requires four solver moves, only one beyond the current three-move B set. The required two-to-three-move increase in calculation has not been established. Withhold from C* rather than pad the line or automatically relabel it.",
+      "previousReason": "C*: Kh1 c6 Rxf6 cxd5 Rf4+ Kc7 Rxd4. R f6–f4 uncovers B h4 against K d8; checking tempo links preparation to the final material capture.",
+      "solverMoves": 4,
+      "aspects": [
+        "check",
+        "diagonal",
+        "mover-R",
+        "quiet-move",
+        "slider-B",
+        "target-K",
+        "white"
+      ]
+    },
+    {
+      "gameId": "7cfff5db824aa6cd",
+      "level": "C*",
+      "originalExerciseNumber": 10,
+      "fen": "4k1r1/1b1p1p2/1pnPpP2/pN6/4B1P1/P5K1/4P3/1R6 w - - 4 40",
+      "moves": [
+        "Kf4",
+        "Rh8",
+        "Kg3",
+        "Bc8",
+        "Nc7+",
+        "Kd8",
+        "Rxb6"
+      ],
+      "decision": "remove",
+      "reason": "The saved line requires four solver moves, only one beyond the current three-move B set. The required two-to-three-move increase in calculation has not been established. Withhold from C* rather than pad the line or automatically relabel it.",
+      "previousReason": "C*: Kf4 Rh8 Kg3 Bc8 Nc7+ Kd8 Rxb6. N b5–c7 uncovers R b1 against P b6; the revealed attack and the moving piece create competing threats before the payoff capture.",
+      "solverMoves": 4,
+      "aspects": [
+        "attack",
+        "file",
+        "mover-N",
+        "quiet-move",
+        "slider-R",
+        "target-P",
+        "white"
+      ]
+    },
+    {
+      "gameId": "9df15f0f818e3bae",
+      "level": "C*",
+      "originalExerciseNumber": 11,
+      "fen": "5rk1/1B3ppp/p3b3/4p3/5PP1/bNr3P1/P2RP3/4K1R1 b - - 0 22",
+      "moves": [
+        "Bxb3",
+        "axb3",
+        "Bb4",
+        "Rd5",
+        "Rc7+",
+        "Kf2",
+        "Rxb7"
+      ],
+      "decision": "remove",
+      "reason": "The saved line requires four solver moves, only one beyond the current three-move B set. The required two-to-three-move increase in calculation has not been established. Withhold from C* rather than pad the line or automatically relabel it.",
+      "previousReason": "C*: Bxb3 axb3 Bb4 Rd5 Rc7+ Kf2 Rxb7. R c3–c7 uncovers B b4 against K e1; checking tempo links preparation to the final material capture.",
+      "solverMoves": 4,
+      "aspects": [
+        "black",
+        "check",
+        "diagonal",
+        "mover-R",
+        "quiet-move",
+        "slider-B",
+        "target-K"
+      ]
+    },
+    {
+      "gameId": "9a6890d28d1fda55",
+      "level": "C*",
+      "originalExerciseNumber": 12,
+      "fen": "6R1/1p4p1/1N6/p3r2p/Pb4kP/6P1/1PRn2K1/8 b - - 0 40",
+      "moves": [
+        "Re2+",
+        "Kh1",
+        "Kh3",
+        "Re8",
+        "Rh2+",
+        "Kg1",
+        "Nf3+",
+        "Kf1",
+        "Rxc2"
+      ],
+      "decision": "keep",
+      "reason": "C*: Re2+ Kh1 Kh3 Re8 Rh2+ Kg1 Nf3+ Kf1 Rxc2. N d2–f3 uncovers R h2 against R c2; the revealed attack and the moving piece create competing threats before the payoff capture. Second pass replayed every solver position, immediate defensive material responses and the complete payoff; no new tactical screening flag. Retained within the level after comparison of preparation and defensive mechanism.",
+      "previousReason": "C*: Re2+ Kh1 Kh3 Re8 Rh2+ Kg1 Nf3+ Kf1 Rxc2. N d2–f3 uncovers R h2 against R c2; the revealed attack and the moving piece create competing threats before the payoff capture.",
+      "solverMoves": 5,
+      "aspects": [
+        "attack",
+        "black",
+        "mover-N",
+        "quiet-move",
+        "rank",
+        "slider-R",
+        "target-R"
+      ]
+    },
+    {
+      "gameId": "4b9dea8ebedc2f28",
+      "level": "C*",
+      "originalExerciseNumber": 13,
+      "fen": "8/kpR5/3p3P/3P4/1nb1Pp2/p4P2/1r6/2K4R b - - 4 58",
+      "moves": [
+        "Nd3+",
+        "Kd1",
+        "Bb3+",
+        "Rc2",
+        "Rxc2",
+        "h7",
+        "Ra2#"
+      ],
+      "decision": "remove",
+      "reason": "The saved line requires four solver moves, only one beyond the current three-move B set. The required two-to-three-move increase in calculation has not been established. Withhold from C* rather than pad the line or automatically relabel it.",
+      "previousReason": "C*: Nd3+ Kd1 Bb3+ Rc2 Rxc2 h7 Ra2#. R c2–a2 uncovers B b3 against K d1; checking tempo links preparation to the final mate.",
+      "solverMoves": 4,
+      "aspects": [
+        "black",
+        "check",
+        "diagonal",
+        "mover-R",
+        "quiet-move",
+        "slider-B",
+        "target-K"
+      ]
+    },
+    {
+      "gameId": "8a22aaf5a03aa6fb",
+      "level": "C*",
+      "originalExerciseNumber": 14,
+      "fen": "7R/2k5/2p5/p1Pp1Np1/3P4/4K3/r7/8 w - - 0 46",
+      "moves": [
+        "Rh7+",
+        "Kb8",
+        "Ne7",
+        "Ra3+",
+        "Kd2",
+        "Kc7",
+        "Nxd5+"
+      ],
+      "decision": "remove",
+      "reason": "The saved line requires four solver moves, only one beyond the current three-move B set. The required two-to-three-move increase in calculation has not been established. Withhold from C* rather than pad the line or automatically relabel it.",
+      "previousReason": "C*: Rh7+ Kb8 Ne7 Ra3+ Kd2 Kc7 Nxd5+. N e7–d5 uncovers R h7 against K c7; checking tempo links preparation to the final material capture.",
+      "solverMoves": 4,
+      "aspects": [
+        "capture",
+        "check",
+        "double-check",
+        "mover-N",
+        "rank",
+        "slider-R",
+        "target-K",
+        "white"
+      ]
+    },
+    {
+      "gameId": "ba05878e721a6390",
+      "level": "C*",
+      "originalExerciseNumber": 15,
+      "fen": "5R2/6k1/3p3p/3Pq2p/2P4P/1P3RK1/5Q2/8 w - - 3 57",
+      "moves": [
+        "Kh3",
+        "Qf5+",
+        "R3xf5",
+        "Kg6",
+        "Qc2",
+        "Kh7",
+        "R5f7#"
+      ],
+      "decision": "remove",
+      "reason": "The saved line requires four solver moves, only one beyond the current three-move B set. The required two-to-three-move increase in calculation has not been established. Withhold from C* rather than pad the line or automatically relabel it.",
+      "previousReason": "C*: Kh3 Qf5+ R3xf5 Kg6 Qc2 Kh7 R5f7#. R f5–f7 uncovers Q c2 against K h7; checking tempo links preparation to the final mate.",
+      "solverMoves": 4,
+      "aspects": [
+        "check",
+        "diagonal",
+        "double-check",
+        "mover-R",
+        "quiet-move",
+        "slider-Q",
+        "target-K",
+        "white"
+      ]
+    },
+    {
+      "gameId": "90e8e64606c65bad",
+      "level": "C*",
+      "originalExerciseNumber": 16,
+      "fen": "2b1r1k1/1pp2r1p/p1pq1p1P/6p1/4PQ1N/P2P2R1/1PP2P1P/6RK w - - 1 30",
+      "moves": [
+        "Qxd6",
+        "cxd6",
+        "f4",
+        "d5",
+        "fxg5",
+        "dxe4",
+        "gxf6+"
+      ],
+      "decision": "remove",
+      "reason": "The saved line requires four solver moves, only one beyond the current three-move B set. The required two-to-three-move increase in calculation has not been established. Withhold from C* rather than pad the line or automatically relabel it.",
+      "previousReason": "C*: Qxd6 cxd6 f4 d5 fxg5 dxe4 gxf6+. P g5–f6 uncovers R g3 against K g8; checking tempo links preparation to the final material capture.",
+      "solverMoves": 4,
+      "aspects": [
+        "capture",
+        "check",
+        "file",
+        "mover-P",
+        "pawn-capture",
+        "slider-R",
+        "target-K",
+        "white"
+      ]
+    },
+    {
+      "gameId": "ce7ae73972f4d57c",
+      "level": "C*",
+      "originalExerciseNumber": 17,
+      "fen": "8/2p5/p7/2N2pp1/5n2/k1P2Pb1/6r1/1R3K2 b - - 5 51",
+      "moves": [
+        "Rf2+",
+        "Ke1",
+        "Ng2+",
+        "Kd1",
+        "Ne3+",
+        "Ke1",
+        "Rg2#"
+      ],
+      "decision": "remove",
+      "reason": "The saved line requires four solver moves, only one beyond the current three-move B set. The required two-to-three-move increase in calculation has not been established. Withhold from C* rather than pad the line or automatically relabel it.",
+      "previousReason": "C*: Rf2+ Ke1 Ng2+ Kd1 Ne3+ Ke1 Rg2#. R f2–g2 uncovers B g3 against K e1; checking tempo links preparation to the final mate.",
+      "solverMoves": 4,
+      "aspects": [
+        "black",
+        "check",
+        "diagonal",
+        "mover-R",
+        "quiet-move",
+        "slider-B",
+        "target-K"
+      ]
+    },
+    {
+      "gameId": "f79142da93c0a6b5",
+      "level": "C*",
+      "originalExerciseNumber": 18,
+      "fen": "8/5k2/1N5R/p3p1p1/P7/1nn3P1/6KP/8 w - - 1 45",
+      "moves": [
+        "Rc6",
+        "Nd1",
+        "Nc4",
+        "e4",
+        "Nd6+",
+        "Ke6",
+        "Nxe4+"
+      ],
+      "decision": "remove",
+      "reason": "The saved line requires four solver moves, only one beyond the current three-move B set. The required two-to-three-move increase in calculation has not been established. Withhold from C* rather than pad the line or automatically relabel it.",
+      "previousReason": "C*: Rc6 Nd1 Nc4 e4 Nd6+ Ke6 Nxe4+. N d6–e4 uncovers R c6 against K e6; checking tempo links preparation to the final material capture.",
+      "solverMoves": 4,
+      "aspects": [
+        "capture",
+        "check",
+        "mover-N",
+        "rank",
+        "slider-R",
+        "target-K",
+        "white"
+      ]
+    },
+    {
+      "gameId": "7411f04447e3aaec",
+      "level": "C*",
+      "originalExerciseNumber": 19,
+      "fen": "r5k1/ppq2ppp/5nb1/2pP4/2Pp1Q2/PP1Pr1PP/3KB3/R5NR b - - 2 19",
+      "moves": [
+        "Qb6",
+        "b4",
+        "cxb4",
+        "Nf3",
+        "Rae8",
+        "Rh2",
+        "Qa5",
+        "Qxd4",
+        "bxa3+"
+      ],
+      "decision": "keep",
+      "reason": "C*: Qb6 b4 cxb4 Nf3 Rae8 Rh2 Qa5 Qxd4 bxa3+. P b4–a3 uncovers Q a5 against K d2; checking tempo links preparation to the final material capture. Second pass replayed every solver position, immediate defensive material responses and the complete payoff; no new tactical screening flag. Retained within the level after comparison of preparation and defensive mechanism.",
+      "previousReason": "C*: Qb6 b4 cxb4 Nf3 Rae8 Rh2 Qa5 Qxd4 bxa3+. P b4–a3 uncovers Q a5 against K d2; checking tempo links preparation to the final material capture.",
+      "solverMoves": 5,
+      "aspects": [
+        "black",
+        "capture",
+        "check",
+        "diagonal",
+        "mover-P",
+        "pawn-capture",
+        "slider-Q",
+        "target-K"
+      ]
+    },
+    {
+      "gameId": "b084b8044363463b",
+      "level": "C*",
+      "originalExerciseNumber": 20,
+      "fen": "r4k2/2R1N1p1/5p1p/1p6/1P1Pn2P/6P1/5P2/6K1 w - - 4 35",
+      "moves": [
+        "Ng6+",
+        "Kg8",
+        "h5",
+        "f5",
+        "Ne7+",
+        "Kf7",
+        "Nxf5+"
+      ],
+      "decision": "remove",
+      "reason": "The saved line requires four solver moves, only one beyond the current three-move B set. The required two-to-three-move increase in calculation has not been established. Withhold from C* rather than pad the line or automatically relabel it.",
+      "previousReason": "C*: Ng6+ Kg8 h5 f5 Ne7+ Kf7 Nxf5+. N e7–f5 uncovers R c7 against K f7; checking tempo links preparation to the final material capture.",
+      "solverMoves": 4,
+      "aspects": [
+        "attack",
+        "capture",
+        "check",
+        "mover-N",
+        "quiet-move",
+        "rank",
+        "slider-R",
+        "target-K",
+        "target-P",
+        "white"
+      ]
+    },
+    {
+      "gameId": "4a44ccadcb4b7d83",
+      "level": "C*",
+      "originalExerciseNumber": 21,
+      "fen": "6k1/p4p2/1pBb2p1/3P3p/P6P/2Q3PK/5q2/8 b - - 7 37",
+      "moves": [
+        "Qf1+",
+        "Kh2",
+        "Bc5",
+        "d6",
+        "Bg1+",
+        "Kh1",
+        "Bd4+",
+        "Kh2",
+        "Bxc3"
+      ],
+      "decision": "keep",
+      "reason": "C*: Qf1+ Kh2 Bc5 d6 Bg1+ Kh1 Bd4+ Kh2 Bxc3. B g1–d4 uncovers Q f1 against K h1; checking tempo links preparation to the final material capture. Second pass replayed every solver position, immediate defensive material responses and the complete payoff; no new tactical screening flag. Retained within the level after comparison of preparation and defensive mechanism.",
+      "previousReason": "C*: Qf1+ Kh2 Bc5 d6 Bg1+ Kh1 Bd4+ Kh2 Bxc3. B g1–d4 uncovers Q f1 against K h1; checking tempo links preparation to the final material capture.",
+      "solverMoves": 5,
+      "aspects": [
+        "black",
+        "check",
+        "mover-B",
+        "quiet-move",
+        "rank",
+        "slider-Q",
+        "target-K"
+      ]
+    },
+    {
+      "gameId": "2deac98cb1be31b3",
+      "level": "C*",
+      "originalExerciseNumber": 22,
+      "fen": "8/8/3R3p/6pk/4Np2/5P1q/4KR2/8 w - - 9 54",
+      "moves": [
+        "Rb6",
+        "Qh4",
+        "Rf1",
+        "g4",
+        "Nf6+",
+        "Kg6",
+        "Nxg4+"
+      ],
+      "decision": "remove",
+      "reason": "The saved line requires four solver moves, only one beyond the current three-move B set. The required two-to-three-move increase in calculation has not been established. Withhold from C* rather than pad the line or automatically relabel it.",
+      "previousReason": "C*: Rb6 Qh4 Rf1 g4 Nf6+ Kg6 Nxg4+. N f6–g4 uncovers R b6 against K g6; checking tempo links preparation to the final material capture.",
+      "solverMoves": 4,
+      "aspects": [
+        "capture",
+        "check",
+        "mover-N",
+        "rank",
+        "slider-R",
+        "target-K",
+        "white"
+      ]
+    },
+    {
+      "gameId": "800852c19e2bd894",
+      "level": "C*",
+      "originalExerciseNumber": 23,
+      "fen": "8/p3q2k/bpP1n1pp/4Q3/P3NP2/3r4/6BP/3R2K1 w - - 4 37",
+      "moves": [
+        "Rxd3",
+        "Bxd3",
+        "Nf6+",
+        "Kh8",
+        "Nd5+",
+        "Qg7",
+        "Qxe6"
+      ],
+      "decision": "remove",
+      "reason": "The saved line requires four solver moves, only one beyond the current three-move B set. The required two-to-three-move increase in calculation has not been established. Withhold from C* rather than pad the line or automatically relabel it.",
+      "previousReason": "C*: Rxd3 Bxd3 Nf6+ Kh8 Nd5+ Qg7 Qxe6. N f6–d5 uncovers Q e5 against K h8; checking tempo links preparation to the final material capture.",
+      "solverMoves": 4,
+      "aspects": [
+        "check",
+        "diagonal",
+        "mover-N",
+        "quiet-move",
+        "slider-Q",
+        "target-K",
+        "white"
+      ]
+    },
+    {
+      "gameId": "40138fe04b0de9dc",
+      "level": "C*",
+      "originalExerciseNumber": 24,
+      "fen": "r2r2k1/ppnq1pNp/2p5/3pP3/8/8/PPPQ1PPP/R3R1K1 w - - 1 19",
+      "moves": [
+        "Qg5",
+        "Kf8",
+        "Qh6",
+        "Qg4",
+        "Ne6+",
+        "Kg8",
+        "Nxc7"
+      ],
+      "decision": "remove",
+      "reason": "The saved line requires four solver moves, only one beyond the current three-move B set. The required two-to-three-move increase in calculation has not been established. Withhold from C* rather than pad the line or automatically relabel it.",
+      "previousReason": "C*: Qg5 Kf8 Qh6 Qg4 Ne6+ Kg8 Nxc7. N g7–e6 uncovers Q h6 against K f8; checking tempo links preparation to the final material capture.",
+      "solverMoves": 4,
+      "aspects": [
+        "attack",
+        "capture",
+        "check",
+        "diagonal",
+        "double-check",
+        "mover-N",
+        "nonchecking-attack",
+        "quiet-move",
+        "rank",
+        "slider-Q",
+        "target-K",
+        "target-P",
+        "white"
+      ]
+    },
+    {
+      "gameId": "036003deb06597b9",
+      "level": "D",
+      "originalExerciseNumber": 1,
+      "fen": "1r6/2r5/p2kpn2/5p2/2P3pP/3B1bP1/P4B2/K2RR3 w - - 5 31",
+      "moves": [
+        "Bxf5+",
+        "Bxd1",
+        "Rxe6+",
+        "Kd7",
+        "Rb6+",
+        "Ke7",
+        "Rxb8"
+      ],
+      "decision": "keep",
+      "reason": "D: Bxf5+ Bxd1 Rxe6+ Kd7 Rb6+ Ke7 Rxb8. R e6–b6 uncovers B f5 against K d7; checking tempo links preparation to the final material capture. Bxf5+ leaves the stationary Rook on d1 to Bxd1; two further Rook checks are needed before recovery. Four solver moves with a Rook sacrifice. Second pass replayed every solver position, immediate defensive material responses and the complete payoff; no new tactical screening flag. Retained within the level after comparison of preparation and defensive mechanism.",
+      "previousReason": "D: Bxf5+ Bxd1 Rxe6+ Kd7 Rb6+ Ke7 Rxb8. R e6–b6 uncovers B f5 against K d7; checking tempo links preparation to the final material capture. Bxf5+ leaves the stationary Rook on d1 to Bxd1; two further Rook checks are needed before recovery. Four solver moves with a Rook sacrifice.",
+      "solverMoves": 4,
+      "aspects": [
+        "capture",
+        "check",
+        "diagonal",
+        "file",
+        "mover-B",
+        "mover-R",
+        "quiet-move",
+        "slider-B",
+        "slider-R",
+        "target-K",
+        "white"
+      ]
+    },
+    {
+      "gameId": "4c8e80c2775ab2d7",
+      "level": "D",
+      "originalExerciseNumber": 2,
+      "fen": "2Q2Nk1/6pp/1p6/2b2p2/6q1/2P2n2/5PB1/B3RK2 b - - 6 42",
+      "moves": [
+        "Qc4+",
+        "Re2",
+        "Nh2+",
+        "Kg1",
+        "Bxf2+",
+        "Rxf2",
+        "Qxc8"
+      ],
+      "decision": "keep",
+      "reason": "D: Qc4+ Re2 Nh2+ Kg1 Bxf2+ Rxf2 Qxc8. B c5–f2 uncovers Q c4 against Q c8; the revealed attack and the moving piece create competing threats before the payoff capture. Second pass replayed every solver position, immediate defensive material responses and the complete payoff; no new tactical screening flag. Retained within the level after comparison of preparation and defensive mechanism.",
+      "previousReason": "D: Qc4+ Re2 Nh2+ Kg1 Bxf2+ Rxf2 Qxc8. B c5–f2 uncovers Q c4 against Q c8; the revealed attack and the moving piece create competing threats before the payoff capture.",
+      "solverMoves": 4,
+      "aspects": [
+        "attack",
+        "black",
+        "capture",
+        "file",
+        "mover-B",
+        "slider-Q",
+        "target-Q"
+      ]
+    },
+    {
+      "gameId": "e65dea1262d6bb5e",
+      "level": "D",
+      "originalExerciseNumber": 3,
+      "fen": "6k1/R4p1p/1rp3p1/8/2B4n/2K2P2/PPP2RbP/7r w - - 0 26",
+      "moves": [
+        "Rxf7",
+        "Bf1",
+        "Rxf1",
+        "Rxf1",
+        "Ra7+",
+        "Kh8",
+        "Bxf1"
+      ],
+      "decision": "keep",
+      "reason": "D: Rxf7 Bf1 Rxf1 Rxf1 Ra7+ Kh8 Bxf1. R f7–a7 uncovers B c4 against K g8; checking tempo links preparation to the final material capture. Second pass replayed every solver position, immediate defensive material responses and the complete payoff; no new tactical screening flag. Retained within the level after comparison of preparation and defensive mechanism.",
+      "previousReason": "D: Rxf7 Bf1 Rxf1 Rxf1 Ra7+ Kh8 Bxf1. R f7–a7 uncovers B c4 against K g8; checking tempo links preparation to the final material capture.",
+      "solverMoves": 4,
+      "aspects": [
+        "check",
+        "diagonal",
+        "mover-R",
+        "quiet-move",
+        "slider-B",
+        "target-K",
+        "white"
+      ]
+    },
+    {
+      "gameId": "c0c8a7bcd849e8c3",
+      "level": "D",
+      "originalExerciseNumber": 4,
+      "fen": "r3k2r/1p1bppbp/p4np1/P2p1q2/3P4/1QN2N2/1P3PPP/R1B1R1K1 w kq - 3 14",
+      "moves": [
+        "Re5",
+        "Qd3",
+        "Rxe7+",
+        "Kxe7",
+        "Nxd5+",
+        "Nxd5",
+        "Qxd3"
+      ],
+      "decision": "keep",
+      "reason": "D: Re5 Qd3 Rxe7+ Kxe7 Nxd5+ Nxd5 Qxd3. N c3–d5 uncovers Q b3 against Q d3; the revealed attack and the moving piece create competing threats before the payoff capture. Second pass replayed every solver position, immediate defensive material responses and the complete payoff; no new tactical screening flag. Retained within the level after comparison of preparation and defensive mechanism.",
+      "previousReason": "D: Re5 Qd3 Rxe7+ Kxe7 Nxd5+ Nxd5 Qxd3. N c3–d5 uncovers Q b3 against Q d3; the revealed attack and the moving piece create competing threats before the payoff capture.",
+      "solverMoves": 4,
+      "aspects": [
+        "attack",
+        "capture",
+        "mover-N",
+        "rank",
+        "slider-Q",
+        "target-Q",
+        "white"
+      ]
+    },
+    {
+      "gameId": "1f10b7ae58f714b3",
+      "level": "D",
+      "originalExerciseNumber": 5,
+      "fen": "1k3Q2/1p6/1np5/3rP3/3b1PB1/1P1q4/P2B1P1P/3K4 b - - 2 46",
+      "moves": [
+        "Kc7",
+        "Bf5",
+        "Qxd2+",
+        "Kxd2",
+        "Bc5+",
+        "Ke2",
+        "Bxf8"
+      ],
+      "decision": "keep",
+      "reason": "D: Kc7 Bf5 Qxd2+ Kxd2 Bc5+ Ke2 Bxf8. B d4–c5 uncovers R d5 against K d2; checking tempo links preparation to the final material capture. Second pass replayed every solver position, immediate defensive material responses and the complete payoff; no new tactical screening flag. Retained within the level after comparison of preparation and defensive mechanism.",
+      "previousReason": "D: Kc7 Bf5 Qxd2+ Kxd2 Bc5+ Ke2 Bxf8. B d4–c5 uncovers R d5 against K d2; checking tempo links preparation to the final material capture.",
+      "solverMoves": 4,
+      "aspects": [
+        "black",
+        "check",
+        "file",
+        "mover-B",
+        "quiet-move",
+        "slider-R",
+        "target-K"
+      ]
+    },
+    {
+      "gameId": "055e26cb67e8920a",
+      "level": "D",
+      "originalExerciseNumber": 6,
+      "fen": "6rk/3nQ2p/Bp3n1B/4p1p1/P6q/7P/2P3P1/5R1K w - - 2 32",
+      "moves": [
+        "Rxf6",
+        "g4",
+        "Bg7+",
+        "Rxg7",
+        "Rf8+",
+        "Nxf8",
+        "Qxh4"
+      ],
+      "decision": "keep",
+      "reason": "D: Rxf6 g4 Bg7+ Rxg7 Rf8+ Nxf8 Qxh4. R f6–f8 uncovers Q e7 against Q h4; the revealed attack and the moving piece create competing threats before the payoff capture. Second pass replayed every solver position, immediate defensive material responses and the complete payoff; no new tactical screening flag. Retained within the level after comparison of preparation and defensive mechanism.",
+      "previousReason": "D: Rxf6 g4 Bg7+ Rxg7 Rf8+ Nxf8 Qxh4. R f6–f8 uncovers Q e7 against Q h4; the revealed attack and the moving piece create competing threats before the payoff capture.",
+      "solverMoves": 4,
+      "aspects": [
+        "attack",
+        "diagonal",
+        "mover-R",
+        "quiet-move",
+        "slider-Q",
+        "target-Q",
+        "white"
+      ]
+    },
+    {
+      "gameId": "fd4d98272e4bb135",
+      "level": "D",
+      "originalExerciseNumber": 7,
+      "fen": "8/p1Pnk3/8/5P2/1PBK1r2/P3N3/8/8 w - - 3 65",
+      "moves": [
+        "Kc3",
+        "Nb6",
+        "c8=Q",
+        "Nxc8",
+        "Nd5+",
+        "Kf7",
+        "Nxf4+"
+      ],
+      "decision": "keep",
+      "reason": "D: Kc3 Nb6 c8=Q Nxc8 Nd5+ Kf7 Nxf4+. N d5–f4 uncovers B c4 against K f7; checking tempo links preparation to the final material capture. Second pass replayed every solver position, immediate defensive material responses and the complete payoff; no new tactical screening flag. Retained within the level after comparison of preparation and defensive mechanism.",
+      "previousReason": "D: Kc3 Nb6 c8=Q Nxc8 Nd5+ Kf7 Nxf4+. N d5–f4 uncovers B c4 against K f7; checking tempo links preparation to the final material capture.",
+      "solverMoves": 4,
+      "aspects": [
+        "capture",
+        "check",
+        "diagonal",
+        "mover-N",
+        "slider-B",
+        "target-K",
+        "white"
+      ]
+    },
+    {
+      "gameId": "6c8bc0aafbdeb42e",
+      "level": "D",
+      "originalExerciseNumber": 8,
+      "fen": "5r2/pp4k1/2b1Q3/2q3P1/7P/P7/1PP2P2/2KR4 w - - 9 34",
+      "moves": [
+        "Rd6",
+        "Rxf2",
+        "Qe7+",
+        "Rf7",
+        "Rg6+",
+        "Kxg6",
+        "Qxc5"
+      ],
+      "decision": "keep",
+      "reason": "D: Rd6 Rxf2 Qe7+ Rf7 Rg6+ Kxg6 Qxc5. R d6–g6 uncovers Q e7 against Q c5; the revealed attack and the moving piece create competing threats before the payoff capture. Second pass replayed every solver position, immediate defensive material responses and the complete payoff; no new tactical screening flag. Retained within the level after comparison of preparation and defensive mechanism.",
+      "previousReason": "D: Rd6 Rxf2 Qe7+ Rf7 Rg6+ Kxg6 Qxc5. R d6–g6 uncovers Q e7 against Q c5; the revealed attack and the moving piece create competing threats before the payoff capture.",
+      "solverMoves": 4,
+      "aspects": [
+        "attack",
+        "diagonal",
+        "mover-R",
+        "quiet-move",
+        "slider-Q",
+        "target-Q",
+        "white"
+      ]
+    },
+    {
+      "gameId": "1394114c147bc393",
+      "level": "D",
+      "originalExerciseNumber": 9,
+      "fen": "6k1/5rpp/4p3/2Pn1p2/2r2P2/3QPP2/q1B3RP/2K3R1 b - - 2 28",
+      "moves": [
+        "Rd7",
+        "e4",
+        "Qa1+",
+        "Kd2",
+        "Rxc2+",
+        "Kxc2",
+        "Nb4+",
+        "Kb3",
+        "Rxd3+"
+      ],
+      "decision": "keep",
+      "reason": "D: Rd7 e4 Qa1+ Kd2 Rxc2+ Kxc2 Nb4+ Kb3 Rxd3+. N d5–b4 uncovers R d7 against Q d3; the revealed attack and the moving piece create competing threats before the payoff capture. Second pass replayed every solver position, immediate defensive material responses and the complete payoff; no new tactical screening flag. Retained within the level after comparison of preparation and defensive mechanism.",
+      "previousReason": "D: Rd7 e4 Qa1+ Kd2 Rxc2+ Kxc2 Nb4+ Kb3 Rxd3+. N d5–b4 uncovers R d7 against Q d3; the revealed attack and the moving piece create competing threats before the payoff capture.",
+      "solverMoves": 5,
+      "aspects": [
+        "attack",
+        "black",
+        "file",
+        "mover-N",
+        "quiet-move",
+        "slider-R",
+        "target-Q"
+      ]
+    },
+    {
+      "gameId": "ba8f859e6302aa98",
+      "level": "D",
+      "originalExerciseNumber": 10,
+      "fen": "2r4k/1p3RRp/p3q2N/3pnb2/2rQ4/P7/1PP4P/1K6 w - - 7 37",
+      "moves": [
+        "Nxf5",
+        "Qxf7",
+        "Qxe5",
+        "Qxf5",
+        "Rxh7+",
+        "Kxh7",
+        "Qxf5+"
+      ],
+      "decision": "keep",
+      "reason": "D: Nxf5 Qxf7 Qxe5 Qxf5 Rxh7+ Kxh7 Qxf5+. R g7–h7 uncovers Q e5 against K h8; checking tempo links preparation to the final material capture. Second pass replayed every solver position, immediate defensive material responses and the complete payoff; no new tactical screening flag. Retained within the level after comparison of preparation and defensive mechanism.",
+      "previousReason": "D: Nxf5 Qxf7 Qxe5 Qxf5 Rxh7+ Kxh7 Qxf5+. R g7–h7 uncovers Q e5 against K h8; checking tempo links preparation to the final material capture.",
+      "solverMoves": 4,
+      "aspects": [
+        "capture",
+        "check",
+        "diagonal",
+        "double-check",
+        "mover-R",
+        "slider-Q",
+        "target-K",
+        "white"
+      ]
+    },
+    {
+      "gameId": "cb5ba1a9d8ff4109",
+      "level": "D",
+      "originalExerciseNumber": 11,
+      "fen": "1q1rr1k1/1b1n1pp1/1p1p1b1p/pN6/2P5/P2Bp1B1/2Q2PPP/3RR1K1 w - - 0 21",
+      "moves": [
+        "Bh7+",
+        "Kh8",
+        "Nxd6",
+        "exf2+",
+        "Kxf2",
+        "Rf8",
+        "Nxf7+",
+        "Rxf7",
+        "Bxb8"
+      ],
+      "decision": "keep",
+      "reason": "D: Bh7+ Kh8 Nxd6 exf2+ Kxf2 Rf8 Nxf7+ Rxf7 Bxb8. N d6–f7 uncovers B g3 against Q b8; the revealed attack and the moving piece create competing threats before the payoff capture. Second pass replayed every solver position, immediate defensive material responses and the complete payoff; no new tactical screening flag. Retained within the level after comparison of preparation and defensive mechanism.",
+      "previousReason": "D: Bh7+ Kh8 Nxd6 exf2+ Kxf2 Rf8 Nxf7+ Rxf7 Bxb8. N d6–f7 uncovers B g3 against Q b8; the revealed attack and the moving piece create competing threats before the payoff capture.",
+      "solverMoves": 5,
+      "aspects": [
+        "attack",
+        "capture",
+        "diagonal",
+        "file",
+        "mover-B",
+        "mover-N",
+        "quiet-move",
+        "slider-B",
+        "slider-R",
+        "target-N",
+        "target-P",
+        "target-Q",
+        "white"
+      ]
+    },
+    {
+      "gameId": "c7efa26b018fdac9",
+      "level": "D",
+      "originalExerciseNumber": 12,
+      "fen": "5r2/2nqbppk/3p1n2/N2P4/4pQ2/7P/1PPB1P2/4KBR1 w - - 2 25",
+      "moves": [
+        "Qh4+",
+        "Kg8",
+        "Rxg7+",
+        "Kxg7",
+        "Bh6+",
+        "Kh8",
+        "Bxf8+"
+      ],
+      "decision": "keep",
+      "reason": "D: Qh4+ Kg8 Rxg7+ Kxg7 Bh6+ Kh8 Bxf8+. B h6–f8 uncovers Q h4 against K h8; checking tempo links preparation to the final material capture. Second pass replayed every solver position, immediate defensive material responses and the complete payoff; no new tactical screening flag. Retained within the level after comparison of preparation and defensive mechanism.",
+      "previousReason": "D: Qh4+ Kg8 Rxg7+ Kxg7 Bh6+ Kh8 Bxf8+. B h6–f8 uncovers Q h4 against K h8; checking tempo links preparation to the final material capture.",
+      "solverMoves": 4,
+      "aspects": [
+        "capture",
+        "check",
+        "file",
+        "mover-B",
+        "slider-Q",
+        "target-K",
+        "white"
+      ]
+    },
+    {
+      "gameId": "2ea0eab3210a6c1b",
+      "level": "D",
+      "originalExerciseNumber": 13,
+      "fen": "1r1b1r1k/2p1q1p1/4P3/pp1B1P2/3N2Qp/3K3P/PPR5/8 w - - 3 34",
+      "moves": [
+        "Qh5+",
+        "Kg8",
+        "f6",
+        "Rxf6",
+        "Nc6",
+        "a4",
+        "Nxe7+",
+        "Bxe7",
+        "Rxc7"
+      ],
+      "decision": "remove",
+      "reason": "Nxe7+ captures the Queen with direct Knight check. After either Kf8 or Bxe7, material has already been won; Rxc7 merely adds a pawn. Non-target continuations remain winning in targeted engine probes. Reject the incidental discovered Rook attack.",
+      "previousReason": "D: Qh5+ Kg8 f6 Rxf6 Nc6 a4 Nxe7+ Bxe7 Rxc7. N c6–e7 uncovers R c2 against P c7; the revealed attack and the moving piece create competing threats before the payoff capture. f6 offers a pawn to Rxf6; the subsequent Knight discovery and Queen capture require five solver moves.",
+      "solverMoves": 5,
+      "aspects": [
+        "attack",
+        "capture",
+        "file",
+        "mover-N",
+        "slider-R",
+        "target-P",
+        "white"
+      ]
+    },
+    {
+      "gameId": "3cddc8c370f51027",
+      "level": "D",
+      "originalExerciseNumber": 14,
+      "fen": "2n5/pp1R3R/6p1/P5k1/4q3/1BP5/KP6/8 w - - 1 32",
+      "moves": [
+        "Rd5+",
+        "Kf6",
+        "Rf7+",
+        "Kxf7",
+        "Re5+",
+        "Kf6",
+        "Rxe4"
+      ],
+      "decision": "keep",
+      "reason": "D: Rd5+ Kf6 Rf7+ Kxf7 Re5+ Kf6 Rxe4. R d5–e5 uncovers B b3 against K f7; checking tempo links preparation to the final material capture. Second pass replayed every solver position, immediate defensive material responses and the complete payoff; no new tactical screening flag. Retained within the level after comparison of preparation and defensive mechanism.",
+      "previousReason": "D: Rd5+ Kf6 Rf7+ Kxf7 Re5+ Kf6 Rxe4. R d5–e5 uncovers B b3 against K f7; checking tempo links preparation to the final material capture.",
+      "solverMoves": 4,
+      "aspects": [
+        "attack",
+        "check",
+        "diagonal",
+        "mover-R",
+        "quiet-move",
+        "rank",
+        "slider-B",
+        "slider-R",
+        "target-K",
+        "target-P",
+        "white"
+      ]
+    },
+    {
+      "gameId": "7b685ad76ae3f6b7",
+      "level": "D",
+      "originalExerciseNumber": 15,
+      "fen": "r3kb1r/pp1bp1pp/5p2/qN2n3/2B2B2/2P2Q2/P1P2PPP/R4RK1 w kq - 7 14",
+      "moves": [
+        "Bxe5",
+        "Rc8",
+        "Qd5",
+        "Rxc4",
+        "Nd6+",
+        "exd6",
+        "Qxa5"
+      ],
+      "decision": "keep",
+      "reason": "D: Bxe5 Rc8 Qd5 Rxc4 Nd6+ exd6 Qxa5. N b5–d6 uncovers Q d5 against Q a5; the revealed attack and the moving piece create competing threats before the payoff capture. Second pass replayed every solver position, immediate defensive material responses and the complete payoff; no new tactical screening flag. Retained within the level after comparison of preparation and defensive mechanism.",
+      "previousReason": "D: Bxe5 Rc8 Qd5 Rxc4 Nd6+ exd6 Qxa5. N b5–d6 uncovers Q d5 against Q a5; the revealed attack and the moving piece create competing threats before the payoff capture.",
+      "solverMoves": 4,
+      "aspects": [
+        "attack",
+        "capture",
+        "file",
+        "mover-B",
+        "mover-N",
+        "nonchecking-attack",
+        "quiet-move",
+        "rank",
+        "slider-Q",
+        "target-P",
+        "target-Q",
+        "white"
+      ]
+    },
+    {
+      "gameId": "77209c493fea4c1e",
+      "level": "D",
+      "originalExerciseNumber": 16,
+      "fen": "3qk2r/1R1b1ppp/p7/2rpPp2/8/2N5/P1PQ2PP/1R4K1 w k - 0 20",
+      "moves": [
+        "Nxd5",
+        "Bc8",
+        "Re7+",
+        "Kf8",
+        "Qb4",
+        "Rxd5",
+        "Rd7+",
+        "Ke8",
+        "Rxd8+"
+      ],
+      "decision": "keep",
+      "reason": "D: Nxd5 Bc8 Re7+ Kf8 Qb4 Rxd5 Rd7+ Ke8 Rxd8+. R e7–d7 uncovers Q b4 against K f8; checking tempo links preparation to the final material capture. Second pass replayed every solver position, immediate defensive material responses and the complete payoff; no new tactical screening flag. Retained within the level after comparison of preparation and defensive mechanism.",
+      "previousReason": "D: Nxd5 Bc8 Re7+ Kf8 Qb4 Rxd5 Rd7+ Ke8 Rxd8+. R e7–d7 uncovers Q b4 against K f8; checking tempo links preparation to the final material capture.",
+      "solverMoves": 5,
+      "aspects": [
+        "check",
+        "diagonal",
+        "mover-R",
+        "quiet-move",
+        "slider-Q",
+        "target-K",
+        "white"
+      ]
+    },
+    {
+      "gameId": "2ae44fd20a10f740",
+      "level": "D",
+      "originalExerciseNumber": 17,
+      "fen": "2r1r3/3n1pk1/3q2bp/8/Np4P1/1P1n2P1/3Q2BP/1N1R1RK1 b - - 0 31",
+      "moves": [
+        "Qd4+",
+        "Kh1",
+        "Nf6",
+        "Rf4",
+        "Qe5",
+        "Rdf1",
+        "Ne4",
+        "Qxd3",
+        "Nf2+",
+        "R1xf2",
+        "Bxd3"
+      ],
+      "decision": "keep",
+      "reason": "D: Qd4+ Kh1 Nf6 Rf4 Qe5 Rdf1 Ne4 Qxd3 Nf2+ R1xf2 Bxd3. N e4–f2 uncovers B g6 against Q d3; the revealed attack and the moving piece create competing threats before the payoff capture. Second pass replayed every solver position, immediate defensive material responses and the complete payoff; no new tactical screening flag. Retained within the level after comparison of preparation and defensive mechanism.",
+      "previousReason": "D: Qd4+ Kh1 Nf6 Rf4 Qe5 Rdf1 Ne4 Qxd3 Nf2+ R1xf2 Bxd3. N e4–f2 uncovers B g6 against Q d3; the revealed attack and the moving piece create competing threats before the payoff capture.",
+      "solverMoves": 6,
+      "aspects": [
+        "attack",
+        "black",
+        "diagonal",
+        "mover-N",
+        "quiet-move",
+        "slider-B",
+        "target-Q"
+      ]
+    },
+    {
+      "gameId": "202e45c6e308912b",
+      "level": "D",
+      "originalExerciseNumber": 18,
+      "fen": "1r2r1k1/6pp/3b4/p1pP1p2/1qB1bB1Q/1P5P/P4PP1/R2K3R b - - 5 25",
+      "moves": [
+        "Qc3",
+        "Rc1",
+        "Qd4+",
+        "Bd2",
+        "Bc2+",
+        "Kxc2",
+        "Qxh4"
+      ],
+      "decision": "keep",
+      "reason": "D: Qc3 Rc1 Qd4+ Bd2 Bc2+ Kxc2 Qxh4. B e4–c2 uncovers Q d4 against Q h4; the revealed attack and the moving piece create competing threats before the payoff capture. Second pass replayed every solver position, immediate defensive material responses and the complete payoff; no new tactical screening flag. Retained within the level after comparison of preparation and defensive mechanism.",
+      "previousReason": "D: Qc3 Rc1 Qd4+ Bd2 Bc2+ Kxc2 Qxh4. B e4–c2 uncovers Q d4 against Q h4; the revealed attack and the moving piece create competing threats before the payoff capture.",
+      "solverMoves": 4,
+      "aspects": [
+        "attack",
+        "black",
+        "file",
+        "mover-B",
+        "mover-Q",
+        "nonchecking-attack",
+        "quiet-move",
+        "rank",
+        "slider-Q",
+        "slider-R",
+        "target-P",
+        "target-Q"
+      ]
+    },
+    {
+      "gameId": "8b460007cc657492",
+      "level": "D",
+      "originalExerciseNumber": 19,
+      "fen": "6rk/1R5p/2p1q2r/3p1p2/p1bP1Q1N/P3PPP1/5K2/2R5 w - - 2 40",
+      "moves": [
+        "Rh1",
+        "Ba6",
+        "Ra7",
+        "Bc8",
+        "Qc7",
+        "Qd6",
+        "Qxd6",
+        "Rxd6",
+        "Rxh7+",
+        "Kxh7",
+        "Nxf5+",
+        "Kg6",
+        "Nxd6"
+      ],
+      "decision": "keep",
+      "reason": "D: Rh1 Ba6 Ra7 Bc8 Qc7 Qd6 Qxd6 Rxd6 Rxh7+ Kxh7 Nxf5+ Kg6 Nxd6. N h4–f5 uncovers R h1 against K h7; checking tempo links preparation to the final material capture. Second pass replayed every solver position, immediate defensive material responses and the complete payoff; no new tactical screening flag. Retained within the level after comparison of preparation and defensive mechanism.",
+      "previousReason": "D: Rh1 Ba6 Ra7 Bc8 Qc7 Qd6 Qxd6 Rxd6 Rxh7+ Kxh7 Nxf5+ Kg6 Nxd6. N h4–f5 uncovers R h1 against K h7; checking tempo links preparation to the final material capture.",
+      "solverMoves": 7,
+      "aspects": [
+        "attack",
+        "capture",
+        "check",
+        "file",
+        "mover-N",
+        "mover-Q",
+        "nonchecking-attack",
+        "rank",
+        "slider-R",
+        "target-K",
+        "target-P",
+        "white"
+      ]
+    },
+    {
+      "gameId": "3aa080c8abc1afe1",
+      "level": "D",
+      "originalExerciseNumber": 20,
+      "fen": "5r1k/8/4B3/8/4P1Q1/3Pqp1P/1PP3PK/8 w - - 15 43",
+      "moves": [
+        "Qh4+",
+        "Kg7",
+        "Qe7+",
+        "Kg6",
+        "Bf5+",
+        "Rxf5",
+        "exf5+",
+        "Kh6",
+        "Qxe3+"
+      ],
+      "decision": "remove",
+      "reason": "After the Bishop offer, exf5+ captures a Rook with direct pawn check and already wins the exchange. The discovered Queen attack on e3 adds a later capture; it is not essential to achieving material gain.",
+      "previousReason": "D: Qh4+ Kg7 Qe7+ Kg6 Bf5+ Rxf5 exf5+ Kh6 Qxe3+. P e4–f5 uncovers Q e7 against Q e3; the revealed attack and the moving piece create competing threats before the payoff capture.",
+      "solverMoves": 5,
+      "aspects": [
+        "attack",
+        "capture",
+        "file",
+        "mover-P",
+        "pawn-capture",
+        "slider-Q",
+        "target-Q",
+        "white"
+      ]
+    },
+    {
+      "gameId": "034aa99ac986e10b",
+      "level": "D",
+      "originalExerciseNumber": 21,
+      "fen": "3r3k/4rp1p/1q3Np1/1Np2b2/1nP5/6PP/3Q1PBK/4R3 w - - 2 28",
+      "moves": [
+        "Qb2",
+        "Nd3",
+        "Qc3",
+        "Rxe1",
+        "Nd5+",
+        "Kg8",
+        "Nxb6"
+      ],
+      "decision": "keep",
+      "reason": "D: Qb2 Nd3 Qc3 Rxe1 Nd5+ Kg8 Nxb6. N f6–d5 uncovers Q c3 against K h8; checking tempo links preparation to the final material capture. Qc3 allows Rxe1, sacrificing the stationary Rook before Nd5+ and Nxb6 win the Queen. Four solver moves. Second pass replayed every solver position, immediate defensive material responses and the complete payoff; no new tactical screening flag. Retained within the level after comparison of preparation and defensive mechanism.",
+      "previousReason": "D: Qb2 Nd3 Qc3 Rxe1 Nd5+ Kg8 Nxb6. N f6–d5 uncovers Q c3 against K h8; checking tempo links preparation to the final material capture. Qc3 allows Rxe1, sacrificing the stationary Rook before Nd5+ and Nxb6 win the Queen. Four solver moves.",
+      "solverMoves": 4,
+      "aspects": [
+        "check",
+        "diagonal",
+        "mover-N",
+        "quiet-move",
+        "slider-Q",
+        "target-K",
+        "white"
+      ]
+    },
+    {
+      "gameId": "ec35c8b6a2c0000d",
+      "level": "D",
+      "originalExerciseNumber": 22,
+      "fen": "1b3rk1/1p3ppp/p7/5q2/4p3/2P1Bn1P/PP2QPP1/3R1R1K b - - 0 21",
+      "moves": [
+        "Qe5",
+        "g3",
+        "Qh5",
+        "Kg2",
+        "Nh4+",
+        "gxh4",
+        "Qxe2"
+      ],
+      "decision": "keep",
+      "reason": "D: Qe5 g3 Qh5 Kg2 Nh4+ gxh4 Qxe2. N f3–h4 uncovers Q h5 against Q e2; the revealed attack and the moving piece create competing threats before the payoff capture. Second pass replayed every solver position, immediate defensive material responses and the complete payoff; no new tactical screening flag. Retained within the level after comparison of preparation and defensive mechanism.",
+      "previousReason": "D: Qe5 g3 Qh5 Kg2 Nh4+ gxh4 Qxe2. N f3–h4 uncovers Q h5 against Q e2; the revealed attack and the moving piece create competing threats before the payoff capture.",
+      "solverMoves": 4,
+      "aspects": [
+        "attack",
+        "black",
+        "diagonal",
+        "mover-N",
+        "mover-Q",
+        "nonchecking-attack",
+        "quiet-move",
+        "slider-B",
+        "slider-Q",
+        "target-P",
+        "target-Q"
+      ]
+    },
+    {
+      "gameId": "c089371fd50c21ea",
+      "level": "D",
+      "originalExerciseNumber": 23,
+      "fen": "6k1/3q1pb1/p6p/1pP2p2/4pP2/1P1nQ1PK/P2rN2P/5RN1 b - - 0 34",
+      "moves": [
+        "Rxa2",
+        "Rb1",
+        "a5",
+        "Rd1",
+        "Rc2",
+        "Nf3",
+        "Nf2+",
+        "Qxf2",
+        "Qxd1"
+      ],
+      "decision": "keep",
+      "reason": "D: Rxa2 Rb1 a5 Rd1 Rc2 Nf3 Nf2+ Qxf2 Qxd1. N d3–f2 uncovers Q d7 against R d1; the revealed attack and the moving piece create competing threats before the payoff capture. Second pass replayed every solver position, immediate defensive material responses and the complete payoff; no new tactical screening flag. Retained within the level after comparison of preparation and defensive mechanism.",
+      "previousReason": "D: Rxa2 Rb1 a5 Rd1 Rc2 Nf3 Nf2+ Qxf2 Qxd1. N d3–f2 uncovers Q d7 against R d1; the revealed attack and the moving piece create competing threats before the payoff capture.",
+      "solverMoves": 5,
+      "aspects": [
+        "attack",
+        "black",
+        "file",
+        "mover-N",
+        "quiet-move",
+        "slider-Q",
+        "target-R"
+      ]
+    },
+    {
+      "gameId": "23332751c87ee49b",
+      "level": "D",
+      "originalExerciseNumber": 24,
+      "fen": "q5k1/2Q3pp/3Np3/3p1n2/P2P4/8/5PP1/6K1 w - - 9 41",
+      "moves": [
+        "Qf7+",
+        "Kh8",
+        "Ne8",
+        "h6",
+        "Qf8+",
+        "Kh7",
+        "Nf6+",
+        "gxf6",
+        "Qxa8"
+      ],
+      "decision": "keep",
+      "reason": "D: Qf7+ Kh8 Ne8 h6 Qf8+ Kh7 Nf6+ gxf6 Qxa8. N e8–f6 uncovers Q f8 against Q a8; the revealed attack and the moving piece create competing threats before the payoff capture. Second pass replayed every solver position, immediate defensive material responses and the complete payoff; no new tactical screening flag. Retained within the level after comparison of preparation and defensive mechanism.",
+      "previousReason": "D: Qf7+ Kh8 Ne8 h6 Qf8+ Kh7 Nf6+ gxf6 Qxa8. N e8–f6 uncovers Q f8 against Q a8; the revealed attack and the moving piece create competing threats before the payoff capture.",
+      "solverMoves": 5,
+      "aspects": [
+        "attack",
+        "mover-N",
+        "quiet-move",
+        "rank",
+        "slider-Q",
+        "target-Q",
+        "white"
+      ]
+    }
+  ]
+}

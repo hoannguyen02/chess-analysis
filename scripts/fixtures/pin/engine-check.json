@@ -1,0 +1,44 @@
+[
+  {
+    "id": "bb8f46930baae471",
+    "bestCp": 777,
+    "selectedCp": 795,
+    "gapCp": -18
+  },
+  {
+    "id": "0a6f70ff6208599b",
+    "bestCp": 272,
+    "selectedCp": 272,
+    "gapCp": 0
+  },
+  {
+    "id": "c8967d1db1fe5f89",
+    "bestCp": 99995,
+    "selectedCp": 99995,
+    "gapCp": 0
+  },
+  {
+    "id": "fe8a6c3c31920d9d",
+    "bestCp": 583,
+    "selectedCp": 661,
+    "gapCp": -78
+  },
+  {
+    "id": "a73554de6c228f1b",
+    "bestCp": 294,
+    "selectedCp": 311,
+    "gapCp": -17
+  },
+  {
+    "id": "2bd61ed84cc63356",
+    "bestCp": 454,
+    "selectedCp": 481,
+    "gapCp": -27
+  },
+  {
+    "id": "7e57ba137c797ff0",
+    "bestCp": 99993,
+    "selectedCp": 99993,
+    "gapCp": 0
+  }
+]

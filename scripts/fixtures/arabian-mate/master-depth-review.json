@@ -1,0 +1,738 @@
+[
+  {
+    "gameId": "4b33895b54321d12",
+    "fen": "7k/1R6/6pp/rp6/4N2P/5PK1/8/8 w - - 1 43",
+    "moves": [
+      "Nf6",
+      "Ra7",
+      "Rxa7",
+      "b4",
+      "Rh7#"
+    ],
+    "nodes": 1200000,
+    "depth": 245,
+    "mate": 3,
+    "principalVariation": [
+      "e4f6",
+      "a5a7",
+      "b7a7",
+      "b5b4",
+      "a7h7"
+    ],
+    "decision": "verified",
+    "finalLevel": "B"
+  },
+  {
+    "gameId": "417a207ac041dea8",
+    "fen": "8/1R6/3Np1pP/4PpP1/5Pn1/4k3/r7/5K2 b - - 4 49",
+    "moves": [
+      "Nh2+",
+      "Kg1",
+      "Nf3+",
+      "Kh1",
+      "Rh2#"
+    ],
+    "nodes": 1200000,
+    "depth": 245,
+    "mate": 3,
+    "principalVariation": [
+      "g4h2",
+      "f1g1",
+      "h2f3",
+      "g1h1",
+      "a2h2"
+    ],
+    "decision": "verified",
+    "finalLevel": "B"
+  },
+  {
+    "gameId": "71edb382894aeb7d",
+    "fen": "8/p7/1p4P1/1n1PkN2/2p1P3/2Pn4/PB3r2/1K4R1 b - - 0 53",
+    "moves": [
+      "Rxb2+",
+      "Ka1",
+      "Nxc3",
+      "a3",
+      "Ra2#"
+    ],
+    "nodes": 1200000,
+    "depth": 245,
+    "mate": 3,
+    "principalVariation": [
+      "f2b2",
+      "b1a1",
+      "b5c3",
+      "g1g2",
+      "b2b1"
+    ],
+    "decision": "verified",
+    "finalLevel": "B"
+  },
+  {
+    "gameId": "bdcff56a4d6a1521",
+    "fen": "r6k/3nq2r/p3pNQ1/1p1pn3/1PpP1P2/2P2N2/P6P/6RK w - - 0 34",
+    "moves": [
+      "Qg8+",
+      "Rxg8",
+      "Rxg8#"
+    ],
+    "nodes": 1200000,
+    "depth": 245,
+    "mate": 2,
+    "principalVariation": [
+      "g6g8",
+      "a8g8",
+      "g1g8"
+    ],
+    "decision": "verified",
+    "finalLevel": "C"
+  },
+  {
+    "gameId": "7e17b485354ae54e",
+    "fen": "r4b1k/p2R4/1qp1pNpp/4p3/8/5P2/PPP3PP/2K4R w - - 2 23",
+    "moves": [
+      "Rh7#"
+    ],
+    "nodes": 1200000,
+    "depth": 245,
+    "mate": 1,
+    "principalVariation": [
+      "d7h7"
+    ],
+    "decision": "verified",
+    "finalLevel": "A"
+  },
+  {
+    "gameId": "4cc16a262deba696",
+    "fen": "1b4rk/1p4p1/1qp2n2/p4PN1/P1Q3R1/1PP3PK/7P/8 w - - 1 51",
+    "moves": [
+      "Rh4+",
+      "Nh7",
+      "Rxh7#"
+    ],
+    "nodes": 1200000,
+    "depth": 245,
+    "mate": 2,
+    "principalVariation": [
+      "g4h4",
+      "f6h5",
+      "h4h5"
+    ],
+    "decision": "verified",
+    "finalLevel": "A"
+  },
+  {
+    "gameId": "57edba0003df06e9",
+    "fen": "6rk/p4p1p/5p2/8/2B5/5Pnq/PP3R1P/4Q1K1 b - - 4 30",
+    "moves": [
+      "Nf1+",
+      "Kh1",
+      "Nxh2",
+      "Be6",
+      "fxe6",
+      "Qxe6",
+      "Nxf3+",
+      "Qxh3",
+      "Rg1#"
+    ],
+    "nodes": 1200000,
+    "depth": 53,
+    "mate": 5,
+    "principalVariation": [
+      "g3f1",
+      "g1h1",
+      "f1h2",
+      "c4e6",
+      "f7e6",
+      "e1e2",
+      "h2f3",
+      "f2h2",
+      "g8g1"
+    ],
+    "decision": "verified",
+    "finalLevel": "C*"
+  },
+  {
+    "gameId": "91e236332964a3c1",
+    "fen": "5r1k/RR6/6p1/7r/4p1N1/3nP1P1/5P1P/6K1 w - - 7 35",
+    "moves": [
+      "Nf6",
+      "Rf7",
+      "Rxf7",
+      "Ra5",
+      "Rh7#"
+    ],
+    "nodes": 1200000,
+    "depth": 245,
+    "mate": 3,
+    "principalVariation": [
+      "g4f6",
+      "f8f7",
+      "b7f7",
+      "d3e1",
+      "a7a8"
+    ],
+    "decision": "verified",
+    "finalLevel": "B"
+  },
+  {
+    "gameId": "75f770d8a36cd326",
+    "fen": "3R4/7b/3p3k/4n1r1/2P5/7K/8/8 b - - 1 56",
+    "moves": [
+      "Bf5+",
+      "Kh2",
+      "Nf3+",
+      "Kh1",
+      "Rg1#"
+    ],
+    "nodes": 1200000,
+    "depth": 245,
+    "mate": 3,
+    "principalVariation": [
+      "h7f5",
+      "h3h2",
+      "e5f3",
+      "h2h1",
+      "g5g1"
+    ],
+    "decision": "verified",
+    "finalLevel": "B"
+  },
+  {
+    "gameId": "c29ebb9ef9e61b28",
+    "fen": "r6k/5RR1/p5p1/3pp1N1/6b1/2qBB3/P4KP1/8 w - - 7 26",
+    "moves": [
+      "Rxg6",
+      "Qc7",
+      "Rxc7",
+      "Rf8+",
+      "Kg3",
+      "Rf3+",
+      "gxf3",
+      "Bd7",
+      "Rxd7",
+      "d4",
+      "Rh7#"
+    ],
+    "nodes": 1200000,
+    "depth": 43,
+    "mate": 6,
+    "principalVariation": [
+      "g7g6",
+      "c3c7",
+      "f7c7",
+      "a8f8",
+      "f2e1",
+      "f8f1",
+      "d3f1",
+      "g4d7",
+      "c7d7",
+      "d5d4",
+      "d7h7"
+    ],
+    "decision": "verified",
+    "finalLevel": "C*"
+  },
+  {
+    "gameId": "8579f83a0d7b4cd8",
+    "fen": "k2r3r/p1R1p1bp/4P1p1/4Np2/3pnP2/4B2P/P5P1/1R4K1 w - - 0 23",
+    "moves": [
+      "Nc6",
+      "Rd7",
+      "exd7",
+      "a5",
+      "Ra7#"
+    ],
+    "nodes": 1200000,
+    "depth": 245,
+    "mate": 3,
+    "principalVariation": [
+      "e5c6",
+      "d8d7",
+      "e6d7",
+      "d4e3",
+      "c7a7"
+    ],
+    "decision": "verified",
+    "finalLevel": "B"
+  },
+  {
+    "gameId": "0b038ec07c620bf1",
+    "fen": "2r2b2/p2q1P1p/3p2k1/4pNP1/4P1RQ/7K/2pr4/5R2 w - - 0 48",
+    "moves": [
+      "Qxh7+",
+      "Kxh7",
+      "g6+",
+      "Kh8",
+      "Rh4+",
+      "Bh6",
+      "Rxh6#"
+    ],
+    "nodes": 3000000,
+    "depth": 245,
+    "mate": 4,
+    "principalVariation": [
+      "h4h7",
+      "g6h7",
+      "g5g6",
+      "h7h8",
+      "g4h4",
+      "f8h6",
+      "h4h6"
+    ],
+    "decision": "verified",
+    "finalLevel": "D"
+  },
+  {
+    "gameId": "2110497a2caca660",
+    "fen": "k7/8/1RN5/B5p1/p7/1b1P4/1P3KPP/8 w - - 7 50",
+    "moves": [
+      "Rb8#"
+    ],
+    "nodes": 1200000,
+    "depth": 245,
+    "mate": 1,
+    "principalVariation": [
+      "b6b8"
+    ],
+    "decision": "verified",
+    "finalLevel": "A"
+  },
+  {
+    "gameId": "e4788aaa949e9321",
+    "fen": "4K2k/4R2p/5N2/8/8/8/8/r7 w - - 6 55",
+    "moves": [
+      "Rxh7#"
+    ],
+    "nodes": 1200000,
+    "depth": 245,
+    "mate": 1,
+    "principalVariation": [
+      "e7h7"
+    ],
+    "decision": "verified",
+    "finalLevel": "A"
+  },
+  {
+    "gameId": "bef5579c6f18e654",
+    "fen": "r1b4k/1p1pR2p/p4N2/5p2/8/P4P2/6n1/7K w - - 0 32",
+    "moves": [
+      "Rxh7#"
+    ],
+    "nodes": 1200000,
+    "depth": 245,
+    "mate": 1,
+    "principalVariation": [
+      "e7h7"
+    ],
+    "decision": "verified",
+    "finalLevel": "A"
+  },
+  {
+    "gameId": "d4ff2a1bdab97a26",
+    "fen": "8/8/4k2p/8/6R1/5nP1/Pr5P/7K b - - 2 45",
+    "moves": [
+      "Rxh2#"
+    ],
+    "nodes": 1200000,
+    "depth": 245,
+    "mate": 1,
+    "principalVariation": [
+      "b2h2"
+    ],
+    "decision": "verified",
+    "finalLevel": "A"
+  },
+  {
+    "gameId": "a68e371c9b6b9e02",
+    "fen": "k7/2R5/1pNK4/3p4/3P4/1P6/7r/8 w - - 10 52",
+    "moves": [
+      "Ra7#"
+    ],
+    "nodes": 1200000,
+    "depth": 245,
+    "mate": 1,
+    "principalVariation": [
+      "c7a7"
+    ],
+    "decision": "verified",
+    "finalLevel": "A"
+  },
+  {
+    "gameId": "5444da0a4a469a66",
+    "fen": "1r2b2k/R7/3ppN1p/8/4P3/6RP/5PP1/1q5K w - - 0 43",
+    "moves": [
+      "Kh2",
+      "Bd7",
+      "Rxd7",
+      "Qg1+",
+      "Kxg1",
+      "Rb1+",
+      "Kh2",
+      "Rh1+",
+      "Kxh1",
+      "d5",
+      "Rh7#"
+    ],
+    "nodes": 1200000,
+    "depth": 65,
+    "mate": 6,
+    "principalVariation": [
+      "h1h2",
+      "e8d7",
+      "a7d7",
+      "b1h1",
+      "h2h1",
+      "b8b1",
+      "h1h2",
+      "b1h1",
+      "h2h1",
+      "h6h5",
+      "g3g8"
+    ],
+    "decision": "verified",
+    "finalLevel": "C*"
+  },
+  {
+    "gameId": "486aacef9bc6ab2a",
+    "fen": "5k2/3R4/p2P2Bp/1p6/1P1p2N1/4n2P/4r1PK/8 w - - 1 43",
+    "moves": [
+      "Rf7+",
+      "Kg8",
+      "Nf6+",
+      "Kh8",
+      "Rh7#"
+    ],
+    "nodes": 1200000,
+    "depth": 245,
+    "mate": 3,
+    "principalVariation": [
+      "d7f7",
+      "f8g8",
+      "g4f6",
+      "g8h8",
+      "f7h7"
+    ],
+    "decision": "verified",
+    "finalLevel": "B"
+  },
+  {
+    "gameId": "bd6a7c56ba3ad70d",
+    "fen": "5r1k/p3R2p/1p3ppb/6N1/8/1Q4P1/PP1q1PP1/6K1 w - - 9 28",
+    "moves": [
+      "Rxh7#"
+    ],
+    "nodes": 1200000,
+    "depth": 245,
+    "mate": 1,
+    "principalVariation": [
+      "e7h7"
+    ],
+    "decision": "verified",
+    "finalLevel": "A"
+  },
+  {
+    "gameId": "8d5766dbd7da061c",
+    "fen": "8/r5k1/7R/6pP/6N1/5RPK/8/8 w - - 5 74",
+    "moves": [
+      "Rg6+",
+      "Kh7",
+      "Nf6+",
+      "Kh8",
+      "Rg8#"
+    ],
+    "nodes": 1200000,
+    "depth": 245,
+    "mate": 3,
+    "principalVariation": [
+      "h6g6",
+      "g7h8",
+      "f3f8",
+      "h8h7",
+      "g4f6"
+    ],
+    "decision": "verified",
+    "finalLevel": "B"
+  },
+  {
+    "gameId": "65887c407be19338",
+    "fen": "8/6k1/7p/6rP/2P1Nr2/pP1B1n1b/P4R2/2R4K b - - 4 38",
+    "moves": [
+      "Bg2+",
+      "Rxg2",
+      "Rh4+",
+      "Rh2",
+      "Rxh2#"
+    ],
+    "nodes": 1200000,
+    "depth": 245,
+    "mate": 3,
+    "principalVariation": [
+      "h3g2",
+      "f2g2",
+      "f4h4",
+      "g2h2",
+      "h4h2"
+    ],
+    "decision": "verified",
+    "finalLevel": "C"
+  },
+  {
+    "gameId": "5697b29a4fd6d1dd",
+    "fen": "8/R4p2/P4k1p/3p4/3n1p2/8/r6P/5BK1 b - - 2 43",
+    "moves": [
+      "Nf3+",
+      "Kh1",
+      "Rxh2#"
+    ],
+    "nodes": 1200000,
+    "depth": 245,
+    "mate": 2,
+    "principalVariation": [
+      "d4f3",
+      "g1h1",
+      "a2h2"
+    ],
+    "decision": "verified",
+    "finalLevel": "A"
+  },
+  {
+    "gameId": "2de2c68bda535360",
+    "fen": "5bk1/p1R2B2/6pp/p7/5P2/P4nP1/1P2r2P/7K b - - 0 34",
+    "moves": [
+      "Kh8",
+      "Rc2",
+      "Rxc2",
+      "Bxg6",
+      "Rxh2#"
+    ],
+    "nodes": 1200000,
+    "depth": 245,
+    "mate": 3,
+    "principalVariation": [
+      "g8h8",
+      "c7c2",
+      "e2c2",
+      "f7g6",
+      "c2h2"
+    ],
+    "decision": "verified",
+    "finalLevel": "B"
+  },
+  {
+    "gameId": "80a6f92d49ac7513",
+    "fen": "3qrnk1/pp2r1p1/4P3/3p1QN1/8/2P1R3/1P4KP/4R3 w - - 3 32",
+    "moves": [
+      "Qf7+",
+      "Rxf7",
+      "exf7+",
+      "Kh8",
+      "Rh3+",
+      "Nh7",
+      "Rxh7#"
+    ],
+    "nodes": 3000000,
+    "depth": 81,
+    "mate": 4,
+    "principalVariation": [
+      "f5f7",
+      "e7f7",
+      "e6f7",
+      "g8h8",
+      "e3h3",
+      "f8h7",
+      "h3h7"
+    ],
+    "decision": "verified",
+    "finalLevel": "D"
+  },
+  {
+    "gameId": "942e6f9576e5ed94",
+    "fen": "1n1r3k/1r6/8/pP1NPpR1/3P4/8/6RP/6K1 w - f6 0 34",
+    "moves": [
+      "Nf6",
+      "Rc7",
+      "Rg8+",
+      "Rxg8",
+      "Rxg8#"
+    ],
+    "nodes": 1200000,
+    "depth": 245,
+    "mate": 3,
+    "principalVariation": [
+      "d5f6",
+      "b7c7",
+      "g5g8",
+      "d8g8",
+      "g2g8"
+    ],
+    "decision": "verified",
+    "finalLevel": "B"
+  },
+  {
+    "gameId": "4d4482966276d686",
+    "fen": "5r1k/1p5p/p3rp1N/P1n5/6R1/5R1P/1P4P1/6K1 w - - 9 31",
+    "moves": [
+      "Rfg3",
+      "Re1+",
+      "Kh2",
+      "Rh1+",
+      "Kxh1",
+      "Ne4",
+      "Rg8+",
+      "Rxg8",
+      "Rxg8#"
+    ],
+    "nodes": 1200000,
+    "depth": 66,
+    "mate": 5,
+    "principalVariation": [
+      "f3g3",
+      "e6e1",
+      "g1h2",
+      "e1h1",
+      "h2h1",
+      "c5d3",
+      "g4g8",
+      "f8g8",
+      "g3g8"
+    ],
+    "decision": "verified",
+    "finalLevel": "C*"
+  },
+  {
+    "gameId": "f52b59d43888483e",
+    "fen": "6k1/1b3ppp/pb2p3/1p2P3/1P2BPnP/P1r5/1B1Q3P/R4R1K b - - 0 24",
+    "moves": [
+      "Bxe4+",
+      "Qg2",
+      "Rh3",
+      "Bd4",
+      "Bxd4",
+      "Rf2",
+      "Bxf2",
+      "Qxe4",
+      "Rxh2#"
+    ],
+    "nodes": 1200000,
+    "depth": 51,
+    "mate": 5,
+    "principalVariation": [
+      "b7e4",
+      "d2g2",
+      "c3h3",
+      "b2d4",
+      "b6d4",
+      "f1f2",
+      "d4f2",
+      "g2e4",
+      "h3h2"
+    ],
+    "decision": "verified",
+    "finalLevel": "C*"
+  },
+  {
+    "gameId": "f1edab094e80ee38",
+    "fen": "8/6kp/3N2p1/pB3p2/P4n2/5n2/2r2P1P/3R3K b - - 1 40",
+    "moves": [
+      "Rxf2",
+      "Nxf5+",
+      "Kf6",
+      "Rd6+",
+      "Kxf5",
+      "Bd3+",
+      "Ke5",
+      "Rd5+",
+      "Nxd5",
+      "h3",
+      "Rh2#"
+    ],
+    "nodes": 1200000,
+    "depth": 50,
+    "mate": 6,
+    "principalVariation": [
+      "c2f2",
+      "d6f5",
+      "g7f6",
+      "d1d6",
+      "f6f5",
+      "b5d3",
+      "f5e5",
+      "d6d5",
+      "f4d5",
+      "h2h3",
+      "f2h2"
+    ],
+    "decision": "verified",
+    "finalLevel": "C*"
+  },
+  {
+    "gameId": "9ffb8edc25d7882c",
+    "fen": "6k1/p4R2/1p2P2p/8/1b2Np1P/3K4/6P1/4r3 w - - 0 45",
+    "moves": [
+      "Nf6+",
+      "Kh8",
+      "Rh7#"
+    ],
+    "nodes": 1200000,
+    "depth": 245,
+    "mate": 2,
+    "principalVariation": [
+      "e4f6",
+      "g8h8",
+      "f7h7"
+    ],
+    "decision": "verified",
+    "finalLevel": "A"
+  },
+  {
+    "gameId": "b844cd3109266a25",
+    "fen": "8/1B4k1/p5pp/2p1p3/P1PnP3/1P1Rb1P1/5r1P/6K1 b - - 4 36",
+    "moves": [
+      "Nf3+",
+      "Kh1",
+      "Rxh2#"
+    ],
+    "nodes": 1200000,
+    "depth": 245,
+    "mate": 2,
+    "principalVariation": [
+      "d4f3",
+      "g1h1",
+      "f2h2"
+    ],
+    "decision": "verified",
+    "finalLevel": "A"
+  },
+  {
+    "gameId": "dae78c7f89bf2633",
+    "fen": "1k3r2/1p2b2R/1R2p3/3pP3/P2Pn2n/P7/4K2P/8 b - - 3 44",
+    "moves": [
+      "Rf2+",
+      "Kd1",
+      "Rd2+",
+      "Kc1",
+      "Bxa3+",
+      "Kb1",
+      "Nc3+",
+      "Ka1",
+      "Ra2#"
+    ],
+    "nodes": 1200000,
+    "depth": 56,
+    "mate": 5,
+    "principalVariation": [
+      "f8f2",
+      "e2d1",
+      "f2d2",
+      "d1c1",
+      "e7a3",
+      "c1b1",
+      "e4c3",
+      "b1a1",
+      "d2a2"
+    ],
+    "decision": "verified",
+    "finalLevel": "C*"
+  }
+]

@@ -1,0 +1,149 @@
+[
+  {
+    "gameId": "b3ec6845e8e00bfa",
+    "fen": "r3r1k1/pp3pp1/3p1q1p/8/2BR2b1/NP3P2/P1PQ1P1P/5K1R b - - 0 18",
+    "moves": [
+      "Bh3+",
+      "Kg1",
+      "Qg5+",
+      "Rg4",
+      "Qxd2",
+      "Bf1",
+      "Re1",
+      "Rxg7+",
+      "Kxg7",
+      "c3",
+      "Rxf1#"
+    ],
+    "reason": "Fresh defensive search does not confirm the advertised mating length.",
+    "review": {
+      "gameId": "b3ec6845e8e00bfa",
+      "fen": "r3r1k1/pp3pp1/3p1q1p/8/2BR2b1/NP3P2/P1PQ1P1P/5K1R b - - 0 18",
+      "moves": [
+        "Bh3+",
+        "Kg1",
+        "Qg5+",
+        "Rg4",
+        "Qxd2",
+        "Bf1",
+        "Re1",
+        "Rxg7+",
+        "Kxg7",
+        "c3",
+        "Rxf1#"
+      ],
+      "nodes": 1200000,
+      "depth": 44,
+      "mate": 6,
+      "principalVariation": [
+        "g4h3",
+        "f1g1",
+        "f6g5",
+        "d4g4",
+        "g5d2",
+        "g4g2",
+        "e8e1",
+        "c4f1",
+        "e1f1",
+        "g1f1",
+        "d2d1"
+      ]
+    }
+  },
+  {
+    "gameId": "649b1d8b1c9d0851",
+    "fen": "5b2/3R1Nkp/1q2pNp1/4P3/3P4/3B3P/5PPK/2r5 w - - 1 31",
+    "moves": [
+      "Nd6+",
+      "Be7",
+      "Rxe7+",
+      "Kh6",
+      "Rxh7+",
+      "Kg5",
+      "Nf7+",
+      "Kf4",
+      "Rh4#"
+    ],
+    "reason": "Fresh defensive search does not confirm the advertised mating length.",
+    "review": {
+      "gameId": "649b1d8b1c9d0851",
+      "fen": "5b2/3R1Nkp/1q2pNp1/4P3/3P4/3B3P/5PPK/2r5 w - - 1 31",
+      "moves": [
+        "Nd6+",
+        "Be7",
+        "Rxe7+",
+        "Kh6",
+        "Rxh7+",
+        "Kg5",
+        "Nf7+",
+        "Kf4",
+        "Rh4#"
+      ],
+      "nodes": 1200000,
+      "depth": 51,
+      "mate": 5,
+      "principalVariation": [
+        "f7d8",
+        "f8e7",
+        "d7e7",
+        "g7h6",
+        "e7h7",
+        "h6g5",
+        "d8f7",
+        "g5f4",
+        "h7h4"
+      ]
+    }
+  },
+  {
+    "gameId": "b9fc53a1cf7fc369",
+    "fen": "r2k3r/3nppbp/2R3p1/1Q1Pq3/pP6/3BP3/P4PPP/2R3K1 w - - 3 26",
+    "moves": [
+      "Qa5+",
+      "Nb6",
+      "Qxb6+",
+      "Kd7",
+      "Qb7+",
+      "Qc7",
+      "Rxc7+",
+      "Kd6",
+      "Qc6+",
+      "Ke5",
+      "Rxe7#"
+    ],
+    "reason": "Fresh defensive search does not confirm the advertised mating length.",
+    "review": {
+      "gameId": "b9fc53a1cf7fc369",
+      "fen": "r2k3r/3nppbp/2R3p1/1Q1Pq3/pP6/3BP3/P4PPP/2R3K1 w - - 3 26",
+      "moves": [
+        "Qa5+",
+        "Nb6",
+        "Qxb6+",
+        "Kd7",
+        "Qb7+",
+        "Qc7",
+        "Rxc7+",
+        "Kd6",
+        "Qc6+",
+        "Ke5",
+        "Rxe7#"
+      ],
+      "nodes": 1200000,
+      "depth": 41,
+      "mate": 6,
+      "principalVariation": [
+        "b5a5",
+        "d7b6",
+        "a5b6",
+        "d8d7",
+        "c6c7",
+        "e5c7",
+        "d3b5",
+        "c7c6",
+        "b6c6",
+        "d7d8",
+        "c6a8"
+      ]
+    }
+  }
+]

@@ -1,0 +1,727 @@
+[
+  {
+    "gameId": "1214702638d27a10",
+    "headers": {
+      "Event": "41st Olympiad Open 2014",
+      "Site": "Tromso NOR",
+      "Date": "2014.08.06",
+      "Round": "5.20",
+      "White": "Almasi,Z",
+      "Black": "Salgado Lopez,I",
+      "Result": "1-0",
+      "WhiteElo": "2690",
+      "BlackElo": "2620",
+      "ECO": "B32"
+    },
+    "fen": "3r3r/1b1qbk1p/p7/1p2Q3/2p1pB2/3P4/PP5P/K2R2R1 w - - 14 36",
+    "moves": [
+      "Rg7+",
+      "Kf8",
+      "Bg5",
+      "Bxg5",
+      "Rf1+",
+      "Bf6",
+      "Rxf6+",
+      "Kxg7",
+      "Qg5#"
+    ],
+    "solverMoves": 5,
+    "sacrifices": [
+      {
+        "ply": 2,
+        "piece": "B",
+        "capturedOn": "g5",
+        "materialConcession": 330
+      },
+      {
+        "ply": 0,
+        "piece": "R",
+        "capturedOn": "g7",
+        "materialConcession": 500
+      }
+    ],
+    "attackingPieceTypes": [
+      "B",
+      "Q",
+      "R"
+    ],
+    "quietMoves": [
+      {
+        "ply": 2,
+        "move": "Bg5"
+      }
+    ],
+    "essentialRooks": [
+      {
+        "square": "f6",
+        "escapesWithoutRook": [
+          "Kf8",
+          "Kf7"
+        ]
+      }
+    ],
+    "reason": "Multiple material concessions followed by queen-and-rook coordination over more than three solver moves."
+  },
+  {
+    "gameId": "1ec01b3efb432b9e",
+    "headers": {
+      "Event": "OHRA-A",
+      "Site": "Brussels",
+      "Date": "1986.??.??",
+      "Round": "2",
+      "White": "Nunn, John DM",
+      "Black": "Short, Nigel D",
+      "Result": "1-0",
+      "WhiteElo": "2590",
+      "BlackElo": "2615",
+      "ECO": "C98"
+    },
+    "fen": "1r3rk1/1nqb2n1/6R1/1p1Pp3/1Pp3p1/2P4P/2B2QP1/2B2RK1 w - - 1 30",
+    "moves": [
+      "Rxg7+",
+      "Kxg7",
+      "Bh6+",
+      "Kxh6",
+      "Qh4+",
+      "Kg7",
+      "Qh7#"
+    ],
+    "solverMoves": 4,
+    "sacrifices": [
+      {
+        "ply": 0,
+        "piece": "R",
+        "capturedOn": "g7",
+        "materialConcession": 180
+      },
+      {
+        "ply": 2,
+        "piece": "B",
+        "capturedOn": "h6",
+        "materialConcession": 330
+      }
+    ],
+    "attackingPieceTypes": [
+      "B",
+      "Q",
+      "R"
+    ],
+    "quietMoves": [],
+    "essentialRooks": [
+      {
+        "square": "f1",
+        "escapesWithoutRook": [
+          "Kf6"
+        ]
+      }
+    ],
+    "reason": "Multiple material concessions followed by queen-and-rook coordination over more than three solver moves."
+  },
+  {
+    "gameId": "701cef44f6a1e23b",
+    "headers": {
+      "Event": "LCC Superblitz GpD",
+      "Site": "London ENG",
+      "Date": "2024.12.07",
+      "Round": "2.3",
+      "White": "Willow,Jonah B",
+      "Black": "Smirin,I",
+      "Result": "1-0",
+      "WhiteElo": "2453",
+      "BlackElo": "2574",
+      "ECO": "B42"
+    },
+    "fen": "4r2k/b3r2P/p2Nq1p1/4p3/3pP3/1Q6/PPP5/1K3R1R w - - 1 31",
+    "moves": [
+      "Nxe8",
+      "Qf7",
+      "Rxf7",
+      "Rxe8",
+      "Qe6",
+      "Rxe6",
+      "Rf8+",
+      "Kg7",
+      "h8=Q#"
+    ],
+    "solverMoves": 5,
+    "sacrifices": [
+      {
+        "ply": 4,
+        "piece": "Q",
+        "capturedOn": "e6",
+        "materialConcession": 900
+      }
+    ],
+    "attackingPieceTypes": [
+      "N",
+      "P",
+      "Q",
+      "R"
+    ],
+    "quietMoves": [
+      {
+        "ply": 4,
+        "move": "Qe6"
+      }
+    ],
+    "essentialRooks": [
+      {
+        "square": "f8",
+        "escapesWithoutRook": [
+          "Kf7"
+        ]
+      }
+    ],
+    "reason": "Queen sacrifice in a promotion combination; a replacement queen and an essential rook complete the mating net."
+  },
+  {
+    "gameId": "f4c73ebb0eb498df",
+    "headers": {
+      "Event": "Titled Tue 23rd Sep 2025",
+      "Site": "chess.com INT",
+      "Date": "2025.09.23",
+      "Round": "3",
+      "White": "Akobian,V",
+      "Black": "Shavkatov,Temur",
+      "Result": "1-0",
+      "WhiteElo": "2552",
+      "BlackElo": "2043",
+      "ECO": "E10"
+    },
+    "fen": "3r3k/1p1P2p1/1q3pQp/5P2/1p1R4/7P/P5P1/3R3K w - - 4 36",
+    "moves": [
+      "Rg4",
+      "Rg8",
+      "d8=Q",
+      "Qc7",
+      "Qxh6+",
+      "gxh6",
+      "Qxg8#"
+    ],
+    "solverMoves": 4,
+    "sacrifices": [
+      {
+        "ply": 4,
+        "piece": "Q",
+        "capturedOn": "h6",
+        "materialConcession": 300
+      }
+    ],
+    "attackingPieceTypes": [
+      "P",
+      "Q",
+      "R"
+    ],
+    "quietMoves": [
+      {
+        "ply": 0,
+        "move": "Rg4"
+      },
+      {
+        "ply": 2,
+        "move": "d8=Q"
+      }
+    ],
+    "essentialRooks": [
+      {
+        "square": "g4",
+        "escapesWithoutRook": [
+          "Kxg8"
+        ]
+      }
+    ],
+    "reason": "Queen sacrifice in a promotion combination; a replacement queen and an essential rook complete the mating net."
+  },
+  {
+    "gameId": "3d7a2815c00f9d75",
+    "headers": {
+      "Event": "URS-chT",
+      "Site": "Tbilisi",
+      "Date": "1951.??.??",
+      "Round": "?",
+      "White": "Bronstein, David I",
+      "Black": "Makogonov, Vladimir Andreevich",
+      "Result": "1-0",
+      "WhiteElo": "",
+      "BlackElo": "",
+      "ECO": "B11"
+    },
+    "fen": "k6r/p4R2/1p2p1pP/N2pP1q1/1Q6/P7/KPr5/8 w - - 2 47",
+    "moves": [
+      "Nc6",
+      "Rxc6",
+      "Qa4",
+      "Rc7",
+      "Rxc7",
+      "a5",
+      "Qc6+",
+      "Kb8",
+      "Qb7#"
+    ],
+    "solverMoves": 5,
+    "sacrifices": [
+      {
+        "ply": 0,
+        "piece": "N",
+        "capturedOn": "c6",
+        "materialConcession": 320
+      }
+    ],
+    "attackingPieceTypes": [
+      "N",
+      "Q",
+      "R"
+    ],
+    "quietMoves": [
+      {
+        "ply": 0,
+        "move": "Nc6"
+      },
+      {
+        "ply": 2,
+        "move": "Qa4"
+      }
+    ],
+    "essentialRooks": [
+      {
+        "square": "c7",
+        "escapesWithoutRook": [
+          "Kxb7"
+        ]
+      }
+    ],
+    "reason": "A material concession followed by at least five solver moves, coordination of three piece types, and non-capturing non-checking preparation."
+  },
+  {
+    "gameId": "081ee4595ebf20ff",
+    "headers": {
+      "Event": "TCh-RUS Rapid 2025",
+      "Site": "Sochi RUS",
+      "Date": "2025.10.18",
+      "Round": "5.6",
+      "White": "Morozevich,A",
+      "Black": "Remizov,Yaroslav",
+      "Result": "1-0",
+      "WhiteElo": "2650",
+      "BlackElo": "2479",
+      "ECO": "B15"
+    },
+    "fen": "r2qrk2/pp6/2p2B2/4bb1Q/3P3p/3R4/PPP2P1P/2K3R1 w - - 1 24",
+    "moves": [
+      "Rg7",
+      "Bf4+",
+      "Re3",
+      "Bxe3+",
+      "fxe3",
+      "Qd5",
+      "Qh8+",
+      "Qg8",
+      "Qxg8#"
+    ],
+    "solverMoves": 5,
+    "sacrifices": [
+      {
+        "ply": 2,
+        "piece": "R",
+        "capturedOn": "e3",
+        "materialConcession": 170
+      }
+    ],
+    "attackingPieceTypes": [
+      "P",
+      "Q",
+      "R"
+    ],
+    "quietMoves": [
+      {
+        "ply": 0,
+        "move": "Rg7"
+      },
+      {
+        "ply": 2,
+        "move": "Re3"
+      }
+    ],
+    "essentialRooks": [
+      {
+        "square": "g7",
+        "escapesWithoutRook": [
+          "Kxg8"
+        ]
+      }
+    ],
+    "reason": "A material concession followed by at least five solver moves, coordination of three piece types, and non-capturing non-checking preparation."
+  },
+  {
+    "gameId": "237d2d0d202abff9",
+    "headers": {
+      "Event": "World Blitz 2018",
+      "Site": "St Petersburg RUS",
+      "Date": "2018.12.30",
+      "Round": "20.17",
+      "White": "Jakovenko,D",
+      "Black": "Jobava,Ba",
+      "Result": "1-0",
+      "WhiteElo": "2735",
+      "BlackElo": "2627",
+      "ECO": "A17"
+    },
+    "fen": "rqr1nk2/1b2b1pB/pp2Pp2/2n1p3/2PN4/1PN5/PB2Q1PP/3R1RK1 w - - 1 19",
+    "moves": [
+      "Qh5",
+      "Nd6",
+      "Bg6",
+      "Bd8",
+      "Nf5",
+      "Nxf5",
+      "Qh8+",
+      "Ke7",
+      "Qe8#"
+    ],
+    "solverMoves": 5,
+    "sacrifices": [
+      {
+        "ply": 4,
+        "piece": "N",
+        "capturedOn": "f5",
+        "materialConcession": 320
+      }
+    ],
+    "attackingPieceTypes": [
+      "B",
+      "N",
+      "Q"
+    ],
+    "quietMoves": [
+      {
+        "ply": 0,
+        "move": "Qh5"
+      },
+      {
+        "ply": 2,
+        "move": "Bg6"
+      },
+      {
+        "ply": 4,
+        "move": "Nf5"
+      }
+    ],
+    "essentialRooks": [
+      {
+        "square": "d1",
+        "escapesWithoutRook": [
+          "Kd6"
+        ]
+      }
+    ],
+    "reason": "A material concession followed by at least five solver moves, coordination of three piece types, and non-capturing non-checking preparation."
+  },
+  {
+    "gameId": "a2d4bac67cac79d7",
+    "headers": {
+      "Event": "11th World Teams 2017",
+      "Site": "Khanty-Mansiysk RUS",
+      "Date": "2017.06.25",
+      "Round": "8.2",
+      "White": "Ding Liren",
+      "Black": "Urkedal,F",
+      "Result": "1-0",
+      "WhiteElo": "2783",
+      "BlackElo": "2541",
+      "ECO": "E15"
+    },
+    "fen": "4n3/3R1pk1/p3p1q1/2r1P1Q1/1p6/1P4P1/5P2/3R2K1 w - - 0 44",
+    "moves": [
+      "Rxf7+",
+      "Kxf7",
+      "Rd7+",
+      "Kf8",
+      "Qxg6",
+      "Rc1+",
+      "Kg2",
+      "Rg1+",
+      "Kxg1",
+      "Nd6",
+      "Qg7+",
+      "Ke8",
+      "Qe7#"
+    ],
+    "solverMoves": 7,
+    "sacrifices": [
+      {
+        "ply": 0,
+        "piece": "R",
+        "capturedOn": "f7",
+        "materialConcession": 400
+      }
+    ],
+    "attackingPieceTypes": [
+      "K",
+      "Q",
+      "R"
+    ],
+    "quietMoves": [
+      {
+        "ply": 6,
+        "move": "Kg2"
+      }
+    ],
+    "essentialRooks": [
+      {
+        "square": "d7",
+        "escapesWithoutRook": [
+          "Kxe7"
+        ]
+      }
+    ],
+    "reason": "A material concession followed by at least five solver moves, coordination of three piece types, and non-capturing non-checking preparation."
+  },
+  {
+    "gameId": "ecd83a11709997f4",
+    "headers": {
+      "Event": "Cracovia Comarch Cup",
+      "Site": "Krakow POL",
+      "Date": "2012.01.04",
+      "Round": "9.4",
+      "White": "Duda,J",
+      "Black": "Kanarek,M",
+      "Result": "0-1",
+      "WhiteElo": "2379",
+      "BlackElo": "2467",
+      "ECO": "C65"
+    },
+    "fen": "8/6pk/b7/p5p1/P7/5Q1P/1pq1r1P1/3R2K1 b - - 1 55",
+    "moves": [
+      "Qxd1+",
+      "Kh2",
+      "Qd6+",
+      "Qg3",
+      "Bb7",
+      "Qxd6",
+      "Rxg2+",
+      "Kh1",
+      "b1=Q+",
+      "Qd1",
+      "Qxd1#"
+    ],
+    "solverMoves": 6,
+    "sacrifices": [
+      {
+        "ply": 2,
+        "piece": "Q",
+        "capturedOn": "d6",
+        "materialConcession": 800
+      }
+    ],
+    "attackingPieceTypes": [
+      "B",
+      "P",
+      "Q",
+      "R"
+    ],
+    "quietMoves": [
+      {
+        "ply": 4,
+        "move": "Bb7"
+      }
+    ],
+    "essentialRooks": [
+      {
+        "square": "g2",
+        "escapesWithoutRook": [
+          "Kh2"
+        ]
+      }
+    ],
+    "reason": "Queen sacrifice in a promotion combination; a replacement queen and an essential rook complete the mating net."
+  },
+  {
+    "gameId": "6e7a295c9890087c",
+    "headers": {
+      "Event": "Corus A",
+      "Site": "Wijk aan Zee NED",
+      "Date": "2010.01.18",
+      "Round": "3",
+      "White": "Smeets,J",
+      "Black": "Ivanchuk,V",
+      "Result": "0-1",
+      "WhiteElo": "2657",
+      "BlackElo": "2749",
+      "ECO": "B96"
+    },
+    "fen": "3r4/4kp2/3p1p2/P3pPb1/4P1B1/KN5P/2q3P1/Q7 b - - 0 36",
+    "moves": [
+      "Rb8",
+      "Qb1",
+      "Qxb1",
+      "Bd1",
+      "Bc1+",
+      "Nxc1",
+      "Qb4+",
+      "Ka2",
+      "Qb2#"
+    ],
+    "solverMoves": 5,
+    "sacrifices": [
+      {
+        "ply": 4,
+        "piece": "B",
+        "capturedOn": "c1",
+        "materialConcession": 330
+      }
+    ],
+    "attackingPieceTypes": [
+      "B",
+      "Q",
+      "R"
+    ],
+    "quietMoves": [
+      {
+        "ply": 0,
+        "move": "Rb8"
+      }
+    ],
+    "essentialRooks": [
+      {
+        "square": "b8",
+        "escapesWithoutRook": [
+          "Kxb2"
+        ]
+      }
+    ],
+    "reason": "A material concession followed by at least five solver moves, coordination of three piece types, and non-capturing non-checking preparation."
+  },
+  {
+    "gameId": "16af538f65db7da4",
+    "headers": {
+      "Event": "chess.com Junior Speed",
+      "Site": "chess.com INT",
+      "Date": "2022.04.25",
+      "Round": "1.36",
+      "White": "Lazavik,Denis",
+      "Black": "Erigaisi,Arjun",
+      "Result": "0-1",
+      "WhiteElo": "2483",
+      "BlackElo": "2675",
+      "ECO": "A60"
+    },
+    "fen": "4r1k1/2Q2pb1/p5p1/p2P1q1p/5P2/5N2/4r2B/3R1R1K b - - 9 38",
+    "moves": [
+      "Qg4",
+      "Qxf7+",
+      "Kxf7",
+      "Ng5+",
+      "Kg8",
+      "Rf2",
+      "Rxf2",
+      "Rg1",
+      "Re1",
+      "Bg3",
+      "Qxg3",
+      "Rxe1",
+      "Qg2#"
+    ],
+    "solverMoves": 7,
+    "sacrifices": [
+      {
+        "ply": 8,
+        "piece": "R",
+        "capturedOn": "e1",
+        "materialConcession": 170
+      }
+    ],
+    "attackingPieceTypes": [
+      "K",
+      "Q",
+      "R"
+    ],
+    "quietMoves": [
+      {
+        "ply": 0,
+        "move": "Qg4"
+      },
+      {
+        "ply": 4,
+        "move": "Kg8"
+      },
+      {
+        "ply": 8,
+        "move": "Re1"
+      }
+    ],
+    "essentialRooks": [
+      {
+        "square": "f2",
+        "escapesWithoutRook": [
+          "Kxg2"
+        ]
+      }
+    ],
+    "reason": "A material concession followed by at least five solver moves, coordination of three piece types, and non-capturing non-checking preparation."
+  },
+  {
+    "gameId": "edcaed0f29b64690",
+    "headers": {
+      "Event": "Junior Speed Qual Global",
+      "Site": "chess.com INT",
+      "Date": "2021.06.21",
+      "Round": "1.5",
+      "White": "Suleymanli,Aydin",
+      "Black": "Gukesh,D",
+      "Result": "1-0",
+      "WhiteElo": "2560",
+      "BlackElo": "2578",
+      "ECO": "D31"
+    },
+    "fen": "r3r2k/4bRpB/p6p/1q2P2P/1nRP2P1/1p1Q4/1P2N3/6K1 w - - 1 33",
+    "moves": [
+      "Qg6",
+      "Qxe5",
+      "dxe5",
+      "Rg8",
+      "Bxg8",
+      "Rxg8",
+      "Rxe7",
+      "Nc6",
+      "Rxc6",
+      "a5",
+      "Rc8",
+      "Rxc8",
+      "Qxg7#"
+    ],
+    "solverMoves": 7,
+    "sacrifices": [
+      {
+        "ply": 10,
+        "piece": "R",
+        "capturedOn": "c8",
+        "materialConcession": 400
+      }
+    ],
+    "attackingPieceTypes": [
+      "B",
+      "P",
+      "Q",
+      "R"
+    ],
+    "quietMoves": [
+      {
+        "ply": 0,
+        "move": "Qg6"
+      },
+      {
+        "ply": 10,
+        "move": "Rc8"
+      }
+    ],
+    "essentialRooks": [
+      {
+        "square": "e7",
+        "escapesWithoutRook": [
+          "Kxg7"
+        ]
+      }
+    ],
+    "reason": "A material concession followed by at least five solver moves, coordination of three piece types, and non-capturing non-checking preparation."
+  }
+]

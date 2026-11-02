@@ -1,0 +1,2204 @@
+{
+  "method": "Bounded local material gain in at most two solver moves, with every immediate defensive reply and recapture. Finite horizon is not a long-term engine proof. Search-limit results are unresolved.",
+  "reviews": [
+    {
+      "gameId": "f79142da93c0a6b5",
+      "level": "C*",
+      "fen": "8/5k2/1N5R/p3p1p1/P7/1nn3P1/6KP/8 w - - 1 45",
+      "shortcuts": [],
+      "unverified": []
+    },
+    {
+      "gameId": "9df15f0f818e3bae",
+      "level": "C*",
+      "fen": "5rk1/1B3ppp/p3b3/4p3/5PP1/bNr3P1/P2RP3/4K1R1 b - - 0 22",
+      "shortcuts": [],
+      "unverified": []
+    },
+    {
+      "gameId": "034aa99ac986e10b",
+      "level": "C*",
+      "fen": "3r3k/4rp1p/1q3Np1/1Np2b2/1nP5/6PP/3Q1PBK/4R3 w - - 2 28",
+      "shortcuts": [],
+      "unverified": []
+    },
+    {
+      "gameId": "d6f3aa30c99bb6dc",
+      "level": "C*",
+      "fen": "7r/2r1p1k1/4B1pp/p2nP3/p1P3P1/P3B3/1b2K3/5R2 w - - 0 35",
+      "shortcuts": [
+        {
+          "first": "Rf7+",
+          "replies": {
+            "Kg8": "Rxe7+"
+          },
+          "nodes": 2,
+          "discovery": false,
+          "scoreCp": 128
+        }
+      ],
+      "unverified": []
+    },
+    {
+      "gameId": "e984f7da2f50efe4",
+      "level": "C*",
+      "fen": "r5k1/pp1q1pbp/2n3p1/3p4/3B2b1/1P3NPP/P3QPB1/R4RK1 b - - 0 17",
+      "shortcuts": [
+        {
+          "first": "Nxd4",
+          "replies": {
+            "Ng5": "Nxe2+",
+            "Ne5": "Nxe2+",
+            "Nh4": "Nxe2+",
+            "Nxd4": "Bxe2",
+            "Nh2": "Nxe2+",
+            "Nd2": "Nxe2+",
+            "Ne1": "Nxe2+",
+            "Bh1": "Nxf3+",
+            "Qe8+": "Rxe8",
+            "Qe7": "Nxf3+",
+            "Qe6": "Nxf3+",
+            "Qa6": "Nxf3+",
+            "Qe5": "Nxf3+",
+            "Qb5": "Nxf3+",
+            "Qe4": "Nxf3+",
+            "Qc4": "Nxf3+",
+            "Qe3": "Nxf3+",
+            "Qd3": "Nxf3+",
+            "Qd2": "Nxf3+",
+            "Qc2": "Nxf3+",
+            "Qb2": "Nxf3+",
+            "Qe1": "Nxf3+",
+            "Qd1": "Nxf3+",
+            "Kh2": "Nxf3+",
+            "Kh1": "Bxh3",
+            "Rfe1": "Nxf3+",
+            "Rfd1": "Nxf3+",
+            "Rfc1": "Nxf3+",
+            "Rfb1": "Nxf3+",
+            "Rae1": "Nxf3+",
+            "Rad1": "Nxf3+",
+            "Rac1": "Nxf3+",
+            "Rab1": "Nxf3+",
+            "hxg4": "Nxe2+",
+            "h4": "Nxf3+",
+            "b4": "Nxf3+",
+            "a3": "Nxf3+",
+            "a4": "Nxf3+"
+          },
+          "nodes": 244,
+          "discovery": false,
+          "scoreCp": 176
+        }
+      ],
+      "unverified": []
+    },
+    {
+      "gameId": "b084b8044363463b",
+      "level": "C*",
+      "fen": "r4k2/2R1N1p1/5p1p/1p6/1P1Pn2P/6P1/5P2/6K1 w - - 4 35",
+      "shortcuts": [],
+      "unverified": []
+    },
+    {
+      "gameId": "2ea0eab3210a6c1b",
+      "level": "C*",
+      "fen": "1r1b1r1k/2p1q1p1/4P3/pp1B1P2/3N2Qp/3K3P/PPR5/8 w - - 3 34",
+      "shortcuts": [],
+      "unverified": []
+    },
+    {
+      "gameId": "51b7100baa406cfe",
+      "level": "D",
+      "fen": "7k/3nq1rp/R6Q/2pP2p1/2p1B1b1/8/PP6/2K2R2 w - - 1 39",
+      "shortcuts": [],
+      "unverified": []
+    },
+    {
+      "gameId": "4c42ad8f14a0d069",
+      "level": "B",
+      "fen": "5Q2/p7/1p2Npk1/4p2p/2q1b3/6P1/PP3P1P/6K1 w - - 1 33",
+      "shortcuts": [],
+      "unverified": []
+    },
+    {
+      "gameId": "8f3a1c9c66382483",
+      "level": "C*",
+      "fen": "8/8/P1k5/4p2p/2B1P1p1/2K5/8/5r2 w - - 0 62",
+      "shortcuts": [
+        {
+          "first": "Bxf1",
+          "replies": {
+            "Kd7": "Bb5+",
+            "Kc7": "Kc4",
+            "Kd6": "Kc4",
+            "Kb6": "Kc4",
+            "Kc5": "Kd3",
+            "h4": "Bb5+",
+            "g3": "Bb5+"
+          },
+          "nodes": 53,
+          "discovery": false,
+          "scoreCp": 394
+        }
+      ],
+      "unverified": []
+    },
+    {
+      "gameId": "fd4d98272e4bb135",
+      "level": "D",
+      "fen": "8/p1Pnk3/8/5P2/1PBK1r2/P3N3/8/8 w - - 3 65",
+      "shortcuts": [],
+      "unverified": []
+    },
+    {
+      "gameId": "56f91fdfa2c39c92",
+      "level": "C*",
+      "fen": "1kr5/1p1r1pp1/R3pnp1/2Pq4/3P4/1Q6/4N1PP/1R4K1 w - - 1 41",
+      "shortcuts": [],
+      "unverified": []
+    },
+    {
+      "gameId": "a2e783bb353580c6",
+      "level": "B",
+      "fen": "r2q4/1b4Qp/p3k2N/1p3p2/5pP1/P7/1PP3BP/6K1 w - - 3 29",
+      "shortcuts": [
+        {
+          "first": "Qf7+",
+          "replies": {
+            "Kd6": "Nxf5+",
+            "Ke5": "Qxf5+"
+          },
+          "nodes": 6,
+          "discovery": false,
+          "scoreCp": 689
+        },
+        {
+          "first": "Qxb7",
+          "replies": {
+            "Qh8": "gxf5+",
+            "Qg8": "gxf5+",
+            "Qf8": "gxf5+",
+            "Qe8": "gxf5+",
+            "Qc8": "Qxc8+",
+            "Qb8": "gxf5+",
+            "Qe7": "Qxe7+",
+            "Qd7": "Qxd7+",
+            "Qc7": "gxf5+",
+            "Qf6": "gxf5+",
+            "Qd6": "gxf5+",
+            "Qb6+": "Qxb6+",
+            "Qg5": "gxf5+",
+            "Qd5": "Qxd5+",
+            "Qa5": "gxf5+",
+            "Qh4": "gxf5+",
+            "Qd4+": "Kh1",
+            "Qd3": "gxf5+",
+            "Qd2": "gxf5+",
+            "Qd1+": "Kf2",
+            "Rc8": "Qxa6+",
+            "Rb8": "Qxa6+",
+            "Ra7": "gxf5+",
+            "Kf6": "Qxh7",
+            "Kd6": "Nxf5+",
+            "Ke5": "Qxh7",
+            "fxg4": "Qxh7",
+            "a5": "gxf5+",
+            "b4": "gxf5+",
+            "f3": "gxf5+"
+          },
+          "nodes": 424,
+          "discovery": false,
+          "scoreCp": 0
+        },
+        {
+          "first": "gxf5+",
+          "replies": {
+            "Kd6": "Qxb7"
+          },
+          "nodes": 47,
+          "discovery": false,
+          "scoreCp": 949
+        }
+      ],
+      "unverified": []
+    },
+    {
+      "gameId": "103c156e347bd2db",
+      "level": "B",
+      "fen": "6r1/1Pk5/2N5/8/2K1Bp2/8/8/8 w - - 3 51",
+      "shortcuts": [],
+      "unverified": []
+    },
+    {
+      "gameId": "6f98af45f5602cb1",
+      "level": "C*",
+      "fen": "3r2n1/1p1r1qk1/p1p2pn1/4P3/1P1P1N2/P3Q2R/7P/6RK w - - 2 40",
+      "shortcuts": [
+        {
+          "first": "Rxg6+",
+          "replies": {
+            "Kf8": "Rxg8+",
+            "Qxg6": "Nxg6"
+          },
+          "nodes": 27,
+          "discovery": false,
+          "scoreCp": 486
+        }
+      ],
+      "unverified": []
+    },
+    {
+      "gameId": "8bc46c7ffe5c540d",
+      "level": "C*",
+      "fen": "r3k2r/2q1np1p/p3P1p1/1p2p3/8/2PBB3/P1PR2PP/5RK1 w kq - 0 21",
+      "shortcuts": [],
+      "unverified": []
+    },
+    {
+      "gameId": "66e89386a921a0f6",
+      "level": "B",
+      "fen": "6k1/5p2/b2Q2p1/P2P1P1p/3b4/1R4KP/1P4P1/5q2 b - - 0 36",
+      "shortcuts": [],
+      "unverified": []
+    },
+    {
+      "gameId": "22f9cd0e21a85c4e",
+      "level": "B",
+      "fen": "8/6pk/6rp/5r2/1Q2pP2/2p1B1Pq/4P1R1/5RK1 b - - 0 41",
+      "shortcuts": [],
+      "unverified": []
+    },
+    {
+      "gameId": "9a6890d28d1fda55",
+      "level": "C*",
+      "fen": "6R1/1p4p1/1N6/p3r2p/Pb4kP/6P1/1PRn2K1/8 b - - 0 40",
+      "shortcuts": [],
+      "unverified": []
+    },
+    {
+      "gameId": "58c7dcff35417718",
+      "level": "B",
+      "fen": "2k2N2/pp2p1b1/2n1p2p/5q2/8/N2n1pP1/P2P3P/1RBQ2K1 b - - 3 28",
+      "shortcuts": [
+        {
+          "first": "Bxf8",
+          "replies": {
+            "Nb5": "Nxc1",
+            "Nc4": "Nxc1",
+            "Nc2": "Nxc1",
+            "Kh1": "Nxc1",
+            "Kf1": "Nxc1",
+            "Qa4": "Nxc1",
+            "Qxf3": "Qxf3",
+            "Qb3": "Nxc1",
+            "Qe2": "Nxc1",
+            "Qc2": "f2+",
+            "Qf1": "Nxc1",
+            "Qe1": "Nxe1",
+            "Bb2": "Nxb2",
+            "Rxb7": "Kxb7",
+            "Rb6": "Nxc1",
+            "Rb5": "f2+",
+            "Rb4": "Ncxb4",
+            "Rb3": "Nxc1",
+            "Rb2": "Nxb2",
+            "Ra1": "Nxc1",
+            "g4": "Qxg4+",
+            "h3": "Qxh3",
+            "h4": "Nxc1"
+          },
+          "nodes": 565,
+          "discovery": false,
+          "scoreCp": 470
+        },
+        {
+          "first": "Bd4+",
+          "replies": {
+            "Kh1": "Qxf8",
+            "Kf1": "Qxf8"
+          },
+          "nodes": 44,
+          "discovery": false,
+          "scoreCp": null
+        },
+        {
+          "first": "Nd4",
+          "replies": {
+            "Nh7": "Qxh7",
+            "Nd7": "Kxd7",
+            "Ng6": "Qxg6",
+            "Nxe6": "Qxe6",
+            "Nb5": "Nxc1",
+            "Nc4": "Bxf8",
+            "Nc2": "Nxc1",
+            "Kh1": "Bxf8",
+            "Kf1": "Bxf8",
+            "Qa4": "Nxc1",
+            "Qxf3": "Nxf3+",
+            "Qb3": "Nxb3",
+            "Qe2": "Nxe2+",
+            "Qc2+": "Nxc2",
+            "Qf1": "Nxc1",
+            "Qe1": "Bxf8",
+            "Bb2": "Nxb2",
+            "Rxb7": "Kxb7",
+            "Rb6": "Bxf8",
+            "Rb5": "Qxf8",
+            "Rb4": "Nxb4",
+            "Rb3": "Nxb3",
+            "Rb2": "Bxf8",
+            "Ra1": "Bxf8",
+            "g4": "Qxg4+",
+            "h3": "Bxf8",
+            "h4": "Bxf8"
+          },
+          "nodes": 774,
+          "discovery": false,
+          "scoreCp": 488
+        },
+        {
+          "first": "Qxf8",
+          "replies": {
+            "Nb5": "Nxc1",
+            "Nc4": "Nxc1",
+            "Nc2": "Nxc1",
+            "Kh1": "Nxc1",
+            "Kf1": "Nxc1",
+            "Qa4": "Nxc1",
+            "Qxf3": "Qxf3",
+            "Qb3": "Nxc1",
+            "Qe2": "Nxc1",
+            "Qc2": "Nxc1",
+            "Qf1": "Nxc1",
+            "Qe1": "Nxe1",
+            "Bb2": "Bxb2",
+            "Rxb7": "Kxb7",
+            "Rb6": "Nxc1",
+            "Rb5": "Nxc1",
+            "Rb4": "Ncxb4",
+            "Rb3": "Nxc1",
+            "Rb2": "Bxb2",
+            "Ra1": "Bxa1",
+            "g4": "Nxc1",
+            "h3": "Nxc1",
+            "h4": "Nxc1"
+          },
+          "nodes": 613,
+          "discovery": false,
+          "scoreCp": 362
+        },
+        {
+          "first": "Qf7",
+          "replies": {
+            "Nh7": "Nxc1",
+            "Nd7": "Kxd7",
+            "Ng6": "Qxg6",
+            "Nxe6": "Qxe6",
+            "Nb5": "Bxf8",
+            "Nc4": "Bxf8",
+            "Nc2": "Bxf8",
+            "Kh1": "Bxf8",
+            "Kf1": "Bxf8",
+            "Qa4": "Nxc1",
+            "Qxf3": "Qxf3",
+            "Qb3": "Nxc1",
+            "Qe2": "Nxc1",
+            "Qc2": "Nxc1",
+            "Qf1": "Nxc1",
+            "Qe1": "Bxf8",
+            "Bb2": "Bxf8",
+            "Rxb7": "Kxb7",
+            "Rb6": "Nxc1",
+            "Rb5": "Bxf8",
+            "Rb4": "Bxf8",
+            "Rb3": "Nxc1",
+            "Rb2": "Bxf8",
+            "Ra1": "Bxf8",
+            "g4": "Bxf8",
+            "h3": "Bxf8",
+            "h4": "Bxf8"
+          },
+          "nodes": 844,
+          "discovery": false,
+          "scoreCp": 223
+        },
+        {
+          "first": "Qc5+",
+          "replies": {
+            "Kh1": "Bxf8",
+            "Kf1": "Bxf8"
+          },
+          "nodes": 44,
+          "discovery": false,
+          "scoreCp": 805
+        },
+        {
+          "first": "Qg4",
+          "replies": {
+            "Nh7": "Nxc1",
+            "Nd7": "Kxd7",
+            "Ng6": "Qxg6",
+            "Nxe6": "Qxe6",
+            "Nb5": "Bxf8",
+            "Nc4": "Bxf8",
+            "Nc2": "Bxf8",
+            "Kh1": "Bxf8",
+            "Kf1": "Bxf8",
+            "Qa4": "Qxa4",
+            "Qxf3": "Qxf3",
+            "Qb3": "Nxc1",
+            "Qe2": "Nxc1",
+            "Qc2": "Nxc1",
+            "Qf1": "Nxc1",
+            "Qe1": "Bxf8",
+            "Bb2": "Bxf8",
+            "Rxb7": "Kxb7",
+            "Rb6": "Nxc1",
+            "Rb5": "Bxf8",
+            "Rb4": "Ncxb4",
+            "Rb3": "Nxc1",
+            "Rb2": "Bxf8",
+            "Ra1": "Bxf8",
+            "h3": "Qxg3+",
+            "h4": "Qxg3+"
+          },
+          "nodes": 770,
+          "discovery": false,
+          "scoreCp": 698
+        },
+        {
+          "first": "Nxc1",
+          "replies": {
+            "Nh7": "Qxh7",
+            "Nd7": "Kxd7",
+            "Ng6": "Qxg6",
+            "Nxe6": "Qxe6",
+            "Nb5": "Bxf8",
+            "Nc4": "Bxf8",
+            "Nc2": "Bxf8",
+            "Kf2": "Bxf8",
+            "Kh1": "Bxf8",
+            "Kf1": "Bxf8",
+            "Qa4": "Bxf8",
+            "Qxf3": "Qxf3",
+            "Qb3": "Bxf8",
+            "Qe2": "Nxe2+",
+            "Qc2": "Qxf8",
+            "Qf1": "Bxf8",
+            "Qe1": "Bxf8",
+            "Qxc1": "Bxf8",
+            "Rxb7": "Kxb7",
+            "Rb6": "Bxf8",
+            "Rb5": "Qxf8",
+            "Rb4": "Bxf8",
+            "Rb3": "Bxf8",
+            "Rb2": "Bxf8",
+            "Rxc1": "Bxf8",
+            "Ra1": "Bxf8",
+            "g4": "Qxg4+",
+            "h3": "Bxf8",
+            "d3": "Bxf8",
+            "h4": "Bxf8",
+            "d4": "Bxd4+"
+          },
+          "nodes": 837,
+          "discovery": true,
+          "scoreCp": 70
+        },
+        {
+          "first": "f2+",
+          "replies": {
+            "Kg2": "Bxf8",
+            "Kh1": "Bxf8",
+            "Kf1": "Bxf8"
+          },
+          "nodes": 79,
+          "discovery": false,
+          "scoreCp": 613
+        }
+      ],
+      "unverified": []
+    },
+    {
+      "gameId": "3face19fac642189",
+      "level": "D",
+      "fen": "2b3k1/1rB2qNp/p1p3p1/3p1P2/6P1/2P5/PP3Q1P/R3r1K1 w - - 0 26",
+      "shortcuts": [],
+      "unverified": []
+    },
+    {
+      "gameId": "59ebf9736cbbb2b1",
+      "level": "D",
+      "fen": "6k1/1p6/5n1Q/3qpBB1/6P1/8/5b1K/8 w - - 2 69",
+      "shortcuts": [
+        {
+          "first": "Qg6+",
+          "replies": {
+            "Kh8": "Qxf6+",
+            "Kf8": "Qxf6+"
+          },
+          "nodes": 6,
+          "discovery": false,
+          "scoreCp": null
+        },
+        {
+          "first": "Qxf6",
+          "replies": {
+            "Qd8": "Qxd8+",
+            "Qf7": "Qxf7+",
+            "Qd7": "Qxe5",
+            "Qe6": "Qxe6+",
+            "Qd6": "Qxd6",
+            "Qc6": "Qxc6",
+            "Qc5": "Qd8+",
+            "Qb5": "Qd8+",
+            "Qa5": "Qg6+",
+            "Qe4": "Bxe4",
+            "Qd4": "Qg6+",
+            "Qc4": "Qxe5",
+            "Qf3": "Qxe5",
+            "Qd3": "Qxe5",
+            "Qb3": "Qxe5",
+            "Qg2+": "Kxg2",
+            "Qd2": "Qxe5",
+            "Qa2": "Qxe5",
+            "Qh1+": "Kxh1",
+            "Qd1": "Qxe5",
+            "Ba7": "Qg6+",
+            "Bb6": "Qxb6",
+            "Bc5": "Qg6+",
+            "Bh4": "Bxh4",
+            "Bd4": "Qg6+",
+            "Bg3+": "Kxg3",
+            "Be3": "Bxe3",
+            "Bg1+": "Kxg1",
+            "Be1": "Qg6+",
+            "b6": "Qg6+",
+            "e4": "Bxe4",
+            "b5": "Qg6+"
+          },
+          "nodes": 815,
+          "discovery": false,
+          "scoreCp": 677
+        },
+        {
+          "first": "Bxf6",
+          "replies": {
+            "Kf7": "Bxe5",
+            "Qd8": "Bxd8",
+            "Qf7": "Bxe5",
+            "Qd7": "Bxe5",
+            "Qe6": "Qh8+",
+            "Qd6": "Qh8+",
+            "Qc6": "Qh8+",
+            "Qc5": "Bxe5",
+            "Qb5": "Bxe5",
+            "Qa5": "Bxe5",
+            "Qe4": "Bxe5",
+            "Qd4": "Bxe5",
+            "Qc4": "Bxe5",
+            "Qf3": "Bxe5",
+            "Qd3": "Bxe5",
+            "Qb3": "Bxe5",
+            "Qg2+": "Kxg2",
+            "Qd2": "Qxd2",
+            "Qa2": "Bxe5",
+            "Qh1+": "Kxh1",
+            "Qd1": "Bxe5",
+            "Ba7": "Bxe5",
+            "Bb6": "Bxe5",
+            "Bc5": "Bxe5",
+            "Bh4": "Qxh4",
+            "Bd4": "Bxe5",
+            "Bg3+": "Kxg3",
+            "Be3": "Qxe3",
+            "Bg1+": "Kxg1",
+            "Be1": "Bxe5",
+            "b6": "Bxe5",
+            "e4": "Bxe4",
+            "b5": "Bxe5"
+          },
+          "nodes": 896,
+          "discovery": false,
+          "scoreCp": 674
+        }
+      ],
+      "unverified": []
+    },
+    {
+      "gameId": "f5d84411cb8023d2",
+      "level": "B",
+      "fen": "1b6/6np/6p1/8/8/3K3P/4R1Pk/4B3 w - - 5 42",
+      "shortcuts": [],
+      "unverified": []
+    },
+    {
+      "gameId": "59d867196a5f620d",
+      "level": "B",
+      "fen": "2r3k1/3b1pb1/p5p1/3Pr2p/2p1N1nP/2N3P1/P7/2KRRB2 b - - 0 30",
+      "shortcuts": [],
+      "unverified": []
+    },
+    {
+      "gameId": "9e4142aa65c5edb3",
+      "level": "D",
+      "fen": "3R4/5pkp/3Np1p1/2bbP3/1pB5/1P4PP/2r2P2/6K1 b - - 12 38",
+      "shortcuts": [
+        {
+          "first": "Bxf2+",
+          "replies": {
+            "Kh2": "Bxc4",
+            "Kf1": "Bxc4+"
+          },
+          "nodes": 28,
+          "discovery": false,
+          "scoreCp": 333
+        }
+      ],
+      "unverified": []
+    },
+    {
+      "gameId": "8005602648315253",
+      "level": "B",
+      "fen": "4k3/RP3p2/2p4p/3p3q/3P3P/1P3Pp1/P4K2/8 w - - 0 40",
+      "shortcuts": [
+        {
+          "first": "Kxg3",
+          "replies": {
+            "Kf8": "Ra8+",
+            "Kd8": "Ra8+",
+            "Ke7": "b8=Q+",
+            "Kd7": "b8=Q+",
+            "Qg6+": "Kf4",
+            "Qg5+": "hxg5",
+            "Qf5": "Ra8+",
+            "Qe5+": "dxe5",
+            "Qxh4+": "Kxh4",
+            "Qg4+": "Kxg4",
+            "Qxf3+": "Kxf3",
+            "f6": "Ra8+",
+            "c5": "dxc5",
+            "f5": "Ra8+"
+          },
+          "nodes": 112,
+          "discovery": false,
+          "scoreCp": 193
+        },
+        {
+          "first": "Kg2",
+          "replies": {
+            "Kf8": "b8=Q+",
+            "Kd8": "b8=B",
+            "Ke7": "b8=Q+",
+            "Kd7": "b8=Q+",
+            "Qg6": "b8=B",
+            "Qg5": "hxg5",
+            "Qf5": "b8=Q+",
+            "Qe5": "dxe5",
+            "Qxh4": "b8=Q+",
+            "Qg4": "fxg4",
+            "Qxf3+": "Kxf3",
+            "f6": "b8=B",
+            "c5": "b8=B",
+            "f5": "b8=B"
+          },
+          "nodes": 286,
+          "discovery": false,
+          "scoreCp": 733
+        },
+        {
+          "first": "Kg1",
+          "replies": {
+            "Kf8": "b8=Q+",
+            "Kd8": "b8=B",
+            "Ke7": "b8=Q+",
+            "Kd7": "b8=Q+",
+            "Qg6": "b8=B",
+            "Qg5": "hxg5",
+            "Qf5": "b8=Q+",
+            "Qe5": "dxe5",
+            "Qxh4": "b8=Q+",
+            "Qg4": "fxg4",
+            "Qxf3": "b8=B",
+            "f6": "b8=B",
+            "c5": "b8=B",
+            "g2": "b8=B",
+            "f5": "b8=B"
+          },
+          "nodes": 246,
+          "discovery": false,
+          "scoreCp": 703
+        }
+      ],
+      "unverified": []
+    },
+    {
+      "gameId": "03ee99ddc39c7d92",
+      "level": "B",
+      "fen": "6k1/3Q2pp/2p5/p5N1/Pp2r1P1/4p3/1PP1KRqP/3R4 b - - 0 28",
+      "shortcuts": [
+        {
+          "first": "exf2+",
+          "replies": {
+            "Kd3": "Qxh2",
+            "Kd2": "Qxh2",
+            "Nxe4": "Qxe4+"
+          },
+          "nodes": 114,
+          "discovery": true,
+          "scoreCp": 456
+        }
+      ],
+      "unverified": []
+    },
+    {
+      "gameId": "b27ed0ce4a453973",
+      "level": "B",
+      "fen": "6qk/4N1p1/7p/8/1p1p1P2/6PK/2B4P/8 w - - 0 52",
+      "shortcuts": [
+        {
+          "first": "Nxg8",
+          "replies": {
+            "Kxg8": "Bh7+",
+            "g6": "Nxh6",
+            "h5": "Ne7",
+            "d3": "Nxh6",
+            "b3": "Nxh6",
+            "g5": "Nxh6"
+          },
+          "nodes": 38,
+          "discovery": false,
+          "scoreCp": 495
+        }
+      ],
+      "unverified": []
+    },
+    {
+      "gameId": "c4fafdf2c254978e",
+      "level": "B",
+      "fen": "7r/5k2/3p1p2/5Pp1/2p2nP1/2P2R1P/7K/r1B4R b - - 1 39",
+      "shortcuts": [],
+      "unverified": []
+    },
+    {
+      "gameId": "e2f3d9ba540b9b31",
+      "level": "C*",
+      "fen": "8/8/1p5k/pP1Pp2b/P3Pprp/5R2/8/2q1QK1R b - - 5 44",
+      "shortcuts": [],
+      "unverified": []
+    },
+    {
+      "gameId": "67984d20afcafdb2",
+      "level": "C*",
+      "fen": "4r1k1/pb5p/6pN/1p6/8/1P4P1/P1Q2K1P/q7 b - - 1 35",
+      "shortcuts": [],
+      "unverified": []
+    },
+    {
+      "gameId": "1499d7cc70b2cf52",
+      "level": "B",
+      "fen": "8/6k1/6p1/7p/1p1b1P2/1N5P/R5PK/4r3 b - - 4 51",
+      "shortcuts": [],
+      "unverified": []
+    },
+    {
+      "gameId": "b59a2d09860065ef",
+      "level": "B",
+      "fen": "2bk4/3p4/4p2r/2PP4/8/4R1P1/1p3rBp/1R5K b - - 3 42",
+      "shortcuts": [],
+      "unverified": []
+    },
+    {
+      "gameId": "2a419ef6018b61d3",
+      "level": "B",
+      "fen": "r4k2/3qb1pB/2p1n1Qp/1p2P3/1P1P4/r7/4N1P1/1R4BK w - - 2 36",
+      "shortcuts": [
+        {
+          "first": "Rf1+",
+          "replies": {
+            "Bf6": "exf6",
+            "Nf4": "Rxf4+",
+            "Rf3": "Rxf3+"
+          },
+          "nodes": 88,
+          "discovery": false,
+          "scoreCp": 654
+        }
+      ],
+      "unverified": []
+    },
+    {
+      "gameId": "9eedca08c5a0b409",
+      "level": "C*",
+      "fen": "2r1k3/ppp3p1/2n3n1/5R2/2B1p2B/2P5/P4KPP/8 w - - 12 30",
+      "shortcuts": [
+        {
+          "first": "Bf7+",
+          "replies": {
+            "Kf8": "Bxg6+",
+            "Kd7": "Bxg6"
+          },
+          "nodes": 24,
+          "discovery": false,
+          "scoreCp": 878
+        }
+      ],
+      "unverified": []
+    },
+    {
+      "gameId": "4244a04e7579333a",
+      "level": "D",
+      "fen": "2r3k1/1p1q1rb1/p1n1p1B1/3p2p1/3P2n1/2N1PRB1/PP5Q/2R3K1 w - - 0 27",
+      "shortcuts": [
+        {
+          "first": "Bxf7+",
+          "replies": {
+            "Kf8": "Bxe6+",
+            "Qxf7": "Rxf7"
+          },
+          "nodes": 38,
+          "discovery": false,
+          "scoreCp": 435
+        },
+        {
+          "first": "Rxf7",
+          "replies": {
+            "Rf8": "Rxf8+",
+            "Re8": "Rxg7+",
+            "Rd8": "Rxg7+",
+            "Rb8": "Rxg7+",
+            "Ra8": "Rxg7+",
+            "Rc7": "Rxg7+",
+            "Bh8": "Rxd7",
+            "Bf8": "Rxf8+",
+            "Bh6": "Rxd7",
+            "Bf6": "Rxd7",
+            "Be5": "Rxd7",
+            "Bxd4": "Rxd7",
+            "Qe8": "Rxg7+",
+            "Qd8": "Rxg7+",
+            "Qxf7": "Bxf7+",
+            "Qe7": "Rxg7+",
+            "Qc7": "Rxg7+",
+            "Qd6": "Rxg7+",
+            "Nd8": "Rxg7+",
+            "Nb8": "Rxg7+",
+            "Ne7": "Rxg7+",
+            "Na7": "Rxg7+",
+            "Nce5": "Rxg7+",
+            "Na5": "Rxg7+",
+            "Nxd4": "Rxg7+",
+            "Nb4": "Rxg7+",
+            "Nh6": "Rxg7+",
+            "Nf6": "Rxg7+",
+            "Nge5": "Rxg7+",
+            "Nxe3": "Rxg7+",
+            "Nxh2": "Rxd7",
+            "Nf2": "Rxg7+",
+            "b6": "Rxg7+",
+            "e5": "Rxg7+",
+            "a5": "Rxg7+",
+            "b5": "Rxg7+"
+          },
+          "nodes": 304,
+          "discovery": false,
+          "scoreCp": 497
+        },
+        {
+          "first": "Qh7+",
+          "replies": {
+            "Kf8": "Bxf7"
+          },
+          "nodes": 42,
+          "discovery": false,
+          "scoreCp": null
+        }
+      ],
+      "unverified": []
+    },
+    {
+      "gameId": "6eb3c1ebedd3a71d",
+      "level": "B",
+      "fen": "1r1Rr3/4Npbk/p5pp/8/4R3/7P/5PP1/1Q3bK1 b - - 0 26",
+      "shortcuts": [
+        {
+          "first": "Rxb1",
+          "replies": {
+            "Rxe8": "Bxg2+",
+            "Rc8": "Bxg2+",
+            "Rb8": "Bxg2+",
+            "Ra8": "Bxg2+",
+            "Rd7": "Bxg2+",
+            "Rd6": "Bxg2+",
+            "Rd5": "Bxg2+",
+            "Rdd4": "Bxg2+",
+            "Rd3": "Bxd3+",
+            "Rd2": "Bxg2+",
+            "Rd1": "Rxe7",
+            "Ng8": "Bxg2+",
+            "Nc8": "Bxg2+",
+            "Nxg6": "Bxg2+",
+            "Nc6": "Bxg2+",
+            "Nf5": "Bxg2+",
+            "Nd5": "Bxg2+",
+            "Re6": "Bxg2+",
+            "Re5": "Bxg2+",
+            "Rh4": "Bxg2+",
+            "Rg4": "Bxg2+",
+            "Rf4": "Bxg2+",
+            "Red4": "Bxg2+",
+            "Rc4": "Bxc4+",
+            "Rb4": "Bxg2+",
+            "Ra4": "Bxg2+",
+            "Re3": "Bxg2+",
+            "Re2": "Bxg2+",
+            "Re1": "Rxd8",
+            "Kh2": "Rxd8",
+            "Kh1": "Bxg2+",
+            "h4": "Bxg2+",
+            "g3": "Bxh3+",
+            "f3": "Bxg2+",
+            "g4": "Bxh3+",
+            "f4": "Bxg2+"
+          },
+          "nodes": 235,
+          "discovery": false,
+          "scoreCp": 584
+        }
+      ],
+      "unverified": []
+    },
+    {
+      "gameId": "22a9700eeb011cca",
+      "level": "B",
+      "fen": "8/8/2k5/2P1b3/1PK5/3B1R1P/8/7r w - - 3 78",
+      "shortcuts": [],
+      "unverified": []
+    },
+    {
+      "gameId": "8b27819a67622f39",
+      "level": "D",
+      "fen": "r5k1/1b1n1r1p/1p2p1pQ/pq2Pp1N/2pP1P1P/B1P3R1/6P1/R3K3 w Q - 2 25",
+      "shortcuts": [],
+      "unverified": []
+    },
+    {
+      "gameId": "3cddc8c370f51027",
+      "level": "D",
+      "fen": "2n5/pp1R3R/6p1/P5k1/4q3/1BP5/KP6/8 w - - 1 32",
+      "shortcuts": [],
+      "unverified": []
+    },
+    {
+      "gameId": "ee24855a21909195",
+      "level": "B",
+      "fen": "r6r/pp1NNp1k/2p2Pnp/q7/8/P3P3/1PQ4P/2KR4 w - - 6 27",
+      "shortcuts": [],
+      "unverified": []
+    },
+    {
+      "gameId": "a1ad9410f81616a3",
+      "level": "B",
+      "fen": "4r1k1/pn6/1p4pB/2qP4/6N1/7P/P4QP1/7K w - - 11 38",
+      "shortcuts": [],
+      "unverified": []
+    },
+    {
+      "gameId": "605db1bbb1fa9cc2",
+      "level": "B",
+      "fen": "2q1r2k/7p/p2R1P2/1p2Q3/4p3/1PP2p2/P4P1P/7K w - - 3 41",
+      "shortcuts": [],
+      "unverified": []
+    },
+    {
+      "gameId": "6d2cdf805155fafa",
+      "level": "C*",
+      "fen": "5r2/5pk1/5bp1/1pq5/1N2P3/1BP2P1b/P4Q2/4R1K1 b - - 2 43",
+      "shortcuts": [],
+      "unverified": []
+    },
+    {
+      "gameId": "3b8d9e441babdedb",
+      "level": "B",
+      "fen": "5Q2/6R1/6q1/4p1kp/4P1p1/6P1/1p4PK/6b1 w - - 5 52",
+      "shortcuts": [],
+      "unverified": []
+    },
+    {
+      "gameId": "27432564c7a2b7f7",
+      "level": "B",
+      "fen": "8/2R5/6k1/r4pBp/2Bp4/5P2/5KP1/3r4 w - - 8 46",
+      "shortcuts": [],
+      "unverified": []
+    },
+    {
+      "gameId": "da9e33da190d492a",
+      "level": "C*",
+      "fen": "8/6p1/1R2nkP1/5N2/4p1K1/1p2P3/1r3P2/8 w - - 1 54",
+      "shortcuts": [
+        {
+          "first": "Nd4",
+          "replies": {
+            "Ke7": "Rxe6+",
+            "Kxg6": "Rxe6+",
+            "Ke5": "Rxe6+",
+            "Rxf2": "Nxe6",
+            "Re2": "Nxe6",
+            "Rd2": "Nxe6",
+            "Rc2": "Nxe6",
+            "Ra2": "Nxe6",
+            "Rb1": "Nxe6"
+          },
+          "nodes": 123,
+          "discovery": false,
+          "scoreCp": 391
+        }
+      ],
+      "unverified": []
+    },
+    {
+      "gameId": "5f7c2607c35fd991",
+      "level": "C*",
+      "fen": "q3rk2/5r1p/2p4P/2Pp4/1p1PnnQ1/1P2P1R1/1B6/3NK1R1 b - - 2 37",
+      "shortcuts": [
+        {
+          "first": "Nd3+",
+          "replies": {
+            "Ke2": "Nxg3+"
+          },
+          "nodes": 5,
+          "discovery": false,
+          "scoreCp": 549
+        },
+        {
+          "first": "Nxg3",
+          "replies": {
+            "Qg8+": "Kxg8",
+            "Qc8": "Rxc8",
+            "Qg7+": "Rxg7",
+            "Qd7": "Rxe3+",
+            "Qg6": "Rxe3+",
+            "Qe6": "Rxe6",
+            "Qh5": "Rxe3+",
+            "Qg5": "Rxe3+",
+            "Qf5": "Rxe3+",
+            "Qh4": "Rxe3+",
+            "Qxf4": "Rxf4",
+            "Qh3": "Rxe3+",
+            "Qxg3": "Nd3+",
+            "Qf3": "Rxe3+",
+            "Qe2": "Rxe3",
+            "Bc3": "Rxe3+",
+            "Ba3": "Rxe3+",
+            "Bc1": "Rxe3+",
+            "Ba1": "Rxe3+",
+            "Rxg3": "Nd3+",
+            "Rg2": "Rxe3+",
+            "Rh1": "Rxe3+",
+            "Rf1": "Rxe3+",
+            "Kf2": "Rxe3",
+            "Kd2": "Rxe3",
+            "Nc3": "Rxe3+",
+            "Nf2": "Rxe3+",
+            "e4": "Rxe4+"
+          },
+          "nodes": 253,
+          "discovery": true,
+          "scoreCp": 310
+        }
+      ],
+      "unverified": []
+    },
+    {
+      "gameId": "23332751c87ee49b",
+      "level": "D",
+      "fen": "q5k1/2Q3pp/3Np3/3p1n2/P2P4/8/5PP1/6K1 w - - 9 41",
+      "shortcuts": [],
+      "unverified": []
+    },
+    {
+      "gameId": "8f52544e884fd0c8",
+      "level": "C*",
+      "fen": "kq3r2/1pRb4/p7/P1Q3p1/2P1p1P1/2P1N2p/7P/6K1 w - - 0 50",
+      "shortcuts": [
+        {
+          "first": "Rxd7",
+          "replies": {
+            "Rh8": "Qxg5",
+            "Rg8": "Rh7",
+            "Re8": "Qxg5",
+            "Rd8": "Rxd8",
+            "Rc8": "Qxg5",
+            "Rf7": "Rxf7",
+            "Rf6": "Qxg5",
+            "Rf5": "Qxf5",
+            "Rf4": "Qxg5",
+            "Rf3": "Qxg5",
+            "Rf2": "Kxf2",
+            "Rf1+": "Kxf1",
+            "Qe8": "Rh7",
+            "Qd8": "Rxd8+",
+            "Qc8": "Qxc8+",
+            "Qc7": "Qxf8+",
+            "Qa7": "Qxf8+",
+            "Qd6": "Rxd6",
+            "Qe5": "Qxf8+",
+            "Qf4": "Rh7",
+            "Qg3+": "hxg3",
+            "Qxh2+": "Kxh2",
+            "b6": "Qxg5",
+            "b5": "Qxg5"
+          },
+          "nodes": 667,
+          "discovery": false,
+          "scoreCp": 319
+        }
+      ],
+      "unverified": []
+    },
+    {
+      "gameId": "800405042edd8049",
+      "level": "B",
+      "fen": "3r4/3Pkr1p/7P/p1NR1p2/3K1P2/8/P7/8 w - - 7 42",
+      "shortcuts": [],
+      "unverified": []
+    },
+    {
+      "gameId": "3f7b1e50da856884",
+      "level": "D",
+      "fen": "3q1n2/1n3rpk/7r/1p1pP2Q/1PpP3b/P3B3/5R1P/4NRK1 w - - 2 26",
+      "shortcuts": [
+        {
+          "first": "Qxf7",
+          "replies": {
+            "Nd7": "Qxd5",
+            "Ng6": "Qxb7",
+            "Ne6": "Qxb7",
+            "Qe8": "Qxe8",
+            "Qc8": "Qxd5",
+            "Qb8": "Qxd5",
+            "Qa8": "Qxd5",
+            "Qe7": "Qxe7",
+            "Qd7": "Qxf8",
+            "Qc7": "Qxf8",
+            "Qf6": "Qxb7",
+            "Qd6": "Qxb7",
+            "Qb6": "Qxf8",
+            "Qg5+": "Bxg5",
+            "Qa5": "Qxf8",
+            "Kh8": "Qxb7",
+            "Nd6": "Qxd5",
+            "Nc5": "Bxh6",
+            "Na5": "Bxh6",
+            "Rg6+": "Qxg6+",
+            "Rf6": "Qxb7",
+            "Re6": "Qxb7",
+            "Rd6": "Qxb7",
+            "Rc6": "Qxb7",
+            "Rb6": "Qh5+",
+            "Ra6": "Qxb7",
+            "Rh5": "Qxh5+",
+            "Be7": "Bxh6",
+            "Bf6": "Qxb7",
+            "Bg5": "Qxb7",
+            "Bg3": "Qxb7",
+            "Bxf2+": "Kxf2",
+            "c3": "Qxb7"
+          },
+          "nodes": 1240,
+          "discovery": false,
+          "scoreCp": 373
+        },
+        {
+          "first": "Qxh6+",
+          "replies": {
+            "Kg8": "Rxf7",
+            "gxh6": "Rxf7+"
+          },
+          "nodes": 54,
+          "discovery": false,
+          "scoreCp": 317
+        }
+      ],
+      "unverified": []
+    },
+    {
+      "gameId": "8b544ba4699b6a75",
+      "level": "D",
+      "fen": "2rqrb1k/1p1b1p2/p1n1p1p1/3p2Pp/4PPNQ/4B2R/PPP3BP/R5K1 w - - 0 23",
+      "shortcuts": [
+        {
+          "first": "Nf6",
+          "replies": {
+            "Kg7": "Nxe8+",
+            "Bg7": "Nxe8",
+            "Be7": "Nxe8",
+            "Bh6": "Nxe8",
+            "Bd6": "Nxe8",
+            "Bc5": "Nxe8",
+            "Bb4": "Nxe8",
+            "Ba3": "Nxe8",
+            "Re7": "Nxd7",
+            "Qe7": "Nxe8",
+            "Qc7": "Nxe8",
+            "Qxf6": "gxf6",
+            "Qb6": "Nxe8",
+            "Qa5": "Nxe8",
+            "Rb8": "Nxe8",
+            "Ra8": "Nxe8",
+            "Rc7": "Nxe8",
+            "Nb8": "Nxe8",
+            "Ne7": "Nxe8",
+            "Na7": "Nxe8",
+            "Ne5": "Nxe8",
+            "Na5": "Nxe8",
+            "Nd4": "Nxe8",
+            "Nb4": "Nxe8",
+            "dxe4": "Nxe8",
+            "b6": "Nxe8",
+            "e5": "Nxd7",
+            "a5": "Nxe8",
+            "d4": "Nxe8",
+            "b5": "Nxe8"
+          },
+          "nodes": 1181,
+          "discovery": false,
+          "scoreCp": 508
+        }
+      ],
+      "unverified": []
+    },
+    {
+      "gameId": "4eed5d9ed884b960",
+      "level": "C*",
+      "fen": "3Rr3/1p3k1p/2b3p1/p3r3/P4p1P/1PP5/5KP1/3R1N2 b - - 1 30",
+      "shortcuts": [
+        {
+          "first": "Re2+",
+          "replies": {
+            "Kg1": "Rxg2+"
+          },
+          "nodes": 2,
+          "discovery": false,
+          "scoreCp": 839
+        }
+      ],
+      "unverified": []
+    },
+    {
+      "gameId": "2deac98cb1be31b3",
+      "level": "C*",
+      "fen": "8/8/3R3p/6pk/4Np2/5P1q/4KR2/8 w - - 9 54",
+      "shortcuts": [],
+      "unverified": []
+    },
+    {
+      "gameId": "cdde4ec0c6c0ab3c",
+      "level": "D",
+      "fen": "3rk3/pp1qn2r/2b1R2p/3p2p1/8/PB6/3BQPPP/4R1K1 w - - 3 29",
+      "shortcuts": [],
+      "unverified": []
+    },
+    {
+      "gameId": "2d6cb687af125f73",
+      "level": "B",
+      "fen": "r1bk4/p4pp1/4pb2/1Bpq4/1B6/5N2/P1K2P1P/3R3R w - - 1 24",
+      "shortcuts": [
+        {
+          "first": "Bc6",
+          "replies": {
+            "Ke7": "Bxd5",
+            "Kc7": "Bxd5",
+            "Bd7": "Bxd5",
+            "Bb7": "Rxd5+",
+            "Ba6": "Rxd5+",
+            "Rb8": "Rxd5+",
+            "Be7": "Rxd5+",
+            "Bg5": "Rxd5+",
+            "Be5": "Rxd5+",
+            "Bh4": "Rxd5+",
+            "Bd4": "Bxa8",
+            "Bc3": "Rxd5+",
+            "Bb2": "Rxd5+",
+            "Ba1": "Rxd5+",
+            "Qd7": "Rxd7+",
+            "Qd6": "Rxd6+",
+            "Qd4": "Rxd4+",
+            "Qd3+": "Rxd3+",
+            "Qd2+": "Rxd2+",
+            "Qxd1+": "Rxd1+",
+            "cxb4": "Rxd5+",
+            "g6": "Rxd5+",
+            "a6": "Rxd5+",
+            "e5": "Rxd5+",
+            "c4": "Rxd5+",
+            "g5": "Rxd5+",
+            "a5": "Rxd5+"
+          },
+          "nodes": 346,
+          "discovery": false,
+          "scoreCp": 346
+        },
+        {
+          "first": "Ba5+",
+          "replies": {
+            "Ke7": "Rxd5"
+          },
+          "nodes": 19,
+          "discovery": false,
+          "scoreCp": 125
+        },
+        {
+          "first": "Rxd5+",
+          "replies": {
+            "Ke7": "Rxc5",
+            "Kc7": "Rxc5+",
+            "Bd7": "Rxd7+",
+            "exd5": "Bxc5"
+          },
+          "nodes": 53,
+          "discovery": false,
+          "scoreCp": 233
+        }
+      ],
+      "unverified": []
+    },
+    {
+      "gameId": "7b685ad76ae3f6b7",
+      "level": "D",
+      "fen": "r3kb1r/pp1bp1pp/5p2/qN2n3/2B2B2/2P2Q2/P1P2PPP/R4RK1 w kq - 7 14",
+      "shortcuts": [],
+      "unverified": []
+    },
+    {
+      "gameId": "bae36610af56da24",
+      "level": "C*",
+      "fen": "3rk3/4bp2/pp1p4/3P1n2/1PPB3r/R6R/q3B3/3Q1K2 w - - 0 29",
+      "shortcuts": [
+        {
+          "first": "Rxa2",
+          "replies": {
+            "Kf8": "Bxb6",
+            "Kd7": "Bxb6",
+            "Rc8": "Bxb6",
+            "Rb8": "Bxb6",
+            "Ra8": "Bxb6",
+            "Rd7": "Bxb6",
+            "Bf8": "Bxb6",
+            "Bf6": "Bxf6",
+            "Bg5": "Bxb6",
+            "Ng7": "Bxg7",
+            "Nh6": "Bxb6",
+            "Nxd4": "Rxh4",
+            "Ng3+": "Rxg3",
+            "Ne3+": "Bxe3",
+            "Rh8": "Rxh8+",
+            "Rh7": "Bxb6",
+            "Rh6": "Bxb6",
+            "Rh5": "Bxb6",
+            "Rg4": "Bxb6",
+            "Rf4+": "Kg2",
+            "Re4": "Bxb6",
+            "Rxd4": "Qxd4",
+            "Rxh3": "Bxb6",
+            "f6": "Bxf6",
+            "b5": "Rxh4",
+            "a5": "Bxb6"
+          },
+          "nodes": 695,
+          "discovery": false,
+          "scoreCp": 364
+        }
+      ],
+      "unverified": []
+    },
+    {
+      "gameId": "7feed37a5d29ff69",
+      "level": "B",
+      "fen": "R5r1/3k1n1p/Q7/1P1bPp2/P2P1P2/8/1B4rP/5K2 w - - 9 43",
+      "shortcuts": [],
+      "unverified": []
+    },
+    {
+      "gameId": "87849a5e674cd22f",
+      "level": "B",
+      "fen": "6k1/p7/1pN2pp1/2pP4/P1P2Pn1/4q1Pp/7P/5Q1K b - - 10 42",
+      "shortcuts": [],
+      "unverified": []
+    },
+    {
+      "gameId": "5eb18480b93c3f90",
+      "level": "C*",
+      "fen": "3k2r1/p1N4R/8/n4Bb1/8/5KB1/1r3PP1/8 w - - 3 37",
+      "shortcuts": [
+        {
+          "first": "Ne6+",
+          "replies": {
+            "Ke8": "Nxg5",
+            "Kc8": "Nxg5+"
+          },
+          "nodes": 52,
+          "discovery": true,
+          "scoreCp": 593
+        }
+      ],
+      "unverified": []
+    },
+    {
+      "gameId": "7411f04447e3aaec",
+      "level": "C*",
+      "fen": "r5k1/ppq2ppp/5nb1/2pP4/2Pp1Q2/PP1Pr1PP/3KB3/R5NR b - - 2 19",
+      "shortcuts": [],
+      "unverified": []
+    },
+    {
+      "gameId": "42e09b38e85184ca",
+      "level": "C*",
+      "fen": "2b3k1/p4pp1/q5p1/1p1p4/2p5/P1N2nP1/1PQ2P1P/3R1K2 b - - 1 27",
+      "shortcuts": [
+        {
+          "first": "Bf5",
+          "replies": {
+            "Nxd5": "Bxc2",
+            "Nxb5": "Bxc2",
+            "Ne4": "Nxh2+",
+            "Na4": "Nxh2+",
+            "Ne2": "Nxh2+",
+            "Na2": "Nxh2+",
+            "Nb1": "Nxh2+",
+            "Qxf5": "gxf5",
+            "Qe4": "Nxh2+",
+            "Qa4": "Nxh2+",
+            "Qd3": "Bxd3+",
+            "Qb3": "Nxh2+",
+            "Qe2": "Nxh2+",
+            "Qd2": "Nxh2+",
+            "Qc1": "Nxh2+",
+            "Qb1": "Nxh2+",
+            "Kg2": "Bxc2",
+            "Ke2": "Bxc2",
+            "Rxd5": "Bxc2",
+            "Rd4": "Nxh2+",
+            "Rd3": "Bxd3+",
+            "Rd2": "Nxh2+",
+            "Re1": "Nxh2+",
+            "Rc1": "Nxh2+",
+            "Rb1": "Nxh2+",
+            "Ra1": "Nxh2+",
+            "g4": "Nxh2+",
+            "a4": "Nxh2+",
+            "h3": "Bxh3+",
+            "b3": "Nxh2+",
+            "h4": "Bxc2",
+            "b4": "Nxh2+"
+          },
+          "nodes": 312,
+          "discovery": false,
+          "scoreCp": 265
+        }
+      ],
+      "unverified": []
+    },
+    {
+      "gameId": "63da83b721737483",
+      "level": "B",
+      "fen": "r1b1kb1r/pp3p2/3p1Bp1/qN2p2p/2P1Pn1P/5K2/P4PP1/RN1Q1B1R w kq h6 0 13",
+      "shortcuts": [
+        {
+          "first": "Nxd6+",
+          "replies": {
+            "Kd7": "Nxc8+",
+            "Bxd6": "Bxh8"
+          },
+          "nodes": 55,
+          "discovery": false,
+          "scoreCp": 502
+        }
+      ],
+      "unverified": []
+    },
+    {
+      "gameId": "0b82a4d6d30a49a5",
+      "level": "C*",
+      "fen": "4r2k/pp4pp/1n4r1/1PR1p3/8/P2PKpqP/1Q1B4/4RB2 b - - 5 45",
+      "shortcuts": [
+        {
+          "first": "Qg1+",
+          "replies": {
+            "Ke4": "Qxc5",
+            "Kxf3": "Qxc5"
+          },
+          "nodes": 70,
+          "discovery": false,
+          "scoreCp": 518
+        },
+        {
+          "first": "f2+",
+          "replies": {
+            "Ke4": "fxe1=Q+",
+            "Ke2": "fxe1=Q+"
+          },
+          "nodes": 11,
+          "discovery": true,
+          "scoreCp": 814
+        }
+      ],
+      "unverified": []
+    },
+    {
+      "gameId": "17b800f401a2a72e",
+      "level": "B",
+      "fen": "4rk2/p4p2/2p2B1p/1p6/4r3/qP4RK/2Q3P1/3R4 w - - 0 31",
+      "shortcuts": [
+        {
+          "first": "Qxc6",
+          "replies": {
+            "Rd8": "Rxd8+",
+            "Rc8": "Qxc8+",
+            "Rb8": "Qxe4",
+            "Ra8": "Qxa8+",
+            "R8e7": "Bxe7+",
+            "R8e6": "Bg7+",
+            "R8e5": "Bxe5",
+            "R4e7": "Bxe7+",
+            "R4e6": "Bg7+",
+            "R4e5": "Bxe5",
+            "Rh4+": "Kxh4",
+            "Rg4": "Kxg4",
+            "Rf4": "Bg7+",
+            "Rd4": "Bxd4",
+            "Rc4": "Qxb5",
+            "Rb4": "Bg7+",
+            "Ra4": "Qxb5",
+            "Re3": "Rxe3",
+            "Re2": "Qxb5",
+            "Re1": "Rxe1",
+            "Qe7": "Bxe7+",
+            "Qd6": "Qxd6+",
+            "Qa6": "Qxa6",
+            "Qc5": "Qxc5+",
+            "Qa5": "Bg7+",
+            "Qb4": "Bg7+",
+            "Qa4": "bxa4",
+            "Qxb3": "Rxb3",
+            "Qb2": "Bxb2",
+            "Qa2": "Qxb5",
+            "Qc1": "Qxc1",
+            "Qa1": "Bxa1",
+            "a6": "Bg7+",
+            "h5": "Qxb5",
+            "b4": "Bg7+",
+            "a5": "Qxb5"
+          },
+          "nodes": 1072,
+          "discovery": false,
+          "scoreCp": 667
+        }
+      ],
+      "unverified": []
+    },
+    {
+      "gameId": "5d242ef788518d96",
+      "level": "C*",
+      "fen": "3R4/ppr3k1/2p1r1p1/8/1P2p1P1/4B1K1/P4R2/8 w - - 4 49",
+      "shortcuts": [
+        {
+          "first": "Bxa7",
+          "replies": {
+            "Kh7": "Rh2+",
+            "Kh6": "Rh8+",
+            "Rc8": "Rxc8",
+            "Rf7": "Rxf7+",
+            "Rce7": "Bd4+",
+            "Rd7": "Rxd7+",
+            "Re8": "Rxe8",
+            "Ree7": "Bd4+",
+            "Rf6": "Rxf6",
+            "Rd6": "Rxd6",
+            "Re5": "Rdf8",
+            "b6": "Bxb6",
+            "g5": "Bd4+",
+            "c5": "bxc5",
+            "e3": "Bd4+",
+            "b5": "Bd4+"
+          },
+          "nodes": 220,
+          "discovery": false,
+          "scoreCp": 491
+        },
+        {
+          "first": "Bd4+",
+          "replies": {
+            "Kh7": "Bxa7",
+            "Kh6": "Bxa7",
+            "Rf6": "Bxf6+",
+            "Re5": "Bxe5+"
+          },
+          "nodes": 45,
+          "discovery": false,
+          "scoreCp": 847
+        }
+      ],
+      "unverified": []
+    },
+    {
+      "gameId": "3aa080c8abc1afe1",
+      "level": "D",
+      "fen": "5r1k/8/4B3/8/4P1Q1/3Pqp1P/1PP3PK/8 w - - 15 43",
+      "shortcuts": [],
+      "unverified": []
+    },
+    {
+      "gameId": "4a44ccadcb4b7d83",
+      "level": "C*",
+      "fen": "6k1/p4p2/1pBb2p1/3P3p/P6P/2Q3PK/5q2/8 b - - 7 37",
+      "shortcuts": [],
+      "unverified": []
+    },
+    {
+      "gameId": "8f148353269ab57b",
+      "level": "B",
+      "fen": "r1b2r1Q/pppnk3/4p1QB/3q4/3N4/2P5/2PK1PP1/8 w - - 2 23",
+      "shortcuts": [
+        {
+          "first": "Qhh7+",
+          "replies": {
+            "Kd8": "Bxf8",
+            "Kd6": "Bxf8+",
+            "Rf7": "Qhxf7+"
+          },
+          "nodes": 41,
+          "discovery": false,
+          "scoreCp": 630
+        },
+        {
+          "first": "Bxf8+",
+          "replies": {
+            "Kd8": "Qh4+",
+            "Nxf8": "Qhg7+"
+          },
+          "nodes": 26,
+          "discovery": false,
+          "scoreCp": null
+        }
+      ],
+      "unverified": []
+    },
+    {
+      "gameId": "b0537b0c06d7834d",
+      "level": "D",
+      "fen": "2rr4/qp1Nkp1p/4p3/pB1pP2p/1b1P4/Q4N1P/4KP2/1R6 w - - 14 26",
+      "shortcuts": [],
+      "unverified": []
+    },
+    {
+      "gameId": "c56215d52d511aac",
+      "level": "B",
+      "fen": "3r3k/pR6/2p1B2B/3np3/PPKP4/7P/5b2/8 w - - 4 47",
+      "shortcuts": [
+        {
+          "first": "Bg7+",
+          "replies": {
+            "Kh7": "Bxe5+"
+          },
+          "nodes": 6,
+          "discovery": false,
+          "scoreCp": 560
+        }
+      ],
+      "unverified": []
+    },
+    {
+      "gameId": "a5011f14cd353245",
+      "level": "B",
+      "fen": "5rk1/3nbp1p/p1r4p/1p1pq1P1/7Q/P2BBP2/1PP5/1K1R3R w - - 2 23",
+      "shortcuts": [],
+      "unverified": []
+    },
+    {
+      "gameId": "812542ed7f8a36ab",
+      "level": "C*",
+      "fen": "1r1r4/3q1k2/4R1p1/pp2Q2p/3Pp1PP/P1P2P2/1P4K1/8 w - - 0 32",
+      "shortcuts": [
+        {
+          "first": "Qf6+",
+          "replies": {
+            "Kg8": "Qxg6+"
+          },
+          "nodes": 9,
+          "discovery": true,
+          "scoreCp": 180
+        }
+      ],
+      "unverified": []
+    },
+    {
+      "gameId": "427c837c94efc1a7",
+      "level": "C*",
+      "fen": "2b2r2/1p2kp1p/3Npp2/8/3pN3/2Q4P/PPP3PK/5q2 w - - 0 27",
+      "shortcuts": [
+        {
+          "first": "Nxc8+",
+          "replies": {
+            "Ke8": "Nxf6+",
+            "Kd8": "Qxd4+",
+            "Kd7": "Nxf6+",
+            "Rxc8": "Qxc8"
+          },
+          "nodes": 48,
+          "discovery": false,
+          "scoreCp": 402
+        }
+      ],
+      "unverified": []
+    },
+    {
+      "gameId": "6c8bc0aafbdeb42e",
+      "level": "D",
+      "fen": "5r2/pp4k1/2b1Q3/2q3P1/7P/P7/1PP2P2/2KR4 w - - 9 34",
+      "shortcuts": [],
+      "unverified": []
+    },
+    {
+      "gameId": "a96335a58d91f561",
+      "level": "C*",
+      "fen": "2r2q2/pb1p2pk/1pn5/6P1/2P1p3/P7/1PQ1BPP1/1K1R4 w - - 0 26",
+      "shortcuts": [
+        {
+          "first": "Qxe4+",
+          "replies": {
+            "Kh8": "Rxd7",
+            "Kg8": "Rxd7",
+            "Qf5": "Qxf5+",
+            "g6": "Rxd7+"
+          },
+          "nodes": 127,
+          "discovery": false,
+          "scoreCp": 435
+        }
+      ],
+      "unverified": []
+    },
+    {
+      "gameId": "e5c686f8d72d8792",
+      "level": "C*",
+      "fen": "2r1k2r/pq2n1b1/2n1Q1pp/2B1p3/Bp2P3/5N1P/P4PP1/3R2K1 w k - 4 25",
+      "shortcuts": [
+        {
+          "first": "Bxe7",
+          "replies": {
+            "Rg8": "Bxb4+",
+            "Rf8": "Bxf8+",
+            "Rh7": "Bxb4+",
+            "Rd8": "Bxd8+",
+            "Rb8": "Bxb4+",
+            "Ra8": "Bxb4+",
+            "Rc7": "Bxb4+",
+            "Bf8": "Bxf8+",
+            "Bf6": "Bxf6+",
+            "Qb8": "Qxg6+",
+            "Qa8": "Qxg6+",
+            "Qxe7": "Qxc8+",
+            "Qd7": "Qxd7+",
+            "Qc7": "Bxb4+",
+            "Qb6": "Qxc8+",
+            "Qa6": "Qxg6+",
+            "Qb5": "Bxb4+",
+            "a6": "Bxb4+",
+            "h5": "Bxb4+",
+            "g5": "Bxg5+",
+            "b3": "Qxg6+",
+            "a5": "Bxb4+"
+          },
+          "nodes": 76,
+          "discovery": false,
+          "scoreCp": null
+        },
+        {
+          "first": "Nxe5",
+          "replies": {
+            "Rg8": "Bxc6+",
+            "Rf8": "Bxc6+",
+            "Rh7": "Bxc6+",
+            "Kf8": "Nxg6+",
+            "Rd8": "Bxc6+",
+            "Rb8": "Bxc6+",
+            "Ra8": "Bxc6+",
+            "Rc7": "Bxc6+",
+            "Bf8": "Bxc6+",
+            "Bf6": "Bxc6+",
+            "Bxe5": "Qxe5",
+            "Qb8": "Bxc6+",
+            "Qa8": "Bxc6+",
+            "Qd7": "Qxd7+",
+            "Qc7": "Bxc6+",
+            "Qb6": "Bxc6+",
+            "Qa6": "Bxc6+",
+            "Qb5": "Nxc6",
+            "a6": "Bxc6+",
+            "h5": "Bxc6+",
+            "g5": "Bxc6+",
+            "b3": "Bxc6+",
+            "a5": "Bxc6+"
+          },
+          "nodes": 374,
+          "discovery": false,
+          "scoreCp": 305
+        }
+      ],
+      "unverified": []
+    },
+    {
+      "gameId": "469199c9433d7106",
+      "level": "D",
+      "fen": "4r3/pb1n1r1k/1p2P1pp/2pP4/2P3nq/3B2N1/PB1Q2PP/4R1K1 w - - 0 24",
+      "shortcuts": [],
+      "unverified": []
+    },
+    {
+      "gameId": "202e45c6e308912b",
+      "level": "D",
+      "fen": "1r2r1k1/6pp/3b4/p1pP1p2/1qB1bB1Q/1P5P/P4PP1/R2K3R b - - 5 25",
+      "shortcuts": [],
+      "unverified": []
+    },
+    {
+      "gameId": "8eb2714f06661c3a",
+      "level": "C*",
+      "fen": "5Q2/7p/1p4p1/4R3/1P4kP/r7/3q1PP1/6K1 w - - 8 40",
+      "shortcuts": [],
+      "unverified": []
+    },
+    {
+      "gameId": "800852c19e2bd894",
+      "level": "C*",
+      "fen": "8/p3q2k/bpP1n1pp/4Q3/P3NP2/3r4/6BP/3R2K1 w - - 4 37",
+      "shortcuts": [],
+      "unverified": []
+    },
+    {
+      "gameId": "32423237262b61f4",
+      "level": "C*",
+      "fen": "3k3r/p1qr1p1p/Q2bpn2/2P1N1p1/5B2/6P1/P1B2P1P/1R4K1 w - - 3 25",
+      "shortcuts": [
+        {
+          "first": "Nxd7",
+          "replies": {
+            "Rg8": "Nxf6",
+            "Rf8": "Nxf8",
+            "Re8": "Nxf6",
+            "Ke8": "Nxf6+",
+            "Ke7": "Bxd6+",
+            "Kxd7": "Bxd6",
+            "Qc8": "Qxc8+",
+            "Qb8": "Rxb8+",
+            "Qxd7": "Bxd6",
+            "Qb7": "Qxb7",
+            "Qc6": "Qxa7",
+            "Qb6": "Qxb6+",
+            "Qxc5": "Nxf6",
+            "Qa5": "Qxa5+",
+            "Ng8": "Bxg5+",
+            "Ne8": "Bxg5+",
+            "Nxd7": "Bxg5+",
+            "Nh5": "Bxg5+",
+            "Nd5": "Bxg5+",
+            "Ng4": "Bxg5+",
+            "Ne4": "Bxg5+",
+            "Bf8": "Bxc7+",
+            "Be7": "Bxc7+",
+            "Be5": "Nxf6",
+            "Bxc5": "Bxc7+",
+            "Bxf4": "Nxf6",
+            "gxf4": "Nxf6",
+            "h6": "Nxf6",
+            "e5": "Nxf6",
+            "g4": "Nxf6",
+            "h5": "Nxf6"
+          },
+          "nodes": 571,
+          "discovery": true,
+          "scoreCp": 613
+        }
+      ],
+      "unverified": []
+    },
+    {
+      "gameId": "ec35c8b6a2c0000d",
+      "level": "D",
+      "fen": "1b3rk1/1p3ppp/p7/5q2/4p3/2P1Bn1P/PP2QPP1/3R1R1K b - - 0 21",
+      "shortcuts": [],
+      "unverified": []
+    },
+    {
+      "gameId": "dcf49c490f153c0f",
+      "level": "C*",
+      "fen": "4r3/2p2r1k/1p3pR1/2qP1B2/p3PP2/PnQ4P/KP6/8 w - - 0 64",
+      "shortcuts": [
+        {
+          "first": "Rxf6+",
+          "replies": {
+            "Kh8": "Qxc5",
+            "Kg8": "Qxc5",
+            "Kg7": "Rxf7+"
+          },
+          "nodes": 112,
+          "discovery": true,
+          "scoreCp": null
+        }
+      ],
+      "unverified": []
+    },
+    {
+      "gameId": "4bb5e25a9712abf4",
+      "level": "C*",
+      "fen": "4r1b1/2p1r1kp/1q2Pn2/p2p1p2/5P2/1P4NP/PQ2R1PK/3R4 w - - 0 32",
+      "shortcuts": [
+        {
+          "first": "Nh5+",
+          "replies": {
+            "Kh8": "Qxf6+",
+            "Kf8": "Qxf6+",
+            "Kh6": "Nxf6",
+            "Kg6": "Nxf6"
+          },
+          "nodes": 77,
+          "discovery": false,
+          "scoreCp": null
+        },
+        {
+          "first": "Nxf5+",
+          "replies": {
+            "Kh8": "Qxf6+",
+            "Kf8": "Qxf6+",
+            "Kg6": "Nxe7+"
+          },
+          "nodes": 10,
+          "discovery": false,
+          "scoreCp": 604
+        }
+      ],
+      "unverified": []
+    },
+    {
+      "gameId": "b19080d6aa5067ee",
+      "level": "C*",
+      "fen": "5r2/3b1r2/1k6/p2BB2p/5P2/7P/PP1K4/2R5 w - - 0 36",
+      "shortcuts": [
+        {
+          "first": "Bc7+",
+          "replies": {
+            "Ka7": "Bxf7",
+            "Ka6": "Bxf7",
+            "Kb5": "Bxf7"
+          },
+          "nodes": 109,
+          "discovery": false,
+          "scoreCp": 249
+        },
+        {
+          "first": "Bd4+",
+          "replies": {
+            "Ka6": "Bxf7",
+            "Kb5": "Bxf7"
+          },
+          "nodes": 43,
+          "discovery": false,
+          "scoreCp": 329
+        },
+        {
+          "first": "Bxf7",
+          "replies": {
+            "Rh8": "Bxh5",
+            "Rg8": "Bxg8",
+            "Re8": "Bxe8",
+            "Rd8": "Bxh5",
+            "Rc8": "Bxh5",
+            "Rb8": "Bxh5",
+            "Ra8": "Bxh5",
+            "Rxf7": "Bc7+",
+            "Be8": "Bxe8",
+            "Bc8": "Bxh5",
+            "Be6": "Bxe6",
+            "Bc6": "Rxc6+",
+            "Bf5": "Bxh5",
+            "Bb5": "Bxh5",
+            "Bg4": "Bxh5",
+            "Ba4": "Bxh5",
+            "Bxh3": "Bxh5",
+            "Kb7": "Bxh5",
+            "Ka7": "Bxh5",
+            "Ka6": "Bxh5",
+            "Kb5": "Bxh5",
+            "h4": "Bc7+",
+            "a4": "Bxh5"
+          },
+          "nodes": 473,
+          "discovery": false,
+          "scoreCp": 249
+        }
+      ],
+      "unverified": []
+    },
+    {
+      "gameId": "40138fe04b0de9dc",
+      "level": "C*",
+      "fen": "r2r2k1/ppnq1pNp/2p5/3pP3/8/8/PPPQ1PPP/R3R1K1 w - - 1 19",
+      "shortcuts": [],
+      "unverified": []
+    },
+    {
+      "gameId": "67e009ad6cae4878",
+      "level": "C*",
+      "fen": "5k2/1R6/3p2BN/P1pP4/2P2n2/4b3/5r2/4K3 b - - 2 52",
+      "shortcuts": [
+        {
+          "first": "Ng2+",
+          "replies": {
+            "Kd1": "Bxh6"
+          },
+          "nodes": 25,
+          "discovery": true,
+          "scoreCp": 319
+        }
+      ],
+      "unverified": []
+    },
+    {
+      "gameId": "76a474f8b5231378",
+      "level": "C*",
+      "fen": "6r1/3R3p/3p2rk/Q1pP1p2/4pP1q/P4nP1/4N1K1/7R b - - 1 47",
+      "shortcuts": [],
+      "unverified": []
+    },
+    {
+      "gameId": "70e6ee152e160aa9",
+      "level": "C*",
+      "fen": "5bq1/2R5/4pk2/1B3pr1/P6Q/2P2p1P/6P1/7K w - - 0 35",
+      "shortcuts": [
+        {
+          "first": "gxf3",
+          "replies": {
+            "Qh8": "Qxh8+",
+            "Qh7": "Rxh7",
+            "Qg7": "Rxg7",
+            "Qf7": "Rxf7+",
+            "Qg6": "Qh8+",
+            "Bg7": "Qd4+",
+            "Be7": "Qh6+",
+            "Bh6": "Qxh6+",
+            "Bd6": "Qh6+",
+            "Bc5": "Rxc5",
+            "Bb4": "Qxb4",
+            "Ba3": "Qh6+",
+            "Kg6": "Be8+",
+            "Ke5": "Qe1+",
+            "e5": "Rc6+",
+            "f4": "Qxf4+"
+          },
+          "nodes": 215,
+          "discovery": false,
+          "scoreCp": 151
+        }
+      ],
+      "unverified": []
+    },
+    {
+      "gameId": "5114a73607214a20",
+      "level": "C*",
+      "fen": "2r5/1pq1k3/4p2Q/r7/p3N3/P7/1PP3PP/2K1R3 w - - 0 35",
+      "shortcuts": [],
+      "unverified": []
+    },
+    {
+      "gameId": "0adf5cb973db2a4e",
+      "level": "C*",
+      "fen": "2k1rr2/ppp3pp/2n3q1/3p1p2/3P3b/NNPB1P1b/PPQ2RPP/R1B4K b - - 0 18",
+      "shortcuts": [],
+      "unverified": []
+    },
+    {
+      "gameId": "9454bbb50e959995",
+      "level": "C*",
+      "fen": "8/5p2/p4rpk/p2Bp2p/P1QbP2P/6P1/2R2PK1/3q4 b - - 2 42",
+      "shortcuts": [],
+      "unverified": []
+    },
+    {
+      "gameId": "17b745e0594148d3",
+      "level": "C*",
+      "fen": "1rb4Q/1p2rkp1/4pq2/1NB5/P7/6P1/1PP3BP/6K1 w - - 3 26",
+      "shortcuts": [
+        {
+          "first": "Bxe7",
+          "replies": {
+            "Bd7": "Qxb8",
+            "Ra8": "Bxf6",
+            "Kxe7": "Qg8",
+            "Kg6": "Bxf6",
+            "Qxe7": "Qh5+",
+            "Qh6": "Qxh6",
+            "Qg6": "Bxb7",
+            "Qg5": "Bxg5",
+            "Qf5": "Bxb7",
+            "Qe5": "Bxb7",
+            "Qh4": "Qxh4",
+            "Qf4": "Bxb7",
+            "Qd4+": "Nxd4",
+            "Qf3": "Bxf3",
+            "Qc3": "Nxc3",
+            "Qf2+": "Kxf2",
+            "Qxb2": "Bxb7",
+            "Qf1+": "Kxf1",
+            "g6": "Qxf6+",
+            "b6": "Bxf6",
+            "e5": "Bxf6",
+            "g5": "Qxf6+"
+          },
+          "nodes": 412,
+          "discovery": false,
+          "scoreCp": 92
+        },
+        {
+          "first": "Nd6+",
+          "replies": {
+            "Kg6": "Nxc8"
+          },
+          "nodes": 30,
+          "discovery": false,
+          "scoreCp": 694
+        }
+      ],
+      "unverified": []
+    },
+    {
+      "gameId": "44a3f86e0e350418",
+      "level": "C*",
+      "fen": "7k/1q4p1/p6p/3nN3/1pQ5/1P5P/1P3PP1/6K1 w - - 2 36",
+      "shortcuts": [],
+      "unverified": []
+    },
+    {
+      "gameId": "126f0c8bc5a4e2d6",
+      "level": "C*",
+      "fen": "2q5/2nb1rPk/p2ppbp1/8/1p1NPN2/1Pr1BP2/P1PQ4/1K4R1 w - - 0 26",
+      "shortcuts": [],
+      "unverified": []
+    },
+    {
+      "gameId": "d4ca680d025bebc3",
+      "level": "C*",
+      "fen": "2r3k1/5p1p/3Rb1p1/p5P1/2P4P/1P2q3/1K1R4/Q7 w - - 8 40",
+      "shortcuts": [],
+      "unverified": []
+    },
+    {
+      "gameId": "ee9695ddee78a9ab",
+      "level": "C*",
+      "fen": "8/7k/4NR2/5P2/2p3b1/2r5/5K2/8 w - - 0 54",
+      "shortcuts": [],
+      "unverified": []
+    }
+  ]
+}

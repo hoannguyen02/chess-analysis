@@ -1,0 +1,542 @@
+[
+  {
+    "title": "Phong cấp chiếu hết · Bài 1",
+    "prompt": "Phong cấp để chiếu hết trong một nước.",
+    "mode": "interactive",
+    "goal": "checkmate",
+    "outcome": "checkmate",
+    "beginner": true,
+    "fen": "8/5P1k/6R1/5K2/8/2B5/8/8 w - - 0 1",
+    "moves": [
+      "f8=N#"
+    ],
+    "alternativeLines": [],
+    "source": "Thế cờ biên soạn.",
+    "hints": [
+      "Kiểm tra ô phong cấp và các quân có thể bắt quân mới.",
+      "Xét Hậu, Xe, Tượng và Mã; chọn quân đạt mục tiêu của bài."
+    ],
+    "solution": "f8=N# — Tốt từ f7 đến f8, phong cấp thành Mã, chiếu hết."
+  },
+  {
+    "title": "Phong cấp chiếu hết · Bài 2",
+    "prompt": "Phong cấp để chiếu hết trong một nước.",
+    "mode": "interactive",
+    "goal": "checkmate",
+    "outcome": "checkmate",
+    "beginner": true,
+    "fen": "8/8/2b5/8/5k2/6r1/4p2K/5B2 b - - 0 1",
+    "moves": [
+      "exf1=N#"
+    ],
+    "alternativeLines": [],
+    "source": "Thế cờ biên soạn.",
+    "hints": [
+      "Kiểm tra ô phong cấp và các quân có thể bắt quân mới.",
+      "Xét Hậu, Xe, Tượng và Mã; chọn quân đạt mục tiêu của bài."
+    ],
+    "solution": "exf1=N# — Tốt từ e2 đến f1, bắt quân, phong cấp thành Mã, chiếu hết."
+  },
+  {
+    "title": "Phong cấp chiếu hết · Bài 3",
+    "prompt": "Phong cấp để chiếu hết trong một nước.",
+    "mode": "interactive",
+    "goal": "checkmate",
+    "outcome": "checkmate",
+    "beginner": true,
+    "fen": "4k3/1P5R/8/8/7K/8/2N5/8 w - - 0 1",
+    "moves": [
+      "b8=Q#"
+    ],
+    "alternativeLines": [
+      [
+        "b8=R#"
+      ]
+    ],
+    "source": "Thế cờ biên soạn.",
+    "hints": [
+      "Kiểm tra ô phong cấp và các quân có thể bắt quân mới.",
+      "Xét Hậu, Xe, Tượng và Mã; chọn quân đạt mục tiêu của bài."
+    ],
+    "solution": "b8=Q# — Tốt từ b7 đến b8, phong cấp thành Hậu, chiếu hết."
+  },
+  {
+    "title": "Phong cấp chiếu hết · Bài 4",
+    "prompt": "Phong cấp để chiếu hết trong một nước.",
+    "mode": "interactive",
+    "goal": "checkmate",
+    "outcome": "checkmate",
+    "beginner": true,
+    "fen": "8/8/8/5k2/8/8/2p2r2/7K b - - 0 1",
+    "moves": [
+      "c1=Q#"
+    ],
+    "alternativeLines": [
+      [
+        "c1=R#"
+      ]
+    ],
+    "source": "Thế cờ biên soạn.",
+    "hints": [
+      "Kiểm tra ô phong cấp và các quân có thể bắt quân mới.",
+      "Xét Hậu, Xe, Tượng và Mã; chọn quân đạt mục tiêu của bài."
+    ],
+    "solution": "c1=Q# — Tốt từ c2 đến c1, phong cấp thành Hậu, chiếu hết."
+  },
+  {
+    "title": "Phong cấp chiếu hết · Bài 5",
+    "prompt": "Phong cấp để chiếu hết trong một nước.",
+    "mode": "interactive",
+    "goal": "checkmate",
+    "outcome": "checkmate",
+    "beginner": true,
+    "fen": "4k3/2R4P/8/1K6/8/8/N7/8 w - - 0 1",
+    "moves": [
+      "h8=Q#"
+    ],
+    "alternativeLines": [
+      [
+        "h8=R#"
+      ]
+    ],
+    "source": "Thế cờ biên soạn.",
+    "hints": [
+      "Kiểm tra ô phong cấp và các quân có thể bắt quân mới.",
+      "Xét Hậu, Xe, Tượng và Mã; chọn quân đạt mục tiêu của bài."
+    ],
+    "solution": "h8=Q# — Tốt từ h7 đến h8, phong cấp thành Hậu, chiếu hết."
+  },
+  {
+    "title": "Phong cấp chiếu hết · Bài 6",
+    "prompt": "Phong cấp để chiếu hết trong một nước.",
+    "mode": "interactive",
+    "goal": "checkmate",
+    "outcome": "checkmate",
+    "beginner": true,
+    "fen": "8/8/8/5k2/4b3/8/1rp5/5K2 b - - 0 1",
+    "moves": [
+      "c1=Q#"
+    ],
+    "alternativeLines": [
+      [
+        "c1=R#"
+      ]
+    ],
+    "source": "Thế cờ biên soạn.",
+    "hints": [
+      "Kiểm tra ô phong cấp và các quân có thể bắt quân mới.",
+      "Xét Hậu, Xe, Tượng và Mã; chọn quân đạt mục tiêu của bài."
+    ],
+    "solution": "c1=Q# — Tốt từ c2 đến c1, phong cấp thành Hậu, chiếu hết."
+  },
+  {
+    "title": "Phong cấp chiếu hết · Bài 7",
+    "prompt": "Phong cấp để chiếu hết trong một nước.",
+    "mode": "interactive",
+    "goal": "checkmate",
+    "outcome": "checkmate",
+    "beginner": true,
+    "fen": "1k6/6P1/1K6/8/8/3N4/8/8 w - - 0 1",
+    "moves": [
+      "g8=Q#"
+    ],
+    "alternativeLines": [
+      [
+        "g8=R#"
+      ]
+    ],
+    "source": "Thế cờ biên soạn.",
+    "hints": [
+      "Kiểm tra ô phong cấp và các quân có thể bắt quân mới.",
+      "Xét Hậu, Xe, Tượng và Mã; chọn quân đạt mục tiêu của bài."
+    ],
+    "solution": "g8=Q# — Tốt từ g7 đến g8, phong cấp thành Hậu, chiếu hết."
+  },
+  {
+    "title": "Phong cấp chiếu hết · Bài 8",
+    "prompt": "Phong cấp để chiếu hết trong một nước.",
+    "mode": "interactive",
+    "goal": "checkmate",
+    "outcome": "checkmate",
+    "beginner": true,
+    "fen": "8/n7/5k1K/8/8/8/7p/8 b - - 0 1",
+    "moves": [
+      "h1=Q#"
+    ],
+    "alternativeLines": [
+      [
+        "h1=R#"
+      ]
+    ],
+    "source": "Thế cờ biên soạn.",
+    "hints": [
+      "Kiểm tra ô phong cấp và các quân có thể bắt quân mới.",
+      "Xét Hậu, Xe, Tượng và Mã; chọn quân đạt mục tiêu của bài."
+    ],
+    "solution": "h1=Q# — Tốt từ h2 đến h1, phong cấp thành Hậu, chiếu hết."
+  },
+  {
+    "title": "Phong cấp chiếu hết · Bài 9",
+    "prompt": "Phong cấp để chiếu hết trong một nước.",
+    "mode": "interactive",
+    "goal": "checkmate",
+    "outcome": "checkmate",
+    "beginner": true,
+    "fen": "5K2/7P/8/8/6R1/8/7k/7B w - - 0 1",
+    "moves": [
+      "h8=Q#"
+    ],
+    "alternativeLines": [
+      [
+        "h8=R#"
+      ]
+    ],
+    "source": "Thế cờ biên soạn.",
+    "hints": [
+      "Kiểm tra ô phong cấp và các quân có thể bắt quân mới.",
+      "Xét Hậu, Xe, Tượng và Mã; chọn quân đạt mục tiêu của bài."
+    ],
+    "solution": "h8=Q# — Tốt từ h7 đến h8, phong cấp thành Hậu, chiếu hết."
+  },
+  {
+    "title": "Phong cấp chiếu hết · Bài 10",
+    "prompt": "Phong cấp để chiếu hết trong một nước.",
+    "mode": "interactive",
+    "goal": "checkmate",
+    "outcome": "checkmate",
+    "beginner": true,
+    "fen": "6k1/8/K7/8/8/1r6/p7/8 b - - 0 1",
+    "moves": [
+      "a1=Q#"
+    ],
+    "alternativeLines": [
+      [
+        "a1=R#"
+      ]
+    ],
+    "source": "Thế cờ biên soạn.",
+    "hints": [
+      "Kiểm tra ô phong cấp và các quân có thể bắt quân mới.",
+      "Xét Hậu, Xe, Tượng và Mã; chọn quân đạt mục tiêu của bài."
+    ],
+    "solution": "a1=Q# — Tốt từ a2 đến a1, phong cấp thành Hậu, chiếu hết."
+  },
+  {
+    "title": "Phong cấp chiếu hết · Bài 11",
+    "prompt": "Phong cấp để chiếu hết trong một nước.",
+    "mode": "interactive",
+    "goal": "checkmate",
+    "outcome": "checkmate",
+    "beginner": true,
+    "fen": "8/7P/8/8/7k/8/2N3R1/2K5 w - - 0 1",
+    "moves": [
+      "h8=R#"
+    ],
+    "alternativeLines": [
+      [
+        "h8=Q#"
+      ]
+    ],
+    "source": "Thế cờ biên soạn.",
+    "hints": [
+      "Kiểm tra ô phong cấp và các quân có thể bắt quân mới.",
+      "Xét Hậu, Xe, Tượng và Mã; chọn quân đạt mục tiêu của bài."
+    ],
+    "solution": "h8=R# — Tốt từ h7 đến h8, phong cấp thành Xe, chiếu hết."
+  },
+  {
+    "title": "Phong cấp chiếu hết · Bài 12",
+    "prompt": "Phong cấp để chiếu hết trong một nước.",
+    "mode": "interactive",
+    "goal": "checkmate",
+    "outcome": "checkmate",
+    "beginner": true,
+    "fen": "6r1/4k3/8/7K/8/8/7p/8 b - - 0 1",
+    "moves": [
+      "h1=R#"
+    ],
+    "alternativeLines": [
+      [
+        "h1=Q#"
+      ]
+    ],
+    "source": "Thế cờ biên soạn.",
+    "hints": [
+      "Kiểm tra ô phong cấp và các quân có thể bắt quân mới.",
+      "Xét Hậu, Xe, Tượng và Mã; chọn quân đạt mục tiêu của bài."
+    ],
+    "solution": "h1=R# — Tốt từ h2 đến h1, phong cấp thành Xe, chiếu hết."
+  },
+  {
+    "title": "Phong cấp chiếu hết · Bài 13",
+    "prompt": "Phong cấp để chiếu hết trong một nước.",
+    "mode": "interactive",
+    "goal": "checkmate",
+    "outcome": "checkmate",
+    "beginner": true,
+    "fen": "7k/5P2/N6K/8/8/8/8/8 w - - 0 1",
+    "moves": [
+      "f8=R#"
+    ],
+    "alternativeLines": [
+      [
+        "f8=Q#"
+      ]
+    ],
+    "source": "Thế cờ biên soạn.",
+    "hints": [
+      "Kiểm tra ô phong cấp và các quân có thể bắt quân mới.",
+      "Xét Hậu, Xe, Tượng và Mã; chọn quân đạt mục tiêu của bài."
+    ],
+    "solution": "f8=R# — Tốt từ f7 đến f8, phong cấp thành Xe, chiếu hết."
+  },
+  {
+    "title": "Phong cấp chiếu hết · Bài 14",
+    "prompt": "Phong cấp để chiếu hết trong một nước.",
+    "mode": "interactive",
+    "goal": "checkmate",
+    "outcome": "checkmate",
+    "beginner": true,
+    "fen": "8/8/8/7r/4K3/8/3kn2p/8 b - - 0 1",
+    "moves": [
+      "h1=B#"
+    ],
+    "alternativeLines": [
+      [
+        "h1=Q#"
+      ]
+    ],
+    "source": "Thế cờ biên soạn.",
+    "hints": [
+      "Kiểm tra ô phong cấp và các quân có thể bắt quân mới.",
+      "Xét Hậu, Xe, Tượng và Mã; chọn quân đạt mục tiêu của bài."
+    ],
+    "solution": "h1=B# — Tốt từ h2 đến h1, phong cấp thành Tượng, chiếu hết."
+  },
+  {
+    "title": "Phong cấp chiếu hết · Bài 15",
+    "prompt": "Phong cấp để chiếu hết trong một nước.",
+    "mode": "interactive",
+    "goal": "checkmate",
+    "outcome": "checkmate",
+    "beginner": true,
+    "fen": "1R6/P3K3/2kB4/8/8/8/8/8 w - - 0 1",
+    "moves": [
+      "a8=B#"
+    ],
+    "alternativeLines": [
+      [
+        "a8=Q#"
+      ]
+    ],
+    "source": "Thế cờ biên soạn.",
+    "hints": [
+      "Kiểm tra ô phong cấp và các quân có thể bắt quân mới.",
+      "Xét Hậu, Xe, Tượng và Mã; chọn quân đạt mục tiêu của bài."
+    ],
+    "solution": "a8=B# — Tốt từ a7 đến a8, phong cấp thành Tượng, chiếu hết."
+  },
+  {
+    "title": "Phong cấp chiếu hết · Bài 16",
+    "prompt": "Phong cấp để chiếu hết trong một nước.",
+    "mode": "interactive",
+    "goal": "checkmate",
+    "outcome": "checkmate",
+    "beginner": true,
+    "fen": "1b6/8/8/1r4k1/8/7K/5p2/8 b - - 0 1",
+    "moves": [
+      "f1=B#"
+    ],
+    "alternativeLines": [
+      [
+        "f1=Q#"
+      ]
+    ],
+    "source": "Thế cờ biên soạn.",
+    "hints": [
+      "Kiểm tra ô phong cấp và các quân có thể bắt quân mới.",
+      "Xét Hậu, Xe, Tượng và Mã; chọn quân đạt mục tiêu của bài."
+    ],
+    "solution": "f1=B# — Tốt từ f2 đến f1, phong cấp thành Tượng, chiếu hết."
+  },
+  {
+    "title": "Phong cấp chiếu hết · Bài 17",
+    "prompt": "Phong cấp để chiếu hết trong một nước.",
+    "mode": "interactive",
+    "goal": "checkmate",
+    "outcome": "checkmate",
+    "beginner": true,
+    "fen": "7k/2P2R2/8/8/5K2/8/8/8 w - - 0 1",
+    "moves": [
+      "c8=Q#"
+    ],
+    "alternativeLines": [
+      [
+        "c8=R#"
+      ]
+    ],
+    "source": "Thế cờ biên soạn.",
+    "hints": [
+      "Kiểm tra ô phong cấp và các quân có thể bắt quân mới.",
+      "Xét Hậu, Xe, Tượng và Mã; chọn quân đạt mục tiêu của bài."
+    ],
+    "solution": "c8=Q# — Tốt từ c7 đến c8, phong cấp thành Hậu, chiếu hết."
+  },
+  {
+    "title": "Phong cấp chiếu hết · Bài 18",
+    "prompt": "Phong cấp để chiếu hết trong một nước.",
+    "mode": "interactive",
+    "goal": "checkmate",
+    "outcome": "checkmate",
+    "beginner": true,
+    "fen": "8/n7/8/8/1k6/8/2r4p/4K3 b - - 0 1",
+    "moves": [
+      "h1=Q#"
+    ],
+    "alternativeLines": [
+      [
+        "h1=R#"
+      ]
+    ],
+    "source": "Thế cờ biên soạn.",
+    "hints": [
+      "Kiểm tra ô phong cấp và các quân có thể bắt quân mới.",
+      "Xét Hậu, Xe, Tượng và Mã; chọn quân đạt mục tiêu của bài."
+    ],
+    "solution": "h1=Q# — Tốt từ h2 đến h1, phong cấp thành Hậu, chiếu hết."
+  },
+  {
+    "title": "Phong cấp chiếu hết · Bài 19",
+    "prompt": "Phong cấp để chiếu hết trong một nước.",
+    "mode": "interactive",
+    "goal": "checkmate",
+    "outcome": "checkmate",
+    "beginner": true,
+    "fen": "5k2/1RP5/8/4B3/5K2/8/8/8 w - - 0 1",
+    "moves": [
+      "c8=Q#"
+    ],
+    "alternativeLines": [
+      [
+        "c8=R#"
+      ]
+    ],
+    "source": "Thế cờ biên soạn.",
+    "hints": [
+      "Kiểm tra ô phong cấp và các quân có thể bắt quân mới.",
+      "Xét Hậu, Xe, Tượng và Mã; chọn quân đạt mục tiêu của bài."
+    ],
+    "solution": "c8=Q# — Tốt từ c7 đến c8, phong cấp thành Hậu, chiếu hết."
+  },
+  {
+    "title": "Phong cấp chiếu hết · Bài 20",
+    "prompt": "Phong cấp để chiếu hết trong một nước.",
+    "mode": "interactive",
+    "goal": "checkmate",
+    "outcome": "checkmate",
+    "beginner": true,
+    "fen": "8/8/3n4/8/8/1k6/6p1/1K6 b - - 0 1",
+    "moves": [
+      "g1=Q#"
+    ],
+    "alternativeLines": [
+      [
+        "g1=R#"
+      ]
+    ],
+    "source": "Thế cờ biên soạn.",
+    "hints": [
+      "Kiểm tra ô phong cấp và các quân có thể bắt quân mới.",
+      "Xét Hậu, Xe, Tượng và Mã; chọn quân đạt mục tiêu của bài."
+    ],
+    "solution": "g1=Q# — Tốt từ g2 đến g1, phong cấp thành Hậu, chiếu hết."
+  },
+  {
+    "title": "Phong cấp chiếu hết · Bài 21",
+    "prompt": "Phong cấp để chiếu hết trong một nước.",
+    "mode": "interactive",
+    "goal": "checkmate",
+    "outcome": "checkmate",
+    "beginner": true,
+    "fen": "8/7P/8/8/8/5K1k/N7/8 w - - 0 1",
+    "moves": [
+      "h8=Q#"
+    ],
+    "alternativeLines": [
+      [
+        "h8=R#"
+      ]
+    ],
+    "source": "Thế cờ biên soạn.",
+    "hints": [
+      "Kiểm tra ô phong cấp và các quân có thể bắt quân mới.",
+      "Xét Hậu, Xe, Tượng và Mã; chọn quân đạt mục tiêu của bài."
+    ],
+    "solution": "h8=Q# — Tốt từ h7 đến h8, phong cấp thành Hậu, chiếu hết."
+  },
+  {
+    "title": "Phong cấp chiếu hết · Bài 22",
+    "prompt": "Phong cấp để chiếu hết trong một nước.",
+    "mode": "interactive",
+    "goal": "checkmate",
+    "outcome": "checkmate",
+    "beginner": true,
+    "fen": "7b/7K/8/6r1/8/8/7p/5k2 b - - 0 1",
+    "moves": [
+      "h1=Q#"
+    ],
+    "alternativeLines": [
+      [
+        "h1=R#"
+      ]
+    ],
+    "source": "Thế cờ biên soạn.",
+    "hints": [
+      "Kiểm tra ô phong cấp và các quân có thể bắt quân mới.",
+      "Xét Hậu, Xe, Tượng và Mã; chọn quân đạt mục tiêu của bài."
+    ],
+    "solution": "h1=Q# — Tốt từ h2 đến h1, phong cấp thành Hậu, chiếu hết."
+  },
+  {
+    "title": "Phong cấp chiếu hết · Bài 23",
+    "prompt": "Phong cấp để chiếu hết trong một nước.",
+    "mode": "interactive",
+    "goal": "checkmate",
+    "outcome": "checkmate",
+    "beginner": true,
+    "fen": "8/P7/1R6/8/8/k7/8/6K1 w - - 0 1",
+    "moves": [
+      "a8=Q#"
+    ],
+    "alternativeLines": [
+      [
+        "a8=R#"
+      ]
+    ],
+    "source": "Thế cờ biên soạn.",
+    "hints": [
+      "Kiểm tra ô phong cấp và các quân có thể bắt quân mới.",
+      "Xét Hậu, Xe, Tượng và Mã; chọn quân đạt mục tiêu của bài."
+    ],
+    "solution": "a8=Q# — Tốt từ a7 đến a8, phong cấp thành Hậu, chiếu hết."
+  },
+  {
+    "title": "Phong cấp chiếu hết · Bài 24",
+    "prompt": "Phong cấp để chiếu hết trong một nước.",
+    "mode": "interactive",
+    "goal": "checkmate",
+    "outcome": "checkmate",
+    "beginner": true,
+    "fen": "8/8/8/8/8/r2k4/p7/2K5 b - - 0 1",
+    "moves": [
+      "a1=Q#"
+    ],
+    "alternativeLines": [],
+    "source": "Thế cờ biên soạn.",
+    "hints": [
+      "Kiểm tra ô phong cấp và các quân có thể bắt quân mới.",
+      "Xét Hậu, Xe, Tượng và Mã; chọn quân đạt mục tiêu của bài."
+    ],
+    "solution": "a1=Q# — Tốt từ a2 đến a1, phong cấp thành Hậu, chiếu hết."
+  }
+]

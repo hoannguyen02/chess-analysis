@@ -1,0 +1,44 @@
+{
+  "date": "2026-10-28",
+  "savedGameCorpusCount": 1855,
+  "sources": [
+    {
+      "source": "https://www.pgnmentor.com/players/Tal.zip",
+      "sha256": "4fef900575a39450bfe953fd60ede363c2d72994fdf388494374d68708588afd",
+      "legalMasterGames": 2286
+    },
+    {
+      "source": "https://www.pgnmentor.com/players/Ivanchuk.zip",
+      "sha256": "7ec014b95ad9d5c2540287ad7c53ef1ad8cc7fed76d34ad4ae4a5a6fd31f21d6",
+      "legalMasterGames": 3857
+    },
+    {
+      "source": "https://www.pgnmentor.com/players/Shirov.zip",
+      "sha256": "b2d9883ee1489c06f4aa0f7743b4f1f30674d4e76e3742715a2f5a62d19831b4",
+      "legalMasterGames": 4674
+    },
+    {
+      "source": "https://www.pgnmentor.com/players/Kasparov.zip",
+      "sha256": "c5acd2fa3175af0a32a3b45fc57282b21aaeda973a47b1e126668166a34a5702",
+      "legalMasterGames": 1834
+    },
+    {
+      "source": "https://www.pgnmentor.com/players/Alekhine.zip",
+      "sha256": "59f4c4e46a8bc2d9b4c7798e75a91b6a1676c30ebbc71ab04959fb86fed35b3f",
+      "legalMasterGames": 1497
+    },
+    {
+      "source": "https://www.pgnmentor.com/players/PolgarJ.zip",
+      "sha256": "93d9ea786c536d718ae1845867ff0b045b8dd343c94211c9467dfe39eb3342c1",
+      "legalMasterGames": 1203
+    },
+    {
+      "source": "https://www.pgnmentor.com/players/Anand.zip",
+      "sha256": "9f7227690c26ed05688cf1c118c46585c8d6a69a054764f5ef2649c47aeb292f",
+      "legalMasterGames": 3876
+    }
+  ],
+  "search": "Played discoveries with earlier setup positions, then winning-side positions in the final 11 plies to include unplayed resignation continuations. Searches were bounded and are not an exhaustive survey of master games.",
+  "replacementCandidatesReviewed": 106,
+  "replacementCandidatesPublished": 32
+}

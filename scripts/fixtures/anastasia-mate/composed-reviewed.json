@@ -1,0 +1,2027 @@
+[
+  {
+    "gameId": "composed-f21fb5cb8cdc40d6",
+    "level": "D",
+    "fingerprint": "[\"D\", [[\"Q\", \"N\", true], [\"K\", \"Q\", false], [\"N\", \"P\", true], [\"K\", \"-\", false], [\"R\", \"-\", true], [\"B\", \"-\", false], [\"N\", \"-\", true], [\"K\", \"-\", false], [\"R\", \"B\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 5
+  },
+  {
+    "gameId": "composed-44b9ea7e638b9731",
+    "level": "D",
+    "fingerprint": "[\"D\", [[\"Q\", \"N\", true], [\"K\", \"Q\", false], [\"N\", \"-\", true], [\"K\", \"-\", false], [\"R\", \"P\", true], [\"B\", \"-\", false], [\"N\", \"-\", true], [\"K\", \"-\", false], [\"R\", \"B\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 5
+  },
+  {
+    "gameId": "composed-e98d75e47cf7702e",
+    "level": "D",
+    "fingerprint": "[\"D\", [[\"Q\", \"N\", true], [\"K\", \"Q\", false], [\"N\", \"-\", true], [\"K\", \"-\", false], [\"R\", \"P\", true], [\"B\", \"-\", false], [\"N\", \"P\", true], [\"K\", \"-\", false], [\"R\", \"B\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 5
+  },
+  {
+    "gameId": "composed-a924d47cb27a1f3a",
+    "level": "D",
+    "fingerprint": "[\"D\", [[\"Q\", \"N\", true], [\"K\", \"Q\", false], [\"N\", \"-\", true], [\"K\", \"-\", false], [\"R\", \"-\", true], [\"B\", \"-\", false], [\"N\", \"-\", true], [\"K\", \"-\", false], [\"R\", \"B\", true]]]",
+    "decision": "rejected",
+    "reason": "Deeper review changes the shortest mating distance.",
+    "rootNodes": 1200000,
+    "rootMate": null
+  },
+  {
+    "gameId": "composed-f98c2ed10ff5a117",
+    "level": "D",
+    "fingerprint": "[\"D\", [[\"K\", \"P\", false], [\"R\", \"-\", true], [\"K\", \"R\", false], [\"N\", \"R\", false], [\"Q\", \"P\", true], [\"K\", \"Q\", false], [\"R\", \"-\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 4
+  },
+  {
+    "gameId": "composed-39aabf2a6686a49a",
+    "level": "D",
+    "fingerprint": "[\"D\", [[\"Q\", \"-\", true], [\"K\", \"Q\", false], [\"N\", \"-\", true], [\"K\", \"-\", false], [\"R\", \"-\", true], [\"B\", \"-\", false], [\"N\", \"-\", true], [\"K\", \"-\", false], [\"R\", \"B\", true]]]",
+    "decision": "rejected",
+    "reason": "Deeper review changes the shortest mating distance.",
+    "rootNodes": 1200000,
+    "rootMate": null
+  },
+  {
+    "gameId": "composed-346b6fa686e894e5",
+    "level": "D",
+    "fingerprint": "[\"D\", [[\"Q\", \"N\", true], [\"K\", \"Q\", false], [\"N\", \"P\", true], [\"K\", \"-\", false], [\"R\", \"P\", true], [\"B\", \"-\", false], [\"N\", \"-\", true], [\"K\", \"-\", false], [\"R\", \"B\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 5
+  },
+  {
+    "gameId": "composed-0cdc6673e9db6133",
+    "level": "D",
+    "fingerprint": "[\"D\", [[\"B\", \"Q\", false], [\"N\", \"-\", false], [\"Q\", \"B\", true], [\"K\", \"Q\", false], [\"R\", \"-\", true], [\"N\", \"-\", false], [\"R\", \"N\", true]]]",
+    "decision": "rejected",
+    "reason": "Deeper principal line changes the motif or sacrifice grade.",
+    "rootNodes": 1200000,
+    "rootMate": 4
+  },
+  {
+    "gameId": "composed-1fa41db6fa3e7a51",
+    "level": "D",
+    "fingerprint": "[\"D\", [[\"N\", \"Q\", false], [\"B\", \"P\", true], [\"K\", \"B\", false], [\"N\", \"-\", false], [\"Q\", \"-\", true], [\"N\", \"-\", false], [\"Q\", \"N\", true], [\"K\", \"Q\", false], [\"R\", \"-\", true]]]",
+    "decision": "rejected",
+    "reason": "Deeper principal line changes the motif or sacrifice grade.",
+    "rootNodes": 1200000,
+    "rootMate": 5
+  },
+  {
+    "gameId": "composed-f9ec2cee6924d1d3",
+    "level": "D",
+    "fingerprint": "[\"D\", [[\"B\", \"Q\", false], [\"N\", \"-\", false], [\"Q\", \"B\", true], [\"K\", \"Q\", false], [\"R\", \"P\", true], [\"N\", \"-\", false], [\"R\", \"N\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 4
+  },
+  {
+    "gameId": "composed-201288ec08546b1b",
+    "level": "D",
+    "fingerprint": "[\"D\", [[\"N\", \"Q\", false], [\"B\", \"P\", true], [\"K\", \"-\", false], [\"N\", \"-\", false], [\"Q\", \"-\", true], [\"N\", \"-\", false], [\"Q\", \"N\", true], [\"K\", \"Q\", false], [\"R\", \"-\", true]]]",
+    "decision": "rejected",
+    "reason": "Deeper principal line changes the motif or sacrifice grade.",
+    "rootNodes": 1200000,
+    "rootMate": 5
+  },
+  {
+    "gameId": "composed-57209369bb24ad1a",
+    "level": "D",
+    "fingerprint": "[\"D\", [[\"N\", \"Q\", false], [\"B\", \"B\", true], [\"K\", \"-\", false], [\"N\", \"-\", false], [\"Q\", \"-\", true], [\"N\", \"-\", false], [\"Q\", \"N\", true], [\"K\", \"Q\", false], [\"R\", \"-\", true]]]",
+    "decision": "rejected",
+    "reason": "Deeper principal line changes the motif or sacrifice grade.",
+    "rootNodes": 1200000,
+    "rootMate": 5
+  },
+  {
+    "gameId": "composed-477521d1e4b12867",
+    "level": "D",
+    "fingerprint": "[\"D\", [[\"Q\", \"N\", true], [\"K\", \"Q\", false], [\"N\", \"-\", true], [\"K\", \"-\", false], [\"R\", \"-\", true], [\"B\", \"-\", false], [\"N\", \"P\", true], [\"K\", \"-\", false], [\"R\", \"B\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 5
+  },
+  {
+    "gameId": "composed-7f7d9f0a9c2939aa",
+    "level": "D",
+    "fingerprint": "[\"D\", [[\"N\", \"Q\", false], [\"B\", \"-\", false], [\"R\", \"B\", false], [\"P\", \"-\", false], [\"Q\", \"N\", true], [\"K\", \"Q\", false], [\"R\", \"-\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 4
+  },
+  {
+    "gameId": "composed-29383ef4f9864b4d",
+    "level": "D",
+    "fingerprint": "[\"D\", [[\"Q\", \"-\", true], [\"K\", \"Q\", false], [\"N\", \"P\", true], [\"K\", \"-\", false], [\"R\", \"P\", true], [\"B\", \"-\", false], [\"N\", \"-\", true], [\"K\", \"-\", false], [\"R\", \"B\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 5
+  },
+  {
+    "gameId": "composed-8c19e290e3744b50",
+    "level": "D",
+    "fingerprint": "[\"D\", [[\"Q\", \"-\", true], [\"K\", \"Q\", false], [\"N\", \"-\", true], [\"K\", \"-\", false], [\"R\", \"-\", true], [\"B\", \"-\", false], [\"N\", \"P\", true], [\"K\", \"-\", false], [\"R\", \"B\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 5
+  },
+  {
+    "gameId": "composed-e55363867fe0680f",
+    "level": "D",
+    "fingerprint": "[\"D\", [[\"Q\", \"N\", true], [\"K\", \"Q\", false], [\"N\", \"-\", true], [\"K\", \"-\", false], [\"N\", \"-\", true], [\"K\", \"-\", false], [\"R\", \"P\", true], [\"B\", \"-\", false], [\"R\", \"B\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 5
+  },
+  {
+    "gameId": "composed-10b842a05e996c1d",
+    "level": "D",
+    "fingerprint": "[\"D\", [[\"Q\", \"N\", true], [\"K\", \"Q\", false], [\"N\", \"-\", true], [\"K\", \"-\", false], [\"N\", \"-\", true], [\"K\", \"-\", false], [\"R\", \"-\", true], [\"B\", \"-\", false], [\"R\", \"B\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 5
+  },
+  {
+    "gameId": "composed-751ba40fe4f51410",
+    "level": "D",
+    "fingerprint": "[\"D\", [[\"N\", \"Q\", false], [\"P\", \"P\", true], [\"K\", \"-\", false], [\"N\", \"-\", false], [\"Q\", \"-\", true], [\"N\", \"-\", false], [\"Q\", \"N\", true], [\"K\", \"Q\", false], [\"R\", \"-\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 5
+  },
+  {
+    "gameId": "composed-0451799d166981dc",
+    "level": "D",
+    "fingerprint": "[\"D\", [[\"N\", \"Q\", false], [\"N\", \"P\", false], [\"Q\", \"-\", true], [\"N\", \"-\", false], [\"Q\", \"N\", true], [\"K\", \"Q\", false], [\"R\", \"-\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 4
+  },
+  {
+    "gameId": "composed-7c78755b6fc465f5",
+    "level": "D",
+    "fingerprint": "[\"D\", [[\"N\", \"Q\", false], [\"B\", \"-\", true], [\"K\", \"-\", false], [\"N\", \"P\", false], [\"Q\", \"-\", true], [\"N\", \"-\", false], [\"Q\", \"N\", true], [\"K\", \"Q\", false], [\"R\", \"-\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 5
+  },
+  {
+    "gameId": "composed-1f7efa21fa538f7d",
+    "level": "D",
+    "fingerprint": "[\"D\", [[\"N\", \"Q\", false], [\"B\", \"-\", false], [\"Q\", \"-\", true], [\"K\", \"-\", false], [\"Q\", \"-\", true], [\"N\", \"Q\", false], [\"R\", \"-\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 4
+  },
+  {
+    "gameId": "composed-a306fe2e784367dd",
+    "level": "C",
+    "fingerprint": "[\"C\", [[\"Q\", \"N\", true], [\"K\", \"Q\", false], [\"R\", \"-\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 2
+  },
+  {
+    "gameId": "composed-d063d698cd5e6922",
+    "level": "C",
+    "fingerprint": "[\"C\", [[\"Q\", \"P\", true], [\"K\", \"Q\", false], [\"R\", \"-\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 2
+  },
+  {
+    "gameId": "composed-f10a4ce39efb8194",
+    "level": "C",
+    "fingerprint": "[\"C\", [[\"Q\", \"N\", true], [\"K\", \"Q\", false], [\"R\", \"P\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 2
+  },
+  {
+    "gameId": "composed-6ab48ca9d2bf8aea",
+    "level": "C",
+    "fingerprint": "[\"C\", [[\"Q\", \"P\", true], [\"K\", \"Q\", false], [\"R\", \"P\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 2
+  },
+  {
+    "gameId": "composed-bbfa84c9c118e378",
+    "level": "C",
+    "fingerprint": "[\"C\", [[\"Q\", \"P\", true], [\"K\", \"Q\", false], [\"R\", \"P\", true], [\"N\", \"-\", false], [\"R\", \"N\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 3
+  },
+  {
+    "gameId": "composed-5fca9738b2411858",
+    "level": "C",
+    "fingerprint": "[\"C\", [[\"Q\", \"N\", true], [\"K\", \"Q\", false], [\"R\", \"-\", true], [\"Q\", \"-\", false], [\"R\", \"Q\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 3
+  },
+  {
+    "gameId": "composed-0a2780f1abb3d0f2",
+    "level": "C",
+    "fingerprint": "[\"C\", [[\"Q\", \"P\", true], [\"K\", \"Q\", false], [\"R\", \"N\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 2
+  },
+  {
+    "gameId": "composed-f3d6a6a49276290c",
+    "level": "C",
+    "fingerprint": "[\"C\", [[\"Q\", \"P\", true], [\"K\", \"Q\", false], [\"R\", \"-\", true], [\"N\", \"-\", false], [\"R\", \"N\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 3
+  },
+  {
+    "gameId": "composed-b301633334c1b09f",
+    "level": "C",
+    "fingerprint": "[\"C\", [[\"Q\", \"B\", true], [\"K\", \"Q\", false], [\"R\", \"P\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 2
+  },
+  {
+    "gameId": "composed-85835262636b5ce9",
+    "level": "C",
+    "fingerprint": "[\"C\", [[\"Q\", \"B\", true], [\"K\", \"Q\", false], [\"R\", \"-\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 2
+  },
+  {
+    "gameId": "composed-5aad633fb628c72b",
+    "level": "C",
+    "fingerprint": "[\"C\", [[\"Q\", \"B\", true], [\"K\", \"Q\", false], [\"R\", \"P\", true], [\"Q\", \"-\", false], [\"R\", \"Q\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 3
+  },
+  {
+    "gameId": "composed-c280ca87fbea6049",
+    "level": "C",
+    "fingerprint": "[\"C\", [[\"Q\", \"-\", true], [\"B\", \"-\", false], [\"Q\", \"B\", true], [\"K\", \"Q\", false], [\"R\", \"P\", true]]]",
+    "decision": "rejected",
+    "reason": "Deeper principal line changes the motif or sacrifice grade.",
+    "rootNodes": 1200000,
+    "rootMate": 3
+  },
+  {
+    "gameId": "composed-7ac4ac8c92660649",
+    "level": "C",
+    "fingerprint": "[\"C\", [[\"Q\", \"P\", true], [\"K\", \"Q\", false], [\"R\", \"-\", true], [\"Q\", \"-\", false], [\"R\", \"Q\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 3
+  },
+  {
+    "gameId": "composed-63a256216d55283f",
+    "level": "C",
+    "fingerprint": "[\"C\", [[\"Q\", \"P\", true], [\"K\", \"Q\", false], [\"R\", \"P\", true], [\"R\", \"-\", false], [\"R\", \"R\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 3
+  },
+  {
+    "gameId": "composed-23150295513be603",
+    "level": "C",
+    "fingerprint": "[\"C\", [[\"Q\", \"B\", true], [\"K\", \"Q\", false], [\"R\", \"-\", true], [\"Q\", \"-\", false], [\"R\", \"Q\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 3
+  },
+  {
+    "gameId": "composed-1c7494138b01ca81",
+    "level": "C",
+    "fingerprint": "[\"C\", [[\"Q\", \"N\", true], [\"K\", \"Q\", false], [\"R\", \"B\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 2
+  },
+  {
+    "gameId": "composed-318b2708d0d5db95",
+    "level": "C",
+    "fingerprint": "[\"C\", [[\"Q\", \"N\", true], [\"K\", \"Q\", false], [\"R\", \"-\", true], [\"B\", \"-\", false], [\"R\", \"B\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 3
+  },
+  {
+    "gameId": "composed-2c72c16d5148a21b",
+    "level": "C",
+    "fingerprint": "[\"C\", [[\"R\", \"P\", true], [\"K\", \"R\", false], [\"R\", \"-\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 2
+  },
+  {
+    "gameId": "composed-77bca81056c21e85",
+    "level": "C",
+    "fingerprint": "[\"C\", [[\"Q\", \"P\", true], [\"K\", \"Q\", false], [\"R\", \"-\", true], [\"R\", \"-\", false], [\"R\", \"R\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 3
+  },
+  {
+    "gameId": "composed-19a11dbf4be59429",
+    "level": "C",
+    "fingerprint": "[\"C\", [[\"Q\", \"N\", true], [\"K\", \"Q\", false], [\"R\", \"P\", true], [\"B\", \"-\", false], [\"R\", \"B\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 3
+  },
+  {
+    "gameId": "composed-ce2cd761cbdf84c0",
+    "level": "C",
+    "fingerprint": "[\"C\", [[\"K\", \"Q\", false], [\"N\", \"-\", false], [\"R\", \"P\", true], [\"K\", \"R\", false], [\"R\", \"-\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 3
+  },
+  {
+    "gameId": "composed-3558756246ee6ab9",
+    "level": "C",
+    "fingerprint": "[\"C\", [[\"R\", \"P\", true], [\"K\", \"R\", false], [\"R\", \"-\", true], [\"N\", \"-\", false], [\"R\", \"N\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 3
+  },
+  {
+    "gameId": "composed-20675310dc49d25d",
+    "level": "C",
+    "fingerprint": "[\"C\", [[\"K\", \"Q\", false], [\"R\", \"-\", false], [\"R\", \"P\", true], [\"K\", \"R\", false], [\"R\", \"-\", true]]]",
+    "decision": "rejected",
+    "reason": "Deeper principal line changes the motif or sacrifice grade.",
+    "rootNodes": 1200000,
+    "rootMate": 3
+  },
+  {
+    "gameId": "composed-07039842cafdfff1",
+    "level": "C",
+    "fingerprint": "[\"C\", [[\"R\", \"P\", true], [\"K\", \"R\", false], [\"R\", \"-\", true], [\"R\", \"-\", false], [\"R\", \"R\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 3
+  },
+  {
+    "gameId": "composed-babb20cc0cdfcd6f",
+    "level": "C",
+    "fingerprint": "[\"C\", [[\"P\", \"Q\", false], [\"P\", \"-\", false], [\"Q\", \"N\", true], [\"K\", \"Q\", false], [\"R\", \"-\", true]]]",
+    "decision": "rejected",
+    "reason": "Deeper review changes the shortest mating distance.",
+    "rootNodes": 1200000,
+    "rootMate": null
+  },
+  {
+    "gameId": "composed-b5177011774913de",
+    "level": "C",
+    "fingerprint": "[\"C\", [[\"K\", \"Q\", false], [\"N\", \"Q\", false], [\"R\", \"P\", true], [\"K\", \"R\", false], [\"R\", \"-\", true]]]",
+    "decision": "rejected",
+    "reason": "Deeper principal line changes the motif or sacrifice grade.",
+    "rootNodes": 1200000,
+    "rootMate": 3
+  },
+  {
+    "gameId": "composed-c1d2fb4c4a257c42",
+    "level": "C",
+    "fingerprint": "[\"C\", [[\"Q\", \"-\", true], [\"N\", \"-\", false], [\"Q\", \"N\", true], [\"K\", \"Q\", false], [\"R\", \"-\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 3
+  },
+  {
+    "gameId": "composed-b4b503c4a9962a69",
+    "level": "C",
+    "fingerprint": "[\"C\", [[\"K\", \"Q\", false], [\"R\", \"Q\", false], [\"R\", \"P\", true], [\"K\", \"R\", false], [\"R\", \"-\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 3
+  },
+  {
+    "gameId": "composed-f3dd663a20755bb7",
+    "level": "C",
+    "fingerprint": "[\"C\", [[\"P\", \"Q\", false], [\"P\", \"P\", false], [\"Q\", \"N\", true], [\"K\", \"Q\", false], [\"R\", \"-\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 3
+  },
+  {
+    "gameId": "composed-9d0dcd429a19610c",
+    "level": "C",
+    "fingerprint": "[\"C\", [[\"Q\", \"P\", true], [\"K\", \"Q\", false], [\"R\", \"P\", true], [\"Q\", \"-\", false], [\"R\", \"Q\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 3
+  },
+  {
+    "gameId": "composed-c710fafafe75b79c",
+    "level": "C",
+    "fingerprint": "[\"C\", [[\"K\", \"P\", false], [\"N\", \"-\", false], [\"Q\", \"P\", true], [\"K\", \"Q\", false], [\"R\", \"-\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 3
+  },
+  {
+    "gameId": "composed-687f51527e994656",
+    "level": "C",
+    "fingerprint": "[\"C\", [[\"K\", \"P\", false], [\"N\", \"R\", false], [\"Q\", \"P\", true], [\"K\", \"Q\", false], [\"R\", \"-\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 3
+  },
+  {
+    "gameId": "composed-329d6058fbdeb9a1",
+    "level": "C",
+    "fingerprint": "[\"C\", [[\"Q\", \"N\", true], [\"K\", \"Q\", false], [\"R\", \"-\", true], [\"R\", \"-\", false], [\"R\", \"R\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 3
+  },
+  {
+    "gameId": "composed-0aca1eae29fadca4",
+    "level": "C",
+    "fingerprint": "[\"C\", [[\"Q\", \"Q\", true], [\"N\", \"-\", false], [\"Q\", \"N\", true], [\"K\", \"Q\", false], [\"R\", \"-\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 3
+  },
+  {
+    "gameId": "composed-217814212efaf2e7",
+    "level": "C",
+    "fingerprint": "[\"C\", [[\"Q\", \"N\", true], [\"K\", \"Q\", false], [\"R\", \"P\", true], [\"R\", \"-\", false], [\"R\", \"R\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 3
+  },
+  {
+    "gameId": "composed-889a971c571279d8",
+    "level": "C",
+    "fingerprint": "[\"C\", [[\"N\", \"Q\", false], [\"P\", \"-\", false], [\"Q\", \"B\", true], [\"K\", \"Q\", false], [\"R\", \"-\", true]]]",
+    "decision": "rejected",
+    "reason": "Deeper principal line changes the motif or sacrifice grade.",
+    "rootNodes": 1200000,
+    "rootMate": 3
+  },
+  {
+    "gameId": "composed-cb2b675532b15209",
+    "level": "C",
+    "fingerprint": "[\"C\", [[\"Q\", \"-\", true], [\"R\", \"Q\", false], [\"R\", \"-\", true], [\"R\", \"-\", false], [\"R\", \"R\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 3
+  },
+  {
+    "gameId": "composed-e1b5a9d54023d2c1",
+    "level": "C",
+    "fingerprint": "[\"C\", [[\"N\", \"Q\", false], [\"N\", \"B\", false], [\"Q\", \"B\", true], [\"K\", \"Q\", false], [\"R\", \"-\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 3
+  },
+  {
+    "gameId": "composed-9cfa419182b7f391",
+    "level": "C",
+    "fingerprint": "[\"C\", [[\"B\", \"Q\", false], [\"N\", \"-\", false], [\"Q\", \"B\", true], [\"K\", \"Q\", false], [\"R\", \"-\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 3
+  },
+  {
+    "gameId": "composed-dc4f272523dfa181",
+    "level": "C",
+    "fingerprint": "[\"C\", [[\"Q\", \"P\", true], [\"N\", \"-\", false], [\"Q\", \"N\", true], [\"K\", \"Q\", false], [\"R\", \"-\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 3
+  },
+  {
+    "gameId": "composed-7e75f7da834ae04d",
+    "level": "C",
+    "fingerprint": "[\"C\", [[\"N\", \"Q\", false], [\"B\", \"P\", false], [\"Q\", \"N\", true], [\"K\", \"Q\", false], [\"R\", \"-\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 3
+  },
+  {
+    "gameId": "composed-722014bc457d8356",
+    "level": "C",
+    "fingerprint": "[\"C\", [[\"R\", \"R\", false], [\"N\", \"-\", false], [\"Q\", \"P\", true], [\"K\", \"Q\", false], [\"R\", \"-\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 3
+  },
+  {
+    "gameId": "composed-f9a41fcd21e80612",
+    "level": "C",
+    "fingerprint": "[\"C\", [[\"B\", \"Q\", false], [\"N\", \"-\", false], [\"Q\", \"B\", true], [\"K\", \"Q\", false], [\"R\", \"P\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 3
+  },
+  {
+    "gameId": "composed-b7ec2517719beb75",
+    "level": "C",
+    "fingerprint": "[\"C\", [[\"R\", \"Q\", true], [\"N\", \"-\", false], [\"R\", \"N\", true], [\"K\", \"R\", false], [\"R\", \"-\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 3
+  },
+  {
+    "gameId": "composed-31ce733ba02ad81c",
+    "level": "C",
+    "fingerprint": "[\"C\", [[\"Q\", \"-\", true], [\"K\", \"-\", false], [\"Q\", \"-\", true], [\"Q\", \"Q\", false], [\"R\", \"P\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 3
+  },
+  {
+    "gameId": "composed-30dbfbe316263486",
+    "level": "C*",
+    "fingerprint": "[\"C*\", [[\"N\", \"Q\", false], [\"B\", \"P\", true], [\"K\", \"-\", false], [\"N\", \"-\", false], [\"Q\", \"-\", true], [\"K\", \"-\", false], [\"R\", \"P\", true], [\"N\", \"-\", false], [\"R\", \"N\", true]]]",
+    "decision": "rejected",
+    "reason": "Deeper principal line changes the motif or sacrifice grade.",
+    "rootNodes": 1200000,
+    "rootMate": 5
+  },
+  {
+    "gameId": "composed-1a3b98a03f09a5c8",
+    "level": "C*",
+    "fingerprint": "[\"C*\", [[\"N\", \"Q\", false], [\"B\", \"Q\", false], [\"N\", \"B\", true], [\"K\", \"-\", false], [\"N\", \"-\", false], [\"N\", \"-\", false], [\"R\", \"P\", true], [\"N\", \"-\", false], [\"R\", \"N\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 5
+  },
+  {
+    "gameId": "composed-7a5563892bc7c3b1",
+    "level": "C*",
+    "fingerprint": "[\"C*\", [[\"N\", \"Q\", false], [\"B\", \"Q\", false], [\"N\", \"B\", true], [\"K\", \"-\", false], [\"N\", \"-\", false], [\"N\", \"-\", false], [\"R\", \"-\", true], [\"N\", \"-\", false], [\"R\", \"N\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 5
+  },
+  {
+    "gameId": "composed-b2eb61e67f522034",
+    "level": "C*",
+    "fingerprint": "[\"C*\", [[\"N\", \"Q\", false], [\"P\", \"-\", true], [\"K\", \"P\", false], [\"B\", \"Q\", false], [\"N\", \"B\", true], [\"K\", \"-\", false], [\"N\", \"-\", false], [\"N\", \"-\", false], [\"R\", \"-\", true], [\"N\", \"-\", false], [\"R\", \"N\", true]]]",
+    "decision": "rejected",
+    "reason": "Deeper principal line changes the motif or sacrifice grade.",
+    "rootNodes": 1200000,
+    "rootMate": 6
+  },
+  {
+    "gameId": "composed-ebcbabd8d9be6ee0",
+    "level": "C*",
+    "fingerprint": "[\"C*\", [[\"N\", \"Q\", false], [\"B\", \"P\", true], [\"K\", \"B\", false], [\"N\", \"-\", false], [\"Q\", \"-\", true], [\"K\", \"-\", false], [\"R\", \"-\", true], [\"N\", \"-\", false], [\"R\", \"N\", true]]]",
+    "decision": "rejected",
+    "reason": "Deeper principal line changes the motif or sacrifice grade.",
+    "rootNodes": 1200000,
+    "rootMate": 5
+  },
+  {
+    "gameId": "composed-213d8d6bc1c6dda3",
+    "level": "C*",
+    "fingerprint": "[\"C*\", [[\"N\", \"Q\", false], [\"B\", \"Q\", false], [\"N\", \"B\", true], [\"K\", \"-\", false], [\"N\", \"-\", false], [\"N\", \"-\", false], [\"R\", \"N\", false], [\"P\", \"-\", false], [\"R\", \"-\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 5
+  },
+  {
+    "gameId": "composed-84ecced125b64740",
+    "level": "C*",
+    "fingerprint": "[\"C*\", [[\"N\", \"Q\", false], [\"B\", \"P\", true], [\"Q\", \"B\", false], [\"N\", \"-\", false], [\"Q\", \"-\", true], [\"K\", \"-\", false], [\"R\", \"-\", true], [\"N\", \"-\", false], [\"R\", \"N\", true]]]",
+    "decision": "rejected",
+    "reason": "Deeper principal line changes the motif or sacrifice grade.",
+    "rootNodes": 1200000,
+    "rootMate": 5
+  },
+  {
+    "gameId": "composed-366618f4b22070ed",
+    "level": "C*",
+    "fingerprint": "[\"C*\", [[\"N\", \"Q\", false], [\"B\", \"-\", true], [\"R\", \"B\", false], [\"N\", \"-\", false], [\"Q\", \"-\", true], [\"K\", \"-\", false], [\"R\", \"-\", true], [\"N\", \"-\", false], [\"R\", \"N\", true]]]",
+    "decision": "rejected",
+    "reason": "Deeper principal line changes the motif or sacrifice grade.",
+    "rootNodes": 1200000,
+    "rootMate": 5
+  },
+  {
+    "gameId": "composed-373107c5a60a6688",
+    "level": "C*",
+    "fingerprint": "[\"C*\", [[\"N\", \"Q\", false], [\"B\", \"P\", true], [\"K\", \"-\", false], [\"N\", \"-\", false], [\"Q\", \"-\", true], [\"K\", \"-\", false], [\"R\", \"-\", true], [\"N\", \"-\", false], [\"R\", \"N\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 5
+  },
+  {
+    "gameId": "composed-7c02e1eb54f02dad",
+    "level": "C*",
+    "fingerprint": "[\"C*\", [[\"B\", \"Q\", false], [\"B\", \"P\", true], [\"K\", \"-\", false], [\"N\", \"-\", false], [\"Q\", \"-\", true], [\"K\", \"-\", false], [\"R\", \"P\", true], [\"N\", \"-\", false], [\"R\", \"N\", true]]]",
+    "decision": "rejected",
+    "reason": "Deeper principal line changes the motif or sacrifice grade.",
+    "rootNodes": 1200000,
+    "rootMate": 5
+  },
+  {
+    "gameId": "composed-0f1887f2c592046c",
+    "level": "C*",
+    "fingerprint": "[\"C*\", [[\"N\", \"Q\", false], [\"P\", \"P\", true], [\"K\", \"-\", false], [\"N\", \"-\", false], [\"Q\", \"-\", true], [\"K\", \"-\", false], [\"R\", \"-\", true], [\"N\", \"-\", false], [\"R\", \"N\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 5
+  },
+  {
+    "gameId": "composed-43ee58c22e19a28f",
+    "level": "C*",
+    "fingerprint": "[\"C*\", [[\"N\", \"Q\", false], [\"B\", \"-\", true], [\"Q\", \"B\", false], [\"N\", \"-\", false], [\"Q\", \"-\", true], [\"K\", \"-\", false], [\"R\", \"-\", true], [\"N\", \"-\", false], [\"R\", \"N\", true]]]",
+    "decision": "rejected",
+    "reason": "Deeper principal line changes the motif or sacrifice grade.",
+    "rootNodes": 1200000,
+    "rootMate": 5
+  },
+  {
+    "gameId": "composed-8c8becce1e6cf663",
+    "level": "C*",
+    "fingerprint": "[\"C*\", [[\"B\", \"Q\", false], [\"B\", \"P\", true], [\"K\", \"B\", false], [\"N\", \"-\", false], [\"Q\", \"-\", true], [\"K\", \"-\", false], [\"R\", \"-\", true], [\"N\", \"-\", false], [\"R\", \"N\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 5
+  },
+  {
+    "gameId": "composed-b4af5916c6eacfdc",
+    "level": "C*",
+    "fingerprint": "[\"C*\", [[\"N\", \"Q\", false], [\"P\", \"P\", true], [\"K\", \"-\", false], [\"N\", \"-\", false], [\"Q\", \"B\", true], [\"K\", \"-\", false], [\"R\", \"-\", true], [\"N\", \"-\", false], [\"R\", \"N\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 5
+  },
+  {
+    "gameId": "composed-263cbc4eae6991f0",
+    "level": "C*",
+    "fingerprint": "[\"C*\", [[\"B\", \"Q\", false], [\"B\", \"P\", true], [\"K\", \"-\", false], [\"N\", \"-\", false], [\"Q\", \"-\", true], [\"K\", \"-\", false], [\"R\", \"-\", true], [\"N\", \"-\", false], [\"R\", \"N\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 5
+  },
+  {
+    "gameId": "composed-222fb3ac8ec51062",
+    "level": "C*",
+    "fingerprint": "[\"C*\", [[\"B\", \"Q\", false], [\"B\", \"P\", true], [\"K\", \"-\", false], [\"N\", \"P\", false], [\"Q\", \"-\", true], [\"K\", \"-\", false], [\"R\", \"P\", true], [\"N\", \"-\", false], [\"R\", \"N\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 5
+  },
+  {
+    "gameId": "composed-462c1c60a43fd844",
+    "level": "C*",
+    "fingerprint": "[\"C*\", [[\"B\", \"-\", false], [\"Q\", \"B\", true], [\"Q\", \"Q\", false], [\"N\", \"-\", false], [\"R\", \"-\", true], [\"N\", \"-\", false], [\"P\", \"-\", false], [\"K\", \"-\", false], [\"Q\", \"B\", false], [\"P\", \"-\", false], [\"R\", \"N\", true]]]",
+    "decision": "rejected",
+    "reason": "Deeper principal line changes the motif or sacrifice grade.",
+    "rootNodes": 1200000,
+    "rootMate": 6
+  },
+  {
+    "gameId": "composed-43fdd0bb27e5f223",
+    "level": "C*",
+    "fingerprint": "[\"C*\", [[\"N\", \"Q\", false], [\"P\", \"P\", true], [\"K\", \"-\", false], [\"N\", \"P\", false], [\"Q\", \"B\", true], [\"K\", \"-\", false], [\"R\", \"-\", true], [\"N\", \"-\", false], [\"R\", \"N\", true]]]",
+    "decision": "rejected",
+    "reason": "Deeper principal line changes the motif or sacrifice grade.",
+    "rootNodes": 1200000,
+    "rootMate": 5
+  },
+  {
+    "gameId": "composed-31330a15f91052e5",
+    "level": "C*",
+    "fingerprint": "[\"C*\", [[\"N\", \"Q\", false], [\"B\", \"-\", true], [\"K\", \"-\", false], [\"N\", \"-\", false], [\"Q\", \"-\", true], [\"K\", \"-\", false], [\"R\", \"-\", true], [\"N\", \"-\", false], [\"R\", \"N\", true]]]",
+    "decision": "rejected",
+    "reason": "Deeper principal line changes the motif or sacrifice grade.",
+    "rootNodes": 1200000,
+    "rootMate": 5
+  },
+  {
+    "gameId": "composed-99d96a7e5fd93d64",
+    "level": "C*",
+    "fingerprint": "[\"C*\", [[\"Q\", \"-\", true], [\"N\", \"-\", false], [\"Q\", \"N\", true], [\"K\", \"-\", false], [\"Q\", \"-\", true], [\"K\", \"P\", false], [\"Q\", \"-\", true], [\"Q\", \"-\", false], [\"Q\", \"Q\", true], [\"K\", \"Q\", false], [\"R\", \"-\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 6
+  },
+  {
+    "gameId": "composed-6302d5253e4f9794",
+    "level": "C*",
+    "fingerprint": "[\"C*\", [[\"Q\", \"-\", true], [\"K\", \"-\", false], [\"Q\", \"-\", true], [\"K\", \"P\", false], [\"Q\", \"-\", true], [\"Q\", \"-\", false], [\"Q\", \"Q\", true], [\"K\", \"Q\", false], [\"R\", \"-\", true], [\"N\", \"-\", false], [\"R\", \"N\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 6
+  },
+  {
+    "gameId": "composed-2a15072e7f492e39",
+    "level": "C*",
+    "fingerprint": "[\"C*\", [[\"Q\", \"-\", true], [\"K\", \"-\", false], [\"Q\", \"-\", true], [\"K\", \"P\", false], [\"Q\", \"-\", true], [\"Q\", \"-\", false], [\"Q\", \"Q\", true], [\"K\", \"Q\", false], [\"R\", \"-\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 5
+  },
+  {
+    "gameId": "composed-4e6bc090f348cfad",
+    "level": "C*",
+    "fingerprint": "[\"C*\", [[\"N\", \"Q\", false], [\"B\", \"P\", true], [\"K\", \"-\", false], [\"N\", \"B\", false], [\"Q\", \"-\", true], [\"K\", \"-\", false], [\"R\", \"-\", true], [\"N\", \"-\", false], [\"R\", \"N\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 5
+  },
+  {
+    "gameId": "composed-ca6fff551e115f9c",
+    "level": "B",
+    "fingerprint": "[\"B\", [[\"Q\", \"Q\", true], [\"N\", \"-\", false], [\"R\", \"N\", true], [\"K\", \"-\", false], [\"R\", \"-\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 3
+  },
+  {
+    "gameId": "composed-403c34f164cf978b",
+    "level": "B",
+    "fingerprint": "[\"B\", [[\"P\", \"R\", false], [\"P\", \"-\", false], [\"R\", \"Q\", true], [\"K\", \"-\", false], [\"R\", \"-\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 3
+  },
+  {
+    "gameId": "composed-d3f64983e14ddf36",
+    "level": "B",
+    "fingerprint": "[\"B\", [[\"Q\", \"-\", true], [\"Q\", \"-\", false], [\"Q\", \"Q\", true], [\"K\", \"Q\", false], [\"R\", \"-\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 3
+  },
+  {
+    "gameId": "composed-2e66b5f421235e03",
+    "level": "B",
+    "fingerprint": "[\"B\", [[\"Q\", \"B\", true], [\"N\", \"-\", false], [\"R\", \"N\", true], [\"K\", \"-\", false], [\"R\", \"-\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 3
+  },
+  {
+    "gameId": "composed-d2c654c4eb8e19a1",
+    "level": "B",
+    "fingerprint": "[\"B\", [[\"N\", \"-\", true], [\"K\", \"-\", false], [\"R\", \"-\", true], [\"R\", \"-\", false], [\"R\", \"R\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 3
+  },
+  {
+    "gameId": "composed-69f1e1116ffd2908",
+    "level": "B",
+    "fingerprint": "[\"B\", [[\"Q\", \"-\", true], [\"K\", \"-\", false], [\"R\", \"P\", true], [\"Q\", \"-\", false], [\"R\", \"Q\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 3
+  },
+  {
+    "gameId": "composed-1599b3a59d34d88c",
+    "level": "B",
+    "fingerprint": "[\"B\", [[\"Q\", \"-\", true], [\"N\", \"-\", false], [\"R\", \"N\", true], [\"K\", \"-\", false], [\"R\", \"-\", true]]]",
+    "decision": "rejected",
+    "reason": "Deeper principal line changes the motif or sacrifice grade.",
+    "rootNodes": 1200000,
+    "rootMate": 3
+  },
+  {
+    "gameId": "composed-0ed9aea7687076db",
+    "level": "B",
+    "fingerprint": "[\"B\", [[\"N\", \"-\", true], [\"K\", \"-\", false], [\"R\", \"-\", true], [\"B\", \"-\", false], [\"R\", \"B\", true]]]",
+    "decision": "rejected",
+    "reason": "Deeper principal line changes the motif or sacrifice grade.",
+    "rootNodes": 1200000,
+    "rootMate": 3
+  },
+  {
+    "gameId": "composed-b3291dec96048554",
+    "level": "B",
+    "fingerprint": "[\"B\", [[\"B\", \"Q\", false], [\"B\", \"Q\", false], [\"N\", \"B\", true], [\"K\", \"-\", false], [\"R\", \"P\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 3
+  },
+  {
+    "gameId": "composed-8f55b6713dfd6976",
+    "level": "B",
+    "fingerprint": "[\"B\", [[\"N\", \"R\", false], [\"K\", \"-\", false], [\"R\", \"-\", false], [\"K\", \"-\", false], [\"R\", \"-\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 3
+  },
+  {
+    "gameId": "composed-96923f81de68b0f8",
+    "level": "B",
+    "fingerprint": "[\"B\", [[\"Q\", \"-\", true], [\"K\", \"-\", false], [\"R\", \"Q\", true], [\"N\", \"-\", false], [\"R\", \"N\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 3
+  },
+  {
+    "gameId": "composed-85599c39180ff04b",
+    "level": "B",
+    "fingerprint": "[\"B\", [[\"Q\", \"-\", true], [\"B\", \"-\", false], [\"Q\", \"B\", true], [\"K\", \"-\", false], [\"R\", \"-\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 3
+  },
+  {
+    "gameId": "composed-60368d5eb093d831",
+    "level": "B",
+    "fingerprint": "[\"B\", [[\"Q\", \"-\", true], [\"R\", \"-\", false], [\"N\", \"-\", true], [\"K\", \"-\", false], [\"R\", \"-\", true]]]",
+    "decision": "rejected",
+    "reason": "Deeper principal line changes the motif or sacrifice grade.",
+    "rootNodes": 1200000,
+    "rootMate": 3
+  },
+  {
+    "gameId": "composed-02616e5e5cc31dbb",
+    "level": "B",
+    "fingerprint": "[\"B\", [[\"Q\", \"-\", true], [\"K\", \"P\", false], [\"R\", \"Q\", true], [\"N\", \"-\", false], [\"R\", \"N\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 3
+  },
+  {
+    "gameId": "composed-94787912acc82d2f",
+    "level": "B",
+    "fingerprint": "[\"B\", [[\"Q\", \"-\", true], [\"K\", \"-\", false], [\"R\", \"-\", true], [\"N\", \"-\", false], [\"R\", \"N\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 3
+  },
+  {
+    "gameId": "composed-de22ff7a16405516",
+    "level": "B",
+    "fingerprint": "[\"B\", [[\"Q\", \"Q\", false], [\"B\", \"-\", true], [\"N\", \"B\", false], [\"K\", \"-\", false], [\"R\", \"-\", true]]]",
+    "decision": "rejected",
+    "reason": "Deeper principal line changes the motif or sacrifice grade.",
+    "rootNodes": 1200000,
+    "rootMate": 3
+  },
+  {
+    "gameId": "composed-5cdfa19b4d5cac9f",
+    "level": "B",
+    "fingerprint": "[\"B\", [[\"Q\", \"Q\", true], [\"K\", \"-\", false], [\"R\", \"-\", true], [\"N\", \"-\", false], [\"R\", \"N\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 3
+  },
+  {
+    "gameId": "composed-21acc98c1db34ef6",
+    "level": "B",
+    "fingerprint": "[\"B\", [[\"R\", \"-\", true], [\"Q\", \"-\", false], [\"R\", \"Q\", true], [\"K\", \"R\", false], [\"R\", \"-\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 3
+  },
+  {
+    "gameId": "composed-ff8cd681e94393f5",
+    "level": "B",
+    "fingerprint": "[\"B\", [[\"Q\", \"-\", true], [\"N\", \"-\", false], [\"Q\", \"N\", true], [\"K\", \"-\", false], [\"R\", \"-\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 3
+  },
+  {
+    "gameId": "composed-8dfba3c044b5e3ef",
+    "level": "B",
+    "fingerprint": "[\"B\", [[\"Q\", \"-\", true], [\"K\", \"P\", false], [\"R\", \"-\", true], [\"N\", \"-\", false], [\"R\", \"N\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 3
+  },
+  {
+    "gameId": "composed-02f1442295deca01",
+    "level": "B",
+    "fingerprint": "[\"B\", [[\"Q\", \"-\", true], [\"N\", \"-\", false], [\"Q\", \"N\", true], [\"K\", \"P\", false], [\"R\", \"-\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 3
+  },
+  {
+    "gameId": "composed-71b4f2484484cd08",
+    "level": "B",
+    "fingerprint": "[\"B\", [[\"Q\", \"-\", true], [\"N\", \"-\", false], [\"R\", \"N\", true], [\"K\", \"P\", false], [\"R\", \"-\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 3
+  },
+  {
+    "gameId": "composed-bada5a7cd0fb4539",
+    "level": "B",
+    "fingerprint": "[\"B\", [[\"Q\", \"-\", true], [\"N\", \"-\", false], [\"R\", \"-\", true], [\"K\", \"P\", false], [\"R\", \"-\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 3
+  },
+  {
+    "gameId": "composed-1130701285e21c5d",
+    "level": "A",
+    "fingerprint": "[\"A\", [[\"R\", \"-\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 1
+  },
+  {
+    "gameId": "composed-84ae8349016b9d0f",
+    "level": "A",
+    "fingerprint": "[\"A\", [[\"R\", \"R\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 1
+  },
+  {
+    "gameId": "composed-5b786354d7a43915",
+    "level": "A",
+    "fingerprint": "[\"A\", [[\"N\", \"-\", true], [\"K\", \"-\", false], [\"R\", \"-\", true]]]",
+    "decision": "rejected",
+    "reason": "Deeper principal line changes the motif or sacrifice grade.",
+    "rootNodes": 1200000,
+    "rootMate": 2
+  },
+  {
+    "gameId": "composed-1d5e08e0bf0d7534",
+    "level": "A",
+    "fingerprint": "[\"A\", [[\"R\", \"-\", true], [\"R\", \"-\", false], [\"R\", \"R\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 2
+  },
+  {
+    "gameId": "composed-551db1b9f117f2db",
+    "level": "A",
+    "fingerprint": "[\"A\", [[\"Q\", \"-\", true], [\"K\", \"-\", false], [\"R\", \"P\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 2
+  },
+  {
+    "gameId": "composed-9cef1afe7eb8dfde",
+    "level": "A",
+    "fingerprint": "[\"A\", [[\"Q\", \"Q\", true], [\"K\", \"-\", false], [\"R\", \"P\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 2
+  },
+  {
+    "gameId": "composed-f0c2394af3533bea",
+    "level": "A",
+    "fingerprint": "[\"A\", [[\"N\", \"-\", true], [\"K\", \"-\", false], [\"R\", \"R\", true]]]",
+    "decision": "rejected",
+    "reason": "Deeper principal line changes the motif or sacrifice grade.",
+    "rootNodes": 1200000,
+    "rootMate": 2
+  },
+  {
+    "gameId": "composed-3c27a6a6c82b4ef9",
+    "level": "A",
+    "fingerprint": "[\"A\", [[\"P\", \"R\", true], [\"R\", \"Q\", false], [\"R\", \"R\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 2
+  },
+  {
+    "gameId": "composed-60e1154425e4daaa",
+    "level": "A",
+    "fingerprint": "[\"A\", [[\"R\", \"-\", true], [\"R\", \"R\", false], [\"R\", \"R\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 2
+  },
+  {
+    "gameId": "composed-19cc8cc393396bc8",
+    "level": "A",
+    "fingerprint": "[\"A\", [[\"P\", \"-\", true]]]",
+    "decision": "rejected",
+    "reason": "Immediate mate bypasses the Anastasia motif.",
+    "rootNodes": 1200000,
+    "rootMate": null
+  },
+  {
+    "gameId": "composed-2e2f3e30bb7bb43c",
+    "level": "A",
+    "fingerprint": "[\"A\", [[\"R\", \"R\", true], [\"R\", \"R\", false], [\"R\", \"R\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 2
+  },
+  {
+    "gameId": "composed-3438bb2377b0abc6",
+    "level": "A",
+    "fingerprint": "[\"A\", [[\"N\", \"-\", true], [\"K\", \"-\", false], [\"R\", \"P\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 2
+  },
+  {
+    "gameId": "composed-f0d8506bb333a244",
+    "level": "A",
+    "fingerprint": "[\"A\", [[\"R\", \"P\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 1
+  },
+  {
+    "gameId": "composed-f562f0c7ecbaa3dc",
+    "level": "A",
+    "fingerprint": "[\"A\", [[\"R\", \"Q\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 1
+  },
+  {
+    "gameId": "composed-363fe3f5565042ba",
+    "level": "A",
+    "fingerprint": "[\"A\", [[\"Q\", \"R\", true], [\"K\", \"Q\", false], [\"R\", \"N\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 2
+  },
+  {
+    "gameId": "composed-a094d454949874da",
+    "level": "A",
+    "fingerprint": "[\"A\", [[\"Q\", \"-\", true], [\"K\", \"-\", false], [\"R\", \"-\", true]]]",
+    "decision": "rejected",
+    "reason": "Deeper principal line changes the motif or sacrifice grade.",
+    "rootNodes": 1200000,
+    "rootMate": 2
+  },
+  {
+    "gameId": "composed-e8c8c013f3231eca",
+    "level": "A",
+    "fingerprint": "[\"A\", [[\"R\", \"-\", true], [\"Q\", \"-\", false], [\"R\", \"Q\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 2
+  },
+  {
+    "gameId": "composed-e1c89d10c4b4ad4b",
+    "level": "A",
+    "fingerprint": "[\"A\", [[\"R\", \"N\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 1
+  },
+  {
+    "gameId": "composed-04eec7f0fab99c65",
+    "level": "A",
+    "fingerprint": "[\"A\", [[\"Q\", \"-\", true], [\"K\", \"-\", false], [\"R\", \"Q\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 2
+  },
+  {
+    "gameId": "composed-c8ad32a1504ca922",
+    "level": "A",
+    "fingerprint": "[\"A\", [[\"Q\", \"Q\", true], [\"K\", \"Q\", false], [\"R\", \"-\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 2
+  },
+  {
+    "gameId": "composed-3f87e338d281bd9b",
+    "level": "A",
+    "fingerprint": "[\"A\", [[\"Q\", \"-\", true], [\"K\", \"P\", false], [\"R\", \"-\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 2
+  },
+  {
+    "gameId": "composed-ca40a73a226389f9",
+    "level": "A",
+    "fingerprint": "[\"A\", [[\"Q\", \"Q\", false], [\"K\", \"-\", false], [\"R\", \"-\", true]]]",
+    "decision": "rejected",
+    "reason": "Deeper principal line changes the motif or sacrifice grade.",
+    "rootNodes": 1200000,
+    "rootMate": 2
+  },
+  {
+    "gameId": "composed-02c63fe9904e4592",
+    "level": "A",
+    "fingerprint": "[\"A\", [[\"Q\", \"N\", true], [\"K\", \"-\", false], [\"R\", \"-\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 2
+  },
+  {
+    "gameId": "composed-5bcaab50303b957a",
+    "level": "A",
+    "fingerprint": "[\"A\", [[\"N\", \"R\", true], [\"K\", \"-\", false], [\"R\", \"-\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 2
+  },
+  {
+    "gameId": "composed-8790796b56775af7",
+    "level": "A",
+    "fingerprint": "[\"A\", [[\"P\", \"-\", true], [\"R\", \"R\", false], [\"R\", \"R\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 2
+  },
+  {
+    "gameId": "composed-c8194b2adba0f482",
+    "level": "A",
+    "fingerprint": "[\"A\", [[\"P\", \"Q\", true], [\"K\", \"-\", false], [\"R\", \"-\", true]]]",
+    "decision": "rejected",
+    "reason": "Deeper principal line changes the motif or sacrifice grade.",
+    "rootNodes": 1200000,
+    "rootMate": 2
+  },
+  {
+    "gameId": "composed-6e0e393591a6a037",
+    "level": "D",
+    "fingerprint": "[\"D\", [[\"N\", \"Q\", false], [\"N\", \"-\", false], [\"Q\", \"-\", true], [\"N\", \"-\", false], [\"Q\", \"N\", true], [\"K\", \"Q\", false], [\"R\", \"-\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 4
+  },
+  {
+    "gameId": "composed-44f83c5c5aa5e997",
+    "level": "D",
+    "fingerprint": "[\"D\", [[\"Q\", \"-\", true], [\"K\", \"Q\", false], [\"N\", \"-\", true], [\"K\", \"-\", false], [\"R\", \"P\", true], [\"B\", \"-\", false], [\"N\", \"P\", true], [\"K\", \"-\", false], [\"R\", \"B\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 5
+  },
+  {
+    "gameId": "composed-2bd6f05854b4d8fa",
+    "level": "D",
+    "fingerprint": "[\"D\", [[\"N\", \"Q\", false], [\"B\", \"-\", true], [\"K\", \"-\", false], [\"N\", \"-\", false], [\"Q\", \"-\", true], [\"N\", \"-\", false], [\"Q\", \"N\", true], [\"K\", \"Q\", false], [\"R\", \"-\", true]]]",
+    "decision": "rejected",
+    "reason": "Deeper principal line changes the motif or sacrifice grade.",
+    "rootNodes": 1200000,
+    "rootMate": 5
+  },
+  {
+    "gameId": "composed-51d077bc69516e51",
+    "level": "D",
+    "fingerprint": "[\"D\", [[\"N\", \"-\", true], [\"K\", \"-\", false], [\"Q\", \"-\", true], [\"B\", \"-\", false], [\"Q\", \"B\", true], [\"K\", \"Q\", false], [\"R\", \"-\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 4
+  },
+  {
+    "gameId": "composed-b607539ea8ca0afa",
+    "level": "D",
+    "fingerprint": "[\"D\", [[\"N\", \"Q\", false], [\"P\", \"-\", true], [\"B\", \"Q\", false], [\"N\", \"-\", false], [\"Q\", \"-\", true], [\"N\", \"-\", false], [\"Q\", \"N\", true], [\"K\", \"Q\", false], [\"R\", \"-\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 5
+  },
+  {
+    "gameId": "composed-b3ad9a3a7db6290c",
+    "level": "D",
+    "fingerprint": "[\"D\", [[\"N\", \"Q\", false], [\"P\", \"-\", true], [\"B\", \"R\", false], [\"N\", \"-\", false], [\"Q\", \"-\", true], [\"N\", \"-\", false], [\"Q\", \"N\", true], [\"K\", \"Q\", false], [\"R\", \"-\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 5
+  },
+  {
+    "gameId": "composed-287fc27b9de13b51",
+    "level": "D",
+    "fingerprint": "[\"D\", [[\"N\", \"Q\", false], [\"B\", \"B\", true], [\"K\", \"-\", false], [\"N\", \"P\", false], [\"Q\", \"-\", true], [\"N\", \"-\", false], [\"Q\", \"N\", true], [\"K\", \"Q\", false], [\"R\", \"-\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 5
+  },
+  {
+    "gameId": "composed-dcf15cd2f1923402",
+    "level": "D",
+    "fingerprint": "[\"D\", [[\"Q\", \"N\", true], [\"K\", \"Q\", false], [\"N\", \"P\", true], [\"K\", \"-\", false], [\"N\", \"-\", true], [\"K\", \"-\", false], [\"R\", \"P\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 4
+  },
+  {
+    "gameId": "composed-a70ead2278e224b7",
+    "level": "D",
+    "fingerprint": "[\"D\", [[\"Q\", \"-\", true], [\"K\", \"Q\", false], [\"N\", \"P\", true], [\"K\", \"-\", false], [\"N\", \"-\", true], [\"K\", \"-\", false], [\"R\", \"P\", true], [\"B\", \"-\", false], [\"R\", \"B\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 5
+  },
+  {
+    "gameId": "composed-0592db30dde43304",
+    "level": "D",
+    "fingerprint": "[\"D\", [[\"Q\", \"N\", true], [\"K\", \"Q\", false], [\"N\", \"P\", true], [\"K\", \"-\", false], [\"N\", \"-\", true], [\"K\", \"-\", false], [\"R\", \"P\", true], [\"B\", \"-\", false], [\"R\", \"B\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 5
+  },
+  {
+    "gameId": "composed-6b5a2ef1c05f353c",
+    "level": "D",
+    "fingerprint": "[\"D\", [[\"Q\", \"-\", true], [\"K\", \"Q\", false], [\"N\", \"-\", true], [\"K\", \"-\", false], [\"R\", \"P\", true], [\"B\", \"-\", false], [\"N\", \"-\", true], [\"K\", \"-\", false], [\"R\", \"B\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 5
+  },
+  {
+    "gameId": "composed-c18b232b91f1fb0d",
+    "level": "D",
+    "fingerprint": "[\"D\", [[\"B\", \"Q\", false], [\"B\", \"-\", false], [\"Q\", \"-\", true], [\"K\", \"-\", false], [\"Q\", \"-\", true], [\"N\", \"Q\", false], [\"R\", \"-\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 4
+  },
+  {
+    "gameId": "composed-85b87b6a44b11b18",
+    "level": "D",
+    "fingerprint": "[\"D\", [[\"Q\", \"N\", true], [\"K\", \"Q\", false], [\"N\", \"P\", true], [\"K\", \"-\", false], [\"N\", \"P\", true], [\"K\", \"-\", false], [\"R\", \"-\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 4
+  },
+  {
+    "gameId": "composed-7d0b4fb314a59cda",
+    "level": "D",
+    "fingerprint": "[\"D\", [[\"N\", \"Q\", false], [\"B\", \"-\", true], [\"K\", \"-\", false], [\"N\", \"B\", false], [\"Q\", \"-\", true], [\"N\", \"-\", false], [\"Q\", \"N\", true], [\"K\", \"Q\", false], [\"R\", \"-\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 5
+  },
+  {
+    "gameId": "composed-2ec0e418cec7a69d",
+    "level": "D",
+    "fingerprint": "[\"D\", [[\"N\", \"Q\", false], [\"N\", \"B\", false], [\"Q\", \"-\", true], [\"N\", \"-\", false], [\"Q\", \"N\", true], [\"K\", \"Q\", false], [\"R\", \"-\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 4
+  },
+  {
+    "gameId": "composed-404ed4b889346020",
+    "level": "D",
+    "fingerprint": "[\"D\", [[\"Q\", \"N\", true], [\"K\", \"Q\", false], [\"N\", \"P\", true], [\"K\", \"-\", false], [\"N\", \"Q\", true], [\"K\", \"-\", false], [\"R\", \"P\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 4
+  },
+  {
+    "gameId": "composed-4f71d9ded480b0d8",
+    "level": "D",
+    "fingerprint": "[\"D\", [[\"Q\", \"-\", true], [\"K\", \"Q\", false], [\"N\", \"-\", true], [\"K\", \"-\", false], [\"N\", \"-\", true], [\"K\", \"-\", false], [\"R\", \"N\", true], [\"B\", \"-\", false], [\"R\", \"B\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 5
+  },
+  {
+    "gameId": "composed-acc2e5cbfd173bae",
+    "level": "D",
+    "fingerprint": "[\"D\", [[\"K\", \"-\", false], [\"Q\", \"N\", true], [\"B\", \"Q\", false], [\"N\", \"-\", false], [\"Q\", \"-\", true], [\"N\", \"-\", false], [\"Q\", \"N\", true], [\"K\", \"Q\", false], [\"R\", \"-\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 5
+  },
+  {
+    "gameId": "composed-285479aa14641d1a",
+    "level": "D",
+    "fingerprint": "[\"D\", [[\"N\", \"Q\", false], [\"P\", \"-\", true], [\"B\", \"R\", false], [\"B\", \"-\", true], [\"K\", \"-\", false], [\"N\", \"-\", false], [\"Q\", \"-\", true], [\"N\", \"-\", false], [\"Q\", \"N\", true], [\"K\", \"Q\", false], [\"R\", \"-\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 6
+  },
+  {
+    "gameId": "composed-43b011cda0f6ab65",
+    "level": "D",
+    "fingerprint": "[\"D\", [[\"B\", \"Q\", false], [\"P\", \"P\", true], [\"K\", \"-\", false], [\"N\", \"-\", false], [\"Q\", \"-\", true], [\"N\", \"-\", false], [\"Q\", \"N\", true], [\"K\", \"Q\", false], [\"R\", \"-\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 5
+  },
+  {
+    "gameId": "composed-0270bbd83f2e332a",
+    "level": "D",
+    "fingerprint": "[\"D\", [[\"B\", \"Q\", false], [\"N\", \"-\", false], [\"Q\", \"-\", true], [\"N\", \"-\", false], [\"Q\", \"N\", true], [\"K\", \"Q\", false], [\"R\", \"-\", true]]]",
+    "decision": "rejected",
+    "reason": "Deeper principal line changes the motif or sacrifice grade.",
+    "rootNodes": 1200000,
+    "rootMate": 4
+  },
+  {
+    "gameId": "composed-11356e9378ad7a51",
+    "level": "D",
+    "fingerprint": "[\"D\", [[\"B\", \"Q\", false], [\"B\", \"P\", true], [\"K\", \"B\", false], [\"N\", \"-\", false], [\"Q\", \"-\", true], [\"N\", \"-\", false], [\"Q\", \"N\", true], [\"K\", \"Q\", false], [\"R\", \"-\", true]]]",
+    "decision": "rejected",
+    "reason": "Deeper principal line changes the motif or sacrifice grade.",
+    "rootNodes": 1200000,
+    "rootMate": 5
+  },
+  {
+    "gameId": "composed-385ce330a5a3c0a0",
+    "level": "D",
+    "fingerprint": "[\"D\", [[\"N\", \"Q\", false], [\"B\", \"-\", true], [\"K\", \"-\", false], [\"P\", \"-\", true], [\"B\", \"Q\", false], [\"N\", \"P\", false], [\"Q\", \"-\", true], [\"N\", \"-\", false], [\"Q\", \"N\", true], [\"K\", \"Q\", false], [\"R\", \"-\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 6
+  },
+  {
+    "gameId": "composed-5704c905bbe95abc",
+    "level": "C",
+    "fingerprint": "[\"C\", [[\"Q\", \"-\", true], [\"B\", \"-\", false], [\"Q\", \"B\", true], [\"K\", \"Q\", false], [\"R\", \"-\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 3
+  },
+  {
+    "gameId": "composed-681b94a71342ba1b",
+    "level": "C",
+    "fingerprint": "[\"C\", [[\"Q\", \"Q\", true], [\"K\", \"-\", false], [\"Q\", \"-\", true], [\"N\", \"Q\", false], [\"R\", \"-\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 3
+  },
+  {
+    "gameId": "composed-24b707347c834f0b",
+    "level": "C",
+    "fingerprint": "[\"C\", [[\"P\", \"-\", true], [\"K\", \"P\", false], [\"Q\", \"-\", true], [\"N\", \"Q\", false], [\"R\", \"N\", true]]]",
+    "decision": "rejected",
+    "reason": "Deeper principal line changes the motif or sacrifice grade.",
+    "rootNodes": 1200000,
+    "rootMate": 3
+  },
+  {
+    "gameId": "composed-c881e828f65973a6",
+    "level": "C*",
+    "fingerprint": "[\"C*\", [[\"K\", \"-\", false], [\"Q\", \"-\", true], [\"K\", \"Q\", false], [\"P\", \"-\", true], [\"K\", \"P\", false], [\"N\", \"-\", false], [\"Q\", \"B\", true], [\"K\", \"-\", false], [\"R\", \"-\", true], [\"N\", \"-\", false], [\"R\", \"N\", true]]]",
+    "decision": "rejected",
+    "reason": "Deeper principal line changes the motif or sacrifice grade.",
+    "rootNodes": 1200000,
+    "rootMate": 6
+  },
+  {
+    "gameId": "composed-276b2b77f64c08c6",
+    "level": "C*",
+    "fingerprint": "[\"C*\", [[\"B\", \"Q\", false], [\"B\", \"-\", false], [\"Q\", \"B\", false], [\"N\", \"-\", true], [\"B\", \"N\", false], [\"P\", \"P\", true], [\"K\", \"P\", false], [\"K\", \"-\", false], [\"R\", \"-\", true]]]",
+    "decision": "rejected",
+    "reason": "Deeper principal line changes the motif or sacrifice grade.",
+    "rootNodes": 1200000,
+    "rootMate": 5
+  },
+  {
+    "gameId": "composed-631edeb7dec591b5",
+    "level": "C*",
+    "fingerprint": "[\"C*\", [[\"N\", \"R\", false], [\"K\", \"-\", false], [\"R\", \"-\", false], [\"P\", \"-\", false], [\"K\", \"-\", false], [\"P\", \"-\", true], [\"K\", \"P\", false], [\"K\", \"-\", false], [\"R\", \"-\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 5
+  },
+  {
+    "gameId": "composed-c420aaeefba5f808",
+    "level": "C*",
+    "fingerprint": "[\"C*\", [[\"K\", \"Q\", false], [\"R\", \"R\", false], [\"Q\", \"-\", true], [\"N\", \"-\", false], [\"Q\", \"N\", true], [\"K\", \"P\", false], [\"R\", \"-\", true], [\"R\", \"-\", false], [\"R\", \"R\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 5
+  },
+  {
+    "gameId": "composed-38259d152aa4d60a",
+    "level": "C*",
+    "fingerprint": "[\"C*\", [[\"K\", \"-\", false], [\"Q\", \"N\", true], [\"B\", \"Q\", false], [\"N\", \"-\", false], [\"Q\", \"-\", true], [\"K\", \"-\", false], [\"R\", \"-\", true], [\"N\", \"-\", false], [\"R\", \"N\", true]]]",
+    "decision": "rejected",
+    "reason": "Deeper principal line changes the motif or sacrifice grade.",
+    "rootNodes": 1200000,
+    "rootMate": 5
+  },
+  {
+    "gameId": "composed-71026d13b1a907a1",
+    "level": "C*",
+    "fingerprint": "[\"C*\", [[\"B\", \"-\", false], [\"Q\", \"B\", true], [\"K\", \"Q\", false], [\"N\", \"-\", false], [\"Q\", \"B\", true], [\"K\", \"-\", false], [\"R\", \"-\", true], [\"N\", \"-\", false], [\"R\", \"N\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 5
+  },
+  {
+    "gameId": "composed-1618891808b5b29d",
+    "level": "C*",
+    "fingerprint": "[\"C*\", [[\"K\", \"-\", false], [\"Q\", \"-\", true], [\"B\", \"Q\", false], [\"N\", \"-\", false], [\"Q\", \"B\", true], [\"K\", \"-\", false], [\"R\", \"-\", true], [\"N\", \"-\", false], [\"R\", \"N\", true]]]",
+    "decision": "rejected",
+    "reason": "Deeper principal line changes the motif or sacrifice grade.",
+    "rootNodes": 1200000,
+    "rootMate": 5
+  },
+  {
+    "gameId": "composed-426d14ebf4599ada",
+    "level": "C*",
+    "fingerprint": "[\"C*\", [[\"B\", \"Q\", false], [\"P\", \"P\", true], [\"K\", \"-\", false], [\"N\", \"-\", false], [\"Q\", \"B\", true], [\"K\", \"-\", false], [\"R\", \"-\", true], [\"N\", \"-\", false], [\"R\", \"N\", true]]]",
+    "decision": "rejected",
+    "reason": "Deeper principal line changes the motif or sacrifice grade.",
+    "rootNodes": 1200000,
+    "rootMate": 5
+  },
+  {
+    "gameId": "composed-63e18d45a8c34c04",
+    "level": "C*",
+    "fingerprint": "[\"C*\", [[\"N\", \"Q\", false], [\"P\", \"-\", true], [\"B\", \"R\", false], [\"N\", \"-\", false], [\"Q\", \"B\", true], [\"K\", \"-\", false], [\"R\", \"-\", true], [\"N\", \"-\", false], [\"R\", \"N\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 5
+  },
+  {
+    "gameId": "composed-94bf2cf768742483",
+    "level": "C*",
+    "fingerprint": "[\"C*\", [[\"N\", \"Q\", false], [\"B\", \"Q\", false], [\"P\", \"-\", true], [\"N\", \"Q\", false], [\"N\", \"B\", true], [\"K\", \"-\", false], [\"N\", \"-\", false], [\"P\", \"-\", false], [\"R\", \"-\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 5
+  },
+  {
+    "gameId": "composed-c681d085a43b5e77",
+    "level": "C*",
+    "fingerprint": "[\"C*\", [[\"N\", \"Q\", false], [\"P\", \"-\", true], [\"B\", \"R\", false], [\"N\", \"P\", false], [\"Q\", \"B\", true], [\"K\", \"-\", false], [\"R\", \"-\", true], [\"N\", \"-\", false], [\"R\", \"N\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 5
+  },
+  {
+    "gameId": "composed-ef4f805b58b108e0",
+    "level": "C*",
+    "fingerprint": "[\"C*\", [[\"K\", \"-\", false], [\"Q\", \"-\", true], [\"K\", \"Q\", false], [\"P\", \"P\", true], [\"K\", \"-\", false], [\"N\", \"-\", false], [\"Q\", \"B\", true], [\"K\", \"-\", false], [\"R\", \"-\", true], [\"N\", \"-\", false], [\"R\", \"N\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 6
+  },
+  {
+    "gameId": "composed-842a8fd104af11ae",
+    "level": "C*",
+    "fingerprint": "[\"C*\", [[\"K\", \"-\", false], [\"Q\", \"-\", true], [\"K\", \"Q\", false], [\"N\", \"-\", false], [\"Q\", \"B\", true], [\"K\", \"-\", false], [\"R\", \"-\", true], [\"N\", \"-\", false], [\"R\", \"N\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 5
+  },
+  {
+    "gameId": "composed-96a8c31dd32156dc",
+    "level": "C*",
+    "fingerprint": "[\"C*\", [[\"N\", \"Q\", false], [\"P\", \"-\", true], [\"B\", \"Q\", false], [\"N\", \"-\", false], [\"Q\", \"B\", true], [\"K\", \"-\", false], [\"R\", \"-\", true], [\"N\", \"-\", false], [\"R\", \"N\", true]]]",
+    "decision": "rejected",
+    "reason": "Deeper principal line changes the motif or sacrifice grade.",
+    "rootNodes": 1200000,
+    "rootMate": 5
+  },
+  {
+    "gameId": "composed-161bd988e5035976",
+    "level": "C*",
+    "fingerprint": "[\"C*\", [[\"B\", \"Q\", false], [\"B\", \"-\", true], [\"R\", \"B\", false], [\"N\", \"-\", false], [\"Q\", \"-\", true], [\"K\", \"-\", false], [\"R\", \"-\", true], [\"N\", \"-\", false], [\"R\", \"N\", true]]]",
+    "decision": "rejected",
+    "reason": "Deeper principal line changes the motif or sacrifice grade.",
+    "rootNodes": 1200000,
+    "rootMate": 5
+  },
+  {
+    "gameId": "composed-d1d83ab0e0ae1122",
+    "level": "C*",
+    "fingerprint": "[\"C*\", [[\"N\", \"Q\", false], [\"B\", \"P\", true], [\"K\", \"-\", false], [\"N\", \"P\", false], [\"Q\", \"-\", true], [\"K\", \"-\", false], [\"R\", \"-\", true], [\"N\", \"-\", false], [\"R\", \"N\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 5
+  },
+  {
+    "gameId": "composed-b736c28976842a8c",
+    "level": "C*",
+    "fingerprint": "[\"C*\", [[\"N\", \"-\", false], [\"Q\", \"N\", true], [\"B\", \"Q\", false], [\"N\", \"-\", false], [\"Q\", \"B\", true], [\"K\", \"-\", false], [\"R\", \"-\", true], [\"N\", \"-\", false], [\"R\", \"N\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 5
+  },
+  {
+    "gameId": "composed-89ead48b306891f8",
+    "level": "C*",
+    "fingerprint": "[\"C*\", [[\"B\", \"Q\", false], [\"P\", \"P\", true], [\"K\", \"P\", false], [\"N\", \"-\", false], [\"Q\", \"-\", true], [\"K\", \"-\", false], [\"R\", \"-\", true], [\"N\", \"-\", false], [\"R\", \"N\", true]]]",
+    "decision": "rejected",
+    "reason": "Deeper principal line changes the motif or sacrifice grade.",
+    "rootNodes": 1200000,
+    "rootMate": 5
+  },
+  {
+    "gameId": "composed-32f640aca2cd6bac",
+    "level": "C*",
+    "fingerprint": "[\"C*\", [[\"Q\", \"-\", true], [\"K\", \"-\", false], [\"Q\", \"-\", true], [\"K\", \"P\", false], [\"Q\", \"-\", true], [\"Q\", \"-\", false], [\"Q\", \"Q\", true], [\"K\", \"Q\", false], [\"R\", \"R\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 5
+  },
+  {
+    "gameId": "composed-031d64ed118e9f0c",
+    "level": "C*",
+    "fingerprint": "[\"C*\", [[\"B\", \"-\", false], [\"Q\", \"B\", true], [\"N\", \"Q\", false], [\"N\", \"-\", false], [\"Q\", \"B\", true], [\"K\", \"-\", false], [\"R\", \"-\", true], [\"N\", \"-\", false], [\"R\", \"N\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 5
+  },
+  {
+    "gameId": "composed-df74a4dca1041ab5",
+    "level": "C*",
+    "fingerprint": "[\"C*\", [[\"K\", \"-\", false], [\"Q\", \"-\", true], [\"K\", \"Q\", false], [\"P\", \"-\", true], [\"B\", \"Q\", false], [\"N\", \"-\", false], [\"Q\", \"B\", true], [\"K\", \"-\", false], [\"R\", \"-\", true], [\"N\", \"-\", false], [\"R\", \"N\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 6
+  },
+  {
+    "gameId": "composed-958e1fc5cd66b8d8",
+    "level": "B",
+    "fingerprint": "[\"B\", [[\"Q\", \"Q\", false], [\"B\", \"-\", false], [\"Q\", \"-\", true], [\"K\", \"N\", false], [\"R\", \"-\", true]]]",
+    "decision": "rejected",
+    "reason": "Deeper principal line changes the motif or sacrifice grade.",
+    "rootNodes": 1200000,
+    "rootMate": 3
+  },
+  {
+    "gameId": "composed-d1927dc5f9b11bf7",
+    "level": "B",
+    "fingerprint": "[\"B\", [[\"Q\", \"P\", true], [\"Q\", \"Q\", false], [\"R\", \"Q\", true], [\"K\", \"R\", false], [\"R\", \"-\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 3
+  },
+  {
+    "gameId": "composed-d3d4973875d7f7b6",
+    "level": "B",
+    "fingerprint": "[\"B\", [[\"R\", \"-\", true], [\"N\", \"-\", false], [\"R\", \"N\", true], [\"K\", \"P\", false], [\"R\", \"R\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 3
+  },
+  {
+    "gameId": "composed-8d28049a82a8c511",
+    "level": "B",
+    "fingerprint": "[\"B\", [[\"R\", \"-\", true], [\"N\", \"-\", false], [\"Q\", \"N\", true], [\"K\", \"P\", false], [\"R\", \"R\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 3
+  },
+  {
+    "gameId": "composed-1513856927df0a45",
+    "level": "B",
+    "fingerprint": "[\"B\", [[\"Q\", \"N\", true], [\"K\", \"-\", false], [\"R\", \"P\", true], [\"N\", \"-\", false], [\"R\", \"N\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 3
+  },
+  {
+    "gameId": "composed-791d5f0370238b63",
+    "level": "B",
+    "fingerprint": "[\"B\", [[\"R\", \"-\", true], [\"N\", \"-\", false], [\"R\", \"N\", true], [\"K\", \"P\", false], [\"R\", \"-\", true]]]",
+    "decision": "rejected",
+    "reason": "Deeper principal line changes the motif or sacrifice grade.",
+    "rootNodes": 1200000,
+    "rootMate": 3
+  },
+  {
+    "gameId": "composed-552e5ecc12a821c8",
+    "level": "B",
+    "fingerprint": "[\"B\", [[\"B\", \"Q\", false], [\"B\", \"P\", true], [\"K\", \"B\", false], [\"K\", \"-\", false], [\"R\", \"-\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 3
+  },
+  {
+    "gameId": "composed-edd73daa80131ef9",
+    "level": "B",
+    "fingerprint": "[\"B\", [[\"Q\", \"Q\", true], [\"K\", \"Q\", false], [\"R\", \"-\", true], [\"N\", \"-\", false], [\"R\", \"N\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 3
+  },
+  {
+    "gameId": "composed-28ff16f71e8baaa5",
+    "level": "B",
+    "fingerprint": "[\"B\", [[\"R\", \"Q\", false], [\"B\", \"Q\", false], [\"N\", \"B\", true], [\"K\", \"-\", false], [\"R\", \"-\", true]]]",
+    "decision": "rejected",
+    "reason": "Deeper principal line changes the motif or sacrifice grade.",
+    "rootNodes": 1200000,
+    "rootMate": 3
+  },
+  {
+    "gameId": "composed-7af35f25d29d1679",
+    "level": "B",
+    "fingerprint": "[\"B\", [[\"R\", \"N\", true], [\"N\", \"-\", false], [\"Q\", \"N\", true], [\"K\", \"P\", false], [\"R\", \"R\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 3
+  },
+  {
+    "gameId": "composed-d55f0ad3a64a3c2e",
+    "level": "B",
+    "fingerprint": "[\"B\", [[\"B\", \"Q\", false], [\"B\", \"Q\", false], [\"N\", \"B\", true], [\"K\", \"-\", false], [\"R\", \"-\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 3
+  },
+  {
+    "gameId": "composed-6255f53bd0b38243",
+    "level": "B",
+    "fingerprint": "[\"B\", [[\"Q\", \"-\", true], [\"K\", \"-\", false], [\"R\", \"P\", true], [\"N\", \"-\", false], [\"R\", \"N\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 3
+  },
+  {
+    "gameId": "composed-d95161c05ef593cf",
+    "level": "B",
+    "fingerprint": "[\"B\", [[\"Q\", \"-\", true], [\"N\", \"-\", false], [\"Q\", \"N\", true], [\"K\", \"P\", false], [\"R\", \"R\", true]]]",
+    "decision": "rejected",
+    "reason": "Deeper principal line changes the motif or sacrifice grade.",
+    "rootNodes": 1200000,
+    "rootMate": 3
+  },
+  {
+    "gameId": "composed-2d79afbdca9c27ba",
+    "level": "B",
+    "fingerprint": "[\"B\", [[\"Q\", \"-\", true], [\"R\", \"-\", false], [\"Q\", \"R\", true], [\"K\", \"P\", false], [\"R\", \"-\", true]]]",
+    "decision": "rejected",
+    "reason": "Deeper principal line changes the motif or sacrifice grade.",
+    "rootNodes": 1200000,
+    "rootMate": 3
+  },
+  {
+    "gameId": "composed-1188661b0677e7fa",
+    "level": "B",
+    "fingerprint": "[\"B\", [[\"P\", \"-\", true], [\"N\", \"-\", false], [\"Q\", \"N\", true], [\"K\", \"P\", false], [\"R\", \"-\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 3
+  },
+  {
+    "gameId": "composed-d8c8472af903bd30",
+    "level": "B",
+    "fingerprint": "[\"B\", [[\"Q\", \"N\", true], [\"K\", \"-\", false], [\"R\", \"Q\", true], [\"N\", \"-\", false], [\"R\", \"N\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 3
+  },
+  {
+    "gameId": "composed-1f8bc4b2cf7d07d7",
+    "level": "B",
+    "fingerprint": "[\"B\", [[\"Q\", \"Q\", true], [\"K\", \"-\", false], [\"R\", \"R\", true], [\"N\", \"-\", false], [\"R\", \"N\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 3
+  },
+  {
+    "gameId": "composed-ebab303d1349640d",
+    "level": "B",
+    "fingerprint": "[\"B\", [[\"Q\", \"-\", true], [\"K\", \"-\", false], [\"R\", \"R\", true], [\"N\", \"-\", false], [\"R\", \"N\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 3
+  },
+  {
+    "gameId": "composed-5618cb03f42712fb",
+    "level": "B",
+    "fingerprint": "[\"B\", [[\"Q\", \"-\", true], [\"K\", \"P\", false], [\"R\", \"-\", true], [\"R\", \"R\", false], [\"R\", \"R\", true]]]",
+    "decision": "rejected",
+    "reason": "Deeper principal line changes the motif or sacrifice grade.",
+    "rootNodes": 1200000,
+    "rootMate": 3
+  },
+  {
+    "gameId": "composed-54df11939041e050",
+    "level": "B",
+    "fingerprint": "[\"B\", [[\"Q\", \"Q\", false], [\"P\", \"-\", false], [\"P\", \"R\", true], [\"K\", \"-\", false], [\"R\", \"-\", true]]]",
+    "decision": "rejected",
+    "reason": "Deeper principal line changes the motif or sacrifice grade.",
+    "rootNodes": 1200000,
+    "rootMate": 3
+  },
+  {
+    "gameId": "composed-f39f936556495aa0",
+    "level": "B",
+    "fingerprint": "[\"B\", [[\"Q\", \"Q\", false], [\"B\", \"-\", true], [\"K\", \"B\", false], [\"K\", \"-\", false], [\"R\", \"P\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 3
+  },
+  {
+    "gameId": "composed-f543aa7407894f1b",
+    "level": "A",
+    "fingerprint": "[\"A\", [[\"Q\", \"-\", true], [\"K\", \"P\", false], [\"R\", \"Q\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 2
+  },
+  {
+    "gameId": "composed-fe6ecb1ba2a2a9b1",
+    "level": "A",
+    "fingerprint": "[\"A\", [[\"Q\", \"-\", true], [\"K\", \"N\", false], [\"R\", \"-\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 2
+  },
+  {
+    "gameId": "composed-8d44186d1a23c02a",
+    "level": "A",
+    "fingerprint": "[\"A\", [[\"Q\", \"Q\", false], [\"K\", \"N\", false], [\"R\", \"-\", true]]]",
+    "decision": "rejected",
+    "reason": "Deeper principal line changes the motif or sacrifice grade.",
+    "rootNodes": 1200000,
+    "rootMate": 2
+  },
+  {
+    "gameId": "composed-1172ae35b8be135e",
+    "level": "A",
+    "fingerprint": "[\"A\", [[\"Q\", \"B\", true], [\"K\", \"-\", false], [\"R\", \"-\", true]]]",
+    "decision": "rejected",
+    "reason": "Deeper principal line changes the motif or sacrifice grade.",
+    "rootNodes": 1200000,
+    "rootMate": 2
+  },
+  {
+    "gameId": "composed-ba62576619664e77",
+    "level": "A",
+    "fingerprint": "[\"A\", [[\"N\", \"B\", true], [\"K\", \"-\", false], [\"R\", \"-\", true]]]",
+    "decision": "rejected",
+    "reason": "Deeper principal line changes the motif or sacrifice grade.",
+    "rootNodes": 1200000,
+    "rootMate": 2
+  },
+  {
+    "gameId": "composed-0d7b8096befac34e",
+    "level": "A",
+    "fingerprint": "[\"A\", [[\"K\", \"-\", true], [\"R\", \"-\", false], [\"R\", \"R\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 2
+  },
+  {
+    "gameId": "composed-ea6bbc54ddb046bc",
+    "level": "A",
+    "fingerprint": "[\"A\", [[\"R\", \"-\", true], [\"K\", \"P\", false], [\"R\", \"R\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 2
+  },
+  {
+    "gameId": "composed-2420168c5ff47b97",
+    "level": "A",
+    "fingerprint": "[\"A\", [[\"P\", \"-\", true], [\"R\", \"-\", false], [\"R\", \"R\", true]]]",
+    "decision": "rejected",
+    "reason": "Deeper principal line changes the motif or sacrifice grade.",
+    "rootNodes": 1200000,
+    "rootMate": 2
+  },
+  {
+    "gameId": "composed-bd585f8a48e90cea",
+    "level": "A",
+    "fingerprint": "[\"A\", [[\"Q\", \"-\", true], [\"K\", \"P\", false], [\"R\", \"R\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 2
+  },
+  {
+    "gameId": "composed-7d5adc91517f516f",
+    "level": "A",
+    "fingerprint": "[\"A\", [[\"R\", \"-\", true], [\"K\", \"P\", false], [\"R\", \"-\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 2
+  },
+  {
+    "gameId": "composed-21b5746558df7609",
+    "level": "A",
+    "fingerprint": "[\"A\", [[\"R\", \"R\", true], [\"Q\", \"-\", false], [\"R\", \"Q\", true]]]",
+    "decision": "rejected",
+    "reason": "Deeper principal line changes the motif or sacrifice grade.",
+    "rootNodes": 1200000,
+    "rootMate": 2
+  },
+  {
+    "gameId": "composed-b0378aebd12ef7a7",
+    "level": "A",
+    "fingerprint": "[\"A\", [[\"Q\", \"N\", true], [\"K\", \"P\", false], [\"R\", \"-\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 2
+  },
+  {
+    "gameId": "composed-a4a0061c8ecddb5a",
+    "level": "A",
+    "fingerprint": "[\"A\", [[\"K\", \"-\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 1
+  },
+  {
+    "gameId": "composed-6cd806a10e86e473",
+    "level": "A",
+    "fingerprint": "[\"A\", [[\"R\", \"P\", true], [\"Q\", \"-\", false], [\"R\", \"Q\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 2
+  },
+  {
+    "gameId": "composed-a6c47006de887a90",
+    "level": "A",
+    "fingerprint": "[\"A\", [[\"Q\", \"-\", true], [\"K\", \"P\", false], [\"R\", \"P\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 2
+  },
+  {
+    "gameId": "composed-4c4009cabb89bf8b",
+    "level": "A",
+    "fingerprint": "[\"A\", [[\"P\", \"-\", true], [\"R\", \"Q\", false], [\"R\", \"R\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 2
+  },
+  {
+    "gameId": "composed-d5e3a0a6ac0d1450",
+    "level": "A",
+    "fingerprint": "[\"A\", [[\"Q\", \"R\", true], [\"K\", \"P\", false], [\"R\", \"P\", true]]]",
+    "decision": "accepted",
+    "reason": "Deeper root review, essential rook/knight motif, immediate alternatives and all-defence certificate checked.",
+    "rootNodes": 1200000,
+    "rootMate": 2
+  },
+  {
+    "gameId": "composed-9a8c6f4443e514e3",
+    "level": "A",
+    "fingerprint": "[\"A\", [[\"P\", \"-\", true], [\"K\", \"P\", false], [\"R\", \"-\", true]]]",
+    "decision": "rejected",
+    "reason": "Deeper principal line changes the motif or sacrifice grade.",
+    "rootNodes": 1200000,
+    "rootMate": 2
+  }
+]

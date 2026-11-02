@@ -1,0 +1,1197 @@
+{
+  "policy": "Only rejected composed proofs without published, builder-pool or explicit dependencies. Rejection and candidate records retained.",
+  "removed": [
+    {
+      "path": "scripts/fixtures/anastasia-mate/mate-proofs/composed-5618cb03f42712fb.json",
+      "sha256": "7d0a469a28eda1e8e62a48c464c34085005db657976783af1861b5fb3eaab287",
+      "bytes": 741,
+      "gameId": "composed-5618cb03f42712fb",
+      "rejectionRecord": "scripts/fixtures/anastasia-mate/composed-reviewed.json",
+      "reason": "Deeper principal line changes the motif or sacrifice grade."
+    },
+    {
+      "path": "scripts/fixtures/anastasia-mate/mate-proofs/composed-57209369bb24ad1a.json",
+      "sha256": "2fa2c61e883d0b57dfed553bae4a6bbd39c726b42d7677b3ab6a1904683f9a01",
+      "bytes": 6718,
+      "gameId": "composed-57209369bb24ad1a",
+      "rejectionRecord": "scripts/fixtures/anastasia-mate/composed-reviewed.json",
+      "reason": "Deeper principal line changes the motif or sacrifice grade."
+    },
+    {
+      "path": "scripts/fixtures/anastasia-mate/mate-proofs/composed-366618f4b22070ed.json",
+      "sha256": "45ff4c9feb4adbcfd28a12398a849a9148d8cdcce7d55c4d0843ff15ed11078d",
+      "bytes": 17936,
+      "gameId": "composed-366618f4b22070ed",
+      "rejectionRecord": "scripts/fixtures/anastasia-mate/composed-reviewed.json",
+      "reason": "Deeper principal line changes the motif or sacrifice grade."
+    },
+    {
+      "path": "scripts/fixtures/anastasia-mate/mate-proofs/composed-0ed9aea7687076db.json",
+      "sha256": "75c21d2405ee00ba18dd531ee9453ff958d47fd3607fdd01ede5ae764def9e8f",
+      "bytes": 1066,
+      "gameId": "composed-0ed9aea7687076db",
+      "rejectionRecord": "scripts/fixtures/anastasia-mate/composed-reviewed.json",
+      "reason": "Deeper principal line changes the motif or sacrifice grade."
+    },
+    {
+      "path": "scripts/fixtures/anastasia-mate/mate-proofs/composed-21b5746558df7609.json",
+      "sha256": "bb60b61652c8b599e86bb542d22c13e15c1a0ed247d98cfe2eefb69674bf745f",
+      "bytes": 792,
+      "gameId": "composed-21b5746558df7609",
+      "rejectionRecord": "scripts/fixtures/anastasia-mate/composed-reviewed.json",
+      "reason": "Deeper principal line changes the motif or sacrifice grade."
+    },
+    {
+      "path": "scripts/fixtures/anastasia-mate/mate-proofs/composed-2420168c5ff47b97.json",
+      "sha256": "611a7164c8f2e878d4d7feb0ca5258498d24edae8301e4c1146f8d5af3edc896",
+      "bytes": 571,
+      "gameId": "composed-2420168c5ff47b97",
+      "rejectionRecord": "scripts/fixtures/anastasia-mate/composed-reviewed.json",
+      "reason": "Deeper principal line changes the motif or sacrifice grade."
+    },
+    {
+      "path": "scripts/fixtures/anastasia-mate/mate-proofs/composed-958e1fc5cd66b8d8.json",
+      "sha256": "ffc02a818bb91dece39b7fb8806a8dedecd7f77acfcecd74738663e831b37fe3",
+      "bytes": 3851,
+      "gameId": "composed-958e1fc5cd66b8d8",
+      "rejectionRecord": "scripts/fixtures/anastasia-mate/composed-reviewed.json",
+      "reason": "Deeper principal line changes the motif or sacrifice grade."
+    },
+    {
+      "path": "scripts/fixtures/anastasia-mate/mate-proofs/composed-de22ff7a16405516.json",
+      "sha256": "4cef06cdeb5d1f74012fd07460971c78f8b834def025a7fda83ae46ce489decd",
+      "bytes": 3563,
+      "gameId": "composed-de22ff7a16405516",
+      "rejectionRecord": "scripts/fixtures/anastasia-mate/composed-reviewed.json",
+      "reason": "Deeper principal line changes the motif or sacrifice grade."
+    },
+    {
+      "path": "scripts/fixtures/anastasia-mate/mate-proofs/composed-38259d152aa4d60a.json",
+      "sha256": "8a3dce28a0ff1fb3c6d65beedf57eb13bdd703c0af3677bd4d869b214774895b",
+      "bytes": 10212,
+      "gameId": "composed-38259d152aa4d60a",
+      "rejectionRecord": "scripts/fixtures/anastasia-mate/composed-reviewed.json",
+      "reason": "Deeper principal line changes the motif or sacrifice grade."
+    },
+    {
+      "path": "scripts/fixtures/anastasia-mate/mate-proofs/composed-11356e9378ad7a51.json",
+      "sha256": "c50548737fb1b15b1daf510bc077fbab39e687279aa760dc330875b7b7ad6827",
+      "bytes": 5306,
+      "gameId": "composed-11356e9378ad7a51",
+      "rejectionRecord": "scripts/fixtures/anastasia-mate/composed-reviewed.json",
+      "reason": "Deeper principal line changes the motif or sacrifice grade."
+    },
+    {
+      "path": "scripts/fixtures/anastasia-mate/mate-proofs/composed-31330a15f91052e5.json",
+      "sha256": "993d209f4fe564a42f85c1457cad423c2c96e64078e4b769b1cfd7f2feb0008f",
+      "bytes": 22361,
+      "gameId": "composed-31330a15f91052e5",
+      "rejectionRecord": "scripts/fixtures/anastasia-mate/composed-reviewed.json",
+      "reason": "Deeper principal line changes the motif or sacrifice grade."
+    },
+    {
+      "path": "scripts/fixtures/anastasia-mate/mate-proofs/composed-1599b3a59d34d88c.json",
+      "sha256": "c2d97574e747069b994794a2695098b6d9d857e2eb11c9220bf4f5a1e4d5578c",
+      "bytes": 786,
+      "gameId": "composed-1599b3a59d34d88c",
+      "rejectionRecord": "scripts/fixtures/anastasia-mate/composed-reviewed.json",
+      "reason": "Deeper principal line changes the motif or sacrifice grade."
+    },
+    {
+      "path": "scripts/fixtures/anastasia-mate/mate-proofs/composed-a924d47cb27a1f3a.json",
+      "sha256": "c84ffef22f004762c0032e189d6f93acefffcf5f2569c609fc5157d83c88d3b3",
+      "bytes": 1590,
+      "gameId": "composed-a924d47cb27a1f3a",
+      "rejectionRecord": "scripts/fixtures/anastasia-mate/composed-reviewed.json",
+      "reason": "Deeper review changes the shortest mating distance."
+    },
+    {
+      "path": "scripts/fixtures/anastasia-mate/mate-proofs/composed-7c02e1eb54f02dad.json",
+      "sha256": "3ec3b9adc95457404342888c5547ec36d84c49a2c04c813b496d2e816519ec65",
+      "bytes": 7085,
+      "gameId": "composed-7c02e1eb54f02dad",
+      "rejectionRecord": "scripts/fixtures/anastasia-mate/composed-reviewed.json",
+      "reason": "Deeper principal line changes the motif or sacrifice grade."
+    },
+    {
+      "path": "scripts/fixtures/anastasia-mate/mate-proofs/composed-30dbfbe316263486.json",
+      "sha256": "b292a339cc23485881d1edf449a4fa9df09ef2b570a4430868119ee239c70491",
+      "bytes": 7239,
+      "gameId": "composed-30dbfbe316263486",
+      "rejectionRecord": "scripts/fixtures/anastasia-mate/composed-reviewed.json",
+      "reason": "Deeper principal line changes the motif or sacrifice grade."
+    },
+    {
+      "path": "scripts/fixtures/anastasia-mate/mate-proofs/composed-ba62576619664e77.json",
+      "sha256": "5315b33ad211f2e6d8e08b50c39bf2e66d798e0348370620bea995c25bb4bfc4",
+      "bytes": 682,
+      "gameId": "composed-ba62576619664e77",
+      "rejectionRecord": "scripts/fixtures/anastasia-mate/composed-reviewed.json",
+      "reason": "Deeper principal line changes the motif or sacrifice grade."
+    },
+    {
+      "path": "scripts/fixtures/anastasia-mate/mate-proofs/composed-201288ec08546b1b.json",
+      "sha256": "b678bcc7862a6bbf9c479dd3cbd2cc3856eb9d36a6a3e50412a8477551fb2c65",
+      "bytes": 6720,
+      "gameId": "composed-201288ec08546b1b",
+      "rejectionRecord": "scripts/fixtures/anastasia-mate/composed-reviewed.json",
+      "reason": "Deeper principal line changes the motif or sacrifice grade."
+    },
+    {
+      "path": "scripts/fixtures/anastasia-mate/mate-proofs/composed-2bd6f05854b4d8fa.json",
+      "sha256": "8bd36c3a8eeda93f34e96d332315034fdb55797156235b03de9c693ff20045a4",
+      "bytes": 14450,
+      "gameId": "composed-2bd6f05854b4d8fa",
+      "rejectionRecord": "scripts/fixtures/anastasia-mate/composed-reviewed.json",
+      "reason": "Deeper principal line changes the motif or sacrifice grade."
+    },
+    {
+      "path": "scripts/fixtures/anastasia-mate/mate-proofs/composed-43fdd0bb27e5f223.json",
+      "sha256": "e5aadb3982db91e2bcf7b3a93c4b21616b899bae21eb450adb7ebd5e984d3b7e",
+      "bytes": 7022,
+      "gameId": "composed-43fdd0bb27e5f223",
+      "rejectionRecord": "scripts/fixtures/anastasia-mate/composed-reviewed.json",
+      "reason": "Deeper principal line changes the motif or sacrifice grade."
+    },
+    {
+      "path": "scripts/fixtures/anastasia-mate/mate-proofs/composed-1172ae35b8be135e.json",
+      "sha256": "c879b93630ab4ff2e762b98f6c3f048c3b885a4da25ac8b79b84d1462a4fb232",
+      "bytes": 918,
+      "gameId": "composed-1172ae35b8be135e",
+      "rejectionRecord": "scripts/fixtures/anastasia-mate/composed-reviewed.json",
+      "reason": "Deeper principal line changes the motif or sacrifice grade."
+    },
+    {
+      "path": "scripts/fixtures/anastasia-mate/mate-proofs/composed-39aabf2a6686a49a.json",
+      "sha256": "2ef2eb1279f364627a4ca1206ae5791312f8a293b99f932a6fe1723c1b9c2ea9",
+      "bytes": 1559,
+      "gameId": "composed-39aabf2a6686a49a",
+      "rejectionRecord": "scripts/fixtures/anastasia-mate/composed-reviewed.json",
+      "reason": "Deeper review changes the shortest mating distance."
+    },
+    {
+      "path": "scripts/fixtures/anastasia-mate/mate-proofs/composed-2d79afbdca9c27ba.json",
+      "sha256": "d5e708802a3469b0977415248b26bed455b7675d5feeea1a9e21759eef07e62a",
+      "bytes": 1115,
+      "gameId": "composed-2d79afbdca9c27ba",
+      "rejectionRecord": "scripts/fixtures/anastasia-mate/composed-reviewed.json",
+      "reason": "Deeper principal line changes the motif or sacrifice grade."
+    },
+    {
+      "path": "scripts/fixtures/anastasia-mate/mate-proofs/composed-161bd988e5035976.json",
+      "sha256": "06f1cbde5ad721b75e6d48a0995e76248be8c1439a80e6e3854ca9eb4099ff38",
+      "bytes": 16787,
+      "gameId": "composed-161bd988e5035976",
+      "rejectionRecord": "scripts/fixtures/anastasia-mate/composed-reviewed.json",
+      "reason": "Deeper principal line changes the motif or sacrifice grade."
+    },
+    {
+      "path": "scripts/fixtures/anastasia-mate/mate-proofs/composed-5b786354d7a43915.json",
+      "sha256": "38c8ef1c1d315e61177adaca6ad9b19c17afb6bfd8a9549b424a52099e614ec8",
+      "bytes": 684,
+      "gameId": "composed-5b786354d7a43915",
+      "rejectionRecord": "scripts/fixtures/anastasia-mate/composed-reviewed.json",
+      "reason": "Deeper principal line changes the motif or sacrifice grade."
+    },
+    {
+      "path": "scripts/fixtures/anastasia-mate/mate-proofs/composed-84ecced125b64740.json",
+      "sha256": "453cc936b188cd89a6173d68fc277f716c88755f16c19a23c74e257b12b0c91c",
+      "bytes": 8153,
+      "gameId": "composed-84ecced125b64740",
+      "rejectionRecord": "scripts/fixtures/anastasia-mate/composed-reviewed.json",
+      "reason": "Deeper principal line changes the motif or sacrifice grade."
+    },
+    {
+      "path": "scripts/fixtures/anastasia-mate/mate-proofs/composed-0270bbd83f2e332a.json",
+      "sha256": "23250a8521623e7477f39043466b4114a404a8d1da41f5bce0b08957af25f5ea",
+      "bytes": 3366,
+      "gameId": "composed-0270bbd83f2e332a",
+      "rejectionRecord": "scripts/fixtures/anastasia-mate/composed-reviewed.json",
+      "reason": "Deeper principal line changes the motif or sacrifice grade."
+    },
+    {
+      "path": "scripts/fixtures/anastasia-mate/mate-proofs/composed-1fa41db6fa3e7a51.json",
+      "sha256": "6d0e6814388c789fa13a1c5c83b45fb987bf0a43c5e0cdf409da521b3193c6d5",
+      "bytes": 5555,
+      "gameId": "composed-1fa41db6fa3e7a51",
+      "rejectionRecord": "scripts/fixtures/anastasia-mate/composed-reviewed.json",
+      "reason": "Deeper principal line changes the motif or sacrifice grade."
+    },
+    {
+      "path": "scripts/fixtures/anastasia-mate/mate-proofs/composed-28ff16f71e8baaa5.json",
+      "sha256": "5b6a80deb621c04de96acc0f7427c3ef1a66c95614f2f053e33549bb26682789",
+      "bytes": 1813,
+      "gameId": "composed-28ff16f71e8baaa5",
+      "rejectionRecord": "scripts/fixtures/anastasia-mate/composed-reviewed.json",
+      "reason": "Deeper principal line changes the motif or sacrifice grade."
+    },
+    {
+      "path": "scripts/fixtures/anastasia-mate/mate-proofs/composed-1618891808b5b29d.json",
+      "sha256": "9fc9fad97fc268ac1344d88a97f4201cab343be00464bc07895ea057f3c1ade4",
+      "bytes": 13305,
+      "gameId": "composed-1618891808b5b29d",
+      "rejectionRecord": "scripts/fixtures/anastasia-mate/composed-reviewed.json",
+      "reason": "Deeper principal line changes the motif or sacrifice grade."
+    },
+    {
+      "path": "scripts/fixtures/anastasia-mate/mate-proofs/composed-60368d5eb093d831.json",
+      "sha256": "8f6e192bb24d0eb019837724ec31f61b6d40b1c41054df47f93053b342fe78bc",
+      "bytes": 2381,
+      "gameId": "composed-60368d5eb093d831",
+      "rejectionRecord": "scripts/fixtures/anastasia-mate/composed-reviewed.json",
+      "reason": "Deeper principal line changes the motif or sacrifice grade."
+    },
+    {
+      "path": "scripts/fixtures/anastasia-mate/mate-proofs/composed-9a8c6f4443e514e3.json",
+      "sha256": "e96da11aeeda98fb3f45503ee7c154a8654a1be32bdde92ea056f7eb861b6305",
+      "bytes": 530,
+      "gameId": "composed-9a8c6f4443e514e3",
+      "rejectionRecord": "scripts/fixtures/anastasia-mate/composed-reviewed.json",
+      "reason": "Deeper principal line changes the motif or sacrifice grade."
+    },
+    {
+      "path": "scripts/fixtures/anastasia-mate/mate-proofs/composed-b5177011774913de.json",
+      "sha256": "18c264f501518ddb3600193876c8b73424301d0f41ca400149c18b9b0ed9b340",
+      "bytes": 7381,
+      "gameId": "composed-b5177011774913de",
+      "rejectionRecord": "scripts/fixtures/anastasia-mate/composed-reviewed.json",
+      "reason": "Deeper principal line changes the motif or sacrifice grade."
+    },
+    {
+      "path": "scripts/fixtures/anastasia-mate/mate-proofs/composed-276b2b77f64c08c6.json",
+      "sha256": "5ca67c3a800bb039fbc61c5826043f3a5f1af68ba5959d08fcb47b5ed6c124b7",
+      "bytes": 22039,
+      "gameId": "composed-276b2b77f64c08c6",
+      "rejectionRecord": "scripts/fixtures/anastasia-mate/composed-reviewed.json",
+      "reason": "Deeper principal line changes the motif or sacrifice grade."
+    },
+    {
+      "path": "scripts/fixtures/anastasia-mate/mate-proofs/composed-889a971c571279d8.json",
+      "sha256": "2837cece8e7f3d0708a1513a200fe1f164e92cead1ac51021416d7d620bf54e2",
+      "bytes": 4499,
+      "gameId": "composed-889a971c571279d8",
+      "rejectionRecord": "scripts/fixtures/anastasia-mate/composed-reviewed.json",
+      "reason": "Deeper principal line changes the motif or sacrifice grade."
+    },
+    {
+      "path": "scripts/fixtures/anastasia-mate/mate-proofs/composed-b2eb61e67f522034.json",
+      "sha256": "05c79f24c3ed64b9d9975fd16524b78225416f10307c2cddb5e67a3c135c85e1",
+      "bytes": 13430,
+      "gameId": "composed-b2eb61e67f522034",
+      "rejectionRecord": "scripts/fixtures/anastasia-mate/composed-reviewed.json",
+      "reason": "Deeper principal line changes the motif or sacrifice grade."
+    },
+    {
+      "path": "scripts/fixtures/anastasia-mate/mate-proofs/composed-462c1c60a43fd844.json",
+      "sha256": "782ded1c36d0d288fcae1c58e1d7b0c415a711bc56bffe0429a4bb53c2370ab7",
+      "bytes": 12480,
+      "gameId": "composed-462c1c60a43fd844",
+      "rejectionRecord": "scripts/fixtures/anastasia-mate/composed-reviewed.json",
+      "reason": "Deeper principal line changes the motif or sacrifice grade."
+    },
+    {
+      "path": "scripts/fixtures/anastasia-mate/mate-proofs/composed-d95161c05ef593cf.json",
+      "sha256": "8d637f2001f7316f7c6da3135f0e951e73783aa309522ef175dee0f0f0c773ea",
+      "bytes": 1342,
+      "gameId": "composed-d95161c05ef593cf",
+      "rejectionRecord": "scripts/fixtures/anastasia-mate/composed-reviewed.json",
+      "reason": "Deeper principal line changes the motif or sacrifice grade."
+    },
+    {
+      "path": "scripts/fixtures/anastasia-mate/mate-proofs/composed-c8194b2adba0f482.json",
+      "sha256": "6bcbe7be0096956b2931e50eb70a4211bec90c346b062e8327942dda73f5283f",
+      "bytes": 555,
+      "gameId": "composed-c8194b2adba0f482",
+      "rejectionRecord": "scripts/fixtures/anastasia-mate/composed-reviewed.json",
+      "reason": "Deeper principal line changes the motif or sacrifice grade."
+    },
+    {
+      "path": "scripts/fixtures/anastasia-mate/mate-proofs/composed-426d14ebf4599ada.json",
+      "sha256": "6eac67e2269d55a1874c7e2d3e018409a29e3cc50e0ac6cebe1466a8cacfb07a",
+      "bytes": 6717,
+      "gameId": "composed-426d14ebf4599ada",
+      "rejectionRecord": "scripts/fixtures/anastasia-mate/composed-reviewed.json",
+      "reason": "Deeper principal line changes the motif or sacrifice grade."
+    },
+    {
+      "path": "scripts/fixtures/anastasia-mate/mate-proofs/composed-babb20cc0cdfcd6f.json",
+      "sha256": "59477908b6608b97a1dff4a21d75ae2c3ed53435971a97f5d7eb4ff9bad198ea",
+      "bytes": 2579,
+      "gameId": "composed-babb20cc0cdfcd6f",
+      "rejectionRecord": "scripts/fixtures/anastasia-mate/composed-reviewed.json",
+      "reason": "Deeper review changes the shortest mating distance."
+    },
+    {
+      "path": "scripts/fixtures/anastasia-mate/mate-proofs/composed-791d5f0370238b63.json",
+      "sha256": "a05b968e80972dd12aa1aaa1a11b6c13858d313c2ca496fe69e664ef3a2c0166",
+      "bytes": 1322,
+      "gameId": "composed-791d5f0370238b63",
+      "rejectionRecord": "scripts/fixtures/anastasia-mate/composed-reviewed.json",
+      "reason": "Deeper principal line changes the motif or sacrifice grade."
+    },
+    {
+      "path": "scripts/fixtures/anastasia-mate/mate-proofs/composed-8d44186d1a23c02a.json",
+      "sha256": "a8513d9943afb22f3693a8ef47637a287b1a61113d0262197b8d04c87a9ea035",
+      "bytes": 1020,
+      "gameId": "composed-8d44186d1a23c02a",
+      "rejectionRecord": "scripts/fixtures/anastasia-mate/composed-reviewed.json",
+      "reason": "Deeper principal line changes the motif or sacrifice grade."
+    },
+    {
+      "path": "scripts/fixtures/anastasia-mate/mate-proofs/composed-19cc8cc393396bc8.json",
+      "sha256": "c56fecf048a9d63e4bd807a54b77497e3201ccb32cf6035bcc26040d17cc8bcd",
+      "bytes": 362,
+      "gameId": "composed-19cc8cc393396bc8",
+      "rejectionRecord": "scripts/fixtures/anastasia-mate/composed-reviewed.json",
+      "reason": "Immediate mate bypasses the Anastasia motif."
+    },
+    {
+      "path": "scripts/fixtures/anastasia-mate/mate-proofs/composed-0cdc6673e9db6133.json",
+      "sha256": "22e45d45a4e78e82be8d978cd23a9c4ad8212e73d292cdf750b03de445e3abe8",
+      "bytes": 4622,
+      "gameId": "composed-0cdc6673e9db6133",
+      "rejectionRecord": "scripts/fixtures/anastasia-mate/composed-reviewed.json",
+      "reason": "Deeper principal line changes the motif or sacrifice grade."
+    },
+    {
+      "path": "scripts/fixtures/anastasia-mate/mate-proofs/composed-ebcbabd8d9be6ee0.json",
+      "sha256": "e161229ea9b0de89d9c8ed77d05b28dfc8b4f88e5a2a0903518b336577a18215",
+      "bytes": 5753,
+      "gameId": "composed-ebcbabd8d9be6ee0",
+      "rejectionRecord": "scripts/fixtures/anastasia-mate/composed-reviewed.json",
+      "reason": "Deeper principal line changes the motif or sacrifice grade."
+    },
+    {
+      "path": "scripts/fixtures/anastasia-mate/mate-proofs/composed-ca40a73a226389f9.json",
+      "sha256": "9e0c906cb328cfad802b7c4a1eee888f27c30ae9a1e2d3d0ff4cd37d24a67145",
+      "bytes": 1037,
+      "gameId": "composed-ca40a73a226389f9",
+      "rejectionRecord": "scripts/fixtures/anastasia-mate/composed-reviewed.json",
+      "reason": "Deeper principal line changes the motif or sacrifice grade."
+    },
+    {
+      "path": "scripts/fixtures/anastasia-mate/mate-proofs/composed-43ee58c22e19a28f.json",
+      "sha256": "717cb7c7f5222955ad9f4877fcc841a8ee18b6717af68ed480ea9e3f4f6a149a",
+      "bytes": 12608,
+      "gameId": "composed-43ee58c22e19a28f",
+      "rejectionRecord": "scripts/fixtures/anastasia-mate/composed-reviewed.json",
+      "reason": "Deeper principal line changes the motif or sacrifice grade."
+    },
+    {
+      "path": "scripts/fixtures/anastasia-mate/mate-proofs/composed-20675310dc49d25d.json",
+      "sha256": "876f6dee0ed1fb98eacaca68a69cdbcaecffefd9ffe076ec39b0aaae5d7337d2",
+      "bytes": 12572,
+      "gameId": "composed-20675310dc49d25d",
+      "rejectionRecord": "scripts/fixtures/anastasia-mate/composed-reviewed.json",
+      "reason": "Deeper principal line changes the motif or sacrifice grade."
+    },
+    {
+      "path": "scripts/fixtures/anastasia-mate/mate-proofs/composed-f0c2394af3533bea.json",
+      "sha256": "db1c30290767a413f3c2e33c36fa33b23cf6684211b40dcddc2cb92b357c4838",
+      "bytes": 665,
+      "gameId": "composed-f0c2394af3533bea",
+      "rejectionRecord": "scripts/fixtures/anastasia-mate/composed-reviewed.json",
+      "reason": "Deeper principal line changes the motif or sacrifice grade."
+    },
+    {
+      "path": "scripts/fixtures/anastasia-mate/mate-proofs/composed-54df11939041e050.json",
+      "sha256": "14dcb31fef00a9dd114a59089a55ef4f3b74d5dbcf3cf669cffdacef5768ada7",
+      "bytes": 5001,
+      "gameId": "composed-54df11939041e050",
+      "rejectionRecord": "scripts/fixtures/anastasia-mate/composed-reviewed.json",
+      "reason": "Deeper principal line changes the motif or sacrifice grade."
+    },
+    {
+      "path": "scripts/fixtures/anastasia-mate/mate-proofs/composed-c280ca87fbea6049.json",
+      "sha256": "993c6c9639c2fd084a7cc7b7dec3275a9c3cd195cc8675e36f329e904fd739e2",
+      "bytes": 767,
+      "gameId": "composed-c280ca87fbea6049",
+      "rejectionRecord": "scripts/fixtures/anastasia-mate/composed-reviewed.json",
+      "reason": "Deeper principal line changes the motif or sacrifice grade."
+    },
+    {
+      "path": "scripts/fixtures/anastasia-mate/mate-proofs/composed-a094d454949874da.json",
+      "sha256": "6be0fa14cc664fe7c05d8a47ff8c37d37a633da4696f78b7e226739602430b43",
+      "bytes": 558,
+      "gameId": "composed-a094d454949874da",
+      "rejectionRecord": "scripts/fixtures/anastasia-mate/composed-reviewed.json",
+      "reason": "Deeper principal line changes the motif or sacrifice grade."
+    },
+    {
+      "path": "scripts/fixtures/anastasia-mate/mate-proofs/composed-24b707347c834f0b.json",
+      "sha256": "1b34e118c290ce8c313bb5f210f1644a173e60262359ade1c6c7411ebc28a02d",
+      "bytes": 940,
+      "gameId": "composed-24b707347c834f0b",
+      "rejectionRecord": "scripts/fixtures/anastasia-mate/composed-reviewed.json",
+      "reason": "Deeper principal line changes the motif or sacrifice grade."
+    },
+    {
+      "path": "scripts/fixtures/anastasia-mate/mate-proofs/composed-96a8c31dd32156dc.json",
+      "sha256": "4507cf95fd5100d21aeef84ad18bced2bab607715d43464a719523a276549c8a",
+      "bytes": 7340,
+      "gameId": "composed-96a8c31dd32156dc",
+      "rejectionRecord": "scripts/fixtures/anastasia-mate/composed-reviewed.json",
+      "reason": "Deeper principal line changes the motif or sacrifice grade."
+    },
+    {
+      "path": "scripts/fixtures/anastasia-mate/mate-proofs/composed-89ead48b306891f8.json",
+      "sha256": "408fbb6c9d1686fbabde87693e82f9f802147857678d81d1a0e3a6e2bda6fa88",
+      "bytes": 6447,
+      "gameId": "composed-89ead48b306891f8",
+      "rejectionRecord": "scripts/fixtures/anastasia-mate/composed-reviewed.json",
+      "reason": "Deeper principal line changes the motif or sacrifice grade."
+    },
+    {
+      "path": "scripts/fixtures/anastasia-mate/mate-proofs/composed-c881e828f65973a6.json",
+      "sha256": "281fbdefc8a47aaa64065ae6e06df6567bb9f59cead6af5ba3f4c4f2f4015d26",
+      "bytes": 20872,
+      "gameId": "composed-c881e828f65973a6",
+      "rejectionRecord": "scripts/fixtures/anastasia-mate/composed-reviewed.json",
+      "reason": "Deeper principal line changes the motif or sacrifice grade."
+    },
+    {
+      "path": "scripts/fixtures/arabian-mate/mate-proofs/composed-d3f7c350575a41dc.json",
+      "sha256": "15683411c7810675c4bdbe4c21aa2906e2fee380dbafeb3a3ecd29b6c5b580be",
+      "bytes": 1163,
+      "gameId": "composed-d3f7c350575a41dc",
+      "rejectionRecord": "scripts/fixtures/arabian-mate/composed-reviewed.json",
+      "reason": "Deeper principal line changes the motif or sacrifice grade."
+    },
+    {
+      "path": "scripts/fixtures/arabian-mate/mate-proofs/composed-3569de21df9c0139.json",
+      "sha256": "e95b677545c52f15fc63290a378113200098487b11b003fc512653a0e05f6109",
+      "bytes": 570,
+      "gameId": "composed-3569de21df9c0139",
+      "rejectionRecord": "scripts/fixtures/arabian-mate/composed-reviewed.json",
+      "reason": "Same complete sequence of moving pieces, captures and checks as a retained teaching mechanism."
+    },
+    {
+      "path": "scripts/fixtures/arabian-mate/mate-proofs/composed-af79b4d25400e25c.json",
+      "sha256": "8df9ea4c9dc8f0234acb70c0848a8cb9c2d09ee201ce89837ad3d7eb56ebae63",
+      "bytes": 6938,
+      "gameId": "composed-af79b4d25400e25c",
+      "rejectionRecord": "scripts/fixtures/arabian-mate/composed-reviewed.json",
+      "reason": "Deeper principal line changes the motif or sacrifice grade."
+    },
+    {
+      "path": "scripts/fixtures/arabian-mate/mate-proofs/composed-6df8eae3ad78045c.json",
+      "sha256": "d56e3dfba4f0841209dacbd7d9a4bdf4e76fe9c0347c779c5ac00f868c60aea6",
+      "bytes": 562,
+      "gameId": "composed-6df8eae3ad78045c",
+      "rejectionRecord": "scripts/fixtures/arabian-mate/composed-reviewed.json",
+      "reason": "Same complete sequence of moving pieces, captures and checks as a retained teaching mechanism."
+    },
+    {
+      "path": "scripts/fixtures/arabian-mate/mate-proofs/composed-408950e3314fc7bc.json",
+      "sha256": "b522132a48fda4d86bf9d4d2f00543ce0108e63546b6c80a5086bde3b41f3707",
+      "bytes": 763,
+      "gameId": "composed-408950e3314fc7bc",
+      "rejectionRecord": "scripts/fixtures/arabian-mate/composed-reviewed.json",
+      "reason": "Deeper principal line changes the motif or sacrifice grade."
+    },
+    {
+      "path": "scripts/fixtures/arabian-mate/mate-proofs/composed-89c82eec49136728.json",
+      "sha256": "b7bf4808ac05f7a59a902675f405558ce24d2452783780ad57fc19fc2af7cc78",
+      "bytes": 546,
+      "gameId": "composed-89c82eec49136728",
+      "rejectionRecord": "scripts/fixtures/arabian-mate/composed-reviewed.json",
+      "reason": "Knight protects checking rook but does not cover a separate king escape square uncovered by that rook: related rook-knight mate, not the classic Arabian pattern."
+    },
+    {
+      "path": "scripts/fixtures/arabian-mate/mate-proofs/composed-78b5d276cb8fc3f8.json",
+      "sha256": "02c09e5be39d9f01e3423adab46dc6285b3fff80cb488988ae998b8820d3a793",
+      "bytes": 543,
+      "gameId": "composed-78b5d276cb8fc3f8",
+      "rejectionRecord": "scripts/fixtures/arabian-mate/composed-reviewed.json",
+      "reason": "Same complete sequence of moving pieces, captures and checks as a retained teaching mechanism."
+    },
+    {
+      "path": "scripts/fixtures/arabian-mate/mate-proofs/composed-406a7f6ce45a41dd.json",
+      "sha256": "322015e0e69bbd3862832c015aca69327010aad8da037502c6c9c859876afa45",
+      "bytes": 1146,
+      "gameId": "composed-406a7f6ce45a41dd",
+      "rejectionRecord": "scripts/fixtures/arabian-mate/composed-reviewed.json",
+      "reason": "Deeper principal line changes the motif or sacrifice grade."
+    },
+    {
+      "path": "scripts/fixtures/arabian-mate/mate-proofs/composed-59c5f77f5ce348d2.json",
+      "sha256": "215cabe3be330db10eee674425e709f0a527778ee59ba789d508d47828d454c8",
+      "bytes": 1298,
+      "gameId": "composed-59c5f77f5ce348d2",
+      "rejectionRecord": "scripts/fixtures/arabian-mate/composed-reviewed.json",
+      "reason": "Deeper principal line changes the motif or sacrifice grade."
+    },
+    {
+      "path": "scripts/fixtures/arabian-mate/mate-proofs/composed-76621dd1e0dda615.json",
+      "sha256": "b0686fec3a7623972bc87f2cd9c8ff1c880b085e003f07f3f5d0ee40ae74887c",
+      "bytes": 1401,
+      "gameId": "composed-76621dd1e0dda615",
+      "rejectionRecord": "scripts/fixtures/arabian-mate/composed-reviewed.json",
+      "reason": "Deeper principal line changes the motif or sacrifice grade."
+    },
+    {
+      "path": "scripts/fixtures/arabian-mate/mate-proofs/composed-3f8050a4b013f90e.json",
+      "sha256": "124bf9079bc74df81a95d49b599e2c222bd6a7707d0f0ea1a4316096943991ae",
+      "bytes": 353,
+      "gameId": "composed-3f8050a4b013f90e",
+      "rejectionRecord": "scripts/fixtures/arabian-mate/composed-reviewed.json",
+      "reason": "Knight protects checking rook but does not cover a separate king escape square uncovered by that rook: related rook-knight mate, not the classic Arabian pattern."
+    },
+    {
+      "path": "scripts/fixtures/arabian-mate/mate-proofs/composed-d2b97ae5dadff845.json",
+      "sha256": "ceda0892edfe1ded6ea97534921f9b91e8ebb80483e089ae67b5837d0e6049dd",
+      "bytes": 20851,
+      "gameId": "composed-d2b97ae5dadff845",
+      "rejectionRecord": "scripts/fixtures/arabian-mate/composed-reviewed.json",
+      "reason": "Deeper principal line changes the motif or sacrifice grade."
+    },
+    {
+      "path": "scripts/fixtures/arabian-mate/mate-proofs/composed-a827ba313714700d.json",
+      "sha256": "75ba0ce97df0d549519608e74cf25d1266a0ac06d67db8c473abfa1081fe765f",
+      "bytes": 1010,
+      "gameId": "composed-a827ba313714700d",
+      "rejectionRecord": "scripts/fixtures/arabian-mate/composed-reviewed.json",
+      "reason": "Same complete sequence of moving pieces, captures and checks as a retained teaching mechanism."
+    },
+    {
+      "path": "scripts/fixtures/arabian-mate/mate-proofs/composed-e5f00e51c4ee04d6.json",
+      "sha256": "2cb809db3104a0cbe6e4e7a8fd910e33f07a3c2b7589bc8f7532474f4993c76a",
+      "bytes": 20772,
+      "gameId": "composed-e5f00e51c4ee04d6",
+      "rejectionRecord": "scripts/fixtures/arabian-mate/composed-reviewed.json",
+      "reason": "Deeper review changes the shortest mating distance."
+    },
+    {
+      "path": "scripts/fixtures/arabian-mate/mate-proofs/composed-3bfa92653e07e359.json",
+      "sha256": "46cfbacfd344af21728b084fc8da1a15c197f4ef76842ae40575740de240cbd1",
+      "bytes": 587,
+      "gameId": "composed-3bfa92653e07e359",
+      "rejectionRecord": "scripts/fixtures/arabian-mate/composed-reviewed.json",
+      "reason": "Same complete sequence of moving pieces, captures and checks as a retained teaching mechanism."
+    },
+    {
+      "path": "scripts/fixtures/arabian-mate/mate-proofs/composed-34887d2dd3b6a09d.json",
+      "sha256": "dd881ef40aece4de25844f3b8650754a438e4d9c9b6a9b9424d998e15a26e0d4",
+      "bytes": 743,
+      "gameId": "composed-34887d2dd3b6a09d",
+      "rejectionRecord": "scripts/fixtures/arabian-mate/composed-reviewed.json",
+      "reason": "Knight protects checking rook but does not cover a separate king escape square uncovered by that rook: related rook-knight mate, not the classic Arabian pattern."
+    },
+    {
+      "path": "scripts/fixtures/arabian-mate/mate-proofs/composed-b97d9a66a431c19b.json",
+      "sha256": "8cf92de624f60067a49309d99998bd8e3de097e52425086cb3b081dec5738594",
+      "bytes": 1337,
+      "gameId": "composed-b97d9a66a431c19b",
+      "rejectionRecord": "scripts/fixtures/arabian-mate/composed-reviewed.json",
+      "reason": "Knight protects checking rook but does not cover a separate king escape square uncovered by that rook: related rook-knight mate, not the classic Arabian pattern."
+    },
+    {
+      "path": "scripts/fixtures/arabian-mate/mate-proofs/composed-b05f13d94f899693.json",
+      "sha256": "36c7290a8df84f6b4ce96265a4de316f3f141a71c81e5905bca930de65a19317",
+      "bytes": 3740,
+      "gameId": "composed-b05f13d94f899693",
+      "rejectionRecord": "scripts/fixtures/arabian-mate/composed-reviewed.json",
+      "reason": "Deeper principal line changes the motif or sacrifice grade."
+    },
+    {
+      "path": "scripts/fixtures/arabian-mate/mate-proofs/composed-e2253d60f839e7ee.json",
+      "sha256": "fd469455309e57c8cb0937b191068ab23fe29963998b6cbdea9380bf134f5d1e",
+      "bytes": 834,
+      "gameId": "composed-e2253d60f839e7ee",
+      "rejectionRecord": "scripts/fixtures/arabian-mate/composed-reviewed.json",
+      "reason": "Deeper principal line changes the motif or sacrifice grade."
+    },
+    {
+      "path": "scripts/fixtures/arabian-mate/mate-proofs/composed-2d1c237979c61258.json",
+      "sha256": "82339a8d01f3f28f50cf4acd311872813c9519d67ce8a9bbd71923ef20ac7312",
+      "bytes": 2403,
+      "gameId": "composed-2d1c237979c61258",
+      "rejectionRecord": "scripts/fixtures/arabian-mate/composed-reviewed.json",
+      "reason": "Knight protects checking rook but does not cover a separate king escape square uncovered by that rook: related rook-knight mate, not the classic Arabian pattern."
+    },
+    {
+      "path": "scripts/fixtures/arabian-mate/mate-proofs/composed-8b941f106f7c4fd4.json",
+      "sha256": "7c42f1ad48a4e9e1ae64b347c764e0e1f6a59da9de6d3abd3f9b99d798dcbd2e",
+      "bytes": 778,
+      "gameId": "composed-8b941f106f7c4fd4",
+      "rejectionRecord": "scripts/fixtures/arabian-mate/composed-reviewed.json",
+      "reason": "Knight protects checking rook but does not cover a separate king escape square uncovered by that rook: related rook-knight mate, not the classic Arabian pattern."
+    },
+    {
+      "path": "scripts/fixtures/arabian-mate/mate-proofs/composed-f8897b4468888fa6.json",
+      "sha256": "8f92d6fb16a1c1122118f4c59fe5be36c1dd676f2fe469557bd0cbf668f755cd",
+      "bytes": 2595,
+      "gameId": "composed-f8897b4468888fa6",
+      "rejectionRecord": "scripts/fixtures/arabian-mate/composed-reviewed.json",
+      "reason": "Same complete sequence of moving pieces, captures and checks as a retained teaching mechanism."
+    },
+    {
+      "path": "scripts/fixtures/arabian-mate/mate-proofs/composed-8385816647148fd8.json",
+      "sha256": "e5ea2559c91c3fc0b69720b4e15dfbd5735ea4045bf2a2a7a64c7828173f46ef",
+      "bytes": 1201,
+      "gameId": "composed-8385816647148fd8",
+      "rejectionRecord": "scripts/fixtures/arabian-mate/composed-reviewed.json",
+      "reason": "Deeper principal line changes the motif or sacrifice grade."
+    },
+    {
+      "path": "scripts/fixtures/arabian-mate/mate-proofs/composed-ca41bb0e6ca607fd.json",
+      "sha256": "b5b4fdd94ba743557a2af6d00b33f1bbc14d01349bf5a73c4e8612ad19a2b9d8",
+      "bytes": 2874,
+      "gameId": "composed-ca41bb0e6ca607fd",
+      "rejectionRecord": "scripts/fixtures/arabian-mate/composed-reviewed.json",
+      "reason": "Same complete sequence of moving pieces, captures and checks as a retained teaching mechanism."
+    },
+    {
+      "path": "scripts/fixtures/arabian-mate/mate-proofs/composed-ac435eda46951840.json",
+      "sha256": "00528a711ef9881746dfd4cd7531c3e841cc0593f573f1569590231b23ca389f",
+      "bytes": 2825,
+      "gameId": "composed-ac435eda46951840",
+      "rejectionRecord": "scripts/fixtures/arabian-mate/composed-reviewed.json",
+      "reason": "Deeper principal line changes the motif or sacrifice grade."
+    },
+    {
+      "path": "scripts/fixtures/arabian-mate/mate-proofs/composed-7c73d5bc92797ef9.json",
+      "sha256": "2bda4cfee541040699c08ca839b8008604f82317a425f59bfa1f6bbae4dc0400",
+      "bytes": 562,
+      "gameId": "composed-7c73d5bc92797ef9",
+      "rejectionRecord": "scripts/fixtures/arabian-mate/composed-reviewed.json",
+      "reason": "Same complete sequence of moving pieces, captures and checks as a retained teaching mechanism."
+    },
+    {
+      "path": "scripts/fixtures/arabian-mate/mate-proofs/composed-658f0733116c1b56.json",
+      "sha256": "46ec91e372a9b099b14b8cf09f01bdec14d390009b8da6c19186ceb872e94bfe",
+      "bytes": 2146,
+      "gameId": "composed-658f0733116c1b56",
+      "rejectionRecord": "scripts/fixtures/arabian-mate/composed-reviewed.json",
+      "reason": "Same complete sequence of moving pieces, captures and checks as a retained teaching mechanism."
+    },
+    {
+      "path": "scripts/fixtures/arabian-mate/mate-proofs/composed-44bb8b38d85229d1.json",
+      "sha256": "de10fc7c242bcf0def3f874ec37cc07a869252c6ddd9817b2ba6bc56fc083e3e",
+      "bytes": 744,
+      "gameId": "composed-44bb8b38d85229d1",
+      "rejectionRecord": "scripts/fixtures/arabian-mate/composed-reviewed.json",
+      "reason": "Knight protects checking rook but does not cover a separate king escape square uncovered by that rook: related rook-knight mate, not the classic Arabian pattern."
+    },
+    {
+      "path": "scripts/fixtures/arabian-mate/mate-proofs/composed-597a7936be763e81.json",
+      "sha256": "1f8756137e0cfdd1ead9ec48a2ad6fcd72380e4dde2be14f688728492c3dc3b7",
+      "bytes": 802,
+      "gameId": "composed-597a7936be763e81",
+      "rejectionRecord": "scripts/fixtures/arabian-mate/composed-reviewed.json",
+      "reason": "Same complete sequence of moving pieces, captures and checks as a retained teaching mechanism."
+    },
+    {
+      "path": "scripts/fixtures/arabian-mate/mate-proofs/composed-7a150f9bfff41b78.json",
+      "sha256": "2318e7700ff3c97976c24d3e2eed609e6a8e3a10ce151aaace188c71f819fb2e",
+      "bytes": 774,
+      "gameId": "composed-7a150f9bfff41b78",
+      "rejectionRecord": "scripts/fixtures/arabian-mate/composed-reviewed.json",
+      "reason": "Knight protects checking rook but does not cover a separate king escape square uncovered by that rook: related rook-knight mate, not the classic Arabian pattern."
+    },
+    {
+      "path": "scripts/fixtures/arabian-mate/mate-proofs/composed-732619f73de5d507.json",
+      "sha256": "4348fa695e51d3cda2aa63dc29070a0379a9ee264c3761917464e9c5c361953a",
+      "bytes": 650,
+      "gameId": "composed-732619f73de5d507",
+      "rejectionRecord": "scripts/fixtures/arabian-mate/composed-reviewed.json",
+      "reason": "Same complete sequence of moving pieces, captures and checks as a retained teaching mechanism."
+    },
+    {
+      "path": "scripts/fixtures/arabian-mate/mate-proofs/composed-64243c9a1bb25583.json",
+      "sha256": "fdf358af10e698508a8c06ecdeac3ee2eca04a94e85c44159eebcdbe7c625f21",
+      "bytes": 1434,
+      "gameId": "composed-64243c9a1bb25583",
+      "rejectionRecord": "scripts/fixtures/arabian-mate/composed-reviewed.json",
+      "reason": "Knight protects checking rook but does not cover a separate king escape square uncovered by that rook: related rook-knight mate, not the classic Arabian pattern."
+    },
+    {
+      "path": "scripts/fixtures/arabian-mate/mate-proofs/composed-403e921436691a79.json",
+      "sha256": "3c2c781b0a128be12cc8d2efb1b4c3cbcca14f89bdcff082f9abc9a07bfdaf31",
+      "bytes": 5341,
+      "gameId": "composed-403e921436691a79",
+      "rejectionRecord": "scripts/fixtures/arabian-mate/composed-reviewed.json",
+      "reason": "Deeper principal line changes the motif or sacrifice grade."
+    },
+    {
+      "path": "scripts/fixtures/arabian-mate/mate-proofs/composed-ed8d6e4f80e17e58.json",
+      "sha256": "b7366a545a62ab44989f64cafa82b54469d13eb7b8998582c40ada4982f3a9af",
+      "bytes": 1043,
+      "gameId": "composed-ed8d6e4f80e17e58",
+      "rejectionRecord": "scripts/fixtures/arabian-mate/composed-reviewed.json",
+      "reason": "Same complete sequence of moving pieces, captures and checks as a retained teaching mechanism."
+    },
+    {
+      "path": "scripts/fixtures/arabian-mate/mate-proofs/composed-9e6f6d8554ac085f.json",
+      "sha256": "7d59012f5abdc4313c8e433e395ab81efc59e39bf165e6353aaf82200c9be52d",
+      "bytes": 25464,
+      "gameId": "composed-9e6f6d8554ac085f",
+      "rejectionRecord": "scripts/fixtures/arabian-mate/composed-reviewed.json",
+      "reason": "Deeper principal line changes the motif or sacrifice grade."
+    },
+    {
+      "path": "scripts/fixtures/arabian-mate/mate-proofs/composed-99913e6c3cd6defe.json",
+      "sha256": "189b292d3f26359bdd7a31f2adc7baa9d919f231c69ba4ff358c3607513a5b2e",
+      "bytes": 1037,
+      "gameId": "composed-99913e6c3cd6defe",
+      "rejectionRecord": "scripts/fixtures/arabian-mate/composed-reviewed.json",
+      "reason": "Same complete sequence of moving pieces, captures and checks as a retained teaching mechanism."
+    },
+    {
+      "path": "scripts/fixtures/arabian-mate/mate-proofs/composed-210c51d0f2913553.json",
+      "sha256": "2732ba6d9c6b9d94da91ff36d58507c2c4e0ea334bb91a903a455f8c22afac6a",
+      "bytes": 7417,
+      "gameId": "composed-210c51d0f2913553",
+      "rejectionRecord": "scripts/fixtures/arabian-mate/composed-reviewed.json",
+      "reason": "Deeper principal line changes the motif or sacrifice grade."
+    },
+    {
+      "path": "scripts/fixtures/arabian-mate/mate-proofs/composed-8d194623ddfd6349.json",
+      "sha256": "21fbc4556afb06a764bdda3ccd5251b560e02e7d00a67e8d84755d6d4f22970b",
+      "bytes": 35924,
+      "gameId": "composed-8d194623ddfd6349",
+      "rejectionRecord": "scripts/fixtures/arabian-mate/composed-reviewed.json",
+      "reason": "Deeper principal line changes the motif or sacrifice grade."
+    },
+    {
+      "path": "scripts/fixtures/arabian-mate/mate-proofs/composed-be9dfa4dca552921.json",
+      "sha256": "19c0dd3ae45ea343d79619dab98202221f43bf375ac96ca5ab65dc3860c9059f",
+      "bytes": 550,
+      "gameId": "composed-be9dfa4dca552921",
+      "rejectionRecord": "scripts/fixtures/arabian-mate/composed-reviewed.json",
+      "reason": "Knight protects checking rook but does not cover a separate king escape square uncovered by that rook: related rook-knight mate, not the classic Arabian pattern."
+    },
+    {
+      "path": "scripts/fixtures/arabian-mate/mate-proofs/composed-6f6d922e311a9eb9.json",
+      "sha256": "bcfb4ba865a7f6a7f840cf2da5b84302246cdf180b00567e19043402a253abbd",
+      "bytes": 2888,
+      "gameId": "composed-6f6d922e311a9eb9",
+      "rejectionRecord": "scripts/fixtures/arabian-mate/composed-reviewed.json",
+      "reason": "Knight protects checking rook but does not cover a separate king escape square uncovered by that rook: related rook-knight mate, not the classic Arabian pattern."
+    },
+    {
+      "path": "scripts/fixtures/arabian-mate/mate-proofs/composed-832aed4b21b1ff0f.json",
+      "sha256": "acfa40db7eff6f15366a0b3ae92ab547c207a6083bcd71519e5a15f39b06d235",
+      "bytes": 592,
+      "gameId": "composed-832aed4b21b1ff0f",
+      "rejectionRecord": "scripts/fixtures/arabian-mate/composed-reviewed.json",
+      "reason": "Same complete sequence of moving pieces, captures and checks as a retained teaching mechanism."
+    },
+    {
+      "path": "scripts/fixtures/arabian-mate/mate-proofs/composed-32a75722094bf2fc.json",
+      "sha256": "5b0d2101e94f227cbc1b159b25004a1a5f20eca227e0c3a811cd99ea70f96d33",
+      "bytes": 572,
+      "gameId": "composed-32a75722094bf2fc",
+      "rejectionRecord": "scripts/fixtures/arabian-mate/composed-reviewed.json",
+      "reason": "Same complete sequence of moving pieces, captures and checks as a retained teaching mechanism."
+    },
+    {
+      "path": "scripts/fixtures/arabian-mate/mate-proofs/composed-121bbcc84beca0b8.json",
+      "sha256": "83e2ceda0967924f81c853e83a441bbea0838ea76f981251656140af10d902d2",
+      "bytes": 558,
+      "gameId": "composed-121bbcc84beca0b8",
+      "rejectionRecord": "scripts/fixtures/arabian-mate/composed-reviewed.json",
+      "reason": "Knight protects checking rook but does not cover a separate king escape square uncovered by that rook: related rook-knight mate, not the classic Arabian pattern."
+    },
+    {
+      "path": "scripts/fixtures/arabian-mate/mate-proofs/composed-ebf325929df0d81d.json",
+      "sha256": "8b44a7ffe719a20a096f394f1f661c208baae8daf2b194a3ae7110d552e62df9",
+      "bytes": 2342,
+      "gameId": "composed-ebf325929df0d81d",
+      "rejectionRecord": "scripts/fixtures/arabian-mate/composed-reviewed.json",
+      "reason": "Same complete sequence of moving pieces, captures and checks as a retained teaching mechanism."
+    },
+    {
+      "path": "scripts/fixtures/arabian-mate/mate-proofs/composed-3f7e69039a4add91.json",
+      "sha256": "da201e8044318cb5a3cfbf79733dc3a28e606292287c90db43db4ad4dc908e14",
+      "bytes": 9646,
+      "gameId": "composed-3f7e69039a4add91",
+      "rejectionRecord": "scripts/fixtures/arabian-mate/composed-reviewed.json",
+      "reason": "Deeper principal line changes the motif or sacrifice grade."
+    },
+    {
+      "path": "scripts/fixtures/arabian-mate/mate-proofs/composed-53212ea713a266bf.json",
+      "sha256": "98146e1cd4783bb5464f58928c00583204636316b0c9deae61d18ea40fd63dbf",
+      "bytes": 763,
+      "gameId": "composed-53212ea713a266bf",
+      "rejectionRecord": "scripts/fixtures/arabian-mate/composed-reviewed.json",
+      "reason": "Deeper principal line changes the motif or sacrifice grade."
+    },
+    {
+      "path": "scripts/fixtures/arabian-mate/mate-proofs/composed-32108d895ffec5f2.json",
+      "sha256": "e69c63266cc31f655f80d12e6b43f32ae6f13e3283bb6fe9ca7af4fc510df5a3",
+      "bytes": 770,
+      "gameId": "composed-32108d895ffec5f2",
+      "rejectionRecord": "scripts/fixtures/arabian-mate/composed-reviewed.json",
+      "reason": "Deeper principal line changes the motif or sacrifice grade."
+    },
+    {
+      "path": "scripts/fixtures/arabian-mate/mate-proofs/composed-8146194126a8edb6.json",
+      "sha256": "61244ebf09b8b98aed8dc8f2afb089fc0068ec8abe03108e1fad9f7b4599e346",
+      "bytes": 503,
+      "gameId": "composed-8146194126a8edb6",
+      "rejectionRecord": "scripts/fixtures/arabian-mate/composed-reviewed.json",
+      "reason": "Deeper principal line changes the motif or sacrifice grade."
+    },
+    {
+      "path": "scripts/fixtures/arabian-mate/mate-proofs/composed-2c6cd7668e28aafd.json",
+      "sha256": "c22858b3507f0b7de989a7083a3eabb37088fb9c43656476853451ca02dd165b",
+      "bytes": 5475,
+      "gameId": "composed-2c6cd7668e28aafd",
+      "rejectionRecord": "scripts/fixtures/arabian-mate/composed-reviewed.json",
+      "reason": "Knight protects checking rook but does not cover a separate king escape square uncovered by that rook: related rook-knight mate, not the classic Arabian pattern."
+    },
+    {
+      "path": "scripts/fixtures/arabian-mate/mate-proofs/composed-34e399a701c14acc.json",
+      "sha256": "2b80348370c072da04dd74a621f5f14928191195cc764c35bc4a05775dc9d858",
+      "bytes": 11952,
+      "gameId": "composed-34e399a701c14acc",
+      "rejectionRecord": "scripts/fixtures/arabian-mate/composed-reviewed.json",
+      "reason": "Deeper principal line changes the motif or sacrifice grade."
+    },
+    {
+      "path": "scripts/fixtures/arabian-mate/mate-proofs/composed-90979dc99893c313.json",
+      "sha256": "5c884219757f593af9baab50efcd35c4e4ec49c3ab8cad20fe6589c736a95144",
+      "bytes": 558,
+      "gameId": "composed-90979dc99893c313",
+      "rejectionRecord": "scripts/fixtures/arabian-mate/composed-reviewed.json",
+      "reason": "Knight protects checking rook but does not cover a separate king escape square uncovered by that rook: related rook-knight mate, not the classic Arabian pattern."
+    },
+    {
+      "path": "scripts/fixtures/arabian-mate/mate-proofs/composed-393bf3583c612abe.json",
+      "sha256": "3d61651d5d9678b850793e19e332c92b6aede60050b59e1ff792d96822568088",
+      "bytes": 808,
+      "gameId": "composed-393bf3583c612abe",
+      "rejectionRecord": "scripts/fixtures/arabian-mate/composed-reviewed.json",
+      "reason": "Knight protects checking rook but does not cover a separate king escape square uncovered by that rook: related rook-knight mate, not the classic Arabian pattern."
+    },
+    {
+      "path": "scripts/fixtures/arabian-mate/mate-proofs/composed-704a3e4ed59f5343.json",
+      "sha256": "126abaa0d929060957ff7afd7c08d8ce7229d3fa5ec4b1cca6370c011ba9ed5d",
+      "bytes": 784,
+      "gameId": "composed-704a3e4ed59f5343",
+      "rejectionRecord": "scripts/fixtures/arabian-mate/composed-reviewed.json",
+      "reason": "Knight protects checking rook but does not cover a separate king escape square uncovered by that rook: related rook-knight mate, not the classic Arabian pattern."
+    },
+    {
+      "path": "scripts/fixtures/arabian-mate/mate-proofs/composed-63a1bd70e8f54056.json",
+      "sha256": "733b5026db0f9274d43d31bf514393dabe9c2fb742b516da348b9de393c18a90",
+      "bytes": 769,
+      "gameId": "composed-63a1bd70e8f54056",
+      "rejectionRecord": "scripts/fixtures/arabian-mate/composed-reviewed.json",
+      "reason": "Deeper principal line changes the motif or sacrifice grade."
+    },
+    {
+      "path": "scripts/fixtures/arabian-mate/mate-proofs/composed-855b48e25caf1c72.json",
+      "sha256": "d3491c83b081b4eb6bc19e32c5a9e0b1374fc62477a44623e429b4f3d356d5b9",
+      "bytes": 3277,
+      "gameId": "composed-855b48e25caf1c72",
+      "rejectionRecord": "scripts/fixtures/arabian-mate/composed-reviewed.json",
+      "reason": "Deeper principal line changes the motif or sacrifice grade."
+    },
+    {
+      "path": "scripts/fixtures/arabian-mate/mate-proofs/composed-120fa750645189f7.json",
+      "sha256": "937c95633eba94a25b7a97703e9045b04fac19cf0e1bda7bebdd61e356750d2d",
+      "bytes": 961,
+      "gameId": "composed-120fa750645189f7",
+      "rejectionRecord": "scripts/fixtures/arabian-mate/composed-reviewed.json",
+      "reason": "Deeper principal line changes the motif or sacrifice grade."
+    },
+    {
+      "path": "scripts/fixtures/arabian-mate/mate-proofs/composed-dded7b2de95924e0.json",
+      "sha256": "05610872f8c3b0bd1cf03c87b328e72b56d03ceddb4f8edc8c1f68a39819594f",
+      "bytes": 11113,
+      "gameId": "composed-dded7b2de95924e0",
+      "rejectionRecord": "scripts/fixtures/arabian-mate/composed-reviewed.json",
+      "reason": "Knight protects checking rook but does not cover a separate king escape square uncovered by that rook: related rook-knight mate, not the classic Arabian pattern."
+    },
+    {
+      "path": "scripts/fixtures/arabian-mate/mate-proofs/composed-3969c5ff7a1bdb29.json",
+      "sha256": "ca338421bfb6b274fead08ec715782427971afe42cead0ee81e35c7c94ad23e9",
+      "bytes": 11822,
+      "gameId": "composed-3969c5ff7a1bdb29",
+      "rejectionRecord": "scripts/fixtures/arabian-mate/composed-reviewed.json",
+      "reason": "Same complete sequence of moving pieces, captures and checks as a retained teaching mechanism."
+    },
+    {
+      "path": "scripts/fixtures/arabian-mate/mate-proofs/composed-5aca5ccde3adec25.json",
+      "sha256": "d6641ccce6e54c9f56079c2f8e8936ae526f88fd9eafcaf814f731211ae083d5",
+      "bytes": 554,
+      "gameId": "composed-5aca5ccde3adec25",
+      "rejectionRecord": "scripts/fixtures/arabian-mate/composed-reviewed.json",
+      "reason": "Knight protects checking rook but does not cover a separate king escape square uncovered by that rook: related rook-knight mate, not the classic Arabian pattern."
+    },
+    {
+      "path": "scripts/fixtures/arabian-mate/mate-proofs/composed-600571663c71f356.json",
+      "sha256": "fb5f019d7d4b3cd34e704e9a7795164404142b31e758cc8f4b7b986774c0ed5a",
+      "bytes": 529,
+      "gameId": "composed-600571663c71f356",
+      "rejectionRecord": "scripts/fixtures/arabian-mate/composed-reviewed.json",
+      "reason": "Deeper principal line changes the motif or sacrifice grade."
+    },
+    {
+      "path": "scripts/fixtures/arabian-mate/mate-proofs/composed-316ecd9b615d5251.json",
+      "sha256": "a6724b105a05a2b1b619cce498795548413418b90c8b4509592dee6d39d4ce98",
+      "bytes": 579,
+      "gameId": "composed-316ecd9b615d5251",
+      "rejectionRecord": "scripts/fixtures/arabian-mate/composed-reviewed.json",
+      "reason": "Same complete sequence of moving pieces, captures and checks as a retained teaching mechanism."
+    },
+    {
+      "path": "scripts/fixtures/promotion/mate-proofs/composed-f3d9672012bca9da.json",
+      "sha256": "6611c376004ad9cbf3c81cd200fc3fd1cd68ab8059c472f97d76dc844e288447",
+      "bytes": 37381,
+      "gameId": "composed-f3d9672012bca9da",
+      "rejectionRecord": "scripts/fixtures/promotion/composed-reviewed.json",
+      "reason": "Deeper principal line changes the motif or sacrifice grade."
+    },
+    {
+      "path": "scripts/fixtures/promotion/mate-proofs/composed-3ed60a7986da6d2a.json",
+      "sha256": "ec2b1ff4b9a6e68375f1bf7a57af8e946180750e792e784b417b80ffd0ebf9e0",
+      "bytes": 4291,
+      "gameId": "composed-3ed60a7986da6d2a",
+      "rejectionRecord": "scripts/fixtures/promotion/composed-reviewed.json",
+      "reason": "Deeper principal line changes the motif or sacrifice grade."
+    },
+    {
+      "path": "scripts/fixtures/promotion/mate-proofs/composed-f2cb26e5210220bc.json",
+      "sha256": "c9b667774c8790bc0e0dc91574917f42e269516d3263b2c6a0e97b7785ba0137",
+      "bytes": 7239,
+      "gameId": "composed-f2cb26e5210220bc",
+      "rejectionRecord": "scripts/fixtures/promotion/composed-reviewed.json",
+      "reason": "Deeper principal line changes the motif or sacrifice grade."
+    },
+    {
+      "path": "scripts/fixtures/promotion/mate-proofs/composed-2754cf2f26fed0ee.json",
+      "sha256": "da06b749d39a704a070a56b91b8cba866392e96f6bc27c385cb7c7bd7f1f30d7",
+      "bytes": 5134,
+      "gameId": "composed-2754cf2f26fed0ee",
+      "rejectionRecord": "scripts/fixtures/promotion/composed-reviewed.json",
+      "reason": "Deeper principal line changes the motif or sacrifice grade."
+    },
+    {
+      "path": "scripts/fixtures/promotion/mate-proofs/composed-a918bd510637aed2.json",
+      "sha256": "5c320e8efb9fd6f8d485bea67f77d5014d948766d87e7485044262fe6eabe065",
+      "bytes": 4551,
+      "gameId": "composed-a918bd510637aed2",
+      "rejectionRecord": "scripts/fixtures/promotion/composed-reviewed.json",
+      "reason": "Deeper principal line changes the motif or sacrifice grade."
+    },
+    {
+      "path": "scripts/fixtures/promotion/mate-proofs/composed-691c89f114464d44.json",
+      "sha256": "b02cb0e622e0938fa98feb70ef5274e1b05b897175d471a712a15768d9cfd825",
+      "bytes": 11446,
+      "gameId": "composed-691c89f114464d44",
+      "rejectionRecord": "scripts/fixtures/promotion/composed-reviewed.json",
+      "reason": "Deeper principal line changes the motif or sacrifice grade."
+    },
+    {
+      "path": "scripts/fixtures/promotion/mate-proofs/composed-cd74205af16982a4.json",
+      "sha256": "cd08a948a183e187b72f252f023680ec744ba965b4148d50841dbba3c798d4c8",
+      "bytes": 4301,
+      "gameId": "composed-cd74205af16982a4",
+      "rejectionRecord": "scripts/fixtures/promotion/composed-reviewed.json",
+      "reason": "Deeper principal line changes the motif or sacrifice grade."
+    },
+    {
+      "path": "scripts/fixtures/promotion/mate-proofs/composed-b86c668523026628.json",
+      "sha256": "dd347603ad9724379bab3c8c77949db94cfeb0ad1d913f1e85d32e71c1a07e02",
+      "bytes": 755,
+      "gameId": "composed-b86c668523026628",
+      "rejectionRecord": "scripts/fixtures/promotion/composed-reviewed.json",
+      "reason": "Deeper principal line changes the motif or sacrifice grade."
+    },
+    {
+      "path": "scripts/fixtures/promotion/mate-proofs/composed-e1bbe96cc56c9109.json",
+      "sha256": "1a5a5a6b80c25ec2e585e30294f364fe7deb1e81363c4da1ec08513002e2de78",
+      "bytes": 4624,
+      "gameId": "composed-e1bbe96cc56c9109",
+      "rejectionRecord": "scripts/fixtures/promotion/composed-reviewed.json",
+      "reason": "Deeper review changes the shortest mating distance."
+    },
+    {
+      "path": "scripts/fixtures/promotion/mate-proofs/composed-6145bd310642f513.json",
+      "sha256": "68618b24f98e233c34808fd2e3adfd8689d4525de58590879e116e6980863946",
+      "bytes": 3205,
+      "gameId": "composed-6145bd310642f513",
+      "rejectionRecord": "scripts/fixtures/promotion/composed-reviewed.json",
+      "reason": "Deeper principal line changes the motif or sacrifice grade."
+    },
+    {
+      "path": "scripts/fixtures/promotion/mate-proofs/composed-1f088aac8f04fd4b.json",
+      "sha256": "2a7c6cc8c0bb007210b7d0eaff0aeb12e7eb6a34847c7e5791155a552e1b837f",
+      "bytes": 18304,
+      "gameId": "composed-1f088aac8f04fd4b",
+      "rejectionRecord": "scripts/fixtures/promotion/composed-reviewed.json",
+      "reason": "Deeper principal line changes the motif or sacrifice grade."
+    },
+    {
+      "path": "scripts/fixtures/promotion/mate-proofs/composed-2b63409570acfecc.json",
+      "sha256": "7ffa67d73b5acc38fcf93fe41b47814064f2c99ee5218ca0615ab0de600485ff",
+      "bytes": 723,
+      "gameId": "composed-2b63409570acfecc",
+      "rejectionRecord": "scripts/fixtures/promotion/composed-reviewed.json",
+      "reason": "Deeper principal line changes the motif or sacrifice grade."
+    },
+    {
+      "path": "scripts/fixtures/promotion/mate-proofs/composed-b6d90b15fe5cdf0a.json",
+      "sha256": "3268e96c461f2916a9a398194ea30712f17ccb4007a6c9705382f4673f711df3",
+      "bytes": 1240,
+      "gameId": "composed-b6d90b15fe5cdf0a",
+      "rejectionRecord": "scripts/fixtures/promotion/composed-reviewed.json",
+      "reason": "Deeper principal line changes the motif or sacrifice grade."
+    },
+    {
+      "path": "scripts/fixtures/promotion/mate-proofs/composed-913ae2ac2d5cb202.json",
+      "sha256": "2f3fcb5b986fb38b9325e06bb5e5b36b1a80368be226e7017a293ae2415d5934",
+      "bytes": 4371,
+      "gameId": "composed-913ae2ac2d5cb202",
+      "rejectionRecord": "scripts/fixtures/promotion/composed-reviewed.json",
+      "reason": "Deeper review changes the shortest mating distance."
+    },
+    {
+      "path": "scripts/fixtures/promotion/mate-proofs/composed-1aaa93277d6558dd.json",
+      "sha256": "1838be21410a697d7c996dbe7a321200c42117b594b0ab1ca61269e84aaaf2b6",
+      "bytes": 744,
+      "gameId": "composed-1aaa93277d6558dd",
+      "rejectionRecord": "scripts/fixtures/promotion/composed-reviewed.json",
+      "reason": "Deeper principal line changes the motif or sacrifice grade."
+    },
+    {
+      "path": "scripts/fixtures/promotion/mate-proofs/composed-d8ab2b5d6ae27d14.json",
+      "sha256": "094c5ed6dfd8cdcfa6da8b0c77eeb3005901f762b952da5c738e376f552cb6af",
+      "bytes": 13151,
+      "gameId": "composed-d8ab2b5d6ae27d14",
+      "rejectionRecord": "scripts/fixtures/promotion/composed-reviewed.json",
+      "reason": "Deeper review changes the shortest mating distance."
+    },
+    {
+      "path": "scripts/fixtures/promotion/mate-proofs/composed-8dc70aaace1d4ac7.json",
+      "sha256": "0c8edc363bd9c785175efb92e246de35c7855471e64cc1eafca140a5b6f323ae",
+      "bytes": 7066,
+      "gameId": "composed-8dc70aaace1d4ac7",
+      "rejectionRecord": "scripts/fixtures/promotion/composed-reviewed.json",
+      "reason": "Deeper principal line changes the motif or sacrifice grade."
+    },
+    {
+      "path": "scripts/fixtures/promotion/mate-proofs/composed-b923bd9050d9f835.json",
+      "sha256": "356aa007a62fb74bd6adb4f8af9a54c0b06b26467924b9eeaaabdb63cc1f5c47",
+      "bytes": 3094,
+      "gameId": "composed-b923bd9050d9f835",
+      "rejectionRecord": "scripts/fixtures/promotion/composed-reviewed.json",
+      "reason": "Deeper principal line changes the motif or sacrifice grade."
+    },
+    {
+      "path": "scripts/fixtures/promotion/mate-proofs/composed-67c1213f637b4c21.json",
+      "sha256": "f2f71d565d40fbf3d2c822eda90f4c05d2a0e9d0c12bbe894a5fbbd3d60ce443",
+      "bytes": 8081,
+      "gameId": "composed-67c1213f637b4c21",
+      "rejectionRecord": "scripts/fixtures/promotion/composed-reviewed.json",
+      "reason": "Deeper principal line changes the motif or sacrifice grade."
+    },
+    {
+      "path": "scripts/fixtures/promotion/mate-proofs/composed-fc402a6529da3a66.json",
+      "sha256": "5638e1cedbb067412c4506439ad78464d96afc7db0770c2cf6956c58420e94ce",
+      "bytes": 2689,
+      "gameId": "composed-fc402a6529da3a66",
+      "rejectionRecord": "scripts/fixtures/promotion/composed-reviewed.json",
+      "reason": "Deeper principal line changes the motif or sacrifice grade."
+    },
+    {
+      "path": "scripts/fixtures/promotion/mate-proofs/composed-ea558e0b6087821d.json",
+      "sha256": "e16675dced9219b1ab182125c1186ac447ff72238335569cfd5103e6255f809a",
+      "bytes": 7151,
+      "gameId": "composed-ea558e0b6087821d",
+      "rejectionRecord": "scripts/fixtures/promotion/composed-reviewed.json",
+      "reason": "Deeper principal line changes the motif or sacrifice grade."
+    },
+    {
+      "path": "scripts/fixtures/promotion/mate-proofs/composed-b8300c28f56b672a.json",
+      "sha256": "a6951882ac5dfe656b907593fd884c55b6b3f5e5f1278ea015325289635934fe",
+      "bytes": 2344,
+      "gameId": "composed-b8300c28f56b672a",
+      "rejectionRecord": "scripts/fixtures/promotion/composed-reviewed.json",
+      "reason": "Deeper principal line changes the motif or sacrifice grade."
+    },
+    {
+      "path": "scripts/fixtures/promotion/mate-proofs/composed-6cd67babd8b9a504.json",
+      "sha256": "9061137efe724d4f02ce1ca901fdadc96b130391292838674ba31949c9222638",
+      "bytes": 3517,
+      "gameId": "composed-6cd67babd8b9a504",
+      "rejectionRecord": "scripts/fixtures/promotion/composed-reviewed.json",
+      "reason": "Deeper principal line changes the motif or sacrifice grade."
+    },
+    {
+      "path": "scripts/fixtures/promotion/mate-proofs/composed-99618f6201bff5cd.json",
+      "sha256": "b0147b6aabfdb057420ee45edfc651e74f8782e836dc85135359eba1bb3a18f7",
+      "bytes": 13957,
+      "gameId": "composed-99618f6201bff5cd",
+      "rejectionRecord": "scripts/fixtures/promotion/composed-reviewed.json",
+      "reason": "Deeper principal line changes the motif or sacrifice grade."
+    },
+    {
+      "path": "scripts/fixtures/promotion/mate-proofs/composed-e818e848f336a9e4.json",
+      "sha256": "2d7b7bfbb553ffe9855975805300f813d0bc70c757bd521a93ef4b9f9355d4c9",
+      "bytes": 588,
+      "gameId": "composed-e818e848f336a9e4",
+      "rejectionRecord": "scripts/fixtures/promotion/composed-reviewed.json",
+      "reason": "Deeper principal line changes the motif or sacrifice grade."
+    },
+    {
+      "path": "scripts/fixtures/promotion/mate-proofs/composed-837222b9b7e37233.json",
+      "sha256": "571c9558198e9d9b65892b05de347da50b3edece163b54be545b20779024eb99",
+      "bytes": 585,
+      "gameId": "composed-837222b9b7e37233",
+      "rejectionRecord": "scripts/fixtures/promotion/composed-reviewed.json",
+      "reason": "Deeper principal line changes the motif or sacrifice grade."
+    },
+    {
+      "path": "scripts/fixtures/promotion/mate-proofs/composed-8df7965261bc8a40.json",
+      "sha256": "713fe663aef68ba2f7016d76ad48133d7f49dd81672d2657285a9794ac62e0b2",
+      "bytes": 5728,
+      "gameId": "composed-8df7965261bc8a40",
+      "rejectionRecord": "scripts/fixtures/promotion/composed-reviewed.json",
+      "reason": "Deeper review changes the shortest mating distance."
+    },
+    {
+      "path": "scripts/fixtures/promotion/mate-proofs/composed-cb9d7d3a7a1e73fb.json",
+      "sha256": "8ff3e7633c4ed1bc2401f50e7b61c374623e4951523ada0fd6967f2d7dca97cc",
+      "bytes": 3739,
+      "gameId": "composed-cb9d7d3a7a1e73fb",
+      "rejectionRecord": "scripts/fixtures/promotion/composed-reviewed.json",
+      "reason": "Deeper review changes the shortest mating distance."
+    },
+    {
+      "path": "scripts/fixtures/promotion/mate-proofs/composed-703fd3d88e73ce97.json",
+      "sha256": "edf057dea3a191b23137510dbd4bf79b4f39e0f5ed456d2ddb8cbca6a5aa2876",
+      "bytes": 4138,
+      "gameId": "composed-703fd3d88e73ce97",
+      "rejectionRecord": "scripts/fixtures/promotion/composed-reviewed.json",
+      "reason": "Deeper review changes the shortest mating distance."
+    },
+    {
+      "path": "scripts/fixtures/promotion/mate-proofs/composed-4c7de61c8775b0d0.json",
+      "sha256": "adfff97b20fb39a2cdaaa57f2eef94174f2a6851da824940a65102ac6bd17c5f",
+      "bytes": 8086,
+      "gameId": "composed-4c7de61c8775b0d0",
+      "rejectionRecord": "scripts/fixtures/promotion/composed-reviewed.json",
+      "reason": "Deeper principal line changes the motif or sacrifice grade."
+    },
+    {
+      "path": "scripts/fixtures/promotion/mate-proofs/composed-5ec24e0d05e2515c.json",
+      "sha256": "56ccb8b45b1379e6d746c74dfd1b2711dbee758a397d96a561404dccdbd23b5a",
+      "bytes": 4788,
+      "gameId": "composed-5ec24e0d05e2515c",
+      "rejectionRecord": "scripts/fixtures/promotion/composed-reviewed.json",
+      "reason": "Deeper principal line changes the motif or sacrifice grade."
+    },
+    {
+      "path": "scripts/fixtures/promotion/mate-proofs/composed-62c1753000e18a75.json",
+      "sha256": "af918517b58f48d428f9d3850935574daea1fa4bbb9becbb26576dcd8fad9d6a",
+      "bytes": 13780,
+      "gameId": "composed-62c1753000e18a75",
+      "rejectionRecord": "scripts/fixtures/promotion/composed-reviewed.json",
+      "reason": "Deeper principal line changes the motif or sacrifice grade."
+    }
+  ]
+}

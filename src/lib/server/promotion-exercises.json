@@ -1,0 +1,715 @@
+[
+  {
+    "id": "promotion",
+    "title": "Phong cấp giành vật chất",
+    "description": "Khai thác phong cấp để giành vật chất; kiểm tra các nước bắt lại.",
+    "exercises": [
+      {
+        "title": "Phong cấp · Bài 1",
+        "prompt": "Phong cấp ngay và giữ lợi thế vật chất.",
+        "mode": "interactive",
+        "goal": "material",
+        "outcome": "promotion",
+        "beginner": true,
+        "fen": "8/1P6/k7/8/1K6/8/8/8 w - - 0 1",
+        "moves": [
+          "b8=R",
+          "Ka7"
+        ],
+        "alternativeLines": [],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "Kiểm tra ô phong cấp và các quân có thể bắt quân mới.",
+          "Xét Hậu, Xe, Tượng và Mã; chọn quân đạt mục tiêu của bài."
+        ],
+        "solution": "b8=R — Tốt từ b7 đến b8, phong cấp thành Xe. Quân mới không bị bắt trong nước đáp. Phong Hậu dẫn đến hòa do hết nước đi (pat); phong Xe giữ được lợi thế vật chất.",
+        "promotionMaterial": {
+          "minimumGain": 4
+        },
+        "id": "promotion-beginner-avoid-stalemate"
+      },
+      {
+        "title": "Phong cấp · Bài 2",
+        "prompt": "Phong cấp ngay và giữ lợi thế vật chất.",
+        "mode": "interactive",
+        "goal": "material",
+        "outcome": "promotion",
+        "beginner": true,
+        "fen": "8/8/K7/8/2k5/8/2p5/8 b - - 0 1",
+        "moves": [
+          "c1=Q",
+          "Kb7"
+        ],
+        "alternativeLines": [
+          [
+            "c1=R",
+            "Kb7"
+          ]
+        ],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "Kiểm tra ô phong cấp và các quân có thể bắt quân mới.",
+          "Xét Hậu, Xe, Tượng và Mã; chọn quân đạt mục tiêu của bài."
+        ],
+        "solution": "c1=Q — Tốt từ c2 đến c1, phong cấp thành Hậu. Quân mới không bị bắt trong nước đáp.",
+        "promotionMaterial": {
+          "minimumGain": 4
+        },
+        "id": "promotion-beginner-safe-advance"
+      },
+      {
+        "id": "promotion-beginner-capture-defender",
+        "title": "Bắt quân để phong cấp",
+        "prompt": "Phong cấp và giữ lợi thế vật chất.",
+        "mode": "interactive",
+        "goal": "material",
+        "outcome": "promotion",
+        "beginner": true,
+        "fen": "1r6/P7/7k/8/8/8/8/K7 w - - 0 1",
+        "moves": [
+          "axb8=Q",
+          "Kg5"
+        ],
+        "alternativeLines": [
+          [
+            "axb8=R",
+            "Kg5"
+          ]
+        ],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "So sánh a8 và axb8: Xe đen có thể bắt quân mới ở ô nào?",
+          "Bắt Xe trên b8 đồng thời phong cấp."
+        ],
+        "solution": "axb8=Q — Tốt từ a7 bắt Xe ở b8 và phong cấp thành Hậu. Nếu đi a8=Q, Đen có thể bắt Hậu bằng Rxa8+. Phong Xe trên b8 cũng đạt mục tiêu.",
+        "promotionMaterial": {
+          "minimumGain": 4
+        }
+      },
+      {
+        "title": "Morozevich,A — Kozak,Adam",
+        "prompt": "Phong cấp để giành vật chất, tính cả các nước bắt lại.",
+        "mode": "interactive",
+        "outcome": "promotion",
+        "goal": "material",
+        "fen": "8/3r2pk/2p4p/2P5/1K5P/3p4/8/8 b - - 1 46",
+        "moves": [
+          "d2",
+          "Ka3",
+          "Rb7",
+          "Ka4",
+          "d1=Q+",
+          "Ka5"
+        ],
+        "source": "https://www.pgnmentor.com/players/Morozevich.zip",
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức ở thời điểm giữ được lợi thế vật chất, không dùng độ dài phương án chiếu hết."
+        },
+        "hints": [
+          "Kiểm tra đường đi của Tốt và quân kiểm soát ô phong cấp.",
+          "Xét cả phong cấp thành Hậu, Xe, Tượng hoặc Mã; tính các nước đáp."
+        ],
+        "solution": "Phong cấp và giữ phần vật chất giành được trước các nước đáp. Phương án: d2 · Ka3 · Rb7 · Ka4 · d1=Q+ · Ka5.",
+        "previousMove": {
+          "fen": "8/3r2pk/2p4p/2P5/7P/1K1p4/8/8 w - - 0 46",
+          "move": "Kb4"
+        },
+        "gameReference": {
+          "collection": "promotion",
+          "kind": "game",
+          "id": "58726c2fc7347db1",
+          "ply": 91,
+          "branch": 0
+        },
+        "promotionGain": {
+          "minimumGain": 100,
+          "solverMoves": 3
+        }
+      },
+      {
+        "title": "Manukian,Ar — Morozevich,A",
+        "prompt": "Phong cấp để giành vật chất, tính cả các nước bắt lại.",
+        "mode": "interactive",
+        "outcome": "promotion",
+        "goal": "material",
+        "fen": "1R6/8/8/2PK4/8/8/k7/8 w - - 1 69",
+        "moves": [
+          "c6",
+          "Ka3",
+          "c7",
+          "Ka4",
+          "c8=Q",
+          "Ka5"
+        ],
+        "source": "https://www.pgnmentor.com/players/Morozevich.zip",
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức ở thời điểm giữ được lợi thế vật chất, không dùng độ dài phương án chiếu hết."
+        },
+        "hints": [
+          "Kiểm tra đường đi của Tốt và quân kiểm soát ô phong cấp.",
+          "Xét cả phong cấp thành Hậu, Xe, Tượng hoặc Mã; tính các nước đáp."
+        ],
+        "solution": "Phong cấp và giữ phần vật chất giành được trước các nước đáp. Phương án: c6 · Ka3 · c7 · Ka4 · c8=Q · Ka5.",
+        "previousMove": {
+          "fen": "1R6/8/8/2PK4/8/k7/8/8 b - - 0 68",
+          "move": "Ka2"
+        },
+        "gameReference": {
+          "collection": "promotion",
+          "kind": "game",
+          "id": "4ceb257e1bef3210",
+          "ply": 136,
+          "branch": 0
+        },
+        "promotionGain": {
+          "minimumGain": 100,
+          "solverMoves": 3
+        }
+      },
+      {
+        "title": "Nepomniachtchi,I — Rustemov,A",
+        "prompt": "Phong cấp để giành vật chất, tính cả các nước bắt lại.",
+        "mode": "interactive",
+        "outcome": "promotion",
+        "goal": "material",
+        "fen": "8/R6P/1p1k4/8/2B5/4n3/4Kpr1/8 b - - 1 60",
+        "moves": [
+          "f1=Q+",
+          "Kxe3"
+        ],
+        "source": "https://www.pgnmentor.com/players/Nepomniachtchi.zip",
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 1,
+          "sacrificeCount": 0,
+          "reason": "Phân mức ở thời điểm giữ được lợi thế vật chất, không dùng độ dài phương án chiếu hết."
+        },
+        "hints": [
+          "Kiểm tra đường đi của Tốt và quân kiểm soát ô phong cấp.",
+          "Xét cả phong cấp thành Hậu, Xe, Tượng hoặc Mã; tính các nước đáp."
+        ],
+        "solution": "Phong cấp và giữ phần vật chất giành được trước các nước đáp. Phương án: f1=Q+ · Kxe3.",
+        "previousMove": {
+          "fen": "8/R6P/1p1k4/8/2B5/4n3/5pr1/4K3 w - - 0 60",
+          "move": "Ke2"
+        },
+        "gameReference": {
+          "collection": "promotion",
+          "kind": "game",
+          "id": "d80d26ca5ca1d728",
+          "ply": 119,
+          "branch": 0
+        },
+        "promotionGain": {
+          "minimumGain": 100,
+          "solverMoves": 1
+        }
+      },
+      {
+        "title": "Ashraf,Artin — Caruana,F",
+        "prompt": "Phong cấp để giành vật chất, tính cả các nước bắt lại.",
+        "mode": "interactive",
+        "outcome": "promotion",
+        "goal": "material",
+        "fen": "8/5P2/3k4/8/4R3/4K3/8/5N2 w - - 1 78",
+        "moves": [
+          "f8=Q+",
+          "Kd7"
+        ],
+        "source": "https://www.pgnmentor.com/players/Caruana.zip",
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 1,
+          "sacrificeCount": 0,
+          "reason": "Phân mức ở thời điểm giữ được lợi thế vật chất, không dùng độ dài phương án chiếu hết."
+        },
+        "hints": [
+          "Kiểm tra đường đi của Tốt và quân kiểm soát ô phong cấp.",
+          "Xét cả phong cấp thành Hậu, Xe, Tượng hoặc Mã; tính các nước đáp."
+        ],
+        "solution": "Phong cấp và giữ phần vật chất giành được trước các nước đáp. Phương án: f8=Q+ · Kd7.",
+        "previousMove": {
+          "fen": "8/3k1P2/8/8/4R3/4K3/8/5N2 b - - 0 77",
+          "move": "Kd6"
+        },
+        "gameReference": {
+          "collection": "promotion",
+          "kind": "game",
+          "id": "50bb48171c0b6ff3",
+          "ply": 154,
+          "branch": 0
+        },
+        "promotionGain": {
+          "minimumGain": 100,
+          "solverMoves": 1
+        }
+      },
+      {
+        "title": "Phong cấp giành vật chất · A · Thế biên soạn",
+        "prompt": "Phong cấp để giành vật chất, tính cả các nước bắt lại.",
+        "mode": "interactive",
+        "outcome": "promotion",
+        "goal": "material",
+        "fen": "6k1/8/8/4B3/p4p2/1b1pbB2/pP4P1/4K3 b - - 0 1",
+        "moves": [
+          "a1=R+",
+          "Bd1"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 1,
+          "sacrificeCount": 0,
+          "reason": "Phân mức ở thời điểm giữ được lợi thế vật chất, không dùng độ dài phương án chiếu hết."
+        },
+        "hints": [
+          "Kiểm tra đường đi của Tốt và quân kiểm soát ô phong cấp.",
+          "Xét cả phong cấp thành Hậu, Xe, Tượng hoặc Mã; tính các nước đáp."
+        ],
+        "solution": "Phong cấp và giữ phần vật chất giành được trước các nước đáp. Phương án: a1=R+ · Bd1.",
+        "promotionGain": {
+          "minimumGain": 100,
+          "solverMoves": 1
+        }
+      },
+      {
+        "title": "Phong cấp giành vật chất · A · Thế biên soạn",
+        "fen": "8/8/4k2N/p5P1/5nKb/r7/2p5/8 b - - 0 1",
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "mode": "interactive",
+        "goal": "material",
+        "outcome": "promotion",
+        "moves": [
+          "c1=Q",
+          "Ng8"
+        ],
+        "promotionGain": {
+          "minimumGain": 100,
+          "solverMoves": 1
+        },
+        "prompt": "Phong cấp để giành vật chất, tính cả các nước bắt lại.",
+        "solution": "Phong cấp và giữ phần vật chất giành được trước các nước đáp. Phương án: c1=Q · Ng8.",
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 1,
+          "sacrificeCount": 0,
+          "reason": "Phân mức ở thời điểm giữ được lợi thế vật chất, không dùng độ dài phương án chiếu hết."
+        }
+      },
+      {
+        "title": "Phong cấp giành vật chất · A · Thế biên soạn",
+        "prompt": "Phong cấp để giành vật chất, tính cả các nước bắt lại.",
+        "mode": "interactive",
+        "outcome": "promotion",
+        "goal": "material",
+        "fen": "6k1/8/8/1R6/8/8/2r3p1/K7 b - - 0 1",
+        "moves": [
+          "g1=Q+",
+          "Rb1"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 1,
+          "sacrificeCount": 0,
+          "reason": "Phân mức ở thời điểm giữ được lợi thế vật chất, không dùng độ dài phương án chiếu hết."
+        },
+        "hints": [
+          "Kiểm tra đường đi của Tốt và quân kiểm soát ô phong cấp.",
+          "Xét cả phong cấp thành Hậu, Xe, Tượng hoặc Mã; tính các nước đáp."
+        ],
+        "solution": "Phong cấp và giữ phần vật chất giành được trước các nước đáp. Phương án: g1=Q+ · Rb1.",
+        "promotionGain": {
+          "minimumGain": 100,
+          "solverMoves": 1
+        }
+      },
+      {
+        "title": "Phong cấp giành vật chất · A · Thế biên soạn",
+        "fen": "8/1P3QK1/8/k3r3/8/8/8/8 w - - 0 1",
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "mode": "interactive",
+        "goal": "material",
+        "outcome": "promotion",
+        "moves": [
+          "Qa2+",
+          "Kb6",
+          "b8=Q+",
+          "Kc6"
+        ],
+        "promotionGain": {
+          "minimumGain": 100,
+          "solverMoves": 2
+        },
+        "prompt": "Phong cấp để giành vật chất, tính cả các nước bắt lại.",
+        "solution": "Phong cấp và giữ phần vật chất giành được trước các nước đáp. Phương án: Qa2+ · Kb6 · b8=Q+ · Kc6.",
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 0,
+          "reason": "Phân mức ở thời điểm giữ được lợi thế vật chất, không dùng độ dài phương án chiếu hết."
+        }
+      },
+      {
+        "title": "Phong cấp giành vật chất · A · Thế biên soạn",
+        "fen": "8/1r4pk/K1p5/2P2p2/8/8/3p2P1/8 b - - 0 1",
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "mode": "interactive",
+        "goal": "material",
+        "outcome": "promotion",
+        "moves": [
+          "Rb2",
+          "Ka7",
+          "d1=R",
+          "Ka8"
+        ],
+        "promotionGain": {
+          "minimumGain": 100,
+          "solverMoves": 2
+        },
+        "prompt": "Phong cấp để giành vật chất, tính cả các nước bắt lại.",
+        "solution": "Phong cấp và giữ phần vật chất giành được trước các nước đáp. Phương án: Rb2 · Ka7 · d1=R · Ka8.",
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 0,
+          "reason": "Phân mức ở thời điểm giữ được lợi thế vật chất, không dùng độ dài phương án chiếu hết."
+        }
+      },
+      {
+        "title": "Phong cấp giành vật chất · A · Thế biên soạn",
+        "fen": "8/8/5q2/7k/8/8/2p5/1R5K b - - 0 1",
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "mode": "interactive",
+        "goal": "material",
+        "outcome": "promotion",
+        "moves": [
+          "cxb1=Q+",
+          "Kh2"
+        ],
+        "promotionGain": {
+          "minimumGain": 100,
+          "solverMoves": 1
+        },
+        "prompt": "Phong cấp để giành vật chất, tính cả các nước bắt lại.",
+        "solution": "Phong cấp và giữ phần vật chất giành được trước các nước đáp. Phương án: cxb1=Q+ · Kh2.",
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 1,
+          "sacrificeCount": 0,
+          "reason": "Phân mức ở thời điểm giữ được lợi thế vật chất, không dùng độ dài phương án chiếu hết."
+        }
+      },
+      {
+        "title": "Phong cấp giành vật chất · A · Thế biên soạn",
+        "fen": "8/5P2/R7/5Nk1/P5p1/4K2n/B7/8 w - - 0 1",
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "mode": "interactive",
+        "goal": "material",
+        "outcome": "promotion",
+        "moves": [
+          "f8=Q",
+          "Kh5"
+        ],
+        "promotionGain": {
+          "minimumGain": 100,
+          "solverMoves": 1
+        },
+        "prompt": "Phong cấp để giành vật chất, tính cả các nước bắt lại.",
+        "solution": "Phong cấp và giữ phần vật chất giành được trước các nước đáp. Phương án: f8=Q · Kh5.",
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 1,
+          "sacrificeCount": 0,
+          "reason": "Phân mức ở thời điểm giữ được lợi thế vật chất, không dùng độ dài phương án chiếu hết."
+        }
+      },
+      {
+        "title": "Phong cấp giành vật chất · A · Thế biên soạn",
+        "fen": "8/2P5/6R1/6Pp/7k/4K1Nn/B7/7R w - - 0 1",
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "mode": "interactive",
+        "goal": "material",
+        "outcome": "promotion",
+        "moves": [
+          "c8=Q",
+          "Kxg3"
+        ],
+        "promotionGain": {
+          "minimumGain": 100,
+          "solverMoves": 1
+        },
+        "prompt": "Phong cấp để giành vật chất, tính cả các nước bắt lại.",
+        "solution": "Phong cấp và giữ phần vật chất giành được trước các nước đáp. Phương án: c8=Q · Kxg3.",
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 1,
+          "sacrificeCount": 0,
+          "reason": "Phân mức ở thời điểm giữ được lợi thế vật chất, không dùng độ dài phương án chiếu hết."
+        }
+      },
+      {
+        "title": "Phong cấp giành vật chất · A · Thế biên soạn",
+        "prompt": "Phong cấp để giành vật chất, tính cả các nước bắt lại.",
+        "mode": "interactive",
+        "outcome": "promotion",
+        "goal": "material",
+        "fen": "5r2/6P1/2Q5/k7/8/8/8/4K3 w - - 0 1",
+        "moves": [
+          "gxf8=R",
+          "Kb4"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 1,
+          "sacrificeCount": 0,
+          "reason": "Phân mức ở thời điểm giữ được lợi thế vật chất, không dùng độ dài phương án chiếu hết."
+        },
+        "hints": [
+          "Kiểm tra đường đi của Tốt và quân kiểm soát ô phong cấp.",
+          "Xét cả phong cấp thành Hậu, Xe, Tượng hoặc Mã; tính các nước đáp."
+        ],
+        "solution": "Phong cấp và giữ phần vật chất giành được trước các nước đáp. Phương án: gxf8=R · Kb4.",
+        "promotionGain": {
+          "minimumGain": 100,
+          "solverMoves": 1
+        }
+      },
+      {
+        "title": "Phong cấp giành vật chất · C · Thế biên soạn",
+        "prompt": "Phong cấp để giành vật chất, tính cả các nước bắt lại.",
+        "mode": "interactive",
+        "outcome": "promotion",
+        "goal": "material",
+        "fen": "8/2P5/R5R1/7p/6bk/2P1K1Nn/B7/8 w - - 0 1",
+        "moves": [
+          "Rxg4+",
+          "hxg4",
+          "Nf5+",
+          "Kh5",
+          "c8=Q",
+          "Kg5"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 1,
+          "reason": "Phân mức ở thời điểm giữ được lợi thế vật chất, không dùng độ dài phương án chiếu hết."
+        },
+        "hints": [
+          "Kiểm tra đường đi của Tốt và quân kiểm soát ô phong cấp.",
+          "Xét cả phong cấp thành Hậu, Xe, Tượng hoặc Mã; tính các nước đáp."
+        ],
+        "solution": "Phong cấp và giữ phần vật chất giành được trước các nước đáp. Phương án: Rxg4+ · hxg4 · Nf5+ · Kh5 · c8=Q · Kg5.",
+        "promotionGain": {
+          "minimumGain": 100,
+          "solverMoves": 3
+        }
+      },
+      {
+        "title": "Phong cấp giành vật chất · A · Thế biên soạn",
+        "prompt": "Phong cấp để giành vật chất, tính cả các nước bắt lại.",
+        "mode": "interactive",
+        "outcome": "promotion",
+        "goal": "material",
+        "fen": "8/1P6/8/4kbp1/4p3/P1R2pP1/p2r3P/1N4K1 b - - 0 1",
+        "moves": [
+          "axb1=Q+",
+          "Rc1"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 1,
+          "sacrificeCount": 0,
+          "reason": "Phân mức ở thời điểm giữ được lợi thế vật chất, không dùng độ dài phương án chiếu hết."
+        },
+        "hints": [
+          "Kiểm tra đường đi của Tốt và quân kiểm soát ô phong cấp.",
+          "Xét cả phong cấp thành Hậu, Xe, Tượng hoặc Mã; tính các nước đáp."
+        ],
+        "solution": "Phong cấp và giữ phần vật chất giành được trước các nước đáp. Phương án: axb1=Q+ · Rc1.",
+        "promotionGain": {
+          "minimumGain": 100,
+          "solverMoves": 1
+        }
+      },
+      {
+        "title": "Phong cấp giành vật chất · A · Thế biên soạn",
+        "fen": "8/3r4/5p2/4k2K/6P1/7p/8/8 b - - 0 1",
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "mode": "interactive",
+        "goal": "material",
+        "outcome": "promotion",
+        "moves": [
+          "h2",
+          "Kh6",
+          "h1=Q+",
+          "Kg6"
+        ],
+        "promotionGain": {
+          "minimumGain": 100,
+          "solverMoves": 2
+        },
+        "prompt": "Phong cấp để giành vật chất, tính cả các nước bắt lại.",
+        "solution": "Phong cấp và giữ phần vật chất giành được trước các nước đáp. Phương án: h2 · Kh6 · h1=Q+ · Kg6.",
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 0,
+          "reason": "Phân mức ở thời điểm giữ được lợi thế vật chất, không dùng độ dài phương án chiếu hết."
+        }
+      },
+      {
+        "title": "Phong cấp giành vật chất · A · Thế biên soạn",
+        "fen": "5k2/8/2P5/7P/2R2P2/1P1K1PP1/8/8 w - - 0 1",
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "mode": "interactive",
+        "goal": "material",
+        "outcome": "promotion",
+        "moves": [
+          "c7",
+          "Kg8",
+          "c8=Q+",
+          "Kh7"
+        ],
+        "promotionGain": {
+          "minimumGain": 100,
+          "solverMoves": 2
+        },
+        "prompt": "Phong cấp để giành vật chất, tính cả các nước bắt lại.",
+        "solution": "Phong cấp và giữ phần vật chất giành được trước các nước đáp. Phương án: c7 · Kg8 · c8=Q+ · Kh7.",
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 0,
+          "reason": "Phân mức ở thời điểm giữ được lợi thế vật chất, không dùng độ dài phương án chiếu hết."
+        }
+      },
+      {
+        "title": "Phong cấp giành vật chất · A · Thế biên soạn",
+        "prompt": "Phong cấp để giành vật chất, tính cả các nước bắt lại.",
+        "mode": "interactive",
+        "outcome": "promotion",
+        "goal": "material",
+        "fen": "6R1/R6P/6pk/6np/P4pb1/6N1/B4K2/8 w - - 0 1",
+        "moves": [
+          "h8=Q+",
+          "Nh7"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 1,
+          "sacrificeCount": 0,
+          "reason": "Phân mức ở thời điểm giữ được lợi thế vật chất, không dùng độ dài phương án chiếu hết."
+        },
+        "hints": [
+          "Kiểm tra đường đi của Tốt và quân kiểm soát ô phong cấp.",
+          "Xét cả phong cấp thành Hậu, Xe, Tượng hoặc Mã; tính các nước đáp."
+        ],
+        "solution": "Phong cấp và giữ phần vật chất giành được trước các nước đáp. Phương án: h8=Q+ · Nh7.",
+        "promotionGain": {
+          "minimumGain": 100,
+          "solverMoves": 1
+        }
+      },
+      {
+        "title": "Phong cấp giành vật chất · C · Thế biên soạn",
+        "prompt": "Phong cấp để giành vật chất, tính cả các nước bắt lại.",
+        "mode": "interactive",
+        "outcome": "promotion",
+        "goal": "material",
+        "fen": "8/2Pp4/R5R1/8/6bk/4K1Nn/B7/8 w - - 0 1",
+        "moves": [
+          "Rxg4+",
+          "Kxg4",
+          "Rg6+",
+          "Kh4",
+          "c8=Q",
+          "Ng5"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 1,
+          "reason": "Phân mức ở thời điểm giữ được lợi thế vật chất, không dùng độ dài phương án chiếu hết."
+        },
+        "hints": [
+          "Kiểm tra đường đi của Tốt và quân kiểm soát ô phong cấp.",
+          "Xét cả phong cấp thành Hậu, Xe, Tượng hoặc Mã; tính các nước đáp."
+        ],
+        "solution": "Phong cấp và giữ phần vật chất giành được trước các nước đáp. Phương án: Rxg4+ · Kxg4 · Rg6+ · Kh4 · c8=Q · Ng5.",
+        "promotionGain": {
+          "minimumGain": 100,
+          "solverMoves": 3
+        }
+      },
+      {
+        "title": "Phong cấp giành vật chất · D · Thế biên soạn",
+        "prompt": "Phong cấp để giành vật chất, tính cả các nước bắt lại.",
+        "mode": "interactive",
+        "outcome": "promotion",
+        "goal": "material",
+        "fen": "8/8/4k1nN/6BK/3pP3/r5rb/4p3/8 b - - 0 1",
+        "moves": [
+          "Rxg5+",
+          "Kxg5",
+          "Rg3+",
+          "Ng4",
+          "Rxg4+",
+          "Kh6",
+          "Nf4",
+          "Kh7",
+          "e1=Q",
+          "Kh8"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "D",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 1,
+          "reason": "Phân mức ở thời điểm giữ được lợi thế vật chất, không dùng độ dài phương án chiếu hết."
+        },
+        "hints": [
+          "Kiểm tra đường đi của Tốt và quân kiểm soát ô phong cấp.",
+          "Xét cả phong cấp thành Hậu, Xe, Tượng hoặc Mã; tính các nước đáp."
+        ],
+        "solution": "Phong cấp và giữ phần vật chất giành được trước các nước đáp. Phương án: Rxg5+ · Kxg5 · Rg3+ · Ng4 · Rxg4+ · Kh6 · Nf4 · Kh7 · e1=Q · Kh8.",
+        "promotionGain": {
+          "minimumGain": 100,
+          "solverMoves": 5
+        }
+      }
+    ]
+  }
+]

@@ -1,0 +1,295 @@
+[
+  {
+    "id": "underpromotion",
+    "title": "Phong cấp thành Xe, Tượng hoặc Mã",
+    "description": "Tìm lý do cụ thể để chọn quân khác Hậu: tránh pat, tạo nước chiếu hoặc đạt mục tiêu chiến thuật.",
+    "exercises": [
+      {
+        "title": "Phong cấp · Bài 1",
+        "prompt": "Phong cấp ngay và giữ lợi thế vật chất.",
+        "mode": "interactive",
+        "goal": "material",
+        "outcome": "promotion",
+        "beginner": true,
+        "fen": "8/1P6/k7/8/1K6/8/8/8 w - - 0 1",
+        "moves": [
+          "b8=R",
+          "Ka7"
+        ],
+        "alternativeLines": [],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "Kiểm tra ô phong cấp và các quân có thể bắt quân mới.",
+          "Xét Hậu, Xe, Tượng và Mã; chọn quân đạt mục tiêu của bài."
+        ],
+        "solution": "b8=R — Tốt từ b7 đến b8, phong cấp thành Xe. Quân mới không bị bắt trong nước đáp. Phong Hậu dẫn đến hòa do hết nước đi (pat); phong Xe giữ được lợi thế vật chất.",
+        "promotionMaterial": {
+          "minimumGain": 4
+        },
+        "id": "promotion-beginner-avoid-stalemate"
+      },
+      {
+        "title": "Phong cấp · Bài 9",
+        "prompt": "Phong cấp để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "goal": "checkmate",
+        "outcome": "checkmate",
+        "beginner": true,
+        "fen": "8/5P1k/6R1/5K2/8/2B5/8/8 w - - 0 1",
+        "moves": [
+          "f8=N#"
+        ],
+        "alternativeLines": [],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "Kiểm tra ô phong cấp và các quân có thể bắt quân mới.",
+          "Xét Hậu, Xe, Tượng và Mã; chọn quân đạt mục tiêu của bài."
+        ],
+        "solution": "f8=N# — Tốt từ f7 đến f8, phong cấp thành Mã, chiếu hết."
+      },
+      {
+        "title": "Phong cấp · Bài 10",
+        "prompt": "Phong cấp để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "goal": "checkmate",
+        "outcome": "checkmate",
+        "beginner": true,
+        "fen": "8/8/2b5/8/5k2/6r1/4p2K/5B2 b - - 0 1",
+        "moves": [
+          "exf1=N#"
+        ],
+        "alternativeLines": [],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "Kiểm tra ô phong cấp và các quân có thể bắt quân mới.",
+          "Xét Hậu, Xe, Tượng và Mã; chọn quân đạt mục tiêu của bài."
+        ],
+        "solution": "exf1=N# — Tốt từ e2 đến f1, bắt quân, phong cấp thành Mã, chiếu hết."
+      },
+      {
+        "title": "Phong cấp · A · Thế biên soạn 3",
+        "prompt": "Phong cấp và phối hợp để chiếu hết.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/7k/5PR1/5K2/8/2B5/p7/8 w - - 0 1",
+        "moves": [
+          "f7",
+          "a1=Q",
+          "f8=N#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu của toàn bộ phương án."
+        },
+        "hints": [
+          "Kiểm tra đường đi của Tốt và quân kiểm soát ô phong cấp.",
+          "Xét cả phong cấp thành Hậu, Xe, Tượng hoặc Mã; tính các nước đáp."
+        ],
+        "solution": "Tốt phong cấp thành Mã; quân mới góp phần quyết định vào thế chiếu hết. Phương án: f7 · a1=Q · f8=N#."
+      },
+      {
+        "title": "Phong cấp · B · Thế biên soạn 3",
+        "prompt": "Phong cấp và phối hợp để chiếu hết.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/7k/6R1/5P1P/8/2B5/8/K7 w - - 0 1",
+        "moves": [
+          "f6",
+          "Kh8",
+          "f7+",
+          "Kh7",
+          "f8=N#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu của toàn bộ phương án."
+        },
+        "hints": [
+          "Kiểm tra đường đi của Tốt và quân kiểm soát ô phong cấp.",
+          "Xét cả phong cấp thành Hậu, Xe, Tượng hoặc Mã; tính các nước đáp."
+        ],
+        "solution": "Tốt phong cấp thành Mã; quân mới góp phần quyết định vào thế chiếu hết. Phương án: f6 · Kh8 · f7+ · Kh7 · f8=N#."
+      },
+      {
+        "title": "Phong cấp Mã tạo chiếu và tấn công đôi",
+        "prompt": "Chọn quân phong cấp để giành Hậu và tránh bị chiếu hết.",
+        "mode": "interactive",
+        "goal": "material",
+        "outcome": "promotion",
+        "fen": "8/2P5/1q1k4/8/8/8/4n1PP/7K w - - 0 1",
+        "moves": [
+          "c8=N+",
+          "Kc6",
+          "Nxb6",
+          "Kxb6"
+        ],
+        "promotionGain": {
+          "minimumGain": 800,
+          "solverMoves": 2
+        },
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 0,
+          "reason": "Phong Mã tạo chiếu và tấn công Hậu; tính cả nước bắt lại."
+        },
+        "hints": [
+          "Nếu phong Hậu, Xe hoặc Tượng, Đen có Qg1#.",
+          "Tìm nước phong cấp vừa chiếu Vua vừa tấn công Hậu."
+        ],
+        "solution": "c8=N+ — Tốt từ c7 đến c8, phong Mã và chiếu. Mã đồng thời tấn công Hậu b6. Sau Kc6, Nxb6 giành Hậu; kể cả Kxb6, Trắng vẫn đổi được một Tốt lấy Hậu. Phong Hậu, Xe hoặc Tượng đều cho phép Qg1#.",
+        "source": "Thế cờ biên soạn."
+      },
+      {
+        "title": "Phong Tượng hoặc Mã để tránh pat",
+        "prompt": "Phong cấp để tăng lực lượng mà không gây pat.",
+        "hints": [
+          "Sau phong Hậu hoặc Xe, Vua đen còn ô nào hợp lệ?",
+          "Phong Tượng hoặc Mã để giữ cho Vua đen còn nước đi."
+        ],
+        "solution": "c8=B — Tốt từ c7 đến c8, phong cấp thành Tượng. Đen còn Ka8 hoặc Kb8. c8=N+ cũng đạt mục tiêu. Phong Hậu hoặc Xe gây hòa do hết nước đi (pat): Vua đen không bị chiếu nhưng không còn nước hợp lệ.",
+        "fen": "8/k1P5/2K5/8/1N6/8/8/8 w - - 0 1",
+        "moves": [
+          "c8=B",
+          "Ka8"
+        ],
+        "source": "Thế cờ biên soạn.",
+        "mode": "interactive",
+        "goal": "material",
+        "outcome": "promotion",
+        "beginner": true,
+        "promotionGain": {
+          "minimumGain": 220,
+          "solverMoves": 1
+        },
+        "alternativeLines": [
+          [
+            "c8=N+",
+            "Ka8"
+          ]
+        ]
+      },
+      {
+        "title": "Phong Tượng, chặn rồi mở đường Xe",
+        "prompt": "Phong cấp và thí Xe để chiếu hết trong bốn nước.",
+        "hints": [
+          "Cần đưa quân mới đến d1 để chặn đường bảo vệ của Xe f1.",
+          "Sau khi Vua đen bắt Xe b1, mở lại đường chiếu của Xe f1."
+        ],
+        "solution": "Phương án: c8=B b3 Bg4 b2 Bd1 Kxb1 Bb3#. Tượng trên d1 chặn đường bảo vệ của Xe f1, cho phép Kxb1. Bb3 mở đường chiếu của Xe f1 và khống chế a2, c2. Nếu dùng Hậu trên d1, Hậu vẫn bảo vệ b1 nên cách thí Xe này không thực hiện được.",
+        "fen": "8/1KP5/8/2p5/1pP5/p7/k7/1R3R2 w - - 0 1",
+        "moves": [
+          "c8=B",
+          "b3",
+          "Bg4",
+          "b2",
+          "Bd1",
+          "Kxb1",
+          "Bb3#"
+        ],
+        "source": "Oswald von Krobshofer, thế cờ biên soạn, Münchner Neueste Nachrichten, 11-09-1904. https://www.chesshistory.com/winter/extra/underpromotion.html",
+        "mode": "interactive",
+        "goal": "checkmate",
+        "outcome": "checkmate",
+        "difficulty": {
+          "level": "D",
+          "status": "suggested",
+          "solverMoves": 4,
+          "sacrificeCount": 1,
+          "reason": "Thí Xe, điều Tượng và chiếu mở trong bốn nước."
+        }
+      },
+      {
+        "title": "Alapin — Rubinstein: đổi quân và phong Xe",
+        "prompt": "Phối hợp đổi quân và phong cấp để chiếu hết trong năm nước.",
+        "hints": [
+          "Đẩy Tốt h để buộc Vua trắng lùi về h1.",
+          "Sau khi đổi Mã lấy Tượng, so sánh phong Hậu và phong Xe."
+        ],
+        "solution": "Phương án: h2+ Kh1 Nf2+ Bxf2 gxf2 Kxh2 f1=R Kh3 Rh1#. Mã và Tượng được đổi với nhau; Tốt f2 phong Xe để tránh pat. Phong Hậu trên f1 khiến Vua trắng ở h2 hết nước hợp lệ mà không bị chiếu.",
+        "fen": "8/8/1B6/8/8/3n1kpp/8/6K1 b - - 3 74",
+        "moves": [
+          "h2+",
+          "Kh1",
+          "Nf2+",
+          "Bxf2",
+          "gxf2",
+          "Kxh2",
+          "f1=R",
+          "Kh3",
+          "Rh1#"
+        ],
+        "source": "https://www.pgnmentor.com/players/Rubinstein.zip",
+        "mode": "interactive",
+        "goal": "checkmate",
+        "outcome": "checkmate",
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo toàn bộ phương án và các nước đáp."
+        },
+        "gameReference": {
+          "collection": "underpromotion",
+          "kind": "game",
+          "id": "443e80246d5527b7",
+          "ply": 147,
+          "branch": 0
+        },
+        "previousMove": {
+          "fen": "8/8/1B6/8/8/3n1kpp/8/7K w - - 2 74",
+          "move": "Kg1"
+        }
+      },
+      {
+        "title": "Goetz: Hậu dẫn đường cho Mã mới",
+        "prompt": "Phối hợp Hậu và phong Mã để chiếu hết trong hai nước.",
+        "hints": [
+          "Dùng nước chiếu của Hậu để đưa Vua trắng đến f2.",
+          "Quân nào sau khi phong cấp trên h1 sẽ chiếu Vua f2?"
+        ],
+        "solution": "Qxe4+ Kf2 gxh1=N#. Hậu chiếu buộc Vua đến f2; Tốt g2 bắt Xe h1 và phong Mã, tạo nước chiếu hết. Phong Hậu, Xe hoặc Tượng trên h1 không tạo nước chiếu vào f2.",
+        "fen": "rnb1kbnr/pppp1ppp/8/8/4P2q/1P5P/P1PPK1p1/RNBQ1BNR b kq - 1 6",
+        "moves": [
+          "Qxe4+",
+          "Kf2",
+          "gxh1=N#"
+        ],
+        "source": "https://www.chesshistory.com/winter/extra/underpromotion.html",
+        "mode": "interactive",
+        "goal": "checkmate",
+        "outcome": "checkmate",
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo toàn bộ phương án và các nước đáp."
+        },
+        "gameReference": {
+          "collection": "underpromotion",
+          "kind": "game",
+          "id": "goetz-historical-knight",
+          "ply": 11,
+          "branch": 0
+        },
+        "previousMove": {
+          "fen": "rnb1kbnr/pppp1ppp/8/8/4P2q/1P5P/P1PP2p1/RNBQKBNR w KQkq - 0 6",
+          "move": "Ke2"
+        }
+      }
+    ]
+  }
+]

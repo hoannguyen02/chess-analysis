@@ -1,0 +1,441 @@
+[
+  {
+    "id": "arabian-mate",
+    "title": "Chiếu hết kiểu Arabian",
+    "description": "Xe chiếu hết Vua trong góc; Mã bảo vệ Xe và khống chế ô thoát.",
+    "exercises": [
+      {
+        "title": "Arabian Mate · Bài 1",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "7k/1R5n/5N2/1K6/8/8/8/8 w - - 0 1",
+        "moves": [
+          "Rxh7#"
+        ],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "Mã bảo vệ ô mà Xe có thể đến để chiếu.",
+          "Tìm nước chiếu của Xe, rồi kiểm tra mọi ô thoát của Vua."
+        ],
+        "solution": "Rxh7# — Xe từ b7 đến h7, bắt quân và chiếu hết. Mã ở f6 bảo vệ Xe ở h7 và khống chế ô thoát của Vua."
+      },
+      {
+        "title": "Arabian Mate · Bài 2",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "8/8/8/8/8/5n2/1k2r3/7K b - - 0 1",
+        "moves": [
+          "Rh2#"
+        ],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "Mã bảo vệ ô mà Xe có thể đến để chiếu.",
+          "Tìm nước chiếu của Xe, rồi kiểm tra mọi ô thoát của Vua."
+        ],
+        "solution": "Rh2# — Xe từ e2 đến h2, chiếu hết. Mã ở f3 bảo vệ Xe ở h2 và khống chế ô thoát của Vua."
+      },
+      {
+        "title": "Arabian Mate · Bài 3",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "kn6/8/2N5/K7/8/1R6/8/8 w - - 0 1",
+        "moves": [
+          "Rxb8#"
+        ],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "Mã bảo vệ ô mà Xe có thể đến để chiếu.",
+          "Tìm nước chiếu của Xe, rồi kiểm tra mọi ô thoát của Vua."
+        ],
+        "solution": "Rxb8# — Xe từ b3 đến b8, bắt quân và chiếu hết. Mã ở c6 bảo vệ Xe ở b8 và khống chế ô thoát của Vua."
+      },
+      {
+        "title": "Arabian Mate · Bài 4",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "8/8/8/8/8/2n5/2r2k2/K7 b - - 0 1",
+        "moves": [
+          "Ra2#"
+        ],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "Mã bảo vệ ô mà Xe có thể đến để chiếu.",
+          "Tìm nước chiếu của Xe, rồi kiểm tra mọi ô thoát của Vua."
+        ],
+        "solution": "Ra2# — Xe từ c2 đến a2, chiếu hết. Mã ở c3 bảo vệ Xe ở a2 và khống chế ô thoát của Vua."
+      },
+      {
+        "title": "Arabian Mate · Bài 5",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "5K1k/1R6/5N2/8/8/8/8/8 w - - 0 1",
+        "moves": [
+          "Rh7#"
+        ],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "Mã bảo vệ ô mà Xe có thể đến để chiếu.",
+          "Tìm nước chiếu của Xe, rồi kiểm tra mọi ô thoát của Vua."
+        ],
+        "solution": "Rh7# — Xe từ b7 đến h7, chiếu hết. Mã ở f6 bảo vệ Xe ở h7 và khống chế ô thoát của Vua."
+      },
+      {
+        "title": "Arabian Mate · Bài 6",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "8/8/8/5k2/8/5nr1/8/7K b - - 0 1",
+        "moves": [
+          "Rg1#"
+        ],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "Mã bảo vệ ô mà Xe có thể đến để chiếu.",
+          "Tìm nước chiếu của Xe, rồi kiểm tra mọi ô thoát của Vua."
+        ],
+        "solution": "Rg1# — Xe từ g3 đến g1, chiếu hết. Mã ở f3 bảo vệ Xe ở g1 và khống chế ô thoát của Vua."
+      },
+      {
+        "title": "Arabian Mate · Bài 7",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "k7/6R1/2N5/7K/8/8/8/8 w - - 0 1",
+        "moves": [
+          "Ra7#"
+        ],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "Mã bảo vệ ô mà Xe có thể đến để chiếu.",
+          "Tìm nước chiếu của Xe, rồi kiểm tra mọi ô thoát của Vua."
+        ],
+        "solution": "Ra7# — Xe từ g7 đến a7, chiếu hết. Mã ở c6 bảo vệ Xe ở a7 và khống chế ô thoát của Vua."
+      },
+      {
+        "title": "Arabian Mate · Bài 8",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "8/8/8/8/8/2n5/1r6/K4k2 b - - 0 1",
+        "moves": [
+          "Ra2#"
+        ],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "Mã bảo vệ ô mà Xe có thể đến để chiếu.",
+          "Tìm nước chiếu của Xe, rồi kiểm tra mọi ô thoát của Vua."
+        ],
+        "solution": "Ra2# — Xe từ b2 đến a2, chiếu hết. Mã ở c3 bảo vệ Xe ở a2 và khống chế ô thoát của Vua."
+      },
+      {
+        "title": "Arabian Mate · Bài 9",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "7k/8/5N2/8/8/8/6R1/7K w - - 0 1",
+        "moves": [
+          "Rg8#"
+        ],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "Mã bảo vệ ô mà Xe có thể đến để chiếu.",
+          "Tìm nước chiếu của Xe, rồi kiểm tra mọi ô thoát của Vua."
+        ],
+        "solution": "Rg8# — Xe từ g2 đến g8, chiếu hết. Mã ở f6 bảo vệ Xe ở g8 và khống chế ô thoát của Vua."
+      },
+      {
+        "title": "Arabian Mate · Bài 10",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "8/8/8/6r1/8/5n2/8/3k3K b - - 0 1",
+        "moves": [
+          "Rg1#"
+        ],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "Mã bảo vệ ô mà Xe có thể đến để chiếu.",
+          "Tìm nước chiếu của Xe, rồi kiểm tra mọi ô thoát của Vua."
+        ],
+        "solution": "Rg1# — Xe từ g5 đến g1, chiếu hết. Mã ở f3 bảo vệ Xe ở g1 và khống chế ô thoát của Vua."
+      },
+      {
+        "title": "Arabian Mate · Bài 11",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "kr3R2/8/2N5/8/8/4K3/8/8 w - - 0 1",
+        "moves": [
+          "Rxb8#"
+        ],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "Mã bảo vệ ô mà Xe có thể đến để chiếu.",
+          "Tìm nước chiếu của Xe, rồi kiểm tra mọi ô thoát của Vua."
+        ],
+        "solution": "Rxb8# — Xe từ f8 đến b8, bắt quân và chiếu hết. Mã ở c6 bảo vệ Xe ở b8 và khống chế ô thoát của Vua."
+      },
+      {
+        "title": "Arabian Mate · Bài 12",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "8/8/8/8/8/1kn5/5r2/K7 b - - 0 1",
+        "moves": [
+          "Ra2#"
+        ],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "Mã bảo vệ ô mà Xe có thể đến để chiếu.",
+          "Tìm nước chiếu của Xe, rồi kiểm tra mọi ô thoát của Vua."
+        ],
+        "solution": "Ra2# — Xe từ f2 đến a2, chiếu hết. Mã ở c3 bảo vệ Xe ở a2 và khống chế ô thoát của Vua."
+      },
+      {
+        "title": "Arabian Mate · Bài 13",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "1K5k/8/5NR1/8/8/8/8/8 w - - 0 1",
+        "moves": [
+          "Rg8#"
+        ],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "Mã bảo vệ ô mà Xe có thể đến để chiếu.",
+          "Tìm nước chiếu của Xe, rồi kiểm tra mọi ô thoát của Vua."
+        ],
+        "solution": "Rg8# — Xe từ g6 đến g8, chiếu hết. Mã ở f6 bảo vệ Xe ở g8 và khống chế ô thoát của Vua."
+      },
+      {
+        "title": "Arabian Mate · Bài 14",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "8/8/8/8/6k1/5n2/5r2/7K b - - 0 1",
+        "moves": [
+          "Rh2#"
+        ],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "Mã bảo vệ ô mà Xe có thể đến để chiếu.",
+          "Tìm nước chiếu của Xe, rồi kiểm tra mọi ô thoát của Vua."
+        ],
+        "solution": "Rh2# — Xe từ f2 đến h2, chiếu hết. Mã ở f3 bảo vệ Xe ở h2 và khống chế ô thoát của Vua."
+      },
+      {
+        "title": "Arabian Mate · Bài 15",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "k7/b1R2K2/2N5/8/8/8/8/8 w - - 0 1",
+        "moves": [
+          "Rxa7#"
+        ],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "Mã bảo vệ ô mà Xe có thể đến để chiếu.",
+          "Tìm nước chiếu của Xe, rồi kiểm tra mọi ô thoát của Vua."
+        ],
+        "solution": "Rxa7# — Xe từ c7 đến a7, bắt quân và chiếu hết. Mã ở c6 bảo vệ Xe ở a7 và khống chế ô thoát của Vua."
+      },
+      {
+        "title": "Arabian Mate · Bài 16",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "7k/8/8/8/8/2n5/6r1/KN6 b - - 0 1",
+        "moves": [
+          "Ra2#"
+        ],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "Mã bảo vệ ô mà Xe có thể đến để chiếu.",
+          "Tìm nước chiếu của Xe, rồi kiểm tra mọi ô thoát của Vua."
+        ],
+        "solution": "Ra2# — Xe từ g2 đến a2, chiếu hết. Mã ở c3 bảo vệ Xe ở a2 và khống chế ô thoát của Vua."
+      },
+      {
+        "title": "Arabian Mate · Bài 17",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "7k/5R2/5N2/8/8/K7/8/8 w - - 0 1",
+        "moves": [
+          "Rh7#"
+        ],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "Mã bảo vệ ô mà Xe có thể đến để chiếu.",
+          "Tìm nước chiếu của Xe, rồi kiểm tra mọi ô thoát của Vua."
+        ],
+        "solution": "Rh7# — Xe từ f7 đến h7, chiếu hết. Mã ở f6 bảo vệ Xe ở h7 và khống chế ô thoát của Vua."
+      },
+      {
+        "title": "Arabian Mate · Bài 18",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "8/8/8/6k1/8/5n2/4r3/7K b - - 0 1",
+        "moves": [
+          "Rh2#"
+        ],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "Mã bảo vệ ô mà Xe có thể đến để chiếu.",
+          "Tìm nước chiếu của Xe, rồi kiểm tra mọi ô thoát của Vua."
+        ],
+        "solution": "Rh2# — Xe từ e2 đến h2, chiếu hết. Mã ở f3 bảo vệ Xe ở h2 và khống chế ô thoát của Vua."
+      },
+      {
+        "title": "Arabian Mate · Bài 19",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "k7/7R/2N3K1/8/8/8/8/8 w - - 0 1",
+        "moves": [
+          "Ra7#"
+        ],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "Mã bảo vệ ô mà Xe có thể đến để chiếu.",
+          "Tìm nước chiếu của Xe, rồi kiểm tra mọi ô thoát của Vua."
+        ],
+        "solution": "Ra7# — Xe từ h7 đến a7, chiếu hết. Mã ở c6 bảo vệ Xe ở a7 và khống chế ô thoát của Vua."
+      },
+      {
+        "title": "Arabian Mate · Bài 20",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "kr6/8/8/8/8/2n5/8/K7 b - - 0 1",
+        "moves": [
+          "Rb1#"
+        ],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "Mã bảo vệ ô mà Xe có thể đến để chiếu.",
+          "Tìm nước chiếu của Xe, rồi kiểm tra mọi ô thoát của Vua."
+        ],
+        "solution": "Rb1# — Xe từ b8 đến b1, chiếu hết. Mã ở c3 bảo vệ Xe ở b1 và khống chế ô thoát của Vua."
+      },
+      {
+        "title": "Arabian Mate · Bài 21",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "7k/7b/4KN2/7R/8/8/8/8 w - - 0 1",
+        "moves": [
+          "Rxh7#"
+        ],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "Mã bảo vệ ô mà Xe có thể đến để chiếu.",
+          "Tìm nước chiếu của Xe, rồi kiểm tra mọi ô thoát của Vua."
+        ],
+        "solution": "Rxh7# — Xe từ h5 đến h7, bắt quân và chiếu hết. Mã ở f6 bảo vệ Xe ở h7 và khống chế ô thoát của Vua."
+      },
+      {
+        "title": "Arabian Mate · Bài 22",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "8/8/8/8/8/1k3n2/r7/7K b - - 0 1",
+        "moves": [
+          "Rh2#"
+        ],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "Mã bảo vệ ô mà Xe có thể đến để chiếu.",
+          "Tìm nước chiếu của Xe, rồi kiểm tra mọi ô thoát của Vua."
+        ],
+        "solution": "Rh2# — Xe từ a2 đến h2, chiếu hết. Mã ở f3 bảo vệ Xe ở h2 và khống chế ô thoát của Vua."
+      },
+      {
+        "title": "Arabian Mate · Bài 23",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "k7/6R1/2N5/1K6/8/8/8/8 w - - 0 1",
+        "moves": [
+          "Ra7#"
+        ],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "Mã bảo vệ ô mà Xe có thể đến để chiếu.",
+          "Tìm nước chiếu của Xe, rồi kiểm tra mọi ô thoát của Vua."
+        ],
+        "solution": "Ra7# — Xe từ g7 đến a7, chiếu hết. Mã ở c6 bảo vệ Xe ở a7 và khống chế ô thoát của Vua."
+      },
+      {
+        "title": "Arabian Mate · Bài 24",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "8/8/8/8/8/2n5/5r2/K3k3 b - - 0 1",
+        "moves": [
+          "Ra2#"
+        ],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "Mã bảo vệ ô mà Xe có thể đến để chiếu.",
+          "Tìm nước chiếu của Xe, rồi kiểm tra mọi ô thoát của Vua."
+        ],
+        "solution": "Ra2# — Xe từ f2 đến a2, chiếu hết. Mã ở c3 bảo vệ Xe ở a2 và khống chế ô thoát của Vua."
+      }
+    ]
+  }
+]

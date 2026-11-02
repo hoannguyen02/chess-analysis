@@ -9,16 +9,11 @@ export default function DrawPracticePage() {
   return (
     <>
       <Head>
-        <title>Luyện cứu hòa | LIMA Chess</title>
+        <title>Hoà cờ | LIMA Chess</title>
         <meta name="robots" content="noindex, nofollow" />
       </Head>
       <main lang="vi" className={styles.page}>
         <article className={styles.article}>
-          <header className={styles.hero}>
-            <p className={styles.eyebrow}>LIMA Chess · LUYỆN TẬP</p>
-            <h1>Luyện cứu hòa</h1>
-            <p className={styles.intro}>Chiến thuật và kỹ năng phòng thủ</p>
-          </header>
           <PrivateContent<{
             hubPath: string;
             categories: DrawCategory[];

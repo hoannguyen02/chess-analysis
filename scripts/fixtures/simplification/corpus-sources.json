@@ -1,0 +1,190 @@
+[
+  {
+    "archive": "Anand.pgn",
+    "sha256": "3f2aa841ebdfffb33ba81f3a46ab97987efb06d29b8b4cda635f35a2240c7f9a",
+    "source": "https://www.pgnmentor.com/players/Anand.zip"
+  },
+  {
+    "archive": "Anderssen",
+    "url": "https://www.pgnmentor.com/players/Anderssen.zip",
+    "sha256": "97927f56a2f85a01d66e2f747fc86aa61a1aaab3de45ffb8d44b3eee640cffc0",
+    "bytes": 411393
+  },
+  {
+    "archive": "Aronian",
+    "url": "https://www.pgnmentor.com/players/Aronian.zip",
+    "sha256": "fac0122d3c55f8a2b09cb79dc00b1e9a906a059267fe6f5dafa0a7416898c430",
+    "bytes": 4061200
+  },
+  {
+    "archive": "Blackburne",
+    "url": "https://www.pgnmentor.com/players/Blackburne.zip",
+    "sha256": "a8220aa740d6d27db4b5978df741ecaa10ffa2efa27e071000129ece01415723",
+    "bytes": 500992
+  },
+  {
+    "archive": "Bronstein.pgn",
+    "sha256": "881f83eb2e6efb3c233ec62261b54f493dc5821b962384352e1403e8fcf42ae0",
+    "source": "https://www.pgnmentor.com/players/Bronstein.zip"
+  },
+  {
+    "archive": "Geller",
+    "url": "https://www.pgnmentor.com/players/Geller.zip",
+    "sha256": "532c2072214c90e932459f681bfab29ac3ca760442bff09886331c3b62fa75b0",
+    "bytes": 1346332
+  },
+  {
+    "archive": "Ivanchuk",
+    "url": "https://www.pgnmentor.com/players/Ivanchuk.zip",
+    "sha256": "cd9085bd626232d6d12b8fc129a3521fbd3dc1900b497307bdfdaec1d668cf9d",
+    "bytes": 3558069
+  },
+  {
+    "archive": "Jobava",
+    "url": "https://www.pgnmentor.com/players/Jobava.zip",
+    "sha256": "7c6867c1df06e1e9b021b4e014174d8bb9cd6127d191184d0f99632dbd018066",
+    "bytes": 3230237
+  },
+  {
+    "archive": "Kasparov.pgn",
+    "sha256": "02d021df5ea2b2896f89ec752eb0f9db8af61f2726a6d4e75a7bb1ced9aa9a80",
+    "source": "https://www.pgnmentor.com/players/Kasparov.zip"
+  },
+  {
+    "archive": "Keres.pgn",
+    "sha256": "b67e137b27e05d0a3921e98f01e2be34e01a2b3206bdbb35889b797824932822",
+    "source": "https://www.pgnmentor.com/players/Keres.zip"
+  },
+  {
+    "archive": "Marshall",
+    "url": "https://www.pgnmentor.com/players/Marshall.zip",
+    "sha256": "07357fd22eec4d30ea0d3c95b27eec7cf1809f7987dda2d5cebbe4a6547af2b0",
+    "bytes": 693137
+  },
+  {
+    "archive": "Morozevich",
+    "url": "https://www.pgnmentor.com/players/Morozevich.zip",
+    "sha256": "89b31b9ed3acf4d5328e8e9bbdfd14a8f38109cfe51072484c1ede869467142f",
+    "bytes": 1933550
+  },
+  {
+    "archive": "PolgarJ",
+    "url": "https://www.pgnmentor.com/players/PolgarJ.zip",
+    "sha256": "1206d56d5ed4ce665e17638cec9c6676a4cc761da4d3adda115b6f9e6fdf14c8",
+    "bytes": 1277519
+  },
+  {
+    "archive": "Shirov",
+    "url": "https://www.pgnmentor.com/players/Shirov.zip",
+    "sha256": "0b9922ab40beeb2b1bcc8b34c0b0849cd6a921452a475ee47c320ae3270297a2",
+    "bytes": 4032436
+  },
+  {
+    "archive": "Spielmann",
+    "url": "https://www.pgnmentor.com/players/Spielmann.zip",
+    "sha256": "7b8f0a33088786a7904210c0a6147e4ef1d18b4cf7402d1234dc54ff228066d3",
+    "bytes": 652817
+  },
+  {
+    "archive": "Stein",
+    "url": "https://www.pgnmentor.com/players/Stein.zip",
+    "sha256": "9a2b1440812501b7d82eb8aa905a7736193c462287f56a9f737c8769d4455747",
+    "bytes": 440391
+  },
+  {
+    "archive": "Topalov",
+    "url": "https://www.pgnmentor.com/players/Topalov.zip",
+    "sha256": "496767693c18547e0b51482000325ca9918e61c442709a4a962c4d7786b8914a",
+    "bytes": 1849908
+  },
+  {
+    "archive": "Alekhine.pgn",
+    "sha256": "d3fd8dcd9fb308d7636856c6538b386191f87738d8908ebe85fa064f48b5a8a0",
+    "source": "https://www.pgnmentor.com/players/Alekhine.zip"
+  },
+  {
+    "source": "https://www.pgnmentor.com/players/Carlsen.zip",
+    "sha256": "29347942a512b260814717592c82cf6f3cd5975925a0b1732ef60f734651553d",
+    "eligibleGames": 7517
+  },
+  {
+    "source": "https://www.pgnmentor.com/players/Rubinstein.zip",
+    "sha256": "63b48a0f65ad783c233ec569b9081e3478a847bc60d9fe32e9cc346daa8471f4",
+    "eligibleGames": 568
+  },
+  {
+    "source": "https://www.pgnmentor.com/players/Caruana.zip",
+    "sha256": "d63c0e697c2dab0b65247cc29f8f03c3b7c1f06d50a48da4f28cf971d89318f9",
+    "eligibleGames": 5933
+  },
+  {
+    "source": "https://www.pgnmentor.com/players/Grischuk.zip",
+    "sha256": "b31b5f6541299ccea3c769c521a1f7b03699bdd87ffb251831baae72f2a99828",
+    "eligibleGames": 5282
+  },
+  {
+    "source": "https://www.pgnmentor.com/players/Timman.zip",
+    "sha256": "4da115ba736552df6d3c1e2e4e85d3f00d00c81fa809c8ce3f1efd7d12e6db04",
+    "eligibleGames": 2761
+  },
+  {
+    "source": "https://www.pgnmentor.com/players/Lasker.zip",
+    "sha256": "bb1bb16d87a198905f043d4f8be900dc96c966f69b1f278887e3143139eb7a1d",
+    "eligibleGames": 876
+  },
+  {
+    "source": "https://www.pgnmentor.com/players/Tartakower.zip",
+    "sha256": "739572fc242b6ee4e530c3f2b536d1edfe24ee3449884a516edb0f103c9e4ded",
+    "eligibleGames": 1084
+  },
+  {
+    "source": "https://www.pgnmentor.com/players/Kamsky.zip",
+    "sha256": "86d5680a18b7847d34bda67fff05f801ee96341dedfcd99b01dfcb087961d742",
+    "eligibleGames": 6416
+  },
+  {
+    "source": "https://www.pgnmentor.com/players/Nepomniachtchi.zip",
+    "sha256": "eb409fd7d72575dfacd0bc7dddd40046adcebad46181c0684aeb30c859b1971c",
+    "eligibleGames": 4631
+  },
+  {
+    "source": "https://www.pgnmentor.com/players/So.zip",
+    "sha256": "82aeecf48ecacb07cdb44f95cb6dd07badfa2e177f7a0693d67a7a5b3fd224aa",
+    "eligibleGames": 4762
+  },
+  {
+    "source": "https://www.pgnmentor.com/players/Seirawan.zip",
+    "sha256": "e76df1428e75de440755f7ed0e5dc4aeb99ed929498af1135127aebd064cab5b",
+    "eligibleGames": 265
+  },
+  {
+    "source": "https://www.pgnmentor.com/players/Movsesian.zip",
+    "sha256": "baebc927af6d822f1e9938f45c86abd5a55482d0437a6223115f0ce7abcb5a4a",
+    "eligibleGames": 2339
+  },
+  {
+    "source": "https://www.pgnmentor.com/players/Pillsbury.zip",
+    "sha256": "71021bf6b738ee80057a33f5ba890c6a816ac989042749557b90987144833658",
+    "eligibleGames": 332
+  },
+  {
+    "source": "https://www.pgnmentor.com/players/Ljubojevic.zip",
+    "sha256": "d8f14cbf7028a3672f8029db9ddec441bf67f5ecb94f145d62dbadc0a0d7c209",
+    "eligibleGames": 1227
+  },
+  {
+    "source": "https://www.pgnmentor.com/players/Akobian.zip",
+    "sha256": "a78a0989c2e45c5f7056c8c2c68f5c606c5745a504169a2a3afcbcc81cc24950",
+    "eligibleGames": 2103
+  },
+  {
+    "source": "https://www.pgnmentor.com/players/Dreev.zip",
+    "sha256": "cefebcf086426c49db7ce8547a810d518fd616c31cb3f5c319bce373bc70a240",
+    "eligibleGames": 3360
+  },
+  {
+    "source": "https://www.pgnmentor.com/players/Fischer.zip",
+    "sha256": "c07174dd3a66116ca74ac3b466e771a53de95068bcafa0a453f6df65d36e0b2b",
+    "eligibleGames": 706
+  }
+]

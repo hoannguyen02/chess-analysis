@@ -1,0 +1,3653 @@
+[
+  {
+    "exercise": {
+      "fen": "8/8/8/8/8/3kn3/5K1Q/8 w - - 0 1",
+      "moves": [
+        "Qg3",
+        "Ke4",
+        "Qxe3+"
+      ],
+      "alternativeLines": [
+        [
+          "Qg3",
+          "Kd4",
+          "Qxe3+"
+        ],
+        [
+          "Qg3",
+          "Kc4",
+          "Qxe3"
+        ],
+        [
+          "Qg3",
+          "Kc3",
+          "Qxe3+"
+        ],
+        [
+          "Qg3",
+          "Kd2",
+          "Qxe3+"
+        ],
+        [
+          "Qg3",
+          "Kc2",
+          "Qxe3"
+        ]
+      ],
+      "pinCreation": {
+        "front": "e3",
+        "back": "d3",
+        "pinner": "h2",
+        "destination": "g3"
+      },
+      "beginnerKind": "king",
+      "title": "Hậu ghim mã rồi bắt quân",
+      "beginner": true,
+      "goal": "material",
+      "mode": "interactive",
+      "outcome": "pin",
+      "source": "original-composition",
+      "prompt": "Tạo đòn ghim rồi bắt quân ở nước tiếp theo.",
+      "hints": [
+        "Tìm hàng, cột hoặc đường chéo có mã ở e3 đứng trước Vua ở d3.",
+        "Đưa hậu đến đường đó để mã không thể rời đường ghim. Sau nước đáp của Vua, kiểm tra nước bắt quân."
+      ],
+      "solution": "Qg3 — Hậu từ h2 đến g3, ghim mã ở e3 vào Vua ở d3. Mã không thể rời đường ghim vì sẽ làm lộ chiếu. Trong phương án minh họa, sau Ke4, chơi Qxe3+ — hậu bắt mã ở e3 và chiếu Vua. Sau các nước đáp khác của Vua, quân bị ghim vẫn có thể bị bắt mà không mất quân bắt."
+    },
+    "defenceProbes": [
+      {
+        "line": [
+          "Qg3",
+          "Ke4",
+          "Qxe3+"
+        ],
+        "score": 580,
+        "pv": [
+          "e4f5",
+          "e3e1",
+          "f5g6",
+          "e1b1",
+          "g6g7",
+          "f2g3",
+          "g7f7",
+          "b1d1",
+          "f7f8",
+          "d1b3",
+          "f8g7",
+          "g3h3",
+          "g7g6"
+        ],
+        "materialGainAfterEightPlies": 320
+      },
+      {
+        "line": [
+          "Qg3",
+          "Kd4",
+          "Qxe3+"
+        ],
+        "score": 557,
+        "pv": [
+          "d4d5",
+          "e3d3",
+          "d5c5",
+          "d3c3",
+          "c5b5",
+          "c3d4",
+          "b5a6",
+          "d4d1"
+        ],
+        "materialGainAfterEightPlies": 320
+      },
+      {
+        "line": [
+          "Qg3",
+          "Kc4",
+          "Qxe3"
+        ],
+        "score": 539,
+        "pv": [
+          "c4b4",
+          "e3d3",
+          "b4c5",
+          "d3c3",
+          "c5d5",
+          "f2e3",
+          "d5e6",
+          "e3f4",
+          "e6d5",
+          "c3g7",
+          "d5c4",
+          "f4g5",
+          "c4b4"
+        ],
+        "materialGainAfterEightPlies": 320
+      },
+      {
+        "line": [
+          "Qg3",
+          "Kc3",
+          "Qxe3+"
+        ],
+        "score": 550,
+        "pv": [
+          "c3b4",
+          "f2e1",
+          "b4c4",
+          "e1d2",
+          "c4d5",
+          "e3f4",
+          "d5c5",
+          "f4h4"
+        ],
+        "materialGainAfterEightPlies": 320
+      },
+      {
+        "line": [
+          "Qg3",
+          "Kd2",
+          "Qxe3+"
+        ],
+        "score": 99995,
+        "pv": [
+          "d2c2",
+          "f2e1",
+          "c2b2",
+          "e1d2",
+          "b2b1",
+          "e3b6",
+          "b1a1",
+          "d2c2",
+          "a1a2",
+          "b6a6"
+        ],
+        "materialGainAfterEightPlies": 320
+      },
+      {
+        "line": [
+          "Qg3",
+          "Kc2",
+          "Qxe3"
+        ],
+        "score": 99994,
+        "pv": [
+          "c2b2",
+          "f2e1",
+          "b2c2",
+          "e1e2",
+          "c2b2",
+          "e2d2",
+          "b2b1",
+          "e3b6",
+          "b1a1",
+          "d2c2",
+          "a1a2",
+          "b6a6"
+        ],
+        "materialGainAfterEightPlies": 320
+      }
+    ],
+    "engine": {
+      "name": "Stockfish 17",
+      "nodesPerRoot": 120000,
+      "nodesPerEndpoint": 40000,
+      "rootPV": [
+        "Qg3",
+        "Ke4",
+        "Qxe3+",
+        "Kf5",
+        "Kg1",
+        "Kf6",
+        "Qe4",
+        "Kg7",
+        "Qg2+",
+        "Kf7"
+      ]
+    },
+    "id": "pin-create-20261027-01",
+    "reviewed": "2026-10-27",
+    "review": "Four-piece original composition. No initial legal capture; the first quiet move creates a pin and prevents at least one otherwise pseudo-legal escape from attack. Every legal reply has a saved capture preserving at least one pawn of material against every immediate recapture. Endpoint engine probes retain the gain for eight PV plies. Finite evidence, not a proof of all later endgame play."
+  },
+  {
+    "exercise": {
+      "fen": "8/8/6q1/8/5B2/2k5/8/5K2 b - - 0 1",
+      "moves": [
+        "Qf5",
+        "Kg2",
+        "Qxf4"
+      ],
+      "alternativeLines": [
+        [
+          "Qf5",
+          "Kf2",
+          "Qxf4+"
+        ],
+        [
+          "Qf5",
+          "Ke2",
+          "Qxf4"
+        ],
+        [
+          "Qf5",
+          "Kg1",
+          "Qxf4"
+        ],
+        [
+          "Qf5",
+          "Ke1",
+          "Qxf4"
+        ]
+      ],
+      "pinCreation": {
+        "front": "f4",
+        "back": "f1",
+        "pinner": "g6",
+        "destination": "f5"
+      },
+      "beginnerKind": "king",
+      "title": "Hậu ghim tượng rồi bắt quân",
+      "beginner": true,
+      "goal": "material",
+      "mode": "interactive",
+      "outcome": "pin",
+      "source": "original-composition",
+      "prompt": "Tạo đòn ghim rồi bắt quân ở nước tiếp theo.",
+      "hints": [
+        "Tìm hàng, cột hoặc đường chéo có tượng ở f4 đứng trước Vua ở f1.",
+        "Đưa hậu đến đường đó để tượng không thể rời đường ghim. Sau nước đáp của Vua, kiểm tra nước bắt quân."
+      ],
+      "solution": "Qf5 — Hậu từ g6 đến f5, ghim tượng ở f4 vào Vua ở f1. Tượng không thể rời đường ghim vì sẽ làm lộ chiếu. Trong phương án minh họa, sau Kg2, chơi Qxf4 — hậu bắt tượng ở f4. Sau các nước đáp khác của Vua, quân bị ghim vẫn có thể bị bắt mà không mất quân bắt."
+    },
+    "defenceProbes": [
+      {
+        "line": [
+          "Qf5",
+          "Kg2",
+          "Qxf4"
+        ],
+        "score": 597,
+        "pv": [
+          "g2h3",
+          "c3d3",
+          "h3g2",
+          "d3d4",
+          "g2h3",
+          "d4e3",
+          "h3g2",
+          "f4f3",
+          "g2h2",
+          "e3e4",
+          "h2g1",
+          "e4d5",
+          "g1h2",
+          "d5d4",
+          "h2g1",
+          "d4c4",
+          "g1h2",
+          "c4d3",
+          "h2g1",
+          "f3e2",
+          "g1h1"
+        ],
+        "materialGainAfterEightPlies": 330
+      },
+      {
+        "line": [
+          "Qf5",
+          "Kf2",
+          "Qxf4+"
+        ],
+        "score": 99991,
+        "pv": [
+          "f2g2",
+          "c3d3",
+          "g2h3",
+          "d3e3",
+          "h3g2",
+          "f4f3",
+          "g2h2",
+          "e3f4",
+          "h2g1",
+          "f4f5",
+          "g1h2",
+          "f5e4",
+          "h2g1",
+          "f3e2",
+          "g1h1",
+          "e4f3",
+          "h1g1",
+          "e2g2"
+        ],
+        "materialGainAfterEightPlies": 330
+      },
+      {
+        "line": [
+          "Qf5",
+          "Ke2",
+          "Qxf4"
+        ],
+        "score": 99998,
+        "pv": [
+          "e2e1",
+          "c3d3",
+          "e1d1",
+          "f4d2"
+        ],
+        "materialGainAfterEightPlies": 330
+      },
+      {
+        "line": [
+          "Qf5",
+          "Kg1",
+          "Qxf4"
+        ],
+        "score": 99995,
+        "pv": [
+          "g1g2",
+          "c3d3",
+          "g2h3",
+          "d3e3",
+          "h3g2",
+          "f4g4",
+          "g2f1",
+          "g4g7",
+          "f1e1",
+          "g7g1"
+        ],
+        "materialGainAfterEightPlies": 330
+      },
+      {
+        "line": [
+          "Qf5",
+          "Ke1",
+          "Qxf4"
+        ],
+        "score": 99997,
+        "pv": [
+          "e1e2",
+          "c3c2",
+          "e2e1",
+          "c2d3",
+          "e1d1",
+          "f4d2"
+        ],
+        "materialGainAfterEightPlies": 330
+      }
+    ],
+    "engine": {
+      "name": "Stockfish 17",
+      "nodesPerRoot": 120000,
+      "nodesPerEndpoint": 40000,
+      "rootPV": [
+        "Qf5",
+        "Kg2",
+        "Qxf4",
+        "Kh3",
+        "Kd3",
+        "Kg2",
+        "Ke2",
+        "Kh1",
+        "Qg5",
+        "Kh2"
+      ]
+    },
+    "id": "pin-create-20261027-02",
+    "reviewed": "2026-10-27",
+    "review": "Four-piece original composition. No initial legal capture; the first quiet move creates a pin and prevents at least one otherwise pseudo-legal escape from attack. Every legal reply has a saved capture preserving at least one pawn of material against every immediate recapture. Endpoint engine probes retain the gain for eight PV plies. Finite evidence, not a proof of all later endgame play."
+  },
+  {
+    "exercise": {
+      "fen": "6K1/8/8/5k2/8/8/2r5/6Q1 w - - 0 1",
+      "moves": [
+        "Qb1",
+        "Ke5",
+        "Qxc2"
+      ],
+      "alternativeLines": [
+        [
+          "Qb1",
+          "Kg6",
+          "Qxc2+"
+        ],
+        [
+          "Qb1",
+          "Kf6",
+          "Qxc2"
+        ],
+        [
+          "Qb1",
+          "Ke6",
+          "Qxc2"
+        ],
+        [
+          "Qb1",
+          "Kg5",
+          "Qxc2"
+        ],
+        [
+          "Qb1",
+          "Kg4",
+          "Qxc2"
+        ],
+        [
+          "Qb1",
+          "Kf4",
+          "Qxc2"
+        ],
+        [
+          "Qb1",
+          "Ke4",
+          "Qxc2+"
+        ]
+      ],
+      "pinCreation": {
+        "front": "c2",
+        "back": "f5",
+        "pinner": "g1",
+        "destination": "b1"
+      },
+      "beginnerKind": "king",
+      "title": "Hậu ghim xe rồi bắt quân",
+      "beginner": true,
+      "goal": "material",
+      "mode": "interactive",
+      "outcome": "pin",
+      "source": "original-composition",
+      "prompt": "Tạo đòn ghim rồi bắt quân ở nước tiếp theo.",
+      "hints": [
+        "Tìm hàng, cột hoặc đường chéo có xe ở c2 đứng trước Vua ở f5.",
+        "Đưa hậu đến đường đó để xe không thể rời đường ghim. Sau nước đáp của Vua, kiểm tra nước bắt quân."
+      ],
+      "solution": "Qb1 — Hậu từ g1 đến b1, ghim xe ở c2 vào Vua ở f5. Xe không thể rời đường ghim vì sẽ làm lộ chiếu. Trong phương án minh họa, sau Ke5, chơi Qxc2 — hậu bắt xe ở c2. Sau các nước đáp khác của Vua, quân bị ghim vẫn có thể bị bắt mà không mất quân bắt."
+    },
+    "defenceProbes": [
+      {
+        "line": [
+          "Qb1",
+          "Kg6",
+          "Qxc2+"
+        ],
+        "score": 99995,
+        "pv": [
+          "g6g5",
+          "c2e4",
+          "g5h6",
+          "g8f7",
+          "h6g5",
+          "f7g7",
+          "g5h5",
+          "g7f6",
+          "h5h6",
+          "e4h4"
+        ],
+        "materialGainAfterEightPlies": 500
+      },
+      {
+        "line": [
+          "Qb1",
+          "Kf6",
+          "Qxc2"
+        ],
+        "score": 547,
+        "pv": [
+          "f6e6",
+          "c2e4",
+          "e6d6",
+          "g8f7",
+          "d6c5",
+          "f7f6",
+          "c5b5",
+          "e4d4"
+        ],
+        "materialGainAfterEightPlies": 500
+      },
+      {
+        "line": [
+          "Qb1",
+          "Ke6",
+          "Qxc2"
+        ],
+        "score": 533,
+        "pv": [
+          "e6d5",
+          "c2d3",
+          "d5c5",
+          "d3e4",
+          "c5b6",
+          "e4c4",
+          "b6b7",
+          "c4f7",
+          "b7c6",
+          "f7h5",
+          "c6d7",
+          "g8f7"
+        ],
+        "materialGainAfterEightPlies": 500
+      },
+      {
+        "line": [
+          "Qb1",
+          "Kg5",
+          "Qxc2"
+        ],
+        "score": 547,
+        "pv": [
+          "g5g4",
+          "c2b3",
+          "g4f4",
+          "b3d3",
+          "f4g4",
+          "g8f7",
+          "g4f4",
+          "f7e6",
+          "f4g4",
+          "e6e7",
+          "g4h4",
+          "d3f3"
+        ],
+        "materialGainAfterEightPlies": 500
+      },
+      {
+        "line": [
+          "Qb1",
+          "Ke5",
+          "Qxc2"
+        ],
+        "score": 540,
+        "pv": [
+          "e5d4",
+          "g8g7",
+          "d4d5",
+          "g7f6",
+          "d5d4",
+          "f6e6",
+          "d4e3",
+          "e6e5",
+          "e3f3",
+          "c2e4",
+          "f3g3",
+          "e5f5",
+          "g3h3",
+          "f5g5",
+          "h3g3",
+          "g5h5",
+          "g3h2",
+          "h5h4"
+        ],
+        "materialGainAfterEightPlies": 500
+      },
+      {
+        "line": [
+          "Qb1",
+          "Kg4",
+          "Qxc2"
+        ],
+        "score": 99989,
+        "pv": [
+          "g4f3",
+          "g8f7",
+          "f3e3",
+          "f7f6",
+          "e3f3",
+          "f6e6",
+          "f3e3",
+          "e6e5",
+          "e3f3",
+          "c2e4",
+          "f3g3",
+          "e5f5",
+          "g3f2",
+          "f5f4",
+          "f2g1",
+          "f4g4",
+          "g1f2",
+          "g4h3",
+          "f2f1",
+          "h3g3",
+          "f1g1",
+          "e4g2"
+        ],
+        "materialGainAfterEightPlies": 500
+      },
+      {
+        "line": [
+          "Qb1",
+          "Kf4",
+          "Qxc2"
+        ],
+        "score": 99989,
+        "pv": [
+          "f4f3",
+          "g8f7",
+          "f3e3",
+          "f7f6",
+          "e3f3",
+          "f6e6",
+          "f3e3",
+          "e6e5",
+          "e3f3",
+          "c2e4",
+          "f3g3",
+          "e5f5",
+          "g3f2",
+          "f5g4",
+          "f2g1",
+          "g4h3",
+          "g1f2",
+          "h3h2",
+          "f2f1",
+          "h2g3",
+          "f1g1",
+          "e4g2"
+        ],
+        "materialGainAfterEightPlies": 500
+      },
+      {
+        "line": [
+          "Qb1",
+          "Ke4",
+          "Qxc2+"
+        ],
+        "score": 99989,
+        "pv": [
+          "e4d4",
+          "g8f7",
+          "d4d5",
+          "f7e7",
+          "d5d4",
+          "e7e6",
+          "d4e3",
+          "e6e5",
+          "e3f3",
+          "c2e4",
+          "f3g3",
+          "e5f5",
+          "g3f2",
+          "f5f4",
+          "f2g1",
+          "f4g4",
+          "g1f2",
+          "g4h3",
+          "f2f1",
+          "h3g3",
+          "f1g1",
+          "e4g2"
+        ],
+        "materialGainAfterEightPlies": 500
+      }
+    ],
+    "engine": {
+      "name": "Stockfish 17",
+      "nodesPerRoot": 120000,
+      "nodesPerEndpoint": 40000,
+      "rootPV": [
+        "Qb1",
+        "Ke5",
+        "Qxc2",
+        "Kd4",
+        "Kf7",
+        "Ke3",
+        "Ke7",
+        "Kd4",
+        "Ke6",
+        "Ke3"
+      ]
+    },
+    "id": "pin-create-20261027-03",
+    "reviewed": "2026-10-27",
+    "review": "Four-piece original composition. No initial legal capture; the first quiet move creates a pin and prevents at least one otherwise pseudo-legal escape from attack. Every legal reply has a saved capture preserving at least one pawn of material against every immediate recapture. Endpoint engine probes retain the gain for eight PV plies. Finite evidence, not a proof of all later endgame play."
+  },
+  {
+    "exercise": {
+      "fen": "6k1/8/8/6n1/8/8/1K2Q3/8 w - - 0 1",
+      "moves": [
+        "Qg2",
+        "Kg7",
+        "Qxg5+"
+      ],
+      "alternativeLines": [
+        [
+          "Qg2",
+          "Kh8",
+          "Qxg5"
+        ],
+        [
+          "Qg2",
+          "Kf8",
+          "Qxg5"
+        ],
+        [
+          "Qg2",
+          "Kh7",
+          "Qxg5"
+        ],
+        [
+          "Qg2",
+          "Kf7",
+          "Qxg5"
+        ]
+      ],
+      "pinCreation": {
+        "front": "g5",
+        "back": "g8",
+        "pinner": "e2",
+        "destination": "g2"
+      },
+      "beginnerKind": "king",
+      "title": "Hậu ghim mã rồi bắt quân",
+      "beginner": true,
+      "goal": "material",
+      "mode": "interactive",
+      "outcome": "pin",
+      "source": "original-composition",
+      "prompt": "Tạo đòn ghim rồi bắt quân ở nước tiếp theo.",
+      "hints": [
+        "Tìm hàng, cột hoặc đường chéo có mã ở g5 đứng trước Vua ở g8.",
+        "Đưa hậu đến đường đó để mã không thể rời đường ghim. Sau nước đáp của Vua, kiểm tra nước bắt quân."
+      ],
+      "solution": "Qg2 — Hậu từ e2 đến g2, ghim mã ở g5 vào Vua ở g8. Mã không thể rời đường ghim vì sẽ làm lộ chiếu. Trong phương án minh họa, sau Kg7, chơi Qxg5+ — hậu bắt mã ở g5 và chiếu Vua. Sau các nước đáp khác của Vua, quân bị ghim vẫn có thể bị bắt mà không mất quân bắt."
+    },
+    "defenceProbes": [
+      {
+        "line": [
+          "Qg2",
+          "Kh8",
+          "Qxg5"
+        ],
+        "score": 99994,
+        "pv": [
+          "h8h7",
+          "b2c2",
+          "h7h8",
+          "c2d3",
+          "h8h7",
+          "d3e4",
+          "h7h8",
+          "e4f5",
+          "h8h7",
+          "f5f6",
+          "h7h8",
+          "g5g7"
+        ],
+        "materialGainAfterEightPlies": 320
+      },
+      {
+        "line": [
+          "Qg2",
+          "Kf8",
+          "Qxg5"
+        ],
+        "score": 548,
+        "pv": [
+          "f8f7",
+          "b2c2",
+          "f7f8",
+          "g5g3",
+          "f8e7",
+          "g3e1",
+          "e7f7"
+        ],
+        "materialGainAfterEightPlies": 320
+      },
+      {
+        "line": [
+          "Qg2",
+          "Kh7",
+          "Qxg5"
+        ],
+        "score": 99994,
+        "pv": [
+          "h7h8",
+          "b2c2",
+          "h8h7",
+          "c2d3",
+          "h7h8",
+          "d3e4",
+          "h8h7",
+          "e4f5",
+          "h7h8",
+          "f5f6",
+          "h8h7",
+          "g5g7"
+        ],
+        "materialGainAfterEightPlies": 320
+      },
+      {
+        "line": [
+          "Qg2",
+          "Kg7",
+          "Qxg5+"
+        ],
+        "score": 576,
+        "pv": [
+          "g7f7",
+          "b2c3",
+          "f7e6",
+          "c3c4",
+          "e6d6",
+          "g5d5",
+          "d6e7"
+        ],
+        "materialGainAfterEightPlies": 320
+      },
+      {
+        "line": [
+          "Qg2",
+          "Kf7",
+          "Qxg5"
+        ],
+        "score": 99989,
+        "pv": [
+          "f7e8",
+          "b2c3",
+          "e8d7",
+          "c3d4",
+          "d7e6",
+          "d4e4",
+          "e6d6",
+          "g5d5",
+          "d6c7",
+          "e4e5",
+          "c7c8",
+          "e5e6",
+          "c8c7",
+          "d5d6",
+          "c7c8",
+          "e6e7",
+          "c8b7",
+          "e7d7",
+          "b7a7",
+          "d7c7",
+          "a7a8",
+          "d6a3"
+        ],
+        "materialGainAfterEightPlies": 320
+      }
+    ],
+    "engine": {
+      "name": "Stockfish 17",
+      "nodesPerRoot": 120000,
+      "nodesPerEndpoint": 40000,
+      "rootPV": [
+        "Qg2",
+        "Kg7",
+        "Qxg5+",
+        "Kf8",
+        "Kc3",
+        "Kf7",
+        "Kc4",
+        "Ke6",
+        "Kd4",
+        "Kd7"
+      ]
+    },
+    "id": "pin-create-20261027-04",
+    "reviewed": "2026-10-27",
+    "review": "Four-piece original composition. No initial legal capture; the first quiet move creates a pin and prevents at least one otherwise pseudo-legal escape from attack. Every legal reply has a saved capture preserving at least one pawn of material against every immediate recapture. Endpoint engine probes retain the gain for eight PV plies. Finite evidence, not a proof of all later endgame play."
+  },
+  {
+    "exercise": {
+      "fen": "K7/8/8/5k2/B7/8/5q2/8 b - - 0 1",
+      "moves": [
+        "Qa2",
+        "Kb7",
+        "Qxa4"
+      ],
+      "alternativeLines": [
+        [
+          "Qa2",
+          "Kb8",
+          "Qxa4"
+        ],
+        [
+          "Qa2",
+          "Ka7",
+          "Qxa4+"
+        ]
+      ],
+      "pinCreation": {
+        "front": "a4",
+        "back": "a8",
+        "pinner": "f2",
+        "destination": "a2"
+      },
+      "beginnerKind": "king",
+      "title": "Hậu ghim tượng rồi bắt quân",
+      "beginner": true,
+      "goal": "material",
+      "mode": "interactive",
+      "outcome": "pin",
+      "source": "original-composition",
+      "prompt": "Tạo đòn ghim rồi bắt quân ở nước tiếp theo.",
+      "hints": [
+        "Tìm hàng, cột hoặc đường chéo có tượng ở a4 đứng trước Vua ở a8.",
+        "Đưa hậu đến đường đó để tượng không thể rời đường ghim. Sau nước đáp của Vua, kiểm tra nước bắt quân."
+      ],
+      "solution": "Qa2 — Hậu từ f2 đến a2, ghim tượng ở a4 vào Vua ở a8. Tượng không thể rời đường ghim vì sẽ làm lộ chiếu. Trong phương án minh họa, sau Kb7, chơi Qxa4 — hậu bắt tượng ở a4. Sau các nước đáp khác của Vua, quân bị ghim vẫn có thể bị bắt mà không mất quân bắt."
+    },
+    "defenceProbes": [
+      {
+        "line": [
+          "Qa2",
+          "Kb8",
+          "Qxa4"
+        ],
+        "score": 99995,
+        "pv": [
+          "b8c8",
+          "f5e6",
+          "c8b7",
+          "e6d6",
+          "b7b6",
+          "a4b4",
+          "b6a7",
+          "d6c7",
+          "a7a8",
+          "b4b7"
+        ],
+        "materialGainAfterEightPlies": 330
+      },
+      {
+        "line": [
+          "Qa2",
+          "Kb7",
+          "Qxa4"
+        ],
+        "score": 99994,
+        "pv": [
+          "b7b6",
+          "f5f6",
+          "b6c7",
+          "f6e6",
+          "c7b7",
+          "e6d6",
+          "b7b6",
+          "a4b4",
+          "b6a6",
+          "d6c7",
+          "a6a7",
+          "b4b7"
+        ],
+        "materialGainAfterEightPlies": 330
+      },
+      {
+        "line": [
+          "Qa2",
+          "Ka7",
+          "Qxa4+"
+        ],
+        "score": 99994,
+        "pv": [
+          "a7b6",
+          "f5f6",
+          "b6c7",
+          "f6e6",
+          "c7b7",
+          "e6d6",
+          "b7b6",
+          "a4b4",
+          "b6a6",
+          "d6c7",
+          "a6a7",
+          "b4b7"
+        ],
+        "materialGainAfterEightPlies": 330
+      }
+    ],
+    "engine": {
+      "name": "Stockfish 17",
+      "nodesPerRoot": 120000,
+      "nodesPerEndpoint": 40000,
+      "rootPV": [
+        "Qa2",
+        "Kb7",
+        "Qxa4",
+        "Kb6",
+        "Kf6",
+        "Kc7",
+        "Ke6",
+        "Kb7",
+        "Kd6",
+        "Kb6"
+      ]
+    },
+    "id": "pin-create-20261027-05",
+    "reviewed": "2026-10-27",
+    "review": "Four-piece original composition. No initial legal capture; the first quiet move creates a pin and prevents at least one otherwise pseudo-legal escape from attack. Every legal reply has a saved capture preserving at least one pawn of material against every immediate recapture. Endpoint engine probes retain the gain for eight PV plies. Finite evidence, not a proof of all later endgame play."
+  },
+  {
+    "exercise": {
+      "fen": "8/8/8/8/2k1K3/3r4/1Q6/8 w - - 0 1",
+      "moves": [
+        "Qe2",
+        "Kc5",
+        "Qxd3"
+      ],
+      "alternativeLines": [
+        [
+          "Qe2",
+          "Kb5",
+          "Qxd3+"
+        ],
+        [
+          "Qe2",
+          "Kb4",
+          "Qxd3"
+        ],
+        [
+          "Qe2",
+          "Kc3",
+          "Qxd3+"
+        ],
+        [
+          "Qe2",
+          "Kb3",
+          "Qxd3+"
+        ]
+      ],
+      "pinCreation": {
+        "front": "d3",
+        "back": "c4",
+        "pinner": "b2",
+        "destination": "e2"
+      },
+      "beginnerKind": "king",
+      "title": "Hậu ghim xe rồi bắt quân",
+      "beginner": true,
+      "goal": "material",
+      "mode": "interactive",
+      "outcome": "pin",
+      "source": "original-composition",
+      "prompt": "Tạo đòn ghim rồi bắt quân ở nước tiếp theo.",
+      "hints": [
+        "Tìm hàng, cột hoặc đường chéo có xe ở d3 đứng trước Vua ở c4.",
+        "Đưa hậu đến đường đó để xe không thể rời đường ghim. Sau nước đáp của Vua, kiểm tra nước bắt quân."
+      ],
+      "solution": "Qe2 — Hậu từ b2 đến e2, ghim xe ở d3 vào Vua ở c4. Xe không thể rời đường ghim vì sẽ làm lộ chiếu. Trong phương án minh họa, sau Kc5, chơi Qxd3 — hậu bắt xe ở d3. Sau các nước đáp khác của Vua, quân bị ghim vẫn có thể bị bắt mà không mất quân bắt."
+    },
+    "defenceProbes": [
+      {
+        "line": [
+          "Qe2",
+          "Kc5",
+          "Qxd3"
+        ],
+        "score": 99993,
+        "pv": [
+          "c5c6",
+          "d3d5",
+          "c6b6",
+          "e4e5",
+          "b6a6",
+          "e5d6",
+          "a6b6",
+          "d6d7",
+          "b6a7",
+          "d7c7",
+          "a7a6",
+          "d5h5",
+          "a6a7",
+          "h5a5"
+        ],
+        "materialGainAfterEightPlies": 500
+      },
+      {
+        "line": [
+          "Qe2",
+          "Kb5",
+          "Qxd3+"
+        ],
+        "score": 99993,
+        "pv": [
+          "b5b6",
+          "d3d5",
+          "b6a7",
+          "e4e5",
+          "a7a6",
+          "e5d6",
+          "a6b6",
+          "d6d7",
+          "b6a7",
+          "d7c7",
+          "a7a6",
+          "d5h5",
+          "a6a7",
+          "h5a5"
+        ],
+        "materialGainAfterEightPlies": 500
+      },
+      {
+        "line": [
+          "Qe2",
+          "Kb4",
+          "Qxd3"
+        ],
+        "score": 99993,
+        "pv": [
+          "b4c5",
+          "e4e5",
+          "c5c6",
+          "d3d5",
+          "c6c7",
+          "e5e6",
+          "c7c8",
+          "d5d6",
+          "c8b7",
+          "e6d7",
+          "b7a7",
+          "d7c7",
+          "a7a8",
+          "d6a3"
+        ],
+        "materialGainAfterEightPlies": 500
+      },
+      {
+        "line": [
+          "Qe2",
+          "Kc3",
+          "Qxd3+"
+        ],
+        "score": 99995,
+        "pv": [
+          "c3b2",
+          "e4e3",
+          "b2a2",
+          "e3d2",
+          "a2b2",
+          "d3b5",
+          "b2a2",
+          "d2c2",
+          "a2a3",
+          "b5b3"
+        ],
+        "materialGainAfterEightPlies": 500
+      },
+      {
+        "line": [
+          "Qe2",
+          "Kb3",
+          "Qxd3+"
+        ],
+        "score": 99995,
+        "pv": [
+          "b3b2",
+          "e4e3",
+          "b2a2",
+          "e3d2",
+          "a2b2",
+          "d3b5",
+          "b2a2",
+          "d2c2",
+          "a2a3",
+          "b5b3"
+        ],
+        "materialGainAfterEightPlies": 500
+      }
+    ],
+    "engine": {
+      "name": "Stockfish 17",
+      "nodesPerRoot": 120000,
+      "nodesPerEndpoint": 40000,
+      "rootPV": [
+        "Qe2",
+        "Kc5",
+        "Qxd3",
+        "Kc6",
+        "Qd5+",
+        "Kc7",
+        "Ke5",
+        "Kc8",
+        "Kd6",
+        "Kb8"
+      ]
+    },
+    "id": "pin-create-20261027-06",
+    "reviewed": "2026-10-27",
+    "review": "Four-piece original composition. No initial legal capture; the first quiet move creates a pin and prevents at least one otherwise pseudo-legal escape from attack. Every legal reply has a saved capture preserving at least one pawn of material against every immediate recapture. Endpoint engine probes retain the gain for eight PV plies. Finite evidence, not a proof of all later endgame play."
+  },
+  {
+    "exercise": {
+      "fen": "8/8/8/4R3/2kn4/4K3/8/8 w - - 0 1",
+      "moves": [
+        "Re4",
+        "Kc5",
+        "Rxd4"
+      ],
+      "alternativeLines": [
+        [
+          "Re4",
+          "Kd5",
+          "Rxd4+"
+        ],
+        [
+          "Re4",
+          "Kb5",
+          "Rxd4"
+        ],
+        [
+          "Re4",
+          "Kb4",
+          "Rxd4+"
+        ],
+        [
+          "Re4",
+          "Kc3",
+          "Rxd4"
+        ],
+        [
+          "Re4",
+          "Kb3",
+          "Rxd4"
+        ]
+      ],
+      "pinCreation": {
+        "front": "d4",
+        "back": "c4",
+        "pinner": "e5",
+        "destination": "e4"
+      },
+      "beginnerKind": "king",
+      "title": "Xe ghim mã rồi bắt quân",
+      "beginner": true,
+      "goal": "material",
+      "mode": "interactive",
+      "outcome": "pin",
+      "source": "original-composition",
+      "prompt": "Tạo đòn ghim rồi bắt quân ở nước tiếp theo.",
+      "hints": [
+        "Tìm hàng, cột hoặc đường chéo có mã ở d4 đứng trước Vua ở c4.",
+        "Đưa xe đến đường đó để mã không thể rời đường ghim. Sau nước đáp của Vua, kiểm tra nước bắt quân."
+      ],
+      "solution": "Re4 — Xe từ e5 đến e4, ghim mã ở d4 vào Vua ở c4. Mã không thể rời đường ghim vì sẽ làm lộ chiếu. Trong phương án minh họa, sau Kc5, chơi Rxd4 — xe bắt mã ở d4. Sau các nước đáp khác của Vua, quân bị ghim vẫn có thể bị bắt mà không mất quân bắt."
+    },
+    "defenceProbes": [
+      {
+        "line": [
+          "Re4",
+          "Kd5",
+          "Rxd4+"
+        ],
+        "score": 541,
+        "pv": [
+          "d5c5",
+          "d4d8",
+          "c5b5",
+          "d8d1",
+          "b5b4",
+          "e3f2",
+          "b4b3",
+          "f2g1",
+          "b3c2",
+          "d1d4",
+          "c2c1"
+        ],
+        "materialGainAfterEightPlies": 320
+      },
+      {
+        "line": [
+          "Re4",
+          "Kc5",
+          "Rxd4"
+        ],
+        "score": 533,
+        "pv": [
+          "c5b5",
+          "e3e2",
+          "b5c5",
+          "d4g4",
+          "c5b6",
+          "g4f4",
+          "b6c5",
+          "e2d1",
+          "c5d5",
+          "f4g4",
+          "d5c5",
+          "d1c1",
+          "c5d6",
+          "g4g2",
+          "d6c5"
+        ],
+        "materialGainAfterEightPlies": 320
+      },
+      {
+        "line": [
+          "Re4",
+          "Kb5",
+          "Rxd4"
+        ],
+        "score": 540,
+        "pv": [
+          "b5c5",
+          "d4d1",
+          "c5c4",
+          "e3d2",
+          "c4b3",
+          "d2c1",
+          "b3c4",
+          "d1d6",
+          "c4c3",
+          "d6d5",
+          "c3b3",
+          "d5d2",
+          "b3c3",
+          "d2e2"
+        ],
+        "materialGainAfterEightPlies": 320
+      },
+      {
+        "line": [
+          "Re4",
+          "Kb4",
+          "Rxd4+"
+        ],
+        "score": 540,
+        "pv": [
+          "b4c3",
+          "d4d8",
+          "c3b4",
+          "e3d2",
+          "b4b3",
+          "d8c8",
+          "b3a4",
+          "c8b8",
+          "a4a3",
+          "d2c2",
+          "a3a4",
+          "c2c1"
+        ],
+        "materialGainAfterEightPlies": 320
+      },
+      {
+        "line": [
+          "Re4",
+          "Kc3",
+          "Rxd4"
+        ],
+        "score": 99992,
+        "pv": [
+          "c3c2",
+          "d4c4",
+          "c2b2",
+          "e3d2",
+          "b2b3",
+          "c4g4",
+          "b3b2",
+          "g4b4",
+          "b2a3",
+          "d2c3",
+          "a3a2",
+          "c3c2",
+          "a2a3",
+          "b4h4",
+          "a3a2",
+          "h4a4"
+        ],
+        "materialGainAfterEightPlies": 320
+      },
+      {
+        "line": [
+          "Re4",
+          "Kb3",
+          "Rxd4"
+        ],
+        "score": 99991,
+        "pv": [
+          "b3c3",
+          "d4h4",
+          "c3c2",
+          "h4c4",
+          "c2b2",
+          "e3d2",
+          "b2b3",
+          "c4h4",
+          "b3b2",
+          "h4b4",
+          "b2a3",
+          "d2c3",
+          "a3a2",
+          "c3c2",
+          "a2a3",
+          "b4h4",
+          "a3a2",
+          "h4a4"
+        ],
+        "materialGainAfterEightPlies": 320
+      }
+    ],
+    "engine": {
+      "name": "Stockfish 17",
+      "nodesPerRoot": 120000,
+      "nodesPerEndpoint": 40000,
+      "rootPV": [
+        "Re4",
+        "Kc5",
+        "Rxd4",
+        "Kb5",
+        "Rd1",
+        "Kc4",
+        "Ra1",
+        "Kc3",
+        "Rc1+",
+        "Kb4"
+      ]
+    },
+    "id": "pin-create-20261027-07",
+    "reviewed": "2026-10-27",
+    "review": "Four-piece original composition. No initial legal capture; the first quiet move creates a pin and prevents at least one otherwise pseudo-legal escape from attack. Every legal reply has a saved capture preserving at least one pawn of material against every immediate recapture. Endpoint engine probes retain the gain for eight PV plies. Finite evidence, not a proof of all later endgame play."
+  },
+  {
+    "exercise": {
+      "fen": "8/8/8/7k/7r/3K2B1/8/8 b - - 0 1",
+      "moves": [
+        "Rh3",
+        "Ke4",
+        "Rxg3"
+      ],
+      "alternativeLines": [
+        [
+          "Rh3",
+          "Kd4",
+          "Rxg3"
+        ],
+        [
+          "Rh3",
+          "Kc4",
+          "Rxg3"
+        ],
+        [
+          "Rh3",
+          "Ke3",
+          "Rxg3+"
+        ],
+        [
+          "Rh3",
+          "Kc3",
+          "Rxg3+"
+        ],
+        [
+          "Rh3",
+          "Ke2",
+          "Rxg3"
+        ],
+        [
+          "Rh3",
+          "Kd2",
+          "Rxg3"
+        ],
+        [
+          "Rh3",
+          "Kc2",
+          "Rxg3"
+        ]
+      ],
+      "pinCreation": {
+        "front": "g3",
+        "back": "d3",
+        "pinner": "h4",
+        "destination": "h3"
+      },
+      "beginnerKind": "king",
+      "title": "Xe ghim tượng rồi bắt quân",
+      "beginner": true,
+      "goal": "material",
+      "mode": "interactive",
+      "outcome": "pin",
+      "source": "original-composition",
+      "prompt": "Tạo đòn ghim rồi bắt quân ở nước tiếp theo.",
+      "hints": [
+        "Tìm hàng, cột hoặc đường chéo có tượng ở g3 đứng trước Vua ở d3.",
+        "Đưa xe đến đường đó để tượng không thể rời đường ghim. Sau nước đáp của Vua, kiểm tra nước bắt quân."
+      ],
+      "solution": "Rh3 — Xe từ h4 đến h3, ghim tượng ở g3 vào Vua ở d3. Tượng không thể rời đường ghim vì sẽ làm lộ chiếu. Trong phương án minh họa, sau Ke4, chơi Rxg3 — xe bắt tượng ở g3. Sau các nước đáp khác của Vua, quân bị ghim vẫn có thể bị bắt mà không mất quân bắt."
+    },
+    "defenceProbes": [
+      {
+        "line": [
+          "Rh3",
+          "Ke4",
+          "Rxg3"
+        ],
+        "score": 488,
+        "pv": [
+          "e4f4",
+          "g3g1",
+          "f4e5",
+          "g1e1",
+          "e5d6",
+          "h5h6",
+          "d6c7",
+          "e1d1",
+          "c7b8"
+        ],
+        "materialGainAfterEightPlies": 330
+      },
+      {
+        "line": [
+          "Rh3",
+          "Kd4",
+          "Rxg3"
+        ],
+        "score": 481,
+        "pv": [
+          "d4d5",
+          "g3b3",
+          "d5d4",
+          "b3b8",
+          "d4e5",
+          "b8e8",
+          "e5d4",
+          "h5h4",
+          "d4d5",
+          "e8h8"
+        ],
+        "materialGainAfterEightPlies": 330
+      },
+      {
+        "line": [
+          "Rh3",
+          "Kc4",
+          "Rxg3"
+        ],
+        "score": 479,
+        "pv": [
+          "c4d5",
+          "g3e3",
+          "d5d4",
+          "e3a3",
+          "d4c4"
+        ],
+        "materialGainAfterEightPlies": 330
+      },
+      {
+        "line": [
+          "Rh3",
+          "Ke3",
+          "Rxg3+"
+        ],
+        "score": 479,
+        "pv": [
+          "e3d4",
+          "h5h6",
+          "d4e4",
+          "g3b3",
+          "e4e5",
+          "h6g7",
+          "e5d6",
+          "b3e3",
+          "d6d5",
+          "e3e1",
+          "d5d6",
+          "g7f8",
+          "d6d5",
+          "f8e8",
+          "d5d6",
+          "e1e7",
+          "d6d5",
+          "e8d7",
+          "d5d4"
+        ],
+        "materialGainAfterEightPlies": 330
+      },
+      {
+        "line": [
+          "Rh3",
+          "Kc3",
+          "Rxg3+"
+        ],
+        "score": 479,
+        "pv": [
+          "c3d4",
+          "g3h3",
+          "d4d5",
+          "h5h4",
+          "d5d4",
+          "h3h1",
+          "d4e3",
+          "h4g3"
+        ],
+        "materialGainAfterEightPlies": 330
+      },
+      {
+        "line": [
+          "Rh3",
+          "Ke2",
+          "Rxg3"
+        ],
+        "score": 534,
+        "pv": [
+          "e2d1",
+          "g3a3",
+          "d1c2",
+          "h5h6",
+          "c2b2",
+          "a3a7",
+          "b2c3",
+          "h6g7",
+          "c3d4"
+        ],
+        "materialGainAfterEightPlies": 330
+      },
+      {
+        "line": [
+          "Rh3",
+          "Kd2",
+          "Rxg3"
+        ],
+        "score": 535,
+        "pv": [
+          "d2c2",
+          "h5g4",
+          "c2d1",
+          "g4h3",
+          "d1e1",
+          "g3f3",
+          "e1d1",
+          "h3g2",
+          "d1e2",
+          "f3h3",
+          "e2d2",
+          "g2f2",
+          "d2d1"
+        ],
+        "materialGainAfterEightPlies": 330
+      },
+      {
+        "line": [
+          "Rh3",
+          "Kc2",
+          "Rxg3"
+        ],
+        "score": 532,
+        "pv": [
+          "c2d1",
+          "h5h4",
+          "d1e1",
+          "h4h3",
+          "e1d2",
+          "h3g2",
+          "d2e2",
+          "g3b3",
+          "e2e1",
+          "g2f3"
+        ],
+        "materialGainAfterEightPlies": 330
+      }
+    ],
+    "engine": {
+      "name": "Stockfish 17",
+      "nodesPerRoot": 120000,
+      "nodesPerEndpoint": 40000,
+      "rootPV": [
+        "Rh3",
+        "Ke4",
+        "Rxg3",
+        "Kf4",
+        "Rh3",
+        "Ke5",
+        "Kg4",
+        "Ke6",
+        "Kf3",
+        "Ke5"
+      ]
+    },
+    "id": "pin-create-20261027-08",
+    "reviewed": "2026-10-27",
+    "review": "Four-piece original composition. No initial legal capture; the first quiet move creates a pin and prevents at least one otherwise pseudo-legal escape from attack. Every legal reply has a saved capture preserving at least one pawn of material against every immediate recapture. Endpoint engine probes retain the gain for eight PV plies. Finite evidence, not a proof of all later endgame play."
+  },
+  {
+    "exercise": {
+      "fen": "8/1r6/8/8/4k3/7K/Q7/8 w - - 0 1",
+      "moves": [
+        "Qa8",
+        "Ke5",
+        "Qxb7"
+      ],
+      "alternativeLines": [
+        [
+          "Qa8",
+          "Kf5",
+          "Qxb7"
+        ],
+        [
+          "Qa8",
+          "Kd5",
+          "Qxb7+"
+        ],
+        [
+          "Qa8",
+          "Kf4",
+          "Qxb7"
+        ],
+        [
+          "Qa8",
+          "Kd4",
+          "Qxb7"
+        ],
+        [
+          "Qa8",
+          "Kf3",
+          "Qxb7+"
+        ],
+        [
+          "Qa8",
+          "Ke3",
+          "Qxb7"
+        ],
+        [
+          "Qa8",
+          "Kd3",
+          "Qxb7"
+        ]
+      ],
+      "pinCreation": {
+        "front": "b7",
+        "back": "e4",
+        "pinner": "a2",
+        "destination": "a8"
+      },
+      "beginnerKind": "king",
+      "title": "Hậu ghim xe rồi bắt quân",
+      "beginner": true,
+      "goal": "material",
+      "mode": "interactive",
+      "outcome": "pin",
+      "source": "original-composition",
+      "prompt": "Tạo đòn ghim rồi bắt quân ở nước tiếp theo.",
+      "hints": [
+        "Tìm hàng, cột hoặc đường chéo có xe ở b7 đứng trước Vua ở e4.",
+        "Đưa hậu đến đường đó để xe không thể rời đường ghim. Sau nước đáp của Vua, kiểm tra nước bắt quân."
+      ],
+      "solution": "Qa8 — Hậu từ a2 đến a8, ghim xe ở b7 vào Vua ở e4. Xe không thể rời đường ghim vì sẽ làm lộ chiếu. Trong phương án minh họa, sau Ke5, chơi Qxb7 — hậu bắt xe ở b7. Sau các nước đáp khác của Vua, quân bị ghim vẫn có thể bị bắt mà không mất quân bắt."
+    },
+    "defenceProbes": [
+      {
+        "line": [
+          "Qa8",
+          "Kf5",
+          "Qxb7"
+        ],
+        "score": 533,
+        "pv": [
+          "f5f4",
+          "b7b3",
+          "f4e5",
+          "h3g3",
+          "e5e4",
+          "b3f3",
+          "e4e5"
+        ],
+        "materialGainAfterEightPlies": 500
+      },
+      {
+        "line": [
+          "Qa8",
+          "Ke5",
+          "Qxb7"
+        ],
+        "score": 531,
+        "pv": [
+          "e5d6",
+          "b7b4",
+          "d6e6",
+          "b4b3",
+          "e6d7",
+          "b3d1",
+          "d7e7"
+        ],
+        "materialGainAfterEightPlies": 500
+      },
+      {
+        "line": [
+          "Qa8",
+          "Kd5",
+          "Qxb7+"
+        ],
+        "score": 528,
+        "pv": [
+          "d5c4",
+          "b7b2",
+          "c4d5",
+          "b2c3",
+          "d5e6",
+          "c3d4",
+          "e6f7",
+          "d4f2",
+          "f7g7"
+        ],
+        "materialGainAfterEightPlies": 500
+      },
+      {
+        "line": [
+          "Qa8",
+          "Kf4",
+          "Qxb7"
+        ],
+        "score": 720,
+        "pv": [
+          "f4e5",
+          "h3g4",
+          "e5e6",
+          "b7b3",
+          "e6f6",
+          "g4h4",
+          "f6g6",
+          "b3e6",
+          "g6h7",
+          "h4g5",
+          "h7g7",
+          "e6d7",
+          "g7g8",
+          "g5g6"
+        ],
+        "materialGainAfterEightPlies": 500
+      },
+      {
+        "line": [
+          "Qa8",
+          "Kd4",
+          "Qxb7"
+        ],
+        "score": 1087,
+        "pv": [
+          "d4c4"
+        ],
+        "materialGainAfterEightPlies": 500
+      },
+      {
+        "line": [
+          "Qa8",
+          "Kf3",
+          "Qxb7+"
+        ],
+        "score": 99987,
+        "pv": [
+          "f3e3",
+          "h3g4",
+          "e3e2",
+          "b7b3",
+          "e2d2",
+          "g4f3",
+          "d2e1",
+          "b3b4",
+          "e1d1",
+          "f3f2",
+          "d1c1",
+          "b4e4",
+          "c1b2",
+          "e4e3",
+          "b2b1",
+          "f2e1",
+          "b1c2",
+          "e1e2",
+          "c2b2",
+          "e2d2",
+          "b2b1",
+          "e3b6",
+          "b1a1",
+          "d2c2",
+          "a1a2",
+          "b6a6"
+        ],
+        "materialGainAfterEightPlies": 500
+      },
+      {
+        "line": [
+          "Qa8",
+          "Ke3",
+          "Qxb7"
+        ],
+        "score": 99989,
+        "pv": [
+          "e3d3",
+          "b7b3",
+          "d3d2",
+          "h3g2",
+          "d2e2",
+          "g2g3",
+          "e2d2",
+          "g3f2",
+          "d2c1",
+          "b3e3",
+          "c1b1",
+          "f2e2",
+          "b1c2",
+          "e2e1",
+          "c2b1",
+          "e1d2",
+          "b1b2",
+          "e3d3",
+          "b2a2",
+          "d2c2",
+          "a2a1",
+          "d3a6"
+        ],
+        "materialGainAfterEightPlies": 500
+      },
+      {
+        "line": [
+          "Qa8",
+          "Kd3",
+          "Qxb7"
+        ],
+        "score": 99988,
+        "pv": [
+          "d3c4",
+          "h3g4",
+          "c4d3",
+          "b7b3",
+          "d3e2",
+          "g4g3",
+          "e2d2",
+          "g3f3",
+          "d2c1",
+          "f3f2",
+          "c1d2",
+          "b3e3",
+          "d2c2",
+          "f2e1",
+          "c2b2",
+          "e1d2",
+          "b2b1",
+          "e3e4",
+          "b1b2",
+          "e4d3",
+          "b2a2",
+          "d2c2",
+          "a2a1",
+          "d3a6"
+        ],
+        "materialGainAfterEightPlies": 500
+      }
+    ],
+    "engine": {
+      "name": "Stockfish 17",
+      "nodesPerRoot": 120000,
+      "nodesPerEndpoint": 40000,
+      "rootPV": [
+        "Qa8",
+        "Ke5",
+        "Qxb7",
+        "Kf5",
+        "Kg3",
+        "Ke5",
+        "Qb3",
+        "Ke4",
+        "Qc4+",
+        "Ke5"
+      ]
+    },
+    "id": "pin-create-20261027-09",
+    "reviewed": "2026-10-27",
+    "review": "Four-piece original composition. No initial legal capture; the first quiet move creates a pin and prevents at least one otherwise pseudo-legal escape from attack. Every legal reply has a saved capture preserving at least one pawn of material against every immediate recapture. Endpoint engine probes retain the gain for eight PV plies. Finite evidence, not a proof of all later endgame play."
+  },
+  {
+    "exercise": {
+      "fen": "6R1/8/8/8/8/7K/k2n4/8 w - - 0 1",
+      "moves": [
+        "Rg2",
+        "Kb2",
+        "Rxd2+"
+      ],
+      "alternativeLines": [
+        [
+          "Rg2",
+          "Kb3",
+          "Rxd2"
+        ],
+        [
+          "Rg2",
+          "Ka3",
+          "Rxd2"
+        ],
+        [
+          "Rg2",
+          "Kb1",
+          "Rxd2"
+        ],
+        [
+          "Rg2",
+          "Ka1",
+          "Rxd2"
+        ]
+      ],
+      "pinCreation": {
+        "front": "d2",
+        "back": "a2",
+        "pinner": "g8",
+        "destination": "g2"
+      },
+      "beginnerKind": "king",
+      "title": "Xe ghim mã rồi bắt quân",
+      "beginner": true,
+      "goal": "material",
+      "mode": "interactive",
+      "outcome": "pin",
+      "source": "original-composition",
+      "prompt": "Tạo đòn ghim rồi bắt quân ở nước tiếp theo.",
+      "hints": [
+        "Tìm hàng, cột hoặc đường chéo có mã ở d2 đứng trước Vua ở a2.",
+        "Đưa xe đến đường đó để mã không thể rời đường ghim. Sau nước đáp của Vua, kiểm tra nước bắt quân."
+      ],
+      "solution": "Rg2 — Xe từ g8 đến g2, ghim mã ở d2 vào Vua ở a2. Mã không thể rời đường ghim vì sẽ làm lộ chiếu. Trong phương án minh họa, sau Kb2, chơi Rxd2+ — xe bắt mã ở d2 và chiếu Vua. Sau các nước đáp khác của Vua, quân bị ghim vẫn có thể bị bắt mà không mất quân bắt."
+    },
+    "defenceProbes": [
+      {
+        "line": [
+          "Rg2",
+          "Kb3",
+          "Rxd2"
+        ],
+        "score": 528,
+        "pv": [
+          "b3c3",
+          "d2f2",
+          "c3b3",
+          "h3g2",
+          "b3c3",
+          "g2f1",
+          "c3d3",
+          "f2h2"
+        ],
+        "materialGainAfterEightPlies": 320
+      },
+      {
+        "line": [
+          "Rg2",
+          "Ka3",
+          "Rxd2"
+        ],
+        "score": 529,
+        "pv": [
+          "a3b4",
+          "h3g2",
+          "b4c3",
+          "d2f2",
+          "c3b3",
+          "g2f1",
+          "b3c4",
+          "f1e1",
+          "c4b4",
+          "e1d1",
+          "b4c3",
+          "f2d2",
+          "c3b3",
+          "d1c1"
+        ],
+        "materialGainAfterEightPlies": 320
+      },
+      {
+        "line": [
+          "Rg2",
+          "Kb2",
+          "Rxd2+"
+        ],
+        "score": 502,
+        "pv": [
+          "b2c3",
+          "d2f2",
+          "c3c4",
+          "h3g2",
+          "c4c3",
+          "g2f1",
+          "c3d4",
+          "f2e2",
+          "d4d3",
+          "e2a2",
+          "d3c3",
+          "f1e1",
+          "c3b3"
+        ],
+        "materialGainAfterEightPlies": 320
+      },
+      {
+        "line": [
+          "Rg2",
+          "Kb1",
+          "Rxd2"
+        ],
+        "score": 676,
+        "pv": [
+          "b1c1",
+          "d2h2"
+        ],
+        "materialGainAfterEightPlies": 320
+      },
+      {
+        "line": [
+          "Rg2",
+          "Ka1",
+          "Rxd2"
+        ],
+        "score": 99988,
+        "pv": [
+          "a1b1",
+          "h3g3",
+          "b1c1",
+          "d2f2",
+          "c1d1",
+          "f2a2",
+          "d1e1",
+          "g3f3",
+          "e1d1",
+          "a2e2",
+          "d1c1",
+          "e2h2",
+          "c1d1",
+          "f3e3",
+          "d1c1",
+          "e3d3",
+          "c1b1",
+          "d3c3",
+          "b1a1",
+          "c3c2",
+          "a1a2",
+          "h2h3",
+          "a2a1",
+          "h3a3"
+        ],
+        "materialGainAfterEightPlies": 320
+      }
+    ],
+    "engine": {
+      "name": "Stockfish 17",
+      "nodesPerRoot": 120000,
+      "nodesPerEndpoint": 40000,
+      "rootPV": [
+        "Rg2",
+        "Kb2",
+        "Rxd2+",
+        "Kc3",
+        "Rd8",
+        "Kb3",
+        "Rc8",
+        "Kb4",
+        "Kg2",
+        "Kb3"
+      ]
+    },
+    "id": "pin-create-20261027-10",
+    "reviewed": "2026-10-27",
+    "review": "Four-piece original composition. No initial legal capture; the first quiet move creates a pin and prevents at least one otherwise pseudo-legal escape from attack. Every legal reply has a saved capture preserving at least one pawn of material against every immediate recapture. Endpoint engine probes retain the gain for eight PV plies. Finite evidence, not a proof of all later endgame play."
+  },
+  {
+    "exercise": {
+      "fen": "8/8/8/8/k7/8/r7/1B2K3 b - - 0 1",
+      "moves": [
+        "Ra1",
+        "Kd2",
+        "Rxb1"
+      ],
+      "alternativeLines": [
+        [
+          "Ra1",
+          "Kf2",
+          "Rxb1"
+        ],
+        [
+          "Ra1",
+          "Ke2",
+          "Rxb1"
+        ],
+        [
+          "Ra1",
+          "Kf1",
+          "Rxb1+"
+        ],
+        [
+          "Ra1",
+          "Kd1",
+          "Rxb1+"
+        ]
+      ],
+      "pinCreation": {
+        "front": "b1",
+        "back": "e1",
+        "pinner": "a2",
+        "destination": "a1"
+      },
+      "beginnerKind": "king",
+      "title": "Xe ghim tượng rồi bắt quân",
+      "beginner": true,
+      "goal": "material",
+      "mode": "interactive",
+      "outcome": "pin",
+      "source": "original-composition",
+      "prompt": "Tạo đòn ghim rồi bắt quân ở nước tiếp theo.",
+      "hints": [
+        "Tìm hàng, cột hoặc đường chéo có tượng ở b1 đứng trước Vua ở e1.",
+        "Đưa xe đến đường đó để tượng không thể rời đường ghim. Sau nước đáp của Vua, kiểm tra nước bắt quân."
+      ],
+      "solution": "Ra1 — Xe từ a2 đến a1, ghim tượng ở b1 vào Vua ở e1. Tượng không thể rời đường ghim vì sẽ làm lộ chiếu. Trong phương án minh họa, sau Kd2, chơi Rxb1 — xe bắt tượng ở b1. Sau các nước đáp khác của Vua, quân bị ghim vẫn có thể bị bắt mà không mất quân bắt."
+    },
+    "defenceProbes": [
+      {
+        "line": [
+          "Ra1",
+          "Kf2",
+          "Rxb1"
+        ],
+        "score": 662,
+        "pv": [
+          "f2g3"
+        ],
+        "materialGainAfterEightPlies": 330
+      },
+      {
+        "line": [
+          "Ra1",
+          "Ke2",
+          "Rxb1"
+        ],
+        "score": 650,
+        "pv": [
+          "e2f3",
+          "b1b4",
+          "f3e3",
+          "a4b3",
+          "e3f2",
+          "b3a3",
+          "f2e3",
+          "a3b2",
+          "e3d3",
+          "b4a4",
+          "d3e2",
+          "a4a3",
+          "e2f1",
+          "a3b3"
+        ],
+        "materialGainAfterEightPlies": 330
+      },
+      {
+        "line": [
+          "Ra1",
+          "Kd2",
+          "Rxb1"
+        ],
+        "score": 2218,
+        "pv": [
+          "d2e3"
+        ],
+        "materialGainAfterEightPlies": 330
+      },
+      {
+        "line": [
+          "Ra1",
+          "Kf1",
+          "Rxb1+"
+        ],
+        "score": 646,
+        "pv": [
+          "f1g2",
+          "a4a3",
+          "g2g3",
+          "b1b4",
+          "g3h2",
+          "b4b3",
+          "h2h1",
+          "b3c3",
+          "h1g2",
+          "a3b3",
+          "g2h2",
+          "b3c2",
+          "h2g1",
+          "c2d2",
+          "g1f1",
+          "c3b3",
+          "f1f2",
+          "d2d1",
+          "f2g1",
+          "d1e2",
+          "g1g2",
+          "e2e1",
+          "g2g1",
+          "b3b2",
+          "g1h1",
+          "e1f2",
+          "h1h2",
+          "b2b3"
+        ],
+        "materialGainAfterEightPlies": 330
+      },
+      {
+        "line": [
+          "Ra1",
+          "Kd1",
+          "Rxb1+"
+        ],
+        "score": 1024,
+        "pv": [
+          "d1e2"
+        ],
+        "materialGainAfterEightPlies": 330
+      }
+    ],
+    "engine": {
+      "name": "Stockfish 17",
+      "nodesPerRoot": 120000,
+      "nodesPerEndpoint": 40000,
+      "rootPV": [
+        "Ra1",
+        "Kd2",
+        "Rxb1",
+        "Kd3",
+        "Rb4",
+        "Kc2",
+        "Ka3",
+        "Kc3",
+        "Rg4",
+        "Kc2"
+      ]
+    },
+    "id": "pin-create-20261027-11",
+    "reviewed": "2026-10-27",
+    "review": "Four-piece original composition. No initial legal capture; the first quiet move creates a pin and prevents at least one otherwise pseudo-legal escape from attack. Every legal reply has a saved capture preserving at least one pawn of material against every immediate recapture. Endpoint engine probes retain the gain for eight PV plies. Finite evidence, not a proof of all later endgame play."
+  },
+  {
+    "exercise": {
+      "fen": "8/Q7/6K1/4k3/8/8/1r6/8 w - - 0 1",
+      "moves": [
+        "Qa1",
+        "Kd4",
+        "Qxb2+"
+      ],
+      "alternativeLines": [
+        [
+          "Qa1",
+          "Ke6",
+          "Qxb2"
+        ],
+        [
+          "Qa1",
+          "Kd6",
+          "Qxb2"
+        ],
+        [
+          "Qa1",
+          "Kd5",
+          "Qxb2"
+        ],
+        [
+          "Qa1",
+          "Kf4",
+          "Qxb2"
+        ],
+        [
+          "Qa1",
+          "Ke4",
+          "Qxb2"
+        ]
+      ],
+      "pinCreation": {
+        "front": "b2",
+        "back": "e5",
+        "pinner": "a7",
+        "destination": "a1"
+      },
+      "beginnerKind": "king",
+      "title": "Hậu ghim xe rồi bắt quân",
+      "beginner": true,
+      "goal": "material",
+      "mode": "interactive",
+      "outcome": "pin",
+      "source": "original-composition",
+      "prompt": "Tạo đòn ghim rồi bắt quân ở nước tiếp theo.",
+      "hints": [
+        "Tìm hàng, cột hoặc đường chéo có xe ở b2 đứng trước Vua ở e5.",
+        "Đưa hậu đến đường đó để xe không thể rời đường ghim. Sau nước đáp của Vua, kiểm tra nước bắt quân."
+      ],
+      "solution": "Qa1 — Hậu từ a7 đến a1, ghim xe ở b2 vào Vua ở e5. Xe không thể rời đường ghim vì sẽ làm lộ chiếu. Trong phương án minh họa, sau Kd4, chơi Qxb2+ — hậu bắt xe ở b2 và chiếu Vua. Sau các nước đáp khác của Vua, quân bị ghim vẫn có thể bị bắt mà không mất quân bắt."
+    },
+    "defenceProbes": [
+      {
+        "line": [
+          "Qa1",
+          "Ke6",
+          "Qxb2"
+        ],
+        "score": 565,
+        "pv": [
+          "e6d6",
+          "b2b5",
+          "d6e6",
+          "b5b3",
+          "e6d6"
+        ],
+        "materialGainAfterEightPlies": 500
+      },
+      {
+        "line": [
+          "Qa1",
+          "Kd6",
+          "Qxb2"
+        ],
+        "score": 552,
+        "pv": [
+          "d6c5",
+          "b2c3",
+          "c5b6",
+          "c3b4",
+          "b6c6",
+          "g6f5",
+          "c6d7",
+          "f5e5",
+          "d7c6",
+          "e5e6",
+          "c6c7",
+          "b4c3",
+          "c7b6"
+        ],
+        "materialGainAfterEightPlies": 500
+      },
+      {
+        "line": [
+          "Qa1",
+          "Kd5",
+          "Qxb2"
+        ],
+        "score": 552,
+        "pv": [
+          "d5c4",
+          "g6f5",
+          "c4d3",
+          "f5f4",
+          "d3c4",
+          "f4e4",
+          "c4c5",
+          "e4d3",
+          "c5d5",
+          "b2f6",
+          "d5c5",
+          "f6g5",
+          "c5d6",
+          "g5g1",
+          "d6d5"
+        ],
+        "materialGainAfterEightPlies": 500
+      },
+      {
+        "line": [
+          "Qa1",
+          "Kf4",
+          "Qxb2"
+        ],
+        "score": 575,
+        "pv": [
+          "f4e3",
+          "b2c2",
+          "e3f3",
+          "g6g5",
+          "f3g3",
+          "c2e2",
+          "g3h3",
+          "g5f4"
+        ],
+        "materialGainAfterEightPlies": 500
+      },
+      {
+        "line": [
+          "Qa1",
+          "Ke4",
+          "Qxb2"
+        ],
+        "score": 543,
+        "pv": [
+          "e4d3",
+          "g6f5",
+          "d3c4",
+          "f5g5",
+          "c4d3",
+          "g5f4",
+          "d3c4",
+          "f4e3",
+          "c4c5",
+          "e3d2",
+          "c5c4",
+          "d2c2",
+          "c4d5",
+          "c2d3",
+          "d5d6",
+          "d3c4",
+          "d6c6",
+          "b2e2",
+          "c6b7"
+        ],
+        "materialGainAfterEightPlies": 500
+      },
+      {
+        "line": [
+          "Qa1",
+          "Kd4",
+          "Qxb2+"
+        ],
+        "score": 533,
+        "pv": [
+          "d4d3",
+          "g6h5",
+          "d3c4",
+          "h5g5",
+          "c4d3",
+          "g5f4",
+          "d3c4",
+          "f4g3",
+          "c4c5",
+          "b2b3",
+          "c5d4",
+          "g3h4",
+          "d4e4",
+          "b3b1",
+          "e4d4",
+          "h4h3",
+          "d4c4"
+        ],
+        "materialGainAfterEightPlies": 500
+      }
+    ],
+    "engine": {
+      "name": "Stockfish 17",
+      "nodesPerRoot": 120000,
+      "nodesPerEndpoint": 40000,
+      "rootPV": [
+        "Qa1",
+        "Kd4",
+        "Qxb2+",
+        "Kd3",
+        "Kf5",
+        "Kc4",
+        "Ke4",
+        "Kc5",
+        "Qd4+",
+        "Kc6"
+      ]
+    },
+    "id": "pin-create-20261027-12",
+    "reviewed": "2026-10-27",
+    "review": "Four-piece original composition. No initial legal capture; the first quiet move creates a pin and prevents at least one otherwise pseudo-legal escape from attack. Every legal reply has a saved capture preserving at least one pawn of material against every immediate recapture. Endpoint engine probes retain the gain for eight PV plies. Finite evidence, not a proof of all later endgame play."
+  },
+  {
+    "exercise": {
+      "fen": "8/8/3k3K/8/8/q7/3P4/8 b - - 0 1",
+      "moves": [
+        "Qc1",
+        "Kh5",
+        "Qxd2"
+      ],
+      "alternativeLines": [
+        [
+          "Qc1",
+          "Kh7",
+          "Qxd2"
+        ],
+        [
+          "Qc1",
+          "Kg7",
+          "Qxd2"
+        ],
+        [
+          "Qc1",
+          "Kg6",
+          "Qxd2"
+        ],
+        [
+          "Qc1",
+          "Kg5",
+          "Qxd2+"
+        ]
+      ],
+      "pinCreation": {
+        "front": "d2",
+        "back": "h6",
+        "pinner": "a3",
+        "destination": "c1"
+      },
+      "beginnerKind": "king",
+      "title": "Hậu ghim tốt rồi bắt quân",
+      "beginner": true,
+      "goal": "material",
+      "mode": "interactive",
+      "outcome": "pin",
+      "source": "original-composition",
+      "prompt": "Tạo đòn ghim rồi bắt quân ở nước tiếp theo.",
+      "hints": [
+        "Tìm hàng, cột hoặc đường chéo có tốt ở d2 đứng trước Vua ở h6.",
+        "Đưa hậu đến đường đó để tốt không thể rời đường ghim. Sau nước đáp của Vua, kiểm tra nước bắt quân."
+      ],
+      "solution": "Qc1 — Hậu từ a3 đến c1, ghim tốt ở d2 vào Vua ở h6. Tốt không thể rời đường ghim vì sẽ làm lộ chiếu. Trong phương án minh họa, sau Kh5, chơi Qxd2 — hậu bắt tốt ở d2. Sau các nước đáp khác của Vua, quân bị ghim vẫn có thể bị bắt mà không mất quân bắt."
+    },
+    "defenceProbes": [
+      {
+        "line": [
+          "Qc1",
+          "Kh7",
+          "Qxd2"
+        ],
+        "score": 883,
+        "pv": [
+          "h7g7",
+          "d6e7"
+        ],
+        "materialGainAfterEightPlies": 100
+      },
+      {
+        "line": [
+          "Qc1",
+          "Kg7",
+          "Qxd2"
+        ],
+        "score": 99994,
+        "pv": [
+          "g7f6",
+          "d2a5",
+          "f6f7",
+          "a5f5",
+          "f7g7",
+          "d6e7",
+          "g7g8",
+          "f5g5",
+          "g8h8",
+          "e7f7",
+          "h8h7",
+          "g5h5"
+        ],
+        "materialGainAfterEightPlies": 100
+      },
+      {
+        "line": [
+          "Qc1",
+          "Kg6",
+          "Qxd2"
+        ],
+        "score": 99994,
+        "pv": [
+          "g6f5",
+          "d2d4",
+          "f5g6",
+          "d4f4",
+          "g6h7",
+          "d6e7",
+          "h7g6",
+          "f4g4",
+          "g6h7",
+          "e7f7",
+          "h7h6",
+          "g4g6"
+        ],
+        "materialGainAfterEightPlies": 100
+      },
+      {
+        "line": [
+          "Qc1",
+          "Kh5",
+          "Qxd2"
+        ],
+        "score": 593,
+        "pv": [
+          "h5g4",
+          "d2f2",
+          "g4h3",
+          "f2f3",
+          "h3h2",
+          "f3a3",
+          "h2g2",
+          "d6e5"
+        ],
+        "materialGainAfterEightPlies": 100
+      },
+      {
+        "line": [
+          "Qc1",
+          "Kg5",
+          "Qxd2+"
+        ],
+        "score": 99988,
+        "pv": [
+          "g5g4",
+          "d2f2",
+          "g4h3",
+          "f2f3",
+          "h3h4",
+          "f3g2",
+          "h4h5",
+          "g2e4",
+          "h5g5",
+          "e4a4",
+          "g5g6",
+          "a4g4",
+          "g6f6",
+          "g4h5",
+          "f6g7",
+          "d6e7",
+          "g7g8",
+          "h5g5",
+          "g8h8",
+          "e7f7",
+          "h8h7",
+          "g5g6",
+          "h7h8",
+          "g6g7"
+        ],
+        "materialGainAfterEightPlies": 100
+      }
+    ],
+    "engine": {
+      "name": "Stockfish 17",
+      "nodesPerRoot": 120000,
+      "nodesPerEndpoint": 40000,
+      "rootPV": [
+        "Qc1",
+        "Kh5",
+        "Qxd2",
+        "Kg4",
+        "Qf2",
+        "Kg5",
+        "Qd4",
+        "Kf5",
+        "Ke7",
+        "Kg5"
+      ]
+    },
+    "id": "pin-create-20261027-13",
+    "reviewed": "2026-10-27",
+    "review": "Four-piece original composition. No initial legal capture; the first quiet move creates a pin and prevents at least one otherwise pseudo-legal escape from attack. Every legal reply has a saved capture preserving at least one pawn of material against every immediate recapture. Endpoint engine probes retain the gain for eight PV plies. Finite evidence, not a proof of all later endgame play."
+  },
+  {
+    "exercise": {
+      "fen": "8/6k1/8/8/2K3n1/7R/8/8 w - - 0 1",
+      "moves": [
+        "Rg3",
+        "Kg6",
+        "Rxg4+"
+      ],
+      "alternativeLines": [
+        [
+          "Rg3",
+          "Kh8",
+          "Rxg4"
+        ],
+        [
+          "Rg3",
+          "Kg8",
+          "Rxg4+"
+        ],
+        [
+          "Rg3",
+          "Kf8",
+          "Rxg4"
+        ],
+        [
+          "Rg3",
+          "Kh7",
+          "Rxg4"
+        ],
+        [
+          "Rg3",
+          "Kf7",
+          "Rxg4"
+        ],
+        [
+          "Rg3",
+          "Kh6",
+          "Rxg4"
+        ],
+        [
+          "Rg3",
+          "Kf6",
+          "Rxg4"
+        ]
+      ],
+      "pinCreation": {
+        "front": "g4",
+        "back": "g7",
+        "pinner": "h3",
+        "destination": "g3"
+      },
+      "beginnerKind": "king",
+      "title": "Xe ghim mã rồi bắt quân",
+      "beginner": true,
+      "goal": "material",
+      "mode": "interactive",
+      "outcome": "pin",
+      "source": "original-composition",
+      "prompt": "Tạo đòn ghim rồi bắt quân ở nước tiếp theo.",
+      "hints": [
+        "Tìm hàng, cột hoặc đường chéo có mã ở g4 đứng trước Vua ở g7.",
+        "Đưa xe đến đường đó để mã không thể rời đường ghim. Sau nước đáp của Vua, kiểm tra nước bắt quân."
+      ],
+      "solution": "Rg3 — Xe từ h3 đến g3, ghim mã ở g4 vào Vua ở g7. Mã không thể rời đường ghim vì sẽ làm lộ chiếu. Trong phương án minh họa, sau Kg6, chơi Rxg4+ — xe bắt mã ở g4 và chiếu Vua. Sau các nước đáp khác của Vua, quân bị ghim vẫn có thể bị bắt mà không mất quân bắt."
+    },
+    "defenceProbes": [
+      {
+        "line": [
+          "Rg3",
+          "Kh8",
+          "Rxg4"
+        ],
+        "score": 590,
+        "pv": [
+          "h8h7",
+          "c4b3",
+          "h7h6",
+          "g4g2",
+          "h6h5",
+          "g2g1",
+          "h5h4",
+          "b3a2",
+          "h4h5"
+        ],
+        "materialGainAfterEightPlies": 320
+      },
+      {
+        "line": [
+          "Rg3",
+          "Kg8",
+          "Rxg4+"
+        ],
+        "score": 516,
+        "pv": [
+          "g8f7",
+          "c4d3",
+          "f7f6",
+          "d3c2",
+          "f6f5",
+          "g4c4",
+          "f5g5",
+          "c2b1",
+          "g5f5",
+          "c4c7",
+          "f5e6",
+          "c7c2",
+          "e6f5"
+        ],
+        "materialGainAfterEightPlies": 320
+      },
+      {
+        "line": [
+          "Rg3",
+          "Kf8",
+          "Rxg4"
+        ],
+        "score": 514,
+        "pv": [
+          "f8e7",
+          "c4d3",
+          "e7d6",
+          "d3d2",
+          "d6c5",
+          "d2d1"
+        ],
+        "materialGainAfterEightPlies": 320
+      },
+      {
+        "line": [
+          "Rg3",
+          "Kh7",
+          "Rxg4"
+        ],
+        "score": 543,
+        "pv": [
+          "h7h6",
+          "c4d5",
+          "h6h5",
+          "g4b4",
+          "h5g5",
+          "d5e5",
+          "g5g6",
+          "e5e6",
+          "g6g5",
+          "b4a4",
+          "g5g6",
+          "a4a5",
+          "g6g7",
+          "e6f5",
+          "g7f7"
+        ],
+        "materialGainAfterEightPlies": 320
+      },
+      {
+        "line": [
+          "Rg3",
+          "Kf7",
+          "Rxg4"
+        ],
+        "score": 488,
+        "pv": [
+          "f7e6",
+          "g4g1",
+          "e6e5",
+          "c4d3",
+          "e5f4",
+          "d3e2",
+          "f4e4",
+          "g1a1",
+          "e4d4",
+          "e2e1",
+          "d4e4",
+          "e1f1",
+          "e4e3"
+        ],
+        "materialGainAfterEightPlies": 320
+      },
+      {
+        "line": [
+          "Rg3",
+          "Kh6",
+          "Rxg4"
+        ],
+        "score": 643,
+        "pv": [
+          "h6h5",
+          "g4g1"
+        ],
+        "materialGainAfterEightPlies": 320
+      },
+      {
+        "line": [
+          "Rg3",
+          "Kg6",
+          "Rxg4+"
+        ],
+        "score": 484,
+        "pv": [
+          "g6f5",
+          "g4g8",
+          "f5e5",
+          "c4b3",
+          "e5e4",
+          "b3b2",
+          "e4d5",
+          "g8g1",
+          "d5e4"
+        ],
+        "materialGainAfterEightPlies": 320
+      },
+      {
+        "line": [
+          "Rg3",
+          "Kf6",
+          "Rxg4"
+        ],
+        "score": 483,
+        "pv": [
+          "f6f5",
+          "g4g8",
+          "f5e5",
+          "g8g5",
+          "e5f6",
+          "g5a5",
+          "f6e6",
+          "a5a1",
+          "e6e5"
+        ],
+        "materialGainAfterEightPlies": 320
+      }
+    ],
+    "engine": {
+      "name": "Stockfish 17",
+      "nodesPerRoot": 120000,
+      "nodesPerEndpoint": 40000,
+      "rootPV": [
+        "Rg3",
+        "Kg6",
+        "Rxg4+",
+        "Kf5",
+        "Rg3",
+        "Ke4",
+        "Rb3",
+        "Ke5",
+        "Kd3",
+        "Kf4"
+      ]
+    },
+    "id": "pin-create-20261027-14",
+    "reviewed": "2026-10-27",
+    "review": "Four-piece original composition. No initial legal capture; the first quiet move creates a pin and prevents at least one otherwise pseudo-legal escape from attack. Every legal reply has a saved capture preserving at least one pawn of material against every immediate recapture. Endpoint engine probes retain the gain for eight PV plies. Finite evidence, not a proof of all later endgame play."
+  },
+  {
+    "exercise": {
+      "fen": "8/8/2r5/K7/8/1Q6/6k1/8 w - - 0 1",
+      "moves": [
+        "Qb7",
+        "Kf2",
+        "Qxc6"
+      ],
+      "alternativeLines": [
+        [
+          "Qb7",
+          "Kh3",
+          "Qxc6"
+        ],
+        [
+          "Qb7",
+          "Kg3",
+          "Qxc6"
+        ],
+        [
+          "Qb7",
+          "Kf3",
+          "Qxc6+"
+        ],
+        [
+          "Qb7",
+          "Kh2",
+          "Qxc6"
+        ],
+        [
+          "Qb7",
+          "Kh1",
+          "Qxc6+"
+        ],
+        [
+          "Qb7",
+          "Kg1",
+          "Qxc6"
+        ],
+        [
+          "Qb7",
+          "Kf1",
+          "Qxc6"
+        ]
+      ],
+      "pinCreation": {
+        "front": "c6",
+        "back": "g2",
+        "pinner": "b3",
+        "destination": "b7"
+      },
+      "beginnerKind": "king",
+      "title": "Hậu ghim xe rồi bắt quân",
+      "beginner": true,
+      "goal": "material",
+      "mode": "interactive",
+      "outcome": "pin",
+      "source": "original-composition",
+      "prompt": "Tạo đòn ghim rồi bắt quân ở nước tiếp theo.",
+      "hints": [
+        "Tìm hàng, cột hoặc đường chéo có xe ở c6 đứng trước Vua ở g2.",
+        "Đưa hậu đến đường đó để xe không thể rời đường ghim. Sau nước đáp của Vua, kiểm tra nước bắt quân."
+      ],
+      "solution": "Qb7 — Hậu từ b3 đến b7, ghim xe ở c6 vào Vua ở g2. Xe không thể rời đường ghim vì sẽ làm lộ chiếu. Trong phương án minh họa, sau Kf2, chơi Qxc6 — hậu bắt xe ở c6. Sau các nước đáp khác của Vua, quân bị ghim vẫn có thể bị bắt mà không mất quân bắt."
+    },
+    "defenceProbes": [
+      {
+        "line": [
+          "Qb7",
+          "Kh3",
+          "Qxc6"
+        ],
+        "score": 516,
+        "pv": [
+          "h3g3",
+          "a5a4",
+          "g3h2",
+          "c6b7",
+          "h2g1",
+          "b7b3",
+          "g1g2",
+          "b3b4",
+          "g2f1",
+          "b4b1",
+          "f1g2"
+        ],
+        "materialGainAfterEightPlies": 500
+      },
+      {
+        "line": [
+          "Qb7",
+          "Kg3",
+          "Qxc6"
+        ],
+        "score": 497,
+        "pv": [
+          "g3f2",
+          "a5a4",
+          "f2f1",
+          "c6c7",
+          "f1g1",
+          "c7d7",
+          "g1f1",
+          "d7f7",
+          "f1e2"
+        ],
+        "materialGainAfterEightPlies": 500
+      },
+      {
+        "line": [
+          "Qb7",
+          "Kf3",
+          "Qxc6+"
+        ],
+        "score": 542,
+        "pv": [
+          "f3f2",
+          "c6e4",
+          "f2g3",
+          "e4e2",
+          "g3h3",
+          "e2f3",
+          "h3h4",
+          "a5b5",
+          "h4g5",
+          "b5a6",
+          "g5h4",
+          "f3a3"
+        ],
+        "materialGainAfterEightPlies": 500
+      },
+      {
+        "line": [
+          "Qb7",
+          "Kh2",
+          "Qxc6"
+        ],
+        "score": 538,
+        "pv": [
+          "h2g3",
+          "c6f6",
+          "g3h3",
+          "f6f3",
+          "h3h4",
+          "a5b5",
+          "h4g5",
+          "b5c5",
+          "g5h6"
+        ],
+        "materialGainAfterEightPlies": 500
+      },
+      {
+        "line": [
+          "Qb7",
+          "Kf2",
+          "Qxc6"
+        ],
+        "score": 553,
+        "pv": [
+          "f2e2",
+          "c6g2",
+          "e2e3",
+          "g2f1",
+          "e3d2",
+          "f1f3",
+          "d2e1",
+          "a5b4",
+          "e1d2",
+          "f3f2",
+          "d2d3",
+          "b4b3",
+          "d3e4",
+          "b3c3",
+          "e4d5"
+        ],
+        "materialGainAfterEightPlies": 500
+      },
+      {
+        "line": [
+          "Qb7",
+          "Kh1",
+          "Qxc6+"
+        ],
+        "score": 99992,
+        "pv": [
+          "h1g1",
+          "c6f3",
+          "g1h2",
+          "a5b4",
+          "h2g1",
+          "b4c4",
+          "g1h2",
+          "c4d3",
+          "h2g1",
+          "f3e2",
+          "g1h1",
+          "d3e3",
+          "h1g1",
+          "e3f3",
+          "g1h1",
+          "e2g2"
+        ],
+        "materialGainAfterEightPlies": 500
+      },
+      {
+        "line": [
+          "Qb7",
+          "Kg1",
+          "Qxc6"
+        ],
+        "score": 1674,
+        "pv": [
+          "g1f2"
+        ],
+        "materialGainAfterEightPlies": 500
+      },
+      {
+        "line": [
+          "Qb7",
+          "Kf1",
+          "Qxc6"
+        ],
+        "score": 99989,
+        "pv": [
+          "f1e2",
+          "c6c3",
+          "e2f2",
+          "a5a4",
+          "f2g2",
+          "c3e3",
+          "g2f1",
+          "e3d2",
+          "f1g1",
+          "d2e2",
+          "g1h1",
+          "a4b4",
+          "h1g1",
+          "b4c4",
+          "g1h1",
+          "c4d3",
+          "h1g1",
+          "d3e3",
+          "g1h1",
+          "e3f2",
+          "h1h2",
+          "e2h5"
+        ],
+        "materialGainAfterEightPlies": 500
+      }
+    ],
+    "engine": {
+      "name": "Stockfish 17",
+      "nodesPerRoot": 120000,
+      "nodesPerEndpoint": 40000,
+      "rootPV": [
+        "Qb7",
+        "Kf2",
+        "Qxc6",
+        "Ke3",
+        "Qc3+",
+        "Kf4",
+        "Qh3",
+        "Ke4",
+        "Qb3",
+        "Kf5"
+      ]
+    },
+    "id": "pin-create-20261027-15",
+    "reviewed": "2026-10-27",
+    "review": "Four-piece original composition. No initial legal capture; the first quiet move creates a pin and prevents at least one otherwise pseudo-legal escape from attack. Every legal reply has a saved capture preserving at least one pawn of material against every immediate recapture. Endpoint engine probes retain the gain for eight PV plies. Finite evidence, not a proof of all later endgame play."
+  },
+  {
+    "exercise": {
+      "fen": "6r1/8/8/8/8/7k/K2P4/8 b - - 0 1",
+      "moves": [
+        "Rg2",
+        "Ka3",
+        "Rxd2"
+      ],
+      "alternativeLines": [
+        [
+          "Rg2",
+          "Kb3",
+          "Rxd2"
+        ],
+        [
+          "Rg2",
+          "Kb2",
+          "Rxd2+"
+        ],
+        [
+          "Rg2",
+          "Kb1",
+          "Rxd2"
+        ],
+        [
+          "Rg2",
+          "Ka1",
+          "Rxd2"
+        ]
+      ],
+      "pinCreation": {
+        "front": "d2",
+        "back": "a2",
+        "pinner": "g8",
+        "destination": "g2"
+      },
+      "beginnerKind": "king",
+      "title": "Xe ghim tốt rồi bắt quân",
+      "beginner": true,
+      "goal": "material",
+      "mode": "interactive",
+      "outcome": "pin",
+      "source": "original-composition",
+      "prompt": "Tạo đòn ghim rồi bắt quân ở nước tiếp theo.",
+      "hints": [
+        "Tìm hàng, cột hoặc đường chéo có tốt ở d2 đứng trước Vua ở a2.",
+        "Đưa xe đến đường đó để tốt không thể rời đường ghim. Sau nước đáp của Vua, kiểm tra nước bắt quân."
+      ],
+      "solution": "Rg2 — Xe từ g8 đến g2, ghim tốt ở d2 vào Vua ở a2. Tốt không thể rời đường ghim vì sẽ làm lộ chiếu. Trong phương án minh họa, sau Ka3, chơi Rxd2 — xe bắt tốt ở d2. Sau các nước đáp khác của Vua, quân bị ghim vẫn có thể bị bắt mà không mất quân bắt."
+    },
+    "defenceProbes": [
+      {
+        "line": [
+          "Rg2",
+          "Kb3",
+          "Rxd2"
+        ],
+        "score": 524,
+        "pv": [
+          "b3b4",
+          "h3h2",
+          "b4c3",
+          "d2g2",
+          "c3d3"
+        ],
+        "materialGainAfterEightPlies": 100
+      },
+      {
+        "line": [
+          "Rg2",
+          "Ka3",
+          "Rxd2"
+        ],
+        "score": 508,
+        "pv": [
+          "a3b4",
+          "d2d5",
+          "b4c4",
+          "d5a5",
+          "c4b3",
+          "h3g2"
+        ],
+        "materialGainAfterEightPlies": 100
+      },
+      {
+        "line": [
+          "Rg2",
+          "Kb2",
+          "Rxd2+"
+        ],
+        "score": 496,
+        "pv": [
+          "b2c3",
+          "d2d8",
+          "c3b4",
+          "h3g4",
+          "b4c5",
+          "g4g5",
+          "c5b6",
+          "g5f6",
+          "b6c7",
+          "f6e7",
+          "c7b6",
+          "e7d6",
+          "b6b5",
+          "d6c7"
+        ],
+        "materialGainAfterEightPlies": 100
+      },
+      {
+        "line": [
+          "Rg2",
+          "Kb1",
+          "Rxd2"
+        ],
+        "score": 540,
+        "pv": [
+          "b1c1",
+          "d2d8",
+          "c1c2",
+          "h3g4",
+          "c2b3",
+          "g4f5",
+          "b3c4",
+          "f5f6",
+          "c4b5",
+          "f6f7",
+          "b5b6",
+          "f7g8",
+          "b6b7",
+          "d8f8",
+          "b7c7"
+        ],
+        "materialGainAfterEightPlies": 100
+      },
+      {
+        "line": [
+          "Rg2",
+          "Ka1",
+          "Rxd2"
+        ],
+        "score": 568,
+        "pv": [
+          "a1b1",
+          "d2f2",
+          "b1a1",
+          "h3g4",
+          "a1b1",
+          "g4h5",
+          "b1a1",
+          "h5h6",
+          "a1b1",
+          "h6h7",
+          "b1c1",
+          "h7g8",
+          "c1b1",
+          "f2f6",
+          "b1c2"
+        ],
+        "materialGainAfterEightPlies": 100
+      }
+    ],
+    "engine": {
+      "name": "Stockfish 17",
+      "nodesPerRoot": 120000,
+      "nodesPerEndpoint": 40000,
+      "rootPV": [
+        "Rg2",
+        "Ka3",
+        "Rxd2",
+        "Kb4",
+        "Kg2",
+        "Kc3",
+        "Rd8",
+        "Kb3",
+        "Ra8",
+        "Kc4"
+      ]
+    },
+    "id": "pin-create-20261027-16",
+    "reviewed": "2026-10-27",
+    "review": "Four-piece original composition. No initial legal capture; the first quiet move creates a pin and prevents at least one otherwise pseudo-legal escape from attack. Every legal reply has a saved capture preserving at least one pawn of material against every immediate recapture. Endpoint engine probes retain the gain for eight PV plies. Finite evidence, not a proof of all later endgame play."
+  },
+  {
+    "exercise": {
+      "fen": "8/8/8/8/K7/R7/8/1n2k3 w - - 0 1",
+      "moves": [
+        "Ra1",
+        "Kd1",
+        "Rxb1+"
+      ],
+      "alternativeLines": [
+        [
+          "Ra1",
+          "Kf2",
+          "Rxb1"
+        ],
+        [
+          "Ra1",
+          "Ke2",
+          "Rxb1"
+        ],
+        [
+          "Ra1",
+          "Kd2",
+          "Rxb1"
+        ],
+        [
+          "Ra1",
+          "Kf1",
+          "Rxb1+"
+        ]
+      ],
+      "pinCreation": {
+        "front": "b1",
+        "back": "e1",
+        "pinner": "a3",
+        "destination": "a1"
+      },
+      "beginnerKind": "king",
+      "title": "Xe ghim mã rồi bắt quân",
+      "beginner": true,
+      "goal": "material",
+      "mode": "interactive",
+      "outcome": "pin",
+      "source": "original-composition",
+      "prompt": "Tạo đòn ghim rồi bắt quân ở nước tiếp theo.",
+      "hints": [
+        "Tìm hàng, cột hoặc đường chéo có mã ở b1 đứng trước Vua ở e1.",
+        "Đưa xe đến đường đó để mã không thể rời đường ghim. Sau nước đáp của Vua, kiểm tra nước bắt quân."
+      ],
+      "solution": "Ra1 — Xe từ a3 đến a1, ghim mã ở b1 vào Vua ở e1. Mã không thể rời đường ghim vì sẽ làm lộ chiếu. Trong phương án minh họa, sau Kd1, chơi Rxb1+ — xe bắt mã ở b1 và chiếu Vua. Sau các nước đáp khác của Vua, quân bị ghim vẫn có thể bị bắt mà không mất quân bắt."
+    },
+    "defenceProbes": [
+      {
+        "line": [
+          "Ra1",
+          "Kf2",
+          "Rxb1"
+        ],
+        "score": 524,
+        "pv": [
+          "f2e2",
+          "b1g1",
+          "e2f2",
+          "g1h1",
+          "f2g3",
+          "h1b1",
+          "g3g2",
+          "a4a3",
+          "g2f2",
+          "b1a1"
+        ],
+        "materialGainAfterEightPlies": 320
+      },
+      {
+        "line": [
+          "Ra1",
+          "Ke2",
+          "Rxb1"
+        ],
+        "score": 522,
+        "pv": [
+          "e2f2",
+          "a4a3",
+          "f2e2",
+          "b1g1",
+          "e2f2",
+          "g1g6",
+          "f2f3",
+          "a3b2",
+          "f3f2",
+          "g6e6",
+          "f2g1",
+          "b2b1",
+          "g1f2"
+        ],
+        "materialGainAfterEightPlies": 320
+      },
+      {
+        "line": [
+          "Ra1",
+          "Kd2",
+          "Rxb1"
+        ],
+        "score": 490,
+        "pv": [
+          "d2e3",
+          "a4a3",
+          "e3f3",
+          "a3a2",
+          "f3f2",
+          "b1b6",
+          "f2f3",
+          "b6b7",
+          "f3e2",
+          "a2b2",
+          "e2e1",
+          "b7e7",
+          "e1f2",
+          "b2b1",
+          "f2f3",
+          "e7f7",
+          "f3g3"
+        ],
+        "materialGainAfterEightPlies": 320
+      },
+      {
+        "line": [
+          "Ra1",
+          "Kf1",
+          "Rxb1+"
+        ],
+        "score": 489,
+        "pv": [
+          "f1f2",
+          "a4a5",
+          "f2e2",
+          "b1b5",
+          "e2e3",
+          "b5g5",
+          "e3f2",
+          "g5c5",
+          "f2e2"
+        ],
+        "materialGainAfterEightPlies": 320
+      },
+      {
+        "line": [
+          "Ra1",
+          "Kd1",
+          "Rxb1+"
+        ],
+        "score": 480,
+        "pv": [
+          "d1e2",
+          "b1b5",
+          "e2f2",
+          "b5b7",
+          "f2e3",
+          "b7g7",
+          "e3f2",
+          "g7d7",
+          "f2e2",
+          "a4b3",
+          "e2f3",
+          "d7e7",
+          "f3f2",
+          "b3b2",
+          "f2f3",
+          "e7b7",
+          "f3f4",
+          "b2b1",
+          "f4e5"
+        ],
+        "materialGainAfterEightPlies": 320
+      }
+    ],
+    "engine": {
+      "name": "Stockfish 17",
+      "nodesPerRoot": 120000,
+      "nodesPerEndpoint": 40000,
+      "rootPV": [
+        "Ra1",
+        "Kd1",
+        "Rxb1+",
+        "Ke2",
+        "Rb3",
+        "Kf2",
+        "Rb7",
+        "Ke2",
+        "Re7+",
+        "Kf2"
+      ]
+    },
+    "id": "pin-create-20261027-17",
+    "reviewed": "2026-10-27",
+    "review": "Four-piece original composition. No initial legal capture; the first quiet move creates a pin and prevents at least one otherwise pseudo-legal escape from attack. Every legal reply has a saved capture preserving at least one pawn of material against every immediate recapture. Endpoint engine probes retain the gain for eight PV plies. Finite evidence, not a proof of all later endgame play."
+  }
+]

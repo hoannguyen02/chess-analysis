@@ -1,0 +1,110 @@
+.page {
+  max-width: 1120px;
+  margin: auto;
+  padding: 32px 20px;
+  color: #243b35;
+  min-height: 75vh;
+}
+.page h1 {
+  font-size: 2rem;
+  font-weight: 750;
+  margin-bottom: 12px;
+}
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+.page button,
+.page select,
+.page input,
+.saveControl button,
+.saveControl input,
+.saveControl textarea,
+.actions a {
+  min-height: 44px;
+  border: 1px solid #b9cbaa;
+  border-radius: 9px;
+  padding: 9px 12px;
+  background: white;
+  color: #243b35;
+}
+.page button,
+.saveControl button {
+  background: #edf3e4;
+  cursor: pointer;
+}
+.page button:disabled,
+.saveControl button:disabled {
+  opacity: 0.55;
+  cursor: default;
+}
+.page :is(button, a, input, select):focus-visible,
+.saveControl :is(button, a, input, textarea):focus-visible {
+  outline: 3px solid #597c3e;
+  outline-offset: 2px;
+}
+.saveControl {
+  margin: 12px 0;
+}
+.editor {
+  padding: 16px;
+  border: 1px solid #b9cbaa;
+  border-radius: 12px;
+  margin-top: 8px;
+  display: grid;
+  gap: 12px;
+  background: #f5f8ef;
+}
+.editor label,
+.filters label {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-size: 0.9rem;
+}
+.editor textarea {
+  min-height: 80px;
+  width: 100%;
+}
+.filters {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+  padding: 20px 0;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
+  gap: 16px;
+  margin: 16px 0;
+}
+.card {
+  border: 1px solid #d8dfd0;
+  background: #fff;
+  border-radius: 14px;
+  padding: 20px;
+  display: grid;
+  gap: 12px;
+  align-content: start;
+  overflow-wrap: anywhere;
+}
+.card h2 {
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.chips span {
+  background: #edf3e4;
+  border-radius: 16px;
+  padding: 3px 10px;
+  font-size: 0.85rem;
+}
+.note {
+  white-space: pre-wrap;
+}

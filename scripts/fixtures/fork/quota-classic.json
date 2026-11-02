@@ -1,0 +1,9 @@
+{
+  "engine": {
+    "name": "Stockfish 17",
+    "author": "the Stockfish developers (see AUTHORS file)"
+  },
+  "nodes": 300000,
+  "defenceNodes": 100000,
+  "records": []
+}

@@ -1,0 +1,158 @@
+[
+  {
+    "gameId": "3a25e361f3d95ad5",
+    "fen": "5R2/3P3p/1p2k3/4p1P1/3bP1p1/6P1/1p6/7K w - - 2 52",
+    "playedPromotion": "d8=N+",
+    "status": "unpublished",
+    "competingMove": "Rf6+",
+    "reason": "No distinct, fully certified objective-specific payoff accepted in this pass. Root scores are finite screening evidence; do not infer a forced win or terminal draw."
+  },
+  {
+    "gameId": "d8242e16685fea4c",
+    "fen": "8/p7/kp6/2pP1p2/P1Pb1P2/3N1K2/4p3/8 b - - 2 42",
+    "playedPromotion": "e1=N+",
+    "status": "unpublished",
+    "competingMove": "Bf6",
+    "reason": "No distinct, fully certified objective-specific payoff accepted in this pass. Root scores are finite screening evidence; do not infer a forced win or terminal draw."
+  },
+  {
+    "gameId": "a21e217936df25de",
+    "fen": "1r1qkb1r/1bpn1pPp/p3p3/8/3P4/5N2/PpQ1BPPP/R1B2RK1 b k - 0 13",
+    "playedPromotion": "bxa1=N",
+    "status": "unpublished",
+    "competingMove": "bxa1=N",
+    "reason": "No distinct, fully certified objective-specific payoff accepted in this pass. Root scores are finite screening evidence; do not infer a forced win or terminal draw."
+  },
+  {
+    "gameId": "d263402e7f3f8a67",
+    "fen": "8/3n1Ppk/1p1B3p/p7/P3P2P/4QP2/1P2n1NK/3q4 w - - 3 33",
+    "playedPromotion": "f8=N+",
+    "status": "unpublished",
+    "competingMove": "e5",
+    "reason": "No distinct, fully certified objective-specific payoff accepted in this pass. Root scores are finite screening evidence; do not infer a forced win or terminal draw."
+  },
+  {
+    "gameId": "5e098f9b028b70d1",
+    "fen": "1r2rb1k/n2q1Ppp/3p4/1p1N2B1/1P2P1b1/8/2PQ2BP/5R1K w - - 3 27",
+    "playedPromotion": "fxe8=N",
+    "status": "unpublished",
+    "competingMove": "fxe8=N",
+    "reason": "No distinct, fully certified objective-specific payoff accepted in this pass. Root scores are finite screening evidence; do not infer a forced win or terminal draw."
+  },
+  {
+    "gameId": "8c018282286ecf51",
+    "fen": "8/4k2p/6p1/2P2b2/7P/6P1/1pBK4/8 b - - 2 49",
+    "playedPromotion": "b1=R",
+    "status": "unpublished",
+    "competingMove": "b1=R",
+    "reason": "No distinct, fully certified objective-specific payoff accepted in this pass. Root scores are finite screening evidence; do not infer a forced win or terminal draw."
+  },
+  {
+    "gameId": "3eba8f60d0dd4f7d",
+    "fen": "1rbr4/3Pk3/2p1p1p1/p1N2p1p/2B2P2/1P6/P1P1K3/3R4 w - - 1 37",
+    "playedPromotion": "dxc8=N+",
+    "status": "unpublished",
+    "competingMove": "dxc8=Q",
+    "reason": "No distinct, fully certified objective-specific payoff accepted in this pass. Root scores are finite screening evidence; do not infer a forced win or terminal draw."
+  },
+  {
+    "gameId": "722aec4b8805f55c",
+    "fen": "1q6/4P1k1/4Qp2/5P1p/7P/4K3/8/8 w - - 1 55",
+    "playedPromotion": "e8=N+",
+    "status": "unpublished",
+    "competingMove": "e8=N+",
+    "reason": "No distinct, fully certified objective-specific payoff accepted in this pass. Root scores are finite screening evidence; do not infer a forced win or terminal draw."
+  },
+  {
+    "gameId": "8ac4a54e4e2f0a66",
+    "fen": "k7/P7/1K6/8/8/5N2/6p1/8 b - - 0 88",
+    "playedPromotion": "g1=B+",
+    "status": "unpublished",
+    "competingMove": "g1=Q+",
+    "reason": "No distinct, fully certified objective-specific payoff accepted in this pass. Root scores are finite screening evidence; do not infer a forced win or terminal draw."
+  },
+  {
+    "gameId": "7d82c7bd207bca81",
+    "fen": "8/6R1/8/3P4/P7/2P1P2k/3K2p1/1r6 b - - 3 57",
+    "playedPromotion": "g1=R",
+    "status": "unpublished",
+    "competingMove": "g1=Q",
+    "reason": "No distinct, fully certified objective-specific payoff accepted in this pass. Root scores are finite screening evidence; do not infer a forced win or terminal draw."
+  },
+  {
+    "gameId": "a97d259b5627c151",
+    "fen": "3rq2Q/p1P1pk2/bpR5/4p1p1/5bP1/8/P4P1P/6K1 w - - 2 37",
+    "playedPromotion": "cxd8=N+",
+    "status": "unpublished",
+    "competingMove": "cxd8=N+",
+    "reason": "No distinct, fully certified objective-specific payoff accepted in this pass. Root scores are finite screening evidence; do not infer a forced win or terminal draw."
+  },
+  {
+    "gameId": "6984c222ac6936fc",
+    "fen": "8/4P1kp/2pN1rb1/3p1p2/6B1/1P1n1Q2/r2q2PP/2R2R1K w - - 1 30",
+    "playedPromotion": "e8=N+",
+    "status": "unpublished",
+    "competingMove": "e8=Q",
+    "reason": "No distinct, fully certified objective-specific payoff accepted in this pass. Root scores are finite screening evidence; do not infer a forced win or terminal draw."
+  },
+  {
+    "gameId": "48a9ce751cc495c6",
+    "fen": "8/6k1/8/5K1R/8/8/6p1/8 b - - 0 90",
+    "playedPromotion": "g1=R",
+    "status": "unpublished",
+    "competingMove": "g1=Q",
+    "reason": "No distinct, fully certified objective-specific payoff accepted in this pass. Root scores are finite screening evidence; do not infer a forced win or terminal draw."
+  },
+  {
+    "gameId": "bed58bd2e18fd2fd",
+    "fen": "8/8/8/8/B7/8/3pb1Kp/2k5 b - - 1 70",
+    "playedPromotion": "h1=B+",
+    "status": "unpublished",
+    "competingMove": "h1=Q+",
+    "reason": "No distinct, fully certified objective-specific payoff accepted in this pass. Root scores are finite screening evidence; do not infer a forced win or terminal draw."
+  },
+  {
+    "gameId": "bed58bd2e18fd2fd",
+    "fen": "8/8/2B5/8/8/4K3/2bp4/2k4b b - - 5 73",
+    "playedPromotion": "d1=R",
+    "status": "unpublished",
+    "competingMove": "Bxc6",
+    "reason": "No distinct, fully certified objective-specific payoff accepted in this pass. Root scores are finite screening evidence; do not infer a forced win or terminal draw."
+  },
+  {
+    "gameId": "6c8aa69e43d1eb01",
+    "fen": "1r6/p3Pkp1/8/1p4R1/3P4/7P/8/6K1 w - - 1 37",
+    "playedPromotion": "e8=B+",
+    "status": "unpublished",
+    "competingMove": "e8=R",
+    "reason": "No distinct, fully certified objective-specific payoff accepted in this pass. Root scores are finite screening evidence; do not infer a forced win or terminal draw."
+  },
+  {
+    "id": "goetz-discovery-knight-mate",
+    "fen": "rnb1kbnr/pppp1ppp/8/8/4P2q/1P4pP/P1PP4/RNBQKBNR b KQkq - 0 5",
+    "moves": [
+      "g2+",
+      "Ke2",
+      "Qxe4+",
+      "Kf2",
+      "gxh1=N#"
+    ],
+    "status": "excluded-start",
+    "competingMove": "Qxe4+",
+    "reason": "Earlier discovery start has a simpler material candidate. Retain only the later Queen-check preparation; do not count shifted starts twice."
+  },
+  {
+    "id": "same-color-bishop-development",
+    "fen": "8/k1P5/2K5/8/8/3B4/8/8 w - - 0 1",
+    "moves": [
+      "c8=B"
+    ],
+    "status": "rejected",
+    "reason": "Same-color Bishops versus bare King is a dead position, not a live material-gain objective. Not published."
+  },
+  {
+    "id": "special-move-leads",
+    "status": "unpublished",
+    "reason": "The two castling proximity hits concern the same Xu Jun–Ivanchuk game. Proximity does not establish castling as essential to the later promotion payoff; no en passant lead in this played-move window."
+  }
+]

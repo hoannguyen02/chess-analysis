@@ -33,7 +33,7 @@ export default function PracticeExploration({
   onClose: () => void;
 }) {
   const [branches, setBranches] = useState<Branch[]>([
-    { label: 'Nhánh bài tập', moves: [...moves] },
+    { label: 'Phương án bài tập', moves: [...moves] },
   ]);
   const [branchIndex, setBranchIndex] = useState(0);
   const [ply, setPly] = useState(initialPly);
@@ -151,7 +151,7 @@ export default function PracticeExploration({
   const status = game.in_checkmate()
     ? 'Chiếu hết.'
     : game.in_stalemate()
-      ? 'Hòa do hết nước đi.'
+      ? 'Hòa do hết nước đi (pat).'
       : `${game.turn() === 'w' ? 'Trắng' : 'Đen'} đi${game.in_check() ? ' — đang bị chiếu' : ''}.`;
 
   return (
@@ -251,7 +251,7 @@ export default function PracticeExploration({
         </div>
       </div>
       <div className={styles.trainerInfo}>
-        <h4>Đang thử biến</h4>
+        <h4>Thử phương án</h4>
         <p className={styles.note}>
           Đi thử cho cả hai bên. Tiến độ bài tập được giữ nguyên. Bạn có thể bật
           lại đồng hồ bất cứ lúc nào.
@@ -273,7 +273,7 @@ export default function PracticeExploration({
           <p className={styles.note}>Không đủ lực chiếu hết.</p>
         )}
         <label className={styles.explorationSelect}>
-          Nhánh đang xem
+          Phương án đang xem
           <select
             value={branchIndex}
             onChange={(event) => {

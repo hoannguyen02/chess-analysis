@@ -1,0 +1,117 @@
+[
+  {
+    "gameId": "31c4b4738c38279a",
+    "fen": "3r2k1/1p2b1pp/p2p1r2/3P3Q/b1P1BR2/P7/7P/7K w - - 0 29",
+    "moves": [
+      "Qxh7+",
+      "Kf8",
+      "Bg6",
+      "a5",
+      "Qh8#"
+    ],
+    "nodes": 1200000,
+    "depth": 245,
+    "mate": 3,
+    "principalVariation": [
+      "h5h7",
+      "g8f8",
+      "e4g6",
+      "a6a5",
+      "h7h8"
+    ],
+    "decision": "verified",
+    "finalLevel": "B"
+  },
+  {
+    "gameId": "39afb05a218e9a3d",
+    "fen": "7k/1Q2Pqpp/2p4b/3p4/3P3P/8/6n1/7K w - - 0 37",
+    "moves": [
+      "Qa8+",
+      "Qg8",
+      "Qxg8+",
+      "Kxg8",
+      "e8=Q#"
+    ],
+    "nodes": 1200000,
+    "depth": 245,
+    "mate": 3,
+    "principalVariation": [
+      "b7a8",
+      "f7g8",
+      "a8g8",
+      "h8g8",
+      "e7e8q"
+    ],
+    "decision": "verified",
+    "finalLevel": "B"
+  },
+  {
+    "gameId": "7c1fd90b0f3c4a8c",
+    "fen": "2r4k/5P1p/4P3/5R2/p2pQNq1/Pp1Pb1B1/6KP/8 w - - 3 49",
+    "moves": [
+      "Qe5+",
+      "Qg7",
+      "f8=Q+",
+      "Rxf8",
+      "Rxf8#"
+    ],
+    "nodes": 1200000,
+    "depth": 245,
+    "mate": 3,
+    "principalVariation": [
+      "e4e5",
+      "g4g7",
+      "f7f8q",
+      "c8f8",
+      "f5f8"
+    ],
+    "decision": "verified",
+    "finalLevel": "B"
+  },
+  {
+    "gameId": "4e89a0de2f07bc33",
+    "fen": "r1R5/3Q1ppk/1p2p2p/3n4/4N3/5P2/1q3PPP/r4RK1 b - - 4 29",
+    "moves": [
+      "Rxf1+",
+      "Kxf1",
+      "Ra1+",
+      "Rc1",
+      "Rxc1#"
+    ],
+    "nodes": 1200000,
+    "depth": 245,
+    "mate": 3,
+    "principalVariation": [
+      "a1f1",
+      "g1f1",
+      "a8a1",
+      "c8c1",
+      "a1c1"
+    ],
+    "decision": "verified",
+    "finalLevel": "B"
+  },
+  {
+    "gameId": "a76362832c073b01",
+    "fen": "1r4k1/5p2/2p3p1/2Pp3p/PR6/4P3/3Q1PPP/qB4K1 b - - 2 30",
+    "moves": [
+      "Qxb1+",
+      "Rxb1",
+      "Rxb1+",
+      "Qd1",
+      "Rxd1#"
+    ],
+    "nodes": 1200000,
+    "depth": 245,
+    "mate": 3,
+    "principalVariation": [
+      "a1b1",
+      "b4b1",
+      "b8b1",
+      "d2d1",
+      "b1d1"
+    ],
+    "decision": "verified",
+    "finalLevel": "B"
+  }
+]

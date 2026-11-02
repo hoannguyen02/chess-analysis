@@ -1,0 +1,349 @@
+[
+  {
+    "id": "rook-bishop-mate",
+    "title": "Chiếu hết bằng Xe và Tượng",
+    "description": "Phối hợp Xe và Tượng để bảo vệ quân chiếu và khóa các ô thoát.",
+    "exercises": [
+      {
+        "title": "Xe và Tượng phối hợp · Bài 1",
+        "prompt": "Phối hợp Xe và Tượng để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "8/5b2/8/3r4/7K/5k2/8/8 b - - 0 1",
+        "moves": [
+          "Rh5#"
+        ],
+        "hints": [
+          "Tìm nước chiếu của Xe hoặc Tượng; quân còn lại bảo vệ hoặc khóa đường thoát.",
+          "Kiểm tra mọi ô thoát và xem Vua đối phương có thể bắt quân chiếu không."
+        ],
+        "solution": "Xe ở h5 và Tượng ở f7 phối hợp chiếu hết. Nhánh mẫu: Rh5#."
+      },
+      {
+        "title": "Xe và Tượng phối hợp · Bài 2",
+        "prompt": "Phối hợp Xe và Tượng để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "6k1/8/5K2/5B2/3R4/8/8/8 w - - 0 1",
+        "moves": [
+          "Rd8#"
+        ],
+        "hints": [
+          "Tìm nước chiếu của Xe hoặc Tượng; quân còn lại bảo vệ hoặc khóa đường thoát.",
+          "Kiểm tra mọi ô thoát và xem Vua đối phương có thể bắt quân chiếu không."
+        ],
+        "solution": "Xe ở d8 và Tượng ở f5 phối hợp chiếu hết. Nhánh mẫu: Rd8#."
+      },
+      {
+        "title": "Xe và Tượng phối hợp · Bài 3",
+        "prompt": "Phối hợp Xe và Tượng để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "3b4/5k2/8/7K/2r5/8/8/8 b - - 0 1",
+        "moves": [
+          "Rh4#"
+        ],
+        "hints": [
+          "Tìm nước chiếu của Xe hoặc Tượng; quân còn lại bảo vệ hoặc khóa đường thoát.",
+          "Kiểm tra mọi ô thoát và xem Vua đối phương có thể bắt quân chiếu không."
+        ],
+        "solution": "Xe ở h4 và Tượng ở d8 phối hợp chiếu hết. Nhánh mẫu: Rh4#."
+      },
+      {
+        "title": "Xe và Tượng phối hợp · Bài 4",
+        "prompt": "Phối hợp Xe và Tượng để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "8/8/8/8/8/1k1b4/7r/K7 b - - 0 1",
+        "moves": [
+          "Ra2#"
+        ],
+        "hints": [
+          "Tìm nước chiếu của Xe hoặc Tượng; quân còn lại bảo vệ hoặc khóa đường thoát.",
+          "Kiểm tra mọi ô thoát và xem Vua đối phương có thể bắt quân chiếu không."
+        ],
+        "solution": "Xe ở a2 và Tượng ở d3 phối hợp chiếu hết. Nhánh mẫu: Ra2#."
+      },
+      {
+        "title": "Xe và Tượng phối hợp · Bài 5",
+        "prompt": "Phối hợp Xe và Tượng để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "K7/2b5/k7/8/8/r7/8/8 b - - 0 1",
+        "moves": [
+          "Kb6#"
+        ],
+        "hints": [
+          "Tìm nước chiếu của Xe hoặc Tượng; quân còn lại bảo vệ hoặc khóa đường thoát.",
+          "Kiểm tra mọi ô thoát và xem Vua đối phương có thể bắt quân chiếu không."
+        ],
+        "solution": "Xe ở a3 và Tượng ở c7 phối hợp chiếu hết. Nhánh mẫu: Kb6#."
+      },
+      {
+        "title": "Xe và Tượng phối hợp · Bài 6",
+        "prompt": "Phối hợp Xe và Tượng để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "5k1K/8/8/8/4b3/6r1/8/8 b - - 0 1",
+        "moves": [
+          "Rg8#"
+        ],
+        "hints": [
+          "Tìm nước chiếu của Xe hoặc Tượng; quân còn lại bảo vệ hoặc khóa đường thoát.",
+          "Kiểm tra mọi ô thoát và xem Vua đối phương có thể bắt quân chiếu không."
+        ],
+        "solution": "Xe ở g8 và Tượng ở e4 phối hợp chiếu hết. Nhánh mẫu: Rg8#."
+      },
+      {
+        "title": "Xe và Tượng phối hợp · Bài 7",
+        "prompt": "Phối hợp Xe và Tượng để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "8/8/8/8/k7/2K5/5R2/5B2 w - - 0 1",
+        "moves": [
+          "Ra2#"
+        ],
+        "hints": [
+          "Tìm nước chiếu của Xe hoặc Tượng; quân còn lại bảo vệ hoặc khóa đường thoát.",
+          "Kiểm tra mọi ô thoát và xem Vua đối phương có thể bắt quân chiếu không."
+        ],
+        "solution": "Xe ở a2 và Tượng ở f1 phối hợp chiếu hết. Nhánh mẫu: Ra2#."
+      },
+      {
+        "title": "Xe và Tượng phối hợp · Bài 8",
+        "prompt": "Phối hợp Xe và Tượng để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "8/8/8/8/8/5KB1/2R5/6k1 w - - 0 1",
+        "moves": [
+          "Rc1#"
+        ],
+        "hints": [
+          "Tìm nước chiếu của Xe hoặc Tượng; quân còn lại bảo vệ hoặc khóa đường thoát.",
+          "Kiểm tra mọi ô thoát và xem Vua đối phương có thể bắt quân chiếu không."
+        ],
+        "solution": "Xe ở c1 và Tượng ở g3 phối hợp chiếu hết. Nhánh mẫu: Rc1#."
+      },
+      {
+        "title": "Xe và Tượng phối hợp · Bài 9",
+        "prompt": "Phối hợp Xe và Tượng để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "3K4/8/3bk3/8/5r2/8/8/8 b - - 0 1",
+        "moves": [
+          "Rf8#"
+        ],
+        "hints": [
+          "Tìm nước chiếu của Xe hoặc Tượng; quân còn lại bảo vệ hoặc khóa đường thoát.",
+          "Kiểm tra mọi ô thoát và xem Vua đối phương có thể bắt quân chiếu không."
+        ],
+        "solution": "Xe ở f8 và Tượng ở d6 phối hợp chiếu hết. Nhánh mẫu: Rf8#."
+      },
+      {
+        "title": "Xe và Tượng phối hợp · Bài 10",
+        "prompt": "Phối hợp Xe và Tượng để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "6K1/8/5k2/8/4r3/3b4/8/8 b - - 0 1",
+        "moves": [
+          "Re8#"
+        ],
+        "hints": [
+          "Tìm nước chiếu của Xe hoặc Tượng; quân còn lại bảo vệ hoặc khóa đường thoát.",
+          "Kiểm tra mọi ô thoát và xem Vua đối phương có thể bắt quân chiếu không."
+        ],
+        "solution": "Xe ở e8 và Tượng ở d3 phối hợp chiếu hết. Nhánh mẫu: Re8#."
+      },
+      {
+        "title": "Xe và Tượng phối hợp · Bài 11",
+        "prompt": "Phối hợp Xe và Tượng để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "k7/8/2K5/8/8/5R2/7B/8 w - - 0 1",
+        "moves": [
+          "Ra3#"
+        ],
+        "hints": [
+          "Tìm nước chiếu của Xe hoặc Tượng; quân còn lại bảo vệ hoặc khóa đường thoát.",
+          "Kiểm tra mọi ô thoát và xem Vua đối phương có thể bắt quân chiếu không."
+        ],
+        "solution": "Xe ở a3 và Tượng ở h2 phối hợp chiếu hết. Nhánh mẫu: Ra3#."
+      },
+      {
+        "title": "Xe và Tượng phối hợp · Bài 12",
+        "prompt": "Phối hợp Xe và Tượng để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "8/8/8/8/3b4/3k3r/8/4K3 b - - 0 1",
+        "moves": [
+          "Rh1#"
+        ],
+        "hints": [
+          "Tìm nước chiếu của Xe hoặc Tượng; quân còn lại bảo vệ hoặc khóa đường thoát.",
+          "Kiểm tra mọi ô thoát và xem Vua đối phương có thể bắt quân chiếu không."
+        ],
+        "solution": "Xe ở h1 và Tượng ở d4 phối hợp chiếu hết. Nhánh mẫu: Rh1#."
+      },
+      {
+        "title": "Xe và Tượng phối hợp · Bài 13",
+        "prompt": "Phối hợp Xe và Tượng để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "8/5r2/8/8/8/3b4/2k5/4K3 b - - 0 1",
+        "moves": [
+          "Rf1#"
+        ],
+        "hints": [
+          "Tìm nước chiếu của Xe hoặc Tượng; quân còn lại bảo vệ hoặc khóa đường thoát.",
+          "Kiểm tra mọi ô thoát và xem Vua đối phương có thể bắt quân chiếu không."
+        ],
+        "solution": "Xe ở f1 và Tượng ở d3 phối hợp chiếu hết. Nhánh mẫu: Rf1#."
+      },
+      {
+        "title": "Xe và Tượng phối hợp · Bài 14",
+        "prompt": "Phối hợp Xe và Tượng để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "8/8/8/2b4r/8/7k/8/7K b - - 0 1",
+        "moves": [
+          "Kg3#"
+        ],
+        "hints": [
+          "Tìm nước chiếu của Xe hoặc Tượng; quân còn lại bảo vệ hoặc khóa đường thoát.",
+          "Kiểm tra mọi ô thoát và xem Vua đối phương có thể bắt quân chiếu không."
+        ],
+        "solution": "Xe ở h5 và Tượng ở c5 phối hợp chiếu hết. Nhánh mẫu: Kg3#."
+      },
+      {
+        "title": "Xe và Tượng phối hợp · Bài 15",
+        "prompt": "Phối hợp Xe và Tượng để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "1k6/8/1BK5/8/8/5R2/8/8 w - - 0 1",
+        "moves": [
+          "Rf8#"
+        ],
+        "hints": [
+          "Tìm nước chiếu của Xe hoặc Tượng; quân còn lại bảo vệ hoặc khóa đường thoát.",
+          "Kiểm tra mọi ô thoát và xem Vua đối phương có thể bắt quân chiếu không."
+        ],
+        "solution": "Xe ở f8 và Tượng ở b6 phối hợp chiếu hết. Nhánh mẫu: Rf8#."
+      },
+      {
+        "title": "Xe và Tượng phối hợp · Bài 16",
+        "prompt": "Phối hợp Xe và Tượng để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "8/8/3B4/8/8/8/4R3/5K1k w - - 0 1",
+        "moves": [
+          "Rh2#"
+        ],
+        "hints": [
+          "Tìm nước chiếu của Xe hoặc Tượng; quân còn lại bảo vệ hoặc khóa đường thoát.",
+          "Kiểm tra mọi ô thoát và xem Vua đối phương có thể bắt quân chiếu không."
+        ],
+        "solution": "Xe ở h2 và Tượng ở d6 phối hợp chiếu hết. Nhánh mẫu: Rh2#."
+      },
+      {
+        "title": "Xe và Tượng phối hợp · Bài 17",
+        "prompt": "Phối hợp Xe và Tượng để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "8/2B5/8/8/8/5K1k/4R3/8 w - - 0 1",
+        "moves": [
+          "Rh2#"
+        ],
+        "hints": [
+          "Tìm nước chiếu của Xe hoặc Tượng; quân còn lại bảo vệ hoặc khóa đường thoát.",
+          "Kiểm tra mọi ô thoát và xem Vua đối phương có thể bắt quân chiếu không."
+        ],
+        "solution": "Xe ở h2 và Tượng ở c7 phối hợp chiếu hết. Nhánh mẫu: Rh2#."
+      },
+      {
+        "title": "Xe và Tượng phối hợp · Bài 18",
+        "prompt": "Phối hợp Xe và Tượng để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "8/8/5R2/8/8/8/k7/2KB4 w - - 0 1",
+        "moves": [
+          "Ra6#"
+        ],
+        "hints": [
+          "Tìm nước chiếu của Xe hoặc Tượng; quân còn lại bảo vệ hoặc khóa đường thoát.",
+          "Kiểm tra mọi ô thoát và xem Vua đối phương có thể bắt quân chiếu không."
+        ],
+        "solution": "Xe ở a6 và Tượng ở d1 phối hợp chiếu hết. Nhánh mẫu: Ra6#."
+      },
+      {
+        "title": "Xe và Tượng phối hợp · Bài 19",
+        "prompt": "Phối hợp Xe và Tượng để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "8/8/2R5/8/5B2/5K2/8/6k1 w - - 0 1",
+        "moves": [
+          "Rc1#"
+        ],
+        "hints": [
+          "Tìm nước chiếu của Xe hoặc Tượng; quân còn lại bảo vệ hoặc khóa đường thoát.",
+          "Kiểm tra mọi ô thoát và xem Vua đối phương có thể bắt quân chiếu không."
+        ],
+        "solution": "Xe ở c1 và Tượng ở f4 phối hợp chiếu hết. Nhánh mẫu: Rc1#."
+      },
+      {
+        "title": "Xe và Tượng phối hợp · Bài 20",
+        "prompt": "Phối hợp Xe và Tượng để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "B1k5/8/3K4/8/8/8/8/5R2 w - - 0 1",
+        "moves": [
+          "Rf8#"
+        ],
+        "hints": [
+          "Tìm nước chiếu của Xe hoặc Tượng; quân còn lại bảo vệ hoặc khóa đường thoát.",
+          "Kiểm tra mọi ô thoát và xem Vua đối phương có thể bắt quân chiếu không."
+        ],
+        "solution": "Xe ở f8 và Tượng ở a8 phối hợp chiếu hết. Nhánh mẫu: Rf8#."
+      }
+    ]
+  }
+]

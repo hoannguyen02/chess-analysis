@@ -1,0 +1,702 @@
+{
+  "records": [
+    {
+      "id": "queen-beginner-king-01",
+      "decision": "Retained: clear king support, varied edge/corner geometry and queen approach.",
+      "support": "g6",
+      "piece": "K",
+      "role": "escape-control",
+      "exercise": {
+        "title": "Hậu và Vua phối hợp · Bài 1",
+        "prompt": "Phối hợp Vua và Hậu để chiếu hết trong 1 nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "6K1/8/6k1/8/3q4/8/8/8 b - - 0 1",
+        "moves": [
+          "Qd8#"
+        ],
+        "hints": [
+          "Xác định các ô thoát mà Vua đang khống chế, rồi tìm nước chiếu bằng Hậu.",
+          "Kiểm tra xem Vua đối phương có thể bắt Hậu hoặc đi sang ô không bị tấn công không."
+        ],
+        "solution": "Qd8# — Hậu từ d4 đến d8, chiếu hết. Vua ở g6 khống chế f7, g7, h7. Hậu chiếu và khống chế các ô thoát còn lại.",
+        "beginner": true,
+        "source": "Thế cờ biên soạn để luyện chiếu hết bằng Hậu."
+      }
+    },
+    {
+      "id": "queen-beginner-king-02",
+      "decision": "Retained: clear king support, varied edge/corner geometry and queen approach.",
+      "support": "c2",
+      "piece": "K",
+      "role": "escape-control",
+      "exercise": {
+        "title": "Hậu và Vua phối hợp · Bài 2",
+        "prompt": "Phối hợp Vua và Hậu để chiếu hết trong 1 nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/8/8/8/8/2Q5/k1K5/8 w - - 0 1",
+        "moves": [
+          "Qb2#"
+        ],
+        "hints": [
+          "Xác định các ô thoát mà Vua đang khống chế, rồi tìm nước chiếu bằng Hậu.",
+          "Kiểm tra xem Vua đối phương có thể bắt Hậu hoặc đi sang ô không bị tấn công không."
+        ],
+        "solution": "Qb2# — Hậu từ c3 đến b2, chiếu hết. Vua ở c2 khống chế b1, b3. Hậu chiếu và khống chế các ô thoát còn lại. Vua cũng bảo vệ Hậu, nên Vua đối phương không thể bắt Hậu.",
+        "beginner": true,
+        "source": "Thế cờ biên soạn để luyện chiếu hết bằng Hậu."
+      }
+    },
+    {
+      "id": "queen-beginner-king-04",
+      "decision": "Retained: clear king support, varied edge/corner geometry and queen approach.",
+      "support": "d3",
+      "piece": "K",
+      "role": "escape-control",
+      "exercise": {
+        "title": "Hậu và Vua phối hợp · Bài 3",
+        "prompt": "Phối hợp Vua và Hậu để chiếu hết trong 1 nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/8/8/1Q6/8/3K4/8/3k4 w - - 0 1",
+        "moves": [
+          "Qb1#"
+        ],
+        "hints": [
+          "Xác định các ô thoát mà Vua đang khống chế, rồi tìm nước chiếu bằng Hậu.",
+          "Kiểm tra xem Vua đối phương có thể bắt Hậu hoặc đi sang ô không bị tấn công không."
+        ],
+        "solution": "Qb1# — Hậu từ b5 đến b1, chiếu hết. Vua ở d3 khống chế c2, d2, e2. Hậu chiếu và khống chế các ô thoát còn lại.",
+        "beginner": true,
+        "source": "Thế cờ biên soạn để luyện chiếu hết bằng Hậu."
+      }
+    },
+    {
+      "id": "queen-beginner-king-06",
+      "decision": "Retained: clear king support, varied edge/corner geometry and queen approach.",
+      "support": "f6",
+      "piece": "K",
+      "role": "escape-control",
+      "exercise": {
+        "title": "Hậu và Vua phối hợp · Bài 4",
+        "prompt": "Phối hợp Vua và Hậu để chiếu hết trong 1 nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "4K3/8/5k2/8/8/8/8/2q5 b - - 0 1",
+        "moves": [
+          "Qc8#"
+        ],
+        "hints": [
+          "Xác định các ô thoát mà Vua đang khống chế, rồi tìm nước chiếu bằng Hậu.",
+          "Kiểm tra xem Vua đối phương có thể bắt Hậu hoặc đi sang ô không bị tấn công không."
+        ],
+        "solution": "Qc8# — Hậu từ c1 đến c8, chiếu hết. Vua ở f6 khống chế e7, f7. Hậu chiếu và khống chế các ô thoát còn lại.",
+        "beginner": true,
+        "source": "Thế cờ biên soạn để luyện chiếu hết bằng Hậu."
+      }
+    },
+    {
+      "id": "queen-beginner-king-09",
+      "decision": "Retained: clear king support, varied edge/corner geometry and queen approach.",
+      "support": "f7",
+      "piece": "K",
+      "role": "escape-control",
+      "exercise": {
+        "title": "Hậu và Vua phối hợp · Bài 5",
+        "prompt": "Phối hợp Vua và Hậu để chiếu hết trong 1 nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/5K1k/8/8/8/5Q2/8/8 w - - 0 1",
+        "moves": [
+          "Qh3#"
+        ],
+        "hints": [
+          "Xác định các ô thoát mà Vua đang khống chế, rồi tìm nước chiếu bằng Hậu.",
+          "Kiểm tra xem Vua đối phương có thể bắt Hậu hoặc đi sang ô không bị tấn công không."
+        ],
+        "solution": "Qh3# — Hậu từ f3 đến h3, chiếu hết. Vua ở f7 khống chế g6, g7, g8. Hậu chiếu và khống chế các ô thoát còn lại.",
+        "beginner": true,
+        "source": "Thế cờ biên soạn để luyện chiếu hết bằng Hậu."
+      }
+    },
+    {
+      "id": "queen-beginner-king-12",
+      "decision": "Retained: clear king support, varied edge/corner geometry and queen approach.",
+      "support": "h3",
+      "piece": "K",
+      "role": "escape-control",
+      "exercise": {
+        "title": "Hậu và Vua phối hợp · Bài 6",
+        "prompt": "Phối hợp Vua và Hậu để chiếu hết trong 1 nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/8/5q2/8/8/7k/8/7K b - - 0 1",
+        "moves": [
+          "Qa1#"
+        ],
+        "hints": [
+          "Xác định các ô thoát mà Vua đang khống chế, rồi tìm nước chiếu bằng Hậu.",
+          "Kiểm tra xem Vua đối phương có thể bắt Hậu hoặc đi sang ô không bị tấn công không."
+        ],
+        "solution": "Qa1# — Hậu từ f6 đến a1, chiếu hết. Vua ở h3 khống chế g2, h2. Hậu chiếu và khống chế các ô thoát còn lại.",
+        "beginner": true,
+        "source": "Thế cờ biên soạn để luyện chiếu hết bằng Hậu."
+      }
+    },
+    {
+      "id": "queen-beginner-king-19",
+      "decision": "Retained: clear king support, varied edge/corner geometry and queen approach.",
+      "support": "c4",
+      "piece": "K",
+      "role": "escape-control",
+      "exercise": {
+        "title": "Hậu và Vua phối hợp · Bài 7",
+        "prompt": "Phối hợp Vua và Hậu để chiếu hết trong 1 nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/8/8/K7/2kq4/8/8/8 b - - 0 1",
+        "moves": [
+          "Qa7#"
+        ],
+        "hints": [
+          "Xác định các ô thoát mà Vua đang khống chế, rồi tìm nước chiếu bằng Hậu.",
+          "Kiểm tra xem Vua đối phương có thể bắt Hậu hoặc đi sang ô không bị tấn công không."
+        ],
+        "solution": "Qa7# — Hậu từ d4 đến a7, chiếu hết. Vua ở c4 khống chế b4, b5. Hậu chiếu và khống chế các ô thoát còn lại.",
+        "beginner": true,
+        "source": "Thế cờ biên soạn để luyện chiếu hết bằng Hậu."
+      }
+    },
+    {
+      "id": "queen-beginner-king-20",
+      "decision": "Retained: clear king support, varied edge/corner geometry and queen approach.",
+      "support": "c3",
+      "piece": "K",
+      "role": "escape-control",
+      "exercise": {
+        "title": "Hậu và Vua phối hợp · Bài 8",
+        "prompt": "Phối hợp Vua và Hậu để chiếu hết trong 1 nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/4Q3/8/8/k7/2K5/8/8 w - - 0 1",
+        "moves": [
+          "Qb4#"
+        ],
+        "hints": [
+          "Xác định các ô thoát mà Vua đang khống chế, rồi tìm nước chiếu bằng Hậu.",
+          "Kiểm tra xem Vua đối phương có thể bắt Hậu hoặc đi sang ô không bị tấn công không."
+        ],
+        "solution": "Qb4# — Hậu từ e7 đến b4, chiếu hết. Vua ở c3 khống chế b3. Hậu chiếu và khống chế các ô thoát còn lại. Vua cũng bảo vệ Hậu, nên Vua đối phương không thể bắt Hậu.",
+        "beginner": true,
+        "source": "Thế cờ biên soạn để luyện chiếu hết bằng Hậu."
+      }
+    },
+    {
+      "id": "queen-beginner-r-1",
+      "decision": "Added: essential queen-protection by R; one queen move, no capture or sacrifice, four pieces.",
+      "support": "g3",
+      "piece": "R",
+      "role": "queen-protection",
+      "exercise": {
+        "title": "Hậu và Xe phối hợp · Bài 9",
+        "prompt": "Phối hợp Hậu và Xe để chiếu hết trong 1 nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "7k/4Q3/8/8/8/6R1/8/K7 w - - 0 1",
+        "moves": [
+          "Qg7#"
+        ],
+        "beginner": true,
+        "hints": [
+          "Tìm ô chiếu cạnh Vua đối phương mà Xe đang bảo vệ.",
+          "Kiểm tra xem Vua đối phương có thể bắt Hậu hoặc đi sang ô không bị tấn công không."
+        ],
+        "solution": "Qg7# — Hậu từ e7 đến g7, chiếu hết. Xe ở g3 bảo vệ Hậu ở g7, nên Vua đối phương không thể bắt Hậu. Hậu khống chế các ô thoát còn lại.",
+        "source": "Thế cờ biên soạn để luyện chiếu hết bằng Hậu."
+      }
+    },
+    {
+      "id": "queen-beginner-b-1",
+      "decision": "Added: essential queen-protection by B; one queen move, no capture or sacrifice, four pieces.",
+      "support": "d6",
+      "piece": "B",
+      "role": "queen-protection",
+      "exercise": {
+        "title": "Hậu và Tượng phối hợp · Bài 10",
+        "prompt": "Phối hợp Hậu và Tượng để chiếu hết trong 1 nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "k7/8/3b4/8/8/6q1/8/7K b - - 0 1",
+        "moves": [
+          "Qh2#"
+        ],
+        "beginner": true,
+        "hints": [
+          "Tìm ô chiếu cạnh Vua đối phương mà Tượng đang bảo vệ.",
+          "Kiểm tra xem Vua đối phương có thể bắt Hậu hoặc đi sang ô không bị tấn công không."
+        ],
+        "solution": "Qh2# — Hậu từ g3 đến h2, chiếu hết. Tượng ở d6 bảo vệ Hậu ở h2, nên Vua đối phương không thể bắt Hậu. Hậu khống chế các ô thoát còn lại.",
+        "source": "Thế cờ biên soạn để luyện chiếu hết bằng Hậu."
+      }
+    },
+    {
+      "id": "queen-beginner-n-1",
+      "decision": "Added: essential queen-protection by N; one queen move, no capture or sacrifice, four pieces.",
+      "support": "d3",
+      "piece": "N",
+      "role": "queen-protection",
+      "exercise": {
+        "title": "Hậu và Mã phối hợp · Bài 11",
+        "prompt": "Phối hợp Hậu và Mã để chiếu hết trong 1 nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "7k/8/8/1q6/8/3n4/8/K7 b - - 0 1",
+        "moves": [
+          "Qb2#"
+        ],
+        "beginner": true,
+        "hints": [
+          "Tìm ô chiếu cạnh Vua đối phương mà Mã đang bảo vệ.",
+          "Kiểm tra xem Vua đối phương có thể bắt Hậu hoặc đi sang ô không bị tấn công không."
+        ],
+        "solution": "Qb2# — Hậu từ b5 đến b2, chiếu hết. Mã ở d3 bảo vệ Hậu ở b2, nên Vua đối phương không thể bắt Hậu. Hậu khống chế các ô thoát còn lại.",
+        "source": "Thế cờ biên soạn để luyện chiếu hết bằng Hậu."
+      }
+    },
+    {
+      "id": "queen-beginner-p-1",
+      "decision": "Added: essential queen-protection by P; one queen move, no capture or sacrifice, four pieces.",
+      "support": "f6",
+      "piece": "P",
+      "role": "queen-protection",
+      "exercise": {
+        "title": "Hậu và Tốt phối hợp · Bài 12",
+        "prompt": "Phối hợp Hậu và Tốt để chiếu hết trong 1 nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "7k/4Q3/5P2/8/8/8/8/K7 w - - 0 1",
+        "moves": [
+          "Qg7#"
+        ],
+        "beginner": true,
+        "hints": [
+          "Tìm ô chiếu cạnh Vua đối phương mà Tốt đang bảo vệ.",
+          "Kiểm tra xem Vua đối phương có thể bắt Hậu hoặc đi sang ô không bị tấn công không."
+        ],
+        "solution": "Qg7# — Hậu từ e7 đến g7, chiếu hết. Tốt ở f6 bảo vệ Hậu ở g7, nên Vua đối phương không thể bắt Hậu. Hậu khống chế các ô thoát còn lại.",
+        "source": "Thế cờ biên soạn để luyện chiếu hết bằng Hậu."
+      }
+    },
+    {
+      "id": "queen-beginner-r-2",
+      "decision": "Added: essential queen-protection by R; one queen move, no capture or sacrifice, four pieces.",
+      "support": "a7",
+      "piece": "R",
+      "role": "queen-protection",
+      "exercise": {
+        "title": "Hậu và Xe phối hợp · Bài 13",
+        "prompt": "Phối hợp Hậu và Xe để chiếu hết trong 1 nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "4k3/R7/8/6Q1/8/8/8/K7 w - - 0 1",
+        "moves": [
+          "Qe7#"
+        ],
+        "beginner": true,
+        "hints": [
+          "Tìm ô chiếu cạnh Vua đối phương mà Xe đang bảo vệ.",
+          "Kiểm tra xem Vua đối phương có thể bắt Hậu hoặc đi sang ô không bị tấn công không."
+        ],
+        "solution": "Qe7# — Hậu từ g5 đến e7, chiếu hết. Xe ở a7 bảo vệ Hậu ở e7, nên Vua đối phương không thể bắt Hậu. Hậu khống chế các ô thoát còn lại.",
+        "source": "Thế cờ biên soạn để luyện chiếu hết bằng Hậu."
+      }
+    },
+    {
+      "id": "queen-beginner-b-2",
+      "decision": "Added: essential queen-protection by B; one queen move, no capture or sacrifice, four pieces.",
+      "support": "g5",
+      "piece": "B",
+      "role": "queen-protection",
+      "exercise": {
+        "title": "Hậu và Tượng phối hợp · Bài 14",
+        "prompt": "Phối hợp Hậu và Tượng để chiếu hết trong 1 nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "7k/8/8/6b1/1q6/8/8/3K4 b - - 0 1",
+        "moves": [
+          "Qd2#"
+        ],
+        "beginner": true,
+        "hints": [
+          "Tìm ô chiếu cạnh Vua đối phương mà Tượng đang bảo vệ.",
+          "Kiểm tra xem Vua đối phương có thể bắt Hậu hoặc đi sang ô không bị tấn công không."
+        ],
+        "solution": "Qd2# — Hậu từ b4 đến d2, chiếu hết. Tượng ở g5 bảo vệ Hậu ở d2, nên Vua đối phương không thể bắt Hậu. Hậu khống chế các ô thoát còn lại.",
+        "source": "Thế cờ biên soạn để luyện chiếu hết bằng Hậu."
+      }
+    },
+    {
+      "id": "queen-beginner-n-2",
+      "decision": "Added: essential queen-protection by N; one queen move, no capture or sacrifice, four pieces.",
+      "support": "c3",
+      "piece": "N",
+      "role": "queen-protection",
+      "exercise": {
+        "title": "Hậu và Mã phối hợp · Bài 15",
+        "prompt": "Phối hợp Hậu và Mã để chiếu hết trong 1 nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "k7/8/8/8/6q1/2n5/8/4K3 b - - 0 1",
+        "moves": [
+          "Qe2#"
+        ],
+        "beginner": true,
+        "hints": [
+          "Tìm ô chiếu cạnh Vua đối phương mà Mã đang bảo vệ.",
+          "Kiểm tra xem Vua đối phương có thể bắt Hậu hoặc đi sang ô không bị tấn công không."
+        ],
+        "solution": "Qe2# — Hậu từ g4 đến e2, chiếu hết. Mã ở c3 bảo vệ Hậu ở e2, nên Vua đối phương không thể bắt Hậu. Hậu khống chế các ô thoát còn lại.",
+        "source": "Thế cờ biên soạn để luyện chiếu hết bằng Hậu."
+      }
+    },
+    {
+      "id": "queen-beginner-p-2",
+      "decision": "Added: essential queen-protection by P; one queen move, no capture or sacrifice, four pieces.",
+      "support": "d6",
+      "piece": "P",
+      "role": "queen-protection",
+      "exercise": {
+        "title": "Hậu và Tốt phối hợp · Bài 16",
+        "prompt": "Phối hợp Hậu và Tốt để chiếu hết trong 1 nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "4k3/8/3P4/6Q1/8/8/8/K7 w - - 0 1",
+        "moves": [
+          "Qe7#"
+        ],
+        "beginner": true,
+        "hints": [
+          "Tìm ô chiếu cạnh Vua đối phương mà Tốt đang bảo vệ.",
+          "Kiểm tra xem Vua đối phương có thể bắt Hậu hoặc đi sang ô không bị tấn công không."
+        ],
+        "solution": "Qe7# — Hậu từ g5 đến e7, chiếu hết. Tốt ở d6 bảo vệ Hậu ở e7, nên Vua đối phương không thể bắt Hậu. Hậu khống chế các ô thoát còn lại.",
+        "source": "Thế cờ biên soạn để luyện chiếu hết bằng Hậu."
+      }
+    },
+    {
+      "id": "queen-beginner-r-3",
+      "decision": "Added: essential escape-control by R; one queen move, no capture or sacrifice, four pieces.",
+      "support": "b7",
+      "piece": "R",
+      "role": "escape-control",
+      "exercise": {
+        "title": "Hậu và Xe phối hợp · Bài 17",
+        "prompt": "Phối hợp Hậu và Xe để chiếu hết trong 1 nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "7k/1r6/3q4/8/8/8/8/K7 b - - 0 1",
+        "moves": [
+          "Qa3#"
+        ],
+        "beginner": true,
+        "hints": [
+          "Xác định các ô thoát mà Xe đang khống chế, rồi tìm nước chiếu bằng Hậu.",
+          "Kiểm tra xem Vua đối phương có thể bắt Hậu hoặc đi sang ô không bị tấn công không."
+        ],
+        "solution": "Qa3# — Hậu từ d6 đến a3, chiếu hết. Xe ở b7 khống chế b1, b2. Hậu chiếu và khống chế các ô thoát còn lại.",
+        "source": "Thế cờ biên soạn để luyện chiếu hết bằng Hậu."
+      }
+    },
+    {
+      "id": "queen-beginner-b-3",
+      "decision": "Added: essential escape-control by B; one queen move, no capture or sacrifice, four pieces.",
+      "support": "c4",
+      "piece": "B",
+      "role": "escape-control",
+      "exercise": {
+        "title": "Hậu và Tượng phối hợp · Bài 18",
+        "prompt": "Phối hợp Hậu và Tượng để chiếu hết trong 1 nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "7k/8/8/8/2B5/4Q3/8/K7 w - - 0 1",
+        "moves": [
+          "Qh6#"
+        ],
+        "beginner": true,
+        "hints": [
+          "Xác định các ô thoát mà Tượng đang khống chế, rồi tìm nước chiếu bằng Hậu.",
+          "Kiểm tra xem Vua đối phương có thể bắt Hậu hoặc đi sang ô không bị tấn công không."
+        ],
+        "solution": "Qh6# — Hậu từ e3 đến h6, chiếu hết. Tượng ở c4 khống chế g8. Hậu chiếu và khống chế các ô thoát còn lại.",
+        "source": "Thế cờ biên soạn để luyện chiếu hết bằng Hậu."
+      }
+    },
+    {
+      "id": "queen-beginner-n-3",
+      "decision": "Added: essential escape-control by N; one queen move, no capture or sacrifice, four pieces.",
+      "support": "e7",
+      "piece": "N",
+      "role": "escape-control",
+      "exercise": {
+        "title": "Hậu và Mã phối hợp · Bài 19",
+        "prompt": "Phối hợp Hậu và Mã để chiếu hết trong 1 nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "7k/4N3/8/8/8/4Q3/8/K7 w - - 0 1",
+        "moves": [
+          "Qh6#"
+        ],
+        "beginner": true,
+        "hints": [
+          "Xác định các ô thoát mà Mã đang khống chế, rồi tìm nước chiếu bằng Hậu.",
+          "Kiểm tra xem Vua đối phương có thể bắt Hậu hoặc đi sang ô không bị tấn công không."
+        ],
+        "solution": "Qh6# — Hậu từ e3 đến h6, chiếu hết. Mã ở e7 khống chế g8. Hậu chiếu và khống chế các ô thoát còn lại.",
+        "source": "Thế cờ biên soạn để luyện chiếu hết bằng Hậu."
+      }
+    },
+    {
+      "id": "queen-beginner-p-3",
+      "decision": "Added: essential escape-control by P; one queen move, no capture or sacrifice, four pieces.",
+      "support": "c2",
+      "piece": "P",
+      "role": "escape-control",
+      "exercise": {
+        "title": "Hậu và Tốt phối hợp · Bài 20",
+        "prompt": "Phối hợp Hậu và Tốt để chiếu hết trong 1 nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "7k/8/3q4/8/8/8/2p5/K7 b - - 0 1",
+        "moves": [
+          "Qa3#"
+        ],
+        "beginner": true,
+        "hints": [
+          "Xác định các ô thoát mà Tốt đang khống chế, rồi tìm nước chiếu bằng Hậu.",
+          "Kiểm tra xem Vua đối phương có thể bắt Hậu hoặc đi sang ô không bị tấn công không."
+        ],
+        "solution": "Qa3# — Hậu từ d6 đến a3, chiếu hết. Tốt ở c2 khống chế b1. Hậu chiếu và khống chế các ô thoát còn lại.",
+        "source": "Thế cờ biên soạn để luyện chiếu hết bằng Hậu."
+      }
+    },
+    {
+      "id": "queen-beginner-r-4",
+      "decision": "Added to reach 24: essential queen protection at a non-corner edge; four pieces, no capture or sacrifice.",
+      "support": "b2",
+      "piece": "R",
+      "role": "queen-protection",
+      "exercise": {
+        "title": "Hậu và Xe phối hợp · Bài 21",
+        "prompt": "Phối hợp Hậu và Xe để chiếu hết trong 1 nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "4q2k/8/8/K7/8/8/1r6/8 b - - 0 1",
+        "moves": [
+          "Qb5#"
+        ],
+        "beginner": true,
+        "hints": [
+          "Tìm ô chiếu cạnh Vua đối phương mà Xe đang bảo vệ.",
+          "Kiểm tra xem Vua đối phương có thể bắt Hậu hoặc đi sang ô không bị tấn công không."
+        ],
+        "solution": "Qb5# — Hậu từ e8 đến b5, chiếu hết. Xe ở b2 bảo vệ Hậu ở b5, nên Vua đối phương không thể bắt Hậu. Hậu khống chế các ô thoát còn lại.",
+        "source": "Thế cờ biên soạn để luyện chiếu hết bằng Hậu."
+      }
+    },
+    {
+      "id": "queen-beginner-b-4",
+      "decision": "Added to reach 24: essential queen protection at a non-corner edge; four pieces, no capture or sacrifice.",
+      "support": "d2",
+      "piece": "B",
+      "role": "queen-protection",
+      "exercise": {
+        "title": "Hậu và Tượng phối hợp · Bài 22",
+        "prompt": "Phối hợp Hậu và Tượng để chiếu hết trong 1 nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/8/8/7k/8/8/3B2Q1/K7 w - - 0 1",
+        "moves": [
+          "Qg5#"
+        ],
+        "beginner": true,
+        "hints": [
+          "Tìm ô chiếu cạnh Vua đối phương mà Tượng đang bảo vệ.",
+          "Kiểm tra xem Vua đối phương có thể bắt Hậu hoặc đi sang ô không bị tấn công không."
+        ],
+        "solution": "Qg5# — Hậu từ g2 đến g5, chiếu hết. Tượng ở d2 bảo vệ Hậu ở g5, nên Vua đối phương không thể bắt Hậu. Hậu khống chế các ô thoát còn lại.",
+        "source": "Thế cờ biên soạn để luyện chiếu hết bằng Hậu."
+      }
+    },
+    {
+      "id": "queen-beginner-n-4",
+      "decision": "Added to reach 24: essential queen protection at a non-corner edge; four pieces, no capture or sacrifice.",
+      "support": "e3",
+      "piece": "N",
+      "role": "queen-protection",
+      "exercise": {
+        "title": "Hậu và Mã phối hợp · Bài 23",
+        "prompt": "Phối hợp Hậu và Mã để chiếu hết trong 1 nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "7k/8/8/8/q7/4n3/8/2K5 b - - 0 1",
+        "moves": [
+          "Qc2#"
+        ],
+        "beginner": true,
+        "hints": [
+          "Tìm ô chiếu cạnh Vua đối phương mà Mã đang bảo vệ.",
+          "Kiểm tra xem Vua đối phương có thể bắt Hậu hoặc đi sang ô không bị tấn công không."
+        ],
+        "solution": "Qc2# — Hậu từ a4 đến c2, chiếu hết. Mã ở e3 bảo vệ Hậu ở c2, nên Vua đối phương không thể bắt Hậu. Hậu khống chế các ô thoát còn lại.",
+        "source": "Thế cờ biên soạn để luyện chiếu hết bằng Hậu."
+      }
+    },
+    {
+      "id": "queen-beginner-p-4",
+      "decision": "Added to reach 24: essential queen protection at a non-corner edge; four pieces, no capture or sacrifice.",
+      "support": "c5",
+      "piece": "P",
+      "role": "queen-protection",
+      "exercise": {
+        "title": "Hậu và Tốt phối hợp · Bài 24",
+        "prompt": "Phối hợp Hậu và Tốt để chiếu hết trong 1 nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/8/k7/2P5/8/8/1Q6/7K w - - 0 1",
+        "moves": [
+          "Qb6#"
+        ],
+        "beginner": true,
+        "hints": [
+          "Tìm ô chiếu cạnh Vua đối phương mà Tốt đang bảo vệ.",
+          "Kiểm tra xem Vua đối phương có thể bắt Hậu hoặc đi sang ô không bị tấn công không."
+        ],
+        "solution": "Qb6# — Hậu từ b2 đến b6, chiếu hết. Tốt ở c5 bảo vệ Hậu ở b6, nên Vua đối phương không thể bắt Hậu. Hậu khống chế các ô thoát còn lại.",
+        "source": "Thế cờ biên soạn để luyện chiếu hết bằng Hậu."
+      }
+    }
+  ],
+  "replaced": [
+    {
+      "id": "queen-beginner-original-03",
+      "fen": "3K4/q7/3k4/8/8/8/8/8 b - - 0 1",
+      "moves": [
+        "Qb8#"
+      ],
+      "decision": "Replaced for variety: repeats king-supported edge-mate patterns; not rejected as tactically invalid."
+    },
+    {
+      "id": "queen-beginner-original-05",
+      "fen": "7k/8/7K/6Q1/8/8/8/8 w - - 0 1",
+      "moves": [
+        "Qd8#"
+      ],
+      "decision": "Replaced for variety: repeats king-supported edge-mate patterns; not rejected as tactically invalid."
+    },
+    {
+      "id": "queen-beginner-original-07",
+      "fen": "4q3/K1k5/8/8/8/8/8/8 b - - 0 1",
+      "moves": [
+        "Qa4#"
+      ],
+      "decision": "Replaced for variety: repeats king-supported edge-mate patterns; not rejected as tactically invalid."
+    },
+    {
+      "id": "queen-beginner-original-08",
+      "fen": "5k2/8/1Q4K1/8/8/8/8/8 w - - 0 1",
+      "moves": [
+        "Qd8#"
+      ],
+      "decision": "Replaced for variety: repeats king-supported edge-mate patterns; not rejected as tactically invalid."
+    },
+    {
+      "id": "queen-beginner-original-10",
+      "fen": "8/4Q3/k1K5/8/8/8/8/8 w - - 0 1",
+      "moves": [
+        "Qa3#"
+      ],
+      "decision": "Replaced for variety: repeats king-supported edge-mate patterns; not rejected as tactically invalid."
+    },
+    {
+      "id": "queen-beginner-original-11",
+      "fen": "1K6/3q4/1k6/8/8/8/8/8 b - - 0 1",
+      "moves": [
+        "Qd8#"
+      ],
+      "decision": "Replaced for variety: repeats king-supported edge-mate patterns; not rejected as tactically invalid."
+    },
+    {
+      "id": "queen-beginner-original-13",
+      "fen": "3k4/8/2K5/8/8/Q7/8/8 w - - 0 1",
+      "moves": [
+        "Qf8#"
+      ],
+      "decision": "Replaced for variety: repeats king-supported edge-mate patterns; not rejected as tactically invalid."
+    },
+    {
+      "id": "queen-beginner-original-14",
+      "fen": "8/8/6q1/8/8/6k1/8/6K1 b - - 0 1",
+      "moves": [
+        "Qb1#"
+      ],
+      "decision": "Replaced for variety: repeats king-supported edge-mate patterns; not rejected as tactically invalid."
+    },
+    {
+      "id": "queen-beginner-original-15",
+      "fen": "2k5/8/2K5/8/8/8/Q7/8 w - - 0 1",
+      "moves": [
+        "Qg8#"
+      ],
+      "decision": "Replaced for variety: repeats king-supported edge-mate patterns; not rejected as tactically invalid."
+    },
+    {
+      "id": "queen-beginner-original-16",
+      "fen": "8/8/8/8/K1k5/8/6q1/8 b - - 0 1",
+      "moves": [
+        "Qa2#"
+      ],
+      "decision": "Replaced for variety: repeats king-supported edge-mate patterns; not rejected as tactically invalid."
+    },
+    {
+      "id": "queen-beginner-original-17",
+      "fen": "4Q3/8/8/8/8/1K6/8/2k5 w - - 0 1",
+      "moves": [
+        "Qe1#"
+      ],
+      "decision": "Replaced for variety: repeats king-supported edge-mate patterns; not rejected as tactically invalid."
+    },
+    {
+      "id": "queen-beginner-original-18",
+      "fen": "8/8/6Q1/8/k1K5/8/8/8 w - - 0 1",
+      "moves": [
+        "Qa6#"
+      ],
+      "decision": "Replaced for variety: repeats king-supported edge-mate patterns; not rejected as tactically invalid."
+    }
+  ]
+}

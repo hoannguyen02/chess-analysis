@@ -1,3 +1,10 @@
+import {
+  drawThemeRoutePaths,
+  drawPracticeChoices,
+  drawPracticeLevelChoices,
+  initialDrawPracticeLevel,
+  type DrawThemeLink,
+} from '@/lib/chess/draw-practice-view';
 import { usePracticeFullscreen } from '@/hooks/usePracticeFullscreen';
 import { drawExerciseUrl } from '@/lib/chess/draw-exercise-url';
 import {
@@ -7,9 +14,14 @@ import {
   filterDrawLevel,
 } from '@/lib/chess/draw-levels';
 import type { DrawCategory } from '@/lib/chess/draw-practice';
+import { simplificationLevelDescriptions } from '@/lib/chess/simplification-levels';
+import { discoveryLevelDescriptions } from '@/lib/chess/discovery-levels';
+import { forkLevelDescriptions } from '@/lib/chess/fork-levels';
+import { pinLevelDescriptions } from '@/lib/chess/pin-levels';
 import { skewerLevelDescriptions } from '@/lib/chess/skewer-levels';
 import styles from '@/styles/ChessPractice.module.css';
 import dynamic from 'next/dynamic';
+import Link from 'next/link';
 import { useState } from 'react';
 import GamePlayerNames from './GamePlayerNames';
 import { TeachingTimer } from './TeachingTimer';
@@ -21,7 +33,22 @@ const DrawTrainer = dynamic(() => import('./DrawTrainer'), {
 
 const PAGE_SIZE = 6;
 
-function CategoryPractice({ category }: { category: DrawCategory }) {
+function CategoryIntroduction({ category }: { category: DrawCategory }) {
+  return (
+    <>
+      <h3 id={`draw-heading-${category.id}`}>{category.title}</h3>
+      <p>{category.description}</p>
+    </>
+  );
+}
+
+function CategoryPractice({
+  category,
+  showIntroduction = true,
+}: {
+  category: DrawCategory;
+  showIntroduction?: boolean;
+}) {
   const [page, setPage] = useState(0);
   const [activeIndex, setActiveIndex] = useState(0);
   const { trainerRef, expandButtonRef, expanded, toggleExpanded } =
@@ -36,8 +63,7 @@ function CategoryPractice({ category }: { category: DrawCategory }) {
       className={styles.category}
       aria-labelledby={`draw-heading-${category.id}`}
     >
-      <h3 id={`draw-heading-${category.id}`}>{category.title}</h3>
-      <p>{category.description}</p>
+      {showIntroduction && <CategoryIntroduction category={category} />}
       <div
         ref={trainerRef}
         className={`${styles.trainerAnchor} ${expanded ? styles.expanded : ''}`}
@@ -59,9 +85,23 @@ function CategoryPractice({ category }: { category: DrawCategory }) {
             >
               ← Bài trước
             </button>
-            <span>
-              Bài {activeIndex + 1}/{category.exercises.length}
-            </span>
+            <select
+              className={styles.exercisePicker}
+              aria-label="Chọn bài tập"
+              title="Chuyển nhanh đến bài bất kỳ"
+              value={activeIndex}
+              onChange={(event) => {
+                const index = Number(event.target.value);
+                setActiveIndex(index);
+                setPage(Math.floor(index / PAGE_SIZE));
+              }}
+            >
+              {category.exercises.map((exercise, index) => (
+                <option key={drawExerciseUrl(exercise)} value={index}>
+                  Bài {index + 1}/{category.exercises.length}
+                </option>
+              ))}
+            </select>
             <button
               type="button"
               disabled={activeIndex === category.exercises.length - 1}
@@ -158,7 +198,7 @@ function CategoryPractice({ category }: { category: DrawCategory }) {
                 <p className={styles.kind}>
                   {String(start + index + 1).padStart(2, '0')}
                   {exercise.difficulty && (
-                    <span className={styles.levelBadge} title="Mức gợi ý">
+                    <span className={styles.levelBadge} title="Cấp độ bài tập">
                       {exercise.difficulty.level}
                     </span>
                   )}
@@ -191,7 +231,7 @@ function CategoryPractice({ category }: { category: DrawCategory }) {
                 >
                   {activeIndex === start + index
                     ? 'Đang luyện bài này'
-                    : 'Luyện trên bàn cờ LIMA'}
+                    : 'Luyện bài này'}
                 </button>
               </article>
             );
@@ -204,39 +244,68 @@ function CategoryPractice({ category }: { category: DrawCategory }) {
 export default function ChessPractice({
   categories,
   variant = 'draw',
+  showLevelFilter = true,
+  showCategoryNavigation = true,
+  categoryLinks,
 }: {
   categories: DrawCategory[];
-  variant?: 'draw' | 'skewer';
+  variant?:
+    | 'draw'
+    | 'skewer'
+    | 'pin'
+    | 'fork'
+    | 'discovery'
+    | 'simplification'
+    | 'checkmate'
+    | 'promotion';
+  showLevelFilter?: boolean;
+  showCategoryNavigation?: boolean;
+  categoryLinks?: DrawThemeLink[];
 }) {
+  const choices =
+    variant === 'draw' ? drawPracticeChoices(categories) : categories;
   const [selectedId, setSelectedId] = useState(
     () =>
       (
-        categories.find(
-          (item) => filterDrawLevel(item.exercises, 'A').length > 0
-        ) ?? categories[0]
+        choices.find((item) =>
+          choices.some((c) => c.exercises.some((e) => e.beginner))
+            ? item.exercises.some((e) => e.beginner)
+            : filterDrawLevel(item.exercises, 'A').length > 0
+        ) ?? choices[0]
       ).id
   );
   const [selectedLevel, setSelectedLevel] = useState<
     DrawLevel | 'all' | 'beginner'
   >(
-    variant === 'skewer' &&
-      categories.some((item) =>
-        item.exercises.some((exercise) => exercise.beginner)
-      )
-      ? 'beginner'
-      : 'A'
+    !showLevelFilter
+      ? 'all'
+      : variant === 'draw'
+        ? initialDrawPracticeLevel(categories)
+        : categories.some((item) =>
+              item.exercises.some((exercise) => exercise.beginner)
+            )
+          ? 'beginner'
+          : 'A'
   );
   const [beginnerKind, setBeginnerKind] = useState<'king' | 'queen'>('king');
-  const category = categories.find((item) => item.id === selectedId)!;
+  const category = choices.find((item) => item.id === selectedId) ?? choices[0];
   const filtered = {
     ...category,
-    ...(selectedLevel === 'beginner'
+    ...(selectedLevel === 'beginner' &&
+    (variant === 'pin' || variant === 'skewer')
       ? {
-          title: beginnerKind === 'king' ? 'Xiên Vua' : 'Xiên Hậu',
+          title:
+            variant === 'pin'
+              ? 'Nhập môn · Đòn ghim'
+              : beginnerKind === 'king'
+                ? 'Xiên Vua'
+                : 'Xiên Hậu',
           description:
-            beginnerKind === 'king'
-              ? 'Dùng Xe, Tượng hoặc Hậu chiếu Vua theo cột, hàng, đường chéo, rồi bắt quân phía sau.'
-              : 'Tìm đòn xiên trên đường chéo, hàng hoặc cột. Kiểm tra quân bảo vệ và tính đủ các nước bắt lại. Ở bài cuối, hãy quyết định đòn xiên có thực sự hiệu quả không.',
+            variant === 'pin'
+              ? 'Khai thác quân bị ghim để giành lợi thế vật chất. Ghim vào Vua hạn chế các nước đi làm lộ chiếu; ghim vào Hậu hoặc Xe cần tính cả nước bắt lại và phản công.'
+              : beginnerKind === 'king'
+                ? 'Dùng Xe, Tượng hoặc Hậu chiếu Vua theo cột, hàng, đường chéo, rồi bắt quân phía sau.'
+                : 'Tìm đòn xiên trên đường chéo, hàng hoặc cột. Kiểm tra quân bảo vệ và tính đủ các nước bắt lại. Ở bài cuối, hãy quyết định đòn xiên có thực sự hiệu quả không.',
         }
       : {}),
     exercises:
@@ -244,106 +313,200 @@ export default function ChessPractice({
         ? category.exercises.filter(
             (exercise) =>
               exercise.beginner &&
-              (exercise.beginnerKind ?? 'king') === beginnerKind
+              (variant === 'draw' ||
+                variant === 'checkmate' ||
+                variant === 'promotion' ||
+                variant === 'pin' ||
+                (exercise.beginnerKind ?? 'king') === beginnerKind)
           )
         : filterDrawLevel(category.exercises, selectedLevel),
   };
   return (
     <div className={styles.practice}>
-      {variant === 'draw' && (
-        <nav className={styles.categories} aria-label="Chọn kỹ năng cứu hòa">
-          {categories.map((item) => (
-            <button
-              type="button"
-              key={item.id}
-              aria-pressed={selectedId === item.id}
-              onClick={() => setSelectedId(item.id)}
-            >
-              {item.title} <span>· {item.exercises.length} bài</span>
-            </button>
-          ))}
-        </nav>
+      {(variant === 'draw' ||
+        variant === 'discovery' ||
+        (variant === 'checkmate' && categories.length > 1)) &&
+        showCategoryNavigation && (
+          <nav
+            className={styles.categories}
+            aria-label={
+              variant === 'discovery'
+                ? 'Chọn chủ đề đòn mở'
+                : variant === 'checkmate'
+                  ? 'Chọn bài học chiếu hết'
+                  : 'Chọn kỹ năng cứu hòa'
+            }
+          >
+            {categoryLinks
+              ? categoryLinks.map((link) => (
+                  <Link
+                    key={link.id}
+                    href={link.href}
+                    aria-current={link.id === category.id ? 'page' : undefined}
+                  >
+                    {link.label} <span>· {link.count} bài</span>
+                  </Link>
+                ))
+              : choices.map((item) => {
+                  const href =
+                    variant === 'draw'
+                      ? drawThemeRoutePaths[item.id]
+                      : undefined;
+                  const label = item.shortLabel ?? item.title;
+                  return href ? (
+                    <Link key={item.id} href={href}>
+                      {label} <span>· {item.exercises.length} bài</span>
+                    </Link>
+                  ) : (
+                    <button
+                      type="button"
+                      key={item.id}
+                      aria-pressed={selectedId === item.id}
+                      onClick={() => setSelectedId(item.id)}
+                    >
+                      {label} <span>· {item.exercises.length} bài</span>
+                    </button>
+                  );
+                })}
+          </nav>
+        )}
+      {variant !== 'draw' && (
+        <div className={styles.categoryIntroduction}>
+          <CategoryIntroduction category={filtered} />
+        </div>
       )}
-      <div className={styles.filterPanel}>
-        <div className={styles.filterGroup}>
-          <p className={styles.filterLabel}>Mức độ</p>
-          <nav className={styles.levels} aria-label="Chọn mức độ">
-            {variant === 'skewer' &&
-              (['king', 'queen'] as const).map((kind) => {
-                const count = category.exercises.filter(
-                  (exercise) =>
-                    exercise.beginner &&
-                    (exercise.beginnerKind ?? 'king') === kind
-                ).length;
-                if (!count) return null;
-                return (
+      {showLevelFilter && (
+        <div className={styles.filterPanel}>
+          <div className={styles.filterGroup}>
+            <p className={styles.filterLabel}>Cấp độ</p>
+            <nav className={styles.levels} aria-label="Chọn cấp độ">
+              {variant === 'draw' &&
+                drawPracticeLevelChoices(category).map((choice) => (
                   <button
                     type="button"
-                    key={kind}
-                    aria-pressed={
-                      selectedLevel === 'beginner' && beginnerKind === kind
-                    }
+                    key={choice.id}
+                    aria-pressed={selectedLevel === choice.id}
                     title={
-                      kind === 'king'
-                        ? 'Nhập môn: xiên Vua'
-                        : 'Nhập môn: xiên Hậu'
+                      choice.id === 'beginner'
+                        ? 'Nhập môn: dành cho người mới biết cách đi và bắt quân'
+                        : drawLevelDescriptions[choice.id]
                     }
-                    onClick={() => {
-                      setSelectedLevel('beginner');
-                      setBeginnerKind(kind);
-                    }}
+                    onClick={() => setSelectedLevel(choice.id)}
                   >
-                    {kind === 'king' ? 'Xiên Vua' : 'Xiên Hậu'}
-                    <span aria-label={`${count} bài`}>{count}</span>
+                    {choice.label}{' '}
+                    <span aria-label={`${choice.count} bài`}>
+                      {choice.count}
+                    </span>
                   </button>
-                );
-              })}
-            {drawLevels.map((level) => {
-              const count = filterDrawLevel(category.exercises, level).length;
-              return (
+                ))}
+              {(variant === 'checkmate' ||
+                variant === 'promotion' ||
+                variant === 'pin' ||
+                variant === 'discovery') && (
                 <button
                   type="button"
-                  key={level}
-                  aria-pressed={selectedLevel === level}
-                  title={
-                    (variant === 'skewer'
-                      ? skewerLevelDescriptions
-                      : drawLevelDescriptions)[level]
-                  }
-                  onClick={() => setSelectedLevel(level)}
+                  aria-pressed={selectedLevel === 'beginner'}
+                  title="Nhập môn: dành cho người mới biết cách đi và bắt quân"
+                  onClick={() => setSelectedLevel('beginner')}
                 >
-                  {level} <span aria-label={`${count} bài`}>{count}</span>
+                  Nhập môn / Beginner{' '}
+                  <span
+                    aria-label={`${category.exercises.filter((e) => e.beginner).length} bài`}
+                  >
+                    {category.exercises.filter((e) => e.beginner).length}
+                  </span>
                 </button>
-              );
-            })}
-            {variant === 'draw' && (
-              <button
-                type="button"
-                aria-pressed={selectedLevel === 'all'}
-                onClick={() => setSelectedLevel('all')}
-              >
-                Tất cả{' '}
-                <span aria-label={`${category.exercises.length} bài`}>
-                  {category.exercises.length}
-                </span>
-              </button>
-            )}
-          </nav>
+              )}
+              {variant !== 'draw' &&
+                variant !== 'checkmate' &&
+                variant !== 'promotion' &&
+                variant !== 'pin' &&
+                variant !== 'discovery' &&
+                (['king', 'queen'] as const).map((kind) => {
+                  const count = category.exercises.filter(
+                    (exercise) =>
+                      exercise.beginner &&
+                      (exercise.beginnerKind ?? 'king') === kind
+                  ).length;
+                  if (!count) return null;
+                  return (
+                    <button
+                      type="button"
+                      key={kind}
+                      aria-pressed={
+                        selectedLevel === 'beginner' && beginnerKind === kind
+                      }
+                      title={
+                        variant !== 'skewer'
+                          ? 'Nhập môn / Beginner'
+                          : kind === 'king'
+                            ? 'Nhập môn: xiên Vua'
+                            : 'Nhập môn: xiên Hậu'
+                      }
+                      onClick={() => {
+                        setSelectedLevel('beginner');
+                        setBeginnerKind(kind);
+                      }}
+                    >
+                      {variant !== 'skewer'
+                        ? 'Nhập môn / Beginner'
+                        : kind === 'king'
+                          ? 'Nhập môn · Xiên Vua'
+                          : 'Nhập môn · Xiên Hậu'}
+                      <span aria-label={`${count} bài`}>{count}</span>
+                    </button>
+                  );
+                })}
+              {variant !== 'draw' &&
+                drawLevels.map((level) => {
+                  const count = filterDrawLevel(
+                    category.exercises,
+                    level
+                  ).length;
+                  return (
+                    <button
+                      type="button"
+                      key={level}
+                      aria-pressed={selectedLevel === level}
+                      title={
+                        (variant === 'simplification'
+                          ? simplificationLevelDescriptions
+                          : variant === 'discovery'
+                            ? discoveryLevelDescriptions
+                            : variant === 'fork'
+                              ? forkLevelDescriptions
+                              : variant === 'pin'
+                                ? pinLevelDescriptions
+                                : variant === 'skewer'
+                                  ? skewerLevelDescriptions
+                                  : drawLevelDescriptions)[level]
+                      }
+                      onClick={() => setSelectedLevel(level)}
+                    >
+                      Cấp độ {level}{' '}
+                      <span aria-label={`${count} bài`}>{count}</span>
+                    </button>
+                  );
+                })}
+            </nav>
+          </div>
         </div>
-      </div>
+      )}
       {filtered.exercises.length ? (
         <CategoryPractice
           key={`${category.id}-${selectedLevel}-${beginnerKind}`}
           category={filtered}
+          showIntroduction={variant === 'draw'}
         />
       ) : (
         <div className={styles.emptyLevel} role="status">
-          <p>Chưa có bài được xếp mức {selectedLevel} trong chủ đề này.</p>
-          {variant === 'draw' && (
-            <button type="button" onClick={() => setSelectedLevel('all')}>
-              Xem tất cả bài của chủ đề
-            </button>
-          )}
+          <p>
+            Chưa có bài ở cấp độ{' '}
+            {selectedLevel === 'beginner'
+              ? 'Nhập môn / Beginner'
+              : selectedLevel}{' '}
+            trong chủ đề này.
+          </p>
         </div>
       )}
       <details className={`${styles.note} ${styles.notationLegend}`}>

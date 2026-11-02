@@ -1,0 +1,66 @@
+{
+  "gameId": "8fdba4904a952ed2",
+  "fen": "N4rk1/p5pp/P7/2P5/3P3q/2B1P1nn/3N2QK/R3R3 b - - 2 46",
+  "nodesPerRoot": 1000000,
+  "analysis": [
+    {
+      "move": "Nf2+",
+      "score": "#+8",
+      "line": [
+        "Nf2+",
+        "Kg1",
+        "Nh3+",
+        "Kh2",
+        "Nf4+",
+        "Kg1",
+        "Nxg2",
+        "Kxg2",
+        "Qg4",
+        "Nf3",
+        "Rxf3",
+        "Kh2",
+        "Ne4",
+        "Kh1",
+        "Rh3#"
+      ]
+    },
+    {
+      "move": "Ng5+",
+      "score": "#+8",
+      "line": [
+        "Ng5+",
+        "Kg1",
+        "Nh3+",
+        "Kh2",
+        "Nf4+",
+        "Kg1",
+        "Nxg2",
+        "Kxg2",
+        "Qg4",
+        "Nf3",
+        "Rxf3",
+        "Kh2",
+        "Ne2",
+        "Rxe2",
+        "Rh3#"
+      ]
+    },
+    {
+      "move": "Nf4+",
+      "score": "#+6",
+      "line": [
+        "Nf4+",
+        "Kg1",
+        "Nxg2",
+        "Kxg2",
+        "Qg4",
+        "Nf3",
+        "Rxf3",
+        "e4",
+        "Nxe4+",
+        "Kh1",
+        "Rh3#"
+      ]
+    }
+  ]
+}

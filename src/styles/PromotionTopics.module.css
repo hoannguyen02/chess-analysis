@@ -1,0 +1,40 @@
+.topics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+.topics a {
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0.5rem 0.8rem;
+  border: 1px solid #bdcbb0;
+  border-radius: 0.75rem;
+  color: #263d35;
+  background: #f4f7ef;
+  overflow-wrap: anywhere;
+  max-width: 100%;
+}
+.topics a[aria-current='page'] {
+  background: #365b2b;
+  color: #fff;
+}
+.topics a:focus-visible {
+  outline: 3px solid #a76718;
+  outline-offset: 3px;
+}
+
+@media (max-width: 600px) {
+  .topics {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .topics a {
+    justify-content: center;
+    text-align: center;
+    font-size: 0.875rem;
+    min-width: 0;
+    padding: 0.5rem;
+  }
+}

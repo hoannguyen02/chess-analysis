@@ -1,0 +1,230 @@
+{
+  "method": "One-million-node continuation probes after every immediate discovery defence, excluding the revealed target capture on the next solver move. Finite engine evidence supports editorial review; not an exhaustive proof.",
+  "reviews": [
+    {
+      "gameId": "9454bbb50e959995",
+      "fen": "8/5p2/p4rpk/p2Bp2p/P1QbP2P/6P1/2R2PK1/3q4 b - - 2 42",
+      "moves": [
+        "Qf3+",
+        "Kh2",
+        "Bxf2",
+        "Qf1",
+        "Bxg3+",
+        "Kh3",
+        "Qxf1+"
+      ],
+      "branches": [
+        {
+          "reply": "Kh3",
+          "withoutTargetCapture": [
+            "Qg4+",
+            "Kg2",
+            "Bxh4+",
+            "Kh1",
+            "Rxf1+",
+            "Kh2",
+            "Qg3#"
+          ],
+          "cp": null,
+          "mate": 4
+        },
+        {
+          "reply": "Kg1",
+          "withoutTargetCapture": [
+            "Bh2+",
+            "Kxh2",
+            "Qxf1",
+            "Bc4",
+            "Qf4+",
+            "Kg1",
+            "Qe3+",
+            "Kh2",
+            "Rf4",
+            "Kh1",
+            "Rxh4+",
+            "Kg2",
+            "Rg4+",
+            "Kh2",
+            "Qg3+",
+            "Kh1",
+            "Qg1#"
+          ],
+          "cp": null,
+          "mate": 9
+        }
+      ]
+    },
+    {
+      "gameId": "0bd02a2c706e15bd",
+      "fen": "3r1rk1/1p3ppp/p1b2b2/3p4/1P3P2/P3PB2/3Q2PP/3R2K1 w - - 5 25",
+      "moves": [
+        "Qa2",
+        "Rfe8",
+        "Bxd5",
+        "Rxe3",
+        "Bxf7+",
+        "Kh8",
+        "Rxd8+"
+      ],
+      "branches": [
+        {
+          "reply": "Kh8",
+          "withoutTargetCapture": [
+            "Kf2"
+          ],
+          "cp": 225,
+          "mate": null
+        },
+        {
+          "reply": "Kf8",
+          "withoutTargetCapture": [
+            "Bd5",
+            "Re4"
+          ],
+          "cp": 99,
+          "mate": null
+        }
+      ]
+    },
+    {
+      "gameId": "2ea0eab3210a6c1b",
+      "fen": "1r1b1r1k/2p1q1p1/4P3/pp1B1P2/3N2Qp/3K3P/PPR5/8 w - - 3 34",
+      "moves": [
+        "Qh5+",
+        "Kg8",
+        "f6",
+        "Rxf6",
+        "Nc6",
+        "a4",
+        "Nxe7+",
+        "Bxe7",
+        "Rxc7"
+      ],
+      "branches": [
+        {
+          "reply": "Kf8",
+          "withoutTargetCapture": [
+            "Ng6+",
+            "Rxg6",
+            "Qxg6",
+            "Ke7",
+            "Rc6",
+            "Kf8",
+            "Qf7#"
+          ],
+          "cp": null,
+          "mate": 4
+        },
+        {
+          "reply": "Bxe7",
+          "withoutTargetCapture": [
+            "Rg2",
+            "Rd8",
+            "Kc2",
+            "Rxd5",
+            "Qxd5",
+            "g6",
+            "Qxb5",
+            "Kg7",
+            "Qd7",
+            "Kf8",
+            "Qc6",
+            "a3",
+            "b3",
+            "Bd6",
+            "Qd7",
+            "Be7",
+            "Re2",
+            "Rf5",
+            "Kd3",
+            "Rf1",
+            "Ke4"
+          ],
+          "cp": 692,
+          "mate": null
+        }
+      ]
+    },
+    {
+      "gameId": "3aa080c8abc1afe1",
+      "fen": "5r1k/8/4B3/8/4P1Q1/3Pqp1P/1PP3PK/8 w - - 15 43",
+      "moves": [
+        "Qh4+",
+        "Kg7",
+        "Qe7+",
+        "Kg6",
+        "Bf5+",
+        "Rxf5",
+        "exf5+",
+        "Kh6",
+        "Qxe3+"
+      ],
+      "branches": [
+        {
+          "reply": "Kh6",
+          "withoutTargetCapture": [
+            "Qf6+",
+            "Kh7",
+            "Qf7+",
+            "Kh8",
+            "Qh5+",
+            "Kg8",
+            "Qxf3",
+            "Qc1",
+            "Qd5+",
+            "Kh7",
+            "Qe4",
+            "Kh6",
+            "Qe5",
+            "Qxc2",
+            "Qd5"
+          ],
+          "cp": 600,
+          "mate": null
+        },
+        {
+          "reply": "Kh5",
+          "withoutTargetCapture": [
+            "Qf7+",
+            "Kg5",
+            "Qg6+",
+            "Kf4",
+            "g3+",
+            "Ke5",
+            "Qe6+",
+            "Kd4",
+            "Qd6#"
+          ],
+          "cp": null,
+          "mate": 5
+        },
+        {
+          "reply": "Kxf5",
+          "withoutTargetCapture": [
+            "g4+",
+            "Kg6",
+            "Qxe3",
+            "Kf6",
+            "Qxf3+",
+            "Ke6",
+            "Qf5+",
+            "Kd6",
+            "g5",
+            "Kc6",
+            "g6",
+            "Kb7",
+            "g7",
+            "Kc7",
+            "g8=Q",
+            "Kd6",
+            "Qgc8",
+            "Ke7",
+            "Qfe6#"
+          ],
+          "cp": null,
+          "mate": 10
+        }
+      ]
+    }
+  ]
+}

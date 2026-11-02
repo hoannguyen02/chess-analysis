@@ -1,0 +1,1247 @@
+[
+  {
+    "fen": "R4R2/8/8/K7/8/8/6k1/8 w - - 0 1",
+    "mateIn": 3,
+    "engine": {
+      "name": "Stockfish 17",
+      "author": "the Stockfish developers (see AUTHORS file)"
+    },
+    "nodes": 150000,
+    "lines": [
+      [
+        "Rf7",
+        "Kg1",
+        "Rg8+",
+        "Kh2",
+        "Rh7#"
+      ],
+      [
+        "Rf6",
+        "Kg3",
+        "Rg8+",
+        "Kh3",
+        "Rh6#"
+      ],
+      [
+        "Ra6",
+        "Kg3",
+        "Rg6+",
+        "Kh4",
+        "Rh8#"
+      ],
+      [
+        "Ra7",
+        "Kg1",
+        "Rg7+",
+        "Kh1",
+        "Rh8#"
+      ]
+    ]
+  },
+  {
+    "fen": "8/8/7k/8/r7/2r5/8/3K4 b - - 0 1",
+    "mateIn": 2,
+    "engine": {
+      "name": "Stockfish 17",
+      "author": "the Stockfish developers (see AUTHORS file)"
+    },
+    "nodes": 150000,
+    "lines": [
+      [
+        "Ra2",
+        "Ke1",
+        "Rc1#"
+      ]
+    ]
+  },
+  {
+    "fen": "8/7k/8/8/8/K5R1/8/1R6 w - - 0 1",
+    "mateIn": 1,
+    "engine": {
+      "name": "Stockfish 17",
+      "author": "the Stockfish developers (see AUTHORS file)"
+    },
+    "nodes": 150000,
+    "lines": [
+      [
+        "Rh1#"
+      ]
+    ]
+  },
+  {
+    "fen": "8/2K4R/8/8/8/3R4/1k6/8 w - - 0 1",
+    "mateIn": 3,
+    "engine": {
+      "name": "Stockfish 17",
+      "author": "the Stockfish developers (see AUTHORS file)"
+    },
+    "nodes": 150000,
+    "lines": [
+      [
+        "Rg3",
+        "Kc2",
+        "Rh2+",
+        "Kd1",
+        "Rg1#"
+      ],
+      [
+        "Rf3",
+        "Kc2",
+        "Rh2+",
+        "Kd1",
+        "Rf1#"
+      ]
+    ]
+  },
+  {
+    "fen": "R7/1R6/6k1/8/8/8/8/K7 w - - 0 1",
+    "mateIn": 4,
+    "engine": {
+      "name": "Stockfish 17",
+      "author": "the Stockfish developers (see AUTHORS file)"
+    },
+    "nodes": 150000,
+    "lines": [
+      [
+        "Ra5",
+        "Kf6",
+        "Rb6+",
+        "Kg7",
+        "Ra7+",
+        "Kg8",
+        "Rb8#"
+      ]
+    ]
+  },
+  {
+    "fen": "8/8/8/8/8/2r2r2/K4k2/8 b - - 0 1",
+    "mateIn": 4,
+    "engine": {
+      "name": "Stockfish 17",
+      "author": "the Stockfish developers (see AUTHORS file)"
+    },
+    "nodes": 150000,
+    "lines": [
+      [
+        "Rb3",
+        "Ka1",
+        "Rfe3",
+        "Ka2",
+        "Rb7",
+        "Ka1",
+        "Ra3#"
+      ]
+    ]
+  },
+  {
+    "fen": "1K6/8/8/8/8/R7/1R6/4k3 w - - 0 1",
+    "mateIn": 1,
+    "engine": {
+      "name": "Stockfish 17",
+      "author": "the Stockfish developers (see AUTHORS file)"
+    },
+    "nodes": 150000,
+    "lines": [
+      [
+        "Ra1#"
+      ]
+    ]
+  },
+  {
+    "fen": "3KR3/1R6/8/8/8/6k1/8/8 w - - 0 1",
+    "mateIn": 3,
+    "engine": {
+      "name": "Stockfish 17",
+      "author": "the Stockfish developers (see AUTHORS file)"
+    },
+    "nodes": 150000,
+    "lines": [
+      [
+        "Rf7",
+        "Kg2",
+        "Rg8+",
+        "Kh3",
+        "Rh7#"
+      ],
+      [
+        "Rf8",
+        "Kg4",
+        "Rg7+",
+        "Kh5",
+        "Rh8#"
+      ]
+    ]
+  },
+  {
+    "fen": "7K/8/8/8/1k6/4r3/r7/8 b - - 0 1",
+    "mateIn": 2,
+    "engine": {
+      "name": "Stockfish 17",
+      "author": "the Stockfish developers (see AUTHORS file)"
+    },
+    "nodes": 150000,
+    "lines": [
+      [
+        "Rg2",
+        "Kh7",
+        "Rh3#"
+      ],
+      [
+        "Ra7",
+        "Kg8",
+        "Re8#"
+      ],
+      [
+        "Rg3",
+        "Kh7",
+        "Rh2#"
+      ],
+      [
+        "Re7",
+        "Kg8",
+        "Ra8#"
+      ]
+    ]
+  },
+  {
+    "fen": "7K/8/k7/2r5/4r3/8/8/8 b - - 0 1",
+    "mateIn": 2,
+    "engine": {
+      "name": "Stockfish 17",
+      "author": "the Stockfish developers (see AUTHORS file)"
+    },
+    "nodes": 150000,
+    "lines": [
+      [
+        "Rg4",
+        "Kh7",
+        "Rh5#"
+      ],
+      [
+        "Rc7",
+        "Kg8",
+        "Re8#"
+      ],
+      [
+        "Rg5",
+        "Kh7",
+        "Rh4#"
+      ],
+      [
+        "Re7",
+        "Kg8",
+        "Rc8#"
+      ]
+    ]
+  },
+  {
+    "fen": "7K/3r4/2k5/8/3r4/8/8/8 b - - 0 1",
+    "mateIn": 2,
+    "engine": {
+      "name": "Stockfish 17",
+      "author": "the Stockfish developers (see AUTHORS file)"
+    },
+    "nodes": 150000,
+    "lines": [
+      [
+        "Ra7",
+        "Kg8",
+        "Rd8#"
+      ],
+      [
+        "Ra4",
+        "Kg8",
+        "Ra8#"
+      ],
+      [
+        "Rb7",
+        "Kg8",
+        "Rd8#"
+      ],
+      [
+        "Re4",
+        "Kg8",
+        "Re8#"
+      ]
+    ]
+  },
+  {
+    "fen": "7k/8/3R4/2R5/8/8/K7/8 w - - 0 1",
+    "mateIn": 2,
+    "engine": {
+      "name": "Stockfish 17",
+      "author": "the Stockfish developers (see AUTHORS file)"
+    },
+    "nodes": 150000,
+    "lines": [
+      [
+        "Rc7",
+        "Kg8",
+        "Rd8#"
+      ],
+      [
+        "Rd7",
+        "Kg8",
+        "Rc8#"
+      ]
+    ]
+  },
+  {
+    "fen": "8/8/4r3/7K/8/1k4r1/8/8 b - - 0 1",
+    "mateIn": 2,
+    "engine": {
+      "name": "Stockfish 17",
+      "author": "the Stockfish developers (see AUTHORS file)"
+    },
+    "nodes": 150000,
+    "lines": [
+      [
+        "Rg1",
+        "Kh4",
+        "Rh6#"
+      ],
+      [
+        "Rg8",
+        "Kh4",
+        "Rh6#"
+      ],
+      [
+        "Rg2",
+        "Kh4",
+        "Rh6#"
+      ],
+      [
+        "Rg7",
+        "Kh4",
+        "Rh6#"
+      ]
+    ]
+  },
+  {
+    "fen": "3KR3/8/8/8/8/k7/8/6R1 w - - 0 1",
+    "mateIn": 4,
+    "engine": {
+      "name": "Stockfish 17",
+      "author": "the Stockfish developers (see AUTHORS file)"
+    },
+    "nodes": 150000,
+    "lines": [
+      [
+        "Rb1",
+        "Ka2",
+        "Rb7",
+        "Ka1",
+        "Re6",
+        "Ka2",
+        "Ra6#"
+      ]
+    ]
+  },
+  {
+    "fen": "2R5/8/8/8/1k6/8/8/R4K2 w - - 0 1",
+    "mateIn": 2,
+    "engine": {
+      "name": "Stockfish 17",
+      "author": "the Stockfish developers (see AUTHORS file)"
+    },
+    "nodes": 150000,
+    "lines": [
+      [
+        "Rb1+",
+        "Ka3",
+        "Ra8#"
+      ]
+    ]
+  },
+  {
+    "fen": "8/8/6r1/7K/8/2r5/2k5/8 b - - 0 1",
+    "mateIn": 3,
+    "engine": {
+      "name": "Stockfish 17",
+      "author": "the Stockfish developers (see AUTHORS file)"
+    },
+    "nodes": 150000,
+    "lines": [
+      [
+        "Rcg3",
+        "Kh4",
+        "Rg8",
+        "Kh5",
+        "Rh3#"
+      ],
+      [
+        "Rgg3",
+        "Kh6",
+        "Rg2",
+        "Kh7",
+        "Rh3#"
+      ],
+      [
+        "Rg2",
+        "Kh4",
+        "Rg8",
+        "Kh5",
+        "Rh3#"
+      ],
+      [
+        "Rg7",
+        "Kh6",
+        "Rg2",
+        "Kh7",
+        "Rh3#"
+      ]
+    ]
+  },
+  {
+    "fen": "8/8/7R/7R/k7/4K3/8/8 w - - 0 1",
+    "mateIn": 2,
+    "engine": {
+      "name": "Stockfish 17",
+      "author": "the Stockfish developers (see AUTHORS file)"
+    },
+    "nodes": 150000,
+    "lines": [
+      [
+        "Rb6",
+        "Ka3",
+        "Ra5#"
+      ]
+    ]
+  },
+  {
+    "fen": "4K3/8/8/8/1r6/1k6/5r2/8 b - - 0 1",
+    "mateIn": 2,
+    "engine": {
+      "name": "Stockfish 17",
+      "author": "the Stockfish developers (see AUTHORS file)"
+    },
+    "nodes": 150000,
+    "lines": [
+      [
+        "Rb7",
+        "Kd8",
+        "Rf8#"
+      ]
+    ]
+  },
+  {
+    "fen": "8/3k4/8/7R/8/8/8/R3K3 w - - 0 1",
+    "mateIn": 4,
+    "engine": {
+      "name": "Stockfish 17",
+      "author": "the Stockfish developers (see AUTHORS file)"
+    },
+    "nodes": 150000,
+    "lines": [
+      [
+        "Ra6",
+        "Kc7",
+        "Rh7+",
+        "Kb8",
+        "Re6",
+        "Kc8",
+        "Re8#"
+      ],
+      [
+        "Rh6",
+        "Kc7",
+        "Ra7+",
+        "Kb8",
+        "Rhh7",
+        "Kc8",
+        "Ra8#"
+      ]
+    ]
+  },
+  {
+    "fen": "8/5k2/1R6/8/8/6K1/8/3R4 w - - 0 1",
+    "mateIn": 3,
+    "engine": {
+      "name": "Stockfish 17",
+      "author": "the Stockfish developers (see AUTHORS file)"
+    },
+    "nodes": 150000,
+    "lines": [
+      [
+        "Rd7+",
+        "Ke8",
+        "Rh7",
+        "Kd8",
+        "Rb8#"
+      ],
+      [
+        "Ra1",
+        "Ke8",
+        "Ra7",
+        "Kf8",
+        "Rb8#"
+      ]
+    ]
+  },
+  {
+    "fen": "8/8/8/7K/8/4r3/4r3/3k4 b - - 0 1",
+    "mateIn": 3,
+    "engine": {
+      "name": "Stockfish 17",
+      "author": "the Stockfish developers (see AUTHORS file)"
+    },
+    "nodes": 150000,
+    "lines": [
+      [
+        "Rg2",
+        "Kh4",
+        "Rg8",
+        "Kh5",
+        "Rh3#"
+      ],
+      [
+        "Rg3",
+        "Kh4",
+        "Reg2",
+        "Kh5",
+        "Rh3#"
+      ]
+    ]
+  },
+  {
+    "fen": "2r5/2r5/8/5k2/8/8/8/7K b - - 0 1",
+    "mateIn": 2,
+    "engine": {
+      "name": "Stockfish 17",
+      "author": "the Stockfish developers (see AUTHORS file)"
+    },
+    "nodes": 150000,
+    "lines": [
+      [
+        "Rg7",
+        "Kh2",
+        "Rh8#"
+      ],
+      [
+        "Rg8",
+        "Kh2",
+        "Rh7#"
+      ]
+    ]
+  },
+  {
+    "fen": "K7/8/8/8/8/4r3/4kr2/8 b - - 0 1",
+    "mateIn": 2,
+    "engine": {
+      "name": "Stockfish 17",
+      "author": "the Stockfish developers (see AUTHORS file)"
+    },
+    "nodes": 150000,
+    "lines": [
+      [
+        "Rf7",
+        "Kb8",
+        "Re8#"
+      ],
+      [
+        "Re7",
+        "Kb8",
+        "Rf8#"
+      ]
+    ]
+  },
+  {
+    "fen": "8/8/7k/8/3R4/3R4/8/K7 w - - 0 1",
+    "mateIn": 3,
+    "engine": {
+      "name": "Stockfish 17",
+      "author": "the Stockfish developers (see AUTHORS file)"
+    },
+    "nodes": 150000,
+    "lines": [
+      [
+        "Rg3",
+        "Kh5",
+        "Rb4",
+        "Kh6",
+        "Rh4#"
+      ],
+      [
+        "Rg4",
+        "Kh5",
+        "Rdg3",
+        "Kh6",
+        "Rh4#"
+      ]
+    ]
+  },
+  {
+    "fen": "R7/3K4/8/7k/1R6/8/8/8 w - - 0 1",
+    "mateIn": 2,
+    "engine": {
+      "name": "Stockfish 17",
+      "author": "the Stockfish developers (see AUTHORS file)"
+    },
+    "nodes": 150000,
+    "lines": [
+      [
+        "Rg8",
+        "Kh6",
+        "Rh4#"
+      ]
+    ]
+  },
+  {
+    "fen": "5k2/8/8/8/2R2K2/8/4R3/8 w - - 0 1",
+    "mateIn": 2,
+    "engine": {
+      "name": "Stockfish 17",
+      "author": "the Stockfish developers (see AUTHORS file)"
+    },
+    "nodes": 150000,
+    "lines": [
+      [
+        "Rc7",
+        "Kg8",
+        "Re8#"
+      ]
+    ]
+  },
+  {
+    "fen": "7k/8/8/7r/4r3/8/8/3K4 b - - 0 1",
+    "mateIn": 2,
+    "engine": {
+      "name": "Stockfish 17",
+      "author": "the Stockfish developers (see AUTHORS file)"
+    },
+    "nodes": 150000,
+    "lines": [
+      [
+        "Rh2",
+        "Kc1",
+        "Re1#"
+      ]
+    ]
+  },
+  {
+    "fen": "8/k7/8/8/5r2/K7/8/7r b - - 0 1",
+    "mateIn": 3,
+    "engine": {
+      "name": "Stockfish 17",
+      "author": "the Stockfish developers (see AUTHORS file)"
+    },
+    "nodes": 150000,
+    "lines": [
+      [
+        "Rh3+",
+        "Kb2",
+        "Rf2+",
+        "Ka1",
+        "Rh1#"
+      ]
+    ]
+  },
+  {
+    "fen": "8/1r3k2/8/8/3r4/8/8/2K5 b - - 0 1",
+    "mateIn": 4,
+    "engine": {
+      "name": "Stockfish 17",
+      "author": "the Stockfish developers (see AUTHORS file)"
+    },
+    "nodes": 150000,
+    "lines": [
+      [
+        "Rd8",
+        "Kc2",
+        "Rc7+",
+        "Kb3",
+        "Rb8+",
+        "Ka2",
+        "Ra7#"
+      ],
+      [
+        "Rc7+",
+        "Kb2",
+        "Rd8",
+        "Kb3",
+        "Rb8+",
+        "Ka2",
+        "Ra7#"
+      ],
+      [
+        "Rd6",
+        "Kc2",
+        "Rc7+",
+        "Kb3",
+        "Rb6+",
+        "Ka2",
+        "Ra7#"
+      ]
+    ]
+  },
+  {
+    "fen": "8/3k3r/8/8/8/8/5r2/1K6 b - - 0 1",
+    "mateIn": 1,
+    "engine": {
+      "name": "Stockfish 17",
+      "author": "the Stockfish developers (see AUTHORS file)"
+    },
+    "nodes": 150000,
+    "lines": [
+      [
+        "Rh1#"
+      ]
+    ]
+  },
+  {
+    "fen": "1K6/8/r7/5k2/8/8/8/7r b - - 0 1",
+    "mateIn": 2,
+    "engine": {
+      "name": "Stockfish 17",
+      "author": "the Stockfish developers (see AUTHORS file)"
+    },
+    "nodes": 150000,
+    "lines": [
+      [
+        "Rh7",
+        "Kc8",
+        "Ra8#"
+      ]
+    ]
+  },
+  {
+    "fen": "3R4/7k/8/R7/8/8/8/2K5 w - - 0 1",
+    "mateIn": 3,
+    "engine": {
+      "name": "Stockfish 17",
+      "author": "the Stockfish developers (see AUTHORS file)"
+    },
+    "nodes": 150000,
+    "lines": [
+      [
+        "Rd6",
+        "Kg7",
+        "Ra7+",
+        "Kf8",
+        "Rd8#"
+      ],
+      [
+        "Ra6",
+        "Kg7",
+        "Rd7+",
+        "Kf8",
+        "Ra8#"
+      ]
+    ]
+  },
+  {
+    "fen": "8/5kr1/2r5/8/8/7K/8/8 b - - 0 1",
+    "mateIn": 1,
+    "engine": {
+      "name": "Stockfish 17",
+      "author": "the Stockfish developers (see AUTHORS file)"
+    },
+    "nodes": 150000,
+    "lines": [
+      [
+        "Rh6#"
+      ]
+    ]
+  },
+  {
+    "fen": "8/2k5/8/8/3r4/8/K7/7r b - - 0 1",
+    "mateIn": 4,
+    "engine": {
+      "name": "Stockfish 17",
+      "author": "the Stockfish developers (see AUTHORS file)"
+    },
+    "nodes": 150000,
+    "lines": [
+      [
+        "Rh3",
+        "Kb2",
+        "Rf4",
+        "Kc2",
+        "Rf2+",
+        "Kd1",
+        "Rh1#"
+      ],
+      [
+        "Rf4",
+        "Kb2",
+        "Rh3",
+        "Kc2",
+        "Rf2+",
+        "Kd1",
+        "Rh1#"
+      ]
+    ]
+  },
+  {
+    "fen": "8/8/8/8/8/4r2r/1K6/6k1 b - - 0 1",
+    "mateIn": 2,
+    "engine": {
+      "name": "Stockfish 17",
+      "author": "the Stockfish developers (see AUTHORS file)"
+    },
+    "nodes": 150000,
+    "lines": [
+      [
+        "Rh2+",
+        "Kc1",
+        "Re1#"
+      ]
+    ]
+  },
+  {
+    "fen": "7K/8/8/8/6r1/6k1/8/r7 b - - 0 1",
+    "mateIn": 1,
+    "engine": {
+      "name": "Stockfish 17",
+      "author": "the Stockfish developers (see AUTHORS file)"
+    },
+    "nodes": 150000,
+    "lines": [
+      [
+        "Rh1#"
+      ]
+    ]
+  },
+  {
+    "fen": "k7/8/2R5/8/8/8/4K1R1/8 w - - 0 1",
+    "mateIn": 3,
+    "engine": {
+      "name": "Stockfish 17",
+      "author": "the Stockfish developers (see AUTHORS file)"
+    },
+    "nodes": 150000,
+    "lines": [
+      [
+        "Rc7",
+        "Kb8",
+        "Rh7",
+        "Ka8",
+        "Rg8#"
+      ],
+      [
+        "Rg7",
+        "Kb8",
+        "Rh7",
+        "Ka8",
+        "Rc8#"
+      ],
+      [
+        "Rh6",
+        "Kb7",
+        "Rg7+",
+        "Kb8",
+        "Rh8#"
+      ],
+      [
+        "Re6",
+        "Kb7",
+        "Rg7+",
+        "Kc8",
+        "Re8#"
+      ]
+    ]
+  },
+  {
+    "fen": "6r1/8/3r4/8/8/8/K3k3/8 b - - 0 1",
+    "mateIn": 2,
+    "engine": {
+      "name": "Stockfish 17",
+      "author": "the Stockfish developers (see AUTHORS file)"
+    },
+    "nodes": 150000,
+    "lines": [
+      [
+        "Rb6",
+        "Ka1",
+        "Ra8#"
+      ],
+      [
+        "Rb8",
+        "Ka3",
+        "Ra6#"
+      ]
+    ]
+  },
+  {
+    "fen": "8/2rr4/8/8/8/7K/8/1k6 b - - 0 1",
+    "mateIn": 3,
+    "engine": {
+      "name": "Stockfish 17",
+      "author": "the Stockfish developers (see AUTHORS file)"
+    },
+    "nodes": 150000,
+    "lines": [
+      [
+        "Rg7",
+        "Kh4",
+        "Rc3",
+        "Kh5",
+        "Rh3#"
+      ]
+    ]
+  },
+  {
+    "fen": "8/7R/6R1/4K3/8/8/8/2k5 w - - 0 1",
+    "mateIn": 2,
+    "engine": {
+      "name": "Stockfish 17",
+      "author": "the Stockfish developers (see AUTHORS file)"
+    },
+    "nodes": 150000,
+    "lines": [
+      [
+        "Rg2",
+        "Kb1",
+        "Rh1#"
+      ],
+      [
+        "Rh2",
+        "Kd1",
+        "Rg1#"
+      ]
+    ]
+  },
+  {
+    "fen": "7k/8/8/8/8/1K6/3R4/R7 w - - 0 1",
+    "mateIn": 2,
+    "engine": {
+      "name": "Stockfish 17",
+      "author": "the Stockfish developers (see AUTHORS file)"
+    },
+    "nodes": 150000,
+    "lines": [
+      [
+        "Rg2",
+        "Kh7",
+        "Rh1#"
+      ],
+      [
+        "Ra7",
+        "Kg8",
+        "Rd8#"
+      ],
+      [
+        "Rd7",
+        "Kg8",
+        "Ra8#"
+      ],
+      [
+        "Rg1",
+        "Kh7",
+        "Rh2#"
+      ]
+    ]
+  },
+  {
+    "fen": "8/6k1/8/1R6/2R5/K7/8/8 w - - 0 1",
+    "mateIn": 3,
+    "engine": {
+      "name": "Stockfish 17",
+      "author": "the Stockfish developers (see AUTHORS file)"
+    },
+    "nodes": 150000,
+    "lines": [
+      [
+        "Rc6",
+        "Kh7",
+        "Rb7+",
+        "Kg8",
+        "Rc8#"
+      ],
+      [
+        "Rb6",
+        "Kh7",
+        "Rc7+",
+        "Kg8",
+        "Rb8#"
+      ]
+    ]
+  },
+  {
+    "fen": "6k1/2R5/8/R7/2K5/8/8/8 w - - 0 1",
+    "mateIn": 1,
+    "engine": {
+      "name": "Stockfish 17",
+      "author": "the Stockfish developers (see AUTHORS file)"
+    },
+    "nodes": 150000,
+    "lines": [
+      [
+        "Ra8#"
+      ]
+    ]
+  },
+  {
+    "fen": "6K1/2k5/5R2/8/1R6/8/8/8 w - - 0 1",
+    "mateIn": 3,
+    "engine": {
+      "name": "Stockfish 17",
+      "author": "the Stockfish developers (see AUTHORS file)"
+    },
+    "nodes": 150000,
+    "lines": [
+      [
+        "Rh4",
+        "Kd8",
+        "Rh7",
+        "Ke8",
+        "Rf8#"
+      ],
+      [
+        "Rg4",
+        "Kd8",
+        "Rg7",
+        "Ke8",
+        "Rf8#"
+      ]
+    ]
+  },
+  {
+    "fen": "k7/7R/8/3R4/8/3K4/8/8 w - - 0 1",
+    "mateIn": 1,
+    "engine": {
+      "name": "Stockfish 17",
+      "author": "the Stockfish developers (see AUTHORS file)"
+    },
+    "nodes": 150000,
+    "lines": [
+      [
+        "Rd8#"
+      ]
+    ]
+  },
+  {
+    "fen": "5k2/6R1/K7/8/8/8/6R1/8 w - - 0 1",
+    "mateIn": 2,
+    "engine": {
+      "name": "Stockfish 17",
+      "author": "the Stockfish developers (see AUTHORS file)"
+    },
+    "nodes": 150000,
+    "lines": [
+      [
+        "Rb7",
+        "Ke8",
+        "Rg8#"
+      ],
+      [
+        "Rc7",
+        "Ke8",
+        "Rg8#"
+      ],
+      [
+        "Ra7",
+        "Ke8",
+        "Rg8#"
+      ],
+      [
+        "Rh7",
+        "Ke8",
+        "Rg8#"
+      ]
+    ]
+  },
+  {
+    "fen": "k2r4/6r1/8/8/2K5/8/8/8 b - - 0 1",
+    "mateIn": 3,
+    "engine": {
+      "name": "Stockfish 17",
+      "author": "the Stockfish developers (see AUTHORS file)"
+    },
+    "nodes": 150000,
+    "lines": [
+      [
+        "Rc7+",
+        "Kb3",
+        "Rb8+",
+        "Ka2",
+        "Ra7#"
+      ]
+    ]
+  },
+  {
+    "fen": "r7/6r1/8/7K/8/8/1k6/8 b - - 0 1",
+    "mateIn": 1,
+    "engine": {
+      "name": "Stockfish 17",
+      "author": "the Stockfish developers (see AUTHORS file)"
+    },
+    "nodes": 150000,
+    "lines": [
+      [
+        "Rh8#"
+      ]
+    ]
+  },
+  {
+    "fen": "k7/7R/3R4/8/4K3/8/8/8 w - - 0 1",
+    "mateIn": 1,
+    "engine": {
+      "name": "Stockfish 17",
+      "author": "the Stockfish developers (see AUTHORS file)"
+    },
+    "nodes": 150000,
+    "lines": [
+      [
+        "Rd8#"
+      ]
+    ]
+  },
+  {
+    "fen": "K7/8/7k/7r/8/8/8/1r6 b - - 0 1",
+    "mateIn": 1,
+    "engine": {
+      "name": "Stockfish 17",
+      "author": "the Stockfish developers (see AUTHORS file)"
+    },
+    "nodes": 150000,
+    "lines": [
+      [
+        "Ra5#"
+      ]
+    ]
+  },
+  {
+    "fen": "7k/1R6/8/3K4/4R3/8/8/8 w - - 0 1",
+    "mateIn": 1,
+    "engine": {
+      "name": "Stockfish 17",
+      "author": "the Stockfish developers (see AUTHORS file)"
+    },
+    "nodes": 150000,
+    "lines": [
+      [
+        "Re8#"
+      ]
+    ]
+  },
+  {
+    "fen": "7k/8/3R4/8/6R1/8/8/5K2 w - - 0 1",
+    "mateIn": 1,
+    "engine": {
+      "name": "Stockfish 17",
+      "author": "the Stockfish developers (see AUTHORS file)"
+    },
+    "nodes": 150000,
+    "lines": [
+      [
+        "Rh6#"
+      ]
+    ]
+  },
+  {
+    "fen": "8/8/2r4k/8/8/8/3r4/6K1 b - - 0 1",
+    "mateIn": 1,
+    "engine": {
+      "name": "Stockfish 17",
+      "author": "the Stockfish developers (see AUTHORS file)"
+    },
+    "nodes": 150000,
+    "lines": [
+      [
+        "Rc1#"
+      ]
+    ]
+  },
+  {
+    "fen": "6k1/4R3/8/8/6K1/8/8/2R5 w - - 0 1",
+    "mateIn": 1,
+    "engine": {
+      "name": "Stockfish 17",
+      "author": "the Stockfish developers (see AUTHORS file)"
+    },
+    "nodes": 150000,
+    "lines": [
+      [
+        "Rc8#"
+      ]
+    ]
+  },
+  {
+    "fen": "5R2/8/k7/8/8/1R6/3K4/8 w - - 0 1",
+    "mateIn": 1,
+    "engine": {
+      "name": "Stockfish 17",
+      "author": "the Stockfish developers (see AUTHORS file)"
+    },
+    "nodes": 150000,
+    "lines": [
+      [
+        "Ra8#"
+      ]
+    ]
+  },
+  {
+    "fen": "7k/1R6/8/8/8/8/2KR4/8 w - - 0 1",
+    "mateIn": 1,
+    "engine": {
+      "name": "Stockfish 17",
+      "author": "the Stockfish developers (see AUTHORS file)"
+    },
+    "nodes": 150000,
+    "lines": [
+      [
+        "Rd8#"
+      ]
+    ]
+  },
+  {
+    "fen": "8/8/2K5/6R1/8/R7/8/7k w - - 0 1",
+    "mateIn": 1,
+    "engine": {
+      "name": "Stockfish 17",
+      "author": "the Stockfish developers (see AUTHORS file)"
+    },
+    "nodes": 150000,
+    "lines": [
+      [
+        "Rh3#"
+      ]
+    ]
+  },
+  {
+    "fen": "4k3/R5R1/8/8/8/8/2K5/8 w - - 0 1",
+    "mateIn": 1,
+    "engine": {
+      "name": "Stockfish 17",
+      "author": "the Stockfish developers (see AUTHORS file)"
+    },
+    "nodes": 150000,
+    "lines": [
+      [
+        "Rg8#"
+      ],
+      [
+        "Ra8#"
+      ]
+    ]
+  },
+  {
+    "fen": "1r6/8/7k/6r1/8/8/8/K7 b - - 0 1",
+    "mateIn": 1,
+    "engine": {
+      "name": "Stockfish 17",
+      "author": "the Stockfish developers (see AUTHORS file)"
+    },
+    "nodes": 150000,
+    "lines": [
+      [
+        "Ra5#"
+      ]
+    ]
+  },
+  {
+    "fen": "7K/2R5/8/8/7k/8/6R1/8 w - - 0 1",
+    "mateIn": 1,
+    "engine": {
+      "name": "Stockfish 17",
+      "author": "the Stockfish developers (see AUTHORS file)"
+    },
+    "nodes": 150000,
+    "lines": [
+      [
+        "Rh7#"
+      ]
+    ]
+  }
+]

@@ -1,0 +1,52 @@
+[
+  {
+    "source": "https://www.pgnmentor.com/players/Anderssen.zip",
+    "archive": "Anderssen.zip",
+    "sha256": "97927f56a2f85a01d66e2f747fc86aa61a1aaab3de45ffb8d44b3eee640cffc0"
+  },
+  {
+    "source": "https://www.pgnmentor.com/players/Aronian.zip",
+    "archive": "Aronian.zip",
+    "sha256": "d9fa17c7a3dab9c76627e93d00bf0c6f70dbe6deb12289b71a4c34ec4601fcc5"
+  },
+  {
+    "source": "https://www.pgnmentor.com/players/Carlsen.zip",
+    "sha256": "29347942a512b260814717592c82cf6f3cd5975925a0b1732ef60f734651553d",
+    "eligibleGames": 7517
+  },
+  {
+    "source": "https://www.pgnmentor.com/players/Caruana.zip",
+    "sha256": "d63c0e697c2dab0b65247cc29f8f03c3b7c1f06d50a48da4f28cf971d89318f9",
+    "eligibleGames": 5933
+  },
+  {
+    "source": "https://www.pgnmentor.com/players/Giri.zip",
+    "archive": "Giri.zip",
+    "sha256": "a0649419c055a45849d000baec27f4008dda69194d99c3524426466dd100aa63"
+  },
+  {
+    "source": "https://www.pgnmentor.com/players/Grischuk.zip",
+    "sha256": "b31b5f6541299ccea3c769c521a1f7b03699bdd87ffb251831baae72f2a99828",
+    "eligibleGames": 5282
+  },
+  {
+    "source": "https://www.pgnmentor.com/players/Ivanchuk.zip",
+    "archive": "Ivanchuk.zip",
+    "sha256": "7ec014b95ad9d5c2540287ad7c53ef1ad8cc7fed76d34ad4ae4a5a6fd31f21d6"
+  },
+  {
+    "source": "https://www.pgnmentor.com/players/Marshall.zip",
+    "archive": "Marshall.zip",
+    "sha256": "01280153412a1bc4c1967c4b0a2ee75897ecbda09caffe740bfc1a8082b7ac68"
+  },
+  {
+    "source": "https://www.pgnmentor.com/players/Morozevich.zip",
+    "archive": "Morozevich.zip",
+    "sha256": "6a5afeb1a4fb3fa7e255cb7327f3de63249d86fd2e166877da0add97d5f57f6d"
+  },
+  {
+    "source": "https://www.pgnmentor.com/players/Nepomniachtchi.zip",
+    "sha256": "eb409fd7d72575dfacd0bc7dddd40046adcebad46181c0684aeb30c859b1971c",
+    "eligibleGames": 4631
+  }
+]

@@ -1,0 +1,4442 @@
+[
+  {
+    "title": "Keres, Paul — Rajkovic, Dusan",
+    "prompt": "Tìm cách đổi quân để chuyển sang tàn cuộc Tốt hòa.",
+    "mode": "interactive",
+    "outcome": "simplification",
+    "goal": "draw",
+    "fen": "8/2Qqk3/6p1/7p/4p2P/6K1/6P1/8 w - - 12 53",
+    "moves": [
+      "Qxd7+",
+      "Kxd7"
+    ],
+    "previousMove": {
+      "fen": "8/2Q1k3/6p1/5q1p/4p2P/6K1/6P1/8 b - - 11 52",
+      "move": "Qd7"
+    },
+    "source": "https://www.pgnmentor.com/players/Keres.zip",
+    "gameReference": {
+      "id": "13d10f054c0cc0c6",
+      "kind": "game",
+      "ply": 104,
+      "branch": 0,
+      "collection": "simplification"
+    },
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "solverMoves": 1,
+      "sacrificeCount": 0,
+      "reason": "Phân mức theo chuỗi đổi quân và vật chất nhường lại trong nhánh đã kiểm tra."
+    },
+    "hints": [
+      "Xem có thể đổi hết các quân còn lại để về tàn cuộc Vua và Tốt không.",
+      "Tính cả nước bắt lại của đối thủ, rồi so sánh vị trí Vua và các Tốt."
+    ],
+    "solution": "Chuỗi đổi loại bỏ các quân còn lại của cả hai bên. Trắng: Vua g3, Tốt g2, h4; Đen: Vua d7, Tốt e4, h5, g6. Trắng đang kém vật chất, nhưng chuỗi đổi đưa về thế có thể giữ hòa nếu chơi chính xác. Nhánh mẫu: Qxd7+ · Kxd7."
+  },
+  {
+    "title": "Spielmann, Rudolf — Eliskases, Erich Gottlieb",
+    "prompt": "Tìm cách đổi quân để chuyển sang tàn cuộc Tốt hòa.",
+    "mode": "interactive",
+    "outcome": "simplification",
+    "goal": "draw",
+    "fen": "8/8/6kq/5p2/7Q/4p1P1/7K/8 w - - 16 65",
+    "moves": [
+      "Qxh6+",
+      "Kxh6"
+    ],
+    "previousMove": {
+      "fen": "8/8/7q/5p1k/7Q/4p1P1/7K/8 b - - 15 64",
+      "move": "Kg6"
+    },
+    "source": "https://www.pgnmentor.com/players/Spielmann.zip",
+    "gameReference": {
+      "id": "2a00c41cac4e90e6",
+      "kind": "game",
+      "ply": 128,
+      "branch": 0,
+      "collection": "simplification"
+    },
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "solverMoves": 1,
+      "sacrificeCount": 0,
+      "reason": "Phân mức theo chuỗi đổi quân và vật chất nhường lại trong nhánh đã kiểm tra."
+    },
+    "hints": [
+      "Xem có thể đổi hết các quân còn lại để về tàn cuộc Vua và Tốt không.",
+      "Tính cả nước bắt lại của đối thủ, rồi so sánh vị trí Vua và các Tốt."
+    ],
+    "solution": "Chuỗi đổi loại bỏ các quân còn lại của cả hai bên. Trắng: Vua h2, Tốt g3; Đen: Vua h6, Tốt e3, f5. Trắng đang kém vật chất, nhưng chuỗi đổi đưa về thế có thể giữ hòa nếu chơi chính xác. Nhánh mẫu: Qxh6+ · Kxh6."
+  },
+  {
+    "title": "Bronstein, David I — Bykhovsky, Anatoly A",
+    "prompt": "Tìm cách đổi quân để chuyển sang tàn cuộc Tốt thắng.",
+    "mode": "interactive",
+    "outcome": "simplification",
+    "goal": "win",
+    "fen": "8/4rk2/4R2p/3p1P2/3P3K/4P3/8/8 w - - 3 56",
+    "moves": [
+      "Rxe7+",
+      "Kxe7"
+    ],
+    "previousMove": {
+      "fen": "8/3r1k2/4R2p/3p1P2/3P3K/4P3/8/8 b - - 2 55",
+      "move": "Re7"
+    },
+    "source": "https://www.pgnmentor.com/players/Bronstein.zip",
+    "gameReference": {
+      "id": "43ad2e4e59d54afb",
+      "kind": "game",
+      "ply": 110,
+      "branch": 0,
+      "collection": "simplification"
+    },
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "solverMoves": 1,
+      "sacrificeCount": 0,
+      "reason": "Phân mức theo chuỗi đổi quân và vật chất nhường lại trong nhánh đã kiểm tra."
+    },
+    "hints": [
+      "Xem có thể đổi hết các quân còn lại để về tàn cuộc Vua và Tốt không.",
+      "Tính cả nước bắt lại của đối thủ, rồi so sánh vị trí Vua và các Tốt."
+    ],
+    "solution": "Chuỗi đổi loại bỏ các quân còn lại của cả hai bên. Trắng: Vua h4, Tốt e3, d4, f5; Đen: Vua e7, Tốt d5, h6. Trắng có thể thắng nếu chơi chính xác. Nhánh mẫu: Rxe7+ · Kxe7."
+  },
+  {
+    "title": "Mieses, Jacques — Marshall, Frank James",
+    "prompt": "Tìm cách đổi quân để chuyển sang tàn cuộc Tốt hòa.",
+    "mode": "interactive",
+    "outcome": "simplification",
+    "goal": "draw",
+    "fen": "8/8/7Q/5p2/2p2q2/6k1/P1K5/8 w - - 0 60",
+    "moves": [
+      "Qxf4+",
+      "Kxf4"
+    ],
+    "previousMove": {
+      "fen": "8/8/7Q/5p2/2p2P2/4q1k1/P1K5/8 b - - 3 59",
+      "move": "Qxf4"
+    },
+    "source": "https://www.pgnmentor.com/players/Marshall.zip",
+    "gameReference": {
+      "id": "6ac86b0dd29915fc",
+      "kind": "game",
+      "ply": 118,
+      "branch": 0,
+      "collection": "simplification"
+    },
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "solverMoves": 1,
+      "sacrificeCount": 0,
+      "reason": "Phân mức theo chuỗi đổi quân và vật chất nhường lại trong nhánh đã kiểm tra."
+    },
+    "hints": [
+      "Xem có thể đổi hết các quân còn lại để về tàn cuộc Vua và Tốt không.",
+      "Tính cả nước bắt lại của đối thủ, rồi so sánh vị trí Vua và các Tốt."
+    ],
+    "solution": "Chuỗi đổi loại bỏ các quân còn lại của cả hai bên. Trắng: Vua c2, Tốt a2; Đen: Vua f4, Tốt c4, f5. Trắng đang kém vật chất, nhưng chuỗi đổi đưa về thế có thể giữ hòa nếu chơi chính xác. Nhánh mẫu: Qxf4+ · Kxf4."
+  },
+  {
+    "title": "Keres, Paul — Flohr, Salo",
+    "prompt": "Tìm cách đổi quân để chuyển sang tàn cuộc Tốt hòa.",
+    "mode": "interactive",
+    "outcome": "simplification",
+    "goal": "draw",
+    "fen": "8/8/2p2p1k/2R1rK1P/8/8/8/8 w - - 4 59",
+    "moves": [
+      "Rxe5",
+      "fxe5"
+    ],
+    "previousMove": {
+      "fen": "8/8/2p1rp1k/2R2K1P/8/8/8/8 b - - 3 58",
+      "move": "Re5+"
+    },
+    "source": "https://www.pgnmentor.com/players/Keres.zip",
+    "gameReference": {
+      "id": "78af65fd8f36d3e7",
+      "kind": "game",
+      "ply": 116,
+      "branch": 0,
+      "collection": "simplification"
+    },
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "solverMoves": 1,
+      "sacrificeCount": 0,
+      "reason": "Phân mức theo chuỗi đổi quân và vật chất nhường lại trong nhánh đã kiểm tra."
+    },
+    "hints": [
+      "Xem có thể đổi hết các quân còn lại để về tàn cuộc Vua và Tốt không.",
+      "Tính cả nước bắt lại của đối thủ, rồi so sánh vị trí Vua và các Tốt."
+    ],
+    "solution": "Chuỗi đổi loại bỏ các quân còn lại của cả hai bên. Trắng: Vua f5, Tốt h5; Đen: Vua h6, Tốt e5, c6. Trắng đang kém vật chất, nhưng chuỗi đổi đưa về thế có thể giữ hòa nếu chơi chính xác. Nhánh mẫu: Rxe5 · fxe5."
+  },
+  {
+    "title": "Kramnik,V — Kasparov,G",
+    "prompt": "Tìm cách đổi quân để chuyển sang tàn cuộc Tốt hòa.",
+    "mode": "interactive",
+    "outcome": "simplification",
+    "goal": "draw",
+    "fen": "8/8/4k3/6p1/6P1/r4RKP/8/8 b - - 6 49",
+    "moves": [
+      "Rxf3+",
+      "Kxf3"
+    ],
+    "previousMove": {
+      "fen": "5R2/8/4k3/6p1/6P1/r5KP/8/8 w - - 5 49",
+      "move": "Rf3"
+    },
+    "source": "https://www.pgnmentor.com/players/Kasparov.zip",
+    "gameReference": {
+      "id": "8632ab94eb8d0222",
+      "kind": "game",
+      "ply": 97,
+      "branch": 0,
+      "collection": "simplification"
+    },
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "solverMoves": 1,
+      "sacrificeCount": 0,
+      "reason": "Phân mức theo chuỗi đổi quân và vật chất nhường lại trong nhánh đã kiểm tra."
+    },
+    "hints": [
+      "Xem có thể đổi hết các quân còn lại để về tàn cuộc Vua và Tốt không.",
+      "Tính cả nước bắt lại của đối thủ, rồi so sánh vị trí Vua và các Tốt."
+    ],
+    "solution": "Chuỗi đổi loại bỏ các quân còn lại của cả hai bên. Trắng: Vua f3, Tốt h3, g4; Đen: Vua e6, Tốt g5. Đen đang kém vật chất, nhưng chuỗi đổi đưa về thế có thể giữ hòa nếu chơi chính xác. Nhánh mẫu: Rxf3+ · Kxf3."
+  },
+  {
+    "title": "Kasparov, Gary — Short, Nigel D",
+    "prompt": "Tìm cách đổi quân để chuyển sang tàn cuộc Tốt hòa.",
+    "mode": "interactive",
+    "outcome": "simplification",
+    "goal": "draw",
+    "fen": "8/3k1p1p/3r1K2/3R4/5P2/8/8/8 w - - 0 53",
+    "moves": [
+      "Rxd6+",
+      "Kxd6"
+    ],
+    "previousMove": {
+      "fen": "8/3k1p1p/r2P1K2/3R4/5P2/8/8/8 b - - 0 52",
+      "move": "Rxd6+"
+    },
+    "source": "https://www.pgnmentor.com/players/Kasparov.zip",
+    "gameReference": {
+      "id": "98ef7dd74e2fcf71",
+      "kind": "game",
+      "ply": 104,
+      "branch": 0,
+      "collection": "simplification"
+    },
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "solverMoves": 1,
+      "sacrificeCount": 0,
+      "reason": "Phân mức theo chuỗi đổi quân và vật chất nhường lại trong nhánh đã kiểm tra."
+    },
+    "hints": [
+      "Xem có thể đổi hết các quân còn lại để về tàn cuộc Vua và Tốt không.",
+      "Tính cả nước bắt lại của đối thủ, rồi so sánh vị trí Vua và các Tốt."
+    ],
+    "solution": "Chuỗi đổi loại bỏ các quân còn lại của cả hai bên. Trắng: Vua f6, Tốt f4; Đen: Vua d6, Tốt f7, h7. Trắng đang kém vật chất, nhưng chuỗi đổi đưa về thế có thể giữ hòa nếu chơi chính xác. Nhánh mẫu: Rxd6+ · Kxd6."
+  },
+  {
+    "title": "Keres, Paul — Richter, Kurt",
+    "prompt": "Tìm cách đổi quân để chuyển sang tàn cuộc Tốt thắng.",
+    "mode": "interactive",
+    "outcome": "simplification",
+    "goal": "win",
+    "fen": "7Q/7p/8/8/5Kp1/8/k6P/q7 w - - 2 54",
+    "moves": [
+      "Qxa1+",
+      "Kxa1"
+    ],
+    "previousMove": {
+      "fen": "7Q/7p/8/8/5Kp1/8/1k5P/q7 b - - 1 53",
+      "move": "Ka2"
+    },
+    "source": "https://www.pgnmentor.com/players/Keres.zip",
+    "gameReference": {
+      "id": "9b4883199798e842",
+      "kind": "game",
+      "ply": 106,
+      "branch": 0,
+      "collection": "simplification"
+    },
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "solverMoves": 1,
+      "sacrificeCount": 0,
+      "reason": "Phân mức theo chuỗi đổi quân và vật chất nhường lại trong nhánh đã kiểm tra."
+    },
+    "hints": [
+      "Xem có thể đổi hết các quân còn lại để về tàn cuộc Vua và Tốt không.",
+      "Tính cả nước bắt lại của đối thủ, rồi so sánh vị trí Vua và các Tốt."
+    ],
+    "solution": "Chuỗi đổi loại bỏ các quân còn lại của cả hai bên. Trắng: Vua f4, Tốt h2; Đen: Vua a1, Tốt g4, h7. Trắng có thể thắng nếu chơi chính xác. Nhánh mẫu: Qxa1+ · Kxa1."
+  },
+  {
+    "title": "Tseshkovsky, Vitaly — Bronstein, David I",
+    "prompt": "Tìm cách đổi quân để chuyển sang tàn cuộc Tốt thắng.",
+    "mode": "interactive",
+    "outcome": "simplification",
+    "goal": "win",
+    "fen": "8/2BK4/p1P5/2P5/6k1/6bp/P7/8 w - - 0 62",
+    "moves": [
+      "Bxg3",
+      "Kxg3"
+    ],
+    "previousMove": {
+      "fen": "8/2BK4/p1P5/2P5/6kp/6b1/P7/8 b - - 0 61",
+      "move": "h3"
+    },
+    "source": "https://www.pgnmentor.com/players/Bronstein.zip",
+    "gameReference": {
+      "id": "9f182ad464670c2e",
+      "kind": "game",
+      "ply": 122,
+      "branch": 0,
+      "collection": "simplification"
+    },
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "solverMoves": 1,
+      "sacrificeCount": 0,
+      "reason": "Phân mức theo chuỗi đổi quân và vật chất nhường lại trong nhánh đã kiểm tra."
+    },
+    "hints": [
+      "Xem có thể đổi hết các quân còn lại để về tàn cuộc Vua và Tốt không.",
+      "Tính cả nước bắt lại của đối thủ, rồi so sánh vị trí Vua và các Tốt."
+    ],
+    "solution": "Chuỗi đổi loại bỏ các quân còn lại của cả hai bên. Trắng: Vua d7, Tốt a2, c5, c6; Đen: Vua g3, Tốt h3, a6. Trắng có thể thắng nếu chơi chính xác. Nhánh mẫu: Bxg3 · Kxg3."
+  },
+  {
+    "title": "Alburt, Lev O — Bronstein, David I",
+    "prompt": "Tìm cách đổi quân để chuyển sang tàn cuộc Tốt thắng.",
+    "mode": "interactive",
+    "outcome": "simplification",
+    "goal": "win",
+    "fen": "5k2/8/1p3p2/1b6/1P6/3N4/1K2P3/8 b - - 0 46",
+    "moves": [
+      "Bxd3",
+      "exd3"
+    ],
+    "previousMove": {
+      "fen": "5k2/8/1p3p2/1b2N3/1P6/3r4/1K2P3/8 w - - 0 46",
+      "move": "Nxd3"
+    },
+    "source": "https://www.pgnmentor.com/players/Bronstein.zip",
+    "gameReference": {
+      "id": "be0662d6307a73d5",
+      "kind": "game",
+      "ply": 91,
+      "branch": 0,
+      "collection": "simplification"
+    },
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "solverMoves": 1,
+      "sacrificeCount": 0,
+      "reason": "Phân mức theo chuỗi đổi quân và vật chất nhường lại trong nhánh đã kiểm tra."
+    },
+    "hints": [
+      "Xem có thể đổi hết các quân còn lại để về tàn cuộc Vua và Tốt không.",
+      "Tính cả nước bắt lại của đối thủ, rồi so sánh vị trí Vua và các Tốt."
+    ],
+    "solution": "Chuỗi đổi loại bỏ các quân còn lại của cả hai bên. Trắng: Vua b2, Tốt d3, b4; Đen: Vua f8, Tốt b6, f6. Đen có thể thắng nếu chơi chính xác. Nhánh mẫu: Bxd3 · exd3."
+  },
+  {
+    "title": "Drimer, Dolfi — Stein, Leonid",
+    "prompt": "Tìm cách đổi quân để chuyển sang tàn cuộc Tốt thắng.",
+    "mode": "interactive",
+    "outcome": "simplification",
+    "goal": "win",
+    "fen": "8/8/5Kp1/6Rp/7P/6r1/6k1/8 b - - 1 73",
+    "moves": [
+      "Rxg5",
+      "hxg5"
+    ],
+    "previousMove": {
+      "fen": "8/8/6p1/4K1Rp/7P/6r1/6k1/8 w - - 0 73",
+      "move": "Kf6"
+    },
+    "source": "https://www.pgnmentor.com/players/Stein.zip",
+    "gameReference": {
+      "id": "e7f6272163cf4c85",
+      "kind": "game",
+      "ply": 145,
+      "branch": 0,
+      "collection": "simplification"
+    },
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "solverMoves": 1,
+      "sacrificeCount": 0,
+      "reason": "Phân mức theo chuỗi đổi quân và vật chất nhường lại trong nhánh đã kiểm tra."
+    },
+    "hints": [
+      "Xem có thể đổi hết các quân còn lại để về tàn cuộc Vua và Tốt không.",
+      "Tính cả nước bắt lại của đối thủ, rồi so sánh vị trí Vua và các Tốt."
+    ],
+    "solution": "Chuỗi đổi loại bỏ các quân còn lại của cả hai bên. Trắng: Vua f6, Tốt g5; Đen: Vua g2, Tốt h5, g6. Đen có thể thắng nếu chơi chính xác. Nhánh mẫu: Rxg5 · hxg5."
+  },
+  {
+    "title": "Canal, Esteban — Spielmann, Rudolf",
+    "prompt": "Tìm cách đổi quân để chuyển sang tàn cuộc Tốt thắng.",
+    "mode": "interactive",
+    "outcome": "simplification",
+    "goal": "win",
+    "fen": "8/1p6/4b3/P1Np1k2/3P3K/8/8/8 w - - 0 54",
+    "moves": [
+      "Nxe6",
+      "Kxe6"
+    ],
+    "previousMove": {
+      "fen": "2b5/1p6/4P3/P1Np1k2/3P3K/8/8/8 b - - 0 53",
+      "move": "Bxe6"
+    },
+    "source": "https://www.pgnmentor.com/players/Spielmann.zip",
+    "gameReference": {
+      "id": "ee1cd051f9dd705d",
+      "kind": "game",
+      "ply": 106,
+      "branch": 0,
+      "collection": "simplification"
+    },
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "solverMoves": 1,
+      "sacrificeCount": 0,
+      "reason": "Phân mức theo chuỗi đổi quân và vật chất nhường lại trong nhánh đã kiểm tra."
+    },
+    "hints": [
+      "Xem có thể đổi hết các quân còn lại để về tàn cuộc Vua và Tốt không.",
+      "Tính cả nước bắt lại của đối thủ, rồi so sánh vị trí Vua và các Tốt."
+    ],
+    "solution": "Chuỗi đổi loại bỏ các quân còn lại của cả hai bên. Trắng: Vua h4, Tốt d4, a5; Đen: Vua e6, Tốt d5, b7. Trắng có thể thắng nếu chơi chính xác. Nhánh mẫu: Nxe6 · Kxe6."
+  },
+  {
+    "title": "Marshall, Frank James — Nimzowitsch, Aaron ",
+    "prompt": "Tìm cách đổi quân để chuyển sang tàn cuộc Tốt hòa.",
+    "mode": "interactive",
+    "outcome": "simplification",
+    "goal": "draw",
+    "fen": "8/8/8/b3p3/4k3/1Pp5/2K5/4B3 w - - 20 77",
+    "moves": [
+      "Bxc3",
+      "Bxc3",
+      "Kxc3"
+    ],
+    "previousMove": {
+      "fen": "8/8/8/b2kp3/8/1Pp5/2K5/4B3 b - - 19 76",
+      "move": "Ke4"
+    },
+    "source": "https://www.pgnmentor.com/players/Marshall.zip",
+    "gameReference": {
+      "id": "0ef6f389b234c775",
+      "kind": "game",
+      "ply": 152,
+      "branch": 0,
+      "collection": "simplification"
+    },
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "solverMoves": 2,
+      "sacrificeCount": 0,
+      "reason": "Phân mức theo chuỗi đổi quân và vật chất nhường lại trong nhánh đã kiểm tra."
+    },
+    "hints": [
+      "Xem có thể đổi hết các quân còn lại để về tàn cuộc Vua và Tốt không.",
+      "Tính cả nước bắt lại của đối thủ, rồi so sánh vị trí Vua và các Tốt."
+    ],
+    "solution": "Chuỗi đổi loại bỏ các quân còn lại của cả hai bên. Trắng: Vua c3, Tốt b3; Đen: Vua e4, Tốt e5. Trắng đang kém vật chất, nhưng chuỗi đổi đưa về thế có thể giữ hòa nếu chơi chính xác. Nhánh mẫu: Bxc3 · Bxc3 · Kxc3."
+  },
+  {
+    "title": "Alekhine, Alexander — Vasquez",
+    "prompt": "Tìm cách đổi quân để chuyển sang tàn cuộc Tốt thắng.",
+    "mode": "interactive",
+    "outcome": "simplification",
+    "goal": "win",
+    "fen": "8/6p1/5nKp/8/3p4/2k2P2/8/2B5 b - - 5 58",
+    "moves": [
+      "Kc2",
+      "Bxh6",
+      "gxh6",
+      "Kxf6"
+    ],
+    "previousMove": {
+      "fen": "8/6p1/5n1p/5K2/3p4/2k2P2/8/2B5 w - - 4 58",
+      "move": "Kg6"
+    },
+    "source": "https://www.pgnmentor.com/players/Alekhine.zip",
+    "gameReference": {
+      "id": "27992175cd34649f",
+      "kind": "game",
+      "ply": 115,
+      "branch": 0,
+      "collection": "simplification"
+    },
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "solverMoves": 2,
+      "sacrificeCount": 0,
+      "reason": "Phân mức theo chuỗi đổi quân và vật chất nhường lại trong nhánh đã kiểm tra."
+    },
+    "hints": [
+      "Xem có thể đổi hết các quân còn lại để về tàn cuộc Vua và Tốt không.",
+      "Tính cả nước bắt lại của đối thủ, rồi so sánh vị trí Vua và các Tốt."
+    ],
+    "solution": "Chuỗi đổi loại bỏ các quân còn lại của cả hai bên. Trắng: Vua f6, Tốt f3; Đen: Vua c2, Tốt d4, h6. Đen có thể thắng nếu chơi chính xác. Nhánh mẫu: Kc2 · Bxh6 · gxh6 · Kxf6."
+  },
+  {
+    "title": "Rustemov,A — Jobava,Ba",
+    "prompt": "Tìm cách đổi quân để chuyển sang tàn cuộc Tốt hòa.",
+    "mode": "interactive",
+    "outcome": "simplification",
+    "goal": "draw",
+    "fen": "Q7/8/8/8/1k3q2/6p1/6K1/8 w - - 2 55",
+    "moves": [
+      "Qf3",
+      "Qxf3+",
+      "Kxf3"
+    ],
+    "previousMove": {
+      "fen": "Q7/8/8/8/k4q2/6p1/6K1/8 b - - 1 54",
+      "move": "Kb4"
+    },
+    "source": "https://www.pgnmentor.com/players/Jobava.zip",
+    "gameReference": {
+      "id": "38794dd20b517602",
+      "kind": "game",
+      "ply": 108,
+      "branch": 0,
+      "collection": "simplification"
+    },
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "solverMoves": 2,
+      "sacrificeCount": 0,
+      "reason": "Phân mức theo chuỗi đổi quân và vật chất nhường lại trong nhánh đã kiểm tra."
+    },
+    "hints": [
+      "Xem có thể đổi hết các quân còn lại để về tàn cuộc Vua và Tốt không.",
+      "Tính cả nước bắt lại của đối thủ, rồi so sánh vị trí Vua và các Tốt."
+    ],
+    "solution": "Chuỗi đổi loại bỏ các quân còn lại của cả hai bên. Trắng: Vua f3, không còn Tốt; Đen: Vua b4, Tốt g3. Trắng đang kém vật chất, nhưng chuỗi đổi đưa về thế có thể giữ hòa nếu chơi chính xác. Nhánh mẫu: Qf3 · Qxf3+ · Kxf3."
+  },
+  {
+    "title": "Aronian,L — Giri,A",
+    "prompt": "Tìm cách đổi quân để chuyển sang tàn cuộc Tốt thắng.",
+    "mode": "interactive",
+    "outcome": "simplification",
+    "goal": "win",
+    "fen": "8/6p1/7k/3p1Q2/3P1P1q/8/5PK1/8 w - - 3 60",
+    "moves": [
+      "Qh3",
+      "Kh5",
+      "Qxh4+",
+      "Kxh4"
+    ],
+    "previousMove": {
+      "fen": "8/6pk/8/3p1Q2/3P1P1q/8/5PK1/8 b - - 2 59",
+      "move": "Kh6"
+    },
+    "source": "https://www.pgnmentor.com/players/Aronian.zip",
+    "gameReference": {
+      "id": "5e745499ed1d7d45",
+      "kind": "game",
+      "ply": 118,
+      "branch": 0,
+      "collection": "simplification"
+    },
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "solverMoves": 2,
+      "sacrificeCount": 0,
+      "reason": "Phân mức theo chuỗi đổi quân và vật chất nhường lại trong nhánh đã kiểm tra."
+    },
+    "hints": [
+      "Xem có thể đổi hết các quân còn lại để về tàn cuộc Vua và Tốt không.",
+      "Tính cả nước bắt lại của đối thủ, rồi so sánh vị trí Vua và các Tốt."
+    ],
+    "solution": "Chuỗi đổi loại bỏ các quân còn lại của cả hai bên. Trắng: Vua g2, Tốt f2, d4, f4; Đen: Vua h4, Tốt d5, g7. Trắng có thể thắng nếu chơi chính xác. Nhánh mẫu: Qh3 · Kh5 · Qxh4+ · Kxh4."
+  },
+  {
+    "title": "Kasparov, Gary — Salov, Valery",
+    "prompt": "Tìm cách đổi quân để chuyển sang tàn cuộc Tốt hòa.",
+    "mode": "interactive",
+    "outcome": "simplification",
+    "goal": "draw",
+    "fen": "8/8/3r3p/1p1Pk2P/8/3RK3/P7/8 b - - 0 54",
+    "moves": [
+      "Rxd5",
+      "Rxd5+",
+      "Kxd5"
+    ],
+    "previousMove": {
+      "fen": "8/8/3r3p/1p1Pk3/7P/3RK3/P7/8 w - - 1 54",
+      "move": "h5"
+    },
+    "source": "https://www.pgnmentor.com/players/Kasparov.zip",
+    "gameReference": {
+      "id": "6f413ff29a0135c7",
+      "kind": "game",
+      "ply": 107,
+      "branch": 0,
+      "collection": "simplification"
+    },
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "solverMoves": 2,
+      "sacrificeCount": 0,
+      "reason": "Phân mức theo chuỗi đổi quân và vật chất nhường lại trong nhánh đã kiểm tra."
+    },
+    "hints": [
+      "Xem có thể đổi hết các quân còn lại để về tàn cuộc Vua và Tốt không.",
+      "Tính cả nước bắt lại của đối thủ, rồi so sánh vị trí Vua và các Tốt."
+    ],
+    "solution": "Chuỗi đổi loại bỏ các quân còn lại của cả hai bên. Trắng: Vua e3, Tốt a2, h5; Đen: Vua d5, Tốt b5, h6. Đen đang kém vật chất, nhưng chuỗi đổi đưa về thế có thể giữ hòa nếu chơi chính xác. Nhánh mẫu: Rxd5 · Rxd5+ · Kxd5."
+  },
+  {
+    "title": "Norcia, Federico — Keres, Paul",
+    "prompt": "Tìm cách đổi quân để chuyển sang tàn cuộc Tốt thắng.",
+    "mode": "interactive",
+    "outcome": "simplification",
+    "goal": "win",
+    "fen": "8/5pk1/2Q3p1/7p/8/1q4PK/7P/8 b - - 0 45",
+    "moves": [
+      "Qe6+",
+      "Qxe6",
+      "fxe6"
+    ],
+    "previousMove": {
+      "fen": "8/5pk1/2p3p1/2Q4p/8/1q4PK/7P/8 w - - 2 45",
+      "move": "Qxc6"
+    },
+    "source": "https://www.pgnmentor.com/players/Keres.zip",
+    "gameReference": {
+      "id": "72256c8e26a223f6",
+      "kind": "game",
+      "ply": 89,
+      "branch": 0,
+      "collection": "simplification"
+    },
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "solverMoves": 2,
+      "sacrificeCount": 0,
+      "reason": "Phân mức theo chuỗi đổi quân và vật chất nhường lại trong nhánh đã kiểm tra."
+    },
+    "hints": [
+      "Xem có thể đổi hết các quân còn lại để về tàn cuộc Vua và Tốt không.",
+      "Tính cả nước bắt lại của đối thủ, rồi so sánh vị trí Vua và các Tốt."
+    ],
+    "solution": "Chuỗi đổi loại bỏ các quân còn lại của cả hai bên. Trắng: Vua h3, Tốt h2, g3; Đen: Vua g7, Tốt h5, e6, g6. Đen có thể thắng nếu chơi chính xác. Nhánh mẫu: Qe6+ · Qxe6 · fxe6."
+  },
+  {
+    "title": "Ekstrom, Folke — Keres, Paul",
+    "prompt": "Tìm cách đổi quân để chuyển sang tàn cuộc Tốt thắng.",
+    "mode": "interactive",
+    "outcome": "simplification",
+    "goal": "win",
+    "fen": "8/8/8/p1Qp3p/3K4/5P2/k6P/1q6 b - - 1 42",
+    "moves": [
+      "Qg1+",
+      "Kxd5",
+      "Qxc5+",
+      "Kxc5"
+    ],
+    "previousMove": {
+      "fen": "5Q2/8/8/p2p3p/3K4/5P2/k6P/1q6 w - - 0 42",
+      "move": "Qc5"
+    },
+    "source": "https://www.pgnmentor.com/players/Keres.zip",
+    "gameReference": {
+      "id": "75dbd44afbfb0b0f",
+      "kind": "game",
+      "ply": 83,
+      "branch": 0,
+      "collection": "simplification"
+    },
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "solverMoves": 2,
+      "sacrificeCount": 0,
+      "reason": "Phân mức theo chuỗi đổi quân và vật chất nhường lại trong nhánh đã kiểm tra."
+    },
+    "hints": [
+      "Xem có thể đổi hết các quân còn lại để về tàn cuộc Vua và Tốt không.",
+      "Tính cả nước bắt lại của đối thủ, rồi so sánh vị trí Vua và các Tốt."
+    ],
+    "solution": "Chuỗi đổi loại bỏ các quân còn lại của cả hai bên. Trắng: Vua c5, Tốt h2, f3; Đen: Vua a2, Tốt a5, h5. Đen có thể thắng nếu chơi chính xác. Nhánh mẫu: Qg1+ · Kxd5 · Qxc5+ · Kxc5."
+  },
+  {
+    "title": "Michel, Walter — Spielmann, Rudolf",
+    "prompt": "Tìm cách đổi quân để chuyển sang tàn cuộc Tốt hòa.",
+    "mode": "interactive",
+    "outcome": "simplification",
+    "goal": "draw",
+    "fen": "8/7p/1k4p1/1P4R1/7P/1r4P1/5K2/8 b - - 6 49",
+    "moves": [
+      "Rxb5",
+      "Rxb5+",
+      "Kxb5"
+    ],
+    "previousMove": {
+      "fen": "8/7p/1k4p1/1P4R1/7P/1r4P1/4K3/8 w - - 5 49",
+      "move": "Kf2"
+    },
+    "source": "https://www.pgnmentor.com/players/Spielmann.zip",
+    "gameReference": {
+      "id": "89eff12996e5e506",
+      "kind": "game",
+      "ply": 97,
+      "branch": 0,
+      "collection": "simplification"
+    },
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "solverMoves": 2,
+      "sacrificeCount": 0,
+      "reason": "Phân mức theo chuỗi đổi quân và vật chất nhường lại trong nhánh đã kiểm tra."
+    },
+    "hints": [
+      "Xem có thể đổi hết các quân còn lại để về tàn cuộc Vua và Tốt không.",
+      "Tính cả nước bắt lại của đối thủ, rồi so sánh vị trí Vua và các Tốt."
+    ],
+    "solution": "Chuỗi đổi loại bỏ các quân còn lại của cả hai bên. Trắng: Vua f2, Tốt g3, h4; Đen: Vua b5, Tốt g6, h7. Đen đang kém vật chất, nhưng chuỗi đổi đưa về thế có thể giữ hòa nếu chơi chính xác. Nhánh mẫu: Rxb5 · Rxb5+ · Kxb5."
+  },
+  {
+    "title": "Bronstein, David I — Radovici, Corvin",
+    "prompt": "Tìm cách đổi quân để chuyển sang tàn cuộc Tốt thắng.",
+    "mode": "interactive",
+    "outcome": "simplification",
+    "goal": "win",
+    "fen": "1R6/5p2/5K2/5P2/2r5/2k5/1p6/8 b - - 2 72",
+    "moves": [
+      "Rb4",
+      "Rxb4",
+      "Kxb4"
+    ],
+    "previousMove": {
+      "fen": "1R6/5p2/8/4KP2/2r5/2k5/1p6/8 w - - 1 72",
+      "move": "Kf6"
+    },
+    "source": "https://www.pgnmentor.com/players/Bronstein.zip",
+    "gameReference": {
+      "id": "dd93017373023742",
+      "kind": "game",
+      "ply": 143,
+      "branch": 0,
+      "collection": "simplification"
+    },
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "solverMoves": 2,
+      "sacrificeCount": 0,
+      "reason": "Phân mức theo chuỗi đổi quân và vật chất nhường lại trong nhánh đã kiểm tra."
+    },
+    "hints": [
+      "Xem có thể đổi hết các quân còn lại để về tàn cuộc Vua và Tốt không.",
+      "Tính cả nước bắt lại của đối thủ, rồi so sánh vị trí Vua và các Tốt."
+    ],
+    "solution": "Chuỗi đổi loại bỏ các quân còn lại của cả hai bên. Trắng: Vua f6, Tốt f5; Đen: Vua b4, Tốt b2, f7. Đen có thể thắng nếu chơi chính xác. Nhánh mẫu: Rb4 · Rxb4 · Kxb4."
+  },
+  {
+    "title": "Spielmann, Rudolf — Steiner, Endre",
+    "prompt": "Tìm cách đổi quân để chuyển sang tàn cuộc Tốt thắng.",
+    "mode": "interactive",
+    "outcome": "simplification",
+    "goal": "win",
+    "fen": "8/5p2/5k2/2R2rp1/2K5/1P6/2P5/8 b - - 0 45",
+    "moves": [
+      "g4",
+      "Rxf5+",
+      "Kxf5"
+    ],
+    "previousMove": {
+      "fen": "8/5p2/5k2/R1p2rp1/2K5/1P6/2P5/8 w - - 0 45",
+      "move": "Rxc5"
+    },
+    "source": "https://www.pgnmentor.com/players/Spielmann.zip",
+    "gameReference": {
+      "id": "3ff437b31a5310dd",
+      "kind": "game",
+      "ply": 89,
+      "branch": 0,
+      "collection": "simplification"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "solverMoves": 2,
+      "sacrificeCount": 0,
+      "reason": "Phân mức theo chuỗi đổi quân và vật chất nhường lại trong nhánh đã kiểm tra."
+    },
+    "hints": [
+      "Xem có thể đổi hết các quân còn lại để về tàn cuộc Vua và Tốt không.",
+      "Tính cả nước bắt lại của đối thủ, rồi so sánh vị trí Vua và các Tốt."
+    ],
+    "solution": "Chuỗi đổi loại bỏ các quân còn lại của cả hai bên. Trắng: Vua c4, Tốt c2, b3; Đen: Vua f5, Tốt g4, f7. Đen có thể thắng nếu chơi chính xác. Nhánh mẫu: g4 · Rxf5+ · Kxf5."
+  },
+  {
+    "title": "Rubinstein, Akiba — Duras, Oldrich",
+    "prompt": "Tìm cách đổi quân để chuyển sang tàn cuộc Tốt thắng.",
+    "mode": "interactive",
+    "outcome": "simplification",
+    "goal": "win",
+    "fen": "8/6k1/p3Qpq1/P4R1P/8/6PK/4r3/8 w - - 3 65",
+    "moves": [
+      "Qxe2",
+      "Qxf5+",
+      "Qg4+",
+      "Qxg4+",
+      "Kxg4"
+    ],
+    "previousMove": {
+      "fen": "8/6k1/p3Qpq1/P4R1P/8/6PK/1r6/8 b - - 2 64",
+      "move": "Re2"
+    },
+    "source": "https://www.pgnmentor.com/players/Rubinstein.zip",
+    "gameReference": {
+      "id": "0520572a6c8c5e62",
+      "kind": "game",
+      "ply": 128,
+      "branch": 0,
+      "collection": "simplification"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "solverMoves": 3,
+      "sacrificeCount": 0,
+      "reason": "Phân mức theo chuỗi đổi quân và vật chất nhường lại trong nhánh đã kiểm tra."
+    },
+    "hints": [
+      "Xem có thể đổi hết các quân còn lại để về tàn cuộc Vua và Tốt không.",
+      "Tính cả nước bắt lại của đối thủ, rồi so sánh vị trí Vua và các Tốt."
+    ],
+    "solution": "Chuỗi đổi loại bỏ các quân còn lại của cả hai bên. Trắng: Vua g4, Tốt g3, a5, h5; Đen: Vua g7, Tốt a6, f6. Trắng có thể thắng nếu chơi chính xác. Nhánh mẫu: Qxe2 · Qxf5+ · Qg4+ · Qxg4+ · Kxg4."
+  },
+  {
+    "title": "Martinez Alcantara,Jose Eduardo — Carlsen,M",
+    "prompt": "Tìm cách đổi quân để chuyển sang tàn cuộc Tốt thắng.",
+    "mode": "interactive",
+    "outcome": "simplification",
+    "goal": "win",
+    "fen": "2K5/8/2k5/2q5/8/5Q2/7p/8 b - - 51 101",
+    "moves": [
+      "Kd6+",
+      "Kb7",
+      "Qd5+",
+      "Qxd5+",
+      "Kxd5"
+    ],
+    "previousMove": {
+      "fen": "2K5/8/2k5/2q5/8/2Q5/7p/8 w - - 50 101",
+      "move": "Qf3+"
+    },
+    "source": "https://www.pgnmentor.com/players/Carlsen.zip",
+    "gameReference": {
+      "id": "11ec3ca1309a737c",
+      "kind": "game",
+      "ply": 201,
+      "branch": 0,
+      "collection": "simplification"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "solverMoves": 3,
+      "sacrificeCount": 0,
+      "reason": "Phân mức theo chuỗi đổi quân và vật chất nhường lại trong nhánh đã kiểm tra."
+    },
+    "hints": [
+      "Xem có thể đổi hết các quân còn lại để về tàn cuộc Vua và Tốt không.",
+      "Tính cả nước bắt lại của đối thủ, rồi so sánh vị trí Vua và các Tốt."
+    ],
+    "solution": "Chuỗi đổi loại bỏ các quân còn lại của cả hai bên. Trắng: Vua b7, không còn Tốt; Đen: Vua d5, Tốt h2. Đen có thể thắng nếu chơi chính xác. Nhánh mẫu: Kd6+ · Kb7 · Qd5+ · Qxd5+ · Kxd5."
+  },
+  {
+    "title": "Blackburne, Joseph Henry — Weiss, Miksa",
+    "prompt": "Tìm cách đổi quân để chuyển sang tàn cuộc Tốt thắng.",
+    "mode": "interactive",
+    "outcome": "simplification",
+    "goal": "win",
+    "fen": "7Q/8/2p5/8/pP6/Pk1K4/5q2/8 b - - 3 63",
+    "moves": [
+      "Qc2+",
+      "Ke3",
+      "Qc3+",
+      "Qxc3+",
+      "Kxc3"
+    ],
+    "previousMove": {
+      "fen": "7Q/8/2p5/8/pP6/Pk6/3K1q2/8 w - - 2 63",
+      "move": "Kd3"
+    },
+    "source": "https://www.pgnmentor.com/players/Blackburne.zip",
+    "gameReference": {
+      "id": "164a7e33aef61e2e",
+      "kind": "game",
+      "ply": 125,
+      "branch": 0,
+      "collection": "simplification"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "solverMoves": 3,
+      "sacrificeCount": 0,
+      "reason": "Phân mức theo chuỗi đổi quân và vật chất nhường lại trong nhánh đã kiểm tra."
+    },
+    "hints": [
+      "Xem có thể đổi hết các quân còn lại để về tàn cuộc Vua và Tốt không.",
+      "Tính cả nước bắt lại của đối thủ, rồi so sánh vị trí Vua và các Tốt."
+    ],
+    "solution": "Chuỗi đổi loại bỏ các quân còn lại của cả hai bên. Trắng: Vua e3, Tốt a3, b4; Đen: Vua c3, Tốt a4, c6. Đen có thể thắng nếu chơi chính xác. Nhánh mẫu: Qc2+ · Ke3 · Qc3+ · Qxc3+ · Kxc3."
+  },
+  {
+    "title": "Alekhine, Alexander — Nielsen, Bjorn",
+    "prompt": "Tìm cách đổi quân để chuyển sang tàn cuộc Tốt thắng.",
+    "mode": "interactive",
+    "outcome": "simplification",
+    "goal": "win",
+    "fen": "6k1/5pp1/5q1p/8/4K3/2Pp3P/3Q4/8 b - - 2 61",
+    "moves": [
+      "Qe6+",
+      "Kxd3",
+      "Qd5+",
+      "Ke3",
+      "Qxd2+",
+      "Kxd2"
+    ],
+    "previousMove": {
+      "fen": "6k1/5pp1/5q1p/8/8/2Pp1K1P/3Q4/8 w - - 1 61",
+      "move": "Ke4"
+    },
+    "source": "https://www.pgnmentor.com/players/Alekhine.zip",
+    "gameReference": {
+      "id": "2619f16ed3295923",
+      "kind": "game",
+      "ply": 121,
+      "branch": 0,
+      "collection": "simplification"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "solverMoves": 3,
+      "sacrificeCount": 0,
+      "reason": "Phân mức theo chuỗi đổi quân và vật chất nhường lại trong nhánh đã kiểm tra."
+    },
+    "hints": [
+      "Xem có thể đổi hết các quân còn lại để về tàn cuộc Vua và Tốt không.",
+      "Tính cả nước bắt lại của đối thủ, rồi so sánh vị trí Vua và các Tốt."
+    ],
+    "solution": "Chuỗi đổi loại bỏ các quân còn lại của cả hai bên. Trắng: Vua d2, Tốt c3, h3; Đen: Vua g8, Tốt h6, f7, g7. Đen có thể thắng nếu chơi chính xác. Nhánh mẫu: Qe6+ · Kxd3 · Qd5+ · Ke3 · Qxd2+ · Kxd2."
+  },
+  {
+    "title": "Carlsen,M — Nakamura,Hi",
+    "prompt": "Tìm cách đổi quân để chuyển sang tàn cuộc Tốt hòa.",
+    "mode": "interactive",
+    "outcome": "simplification",
+    "goal": "draw",
+    "fen": "6k1/6p1/8/8/p4P2/P3K3/1P5r/3R4 b - - 0 50",
+    "moves": [
+      "Rxb2",
+      "Rd4",
+      "Rb3+",
+      "Rd3",
+      "Rxd3+",
+      "Kxd3"
+    ],
+    "previousMove": {
+      "fen": "6k1/3R2p1/8/8/p4P2/P3K3/1P5r/3n4 w - - 0 50",
+      "move": "Rxd1"
+    },
+    "source": "https://www.pgnmentor.com/players/Carlsen.zip",
+    "gameReference": {
+      "id": "265cc936971faa97",
+      "kind": "game",
+      "ply": 99,
+      "branch": 0,
+      "collection": "simplification"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "solverMoves": 3,
+      "sacrificeCount": 0,
+      "reason": "Phân mức theo chuỗi đổi quân và vật chất nhường lại trong nhánh đã kiểm tra."
+    },
+    "hints": [
+      "Xem có thể đổi hết các quân còn lại để về tàn cuộc Vua và Tốt không.",
+      "Tính cả nước bắt lại của đối thủ, rồi so sánh vị trí Vua và các Tốt."
+    ],
+    "solution": "Chuỗi đổi loại bỏ các quân còn lại của cả hai bên. Trắng: Vua d3, Tốt a3, f4; Đen: Vua g8, Tốt a4, g7. Đen đang kém vật chất, nhưng chuỗi đổi đưa về thế có thể giữ hòa nếu chơi chính xác. Nhánh mẫu: Rxb2 · Rd4 · Rb3+ · Rd3 · Rxd3+ · Kxd3."
+  },
+  {
+    "title": "Eynullayev,Atilla — Ivanchuk,V",
+    "prompt": "Tìm cách đổi quân để chuyển sang tàn cuộc Tốt thắng.",
+    "mode": "interactive",
+    "outcome": "simplification",
+    "goal": "win",
+    "fen": "8/8/4p2B/7p/1np4P/3k1P2/2p5/2K5 b - - 1 58",
+    "moves": [
+      "Na2+",
+      "Kb2",
+      "c1=Q+",
+      "Bxc1",
+      "Nxc1",
+      "Kxc1"
+    ],
+    "previousMove": {
+      "fen": "8/8/4p3/6Bp/1np4P/3k1P2/2p5/2K5 w - - 0 58",
+      "move": "Bh6"
+    },
+    "source": "https://www.pgnmentor.com/players/Ivanchuk.zip",
+    "gameReference": {
+      "id": "2a0b88cb6d7e366c",
+      "kind": "game",
+      "ply": 115,
+      "branch": 0,
+      "collection": "simplification"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "solverMoves": 3,
+      "sacrificeCount": 0,
+      "reason": "Phân mức theo chuỗi đổi quân và vật chất nhường lại trong nhánh đã kiểm tra."
+    },
+    "hints": [
+      "Xem có thể đổi hết các quân còn lại để về tàn cuộc Vua và Tốt không.",
+      "Tính cả nước bắt lại của đối thủ, rồi so sánh vị trí Vua và các Tốt."
+    ],
+    "solution": "Chuỗi đổi loại bỏ các quân còn lại của cả hai bên. Trắng: Vua c1, Tốt f3, h4; Đen: Vua d3, Tốt c4, h5, e6. Đen có thể thắng nếu chơi chính xác. Nhánh mẫu: Na2+ · Kb2 · c1=Q+ · Bxc1 · Nxc1 · Kxc1."
+  },
+  {
+    "title": "Vachier Lagrave,M — Aronian,L",
+    "prompt": "Tìm cách đổi quân để chuyển sang tàn cuộc Tốt thắng.",
+    "mode": "interactive",
+    "outcome": "simplification",
+    "goal": "win",
+    "fen": "1k1q4/2p5/1P4P1/4Q3/3P4/8/p5PK/8 w - - 2 44",
+    "moves": [
+      "bxc7+",
+      "Qxc7",
+      "g7",
+      "Qxe5+",
+      "dxe5"
+    ],
+    "previousMove": {
+      "fen": "1k4q1/2p5/1P4P1/4Q3/3P4/8/p5PK/8 b - - 1 43",
+      "move": "Qd8"
+    },
+    "source": "https://www.pgnmentor.com/players/Aronian.zip",
+    "gameReference": {
+      "id": "3496278112019274",
+      "kind": "game",
+      "ply": 86,
+      "branch": 0,
+      "collection": "simplification"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "solverMoves": 3,
+      "sacrificeCount": 0,
+      "reason": "Phân mức theo chuỗi đổi quân và vật chất nhường lại trong nhánh đã kiểm tra."
+    },
+    "hints": [
+      "Xem có thể đổi hết các quân còn lại để về tàn cuộc Vua và Tốt không.",
+      "Tính cả nước bắt lại của đối thủ, rồi so sánh vị trí Vua và các Tốt."
+    ],
+    "solution": "Chuỗi đổi loại bỏ các quân còn lại của cả hai bên. Trắng: Vua h2, Tốt g2, e5, g7; Đen: Vua b8, Tốt a2. Trắng có thể thắng nếu chơi chính xác. Nhánh mẫu: bxc7+ · Qxc7 · g7 · Qxe5+ · dxe5."
+  },
+  {
+    "title": "Neumann, Gustav Richard — Anderssen, Adolf",
+    "prompt": "Tìm cách đổi quân để chuyển sang tàn cuộc Tốt thắng.",
+    "mode": "interactive",
+    "outcome": "simplification",
+    "goal": "win",
+    "fen": "Q7/8/4p3/5p2/5P2/8/5KP1/2qk4 w - - 0 50",
+    "moves": [
+      "Qf3+",
+      "Kc2",
+      "Qc6+",
+      "Kd1",
+      "Qxc1+",
+      "Kxc1"
+    ],
+    "previousMove": {
+      "fen": "Q7/8/4p3/5p2/5P2/8/2p2KP1/3k4 b - - 0 49",
+      "move": "c1=Q"
+    },
+    "source": "https://www.pgnmentor.com/players/Anderssen.zip",
+    "gameReference": {
+      "id": "491cd4f97df78326",
+      "kind": "game",
+      "ply": 98,
+      "branch": 0,
+      "collection": "simplification"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "solverMoves": 3,
+      "sacrificeCount": 0,
+      "reason": "Phân mức theo chuỗi đổi quân và vật chất nhường lại trong nhánh đã kiểm tra."
+    },
+    "hints": [
+      "Xem có thể đổi hết các quân còn lại để về tàn cuộc Vua và Tốt không.",
+      "Tính cả nước bắt lại của đối thủ, rồi so sánh vị trí Vua và các Tốt."
+    ],
+    "solution": "Chuỗi đổi loại bỏ các quân còn lại của cả hai bên. Trắng: Vua f2, Tốt g2, f4; Đen: Vua c1, Tốt f5, e6. Trắng có thể thắng nếu chơi chính xác. Nhánh mẫu: Qf3+ · Kc2 · Qc6+ · Kd1 · Qxc1+ · Kxc1."
+  },
+  {
+    "title": "Harika,D — Shirov,A",
+    "prompt": "Tìm cách đổi quân để chuyển sang tàn cuộc Tốt hòa.",
+    "mode": "interactive",
+    "outcome": "simplification",
+    "goal": "draw",
+    "fen": "5R2/4k3/8/4p1q1/8/5R2/6PK/8 b - - 10 85",
+    "moves": [
+      "Qh6+",
+      "Kg1",
+      "Qxf8",
+      "Rxf8",
+      "Kxf8"
+    ],
+    "previousMove": {
+      "fen": "5R2/4k3/8/4p1q1/8/5RK1/6P1/8 w - - 9 85",
+      "move": "Kh2"
+    },
+    "source": "https://www.pgnmentor.com/players/Shirov.zip",
+    "gameReference": {
+      "id": "565c191407c1d99e",
+      "kind": "game",
+      "ply": 169,
+      "branch": 0,
+      "collection": "simplification"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "solverMoves": 3,
+      "sacrificeCount": 0,
+      "reason": "Phân mức theo chuỗi đổi quân và vật chất nhường lại trong nhánh đã kiểm tra."
+    },
+    "hints": [
+      "Xem có thể đổi hết các quân còn lại để về tàn cuộc Vua và Tốt không.",
+      "Tính cả nước bắt lại của đối thủ, rồi so sánh vị trí Vua và các Tốt."
+    ],
+    "solution": "Chuỗi đổi loại bỏ các quân còn lại của cả hai bên. Trắng: Vua g1, Tốt g2; Đen: Vua f8, Tốt e5. Đen đang kém vật chất, nhưng chuỗi đổi đưa về thế có thể giữ hòa nếu chơi chính xác. Nhánh mẫu: Qh6+ · Kg1 · Qxf8 · Rxf8 · Kxf8."
+  },
+  {
+    "title": "Kramnik,V — Aronian,L",
+    "prompt": "Tìm cách đổi quân để chuyển sang tàn cuộc Tốt hòa.",
+    "mode": "interactive",
+    "outcome": "simplification",
+    "goal": "draw",
+    "fen": "8/1R6/7r/4K3/1Pk5/8/8/8 b - - 2 56",
+    "moves": [
+      "Rh5+",
+      "Ke6",
+      "Rb5",
+      "Rxb5",
+      "Kxb5"
+    ],
+    "previousMove": {
+      "fen": "1R6/8/7r/4K3/1Pk5/8/8/8 w - - 1 56",
+      "move": "Rb7"
+    },
+    "source": "https://www.pgnmentor.com/players/Aronian.zip",
+    "gameReference": {
+      "id": "613988370a78de40",
+      "kind": "game",
+      "ply": 111,
+      "branch": 0,
+      "collection": "simplification"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "solverMoves": 3,
+      "sacrificeCount": 0,
+      "reason": "Phân mức theo chuỗi đổi quân và vật chất nhường lại trong nhánh đã kiểm tra."
+    },
+    "hints": [
+      "Xem có thể đổi hết các quân còn lại để về tàn cuộc Vua và Tốt không.",
+      "Tính cả nước bắt lại của đối thủ, rồi so sánh vị trí Vua và các Tốt."
+    ],
+    "solution": "Chuỗi đổi loại bỏ các quân còn lại của cả hai bên. Trắng: Vua e6, Tốt b4; Đen: Vua b5, không còn Tốt. Đen đang kém vật chất, nhưng chuỗi đổi đưa về thế có thể giữ hòa nếu chơi chính xác. Nhánh mẫu: Rh5+ · Ke6 · Rb5 · Rxb5 · Kxb5."
+  },
+  {
+    "title": "Blackburne, Joseph Henry — Janowsky, Dawid Markelowicz",
+    "prompt": "Tìm cách đổi quân để chuyển sang tàn cuộc Tốt hòa.",
+    "mode": "interactive",
+    "outcome": "simplification",
+    "goal": "draw",
+    "fen": "8/8/4q3/3k4/2p5/8/Q7/2K5 w - - 0 69",
+    "moves": [
+      "Qa5+",
+      "Kd6",
+      "Qb6+",
+      "Ke5",
+      "Qxe6+",
+      "Kxe6"
+    ],
+    "previousMove": {
+      "fen": "8/8/4q3/2pk4/8/8/Q7/2K5 b - - 11 68",
+      "move": "c4"
+    },
+    "source": "https://www.pgnmentor.com/players/Blackburne.zip",
+    "gameReference": {
+      "id": "614398ad142e4e06",
+      "kind": "game",
+      "ply": 136,
+      "branch": 0,
+      "collection": "simplification"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "solverMoves": 3,
+      "sacrificeCount": 0,
+      "reason": "Phân mức theo chuỗi đổi quân và vật chất nhường lại trong nhánh đã kiểm tra."
+    },
+    "hints": [
+      "Xem có thể đổi hết các quân còn lại để về tàn cuộc Vua và Tốt không.",
+      "Tính cả nước bắt lại của đối thủ, rồi so sánh vị trí Vua và các Tốt."
+    ],
+    "solution": "Chuỗi đổi loại bỏ các quân còn lại của cả hai bên. Trắng: Vua c1, không còn Tốt; Đen: Vua e6, Tốt c4. Trắng đang kém vật chất, nhưng chuỗi đổi đưa về thế có thể giữ hòa nếu chơi chính xác. Nhánh mẫu: Qa5+ · Kd6 · Qb6+ · Ke5 · Qxe6+ · Kxe6."
+  },
+  {
+    "title": "Iskusnyh,S — Shirov,A",
+    "prompt": "Tìm cách đổi quân để chuyển sang tàn cuộc Tốt hòa.",
+    "mode": "interactive",
+    "outcome": "simplification",
+    "goal": "draw",
+    "fen": "8/8/8/2k5/R7/P7/1P2K3/6r1 b - - 0 59",
+    "moves": [
+      "Rg2+",
+      "Kd3",
+      "Rxb2",
+      "Rb4",
+      "Rxb4",
+      "axb4+"
+    ],
+    "previousMove": {
+      "fen": "8/8/8/2k5/R7/P7/1P2p3/4K1r1 w - - 1 59",
+      "move": "Kxe2"
+    },
+    "source": "https://www.pgnmentor.com/players/Shirov.zip",
+    "gameReference": {
+      "id": "766e3291c93383d6",
+      "kind": "game",
+      "ply": 117,
+      "branch": 0,
+      "collection": "simplification"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "solverMoves": 3,
+      "sacrificeCount": 0,
+      "reason": "Phân mức theo chuỗi đổi quân và vật chất nhường lại trong nhánh đã kiểm tra."
+    },
+    "hints": [
+      "Xem có thể đổi hết các quân còn lại để về tàn cuộc Vua và Tốt không.",
+      "Tính cả nước bắt lại của đối thủ, rồi so sánh vị trí Vua và các Tốt."
+    ],
+    "solution": "Chuỗi đổi loại bỏ các quân còn lại của cả hai bên. Trắng: Vua d3, Tốt b4; Đen: Vua c5, không còn Tốt. Đen đang kém vật chất, nhưng chuỗi đổi đưa về thế có thể giữ hòa nếu chơi chính xác. Nhánh mẫu: Rg2+ · Kd3 · Rxb2 · Rb4 · Rxb4 · axb4+."
+  },
+  {
+    "title": "Carlsen,M — Bortnyk,Olexandr",
+    "prompt": "Tìm cách đổi quân để chuyển sang tàn cuộc Tốt thắng.",
+    "mode": "interactive",
+    "outcome": "simplification",
+    "goal": "win",
+    "fen": "8/5r1p/6pk/5r2/6Q1/7P/5P1K/8 b - - 5 69",
+    "moves": [
+      "Rxf2+",
+      "Kg3",
+      "R7f3+",
+      "Qxf3",
+      "Rxf3+",
+      "Kxf3"
+    ],
+    "previousMove": {
+      "fen": "8/5r1p/6pk/5r2/8/6QP/5P1K/8 w - - 4 69",
+      "move": "Qg4"
+    },
+    "source": "https://www.pgnmentor.com/players/Carlsen.zip",
+    "gameReference": {
+      "id": "7eaa7c93e29a86f8",
+      "kind": "game",
+      "ply": 137,
+      "branch": 0,
+      "collection": "simplification"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "solverMoves": 3,
+      "sacrificeCount": 0,
+      "reason": "Phân mức theo chuỗi đổi quân và vật chất nhường lại trong nhánh đã kiểm tra."
+    },
+    "hints": [
+      "Xem có thể đổi hết các quân còn lại để về tàn cuộc Vua và Tốt không.",
+      "Tính cả nước bắt lại của đối thủ, rồi so sánh vị trí Vua và các Tốt."
+    ],
+    "solution": "Chuỗi đổi loại bỏ các quân còn lại của cả hai bên. Trắng: Vua f3, Tốt h3; Đen: Vua h6, Tốt g6, h7. Đen có thể thắng nếu chơi chính xác. Nhánh mẫu: Rxf2+ · Kg3 · R7f3+ · Qxf3 · Rxf3+ · Kxf3."
+  },
+  {
+    "title": "Caruana,F — Anand,V",
+    "prompt": "Tìm cách đổi quân để chuyển sang tàn cuộc Tốt thắng.",
+    "mode": "interactive",
+    "outcome": "simplification",
+    "goal": "win",
+    "fen": "8/4b3/4p3/1p1k2p1/5pPP/1P1K4/8/2B5 b - - 0 50",
+    "moves": [
+      "gxh4",
+      "Bxf4",
+      "Bd6",
+      "Bxd6",
+      "Kxd6"
+    ],
+    "previousMove": {
+      "fen": "8/4b3/4p3/1p1k2p1/5pP1/1P1K3P/8/2B5 w - - 2 50",
+      "move": "h4"
+    },
+    "source": "https://www.pgnmentor.com/players/Anand.zip",
+    "gameReference": {
+      "id": "8ce3e3994bd859d2",
+      "kind": "game",
+      "ply": 99,
+      "branch": 0,
+      "collection": "simplification"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "solverMoves": 3,
+      "sacrificeCount": 0,
+      "reason": "Phân mức theo chuỗi đổi quân và vật chất nhường lại trong nhánh đã kiểm tra."
+    },
+    "hints": [
+      "Xem có thể đổi hết các quân còn lại để về tàn cuộc Vua và Tốt không.",
+      "Tính cả nước bắt lại của đối thủ, rồi so sánh vị trí Vua và các Tốt."
+    ],
+    "solution": "Chuỗi đổi loại bỏ các quân còn lại của cả hai bên. Trắng: Vua d3, Tốt b3, g4; Đen: Vua d6, Tốt h4, b5, e6. Đen có thể thắng nếu chơi chính xác. Nhánh mẫu: gxh4 · Bxf4 · Bd6 · Bxd6 · Kxd6."
+  },
+  {
+    "title": "Neumann, Gustav Richard — Anderssen, Adolf",
+    "prompt": "Tìm cách đổi quân để chuyển sang tàn cuộc Tốt thắng.",
+    "mode": "interactive",
+    "outcome": "simplification",
+    "goal": "win",
+    "fen": "8/7p/1p5P/5k2/4n3/P4B2/4Kp2/8 b - - 0 51",
+    "moves": [
+      "f1=Q+",
+      "Kxf1",
+      "Nd2+",
+      "Ke2",
+      "Nxf3",
+      "Kxf3"
+    ],
+    "previousMove": {
+      "fen": "8/7p/1p5P/5k2/4n3/P4p2/4KpB1/8 w - - 0 51",
+      "move": "Bxf3"
+    },
+    "source": "https://www.pgnmentor.com/players/Anderssen.zip",
+    "gameReference": {
+      "id": "9708bf815e7041a4",
+      "kind": "game",
+      "ply": 101,
+      "branch": 0,
+      "collection": "simplification"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "solverMoves": 3,
+      "sacrificeCount": 0,
+      "reason": "Phân mức theo chuỗi đổi quân và vật chất nhường lại trong nhánh đã kiểm tra."
+    },
+    "hints": [
+      "Xem có thể đổi hết các quân còn lại để về tàn cuộc Vua và Tốt không.",
+      "Tính cả nước bắt lại của đối thủ, rồi so sánh vị trí Vua và các Tốt."
+    ],
+    "solution": "Chuỗi đổi loại bỏ các quân còn lại của cả hai bên. Trắng: Vua f3, Tốt a3, h6; Đen: Vua f5, Tốt b6, h7. Đen có thể thắng nếu chơi chính xác. Nhánh mẫu: f1=Q+ · Kxf1 · Nd2+ · Ke2 · Nxf3 · Kxf3."
+  },
+  {
+    "title": "Marshall, Frank James — Alekhine, Alexander",
+    "prompt": "Tìm cách đổi quân để chuyển sang tàn cuộc Tốt thắng.",
+    "mode": "interactive",
+    "outcome": "simplification",
+    "goal": "win",
+    "fen": "8/4k1p1/1Q6/p2P1K2/5P2/8/6qP/8 b - - 4 52",
+    "moves": [
+      "Qxd5+",
+      "Kg6",
+      "Qd6+",
+      "Qxd6+",
+      "Kxd6"
+    ],
+    "previousMove": {
+      "fen": "8/4k1p1/1Q6/p2P2K1/5P2/8/6qP/8 w - - 3 52",
+      "move": "Kf5"
+    },
+    "source": "https://www.pgnmentor.com/players/Alekhine.zip",
+    "gameReference": {
+      "id": "b4388ee23f2335c7",
+      "kind": "game",
+      "ply": 103,
+      "branch": 0,
+      "collection": "simplification"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "solverMoves": 3,
+      "sacrificeCount": 0,
+      "reason": "Phân mức theo chuỗi đổi quân và vật chất nhường lại trong nhánh đã kiểm tra."
+    },
+    "hints": [
+      "Xem có thể đổi hết các quân còn lại để về tàn cuộc Vua và Tốt không.",
+      "Tính cả nước bắt lại của đối thủ, rồi so sánh vị trí Vua và các Tốt."
+    ],
+    "solution": "Chuỗi đổi loại bỏ các quân còn lại của cả hai bên. Trắng: Vua g6, Tốt h2, f4; Đen: Vua d6, Tốt a5, g7. Đen có thể thắng nếu chơi chính xác. Nhánh mẫu: Qxd5+ · Kg6 · Qd6+ · Qxd6+ · Kxd6."
+  },
+  {
+    "title": "Polgar,Ju — Kazhgaleyev,M",
+    "prompt": "Tìm cách đổi quân để chuyển sang tàn cuộc Tốt thắng.",
+    "mode": "interactive",
+    "outcome": "simplification",
+    "goal": "win",
+    "fen": "8/6r1/8/2p5/2k5/8/1R6/3K4 b - - 0 69",
+    "moves": [
+      "Rg1+",
+      "Kd2",
+      "Rg2+",
+      "Kc1",
+      "Rxb2",
+      "Kxb2"
+    ],
+    "previousMove": {
+      "fen": "1R6/6r1/8/2p5/2k5/8/1p6/3K4 w - - 0 69",
+      "move": "Rxb2"
+    },
+    "source": "https://www.pgnmentor.com/players/PolgarJ.zip",
+    "gameReference": {
+      "id": "bc9e6a3e55be0b3b",
+      "kind": "game",
+      "ply": 137,
+      "branch": 0,
+      "collection": "simplification"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "solverMoves": 3,
+      "sacrificeCount": 0,
+      "reason": "Phân mức theo chuỗi đổi quân và vật chất nhường lại trong nhánh đã kiểm tra."
+    },
+    "hints": [
+      "Xem có thể đổi hết các quân còn lại để về tàn cuộc Vua và Tốt không.",
+      "Tính cả nước bắt lại của đối thủ, rồi so sánh vị trí Vua và các Tốt."
+    ],
+    "solution": "Chuỗi đổi loại bỏ các quân còn lại của cả hai bên. Trắng: Vua b2, không còn Tốt; Đen: Vua c4, Tốt c5. Đen có thể thắng nếu chơi chính xác. Nhánh mẫu: Rg1+ · Kd2 · Rg2+ · Kc1 · Rxb2 · Kxb2."
+  },
+  {
+    "title": "Topalov,V — Giri,A",
+    "prompt": "Tìm cách đổi quân để chuyển sang tàn cuộc Tốt thắng.",
+    "mode": "interactive",
+    "outcome": "simplification",
+    "goal": "win",
+    "fen": "5Q2/1pp5/8/1P2K3/8/1P4k1/8/7q w - - 0 49",
+    "moves": [
+      "Qf4+",
+      "Kh3",
+      "Qh6+",
+      "Kg2",
+      "Qxh1+",
+      "Kxh1"
+    ],
+    "previousMove": {
+      "fen": "5Q2/1pp5/8/1P2K3/8/1P4k1/7p/8 b - - 0 48",
+      "move": "h1=Q"
+    },
+    "source": "https://www.pgnmentor.com/players/Topalov.zip",
+    "gameReference": {
+      "id": "c89bb80725aaf305",
+      "kind": "game",
+      "ply": 96,
+      "branch": 0,
+      "collection": "simplification"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "solverMoves": 3,
+      "sacrificeCount": 0,
+      "reason": "Phân mức theo chuỗi đổi quân và vật chất nhường lại trong nhánh đã kiểm tra."
+    },
+    "hints": [
+      "Xem có thể đổi hết các quân còn lại để về tàn cuộc Vua và Tốt không.",
+      "Tính cả nước bắt lại của đối thủ, rồi so sánh vị trí Vua và các Tốt."
+    ],
+    "solution": "Chuỗi đổi loại bỏ các quân còn lại của cả hai bên. Trắng: Vua e5, Tốt b3, b5; Đen: Vua h1, Tốt b7, c7. Trắng có thể thắng nếu chơi chính xác. Nhánh mẫu: Qf4+ · Kh3 · Qh6+ · Kg2 · Qxh1+ · Kxh1."
+  },
+  {
+    "title": "Geller, Efim P — Krogius, Nikolai V",
+    "prompt": "Tìm cách đổi quân để chuyển sang tàn cuộc Tốt thắng.",
+    "mode": "interactive",
+    "outcome": "simplification",
+    "goal": "win",
+    "fen": "8/p1k5/4Q3/1PP4p/2K4P/8/8/3q4 w - - 13 86",
+    "moves": [
+      "Qc6+",
+      "Kb8",
+      "Qd6+",
+      "Qxd6",
+      "cxd6"
+    ],
+    "previousMove": {
+      "fen": "2k5/p7/4Q3/1PP4p/2K4P/8/8/3q4 b - - 12 85",
+      "move": "Kc7"
+    },
+    "source": "https://www.pgnmentor.com/players/Geller.zip",
+    "gameReference": {
+      "id": "ce29e973aad9af40",
+      "kind": "game",
+      "ply": 170,
+      "branch": 0,
+      "collection": "simplification"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "solverMoves": 3,
+      "sacrificeCount": 0,
+      "reason": "Phân mức theo chuỗi đổi quân và vật chất nhường lại trong nhánh đã kiểm tra."
+    },
+    "hints": [
+      "Xem có thể đổi hết các quân còn lại để về tàn cuộc Vua và Tốt không.",
+      "Tính cả nước bắt lại của đối thủ, rồi so sánh vị trí Vua và các Tốt."
+    ],
+    "solution": "Chuỗi đổi loại bỏ các quân còn lại của cả hai bên. Trắng: Vua c4, Tốt h4, b5, d6; Đen: Vua b8, Tốt h5, a7. Trắng có thể thắng nếu chơi chính xác. Nhánh mẫu: Qc6+ · Kb8 · Qd6+ · Qxd6 · cxd6."
+  },
+  {
+    "title": "Paulsen, Louis — Anderssen, Adolf",
+    "prompt": "Tìm cách đổi quân để chuyển sang tàn cuộc Tốt thắng.",
+    "mode": "interactive",
+    "outcome": "simplification",
+    "goal": "win",
+    "fen": "8/1k6/1p2r3/8/1P4p1/P4p2/5R2/6K1 b - - 1 45",
+    "moves": [
+      "Re1+",
+      "Kh2",
+      "Re2",
+      "Kg1",
+      "Rxf2",
+      "Kxf2"
+    ],
+    "previousMove": {
+      "fen": "8/1k6/1p2r3/8/1P4p1/P4p2/8/5RK1 w - - 0 45",
+      "move": "Rf2"
+    },
+    "source": "https://www.pgnmentor.com/players/Anderssen.zip",
+    "gameReference": {
+      "id": "d0661dd1470b2908",
+      "kind": "game",
+      "ply": 89,
+      "branch": 0,
+      "collection": "simplification"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "solverMoves": 3,
+      "sacrificeCount": 0,
+      "reason": "Phân mức theo chuỗi đổi quân và vật chất nhường lại trong nhánh đã kiểm tra."
+    },
+    "hints": [
+      "Xem có thể đổi hết các quân còn lại để về tàn cuộc Vua và Tốt không.",
+      "Tính cả nước bắt lại của đối thủ, rồi so sánh vị trí Vua và các Tốt."
+    ],
+    "solution": "Chuỗi đổi loại bỏ các quân còn lại của cả hai bên. Trắng: Vua f2, Tốt a3, b4; Đen: Vua b7, Tốt f3, g4, b6. Đen có thể thắng nếu chơi chính xác. Nhánh mẫu: Re1+ · Kh2 · Re2 · Kg1 · Rxf2 · Kxf2."
+  },
+  {
+    "title": "Ivanchuk,V — Karjakin,Sergey",
+    "prompt": "Tìm cách đổi quân để chuyển sang tàn cuộc Tốt hòa.",
+    "mode": "interactive",
+    "outcome": "simplification",
+    "goal": "draw",
+    "fen": "7N/4k3/6p1/6Pp/5K1n/8/8/8 w - - 33 79",
+    "moves": [
+      "Kg3",
+      "Kf8",
+      "Kxh4",
+      "Kg7",
+      "Nxg6",
+      "Kxg6"
+    ],
+    "previousMove": {
+      "fen": "7N/8/4k1p1/6Pp/5K1n/8/8/8 b - - 32 78",
+      "move": "Ke7"
+    },
+    "source": "https://www.pgnmentor.com/players/Ivanchuk.zip",
+    "gameReference": {
+      "id": "d3870f9ee4467a0a",
+      "kind": "game",
+      "ply": 156,
+      "branch": 0,
+      "collection": "simplification"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "solverMoves": 3,
+      "sacrificeCount": 0,
+      "reason": "Phân mức theo chuỗi đổi quân và vật chất nhường lại trong nhánh đã kiểm tra."
+    },
+    "hints": [
+      "Xem có thể đổi hết các quân còn lại để về tàn cuộc Vua và Tốt không.",
+      "Tính cả nước bắt lại của đối thủ, rồi so sánh vị trí Vua và các Tốt."
+    ],
+    "solution": "Chuỗi đổi loại bỏ các quân còn lại của cả hai bên. Trắng: Vua h4, Tốt g5; Đen: Vua g6, Tốt h5. Trắng đang kém vật chất, nhưng chuỗi đổi đưa về thế có thể giữ hòa nếu chơi chính xác. Nhánh mẫu: Kg3 · Kf8 · Kxh4 · Kg7 · Nxg6 · Kxg6."
+  },
+  {
+    "title": "Bernstein, Ossip — Alekhine, Alexander",
+    "prompt": "Tìm cách đổi quân để chuyển sang tàn cuộc Tốt thắng.",
+    "mode": "interactive",
+    "outcome": "simplification",
+    "goal": "win",
+    "fen": "5k2/7q/2pK4/2P2PQp/2P5/8/8/8 w - - 4 63",
+    "moves": [
+      "Qd8+",
+      "Kf7",
+      "Qe7+",
+      "Kg8",
+      "Qxh7+",
+      "Kxh7"
+    ],
+    "previousMove": {
+      "fen": "5k2/5q2/2pK4/2P2PQp/2P5/8/8/8 b - - 3 62",
+      "move": "Qh7"
+    },
+    "source": "https://www.pgnmentor.com/players/Alekhine.zip",
+    "gameReference": {
+      "id": "d67dda9d010532be",
+      "kind": "game",
+      "ply": 124,
+      "branch": 0,
+      "collection": "simplification"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "solverMoves": 3,
+      "sacrificeCount": 0,
+      "reason": "Phân mức theo chuỗi đổi quân và vật chất nhường lại trong nhánh đã kiểm tra."
+    },
+    "hints": [
+      "Xem có thể đổi hết các quân còn lại để về tàn cuộc Vua và Tốt không.",
+      "Tính cả nước bắt lại của đối thủ, rồi so sánh vị trí Vua và các Tốt."
+    ],
+    "solution": "Chuỗi đổi loại bỏ các quân còn lại của cả hai bên. Trắng: Vua d6, Tốt c4, c5, f5; Đen: Vua h7, Tốt h5, c6. Trắng có thể thắng nếu chơi chính xác. Nhánh mẫu: Qd8+ · Kf7 · Qe7+ · Kg8 · Qxh7+ · Kxh7."
+  },
+  {
+    "title": "Jobava,Ba — Arutinian,D",
+    "prompt": "Tìm cách đổi quân để chuyển sang tàn cuộc Tốt thắng.",
+    "mode": "interactive",
+    "outcome": "simplification",
+    "goal": "win",
+    "fen": "8/pp1kn1R1/8/4B3/4r3/8/PPPK4/8 w - - 0 30",
+    "moves": [
+      "Bf6",
+      "Re6",
+      "Rxe7+",
+      "Rxe7",
+      "Bxe7",
+      "Kxe7"
+    ],
+    "previousMove": {
+      "fen": "8/pp1kn1R1/8/4B3/4P3/4r3/PPPK4/8 b - - 2 29",
+      "move": "Rxe4"
+    },
+    "source": "https://www.pgnmentor.com/players/Jobava.zip",
+    "gameReference": {
+      "id": "db11da8be0356565",
+      "kind": "game",
+      "ply": 58,
+      "branch": 0,
+      "collection": "simplification"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "solverMoves": 3,
+      "sacrificeCount": 0,
+      "reason": "Phân mức theo chuỗi đổi quân và vật chất nhường lại trong nhánh đã kiểm tra."
+    },
+    "hints": [
+      "Xem có thể đổi hết các quân còn lại để về tàn cuộc Vua và Tốt không.",
+      "Tính cả nước bắt lại của đối thủ, rồi so sánh vị trí Vua và các Tốt."
+    ],
+    "solution": "Chuỗi đổi loại bỏ các quân còn lại của cả hai bên. Trắng: Vua d2, Tốt a2, b2, c2; Đen: Vua e7, Tốt a7, b7. Trắng có thể thắng nếu chơi chính xác. Nhánh mẫu: Bf6 · Re6 · Rxe7+ · Rxe7 · Bxe7 · Kxe7."
+  },
+  {
+    "title": "Aronian,L — Melkumyan,H",
+    "prompt": "Tìm cách đổi quân để chuyển sang tàn cuộc Tốt hòa.",
+    "mode": "interactive",
+    "outcome": "simplification",
+    "goal": "draw",
+    "fen": "8/2k5/2P5/1Q6/1P6/5p2/5K2/3q4 b - - 0 67",
+    "moves": [
+      "Qc2+",
+      "Kxf3",
+      "Qxc6+",
+      "Qxc6+",
+      "Kxc6"
+    ],
+    "previousMove": {
+      "fen": "8/2k5/2P5/1pQ5/1P6/5p2/5K2/3q4 w - - 11 67",
+      "move": "Qxb5"
+    },
+    "source": "https://www.pgnmentor.com/players/Aronian.zip",
+    "gameReference": {
+      "id": "fd2f1b5aa450f91e",
+      "kind": "game",
+      "ply": 133,
+      "branch": 0,
+      "collection": "simplification"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "solverMoves": 3,
+      "sacrificeCount": 0,
+      "reason": "Phân mức theo chuỗi đổi quân và vật chất nhường lại trong nhánh đã kiểm tra."
+    },
+    "hints": [
+      "Xem có thể đổi hết các quân còn lại để về tàn cuộc Vua và Tốt không.",
+      "Tính cả nước bắt lại của đối thủ, rồi so sánh vị trí Vua và các Tốt."
+    ],
+    "solution": "Chuỗi đổi loại bỏ các quân còn lại của cả hai bên. Trắng: Vua f3, Tốt b4; Đen: Vua c6, không còn Tốt. Đen đang kém vật chất, nhưng chuỗi đổi đưa về thế có thể giữ hòa nếu chơi chính xác. Nhánh mẫu: Qc2+ · Kxf3 · Qxc6+ · Qxc6+ · Kxc6."
+  },
+  {
+    "title": "Morozevich,A — Shomoev,A",
+    "prompt": "Tìm cách đổi quân để chuyển sang tàn cuộc Tốt thắng.",
+    "mode": "interactive",
+    "outcome": "simplification",
+    "goal": "win",
+    "fen": "8/8/6p1/3K2Pp/2N1rk1P/8/8/8 b - - 39 71",
+    "moves": [
+      "Rxc4",
+      "Kxc4"
+    ],
+    "previousMove": {
+      "fen": "8/8/6p1/6Pp/2NKrk1P/8/8/8 w - - 38 71",
+      "move": "Kd5"
+    },
+    "source": "https://www.pgnmentor.com/players/Morozevich.zip",
+    "gameReference": {
+      "id": "0b8c13f7cb6e02bb",
+      "kind": "game",
+      "ply": 141,
+      "branch": 0,
+      "collection": "simplification"
+    },
+    "difficulty": {
+      "level": "C",
+      "status": "suggested",
+      "solverMoves": 1,
+      "sacrificeCount": 1,
+      "reason": "Phân mức theo chuỗi đổi quân và vật chất nhường lại trong nhánh đã kiểm tra."
+    },
+    "hints": [
+      "Xem có thể đổi hết các quân còn lại để về tàn cuộc Vua và Tốt không.",
+      "Tính cả nước bắt lại của đối thủ, rồi so sánh vị trí Vua và các Tốt."
+    ],
+    "solution": "Chuỗi đổi loại bỏ các quân còn lại của cả hai bên. Trắng: Vua c4, Tốt h4, g5; Đen: Vua f4, Tốt h5, g6. Đen có thể thắng nếu chơi chính xác. Nhánh mẫu: Rxc4 · Kxc4."
+  },
+  {
+    "title": "Ljubojevic, Ljubomir — Polgar, Judit",
+    "prompt": "Tìm cách đổi quân để chuyển sang tàn cuộc Tốt thắng.",
+    "mode": "interactive",
+    "outcome": "simplification",
+    "goal": "win",
+    "fen": "7k/7p/4KNPP/7P/8/p7/5r2/8 b - - 0 52",
+    "moves": [
+      "Rxf6+",
+      "Kxf6"
+    ],
+    "previousMove": {
+      "fen": "7k/7p/4KN1P/6PP/8/p7/5r2/8 w - - 0 52",
+      "move": "g6"
+    },
+    "source": "https://www.pgnmentor.com/players/PolgarJ.zip",
+    "gameReference": {
+      "id": "11ac98770ef08bcd",
+      "kind": "game",
+      "ply": 103,
+      "branch": 0,
+      "collection": "simplification"
+    },
+    "difficulty": {
+      "level": "C",
+      "status": "suggested",
+      "solverMoves": 1,
+      "sacrificeCount": 1,
+      "reason": "Phân mức theo chuỗi đổi quân và vật chất nhường lại trong nhánh đã kiểm tra."
+    },
+    "hints": [
+      "Xem có thể đổi hết các quân còn lại để về tàn cuộc Vua và Tốt không.",
+      "Tính cả nước bắt lại của đối thủ, rồi so sánh vị trí Vua và các Tốt."
+    ],
+    "solution": "Chuỗi đổi loại bỏ các quân còn lại của cả hai bên. Trắng: Vua f6, Tốt h5, g6, h6; Đen: Vua h8, Tốt a3, h7. Đen có thể thắng nếu chơi chính xác. Nhánh mẫu: Rxf6+ · Kxf6."
+  },
+  {
+    "title": "Jobava,Ba — Oparin,G",
+    "prompt": "Tìm cách đổi quân để chuyển sang tàn cuộc Tốt thắng.",
+    "mode": "interactive",
+    "outcome": "simplification",
+    "goal": "win",
+    "fen": "8/1p6/3K4/k2N3r/8/8/8/8 b - - 1 84",
+    "moves": [
+      "Rxd5+",
+      "Kxd5"
+    ],
+    "previousMove": {
+      "fen": "8/1p6/8/k1KN3r/8/8/8/8 w - - 0 84",
+      "move": "Kd6"
+    },
+    "source": "https://www.pgnmentor.com/players/Jobava.zip",
+    "gameReference": {
+      "id": "186ed560c3dacc21",
+      "kind": "game",
+      "ply": 167,
+      "branch": 0,
+      "collection": "simplification"
+    },
+    "difficulty": {
+      "level": "C",
+      "status": "suggested",
+      "solverMoves": 1,
+      "sacrificeCount": 1,
+      "reason": "Phân mức theo chuỗi đổi quân và vật chất nhường lại trong nhánh đã kiểm tra."
+    },
+    "hints": [
+      "Xem có thể đổi hết các quân còn lại để về tàn cuộc Vua và Tốt không.",
+      "Tính cả nước bắt lại của đối thủ, rồi so sánh vị trí Vua và các Tốt."
+    ],
+    "solution": "Chuỗi đổi loại bỏ các quân còn lại của cả hai bên. Trắng: Vua d5, không còn Tốt; Đen: Vua a5, Tốt b7. Đen có thể thắng nếu chơi chính xác. Nhánh mẫu: Rxd5+ · Kxd5."
+  },
+  {
+    "title": "Blackburne, Joseph Henry — Baird, David Graham",
+    "prompt": "Tìm cách đổi quân để chuyển sang tàn cuộc Tốt thắng.",
+    "mode": "interactive",
+    "outcome": "simplification",
+    "goal": "win",
+    "fen": "8/8/4k3/5p2/R3n1p1/P1P5/1P4K1/8 w - - 1 43",
+    "moves": [
+      "Rxe4+",
+      "fxe4"
+    ],
+    "previousMove": {
+      "fen": "8/5k2/8/5p2/R3n1p1/P1P5/1P4K1/8 b - - 0 42",
+      "move": "Ke6"
+    },
+    "source": "https://www.pgnmentor.com/players/Blackburne.zip",
+    "gameReference": {
+      "id": "1cee0c1c781b1fbe",
+      "kind": "game",
+      "ply": 84,
+      "branch": 0,
+      "collection": "simplification"
+    },
+    "difficulty": {
+      "level": "C",
+      "status": "suggested",
+      "solverMoves": 1,
+      "sacrificeCount": 1,
+      "reason": "Phân mức theo chuỗi đổi quân và vật chất nhường lại trong nhánh đã kiểm tra."
+    },
+    "hints": [
+      "Xem có thể đổi hết các quân còn lại để về tàn cuộc Vua và Tốt không.",
+      "Tính cả nước bắt lại của đối thủ, rồi so sánh vị trí Vua và các Tốt."
+    ],
+    "solution": "Chuỗi đổi loại bỏ các quân còn lại của cả hai bên. Trắng: Vua g2, Tốt b2, a3, c3; Đen: Vua e6, Tốt e4, g4. Trắng có thể thắng nếu chơi chính xác. Nhánh mẫu: Rxe4+ · fxe4."
+  },
+  {
+    "title": "Spielmann, Rudolf — Bogoljubow, Efim",
+    "prompt": "Tìm cách đổi quân để chuyển sang tàn cuộc Tốt thắng.",
+    "mode": "interactive",
+    "outcome": "simplification",
+    "goal": "win",
+    "fen": "8/p7/7k/2P2Qr1/7p/6p1/P5K1/8 w - - 1 51",
+    "moves": [
+      "Qxg5+",
+      "Kxg5"
+    ],
+    "previousMove": {
+      "fen": "8/p7/6rk/2P2Q2/7p/6p1/P5K1/8 b - - 0 50",
+      "move": "Rg5"
+    },
+    "source": "https://www.pgnmentor.com/players/Spielmann.zip",
+    "gameReference": {
+      "id": "2dc4fb048741d2cf",
+      "kind": "game",
+      "ply": 100,
+      "branch": 0,
+      "collection": "simplification"
+    },
+    "difficulty": {
+      "level": "C",
+      "status": "suggested",
+      "solverMoves": 1,
+      "sacrificeCount": 1,
+      "reason": "Phân mức theo chuỗi đổi quân và vật chất nhường lại trong nhánh đã kiểm tra."
+    },
+    "hints": [
+      "Xem có thể đổi hết các quân còn lại để về tàn cuộc Vua và Tốt không.",
+      "Tính cả nước bắt lại của đối thủ, rồi so sánh vị trí Vua và các Tốt."
+    ],
+    "solution": "Chuỗi đổi loại bỏ các quân còn lại của cả hai bên. Trắng: Vua g2, Tốt a2, c5; Đen: Vua g5, Tốt g3, h4, a7. Trắng có thể thắng nếu chơi chính xác. Nhánh mẫu: Qxg5+ · Kxg5."
+  },
+  {
+    "title": "Firouzja,Alireza — Jobava,Ba",
+    "prompt": "Tìm cách đổi quân để chuyển sang tàn cuộc Tốt thắng.",
+    "mode": "interactive",
+    "outcome": "simplification",
+    "goal": "win",
+    "fen": "8/8/8/7P/1R3p2/1nk1pP2/6P1/4K3 w - - 0 65",
+    "moves": [
+      "Rxb3+",
+      "Kxb3"
+    ],
+    "previousMove": {
+      "fen": "8/8/8/7P/1R3p2/1nN1pP2/1k4P1/4K3 b - - 0 64",
+      "move": "Kxc3"
+    },
+    "source": "https://www.pgnmentor.com/players/Jobava.zip",
+    "gameReference": {
+      "id": "31dbe95caf542376",
+      "kind": "game",
+      "ply": 128,
+      "branch": 0,
+      "collection": "simplification"
+    },
+    "difficulty": {
+      "level": "C",
+      "status": "suggested",
+      "solverMoves": 1,
+      "sacrificeCount": 1,
+      "reason": "Phân mức theo chuỗi đổi quân và vật chất nhường lại trong nhánh đã kiểm tra."
+    },
+    "hints": [
+      "Xem có thể đổi hết các quân còn lại để về tàn cuộc Vua và Tốt không.",
+      "Tính cả nước bắt lại của đối thủ, rồi so sánh vị trí Vua và các Tốt."
+    ],
+    "solution": "Chuỗi đổi loại bỏ các quân còn lại của cả hai bên. Trắng: Vua e1, Tốt g2, f3, h5; Đen: Vua b3, Tốt e3, f4. Trắng có thể thắng nếu chơi chính xác. Nhánh mẫu: Rxb3+ · Kxb3."
+  },
+  {
+    "title": "Carlsen,M — Bluebaum,M",
+    "prompt": "Tìm cách đổi quân để chuyển sang tàn cuộc Tốt thắng.",
+    "mode": "interactive",
+    "outcome": "simplification",
+    "goal": "win",
+    "fen": "5R2/4kn2/8/3K2p1/6P1/5P2/8/8 w - - 7 65",
+    "moves": [
+      "Rxf7+",
+      "Kxf7"
+    ],
+    "previousMove": {
+      "fen": "5R2/5n2/5k2/3K2p1/6P1/5P2/8/8 b - - 6 64",
+      "move": "Ke7"
+    },
+    "source": "https://www.pgnmentor.com/players/Carlsen.zip",
+    "gameReference": {
+      "id": "369c275377a74a23",
+      "kind": "game",
+      "ply": 128,
+      "branch": 0,
+      "collection": "simplification"
+    },
+    "difficulty": {
+      "level": "C",
+      "status": "suggested",
+      "solverMoves": 1,
+      "sacrificeCount": 1,
+      "reason": "Phân mức theo chuỗi đổi quân và vật chất nhường lại trong nhánh đã kiểm tra."
+    },
+    "hints": [
+      "Xem có thể đổi hết các quân còn lại để về tàn cuộc Vua và Tốt không.",
+      "Tính cả nước bắt lại của đối thủ, rồi so sánh vị trí Vua và các Tốt."
+    ],
+    "solution": "Chuỗi đổi loại bỏ các quân còn lại của cả hai bên. Trắng: Vua d5, Tốt f3, g4; Đen: Vua f7, Tốt g5. Trắng có thể thắng nếu chơi chính xác. Nhánh mẫu: Rxf7+ · Kxf7."
+  },
+  {
+    "title": "Aronian,L — Dubov,Daniil",
+    "prompt": "Tìm cách đổi quân để chuyển sang tàn cuộc Tốt thắng.",
+    "mode": "interactive",
+    "outcome": "simplification",
+    "goal": "win",
+    "fen": "8/6K1/8/6p1/1R2bkP1/8/8/8 w - - 11 96",
+    "moves": [
+      "Rxe4+",
+      "Kxe4"
+    ],
+    "previousMove": {
+      "fen": "8/6K1/8/6p1/1R3kP1/3b4/8/8 b - - 10 95",
+      "move": "Be4"
+    },
+    "source": "https://www.pgnmentor.com/players/Aronian.zip",
+    "gameReference": {
+      "id": "46cd131c69674ecd",
+      "kind": "game",
+      "ply": 190,
+      "branch": 0,
+      "collection": "simplification"
+    },
+    "difficulty": {
+      "level": "C",
+      "status": "suggested",
+      "solverMoves": 1,
+      "sacrificeCount": 1,
+      "reason": "Phân mức theo chuỗi đổi quân và vật chất nhường lại trong nhánh đã kiểm tra."
+    },
+    "hints": [
+      "Xem có thể đổi hết các quân còn lại để về tàn cuộc Vua và Tốt không.",
+      "Tính cả nước bắt lại của đối thủ, rồi so sánh vị trí Vua và các Tốt."
+    ],
+    "solution": "Chuỗi đổi loại bỏ các quân còn lại của cả hai bên. Trắng: Vua g7, Tốt g4; Đen: Vua e4, Tốt g5. Trắng có thể thắng nếu chơi chính xác. Nhánh mẫu: Rxe4+ · Kxe4."
+  },
+  {
+    "title": "So,W — Carlsen,M",
+    "prompt": "Tìm cách đổi quân để chuyển sang tàn cuộc Tốt thắng.",
+    "mode": "interactive",
+    "outcome": "simplification",
+    "goal": "win",
+    "fen": "8/P1K4p/4p3/2Rbk3/8/8/4p2P/8 w - - 0 59",
+    "moves": [
+      "Rxd5+",
+      "exd5"
+    ],
+    "previousMove": {
+      "fen": "8/P1K4p/4p3/2Rbk3/8/4p3/7P/8 b - - 2 58",
+      "move": "e2"
+    },
+    "source": "https://www.pgnmentor.com/players/Carlsen.zip",
+    "gameReference": {
+      "id": "89459cea5babc6cd",
+      "kind": "game",
+      "ply": 116,
+      "branch": 0,
+      "collection": "simplification"
+    },
+    "difficulty": {
+      "level": "C",
+      "status": "suggested",
+      "solverMoves": 1,
+      "sacrificeCount": 1,
+      "reason": "Phân mức theo chuỗi đổi quân và vật chất nhường lại trong nhánh đã kiểm tra."
+    },
+    "hints": [
+      "Xem có thể đổi hết các quân còn lại để về tàn cuộc Vua và Tốt không.",
+      "Tính cả nước bắt lại của đối thủ, rồi so sánh vị trí Vua và các Tốt."
+    ],
+    "solution": "Chuỗi đổi loại bỏ các quân còn lại của cả hai bên. Trắng: Vua c7, Tốt h2, a7; Đen: Vua e5, Tốt e2, d5, h7. Trắng có thể thắng nếu chơi chính xác. Nhánh mẫu: Rxd5+ · exd5."
+  },
+  {
+    "title": "Aronian,L — Zakhartsov,Vl",
+    "prompt": "Tìm cách đổi quân để chuyển sang tàn cuộc Tốt thắng.",
+    "mode": "interactive",
+    "outcome": "simplification",
+    "goal": "win",
+    "fen": "8/8/4k3/1P5p/6p1/6Br/6K1/8 b - - 0 51",
+    "moves": [
+      "Rxg3+",
+      "Kxg3"
+    ],
+    "previousMove": {
+      "fen": "8/8/4k3/7p/1P4p1/6Br/6K1/8 w - - 2 51",
+      "move": "b5"
+    },
+    "source": "https://www.pgnmentor.com/players/Aronian.zip",
+    "gameReference": {
+      "id": "9cde4cb309b507fc",
+      "kind": "game",
+      "ply": 101,
+      "branch": 0,
+      "collection": "simplification"
+    },
+    "difficulty": {
+      "level": "C",
+      "status": "suggested",
+      "solverMoves": 1,
+      "sacrificeCount": 1,
+      "reason": "Phân mức theo chuỗi đổi quân và vật chất nhường lại trong nhánh đã kiểm tra."
+    },
+    "hints": [
+      "Xem có thể đổi hết các quân còn lại để về tàn cuộc Vua và Tốt không.",
+      "Tính cả nước bắt lại của đối thủ, rồi so sánh vị trí Vua và các Tốt."
+    ],
+    "solution": "Chuỗi đổi loại bỏ các quân còn lại của cả hai bên. Trắng: Vua g3, Tốt b5; Đen: Vua e6, Tốt g4, h5. Đen có thể thắng nếu chơi chính xác. Nhánh mẫu: Rxg3+ · Kxg3."
+  },
+  {
+    "title": "Carlsen,M — Mamedov,Rau",
+    "prompt": "Tìm cách đổi quân để chuyển sang tàn cuộc Tốt thắng.",
+    "mode": "interactive",
+    "outcome": "simplification",
+    "goal": "win",
+    "fen": "8/8/5kp1/5n2/5RKP/5P2/8/8 w - - 5 58",
+    "moves": [
+      "Rxf5+",
+      "gxf5+"
+    ],
+    "previousMove": {
+      "fen": "8/6k1/6p1/5n2/5RKP/5P2/8/8 b - - 4 57",
+      "move": "Kf6"
+    },
+    "source": "https://www.pgnmentor.com/players/Carlsen.zip",
+    "gameReference": {
+      "id": "b25651ad73c9c379",
+      "kind": "game",
+      "ply": 114,
+      "branch": 0,
+      "collection": "simplification"
+    },
+    "difficulty": {
+      "level": "C",
+      "status": "suggested",
+      "solverMoves": 1,
+      "sacrificeCount": 1,
+      "reason": "Phân mức theo chuỗi đổi quân và vật chất nhường lại trong nhánh đã kiểm tra."
+    },
+    "hints": [
+      "Xem có thể đổi hết các quân còn lại để về tàn cuộc Vua và Tốt không.",
+      "Tính cả nước bắt lại của đối thủ, rồi so sánh vị trí Vua và các Tốt."
+    ],
+    "solution": "Chuỗi đổi loại bỏ các quân còn lại của cả hai bên. Trắng: Vua g4, Tốt f3, h4; Đen: Vua f6, Tốt f5. Trắng có thể thắng nếu chơi chính xác. Nhánh mẫu: Rxf5+ · gxf5+."
+  },
+  {
+    "title": "Navara,D — Carlsen,M",
+    "prompt": "Tìm cách đổi quân để chuyển sang tàn cuộc Tốt thắng.",
+    "mode": "interactive",
+    "outcome": "simplification",
+    "goal": "win",
+    "fen": "8/8/2PK2k1/2rB4/8/7p/8/8 b - - 3 57",
+    "moves": [
+      "Rxd5+",
+      "Kxd5"
+    ],
+    "previousMove": {
+      "fen": "8/8/2P3k1/2rBK3/8/7p/8/8 w - - 2 57",
+      "move": "Kd6"
+    },
+    "source": "https://www.pgnmentor.com/players/Carlsen.zip",
+    "gameReference": {
+      "id": "b3d1deee3016d526",
+      "kind": "game",
+      "ply": 113,
+      "branch": 0,
+      "collection": "simplification"
+    },
+    "difficulty": {
+      "level": "C",
+      "status": "suggested",
+      "solverMoves": 1,
+      "sacrificeCount": 1,
+      "reason": "Phân mức theo chuỗi đổi quân và vật chất nhường lại trong nhánh đã kiểm tra."
+    },
+    "hints": [
+      "Xem có thể đổi hết các quân còn lại để về tàn cuộc Vua và Tốt không.",
+      "Tính cả nước bắt lại của đối thủ, rồi so sánh vị trí Vua và các Tốt."
+    ],
+    "solution": "Chuỗi đổi loại bỏ các quân còn lại của cả hai bên. Trắng: Vua d5, Tốt c6; Đen: Vua g6, Tốt h3. Đen có thể thắng nếu chơi chính xác. Nhánh mẫu: Rxd5+ · Kxd5."
+  },
+  {
+    "title": "Carlsen,M — Martinez Alcantara,Jose Eduardo",
+    "prompt": "Tìm cách đổi quân để chuyển sang tàn cuộc Tốt thắng.",
+    "mode": "interactive",
+    "outcome": "simplification",
+    "goal": "win",
+    "fen": "8/8/1p4P1/1P6/3bR3/3kpK2/8/8 w - - 13 68",
+    "moves": [
+      "Rxd4+",
+      "Kxd4"
+    ],
+    "previousMove": {
+      "fen": "8/8/1p4P1/1P6/4R3/2bkpK2/8/8 b - - 12 67",
+      "move": "Bd4"
+    },
+    "source": "https://www.pgnmentor.com/players/Carlsen.zip",
+    "gameReference": {
+      "id": "b67d5992af6080e9",
+      "kind": "game",
+      "ply": 134,
+      "branch": 0,
+      "collection": "simplification"
+    },
+    "difficulty": {
+      "level": "C",
+      "status": "suggested",
+      "solverMoves": 1,
+      "sacrificeCount": 1,
+      "reason": "Phân mức theo chuỗi đổi quân và vật chất nhường lại trong nhánh đã kiểm tra."
+    },
+    "hints": [
+      "Xem có thể đổi hết các quân còn lại để về tàn cuộc Vua và Tốt không.",
+      "Tính cả nước bắt lại của đối thủ, rồi so sánh vị trí Vua và các Tốt."
+    ],
+    "solution": "Chuỗi đổi loại bỏ các quân còn lại của cả hai bên. Trắng: Vua f3, Tốt b5, g6; Đen: Vua d4, Tốt e3, b6. Trắng có thể thắng nếu chơi chính xác. Nhánh mẫu: Rxd4+ · Kxd4."
+  },
+  {
+    "title": "Grischuk,A — Jobava,Ba",
+    "prompt": "Tìm cách đổi quân để chuyển sang tàn cuộc Tốt thắng.",
+    "mode": "interactive",
+    "outcome": "simplification",
+    "goal": "win",
+    "fen": "8/8/8/6kP/R5n1/5p2/8/6K1 w - - 3 62",
+    "moves": [
+      "Rxg4+",
+      "Kxg4"
+    ],
+    "previousMove": {
+      "fen": "8/8/8/7P/R4kn1/5p2/8/6K1 b - - 2 61",
+      "move": "Kg5"
+    },
+    "source": "https://www.pgnmentor.com/players/Jobava.zip",
+    "gameReference": {
+      "id": "c20f663fc639372b",
+      "kind": "game",
+      "ply": 122,
+      "branch": 0,
+      "collection": "simplification"
+    },
+    "difficulty": {
+      "level": "C",
+      "status": "suggested",
+      "solverMoves": 1,
+      "sacrificeCount": 1,
+      "reason": "Phân mức theo chuỗi đổi quân và vật chất nhường lại trong nhánh đã kiểm tra."
+    },
+    "hints": [
+      "Xem có thể đổi hết các quân còn lại để về tàn cuộc Vua và Tốt không.",
+      "Tính cả nước bắt lại của đối thủ, rồi so sánh vị trí Vua và các Tốt."
+    ],
+    "solution": "Chuỗi đổi loại bỏ các quân còn lại của cả hai bên. Trắng: Vua g1, Tốt h5; Đen: Vua g4, Tốt f3. Trắng có thể thắng nếu chơi chính xác. Nhánh mẫu: Rxg4+ · Kxg4."
+  },
+  {
+    "title": "Jobava,Ba — Bluebaum,M",
+    "prompt": "Tìm cách đổi quân để chuyển sang tàn cuộc Tốt thắng.",
+    "mode": "interactive",
+    "outcome": "simplification",
+    "goal": "win",
+    "fen": "8/8/7p/8/8/6k1/3rN3/5K2 b - - 3 59",
+    "moves": [
+      "Rxe2",
+      "Kxe2"
+    ],
+    "previousMove": {
+      "fen": "8/8/7p/8/8/6k1/3r4/5KN1 w - - 2 59",
+      "move": "Ne2+"
+    },
+    "source": "https://www.pgnmentor.com/players/Jobava.zip",
+    "gameReference": {
+      "id": "e95185845821c3e0",
+      "kind": "game",
+      "ply": 117,
+      "branch": 0,
+      "collection": "simplification"
+    },
+    "difficulty": {
+      "level": "C",
+      "status": "suggested",
+      "solverMoves": 1,
+      "sacrificeCount": 1,
+      "reason": "Phân mức theo chuỗi đổi quân và vật chất nhường lại trong nhánh đã kiểm tra."
+    },
+    "hints": [
+      "Xem có thể đổi hết các quân còn lại để về tàn cuộc Vua và Tốt không.",
+      "Tính cả nước bắt lại của đối thủ, rồi so sánh vị trí Vua và các Tốt."
+    ],
+    "solution": "Chuỗi đổi loại bỏ các quân còn lại của cả hai bên. Trắng: Vua e2, không còn Tốt; Đen: Vua g3, Tốt h6. Đen có thể thắng nếu chơi chính xác. Nhánh mẫu: Rxe2 · Kxe2."
+  },
+  {
+    "title": "Shirov,A — Badacsonyi,Stanley",
+    "prompt": "Tìm cách đổi quân để chuyển sang tàn cuộc Tốt thắng.",
+    "mode": "interactive",
+    "outcome": "simplification",
+    "goal": "win",
+    "fen": "8/8/8/8/7k/4KQr1/6P1/8 w - - 10 71",
+    "moves": [
+      "Kf4",
+      "Rxf3+",
+      "gxf3"
+    ],
+    "previousMove": {
+      "fen": "8/8/8/6r1/7k/4KQ2/6P1/8 b - - 9 70",
+      "move": "Rg3"
+    },
+    "source": "https://www.pgnmentor.com/players/Shirov.zip",
+    "gameReference": {
+      "id": "5dc3c64e1abb088f",
+      "kind": "game",
+      "ply": 140,
+      "branch": 0,
+      "collection": "simplification"
+    },
+    "difficulty": {
+      "level": "C",
+      "status": "suggested",
+      "solverMoves": 2,
+      "sacrificeCount": 1,
+      "reason": "Phân mức theo chuỗi đổi quân và vật chất nhường lại trong nhánh đã kiểm tra."
+    },
+    "hints": [
+      "Xem có thể đổi hết các quân còn lại để về tàn cuộc Vua và Tốt không.",
+      "Tính cả nước bắt lại của đối thủ, rồi so sánh vị trí Vua và các Tốt."
+    ],
+    "solution": "Chuỗi đổi loại bỏ các quân còn lại của cả hai bên. Trắng: Vua f4, Tốt f3; Đen: Vua h4, không còn Tốt. Trắng có thể thắng nếu chơi chính xác. Nhánh mẫu: Kf4 · Rxf3+ · gxf3."
+  },
+  {
+    "title": "Karjakin,Sergey — Morozevich,A",
+    "prompt": "Tìm cách đổi quân để chuyển sang tàn cuộc Tốt thắng.",
+    "mode": "interactive",
+    "outcome": "simplification",
+    "goal": "win",
+    "fen": "8/7Q/2pK1k1P/6r1/8/6p1/8/8 w - - 2 66",
+    "moves": [
+      "Qe7+",
+      "Kf5",
+      "Qxg5+",
+      "Kxg5"
+    ],
+    "previousMove": {
+      "fen": "8/5k1Q/2pK3P/6r1/8/6p1/8/8 b - - 1 65",
+      "move": "Kf6"
+    },
+    "source": "https://www.pgnmentor.com/players/Morozevich.zip",
+    "gameReference": {
+      "id": "95834c82b7acff89",
+      "kind": "game",
+      "ply": 130,
+      "branch": 0,
+      "collection": "simplification"
+    },
+    "difficulty": {
+      "level": "C",
+      "status": "suggested",
+      "solverMoves": 2,
+      "sacrificeCount": 1,
+      "reason": "Phân mức theo chuỗi đổi quân và vật chất nhường lại trong nhánh đã kiểm tra."
+    },
+    "hints": [
+      "Xem có thể đổi hết các quân còn lại để về tàn cuộc Vua và Tốt không.",
+      "Tính cả nước bắt lại của đối thủ, rồi so sánh vị trí Vua và các Tốt."
+    ],
+    "solution": "Chuỗi đổi loại bỏ các quân còn lại của cả hai bên. Trắng: Vua d6, Tốt h6; Đen: Vua g5, Tốt g3, c6. Trắng có thể thắng nếu chơi chính xác. Nhánh mẫu: Qe7+ · Kf5 · Qxg5+ · Kxg5."
+  },
+  {
+    "title": "Seirawan,Y — Abel,D",
+    "prompt": "Tìm cách đổi quân để chuyển sang tàn cuộc Tốt thắng.",
+    "mode": "interactive",
+    "outcome": "simplification",
+    "goal": "win",
+    "fen": "8/4p3/5p2/3Pk3/4PR2/3q2P1/6K1/8 b - - 25 70",
+    "moves": [
+      "Qxe4+",
+      "Rxe4+",
+      "Kxe4"
+    ],
+    "previousMove": {
+      "fen": "8/4p3/5p2/3Pk3/4P2R/3q2P1/6K1/8 w - - 24 70",
+      "move": "Rf4"
+    },
+    "source": "https://www.pgnmentor.com/players/Seirawan.zip",
+    "gameReference": {
+      "id": "9eb7d3b803f0448a",
+      "kind": "game",
+      "ply": 139,
+      "branch": 0,
+      "collection": "simplification"
+    },
+    "difficulty": {
+      "level": "C",
+      "status": "suggested",
+      "solverMoves": 2,
+      "sacrificeCount": 1,
+      "reason": "Phân mức theo chuỗi đổi quân và vật chất nhường lại trong nhánh đã kiểm tra."
+    },
+    "hints": [
+      "Xem có thể đổi hết các quân còn lại để về tàn cuộc Vua và Tốt không.",
+      "Tính cả nước bắt lại của đối thủ, rồi so sánh vị trí Vua và các Tốt."
+    ],
+    "solution": "Chuỗi đổi loại bỏ các quân còn lại của cả hai bên. Trắng: Vua g2, Tốt g3, d5; Đen: Vua e4, Tốt f6, e7. Đen có thể thắng nếu chơi chính xác. Nhánh mẫu: Qxe4+ · Rxe4+ · Kxe4."
+  },
+  {
+    "title": "Alekhine, Alexander — Vidmar, Milan Sr",
+    "prompt": "Tìm cách đổi quân để chuyển sang tàn cuộc Tốt thắng.",
+    "mode": "interactive",
+    "outcome": "simplification",
+    "goal": "win",
+    "fen": "3r4/5p2/R1Rn4/P2k4/3P4/3K4/8/8 w - - 13 64",
+    "moves": [
+      "Rxd6+",
+      "Rxd6",
+      "Rxd6+",
+      "Kxd6"
+    ],
+    "previousMove": {
+      "fen": "3r4/5p2/R1Rnk3/P7/3P4/3K4/8/8 b - - 12 63",
+      "move": "Kd5"
+    },
+    "source": "https://www.pgnmentor.com/players/Alekhine.zip",
+    "gameReference": {
+      "id": "ab4ee163b7c3ea89",
+      "kind": "game",
+      "ply": 126,
+      "branch": 0,
+      "collection": "simplification"
+    },
+    "difficulty": {
+      "level": "C",
+      "status": "suggested",
+      "solverMoves": 2,
+      "sacrificeCount": 2,
+      "reason": "Phân mức theo chuỗi đổi quân và vật chất nhường lại trong nhánh đã kiểm tra."
+    },
+    "hints": [
+      "Xem có thể đổi hết các quân còn lại để về tàn cuộc Vua và Tốt không.",
+      "Tính cả nước bắt lại của đối thủ, rồi so sánh vị trí Vua và các Tốt."
+    ],
+    "solution": "Chuỗi đổi loại bỏ các quân còn lại của cả hai bên. Trắng: Vua d3, Tốt d4, a5; Đen: Vua d6, Tốt f7. Trắng có thể thắng nếu chơi chính xác. Nhánh mẫu: Rxd6+ · Rxd6 · Rxd6+ · Kxd6."
+  },
+  {
+    "title": "Rustemov,A — So,W",
+    "prompt": "Tìm cách đổi quân để chuyển sang tàn cuộc Tốt thắng.",
+    "mode": "interactive",
+    "outcome": "simplification",
+    "goal": "win",
+    "fen": "8/5p2/8/4k3/8/5R2/6K1/4q3 b - - 5 92",
+    "moves": [
+      "Qe2+",
+      "Kg3",
+      "Qxf3+",
+      "Kxf3"
+    ],
+    "previousMove": {
+      "fen": "8/5p2/8/4k3/8/5RK1/8/4q3 w - - 4 92",
+      "move": "Kg2"
+    },
+    "source": "https://www.pgnmentor.com/players/So.zip",
+    "gameReference": {
+      "id": "b3249722fee43310",
+      "kind": "game",
+      "ply": 183,
+      "branch": 0,
+      "collection": "simplification"
+    },
+    "difficulty": {
+      "level": "C",
+      "status": "suggested",
+      "solverMoves": 2,
+      "sacrificeCount": 1,
+      "reason": "Phân mức theo chuỗi đổi quân và vật chất nhường lại trong nhánh đã kiểm tra."
+    },
+    "hints": [
+      "Xem có thể đổi hết các quân còn lại để về tàn cuộc Vua và Tốt không.",
+      "Tính cả nước bắt lại của đối thủ, rồi so sánh vị trí Vua và các Tốt."
+    ],
+    "solution": "Chuỗi đổi loại bỏ các quân còn lại của cả hai bên. Trắng: Vua f3, không còn Tốt; Đen: Vua e5, Tốt f7. Đen có thể thắng nếu chơi chính xác. Nhánh mẫu: Qe2+ · Kg3 · Qxf3+ · Kxf3."
+  },
+  {
+    "title": "Gelfand,B — Morozevich,A",
+    "prompt": "Tìm cách đổi quân để chuyển sang tàn cuộc Tốt thắng.",
+    "mode": "interactive",
+    "outcome": "simplification",
+    "goal": "win",
+    "fen": "5q2/3R2pk/4K3/5p1p/3Q1P2/4P3/8/8 w - - 0 66",
+    "moves": [
+      "Qxg7+",
+      "Qxg7",
+      "Rxg7+",
+      "Kxg7"
+    ],
+    "previousMove": {
+      "fen": "5q2/3R2pk/4K2p/5p2/3Q1P2/4P3/8/8 b - - 12 65",
+      "move": "h5"
+    },
+    "source": "https://www.pgnmentor.com/players/Morozevich.zip",
+    "gameReference": {
+      "id": "f1fff4b673f47003",
+      "kind": "game",
+      "ply": 130,
+      "branch": 0,
+      "collection": "simplification"
+    },
+    "difficulty": {
+      "level": "C",
+      "status": "suggested",
+      "solverMoves": 2,
+      "sacrificeCount": 2,
+      "reason": "Phân mức theo chuỗi đổi quân và vật chất nhường lại trong nhánh đã kiểm tra."
+    },
+    "hints": [
+      "Xem có thể đổi hết các quân còn lại để về tàn cuộc Vua và Tốt không.",
+      "Tính cả nước bắt lại của đối thủ, rồi so sánh vị trí Vua và các Tốt."
+    ],
+    "solution": "Chuỗi đổi loại bỏ các quân còn lại của cả hai bên. Trắng: Vua e6, Tốt e3, f4; Đen: Vua g7, Tốt f5, h5. Trắng có thể thắng nếu chơi chính xác. Nhánh mẫu: Qxg7+ · Qxg7 · Rxg7+ · Kxg7."
+  },
+  {
+    "title": "Ivanchuk,V — Bu Xiangzhi",
+    "prompt": "Tìm cách đổi quân để chuyển sang tàn cuộc Tốt thắng.",
+    "mode": "interactive",
+    "outcome": "simplification",
+    "goal": "win",
+    "fen": "8/p5k1/3q1n2/1Q3P1p/4P3/4K3/8/8 b - - 7 65",
+    "moves": [
+      "Qb6+",
+      "Qxb6",
+      "axb6",
+      "e5",
+      "b5",
+      "exf6+"
+    ],
+    "previousMove": {
+      "fen": "8/p5k1/3q1n2/5P1p/2Q1P3/4K3/8/8 w - - 6 65",
+      "move": "Qb5"
+    },
+    "source": "https://www.pgnmentor.com/players/Ivanchuk.zip",
+    "gameReference": {
+      "id": "3379e0114480c22a",
+      "kind": "game",
+      "ply": 129,
+      "branch": 0,
+      "collection": "simplification"
+    },
+    "difficulty": {
+      "level": "C",
+      "status": "suggested",
+      "solverMoves": 3,
+      "sacrificeCount": 2,
+      "reason": "Phân mức theo chuỗi đổi quân và vật chất nhường lại trong nhánh đã kiểm tra."
+    },
+    "hints": [
+      "Xem có thể đổi hết các quân còn lại để về tàn cuộc Vua và Tốt không.",
+      "Tính cả nước bắt lại của đối thủ, rồi so sánh vị trí Vua và các Tốt."
+    ],
+    "solution": "Chuỗi đổi loại bỏ các quân còn lại của cả hai bên. Trắng: Vua e3, Tốt f5, f6; Đen: Vua g7, Tốt b5, h5. Đen có thể thắng nếu chơi chính xác. Nhánh mẫu: Qb6+ · Qxb6 · axb6 · e5 · b5 · exf6+."
+  },
+  {
+    "title": "Aronian,L — Pranav,Anand",
+    "prompt": "Tìm cách đổi quân để chuyển sang tàn cuộc Tốt thắng.",
+    "mode": "interactive",
+    "outcome": "simplification",
+    "goal": "win",
+    "fen": "3Q4/4Kpk1/6p1/5r2/5P1p/7P/6P1/8 w - - 6 54",
+    "moves": [
+      "Qf8+",
+      "Kh7",
+      "Qxf7+",
+      "Rxf7+",
+      "Kxf7"
+    ],
+    "previousMove": {
+      "fen": "3Q2k1/4Kp2/6p1/5r2/5P1p/7P/6P1/8 b - - 5 53",
+      "move": "Kg7"
+    },
+    "source": "https://www.pgnmentor.com/players/Aronian.zip",
+    "gameReference": {
+      "id": "4f2f1df0d23ea298",
+      "kind": "game",
+      "ply": 106,
+      "branch": 0,
+      "collection": "simplification"
+    },
+    "difficulty": {
+      "level": "C",
+      "status": "suggested",
+      "solverMoves": 3,
+      "sacrificeCount": 1,
+      "reason": "Phân mức theo chuỗi đổi quân và vật chất nhường lại trong nhánh đã kiểm tra."
+    },
+    "hints": [
+      "Xem có thể đổi hết các quân còn lại để về tàn cuộc Vua và Tốt không.",
+      "Tính cả nước bắt lại của đối thủ, rồi so sánh vị trí Vua và các Tốt."
+    ],
+    "solution": "Chuỗi đổi loại bỏ các quân còn lại của cả hai bên. Trắng: Vua f7, Tốt g2, h3, f4; Đen: Vua h7, Tốt h4, g6. Trắng có thể thắng nếu chơi chính xác. Nhánh mẫu: Qf8+ · Kh7 · Qxf7+ · Rxf7+ · Kxf7."
+  },
+  {
+    "title": "Carlsen,M — Naroditsky,D",
+    "prompt": "Tìm cách đổi quân để chuyển sang tàn cuộc Tốt thắng.",
+    "mode": "interactive",
+    "outcome": "simplification",
+    "goal": "win",
+    "fen": "8/4b3/8/5K1k/6Rp/7P/6P1/8 w - - 4 88",
+    "moves": [
+      "Rg7",
+      "Bg5",
+      "Rh7+",
+      "Bh6",
+      "Rxh6+",
+      "Kxh6"
+    ],
+    "previousMove": {
+      "fen": "8/8/5b2/5K1k/6Rp/7P/6P1/8 b - - 3 87",
+      "move": "Be7"
+    },
+    "source": "https://www.pgnmentor.com/players/Carlsen.zip",
+    "gameReference": {
+      "id": "b7cfa545c1f1cc58",
+      "kind": "game",
+      "ply": 174,
+      "branch": 0,
+      "collection": "simplification"
+    },
+    "difficulty": {
+      "level": "C",
+      "status": "suggested",
+      "solverMoves": 3,
+      "sacrificeCount": 1,
+      "reason": "Phân mức theo chuỗi đổi quân và vật chất nhường lại trong nhánh đã kiểm tra."
+    },
+    "hints": [
+      "Xem có thể đổi hết các quân còn lại để về tàn cuộc Vua và Tốt không.",
+      "Tính cả nước bắt lại của đối thủ, rồi so sánh vị trí Vua và các Tốt."
+    ],
+    "solution": "Chuỗi đổi loại bỏ các quân còn lại của cả hai bên. Trắng: Vua f5, Tốt g2, h3; Đen: Vua h6, Tốt h4. Trắng có thể thắng nếu chơi chính xác. Nhánh mẫu: Rg7 · Bg5 · Rh7+ · Bh6 · Rxh6+ · Kxh6."
+  },
+  {
+    "title": "Marshall, Frank James — Wolf, Heinrich",
+    "prompt": "Tìm cách đổi quân để chuyển sang tàn cuộc Tốt thắng.",
+    "mode": "interactive",
+    "outcome": "simplification",
+    "goal": "win",
+    "fen": "6k1/8/5rpp/8/6KP/5R2/8/8 b - - 0 57",
+    "moves": [
+      "Rxf3",
+      "Kxf3"
+    ],
+    "previousMove": {
+      "fen": "6k1/8/5rpp/8/6KP/5p2/5R2/8 w - - 0 57",
+      "move": "Rxf3"
+    },
+    "source": "https://www.pgnmentor.com/players/Marshall.zip",
+    "gameReference": {
+      "id": "a81dda7bdbee044e",
+      "kind": "game",
+      "ply": 113,
+      "branch": 0,
+      "collection": "simplification"
+    },
+    "difficulty": {
+      "level": "C*",
+      "status": "suggested",
+      "solverMoves": 1,
+      "sacrificeCount": 0,
+      "reason": "Phân mức theo chuỗi đổi quân và vật chất nhường lại trong nhánh đã kiểm tra."
+    },
+    "hints": [
+      "Xem có thể đổi hết các quân còn lại để về tàn cuộc Vua và Tốt không.",
+      "Tính cả nước bắt lại của đối thủ, rồi so sánh vị trí Vua và các Tốt."
+    ],
+    "solution": "Chuỗi đổi loại bỏ các quân còn lại của cả hai bên. Trắng: Vua f3, Tốt h4; Đen: Vua g8, Tốt g6, h6. Đen có thể thắng nếu chơi chính xác. Nhánh mẫu: Rxf3 · Kxf3."
+  },
+  {
+    "title": "Akobian,V — Xiong,Jeffery",
+    "prompt": "Tìm cách đổi quân để chuyển sang tàn cuộc Tốt hòa.",
+    "mode": "interactive",
+    "outcome": "simplification",
+    "goal": "draw",
+    "fen": "8/5k2/q7/4Q3/8/4P1K1/8/8 b - - 3 45",
+    "moves": [
+      "Qg6+",
+      "Kf3",
+      "Qc6+",
+      "e4",
+      "Qf6+",
+      "Qxf6+",
+      "Kxf6"
+    ],
+    "previousMove": {
+      "fen": "8/5k2/q7/4Q3/8/4P3/5K2/8 w - - 2 45",
+      "move": "Kg3"
+    },
+    "source": "https://www.pgnmentor.com/players/Akobian.zip",
+    "gameReference": {
+      "id": "141895942d057dfb",
+      "kind": "game",
+      "ply": 89,
+      "branch": 0,
+      "collection": "simplification"
+    },
+    "difficulty": {
+      "level": "C*",
+      "status": "suggested",
+      "solverMoves": 4,
+      "sacrificeCount": 0,
+      "reason": "Phân mức theo chuỗi đổi quân và vật chất nhường lại trong nhánh đã kiểm tra."
+    },
+    "hints": [
+      "Xem có thể đổi hết các quân còn lại để về tàn cuộc Vua và Tốt không.",
+      "Tính cả nước bắt lại của đối thủ, rồi so sánh vị trí Vua và các Tốt."
+    ],
+    "solution": "Chuỗi đổi loại bỏ các quân còn lại của cả hai bên. Trắng: Vua f3, Tốt e4; Đen: Vua f6, không còn Tốt. Đen đang kém vật chất, nhưng chuỗi đổi đưa về thế có thể giữ hòa nếu chơi chính xác. Nhánh mẫu: Qg6+ · Kf3 · Qc6+ · e4 · Qf6+ · Qxf6+ · Kxf6."
+  },
+  {
+    "title": "Fridman,D — Ivanchuk,V",
+    "prompt": "Tìm cách đổi quân để chuyển sang tàn cuộc Tốt hòa.",
+    "mode": "interactive",
+    "outcome": "simplification",
+    "goal": "draw",
+    "fen": "8/8/8/1R3p2/5kp1/3r4/5PK1/8 w - - 6 60",
+    "moves": [
+      "Rb4+",
+      "Ke5",
+      "Rb5+",
+      "Ke4",
+      "Rb4+",
+      "Rd4",
+      "Rxd4+",
+      "Kxd4"
+    ],
+    "previousMove": {
+      "fen": "8/8/8/1R3pk1/6p1/3r4/5PK1/8 b - - 5 59",
+      "move": "Kf4"
+    },
+    "source": "https://www.pgnmentor.com/players/Ivanchuk.zip",
+    "gameReference": {
+      "id": "1f9f6466406cae9f",
+      "kind": "game",
+      "ply": 118,
+      "branch": 0,
+      "collection": "simplification"
+    },
+    "difficulty": {
+      "level": "C*",
+      "status": "suggested",
+      "solverMoves": 4,
+      "sacrificeCount": 0,
+      "reason": "Phân mức theo chuỗi đổi quân và vật chất nhường lại trong nhánh đã kiểm tra."
+    },
+    "hints": [
+      "Xem có thể đổi hết các quân còn lại để về tàn cuộc Vua và Tốt không.",
+      "Tính cả nước bắt lại của đối thủ, rồi so sánh vị trí Vua và các Tốt."
+    ],
+    "solution": "Chuỗi đổi loại bỏ các quân còn lại của cả hai bên. Trắng: Vua g2, Tốt f2; Đen: Vua d4, Tốt g4, f5. Trắng đang kém vật chất, nhưng chuỗi đổi đưa về thế có thể giữ hòa nếu chơi chính xác. Nhánh mẫu: Rb4+ · Ke5 · Rb5+ · Ke4 · Rb4+ · Rd4 · Rxd4+ · Kxd4."
+  },
+  {
+    "title": "Carlsen,M — Firouzja,Alireza",
+    "prompt": "Tìm cách đổi quân để chuyển sang tàn cuộc Tốt hòa.",
+    "mode": "interactive",
+    "outcome": "simplification",
+    "goal": "draw",
+    "fen": "6QR/pp6/8/5P2/2r5/2k1K3/P1p5/3q4 w - - 0 49",
+    "moves": [
+      "Qg7+",
+      "Qd4+",
+      "Qxd4+",
+      "Rxd4",
+      "Rc8+",
+      "Rc4",
+      "Rxc4+",
+      "Kxc4"
+    ],
+    "previousMove": {
+      "fen": "6QR/pp6/8/5P2/2r5/2k1K3/P1pp4/8 b - - 0 48",
+      "move": "d1=Q"
+    },
+    "source": "https://www.pgnmentor.com/players/Carlsen.zip",
+    "gameReference": {
+      "id": "2e1cf7ffbd9b6f9e",
+      "kind": "game",
+      "ply": 96,
+      "branch": 0,
+      "collection": "simplification"
+    },
+    "difficulty": {
+      "level": "C*",
+      "status": "suggested",
+      "solverMoves": 4,
+      "sacrificeCount": 0,
+      "reason": "Phân mức theo chuỗi đổi quân và vật chất nhường lại trong nhánh đã kiểm tra."
+    },
+    "hints": [
+      "Xem có thể đổi hết các quân còn lại để về tàn cuộc Vua và Tốt không.",
+      "Tính cả nước bắt lại của đối thủ, rồi so sánh vị trí Vua và các Tốt."
+    ],
+    "solution": "Chuỗi đổi loại bỏ các quân còn lại của cả hai bên. Trắng: Vua e3, Tốt a2, f5; Đen: Vua c4, Tốt c2, a7, b7. Trắng đang kém vật chất, nhưng chuỗi đổi đưa về thế có thể giữ hòa nếu chơi chính xác. Nhánh mẫu: Qg7+ · Qd4+ · Qxd4+ · Rxd4 · Rc8+ · Rc4 · Rxc4+ · Kxc4."
+  },
+  {
+    "title": "Beznosov,Timofey — Morozevich,A",
+    "prompt": "Tìm cách đổi quân để chuyển sang tàn cuộc Tốt hòa.",
+    "mode": "interactive",
+    "outcome": "simplification",
+    "goal": "draw",
+    "fen": "8/6p1/3rk1p1/4p3/3pK3/R5P1/5P1P/8 w - - 4 43",
+    "moves": [
+      "f4",
+      "exf4",
+      "gxf4",
+      "d3",
+      "Rxd3",
+      "Rxd3",
+      "Kxd3"
+    ],
+    "previousMove": {
+      "fen": "3r4/6p1/4k1p1/4p3/3pK3/R5P1/5P1P/8 b - - 3 42",
+      "move": "Rd6"
+    },
+    "source": "https://www.pgnmentor.com/players/Morozevich.zip",
+    "gameReference": {
+      "id": "37c289291294c133",
+      "kind": "game",
+      "ply": 84,
+      "branch": 0,
+      "collection": "simplification"
+    },
+    "difficulty": {
+      "level": "C*",
+      "status": "suggested",
+      "solverMoves": 4,
+      "sacrificeCount": 0,
+      "reason": "Phân mức theo chuỗi đổi quân và vật chất nhường lại trong nhánh đã kiểm tra."
+    },
+    "hints": [
+      "Xem có thể đổi hết các quân còn lại để về tàn cuộc Vua và Tốt không.",
+      "Tính cả nước bắt lại của đối thủ, rồi so sánh vị trí Vua và các Tốt."
+    ],
+    "solution": "Chuỗi đổi loại bỏ các quân còn lại của cả hai bên. Trắng: Vua d3, Tốt h2, f4; Đen: Vua e6, Tốt g6, g7. Trắng đang kém vật chất, nhưng chuỗi đổi đưa về thế có thể giữ hòa nếu chơi chính xác. Nhánh mẫu: f4 · exf4 · gxf4 · d3 · Rxd3 · Rxd3 · Kxd3."
+  },
+  {
+    "title": "Alekhine, Alexander — Euwe, Max",
+    "prompt": "Tìm cách đổi quân để chuyển sang tàn cuộc Tốt hòa.",
+    "mode": "interactive",
+    "outcome": "simplification",
+    "goal": "draw",
+    "fen": "4k3/1R3p2/1p4r1/3K2P1/P2P4/8/8/8 b - - 2 52",
+    "moves": [
+      "Rxg5+",
+      "Kc6",
+      "Rg6+",
+      "Kc7",
+      "f5",
+      "Rxb6",
+      "Rxb6",
+      "Kxb6"
+    ],
+    "previousMove": {
+      "fen": "4k3/2R2p2/1p4r1/3K2P1/P2P4/8/8/8 w - - 1 52",
+      "move": "Rb7"
+    },
+    "source": "https://www.pgnmentor.com/players/Alekhine.zip",
+    "gameReference": {
+      "id": "4af35312247fa363",
+      "kind": "game",
+      "ply": 103,
+      "branch": 0,
+      "collection": "simplification"
+    },
+    "difficulty": {
+      "level": "C*",
+      "status": "suggested",
+      "solverMoves": 4,
+      "sacrificeCount": 0,
+      "reason": "Phân mức theo chuỗi đổi quân và vật chất nhường lại trong nhánh đã kiểm tra."
+    },
+    "hints": [
+      "Xem có thể đổi hết các quân còn lại để về tàn cuộc Vua và Tốt không.",
+      "Tính cả nước bắt lại của đối thủ, rồi so sánh vị trí Vua và các Tốt."
+    ],
+    "solution": "Chuỗi đổi loại bỏ các quân còn lại của cả hai bên. Trắng: Vua b6, Tốt a4, d4; Đen: Vua e8, Tốt f5. Đen đang kém vật chất, nhưng chuỗi đổi đưa về thế có thể giữ hòa nếu chơi chính xác. Nhánh mẫu: Rxg5+ · Kc6 · Rg6+ · Kc7 · f5 · Rxb6 · Rxb6 · Kxb6."
+  },
+  {
+    "title": "Akobian,V — Naroditsky,D",
+    "prompt": "Tìm cách đổi quân để chuyển sang tàn cuộc Tốt hòa.",
+    "mode": "interactive",
+    "outcome": "simplification",
+    "goal": "draw",
+    "fen": "8/1k6/1P4R1/1K6/8/8/8/r7 b - - 2 70",
+    "moves": [
+      "Rb1+",
+      "Kc5",
+      "Rc1+",
+      "Kd4",
+      "Rc6",
+      "Rxc6",
+      "Kxc6"
+    ],
+    "previousMove": {
+      "fen": "8/1k6/1P4R1/8/K7/8/8/r7 w - - 1 70",
+      "move": "Kb5"
+    },
+    "source": "https://www.pgnmentor.com/players/Akobian.zip",
+    "gameReference": {
+      "id": "4d2078f29962bd56",
+      "kind": "game",
+      "ply": 139,
+      "branch": 0,
+      "collection": "simplification"
+    },
+    "difficulty": {
+      "level": "C*",
+      "status": "suggested",
+      "solverMoves": 4,
+      "sacrificeCount": 0,
+      "reason": "Phân mức theo chuỗi đổi quân và vật chất nhường lại trong nhánh đã kiểm tra."
+    },
+    "hints": [
+      "Xem có thể đổi hết các quân còn lại để về tàn cuộc Vua và Tốt không.",
+      "Tính cả nước bắt lại của đối thủ, rồi so sánh vị trí Vua và các Tốt."
+    ],
+    "solution": "Chuỗi đổi loại bỏ các quân còn lại của cả hai bên. Trắng: Vua d4, Tốt b6; Đen: Vua c6, không còn Tốt. Đen đang kém vật chất, nhưng chuỗi đổi đưa về thế có thể giữ hòa nếu chơi chính xác. Nhánh mẫu: Rb1+ · Kc5 · Rc1+ · Kd4 · Rc6 · Rxc6 · Kxc6."
+  },
+  {
+    "title": "Geller, Efim P — Fischer, Robert James",
+    "prompt": "Tìm cách đổi quân để chuyển sang tàn cuộc Tốt thắng.",
+    "mode": "interactive",
+    "outcome": "simplification",
+    "goal": "win",
+    "fen": "8/1b6/1P1k2p1/8/5P1p/4Q3/1q2B1PK/8 w - - 13 53",
+    "moves": [
+      "Bf3",
+      "Bxf3",
+      "Qe5+",
+      "Qxe5",
+      "fxe5+",
+      "Kxe5",
+      "gxf3"
+    ],
+    "previousMove": {
+      "fen": "8/1b6/1P1k2p1/8/5P1p/4Q3/4B1PK/q7 b - - 12 52",
+      "move": "Qb2"
+    },
+    "source": "https://www.pgnmentor.com/players/Fischer.zip",
+    "gameReference": {
+      "id": "5f1671f5e751b985",
+      "kind": "game",
+      "ply": 104,
+      "branch": 0,
+      "collection": "simplification"
+    },
+    "difficulty": {
+      "level": "C*",
+      "status": "suggested",
+      "solverMoves": 4,
+      "sacrificeCount": 0,
+      "reason": "Phân mức theo chuỗi đổi quân và vật chất nhường lại trong nhánh đã kiểm tra."
+    },
+    "hints": [
+      "Xem có thể đổi hết các quân còn lại để về tàn cuộc Vua và Tốt không.",
+      "Tính cả nước bắt lại của đối thủ, rồi so sánh vị trí Vua và các Tốt."
+    ],
+    "solution": "Chuỗi đổi loại bỏ các quân còn lại của cả hai bên. Trắng: Vua h2, Tốt f3, b6; Đen: Vua e5, Tốt h4, g6. Trắng có thể thắng nếu chơi chính xác. Nhánh mẫu: Bf3 · Bxf3 · Qe5+ · Qxe5 · fxe5+ · Kxe5 · gxf3."
+  },
+  {
+    "title": "Carlsen,M — Nepomniachtchi,I",
+    "prompt": "Tìm cách đổi quân để chuyển sang tàn cuộc Tốt hòa.",
+    "mode": "interactive",
+    "outcome": "simplification",
+    "goal": "draw",
+    "fen": "8/5p2/6kp/4Q2p/8/3K3P/5qP1/8 w - - 17 61",
+    "moves": [
+      "Qe4+",
+      "Kg5",
+      "Qe7+",
+      "f6",
+      "Qe3+",
+      "Qxe3+",
+      "Kxe3"
+    ],
+    "previousMove": {
+      "fen": "8/5pk1/7p/4Q2p/8/3K3P/5qP1/8 b - - 16 60",
+      "move": "Kg6"
+    },
+    "source": "https://www.pgnmentor.com/players/Carlsen.zip",
+    "gameReference": {
+      "id": "60b51699f7baa789",
+      "kind": "game",
+      "ply": 120,
+      "branch": 0,
+      "collection": "simplification"
+    },
+    "difficulty": {
+      "level": "C*",
+      "status": "suggested",
+      "solverMoves": 4,
+      "sacrificeCount": 0,
+      "reason": "Phân mức theo chuỗi đổi quân và vật chất nhường lại trong nhánh đã kiểm tra."
+    },
+    "hints": [
+      "Xem có thể đổi hết các quân còn lại để về tàn cuộc Vua và Tốt không.",
+      "Tính cả nước bắt lại của đối thủ, rồi so sánh vị trí Vua và các Tốt."
+    ],
+    "solution": "Chuỗi đổi loại bỏ các quân còn lại của cả hai bên. Trắng: Vua e3, Tốt g2, h3; Đen: Vua g5, Tốt h5, f6, h6. Trắng đang kém vật chất, nhưng chuỗi đổi đưa về thế có thể giữ hòa nếu chơi chính xác. Nhánh mẫu: Qe4+ · Kg5 · Qe7+ · f6 · Qe3+ · Qxe3+ · Kxe3."
+  },
+  {
+    "title": "Bu Xiangzhi — Ivanchuk,V",
+    "prompt": "Tìm cách đổi quân để chuyển sang tàn cuộc Tốt thắng.",
+    "mode": "interactive",
+    "outcome": "simplification",
+    "goal": "win",
+    "fen": "8/1kp5/3p2P1/5Q2/2q1P3/1p6/5PK1/8 b - - 0 57",
+    "moves": [
+      "b2",
+      "e5",
+      "Qd5+",
+      "Kh2",
+      "Qxe5+",
+      "Qxe5",
+      "dxe5"
+    ],
+    "previousMove": {
+      "fen": "8/1kp5/3p4/5QP1/2q1P3/1p6/5PK1/8 w - - 0 57",
+      "move": "g6"
+    },
+    "source": "https://www.pgnmentor.com/players/Ivanchuk.zip",
+    "gameReference": {
+      "id": "784d5fe847d3133e",
+      "kind": "game",
+      "ply": 113,
+      "branch": 0,
+      "collection": "simplification"
+    },
+    "difficulty": {
+      "level": "C*",
+      "status": "suggested",
+      "solverMoves": 4,
+      "sacrificeCount": 0,
+      "reason": "Phân mức theo chuỗi đổi quân và vật chất nhường lại trong nhánh đã kiểm tra."
+    },
+    "hints": [
+      "Xem có thể đổi hết các quân còn lại để về tàn cuộc Vua và Tốt không.",
+      "Tính cả nước bắt lại của đối thủ, rồi so sánh vị trí Vua và các Tốt."
+    ],
+    "solution": "Chuỗi đổi loại bỏ các quân còn lại của cả hai bên. Trắng: Vua h2, Tốt f2, g6; Đen: Vua b7, Tốt b2, e5, c7. Đen có thể thắng nếu chơi chính xác. Nhánh mẫu: b2 · e5 · Qd5+ · Kh2 · Qxe5+ · Qxe5 · dxe5."
+  },
+  {
+    "title": "Gligoric, Svetozar — Fischer, Robert James",
+    "prompt": "Tìm cách đổi quân để chuyển sang tàn cuộc Tốt hòa.",
+    "mode": "interactive",
+    "outcome": "simplification",
+    "goal": "draw",
+    "fen": "7r/3k4/8/1K6/1P6/8/8/2R5 b - - 0 53",
+    "moves": [
+      "Rb8+",
+      "Ka4",
+      "Ra8+",
+      "Kb3",
+      "Rc8",
+      "Rxc8",
+      "Kxc8"
+    ],
+    "previousMove": {
+      "fen": "7r/3k4/1K6/1p6/1P6/8/8/2R5 w - - 3 53",
+      "move": "Kxb5"
+    },
+    "source": "https://www.pgnmentor.com/players/Fischer.zip",
+    "gameReference": {
+      "id": "8e54b06bfb83ed45",
+      "kind": "game",
+      "ply": 105,
+      "branch": 0,
+      "collection": "simplification"
+    },
+    "difficulty": {
+      "level": "C*",
+      "status": "suggested",
+      "solverMoves": 4,
+      "sacrificeCount": 0,
+      "reason": "Phân mức theo chuỗi đổi quân và vật chất nhường lại trong nhánh đã kiểm tra."
+    },
+    "hints": [
+      "Xem có thể đổi hết các quân còn lại để về tàn cuộc Vua và Tốt không.",
+      "Tính cả nước bắt lại của đối thủ, rồi so sánh vị trí Vua và các Tốt."
+    ],
+    "solution": "Chuỗi đổi loại bỏ các quân còn lại của cả hai bên. Trắng: Vua b3, Tốt b4; Đen: Vua c8, không còn Tốt. Đen đang kém vật chất, nhưng chuỗi đổi đưa về thế có thể giữ hòa nếu chơi chính xác. Nhánh mẫu: Rb8+ · Ka4 · Ra8+ · Kb3 · Rc8 · Rxc8 · Kxc8."
+  },
+  {
+    "title": "So,W — Ivanchuk,V",
+    "prompt": "Tìm cách đổi quân để chuyển sang tàn cuộc Tốt hòa.",
+    "mode": "interactive",
+    "outcome": "simplification",
+    "goal": "draw",
+    "fen": "8/8/8/3kp3/1R6/1p1KP3/1r6/8 w - - 0 51",
+    "moves": [
+      "Rb5+",
+      "Kd6",
+      "Kc3",
+      "Rb1",
+      "Rxb3",
+      "Rxb3+",
+      "Kxb3"
+    ],
+    "previousMove": {
+      "fen": "8/8/8/3kp3/1R6/1p1KP3/1Pr5/8 b - - 4 50",
+      "move": "Rxb2"
+    },
+    "source": "https://www.pgnmentor.com/players/Ivanchuk.zip",
+    "gameReference": {
+      "id": "900e6f9178698810",
+      "kind": "game",
+      "ply": 100,
+      "branch": 0,
+      "collection": "simplification"
+    },
+    "difficulty": {
+      "level": "C*",
+      "status": "suggested",
+      "solverMoves": 4,
+      "sacrificeCount": 0,
+      "reason": "Phân mức theo chuỗi đổi quân và vật chất nhường lại trong nhánh đã kiểm tra."
+    },
+    "hints": [
+      "Xem có thể đổi hết các quân còn lại để về tàn cuộc Vua và Tốt không.",
+      "Tính cả nước bắt lại của đối thủ, rồi so sánh vị trí Vua và các Tốt."
+    ],
+    "solution": "Chuỗi đổi loại bỏ các quân còn lại của cả hai bên. Trắng: Vua b3, Tốt e3; Đen: Vua d6, Tốt e5. Trắng đang kém vật chất, nhưng chuỗi đổi đưa về thế có thể giữ hòa nếu chơi chính xác. Nhánh mẫu: Rb5+ · Kd6 · Kc3 · Rb1 · Rxb3 · Rxb3+ · Kxb3."
+  },
+  {
+    "title": "Halkias,S — Aronian,L",
+    "prompt": "Tìm cách đổi quân để chuyển sang tàn cuộc Tốt thắng.",
+    "mode": "interactive",
+    "outcome": "simplification",
+    "goal": "win",
+    "fen": "8/8/1P3p2/4p3/6k1/K3Q1p1/8/1q6 b - - 0 60",
+    "moves": [
+      "Qa1+",
+      "Kb4",
+      "Qb2+",
+      "Kc5",
+      "Qf2",
+      "Qxf2",
+      "gxf2"
+    ],
+    "previousMove": {
+      "fen": "8/8/5p2/1P2p3/6k1/K3Q1p1/8/1q6 w - - 2 60",
+      "move": "b6"
+    },
+    "source": "https://www.pgnmentor.com/players/Aronian.zip",
+    "gameReference": {
+      "id": "a2165beb60096060",
+      "kind": "game",
+      "ply": 119,
+      "branch": 0,
+      "collection": "simplification"
+    },
+    "difficulty": {
+      "level": "C*",
+      "status": "suggested",
+      "solverMoves": 4,
+      "sacrificeCount": 0,
+      "reason": "Phân mức theo chuỗi đổi quân và vật chất nhường lại trong nhánh đã kiểm tra."
+    },
+    "hints": [
+      "Xem có thể đổi hết các quân còn lại để về tàn cuộc Vua và Tốt không.",
+      "Tính cả nước bắt lại của đối thủ, rồi so sánh vị trí Vua và các Tốt."
+    ],
+    "solution": "Chuỗi đổi loại bỏ các quân còn lại của cả hai bên. Trắng: Vua c5, Tốt b6; Đen: Vua g4, Tốt f2, e5, f6. Đen có thể thắng nếu chơi chính xác. Nhánh mẫu: Qa1+ · Kb4 · Qb2+ · Kc5 · Qf2 · Qxf2 · gxf2."
+  },
+  {
+    "title": "Topalov,V — Ivanchuk,V",
+    "prompt": "Tìm cách đổi quân để chuyển sang tàn cuộc Tốt thắng.",
+    "mode": "interactive",
+    "outcome": "simplification",
+    "goal": "win",
+    "fen": "8/3k3p/8/1P1n2K1/2N5/7P/8/8 w - - 2 70",
+    "moves": [
+      "h4",
+      "Ne7",
+      "Kf6",
+      "Ng6",
+      "Ne5+",
+      "Nxe5",
+      "Kxe5"
+    ],
+    "previousMove": {
+      "fen": "8/4k2p/8/1P1n2K1/2N5/7P/8/8 b - - 1 69",
+      "move": "Kd7"
+    },
+    "source": "https://www.pgnmentor.com/players/Topalov.zip",
+    "gameReference": {
+      "id": "abe25261867de78d",
+      "kind": "game",
+      "ply": 138,
+      "branch": 0,
+      "collection": "simplification"
+    },
+    "difficulty": {
+      "level": "C*",
+      "status": "suggested",
+      "solverMoves": 4,
+      "sacrificeCount": 0,
+      "reason": "Phân mức theo chuỗi đổi quân và vật chất nhường lại trong nhánh đã kiểm tra."
+    },
+    "hints": [
+      "Xem có thể đổi hết các quân còn lại để về tàn cuộc Vua và Tốt không.",
+      "Tính cả nước bắt lại của đối thủ, rồi so sánh vị trí Vua và các Tốt."
+    ],
+    "solution": "Chuỗi đổi loại bỏ các quân còn lại của cả hai bên. Trắng: Vua e5, Tốt h4, b5; Đen: Vua d7, Tốt h7. Trắng có thể thắng nếu chơi chính xác. Nhánh mẫu: h4 · Ne7 · Kf6 · Ng6 · Ne5+ · Nxe5 · Kxe5."
+  },
+  {
+    "title": "Gustafsson,J — Morozevich,A",
+    "prompt": "Tìm cách đổi quân để chuyển sang tàn cuộc Tốt hòa.",
+    "mode": "interactive",
+    "outcome": "simplification",
+    "goal": "draw",
+    "fen": "8/8/6p1/R6p/4r1kP/8/7K/8 w - - 54 93",
+    "moves": [
+      "Rg5+",
+      "Kxh4",
+      "Rxg6",
+      "Re2+",
+      "Rg2",
+      "Rxg2+",
+      "Kxg2"
+    ],
+    "previousMove": {
+      "fen": "8/8/6p1/R4k1p/4r2P/8/7K/8 b - - 53 92",
+      "move": "Kg4"
+    },
+    "source": "https://www.pgnmentor.com/players/Morozevich.zip",
+    "gameReference": {
+      "id": "b19ace28735a86c8",
+      "kind": "game",
+      "ply": 184,
+      "branch": 0,
+      "collection": "simplification"
+    },
+    "difficulty": {
+      "level": "C*",
+      "status": "suggested",
+      "solverMoves": 4,
+      "sacrificeCount": 0,
+      "reason": "Phân mức theo chuỗi đổi quân và vật chất nhường lại trong nhánh đã kiểm tra."
+    },
+    "hints": [
+      "Xem có thể đổi hết các quân còn lại để về tàn cuộc Vua và Tốt không.",
+      "Tính cả nước bắt lại của đối thủ, rồi so sánh vị trí Vua và các Tốt."
+    ],
+    "solution": "Chuỗi đổi loại bỏ các quân còn lại của cả hai bên. Trắng: Vua g2, không còn Tốt; Đen: Vua h4, Tốt h5. Trắng đang kém vật chất, nhưng chuỗi đổi đưa về thế có thể giữ hòa nếu chơi chính xác. Nhánh mẫu: Rg5+ · Kxh4 · Rxg6 · Re2+ · Rg2 · Rxg2+ · Kxg2."
+  },
+  {
+    "title": "Giri,A — Carlsen,M",
+    "prompt": "Tìm cách đổi quân để chuyển sang tàn cuộc Tốt hòa.",
+    "mode": "interactive",
+    "outcome": "simplification",
+    "goal": "draw",
+    "fen": "8/5p2/4rP1k/4p1P1/4R3/5PK1/8/8 b - - 0 45",
+    "moves": [
+      "Kxg5",
+      "f4+",
+      "exf4+",
+      "Rxf4",
+      "Re3+",
+      "Rf3",
+      "Rxf3+",
+      "Kxf3"
+    ],
+    "previousMove": {
+      "fen": "8/5p2/4rP1k/4p1p1/4R2P/5PK1/8/8 w - - 0 45",
+      "move": "hxg5+"
+    },
+    "source": "https://www.pgnmentor.com/players/Carlsen.zip",
+    "gameReference": {
+      "id": "c9892a73d9530c4d",
+      "kind": "game",
+      "ply": 89,
+      "branch": 0,
+      "collection": "simplification"
+    },
+    "difficulty": {
+      "level": "C*",
+      "status": "suggested",
+      "solverMoves": 4,
+      "sacrificeCount": 0,
+      "reason": "Phân mức theo chuỗi đổi quân và vật chất nhường lại trong nhánh đã kiểm tra."
+    },
+    "hints": [
+      "Xem có thể đổi hết các quân còn lại để về tàn cuộc Vua và Tốt không.",
+      "Tính cả nước bắt lại của đối thủ, rồi so sánh vị trí Vua và các Tốt."
+    ],
+    "solution": "Chuỗi đổi loại bỏ các quân còn lại của cả hai bên. Trắng: Vua f3, Tốt f6; Đen: Vua g5, Tốt f7. Đen đang kém vật chất, nhưng chuỗi đổi đưa về thế có thể giữ hòa nếu chơi chính xác. Nhánh mẫu: Kxg5 · f4+ · exf4+ · Rxf4 · Re3+ · Rf3 · Rxf3+ · Kxf3."
+  },
+  {
+    "title": "Nepomniachtchi,I — Ivanchuk,V",
+    "prompt": "Tìm cách đổi quân để chuyển sang tàn cuộc Tốt thắng.",
+    "mode": "interactive",
+    "outcome": "simplification",
+    "goal": "win",
+    "fen": "8/8/8/1p1P2R1/2r1PK2/3k1P2/8/8 w - - 0 56",
+    "moves": [
+      "d6",
+      "b4",
+      "d7",
+      "Rd4",
+      "Rd5",
+      "Rxd5",
+      "exd5"
+    ],
+    "previousMove": {
+      "fen": "8/8/1p6/3P2R1/2r1PK2/3k1P2/8/8 b - - 0 55",
+      "move": "b5"
+    },
+    "source": "https://www.pgnmentor.com/players/Ivanchuk.zip",
+    "gameReference": {
+      "id": "d252dc7360ea6545",
+      "kind": "game",
+      "ply": 110,
+      "branch": 0,
+      "collection": "simplification"
+    },
+    "difficulty": {
+      "level": "C*",
+      "status": "suggested",
+      "solverMoves": 4,
+      "sacrificeCount": 0,
+      "reason": "Phân mức theo chuỗi đổi quân và vật chất nhường lại trong nhánh đã kiểm tra."
+    },
+    "hints": [
+      "Xem có thể đổi hết các quân còn lại để về tàn cuộc Vua và Tốt không.",
+      "Tính cả nước bắt lại của đối thủ, rồi so sánh vị trí Vua và các Tốt."
+    ],
+    "solution": "Chuỗi đổi loại bỏ các quân còn lại của cả hai bên. Trắng: Vua f4, Tốt f3, d5, d7; Đen: Vua d3, Tốt b4. Trắng có thể thắng nếu chơi chính xác. Nhánh mẫu: d6 · b4 · d7 · Rd4 · Rd5 · Rxd5 · exd5."
+  },
+  {
+    "title": "Duras, Oldrich — Marshall, Frank James",
+    "prompt": "Tìm cách đổi quân để chuyển sang tàn cuộc Tốt thắng.",
+    "mode": "interactive",
+    "outcome": "simplification",
+    "goal": "win",
+    "fen": "8/8/8/3b1k1p/p7/P2NKPP1/1P6/8 w - - 6 48",
+    "moves": [
+      "Nf4",
+      "Bf7",
+      "Nxh5",
+      "Bxh5",
+      "g4+",
+      "Bxg4",
+      "fxg4+"
+    ],
+    "previousMove": {
+      "fen": "8/5b2/8/5k1p/p7/P2NKPP1/1P6/8 b - - 5 47",
+      "move": "Bd5"
+    },
+    "source": "https://www.pgnmentor.com/players/Marshall.zip",
+    "gameReference": {
+      "id": "dcd64431ddef8b38",
+      "kind": "game",
+      "ply": 94,
+      "branch": 0,
+      "collection": "simplification"
+    },
+    "difficulty": {
+      "level": "C*",
+      "status": "suggested",
+      "solverMoves": 4,
+      "sacrificeCount": 0,
+      "reason": "Phân mức theo chuỗi đổi quân và vật chất nhường lại trong nhánh đã kiểm tra."
+    },
+    "hints": [
+      "Xem có thể đổi hết các quân còn lại để về tàn cuộc Vua và Tốt không.",
+      "Tính cả nước bắt lại của đối thủ, rồi so sánh vị trí Vua và các Tốt."
+    ],
+    "solution": "Chuỗi đổi loại bỏ các quân còn lại của cả hai bên. Trắng: Vua e3, Tốt b2, a3, g4; Đen: Vua f5, Tốt a4. Trắng có thể thắng nếu chơi chính xác. Nhánh mẫu: Nf4 · Bf7 · Nxh5 · Bxh5 · g4+ · Bxg4 · fxg4+."
+  },
+  {
+    "title": "Aronian,L — Vidit,S",
+    "prompt": "Tìm cách đổi quân để chuyển sang tàn cuộc Tốt hòa.",
+    "mode": "interactive",
+    "outcome": "simplification",
+    "goal": "draw",
+    "fen": "6r1/8/6p1/7P/7k/1KR4P/8/8 b - - 0 72",
+    "moves": [
+      "gxh5",
+      "Kc2",
+      "Rg2+",
+      "Kd1",
+      "Rg3",
+      "Rxg3",
+      "Kxg3"
+    ],
+    "previousMove": {
+      "fen": "6r1/8/6p1/7p/6Pk/1KR4P/8/8 w - - 0 72",
+      "move": "gxh5"
+    },
+    "source": "https://www.pgnmentor.com/players/Aronian.zip",
+    "gameReference": {
+      "id": "e73fbbd641efc2a1",
+      "kind": "game",
+      "ply": 143,
+      "branch": 0,
+      "collection": "simplification"
+    },
+    "difficulty": {
+      "level": "C*",
+      "status": "suggested",
+      "solverMoves": 4,
+      "sacrificeCount": 0,
+      "reason": "Phân mức theo chuỗi đổi quân và vật chất nhường lại trong nhánh đã kiểm tra."
+    },
+    "hints": [
+      "Xem có thể đổi hết các quân còn lại để về tàn cuộc Vua và Tốt không.",
+      "Tính cả nước bắt lại của đối thủ, rồi so sánh vị trí Vua và các Tốt."
+    ],
+    "solution": "Chuỗi đổi loại bỏ các quân còn lại của cả hai bên. Trắng: Vua d1, Tốt h3; Đen: Vua g3, Tốt h5. Đen đang kém vật chất, nhưng chuỗi đổi đưa về thế có thể giữ hòa nếu chơi chính xác. Nhánh mẫu: gxh5 · Kc2 · Rg2+ · Kd1 · Rg3 · Rxg3 · Kxg3."
+  },
+  {
+    "title": "Moiseenko,A1 — Ivanchuk,V",
+    "prompt": "Tìm cách đổi quân để chuyển sang tàn cuộc Tốt hòa.",
+    "mode": "interactive",
+    "outcome": "simplification",
+    "goal": "draw",
+    "fen": "7R/8/8/6k1/6p1/6p1/4r3/6K1 w - - 16 81",
+    "moves": [
+      "Rg8+",
+      "Kf5",
+      "Rf8+",
+      "Ke4",
+      "Re8+",
+      "Kf3",
+      "Rxe2",
+      "Kxe2"
+    ],
+    "previousMove": {
+      "fen": "7R/8/8/7k/6p1/6p1/4r3/6K1 b - - 15 80",
+      "move": "Kg5"
+    },
+    "source": "https://www.pgnmentor.com/players/Ivanchuk.zip",
+    "gameReference": {
+      "id": "eaa158a778d92125",
+      "kind": "game",
+      "ply": 160,
+      "branch": 0,
+      "collection": "simplification"
+    },
+    "difficulty": {
+      "level": "C*",
+      "status": "suggested",
+      "solverMoves": 4,
+      "sacrificeCount": 0,
+      "reason": "Phân mức theo chuỗi đổi quân và vật chất nhường lại trong nhánh đã kiểm tra."
+    },
+    "hints": [
+      "Xem có thể đổi hết các quân còn lại để về tàn cuộc Vua và Tốt không.",
+      "Tính cả nước bắt lại của đối thủ, rồi so sánh vị trí Vua và các Tốt."
+    ],
+    "solution": "Chuỗi đổi loại bỏ các quân còn lại của cả hai bên. Trắng: Vua g1, không còn Tốt; Đen: Vua e2, Tốt g3, g4. Trắng đang kém vật chất, nhưng chuỗi đổi đưa về thế có thể giữ hòa nếu chơi chính xác. Nhánh mẫu: Rg8+ · Kf5 · Rf8+ · Ke4 · Re8+ · Kf3 · Rxe2 · Kxe2."
+  },
+  {
+    "title": "Mamedyarov,S — Ivanchuk,V",
+    "prompt": "Tìm cách đổi quân để chuyển sang tàn cuộc Tốt hòa.",
+    "mode": "interactive",
+    "outcome": "simplification",
+    "goal": "draw",
+    "fen": "3k2B1/3b2Rp/1p6/4K3/4P2r/8/8/8 w - - 0 52",
+    "moves": [
+      "Bxh7",
+      "Rh6",
+      "Bf5",
+      "Bxf5",
+      "exf5",
+      "Ke8",
+      "Rg6",
+      "Rxg6",
+      "fxg6"
+    ],
+    "previousMove": {
+      "fen": "3k2B1/3b2Rp/1p5r/4K3/4P2P/8/8/8 b - - 12 51",
+      "move": "Rxh4"
+    },
+    "source": "https://www.pgnmentor.com/players/Ivanchuk.zip",
+    "gameReference": {
+      "id": "6b2668fedae8b54b",
+      "kind": "game",
+      "ply": 102,
+      "branch": 0,
+      "collection": "simplification"
+    },
+    "difficulty": {
+      "level": "C*",
+      "status": "suggested",
+      "solverMoves": 5,
+      "sacrificeCount": 0,
+      "reason": "Phân mức theo chuỗi đổi quân và vật chất nhường lại trong nhánh đã kiểm tra."
+    },
+    "hints": [
+      "Xem có thể đổi hết các quân còn lại để về tàn cuộc Vua và Tốt không.",
+      "Tính cả nước bắt lại của đối thủ, rồi so sánh vị trí Vua và các Tốt."
+    ],
+    "solution": "Chuỗi đổi loại bỏ các quân còn lại của cả hai bên. Trắng: Vua e5, Tốt g6; Đen: Vua e8, Tốt b6. Trắng đang kém vật chất, nhưng chuỗi đổi đưa về thế có thể giữ hòa nếu chơi chính xác. Nhánh mẫu: Bxh7 · Rh6 · Bf5 · Bxf5 · exf5 · Ke8 · Rg6 · Rxg6 · fxg6."
+  },
+  {
+    "title": "Tologontegin,S — Shirov,A",
+    "prompt": "Tìm cách đổi quân để chuyển sang tàn cuộc Tốt thắng.",
+    "mode": "interactive",
+    "outcome": "simplification",
+    "goal": "win",
+    "fen": "8/1p6/4P3/p4K1p/P2kN3/8/8/2q5 b - - 1 64",
+    "moves": [
+      "Qf1+",
+      "Kg6",
+      "Qd3",
+      "Kf7",
+      "Qxe4",
+      "e7",
+      "h4",
+      "e8=Q",
+      "Qxe8+",
+      "Kxe8"
+    ],
+    "previousMove": {
+      "fen": "8/1p6/4P3/p6p/P2kNK2/8/8/2q5 w - - 0 64",
+      "move": "Kf5"
+    },
+    "source": "https://www.pgnmentor.com/players/Shirov.zip",
+    "gameReference": {
+      "id": "8768b00abdaccf72",
+      "kind": "game",
+      "ply": 127,
+      "branch": 0,
+      "collection": "simplification"
+    },
+    "difficulty": {
+      "level": "C*",
+      "status": "suggested",
+      "solverMoves": 5,
+      "sacrificeCount": 0,
+      "reason": "Phân mức theo chuỗi đổi quân và vật chất nhường lại trong nhánh đã kiểm tra."
+    },
+    "hints": [
+      "Xem có thể đổi hết các quân còn lại để về tàn cuộc Vua và Tốt không.",
+      "Tính cả nước bắt lại của đối thủ, rồi so sánh vị trí Vua và các Tốt."
+    ],
+    "solution": "Chuỗi đổi loại bỏ các quân còn lại của cả hai bên. Trắng: Vua e8, Tốt a4; Đen: Vua d4, Tốt h4, a5, b7. Đen có thể thắng nếu chơi chính xác. Nhánh mẫu: Qf1+ · Kg6 · Qd3 · Kf7 · Qxe4 · e7 · h4 · e8=Q · Qxe8+ · Kxe8."
+  },
+  {
+    "title": "Dubov,Daniil — So,W",
+    "prompt": "Tìm cách đổi quân để chuyển sang tàn cuộc Tốt thắng.",
+    "mode": "interactive",
+    "outcome": "simplification",
+    "goal": "win",
+    "fen": "8/8/8/5kpp/3Rp3/2Pb2P1/1P3K2/8 w - g6 0 37",
+    "moves": [
+      "b4",
+      "h4",
+      "gxh4",
+      "gxh4",
+      "b5",
+      "Kf4",
+      "Rxd3",
+      "exd3"
+    ],
+    "previousMove": {
+      "fen": "8/6p1/8/5k1p/3Rp3/2Pb2P1/1P3K2/8 b - - 2 36",
+      "move": "g5"
+    },
+    "source": "https://www.pgnmentor.com/players/So.zip",
+    "gameReference": {
+      "id": "049833efabb8f342",
+      "kind": "game",
+      "ply": 72,
+      "branch": 0,
+      "collection": "simplification"
+    },
+    "difficulty": {
+      "level": "D",
+      "status": "suggested",
+      "solverMoves": 4,
+      "sacrificeCount": 1,
+      "reason": "Phân mức theo chuỗi đổi quân và vật chất nhường lại trong nhánh đã kiểm tra."
+    },
+    "hints": [
+      "Xem có thể đổi hết các quân còn lại để về tàn cuộc Vua và Tốt không.",
+      "Tính cả nước bắt lại của đối thủ, rồi so sánh vị trí Vua và các Tốt."
+    ],
+    "solution": "Chuỗi đổi loại bỏ các quân còn lại của cả hai bên. Trắng: Vua f2, Tốt c3, b5; Đen: Vua f4, Tốt d3, h4. Trắng có thể thắng nếu chơi chính xác. Nhánh mẫu: b4 · h4 · gxh4 · gxh4 · b5 · Kf4 · Rxd3 · exd3."
+  },
+  {
+    "title": "Voigt, HG. — Lasker, Emanuel",
+    "prompt": "Tìm cách đổi quân để chuyển sang tàn cuộc Tốt thắng.",
+    "mode": "interactive",
+    "outcome": "simplification",
+    "goal": "win",
+    "fen": "8/8/8/2r5/5p2/4kB2/6P1/6K1 b - - 3 78",
+    "moves": [
+      "Rc1+",
+      "Kh2",
+      "Kf2",
+      "Kh3",
+      "Rc3",
+      "Kg4",
+      "Rxf3",
+      "gxf3"
+    ],
+    "previousMove": {
+      "fen": "8/8/2B5/2r5/5p2/4k3/6P1/6K1 w - - 2 78",
+      "move": "Bf3"
+    },
+    "source": "https://www.pgnmentor.com/players/Lasker.zip",
+    "gameReference": {
+      "id": "119fbd2f480f15e1",
+      "kind": "game",
+      "ply": 155,
+      "branch": 0,
+      "collection": "simplification"
+    },
+    "difficulty": {
+      "level": "D",
+      "status": "suggested",
+      "solverMoves": 4,
+      "sacrificeCount": 1,
+      "reason": "Phân mức theo chuỗi đổi quân và vật chất nhường lại trong nhánh đã kiểm tra."
+    },
+    "hints": [
+      "Xem có thể đổi hết các quân còn lại để về tàn cuộc Vua và Tốt không.",
+      "Tính cả nước bắt lại của đối thủ, rồi so sánh vị trí Vua và các Tốt."
+    ],
+    "solution": "Chuỗi đổi loại bỏ các quân còn lại của cả hai bên. Trắng: Vua g4, Tốt f3; Đen: Vua f2, Tốt f4. Đen có thể thắng nếu chơi chính xác. Nhánh mẫu: Rc1+ · Kh2 · Kf2 · Kh3 · Rc3 · Kg4 · Rxf3 · gxf3."
+  },
+  {
+    "title": "Sax, Gyula — Timman, Jan H",
+    "prompt": "Tìm cách đổi quân để chuyển sang tàn cuộc Tốt thắng.",
+    "mode": "interactive",
+    "outcome": "simplification",
+    "goal": "win",
+    "fen": "3k2r1/2R4R/4p3/3b3p/7P/P4p1K/8/8 w - - 4 49",
+    "moves": [
+      "Rhd7+",
+      "Ke8",
+      "Rxd5",
+      "exd5",
+      "Rc8+",
+      "Kf7",
+      "Rxg8",
+      "Kxg8"
+    ],
+    "previousMove": {
+      "fen": "4k1r1/2R4R/4p3/3b3p/7P/P4p1K/8/8 b - - 3 48",
+      "move": "Kd8"
+    },
+    "source": "https://www.pgnmentor.com/players/Timman.zip",
+    "gameReference": {
+      "id": "1ade2105dffa33f1",
+      "kind": "game",
+      "ply": 96,
+      "branch": 0,
+      "collection": "simplification"
+    },
+    "difficulty": {
+      "level": "D",
+      "status": "suggested",
+      "solverMoves": 4,
+      "sacrificeCount": 2,
+      "reason": "Phân mức theo chuỗi đổi quân và vật chất nhường lại trong nhánh đã kiểm tra."
+    },
+    "hints": [
+      "Xem có thể đổi hết các quân còn lại để về tàn cuộc Vua và Tốt không.",
+      "Tính cả nước bắt lại của đối thủ, rồi so sánh vị trí Vua và các Tốt."
+    ],
+    "solution": "Chuỗi đổi loại bỏ các quân còn lại của cả hai bên. Trắng: Vua h3, Tốt a3, h4; Đen: Vua g8, Tốt f3, d5, h5. Trắng có thể thắng nếu chơi chính xác. Nhánh mẫu: Rhd7+ · Ke8 · Rxd5 · exd5 · Rc8+ · Kf7 · Rxg8 · Kxg8."
+  },
+  {
+    "title": "Anderssen, Adolf — Winawer, Szymon",
+    "prompt": "Tìm cách đổi quân để chuyển sang tàn cuộc Tốt thắng.",
+    "mode": "interactive",
+    "outcome": "simplification",
+    "goal": "win",
+    "fen": "8/1r6/R7/4b1k1/1P3p2/P7/8/1K3R2 w - - 0 53",
+    "moves": [
+      "Ra5",
+      "Kf5",
+      "Re1",
+      "Re7",
+      "Raxe5+",
+      "Rxe5",
+      "Rxe5+",
+      "Kxe5"
+    ],
+    "previousMove": {
+      "fen": "8/1r6/R7/4bpk1/1P6/P7/8/1K3R2 b - - 0 52",
+      "move": "f4"
+    },
+    "source": "https://www.pgnmentor.com/players/Anderssen.zip",
+    "gameReference": {
+      "id": "33f95d2489df9c89",
+      "kind": "game",
+      "ply": 104,
+      "branch": 0,
+      "collection": "simplification"
+    },
+    "difficulty": {
+      "level": "D",
+      "status": "suggested",
+      "solverMoves": 4,
+      "sacrificeCount": 2,
+      "reason": "Phân mức theo chuỗi đổi quân và vật chất nhường lại trong nhánh đã kiểm tra."
+    },
+    "hints": [
+      "Xem có thể đổi hết các quân còn lại để về tàn cuộc Vua và Tốt không.",
+      "Tính cả nước bắt lại của đối thủ, rồi so sánh vị trí Vua và các Tốt."
+    ],
+    "solution": "Chuỗi đổi loại bỏ các quân còn lại của cả hai bên. Trắng: Vua b1, Tốt a3, b4; Đen: Vua e5, Tốt f4. Trắng có thể thắng nếu chơi chính xác. Nhánh mẫu: Ra5 · Kf5 · Re1 · Re7 · Raxe5+ · Rxe5 · Rxe5+ · Kxe5."
+  },
+  {
+    "title": "Hakobyan,Menua — Nepomniachtchi,I",
+    "prompt": "Tìm cách đổi quân để chuyển sang tàn cuộc Tốt thắng.",
+    "mode": "interactive",
+    "outcome": "simplification",
+    "goal": "win",
+    "fen": "3b4/8/pk6/7R/K1P5/8/P7/8 w - - 14 71",
+    "moves": [
+      "Rh6+",
+      "Kb7",
+      "c5",
+      "Bc7",
+      "Rh7",
+      "Kc6",
+      "Rxc7+",
+      "Kxc7"
+    ],
+    "previousMove": {
+      "fen": "8/4b3/pk6/7R/K1P5/8/P7/8 b - - 13 70",
+      "move": "Bd8"
+    },
+    "source": "https://www.pgnmentor.com/players/Nepomniachtchi.zip",
+    "gameReference": {
+      "id": "43d79bc53a272157",
+      "kind": "game",
+      "ply": 140,
+      "branch": 0,
+      "collection": "simplification"
+    },
+    "difficulty": {
+      "level": "D",
+      "status": "suggested",
+      "solverMoves": 4,
+      "sacrificeCount": 1,
+      "reason": "Phân mức theo chuỗi đổi quân và vật chất nhường lại trong nhánh đã kiểm tra."
+    },
+    "hints": [
+      "Xem có thể đổi hết các quân còn lại để về tàn cuộc Vua và Tốt không.",
+      "Tính cả nước bắt lại của đối thủ, rồi so sánh vị trí Vua và các Tốt."
+    ],
+    "solution": "Chuỗi đổi loại bỏ các quân còn lại của cả hai bên. Trắng: Vua a4, Tốt a2, c5; Đen: Vua c7, Tốt a6. Trắng có thể thắng nếu chơi chính xác. Nhánh mẫu: Rh6+ · Kb7 · c5 · Bc7 · Rh7 · Kc6 · Rxc7+ · Kxc7."
+  },
+  {
+    "title": "Alekseev,Evgeny — Movsesian,S",
+    "prompt": "Tìm cách đổi quân để chuyển sang tàn cuộc Tốt thắng.",
+    "mode": "interactive",
+    "outcome": "simplification",
+    "goal": "win",
+    "fen": "8/8/R3n3/5kp1/P4p2/2P5/1P3K2/8 w - - 0 46",
+    "moves": [
+      "Rd6",
+      "g4",
+      "a5",
+      "Ng5",
+      "Rd5+",
+      "Kf6",
+      "Rxg5",
+      "Kxg5"
+    ],
+    "previousMove": {
+      "fen": "8/8/R3n1p1/5k2/P4p2/2P5/1P3K2/8 b - - 0 45",
+      "move": "g5"
+    },
+    "source": "https://www.pgnmentor.com/players/Movsesian.zip",
+    "gameReference": {
+      "id": "46aeb3df1f4caa37",
+      "kind": "game",
+      "ply": 90,
+      "branch": 0,
+      "collection": "simplification"
+    },
+    "difficulty": {
+      "level": "D",
+      "status": "suggested",
+      "solverMoves": 4,
+      "sacrificeCount": 1,
+      "reason": "Phân mức theo chuỗi đổi quân và vật chất nhường lại trong nhánh đã kiểm tra."
+    },
+    "hints": [
+      "Xem có thể đổi hết các quân còn lại để về tàn cuộc Vua và Tốt không.",
+      "Tính cả nước bắt lại của đối thủ, rồi so sánh vị trí Vua và các Tốt."
+    ],
+    "solution": "Chuỗi đổi loại bỏ các quân còn lại của cả hai bên. Trắng: Vua f2, Tốt b2, c3, a5; Đen: Vua g5, Tốt f4, g4. Trắng có thể thắng nếu chơi chính xác. Nhánh mẫu: Rd6 · g4 · a5 · Ng5 · Rd5+ · Kf6 · Rxg5 · Kxg5."
+  },
+  {
+    "title": "Szpar,Milosz — Akobian,V",
+    "prompt": "Tìm cách đổi quân để chuyển sang tàn cuộc Tốt thắng.",
+    "mode": "interactive",
+    "outcome": "simplification",
+    "goal": "win",
+    "fen": "7k/p5p1/6N1/7p/P6P/r5P1/5PK1/8 b - - 0 45",
+    "moves": [
+      "Kh7",
+      "Nf4",
+      "Rxa4",
+      "Nxh5",
+      "Kg6",
+      "Nf4+",
+      "Rxf4",
+      "gxf4"
+    ],
+    "previousMove": {
+      "fen": "7k/p5p1/6p1/4N2p/P6P/r5P1/5PK1/8 w - - 1 45",
+      "move": "Nxg6+"
+    },
+    "source": "https://www.pgnmentor.com/players/Akobian.zip",
+    "gameReference": {
+      "id": "4ca4e7481f5b261d",
+      "kind": "game",
+      "ply": 89,
+      "branch": 0,
+      "collection": "simplification"
+    },
+    "difficulty": {
+      "level": "D",
+      "status": "suggested",
+      "solverMoves": 4,
+      "sacrificeCount": 1,
+      "reason": "Phân mức theo chuỗi đổi quân và vật chất nhường lại trong nhánh đã kiểm tra."
+    },
+    "hints": [
+      "Xem có thể đổi hết các quân còn lại để về tàn cuộc Vua và Tốt không.",
+      "Tính cả nước bắt lại của đối thủ, rồi so sánh vị trí Vua và các Tốt."
+    ],
+    "solution": "Chuỗi đổi loại bỏ các quân còn lại của cả hai bên. Trắng: Vua g2, Tốt f2, f4, h4; Đen: Vua g6, Tốt a7, g7. Đen có thể thắng nếu chơi chính xác. Nhánh mẫu: Kh7 · Nf4 · Rxa4 · Nxh5 · Kg6 · Nf4+ · Rxf4 · gxf4."
+  },
+  {
+    "title": "Razafindratsima,Timothe — Kamsky,G",
+    "prompt": "Tìm cách đổi quân để chuyển sang tàn cuộc Tốt thắng.",
+    "mode": "interactive",
+    "outcome": "simplification",
+    "goal": "win",
+    "fen": "8/8/p5pk/1p2R3/8/1P6/P2r1r2/1KN5 b - - 4 51",
+    "moves": [
+      "Rf1",
+      "Rc5",
+      "Rdd1",
+      "Kb2",
+      "Rxc1",
+      "Rxc1",
+      "Rxc1",
+      "Kxc1"
+    ],
+    "previousMove": {
+      "fen": "8/8/p5pk/1p2R3/8/1P6/P2rNr2/1K6 w - - 3 51",
+      "move": "Nc1"
+    },
+    "source": "https://www.pgnmentor.com/players/Kamsky.zip",
+    "gameReference": {
+      "id": "64d7047c228381ee",
+      "kind": "game",
+      "ply": 101,
+      "branch": 0,
+      "collection": "simplification"
+    },
+    "difficulty": {
+      "level": "D",
+      "status": "suggested",
+      "solverMoves": 4,
+      "sacrificeCount": 2,
+      "reason": "Phân mức theo chuỗi đổi quân và vật chất nhường lại trong nhánh đã kiểm tra."
+    },
+    "hints": [
+      "Xem có thể đổi hết các quân còn lại để về tàn cuộc Vua và Tốt không.",
+      "Tính cả nước bắt lại của đối thủ, rồi so sánh vị trí Vua và các Tốt."
+    ],
+    "solution": "Chuỗi đổi loại bỏ các quân còn lại của cả hai bên. Trắng: Vua c1, Tốt a2, b3; Đen: Vua h6, Tốt b5, a6, g6. Đen có thể thắng nếu chơi chính xác. Nhánh mẫu: Rf1 · Rc5 · Rdd1 · Kb2 · Rxc1 · Rxc1 · Rxc1 · Kxc1."
+  },
+  {
+    "title": "Carlsen,M — Lalith,B",
+    "prompt": "Tìm cách đổi quân để chuyển sang tàn cuộc Tốt thắng.",
+    "mode": "interactive",
+    "outcome": "simplification",
+    "goal": "win",
+    "fen": "8/8/2p5/8/pk1q4/R7/1P6/1K6 b - - 1 78",
+    "moves": [
+      "Qd1+",
+      "Ka2",
+      "Qd5+",
+      "Kb1",
+      "Qb3",
+      "Rxb3+",
+      "Kxb3"
+    ],
+    "previousMove": {
+      "fen": "8/8/2p5/8/pk1q4/R7/1P6/K7 w - - 0 78",
+      "move": "Kb1"
+    },
+    "source": "https://www.pgnmentor.com/players/Carlsen.zip",
+    "gameReference": {
+      "id": "74b3d7dc79733af8",
+      "kind": "game",
+      "ply": 155,
+      "branch": 0,
+      "collection": "simplification"
+    },
+    "difficulty": {
+      "level": "D",
+      "status": "suggested",
+      "solverMoves": 4,
+      "sacrificeCount": 1,
+      "reason": "Phân mức theo chuỗi đổi quân và vật chất nhường lại trong nhánh đã kiểm tra."
+    },
+    "hints": [
+      "Xem có thể đổi hết các quân còn lại để về tàn cuộc Vua và Tốt không.",
+      "Tính cả nước bắt lại của đối thủ, rồi so sánh vị trí Vua và các Tốt."
+    ],
+    "solution": "Chuỗi đổi loại bỏ các quân còn lại của cả hai bên. Trắng: Vua b1, Tốt b2; Đen: Vua b3, Tốt a4, c6. Đen có thể thắng nếu chơi chính xác. Nhánh mẫu: Qd1+ · Ka2 · Qd5+ · Kb1 · Qb3 · Rxb3+ · Kxb3."
+  },
+  {
+    "title": "Tarhan,Adar — Kamsky,G",
+    "prompt": "Tìm cách đổi quân để chuyển sang tàn cuộc Tốt thắng.",
+    "mode": "interactive",
+    "outcome": "simplification",
+    "goal": "win",
+    "fen": "8/6p1/2n2p2/1r1pkN2/8/6P1/2BK3P/8 b - - 5 48",
+    "moves": [
+      "Nd4",
+      "Ne3",
+      "Rb2",
+      "Kc3",
+      "Rxc2+",
+      "Nxc2",
+      "Nxc2",
+      "Kxc2"
+    ],
+    "previousMove": {
+      "fen": "8/6p1/2n2p2/1r1pkN2/8/6P1/3K3P/1B6 w - - 4 48",
+      "move": "Bc2"
+    },
+    "source": "https://www.pgnmentor.com/players/Kamsky.zip",
+    "gameReference": {
+      "id": "9d05fa177161579c",
+      "kind": "game",
+      "ply": 95,
+      "branch": 0,
+      "collection": "simplification"
+    },
+    "difficulty": {
+      "level": "D",
+      "status": "suggested",
+      "solverMoves": 4,
+      "sacrificeCount": 2,
+      "reason": "Phân mức theo chuỗi đổi quân và vật chất nhường lại trong nhánh đã kiểm tra."
+    },
+    "hints": [
+      "Xem có thể đổi hết các quân còn lại để về tàn cuộc Vua và Tốt không.",
+      "Tính cả nước bắt lại của đối thủ, rồi so sánh vị trí Vua và các Tốt."
+    ],
+    "solution": "Chuỗi đổi loại bỏ các quân còn lại của cả hai bên. Trắng: Vua c2, Tốt h2, g3; Đen: Vua e5, Tốt d5, f6, g7. Đen có thể thắng nếu chơi chính xác. Nhánh mẫu: Nd4 · Ne3 · Rb2 · Kc3 · Rxc2+ · Nxc2 · Nxc2 · Kxc2."
+  },
+  {
+    "title": "Reti, Richard — Tartakower, Saviely",
+    "prompt": "Tìm cách đổi quân để chuyển sang tàn cuộc Tốt thắng.",
+    "mode": "interactive",
+    "outcome": "simplification",
+    "goal": "win",
+    "fen": "8/2b5/2P1k3/5p2/7p/1R4P1/6K1/8 w - - 0 50",
+    "moves": [
+      "gxh4",
+      "Kd5",
+      "h5",
+      "Kxc6",
+      "Rc3+",
+      "Kd7",
+      "Rxc7+",
+      "Kxc7"
+    ],
+    "previousMove": {
+      "fen": "8/2b5/2P1k3/5pp1/7P/1R4P1/6K1/8 b - h3 0 49",
+      "move": "gxh4"
+    },
+    "source": "https://www.pgnmentor.com/players/Tartakower.zip",
+    "gameReference": {
+      "id": "b08963eb0e8671e5",
+      "kind": "game",
+      "ply": 98,
+      "branch": 0,
+      "collection": "simplification"
+    },
+    "difficulty": {
+      "level": "D",
+      "status": "suggested",
+      "solverMoves": 4,
+      "sacrificeCount": 1,
+      "reason": "Phân mức theo chuỗi đổi quân và vật chất nhường lại trong nhánh đã kiểm tra."
+    },
+    "hints": [
+      "Xem có thể đổi hết các quân còn lại để về tàn cuộc Vua và Tốt không.",
+      "Tính cả nước bắt lại của đối thủ, rồi so sánh vị trí Vua và các Tốt."
+    ],
+    "solution": "Chuỗi đổi loại bỏ các quân còn lại của cả hai bên. Trắng: Vua g2, Tốt h5; Đen: Vua c7, Tốt f5. Trắng có thể thắng nếu chơi chính xác. Nhánh mẫu: gxh4 · Kd5 · h5 · Kxc6 · Rc3+ · Kd7 · Rxc7+ · Kxc7."
+  },
+  {
+    "title": "Ponomariov,R — Nepomniachtchi,I",
+    "prompt": "Tìm cách đổi quân để chuyển sang tàn cuộc Tốt thắng.",
+    "mode": "interactive",
+    "outcome": "simplification",
+    "goal": "win",
+    "fen": "3k4/8/p2bq3/2p5/P7/8/1P4QP/5R1K w - - 3 41",
+    "moves": [
+      "Rd1",
+      "Kc7",
+      "Qd5",
+      "Qh6",
+      "Qxd6+",
+      "Qxd6",
+      "Rxd6",
+      "Kxd6"
+    ],
+    "previousMove": {
+      "fen": "4k3/8/p2bq3/2p5/P7/8/1P4QP/5R1K b - - 2 40",
+      "move": "Kd8"
+    },
+    "source": "https://www.pgnmentor.com/players/Nepomniachtchi.zip",
+    "gameReference": {
+      "id": "b199f91f799808fa",
+      "kind": "game",
+      "ply": 80,
+      "branch": 0,
+      "collection": "simplification"
+    },
+    "difficulty": {
+      "level": "D",
+      "status": "suggested",
+      "solverMoves": 4,
+      "sacrificeCount": 2,
+      "reason": "Phân mức theo chuỗi đổi quân và vật chất nhường lại trong nhánh đã kiểm tra."
+    },
+    "hints": [
+      "Xem có thể đổi hết các quân còn lại để về tàn cuộc Vua và Tốt không.",
+      "Tính cả nước bắt lại của đối thủ, rồi so sánh vị trí Vua và các Tốt."
+    ],
+    "solution": "Chuỗi đổi loại bỏ các quân còn lại của cả hai bên. Trắng: Vua h1, Tốt b2, h2, a4; Đen: Vua d6, Tốt c5, a6. Trắng có thể thắng nếu chơi chính xác. Nhánh mẫu: Rd1 · Kc7 · Qd5 · Qh6 · Qxd6+ · Qxd6 · Rxd6 · Kxd6."
+  },
+  {
+    "title": "Ljubojevic,L — Milov,V",
+    "prompt": "Tìm cách đổi quân để chuyển sang tàn cuộc Tốt thắng.",
+    "mode": "interactive",
+    "outcome": "simplification",
+    "goal": "win",
+    "fen": "8/Q7/1p3r1p/6k1/8/8/PP4PK/8 w - - 1 67",
+    "moves": [
+      "Qe7",
+      "Kg6",
+      "a4",
+      "Rf5",
+      "Qe6+",
+      "Rf6",
+      "Qxf6+",
+      "Kxf6"
+    ],
+    "previousMove": {
+      "fen": "8/Q7/1p3rkp/8/8/8/PP4PK/8 b - - 0 66",
+      "move": "Kg5"
+    },
+    "source": "https://www.pgnmentor.com/players/Ljubojevic.zip",
+    "gameReference": {
+      "id": "baa94ffe077ce0a4",
+      "kind": "game",
+      "ply": 132,
+      "branch": 0,
+      "collection": "simplification"
+    },
+    "difficulty": {
+      "level": "D",
+      "status": "suggested",
+      "solverMoves": 4,
+      "sacrificeCount": 1,
+      "reason": "Phân mức theo chuỗi đổi quân và vật chất nhường lại trong nhánh đã kiểm tra."
+    },
+    "hints": [
+      "Xem có thể đổi hết các quân còn lại để về tàn cuộc Vua và Tốt không.",
+      "Tính cả nước bắt lại của đối thủ, rồi so sánh vị trí Vua và các Tốt."
+    ],
+    "solution": "Chuỗi đổi loại bỏ các quân còn lại của cả hai bên. Trắng: Vua h2, Tốt b2, g2, a4; Đen: Vua f6, Tốt b6, h6. Trắng có thể thắng nếu chơi chính xác. Nhánh mẫu: Qe7 · Kg6 · a4 · Rf5 · Qe6+ · Rf6 · Qxf6+ · Kxf6."
+  },
+  {
+    "title": "Sindarov,Javokhir — Grischuk,A",
+    "prompt": "Tìm cách đổi quân để chuyển sang tàn cuộc Tốt thắng.",
+    "mode": "interactive",
+    "outcome": "simplification",
+    "goal": "win",
+    "fen": "8/5pk1/4P1p1/3K2P1/3N4/8/r7/8 b - - 0 37",
+    "moves": [
+      "Ra5+",
+      "Kd6",
+      "fxe6",
+      "Nxe6+",
+      "Kf7",
+      "Nc5",
+      "Rxc5",
+      "Kxc5"
+    ],
+    "previousMove": {
+      "fen": "8/5pk1/6p1/3KP1P1/3N4/8/r7/8 w - - 0 37",
+      "move": "e6"
+    },
+    "source": "https://www.pgnmentor.com/players/Grischuk.zip",
+    "gameReference": {
+      "id": "de33549cc2689fd6",
+      "kind": "game",
+      "ply": 73,
+      "branch": 0,
+      "collection": "simplification"
+    },
+    "difficulty": {
+      "level": "D",
+      "status": "suggested",
+      "solverMoves": 4,
+      "sacrificeCount": 1,
+      "reason": "Phân mức theo chuỗi đổi quân và vật chất nhường lại trong nhánh đã kiểm tra."
+    },
+    "hints": [
+      "Xem có thể đổi hết các quân còn lại để về tàn cuộc Vua và Tốt không.",
+      "Tính cả nước bắt lại của đối thủ, rồi so sánh vị trí Vua và các Tốt."
+    ],
+    "solution": "Chuỗi đổi loại bỏ các quân còn lại của cả hai bên. Trắng: Vua c5, Tốt g5; Đen: Vua f7, Tốt g6. Đen có thể thắng nếu chơi chính xác. Nhánh mẫu: Ra5+ · Kd6 · fxe6 · Nxe6+ · Kf7 · Nc5 · Rxc5 · Kxc5."
+  },
+  {
+    "title": "Razafindratsima,Timothe — Akobian,V",
+    "prompt": "Tìm cách đổi quân để chuyển sang tàn cuộc Tốt thắng.",
+    "mode": "interactive",
+    "outcome": "simplification",
+    "goal": "win",
+    "fen": "8/8/3r4/3k2P1/R2B1K2/8/8/8 w - - 1 69",
+    "moves": [
+      "Be5",
+      "Rc6",
+      "Rd4+",
+      "Ke6",
+      "Rd6+",
+      "Rxd6",
+      "Bxd6",
+      "Kxd6"
+    ],
+    "previousMove": {
+      "fen": "8/8/3rk3/6P1/R2B1K2/8/8/8 b - - 0 68",
+      "move": "Kd5"
+    },
+    "source": "https://www.pgnmentor.com/players/Akobian.zip",
+    "gameReference": {
+      "id": "dedda358d5ac659a",
+      "kind": "game",
+      "ply": 136,
+      "branch": 0,
+      "collection": "simplification"
+    },
+    "difficulty": {
+      "level": "D",
+      "status": "suggested",
+      "solverMoves": 4,
+      "sacrificeCount": 2,
+      "reason": "Phân mức theo chuỗi đổi quân và vật chất nhường lại trong nhánh đã kiểm tra."
+    },
+    "hints": [
+      "Xem có thể đổi hết các quân còn lại để về tàn cuộc Vua và Tốt không.",
+      "Tính cả nước bắt lại của đối thủ, rồi so sánh vị trí Vua và các Tốt."
+    ],
+    "solution": "Chuỗi đổi loại bỏ các quân còn lại của cả hai bên. Trắng: Vua f4, Tốt g5; Đen: Vua d6, không còn Tốt. Trắng có thể thắng nếu chơi chính xác. Nhánh mẫu: Be5 · Rc6 · Rd4+ · Ke6 · Rd6+ · Rxd6 · Bxd6 · Kxd6."
+  },
+  {
+    "title": "Pillsbury, Harry Nelson — Albin, Adolf",
+    "prompt": "Tìm cách đổi quân để chuyển sang tàn cuộc Tốt thắng.",
+    "mode": "interactive",
+    "outcome": "simplification",
+    "goal": "win",
+    "fen": "5r2/2p5/7R/5kp1/1P1B3p/2P2P2/5K2/8 w - - 6 41",
+    "moves": [
+      "b5",
+      "g4",
+      "Rf6+",
+      "Rxf6",
+      "fxg4+",
+      "Kg6+",
+      "Bxf6",
+      "Kxf6"
+    ],
+    "previousMove": {
+      "fen": "4r3/2p5/7R/5kp1/1P1B3p/2P2P2/5K2/8 b - - 5 40",
+      "move": "Rf8"
+    },
+    "source": "https://www.pgnmentor.com/players/Pillsbury.zip",
+    "gameReference": {
+      "id": "e3ee0eaa607838cd",
+      "kind": "game",
+      "ply": 80,
+      "branch": 0,
+      "collection": "simplification"
+    },
+    "difficulty": {
+      "level": "D",
+      "status": "suggested",
+      "solverMoves": 4,
+      "sacrificeCount": 2,
+      "reason": "Phân mức theo chuỗi đổi quân và vật chất nhường lại trong nhánh đã kiểm tra."
+    },
+    "hints": [
+      "Xem có thể đổi hết các quân còn lại để về tàn cuộc Vua và Tốt không.",
+      "Tính cả nước bắt lại của đối thủ, rồi so sánh vị trí Vua và các Tốt."
+    ],
+    "solution": "Chuỗi đổi loại bỏ các quân còn lại của cả hai bên. Trắng: Vua f2, Tốt c3, g4, b5; Đen: Vua f6, Tốt h4, c7. Trắng có thể thắng nếu chơi chính xác. Nhánh mẫu: b5 · g4 · Rf6+ · Rxf6 · fxg4+ · Kg6+ · Bxf6 · Kxf6."
+  },
+  {
+    "title": "Mamedyarov,S — Grischuk,A",
+    "prompt": "Tìm cách đổi quân để chuyển sang tàn cuộc Tốt thắng.",
+    "mode": "interactive",
+    "outcome": "simplification",
+    "goal": "win",
+    "fen": "5k2/p5bQ/8/6q1/P4p2/5P2/2R3PK/8 w - - 1 43",
+    "moves": [
+      "Rc8+",
+      "Ke7",
+      "Qxg7+",
+      "Qxg7",
+      "Rc7+",
+      "Kf6",
+      "Rxg7",
+      "Kxg7"
+    ],
+    "previousMove": {
+      "fen": "5k2/p5bQ/8/2q5/P4p2/5P2/2R3PK/8 b - - 0 42",
+      "move": "Qg5"
+    },
+    "source": "https://www.pgnmentor.com/players/Grischuk.zip",
+    "gameReference": {
+      "id": "e4879f8e9262af06",
+      "kind": "game",
+      "ply": 84,
+      "branch": 0,
+      "collection": "simplification"
+    },
+    "difficulty": {
+      "level": "D",
+      "status": "suggested",
+      "solverMoves": 4,
+      "sacrificeCount": 2,
+      "reason": "Phân mức theo chuỗi đổi quân và vật chất nhường lại trong nhánh đã kiểm tra."
+    },
+    "hints": [
+      "Xem có thể đổi hết các quân còn lại để về tàn cuộc Vua và Tốt không.",
+      "Tính cả nước bắt lại của đối thủ, rồi so sánh vị trí Vua và các Tốt."
+    ],
+    "solution": "Chuỗi đổi loại bỏ các quân còn lại của cả hai bên. Trắng: Vua h2, Tốt g2, f3, a4; Đen: Vua g7, Tốt f4, a7. Trắng có thể thắng nếu chơi chính xác. Nhánh mẫu: Rc8+ · Ke7 · Qxg7+ · Qxg7 · Rc7+ · Kf6 · Rxg7 · Kxg7."
+  },
+  {
+    "title": "Caruana,F — Dominguez Perez,L",
+    "prompt": "Tìm cách đổi quân để chuyển sang tàn cuộc Tốt thắng.",
+    "mode": "interactive",
+    "outcome": "simplification",
+    "goal": "win",
+    "fen": "8/8/6p1/r4k2/8/5KPN/8/8 b - - 5 69",
+    "moves": [
+      "Ra3+",
+      "Kg2",
+      "g5",
+      "Ng1",
+      "g4",
+      "Ne2",
+      "Ra2",
+      "Kf1",
+      "Rxe2",
+      "Kxe2"
+    ],
+    "previousMove": {
+      "fen": "8/8/6p1/r4k2/8/5KP1/5N2/8 w - - 4 69",
+      "move": "Nh3"
+    },
+    "source": "https://www.pgnmentor.com/players/Caruana.zip",
+    "gameReference": {
+      "id": "2ef24b46e349d44a",
+      "kind": "game",
+      "ply": 137,
+      "branch": 0,
+      "collection": "simplification"
+    },
+    "difficulty": {
+      "level": "D",
+      "status": "suggested",
+      "solverMoves": 5,
+      "sacrificeCount": 1,
+      "reason": "Phân mức theo chuỗi đổi quân và vật chất nhường lại trong nhánh đã kiểm tra."
+    },
+    "hints": [
+      "Xem có thể đổi hết các quân còn lại để về tàn cuộc Vua và Tốt không.",
+      "Tính cả nước bắt lại của đối thủ, rồi so sánh vị trí Vua và các Tốt."
+    ],
+    "solution": "Chuỗi đổi loại bỏ các quân còn lại của cả hai bên. Trắng: Vua e2, Tốt g3; Đen: Vua f5, Tốt g4. Đen có thể thắng nếu chơi chính xác. Nhánh mẫu: Ra3+ · Kg2 · g5 · Ng1 · g4 · Ne2 · Ra2 · Kf1 · Rxe2 · Kxe2."
+  },
+  {
+    "title": "Dreev,A — Malakhatko,V",
+    "prompt": "Tìm cách đổi quân để chuyển sang tàn cuộc Tốt thắng.",
+    "mode": "interactive",
+    "outcome": "simplification",
+    "goal": "win",
+    "fen": "8/8/pp2k3/2b2p1R/8/3KP3/PP6/8 w - - 2 44",
+    "moves": [
+      "e4",
+      "fxe4+",
+      "Kxe4",
+      "Bf8",
+      "Rh8",
+      "Be7",
+      "Rh6+",
+      "Bf6",
+      "Rxf6+",
+      "Kxf6"
+    ],
+    "previousMove": {
+      "fen": "8/8/pp6/2bk1p1R/8/3KP3/PP6/8 b - - 1 43",
+      "move": "Ke6"
+    },
+    "source": "https://www.pgnmentor.com/players/Dreev.zip",
+    "gameReference": {
+      "id": "d0effcc5e7e3b4d1",
+      "kind": "game",
+      "ply": 86,
+      "branch": 0,
+      "collection": "simplification"
+    },
+    "difficulty": {
+      "level": "D",
+      "status": "suggested",
+      "solverMoves": 5,
+      "sacrificeCount": 1,
+      "reason": "Phân mức theo chuỗi đổi quân và vật chất nhường lại trong nhánh đã kiểm tra."
+    },
+    "hints": [
+      "Xem có thể đổi hết các quân còn lại để về tàn cuộc Vua và Tốt không.",
+      "Tính cả nước bắt lại của đối thủ, rồi so sánh vị trí Vua và các Tốt."
+    ],
+    "solution": "Chuỗi đổi loại bỏ các quân còn lại của cả hai bên. Trắng: Vua e4, Tốt a2, b2; Đen: Vua f6, Tốt a6, b6. Trắng có thể thắng nếu chơi chính xác. Nhánh mẫu: e4 · fxe4+ · Kxe4 · Bf8 · Rh8 · Be7 · Rh6+ · Bf6 · Rxf6+ · Kxf6."
+  },
+  {
+    "title": "Nepomniachtchi,I — Leiva,G",
+    "prompt": "Tìm cách đổi quân để chuyển sang tàn cuộc Tốt thắng.",
+    "mode": "interactive",
+    "outcome": "simplification",
+    "goal": "win",
+    "fen": "7N/7K/4k1pP/4q1P1/8/8/8/8 b - - 0 67",
+    "moves": [
+      "Qxg5",
+      "Kg7",
+      "Qf6+",
+      "Kg8",
+      "g5",
+      "h7",
+      "g4",
+      "Ng6",
+      "Qxg6+",
+      "Kh8",
+      "Qxh7+",
+      "Kxh7"
+    ],
+    "previousMove": {
+      "fen": "7N/6Kp/4k1pP/4q1P1/8/8/8/8 w - - 12 67",
+      "move": "Kxh7"
+    },
+    "source": "https://www.pgnmentor.com/players/Nepomniachtchi.zip",
+    "gameReference": {
+      "id": "1cddd80148d4a5b7",
+      "kind": "game",
+      "ply": 133,
+      "branch": 0,
+      "collection": "simplification"
+    },
+    "difficulty": {
+      "level": "D",
+      "status": "suggested",
+      "solverMoves": 6,
+      "sacrificeCount": 1,
+      "reason": "Phân mức theo chuỗi đổi quân và vật chất nhường lại trong nhánh đã kiểm tra."
+    },
+    "hints": [
+      "Xem có thể đổi hết các quân còn lại để về tàn cuộc Vua và Tốt không.",
+      "Tính cả nước bắt lại của đối thủ, rồi so sánh vị trí Vua và các Tốt."
+    ],
+    "solution": "Chuỗi đổi loại bỏ các quân còn lại của cả hai bên. Trắng: Vua h7, không còn Tốt; Đen: Vua e6, Tốt g4. Đen có thể thắng nếu chơi chính xác. Nhánh mẫu: Qxg5 · Kg7 · Qf6+ · Kg8 · g5 · h7 · g4 · Ng6 · Qxg6+ · Kh8 · Qxh7+ · Kxh7."
+  },
+  {
+    "title": "Carlsen,M — Rosen,E",
+    "prompt": "Tìm cách đổi quân để chuyển sang tàn cuộc Tốt thắng.",
+    "mode": "interactive",
+    "outcome": "simplification",
+    "goal": "win",
+    "fen": "4Q3/1p6/3k4/2n5/p7/P5P1/1P3P2/5K2 w - - 1 44",
+    "moves": [
+      "Qb5",
+      "Ne6",
+      "Qxa4",
+      "b5",
+      "Qb4+",
+      "Kd7",
+      "Qxb5+",
+      "Ke7",
+      "Qb6",
+      "Nd8",
+      "Qxd8+",
+      "Kxd8"
+    ],
+    "previousMove": {
+      "fen": "4Q3/1p6/3k4/8/p7/P2n2P1/1P3P2/5K2 b - - 0 43",
+      "move": "Nc5"
+    },
+    "source": "https://www.pgnmentor.com/players/Carlsen.zip",
+    "gameReference": {
+      "id": "997bb9cdf8b0bb6c",
+      "kind": "game",
+      "ply": 86,
+      "branch": 0,
+      "collection": "simplification"
+    },
+    "difficulty": {
+      "level": "D",
+      "status": "suggested",
+      "solverMoves": 6,
+      "sacrificeCount": 1,
+      "reason": "Phân mức theo chuỗi đổi quân và vật chất nhường lại trong nhánh đã kiểm tra."
+    },
+    "hints": [
+      "Xem có thể đổi hết các quân còn lại để về tàn cuộc Vua và Tốt không.",
+      "Tính cả nước bắt lại của đối thủ, rồi so sánh vị trí Vua và các Tốt."
+    ],
+    "solution": "Chuỗi đổi loại bỏ các quân còn lại của cả hai bên. Trắng: Vua f1, Tốt b2, f2, a3, g3; Đen: Vua d8, không còn Tốt. Trắng có thể thắng nếu chơi chính xác. Nhánh mẫu: Qb5 · Ne6 · Qxa4 · b5 · Qb4+ · Kd7 · Qxb5+ · Ke7 · Qb6 · Nd8 · Qxd8+ · Kxd8."
+  }
+]

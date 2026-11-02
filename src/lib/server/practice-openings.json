@@ -1,0 +1,6986 @@
+{
+  "discovery/0102f6c5e7203f3c": {
+    "name": "Ruy Lopez: Morphy Defense, Steinitz Deferred",
+    "eco": "C79"
+  },
+  "discovery/0c950ca1d44e7eae": {
+    "name": "Ponziani Opening: Jaenisch Counterattack",
+    "eco": "C44"
+  },
+  "discovery/10343541ca0ded37": {
+    "name": "Tarrasch Defense: Rubinstein System",
+    "eco": "D33"
+  },
+  "discovery/144a6e4730849037": {
+    "name": "French Defense: Winawer Variation, Positional Variation",
+    "eco": "C19"
+  },
+  "discovery/189cfa1647a2b599": {
+    "name": "King's Gambit Accepted: Kieseritzky Gambit, Berlin Defense",
+    "eco": "C39"
+  },
+  "discovery/1e36b3bd53f5adb8": {
+    "name": "Ruy Lopez: Closed, Karpov Variation",
+    "eco": "C92"
+  },
+  "discovery/1f48a32231b00b51": {
+    "name": "Queen's Gambit Declined: Lasker Defense",
+    "eco": "D53"
+  },
+  "discovery/24684fa8fba03122": {
+    "name": "Sicilian Defense: Nyezhmetdinov-Rossolimo Attack, Fianchetto Variation",
+    "eco": "B31"
+  },
+  "discovery/30f0b8292254f953": {
+    "name": "Old Indian Defense: Normal Variation",
+    "eco": "A55"
+  },
+  "discovery/34e5080a8e974e90": {
+    "name": "Ponziani Opening: Steinitz Variation",
+    "eco": "C44"
+  },
+  "discovery/478d644f0332ff85": {
+    "name": "Ruy Lopez: Closed, Chigorin Defense",
+    "eco": "C97"
+  },
+  "discovery/48563f17f8776422": {
+    "name": "King's Indian Defense: Orthodox Variation, Gligoric-Taimanov System",
+    "eco": "E92"
+  },
+  "discovery/49afc8372c91a9f3": {
+    "name": "Réti Opening: Advance Variation",
+    "eco": "A09"
+  },
+  "discovery/540df9d4601d29a2": {
+    "name": "Italian Game: Evans Gambit Declined",
+    "eco": "C51"
+  },
+  "discovery/61e5e5711856c109": {
+    "name": "French Defense: Winawer Variation, Poisoned Pawn Variation, Main Line",
+    "eco": "C18"
+  },
+  "discovery/7685db3db15a1eff": {
+    "name": "Ponziani Opening: Steinitz Variation",
+    "eco": "C44"
+  },
+  "discovery/7e7a9592a438025f": {
+    "name": "Scotch Game: Steinitz Variation",
+    "eco": "C45"
+  },
+  "discovery/9bf563240af5538f": {
+    "name": "Italian Game: Evans Gambit, Alapin-Steinitz Variation",
+    "eco": "C52"
+  },
+  "discovery/9fce5e4e0a5f6a21": {
+    "name": "King's Gambit Accepted: Kieseritzky Gambit, Anderssen Defense",
+    "eco": "C39"
+  },
+  "discovery/a4128f10b102f750": {
+    "name": "Pirc Defense: Classical Variation, Quiet System, Czech Defense",
+    "eco": "B08"
+  },
+  "discovery/a58bc7c64507a40b": {
+    "name": "Italian Game: Giuoco Piano",
+    "eco": "C50"
+  },
+  "discovery/af482d45d12fb2cc": {
+    "name": "Queen's Gambit Declined: Exchange Variation, Positional Variation",
+    "eco": "D35"
+  },
+  "discovery/be47f97ecc78e7ea": {
+    "name": "Ruy Lopez: Closed",
+    "eco": "C88"
+  },
+  "discovery/c16b8e6366600ce5": {
+    "name": "English Opening: King's English Variation",
+    "eco": "A20"
+  },
+  "discovery/da14cf201d6ec6e9": {
+    "name": "King's Indian Defense: Orthodox Variation, Classical System, Benko Attack",
+    "eco": "E99"
+  },
+  "discovery/e8a211b7a26540ab": {
+    "name": "Italian Game: Classical Variation, Giuoco Pianissimo",
+    "eco": "C54"
+  },
+  "discovery/f752d170c415a807": {
+    "name": "English Opening: Symmetrical Variation, Rubinstein Variation",
+    "eco": "A34"
+  },
+  "discovery/2dd61c74a114fd5f": {
+    "name": "Danish Gambit",
+    "eco": "C21"
+  },
+  "discovery/4ea03afbd8874d1f": {
+    "name": "King's Gambit Declined: Classical Variation",
+    "eco": "C30"
+  },
+  "discovery/7c963840d429d8ab": {
+    "name": "Italian Game: Evans Gambit, Göring Attack",
+    "eco": "C51"
+  },
+  "discovery/8042b968ea20feab": {
+    "name": "Italian Game: Evans Gambit Declined",
+    "eco": "C51"
+  },
+  "discovery/85d1276d7be883e4": {
+    "name": "Italian Game: Two Knights Defense, Polerio Defense, Kieseritzky Variation",
+    "eco": "C58"
+  },
+  "discovery/8b1b9e0cfc0f2840": {
+    "name": "Vienna Game",
+    "eco": "C25"
+  },
+  "discovery/8fdba4904a952ed2": {
+    "name": "Semi-Slav Defense: Main Line",
+    "eco": "D45"
+  },
+  "discovery/92398b7ec63f4a5b": {
+    "name": "Nimzowitsch Defense: Franco-Nimzowitsch Variation",
+    "eco": "B00"
+  },
+  "discovery/a406ea076875d829": {
+    "name": "Scandinavian Defense: Gubinsky-Melts Defense",
+    "eco": "B01"
+  },
+  "discovery/c0b208644f84bd31": {
+    "name": "Sicilian Defense: Nyezhmetdinov-Rossolimo Attack",
+    "eco": "B30"
+  },
+  "discovery/ce45959a1f6aa98c": {
+    "name": "French Defense: Winawer Variation, Positional Variation",
+    "eco": "C19"
+  },
+  "discovery/ee7b7c555bb9df80": {
+    "name": "Ruy Lopez: Cozio Defense",
+    "eco": "C60"
+  },
+  "discovery/9928b2016f893cbc": {
+    "name": "Sicilian Defense: Richter-Rauzer Variation, Modern Variation",
+    "eco": "B60"
+  },
+  "discovery/f725668f52ee83b8": {
+    "name": "Italian Game: Evans Gambit, Compromised Defense, Main Line",
+    "eco": "C52"
+  },
+  "discovery/030b9b8cf4f0b6af": {
+    "name": "King's Indian Attack: Keres Variation",
+    "eco": "A07"
+  },
+  "discovery/05b127856d986ac1": {
+    "name": "Ruy Lopez: Morphy Defense, Wormald Attack",
+    "eco": "C77"
+  },
+  "discovery/0fbd5c79e745832d": {
+    "name": "Ruy Lopez: Marshall Attack, Modern Variation",
+    "eco": "C89"
+  },
+  "discovery/190a7d5dc7d49c0d": {
+    "name": "King's Indian Attack: Spassky Variation",
+    "eco": "A05"
+  },
+  "discovery/1f95e7caefa9237a": {
+    "name": "French Defense: Rubinstein Variation, Fort Knox Variation",
+    "eco": "C10"
+  },
+  "discovery/4acf9d2a4534e6dc": {
+    "name": "Queen's Gambit Declined",
+    "eco": "D53"
+  },
+  "discovery/6829111eff6e64cb": {
+    "name": "Sicilian Defense: Kan Variation, Modern Variation",
+    "eco": "B42"
+  },
+  "discovery/6bd867e12918ce1e": {
+    "name": "French Defense: Winawer Variation, Petrosian Variation",
+    "eco": "C16"
+  },
+  "discovery/7b5facbd1580ff21": {
+    "name": "Caro-Kann Defense: Advance Variation, Van der Wiel Attack",
+    "eco": "B12"
+  },
+  "discovery/7e2d61c8807dc031": {
+    "name": "Petrov's Defense: Classical Attack, Chigorin Variation, Main Line",
+    "eco": "C42"
+  },
+  "discovery/80360d633653b13a": {
+    "name": "King's Indian Attack: Double Fianchetto",
+    "eco": "A07"
+  },
+  "discovery/8677668f179221a3": {
+    "name": "Indian Defense: Normal Variation",
+    "eco": "A50"
+  },
+  "discovery/8a0fbea0c8047b5d": {
+    "name": "French Defense: Tarrasch Variation, Pawn Center Variation",
+    "eco": "C05"
+  },
+  "discovery/8c19400429b79d73": {
+    "name": "Sicilian Defense: Richter-Rauzer Variation, Classical Variation",
+    "eco": "B63"
+  },
+  "discovery/8c7cf902f7a1b154": {
+    "name": "Italian Game: Classical Variation, Giuoco Pianissimo",
+    "eco": "C54"
+  },
+  "discovery/8f195eb5e17e51f6": {
+    "name": "Sicilian Defense: Najdorf Variation, Lipnitsky Attack",
+    "eco": "B90"
+  },
+  "discovery/945b0a6722704c66": {
+    "name": "Pirc Defense",
+    "eco": "B00"
+  },
+  "discovery/9f0cc28d5b4447d5": {
+    "name": "Queen's Gambit Declined: Barmen Variation",
+    "eco": "D37"
+  },
+  "discovery/a0d2e9b76703f002": {
+    "name": "King's Indian Defense: Orthodox Variation, Bayonet Attack",
+    "eco": "E97"
+  },
+  "discovery/a19fb9d3a512c70e": {
+    "name": "English Opening: King's English Variation, Kramnik-Shirov Counterattack",
+    "eco": "A21"
+  },
+  "discovery/a47aeafddfb1266b": {
+    "name": "King's Indian Defense: Fianchetto Variation, Classical Variation",
+    "eco": "E68"
+  },
+  "discovery/a58e948badb7a59e": {
+    "name": "Sicilian Defense: Delayed Alapin Variation, with d6",
+    "eco": "B50"
+  },
+  "discovery/a8f4fab467cffb29": {
+    "name": "Sicilian Defense: Najdorf Variation, English Attack",
+    "eco": "B90"
+  },
+  "discovery/a9948e12cc09c940": {
+    "name": "Ruy Lopez: Open, Bernstein Variation",
+    "eco": "C80"
+  },
+  "discovery/ad058a144c3b1cb1": {
+    "name": "Nimzo-Larsen Attack: Classical Variation",
+    "eco": "A01"
+  },
+  "discovery/b715e1b3cb3644a1": {
+    "name": "Sicilian Defense: Dragon Variation",
+    "eco": "B72"
+  },
+  "discovery/bfb60242f4cc9115": {
+    "name": "Benoni Defense: Classical Variation",
+    "eco": "A70"
+  },
+  "discovery/bfef9477bba315c3": {
+    "name": "Scotch Game: Cochrane-Shumov Defense",
+    "eco": "C44"
+  },
+  "discovery/c0209e56ab19cf19": {
+    "name": "King's Indian Attack: Double Fianchetto",
+    "eco": "A07"
+  },
+  "discovery/c32aeb86261d79e1": {
+    "name": "Four Knights Game: Scotch Variation Accepted",
+    "eco": "C47"
+  },
+  "discovery/cab376705247c2bd": {
+    "name": "Slav Defense: Exchange Variation",
+    "eco": "D10"
+  },
+  "discovery/cffebda8f1e56c9f": {
+    "name": "Queen's Gambit Accepted: Classical Defense, Main Line",
+    "eco": "D27"
+  },
+  "discovery/d1fd14f2abbd682a": {
+    "name": "Semi-Slav Defense: Meran Variation, Wade Variation",
+    "eco": "D47"
+  },
+  "discovery/d45cd7a63d7f0cae": {
+    "name": "Four Knights Game: Spanish Variation",
+    "eco": "C48"
+  },
+  "discovery/df7a27315904a833": {
+    "name": "Alekhine Defense: Modern Variation, Larsen Variation",
+    "eco": "B04"
+  },
+  "discovery/eb90320742dca76e": {
+    "name": "Benoni Defense: French Benoni",
+    "eco": "A43"
+  },
+  "discovery/f53f0949eaf9a299": {
+    "name": "Sicilian Defense: Kan Variation, Knight Variation",
+    "eco": "B43"
+  },
+  "discovery/f5a8ba3b56b2d03e": {
+    "name": "Indian Defense: Anti-Nimzo-Indian",
+    "eco": "E10"
+  },
+  "discovery/fa4ca9731fccb3d4": {
+    "name": "Sicilian Defense: Modern Variations",
+    "eco": "B50"
+  },
+  "discovery/0ee13b73848ee956": {
+    "name": "Sicilian Defense: Kveinis Variation",
+    "eco": "B40"
+  },
+  "discovery/193f2d45e32983a7": {
+    "name": "Slav Defense: Alapin Variation",
+    "eco": "D16"
+  },
+  "discovery/236a384198a9f81a": {
+    "name": "Ruy Lopez: Closed, Karpov Variation",
+    "eco": "C92"
+  },
+  "discovery/2528e321fb2808ab": {
+    "name": "French Defense: Tarrasch Variation",
+    "eco": "C03"
+  },
+  "discovery/2cb070e80fc78479": {
+    "name": "Queen's Gambit Accepted: Rosenthal Variation",
+    "eco": "D21"
+  },
+  "discovery/33c9d5b087ad109b": {
+    "name": "Ruy Lopez: Exchange Variation, Gligoric Variation",
+    "eco": "C69"
+  },
+  "discovery/3b1c009741140b38": {
+    "name": "Queen's Gambit Declined: Albin Countergambit, Normal Line",
+    "eco": "D08"
+  },
+  "discovery/3d25450f7c6f53c2": {
+    "name": "Queen's Gambit Accepted: Classical Defense, Rubinstein Variation",
+    "eco": "D27"
+  },
+  "discovery/433d9e0e49657550": {
+    "name": "Benoni Defense: King's Pawn Line",
+    "eco": "A65"
+  },
+  "discovery/45e5b79b37ee52d3": {
+    "name": "Queen's Gambit Declined: Ragozin Defense, Alekhine Variation",
+    "eco": "D38"
+  },
+  "discovery/4d2af1a792c80e7b": {
+    "name": "Queen's Gambit Declined: Semi-Tarrasch Defense, Symmetrical Variation",
+    "eco": "D40"
+  },
+  "discovery/50d3a7c1b6e28155": {
+    "name": "Ruy Lopez: Open, Motzko Attack",
+    "eco": "C82"
+  },
+  "discovery/66af3848641ad16b": {
+    "name": "King's Gambit Accepted: Schallopp Defense",
+    "eco": "C34"
+  },
+  "discovery/6e399180d48ad8bd": {
+    "name": "King's Gambit Declined: Panteldakis Countergambit",
+    "eco": "C30"
+  },
+  "discovery/7176e5ef6a35f0c0": {
+    "name": "King's Indian Defense: Fianchetto Variation, Debrecen Defense",
+    "eco": "E67"
+  },
+  "discovery/75e8e5204b97ae33": {
+    "name": "Italian Game: Classical Variation, Giuoco Pianissimo",
+    "eco": "C54"
+  },
+  "discovery/808ff4b820ad89be": {
+    "name": "Caro-Kann Defense: Classical Variation",
+    "eco": "B19"
+  },
+  "discovery/89edd5609c6b96d5": {
+    "name": "Ruy Lopez: Morphy Defense, Cozio Defense",
+    "eco": "C70"
+  },
+  "discovery/8faef3febec02641": {
+    "name": "Nimzo-Larsen Attack: Modern Variation",
+    "eco": "A01"
+  },
+  "discovery/97cfd524a574d28c": {
+    "name": "French Defense: Tarrasch Variation",
+    "eco": "C03"
+  },
+  "discovery/9b9c8f7961db0a4b": {
+    "name": "English Opening: Symmetrical Variation, Three Knights Variation",
+    "eco": "A34"
+  },
+  "discovery/aaa133aefefc348e": {
+    "name": "Nimzo-Larsen Attack",
+    "eco": "A01"
+  },
+  "discovery/aabef71fc713b171": {
+    "name": "Vienna Game: Max Lange Defense",
+    "eco": "C25"
+  },
+  "discovery/ad8057967eb37ed7": {
+    "name": "Sicilian Defense: Pin Variation, Koch Variation",
+    "eco": "B40"
+  },
+  "discovery/af80795c3571b013": {
+    "name": "Slav Defense: Quiet Variation",
+    "eco": "D11"
+  },
+  "discovery/b30a8f3fc103c57c": {
+    "name": "Queen's Gambit Declined: Ragozin Defense",
+    "eco": "D38"
+  },
+  "discovery/c6704cf082f4b874": {
+    "name": "Caro-Kann Defense: Maróczy Variation",
+    "eco": "B12"
+  },
+  "discovery/c6ec3ce0bc83a3d8": {
+    "name": "Sicilian Defense: Four Knights Variation, Exchange Variation",
+    "eco": "B45"
+  },
+  "discovery/d2639cb055a383df": {
+    "name": "Slav Defense: Exchange Variation, Symmetrical Line",
+    "eco": "D14"
+  },
+  "discovery/e3ccf60f9f3732c3": {
+    "name": "Petrov's Defense: Classical Attack",
+    "eco": "C42"
+  },
+  "discovery/edc75c8164ac66f8": {
+    "name": "Zukertort Opening: Nimzo-Larsen Variation",
+    "eco": "A05"
+  },
+  "discovery/ee1a0c1a5f6fcfad": {
+    "name": "Pirc Defense",
+    "eco": "B00"
+  },
+  "discovery/f456bd99bde5761f": {
+    "name": "Ruy Lopez: Closed, Flohr System",
+    "eco": "C92"
+  },
+  "discovery/fa20c9e1f706c137": {
+    "name": "Sicilian Defense: Najdorf Variation",
+    "eco": "B90"
+  },
+  "discovery/fb25445ceb2ddbdc": {
+    "name": "Queen's Pawn Game: London System",
+    "eco": "D02"
+  },
+  "discovery/073e41ab40567f7c": {
+    "name": "English Opening: King's English Variation, Kramnik-Shirov Counterattack",
+    "eco": "A21"
+  },
+  "discovery/65e28198bca55561": {
+    "name": "Scandinavian Defense: Modern Variation",
+    "eco": "B01"
+  },
+  "discovery/7dc5f1cef07069b8": {
+    "name": "Nimzo-Larsen Attack: Classical Variation",
+    "eco": "A01"
+  },
+  "discovery/d1a0bb978be3430a": {
+    "name": "Benoni Defense",
+    "eco": "A61"
+  },
+  "discovery/e156b41271bd5b4d": {
+    "name": "French Defense: Steiner Variation",
+    "eco": "C00"
+  },
+  "discovery/f597cd96e9f20a30": {
+    "name": "Caro-Kann Defense: Breyer Variation, Stein Attack",
+    "eco": "B10"
+  },
+  "discovery/3e38e528389a6e05": {
+    "name": "French Defense: Exchange Variation",
+    "eco": "C01"
+  },
+  "discovery/4d73cc7fb0e14287": {
+    "name": "Petrov's Defense: Classical Attack",
+    "eco": "C42"
+  },
+  "discovery/91293e0b7c7e17ab": {
+    "name": "Scotch Game: Schmidt Variation",
+    "eco": "C45"
+  },
+  "discovery/081ee4595ebf20ff": {
+    "name": "Caro-Kann Defense: Forgacs Variation",
+    "eco": "B15"
+  },
+  "discovery/036003deb06597b9": {
+    "name": "Sicilian Defense: Richter-Rauzer Variation, Neo-Modern Variation, Early Deviations",
+    "eco": "B66"
+  },
+  "discovery/05909e59766aa959": {
+    "name": "Semi-Slav Defense: Botvinnik Variation",
+    "eco": "D44"
+  },
+  "discovery/0bd02a2c706e15bd": {
+    "name": "Queen's Gambit Accepted: Classical Defense, Main Line",
+    "eco": "D27"
+  },
+  "discovery/0c849880ee8bcf5e": {
+    "name": "Benoni Defense: Fianchetto Variation, Hastings Defense, Main Line",
+    "eco": "A64"
+  },
+  "discovery/3575140c6717a5b9": {
+    "name": "Benoni Defense: Modern Variation",
+    "eco": "A60"
+  },
+  "discovery/58074b148c0b41b6": {
+    "name": "French Defense: Rubinstein Variation, Fort Knox Variation",
+    "eco": "C10"
+  },
+  "discovery/793424f34e852d9f": {
+    "name": "King's Gambit Accepted: Muzio Gambit, Kling and Horwitz Counterattack",
+    "eco": "C37"
+  },
+  "discovery/7a3dcbd1a5449cfe": {
+    "name": "Grünfeld Defense: Exchange Variation",
+    "eco": "D85"
+  },
+  "discovery/7cfff5db824aa6cd": {
+    "name": "English Opening: Symmetrical Variation",
+    "eco": "A30"
+  },
+  "discovery/8a22aaf5a03aa6fb": {
+    "name": "Alekhine Defense: Exchange Variation",
+    "eco": "B03"
+  },
+  "discovery/90e8e64606c65bad": {
+    "name": "Ruy Lopez: Closed, Delayed Exchange",
+    "eco": "C85"
+  },
+  "discovery/97f622b0bf060ceb": {
+    "name": "Ruy Lopez: Morphy Defense, Wormald Attack",
+    "eco": "C77"
+  },
+  "discovery/c750ed0a9524ffcc": {
+    "name": "Tarrasch Defense: Symmetrical Variation",
+    "eco": "D32"
+  },
+  "discovery/cdb01a65c9046a8f": {
+    "name": "Italian Game: Two Knights Defense, Modern Bishop's Opening",
+    "eco": "C55"
+  },
+  "discovery/83ed8b4b5ea99a07": {
+    "name": "Torre Attack: Fianchetto Defense",
+    "eco": "A48"
+  },
+  "discovery/055e26cb67e8920a": {
+    "name": "Sicilian Defense: Scheveningen Variation, Classical Variation",
+    "eco": "B84"
+  },
+  "discovery/1f10b7ae58f714b3": {
+    "name": "Queen's Pawn Game",
+    "eco": "A40"
+  },
+  "discovery/4c8e80c2775ab2d7": {
+    "name": "French Defense: King's Indian Attack",
+    "eco": "C00"
+  },
+  "discovery/8ffa6298a38d8142": {
+    "name": "Ruy Lopez: Closed, Pilnik Variation",
+    "eco": "C90"
+  },
+  "discovery/ba8f859e6302aa98": {
+    "name": "Sicilian Defense: Najdorf Variation, English Attack",
+    "eco": "B90"
+  },
+  "discovery/c0c8a7bcd849e8c3": {
+    "name": "Sicilian Defense: Nyezhmetdinov-Rossolimo Attack, Fianchetto Variation",
+    "eco": "B31"
+  },
+  "discovery/c7efa26b018fdac9": {
+    "name": "Sicilian Defense: Najdorf Variation, Adams Attack",
+    "eco": "B90"
+  },
+  "discovery/e65dea1262d6bb5e": {
+    "name": "Sicilian Defense: Dragon Variation, Yugoslav Attack, Modern Line",
+    "eco": "B76"
+  },
+  "discovery/1394114c147bc393": {
+    "name": "Queen's Gambit Declined: Chigorin Defense, Main Line",
+    "eco": "D07"
+  },
+  "discovery/4d1116a7f694bb46": {
+    "name": "Queen's Indian Accelerated",
+    "eco": "A50"
+  },
+  "discovery/77209c493fea4c1e": {
+    "name": "French Defense: Steinitz Variation, Boleslavsky Variation",
+    "eco": "C11"
+  },
+  "discovery/c089371fd50c21ea": {
+    "name": "French Defense: Classical Variation, Burn Variation, Morozevich Line",
+    "eco": "C13"
+  },
+  "discovery/c33b4fb48cd3ac8e": {
+    "name": "Queen's Gambit Declined: Charousek Variation",
+    "eco": "D31"
+  },
+  "discovery/c46aa4f9355a865b": {
+    "name": "Queen's Gambit Declined: Ragozin Defense, Vienna Variation",
+    "eco": "D39"
+  },
+  "discovery/cb5ba1a9d8ff4109": {
+    "name": "Old Indian Defense: Two Knights Variation",
+    "eco": "A54"
+  },
+  "discovery/e104c6aaeb568e20": {
+    "name": "Pirc Defense: Austrian Attack, Unzicker Attack, Bronstein Variation",
+    "eco": "B09"
+  },
+  "discovery/2ae44fd20a10f740": {
+    "name": "Sicilian Defense: Taimanov Variation, Gary Gambit",
+    "eco": "B44"
+  },
+  "discovery/a4f748dccf51efbf": {
+    "name": "Sicilian Defense: Delayed Alapin Variation, with d6",
+    "eco": "B50"
+  },
+  "discovery/8b460007cc657492": {
+    "name": "Polish Opening",
+    "eco": "A00"
+  },
+  "draw/0": {
+    "name": "Sicilian Defense: Accelerated Dragon, Maróczy Bind",
+    "eco": "B38"
+  },
+  "draw/1": {
+    "name": "Zukertort Opening: Sicilian Invitation",
+    "eco": "A04"
+  },
+  "draw/2": {
+    "name": "King's Indian Defense: Fianchetto Variation, Immediate Fianchetto",
+    "eco": "E60"
+  },
+  "draw/3": {
+    "name": "Catalan Opening: Closed",
+    "eco": "E06"
+  },
+  "draw/4": {
+    "name": "Ruy Lopez: Berlin Defense, Rio Gambit Accepted",
+    "eco": "C67"
+  },
+  "draw/5": {
+    "name": "Indian Defense: Pseudo-Benko",
+    "eco": "A43"
+  },
+  "draw/6": {
+    "name": "King's Indian Defense: Fianchetto Variation, Classical Variation",
+    "eco": "E68"
+  },
+  "draw/7": {
+    "name": "Ruy Lopez: Closed, Martinez Variation",
+    "eco": "C84"
+  },
+  "draw/8": {
+    "name": "Semi-Slav Defense: Anti-Moscow Gambit",
+    "eco": "D43"
+  },
+  "draw/9": {
+    "name": "Caro-Kann Defense: Classical Variation",
+    "eco": "B18"
+  },
+  "draw/10": {
+    "name": "Sicilian Defense: Moscow Variation",
+    "eco": "B51"
+  },
+  "draw/11": {
+    "name": "Italian Game: Classical Variation, Greco Gambit, Modern Line",
+    "eco": "C54"
+  },
+  "draw/12": {
+    "name": "Modern Defense: Two Knights Variation",
+    "eco": "B06"
+  },
+  "draw/13": {
+    "name": "Ruy Lopez: Berlin Defense, l'Hermet Variation, Berlin Wall Defense",
+    "eco": "C67"
+  },
+  "draw/14": {
+    "name": "Semi-Slav Defense: Stoltz Variation",
+    "eco": "D45"
+  },
+  "draw/15": {
+    "name": "Nimzo-Indian Defense: Classical Variation, Modern Variation",
+    "eco": "E37"
+  },
+  "draw/16": {
+    "name": "Nimzo-Indian Defense: Sämisch Variation, Keres Variation",
+    "eco": "E25"
+  },
+  "draw/17": {
+    "name": "Zukertort Opening: Dutch Variation",
+    "eco": "A04"
+  },
+  "draw/18": {
+    "name": "Semi-Slav Defense: Stoltz Variation",
+    "eco": "D45"
+  },
+  "draw/19": {
+    "name": "Semi-Slav Defense: Marshall Gambit, Main Line",
+    "eco": "D31"
+  },
+  "draw/20": {
+    "name": "Ruy Lopez: Berlin Defense, Anti-Berlin Variation",
+    "eco": "C65"
+  },
+  "draw/21": {
+    "name": "Ruy Lopez: Marshall Attack, Modern Variation",
+    "eco": "C89"
+  },
+  "draw/22": {
+    "name": "Semi-Slav Defense: Chigorin Defense",
+    "eco": "D46"
+  },
+  "draw/23": {
+    "name": "King's Indian Defense: Fianchetto Variation, Larsen Defense",
+    "eco": "E62"
+  },
+  "draw/24": {
+    "name": "Queen's Indian Defense: Fianchetto Variation, Nimzowitsch Variation",
+    "eco": "E15"
+  },
+  "draw/25": {
+    "name": "Grünfeld Defense: Three Knights Variation",
+    "eco": "D90"
+  },
+  "draw/26": {
+    "name": "Italian Game: Classical Variation, Giuoco Pianissimo",
+    "eco": "C54"
+  },
+  "draw/27": {
+    "name": "Bogo-Indian Defense: Retreat Variation",
+    "eco": "E11"
+  },
+  "draw/28": {
+    "name": "English Opening: Symmetrical Variation, Three Knights, Fianchetto Variation",
+    "eco": "A37"
+  },
+  "draw/29": {
+    "name": "Ruy Lopez: Marshall Attack",
+    "eco": "C89"
+  },
+  "draw/30": {
+    "name": "Sicilian Defense: Lasker-Pelikan Variation, Sveshnikov Variation, Chelyabinsk Variation",
+    "eco": "B33"
+  },
+  "draw/31": {
+    "name": "Sicilian Defense: Lasker-Pelikan Variation, Sveshnikov Variation, Chelyabinsk Variation",
+    "eco": "B33"
+  },
+  "draw/32": {
+    "name": "King's Indian Defense: Orthodox Variation",
+    "eco": "E94"
+  },
+  "draw/33": {
+    "name": "French Defense: Winawer Variation, Advance Variation",
+    "eco": "C18"
+  },
+  "draw/34": {
+    "name": "English Opening: Symmetrical Variation, Hedgehog Defense",
+    "eco": "A30"
+  },
+  "draw/35": {
+    "name": "Ruy Lopez: Morphy Defense, Tarrasch Variation",
+    "eco": "C77"
+  },
+  "draw/36": {
+    "name": "Bogo-Indian Defense: Vitolins Variation",
+    "eco": "E11"
+  },
+  "draw/37": {
+    "name": "Grünfeld Defense: Brinckmann Attack",
+    "eco": "D82"
+  },
+  "draw/38": {
+    "name": "Grünfeld Defense: Exchange Variation, Classical Variation",
+    "eco": "D86"
+  },
+  "draw/39": {
+    "name": "Sicilian Defense: Najdorf Variation",
+    "eco": "B94"
+  },
+  "draw/40": {
+    "name": "Sicilian Defense: Delayed Alapin Variation, with e6",
+    "eco": "B40"
+  },
+  "draw/41": {
+    "name": "Indian Defense: Anti-Nimzo-Indian",
+    "eco": "E10"
+  },
+  "draw/42": {
+    "name": "Sicilian Defense: Nyezhmetdinov-Rossolimo Attack",
+    "eco": "B30"
+  },
+  "draw/43": {
+    "name": "Queen's Gambit Declined: Ragozin Defense",
+    "eco": "D38"
+  },
+  "draw/44": {
+    "name": "Sicilian Defense: Nyezhmetdinov-Rossolimo Attack, Fianchetto Variation",
+    "eco": "B31"
+  },
+  "draw/45": {
+    "name": "Sicilian Defense: Nyezhmetdinov-Rossolimo Attack, Fianchetto Variation",
+    "eco": "B31"
+  },
+  "draw/46": {
+    "name": "Mikenas Defense",
+    "eco": "A40"
+  },
+  "draw/47": {
+    "name": "Ruy Lopez: Berlin Defense, Rio Gambit Accepted",
+    "eco": "C67"
+  },
+  "draw/48": {
+    "name": "Catalan Opening: Open Defense, Classical Line",
+    "eco": "E05"
+  },
+  "draw/49": {
+    "name": "Italian Game: Two Knights Defense, Modern Bishop's Opening",
+    "eco": "C55"
+  },
+  "draw/50": {
+    "name": "Queen's Gambit Declined: Barmen Variation",
+    "eco": "D37"
+  },
+  "draw/51": {
+    "name": "Ruy Lopez: Berlin Defense, Anti-Berlin Variation",
+    "eco": "C65"
+  },
+  "draw/52": {
+    "name": "Grünfeld Defense: Exchange Variation",
+    "eco": "D85"
+  },
+  "draw/53": {
+    "name": "Ruy Lopez: Marshall Attack, Modern Variation",
+    "eco": "C89"
+  },
+  "draw/54": {
+    "name": "Italian Game: Classical Variation, Giuoco Pianissimo",
+    "eco": "C54"
+  },
+  "draw/55": {
+    "name": "Sicilian Defense: Closed, Traditional",
+    "eco": "B23"
+  },
+  "draw/56": {
+    "name": "Zukertort Opening: Queen's Gambit Invitation",
+    "eco": "A04"
+  },
+  "draw/57": {
+    "name": "Ruy Lopez: Berlin Defense, Rio Gambit Accepted",
+    "eco": "C67"
+  },
+  "draw/58": {
+    "name": "Queen's Gambit Declined: Cambridge Springs Defense, Yugoslav Variation",
+    "eco": "D52"
+  },
+  "draw/59": {
+    "name": "Sicilian Defense: Nyezhmetdinov-Rossolimo Attack, Fianchetto Variation",
+    "eco": "B31"
+  },
+  "draw/60": {
+    "name": "Ruy Lopez: Berlin Defense, Rio Gambit Accepted",
+    "eco": "C67"
+  },
+  "draw/61": {
+    "name": "King's Indian Attack: Spassky Variation",
+    "eco": "A05"
+  },
+  "draw/62": {
+    "name": "Four Knights Game: Spanish Variation, Nimzowitsch Variation",
+    "eco": "C49"
+  },
+  "draw/63": {
+    "name": "Caro-Kann Defense: Advance Variation, Botvinnik-Carls Defense",
+    "eco": "B12"
+  },
+  "draw/64": {
+    "name": "Queen's Gambit Declined: Barmen Variation",
+    "eco": "D37"
+  },
+  "draw/65": {
+    "name": "Queen's Indian Defense: Classical Variation, Traditional Variation",
+    "eco": "E18"
+  },
+  "draw/66": {
+    "name": "Queen's Indian Accelerated",
+    "eco": "A50"
+  },
+  "draw/67": {
+    "name": "English Opening: Symmetrical Variation, Three Knights Variation",
+    "eco": "A34"
+  },
+  "draw/68": {
+    "name": "Grünfeld Defense: Exchange Variation, Spassky Variation",
+    "eco": "D87"
+  },
+  "draw/69": {
+    "name": "Ruy Lopez: Closed, Anti-Marshall",
+    "eco": "C88"
+  },
+  "draw/70": {
+    "name": "Ruy Lopez: Berlin Defense, Rio Gambit Accepted",
+    "eco": "C67"
+  },
+  "draw/71": {
+    "name": "Sicilian Defense: Smith-Morra Gambit Accepted, Fianchetto Defense",
+    "eco": "B21"
+  },
+  "draw/72": {
+    "name": "King's Indian Defense: Fianchetto Variation, Immediate Fianchetto",
+    "eco": "E60"
+  },
+  "draw/73": {
+    "name": "Ruy Lopez: Berlin Defense, Rio Gambit Accepted",
+    "eco": "C67"
+  },
+  "draw/74": {
+    "name": "Ruy Lopez: Berlin Defense, Rio Gambit Accepted",
+    "eco": "C67"
+  },
+  "draw/75": {
+    "name": "Ruy Lopez: Open Berlin Defense, l'Hermet Variation",
+    "eco": "C67"
+  },
+  "draw/76": {
+    "name": "Slav Defense: Modern Line",
+    "eco": "D11"
+  },
+  "draw/77": {
+    "name": "Sicilian Defense: Old Sicilian",
+    "eco": "B30"
+  },
+  "draw/78": {
+    "name": "Ruy Lopez: Morphy Defense, Anderssen Variation",
+    "eco": "C77"
+  },
+  "draw/79": {
+    "name": "East Indian Defense",
+    "eco": "A48"
+  },
+  "draw/80": {
+    "name": "Italian Game: Classical Variation, Giuoco Pianissimo",
+    "eco": "C54"
+  },
+  "draw/81": {
+    "name": "Italian Game: Classical Variation, Giuoco Pianissimo, with a6",
+    "eco": "C54"
+  },
+  "draw/82": {
+    "name": "Ruy Lopez: Closed, Breyer Defense, Zaitsev Hybrid",
+    "eco": "C95"
+  },
+  "draw/83": {
+    "name": "Semi-Slav Defense",
+    "eco": "D43"
+  },
+  "draw/84": {
+    "name": "Nimzo-Indian Defense: Reshevsky Variation",
+    "eco": "E46"
+  },
+  "draw/85": {
+    "name": "Semi-Slav Defense: Anti-Moscow Gambit",
+    "eco": "D43"
+  },
+  "draw/86": {
+    "name": "Nimzo-Indian Defense: Classical Variation, Modern Variation",
+    "eco": "E37"
+  },
+  "draw/87": {
+    "name": "King's Indian Attack, with e6",
+    "eco": "A07"
+  },
+  "draw/88": {
+    "name": "King's Indian Defense: Orthodox Variation, Glek Defense",
+    "eco": "E94"
+  },
+  "draw/89": {
+    "name": "English Opening: Neo-Catalan",
+    "eco": "A13"
+  },
+  "draw/90": {
+    "name": "Ruy Lopez: Exchange Variation, Normal Variation",
+    "eco": "C69"
+  },
+  "draw/91": {
+    "name": "Nimzo-Indian Defense: Classical Variation, Noa Variation",
+    "eco": "E34"
+  },
+  "draw/92": {
+    "name": "Italian Game: Classical Variation, Giuoco Pianissimo",
+    "eco": "C54"
+  },
+  "draw/93": {
+    "name": "Ruy Lopez: Schliemann Defense",
+    "eco": "C63"
+  },
+  "draw/94": {
+    "name": "Ruy Lopez: Closed, Martinez Variation",
+    "eco": "C84"
+  },
+  "draw/95": {
+    "name": "Ruy Lopez: Closed",
+    "eco": "C88"
+  },
+  "draw/96": {
+    "name": "Petrov's Defense: Karklins-Martinovsky Variation",
+    "eco": "C42"
+  },
+  "draw/97": {
+    "name": "Grünfeld Defense: Exchange Variation",
+    "eco": "D85"
+  },
+  "draw/98": {
+    "name": "Catalan Opening: Open Defense",
+    "eco": "E01"
+  },
+  "draw/99": {
+    "name": "Sicilian Defense: Richter-Rauzer Variation, Classical Variation",
+    "eco": "B65"
+  },
+  "draw/100": {
+    "name": "Queen's Gambit Declined",
+    "eco": "D53"
+  },
+  "draw/101": {
+    "name": "Rapport-Jobava System",
+    "eco": "D01"
+  },
+  "draw/102": {
+    "name": "Nimzo-Larsen Attack",
+    "eco": "A01"
+  },
+  "draw/103": {
+    "name": "Slav Defense: Exchange Variation, Symmetrical Line",
+    "eco": "D14"
+  },
+  "draw/104": {
+    "name": "Nimzo-Indian Defense: Sämisch Variation",
+    "eco": "E24"
+  },
+  "draw/105": {
+    "name": "Sicilian Defense: Kronberger Variation",
+    "eco": "B20"
+  },
+  "draw/106": {
+    "name": "Queen's Gambit Declined: Ragozin Defense",
+    "eco": "D38"
+  },
+  "draw/107": {
+    "name": "Semi-Slav Defense",
+    "eco": "D43"
+  },
+  "draw/108": {
+    "name": "Queen's Gambit Declined: Ragozin Defense",
+    "eco": "D38"
+  },
+  "draw/109": {
+    "name": "St. George Defense",
+    "eco": "B00"
+  },
+  "draw/110": {
+    "name": "Sicilian Defense: Closed, Anti-Sveshnikov Variation",
+    "eco": "B30"
+  },
+  "draw/111": {
+    "name": "English Opening: Anglo-Indian Defense, Queen's Indian Formation",
+    "eco": "A15"
+  },
+  "draw/112": {
+    "name": "Queen's Gambit Declined: Ragozin Defense",
+    "eco": "D38"
+  },
+  "draw/113": {
+    "name": "Pirc Defense: Austrian Attack, Dragon Formation",
+    "eco": "B09"
+  },
+  "draw/114": {
+    "name": "Queen's Indian Defense: Fianchetto Variation, Nimzowitsch Variation",
+    "eco": "E15"
+  },
+  "draw/115": {
+    "name": "Neo-Grünfeld Defense: Ultra-Delayed Exchange Variation",
+    "eco": "D79"
+  },
+  "draw/116": {
+    "name": "Ruy Lopez: Berlin Defense, Rio Gambit Accepted",
+    "eco": "C67"
+  },
+  "draw/117": {
+    "name": "King's Indian Defense: Fianchetto Variation, Immediate Fianchetto",
+    "eco": "E60"
+  },
+  "draw/118": {
+    "name": "Caro-Kann Defense: Exchange Variation, Rubinstein Variation",
+    "eco": "B13"
+  },
+  "draw/119": {
+    "name": "Ruy Lopez: Berlin Defense, Anti-Berlin Variation",
+    "eco": "C65"
+  },
+  "draw/120": {
+    "name": "Queen's Gambit Declined: Three Knights Variation",
+    "eco": "D37"
+  },
+  "draw/121": {
+    "name": "Ruy Lopez: Closed",
+    "eco": "C88"
+  },
+  "draw/122": {
+    "name": "Caro-Kann Defense: Advance Variation, Short Variation",
+    "eco": "B12"
+  },
+  "draw/123": {
+    "name": "Queen's Gambit Declined: Exchange Variation, Reshevsky Variation",
+    "eco": "D36"
+  },
+  "draw/124": {
+    "name": "Queen's Gambit Accepted: Classical Defense, Main Line",
+    "eco": "D27"
+  },
+  "draw/125": {
+    "name": "King's Indian Defense: Fianchetto Variation",
+    "eco": "E60"
+  },
+  "draw/126": {
+    "name": "Queen's Gambit Declined: Semi-Tarrasch Defense, Endgame Variation",
+    "eco": "D41"
+  },
+  "draw/127": {
+    "name": "Ruy Lopez: Morphy Defense, Neo-Arkhangelsk Variation",
+    "eco": "C78"
+  },
+  "draw/128": {
+    "name": "Ruy Lopez: Berlin Defense, Rio Gambit Accepted",
+    "eco": "C67"
+  },
+  "draw/129": {
+    "name": "Caro-Kann Defense: Exchange Variation",
+    "eco": "B13"
+  },
+  "draw/130": {
+    "name": "French Defense: Winawer Variation, Advance Variation",
+    "eco": "C16"
+  },
+  "draw/131": {
+    "name": "Ruy Lopez: Closed, Anti-Marshall",
+    "eco": "C88"
+  },
+  "draw/132": {
+    "name": "Sicilian Defense: Chekhover Variation",
+    "eco": "B53"
+  },
+  "draw/133": {
+    "name": "Sicilian Defense: Delayed Alapin Variation, with e6",
+    "eco": "B40"
+  },
+  "draw/134": {
+    "name": "Petrov's Defense: French Attack",
+    "eco": "C42"
+  },
+  "draw/135": {
+    "name": "Queen's Gambit Declined: Ragozin Defense, Vienna Variation",
+    "eco": "D39"
+  },
+  "draw/136": {
+    "name": "Pseudo Queen's Indian Defense",
+    "eco": "A47"
+  },
+  "draw/137": {
+    "name": "Queen's Gambit Declined: Three Knights Variation",
+    "eco": "D37"
+  },
+  "draw/138": {
+    "name": "Sicilian Defense: Nyezhmetdinov-Rossolimo Attack",
+    "eco": "B30"
+  },
+  "draw/139": {
+    "name": "King's Indian Defense: Makogonov Variation",
+    "eco": "E71"
+  },
+  "draw/140": {
+    "name": "Queen's Pawn Game: Rossolimo Variation",
+    "eco": "A41"
+  },
+  "draw/141": {
+    "name": "Catalan Opening: Closed",
+    "eco": "E06"
+  },
+  "draw/142": {
+    "name": "English Opening: Anglo-Indian Defense, Anglo-Grünfeld Variation",
+    "eco": "A16"
+  },
+  "draw/143": {
+    "name": "Queen's Gambit Accepted: Gunsberg Defense",
+    "eco": "D21"
+  },
+  "draw/144": {
+    "name": "Queen's Gambit Declined: Ragozin Defense, Alekhine Variation",
+    "eco": "D38"
+  },
+  "draw/145": {
+    "name": "Sicilian Defense: Moscow Variation",
+    "eco": "B51"
+  },
+  "draw/146": {
+    "name": "English Opening: King's English Variation, Four Knights Variation, Korchnoi Line",
+    "eco": "A28"
+  },
+  "draw/147": {
+    "name": "Hungarian Opening: Symmetrical Variation",
+    "eco": "A00"
+  },
+  "draw/148": {
+    "name": "English Opening: Anglo-Indian Defense, Anglo-Grünfeld Variation",
+    "eco": "A16"
+  },
+  "draw/149": {
+    "name": "Petrov's Defense: Nimzowitsch Attack",
+    "eco": "C42"
+  },
+  "draw/150": {
+    "name": "Sicilian Defense: Closed",
+    "eco": "B25"
+  },
+  "draw/151": {
+    "name": "Catalan Opening",
+    "eco": "E00"
+  },
+  "draw/152": {
+    "name": "Italian Game: Classical Variation, Giuoco Pianissimo",
+    "eco": "C54"
+  },
+  "draw/153": {
+    "name": "Italian Game: Classical Variation, Giuoco Pianissimo",
+    "eco": "C54"
+  },
+  "draw/154": {
+    "name": "Sicilian Defense: Moscow Variation",
+    "eco": "B51"
+  },
+  "draw/155": {
+    "name": "Sicilian Defense: Nyezhmetdinov-Rossolimo Attack, Fianchetto Variation",
+    "eco": "B31"
+  },
+  "draw/156": {
+    "name": "Sicilian Defense: Old Sicilian",
+    "eco": "B30"
+  },
+  "draw/157": {
+    "name": "Ruy Lopez: Open Berlin Defense, l'Hermet Variation",
+    "eco": "C67"
+  },
+  "draw/158": {
+    "name": "Ruy Lopez: Morphy Defense, Arkhangelsk Variation",
+    "eco": "C78"
+  },
+  "draw/159": {
+    "name": "Italian Game: Giuoco Piano",
+    "eco": "C50"
+  },
+  "draw/160": {
+    "name": "Slav Defense: Exchange Variation",
+    "eco": "D10"
+  },
+  "draw/161": {
+    "name": "Ruy Lopez: Berlin Defense, Rio Gambit Accepted",
+    "eco": "C67"
+  },
+  "draw/162": {
+    "name": "English Opening: Symmetrical Variation",
+    "eco": "A30"
+  },
+  "draw/163": {
+    "name": "Four Knights Game: Scotch Variation Accepted, Main Line",
+    "eco": "C47"
+  },
+  "draw/164": {
+    "name": "Queen's Gambit Declined: Ragozin Defense",
+    "eco": "D38"
+  },
+  "draw/165": {
+    "name": "Nimzo-Indian Defense: Sämisch Variation",
+    "eco": "E26"
+  },
+  "draw/166": {
+    "name": "Sicilian Defense: Moscow Variation",
+    "eco": "B51"
+  },
+  "draw/167": {
+    "name": "Queen's Pawn Game: Accelerated London System, Steinitz Countergambit",
+    "eco": "D00"
+  },
+  "draw/168": {
+    "name": "Italian Game: Two Knights Defense, Polerio Defense, Bishop Check Line",
+    "eco": "C58"
+  },
+  "draw/169": {
+    "name": "Sicilian Defense: Moscow Variation",
+    "eco": "B51"
+  },
+  "draw/170": {
+    "name": "Ruy Lopez: Morphy Defense, Neo-Arkhangelsk Variation",
+    "eco": "C78"
+  },
+  "draw/171": {
+    "name": "Benko Gambit Accepted: Fully Accepted Variation",
+    "eco": "A58"
+  },
+  "draw/172": {
+    "name": "Queen's Gambit Declined: Tarrasch Defense",
+    "eco": "D32"
+  },
+  "draw/173": {
+    "name": "Sicilian Defense: Nyezhmetdinov-Rossolimo Attack, Fianchetto Variation",
+    "eco": "B31"
+  },
+  "draw/174": {
+    "name": "Hungarian Opening: Indian Defense",
+    "eco": "A00"
+  },
+  "draw/175": {
+    "name": "Sicilian Defense: Nyezhmetdinov-Rossolimo Attack",
+    "eco": "B30"
+  },
+  "draw/176": {
+    "name": "Bogo-Indian Defense: Grünfeld Variation",
+    "eco": "E11"
+  },
+  "draw/177": {
+    "name": "Ruy Lopez: Open",
+    "eco": "C80"
+  },
+  "draw/178": {
+    "name": "Anderssen's Opening",
+    "eco": "A00"
+  },
+  "draw/179": {
+    "name": "Sicilian Defense: Nyezhmetdinov-Rossolimo Attack, Fianchetto Variation",
+    "eco": "B31"
+  },
+  "draw/180": {
+    "name": "St. George Defense",
+    "eco": "B00"
+  },
+  "draw/181": {
+    "name": "English Opening: King's English Variation",
+    "eco": "A20"
+  },
+  "draw/182": {
+    "name": "Queen's Gambit Declined: Harrwitz Attack, Two Knights Defense, Blockade Line",
+    "eco": "D37"
+  },
+  "draw/183": {
+    "name": "King's Indian Defense: Fianchetto Variation, Classical Variation",
+    "eco": "E68"
+  },
+  "draw/184": {
+    "name": "French Defense: Winawer Variation, Delayed Exchange Variation",
+    "eco": "C15"
+  },
+  "draw/185": {
+    "name": "Queen's Gambit Accepted: Classical Defense, Main Line",
+    "eco": "D27"
+  },
+  "draw/186": {
+    "name": "Queen's Gambit Declined: Three Knights Variation",
+    "eco": "D37"
+  },
+  "draw/187": {
+    "name": "Polish Opening",
+    "eco": "A00"
+  },
+  "draw/188": {
+    "name": "Scotch Game: Mieses Variation",
+    "eco": "C45"
+  },
+  "draw/189": {
+    "name": "Ruy Lopez: Morphy Defense, Anderssen Variation",
+    "eco": "C77"
+  },
+  "draw/190": {
+    "name": "Nimzo-Larsen Attack: Modern Variation",
+    "eco": "A01"
+  },
+  "draw/191": {
+    "name": "Queen's Pawn Game: London System, with e6",
+    "eco": "D02"
+  },
+  "draw/192": {
+    "name": "King's Indian Defense: Normal Variation, King's Knight Variation",
+    "eco": "E60"
+  },
+  "draw/193": {
+    "name": "Réti Opening: Anglo-Slav Variation, with g3",
+    "eco": "A11"
+  },
+  "draw/194": {
+    "name": "Queen's Gambit Declined: Semi-Tarrasch Defense, Main Line",
+    "eco": "D42"
+  },
+  "draw/195": {
+    "name": "Sicilian Defense: Hyperaccelerated Dragon",
+    "eco": "B27"
+  },
+  "draw/196": {
+    "name": "Catalan Opening: Open Defense, Classical Line",
+    "eco": "E05"
+  },
+  "draw/197": {
+    "name": "Pirc Defense: Classical Variation, Quiet System, Czech Defense",
+    "eco": "B08"
+  },
+  "draw/198": {
+    "name": "Queen's Indian Defense: Kasparov-Petrosian Variation, Kasparov Attack",
+    "eco": "E12"
+  },
+  "draw/199": {
+    "name": "Queen's Gambit Declined: Three Knights Variation",
+    "eco": "D37"
+  },
+  "draw/200": {
+    "name": "Semi-Slav Defense: Chigorin Defense",
+    "eco": "D46"
+  },
+  "draw/201": {
+    "name": "Sicilian Defense: Lasker-Pelikan Variation, Sveshnikov Variation, Novosibirsk Variation",
+    "eco": "B33"
+  },
+  "draw/202": {
+    "name": "Sicilian Defense: Kan Variation, Maróczy Bind, Réti Variation",
+    "eco": "B41"
+  },
+  "draw/203": {
+    "name": "Italian Game: Classical Variation, Giuoco Pianissimo",
+    "eco": "C54"
+  },
+  "draw/204": {
+    "name": "Sicilian Defense: Lasker-Dunne Attack",
+    "eco": "B20"
+  },
+  "draw/205": {
+    "name": "Sicilian Defense: Najdorf Variation, English Attack",
+    "eco": "B90"
+  },
+  "draw/206": {
+    "name": "Nimzo-Indian Defense: Three Knights Variation",
+    "eco": "E21"
+  },
+  "draw/207": {
+    "name": "Ruy Lopez: Closed, Breyer Defense, Zaitsev Hybrid",
+    "eco": "C95"
+  },
+  "draw/208": {
+    "name": "King's Indian Defense: Fianchetto Variation",
+    "eco": "E60"
+  },
+  "draw/209": {
+    "name": "English Opening: Mikenas-Carls Variation",
+    "eco": "A18"
+  },
+  "draw/210": {
+    "name": "Queen's Gambit Declined",
+    "eco": "D30"
+  },
+  "draw/211": {
+    "name": "Modern Defense: Averbakh System",
+    "eco": "A42"
+  },
+  "draw/212": {
+    "name": "Catalan Opening: Open Defense, Classical Line",
+    "eco": "E05"
+  },
+  "draw/213": {
+    "name": "King's Indian Defense",
+    "eco": "E61"
+  },
+  "draw/214": {
+    "name": "Queen's Gambit Declined: Ragozin Defense",
+    "eco": "D38"
+  },
+  "draw/215": {
+    "name": "Ruy Lopez: Open, Classical Defense, Main Line",
+    "eco": "C83"
+  },
+  "draw/216": {
+    "name": "Ruy Lopez: Closed, Breyer Defense, Zaitsev Hybrid",
+    "eco": "C95"
+  },
+  "draw/217": {
+    "name": "Modern Defense",
+    "eco": "B06"
+  },
+  "draw/218": {
+    "name": "Four Knights Game: Spanish Variation, Rubinstein Variation, Henneberger Variation",
+    "eco": "C48"
+  },
+  "draw/219": {
+    "name": "Queen's Indian Defense: Classical Variation",
+    "eco": "E17"
+  },
+  "draw/220": {
+    "name": "Modern Defense: Standard Defense",
+    "eco": "B06"
+  },
+  "draw/221": {
+    "name": "Tarrasch Defense: Dubov Tarrasch",
+    "eco": "D33"
+  },
+  "draw/222": {
+    "name": "Nimzo-Larsen Attack: Indian Variation",
+    "eco": "A01"
+  },
+  "draw/223": {
+    "name": "Ruy Lopez: Berlin Defense, Rio Gambit Accepted",
+    "eco": "C67"
+  },
+  "draw/224": {
+    "name": "King's Indian Attack: Pachman System",
+    "eco": "A07"
+  },
+  "draw/225": {
+    "name": "King's Indian Attack: Sicilian Variation",
+    "eco": "A07"
+  },
+  "draw/226": {
+    "name": "Nimzo-Larsen Attack: Classical Variation",
+    "eco": "A06"
+  },
+  "draw/227": {
+    "name": "Ruy Lopez: Berlin Defense, Beverwijk Variation",
+    "eco": "C65"
+  },
+  "draw/228": {
+    "name": "Catalan Opening: Open Defense",
+    "eco": "E04"
+  },
+  "draw/229": {
+    "name": "Sicilian Defense: Old Sicilian",
+    "eco": "B30"
+  },
+  "draw/230": {
+    "name": "Sicilian Defense: Scheveningen Variation, Delayed Keres Attack, Perenyi Gambit",
+    "eco": "B90"
+  },
+  "draw/231": {
+    "name": "Sicilian Defense: Portsmouth Gambit",
+    "eco": "B30"
+  },
+  "draw/232": {
+    "name": "Queen's Gambit Declined: Semi-Tarrasch Defense",
+    "eco": "D41"
+  },
+  "draw/233": {
+    "name": "Queen's Gambit Declined: Ragozin Defense, Vienna Variation",
+    "eco": "D39"
+  },
+  "draw/234": {
+    "name": "Catalan Opening: Closed",
+    "eco": "E06"
+  },
+  "draw/235": {
+    "name": "Queen's Gambit Declined: Three Knights Variation",
+    "eco": "D37"
+  },
+  "draw/236": {
+    "name": "Zukertort Opening: Sicilian Invitation",
+    "eco": "A04"
+  },
+  "draw/237": {
+    "name": "Nimzo-Indian Defense: Normal Variation",
+    "eco": "E46"
+  },
+  "draw/238": {
+    "name": "Ruy Lopez: Closed, Pilnik Variation",
+    "eco": "C90"
+  },
+  "draw/239": {
+    "name": "Ruy Lopez: Berlin Defense, Rio Gambit Accepted",
+    "eco": "C67"
+  },
+  "draw/240": {
+    "name": "Nimzo-Indian Defense: Romanishin Variation, English Hybrid",
+    "eco": "E20"
+  },
+  "draw/241": {
+    "name": "Vienna Game: Paulsen Variation",
+    "eco": "C25"
+  },
+  "draw/242": {
+    "name": "Sicilian Defense: Najdorf Variation, English Attack, Anti-English",
+    "eco": "B90"
+  },
+  "draw/243": {
+    "name": "Queen's Gambit Declined: Semi-Tarrasch Defense, Endgame Variation",
+    "eco": "D41"
+  },
+  "draw/244": {
+    "name": "Sicilian Defense: Old Sicilian",
+    "eco": "B30"
+  },
+  "draw/245": {
+    "name": "Four Knights Game: Gunsberg Variation",
+    "eco": "C47"
+  },
+  "draw/246": {
+    "name": "Queen's Gambit Declined: Charousek Variation",
+    "eco": "D31"
+  },
+  "draw/247": {
+    "name": "English Opening: King's English Variation",
+    "eco": "A20"
+  },
+  "draw/248": {
+    "name": "Queen's Gambit Declined",
+    "eco": "D53"
+  },
+  "draw/249": {
+    "name": "Caro-Kann Defense: Advance Variation, Short Variation",
+    "eco": "B12"
+  },
+  "draw/250": {
+    "name": "Italian Game: Classical Variation, Giuoco Pianissimo",
+    "eco": "C54"
+  },
+  "draw/251": {
+    "name": "Ruy Lopez: Closed, Anti-Marshall",
+    "eco": "C88"
+  },
+  "draw/252": {
+    "name": "Nimzowitsch Defense: Woodchuck Variation",
+    "eco": "B00"
+  },
+  "draw/253": {
+    "name": "Italian Game: Classical Variation, Giuoco Pianissimo",
+    "eco": "C54"
+  },
+  "draw/254": {
+    "name": "English Opening: King's English Variation, Four Knights Variation, Quiet Line",
+    "eco": "A28"
+  },
+  "draw/255": {
+    "name": "Caro-Kann Defense: Endgame Offer",
+    "eco": "B10"
+  },
+  "draw/256": {
+    "name": "Sicilian Defense: Najdorf Variation",
+    "eco": "B90"
+  },
+  "draw/257": {
+    "name": "Sicilian Defense: Chekhover Variation",
+    "eco": "B53"
+  },
+  "draw/258": {
+    "name": "Queen's Gambit Declined",
+    "eco": "D30"
+  },
+  "draw/259": {
+    "name": "Pirc Defense: Classical Variation, Schlechter Variation",
+    "eco": "B08"
+  },
+  "draw/260": {
+    "name": "Caro-Kann Defense: Exchange Variation",
+    "eco": "B13"
+  },
+  "draw/261": {
+    "name": "Modern Defense",
+    "eco": "B06"
+  },
+  "draw/262": {
+    "name": "Neo-Grünfeld Defense: Classical Variation, Original Defense",
+    "eco": "D78"
+  },
+  "draw/263": {
+    "name": "Rat Defense: Accelerated Gurgenidze",
+    "eco": "B06"
+  },
+  "draw/264": {
+    "name": "Queen's Pawn Game: Barry Attack",
+    "eco": "A48"
+  },
+  "draw/265": {
+    "name": "King's Indian Defense: Orthodox Variation",
+    "eco": "E94"
+  },
+  "draw/266": {
+    "name": "Ruy Lopez: Closed, Breyer Defense, Zaitsev Hybrid",
+    "eco": "C95"
+  },
+  "draw/267": {
+    "name": "Queen's Gambit Accepted: Central Variation, Alekhine System",
+    "eco": "D20"
+  },
+  "draw/268": {
+    "name": "Queen's Gambit Declined",
+    "eco": "D30"
+  },
+  "draw/269": {
+    "name": "French Defense: Tarrasch Variation, Open System, Main Line",
+    "eco": "C09"
+  },
+  "draw/270": {
+    "name": "Petrov's Defense: French Attack",
+    "eco": "C42"
+  },
+  "draw/271": {
+    "name": "Ruy Lopez: Berlin Defense, l'Hermet Variation, Berlin Wall Defense",
+    "eco": "C67"
+  },
+  "draw/272": {
+    "name": "Catalan Opening: Open Defense",
+    "eco": "E04"
+  },
+  "draw/273": {
+    "name": "Italian Game: Classical Variation, Greco Gambit, Traditional Line",
+    "eco": "C54"
+  },
+  "draw/274": {
+    "name": "French Defense: La Bourdonnais Variation",
+    "eco": "C00"
+  },
+  "draw/275": {
+    "name": "Slav Defense: Quiet Variation",
+    "eco": "D11"
+  },
+  "draw/276": {
+    "name": "Queen's Gambit Declined: Three Knights Variation",
+    "eco": "D37"
+  },
+  "draw/277": {
+    "name": "Sicilian Defense: Classical Variation, Fianchetto Variation",
+    "eco": "B56"
+  },
+  "draw/278": {
+    "name": "Sicilian Defense: Nyezhmetdinov-Rossolimo Attack, Fianchetto Variation",
+    "eco": "B31"
+  },
+  "draw/279": {
+    "name": "Queen's Indian Defense: Yates Variation",
+    "eco": "E16"
+  },
+  "draw/280": {
+    "name": "Sicilian Defense: O'Kelly Variation, Yerevan System",
+    "eco": "B28"
+  },
+  "draw/281": {
+    "name": "Semi-Slav Defense: Chigorin Defense",
+    "eco": "D46"
+  },
+  "draw/282": {
+    "name": "Ruy Lopez: Morphy Defense, Anderssen Variation",
+    "eco": "C77"
+  },
+  "draw/283": {
+    "name": "Sicilian Defense: Nyezhmetdinov-Rossolimo Attack, Fianchetto Variation",
+    "eco": "B31"
+  },
+  "draw/284": {
+    "name": "Catalan Opening: Open Defense, Classical Line",
+    "eco": "E05"
+  },
+  "draw/285": {
+    "name": "Ruy Lopez: Closed, Pilnik Variation",
+    "eco": "C90"
+  },
+  "draw/286": {
+    "name": "Queen's Gambit Declined: Austrian Defense, Haberditz Variation",
+    "eco": "D06"
+  },
+  "draw/287": {
+    "name": "Hippopotamus Defense",
+    "eco": "B00"
+  },
+  "draw/288": {
+    "name": "Modern Defense: Averbakh System",
+    "eco": "A42"
+  },
+  "draw/289": {
+    "name": "Modern Defense",
+    "eco": "B06"
+  },
+  "draw/290": {
+    "name": "Sicilian Defense: Najdorf Variation",
+    "eco": "B90"
+  },
+  "draw/291": {
+    "name": "Modern Defense: Averbakh System",
+    "eco": "A42"
+  },
+  "draw/292": {
+    "name": "Semi-Slav Defense: Stoltz Variation",
+    "eco": "D45"
+  },
+  "draw/293": {
+    "name": "Nimzo-Larsen Attack: Modern Variation",
+    "eco": "A01"
+  },
+  "draw/294": {
+    "name": "Caro-Kann Defense: Exchange Variation",
+    "eco": "B13"
+  },
+  "draw/295": {
+    "name": "Sicilian Defense: Nyezhmetdinov-Rossolimo Attack",
+    "eco": "B30"
+  },
+  "draw/296": {
+    "name": "Ruy Lopez: Open, Main Line",
+    "eco": "C80"
+  },
+  "draw/297": {
+    "name": "Bogo-Indian Defense: Grünfeld Variation",
+    "eco": "E11"
+  },
+  "draw/298": {
+    "name": "Zukertort Opening: Ware Defense",
+    "eco": "A04"
+  },
+  "draw/299": {
+    "name": "Alekhine Defense: Two Pawns Attack, Lasker Variation",
+    "eco": "B02"
+  },
+  "draw/300": {
+    "name": "Queen's Gambit Declined: Chigorin Defense, Main Line",
+    "eco": "D07"
+  },
+  "draw/301": {
+    "name": "Polish Opening",
+    "eco": "A00"
+  },
+  "draw/302": {
+    "name": "Neo-Grünfeld Defense: Classical Variation, Original Defense",
+    "eco": "D78"
+  },
+  "draw/303": {
+    "name": "Slav Defense: Quiet Variation",
+    "eco": "D11"
+  },
+  "draw/304": {
+    "name": "Queen's Gambit Declined: Charousek Variation",
+    "eco": "D31"
+  },
+  "draw/305": {
+    "name": "Ruy Lopez: Closed, Smyslov-Breyer-Zaitsev Hybrid",
+    "eco": "C92"
+  },
+  "draw/306": {
+    "name": "Pirc Defense: Austrian Attack, Dragon Formation",
+    "eco": "B09"
+  },
+  "draw/307": {
+    "name": "Sicilian Defense: Nyezhmetdinov-Rossolimo Attack",
+    "eco": "B30"
+  },
+  "draw/308": {
+    "name": "Caro-Kann Defense: Advance Variation, Van der Wiel Attack",
+    "eco": "B12"
+  },
+  "draw/309": {
+    "name": "Caro-Kann Defense: Advance Variation, Short Variation",
+    "eco": "B12"
+  },
+  "draw/310": {
+    "name": "Four Knights Game: Scotch Variation, Schmid Defense",
+    "eco": "C47"
+  },
+  "draw/311": {
+    "name": "English Opening: King's English Variation",
+    "eco": "A20"
+  },
+  "draw/312": {
+    "name": "Petrov's Defense: Nimzowitsch Attack",
+    "eco": "C42"
+  },
+  "draw/313": {
+    "name": "Sicilian Defense: Kan Variation, Polugaevsky Variation",
+    "eco": "B42"
+  },
+  "draw/314": {
+    "name": "Caro-Kann Defense: Exchange Variation",
+    "eco": "B13"
+  },
+  "draw/315": {
+    "name": "Caro-Kann Defense: Advance Variation, Tal Variation",
+    "eco": "B12"
+  },
+  "draw/316": {
+    "name": "Queen's Gambit Declined: Queen's Knight Variation",
+    "eco": "D31"
+  },
+  "draw/317": {
+    "name": "Catalan Opening: Open Defense, Classical Line",
+    "eco": "E05"
+  },
+  "draw/318": {
+    "name": "Italian Game: Classical Variation, Giuoco Pianissimo",
+    "eco": "C54"
+  },
+  "draw/319": {
+    "name": "Semi-Slav Defense: Stoltz Variation",
+    "eco": "D45"
+  },
+  "draw/320": {
+    "name": "Sicilian Defense: Four Knights Variation, Exchange Variation",
+    "eco": "B45"
+  },
+  "draw/321": {
+    "name": "Ruy Lopez: Morphy Defense, Anderssen Variation",
+    "eco": "C77"
+  },
+  "draw/322": {
+    "name": "French Defense, Classical, 4. Bg5",
+    "eco": "C12"
+  },
+  "draw/323": {
+    "name": "Queen's Pawn Game: Symmetrical Variation, Pseudo-Catalan",
+    "eco": "D02"
+  },
+  "draw/324": {
+    "name": "English Opening: King's English Variation, Three Knights System",
+    "eco": "A27"
+  },
+  "draw/325": {
+    "name": "Sicilian Defense: Nyezhmetdinov-Rossolimo Attack",
+    "eco": "B30"
+  },
+  "draw/326": {
+    "name": "Sicilian Defense: Najdorf Variation, English Attack, Anti-English",
+    "eco": "B90"
+  },
+  "draw/327": {
+    "name": "Queen's Pawn Game: Colle System",
+    "eco": "D05"
+  },
+  "draw/328": {
+    "name": "Semi-Slav Defense: Stoltz Variation",
+    "eco": "D45"
+  },
+  "draw/329": {
+    "name": "Slav Defense: Czech Variation, Carlsbad Variation, Morozevich Variation",
+    "eco": "D17"
+  },
+  "draw/330": {
+    "name": "Semi-Slav Defense: Botvinnik Variation",
+    "eco": "D44"
+  },
+  "draw/331": {
+    "name": "Catalan Opening: Open Defense",
+    "eco": "E01"
+  },
+  "draw/332": {
+    "name": "Sicilian Defense: Najdorf Variation",
+    "eco": "B98"
+  },
+  "draw/333": {
+    "name": "Queen's Gambit Declined: Barmen Variation",
+    "eco": "D37"
+  },
+  "draw/334": {
+    "name": "Ruy Lopez: Berlin Defense, Anti-Berlin Variation",
+    "eco": "C65"
+  },
+  "draw/335": {
+    "name": "Sicilian Defense: Nyezhmetdinov-Rossolimo Attack",
+    "eco": "B30"
+  },
+  "draw/336": {
+    "name": "Horwitz Defense",
+    "eco": "A40"
+  },
+  "draw/337": {
+    "name": "French Defense",
+    "eco": "C00"
+  },
+  "draw/338": {
+    "name": "Queen's Gambit Declined: Cambridge Springs Defense, Rubinstein Variation",
+    "eco": "D52"
+  },
+  "draw/339": {
+    "name": "Indian Defense: London System",
+    "eco": "A46"
+  },
+  "draw/340": {
+    "name": "Sicilian Defense: Closed, Anti-Sveshnikov Variation, with d6",
+    "eco": "B30"
+  },
+  "draw/341": {
+    "name": "King's Indian Attack",
+    "eco": "A05"
+  },
+  "draw/342": {
+    "name": "Ruy Lopez: Closed, Anti-Marshall",
+    "eco": "C88"
+  },
+  "draw/343": {
+    "name": "Ruy Lopez: Berlin Defense, Anti-Berlin Variation",
+    "eco": "C65"
+  },
+  "draw/344": {
+    "name": "Queen's Gambit Accepted",
+    "eco": "D24"
+  },
+  "draw/345": {
+    "name": "Caro-Kann Defense: Exchange Variation, Rubinstein Variation",
+    "eco": "B13"
+  },
+  "draw/346": {
+    "name": "Italian Game: Giuoco Pianissimo",
+    "eco": "C50"
+  },
+  "draw/347": {
+    "name": "Neo-Grünfeld Defense: Classical Variation, Original Defense",
+    "eco": "D78"
+  },
+  "draw/348": {
+    "name": "English Opening: King's English Variation, Four Knights Variation, Fianchetto Line",
+    "eco": "A29"
+  },
+  "draw/349": {
+    "name": "Ruy Lopez: Berlin Defense, Anti-Berlin Variation",
+    "eco": "C65"
+  },
+  "draw/350": {
+    "name": "London System",
+    "eco": "A48"
+  },
+  "draw/351": {
+    "name": "King's Indian Attack: Double Fianchetto",
+    "eco": "A07"
+  },
+  "draw/352": {
+    "name": "Ruy Lopez: Closed, Bogoljubow Variation",
+    "eco": "C91"
+  },
+  "draw/353": {
+    "name": "Queen's Gambit Declined: Cambridge Springs Defense, Rubinstein Variation",
+    "eco": "D52"
+  },
+  "draw/354": {
+    "name": "English Opening: Anglo-Indian Defense, King's Indian Formation, Double Fianchetto",
+    "eco": "A15"
+  },
+  "draw/355": {
+    "name": "Sicilian Defense: French Variation",
+    "eco": "B40"
+  },
+  "draw/356": {
+    "name": "English Opening: Symmetrical Variation, Three Knights, Fianchetto Variation",
+    "eco": "A37"
+  },
+  "draw/357": {
+    "name": "Pirc Defense",
+    "eco": "B00"
+  },
+  "draw/358": {
+    "name": "Queen's Gambit Declined: Janowski Variation",
+    "eco": "D31"
+  },
+  "draw/359": {
+    "name": "Sicilian Defense: French Variation",
+    "eco": "B40"
+  },
+  "draw/360": {
+    "name": "English Opening: Symmetrical Variation, Three Knights, Fianchetto Variation",
+    "eco": "A37"
+  },
+  "draw/361": {
+    "name": "Queen's Gambit Accepted: Alekhine Defense, Haberditz Variation",
+    "eco": "D22"
+  },
+  "draw/362": {
+    "name": "Sicilian Defense: Delayed Alapin Variation, with e6",
+    "eco": "B40"
+  },
+  "draw/363": {
+    "name": "Philidor Defense",
+    "eco": "C41"
+  },
+  "draw/364": {
+    "name": "Italian Game: Classical Variation, Giuoco Pianissimo",
+    "eco": "C54"
+  },
+  "draw/365": {
+    "name": "Modern Defense: Standard Defense",
+    "eco": "B06"
+  },
+  "draw/366": {
+    "name": "Sicilian Defense: Nyezhmetdinov-Rossolimo Attack",
+    "eco": "B30"
+  },
+  "draw/367": {
+    "name": "Petrov's Defense: Classical Attack",
+    "eco": "C42"
+  },
+  "draw/368": {
+    "name": "Nimzo-Indian Defense: Normal Variation",
+    "eco": "E46"
+  },
+  "draw/369": {
+    "name": "Italian Game: Classical Variation, Giuoco Pianissimo",
+    "eco": "C54"
+  },
+  "draw/370": {
+    "name": "Ruy Lopez: Berlin Defense, Anti-Berlin Variation",
+    "eco": "C65"
+  },
+  "draw/371": {
+    "name": "Catalan Opening: Open Defense, Classical Line",
+    "eco": "E05"
+  },
+  "draw/372": {
+    "name": "Neo-Grünfeld Defense: Classical Variation, Original Defense",
+    "eco": "D78"
+  },
+  "draw/373": {
+    "name": "Italian Game: Two Knights Defense, Modern Bishop's Opening",
+    "eco": "C55"
+  },
+  "draw/374": {
+    "name": "Réti Opening: Anglo-Slav Variation, with g3",
+    "eco": "A11"
+  },
+  "draw/375": {
+    "name": "Caro-Kann Defense: Classical Variation, Flohr Variation",
+    "eco": "B18"
+  },
+  "draw/376": {
+    "name": "Caro-Kann Defense: Exchange Variation",
+    "eco": "B13"
+  },
+  "draw/377": {
+    "name": "Ruy Lopez: Berlin Defense, Rio Gambit Accepted",
+    "eco": "C67"
+  },
+  "draw/378": {
+    "name": "Réti Opening: Anglo-Slav Variation, with g3",
+    "eco": "A11"
+  },
+  "draw/379": {
+    "name": "Sicilian Defense: Alapin Variation",
+    "eco": "B22"
+  },
+  "draw/380": {
+    "name": "Queen's Pawn Game: Veresov Attack, Dutch System",
+    "eco": "A80"
+  },
+  "draw/381": {
+    "name": "English Opening: Agincourt Defense, Neo-Catalan Declined",
+    "eco": "A14"
+  },
+  "draw/382": {
+    "name": "King's Indian Defense: Fianchetto Variation, Immediate Fianchetto",
+    "eco": "E60"
+  },
+  "draw/383": {
+    "name": "Nimzo-Indian Defense: Normal Variation, Bernstein Defense, Exchange Line",
+    "eco": "E58"
+  },
+  "draw/384": {
+    "name": "Zukertort Opening: The Potato",
+    "eco": "A06"
+  },
+  "draw/385": {
+    "name": "Nimzo-Larsen Attack: Classical Variation",
+    "eco": "A06"
+  },
+  "draw/386": {
+    "name": "Ruy Lopez: Berlin Defense, Anti-Berlin Variation",
+    "eco": "C65"
+  },
+  "draw/387": {
+    "name": "Sicilian Defense: Nyezhmetdinov-Rossolimo Attack",
+    "eco": "B30"
+  },
+  "draw/388": {
+    "name": "Owen Defense",
+    "eco": "B00"
+  },
+  "draw/389": {
+    "name": "French Defense: Winawer Variation, Positional Variation",
+    "eco": "C19"
+  },
+  "draw/390": {
+    "name": "Italian Game: Two Knights Defense, Modern Bishop's Opening",
+    "eco": "C55"
+  },
+  "draw/391": {
+    "name": "Queen's Gambit Declined: Exchange Variation, Positional Variation",
+    "eco": "D35"
+  },
+  "draw/392": {
+    "name": "Grünfeld Defense: Exchange Variation",
+    "eco": "D85"
+  },
+  "draw/393": {
+    "name": "Queen's Indian Defense: Kasparov-Petrosian Variation, Hedgehog Variation",
+    "eco": "E12"
+  },
+  "draw/394": {
+    "name": "Nimzo-Indian Defense: Normal Variation, Classical Defense",
+    "eco": "E48"
+  },
+  "draw/395": {
+    "name": "Pseudo Queen's Indian Defense",
+    "eco": "A47"
+  },
+  "draw/396": {
+    "name": "Italian Game: Classical Variation, Giuoco Pianissimo",
+    "eco": "C54"
+  },
+  "draw/397": {
+    "name": "Queen's Gambit Declined: Exchange Variation, Positional Variation",
+    "eco": "D35"
+  },
+  "draw/398": {
+    "name": "Dutch Defense: Raphael Variation",
+    "eco": "A80"
+  },
+  "draw/399": {
+    "name": "Ruy Lopez: Berlin Defense, Anti-Berlin Variation",
+    "eco": "C65"
+  },
+  "draw/400": {
+    "name": "Modern Defense: Standard Defense",
+    "eco": "B06"
+  },
+  "draw/401": {
+    "name": "Ruy Lopez: Berlin Defense, Anti-Berlin Variation",
+    "eco": "C65"
+  },
+  "draw/402": {
+    "name": "Ruy Lopez: Berlin Defense, Anti-Berlin Variation",
+    "eco": "C65"
+  },
+  "draw/403": {
+    "name": "Sicilian Defense: Najdorf Variation, Adams Attack",
+    "eco": "B90"
+  },
+  "draw/404": {
+    "name": "Rat Defense: Accelerated Gurgenidze",
+    "eco": "B06"
+  },
+  "draw/405": {
+    "name": "Zukertort Opening: Quiet System",
+    "eco": "A05"
+  },
+  "draw/406": {
+    "name": "Van't Kruijs Opening",
+    "eco": "A00"
+  },
+  "draw/407": {
+    "name": "Queen's Gambit Declined: Queen's Knight Variation",
+    "eco": "D31"
+  },
+  "draw/408": {
+    "name": "Queen's Gambit Declined: Marshall Defense",
+    "eco": "D06"
+  },
+  "draw/409": {
+    "name": "Ruy Lopez: Berlin Defense",
+    "eco": "C65"
+  },
+  "draw/410": {
+    "name": "Owen Defense",
+    "eco": "B00"
+  },
+  "draw/411": {
+    "name": "Hungarian Opening",
+    "eco": "A00"
+  },
+  "draw/412": {
+    "name": "Queen's Gambit Declined: Harrwitz Attack, Fianchetto Defense",
+    "eco": "D37"
+  },
+  "draw/413": {
+    "name": "Bishop's Opening",
+    "eco": "C23"
+  },
+  "draw/414": {
+    "name": "Sicilian Defense: Pin Variation",
+    "eco": "B40"
+  },
+  "draw/415": {
+    "name": "Queen's Pawn Game: Zukertort Variation",
+    "eco": "D02"
+  },
+  "draw/416": {
+    "name": "French Defense: Two Knights Variation",
+    "eco": "C00"
+  },
+  "draw/417": {
+    "name": "French Defense: Knight Variation",
+    "eco": "C00"
+  },
+  "draw/418": {
+    "name": "Queen's Gambit Accepted: Old Variation",
+    "eco": "D20"
+  },
+  "draw/419": {
+    "name": "Queen's Gambit Accepted: Central Variation, Alekhine System",
+    "eco": "D20"
+  },
+  "draw/420": {
+    "name": "Queen's Gambit Declined: Semi-Tarrasch Defense, Endgame Variation",
+    "eco": "D41"
+  },
+  "draw/421": {
+    "name": "Center Game: Normal Variation",
+    "eco": "C22"
+  },
+  "draw/422": {
+    "name": "Sicilian Defense: Four Knights Variation, Exchange Variation",
+    "eco": "B45"
+  },
+  "draw/423": {
+    "name": "Caro-Kann Defense: Tartakower Variation",
+    "eco": "B15"
+  },
+  "draw/424": {
+    "name": "Owen Defense",
+    "eco": "B00"
+  },
+  "draw/425": {
+    "name": "English Opening: Agincourt Defense",
+    "eco": "A13"
+  },
+  "draw/426": {
+    "name": "Nimzo-Indian Defense: Three Knights Variation",
+    "eco": "E21"
+  },
+  "draw/427": {
+    "name": "Queen's Gambit Declined",
+    "eco": "D30"
+  },
+  "draw/428": {
+    "name": "Italian Game: Giuoco Pianissimo",
+    "eco": "C50"
+  },
+  "draw/429": {
+    "name": "Old Indian Defense",
+    "eco": "A53"
+  },
+  "draw/430": {
+    "name": "Queen's Gambit Declined",
+    "eco": "D30"
+  },
+  "draw/431": {
+    "name": "Alekhine Defense: Modern Variation, Panov Variation",
+    "eco": "B05"
+  },
+  "draw/432": {
+    "name": "Alekhine Defense: Scandinavian Variation",
+    "eco": "B02"
+  },
+  "draw/433": {
+    "name": "Bishop's Opening",
+    "eco": "C23"
+  },
+  "draw/434": {
+    "name": "Scandinavian Defense",
+    "eco": "B01"
+  },
+  "draw/435": {
+    "name": "Owen Defense",
+    "eco": "B00"
+  },
+  "draw/436": {
+    "name": "Queen's Pawn Game",
+    "eco": "D00"
+  },
+  "draw/437": {
+    "name": "French Defense",
+    "eco": "C00"
+  },
+  "draw/438": {
+    "name": "Italian Game: Classical Variation, Giuoco Pianissimo",
+    "eco": "C54"
+  },
+  "draw/439": {
+    "name": "French Defense: Exchange Variation",
+    "eco": "C01"
+  },
+  "draw/440": {
+    "name": "Sicilian Defense: Closed",
+    "eco": "B23"
+  },
+  "draw/441": {
+    "name": "Sicilian Defense: Delayed Alapin Variation, with e6",
+    "eco": "B40"
+  },
+  "draw/442": {
+    "name": "Owen Defense",
+    "eco": "B00"
+  },
+  "draw/443": {
+    "name": "Barnes Opening",
+    "eco": "A00"
+  },
+  "draw/444": {
+    "name": "Queen's Gambit Declined",
+    "eco": "D30"
+  },
+  "draw/445": {
+    "name": "Queen's Pawn Game: Accelerated London System",
+    "eco": "D00"
+  },
+  "draw/446": {
+    "name": "Italian Game: Classical Variation, Albin Gambit",
+    "eco": "C50"
+  },
+  "draw/447": {
+    "name": "King's Indian Defense: Orthodox Variation, Glek Defense",
+    "eco": "E94"
+  },
+  "draw/448": {
+    "name": "Petrov's Defense: Italian Variation",
+    "eco": "C42"
+  },
+  "draw/449": {
+    "name": "Benoni Defense: Benoni Gambit Accepted",
+    "eco": "A43"
+  },
+  "draw/450": {
+    "name": "Ruy Lopez: Open",
+    "eco": "C80"
+  },
+  "draw/451": {
+    "name": "French Defense: Two Knights Variation",
+    "eco": "C00"
+  },
+  "draw/452": {
+    "name": "King's Indian Defense: Normal Variation, King's Knight Variation",
+    "eco": "E60"
+  },
+  "draw/453": {
+    "name": "French Defense: Diemer-Duhm Gambit Accepted",
+    "eco": "C00"
+  },
+  "draw/454": {
+    "name": "Philidor Defense: Lion Variation",
+    "eco": "C41"
+  },
+  "draw/455": {
+    "name": "Queen's Gambit Declined: Baltic Defense, Pseudo-Slav",
+    "eco": "D02"
+  },
+  "draw/456": {
+    "name": "King's Pawn Game: Wayward Queen Attack",
+    "eco": "C20"
+  },
+  "draw/457": {
+    "name": "Horwitz Defense",
+    "eco": "A40"
+  },
+  "draw/458": {
+    "name": "Ruy Lopez: Berlin Defense, l'Hermet Variation, Berlin Wall Defense",
+    "eco": "C67"
+  },
+  "draw/459": {
+    "name": "Queen's Gambit Declined: Austrian Defense",
+    "eco": "D06"
+  },
+  "draw/460": {
+    "name": "Bird Opening: Dutch Variation",
+    "eco": "A03"
+  },
+  "draw/461": {
+    "name": "Pirc Defense",
+    "eco": "B00"
+  },
+  "draw/462": {
+    "name": "Scandinavian Defense: Main Line",
+    "eco": "B01"
+  },
+  "draw/463": {
+    "name": "King's Pawn Game: Leonardis Variation",
+    "eco": "C20"
+  },
+  "draw/464": {
+    "name": "Bishop's Opening",
+    "eco": "C23"
+  },
+  "draw/465": {
+    "name": "Bishop's Opening: Vienna Hybrid",
+    "eco": "C24"
+  },
+  "draw/466": {
+    "name": "Grünfeld Defense: Brinckmann Attack",
+    "eco": "D82"
+  },
+  "draw/467": {
+    "name": "Sicilian Defense: Nyezhmetdinov-Rossolimo Attack, Fianchetto Variation",
+    "eco": "B31"
+  },
+  "draw/468": {
+    "name": "English Opening: Symmetrical Variation, Three Knights, Fianchetto Variation",
+    "eco": "A37"
+  },
+  "draw/469": {
+    "name": "Queen's Pawn Game: Modern Defense",
+    "eco": "A40"
+  },
+  "draw/470": {
+    "name": "Sicilian Defense",
+    "eco": "B20"
+  },
+  "draw/471": {
+    "name": "French Defense: Advance Variation, Euwe Variation",
+    "eco": "C02"
+  },
+  "draw/472": {
+    "name": "French Defense: Advance Variation",
+    "eco": "C02"
+  },
+  "draw/473": {
+    "name": "Queen's Pawn Game: London System",
+    "eco": "D02"
+  },
+  "draw/474": {
+    "name": "King's Indian Attack: Spassky Variation",
+    "eco": "A05"
+  },
+  "draw/475": {
+    "name": "Queen's Pawn Game: Chigorin Variation",
+    "eco": "A45"
+  },
+  "draw/476": {
+    "name": "French Defense: Exchange Variation",
+    "eco": "C01"
+  },
+  "draw/477": {
+    "name": "Queen's Gambit Accepted: Normal Variation, Traditional System",
+    "eco": "D26"
+  },
+  "draw/478": {
+    "name": "Portuguese Opening",
+    "eco": "C20"
+  },
+  "draw/479": {
+    "name": "Caro-Kann Defense: Exchange Variation",
+    "eco": "B13"
+  },
+  "draw/480": {
+    "name": "Four Knights Game: Scotch Variation Accepted, Main Line",
+    "eco": "C47"
+  },
+  "draw/481": {
+    "name": "Sicilian Defense: Delayed Alapin Variation, with e6",
+    "eco": "B40"
+  },
+  "draw/482": {
+    "name": "Nimzowitsch Defense: Declined Variation",
+    "eco": "B00"
+  },
+  "draw/483": {
+    "name": "Scotch Game: Meitner Variation",
+    "eco": "C45"
+  },
+  "draw/484": {
+    "name": "Ruy Lopez: Berlin Defense, Anti-Berlin Variation",
+    "eco": "C65"
+  },
+  "draw/485": {
+    "name": "Semi-Slav Defense: Normal Variation",
+    "eco": "D45"
+  },
+  "draw/486": {
+    "name": "Queen's Pawn Game",
+    "eco": "D00"
+  },
+  "draw/487": {
+    "name": "Torre Attack: Classical Defense, Nimzowitsch Variation",
+    "eco": "A46"
+  },
+  "draw/488": {
+    "name": "Slav Defense: Exchange Variation",
+    "eco": "D10"
+  },
+  "draw/489": {
+    "name": "Queen's Pawn Game: Torre Attack, Gossip Variation",
+    "eco": "D03"
+  },
+  "draw/490": {
+    "name": "Caro-Kann Defense: Karpov Variation",
+    "eco": "B17"
+  },
+  "draw/491": {
+    "name": "Queen's Gambit Declined: Exchange Variation, Positional Variation",
+    "eco": "D35"
+  },
+  "draw/492": {
+    "name": "Caro-Kann Defense",
+    "eco": "B12"
+  },
+  "draw/493": {
+    "name": "English Opening",
+    "eco": "A10"
+  },
+  "draw/494": {
+    "name": "Owen Defense",
+    "eco": "B00"
+  },
+  "draw/495": {
+    "name": "Sicilian Defense: Alapin Variation",
+    "eco": "B22"
+  },
+  "draw/496": {
+    "name": "Sicilian Defense: Accelerated Dragon, Modern Bc4 Variation",
+    "eco": "B35"
+  },
+  "draw/497": {
+    "name": "Queen's Pawn Game",
+    "eco": "D00"
+  },
+  "draw/498": {
+    "name": "Four Knights Game: Scotch Variation Accepted, Main Line",
+    "eco": "C47"
+  },
+  "draw/499": {
+    "name": "St. George Defense: Polish Variation",
+    "eco": "B00"
+  },
+  "draw/500": {
+    "name": "Ruy Lopez: Open, Classical Defense",
+    "eco": "C83"
+  },
+  "draw/501": {
+    "name": "Sicilian Defense: Bowdler Attack",
+    "eco": "B20"
+  },
+  "draw/502": {
+    "name": "Nimzo-Larsen Attack: Classical Variation",
+    "eco": "A01"
+  },
+  "draw/503": {
+    "name": "Scandinavian Defense: Mieses-Kotroc Variation",
+    "eco": "B01"
+  },
+  "draw/504": {
+    "name": "Sicilian Defense: Najdorf Variation, English Attack",
+    "eco": "B90"
+  },
+  "draw/505": {
+    "name": "French Defense: Normal Variation",
+    "eco": "C00"
+  },
+  "draw/506": {
+    "name": "Nimzo-Indian Defense: Three Knights Variation",
+    "eco": "E21"
+  },
+  "draw/507": {
+    "name": "Ruy Lopez: Open",
+    "eco": "C80"
+  },
+  "draw/508": {
+    "name": "London System, with Be2",
+    "eco": "A48"
+  },
+  "draw/509": {
+    "name": "Grünfeld Defense: Exchange Variation",
+    "eco": "D85"
+  },
+  "draw/510": {
+    "name": "Italian Game: Classical Variation, Greco Gambit, Modern Line",
+    "eco": "C54"
+  },
+  "draw/511": {
+    "name": "Queen's Gambit Accepted: Classical Defense, Main Line",
+    "eco": "D27"
+  },
+  "draw/512": {
+    "name": "Caro-Kann Defense: Two Knights Attack",
+    "eco": "B10"
+  },
+  "draw/513": {
+    "name": "Sicilian Defense: Moscow Variation",
+    "eco": "B51"
+  },
+  "draw/514": {
+    "name": "Caro-Kann Defense: Advance Variation",
+    "eco": "B12"
+  },
+  "draw/515": {
+    "name": "English Opening: King's English Variation, Two Knights Variation, Smyslov System",
+    "eco": "A22"
+  },
+  "draw/516": {
+    "name": "Sicilian Defense: Najdorf Variation, Adams Attack",
+    "eco": "B90"
+  },
+  "draw/517": {
+    "name": "Sicilian Defense: Alapin Variation, Barmen Defense",
+    "eco": "B22"
+  },
+  "draw/518": {
+    "name": "Nimzo-Larsen Attack: Indian Variation",
+    "eco": "A01"
+  },
+  "draw/519": {
+    "name": "Pirc Defense: Austrian Attack, Dragon Formation",
+    "eco": "B09"
+  },
+  "draw/520": {
+    "name": "Four Knights Game: Scotch Variation Accepted",
+    "eco": "C47"
+  },
+  "draw/521": {
+    "name": "Grünfeld Defense: Exchange Variation, Modern Exchange Variation",
+    "eco": "D85"
+  },
+  "draw/522": {
+    "name": "Queen's Gambit Declined: Vienna Variation, Quiet Variation",
+    "eco": "D37"
+  },
+  "draw/523": {
+    "name": "Nimzo-Indian Defense: Three Knights Variation",
+    "eco": "E21"
+  },
+  "draw/524": {
+    "name": "Ruy Lopez: Morphy Defense, Anderssen Variation",
+    "eco": "C77"
+  },
+  "draw/525": {
+    "name": "Sicilian Defense: Nyezhmetdinov-Rossolimo Attack, Fianchetto Variation",
+    "eco": "B31"
+  },
+  "draw/526": {
+    "name": "Scandinavian Defense: Bronstein Variation",
+    "eco": "B01"
+  },
+  "draw/527": {
+    "name": "Sicilian Defense: Dragon Variation, Yugoslav Attack, Main Line",
+    "eco": "B77"
+  },
+  "draw/528": {
+    "name": "Sicilian Defense: Alapin Variation, Stoltz Attack",
+    "eco": "B22"
+  },
+  "draw/529": {
+    "name": "Queen's Indian Defense: Fianchetto Variation, Check Variation, Intermezzo Line",
+    "eco": "E15"
+  },
+  "draw/530": {
+    "name": "Tarrasch Defense: Symmetrical Variation",
+    "eco": "D32"
+  },
+  "draw/531": {
+    "name": "Grünfeld Defense: Three Knights Variation, Hungarian Variation",
+    "eco": "D93"
+  },
+  "draw/532": {
+    "name": "Slav Defense: Chebanenko Variation",
+    "eco": "D15"
+  },
+  "draw/533": {
+    "name": "Queen's Gambit Declined: Ragozin Defense, Vienna Variation",
+    "eco": "D39"
+  },
+  "draw/534": {
+    "name": "English Opening: King's English Variation, Nimzowitsch Variation",
+    "eco": "A20"
+  },
+  "draw/535": {
+    "name": "Slav Defense: Chebanenko Variation",
+    "eco": "D15"
+  },
+  "draw/536": {
+    "name": "Queen's Indian Defense: Classical Variation, Traditional Variation",
+    "eco": "E18"
+  },
+  "draw/537": {
+    "name": "Sicilian Defense: Dragon Variation, Yugoslav Attack, Main Line",
+    "eco": "B77"
+  },
+  "draw/538": {
+    "name": "Semi-Slav Defense: Marshall Gambit, Forgotten Variation",
+    "eco": "D31"
+  },
+  "draw/539": {
+    "name": "Nimzo-Indian Defense: Classical Variation, Berlin Variation, Pirc Variation",
+    "eco": "E39"
+  },
+  "draw/540": {
+    "name": "Sicilian Defense: Scheveningen Variation, Keres Attack",
+    "eco": "B81"
+  },
+  "draw/541": {
+    "name": "Ruy Lopez: Morphy Defense, Arkhangelsk Variation",
+    "eco": "C78"
+  },
+  "draw/542": {
+    "name": "Ruy Lopez: Berlin Defense, Rio Gambit Accepted",
+    "eco": "C67"
+  },
+  "draw/543": {
+    "name": "English Opening: Anglo-Indian Defense, Anglo-Grünfeld Variation",
+    "eco": "A16"
+  },
+  "draw/544": {
+    "name": "Sicilian Defense: Moscow Variation",
+    "eco": "B51"
+  },
+  "draw/545": {
+    "name": "Grünfeld Defense: Exchange Variation, Spassky Variation",
+    "eco": "D87"
+  },
+  "draw/546": {
+    "name": "Nimzo-Indian Defense: Normal Variation",
+    "eco": "E47"
+  },
+  "draw/547": {
+    "name": "Sicilian Defense: Chekhover Variation",
+    "eco": "B53"
+  },
+  "draw/548": {
+    "name": "Queen's Gambit Declined: Ragozin Defense",
+    "eco": "D38"
+  },
+  "draw/549": {
+    "name": "English Opening: Symmetrical Variation, Botvinnik System Reversed, with Nf3",
+    "eco": "A37"
+  },
+  "draw/550": {
+    "name": "Scandinavian Defense: Mieses-Kotroc Variation",
+    "eco": "B01"
+  },
+  "draw/551": {
+    "name": "Sicilian Defense: Nyezhmetdinov-Rossolimo Attack",
+    "eco": "B30"
+  },
+  "draw/552": {
+    "name": "Scandinavian Defense: Main Line",
+    "eco": "B01"
+  },
+  "draw/553": {
+    "name": "English Opening: Symmetrical Variation, Three Knights, Fianchetto Variation",
+    "eco": "A37"
+  },
+  "draw/554": {
+    "name": "English Opening: Symmetrical Variation, Three Knights, Fianchetto Variation",
+    "eco": "A37"
+  },
+  "draw/555": {
+    "name": "Sicilian Defense: Najdorf Variation, English Attack",
+    "eco": "B90"
+  },
+  "draw/556": {
+    "name": "English Opening: Anglo-Indian Defense, King's Indian Formation",
+    "eco": "A15"
+  },
+  "draw/557": {
+    "name": "Sicilian Defense: Dragon Variation, Yugoslav Attack, Modern Line",
+    "eco": "B76"
+  },
+  "draw/558": {
+    "name": "Sicilian Defense: Moscow Variation",
+    "eco": "B51"
+  },
+  "draw/559": {
+    "name": "Ruy Lopez: Berlin Defense, Anti-Berlin Variation",
+    "eco": "C65"
+  },
+  "draw/560": {
+    "name": "Rapport-Jobava System",
+    "eco": "D01"
+  },
+  "draw/561": {
+    "name": "London System, with Be2",
+    "eco": "A48"
+  },
+  "draw/562": {
+    "name": "Torre Attack: Fianchetto Defense",
+    "eco": "A48"
+  },
+  "draw/563": {
+    "name": "Benko Gambit: Fianchetto Variation",
+    "eco": "A58"
+  },
+  "draw/564": {
+    "name": "Pirc Defense: Classical Variation, Schlechter Variation",
+    "eco": "B08"
+  },
+  "draw/565": {
+    "name": "Tarrasch Defense: Two Knights Variation",
+    "eco": "D32"
+  },
+  "draw/566": {
+    "name": "Sicilian Defense: Accelerated Dragon, Modern Variation",
+    "eco": "B34"
+  },
+  "draw/567": {
+    "name": "Sicilian Defense: Najdorf Variation, English Attack",
+    "eco": "B90"
+  },
+  "draw/568": {
+    "name": "Scotch Game: Göring Gambit, Main Line",
+    "eco": "C44"
+  },
+  "draw/569": {
+    "name": "Queen's Pawn Game: Zukertort Variation",
+    "eco": "D02"
+  },
+  "draw/570": {
+    "name": "English Opening: King's English Variation, Two Knights Variation, Smyslov System",
+    "eco": "A22"
+  },
+  "draw/571": {
+    "name": "Slav Defense: Quiet Variation, Schallopp Defense",
+    "eco": "D12"
+  },
+  "draw/572": {
+    "name": "Sicilian Defense: Moscow Variation",
+    "eco": "B51"
+  },
+  "draw/573": {
+    "name": "Queen's Pawn Game: Rossolimo Variation",
+    "eco": "A41"
+  },
+  "draw/574": {
+    "name": "Ruy Lopez: Berlin Defense, Anti-Berlin Variation",
+    "eco": "C65"
+  },
+  "draw/575": {
+    "name": "Queen's Pawn Game: Accelerated London System",
+    "eco": "D00"
+  },
+  "draw/576": {
+    "name": "Sicilian Defense: Dragon Variation, Yugoslav Attack, Modern Line",
+    "eco": "B76"
+  },
+  "draw/577": {
+    "name": "Zukertort Opening: Sicilian Invitation",
+    "eco": "A04"
+  },
+  "draw/578": {
+    "name": "Sicilian Defense: Lasker-Pelikan Variation",
+    "eco": "B33"
+  },
+  "draw/579": {
+    "name": "Scotch Game: Potter Variation",
+    "eco": "C45"
+  },
+  "draw/580": {
+    "name": "English Opening: King's English Variation, Four Knights Variation, Quiet Line",
+    "eco": "A28"
+  },
+  "draw/581": {
+    "name": "Ruy Lopez: Berlin Defense, l'Hermet Variation, Berlin Wall Defense",
+    "eco": "C67"
+  },
+  "draw/582": {
+    "name": "Semi-Slav Defense: Chigorin Defense",
+    "eco": "D46"
+  },
+  "draw/583": {
+    "name": "English Opening: King's English Variation, Four Knights Variation, Fianchetto Line",
+    "eco": "A29"
+  },
+  "draw/584": {
+    "name": "Sicilian Defense: Closed, Traditional",
+    "eco": "B23"
+  },
+  "draw/585": {
+    "name": "Grünfeld Defense: Three Knights Variation, Petrosian System",
+    "eco": "D91"
+  },
+  "draw/586": {
+    "name": "Slav Defense: Modern Line",
+    "eco": "D11"
+  },
+  "draw/587": {
+    "name": "Pirc Defense: Austrian Attack, Kurajica Variation",
+    "eco": "B09"
+  },
+  "draw/588": {
+    "name": "Sicilian Defense: Nyezhmetdinov-Rossolimo Attack, Fianchetto Variation",
+    "eco": "B31"
+  },
+  "draw/589": {
+    "name": "Sicilian Defense: Moscow Variation",
+    "eco": "B51"
+  },
+  "draw/590": {
+    "name": "Queen's Gambit Accepted",
+    "eco": "D24"
+  },
+  "draw/591": {
+    "name": "Ruy Lopez: Closed, Martinez Variation",
+    "eco": "C84"
+  },
+  "draw/592": {
+    "name": "Semi-Slav Defense: Stoltz Variation",
+    "eco": "D45"
+  },
+  "draw/593": {
+    "name": "Queen's Gambit Declined: Ragozin Defense, Alekhine Variation",
+    "eco": "D38"
+  },
+  "draw/594": {
+    "name": "Queen's Gambit Declined: Lasker Defense",
+    "eco": "D56"
+  },
+  "draw/595": {
+    "name": "Queen's Indian Defense: Fianchetto Variation, Nimzowitsch Variation, Quiet Line",
+    "eco": "E15"
+  },
+  "draw/596": {
+    "name": "Queen's Indian Defense: Fianchetto Variation, Check Variation, Intermezzo Line",
+    "eco": "E15"
+  },
+  "draw/597": {
+    "name": "Queen's Gambit Declined: Harrwitz Attack",
+    "eco": "D37"
+  },
+  "draw/598": {
+    "name": "Nimzo-Larsen Attack: English Variation",
+    "eco": "A01"
+  },
+  "draw/599": {
+    "name": "King's Indian Attack: Double Fianchetto",
+    "eco": "A07"
+  },
+  "draw/600": {
+    "name": "Pirc Defense: Byrne Variation",
+    "eco": "B07"
+  },
+  "draw/601": {
+    "name": "Queen's Pawn Game",
+    "eco": "A40"
+  },
+  "draw/602": {
+    "name": "French Defense: Chigorin Variation",
+    "eco": "C00"
+  },
+  "draw/603": {
+    "name": "Italian Game: Classical Variation, Giuoco Pianissimo",
+    "eco": "C54"
+  },
+  "draw/604": {
+    "name": "Queen's Gambit Declined: Ragozin Defense",
+    "eco": "D38"
+  },
+  "draw/605": {
+    "name": "Ruy Lopez: Berlin Defense, l'Hermet Variation, Berlin Wall Defense",
+    "eco": "C67"
+  },
+  "draw/606": {
+    "name": "Sicilian Defense: Pin Variation",
+    "eco": "B40"
+  },
+  "draw/607": {
+    "name": "Latvian Gambit Accepted",
+    "eco": "C40"
+  },
+  "draw/608": {
+    "name": "Dutch Defense: Stonewall Variation, Modern Variation",
+    "eco": "A90"
+  },
+  "draw/609": {
+    "name": "King's Pawn Game: Pachman Wing Gambit",
+    "eco": "C44"
+  },
+  "draw/610": {
+    "name": "Philidor Defense: Exchange Variation",
+    "eco": "C41"
+  },
+  "draw/611": {
+    "name": "Ruy Lopez: Steinitz Defense",
+    "eco": "C62"
+  },
+  "draw/612": {
+    "name": "Queen's Gambit Declined: Normal Defense",
+    "eco": "D35"
+  },
+  "draw/613": {
+    "name": "Pirc Defense: Classical Variation",
+    "eco": "B08"
+  },
+  "draw/614": {
+    "name": "Queen's Gambit Accepted: Old Variation",
+    "eco": "D20"
+  },
+  "draw/615": {
+    "name": "Queen's Gambit Declined: Queen's Knight Variation",
+    "eco": "D31"
+  },
+  "draw/616": {
+    "name": "Scandinavian Defense",
+    "eco": "B01"
+  },
+  "draw/617": {
+    "name": "Semi-Slav Defense: Noteboom Variation",
+    "eco": "D31"
+  },
+  "draw/618": {
+    "name": "Scandinavian Defense: Modern Variation",
+    "eco": "B01"
+  },
+  "draw/619": {
+    "name": "Nimzowitsch Defense: Franco-Nimzowitsch Variation",
+    "eco": "B00"
+  },
+  "draw/620": {
+    "name": "Ruy Lopez: Bird Variation",
+    "eco": "C61"
+  },
+  "draw/621": {
+    "name": "Barnes Opening",
+    "eco": "A00"
+  },
+  "draw/622": {
+    "name": "Sicilian Defense: Closed, Traditional",
+    "eco": "B23"
+  },
+  "draw/623": {
+    "name": "Sicilian Defense: Bowdler Attack",
+    "eco": "B20"
+  },
+  "draw/624": {
+    "name": "Queen's Pawn Game",
+    "eco": "D00"
+  },
+  "draw/625": {
+    "name": "Scandinavian Defense: Gubinsky-Melts Defense",
+    "eco": "B01"
+  },
+  "draw/626": {
+    "name": "Italian Game",
+    "eco": "C50"
+  },
+  "draw/627": {
+    "name": "Owen Defense",
+    "eco": "B00"
+  },
+  "draw/628": {
+    "name": "Bishop's Opening: Berlin Defense",
+    "eco": "C24"
+  },
+  "draw/629": {
+    "name": "East Indian Defense",
+    "eco": "A48"
+  },
+  "draw/630": {
+    "name": "Modern Defense: Geller's System",
+    "eco": "B07"
+  },
+  "draw/631": {
+    "name": "King's Gambit",
+    "eco": "C30"
+  },
+  "draw/632": {
+    "name": "Queen's Pawn Game",
+    "eco": "D00"
+  },
+  "draw/633": {
+    "name": "French Defense: Queen's Knight",
+    "eco": "C00"
+  },
+  "draw/634": {
+    "name": "English Opening: King's English Variation, Reversed Sicilian",
+    "eco": "A21"
+  },
+  "draw/635": {
+    "name": "Nimzo-Indian Defense: Three Knights Variation",
+    "eco": "E21"
+  },
+  "draw/636": {
+    "name": "English Opening: Symmetrical Variation, Three Knights, Fianchetto Variation",
+    "eco": "A37"
+  },
+  "draw/637": {
+    "name": "Ware Defense",
+    "eco": "B00"
+  },
+  "draw/638": {
+    "name": "Queen's Pawn Game: Zukertort Variation",
+    "eco": "D02"
+  },
+  "draw/639": {
+    "name": "Sicilian Defense: Smith-Morra Gambit",
+    "eco": "B21"
+  },
+  "draw/640": {
+    "name": "Sicilian Defense: French Variation, Open",
+    "eco": "B40"
+  },
+  "draw/641": {
+    "name": "Philidor Defense",
+    "eco": "C41"
+  },
+  "draw/642": {
+    "name": "Englund Gambit: Hartlaub-Charlick Gambit",
+    "eco": "A40"
+  },
+  "draw/643": {
+    "name": "Queen's Pawn Game",
+    "eco": "D00"
+  },
+  "draw/644": {
+    "name": "Caro-Kann Defense",
+    "eco": "B15"
+  },
+  "draw/645": {
+    "name": "King's Gambit Declined: Falkbeer Countergambit, Charousek Gambit",
+    "eco": "C31"
+  },
+  "draw/646": {
+    "name": "Queen's Gambit Accepted: Old Variation",
+    "eco": "D20"
+  },
+  "draw/647": {
+    "name": "French Defense: Exchange Variation, Monte Carlo Variation",
+    "eco": "C01"
+  },
+  "draw/648": {
+    "name": "French Defense: Advance Variation, Paulsen Attack",
+    "eco": "C02"
+  },
+  "draw/649": {
+    "name": "Petrov's Defense",
+    "eco": "C42"
+  },
+  "draw/650": {
+    "name": "King's Pawn Game: McConnell Defense",
+    "eco": "C40"
+  },
+  "draw/651": {
+    "name": "Philidor Defense: Lion Variation",
+    "eco": "C41"
+  },
+  "draw/652": {
+    "name": "French Defense: Diemer-Duhm Gambit Accepted",
+    "eco": "C00"
+  },
+  "draw/653": {
+    "name": "Owen Defense: Guatemala Defense",
+    "eco": "B00"
+  },
+  "draw/654": {
+    "name": "English Defense",
+    "eco": "A40"
+  },
+  "draw/655": {
+    "name": "Queen's Gambit Declined: Baltic Defense, Pseudo-Slav",
+    "eco": "D02"
+  },
+  "draw/656": {
+    "name": "Sicilian Defense: Czerniak Attack",
+    "eco": "B20"
+  },
+  "draw/657": {
+    "name": "Queen's Pawn Game: Chigorin Variation",
+    "eco": "D00"
+  },
+  "draw/658": {
+    "name": "Vienna Game",
+    "eco": "C25"
+  },
+  "draw/659": {
+    "name": "Semi-Slav Defense: Quiet Variation",
+    "eco": "D30"
+  },
+  "draw/660": {
+    "name": "Van't Kruijs Opening",
+    "eco": "A00"
+  },
+  "draw/661": {
+    "name": "Scotch Game: Lolli Variation",
+    "eco": "C44"
+  },
+  "draw/662": {
+    "name": "Pirc Defense: Classical Variation",
+    "eco": "B08"
+  },
+  "draw/663": {
+    "name": "Philidor Defense: Exchange Variation",
+    "eco": "C41"
+  },
+  "draw/664": {
+    "name": "Nimzo-Larsen Attack",
+    "eco": "A01"
+  },
+  "draw/665": {
+    "name": "Sicilian Defense: Alapin Variation",
+    "eco": "B22"
+  },
+  "draw/666": {
+    "name": "King's Gambit Declined: Queen's Knight Defense",
+    "eco": "C30"
+  },
+  "draw/667": {
+    "name": "Caro-Kann Defense: Hillbilly Attack",
+    "eco": "B10"
+  },
+  "draw/668": {
+    "name": "English Opening: King's English Variation, Two Knights Variation",
+    "eco": "A22"
+  },
+  "draw/669": {
+    "name": "French Defense: Réti-Spielmann Attack",
+    "eco": "C00"
+  },
+  "draw/670": {
+    "name": "King's Knight Opening: Normal Variation",
+    "eco": "C44"
+  },
+  "draw/671": {
+    "name": "Scandinavian Defense: Main Line",
+    "eco": "B01"
+  },
+  "draw/672": {
+    "name": "Queen's Gambit Declined: Cambridge Springs Defense",
+    "eco": "D52"
+  },
+  "draw/673": {
+    "name": "Polish Opening: Dutch Defense",
+    "eco": "A00"
+  },
+  "draw/674": {
+    "name": "Scotch Game: Benima Defense",
+    "eco": "C44"
+  },
+  "draw/675": {
+    "name": "Bishop's Opening: Vienna Hybrid",
+    "eco": "C24"
+  },
+  "draw/676": {
+    "name": "Owen Defense",
+    "eco": "B00"
+  },
+  "draw/677": {
+    "name": "Slav Defense: Exchange Variation",
+    "eco": "D10"
+  },
+  "draw/678": {
+    "name": "Kádas Opening",
+    "eco": "A00"
+  },
+  "draw/679": {
+    "name": "English Opening: Symmetrical Variation, Three Knights, Fianchetto Variation",
+    "eco": "A37"
+  },
+  "draw/680": {
+    "name": "Horwitz Defense",
+    "eco": "A40"
+  },
+  "draw/681": {
+    "name": "French Defense: Advance Variation",
+    "eco": "C02"
+  },
+  "draw/682": {
+    "name": "French Defense: Advance Variation",
+    "eco": "C02"
+  },
+  "draw/683": {
+    "name": "Danish Gambit",
+    "eco": "C21"
+  },
+  "draw/684": {
+    "name": "Nimzo-Larsen Attack: English Variation",
+    "eco": "A01"
+  },
+  "draw/685": {
+    "name": "Nimzowitsch Defense",
+    "eco": "B00"
+  },
+  "draw/686": {
+    "name": "Modern Defense",
+    "eco": "B06"
+  },
+  "draw/687": {
+    "name": "King's Gambit Accepted: MacLeod Defense",
+    "eco": "C34"
+  },
+  "draw/688": {
+    "name": "Queen's Pawn Game: Chigorin Variation, Anti-Veresov",
+    "eco": "D00"
+  },
+  "draw/689": {
+    "name": "Trompowsky Attack: Classical Defense",
+    "eco": "A45"
+  },
+  "draw/690": {
+    "name": "Semi-Slav Defense: Normal Variation",
+    "eco": "D45"
+  },
+  "draw/691": {
+    "name": "Horwitz Defense",
+    "eco": "A40"
+  },
+  "draw/692": {
+    "name": "Vienna Game: Mengarini Variation",
+    "eco": "C26"
+  },
+  "draw/693": {
+    "name": "French Defense: Knight Variation",
+    "eco": "C00"
+  },
+  "draw/694": {
+    "name": "Caro-Kann Defense",
+    "eco": "B12"
+  },
+  "draw/695": {
+    "name": "Sicilian Defense: Alapin Variation",
+    "eco": "B22"
+  },
+  "draw/696": {
+    "name": "Philidor Defense",
+    "eco": "C41"
+  },
+  "draw/697": {
+    "name": "St. George Defense: Polish Variation",
+    "eco": "B00"
+  },
+  "draw/698": {
+    "name": "Nimzo-Larsen Attack: Symmetrical Variation",
+    "eco": "A01"
+  },
+  "draw/699": {
+    "name": "Mieses Opening",
+    "eco": "A00"
+  },
+  "draw/700": {
+    "name": "Sicilian Defense: Old Sicilian",
+    "eco": "B30"
+  },
+  "draw/701": {
+    "name": "Ponziani Opening: Jaenisch Counterattack",
+    "eco": "C44"
+  },
+  "draw/702": {
+    "name": "Queen's Pawn Game",
+    "eco": "D00"
+  },
+  "draw/703": {
+    "name": "Queen's Pawn Game: Anglo-Slav Opening",
+    "eco": "A40"
+  },
+  "draw/704": {
+    "name": "Italian Game: Classical Variation, Giuoco Pianissimo",
+    "eco": "C54"
+  },
+  "draw/705": {
+    "name": "Philidor Defense: Lion Variation",
+    "eco": "C41"
+  },
+  "fork/134afe6e4bec377f": {
+    "name": "Queen's Gambit Accepted: Central Variation, McDonnell Defense",
+    "eco": "D20"
+  },
+  "fork/276ff4248ed22e13": {
+    "name": "Sicilian Defense: Scheveningen Variation, Classical Variation",
+    "eco": "B83"
+  },
+  "fork/2956b3722f42da50": {
+    "name": "Queen's Gambit Accepted: Central Variation, McDonnell Defense",
+    "eco": "D20"
+  },
+  "fork/2d2bf9726c2036ed": {
+    "name": "Bird Opening",
+    "eco": "A02"
+  },
+  "fork/3b582b09bf14caba": {
+    "name": "Scotch Game",
+    "eco": "C44"
+  },
+  "fork/41f5eb0f4f4f20c1": {
+    "name": "King's Gambit Accepted: Muzio Gambit Accepted, From's Defense",
+    "eco": "C37"
+  },
+  "fork/435ec7318ffd937f": {
+    "name": "Semi-Slav Defense: Stoltz Variation, Shabalov Attack",
+    "eco": "D45"
+  },
+  "fork/5e2aa2bd857f5fdf": {
+    "name": "Ruy Lopez: Berlin Defense, Anti-Berlin Variation",
+    "eco": "C65"
+  },
+  "fork/64d091c867dc3a1a": {
+    "name": "Ruy Lopez: Closed, Anti-Marshall",
+    "eco": "C88"
+  },
+  "fork/64d5ef2b633ae5ac": {
+    "name": "East Indian Defense",
+    "eco": "A48"
+  },
+  "fork/6c32f3d3bc06750e": {
+    "name": "English Opening: King's English Variation, Reversed Closed Sicilian",
+    "eco": "A25"
+  },
+  "fork/714227cff1a6a56f": {
+    "name": "Sicilian Defense: Bowdler Attack",
+    "eco": "B20"
+  },
+  "fork/7fbfbc979f6b7867": {
+    "name": "English Opening: Symmetrical Variation, Botvinnik System Reversed, with Nf3",
+    "eco": "A37"
+  },
+  "fork/8039fb470703d334": {
+    "name": "Ruy Lopez: Closed, Bogoljubow Variation",
+    "eco": "C91"
+  },
+  "fork/879391d6a97bca4d": {
+    "name": "Sicilian Defense: Najdorf Variation, English Attack",
+    "eco": "B90"
+  },
+  "fork/8b697b6133c09eeb": {
+    "name": "Sicilian Defense: Kronberger Variation",
+    "eco": "B20"
+  },
+  "fork/8bd5ea218fe2c59d": {
+    "name": "Sicilian Defense: Moscow Variation, Main Line",
+    "eco": "B52"
+  },
+  "fork/d4fb770cc23461cd": {
+    "name": "Tarrasch Defense: Classical Variation, Main Line",
+    "eco": "D34"
+  },
+  "fork/d7f7aa41af123801": {
+    "name": "Slav Defense: Czech Variation, Krause Attack",
+    "eco": "D17"
+  },
+  "fork/e48f8058973b2d73": {
+    "name": "Nimzo-Indian Defense: Sämisch Variation",
+    "eco": "E27"
+  },
+  "fork/efa11a680290a113": {
+    "name": "King's Gambit Accepted: Bishop's Gambit, Bledow Variation",
+    "eco": "C33"
+  },
+  "fork/feb932bf8231cf1a": {
+    "name": "Sicilian Defense: Lasker-Pelikan Variation, Sveshnikov Variation, Chelyabinsk Variation",
+    "eco": "B33"
+  },
+  "fork/01ee54deeca58f1a": {
+    "name": "Danish Gambit Accepted: Classical Defense",
+    "eco": "C21"
+  },
+  "fork/065712c3e90b399d": {
+    "name": "Italian Game: Evans Gambit Declined",
+    "eco": "C51"
+  },
+  "fork/0d4d8b3a5b92b01d": {
+    "name": "King's Gambit Accepted: McDonnell Gambit",
+    "eco": "C37"
+  },
+  "fork/0d6bc20b42c9bde9": {
+    "name": "Philidor Defense",
+    "eco": "C41"
+  },
+  "fork/2354a693956d69b1": {
+    "name": "Italian Game: Evans Gambit, Morphy Attack",
+    "eco": "C51"
+  },
+  "fork/3806821ed98abe9b": {
+    "name": "Ruy Lopez: Berlin Defense, Rio Gambit Accepted",
+    "eco": "C67"
+  },
+  "fork/3e238c0f0b362919": {
+    "name": "Slav Defense: Czech Variation, Dutch Variation",
+    "eco": "D19"
+  },
+  "fork/4c0a5b4e74a54b27": {
+    "name": "Nimzo-Indian Defense: Sämisch Variation, Keres Variation",
+    "eco": "E25"
+  },
+  "fork/5af42eb599147c4d": {
+    "name": "Bird Opening",
+    "eco": "A02"
+  },
+  "fork/639607615f718eab": {
+    "name": "English Opening: Great Snake Variation",
+    "eco": "A10"
+  },
+  "fork/697208e5569635d9": {
+    "name": "Sicilian Defense: Lasker-Pelikan Variation, Sveshnikov Variation",
+    "eco": "B33"
+  },
+  "fork/8b1b9e0cfc0f2840": {
+    "name": "Vienna Game",
+    "eco": "C25"
+  },
+  "fork/900f560d17d6f28a": {
+    "name": "King's Indian Defense: Averbakh Variation, Modern Defense",
+    "eco": "E73"
+  },
+  "fork/a0077bb4ff59659b": {
+    "name": "Sicilian Defense: Modern Variations",
+    "eco": "B50"
+  },
+  "fork/a619b4baec41c581": {
+    "name": "Petrov's Defense: Three Knights Game",
+    "eco": "C42"
+  },
+  "fork/d8b4c76f39193efc": {
+    "name": "Queen's Gambit Declined: Exchange Variation, Positional Variation",
+    "eco": "D35"
+  },
+  "fork/e279dc1b168e47ca": {
+    "name": "Sicilian Defense: Lasker-Pelikan Variation, Sveshnikov Variation, Chelyabinsk Variation",
+    "eco": "B33"
+  },
+  "fork/e46d7f6257982106": {
+    "name": "Ruy Lopez: Open",
+    "eco": "C80"
+  },
+  "fork/eff92420fb678fd7": {
+    "name": "Sicilian Defense: Alapin Variation, Barmen Defense",
+    "eco": "B22"
+  },
+  "fork/f7e2faaca07d7394": {
+    "name": "London System",
+    "eco": "A48"
+  },
+  "fork/013044da3cea6dc5": {
+    "name": "Sicilian Defense: Scheveningen Variation, English Attack, with f3",
+    "eco": "B90"
+  },
+  "fork/0e9325c72cb04bb9": {
+    "name": "Ruy Lopez: Closed, Smyslov Defense",
+    "eco": "C93"
+  },
+  "fork/13de7acf5c45d71b": {
+    "name": "Benoni Defense: Fianchetto Variation, Hastings Defense, Main Line",
+    "eco": "A64"
+  },
+  "fork/18cf2e9c237d2727": {
+    "name": "Nimzo-Indian Defense: Classical Variation, Berlin Variation, Pirc Variation",
+    "eco": "E39"
+  },
+  "fork/227dc4b8f8b46aba": {
+    "name": "Catalan Opening: Open Defense",
+    "eco": "E04"
+  },
+  "fork/30522b5abed1cf06": {
+    "name": "Vienna Game: Mieses Variation",
+    "eco": "C26"
+  },
+  "fork/36e1812b5161c270": {
+    "name": "King's Indian Defense: Orthodox Variation, Bayonet Attack, Sokolov's Line",
+    "eco": "E97"
+  },
+  "fork/3efccff3c1e4c9b0": {
+    "name": "Ruy Lopez: Closed, Morphy Attack",
+    "eco": "C84"
+  },
+  "fork/3f9db899ce5832f1": {
+    "name": "King's Indian Defense: Fianchetto Variation, Uhlmann-Szabo System",
+    "eco": "E62"
+  },
+  "fork/4c0e4d265c545a88": {
+    "name": "Queen's Gambit Declined: Exchange Variation, Reshevsky Variation",
+    "eco": "D36"
+  },
+  "fork/4ea03afbd8874d1f": {
+    "name": "King's Gambit Declined: Classical Variation",
+    "eco": "C30"
+  },
+  "fork/6b63b2aa5cb801be": {
+    "name": "French Defense: La Bourdonnais Variation",
+    "eco": "C00"
+  },
+  "fork/7539f1a39450549d": {
+    "name": "King's Indian Attack",
+    "eco": "A05"
+  },
+  "fork/7619537ddfd7b379": {
+    "name": "King's Indian Attack: Keres Variation",
+    "eco": "A07"
+  },
+  "fork/7f507f1caad1402a": {
+    "name": "Modern Defense",
+    "eco": "A41"
+  },
+  "fork/ad499d4853df7848": {
+    "name": "Italian Game: Scotch Gambit, Max Lange Attack",
+    "eco": "C56"
+  },
+  "fork/b5a4185d0d0c947b": {
+    "name": "King's Indian Defense: Orthodox Variation, Classical System",
+    "eco": "E98"
+  },
+  "fork/c74fda10325e852d": {
+    "name": "Sicilian Defense: Najdorf Variation",
+    "eco": "B96"
+  },
+  "fork/ca39eae5a9ec1621": {
+    "name": "English Opening: Symmetrical Variation",
+    "eco": "A30"
+  },
+  "fork/d9c515b46eb6a297": {
+    "name": "Queen's Gambit Declined: Barmen Variation",
+    "eco": "D37"
+  },
+  "fork/dc2e28765cc1e85e": {
+    "name": "King's Indian Defense: Fianchetto Variation, Lesser Simagin (Spassky)",
+    "eco": "E62"
+  },
+  "fork/dfee8afc0e5dd4a6": {
+    "name": "Sicilian Defense: Lasker-Pelikan Variation, Sveshnikov Variation, Chelyabinsk Variation",
+    "eco": "B33"
+  },
+  "fork/e60b00b894b35dda": {
+    "name": "Four Knights Game: Spanish Variation, Classical Variation",
+    "eco": "C48"
+  },
+  "fork/e6590ac221963f40": {
+    "name": "Italian Game: Classical Variation, Giuoco Pianissimo",
+    "eco": "C54"
+  },
+  "fork/ec49f8089b57267f": {
+    "name": "Ruy Lopez: Closed, Flohr System",
+    "eco": "C92"
+  },
+  "fork/eedceff6d267667f": {
+    "name": "Queen's Gambit Declined: Charousek Variation",
+    "eco": "D31"
+  },
+  "fork/f456bd99bde5761f": {
+    "name": "Ruy Lopez: Closed, Flohr System",
+    "eco": "C92"
+  },
+  "fork/fe2e20165488b941": {
+    "name": "Slav Defense: Chebanenko Variation, Advance System",
+    "eco": "D15"
+  },
+  "fork/0f69ce001a9d6075": {
+    "name": "Nimzo-Indian Defense: Normal Variation, Gligoric System, Exchange Variation",
+    "eco": "E54"
+  },
+  "fork/1902b13b7903f18e": {
+    "name": "Queen's Gambit Declined: Charousek Variation",
+    "eco": "D31"
+  },
+  "fork/22e5b9bb918768d8": {
+    "name": "Sicilian Defense: Lasker-Pelikan Variation, Sveshnikov Variation",
+    "eco": "B33"
+  },
+  "fork/3826d147558583b8": {
+    "name": "Sicilian Defense: Scheveningen Variation, Classical Variation",
+    "eco": "B84"
+  },
+  "fork/4cea711ac055cb09": {
+    "name": "Sicilian Defense: Najdorf Variation",
+    "eco": "B96"
+  },
+  "fork/4d6471335083098d": {
+    "name": "Ruy Lopez: Exchange Variation, Gligoric Variation",
+    "eco": "C69"
+  },
+  "fork/58466a8677f9643f": {
+    "name": "Queen's Indian Defense: Kasparov Variation",
+    "eco": "E12"
+  },
+  "fork/63d862dcc47fb9db": {
+    "name": "King's Indian Defense: Orthodox Variation, Classical System, Benko Attack",
+    "eco": "E99"
+  },
+  "fork/7f7ab197be5808c5": {
+    "name": "King's Indian Defense: Fianchetto Variation, Immediate Fianchetto",
+    "eco": "E60"
+  },
+  "fork/810012dd54c704f4": {
+    "name": "Queen's Gambit Declined: Three Knights Variation",
+    "eco": "D37"
+  },
+  "fork/90290a4a949bda06": {
+    "name": "King's Indian Defense: Orthodox Variation, Modern System",
+    "eco": "E97"
+  },
+  "fork/bdd1c8e2f287395d": {
+    "name": "Slav Defense: Czech Variation, Classical System, Main Line",
+    "eco": "D19"
+  },
+  "fork/ccc5ca08a828854f": {
+    "name": "Sicilian Defense: Old Sicilian",
+    "eco": "B30"
+  },
+  "fork/d100a18e91aa4231": {
+    "name": "Queen's Gambit Declined",
+    "eco": "D53"
+  },
+  "fork/daa3a2081c0f2c3f": {
+    "name": "Sicilian Defense: Classical Variation, Anti-Sozin Variation",
+    "eco": "B57"
+  },
+  "fork/e7299a1084e67428": {
+    "name": "Queen's Pawn Game: Anti-Torre",
+    "eco": "D02"
+  },
+  "fork/f2e53663331213ea": {
+    "name": "Benoni Defense",
+    "eco": "A61"
+  },
+  "fork/f2f2148020aa95a6": {
+    "name": "Scandinavian Defense: Main Line",
+    "eco": "B01"
+  },
+  "fork/f8e707cad693fee6": {
+    "name": "Sicilian Defense: Taimanov Variation",
+    "eco": "B45"
+  },
+  "fork/fc7e617811e81c7a": {
+    "name": "Sicilian Defense: Delayed Alapin Variation, with d6",
+    "eco": "B50"
+  },
+  "fork/ffd584d677e3d4be": {
+    "name": "Zukertort Opening: Queenside Fianchetto Variation",
+    "eco": "A04"
+  },
+  "fork/2ae5bff2dd967252": {
+    "name": "Kangaroo Defense",
+    "eco": "A40"
+  },
+  "fork/31c128af79284a9c": {
+    "name": "Ruy Lopez: Morphy Defense, Wormald Attack",
+    "eco": "C77"
+  },
+  "fork/4c9ea60e450a25f8": {
+    "name": "Queen's Gambit Declined: Three Knights Variation",
+    "eco": "D37"
+  },
+  "fork/704d4b7f532b9b58": {
+    "name": "French Defense: Winawer Variation, Petrosian Variation",
+    "eco": "C16"
+  },
+  "fork/8e0f7a16b0bb4421": {
+    "name": "Slav Defense: Chebanenko Variation",
+    "eco": "D15"
+  },
+  "fork/93306af61a78dc54": {
+    "name": "Scandinavian Defense: Gubinsky-Melts Defense",
+    "eco": "B01"
+  },
+  "fork/a6aeece01135bb95": {
+    "name": "Sicilian Defense: Najdorf Variation, Lipnitsky Attack",
+    "eco": "B90"
+  },
+  "fork/b92b6378b13a9538": {
+    "name": "Bogo-Indian Defense: Wade-Smyslov Variation",
+    "eco": "E11"
+  },
+  "fork/b9f22796d7548410": {
+    "name": "Sicilian Defense: Kan Variation, Knight Variation",
+    "eco": "B43"
+  },
+  "fork/bfb60242f4cc9115": {
+    "name": "Benoni Defense: Classical Variation",
+    "eco": "A70"
+  },
+  "fork/cd07c7d17233e3a7": {
+    "name": "King's Gambit Accepted: Bishop's Gambit, Gianutio Gambit",
+    "eco": "C33"
+  },
+  "fork/1a10c843a67feeca": {
+    "name": "King's Indian Defense: Orthodox Variation, Bayonet Attack",
+    "eco": "E97"
+  },
+  "fork/24ae31cf006b14ac": {
+    "name": "Sicilian Defense: Najdorf Variation",
+    "eco": "B90"
+  },
+  "fork/26f4b7a9d4dbe643": {
+    "name": "Sicilian Defense: Scheveningen Variation, Modern Variation",
+    "eco": "B83"
+  },
+  "fork/45031870cd822a42": {
+    "name": "Queen's Indian Defense: Buerger Variation",
+    "eco": "E15"
+  },
+  "fork/494d7b9a1adbc963": {
+    "name": "Ruy Lopez: Steinitz Defense",
+    "eco": "C62"
+  },
+  "fork/7d6b31a3a7c578ec": {
+    "name": "Sicilian Defense: Najdorf Variation, Opocensky Variation",
+    "eco": "B92"
+  },
+  "fork/90644a1dda653786": {
+    "name": "Dutch Defense: Stonewall Variation, Modern Variation",
+    "eco": "A90"
+  },
+  "fork/e2b9f7473efb3e29": {
+    "name": "Semi-Slav Defense: Accelerated Move Order",
+    "eco": "D31"
+  },
+  "fork/387c4f7e11cd24fe": {
+    "name": "King's Gambit Accepted: Muzio Gambit, Kling and Horwitz Counterattack",
+    "eco": "C37"
+  },
+  "fork/3e82acb4376b7033": {
+    "name": "Sicilian Defense: French Variation, Westerinen Attack",
+    "eco": "B40"
+  },
+  "fork/66708223c26afb47": {
+    "name": "Ruy Lopez: Closed, Bogoljubow Variation",
+    "eco": "C91"
+  },
+  "fork/2f70c32ae84eaafe": {
+    "name": "Hungarian Opening",
+    "eco": "A00"
+  },
+  "fork/fae98a5b202d9fc8": {
+    "name": "English Opening: King's English Variation, Adhiban Gambit",
+    "eco": "A22"
+  },
+  "fork/7798f0e38bc24458": {
+    "name": "Ruy Lopez: Morphy Defense, Bayreuth Variation",
+    "eco": "C77"
+  },
+  "fork/a47d25d30e9bd45c": {
+    "name": "French Defense: Advance Variation, Paulsen Attack",
+    "eco": "C02"
+  },
+  "fork/be8b16f14b0addc7": {
+    "name": "Slav Defense: Three Knights Variation",
+    "eco": "D15"
+  },
+  "fork/dbd0595f0f4217d9": {
+    "name": "Sicilian Defense: Kan Variation, Modern Variation",
+    "eco": "B42"
+  },
+  "fork/e9d6150b67b1a32b": {
+    "name": "Ruy Lopez: Closed, Breyer Defense, Zaitsev Hybrid",
+    "eco": "C95"
+  },
+  "fork/57c710232c565cb4": {
+    "name": "French Defense: Tarrasch Variation, Chistyakov Defense, Modern Line",
+    "eco": "C07"
+  },
+  "fork/e4e14a416ddf59ab": {
+    "name": "Scandinavian Defense: Richter Variation",
+    "eco": "B01"
+  },
+  "one-rook-mate/174b3c98e1f4e64d": {
+    "name": "Old Indian Defense",
+    "eco": "A53"
+  },
+  "one-rook-mate/1a1b564476544120": {
+    "name": "King's Indian Attack",
+    "eco": "A07"
+  },
+  "one-rook-mate/2d33ce3654f5aefc": {
+    "name": "French Defense: McCutcheon Variation, Lasker Variation",
+    "eco": "C12"
+  },
+  "one-rook-mate/40c389851dd7c0bc": {
+    "name": "Sicilian Defense: Najdorf Variation, Zagreb Variation",
+    "eco": "B91"
+  },
+  "one-rook-mate/40f7c1511e05b907": {
+    "name": "Sicilian Defense: Delayed Alapin Variation, with d6",
+    "eco": "B50"
+  },
+  "one-rook-mate/49a109bf96f0a55a": {
+    "name": "Ruy Lopez: Bird Variation",
+    "eco": "C61"
+  },
+  "one-rook-mate/530546d7c40e8f3b": {
+    "name": "King's Indian Defense: Orthodox Variation, Bayonet Attack",
+    "eco": "E97"
+  },
+  "one-rook-mate/551a897a7f005cdf": {
+    "name": "Trompowsky Attack: Classical Defense",
+    "eco": "A45"
+  },
+  "one-rook-mate/58b0299fcb1a31d4": {
+    "name": "French Defense: Winawer Variation",
+    "eco": "C15"
+  },
+  "one-rook-mate/75f4184e52742f20": {
+    "name": "King's Gambit",
+    "eco": "C30"
+  },
+  "one-rook-mate/7ac5c5b5c0aeac72": {
+    "name": "Czech Defense",
+    "eco": "B07"
+  },
+  "one-rook-mate/8240bd95103348e1": {
+    "name": "Sicilian Defense: French Variation",
+    "eco": "B40"
+  },
+  "one-rook-mate/90af79246ff4e36c": {
+    "name": "Scotch Game: Mieses Variation",
+    "eco": "C45"
+  },
+  "one-rook-mate/98fdff54726ab28a": {
+    "name": "Caro-Kann Defense: Advance Variation, Tal Variation",
+    "eco": "B12"
+  },
+  "one-rook-mate/9b20a1a44c1fc431": {
+    "name": "Queen's Gambit Declined: Orthodox Defense, Henneberger Variation",
+    "eco": "D63"
+  },
+  "one-rook-mate/aa3efdc42550e0b9": {
+    "name": "Sicilian Defense: Lasker-Pelikan Variation, Sveshnikov Variation",
+    "eco": "B33"
+  },
+  "one-rook-mate/b4f26c1589474013": {
+    "name": "Italian Game: Classical Variation, Giuoco Pianissimo",
+    "eco": "C54"
+  },
+  "one-rook-mate/b8c4df436461bbfe": {
+    "name": "Sicilian Defense: Prins Variation",
+    "eco": "B54"
+  },
+  "one-rook-mate/ee8f7a25b37ac325": {
+    "name": "King's Indian Defense: Orthodox Variation, Glek Defense",
+    "eco": "E94"
+  },
+  "one-rook-mate/f885779cd3c21266": {
+    "name": "Queen's Pawn Game: Chigorin Variation",
+    "eco": "A45"
+  },
+  "one-rook-mate/07d2d0a91638e007": {
+    "name": "Scotch Game: Classical Variation",
+    "eco": "C45"
+  },
+  "one-rook-mate/0af57f37607c2d60": {
+    "name": "Queen's Gambit Declined: Orthodox Defense, Rubinstein Attack",
+    "eco": "D64"
+  },
+  "one-rook-mate/2bc72e40d1373a09": {
+    "name": "English Opening: Agincourt Defense",
+    "eco": "A13"
+  },
+  "one-rook-mate/417a207ac041dea8": {
+    "name": "Caro-Kann Defense: Advance Variation, Tal Variation",
+    "eco": "B12"
+  },
+  "one-rook-mate/46f7ce6424ee526c": {
+    "name": "French Defense: King's Indian Attack",
+    "eco": "C00"
+  },
+  "one-rook-mate/4b33895b54321d12": {
+    "name": "Queen's Gambit Declined: Harrwitz Attack, Orthodox Defense",
+    "eco": "D37"
+  },
+  "one-rook-mate/56ccb216d5eb7295": {
+    "name": "Sicilian Defense: Hyperaccelerated Dragon",
+    "eco": "B27"
+  },
+  "one-rook-mate/71edb382894aeb7d": {
+    "name": "English Opening: King's English Variation, Kramnik-Shirov Counterattack",
+    "eco": "A21"
+  },
+  "one-rook-mate/7323912ce19e0d92": {
+    "name": "Benoni Defense",
+    "eco": "A56"
+  },
+  "one-rook-mate/8d25152e11937c98": {
+    "name": "Sicilian Defense: Delayed Alapin Variation, with e6",
+    "eco": "B40"
+  },
+  "one-rook-mate/a5fb34e25684a93a": {
+    "name": "French Defense: Classical Variation, Steinitz Variation",
+    "eco": "C14"
+  },
+  "one-rook-mate/ab10f15a3540feff": {
+    "name": "Zukertort Opening: Sicilian Invitation",
+    "eco": "A04"
+  },
+  "one-rook-mate/ad47e02ea8fce480": {
+    "name": "King's Indian Defense: Sämisch Variation, Orthodox Variation",
+    "eco": "E85"
+  },
+  "one-rook-mate/b084b8044363463b": {
+    "name": "Catalan Opening: Open Defense",
+    "eco": "E04"
+  },
+  "one-rook-mate/b59a27159dec699a": {
+    "name": "Italian Game: Giuoco Pianissimo",
+    "eco": "C50"
+  },
+  "one-rook-mate/bf6c6ea68764b437": {
+    "name": "Slav Indian",
+    "eco": "A50"
+  },
+  "one-rook-mate/c7053943a4d237e8": {
+    "name": "Queen's Gambit Declined: Albin Countergambit, Normal Line",
+    "eco": "D08"
+  },
+  "one-rook-mate/cbcecd1e4d999fdd": {
+    "name": "Ponziani Opening",
+    "eco": "C44"
+  },
+  "one-rook-mate/cd07c7d17233e3a7": {
+    "name": "King's Gambit Accepted: Bishop's Gambit, Gianutio Gambit",
+    "eco": "C33"
+  },
+  "one-rook-mate/f5ef47c3e9465301": {
+    "name": "Pseudo Queen's Indian Defense",
+    "eco": "A47"
+  },
+  "one-rook-mate/0d49ca024dbb49b7": {
+    "name": "Italian Game: Evans Gambit, McDonnell Defense, Main Line",
+    "eco": "C51"
+  },
+  "one-rook-mate/101eb5ca28750579": {
+    "name": "Ruy Lopez: Closed, Martinez Variation",
+    "eco": "C84"
+  },
+  "one-rook-mate/10e008152eea15c4": {
+    "name": "Ruy Lopez: Morphy Defense, Classical Defense Deferred",
+    "eco": "C70"
+  },
+  "one-rook-mate/18f89b6a0336a722": {
+    "name": "Queen's Gambit Declined: Exchange Variation, Reshevsky Variation",
+    "eco": "D36"
+  },
+  "one-rook-mate/33b8d628f0b67071": {
+    "name": "Sicilian Defense: French Variation",
+    "eco": "B40"
+  },
+  "one-rook-mate/3ae89ecf4f579140": {
+    "name": "Sicilian Defense: Taimanov Variation",
+    "eco": "B46"
+  },
+  "one-rook-mate/475e58ac7690572e": {
+    "name": "Scotch Game: Schmidt Variation",
+    "eco": "C45"
+  },
+  "one-rook-mate/6b08b27321b8a609": {
+    "name": "Horwitz Defense",
+    "eco": "A40"
+  },
+  "one-rook-mate/7e72fb8b1d808558": {
+    "name": "Sicilian Defense: Nyezhmetdinov-Rossolimo Attack, Fianchetto Variation",
+    "eco": "B31"
+  },
+  "one-rook-mate/870939b1c1824036": {
+    "name": "King's Indian Defense: Sämisch Variation",
+    "eco": "E80"
+  },
+  "one-rook-mate/996c13f2ae0892d8": {
+    "name": "Caro-Kann Defense: Advance Variation",
+    "eco": "B12"
+  },
+  "one-rook-mate/ac1d15919d642c7c": {
+    "name": "Indian Defense: London System",
+    "eco": "A46"
+  },
+  "one-rook-mate/b0a7af666f9e5c7b": {
+    "name": "Alekhine Defense: Exchange Variation",
+    "eco": "B03"
+  },
+  "one-rook-mate/b4b58bedbc1485c3": {
+    "name": "Sicilian Defense: Hyperaccelerated Dragon",
+    "eco": "B27"
+  },
+  "one-rook-mate/b5a1afad68c257bd": {
+    "name": "Zukertort Opening",
+    "eco": "A05"
+  },
+  "one-rook-mate/bdcff56a4d6a1521": {
+    "name": "French Defense: Classical Variation, Alapin Variation",
+    "eco": "C14"
+  },
+  "one-rook-mate/cbaa389382fe5e30": {
+    "name": "Sicilian Defense: Najdorf Variation, Adams Attack",
+    "eco": "B90"
+  },
+  "one-rook-mate/f66041d73e2dcbed": {
+    "name": "Sicilian Defense: Kan Variation, Knight Variation",
+    "eco": "B43"
+  },
+  "one-rook-mate/a0281e1b3ee6ecd7": {
+    "name": "Nimzo-Indian Defense: St. Petersburg Variation",
+    "eco": "E44"
+  },
+  "one-rook-mate/db6fb876a2d6ddad": {
+    "name": "Philidor Defense",
+    "eco": "C41"
+  },
+  "one-rook-mate/2b15706f860bfa49": {
+    "name": "French Defense: Pelikan Variation",
+    "eco": "C00"
+  },
+  "one-rook-mate/2c79138dc1ffd4bf": {
+    "name": "Clemenz Opening",
+    "eco": "A00"
+  },
+  "one-rook-mate/4bab5ae318b29a56": {
+    "name": "Clemenz Opening",
+    "eco": "A00"
+  },
+  "one-rook-mate/4c73aab88705b45b": {
+    "name": "Sicilian Defense: Classical Variation, Fianchetto Variation",
+    "eco": "B56"
+  },
+  "one-rook-mate/50bb48171c0b6ff3": {
+    "name": "Four Knights Game: Spanish Variation, Rubinstein Variation, Henneberger Variation",
+    "eco": "C48"
+  },
+  "one-rook-mate/572bbc90785bb39f": {
+    "name": "Sicilian Defense: Closed, Traditional",
+    "eco": "B23"
+  },
+  "one-rook-mate/606a05cb5507665a": {
+    "name": "King's Indian Defense: Fianchetto Variation, Debrecen Defense",
+    "eco": "E67"
+  },
+  "one-rook-mate/8405c7defa699141": {
+    "name": "Rapport-Jobava System",
+    "eco": "D01"
+  },
+  "one-rook-mate/af31ae3c6b9d7ab4": {
+    "name": "Nimzo-Larsen Attack: Symmetrical Variation",
+    "eco": "A01"
+  },
+  "one-rook-mate/d5f12b7bfb3fc913": {
+    "name": "Sicilian Defense: Delayed Alapin Variation, with d6",
+    "eco": "B50"
+  },
+  "one-rook-mate/dfa1ca9b6e2631a0": {
+    "name": "Sicilian Defense: Delayed Alapin Variation, with d6",
+    "eco": "B50"
+  },
+  "one-rook-mate/e03447ef3a3a124c": {
+    "name": "Petrov's Defense",
+    "eco": "C42"
+  },
+  "one-rook-mate/e6841d5d7c987515": {
+    "name": "Queen's Pawn Game: Symmetrical Variation",
+    "eco": "D02"
+  },
+  "one-rook-mate/e72fbf7a7e3b7ddd": {
+    "name": "Bishop's Opening: Berlin Defense",
+    "eco": "C24"
+  },
+  "one-rook-mate/e7e8cd1ced78887e": {
+    "name": "Alekhine Defense: Modern Variation, Larsen Variation",
+    "eco": "B04"
+  },
+  "one-rook-mate/fc87209f97f54579": {
+    "name": "Nimzo-Indian Defense: Classical Variation",
+    "eco": "E32"
+  },
+  "one-rook-mate/fdc9026b6cdf7705": {
+    "name": "Ruy Lopez: Berlin Defense, Anti-Berlin Variation",
+    "eco": "C65"
+  },
+  "one-rook-mate/20be286535542c7f": {
+    "name": "Sicilian Defense: Modern Variations",
+    "eco": "B50"
+  },
+  "one-rook-mate/57fbcdd08069f994": {
+    "name": "Hungarian Opening: Slav Formation",
+    "eco": "A00"
+  },
+  "one-rook-mate/6d6e2ba989acf935": {
+    "name": "King's Indian Attack: Symmetrical Defense",
+    "eco": "A05"
+  },
+  "one-rook-mate/07cd314d5d3f4c63": {
+    "name": "Benoni Defense: Classical Variation, Czerniak Defense, Tal Line",
+    "eco": "A77"
+  },
+  "one-rook-mate/146485ebb57d9261": {
+    "name": "Queen's Gambit Declined: Chigorin Defense, Tartakower Gambit",
+    "eco": "D07"
+  },
+  "one-rook-mate/25bffc3898150cda": {
+    "name": "Sicilian Defense: Lasker-Pelikan Variation",
+    "eco": "B33"
+  },
+  "one-rook-mate/3fadb1171498be65": {
+    "name": "Ruy Lopez: Closed, Flohr System",
+    "eco": "C92"
+  },
+  "one-rook-mate/4677786a521fcac6": {
+    "name": "Ruy Lopez: Morphy Defense, Modern Steinitz Defense",
+    "eco": "C73"
+  },
+  "one-rook-mate/4787e431c0fcdaa4": {
+    "name": "Alekhine Defense: Modern Variation, Larsen Variation",
+    "eco": "B04"
+  },
+  "one-rook-mate/8acb535b3a7e92c5": {
+    "name": "Nimzo-Indian Defense: Normal Variation, Classical Defense",
+    "eco": "E48"
+  },
+  "one-rook-mate/92fe7aec5b7c263a": {
+    "name": "Indian Defense: Accelerated London System",
+    "eco": "A45"
+  },
+  "one-rook-mate/9c700e2922cfb343": {
+    "name": "Alekhine Defense: Modern Variation, Alekhine Gambit",
+    "eco": "B03"
+  },
+  "one-rook-mate/b66ab29bdfd01ac1": {
+    "name": "Queen's Gambit Declined: Orthodox Defense, Henneberger Variation",
+    "eco": "D63"
+  },
+  "one-rook-mate/e0baf1f7c63fc104": {
+    "name": "Sicilian Defense: Richter-Rauzer Variation, Classical Variation, Kantscher Line",
+    "eco": "B63"
+  },
+  "one-rook-mate/e3b2f7f7a29f7da3": {
+    "name": "Pirc Defense: Classical Variation",
+    "eco": "B08"
+  },
+  "one-rook-mate/e9edcb3d78d2e586": {
+    "name": "Réti Opening: Anglo-Slav Variation, London Defensive System",
+    "eco": "A12"
+  },
+  "one-rook-mate/3e98303f98042f03": {
+    "name": "Caro-Kann Defense: Two Knights Attack, Mindeno Variation, Exchange Line",
+    "eco": "B11"
+  },
+  "one-rook-mate/fe22af23d0ffc993": {
+    "name": "Neo-Grünfeld Defense: Goglidze Attack",
+    "eco": "D70"
+  },
+  "one-rook-mate/72e9a33e44c262ef": {
+    "name": "Queen's Gambit Declined: Ragozin Defense",
+    "eco": "D38"
+  },
+  "one-rook-mate/c85a941da2935bd3": {
+    "name": "Ruy Lopez: Morphy Defense, Anderssen Variation",
+    "eco": "C77"
+  },
+  "pin/0011589e39e69617": {
+    "name": "Ruy Lopez: Closed, Pilnik Variation",
+    "eco": "C90"
+  },
+  "pin/190e2186af35e6be": {
+    "name": "Anderssen's Opening",
+    "eco": "A00"
+  },
+  "pin/22dcb175de3cb2a3": {
+    "name": "Catalan Opening: Open Defense, Classical Line",
+    "eco": "E05"
+  },
+  "pin/557858e634b85b1a": {
+    "name": "Mikenas Defense",
+    "eco": "A40"
+  },
+  "pin/65720f45f86a0dbd": {
+    "name": "Sicilian Defense: Mengarini Variation",
+    "eco": "B20"
+  },
+  "pin/6f5debfbecc550e1": {
+    "name": "Queen's Gambit Declined: Exchange Variation, Positional Variation",
+    "eco": "D35"
+  },
+  "pin/7ea4384d20d27be4": {
+    "name": "Ruy Lopez: Berlin Defense, Improved Steinitz Defense",
+    "eco": "C66"
+  },
+  "pin/854f6568ddf87f6e": {
+    "name": "Indian Defense: Anti-Grünfeld, Alekhine Variation",
+    "eco": "E60"
+  },
+  "pin/8fba7fefde777817": {
+    "name": "Queen's Indian Defense: Fianchetto Variation, Traditional Line",
+    "eco": "E15"
+  },
+  "pin/97675ef7e111e612": {
+    "name": "Sicilian Defense: French Variation, Normal",
+    "eco": "B40"
+  },
+  "pin/aee75c01900328b7": {
+    "name": "Mexican Defense",
+    "eco": "A50"
+  },
+  "pin/b7c5326b3bd9ebbc": {
+    "name": "Italian Game: Evans Gambit, Compromised Defense",
+    "eco": "C52"
+  },
+  "pin/c2126a3dafd5d5b4": {
+    "name": "Caro-Kann Defense: Endgame Offer",
+    "eco": "B10"
+  },
+  "pin/068afdb92c8cf81a": {
+    "name": "Indian Defense: Przepiorka Variation",
+    "eco": "A49"
+  },
+  "pin/551af04b4d004439": {
+    "name": "King's Indian Defense: Fianchetto Variation, Classical Main Line",
+    "eco": "E69"
+  },
+  "pin/96b0399abc7796f8": {
+    "name": "Sicilian Defense: Moscow Variation, Main Line",
+    "eco": "B52"
+  },
+  "pin/e931b64e59467f65": {
+    "name": "Petrov's Defense: Classical Attack, Chigorin Variation, Browne Attack",
+    "eco": "C42"
+  },
+  "pin/e9fc760f19083176": {
+    "name": "Sicilian Defense: Löwenthal Variation",
+    "eco": "B32"
+  },
+  "pin/f14b8d90c3a295e6": {
+    "name": "Queen's Gambit Declined: Albin Countergambit, Modern Line",
+    "eco": "D08"
+  },
+  "pin/fe8a6c3c31920d9d": {
+    "name": "King's Gambit Accepted: Kieseritzky Gambit, Long Whip",
+    "eco": "C39"
+  },
+  "pin/8b4a0cd3fc1c53b1": {
+    "name": "French Defense: Rubinstein Variation, Fort Knox Variation",
+    "eco": "C10"
+  },
+  "pin/a1749ae80f95db40": {
+    "name": "Four Knights Game: Spanish Variation, Symmetrical Variation, Metger Unpin",
+    "eco": "C49"
+  },
+  "pin/a3c8f33d50aa00d2": {
+    "name": "Benoni Defense",
+    "eco": "A56"
+  },
+  "pin/1df8b1cfa4c0f697": {
+    "name": "King's Gambit Declined: Falkbeer Countergambit, Charousek Gambit Accepted",
+    "eco": "C32"
+  },
+  "pin/caf4006380d1a795": {
+    "name": "English Opening: Anglo-Indian Defense, Queen's Indian Formation",
+    "eco": "A17"
+  },
+  "pin/007a37fc0f7636cc": {
+    "name": "English Opening: King's English Variation, Kramnik-Shirov Counterattack",
+    "eco": "A21"
+  },
+  "pin/023c86eb9ea2eb47": {
+    "name": "French Defense: Tarrasch Variation, Closed Variation",
+    "eco": "C05"
+  },
+  "pin/02bd6aeb167fc3d0": {
+    "name": "Trompowsky Attack: Borg Variation",
+    "eco": "A45"
+  },
+  "pin/05909e59766aa959": {
+    "name": "Semi-Slav Defense: Botvinnik Variation",
+    "eco": "D44"
+  },
+  "pin/070e102ef4e69cf6": {
+    "name": "Catalan Opening: Open Defense",
+    "eco": "E04"
+  },
+  "pin/09e640f5dbf2f7ab": {
+    "name": "Sicilian Defense: Four Knights Variation, Exchange Variation",
+    "eco": "B45"
+  },
+  "pin/0a148c5f6cc8e171": {
+    "name": "King's Gambit Accepted: Muzio Gambit, Brentano Defense",
+    "eco": "C37"
+  },
+  "pin/0d492c2f80a9dae9": {
+    "name": "Semi-Slav Defense: Romih Variation",
+    "eco": "D46"
+  },
+  "pin/0e8a7b22a5c6de57": {
+    "name": "English Opening: Symmetrical Variation, Hedgehog Defense",
+    "eco": "A30"
+  },
+  "pin/0f2aea1a63144f2a": {
+    "name": "King's Indian Defense: Fianchetto Variation, Classical Main Line",
+    "eco": "E69"
+  },
+  "pin/14cdc16ede9b0610": {
+    "name": "King's Indian Defense: Sämisch Variation, Normal Defense",
+    "eco": "E81"
+  },
+  "pin/1aa5c8143fd10ace": {
+    "name": "Ruy Lopez: Morphy Defense, Modern Steinitz Defense",
+    "eco": "C71"
+  },
+  "pin/1dda15f169c5d858": {
+    "name": "Neo-Grünfeld Defense: Ultra-Delayed Exchange Variation",
+    "eco": "D79"
+  },
+  "pin/1e8193e0f948e76b": {
+    "name": "Ruy Lopez: Closed, Chigorin Defense",
+    "eco": "C96"
+  },
+  "pin/1ef2445ccee9f98d": {
+    "name": "Bogo-Indian Defense: Grünfeld Variation",
+    "eco": "E11"
+  },
+  "pin/2170b32050de04a1": {
+    "name": "Sicilian Defense: Richter-Rauzer Variation, Classical Variation",
+    "eco": "B63"
+  },
+  "pin/221fe4cf64dc88c0": {
+    "name": "Neo-Grünfeld Defense: Delayed Exchange Variation",
+    "eco": "D74"
+  },
+  "pin/36ae809a6805f9de": {
+    "name": "Nimzo-Indian Defense: St. Petersburg Variation, Fischer Variation",
+    "eco": "E45"
+  },
+  "pin/390ac172c2bee569": {
+    "name": "Tarrasch Defense: Classical Variation, Main Line",
+    "eco": "D34"
+  },
+  "pin/3a81ebbf067f092a": {
+    "name": "Grünfeld Defense: Russian Variation, Smyslov Variation",
+    "eco": "D98"
+  },
+  "pin/4195068f198d89b0": {
+    "name": "Queen's Indian Defense: Kasparov-Petrosian Variation, Petrosian Attack",
+    "eco": "E12"
+  },
+  "pin/444af90727a257b5": {
+    "name": "King's Gambit Declined: Falkbeer Countergambit Accepted",
+    "eco": "C31"
+  },
+  "pin/481564ab73c33511": {
+    "name": "Sicilian Defense: Lasker-Pelikan Variation, Sveshnikov Variation, Chelyabinsk Variation",
+    "eco": "B33"
+  },
+  "pin/48880a030a35dc7f": {
+    "name": "Sicilian Defense: Delayed Alapin Variation",
+    "eco": "B22"
+  },
+  "pin/50fdba0c6c40b7fe": {
+    "name": "Queen's Indian Defense: Kasparov Variation",
+    "eco": "E12"
+  },
+  "pin/52054a1938a466e0": {
+    "name": "Pseudo Queen's Indian Defense",
+    "eco": "A47"
+  },
+  "pin/53cc0e1f1b78b8cb": {
+    "name": "Slav Defense",
+    "eco": "D10"
+  },
+  "pin/563feca6a5676974": {
+    "name": "Sicilian Defense: Najdorf Variation, English Attack",
+    "eco": "B90"
+  },
+  "pin/56be9afc2d60eb4a": {
+    "name": "Sicilian Defense: Najdorf Variation, Lipnitsky Attack",
+    "eco": "B90"
+  },
+  "pin/61bab6eb7391ee26": {
+    "name": "Queen's Gambit Declined: Anti-Tartakower Variation, Petrosian Variation",
+    "eco": "D55"
+  },
+  "pin/67c246550dca0cd3": {
+    "name": "Ruy Lopez: Morphy Defense, Modern Steinitz Defense, Fianchetto Variation",
+    "eco": "C76"
+  },
+  "pin/6b6572c1742c7274": {
+    "name": "Italian Game: Two Knights Defense, Polerio Defense, Bishop Check Line",
+    "eco": "C58"
+  },
+  "pin/6dd148057d1993af": {
+    "name": "Nimzo-Indian Defense",
+    "eco": "E50"
+  },
+  "pin/7798f0e38bc24458": {
+    "name": "Ruy Lopez: Morphy Defense, Bayreuth Variation",
+    "eco": "C77"
+  },
+  "pin/7ab85e9f2e761631": {
+    "name": "Caro-Kann Defense: Advance Variation, Tal Variation",
+    "eco": "B12"
+  },
+  "pin/8182a79d057f905f": {
+    "name": "Sicilian Defense: Najdorf Variation",
+    "eco": "B95"
+  },
+  "pin/8356dd4ea794e725": {
+    "name": "Sicilian Defense: Scheveningen Variation, Delayed Keres Attack",
+    "eco": "B90"
+  },
+  "pin/8677668f179221a3": {
+    "name": "Indian Defense: Normal Variation",
+    "eco": "A50"
+  },
+  "pin/8cbab66666fd2d69": {
+    "name": "Trompowsky Attack",
+    "eco": "A45"
+  },
+  "pin/8cf9ed4369747561": {
+    "name": "Italian Game: Classical Variation, Giuoco Pianissimo, with a6",
+    "eco": "C54"
+  },
+  "pin/90a615e182ce3432": {
+    "name": "French Defense: Tarrasch Variation, Open System, Main Line",
+    "eco": "C09"
+  },
+  "pin/936ad847f6f4f84f": {
+    "name": "Queen's Gambit Declined: Harrwitz Attack",
+    "eco": "D37"
+  },
+  "pin/98ad047df19b9694": {
+    "name": "Queen's Gambit Accepted: Mannheim Variation",
+    "eco": "D23"
+  },
+  "pin/9b20a1a44c1fc431": {
+    "name": "Queen's Gambit Declined: Orthodox Defense, Henneberger Variation",
+    "eco": "D63"
+  },
+  "pin/9b3cdc1a65342e2e": {
+    "name": "Modern Defense: Two Knights Variation, Suttles Variation",
+    "eco": "B06"
+  },
+  "pin/a0720ff6762f7d8c": {
+    "name": "Slav Defense: Quiet Variation, Schallopp Defense",
+    "eco": "D12"
+  },
+  "pin/a0f2593b2e3d7865": {
+    "name": "Dutch Defense: Semi-Leningrad Variation",
+    "eco": "A81"
+  },
+  "pin/a64db5e24d9620e2": {
+    "name": "English Opening: King's English Variation, Closed System, Full Symmetry",
+    "eco": "A26"
+  },
+  "pin/a800769d8d479b45": {
+    "name": "English Opening: Anglo-Indian Defense, King's Indian Formation",
+    "eco": "A15"
+  },
+  "pin/abad20017bf1d619": {
+    "name": "Sicilian Defense: Nyezhmetdinov-Rossolimo Attack",
+    "eco": "B30"
+  },
+  "pin/b06d73e03091548b": {
+    "name": "Sicilian Defense: Nyezhmetdinov-Rossolimo Attack, Fianchetto Variation",
+    "eco": "B31"
+  },
+  "pin/b071210843ee2d7d": {
+    "name": "Caro-Kann Defense: Classical Variation, Spassky Variation",
+    "eco": "B19"
+  },
+  "pin/b1eef7a1b94b94d1": {
+    "name": "French Defense: Classical Variation",
+    "eco": "C13"
+  },
+  "pin/b2a4fe2d9c0b61cb": {
+    "name": "Sicilian Defense: Dragon Variation, Yugoslav Attack, Czerniak Variation",
+    "eco": "B77"
+  },
+  "pin/b52d3562a3cbdffd": {
+    "name": "Slav Defense: Exchange Variation",
+    "eco": "D10"
+  },
+  "pin/b578e73c39d66472": {
+    "name": "Sicilian Defense: Classical Variation",
+    "eco": "B56"
+  },
+  "pin/b8c9f863c83f1ee1": {
+    "name": "Sicilian Defense: Chekhover Variation",
+    "eco": "B53"
+  },
+  "pin/bb8f46930baae471": {
+    "name": "Benoni Defense",
+    "eco": "A56"
+  },
+  "pin/c05e2ea5cf6cbb52": {
+    "name": "Sicilian Defense: Najdorf Variation, English Attack",
+    "eco": "B90"
+  },
+  "pin/c30ddc0ebdae5a11": {
+    "name": "King's Indian Defense: Sämisch Variation, Closed Variation",
+    "eco": "E87"
+  },
+  "pin/d09194696f1b8414": {
+    "name": "Philidor Defense: Exchange Variation",
+    "eco": "C41"
+  },
+  "pin/d6eb20e3fae4878c": {
+    "name": "Dutch Defense: Classical Variation, Ilyin-Zhenevsky Variation, Winter Variation",
+    "eco": "A97"
+  },
+  "pin/d70baaf1b98384fc": {
+    "name": "Sicilian Defense: Dragon Variation, Yugoslav Attack, Main Line",
+    "eco": "B77"
+  },
+  "pin/dbeeab5ccd7363f8": {
+    "name": "Ruy Lopez: Closed, Keres Defense",
+    "eco": "C96"
+  },
+  "pin/dd3aeb1c69820de7": {
+    "name": "Horwitz Defense",
+    "eco": "A40"
+  },
+  "pin/e111fc3447dbeb65": {
+    "name": "King's Indian Defense: Fianchetto Variation, Uhlmann-Szabo System",
+    "eco": "E62"
+  },
+  "pin/e412812e6cc81094": {
+    "name": "Sicilian Defense: Moscow Variation",
+    "eco": "B51"
+  },
+  "pin/ef579eec3a63645c": {
+    "name": "King's Indian Defense: Petrosian Variation, Normal Defense",
+    "eco": "E93"
+  },
+  "pin/f175a2596d167bcc": {
+    "name": "Petrov's Defense: Modern Attack, Center Variation",
+    "eco": "C43"
+  },
+  "pin/7131eddd1b293eb8": {
+    "name": "Sicilian Defense: Najdorf Variation, Amsterdam Variation",
+    "eco": "B93"
+  },
+  "pin/80da2381d2157ca6": {
+    "name": "King's Indian Attack: Keres Variation",
+    "eco": "A07"
+  },
+  "pin/b63b57ee53e9f222": {
+    "name": "Catalan Opening",
+    "eco": "E00"
+  },
+  "pin/190a7d5dc7d49c0d": {
+    "name": "King's Indian Attack: Spassky Variation",
+    "eco": "A05"
+  },
+  "pin/3dd01e62d95f1b9f": {
+    "name": "English Opening: Agincourt Defense",
+    "eco": "A13"
+  },
+  "pin/58343427c0a43564": {
+    "name": "Nimzo-Indian Defense: Ragozin Defense",
+    "eco": "E48"
+  },
+  "pin/5ce62912aafd10de": {
+    "name": "Sicilian Defense: Nyezhmetdinov-Rossolimo Attack, Fianchetto Variation",
+    "eco": "B31"
+  },
+  "pin/5d2348078b903f5c": {
+    "name": "Bogo-Indian Defense: Exchange Variation",
+    "eco": "E11"
+  },
+  "pin/5dc3c64e1abb088f": {
+    "name": "French Defense: Advance Variation, Euwe Variation",
+    "eco": "C02"
+  },
+  "pin/7888758c9f476480": {
+    "name": "Sicilian Defense: Najdorf Variation, Adams Attack",
+    "eco": "B90"
+  },
+  "pin/850273d61abe3b12": {
+    "name": "King's Gambit Declined: Petrov's Defense",
+    "eco": "C30"
+  },
+  "pin/a1c03034f7980b90": {
+    "name": "Queen's Indian Defense, with e3",
+    "eco": "E14"
+  },
+  "pin/ac0accd42203d5bc": {
+    "name": "Ruy Lopez: Morphy Defense, Modern Steinitz Defense",
+    "eco": "C75"
+  },
+  "pin/afa6fe514dc5e244": {
+    "name": "Benoni Defense: Old Benoni",
+    "eco": "A43"
+  },
+  "pin/b1f20620d4ac16d0": {
+    "name": "King's Indian Defense: Orthodox Variation, Classical System, Neo-Classical Line",
+    "eco": "E98"
+  },
+  "pin/c8248a9f586f1a0c": {
+    "name": "Sicilian Defense: Kan Variation, Modern Variation",
+    "eco": "B42"
+  },
+  "pin/d7dc9e519d49b55a": {
+    "name": "English Opening: Symmetrical Variation, Anti-Benoni Variation",
+    "eco": "A31"
+  },
+  "pin/15d2998325dd2585": {
+    "name": "Slav Defense: Chebanenko Variation, Advance System",
+    "eco": "D15"
+  },
+  "pin/1d83cd4ab90f0407": {
+    "name": "King's Gambit Accepted: Philidor Gambit, Schultz Variation",
+    "eco": "C38"
+  },
+  "pin/40877d4d6cba5938": {
+    "name": "Ruy Lopez: Berlin Defense, Anti-Berlin Variation",
+    "eco": "C65"
+  },
+  "pin/520e3835df57f3db": {
+    "name": "Bogo-Indian Defense: Wade-Smyslov Variation",
+    "eco": "E11"
+  },
+  "pin/549b9a284a3c6972": {
+    "name": "French Defense: Advance Variation, Euwe Variation",
+    "eco": "C02"
+  },
+  "pin/5be2b76aab31b736": {
+    "name": "Sicilian Defense: Taimanov Variation",
+    "eco": "B45"
+  },
+  "pin/76f1cfe54dd4a1fd": {
+    "name": "Queen's Gambit Accepted: Classical Defense, Steinitz Variation, Development Variation",
+    "eco": "D26"
+  },
+  "pin/779902d64f188d49": {
+    "name": "English Opening: King's English Variation",
+    "eco": "A20"
+  },
+  "pin/79596fdb78048e01": {
+    "name": "Caro-Kann Defense: Karpov Variation",
+    "eco": "B17"
+  },
+  "pin/79ae6f9af00f55cf": {
+    "name": "Ruy Lopez: Berlin Defense, l'Hermet Variation, Berlin Wall Defense",
+    "eco": "C67"
+  },
+  "pin/804f594eaba1ea3d": {
+    "name": "Sicilian Defense: Closed",
+    "eco": "B23"
+  },
+  "pin/80b573b8d865390b": {
+    "name": "Sicilian Defense: Lasker-Pelikan Variation, Sveshnikov Variation, Peresypkin's Sacrifice",
+    "eco": "B33"
+  },
+  "pin/91a490f7c3b57731": {
+    "name": "Elephant Gambit: Paulsen Countergambit",
+    "eco": "C40"
+  },
+  "pin/aa2426911e98baa9": {
+    "name": "Pirc Defense: Austrian Attack, Unzicker Attack, Bronstein Variation",
+    "eco": "B09"
+  },
+  "pin/ae3ac2890dc9bc79": {
+    "name": "English Opening: Agincourt Defense",
+    "eco": "A13"
+  },
+  "pin/ae4dd5d7ce1413ae": {
+    "name": "French Defense: Classical Variation, Rubinstein Variation",
+    "eco": "C14"
+  },
+  "pin/af8d0ae2044bea62": {
+    "name": "Sicilian Defense: Najdorf Variation, English Attack, Anti-English",
+    "eco": "B90"
+  },
+  "pin/d58f4ef9875bc38b": {
+    "name": "Benoni Defense: Classical Variation, Czerniak Defense",
+    "eco": "A79"
+  },
+  "pin/df92b649d0b8773d": {
+    "name": "Nimzo-Indian Defense: St. Petersburg Variation, Fischer Variation",
+    "eco": "E45"
+  },
+  "pin/dfa1948891342711": {
+    "name": "Sicilian Defense: Richter-Rauzer Variation, Neo-Modern Variation, Nyezhmetdinov Attack",
+    "eco": "B69"
+  },
+  "pin/e67be72bc3334992": {
+    "name": "Sicilian Defense: Najdorf Variation, Amsterdam Variation",
+    "eco": "B93"
+  },
+  "pin/e9a5c521aa456ee9": {
+    "name": "Ruy Lopez: Berlin Defense, Anti-Berlin Variation",
+    "eco": "C65"
+  },
+  "pin/56b9d603892a1188": {
+    "name": "Caro-Kann Defense: Advance Variation, Short Variation",
+    "eco": "B12"
+  },
+  "pin/00f38167f70df0dd": {
+    "name": "Sicilian Defense: Closed",
+    "eco": "B24"
+  },
+  "pin/0141d971f1904ff4": {
+    "name": "French Defense: Tarrasch Variation, Morozevich Variation",
+    "eco": "C03"
+  },
+  "pin/061376bc81acf373": {
+    "name": "Sicilian Defense: Dragon Variation, Classical Variation, Normal Line",
+    "eco": "B74"
+  },
+  "pin/09d88fc50ff2aef3": {
+    "name": "English Opening: King's English Variation",
+    "eco": "A20"
+  },
+  "pin/13de7acf5c45d71b": {
+    "name": "Benoni Defense: Fianchetto Variation, Hastings Defense, Main Line",
+    "eco": "A64"
+  },
+  "pin/1a54bf38dc90da95": {
+    "name": "English Opening: Great Snake Variation",
+    "eco": "A10"
+  },
+  "pin/1f471677141c4cf0": {
+    "name": "Sicilian Defense: Nyezhmetdinov-Rossolimo Attack",
+    "eco": "B30"
+  },
+  "pin/257d7abbd6035b35": {
+    "name": "Slav Defense: Exchange Variation, Schallopp Variation",
+    "eco": "D13"
+  },
+  "pin/299350a61430f678": {
+    "name": "King's Indian Defense: Orthodox Variation, Gligoric-Taimanov System",
+    "eco": "E92"
+  },
+  "pin/3cce456616ad24a1": {
+    "name": "Queen's Gambit Declined: Exchange Variation, Reshevsky Variation",
+    "eco": "D36"
+  },
+  "pin/3e29732a92352427": {
+    "name": "Bishop's Opening: Paulsen Defense",
+    "eco": "C24"
+  },
+  "pin/4b0e385495c0bd82": {
+    "name": "French Defense: Classical Variation",
+    "eco": "C13"
+  },
+  "pin/5a67f4227049cbbd": {
+    "name": "Nimzo-Indian Defense: Classical Variation, Keres Defense",
+    "eco": "E32"
+  },
+  "pin/6090906b5e53905f": {
+    "name": "Ruy Lopez: Closed, Flohr System",
+    "eco": "C92"
+  },
+  "pin/609b01ecf9304134": {
+    "name": "Sicilian Defense: Moscow Variation, Main Line",
+    "eco": "B52"
+  },
+  "pin/62b2baa44f69fb97": {
+    "name": "Queen's Indian Defense: Fianchetto Variation",
+    "eco": "E15"
+  },
+  "pin/73e0a2e1f0ddfa09": {
+    "name": "Queen's Gambit Declined: Orthodox Defense, Rubinstein Variation",
+    "eco": "D61"
+  },
+  "pin/75cbfff283e02353": {
+    "name": "French Defense: Advance Variation",
+    "eco": "C02"
+  },
+  "pin/76aa7146341d627a": {
+    "name": "French Defense: Advance Variation, Paulsen Attack",
+    "eco": "C02"
+  },
+  "pin/82cdfa2ed4a04774": {
+    "name": "Italian Game: Two Knights Defense, Fried Liver Attack",
+    "eco": "C57"
+  },
+  "pin/83d66615e91f6bd2": {
+    "name": "French Defense: Classical Variation, Burn Variation",
+    "eco": "C13"
+  },
+  "pin/8ca10b9d34ad9317": {
+    "name": "Sicilian Defense: Taimanov Variation",
+    "eco": "B46"
+  },
+  "pin/8d1cdd2865649492": {
+    "name": "French Defense: Classical Variation",
+    "eco": "C13"
+  },
+  "pin/8ddb7d1d5299fa07": {
+    "name": "Ruy Lopez: Closed",
+    "eco": "C88"
+  },
+  "pin/9f88898ca96bddf0": {
+    "name": "Ruy Lopez: Berlin Defense",
+    "eco": "C65"
+  },
+  "pin/a3542c881a2cce40": {
+    "name": "Nimzo-Indian Defense: Classical Variation, Keres Defense",
+    "eco": "E32"
+  },
+  "pin/a73554de6c228f1b": {
+    "name": "Sicilian Defense: French Variation",
+    "eco": "B40"
+  },
+  "pin/a97ddc11b0b62653": {
+    "name": "Sicilian Defense: Delayed Alapin Variation, with e6",
+    "eco": "B40"
+  },
+  "pin/aaa080695dc78584": {
+    "name": "Indian Defense: Accelerated London System",
+    "eco": "A45"
+  },
+  "pin/ac19793ff8995fd9": {
+    "name": "Réti Opening: Anglo-Slav Variation, Capablanca Variation",
+    "eco": "A12"
+  },
+  "pin/b1f3a55f93438d3f": {
+    "name": "Sicilian Defense: Lasker-Pelikan Variation, Sveshnikov Variation",
+    "eco": "B33"
+  },
+  "pin/b39dc4d6936016c6": {
+    "name": "Sicilian Defense: Nyezhmetdinov-Rossolimo Attack",
+    "eco": "B30"
+  },
+  "pin/c07522ef0a4ba446": {
+    "name": "Sicilian Defense: Modern Variations",
+    "eco": "B50"
+  },
+  "pin/c1334497b503fc69": {
+    "name": "Sicilian Defense: Accelerated Dragon, Modern Bc4 Variation",
+    "eco": "B35"
+  },
+  "pin/c559a524461f8048": {
+    "name": "Petrov's Defense: Paulsen Attack",
+    "eco": "C42"
+  },
+  "pin/d91fe7dcd2ebf741": {
+    "name": "Queen's Gambit Declined: Traditional Variation",
+    "eco": "D30"
+  },
+  "pin/dae6aab1a698fbea": {
+    "name": "Scandinavian Defense: Modern Variation",
+    "eco": "B01"
+  },
+  "pin/e21e03a3d430ba26": {
+    "name": "Ruy Lopez: Berlin Defense, l'Hermet Variation, Berlin Wall Defense",
+    "eco": "C67"
+  },
+  "pin/e7620a74c710cbbc": {
+    "name": "French Defense: Winawer Variation, Classical Variation",
+    "eco": "C18"
+  },
+  "pin/e82f796ca4a3c125": {
+    "name": "Alekhine Defense: Modern Variation, Main Line",
+    "eco": "B05"
+  },
+  "pin/f80c75148579f9bc": {
+    "name": "Sicilian Defense: Kalashnikov Variation",
+    "eco": "B32"
+  },
+  "pin/1171d868e56fd2ba": {
+    "name": "King's Gambit Declined: Falkbeer Countergambit, Blackburne Attack",
+    "eco": "C31"
+  },
+  "pin/1fe125a17117d58f": {
+    "name": "Sicilian Defense: Scheveningen Variation, Classical Variation",
+    "eco": "B83"
+  },
+  "pin/2f5367d194f55f91": {
+    "name": "Caro-Kann Defense: Advance Variation, Botvinnik-Carls Defense",
+    "eco": "B12"
+  },
+  "pin/36e1812b5161c270": {
+    "name": "King's Indian Defense: Orthodox Variation, Bayonet Attack, Sokolov's Line",
+    "eco": "E97"
+  },
+  "pin/3d8aef9803d9a518": {
+    "name": "Dutch Defense: Classical Variation",
+    "eco": "A84"
+  },
+  "pin/4b4f6e52a8184ec5": {
+    "name": "French Defense: Advance Variation, Euwe Variation",
+    "eco": "C02"
+  },
+  "pin/5abd24c9f1325c9c": {
+    "name": "Sicilian Defense: Najdorf Variation, Poisoned Pawn Accepted",
+    "eco": "B97"
+  },
+  "pin/5b470501adb75d58": {
+    "name": "Queen's Gambit Declined: Semi-Tarrasch Defense, Pillsbury Variation",
+    "eco": "D41"
+  },
+  "pin/6b0bc7e9ecee7155": {
+    "name": "French Defense: Tarrasch Variation",
+    "eco": "C03"
+  },
+  "pin/6dcb87970062d284": {
+    "name": "Ruy Lopez: Open, Classical Defense",
+    "eco": "C83"
+  },
+  "pin/7266cb420b694ea1": {
+    "name": "Sicilian Defense: Moscow Variation",
+    "eco": "B51"
+  },
+  "pin/796086e0dcb9549f": {
+    "name": "Slav Defense: Exchange Variation",
+    "eco": "D10"
+  },
+  "pin/82019094010c22d8": {
+    "name": "Ruy Lopez: Closed, Flohr System",
+    "eco": "C92"
+  },
+  "pin/8dda52d66b5436cd": {
+    "name": "Ruy Lopez: Morphy Defense, Neo-Arkhangelsk Variation",
+    "eco": "C78"
+  },
+  "pin/b0496194ebb0a8a4": {
+    "name": "French Defense: Winawer Variation, Alekhine-Maróczy Gambit",
+    "eco": "C15"
+  },
+  "pin/c16b8e6366600ce5": {
+    "name": "English Opening: King's English Variation",
+    "eco": "A20"
+  },
+  "pin/c573c6449aaacff0": {
+    "name": "Ruy Lopez: Closed, Chigorin Defense",
+    "eco": "C96"
+  },
+  "pin/cb164d749f1cb80d": {
+    "name": "French Defense: Tarrasch Variation, Leningrad Variation",
+    "eco": "C06"
+  },
+  "pin/d2112ee5b417c1c6": {
+    "name": "Sicilian Defense: Wing Gambit, Deferred Variation",
+    "eco": "B50"
+  },
+  "pin/d87b6f2856a01140": {
+    "name": "French Defense: Advance Variation, Main Line",
+    "eco": "C02"
+  },
+  "pin/e5f0072cbed4e1b6": {
+    "name": "Queen's Gambit Declined: Exchange Variation, Reshevsky Variation",
+    "eco": "D36"
+  },
+  "pin/e65ee3c5675fbea6": {
+    "name": "Caro-Kann Defense: Maróczy Variation",
+    "eco": "B12"
+  },
+  "pin/f69989e108466fe3": {
+    "name": "Sicilian Defense: Dragon Variation, Yugoslav Attack, Panov Variation",
+    "eco": "B76"
+  },
+  "pin/f9f1762831cd8ede": {
+    "name": "Pseudo Queen's Indian Defense",
+    "eco": "A47"
+  },
+  "pin/fec05aad7a2b4876": {
+    "name": "Slav Defense: Schlechter Variation",
+    "eco": "D15"
+  },
+  "pin/1e9152449bf9594c": {
+    "name": "Sicilian Defense: French Variation",
+    "eco": "B40"
+  },
+  "pin/377ea0a28e2963ce": {
+    "name": "King's Indian Defense: Fianchetto Variation, Panno Variation",
+    "eco": "E63"
+  },
+  "pin/3ed18be7ec382b82": {
+    "name": "Scotch Game: Mieses Variation",
+    "eco": "C45"
+  },
+  "pin/772b53fdad3e1150": {
+    "name": "Alekhine Defense: Sämisch Attack",
+    "eco": "B02"
+  },
+  "pin/9a90ce59b0f52115": {
+    "name": "Sicilian Defense: Closed, Traditional",
+    "eco": "B23"
+  },
+  "pin/ae8d6718a9d86274": {
+    "name": "Réti Opening: Anglo-Slav Variation, Gurevich System",
+    "eco": "A11"
+  },
+  "pin/caec3f0f28d2509f": {
+    "name": "Dutch Defense: Staunton Gambit",
+    "eco": "A83"
+  },
+  "pin/cf933873c7d435a8": {
+    "name": "Benoni Defense: Classical Variation, Czerniak Defense",
+    "eco": "A78"
+  },
+  "pin/e22c98b0407e07ea": {
+    "name": "Sicilian Defense: Dragon Variation, Yugoslav Attack, Main Line",
+    "eco": "B77"
+  },
+  "pin/f55720223c53448a": {
+    "name": "English Opening: Agincourt Defense, Neo-Catalan Declined",
+    "eco": "A14"
+  },
+  "pin/16c9f81f29c12e97": {
+    "name": "Modern Defense: Standard Line",
+    "eco": "B06"
+  },
+  "pin/2ea1ac1412765eb2": {
+    "name": "Rat Defense: English Rat",
+    "eco": "A41"
+  },
+  "pin/72d7821c50b63145": {
+    "name": "Vienna Game: Paulsen Variation",
+    "eco": "C25"
+  },
+  "pin/7e57ba137c797ff0": {
+    "name": "Tarrasch Defense: Symmetrical Variation",
+    "eco": "D32"
+  },
+  "pin/8d0efce28d64e971": {
+    "name": "Pirc Defense: Classical Variation, Quiet System, Czech Defense",
+    "eco": "B08"
+  },
+  "pin/bb42ce6146dfe4ec": {
+    "name": "Caro-Kann Defense: Advance Variation",
+    "eco": "B12"
+  },
+  "pin/beb336120ad4ee68": {
+    "name": "French Defense: Winawer Variation, Delayed Exchange Variation",
+    "eco": "C15"
+  },
+  "pin/50c8567a58bff4bf": {
+    "name": "Sicilian Defense: Najdorf Variation",
+    "eco": "B90"
+  },
+  "pin/5d855d0f1bbd881a": {
+    "name": "Tarrasch Defense: Swedish Variation",
+    "eco": "D33"
+  },
+  "pin/710b48e421464183": {
+    "name": "English Opening: Symmetrical Variation, Three Knights, Fianchetto Variation",
+    "eco": "A37"
+  },
+  "pin/83e18106f30f7645": {
+    "name": "Ruy Lopez: Cozio Defense",
+    "eco": "C60"
+  },
+  "simplification/13d10f054c0cc0c6": {
+    "name": "Benoni Defense: Classical Variation, Czerniak Defense",
+    "eco": "A79"
+  },
+  "simplification/2a00c41cac4e90e6": {
+    "name": "Ruy Lopez: Morphy Defense, Wormald Attack",
+    "eco": "C77"
+  },
+  "simplification/43ad2e4e59d54afb": {
+    "name": "Queen's Gambit Declined: Exchange Variation, Reshevsky Variation",
+    "eco": "D36"
+  },
+  "simplification/6ac86b0dd29915fc": {
+    "name": "Vienna Game: Mieses Variation",
+    "eco": "C26"
+  },
+  "simplification/78af65fd8f36d3e7": {
+    "name": "Réti Opening: Advance Variation",
+    "eco": "A09"
+  },
+  "simplification/8632ab94eb8d0222": {
+    "name": "Slav Defense: Chebanenko Variation",
+    "eco": "D15"
+  },
+  "simplification/98ef7dd74e2fcf71": {
+    "name": "Italian Game: Evans Gambit, Anderssen Variation, Cordel Line",
+    "eco": "C51"
+  },
+  "simplification/9b4883199798e842": {
+    "name": "Zukertort Opening: Dutch Variation",
+    "eco": "A04"
+  },
+  "simplification/9f182ad464670c2e": {
+    "name": "Ruy Lopez: Schliemann Defense, Tartakower Variation",
+    "eco": "C63"
+  },
+  "simplification/be0662d6307a73d5": {
+    "name": "Queen's Indian Defense: Petrosian Variation",
+    "eco": "E12"
+  },
+  "simplification/e7f6272163cf4c85": {
+    "name": "Sicilian Defense: Najdorf Variation, Opocensky Variation",
+    "eco": "B92"
+  },
+  "simplification/ee1cd051f9dd705d": {
+    "name": "French Defense: Chigorin Variation",
+    "eco": "C00"
+  },
+  "simplification/0ef6f389b234c775": {
+    "name": "Indian Defense",
+    "eco": "A45"
+  },
+  "simplification/27992175cd34649f": {
+    "name": "French Defense: Tarrasch Variation, Closed Variation",
+    "eco": "C05"
+  },
+  "simplification/38794dd20b517602": {
+    "name": "Bogo-Indian Defense: Exchange Variation",
+    "eco": "E11"
+  },
+  "simplification/5e745499ed1d7d45": {
+    "name": "Petrov's Defense: Millennium Attack",
+    "eco": "C42"
+  },
+  "simplification/6f413ff29a0135c7": {
+    "name": "Nimzo-Indian Defense: Romanishin Variation, English Hybrid",
+    "eco": "E20"
+  },
+  "simplification/72256c8e26a223f6": {
+    "name": "English Opening: King's English Variation, Two Knights Variation, Keres Variation",
+    "eco": "A23"
+  },
+  "simplification/75dbd44afbfb0b0f": {
+    "name": "Indian Defense: Spielmann-Indian",
+    "eco": "A46"
+  },
+  "simplification/89eff12996e5e506": {
+    "name": "Benoni Defense: Benoni-Indian Defense, Kingside Move Order",
+    "eco": "A43"
+  },
+  "simplification/dd93017373023742": {
+    "name": "Slav Defense: Alekhine Variation",
+    "eco": "D15"
+  },
+  "simplification/3ff437b31a5310dd": {
+    "name": "Sicilian Defense: Nimzowitsch Variation, Exchange Variation",
+    "eco": "B29"
+  },
+  "simplification/0520572a6c8c5e62": {
+    "name": "Queen's Gambit Declined: Capablanca Variation",
+    "eco": "D30"
+  },
+  "simplification/11ec3ca1309a737c": {
+    "name": "Pirc Defense",
+    "eco": "B00"
+  },
+  "simplification/164a7e33aef61e2e": {
+    "name": "Ruy Lopez: Berlin Defense, Nyholm Attack",
+    "eco": "C65"
+  },
+  "simplification/2619f16ed3295923": {
+    "name": "Ruy Lopez: Closed, Worrall Attack, Delayed Castling Line",
+    "eco": "C86"
+  },
+  "simplification/265cc936971faa97": {
+    "name": "English Opening: King's English Variation, Four Knights Variation, Fianchetto Line, with Nb6",
+    "eco": "A29"
+  },
+  "simplification/2a0b88cb6d7e366c": {
+    "name": "Elephant Gambit",
+    "eco": "C40"
+  },
+  "simplification/3496278112019274": {
+    "name": "Queen's Gambit Declined: Ragozin Defense",
+    "eco": "D38"
+  },
+  "simplification/491cd4f97df78326": {
+    "name": "Dutch Defense: Rubinstein Variation",
+    "eco": "A84"
+  },
+  "simplification/565c191407c1d99e": {
+    "name": "Semi-Slav Defense: Stoltz Variation",
+    "eco": "D45"
+  },
+  "simplification/613988370a78de40": {
+    "name": "Queen's Indian Defense, with e3",
+    "eco": "E14"
+  },
+  "simplification/614398ad142e4e06": {
+    "name": "Four Knights Game",
+    "eco": "C47"
+  },
+  "simplification/766e3291c93383d6": {
+    "name": "Slav Defense: Quiet Variation, Schallopp Defense",
+    "eco": "D12"
+  },
+  "simplification/7eaa7c93e29a86f8": {
+    "name": "Alekhine Defense: Modern Variation, Larsen Variation",
+    "eco": "B04"
+  },
+  "simplification/8ce3e3994bd859d2": {
+    "name": "Catalan Opening: Open Defense, Classical Line",
+    "eco": "E05"
+  },
+  "simplification/9708bf815e7041a4": {
+    "name": "Dutch Defense: Staunton Gambit, Chigorin Variation",
+    "eco": "A83"
+  },
+  "simplification/b4388ee23f2335c7": {
+    "name": "Queen's Pawn Game: Colle System, Traditional Colle",
+    "eco": "D05"
+  },
+  "simplification/bc9e6a3e55be0b3b": {
+    "name": "Philidor Defense: Exchange Variation",
+    "eco": "C41"
+  },
+  "simplification/c89bb80725aaf305": {
+    "name": "Réti Opening: Advance Variation",
+    "eco": "A09"
+  },
+  "simplification/ce29e973aad9af40": {
+    "name": "French Defense: Tarrasch Variation, Open System, Euwe-Keres Line",
+    "eco": "C07"
+  },
+  "simplification/d0661dd1470b2908": {
+    "name": "King's Gambit Accepted: Bishop's Gambit, Bledow Variation",
+    "eco": "C33"
+  },
+  "simplification/d3870f9ee4467a0a": {
+    "name": "Queen's Gambit Declined: Capablanca Variation",
+    "eco": "D30"
+  },
+  "simplification/d67dda9d010532be": {
+    "name": "Three Knights Opening",
+    "eco": "C46"
+  },
+  "simplification/db11da8be0356565": {
+    "name": "Pirc Defense: Bayonet Attack",
+    "eco": "B07"
+  },
+  "simplification/fd2f1b5aa450f91e": {
+    "name": "Ruy Lopez: Berlin Defense, Rio Gambit Accepted",
+    "eco": "C67"
+  },
+  "simplification/0b8c13f7cb6e02bb": {
+    "name": "Queen's Indian Defense, with e3",
+    "eco": "E14"
+  },
+  "simplification/11ac98770ef08bcd": {
+    "name": "Benoni Defense: Fianchetto Variation, Hastings Defense",
+    "eco": "A63"
+  },
+  "simplification/186ed560c3dacc21": {
+    "name": "Nimzo-Indian Defense: Normal Variation",
+    "eco": "E47"
+  },
+  "simplification/1cee0c1c781b1fbe": {
+    "name": "Queen's Pawn Game: London System",
+    "eco": "D02"
+  },
+  "simplification/2dc4fb048741d2cf": {
+    "name": "Sicilian Defense: Lasker-Dunne Attack",
+    "eco": "B20"
+  },
+  "simplification/31dbe95caf542376": {
+    "name": "Queen's Pawn Game: Levitsky Attack",
+    "eco": "D00"
+  },
+  "simplification/369c275377a74a23": {
+    "name": "Anderssen's Opening",
+    "eco": "A00"
+  },
+  "simplification/46cd131c69674ecd": {
+    "name": "Grünfeld Defense: Exchange Variation, Modern Exchange Variation",
+    "eco": "D85"
+  },
+  "simplification/89459cea5babc6cd": {
+    "name": "Queen's Pawn Game: Colle System",
+    "eco": "D05"
+  },
+  "simplification/9cde4cb309b507fc": {
+    "name": "Sicilian Defense: Nyezhmetdinov-Rossolimo Attack, Fianchetto Variation",
+    "eco": "B31"
+  },
+  "simplification/b25651ad73c9c379": {
+    "name": "Nimzo-Larsen Attack: Indian Variation",
+    "eco": "A01"
+  },
+  "simplification/b3d1deee3016d526": {
+    "name": "Sicilian Defense: Lasker-Pelikan Variation",
+    "eco": "B33"
+  },
+  "simplification/b67d5992af6080e9": {
+    "name": "Mieses Opening",
+    "eco": "A00"
+  },
+  "simplification/c20f663fc639372b": {
+    "name": "Réti Opening: Anglo-Slav Variation, Gurevich System",
+    "eco": "A11"
+  },
+  "simplification/e95185845821c3e0": {
+    "name": "Nimzo-Larsen Attack: Classical Variation",
+    "eco": "A01"
+  },
+  "simplification/5dc3c64e1abb088f": {
+    "name": "French Defense: Advance Variation, Euwe Variation",
+    "eco": "C02"
+  },
+  "simplification/95834c82b7acff89": {
+    "name": "Sicilian Defense: Taimanov Variation, Bastrikov Variation",
+    "eco": "B49"
+  },
+  "simplification/9eb7d3b803f0448a": {
+    "name": "Caro-Kann Defense: Accelerated Panov Attack, Modern Variation",
+    "eco": "B10"
+  },
+  "simplification/ab4ee163b7c3ea89": {
+    "name": "Semi-Slav Defense",
+    "eco": "D43"
+  },
+  "simplification/b3249722fee43310": {
+    "name": "King's Indian Defense: Fianchetto Variation",
+    "eco": "E60"
+  },
+  "simplification/f1fff4b673f47003": {
+    "name": "Bogo-Indian Defense: Grünfeld Variation",
+    "eco": "E11"
+  },
+  "simplification/3379e0114480c22a": {
+    "name": "Grünfeld Defense: Smyslov Defense",
+    "eco": "D94"
+  },
+  "simplification/4f2f1df0d23ea298": {
+    "name": "Sicilian Defense: Modern Variations",
+    "eco": "B50"
+  },
+  "simplification/b7cfa545c1f1cc58": {
+    "name": "Ruy Lopez: Morphy Defense, Modern Steinitz Defense",
+    "eco": "C75"
+  },
+  "simplification/a81dda7bdbee044e": {
+    "name": "Queen's Gambit Declined",
+    "eco": "D53"
+  },
+  "simplification/141895942d057dfb": {
+    "name": "Grünfeld Defense: Brinckmann Attack, Grünfeld Gambit, Botvinnik Variation",
+    "eco": "D83"
+  },
+  "simplification/1f9f6466406cae9f": {
+    "name": "Queen's Gambit Declined",
+    "eco": "D30"
+  },
+  "simplification/2e1cf7ffbd9b6f9e": {
+    "name": "King's Indian Attack: Symmetrical Defense",
+    "eco": "A05"
+  },
+  "simplification/37c289291294c133": {
+    "name": "French Defense: Advance Variation, Euwe Variation",
+    "eco": "C02"
+  },
+  "simplification/4af35312247fa363": {
+    "name": "Caro-Kann Defense: Panov Attack, Fianchetto Defense",
+    "eco": "B14"
+  },
+  "simplification/4d2078f29962bd56": {
+    "name": "Nimzo-Indian Defense: Classical Variation",
+    "eco": "E32"
+  },
+  "simplification/5f1671f5e751b985": {
+    "name": "King's Indian Defense: Sämisch Variation",
+    "eco": "E80"
+  },
+  "simplification/60b51699f7baa789": {
+    "name": "Sicilian Defense: Najdorf Variation",
+    "eco": "B90"
+  },
+  "simplification/784d5fe847d3133e": {
+    "name": "Queen's Indian Defense: Miles Variation",
+    "eco": "E12"
+  },
+  "simplification/8e54b06bfb83ed45": {
+    "name": "Sicilian Defense: Najdorf Variation, Main Line",
+    "eco": "B99"
+  },
+  "simplification/900e6f9178698810": {
+    "name": "Sicilian Defense: Taimanov Variation",
+    "eco": "B46"
+  },
+  "simplification/a2165beb60096060": {
+    "name": "Queen's Pawn Game: Zukertort Variation",
+    "eco": "D02"
+  },
+  "simplification/abe25261867de78d": {
+    "name": "Ruy Lopez: Closed, Chigorin Defense",
+    "eco": "C97"
+  },
+  "simplification/b19ace28735a86c8": {
+    "name": "Grünfeld Defense: Exchange Variation, Modern Exchange Variation",
+    "eco": "D85"
+  },
+  "simplification/c9892a73d9530c4d": {
+    "name": "Catalan Opening: Closed",
+    "eco": "E06"
+  },
+  "simplification/d252dc7360ea6545": {
+    "name": "Réti Opening: Anglo-Slav Variation, Gurevich System",
+    "eco": "A11"
+  },
+  "simplification/dcd64431ddef8b38": {
+    "name": "Ruy Lopez: Morphy Defense, Anderssen Variation",
+    "eco": "C77"
+  },
+  "simplification/e73fbbd641efc2a1": {
+    "name": "Italian Game: Classical Variation, Greco Gambit, Modern Line",
+    "eco": "C54"
+  },
+  "simplification/eaa158a778d92125": {
+    "name": "Slav Defense: Chebanenko Variation",
+    "eco": "D15"
+  },
+  "simplification/6b2668fedae8b54b": {
+    "name": "Queen's Indian Defense: Kasparov-Petrosian Variation, Romanishin Attack",
+    "eco": "E12"
+  },
+  "simplification/8768b00abdaccf72": {
+    "name": "Nimzo-Larsen Attack: Classical Variation",
+    "eco": "A01"
+  },
+  "simplification/049833efabb8f342": {
+    "name": "Vienna Game: Falkbeer Variation",
+    "eco": "C26"
+  },
+  "simplification/119fbd2f480f15e1": {
+    "name": "Sicilian Defense: Dragon Variation, Classical Variation, Battery Variation",
+    "eco": "B73"
+  },
+  "simplification/1ade2105dffa33f1": {
+    "name": "Sicilian Defense: Najdorf Variation, Lipnitsky Attack",
+    "eco": "B90"
+  },
+  "simplification/33f95d2489df9c89": {
+    "name": "Ruy Lopez: Morphy Defense, Anderssen Variation",
+    "eco": "C77"
+  },
+  "simplification/43d79bc53a272157": {
+    "name": "Indian Defense: Anti-Grünfeld, Basman-Williams Attack",
+    "eco": "E60"
+  },
+  "simplification/46aeb3df1f4caa37": {
+    "name": "Sicilian Defense: Taimanov Variation, Bastrikov Variation",
+    "eco": "B47"
+  },
+  "simplification/4ca4e7481f5b261d": {
+    "name": "Pirc Defense",
+    "eco": "B00"
+  },
+  "simplification/64d7047c228381ee": {
+    "name": "Ruy Lopez: Morphy Defense, Anderssen Variation",
+    "eco": "C77"
+  },
+  "simplification/74b3d7dc79733af8": {
+    "name": "Barnes Opening",
+    "eco": "A00"
+  },
+  "simplification/9d05fa177161579c": {
+    "name": "Ruy Lopez: Berlin Defense, Rio Gambit Accepted",
+    "eco": "C67"
+  },
+  "simplification/b08963eb0e8671e5": {
+    "name": "Queen's Gambit Declined: Tartakower Defense",
+    "eco": "D58"
+  },
+  "simplification/b199f91f799808fa": {
+    "name": "Indian Defense: Anti-Grünfeld, Alekhine Variation",
+    "eco": "E60"
+  },
+  "simplification/baa94ffe077ce0a4": {
+    "name": "Queen's Gambit Declined: Ragozin Defense, Alekhine Variation",
+    "eco": "D38"
+  },
+  "simplification/de33549cc2689fd6": {
+    "name": "Italian Game: Two Knights Defense",
+    "eco": "C55"
+  },
+  "simplification/dedda358d5ac659a": {
+    "name": "French Defense: Winawer Variation, Eingorn Variation",
+    "eco": "C18"
+  },
+  "simplification/e3ee0eaa607838cd": {
+    "name": "Ruy Lopez: Open",
+    "eco": "C80"
+  },
+  "simplification/e4879f8e9262af06": {
+    "name": "Grünfeld Defense: Three Knights Variation",
+    "eco": "D90"
+  },
+  "simplification/2ef24b46e349d44a": {
+    "name": "Ruy Lopez: Open, Main Line",
+    "eco": "C80"
+  },
+  "simplification/d0effcc5e7e3b4d1": {
+    "name": "Queen's Gambit Accepted: Alekhine Defense",
+    "eco": "D22"
+  },
+  "simplification/1cddd80148d4a5b7": {
+    "name": "Sicilian Defense: Najdorf Variation",
+    "eco": "B90"
+  },
+  "simplification/997bb9cdf8b0bb6c": {
+    "name": "French Defense: Classical Variation, Steinitz Variation",
+    "eco": "C11"
+  },
+  "skewer/060f2de6d5aeaa58": {
+    "name": "Queen's Indian Defense: Fianchetto Variation, Check Variation, Intermezzo Line",
+    "eco": "E15"
+  },
+  "skewer/071295b639b49091": {
+    "name": "King's Gambit Accepted: Greco Gambit",
+    "eco": "C34"
+  },
+  "skewer/0a6f70ff6208599b": {
+    "name": "Sicilian Defense: Najdorf Variation, Poisoned Pawn Accepted",
+    "eco": "B97"
+  },
+  "skewer/0e87d0c3b5235414": {
+    "name": "Ruy Lopez: Cozio Defense",
+    "eco": "C60"
+  },
+  "skewer/1171d868e56fd2ba": {
+    "name": "King's Gambit Declined: Falkbeer Countergambit, Blackburne Attack",
+    "eco": "C31"
+  },
+  "skewer/16e80feeee99c660": {
+    "name": "Queen's Gambit Declined: Semi-Tarrasch Defense, Exchange Variation",
+    "eco": "D41"
+  },
+  "skewer/19d361502eba6d8e": {
+    "name": "English Opening: Anglo-Indian Defense, King's Knight Variation",
+    "eco": "A15"
+  },
+  "skewer/20876711a1621131": {
+    "name": "Caro-Kann Defense: Karpov Variation, Modern Main Line",
+    "eco": "B17"
+  },
+  "skewer/291f2b0ef8873a64": {
+    "name": "English Opening: Great Snake Variation",
+    "eco": "A10"
+  },
+  "skewer/3bf1a6e927d26fd9": {
+    "name": "French Defense: Advance Variation, Main Line",
+    "eco": "C02"
+  },
+  "skewer/427adb2c4371fabf": {
+    "name": "Caro-Kann Defense: Two Knights Attack",
+    "eco": "B10"
+  },
+  "skewer/46f70ff360b019a1": {
+    "name": "Richter-Veresov Attack",
+    "eco": "D01"
+  },
+  "skewer/57b8686bf6946163": {
+    "name": "Four Knights Game: Spanish Variation, Double Spanish",
+    "eco": "C49"
+  },
+  "skewer/5e6922faa5542c14": {
+    "name": "King's Indian Attack",
+    "eco": "A05"
+  },
+  "skewer/62164c0d43f9d7f8": {
+    "name": "King's Gambit Accepted: Bishop's Gambit, Bledow Variation",
+    "eco": "C33"
+  },
+  "skewer/684dffa2595576d9": {
+    "name": "Semi-Slav Defense: Accelerated Move Order",
+    "eco": "D31"
+  },
+  "skewer/68ccdda3414a9f90": {
+    "name": "English Opening: King's English Variation, Two Knights Variation, Reversed Dragon",
+    "eco": "A22"
+  },
+  "skewer/810012dd54c704f4": {
+    "name": "Queen's Gambit Declined: Three Knights Variation",
+    "eco": "D37"
+  },
+  "skewer/83bfc3c95dd5ae0e": {
+    "name": "Queen's Indian Defense: Fianchetto Variation, Kramnik Variation",
+    "eco": "E17"
+  },
+  "skewer/86c4fd164ef0852f": {
+    "name": "Slav Defense: Quiet Variation, Pin Defense",
+    "eco": "D11"
+  },
+  "skewer/8772abb0ac4ff865": {
+    "name": "Ruy Lopez: Exchange Variation, Alekhine Variation",
+    "eco": "C68"
+  },
+  "skewer/8783d659a1270f13": {
+    "name": "French Defense: Winawer Variation, Classical Variation",
+    "eco": "C18"
+  },
+  "skewer/8ae5e36f6007f309": {
+    "name": "Italian Game: Evans Gambit, Dufresne Defense",
+    "eco": "C52"
+  },
+  "skewer/8c8b01a658e156a5": {
+    "name": "Queen's Gambit Declined: Harrwitz Attack, Two Knights Defense, Blockade Line",
+    "eco": "D37"
+  },
+  "skewer/91d13c8b85edbf9d": {
+    "name": "Indian Defense: Anti-Nimzo-Indian",
+    "eco": "E10"
+  },
+  "skewer/93dc2177f15c691f": {
+    "name": "Sicilian Defense: Moscow Variation, Sokolsky Variation",
+    "eco": "B52"
+  },
+  "skewer/9543acf11aaeca09": {
+    "name": "Sicilian Defense: Moscow Variation, Moscow Gambit",
+    "eco": "B51"
+  },
+  "skewer/9cc830468d5b1ad8": {
+    "name": "Slav Defense: Czech Variation, Dutch Variation",
+    "eco": "D19"
+  },
+  "skewer/9d28e81bbe36e784": {
+    "name": "King's Indian Defense: Four Pawns Attack",
+    "eco": "E76"
+  },
+  "skewer/9e3ea8bd912199fd": {
+    "name": "Ruy Lopez: Morphy Defense, Arkhangelsk Variation",
+    "eco": "C78"
+  },
+  "skewer/9fa546b2001d2a85": {
+    "name": "Sicilian Defense: Taimanov Variation, Bastrikov Variation, English Attack",
+    "eco": "B48"
+  },
+  "skewer/a17d0135e036686f": {
+    "name": "Queen's Gambit Declined: Semi-Tarrasch Defense, Pillsbury Variation",
+    "eco": "D40"
+  },
+  "skewer/a3c8f33d50aa00d2": {
+    "name": "Benoni Defense",
+    "eco": "A56"
+  },
+  "skewer/a8d79b56cb4b805e": {
+    "name": "Pseudo Queen's Indian Defense",
+    "eco": "A47"
+  },
+  "skewer/ad0198595032d6a4": {
+    "name": "Ruy Lopez: Morphy Defense, Modern Steinitz Defense, Fianchetto Variation",
+    "eco": "C76"
+  },
+  "skewer/b1a86db02bb49e94": {
+    "name": "French Defense: Winawer Variation, Warsaw Variation",
+    "eco": "C18"
+  },
+  "skewer/b802edb6d8c5fb03": {
+    "name": "King's Indian Attack: Wahls Defense",
+    "eco": "A05"
+  },
+  "skewer/c72bcb58884cfb61": {
+    "name": "Ruy Lopez: Morphy Defense, Modern Steinitz Defense",
+    "eco": "C72"
+  },
+  "skewer/c8967d1db1fe5f89": {
+    "name": "King's Indian Defense: Fianchetto Variation, Kavalek Defense",
+    "eco": "E62"
+  },
+  "skewer/c897608119824e25": {
+    "name": "Ruy Lopez: Morphy Defense, Arkhangelsk Variation",
+    "eco": "C78"
+  },
+  "skewer/c9cded8fabc35f68": {
+    "name": "Queen's Gambit Declined: Exchange Variation, Positional Variation",
+    "eco": "D35"
+  },
+  "skewer/cd7bcab525ba898c": {
+    "name": "Bishop's Opening: Berlin Defense",
+    "eco": "C24"
+  },
+  "skewer/ceb4b10bdf82f656": {
+    "name": "Ruy Lopez: Berlin Defense, l'Hermet Variation, Berlin Wall Defense",
+    "eco": "C67"
+  },
+  "skewer/dcee5928b2d843d3": {
+    "name": "Sicilian Defense: Scheveningen Variation, Modern Variation",
+    "eco": "B83"
+  },
+  "skewer/e50417a7f659a874": {
+    "name": "Italian Game: Giuoco Pianissimo, Normal",
+    "eco": "C50"
+  },
+  "skewer/e8bca0af04067f28": {
+    "name": "King's Indian Attack: Keres Variation",
+    "eco": "A07"
+  },
+  "skewer/f39bdb188640d77f": {
+    "name": "Trompowsky Attack",
+    "eco": "A45"
+  },
+  "skewer/f734c698ad2218f1": {
+    "name": "King's Indian Defense: Orthodox Variation, Glek Defense",
+    "eco": "E94"
+  },
+  "skewer/fc475f5bd51868b0": {
+    "name": "Nimzowitsch Defense: Scandinavian Variation, Exchange Variation",
+    "eco": "B00"
+  },
+  "skewer/046d7a65b372ab25": {
+    "name": "Pirc Defense",
+    "eco": "B00"
+  },
+  "skewer/061376bc81acf373": {
+    "name": "Sicilian Defense: Dragon Variation, Classical Variation, Normal Line",
+    "eco": "B74"
+  },
+  "skewer/13ce05a917da9580": {
+    "name": "Queen's Gambit Declined: Ragozin Defense, Alekhine Variation",
+    "eco": "D38"
+  },
+  "skewer/199518a0dbdd9cb1": {
+    "name": "Ponziani Opening: Jaenisch Counterattack",
+    "eco": "C44"
+  },
+  "skewer/1b30b8354822535d": {
+    "name": "Nimzo-Indian Defense: Normal Variation, Botvinnik System",
+    "eco": "E49"
+  },
+  "skewer/21a6235f8311885d": {
+    "name": "Ruy Lopez: Open, Karpov Gambit",
+    "eco": "C80"
+  },
+  "skewer/2406f90319cc560e": {
+    "name": "English Opening: King's English Variation",
+    "eco": "A20"
+  },
+  "skewer/26f8498ea89a14b6": {
+    "name": "Philidor Defense: Lion Variation",
+    "eco": "C41"
+  },
+  "skewer/28d852cd148221be": {
+    "name": "King's Indian Defense: Fianchetto Variation, Classical Variation",
+    "eco": "E68"
+  },
+  "skewer/2e1517841b0f0852": {
+    "name": "Sicilian Defense: Boleslavsky Variation",
+    "eco": "B58"
+  },
+  "skewer/32533a40732eb406": {
+    "name": "Vienna Game: Mieses Variation",
+    "eco": "C26"
+  },
+  "skewer/352a65eed43dffae": {
+    "name": "Sicilian Defense: Scheveningen Variation, Keres Attack",
+    "eco": "B81"
+  },
+  "skewer/354aa94a7ba77f77": {
+    "name": "Nimzo-Larsen Attack",
+    "eco": "A01"
+  },
+  "skewer/377522202cb294cd": {
+    "name": "Philidor Defense: Lion Variation",
+    "eco": "C41"
+  },
+  "skewer/3f68e5b5194884b4": {
+    "name": "Caro-Kann Defense: Advance Variation, Short Variation",
+    "eco": "B12"
+  },
+  "skewer/42772dfad8bbe6e8": {
+    "name": "Bird Opening",
+    "eco": "A02"
+  },
+  "skewer/48880a030a35dc7f": {
+    "name": "Sicilian Defense: Delayed Alapin Variation",
+    "eco": "B22"
+  },
+  "skewer/4ca7b1e3e66c353b": {
+    "name": "Queen's Gambit Declined: Chigorin Defense, Main Line",
+    "eco": "D07"
+  },
+  "skewer/4e6950b2b2f0c458": {
+    "name": "Sicilian Defense: McDonnell Attack",
+    "eco": "B21"
+  },
+  "skewer/4f11757939aef07f": {
+    "name": "Sicilian Defense: Najdorf Variation, Opocensky Variation, Traditional Line",
+    "eco": "B92"
+  },
+  "skewer/56b9d603892a1188": {
+    "name": "Caro-Kann Defense: Advance Variation, Short Variation",
+    "eco": "B12"
+  },
+  "skewer/588bded5a85b00d2": {
+    "name": "Scandinavian Defense: Gubinsky-Melts Defense",
+    "eco": "B01"
+  },
+  "skewer/59f9e42056c2e331": {
+    "name": "Caro-Kann Defense: Endgame Offer",
+    "eco": "B10"
+  },
+  "skewer/5cdb8e92e0b4773d": {
+    "name": "Sicilian Defense: Moscow Variation, Haag Gambit",
+    "eco": "B52"
+  },
+  "skewer/623d533159776999": {
+    "name": "Queen's Pawn Game: Anti-Torre",
+    "eco": "D02"
+  },
+  "skewer/765ae4dd9b382bb8": {
+    "name": "Italian Game: Evans Gambit, Paulsen Variation",
+    "eco": "C51"
+  },
+  "skewer/848c8fc6db7ba404": {
+    "name": "Italian Game: Giuoco Pianissimo, Canal Variation",
+    "eco": "C50"
+  },
+  "skewer/8692034ad7ae9ace": {
+    "name": "Sicilian Defense: Lasker-Pelikan Variation",
+    "eco": "B33"
+  },
+  "skewer/8a19b6aec065f0d5": {
+    "name": "Ruy Lopez: Steinitz Defense",
+    "eco": "C62"
+  },
+  "skewer/8b4a0cd3fc1c53b1": {
+    "name": "French Defense: Rubinstein Variation, Fort Knox Variation",
+    "eco": "C10"
+  },
+  "skewer/8bc7e0f7f89b641b": {
+    "name": "Benoni Defense: Czech Benoni Defense",
+    "eco": "A56"
+  },
+  "skewer/8cf31dd4ce9a19c3": {
+    "name": "Ruy Lopez: Berlin Defense, Improved Steinitz Defense",
+    "eco": "C66"
+  },
+  "skewer/8fc73efae80bf5e3": {
+    "name": "King's Gambit Accepted: Kieseritzky Gambit, Rice Gambit",
+    "eco": "C39"
+  },
+  "skewer/96246d2764aeb8f1": {
+    "name": "Ruy Lopez: Closed, Flohr System",
+    "eco": "C92"
+  },
+  "skewer/9a9c3783af6c50ae": {
+    "name": "Queen's Pawn Game: Zukertort Variation",
+    "eco": "D02"
+  },
+  "skewer/9df15f0f818e3bae": {
+    "name": "English Opening: Symmetrical Variation, Anti-Benoni Variation",
+    "eco": "A31"
+  },
+  "skewer/a7c0888251425b6e": {
+    "name": "Nimzo-Indian Defense: Simagin Variation",
+    "eco": "E46"
+  },
+  "skewer/af88b08e8f267ba6": {
+    "name": "Queen's Pawn Game: Zukertort Variation",
+    "eco": "D02"
+  },
+  "skewer/b761d1c72c385d01": {
+    "name": "Ruy Lopez: Morphy Defense, Steinitz Deferred",
+    "eco": "C79"
+  },
+  "skewer/bb8f46930baae471": {
+    "name": "Benoni Defense",
+    "eco": "A56"
+  },
+  "skewer/bdede194a49d4d81": {
+    "name": "Queen's Gambit Declined: Semi-Tarrasch Defense, with e3",
+    "eco": "D40"
+  },
+  "skewer/d09194696f1b8414": {
+    "name": "Philidor Defense: Exchange Variation",
+    "eco": "C41"
+  },
+  "skewer/d39b6ae69fa04fb3": {
+    "name": "French Defense: Chigorin Variation",
+    "eco": "C00"
+  },
+  "skewer/dc16bdce47e7b922": {
+    "name": "King's Pawn Game: Tayler Opening, Inverted Hanham",
+    "eco": "C44"
+  },
+  "skewer/e5efd97048545b74": {
+    "name": "King's Indian Attack: Double Fianchetto",
+    "eco": "A07"
+  },
+  "skewer/e899a52d54aabcc4": {
+    "name": "Ruy Lopez: Closed Berlin Defense, Chigorin Variation",
+    "eco": "C66"
+  },
+  "skewer/eb90320742dca76e": {
+    "name": "Benoni Defense: French Benoni",
+    "eco": "A43"
+  },
+  "skewer/f79142da93c0a6b5": {
+    "name": "Slav Defense: Quiet Variation",
+    "eco": "D11"
+  },
+  "skewer/fe8a6c3c31920d9d": {
+    "name": "King's Gambit Accepted: Kieseritzky Gambit, Long Whip",
+    "eco": "C39"
+  },
+  "skewer/ff985fa5bdefb17b": {
+    "name": "Bogo-Indian Defense: Retreat Variation",
+    "eco": "E11"
+  },
+  "skewer/7ffe2bbc362d63a7": {
+    "name": "Petrov's Defense: Three Knights Game",
+    "eco": "C42"
+  },
+  "skewer/0508c33a1662c7c7": {
+    "name": "King's Indian Attack",
+    "eco": "A07"
+  },
+  "skewer/071da8588b9fdbbf": {
+    "name": "Rapport-Jobava System",
+    "eco": "D01"
+  },
+  "skewer/076475ae5c90e35f": {
+    "name": "Nimzo-Larsen Attack",
+    "eco": "A01"
+  },
+  "skewer/0ceb8452e321e985": {
+    "name": "East Indian Defense",
+    "eco": "A48"
+  },
+  "skewer/190e2186af35e6be": {
+    "name": "Anderssen's Opening",
+    "eco": "A00"
+  },
+  "skewer/1e9314e575b3d107": {
+    "name": "Scotch Game: Schmidt Variation",
+    "eco": "C45"
+  },
+  "skewer/21f62f26735388f7": {
+    "name": "Réti Opening: Advance Variation",
+    "eco": "A09"
+  },
+  "skewer/22081813853ca3f2": {
+    "name": "Semi-Slav Defense: Accelerated Move Order",
+    "eco": "D31"
+  },
+  "skewer/29e4412d899d7ac8": {
+    "name": "Sicilian Defense: French Variation, Westerinen Attack",
+    "eco": "B40"
+  },
+  "skewer/2a511bb5c63fffef": {
+    "name": "Sicilian Defense: Godiva Variation",
+    "eco": "B32"
+  },
+  "skewer/31f26959d571357f": {
+    "name": "Queen's Pawn Game: Levitsky Attack",
+    "eco": "D00"
+  },
+  "skewer/34067b709404d402": {
+    "name": "English Opening: Caro-Kann Defensive System",
+    "eco": "A11"
+  },
+  "skewer/3567d6c48307d6fe": {
+    "name": "Ruy Lopez: Closed, Keres Defense",
+    "eco": "C96"
+  },
+  "skewer/3718126e667e7124": {
+    "name": "Nimzo-Indian Defense: Romanishin Variation",
+    "eco": "E20"
+  },
+  "skewer/374351723a55eab2": {
+    "name": "Dutch Defense: Blackmar's Second Gambit",
+    "eco": "A82"
+  },
+  "skewer/3a3f6d396f946279": {
+    "name": "Sicilian Defense: Richter-Rauzer Variation, Classical Variation",
+    "eco": "B63"
+  },
+  "skewer/3d270ebeb008e62d": {
+    "name": "Sicilian Defense: Najdorf Variation, Opocensky Variation, Traditional Line",
+    "eco": "B92"
+  },
+  "skewer/4c3eddb964c40d4a": {
+    "name": "Caro-Kann Defense: Advance Variation, Short Variation",
+    "eco": "B12"
+  },
+  "skewer/4fe4cf437fc3a78e": {
+    "name": "Ruy Lopez: Morphy Defense, Cozio Defense",
+    "eco": "C70"
+  },
+  "skewer/642892f93014f819": {
+    "name": "Indian Defense: Wade-Tartakower Defense",
+    "eco": "A46"
+  },
+  "skewer/6b6f7594d49d3ac0": {
+    "name": "Nimzo-Indian Defense: Rubinstein System",
+    "eco": "E41"
+  },
+  "skewer/6e9f2e3ef0624802": {
+    "name": "Sicilian Defense: Kan Variation, Knight Variation",
+    "eco": "B43"
+  },
+  "skewer/7073af99fe64b20d": {
+    "name": "Neo-Grünfeld Defense: with g3",
+    "eco": "D72"
+  },
+  "skewer/708e130e38a364aa": {
+    "name": "Sicilian Defense: Lasker-Pelikan Variation, Sveshnikov Variation, Chelyabinsk Variation",
+    "eco": "B33"
+  },
+  "skewer/7540468d6902bfa1": {
+    "name": "Caro-Kann Defense: Classical Variation, Spassky Variation",
+    "eco": "B19"
+  },
+  "skewer/75b01a8fa0ead859": {
+    "name": "Slav Defense: Czech Variation, Carlsbad Variation",
+    "eco": "D17"
+  },
+  "skewer/78b290b7758e4b0a": {
+    "name": "Grünfeld Defense: Stockholm Variation",
+    "eco": "D80"
+  },
+  "skewer/78bc4195c02fcca8": {
+    "name": "English Opening: King's English Variation, Kramnik-Shirov Counterattack",
+    "eco": "A21"
+  },
+  "skewer/7d5f5bc0049c5aef": {
+    "name": "Nimzo-Indian Defense: Normal Variation, Gligoric System, Smyslov Variation",
+    "eco": "E54"
+  },
+  "skewer/7d94b915b00281e4": {
+    "name": "Old Indian Defense",
+    "eco": "A53"
+  },
+  "skewer/885c185947460e08": {
+    "name": "Indian Defense: Normal Variation",
+    "eco": "A50"
+  },
+  "skewer/8a1d7ea5062aebc9": {
+    "name": "King's Indian Defense: Normal Variation, King's Knight Variation",
+    "eco": "E60"
+  },
+  "skewer/914065b4ade088a9": {
+    "name": "Sicilian Defense: Chekhover Variation",
+    "eco": "B53"
+  },
+  "skewer/9bf563240af5538f": {
+    "name": "Italian Game: Evans Gambit, Alapin-Steinitz Variation",
+    "eco": "C52"
+  },
+  "skewer/a14535c55702022f": {
+    "name": "King's Indian Defense: Sämisch Variation, Double Fianchetto",
+    "eco": "E82"
+  },
+  "skewer/a5988e6505b07de6": {
+    "name": "Caro-Kann Defense: Exchange Variation",
+    "eco": "B13"
+  },
+  "skewer/aee75c01900328b7": {
+    "name": "Mexican Defense",
+    "eco": "A50"
+  },
+  "skewer/b0d72108f0603156": {
+    "name": "Semi-Slav Defense: Meran Variation",
+    "eco": "D47"
+  },
+  "skewer/b626f65bf017f534": {
+    "name": "Sicilian Defense: Taimanov Variation, Bastrikov Variation, English Attack",
+    "eco": "B48"
+  },
+  "skewer/ce56a7bb9d205544": {
+    "name": "Queen's Gambit Declined: Harrwitz Attack, Fianchetto Defense",
+    "eco": "D37"
+  },
+  "skewer/cefe707103121620": {
+    "name": "Sicilian Defense: Accelerated Dragon, Maróczy Bind",
+    "eco": "B36"
+  },
+  "skewer/dae6aab1a698fbea": {
+    "name": "Scandinavian Defense: Modern Variation",
+    "eco": "B01"
+  },
+  "skewer/e2b9f7473efb3e29": {
+    "name": "Semi-Slav Defense: Accelerated Move Order",
+    "eco": "D31"
+  },
+  "skewer/e68c96ad5a8171a0": {
+    "name": "Modern Defense: Averbakh System",
+    "eco": "A42"
+  },
+  "skewer/f2fc8f381be1daf3": {
+    "name": "King's Indian Defense: Normal Variation, King's Knight Variation",
+    "eco": "E60"
+  },
+  "skewer/f3c7d1d2d2a71517": {
+    "name": "Queen's Gambit Declined",
+    "eco": "D53"
+  },
+  "skewer/f9e7204ff6fdb584": {
+    "name": "Ruy Lopez: Berlin Defense, l'Hermet Variation, Berlin Wall Defense",
+    "eco": "C67"
+  },
+  "skewer/fae5ef59ac46edf3": {
+    "name": "Caro-Kann Defense: Advance Variation, Tal Variation",
+    "eco": "B12"
+  },
+  "skewer/fae98a5b202d9fc8": {
+    "name": "English Opening: King's English Variation, Adhiban Gambit",
+    "eco": "A22"
+  },
+  "skewer/fbbfab6b82fbdfcc": {
+    "name": "Ruy Lopez: Berlin Defense, Rio de Janeiro Variation",
+    "eco": "C67"
+  },
+  "skewer/09e22f119d0e76db": {
+    "name": "Sicilian Defense: Najdorf Variation",
+    "eco": "B90"
+  },
+  "skewer/1b8a0ed2fdb2d1c7": {
+    "name": "Queen's Gambit Accepted: Classical Defense, Alekhine System, Main Line",
+    "eco": "D29"
+  },
+  "skewer/1c7a272b66558295": {
+    "name": "French Defense: Normal Variation",
+    "eco": "C00"
+  },
+  "skewer/1d80bf1d986835b4": {
+    "name": "Ruy Lopez: Exchange, Alekhine Variation",
+    "eco": "C68"
+  },
+  "skewer/1fb753a5aa5925e8": {
+    "name": "English Opening: Anglo-Dutch Defense",
+    "eco": "A10"
+  },
+  "skewer/3bf913d425cf0f37": {
+    "name": "King's Indian Defense: Kramer Variation",
+    "eco": "E70"
+  },
+  "skewer/4b6e1521ffd8e686": {
+    "name": "Van't Kruijs Opening",
+    "eco": "A00"
+  },
+  "skewer/5a96185a56e340b0": {
+    "name": "Four Knights Game: Spanish Variation, Symmetrical Variation",
+    "eco": "C49"
+  },
+  "skewer/5ec4b09462c03411": {
+    "name": "Nimzo-Indian Defense: Kmoch Variation",
+    "eco": "E20"
+  },
+  "skewer/669ce841cd72378a": {
+    "name": "Ruy Lopez: Bird Variation",
+    "eco": "C61"
+  },
+  "skewer/6ad0d063cbf627f0": {
+    "name": "Dutch Defense: Classical Variation",
+    "eco": "A90"
+  },
+  "skewer/6b63b2aa5cb801be": {
+    "name": "French Defense: La Bourdonnais Variation",
+    "eco": "C00"
+  },
+  "skewer/6dcd0cab3f327f8f": {
+    "name": "King's Gambit Accepted: Kieseritzky Gambit, Berlin Defense, de Riviere Variation",
+    "eco": "C39"
+  },
+  "skewer/6e6dd52a19a4e871": {
+    "name": "Modern Defense",
+    "eco": "B06"
+  },
+  "skewer/6f8e596f63d11a1d": {
+    "name": "Nimzo-Indian Defense: Normal Variation, Gligoric System, Exchange Variation",
+    "eco": "E54"
+  },
+  "skewer/7269ca83002523f7": {
+    "name": "Nimzowitsch Defense: Declined Variation",
+    "eco": "B00"
+  },
+  "skewer/783d4b863d47c107": {
+    "name": "Queen's Pawn Game: Anti-Torre",
+    "eco": "D02"
+  },
+  "skewer/89542d9a6ae02f36": {
+    "name": "Semi-Slav Defense: Meran Variation, Wade Variation",
+    "eco": "D47"
+  },
+  "skewer/a73554de6c228f1b": {
+    "name": "Sicilian Defense: French Variation",
+    "eco": "B40"
+  },
+  "skewer/addf396c754b1c28": {
+    "name": "Ruy Lopez: Berlin Defense, Anti-Berlin Variation",
+    "eco": "C65"
+  },
+  "skewer/b7c5326b3bd9ebbc": {
+    "name": "Italian Game: Evans Gambit, Compromised Defense",
+    "eco": "C52"
+  },
+  "skewer/c24367cce431dfbd": {
+    "name": "Ruy Lopez: Berlin Defense, Rio Gambit Accepted",
+    "eco": "C67"
+  },
+  "skewer/c2592a9ebc02eac7": {
+    "name": "Benoni Defense: Czech Benoni Defense",
+    "eco": "A56"
+  },
+  "skewer/cdb01a65c9046a8f": {
+    "name": "Italian Game: Two Knights Defense, Modern Bishop's Opening",
+    "eco": "C55"
+  },
+  "skewer/cf8f98f3b704a1ba": {
+    "name": "Indian Defense: Wade-Tartakower Defense",
+    "eco": "A46"
+  },
+  "skewer/def1f50659300550": {
+    "name": "Alekhine Defense: Modern Variation, Larsen Variation",
+    "eco": "B04"
+  },
+  "skewer/e4546a5be36e6baf": {
+    "name": "Indian Defense: Spielmann-Indian",
+    "eco": "A46"
+  },
+  "skewer/edf767783999cea2": {
+    "name": "Sicilian Defense: Closed",
+    "eco": "B23"
+  },
+  "skewer/fa8ee847af8ce712": {
+    "name": "French Defense: Tarrasch Variation, Open System",
+    "eco": "C08"
+  },
+  "skewer/fafad5f2bf0d384e": {
+    "name": "Ruy Lopez: Closed, Chigorin Defense",
+    "eco": "C97"
+  },
+  "skewer/06a61d7b0357c7ff": {
+    "name": "Queen's Indian Defense: Kasparov-Petrosian Variation, Petrosian Attack",
+    "eco": "E12"
+  },
+  "skewer/07f1cdfcfa5a80bd": {
+    "name": "English Opening: Anglo-Indian Defense, King's Knight Variation",
+    "eco": "A15"
+  },
+  "skewer/2c7a5bc533dff541": {
+    "name": "Trompowsky Attack: Classical Defense",
+    "eco": "A45"
+  },
+  "skewer/3552bb761dcf3c5c": {
+    "name": "Dutch Defense: Fianchetto Attack",
+    "eco": "A81"
+  },
+  "skewer/3e4a9966a83bb3da": {
+    "name": "Queen's Gambit Declined: Traditional Variation",
+    "eco": "D30"
+  },
+  "skewer/4a2012a2a602a84e": {
+    "name": "Caro-Kann Defense: Advance Variation, Short Variation",
+    "eco": "B12"
+  },
+  "skewer/570d20f5d26d5a7b": {
+    "name": "French Defense: Winawer Variation, Positional Variation",
+    "eco": "C19"
+  },
+  "skewer/61ed6486ae0e66b1": {
+    "name": "Queen's Gambit Declined: Tartakower Defense",
+    "eco": "D58"
+  },
+  "skewer/695e4499e64d57c3": {
+    "name": "Ruy Lopez: Morphy Defense, Modern Steinitz Defense",
+    "eco": "C74"
+  },
+  "skewer/6ad366f40498bc63": {
+    "name": "Slav Defense: Quiet Variation",
+    "eco": "D11"
+  },
+  "skewer/8fba7fefde777817": {
+    "name": "Queen's Indian Defense: Fianchetto Variation, Traditional Line",
+    "eco": "E15"
+  },
+  "skewer/97675ef7e111e612": {
+    "name": "Sicilian Defense: French Variation, Normal",
+    "eco": "B40"
+  },
+  "skewer/9cdf1ac8f4c540da": {
+    "name": "King's Gambit Accepted: Bishop's Gambit, Anderssen Variation",
+    "eco": "C33"
+  },
+  "skewer/a3b4c28887bf187a": {
+    "name": "Sicilian Defense: Najdorf Variation, English Attack, Anti-English",
+    "eco": "B90"
+  },
+  "skewer/ac643a91b033d523": {
+    "name": "Sicilian Defense: French Variation, Westerinen Attack",
+    "eco": "B40"
+  },
+  "skewer/dc58c8092f9f172b": {
+    "name": "Alekhine Defense: Modern Variation, Flohr Variation",
+    "eco": "B05"
+  },
+  "skewer/dd3f1a2df4acf93a": {
+    "name": "Queen's Gambit Accepted: Rosenthal Variation",
+    "eco": "D21"
+  },
+  "skewer/ed42ff96f057a0e3": {
+    "name": "French Defense: Réti-Spielmann Attack",
+    "eco": "C00"
+  },
+  "skewer/f56c8ff8670abf18": {
+    "name": "Ruy Lopez: Open, Classical Defense",
+    "eco": "C83"
+  },
+  "skewer/fc543bddd9f39b23": {
+    "name": "Nimzo-Indian Defense: Normal Variation, Ragozin Variation",
+    "eco": "E51"
+  },
+  "skewer/20639909ef039fe7": {
+    "name": "Queen's Gambit Declined: Exchange Variation",
+    "eco": "D35"
+  },
+  "skewer/2bd61ed84cc63356": {
+    "name": "French Defense: Tarrasch Variation, Open System, Euwe-Keres Line",
+    "eco": "C07"
+  },
+  "skewer/303a834a464f4e5b": {
+    "name": "Queen's Gambit Declined: Exchange Variation, Positional Variation",
+    "eco": "D35"
+  },
+  "skewer/3b44bb60b86f3f35": {
+    "name": "Ruy Lopez: Closed, Center Attack",
+    "eco": "C84"
+  },
+  "skewer/3c14b8943c8f4074": {
+    "name": "Sicilian Defense: Najdorf Variation, Poisoned Pawn Accepted",
+    "eco": "B97"
+  },
+  "skewer/4b0e385495c0bd82": {
+    "name": "French Defense: Classical Variation",
+    "eco": "C13"
+  },
+  "skewer/69e8f6541f42f272": {
+    "name": "Nimzo-Indian Defense: Three Knights Variation",
+    "eco": "E21"
+  },
+  "skewer/77f9d3105a75c124": {
+    "name": "King's Indian Defense: Orthodox Variation",
+    "eco": "E95"
+  },
+  "skewer/967ce770f13be29d": {
+    "name": "King's Indian Attack: Spassky Variation",
+    "eco": "A05"
+  },
+  "skewer/9790d00b325d409d": {
+    "name": "Sicilian Defense: Delayed Alapin Variation",
+    "eco": "B22"
+  },
+  "skewer/996e223c1c5c5c97": {
+    "name": "Ruy Lopez: Closed, Smyslov Defense",
+    "eco": "C93"
+  },
+  "skewer/9a90ce59b0f52115": {
+    "name": "Sicilian Defense: Closed, Traditional",
+    "eco": "B23"
+  },
+  "skewer/a6b42f259130b32d": {
+    "name": "Sicilian Defense: Najdorf Variation",
+    "eco": "B90"
+  },
+  "skewer/b201a90eccee3e8a": {
+    "name": "Benoni Defense",
+    "eco": "A56"
+  },
+  "skewer/b6753b96816ea3eb": {
+    "name": "Queen's Pawn Game: London System",
+    "eco": "D02"
+  },
+  "skewer/e2a812b6d8659d96": {
+    "name": "Slav Defense: Quiet Variation, Schallopp Defense",
+    "eco": "D12"
+  },
+  "skewer/e68716e8bbe63830": {
+    "name": "Sicilian Defense: Closed, Traditional",
+    "eco": "B23"
+  },
+  "skewer/fda482c25f8dbdd5": {
+    "name": "Caro-Kann Defense: Panov Attack",
+    "eco": "B14"
+  },
+  "skewer/13e47df0d2ba481b": {
+    "name": "Ruy Lopez: Berlin Defense",
+    "eco": "C65"
+  },
+  "skewer/2a02e8f0dc23ac3b": {
+    "name": "Sicilian Defense: Chekhover Variation",
+    "eco": "B53"
+  },
+  "skewer/75487687a60846e5": {
+    "name": "Scotch Game: Schmidt Variation",
+    "eco": "C45"
+  },
+  "skewer/7e57ba137c797ff0": {
+    "name": "Tarrasch Defense: Symmetrical Variation",
+    "eco": "D32"
+  },
+  "skewer/856f163bbc878f47": {
+    "name": "Queen's Pawn Game: Accelerated London System",
+    "eco": "D00"
+  },
+  "skewer/8975d0ebd0e74c99": {
+    "name": "Italian Game: Classical Variation, Center Holding Variation",
+    "eco": "C53"
+  },
+  "skewer/91c6c4588bddd812": {
+    "name": "King's Indian Defense: Four Pawns Attack, Dynamic Attack",
+    "eco": "E76"
+  },
+  "skewer/a982f9e5bb1c0eed": {
+    "name": "Queen's Gambit Accepted: Central Variation, McDonnell Defense",
+    "eco": "D20"
+  },
+  "skewer/ad6ea8265a18ad3d": {
+    "name": "King's Gambit Accepted: Bishop's Gambit, Maurian Defense",
+    "eco": "C33"
+  },
+  "skewer/b99ab9db06520f1d": {
+    "name": "Queen's Gambit Declined: Pillsbury Attack",
+    "eco": "D55"
+  },
+  "skewer/c94b9d32e716ac37": {
+    "name": "Sicilian Defense: Najdorf Variation, English Attack, Anti-English",
+    "eco": "B90"
+  },
+  "skewer/cb5f91a81a6d5372": {
+    "name": "English Opening: King's English Variation, Two Knights Variation, Smyslov System",
+    "eco": "A22"
+  },
+  "skewer/db94389431328915": {
+    "name": "Slav Defense: Modern Line",
+    "eco": "D11"
+  },
+  "skewer/0811654b674eb486": {
+    "name": "French Defense: Hecht-Reefschläger Variation",
+    "eco": "C10"
+  },
+  "skewer/431245439f472086": {
+    "name": "Sicilian Defense: Najdorf Variation, Poisoned Pawn Variation",
+    "eco": "B97"
+  },
+  "skewer/5c0b9bee75bd5589": {
+    "name": "Sicilian Defense: Richter-Rauzer Variation, Neo-Modern Variation",
+    "eco": "B67"
+  },
+  "skewer/9ae9354f2fcd397e": {
+    "name": "King's Indian Attack, with e6",
+    "eco": "A07"
+  },
+  "skewer/9cbbeca18b46c128": {
+    "name": "Queen's Gambit Declined: Semi-Tarrasch Defense, Main Line",
+    "eco": "D42"
+  },
+  "skewer/dc9b6168f8208fe9": {
+    "name": "King's Indian Defense: Fianchetto Variation, Larsen Defense",
+    "eco": "E62"
+  },
+  "skewer/f1e5a844a5179c72": {
+    "name": "King's Indian Defense: Fianchetto Variation",
+    "eco": "E60"
+  },
+  "skewer/f9917e4b0b6aede0": {
+    "name": "Queen's Gambit Declined",
+    "eco": "D53"
+  },
+  "skewer/0ba7ddb2ebb3c1d9": {
+    "name": "Sicilian Defense: Moscow Variation",
+    "eco": "B51"
+  },
+  "skewer/455b528432dd1cea": {
+    "name": "King's Gambit Accepted: Traditional Variation",
+    "eco": "C38"
+  },
+  "skewer/5b86917b4d9ea146": {
+    "name": "Slav Indian",
+    "eco": "A50"
+  },
+  "skewer/6171953e619bc603": {
+    "name": "Sicilian Defense: Kan Variation, Wing Attack, Spraggett Attack",
+    "eco": "B43"
+  },
+  "skewer/7af53dfcfcc068e0": {
+    "name": "Nimzowitsch Defense: Kennedy Variation, Paulsen Attack",
+    "eco": "B00"
+  },
+  "skewer/857d89d0fb4500b2": {
+    "name": "Queen's Indian Defense: Fianchetto Variation, Nimzowitsch Variation, Nimzowitsch Attack",
+    "eco": "E15"
+  },
+  "skewer/bff4ea52f42ba9a5": {
+    "name": "English Defense",
+    "eco": "A40"
+  },
+  "skewer/c66e7f7b3bf45ef0": {
+    "name": "Pirc Defense",
+    "eco": "B00"
+  },
+  "skewer/e5735ee159ef246b": {
+    "name": "Caro-Kann Defense: Bronstein-Larsen Variation",
+    "eco": "B16"
+  },
+  "skewer/fd5eaf304ef30586": {
+    "name": "Sicilian Defense: Closed",
+    "eco": "B26"
+  },
+  "skewer/71ad4af002483140": {
+    "name": "Ruy Lopez: Morphy Defense, Anderssen Variation",
+    "eco": "C77"
+  },
+  "two-rook-mate/19af433c073800dc": {
+    "name": "Queen's Pawn Game: Zukertort Variation",
+    "eco": "D02"
+  },
+  "two-rook-mate/2c65b9a4c8d9a5e7": {
+    "name": "Nimzo-Larsen Attack: Modern Variation",
+    "eco": "A01"
+  },
+  "two-rook-mate/4740517afad46261": {
+    "name": "Caro-Kann Defense: Maróczy Variation",
+    "eco": "B12"
+  },
+  "two-rook-mate/66832864b70d07a6": {
+    "name": "Queen's Pawn Game",
+    "eco": "A40"
+  },
+  "two-rook-mate/ad058a144c3b1cb1": {
+    "name": "Nimzo-Larsen Attack: Classical Variation",
+    "eco": "A01"
+  },
+  "two-rook-mate/b707ba469315c1af": {
+    "name": "Queen's Pawn Game",
+    "eco": "A40"
+  },
+  "two-rook-mate/bbe4bb4ebf063c0c": {
+    "name": "Ruy Lopez: Berlin Defense, Anti-Berlin Variation",
+    "eco": "C65"
+  },
+  "two-rook-mate/c103fc38fbc49aaf": {
+    "name": "Rapport-Jobava System",
+    "eco": "D01"
+  },
+  "two-rook-mate/ccda9a07fd1b0672": {
+    "name": "Réti Opening: Anglo-Slav Variation, Bogoljubow Variation",
+    "eco": "A12"
+  },
+  "two-rook-mate/d9e8f73b92de4874": {
+    "name": "Queen's Gambit Declined: Chigorin Defense, Main Line",
+    "eco": "D07"
+  },
+  "two-rook-mate/164cf1dbcce1fda6": {
+    "name": "Semi-Slav Defense",
+    "eco": "D43"
+  },
+  "two-rook-mate/18ba24c4d5fc4fe8": {
+    "name": "Slav Defense: Quiet Variation, Schallopp Defense",
+    "eco": "D12"
+  },
+  "two-rook-mate/4c9eb38a02def1a0": {
+    "name": "Sicilian Defense: Closed, Traditional",
+    "eco": "B23"
+  },
+  "two-rook-mate/4f6fe744df0ed68e": {
+    "name": "Sicilian Defense: Prins Variation",
+    "eco": "B54"
+  },
+  "two-rook-mate/525a9bd885534782": {
+    "name": "Sicilian Defense: Najdorf Variation",
+    "eco": "B96"
+  },
+  "two-rook-mate/a068c9721dbd2e82": {
+    "name": "King's Indian Defense: Orthodox Variation, Gligoric-Taimanov System",
+    "eco": "E92"
+  },
+  "two-rook-mate/b75d42c9c53987ae": {
+    "name": "Réti Opening: Réti Accepted",
+    "eco": "A09"
+  },
+  "two-rook-mate/d7c567f8f38eb74c": {
+    "name": "Queen's Pawn Game: Barry Attack",
+    "eco": "A48"
+  },
+  "two-rook-mate/ede3b9e23b4692c1": {
+    "name": "Sicilian Defense: Taimanov Variation, Modern Line",
+    "eco": "B44"
+  },
+  "two-rook-mate/fc8fb54ad071ee95": {
+    "name": "Zukertort Opening: Queenside Fianchetto Variation",
+    "eco": "A04"
+  },
+  "two-rook-mate/416d57ef1fa8bb24": {
+    "name": "Queen's Gambit Accepted",
+    "eco": "D24"
+  },
+  "two-rook-mate/52054a1938a466e0": {
+    "name": "Pseudo Queen's Indian Defense",
+    "eco": "A47"
+  },
+  "two-rook-mate/58b573f1d5612e0b": {
+    "name": "Sicilian Defense: Najdorf Variation, Opocensky Variation",
+    "eco": "B92"
+  },
+  "two-rook-mate/5ea9584689df1f30": {
+    "name": "Sicilian Defense: Sozin Attack, Main Line",
+    "eco": "B89"
+  },
+  "two-rook-mate/6b6ce7762344914e": {
+    "name": "English Opening: King's English Variation, Four Knights Variation, Fianchetto Line",
+    "eco": "A29"
+  },
+  "two-rook-mate/7d86632d58aae49f": {
+    "name": "King's Indian Defense: Fianchetto Variation, Immediate Fianchetto",
+    "eco": "E60"
+  },
+  "two-rook-mate/8bfad5c79ac4fe0e": {
+    "name": "Slav Defense: Exchange Variation",
+    "eco": "D10"
+  },
+  "two-rook-mate/9840cc3b086dbcb1": {
+    "name": "Petrov's Defense: Classical Attack, Staunton Variation",
+    "eco": "C42"
+  },
+  "two-rook-mate/996fcf43045c7ac4": {
+    "name": "Ruy Lopez: Closed, Yates Variation, Short Attack",
+    "eco": "C91"
+  },
+  "two-rook-mate/b74d5401615c98f6": {
+    "name": "Australian Defense",
+    "eco": "A40"
+  },
+  "two-rook-mate/c94fef5059c44485": {
+    "name": "Sicilian Defense: Lasker-Pelikan Variation, Sveshnikov Variation",
+    "eco": "B33"
+  },
+  "two-rook-mate/f3d4adbc44847312": {
+    "name": "Petrov's Defense: Classical Attack, Jaenisch Variation",
+    "eco": "C42"
+  },
+  "two-rook-mate/148b6099a9d91c82": {
+    "name": "Ruy Lopez: Morphy Defense, Anderssen Variation",
+    "eco": "C77"
+  },
+  "two-rook-mate/1febb2bc8cdafefe": {
+    "name": "Torre Attack: Fianchetto Defense",
+    "eco": "A48"
+  },
+  "two-rook-mate/2e77be687ac08d47": {
+    "name": "Caro-Kann Defense: Advance Variation, Short Variation",
+    "eco": "B12"
+  },
+  "two-rook-mate/354e089ec24aad86": {
+    "name": "Sicilian Defense: Löwenthal Variation",
+    "eco": "B32"
+  },
+  "two-rook-mate/3922e37bb72d622f": {
+    "name": "Queen's Gambit Declined: Charousek Variation",
+    "eco": "D31"
+  },
+  "two-rook-mate/3a3880cff7a239b6": {
+    "name": "French Defense: Advance Variation, Main Line",
+    "eco": "C02"
+  },
+  "two-rook-mate/4ca7b1e3e66c353b": {
+    "name": "Queen's Gambit Declined: Chigorin Defense, Main Line",
+    "eco": "D07"
+  },
+  "two-rook-mate/4e985c8b07b82065": {
+    "name": "Queen's Gambit Declined: Exchange Variation, Positional Variation",
+    "eco": "D35"
+  },
+  "two-rook-mate/55d6f10399ee24a0": {
+    "name": "Ruy Lopez: Open",
+    "eco": "C80"
+  },
+  "two-rook-mate/5ab8ccac65cd16a0": {
+    "name": "Zukertort Opening: Tennison Gambit",
+    "eco": "A06"
+  },
+  "two-rook-mate/5db1418d159f7a76": {
+    "name": "Sicilian Defense: Kan Variation, Maróczy Bind, Réti Variation",
+    "eco": "B41"
+  },
+  "two-rook-mate/755592fab537803a": {
+    "name": "Queen's Gambit Declined",
+    "eco": "D30"
+  },
+  "two-rook-mate/ab0f0462a0c03e56": {
+    "name": "Sicilian Defense: Kan Variation, Knight Variation",
+    "eco": "B43"
+  },
+  "two-rook-mate/b5bbd16be1444773": {
+    "name": "Indian Defense: Accelerated London System",
+    "eco": "A45"
+  },
+  "two-rook-mate/bd9c44a6d0929c08": {
+    "name": "Nimzo-Larsen Attack: Classical Variation",
+    "eco": "A01"
+  },
+  "two-rook-mate/c3657703f8207245": {
+    "name": "Ruy Lopez: Closed, Chigorin Defense",
+    "eco": "C97"
+  },
+  "two-rook-mate/df6df5726bb6fe15": {
+    "name": "Petrov's Defense: Karklins-Martinovsky Variation",
+    "eco": "C42"
+  },
+  "two-rook-mate/e19c23e2a845d800": {
+    "name": "Caro-Kann Defense: Panov Attack",
+    "eco": "B13"
+  },
+  "two-rook-mate/f07626dad7d70674": {
+    "name": "Queen's Pawn Game: Symmetrical Variation",
+    "eco": "D02"
+  },
+  "two-rook-mate/fa18a55a8d05a7d0": {
+    "name": "Italian Game: Classical Variation, Giuoco Pianissimo",
+    "eco": "C54"
+  },
+  "two-rook-mate/60e8c0f409054bb4": {
+    "name": "Sicilian Defense: Modern Variations",
+    "eco": "B50"
+  },
+  "two-rook-mate/774bc9403b79c132": {
+    "name": "French Defense: Tarrasch Variation",
+    "eco": "C03"
+  },
+  "two-rook-mate/00d815c051c6220d": {
+    "name": "Nimzo-Indian Defense: Classical Variation, Noa Variation",
+    "eco": "E37"
+  },
+  "two-rook-mate/044d7fd725952b4b": {
+    "name": "English Opening: Symmetrical Variation, Three Knights Variation",
+    "eco": "A34"
+  },
+  "two-rook-mate/12faf9b2654be35e": {
+    "name": "English Opening: Symmetrical Variation, Anti-Benoni Variation",
+    "eco": "A31"
+  },
+  "two-rook-mate/21c9d91919b135d6": {
+    "name": "Queen's Gambit Declined: Three Knights Variation",
+    "eco": "D37"
+  },
+  "two-rook-mate/38d31b4a2687b66a": {
+    "name": "Sicilian Defense: Nyezhmetdinov-Rossolimo Attack",
+    "eco": "B30"
+  },
+  "two-rook-mate/49119eb094fd474e": {
+    "name": "Sicilian Defense: Najdorf Variation, English Attack",
+    "eco": "B90"
+  },
+  "two-rook-mate/55ff5815e7819283": {
+    "name": "Queen's Indian Defense: Spassky System",
+    "eco": "E14"
+  },
+  "two-rook-mate/6b063cae4db9c5d7": {
+    "name": "English Opening: King's English Variation, Reversed Sicilian",
+    "eco": "A21"
+  },
+  "two-rook-mate/73caa649590677c8": {
+    "name": "King's Indian Defense: Orthodox Variation, Modern System",
+    "eco": "E97"
+  },
+  "two-rook-mate/7a0794404bbee9b9": {
+    "name": "Italian Game: Two Knights Defense, Steinitz Variation",
+    "eco": "C59"
+  },
+  "two-rook-mate/9cdab4f80c080497": {
+    "name": "Scandinavian Defense: Valencian Variation",
+    "eco": "B01"
+  },
+  "two-rook-mate/bb646fcffe99fb01": {
+    "name": "Ruy Lopez: Closed, Delayed Exchange",
+    "eco": "C85"
+  },
+  "two-rook-mate/c2d48e25249c1bb8": {
+    "name": "Wade Defense",
+    "eco": "A41"
+  },
+  "two-rook-mate/c91bda880bf5e998": {
+    "name": "Sicilian Defense: Scheveningen Variation, Keres Attack",
+    "eco": "B81"
+  },
+  "two-rook-mate/cd731fb30bd583c3": {
+    "name": "Nimzo-Indian Defense: Classical Variation",
+    "eco": "E32"
+  },
+  "two-rook-mate/ecdd923b8fc8de90": {
+    "name": "Nimzo-Indian Defense: Simagin Variation",
+    "eco": "E46"
+  },
+  "two-rook-mate/f788e7dadf8c0d99": {
+    "name": "Modern Defense: Averbakh System",
+    "eco": "A42"
+  },
+  "two-rook-mate/a966adeeecf00e3b": {
+    "name": "English Opening: Symmetrical, Hedgehog, Flexible Formation",
+    "eco": "A30"
+  },
+  "two-rook-mate/ad9d5eb9012f97c5": {
+    "name": "English Opening: King's English Variation",
+    "eco": "A20"
+  },
+  "two-rook-mate/eb3b0ccdd97a1e94": {
+    "name": "King's Indian Defense: Sämisch Variation",
+    "eco": "E80"
+  },
+  "two-rook-mate/f35f2a4a52555a23": {
+    "name": "Sicilian Defense: Kan Variation",
+    "eco": "B41"
+  },
+  "two-rook-mate/6466bfde499f01e9": {
+    "name": "Italian Game: Classical Variation, Giuoco Pianissimo",
+    "eco": "C54"
+  },
+  "two-rook-mate/b00511d9bf0b35a1": {
+    "name": "Queen's Indian Defense: Capablanca Variation",
+    "eco": "E16"
+  },
+  "two-rook-mate/df290b0fb51485e1": {
+    "name": "Slav Defense: Modern Line",
+    "eco": "D11"
+  }
+}

@@ -1,0 +1,155 @@
+[
+  {
+    "fen": "6B1/8/8/8/2K1n3/8/8/7k w - - 0 1",
+    "reason": "Removed at user request: unsuitable beginner pin exercise.",
+    "date": "2026-10-25"
+  },
+  {
+    "fen": "8/6B1/8/6n1/8/6K1/8/2k5 w - - 0 1",
+    "reason": "Removed at user request: unsuitable beginner pin exercise.",
+    "date": "2026-10-25"
+  },
+  {
+    "id": "pin-beginner-20261027-05",
+    "fen": "8/7K/8/8/3n4/2BRb1k1/8/8 w - - 0 1",
+    "moves": [
+      "Bxd4"
+    ],
+    "reason": "Rxe3+ safely wins the bishop immediately (330), comparable to the published Bxd4 knight gain (320); unnecessary competing free capture for this introductory pin lesson.",
+    "date": "2026-10-27"
+  },
+  {
+    "id": "pin-beginner-20261027-01",
+    "fen": "2R5/8/7k/8/8/2p4q/7R/7K w - - 0 1",
+    "moves": [
+      "Rxc3",
+      "Kh7",
+      "Rcxh3+"
+    ],
+    "reason": "User removal: Rxh3+ immediately wins the undefended queen; the published Rxc3 line obscures the simpler gain.",
+    "date": "2026-10-27"
+  },
+  {
+    "id": "pin-beginner-20261027-06",
+    "fen": "8/8/kN3r1b/8/8/4B3/3K4/8 b - - 0 1",
+    "moves": [
+      "Rxb6",
+      "Ke1",
+      "Bxe3"
+    ],
+    "reason": "User removal: Bxe3+ followed by Kxb6 after Kxe3 wins the knight without relying on the published pinned-defender capture.",
+    "date": "2026-10-27"
+  },
+  {
+    "id": "pin-beginner-20261027-04",
+    "fen": "8/8/1r3N2/8/8/8/4rR1K/4k3 b - - 0 1",
+    "moves": [
+      "Rxf6",
+      "Kh1",
+      "Kxf2"
+    ],
+    "reason": "User removal: Kxf2 or Rxf2+ immediately wins the rook; Rxf6 is an unnecessary detour.",
+    "date": "2026-10-27"
+  },
+  {
+    "id": "pin-beginner-20261027-02",
+    "fen": "8/4K3/5Q2/7k/3P3b/8/8/3q4 b - - 0 1",
+    "moves": [
+      "Qxd4",
+      "Qxh4+",
+      "Kxh4"
+    ],
+    "reason": "User removal: Bxf6+ wins queen for bishop immediately; the pawn capture is an unsuitable beginner demonstration.",
+    "date": "2026-10-27"
+  },
+  {
+    "id": "pin-beginner-20261027-09",
+    "fen": "8/8/8/2K5/q1nR4/7P/2Qn4/6k1 w - - 0 1",
+    "moves": [
+      "Qxd2",
+      "Nxd2",
+      "Rxa4"
+    ],
+    "reason": "Qxa4 immediately wins the undefended queen; the relative-pin sequence is unnecessary.",
+    "date": "2026-10-27"
+  },
+  {
+    "id": "pin-beginner-20261027-12",
+    "fen": "6R1/p4N2/4b3/2k1P2K/8/3n4/8/8 b - - 0 1",
+    "moves": [
+      "Nxe5",
+      "Nxe5",
+      "Bxg8"
+    ],
+    "reason": "Bxf7+ wins the knight and then the rook on g8; Nxe5 is a weaker, less clear detour.",
+    "date": "2026-10-27"
+  },
+  {
+    "id": "pin-beginner-20261027-14",
+    "fen": "1k6/2q5/1p1P4/2r5/2N4K/8/2Q5/8 b - - 0 1",
+    "moves": [
+      "Qxd6",
+      "Nxd6",
+      "Rxc2"
+    ],
+    "reason": "Rxc4+ is a stronger direct capture: Qxc4 is answered by Qxc4, winning queen for rook as well as the knight. The published pawn capture is an unnecessarily indirect beginner example.",
+    "date": "2026-10-27"
+  },
+  {
+    "id": "pin-beginner-20261027-03",
+    "fen": "8/2R1n3/8/3k4/4r3/5B2/5K2/8 w - - 0 1",
+    "moves": [
+      "Rxe7"
+    ],
+    "reason": "Bxe4+ directly captures the rook with check. Even Kxe4 leaves a net exchange gain of 170 cp; every other immediate reply retains at least that gain. Rxe7 uses the pin to win a knight, but the simpler direct material gain makes this unsuitable for the requested introductory lesson.",
+    "date": "2026-10-27"
+  },
+  {
+    "id": "pin-beginner-20261027-08",
+    "fen": "8/3q4/3N4/2krP1K1/8/8/8/8 b - - 0 1",
+    "moves": [
+      "Qxd6"
+    ],
+    "reason": "User-rejected example: Rxe5+ captures the pawn safely with check and gains 100 cp of material after every immediate legal reply, without exploiting a pinned defender. The engine continuation can then take the knight. Qxd6 gains more immediately, but that does not make this a focused introductory pin exercise.",
+    "date": "2026-10-27"
+  },
+  {
+    "id": "pin-beginner-expansion-rejected-bishop-trade",
+    "date": "2026-10-27",
+    "fen": "8/2k1P2K/6N1/2b5/4b3/8/8/8 b - - 0 1",
+    "moves": [
+      "Bxe7"
+    ],
+    "reason": "Rejected during expansion: Bxg6+ Kxg6 Bxe7 removes the pinned knight first and then wins the pawn, for a net 90-centipawn material gain without the intended pin. A direct root gain check alone missed this two-move bypass.",
+    "bypassLine": [
+      "Bxg6+",
+      "Kxg6",
+      "Bxe7"
+    ],
+    "netMaterialGain": 90
+  },
+  {
+    "id": "pin-beginner-20261027-07",
+    "fen": "2k5/1n6/B7/p7/8/Q7/6K1/8 w - - 0 1",
+    "moves": [
+      "Qxa5"
+    ],
+    "reason": "Removed at user request: the composed knight pinned to the king on c8, with Qxa5 as the saved solution.",
+    "date": "2026-10-27"
+  },
+  {
+    "fen": "7r/5P2/8/1k6/8/8/5K2/8 b - - 0 1",
+    "date": "2026-10-27",
+    "reason": "Rejected creation candidate: the pin does not prevent an otherwise available escape from the attacking piece. Do not use a blocked pawn or a pawn that remains attacked after advancing as evidence of the pin benefit."
+  },
+  {
+    "fen": "8/2P4K/8/8/8/1q6/3k4/8 b - - 0 1",
+    "date": "2026-10-27",
+    "reason": "Rejected creation candidate: the pin does not prevent an otherwise available escape from the attacking piece. Do not use a blocked pawn or a pawn that remains attacked after advancing as evidence of the pin benefit."
+  },
+  {
+    "fen": "8/1k6/8/1q6/3P2K1/8/8/8 b - - 0 1",
+    "date": "2026-10-27",
+    "reason": "Rejected creation candidate: the pin does not prevent an otherwise available escape from the attacking piece. Do not use a blocked pawn or a pawn that remains attacked after advancing as evidence of the pin benefit."
+  }
+]

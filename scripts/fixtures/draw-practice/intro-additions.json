@@ -1,0 +1,1331 @@
+{
+  "method": "Exact Syzygy WDL for every legal root and all sample positions; five-piece checking-pawn seed verified by enumerating every legal reply. WDL=0 does not mean automatic termination.",
+  "tableSource": "https://tablebase.lichess.ovh/tables/standard/3-4-5-wdl/",
+  "tables": [
+    {
+      "file": "KBvK.rtbw",
+      "sha256": "bc0d8ab3560de9038460f0e8f61e3b7efd3e3d0327d19ae0387c0da7ddeb244d"
+    },
+    {
+      "file": "KBvKB.rtbw",
+      "sha256": "f0bfff470a9775c0f6693d7c1b73a0879cfed64f9b50cb56872cc15dbe8336ad"
+    },
+    {
+      "file": "KBvKN.rtbw",
+      "sha256": "1d0c01bfb86b5167103f5e46eaa9cfda8b614424cd7749b5e02539c850594bda"
+    },
+    {
+      "file": "KBvKP.rtbw",
+      "sha256": "7ea5491c17771a47cb558bf3ac3d6fe6a85e2075daa34f8ec4fa91b4319c1fe5"
+    },
+    {
+      "file": "KNvK.rtbw",
+      "sha256": "9d3518b12df3d2006441df758bce31e961346e70a11920aaad75c647003bb6e7"
+    },
+    {
+      "file": "KNvKN.rtbw",
+      "sha256": "290b5d295f531ac680e35a3295ff265e89da864fc0363b5d7aca928c8e38faf6"
+    },
+    {
+      "file": "KNvKP.rtbw",
+      "sha256": "f21332cc4b380764847d6c32511dee16cbf56e65604596ca24e784f8e4c13bdb"
+    },
+    {
+      "file": "KPvK.rtbw",
+      "sha256": "02fd2bdcd92821c869458f019f63524def1c9e7a2862ca8d2b16dc7712b16183"
+    },
+    {
+      "file": "KPvKP.rtbw",
+      "sha256": "6d21860e47a91d00841ccf63a657dc09b78f602e0ec005f925470e2449e1ae05"
+    },
+    {
+      "file": "KQvK.rtbw",
+      "sha256": "517667dff787162dbb1ed9d5d6484d30ee854e686ee0675c08d99ecf045d2d50"
+    },
+    {
+      "file": "KQvKB.rtbw",
+      "sha256": "0c18bbcaec0e7c161d56392ff57a39258dd93acd0321e3bbb32f7c05636abeac"
+    },
+    {
+      "file": "KQvKN.rtbw",
+      "sha256": "ba07bd47c6eaa20904b595f43e171c6fc70fcc056cb33696fe12ed254c546100"
+    },
+    {
+      "file": "KQvKP.rtbw",
+      "sha256": "2f92788170e8a5c05608f44a47fd42f3f4fff372d0af64633c56bd081039d8f9"
+    },
+    {
+      "file": "KQvKQ.rtbw",
+      "sha256": "571a85d86e635e48567997ea648fd1e90dde39c9b413b2fe968f5e7faeacfbb0"
+    },
+    {
+      "file": "KQvKR.rtbw",
+      "sha256": "8cdbe3c8e098037875de5854c656f8afeadb8327c85b5b7b1cac81719afd3e2c"
+    },
+    {
+      "file": "KRvK.rtbw",
+      "sha256": "386fbde73308e49a4207836922c68b30b664e83c5a37f7fa37305a15cd16f2f1"
+    },
+    {
+      "file": "KRvKB.rtbw",
+      "sha256": "69b247cb390ffcd729cf5fe5c40f8a24803190bf67b108b8f05b8b08b26a6a72"
+    },
+    {
+      "file": "KRvKN.rtbw",
+      "sha256": "a8cde902b010bf6c8763c97d19b5430b422e74db9cb8e9d5e67fa07373c13c5b"
+    },
+    {
+      "file": "KRvKP.rtbw",
+      "sha256": "3968c2bfced3a5ecfbb54166ec13d4e7b70f3b03c495af4ae87cad2ec75a0749"
+    },
+    {
+      "file": "KRvKR.rtbw",
+      "sha256": "797081b5b3fbac20c4baa5453d68bdae1425b63895f5c9a5ac5c68ea63a97712"
+    }
+  ],
+  "records": [
+    {
+      "id": "draw-composed-335a1e883d619d72",
+      "gameId": "draw-composed-335a1e883d619d72",
+      "sourceKind": "composed",
+      "level": "Beginner",
+      "fen": "k7/7K/8/8/8/8/6p1/3B4 w - - 0 1",
+      "moves": [
+        "Bf3+",
+        "Ka7",
+        "Bxg2"
+      ],
+      "aspect": "Checking bishop fork removes the last pawn",
+      "solution": "Bf3+ — Tượng từ d1 đến f3, vừa chiếu Vua vừa tấn công Tốt g2. Sau khi Vua tránh chiếu, Tượng bắt Tốt; Vua và một Tượng chống Vua là thế không thể có chiếu hết.",
+      "category": "insufficient-material",
+      "outcome": "material",
+      "solverDecisions": 2,
+      "sacrifices": [],
+      "actualGamePlies": 0,
+      "roots": [
+        {
+          "move": "Kh8",
+          "wdl": -2,
+          "immediateMate": false
+        },
+        {
+          "move": "Kg8",
+          "wdl": -2,
+          "immediateMate": false
+        },
+        {
+          "move": "Kg7",
+          "wdl": -2,
+          "immediateMate": false
+        },
+        {
+          "move": "Kh6",
+          "wdl": -2,
+          "immediateMate": false
+        },
+        {
+          "move": "Kg6",
+          "wdl": -2,
+          "immediateMate": false
+        },
+        {
+          "move": "Bh5",
+          "wdl": -2,
+          "immediateMate": false
+        },
+        {
+          "move": "Bg4",
+          "wdl": -2,
+          "immediateMate": false
+        },
+        {
+          "move": "Ba4",
+          "wdl": -2,
+          "immediateMate": false
+        },
+        {
+          "move": "Bf3+",
+          "wdl": 0,
+          "immediateMate": false
+        },
+        {
+          "move": "Bb3",
+          "wdl": -2,
+          "immediateMate": false
+        },
+        {
+          "move": "Be2",
+          "wdl": -2,
+          "immediateMate": false
+        },
+        {
+          "move": "Bc2",
+          "wdl": -2,
+          "immediateMate": false
+        }
+      ],
+      "positions": [
+        {
+          "fen": "k7/7K/8/8/8/8/6p1/3B4 w - - 0 1",
+          "wdl": 0
+        },
+        {
+          "fen": "k7/7K/8/8/8/5B2/6p1/8 b - - 1 1",
+          "wdl": 0
+        },
+        {
+          "fen": "8/k6K/8/8/8/5B2/6p1/8 w - - 2 2",
+          "wdl": 0
+        },
+        {
+          "fen": "8/k6K/8/8/8/8/6B1/8 b - - 0 2",
+          "wdl": 0
+        }
+      ]
+    },
+    {
+      "id": "draw-composed-2afee6264f8e90f1",
+      "gameId": "draw-composed-2afee6264f8e90f1",
+      "sourceKind": "composed",
+      "level": "Beginner",
+      "fen": "8/4N3/8/8/8/2p1k1K1/8/8 w - - 0 1",
+      "moves": [
+        "Nd5+",
+        "Kd4",
+        "Nxc3"
+      ],
+      "aspect": "Unblockable knight fork wins the last pawn with tempo",
+      "solution": "Nd5+ — Mã từ e7 đến d5, vừa chiếu Vua vừa tấn công Tốt c3. Vua phải tránh chiếu; Mã bắt Tốt để đưa về thế Vua và Mã chống Vua.",
+      "category": "insufficient-material",
+      "outcome": "material",
+      "solverDecisions": 2,
+      "sacrifices": [],
+      "actualGamePlies": 0,
+      "roots": [
+        {
+          "move": "Ng8",
+          "wdl": -2,
+          "immediateMate": false
+        },
+        {
+          "move": "Nc8",
+          "wdl": -2,
+          "immediateMate": false
+        },
+        {
+          "move": "Ng6",
+          "wdl": -2,
+          "immediateMate": false
+        },
+        {
+          "move": "Nc6",
+          "wdl": -2,
+          "immediateMate": false
+        },
+        {
+          "move": "Nf5+",
+          "wdl": -2,
+          "immediateMate": false
+        },
+        {
+          "move": "Nd5+",
+          "wdl": 0,
+          "immediateMate": false
+        },
+        {
+          "move": "Kh4",
+          "wdl": -2,
+          "immediateMate": false
+        },
+        {
+          "move": "Kg4",
+          "wdl": -2,
+          "immediateMate": false
+        },
+        {
+          "move": "Kh3",
+          "wdl": -2,
+          "immediateMate": false
+        },
+        {
+          "move": "Kh2",
+          "wdl": -2,
+          "immediateMate": false
+        },
+        {
+          "move": "Kg2",
+          "wdl": -2,
+          "immediateMate": false
+        }
+      ],
+      "positions": [
+        {
+          "fen": "8/4N3/8/8/8/2p1k1K1/8/8 w - - 0 1",
+          "wdl": 0
+        },
+        {
+          "fen": "8/8/8/3N4/8/2p1k1K1/8/8 b - - 1 1",
+          "wdl": 0
+        },
+        {
+          "fen": "8/8/8/3N4/3k4/2p3K1/8/8 w - - 2 2",
+          "wdl": 0
+        },
+        {
+          "fen": "8/8/8/8/3k4/2N3K1/8/8 b - - 0 2",
+          "wdl": 0
+        }
+      ]
+    },
+    {
+      "id": "draw-composed-05aeaa6e0d17bc79",
+      "gameId": "draw-composed-05aeaa6e0d17bc79",
+      "sourceKind": "composed",
+      "level": "Beginner",
+      "fen": "7K/1q1P1k2/8/8/8/8/8/8 w - - 0 1",
+      "moves": [
+        "d8=N+",
+        "Kg6",
+        "Nxb7"
+      ],
+      "aspect": "Knight underpromotion checks and forks the opposing queen",
+      "solution": "d8=N+ — Tốt từ d7 đến d8 và phong Mã, vừa chiếu Vua vừa tấn công Hậu b7. Sau khi Vua tránh chiếu, Mã bắt Hậu; không còn khả năng chiếu hết. Phong Hậu ở đây không giữ được hòa.",
+      "category": "insufficient-material",
+      "outcome": "material",
+      "solverDecisions": 2,
+      "sacrifices": [],
+      "actualGamePlies": 0,
+      "roots": [
+        {
+          "move": "Kh7",
+          "wdl": -2,
+          "immediateMate": false
+        },
+        {
+          "move": "d8=Q",
+          "wdl": -2,
+          "immediateMate": false
+        },
+        {
+          "move": "d8=R",
+          "wdl": -2,
+          "immediateMate": false
+        },
+        {
+          "move": "d8=B",
+          "wdl": -2,
+          "immediateMate": false
+        },
+        {
+          "move": "d8=N+",
+          "wdl": 0,
+          "immediateMate": false
+        }
+      ],
+      "positions": [
+        {
+          "fen": "7K/1q1P1k2/8/8/8/8/8/8 w - - 0 1",
+          "wdl": 0
+        },
+        {
+          "fen": "3N3K/1q3k2/8/8/8/8/8/8 b - - 0 1",
+          "wdl": 0
+        },
+        {
+          "fen": "3N3K/1q6/6k1/8/8/8/8/8 w - - 1 2",
+          "wdl": 0
+        },
+        {
+          "fen": "7K/1N6/6k1/8/8/8/8/8 b - - 0 2",
+          "wdl": 0
+        }
+      ]
+    },
+    {
+      "id": "draw-composed-fc5ad93b6067bc98",
+      "gameId": "draw-composed-fc5ad93b6067bc98",
+      "sourceKind": "composed",
+      "level": "Beginner",
+      "fen": "8/8/4k3/5pP1/K7/8/8/8 w - f6 0 2",
+      "moves": [
+        "gxf6",
+        "Kxf6"
+      ],
+      "aspect": "En passant removes an otherwise escaping enemy pawn",
+      "solution": "gxf6 — Tốt g5 đến f6, bắt qua đường Tốt Đen ở f5 vừa đi từ f7 đến f5. Sau Kxf6, bàn cờ chỉ còn hai Vua. Nếu Đen chưa bắt lại, Trắng vẫn giữ được hòa.",
+      "category": "insufficient-material",
+      "outcome": "material",
+      "solverDecisions": 1,
+      "sacrifices": [],
+      "actualGamePlies": 0,
+      "roots": [
+        {
+          "move": "Kb5",
+          "wdl": -2,
+          "immediateMate": false
+        },
+        {
+          "move": "Ka5",
+          "wdl": -2,
+          "immediateMate": false
+        },
+        {
+          "move": "Kb4",
+          "wdl": -2,
+          "immediateMate": false
+        },
+        {
+          "move": "Kb3",
+          "wdl": -2,
+          "immediateMate": false
+        },
+        {
+          "move": "Ka3",
+          "wdl": -2,
+          "immediateMate": false
+        },
+        {
+          "move": "g6",
+          "wdl": -2,
+          "immediateMate": false
+        },
+        {
+          "move": "gxf6",
+          "wdl": 0,
+          "immediateMate": false
+        }
+      ],
+      "positions": [
+        {
+          "fen": "8/8/4k3/5pP1/K7/8/8/8 w - f6 0 2",
+          "wdl": 0
+        },
+        {
+          "fen": "8/8/4kP2/8/K7/8/8/8 b - - 0 2",
+          "wdl": 0
+        },
+        {
+          "fen": "8/8/5k2/8/K7/8/8/8 w - - 0 3",
+          "wdl": 0
+        }
+      ],
+      "previousMove": {
+        "fen": "8/5p2/4k3/6P1/K7/8/8/8 b - - 0 1",
+        "move": "f5"
+      }
+    },
+    {
+      "id": "draw-composed-b404db408939f576",
+      "gameId": "draw-composed-b404db408939f576",
+      "sourceKind": "composed",
+      "level": "Beginner",
+      "fen": "2k5/4P3/8/8/3K4/8/8/8 b - - 0 1",
+      "moves": [
+        "Kd7",
+        "e8=Q+",
+        "Kxe8"
+      ],
+      "aspect": "Approach the pawn with access to its promotion square",
+      "solution": "Kd7 — Vua từ c8 đến d7, vừa tấn công Tốt e7 vừa kiểm soát ô e8. Nếu Tốt phong cấp như phương án, Vua bắt quân mới để hòa.",
+      "category": "insufficient-material",
+      "outcome": "material",
+      "solverDecisions": 2,
+      "sacrifices": [],
+      "actualGamePlies": 0,
+      "roots": [
+        {
+          "move": "Kb8",
+          "wdl": -2,
+          "immediateMate": false
+        },
+        {
+          "move": "Kd7",
+          "wdl": 0,
+          "immediateMate": false
+        },
+        {
+          "move": "Kc7",
+          "wdl": -2,
+          "immediateMate": false
+        },
+        {
+          "move": "Kb7",
+          "wdl": -2,
+          "immediateMate": false
+        }
+      ],
+      "positions": [
+        {
+          "fen": "2k5/4P3/8/8/3K4/8/8/8 b - - 0 1",
+          "wdl": 0
+        },
+        {
+          "fen": "8/3kP3/8/8/3K4/8/8/8 w - - 1 2",
+          "wdl": 0
+        },
+        {
+          "fen": "4Q3/3k4/8/8/3K4/8/8/8 b - - 0 2",
+          "wdl": 0
+        },
+        {
+          "fen": "4k3/8/8/8/3K4/8/8/8 w - - 0 3",
+          "wdl": 0
+        }
+      ]
+    },
+    {
+      "id": "draw-composed-945cf6199e364e6c",
+      "gameId": "draw-composed-945cf6199e364e6c",
+      "sourceKind": "composed",
+      "level": "Beginner",
+      "fen": "4k3/8/4P3/3K4/8/8/8/8 b - - 0 1",
+      "moves": [
+        "Ke7"
+      ],
+      "aspect": "Take direct opposition while blocking the pawn",
+      "solution": "Ke7 — Vua từ e8 đến e7, đứng ngay trước Tốt e6. Giữ Vua trước Tốt để ngăn phong cấp; đây là thế giữ hòa, chưa phải ván cờ tự động kết thúc.",
+      "category": "fortress",
+      "outcome": "fortress",
+      "solverDecisions": 1,
+      "sacrifices": [],
+      "actualGamePlies": 0,
+      "roots": [
+        {
+          "move": "Kf8",
+          "wdl": -2,
+          "immediateMate": false
+        },
+        {
+          "move": "Kd8",
+          "wdl": -2,
+          "immediateMate": false
+        },
+        {
+          "move": "Ke7",
+          "wdl": 0,
+          "immediateMate": false
+        }
+      ],
+      "positions": [
+        {
+          "fen": "4k3/8/4P3/3K4/8/8/8/8 b - - 0 1",
+          "wdl": 0
+        },
+        {
+          "fen": "8/4k3/4P3/3K4/8/8/8/8 w - - 1 2",
+          "wdl": 0
+        }
+      ]
+    },
+    {
+      "id": "draw-composed-17471cc4d0c2bbee",
+      "gameId": "draw-composed-17471cc4d0c2bbee",
+      "sourceKind": "composed",
+      "level": "Beginner",
+      "fen": "8/2K5/8/8/Bk6/2p5/8/8 w - - 0 1",
+      "moves": [
+        "Bc2"
+      ],
+      "aspect": "Bishop occupies the square immediately ahead of a pawn",
+      "solution": "Bc2 — Tượng từ a4 đến c2 để chặn Tốt c3. Tiếp tục giữ đường chéo chặn Tốt và tránh để Tượng bị bắt; kết thúc đoạn này chưa phải điều kiện tự động hòa.",
+      "category": "fortress",
+      "outcome": "fortress",
+      "solverDecisions": 1,
+      "sacrifices": [],
+      "actualGamePlies": 0,
+      "roots": [
+        {
+          "move": "Kd8",
+          "wdl": -2,
+          "immediateMate": false
+        },
+        {
+          "move": "Kc8",
+          "wdl": -2,
+          "immediateMate": false
+        },
+        {
+          "move": "Kb8",
+          "wdl": -2,
+          "immediateMate": false
+        },
+        {
+          "move": "Kd7",
+          "wdl": -2,
+          "immediateMate": false
+        },
+        {
+          "move": "Kb7",
+          "wdl": -2,
+          "immediateMate": false
+        },
+        {
+          "move": "Kd6",
+          "wdl": -2,
+          "immediateMate": false
+        },
+        {
+          "move": "Kc6",
+          "wdl": -2,
+          "immediateMate": false
+        },
+        {
+          "move": "Kb6",
+          "wdl": -2,
+          "immediateMate": false
+        },
+        {
+          "move": "Be8",
+          "wdl": -2,
+          "immediateMate": false
+        },
+        {
+          "move": "Bd7",
+          "wdl": -2,
+          "immediateMate": false
+        },
+        {
+          "move": "Bc6",
+          "wdl": -2,
+          "immediateMate": false
+        },
+        {
+          "move": "Bb5",
+          "wdl": -2,
+          "immediateMate": false
+        },
+        {
+          "move": "Bb3",
+          "wdl": -2,
+          "immediateMate": false
+        },
+        {
+          "move": "Bc2",
+          "wdl": 0,
+          "immediateMate": false
+        },
+        {
+          "move": "Bd1",
+          "wdl": 0,
+          "immediateMate": false
+        }
+      ],
+      "positions": [
+        {
+          "fen": "8/2K5/8/8/Bk6/2p5/8/8 w - - 0 1",
+          "wdl": 0
+        },
+        {
+          "fen": "8/2K5/8/8/1k6/2p5/2B5/8 b - - 1 1",
+          "wdl": 0
+        }
+      ]
+    },
+    {
+      "id": "draw-composed-8192b4c1563c647a",
+      "gameId": "draw-composed-8192b4c1563c647a",
+      "sourceKind": "composed",
+      "level": "Beginner",
+      "fen": "8/7K/8/8/8/1Nk5/2p5/8 w - - 0 1",
+      "moves": [
+        "Nc1"
+      ],
+      "aspect": "Knight blocks promotion when checking is unnecessary",
+      "solution": "Nc1 — Mã từ b3 đến c1, chặn ngay ô phong cấp của Tốt c2. Giữ Mã an toàn và tiếp tục ngăn Tốt phong cấp; ván cờ chưa tự động kết thúc.",
+      "category": "fortress",
+      "outcome": "fortress",
+      "solverDecisions": 1,
+      "sacrifices": [],
+      "actualGamePlies": 0,
+      "roots": [
+        {
+          "move": "Kh8",
+          "wdl": -2,
+          "immediateMate": false
+        },
+        {
+          "move": "Kg8",
+          "wdl": -2,
+          "immediateMate": false
+        },
+        {
+          "move": "Kg7",
+          "wdl": -2,
+          "immediateMate": false
+        },
+        {
+          "move": "Kh6",
+          "wdl": -2,
+          "immediateMate": false
+        },
+        {
+          "move": "Kg6",
+          "wdl": -2,
+          "immediateMate": false
+        },
+        {
+          "move": "Nc5",
+          "wdl": -2,
+          "immediateMate": false
+        },
+        {
+          "move": "Na5",
+          "wdl": -2,
+          "immediateMate": false
+        },
+        {
+          "move": "Nd4",
+          "wdl": -2,
+          "immediateMate": false
+        },
+        {
+          "move": "Nd2",
+          "wdl": -2,
+          "immediateMate": false
+        },
+        {
+          "move": "Nc1",
+          "wdl": 0,
+          "immediateMate": false
+        },
+        {
+          "move": "Na1",
+          "wdl": -2,
+          "immediateMate": false
+        }
+      ],
+      "positions": [
+        {
+          "fen": "8/7K/8/8/8/1Nk5/2p5/8 w - - 0 1",
+          "wdl": 0
+        },
+        {
+          "fen": "8/7K/8/8/8/2k5/2p5/2N5 b - - 1 1",
+          "wdl": 0
+        }
+      ]
+    },
+    {
+      "id": "draw-composed-f5c6bb8fdb0ba9f2",
+      "gameId": "draw-composed-f5c6bb8fdb0ba9f2",
+      "sourceKind": "composed",
+      "level": "Beginner",
+      "fen": "8/8/8/8/K7/6pB/7k/8 w - - 0 1",
+      "moves": [
+        "Bf1"
+      ],
+      "aspect": "Long diagonal controls the pawn advance from a distance",
+      "solution": "Bf1 — Tượng từ h3 đến f1 để khống chế g2. Khi Tốt g3 tiến, Tượng có thể bắt Tốt; cần giữ đường chéo này trong các nước tiếp theo.",
+      "category": "fortress",
+      "outcome": "fortress",
+      "solverDecisions": 1,
+      "sacrifices": [],
+      "actualGamePlies": 0,
+      "roots": [
+        {
+          "move": "Kb5",
+          "wdl": -2,
+          "immediateMate": false
+        },
+        {
+          "move": "Ka5",
+          "wdl": -2,
+          "immediateMate": false
+        },
+        {
+          "move": "Kb4",
+          "wdl": -2,
+          "immediateMate": false
+        },
+        {
+          "move": "Kb3",
+          "wdl": -2,
+          "immediateMate": false
+        },
+        {
+          "move": "Ka3",
+          "wdl": -2,
+          "immediateMate": false
+        },
+        {
+          "move": "Bc8",
+          "wdl": -2,
+          "immediateMate": false
+        },
+        {
+          "move": "Bd7",
+          "wdl": -2,
+          "immediateMate": false
+        },
+        {
+          "move": "Be6",
+          "wdl": -2,
+          "immediateMate": false
+        },
+        {
+          "move": "Bf5",
+          "wdl": -2,
+          "immediateMate": false
+        },
+        {
+          "move": "Bg4",
+          "wdl": -2,
+          "immediateMate": false
+        },
+        {
+          "move": "Bg2",
+          "wdl": -2,
+          "immediateMate": false
+        },
+        {
+          "move": "Bf1",
+          "wdl": 0,
+          "immediateMate": false
+        }
+      ],
+      "positions": [
+        {
+          "fen": "8/8/8/8/K7/6pB/7k/8 w - - 0 1",
+          "wdl": 0
+        },
+        {
+          "fen": "8/8/8/8/K7/6p1/7k/5B2 b - - 1 1",
+          "wdl": 0
+        }
+      ]
+    },
+    {
+      "id": "draw-composed-a1601bd387e1a331",
+      "gameId": "draw-composed-a1601bd387e1a331",
+      "sourceKind": "composed",
+      "level": "Beginner",
+      "fen": "K7/8/8/8/8/6k1/5p2/1N6 w - - 0 1",
+      "moves": [
+        "Nd2",
+        "f1=Q",
+        "Nxf1"
+      ],
+      "aspect": "Knight guards promotion rather than occupying the pawn file",
+      "solution": "Nd2 — Mã từ b1 đến d2, khống chế ô phong cấp f1. Nếu Đen phong cấp, Mã bắt quân vừa xuất hiện; chỉ còn Vua và Mã chống Vua.",
+      "category": "insufficient-material",
+      "outcome": "material",
+      "solverDecisions": 2,
+      "sacrifices": [],
+      "actualGamePlies": 0,
+      "roots": [
+        {
+          "move": "Kb8",
+          "wdl": -2,
+          "immediateMate": false
+        },
+        {
+          "move": "Kb7",
+          "wdl": -2,
+          "immediateMate": false
+        },
+        {
+          "move": "Ka7",
+          "wdl": -2,
+          "immediateMate": false
+        },
+        {
+          "move": "Nc3",
+          "wdl": -2,
+          "immediateMate": false
+        },
+        {
+          "move": "Na3",
+          "wdl": -2,
+          "immediateMate": false
+        },
+        {
+          "move": "Nd2",
+          "wdl": 0,
+          "immediateMate": false
+        }
+      ],
+      "positions": [
+        {
+          "fen": "K7/8/8/8/8/6k1/5p2/1N6 w - - 0 1",
+          "wdl": 0
+        },
+        {
+          "fen": "K7/8/8/8/8/6k1/3N1p2/8 b - - 1 1",
+          "wdl": 0
+        },
+        {
+          "fen": "K7/8/8/8/8/6k1/3N4/5q2 w - - 0 2",
+          "wdl": 0
+        },
+        {
+          "fen": "K7/8/8/8/8/6k1/8/5N2 b - - 0 2",
+          "wdl": 0
+        }
+      ]
+    },
+    {
+      "id": "draw-composed-7e99b83b90b3dfe3",
+      "gameId": "draw-composed-7e99b83b90b3dfe3",
+      "sourceKind": "composed",
+      "level": "Beginner",
+      "fen": "8/3B4/8/8/8/2K1k3/p7/8 w - - 0 1",
+      "moves": [
+        "Kb2",
+        "a1=Q+",
+        "Kxa1"
+      ],
+      "aspect": "Use the king when the bishop cannot control the promotion colour",
+      "solution": "Kb2 — Vua từ c3 đến b2 để chặn Tốt a2 phong cấp an toàn. Tượng d7 đi trên ô đen nên không kiểm soát a1; Vua phải đảm nhiệm việc này.",
+      "category": "insufficient-material",
+      "outcome": "material",
+      "solverDecisions": 2,
+      "sacrifices": [],
+      "actualGamePlies": 0,
+      "roots": [
+        {
+          "move": "Be8",
+          "wdl": -2,
+          "immediateMate": false
+        },
+        {
+          "move": "Bc8",
+          "wdl": -2,
+          "immediateMate": false
+        },
+        {
+          "move": "Be6",
+          "wdl": -2,
+          "immediateMate": false
+        },
+        {
+          "move": "Bc6",
+          "wdl": -2,
+          "immediateMate": false
+        },
+        {
+          "move": "Bf5",
+          "wdl": -2,
+          "immediateMate": false
+        },
+        {
+          "move": "Bb5",
+          "wdl": -2,
+          "immediateMate": false
+        },
+        {
+          "move": "Bg4",
+          "wdl": -2,
+          "immediateMate": false
+        },
+        {
+          "move": "Ba4",
+          "wdl": -2,
+          "immediateMate": false
+        },
+        {
+          "move": "Bh3",
+          "wdl": -2,
+          "immediateMate": false
+        },
+        {
+          "move": "Kc4",
+          "wdl": -2,
+          "immediateMate": false
+        },
+        {
+          "move": "Kb4",
+          "wdl": -2,
+          "immediateMate": false
+        },
+        {
+          "move": "Kb3",
+          "wdl": -2,
+          "immediateMate": false
+        },
+        {
+          "move": "Kc2",
+          "wdl": -2,
+          "immediateMate": false
+        },
+        {
+          "move": "Kb2",
+          "wdl": 0,
+          "immediateMate": false
+        }
+      ],
+      "positions": [
+        {
+          "fen": "8/3B4/8/8/8/2K1k3/p7/8 w - - 0 1",
+          "wdl": 0
+        },
+        {
+          "fen": "8/3B4/8/8/8/4k3/pK6/8 b - - 1 1",
+          "wdl": 0
+        },
+        {
+          "fen": "8/3B4/8/8/8/4k3/1K6/q7 w - - 0 2",
+          "wdl": 0
+        },
+        {
+          "fen": "8/3B4/8/8/8/4k3/8/K7 b - - 0 2",
+          "wdl": 0
+        }
+      ]
+    },
+    {
+      "id": "draw-composed-e31e8a3c485bda9f",
+      "gameId": "draw-composed-e31e8a3c485bda9f",
+      "sourceKind": "composed",
+      "level": "Beginner",
+      "fen": "8/3q4/2k5/8/8/8/8/3Q3K w - - 0 1",
+      "moves": [
+        "Qxd7+",
+        "Kxd7"
+      ],
+      "aspect": "Equal queen exchange removes both sides mating material",
+      "solution": "Qxd7+ — Hậu từ d1 bắt Hậu d7 và chiếu. Khi Vua bắt lại, bàn cờ chỉ còn hai Vua nên hòa. Nếu Vua tránh bắt, Trắng vẫn không thua.",
+      "category": "insufficient-material",
+      "outcome": "material",
+      "solverDecisions": 1,
+      "sacrifices": [],
+      "actualGamePlies": 0,
+      "roots": [
+        {
+          "move": "Kh2",
+          "wdl": -2,
+          "immediateMate": false
+        },
+        {
+          "move": "Kg2",
+          "wdl": -2,
+          "immediateMate": false
+        },
+        {
+          "move": "Kg1",
+          "wdl": -2,
+          "immediateMate": false
+        },
+        {
+          "move": "Qxd7+",
+          "wdl": 0,
+          "immediateMate": false
+        },
+        {
+          "move": "Qd6+",
+          "wdl": -2,
+          "immediateMate": false
+        },
+        {
+          "move": "Qh5",
+          "wdl": 0,
+          "immediateMate": false
+        },
+        {
+          "move": "Qd5+",
+          "wdl": -2,
+          "immediateMate": false
+        },
+        {
+          "move": "Qg4",
+          "wdl": -2,
+          "immediateMate": false
+        },
+        {
+          "move": "Qd4",
+          "wdl": -2,
+          "immediateMate": false
+        },
+        {
+          "move": "Qa4+",
+          "wdl": 0,
+          "immediateMate": false
+        },
+        {
+          "move": "Qf3+",
+          "wdl": 0,
+          "immediateMate": false
+        },
+        {
+          "move": "Qd3",
+          "wdl": -2,
+          "immediateMate": false
+        },
+        {
+          "move": "Qb3",
+          "wdl": 0,
+          "immediateMate": false
+        },
+        {
+          "move": "Qe2",
+          "wdl": 0,
+          "immediateMate": false
+        },
+        {
+          "move": "Qd2",
+          "wdl": -2,
+          "immediateMate": false
+        },
+        {
+          "move": "Qc2+",
+          "wdl": 0,
+          "immediateMate": false
+        },
+        {
+          "move": "Qg1",
+          "wdl": 0,
+          "immediateMate": false
+        },
+        {
+          "move": "Qf1",
+          "wdl": 0,
+          "immediateMate": false
+        },
+        {
+          "move": "Qe1",
+          "wdl": 0,
+          "immediateMate": false
+        },
+        {
+          "move": "Qc1+",
+          "wdl": 0,
+          "immediateMate": false
+        },
+        {
+          "move": "Qb1",
+          "wdl": 0,
+          "immediateMate": false
+        },
+        {
+          "move": "Qa1",
+          "wdl": 0,
+          "immediateMate": false
+        }
+      ],
+      "positions": [
+        {
+          "fen": "8/3q4/2k5/8/8/8/8/3Q3K w - - 0 1",
+          "wdl": 0
+        },
+        {
+          "fen": "8/3Q4/2k5/8/8/8/8/7K b - - 0 1",
+          "wdl": 0
+        },
+        {
+          "fen": "8/3k4/8/8/8/8/8/7K w - - 0 2",
+          "wdl": 0
+        }
+      ]
+    },
+    {
+      "id": "draw-composed-c7b46cee843fcc90",
+      "gameId": "draw-composed-c7b46cee843fcc90",
+      "sourceKind": "composed",
+      "level": "Beginner",
+      "fen": "7k/5Kq1/8/8/8/8/8/6R1 w - - 0 1",
+      "moves": [
+        "Rxg7"
+      ],
+      "aspect": "Capture the checking queen creates immediate opposing stalemate",
+      "solution": "Rxg7 — Xe từ g1 bắt Hậu g7 để giải chiếu. Vua Đen h8 không bị chiếu nhưng cả g8, g7 và h7 đều bị khống chế: hòa do hết nước đi (pat).",
+      "category": "stalemate",
+      "outcome": "stalemate",
+      "solverDecisions": 1,
+      "sacrifices": [],
+      "actualGamePlies": 0,
+      "roots": [
+        {
+          "move": "Ke8",
+          "wdl": -2,
+          "immediateMate": false
+        },
+        {
+          "move": "Ke6",
+          "wdl": -2,
+          "immediateMate": false
+        },
+        {
+          "move": "Rxg7",
+          "wdl": 0,
+          "immediateMate": false
+        }
+      ],
+      "positions": [
+        {
+          "fen": "7k/5Kq1/8/8/8/8/8/6R1 w - - 0 1",
+          "wdl": 0
+        },
+        {
+          "fen": "7k/5KR1/8/8/8/8/8/8 b - - 0 1",
+          "wdl": 0
+        }
+      ]
+    },
+    {
+      "id": "draw-composed-afebe96f65d9cb11",
+      "gameId": "draw-composed-afebe96f65d9cb11",
+      "sourceKind": "composed",
+      "level": "Beginner",
+      "fen": "8/3k4/K7/8/8/2P5/8/8 b - - 0 1",
+      "moves": [
+        "Kc6"
+      ],
+      "aspect": "Lateral king opposition stops the king escorting a pawn",
+      "solution": "Kc6 — Vua từ d7 đến c6, đối diện Vua a6 theo hàng ngang, với ô b6 ở giữa. Chặn đường Vua Trắng tiến sang hỗ trợ Tốt; vẫn phải phòng thủ đúng ở các nước sau.",
+      "category": "fortress",
+      "outcome": "fortress",
+      "solverDecisions": 1,
+      "sacrifices": [],
+      "actualGamePlies": 0,
+      "roots": [
+        {
+          "move": "Ke8",
+          "wdl": -2,
+          "immediateMate": false
+        },
+        {
+          "move": "Kd8",
+          "wdl": -2,
+          "immediateMate": false
+        },
+        {
+          "move": "Kc8",
+          "wdl": -2,
+          "immediateMate": false
+        },
+        {
+          "move": "Ke7",
+          "wdl": -2,
+          "immediateMate": false
+        },
+        {
+          "move": "Kc7",
+          "wdl": -2,
+          "immediateMate": false
+        },
+        {
+          "move": "Ke6",
+          "wdl": -2,
+          "immediateMate": false
+        },
+        {
+          "move": "Kd6",
+          "wdl": -2,
+          "immediateMate": false
+        },
+        {
+          "move": "Kc6",
+          "wdl": 0,
+          "immediateMate": false
+        }
+      ],
+      "positions": [
+        {
+          "fen": "8/3k4/K7/8/8/2P5/8/8 b - - 0 1",
+          "wdl": 0
+        },
+        {
+          "fen": "8/8/K1k5/8/8/2P5/8/8 w - - 1 2",
+          "wdl": 0
+        }
+      ]
+    },
+    {
+      "id": "draw-composed-95669811358c2639",
+      "gameId": "draw-composed-95669811358c2639",
+      "sourceKind": "composed",
+      "level": "Beginner",
+      "fen": "2k5/8/P7/8/8/8/8/7K b - - 0 1",
+      "moves": [
+        "Kb8",
+        "a7+",
+        "Kxa7"
+      ],
+      "aspect": "Approach a rook pawn without entering the square it attacks",
+      "solution": "Kb8 — Vua từ c8 đến b8, giữ ô a8 trong tầm kiểm soát. Không thể đến b7 vì Tốt a6 khống chế ô đó. Nếu a7+, Vua bắt Tốt để hòa.",
+      "category": "insufficient-material",
+      "outcome": "material",
+      "solverDecisions": 2,
+      "sacrifices": [],
+      "actualGamePlies": 0,
+      "roots": [
+        {
+          "move": "Kd8",
+          "wdl": -2,
+          "immediateMate": false
+        },
+        {
+          "move": "Kb8",
+          "wdl": 0,
+          "immediateMate": false
+        },
+        {
+          "move": "Kd7",
+          "wdl": -2,
+          "immediateMate": false
+        },
+        {
+          "move": "Kc7",
+          "wdl": 0,
+          "immediateMate": false
+        }
+      ],
+      "positions": [
+        {
+          "fen": "2k5/8/P7/8/8/8/8/7K b - - 0 1",
+          "wdl": 0
+        },
+        {
+          "fen": "1k6/8/P7/8/8/8/8/7K w - - 1 2",
+          "wdl": 0
+        },
+        {
+          "fen": "1k6/P7/8/8/8/8/8/7K b - - 0 2",
+          "wdl": 0
+        },
+        {
+          "fen": "8/k7/8/8/8/8/8/7K w - - 0 3",
+          "wdl": 0
+        }
+      ]
+    },
+    {
+      "id": "draw-composed-ca2966e8adacbcb1",
+      "gameId": "draw-composed-ca2966e8adacbcb1",
+      "sourceKind": "composed",
+      "level": "Beginner",
+      "fen": "8/8/6kp/8/7P/8/5q2/7K w - - 0 1",
+      "moves": [
+        "h5+",
+        "Kg5"
+      ],
+      "aspect": "Checking pawn advance closes the final pawn move",
+      "solution": "h5+ — Tốt từ h4 đến h5, chiếu Vua và bị Tốt h6 chặn lại. Sau khi Vua Đen tránh chiếu, Trắng không bị chiếu và không còn nước hợp lệ: hòa do hết nước đi (pat).",
+      "category": "stalemate",
+      "outcome": "stalemate",
+      "solverDecisions": 1,
+      "sacrifices": [],
+      "actualGamePlies": 0,
+      "roots": [
+        {
+          "move": "h5+",
+          "wdl": 0,
+          "immediateMate": false
+        }
+      ],
+      "positions": [
+        {
+          "fen": "8/8/6kp/8/7P/8/5q2/7K w - - 0 1",
+          "wdl": 0
+        },
+        {
+          "fen": "8/8/6kp/7P/8/8/5q2/7K b - - 0 1",
+          "wdl": 0
+        },
+        {
+          "fen": "8/8/7p/6kP/8/8/5q2/7K w - - 1 2",
+          "wdl": 0
+        }
+      ]
+    }
+  ]
+}

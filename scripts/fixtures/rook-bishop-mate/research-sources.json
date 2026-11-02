@@ -1,0 +1,62 @@
+[
+  {
+    "source": "https://www.pgnmentor.com/players/Alekhine.zip",
+    "archive": "Alekhine.zip",
+    "sha256": "59f4c4e46a8bc2d9b4c7798e75a91b6a1676c30ebbc71ab04959fb86fed35b3f"
+  },
+  {
+    "source": "https://www.pgnmentor.com/players/Anand.zip",
+    "archive": "Anand.zip",
+    "sha256": "9f7227690c26ed05688cf1c118c46585c8d6a69a054764f5ef2649c47aeb292f"
+  },
+  {
+    "source": "https://www.pgnmentor.com/players/Carlsen.zip",
+    "archive": "Carlsen.zip",
+    "sha256": "29347942a512b260814717592c82cf6f3cd5975925a0b1732ef60f734651553d"
+  },
+  {
+    "source": "https://www.pgnmentor.com/players/Ivanchuk.zip",
+    "archive": "Ivanchuk.zip",
+    "sha256": "7ec014b95ad9d5c2540287ad7c53ef1ad8cc7fed76d34ad4ae4a5a6fd31f21d6"
+  },
+  {
+    "source": "https://www.pgnmentor.com/players/Kasparov.zip",
+    "archive": "Kasparov.zip",
+    "sha256": "c5acd2fa3175af0a32a3b45fc57282b21aaeda973a47b1e126668166a34a5702"
+  },
+  {
+    "source": "https://www.pgnmentor.com/players/Keres.zip",
+    "archive": "Keres.zip",
+    "sha256": "d003c60192153cba1ad415707de56639b52113564c93dd391ea0efa373af4d43"
+  },
+  {
+    "source": "https://www.pgnmentor.com/players/Morozevich.zip",
+    "archive": "Morozevich.zip",
+    "sha256": "6a5afeb1a4fb3fa7e255cb7327f3de63249d86fd2e166877da0add97d5f57f6d"
+  },
+  {
+    "source": "https://www.pgnmentor.com/players/Nunn.zip",
+    "archive": "Nunn.zip",
+    "sha256": "b1104d57b963429b95487b15be8b783df041fcdbeaf2372900f3445cc8e71589"
+  },
+  {
+    "source": "https://www.pgnmentor.com/players/PolgarJ.zip",
+    "archive": "PolgarJ.zip",
+    "sha256": "93d9ea786c536d718ae1845867ff0b045b8dd343c94211c9467dfe39eb3342c1"
+  },
+  {
+    "source": "https://www.pgnmentor.com/players/Shirov.zip",
+    "archive": "Shirov.zip",
+    "sha256": "b2d9883ee1489c06f4aa0f7743b4f1f30674d4e76e3742715a2f5a62d19831b4"
+  },
+  {
+    "source": "https://www.pgnmentor.com/players/Tal.zip",
+    "archive": "Tal.zip",
+    "sha256": "4fef900575a39450bfe953fd60ede363c2d72994fdf388494374d68708588afd"
+  },
+  {
+    "source": "https://www.pgnmentor.com/players/Topalov.zip",
+    "archive": "Topalov.zip",
+    "sha256": "77b824a291d8e13325a1c5b7e6b32248c3828a43ea0e7cfba76aecac438fb183"
+  }
+]

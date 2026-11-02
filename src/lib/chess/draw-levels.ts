@@ -10,9 +10,9 @@ export type DrawDifficulty = {
 export const drawLevelDescriptions: Record<DrawLevel, string> = {
   A: 'Nhận biết — một nước rõ ràng, mẫu cơ bản.',
   B: 'Phối hợp đơn giản — tính ngắn hoặc giữ một vùng phòng thủ quen thuộc.',
-  C: 'Hy sinh đơn giản — nhường vật chất với mục đích rõ trong đoạn đã chơi.',
-  'C*': 'Tính trước — so sánh các nhánh hoặc phối hợp nhiều nước; chưa xác nhận hy sinh.',
-  D: 'Chiến thuật nâng cao — hy sinh phức tạp và tính hơn 3 nước của bên giải.',
+  C: 'Thí quân đơn giản — nhường vật chất để đạt mục tiêu của bài.',
+  'C*': 'Tính trước — không thí quân, cần tính xa hơn B từ hai đến ba nước.',
+  D: 'Chiến thuật nâng cao — thí quân phức tạp và tính hơn 3 nước của bên giải.',
 };
 
 export function filterDrawLevel<T extends { difficulty?: DrawDifficulty }>(

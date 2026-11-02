@@ -1,6 +1,7 @@
 import { usePracticeBoardTools } from '@/hooks/usePracticeBoardTools';
 import type { GameSource, ReferenceGame } from '@/lib/chess/draw-game-viewer';
 import type { DrawExercise } from '@/lib/chess/draw-practice';
+import { explainLine } from '@/lib/chess/worksheet';
 import {
   drawPositionOutcome,
   evaluateDrawDecision,
@@ -80,8 +81,16 @@ export default function DrawTrainer({
     reference?.kind === 'game' ? 'Xem ván gốc' : 'Xem bài nghiên cứu';
   const lesson = exercise.outcome === 'fortress';
   const decision = exercise.decision;
+  const tactical = [
+    'skewer',
+    'pin',
+    'fork',
+    'discovery',
+    'simplification',
+  ].includes(exercise.outcome);
   const recognition = !decision && exercise.moves.length === 0;
   const [played, setPlayed] = useState<string[]>([]);
+  const [verifiedLines, setVerifiedLines] = useState<string[][]>([]);
   const [review, setReview] = useState(lesson);
   const [reviewPly, setReviewPly] = useState(0);
   const [historyPly, setHistoryPly] = useState<number | null>(null);
@@ -163,7 +172,17 @@ export default function DrawTrainer({
         ? replayDrawExercise(exercise, played).move(move)?.to
         : move.to;
     setMoveFeedback(destination ? { square: destination } : null);
-    const result = tryDrawMove(exercise, played, move);
+    const result = tryDrawMove(
+      {
+        ...exercise,
+        alternativeLines: [
+          ...(exercise.alternativeLines ?? []),
+          ...verifiedLines,
+        ],
+      },
+      played,
+      move
+    );
     setSelectedSquare(null);
     if (result.status === 'illegal') {
       setFeedbackKind('error');
@@ -173,15 +192,28 @@ export default function DrawTrainer({
     if (result.status === 'unrecorded') {
       setFeedbackKind(opening ? 'info' : 'retry');
       setMessage(
-        opening
-          ? 'Nước hợp lệ này chưa có trong bộ biến đã kiểm tra. Bạn có thể dùng “Thử nước khác” để khám phá.'
-          : 'Nước này chưa có trong lời giải. Thử nước khác.'
+        'promotionFailure' in result && result.promotionFailure === 'stalemate'
+          ? 'Nước này dẫn đến hòa do hết nước đi (pat). Hãy chọn quân phong cấp khác để giữ lợi thế vật chất.'
+          : 'promotionFailure' in result && result.promotionFailure === 'dead'
+            ? 'Thế cờ sau phong cấp không còn khả năng chiếu hết và đã hòa. Hãy chọn quân khác để đạt mục tiêu.'
+            : 'promotionFailure' in result &&
+                result.promotionFailure === 'material'
+              ? 'Chưa giữ được lợi thế vật chất trước mọi nước đáp. Hãy kiểm tra khả năng bắt quân mới.'
+              : opening
+                ? 'Nước hợp lệ này chưa có trong các phương án đã kiểm tra. Bạn có thể dùng “Thử nước khác” để khám phá.'
+                : exercise.outcome === 'checkmate'
+                  ? 'Chưa xác minh được cách chiếu hết sau nước này trong số nước yêu cầu. Hãy thử nước khác hoặc xem lời giải.'
+                  : 'Nước này chưa được xác minh theo yêu cầu bài tập. Có thể dùng “Thử nước khác” để phân tích.'
       );
       return false;
     }
     setFeedbackKind('success');
     setHintCount(0);
     setPlayed(result.played);
+    if ('continuation' in result && result.continuation) {
+      const continuation = result.continuation;
+      setVerifiedLines((lines) => [...lines, continuation]);
+    }
     setHistoryPly(null);
     setComplete(result.complete);
     if (result.complete) onComplete?.(assisted);
@@ -224,6 +256,7 @@ export default function DrawTrainer({
     setMoveFeedback(null);
     setHintCount(0);
     setPlayed([]);
+    setVerifiedLines([]);
     setHistoryPly(null);
     setReviewPly(0);
     setComplete(false);
@@ -443,7 +476,7 @@ export default function DrawTrainer({
               <FiGitBranch size={20} aria-hidden="true" />
             </button>
           </Tooltip>
-          {exercise.outcome === 'skewer' && (
+          {(tactical || exercise.outcome === 'checkmate') && (
             <Tooltip
               content="Phân tích thế hiện tại trong tab mới"
               placement="top"
@@ -504,7 +537,7 @@ export default function DrawTrainer({
               />
             </h4>
             {exercise.difficulty && (
-              <span className={styles.levelBadge} title="Mức gợi ý">
+              <span className={styles.levelBadge} title="Cấp độ bài tập">
                 {exercise.difficulty.level}
               </span>
             )}
@@ -531,6 +564,15 @@ export default function DrawTrainer({
               {exercise.gameCaption}
             </p>
           )}
+          {exercise.gameOpening && (
+            <p
+              className={`${styles.gameCaption} ${styles.trainerCaption}`}
+              title={exercise.gameOpening}
+              tabIndex={0}
+            >
+              {exercise.gameOpening}
+            </p>
+          )}
           {viewerOpen && reference && (
             <DrawGameViewer
               reference={reference}
@@ -540,17 +582,38 @@ export default function DrawTrainer({
               onClose={() => setViewerOpen(false)}
             />
           )}
-          {(exercise.outcome !== 'skewer' || decision) && (
+          {exercise.goal && (
+            <p className={styles.exerciseGoal} aria-label="Yêu cầu bài tập">
+              <strong>{initialWhite ? 'Trắng' : 'Đen'} đi</strong>
+              <span aria-hidden="true">·</span>
+              <strong>
+                Mục tiêu:{' '}
+                {
+                  {
+                    win: 'Giành thế thắng',
+                    draw: 'Hòa',
+                    checkmate: 'Chiếu hết',
+                    material: 'Thắng vật chất',
+                  }[exercise.goal]
+                }
+              </strong>
+            </p>
+          )}
+          {(!tactical ||
+            decision ||
+            ['discovery', 'simplification'].includes(exercise.outcome)) && (
             <p>{exercise.prompt}</p>
           )}
           <p className={styles.note}>
             {lesson
-              ? 'Bài học hai phía: dùng nút từng nước để xem cách giữ pháo đài. Hết biến minh họa không đồng nghĩa ván cờ tự động hòa.'
+              ? 'Xem từng nước của cả hai bên để tìm hiểu cách giữ pháo đài. Hết phương án minh họa không đồng nghĩa ván cờ tự động hòa.'
               : recognition || decision
                 ? 'Quan sát bàn cờ và chọn kết luận.'
-                : 'Bạn cầm ' +
-                  (initialWhite ? 'Trắng' : 'Đen') +
-                  '. Kéo quân hoặc chạm ô đi rồi ô đến.'}
+                : exercise.goal
+                  ? 'Kéo quân hoặc chạm ô đi rồi ô đến.'
+                  : 'Bạn cầm ' +
+                    (initialWhite ? 'Trắng' : 'Đen') +
+                    '. Kéo quân hoặc chạm ô đi rồi ô đến.'}
           </p>
           {!recognition && !lesson && (
             <div className={styles.controls}>
@@ -583,7 +646,7 @@ export default function DrawTrainer({
                   setSelectedSquare(null);
                 }}
               >
-                Xem mẫu
+                Xem lời giải
               </button>
             </div>
           )}
@@ -594,7 +657,7 @@ export default function DrawTrainer({
                 {game.turn() === 'w' ? 'Trắng' : 'Đen'} đi
               </p>
               {reviewPly === exercise.moves.length && (
-                <p>Đã xem hết biến minh họa.</p>
+                <p>Đã xem hết phương án minh họa.</p>
               )}
             </>
           )}
@@ -606,9 +669,12 @@ export default function DrawTrainer({
                   setAssisted(true);
                   setFeedbackKind('info');
                   const branch =
-                    [exercise.moves, ...(exercise.alternativeLines ?? [])].find(
-                      (candidate) =>
-                        played.every((move, i) => candidate[i] === move)
+                    [
+                      exercise.moves,
+                      ...(exercise.alternativeLines ?? []),
+                      ...verifiedLines,
+                    ].find((candidate) =>
+                      played.every((move, i) => candidate[i] === move)
                     ) ?? exercise.moves;
                   const hint = replayDrawExercise(exercise, played).move(
                     branch[played.length]
@@ -619,29 +685,42 @@ export default function DrawTrainer({
                       setMessage(
                         stage === 0
                           ? played.length
-                            ? 'Kiểm tra nước chiếu, bắt quân và đe dọa sau đáp trả của đối thủ.'
+                            ? 'Kiểm tra nước chiếu, bắt quân và đe dọa sau đáp trả của đối phương.'
                             : (exercise.hints?.[0] ?? exercise.prompt)
                           : stage === 1
                             ? `Gợi ý: xét quân ở ô ${hint.from}.`
-                            : `Gợi ý: ${hint.san}.`
+                            : `Gợi ý: ${explainLine(replayDrawExercise(exercise, played).fen(), [hint.san])[0]}`
                       );
                       if (stage > 0) setSelectedSquare(hint.from);
                       setHintCount(stage + 1);
-                    } else if (exercise.outcome === 'skewer') {
+                    } else if (tactical) {
                       const stage = Math.min(hintCount, 3);
                       const first =
                         played.length === 0
                           ? exercise.hints?.[0]
-                          : 'Tìm nước buộc đối thủ phải đáp lại để tiếp tục ý tưởng đòn xiên.';
+                          : exercise.outcome === 'simplification'
+                            ? 'Tính đủ các nước đổi và bắt lại. Đánh giá thế cờ còn lại sau khi đổi quân.'
+                            : exercise.outcome === 'discovery'
+                              ? 'Tận dụng đường tấn công vừa được mở. Kiểm tra nước chiếu và nước bắt quân.'
+                              : exercise.outcome === 'pin' ||
+                                  exercise.outcome === 'fork'
+                                ? exercise.outcome === 'fork'
+                                  ? 'Tìm mục tiêu còn bị tấn công sau nước đáp của đối phương.'
+                                  : 'Tìm cách khai thác quân bị ghim.'
+                                : 'Tìm nước buộc đối phương phải đáp lại để tiếp tục ý tưởng đòn xiên.';
                       setMessage(
                         stage === 0
                           ? exercise.prompt
                           : stage === 1
                             ? (first ??
-                              'Tìm hai quân đối phương trên cùng một đường.')
+                              (exercise.outcome === 'discovery'
+                                ? 'Tìm quân đang che đường của Xe, Tượng hoặc Hậu.'
+                                : exercise.outcome === 'fork'
+                                  ? 'Tìm hai mục tiêu có thể bị tấn công cùng lúc.'
+                                  : 'Tìm hai quân đối phương trên cùng một đường.'))
                             : stage === 2
                               ? `Gợi ý: xét quân ở ô ${hint.from}.`
-                              : `Gợi ý: ${hint.san}.`
+                              : `Gợi ý: ${explainLine(replayDrawExercise(exercise, played).fen(), [hint.san])[0]}`
                       );
                       if (stage > 1) setSelectedSquare(hint.from);
                       setHintCount(stage + 1);
@@ -673,7 +752,7 @@ export default function DrawTrainer({
                     setFeedbackKind(correct ? 'success' : 'retry');
                     setMessage(
                       correct
-                        ? 'Đúng. Xem mẫu để kiểm tra nước đáp.'
+                        ? 'Đúng. Xem lời giải để kiểm tra nước đáp.'
                         : decision.retryMessage
                     );
                     if (correct) onComplete?.(assisted);
@@ -698,7 +777,7 @@ export default function DrawTrainer({
                     setMessage(
                       correct
                         ? 'Đúng.'
-                        : 'Chưa đúng. Kiểm tra các nước hợp lệ của Vua.'
+                        : 'Chưa đúng. Kiểm tra xem Vua có bị chiếu và bên đến lượt còn nước đi hợp lệ nào không.'
                     );
                   }}
                 >
@@ -713,10 +792,15 @@ export default function DrawTrainer({
             aria-atomic="true"
             className={styles.hintFeedback}
           >
-            {feedbackKind === 'info' || recognition || decision ? message : ''}
+            {feedbackKind === 'info' ||
+            feedbackKind === 'retry' ||
+            recognition ||
+            decision
+              ? message
+              : ''}
           </div>
           {hasExplored && (
-            <p className={styles.note}>Đã sử dụng chế độ thử biến.</p>
+            <p className={styles.note}>Đã sử dụng chế độ thử phương án.</p>
           )}
           {line.length > 0 && (
             <p className={styles.moves}>
@@ -726,12 +810,15 @@ export default function DrawTrainer({
           {(review || complete) && (
             <div>
               <p className={styles.explanation}>{exercise.solution}</p>
-              {exercise.difficulty && exercise.outcome !== 'skewer' && (
+              {exercise.difficulty && !tactical && (
                 <details className={styles.solution}>
-                  <summary>Vì sao ở mức {exercise.difficulty.level}?</summary>
+                  <summary>
+                    Vì sao ở cấp độ {exercise.difficulty.level}?
+                  </summary>
                   <p>{exercise.difficulty.reason}</p>
                   <p>
-                    Mức gợi ý; giáo viên nên xem lại các nhánh trước khi dạy.
+                    Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu
+                    cầu thí quân.
                   </p>
                 </details>
               )}

@@ -1,0 +1,1140 @@
+[
+  {
+    "fen": "8/4rk2/4R2p/3p1P2/3P3K/4P3/8/8 w - - 3 56",
+    "moves": [
+      "Rxe7+",
+      "Kxe7"
+    ],
+    "endFen": "8/4k3/7p/3p1P2/3P3K/4P3/8/8 w - - 0 57",
+    "passedPawns": [
+      "f5"
+    ],
+    "source": "existing reviewed simplification endpoint and tablebase evidence",
+    "withoutPassers": "8/4k3/7p/3p4/3P3K/4P3/8/8 w - - 0 57",
+    "withoutPassersCategory": "draw",
+    "accepted": true,
+    "reason": "The solver no longer wins when these passed pawns are removed."
+  },
+  {
+    "fen": "8/2BK4/p1P5/2P5/6k1/6bp/P7/8 w - - 0 62",
+    "moves": [
+      "Bxg3",
+      "Kxg3"
+    ],
+    "endFen": "8/3K4/p1P5/2P5/8/6kp/P7/8 w - - 0 63",
+    "passedPawns": [
+      "c5",
+      "c6"
+    ],
+    "source": "existing reviewed simplification endpoint and tablebase evidence",
+    "withoutPassers": "8/3K4/p7/8/8/6kp/P7/8 w - - 0 63",
+    "withoutPassersCategory": "loss",
+    "accepted": true,
+    "reason": "The solver no longer wins when these passed pawns are removed."
+  },
+  {
+    "fen": "5k2/8/1p3p2/1b6/1P6/3N4/1K2P3/8 b - - 0 46",
+    "moves": [
+      "Bxd3",
+      "exd3"
+    ],
+    "endFen": "5k2/8/1p3p2/8/1P6/3P4/1K6/8 b - - 0 47",
+    "passedPawns": [
+      "f6"
+    ],
+    "source": "existing reviewed simplification endpoint and tablebase evidence",
+    "withoutPassers": "5k2/8/1p6/8/1P6/3P4/1K6/8 b - - 0 47",
+    "withoutPassersCategory": "loss",
+    "accepted": true,
+    "reason": "The solver no longer wins when these passed pawns are removed."
+  },
+  {
+    "fen": "8/8/5Kp1/6Rp/7P/6r1/6k1/8 b - - 1 73",
+    "moves": [
+      "Rxg5",
+      "hxg5"
+    ],
+    "endFen": "8/8/5Kp1/6Pp/8/8/6k1/8 b - - 0 74",
+    "passedPawns": [
+      "h5"
+    ],
+    "source": "existing reviewed simplification endpoint and tablebase evidence",
+    "withoutPassers": "8/8/5Kp1/6P1/8/8/6k1/8 b - - 0 74",
+    "withoutPassersCategory": "loss",
+    "accepted": true,
+    "reason": "The solver no longer wins when these passed pawns are removed."
+  },
+  {
+    "fen": "8/6p1/5nKp/8/3p4/2k2P2/8/2B5 b - - 5 58",
+    "moves": [
+      "Kc2",
+      "Bxh6",
+      "gxh6",
+      "Kxf6"
+    ],
+    "endFen": "8/8/5K1p/8/3p4/5P2/2k5/8 b - - 0 60",
+    "passedPawns": [
+      "d4",
+      "h6"
+    ],
+    "source": "existing reviewed simplification endpoint and tablebase evidence",
+    "withoutPassers": "8/8/5K2/8/8/5P2/2k5/8 b - - 0 60",
+    "withoutPassersCategory": "loss",
+    "accepted": true,
+    "reason": "The solver no longer wins when these passed pawns are removed."
+  },
+  {
+    "fen": "8/5pk1/2Q3p1/7p/8/1q4PK/7P/8 b - - 0 45",
+    "moves": [
+      "Qe6+",
+      "Qxe6",
+      "fxe6"
+    ],
+    "endFen": "8/6k1/4p1p1/7p/8/6PK/7P/8 w - - 0 47",
+    "passedPawns": [
+      "e6"
+    ],
+    "source": "existing reviewed simplification endpoint and tablebase evidence",
+    "withoutPassers": "8/6k1/6p1/7p/8/6PK/7P/8 w - - 0 47",
+    "withoutPassersCategory": "draw",
+    "accepted": true,
+    "reason": "The solver no longer wins when these passed pawns are removed."
+  },
+  {
+    "fen": "8/8/8/p1Qp3p/3K4/5P2/k6P/1q6 b - - 1 42",
+    "moves": [
+      "Qg1+",
+      "Kxd5",
+      "Qxc5+",
+      "Kxc5"
+    ],
+    "endFen": "8/8/8/p1K4p/8/5P2/k6P/8 b - - 0 44",
+    "passedPawns": [
+      "a5"
+    ],
+    "source": "existing reviewed simplification endpoint and tablebase evidence",
+    "withoutPassers": "8/8/8/2K4p/8/5P2/k6P/8 b - - 0 44",
+    "withoutPassersCategory": "loss",
+    "accepted": true,
+    "reason": "The solver no longer wins when these passed pawns are removed."
+  },
+  {
+    "fen": "1R6/5p2/5K2/5P2/2r5/2k5/1p6/8 b - - 2 72",
+    "moves": [
+      "Rb4",
+      "Rxb4",
+      "Kxb4"
+    ],
+    "endFen": "8/5p2/5K2/5P2/1k6/8/1p6/8 w - - 0 74",
+    "passedPawns": [
+      "b2"
+    ],
+    "source": "existing reviewed simplification endpoint and tablebase evidence",
+    "withoutPassers": "8/5p2/5K2/5P2/1k6/8/8/8 w - - 0 74",
+    "withoutPassersCategory": "win",
+    "accepted": true,
+    "reason": "The solver no longer wins when these passed pawns are removed."
+  },
+  {
+    "fen": "8/5p2/5k2/2R2rp1/2K5/1P6/2P5/8 b - - 0 45",
+    "moves": [
+      "g4",
+      "Rxf5+",
+      "Kxf5"
+    ],
+    "endFen": "8/5p2/8/5k2/2K3p1/1P6/2P5/8 w - - 0 47",
+    "passedPawns": [
+      "g4",
+      "f7"
+    ],
+    "source": "existing reviewed simplification endpoint and tablebase evidence",
+    "withoutPassers": "8/8/8/5k2/2K5/1P6/2P5/8 w - - 0 47",
+    "withoutPassersCategory": "win",
+    "accepted": true,
+    "reason": "The solver no longer wins when these passed pawns are removed."
+  },
+  {
+    "fen": "8/6k1/p3Qpq1/P4R1P/8/6PK/4r3/8 w - - 3 65",
+    "moves": [
+      "Qxe2",
+      "Qxf5+",
+      "Qg4+",
+      "Qxg4+",
+      "Kxg4"
+    ],
+    "endFen": "8/6k1/p4p2/P6P/6K1/6P1/8/8 b - - 0 67",
+    "passedPawns": [
+      "h5"
+    ],
+    "source": "existing reviewed simplification endpoint and tablebase evidence",
+    "withoutPassers": "8/6k1/p4p2/P7/6K1/6P1/8/8 b - - 0 67",
+    "withoutPassersCategory": "draw",
+    "accepted": true,
+    "reason": "The solver no longer wins when these passed pawns are removed."
+  },
+  {
+    "fen": "2K5/8/2k5/2q5/8/5Q2/7p/8 b - - 51 101",
+    "moves": [
+      "Kd6+",
+      "Kb7",
+      "Qd5+",
+      "Qxd5+",
+      "Kxd5"
+    ],
+    "endFen": "8/1K6/8/3k4/8/8/7p/8 w - - 0 104",
+    "passedPawns": [
+      "h2"
+    ],
+    "source": "existing reviewed simplification endpoint and tablebase evidence",
+    "withoutPassers": "8/1K6/8/3k4/8/8/8/8 w - - 0 104",
+    "withoutPassersCategory": "draw",
+    "accepted": true,
+    "reason": "The solver no longer wins when these passed pawns are removed."
+  },
+  {
+    "fen": "6k1/5pp1/5q1p/8/4K3/2Pp3P/3Q4/8 b - - 2 61",
+    "moves": [
+      "Qe6+",
+      "Kxd3",
+      "Qd5+",
+      "Ke3",
+      "Qxd2+",
+      "Kxd2"
+    ],
+    "endFen": "6k1/5pp1/7p/8/8/2P4P/3K4/8 b - - 0 64",
+    "passedPawns": [
+      "f7"
+    ],
+    "source": "existing reviewed simplification endpoint and tablebase evidence",
+    "withoutPassers": "6k1/6p1/7p/8/8/2P4P/3K4/8 b - - 0 64",
+    "withoutPassersCategory": "draw",
+    "accepted": true,
+    "reason": "The solver no longer wins when these passed pawns are removed."
+  },
+  {
+    "fen": "8/8/4p2B/7p/1np4P/3k1P2/2p5/2K5 b - - 1 58",
+    "moves": [
+      "Na2+",
+      "Kb2",
+      "c1=Q+",
+      "Bxc1",
+      "Nxc1",
+      "Kxc1"
+    ],
+    "endFen": "8/8/4p3/7p/2p4P/3k1P2/8/2K5 b - - 0 61",
+    "passedPawns": [
+      "c4"
+    ],
+    "source": "existing reviewed simplification endpoint and tablebase evidence",
+    "withoutPassers": "8/8/4p3/7p/7P/3k1P2/8/2K5 b - - 0 61",
+    "withoutPassersCategory": "win",
+    "accepted": false,
+    "reason": "Endpoint still wins without the passed pawns; reject incidental passers."
+  },
+  {
+    "fen": "1k1q4/2p5/1P4P1/4Q3/3P4/8/p5PK/8 w - - 2 44",
+    "moves": [
+      "bxc7+",
+      "Qxc7",
+      "g7",
+      "Qxe5+",
+      "dxe5"
+    ],
+    "endFen": "1k6/6P1/8/4P3/8/8/p5PK/8 b - - 0 46",
+    "passedPawns": [
+      "g2",
+      "e5",
+      "g7"
+    ],
+    "source": "existing reviewed simplification endpoint and tablebase evidence",
+    "withoutPassers": "1k6/8/8/8/8/8/p6K/8 b - - 0 46",
+    "withoutPassersCategory": "win",
+    "accepted": true,
+    "reason": "The solver no longer wins when these passed pawns are removed."
+  },
+  {
+    "fen": "8/4b3/4p3/1p1k2p1/5pPP/1P1K4/8/2B5 b - - 0 50",
+    "moves": [
+      "gxh4",
+      "Bxf4",
+      "Bd6",
+      "Bxd6",
+      "Kxd6"
+    ],
+    "endFen": "8/8/3kp3/1p6/6Pp/1P1K4/8/8 w - - 0 53",
+    "passedPawns": [
+      "h4",
+      "e6"
+    ],
+    "source": "existing reviewed simplification endpoint and tablebase evidence",
+    "withoutPassers": "8/8/3k4/1p6/6P1/1P1K4/8/8 w - - 0 53",
+    "withoutPassersCategory": "win",
+    "accepted": true,
+    "reason": "The solver no longer wins when these passed pawns are removed."
+  },
+  {
+    "fen": "8/4k1p1/1Q6/p2P1K2/5P2/8/6qP/8 b - - 4 52",
+    "moves": [
+      "Qxd5+",
+      "Kg6",
+      "Qd6+",
+      "Qxd6+",
+      "Kxd6"
+    ],
+    "endFen": "8/6p1/3k2K1/p7/5P2/8/7P/8 w - - 0 55",
+    "passedPawns": [
+      "a5"
+    ],
+    "source": "existing reviewed simplification endpoint and tablebase evidence",
+    "withoutPassers": "8/6p1/3k2K1/8/5P2/8/7P/8 w - - 0 55",
+    "withoutPassersCategory": "win",
+    "accepted": true,
+    "reason": "The solver no longer wins when these passed pawns are removed."
+  },
+  {
+    "fen": "8/6r1/8/2p5/2k5/8/1R6/3K4 b - - 0 69",
+    "moves": [
+      "Rg1+",
+      "Kd2",
+      "Rg2+",
+      "Kc1",
+      "Rxb2",
+      "Kxb2"
+    ],
+    "endFen": "8/8/8/2p5/2k5/8/1K6/8 b - - 0 72",
+    "passedPawns": [
+      "c5"
+    ],
+    "source": "existing reviewed simplification endpoint and tablebase evidence",
+    "withoutPassers": "8/8/8/8/2k5/8/1K6/8 b - - 0 72",
+    "withoutPassersCategory": "draw",
+    "accepted": true,
+    "reason": "The solver no longer wins when these passed pawns are removed."
+  },
+  {
+    "fen": "8/p1k5/4Q3/1PP4p/2K4P/8/8/3q4 w - - 13 86",
+    "moves": [
+      "Qc6+",
+      "Kb8",
+      "Qd6+",
+      "Qxd6",
+      "cxd6"
+    ],
+    "endFen": "1k6/p7/3P4/1P5p/2K4P/8/8/8 b - - 0 88",
+    "passedPawns": [
+      "d6"
+    ],
+    "source": "existing reviewed simplification endpoint and tablebase evidence",
+    "withoutPassers": "1k6/p7/8/1P5p/2K4P/8/8/8 b - - 0 88",
+    "withoutPassersCategory": "draw",
+    "accepted": true,
+    "reason": "The solver no longer wins when these passed pawns are removed."
+  },
+  {
+    "fen": "8/1k6/1p2r3/8/1P4p1/P4p2/5R2/6K1 b - - 1 45",
+    "moves": [
+      "Re1+",
+      "Kh2",
+      "Re2",
+      "Kg1",
+      "Rxf2",
+      "Kxf2"
+    ],
+    "endFen": "8/1k6/1p6/8/1P4p1/P4p2/5K2/8 b - - 0 48",
+    "passedPawns": [
+      "f3",
+      "g4"
+    ],
+    "source": "existing reviewed simplification endpoint and tablebase evidence",
+    "withoutPassers": "8/1k6/1p6/8/1P6/P7/5K2/8 b - - 0 48",
+    "withoutPassersCategory": "draw",
+    "accepted": true,
+    "reason": "The solver no longer wins when these passed pawns are removed."
+  },
+  {
+    "fen": "5k2/7q/2pK4/2P2PQp/2P5/8/8/8 w - - 4 63",
+    "moves": [
+      "Qd8+",
+      "Kf7",
+      "Qe7+",
+      "Kg8",
+      "Qxh7+",
+      "Kxh7"
+    ],
+    "endFen": "8/7k/2pK4/2P2P1p/2P5/8/8/8 w - - 0 66",
+    "passedPawns": [
+      "f5"
+    ],
+    "source": "existing reviewed simplification endpoint and tablebase evidence",
+    "withoutPassers": "8/7k/2pK4/2P4p/2P5/8/8/8 w - - 0 66",
+    "withoutPassersCategory": "win",
+    "accepted": false,
+    "reason": "Endpoint still wins without the passed pawns; reject incidental passers."
+  },
+  {
+    "fen": "7k/7p/4KNPP/7P/8/p7/5r2/8 b - - 0 52",
+    "moves": [
+      "Rxf6+",
+      "Kxf6"
+    ],
+    "endFen": "7k/7p/5KPP/7P/8/p7/8/8 b - - 0 53",
+    "passedPawns": [
+      "a3"
+    ],
+    "source": "existing reviewed simplification endpoint and tablebase evidence",
+    "withoutPassers": "7k/7p/5KPP/7P/8/8/8/8 b - - 0 53",
+    "withoutPassersCategory": "draw",
+    "accepted": true,
+    "reason": "The solver no longer wins when these passed pawns are removed."
+  },
+  {
+    "fen": "8/1p6/3K4/k2N3r/8/8/8/8 b - - 1 84",
+    "moves": [
+      "Rxd5+",
+      "Kxd5"
+    ],
+    "endFen": "8/1p6/8/k2K4/8/8/8/8 b - - 0 85",
+    "passedPawns": [
+      "b7"
+    ],
+    "source": "existing reviewed simplification endpoint and tablebase evidence",
+    "withoutPassers": "8/8/8/k2K4/8/8/8/8 b - - 0 85",
+    "withoutPassersCategory": "draw",
+    "accepted": true,
+    "reason": "The solver no longer wins when these passed pawns are removed."
+  },
+  {
+    "fen": "8/8/4k3/5p2/R3n1p1/P1P5/1P4K1/8 w - - 1 43",
+    "moves": [
+      "Rxe4+",
+      "fxe4"
+    ],
+    "endFen": "8/8/4k3/8/4p1p1/P1P5/1P4K1/8 w - - 0 44",
+    "passedPawns": [
+      "b2",
+      "a3",
+      "c3"
+    ],
+    "source": "existing reviewed simplification endpoint and tablebase evidence",
+    "withoutPassers": "8/8/4k3/8/4p1p1/8/6K1/8 w - - 0 44",
+    "withoutPassersCategory": "loss",
+    "accepted": true,
+    "reason": "The solver no longer wins when these passed pawns are removed."
+  },
+  {
+    "fen": "8/p7/7k/2P2Qr1/7p/6p1/P5K1/8 w - - 1 51",
+    "moves": [
+      "Qxg5+",
+      "Kxg5"
+    ],
+    "endFen": "8/p7/8/2P3k1/7p/6p1/P5K1/8 w - - 0 52",
+    "passedPawns": [
+      "c5"
+    ],
+    "source": "existing reviewed simplification endpoint and tablebase evidence",
+    "withoutPassers": "8/p7/8/6k1/7p/6p1/P5K1/8 w - - 0 52",
+    "withoutPassersCategory": "loss",
+    "accepted": true,
+    "reason": "The solver no longer wins when these passed pawns are removed."
+  },
+  {
+    "fen": "8/8/8/7P/1R3p2/1nk1pP2/6P1/4K3 w - - 0 65",
+    "moves": [
+      "Rxb3+",
+      "Kxb3"
+    ],
+    "endFen": "8/8/8/7P/5p2/1k2pP2/6P1/4K3 w - - 0 66",
+    "passedPawns": [
+      "h5"
+    ],
+    "source": "existing reviewed simplification endpoint and tablebase evidence",
+    "withoutPassers": "8/8/8/8/5p2/1k2pP2/6P1/4K3 w - - 0 66",
+    "withoutPassersCategory": "draw",
+    "accepted": true,
+    "reason": "The solver no longer wins when these passed pawns are removed."
+  },
+  {
+    "fen": "8/P1K4p/4p3/2Rbk3/8/8/4p2P/8 w - - 0 59",
+    "moves": [
+      "Rxd5+",
+      "exd5"
+    ],
+    "endFen": "8/P1K4p/8/3pk3/8/8/4p2P/8 w - - 0 60",
+    "passedPawns": [
+      "a7"
+    ],
+    "source": "existing reviewed simplification endpoint and tablebase evidence",
+    "withoutPassers": "8/2K4p/8/3pk3/8/8/4p2P/8 w - - 0 60",
+    "withoutPassersCategory": "loss",
+    "accepted": true,
+    "reason": "The solver no longer wins when these passed pawns are removed."
+  },
+  {
+    "fen": "8/8/4k3/1P5p/6p1/6Br/6K1/8 b - - 0 51",
+    "moves": [
+      "Rxg3+",
+      "Kxg3"
+    ],
+    "endFen": "8/8/4k3/1P5p/6p1/6K1/8/8 b - - 0 52",
+    "passedPawns": [
+      "g4",
+      "h5"
+    ],
+    "source": "existing reviewed simplification endpoint and tablebase evidence",
+    "withoutPassers": "8/8/4k3/1P6/8/6K1/8/8 b - - 0 52",
+    "withoutPassersCategory": "draw",
+    "accepted": true,
+    "reason": "The solver no longer wins when these passed pawns are removed."
+  },
+  {
+    "fen": "8/8/5kp1/5n2/5RKP/5P2/8/8 w - - 5 58",
+    "moves": [
+      "Rxf5+",
+      "gxf5+"
+    ],
+    "endFen": "8/8/5k2/5p2/6KP/5P2/8/8 w - - 0 59",
+    "passedPawns": [
+      "h4"
+    ],
+    "source": "existing reviewed simplification endpoint and tablebase evidence",
+    "withoutPassers": "8/8/5k2/5p2/6K1/5P2/8/8 w - - 0 59",
+    "withoutPassersCategory": "draw",
+    "accepted": true,
+    "reason": "The solver no longer wins when these passed pawns are removed."
+  },
+  {
+    "fen": "8/8/2PK2k1/2rB4/8/7p/8/8 b - - 3 57",
+    "moves": [
+      "Rxd5+",
+      "Kxd5"
+    ],
+    "endFen": "8/8/2P3k1/3K4/8/7p/8/8 b - - 0 58",
+    "passedPawns": [
+      "h3"
+    ],
+    "source": "existing reviewed simplification endpoint and tablebase evidence",
+    "withoutPassers": "8/8/2P3k1/3K4/8/8/8/8 b - - 0 58",
+    "withoutPassersCategory": "loss",
+    "accepted": true,
+    "reason": "The solver no longer wins when these passed pawns are removed."
+  },
+  {
+    "fen": "8/8/1p4P1/1P6/3bR3/3kpK2/8/8 w - - 13 68",
+    "moves": [
+      "Rxd4+",
+      "Kxd4"
+    ],
+    "endFen": "8/8/1p4P1/1P6/3k4/4pK2/8/8 w - - 0 69",
+    "passedPawns": [
+      "g6"
+    ],
+    "source": "existing reviewed simplification endpoint and tablebase evidence",
+    "withoutPassers": "8/8/1p6/1P6/3k4/4pK2/8/8 w - - 0 69",
+    "withoutPassersCategory": "loss",
+    "accepted": true,
+    "reason": "The solver no longer wins when these passed pawns are removed."
+  },
+  {
+    "fen": "8/8/8/6kP/R5n1/5p2/8/6K1 w - - 3 62",
+    "moves": [
+      "Rxg4+",
+      "Kxg4"
+    ],
+    "endFen": "8/8/8/7P/6k1/5p2/8/6K1 w - - 0 63",
+    "passedPawns": [
+      "h5"
+    ],
+    "source": "existing reviewed simplification endpoint and tablebase evidence",
+    "withoutPassers": "8/8/8/8/6k1/5p2/8/6K1 w - - 0 63",
+    "withoutPassersCategory": "draw",
+    "accepted": true,
+    "reason": "The solver no longer wins when these passed pawns are removed."
+  },
+  {
+    "fen": "8/8/7p/8/8/6k1/3rN3/5K2 b - - 3 59",
+    "moves": [
+      "Rxe2",
+      "Kxe2"
+    ],
+    "endFen": "8/8/7p/8/8/6k1/4K3/8 b - - 0 60",
+    "passedPawns": [
+      "h6"
+    ],
+    "source": "existing reviewed simplification endpoint and tablebase evidence",
+    "withoutPassers": "8/8/8/8/8/6k1/4K3/8 b - - 0 60",
+    "withoutPassersCategory": "draw",
+    "accepted": true,
+    "reason": "The solver no longer wins when these passed pawns are removed."
+  },
+  {
+    "fen": "8/8/8/8/7k/4KQr1/6P1/8 w - - 10 71",
+    "moves": [
+      "Kf4",
+      "Rxf3+",
+      "gxf3"
+    ],
+    "endFen": "8/8/8/8/5K1k/5P2/8/8 b - - 0 72",
+    "passedPawns": [
+      "f3"
+    ],
+    "source": "existing reviewed simplification endpoint and tablebase evidence",
+    "withoutPassers": "8/8/8/8/5K1k/8/8/8 b - - 0 72",
+    "withoutPassersCategory": "draw",
+    "accepted": true,
+    "reason": "The solver no longer wins when these passed pawns are removed."
+  },
+  {
+    "fen": "8/7Q/2pK1k1P/6r1/8/6p1/8/8 w - - 2 66",
+    "moves": [
+      "Qe7+",
+      "Kf5",
+      "Qxg5+",
+      "Kxg5"
+    ],
+    "endFen": "8/8/2pK3P/6k1/8/6p1/8/8 w - - 0 68",
+    "passedPawns": [
+      "h6"
+    ],
+    "source": "existing reviewed simplification endpoint and tablebase evidence",
+    "withoutPassers": "8/8/2pK4/6k1/8/6p1/8/8 w - - 0 68",
+    "withoutPassersCategory": "loss",
+    "accepted": true,
+    "reason": "The solver no longer wins when these passed pawns are removed."
+  },
+  {
+    "fen": "3r4/5p2/R1Rn4/P2k4/3P4/3K4/8/8 w - - 13 64",
+    "moves": [
+      "Rxd6+",
+      "Rxd6",
+      "Rxd6+",
+      "Kxd6"
+    ],
+    "endFen": "8/5p2/3k4/P7/3P4/3K4/8/8 w - - 0 66",
+    "passedPawns": [
+      "d4",
+      "a5"
+    ],
+    "source": "existing reviewed simplification endpoint and tablebase evidence",
+    "withoutPassers": "8/5p2/3k4/8/8/3K4/8/8 w - - 0 66",
+    "withoutPassersCategory": "draw",
+    "accepted": true,
+    "reason": "The solver no longer wins when these passed pawns are removed."
+  },
+  {
+    "fen": "8/5p2/8/4k3/8/5R2/6K1/4q3 b - - 5 92",
+    "moves": [
+      "Qe2+",
+      "Kg3",
+      "Qxf3+",
+      "Kxf3"
+    ],
+    "endFen": "8/5p2/8/4k3/8/5K2/8/8 b - - 0 94",
+    "passedPawns": [
+      "f7"
+    ],
+    "source": "existing reviewed simplification endpoint and tablebase evidence",
+    "withoutPassers": "8/8/8/4k3/8/5K2/8/8 b - - 0 94",
+    "withoutPassersCategory": "draw",
+    "accepted": true,
+    "reason": "The solver no longer wins when these passed pawns are removed."
+  },
+  {
+    "fen": "8/p5k1/3q1n2/1Q3P1p/4P3/4K3/8/8 b - - 7 65",
+    "moves": [
+      "Qb6+",
+      "Qxb6",
+      "axb6",
+      "e5",
+      "b5",
+      "exf6+"
+    ],
+    "endFen": "8/6k1/5P2/1p3P1p/8/4K3/8/8 b - - 0 68",
+    "passedPawns": [
+      "b5",
+      "h5"
+    ],
+    "source": "existing reviewed simplification endpoint and tablebase evidence",
+    "withoutPassers": "8/6k1/5P2/5P2/8/4K3/8/8 b - - 0 68",
+    "withoutPassersCategory": "draw",
+    "accepted": true,
+    "reason": "The solver no longer wins when these passed pawns are removed."
+  },
+  {
+    "fen": "8/1b6/1P1k2p1/8/5P1p/4Q3/1q2B1PK/8 w - - 13 53",
+    "moves": [
+      "Bf3",
+      "Bxf3",
+      "Qe5+",
+      "Qxe5",
+      "fxe5+",
+      "Kxe5",
+      "gxf3"
+    ],
+    "endFen": "8/8/1P4p1/4k3/7p/5P2/7K/8 b - - 0 56",
+    "passedPawns": [
+      "b6"
+    ],
+    "source": "existing reviewed simplification endpoint and tablebase evidence",
+    "withoutPassers": "8/8/6p1/4k3/7p/5P2/7K/8 b - - 0 56",
+    "withoutPassersCategory": "win",
+    "accepted": true,
+    "reason": "The solver no longer wins when these passed pawns are removed."
+  },
+  {
+    "fen": "8/1kp5/3p2P1/5Q2/2q1P3/1p6/5PK1/8 b - - 0 57",
+    "moves": [
+      "b2",
+      "e5",
+      "Qd5+",
+      "Kh2",
+      "Qxe5+",
+      "Qxe5",
+      "dxe5"
+    ],
+    "endFen": "8/1kp5/6P1/4p3/8/8/1p3P1K/8 w - - 0 61",
+    "passedPawns": [
+      "b2",
+      "c7"
+    ],
+    "source": "existing reviewed simplification endpoint and tablebase evidence",
+    "withoutPassers": "8/1k6/6P1/4p3/8/8/5P1K/8 w - - 0 61",
+    "withoutPassersCategory": "win",
+    "accepted": true,
+    "reason": "The solver no longer wins when these passed pawns are removed."
+  },
+  {
+    "fen": "8/8/1P3p2/4p3/6k1/K3Q1p1/8/1q6 b - - 0 60",
+    "moves": [
+      "Qa1+",
+      "Kb4",
+      "Qb2+",
+      "Kc5",
+      "Qf2",
+      "Qxf2",
+      "gxf2"
+    ],
+    "endFen": "8/8/1P3p2/2K1p3/6k1/8/5p2/8 w - - 0 64",
+    "passedPawns": [
+      "f2",
+      "e5",
+      "f6"
+    ],
+    "source": "existing reviewed simplification endpoint and tablebase evidence",
+    "withoutPassers": "8/8/1P6/2K5/6k1/8/8/8 w - - 0 64",
+    "withoutPassersCategory": "win",
+    "accepted": true,
+    "reason": "The solver no longer wins when these passed pawns are removed."
+  },
+  {
+    "fen": "8/3k3p/8/1P1n2K1/2N5/7P/8/8 w - - 2 70",
+    "moves": [
+      "h4",
+      "Ne7",
+      "Kf6",
+      "Ng6",
+      "Ne5+",
+      "Nxe5",
+      "Kxe5"
+    ],
+    "endFen": "8/3k3p/8/1P2K3/7P/8/8/8 b - - 0 73",
+    "passedPawns": [
+      "b5"
+    ],
+    "source": "existing reviewed simplification endpoint and tablebase evidence",
+    "withoutPassers": "8/3k3p/8/4K3/7P/8/8/8 b - - 0 73",
+    "withoutPassersCategory": "draw",
+    "accepted": true,
+    "reason": "The solver no longer wins when these passed pawns are removed."
+  },
+  {
+    "fen": "8/8/8/1p1P2R1/2r1PK2/3k1P2/8/8 w - - 0 56",
+    "moves": [
+      "d6",
+      "b4",
+      "d7",
+      "Rd4",
+      "Rd5",
+      "Rxd5",
+      "exd5"
+    ],
+    "endFen": "8/3P4/8/3P4/1p3K2/3k1P2/8/8 b - - 0 59",
+    "passedPawns": [
+      "f3",
+      "d5",
+      "d7"
+    ],
+    "source": "existing reviewed simplification endpoint and tablebase evidence",
+    "withoutPassers": "8/8/8/8/1p3K2/3k4/8/8 b - - 0 59",
+    "withoutPassersCategory": "win",
+    "accepted": true,
+    "reason": "The solver no longer wins when these passed pawns are removed."
+  },
+  {
+    "fen": "8/8/8/3b1k1p/p7/P2NKPP1/1P6/8 w - - 6 48",
+    "moves": [
+      "Nf4",
+      "Bf7",
+      "Nxh5",
+      "Bxh5",
+      "g4+",
+      "Bxg4",
+      "fxg4+"
+    ],
+    "endFen": "8/8/8/5k2/p5P1/P3K3/1P6/8 b - - 0 51",
+    "passedPawns": [
+      "g4"
+    ],
+    "source": "existing reviewed simplification endpoint and tablebase evidence",
+    "withoutPassers": "8/8/8/5k2/p7/P3K3/1P6/8 b - - 0 51",
+    "withoutPassersCategory": "draw",
+    "accepted": true,
+    "reason": "The solver no longer wins when these passed pawns are removed."
+  },
+  {
+    "fen": "8/1p6/4P3/p4K1p/P2kN3/8/8/2q5 b - - 1 64",
+    "moves": [
+      "Qf1+",
+      "Kg6",
+      "Qd3",
+      "Kf7",
+      "Qxe4",
+      "e7",
+      "h4",
+      "e8=Q",
+      "Qxe8+",
+      "Kxe8"
+    ],
+    "endFen": "4K3/1p6/8/p7/P2k3p/8/8/8 b - - 0 69",
+    "passedPawns": [
+      "h4"
+    ],
+    "source": "existing reviewed simplification endpoint and tablebase evidence",
+    "withoutPassers": "4K3/1p6/8/p7/P2k4/8/8/8 b - - 0 69",
+    "withoutPassersCategory": "win",
+    "accepted": false,
+    "reason": "Endpoint still wins without the passed pawns; reject incidental passers."
+  },
+  {
+    "fen": "8/8/8/5kpp/3Rp3/2Pb2P1/1P3K2/8 w - g6 0 37",
+    "moves": [
+      "b4",
+      "h4",
+      "gxh4",
+      "gxh4",
+      "b5",
+      "Kf4",
+      "Rxd3",
+      "exd3"
+    ],
+    "endFen": "8/8/8/1P6/5k1p/2Pp4/5K2/8 w - - 0 41",
+    "passedPawns": [
+      "c3",
+      "b5"
+    ],
+    "source": "existing reviewed simplification endpoint and tablebase evidence",
+    "withoutPassers": "8/8/8/8/5k1p/3p4/5K2/8 w - - 0 41",
+    "withoutPassersCategory": "loss",
+    "accepted": true,
+    "reason": "The solver no longer wins when these passed pawns are removed."
+  },
+  {
+    "fen": "3k2r1/2R4R/4p3/3b3p/7P/P4p1K/8/8 w - - 4 49",
+    "moves": [
+      "Rhd7+",
+      "Ke8",
+      "Rxd5",
+      "exd5",
+      "Rc8+",
+      "Kf7",
+      "Rxg8",
+      "Kxg8"
+    ],
+    "endFen": "6k1/8/8/3p3p/7P/P4p1K/8/8 w - - 0 53",
+    "passedPawns": [
+      "a3"
+    ],
+    "source": "existing reviewed simplification endpoint and tablebase evidence",
+    "withoutPassers": "6k1/8/8/3p3p/7P/5p1K/8/8 w - - 0 53",
+    "withoutPassersCategory": "loss",
+    "accepted": true,
+    "reason": "The solver no longer wins when these passed pawns are removed."
+  },
+  {
+    "fen": "8/1r6/R7/4b1k1/1P3p2/P7/8/1K3R2 w - - 0 53",
+    "moves": [
+      "Ra5",
+      "Kf5",
+      "Re1",
+      "Re7",
+      "Raxe5+",
+      "Rxe5",
+      "Rxe5+",
+      "Kxe5"
+    ],
+    "endFen": "8/8/8/4k3/1P3p2/P7/8/1K6 w - - 0 57",
+    "passedPawns": [
+      "a3",
+      "b4"
+    ],
+    "source": "existing reviewed simplification endpoint and tablebase evidence",
+    "withoutPassers": "8/8/8/4k3/5p2/8/8/1K6 w - - 0 57",
+    "withoutPassersCategory": "loss",
+    "accepted": true,
+    "reason": "The solver no longer wins when these passed pawns are removed."
+  },
+  {
+    "fen": "3b4/8/pk6/7R/K1P5/8/P7/8 w - - 14 71",
+    "moves": [
+      "Rh6+",
+      "Kb7",
+      "c5",
+      "Bc7",
+      "Rh7",
+      "Kc6",
+      "Rxc7+",
+      "Kxc7"
+    ],
+    "endFen": "8/2k5/p7/2P5/K7/8/P7/8 w - - 0 75",
+    "passedPawns": [
+      "c5"
+    ],
+    "source": "existing reviewed simplification endpoint and tablebase evidence",
+    "withoutPassers": "8/2k5/p7/8/K7/8/P7/8 w - - 0 75",
+    "withoutPassersCategory": "draw",
+    "accepted": true,
+    "reason": "The solver no longer wins when these passed pawns are removed."
+  },
+  {
+    "fen": "8/8/R3n3/5kp1/P4p2/2P5/1P3K2/8 w - - 0 46",
+    "moves": [
+      "Rd6",
+      "g4",
+      "a5",
+      "Ng5",
+      "Rd5+",
+      "Kf6",
+      "Rxg5",
+      "Kxg5"
+    ],
+    "endFen": "8/8/8/P5k1/5pp1/2P5/1P3K2/8 w - - 0 50",
+    "passedPawns": [
+      "b2",
+      "c3",
+      "a5"
+    ],
+    "source": "existing reviewed simplification endpoint and tablebase evidence",
+    "withoutPassers": "8/8/8/6k1/5pp1/8/5K2/8 w - - 0 50",
+    "withoutPassersCategory": "loss",
+    "accepted": true,
+    "reason": "The solver no longer wins when these passed pawns are removed."
+  },
+  {
+    "fen": "7k/p5p1/6N1/7p/P6P/r5P1/5PK1/8 b - - 0 45",
+    "moves": [
+      "Kh7",
+      "Nf4",
+      "Rxa4",
+      "Nxh5",
+      "Kg6",
+      "Nf4+",
+      "Rxf4",
+      "gxf4"
+    ],
+    "endFen": "8/p5p1/6k1/8/5P1P/8/5PK1/8 b - - 0 49",
+    "passedPawns": [
+      "a7"
+    ],
+    "source": "existing reviewed simplification endpoint and tablebase evidence",
+    "withoutPassers": "8/6p1/6k1/8/5P1P/8/5PK1/8 b - - 0 49",
+    "withoutPassersCategory": "loss",
+    "accepted": true,
+    "reason": "The solver no longer wins when these passed pawns are removed."
+  },
+  {
+    "fen": "8/8/p5pk/1p2R3/8/1P6/P2r1r2/1KN5 b - - 4 51",
+    "moves": [
+      "Rf1",
+      "Rc5",
+      "Rdd1",
+      "Kb2",
+      "Rxc1",
+      "Rxc1",
+      "Rxc1",
+      "Kxc1"
+    ],
+    "endFen": "8/8/p5pk/1p6/8/1P6/P7/2K5 b - - 0 55",
+    "passedPawns": [
+      "g6"
+    ],
+    "source": "existing reviewed simplification endpoint and tablebase evidence",
+    "withoutPassers": "8/8/p6k/1p6/8/1P6/P7/2K5 b - - 0 55",
+    "withoutPassersCategory": "loss",
+    "accepted": true,
+    "reason": "The solver no longer wins when these passed pawns are removed."
+  },
+  {
+    "fen": "8/6p1/2n2p2/1r1pkN2/8/6P1/2BK3P/8 b - - 5 48",
+    "moves": [
+      "Nd4",
+      "Ne3",
+      "Rb2",
+      "Kc3",
+      "Rxc2+",
+      "Nxc2",
+      "Nxc2",
+      "Kxc2"
+    ],
+    "endFen": "8/6p1/5p2/3pk3/8/6P1/2K4P/8 b - - 0 52",
+    "passedPawns": [
+      "d5"
+    ],
+    "source": "existing reviewed simplification endpoint and tablebase evidence",
+    "withoutPassers": "8/6p1/5p2/4k3/8/6P1/2K4P/8 b - - 0 52",
+    "withoutPassersCategory": "win",
+    "accepted": false,
+    "reason": "Endpoint still wins without the passed pawns; reject incidental passers."
+  },
+  {
+    "fen": "8/2b5/2P1k3/5p2/7p/1R4P1/6K1/8 w - - 0 50",
+    "moves": [
+      "gxh4",
+      "Kd5",
+      "h5",
+      "Kxc6",
+      "Rc3+",
+      "Kd7",
+      "Rxc7+",
+      "Kxc7"
+    ],
+    "endFen": "8/2k5/8/5p1P/8/8/6K1/8 w - - 0 54",
+    "passedPawns": [
+      "h5"
+    ],
+    "source": "existing reviewed simplification endpoint and tablebase evidence",
+    "withoutPassers": "8/2k5/8/5p2/8/8/6K1/8 w - - 0 54",
+    "withoutPassersCategory": "draw",
+    "accepted": true,
+    "reason": "The solver no longer wins when these passed pawns are removed."
+  },
+  {
+    "fen": "3k4/8/p2bq3/2p5/P7/8/1P4QP/5R1K w - - 3 41",
+    "moves": [
+      "Rd1",
+      "Kc7",
+      "Qd5",
+      "Qh6",
+      "Qxd6+",
+      "Qxd6",
+      "Rxd6",
+      "Kxd6"
+    ],
+    "endFen": "8/8/p2k4/2p5/P7/8/1P5P/7K w - - 0 45",
+    "passedPawns": [
+      "h2"
+    ],
+    "source": "existing reviewed simplification endpoint and tablebase evidence",
+    "withoutPassers": "8/8/p2k4/2p5/P7/8/1P6/7K w - - 0 45",
+    "withoutPassersCategory": "draw",
+    "accepted": true,
+    "reason": "The solver no longer wins when these passed pawns are removed."
+  },
+  {
+    "fen": "8/8/3r4/3k2P1/R2B1K2/8/8/8 w - - 1 69",
+    "moves": [
+      "Be5",
+      "Rc6",
+      "Rd4+",
+      "Ke6",
+      "Rd6+",
+      "Rxd6",
+      "Bxd6",
+      "Kxd6"
+    ],
+    "endFen": "8/8/3k4/6P1/5K2/8/8/8 w - - 0 73",
+    "passedPawns": [
+      "g5"
+    ],
+    "source": "existing reviewed simplification endpoint and tablebase evidence",
+    "withoutPassers": "8/8/3k4/8/5K2/8/8/8 w - - 0 73",
+    "withoutPassersCategory": "draw",
+    "accepted": true,
+    "reason": "The solver no longer wins when these passed pawns are removed."
+  },
+  {
+    "fen": "5r2/2p5/7R/5kp1/1P1B3p/2P2P2/5K2/8 w - - 6 41",
+    "moves": [
+      "b5",
+      "g4",
+      "Rf6+",
+      "Rxf6",
+      "fxg4+",
+      "Kg6+",
+      "Bxf6",
+      "Kxf6"
+    ],
+    "endFen": "8/2p5/5k2/1P6/6Pp/2P5/5K2/8 w - - 0 45",
+    "passedPawns": [
+      "g4"
+    ],
+    "source": "existing reviewed simplification endpoint and tablebase evidence",
+    "withoutPassers": "8/2p5/5k2/1P6/7p/2P5/5K2/8 w - - 0 45",
+    "withoutPassersCategory": "draw",
+    "accepted": true,
+    "reason": "The solver no longer wins when these passed pawns are removed."
+  },
+  {
+    "fen": "7N/7K/4k1pP/4q1P1/8/8/8/8 b - - 0 67",
+    "moves": [
+      "Qxg5",
+      "Kg7",
+      "Qf6+",
+      "Kg8",
+      "g5",
+      "h7",
+      "g4",
+      "Ng6",
+      "Qxg6+",
+      "Kh8",
+      "Qxh7+",
+      "Kxh7"
+    ],
+    "endFen": "8/7K/4k3/8/6p1/8/8/8 b - - 0 73",
+    "passedPawns": [
+      "g4"
+    ],
+    "source": "existing reviewed simplification endpoint and tablebase evidence",
+    "withoutPassers": "8/7K/4k3/8/8/8/8/8 b - - 0 73",
+    "withoutPassersCategory": "draw",
+    "accepted": true,
+    "reason": "The solver no longer wins when these passed pawns are removed."
+  },
+  {
+    "fen": "4Q3/1p6/3k4/2n5/p7/P5P1/1P3P2/5K2 w - - 1 44",
+    "moves": [
+      "Qb5",
+      "Ne6",
+      "Qxa4",
+      "b5",
+      "Qb4+",
+      "Kd7",
+      "Qxb5+",
+      "Ke7",
+      "Qb6",
+      "Nd8",
+      "Qxd8+",
+      "Kxd8"
+    ],
+    "endFen": "3k4/8/8/8/8/P5P1/1P3P2/5K2 w - - 0 50",
+    "passedPawns": [
+      "b2",
+      "f2",
+      "a3",
+      "g3"
+    ],
+    "source": "existing reviewed simplification endpoint and tablebase evidence",
+    "withoutPassers": "3k4/8/8/8/8/8/8/5K2 w - - 0 50",
+    "withoutPassersCategory": "draw",
+    "accepted": true,
+    "reason": "The solver no longer wins when these passed pawns are removed."
+  }
+]

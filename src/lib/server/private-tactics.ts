@@ -5,7 +5,7 @@ export const topicGroups = [
       ['Chiếu hết 1 nước', 'mateIn1'],
       ['Tấn công quân treo', 'hangingPiece'],
       ['Tấn công đôi', 'fork'],
-      ['Ghim quân', 'pin'],
+      ['Đòn ghim', 'pin'],
       ['Chiếu hết hàng ngang cuối', 'backRankMate'],
       ['Chiếu hết 2 nước', 'mateIn2'],
     ],
@@ -37,8 +37,8 @@ export const topicGroups = [
       ['Nước đi tĩnh', 'quietMove'],
       ['Tấn công xuyên tia (X-ray)', 'xRayAttack'],
       ['Nước phòng thủ', 'defensiveMove'],
-      ['Buộc đối thủ phải đi (Zugzwang)', 'zugzwang'],
-      ['Di chuyển dọc đường đối công (Collinear move)', 'collinearMove'],
+      ['Bất lợi vì phải đi (Zugzwang)', 'zugzwang'],
+      ['Di chuyển trên đường đối đầu (Collinear move)', 'collinearMove'],
       ['Chiếu hết 3 nước', 'mateIn3'],
       ['Chiếu hết 4 nước', 'mateIn4'],
       ['Chiếu hết từ 5 nước', 'mateIn5'],
@@ -49,7 +49,7 @@ export const topicGroups = [
     description:
       'Ôn theo số thứ tự: mẫu dễ nhận biết trước, phối hợp phức tạp sau; cuối cùng luyện tổng hợp. Chiếu hết 1–2 nước và hàng ngang cuối nằm ở nhóm cơ bản.',
     topics: [
-      ['Chiếu hết hai Xe (Blind Swine)', 'blindSwineMate'],
+      ['Hai Xe phối hợp chiếu hết (Blind Swine)', 'blindSwineMate'],
       ['Chiếu hết Opera', 'operaMate'],
       ['Chiếu hết Pillsbury', 'pillsburysMate'],
       ['Chiếu hết Ả Rập (Arabian)', 'arabianMate'],

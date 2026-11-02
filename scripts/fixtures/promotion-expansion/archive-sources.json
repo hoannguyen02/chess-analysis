@@ -1,0 +1,12 @@
+[
+  {
+    "archive": "promotion-Ivanchuk.zip",
+    "sha256": "7ec014b95ad9d5c2540287ad7c53ef1ad8cc7fed76d34ad4ae4a5a6fd31f21d6",
+    "games": 5261
+  },
+  {
+    "archive": "promotion-Rubinstein.zip",
+    "sha256": "63b48a0f65ad783c233ec569b9081e3478a847bc60d9fe32e9cc346daa8471f4",
+    "games": 797
+  }
+]

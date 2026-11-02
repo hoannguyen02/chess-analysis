@@ -1,0 +1,935 @@
+[
+  {
+    "id": "arabian-beginner-1",
+    "fen": "7k/1R5n/5N2/1K6/8/8/8/8 w - - 0 1",
+    "moves": [
+      "Rxh7#"
+    ],
+    "alternatives": [
+      "Rxh7#"
+    ],
+    "roles": {
+      "moves": [
+        "Rxh7#"
+      ],
+      "level": "A",
+      "solverMoves": 1,
+      "sacrifices": [],
+      "knightRoles": [
+        {
+          "square": "f6",
+          "checking": false,
+          "escapesWithoutPiece": [
+            "Kg8",
+            "Kxh7"
+          ]
+        }
+      ],
+      "rookRoles": [
+        {
+          "square": "h7",
+          "checking": true,
+          "escapesWithoutPiece": [
+            "Kg7"
+          ]
+        }
+      ],
+      "endFen": "7k/7R/5N2/1K6/8/8/8/8 b - - 0 1"
+    },
+    "method": "Every legal starting move enumerated; actual checkmate; removal of either essential rook/knight breaks mate."
+  },
+  {
+    "id": "arabian-beginner-2",
+    "fen": "8/8/8/8/8/5n2/1k2r3/7K b - - 0 1",
+    "moves": [
+      "Rh2#"
+    ],
+    "alternatives": [
+      "Rh2#"
+    ],
+    "roles": {
+      "moves": [
+        "Rh2#"
+      ],
+      "level": "A",
+      "solverMoves": 1,
+      "sacrifices": [],
+      "knightRoles": [
+        {
+          "square": "f3",
+          "checking": false,
+          "escapesWithoutPiece": [
+            "Kxh2",
+            "Kg1"
+          ]
+        }
+      ],
+      "rookRoles": [
+        {
+          "square": "h2",
+          "checking": true,
+          "escapesWithoutPiece": [
+            "Kg2"
+          ]
+        }
+      ],
+      "endFen": "8/8/8/8/8/5n2/1k5r/7K w - - 1 2"
+    },
+    "method": "Every legal starting move enumerated; actual checkmate; removal of either essential rook/knight breaks mate."
+  },
+  {
+    "id": "arabian-beginner-3",
+    "fen": "kn6/8/2N5/K7/8/1R6/8/8 w - - 0 1",
+    "moves": [
+      "Rxb8#"
+    ],
+    "alternatives": [
+      "Rxb8#"
+    ],
+    "roles": {
+      "moves": [
+        "Rxb8#"
+      ],
+      "level": "A",
+      "solverMoves": 1,
+      "sacrifices": [],
+      "knightRoles": [
+        {
+          "square": "c6",
+          "checking": false,
+          "escapesWithoutPiece": [
+            "Kxb8",
+            "Ka7"
+          ]
+        }
+      ],
+      "rookRoles": [
+        {
+          "square": "b8",
+          "checking": true,
+          "escapesWithoutPiece": [
+            "Kb7"
+          ]
+        }
+      ],
+      "endFen": "kR6/8/2N5/K7/8/8/8/8 b - - 0 1"
+    },
+    "method": "Every legal starting move enumerated; actual checkmate; removal of either essential rook/knight breaks mate."
+  },
+  {
+    "id": "arabian-beginner-4",
+    "fen": "8/8/8/8/8/2n5/2r2k2/K7 b - - 0 1",
+    "moves": [
+      "Ra2#"
+    ],
+    "alternatives": [
+      "Ra2#"
+    ],
+    "roles": {
+      "moves": [
+        "Ra2#"
+      ],
+      "level": "A",
+      "solverMoves": 1,
+      "sacrifices": [],
+      "knightRoles": [
+        {
+          "square": "c3",
+          "checking": false,
+          "escapesWithoutPiece": [
+            "Kxa2",
+            "Kb1"
+          ]
+        }
+      ],
+      "rookRoles": [
+        {
+          "square": "a2",
+          "checking": true,
+          "escapesWithoutPiece": [
+            "Kb2"
+          ]
+        }
+      ],
+      "endFen": "8/8/8/8/8/2n5/r4k2/K7 w - - 1 2"
+    },
+    "method": "Every legal starting move enumerated; actual checkmate; removal of either essential rook/knight breaks mate."
+  },
+  {
+    "id": "arabian-beginner-5",
+    "fen": "5K1k/1R6/5N2/8/8/8/8/8 w - - 0 1",
+    "moves": [
+      "Rh7#"
+    ],
+    "alternatives": [
+      "Rh7#"
+    ],
+    "roles": {
+      "moves": [
+        "Rh7#"
+      ],
+      "level": "A",
+      "solverMoves": 1,
+      "sacrifices": [],
+      "knightRoles": [
+        {
+          "square": "f6",
+          "checking": false,
+          "escapesWithoutPiece": [
+            "Kxh7"
+          ]
+        }
+      ],
+      "rookRoles": [
+        {
+          "square": "h7",
+          "checking": true,
+          "escapesWithoutPiece": []
+        }
+      ],
+      "endFen": "5K1k/7R/5N2/8/8/8/8/8 b - - 1 1"
+    },
+    "method": "Every legal starting move enumerated; actual checkmate; removal of either essential rook/knight breaks mate."
+  },
+  {
+    "id": "arabian-beginner-6",
+    "fen": "8/8/8/5k2/8/5nr1/8/7K b - - 0 1",
+    "moves": [
+      "Rg1#"
+    ],
+    "alternatives": [
+      "Rg1#"
+    ],
+    "roles": {
+      "moves": [
+        "Rg1#"
+      ],
+      "level": "A",
+      "solverMoves": 1,
+      "sacrifices": [],
+      "knightRoles": [
+        {
+          "square": "f3",
+          "checking": false,
+          "escapesWithoutPiece": [
+            "Kh2",
+            "Kxg1"
+          ]
+        }
+      ],
+      "rookRoles": [
+        {
+          "square": "g1",
+          "checking": true,
+          "escapesWithoutPiece": [
+            "Kg2"
+          ]
+        }
+      ],
+      "endFen": "8/8/8/5k2/8/5n2/8/6rK w - - 1 2"
+    },
+    "method": "Every legal starting move enumerated; actual checkmate; removal of either essential rook/knight breaks mate."
+  },
+  {
+    "id": "arabian-beginner-7",
+    "fen": "k7/6R1/2N5/7K/8/8/8/8 w - - 0 1",
+    "moves": [
+      "Ra7#"
+    ],
+    "alternatives": [
+      "Ra7#"
+    ],
+    "roles": {
+      "moves": [
+        "Ra7#"
+      ],
+      "level": "A",
+      "solverMoves": 1,
+      "sacrifices": [],
+      "knightRoles": [
+        {
+          "square": "c6",
+          "checking": false,
+          "escapesWithoutPiece": [
+            "Kb8",
+            "Kxa7"
+          ]
+        }
+      ],
+      "rookRoles": [
+        {
+          "square": "a7",
+          "checking": true,
+          "escapesWithoutPiece": [
+            "Kb7"
+          ]
+        }
+      ],
+      "endFen": "k7/R7/2N5/7K/8/8/8/8 b - - 1 1"
+    },
+    "method": "Every legal starting move enumerated; actual checkmate; removal of either essential rook/knight breaks mate."
+  },
+  {
+    "id": "arabian-beginner-8",
+    "fen": "8/8/8/8/8/2n5/1r6/K4k2 b - - 0 1",
+    "moves": [
+      "Ra2#"
+    ],
+    "alternatives": [
+      "Ra2#",
+      "Rb1#"
+    ],
+    "roles": {
+      "moves": [
+        "Ra2#"
+      ],
+      "level": "A",
+      "solverMoves": 1,
+      "sacrifices": [],
+      "knightRoles": [
+        {
+          "square": "c3",
+          "checking": false,
+          "escapesWithoutPiece": [
+            "Kxa2",
+            "Kb1"
+          ]
+        }
+      ],
+      "rookRoles": [
+        {
+          "square": "a2",
+          "checking": true,
+          "escapesWithoutPiece": [
+            "Kb2"
+          ]
+        }
+      ],
+      "endFen": "8/8/8/8/8/2n5/r7/K4k2 w - - 1 2"
+    },
+    "method": "Every legal starting move enumerated; actual checkmate; removal of either essential rook/knight breaks mate."
+  },
+  {
+    "id": "arabian-beginner-9",
+    "fen": "7k/8/5N2/8/8/8/6R1/7K w - - 0 1",
+    "moves": [
+      "Rg8#"
+    ],
+    "alternatives": [
+      "Rg8#"
+    ],
+    "roles": {
+      "moves": [
+        "Rg8#"
+      ],
+      "level": "A",
+      "solverMoves": 1,
+      "sacrifices": [],
+      "knightRoles": [
+        {
+          "square": "f6",
+          "checking": false,
+          "escapesWithoutPiece": [
+            "Kxg8",
+            "Kh7"
+          ]
+        }
+      ],
+      "rookRoles": [
+        {
+          "square": "g8",
+          "checking": true,
+          "escapesWithoutPiece": [
+            "Kg7"
+          ]
+        }
+      ],
+      "endFen": "6Rk/8/5N2/8/8/8/8/7K b - - 1 1"
+    },
+    "method": "Every legal starting move enumerated; actual checkmate; removal of either essential rook/knight breaks mate."
+  },
+  {
+    "id": "arabian-beginner-10",
+    "fen": "8/8/8/6r1/8/5n2/8/3k3K b - - 0 1",
+    "moves": [
+      "Rg1#"
+    ],
+    "alternatives": [
+      "Rg1#"
+    ],
+    "roles": {
+      "moves": [
+        "Rg1#"
+      ],
+      "level": "A",
+      "solverMoves": 1,
+      "sacrifices": [],
+      "knightRoles": [
+        {
+          "square": "f3",
+          "checking": false,
+          "escapesWithoutPiece": [
+            "Kh2",
+            "Kxg1"
+          ]
+        }
+      ],
+      "rookRoles": [
+        {
+          "square": "g1",
+          "checking": true,
+          "escapesWithoutPiece": [
+            "Kg2"
+          ]
+        }
+      ],
+      "endFen": "8/8/8/8/8/5n2/8/3k2rK w - - 1 2"
+    },
+    "method": "Every legal starting move enumerated; actual checkmate; removal of either essential rook/knight breaks mate."
+  },
+  {
+    "id": "arabian-beginner-11",
+    "fen": "kr3R2/8/2N5/8/8/4K3/8/8 w - - 0 1",
+    "moves": [
+      "Rxb8#"
+    ],
+    "alternatives": [
+      "Rxb8#"
+    ],
+    "roles": {
+      "moves": [
+        "Rxb8#"
+      ],
+      "level": "A",
+      "solverMoves": 1,
+      "sacrifices": [],
+      "knightRoles": [
+        {
+          "square": "c6",
+          "checking": false,
+          "escapesWithoutPiece": [
+            "Kxb8",
+            "Ka7"
+          ]
+        }
+      ],
+      "rookRoles": [
+        {
+          "square": "b8",
+          "checking": true,
+          "escapesWithoutPiece": [
+            "Kb7"
+          ]
+        }
+      ],
+      "endFen": "kR6/8/2N5/8/8/4K3/8/8 b - - 0 1"
+    },
+    "method": "Every legal starting move enumerated; actual checkmate; removal of either essential rook/knight breaks mate."
+  },
+  {
+    "id": "arabian-beginner-12",
+    "fen": "8/8/8/8/8/1kn5/5r2/K7 b - - 0 1",
+    "moves": [
+      "Ra2#"
+    ],
+    "alternatives": [
+      "Ra2#"
+    ],
+    "roles": {
+      "moves": [
+        "Ra2#"
+      ],
+      "level": "A",
+      "solverMoves": 1,
+      "sacrifices": [],
+      "knightRoles": [
+        {
+          "square": "c3",
+          "checking": false,
+          "escapesWithoutPiece": [
+            "Kb1"
+          ]
+        }
+      ],
+      "rookRoles": [
+        {
+          "square": "a2",
+          "checking": true,
+          "escapesWithoutPiece": []
+        }
+      ],
+      "endFen": "8/8/8/8/8/1kn5/r7/K7 w - - 1 2"
+    },
+    "method": "Every legal starting move enumerated; actual checkmate; removal of either essential rook/knight breaks mate."
+  },
+  {
+    "id": "arabian-beginner-13",
+    "fen": "1K5k/8/5NR1/8/8/8/8/8 w - - 0 1",
+    "moves": [
+      "Rg8#"
+    ],
+    "alternatives": [
+      "Rg8#"
+    ],
+    "roles": {
+      "moves": [
+        "Rg8#"
+      ],
+      "level": "A",
+      "solverMoves": 1,
+      "sacrifices": [],
+      "knightRoles": [
+        {
+          "square": "f6",
+          "checking": false,
+          "escapesWithoutPiece": [
+            "Kxg8",
+            "Kh7"
+          ]
+        }
+      ],
+      "rookRoles": [
+        {
+          "square": "g8",
+          "checking": true,
+          "escapesWithoutPiece": [
+            "Kg7"
+          ]
+        }
+      ],
+      "endFen": "1K4Rk/8/5N2/8/8/8/8/8 b - - 1 1"
+    },
+    "method": "Every legal starting move enumerated; actual checkmate; removal of either essential rook/knight breaks mate."
+  },
+  {
+    "id": "arabian-beginner-14",
+    "fen": "8/8/8/8/6k1/5n2/5r2/7K b - - 0 1",
+    "moves": [
+      "Rh2#"
+    ],
+    "alternatives": [
+      "Rh2#"
+    ],
+    "roles": {
+      "moves": [
+        "Rh2#"
+      ],
+      "level": "A",
+      "solverMoves": 1,
+      "sacrifices": [],
+      "knightRoles": [
+        {
+          "square": "f3",
+          "checking": false,
+          "escapesWithoutPiece": [
+            "Kxh2",
+            "Kg1"
+          ]
+        }
+      ],
+      "rookRoles": [
+        {
+          "square": "h2",
+          "checking": true,
+          "escapesWithoutPiece": [
+            "Kg2"
+          ]
+        }
+      ],
+      "endFen": "8/8/8/8/6k1/5n2/7r/7K w - - 1 2"
+    },
+    "method": "Every legal starting move enumerated; actual checkmate; removal of either essential rook/knight breaks mate."
+  },
+  {
+    "id": "arabian-beginner-15",
+    "fen": "k7/b1R2K2/2N5/8/8/8/8/8 w - - 0 1",
+    "moves": [
+      "Rxa7#"
+    ],
+    "alternatives": [
+      "Rxa7#"
+    ],
+    "roles": {
+      "moves": [
+        "Rxa7#"
+      ],
+      "level": "A",
+      "solverMoves": 1,
+      "sacrifices": [],
+      "knightRoles": [
+        {
+          "square": "c6",
+          "checking": false,
+          "escapesWithoutPiece": [
+            "Kb8",
+            "Kxa7"
+          ]
+        }
+      ],
+      "rookRoles": [
+        {
+          "square": "a7",
+          "checking": true,
+          "escapesWithoutPiece": [
+            "Kb7"
+          ]
+        }
+      ],
+      "endFen": "k7/R4K2/2N5/8/8/8/8/8 b - - 0 1"
+    },
+    "method": "Every legal starting move enumerated; actual checkmate; removal of either essential rook/knight breaks mate."
+  },
+  {
+    "id": "arabian-beginner-16",
+    "fen": "7k/8/8/8/8/2n5/6r1/KN6 b - - 0 1",
+    "moves": [
+      "Ra2#"
+    ],
+    "alternatives": [
+      "Ra2#"
+    ],
+    "roles": {
+      "moves": [
+        "Ra2#"
+      ],
+      "level": "A",
+      "solverMoves": 1,
+      "sacrifices": [],
+      "knightRoles": [
+        {
+          "square": "c3",
+          "checking": false,
+          "escapesWithoutPiece": [
+            "Kxa2"
+          ]
+        }
+      ],
+      "rookRoles": [
+        {
+          "square": "a2",
+          "checking": true,
+          "escapesWithoutPiece": [
+            "Nxc3",
+            "Na3",
+            "Nd2",
+            "Kb2"
+          ]
+        }
+      ],
+      "endFen": "7k/8/8/8/8/2n5/r7/KN6 w - - 1 2"
+    },
+    "method": "Every legal starting move enumerated; actual checkmate; removal of either essential rook/knight breaks mate."
+  },
+  {
+    "id": "arabian-beginner-17",
+    "fen": "7k/5R2/5N2/8/8/K7/8/8 w - - 0 1",
+    "moves": [
+      "Rh7#"
+    ],
+    "alternatives": [
+      "Rh7#"
+    ],
+    "roles": {
+      "moves": [
+        "Rh7#"
+      ],
+      "level": "A",
+      "solverMoves": 1,
+      "sacrifices": [],
+      "knightRoles": [
+        {
+          "square": "f6",
+          "checking": false,
+          "escapesWithoutPiece": [
+            "Kg8",
+            "Kxh7"
+          ]
+        }
+      ],
+      "rookRoles": [
+        {
+          "square": "h7",
+          "checking": true,
+          "escapesWithoutPiece": [
+            "Kg7"
+          ]
+        }
+      ],
+      "endFen": "7k/7R/5N2/8/8/K7/8/8 b - - 1 1"
+    },
+    "method": "Every legal starting move enumerated; actual checkmate; removal of either essential rook/knight breaks mate."
+  },
+  {
+    "id": "arabian-beginner-18",
+    "fen": "8/8/8/6k1/8/5n2/4r3/7K b - - 0 1",
+    "moves": [
+      "Rh2#"
+    ],
+    "alternatives": [
+      "Rh2#"
+    ],
+    "roles": {
+      "moves": [
+        "Rh2#"
+      ],
+      "level": "A",
+      "solverMoves": 1,
+      "sacrifices": [],
+      "knightRoles": [
+        {
+          "square": "f3",
+          "checking": false,
+          "escapesWithoutPiece": [
+            "Kxh2",
+            "Kg1"
+          ]
+        }
+      ],
+      "rookRoles": [
+        {
+          "square": "h2",
+          "checking": true,
+          "escapesWithoutPiece": [
+            "Kg2"
+          ]
+        }
+      ],
+      "endFen": "8/8/8/6k1/8/5n2/7r/7K w - - 1 2"
+    },
+    "method": "Every legal starting move enumerated; actual checkmate; removal of either essential rook/knight breaks mate."
+  },
+  {
+    "id": "arabian-beginner-19",
+    "fen": "k7/7R/2N3K1/8/8/8/8/8 w - - 0 1",
+    "moves": [
+      "Ra7#"
+    ],
+    "alternatives": [
+      "Ra7#"
+    ],
+    "roles": {
+      "moves": [
+        "Ra7#"
+      ],
+      "level": "A",
+      "solverMoves": 1,
+      "sacrifices": [],
+      "knightRoles": [
+        {
+          "square": "c6",
+          "checking": false,
+          "escapesWithoutPiece": [
+            "Kb8",
+            "Kxa7"
+          ]
+        }
+      ],
+      "rookRoles": [
+        {
+          "square": "a7",
+          "checking": true,
+          "escapesWithoutPiece": [
+            "Kb7"
+          ]
+        }
+      ],
+      "endFen": "k7/R7/2N3K1/8/8/8/8/8 b - - 1 1"
+    },
+    "method": "Every legal starting move enumerated; actual checkmate; removal of either essential rook/knight breaks mate."
+  },
+  {
+    "id": "arabian-beginner-20",
+    "fen": "kr6/8/8/8/8/2n5/8/K7 b - - 0 1",
+    "moves": [
+      "Rb1#"
+    ],
+    "alternatives": [
+      "Rb1#"
+    ],
+    "roles": {
+      "moves": [
+        "Rb1#"
+      ],
+      "level": "A",
+      "solverMoves": 1,
+      "sacrifices": [],
+      "knightRoles": [
+        {
+          "square": "c3",
+          "checking": false,
+          "escapesWithoutPiece": [
+            "Ka2",
+            "Kxb1"
+          ]
+        }
+      ],
+      "rookRoles": [
+        {
+          "square": "b1",
+          "checking": true,
+          "escapesWithoutPiece": [
+            "Kb2"
+          ]
+        }
+      ],
+      "endFen": "k7/8/8/8/8/2n5/8/Kr6 w - - 1 2"
+    },
+    "method": "Every legal starting move enumerated; actual checkmate; removal of either essential rook/knight breaks mate."
+  },
+  {
+    "id": "arabian-beginner-21",
+    "fen": "7k/7b/4KN2/7R/8/8/8/8 w - - 0 1",
+    "moves": [
+      "Rxh7#"
+    ],
+    "alternatives": [
+      "Rxh7#"
+    ],
+    "roles": {
+      "moves": [
+        "Rxh7#"
+      ],
+      "level": "A",
+      "solverMoves": 1,
+      "sacrifices": [],
+      "knightRoles": [
+        {
+          "square": "f6",
+          "checking": false,
+          "escapesWithoutPiece": [
+            "Kg8",
+            "Kxh7"
+          ]
+        }
+      ],
+      "rookRoles": [
+        {
+          "square": "h7",
+          "checking": true,
+          "escapesWithoutPiece": [
+            "Kg7"
+          ]
+        }
+      ],
+      "endFen": "7k/7R/4KN2/8/8/8/8/8 b - - 0 1"
+    },
+    "method": "Every legal starting move enumerated; actual checkmate; removal of either essential rook/knight breaks mate."
+  },
+  {
+    "id": "arabian-beginner-22",
+    "fen": "8/8/8/8/8/1k3n2/r7/7K b - - 0 1",
+    "moves": [
+      "Rh2#"
+    ],
+    "alternatives": [
+      "Rh2#"
+    ],
+    "roles": {
+      "moves": [
+        "Rh2#"
+      ],
+      "level": "A",
+      "solverMoves": 1,
+      "sacrifices": [],
+      "knightRoles": [
+        {
+          "square": "f3",
+          "checking": false,
+          "escapesWithoutPiece": [
+            "Kxh2",
+            "Kg1"
+          ]
+        }
+      ],
+      "rookRoles": [
+        {
+          "square": "h2",
+          "checking": true,
+          "escapesWithoutPiece": [
+            "Kg2"
+          ]
+        }
+      ],
+      "endFen": "8/8/8/8/8/1k3n2/7r/7K w - - 1 2"
+    },
+    "method": "Every legal starting move enumerated; actual checkmate; removal of either essential rook/knight breaks mate."
+  },
+  {
+    "id": "arabian-beginner-23",
+    "fen": "k7/6R1/2N5/1K6/8/8/8/8 w - - 0 1",
+    "moves": [
+      "Ra7#"
+    ],
+    "alternatives": [
+      "Ra7#"
+    ],
+    "roles": {
+      "moves": [
+        "Ra7#"
+      ],
+      "level": "A",
+      "solverMoves": 1,
+      "sacrifices": [],
+      "knightRoles": [
+        {
+          "square": "c6",
+          "checking": false,
+          "escapesWithoutPiece": [
+            "Kb8",
+            "Kxa7"
+          ]
+        }
+      ],
+      "rookRoles": [
+        {
+          "square": "a7",
+          "checking": true,
+          "escapesWithoutPiece": [
+            "Kb7"
+          ]
+        }
+      ],
+      "endFen": "k7/R7/2N5/1K6/8/8/8/8 b - - 1 1"
+    },
+    "method": "Every legal starting move enumerated; actual checkmate; removal of either essential rook/knight breaks mate."
+  },
+  {
+    "id": "arabian-beginner-24",
+    "fen": "8/8/8/8/8/2n5/5r2/K3k3 b - - 0 1",
+    "moves": [
+      "Ra2#"
+    ],
+    "alternatives": [
+      "Ra2#"
+    ],
+    "roles": {
+      "moves": [
+        "Ra2#"
+      ],
+      "level": "A",
+      "solverMoves": 1,
+      "sacrifices": [],
+      "knightRoles": [
+        {
+          "square": "c3",
+          "checking": false,
+          "escapesWithoutPiece": [
+            "Kxa2",
+            "Kb1"
+          ]
+        }
+      ],
+      "rookRoles": [
+        {
+          "square": "a2",
+          "checking": true,
+          "escapesWithoutPiece": [
+            "Kb2"
+          ]
+        }
+      ],
+      "endFen": "8/8/8/8/8/2n5/r7/K3k3 w - - 1 2"
+    },
+    "method": "Every legal starting move enumerated; actual checkmate; removal of either essential rook/knight breaks mate."
+  }
+]

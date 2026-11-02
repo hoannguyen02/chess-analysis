@@ -1,0 +1,4162 @@
+[
+  {
+    "id": "arabian-mate",
+    "title": "Chiếu hết kiểu Arabian",
+    "description": "Xe chiếu hết Vua trong góc; Mã bảo vệ Xe và khống chế ô thoát.",
+    "exercises": [
+      {
+        "title": "Arabian Mate · Bài 1",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "7k/1R5n/5N2/1K6/8/8/8/8 w - - 0 1",
+        "moves": [
+          "Rxh7#"
+        ],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "Mã bảo vệ ô mà Xe có thể đến để chiếu.",
+          "Tìm nước chiếu của Xe, rồi kiểm tra mọi ô thoát của Vua."
+        ],
+        "solution": "Rxh7# — Xe từ b7 đến h7, bắt quân và chiếu hết. Mã ở f6 bảo vệ Xe ở h7 và khống chế ô thoát của Vua."
+      },
+      {
+        "title": "Arabian Mate · Bài 2",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "8/8/8/8/8/5n2/1k2r3/7K b - - 0 1",
+        "moves": [
+          "Rh2#"
+        ],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "Mã bảo vệ ô mà Xe có thể đến để chiếu.",
+          "Tìm nước chiếu của Xe, rồi kiểm tra mọi ô thoát của Vua."
+        ],
+        "solution": "Rh2# — Xe từ e2 đến h2, chiếu hết. Mã ở f3 bảo vệ Xe ở h2 và khống chế ô thoát của Vua."
+      },
+      {
+        "title": "Arabian Mate · Bài 3",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "kn6/8/2N5/K7/8/1R6/8/8 w - - 0 1",
+        "moves": [
+          "Rxb8#"
+        ],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "Mã bảo vệ ô mà Xe có thể đến để chiếu.",
+          "Tìm nước chiếu của Xe, rồi kiểm tra mọi ô thoát của Vua."
+        ],
+        "solution": "Rxb8# — Xe từ b3 đến b8, bắt quân và chiếu hết. Mã ở c6 bảo vệ Xe ở b8 và khống chế ô thoát của Vua."
+      },
+      {
+        "title": "Arabian Mate · Bài 4",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "8/8/8/8/8/2n5/2r2k2/K7 b - - 0 1",
+        "moves": [
+          "Ra2#"
+        ],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "Mã bảo vệ ô mà Xe có thể đến để chiếu.",
+          "Tìm nước chiếu của Xe, rồi kiểm tra mọi ô thoát của Vua."
+        ],
+        "solution": "Ra2# — Xe từ c2 đến a2, chiếu hết. Mã ở c3 bảo vệ Xe ở a2 và khống chế ô thoát của Vua."
+      },
+      {
+        "title": "Arabian Mate · Bài 5",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "5K1k/1R6/5N2/8/8/8/8/8 w - - 0 1",
+        "moves": [
+          "Rh7#"
+        ],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "Mã bảo vệ ô mà Xe có thể đến để chiếu.",
+          "Tìm nước chiếu của Xe, rồi kiểm tra mọi ô thoát của Vua."
+        ],
+        "solution": "Rh7# — Xe từ b7 đến h7, chiếu hết. Mã ở f6 bảo vệ Xe ở h7 và khống chế ô thoát của Vua."
+      },
+      {
+        "title": "Arabian Mate · Bài 6",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "8/8/8/5k2/8/5nr1/8/7K b - - 0 1",
+        "moves": [
+          "Rg1#"
+        ],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "Mã bảo vệ ô mà Xe có thể đến để chiếu.",
+          "Tìm nước chiếu của Xe, rồi kiểm tra mọi ô thoát của Vua."
+        ],
+        "solution": "Rg1# — Xe từ g3 đến g1, chiếu hết. Mã ở f3 bảo vệ Xe ở g1 và khống chế ô thoát của Vua."
+      },
+      {
+        "title": "Arabian Mate · Bài 7",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "k7/6R1/2N5/7K/8/8/8/8 w - - 0 1",
+        "moves": [
+          "Ra7#"
+        ],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "Mã bảo vệ ô mà Xe có thể đến để chiếu.",
+          "Tìm nước chiếu của Xe, rồi kiểm tra mọi ô thoát của Vua."
+        ],
+        "solution": "Ra7# — Xe từ g7 đến a7, chiếu hết. Mã ở c6 bảo vệ Xe ở a7 và khống chế ô thoát của Vua."
+      },
+      {
+        "title": "Arabian Mate · Bài 8",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "8/8/8/8/8/2n5/1r6/K4k2 b - - 0 1",
+        "moves": [
+          "Ra2#"
+        ],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "Mã bảo vệ ô mà Xe có thể đến để chiếu.",
+          "Tìm nước chiếu của Xe, rồi kiểm tra mọi ô thoát của Vua."
+        ],
+        "solution": "Ra2# — Xe từ b2 đến a2, chiếu hết. Mã ở c3 bảo vệ Xe ở a2 và khống chế ô thoát của Vua."
+      },
+      {
+        "title": "Arabian Mate · Bài 9",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "7k/8/5N2/8/8/8/6R1/7K w - - 0 1",
+        "moves": [
+          "Rg8#"
+        ],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "Mã bảo vệ ô mà Xe có thể đến để chiếu.",
+          "Tìm nước chiếu của Xe, rồi kiểm tra mọi ô thoát của Vua."
+        ],
+        "solution": "Rg8# — Xe từ g2 đến g8, chiếu hết. Mã ở f6 bảo vệ Xe ở g8 và khống chế ô thoát của Vua."
+      },
+      {
+        "title": "Arabian Mate · Bài 10",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "8/8/8/6r1/8/5n2/8/3k3K b - - 0 1",
+        "moves": [
+          "Rg1#"
+        ],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "Mã bảo vệ ô mà Xe có thể đến để chiếu.",
+          "Tìm nước chiếu của Xe, rồi kiểm tra mọi ô thoát của Vua."
+        ],
+        "solution": "Rg1# — Xe từ g5 đến g1, chiếu hết. Mã ở f3 bảo vệ Xe ở g1 và khống chế ô thoát của Vua."
+      },
+      {
+        "title": "Arabian Mate · Bài 11",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "kr3R2/8/2N5/8/8/4K3/8/8 w - - 0 1",
+        "moves": [
+          "Rxb8#"
+        ],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "Mã bảo vệ ô mà Xe có thể đến để chiếu.",
+          "Tìm nước chiếu của Xe, rồi kiểm tra mọi ô thoát của Vua."
+        ],
+        "solution": "Rxb8# — Xe từ f8 đến b8, bắt quân và chiếu hết. Mã ở c6 bảo vệ Xe ở b8 và khống chế ô thoát của Vua."
+      },
+      {
+        "title": "Arabian Mate · Bài 12",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "8/8/8/8/8/1kn5/5r2/K7 b - - 0 1",
+        "moves": [
+          "Ra2#"
+        ],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "Mã bảo vệ ô mà Xe có thể đến để chiếu.",
+          "Tìm nước chiếu của Xe, rồi kiểm tra mọi ô thoát của Vua."
+        ],
+        "solution": "Ra2# — Xe từ f2 đến a2, chiếu hết. Mã ở c3 bảo vệ Xe ở a2 và khống chế ô thoát của Vua."
+      },
+      {
+        "title": "Arabian Mate · Bài 13",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "1K5k/8/5NR1/8/8/8/8/8 w - - 0 1",
+        "moves": [
+          "Rg8#"
+        ],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "Mã bảo vệ ô mà Xe có thể đến để chiếu.",
+          "Tìm nước chiếu của Xe, rồi kiểm tra mọi ô thoát của Vua."
+        ],
+        "solution": "Rg8# — Xe từ g6 đến g8, chiếu hết. Mã ở f6 bảo vệ Xe ở g8 và khống chế ô thoát của Vua."
+      },
+      {
+        "title": "Arabian Mate · Bài 14",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "8/8/8/8/6k1/5n2/5r2/7K b - - 0 1",
+        "moves": [
+          "Rh2#"
+        ],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "Mã bảo vệ ô mà Xe có thể đến để chiếu.",
+          "Tìm nước chiếu của Xe, rồi kiểm tra mọi ô thoát của Vua."
+        ],
+        "solution": "Rh2# — Xe từ f2 đến h2, chiếu hết. Mã ở f3 bảo vệ Xe ở h2 và khống chế ô thoát của Vua."
+      },
+      {
+        "title": "Arabian Mate · Bài 15",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "k7/b1R2K2/2N5/8/8/8/8/8 w - - 0 1",
+        "moves": [
+          "Rxa7#"
+        ],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "Mã bảo vệ ô mà Xe có thể đến để chiếu.",
+          "Tìm nước chiếu của Xe, rồi kiểm tra mọi ô thoát của Vua."
+        ],
+        "solution": "Rxa7# — Xe từ c7 đến a7, bắt quân và chiếu hết. Mã ở c6 bảo vệ Xe ở a7 và khống chế ô thoát của Vua."
+      },
+      {
+        "title": "Arabian Mate · Bài 16",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "7k/8/8/8/8/2n5/6r1/KN6 b - - 0 1",
+        "moves": [
+          "Ra2#"
+        ],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "Mã bảo vệ ô mà Xe có thể đến để chiếu.",
+          "Tìm nước chiếu của Xe, rồi kiểm tra mọi ô thoát của Vua."
+        ],
+        "solution": "Ra2# — Xe từ g2 đến a2, chiếu hết. Mã ở c3 bảo vệ Xe ở a2 và khống chế ô thoát của Vua."
+      },
+      {
+        "title": "Arabian Mate · Bài 17",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "7k/5R2/5N2/8/8/K7/8/8 w - - 0 1",
+        "moves": [
+          "Rh7#"
+        ],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "Mã bảo vệ ô mà Xe có thể đến để chiếu.",
+          "Tìm nước chiếu của Xe, rồi kiểm tra mọi ô thoát của Vua."
+        ],
+        "solution": "Rh7# — Xe từ f7 đến h7, chiếu hết. Mã ở f6 bảo vệ Xe ở h7 và khống chế ô thoát của Vua."
+      },
+      {
+        "title": "Arabian Mate · Bài 18",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "8/8/8/6k1/8/5n2/4r3/7K b - - 0 1",
+        "moves": [
+          "Rh2#"
+        ],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "Mã bảo vệ ô mà Xe có thể đến để chiếu.",
+          "Tìm nước chiếu của Xe, rồi kiểm tra mọi ô thoát của Vua."
+        ],
+        "solution": "Rh2# — Xe từ e2 đến h2, chiếu hết. Mã ở f3 bảo vệ Xe ở h2 và khống chế ô thoát của Vua."
+      },
+      {
+        "title": "Arabian Mate · Bài 19",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "k7/7R/2N3K1/8/8/8/8/8 w - - 0 1",
+        "moves": [
+          "Ra7#"
+        ],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "Mã bảo vệ ô mà Xe có thể đến để chiếu.",
+          "Tìm nước chiếu của Xe, rồi kiểm tra mọi ô thoát của Vua."
+        ],
+        "solution": "Ra7# — Xe từ h7 đến a7, chiếu hết. Mã ở c6 bảo vệ Xe ở a7 và khống chế ô thoát của Vua."
+      },
+      {
+        "title": "Arabian Mate · Bài 20",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "kr6/8/8/8/8/2n5/8/K7 b - - 0 1",
+        "moves": [
+          "Rb1#"
+        ],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "Mã bảo vệ ô mà Xe có thể đến để chiếu.",
+          "Tìm nước chiếu của Xe, rồi kiểm tra mọi ô thoát của Vua."
+        ],
+        "solution": "Rb1# — Xe từ b8 đến b1, chiếu hết. Mã ở c3 bảo vệ Xe ở b1 và khống chế ô thoát của Vua."
+      },
+      {
+        "title": "Arabian Mate · Bài 21",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "7k/7b/4KN2/7R/8/8/8/8 w - - 0 1",
+        "moves": [
+          "Rxh7#"
+        ],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "Mã bảo vệ ô mà Xe có thể đến để chiếu.",
+          "Tìm nước chiếu của Xe, rồi kiểm tra mọi ô thoát của Vua."
+        ],
+        "solution": "Rxh7# — Xe từ h5 đến h7, bắt quân và chiếu hết. Mã ở f6 bảo vệ Xe ở h7 và khống chế ô thoát của Vua."
+      },
+      {
+        "title": "Arabian Mate · Bài 22",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "8/8/8/8/8/1k3n2/r7/7K b - - 0 1",
+        "moves": [
+          "Rh2#"
+        ],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "Mã bảo vệ ô mà Xe có thể đến để chiếu.",
+          "Tìm nước chiếu của Xe, rồi kiểm tra mọi ô thoát của Vua."
+        ],
+        "solution": "Rh2# — Xe từ a2 đến h2, chiếu hết. Mã ở f3 bảo vệ Xe ở h2 và khống chế ô thoát của Vua."
+      },
+      {
+        "title": "Arabian Mate · Bài 23",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "k7/6R1/2N5/1K6/8/8/8/8 w - - 0 1",
+        "moves": [
+          "Ra7#"
+        ],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "Mã bảo vệ ô mà Xe có thể đến để chiếu.",
+          "Tìm nước chiếu của Xe, rồi kiểm tra mọi ô thoát của Vua."
+        ],
+        "solution": "Ra7# — Xe từ g7 đến a7, chiếu hết. Mã ở c6 bảo vệ Xe ở a7 và khống chế ô thoát của Vua."
+      },
+      {
+        "title": "Arabian Mate · Bài 24",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "8/8/8/8/8/2n5/5r2/K3k3 b - - 0 1",
+        "moves": [
+          "Ra2#"
+        ],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "Mã bảo vệ ô mà Xe có thể đến để chiếu.",
+          "Tìm nước chiếu của Xe, rồi kiểm tra mọi ô thoát của Vua."
+        ],
+        "solution": "Ra2# — Xe từ f2 đến a2, chiếu hết. Mã ở c3 bảo vệ Xe ở a2 và khống chế ô thoát của Vua."
+      },
+      {
+        "title": "Duda,J — So,W",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "k7/8/1RN5/B5p1/p7/1b1P4/1P3KPP/8 w - - 7 50",
+        "moves": [
+          "Rb8#"
+        ],
+        "previousMove": {
+          "fen": "8/k7/1RN5/B5p1/p7/1b1P4/1P3KPP/8 b - - 6 49",
+          "move": "Ka8"
+        },
+        "source": "https://www.pgnmentor.com/players/Duda.zip",
+        "gameReference": {
+          "collection": "arabian-mate",
+          "kind": "game",
+          "id": "2110497a2caca660",
+          "ply": 98,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 1,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xe kiểm soát hàng và cột; Mã bảo vệ ô Xe chiếu và khống chế ô thoát cạnh góc bàn cờ. Tìm cách phối hợp để khóa các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe và Mã; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở b8 và Mã ở c6 phối hợp chiếu hết: quân chiếu được hỗ trợ, các ô thoát bị khóa. Nhánh mẫu: Rb8#."
+      },
+      {
+        "title": "Shirov,A — Horak,Martin",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "r4b1k/p2R4/1qp1pNpp/4p3/8/5P2/PPP3PP/2K4R w - - 2 23",
+        "moves": [
+          "Rh7#"
+        ],
+        "previousMove": {
+          "fen": "r4bk1/p2R4/1qp1pNpp/4p3/8/5P2/PPP3PP/2K4R b - - 1 22",
+          "move": "Kh8"
+        },
+        "source": "https://www.pgnmentor.com/players/Shirov.zip",
+        "gameReference": {
+          "collection": "arabian-mate",
+          "kind": "game",
+          "id": "7e17b485354ae54e",
+          "ply": 44,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 1,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xe kiểm soát hàng và cột; Mã bảo vệ ô Xe chiếu và khống chế ô thoát cạnh góc bàn cờ. Tìm cách phối hợp để khóa các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe và Mã; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở h7 và Mã ở f6 phối hợp chiếu hết: quân chiếu được hỗ trợ, các ô thoát bị khóa. Nhánh mẫu: Rh7#."
+      },
+      {
+        "title": "Firouzja,Alireza — Makarian,Rudik",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "k7/2R5/1pNK4/3p4/3P4/1P6/7r/8 w - - 10 52",
+        "moves": [
+          "Ra7#"
+        ],
+        "previousMove": {
+          "fen": "1k6/2R5/1pNK4/3p4/3P4/1P6/7r/8 b - - 9 51",
+          "move": "Ka8"
+        },
+        "source": "https://www.pgnmentor.com/players/Firouzja.zip",
+        "gameReference": {
+          "collection": "arabian-mate",
+          "kind": "game",
+          "id": "a68e371c9b6b9e02",
+          "ply": 102,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 1,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xe kiểm soát hàng và cột; Mã bảo vệ ô Xe chiếu và khống chế ô thoát cạnh góc bàn cờ. Tìm cách phối hợp để khóa các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe và Mã; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở a7 và Mã ở c6 phối hợp chiếu hết: quân chiếu được hỗ trợ, các ô thoát bị khóa. Nhánh mẫu: Ra7#."
+      },
+      {
+        "title": "Duda,J — George,Kevin",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "r1b4k/1p1pR2p/p4N2/5p2/8/P4P2/6n1/7K w - - 0 32",
+        "moves": [
+          "Rxh7#"
+        ],
+        "previousMove": {
+          "fen": "r1b4k/1p1pR2p/p4N2/5p2/7n/P4P2/6P1/7K b - - 1 31",
+          "move": "Nxg2"
+        },
+        "source": "https://www.pgnmentor.com/players/Duda.zip",
+        "gameReference": {
+          "collection": "arabian-mate",
+          "kind": "game",
+          "id": "bef5579c6f18e654",
+          "ply": 62,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 1,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xe kiểm soát hàng và cột; Mã bảo vệ ô Xe chiếu và khống chế ô thoát cạnh góc bàn cờ. Tìm cách phối hợp để khóa các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe và Mã; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở h7 và Mã ở f6 phối hợp chiếu hết: quân chiếu được hỗ trợ, các ô thoát bị khóa. Nhánh mẫu: Rxh7#."
+      },
+      {
+        "title": "Yanchenko,R — Firouzja,Alireza",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/8/4k2p/8/6R1/5nP1/Pr5P/7K b - - 2 45",
+        "moves": [
+          "Rxh2#"
+        ],
+        "previousMove": {
+          "fen": "8/8/4k2p/8/6R1/5nP1/Pr5P/6K1 w - - 1 45",
+          "move": "Kh1"
+        },
+        "source": "https://www.pgnmentor.com/players/Firouzja.zip",
+        "gameReference": {
+          "collection": "arabian-mate",
+          "kind": "game",
+          "id": "d4ff2a1bdab97a26",
+          "ply": 89,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 1,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xe kiểm soát hàng và cột; Mã bảo vệ ô Xe chiếu và khống chế ô thoát cạnh góc bàn cờ. Tìm cách phối hợp để khóa các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe và Mã; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở h2 và Mã ở f3 phối hợp chiếu hết: quân chiếu được hỗ trợ, các ô thoát bị khóa. Nhánh mẫu: Rxh2#."
+      },
+      {
+        "title": "Duda,J — Navara,D",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "4K2k/4R2p/5N2/8/8/8/8/r7 w - - 6 55",
+        "moves": [
+          "Rxh7#"
+        ],
+        "previousMove": {
+          "fen": "4K2k/4R2p/5N2/8/8/8/8/7r b - - 5 54",
+          "move": "Ra1"
+        },
+        "source": "https://www.pgnmentor.com/players/Duda.zip",
+        "gameReference": {
+          "collection": "arabian-mate",
+          "kind": "game",
+          "id": "e4788aaa949e9321",
+          "ply": 108,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 1,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xe kiểm soát hàng và cột; Mã bảo vệ ô Xe chiếu và khống chế ô thoát cạnh góc bàn cờ. Tìm cách phối hợp để khóa các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe và Mã; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở h7 và Mã ở f6 phối hợp chiếu hết: quân chiếu được hỗ trợ, các ô thoát bị khóa. Nhánh mẫu: Rxh7#."
+      },
+      {
+        "title": "Dehtiarov,Roman — Firouzja,Alireza",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/R4p2/P4k1p/3p4/3n1p2/8/r6P/5BK1 b - - 2 43",
+        "moves": [
+          "Nf3+",
+          "Kh1",
+          "Rxh2#"
+        ],
+        "previousMove": {
+          "fen": "8/R4p2/P4k1p/3p4/3n1p2/8/r5KP/5B2 w - - 1 43",
+          "move": "Kg1"
+        },
+        "source": "https://www.pgnmentor.com/players/Firouzja.zip",
+        "gameReference": {
+          "collection": "arabian-mate",
+          "kind": "game",
+          "id": "5697b29a4fd6d1dd",
+          "ply": 85,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xe kiểm soát hàng và cột; Mã bảo vệ ô Xe chiếu và khống chế ô thoát cạnh góc bàn cờ. Tìm cách phối hợp để khóa các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe và Mã; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở h2 và Mã ở f3 phối hợp chiếu hết: quân chiếu được hỗ trợ, các ô thoát bị khóa. Nhánh mẫu: Nf3+ · Kh1 · Rxh2#."
+      },
+      {
+        "title": "Svidler,P — Martin Duque,J",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "6k1/p4R2/1p2P2p/8/1b2Np1P/3K4/6P1/4r3 w - - 0 45",
+        "moves": [
+          "Nf6+",
+          "Kh8",
+          "Rh7#"
+        ],
+        "previousMove": {
+          "fen": "6k1/p4R2/1p2P2p/8/1P2Np1P/2bK4/6P1/4r3 b - - 8 44",
+          "move": "Bxb4"
+        },
+        "source": "https://www.pgnmentor.com/players/Svidler.zip",
+        "gameReference": {
+          "collection": "arabian-mate",
+          "kind": "game",
+          "id": "9ffb8edc25d7882c",
+          "ply": 88,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xe kiểm soát hàng và cột; Mã bảo vệ ô Xe chiếu và khống chế ô thoát cạnh góc bàn cờ. Tìm cách phối hợp để khóa các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe và Mã; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở h7 và Mã ở f6 phối hợp chiếu hết: quân chiếu được hỗ trợ, các ô thoát bị khóa. Nhánh mẫu: Nf6+ · Kh8 · Rh7#."
+      },
+      {
+        "title": "Vetokhin,Savva — Svidler,P",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/1B4k1/p5pp/2p1p3/P1PnP3/1P1Rb1P1/5r1P/6K1 b - - 4 36",
+        "moves": [
+          "Nf3+",
+          "Kh1",
+          "Rxh2#"
+        ],
+        "previousMove": {
+          "fen": "8/1B4k1/p5pp/2p1p3/P1PnP3/1P2b1P1/5r1P/3R2K1 w - - 3 36",
+          "move": "Rd3"
+        },
+        "source": "https://www.pgnmentor.com/players/Svidler.zip",
+        "gameReference": {
+          "collection": "arabian-mate",
+          "kind": "game",
+          "id": "b844cd3109266a25",
+          "ply": 71,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xe kiểm soát hàng và cột; Mã bảo vệ ô Xe chiếu và khống chế ô thoát cạnh góc bàn cờ. Tìm cách phối hợp để khóa các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe và Mã; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở h2 và Mã ở f3 phối hợp chiếu hết: quân chiếu được hỗ trợ, các ô thoát bị khóa. Nhánh mẫu: Nf3+ · Kh1 · Rxh2#."
+      },
+      {
+        "title": "Saydaliev,Saidakbar — Firouzja,Alireza",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "5bk1/p1R2B2/6pp/p7/5P2/P4nP1/1P2r2P/7K b - - 0 34",
+        "moves": [
+          "Kh8",
+          "Rc2",
+          "Rxc2",
+          "Bxg6",
+          "Rxh2#"
+        ],
+        "previousMove": {
+          "fen": "5bk1/p1R2p2/6pp/p7/5P2/P4nP1/BP2r2P/7K w - - 1 34",
+          "move": "Bxf7+"
+        },
+        "source": "https://www.pgnmentor.com/players/Firouzja.zip",
+        "gameReference": {
+          "collection": "arabian-mate",
+          "kind": "game",
+          "id": "2de2c68bda535360",
+          "ply": 67,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xe kiểm soát hàng và cột; Mã bảo vệ ô Xe chiếu và khống chế ô thoát cạnh góc bàn cờ. Tìm cách phối hợp để khóa các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe và Mã; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở h2 và Mã ở f3 phối hợp chiếu hết: quân chiếu được hỗ trợ, các ô thoát bị khóa. Nhánh mẫu: Kh8 · Rc2 · Rxc2 · Bxg6 · Rxh2#."
+      },
+      {
+        "title": "Hafiz,Arif Abdul — Jobava,Ba",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/1R6/3Np1pP/4PpP1/5Pn1/4k3/r7/5K2 b - - 4 49",
+        "moves": [
+          "Nh2+",
+          "Kg1",
+          "Nf3+",
+          "Kh1",
+          "Rh2#"
+        ],
+        "previousMove": {
+          "fen": "8/7R/3Np1pP/4PpP1/5Pn1/4k3/r7/5K2 w - - 3 49",
+          "move": "Rb7"
+        },
+        "source": "https://www.pgnmentor.com/players/Jobava.zip",
+        "gameReference": {
+          "collection": "arabian-mate",
+          "kind": "game",
+          "id": "417a207ac041dea8",
+          "ply": 97,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xe kiểm soát hàng và cột; Mã bảo vệ ô Xe chiếu và khống chế ô thoát cạnh góc bàn cờ. Tìm cách phối hợp để khóa các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe và Mã; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở h2 và Mã ở f3 phối hợp chiếu hết: quân chiếu được hỗ trợ, các ô thoát bị khóa. Nhánh mẫu: Nh2+ · Kg1 · Nf3+ · Kh1 · Rh2#."
+      },
+      {
+        "title": "So,W — Ghasi,A",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "5k2/3R4/p2P2Bp/1p6/1P1p2N1/4n2P/4r1PK/8 w - - 1 43",
+        "moves": [
+          "Rf7+",
+          "Kg8",
+          "Nf6+",
+          "Kh8",
+          "Rh7#"
+        ],
+        "previousMove": {
+          "fen": "5k2/3R4/p2P2Bp/1p6/1Pnp2N1/7P/4r1PK/8 b - - 0 42",
+          "move": "Ne3"
+        },
+        "source": "https://www.pgnmentor.com/players/So.zip",
+        "gameReference": {
+          "collection": "arabian-mate",
+          "kind": "game",
+          "id": "486aacef9bc6ab2a",
+          "ply": 84,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xe kiểm soát hàng và cột; Mã bảo vệ ô Xe chiếu và khống chế ô thoát cạnh góc bàn cờ. Tìm cách phối hợp để khóa các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe và Mã; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở h7 và Mã ở f6 phối hợp chiếu hết: quân chiếu được hỗ trợ, các ô thoát bị khóa. Nhánh mẫu: Rf7+ · Kg8 · Nf6+ · Kh8 · Rh7#."
+      },
+      {
+        "title": "Jobava,Ba — Melikyan,Gnel",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "7k/1R6/6pp/rp6/4N2P/5PK1/8/8 w - - 1 43",
+        "moves": [
+          "Nf6",
+          "Ra7",
+          "Rxa7",
+          "b4",
+          "Rh7#"
+        ],
+        "previousMove": {
+          "fen": "6k1/1R6/6pp/rp6/4N2P/5PK1/8/8 b - h3 0 42",
+          "move": "Kh8"
+        },
+        "source": "https://www.pgnmentor.com/players/Jobava.zip",
+        "gameReference": {
+          "collection": "arabian-mate",
+          "kind": "game",
+          "id": "4b33895b54321d12",
+          "ply": 84,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xe kiểm soát hàng và cột; Mã bảo vệ ô Xe chiếu và khống chế ô thoát cạnh góc bàn cờ. Tìm cách phối hợp để khóa các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe và Mã; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở h7 và Mã ở f6 phối hợp chiếu hết: quân chiếu được hỗ trợ, các ô thoát bị khóa. Nhánh mẫu: Nf6 · Ra7 · Rxa7 · b4 · Rh7#."
+      },
+      {
+        "title": "Pranav,V — Jobava,Ba",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/p7/1p4P1/1n1PkN2/2p1P3/2Pn4/PB3r2/1K4R1 b - - 0 53",
+        "moves": [
+          "Rxb2+",
+          "Ka1",
+          "Nxc3",
+          "a3",
+          "Ra2#"
+        ],
+        "previousMove": {
+          "fen": "8/p7/1p6/1n1PkNP1/2p1P3/2Pn4/PB3r2/1K4R1 w - - 1 53",
+          "move": "g6"
+        },
+        "source": "https://www.pgnmentor.com/players/Jobava.zip",
+        "gameReference": {
+          "collection": "arabian-mate",
+          "kind": "game",
+          "id": "71edb382894aeb7d",
+          "ply": 105,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xe kiểm soát hàng và cột; Mã bảo vệ ô Xe chiếu và khống chế ô thoát cạnh góc bàn cờ. Tìm cách phối hợp để khóa các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe và Mã; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở a2 và Mã ở c3 phối hợp chiếu hết: quân chiếu được hỗ trợ, các ô thoát bị khóa. Nhánh mẫu: Rxb2+ · Ka1 · Nxc3 · a3 · Ra2#."
+      },
+      {
+        "title": "Polgar, Judit — Milos, Gilberto",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "3R4/7b/3p3k/4n1r1/2P5/7K/8/8 b - - 1 56",
+        "moves": [
+          "Bf5+",
+          "Kh2",
+          "Nf3+",
+          "Kh1",
+          "Rg1#"
+        ],
+        "previousMove": {
+          "fen": "7R/7b/3p3k/4n1r1/2P5/7K/8/8 w - - 0 56",
+          "move": "Rd8"
+        },
+        "source": "https://www.pgnmentor.com/players/PolgarJ.zip",
+        "gameReference": {
+          "collection": "arabian-mate",
+          "kind": "game",
+          "id": "75f770d8a36cd326",
+          "ply": 111,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xe kiểm soát hàng và cột; Mã bảo vệ ô Xe chiếu và khống chế ô thoát cạnh góc bàn cờ. Tìm cách phối hợp để khóa các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe và Mã; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở g1 và Mã ở f3 phối hợp chiếu hết: quân chiếu được hỗ trợ, các ô thoát bị khóa. Nhánh mẫu: Bf5+ · Kh2 · Nf3+ · Kh1 · Rg1#."
+      },
+      {
+        "title": "Moussard,J — Shirov,A",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "k2r3r/p1R1p1bp/4P1p1/4Np2/3pnP2/4B2P/P5P1/1R4K1 w - - 0 23",
+        "moves": [
+          "Nc6",
+          "Rd7",
+          "exd7",
+          "a5",
+          "Ra7#"
+        ],
+        "previousMove": {
+          "fen": "k2r3r/p1R1p1bp/4P1p1/3pNp2/4nP2/4B2P/P5P1/1R4K1 b - - 3 22",
+          "move": "d4"
+        },
+        "source": "https://www.pgnmentor.com/players/Shirov.zip",
+        "gameReference": {
+          "collection": "arabian-mate",
+          "kind": "game",
+          "id": "8579f83a0d7b4cd8",
+          "ply": 44,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xe kiểm soát hàng và cột; Mã bảo vệ ô Xe chiếu và khống chế ô thoát cạnh góc bàn cờ. Tìm cách phối hợp để khóa các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe và Mã; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở a7 và Mã ở c6 phối hợp chiếu hết: quân chiếu được hỗ trợ, các ô thoát bị khóa. Nhánh mẫu: Nc6 · Rd7 · exd7 · a5 · Ra7#."
+      },
+      {
+        "title": "Kuzubov,Y — Duda,J",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/r5k1/7R/6pP/6N1/5RPK/8/8 w - - 5 74",
+        "moves": [
+          "Rg6+",
+          "Kh7",
+          "Nf6+",
+          "Kh8",
+          "Rg8#"
+        ],
+        "previousMove": {
+          "fen": "8/r6k/7R/6pP/6N1/5RPK/8/8 b - - 4 73",
+          "move": "Kg7"
+        },
+        "source": "https://www.pgnmentor.com/players/Duda.zip",
+        "gameReference": {
+          "collection": "arabian-mate",
+          "kind": "game",
+          "id": "8d5766dbd7da061c",
+          "ply": 146,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xe kiểm soát hàng và cột; Mã bảo vệ ô Xe chiếu và khống chế ô thoát cạnh góc bàn cờ. Tìm cách phối hợp để khóa các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe và Mã; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở g8 và Mã ở f6 phối hợp chiếu hết: quân chiếu được hỗ trợ, các ô thoát bị khóa. Nhánh mẫu: Rg6+ · Kh7 · Nf6+ · Kh8 · Rg8#."
+      },
+      {
+        "title": "Morozevich,A — Kamsky,G",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "5r1k/RR6/6p1/7r/4p1N1/3nP1P1/5P1P/6K1 w - - 7 35",
+        "moves": [
+          "Nf6",
+          "Rf7",
+          "Rxf7",
+          "Ra5",
+          "Rh7#"
+        ],
+        "previousMove": {
+          "fen": "5r1k/RR6/6p1/2r5/4p1N1/3nP1P1/5P1P/6K1 b - - 6 34",
+          "move": "Rh5"
+        },
+        "source": "https://www.pgnmentor.com/players/Morozevich.zip",
+        "gameReference": {
+          "collection": "arabian-mate",
+          "kind": "game",
+          "id": "91e236332964a3c1",
+          "ply": 68,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xe kiểm soát hàng và cột; Mã bảo vệ ô Xe chiếu và khống chế ô thoát cạnh góc bàn cờ. Tìm cách phối hợp để khóa các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe và Mã; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở h7 và Mã ở f6 phối hợp chiếu hết: quân chiếu được hỗ trợ, các ô thoát bị khóa. Nhánh mẫu: Nf6 · Rf7 · Rxf7 · Ra5 · Rh7#."
+      },
+      {
+        "title": "Chigaev,M — Grischuk,A",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "1n1r3k/1r6/8/pP1NPpR1/3P4/8/6RP/6K1 w - f6 0 34",
+        "moves": [
+          "Nf6",
+          "Rc7",
+          "Rg8+",
+          "Rxg8",
+          "Rxg8#"
+        ],
+        "previousMove": {
+          "fen": "1n1r3k/1r3p2/8/pP1NP1R1/3P4/8/6RP/6K1 b - - 0 33",
+          "move": "f5"
+        },
+        "source": "https://www.pgnmentor.com/players/Grischuk.zip",
+        "gameReference": {
+          "collection": "arabian-mate",
+          "kind": "game",
+          "id": "942e6f9576e5ed94",
+          "ply": 66,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xe kiểm soát hàng và cột; Mã bảo vệ ô Xe chiếu và khống chế ô thoát cạnh góc bàn cờ. Tìm cách phối hợp để khóa các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe và Mã; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở g8 và Mã ở f6 phối hợp chiếu hết: quân chiếu được hỗ trợ, các ô thoát bị khóa. Nhánh mẫu: Nf6 · Rc7 · Rg8+ · Rxg8 · Rxg8#."
+      },
+      {
+        "title": "Lasker, Emanuel — NN",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "r6k/3nq2r/p3pNQ1/1p1pn3/1PpP1P2/2P2N2/P6P/6RK w - - 0 34",
+        "moves": [
+          "Qg8+",
+          "Rxg8",
+          "Rxg8#"
+        ],
+        "previousMove": {
+          "fen": "r6k/3nq1rR/p3pNQ1/1p1pn3/1PpP1P2/2P2N2/P6P/6RK b - - 0 33",
+          "move": "Rxh7"
+        },
+        "source": "https://www.pgnmentor.com/players/Lasker.zip",
+        "gameReference": {
+          "collection": "arabian-mate",
+          "kind": "game",
+          "id": "bdcff56a4d6a1521",
+          "ply": 66,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xe kiểm soát hàng và cột; Mã bảo vệ ô Xe chiếu và khống chế ô thoát cạnh góc bàn cờ. Tìm cách phối hợp để khóa các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe và Mã; tính cả các cách phòng thủ."
+        ],
+        "solution": "Thí Hậu trên g8 để mở đường cho đòn phối hợp. Xe ở g8 và Mã ở f6 phối hợp chiếu hết: quân chiếu được hỗ trợ, các ô thoát bị khóa. Nhánh mẫu: Qg8+ · Rxg8 · Rxg8#."
+      },
+      {
+        "title": "Suleymenov,Alisher — Firouzja,Alireza",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/6k1/7p/6rP/2P1Nr2/pP1B1n1b/P4R2/2R4K b - - 4 38",
+        "moves": [
+          "Bg2+",
+          "Rxg2",
+          "Rh4+",
+          "Rh2",
+          "Rxh2#"
+        ],
+        "previousMove": {
+          "fen": "8/6k1/7p/6rP/2P2r2/pP1B1nNb/P4R2/2R4K w - - 3 38",
+          "move": "Ne4"
+        },
+        "source": "https://www.pgnmentor.com/players/Firouzja.zip",
+        "gameReference": {
+          "collection": "arabian-mate",
+          "kind": "game",
+          "id": "65887c407be19338",
+          "ply": 75,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xe kiểm soát hàng và cột; Mã bảo vệ ô Xe chiếu và khống chế ô thoát cạnh góc bàn cờ. Tìm cách phối hợp để khóa các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe và Mã; tính cả các cách phòng thủ."
+        ],
+        "solution": "Thí Tượng trên g2 để mở đường cho đòn phối hợp. Xe ở h2 và Mã ở f3 phối hợp chiếu hết: quân chiếu được hỗ trợ, các ô thoát bị khóa. Nhánh mẫu: Bg2+ · Rxg2 · Rh4+ · Rh2 · Rxh2#."
+      },
+      {
+        "title": "Morozevich,A — Movsesian,S",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "6rk/p4p1p/5p2/8/2B5/5Pnq/PP3R1P/4Q1K1 b - - 4 30",
+        "moves": [
+          "Nf1+",
+          "Kh1",
+          "Nxh2",
+          "Be6",
+          "fxe6",
+          "Qxe6",
+          "Nxf3+",
+          "Qxh3",
+          "Rg1#"
+        ],
+        "previousMove": {
+          "fen": "6rk/p4p1p/5p2/8/2B5/5Pnq/PP3R1P/4Q2K w - - 3 30",
+          "move": "Kg1"
+        },
+        "source": "https://www.pgnmentor.com/players/Morozevich.zip",
+        "gameReference": {
+          "collection": "arabian-mate",
+          "kind": "game",
+          "id": "57edba0003df06e9",
+          "ply": 59,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xe kiểm soát hàng và cột; Mã bảo vệ ô Xe chiếu và khống chế ô thoát cạnh góc bàn cờ. Tìm cách phối hợp để khóa các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe và Mã; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở g1 và Mã ở f3 phối hợp chiếu hết: quân chiếu được hỗ trợ, các ô thoát bị khóa. Nhánh mẫu: Nf1+ · Kh1 · Nxh2 · Be6 · fxe6 · Qxe6 · Nxf3+ · Qxh3 · Rg1#."
+      },
+      {
+        "title": "Svidler,P — Van Foreest,Jorden",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "1k3r2/1p2b2R/1R2p3/3pP3/P2Pn2n/P7/4K2P/8 b - - 3 44",
+        "moves": [
+          "Rf2+",
+          "Kd1",
+          "Rd2+",
+          "Kc1",
+          "Bxa3+",
+          "Kb1",
+          "Nc3+",
+          "Ka1",
+          "Ra2#"
+        ],
+        "previousMove": {
+          "fen": "1k3r2/1p2b2R/1R2p3/3pP3/P2Pn2n/P7/7P/5K2 w - - 2 44",
+          "move": "Ke2"
+        },
+        "source": "https://www.pgnmentor.com/players/Svidler.zip",
+        "gameReference": {
+          "collection": "arabian-mate",
+          "kind": "game",
+          "id": "dae78c7f89bf2633",
+          "ply": 87,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xe kiểm soát hàng và cột; Mã bảo vệ ô Xe chiếu và khống chế ô thoát cạnh góc bàn cờ. Tìm cách phối hợp để khóa các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe và Mã; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở a2 và Mã ở c3 phối hợp chiếu hết: quân chiếu được hỗ trợ, các ô thoát bị khóa. Nhánh mẫu: Rf2+ · Kd1 · Rd2+ · Kc1 · Bxa3+ · Kb1 · Nc3+ · Ka1 · Ra2#."
+      },
+      {
+        "title": "Grischuk,A — Preotu,Razvan",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "1r2b2k/R7/3ppN1p/8/4P3/6RP/5PP1/1q5K w - - 0 43",
+        "moves": [
+          "Kh2",
+          "Bd7",
+          "Rxd7",
+          "Qg1+",
+          "Kxg1",
+          "Rb1+",
+          "Kh2",
+          "Rh1+",
+          "Kxh1",
+          "d5",
+          "Rh7#"
+        ],
+        "previousMove": {
+          "fen": "1r2b2k/R7/3ppN1p/8/4P3/6RP/1p3PP1/7K b - - 0 42",
+          "move": "b1=Q+"
+        },
+        "source": "https://www.pgnmentor.com/players/Grischuk.zip",
+        "gameReference": {
+          "collection": "arabian-mate",
+          "kind": "game",
+          "id": "5444da0a4a469a66",
+          "ply": 84,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 6,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xe kiểm soát hàng và cột; Mã bảo vệ ô Xe chiếu và khống chế ô thoát cạnh góc bàn cờ. Tìm cách phối hợp để khóa các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe và Mã; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở h7 và Mã ở f6 phối hợp chiếu hết: quân chiếu được hỗ trợ, các ô thoát bị khóa. Nhánh mẫu: Kh2 · Bd7 · Rxd7 · Qg1+ · Kxg1 · Rb1+ · Kh2 · Rh1+ · Kxh1 · d5 · Rh7#."
+      },
+      {
+        "title": "Anderssen, Adolf — NN",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "2r2b2/p2q1P1p/3p2k1/4pNP1/4P1RQ/7K/2pr4/5R2 w - - 0 48",
+        "moves": [
+          "Qxh7+",
+          "Kxh7",
+          "g6+",
+          "Kh8",
+          "Rh4+",
+          "Bh6",
+          "Rxh6#"
+        ],
+        "previousMove": {
+          "fen": "2r2b2/p2q1P1p/3p2k1/4pNP1/4P1RQ/2p4K/3r4/5R2 b - - 5 47",
+          "move": "c2"
+        },
+        "source": "https://www.pgnmentor.com/players/Anderssen.zip",
+        "gameReference": {
+          "collection": "arabian-mate",
+          "kind": "game",
+          "id": "0b038ec07c620bf1",
+          "ply": 94,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "D",
+          "status": "suggested",
+          "solverMoves": 4,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xe kiểm soát hàng và cột; Mã bảo vệ ô Xe chiếu và khống chế ô thoát cạnh góc bàn cờ. Tìm cách phối hợp để khóa các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe và Mã; tính cả các cách phòng thủ."
+        ],
+        "solution": "Thí Hậu trên h7 để mở đường cho đòn phối hợp. Xe ở h6 và Mã ở f5 phối hợp chiếu hết: quân chiếu được hỗ trợ, các ô thoát bị khóa. Nhánh mẫu: Qxh7+ · Kxh7 · g6+ · Kh8 · Rh4+ · Bh6 · Rxh6#."
+      },
+      {
+        "title": "Arabian Mate · A · Thế biên soạn 10",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "2k5/p1p2P2/8/2pP4/1P5p/5n1P/P5r1/1r3RBK b - - 0 1",
+        "moves": [
+          "Rxg1+",
+          "Rxg1",
+          "Rxg1#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định ô mà Mã có thể bảo vệ cho Xe chiếu.",
+          "Tính các nước chiếu, nước đáp và cách đưa Vua vào góc bàn cờ."
+        ],
+        "solution": "Xe ở g1 chiếu hết; Mã ở f3 bảo vệ Xe và khống chế ô thoát. Phương án: Rxg1+ · Rxg1 · Rxg1#."
+      },
+      {
+        "title": "Arabian Mate · A · Thế biên soạn 11",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "r1b4k/1p2R3/p4N2/4p3/8/P1p2P2/8/7K w - - 0 1",
+        "moves": [
+          "Rh7#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 1,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định ô mà Mã có thể bảo vệ cho Xe chiếu.",
+          "Tính các nước chiếu, nước đáp và cách đưa Vua vào góc bàn cờ."
+        ],
+        "solution": "Xe ở h7 chiếu hết; Mã ở f6 bảo vệ Xe và khống chế ô thoát. Phương án: Rh7#."
+      },
+      {
+        "title": "Arabian Mate · A · Thế biên soạn 12",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "4N3/pp6/6P1/1n1Pk3/2p1P3/3n2P1/P4r2/1K4R1 b - - 0 1",
+        "moves": [
+          "Nc3+",
+          "Ka1",
+          "Rxa2#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định ô mà Mã có thể bảo vệ cho Xe chiếu.",
+          "Tính các nước chiếu, nước đáp và cách đưa Vua vào góc bàn cờ."
+        ],
+        "solution": "Xe ở a2 chiếu hết; Mã ở c3 bảo vệ Xe và khống chế ô thoát. Phương án: Nc3+ · Ka1 · Rxa2#."
+      },
+      {
+        "title": "Arabian Mate · A · Thế biên soạn 13",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "kb6/5p2/2N5/B5p1/8/1R1P4/1P3KPP/8 w - - 0 1",
+        "moves": [
+          "Rxb8#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 1,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định ô mà Mã có thể bảo vệ cho Xe chiếu.",
+          "Tính các nước chiếu, nước đáp và cách đưa Vua vào góc bàn cờ."
+        ],
+        "solution": "Xe ở b8 chiếu hết; Mã ở c6 bảo vệ Xe và khống chế ô thoát. Phương án: Rxb8#."
+      },
+      {
+        "title": "Arabian Mate · A · Thế biên soạn 14",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/p7/6P1/1n1PkNB1/2p1P1p1/2Pn4/P4r2/1K4R1 b - - 0 1",
+        "moves": [
+          "Nxc3+",
+          "Ka1",
+          "Rxa2#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định ô mà Mã có thể bảo vệ cho Xe chiếu.",
+          "Tính các nước chiếu, nước đáp và cách đưa Vua vào góc bàn cờ."
+        ],
+        "solution": "Xe ở a2 chiếu hết; Mã ở c3 bảo vệ Xe và khống chế ô thoát. Phương án: Nxc3+ · Ka1 · Rxa2#."
+      },
+      {
+        "title": "Arabian Mate · A · Thế biên soạn 15",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "7k/1R6/5N2/7r/4p3/3nP1PR/1rp2P1P/6K1 w - - 0 1",
+        "moves": [
+          "Rxh5#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 1,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định ô mà Mã có thể bảo vệ cho Xe chiếu.",
+          "Tính các nước chiếu, nước đáp và cách đưa Vua vào góc bàn cờ."
+        ],
+        "solution": "Xe ở h5, b7 chiếu hết; Mã ở f6 bảo vệ Xe và khống chế ô thoát. Phương án: Rxh5#."
+      },
+      {
+        "title": "Arabian Mate · A · Thế biên soạn 16",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/2p5/4k3/8/8/5n2/PrP4P/7K b - - 0 1",
+        "moves": [
+          "Rxc2",
+          "a3",
+          "Rxh2#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định ô mà Mã có thể bảo vệ cho Xe chiếu.",
+          "Tính các nước chiếu, nước đáp và cách đưa Vua vào góc bàn cờ."
+        ],
+        "solution": "Xe ở h2 chiếu hết; Mã ở f3 bảo vệ Xe và khống chế ô thoát. Phương án: Rxc2 · a3 · Rxh2#."
+      },
+      {
+        "title": "Arabian Mate · A · Thế biên soạn 17",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "1r2b1qk/R7/3p1N1p/8/4P3/6RP/5PP1/7K w - - 0 1",
+        "moves": [
+          "Rxg8#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 1,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định ô mà Mã có thể bảo vệ cho Xe chiếu.",
+          "Tính các nước chiếu, nước đáp và cách đưa Vua vào góc bàn cờ."
+        ],
+        "solution": "Xe ở g8 chiếu hết; Mã ở f6 bảo vệ Xe và khống chế ô thoát. Phương án: Rxg8#."
+      },
+      {
+        "title": "Arabian Mate · A · Thế biên soạn 18",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/8/4P3/3P4/4k3/4Rn2/r7/7K b - - 0 1",
+        "moves": [
+          "Kxe3",
+          "e7",
+          "Rh2#"
+        ],
+        "source": "Thế cờ biên soạn.",
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định ô mà Mã có thể bảo vệ cho Xe chiếu.",
+          "Tính các nước chiếu, nước đáp và cách đưa Vua vào góc bàn cờ."
+        ],
+        "solution": "Xe ở h2 chiếu hết; Mã ở f3 bảo vệ Xe và khống chế ô thoát. Phương án: Kxe3 · e7 · Rh2#."
+      },
+      {
+        "title": "Arabian Mate · A · Thế biên soạn 19",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "r6k/1p1pRP1p/p4N2/5p2/8/5P2/6n1/1b5K w - - 0 1",
+        "moves": [
+          "f8=R+",
+          "Rxf8",
+          "Rxh7#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định ô mà Mã có thể bảo vệ cho Xe chiếu.",
+          "Tính các nước chiếu, nước đáp và cách đưa Vua vào góc bàn cờ."
+        ],
+        "solution": "Xe ở h7 chiếu hết; Mã ở f6 bảo vệ Xe và khống chế ô thoát. Phương án: f8=R+ · Rxf8 · Rxh7#."
+      },
+      {
+        "title": "Arabian Mate · A · Thế biên soạn 20",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/p7/1p4P1/1n1PkN2/2p1P3/2Pn4/5r2/1K4R1 b - - 0 1",
+        "moves": [
+          "Nxc3+",
+          "Ka1",
+          "Ra2#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định ô mà Mã có thể bảo vệ cho Xe chiếu.",
+          "Tính các nước chiếu, nước đáp và cách đưa Vua vào góc bàn cờ."
+        ],
+        "solution": "Xe ở a2 chiếu hết; Mã ở c3 bảo vệ Xe và khống chế ô thoát. Phương án: Nxc3+ · Ka1 · Ra2#."
+      },
+      {
+        "title": "Arabian Mate · A · Thế biên soạn 21",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "k7/2R2r2/1pNK4/3p4/3P4/1P6/8/8 w - - 0 1",
+        "moves": [
+          "Rxf7",
+          "b5",
+          "Ra7#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định ô mà Mã có thể bảo vệ cho Xe chiếu.",
+          "Tính các nước chiếu, nước đáp và cách đưa Vua vào góc bàn cờ."
+        ],
+        "solution": "Xe ở a7 chiếu hết; Mã ở c6 bảo vệ Xe và khống chế ô thoát. Phương án: Rxf7 · b5 · Ra7#."
+      },
+      {
+        "title": "Arabian Mate · A · Thế biên soạn 22",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "r6k/3nq2r/p3pNQ1/1p1pn3/1P1P1P2/2P2N1R/P4p1P/7K w - - 0 1",
+        "moves": [
+          "Qxh7+",
+          "Qxh7",
+          "Rxh7#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định ô mà Mã có thể bảo vệ cho Xe chiếu.",
+          "Tính các nước chiếu, nước đáp và cách đưa Vua vào góc bàn cờ."
+        ],
+        "solution": "Xe ở h7 chiếu hết; Mã ở f6 bảo vệ Xe và khống chế ô thoát. Phương án: Qxh7+ · Qxh7 · Rxh7#."
+      },
+      {
+        "title": "Arabian Mate · A · Thế biên soạn 23",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "6bk/3R4/1qp2Npp/P3p2R/5rp1/8/PP2p2P/2K5 w - - 0 1",
+        "moves": [
+          "Rxh6+",
+          "Bh7",
+          "Rhxh7#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định ô mà Mã có thể bảo vệ cho Xe chiếu.",
+          "Tính các nước chiếu, nước đáp và cách đưa Vua vào góc bàn cờ."
+        ],
+        "solution": "Xe ở h7 chiếu hết; Mã ở f6 bảo vệ Xe và khống chế ô thoát. Phương án: Rxh6+ · Bh7 · Rhxh7#."
+      },
+      {
+        "title": "Arabian Mate · A · Thế biên soạn 24",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "r5qk/p2R4/1Pp1pNpp/4p3/b7/8/PPPP2P1/2K4R w - - 0 1",
+        "moves": [
+          "Rxh6+",
+          "Qh7",
+          "Rhxh7#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định ô mà Mã có thể bảo vệ cho Xe chiếu.",
+          "Tính các nước chiếu, nước đáp và cách đưa Vua vào góc bàn cờ."
+        ],
+        "solution": "Xe ở h7 chiếu hết; Mã ở f6 bảo vệ Xe và khống chế ô thoát. Phương án: Rxh6+ · Qh7 · Rhxh7#."
+      },
+      {
+        "title": "Arabian Mate · B · Thế biên soạn 11",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "rb5k/p2R2R1/4pN2/7P/2Pp4/p2p1P2/1PPq4/2K5 w - - 0 1",
+        "moves": [
+          "Kxd2",
+          "Bf4+",
+          "Kxd3",
+          "Rb8",
+          "Rh7#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định ô mà Mã có thể bảo vệ cho Xe chiếu.",
+          "Tính các nước chiếu, nước đáp và cách đưa Vua vào góc bàn cờ."
+        ],
+        "solution": "Xe ở h7 chiếu hết; Mã ở f6 bảo vệ Xe và khống chế ô thoát. Phương án: Kxd2 · Bf4+ · Kxd3 · Rb8 · Rh7#."
+      },
+      {
+        "title": "Arabian Mate · B · Thế biên soạn 12",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/p1P2P2/1p6/1n2kN1p/4P3/3n4/PB3r2/1K4R1 b - - 0 1",
+        "moves": [
+          "Rxb2+",
+          "Ka1",
+          "Nc3",
+          "f8=Q",
+          "Rxa2#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định ô mà Mã có thể bảo vệ cho Xe chiếu.",
+          "Tính các nước chiếu, nước đáp và cách đưa Vua vào góc bàn cờ."
+        ],
+        "solution": "Xe ở a2 chiếu hết; Mã ở c3 bảo vệ Xe và khống chế ô thoát. Phương án: Rxb2+ · Ka1 · Nc3 · f8=Q · Rxa2#."
+      },
+      {
+        "title": "Arabian Mate · B · Thế biên soạn 13",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "k2r3r/p1R3bp/4P1p1/4Np2/3p4/4B2P/P5P1/1R4K1 w - - 0 1",
+        "moves": [
+          "Nc6",
+          "Rd7",
+          "Rxd7",
+          "dxe3",
+          "Rxa7#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định ô mà Mã có thể bảo vệ cho Xe chiếu.",
+          "Tính các nước chiếu, nước đáp và cách đưa Vua vào góc bàn cờ."
+        ],
+        "solution": "Xe ở a7 chiếu hết; Mã ở c6 bảo vệ Xe và khống chế ô thoát. Phương án: Nc6 · Rd7 · Rxd7 · dxe3 · Rxa7#."
+      },
+      {
+        "title": "Arabian Mate · B · Thế biên soạn 14",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/p7/1p4P1/1npPkN2/4P1P1/3n4/1B3r1P/1K4R1 b - - 0 1",
+        "moves": [
+          "Rxb2+",
+          "Ka1",
+          "Nc3",
+          "Nd4",
+          "Ra2#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định ô mà Mã có thể bảo vệ cho Xe chiếu.",
+          "Tính các nước chiếu, nước đáp và cách đưa Vua vào góc bàn cờ."
+        ],
+        "solution": "Xe ở a2 chiếu hết; Mã ở c3 bảo vệ Xe và khống chế ô thoát. Phương án: Rxb2+ · Ka1 · Nc3 · Nd4 · Ra2#."
+      },
+      {
+        "title": "Arabian Mate · B · Thế biên soạn 15",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "5k2/3R4/7p/1p1P2B1/1P1p2N1/4n2P/4rp1K/8 w - - 0 1",
+        "moves": [
+          "Bxh6+",
+          "Kg8",
+          "Nf6+",
+          "Kh8",
+          "Rh7#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định ô mà Mã có thể bảo vệ cho Xe chiếu.",
+          "Tính các nước chiếu, nước đáp và cách đưa Vua vào góc bàn cờ."
+        ],
+        "solution": "Xe ở h7 chiếu hết; Mã ở f6 bảo vệ Xe và khống chế ô thoát. Phương án: Bxh6+ · Kg8 · Nf6+ · Kh8 · Rh7#."
+      },
+      {
+        "title": "Arabian Mate · B · Thế biên soạn 16",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/p7/1p4P1/1n2kN2/2p1P3/2Pn4/PB1r4/1K4R1 b - - 0 1",
+        "moves": [
+          "Rxb2+",
+          "Ka1",
+          "Nxc3",
+          "g7",
+          "Rxa2#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định ô mà Mã có thể bảo vệ cho Xe chiếu.",
+          "Tính các nước chiếu, nước đáp và cách đưa Vua vào góc bàn cờ."
+        ],
+        "solution": "Xe ở a2 chiếu hết; Mã ở c3 bảo vệ Xe và khống chế ô thoát. Phương án: Rxb2+ · Ka1 · Nxc3 · g7 · Rxa2#."
+      },
+      {
+        "title": "Arabian Mate · B · Thế biên soạn 17",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "k2r3r/pR4b1/4P1p1/3pNp2/3pnP2/3pB2P/P5P1/1R4K1 w - - 0 1",
+        "moves": [
+          "Nc6",
+          "Rd7",
+          "Rb8+",
+          "Rxb8",
+          "Rxb8#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định ô mà Mã có thể bảo vệ cho Xe chiếu.",
+          "Tính các nước chiếu, nước đáp và cách đưa Vua vào góc bàn cờ."
+        ],
+        "solution": "Xe ở b8 chiếu hết; Mã ở c6 bảo vệ Xe và khống chế ô thoát. Phương án: Nc6 · Rd7 · Rb8+ · Rxb8 · Rxb8#."
+      },
+      {
+        "title": "Arabian Mate · B · Thế biên soạn 18",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "1r4k1/5p2/P3b3/3PNp2/4nPp1/4p1P1/2r1P1BP/K2R3R b - - 0 1",
+        "moves": [
+          "Nc3",
+          "Rd2",
+          "exd2",
+          "dxe6",
+          "Ra2#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định ô mà Mã có thể bảo vệ cho Xe chiếu.",
+          "Tính các nước chiếu, nước đáp và cách đưa Vua vào góc bàn cờ."
+        ],
+        "solution": "Xe ở a2 chiếu hết; Mã ở c3 bảo vệ Xe và khống chế ô thoát. Phương án: Nc3 · Rd2 · exd2 · dxe6 · Ra2#."
+      },
+      {
+        "title": "Arabian Mate · B · Thế biên soạn 19",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "1r5k/1b6/3ppN1p/P7/4PR2/6RP/6P1/7K w - - 0 1",
+        "moves": [
+          "Rh4",
+          "Bxe4",
+          "Rxh6+",
+          "Bh7",
+          "Rxh7#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định ô mà Mã có thể bảo vệ cho Xe chiếu.",
+          "Tính các nước chiếu, nước đáp và cách đưa Vua vào góc bàn cờ."
+        ],
+        "solution": "Xe ở h7 chiếu hết; Mã ở f6 bảo vệ Xe và khống chế ô thoát. Phương án: Rh4 · Bxe4 · Rxh6+ · Bh7 · Rxh7#."
+      },
+      {
+        "title": "Arabian Mate · B · Thế biên soạn 20",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/1R6/4p3/4PpPP/5pn1/4kP2/r7/5K2 b - - 0 1",
+        "moves": [
+          "Nh2+",
+          "Kg1",
+          "Nxf3+",
+          "Kh1",
+          "Rh2#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định ô mà Mã có thể bảo vệ cho Xe chiếu.",
+          "Tính các nước chiếu, nước đáp và cách đưa Vua vào góc bàn cờ."
+        ],
+        "solution": "Xe ở h2 chiếu hết; Mã ở f3 bảo vệ Xe và khống chế ô thoát. Phương án: Nh2+ · Kg1 · Nxf3+ · Kh1 · Rh2#."
+      },
+      {
+        "title": "Arabian Mate · B · Thế biên soạn 21",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "r1b4k/1p5p/p4N2/2R2p2/8/P4P1p/1n6/7K w - - 0 1",
+        "moves": [
+          "Rc7",
+          "Bd7",
+          "Rxd7",
+          "h6",
+          "Rh7#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định ô mà Mã có thể bảo vệ cho Xe chiếu.",
+          "Tính các nước chiếu, nước đáp và cách đưa Vua vào góc bàn cờ."
+        ],
+        "solution": "Xe ở h7 chiếu hết; Mã ở f6 bảo vệ Xe và khống chế ô thoát. Phương án: Rc7 · Bd7 · Rxd7 · h6 · Rh7#."
+      },
+      {
+        "title": "Arabian Mate · B · Thế biên soạn 22",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "2k5/p1p5/5p2/3P4/7p/Pr3n2/1Q1r4/R5BK b - - 0 1",
+        "moves": [
+          "Rbxb2",
+          "Ra2",
+          "Rb1",
+          "Rxd2",
+          "Rxg1#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định ô mà Mã có thể bảo vệ cho Xe chiếu.",
+          "Tính các nước chiếu, nước đáp và cách đưa Vua vào góc bàn cờ."
+        ],
+        "solution": "Xe ở g1 chiếu hết; Mã ở f3 bảo vệ Xe và khống chế ô thoát. Phương án: Rbxb2 · Ra2 · Rb1 · Rxd2 · Rxg1#."
+      },
+      {
+        "title": "Arabian Mate · B · Thế biên soạn 23",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "7k/2R5/5ppp/8/4N2P/1r3PK1/8/8 w - - 0 1",
+        "moves": [
+          "Nxf6",
+          "Rb7",
+          "Rxb7",
+          "g5",
+          "Rh7#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định ô mà Mã có thể bảo vệ cho Xe chiếu.",
+          "Tính các nước chiếu, nước đáp và cách đưa Vua vào góc bàn cờ."
+        ],
+        "solution": "Xe ở h7 chiếu hết; Mã ở f6 bảo vệ Xe và khống chế ô thoát. Phương án: Nxf6 · Rb7 · Rxb7 · g5 · Rh7#."
+      },
+      {
+        "title": "Arabian Mate · B · Thế biên soạn 24",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/1R6/p2N2pP/4Pp1P/6n1/4k3/r6P/5K2 b - - 0 1",
+        "moves": [
+          "Nxh2+",
+          "Kg1",
+          "Nf3+",
+          "Kh1",
+          "Rh2#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định ô mà Mã có thể bảo vệ cho Xe chiếu.",
+          "Tính các nước chiếu, nước đáp và cách đưa Vua vào góc bàn cờ."
+        ],
+        "solution": "Xe ở h2 chiếu hết; Mã ở f3 bảo vệ Xe và khống chế ô thoát. Phương án: Nxh2+ · Kg1 · Nf3+ · Kh1 · Rh2#."
+      },
+      {
+        "title": "Arabian Mate · C · Thế biên soạn 3",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "1r5k/Rb6/3ppN1p/8/4P3/6RP/5PP1/7K w - - 0 1",
+        "moves": [
+          "Rxb7",
+          "Rxb7",
+          "Rg8#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định ô mà Mã có thể bảo vệ cho Xe chiếu.",
+          "Tính các nước chiếu, nước đáp và cách đưa Vua vào góc bàn cờ."
+        ],
+        "solution": "Xe ở g8 chiếu hết; Mã ở f6 bảo vệ Xe và khống chế ô thoát. Phương án: Rxb7 · Rxb7 · Rg8#."
+      },
+      {
+        "title": "Arabian Mate · C · Thế biên soạn 4",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "2k5/p1p5/2P2p2/3PP3/1P5p/5n1P/1Q1r2r1/R5BK b - - 0 1",
+        "moves": [
+          "Rxb2",
+          "exf6",
+          "Rh2+",
+          "Bxh2",
+          "Rxh2#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định ô mà Mã có thể bảo vệ cho Xe chiếu.",
+          "Tính các nước chiếu, nước đáp và cách đưa Vua vào góc bàn cờ."
+        ],
+        "solution": "Xe ở h2 chiếu hết; Mã ở f3 bảo vệ Xe và khống chế ô thoát. Phương án: Rxb2 · exf6 · Rh2+ · Bxh2 · Rxh2#."
+      },
+      {
+        "title": "Arabian Mate · C · Thế biên soạn 5",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "r5bk/1qPR4/4pN1p/1p5P/3p4/1p3PR1/P1P5/2K5 w - - 0 1",
+        "moves": [
+          "Rxg8+",
+          "Rxg8",
+          "Rh7#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định ô mà Mã có thể bảo vệ cho Xe chiếu.",
+          "Tính các nước chiếu, nước đáp và cách đưa Vua vào góc bàn cờ."
+        ],
+        "solution": "Xe ở h7 chiếu hết; Mã ở f6 bảo vệ Xe và khống chế ô thoát. Phương án: Rxg8+ · Rxg8 · Rh7#."
+      },
+      {
+        "title": "Arabian Mate · C · Thế biên soạn 6",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "2k5/pppQ4/3P1p2/3P4/7p/4Pn1P/P2r2r1/R5BK b - - 0 1",
+        "moves": [
+          "Kxd7",
+          "e4",
+          "Rxg1+",
+          "Rxg1",
+          "Rh2#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định ô mà Mã có thể bảo vệ cho Xe chiếu.",
+          "Tính các nước chiếu, nước đáp và cách đưa Vua vào góc bàn cờ."
+        ],
+        "solution": "Xe ở h2 chiếu hết; Mã ở f3 bảo vệ Xe và khống chế ô thoát. Phương án: Kxd7 · e4 · Rxg1+ · Rxg1 · Rh2#."
+      },
+      {
+        "title": "Arabian Mate · C · Thế biên soạn 7",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "r5bk/p2R2R1/1qp1pN1p/4p3/8/8/PPP1p1PP/2K5 w - - 0 1",
+        "moves": [
+          "Rh7+",
+          "Bxh7",
+          "Rxh7#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định ô mà Mã có thể bảo vệ cho Xe chiếu.",
+          "Tính các nước chiếu, nước đáp và cách đưa Vua vào góc bàn cờ."
+        ],
+        "solution": "Xe ở h7 chiếu hết; Mã ở f6 bảo vệ Xe và khống chế ô thoát. Phương án: Rh7+ · Bxh7 · Rxh7#."
+      },
+      {
+        "title": "Arabian Mate · C · Thế biên soạn 8",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/2P3k1/7p/6r1/4Nr2/p2B1n1b/5RP1/2R4K b - - 0 1",
+        "moves": [
+          "Bxg2+",
+          "Rxg2",
+          "Rh4+",
+          "Rh2",
+          "Rxh2#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định ô mà Mã có thể bảo vệ cho Xe chiếu.",
+          "Tính các nước chiếu, nước đáp và cách đưa Vua vào góc bàn cờ."
+        ],
+        "solution": "Xe ở h2 chiếu hết; Mã ở f3 bảo vệ Xe và khống chế ô thoát. Phương án: Bxg2+ · Rxg2 · Rh4+ · Rh2 · Rxh2#."
+      },
+      {
+        "title": "Arabian Mate · C · Thế biên soạn 9",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "7k/4q2r/p3pNQn/1p2n3/1PpP1P2/2P1rN2/P6P/6RK w - - 0 1",
+        "moves": [
+          "Qg8+",
+          "Nxg8",
+          "Rxg8#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định ô mà Mã có thể bảo vệ cho Xe chiếu.",
+          "Tính các nước chiếu, nước đáp và cách đưa Vua vào góc bàn cờ."
+        ],
+        "solution": "Xe ở g8 chiếu hết; Mã ở f6 bảo vệ Xe và khống chế ô thoát. Phương án: Qg8+ · Nxg8 · Rxg8#."
+      },
+      {
+        "title": "Arabian Mate · C · Thế biên soạn 10",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "2k5/p1pQ2p1/3P1p2/1P1P4/7p/4Pn2/P2r2r1/R5BK b - - 0 1",
+        "moves": [
+          "Kxd7",
+          "dxc7",
+          "Rxg1+",
+          "Rxg1",
+          "Rh2#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định ô mà Mã có thể bảo vệ cho Xe chiếu.",
+          "Tính các nước chiếu, nước đáp và cách đưa Vua vào góc bàn cờ."
+        ],
+        "solution": "Xe ở h2 chiếu hết; Mã ở f3 bảo vệ Xe và khống chế ô thoát. Phương án: Kxd7 · dxc7 · Rxg1+ · Rxg1 · Rh2#."
+      },
+      {
+        "title": "Arabian Mate · C · Thế biên soạn 11",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "r6k/1p1nq2r/p3pNQ1/3pn3/1PpP1P2/5N2/P5RP/7K w - - 0 1",
+        "moves": [
+          "Qg8+",
+          "Rxg8",
+          "Rxg8#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định ô mà Mã có thể bảo vệ cho Xe chiếu.",
+          "Tính các nước chiếu, nước đáp và cách đưa Vua vào góc bàn cờ."
+        ],
+        "solution": "Xe ở g8 chiếu hết; Mã ở f6 bảo vệ Xe và khống chế ô thoát. Phương án: Qg8+ · Rxg8 · Rxg8#."
+      },
+      {
+        "title": "Arabian Mate · C · Thế biên soạn 12",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/6k1/7p/6r1/1PP1Nr2/pP1B1n1b/P4R2/2R4K b - - 0 1",
+        "moves": [
+          "Bg2+",
+          "Rxg2",
+          "Rh4+",
+          "Rh2",
+          "Rxh2#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định ô mà Mã có thể bảo vệ cho Xe chiếu.",
+          "Tính các nước chiếu, nước đáp và cách đưa Vua vào góc bàn cờ."
+        ],
+        "solution": "Xe ở h2 chiếu hết; Mã ở f3 bảo vệ Xe và khống chế ô thoát. Phương án: Bg2+ · Rxg2 · Rh4+ · Rh2 · Rxh2#."
+      },
+      {
+        "title": "Arabian Mate · C · Thế biên soạn 13",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "r6k/3R2p1/1qpbpNpp/4p3/8/P2P1P2/PP4P1/2K4R w - - 0 1",
+        "moves": [
+          "Rxh6+",
+          "gxh6",
+          "Rh7#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định ô mà Mã có thể bảo vệ cho Xe chiếu.",
+          "Tính các nước chiếu, nước đáp và cách đưa Vua vào góc bàn cờ."
+        ],
+        "solution": "Xe ở h7 chiếu hết; Mã ở f6 bảo vệ Xe và khống chế ô thoát. Phương án: Rxh6+ · gxh6 · Rh7#."
+      },
+      {
+        "title": "Arabian Mate · C · Thế biên soạn 14",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "2k5/ppp5/8/P1PP4/8/2p2n2/PQ1r2r1/R5BK b - - 0 1",
+        "moves": [
+          "cxb2",
+          "Rb1",
+          "Rh2+",
+          "Bxh2",
+          "Rxh2#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định ô mà Mã có thể bảo vệ cho Xe chiếu.",
+          "Tính các nước chiếu, nước đáp và cách đưa Vua vào góc bàn cờ."
+        ],
+        "solution": "Xe ở h2 chiếu hết; Mã ở f3 bảo vệ Xe và khống chế ô thoát. Phương án: cxb2 · Rb1 · Rh2+ · Bxh2 · Rxh2#."
+      },
+      {
+        "title": "Arabian Mate · C · Thế biên soạn 15",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "7k/n2nq1rr/4pNQ1/1p1p4/1PpP1P2/2P2N2/P6P/6RK w - - 0 1",
+        "moves": [
+          "Qxh7+",
+          "Rxh7",
+          "Rg8#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định ô mà Mã có thể bảo vệ cho Xe chiếu.",
+          "Tính các nước chiếu, nước đáp và cách đưa Vua vào góc bàn cờ."
+        ],
+        "solution": "Xe ở g8 chiếu hết; Mã ở f6 bảo vệ Xe và khống chế ô thoát. Phương án: Qxh7+ · Rxh7 · Rg8#."
+      },
+      {
+        "title": "Arabian Mate · C · Thế biên soạn 16",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "2k5/1pp3pp/3Q3P/2P5/2p5/2P2n1P/3r2r1/2R3BK b - - 0 1",
+        "moves": [
+          "cxd6",
+          "hxg7",
+          "Rh2+",
+          "Bxh2",
+          "Rxh2#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định ô mà Mã có thể bảo vệ cho Xe chiếu.",
+          "Tính các nước chiếu, nước đáp và cách đưa Vua vào góc bàn cờ."
+        ],
+        "solution": "Xe ở h2 chiếu hết; Mã ở f3 bảo vệ Xe và khống chế ô thoát. Phương án: cxd6 · hxg7 · Rh2+ · Bxh2 · Rxh2#."
+      },
+      {
+        "title": "Arabian Mate · C · Thế biên soạn 17",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "2r5/2pq1P1r/3p2k1/p4NP1/1p4RQ/b6K/2p4P/5R2 w - - 0 1",
+        "moves": [
+          "Qxh7+",
+          "Kxh7",
+          "g6+",
+          "Kh8",
+          "Rh4#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định ô mà Mã có thể bảo vệ cho Xe chiếu.",
+          "Tính các nước chiếu, nước đáp và cách đưa Vua vào góc bàn cờ."
+        ],
+        "solution": "Xe ở h4 chiếu hết; Mã ở f5 bảo vệ Xe và khống chế ô thoát. Phương án: Qxh7+ · Kxh7 · g6+ · Kh8 · Rh4#."
+      },
+      {
+        "title": "Arabian Mate · C · Thế biên soạn 18",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "r5bk/pq1R2R1/5N1p/1p5P/3p4/8/PPP5/2K5 w - - 0 1",
+        "moves": [
+          "Rxb7",
+          "d3",
+          "Rh7+",
+          "Bxh7",
+          "Rxh7#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định ô mà Mã có thể bảo vệ cho Xe chiếu.",
+          "Tính các nước chiếu, nước đáp và cách đưa Vua vào góc bàn cờ."
+        ],
+        "solution": "Xe ở h7 chiếu hết; Mã ở f6 bảo vệ Xe và khống chế ô thoát. Phương án: Rxb7 · d3 · Rh7+ · Bxh7 · Rxh7#."
+      },
+      {
+        "title": "Arabian Mate · C · Thế biên soạn 19",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "r5bk/pq1R2R1/P3pN1p/8/p1p5/5P2/PPP5/2K5 w - - 0 1",
+        "moves": [
+          "axb7",
+          "h5",
+          "Rh7+",
+          "Bxh7",
+          "Rxh7#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định ô mà Mã có thể bảo vệ cho Xe chiếu.",
+          "Tính các nước chiếu, nước đáp và cách đưa Vua vào góc bàn cờ."
+        ],
+        "solution": "Xe ở h7 chiếu hết; Mã ở f6 bảo vệ Xe và khống chế ô thoát. Phương án: axb7 · h5 · Rh7+ · Bxh7 · Rxh7#."
+      },
+      {
+        "title": "Arabian Mate · C · Thế biên soạn 20",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "r5bk/pq1R2R1/4pN1p/1p5P/3p4/5P2/PPP5/2K5 w - - 0 1",
+        "moves": [
+          "Rxb7",
+          "Rf8",
+          "Rh7+",
+          "Bxh7",
+          "Rxh7#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định ô mà Mã có thể bảo vệ cho Xe chiếu.",
+          "Tính các nước chiếu, nước đáp và cách đưa Vua vào góc bàn cờ."
+        ],
+        "solution": "Xe ở h7 chiếu hết; Mã ở f6 bảo vệ Xe và khống chế ô thoát. Phương án: Rxb7 · Rf8 · Rh7+ · Bxh7 · Rxh7#."
+      },
+      {
+        "title": "Arabian Mate · C · Thế biên soạn 21",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "7k/Rb4r1/3ppN1p/8/3PP3/8/2R2PP1/7K w - - 0 1",
+        "moves": [
+          "Ra8+",
+          "Bxa8",
+          "Rc8+",
+          "Rg8",
+          "Rxg8#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định ô mà Mã có thể bảo vệ cho Xe chiếu.",
+          "Tính các nước chiếu, nước đáp và cách đưa Vua vào góc bàn cờ."
+        ],
+        "solution": "Xe ở g8 chiếu hết; Mã ở f6 bảo vệ Xe và khống chế ô thoát. Phương án: Ra8+ · Bxa8 · Rc8+ · Rg8 · Rxg8#."
+      },
+      {
+        "title": "Arabian Mate · C · Thế biên soạn 22",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "2r4k/p4r2/P4N1B/2p2R1p/6R1/2b4P/2n1p1K1/8 w - - 0 1",
+        "moves": [
+          "Bg7+",
+          "Rxg7",
+          "Rxh5+",
+          "Rh7",
+          "Rxh7#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định ô mà Mã có thể bảo vệ cho Xe chiếu.",
+          "Tính các nước chiếu, nước đáp và cách đưa Vua vào góc bàn cờ."
+        ],
+        "solution": "Xe ở h7 chiếu hết; Mã ở f6 bảo vệ Xe và khống chế ô thoát. Phương án: Bg7+ · Rxg7 · Rxh5+ · Rh7 · Rxh7#."
+      },
+      {
+        "title": "Arabian Mate · C · Thế biên soạn 23",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "r5bk/pq1R2R1/2p1pN1p/4p3/8/5P2/PPP3P1/2K5 w - - 0 1",
+        "moves": [
+          "Rxb7",
+          "c5",
+          "Rxg8+",
+          "Rxg8",
+          "Rh7#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định ô mà Mã có thể bảo vệ cho Xe chiếu.",
+          "Tính các nước chiếu, nước đáp và cách đưa Vua vào góc bàn cờ."
+        ],
+        "solution": "Xe ở h7 chiếu hết; Mã ở f6 bảo vệ Xe và khống chế ô thoát. Phương án: Rxb7 · c5 · Rxg8+ · Rxg8 · Rh7#."
+      },
+      {
+        "title": "Arabian Mate · C · Thế biên soạn 24",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "2r3bk/3R2R1/2p1pN1p/4p3/8/3q4/PPP3PP/2K5 w - - 0 1",
+        "moves": [
+          "cxd3",
+          "h5",
+          "Rxg8+",
+          "Rxg8",
+          "Rh7#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định ô mà Mã có thể bảo vệ cho Xe chiếu.",
+          "Tính các nước chiếu, nước đáp và cách đưa Vua vào góc bàn cờ."
+        ],
+        "solution": "Xe ở h7 chiếu hết; Mã ở f6 bảo vệ Xe và khống chế ô thoát. Phương án: cxd3 · h5 · Rxg8+ · Rxg8 · Rh7#."
+      },
+      {
+        "title": "Arabian Mate · C* · Thế biên soạn 4",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/p7/6PN/1n1Pk3/2p5/2Pn2Pp/PB3r2/1K4R1 b - - 0 1",
+        "moves": [
+          "Rxb2+",
+          "Ka1",
+          "Nxc3",
+          "Re1+",
+          "Kd4",
+          "Nf5+",
+          "Kc5",
+          "g7",
+          "Rxa2#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định ô mà Mã có thể bảo vệ cho Xe chiếu.",
+          "Tính các nước chiếu, nước đáp và cách đưa Vua vào góc bàn cờ."
+        ],
+        "solution": "Xe ở a2 chiếu hết; Mã ở c3 bảo vệ Xe và khống chế ô thoát. Phương án: Rxb2+ · Ka1 · Nxc3 · Re1+ · Kd4 · Nf5+ · Kc5 · g7 · Rxa2#."
+      },
+      {
+        "title": "Arabian Mate · C* · Thế biên soạn 5",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "7k/1R6/7p/rp6/4N2P/6K1/P7/8 w - - 0 1",
+        "moves": [
+          "Nf6",
+          "Ra3+",
+          "Kg4",
+          "Ra7",
+          "Rxa7",
+          "h5+",
+          "Kxh5",
+          "b4",
+          "Rh7#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định ô mà Mã có thể bảo vệ cho Xe chiếu.",
+          "Tính các nước chiếu, nước đáp và cách đưa Vua vào góc bàn cờ."
+        ],
+        "solution": "Xe ở h7 chiếu hết; Mã ở f6 bảo vệ Xe và khống chế ô thoát. Phương án: Nf6 · Ra3+ · Kg4 · Ra7 · Rxa7 · h5+ · Kxh5 · b4 · Rh7#."
+      },
+      {
+        "title": "Arabian Mate · C* · Thế biên soạn 6",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/7p/1p4P1/1n1Pk3/P1p5/2Pn4/PB3r2/1K4R1 b - - 0 1",
+        "moves": [
+          "Rxb2+",
+          "Ka1",
+          "Nxc3",
+          "Re1+",
+          "Kd4",
+          "Re4+",
+          "Kxe4",
+          "a3",
+          "Ra2#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định ô mà Mã có thể bảo vệ cho Xe chiếu.",
+          "Tính các nước chiếu, nước đáp và cách đưa Vua vào góc bàn cờ."
+        ],
+        "solution": "Xe ở a2 chiếu hết; Mã ở c3 bảo vệ Xe và khống chế ô thoát. Phương án: Rxb2+ · Ka1 · Nxc3 · Re1+ · Kd4 · Re4+ · Kxe4 · a3 · Ra2#."
+      },
+      {
+        "title": "Arabian Mate · C* · Thế biên soạn 7",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/4k2p/p5p1/3pN2N/3P4/1r2P3/1P1pB2r/1K3R2 w - - 0 1",
+        "moves": [
+          "Rf7+",
+          "Kd8",
+          "Rd7+",
+          "Kc8",
+          "Bxa6+",
+          "Kb8",
+          "Nc6+",
+          "Ka8",
+          "Ra7#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định ô mà Mã có thể bảo vệ cho Xe chiếu.",
+          "Tính các nước chiếu, nước đáp và cách đưa Vua vào góc bàn cờ."
+        ],
+        "solution": "Xe ở a7 chiếu hết; Mã ở c6 bảo vệ Xe và khống chế ô thoát. Phương án: Rf7+ · Kd8 · Rd7+ · Kc8 · Bxa6+ · Kb8 · Nc6+ · Ka8 · Ra7#."
+      },
+      {
+        "title": "Arabian Mate · C* · Thế biên soạn 8",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "B1k5/ppp5/3Prp2/3P4/6Pp/4Pn2/P2r1Q2/R6K b - - 0 1",
+        "moves": [
+          "Rxf2",
+          "Bxb7+",
+          "Kxb7",
+          "Rb1+",
+          "Ka6",
+          "Rb6+",
+          "axb6",
+          "a3",
+          "Rh2#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định ô mà Mã có thể bảo vệ cho Xe chiếu.",
+          "Tính các nước chiếu, nước đáp và cách đưa Vua vào góc bàn cờ."
+        ],
+        "solution": "Xe ở h2 chiếu hết; Mã ở f3 bảo vệ Xe và khống chế ô thoát. Phương án: Rxf2 · Bxb7+ · Kxb7 · Rb1+ · Ka6 · Rb6+ · axb6 · a3 · Rh2#."
+      },
+      {
+        "title": "Arabian Mate · C* · Thế biên soạn 9",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "6bk/3R2R1/2p2N2/6PP/1r6/3p1P2/1P1q4/2K5 w - - 0 1",
+        "moves": [
+          "Kxd2",
+          "Rxb2+",
+          "Ke3",
+          "Re2+",
+          "Kf4",
+          "Re4+",
+          "fxe4",
+          "d2",
+          "Rxg8#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định ô mà Mã có thể bảo vệ cho Xe chiếu.",
+          "Tính các nước chiếu, nước đáp và cách đưa Vua vào góc bàn cờ."
+        ],
+        "solution": "Xe ở g8 chiếu hết; Mã ở f6 bảo vệ Xe và khống chế ô thoát. Phương án: Kxd2 · Rxb2+ · Ke3 · Re2+ · Kf4 · Re4+ · fxe4 · d2 · Rxg8#."
+      },
+      {
+        "title": "Arabian Mate · C* · Thế biên soạn 10",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "2k5/p1p2Pp1/5p2/p7/P7/5n1P/1Q2r1rP/R5BK b - - 0 1",
+        "moves": [
+          "Rxb2",
+          "f8=Q+",
+          "Kb7",
+          "Qd6",
+          "cxd6",
+          "h4",
+          "Rxg1+",
+          "Rxg1",
+          "Rxh2#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định ô mà Mã có thể bảo vệ cho Xe chiếu.",
+          "Tính các nước chiếu, nước đáp và cách đưa Vua vào góc bàn cờ."
+        ],
+        "solution": "Xe ở h2 chiếu hết; Mã ở f3 bảo vệ Xe và khống chế ô thoát. Phương án: Rxb2 · f8=Q+ · Kb7 · Qd6 · cxd6 · h4 · Rxg1+ · Rxg1 · Rxh2#."
+      },
+      {
+        "title": "Arabian Mate · C* · Thế biên soạn 11",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "6bk/pq1R1R2/1P2pN1p/1p5P/r2p1P2/5P2/1P6/2K5 w - - 0 1",
+        "moves": [
+          "Rxb7",
+          "Rc4+",
+          "Kd1",
+          "Bxf7",
+          "Rxf7",
+          "Rc1+",
+          "Kxc1",
+          "d3",
+          "Rh7#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định ô mà Mã có thể bảo vệ cho Xe chiếu.",
+          "Tính các nước chiếu, nước đáp và cách đưa Vua vào góc bàn cờ."
+        ],
+        "solution": "Xe ở h7 chiếu hết; Mã ở f6 bảo vệ Xe và khống chế ô thoát. Phương án: Rxb7 · Rc4+ · Kd1 · Bxf7 · Rxf7 · Rc1+ · Kxc1 · d3 · Rh7#."
+      },
+      {
+        "title": "Arabian Mate · C* · Thế biên soạn 12",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/7b/3p3k/4n1r1/8/7K/8/4R3 b - - 0 1",
+        "moves": [
+          "Bf5+",
+          "Kh2",
+          "Nf3+",
+          "Kh1",
+          "Nxe1",
+          "Kh2",
+          "Nf3+",
+          "Kh1",
+          "Rg1#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định ô mà Mã có thể bảo vệ cho Xe chiếu.",
+          "Tính các nước chiếu, nước đáp và cách đưa Vua vào góc bàn cờ."
+        ],
+        "solution": "Xe ở g1 chiếu hết; Mã ở f3 bảo vệ Xe và khống chế ô thoát. Phương án: Bf5+ · Kh2 · Nf3+ · Kh1 · Nxe1 · Kh2 · Nf3+ · Kh1 · Rg1#."
+      },
+      {
+        "title": "Arabian Mate · C* · Thế biên soạn 13",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "r5bk/1q1R2R1/5N1p/1p5P/3p1P2/6p1/PP6/2K5 w - - 0 1",
+        "moves": [
+          "Rxb7",
+          "Rc8+",
+          "Kd2",
+          "Rc2+",
+          "Kxc2",
+          "Bb3+",
+          "Kd2",
+          "Bd1",
+          "Rh7#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định ô mà Mã có thể bảo vệ cho Xe chiếu.",
+          "Tính các nước chiếu, nước đáp và cách đưa Vua vào góc bàn cờ."
+        ],
+        "solution": "Xe ở h7 chiếu hết; Mã ở f6 bảo vệ Xe và khống chế ô thoát. Phương án: Rxb7 · Rc8+ · Kd2 · Rc2+ · Kxc2 · Bb3+ · Kd2 · Bd1 · Rh7#."
+      },
+      {
+        "title": "Arabian Mate · C* · Thế biên soạn 14",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/7R/4k3/1p6/1r6/5nPP/P7/7K b - - 0 1",
+        "moves": [
+          "Rb2",
+          "Rh6+",
+          "Kf7",
+          "Rh7+",
+          "Kg6",
+          "Rh6+",
+          "Kxh6",
+          "a3",
+          "Rh2#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định ô mà Mã có thể bảo vệ cho Xe chiếu.",
+          "Tính các nước chiếu, nước đáp và cách đưa Vua vào góc bàn cờ."
+        ],
+        "solution": "Xe ở h2 chiếu hết; Mã ở f3 bảo vệ Xe và khống chế ô thoát. Phương án: Rb2 · Rh6+ · Kf7 · Rh7+ · Kg6 · Rh6+ · Kxh6 · a3 · Rh2#."
+      },
+      {
+        "title": "Arabian Mate · C* · Thế biên soạn 15",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "1r5k/R7/3ppN1p/8/8/3P2RP/6P1/1q5K w - - 0 1",
+        "moves": [
+          "Kh2",
+          "Qh1+",
+          "Kxh1",
+          "Rb1+",
+          "Kh2",
+          "Rh1+",
+          "Kxh1",
+          "d5",
+          "Rg8#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định ô mà Mã có thể bảo vệ cho Xe chiếu.",
+          "Tính các nước chiếu, nước đáp và cách đưa Vua vào góc bàn cờ."
+        ],
+        "solution": "Xe ở g8 chiếu hết; Mã ở f6 bảo vệ Xe và khống chế ô thoát. Phương án: Kh2 · Qh1+ · Kxh1 · Rb1+ · Kh2 · Rh1+ · Kxh1 · d5 · Rg8#."
+      },
+      {
+        "title": "Arabian Mate · C* · Thế biên soạn 16",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "2k5/p7/5p2/3P4/1P5p/5n1P/1Q1r2rP/R5BK b - - 0 1",
+        "moves": [
+          "Rxb2",
+          "Rc1+",
+          "Kd7",
+          "Rc7+",
+          "Kxc7",
+          "d6+",
+          "Kd7",
+          "b5",
+          "Rxg1#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định ô mà Mã có thể bảo vệ cho Xe chiếu.",
+          "Tính các nước chiếu, nước đáp và cách đưa Vua vào góc bàn cờ."
+        ],
+        "solution": "Xe ở g1 chiếu hết; Mã ở f3 bảo vệ Xe và khống chế ô thoát. Phương án: Rxb2 · Rc1+ · Kd7 · Rc7+ · Kxc7 · d6+ · Kd7 · b5 · Rxg1#."
+      },
+      {
+        "title": "Arabian Mate · C* · Thế biên soạn 17",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "k2r3r/2R1p1b1/4P1p1/4NpP1/1p1p4/4B1nP/P3p1P1/1R4K1 w - - 0 1",
+        "moves": [
+          "Nc6",
+          "e1=Q+",
+          "Rxe1",
+          "Rd7",
+          "exd7",
+          "Ne2+",
+          "Rxe2",
+          "dxe3",
+          "Ra7#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định ô mà Mã có thể bảo vệ cho Xe chiếu.",
+          "Tính các nước chiếu, nước đáp và cách đưa Vua vào góc bàn cờ."
+        ],
+        "solution": "Xe ở a7 chiếu hết; Mã ở c6 bảo vệ Xe và khống chế ô thoát. Phương án: Nc6 · e1=Q+ · Rxe1 · Rd7 · exd7 · Ne2+ · Rxe2 · dxe3 · Ra7#."
+      },
+      {
+        "title": "Arabian Mate · C* · Thế biên soạn 18",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/p5P1/1p4P1/1n1Pk3/8/2Pn3B/1N3r2/1K4R1 b - - 0 1",
+        "moves": [
+          "Rxb2+",
+          "Ka1",
+          "Nxc3",
+          "Re1+",
+          "Kd4",
+          "Re4+",
+          "Kxe4",
+          "Bg2+",
+          "Rxg2",
+          "g8=Q",
+          "Ra2#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 6,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định ô mà Mã có thể bảo vệ cho Xe chiếu.",
+          "Tính các nước chiếu, nước đáp và cách đưa Vua vào góc bàn cờ."
+        ],
+        "solution": "Xe ở a2 chiếu hết; Mã ở c3 bảo vệ Xe và khống chế ô thoát. Phương án: Rxb2+ · Ka1 · Nxc3 · Re1+ · Kd4 · Re4+ · Kxe4 · Bg2+ · Rxg2 · g8=Q · Ra2#."
+      },
+      {
+        "title": "Arabian Mate · C* · Thế biên soạn 19",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "7k/1R6/6pp/r7/3pN2P/6K1/P7/8 w - - 0 1",
+        "moves": [
+          "Nf6",
+          "Ra3+",
+          "Kg4",
+          "h5+",
+          "Kg5",
+          "Rg3+",
+          "Kh6",
+          "g5",
+          "Rh7#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định ô mà Mã có thể bảo vệ cho Xe chiếu.",
+          "Tính các nước chiếu, nước đáp và cách đưa Vua vào góc bàn cờ."
+        ],
+        "solution": "Xe ở h7 chiếu hết; Mã ở f6 bảo vệ Xe và khống chế ô thoát. Phương án: Nf6 · Ra3+ · Kg4 · h5+ · Kg5 · Rg3+ · Kh6 · g5 · Rh7#."
+      },
+      {
+        "title": "Arabian Mate · C* · Thế biên soạn 20",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "4N3/p7/1p4P1/1n2k3/2p1P3/2Pn4/PB3r2/1K4R1 b - - 0 1",
+        "moves": [
+          "Rxb2+",
+          "Ka1",
+          "Nxc3",
+          "Rg5+",
+          "Kf4",
+          "Rg4+",
+          "Kxg4",
+          "Nf6+",
+          "Kh4",
+          "Nh5",
+          "Rxa2#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 6,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định ô mà Mã có thể bảo vệ cho Xe chiếu.",
+          "Tính các nước chiếu, nước đáp và cách đưa Vua vào góc bàn cờ."
+        ],
+        "solution": "Xe ở a2 chiếu hết; Mã ở c3 bảo vệ Xe và khống chế ô thoát. Phương án: Rxb2+ · Ka1 · Nxc3 · Rg5+ · Kf4 · Rg4+ · Kxg4 · Nf6+ · Kh4 · Nh5 · Rxa2#."
+      },
+      {
+        "title": "Arabian Mate · C* · Thế biên soạn 21",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "r6k/pq4R1/4pN2/1b5P/3p4/7p/PPP2R2/2K5 w - - 0 1",
+        "moves": [
+          "Rxb7",
+          "Bd3",
+          "cxd3",
+          "Rc8+",
+          "Kd1",
+          "Rc7",
+          "Rxc7",
+          "h2",
+          "Rh7#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định ô mà Mã có thể bảo vệ cho Xe chiếu.",
+          "Tính các nước chiếu, nước đáp và cách đưa Vua vào góc bàn cờ."
+        ],
+        "solution": "Xe ở h7 chiếu hết; Mã ở f6 bảo vệ Xe và khống chế ô thoát. Phương án: Rxb7 · Bd3 · cxd3 · Rc8+ · Kd1 · Rc7 · Rxc7 · h2 · Rh7#."
+      },
+      {
+        "title": "Arabian Mate · C* · Thế biên soạn 22",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "2k5/1p1B2pp/5p2/5p2/2P3P1/4Pn1P/PQ1r2r1/R6K b - - 0 1",
+        "moves": [
+          "Kc7",
+          "Qxb7+",
+          "Kxb7",
+          "Rb1+",
+          "Kc7",
+          "Rb7+",
+          "Kxb7",
+          "Bc8+",
+          "Kxc8",
+          "a3",
+          "Rh2#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 6,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định ô mà Mã có thể bảo vệ cho Xe chiếu.",
+          "Tính các nước chiếu, nước đáp và cách đưa Vua vào góc bàn cờ."
+        ],
+        "solution": "Xe ở h2 chiếu hết; Mã ở f3 bảo vệ Xe và khống chế ô thoát. Phương án: Kc7 · Qxb7+ · Kxb7 · Rb1+ · Kc7 · Rb7+ · Kxb7 · Bc8+ · Kxc8 · a3 · Rh2#."
+      },
+      {
+        "title": "Arabian Mate · C* · Thế biên soạn 23",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "7k/1R6/7p/1p6/1r2N3/6K1/8/8 w - - 0 1",
+        "moves": [
+          "Nf6",
+          "Rb3+",
+          "Kf4",
+          "Rb4+",
+          "Kf5",
+          "Rf4+",
+          "Kxf4",
+          "b4",
+          "Rh7#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định ô mà Mã có thể bảo vệ cho Xe chiếu.",
+          "Tính các nước chiếu, nước đáp và cách đưa Vua vào góc bàn cờ."
+        ],
+        "solution": "Xe ở h7 chiếu hết; Mã ở f6 bảo vệ Xe và khống chế ô thoát. Phương án: Nf6 · Rb3+ · Kf4 · Rb4+ · Kf5 · Rf4+ · Kxf4 · b4 · Rh7#."
+      },
+      {
+        "title": "Arabian Mate · C* · Thế biên soạn 24",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/p7/2P5/1n2kN2/p7/1PPn1P2/PB3r2/1K4R1 b - - 0 1",
+        "moves": [
+          "Rxb2+",
+          "Ka1",
+          "Nxc3",
+          "f4+",
+          "Kxf5",
+          "Rg5+",
+          "Kxf4",
+          "Rf5+",
+          "Kxf5",
+          "a3",
+          "Ra2#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 6,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định ô mà Mã có thể bảo vệ cho Xe chiếu.",
+          "Tính các nước chiếu, nước đáp và cách đưa Vua vào góc bàn cờ."
+        ],
+        "solution": "Xe ở a2 chiếu hết; Mã ở c3 bảo vệ Xe và khống chế ô thoát. Phương án: Rxb2+ · Ka1 · Nxc3 · f4+ · Kxf5 · Rg5+ · Kxf4 · Rf5+ · Kxf5 · a3 · Ra2#."
+      },
+      {
+        "title": "Arabian Mate · D · Thế biên soạn 2",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/6Pr/7k/6rq/4Pnp1/6K1/2P1Rp2/2R2Q2 b - - 0 1",
+        "moves": [
+          "Qh2+",
+          "Kxh2",
+          "g3+",
+          "Kh1",
+          "Kxg7+",
+          "Qh3",
+          "Rxh3#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "D",
+          "status": "suggested",
+          "solverMoves": 4,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định ô mà Mã có thể bảo vệ cho Xe chiếu.",
+          "Tính các nước chiếu, nước đáp và cách đưa Vua vào góc bàn cờ."
+        ],
+        "solution": "Xe ở h3 chiếu hết; Mã ở f4 bảo vệ Xe và khống chế ô thoát. Phương án: Qh2+ · Kxh2 · g3+ · Kh1 · Kxg7+ · Qh3 · Rxh3#."
+      },
+      {
+        "title": "Arabian Mate · D · Thế biên soạn 3",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "5q2/5P1p/2p3k1/5NP1/4P1RQ/5p1K/2p2r1p/5Rr1 w - - 0 1",
+        "moves": [
+          "Qxh7+",
+          "Kxh7",
+          "g6+",
+          "Kh8",
+          "Rh4+",
+          "Qh6",
+          "Rxh6#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "D",
+          "status": "suggested",
+          "solverMoves": 4,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định ô mà Mã có thể bảo vệ cho Xe chiếu.",
+          "Tính các nước chiếu, nước đáp và cách đưa Vua vào góc bàn cờ."
+        ],
+        "solution": "Xe ở h6 chiếu hết; Mã ở f5 bảo vệ Xe và khống chế ô thoát. Phương án: Qxh7+ · Kxh7 · g6+ · Kh8 · Rh4+ · Qh6 · Rxh6#."
+      },
+      {
+        "title": "Arabian Mate · D · Thế biên soạn 4",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/7p/1r5k/Q5rq/5np1/P4PK1/P1P2p1R/2R2B2 b - - 0 1",
+        "moves": [
+          "Qxh2+",
+          "Kxh2",
+          "g3+",
+          "Kh1",
+          "Rxa5",
+          "Bb5",
+          "Rbxb5",
+          "c4",
+          "Rh5#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "D",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định ô mà Mã có thể bảo vệ cho Xe chiếu.",
+          "Tính các nước chiếu, nước đáp và cách đưa Vua vào góc bàn cờ."
+        ],
+        "solution": "Xe ở h5 chiếu hết; Mã ở f4 bảo vệ Xe và khống chế ô thoát. Phương án: Qxh2+ · Kxh2 · g3+ · Kh1 · Rxa5 · Bb5 · Rbxb5 · c4 · Rh5#."
+      },
+      {
+        "title": "Arabian Mate · D · Thế biên soạn 5",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "2r2b2/p2q1P2/3p2k1/4pNP1/4P1RQ/2p2R1K/2pr4/8 w - - 0 1",
+        "moves": [
+          "Qh7+",
+          "Kxh7",
+          "g6+",
+          "Kh8",
+          "Rh4+",
+          "Bh6",
+          "Rxh6#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "D",
+          "status": "suggested",
+          "solverMoves": 4,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định ô mà Mã có thể bảo vệ cho Xe chiếu.",
+          "Tính các nước chiếu, nước đáp và cách đưa Vua vào góc bàn cờ."
+        ],
+        "solution": "Xe ở h6 chiếu hết; Mã ở f5 bảo vệ Xe và khống chế ô thoát. Phương án: Qh7+ · Kxh7 · g6+ · Kh8 · Rh4+ · Bh6 · Rxh6#."
+      },
+      {
+        "title": "Arabian Mate · D · Thế biên soạn 6",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "2B2r2/2P5/7k/2Q3rq/5np1/6K1/p2P3R/8 b - - 0 1",
+        "moves": [
+          "Qxh2+",
+          "Kxh2",
+          "g3+",
+          "Kh1",
+          "a1=Q+",
+          "Qg1",
+          "Rh5+",
+          "Bh3",
+          "Rxh3#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "D",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định ô mà Mã có thể bảo vệ cho Xe chiếu.",
+          "Tính các nước chiếu, nước đáp và cách đưa Vua vào góc bàn cờ."
+        ],
+        "solution": "Xe ở h3 chiếu hết; Mã ở f4 bảo vệ Xe và khống chế ô thoát. Phương án: Qxh2+ · Kxh2 · g3+ · Kh1 · a1=Q+ · Qg1 · Rh5+ · Bh3 · Rxh3#."
+      },
+      {
+        "title": "Arabian Mate · D · Thế biên soạn 7",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "2r5/3p1P1r/6k1/p4NP1/1pq3RQ/6pK/7P/6b1 w - - 0 1",
+        "moves": [
+          "Qxh7+",
+          "Kxh7",
+          "g6+",
+          "Kh8",
+          "Rxc4",
+          "Bc5",
+          "Rh4#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "D",
+          "status": "suggested",
+          "solverMoves": 4,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định ô mà Mã có thể bảo vệ cho Xe chiếu.",
+          "Tính các nước chiếu, nước đáp và cách đưa Vua vào góc bàn cờ."
+        ],
+        "solution": "Xe ở h4 chiếu hết; Mã ở f5 bảo vệ Xe và khống chế ô thoát. Phương án: Qxh7+ · Kxh7 · g6+ · Kh8 · Rxc4 · Bc5 · Rh4#."
+      },
+      {
+        "title": "Arabian Mate · D · Thế biên soạn 8",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/r7/7k/Q5rq/2P2np1/3P1PK1/2PP1p1R/2R2B2 b - - 0 1",
+        "moves": [
+          "Qxh2+",
+          "Kxh2",
+          "g3+",
+          "Kh1",
+          "Raxa5",
+          "c5",
+          "Rh5+",
+          "Bh3",
+          "Rxh3#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "D",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định ô mà Mã có thể bảo vệ cho Xe chiếu.",
+          "Tính các nước chiếu, nước đáp và cách đưa Vua vào góc bàn cờ."
+        ],
+        "solution": "Xe ở h3 chiếu hết; Mã ở f4 bảo vệ Xe và khống chế ô thoát. Phương án: Qxh2+ · Kxh2 · g3+ · Kh1 · Raxa5 · c5 · Rh5+ · Bh3 · Rxh3#."
+      },
+      {
+        "title": "Arabian Mate · D · Thế biên soạn 9",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "2r5/q3pP2/5bk1/5NP1/6RQ/6PK/2prp2R/8 w - - 0 1",
+        "moves": [
+          "Qh7+",
+          "Kxh7",
+          "g6+",
+          "Kh8",
+          "Kg2+",
+          "Bh4",
+          "Rhxh4#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "D",
+          "status": "suggested",
+          "solverMoves": 4,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định ô mà Mã có thể bảo vệ cho Xe chiếu.",
+          "Tính các nước chiếu, nước đáp và cách đưa Vua vào góc bàn cờ."
+        ],
+        "solution": "Xe ở h4 chiếu hết; Mã ở f5 bảo vệ Xe và khống chế ô thoát. Phương án: Qh7+ · Kxh7 · g6+ · Kh8 · Kg2+ · Bh4 · Rhxh4#."
+      },
+      {
+        "title": "Arabian Mate · D · Thế biên soạn 10",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/3r2P1/5B1k/6rq/5np1/6K1/1R3p1P/2R2Q2 b - - 0 1",
+        "moves": [
+          "Qxh2+",
+          "Kxh2",
+          "g3+",
+          "Kh1",
+          "Rh5+",
+          "Bh4",
+          "Rxh4+",
+          "Qh3",
+          "Rxh3#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "D",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định ô mà Mã có thể bảo vệ cho Xe chiếu.",
+          "Tính các nước chiếu, nước đáp và cách đưa Vua vào góc bàn cờ."
+        ],
+        "solution": "Xe ở h3 chiếu hết; Mã ở f4 bảo vệ Xe và khống chế ô thoát. Phương án: Qxh2+ · Kxh2 · g3+ · Kh1 · Rh5+ · Bh4 · Rxh4+ · Qh3 · Rxh3#."
+      },
+      {
+        "title": "Arabian Mate · D · Thế biên soạn 11",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "2r5/1p1p1P1r/6k1/p1R2NP1/2q3RQ/b1p4K/7P/8 w - - 0 1",
+        "moves": [
+          "Qxh7+",
+          "Kxh7",
+          "g6+",
+          "Kh8",
+          "Rxc8+",
+          "Qxc8",
+          "Rh4#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "D",
+          "status": "suggested",
+          "solverMoves": 4,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định ô mà Mã có thể bảo vệ cho Xe chiếu.",
+          "Tính các nước chiếu, nước đáp và cách đưa Vua vào góc bàn cờ."
+        ],
+        "solution": "Xe ở h4 chiếu hết; Mã ở f5 bảo vệ Xe và khống chế ô thoát. Phương án: Qxh7+ · Kxh7 · g6+ · Kh8 · Rxc8+ · Qxc8 · Rh4#."
+      },
+      {
+        "title": "Arabian Mate · D · Thế biên soạn 12",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/2R5/2P4k/1PQ3rq/P4np1/6K1/2rP1pB1/2R5 b - - 0 1",
+        "moves": [
+          "Qh2+",
+          "Kxh2",
+          "g3+",
+          "Kh1",
+          "Rxc1+",
+          "Qxc1",
+          "Rh5+",
+          "Bh3",
+          "Rxh3#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "D",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định ô mà Mã có thể bảo vệ cho Xe chiếu.",
+          "Tính các nước chiếu, nước đáp và cách đưa Vua vào góc bàn cờ."
+        ],
+        "solution": "Xe ở h3 chiếu hết; Mã ở f4 bảo vệ Xe và khống chế ô thoát. Phương án: Qh2+ · Kxh2 · g3+ · Kh1 · Rxc1+ · Qxc1 · Rh5+ · Bh3 · Rxh3#."
+      },
+      {
+        "title": "Arabian Mate · D · Thế biên soạn 13",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "2r5/1r1q1P2/5bk1/4pNP1/4P1RQ/7K/2p3pR/8 w - - 0 1",
+        "moves": [
+          "Qh7+",
+          "Kxh7",
+          "g6+",
+          "Kh8",
+          "Kxg2+",
+          "Bh4",
+          "Rhxh4#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "D",
+          "status": "suggested",
+          "solverMoves": 4,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định ô mà Mã có thể bảo vệ cho Xe chiếu.",
+          "Tính các nước chiếu, nước đáp và cách đưa Vua vào góc bàn cờ."
+        ],
+        "solution": "Xe ở h4 chiếu hết; Mã ở f5 bảo vệ Xe và khống chế ô thoát. Phương án: Qh7+ · Kxh7 · g6+ · Kh8 · Kxg2+ · Bh4 · Rhxh4#."
+      },
+      {
+        "title": "Arabian Mate · D · Thế biên soạn 14",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "5r2/7p/7k/Q5rq/2P2np1/3P1PK1/2PP1p1R/2R2B2 b - - 0 1",
+        "moves": [
+          "Qxh2+",
+          "Kxh2",
+          "g3+",
+          "Kh1",
+          "Rxa5",
+          "c5",
+          "Rxc5",
+          "Bh3",
+          "Rh5",
+          "c3",
+          "Rxh3#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "D",
+          "status": "suggested",
+          "solverMoves": 6,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định ô mà Mã có thể bảo vệ cho Xe chiếu.",
+          "Tính các nước chiếu, nước đáp và cách đưa Vua vào góc bàn cờ."
+        ],
+        "solution": "Xe ở h3 chiếu hết; Mã ở f4 bảo vệ Xe và khống chế ô thoát. Phương án: Qxh2+ · Kxh2 · g3+ · Kh1 · Rxa5 · c5 · Rxc5 · Bh3 · Rh5 · c3 · Rxh3#."
+      },
+      {
+        "title": "Arabian Mate · D · Thế biên soạn 15",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "2r2b2/p1pq1P1r/3p2k1/4pNP1/6RQ/7K/2p4P/5R2 w - - 0 1",
+        "moves": [
+          "Qxh7+",
+          "Kxh7",
+          "g6+",
+          "Kh8",
+          "Rh4+",
+          "Bh6",
+          "Rxh6#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "D",
+          "status": "suggested",
+          "solverMoves": 4,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định ô mà Mã có thể bảo vệ cho Xe chiếu.",
+          "Tính các nước chiếu, nước đáp và cách đưa Vua vào góc bàn cờ."
+        ],
+        "solution": "Xe ở h6 chiếu hết; Mã ở f5 bảo vệ Xe và khống chế ô thoát. Phương án: Qxh7+ · Kxh7 · g6+ · Kh8 · Rh4+ · Bh6 · Rxh6#."
+      },
+      {
+        "title": "Arabian Mate · D · Thế biên soạn 16",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/P2p1P1r/6k1/p4NP1/2q3RQ/b6K/8/5R2 w - - 0 1",
+        "moves": [
+          "Qxh7+",
+          "Kxh7",
+          "g6+",
+          "Kh8",
+          "a8=Q+",
+          "Qc8",
+          "Rh4#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "D",
+          "status": "suggested",
+          "solverMoves": 4,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định ô mà Mã có thể bảo vệ cho Xe chiếu.",
+          "Tính các nước chiếu, nước đáp và cách đưa Vua vào góc bàn cờ."
+        ],
+        "solution": "Xe ở h4 chiếu hết; Mã ở f5 bảo vệ Xe và khống chế ô thoát. Phương án: Qxh7+ · Kxh7 · g6+ · Kh8 · a8=Q+ · Qc8 · Rh4#."
+      },
+      {
+        "title": "Arabian Mate · D · Thế biên soạn 17",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "2r5/1rpq1P1p/5bk1/4pNP1/4P1RQ/7K/2p4R/8 w - - 0 1",
+        "moves": [
+          "Qxh7+",
+          "Kxh7",
+          "g6+",
+          "Kh8",
+          "Kg2+",
+          "Bh4",
+          "Rhxh4#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "D",
+          "status": "suggested",
+          "solverMoves": 4,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định ô mà Mã có thể bảo vệ cho Xe chiếu.",
+          "Tính các nước chiếu, nước đáp và cách đưa Vua vào góc bàn cờ."
+        ],
+        "solution": "Xe ở h4 chiếu hết; Mã ở f5 bảo vệ Xe và khống chế ô thoát. Phương án: Qxh7+ · Kxh7 · g6+ · Kh8 · Kg2+ · Bh4 · Rhxh4#."
+      },
+      {
+        "title": "Arabian Mate · D · Thế biên soạn 18",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "2r5/5P1r/6k1/p4NP1/1p4RQ/b3q1pK/2p4P/5R2 w - - 0 1",
+        "moves": [
+          "Qxh7+",
+          "Kxh7",
+          "g6+",
+          "Kh8",
+          "Rh4+",
+          "Qh6",
+          "Rxh6#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "D",
+          "status": "suggested",
+          "solverMoves": 4,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định ô mà Mã có thể bảo vệ cho Xe chiếu.",
+          "Tính các nước chiếu, nước đáp và cách đưa Vua vào góc bàn cờ."
+        ],
+        "solution": "Xe ở h6 chiếu hết; Mã ở f5 bảo vệ Xe và khống chế ô thoát. Phương án: Qxh7+ · Kxh7 · g6+ · Kh8 · Rh4+ · Qh6 · Rxh6#."
+      },
+      {
+        "title": "Arabian Mate · D · Thế biên soạn 19",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "2r2b2/pr1q1P1p/3p2k1/4pNP1/4P1RQ/7K/2p5/5R2 w - - 0 1",
+        "moves": [
+          "Qxh7+",
+          "Kxh7",
+          "g6+",
+          "Kh8",
+          "Rh4+",
+          "Bh6",
+          "Rxh6#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "D",
+          "status": "suggested",
+          "solverMoves": 4,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định ô mà Mã có thể bảo vệ cho Xe chiếu.",
+          "Tính các nước chiếu, nước đáp và cách đưa Vua vào góc bàn cờ."
+        ],
+        "solution": "Xe ở h6 chiếu hết; Mã ở f5 bảo vệ Xe và khống chế ô thoát. Phương án: Qxh7+ · Kxh7 · g6+ · Kh8 · Rh4+ · Bh6 · Rxh6#."
+      },
+      {
+        "title": "Arabian Mate · D · Thế biên soạn 20",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "2r5/3p1P1r/6k1/p4NP1/1pq3RQ/b5pK/7P/5R2 w - - 0 1",
+        "moves": [
+          "Qxh7+",
+          "Kxh7",
+          "g6+",
+          "Kh8",
+          "Rxc4",
+          "Rb8",
+          "Rh4#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "D",
+          "status": "suggested",
+          "solverMoves": 4,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định ô mà Mã có thể bảo vệ cho Xe chiếu.",
+          "Tính các nước chiếu, nước đáp và cách đưa Vua vào góc bàn cờ."
+        ],
+        "solution": "Xe ở h4 chiếu hết; Mã ở f5 bảo vệ Xe và khống chế ô thoát. Phương án: Qxh7+ · Kxh7 · g6+ · Kh8 · Rxc4 · Rb8 · Rh4#."
+      },
+      {
+        "title": "Arabian Mate · D · Thế biên soạn 21",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "5q2/5P2/3p2k1/5NP1/1p2P1RQ/4Rp1K/2p2r1p/6r1 w - - 0 1",
+        "moves": [
+          "Qh7+",
+          "Kxh7",
+          "g6+",
+          "Kh8",
+          "Rh4+",
+          "Qh6",
+          "Rxh6#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "D",
+          "status": "suggested",
+          "solverMoves": 4,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định ô mà Mã có thể bảo vệ cho Xe chiếu.",
+          "Tính các nước chiếu, nước đáp và cách đưa Vua vào góc bàn cờ."
+        ],
+        "solution": "Xe ở h6 chiếu hết; Mã ở f5 bảo vệ Xe và khống chế ô thoát. Phương án: Qh7+ · Kxh7 · g6+ · Kh8 · Rh4+ · Qh6 · Rxh6#."
+      },
+      {
+        "title": "Arabian Mate · D · Thế biên soạn 22",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "2r2q2/1rp2P2/6k1/5NP1/6RQ/5b1K/6pR/8 w - - 0 1",
+        "moves": [
+          "Qh7+",
+          "Kxh7",
+          "g6+",
+          "Kh8",
+          "Kg3+",
+          "Qh6",
+          "Rxh6#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "D",
+          "status": "suggested",
+          "solverMoves": 4,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định ô mà Mã có thể bảo vệ cho Xe chiếu.",
+          "Tính các nước chiếu, nước đáp và cách đưa Vua vào góc bàn cờ."
+        ],
+        "solution": "Xe ở h6 chiếu hết; Mã ở f5 bảo vệ Xe và khống chế ô thoát. Phương án: Qh7+ · Kxh7 · g6+ · Kh8 · Kg3+ · Qh6 · Rxh6#."
+      },
+      {
+        "title": "Arabian Mate · D · Thế biên soạn 23",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "2r5/q3pP2/5bk1/5NP1/4P1RQ/7K/2pr2pR/8 w - - 0 1",
+        "moves": [
+          "Qh7+",
+          "Kxh7",
+          "g6+",
+          "Kh8",
+          "Kg3+",
+          "Bh4+",
+          "Rhxh4#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "D",
+          "status": "suggested",
+          "solverMoves": 4,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định ô mà Mã có thể bảo vệ cho Xe chiếu.",
+          "Tính các nước chiếu, nước đáp và cách đưa Vua vào góc bàn cờ."
+        ],
+        "solution": "Xe ở h4 chiếu hết; Mã ở f5 bảo vệ Xe và khống chế ô thoát. Phương án: Qh7+ · Kxh7 · g6+ · Kh8 · Kg3+ · Bh4+ · Rhxh4#."
+      },
+      {
+        "title": "Arabian Mate · D · Thế biên soạn 24",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "2r2b2/pr3P1p/3p2k1/5NP1/2p1P1RQ/7K/2p5/3q4 w - - 0 1",
+        "moves": [
+          "Qxh7+",
+          "Kxh7",
+          "g6+",
+          "Kh8",
+          "Rh4+",
+          "Qh5",
+          "Rxh5+",
+          "Bh6",
+          "Rxh6#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "D",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định ô mà Mã có thể bảo vệ cho Xe chiếu.",
+          "Tính các nước chiếu, nước đáp và cách đưa Vua vào góc bàn cờ."
+        ],
+        "solution": "Xe ở h6 chiếu hết; Mã ở f5 bảo vệ Xe và khống chế ô thoát. Phương án: Qxh7+ · Kxh7 · g6+ · Kh8 · Rh4+ · Qh5 · Rxh5+ · Bh6 · Rxh6#."
+      }
+    ]
+  }
+]

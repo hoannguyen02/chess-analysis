@@ -48,7 +48,7 @@ def build(rank, engine_path):
          'Hậu bảo vệ Tượng', 'Hậu c5 bảo vệ e5. Nước bắt Tốt cũng đưa Tượng lên đường chéo g7–h8.'),
         ('bishop', 'Bologan,V — Vovk', 'Rxd6',
          'Tìm đòn xiên bằng Xe. So sánh với nước bắt bằng Tượng.',
-         'Tượng và Hậu phối hợp với Xe', 'Tượng c5 và Hậu d5 cùng bảo vệ d6. Bxd6 cũng là ứng viên mạnh; không xem đó là nước sai chỉ vì không phải đòn xiên.'),
+         'Tượng và Hậu phối hợp với Xe', 'Tượng c5 và Hậu d5 cùng bảo vệ d6. Bxd6 cũng là một nước đáng xét; cần đánh giá kết quả, không loại bỏ chỉ vì nước đó không tạo đòn xiên.'),
     ]
     records = []
     for identifier, name, move, prompt, objective, explanation in specs:
@@ -75,7 +75,7 @@ def build(rank, engine_path):
                         fen=comparison.fen(), intendedMove='Ba3',
                         prompt='Nếu Xe ở b1 thay vì a1, Ba3 còn là đòn xiên có lợi không? Vì sao?',
                         objective='Nhận ra đòn xiên không hiệu quả',
-                        explanation='Xe b1 không bảo vệ a3. Sau Ba3, Hậu có thể bắt Tượng bằng Qxa3. Hình dạng đòn xiên vẫn còn, nhưng quân hỗ trợ đã thay đổi.'))
+                        explanation='Xe b1 không bảo vệ a3. Sau Ba3, Hậu có thể bắt Tượng bằng Qxa3. Thế đòn xiên vẫn còn, nhưng khả năng bảo vệ quân tấn công đã thay đổi.'))
     with chess.engine.SimpleEngine.popen_uci(engine_path) as engine:
         engine.configure({'Threads': 1, 'Hash': 128})
         for record in records:

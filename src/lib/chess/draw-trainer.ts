@@ -43,6 +43,143 @@ export function drawPositionOutcome(game: ReturnType<typeof Chess>) {
   return 'ongoing';
 }
 
+// Prove short alternatives against every legal defence. A budget exhaustion is
+// unknown, never evidence that a move wins (or that it is wrong).
+function proveMateAlternative(
+  game: ReturnType<typeof Chess>,
+  solver: 'w' | 'b',
+  remaining: number,
+  objective?: () => boolean
+): string[] | null {
+  const deadline = Date.now() + 150;
+  const exhausted = Symbol('search budget');
+  let nodes = 0;
+  function search(movesLeft: number): string[] | null {
+    if (++nodes > 6000 || Date.now() > deadline) throw exhausted;
+    if (objective?.()) return [];
+    if (game.in_checkmate())
+      return !objective && game.turn() !== solver ? [] : null;
+    if (game.in_draw()) return null;
+    const attacking = game.turn() === solver;
+    if (attacking && movesLeft <= 0) return null;
+    const moves = game
+      .moves()
+      .sort((a, b) => Number(/[+#]/.test(b)) - Number(/[+#]/.test(a)));
+    let defence: string[] = [];
+    for (const san of moves) {
+      game.move(san);
+      let tail: string[] | null;
+      try {
+        tail = search(movesLeft - (attacking ? 1 : 0));
+      } finally {
+        game.undo();
+      }
+      if (attacking && tail !== null) return [san, ...tail];
+      if (!attacking) {
+        if (tail === null) return null;
+        if (tail.length + 1 > defence.length) defence = [san, ...tail];
+      }
+    }
+    return attacking ? null : defence;
+  }
+  try {
+    return search(remaining);
+  } catch (error) {
+    if (error === exhausted) return null;
+    throw error;
+  }
+}
+
+// The gain is measured in centipawns against the starting material balance.
+// Completion waits for a defensive reply, and promotion must have occurred.
+export function promotionGainReached(
+  exercise: DrawExercise,
+  game: ReturnType<typeof Chess>
+) {
+  if (!exercise.promotionGain) return false;
+  const initial = new Chess(exercise.fen);
+  const solver = initial.turn();
+  const values: Record<string, number> = {
+    p: 100,
+    n: 320,
+    b: 330,
+    r: 500,
+    q: 900,
+    k: 0,
+  };
+  const balance = (board: ReturnType<typeof Chess>) =>
+    board
+      .board()
+      .flat()
+      .reduce(
+        (sum, piece) =>
+          sum +
+          (piece ? values[piece.type] * (piece.color === solver ? 1 : -1) : 0),
+        0
+      );
+  const promoted = game
+    .history({ verbose: true })
+    .some(
+      (move) =>
+        typeof move !== 'string' && move.color === solver && move.promotion
+    );
+  return (
+    Boolean(promoted) &&
+    !game.in_draw() &&
+    (game.turn() === solver ||
+      (game.in_checkmate() && game.turn() !== solver)) &&
+    balance(game) - balance(initial) >= exercise.promotionGain.minimumGain
+  );
+}
+
+// Direct promotion tasks certify the material gain against every legal reply.
+// This is deliberately limited to one-move introductory tasks; it is not a
+// general engine assessment or a claim that a material edge wins the game.
+export function verifyDirectPromotionMaterial(
+  exercise: DrawExercise,
+  input: MoveInput
+) {
+  if (!exercise.promotionMaterial) return null;
+  const board = new Chess(exercise.fen);
+  if (
+    ![3, 4].includes(board.board().flat().filter(Boolean).length) ||
+    board
+      .board()
+      .flat()
+      .filter((piece) => piece?.type === 'p').length !== 1
+  )
+    return null;
+  const solver = board.turn();
+  const values: Record<string, number> = { p: 1, n: 3, b: 3, r: 5, q: 9, k: 0 };
+  const material = () =>
+    board
+      .board()
+      .flat()
+      .reduce(
+        (sum, piece) =>
+          sum +
+          (piece ? values[piece.type] * (piece.color === solver ? 1 : -1) : 0),
+        0
+      );
+  const before = material();
+  const promotion = board.move(input);
+  if (!promotion?.promotion || board.in_draw()) return null;
+  // Direct capture promotions must also leave only kings and the promoted piece.
+  if (board.board().flat().filter(Boolean).length !== 3) return null;
+  if (board.in_checkmate()) return { moves: [promotion.san] };
+  const replies = board.moves();
+  if (replies.length > 100) return null;
+  for (const reply of replies) {
+    board.move(reply);
+    const reached =
+      !board.game_over() &&
+      material() - before >= exercise.promotionMaterial.minimumGain;
+    board.undo();
+    if (!reached) return null;
+  }
+  return replies.length ? { moves: [promotion.san, replies[0]] } : null;
+}
+
 export function tryDrawMove(
   exercise: DrawExercise,
   played: string[],
@@ -58,7 +195,13 @@ export function tryDrawMove(
   );
   const active = matches[0] ?? exercise.moves;
   if (played.length >= active.length || game.game_over()) {
-    return { status: 'finished' as const, played, complete: true };
+    return {
+      status: 'finished' as const,
+      played,
+      complete: exercise.promotionGain
+        ? promotionGainReached(exercise, game)
+        : true,
+    };
   }
   const normalized =
     typeof input === 'string' && /^[a-h][1-8][a-h][1-8][qrbn]?$/i.test(input)
@@ -68,6 +211,33 @@ export function tryDrawMove(
           promotion: input[4]?.toLowerCase() as PromotionPiece | undefined,
         }
       : input;
+  if (exercise.promotionMaterial && played.length === 0) {
+    if (!new Chess(exercise.fen).move(normalized))
+      return { status: 'illegal' as const, played, complete: false };
+    const verified = verifyDirectPromotionMaterial(exercise, normalized);
+    if (verified)
+      return {
+        status: 'accepted' as const,
+        played: verified.moves,
+        complete: true,
+        continuation: verified.moves,
+      };
+    const probe = new Chess(exercise.fen);
+    const attempted = probe.move(normalized);
+    const promotionFailure = attempted?.promotion
+      ? probe.in_stalemate()
+        ? ('stalemate' as const)
+        : probe.insufficient_material()
+          ? ('dead' as const)
+          : ('material' as const)
+      : undefined;
+    return {
+      status: 'unrecorded' as const,
+      played,
+      complete: false,
+      promotionFailure,
+    };
+  }
   const positionBeforeMove = game.fen();
   const move = game.move(normalized);
   if (!move) return { status: 'illegal' as const, played, complete: false };
@@ -86,6 +256,49 @@ export function tryDrawMove(
   const terminalDraw =
     exercise.outcome !== 'fortress' &&
     drawPositionOutcome(game) === exercise.outcome;
+  if (!sameMove && exercise.promotionGain) {
+    const solver = new Chess(exercise.fen).turn();
+    const remaining =
+      exercise.promotionGain.solverMoves - Math.ceil((played.length + 1) / 2);
+    const tail = proveMateAlternative(game, solver, remaining, () =>
+      promotionGainReached(exercise, game)
+    );
+    if (tail !== null) {
+      const continuation = [...played, move.san, ...tail];
+      const next = [...played, move.san];
+      if (tail.length) {
+        const reply = game.move(tail[0]);
+        if (!reply) throw new Error('Invalid verified reply');
+        next.push(reply.san);
+      }
+      return {
+        status: 'accepted' as const,
+        played: next,
+        complete: promotionGainReached(exercise, game),
+        continuation,
+      };
+    }
+  }
+  if (!sameMove && !terminalDraw && exercise.outcome === 'checkmate') {
+    const remaining =
+      Math.ceil(exercise.moves.length / 2) - Math.ceil((played.length + 1) / 2);
+    const tail = proveMateAlternative(game, move.color, remaining);
+    if (tail !== null) {
+      const continuation = [...played, move.san, ...tail];
+      const next = [...played, move.san];
+      if (tail.length) {
+        const reply = game.move(tail[0]);
+        if (!reply) throw new Error('Invalid verified opponent reply');
+        next.push(reply.san);
+      }
+      return {
+        status: 'accepted' as const,
+        played: next,
+        complete: game.in_checkmate(),
+        continuation,
+      };
+    }
+  }
   if (!sameMove && !terminalDraw) {
     return { status: 'unrecorded' as const, played, complete: false };
   }
@@ -98,9 +311,10 @@ export function tryDrawMove(
   return {
     status: 'accepted' as const,
     played: next,
-    complete:
-      next.length >= selectedLine.length ||
-      game.game_over() ||
-      drawPositionOutcome(game) === exercise.outcome,
+    complete: exercise.promotionGain
+      ? promotionGainReached(exercise, game)
+      : next.length >= selectedLine.length ||
+        game.game_over() ||
+        drawPositionOutcome(game) === exercise.outcome,
   };
 }

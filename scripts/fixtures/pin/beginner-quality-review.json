@@ -1,0 +1,2715 @@
+{
+  "date": "2026-10-27",
+  "scope": "All 20 original Beginner positions. Re-review of the 12 survivors removes two further positions with simpler direct material gains, even when the stored pin capture gains more. Earlier exclusions remain in force. Ten new six-piece defender-pin compositions were added after separate root, defence and counterfactual verification; the final published Beginner set contains 20 positions.",
+  "records": [
+    {
+      "id": "pin-creation-1",
+      "previousNumber": 1,
+      "fen": "6Q1/8/8/8/8/2k2n2/8/2K5 w - - 0 1",
+      "moves": [
+        "Qg3",
+        "Kd4",
+        "Qxf3"
+      ],
+      "decision": "retain",
+      "reason": "Creating the pin prevents the knight escaping; all king replies allow a safe knight capture.",
+      "engine": {
+        "name": "Stockfish 17",
+        "nodesPerRoot": 60000,
+        "probes": [
+          {
+            "root": "Qg3",
+            "score": 536,
+            "continuation": [
+              "Kc4",
+              "Qxf3",
+              "Kd4",
+              "Qb3",
+              "Ke4",
+              "Qb1+",
+              "Ke3"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "pin-beginner-20261027-05",
+      "previousNumber": 2,
+      "fen": "8/7K/8/8/3n4/2BRb1k1/8/8 w - - 0 1",
+      "moves": [
+        "Bxd4"
+      ],
+      "decision": "exclude",
+      "reason": "Rxe3+ safely wins the bishop immediately (330), comparable to the published Bxd4 knight gain (320); unnecessary competing free capture for this introductory pin lesson.",
+      "engine": {
+        "name": "Stockfish 17",
+        "nodesPerRoot": 60000,
+        "probes": [
+          {
+            "root": "Bxd4",
+            "score": 679,
+            "continuation": [
+              "Kf2",
+              "Rxe3",
+              "Kg2",
+              "Re1",
+              "Kg3",
+              "Kg6",
+              "Kg2",
+              "Re3",
+              "Kh2",
+              "Re5"
+            ]
+          },
+          {
+            "root": "Rxd4",
+            "score": -20,
+            "continuation": [
+              "Bxd4",
+              "Bb4"
+            ]
+          },
+          {
+            "root": "Rxe3+",
+            "score": 318,
+            "continuation": [
+              "Nf3",
+              "Kg6",
+              "Kf4",
+              "Re8",
+              "Nh4+",
+              "Kf6",
+              "Ng2",
+              "Ba5",
+              "Kf3",
+              "Bc7"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "pin-beginner-20261027-03",
+      "previousNumber": 3,
+      "fen": "8/2R1n3/8/3k4/4r3/5B2/5K2/8 w - - 0 1",
+      "moves": [
+        "Rxe7"
+      ],
+      "decision": "exclude",
+      "reason": "Bxe4+ directly captures the rook with check. Even Kxe4 leaves a net exchange gain of 170 cp; every other immediate reply retains at least that gain. Rxe7 uses the pin to win a knight, but the simpler direct material gain makes this unsuitable for the requested introductory lesson.",
+      "engine": {
+        "name": "Stockfish 17",
+        "nodesPerRoot": 60000,
+        "probes": [
+          {
+            "root": "Bxe4+",
+            "score": 383,
+            "continuation": [
+              "Kd6",
+              "Rb7",
+              "Ng8",
+              "Bb1",
+              "Kd5",
+              "Rf7"
+            ]
+          },
+          {
+            "root": "Rxe7",
+            "score": 568,
+            "continuation": [
+              "Kd4",
+              "Bxe4",
+              "Kc3",
+              "Ke2",
+              "Kd4",
+              "Re6",
+              "Kc3",
+              "Rg6",
+              "Kb2",
+              "Rg2"
+            ]
+          }
+        ]
+      },
+      "previousDecision": "retain",
+      "previousReason": "The pinned rook cannot recapture on e7. Direct Bxe4+ permits Kxe4 and gains only the exchange, less than the full knight."
+    },
+    {
+      "id": "pin-beginner-20261027-08",
+      "previousNumber": 4,
+      "fen": "8/3q4/3N4/2krP1K1/8/8/8/8 b - - 0 1",
+      "moves": [
+        "Qxd6"
+      ],
+      "decision": "exclude",
+      "reason": "User-rejected example: Rxe5+ captures the pawn safely with check and gains 100 cp of material after every immediate legal reply, without exploiting a pinned defender. The engine continuation can then take the knight. Qxd6 gains more immediately, but that does not make this a focused introductory pin exercise.",
+      "engine": {
+        "name": "Stockfish 17",
+        "nodesPerRoot": 60000,
+        "probes": [
+          {
+            "root": "Qxd6",
+            "score": 99996,
+            "continuation": [
+              "Kf5",
+              "Rxe5+",
+              "Kf4",
+              "Qf6+",
+              "Kg4",
+              "Rg5+",
+              "Kh3",
+              "Qh8#"
+            ]
+          },
+          {
+            "root": "Rxd6",
+            "score": 549,
+            "continuation": [
+              "exd6",
+              "Qxd6",
+              "Kg4",
+              "Qf6",
+              "Kh3",
+              "Kd4",
+              "Kg3",
+              "Qb6"
+            ]
+          },
+          {
+            "root": "Rxe5+",
+            "score": 99996,
+            "continuation": [
+              "Kf4",
+              "Qxd6",
+              "Kg3",
+              "Qf6",
+              "Kh2",
+              "Rg5",
+              "Kh3",
+              "Qh8#"
+            ]
+          }
+        ]
+      },
+      "previousDecision": "retain",
+      "previousReason": "The pinned pawn cannot recapture on d6. Direct Rxe5+ initially wins only a pawn; Qxd6 directly wins the knight."
+    },
+    {
+      "id": "pin-beginner-20261027-01",
+      "previousNumber": 5,
+      "fen": "2R5/8/7k/8/8/2p4q/7R/7K w - - 0 1",
+      "moves": [
+        "Rxc3",
+        "Kh7",
+        "Rcxh3+"
+      ],
+      "decision": "exclude",
+      "reason": "User removal: Rxh3+ immediately wins the undefended queen; the published Rxc3 line obscures the simpler gain.",
+      "engine": {
+        "name": "Stockfish 17",
+        "nodesPerRoot": 60000,
+        "probes": [
+          {
+            "root": "Rxc3",
+            "score": 561,
+            "continuation": [
+              "Qxh2+",
+              "Kxh2",
+              "Kg5",
+              "Rf3",
+              "Kg6",
+              "Rf2",
+              "Kg5",
+              "Kh3",
+              "Kg6",
+              "Kg2"
+            ]
+          },
+          {
+            "root": "Rxh3+",
+            "score": 733,
+            "continuation": [
+              "Kg5",
+              "Kg1",
+              "c2",
+              "Rxc2",
+              "Kf4",
+              "Rc4+",
+              "Ke5",
+              "Rd3",
+              "Kf5",
+              "Re3"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "pin-creation-6",
+      "previousNumber": 6,
+      "fen": "8/8/8/k2n4/8/8/6R1/4K3 w - - 0 1",
+      "moves": [
+        "Rg5",
+        "Kb6",
+        "Rxd5"
+      ],
+      "decision": "retain",
+      "reason": "Creating the pin prevents the knight escaping; all king replies allow a safe knight capture.",
+      "engine": {
+        "name": "Stockfish 17",
+        "nodesPerRoot": 60000,
+        "probes": [
+          {
+            "root": "Rg5",
+            "score": 558,
+            "continuation": [
+              "Kb4",
+              "Rxd5",
+              "Kc4",
+              "Rd6",
+              "Kb3",
+              "Rg6"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "pin-beginner-20261027-06",
+      "previousNumber": 7,
+      "fen": "8/8/kN3r1b/8/8/4B3/3K4/8 b - - 0 1",
+      "moves": [
+        "Rxb6",
+        "Ke1",
+        "Bxe3"
+      ],
+      "decision": "exclude",
+      "reason": "User removal: Bxe3+ followed by Kxb6 after Kxe3 wins the knight without relying on the published pinned-defender capture.",
+      "engine": {
+        "name": "Stockfish 17",
+        "nodesPerRoot": 60000,
+        "probes": [
+          {
+            "root": "Bxe3+",
+            "score": 536,
+            "continuation": [
+              "Kxe3",
+              "Kxb6",
+              "Ke4",
+              "Kb7",
+              "Ke5",
+              "Rc6",
+              "Kd5",
+              "Rg6",
+              "Ke4",
+              "Rg7"
+            ]
+          },
+          {
+            "root": "Rxb6",
+            "score": 524,
+            "continuation": [
+              "Bxh6",
+              "Rxh6",
+              "Ke3",
+              "Kb7",
+              "Kf4",
+              "Kb8",
+              "Kg5",
+              "Rh3",
+              "Kg6",
+              "Rd3"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "pin-creation-8",
+      "previousNumber": 8,
+      "fen": "8/8/K5R1/8/8/8/k2n4/8 w - - 0 1",
+      "moves": [
+        "Rg2",
+        "Kb3",
+        "Rxd2"
+      ],
+      "decision": "retain",
+      "reason": "Creating the pin prevents the knight escaping; all king replies allow a safe knight capture.",
+      "engine": {
+        "name": "Stockfish 17",
+        "nodesPerRoot": 60000,
+        "probes": [
+          {
+            "root": "Rg2",
+            "score": 495,
+            "continuation": [
+              "Kb3",
+              "Rxd2",
+              "Kc4",
+              "Ka5",
+              "Kb3",
+              "Rg2",
+              "Kc4",
+              "Ka4",
+              "Kd3",
+              "Ka3"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "pin-beginner-20261027-04",
+      "previousNumber": 9,
+      "fen": "8/8/1r3N2/8/8/8/4rR1K/4k3 b - - 0 1",
+      "moves": [
+        "Rxf6",
+        "Kh1",
+        "Kxf2"
+      ],
+      "decision": "exclude",
+      "reason": "User removal: Kxf2 or Rxf2+ immediately wins the rook; Rxf6 is an unnecessary detour.",
+      "engine": {
+        "name": "Stockfish 17",
+        "nodesPerRoot": 60000,
+        "probes": [
+          {
+            "root": "Kxf2",
+            "score": 99996,
+            "continuation": [
+              "Kh3",
+              "Rxf6",
+              "Kh4",
+              "Re5",
+              "Kg4",
+              "Kg2",
+              "Kh4",
+              "Rf4#"
+            ]
+          },
+          {
+            "root": "Rxf2+",
+            "score": 99996,
+            "continuation": [
+              "Kh3",
+              "Rbxf6",
+              "Kh4",
+              "Rg6",
+              "Kh5",
+              "Rfg2",
+              "Kh4",
+              "Rh6#"
+            ]
+          },
+          {
+            "root": "Rxf6",
+            "score": 498,
+            "continuation": [
+              "Rxe2+",
+              "Kxe2",
+              "Kg3",
+              "Kd2",
+              "Kg4",
+              "Kc1",
+              "Kg5",
+              "Ra6",
+              "Kh5",
+              "Kb2"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "pin-creation-10",
+      "previousNumber": 10,
+      "fen": "1K6/6k1/Q7/8/8/2n5/8/8 w - - 0 1",
+      "moves": [
+        "Qa1",
+        "Kh8",
+        "Qxc3+"
+      ],
+      "decision": "retain",
+      "reason": "Creating the diagonal pin prevents the knight escaping; all king replies allow a safe knight capture.",
+      "engine": {
+        "name": "Stockfish 17",
+        "nodesPerRoot": 60000,
+        "probes": [
+          {
+            "root": "Qa1",
+            "score": 541,
+            "continuation": [
+              "Kf6",
+              "Qxc3+",
+              "Kf5",
+              "Qd4",
+              "Kg5",
+              "Kc7",
+              "Kf5",
+              "Qb4",
+              "Kg5",
+              "Kc6"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "pin-beginner-20261027-02",
+      "previousNumber": 11,
+      "fen": "8/4K3/5Q2/7k/3P3b/8/8/3q4 b - - 0 1",
+      "moves": [
+        "Qxd4",
+        "Qxh4+",
+        "Kxh4"
+      ],
+      "decision": "exclude",
+      "reason": "User removal: Bxf6+ wins queen for bishop immediately; the pawn capture is an unsuitable beginner demonstration.",
+      "engine": {
+        "name": "Stockfish 17",
+        "nodesPerRoot": 60000,
+        "probes": [
+          {
+            "root": "Bxf6+",
+            "score": 581,
+            "continuation": [
+              "Kxf6",
+              "Qxd4+",
+              "Ke7",
+              "Kg6",
+              "Ke6",
+              "Qd8",
+              "Ke5",
+              "Qd7",
+              "Ke4",
+              "Qd6"
+            ]
+          },
+          {
+            "root": "Qxd4",
+            "score": 99993,
+            "continuation": [
+              "Qxh4+",
+              "Kxh4",
+              "Kf7",
+              "Kg5",
+              "Ke6",
+              "Kg6",
+              "Ke7",
+              "Kf5",
+              "Kf7",
+              "Qd7+"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "pin-creation-12",
+      "previousNumber": 12,
+      "fen": "8/8/1n4k1/8/Q6K/8/8/8 w - - 0 1",
+      "moves": [
+        "Qa6",
+        "Kh7",
+        "Qxb6"
+      ],
+      "decision": "retain",
+      "reason": "Creating the rank pin prevents the knight escaping; all king replies allow a safe knight capture.",
+      "engine": {
+        "name": "Stockfish 17",
+        "nodesPerRoot": 60000,
+        "probes": [
+          {
+            "root": "Qa6",
+            "score": 543,
+            "continuation": [
+              "Kf5",
+              "Qxb6",
+              "Ke5",
+              "Qb2+",
+              "Ke4"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "pin-beginner-20261027-07",
+      "previousNumber": 13,
+      "fen": "2k5/1n6/B7/p7/8/Q7/6K1/8 w - - 0 1",
+      "moves": [
+        "Qxa5"
+      ],
+      "decision": "exclude",
+      "reason": "Removed at user request on 2026-10-27; supersedes the earlier retain decision.",
+      "engine": {
+        "name": "Stockfish 17",
+        "nodesPerRoot": 60000,
+        "probes": [
+          {
+            "root": "Bxb7+",
+            "score": 605,
+            "continuation": [
+              "Kxb7",
+              "Qd6",
+              "a4",
+              "Qg6",
+              "a3",
+              "Qg7+",
+              "Kc6"
+            ]
+          },
+          {
+            "root": "Qxa5",
+            "score": 772,
+            "continuation": [
+              "Kd7",
+              "Bxb7",
+              "Ke6",
+              "Ba6",
+              "Kf7",
+              "Qa3",
+              "Ke8",
+              "Kh3"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "pin-beginner-20261027-10",
+      "previousNumber": 14,
+      "fen": "K7/1p2k3/1Q2B2r/8/8/5q1N/8/8 b - - 0 1",
+      "moves": [
+        "Qxh3",
+        "Bxh3",
+        "Rxb6"
+      ],
+      "decision": "retain",
+      "reason": "Bxh3 after Qxh3 opens the rook line to the queen on b6; the full line recovers the queen and wins the knight. Direct captures by the rook do not win material.",
+      "engine": {
+        "name": "Stockfish 17",
+        "nodesPerRoot": 60000,
+        "probes": [
+          {
+            "root": "Qxh3",
+            "score": 433,
+            "continuation": [
+              "Bxh3",
+              "Rxb6"
+            ]
+          },
+          {
+            "root": "Rxe6",
+            "score": 38,
+            "continuation": [
+              "Qxe6+",
+              "Kxe6",
+              "Ng5+",
+              "Kd6",
+              "Nxf3",
+              "b5",
+              "Kb7",
+              "Kd5",
+              "Kb6",
+              "b4"
+            ]
+          },
+          {
+            "root": "Rxh3",
+            "score": 0,
+            "continuation": [
+              "Bxh3",
+              "Qxh3",
+              "Qc7+",
+              "Ke8",
+              "Kxb7",
+              "Qd7",
+              "Kb6",
+              "Qe6+",
+              "Kc5"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "pin-creation-15",
+      "previousNumber": 15,
+      "fen": "6KQ/8/8/8/4n3/8/8/1k6 w - - 0 1",
+      "moves": [
+        "Qh7",
+        "Kc2",
+        "Qxe4+"
+      ],
+      "decision": "retain",
+      "reason": "Creating the diagonal pin prevents the knight escaping; all king replies allow a safe knight capture.",
+      "engine": {
+        "name": "Stockfish 17",
+        "nodesPerRoot": 60000,
+        "probes": [
+          {
+            "root": "Qh7",
+            "score": 499,
+            "continuation": [
+              "Kc2",
+              "Qxe4+",
+              "Kd1",
+              "Kg7",
+              "Kd2",
+              "Kf8",
+              "Kd1",
+              "Ke8",
+              "Kd2",
+              "Qd5+"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "pin-beginner-20261027-09",
+      "previousNumber": 16,
+      "fen": "8/8/8/2K5/q1nR4/7P/2Qn4/6k1 w - - 0 1",
+      "moves": [
+        "Qxd2",
+        "Nxd2",
+        "Rxa4"
+      ],
+      "decision": "exclude",
+      "reason": "Qxa4 immediately wins the undefended queen; the relative-pin sequence is unnecessary.",
+      "engine": {
+        "name": "Stockfish 17",
+        "nodesPerRoot": 60000,
+        "probes": [
+          {
+            "root": "Qxa4",
+            "score": 894,
+            "continuation": [
+              "Kg2",
+              "Qc2"
+            ]
+          },
+          {
+            "root": "Qxc4",
+            "score": -285,
+            "continuation": [
+              "Nxc4",
+              "Rxc4",
+              "Qa3+",
+              "Kd5",
+              "Kf2",
+              "h4",
+              "Ke3",
+              "h5",
+              "Qd3+",
+              "Kc5"
+            ]
+          },
+          {
+            "root": "Qxd2",
+            "score": 489,
+            "continuation": [
+              "Qa7+",
+              "Kxc4",
+              "Qf7+",
+              "Kd3",
+              "Kh1",
+              "Qc1+",
+              "Kg2",
+              "Qf4"
+            ]
+          },
+          {
+            "root": "Rxc4",
+            "score": -3,
+            "continuation": [
+              "Qa5+",
+              "Kc6",
+              "Qa6+",
+              "Kd5",
+              "Nxc4",
+              "Qxc4",
+              "Qa8+",
+              "Qc6",
+              "Qg8+",
+              "Ke5"
+            ]
+          },
+          {
+            "root": "Rxd2",
+            "score": 517,
+            "continuation": [
+              "Qxc2",
+              "Rxc2",
+              "Ne3",
+              "Re2",
+              "Nf1",
+              "h4",
+              "Ng3",
+              "Rb2",
+              "Nf5",
+              "h5"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "pin-beginner-20261027-12",
+      "previousNumber": 17,
+      "fen": "6R1/p4N2/4b3/2k1P2K/8/3n4/8/8 b - - 0 1",
+      "moves": [
+        "Nxe5",
+        "Nxe5",
+        "Bxg8"
+      ],
+      "decision": "exclude",
+      "reason": "Bxf7+ wins the knight and then the rook on g8; Nxe5 is a weaker, less clear detour.",
+      "engine": {
+        "name": "Stockfish 17",
+        "nodesPerRoot": 60000,
+        "probes": [
+          {
+            "root": "Bxf7+",
+            "score": 565,
+            "continuation": [
+              "Kg5",
+              "Bxg8",
+              "Kf6",
+              "a5",
+              "Kg6",
+              "Kb4",
+              "Kg7",
+              "Bd5"
+            ]
+          },
+          {
+            "root": "Nxe5",
+            "score": 143,
+            "continuation": [
+              "Ra8",
+              "Bxf7+"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "pin-beginner-20261027-11",
+      "previousNumber": 18,
+      "fen": "8/8/4K3/q3n2R/3Q2n1/8/P1k5/8 w - - 0 1",
+      "moves": [
+        "Qxg4",
+        "Nxg4",
+        "Rxa5"
+      ],
+      "decision": "retain",
+      "reason": "Nxg4 after Qxg4 opens the rook line to the queen on a5; queen recovery leaves a knight gain. Direct captures of the pinned knight lose material or allow equal recovery.",
+      "engine": {
+        "name": "Stockfish 17",
+        "nodesPerRoot": 60000,
+        "probes": [
+          {
+            "root": "Qxe5",
+            "score": -270,
+            "continuation": [
+              "Nxe5",
+              "Rxe5",
+              "Qa4",
+              "Rf5",
+              "Kd3",
+              "Rf7",
+              "Ke4",
+              "Re7",
+              "Qd4",
+              "Rf7"
+            ]
+          },
+          {
+            "root": "Qxg4",
+            "score": 421,
+            "continuation": [
+              "Qb6+",
+              "Kxe5"
+            ]
+          },
+          {
+            "root": "Rxe5",
+            "score": 0,
+            "continuation": [
+              "Nxe5"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "pin-beginner-20261027-13",
+      "previousNumber": 19,
+      "fen": "8/2k5/6r1/2N1K3/4n3/6n1/3P2R1/8 w - - 0 1",
+      "moves": [
+        "Nxe4",
+        "Nxe4",
+        "Rxg6"
+      ],
+      "decision": "retain",
+      "reason": "Nxe4 recapture vacates g3 and allows Rxg6, winning a rook after the knight exchange. Direct Rxg3 permits Nxg3 and loses the exchange.",
+      "engine": {
+        "name": "Stockfish 17",
+        "nodesPerRoot": 60000,
+        "probes": [
+          {
+            "root": "Nxe4",
+            "score": 375,
+            "continuation": [
+              "Nxe4",
+              "Rxg6"
+            ]
+          },
+          {
+            "root": "Rxg3",
+            "score": -260,
+            "continuation": [
+              "Nxg3",
+              "d4",
+              "Nh5",
+              "Kf5",
+              "Rg2",
+              "Ke4",
+              "Kc6"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "pin-beginner-20261027-14",
+      "previousNumber": 20,
+      "fen": "1k6/2q5/1p1P4/2r5/2N4K/8/2Q5/8 b - - 0 1",
+      "moves": [
+        "Qxd6",
+        "Nxd6",
+        "Rxc2"
+      ],
+      "decision": "exclude",
+      "reason": "Rxc4+ is a stronger direct capture: Qxc4 is answered by Qxc4, winning queen for rook as well as the knight. The published pawn capture is an unnecessarily indirect beginner example.",
+      "engine": {
+        "name": "Stockfish 17",
+        "nodesPerRoot": 60000,
+        "probes": [
+          {
+            "root": "Qxd6",
+            "score": 482,
+            "continuation": [
+              "Nxd6",
+              "Rxc2",
+              "Kg4",
+              "Kc7",
+              "Nb5+",
+              "Kb7",
+              "Kf3",
+              "Rc5",
+              "Nd4",
+              "b5"
+            ]
+          },
+          {
+            "root": "Rxc4+",
+            "score": 970,
+            "continuation": [
+              "Kg5",
+              "Qd8+",
+              "Kf5",
+              "Rxc2",
+              "Ke6",
+              "Re2+",
+              "Kf5",
+              "Qd7+",
+              "Kg5",
+              "Qxd6"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "pin-beginner-essential-20261027-01",
+      "fen": "2B5/8/8/5n2/3k4/4n3/5B2/K7 w - - 0 1",
+      "moves": [
+        "Bxf5"
+      ],
+      "decision": "retain",
+      "reason": "Six-piece composition. The pinned piece is the only defender of the target. Removing the pinner makes recapture legal and loses material for the capturing side. Direct capture of the defender loses material after a legal reply; no simpler positive capture is retained.",
+      "engine": {
+        "name": "Stockfish 17",
+        "nodesPerRoot": 200000,
+        "probes": [
+          {
+            "root": "Bxf5",
+            "score": 55,
+            "continuation": [
+              "Ke5",
+              "Bd3",
+              "Kf4",
+              "Bg1",
+              "Nd5",
+              "Kb1",
+              "Nc3+",
+              "Kb2",
+              "Ne4",
+              "Kc2"
+            ],
+            "materialGainAfterContinuation": 320,
+            "worstMaterialAfterImmediateReply": 320,
+            "immediateReplies": [
+              {
+                "reply": "Ke5",
+                "gain": 320
+              },
+              {
+                "reply": "Kd5",
+                "gain": 320
+              },
+              {
+                "reply": "Kc5",
+                "gain": 320
+              },
+              {
+                "reply": "Kc4",
+                "gain": 320
+              },
+              {
+                "reply": "Kc3",
+                "gain": 320
+              }
+            ]
+          },
+          {
+            "root": "Bxe3+",
+            "score": -25,
+            "continuation": [
+              "Nxe3"
+            ],
+            "materialGainAfterContinuation": -10,
+            "worstMaterialAfterImmediateReply": -10,
+            "immediateReplies": [
+              {
+                "reply": "Ke5",
+                "gain": 320
+              },
+              {
+                "reply": "Kd5",
+                "gain": 320
+              },
+              {
+                "reply": "Ke4",
+                "gain": 320
+              },
+              {
+                "reply": "Kc4",
+                "gain": 320
+              },
+              {
+                "reply": "Kxe3",
+                "gain": -10
+              },
+              {
+                "reply": "Kd3",
+                "gain": 320
+              },
+              {
+                "reply": "Kc3",
+                "gain": 320
+              },
+              {
+                "reply": "Nxe3",
+                "gain": -10
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "pin-beginner-essential-20261027-02",
+      "fen": "3K4/3B4/8/8/N7/3r1k2/2b5/8 b - - 0 1",
+      "moves": [
+        "Bxa4"
+      ],
+      "decision": "retain",
+      "reason": "Six-piece composition. The pinned piece is the only defender of the target. Removing the pinner makes recapture legal and loses material for the capturing side. Direct capture of the defender loses material after a legal reply; no simpler positive capture is retained.",
+      "engine": {
+        "name": "Stockfish 17",
+        "nodesPerRoot": 200000,
+        "probes": [
+          {
+            "root": "Rxd7+",
+            "score": 3,
+            "continuation": [
+              "Kxd7",
+              "Bf5+"
+            ],
+            "materialGainAfterContinuation": -170,
+            "worstMaterialAfterImmediateReply": -170,
+            "immediateReplies": [
+              {
+                "reply": "Ke8",
+                "gain": 330
+              },
+              {
+                "reply": "Kc8",
+                "gain": 330
+              },
+              {
+                "reply": "Kxd7",
+                "gain": -170
+              }
+            ]
+          },
+          {
+            "root": "Bxa4",
+            "score": 614,
+            "continuation": [
+              "Ke7",
+              "Bxd7",
+              "Kf7",
+              "Rd4",
+              "Kg7",
+              "Rh4",
+              "Kg6",
+              "Kg4",
+              "Kf7",
+              "Bf5"
+            ],
+            "materialGainAfterContinuation": 650,
+            "worstMaterialAfterImmediateReply": 320,
+            "immediateReplies": [
+              {
+                "reply": "Ke8",
+                "gain": 320
+              },
+              {
+                "reply": "Kc8",
+                "gain": 320
+              },
+              {
+                "reply": "Ke7",
+                "gain": 320
+              },
+              {
+                "reply": "Kc7",
+                "gain": 320
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "pin-beginner-essential-20261027-03",
+      "fen": "7K/4p3/2R3N1/2b5/2k5/8/8/8 w - - 0 1",
+      "moves": [
+        "Nxe7"
+      ],
+      "decision": "retain",
+      "reason": "Six-piece composition. The pinned piece is the only defender of the target. Removing the pinner makes recapture legal and loses material for the capturing side. Direct capture of the defender loses material after a legal reply; no simpler positive capture is retained.",
+      "engine": {
+        "name": "Stockfish 17",
+        "nodesPerRoot": 200000,
+        "probes": [
+          {
+            "root": "Nxe7",
+            "score": 291,
+            "continuation": [
+              "Kd4",
+              "Re6",
+              "Kd3",
+              "Kg7",
+              "Bb4",
+              "Kg6",
+              "Bd2",
+              "Nd5",
+              "Kd4",
+              "Nf6"
+            ],
+            "materialGainAfterContinuation": 100,
+            "worstMaterialAfterImmediateReply": 100,
+            "immediateReplies": [
+              {
+                "reply": "Kb5",
+                "gain": 100
+              },
+              {
+                "reply": "Kd4",
+                "gain": 100
+              },
+              {
+                "reply": "Kb4",
+                "gain": 100
+              },
+              {
+                "reply": "Kd3",
+                "gain": 100
+              },
+              {
+                "reply": "Kc3",
+                "gain": 100
+              },
+              {
+                "reply": "Kb3",
+                "gain": 100
+              }
+            ]
+          },
+          {
+            "root": "Ne5+",
+            "score": -12,
+            "continuation": [
+              "Kd5",
+              "Rc8",
+              "Bd4",
+              "Re8",
+              "Kxe5",
+              "Rxe7+",
+              "Kd6+",
+              "Kg8",
+              "Kxe7",
+              "Kh7"
+            ],
+            "materialGainAfterContinuation": -720,
+            "worstMaterialAfterImmediateReply": 0,
+            "immediateReplies": [
+              {
+                "reply": "Kd5",
+                "gain": 0
+              },
+              {
+                "reply": "Kb5",
+                "gain": 0
+              },
+              {
+                "reply": "Kd4",
+                "gain": 0
+              },
+              {
+                "reply": "Kb4",
+                "gain": 0
+              },
+              {
+                "reply": "Kc3",
+                "gain": 0
+              },
+              {
+                "reply": "Kb3",
+                "gain": 0
+              }
+            ]
+          },
+          {
+            "root": "Rxc5+",
+            "score": 0,
+            "continuation": [
+              "Kxc5",
+              "Nxe7",
+              "Kd6",
+              "Kg7",
+              "Kxe7",
+              "Kg8",
+              "Ke8",
+              "Kg7"
+            ],
+            "materialGainAfterContinuation": -390,
+            "worstMaterialAfterImmediateReply": -170,
+            "immediateReplies": [
+              {
+                "reply": "Kxc5",
+                "gain": -170
+              },
+              {
+                "reply": "Kd4",
+                "gain": 330
+              },
+              {
+                "reply": "Kb4",
+                "gain": 330
+              },
+              {
+                "reply": "Kd3",
+                "gain": 330
+              },
+              {
+                "reply": "Kb3",
+                "gain": 330
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "pin-beginner-essential-20261027-04",
+      "fen": "8/6r1/8/8/4K1B1/5P2/2k5/7b b - - 0 1",
+      "moves": [
+        "Rxg4+"
+      ],
+      "decision": "retain",
+      "reason": "Six-piece composition. The pinned piece is the only defender of the target. Removing the pinner makes recapture legal and loses material for the capturing side. Direct capture of the defender loses material after a legal reply; no simpler positive capture is retained.",
+      "engine": {
+        "name": "Stockfish 17",
+        "nodesPerRoot": 200000,
+        "probes": [
+          {
+            "root": "Re7+",
+            "score": 320,
+            "continuation": [
+              "Kf5",
+              "Kd2"
+            ],
+            "materialGainAfterContinuation": 0,
+            "worstMaterialAfterImmediateReply": 0,
+            "immediateReplies": [
+              {
+                "reply": "Kf5",
+                "gain": 0
+              },
+              {
+                "reply": "Kd5",
+                "gain": 0
+              },
+              {
+                "reply": "Kf4",
+                "gain": 0
+              },
+              {
+                "reply": "Kd4",
+                "gain": 0
+              },
+              {
+                "reply": "Be6",
+                "gain": 0
+              }
+            ]
+          },
+          {
+            "root": "Rxg4+",
+            "score": 660,
+            "continuation": [
+              "Ke3",
+              "Rg3",
+              "Kd4",
+              "Rxf3",
+              "Ke5",
+              "Rd3",
+              "Kf5",
+              "Rd4",
+              "Ke5",
+              "Kc3"
+            ],
+            "materialGainAfterContinuation": 430,
+            "worstMaterialAfterImmediateReply": 330,
+            "immediateReplies": [
+              {
+                "reply": "Kf5",
+                "gain": 330
+              },
+              {
+                "reply": "Ke5",
+                "gain": 330
+              },
+              {
+                "reply": "Kd5",
+                "gain": 330
+              },
+              {
+                "reply": "Ke3",
+                "gain": 330
+              }
+            ]
+          },
+          {
+            "root": "Bxf3+",
+            "score": 51,
+            "continuation": [
+              "Kxf3",
+              "Kc3"
+            ],
+            "materialGainAfterContinuation": -230,
+            "worstMaterialAfterImmediateReply": -230,
+            "immediateReplies": [
+              {
+                "reply": "Kf5",
+                "gain": 100
+              },
+              {
+                "reply": "Ke5",
+                "gain": 100
+              },
+              {
+                "reply": "Kf4",
+                "gain": 100
+              },
+              {
+                "reply": "Kd4",
+                "gain": 100
+              },
+              {
+                "reply": "Kxf3",
+                "gain": -230
+              },
+              {
+                "reply": "Ke3",
+                "gain": 100
+              },
+              {
+                "reply": "Bxf3",
+                "gain": -230
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "pin-beginner-essential-20261027-05",
+      "fen": "8/8/K3k3/4p3/2Rn4/4R3/8/8 w - - 0 1",
+      "moves": [
+        "Rxd4"
+      ],
+      "decision": "retain",
+      "reason": "Six-piece composition. The pinned piece is the only defender of the target. Removing the pinner makes recapture legal and loses material for the capturing side. Direct capture of the defender loses material after a legal reply; no simpler positive capture is retained.",
+      "engine": {
+        "name": "Stockfish 17",
+        "nodesPerRoot": 200000,
+        "probes": [
+          {
+            "root": "Rc6+",
+            "score": -23,
+            "continuation": [
+              "Nxc6",
+              "Rc3"
+            ],
+            "materialGainAfterContinuation": -500,
+            "worstMaterialAfterImmediateReply": -500,
+            "immediateReplies": [
+              {
+                "reply": "Kf7",
+                "gain": 0
+              },
+              {
+                "reply": "Ke7",
+                "gain": 0
+              },
+              {
+                "reply": "Kd7",
+                "gain": 0
+              },
+              {
+                "reply": "Kf5",
+                "gain": 0
+              },
+              {
+                "reply": "Kd5",
+                "gain": 0
+              },
+              {
+                "reply": "Nxc6",
+                "gain": -500
+              }
+            ]
+          },
+          {
+            "root": "Rxd4",
+            "score": 99990,
+            "continuation": [
+              "Kf5",
+              "Rd5",
+              "Kg5",
+              "Rexe5+",
+              "Kf4",
+              "Kb6",
+              "Kf3",
+              "Kb5",
+              "Kf2",
+              "Re6"
+            ],
+            "materialGainAfterContinuation": 420,
+            "worstMaterialAfterImmediateReply": 320,
+            "immediateReplies": [
+              {
+                "reply": "Kf7",
+                "gain": 320
+              },
+              {
+                "reply": "Ke7",
+                "gain": 320
+              },
+              {
+                "reply": "Kf6",
+                "gain": 320
+              },
+              {
+                "reply": "Kf5",
+                "gain": 320
+              },
+              {
+                "reply": "e4",
+                "gain": 320
+              }
+            ]
+          },
+          {
+            "root": "Rxe5+",
+            "score": 32,
+            "continuation": [
+              "Kxe5",
+              "Kb6",
+              "Ne6",
+              "Rc5+",
+              "Nxc5",
+              "Kc7",
+              "Ne6+",
+              "Kc8",
+              "Nc5"
+            ],
+            "materialGainAfterContinuation": -900,
+            "worstMaterialAfterImmediateReply": -400,
+            "immediateReplies": [
+              {
+                "reply": "Kf7",
+                "gain": 100
+              },
+              {
+                "reply": "Kd7",
+                "gain": 100
+              },
+              {
+                "reply": "Kf6",
+                "gain": 100
+              },
+              {
+                "reply": "Kd6",
+                "gain": 100
+              },
+              {
+                "reply": "Kxe5",
+                "gain": -400
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "pin-beginner-essential-20261027-06",
+      "fen": "2r5/1n6/8/P7/2N5/2K3k1/8/8 b - - 0 1",
+      "moves": [
+        "Nxa5"
+      ],
+      "decision": "retain",
+      "reason": "Six-piece composition. The pinned piece is the only defender of the target. Removing the pinner makes recapture legal and loses material for the capturing side. Direct capture of the defender loses material after a legal reply; no simpler positive capture is retained.",
+      "engine": {
+        "name": "Stockfish 17",
+        "nodesPerRoot": 200000,
+        "probes": [
+          {
+            "root": "Rxc4+",
+            "score": -12,
+            "continuation": [
+              "Kxc4",
+              "Nxa5+"
+            ],
+            "materialGainAfterContinuation": -80,
+            "worstMaterialAfterImmediateReply": -180,
+            "immediateReplies": [
+              {
+                "reply": "Kxc4",
+                "gain": -180
+              },
+              {
+                "reply": "Kd3",
+                "gain": 320
+              },
+              {
+                "reply": "Kb3",
+                "gain": 320
+              },
+              {
+                "reply": "Kd2",
+                "gain": 320
+              },
+              {
+                "reply": "Kb2",
+                "gain": 320
+              }
+            ]
+          },
+          {
+            "root": "Nxa5",
+            "score": 553,
+            "continuation": [
+              "Kb4",
+              "Nxc4",
+              "Kb5",
+              "Nd2",
+              "Kb6",
+              "Rg8",
+              "Kc6",
+              "Ne4",
+              "Kc7",
+              "Nf2"
+            ],
+            "materialGainAfterContinuation": 420,
+            "worstMaterialAfterImmediateReply": 100,
+            "immediateReplies": [
+              {
+                "reply": "Kd4",
+                "gain": 100
+              },
+              {
+                "reply": "Kb4",
+                "gain": 100
+              },
+              {
+                "reply": "Kd3",
+                "gain": 100
+              },
+              {
+                "reply": "Kd2",
+                "gain": 100
+              },
+              {
+                "reply": "Kc2",
+                "gain": 100
+              },
+              {
+                "reply": "Kb2",
+                "gain": 100
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "pin-beginner-essential-20261027-07",
+      "fen": "8/8/K7/8/3R4/2n1R3/3b4/3k4 w - - 0 1",
+      "moves": [
+        "Rxc3"
+      ],
+      "decision": "retain",
+      "reason": "Six-piece composition. The pinned piece is the only defender of the target. Removing the pinner makes recapture legal and loses material for the capturing side. Direct capture of the defender loses material after a legal reply; no simpler positive capture is retained.",
+      "engine": {
+        "name": "Stockfish 17",
+        "nodesPerRoot": 200000,
+        "probes": [
+          {
+            "root": "Rxd2+",
+            "score": 37,
+            "continuation": [
+              "Kxd2"
+            ],
+            "materialGainAfterContinuation": -170,
+            "worstMaterialAfterImmediateReply": -170,
+            "immediateReplies": [
+              {
+                "reply": "Kxd2",
+                "gain": -170
+              },
+              {
+                "reply": "Kc1",
+                "gain": 330
+              }
+            ]
+          },
+          {
+            "root": "Rxc3",
+            "score": 893,
+            "continuation": [
+              "Ke1",
+              "Rh3",
+              "Bg5",
+              "Rh2",
+              "Bc1",
+              "Rh1+",
+              "Ke2",
+              "Rxc1",
+              "Ke3",
+              "Rcd1"
+            ],
+            "materialGainAfterContinuation": 650,
+            "worstMaterialAfterImmediateReply": 320,
+            "immediateReplies": [
+              {
+                "reply": "Ke2",
+                "gain": 320
+              },
+              {
+                "reply": "Ke1",
+                "gain": 320
+              }
+            ]
+          },
+          {
+            "root": "Re1+",
+            "score": 25,
+            "continuation": [
+              "Kxe1",
+              "Kb7",
+              "Kd1",
+              "Kc8",
+              "Ne2",
+              "Rxd2+",
+              "Kxd2",
+              "Kd8",
+              "Ke1",
+              "Ke8"
+            ],
+            "materialGainAfterContinuation": -670,
+            "worstMaterialAfterImmediateReply": -500,
+            "immediateReplies": [
+              {
+                "reply": "Kc2",
+                "gain": 0
+              },
+              {
+                "reply": "Kxe1",
+                "gain": -500
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "pin-beginner-essential-20261027-08",
+      "fen": "8/8/8/5P2/8/6n1/8/KBrk4 b - - 0 1",
+      "moves": [
+        "Nxf5"
+      ],
+      "decision": "retain",
+      "reason": "Six-piece composition. The pinned piece is the only defender of the target. Removing the pinner makes recapture legal and loses material for the capturing side. Direct capture of the defender loses material after a legal reply; no simpler positive capture is retained.",
+      "engine": {
+        "name": "Stockfish 17",
+        "nodesPerRoot": 200000,
+        "probes": [
+          {
+            "root": "Nxf5",
+            "score": 524,
+            "continuation": [
+              "Kb2",
+              "Nd4"
+            ],
+            "materialGainAfterContinuation": 100,
+            "worstMaterialAfterImmediateReply": 100,
+            "immediateReplies": [
+              {
+                "reply": "Kb2",
+                "gain": 100
+              },
+              {
+                "reply": "Ka2",
+                "gain": 100
+              }
+            ]
+          },
+          {
+            "root": "Rxb1+",
+            "score": 20,
+            "continuation": [
+              "Kxb1"
+            ],
+            "materialGainAfterContinuation": -170,
+            "worstMaterialAfterImmediateReply": -170,
+            "immediateReplies": [
+              {
+                "reply": "Ka2",
+                "gain": 330
+              },
+              {
+                "reply": "Kxb1",
+                "gain": -170
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "pin-beginner-essential-20261027-09",
+      "fen": "8/K1R5/8/8/8/2n5/8/kn1R4 w - - 0 1",
+      "moves": [
+        "Rxc3"
+      ],
+      "decision": "retain",
+      "reason": "Six-piece composition. The pinned piece is the only defender of the target. Removing the pinner makes recapture legal and loses material for the capturing side. Direct capture of the defender loses material after a legal reply; no simpler positive capture is retained.",
+      "engine": {
+        "name": "Stockfish 17",
+        "nodesPerRoot": 200000,
+        "probes": [
+          {
+            "root": "Rxc3",
+            "score": 99990,
+            "continuation": [
+              "Kb2",
+              "Rc8",
+              "Na3",
+              "Rd7",
+              "Nb5+",
+              "Ka6",
+              "Nc3",
+              "Rd2+",
+              "Kb3",
+              "Rd3"
+            ],
+            "materialGainAfterContinuation": 320,
+            "worstMaterialAfterImmediateReply": 320,
+            "immediateReplies": [
+              {
+                "reply": "Kb2",
+                "gain": 320
+              },
+              {
+                "reply": "Ka2",
+                "gain": 320
+              }
+            ]
+          },
+          {
+            "root": "Rxb1+",
+            "score": 47,
+            "continuation": [
+              "Nxb1",
+              "Kb6",
+              "Kb2",
+              "Kc5",
+              "Kc3",
+              "Rh7",
+              "Nd2",
+              "Rh1",
+              "Nb3+",
+              "Kb5"
+            ],
+            "materialGainAfterContinuation": -180,
+            "worstMaterialAfterImmediateReply": -180,
+            "immediateReplies": [
+              {
+                "reply": "Ka2",
+                "gain": 320
+              },
+              {
+                "reply": "Kxb1",
+                "gain": -180
+              },
+              {
+                "reply": "Nxb1",
+                "gain": -180
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "pin-beginner-essential-20261027-10",
+      "fen": "3b4/8/3b4/N7/1P6/K7/8/7k b - - 0 1",
+      "moves": [
+        "Bxa5"
+      ],
+      "decision": "retain",
+      "reason": "Six-piece composition. The pinned piece is the only defender of the target. Removing the pinner makes recapture legal and loses material for the capturing side. Direct capture of the defender loses material after a legal reply; no simpler positive capture is retained.",
+      "engine": {
+        "name": "Stockfish 17",
+        "nodesPerRoot": 200000,
+        "probes": [
+          {
+            "root": "Bxa5",
+            "score": 237,
+            "continuation": [
+              "Kb3",
+              "Bb6",
+              "Kc4",
+              "Kg2",
+              "Kb5",
+              "Bg1",
+              "Kc4",
+              "Bdh2",
+              "Kd3"
+            ],
+            "materialGainAfterContinuation": 320,
+            "worstMaterialAfterImmediateReply": 320,
+            "immediateReplies": [
+              {
+                "reply": "Ka4",
+                "gain": 320
+              },
+              {
+                "reply": "Kb3",
+                "gain": 320
+              },
+              {
+                "reply": "Kb2",
+                "gain": 320
+              },
+              {
+                "reply": "Ka2",
+                "gain": 320
+              }
+            ]
+          },
+          {
+            "root": "Bxb4+",
+            "score": -12,
+            "continuation": [
+              "Kxb4"
+            ],
+            "materialGainAfterContinuation": -230,
+            "worstMaterialAfterImmediateReply": -230,
+            "immediateReplies": [
+              {
+                "reply": "Kxb4",
+                "gain": -230
+              },
+              {
+                "reply": "Ka4",
+                "gain": 100
+              },
+              {
+                "reply": "Kb3",
+                "gain": 100
+              },
+              {
+                "reply": "Kb2",
+                "gain": 100
+              },
+              {
+                "reply": "Ka2",
+                "gain": 100
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "pin-beginner-essential-20261027-11",
+      "fen": "8/8/5kbR/K7/4p3/3B4/8/8 w - - 0 1",
+      "moves": [
+        "Bxe4"
+      ],
+      "decision": "retain",
+      "reason": "Six-piece composition: the only defender cannot recapture because of the king pin. Removing the pinner permits a losing recapture trade. All immediate defensive replies preserve the gain; initial captures and checks were inspected for simpler positive material gains, including ten continuation plies. No mirror duplicate of existing or excluded positions.",
+      "engine": {
+        "name": "Stockfish 17",
+        "nodesPerRoot": 200000,
+        "probes": [
+          {
+            "root": "Rxg6+",
+            "score": 16,
+            "continuation": [
+              "Kxg6",
+              "Bxe4+"
+            ],
+            "materialGainAfterContinuation": -70,
+            "worstMaterialAfterImmediateReply": -170
+          },
+          {
+            "root": "Bxe4",
+            "score": 653,
+            "continuation": [
+              "Kg5",
+              "Rxg6+",
+              "Kf4",
+              "Bd3",
+              "Ke3",
+              "Bb5",
+              "Kd2",
+              "Kb6",
+              "Kc3",
+              "Rd6"
+            ],
+            "materialGainAfterContinuation": 430,
+            "worstMaterialAfterImmediateReply": 100
+          }
+        ]
+      }
+    },
+    {
+      "id": "pin-beginner-essential-20261027-12",
+      "fen": "5b2/8/8/1NR5/8/K7/1r6/5k2 b - - 0 1",
+      "moves": [
+        "Rxb5"
+      ],
+      "decision": "retain",
+      "reason": "Six-piece composition: the only defender cannot recapture because of the king pin. Removing the pinner permits a losing recapture trade. All immediate defensive replies preserve the gain; initial captures and checks were inspected for simpler positive material gains, including ten continuation plies. No mirror duplicate of existing or excluded positions.",
+      "engine": {
+        "name": "Stockfish 17",
+        "nodesPerRoot": 200000,
+        "probes": [
+          {
+            "root": "Bxc5+",
+            "score": 0,
+            "continuation": [
+              "Kxb2",
+              "Bd4+",
+              "Kc2",
+              "Ke2",
+              "Nd6",
+              "Ba1",
+              "Nf5",
+              "Bb2",
+              "Nd6"
+            ],
+            "materialGainAfterContinuation": 0,
+            "worstMaterialAfterImmediateReply": 0
+          },
+          {
+            "root": "Rxb5",
+            "score": 633,
+            "continuation": [
+              "Ka4",
+              "Rxc5",
+              "Kb4",
+              "Kg2",
+              "Kb3",
+              "Rg5",
+              "Kc4",
+              "Bc5",
+              "Kb5",
+              "Kf3"
+            ],
+            "materialGainAfterContinuation": 820,
+            "worstMaterialAfterImmediateReply": 320
+          },
+          {
+            "root": "Rb3+",
+            "score": -10,
+            "continuation": [
+              "Kxb3",
+              "Bxc5"
+            ],
+            "materialGainAfterContinuation": 0,
+            "worstMaterialAfterImmediateReply": -500
+          },
+          {
+            "root": "Ra2+",
+            "score": -7,
+            "continuation": [
+              "Kxa2"
+            ],
+            "materialGainAfterContinuation": -500,
+            "worstMaterialAfterImmediateReply": -500
+          }
+        ]
+      }
+    },
+    {
+      "id": "pin-beginner-essential-20261027-13",
+      "fen": "B3K3/3B4/4p3/3p1k2/8/8/8/8 w - - 0 1",
+      "moves": [
+        "Bxd5"
+      ],
+      "decision": "retain",
+      "reason": "Six-piece composition: the only defender cannot recapture because of the king pin. Removing the pinner permits a losing recapture trade. All immediate defensive replies preserve the gain; initial captures and checks were inspected for simpler positive material gains, including ten continuation plies. No mirror duplicate of existing or excluded positions.",
+      "engine": {
+        "name": "Stockfish 17",
+        "nodesPerRoot": 200000,
+        "probes": [
+          {
+            "root": "Bxd5",
+            "score": 253,
+            "continuation": [
+              "Kf4",
+              "Bg2",
+              "Ke3",
+              "Bb5",
+              "Kd4",
+              "Bbc6",
+              "Kd3",
+              "Bce4+",
+              "Kc3",
+              "Ke7"
+            ],
+            "materialGainAfterContinuation": 100,
+            "worstMaterialAfterImmediateReply": 100
+          },
+          {
+            "root": "Bxe6+",
+            "score": 0,
+            "continuation": [
+              "Kxe6",
+              "Bxd5+",
+              "Kxd5",
+              "Ke7",
+              "Ke4",
+              "Kd6",
+              "Ke3",
+              "Kc6",
+              "Ke2",
+              "Kb7"
+            ],
+            "materialGainAfterContinuation": -460,
+            "worstMaterialAfterImmediateReply": -230
+          }
+        ]
+      }
+    },
+    {
+      "id": "pin-beginner-essential-20261027-14",
+      "fen": "8/8/K7/1N6/2b1k3/N5r1/8/8 b - - 0 1",
+      "moves": [
+        "Rxa3+"
+      ],
+      "decision": "retain",
+      "reason": "Six-piece composition: the only defender cannot recapture because of the king pin. Removing the pinner permits a losing recapture trade. All immediate defensive replies preserve the gain; initial captures and checks were inspected for simpler positive material gains, including ten continuation plies. No mirror duplicate of existing or excluded positions.",
+      "engine": {
+        "name": "Stockfish 17",
+        "nodesPerRoot": 200000,
+        "probes": [
+          {
+            "root": "Bxb5+",
+            "score": 37,
+            "continuation": [
+              "Nxb5",
+              "Kd5",
+              "Na7",
+              "Rb3",
+              "Nb5",
+              "Kc5",
+              "Na7",
+              "Rb8",
+              "Ka5",
+              "Rb7"
+            ],
+            "materialGainAfterContinuation": -10,
+            "worstMaterialAfterImmediateReply": -10
+          },
+          {
+            "root": "Rg6+",
+            "score": 40,
+            "continuation": [
+              "Ka5",
+              "Bf7"
+            ],
+            "materialGainAfterContinuation": 0,
+            "worstMaterialAfterImmediateReply": 0
+          },
+          {
+            "root": "Rxa3+",
+            "score": 638,
+            "continuation": [
+              "Kb6",
+              "Rb3",
+              "Kc6",
+              "Bxb5+",
+              "Kc5",
+              "Bd3",
+              "Kc6",
+              "Kf4",
+              "Kd6",
+              "Kg3"
+            ],
+            "materialGainAfterContinuation": 640,
+            "worstMaterialAfterImmediateReply": 320
+          }
+        ]
+      }
+    },
+    {
+      "id": "pin-beginner-essential-20261027-15",
+      "fen": "8/B7/2R5/8/3n3K/2b5/2k5/8 w - - 0 1",
+      "moves": [
+        "Bxd4"
+      ],
+      "decision": "retain",
+      "reason": "Six-piece composition: the only defender cannot recapture because of the king pin. Removing the pinner permits a losing recapture trade. All immediate defensive replies preserve the gain; initial captures and checks were inspected for simpler positive material gains, including ten continuation plies. No mirror duplicate of existing or excluded positions.",
+      "engine": {
+        "name": "Stockfish 17",
+        "nodesPerRoot": 200000,
+        "probes": [
+          {
+            "root": "Bxd4",
+            "score": 575,
+            "continuation": [
+              "Kd3",
+              "Bxc3",
+              "Ke4",
+              "Rf6",
+              "Kd5",
+              "Kg4",
+              "Kc4",
+              "Bd2",
+              "Kd5",
+              "Bf4"
+            ],
+            "materialGainAfterContinuation": 650,
+            "worstMaterialAfterImmediateReply": 320
+          },
+          {
+            "root": "Rxc3+",
+            "score": 4,
+            "continuation": [
+              "Kxc3",
+              "Bb6",
+              "Kd2",
+              "Kg5",
+              "Ke2",
+              "Bc7",
+              "Kf3",
+              "Ba5",
+              "Nb3",
+              "Kf6"
+            ],
+            "materialGainAfterContinuation": -170,
+            "worstMaterialAfterImmediateReply": -170
+          }
+        ]
+      }
+    },
+    {
+      "id": "pin-create-20261027-01",
+      "fen": "8/8/8/8/8/3kn3/5K1Q/8 w - - 0 1",
+      "moves": [
+        "Qg3",
+        "Ke4",
+        "Qxe3+"
+      ],
+      "decision": "retain",
+      "reason": "Four-piece original composition. No initial legal capture; the first quiet move creates a pin and prevents at least one otherwise pseudo-legal escape from attack. Every legal reply has a saved capture preserving at least one pawn of material against every immediate recapture. Endpoint engine probes retain the gain for eight PV plies. Finite evidence, not a proof of all later endgame play.",
+      "engine": {
+        "name": "Stockfish 17",
+        "nodesPerRoot": 120000,
+        "probes": [
+          {
+            "root": "Qg3",
+            "continuation": [
+              "Qg3",
+              "Ke4",
+              "Qxe3+",
+              "Kf5",
+              "Kg1",
+              "Kf6",
+              "Qe4",
+              "Kg7",
+              "Qg2+",
+              "Kf7"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "pin-create-20261027-02",
+      "fen": "8/8/6q1/8/5B2/2k5/8/5K2 b - - 0 1",
+      "moves": [
+        "Qf5",
+        "Kg2",
+        "Qxf4"
+      ],
+      "decision": "retain",
+      "reason": "Four-piece original composition. No initial legal capture; the first quiet move creates a pin and prevents at least one otherwise pseudo-legal escape from attack. Every legal reply has a saved capture preserving at least one pawn of material against every immediate recapture. Endpoint engine probes retain the gain for eight PV plies. Finite evidence, not a proof of all later endgame play.",
+      "engine": {
+        "name": "Stockfish 17",
+        "nodesPerRoot": 120000,
+        "probes": [
+          {
+            "root": "Qf5",
+            "continuation": [
+              "Qf5",
+              "Kg2",
+              "Qxf4",
+              "Kh3",
+              "Kd3",
+              "Kg2",
+              "Ke2",
+              "Kh1",
+              "Qg5",
+              "Kh2"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "pin-create-20261027-03",
+      "fen": "6K1/8/8/5k2/8/8/2r5/6Q1 w - - 0 1",
+      "moves": [
+        "Qb1",
+        "Ke5",
+        "Qxc2"
+      ],
+      "decision": "retain",
+      "reason": "Four-piece original composition. No initial legal capture; the first quiet move creates a pin and prevents at least one otherwise pseudo-legal escape from attack. Every legal reply has a saved capture preserving at least one pawn of material against every immediate recapture. Endpoint engine probes retain the gain for eight PV plies. Finite evidence, not a proof of all later endgame play.",
+      "engine": {
+        "name": "Stockfish 17",
+        "nodesPerRoot": 120000,
+        "probes": [
+          {
+            "root": "Qb1",
+            "continuation": [
+              "Qb1",
+              "Ke5",
+              "Qxc2",
+              "Kd4",
+              "Kf7",
+              "Ke3",
+              "Ke7",
+              "Kd4",
+              "Ke6",
+              "Ke3"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "pin-create-20261027-04",
+      "fen": "6k1/8/8/6n1/8/8/1K2Q3/8 w - - 0 1",
+      "moves": [
+        "Qg2",
+        "Kg7",
+        "Qxg5+"
+      ],
+      "decision": "retain",
+      "reason": "Four-piece original composition. No initial legal capture; the first quiet move creates a pin and prevents at least one otherwise pseudo-legal escape from attack. Every legal reply has a saved capture preserving at least one pawn of material against every immediate recapture. Endpoint engine probes retain the gain for eight PV plies. Finite evidence, not a proof of all later endgame play.",
+      "engine": {
+        "name": "Stockfish 17",
+        "nodesPerRoot": 120000,
+        "probes": [
+          {
+            "root": "Qg2",
+            "continuation": [
+              "Qg2",
+              "Kg7",
+              "Qxg5+",
+              "Kf8",
+              "Kc3",
+              "Kf7",
+              "Kc4",
+              "Ke6",
+              "Kd4",
+              "Kd7"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "pin-create-20261027-05",
+      "fen": "K7/8/8/5k2/B7/8/5q2/8 b - - 0 1",
+      "moves": [
+        "Qa2",
+        "Kb7",
+        "Qxa4"
+      ],
+      "decision": "retain",
+      "reason": "Four-piece original composition. No initial legal capture; the first quiet move creates a pin and prevents at least one otherwise pseudo-legal escape from attack. Every legal reply has a saved capture preserving at least one pawn of material against every immediate recapture. Endpoint engine probes retain the gain for eight PV plies. Finite evidence, not a proof of all later endgame play.",
+      "engine": {
+        "name": "Stockfish 17",
+        "nodesPerRoot": 120000,
+        "probes": [
+          {
+            "root": "Qa2",
+            "continuation": [
+              "Qa2",
+              "Kb7",
+              "Qxa4",
+              "Kb6",
+              "Kf6",
+              "Kc7",
+              "Ke6",
+              "Kb7",
+              "Kd6",
+              "Kb6"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "pin-create-20261027-06",
+      "fen": "8/8/8/8/2k1K3/3r4/1Q6/8 w - - 0 1",
+      "moves": [
+        "Qe2",
+        "Kc5",
+        "Qxd3"
+      ],
+      "decision": "retain",
+      "reason": "Four-piece original composition. No initial legal capture; the first quiet move creates a pin and prevents at least one otherwise pseudo-legal escape from attack. Every legal reply has a saved capture preserving at least one pawn of material against every immediate recapture. Endpoint engine probes retain the gain for eight PV plies. Finite evidence, not a proof of all later endgame play.",
+      "engine": {
+        "name": "Stockfish 17",
+        "nodesPerRoot": 120000,
+        "probes": [
+          {
+            "root": "Qe2",
+            "continuation": [
+              "Qe2",
+              "Kc5",
+              "Qxd3",
+              "Kc6",
+              "Qd5+",
+              "Kc7",
+              "Ke5",
+              "Kc8",
+              "Kd6",
+              "Kb8"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "pin-create-20261027-07",
+      "fen": "8/8/8/4R3/2kn4/4K3/8/8 w - - 0 1",
+      "moves": [
+        "Re4",
+        "Kc5",
+        "Rxd4"
+      ],
+      "decision": "retain",
+      "reason": "Four-piece original composition. No initial legal capture; the first quiet move creates a pin and prevents at least one otherwise pseudo-legal escape from attack. Every legal reply has a saved capture preserving at least one pawn of material against every immediate recapture. Endpoint engine probes retain the gain for eight PV plies. Finite evidence, not a proof of all later endgame play.",
+      "engine": {
+        "name": "Stockfish 17",
+        "nodesPerRoot": 120000,
+        "probes": [
+          {
+            "root": "Re4",
+            "continuation": [
+              "Re4",
+              "Kc5",
+              "Rxd4",
+              "Kb5",
+              "Rd1",
+              "Kc4",
+              "Ra1",
+              "Kc3",
+              "Rc1+",
+              "Kb4"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "pin-create-20261027-08",
+      "fen": "8/8/8/7k/7r/3K2B1/8/8 b - - 0 1",
+      "moves": [
+        "Rh3",
+        "Ke4",
+        "Rxg3"
+      ],
+      "decision": "retain",
+      "reason": "Four-piece original composition. No initial legal capture; the first quiet move creates a pin and prevents at least one otherwise pseudo-legal escape from attack. Every legal reply has a saved capture preserving at least one pawn of material against every immediate recapture. Endpoint engine probes retain the gain for eight PV plies. Finite evidence, not a proof of all later endgame play.",
+      "engine": {
+        "name": "Stockfish 17",
+        "nodesPerRoot": 120000,
+        "probes": [
+          {
+            "root": "Rh3",
+            "continuation": [
+              "Rh3",
+              "Ke4",
+              "Rxg3",
+              "Kf4",
+              "Rh3",
+              "Ke5",
+              "Kg4",
+              "Ke6",
+              "Kf3",
+              "Ke5"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "pin-create-20261027-09",
+      "fen": "8/1r6/8/8/4k3/7K/Q7/8 w - - 0 1",
+      "moves": [
+        "Qa8",
+        "Ke5",
+        "Qxb7"
+      ],
+      "decision": "retain",
+      "reason": "Four-piece original composition. No initial legal capture; the first quiet move creates a pin and prevents at least one otherwise pseudo-legal escape from attack. Every legal reply has a saved capture preserving at least one pawn of material against every immediate recapture. Endpoint engine probes retain the gain for eight PV plies. Finite evidence, not a proof of all later endgame play.",
+      "engine": {
+        "name": "Stockfish 17",
+        "nodesPerRoot": 120000,
+        "probes": [
+          {
+            "root": "Qa8",
+            "continuation": [
+              "Qa8",
+              "Ke5",
+              "Qxb7",
+              "Kf5",
+              "Kg3",
+              "Ke5",
+              "Qb3",
+              "Ke4",
+              "Qc4+",
+              "Ke5"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "pin-create-20261027-10",
+      "fen": "6R1/8/8/8/8/7K/k2n4/8 w - - 0 1",
+      "moves": [
+        "Rg2",
+        "Kb2",
+        "Rxd2+"
+      ],
+      "decision": "retain",
+      "reason": "Four-piece original composition. No initial legal capture; the first quiet move creates a pin and prevents at least one otherwise pseudo-legal escape from attack. Every legal reply has a saved capture preserving at least one pawn of material against every immediate recapture. Endpoint engine probes retain the gain for eight PV plies. Finite evidence, not a proof of all later endgame play.",
+      "engine": {
+        "name": "Stockfish 17",
+        "nodesPerRoot": 120000,
+        "probes": [
+          {
+            "root": "Rg2",
+            "continuation": [
+              "Rg2",
+              "Kb2",
+              "Rxd2+",
+              "Kc3",
+              "Rd8",
+              "Kb3",
+              "Rc8",
+              "Kb4",
+              "Kg2",
+              "Kb3"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "pin-create-20261027-11",
+      "fen": "8/8/8/8/k7/8/r7/1B2K3 b - - 0 1",
+      "moves": [
+        "Ra1",
+        "Kd2",
+        "Rxb1"
+      ],
+      "decision": "retain",
+      "reason": "Four-piece original composition. No initial legal capture; the first quiet move creates a pin and prevents at least one otherwise pseudo-legal escape from attack. Every legal reply has a saved capture preserving at least one pawn of material against every immediate recapture. Endpoint engine probes retain the gain for eight PV plies. Finite evidence, not a proof of all later endgame play.",
+      "engine": {
+        "name": "Stockfish 17",
+        "nodesPerRoot": 120000,
+        "probes": [
+          {
+            "root": "Ra1",
+            "continuation": [
+              "Ra1",
+              "Kd2",
+              "Rxb1",
+              "Kd3",
+              "Rb4",
+              "Kc2",
+              "Ka3",
+              "Kc3",
+              "Rg4",
+              "Kc2"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "pin-create-20261027-12",
+      "fen": "8/Q7/6K1/4k3/8/8/1r6/8 w - - 0 1",
+      "moves": [
+        "Qa1",
+        "Kd4",
+        "Qxb2+"
+      ],
+      "decision": "retain",
+      "reason": "Four-piece original composition. No initial legal capture; the first quiet move creates a pin and prevents at least one otherwise pseudo-legal escape from attack. Every legal reply has a saved capture preserving at least one pawn of material against every immediate recapture. Endpoint engine probes retain the gain for eight PV plies. Finite evidence, not a proof of all later endgame play.",
+      "engine": {
+        "name": "Stockfish 17",
+        "nodesPerRoot": 120000,
+        "probes": [
+          {
+            "root": "Qa1",
+            "continuation": [
+              "Qa1",
+              "Kd4",
+              "Qxb2+",
+              "Kd3",
+              "Kf5",
+              "Kc4",
+              "Ke4",
+              "Kc5",
+              "Qd4+",
+              "Kc6"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "pin-create-20261027-13",
+      "fen": "8/8/3k3K/8/8/q7/3P4/8 b - - 0 1",
+      "moves": [
+        "Qc1",
+        "Kh5",
+        "Qxd2"
+      ],
+      "decision": "retain",
+      "reason": "Four-piece original composition. No initial legal capture; the first quiet move creates a pin and prevents at least one otherwise pseudo-legal escape from attack. Every legal reply has a saved capture preserving at least one pawn of material against every immediate recapture. Endpoint engine probes retain the gain for eight PV plies. Finite evidence, not a proof of all later endgame play.",
+      "engine": {
+        "name": "Stockfish 17",
+        "nodesPerRoot": 120000,
+        "probes": [
+          {
+            "root": "Qc1",
+            "continuation": [
+              "Qc1",
+              "Kh5",
+              "Qxd2",
+              "Kg4",
+              "Qf2",
+              "Kg5",
+              "Qd4",
+              "Kf5",
+              "Ke7",
+              "Kg5"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "pin-create-20261027-14",
+      "fen": "8/6k1/8/8/2K3n1/7R/8/8 w - - 0 1",
+      "moves": [
+        "Rg3",
+        "Kg6",
+        "Rxg4+"
+      ],
+      "decision": "retain",
+      "reason": "Four-piece original composition. No initial legal capture; the first quiet move creates a pin and prevents at least one otherwise pseudo-legal escape from attack. Every legal reply has a saved capture preserving at least one pawn of material against every immediate recapture. Endpoint engine probes retain the gain for eight PV plies. Finite evidence, not a proof of all later endgame play.",
+      "engine": {
+        "name": "Stockfish 17",
+        "nodesPerRoot": 120000,
+        "probes": [
+          {
+            "root": "Rg3",
+            "continuation": [
+              "Rg3",
+              "Kg6",
+              "Rxg4+",
+              "Kf5",
+              "Rg3",
+              "Ke4",
+              "Rb3",
+              "Ke5",
+              "Kd3",
+              "Kf4"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "pin-create-20261027-15",
+      "fen": "8/8/2r5/K7/8/1Q6/6k1/8 w - - 0 1",
+      "moves": [
+        "Qb7",
+        "Kf2",
+        "Qxc6"
+      ],
+      "decision": "retain",
+      "reason": "Four-piece original composition. No initial legal capture; the first quiet move creates a pin and prevents at least one otherwise pseudo-legal escape from attack. Every legal reply has a saved capture preserving at least one pawn of material against every immediate recapture. Endpoint engine probes retain the gain for eight PV plies. Finite evidence, not a proof of all later endgame play.",
+      "engine": {
+        "name": "Stockfish 17",
+        "nodesPerRoot": 120000,
+        "probes": [
+          {
+            "root": "Qb7",
+            "continuation": [
+              "Qb7",
+              "Kf2",
+              "Qxc6",
+              "Ke3",
+              "Qc3+",
+              "Kf4",
+              "Qh3",
+              "Ke4",
+              "Qb3",
+              "Kf5"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "pin-create-20261027-16",
+      "fen": "6r1/8/8/8/8/7k/K2P4/8 b - - 0 1",
+      "moves": [
+        "Rg2",
+        "Ka3",
+        "Rxd2"
+      ],
+      "decision": "retain",
+      "reason": "Four-piece original composition. No initial legal capture; the first quiet move creates a pin and prevents at least one otherwise pseudo-legal escape from attack. Every legal reply has a saved capture preserving at least one pawn of material against every immediate recapture. Endpoint engine probes retain the gain for eight PV plies. Finite evidence, not a proof of all later endgame play.",
+      "engine": {
+        "name": "Stockfish 17",
+        "nodesPerRoot": 120000,
+        "probes": [
+          {
+            "root": "Rg2",
+            "continuation": [
+              "Rg2",
+              "Ka3",
+              "Rxd2",
+              "Kb4",
+              "Kg2",
+              "Kc3",
+              "Rd8",
+              "Kb3",
+              "Ra8",
+              "Kc4"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "pin-create-20261027-17",
+      "fen": "8/8/8/8/K7/R7/8/1n2k3 w - - 0 1",
+      "moves": [
+        "Ra1",
+        "Kd1",
+        "Rxb1+"
+      ],
+      "decision": "retain",
+      "reason": "Four-piece original composition. No initial legal capture; the first quiet move creates a pin and prevents at least one otherwise pseudo-legal escape from attack. Every legal reply has a saved capture preserving at least one pawn of material against every immediate recapture. Endpoint engine probes retain the gain for eight PV plies. Finite evidence, not a proof of all later endgame play.",
+      "engine": {
+        "name": "Stockfish 17",
+        "nodesPerRoot": 120000,
+        "probes": [
+          {
+            "root": "Ra1",
+            "continuation": [
+              "Ra1",
+              "Kd1",
+              "Rxb1+",
+              "Ke2",
+              "Rb3",
+              "Kf2",
+              "Rb7",
+              "Ke2",
+              "Re7+",
+              "Kf2"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+[
+  {
+    "gameId": "ec6bf07bb654e374",
+    "fen": "8/6k1/6P1/2R5/3n1r2/2p5/8/2KB4 b - - 5 52",
+    "moves": [
+      "Rf1",
+      "Rd5",
+      "c2",
+      "Rxd4",
+      "Rxd1+",
+      "Rxd1",
+      "cxd1=Q+",
+      "Kxd1"
+    ],
+    "reason": "Only a minor-piece valuation imbalance, not a pawn or more of material deficit. An ordinary balanced trade is not sufficient evidence of a defensive simplification lesson."
+  },
+  {
+    "gameId": "19528b579f6d0081",
+    "fen": "8/8/4kp1N/8/3K1PP1/7b/8/8 b - - 0 53",
+    "moves": [
+      "Bxg4",
+      "Nxg4",
+      "Kf5",
+      "Ke3",
+      "Kxg4"
+    ],
+    "reason": "Only a minor-piece valuation imbalance, not a pawn or more of material deficit. An ordinary balanced trade is not sufficient evidence of a defensive simplification lesson."
+  },
+  {
+    "gameId": "3119df21c60c6f80",
+    "title": "Saemisch, Fritz — Spielmann, Rudolf",
+    "fen": "3R4/8/8/k1p5/1p6/pP6/P1K5/7r w - - 0 54",
+    "moves": [
+      "Rd1",
+      "Rxd1",
+      "Kxd1"
+    ],
+    "reason": "Removed from simplification practice at the user’s request. Exclude this rook-liquidation drawing exercise from future collections."
+  }
+]

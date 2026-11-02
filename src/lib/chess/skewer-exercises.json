@@ -26,14 +26,14 @@
     "difficulty": {
       "level": "A",
       "status": "suggested",
-      "reason": "Tạo đòn xiên ngay, rồi bắt quân phía sau; không cần chuẩn bị hay hy sinh.",
+      "reason": "Tạo đòn xiên ngay, rồi bắt quân phía sau; không cần chuẩn bị hay thí quân.",
       "solverMoves": 2,
       "sacrificeCount": 0
     },
     "hints": [
       "Quan sát các hàng, cột và đường chéo: có thể buộc quân phía trước rời đường để bắt quân phía sau không?"
     ],
-    "solution": "Xe tại d1 tấn công quân ở d7, để khai thác quân phía sau ở d8. Nhánh mẫu: Rad1+ · Kc8 · Rxd8+."
+    "solution": "Xe tại d1 tấn công quân ở d7, để khai thác quân phía sau ở d8."
   },
   {
     "title": "Stellwagen,D — Anand,V",
@@ -62,14 +62,14 @@
     "difficulty": {
       "level": "A",
       "status": "suggested",
-      "reason": "Tạo đòn xiên ngay, rồi bắt quân phía sau; không cần chuẩn bị hay hy sinh.",
+      "reason": "Tạo đòn xiên ngay, rồi bắt quân phía sau; không cần chuẩn bị hay thí quân.",
       "solverMoves": 2,
       "sacrificeCount": 0
     },
     "hints": [
       "Quan sát các hàng, cột và đường chéo: có thể buộc quân phía trước rời đường để bắt quân phía sau không?"
     ],
-    "solution": "Tượng tại g1 tấn công quân ở d4, để khai thác quân phía sau ở c5. Nhánh mẫu: Bg1+ · Kd5 · Bxc5."
+    "solution": "Tượng tại g1 tấn công quân ở d4, để khai thác quân phía sau ở c5."
   },
   {
     "title": "Neumann, Gustav Richard — Anderssen, Adolf",
@@ -98,14 +98,14 @@
     "difficulty": {
       "level": "A",
       "status": "suggested",
-      "reason": "Tạo đòn xiên ngay, rồi bắt quân phía sau; không cần chuẩn bị hay hy sinh.",
+      "reason": "Tạo đòn xiên ngay, rồi bắt quân phía sau; không cần chuẩn bị hay thí quân.",
       "solverMoves": 2,
       "sacrificeCount": 0
     },
     "hints": [
       "Quan sát các hàng, cột và đường chéo: có thể buộc quân phía trước rời đường để bắt quân phía sau không?"
     ],
-    "solution": "Hậu tại h5 tấn công quân ở g4, để khai thác quân phía sau ở e2. Nhánh mẫu: Qh5+ · Kxf4 · Qxe2."
+    "solution": "Hậu tại h5 tấn công quân ở g4, để khai thác quân phía sau ở e2."
   },
   {
     "title": "Euwe, Max — Naegeli, Oskar",
@@ -134,14 +134,14 @@
     "difficulty": {
       "level": "A",
       "status": "suggested",
-      "reason": "Tạo đòn xiên ngay, rồi bắt quân phía sau; không cần chuẩn bị hay hy sinh.",
+      "reason": "Tạo đòn xiên ngay, rồi bắt quân phía sau; không cần chuẩn bị hay thí quân.",
       "solverMoves": 2,
       "sacrificeCount": 0
     },
     "hints": [
       "Quan sát các hàng, cột và đường chéo: có thể buộc quân phía trước rời đường để bắt quân phía sau không?"
     ],
-    "solution": "Xe tại f8 tấn công quân ở f7, để khai thác quân phía sau ở f6. Nhánh mẫu: Rf8+ · Ke6 · Rxf6+."
+    "solution": "Xe tại f8 tấn công quân ở f7, để khai thác quân phía sau ở f6."
   },
   {
     "title": "Rotstein,A — Beliavsky,A",
@@ -170,14 +170,14 @@
     "difficulty": {
       "level": "A",
       "status": "suggested",
-      "reason": "Tạo đòn xiên ngay, rồi bắt quân phía sau; không cần chuẩn bị hay hy sinh.",
+      "reason": "Tạo đòn xiên ngay, rồi bắt quân phía sau; không cần chuẩn bị hay thí quân.",
       "solverMoves": 2,
       "sacrificeCount": 0
     },
     "hints": [
       "Quan sát các hàng, cột và đường chéo: có thể buộc quân phía trước rời đường để bắt quân phía sau không?"
     ],
-    "solution": "Hậu tại d8 tấn công quân ở f8, để khai thác quân phía sau ở h8. Nhánh mẫu: d8=Q+ · Kg7 · Qxh8+."
+    "solution": "Hậu tại d8 tấn công quân ở f8, để khai thác quân phía sau ở h8."
   },
   {
     "title": "Carlsen,M — Agdestein,S",
@@ -206,14 +206,14 @@
     "difficulty": {
       "level": "A",
       "status": "suggested",
-      "reason": "Tạo đòn xiên ngay, rồi bắt quân phía sau; không cần chuẩn bị hay hy sinh.",
+      "reason": "Tạo đòn xiên ngay, rồi bắt quân phía sau; không cần chuẩn bị hay thí quân.",
       "solverMoves": 2,
       "sacrificeCount": 0
     },
     "hints": [
       "Quan sát các hàng, cột và đường chéo: có thể buộc quân phía trước rời đường để bắt quân phía sau không?"
     ],
-    "solution": "Tượng tại a6 tấn công quân ở e2, để khai thác quân phía sau ở f1. Nhánh mẫu: Ba6 · Qe3 · Bxf1."
+    "solution": "Tượng tại a6 tấn công quân ở e2, để khai thác quân phía sau ở f1."
   },
   {
     "title": "Beliavsky,A — Neubauer,M",
@@ -242,14 +242,14 @@
     "difficulty": {
       "level": "A",
       "status": "suggested",
-      "reason": "Tạo đòn xiên ngay, rồi bắt quân phía sau; không cần chuẩn bị hay hy sinh.",
+      "reason": "Tạo đòn xiên ngay, rồi bắt quân phía sau; không cần chuẩn bị hay thí quân.",
       "solverMoves": 2,
       "sacrificeCount": 0
     },
     "hints": [
       "Quan sát các hàng, cột và đường chéo: có thể buộc quân phía trước rời đường để bắt quân phía sau không?"
     ],
-    "solution": "Hậu tại b8 tấn công quân ở e8, để khai thác quân phía sau ở g8. Nhánh mẫu: Qb8+ · Kd7 · Qxg8."
+    "solution": "Hậu tại b8 tấn công quân ở e8, để khai thác quân phía sau ở g8."
   },
   {
     "title": "Bronstein, David I — Roos, Louis",
@@ -278,14 +278,14 @@
     "difficulty": {
       "level": "A",
       "status": "suggested",
-      "reason": "Tạo đòn xiên ngay, rồi bắt quân phía sau; không cần chuẩn bị hay hy sinh.",
+      "reason": "Tạo đòn xiên ngay, rồi bắt quân phía sau; không cần chuẩn bị hay thí quân.",
       "solverMoves": 2,
       "sacrificeCount": 0
     },
     "hints": [
       "Quan sát các hàng, cột và đường chéo: có thể buộc quân phía trước rời đường để bắt quân phía sau không?"
     ],
-    "solution": "Hậu tại g3 tấn công quân ở g6, để khai thác quân phía sau ở g7. Nhánh mẫu: Qg3+ · Kf7 · Qxg7+."
+    "solution": "Hậu tại g3 tấn công quân ở g6, để khai thác quân phía sau ở g7."
   },
   {
     "title": "Carlsen,M — Grischuk,A",
@@ -314,14 +314,14 @@
     "difficulty": {
       "level": "A",
       "status": "suggested",
-      "reason": "Tạo đòn xiên ngay, rồi bắt quân phía sau; không cần chuẩn bị hay hy sinh.",
+      "reason": "Tạo đòn xiên ngay, rồi bắt quân phía sau; không cần chuẩn bị hay thí quân.",
       "solverMoves": 2,
       "sacrificeCount": 0
     },
     "hints": [
       "Quan sát các hàng, cột và đường chéo: có thể buộc quân phía trước rời đường để bắt quân phía sau không?"
     ],
-    "solution": "Xe tại c4 tấn công quân ở e4, để khai thác quân phía sau ở f4. Nhánh mẫu: Rc4+ · Kd5 · Rxf4."
+    "solution": "Xe tại c4 tấn công quân ở e4, để khai thác quân phía sau ở f4."
   },
   {
     "title": "Anokhin, Yuri — Bronstein, David I",
@@ -350,14 +350,14 @@
     "difficulty": {
       "level": "A",
       "status": "suggested",
-      "reason": "Tạo đòn xiên ngay, rồi bắt quân phía sau; không cần chuẩn bị hay hy sinh.",
+      "reason": "Tạo đòn xiên ngay, rồi bắt quân phía sau; không cần chuẩn bị hay thí quân.",
       "solverMoves": 2,
       "sacrificeCount": 0
     },
     "hints": [
       "Quan sát các hàng, cột và đường chéo: có thể buộc quân phía trước rời đường để bắt quân phía sau không?"
     ],
-    "solution": "Xe tại g3 tấn công quân ở f3, để khai thác quân phía sau ở a3. Nhánh mẫu: Rxg3+ · Kxe2 · Rxa3."
+    "solution": "Xe tại g3 tấn công quân ở f3, để khai thác quân phía sau ở a3."
   },
   {
     "title": "Schwarz, Jacques — Blackburne, Joseph Henry",
@@ -386,14 +386,14 @@
     "difficulty": {
       "level": "A",
       "status": "suggested",
-      "reason": "Tạo đòn xiên ngay, rồi bắt quân phía sau; không cần chuẩn bị hay hy sinh.",
+      "reason": "Tạo đòn xiên ngay, rồi bắt quân phía sau; không cần chuẩn bị hay thí quân.",
       "solverMoves": 2,
       "sacrificeCount": 0
     },
     "hints": [
       "Quan sát các hàng, cột và đường chéo: có thể buộc quân phía trước rời đường để bắt quân phía sau không?"
     ],
-    "solution": "Xe tại d1 tấn công quân ở f1, để khai thác quân phía sau ở g1. Nhánh mẫu: Rd1+ · Ke2 · Rxg1."
+    "solution": "Xe tại d1 tấn công quân ở f1, để khai thác quân phía sau ở g1."
   },
   {
     "title": "Charousek, Rudolf Rezso — Chigorin, Mikhail",
@@ -422,14 +422,14 @@
     "difficulty": {
       "level": "A",
       "status": "suggested",
-      "reason": "Tạo đòn xiên ngay, rồi bắt quân phía sau; không cần chuẩn bị hay hy sinh.",
+      "reason": "Tạo đòn xiên ngay, rồi bắt quân phía sau; không cần chuẩn bị hay thí quân.",
       "solverMoves": 2,
       "sacrificeCount": 0
     },
     "hints": [
       "Quan sát các hàng, cột và đường chéo: có thể buộc quân phía trước rời đường để bắt quân phía sau không?"
     ],
-    "solution": "Xe tại e1 tấn công quân ở g1, để khai thác quân phía sau ở h1. Nhánh mẫu: Re1+ · Kf2 · Rxh1."
+    "solution": "Xe tại e1 tấn công quân ở g1, để khai thác quân phía sau ở h1."
   },
   {
     "title": "Carlsen,M — Ivanchuk,V",
@@ -458,14 +458,14 @@
     "difficulty": {
       "level": "A",
       "status": "suggested",
-      "reason": "Tạo đòn xiên ngay, rồi bắt quân phía sau; không cần chuẩn bị hay hy sinh.",
+      "reason": "Tạo đòn xiên ngay, rồi bắt quân phía sau; không cần chuẩn bị hay thí quân.",
       "solverMoves": 2,
       "sacrificeCount": 0
     },
     "hints": [
       "Quan sát các hàng, cột và đường chéo: có thể buộc quân phía trước rời đường để bắt quân phía sau không?"
     ],
-    "solution": "Xe tại d1 tấn công quân ở d6, để khai thác quân phía sau ở d7. Nhánh mẫu: Rd1+ · Kc7 · Rxd7+."
+    "solution": "Xe tại d1 tấn công quân ở d6, để khai thác quân phía sau ở d7."
   },
   {
     "title": "Euwe, Max — Gilfer, Eggert",
@@ -502,14 +502,14 @@
     "difficulty": {
       "level": "A",
       "status": "suggested",
-      "reason": "Tạo đòn xiên ngay, rồi bắt quân phía sau; không cần chuẩn bị hay hy sinh.",
+      "reason": "Tạo đòn xiên ngay, rồi bắt quân phía sau; không cần chuẩn bị hay thí quân.",
       "solverMoves": 2,
       "sacrificeCount": 0
     },
     "hints": [
       "Quan sát các hàng, cột và đường chéo: có thể buộc quân phía trước rời đường để bắt quân phía sau không?"
     ],
-    "solution": "Tượng tại a5 tấn công quân ở c7, để khai thác quân phía sau ở d8. Nhánh mẫu: Ba5 · Qc8 · Bxd8."
+    "solution": "Tượng tại a5 tấn công quân ở c7, để khai thác quân phía sau ở d8."
   },
   {
     "title": "Larsen, Bent — Geller, Efim P",
@@ -538,14 +538,14 @@
     "difficulty": {
       "level": "A",
       "status": "suggested",
-      "reason": "Tạo đòn xiên ngay, rồi bắt quân phía sau; không cần chuẩn bị hay hy sinh.",
+      "reason": "Tạo đòn xiên ngay, rồi bắt quân phía sau; không cần chuẩn bị hay thí quân.",
       "solverMoves": 2,
       "sacrificeCount": 0
     },
     "hints": [
       "Quan sát các hàng, cột và đường chéo: có thể buộc quân phía trước rời đường để bắt quân phía sau không?"
     ],
-    "solution": "Hậu tại h1 tấn công quân ở f1, để khai thác quân phía sau ở c1. Nhánh mẫu: Qh1+ · Ke2 · Qxc1."
+    "solution": "Hậu tại h1 tấn công quân ở f1, để khai thác quân phía sau ở c1."
   },
   {
     "title": "Nakamura,Hi — Carlsen,M",
@@ -574,14 +574,14 @@
     "difficulty": {
       "level": "A",
       "status": "suggested",
-      "reason": "Tạo đòn xiên ngay, rồi bắt quân phía sau; không cần chuẩn bị hay hy sinh.",
+      "reason": "Tạo đòn xiên ngay, rồi bắt quân phía sau; không cần chuẩn bị hay thí quân.",
       "solverMoves": 2,
       "sacrificeCount": 0
     },
     "hints": [
       "Quan sát các hàng, cột và đường chéo: có thể buộc quân phía trước rời đường để bắt quân phía sau không?"
     ],
-    "solution": "Hậu tại f8 tấn công quân ở d6, để khai thác quân phía sau ở b4. Nhánh mẫu: Qf8+ · Ke6 · Qxb4."
+    "solution": "Hậu tại f8 tấn công quân ở d6, để khai thác quân phía sau ở b4."
   },
   {
     "title": "Bosiocic,Mari — Beliavsky,A",
@@ -610,14 +610,14 @@
     "difficulty": {
       "level": "A",
       "status": "suggested",
-      "reason": "Tạo đòn xiên ngay, rồi bắt quân phía sau; không cần chuẩn bị hay hy sinh.",
+      "reason": "Tạo đòn xiên ngay, rồi bắt quân phía sau; không cần chuẩn bị hay thí quân.",
       "solverMoves": 2,
       "sacrificeCount": 0
     },
     "hints": [
       "Quan sát các hàng, cột và đường chéo: có thể buộc quân phía trước rời đường để bắt quân phía sau không?"
     ],
-    "solution": "Xe tại c6 tấn công quân ở e6, để khai thác quân phía sau ở h6. Nhánh mẫu: Rxc6+ · Kf7 · Rxh6."
+    "solution": "Xe tại c6 tấn công quân ở e6, để khai thác quân phía sau ở h6."
   },
   {
     "title": "Lasker, Emanuel — Capablanca, Jose Raul",
@@ -656,14 +656,14 @@
     "difficulty": {
       "level": "A",
       "status": "suggested",
-      "reason": "Tạo đòn xiên ngay, rồi bắt quân phía sau; không cần chuẩn bị hay hy sinh.",
+      "reason": "Tạo đòn xiên ngay, rồi bắt quân phía sau; không cần chuẩn bị hay thí quân.",
       "solverMoves": 2,
       "sacrificeCount": 0
     },
     "hints": [
       "Quan sát các hàng, cột và đường chéo: có thể buộc quân phía trước rời đường để bắt quân phía sau không?"
     ],
-    "solution": "Xe tại a8 tấn công quân ở d8, để khai thác quân phía sau ở f8. Nhánh mẫu: Ra8+ · Kc7 · Rxf8."
+    "solution": "Xe tại a8 tấn công quân ở d8, để khai thác quân phía sau ở f8."
   },
   {
     "title": "Tal, Mihail — Botvinnik, Mikhail",
@@ -692,14 +692,14 @@
     "difficulty": {
       "level": "A",
       "status": "suggested",
-      "reason": "Tạo đòn xiên ngay, rồi bắt quân phía sau; không cần chuẩn bị hay hy sinh.",
+      "reason": "Tạo đòn xiên ngay, rồi bắt quân phía sau; không cần chuẩn bị hay thí quân.",
       "solverMoves": 2,
       "sacrificeCount": 0
     },
     "hints": [
       "Quan sát các hàng, cột và đường chéo: có thể buộc quân phía trước rời đường để bắt quân phía sau không?"
     ],
-    "solution": "Tượng tại c4 tấn công quân ở f7, để khai thác quân phía sau ở g8. Nhánh mẫu: Bxc4 · Qg7 · Bxg8."
+    "solution": "Tượng tại c4 tấn công quân ở f7, để khai thác quân phía sau ở g8."
   },
   {
     "title": "Anderssen, Adolf — Dufresne, Jean",
@@ -728,14 +728,14 @@
     "difficulty": {
       "level": "A",
       "status": "suggested",
-      "reason": "Tạo đòn xiên ngay, rồi bắt quân phía sau; không cần chuẩn bị hay hy sinh.",
+      "reason": "Tạo đòn xiên ngay, rồi bắt quân phía sau; không cần chuẩn bị hay thí quân.",
       "solverMoves": 2,
       "sacrificeCount": 0
     },
     "hints": [
       "Quan sát các hàng, cột và đường chéo: có thể buộc quân phía trước rời đường để bắt quân phía sau không?"
     ],
-    "solution": "Hậu tại d8 tấn công quân ở f8, để khai thác quân phía sau ở h8. Nhánh mẫu: Qd8+ · Kf7 · Qxh8."
+    "solution": "Hậu tại d8 tấn công quân ở f8, để khai thác quân phía sau ở h8."
   },
   {
     "title": "Anand,V — Nakamura,Hi",
@@ -764,14 +764,14 @@
     "difficulty": {
       "level": "A",
       "status": "suggested",
-      "reason": "Tạo đòn xiên ngay, rồi bắt quân phía sau; không cần chuẩn bị hay hy sinh.",
+      "reason": "Tạo đòn xiên ngay, rồi bắt quân phía sau; không cần chuẩn bị hay thí quân.",
       "solverMoves": 2,
       "sacrificeCount": 0
     },
     "hints": [
       "Quan sát các hàng, cột và đường chéo: có thể buộc quân phía trước rời đường để bắt quân phía sau không?"
     ],
-    "solution": "Tượng tại e4 tấn công quân ở f3, để khai thác quân phía sau ở g2. Nhánh mẫu: Be4+ · Kf4 · Bxg2."
+    "solution": "Tượng tại e4 tấn công quân ở f3, để khai thác quân phía sau ở g2."
   },
   {
     "title": "Beliavsky,A — Moiseenko,A1",
@@ -800,14 +800,14 @@
     "difficulty": {
       "level": "A",
       "status": "suggested",
-      "reason": "Tạo đòn xiên ngay, rồi bắt quân phía sau; không cần chuẩn bị hay hy sinh.",
+      "reason": "Tạo đòn xiên ngay, rồi bắt quân phía sau; không cần chuẩn bị hay thí quân.",
       "solverMoves": 2,
       "sacrificeCount": 0
     },
     "hints": [
       "Quan sát các hàng, cột và đường chéo: có thể buộc quân phía trước rời đường để bắt quân phía sau không?"
     ],
-    "solution": "Tượng tại g6 tấn công quân ở d3, để khai thác quân phía sau ở b1. Nhánh mẫu: Bg6+ · Kd4 · Bxb1."
+    "solution": "Tượng tại g6 tấn công quân ở d3, để khai thác quân phía sau ở b1."
   },
   {
     "title": "Martinovic, Slobodan — Anand, Viswanathan",
@@ -836,14 +836,14 @@
     "difficulty": {
       "level": "A",
       "status": "suggested",
-      "reason": "Tạo đòn xiên ngay, rồi bắt quân phía sau; không cần chuẩn bị hay hy sinh.",
+      "reason": "Tạo đòn xiên ngay, rồi bắt quân phía sau; không cần chuẩn bị hay thí quân.",
       "solverMoves": 2,
       "sacrificeCount": 0
     },
     "hints": [
       "Quan sát các hàng, cột và đường chéo: có thể buộc quân phía trước rời đường để bắt quân phía sau không?"
     ],
-    "solution": "Tượng tại f8 tấn công quân ở g7, để khai thác quân phía sau ở h6. Nhánh mẫu: Bf8 · Qg3 · Bxh6."
+    "solution": "Tượng tại f8 tấn công quân ở g7, để khai thác quân phía sau ở h6."
   },
   {
     "title": "Gajewski,G — Beliavsky,A",
@@ -872,14 +872,14 @@
     "difficulty": {
       "level": "A",
       "status": "suggested",
-      "reason": "Tạo đòn xiên ngay, rồi bắt quân phía sau; không cần chuẩn bị hay hy sinh.",
+      "reason": "Tạo đòn xiên ngay, rồi bắt quân phía sau; không cần chuẩn bị hay thí quân.",
       "solverMoves": 2,
       "sacrificeCount": 0
     },
     "hints": [
       "Quan sát các hàng, cột và đường chéo: có thể buộc quân phía trước rời đường để bắt quân phía sau không?"
     ],
-    "solution": "Tượng tại h4 tấn công quân ở f6, để khai thác quân phía sau ở d8. Nhánh mẫu: Bh4 · Qd6 · Bxd8."
+    "solution": "Tượng tại h4 tấn công quân ở f6, để khai thác quân phía sau ở d8."
   },
   {
     "title": "Alekhine, Alexander — Yates, Frederick",
@@ -908,14 +908,14 @@
     "difficulty": {
       "level": "A",
       "status": "suggested",
-      "reason": "Tạo đòn xiên ngay, rồi bắt quân phía sau; không cần chuẩn bị hay hy sinh.",
+      "reason": "Tạo đòn xiên ngay, rồi bắt quân phía sau; không cần chuẩn bị hay thí quân.",
       "solverMoves": 2,
       "sacrificeCount": 0
     },
     "hints": [
       "Quan sát các hàng, cột và đường chéo: có thể buộc quân phía trước rời đường để bắt quân phía sau không?"
     ],
-    "solution": "Tượng tại c5 tấn công quân ở e7, để khai thác quân phía sau ở f8. Nhánh mẫu: Bc5 · Qe8 · Bxf8."
+    "solution": "Tượng tại c5 tấn công quân ở e7, để khai thác quân phía sau ở f8."
   },
   {
     "title": "Anand, Viswanathan — Kamsky, Gata",
@@ -944,14 +944,14 @@
     "difficulty": {
       "level": "A",
       "status": "suggested",
-      "reason": "Tạo đòn xiên ngay, rồi bắt quân phía sau; không cần chuẩn bị hay hy sinh.",
+      "reason": "Tạo đòn xiên ngay, rồi bắt quân phía sau; không cần chuẩn bị hay thí quân.",
       "solverMoves": 2,
       "sacrificeCount": 0
     },
     "hints": [
       "Quan sát các hàng, cột và đường chéo: có thể buộc quân phía trước rời đường để bắt quân phía sau không?"
     ],
-    "solution": "Xe tại g1 tấn công quân ở e1, để khai thác quân phía sau ở a1. Nhánh mẫu: Rg1+ · Ke2 · Rxa1."
+    "solution": "Xe tại g1 tấn công quân ở e1, để khai thác quân phía sau ở a1."
   },
   {
     "title": "Carlsen,M — Potkin,V",
@@ -980,14 +980,14 @@
     "difficulty": {
       "level": "A",
       "status": "suggested",
-      "reason": "Tạo đòn xiên ngay, rồi bắt quân phía sau; không cần chuẩn bị hay hy sinh.",
+      "reason": "Tạo đòn xiên ngay, rồi bắt quân phía sau; không cần chuẩn bị hay thí quân.",
       "solverMoves": 2,
       "sacrificeCount": 0
     },
     "hints": [
       "Quan sát các hàng, cột và đường chéo: có thể buộc quân phía trước rời đường để bắt quân phía sau không?"
     ],
-    "solution": "Hậu tại h7 tấn công quân ở g7, để khai thác quân phía sau ở d7. Nhánh mẫu: Qh7+ · Kf6 · Qxd7."
+    "solution": "Hậu tại h7 tấn công quân ở g7, để khai thác quân phía sau ở d7."
   },
   {
     "title": "Euwe, Max — Aitken, James",
@@ -1016,14 +1016,14 @@
     "difficulty": {
       "level": "A",
       "status": "suggested",
-      "reason": "Tạo đòn xiên ngay, rồi bắt quân phía sau; không cần chuẩn bị hay hy sinh.",
+      "reason": "Tạo đòn xiên ngay, rồi bắt quân phía sau; không cần chuẩn bị hay thí quân.",
       "solverMoves": 2,
       "sacrificeCount": 0
     },
     "hints": [
       "Quan sát các hàng, cột và đường chéo: có thể buộc quân phía trước rời đường để bắt quân phía sau không?"
     ],
-    "solution": "Xe tại h7 tấn công quân ở g7, để khai thác quân phía sau ở e7. Nhánh mẫu: Rxh7+ · Kf8 · Rxe7."
+    "solution": "Xe tại h7 tấn công quân ở g7, để khai thác quân phía sau ở e7."
   },
   {
     "title": "Ding Liren — Carlsen,M",
@@ -1052,14 +1052,14 @@
     "difficulty": {
       "level": "A",
       "status": "suggested",
-      "reason": "Tạo đòn xiên ngay, rồi bắt quân phía sau; không cần chuẩn bị hay hy sinh.",
+      "reason": "Tạo đòn xiên ngay, rồi bắt quân phía sau; không cần chuẩn bị hay thí quân.",
       "solverMoves": 2,
       "sacrificeCount": 0
     },
     "hints": [
       "Quan sát các hàng, cột và đường chéo: có thể buộc quân phía trước rời đường để bắt quân phía sau không?"
     ],
-    "solution": "Xe tại d3 tấn công quân ở e3, để khai thác quân phía sau ở g3. Nhánh mẫu: Rd3+ · Kf4 · Rxg3."
+    "solution": "Xe tại d3 tấn công quân ở e3, để khai thác quân phía sau ở g3."
   },
   {
     "title": "Selezniev, Alexey Sergeevich — Alekhine, Alexander",
@@ -1088,14 +1088,14 @@
     "difficulty": {
       "level": "A",
       "status": "suggested",
-      "reason": "Tạo đòn xiên ngay, rồi bắt quân phía sau; không cần chuẩn bị hay hy sinh.",
+      "reason": "Tạo đòn xiên ngay, rồi bắt quân phía sau; không cần chuẩn bị hay thí quân.",
       "solverMoves": 2,
       "sacrificeCount": 0
     },
     "hints": [
       "Quan sát các hàng, cột và đường chéo: có thể buộc quân phía trước rời đường để bắt quân phía sau không?"
     ],
-    "solution": "Hậu tại g2 tấn công quân ở e2, để khai thác quân phía sau ở d2. Nhánh mẫu: Qg2+ · Kd3 · Qxd2+."
+    "solution": "Hậu tại g2 tấn công quân ở e2, để khai thác quân phía sau ở d2."
   },
   {
     "title": "Topalov,V — Carlsen,M",
@@ -1124,14 +1124,14 @@
     "difficulty": {
       "level": "A",
       "status": "suggested",
-      "reason": "Tạo đòn xiên ngay, rồi bắt quân phía sau; không cần chuẩn bị hay hy sinh.",
+      "reason": "Tạo đòn xiên ngay, rồi bắt quân phía sau; không cần chuẩn bị hay thí quân.",
       "solverMoves": 2,
       "sacrificeCount": 0
     },
     "hints": [
       "Quan sát các hàng, cột và đường chéo: có thể buộc quân phía trước rời đường để bắt quân phía sau không?"
     ],
-    "solution": "Xe tại h1 tấn công quân ở h3, để khai thác quân phía sau ở h7. Nhánh mẫu: Rh1+ · Kg4 · Rxh7."
+    "solution": "Xe tại h1 tấn công quân ở h3, để khai thác quân phía sau ở h7."
   },
   {
     "title": "Bronstein, David I — Farago, Ivan",
@@ -1160,14 +1160,14 @@
     "difficulty": {
       "level": "A",
       "status": "suggested",
-      "reason": "Tạo đòn xiên ngay, rồi bắt quân phía sau; không cần chuẩn bị hay hy sinh.",
+      "reason": "Tạo đòn xiên ngay, rồi bắt quân phía sau; không cần chuẩn bị hay thí quân.",
       "solverMoves": 2,
       "sacrificeCount": 0
     },
     "hints": [
       "Quan sát các hàng, cột và đường chéo: có thể buộc quân phía trước rời đường để bắt quân phía sau không?"
     ],
-    "solution": "Xe tại g8 tấn công quân ở f8, để khai thác quân phía sau ở c8. Nhánh mẫu: Rg8+ · Ke7 · Rxc8."
+    "solution": "Xe tại g8 tấn công quân ở f8, để khai thác quân phía sau ở c8."
   },
   {
     "title": "Botvinnik, Mikhail — O'Kelly de Galway, Alberic",
@@ -1196,14 +1196,14 @@
     "difficulty": {
       "level": "A",
       "status": "suggested",
-      "reason": "Tạo đòn xiên ngay, rồi bắt quân phía sau; không cần chuẩn bị hay hy sinh.",
+      "reason": "Tạo đòn xiên ngay, rồi bắt quân phía sau; không cần chuẩn bị hay thí quân.",
       "solverMoves": 2,
       "sacrificeCount": 0
     },
     "hints": [
       "Quan sát các hàng, cột và đường chéo: có thể buộc quân phía trước rời đường để bắt quân phía sau không?"
     ],
-    "solution": "Tượng tại c5 tấn công quân ở e7, để khai thác quân phía sau ở f8. Nhánh mẫu: Bxc5 · Re6 · Bxf8."
+    "solution": "Tượng tại c5 tấn công quân ở e7, để khai thác quân phía sau ở f8."
   },
   {
     "title": "Anand,V — Demuth,A",
@@ -1247,14 +1247,14 @@
     "difficulty": {
       "level": "A",
       "status": "suggested",
-      "reason": "Tạo đòn xiên ngay, rồi bắt quân phía sau; không cần chuẩn bị hay hy sinh.",
+      "reason": "Tạo đòn xiên ngay, rồi bắt quân phía sau; không cần chuẩn bị hay thí quân.",
       "solverMoves": 2,
       "sacrificeCount": 0
     },
     "hints": [
       "Quan sát các hàng, cột và đường chéo: có thể buộc quân phía trước rời đường để bắt quân phía sau không?"
     ],
-    "solution": "Hậu tại g2 tấn công quân ở g5, để khai thác quân phía sau ở g8. Nhánh mẫu: Qg2+ · Kh6 · Qxg8."
+    "solution": "Hậu tại g2 tấn công quân ở g5, để khai thác quân phía sau ở g8."
   },
   {
     "title": "Ivkov, Borislav — Bronstein, David I",
@@ -1283,14 +1283,14 @@
     "difficulty": {
       "level": "A",
       "status": "suggested",
-      "reason": "Tạo đòn xiên ngay, rồi bắt quân phía sau; không cần chuẩn bị hay hy sinh.",
+      "reason": "Tạo đòn xiên ngay, rồi bắt quân phía sau; không cần chuẩn bị hay thí quân.",
       "solverMoves": 2,
       "sacrificeCount": 0
     },
     "hints": [
       "Quan sát các hàng, cột và đường chéo: có thể buộc quân phía trước rời đường để bắt quân phía sau không?"
     ],
-    "solution": "Xe tại f1 tấn công quân ở f7, để khai thác quân phía sau ở f8. Nhánh mẫu: Rf1+ · Ke8 · Rxf8+."
+    "solution": "Xe tại f1 tấn công quân ở f7, để khai thác quân phía sau ở f8."
   },
   {
     "title": "Vachier Lagrave,M — Carlsen,M",
@@ -1319,14 +1319,14 @@
     "difficulty": {
       "level": "A",
       "status": "suggested",
-      "reason": "Tạo đòn xiên ngay, rồi bắt quân phía sau; không cần chuẩn bị hay hy sinh.",
+      "reason": "Tạo đòn xiên ngay, rồi bắt quân phía sau; không cần chuẩn bị hay thí quân.",
       "solverMoves": 2,
       "sacrificeCount": 0
     },
     "hints": [
       "Quan sát các hàng, cột và đường chéo: có thể buộc quân phía trước rời đường để bắt quân phía sau không?"
     ],
-    "solution": "Tượng tại h4 tấn công quân ở f2, để khai thác quân phía sau ở e1. Nhánh mẫu: Bh4+ · Kf3 · Bxe1."
+    "solution": "Tượng tại h4 tấn công quân ở f2, để khai thác quân phía sau ở e1."
   },
   {
     "title": "Bronstein, David I — Stahlberg, Gideon",
@@ -1355,14 +1355,14 @@
     "difficulty": {
       "level": "A",
       "status": "suggested",
-      "reason": "Tạo đòn xiên ngay, rồi bắt quân phía sau; không cần chuẩn bị hay hy sinh.",
+      "reason": "Tạo đòn xiên ngay, rồi bắt quân phía sau; không cần chuẩn bị hay thí quân.",
       "solverMoves": 2,
       "sacrificeCount": 0
     },
     "hints": [
       "Quan sát các hàng, cột và đường chéo: có thể buộc quân phía trước rời đường để bắt quân phía sau không?"
     ],
-    "solution": "Xe tại h5 tấn công quân ở g5, để khai thác quân phía sau ở e5. Nhánh mẫu: Rh5+ · Kg4 · Rxe5."
+    "solution": "Xe tại h5 tấn công quân ở g5, để khai thác quân phía sau ở e5."
   },
   {
     "title": "Alapin, Simon — Chigorin, Mikhail",
@@ -1391,14 +1391,14 @@
     "difficulty": {
       "level": "A",
       "status": "suggested",
-      "reason": "Tạo đòn xiên ngay, rồi bắt quân phía sau; không cần chuẩn bị hay hy sinh.",
+      "reason": "Tạo đòn xiên ngay, rồi bắt quân phía sau; không cần chuẩn bị hay thí quân.",
       "solverMoves": 2,
       "sacrificeCount": 0
     },
     "hints": [
       "Quan sát các hàng, cột và đường chéo: có thể buộc quân phía trước rời đường để bắt quân phía sau không?"
     ],
-    "solution": "Hậu tại h1 tấn công quân ở d1, để khai thác quân phía sau ở a1. Nhánh mẫu: Qh1+ · Kd2 · Qxa1."
+    "solution": "Hậu tại h1 tấn công quân ở d1, để khai thác quân phía sau ở a1."
   },
   {
     "title": "Vachier Lagrave,M — Carlsen,M",
@@ -1427,14 +1427,14 @@
     "difficulty": {
       "level": "A",
       "status": "suggested",
-      "reason": "Tạo đòn xiên ngay, rồi bắt quân phía sau; không cần chuẩn bị hay hy sinh.",
+      "reason": "Tạo đòn xiên ngay, rồi bắt quân phía sau; không cần chuẩn bị hay thí quân.",
       "solverMoves": 2,
       "sacrificeCount": 0
     },
     "hints": [
       "Quan sát các hàng, cột và đường chéo: có thể buộc quân phía trước rời đường để bắt quân phía sau không?"
     ],
-    "solution": "Tượng tại a3 tấn công quân ở c5, để khai thác quân phía sau ở e7. Nhánh mẫu: Ba3 · Rxc2 · Bxe7."
+    "solution": "Tượng tại a3 tấn công quân ở c5, để khai thác quân phía sau ở e7."
   },
   {
     "title": "Geller, Efim P — Sokolov, Andrei",
@@ -1463,14 +1463,14 @@
     "difficulty": {
       "level": "A",
       "status": "suggested",
-      "reason": "Tạo đòn xiên ngay, rồi bắt quân phía sau; không cần chuẩn bị hay hy sinh.",
+      "reason": "Tạo đòn xiên ngay, rồi bắt quân phía sau; không cần chuẩn bị hay thí quân.",
       "solverMoves": 2,
       "sacrificeCount": 0
     },
     "hints": [
       "Quan sát các hàng, cột và đường chéo: có thể buộc quân phía trước rời đường để bắt quân phía sau không?"
     ],
-    "solution": "Tượng tại h4 tấn công quân ở g3, để khai thác quân phía sau ở e1. Nhánh mẫu: Bh4 · Qe3 · Bxe1."
+    "solution": "Tượng tại h4 tấn công quân ở g3, để khai thác quân phía sau ở e1."
   },
   {
     "title": "Santos Latasa,J — Anand,V",
@@ -1499,14 +1499,14 @@
     "difficulty": {
       "level": "A",
       "status": "suggested",
-      "reason": "Tạo đòn xiên ngay, rồi bắt quân phía sau; không cần chuẩn bị hay hy sinh.",
+      "reason": "Tạo đòn xiên ngay, rồi bắt quân phía sau; không cần chuẩn bị hay thí quân.",
       "solverMoves": 2,
       "sacrificeCount": 0
     },
     "hints": [
       "Quan sát các hàng, cột và đường chéo: có thể buộc quân phía trước rời đường để bắt quân phía sau không?"
     ],
-    "solution": "Xe tại b1 tấn công quân ở g1, để khai thác quân phía sau ở h1. Nhánh mẫu: Rb1+ · Kg2 · Rxh1."
+    "solution": "Xe tại b1 tấn công quân ở g1, để khai thác quân phía sau ở h1."
   },
   {
     "title": "Gaal,Zsoka — Beliavsky,A",
@@ -1535,14 +1535,14 @@
     "difficulty": {
       "level": "A",
       "status": "suggested",
-      "reason": "Tạo đòn xiên ngay, rồi bắt quân phía sau; không cần chuẩn bị hay hy sinh.",
+      "reason": "Tạo đòn xiên ngay, rồi bắt quân phía sau; không cần chuẩn bị hay thí quân.",
       "solverMoves": 2,
       "sacrificeCount": 0
     },
     "hints": [
       "Quan sát các hàng, cột và đường chéo: có thể buộc quân phía trước rời đường để bắt quân phía sau không?"
     ],
-    "solution": "Xe tại c4 tấn công quân ở d4, để khai thác quân phía sau ở h4. Nhánh mẫu: Rc4+ · Ke5 · Rxh4."
+    "solution": "Xe tại c4 tấn công quân ở d4, để khai thác quân phía sau ở h4."
   },
   {
     "title": "Carlsen,M — Grandelius,N",
@@ -1571,14 +1571,14 @@
     "difficulty": {
       "level": "A",
       "status": "suggested",
-      "reason": "Tạo đòn xiên ngay, rồi bắt quân phía sau; không cần chuẩn bị hay hy sinh.",
+      "reason": "Tạo đòn xiên ngay, rồi bắt quân phía sau; không cần chuẩn bị hay thí quân.",
       "solverMoves": 2,
       "sacrificeCount": 0
     },
     "hints": [
       "Quan sát các hàng, cột và đường chéo: có thể buộc quân phía trước rời đường để bắt quân phía sau không?"
     ],
-    "solution": "Hậu tại d8 tấn công quân ở f6, để khai thác quân phía sau ở h4. Nhánh mẫu: Qd8+ · Ke6 · Qxh4."
+    "solution": "Hậu tại d8 tấn công quân ở f6, để khai thác quân phía sau ở h4."
   },
   {
     "title": "Carlsen,M — Stokke,K",
@@ -1607,14 +1607,14 @@
     "difficulty": {
       "level": "A",
       "status": "suggested",
-      "reason": "Tạo đòn xiên ngay, rồi bắt quân phía sau; không cần chuẩn bị hay hy sinh.",
+      "reason": "Tạo đòn xiên ngay, rồi bắt quân phía sau; không cần chuẩn bị hay thí quân.",
       "solverMoves": 2,
       "sacrificeCount": 0
     },
     "hints": [
       "Quan sát các hàng, cột và đường chéo: có thể buộc quân phía trước rời đường để bắt quân phía sau không?"
     ],
-    "solution": "Tượng tại d8 tấn công quân ở e7, để khai thác quân phía sau ở f6. Nhánh mẫu: Bd8+ · Kf7 · Bxf6."
+    "solution": "Tượng tại d8 tấn công quân ở e7, để khai thác quân phía sau ở f6."
   },
   {
     "title": "Fritz, Alexander — Blackburne, Joseph Henry",
@@ -1643,14 +1643,14 @@
     "difficulty": {
       "level": "A",
       "status": "suggested",
-      "reason": "Tạo đòn xiên ngay, rồi bắt quân phía sau; không cần chuẩn bị hay hy sinh.",
+      "reason": "Tạo đòn xiên ngay, rồi bắt quân phía sau; không cần chuẩn bị hay thí quân.",
       "solverMoves": 2,
       "sacrificeCount": 0
     },
     "hints": [
       "Quan sát các hàng, cột và đường chéo: có thể buộc quân phía trước rời đường để bắt quân phía sau không?"
     ],
-    "solution": "Xe tại b7 tấn công quân ở c7, để khai thác quân phía sau ở f7. Nhánh mẫu: Rb7+ · Kc6 · Rxf7."
+    "solution": "Xe tại b7 tấn công quân ở c7, để khai thác quân phía sau ở f7."
   },
   {
     "title": "Bacrot,E — Bologan,V",
@@ -1681,14 +1681,14 @@
     "difficulty": {
       "level": "B",
       "status": "suggested",
-      "reason": "Một nước chuẩn bị để tạo đòn xiên; không hy sinh vật chất.",
+      "reason": "Một nước chuẩn bị để tạo đòn xiên; không thí quân.",
       "solverMoves": 3,
       "sacrificeCount": 0
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Xe tại f8 tấn công quân ở e8, để khai thác quân phía sau ở a8. Nhánh mẫu: Ng6 · Bh5 · Rf8+ · Kd7 · Rxa8."
+    "solution": "Xe tại f8 tấn công quân ở e8, để khai thác quân phía sau ở a8."
   },
   {
     "title": "Djurhuus,R — Carlsen,M",
@@ -1719,14 +1719,14 @@
     "difficulty": {
       "level": "B",
       "status": "suggested",
-      "reason": "Một nước chuẩn bị để tạo đòn xiên; không hy sinh vật chất.",
+      "reason": "Một nước chuẩn bị để tạo đòn xiên; không thí quân.",
       "solverMoves": 3,
       "sacrificeCount": 0
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Xe tại d2 tấn công quân ở e2, để khai thác quân phía sau ở f2. Nhánh mẫu: Rd1+ · Ke2 · Rd2+ · Ke3 · Rxf2."
+    "solution": "Xe tại d2 tấn công quân ở e2, để khai thác quân phía sau ở f2."
   },
   {
     "title": "Mamedyarov,S — Anand,V",
@@ -1757,14 +1757,14 @@
     "difficulty": {
       "level": "B",
       "status": "suggested",
-      "reason": "Một nước chuẩn bị để tạo đòn xiên; không hy sinh vật chất.",
+      "reason": "Một nước chuẩn bị để tạo đòn xiên; không thí quân.",
       "solverMoves": 3,
       "sacrificeCount": 0
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Xe tại a1 tấn công quân ở d1, để khai thác quân phía sau ở h1. Nhánh mẫu: Ra2 · Rf3 · Ra1+ · Kc2 · Rxh1."
+    "solution": "Xe tại a1 tấn công quân ở d1, để khai thác quân phía sau ở h1."
   },
   {
     "title": "Chigorin, Mikhail — Gunsberg, Isidor",
@@ -1795,14 +1795,14 @@
     "difficulty": {
       "level": "B",
       "status": "suggested",
-      "reason": "Một nước chuẩn bị để tạo đòn xiên; không hy sinh vật chất.",
+      "reason": "Một nước chuẩn bị để tạo đòn xiên; không thí quân.",
       "solverMoves": 3,
       "sacrificeCount": 0
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Xe tại f7 tấn công quân ở e7, để khai thác quân phía sau ở d7. Nhánh mẫu: Qg6 · Re8 · Rf7+ · Kd8 · Rxd7+."
+    "solution": "Xe tại f7 tấn công quân ở e7, để khai thác quân phía sau ở d7."
   },
   {
     "title": "Golovlev,N — Beliavsky,A",
@@ -1841,14 +1841,14 @@
     "difficulty": {
       "level": "B",
       "status": "suggested",
-      "reason": "Một nước chuẩn bị để tạo đòn xiên; không hy sinh vật chất.",
+      "reason": "Một nước chuẩn bị để tạo đòn xiên; không thí quân.",
       "solverMoves": 3,
       "sacrificeCount": 0
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Xe tại a3 tấn công quân ở f3, để khai thác quân phía sau ở h3. Nhánh mẫu: Ra2 · a4 · Ra3+ · Ke2 · Rxh3."
+    "solution": "Xe tại a3 tấn công quân ở f3, để khai thác quân phía sau ở h3."
   },
   {
     "title": "Svidler, Peter — Anand, Viswanathan",
@@ -1879,14 +1879,14 @@
     "difficulty": {
       "level": "B",
       "status": "suggested",
-      "reason": "Một nước chuẩn bị để tạo đòn xiên; không hy sinh vật chất.",
+      "reason": "Một nước chuẩn bị để tạo đòn xiên; không thí quân.",
       "solverMoves": 3,
       "sacrificeCount": 0
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Xe tại e8 tấn công quân ở g8, để khai thác quân phía sau ở h8. Nhánh mẫu: Rxe7 · h4 · Re8+ · Kh7 · Rxh8+."
+    "solution": "Xe tại e8 tấn công quân ở g8, để khai thác quân phía sau ở h8."
   },
   {
     "title": "Larsen, Bent — Kortschnoj, Viktor",
@@ -1917,14 +1917,14 @@
     "difficulty": {
       "level": "B",
       "status": "suggested",
-      "reason": "Một nước chuẩn bị để tạo đòn xiên; không hy sinh vật chất.",
+      "reason": "Một nước chuẩn bị để tạo đòn xiên; không thí quân.",
       "solverMoves": 3,
       "sacrificeCount": 0
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Xe tại g1 tấn công quân ở e1, để khai thác quân phía sau ở d1. Nhánh mẫu: Bg5+ · Ke1 · Rg1+ · Kf2 · Rxd1."
+    "solution": "Xe tại g1 tấn công quân ở e1, để khai thác quân phía sau ở d1."
   },
   {
     "title": "Bilych,Oleksii — Bologan,V",
@@ -1955,14 +1955,14 @@
     "difficulty": {
       "level": "B",
       "status": "suggested",
-      "reason": "Một nước chuẩn bị để tạo đòn xiên; không hy sinh vật chất.",
+      "reason": "Một nước chuẩn bị để tạo đòn xiên; không thí quân.",
       "solverMoves": 3,
       "sacrificeCount": 0
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Hậu tại g8 tấn công quân ở d8, để khai thác quân phía sau ở a8. Nhánh mẫu: Rxg7 · Bd7 · Qg8+ · Kc7 · Qxa8."
+    "solution": "Hậu tại g8 tấn công quân ở d8, để khai thác quân phía sau ở a8."
   },
   {
     "title": "Szekely, Peter — Geller, Efim P",
@@ -1993,14 +1993,14 @@
     "difficulty": {
       "level": "B",
       "status": "suggested",
-      "reason": "Một nước chuẩn bị để tạo đòn xiên; không hy sinh vật chất.",
+      "reason": "Một nước chuẩn bị để tạo đòn xiên; không thí quân.",
       "solverMoves": 3,
       "sacrificeCount": 0
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Xe tại a2 tấn công quân ở c2, để khai thác quân phía sau ở f2. Nhánh mẫu: Nc7 · Qc2 · Rxa2 · Qxc4 · Rxf2."
+    "solution": "Xe tại a2 tấn công quân ở c2, để khai thác quân phía sau ở f2."
   },
   {
     "title": "Carlsen,M — Duda,J",
@@ -2031,14 +2031,14 @@
     "difficulty": {
       "level": "B",
       "status": "suggested",
-      "reason": "Một nước chuẩn bị để tạo đòn xiên; không hy sinh vật chất.",
+      "reason": "Một nước chuẩn bị để tạo đòn xiên; không thí quân.",
       "solverMoves": 3,
       "sacrificeCount": 0
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Xe tại c1 tấn công quân ở c4, để khai thác quân phía sau ở c7. Nhánh mẫu: Qxe3 · Bf5 · Rdc1 · Qa2 · Rxc7."
+    "solution": "Xe tại c1 tấn công quân ở c4, để khai thác quân phía sau ở c7."
   },
   {
     "title": "Mieses, Jacques — Blackburne, Joseph Henry",
@@ -2069,14 +2069,14 @@
     "difficulty": {
       "level": "B",
       "status": "suggested",
-      "reason": "Một nước chuẩn bị để tạo đòn xiên; không hy sinh vật chất.",
+      "reason": "Một nước chuẩn bị để tạo đòn xiên; không thí quân.",
       "solverMoves": 3,
       "sacrificeCount": 0
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Hậu tại a1 tấn công quân ở c1, để khai thác quân phía sau ở e1. Nhánh mẫu: Qd4 · dxc4 · Qxa1+ · Kd2 · Qxe1+."
+    "solution": "Hậu tại a1 tấn công quân ở c1, để khai thác quân phía sau ở e1."
   },
   {
     "title": "Karpov, Anatoly — Sax, Gyula",
@@ -2107,14 +2107,14 @@
     "difficulty": {
       "level": "B",
       "status": "suggested",
-      "reason": "Một nước chuẩn bị để tạo đòn xiên; không hy sinh vật chất.",
+      "reason": "Một nước chuẩn bị để tạo đòn xiên; không thí quân.",
       "solverMoves": 3,
       "sacrificeCount": 0
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Hậu tại a7 tấn công quân ở c7, để khai thác quân phía sau ở e7. Nhánh mẫu: Qa8+ · Kc7 · Qa7+ · Kc8 · Qxe7."
+    "solution": "Hậu tại a7 tấn công quân ở c7, để khai thác quân phía sau ở e7."
   },
   {
     "title": "Nepomniachtchi,I — Carlsen,M",
@@ -2145,14 +2145,14 @@
     "difficulty": {
       "level": "B",
       "status": "suggested",
-      "reason": "Một nước chuẩn bị để tạo đòn xiên; không hy sinh vật chất.",
+      "reason": "Một nước chuẩn bị để tạo đòn xiên; không thí quân.",
       "solverMoves": 3,
       "sacrificeCount": 0
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Xe tại h4 tấn công quân ở g4, để khai thác quân phía sau ở c4. Nhánh mẫu: Rh6+ · Kg4 · Rh4+ · Kf5 · Rxc4."
+    "solution": "Xe tại h4 tấn công quân ở g4, để khai thác quân phía sau ở c4."
   },
   {
     "title": "Grigoriants,S RUS — Bologan,V",
@@ -2183,14 +2183,14 @@
     "difficulty": {
       "level": "B",
       "status": "suggested",
-      "reason": "Một nước chuẩn bị để tạo đòn xiên; không hy sinh vật chất.",
+      "reason": "Một nước chuẩn bị để tạo đòn xiên; không thí quân.",
       "solverMoves": 3,
       "sacrificeCount": 0
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Xe tại g8 tấn công quân ở e8, để khai thác quân phía sau ở a8. Nhánh mẫu: Rf2+ · Ke8 · Rg8+ · Ke7 · Rxa8."
+    "solution": "Xe tại g8 tấn công quân ở e8, để khai thác quân phía sau ở a8."
   },
   {
     "title": "Bologan,V — Kukhmazov,A",
@@ -2229,14 +2229,14 @@
     "difficulty": {
       "level": "B",
       "status": "suggested",
-      "reason": "Một nước chuẩn bị để tạo đòn xiên; không hy sinh vật chất.",
+      "reason": "Một nước chuẩn bị để tạo đòn xiên; không thí quân.",
       "solverMoves": 3,
       "sacrificeCount": 0
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Xe tại a7 tấn công quân ở b7, để khai thác quân phía sau ở d7. Nhánh mẫu: b5+ · Kb7 · Rxa7+ · Kc8 · Rxd7."
+    "solution": "Xe tại a7 tấn công quân ở b7, để khai thác quân phía sau ở d7."
   },
   {
     "title": "Bird, Henry Edward — Anderssen, Adolf",
@@ -2267,14 +2267,14 @@
     "difficulty": {
       "level": "B",
       "status": "suggested",
-      "reason": "Một nước chuẩn bị để tạo đòn xiên; không hy sinh vật chất.",
+      "reason": "Một nước chuẩn bị để tạo đòn xiên; không thí quân.",
       "solverMoves": 3,
       "sacrificeCount": 0
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Xe tại g1 tấn công quân ở f1, để khai thác quân phía sau ở d1. Nhánh mẫu: Rxg2+ · Kf1 · Rg1+ · Kf2 · Rxd1."
+    "solution": "Xe tại g1 tấn công quân ở f1, để khai thác quân phía sau ở d1."
   },
   {
     "title": "Kosteniuk,A — Carlsen,M",
@@ -2305,14 +2305,14 @@
     "difficulty": {
       "level": "B",
       "status": "suggested",
-      "reason": "Một nước chuẩn bị để tạo đòn xiên; không hy sinh vật chất.",
+      "reason": "Một nước chuẩn bị để tạo đòn xiên; không thí quân.",
       "solverMoves": 3,
       "sacrificeCount": 0
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Hậu tại h1 tấn công quân ở f1, để khai thác quân phía sau ở c1. Nhánh mẫu: Qh2+ · Kf1 · Qh1+ · Ke2 · Qxc1."
+    "solution": "Hậu tại h1 tấn công quân ở f1, để khai thác quân phía sau ở c1."
   },
   {
     "title": "Pillsbury, Harry Nelson — Chigorin, Mikhail",
@@ -2343,14 +2343,14 @@
     "difficulty": {
       "level": "B",
       "status": "suggested",
-      "reason": "Một nước chuẩn bị để tạo đòn xiên; không hy sinh vật chất.",
+      "reason": "Một nước chuẩn bị để tạo đòn xiên; không thí quân.",
       "solverMoves": 3,
       "sacrificeCount": 0
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Xe tại g8 tấn công quân ở g5, để khai thác quân phía sau ở g3. Nhánh mẫu: h5+ · Kxg5 · Rg8+ · Kf5 · Rxg3."
+    "solution": "Xe tại g8 tấn công quân ở g5, để khai thác quân phía sau ở g3."
   },
   {
     "title": "Larsen, Bent — Jakobsen, Ole",
@@ -2381,14 +2381,14 @@
     "difficulty": {
       "level": "B",
       "status": "suggested",
-      "reason": "Một nước chuẩn bị để tạo đòn xiên; không hy sinh vật chất.",
+      "reason": "Một nước chuẩn bị để tạo đòn xiên; không thí quân.",
       "solverMoves": 3,
       "sacrificeCount": 0
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Tượng tại e4 tấn công quân ở b7, để khai thác quân phía sau ở a8. Nhánh mẫu: Bd3 · Ra8 · Be4+ · Kb8 · Bxa8."
+    "solution": "Tượng tại e4 tấn công quân ở b7, để khai thác quân phía sau ở a8."
   },
   {
     "title": "Jakovenko,D — Carlsen,M",
@@ -2419,14 +2419,14 @@
     "difficulty": {
       "level": "B",
       "status": "suggested",
-      "reason": "Một nước chuẩn bị để tạo đòn xiên; không hy sinh vật chất.",
+      "reason": "Một nước chuẩn bị để tạo đòn xiên; không thí quân.",
       "solverMoves": 3,
       "sacrificeCount": 0
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Xe tại e3 tấn công quân ở d3, để khai thác quân phía sau ở c3. Nhánh mẫu: Rxe3 · Rxe3 · Rxe3 · Qd1 · Rxc3."
+    "solution": "Xe tại e3 tấn công quân ở d3, để khai thác quân phía sau ở c3."
   },
   {
     "title": "Bologan,V — Riazantsev,A",
@@ -2457,14 +2457,14 @@
     "difficulty": {
       "level": "B",
       "status": "suggested",
-      "reason": "Một nước chuẩn bị để tạo đòn xiên; không hy sinh vật chất.",
+      "reason": "Một nước chuẩn bị để tạo đòn xiên; không thí quân.",
       "solverMoves": 3,
       "sacrificeCount": 0
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Xe tại h6 tấn công quân ở g6, để khai thác quân phía sau ở f6. Nhánh mẫu: Qe3+ · Kg6 · Rh6+ · Kf7 · Rxf6+."
+    "solution": "Xe tại h6 tấn công quân ở g6, để khai thác quân phía sau ở f6."
   },
   {
     "title": "Bologan,V — Vakhidov,J",
@@ -2495,14 +2495,14 @@
     "difficulty": {
       "level": "B",
       "status": "suggested",
-      "reason": "Một nước chuẩn bị để tạo đòn xiên; không hy sinh vật chất.",
+      "reason": "Một nước chuẩn bị để tạo đòn xiên; không thí quân.",
       "solverMoves": 3,
       "sacrificeCount": 0
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Xe tại a1 tấn công quân ở b1, để khai thác quân phía sau ở f1. Nhánh mẫu: Ra4 · Nc7 · Ra1+ · Kc2 · Rxf1."
+    "solution": "Xe tại a1 tấn công quân ở b1, để khai thác quân phía sau ở f1."
   },
   {
     "title": "Carlsen,M — Svane,R",
@@ -2533,14 +2533,14 @@
     "difficulty": {
       "level": "B",
       "status": "suggested",
-      "reason": "Một nước chuẩn bị để tạo đòn xiên; không hy sinh vật chất.",
+      "reason": "Một nước chuẩn bị để tạo đòn xiên; không thí quân.",
       "solverMoves": 3,
       "sacrificeCount": 0
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Xe tại h8 tấn công quân ở d8, để khai thác quân phía sau ở a8. Nhánh mẫu: Rh7+ · Kd8 · Rh8+ · Ke7 · Rxa8."
+    "solution": "Xe tại h8 tấn công quân ở d8, để khai thác quân phía sau ở a8."
   },
   {
     "title": "Halldorsson,H — Carlsen,M",
@@ -2571,14 +2571,14 @@
     "difficulty": {
       "level": "B",
       "status": "suggested",
-      "reason": "Một nước chuẩn bị để tạo đòn xiên; không hy sinh vật chất.",
+      "reason": "Một nước chuẩn bị để tạo đòn xiên; không thí quân.",
       "solverMoves": 3,
       "sacrificeCount": 0
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Xe tại h2 tấn công quân ở e2, để khai thác quân phía sau ở d2. Nhánh mẫu: Kd8 · Re5 · Rxh2+ · Ke3 · Rxd2."
+    "solution": "Xe tại h2 tấn công quân ở e2, để khai thác quân phía sau ở d2."
   },
   {
     "title": "Steinitz, William — Chigorin, Mikhail",
@@ -2609,14 +2609,14 @@
     "difficulty": {
       "level": "B",
       "status": "suggested",
-      "reason": "Một nước chuẩn bị để tạo đòn xiên; không hy sinh vật chất.",
+      "reason": "Một nước chuẩn bị để tạo đòn xiên; không thí quân.",
       "solverMoves": 3,
       "sacrificeCount": 0
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Hậu tại b2 tấn công quân ở b6, để khai thác quân phía sau ở b8. Nhánh mẫu: Qc1+ · Kb6 · Qxb2+ · Ka7 · Qxb8+."
+    "solution": "Hậu tại b2 tấn công quân ở b6, để khai thác quân phía sau ở b8."
   },
   {
     "title": "Zukertort, Johannes Hermann — Anderssen, Adolf",
@@ -2647,14 +2647,14 @@
     "difficulty": {
       "level": "B",
       "status": "suggested",
-      "reason": "Một nước chuẩn bị để tạo đòn xiên; không hy sinh vật chất.",
+      "reason": "Một nước chuẩn bị để tạo đòn xiên; không thí quân.",
       "solverMoves": 3,
       "sacrificeCount": 0
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Tượng tại b5 tấn công quân ở d3, để khai thác quân phía sau ở f1. Nhánh mẫu: Nxd3 · Qxd3 · Bb5 · Qc2 · Bxf1."
+    "solution": "Tượng tại b5 tấn công quân ở d3, để khai thác quân phía sau ở f1."
   },
   {
     "title": "Grob, Henry — Bogoljubow, Efim",
@@ -2685,14 +2685,14 @@
     "difficulty": {
       "level": "B",
       "status": "suggested",
-      "reason": "Một nước chuẩn bị để tạo đòn xiên; không hy sinh vật chất.",
+      "reason": "Một nước chuẩn bị để tạo đòn xiên; không thí quân.",
       "solverMoves": 3,
       "sacrificeCount": 0
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Tượng tại a4 tấn công quân ở b3, để khai thác quân phía sau ở d1. Nhánh mẫu: Bxe3 · fxe3 · Ba4 · Qb1 · Bxd1."
+    "solution": "Tượng tại a4 tấn công quân ở b3, để khai thác quân phía sau ở d1."
   },
   {
     "title": "Pichot,A — Carlsen,M",
@@ -2723,14 +2723,14 @@
     "difficulty": {
       "level": "B",
       "status": "suggested",
-      "reason": "Một nước chuẩn bị để tạo đòn xiên; không hy sinh vật chất.",
+      "reason": "Một nước chuẩn bị để tạo đòn xiên; không thí quân.",
       "solverMoves": 3,
       "sacrificeCount": 0
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Hậu tại g1 tấn công quân ở g3, để khai thác quân phía sau ở g6. Nhánh mẫu: Qh1+ · Kg3 · Qg1+ · Kf3 · Qxg6."
+    "solution": "Hậu tại g1 tấn công quân ở g3, để khai thác quân phía sau ở g6."
   },
   {
     "title": "Alekhine, Alexander — Capablanca, Jose Raul",
@@ -2761,14 +2761,14 @@
     "difficulty": {
       "level": "B",
       "status": "suggested",
-      "reason": "Một nước chuẩn bị để tạo đòn xiên; không hy sinh vật chất.",
+      "reason": "Một nước chuẩn bị để tạo đòn xiên; không thí quân.",
       "solverMoves": 3,
       "sacrificeCount": 0
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Hậu tại e3 tấn công quân ở e2, để khai thác quân phía sau ở e1. Nhánh mẫu: Rxe3+ · fxe3 · Qxe3+ · Kd1 · Qxe1+."
+    "solution": "Hậu tại e3 tấn công quân ở e2, để khai thác quân phía sau ở e1."
   },
   {
     "title": "Bologan,V — Rakhmanov,Ale",
@@ -2799,14 +2799,14 @@
     "difficulty": {
       "level": "B",
       "status": "suggested",
-      "reason": "Một nước chuẩn bị để tạo đòn xiên; không hy sinh vật chất.",
+      "reason": "Một nước chuẩn bị để tạo đòn xiên; không thí quân.",
       "solverMoves": 3,
       "sacrificeCount": 0
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Hậu tại a4 tấn công quân ở c6, để khai thác quân phía sau ở e8. Nhánh mẫu: Bxe4+ · fxe4 · Qxa4+ · Kd5 · Qxe8."
+    "solution": "Hậu tại a4 tấn công quân ở c6, để khai thác quân phía sau ở e8."
   },
   {
     "title": "Gligoric, Svetozar — Ghitescu, Theodor",
@@ -2837,14 +2837,14 @@
     "difficulty": {
       "level": "B",
       "status": "suggested",
-      "reason": "Một nước chuẩn bị để tạo đòn xiên; không hy sinh vật chất.",
+      "reason": "Một nước chuẩn bị để tạo đòn xiên; không thí quân.",
       "solverMoves": 3,
       "sacrificeCount": 0
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Xe tại h8 tấn công quân ở g8, để khai thác quân phía sau ở b8. Nhánh mẫu: Bg7+ · Kg8 · Rh8+ · Kxg7 · Rxb8."
+    "solution": "Xe tại h8 tấn công quân ở g8, để khai thác quân phía sau ở b8."
   },
   {
     "title": "Burn, Amos — Blackburne, Joseph Henry",
@@ -2875,14 +2875,14 @@
     "difficulty": {
       "level": "B",
       "status": "suggested",
-      "reason": "Một nước chuẩn bị để tạo đòn xiên; không hy sinh vật chất.",
+      "reason": "Một nước chuẩn bị để tạo đòn xiên; không thí quân.",
       "solverMoves": 3,
       "sacrificeCount": 0
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Xe tại e1 tấn công quân ở g1, để khai thác quân phía sau ở h1. Nhánh mẫu: Qxd4 · Rxd4 · Re1+ · Kf2 · Rxh1."
+    "solution": "Xe tại e1 tấn công quân ở g1, để khai thác quân phía sau ở h1."
   },
   {
     "title": "Blackburne, Joseph Henry — Duras, Oldrich",
@@ -2913,14 +2913,14 @@
     "difficulty": {
       "level": "B",
       "status": "suggested",
-      "reason": "Một nước chuẩn bị để tạo đòn xiên; không hy sinh vật chất.",
+      "reason": "Một nước chuẩn bị để tạo đòn xiên; không thí quân.",
       "solverMoves": 3,
       "sacrificeCount": 0
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Tượng tại g4 tấn công quân ở e2, để khai thác quân phía sau ở d1. Nhánh mẫu: g3 · Be1 · Bg4 · Qd3 · Bxd1."
+    "solution": "Tượng tại g4 tấn công quân ở e2, để khai thác quân phía sau ở d1."
   },
   {
     "title": "Kasparov, Gary — Karpov, Anatoly",
@@ -2951,14 +2951,14 @@
     "difficulty": {
       "level": "B",
       "status": "suggested",
-      "reason": "Một nước chuẩn bị để tạo đòn xiên; không hy sinh vật chất.",
+      "reason": "Một nước chuẩn bị để tạo đòn xiên; không thí quân.",
       "solverMoves": 3,
       "sacrificeCount": 0
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Xe tại e8 tấn công quân ở e6, để khai thác quân phía sau ở e5. Nhánh mẫu: d6+ · Ke6 · Re8+ · Kd5 · Rxe5+."
+    "solution": "Xe tại e8 tấn công quân ở e6, để khai thác quân phía sau ở e5."
   },
   {
     "title": "Bogoljubow, Efim — Engels, Ludwig",
@@ -2989,14 +2989,14 @@
     "difficulty": {
       "level": "B",
       "status": "suggested",
-      "reason": "Một nước chuẩn bị để tạo đòn xiên; không hy sinh vật chất.",
+      "reason": "Một nước chuẩn bị để tạo đòn xiên; không thí quân.",
       "solverMoves": 3,
       "sacrificeCount": 0
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Hậu tại b2 tấn công quân ở b4, để khai thác quân phía sau ở b7. Nhánh mẫu: Qe2+ · Kb4 · Qb2+ · Kc4 · Qxb7."
+    "solution": "Hậu tại b2 tấn công quân ở b4, để khai thác quân phía sau ở b7."
   },
   {
     "title": "Gajewski,G — Bologan,V",
@@ -3027,14 +3027,14 @@
     "difficulty": {
       "level": "B",
       "status": "suggested",
-      "reason": "Một nước chuẩn bị để tạo đòn xiên; không hy sinh vật chất.",
+      "reason": "Một nước chuẩn bị để tạo đòn xiên; không thí quân.",
       "solverMoves": 3,
       "sacrificeCount": 0
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Xe tại b3 tấn công quân ở b2, để khai thác quân phía sau ở b1. Nhánh mẫu: Rxa3+ · Kb2 · Rb3+ · Kc2 · Rxb1."
+    "solution": "Xe tại b3 tấn công quân ở b2, để khai thác quân phía sau ở b1."
   },
   {
     "title": "Caruana,F — Anand,V",
@@ -3065,14 +3065,14 @@
     "difficulty": {
       "level": "B",
       "status": "suggested",
-      "reason": "Một nước chuẩn bị để tạo đòn xiên; không hy sinh vật chất.",
+      "reason": "Một nước chuẩn bị để tạo đòn xiên; không thí quân.",
       "solverMoves": 3,
       "sacrificeCount": 0
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Xe tại a1 tấn công quân ở b1, để khai thác quân phía sau ở e1. Nhánh mẫu: b2 · Rb1 · Ra1 · Rxb2 · Rxe1."
+    "solution": "Xe tại a1 tấn công quân ở b1, để khai thác quân phía sau ở e1."
   },
   {
     "title": "Colin, B. — Euwe, Max",
@@ -3103,14 +3103,14 @@
     "difficulty": {
       "level": "B",
       "status": "suggested",
-      "reason": "Một nước chuẩn bị để tạo đòn xiên; không hy sinh vật chất.",
+      "reason": "Một nước chuẩn bị để tạo đòn xiên; không thí quân.",
       "solverMoves": 3,
       "sacrificeCount": 0
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Hậu tại f5 tấn công quân ở d3, để khai thác quân phía sau ở c2. Nhánh mẫu: bxa6 · Kd3 · Qf5+ · Kc3 · Qxc2+."
+    "solution": "Hậu tại f5 tấn công quân ở d3, để khai thác quân phía sau ở c2."
   },
   {
     "title": "Lasker, Emanuel — Chigorin, Mikhail",
@@ -3141,14 +3141,14 @@
     "difficulty": {
       "level": "B",
       "status": "suggested",
-      "reason": "Một nước chuẩn bị để tạo đòn xiên; không hy sinh vật chất.",
+      "reason": "Một nước chuẩn bị để tạo đòn xiên; không thí quân.",
       "solverMoves": 3,
       "sacrificeCount": 0
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Hậu tại h8 tấn công quân ở e8, để khai thác quân phía sau ở c8. Nhánh mẫu: Qd4 · Rc8 · Qh8+ · Ke7 · Qxc8."
+    "solution": "Hậu tại h8 tấn công quân ở e8, để khai thác quân phía sau ở c8."
   },
   {
     "title": "Firouzja,Alireza — Carlsen,M",
@@ -3179,14 +3179,14 @@
     "difficulty": {
       "level": "B",
       "status": "suggested",
-      "reason": "Một nước chuẩn bị để tạo đòn xiên; không hy sinh vật chất.",
+      "reason": "Một nước chuẩn bị để tạo đòn xiên; không thí quân.",
       "solverMoves": 3,
       "sacrificeCount": 0
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Xe tại f1 tấn công quân ở f7, để khai thác quân phía sau ở f8. Nhánh mẫu: Qh8+ · Kf7 · Rf1+ · Ke8 · Rxf8+."
+    "solution": "Xe tại f1 tấn công quân ở f7, để khai thác quân phía sau ở f8."
   },
   {
     "title": "Gruenfeld, Ernst — Alekhine, Alexander",
@@ -3217,14 +3217,14 @@
     "difficulty": {
       "level": "B",
       "status": "suggested",
-      "reason": "Một nước chuẩn bị để tạo đòn xiên; không hy sinh vật chất.",
+      "reason": "Một nước chuẩn bị để tạo đòn xiên; không thí quân.",
       "solverMoves": 3,
       "sacrificeCount": 0
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Xe tại b8 tấn công quân ở b5, để khai thác quân phía sau ở b2. Nhánh mẫu: Nf6 · Qb5 · Rb8 · Qxa5 · Rxb2."
+    "solution": "Xe tại b8 tấn công quân ở b5, để khai thác quân phía sau ở b2."
   },
   {
     "title": "Anderssen, Adolf — Paulsen, Louis",
@@ -3255,14 +3255,14 @@
     "difficulty": {
       "level": "B",
       "status": "suggested",
-      "reason": "Một nước chuẩn bị để tạo đòn xiên; không hy sinh vật chất.",
+      "reason": "Một nước chuẩn bị để tạo đòn xiên; không thí quân.",
       "solverMoves": 3,
       "sacrificeCount": 0
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Xe tại h7 tấn công quân ở f7, để khai thác quân phía sau ở d7. Nhánh mẫu: Nxf6+ · Kf7 · Rxh7+ · Kg6 · Rxd7."
+    "solution": "Xe tại h7 tấn công quân ở f7, để khai thác quân phía sau ở d7."
   },
   {
     "title": "Chigorin, Mikhail — Tinsley, Samuel",
@@ -3293,14 +3293,14 @@
     "difficulty": {
       "level": "B",
       "status": "suggested",
-      "reason": "Một nước chuẩn bị để tạo đòn xiên; không hy sinh vật chất.",
+      "reason": "Một nước chuẩn bị để tạo đòn xiên; không thí quân.",
       "solverMoves": 3,
       "sacrificeCount": 0
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Xe tại e8 tấn công quân ở e7, để khai thác quân phía sau ở e5. Nhánh mẫu: Qc8 · b5 · Re8+ · Kf6 · Rxe5."
+    "solution": "Xe tại e8 tấn công quân ở e7, để khai thác quân phía sau ở e5."
   },
   {
     "title": "Tartakower, Saviely — Bogoljubow, Efim",
@@ -3331,14 +3331,14 @@
     "difficulty": {
       "level": "B",
       "status": "suggested",
-      "reason": "Một nước chuẩn bị để tạo đòn xiên; không hy sinh vật chất.",
+      "reason": "Một nước chuẩn bị để tạo đòn xiên; không thí quân.",
       "solverMoves": 3,
       "sacrificeCount": 0
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Xe tại e1 tấn công quân ở e3, để khai thác quân phía sau ở e4. Nhánh mẫu: Rdf1+ · Ke3 · Re1+ · Kd2 · Rxe4."
+    "solution": "Xe tại e1 tấn công quân ở e3, để khai thác quân phía sau ở e4."
   },
   {
     "title": "Anand,V — Hammer,J",
@@ -3369,14 +3369,14 @@
     "difficulty": {
       "level": "B",
       "status": "suggested",
-      "reason": "Một nước chuẩn bị để tạo đòn xiên; không hy sinh vật chất.",
+      "reason": "Một nước chuẩn bị để tạo đòn xiên; không thí quân.",
       "solverMoves": 3,
       "sacrificeCount": 0
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Xe tại d8 tấn công quân ở d7, để khai thác quân phía sau ở d3. Nhánh mẫu: f6+ · Kd7 · Rd8+ · Kc6 · Rxd3."
+    "solution": "Xe tại d8 tấn công quân ở d7, để khai thác quân phía sau ở d3."
   },
   {
     "title": "Sharov, Sergey — Chigorin, Mikhail",
@@ -3407,14 +3407,14 @@
     "difficulty": {
       "level": "B",
       "status": "suggested",
-      "reason": "Một nước chuẩn bị để tạo đòn xiên; không hy sinh vật chất.",
+      "reason": "Một nước chuẩn bị để tạo đòn xiên; không thí quân.",
       "solverMoves": 3,
       "sacrificeCount": 0
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Xe tại h2 tấn công quân ở f2, để khai thác quân phía sau ở a2. Nhánh mẫu: Rh1 · Rxa2 · Rh2+ · Ke3 · Rxa2."
+    "solution": "Xe tại h2 tấn công quân ở f2, để khai thác quân phía sau ở a2."
   },
   {
     "title": "Quinteros, Miguel A — Larsen, Bent",
@@ -3445,14 +3445,14 @@
     "difficulty": {
       "level": "B",
       "status": "suggested",
-      "reason": "Một nước chuẩn bị để tạo đòn xiên; không hy sinh vật chất.",
+      "reason": "Một nước chuẩn bị để tạo đòn xiên; không thí quân.",
       "solverMoves": 3,
       "sacrificeCount": 0
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Xe tại f3 tấn công quân ở e3, để khai thác quân phía sau ở a3. Nhánh mẫu: Qg2+ · Ke3 · Rxf3+ · Ke4 · Rxa3#."
+    "solution": "Xe tại f3 tấn công quân ở e3, để khai thác quân phía sau ở a3."
   },
   {
     "title": "Carlsen,M — Duda,J",
@@ -3483,14 +3483,14 @@
     "difficulty": {
       "level": "B",
       "status": "suggested",
-      "reason": "Một nước chuẩn bị để tạo đòn xiên; không hy sinh vật chất.",
+      "reason": "Một nước chuẩn bị để tạo đòn xiên; không thí quân.",
       "solverMoves": 3,
       "sacrificeCount": 0
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Xe tại d6 tấn công quân ở d5, để khai thác quân phía sau ở d1. Nhánh mẫu: Nxe4+ · Kd5 · Rd6+ · Kxe4 · Rxd1."
+    "solution": "Xe tại d6 tấn công quân ở d5, để khai thác quân phía sau ở d1."
   },
   {
     "title": "Anderssen, Adolf — Zukertort, Johannes Hermann",
@@ -3521,14 +3521,14 @@
     "difficulty": {
       "level": "B",
       "status": "suggested",
-      "reason": "Một nước chuẩn bị để tạo đòn xiên; không hy sinh vật chất.",
+      "reason": "Một nước chuẩn bị để tạo đòn xiên; không thí quân.",
       "solverMoves": 3,
       "sacrificeCount": 0
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Xe tại e8 tấn công quân ở d8, để khai thác quân phía sau ở a8. Nhánh mẫu: Re1 · Rh7 · Rxe8+ · Kd7 · Rxa8."
+    "solution": "Xe tại e8 tấn công quân ở d8, để khai thác quân phía sau ở a8."
   },
   {
     "title": "Beliavsky,A — Sundararajan,K",
@@ -3559,14 +3559,14 @@
     "difficulty": {
       "level": "B",
       "status": "suggested",
-      "reason": "Một nước chuẩn bị để tạo đòn xiên; không hy sinh vật chất.",
+      "reason": "Một nước chuẩn bị để tạo đòn xiên; không thí quân.",
       "solverMoves": 3,
       "sacrificeCount": 0
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Xe tại h7 tấn công quân ở f7, để khai thác quân phía sau ở c7. Nhánh mẫu: Re5+ · Kf7 · Rxh7+ · Kf8 · Rxc7."
+    "solution": "Xe tại h7 tấn công quân ở f7, để khai thác quân phía sau ở c7."
   },
   {
     "title": "Maroczy, Geza — Blackburne, Joseph Henry",
@@ -3612,7 +3612,7 @@
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Xe tại h8 tấn công quân ở h7, để khai thác quân phía sau ở h6. Nhánh mẫu: Rh8+ · Kg6 · Rxh6+."
+    "solution": "Xe tại h8 tấn công quân ở h7, để khai thác quân phía sau ở h6."
   },
   {
     "title": "Carlsen,M — Nihal,Sarin",
@@ -3643,14 +3643,14 @@
     "difficulty": {
       "level": "C",
       "status": "suggested",
-      "reason": "Một hy sinh đơn giản dẫn đến đòn xiên trong chuỗi ngắn.",
+      "reason": "Một thí quân đơn giản dẫn đến đòn xiên trong chuỗi ngắn.",
       "solverMoves": 3,
       "sacrificeCount": 1
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Xe tại a8 tấn công quân ở b8, để khai thác quân phía sau ở h8. Nhánh mẫu: Nd7+ · Nxd7 · Ra8+ · Kb7 · Rxh8."
+    "solution": "Xe tại a8 tấn công quân ở b8, để khai thác quân phía sau ở h8."
   },
   {
     "title": "Jobava,Ba — Gavrilescu,David",
@@ -3681,14 +3681,14 @@
     "difficulty": {
       "level": "C",
       "status": "suggested",
-      "reason": "Một hy sinh đơn giản dẫn đến đòn xiên trong chuỗi ngắn.",
+      "reason": "Một thí quân đơn giản dẫn đến đòn xiên trong chuỗi ngắn.",
       "solverMoves": 3,
       "sacrificeCount": 1
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Xe tại h2 tấn công quân ở f2, để khai thác quân phía sau ở b2. Nhánh mẫu: Nxf2+ · Kxf2 · Rh2+ · Ke1 · Rxb2."
+    "solution": "Xe tại h2 tấn công quân ở f2, để khai thác quân phía sau ở b2."
   },
   {
     "title": "Kukk,S — Carlsen,M",
@@ -3719,14 +3719,14 @@
     "difficulty": {
       "level": "C",
       "status": "suggested",
-      "reason": "Một hy sinh đơn giản dẫn đến đòn xiên trong chuỗi ngắn.",
+      "reason": "Một thí quân đơn giản dẫn đến đòn xiên trong chuỗi ngắn.",
       "solverMoves": 3,
       "sacrificeCount": 1
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Xe tại h2 tấn công quân ở e2, để khai thác quân phía sau ở b2. Nhánh mẫu: Rxb2 · Rxb2 · Rh2+ · Kf1 · Rxb2."
+    "solution": "Xe tại h2 tấn công quân ở e2, để khai thác quân phía sau ở b2."
   },
   {
     "title": "Larsen,B — Zarnicki,P",
@@ -3757,14 +3757,14 @@
     "difficulty": {
       "level": "C",
       "status": "suggested",
-      "reason": "Một hy sinh đơn giản dẫn đến đòn xiên trong chuỗi ngắn.",
+      "reason": "Một thí quân đơn giản dẫn đến đòn xiên trong chuỗi ngắn.",
       "solverMoves": 3,
       "sacrificeCount": 1
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Hậu tại d4 tấn công quân ở f6, để khai thác quân phía sau ở h8. Nhánh mẫu: h8=Q+ · Qxh8 · Qd4+ · Ke7 · Qxh8."
+    "solution": "Hậu tại d4 tấn công quân ở f6, để khai thác quân phía sau ở h8."
   },
   {
     "title": "Carlsen,M — Holm,Kristian Stuvik",
@@ -3795,14 +3795,14 @@
     "difficulty": {
       "level": "C",
       "status": "suggested",
-      "reason": "Một hy sinh đơn giản dẫn đến đòn xiên trong chuỗi ngắn.",
+      "reason": "Một thí quân đơn giản dẫn đến đòn xiên trong chuỗi ngắn.",
       "solverMoves": 3,
       "sacrificeCount": 1
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Hậu tại h5 tấn công quân ở f7, để khai thác quân phía sau ở e8. Nhánh mẫu: Ne5+ · dxe5 · Qxh5+ · Kg8 · Qxe8+."
+    "solution": "Hậu tại h5 tấn công quân ở f7, để khai thác quân phía sau ở e8."
   },
   {
     "title": "Miles, Anthony J — Sorin, Ariel",
@@ -3833,14 +3833,14 @@
     "difficulty": {
       "level": "C",
       "status": "suggested",
-      "reason": "Một hy sinh đơn giản dẫn đến đòn xiên trong chuỗi ngắn.",
+      "reason": "Một thí quân đơn giản dẫn đến đòn xiên trong chuỗi ngắn.",
       "solverMoves": 3,
       "sacrificeCount": 1
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Xe tại b8 tấn công quân ở e8, để khai thác quân phía sau ở h8. Nhánh mẫu: Rxe8+ · Kxe8 · Rb8+ · Ke7 · Rxh8."
+    "solution": "Xe tại b8 tấn công quân ở e8, để khai thác quân phía sau ở h8."
   },
   {
     "title": "Polugaevsky, Lev — Portisch, Lajos",
@@ -3871,14 +3871,14 @@
     "difficulty": {
       "level": "C",
       "status": "suggested",
-      "reason": "Một hy sinh đơn giản dẫn đến đòn xiên trong chuỗi ngắn.",
+      "reason": "Một thí quân đơn giản dẫn đến đòn xiên trong chuỗi ngắn.",
       "solverMoves": 3,
       "sacrificeCount": 1
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Xe tại a8 tấn công quân ở c8, để khai thác quân phía sau ở f8. Nhánh mẫu: Rxe6 · Rxe6 · Ra8+ · Kd7 · Rxf8."
+    "solution": "Xe tại a8 tấn công quân ở c8, để khai thác quân phía sau ở f8."
   },
   {
     "title": "Pillsbury, Harry Nelson — Showalter, Jackson Whipps",
@@ -3909,14 +3909,14 @@
     "difficulty": {
       "level": "C",
       "status": "suggested",
-      "reason": "Một hy sinh đơn giản dẫn đến đòn xiên trong chuỗi ngắn.",
+      "reason": "Một thí quân đơn giản dẫn đến đòn xiên trong chuỗi ngắn.",
       "solverMoves": 3,
       "sacrificeCount": 1
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Xe tại h8 tấn công quân ở e8, để khai thác quân phía sau ở a8. Nhánh mẫu: Ba4 · Bxa4 · Rh8+ · Kd7 · Rxa8."
+    "solution": "Xe tại h8 tấn công quân ở e8, để khai thác quân phía sau ở a8."
   },
   {
     "title": "Carlsen,M — Alexakis,Dimitris",
@@ -3947,14 +3947,14 @@
     "difficulty": {
       "level": "C",
       "status": "suggested",
-      "reason": "Một hy sinh đơn giản dẫn đến đòn xiên trong chuỗi ngắn.",
+      "reason": "Một thí quân đơn giản dẫn đến đòn xiên trong chuỗi ngắn.",
       "solverMoves": 3,
       "sacrificeCount": 1
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Xe tại f7 tấn công quân ở e7, để khai thác quân phía sau ở a7. Nhánh mẫu: Rxe7+ · Kxe7 · Rf7+ · Kd6 · Rxa7."
+    "solution": "Xe tại f7 tấn công quân ở e7, để khai thác quân phía sau ở a7."
   },
   {
     "title": "Chigorin, Mikhail — Paulsen, Louis",
@@ -3985,14 +3985,14 @@
     "difficulty": {
       "level": "C",
       "status": "suggested",
-      "reason": "Một hy sinh đơn giản dẫn đến đòn xiên trong chuỗi ngắn.",
+      "reason": "Một thí quân đơn giản dẫn đến đòn xiên trong chuỗi ngắn.",
       "solverMoves": 3,
       "sacrificeCount": 1
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Xe tại g7 tấn công quân ở e7, để khai thác quân phía sau ở c7. Nhánh mẫu: Qxe7+ · Kxe7 · Rg7+ · Kf8 · Rxc7."
+    "solution": "Xe tại g7 tấn công quân ở e7, để khai thác quân phía sau ở c7."
   },
   {
     "title": "Levitsky, Stepan M — Teichmann, Richard",
@@ -4023,14 +4023,14 @@
     "difficulty": {
       "level": "C",
       "status": "suggested",
-      "reason": "Một hy sinh đơn giản dẫn đến đòn xiên trong chuỗi ngắn.",
+      "reason": "Một thí quân đơn giản dẫn đến đòn xiên trong chuỗi ngắn.",
       "solverMoves": 3,
       "sacrificeCount": 1
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Xe tại d1 tấn công quân ở d2, để khai thác quân phía sau ở d8. Nhánh mẫu: Ne4+ · Rxe4 · Red1+ · Ke2 · Rxd8."
+    "solution": "Xe tại d1 tấn công quân ở d2, để khai thác quân phía sau ở d8."
   },
   {
     "title": "Pancevski,F — Jobava,Ba",
@@ -4061,14 +4061,14 @@
     "difficulty": {
       "level": "C",
       "status": "suggested",
-      "reason": "Một hy sinh đơn giản dẫn đến đòn xiên trong chuỗi ngắn.",
+      "reason": "Một thí quân đơn giản dẫn đến đòn xiên trong chuỗi ngắn.",
       "solverMoves": 3,
       "sacrificeCount": 1
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Xe tại h2 tấn công quân ở f2, để khai thác quân phía sau ở c2. Nhánh mẫu: Rxf2+ · Kxf2 · Rh2+ · Kf3 · Rxc2."
+    "solution": "Xe tại h2 tấn công quân ở f2, để khai thác quân phía sau ở c2."
   },
   {
     "title": "Navara,D — Howell,D",
@@ -4099,14 +4099,14 @@
     "difficulty": {
       "level": "C",
       "status": "suggested",
-      "reason": "Một hy sinh đơn giản dẫn đến đòn xiên trong chuỗi ngắn.",
+      "reason": "Một thí quân đơn giản dẫn đến đòn xiên trong chuỗi ngắn.",
       "solverMoves": 3,
       "sacrificeCount": 1
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Xe tại a8 tấn công quân ở d8, để khai thác quân phía sau ở g8. Nhánh mẫu: Ne6+ · Nxe6 · Ra8+ · Kc7 · Rxg8."
+    "solution": "Xe tại a8 tấn công quân ở d8, để khai thác quân phía sau ở g8."
   },
   {
     "title": "Lasker, Edward — Marshall, Frank James",
@@ -4137,14 +4137,14 @@
     "difficulty": {
       "level": "C",
       "status": "suggested",
-      "reason": "Một hy sinh đơn giản dẫn đến đòn xiên trong chuỗi ngắn.",
+      "reason": "Một thí quân đơn giản dẫn đến đòn xiên trong chuỗi ngắn.",
       "solverMoves": 3,
       "sacrificeCount": 1
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Hậu tại h8 tấn công quân ở f6, để khai thác quân phía sau ở c3. Nhánh mẫu: Rd6+ · Rxd6 · Qh8+ · Ke7 · Qxc3."
+    "solution": "Hậu tại h8 tấn công quân ở f6, để khai thác quân phía sau ở c3."
   },
   {
     "title": "Marshall, Frank James — Michelsen, Einar",
@@ -4175,14 +4175,14 @@
     "difficulty": {
       "level": "C",
       "status": "suggested",
-      "reason": "Một hy sinh đơn giản dẫn đến đòn xiên trong chuỗi ngắn.",
+      "reason": "Một thí quân đơn giản dẫn đến đòn xiên trong chuỗi ngắn.",
       "solverMoves": 3,
       "sacrificeCount": 1
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Xe tại h8 tấn công quân ở d8, để khai thác quân phía sau ở a8. Nhánh mẫu: Bg5+ · Rxg5 · Rh8+ · Kd7 · Rxa8."
+    "solution": "Xe tại h8 tấn công quân ở d8, để khai thác quân phía sau ở a8."
   },
   {
     "title": "Caruana,F — Vishnu,P",
@@ -4213,14 +4213,14 @@
     "difficulty": {
       "level": "C",
       "status": "suggested",
-      "reason": "Một hy sinh đơn giản dẫn đến đòn xiên trong chuỗi ngắn.",
+      "reason": "Một thí quân đơn giản dẫn đến đòn xiên trong chuỗi ngắn.",
       "solverMoves": 3,
       "sacrificeCount": 1
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Xe tại h6 tấn công quân ở f6, để khai thác quân phía sau ở c6. Nhánh mẫu: Qxf6+ · Kxf6 · Rh6+ · Ke5 · Rxc6."
+    "solution": "Xe tại h6 tấn công quân ở f6, để khai thác quân phía sau ở c6."
   },
   {
     "title": "Adams,Mi — Anand,V",
@@ -4251,14 +4251,14 @@
     "difficulty": {
       "level": "C",
       "status": "suggested",
-      "reason": "Một hy sinh đơn giản dẫn đến đòn xiên trong chuỗi ngắn.",
+      "reason": "Một thí quân đơn giản dẫn đến đòn xiên trong chuỗi ngắn.",
       "solverMoves": 3,
       "sacrificeCount": 1
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Xe tại a1 tấn công quân ở e1, để khai thác quân phía sau ở h1. Nhánh mẫu: Rh1+ · Qxh1 · Ra1+ · Kd2 · Rxh1."
+    "solution": "Xe tại a1 tấn công quân ở e1, để khai thác quân phía sau ở h1."
   },
   {
     "title": "Anand, Viswanathan — Ivanchuk, Vassily",
@@ -4289,14 +4289,14 @@
     "difficulty": {
       "level": "C",
       "status": "suggested",
-      "reason": "Một hy sinh đơn giản dẫn đến đòn xiên trong chuỗi ngắn.",
+      "reason": "Một thí quân đơn giản dẫn đến đòn xiên trong chuỗi ngắn.",
       "solverMoves": 3,
       "sacrificeCount": 1
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Tượng tại f6 tấn công quân ở e5, để khai thác quân phía sau ở a1. Nhánh mẫu: a1=Q+ · Rxa1 · Bf6+ · Kf4 · Bxa1."
+    "solution": "Tượng tại f6 tấn công quân ở e5, để khai thác quân phía sau ở a1."
   },
   {
     "title": "Motylev,A — Bondareva,Daria",
@@ -4327,14 +4327,14 @@
     "difficulty": {
       "level": "C",
       "status": "suggested",
-      "reason": "Một hy sinh đơn giản dẫn đến đòn xiên trong chuỗi ngắn.",
+      "reason": "Một thí quân đơn giản dẫn đến đòn xiên trong chuỗi ngắn.",
       "solverMoves": 3,
       "sacrificeCount": 1
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Tượng tại g5 tấn công quân ở f6, để khai thác quân phía sau ở d8. Nhánh mẫu: Rxf6+ · Kxf6 · Bg5+ · Kf7 · Bxd8."
+    "solution": "Tượng tại g5 tấn công quân ở f6, để khai thác quân phía sau ở d8."
   },
   {
     "title": "Janowsky, Dawid Markelowicz — Chajes, Oscar",
@@ -4365,14 +4365,14 @@
     "difficulty": {
       "level": "C",
       "status": "suggested",
-      "reason": "Một hy sinh đơn giản dẫn đến đòn xiên trong chuỗi ngắn.",
+      "reason": "Một thí quân đơn giản dẫn đến đòn xiên trong chuỗi ngắn.",
       "solverMoves": 3,
       "sacrificeCount": 1
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Xe tại f3 tấn công quân ở d3, để khai thác quân phía sau ở a3. Nhánh mẫu: Rxa3+ · Rxa3 · Rf3+ · Ke2 · Rxa3."
+    "solution": "Xe tại f3 tấn công quân ở d3, để khai thác quân phía sau ở a3."
   },
   {
     "title": "Rubinetti, Jorge A — Najdorf, Miguel",
@@ -4403,14 +4403,14 @@
     "difficulty": {
       "level": "C",
       "status": "suggested",
-      "reason": "Một hy sinh đơn giản dẫn đến đòn xiên trong chuỗi ngắn.",
+      "reason": "Một thí quân đơn giản dẫn đến đòn xiên trong chuỗi ngắn.",
       "solverMoves": 3,
       "sacrificeCount": 1
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Hậu tại f3 tấn công quân ở e3, để khai thác quân phía sau ở b3. Nhánh mẫu: Rb3 · Qxb3 · Qf3+ · Kd4 · Qxb3."
+    "solution": "Hậu tại f3 tấn công quân ở e3, để khai thác quân phía sau ở b3."
   },
   {
     "title": "Unzicker, Wolfgang — Tal, Mihail",
@@ -4441,14 +4441,14 @@
     "difficulty": {
       "level": "C",
       "status": "suggested",
-      "reason": "Một hy sinh đơn giản dẫn đến đòn xiên trong chuỗi ngắn.",
+      "reason": "Một thí quân đơn giản dẫn đến đòn xiên trong chuỗi ngắn.",
       "solverMoves": 3,
       "sacrificeCount": 1
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Tượng tại f4 tấn công quân ở e5, để khai thác quân phía sau ở c7. Nhánh mẫu: Qxe5+ · Kxe5 · Bf4+ · Kd4 · Bxc7."
+    "solution": "Tượng tại f4 tấn công quân ở e5, để khai thác quân phía sau ở c7."
   },
   {
     "title": "Navara,D — Bacrot,E",
@@ -4487,14 +4487,14 @@
     "difficulty": {
       "level": "C",
       "status": "suggested",
-      "reason": "Một hy sinh đơn giản dẫn đến đòn xiên trong chuỗi ngắn.",
+      "reason": "Một thí quân đơn giản dẫn đến đòn xiên trong chuỗi ngắn.",
       "solverMoves": 3,
       "sacrificeCount": 1
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Xe tại b1 tấn công quân ở d1, để khai thác quân phía sau ở h1. Nhánh mẫu: d1=Q+ · Kxd1 · Rb1+ · Kd2 · Rxh1."
+    "solution": "Xe tại b1 tấn công quân ở d1, để khai thác quân phía sau ở h1."
   },
   {
     "title": "Huschenbeth,N — Caruana,F",
@@ -4525,14 +4525,14 @@
     "difficulty": {
       "level": "C",
       "status": "suggested",
-      "reason": "Một hy sinh đơn giản dẫn đến đòn xiên trong chuỗi ngắn.",
+      "reason": "Một thí quân đơn giản dẫn đến đòn xiên trong chuỗi ngắn.",
       "solverMoves": 3,
       "sacrificeCount": 1
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Hậu tại f2 tấn công quân ở d2, để khai thác quân phía sau ở b2. Nhánh mẫu: Rd2+ · Kxd2 · Qxf2+ · Kd1 · Qxb2."
+    "solution": "Hậu tại f2 tấn công quân ở d2, để khai thác quân phía sau ở b2."
   },
   {
     "title": "Psakhis,L — Korchnoi,V",
@@ -4563,14 +4563,14 @@
     "difficulty": {
       "level": "C",
       "status": "suggested",
-      "reason": "Một hy sinh đơn giản dẫn đến đòn xiên trong chuỗi ngắn.",
+      "reason": "Một thí quân đơn giản dẫn đến đòn xiên trong chuỗi ngắn.",
       "solverMoves": 3,
       "sacrificeCount": 1
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Xe tại b8 tấn công quân ở f8, để khai thác quân phía sau ở h8. Nhánh mẫu: h8=Q+ · Rxh8 · Rb8+ · Ke7 · Rxh8."
+    "solution": "Xe tại b8 tấn công quân ở f8, để khai thác quân phía sau ở h8."
   },
   {
     "title": "Navara,D — Cech,P",
@@ -4601,14 +4601,14 @@
     "difficulty": {
       "level": "C",
       "status": "suggested",
-      "reason": "Một hy sinh đơn giản dẫn đến đòn xiên trong chuỗi ngắn.",
+      "reason": "Một thí quân đơn giản dẫn đến đòn xiên trong chuỗi ngắn.",
       "solverMoves": 3,
       "sacrificeCount": 1
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Xe tại a8 tấn công quân ở b8, để khai thác quân phía sau ở e8. Nhánh mẫu: Ra8+ · Nxa8 · Rxa8+ · Kc7 · Rxe8."
+    "solution": "Xe tại a8 tấn công quân ở b8, để khai thác quân phía sau ở e8."
   },
   {
     "title": "Radjabov,T — Aronian,L",
@@ -4639,14 +4639,14 @@
     "difficulty": {
       "level": "C",
       "status": "suggested",
-      "reason": "Một hy sinh đơn giản dẫn đến đòn xiên trong chuỗi ngắn.",
+      "reason": "Một thí quân đơn giản dẫn đến đòn xiên trong chuỗi ngắn.",
       "solverMoves": 3,
       "sacrificeCount": 1
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Hậu tại b8 tấn công quân ở b4, để khai thác quân phía sau ở b1. Nhánh mẫu: Rxb1+ · Qxb1 · Qb8+ · Kc5 · Qxb1."
+    "solution": "Hậu tại b8 tấn công quân ở b4, để khai thác quân phía sau ở b1."
   },
   {
     "title": "So,W — Bacrot,E",
@@ -4677,14 +4677,14 @@
     "difficulty": {
       "level": "C",
       "status": "suggested",
-      "reason": "Một hy sinh đơn giản dẫn đến đòn xiên trong chuỗi ngắn.",
+      "reason": "Một thí quân đơn giản dẫn đến đòn xiên trong chuỗi ngắn.",
       "solverMoves": 3,
       "sacrificeCount": 1
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Xe tại c1 tấn công quân ở e1, để khai thác quân phía sau ở g1. Nhánh mẫu: Nd4 · Bxd4 · Rc1+ · Kd2 · Rxg1."
+    "solution": "Xe tại c1 tấn công quân ở e1, để khai thác quân phía sau ở g1."
   },
   {
     "title": "Liberzon, Vladimir M — Smyslov, Vassily",
@@ -4715,14 +4715,14 @@
     "difficulty": {
       "level": "C",
       "status": "suggested",
-      "reason": "Một hy sinh đơn giản dẫn đến đòn xiên trong chuỗi ngắn.",
+      "reason": "Một thí quân đơn giản dẫn đến đòn xiên trong chuỗi ngắn.",
       "solverMoves": 3,
       "sacrificeCount": 1
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Hậu tại h1 tấn công quân ở e1, để khai thác quân phía sau ở d1. Nhánh mẫu: Rxe4+ · Bxe4 · Qh1+ · Ke2 · Qxd1+."
+    "solution": "Hậu tại h1 tấn công quân ở e1, để khai thác quân phía sau ở d1."
   },
   {
     "title": "Szabo, Laszlo — Bronstein, David I",
@@ -4753,14 +4753,14 @@
     "difficulty": {
       "level": "C",
       "status": "suggested",
-      "reason": "Một hy sinh đơn giản dẫn đến đòn xiên trong chuỗi ngắn.",
+      "reason": "Một thí quân đơn giản dẫn đến đòn xiên trong chuỗi ngắn.",
       "solverMoves": 3,
       "sacrificeCount": 1
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Hậu tại h8 tấn công quân ở g8, để khai thác quân phía sau ở d8. Nhánh mẫu: Rd8 · Qxd8 · Qh8+ · Kf7 · Qxd8."
+    "solution": "Hậu tại h8 tấn công quân ở g8, để khai thác quân phía sau ở d8."
   },
   {
     "title": "Wojtaszek,R — Gelfand,B",
@@ -4791,14 +4791,14 @@
     "difficulty": {
       "level": "C",
       "status": "suggested",
-      "reason": "Một hy sinh đơn giản dẫn đến đòn xiên trong chuỗi ngắn.",
+      "reason": "Một thí quân đơn giản dẫn đến đòn xiên trong chuỗi ngắn.",
       "solverMoves": 3,
       "sacrificeCount": 1
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Xe tại e8 tấn công quân ở e6, để khai thác quân phía sau ở e5. Nhánh mẫu: Rxe6+ · Kxe6 · Re8+ · Kd6 · Rxe5."
+    "solution": "Xe tại e8 tấn công quân ở e6, để khai thác quân phía sau ở e5."
   },
   {
     "title": "Jussupow,Ar — Dubrovin,R",
@@ -4829,14 +4829,14 @@
     "difficulty": {
       "level": "C",
       "status": "suggested",
-      "reason": "Một hy sinh đơn giản dẫn đến đòn xiên trong chuỗi ngắn.",
+      "reason": "Một thí quân đơn giản dẫn đến đòn xiên trong chuỗi ngắn.",
       "solverMoves": 3,
       "sacrificeCount": 1
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Xe tại h8 tấn công quân ở f8, để khai thác quân phía sau ở d8. Nhánh mẫu: Rh8+ · Bxh8 · Rxh8+ · Kg7 · Rxd8."
+    "solution": "Xe tại h8 tấn công quân ở f8, để khai thác quân phía sau ở d8."
   },
   {
     "title": "Carlsen,M — Niemann,Hans Moke",
@@ -4867,14 +4867,14 @@
     "difficulty": {
       "level": "C",
       "status": "suggested",
-      "reason": "Một hy sinh đơn giản dẫn đến đòn xiên trong chuỗi ngắn.",
+      "reason": "Một thí quân đơn giản dẫn đến đòn xiên trong chuỗi ngắn.",
       "solverMoves": 3,
       "sacrificeCount": 1
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Xe tại b5 tấn công quân ở e5, để khai thác quân phía sau ở f5. Nhánh mẫu: Nxf5 · Nxf5 · Rb5+ · Kf4 · Rxf5+."
+    "solution": "Xe tại b5 tấn công quân ở e5, để khai thác quân phía sau ở f5."
   },
   {
     "title": "Chigorin, Mikhail — Steinitz, William",
@@ -4905,14 +4905,14 @@
     "difficulty": {
       "level": "C",
       "status": "suggested",
-      "reason": "Một hy sinh đơn giản dẫn đến đòn xiên trong chuỗi ngắn.",
+      "reason": "Một thí quân đơn giản dẫn đến đòn xiên trong chuỗi ngắn.",
       "solverMoves": 3,
       "sacrificeCount": 1
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Hậu tại f8 tấn công quân ở f6, để khai thác quân phía sau ở f5. Nhánh mẫu: Rxf5+ · Qxf5 · Qf8+ · Kg5 · Qxf5+."
+    "solution": "Hậu tại f8 tấn công quân ở f6, để khai thác quân phía sau ở f5."
   },
   {
     "title": "Bjornsson, T. — Tal, Mihail",
@@ -4957,14 +4957,14 @@
     "difficulty": {
       "level": "C",
       "status": "suggested",
-      "reason": "Một hy sinh đơn giản dẫn đến đòn xiên trong chuỗi ngắn.",
+      "reason": "Một thí quân đơn giản dẫn đến đòn xiên trong chuỗi ngắn.",
       "solverMoves": 3,
       "sacrificeCount": 1
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Hậu tại a1 tấn công quân ở c1, để khai thác quân phía sau ở f1. Nhánh mẫu: Rf1+ · Qxf1 · Qa1+ · Kd2 · Qxf1."
+    "solution": "Hậu tại a1 tấn công quân ở c1, để khai thác quân phía sau ở f1."
   },
   {
     "title": "Carlsen,M — Artemiev,V",
@@ -4995,14 +4995,14 @@
     "difficulty": {
       "level": "C",
       "status": "suggested",
-      "reason": "Một hy sinh đơn giản dẫn đến đòn xiên trong chuỗi ngắn.",
+      "reason": "Một thí quân đơn giản dẫn đến đòn xiên trong chuỗi ngắn.",
       "solverMoves": 3,
       "sacrificeCount": 1
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Xe tại b8 tấn công quân ở d8, để khai thác quân phía sau ở g8. Nhánh mẫu: Nc6+ · Bxc6 · Rb8+ · Kc7 · Rxg8."
+    "solution": "Xe tại b8 tấn công quân ở d8, để khai thác quân phía sau ở g8."
   },
   {
     "title": "Osmak,Yuliia — Caruana,F",
@@ -5033,14 +5033,14 @@
     "difficulty": {
       "level": "C",
       "status": "suggested",
-      "reason": "Một hy sinh đơn giản dẫn đến đòn xiên trong chuỗi ngắn.",
+      "reason": "Một thí quân đơn giản dẫn đến đòn xiên trong chuỗi ngắn.",
       "solverMoves": 3,
       "sacrificeCount": 1
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Xe tại g3 tấn công quân ở f3, để khai thác quân phía sau ở a3. Nhánh mẫu: Qxf1+ · Rxf1 · Rxg3+ · Kf2 · Rxa3."
+    "solution": "Xe tại g3 tấn công quân ở f3, để khai thác quân phía sau ở a3."
   },
   {
     "title": "Garcia Palermo, Carlos — Anand, Viswanathan",
@@ -5071,14 +5071,14 @@
     "difficulty": {
       "level": "C",
       "status": "suggested",
-      "reason": "Một hy sinh đơn giản dẫn đến đòn xiên trong chuỗi ngắn.",
+      "reason": "Một thí quân đơn giản dẫn đến đòn xiên trong chuỗi ngắn.",
       "solverMoves": 3,
       "sacrificeCount": 1
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Tượng tại f3 tấn công quân ở e2, để khai thác quân phía sau ở d1. Nhánh mẫu: Nxe5 · fxe5 · Bf3 · Qd3 · Bxd1."
+    "solution": "Tượng tại f3 tấn công quân ở e2, để khai thác quân phía sau ở d1."
   },
   {
     "title": "Motylev,A — Shimanov,A",
@@ -5109,14 +5109,14 @@
     "difficulty": {
       "level": "C",
       "status": "suggested",
-      "reason": "Một hy sinh đơn giản dẫn đến đòn xiên trong chuỗi ngắn.",
+      "reason": "Một thí quân đơn giản dẫn đến đòn xiên trong chuỗi ngắn.",
       "solverMoves": 3,
       "sacrificeCount": 1
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Xe tại d8 tấn công quân ở d6, để khai thác quân phía sau ở d4. Nhánh mẫu: Rxd4+ · Rxd4 · Rd8+ · Kc7 · Rxd4."
+    "solution": "Xe tại d8 tấn công quân ở d6, để khai thác quân phía sau ở d4."
   },
   {
     "title": "Giri,A — Buksa,N",
@@ -5155,14 +5155,14 @@
     "difficulty": {
       "level": "C",
       "status": "suggested",
-      "reason": "Một hy sinh đơn giản dẫn đến đòn xiên trong chuỗi ngắn.",
+      "reason": "Một thí quân đơn giản dẫn đến đòn xiên trong chuỗi ngắn.",
       "solverMoves": 3,
       "sacrificeCount": 1
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Xe tại a8 tấn công quân ở f8, để khai thác quân phía sau ở h8. Nhánh mẫu: h8=R+ · Rxh8 · Ra8+ · Ke7 · Rxh8."
+    "solution": "Xe tại a8 tấn công quân ở f8, để khai thác quân phía sau ở h8."
   },
   {
     "title": "Kortschnoj, Viktor — Anand, Viswanathan",
@@ -5193,14 +5193,14 @@
     "difficulty": {
       "level": "C",
       "status": "suggested",
-      "reason": "Một hy sinh đơn giản dẫn đến đòn xiên trong chuỗi ngắn.",
+      "reason": "Một thí quân đơn giản dẫn đến đòn xiên trong chuỗi ngắn.",
       "solverMoves": 3,
       "sacrificeCount": 1
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Tượng tại f5 tấn công quân ở e4, để khai thác quân phía sau ở c2. Nhánh mẫu: Rxe4 · Kxe4 · Bf5+ · Ke3 · Bxc2."
+    "solution": "Tượng tại f5 tấn công quân ở e4, để khai thác quân phía sau ở c2."
   },
   {
     "title": "Caruana,F — Akobian,V",
@@ -5231,14 +5231,14 @@
     "difficulty": {
       "level": "C",
       "status": "suggested",
-      "reason": "Một hy sinh đơn giản dẫn đến đòn xiên trong chuỗi ngắn.",
+      "reason": "Một thí quân đơn giản dẫn đến đòn xiên trong chuỗi ngắn.",
       "solverMoves": 3,
       "sacrificeCount": 1
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Xe tại g7 tấn công quân ở f7, để khai thác quân phía sau ở c7. Nhánh mẫu: Nxf7 · Qxf7 · Rg7 · Qf8 · Rxc7."
+    "solution": "Xe tại g7 tấn công quân ở f7, để khai thác quân phía sau ở c7."
   },
   {
     "title": "Jobava,Ba — Gaponenko,I",
@@ -5269,14 +5269,14 @@
     "difficulty": {
       "level": "C",
       "status": "suggested",
-      "reason": "Một hy sinh đơn giản dẫn đến đòn xiên trong chuỗi ngắn.",
+      "reason": "Một thí quân đơn giản dẫn đến đòn xiên trong chuỗi ngắn.",
       "solverMoves": 3,
       "sacrificeCount": 1
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Hậu tại e8 tấn công quân ở e6, để khai thác quân phía sau ở e5. Nhánh mẫu: Re5+ · Qxe5 · Qe8+ · Kd6 · Qxe5+."
+    "solution": "Hậu tại e8 tấn công quân ở e6, để khai thác quân phía sau ở e5."
   },
   {
     "title": "Wojtaszek,R — Carlsen,M",
@@ -5307,14 +5307,14 @@
     "difficulty": {
       "level": "C",
       "status": "suggested",
-      "reason": "Một hy sinh đơn giản dẫn đến đòn xiên trong chuỗi ngắn.",
+      "reason": "Một thí quân đơn giản dẫn đến đòn xiên trong chuỗi ngắn.",
       "solverMoves": 3,
       "sacrificeCount": 1
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Tượng tại d4 tấn công quân ở e3, để khai thác quân phía sau ở g1. Nhánh mẫu: Rxe3+ · Kxe3 · Bd4+ · Kd2 · Bxg1."
+    "solution": "Tượng tại d4 tấn công quân ở e3, để khai thác quân phía sau ở g1."
   },
   {
     "title": "Miles, Anthony J — Pujol Clua, Ramon",
@@ -5345,14 +5345,14 @@
     "difficulty": {
       "level": "C",
       "status": "suggested",
-      "reason": "Một hy sinh đơn giản dẫn đến đòn xiên trong chuỗi ngắn.",
+      "reason": "Một thí quân đơn giản dẫn đến đòn xiên trong chuỗi ngắn.",
       "solverMoves": 3,
       "sacrificeCount": 1
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Tượng tại h5 tấn công quân ở f7, để khai thác quân phía sau ở e8. Nhánh mẫu: Nxf5 · gxf5 · Bh5+ · Kg8 · Bxe8."
+    "solution": "Tượng tại h5 tấn công quân ở f7, để khai thác quân phía sau ở e8."
   },
   {
     "title": "Ivanisevic,I — Nikolic,Pr",
@@ -5383,14 +5383,14 @@
     "difficulty": {
       "level": "C",
       "status": "suggested",
-      "reason": "Một hy sinh đơn giản dẫn đến đòn xiên trong chuỗi ngắn.",
+      "reason": "Một thí quân đơn giản dẫn đến đòn xiên trong chuỗi ngắn.",
       "solverMoves": 3,
       "sacrificeCount": 1
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Tượng tại g4 tấn công quân ở e6, để khai thác quân phía sau ở c8. Nhánh mẫu: Rxe6+ · Kxe6 · Bg4+ · Ke7 · Bxc8."
+    "solution": "Tượng tại g4 tấn công quân ở e6, để khai thác quân phía sau ở c8."
   },
   {
     "title": "Kamsky,G — Akobian,V",
@@ -5421,14 +5421,14 @@
     "difficulty": {
       "level": "C",
       "status": "suggested",
-      "reason": "Một hy sinh đơn giản dẫn đến đòn xiên trong chuỗi ngắn.",
+      "reason": "Một thí quân đơn giản dẫn đến đòn xiên trong chuỗi ngắn.",
       "solverMoves": 3,
       "sacrificeCount": 1
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Tượng tại c3 tấn công quân ở f6, để khai thác quân phía sau ở h8. Nhánh mẫu: Nxf6+ · Kxf6 · Bc3+ · Kxf5 · Bxh8."
+    "solution": "Tượng tại c3 tấn công quân ở f6, để khai thác quân phía sau ở h8."
   },
   {
     "title": "Foerster-Yialamas,Lucas — Jobava,Ba",
@@ -5459,14 +5459,14 @@
     "difficulty": {
       "level": "C",
       "status": "suggested",
-      "reason": "Một hy sinh đơn giản dẫn đến đòn xiên trong chuỗi ngắn.",
+      "reason": "Một thí quân đơn giản dẫn đến đòn xiên trong chuỗi ngắn.",
       "solverMoves": 3,
       "sacrificeCount": 1
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Xe tại g1 tấn công quân ở e1, để khai thác quân phía sau ở a1. Nhánh mẫu: Bxh6 · Bxh6 · Rg1+ · Kf2 · Rxa1."
+    "solution": "Xe tại g1 tấn công quân ở e1, để khai thác quân phía sau ở a1."
   },
   {
     "title": "Aronian,L — Praggnanandhaa,R",
@@ -5497,14 +5497,14 @@
     "difficulty": {
       "level": "C",
       "status": "suggested",
-      "reason": "Một hy sinh đơn giản dẫn đến đòn xiên trong chuỗi ngắn.",
+      "reason": "Một thí quân đơn giản dẫn đến đòn xiên trong chuỗi ngắn.",
       "solverMoves": 3,
       "sacrificeCount": 1
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Hậu tại d5 tấn công quân ở d2, để khai thác quân phía sau ở d1. Nhánh mẫu: Rxc3 · bxc3 · Qxd5+ · Kc1 · Qxd1+."
+    "solution": "Hậu tại d5 tấn công quân ở d2, để khai thác quân phía sau ở d1."
   },
   {
     "title": "Chigorin, Mikhail — Zukertort, Johannes Hermann",
@@ -5535,14 +5535,14 @@
     "difficulty": {
       "level": "C",
       "status": "suggested",
-      "reason": "Một hy sinh đơn giản dẫn đến đòn xiên trong chuỗi ngắn.",
+      "reason": "Một thí quân đơn giản dẫn đến đòn xiên trong chuỗi ngắn.",
       "solverMoves": 3,
       "sacrificeCount": 1
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Hậu tại h4 tấn công quân ở d4, để khai thác quân phía sau ở a4. Nhánh mẫu: Rxd4+ · Kxd4 · Qh4+ · Ke3 · Qxa4."
+    "solution": "Hậu tại h4 tấn công quân ở d4, để khai thác quân phía sau ở a4."
   },
   {
     "title": "Praggnanandhaa,R — Anand,V",
@@ -5575,14 +5575,14 @@
     "difficulty": {
       "level": "C*",
       "status": "suggested",
-      "reason": "Cần tính trước 2–3 nước chuẩn bị; không có hy sinh đã xác nhận trong nhánh.",
+      "reason": "Cần tính trước 2–3 nước chuẩn bị; không có thí quân đã xác nhận trong nhánh.",
       "solverMoves": 4,
       "sacrificeCount": 0
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Hậu tại d2 tấn công quân ở e3, để khai thác quân phía sau ở h6. Nhánh mẫu: Nxe4+ · Ke3 · Qc3+ · Bd3 · Qd2+ · Kd4 · Qxh6."
+    "solution": "Hậu tại d2 tấn công quân ở e3, để khai thác quân phía sau ở h6."
   },
   {
     "title": "Bogoljubow, Efim — Rubinstein, Akiba",
@@ -5615,14 +5615,14 @@
     "difficulty": {
       "level": "C*",
       "status": "suggested",
-      "reason": "Cần tính trước 2–3 nước chuẩn bị; không có hy sinh đã xác nhận trong nhánh.",
+      "reason": "Cần tính trước 2–3 nước chuẩn bị; không có thí quân đã xác nhận trong nhánh.",
       "solverMoves": 4,
       "sacrificeCount": 0
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Hậu tại h8 tấn công quân ở g8, để khai thác quân phía sau ở f8. Nhánh mẫu: Qh5+ · Kg8 · Ng6 · f5 · Qh8+ · Kf7 · Qxf8+."
+    "solution": "Hậu tại h8 tấn công quân ở g8, để khai thác quân phía sau ở f8."
   },
   {
     "title": "Anderssen, Adolf — Staunton, Howard",
@@ -5655,14 +5655,14 @@
     "difficulty": {
       "level": "C*",
       "status": "suggested",
-      "reason": "Cần tính trước 2–3 nước chuẩn bị; không có hy sinh đã xác nhận trong nhánh.",
+      "reason": "Cần tính trước 2–3 nước chuẩn bị; không có thí quân đã xác nhận trong nhánh.",
       "solverMoves": 4,
       "sacrificeCount": 0
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Xe tại f8 tấn công quân ở f7, để khai thác quân phía sau ở f6. Nhánh mẫu: Rb8+ · Bc8 · Rxc8+ · Kf7 · Rf8+ · Kg6 · Rxf6+."
+    "solution": "Xe tại f8 tấn công quân ở f7, để khai thác quân phía sau ở f6."
   },
   {
     "title": "Mueller, Oscar Conrad — Bogoljubow, Efim",
@@ -5695,14 +5695,14 @@
     "difficulty": {
       "level": "C*",
       "status": "suggested",
-      "reason": "Cần tính trước 2–3 nước chuẩn bị; không có hy sinh đã xác nhận trong nhánh.",
+      "reason": "Cần tính trước 2–3 nước chuẩn bị; không có thí quân đã xác nhận trong nhánh.",
       "solverMoves": 4,
       "sacrificeCount": 0
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Xe tại c2 tấn công quân ở c4, để khai thác quân phía sau ở c5. Nhánh mẫu: f4 · gxf4 · gxf4 · Bxc5 · Rc2+ · Kd3 · Rxc5."
+    "solution": "Xe tại c2 tấn công quân ở c4, để khai thác quân phía sau ở c5."
   },
   {
     "title": "Andersen, Borge — Larsen, Bent",
@@ -5735,14 +5735,14 @@
     "difficulty": {
       "level": "C*",
       "status": "suggested",
-      "reason": "Cần tính trước 2–3 nước chuẩn bị; không có hy sinh đã xác nhận trong nhánh.",
+      "reason": "Cần tính trước 2–3 nước chuẩn bị; không có thí quân đã xác nhận trong nhánh.",
       "solverMoves": 4,
       "sacrificeCount": 0
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Hậu tại h2 tấn công quân ở e2, để khai thác quân phía sau ở d2. Nhánh mẫu: Qg1+ · Kf3 · g4+ · Ke2 · Qxh2+ · Ke1 · Qxd2+."
+    "solution": "Hậu tại h2 tấn công quân ở e2, để khai thác quân phía sau ở d2."
   },
   {
     "title": "Bologan,V — Pichot,A",
@@ -5775,14 +5775,14 @@
     "difficulty": {
       "level": "C*",
       "status": "suggested",
-      "reason": "Cần tính trước 2–3 nước chuẩn bị; không có hy sinh đã xác nhận trong nhánh.",
+      "reason": "Cần tính trước 2–3 nước chuẩn bị; không có thí quân đã xác nhận trong nhánh.",
       "solverMoves": 4,
       "sacrificeCount": 0
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Xe tại h8 tấn công quân ở f8, để khai thác quân phía sau ở e8. Nhánh mẫu: Nxf6+ · Kg7 · Qg4+ · Kf8 · Rh8+ · Ke7 · Rxe8+."
+    "solution": "Xe tại h8 tấn công quân ở f8, để khai thác quân phía sau ở e8."
   },
   {
     "title": "Carlsen,M — Petrosyan,M",
@@ -5815,14 +5815,14 @@
     "difficulty": {
       "level": "C*",
       "status": "suggested",
-      "reason": "Cần tính trước 2–3 nước chuẩn bị; không có hy sinh đã xác nhận trong nhánh.",
+      "reason": "Cần tính trước 2–3 nước chuẩn bị; không có thí quân đã xác nhận trong nhánh.",
       "solverMoves": 4,
       "sacrificeCount": 0
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Hậu tại h1 tấn công quân ở e1, để khai thác quân phía sau ở a1. Nhánh mẫu: Qf3 · Qxf5+ · Nxf5 · Nb5 · Qh1+ · Ke2 · Qxa1."
+    "solution": "Hậu tại h1 tấn công quân ở e1, để khai thác quân phía sau ở a1."
   },
   {
     "title": "Bogoljubow, Efim — Rubinstein, Akiba",
@@ -5855,14 +5855,14 @@
     "difficulty": {
       "level": "C*",
       "status": "suggested",
-      "reason": "Cần tính trước 2–3 nước chuẩn bị; không có hy sinh đã xác nhận trong nhánh.",
+      "reason": "Cần tính trước 2–3 nước chuẩn bị; không có thí quân đã xác nhận trong nhánh.",
       "solverMoves": 4,
       "sacrificeCount": 0
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Tượng tại h5 tấn công quân ở f3, để khai thác quân phía sau ở d1. Nhánh mẫu: Rxf3+ · Rxf3 · Rxf3+ · Kxf3 · Bh5+ · Kg3 · Bxd1."
+    "solution": "Tượng tại h5 tấn công quân ở f3, để khai thác quân phía sau ở d1."
   },
   {
     "title": "Kieninger, Georg — Bogoljubow, Efim",
@@ -5895,14 +5895,14 @@
     "difficulty": {
       "level": "C*",
       "status": "suggested",
-      "reason": "Cần tính trước 2–3 nước chuẩn bị; không có hy sinh đã xác nhận trong nhánh.",
+      "reason": "Cần tính trước 2–3 nước chuẩn bị; không có thí quân đã xác nhận trong nhánh.",
       "solverMoves": 4,
       "sacrificeCount": 0
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Xe tại b2 tấn công quân ở b4, để khai thác quân phía sau ở b7. Nhánh mẫu: g5 · Bc7 · Ra2+ · Kb4 · Rb2+ · Ka5 · Rxb7."
+    "solution": "Xe tại b2 tấn công quân ở b4, để khai thác quân phía sau ở b7."
   },
   {
     "title": "Duras, Oldrich — Blackburne, Joseph Henry",
@@ -5935,14 +5935,14 @@
     "difficulty": {
       "level": "C*",
       "status": "suggested",
-      "reason": "Cần tính trước 2–3 nước chuẩn bị; không có hy sinh đã xác nhận trong nhánh.",
+      "reason": "Cần tính trước 2–3 nước chuẩn bị; không có thí quân đã xác nhận trong nhánh.",
       "solverMoves": 4,
       "sacrificeCount": 0
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Xe tại h8 tấn công quân ở f8, để khai thác quân phía sau ở d8. Nhánh mẫu: f6 · a4 · f7 · Rg6 · Rh8+ · Kxf7 · Rxd8."
+    "solution": "Xe tại h8 tấn công quân ở f8, để khai thác quân phía sau ở d8."
   },
   {
     "title": "Pantzar,Milton — Carlsen,M",
@@ -5983,14 +5983,14 @@
     "difficulty": {
       "level": "C*",
       "status": "suggested",
-      "reason": "Cần tính trước 2–3 nước chuẩn bị; không có hy sinh đã xác nhận trong nhánh.",
+      "reason": "Cần tính trước 2–3 nước chuẩn bị; không có thí quân đã xác nhận trong nhánh.",
       "solverMoves": 4,
       "sacrificeCount": 0
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Hậu tại h1 tấn công quân ở f1, để khai thác quân phía sau ở a1. Nhánh mẫu: Nh4 · Qg5 · Rxd3 · Nxd3 · Qh1+ · Ke2 · Qxa1."
+    "solution": "Hậu tại h1 tấn công quân ở f1, để khai thác quân phía sau ở a1."
   },
   {
     "title": "Englisch, Berthold — Chigorin, Mikhail",
@@ -6023,14 +6023,14 @@
     "difficulty": {
       "level": "C*",
       "status": "suggested",
-      "reason": "Cần tính trước 2–3 nước chuẩn bị; không có hy sinh đã xác nhận trong nhánh.",
+      "reason": "Cần tính trước 2–3 nước chuẩn bị; không có thí quân đã xác nhận trong nhánh.",
       "solverMoves": 4,
       "sacrificeCount": 0
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Hậu tại a2 tấn công quân ở d2, để khai thác quân phía sau ở f2. Nhánh mẫu: Kh7 · Qf2 · Qa1+ · Kd2 · Qxa2+ · Ke3 · Qxf2+."
+    "solution": "Hậu tại a2 tấn công quân ở d2, để khai thác quân phía sau ở f2."
   },
   {
     "title": "Anderssen, Adolf — Morphy, Paul ",
@@ -6063,14 +6063,14 @@
     "difficulty": {
       "level": "C*",
       "status": "suggested",
-      "reason": "Cần tính trước 2–3 nước chuẩn bị; không có hy sinh đã xác nhận trong nhánh.",
+      "reason": "Cần tính trước 2–3 nước chuẩn bị; không có thí quân đã xác nhận trong nhánh.",
       "solverMoves": 4,
       "sacrificeCount": 0
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Xe tại e5 tấn công quân ở g5, để khai thác quân phía sau ở h5. Nhánh mẫu: Bg5+ · Nxg5 · hxg5+ · Kxg5 · Re5+ · Kf6 · Rxh5."
+    "solution": "Xe tại e5 tấn công quân ở g5, để khai thác quân phía sau ở h5."
   },
   {
     "title": "Sanal,V — Carlsen,M",
@@ -6103,14 +6103,14 @@
     "difficulty": {
       "level": "C*",
       "status": "suggested",
-      "reason": "Cần tính trước 2–3 nước chuẩn bị; không có hy sinh đã xác nhận trong nhánh.",
+      "reason": "Cần tính trước 2–3 nước chuẩn bị; không có thí quân đã xác nhận trong nhánh.",
       "solverMoves": 4,
       "sacrificeCount": 0
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Xe tại c8 tấn công quân ở c5, để khai thác quân phía sau ở c4. Nhánh mẫu: R3f4+ · Kd5 · Rd8+ · Kc5 · Rc8+ · Kb5 · Rcxc4."
+    "solution": "Xe tại c8 tấn công quân ở c5, để khai thác quân phía sau ở c4."
   },
   {
     "title": "Gligoric, Svetozar — Wade, Robert Graham",
@@ -6143,14 +6143,14 @@
     "difficulty": {
       "level": "C*",
       "status": "suggested",
-      "reason": "Cần tính trước 2–3 nước chuẩn bị; không có hy sinh đã xác nhận trong nhánh.",
+      "reason": "Cần tính trước 2–3 nước chuẩn bị; không có thí quân đã xác nhận trong nhánh.",
       "solverMoves": 4,
       "sacrificeCount": 0
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Xe tại e8 tấn công quân ở e6, để khai thác quân phía sau ở e2. Nhánh mẫu: Qg5+ · Ke6 · Rxe2+ · Qxe2 · Re8+ · Kd7 · Rxe2."
+    "solution": "Xe tại e8 tấn công quân ở e6, để khai thác quân phía sau ở e2."
   },
   {
     "title": "Parma, Bruno — Larsen, Bent",
@@ -6183,14 +6183,14 @@
     "difficulty": {
       "level": "C*",
       "status": "suggested",
-      "reason": "Cần tính trước 2–3 nước chuẩn bị; không có hy sinh đã xác nhận trong nhánh.",
+      "reason": "Cần tính trước 2–3 nước chuẩn bị; không có thí quân đã xác nhận trong nhánh.",
       "solverMoves": 4,
       "sacrificeCount": 0
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Xe tại d8 tấn công quân ở d6, để khai thác quân phía sau ở d1. Nhánh mẫu: Qf5+ · Kc7 · Rc8+ · Kd6 · Rd8+ · Ke7 · Rxd1."
+    "solution": "Xe tại d8 tấn công quân ở d6, để khai thác quân phía sau ở d1."
   },
   {
     "title": "Lee, Francis — Blackburne, Joseph Henry",
@@ -6223,14 +6223,14 @@
     "difficulty": {
       "level": "C*",
       "status": "suggested",
-      "reason": "Cần tính trước 2–3 nước chuẩn bị; không có hy sinh đã xác nhận trong nhánh.",
+      "reason": "Cần tính trước 2–3 nước chuẩn bị; không có thí quân đã xác nhận trong nhánh.",
       "solverMoves": 4,
       "sacrificeCount": 0
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Hậu tại g1 tấn công quân ở e1, để khai thác quân phía sau ở d1. Nhánh mẫu: Bh3+ · Kf2 · Qg2+ · Ke1 · Qxg1+ · Kd2 · Qxd1+."
+    "solution": "Hậu tại g1 tấn công quân ở e1, để khai thác quân phía sau ở d1."
   },
   {
     "title": "Carlsen,M — Aronian,L",
@@ -6263,14 +6263,14 @@
     "difficulty": {
       "level": "C*",
       "status": "suggested",
-      "reason": "Cần tính trước 2–3 nước chuẩn bị; không có hy sinh đã xác nhận trong nhánh.",
+      "reason": "Cần tính trước 2–3 nước chuẩn bị; không có thí quân đã xác nhận trong nhánh.",
       "solverMoves": 4,
       "sacrificeCount": 0
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Xe tại a8 tấn công quân ở b8, để khai thác quân phía sau ở h8. Nhánh mẫu: Bxd6 · Kxd6 · Qc6+ · Ke7 · Ra8 · Qd6 · Rxh8."
+    "solution": "Xe tại a8 tấn công quân ở b8, để khai thác quân phía sau ở h8."
   },
   {
     "title": "Bologan,V — Bachmann,Ax",
@@ -6303,14 +6303,14 @@
     "difficulty": {
       "level": "C*",
       "status": "suggested",
-      "reason": "Cần tính trước 2–3 nước chuẩn bị; không có hy sinh đã xác nhận trong nhánh.",
+      "reason": "Cần tính trước 2–3 nước chuẩn bị; không có thí quân đã xác nhận trong nhánh.",
       "solverMoves": 4,
       "sacrificeCount": 0
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Xe tại f7 tấn công quân ở d7, để khai thác quân phía sau ở c7. Nhánh mẫu: Rf3+ · Ke7 · Qxg5+ · Kd7 · Rf7+ · Kc6 · Rxc7+."
+    "solution": "Xe tại f7 tấn công quân ở d7, để khai thác quân phía sau ở c7."
   },
   {
     "title": "Carlsen,M — Elsness,F",
@@ -6343,14 +6343,14 @@
     "difficulty": {
       "level": "C*",
       "status": "suggested",
-      "reason": "Cần tính trước 2–3 nước chuẩn bị; không có hy sinh đã xác nhận trong nhánh.",
+      "reason": "Cần tính trước 2–3 nước chuẩn bị; không có thí quân đã xác nhận trong nhánh.",
       "solverMoves": 4,
       "sacrificeCount": 0
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Hậu tại h8 tấn công quân ở f8, để khai thác quân phía sau ở a8. Nhánh mẫu: Rh4 · Qf6 · Qh7+ · Kf8 · Qh8+ · Ke7 · Qxa8."
+    "solution": "Hậu tại h8 tấn công quân ở f8, để khai thác quân phía sau ở a8."
   },
   {
     "title": "Blackburne, Joseph Henry — Mason, James",
@@ -6383,14 +6383,14 @@
     "difficulty": {
       "level": "C*",
       "status": "suggested",
-      "reason": "Cần tính trước 2–3 nước chuẩn bị; không có hy sinh đã xác nhận trong nhánh.",
+      "reason": "Cần tính trước 2–3 nước chuẩn bị; không có thí quân đã xác nhận trong nhánh.",
       "solverMoves": 4,
       "sacrificeCount": 0
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Hậu tại c4 tấn công quân ở f4, để khai thác quân phía sau ở h4. Nhánh mẫu: Qe2+ · Kg3 · Rg1+ · Kf4 · Qc4+ · Ke3 · Qxh4."
+    "solution": "Hậu tại c4 tấn công quân ở f4, để khai thác quân phía sau ở h4."
   },
   {
     "title": "Anand,V — Aronian,L",
@@ -6423,14 +6423,14 @@
     "difficulty": {
       "level": "C*",
       "status": "suggested",
-      "reason": "Cần tính trước 2–3 nước chuẩn bị; không có hy sinh đã xác nhận trong nhánh.",
+      "reason": "Cần tính trước 2–3 nước chuẩn bị; không có thí quân đã xác nhận trong nhánh.",
       "solverMoves": 4,
       "sacrificeCount": 0
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Xe tại h1 tấn công quân ở f1, để khai thác quân phía sau ở e1. Nhánh mẫu: Qh2+ · Kf1 · Qh1+ · Qxh1 · Rxh1+ · Kg2 · Rxe1."
+    "solution": "Xe tại h1 tấn công quân ở f1, để khai thác quân phía sau ở e1."
   },
   {
     "title": "Holm Petersen, Sejer — Larsen, Bent",
@@ -6463,14 +6463,14 @@
     "difficulty": {
       "level": "C*",
       "status": "suggested",
-      "reason": "Cần tính trước 2–3 nước chuẩn bị; không có hy sinh đã xác nhận trong nhánh.",
+      "reason": "Cần tính trước 2–3 nước chuẩn bị; không có thí quân đã xác nhận trong nhánh.",
       "solverMoves": 4,
       "sacrificeCount": 0
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Xe tại f8 tấn công quân ở f5, để khai thác quân phía sau ở f3. Nhánh mẫu: Qd2+ · Ke4 · Qd4+ · Kf5 · Rf8+ · Kxg5 · Rxf3."
+    "solution": "Xe tại f8 tấn công quân ở f5, để khai thác quân phía sau ở f3."
   },
   {
     "title": "Bologan,V — Kakageldyev,A",
@@ -6503,14 +6503,14 @@
     "difficulty": {
       "level": "C*",
       "status": "suggested",
-      "reason": "Cần tính trước 2–3 nước chuẩn bị; không có hy sinh đã xác nhận trong nhánh.",
+      "reason": "Cần tính trước 2–3 nước chuẩn bị; không có thí quân đã xác nhận trong nhánh.",
       "solverMoves": 4,
       "sacrificeCount": 0
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Tượng tại g6 tấn công quân ở f7, để khai thác quân phía sau ở e8. Nhánh mẫu: Qh7+ · Kf8 · Qxh6+ · Kf7 · Bg6+ · Ke6 · Bxe8+."
+    "solution": "Tượng tại g6 tấn công quân ở f7, để khai thác quân phía sau ở e8."
   },
   {
     "title": "Martynov,Roman — Bologan,V",
@@ -6543,14 +6543,14 @@
     "difficulty": {
       "level": "C*",
       "status": "suggested",
-      "reason": "Cần tính trước 2–3 nước chuẩn bị; không có hy sinh đã xác nhận trong nhánh.",
+      "reason": "Cần tính trước 2–3 nước chuẩn bị; không có thí quân đã xác nhận trong nhánh.",
       "solverMoves": 4,
       "sacrificeCount": 0
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Hậu tại a8 tấn công quân ở d8, để khai thác quân phía sau ở h8. Nhánh mẫu: Qxc6+ · Kd8 · Bd5 · Qb6 · Qa8+ · Kd7 · Qxh8."
+    "solution": "Hậu tại a8 tấn công quân ở d8, để khai thác quân phía sau ở h8."
   },
   {
     "title": "Ivkov, Borislav — Larsen, Bent",
@@ -6583,14 +6583,14 @@
     "difficulty": {
       "level": "C*",
       "status": "suggested",
-      "reason": "Cần tính trước 2–3 nước chuẩn bị; không có hy sinh đã xác nhận trong nhánh.",
+      "reason": "Cần tính trước 2–3 nước chuẩn bị; không có thí quân đã xác nhận trong nhánh.",
       "solverMoves": 4,
       "sacrificeCount": 0
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Xe tại a1 tấn công quân ở e1, để khai thác quân phía sau ở h1. Nhánh mẫu: Qb5 · a4 · axb4 · axb5 · Rxa1+ · Ke2 · Rxh1."
+    "solution": "Xe tại a1 tấn công quân ở e1, để khai thác quân phía sau ở h1."
   },
   {
     "title": "Baramidze,D — Bologan,V",
@@ -6623,14 +6623,14 @@
     "difficulty": {
       "level": "C*",
       "status": "suggested",
-      "reason": "Cần tính trước 2–3 nước chuẩn bị; không có hy sinh đã xác nhận trong nhánh.",
+      "reason": "Cần tính trước 2–3 nước chuẩn bị; không có thí quân đã xác nhận trong nhánh.",
       "solverMoves": 4,
       "sacrificeCount": 0
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Hậu tại a1 tấn công quân ở a4, để khai thác quân phía sau ở a8. Nhánh mẫu: Qgxc3+ · Qxc3+ · Qxc3+ · Ka4 · Qa1+ · Kb5 · Qxa8."
+    "solution": "Hậu tại a1 tấn công quân ở a4, để khai thác quân phía sau ở a8."
   },
   {
     "title": "Carlsen,M — Guseinov,G",
@@ -6663,14 +6663,14 @@
     "difficulty": {
       "level": "C*",
       "status": "suggested",
-      "reason": "Cần tính trước 2–3 nước chuẩn bị; không có hy sinh đã xác nhận trong nhánh.",
+      "reason": "Cần tính trước 2–3 nước chuẩn bị; không có thí quân đã xác nhận trong nhánh.",
       "solverMoves": 4,
       "sacrificeCount": 0
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Hậu tại h1 tấn công quân ở e1, để khai thác quân phía sau ở a1. Nhánh mẫu: Bxd5 · cxd5 · Qh3+ · Ke1 · Qh1+ · Kd2 · Qxa1."
+    "solution": "Hậu tại h1 tấn công quân ở e1, để khai thác quân phía sau ở a1."
   },
   {
     "title": "Bronstein, David I — Gulko, Boris F",
@@ -6703,14 +6703,14 @@
     "difficulty": {
       "level": "C*",
       "status": "suggested",
-      "reason": "Cần tính trước 2–3 nước chuẩn bị; không có hy sinh đã xác nhận trong nhánh.",
+      "reason": "Cần tính trước 2–3 nước chuẩn bị; không có thí quân đã xác nhận trong nhánh.",
       "solverMoves": 4,
       "sacrificeCount": 0
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Xe tại g6 tấn công quân ở d6, để khai thác quân phía sau ở a6. Nhánh mẫu: Qh7+ · Ke5 · Qe4+ · Kd6 · Rg6+ · Kc5 · Rxa6."
+    "solution": "Xe tại g6 tấn công quân ở d6, để khai thác quân phía sau ở a6."
   },
   {
     "title": "Bologan,V — Granda Zuniga,J",
@@ -6743,14 +6743,14 @@
     "difficulty": {
       "level": "C*",
       "status": "suggested",
-      "reason": "Cần tính trước 2–3 nước chuẩn bị; không có hy sinh đã xác nhận trong nhánh.",
+      "reason": "Cần tính trước 2–3 nước chuẩn bị; không có thí quân đã xác nhận trong nhánh.",
       "solverMoves": 4,
       "sacrificeCount": 0
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Hậu tại f8 tấn công quân ở f6, để khai thác quân phía sau ở f2. Nhánh mẫu: Qe8+ · Kg7 · Ne6+ · Kf6 · Qf8+ · Kxe6 · Qxf2."
+    "solution": "Hậu tại f8 tấn công quân ở f6, để khai thác quân phía sau ở f2."
   },
   {
     "title": "Mamedyarov,S — Carlsen,M",
@@ -6785,14 +6785,14 @@
     "difficulty": {
       "level": "C*",
       "status": "suggested",
-      "reason": "Cần tính trước 2–3 nước chuẩn bị; không có hy sinh đã xác nhận trong nhánh.",
+      "reason": "Cần tính trước 2–3 nước chuẩn bị; không có thí quân đã xác nhận trong nhánh.",
       "solverMoves": 5,
       "sacrificeCount": 0
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Hậu tại h1 tấn công quân ở f1, để khai thác quân phía sau ở c1. Nhánh mẫu: Rxd8 · Qe3 · Qxh2 · Qg5+ · Kh7 · Qxd8 · Qh1+ · Ke2 · Qxc1."
+    "solution": "Hậu tại h1 tấn công quân ở f1, để khai thác quân phía sau ở c1."
   },
   {
     "title": "Kramnik,V — Anand,V",
@@ -6827,14 +6827,14 @@
     "difficulty": {
       "level": "C*",
       "status": "suggested",
-      "reason": "Cần tính trước 2–3 nước chuẩn bị; không có hy sinh đã xác nhận trong nhánh.",
+      "reason": "Cần tính trước 2–3 nước chuẩn bị; không có thí quân đã xác nhận trong nhánh.",
       "solverMoves": 5,
       "sacrificeCount": 0
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Xe tại d8 tấn công quân ở f8, để khai thác quân phía sau ở h8. Nhánh mẫu: Rc6 · Qd7 · Rc8+ · Bd8 · Ne5 · Qxa4 · Rxd8+ · Ke7 · Rxh8."
+    "solution": "Xe tại d8 tấn công quân ở f8, để khai thác quân phía sau ở h8."
   },
   {
     "title": "Winants,L — Bologan,V",
@@ -6869,14 +6869,14 @@
     "difficulty": {
       "level": "C*",
       "status": "suggested",
-      "reason": "Cần tính trước 2–3 nước chuẩn bị; không có hy sinh đã xác nhận trong nhánh.",
+      "reason": "Cần tính trước 2–3 nước chuẩn bị; không có thí quân đã xác nhận trong nhánh.",
       "solverMoves": 5,
       "sacrificeCount": 0
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Xe tại b3 tấn công quân ở d3, để khai thác quân phía sau ở f3. Nhánh mẫu: fxg6 · Kd3 · f4 · d6 · f3 · Bxf3 · Rb3+ · Kc4 · Rxf3."
+    "solution": "Xe tại b3 tấn công quân ở d3, để khai thác quân phía sau ở f3."
   },
   {
     "title": "Bogoljubow, Efim — Bohatirchuk, Fedor Parfenovich",
@@ -6911,14 +6911,14 @@
     "difficulty": {
       "level": "C*",
       "status": "suggested",
-      "reason": "Cần tính trước 2–3 nước chuẩn bị; không có hy sinh đã xác nhận trong nhánh.",
+      "reason": "Cần tính trước 2–3 nước chuẩn bị; không có thí quân đã xác nhận trong nhánh.",
       "solverMoves": 5,
       "sacrificeCount": 0
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Hậu tại h7 tấn công quân ở e7, để khai thác quân phía sau ở a7. Nhánh mẫu: Ne6 · Nd5 · Qh8+ · Kf7 · Nxd8+ · Ke7 · Qxh7+ · Kxd8 · Qxa7."
+    "solution": "Hậu tại h7 tấn công quân ở e7, để khai thác quân phía sau ở a7."
   },
   {
     "title": "Alekhine, Alexander — Yates, Frederick",
@@ -6961,14 +6961,14 @@
     "difficulty": {
       "level": "C*",
       "status": "suggested",
-      "reason": "Cần tính trước 2–3 nước chuẩn bị; không có hy sinh đã xác nhận trong nhánh.",
+      "reason": "Cần tính trước 2–3 nước chuẩn bị; không có thí quân đã xác nhận trong nhánh.",
       "solverMoves": 5,
       "sacrificeCount": 0
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Hậu tại f1 tấn công quân ở f3, để khai thác quân phía sau ở f7. Nhánh mẫu: Qxc3+ · Kf2 · Qe1+ · Kf3 · Rc3+ · Bd3 · Qf1+ · Kg3 · Qxf7."
+    "solution": "Hậu tại f1 tấn công quân ở f3, để khai thác quân phía sau ở f7."
   },
   {
     "title": "Bologan,V — Pogorelov,R",
@@ -7003,14 +7003,14 @@
     "difficulty": {
       "level": "C*",
       "status": "suggested",
-      "reason": "Cần tính trước 2–3 nước chuẩn bị; không có hy sinh đã xác nhận trong nhánh.",
+      "reason": "Cần tính trước 2–3 nước chuẩn bị; không có thí quân đã xác nhận trong nhánh.",
       "solverMoves": 5,
       "sacrificeCount": 0
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Xe tại g8 tấn công quân ở e8, để khai thác quân phía sau ở c8. Nhánh mẫu: Rxg7+ · Rxg7 · Rxg7+ · Kf8 · e7+ · Ke8 · Rg8+ · Kxe7 · Rxc8."
+    "solution": "Xe tại g8 tấn công quân ở e8, để khai thác quân phía sau ở c8."
   },
   {
     "title": "Anand, Viswanathan — Quillan, Gary",
@@ -7045,14 +7045,14 @@
     "difficulty": {
       "level": "C*",
       "status": "suggested",
-      "reason": "Cần tính trước 2–3 nước chuẩn bị; không có hy sinh đã xác nhận trong nhánh.",
+      "reason": "Cần tính trước 2–3 nước chuẩn bị; không có thí quân đã xác nhận trong nhánh.",
       "solverMoves": 5,
       "sacrificeCount": 0
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Xe tại b7 tấn công quân ở d7, để khai thác quân phía sau ở f7. Nhánh mẫu: cxb5 · Bxb5 · Rxb5 · Rc8 · Bxc6+ · Nxc6 · Rb7+ · Ke8 · Rxf7."
+    "solution": "Xe tại b7 tấn công quân ở d7, để khai thác quân phía sau ở f7."
   },
   {
     "title": "Karpov, Anatoly — Geller, Efim P",
@@ -7087,14 +7087,14 @@
     "difficulty": {
       "level": "C*",
       "status": "suggested",
-      "reason": "Cần tính trước 2–3 nước chuẩn bị; không có hy sinh đã xác nhận trong nhánh.",
+      "reason": "Cần tính trước 2–3 nước chuẩn bị; không có thí quân đã xác nhận trong nhánh.",
       "solverMoves": 5,
       "sacrificeCount": 0
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Hậu tại h8 tấn công quân ở f8, để khai thác quân phía sau ở d8. Nhánh mẫu: Qxh6+ · Ke8 · Bb5+ · Kf7 · Qh7+ · Kf8 · Qh8+ · Kf7 · Qxd8."
+    "solution": "Hậu tại h8 tấn công quân ở f8, để khai thác quân phía sau ở d8."
   },
   {
     "title": "Zinkl, Adolf Julius — Blackburne, Joseph Henry",
@@ -7129,14 +7129,14 @@
     "difficulty": {
       "level": "C*",
       "status": "suggested",
-      "reason": "Cần tính trước 2–3 nước chuẩn bị; không có hy sinh đã xác nhận trong nhánh.",
+      "reason": "Cần tính trước 2–3 nước chuẩn bị; không có thí quân đã xác nhận trong nhánh.",
       "solverMoves": 5,
       "sacrificeCount": 0
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Hậu tại e4 tấn công quân ở f5, để khai thác quân phía sau ở h7. Nhánh mẫu: Qd2+ · Kg3 · Qe3+ · Kg4 · Bf3+ · Kf5 · Qe4+ · Kg5 · Qxh7."
+    "solution": "Hậu tại e4 tấn công quân ở f5, để khai thác quân phía sau ở h7."
   },
   {
     "title": "Bologan,V — Tkachiev,V",
@@ -7171,14 +7171,14 @@
     "difficulty": {
       "level": "C*",
       "status": "suggested",
-      "reason": "Cần tính trước 2–3 nước chuẩn bị; không có hy sinh đã xác nhận trong nhánh.",
+      "reason": "Cần tính trước 2–3 nước chuẩn bị; không có thí quân đã xác nhận trong nhánh.",
       "solverMoves": 5,
       "sacrificeCount": 0
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Xe tại c8 tấn công quân ở e8, để khai thác quân phía sau ở h8. Nhánh mẫu: Qxb4 · Rc2+ · Rd2 · a5 · Rxc2 · axb4 · Rc8+ · Ke7 · Rxh8."
+    "solution": "Xe tại c8 tấn công quân ở e8, để khai thác quân phía sau ở h8."
   },
   {
     "title": "Beliavsky,A — Borsuk,K",
@@ -7213,14 +7213,14 @@
     "difficulty": {
       "level": "C*",
       "status": "suggested",
-      "reason": "Cần tính trước 2–3 nước chuẩn bị; không có hy sinh đã xác nhận trong nhánh.",
+      "reason": "Cần tính trước 2–3 nước chuẩn bị; không có thí quân đã xác nhận trong nhánh.",
       "solverMoves": 5,
       "sacrificeCount": 0
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Xe tại e8 tấn công quân ở c8, để khai thác quân phía sau ở b8. Nhánh mẫu: Kg2 · Kd8 · Rf8+ · Re8 · Qf6+ · Kc8 · Rxe8+ · Kb7 · Rxb8+."
+    "solution": "Xe tại e8 tấn công quân ở c8, để khai thác quân phía sau ở b8."
   },
   {
     "title": "Lasker, Emanuel — Bogoljubow, Efim",
@@ -7255,14 +7255,14 @@
     "difficulty": {
       "level": "C*",
       "status": "suggested",
-      "reason": "Cần tính trước 2–3 nước chuẩn bị; không có hy sinh đã xác nhận trong nhánh.",
+      "reason": "Cần tính trước 2–3 nước chuẩn bị; không có thí quân đã xác nhận trong nhánh.",
       "solverMoves": 5,
       "sacrificeCount": 0
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Xe tại a7 tấn công quân ở d7, để khai thác quân phía sau ở h7. Nhánh mẫu: h6 · Rxf3+ · Kg5 · Rh3 · h7 · Rxh7 · Ra7+ · Kd6 · Rxh7."
+    "solution": "Xe tại a7 tấn công quân ở d7, để khai thác quân phía sau ở h7."
   },
   {
     "title": "Suhle, Berthold — Anderssen, Adolf",
@@ -7297,14 +7297,14 @@
     "difficulty": {
       "level": "C*",
       "status": "suggested",
-      "reason": "Cần tính trước 2–3 nước chuẩn bị; không có hy sinh đã xác nhận trong nhánh.",
+      "reason": "Cần tính trước 2–3 nước chuẩn bị; không có thí quân đã xác nhận trong nhánh.",
       "solverMoves": 5,
       "sacrificeCount": 0
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Xe tại e2 tấn công quân ở g2, để khai thác quân phía sau ở h2. Nhánh mẫu: Nf5+ · Kg2 · Rxe4 · Nd6+ · Nxd6 · exd6 · Re2+ · Kh1 · Rxh2+."
+    "solution": "Xe tại e2 tấn công quân ở g2, để khai thác quân phía sau ở h2."
   },
   {
     "title": "Anand, Viswanathan — Gelfand, Boris",
@@ -7351,14 +7351,14 @@
     "difficulty": {
       "level": "C*",
       "status": "suggested",
-      "reason": "Cần tính trước 2–3 nước chuẩn bị; không có hy sinh đã xác nhận trong nhánh.",
+      "reason": "Cần tính trước 2–3 nước chuẩn bị; không có thí quân đã xác nhận trong nhánh.",
       "solverMoves": 5,
       "sacrificeCount": 0
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Hậu tại h4 tấn công quân ở f4, để khai thác quân phía sau ở a4. Nhánh mẫu: Qd6+ · Kd4 · Qb6+ · Ke5 · Qf6+ · Kf4 · Qh4+ · Ke5 · Qxa4."
+    "solution": "Hậu tại h4 tấn công quân ở f4, để khai thác quân phía sau ở a4."
   },
   {
     "title": "Carlsen,M — Grachev,B",
@@ -7393,14 +7393,14 @@
     "difficulty": {
       "level": "C*",
       "status": "suggested",
-      "reason": "Cần tính trước 2–3 nước chuẩn bị; không có hy sinh đã xác nhận trong nhánh.",
+      "reason": "Cần tính trước 2–3 nước chuẩn bị; không có thí quân đã xác nhận trong nhánh.",
       "solverMoves": 5,
       "sacrificeCount": 0
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Xe tại g1 tấn công quân ở e1, để khai thác quân phía sau ở c1. Nhánh mẫu: Bxd5+ · Kg1 · Rg2+ · Kf1 · Rf8+ · Ke1 · Rg1+ · Ke2 · Rxc1."
+    "solution": "Xe tại g1 tấn công quân ở e1, để khai thác quân phía sau ở c1."
   },
   {
     "title": "Bologan,V — Hansen,MadsS",
@@ -7435,14 +7435,14 @@
     "difficulty": {
       "level": "C*",
       "status": "suggested",
-      "reason": "Cần tính trước 2–3 nước chuẩn bị; không có hy sinh đã xác nhận trong nhánh.",
+      "reason": "Cần tính trước 2–3 nước chuẩn bị; không có thí quân đã xác nhận trong nhánh.",
       "solverMoves": 5,
       "sacrificeCount": 0
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Xe tại c8 tấn công quân ở e8, để khai thác quân phía sau ở g8. Nhánh mẫu: Rc1 · Rxg2+ · Kxg2 · Rg8+ · Kf2 · Ke8 · Rc8+ · Kf7 · Rxg8."
+    "solution": "Xe tại c8 tấn công quân ở e8, để khai thác quân phía sau ở g8."
   },
   {
     "title": "Capablanca, Jose Raul — Zubarev, Nikolay",
@@ -7477,14 +7477,14 @@
     "difficulty": {
       "level": "C*",
       "status": "suggested",
-      "reason": "Cần tính trước 2–3 nước chuẩn bị; không có hy sinh đã xác nhận trong nhánh.",
+      "reason": "Cần tính trước 2–3 nước chuẩn bị; không có thí quân đã xác nhận trong nhánh.",
       "solverMoves": 5,
       "sacrificeCount": 0
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Xe tại d1 tấn công quân ở d6, để khai thác quân phía sau ở d7. Nhánh mẫu: Re1+ · Be5 · d6+ · Ke6 · Qb3+ · Kxd6 · Rd1+ · Kc7 · Rxd7+."
+    "solution": "Xe tại d1 tấn công quân ở d6, để khai thác quân phía sau ở d7."
   },
   {
     "title": "Tartakower, Saviely — Bogoljubow, Efim",
@@ -7519,14 +7519,14 @@
     "difficulty": {
       "level": "C*",
       "status": "suggested",
-      "reason": "Cần tính trước 2–3 nước chuẩn bị; không có hy sinh đã xác nhận trong nhánh.",
+      "reason": "Cần tính trước 2–3 nước chuẩn bị; không có thí quân đã xác nhận trong nhánh.",
       "solverMoves": 5,
       "sacrificeCount": 0
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Xe tại a2 tấn công quân ở d2, để khai thác quân phía sau ở g2. Nhánh mẫu: Ra1 · Kd2 · Rxb3 · Rcxb3 · Bxb3 · Rxb3 · Ra2+ · Ke3 · Rxg2."
+    "solution": "Xe tại a2 tấn công quân ở d2, để khai thác quân phía sau ở g2."
   },
   {
     "title": "Kieninger, Georg — Bogoljubow, Efim",
@@ -7561,14 +7561,14 @@
     "difficulty": {
       "level": "C*",
       "status": "suggested",
-      "reason": "Cần tính trước 2–3 nước chuẩn bị; không có hy sinh đã xác nhận trong nhánh.",
+      "reason": "Cần tính trước 2–3 nước chuẩn bị; không có thí quân đã xác nhận trong nhánh.",
       "solverMoves": 5,
       "sacrificeCount": 0
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Xe tại a7 tấn công quân ở f7, để khai thác quân phía sau ở g7. Nhánh mẫu: fxg7+ · Rxg7 · Rxh6+ · Kg8 · Ra8+ · Kf7 · Ra7+ · Kg8 · Rxg7+."
+    "solution": "Xe tại a7 tấn công quân ở f7, để khai thác quân phía sau ở g7."
   },
   {
     "title": "Bernstein, Ossip — Chigorin, Mikhail",
@@ -7603,14 +7603,14 @@
     "difficulty": {
       "level": "C*",
       "status": "suggested",
-      "reason": "Cần tính trước 2–3 nước chuẩn bị; không có hy sinh đã xác nhận trong nhánh.",
+      "reason": "Cần tính trước 2–3 nước chuẩn bị; không có thí quân đã xác nhận trong nhánh.",
       "solverMoves": 5,
       "sacrificeCount": 0
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Hậu tại g8 tấn công quân ở e6, để khai thác quân phía sau ở d5. Nhánh mẫu: Qh6+ · Kf7 · Qh7+ · Kf6 · Be7+ · Ke6 · Qg8+ · Kxe7 · Qxd5."
+    "solution": "Hậu tại g8 tấn công quân ở e6, để khai thác quân phía sau ở d5."
   },
   {
     "title": "Navara,D — Dominguez Perez,L",
@@ -7643,14 +7643,14 @@
     "difficulty": {
       "level": "D",
       "status": "suggested",
-      "reason": "Hy sinh phức tạp và hơn 3 nước của bên giải để khai thác đòn xiên.",
+      "reason": "Thí quân phức tạp và hơn 3 nước của bên giải để khai thác đòn xiên.",
       "solverMoves": 4,
       "sacrificeCount": 1
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Hậu tại h1 tấn công quân ở f1, để khai thác quân phía sau ở c1. Nhánh mẫu: c2 · Rc8 · c1=Q+ · Rxc1 · Qh1+ · Kf2 · Qxc1."
+    "solution": "Hậu tại h1 tấn công quân ở f1, để khai thác quân phía sau ở c1."
   },
   {
     "title": "Malakhov,V — Iskusnyh,S",
@@ -7693,14 +7693,14 @@
     "difficulty": {
       "level": "D",
       "status": "suggested",
-      "reason": "Hy sinh phức tạp và hơn 3 nước của bên giải để khai thác đòn xiên.",
+      "reason": "Thí quân phức tạp và hơn 3 nước của bên giải để khai thác đòn xiên.",
       "solverMoves": 4,
       "sacrificeCount": 1
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Hậu tại h8 tấn công quân ở e8, để khai thác quân phía sau ở a8. Nhánh mẫu: Qh7+ · Ke8 · Rxc7 · Rxc7 · Qh8+ · Ke7 · Qxa8."
+    "solution": "Hậu tại h8 tấn công quân ở e8, để khai thác quân phía sau ở a8."
   },
   {
     "title": "Navara,D — Anton Guijarro,D",
@@ -7743,14 +7743,14 @@
     "difficulty": {
       "level": "D",
       "status": "suggested",
-      "reason": "Hy sinh phức tạp và hơn 3 nước của bên giải để khai thác đòn xiên.",
+      "reason": "Thí quân phức tạp và hơn 3 nước của bên giải để khai thác đòn xiên.",
       "solverMoves": 4,
       "sacrificeCount": 1
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Hậu tại h1 tấn công quân ở f1, để khai thác quân phía sau ở c1. Nhánh mẫu: Qh2+ · Kf1 · Rxc1+ · Rxc1 · Qh1+ · Ke2 · Qxc1."
+    "solution": "Hậu tại h1 tấn công quân ở f1, để khai thác quân phía sau ở c1."
   },
   {
     "title": "Eisenberg, LR. — Janowsky, Dawid Markelowicz",
@@ -7791,14 +7791,14 @@
     "difficulty": {
       "level": "D",
       "status": "suggested",
-      "reason": "Hy sinh phức tạp và hơn 3 nước của bên giải để khai thác đòn xiên.",
+      "reason": "Thí quân phức tạp và hơn 3 nước của bên giải để khai thác đòn xiên.",
       "solverMoves": 4,
       "sacrificeCount": 1
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Tượng tại b7 tấn công quân ở f3, để khai thác quân phía sau ở h1. Nhánh mẫu: Bd6+ · Kg2 · Rxf3 · Kxf3 · Bb7+ · Ke3 · Bxh1."
+    "solution": "Tượng tại b7 tấn công quân ở f3, để khai thác quân phía sau ở h1."
   },
   {
     "title": "Tal, Mihail — Ftacnik, Lubomir",
@@ -7831,14 +7831,14 @@
     "difficulty": {
       "level": "D",
       "status": "suggested",
-      "reason": "Hy sinh phức tạp và hơn 3 nước của bên giải để khai thác đòn xiên.",
+      "reason": "Thí quân phức tạp và hơn 3 nước của bên giải để khai thác đòn xiên.",
       "solverMoves": 4,
       "sacrificeCount": 1
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Xe tại b7 tấn công quân ở d7, để khai thác quân phía sau ở g7. Nhánh mẫu: Rb8+ · Ke7 · Qxd7+ · Kxd7 · Rb7+ · Kd8 · Rxg7."
+    "solution": "Xe tại b7 tấn công quân ở d7, để khai thác quân phía sau ở g7."
   },
   {
     "title": "Anand,V — Radjabov,T",
@@ -7871,14 +7871,14 @@
     "difficulty": {
       "level": "D",
       "status": "suggested",
-      "reason": "Hy sinh phức tạp và hơn 3 nước của bên giải để khai thác đòn xiên.",
+      "reason": "Thí quân phức tạp và hơn 3 nước của bên giải để khai thác đòn xiên.",
       "solverMoves": 4,
       "sacrificeCount": 1
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Xe tại f2 tấn công quân ở f4, để khai thác quân phía sau ở f8. Nhánh mẫu: Qxg7+ · Kf4 · Qxf8+ · Qxf8 · Rxf2+ · Ke5 · Rxf8."
+    "solution": "Xe tại f2 tấn công quân ở f4, để khai thác quân phía sau ở f8."
   },
   {
     "title": "Gelfand,B — Karpov,Ana",
@@ -7911,14 +7911,14 @@
     "difficulty": {
       "level": "D",
       "status": "suggested",
-      "reason": "Hy sinh phức tạp và hơn 3 nước của bên giải để khai thác đòn xiên.",
+      "reason": "Thí quân phức tạp và hơn 3 nước của bên giải để khai thác đòn xiên.",
       "solverMoves": 4,
       "sacrificeCount": 1
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Hậu tại h1 tấn công quân ở f1, để khai thác quân phía sau ở a1. Nhánh mẫu: Qe4+ · Kf1 · a1=Q+ · Qxa1 · Qh1+ · Ke2 · Qxa1."
+    "solution": "Hậu tại h1 tấn công quân ở f1, để khai thác quân phía sau ở a1."
   },
   {
     "title": "Najdorf, Miguel — Bolbochan, Jacobo",
@@ -7951,14 +7951,14 @@
     "difficulty": {
       "level": "D",
       "status": "suggested",
-      "reason": "Hy sinh phức tạp và hơn 3 nước của bên giải để khai thác đòn xiên.",
+      "reason": "Thí quân phức tạp và hơn 3 nước của bên giải để khai thác đòn xiên.",
       "solverMoves": 4,
       "sacrificeCount": 1
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Tượng tại g5 tấn công quân ở f6, để khai thác quân phía sau ở d8. Nhánh mẫu: f6 · Bxf6 · Rxf6 · Qxf6 · Bg5 · Qg7 · Bxd8."
+    "solution": "Tượng tại g5 tấn công quân ở f6, để khai thác quân phía sau ở d8."
   },
   {
     "title": "Gelfand,B — Huzman,A",
@@ -8005,14 +8005,14 @@
     "difficulty": {
       "level": "D",
       "status": "suggested",
-      "reason": "Hy sinh phức tạp và hơn 3 nước của bên giải để khai thác đòn xiên.",
+      "reason": "Thí quân phức tạp và hơn 3 nước của bên giải để khai thác đòn xiên.",
       "solverMoves": 4,
       "sacrificeCount": 1
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Xe tại h8 tấn công quân ở e8, để khai thác quân phía sau ở b8. Nhánh mẫu: b7 · Rb4 · b8=Q+ · Rxb8 · Rh8+ · Ke7 · Rxb8."
+    "solution": "Xe tại h8 tấn công quân ở e8, để khai thác quân phía sau ở b8."
   },
   {
     "title": "Jobava,Ba — Nemsadze,Daviti",
@@ -8045,14 +8045,14 @@
     "difficulty": {
       "level": "D",
       "status": "suggested",
-      "reason": "Hy sinh phức tạp và hơn 3 nước của bên giải để khai thác đòn xiên.",
+      "reason": "Thí quân phức tạp và hơn 3 nước của bên giải để khai thác đòn xiên.",
       "solverMoves": 4,
       "sacrificeCount": 1
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Xe tại a8 tấn công quân ở c8, để khai thác quân phía sau ở g8. Nhánh mẫu: Qxd6 · Rxd6 · Ra8+ · Bxa8 · Rxa8+ · Kc7 · Rxg8."
+    "solution": "Xe tại a8 tấn công quân ở c8, để khai thác quân phía sau ở g8."
   },
   {
     "title": "Keres, Paul — Spassky, Boris V",
@@ -8085,14 +8085,14 @@
     "difficulty": {
       "level": "D",
       "status": "suggested",
-      "reason": "Hy sinh phức tạp và hơn 3 nước của bên giải để khai thác đòn xiên.",
+      "reason": "Thí quân phức tạp và hơn 3 nước của bên giải để khai thác đòn xiên.",
       "solverMoves": 4,
       "sacrificeCount": 1
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Hậu tại f1 tấn công quân ở d1, để khai thác quân phía sau ở a1. Nhánh mẫu: a2 · Qa4 · a1=Q+ · Qxa1 · Qf1+ · Kc2 · Qxa1."
+    "solution": "Hậu tại f1 tấn công quân ở d1, để khai thác quân phía sau ở a1."
   },
   {
     "title": "Promyshlyanskiy,V — Motylev,A",
@@ -8125,14 +8125,14 @@
     "difficulty": {
       "level": "D",
       "status": "suggested",
-      "reason": "Hy sinh phức tạp và hơn 3 nước của bên giải để khai thác đòn xiên.",
+      "reason": "Thí quân phức tạp và hơn 3 nước của bên giải để khai thác đòn xiên.",
       "solverMoves": 4,
       "sacrificeCount": 1
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Tượng tại g3 tấn công quân ở f2, để khai thác quân phía sau ở e1. Nhánh mẫu: Rxg2+ · Nxg2 · Qxh2+ · Kf2 · Bg3+ · Ke2 · Bxe1."
+    "solution": "Tượng tại g3 tấn công quân ở f2, để khai thác quân phía sau ở e1."
   },
   {
     "title": "Tal, Mihail — Marjanovic, Slavoljub",
@@ -8175,14 +8175,14 @@
     "difficulty": {
       "level": "D",
       "status": "suggested",
-      "reason": "Hy sinh phức tạp và hơn 3 nước của bên giải để khai thác đòn xiên.",
+      "reason": "Thí quân phức tạp và hơn 3 nước của bên giải để khai thác đòn xiên.",
       "solverMoves": 4,
       "sacrificeCount": 1
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Tượng tại c4 tấn công quân ở e6, để khai thác quân phía sau ở f7. Nhánh mẫu: a8=R · Qxa8 · Qc5+ · Ke6 · Bc4+ · Kd7 · Bxf7."
+    "solution": "Tượng tại c4 tấn công quân ở e6, để khai thác quân phía sau ở f7."
   },
   {
     "title": "Navara,D — Ponkratov,P",
@@ -8225,14 +8225,14 @@
     "difficulty": {
       "level": "D",
       "status": "suggested",
-      "reason": "Hy sinh phức tạp và hơn 3 nước của bên giải để khai thác đòn xiên.",
+      "reason": "Thí quân phức tạp và hơn 3 nước của bên giải để khai thác đòn xiên.",
       "solverMoves": 4,
       "sacrificeCount": 1
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Xe tại f8 tấn công quân ở f6, để khai thác quân phía sau ở f2. Nhánh mẫu: Bh6+ · Kf6 · Qxf2+ · Qxf2 · Rf8+ · Ke7 · Rxf2."
+    "solution": "Xe tại f8 tấn công quân ở f6, để khai thác quân phía sau ở f2."
   },
   {
     "title": "Gajewski,G — Navara,D",
@@ -8265,14 +8265,14 @@
     "difficulty": {
       "level": "D",
       "status": "suggested",
-      "reason": "Hy sinh phức tạp và hơn 3 nước của bên giải để khai thác đòn xiên.",
+      "reason": "Thí quân phức tạp và hơn 3 nước của bên giải để khai thác đòn xiên.",
       "solverMoves": 4,
       "sacrificeCount": 1
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Xe tại h6 tấn công quân ở f6, để khai thác quân phía sau ở e6. Nhánh mẫu: Re1+ · Kf6 · Rxe6+ · Rxe6 · Rh6+ · Kf7 · Rxe6."
+    "solution": "Xe tại h6 tấn công quân ở f6, để khai thác quân phía sau ở e6."
   },
   {
     "title": "Levin,Ev — Malakhov,V",
@@ -8305,14 +8305,14 @@
     "difficulty": {
       "level": "D",
       "status": "suggested",
-      "reason": "Hy sinh phức tạp và hơn 3 nước của bên giải để khai thác đòn xiên.",
+      "reason": "Thí quân phức tạp và hơn 3 nước của bên giải để khai thác đòn xiên.",
       "solverMoves": 4,
       "sacrificeCount": 1
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Xe tại b8 tấn công quân ở d8, để khai thác quân phía sau ở h8. Nhánh mẫu: Bxd8 · Bxd8 · Rxd8+ · Kxd8 · Rb8+ · Kc7 · Rxh8."
+    "solution": "Xe tại b8 tấn công quân ở d8, để khai thác quân phía sau ở h8."
   },
   {
     "title": "Motylev,A — Krjukova,I",
@@ -8345,14 +8345,14 @@
     "difficulty": {
       "level": "D",
       "status": "suggested",
-      "reason": "Hy sinh phức tạp và hơn 3 nước của bên giải để khai thác đòn xiên.",
+      "reason": "Thí quân phức tạp và hơn 3 nước của bên giải để khai thác đòn xiên.",
       "solverMoves": 4,
       "sacrificeCount": 1
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Xe tại h8 tấn công quân ở f8, để khai thác quân phía sau ở e8. Nhánh mẫu: Rxe4 · fxe4 · Nf6+ · Kf8 · Rh8+ · Kg7 · Rxe8."
+    "solution": "Xe tại h8 tấn công quân ở f8, để khai thác quân phía sau ở e8."
   },
   {
     "title": "Yemelin,V — Karpov,Ana",
@@ -8385,14 +8385,14 @@
     "difficulty": {
       "level": "D",
       "status": "suggested",
-      "reason": "Hy sinh phức tạp và hơn 3 nước của bên giải để khai thác đòn xiên.",
+      "reason": "Thí quân phức tạp và hơn 3 nước của bên giải để khai thác đòn xiên.",
       "solverMoves": 4,
       "sacrificeCount": 1
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Hậu tại f2 tấn công quân ở e2, để khai thác quân phía sau ở a2. Nhánh mẫu: Bxd4 · Qd2 · Rxa2 · Qxa2 · Qf2+ · Kd1 · Qxa2."
+    "solution": "Hậu tại f2 tấn công quân ở e2, để khai thác quân phía sau ở a2."
   },
   {
     "title": "Zukertort, Johannes Hermann — Anderssen, Adolf",
@@ -8437,14 +8437,14 @@
     "difficulty": {
       "level": "D",
       "status": "suggested",
-      "reason": "Hy sinh phức tạp và hơn 3 nước của bên giải để khai thác đòn xiên.",
+      "reason": "Thí quân phức tạp và hơn 3 nước của bên giải để khai thác đòn xiên.",
       "solverMoves": 5,
       "sacrificeCount": 1
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Hậu tại f2 tấn công quân ở f5, để khai thác quân phía sau ở f8. Nhánh mẫu: Re1 · Bg4 · Rf1+ · Bf5 · Rxf5+ · Kxf5 · Qf2+ · Ke5 · Qxf8."
+    "solution": "Hậu tại f2 tấn công quân ở f5, để khai thác quân phía sau ở f8."
   },
   {
     "title": "Borgaonkar,Akshay — Caruana,F",
@@ -8479,14 +8479,14 @@
     "difficulty": {
       "level": "D",
       "status": "suggested",
-      "reason": "Hy sinh phức tạp và hơn 3 nước của bên giải để khai thác đòn xiên.",
+      "reason": "Thí quân phức tạp và hơn 3 nước của bên giải để khai thác đòn xiên.",
       "solverMoves": 5,
       "sacrificeCount": 1
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Xe tại b1 tấn công quân ở f1, để khai thác quân phía sau ở h1. Nhánh mẫu: Kg3 · Rb5 · h2 · Rh5 · h1=Q+ · Rxh1 · Rb1+ · Ke2 · Rxh1."
+    "solution": "Xe tại b1 tấn công quân ở f1, để khai thác quân phía sau ở h1."
   },
   {
     "title": "Blackburne, Joseph Henry — Zukertort, Johannes Hermann",
@@ -8521,14 +8521,14 @@
     "difficulty": {
       "level": "D",
       "status": "suggested",
-      "reason": "Hy sinh phức tạp và hơn 3 nước của bên giải để khai thác đòn xiên.",
+      "reason": "Thí quân phức tạp và hơn 3 nước của bên giải để khai thác đòn xiên.",
       "solverMoves": 5,
       "sacrificeCount": 1
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Xe tại e1 tấn công quân ở e2, để khai thác quân phía sau ở e5. Nhánh mẫu: Qxf1+ · Kxf1 · Rxc1+ · Ke2 · Rxe5+ · Qxe5 · Re1+ · Kd3 · Rxe5."
+    "solution": "Xe tại e1 tấn công quân ở e2, để khai thác quân phía sau ở e5."
   },
   {
     "title": "Vidmar, Milan Sr — Tarrasch, Siegbert",
@@ -8563,14 +8563,14 @@
     "difficulty": {
       "level": "D",
       "status": "suggested",
-      "reason": "Hy sinh phức tạp và hơn 3 nước của bên giải để khai thác đòn xiên.",
+      "reason": "Thí quân phức tạp và hơn 3 nước của bên giải để khai thác đòn xiên.",
       "solverMoves": 5,
       "sacrificeCount": 1
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Hậu tại g4 tấn công quân ở e6, để khai thác quân phía sau ở d7. Nhánh mẫu: Bf4 · Nf6 · Re1+ · Ne4 · Rxe4+ · fxe4 · Qg4+ · Kf7 · Qxd7+."
+    "solution": "Hậu tại g4 tấn công quân ở e6, để khai thác quân phía sau ở d7."
   },
   {
     "title": "Pakleza,Z — Jussupow,Ar",
@@ -8605,14 +8605,14 @@
     "difficulty": {
       "level": "D",
       "status": "suggested",
-      "reason": "Hy sinh phức tạp và hơn 3 nước của bên giải để khai thác đòn xiên.",
+      "reason": "Thí quân phức tạp và hơn 3 nước của bên giải để khai thác đòn xiên.",
       "solverMoves": 5,
       "sacrificeCount": 1
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Xe tại b8 tấn công quân ở f8, để khai thác quân phía sau ở h8. Nhánh mẫu: Rxh6+ · Kg8 · Qg2+ · Kf8 · Rh8+ · Qxh8 · Rb8+ · Ke7 · Rxh8."
+    "solution": "Xe tại b8 tấn công quân ở f8, để khai thác quân phía sau ở h8."
   },
   {
     "title": "Tartakower, Saviely — Euwe, Max",
@@ -8647,14 +8647,14 @@
     "difficulty": {
       "level": "D",
       "status": "suggested",
-      "reason": "Hy sinh phức tạp và hơn 3 nước của bên giải để khai thác đòn xiên.",
+      "reason": "Thí quân phức tạp và hơn 3 nước của bên giải để khai thác đòn xiên.",
       "solverMoves": 5,
       "sacrificeCount": 2
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Hậu tại b2 tấn công quân ở b4, để khai thác quân phía sau ở b6. Nhánh mẫu: Nc4+ · bxc4 · Rxa4+ · Kxa4 · Qa2+ · Kb4 · Qb2+ · Ka4 · Qxb6."
+    "solution": "Hậu tại b2 tấn công quân ở b4, để khai thác quân phía sau ở b6."
   },
   {
     "title": "Burn, Amos — Chigorin, Mikhail",
@@ -8689,14 +8689,14 @@
     "difficulty": {
       "level": "D",
       "status": "suggested",
-      "reason": "Hy sinh phức tạp và hơn 3 nước của bên giải để khai thác đòn xiên.",
+      "reason": "Thí quân phức tạp và hơn 3 nước của bên giải để khai thác đòn xiên.",
       "solverMoves": 5,
       "sacrificeCount": 1
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Xe tại h7 tấn công quân ở f7, để khai thác quân phía sau ở e7. Nhánh mẫu: Rh8+ · Kf7 · Rh7+ · Nxh7 · Qd7+ · Qe7 · Rxh7+ · Kf8 · Rxe7."
+    "solution": "Xe tại h7 tấn công quân ở f7, để khai thác quân phía sau ở e7."
   },
   {
     "title": "Aronian,L — Stevic,H",
@@ -8731,14 +8731,14 @@
     "difficulty": {
       "level": "D",
       "status": "suggested",
-      "reason": "Hy sinh phức tạp và hơn 3 nước của bên giải để khai thác đòn xiên.",
+      "reason": "Thí quân phức tạp và hơn 3 nước của bên giải để khai thác đòn xiên.",
       "solverMoves": 5,
       "sacrificeCount": 1
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Hậu tại a8 tấn công quân ở f8, để khai thác quân phía sau ở h8. Nhánh mẫu: Qc6+ · Kf7 · Rg7+ · Kxg7 · Qb7+ · Kf8 · Qxa8+ · Ke7 · Qxh8."
+    "solution": "Hậu tại a8 tấn công quân ở f8, để khai thác quân phía sau ở h8."
   },
   {
     "title": "Metger, Johannes — Chigorin, Mikhail",
@@ -8773,14 +8773,14 @@
     "difficulty": {
       "level": "D",
       "status": "suggested",
-      "reason": "Hy sinh phức tạp và hơn 3 nước của bên giải để khai thác đòn xiên.",
+      "reason": "Thí quân phức tạp và hơn 3 nước của bên giải để khai thác đòn xiên.",
       "solverMoves": 5,
       "sacrificeCount": 1
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Xe tại h1 tấn công quân ở h7, để khai thác quân phía sau ở h8. Nhánh mẫu: Rxg6+ · Kxg6 · Qxf5+ · Kh6 · Qf6+ · Kh7 · Rh1+ · Kg8 · Rxh8#."
+    "solution": "Xe tại h1 tấn công quân ở h7, để khai thác quân phía sau ở h8."
   },
   {
     "title": "Pillsbury, Harry Nelson — Marco, Georg",
@@ -8815,14 +8815,14 @@
     "difficulty": {
       "level": "D",
       "status": "suggested",
-      "reason": "Hy sinh phức tạp và hơn 3 nước của bên giải để khai thác đòn xiên.",
+      "reason": "Thí quân phức tạp và hơn 3 nước của bên giải để khai thác đòn xiên.",
       "solverMoves": 5,
       "sacrificeCount": 1
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Hậu tại h7 tấn công quân ở f7, để khai thác quân phía sau ở d7. Nhánh mẫu: Rxf8+ · Bxf8 · Rxf8+ · Kxf8 · Qh8+ · Kf7 · Qh7+ · Kf8 · Qxd7."
+    "solution": "Hậu tại h7 tấn công quân ở f7, để khai thác quân phía sau ở d7."
   },
   {
     "title": "Motylev,A — Vachier Lagrave,M",
@@ -8857,14 +8857,14 @@
     "difficulty": {
       "level": "D",
       "status": "suggested",
-      "reason": "Hy sinh phức tạp và hơn 3 nước của bên giải để khai thác đòn xiên.",
+      "reason": "Thí quân phức tạp và hơn 3 nước của bên giải để khai thác đòn xiên.",
       "solverMoves": 5,
       "sacrificeCount": 1
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Hậu tại a1 tấn công quân ở c1, để khai thác quân phía sau ở f1. Nhánh mẫu: Qxa2 · Qh1 · Rh8 · Qg2 · Rh2 · Qxh2 · Qa1+ · Kc2 · Qxf1."
+    "solution": "Hậu tại a1 tấn công quân ở c1, để khai thác quân phía sau ở f1."
   },
   {
     "title": "Carlsen,M — Aronian,L",
@@ -8899,14 +8899,14 @@
     "difficulty": {
       "level": "D",
       "status": "suggested",
-      "reason": "Hy sinh phức tạp và hơn 3 nước của bên giải để khai thác đòn xiên.",
+      "reason": "Thí quân phức tạp và hơn 3 nước của bên giải để khai thác đòn xiên.",
       "solverMoves": 5,
       "sacrificeCount": 1
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Hậu tại b7 tấn công quân ở e7, để khai thác quân phía sau ở h7. Nhánh mẫu: Qc6 · Qg7 · Rh7 · Qxh7 · Qd5+ · Ke7 · Qb7+ · Kd8 · Qxh7."
+    "solution": "Hậu tại b7 tấn công quân ở e7, để khai thác quân phía sau ở h7."
   },
   {
     "title": "Ponomariov,R — Jobava,Ba",
@@ -8972,14 +8972,14 @@
     "difficulty": {
       "level": "D",
       "status": "suggested",
-      "reason": "Hy sinh phức tạp và hơn 3 nước của bên giải để khai thác đòn xiên.",
+      "reason": "Thí quân phức tạp và hơn 3 nước của bên giải để khai thác đòn xiên.",
       "solverMoves": 5,
       "sacrificeCount": 1
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Hậu tại h4 tấn công quân ở e7, để khai thác quân phía sau ở d8. Nhánh mẫu: Bc6 · f5 · d8=Q+ · Qxd8 · Qh8+ · Ke7 · Qh4+ · Kd6 · Qxd8+."
+    "solution": "Hậu tại h4 tấn công quân ở e7, để khai thác quân phía sau ở d8."
   },
   {
     "title": "Bologan,V — Zarnicki,P",
@@ -9016,14 +9016,14 @@
     "difficulty": {
       "level": "D",
       "status": "suggested",
-      "reason": "Hy sinh phức tạp và hơn 3 nước của bên giải để khai thác đòn xiên.",
+      "reason": "Thí quân phức tạp và hơn 3 nước của bên giải để khai thác đòn xiên.",
       "solverMoves": 6,
       "sacrificeCount": 1
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Hậu tại f7 tấn công quân ở d7, để khai thác quân phía sau ở a7. Nhánh mẫu: Qg8+ · Ke7 · Rxa7 · Qxa7 · Qg7+ · Ke6 · Qf6+ · Kd7 · Qf7+ · Kc6 · Qxa7."
+    "solution": "Hậu tại f7 tấn công quân ở d7, để khai thác quân phía sau ở a7."
   },
   {
     "title": "Keres, Paul — Panno, Oscar",
@@ -9060,14 +9060,14 @@
     "difficulty": {
       "level": "D",
       "status": "suggested",
-      "reason": "Hy sinh phức tạp và hơn 3 nước của bên giải để khai thác đòn xiên.",
+      "reason": "Thí quân phức tạp và hơn 3 nước của bên giải để khai thác đòn xiên.",
       "solverMoves": 6,
       "sacrificeCount": 1
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Xe tại h8 tấn công quân ở e8, để khai thác quân phía sau ở b8. Nhánh mẫu: Rh8 · Rd7 · Rh7+ · Ke8 · Nxd7 · Bxd7 · Rxc6 · Bxc6 · Rh8+ · Kf7 · Rxb8."
+    "solution": "Xe tại h8 tấn công quân ở e8, để khai thác quân phía sau ở b8."
   },
   {
     "title": "Inarkiev,E — Gelfand,B",
@@ -9104,14 +9104,14 @@
     "difficulty": {
       "level": "D",
       "status": "suggested",
-      "reason": "Hy sinh phức tạp và hơn 3 nước của bên giải để khai thác đòn xiên.",
+      "reason": "Thí quân phức tạp và hơn 3 nước của bên giải để khai thác đòn xiên.",
       "solverMoves": 6,
       "sacrificeCount": 1
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Hậu tại b3 tấn công quân ở d5, để khai thác quân phía sau ở f7. Nhánh mẫu: Qa7+ · Kc7 · Rc1+ · Bc6 · Rxc6+ · Kxc6 · Qb6+ · Kd5 · Qb3+ · Kxd4 · Qxf7."
+    "solution": "Hậu tại b3 tấn công quân ở d5, để khai thác quân phía sau ở f7."
   },
   {
     "title": "Carlsen,M — Gokerkan,Cem Kaan",
@@ -9148,14 +9148,14 @@
     "difficulty": {
       "level": "D",
       "status": "suggested",
-      "reason": "Hy sinh phức tạp và hơn 3 nước của bên giải để khai thác đòn xiên.",
+      "reason": "Thí quân phức tạp và hơn 3 nước của bên giải để khai thác đòn xiên.",
       "solverMoves": 6,
       "sacrificeCount": 1
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Hậu tại f4 tấn công quân ở g4, để khai thác quân phía sau ở h4. Nhánh mẫu: Qxf4+ · Qg5 · Qf8+ · Kh5 · Rxh7+ · Kg4 · Rh4+ · Qxh4 · Qf4+ · Kh3 · Qxh4#."
+    "solution": "Hậu tại f4 tấn công quân ở g4, để khai thác quân phía sau ở h4."
   },
   {
     "title": "Gelfand,B — Wang Yue",
@@ -9192,14 +9192,14 @@
     "difficulty": {
       "level": "D",
       "status": "suggested",
-      "reason": "Hy sinh phức tạp và hơn 3 nước của bên giải để khai thác đòn xiên.",
+      "reason": "Thí quân phức tạp và hơn 3 nước của bên giải để khai thác đòn xiên.",
       "solverMoves": 6,
       "sacrificeCount": 1
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Xe tại a1 tấn công quân ở d1, để khai thác quân phía sau ở g1. Nhánh mẫu: Ra2+ · Kd1 · Rg3 · Qb4+ · Kg8 · Qc5 · Rg1+ · Qxg1 · Ra1+ · Kd2 · Rxg1."
+    "solution": "Xe tại a1 tấn công quân ở d1, để khai thác quân phía sau ở g1."
   },
   {
     "title": "Lenderman,A — Caruana,F",
@@ -9236,14 +9236,14 @@
     "difficulty": {
       "level": "D",
       "status": "suggested",
-      "reason": "Hy sinh phức tạp và hơn 3 nước của bên giải để khai thác đòn xiên.",
+      "reason": "Thí quân phức tạp và hơn 3 nước của bên giải để khai thác đòn xiên.",
       "solverMoves": 6,
       "sacrificeCount": 1
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Hậu tại g1 tấn công quân ở e1, để khai thác quân phía sau ở a1. Nhánh mẫu: Qh8+ · Kg1 · Qh2+ · Kf1 · Rf3+ · Bxf3 · Ne3+ · Ke1 · Qg1+ · Ke2 · Qxa1."
+    "solution": "Hậu tại g1 tấn công quân ở e1, để khai thác quân phía sau ở a1."
   },
   {
     "title": "Kasparov,G — Polgar,Ju",
@@ -9307,14 +9307,14 @@
     "difficulty": {
       "level": "D",
       "status": "suggested",
-      "reason": "Hy sinh phức tạp và hơn 3 nước của bên giải để khai thác đòn xiên.",
+      "reason": "Thí quân phức tạp và hơn 3 nước của bên giải để khai thác đòn xiên.",
       "solverMoves": 6,
       "sacrificeCount": 1
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Hậu tại h7 tấn công quân ở f7, để khai thác quân phía sau ở c7. Nhánh mẫu: Be4+ · Kg8 · Rxf8+ · Rxf8 · Bd5+ · Rf7 · Bxf7+ · Kxf7 · Qh7+ · Kf6 · Qxc7."
+    "solution": "Hậu tại h7 tấn công quân ở f7, để khai thác quân phía sau ở c7."
   },
   {
     "title": "Navara,D — Harikrishna,P",
@@ -9351,14 +9351,14 @@
     "difficulty": {
       "level": "D",
       "status": "suggested",
-      "reason": "Hy sinh phức tạp và hơn 3 nước của bên giải để khai thác đòn xiên.",
+      "reason": "Thí quân phức tạp và hơn 3 nước của bên giải để khai thác đòn xiên.",
       "solverMoves": 6,
       "sacrificeCount": 1
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Xe tại a8 tấn công quân ở c8, để khai thác quân phía sau ở h8. Nhánh mẫu: Kf6 · Rh3 · h7 · e4 · c8=Q+ · Kxc8 · h8=Q+ · Rxh8 · Ra8+ · Kc7 · Rxh8."
+    "solution": "Xe tại a8 tấn công quân ở c8, để khai thác quân phía sau ở h8."
   },
   {
     "title": "Caruana,F — Gukesh,D",
@@ -9397,14 +9397,14 @@
     "difficulty": {
       "level": "D",
       "status": "suggested",
-      "reason": "Hy sinh phức tạp và hơn 3 nước của bên giải để khai thác đòn xiên.",
+      "reason": "Thí quân phức tạp và hơn 3 nước của bên giải để khai thác đòn xiên.",
       "solverMoves": 7,
       "sacrificeCount": 1
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Hậu tại h1 tấn công quân ở f1, để khai thác quân phía sau ở c1. Nhánh mẫu: Qe2+ · Kh3 · Qg4+ · Kg2 · Rc2+ · Rf2 · Qe4+ · Kf1 · Rc1+ · Qxc1 · Qh1+ · Ke2 · Qxc1."
+    "solution": "Hậu tại h1 tấn công quân ở f1, để khai thác quân phía sau ở c1."
   },
   {
     "title": "Chigorin, Mikhail — Alapin, Simon",
@@ -9443,14 +9443,14 @@
     "difficulty": {
       "level": "D",
       "status": "suggested",
-      "reason": "Hy sinh phức tạp và hơn 3 nước của bên giải để khai thác đòn xiên.",
+      "reason": "Thí quân phức tạp và hơn 3 nước của bên giải để khai thác đòn xiên.",
       "solverMoves": 7,
       "sacrificeCount": 1
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Xe tại h1 tấn công quân ở f1, để khai thác quân phía sau ở c1. Nhánh mẫu: e2 · Rc1 · Rh7 · Kf2 · Rxh2+ · Ke3 · f2 · Kxe2 · f1=Q+ · Kxf1 · Rh1+ · Kf2 · Rxc1."
+    "solution": "Xe tại h1 tấn công quân ở f1, để khai thác quân phía sau ở c1."
   },
   {
     "title": "Richterova,Natasa — Movsesian,S",
@@ -9489,14 +9489,14 @@
     "difficulty": {
       "level": "D",
       "status": "suggested",
-      "reason": "Hy sinh phức tạp và hơn 3 nước của bên giải để khai thác đòn xiên.",
+      "reason": "Thí quân phức tạp và hơn 3 nước của bên giải để khai thác đòn xiên.",
       "solverMoves": 7,
       "sacrificeCount": 1
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Hậu tại h1 tấn công quân ở f1, để khai thác quân phía sau ở a1. Nhánh mẫu: Qg3+ · Kg1 · Rxe2 · Rxe2 · Ng4 · Qe3 · Qh2+ · Kf1 · Nxe3+ · Rxe3 · Qh1+ · Kf2 · Qxa1."
+    "solution": "Hậu tại h1 tấn công quân ở f1, để khai thác quân phía sau ở a1."
   },
   {
     "title": "Gashimov,V — Siebrecht,S",
@@ -9535,14 +9535,14 @@
     "difficulty": {
       "level": "D",
       "status": "suggested",
-      "reason": "Hy sinh phức tạp và hơn 3 nước của bên giải để khai thác đòn xiên.",
+      "reason": "Thí quân phức tạp và hơn 3 nước của bên giải để khai thác đòn xiên.",
       "solverMoves": 7,
       "sacrificeCount": 1
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Xe tại b7 tấn công quân ở d7, để khai thác quân phía sau ở e7. Nhánh mẫu: c3 · Qa3 · Rb1 · d5 · exd6 · Qxd6 · Qxe7+ · Qxe7 · Rb8+ · Kd7 · Rb7+ · Kc6 · Rxe7."
+    "solution": "Xe tại b7 tấn công quân ở d7, để khai thác quân phía sau ở e7."
   },
   {
     "title": "Kudrin, Sergey — Miles, Anthony J",
@@ -9581,14 +9581,14 @@
     "difficulty": {
       "level": "D",
       "status": "suggested",
-      "reason": "Hy sinh phức tạp và hơn 3 nước của bên giải để khai thác đòn xiên.",
+      "reason": "Thí quân phức tạp và hơn 3 nước của bên giải để khai thác đòn xiên.",
       "solverMoves": 7,
       "sacrificeCount": 1
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Xe tại h2 tấn công quân ở g2, để khai thác quân phía sau ở d2. Nhánh mẫu: Rxg3 · h3 · Qd5 · Nf3 · Qxf3 · Bc4+ · Rxc4 · gxf3 · Rxh3+ · Kg2 · Rh2+ · Kg3 · Rxd2."
+    "solution": "Xe tại h2 tấn công quân ở g2, để khai thác quân phía sau ở d2."
   },
   {
     "title": "Beliavsky,A — Naiditsch,A",
@@ -9627,14 +9627,14 @@
     "difficulty": {
       "level": "D",
       "status": "suggested",
-      "reason": "Hy sinh phức tạp và hơn 3 nước của bên giải để khai thác đòn xiên.",
+      "reason": "Thí quân phức tạp và hơn 3 nước của bên giải để khai thác đòn xiên.",
       "solverMoves": 7,
       "sacrificeCount": 1
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Hậu tại h2 tấn công quân ở f2, để khai thác quân phía sau ở d2. Nhánh mẫu: Rxf1+ · Kxf1 · Qh1+ · Ke2 · Ra2+ · Rc2 · Rxc2+ · Qd2 · Bc4+ · Kf2 · Qxh2+ · Ke1 · Qxd2#."
+    "solution": "Hậu tại h2 tấn công quân ở f2, để khai thác quân phía sau ở d2."
   },
   {
     "title": "Akesson, Ralf — Miles, Anthony J",
@@ -9673,14 +9673,14 @@
     "difficulty": {
       "level": "D",
       "status": "suggested",
-      "reason": "Hy sinh phức tạp và hơn 3 nước của bên giải để khai thác đòn xiên.",
+      "reason": "Thí quân phức tạp và hơn 3 nước của bên giải để khai thác đòn xiên.",
       "solverMoves": 7,
       "sacrificeCount": 1
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Hậu tại a5 tấn công quân ở c7, để khai thác quân phía sau ở d8. Nhánh mẫu: Qe4+ · Kb8 · d7 · Qg5+ · Qg4 · Qf6 · d8=Q · Qxd8 · Qb4+ · Kc7 · Qa5+ · Kc6 · Qxd8."
+    "solution": "Hậu tại a5 tấn công quân ở c7, để khai thác quân phía sau ở d8."
   },
   {
     "title": "Martirosyan,Haik M. — Carlsen,M",
@@ -9719,14 +9719,14 @@
     "difficulty": {
       "level": "D",
       "status": "suggested",
-      "reason": "Hy sinh phức tạp và hơn 3 nước của bên giải để khai thác đòn xiên.",
+      "reason": "Thí quân phức tạp và hơn 3 nước của bên giải để khai thác đòn xiên.",
       "solverMoves": 7,
       "sacrificeCount": 1
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Hậu tại c1 tấn công quân ở c3, để khai thác quân phía sau ở c7. Nhánh mẫu: Qa4+ · Kc1 · Rg1+ · Kb2 · Qa1+ · Kc2 · Qb1+ · Kc3 · Rc1+ · Bxc1 · Qxc1+ · Kd3 · Qxc7."
+    "solution": "Hậu tại c1 tấn công quân ở c3, để khai thác quân phía sau ở c7."
   },
   {
     "title": "Geller, Efim P — Vasiukov, Evgeni",
@@ -9765,14 +9765,14 @@
     "difficulty": {
       "level": "D",
       "status": "suggested",
-      "reason": "Hy sinh phức tạp và hơn 3 nước của bên giải để khai thác đòn xiên.",
+      "reason": "Thí quân phức tạp và hơn 3 nước của bên giải để khai thác đòn xiên.",
       "solverMoves": 7,
       "sacrificeCount": 1
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Hậu tại f8 tấn công quân ở g7, để khai thác quân phía sau ở h6. Nhánh mẫu: Rg8+ · Rxg8 · Qf6+ · Rg7 · Qxd8+ · Rg8 · Qf6+ · Rg7 · h6 · Bxh6 · Qf8+ · Rg8 · Qxh6."
+    "solution": "Hậu tại f8 tấn công quân ở g7, để khai thác quân phía sau ở h6."
   },
   {
     "title": "Mieses, Jacques — Maroczy, Geza",
@@ -9844,14 +9844,14 @@
     "difficulty": {
       "level": "D",
       "status": "suggested",
-      "reason": "Hy sinh phức tạp và hơn 3 nước của bên giải để khai thác đòn xiên.",
+      "reason": "Thí quân phức tạp và hơn 3 nước của bên giải để khai thác đòn xiên.",
       "solverMoves": 8,
       "sacrificeCount": 1
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Hậu tại a1 tấn công quân ở d1, để khai thác quân phía sau ở h1. Nhánh mẫu: Qb1+ · Kd2 · Qb2+ · Kd1 · Rg2 · Rf2 · Rxf2 · Qxf2 · Rxh6 · Qe1 · Rh1 · Qxh1 · Qa1+ · Kd2 · Qxh1."
+    "solution": "Hậu tại a1 tấn công quân ở d1, để khai thác quân phía sau ở h1."
   },
   {
     "title": "Carlsen,M — Firouzja,Alireza",
@@ -9894,13 +9894,13 @@
     "difficulty": {
       "level": "D",
       "status": "suggested",
-      "reason": "Hy sinh phức tạp và hơn 3 nước của bên giải để khai thác đòn xiên.",
+      "reason": "Thí quân phức tạp và hơn 3 nước của bên giải để khai thác đòn xiên.",
       "solverMoves": 9,
       "sacrificeCount": 1
     },
     "hints": [
       "Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn."
     ],
-    "solution": "Hậu tại g8 tấn công quân ở e8, để khai thác quân phía sau ở b8. Nhánh mẫu: Qxe6+ · Ke8 · Rc7 · Qxe3+ · Kg2 · Qe2+ · Rf2 · Qxf2+ · Kxf2 · Rf8+ · Kg2 · Rf7 · Rxe7+ · Rxe7 · Qg8+ · Kd7 · Qxb8."
+    "solution": "Hậu tại g8 tấn công quân ở e8, để khai thác quân phía sau ở b8."
   }
 ]

@@ -40,3 +40,45 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# local scratch work and generated document previews/exports
+# Keep reusable assets in public/, and research evidence in scripts/fixtures/.
+# Do not ignore *.json or scripts/fixtures/: builders and tests read curated
+# selections, exclusions, source games, validation data and mate certificates.
+# Even generated *published.json files are consumed by regression tests.
+/tmp/
+/temp/
+/output/
+/outputs/
+
+# Interrupted atomic writes from research builders; final JSON evidence stays tracked.
+/scripts/fixtures/**/*.tmp
+
+# One-off local render harnesses (reusable scripts/render-* stay tracked).
+/scripts/.render-*.cjs
+/scripts/.render-*.mjs
+/scripts/.scratch/
+
+# Atomic saved-game writes; the saved-games.json collection itself is required.
+/src/lib/server/saved-games.json.lock
+/src/lib/server/saved-games.json.*.tmp
+
+# Python research-tool caches and local environments
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+
+# browser-test reports and temporary test artifacts
+/playwright-report/
+/test-results/
+/blob-report/
+
+# editor/OS temporary files (keep shared editor settings tracked)
+*.swp
+*.swo
+*~
+Thumbs.db

@@ -1,0 +1,104 @@
+[
+  {
+    "gameId": "ca5aec091b5e08ab",
+    "fen": "r5kr/3q1pp1/1Qb4p/3pp2P/8/2PBB3/2P2PPN/R5K1 w - - 1 26",
+    "moves": [
+      "Rxa8+",
+      "Qe8",
+      "Qxc6",
+      "Qf8",
+      "Rxf8+",
+      "Kxf8",
+      "Bc5+",
+      "Kg8",
+      "Qa8#"
+    ],
+    "reason": "Fresh defensive search does not confirm the advertised mating length.",
+    "review": {
+      "gameId": "ca5aec091b5e08ab",
+      "fen": "r5kr/3q1pp1/1Qb4p/3pp2P/8/2PBB3/2P2PPN/R5K1 w - - 1 26",
+      "moves": [
+        "Rxa8+",
+        "Qe8",
+        "Qxc6",
+        "Qf8",
+        "Rxf8+",
+        "Kxf8",
+        "Bc5+",
+        "Kg8",
+        "Qa8#"
+      ],
+      "nodes": 1200000,
+      "depth": 48,
+      "mate": 5,
+      "principalVariation": [
+        "a1a8",
+        "d7e8",
+        "b6c6",
+        "e8f8",
+        "a8f8",
+        "g8f8",
+        "e3c5",
+        "f8g8",
+        "c6e8"
+      ]
+    }
+  },
+  {
+    "gameId": "303db441477d606b",
+    "fen": "r4k1r/1p1R1p2/p4Qp1/1b2p2p/4q3/6P1/PP3PP1/3K3R b - - 1 23",
+    "moves": [
+      "Qe2+",
+      "Kc1",
+      "Rc8+",
+      "Rc7",
+      "Rxc7+",
+      "Qc6",
+      "Rxc6+",
+      "Kb1",
+      "Qc2+",
+      "Ka1",
+      "Qc1+",
+      "Rxc1",
+      "Rxc1#"
+    ],
+    "reason": "Fresh defensive search does not confirm the advertised mating length.",
+    "review": {
+      "gameId": "303db441477d606b",
+      "fen": "r4k1r/1p1R1p2/p4Qp1/1b2p2p/4q3/6P1/PP3PP1/3K3R b - - 1 23",
+      "moves": [
+        "Qe2+",
+        "Kc1",
+        "Rc8+",
+        "Rc7",
+        "Rxc7+",
+        "Qc6",
+        "Rxc6+",
+        "Kb1",
+        "Qc2+",
+        "Ka1",
+        "Qc1+",
+        "Rxc1",
+        "Rxc1#"
+      ],
+      "nodes": 1200000,
+      "depth": 52,
+      "mate": 7,
+      "principalVariation": [
+        "e4e2",
+        "d1c1",
+        "a8c8",
+        "d7c7",
+        "c8c7",
+        "f6c6",
+        "c7c6",
+        "c1b1",
+        "e2c2",
+        "b1a1",
+        "c2c1",
+        "h1c1",
+        "c6c1"
+      ]
+    }
+  }
+]

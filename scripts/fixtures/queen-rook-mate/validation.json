@@ -1,0 +1,585 @@
+[
+  {
+    "fen": "8/8/k2q4/8/8/8/5r2/1K6 b - - 0 1",
+    "moves": [
+      "Qd1#"
+    ],
+    "alternatives": [
+      "Qd1#"
+    ],
+    "queenRoles": [
+      {
+        "square": "d1",
+        "checking": true,
+        "escapesWithoutQueen": [
+          "Kc1",
+          "Ka1"
+        ]
+      }
+    ],
+    "rookRoles": [
+      {
+        "square": "f2",
+        "escapesWithoutRook": [
+          "Kb2",
+          "Ka2"
+        ]
+      }
+    ],
+    "method": "Exhaustive legal one-move enumeration; actual checkmate and essential-rook removal test."
+  },
+  {
+    "fen": "8/8/8/2q5/8/1K1k4/r7/8 b - - 0 1",
+    "moves": [
+      "Qa3#"
+    ],
+    "alternatives": [
+      "Qc4#",
+      "Qa3#"
+    ],
+    "queenRoles": [
+      {
+        "square": "a3",
+        "checking": true,
+        "escapesWithoutQueen": [
+          "Kb4",
+          "Kxa2"
+        ]
+      }
+    ],
+    "rookRoles": [
+      {
+        "square": "a2",
+        "escapesWithoutRook": [
+          "Kxa3"
+        ]
+      }
+    ],
+    "method": "Exhaustive legal one-move enumeration; actual checkmate and essential-rook removal test."
+  },
+  {
+    "fen": "6q1/8/8/6r1/3k4/7K/8/8 b - - 0 1",
+    "moves": [
+      "Qh7#"
+    ],
+    "alternatives": [
+      "Qh8#",
+      "Qh7#"
+    ],
+    "queenRoles": [
+      {
+        "square": "h7",
+        "checking": true,
+        "escapesWithoutQueen": [
+          "Kh4",
+          "Kh2"
+        ]
+      }
+    ],
+    "rookRoles": [
+      {
+        "square": "g5",
+        "escapesWithoutRook": [
+          "Kg4",
+          "Kg3",
+          "Kg2"
+        ]
+      }
+    ],
+    "method": "Exhaustive legal one-move enumeration; actual checkmate and essential-rook removal test."
+  },
+  {
+    "fen": "8/1q6/8/K7/8/8/1r5k/8 b - - 0 1",
+    "moves": [
+      "Qb5#"
+    ],
+    "alternatives": [
+      "Qa8#",
+      "Qa7#",
+      "Qb5#"
+    ],
+    "queenRoles": [
+      {
+        "square": "b5",
+        "checking": true,
+        "escapesWithoutQueen": [
+          "Ka6",
+          "Ka4"
+        ]
+      }
+    ],
+    "rookRoles": [
+      {
+        "square": "b2",
+        "escapesWithoutRook": [
+          "Kxb5"
+        ]
+      }
+    ],
+    "method": "Exhaustive legal one-move enumeration; actual checkmate and essential-rook removal test."
+  },
+  {
+    "fen": "5k2/R7/4Q3/4K3/8/8/8/8 w - - 0 1",
+    "moves": [
+      "Qf7#"
+    ],
+    "alternatives": [
+      "Qc8#",
+      "Qf7#"
+    ],
+    "queenRoles": [
+      {
+        "square": "f7",
+        "checking": true,
+        "escapesWithoutQueen": [
+          "Kg8",
+          "Ke8"
+        ]
+      }
+    ],
+    "rookRoles": [
+      {
+        "square": "a7",
+        "escapesWithoutRook": [
+          "Kxf7"
+        ]
+      }
+    ],
+    "method": "Exhaustive legal one-move enumeration; actual checkmate and essential-rook removal test."
+  },
+  {
+    "fen": "8/8/8/4Q3/3R4/K7/8/k7 w - - 0 1",
+    "moves": [
+      "Rb4#"
+    ],
+    "alternatives": [
+      "Rb4#"
+    ],
+    "queenRoles": [
+      {
+        "square": "e5",
+        "checking": true,
+        "escapesWithoutQueen": []
+      }
+    ],
+    "rookRoles": [
+      {
+        "square": "b4",
+        "escapesWithoutRook": [
+          "Kb1"
+        ]
+      }
+    ],
+    "method": "Exhaustive legal one-move enumeration; actual checkmate and essential-rook removal test."
+  },
+  {
+    "fen": "1k6/6r1/6q1/8/7K/8/8/8 b - - 0 1",
+    "moves": [
+      "Qg4#"
+    ],
+    "alternatives": [
+      "Qh7#",
+      "Qh6#",
+      "Qg4#"
+    ],
+    "queenRoles": [
+      {
+        "square": "g4",
+        "checking": true,
+        "escapesWithoutQueen": [
+          "Kh5",
+          "Kh3"
+        ]
+      }
+    ],
+    "rookRoles": [
+      {
+        "square": "g7",
+        "escapesWithoutRook": [
+          "Kxg4"
+        ]
+      }
+    ],
+    "method": "Exhaustive legal one-move enumeration; actual checkmate and essential-rook removal test."
+  },
+  {
+    "fen": "8/8/3Q4/2K5/8/8/7R/5k2 w - - 0 1",
+    "moves": [
+      "Qd1#"
+    ],
+    "alternatives": [
+      "Qd1#"
+    ],
+    "queenRoles": [
+      {
+        "square": "d1",
+        "checking": true,
+        "escapesWithoutQueen": [
+          "Kg1",
+          "Ke1"
+        ]
+      }
+    ],
+    "rookRoles": [
+      {
+        "square": "h2",
+        "escapesWithoutRook": [
+          "Kg2",
+          "Kf2"
+        ]
+      }
+    ],
+    "method": "Exhaustive legal one-move enumeration; actual checkmate and essential-rook removal test."
+  },
+  {
+    "fen": "8/5QR1/K6k/8/8/8/8/8 w - - 0 1",
+    "moves": [
+      "Qg6#"
+    ],
+    "alternatives": [
+      "Qg6#"
+    ],
+    "queenRoles": [
+      {
+        "square": "g6",
+        "checking": true,
+        "escapesWithoutQueen": [
+          "Kxg7",
+          "Kh5"
+        ]
+      }
+    ],
+    "rookRoles": [
+      {
+        "square": "g7",
+        "escapesWithoutRook": [
+          "Kxg6"
+        ]
+      }
+    ],
+    "method": "Exhaustive legal one-move enumeration; actual checkmate and essential-rook removal test."
+  },
+  {
+    "fen": "5K1k/r7/8/8/8/8/8/7q b - - 0 1",
+    "moves": [
+      "Qa8#"
+    ],
+    "alternatives": [
+      "Qa8#"
+    ],
+    "queenRoles": [
+      {
+        "square": "a8",
+        "checking": true,
+        "escapesWithoutQueen": [
+          "Ke8"
+        ]
+      }
+    ],
+    "rookRoles": [
+      {
+        "square": "a7",
+        "escapesWithoutRook": [
+          "Kf7",
+          "Ke7"
+        ]
+      }
+    ],
+    "method": "Exhaustive legal one-move enumeration; actual checkmate and essential-rook removal test."
+  },
+  {
+    "fen": "3K4/8/8/k7/8/1R6/4Q3/8 w - - 0 1",
+    "moves": [
+      "Qa2#"
+    ],
+    "alternatives": [
+      "Qb5#",
+      "Qa2#"
+    ],
+    "queenRoles": [
+      {
+        "square": "a2",
+        "checking": true,
+        "escapesWithoutQueen": [
+          "Ka6",
+          "Ka4"
+        ]
+      }
+    ],
+    "rookRoles": [
+      {
+        "square": "b3",
+        "escapesWithoutRook": [
+          "Kb6",
+          "Kb5",
+          "Kb4"
+        ]
+      }
+    ],
+    "method": "Exhaustive legal one-move enumeration; actual checkmate and essential-rook removal test."
+  },
+  {
+    "fen": "4k3/6K1/8/8/5q2/8/8/7r b - - 0 1",
+    "moves": [
+      "Qg5#"
+    ],
+    "alternatives": [
+      "Qf7#",
+      "Qg5#"
+    ],
+    "queenRoles": [
+      {
+        "square": "g5",
+        "checking": true,
+        "escapesWithoutQueen": [
+          "Kg8",
+          "Kg6",
+          "Kf6"
+        ]
+      }
+    ],
+    "rookRoles": [
+      {
+        "square": "h1",
+        "escapesWithoutRook": [
+          "Kh8",
+          "Kh7"
+        ]
+      }
+    ],
+    "method": "Exhaustive legal one-move enumeration; actual checkmate and essential-rook removal test."
+  },
+  {
+    "fen": "8/5q2/8/6r1/8/1k6/8/7K b - - 0 1",
+    "moves": [
+      "Qh5#"
+    ],
+    "alternatives": [
+      "Qh7#",
+      "Qh5#"
+    ],
+    "queenRoles": [
+      {
+        "square": "h5",
+        "checking": true,
+        "escapesWithoutQueen": [
+          "Kh2"
+        ]
+      }
+    ],
+    "rookRoles": [
+      {
+        "square": "g5",
+        "escapesWithoutRook": [
+          "Kg2",
+          "Kg1"
+        ]
+      }
+    ],
+    "method": "Exhaustive legal one-move enumeration; actual checkmate and essential-rook removal test."
+  },
+  {
+    "fen": "8/4q1r1/7K/8/8/1k6/8/8 b - - 0 1",
+    "moves": [
+      "Qg5#"
+    ],
+    "alternatives": [
+      "Qg5#"
+    ],
+    "queenRoles": [
+      {
+        "square": "g5",
+        "checking": true,
+        "escapesWithoutQueen": [
+          "Kxg7",
+          "Kh5"
+        ]
+      }
+    ],
+    "rookRoles": [
+      {
+        "square": "g7",
+        "escapesWithoutRook": [
+          "Kh7",
+          "Kxg5"
+        ]
+      }
+    ],
+    "method": "Exhaustive legal one-move enumeration; actual checkmate and essential-rook removal test."
+  },
+  {
+    "fen": "Q7/8/4R3/5k2/7K/8/8/8 w - - 0 1",
+    "moves": [
+      "Qe4#"
+    ],
+    "alternatives": [
+      "Qe4#"
+    ],
+    "queenRoles": [
+      {
+        "square": "e4",
+        "checking": true,
+        "escapesWithoutQueen": [
+          "Kxe6",
+          "Kf4"
+        ]
+      }
+    ],
+    "rookRoles": [
+      {
+        "square": "e6",
+        "escapesWithoutRook": [
+          "Kf6",
+          "Kxe4"
+        ]
+      }
+    ],
+    "method": "Exhaustive legal one-move enumeration; actual checkmate and essential-rook removal test."
+  },
+  {
+    "fen": "4K3/7r/8/8/k7/7q/8/8 b - - 0 1",
+    "moves": [
+      "Qc8#"
+    ],
+    "alternatives": [
+      "Qc8#"
+    ],
+    "queenRoles": [
+      {
+        "square": "c8",
+        "checking": true,
+        "escapesWithoutQueen": [
+          "Kf8",
+          "Kd8"
+        ]
+      }
+    ],
+    "rookRoles": [
+      {
+        "square": "h7",
+        "escapesWithoutRook": [
+          "Kf7",
+          "Ke7"
+        ]
+      }
+    ],
+    "method": "Exhaustive legal one-move enumeration; actual checkmate and essential-rook removal test."
+  },
+  {
+    "fen": "4R3/8/5k2/7K/8/8/6Q1/8 w - - 0 1",
+    "moves": [
+      "Qg6#"
+    ],
+    "alternatives": [
+      "Qg6#"
+    ],
+    "queenRoles": [
+      {
+        "square": "g6",
+        "checking": true,
+        "escapesWithoutQueen": [
+          "Kg7",
+          "Kf7",
+          "Kf5"
+        ]
+      }
+    ],
+    "rookRoles": [
+      {
+        "square": "e8",
+        "escapesWithoutRook": [
+          "Ke7",
+          "Ke5"
+        ]
+      }
+    ],
+    "method": "Exhaustive legal one-move enumeration; actual checkmate and essential-rook removal test."
+  },
+  {
+    "fen": "5K2/8/8/2Q5/7k/6R1/8/8 w - - 0 1",
+    "moves": [
+      "Qg5#"
+    ],
+    "alternatives": [
+      "Qg5#"
+    ],
+    "queenRoles": [
+      {
+        "square": "g5",
+        "checking": true,
+        "escapesWithoutQueen": [
+          "Kh5",
+          "Kxg3"
+        ]
+      }
+    ],
+    "rookRoles": [
+      {
+        "square": "g3",
+        "escapesWithoutRook": [
+          "Kxg5",
+          "Kh3"
+        ]
+      }
+    ],
+    "method": "Exhaustive legal one-move enumeration; actual checkmate and essential-rook removal test."
+  },
+  {
+    "fen": "7k/R3Q3/8/8/8/8/K7/8 w - - 0 1",
+    "moves": [
+      "Qg7#"
+    ],
+    "alternatives": [
+      "Qf8#",
+      "Qe8#",
+      "Qd8#",
+      "Qh7#",
+      "Qg7#"
+    ],
+    "queenRoles": [
+      {
+        "square": "g7",
+        "checking": true,
+        "escapesWithoutQueen": [
+          "Kg8"
+        ]
+      }
+    ],
+    "rookRoles": [
+      {
+        "square": "a7",
+        "escapesWithoutRook": [
+          "Kxg7"
+        ]
+      }
+    ],
+    "method": "Exhaustive legal one-move enumeration; actual checkmate and essential-rook removal test."
+  },
+  {
+    "fen": "8/8/8/1Q6/8/8/3R4/k4K2 w - - 0 1",
+    "moves": [
+      "Qb2#"
+    ],
+    "alternatives": [
+      "Qb2#"
+    ],
+    "queenRoles": [
+      {
+        "square": "b2",
+        "checking": true,
+        "escapesWithoutQueen": [
+          "Kb1"
+        ]
+      }
+    ],
+    "rookRoles": [
+      {
+        "square": "d2",
+        "escapesWithoutRook": [
+          "Kxb2"
+        ]
+      }
+    ],
+    "method": "Exhaustive legal one-move enumeration; actual checkmate and essential-rook removal test."
+  }
+]

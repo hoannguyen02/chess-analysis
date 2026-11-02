@@ -1,0 +1,566 @@
+[
+  {
+    "fen": "8/5b2/8/3r4/7K/5k2/8/8 b - - 0 1",
+    "moves": [
+      "Rh5#"
+    ],
+    "alternatives": [
+      "Rh5#"
+    ],
+    "bishopRoles": [
+      {
+        "square": "f7",
+        "checking": false,
+        "escapesWithoutPiece": [
+          "Kxh5"
+        ]
+      }
+    ],
+    "rookRoles": [
+      {
+        "square": "h5",
+        "checking": true,
+        "escapesWithoutPiece": [
+          "Kg5",
+          "Kh3"
+        ]
+      }
+    ],
+    "method": "Exhaustive legal one-move enumeration; actual checkmate and essential-rook removal test."
+  },
+  {
+    "fen": "6k1/8/5K2/5B2/3R4/8/8/8 w - - 0 1",
+    "moves": [
+      "Rd8#"
+    ],
+    "alternatives": [
+      "Rd8#"
+    ],
+    "bishopRoles": [
+      {
+        "square": "f5",
+        "checking": false,
+        "escapesWithoutPiece": [
+          "Kh7"
+        ]
+      }
+    ],
+    "rookRoles": [
+      {
+        "square": "d8",
+        "checking": true,
+        "escapesWithoutPiece": [
+          "Kh8",
+          "Kf8"
+        ]
+      }
+    ],
+    "method": "Exhaustive legal one-move enumeration; actual checkmate and essential-rook removal test."
+  },
+  {
+    "fen": "3b4/5k2/8/7K/2r5/8/8/8 b - - 0 1",
+    "moves": [
+      "Rh4#"
+    ],
+    "alternatives": [
+      "Rh4#"
+    ],
+    "bishopRoles": [
+      {
+        "square": "d8",
+        "checking": false,
+        "escapesWithoutPiece": [
+          "Kg5",
+          "Kxh4"
+        ]
+      }
+    ],
+    "rookRoles": [
+      {
+        "square": "h4",
+        "checking": true,
+        "escapesWithoutPiece": [
+          "Kh6",
+          "Kg4"
+        ]
+      }
+    ],
+    "method": "Exhaustive legal one-move enumeration; actual checkmate and essential-rook removal test."
+  },
+  {
+    "fen": "8/8/8/8/8/1k1b4/7r/K7 b - - 0 1",
+    "moves": [
+      "Ra2#"
+    ],
+    "alternatives": [
+      "Ra2#"
+    ],
+    "bishopRoles": [
+      {
+        "square": "d3",
+        "checking": false,
+        "escapesWithoutPiece": [
+          "Kb1"
+        ]
+      }
+    ],
+    "rookRoles": [
+      {
+        "square": "a2",
+        "checking": true,
+        "escapesWithoutPiece": []
+      }
+    ],
+    "method": "Exhaustive legal one-move enumeration; actual checkmate and essential-rook removal test."
+  },
+  {
+    "fen": "K7/2b5/k7/8/8/r7/8/8 b - - 0 1",
+    "moves": [
+      "Kb6#"
+    ],
+    "alternatives": [
+      "Kb6#"
+    ],
+    "bishopRoles": [
+      {
+        "square": "c7",
+        "checking": false,
+        "escapesWithoutPiece": [
+          "Kb8"
+        ]
+      }
+    ],
+    "rookRoles": [
+      {
+        "square": "a3",
+        "checking": true,
+        "escapesWithoutPiece": []
+      }
+    ],
+    "method": "Exhaustive legal one-move enumeration; actual checkmate and essential-rook removal test."
+  },
+  {
+    "fen": "5k1K/8/8/8/4b3/6r1/8/8 b - - 0 1",
+    "moves": [
+      "Rg8#"
+    ],
+    "alternatives": [
+      "Rg8#"
+    ],
+    "bishopRoles": [
+      {
+        "square": "e4",
+        "checking": false,
+        "escapesWithoutPiece": [
+          "Kh7"
+        ]
+      }
+    ],
+    "rookRoles": [
+      {
+        "square": "g8",
+        "checking": true,
+        "escapesWithoutPiece": []
+      }
+    ],
+    "method": "Exhaustive legal one-move enumeration; actual checkmate and essential-rook removal test."
+  },
+  {
+    "fen": "8/8/8/8/k7/2K5/5R2/5B2 w - - 0 1",
+    "moves": [
+      "Ra2#"
+    ],
+    "alternatives": [
+      "Ra2#"
+    ],
+    "bishopRoles": [
+      {
+        "square": "f1",
+        "checking": false,
+        "escapesWithoutPiece": [
+          "Kb5"
+        ]
+      }
+    ],
+    "rookRoles": [
+      {
+        "square": "a2",
+        "checking": true,
+        "escapesWithoutPiece": [
+          "Ka5",
+          "Ka3"
+        ]
+      }
+    ],
+    "method": "Exhaustive legal one-move enumeration; actual checkmate and essential-rook removal test."
+  },
+  {
+    "fen": "8/8/8/8/8/5KB1/2R5/6k1 w - - 0 1",
+    "moves": [
+      "Rc1#"
+    ],
+    "alternatives": [
+      "Rc1#"
+    ],
+    "bishopRoles": [
+      {
+        "square": "g3",
+        "checking": false,
+        "escapesWithoutPiece": [
+          "Kh2"
+        ]
+      }
+    ],
+    "rookRoles": [
+      {
+        "square": "c1",
+        "checking": true,
+        "escapesWithoutPiece": [
+          "Kh1",
+          "Kf1"
+        ]
+      }
+    ],
+    "method": "Exhaustive legal one-move enumeration; actual checkmate and essential-rook removal test."
+  },
+  {
+    "fen": "3K4/8/3bk3/8/5r2/8/8/8 b - - 0 1",
+    "moves": [
+      "Rf8#"
+    ],
+    "alternatives": [
+      "Rf8#"
+    ],
+    "bishopRoles": [
+      {
+        "square": "d6",
+        "checking": false,
+        "escapesWithoutPiece": [
+          "Kc7"
+        ]
+      }
+    ],
+    "rookRoles": [
+      {
+        "square": "f8",
+        "checking": true,
+        "escapesWithoutPiece": [
+          "Ke8",
+          "Kc8"
+        ]
+      }
+    ],
+    "method": "Exhaustive legal one-move enumeration; actual checkmate and essential-rook removal test."
+  },
+  {
+    "fen": "6K1/8/5k2/8/4r3/3b4/8/8 b - - 0 1",
+    "moves": [
+      "Re8#"
+    ],
+    "alternatives": [
+      "Re8#"
+    ],
+    "bishopRoles": [
+      {
+        "square": "d3",
+        "checking": false,
+        "escapesWithoutPiece": [
+          "Kh7"
+        ]
+      }
+    ],
+    "rookRoles": [
+      {
+        "square": "e8",
+        "checking": true,
+        "escapesWithoutPiece": [
+          "Kh8",
+          "Kf8"
+        ]
+      }
+    ],
+    "method": "Exhaustive legal one-move enumeration; actual checkmate and essential-rook removal test."
+  },
+  {
+    "fen": "k7/8/2K5/8/8/5R2/7B/8 w - - 0 1",
+    "moves": [
+      "Ra3#"
+    ],
+    "alternatives": [
+      "Ra3#"
+    ],
+    "bishopRoles": [
+      {
+        "square": "h2",
+        "checking": false,
+        "escapesWithoutPiece": [
+          "Kb8"
+        ]
+      }
+    ],
+    "rookRoles": [
+      {
+        "square": "a3",
+        "checking": true,
+        "escapesWithoutPiece": [
+          "Ka7"
+        ]
+      }
+    ],
+    "method": "Exhaustive legal one-move enumeration; actual checkmate and essential-rook removal test."
+  },
+  {
+    "fen": "8/8/8/8/3b4/3k3r/8/4K3 b - - 0 1",
+    "moves": [
+      "Rh1#"
+    ],
+    "alternatives": [
+      "Rh1#"
+    ],
+    "bishopRoles": [
+      {
+        "square": "d4",
+        "checking": false,
+        "escapesWithoutPiece": [
+          "Kf2"
+        ]
+      }
+    ],
+    "rookRoles": [
+      {
+        "square": "h1",
+        "checking": true,
+        "escapesWithoutPiece": [
+          "Kf1",
+          "Kd1"
+        ]
+      }
+    ],
+    "method": "Exhaustive legal one-move enumeration; actual checkmate and essential-rook removal test."
+  },
+  {
+    "fen": "8/5r2/8/8/8/3b4/2k5/4K3 b - - 0 1",
+    "moves": [
+      "Rf1#"
+    ],
+    "alternatives": [
+      "Rf1#"
+    ],
+    "bishopRoles": [
+      {
+        "square": "d3",
+        "checking": false,
+        "escapesWithoutPiece": [
+          "Ke2",
+          "Kxf1"
+        ]
+      }
+    ],
+    "rookRoles": [
+      {
+        "square": "f1",
+        "checking": true,
+        "escapesWithoutPiece": [
+          "Kf2"
+        ]
+      }
+    ],
+    "method": "Exhaustive legal one-move enumeration; actual checkmate and essential-rook removal test."
+  },
+  {
+    "fen": "8/8/8/2b4r/8/7k/8/7K b - - 0 1",
+    "moves": [
+      "Kg3#"
+    ],
+    "alternatives": [
+      "Kg3#"
+    ],
+    "bishopRoles": [
+      {
+        "square": "c5",
+        "checking": false,
+        "escapesWithoutPiece": [
+          "Kg1"
+        ]
+      }
+    ],
+    "rookRoles": [
+      {
+        "square": "h5",
+        "checking": true,
+        "escapesWithoutPiece": []
+      }
+    ],
+    "method": "Exhaustive legal one-move enumeration; actual checkmate and essential-rook removal test."
+  },
+  {
+    "fen": "1k6/8/1BK5/8/8/5R2/8/8 w - - 0 1",
+    "moves": [
+      "Rf8#"
+    ],
+    "alternatives": [
+      "Rf8#"
+    ],
+    "bishopRoles": [
+      {
+        "square": "b6",
+        "checking": false,
+        "escapesWithoutPiece": [
+          "Ka7"
+        ]
+      }
+    ],
+    "rookRoles": [
+      {
+        "square": "f8",
+        "checking": true,
+        "escapesWithoutPiece": [
+          "Kc8",
+          "Ka8"
+        ]
+      }
+    ],
+    "method": "Exhaustive legal one-move enumeration; actual checkmate and essential-rook removal test."
+  },
+  {
+    "fen": "8/8/3B4/8/8/8/4R3/5K1k w - - 0 1",
+    "moves": [
+      "Rh2#"
+    ],
+    "alternatives": [
+      "Rh2#"
+    ],
+    "bishopRoles": [
+      {
+        "square": "d6",
+        "checking": false,
+        "escapesWithoutPiece": [
+          "Kxh2"
+        ]
+      }
+    ],
+    "rookRoles": [
+      {
+        "square": "h2",
+        "checking": true,
+        "escapesWithoutPiece": []
+      }
+    ],
+    "method": "Exhaustive legal one-move enumeration; actual checkmate and essential-rook removal test."
+  },
+  {
+    "fen": "8/2B5/8/8/8/5K1k/4R3/8 w - - 0 1",
+    "moves": [
+      "Rh2#"
+    ],
+    "alternatives": [
+      "Rh2#"
+    ],
+    "bishopRoles": [
+      {
+        "square": "c7",
+        "checking": false,
+        "escapesWithoutPiece": [
+          "Kxh2"
+        ]
+      }
+    ],
+    "rookRoles": [
+      {
+        "square": "h2",
+        "checking": true,
+        "escapesWithoutPiece": [
+          "Kh4"
+        ]
+      }
+    ],
+    "method": "Exhaustive legal one-move enumeration; actual checkmate and essential-rook removal test."
+  },
+  {
+    "fen": "8/8/5R2/8/8/8/k7/2KB4 w - - 0 1",
+    "moves": [
+      "Ra6#"
+    ],
+    "alternatives": [
+      "Ra6#"
+    ],
+    "bishopRoles": [
+      {
+        "square": "d1",
+        "checking": false,
+        "escapesWithoutPiece": [
+          "Kb3"
+        ]
+      }
+    ],
+    "rookRoles": [
+      {
+        "square": "a6",
+        "checking": true,
+        "escapesWithoutPiece": [
+          "Ka3",
+          "Ka1"
+        ]
+      }
+    ],
+    "method": "Exhaustive legal one-move enumeration; actual checkmate and essential-rook removal test."
+  },
+  {
+    "fen": "8/8/2R5/8/5B2/5K2/8/6k1 w - - 0 1",
+    "moves": [
+      "Rc1#"
+    ],
+    "alternatives": [
+      "Rc1#"
+    ],
+    "bishopRoles": [
+      {
+        "square": "f4",
+        "checking": false,
+        "escapesWithoutPiece": [
+          "Kh2"
+        ]
+      }
+    ],
+    "rookRoles": [
+      {
+        "square": "c1",
+        "checking": true,
+        "escapesWithoutPiece": [
+          "Kh1",
+          "Kf1"
+        ]
+      }
+    ],
+    "method": "Exhaustive legal one-move enumeration; actual checkmate and essential-rook removal test."
+  },
+  {
+    "fen": "B1k5/8/3K4/8/8/8/8/5R2 w - - 0 1",
+    "moves": [
+      "Rf8#"
+    ],
+    "alternatives": [
+      "Rf8#"
+    ],
+    "bishopRoles": [
+      {
+        "square": "a8",
+        "checking": false,
+        "escapesWithoutPiece": [
+          "Kb7"
+        ]
+      }
+    ],
+    "rookRoles": [
+      {
+        "square": "f8",
+        "checking": true,
+        "escapesWithoutPiece": [
+          "Kd8",
+          "Kb8"
+        ]
+      }
+    ],
+    "method": "Exhaustive legal one-move enumeration; actual checkmate and essential-rook removal test."
+  }
+]

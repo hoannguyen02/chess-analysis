@@ -1,0 +1,4678 @@
+[
+  {
+    "id": "one-rook-mate",
+    "title": "Chiếu hết bằng một Xe",
+    "description": "Phối hợp Vua và Xe để chiếu hết. Ở mức nâng cao, khai thác các quân hỗ trợ và mở đường cho Xe kết thúc.",
+    "exercises": [
+      {
+        "title": "Vua và Xe phối hợp · Bài 1",
+        "prompt": "Phối hợp Vua và Xe để chiếu hết trong 1 nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "6K1/8/6k1/8/3r4/8/8/8 b - - 0 1",
+        "moves": [
+          "Rd8#"
+        ],
+        "hints": [
+          "Vua hỗ trợ kiểm soát các ô thoát; Xe chiếu từ khoảng cách an toàn.",
+          "Kiểm tra xem Vua đối phương còn ô thoát hoặc có thể bắt Xe không."
+        ],
+        "solution": "Vua và Xe cùng khống chế các ô thoát để hoàn thành thế chiếu hết. Nhánh mẫu: Rd8#.",
+        "beginner": true
+      },
+      {
+        "title": "Vua và Xe phối hợp · Bài 2",
+        "prompt": "Phối hợp Vua và Xe để chiếu hết trong 1 nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "3K4/r7/3k4/8/8/8/8/8 b - - 0 1",
+        "moves": [
+          "Ra8#"
+        ],
+        "hints": [
+          "Vua hỗ trợ kiểm soát các ô thoát; Xe chiếu từ khoảng cách an toàn.",
+          "Kiểm tra xem Vua đối phương còn ô thoát hoặc có thể bắt Xe không."
+        ],
+        "solution": "Vua và Xe cùng khống chế các ô thoát để hoàn thành thế chiếu hết. Nhánh mẫu: Ra8#.",
+        "beginner": true
+      },
+      {
+        "title": "Vua và Xe phối hợp · Bài 3",
+        "prompt": "Phối hợp Vua và Xe để chiếu hết trong 1 nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/8/8/1R6/8/3K4/8/3k4 w - - 0 1",
+        "moves": [
+          "Rb1#"
+        ],
+        "hints": [
+          "Vua hỗ trợ kiểm soát các ô thoát; Xe chiếu từ khoảng cách an toàn.",
+          "Kiểm tra xem Vua đối phương còn ô thoát hoặc có thể bắt Xe không."
+        ],
+        "solution": "Vua và Xe cùng khống chế các ô thoát để hoàn thành thế chiếu hết. Nhánh mẫu: Rb1#.",
+        "beginner": true
+      },
+      {
+        "title": "Vua và Xe phối hợp · Bài 4",
+        "prompt": "Phối hợp Vua và Xe để chiếu hết trong 1 nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/5K1k/8/8/8/5R2/8/8 w - - 0 1",
+        "moves": [
+          "Rh3#"
+        ],
+        "hints": [
+          "Vua hỗ trợ kiểm soát các ô thoát; Xe chiếu từ khoảng cách an toàn.",
+          "Kiểm tra xem Vua đối phương còn ô thoát hoặc có thể bắt Xe không."
+        ],
+        "solution": "Vua và Xe cùng khống chế các ô thoát để hoàn thành thế chiếu hết. Nhánh mẫu: Rh3#.",
+        "beginner": true
+      },
+      {
+        "title": "Vua và Xe phối hợp · Bài 5",
+        "prompt": "Phối hợp Vua và Xe để chiếu hết trong 1 nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "1K6/3r4/1k6/8/8/8/8/8 b - - 0 1",
+        "moves": [
+          "Rd8#"
+        ],
+        "hints": [
+          "Vua hỗ trợ kiểm soát các ô thoát; Xe chiếu từ khoảng cách an toàn.",
+          "Kiểm tra xem Vua đối phương còn ô thoát hoặc có thể bắt Xe không."
+        ],
+        "solution": "Vua và Xe cùng khống chế các ô thoát để hoàn thành thế chiếu hết. Nhánh mẫu: Rd8#.",
+        "beginner": true
+      },
+      {
+        "title": "Vua và Xe phối hợp · Bài 6",
+        "prompt": "Phối hợp Vua và Xe để chiếu hết trong 1 nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/8/5r2/8/8/7k/8/7K b - - 0 1",
+        "moves": [
+          "Rf1#"
+        ],
+        "hints": [
+          "Vua hỗ trợ kiểm soát các ô thoát; Xe chiếu từ khoảng cách an toàn.",
+          "Kiểm tra xem Vua đối phương còn ô thoát hoặc có thể bắt Xe không."
+        ],
+        "solution": "Vua và Xe cùng khống chế các ô thoát để hoàn thành thế chiếu hết. Nhánh mẫu: Rf1#.",
+        "beginner": true
+      },
+      {
+        "title": "Vua và Xe phối hợp · Bài 7",
+        "prompt": "Phối hợp Vua và Xe để chiếu hết trong 1 nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/7r/8/8/8/1k6/8/1K6 b - - 0 1",
+        "moves": [
+          "Rh1#"
+        ],
+        "hints": [
+          "Vua hỗ trợ kiểm soát các ô thoát; Xe chiếu từ khoảng cách an toàn.",
+          "Kiểm tra xem Vua đối phương còn ô thoát hoặc có thể bắt Xe không."
+        ],
+        "solution": "Vua và Xe cùng khống chế các ô thoát để hoàn thành thế chiếu hết. Nhánh mẫu: Rh1#.",
+        "beginner": true
+      },
+      {
+        "title": "Vua và Xe phối hợp · Bài 8",
+        "prompt": "Phối hợp Vua và Xe để chiếu hết trong 1 nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "2k5/8/2K5/8/8/8/R7/8 w - - 0 1",
+        "moves": [
+          "Ra8#"
+        ],
+        "hints": [
+          "Vua hỗ trợ kiểm soát các ô thoát; Xe chiếu từ khoảng cách an toàn.",
+          "Kiểm tra xem Vua đối phương còn ô thoát hoặc có thể bắt Xe không."
+        ],
+        "solution": "Vua và Xe cùng khống chế các ô thoát để hoàn thành thế chiếu hết. Nhánh mẫu: Ra8#.",
+        "beginner": true
+      },
+      {
+        "title": "Vua và Xe phối hợp · Bài 9",
+        "prompt": "Phối hợp Vua và Xe để chiếu hết trong 1 nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/8/8/8/3R4/1K6/8/k7 w - - 0 1",
+        "moves": [
+          "Rd1#"
+        ],
+        "hints": [
+          "Vua hỗ trợ kiểm soát các ô thoát; Xe chiếu từ khoảng cách an toàn.",
+          "Kiểm tra xem Vua đối phương còn ô thoát hoặc có thể bắt Xe không."
+        ],
+        "solution": "Vua và Xe cùng khống chế các ô thoát để hoàn thành thế chiếu hết. Nhánh mẫu: Rd1#.",
+        "beginner": true
+      },
+      {
+        "title": "Vua và Xe phối hợp · Bài 10",
+        "prompt": "Phối hợp Vua và Xe để chiếu hết trong 1 nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/8/8/8/K1k5/8/6r1/8 b - - 0 1",
+        "moves": [
+          "Ra2#"
+        ],
+        "hints": [
+          "Vua hỗ trợ kiểm soát các ô thoát; Xe chiếu từ khoảng cách an toàn.",
+          "Kiểm tra xem Vua đối phương còn ô thoát hoặc có thể bắt Xe không."
+        ],
+        "solution": "Vua và Xe cùng khống chế các ô thoát để hoàn thành thế chiếu hết. Nhánh mẫu: Ra2#.",
+        "beginner": true
+      },
+      {
+        "title": "Vua và Xe phối hợp · Bài 11",
+        "prompt": "Phối hợp Vua và Xe để chiếu hết trong 1 nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/8/6R1/8/k1K5/8/8/8 w - - 0 1",
+        "moves": [
+          "Ra6#"
+        ],
+        "hints": [
+          "Vua hỗ trợ kiểm soát các ô thoát; Xe chiếu từ khoảng cách an toàn.",
+          "Kiểm tra xem Vua đối phương còn ô thoát hoặc có thể bắt Xe không."
+        ],
+        "solution": "Vua và Xe cùng khống chế các ô thoát để hoàn thành thế chiếu hết. Nhánh mẫu: Ra6#.",
+        "beginner": true
+      },
+      {
+        "title": "Vua và Xe phối hợp · Bài 12",
+        "prompt": "Phối hợp Vua và Xe để chiếu hết trong 1 nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "K7/2k5/8/8/4r3/8/8/8 b - - 0 1",
+        "moves": [
+          "Ra4#"
+        ],
+        "hints": [
+          "Vua hỗ trợ kiểm soát các ô thoát; Xe chiếu từ khoảng cách an toàn.",
+          "Kiểm tra xem Vua đối phương còn ô thoát hoặc có thể bắt Xe không."
+        ],
+        "solution": "Vua và Xe cùng khống chế các ô thoát để hoàn thành thế chiếu hết. Nhánh mẫu: Ra4#.",
+        "beginner": true
+      },
+      {
+        "title": "Vua và Xe phối hợp · Bài 13",
+        "prompt": "Phối hợp Vua và Xe để chiếu hết trong 1 nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/1r6/8/8/8/4k3/8/4K3 b - - 0 1",
+        "moves": [
+          "Rb1#"
+        ],
+        "hints": [
+          "Vua hỗ trợ kiểm soát các ô thoát; Xe chiếu từ khoảng cách an toàn.",
+          "Kiểm tra xem Vua đối phương còn ô thoát hoặc có thể bắt Xe không."
+        ],
+        "solution": "Vua và Xe cùng khống chế các ô thoát để hoàn thành thế chiếu hết. Nhánh mẫu: Rb1#.",
+        "beginner": true
+      },
+      {
+        "title": "Vua và Xe phối hợp · Bài 14",
+        "prompt": "Phối hợp Vua và Xe để chiếu hết trong 1 nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "2r5/8/8/8/8/8/5k1K/8 b - - 0 1",
+        "moves": [
+          "Rh8#"
+        ],
+        "hints": [
+          "Vua hỗ trợ kiểm soát các ô thoát; Xe chiếu từ khoảng cách an toàn.",
+          "Kiểm tra xem Vua đối phương còn ô thoát hoặc có thể bắt Xe không."
+        ],
+        "solution": "Vua và Xe cùng khống chế các ô thoát để hoàn thành thế chiếu hết. Nhánh mẫu: Rh8#.",
+        "beginner": true
+      },
+      {
+        "title": "Vua và Xe phối hợp · Bài 15",
+        "prompt": "Phối hợp Vua và Xe để chiếu hết trong 1 nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/8/5K1k/8/8/8/8/1R6 w - - 0 1",
+        "moves": [
+          "Rh1#"
+        ],
+        "hints": [
+          "Vua hỗ trợ kiểm soát các ô thoát; Xe chiếu từ khoảng cách an toàn.",
+          "Kiểm tra xem Vua đối phương còn ô thoát hoặc có thể bắt Xe không."
+        ],
+        "solution": "Vua và Xe cùng khống chế các ô thoát để hoàn thành thế chiếu hết. Nhánh mẫu: Rh1#.",
+        "beginner": true
+      },
+      {
+        "title": "Vua và Xe phối hợp · Bài 16",
+        "prompt": "Phối hợp Vua và Xe để chiếu hết trong 1 nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/8/8/8/7r/k7/8/K7 b - - 0 1",
+        "moves": [
+          "Rh1#"
+        ],
+        "hints": [
+          "Vua hỗ trợ kiểm soát các ô thoát; Xe chiếu từ khoảng cách an toàn.",
+          "Kiểm tra xem Vua đối phương còn ô thoát hoặc có thể bắt Xe không."
+        ],
+        "solution": "Vua và Xe cùng khống chế các ô thoát để hoàn thành thế chiếu hết. Nhánh mẫu: Rh1#.",
+        "beginner": true
+      },
+      {
+        "title": "Vua và Xe phối hợp · Bài 17",
+        "prompt": "Phối hợp Vua và Xe để chiếu hết trong 1 nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/8/K1k5/8/8/3r4/8/8 b - - 0 1",
+        "moves": [
+          "Ra3#"
+        ],
+        "hints": [
+          "Vua hỗ trợ kiểm soát các ô thoát; Xe chiếu từ khoảng cách an toàn.",
+          "Kiểm tra xem Vua đối phương còn ô thoát hoặc có thể bắt Xe không."
+        ],
+        "solution": "Vua và Xe cùng khống chế các ô thoát để hoàn thành thế chiếu hết. Nhánh mẫu: Ra3#.",
+        "beginner": true
+      },
+      {
+        "title": "Vua và Xe phối hợp · Bài 18",
+        "prompt": "Phối hợp Vua và Xe để chiếu hết trong 1 nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "2R5/8/8/8/8/6K1/8/7k w - - 0 1",
+        "moves": [
+          "Rc1#"
+        ],
+        "hints": [
+          "Vua hỗ trợ kiểm soát các ô thoát; Xe chiếu từ khoảng cách an toàn.",
+          "Kiểm tra xem Vua đối phương còn ô thoát hoặc có thể bắt Xe không."
+        ],
+        "solution": "Vua và Xe cùng khống chế các ô thoát để hoàn thành thế chiếu hết. Nhánh mẫu: Rc1#.",
+        "beginner": true
+      },
+      {
+        "title": "Vua và Xe phối hợp · Bài 19",
+        "prompt": "Phối hợp Vua và Xe để chiếu hết trong 1 nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/8/8/K1k5/8/5r2/8/8 b - - 0 1",
+        "moves": [
+          "Ra3#"
+        ],
+        "hints": [
+          "Vua hỗ trợ kiểm soát các ô thoát; Xe chiếu từ khoảng cách an toàn.",
+          "Kiểm tra xem Vua đối phương còn ô thoát hoặc có thể bắt Xe không."
+        ],
+        "solution": "Vua và Xe cùng khống chế các ô thoát để hoàn thành thế chiếu hết. Nhánh mẫu: Ra3#.",
+        "beginner": true
+      },
+      {
+        "title": "Vua và Xe phối hợp · Bài 20",
+        "prompt": "Phối hợp Vua và Xe để chiếu hết trong 1 nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/8/8/8/8/5K1k/8/4R3 w - - 0 1",
+        "moves": [
+          "Rh1#"
+        ],
+        "hints": [
+          "Vua hỗ trợ kiểm soát các ô thoát; Xe chiếu từ khoảng cách an toàn.",
+          "Kiểm tra xem Vua đối phương còn ô thoát hoặc có thể bắt Xe không."
+        ],
+        "solution": "Vua và Xe cùng khống chế các ô thoát để hoàn thành thế chiếu hết. Nhánh mẫu: Rh1#.",
+        "beginner": true
+      },
+      {
+        "title": "Vua và Xe phối hợp · Bài 1",
+        "prompt": "Phối hợp Vua và Xe để chiếu hết trong 2 nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/8/8/8/8/2R5/k1K5/8 w - - 0 1",
+        "moves": [
+          "Rh3",
+          "Ka1",
+          "Ra3#"
+        ],
+        "hints": [
+          "Vua hỗ trợ kiểm soát các ô thoát; Xe chiếu từ khoảng cách an toàn.",
+          "Kiểm tra xem Vua đối phương còn ô thoát hoặc có thể bắt Xe không."
+        ],
+        "solution": "Vua và Xe cùng khống chế các ô thoát để hoàn thành thế chiếu hết. Nhánh mẫu: Rh3 · Ka1 · Ra3#.",
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 0,
+          "reason": "Phối hợp Vua và Xe, không hy sinh."
+        }
+      },
+      {
+        "title": "Vua và Xe phối hợp · Bài 2",
+        "prompt": "Phối hợp Vua và Xe để chiếu hết trong 2 nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "7K/8/8/1r3k2/8/8/8/8 b - - 0 1",
+        "moves": [
+          "Kg6",
+          "Kg8",
+          "Rb8#"
+        ],
+        "hints": [
+          "Vua hỗ trợ kiểm soát các ô thoát; Xe chiếu từ khoảng cách an toàn.",
+          "Kiểm tra xem Vua đối phương còn ô thoát hoặc có thể bắt Xe không."
+        ],
+        "solution": "Vua và Xe cùng khống chế các ô thoát để hoàn thành thế chiếu hết. Nhánh mẫu: Kg6 · Kg8 · Rb8#.",
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 0,
+          "reason": "Phối hợp Vua và Xe, không hy sinh."
+        }
+      },
+      {
+        "title": "Vua và Xe phối hợp · Bài 3",
+        "prompt": "Phối hợp Vua và Xe để chiếu hết trong 2 nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "6R1/8/8/8/8/4K3/8/5k2 w - - 0 1",
+        "moves": [
+          "Rg7",
+          "Ke1",
+          "Rg1#"
+        ],
+        "hints": [
+          "Vua hỗ trợ kiểm soát các ô thoát; Xe chiếu từ khoảng cách an toàn.",
+          "Kiểm tra xem Vua đối phương còn ô thoát hoặc có thể bắt Xe không."
+        ],
+        "solution": "Vua và Xe cùng khống chế các ô thoát để hoàn thành thế chiếu hết. Nhánh mẫu: Rg7 · Ke1 · Rg1#.",
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 0,
+          "reason": "Phối hợp Vua và Xe, không hy sinh."
+        }
+      },
+      {
+        "title": "Vua và Xe phối hợp · Bài 4",
+        "prompt": "Phối hợp Vua và Xe để chiếu hết trong 2 nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/8/8/1R6/8/8/7k/5K2 w - - 0 1",
+        "moves": [
+          "Rb3",
+          "Kh1",
+          "Rh3#"
+        ],
+        "hints": [
+          "Vua hỗ trợ kiểm soát các ô thoát; Xe chiếu từ khoảng cách an toàn.",
+          "Kiểm tra xem Vua đối phương còn ô thoát hoặc có thể bắt Xe không."
+        ],
+        "solution": "Vua và Xe cùng khống chế các ô thoát để hoàn thành thế chiếu hết. Nhánh mẫu: Rb3 · Kh1 · Rh3#.",
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 0,
+          "reason": "Phối hợp Vua và Xe, không hy sinh."
+        }
+      },
+      {
+        "title": "Vua và Xe phối hợp · Bài 5",
+        "prompt": "Phối hợp Vua và Xe để chiếu hết trong 2 nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "1k6/8/K7/8/8/8/7R/8 w - - 0 1",
+        "moves": [
+          "Rc2",
+          "Ka8",
+          "Rc8#"
+        ],
+        "hints": [
+          "Vua hỗ trợ kiểm soát các ô thoát; Xe chiếu từ khoảng cách an toàn.",
+          "Kiểm tra xem Vua đối phương còn ô thoát hoặc có thể bắt Xe không."
+        ],
+        "solution": "Vua và Xe cùng khống chế các ô thoát để hoàn thành thế chiếu hết. Nhánh mẫu: Rc2 · Ka8 · Rc8#.",
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 0,
+          "reason": "Phối hợp Vua và Xe, không hy sinh."
+        }
+      },
+      {
+        "title": "Vua và Xe phối hợp · Bài 6",
+        "prompt": "Phối hợp Vua và Xe để chiếu hết trong 2 nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "4K3/8/5k2/8/8/8/8/2r5 b - - 0 1",
+        "moves": [
+          "Rd1",
+          "Kf8",
+          "Rd8#"
+        ],
+        "hints": [
+          "Vua hỗ trợ kiểm soát các ô thoát; Xe chiếu từ khoảng cách an toàn.",
+          "Kiểm tra xem Vua đối phương còn ô thoát hoặc có thể bắt Xe không."
+        ],
+        "solution": "Vua và Xe cùng khống chế các ô thoát để hoàn thành thế chiếu hết. Nhánh mẫu: Rd1 · Kf8 · Rd8#.",
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 0,
+          "reason": "Phối hợp Vua và Xe, không hy sinh."
+        }
+      },
+      {
+        "title": "Vua và Xe phối hợp · Bài 7",
+        "prompt": "Phối hợp Vua và Xe để chiếu hết trong 2 nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "4r3/K1k5/8/8/8/8/8/8 b - - 0 1",
+        "moves": [
+          "Re6",
+          "Ka8",
+          "Ra6#"
+        ],
+        "hints": [
+          "Vua hỗ trợ kiểm soát các ô thoát; Xe chiếu từ khoảng cách an toàn.",
+          "Kiểm tra xem Vua đối phương còn ô thoát hoặc có thể bắt Xe không."
+        ],
+        "solution": "Vua và Xe cùng khống chế các ô thoát để hoàn thành thế chiếu hết. Nhánh mẫu: Re6 · Ka8 · Ra6#.",
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 0,
+          "reason": "Phối hợp Vua và Xe, không hy sinh."
+        }
+      },
+      {
+        "title": "Vua và Xe phối hợp · Bài 8",
+        "prompt": "Phối hợp Vua và Xe để chiếu hết trong 2 nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "4K3/8/8/3k4/8/8/5r2/8 b - - 0 1",
+        "moves": [
+          "Kd6",
+          "Kd8",
+          "Rf8#"
+        ],
+        "hints": [
+          "Vua hỗ trợ kiểm soát các ô thoát; Xe chiếu từ khoảng cách an toàn.",
+          "Kiểm tra xem Vua đối phương còn ô thoát hoặc có thể bắt Xe không."
+        ],
+        "solution": "Vua và Xe cùng khống chế các ô thoát để hoàn thành thế chiếu hết. Nhánh mẫu: Kd6 · Kd8 · Rf8#.",
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 0,
+          "reason": "Phối hợp Vua và Xe, không hy sinh."
+        }
+      },
+      {
+        "title": "Vua và Xe phối hợp · Bài 9",
+        "prompt": "Phối hợp Vua và Xe để chiếu hết trong 2 nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/8/6k1/8/7K/1r6/8/8 b - - 0 1",
+        "moves": [
+          "Kf5",
+          "Kh5",
+          "Rh3#"
+        ],
+        "hints": [
+          "Vua hỗ trợ kiểm soát các ô thoát; Xe chiếu từ khoảng cách an toàn.",
+          "Kiểm tra xem Vua đối phương còn ô thoát hoặc có thể bắt Xe không."
+        ],
+        "solution": "Vua và Xe cùng khống chế các ô thoát để hoàn thành thế chiếu hết. Nhánh mẫu: Kf5 · Kh5 · Rh3#.",
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 0,
+          "reason": "Phối hợp Vua và Xe, không hy sinh."
+        }
+      },
+      {
+        "title": "Vua và Xe phối hợp · Bài 10",
+        "prompt": "Phối hợp Vua và Xe để chiếu hết trong 2 nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "4K3/8/8/2k5/5r2/8/8/8 b - - 0 1",
+        "moves": [
+          "Kd6",
+          "Kd8",
+          "Rf8#"
+        ],
+        "hints": [
+          "Vua hỗ trợ kiểm soát các ô thoát; Xe chiếu từ khoảng cách an toàn.",
+          "Kiểm tra xem Vua đối phương còn ô thoát hoặc có thể bắt Xe không."
+        ],
+        "solution": "Vua và Xe cùng khống chế các ô thoát để hoàn thành thế chiếu hết. Nhánh mẫu: Kd6 · Kd8 · Rf8#.",
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 0,
+          "reason": "Phối hợp Vua và Xe, không hy sinh."
+        }
+      },
+      {
+        "title": "Vua và Xe phối hợp · Bài 1",
+        "prompt": "Phối hợp Vua và Xe để chiếu hết trong 3 nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "6k1/8/8/6K1/6R1/8/8/8 w - - 0 1",
+        "moves": [
+          "Kg6",
+          "Kf8",
+          "Re4",
+          "Kg8",
+          "Re8#"
+        ],
+        "hints": [
+          "Vua hỗ trợ kiểm soát các ô thoát; Xe chiếu từ khoảng cách an toàn.",
+          "Kiểm tra xem Vua đối phương còn ô thoát hoặc có thể bắt Xe không."
+        ],
+        "solution": "Vua và Xe cùng khống chế các ô thoát để hoàn thành thế chiếu hết. Nhánh mẫu: Kg6 · Kf8 · Re4 · Kg8 · Re8#.",
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phối hợp Vua và Xe, không hy sinh."
+        }
+      },
+      {
+        "title": "Vua và Xe phối hợp · Bài 2",
+        "prompt": "Phối hợp Vua và Xe để chiếu hết trong 3 nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "6K1/8/8/5k2/4r3/8/8/8 b - - 0 1",
+        "moves": [
+          "Kg6",
+          "Kf8",
+          "Re1",
+          "Kg8",
+          "Re8#"
+        ],
+        "hints": [
+          "Vua hỗ trợ kiểm soát các ô thoát; Xe chiếu từ khoảng cách an toàn.",
+          "Kiểm tra xem Vua đối phương còn ô thoát hoặc có thể bắt Xe không."
+        ],
+        "solution": "Vua và Xe cùng khống chế các ô thoát để hoàn thành thế chiếu hết. Nhánh mẫu: Kg6 · Kf8 · Re1 · Kg8 · Re8#.",
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phối hợp Vua và Xe, không hy sinh."
+        }
+      },
+      {
+        "title": "Vua và Xe phối hợp · Bài 3",
+        "prompt": "Phối hợp Vua và Xe để chiếu hết trong 3 nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "2r5/8/8/8/6k1/8/8/6K1 b - - 0 1",
+        "moves": [
+          "Kg3",
+          "Kf1",
+          "Re8",
+          "Kg1",
+          "Re1#"
+        ],
+        "hints": [
+          "Vua hỗ trợ kiểm soát các ô thoát; Xe chiếu từ khoảng cách an toàn.",
+          "Kiểm tra xem Vua đối phương còn ô thoát hoặc có thể bắt Xe không."
+        ],
+        "solution": "Vua và Xe cùng khống chế các ô thoát để hoàn thành thế chiếu hết. Nhánh mẫu: Kg3 · Kf1 · Re8 · Kg1 · Re1#.",
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phối hợp Vua và Xe, không hy sinh."
+        }
+      },
+      {
+        "title": "Vua và Xe phối hợp · Bài 4",
+        "prompt": "Phối hợp Vua và Xe để chiếu hết trong 3 nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "7k/8/7K/6R1/8/8/8/8 w - - 0 1",
+        "moves": [
+          "Rf5",
+          "Kg8",
+          "Kg6",
+          "Kh8",
+          "Rf8#"
+        ],
+        "hints": [
+          "Vua hỗ trợ kiểm soát các ô thoát; Xe chiếu từ khoảng cách an toàn.",
+          "Kiểm tra xem Vua đối phương còn ô thoát hoặc có thể bắt Xe không."
+        ],
+        "solution": "Vua và Xe cùng khống chế các ô thoát để hoàn thành thế chiếu hết. Nhánh mẫu: Rf5 · Kg8 · Kg6 · Kh8 · Rf8#.",
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phối hợp Vua và Xe, không hy sinh."
+        }
+      },
+      {
+        "title": "Vua và Xe phối hợp · Bài 5",
+        "prompt": "Phối hợp Vua và Xe để chiếu hết trong 3 nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "6K1/8/8/5k2/8/8/4r3/8 b - - 0 1",
+        "moves": [
+          "Kg6",
+          "Kf8",
+          "Re1",
+          "Kg8",
+          "Re8#"
+        ],
+        "hints": [
+          "Vua hỗ trợ kiểm soát các ô thoát; Xe chiếu từ khoảng cách an toàn.",
+          "Kiểm tra xem Vua đối phương còn ô thoát hoặc có thể bắt Xe không."
+        ],
+        "solution": "Vua và Xe cùng khống chế các ô thoát để hoàn thành thế chiếu hết. Nhánh mẫu: Kg6 · Kf8 · Re1 · Kg8 · Re8#.",
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phối hợp Vua và Xe, không hy sinh."
+        }
+      },
+      {
+        "title": "Vua và Xe phối hợp · Bài 6",
+        "prompt": "Phối hợp Vua và Xe để chiếu hết trong 3 nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/8/1r6/8/7k/8/8/6K1 b - - 0 1",
+        "moves": [
+          "Kg3",
+          "Kf1",
+          "Re6",
+          "Kg1",
+          "Re1#"
+        ],
+        "hints": [
+          "Vua hỗ trợ kiểm soát các ô thoát; Xe chiếu từ khoảng cách an toàn.",
+          "Kiểm tra xem Vua đối phương còn ô thoát hoặc có thể bắt Xe không."
+        ],
+        "solution": "Vua và Xe cùng khống chế các ô thoát để hoàn thành thế chiếu hết. Nhánh mẫu: Kg3 · Kf1 · Re6 · Kg1 · Re1#.",
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phối hợp Vua và Xe, không hy sinh."
+        }
+      },
+      {
+        "title": "Vua và Xe phối hợp · Bài 7",
+        "prompt": "Phối hợp Vua và Xe để chiếu hết trong 3 nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/8/8/8/3rk3/8/8/6K1 b - - 0 1",
+        "moves": [
+          "Kf3",
+          "Kh2",
+          "Rd1",
+          "Kh3",
+          "Rh1#"
+        ],
+        "hints": [
+          "Vua hỗ trợ kiểm soát các ô thoát; Xe chiếu từ khoảng cách an toàn.",
+          "Kiểm tra xem Vua đối phương còn ô thoát hoặc có thể bắt Xe không."
+        ],
+        "solution": "Vua và Xe cùng khống chế các ô thoát để hoàn thành thế chiếu hết. Nhánh mẫu: Kf3 · Kh2 · Rd1 · Kh3 · Rh1#.",
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phối hợp Vua và Xe, không hy sinh."
+        }
+      },
+      {
+        "title": "Vua và Xe phối hợp · Bài 8",
+        "prompt": "Phối hợp Vua và Xe để chiếu hết trong 3 nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/7k/8/6K1/8/R7/8/8 w - - 0 1",
+        "moves": [
+          "Kf6",
+          "Kg8",
+          "Rh3",
+          "Kf8",
+          "Rh8#"
+        ],
+        "hints": [
+          "Vua hỗ trợ kiểm soát các ô thoát; Xe chiếu từ khoảng cách an toàn.",
+          "Kiểm tra xem Vua đối phương còn ô thoát hoặc có thể bắt Xe không."
+        ],
+        "solution": "Vua và Xe cùng khống chế các ô thoát để hoàn thành thế chiếu hết. Nhánh mẫu: Kf6 · Kg8 · Rh3 · Kf8 · Rh8#.",
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phối hợp Vua và Xe, không hy sinh."
+        }
+      },
+      {
+        "title": "Vua và Xe phối hợp · Bài 9",
+        "prompt": "Phối hợp Vua và Xe để chiếu hết trong 3 nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "k7/3K4/7R/8/8/8/8/8 w - - 0 1",
+        "moves": [
+          "Kc7",
+          "Ka7",
+          "Rg6",
+          "Ka8",
+          "Ra6#"
+        ],
+        "hints": [
+          "Vua hỗ trợ kiểm soát các ô thoát; Xe chiếu từ khoảng cách an toàn.",
+          "Kiểm tra xem Vua đối phương còn ô thoát hoặc có thể bắt Xe không."
+        ],
+        "solution": "Vua và Xe cùng khống chế các ô thoát để hoàn thành thế chiếu hết. Nhánh mẫu: Kc7 · Ka7 · Rg6 · Ka8 · Ra6#.",
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phối hợp Vua và Xe, không hy sinh."
+        }
+      },
+      {
+        "title": "Vua và Xe phối hợp · Bài 10",
+        "prompt": "Phối hợp Vua và Xe để chiếu hết trong 3 nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/6R1/8/8/8/3K4/k7/8 w - - 0 1",
+        "moves": [
+          "Kc2",
+          "Ka3",
+          "Rg4",
+          "Ka2",
+          "Ra4#"
+        ],
+        "hints": [
+          "Vua hỗ trợ kiểm soát các ô thoát; Xe chiếu từ khoảng cách an toàn.",
+          "Kiểm tra xem Vua đối phương còn ô thoát hoặc có thể bắt Xe không."
+        ],
+        "solution": "Vua và Xe cùng khống chế các ô thoát để hoàn thành thế chiếu hết. Nhánh mẫu: Kc2 · Ka3 · Rg4 · Ka2 · Ra4#.",
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phối hợp Vua và Xe, không hy sinh."
+        }
+      },
+      {
+        "title": "Marshall, Frank James — Moorman, W.",
+        "prompt": "Tìm cách phối hợp với Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "5r2/8/2R2P1p/k3p3/PN4nP/1K6/8/8 w - - 1 50",
+        "moves": [
+          "Ra6#"
+        ],
+        "previousMove": {
+          "fen": "5r2/8/2R2P1p/1k2p3/PN4nP/1K6/8/8 b - - 0 49",
+          "move": "Ka5"
+        },
+        "source": "https://www.pgnmentor.com/players/Marshall.zip",
+        "gameReference": {
+          "collection": "one-rook-mate",
+          "kind": "game",
+          "id": "174b3c98e1f4e64d",
+          "ply": 98,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 1,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Xe có thể chiếu trên hàng, cột nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở a6 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Ra6#."
+      },
+      {
+        "title": "Salov, Valery — Geller, Efim P",
+        "prompt": "Tìm cách phối hợp với Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "R7/4k1p1/2PrnpB1/8/8/6PP/5PK1/8 w - - 3 49",
+        "moves": [
+          "Re8#"
+        ],
+        "previousMove": {
+          "fen": "R4k2/6p1/2PrnpB1/8/8/6PP/5PK1/8 b - - 2 48",
+          "move": "Ke7"
+        },
+        "source": "https://www.pgnmentor.com/players/Geller.zip",
+        "gameReference": {
+          "collection": "one-rook-mate",
+          "kind": "game",
+          "id": "1a1b564476544120",
+          "ply": 96,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 1,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Xe có thể chiếu trên hàng, cột nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở e8 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Re8#."
+      },
+      {
+        "title": "Teichmann, Richard — Marshall, Frank James",
+        "prompt": "Tìm cách phối hợp với Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/k1K5/3P2r1/p6p/2B2p1P/2p5/2P5/R7 w - - 0 56",
+        "moves": [
+          "Rxa5#"
+        ],
+        "previousMove": {
+          "fen": "8/k1K5/3P2r1/p4p1p/2B4P/2p5/2P5/R7 b - - 6 55",
+          "move": "f4"
+        },
+        "source": "https://www.pgnmentor.com/players/Marshall.zip",
+        "gameReference": {
+          "collection": "one-rook-mate",
+          "kind": "game",
+          "id": "2d33ce3654f5aefc",
+          "ply": 110,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 1,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Xe có thể chiếu trên hàng, cột nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở a5 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Rxa5#."
+      },
+      {
+        "title": "Morozevich,A — Agrest,E",
+        "prompt": "Tìm cách phối hợp với Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "4r3/8/8/8/2B5/2K5/R7/3k4 w - - 48 98",
+        "moves": [
+          "Ra1#"
+        ],
+        "previousMove": {
+          "fen": "3r4/8/8/8/2B5/2K5/R7/3k4 b - - 47 97",
+          "move": "Re8"
+        },
+        "source": "https://www.pgnmentor.com/players/Morozevich.zip",
+        "gameReference": {
+          "collection": "one-rook-mate",
+          "kind": "game",
+          "id": "40c389851dd7c0bc",
+          "ply": 194,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 1,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Xe có thể chiếu trên hàng, cột nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở a1 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Ra1#."
+      },
+      {
+        "title": "Morozevich,A — Kosteniuk,A",
+        "prompt": "Tìm cách phối hợp với Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/6bk/2R3np/1Pp2Q2/2N2p1p/2P2BnP/5PPK/4r3 b - - 2 48",
+        "moves": [
+          "Rh1#"
+        ],
+        "previousMove": {
+          "fen": "8/6bk/2R3np/1Pp2Q2/2N2p1p/2P2BnP/5PP1/4r1K1 w - - 1 48",
+          "move": "Kh2"
+        },
+        "source": "https://www.pgnmentor.com/players/Morozevich.zip",
+        "gameReference": {
+          "collection": "one-rook-mate",
+          "kind": "game",
+          "id": "40f7c1511e05b907",
+          "ply": 95,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 1,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Xe có thể chiếu trên hàng, cột nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở h1 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Rh1#."
+      },
+      {
+        "title": "Alekhine, Alexander — Grigoriev, Nikolay Dmitrievich",
+        "prompt": "Tìm cách phối hợp với Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/pp6/2p2r2/4Rn2/5k1P/8/PPB2KP1/8 w - - 0 36",
+        "moves": [
+          "Re4#"
+        ],
+        "previousMove": {
+          "fen": "8/pp6/2p2r2/4Rn2/5RkP/8/PPB2KP1/8 b - - 0 35",
+          "move": "Kxf4"
+        },
+        "source": "https://www.pgnmentor.com/players/Alekhine.zip",
+        "gameReference": {
+          "collection": "one-rook-mate",
+          "kind": "game",
+          "id": "49a109bf96f0a55a",
+          "ply": 70,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 1,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Xe có thể chiếu trên hàng, cột nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở e4 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Re4#."
+      },
+      {
+        "title": "Ivanchuk,V — Carlsen,M",
+        "prompt": "Tìm cách phối hợp với Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/8/5n1k/4r3/P6K/2P3PP/5R2/8 b - - 0 51",
+        "moves": [
+          "Rh5#"
+        ],
+        "previousMove": {
+          "fen": "8/8/5n1k/4r3/P4R1K/2P3PP/5q2/8 w - - 0 51",
+          "move": "Rxf2"
+        },
+        "source": "https://www.pgnmentor.com/players/Ivanchuk.zip",
+        "gameReference": {
+          "collection": "one-rook-mate",
+          "kind": "game",
+          "id": "551a897a7f005cdf",
+          "ply": 101,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 1,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Xe có thể chiếu trên hàng, cột nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở h5 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Rh5#."
+      },
+      {
+        "title": "Kosteniuk,A — Morozevich,A",
+        "prompt": "Tìm cách phối hợp với Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/pr2k2p/8/5p2/R3b3/2p1P2P/4N3/2K5 b - - 1 47",
+        "moves": [
+          "Rb1#"
+        ],
+        "previousMove": {
+          "fen": "8/pr2k2p/8/5p2/R2Nb3/2p1P2P/8/2K5 w - - 0 47",
+          "move": "Ne2"
+        },
+        "source": "https://www.pgnmentor.com/players/Morozevich.zip",
+        "gameReference": {
+          "collection": "one-rook-mate",
+          "kind": "game",
+          "id": "58b0299fcb1a31d4",
+          "ply": 93,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 1,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Xe có thể chiếu trên hàng, cột nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở b1 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Rb1#."
+      },
+      {
+        "title": "Alekhine, Alexander — Schwartz, L.",
+        "prompt": "Tìm cách phối hợp với Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "6R1/7n/5p1k/4pPn1/1P2P1P1/1B1PN3/2P1Q1K1/r1q5 w - - 8 44",
+        "moves": [
+          "Rg6#"
+        ],
+        "previousMove": {
+          "fen": "6R1/6kn/5p2/4pPn1/1P2P1P1/1B1PN3/2P1Q1K1/r1q5 b - - 7 43",
+          "move": "Kh6"
+        },
+        "source": "https://www.pgnmentor.com/players/Alekhine.zip",
+        "gameReference": {
+          "collection": "one-rook-mate",
+          "kind": "game",
+          "id": "75f4184e52742f20",
+          "ply": 86,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 1,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Xe có thể chiếu trên hàng, cột nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở g6 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Rg6#."
+      },
+      {
+        "title": "Ivanchuk,V — Azmaiparashvili,Z",
+        "prompt": "Tìm cách phối hợp với Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "5N1k/5K2/5R2/8/8/8/6r1/8 w - - 28 86",
+        "moves": [
+          "Rh6#"
+        ],
+        "previousMove": {
+          "fen": "5N2/5K1k/5R2/8/8/8/6r1/8 b - - 27 85",
+          "move": "Kh8"
+        },
+        "source": "https://www.pgnmentor.com/players/Ivanchuk.zip",
+        "gameReference": {
+          "collection": "one-rook-mate",
+          "kind": "game",
+          "id": "7ac5c5b5c0aeac72",
+          "ply": 170,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 1,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Xe có thể chiếu trên hàng, cột nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở h6 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Rh6#."
+      },
+      {
+        "title": "Geller, Efim P — Razuvaev, Yuri S",
+        "prompt": "Tìm cách phối hợp với Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/8/4k3/R1b1P1p1/4K1P1/2r5/7P/8 b - - 3 39",
+        "moves": [
+          "Re3#"
+        ],
+        "previousMove": {
+          "fen": "8/8/4k3/1Rb1P1p1/4K1P1/2r5/7P/8 w - - 2 39",
+          "move": "Ra5"
+        },
+        "source": "https://www.pgnmentor.com/players/Geller.zip",
+        "gameReference": {
+          "collection": "one-rook-mate",
+          "kind": "game",
+          "id": "8240bd95103348e1",
+          "ply": 77,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 1,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Xe có thể chiếu trên hàng, cột nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở e3 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Re3#."
+      },
+      {
+        "title": "Morozevich,A — Nihal,Sarin",
+        "prompt": "Tìm cách phối hợp với Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "2r5/7P/1kp5/2p5/KbP5/pB6/8/5R2 b - - 0 56",
+        "moves": [
+          "Ra8#"
+        ],
+        "previousMove": {
+          "fen": "2r5/8/1kp4P/2p5/KbP5/pB6/8/5R2 w - - 0 56",
+          "move": "h7"
+        },
+        "source": "https://www.pgnmentor.com/players/Morozevich.zip",
+        "gameReference": {
+          "collection": "one-rook-mate",
+          "kind": "game",
+          "id": "90af79246ff4e36c",
+          "ply": 111,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 1,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Xe có thể chiếu trên hàng, cột nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở a8 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Ra8#."
+      },
+      {
+        "title": "Morozevich,A — Pershin,Denis",
+        "prompt": "Tìm cách phối hợp với Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "4k3/p1Q3p1/4r3/7p/3R3P/8/P4qPK/8 w - - 3 38",
+        "moves": [
+          "Rd8#"
+        ],
+        "previousMove": {
+          "fen": "8/p1Q1k1p1/4r3/7p/3R3P/8/P4qPK/8 b - - 2 37",
+          "move": "Ke8"
+        },
+        "source": "https://www.pgnmentor.com/players/Morozevich.zip",
+        "gameReference": {
+          "collection": "one-rook-mate",
+          "kind": "game",
+          "id": "98fdff54726ab28a",
+          "ply": 74,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 1,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Xe có thể chiếu trên hàng, cột nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở d8 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Rd8#."
+      },
+      {
+        "title": "Alekhine, Alexander — Bogoljubow, Efim",
+        "prompt": "Tìm cách phối hợp với Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "7r/8/4N3/4K3/7k/5Pp1/6P1/4R3 w - - 5 52",
+        "moves": [
+          "Rh1#"
+        ],
+        "previousMove": {
+          "fen": "r7/8/4N3/4K3/7k/5Pp1/6P1/4R3 b - - 4 51",
+          "move": "Rh8"
+        },
+        "source": "https://www.pgnmentor.com/players/Alekhine.zip",
+        "gameReference": {
+          "collection": "one-rook-mate",
+          "kind": "game",
+          "id": "9b20a1a44c1fc431",
+          "ply": 102,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 1,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Xe có thể chiếu trên hàng, cột nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở h1 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Rh1#."
+      },
+      {
+        "title": "Bronstein, David I — Kim, V.",
+        "prompt": "Tìm cách phối hợp với Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "7r/5p2/2np1k2/P2Q4/1P2p3/2P2q2/8/R4RK1 b - - 2 36",
+        "moves": [
+          "Rh1#"
+        ],
+        "previousMove": {
+          "fen": "7r/5p2/2np1k2/P2Q4/1P2p3/2P2q2/7K/R4R2 w - - 1 36",
+          "move": "Kg1"
+        },
+        "source": "https://www.pgnmentor.com/players/Bronstein.zip",
+        "gameReference": {
+          "collection": "one-rook-mate",
+          "kind": "game",
+          "id": "aa3efdc42550e0b9",
+          "ply": 71,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 1,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Xe có thể chiếu trên hàng, cột nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở h1 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Rh1#."
+      },
+      {
+        "title": "Morozevich,A — Kasimdzhanov,R",
+        "prompt": "Tìm cách phối hợp với Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/8/2pR4/1pB5/1Pb3p1/2k2p2/5Pr1/4K3 b - - 1 66",
+        "moves": [
+          "Rg1#"
+        ],
+        "previousMove": {
+          "fen": "8/8/2pR4/1pB5/1Pb3p1/2k2p2/5Pr1/5K2 w - - 0 66",
+          "move": "Ke1"
+        },
+        "source": "https://www.pgnmentor.com/players/Morozevich.zip",
+        "gameReference": {
+          "collection": "one-rook-mate",
+          "kind": "game",
+          "id": "b4f26c1589474013",
+          "ply": 131,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 1,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Xe có thể chiếu trên hàng, cột nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở g1 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Rg1#."
+      },
+      {
+        "title": "Ivanchuk,V — Gelfand,B",
+        "prompt": "Tìm cách phối hợp với Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "4R3/8/1p6/1P6/1P3k1P/4p2K/6P1/1r6 b - - 3 48",
+        "moves": [
+          "Rh1#"
+        ],
+        "previousMove": {
+          "fen": "4R3/8/1p6/1P6/1P3k1P/4p3/6PK/1r6 w - - 2 48",
+          "move": "Kh3"
+        },
+        "source": "https://www.pgnmentor.com/players/Ivanchuk.zip",
+        "gameReference": {
+          "collection": "one-rook-mate",
+          "kind": "game",
+          "id": "b8c4df436461bbfe",
+          "ply": 95,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 1,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Xe có thể chiếu trên hàng, cột nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở h1 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Rh1#."
+      },
+      {
+        "title": "Ivanchuk,V — Maze,S",
+        "prompt": "Tìm cách phối hợp với Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "3N4/3R1n1p/r2p1k1q/2pPp3/2P1Pp2/5P2/7P/6QK w - - 2 45",
+        "moves": [
+          "Rxf7#"
+        ],
+        "previousMove": {
+          "fen": "3N4/3R1n1p/3p1k1q/r1pPp3/2P1Pp2/5P2/7P/6QK b - - 1 44",
+          "move": "Ra6"
+        },
+        "source": "https://www.pgnmentor.com/players/Ivanchuk.zip",
+        "gameReference": {
+          "collection": "one-rook-mate",
+          "kind": "game",
+          "id": "ee8f7a25b37ac325",
+          "ply": 88,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 1,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Xe có thể chiếu trên hàng, cột nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở f7 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Rxf7#."
+      },
+      {
+        "title": "Marshall, Frank James — Tarrasch, Siegbert",
+        "prompt": "Tìm cách phối hợp với Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "6R1/6B1/7p/3p1p2/4nP2/5kr1/8/4K3 b - - 8 48",
+        "moves": [
+          "Rg1#"
+        ],
+        "previousMove": {
+          "fen": "6R1/6B1/7p/3p1p2/4nP2/5kr1/8/5K2 w - - 7 48",
+          "move": "Ke1"
+        },
+        "source": "https://www.pgnmentor.com/players/Marshall.zip",
+        "gameReference": {
+          "collection": "one-rook-mate",
+          "kind": "game",
+          "id": "f885779cd3c21266",
+          "ply": 95,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 1,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Xe có thể chiếu trên hàng, cột nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở g1 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Rg1#."
+      },
+      {
+        "title": "Jumabayev,R — Morozevich,A",
+        "prompt": "Tìm cách phối hợp với Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "7k/R5b1/Pp1p3p/3P2p1/bP6/8/2N1N1PP/3Knr2 b - - 0 38",
+        "moves": [
+          "Nf3#"
+        ],
+        "previousMove": {
+          "fen": "7k/p1R3b1/Pp1p3p/3P2p1/bP6/8/2N1N1PP/3Knr2 w - - 0 38",
+          "move": "Rxa7"
+        },
+        "source": "https://www.pgnmentor.com/players/Morozevich.zip",
+        "gameReference": {
+          "collection": "one-rook-mate",
+          "kind": "game",
+          "id": "530546d7c40e8f3b",
+          "ply": 75,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 1,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Xe có thể chiếu trên hàng, cột nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở f1 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Nf3#."
+      },
+      {
+        "title": "Chigorin, Mikhail — Schiffers, Emanuel Stepanovich",
+        "prompt": "Tìm cách phối hợp với Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "7q/p1p1Rrkp/2p3p1/2N3P1/5P2/2pB4/PP5P/6K1 w - - 1 26",
+        "moves": [
+          "Ne6+",
+          "Kg8",
+          "Re8+",
+          "Rf8",
+          "Rxf8#"
+        ],
+        "previousMove": {
+          "fen": "5r1q/p1p1R1kp/2p3p1/2N3P1/5P2/2pB4/PP5P/6K1 b - - 0 25",
+          "move": "Rf7"
+        },
+        "source": "https://www.pgnmentor.com/players/Chigorin.zip",
+        "gameReference": {
+          "collection": "one-rook-mate",
+          "kind": "game",
+          "id": "07d2d0a91638e007",
+          "ply": 50,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Xe có thể chiếu trên hàng, cột nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở f8 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Ne6+ · Kg8 · Re8+ · Rf8 · Rxf8#."
+      },
+      {
+        "title": "Alekhine, Alexander — Muffang, Andre",
+        "prompt": "Tìm cách phối hợp với Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "1rb5/p3k3/1ppNpNR1/4P2p/3P4/4K3/PPB2P1P/8 w - - 3 39",
+        "moves": [
+          "Rg8",
+          "Bb7",
+          "Rg7+",
+          "Kf8",
+          "Rf7#"
+        ],
+        "previousMove": {
+          "fen": "2b5/pr2k3/1ppNpNR1/4P2p/3P4/4K3/PPB2P1P/8 b - - 2 38",
+          "move": "Rb8"
+        },
+        "source": "https://www.pgnmentor.com/players/Alekhine.zip",
+        "gameReference": {
+          "collection": "one-rook-mate",
+          "kind": "game",
+          "id": "0af57f37607c2d60",
+          "ply": 76,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Xe có thể chiếu trên hàng, cột nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở f7 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Rg8 · Bb7 · Rg7+ · Kf8 · Rf7#."
+      },
+      {
+        "title": "Nakamura,Hi — Aronian,L",
+        "prompt": "Tìm cách phối hợp với Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "7K/4r3/4k3/8/8/8/8/8 b - - 47 136",
+        "moves": [
+          "Kf7",
+          "Kh7",
+          "Re6",
+          "Kh8",
+          "Rh6#"
+        ],
+        "previousMove": {
+          "fen": "6K1/4r3/4k3/8/8/8/8/8 w - - 46 136",
+          "move": "Kh8"
+        },
+        "source": "https://www.pgnmentor.com/players/Aronian.zip",
+        "gameReference": {
+          "collection": "one-rook-mate",
+          "kind": "game",
+          "id": "46f7ce6424ee526c",
+          "ply": 271,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Xe có thể chiếu trên hàng, cột nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở h6 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Kf7 · Kh7 · Re6 · Kh8 · Rh6#."
+      },
+      {
+        "title": "Jobava,Ba — Melikyan,Gnel",
+        "prompt": "Tìm cách phối hợp với Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "7k/1R6/6pp/rp6/4N2P/5PK1/8/8 w - - 1 43",
+        "moves": [
+          "Nf6",
+          "Ra7",
+          "Rxa7",
+          "h5",
+          "Rh7#"
+        ],
+        "previousMove": {
+          "fen": "6k1/1R6/6pp/rp6/4N2P/5PK1/8/8 b - h3 0 42",
+          "move": "Kh8"
+        },
+        "source": "https://www.pgnmentor.com/players/Jobava.zip",
+        "gameReference": {
+          "collection": "one-rook-mate",
+          "kind": "game",
+          "id": "4b33895b54321d12",
+          "ply": 84,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Xe có thể chiếu trên hàng, cột nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở h7 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Nf6 · Ra7 · Rxa7 · h5 · Rh7#."
+      },
+      {
+        "title": "Ivanchuk,V — Kovalskyi,Roman",
+        "prompt": "Tìm cách phối hợp với Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "4r1k1/2R5/5KP1/8/8/8/6B1/8 w - - 9 72",
+        "moves": [
+          "Bd5+",
+          "Re6+",
+          "Bxe6+",
+          "Kh8",
+          "Rh7#"
+        ],
+        "previousMove": {
+          "fen": "6k1/2R5/5KP1/8/8/8/6B1/4r3 b - - 8 71",
+          "move": "Re8"
+        },
+        "source": "https://www.pgnmentor.com/players/Ivanchuk.zip",
+        "gameReference": {
+          "collection": "one-rook-mate",
+          "kind": "game",
+          "id": "56ccb216d5eb7295",
+          "ply": 142,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Xe có thể chiếu trên hàng, cột nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở h7 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Bd5+ · Re6+ · Bxe6+ · Kh8 · Rh7#."
+      },
+      {
+        "title": "Pranav,V — Jobava,Ba",
+        "prompt": "Tìm cách phối hợp với Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/p7/1p4P1/1n1PkN2/2p1P3/2Pn4/PB3r2/1K4R1 b - - 0 53",
+        "moves": [
+          "Rxb2+",
+          "Ka1",
+          "Nxc3",
+          "Rg2",
+          "Rb1#"
+        ],
+        "previousMove": {
+          "fen": "8/p7/1p6/1n1PkNP1/2p1P3/2Pn4/PB3r2/1K4R1 w - - 1 53",
+          "move": "g6"
+        },
+        "source": "https://www.pgnmentor.com/players/Jobava.zip",
+        "gameReference": {
+          "collection": "one-rook-mate",
+          "kind": "game",
+          "id": "71edb382894aeb7d",
+          "ply": 105,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Xe có thể chiếu trên hàng, cột nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở b1 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Rxb2+ · Ka1 · Nxc3 · Rg2 · Rb1#."
+      },
+      {
+        "title": "Nesterov,Arseniy — Jobava,Ba",
+        "prompt": "Tìm cách phối hợp với Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/5k2/8/4RPK1/5NN1/8/8/3q4 w - - 3 68",
+        "moves": [
+          "Nh6+",
+          "Kf8",
+          "Ng6+",
+          "Kg7",
+          "Re7#"
+        ],
+        "previousMove": {
+          "fen": "8/4k3/8/4RPK1/5NN1/8/8/3q4 b - - 2 67",
+          "move": "Kf7"
+        },
+        "source": "https://www.pgnmentor.com/players/Jobava.zip",
+        "gameReference": {
+          "collection": "one-rook-mate",
+          "kind": "game",
+          "id": "7323912ce19e0d92",
+          "ply": 134,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Xe có thể chiếu trên hàng, cột nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở e7 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Nh6+ · Kf8 · Ng6+ · Kg7 · Re7#."
+      },
+      {
+        "title": "Ivanchuk,V — Kuhn,Clement",
+        "prompt": "Tìm cách phối hợp với Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "4b2r/2q3k1/4p1p1/1p1pP1P1/1PrN1Q2/2P2R2/7P/6K1 w - - 0 33",
+        "moves": [
+          "Qf6+",
+          "Kg8",
+          "Qf8+",
+          "Kh7",
+          "Rh3#"
+        ],
+        "previousMove": {
+          "fen": "4b2r/2q2pk1/4p1R1/1p1pP1P1/1PrN1Q2/2P2R2/7P/6K1 b - - 0 32",
+          "move": "fxg6"
+        },
+        "source": "https://www.pgnmentor.com/players/Ivanchuk.zip",
+        "gameReference": {
+          "collection": "one-rook-mate",
+          "kind": "game",
+          "id": "a5fb34e25684a93a",
+          "ply": 64,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Xe có thể chiếu trên hàng, cột nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở h3 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Qf6+ · Kg8 · Qf8+ · Kh7 · Rh3#."
+      },
+      {
+        "title": "Geller, Efim P — Cuellar Gacharna, Miguel",
+        "prompt": "Tìm cách phối hợp với Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "3r4/8/6pk/p1Q4p/4B3/1P3PP1/P5KP/4q3 b - - 0 40",
+        "moves": [
+          "Rd2+",
+          "Kh3",
+          "Qf1+",
+          "Kh4",
+          "Rxh2#"
+        ],
+        "previousMove": {
+          "fen": "3r4/8/6pk/p1p4p/4B3/1P3PP1/P1Q3KP/4q3 w - - 0 40",
+          "move": "Qxc5"
+        },
+        "source": "https://www.pgnmentor.com/players/Geller.zip",
+        "gameReference": {
+          "collection": "one-rook-mate",
+          "kind": "game",
+          "id": "ab10f15a3540feff",
+          "ply": 79,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Xe có thể chiếu trên hàng, cột nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở h2 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Rd2+ · Kh3 · Qf1+ · Kh4 · Rxh2#."
+      },
+      {
+        "title": "Bronstein, David I — Gufeld, Eduard",
+        "prompt": "Tìm cách phối hợp với Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "r4bk1/5p2/3p2p1/1K1Pp1P1/PPQ1P3/8/3BNq2/8 b - a3 0 39",
+        "moves": [
+          "Rb8+",
+          "Kc6",
+          "Qb6+",
+          "Kd7",
+          "Rd8#"
+        ],
+        "previousMove": {
+          "fen": "r4bk1/5p2/3p2p1/1K1Pp1P1/1PQ1P3/8/P2BNq2/8 w - - 3 39",
+          "move": "a4"
+        },
+        "source": "https://www.pgnmentor.com/players/Bronstein.zip",
+        "gameReference": {
+          "collection": "one-rook-mate",
+          "kind": "game",
+          "id": "ad47e02ea8fce480",
+          "ply": 77,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Xe có thể chiếu trên hàng, cột nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở d8 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Rb8+ · Kc6 · Qb6+ · Kd7 · Rd8#."
+      },
+      {
+        "title": "Ragger,M — Morozevich,A",
+        "prompt": "Tìm cách phối hợp với Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "4k3/2R5/6N1/1p3p1P/1P1Pn3/6PK/3r4/8 b - - 0 44",
+        "moves": [
+          "Ng5+",
+          "Kh4",
+          "Nf3+",
+          "Kh3",
+          "Rh2#"
+        ],
+        "previousMove": {
+          "fen": "4k3/2R5/6N1/1p3p2/1P1Pn2P/6PK/3r4/8 w - - 1 44",
+          "move": "h5"
+        },
+        "source": "https://www.pgnmentor.com/players/Morozevich.zip",
+        "gameReference": {
+          "collection": "one-rook-mate",
+          "kind": "game",
+          "id": "b084b8044363463b",
+          "ply": 87,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Xe có thể chiếu trên hàng, cột nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở h2 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Ng5+ · Kh4 · Nf3+ · Kh3 · Rh2#."
+      },
+      {
+        "title": "Rakhmanov,Ale — Jobava,Ba",
+        "prompt": "Tìm cách phối hợp với Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "6r1/5k2/p1p2p2/2Bb4/3P4/1PN1bP2/P6K/3R4 b - - 4 37",
+        "moves": [
+          "Bf4+",
+          "Kh3",
+          "Be6+",
+          "Kh4",
+          "Rh8#"
+        ],
+        "previousMove": {
+          "fen": "6r1/5k2/p1p2p2/2Bb4/3P4/1PN1bPK1/P7/3R4 w - - 3 37",
+          "move": "Kh2"
+        },
+        "source": "https://www.pgnmentor.com/players/Jobava.zip",
+        "gameReference": {
+          "collection": "one-rook-mate",
+          "kind": "game",
+          "id": "bf6c6ea68764b437",
+          "ply": 73,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Xe có thể chiếu trên hàng, cột nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở h8 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Bf4+ · Kh3 · Be6+ · Kh4 · Rh8#."
+      },
+      {
+        "title": "Putnam,Liam — Morozevich,A",
+        "prompt": "Tìm cách phối hợp với Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/8/8/8/4n3/2p1k3/2K2R1r/5q2 b - - 1 72",
+        "moves": [
+          "Qxf2+",
+          "Kb3",
+          "Qa2+",
+          "Kb4",
+          "Rb2#"
+        ],
+        "previousMove": {
+          "fen": "8/8/8/5R2/4n3/2p1k3/2K4r/5q2 w - - 0 72",
+          "move": "Rf2"
+        },
+        "source": "https://www.pgnmentor.com/players/Morozevich.zip",
+        "gameReference": {
+          "collection": "one-rook-mate",
+          "kind": "game",
+          "id": "c7053943a4d237e8",
+          "ply": 143,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Xe có thể chiếu trên hàng, cột nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở b2 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Qxf2+ · Kb3 · Qa2+ · Kb4 · Rb2#."
+      },
+      {
+        "title": "Anderssen, Adolf — Mayet, Carl",
+        "prompt": "Tìm cách phối hợp với Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "r1bk1b2/ppp4p/2np4/3NP3/2B5/8/PPP1K1PP/5R2 w - - 0 23",
+        "moves": [
+          "Rxf8+",
+          "Kd7",
+          "Nf6+",
+          "Ke7",
+          "Re8#"
+        ],
+        "previousMove": {
+          "fen": "r1bk1R2/ppp3bp/2np4/3NP3/2B5/8/PPP1K1PP/5R2 b - - 1 22",
+          "move": "Bxf8"
+        },
+        "source": "https://www.pgnmentor.com/players/Anderssen.zip",
+        "gameReference": {
+          "collection": "one-rook-mate",
+          "kind": "game",
+          "id": "cd07c7d17233e3a7",
+          "ply": 44,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Xe có thể chiếu trên hàng, cột nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở e8 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Rxf8+ · Kd7 · Nf6+ · Ke7 · Re8#."
+      },
+      {
+        "title": "Meshkovs,Nikita — Jobava,Ba",
+        "prompt": "Tìm cách phối hợp với Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "7B/8/7R/3k2p1/1p3p2/4nP1P/6PK/3r4 b - - 0 61",
+        "moves": [
+          "Nf1+",
+          "Kg1",
+          "Ng3+",
+          "Kh2",
+          "Rh1#"
+        ],
+        "previousMove": {
+          "fen": "7B/8/2R4p/3k2p1/1p3p2/4nP1P/6PK/3r4 w - - 14 61",
+          "move": "Rxh6"
+        },
+        "source": "https://www.pgnmentor.com/players/Jobava.zip",
+        "gameReference": {
+          "collection": "one-rook-mate",
+          "kind": "game",
+          "id": "f5ef47c3e9465301",
+          "ply": 121,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Xe có thể chiếu trên hàng, cột nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở h1 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Nf1+ · Kg1 · Ng3+ · Kh2 · Rh1#."
+      },
+      {
+        "title": "Anderssen, Adolf — Finch, J.",
+        "prompt": "Tìm cách phối hợp với Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/1pp1Qp1k/1b2b2p/p6P/P6N/6r1/5qP1/R3R2K b - - 1 31",
+        "moves": [
+          "Qxg2+",
+          "Nxg2",
+          "Rh3#"
+        ],
+        "previousMove": {
+          "fen": "8/1pp1Qp1k/1b2b2p/p6P/P6N/6r1/5qP1/R3R1K1 w - - 0 31",
+          "move": "Kh1"
+        },
+        "source": "https://www.pgnmentor.com/players/Anderssen.zip",
+        "gameReference": {
+          "collection": "one-rook-mate",
+          "kind": "game",
+          "id": "0d49ca024dbb49b7",
+          "ply": 61,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Xe có thể chiếu trên hàng, cột nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe; tính cả các cách phòng thủ."
+        ],
+        "solution": "Hy sinh Hậu trên g2 để mở đường cho đòn phối hợp. Xe ở h3 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Qxg2+ · Nxg2 · Rh3#."
+      },
+      {
+        "title": "Navara,D — Eilenberg,Jonas",
+        "prompt": "Tìm cách phối hợp với Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "2r2k2/2q2ppQ/4b1n1/1p2p1B1/2p1P3/2P3P1/1PB2PK1/7R w - - 14 37",
+        "moves": [
+          "Qh8+",
+          "Nxh8",
+          "Rxh8#"
+        ],
+        "previousMove": {
+          "fen": "2r3k1/2q2ppQ/4b1n1/1p2p1B1/2p1P3/2P3P1/1PB2PK1/7R b - - 13 36",
+          "move": "Kf8"
+        },
+        "source": "https://www.pgnmentor.com/players/Navara.zip",
+        "gameReference": {
+          "collection": "one-rook-mate",
+          "kind": "game",
+          "id": "101eb5ca28750579",
+          "ply": 72,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Xe có thể chiếu trên hàng, cột nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe; tính cả các cách phòng thủ."
+        ],
+        "solution": "Hy sinh Hậu trên h8 để mở đường cho đòn phối hợp. Xe ở h8 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Qh8+ · Nxh8 · Rxh8#."
+      },
+      {
+        "title": "Bacrot,E — Laddha,Shubh Jayesh",
+        "prompt": "Tìm cách phối hợp với Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "1Q2r1k1/1p3bpp/p1p1N3/3p4/qP6/7P/P5P1/5RK1 w - - 2 27",
+        "moves": [
+          "Qxe8+",
+          "Bxe8",
+          "Rf8#"
+        ],
+        "previousMove": {
+          "fen": "1Q4k1/1p2rbpp/p1p1N3/3p4/qP6/7P/P5P1/5RK1 b - - 1 26",
+          "move": "Re8"
+        },
+        "source": "https://www.pgnmentor.com/players/Bacrot.zip",
+        "gameReference": {
+          "collection": "one-rook-mate",
+          "kind": "game",
+          "id": "10e008152eea15c4",
+          "ply": 52,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Xe có thể chiếu trên hàng, cột nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe; tính cả các cách phòng thủ."
+        ],
+        "solution": "Hy sinh Hậu trên e8 để mở đường cho đòn phối hợp. Xe ở f8 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Qxe8+ · Bxe8 · Rf8#."
+      },
+      {
+        "title": "Kasparov, Gary — NN",
+        "prompt": "Tìm cách phối hợp với Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "b2q3k/4N1pn/2p3Q1/pp6/5R2/2N5/PP1B2PP/7K w - - 5 28",
+        "moves": [
+          "Qxh7+",
+          "Kxh7",
+          "Rh4#"
+        ],
+        "previousMove": {
+          "fen": "b6k/4N1pn/2p3Q1/pp6/3q1R2/2N5/PP1B2PP/7K b - - 4 27",
+          "move": "Qd8"
+        },
+        "source": "https://www.pgnmentor.com/players/Kasparov.zip",
+        "gameReference": {
+          "collection": "one-rook-mate",
+          "kind": "game",
+          "id": "18f89b6a0336a722",
+          "ply": 54,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Xe có thể chiếu trên hàng, cột nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe; tính cả các cách phòng thủ."
+        ],
+        "solution": "Hy sinh Hậu trên h7 để mở đường cho đòn phối hợp. Xe ở h4 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Qxh7+ · Kxh7 · Rh4#."
+      },
+      {
+        "title": "McShane,L — Anand,V",
+        "prompt": "Tìm cách phối hợp với Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/6pk/4qp2/7p/pB5P/P4QP1/6NK/1r6 b - - 22 51",
+        "moves": [
+          "Qh3+",
+          "Kxh3",
+          "Rh1#"
+        ],
+        "previousMove": {
+          "fen": "8/6pk/4qp2/7p/pB3Q1P/P5P1/6NK/1r6 w - - 21 51",
+          "move": "Qf3"
+        },
+        "source": "https://www.pgnmentor.com/players/Anand.zip",
+        "gameReference": {
+          "collection": "one-rook-mate",
+          "kind": "game",
+          "id": "33b8d628f0b67071",
+          "ply": 101,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Xe có thể chiếu trên hàng, cột nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe; tính cả các cách phòng thủ."
+        ],
+        "solution": "Hy sinh Hậu trên h3 để mở đường cho đòn phối hợp. Xe ở h1 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Qh3+ · Kxh3 · Rh1#."
+      },
+      {
+        "title": "Goering, Carl Theodor — Anderssen, Adolf",
+        "prompt": "Tìm cách phối hợp với Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "2Q2nk1/1p2rpp1/8/p2p4/3N1r2/6K1/PP4PR/5q2 w - - 2 36",
+        "moves": [
+          "Qxf8+",
+          "Kxf8",
+          "Rh8#"
+        ],
+        "previousMove": {
+          "fen": "2Q3k1/1p2rpp1/6n1/p2p4/3N1r2/6K1/PP4PR/5q2 b - - 1 35",
+          "move": "Nf8"
+        },
+        "source": "https://www.pgnmentor.com/players/Anderssen.zip",
+        "gameReference": {
+          "collection": "one-rook-mate",
+          "kind": "game",
+          "id": "3ae89ecf4f579140",
+          "ply": 70,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Xe có thể chiếu trên hàng, cột nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe; tính cả các cách phòng thủ."
+        ],
+        "solution": "Hy sinh Hậu trên f8 để mở đường cho đòn phối hợp. Xe ở h8 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Qxf8+ · Kxf8 · Rh8#."
+      },
+      {
+        "title": "Jobava,Ba — Hansen,Eric",
+        "prompt": "Tìm cách phối hợp với Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "4r2k/6p1/7p/8/Q2p3P/BPb2pP1/P4P2/4qBK1 b - - 8 36",
+        "moves": [
+          "Qxf1+",
+          "Kxf1",
+          "Re1#"
+        ],
+        "previousMove": {
+          "fen": "4r2k/6p1/7p/8/Q2p3P/BPbB1pP1/P4P2/4q1K1 w - - 7 36",
+          "move": "Bf1"
+        },
+        "source": "https://www.pgnmentor.com/players/Jobava.zip",
+        "gameReference": {
+          "collection": "one-rook-mate",
+          "kind": "game",
+          "id": "475e58ac7690572e",
+          "ply": 71,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Xe có thể chiếu trên hàng, cột nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe; tính cả các cách phòng thủ."
+        ],
+        "solution": "Hy sinh Hậu trên f1 để mở đường cho đòn phối hợp. Xe ở e1 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Qxf1+ · Kxf1 · Re1#."
+      },
+      {
+        "title": "Lasker, Emanuel — Bird, Henry Edward",
+        "prompt": "Tìm cách phối hợp với Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "4r3/1b3Qbk/2q3Np/p1npP3/2pP1P2/2B4N/PP4K1/3R4 w - - 3 42",
+        "moves": [
+          "Ng5+",
+          "hxg5",
+          "Rh1#"
+        ],
+        "previousMove": {
+          "fen": "4r2k/1b3Qb1/2q3Np/p1npP3/2pP1P2/2B4N/PP4K1/3R4 b - - 2 41",
+          "move": "Kh7"
+        },
+        "source": "https://www.pgnmentor.com/players/Lasker.zip",
+        "gameReference": {
+          "collection": "one-rook-mate",
+          "kind": "game",
+          "id": "6b08b27321b8a609",
+          "ply": 82,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Xe có thể chiếu trên hàng, cột nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe; tính cả các cách phòng thủ."
+        ],
+        "solution": "Hy sinh Mã trên g5 để mở đường cho đòn phối hợp. Xe ở h1 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Ng5+ · hxg5 · Rh1#."
+      },
+      {
+        "title": "Shirov,A — Masague Artero,Guerau",
+        "prompt": "Tìm cách phối hợp với Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "r2q4/p1n1k1r1/1pQ1P2p/2p2R2/5N2/2P1P2P/PP4P1/6K1 w - - 1 27",
+        "moves": [
+          "Ng6+",
+          "Rxg6",
+          "Rf7#"
+        ],
+        "previousMove": {
+          "fen": "r2q2r1/p1n1k3/1pQ1P2p/2p2R2/5N2/2P1P2P/PP4P1/6K1 b - - 0 26",
+          "move": "Rg7"
+        },
+        "source": "https://www.pgnmentor.com/players/Shirov.zip",
+        "gameReference": {
+          "collection": "one-rook-mate",
+          "kind": "game",
+          "id": "7e72fb8b1d808558",
+          "ply": 52,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Xe có thể chiếu trên hàng, cột nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe; tính cả các cách phòng thủ."
+        ],
+        "solution": "Hy sinh Mã trên g6 để mở đường cho đòn phối hợp. Xe ở f7 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Ng6+ · Rxg6 · Rf7#."
+      },
+      {
+        "title": "Jakubowski,K — Kamsky,G",
+        "prompt": "Tìm cách phối hợp với Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "2b2k1r/5p2/3p2p1/2pPb2n/1pB1P2p/4q3/P1Q3PP/2R2R1K b - - 1 31",
+        "moves": [
+          "Ng3+",
+          "hxg3",
+          "hxg3#"
+        ],
+        "previousMove": {
+          "fen": "2b2k1r/5p2/3p2p1/2pPb2n/1pB1P2p/4q3/P1Q3PP/2R2RK1 w - - 0 31",
+          "move": "Kh1"
+        },
+        "source": "https://www.pgnmentor.com/players/Kamsky.zip",
+        "gameReference": {
+          "collection": "one-rook-mate",
+          "kind": "game",
+          "id": "870939b1c1824036",
+          "ply": 61,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Xe có thể chiếu trên hàng, cột nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe; tính cả các cách phòng thủ."
+        ],
+        "solution": "Hy sinh Mã trên g3 để mở đường cho đòn phối hợp. Xe ở h8 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Ng3+ · hxg3 · hxg3#."
+      },
+      {
+        "title": "Polzin,R — Motylev,A",
+        "prompt": "Tìm cách phối hợp với Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "6R1/2k2P2/1n5r/3p1p2/3P3b/1QP2p1q/3R4/6K1 b - - 5 44",
+        "moves": [
+          "Qh1+",
+          "Kxh1",
+          "Bf2#"
+        ],
+        "previousMove": {
+          "fen": "4R3/2k2P2/1n5r/3p1p2/3P3b/1QP2p1q/3R4/6K1 w - - 4 44",
+          "move": "Rg8"
+        },
+        "source": "https://www.pgnmentor.com/players/Motylev.zip",
+        "gameReference": {
+          "collection": "one-rook-mate",
+          "kind": "game",
+          "id": "996c13f2ae0892d8",
+          "ply": 87,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Xe có thể chiếu trên hàng, cột nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe; tính cả các cách phòng thủ."
+        ],
+        "solution": "Hy sinh Hậu trên h1 để mở đường cho đòn phối hợp. Xe ở h6 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Qh1+ · Kxh1 · Bf2#."
+      },
+      {
+        "title": "Gubajdullin,A — Gurevich,D",
+        "prompt": "Tìm cách phối hợp với Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "2B5/4r1k1/p1Q2n2/Pp2q2p/3p2p1/5p2/1P3P1P/2R3K1 b - - 1 35",
+        "moves": [
+          "Qe1+",
+          "Rxe1",
+          "Rxe1#"
+        ],
+        "previousMove": {
+          "fen": "2B5/4r1k1/p1Q2n2/Pp2q2p/3p2p1/5p2/1P3P1P/2R2K2 w - - 0 35",
+          "move": "Kg1"
+        },
+        "source": "https://www.pgnmentor.com/players/GurevichD.zip",
+        "gameReference": {
+          "collection": "one-rook-mate",
+          "kind": "game",
+          "id": "ac1d15919d642c7c",
+          "ply": 69,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Xe có thể chiếu trên hàng, cột nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe; tính cả các cách phòng thủ."
+        ],
+        "solution": "Hy sinh Hậu trên e1 để mở đường cho đòn phối hợp. Xe ở e1 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Qe1+ · Rxe1 · Rxe1#."
+      },
+      {
+        "title": "Heinemann,Josefine — Mamedyarov,S",
+        "prompt": "Tìm cách phối hợp với Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "3r2k1/p4p2/1p4p1/2P1p1q1/1P2Q1b1/6P1/P3NP2/4K2R b K - 1 26",
+        "moves": [
+          "Qc1+",
+          "Nxc1",
+          "Rd1#"
+        ],
+        "previousMove": {
+          "fen": "3r2k1/p4p2/1p4p1/2P1p1q1/1P4b1/6P1/P1Q1NP2/4K2R w K - 0 26",
+          "move": "Qe4"
+        },
+        "source": "https://www.pgnmentor.com/players/Mamedyarov.zip",
+        "gameReference": {
+          "collection": "one-rook-mate",
+          "kind": "game",
+          "id": "b0a7af666f9e5c7b",
+          "ply": 51,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Xe có thể chiếu trên hàng, cột nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe; tính cả các cách phòng thủ."
+        ],
+        "solution": "Hy sinh Hậu trên c1 để mở đường cho đòn phối hợp. Xe ở d1 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Qc1+ · Nxc1 · Rd1#."
+      },
+      {
+        "title": "Bynum,Jacorey — Carlsen,M",
+        "prompt": "Tìm cách phối hợp với Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "5r2/1R6/3p1qnk/2p3pp/3bP3/6PP/4QBB1/6K1 w - - 4 35",
+        "moves": [
+          "Qxh5+",
+          "Kxh5",
+          "Rh7#"
+        ],
+        "previousMove": {
+          "fen": "5r2/1R6/3p1qnk/2p3pp/4P3/2b3PP/4QBB1/6K1 b - - 3 34",
+          "move": "Bd4"
+        },
+        "source": "https://www.pgnmentor.com/players/Carlsen.zip",
+        "gameReference": {
+          "collection": "one-rook-mate",
+          "kind": "game",
+          "id": "b4b58bedbc1485c3",
+          "ply": 68,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Xe có thể chiếu trên hàng, cột nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe; tính cả các cách phòng thủ."
+        ],
+        "solution": "Hy sinh Hậu trên h5 để mở đường cho đòn phối hợp. Xe ở h7 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Qxh5+ · Kxh5 · Rh7#."
+      },
+      {
+        "title": "Piesik,P — Bologan,V",
+        "prompt": "Tìm cách phối hợp với Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "2r3k1/p3Qp2/1p3PP1/3q4/3p2pp/3P2P1/1P6/4R1K1 w - - 0 35",
+        "moves": [
+          "Qe8+",
+          "Rxe8",
+          "Rxe8#"
+        ],
+        "previousMove": {
+          "fen": "2r3k1/p3Qp2/1p3PP1/3q3p/3p2p1/3P2P1/1P6/4R1K1 b - - 4 34",
+          "move": "h4"
+        },
+        "source": "https://www.pgnmentor.com/players/Bologan.zip",
+        "gameReference": {
+          "collection": "one-rook-mate",
+          "kind": "game",
+          "id": "b5a1afad68c257bd",
+          "ply": 68,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Xe có thể chiếu trên hàng, cột nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe; tính cả các cách phòng thủ."
+        ],
+        "solution": "Hy sinh Hậu trên e8 để mở đường cho đòn phối hợp. Xe ở e8 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Qe8+ · Rxe8 · Rxe8#."
+      },
+      {
+        "title": "Lasker, Emanuel — NN",
+        "prompt": "Tìm cách phối hợp với Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "r6k/3nq2r/p3pNQ1/1p1pn3/1PpP1P2/2P2N2/P6P/6RK w - - 0 34",
+        "moves": [
+          "Qg8+",
+          "Rxg8",
+          "Rxg8#"
+        ],
+        "previousMove": {
+          "fen": "r6k/3nq1rR/p3pNQ1/1p1pn3/1PpP1P2/2P2N2/P6P/6RK b - - 0 33",
+          "move": "Rxh7"
+        },
+        "source": "https://www.pgnmentor.com/players/Lasker.zip",
+        "gameReference": {
+          "collection": "one-rook-mate",
+          "kind": "game",
+          "id": "bdcff56a4d6a1521",
+          "ply": 66,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Xe có thể chiếu trên hàng, cột nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe; tính cả các cách phòng thủ."
+        ],
+        "solution": "Hy sinh Hậu trên g8 để mở đường cho đòn phối hợp. Xe ở g8 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Qg8+ · Rxg8 · Rxg8#."
+      },
+      {
+        "title": "Popov,Iv RUS — Nepomniachtchi,I",
+        "prompt": "Tìm cách phối hợp với Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "3rQ3/5pbk/6p1/pp6/4R1Pp/7P/PPNq1P2/1K4R1 b - - 0 35",
+        "moves": [
+          "Qd1+",
+          "Rxd1",
+          "Rxd1#"
+        ],
+        "previousMove": {
+          "fen": "3rQ3/5pbk/6p1/pp6/4R1Pp/4N2P/PPrq1P2/1K4R1 w - - 4 35",
+          "move": "Nxc2"
+        },
+        "source": "https://www.pgnmentor.com/players/Nepomniachtchi.zip",
+        "gameReference": {
+          "collection": "one-rook-mate",
+          "kind": "game",
+          "id": "cbaa389382fe5e30",
+          "ply": 69,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Xe có thể chiếu trên hàng, cột nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe; tính cả các cách phòng thủ."
+        ],
+        "solution": "Hy sinh Hậu trên d1 để mở đường cho đòn phối hợp. Xe ở d1 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Qd1+ · Rxd1 · Rxd1#."
+      },
+      {
+        "title": "Moen,A — Topalov,V",
+        "prompt": "Tìm cách phối hợp với Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "4r1k1/5p1p/p3q1pQ/1p6/1P6/P1R5/6PP/2R4K b - - 0 34",
+        "moves": [
+          "Qe1+",
+          "Rxe1",
+          "Rxe1#"
+        ],
+        "previousMove": {
+          "fen": "4r1k1/5p1p/p3q1pb/1p6/1P3Q2/P1R5/6PP/2R4K w - - 1 34",
+          "move": "Qxh6"
+        },
+        "source": "https://www.pgnmentor.com/players/Topalov.zip",
+        "gameReference": {
+          "collection": "one-rook-mate",
+          "kind": "game",
+          "id": "f66041d73e2dcbed",
+          "ply": 67,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Xe có thể chiếu trên hàng, cột nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe; tính cả các cách phòng thủ."
+        ],
+        "solution": "Hy sinh Hậu trên e1 để mở đường cho đòn phối hợp. Xe ở e1 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Qe1+ · Rxe1 · Rxe1#."
+      },
+      {
+        "title": "Navara,D — Keleberda,Tymur",
+        "prompt": "Tìm cách phối hợp với Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "5rk1/5ppp/8/2QNp1b1/2P1P3/8/2q2PPP/1R4K1 w - - 1 29",
+        "moves": [
+          "Qxf8+",
+          "Kxf8",
+          "Rb8+",
+          "Bd8",
+          "Rxd8#"
+        ],
+        "previousMove": {
+          "fen": "5rk1/5ppp/8/2QNp1b1/q1P1P3/8/5PPP/1R4K1 b - - 0 28",
+          "move": "Qc2"
+        },
+        "source": "https://www.pgnmentor.com/players/Navara.zip",
+        "gameReference": {
+          "collection": "one-rook-mate",
+          "kind": "game",
+          "id": "a0281e1b3ee6ecd7",
+          "ply": 56,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Xe có thể chiếu trên hàng, cột nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe; tính cả các cách phòng thủ."
+        ],
+        "solution": "Hy sinh Hậu trên f8 để mở đường cho đòn phối hợp. Xe ở d8 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Qxf8+ · Kxf8 · Rb8+ · Bd8 · Rxd8#."
+      },
+      {
+        "title": "Anderssen, Adolf — Harrwitz, Daniel",
+        "prompt": "Tìm cách phối hợp với Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "5Qn1/6r1/q2p2pk/3p2Np/3NP2P/5PR1/P1K5/8 w - - 8 48",
+        "moves": [
+          "Nf5+",
+          "gxf5",
+          "Nf7+",
+          "Kh7",
+          "Rxg7#"
+        ],
+        "previousMove": {
+          "fen": "5Qn1/1q4r1/3p2pk/3p2Np/3NP2P/5PR1/P1K5/8 b - - 7 47",
+          "move": "Qa6"
+        },
+        "source": "https://www.pgnmentor.com/players/Anderssen.zip",
+        "gameReference": {
+          "collection": "one-rook-mate",
+          "kind": "game",
+          "id": "db6fb876a2d6ddad",
+          "ply": 94,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Xe có thể chiếu trên hàng, cột nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe; tính cả các cách phòng thủ."
+        ],
+        "solution": "Hy sinh Mã trên f5 để mở đường cho đòn phối hợp. Xe ở g7 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Nf5+ · gxf5 · Nf7+ · Kh7 · Rxg7#."
+      },
+      {
+        "title": "Ivanchuk,V — Suyarov,Mukhammadzokhid",
+        "prompt": "Tìm cách phối hợp với Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "5k2/8/p1R3Q1/Pp1p2pr/1q1P2N1/4Pr2/5P2/6K1 w - - 2 45",
+        "moves": [
+          "Rc8+",
+          "Ke7",
+          "Qe8+",
+          "Kd6",
+          "Rc6#"
+        ],
+        "previousMove": {
+          "fen": "6k1/8/p1R3Q1/Pp1p2pr/1q1P2N1/4Pr2/5P2/6K1 b - - 1 44",
+          "move": "Kf8"
+        },
+        "source": "https://www.pgnmentor.com/players/Ivanchuk.zip",
+        "gameReference": {
+          "collection": "one-rook-mate",
+          "kind": "game",
+          "id": "2bc72e40d1373a09",
+          "ply": 88,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Xe có thể chiếu trên hàng, cột nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở c6 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Rc8+ · Ke7 · Qe8+ · Kd6 · Rc6#."
+      },
+      {
+        "title": "Hafiz,Arif Abdul — Jobava,Ba",
+        "prompt": "Tìm cách phối hợp với Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/1R6/3Np1pP/4PpP1/5Pn1/4k3/r7/5K2 b - - 4 49",
+        "moves": [
+          "Nh2+",
+          "Ke1",
+          "Ra1+",
+          "Rb1",
+          "Rxb1#"
+        ],
+        "previousMove": {
+          "fen": "8/7R/3Np1pP/4PpP1/5Pn1/4k3/r7/5K2 w - - 3 49",
+          "move": "Rb7"
+        },
+        "source": "https://www.pgnmentor.com/players/Jobava.zip",
+        "gameReference": {
+          "collection": "one-rook-mate",
+          "kind": "game",
+          "id": "417a207ac041dea8",
+          "ply": 97,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Xe có thể chiếu trên hàng, cột nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở b1 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Nh2+ · Ke1 · Ra1+ · Rb1 · Rxb1#."
+      },
+      {
+        "title": "Aronian,L — Andreikin,D",
+        "prompt": "Tìm cách phối hợp với Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "3N1k2/pp4p1/4R2p/8/1P3Pn1/PB4Pn/3r3P/5K2 b - - 0 33",
+        "moves": [
+          "Nxh2+",
+          "Ke1",
+          "Nf3+",
+          "Kf1",
+          "Rf2#"
+        ],
+        "previousMove": {
+          "fen": "3r1k2/pp3Np1/4R2p/8/1P3Pn1/PB4Pn/3r3P/5K2 w - - 0 33",
+          "move": "Nxd8"
+        },
+        "source": "https://www.pgnmentor.com/players/Aronian.zip",
+        "gameReference": {
+          "collection": "one-rook-mate",
+          "kind": "game",
+          "id": "8d25152e11937c98",
+          "ply": 65,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Xe có thể chiếu trên hàng, cột nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở f2 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Nxh2+ · Ke1 · Nf3+ · Kf1 · Rf2#."
+      },
+      {
+        "title": "Aronian,L — Vokhidov,Shamsiddin",
+        "prompt": "Tìm cách phối hợp với Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "5Q2/8/2k5/8/8/5K2/4R3/8 w - - 1 75",
+        "moves": [
+          "Qc8+",
+          "Kd5",
+          "Qc7",
+          "Kd4",
+          "Rd2#"
+        ],
+        "previousMove": {
+          "fen": "5Q2/8/8/2k5/8/5K2/4R3/8 b - - 0 74",
+          "move": "Kc6"
+        },
+        "source": "https://www.pgnmentor.com/players/Aronian.zip",
+        "gameReference": {
+          "collection": "one-rook-mate",
+          "kind": "game",
+          "id": "b59a27159dec699a",
+          "ply": 148,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Xe có thể chiếu trên hàng, cột nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở d2 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Qc8+ · Kd5 · Qc7 · Kd4 · Rd2#."
+      },
+      {
+        "title": "Chigorin, Mikhail — Bird, Henry Edward",
+        "prompt": "Tìm cách phối hợp với Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "2r1r3/p7/3B1n1p/7q/8/4kP2/PR4PP/1Q4K1 w - - 9 43",
+        "moves": [
+          "Qe1+",
+          "Kd4",
+          "Qd2+",
+          "Kc4",
+          "Rb4#"
+        ],
+        "previousMove": {
+          "fen": "2r1r3/p7/3B1n1p/7q/8/5P2/PR2k1PP/1Q4K1 b - - 8 42",
+          "move": "Ke3"
+        },
+        "source": "https://www.pgnmentor.com/players/Chigorin.zip",
+        "gameReference": {
+          "collection": "one-rook-mate",
+          "kind": "game",
+          "id": "cbcecd1e4d999fdd",
+          "ply": 84,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Xe có thể chiếu trên hàng, cột nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở b4 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Qe1+ · Kd4 · Qd2+ · Kc4 · Rb4#."
+      },
+      {
+        "title": "Alekhine, Alexander — NN",
+        "prompt": "Tìm cách phối hợp với Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "6k1/5RN1/1p3pPp/2p4P/1n1p2P1/3P4/P1r5/5K2 w - - 0 34",
+        "moves": [
+          "Ne6",
+          "Rc1+",
+          "Kg2",
+          "Rc2+",
+          "Kg3",
+          "Rg2+",
+          "Kxg2",
+          "Nxd3",
+          "Rf8#"
+        ],
+        "previousMove": {
+          "fen": "6k1/5RN1/1p3pPp/2p4P/1n1p2P1/3P4/P1P1r3/5K2 b - - 2 33",
+          "move": "Rxc2"
+        },
+        "source": "https://www.pgnmentor.com/players/Alekhine.zip",
+        "gameReference": {
+          "collection": "one-rook-mate",
+          "kind": "game",
+          "id": "2b15706f860bfa49",
+          "ply": 66,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Xe có thể chiếu trên hàng, cột nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở f8 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Ne6 · Rc1+ · Kg2 · Rc2+ · Kg3 · Rg2+ · Kxg2 · Nxd3 · Rf8#."
+      },
+      {
+        "title": "Carlsen,M — Sathvik Adiga",
+        "prompt": "Tìm cách phối hợp với Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "6k1/8/6PR/4B3/5PKP/8/8/6r1 w - - 1 51",
+        "moves": [
+          "Kf5",
+          "Rxg6",
+          "Kxg6",
+          "Kf8",
+          "Rh7",
+          "Ke8",
+          "Bf6",
+          "Kf8",
+          "Rh8#"
+        ],
+        "previousMove": {
+          "fen": "6k1/8/6PR/4B3/5PKP/8/8/1r6 b - - 0 50",
+          "move": "Rg1+"
+        },
+        "source": "https://www.pgnmentor.com/players/Carlsen.zip",
+        "gameReference": {
+          "collection": "one-rook-mate",
+          "kind": "game",
+          "id": "2c79138dc1ffd4bf",
+          "ply": 100,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Xe có thể chiếu trên hàng, cột nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở h8 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Kf5 · Rxg6 · Kxg6 · Kf8 · Rh7 · Ke8 · Bf6 · Kf8 · Rh8#."
+      },
+      {
+        "title": "Carlsen,M — Donchenko,Alexa",
+        "prompt": "Tìm cách phối hợp với Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/1p3RPk/5n1N/1P6/8/r7/p4K2/8 w - - 1 45",
+        "moves": [
+          "g8=Q+",
+          "Kxh6",
+          "Qh8+",
+          "Kg6",
+          "Qxf6+",
+          "Kh5",
+          "Qf5+",
+          "Kh4",
+          "Rh7#"
+        ],
+        "previousMove": {
+          "fen": "7k/1p3RP1/5n1N/1P6/8/r7/p4K2/8 b - - 0 44",
+          "move": "Kh7"
+        },
+        "source": "https://www.pgnmentor.com/players/Carlsen.zip",
+        "gameReference": {
+          "collection": "one-rook-mate",
+          "kind": "game",
+          "id": "4bab5ae318b29a56",
+          "ply": 88,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Xe có thể chiếu trên hàng, cột nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở h7 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: g8=Q+ · Kxh6 · Qh8+ · Kg6 · Qxf6+ · Kh5 · Qf5+ · Kh4 · Rh7#."
+      },
+      {
+        "title": "Boyer,Mahel — Giri,A",
+        "prompt": "Tìm cách phối hợp với Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/1P6/4p3/2N1kbp1/4p3/P1R2pP1/1P1r3P/6K1 b - - 0 37",
+        "moves": [
+          "f2+",
+          "Kg2",
+          "Bh3+",
+          "Kxh3",
+          "f1=Q+",
+          "Kg4",
+          "Qf5+",
+          "Kh5",
+          "Rxh2#"
+        ],
+        "previousMove": {
+          "fen": "8/8/1P2p3/2N1kbp1/4p3/P1R2pP1/1P1r3P/6K1 w - - 1 37",
+          "move": "b7"
+        },
+        "source": "https://www.pgnmentor.com/players/Giri.zip",
+        "gameReference": {
+          "collection": "one-rook-mate",
+          "kind": "game",
+          "id": "4c73aab88705b45b",
+          "ply": 73,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Xe có thể chiếu trên hàng, cột nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở h2 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: f2+ · Kg2 · Bh3+ · Kxh3 · f1=Q+ · Kg4 · Qf5+ · Kh5 · Rxh2#."
+      },
+      {
+        "title": "Ashraf,Artin — Caruana,F",
+        "prompt": "Tìm cách phối hợp với Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/5P2/3k4/8/4R3/4K3/8/5N2 w - - 1 78",
+        "moves": [
+          "f8=Q+",
+          "Kd5",
+          "Qf5+",
+          "Kc6",
+          "Re6+",
+          "Kd7",
+          "Qf7+",
+          "Kd8",
+          "Re8#"
+        ],
+        "previousMove": {
+          "fen": "8/3k1P2/8/8/4R3/4K3/8/5N2 b - - 0 77",
+          "move": "Kd6"
+        },
+        "source": "https://www.pgnmentor.com/players/Caruana.zip",
+        "gameReference": {
+          "collection": "one-rook-mate",
+          "kind": "game",
+          "id": "50bb48171c0b6ff3",
+          "ply": 154,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Xe có thể chiếu trên hàng, cột nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở e8 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: f8=Q+ · Kd5 · Qf5+ · Kc6 · Re6+ · Kd7 · Qf7+ · Kd8 · Re8#."
+      },
+      {
+        "title": "Englisch, Berthold — Chigorin, Mikhail",
+        "prompt": "Tìm cách phối hợp với Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/2r5/6kp/3n2p1/2P5/1qB3PQ/7P/4R2K w - - 2 46",
+        "moves": [
+          "Re6+",
+          "Kf7",
+          "Qf5+",
+          "Nf6",
+          "Qxf6+",
+          "Kg8",
+          "Qg6+",
+          "Kf8",
+          "Re8#"
+        ],
+        "previousMove": {
+          "fen": "8/2r5/7p/3n2pk/2P5/1qB3PQ/7P/4R2K b - - 1 45",
+          "move": "Kg6"
+        },
+        "source": "https://www.pgnmentor.com/players/Chigorin.zip",
+        "gameReference": {
+          "collection": "one-rook-mate",
+          "kind": "game",
+          "id": "572bbc90785bb39f",
+          "ply": 90,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Xe có thể chiếu trên hàng, cột nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở e8 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Re6+ · Kf7 · Qf5+ · Nf6 · Qxf6+ · Kg8 · Qg6+ · Kf8 · Re8#."
+      },
+      {
+        "title": "Rustemov,A — Jobava,Ba",
+        "prompt": "Tìm cách phối hợp với Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/8/8/1B6/4K3/6k1/5p2/5R2 w - - 10 77",
+        "moves": [
+          "Be2",
+          "Kh3",
+          "Kf3",
+          "Kh4",
+          "Kf4",
+          "Kh3",
+          "Rxf2",
+          "Kh4",
+          "Rh2#"
+        ],
+        "previousMove": {
+          "fen": "8/8/8/1B6/4K3/8/5pk1/5R2 b - - 9 76",
+          "move": "Kg3"
+        },
+        "source": "https://www.pgnmentor.com/players/Jobava.zip",
+        "gameReference": {
+          "collection": "one-rook-mate",
+          "kind": "game",
+          "id": "606a05cb5507665a",
+          "ply": 152,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Xe có thể chiếu trên hàng, cột nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở h2 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Be2 · Kh3 · Kf3 · Kh4 · Kf4 · Kh3 · Rxf2 · Kh4 · Rh2#."
+      },
+      {
+        "title": "Jobava,Ba — Valdazo,Raphael",
+        "prompt": "Tìm cách phối hợp với Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "5k2/8/2P5/8/2P2P2/1P1K1PP1/P3R3/8 w - - 1 54",
+        "moves": [
+          "c7",
+          "Kf7",
+          "c8=Q",
+          "Kf6",
+          "Re6+",
+          "Kf7",
+          "Qd7+",
+          "Kf8",
+          "Re8#"
+        ],
+        "previousMove": {
+          "fen": "8/5k2/2P5/8/2P2P2/1P1K1PP1/P3R3/8 b - - 0 53",
+          "move": "Kf8"
+        },
+        "source": "https://www.pgnmentor.com/players/Jobava.zip",
+        "gameReference": {
+          "collection": "one-rook-mate",
+          "kind": "game",
+          "id": "8405c7defa699141",
+          "ply": 106,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Xe có thể chiếu trên hàng, cột nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở e8 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: c7 · Kf7 · c8=Q · Kf6 · Re6+ · Kf7 · Qd7+ · Kf8 · Re8#."
+      },
+      {
+        "title": "Jobava,Ba — Ladopoulos,D",
+        "prompt": "Tìm cách phối hợp với Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/4k3/5rq1/8/6RK/8/8/8 b - - 7 66",
+        "moves": [
+          "Qh6+",
+          "Kg3",
+          "Qe3+",
+          "Kh2",
+          "Qf2+",
+          "Kh3",
+          "Rh6+",
+          "Rh4",
+          "Rxh4#"
+        ],
+        "previousMove": {
+          "fen": "8/4k3/5rq1/6K1/6R1/8/8/8 w - - 6 66",
+          "move": "Kh4"
+        },
+        "source": "https://www.pgnmentor.com/players/Jobava.zip",
+        "gameReference": {
+          "collection": "one-rook-mate",
+          "kind": "game",
+          "id": "af31ae3c6b9d7ab4",
+          "ply": 131,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Xe có thể chiếu trên hàng, cột nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở h4 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Qh6+ · Kg3 · Qe3+ · Kh2 · Qf2+ · Kh3 · Rh6+ · Rh4 · Rxh4#."
+      },
+      {
+        "title": "Aronian,L — So,W",
+        "prompt": "Tìm cách phối hợp với Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/2R5/7p/3N2p1/5p2/5P2/1k2K1PP/8 w - - 2 44",
+        "moves": [
+          "Kd3",
+          "g4",
+          "Rb7+",
+          "Ka3",
+          "Kc4",
+          "gxf3",
+          "Nc3",
+          "fxg2",
+          "Rb3#"
+        ],
+        "previousMove": {
+          "fen": "8/2R5/7p/3N2p1/5p2/1k3P2/4K1PP/8 b - - 1 43",
+          "move": "Kb2"
+        },
+        "source": "https://www.pgnmentor.com/players/Aronian.zip",
+        "gameReference": {
+          "collection": "one-rook-mate",
+          "kind": "game",
+          "id": "d5f12b7bfb3fc913",
+          "ply": 86,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Xe có thể chiếu trên hàng, cột nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở b3 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Kd3 · g4 · Rb7+ · Ka3 · Kc4 · gxf3 · Nc3 · fxg2 · Rb3#."
+      },
+      {
+        "title": "Aronian,L — Nepomniachtchi,I",
+        "prompt": "Tìm cách phối hợp với Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/6R1/8/8/5K2/7p/8/7k w - - 2 80",
+        "moves": [
+          "Kf3",
+          "Kh2",
+          "Ra7",
+          "Kg1",
+          "Ra2",
+          "Kh1",
+          "Kg3",
+          "h2",
+          "Ra1#"
+        ],
+        "previousMove": {
+          "fen": "8/6R1/8/8/5K2/7p/7k/8 b - - 1 79",
+          "move": "Kh1"
+        },
+        "source": "https://www.pgnmentor.com/players/Aronian.zip",
+        "gameReference": {
+          "collection": "one-rook-mate",
+          "kind": "game",
+          "id": "dfa1ca9b6e2631a0",
+          "ply": 158,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Xe có thể chiếu trên hàng, cột nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở a1 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Kf3 · Kh2 · Ra7 · Kg1 · Ra2 · Kh1 · Kg3 · h2 · Ra1#."
+      },
+      {
+        "title": "Anderssen, Adolf — Kolisch, Ignatz",
+        "prompt": "Tìm cách phối hợp với Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/pp6/1b1q3p/3p4/2r5/1R6/4Q1PP/2k4K w - - 2 42",
+        "moves": [
+          "Qb2+",
+          "Kd1",
+          "Rd3+",
+          "Ke1",
+          "Qd2+",
+          "Kf1",
+          "Qd1+",
+          "Kf2",
+          "Rf3#"
+        ],
+        "previousMove": {
+          "fen": "8/pp6/1b1q3p/3p4/2r5/1R6/4Q1PP/1k5K b - - 1 41",
+          "move": "Kc1"
+        },
+        "source": "https://www.pgnmentor.com/players/Anderssen.zip",
+        "gameReference": {
+          "collection": "one-rook-mate",
+          "kind": "game",
+          "id": "e03447ef3a3a124c",
+          "ply": 82,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Xe có thể chiếu trên hàng, cột nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở f3 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Qb2+ · Kd1 · Rd3+ · Ke1 · Qd2+ · Kf1 · Qd1+ · Kf2 · Rf3#."
+      },
+      {
+        "title": "Dreev,A — Ivanchuk,V",
+        "prompt": "Tìm cách phối hợp với Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/5k1P/6R1/2p3p1/P7/2P3P1/8/6K1 w - - 1 52",
+        "moves": [
+          "Rh6",
+          "c4",
+          "h8=Q",
+          "g4",
+          "Rf6+",
+          "Ke7",
+          "Qg7+",
+          "Ke8",
+          "Rf8#"
+        ],
+        "previousMove": {
+          "fen": "8/4k2P/6R1/2p3p1/P7/2P3P1/8/6K1 b - - 0 51",
+          "move": "Kf7"
+        },
+        "source": "https://www.pgnmentor.com/players/Ivanchuk.zip",
+        "gameReference": {
+          "collection": "one-rook-mate",
+          "kind": "game",
+          "id": "e6841d5d7c987515",
+          "ply": 102,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Xe có thể chiếu trên hàng, cột nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở f8 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Rh6 · c4 · h8=Q · g4 · Rf6+ · Ke7 · Qg7+ · Ke8 · Rf8#."
+      },
+      {
+        "title": "Caruana,F — Elier,Ali",
+        "prompt": "Tìm cách phối hợp với Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/1k6/pP1R4/2KPp3/1PP5/8/r7/8 w - - 1 52",
+        "moves": [
+          "Rd7+",
+          "Kc8",
+          "Kc6",
+          "Rb2",
+          "b7+",
+          "Kb8",
+          "Rd8+",
+          "Ka7",
+          "Ra8#"
+        ],
+        "previousMove": {
+          "fen": "8/1k6/pP1R4/2KPp3/1PP5/8/3r4/8 b - c3 0 51",
+          "move": "Ra2"
+        },
+        "source": "https://www.pgnmentor.com/players/Caruana.zip",
+        "gameReference": {
+          "collection": "one-rook-mate",
+          "kind": "game",
+          "id": "e72fbf7a7e3b7ddd",
+          "ply": 102,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Xe có thể chiếu trên hàng, cột nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở a8 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Rd7+ · Kc8 · Kc6 · Rb2 · b7+ · Kb8 · Rd8+ · Ka7 · Ra8#."
+      },
+      {
+        "title": "Grischuk,A — Bortnyk,Olexandr",
+        "prompt": "Tìm cách phối hợp với Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/8/7P/8/4K1pk/5P2/3R4/8 w - - 0 70",
+        "moves": [
+          "h7",
+          "Kg5",
+          "h8=Q",
+          "Kg6",
+          "Ke5",
+          "Kf7",
+          "Rd7+",
+          "Kg6",
+          "Rg7#"
+        ],
+        "previousMove": {
+          "fen": "8/8/7P/6p1/4K2k/5P2/3R4/8 b - - 0 69",
+          "move": "g4"
+        },
+        "source": "https://www.pgnmentor.com/players/Grischuk.zip",
+        "gameReference": {
+          "collection": "one-rook-mate",
+          "kind": "game",
+          "id": "e7e8cd1ced78887e",
+          "ply": 138,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Xe có thể chiếu trên hàng, cột nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở g7 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: h7 · Kg5 · h8=Q · Kg6 · Ke5 · Kf7 · Rd7+ · Kg6 · Rg7#."
+      },
+      {
+        "title": "Mamedyarov,S — Oparin,G",
+        "prompt": "Tìm cách phối hợp với Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "7k/8/6Rp/7P/8/7K/8/8 w - - 3 82",
+        "moves": [
+          "Kg4",
+          "Kh7",
+          "Kf5",
+          "Kh8",
+          "Kf6",
+          "Kh7",
+          "Kf7",
+          "Kh8",
+          "Rxh6#"
+        ],
+        "previousMove": {
+          "fen": "8/7k/6Rp/7P/8/7K/8/8 b - - 2 81",
+          "move": "Kh8"
+        },
+        "source": "https://www.pgnmentor.com/players/Mamedyarov.zip",
+        "gameReference": {
+          "collection": "one-rook-mate",
+          "kind": "game",
+          "id": "fc87209f97f54579",
+          "ply": 162,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Xe có thể chiếu trên hàng, cột nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở h6 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Kg4 · Kh7 · Kf5 · Kh8 · Kf6 · Kh7 · Kf7 · Kh8 · Rxh6#."
+      },
+      {
+        "title": "Giri,A — Aronian,L",
+        "prompt": "Tìm cách phối hợp với Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/8/8/2p2K2/3k4/1r6/3p4/8 b - - 1 67",
+        "moves": [
+          "d1=Q",
+          "Kf6",
+          "Qg4",
+          "Ke7",
+          "Qg7+",
+          "Ke6",
+          "Rb6+",
+          "Kf5",
+          "Rf6#"
+        ],
+        "previousMove": {
+          "fen": "8/8/4K3/2p5/3k4/1r6/3p4/8 w - - 0 67",
+          "move": "Kf5"
+        },
+        "source": "https://www.pgnmentor.com/players/Aronian.zip",
+        "gameReference": {
+          "collection": "one-rook-mate",
+          "kind": "game",
+          "id": "fdc9026b6cdf7705",
+          "ply": 133,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Xe có thể chiếu trên hàng, cột nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở f6 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: d1=Q · Kf6 · Qg4 · Ke7 · Qg7+ · Ke6 · Rb6+ · Kf5 · Rf6#."
+      },
+      {
+        "title": "Morozevich,A — Vasquez Schroeder,R",
+        "prompt": "Tìm cách phối hợp với Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/6k1/8/4pPPK/1b2Np2/3P1P2/6r1/8 b - - 6 52",
+        "moves": [
+          "Rh2+",
+          "Kg4",
+          "Be1",
+          "g6",
+          "Kh6",
+          "Ng3",
+          "Bxg3",
+          "f6",
+          "Kxg6",
+          "f7",
+          "Rh4#"
+        ],
+        "previousMove": {
+          "fen": "8/6k1/8/4pPP1/1b2NpK1/3P1P2/6r1/8 w - - 5 52",
+          "move": "Kh5"
+        },
+        "source": "https://www.pgnmentor.com/players/Morozevich.zip",
+        "gameReference": {
+          "collection": "one-rook-mate",
+          "kind": "game",
+          "id": "20be286535542c7f",
+          "ply": 103,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 6,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Xe có thể chiếu trên hàng, cột nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở h4 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Rh2+ · Kg4 · Be1 · g6 · Kh6 · Ng3 · Bxg3 · f6 · Kxg6 · f7 · Rh4#."
+      },
+      {
+        "title": "Carlsen,M — Goltsev,Dmitry",
+        "prompt": "Tìm cách phối hợp với Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "Q7/1K3kb1/4p3/2B1P3/1P4p1/6P1/1r6/4R3 w - - 1 46",
+        "moves": [
+          "Rf1+",
+          "Rf2",
+          "Rxf2+",
+          "Kg6",
+          "Qe8+",
+          "Kh7",
+          "Rh2+",
+          "Bh6",
+          "Qf7+",
+          "Kh8",
+          "Rxh6#"
+        ],
+        "previousMove": {
+          "fen": "Q7/1K3kb1/4p3/2B1P3/1P4p1/6P1/7r/4R3 b - - 0 45",
+          "move": "Rb2"
+        },
+        "source": "https://www.pgnmentor.com/players/Carlsen.zip",
+        "gameReference": {
+          "collection": "one-rook-mate",
+          "kind": "game",
+          "id": "57fbcdd08069f994",
+          "ply": 90,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 6,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Xe có thể chiếu trên hàng, cột nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở h6 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Rf1+ · Rf2 · Rxf2+ · Kg6 · Qe8+ · Kh7 · Rh2+ · Bh6 · Qf7+ · Kh8 · Rxh6#."
+      },
+      {
+        "title": "Nihal,Sarin — Caruana,F",
+        "prompt": "Tìm cách phối hợp với Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/1K6/1p5R/4kb2/8/8/8/qr6 b - - 1 57",
+        "moves": [
+          "Be4+",
+          "Kb8",
+          "Qa8+",
+          "Kc7",
+          "Rc1+",
+          "Rc6",
+          "Rxc6+",
+          "Kd7",
+          "Qb7+",
+          "Ke8",
+          "Rc8#"
+        ],
+        "previousMove": {
+          "fen": "8/8/1pK4R/4kb2/8/8/8/qr6 w - - 0 57",
+          "move": "Kb7"
+        },
+        "source": "https://www.pgnmentor.com/players/Caruana.zip",
+        "gameReference": {
+          "collection": "one-rook-mate",
+          "kind": "game",
+          "id": "6d6e2ba989acf935",
+          "ply": 113,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 6,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Xe có thể chiếu trên hàng, cột nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở c8 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Be4+ · Kb8 · Qa8+ · Kc7 · Rc1+ · Rc6 · Rxc6+ · Kd7 · Qb7+ · Ke8 · Rc8#."
+      },
+      {
+        "title": "Larsen, Bent — Ljubojevic, Ljubomir",
+        "prompt": "Tìm cách phối hợp với Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "2r3k1/N4p1p/6p1/R2bQ3/1p5q/8/1P4PP/5R1K b - - 0 27",
+        "moves": [
+          "Qf2",
+          "Rg1",
+          "Qxg2+",
+          "Rxg2",
+          "Rc1+",
+          "Qe1",
+          "Rxe1#"
+        ],
+        "previousMove": {
+          "fen": "2r3k1/N4p1p/6p1/R2bb3/1p5q/8/1P2Q1PP/5R1K w - - 4 27",
+          "move": "Qxe5"
+        },
+        "source": "https://www.pgnmentor.com/players/Larsen.zip",
+        "gameReference": {
+          "collection": "one-rook-mate",
+          "kind": "game",
+          "id": "07cd314d5d3f4c63",
+          "ply": 53,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "D",
+          "status": "suggested",
+          "solverMoves": 4,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Xe có thể chiếu trên hàng, cột nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe; tính cả các cách phòng thủ."
+        ],
+        "solution": "Hy sinh Hậu trên g2 để mở đường cho đòn phối hợp. Xe ở e1 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Qf2 · Rg1 · Qxg2+ · Rxg2 · Rc1+ · Qe1 · Rxe1#."
+      },
+      {
+        "title": "Krasenkow,M — Swic,W",
+        "prompt": "Tìm cách phối hợp với Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "3r3k/p1p1q1pp/1p1nB1b1/3P4/2P4Q/8/PB4PP/5RK1 w - - 8 25",
+        "moves": [
+          "Qxe7",
+          "Bf7",
+          "Qxd8+",
+          "Ne8",
+          "Qxe8+",
+          "Bxe8",
+          "Rf8#"
+        ],
+        "previousMove": {
+          "fen": "3rn2k/p1p1q1pp/1p2B1b1/3P4/2P4Q/8/PB4PP/5RK1 b - - 7 24",
+          "move": "Nd6"
+        },
+        "source": "https://www.pgnmentor.com/players/Krasenkow.zip",
+        "gameReference": {
+          "collection": "one-rook-mate",
+          "kind": "game",
+          "id": "146485ebb57d9261",
+          "ply": 48,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "D",
+          "status": "suggested",
+          "solverMoves": 4,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Xe có thể chiếu trên hàng, cột nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe; tính cả các cách phòng thủ."
+        ],
+        "solution": "Hy sinh Hậu trên e8 để mở đường cho đòn phối hợp. Xe ở f8 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Qxe7 · Bf7 · Qxd8+ · Ne8 · Qxe8+ · Bxe8 · Rf8#."
+      },
+      {
+        "title": "Kholmov, Ratmir D — Filipenko, Alexander V",
+        "prompt": "Tìm cách phối hợp với Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "2Rr1qk1/5ppp/p2N4/P7/5Q2/8/1r4PP/5BK1 w - - 2 40",
+        "moves": [
+          "Qxf7+",
+          "Qxf7",
+          "Rxd8+",
+          "Qf8",
+          "Bc4+",
+          "Kh8",
+          "Rxf8#"
+        ],
+        "previousMove": {
+          "fen": "2R2qk1/3r1ppp/p2N4/P7/5Q2/8/1r4PP/5BK1 b - - 1 39",
+          "move": "Rd8"
+        },
+        "source": "https://www.pgnmentor.com/players/Kholmov.zip",
+        "gameReference": {
+          "collection": "one-rook-mate",
+          "kind": "game",
+          "id": "25bffc3898150cda",
+          "ply": 78,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "D",
+          "status": "suggested",
+          "solverMoves": 4,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Xe có thể chiếu trên hàng, cột nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe; tính cả các cách phòng thủ."
+        ],
+        "solution": "Hy sinh Hậu trên f7 để mở đường cho đòn phối hợp. Xe ở f8 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Qxf7+ · Qxf7 · Rxd8+ · Qf8 · Bc4+ · Kh8 · Rxf8#."
+      },
+      {
+        "title": "Short,N — Blomqvist,E",
+        "prompt": "Tìm cách phối hợp với Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "5b1k/5p1p/3p1p2/4pN2/4P1Q1/1R5P/5PPK/2r2q2 w - - 5 36",
+        "moves": [
+          "Qg7+",
+          "Bxg7",
+          "Rb8+",
+          "Rc8",
+          "Rxc8+",
+          "Bf8",
+          "Rxf8#"
+        ],
+        "previousMove": {
+          "fen": "5bk1/5p1p/3p1p2/4pN2/4P1Q1/1R5P/5PPK/2r2q2 b - - 4 35",
+          "move": "Kh8"
+        },
+        "source": "https://www.pgnmentor.com/players/Short.zip",
+        "gameReference": {
+          "collection": "one-rook-mate",
+          "kind": "game",
+          "id": "3fadb1171498be65",
+          "ply": 70,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "D",
+          "status": "suggested",
+          "solverMoves": 4,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Xe có thể chiếu trên hàng, cột nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe; tính cả các cách phòng thủ."
+        ],
+        "solution": "Hy sinh Hậu trên g7 để mở đường cho đòn phối hợp. Xe ở f8 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Qg7+ · Bxg7 · Rb8+ · Rc8 · Rxc8+ · Bf8 · Rxf8#."
+      },
+      {
+        "title": "Nunn, John DM — Portisch, Lajos",
+        "prompt": "Tìm cách phối hợp với Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "6rk/2p2p1p/p2q1p1Q/2p1pP2/1nP1R3/1P5P/P5P1/2B3K1 w - - 2 33",
+        "moves": [
+          "Qxh7+",
+          "Kxh7",
+          "Rh4+",
+          "Kg7",
+          "Bh6+",
+          "Kh7",
+          "Bf8#"
+        ],
+        "previousMove": {
+          "fen": "3r3k/2p2p1p/p2q1p1Q/2p1pP2/1nP1R3/1P5P/P5P1/2B3K1 b - - 1 32",
+          "move": "Rg8"
+        },
+        "source": "https://www.pgnmentor.com/players/Nunn.zip",
+        "gameReference": {
+          "collection": "one-rook-mate",
+          "kind": "game",
+          "id": "4677786a521fcac6",
+          "ply": 64,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "D",
+          "status": "suggested",
+          "solverMoves": 4,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Xe có thể chiếu trên hàng, cột nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe; tính cả các cách phòng thủ."
+        ],
+        "solution": "Hy sinh Hậu trên h7 để mở đường cho đòn phối hợp. Xe ở h4 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Qxh7+ · Kxh7 · Rh4+ · Kg7 · Bh6+ · Kh7 · Bf8#."
+      },
+      {
+        "title": "Sapenov,Daniyal — Rapport,R",
+        "prompt": "Tìm cách phối hợp với Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "6QR/5rp1/2p1p1kn/4B1p1/8/7P/q4PP1/6K1 w - - 4 39",
+        "moves": [
+          "Qh7+",
+          "Kh5",
+          "g4+",
+          "Kh4",
+          "Qxh6+",
+          "gxh6",
+          "Rxh6#"
+        ],
+        "previousMove": {
+          "fen": "6QR/5rp1/2p1p1k1/4Bnp1/8/7P/q4PP1/6K1 b - - 3 38",
+          "move": "Nh6"
+        },
+        "source": "https://www.pgnmentor.com/players/Rapport.zip",
+        "gameReference": {
+          "collection": "one-rook-mate",
+          "kind": "game",
+          "id": "4787e431c0fcdaa4",
+          "ply": 76,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "D",
+          "status": "suggested",
+          "solverMoves": 4,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Xe có thể chiếu trên hàng, cột nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe; tính cả các cách phòng thủ."
+        ],
+        "solution": "Hy sinh Hậu trên h6 để mở đường cho đòn phối hợp. Xe ở h6 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Qh7+ · Kh5 · g4+ · Kh4 · Qxh6+ · gxh6 · Rxh6#."
+      },
+      {
+        "title": "Navara,D — Vaibhav,S",
+        "prompt": "Tìm cách phối hợp với Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "4rbk1/5p1p/pqn3p1/1p1b2P1/3R3Q/2B1PP2/1P5P/6K1 w - - 0 26",
+        "moves": [
+          "Qxh7+",
+          "Kxh7",
+          "Rh4+",
+          "Bh6",
+          "Rxh6+",
+          "Kg8",
+          "Rh8#"
+        ],
+        "previousMove": {
+          "fen": "4rbk1/5p1p/pqn3p1/1p1N2P1/3R3Q/2B1PP2/bP5P/6K1 b - - 4 25",
+          "move": "Bxd5"
+        },
+        "source": "https://www.pgnmentor.com/players/Navara.zip",
+        "gameReference": {
+          "collection": "one-rook-mate",
+          "kind": "game",
+          "id": "8acb535b3a7e92c5",
+          "ply": 50,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "D",
+          "status": "suggested",
+          "solverMoves": 4,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Xe có thể chiếu trên hàng, cột nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe; tính cả các cách phòng thủ."
+        ],
+        "solution": "Hy sinh Hậu trên h7 để mở đường cho đòn phối hợp. Xe ở h8 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Qxh7+ · Kxh7 · Rh4+ · Bh6 · Rxh6+ · Kg8 · Rh8#."
+      },
+      {
+        "title": "Aronian,L — Erigaisi,Arjun",
+        "prompt": "Tìm cách phối hợp với Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "1kr5/p4pR1/4p3/Np1p4/1Q6/P2p4/KP3q2/8 w - - 0 37",
+        "moves": [
+          "Qd6+",
+          "Ka8",
+          "Qc6+",
+          "Rxc6",
+          "Rg8+",
+          "Rc8",
+          "Rxc8#"
+        ],
+        "previousMove": {
+          "fen": "1kr5/p4pR1/4p3/Np1p4/1Q1p4/P7/KP3q2/8 b - - 3 36",
+          "move": "d3"
+        },
+        "source": "https://www.pgnmentor.com/players/Aronian.zip",
+        "gameReference": {
+          "collection": "one-rook-mate",
+          "kind": "game",
+          "id": "92fe7aec5b7c263a",
+          "ply": 72,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "D",
+          "status": "suggested",
+          "solverMoves": 4,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Xe có thể chiếu trên hàng, cột nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe; tính cả các cách phòng thủ."
+        ],
+        "solution": "Hy sinh Hậu trên c6 để mở đường cho đòn phối hợp. Xe ở c8 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Qd6+ · Ka8 · Qc6+ · Rxc6 · Rg8+ · Rc8 · Rxc8#."
+      },
+      {
+        "title": "Alekhine, Alexander — Reshevsky, Samuel Herman",
+        "prompt": "Tìm cách phối hợp với Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "1k6/1p4pp/1Pp2pq1/2B1r3/1P6/7P/3r2PQ/5RK1 w - - 0 36",
+        "moves": [
+          "Qxe5+",
+          "fxe5",
+          "Rf8+",
+          "Qe8",
+          "Rxe8+",
+          "Rd8",
+          "Rxd8#"
+        ],
+        "previousMove": {
+          "fen": "1Rk5/1p4pp/1Pp2pq1/2B1r3/1P6/7P/3r2PQ/5RK1 b - - 0 35",
+          "move": "Kxb8"
+        },
+        "source": "https://www.pgnmentor.com/players/Alekhine.zip",
+        "gameReference": {
+          "collection": "one-rook-mate",
+          "kind": "game",
+          "id": "9c700e2922cfb343",
+          "ply": 70,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "D",
+          "status": "suggested",
+          "solverMoves": 4,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Xe có thể chiếu trên hàng, cột nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe; tính cả các cách phòng thủ."
+        ],
+        "solution": "Hy sinh Hậu trên e5 để mở đường cho đòn phối hợp. Xe ở d8 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Qxe5+ · fxe5 · Rf8+ · Qe8 · Rxe8+ · Rd8 · Rxd8#."
+      },
+      {
+        "title": "Gligoric, Svetozar — Vukovic, Zdravko",
+        "prompt": "Tìm cách phối hợp với Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "3r2k1/5pp1/p1Q1b2p/2P5/4p3/4P3/P2qBPPP/4RK2 b - - 1 22",
+        "moves": [
+          "Qxe2+",
+          "Rxe2",
+          "Rd1+",
+          "Re1",
+          "Bc4+",
+          "Kg1",
+          "Rxe1#"
+        ],
+        "previousMove": {
+          "fen": "3r2k1/5pp1/p1Q1b2p/2P5/4p3/4P3/P2qBPPP/4R1K1 w - - 0 22",
+          "move": "Kf1"
+        },
+        "source": "https://www.pgnmentor.com/players/Gligoric.zip",
+        "gameReference": {
+          "collection": "one-rook-mate",
+          "kind": "game",
+          "id": "b66ab29bdfd01ac1",
+          "ply": 43,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "D",
+          "status": "suggested",
+          "solverMoves": 4,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Xe có thể chiếu trên hàng, cột nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe; tính cả các cách phòng thủ."
+        ],
+        "solution": "Hy sinh Hậu trên e2 để mở đường cho đòn phối hợp. Xe ở e1 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Qxe2+ · Rxe2 · Rd1+ · Re1 · Bc4+ · Kg1 · Rxe1#."
+      },
+      {
+        "title": "Ortiz Suarez,I — Ivanchuk,V",
+        "prompt": "Tìm cách phối hợp với Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "7r/2k2pQ1/4pP2/2p2p2/p4P2/Pp2qP2/1P6/1K1R4 b - - 3 38",
+        "moves": [
+          "Qd3+",
+          "Rxd3",
+          "Rh1+",
+          "Qg1",
+          "Rxg1+",
+          "Rd1",
+          "Rxd1#"
+        ],
+        "previousMove": {
+          "fen": "7r/2k2p2/4pP2/2p2p2/p4P2/Pp2qP2/1P4Q1/1K1R4 w - - 2 38",
+          "move": "Qg7"
+        },
+        "source": "https://www.pgnmentor.com/players/Ivanchuk.zip",
+        "gameReference": {
+          "collection": "one-rook-mate",
+          "kind": "game",
+          "id": "e0baf1f7c63fc104",
+          "ply": 75,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "D",
+          "status": "suggested",
+          "solverMoves": 4,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Xe có thể chiếu trên hàng, cột nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe; tính cả các cách phòng thủ."
+        ],
+        "solution": "Hy sinh Hậu trên d3 để mở đường cho đòn phối hợp. Xe ở d1 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Qd3+ · Rxd3 · Rh1+ · Qg1 · Rxg1+ · Rd1 · Rxd1#."
+      },
+      {
+        "title": "Grischuk,A — Moroni,L",
+        "prompt": "Tìm cách phối hợp với Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "6rk/p4p1p/2R1pPpQ/2p1B3/6PP/5PK1/8/3q4 w - - 4 45",
+        "moves": [
+          "Qg7+",
+          "Rxg7",
+          "fxg7+",
+          "Kg8",
+          "Rc8+",
+          "Qd8",
+          "Rxd8#"
+        ],
+        "previousMove": {
+          "fen": "6rk/p4p1p/2R1pPpQ/2p1B3/6PP/5PK1/2q5/8 b - - 3 44",
+          "move": "Qd1"
+        },
+        "source": "https://www.pgnmentor.com/players/Grischuk.zip",
+        "gameReference": {
+          "collection": "one-rook-mate",
+          "kind": "game",
+          "id": "e3b2f7f7a29f7da3",
+          "ply": 88,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "D",
+          "status": "suggested",
+          "solverMoves": 4,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Xe có thể chiếu trên hàng, cột nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe; tính cả các cách phòng thủ."
+        ],
+        "solution": "Hy sinh Hậu trên g7 để mở đường cho đòn phối hợp. Xe ở d8 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Qg7+ · Rxg7 · fxg7+ · Kg8 · Rc8+ · Qd8 · Rxd8#."
+      },
+      {
+        "title": "Maghsoodloo,Parham — Jobava,Ba",
+        "prompt": "Tìm cách phối hợp với Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "4Nbk1/1p3pp1/6r1/3N1R2/Pp1R2n1/1P2p3/1Q2P1Bq/5K2 b - - 2 36",
+        "moves": [
+          "Qh1+",
+          "Bxh1",
+          "Nh2+",
+          "Ke1",
+          "Rg1+",
+          "Rf1",
+          "Rxf1#"
+        ],
+        "previousMove": {
+          "fen": "4Nbk1/1p3pp1/6r1/3N1R2/Pp1R2n1/1P2p3/1Q2P1Bq/6K1 w - - 1 36",
+          "move": "Kf1"
+        },
+        "source": "https://www.pgnmentor.com/players/Jobava.zip",
+        "gameReference": {
+          "collection": "one-rook-mate",
+          "kind": "game",
+          "id": "e9edcb3d78d2e586",
+          "ply": 71,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "D",
+          "status": "suggested",
+          "solverMoves": 4,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Xe có thể chiếu trên hàng, cột nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe; tính cả các cách phòng thủ."
+        ],
+        "solution": "Hy sinh Hậu trên h1 để mở đường cho đòn phối hợp. Xe ở f1 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Qh1+ · Bxh1 · Nh2+ · Ke1 · Rg1+ · Rf1 · Rxf1#."
+      },
+      {
+        "title": "Hort, Vlastimil — Pomar Salamanca, Arturo",
+        "prompt": "Tìm cách phối hợp với Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "2k5/Q1b5/2p4p/1p3n2/1P1Bp3/2Pq3P/8/5RQK w - - 3 86",
+        "moves": [
+          "Qg8+",
+          "Kd7",
+          "Qf7+",
+          "Ne7",
+          "Qxc7+",
+          "Kxc7",
+          "Qxe7+",
+          "Kb8",
+          "Rf8#"
+        ],
+        "previousMove": {
+          "fen": "8/Qkb5/2p4p/1p3n2/1P1Bp3/2Pq3P/8/5RQK b - - 2 85",
+          "move": "Kc8"
+        },
+        "source": "https://www.pgnmentor.com/players/Hort.zip",
+        "gameReference": {
+          "collection": "one-rook-mate",
+          "kind": "game",
+          "id": "3e98303f98042f03",
+          "ply": 170,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "D",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Xe có thể chiếu trên hàng, cột nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe; tính cả các cách phòng thủ."
+        ],
+        "solution": "Hy sinh Hậu trên c7 để mở đường cho đòn phối hợp. Xe ở f8 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Qg8+ · Kd7 · Qf7+ · Ne7 · Qxc7+ · Kxc7 · Qxe7+ · Kb8 · Rf8#."
+      },
+      {
+        "title": "Ponomariov,R — Aronian,L",
+        "prompt": "Tìm cách phối hợp với Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/1p1P1r2/6k1/3NQp2/8/5P1K/5qP1/3R4 w - - 1 56",
+        "moves": [
+          "Nf4+",
+          "Kh7",
+          "d8=Q",
+          "Qg3+",
+          "Kxg3",
+          "Rg7+",
+          "Qxg7+",
+          "Kxg7",
+          "Qe7+",
+          "Kh6",
+          "Rd6#"
+        ],
+        "previousMove": {
+          "fen": "8/1p1P1r1k/8/3NQp2/8/5P1K/5qP1/3R4 b - - 0 55",
+          "move": "Kg6"
+        },
+        "source": "https://www.pgnmentor.com/players/Aronian.zip",
+        "gameReference": {
+          "collection": "one-rook-mate",
+          "kind": "game",
+          "id": "fe22af23d0ffc993",
+          "ply": 110,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "D",
+          "status": "suggested",
+          "solverMoves": 6,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Xe có thể chiếu trên hàng, cột nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe; tính cả các cách phòng thủ."
+        ],
+        "solution": "Hy sinh Hậu trên g7 để mở đường cho đòn phối hợp. Xe ở d6 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Nf4+ · Kh7 · d8=Q · Qg3+ · Kxg3 · Rg7+ · Qxg7+ · Kxg7 · Qe7+ · Kh6 · Rd6#."
+      },
+      {
+        "title": "Duda,J — Giri,A",
+        "prompt": "Tìm cách phối hợp với Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "2r2r2/pp6/1n1n1P2/3P2k1/3q2Np/5Qp1/P5PP/1B3R1K w - - 3 31",
+        "moves": [
+          "Qf5+",
+          "Nxf5",
+          "Rxf5+",
+          "Kg6",
+          "Re5+",
+          "Rc2",
+          "Bxc2+",
+          "Qd3",
+          "Bxd3+",
+          "Kf7",
+          "Re7+",
+          "Kg8",
+          "Nh6+",
+          "Kh8",
+          "Rh7#"
+        ],
+        "previousMove": {
+          "fen": "2r2r2/pp6/1n1n1P1k/3P4/3q2Np/5Qp1/P5PP/1B3R1K b - - 2 30",
+          "move": "Kg5"
+        },
+        "source": "https://www.pgnmentor.com/players/Giri.zip",
+        "gameReference": {
+          "collection": "one-rook-mate",
+          "kind": "game",
+          "id": "72e9a33e44c262ef",
+          "ply": 60,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "D",
+          "status": "suggested",
+          "solverMoves": 8,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Xe có thể chiếu trên hàng, cột nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe; tính cả các cách phòng thủ."
+        ],
+        "solution": "Hy sinh Hậu trên f5 để mở đường cho đòn phối hợp. Xe ở h7 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Qf5+ · Nxf5 · Rxf5+ · Kg6 · Re5+ · Rc2 · Bxc2+ · Qd3 · Bxd3+ · Kf7 · Re7+ · Kg8 · Nh6+ · Kh8 · Rh7#."
+      },
+      {
+        "title": "Smirin,I — Jones,G",
+        "prompt": "Tìm cách phối hợp với Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "3r1nk1/R5p1/3pp2p/4p1N1/1qP1P3/4PQ1P/6P1/3r3K w - - 0 32",
+        "moves": [
+          "Kh2",
+          "Rh1+",
+          "Kxh1",
+          "Qe1+",
+          "Kh2",
+          "Qf2",
+          "Qxf2",
+          "Nd7",
+          "Qf7+",
+          "Kh8",
+          "Rxd7",
+          "Rg8",
+          "Qxg8+",
+          "Kxg8",
+          "Rd8#"
+        ],
+        "previousMove": {
+          "fen": "3r1nk1/R5p1/3pp2p/4p1N1/1qP1P3/4PQ1P/6P1/1r1R3K b - - 1 31",
+          "move": "Rxd1+"
+        },
+        "source": "https://www.pgnmentor.com/players/Smirin.zip",
+        "gameReference": {
+          "collection": "one-rook-mate",
+          "kind": "game",
+          "id": "c85a941da2935bd3",
+          "ply": 62,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "D",
+          "status": "suggested",
+          "solverMoves": 8,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xem Xe có thể chiếu trên hàng, cột nào và quân nào đang khống chế các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe; tính cả các cách phòng thủ."
+        ],
+        "solution": "Hy sinh Hậu trên g8 để mở đường cho đòn phối hợp. Xe ở d8 chiếu hết Vua đối phương; các ô thoát đã bị khống chế hoặc bị quân đối phương chặn. Nhánh mẫu: Kh2 · Rh1+ · Kxh1 · Qe1+ · Kh2 · Qf2 · Qxf2 · Nd7 · Qf7+ · Kh8 · Rxd7 · Rg8 · Qxg8+ · Kxg8 · Rd8#."
+      }
+    ]
+  }
+]

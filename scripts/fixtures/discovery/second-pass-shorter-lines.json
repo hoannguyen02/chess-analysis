@@ -1,0 +1,423 @@
+{
+  "method": "Two-million-node top-five root probes for retained C*/D; checks for A/B/C-length motif payoffs with local reply coverage. A lead is not exhaustive proof of the whole preparation.",
+  "reviews": [
+    {
+      "gameId": "9a6890d28d1fda55",
+      "fen": "6R1/1p4p1/1N6/p3r2p/Pb4kP/6P1/1PRn2K1/8 b - - 0 40",
+      "moves": [
+        "Re2+",
+        "Kh1",
+        "Kh3",
+        "Re8",
+        "Rh2+",
+        "Kg1",
+        "Nf3+",
+        "Kf1",
+        "Rxc2"
+      ],
+      "bestScore": 900,
+      "shorterLeads": []
+    },
+    {
+      "gameId": "7411f04447e3aaec",
+      "fen": "r5k1/ppq2ppp/5nb1/2pP4/2Pp1Q2/PP1Pr1PP/3KB3/R5NR b - - 2 19",
+      "moves": [
+        "Qb6",
+        "b4",
+        "cxb4",
+        "Nf3",
+        "Rae8",
+        "Rh2",
+        "Qa5",
+        "Qxd4",
+        "bxa3+"
+      ],
+      "bestScore": 668,
+      "shorterLeads": []
+    },
+    {
+      "gameId": "67984d20afcafdb2",
+      "fen": "4r1k1/pb5p/6pN/1p6/8/1P4P1/P1Q2K1P/q7 b - - 1 35",
+      "moves": [
+        "Kh8",
+        "Qd2",
+        "Qf6+",
+        "Kg1",
+        "Rf8",
+        "Qf4",
+        "Qa1+",
+        "Kf2",
+        "Rxf4+"
+      ],
+      "bestScore": 932,
+      "shorterLeads": []
+    },
+    {
+      "gameId": "4a44ccadcb4b7d83",
+      "fen": "6k1/p4p2/1pBb2p1/3P3p/P6P/2Q3PK/5q2/8 b - - 7 37",
+      "moves": [
+        "Qf1+",
+        "Kh2",
+        "Bc5",
+        "d6",
+        "Bg1+",
+        "Kh1",
+        "Bd4+",
+        "Kh2",
+        "Bxc3"
+      ],
+      "bestScore": 787,
+      "shorterLeads": []
+    },
+    {
+      "gameId": "036003deb06597b9",
+      "fen": "1r6/2r5/p2kpn2/5p2/2P3pP/3B1bP1/P4B2/K2RR3 w - - 5 31",
+      "moves": [
+        "Bxf5+",
+        "Bxd1",
+        "Rxe6+",
+        "Kd7",
+        "Rb6+",
+        "Ke7",
+        "Rxb8"
+      ],
+      "bestScore": 338,
+      "shorterLeads": []
+    },
+    {
+      "gameId": "4c8e80c2775ab2d7",
+      "fen": "2Q2Nk1/6pp/1p6/2b2p2/6q1/2P2n2/5PB1/B3RK2 b - - 6 42",
+      "moves": [
+        "Qc4+",
+        "Re2",
+        "Nh2+",
+        "Kg1",
+        "Bxf2+",
+        "Rxf2",
+        "Qxc8"
+      ],
+      "bestScore": 212,
+      "shorterLeads": []
+    },
+    {
+      "gameId": "e65dea1262d6bb5e",
+      "fen": "6k1/R4p1p/1rp3p1/8/2B4n/2K2P2/PPP2RbP/7r w - - 0 26",
+      "moves": [
+        "Rxf7",
+        "Bf1",
+        "Rxf1",
+        "Rxf1",
+        "Ra7+",
+        "Kh8",
+        "Bxf1"
+      ],
+      "bestScore": 433,
+      "shorterLeads": []
+    },
+    {
+      "gameId": "c0c8a7bcd849e8c3",
+      "fen": "r3k2r/1p1bppbp/p4np1/P2p1q2/3P4/1QN2N2/1P3PPP/R1B1R1K1 w kq - 3 14",
+      "moves": [
+        "Re5",
+        "Qd3",
+        "Rxe7+",
+        "Kxe7",
+        "Nxd5+",
+        "Nxd5",
+        "Qxd3"
+      ],
+      "bestScore": 364,
+      "shorterLeads": []
+    },
+    {
+      "gameId": "1f10b7ae58f714b3",
+      "fen": "1k3Q2/1p6/1np5/3rP3/3b1PB1/1P1q4/P2B1P1P/3K4 b - - 2 46",
+      "moves": [
+        "Kc7",
+        "Bf5",
+        "Qxd2+",
+        "Kxd2",
+        "Bc5+",
+        "Ke2",
+        "Bxf8"
+      ],
+      "bestScore": 595,
+      "shorterLeads": []
+    },
+    {
+      "gameId": "055e26cb67e8920a",
+      "fen": "6rk/3nQ2p/Bp3n1B/4p1p1/P6q/7P/2P3P1/5R1K w - - 2 32",
+      "moves": [
+        "Rxf6",
+        "g4",
+        "Bg7+",
+        "Rxg7",
+        "Rf8+",
+        "Nxf8",
+        "Qxh4"
+      ],
+      "bestScore": 597,
+      "shorterLeads": []
+    },
+    {
+      "gameId": "fd4d98272e4bb135",
+      "fen": "8/p1Pnk3/8/5P2/1PBK1r2/P3N3/8/8 w - - 3 65",
+      "moves": [
+        "Kc3",
+        "Nb6",
+        "c8=Q",
+        "Nxc8",
+        "Nd5+",
+        "Kf7",
+        "Nxf4+"
+      ],
+      "bestScore": 659,
+      "shorterLeads": []
+    },
+    {
+      "gameId": "6c8bc0aafbdeb42e",
+      "fen": "5r2/pp4k1/2b1Q3/2q3P1/7P/P7/1PP2P2/2KR4 w - - 9 34",
+      "moves": [
+        "Rd6",
+        "Rxf2",
+        "Qe7+",
+        "Rf7",
+        "Rg6+",
+        "Kxg6",
+        "Qxc5"
+      ],
+      "bestScore": 520,
+      "shorterLeads": []
+    },
+    {
+      "gameId": "1394114c147bc393",
+      "fen": "6k1/5rpp/4p3/2Pn1p2/2r2P2/3QPP2/q1B3RP/2K3R1 b - - 2 28",
+      "moves": [
+        "Rd7",
+        "e4",
+        "Qa1+",
+        "Kd2",
+        "Rxc2+",
+        "Kxc2",
+        "Nb4+",
+        "Kb3",
+        "Rxd3+"
+      ],
+      "bestScore": 561,
+      "shorterLeads": []
+    },
+    {
+      "gameId": "ba8f859e6302aa98",
+      "fen": "2r4k/1p3RRp/p3q2N/3pnb2/2rQ4/P7/1PP4P/1K6 w - - 7 37",
+      "moves": [
+        "Nxf5",
+        "Qxf7",
+        "Qxe5",
+        "Qxf5",
+        "Rxh7+",
+        "Kxh7",
+        "Qxf5+"
+      ],
+      "bestScore": 238,
+      "shorterLeads": []
+    },
+    {
+      "gameId": "cb5ba1a9d8ff4109",
+      "fen": "1q1rr1k1/1b1n1pp1/1p1p1b1p/pN6/2P5/P2Bp1B1/2Q2PPP/3RR1K1 w - - 0 21",
+      "moves": [
+        "Bh7+",
+        "Kh8",
+        "Nxd6",
+        "exf2+",
+        "Kxf2",
+        "Rf8",
+        "Nxf7+",
+        "Rxf7",
+        "Bxb8"
+      ],
+      "bestScore": 255,
+      "shorterLeads": []
+    },
+    {
+      "gameId": "c7efa26b018fdac9",
+      "fen": "5r2/2nqbppk/3p1n2/N2P4/4pQ2/7P/1PPB1P2/4KBR1 w - - 2 25",
+      "moves": [
+        "Qh4+",
+        "Kg8",
+        "Rxg7+",
+        "Kxg7",
+        "Bh6+",
+        "Kh8",
+        "Bxf8+"
+      ],
+      "bestScore": 547,
+      "shorterLeads": []
+    },
+    {
+      "gameId": "2ae44fd20a10f740",
+      "fen": "2r1r3/3n1pk1/3q2bp/8/Np4P1/1P1n2P1/3Q2BP/1N1R1RK1 b - - 0 31",
+      "moves": [
+        "Qd4+",
+        "Kh1",
+        "Nf6",
+        "Rf4",
+        "Qe5",
+        "Rdf1",
+        "Ne4",
+        "Qxd3",
+        "Nf2+",
+        "R1xf2",
+        "Bxd3"
+      ],
+      "bestScore": 434,
+      "shorterLeads": []
+    },
+    {
+      "gameId": "77209c493fea4c1e",
+      "fen": "3qk2r/1R1b1ppp/p7/2rpPp2/8/2N5/P1PQ2PP/1R4K1 w k - 0 20",
+      "moves": [
+        "Nxd5",
+        "Bc8",
+        "Re7+",
+        "Kf8",
+        "Qb4",
+        "Rxd5",
+        "Rd7+",
+        "Ke8",
+        "Rxd8+"
+      ],
+      "bestScore": 381,
+      "shorterLeads": []
+    },
+    {
+      "gameId": "7b685ad76ae3f6b7",
+      "fen": "r3kb1r/pp1bp1pp/5p2/qN2n3/2B2B2/2P2Q2/P1P2PPP/R4RK1 w kq - 7 14",
+      "moves": [
+        "Bxe5",
+        "Rc8",
+        "Qd5",
+        "Rxc4",
+        "Nd6+",
+        "exd6",
+        "Qxa5"
+      ],
+      "bestScore": 520,
+      "shorterLeads": []
+    },
+    {
+      "gameId": "3cddc8c370f51027",
+      "fen": "2n5/pp1R3R/6p1/P5k1/4q3/1BP5/KP6/8 w - - 1 32",
+      "moves": [
+        "Rd5+",
+        "Kf6",
+        "Rf7+",
+        "Kxf7",
+        "Re5+",
+        "Kf6",
+        "Rxe4"
+      ],
+      "bestScore": 630,
+      "shorterLeads": []
+    },
+    {
+      "gameId": "202e45c6e308912b",
+      "fen": "1r2r1k1/6pp/3b4/p1pP1p2/1qB1bB1Q/1P5P/P4PP1/R2K3R b - - 5 25",
+      "moves": [
+        "Qc3",
+        "Rc1",
+        "Qd4+",
+        "Bd2",
+        "Bc2+",
+        "Kxc2",
+        "Qxh4"
+      ],
+      "bestScore": 521,
+      "shorterLeads": []
+    },
+    {
+      "gameId": "8b460007cc657492",
+      "fen": "6rk/1R5p/2p1q2r/3p1p2/p1bP1Q1N/P3PPP1/5K2/2R5 w - - 2 40",
+      "moves": [
+        "Rh1",
+        "Ba6",
+        "Ra7",
+        "Bc8",
+        "Qc7",
+        "Qd6",
+        "Qxd6",
+        "Rxd6",
+        "Rxh7+",
+        "Kxh7",
+        "Nxf5+",
+        "Kg6",
+        "Nxd6"
+      ],
+      "bestScore": 376,
+      "shorterLeads": []
+    },
+    {
+      "gameId": "ec35c8b6a2c0000d",
+      "fen": "1b3rk1/1p3ppp/p7/5q2/4p3/2P1Bn1P/PP2QPP1/3R1R1K b - - 0 21",
+      "moves": [
+        "Qe5",
+        "g3",
+        "Qh5",
+        "Kg2",
+        "Nh4+",
+        "gxh4",
+        "Qxe2"
+      ],
+      "bestScore": 457,
+      "shorterLeads": []
+    },
+    {
+      "gameId": "034aa99ac986e10b",
+      "fen": "3r3k/4rp1p/1q3Np1/1Np2b2/1nP5/6PP/3Q1PBK/4R3 w - - 2 28",
+      "moves": [
+        "Qb2",
+        "Nd3",
+        "Qc3",
+        "Rxe1",
+        "Nd5+",
+        "Kg8",
+        "Nxb6"
+      ],
+      "bestScore": 354,
+      "shorterLeads": []
+    },
+    {
+      "gameId": "c089371fd50c21ea",
+      "fen": "6k1/3q1pb1/p6p/1pP2p2/4pP2/1P1nQ1PK/P2rN2P/5RN1 b - - 0 34",
+      "moves": [
+        "Rxa2",
+        "Rb1",
+        "a5",
+        "Rd1",
+        "Rc2",
+        "Nf3",
+        "Nf2+",
+        "Qxf2",
+        "Qxd1"
+      ],
+      "bestScore": 454,
+      "shorterLeads": []
+    },
+    {
+      "gameId": "23332751c87ee49b",
+      "fen": "q5k1/2Q3pp/3Np3/3p1n2/P2P4/8/5PP1/6K1 w - - 9 41",
+      "moves": [
+        "Qf7+",
+        "Kh8",
+        "Ne8",
+        "h6",
+        "Qf8+",
+        "Kh7",
+        "Nf6+",
+        "gxf6",
+        "Qxa8"
+      ],
+      "bestScore": 697,
+      "shorterLeads": []
+    }
+  ]
+}

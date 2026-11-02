@@ -1,3 +1,5 @@
+import SaveGameControl from './SaveGameControl';
+import { gameOpeningCaption } from '@/lib/chess/game-opening';
 import GamePlayerNames from './GamePlayerNames';
 import { gamePlayers } from '@/lib/chess/game-player-title';
 import { useEffect, useMemo, useRef, useState } from 'react';
@@ -72,6 +74,11 @@ export default function DrawGameViewer({
         .filter((value) => value && !/^\?+$/.test(value))
         .join(' · ')
     : '';
+
+  const openingCaption =
+    source?.kind === 'game'
+      ? source.gameOpening || gameOpeningCaption(source.headers)
+      : '';
 
   useEffect(() => {
     const element = dialog.current!;
@@ -163,7 +170,12 @@ export default function DrawGameViewer({
         onClose();
       }}
       onKeyDown={(event) => {
-        if (event.target instanceof HTMLSelectElement || !frames.length) return;
+        if (
+          event.target instanceof HTMLElement &&
+          event.target.closest('input, textarea, select, [contenteditable]')
+        )
+          return;
+        if (!frames.length) return;
         if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') {
           event.preventDefault();
           event.stopPropagation();
@@ -210,6 +222,13 @@ export default function DrawGameViewer({
           ✕
         </button>
       </header>
+      {source?.kind === 'game' && (
+        <SaveGameControl
+          key={`${reference.collection}:${reference.id}`}
+          source={source}
+          reference={{ ...reference, branch, ply }}
+        />
+      )}
       {!source && (
         <div className={styles.loading} role="status">
           {error ? (
@@ -341,6 +360,11 @@ export default function DrawGameViewer({
             <p className={styles.gameCaption} title={gameCaption}>
               {gameCaption}
             </p>
+            {openingCaption && (
+              <p className={styles.gameCaption} title={openingCaption}>
+                {openingCaption}
+              </p>
+            )}
             {source.kind === 'study' && source.lines.length > 1 && (
               <label className={styles.variation}>
                 Biến nghiên cứu{' '}
