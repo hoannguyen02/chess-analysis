@@ -3,7 +3,11 @@ import { useRouter } from 'next/router';
 import { Chess } from 'chess.js';
 import { practiceAccessHeaders } from '@/lib/practice-access';
 import { usePracticeBoardTools } from '@/hooks/usePracticeBoardTools';
-import type { ManualTactic } from '@/lib/chess/manual-tactics';
+import {
+  manualInsertionKey,
+  type ManualTactic,
+} from '@/lib/chess/manual-tactics';
+import type { DrawExercise } from '@/lib/chess/draw-practice';
 import { previousDrawPosition } from '@/lib/chess/draw-trainer';
 import PracticeBoard, { PreviousMoveControl } from './PracticeBoard';
 import { PracticePositionDialog } from './PracticePositionEditor';
@@ -42,9 +46,11 @@ const initialFen = new Chess().fen();
 export default function BeginnerTacticImport({
   writable,
   scope,
+  exercises,
 }: {
   writable: boolean;
   scope: string;
+  exercises: DrawExercise[];
 }) {
   const router = useRouter();
   const [open, setOpen] = useState(false);
@@ -254,6 +260,8 @@ export default function BeginnerTacticImport({
           title="Thêm thế cờ Nhập môn"
           onClose={() => setBlank(false)}
           fen={initialFen}
+          hideDestinationFields
+          insertionTargets={exercises.map(manualInsertionKey)}
           defaults={{
             themeId: bank.topic.themeId,
             level: 'Beginner',

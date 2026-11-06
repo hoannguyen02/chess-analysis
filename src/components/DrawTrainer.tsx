@@ -24,6 +24,7 @@ import {
   useRef,
   useState,
   type CSSProperties,
+  type ComponentProps,
 } from 'react';
 import {
   FiBookOpen,
@@ -39,7 +40,10 @@ import {
 import GamePlayerNames from './GamePlayerNames';
 import PracticeBoard from './PracticeBoard';
 import PracticeExploration from './PracticeExploration';
-import { ManualPositionControl } from './PracticePositionEditor';
+import {
+  ManualPositionControl,
+  PracticePositionDialog,
+} from './PracticePositionEditor';
 import { ExerciseManagementControl } from './PracticeManagement';
 
 const DrawGameViewer = dynamic(() => import('./DrawGameViewer'), {
@@ -59,6 +63,7 @@ export default function DrawTrainer({
   onRestart,
   onPreviousExercise,
   onNextExercise,
+  removalReturnHref,
   gameSource,
   referenceGames,
   onComplete,
@@ -71,6 +76,7 @@ export default function DrawTrainer({
   onRestart?: () => void;
   onPreviousExercise?: () => void;
   onNextExercise?: () => void;
+  removalReturnHref?: string;
 }) {
   const [assisted, setAssisted] = useState(false);
   const opening = exercise.outcome === 'opening';
@@ -78,9 +84,14 @@ export default function DrawTrainer({
   const [hasExplored, setHasExplored] = useState(false);
   const exploreButtonRef = useRef<HTMLButtonElement>(null);
   const [viewerOpen, setViewerOpen] = useState(false);
+  const [editingPositionFromMenu, setEditingPositionFromMenu] = useState(false);
   const reference = exercise.gameReference;
   const viewerLabel =
-    reference?.kind === 'game' ? 'Xem ván gốc' : 'Xem bài nghiên cứu';
+    exercise.beginner || exercise.manualId
+      ? 'Xem nguồn và thế cờ bài tập'
+      : reference?.kind === 'game'
+        ? 'Xem ván gốc'
+        : 'Xem bài nghiên cứu';
   const lesson = exercise.outcome === 'fortress';
   const decision = exercise.decision;
   const tactical = [
@@ -341,29 +352,39 @@ export default function DrawTrainer({
       : exercise.outcome === 'fork'
         ? 'fork'
         : undefined;
+  const positionEditorProps: ComponentProps<typeof ManualPositionControl> = {
+    fen: exercise.fen,
+    editId: exercise.manualId,
+    previousMove: exercise.previousMove,
+    ...(exercise.beginner
+      ? {
+          initialLines: solutionLines.filter((moves) => moves.length > 0),
+          initialGoal: exercise.goal,
+          beginnerBaseFen: exercise.fen,
+          beginnerOriginalFen: exercise.beginnerOriginalFen ?? exercise.fen,
+          ...(scopeTheme
+            ? {
+                defaults: {
+                  themeId: scopeTheme,
+                  level: 'Beginner' as const,
+                  solution: exercise.solution,
+                },
+              }
+            : {}),
+        }
+      : {}),
+  };
   const editPosition = (exercise.beginner || exercise.manualId) && (
-    <ManualPositionControl
-      fen={exercise.fen}
-      editId={exercise.manualId}
-      previousMove={exercise.previousMove}
-      {...(exercise.beginner
-        ? {
-            initialLines: solutionLines.filter((moves) => moves.length > 0),
-            initialGoal: exercise.goal,
-            beginnerBaseFen: exercise.fen,
-            beginnerOriginalFen: exercise.beginnerOriginalFen ?? exercise.fen,
-            ...(scopeTheme
-              ? {
-                  defaults: {
-                    themeId: scopeTheme,
-                    level: 'Beginner' as const,
-                    solution: exercise.solution,
-                  },
-                }
-              : {}),
-          }
-        : {})}
-    />
+    <>
+      <ManualPositionControl {...positionEditorProps} />
+      {editingPositionFromMenu && (
+        <PracticePositionDialog
+          {...positionEditorProps}
+          title="Chỉnh sửa thế cờ / lời giải"
+          onClose={() => setEditingPositionFromMenu(false)}
+        />
+      )}
+    </>
   );
 
   if (solutionlessBeginner)
@@ -399,11 +420,16 @@ export default function DrawTrainer({
             </p>
             <p className={styles.note}>Chưa có lời giải</p>
             {editPosition}
-            <ExerciseManagementControl exercise={exercise} />
+            <ExerciseManagementControl
+              exercise={exercise}
+              removalReturnHref={removalReturnHref}
+              onEditPosition={() => setEditingPositionFromMenu(true)}
+            />
             {reference && (
               <button
                 type="button"
                 aria-label={viewerLabel}
+                title={viewerLabel}
                 onClick={() => setViewerOpen(true)}
               >
                 <FiBookOpen size={20} aria-hidden="true" />
@@ -412,6 +438,7 @@ export default function DrawTrainer({
             {viewerOpen && reference && (
               <DrawGameViewer
                 reference={reference}
+                position={exercise}
                 source={gameSource}
                 referenceGames={referenceGames}
                 orientation={orientation}
@@ -690,6 +717,7 @@ export default function DrawTrainer({
           {viewerOpen && reference && (
             <DrawGameViewer
               reference={reference}
+              position={exercise}
               source={gameSource}
               referenceGames={referenceGames}
               orientation={orientation}
@@ -715,7 +743,15 @@ export default function DrawTrainer({
                   </strong>
                 </p>
               )}
-              <ExerciseManagementControl exercise={exercise} />
+              <ExerciseManagementControl
+                exercise={exercise}
+                removalReturnHref={removalReturnHref}
+                onEditPosition={
+                  exercise.beginner || exercise.manualId
+                    ? () => setEditingPositionFromMenu(true)
+                    : undefined
+                }
+              />
             </div>
           )}
           {(!tactical ||
@@ -771,32 +807,28 @@ export default function DrawTrainer({
           )}
           {review && !recognition && (
             <>
-              {(exercise.manualId ||
-                (exercise.management?.currentScope &&
-                  exercise.management.currentScope !==
-                    exercise.management.scope)) &&
-                solutionLines.length > 1 && (
-                  <label className={styles.explorationSelect}>
-                    Phương án lời giải
-                    <select
-                      value={reviewLineIndex}
-                      onChange={(e) => {
-                        setReviewLineIndex(Number(e.target.value));
-                        setReviewPly(0);
-                        setShowPrevious(false);
-                        setSelectedSquare(null);
-                        setPendingPromotion(null);
-                        setMessage('');
-                      }}
-                    >
-                      {solutionLines.map((_, i) => (
-                        <option key={i} value={i}>
-                          {i === 0 ? 'Phương án chính' : `Phương án ${i + 1}`}
-                        </option>
-                      ))}
-                    </select>
-                  </label>
-                )}
+              {solutionLines.length > 1 && (
+                <label className={styles.explorationSelect}>
+                  Phương án lời giải
+                  <select
+                    value={reviewLineIndex}
+                    onChange={(e) => {
+                      setReviewLineIndex(Number(e.target.value));
+                      setReviewPly(0);
+                      setShowPrevious(false);
+                      setSelectedSquare(null);
+                      setPendingPromotion(null);
+                      setMessage('');
+                    }}
+                  >
+                    {solutionLines.map((_, i) => (
+                      <option key={i} value={i}>
+                        {i === 0 ? 'Phương án chính' : `Phương án ${i + 1}`}
+                      </option>
+                    ))}
+                  </select>
+                </label>
+              )}
               <p>
                 Nước {reviewPly}/{reviewMoves.length} ·{' '}
                 {game.turn() === 'w' ? 'Trắng' : 'Đen'} đi

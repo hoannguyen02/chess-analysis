@@ -8,16 +8,23 @@ The six levels remain visible with actual counts; no positions are invented or
 replaced to maintain the target of 24 per level.
 
 **Bỏ khỏi bài tập** excludes the position from interactive practice and future
-worksheet selection. It does not erase its source or solution. The owner reviews
-positions manually; the **Bài đã bỏ** and **Bài đã chuyển** history panels have
+worksheet selection. It does not erase its source or solution. When reviewing
+positions in sequence, removal opens the next exercise in the same filtered slot,
+or the previous exercise when removing the last one. Its stable identity and a
+clamped index fallback keep the level, category, Beginner skewer kind and list
+page selected after the protected catalog reloads. Removing the sole exercise
+leaves that level's empty state visible. Cancelling removal leaves selection
+unchanged; topic/level transfers still open their requested destination. The
+**Bài đã bỏ** and **Bài đã chuyển** history panels have
 been removed from shared practice pages. Removal, level changes, transfers and
 resets show a confirmation naming the exercise and requested change before
 saving. Cancelling sends no mutation. A moved exercise still offers **Trả về
 cấp độ ...** to recover its source classification. These are manual editorial
 decisions, not a new automatic tactical assessment.
 
-Both curated and manually authored exercises use these controls. Manual
-solutions and variations are still edited through **Sửa thế cờ tự thêm**. If a
+Both curated and manually authored exercises use these controls. **Chỉnh sửa
+lời giải / phương án** opens solution editing from the same dialog. Manual
+and Beginner entries reuse their existing position-authoring dialog. If a
 level override exists, that editor displays the effective level and directs
 level changes to **Quản lý bài tập**. Its older irreversible removal control has
 been replaced by the shared reversible removal.
@@ -33,9 +40,10 @@ the same canonical scope. The same position in another topic is independent.
 
 Each decision retains an exact FEN and solution snapshot, alternatives, objective,
 preceding move and source reference when supplied, plus the original level, user
-note, action history and modification timestamp. The overlay changes visibility
-and difficulty metadata only. It preserves existing source files, full games,
-objectives, alternatives, tactical verification settings and provenance. A user
+note, action history and modification timestamp. The overlay changes visibility,
+difficulty metadata and, when explicitly saved, teaching solutions. It preserves
+existing source files, full games, objectives, tactical verification settings
+and provenance. A user
 classification is labelled manual; no sacrifice count or tactical proof is
 invented. Resetting the level recovers the original difficulty data.
 
@@ -47,14 +55,14 @@ Empty levels and topics with removed positions retain all six level controls.
 Saved decisions and history remain in the overlay; the protected API retains
 restoration support, but there is no removed-position list or restore button on
 the practice page.
-No PDF layout or solution wording is changed by this feature.
+Solution edits appear in future worksheet exports; existing PDFs are unchanged.
 
 Like manual authoring, management is writable only in local development and
 requires existing practice access. Production uses the bundled overlay and
 rejects mutations; commit and deploy the data file to distribute decisions.
 No new public route exposes private exercises. Writes use exclusive locking,
 atomic rename and expected timestamps to reject concurrent edits. The protected
-catalog signs its source snapshot with a server-side HMAC; move/removal requests
+catalog signs its source snapshot with a server-side HMAC; move/removal and solution requests
 must carry that signature, preventing fabricated or altered source snapshots.
 Restoration uses the existing stored record. Access secrets are never included
 in responses or stored in the overlay.
@@ -161,3 +169,41 @@ before the request is sent; move confirmations show the selected level and, for
 transfers, the destination topic. Opening/closing or cancelling confirmation
 preserves an unsaved selection. No practice-history panels are rendered below
 the level navigation.
+
+## Edit solutions and teaching variations
+
+Open **⋯ → Chỉnh sửa lời giải / phương án → Mở bàn cờ để sửa phương án**.
+The recorder starts from the exercise root and retains all current lines. Play
+both sides, rewind to a move and play a different reply to add a branch. For
+example, a king move can be recorded as a separate defence alongside a queen
+interposition. Continue each branch through the intended teaching payoff.
+Choose **OK** to keep the lines in the draft, then **Lưu lời giải** to persist
+them. Closing, Escape or **Hủy** discards unsaved edits; cancelling the recorder
+leaves the editor's previous draft intact. An optional common explanation can
+also be changed. No source-game moves are rewritten.
+
+Curated later-level edits use `solutionOverride` in the existing adjustment
+store. The signed original reference remains separate from the effective
+solution, preserving the position, preceding move, source link, topic and level.
+The overlay survives removal/restoration, transfers and level resets. Each
+solution revision retains its lines and explanation in history. **Khôi phục
+lời giải ban đầu** clears only this override after confirmation; it does not
+reset topic or level decisions. Manually authored and Beginner entries keep
+using the manual store and its established optional-Beginner/required-A–D rules.
+
+The protected API replays every branch legally from the root, canonicalizes SAN,
+deduplicates lines, limits the recorder to 12 branches of 120 plies, and rejects
+stale revisions. Later levels require a solution; checkmate lines must end in
+mate delivered by the solver. Owner-recorded lines are teaching choices, not an
+automatic tactical verification or a claim that a defensive reply is forced.
+The existing alternative-solution verification remains connected.
+
+**Xem lời giải → Phương án lời giải** now exposes every saved branch for curated
+as well as manual exercises. Review navigation follows the selected branch.
+Practice accepts matching stored solver moves and uses the corresponding reply;
+when branches share a solver move, its automatic reply follows the first matching
+line. Other defensive lines remain available in review. Protected practice and
+worksheet catalogs consume the same saved override without adding a position or
+changing any level's count. Regression coverage exercises validation, stale and
+unauthorized writes, source preservation, transfers, independent resets, legal
+alternative solving and worksheet selection.

@@ -14,6 +14,7 @@ import { tacticsCatalog } from './tactics-catalog';
 import { practiceLevels } from '../chess/draw-levels';
 import {
   manualPositionKey,
+  manualInsertionKey,
   manualLevelPositionKey,
   manualTopicPath,
   type ManualTactic,
@@ -362,6 +363,79 @@ export function manualExercise(entry: ManualTactic): DrawExercise {
           : undefined,
   };
 }
+
+export function validateBeginnerInsertion(
+  value: unknown,
+  level: ManualTactic['level'],
+  scope: string
+): NonNullable<ManualTactic['beginnerInsertion']> {
+  if (
+    level !== 'Beginner' ||
+    (value !== 'first' &&
+      value !== 'last' &&
+      (!Array.isArray(value) ||
+        !value.length ||
+        value.length > 1000 ||
+        !value.every(
+          (key) =>
+            typeof key === 'string' && key.length > 0 && key.length <= 240
+        )))
+  )
+    throw new Error('Chọn vị trí chèn hợp lệ cho bài Nhập môn.');
+  return { scope, before: Array.isArray(value) ? [...new Set(value)] : value };
+}
+
+/** Replay explicit insertions in creation order, after removals and transfers.
+ * Stable following exercises keep a middle insertion in place when its nearest
+ * neighbour is removed. Existing unpositioned records retain their prior order.
+ */
+export function orderManualInsertions(
+  categories: DrawCategory[],
+  entries: ManualTactic[]
+): DrawCategory[] {
+  return categories.map((category) => {
+    const beginners = category.exercises.filter(
+      (exercise) => exercise.beginner
+    );
+    const authored = new Map(
+      beginners.map((exercise) => [exercise.manualId, exercise])
+    );
+    const inserted = entries.filter(
+      (entry) =>
+        entry.beginnerInsertion &&
+        entry.beginnerInsertion.scope === category.managementScope &&
+        authored.has(entry.id)
+    );
+    if (!inserted.length) return category;
+    const ids = new Set(inserted.map((entry) => entry.id));
+    const ordered = beginners.filter(
+      (exercise) => !ids.has(exercise.manualId!)
+    );
+    for (const entry of inserted) {
+      const before = entry.beginnerInsertion!.before;
+      let index = before === 'first' ? 0 : ordered.length;
+      if (Array.isArray(before)) {
+        for (const key of before) {
+          const target = ordered.findIndex(
+            (exercise) => manualInsertionKey(exercise) === key
+          );
+          if (target !== -1) {
+            index = target;
+            break;
+          }
+        }
+      }
+      ordered.splice(index, 0, authored.get(entry.id)!);
+    }
+    let index = 0;
+    return {
+      ...category,
+      exercises: category.exercises.map((exercise) =>
+        exercise.beginner ? ordered[index++] : exercise
+      ),
+    };
+  });
+}
 export function mergeManualCategories(
   pagePath: string,
   categories: DrawCategory[],
@@ -386,15 +460,22 @@ export function mergeManualCategories(
         : index === 0
           ? additions
           : [];
-    const bases = new Set(
+    const replacements = new Map(
       target
         .filter((e) => e.level === 'Beginner' && e.beginnerBaseFen)
-        .map((e) => manualPositionKey(e.beginnerBaseFen!))
+        .map((e) => [manualPositionKey(e.beginnerBaseFen!), e])
     );
-    const original = category.exercises.filter(
-      (exercise) =>
-        !(exercise.beginner && bases.has(manualPositionKey(exercise.fen)))
-    );
+    const original = category.exercises.map((exercise) => {
+      const replacement = exercise.beginner
+        ? replacements.get(manualPositionKey(exercise.fen))
+        : undefined;
+      return replacement
+        ? {
+            ...manualExercise(replacement),
+            beginnerKind: exercise.beginnerKind,
+          }
+        : exercise;
+    });
     const seen = new Set(
       original.map((e) => manualLevelPositionKey(e.fen, !!e.beginner))
     );

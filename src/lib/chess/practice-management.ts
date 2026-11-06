@@ -10,6 +10,15 @@ export type PracticeExerciseManagement = {
   updatedAt: string | null;
   writable: boolean;
   signature?: string;
+  /** Signed source stays separate from the owner's editable teaching lines. */
+  sourceReference?: PracticeReviewReference;
+  solutionEdited?: boolean;
+};
+
+export type PracticeSolution = {
+  moves: string[];
+  alternativeLines: string[][];
+  solution: string;
 };
 
 export type PracticeReviewReference = {
@@ -32,6 +41,8 @@ export function practiceReviewReference(
   scope: string,
   exercise: DrawExercise
 ): PracticeReviewReference {
+  if (exercise.management?.sourceReference)
+    return exercise.management.sourceReference;
   const { management, difficulty } = exercise;
   const content = { ...exercise };
   delete content.management;
@@ -66,9 +77,17 @@ export type PracticeAdjustment = {
   destinationScope?: string;
   removed: boolean;
   note: string;
+  solutionOverride?: PracticeSolution;
   updatedAt: string;
   history: {
-    action: 'move' | 'remove' | 'restore' | 'reset';
+    action:
+      | 'move'
+      | 'remove'
+      | 'restore'
+      | 'reset'
+      | 'solution'
+      | 'reset-solution';
+    solution?: PracticeSolution;
     level: PracticeLevel | null;
     scope?: string;
     note: string;
@@ -85,4 +104,56 @@ export function practiceManagementHref(
   id?: string
 ) {
   return `${scope}${scope.includes('?') ? '&' : '?'}level=${encodeURIComponent(level)}${id ? `&exercise=${id}` : ''}`;
+}
+
+/** Resume with the neighbour in the currently filtered list after removal. */
+export function practiceRemovalHref(
+  href: string,
+  exercises: DrawExercise[],
+  index: number,
+  context: {
+    categoryId: string;
+    level: PracticeLevel | 'all';
+    beginnerKind?: 'king' | 'queen';
+  }
+) {
+  const [base, hash] = href.split('#', 2);
+  const [pathname, query] = base.split('?', 2);
+  const params = new URLSearchParams(query);
+  const neighbour = exercises[index + 1] ?? exercises[index - 1];
+  const id = neighbour?.manualId ?? neighbour?.management?.id;
+  if (id) params.set('exercise', id);
+  else params.delete('exercise');
+  params.set('level', context.level);
+  params.set('category', context.categoryId);
+  params.set(
+    'reviewIndex',
+    String(Math.max(0, Math.min(index, exercises.length - 2)))
+  );
+  if (context.beginnerKind) params.set('beginnerKind', context.beginnerKind);
+  else params.delete('beginnerKind');
+  return `${pathname}?${params}${hash ? `#${hash}` : ''}`;
+}
+
+export function practiceReviewIndex(
+  exercises: DrawExercise[],
+  id: unknown,
+  fallback: unknown
+) {
+  const match =
+    typeof id === 'string'
+      ? exercises.findIndex(
+          (exercise) =>
+            exercise.manualId === id || exercise.management?.id === id
+        )
+      : -1;
+  if (match >= 0) return match;
+  const index =
+    typeof fallback === 'string' && /^\d+$/.test(fallback)
+      ? Number(fallback)
+      : 0;
+  return Math.max(
+    0,
+    Math.min(Number.isSafeInteger(index) ? index : 0, exercises.length - 1)
+  );
 }

@@ -265,6 +265,12 @@
 .bookSettings {
   margin-top: 24px;
 }
+.bookOptions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 20px;
+}
 .bookSettings h2 {
   font-size: 1.15rem;
   font-weight: 700;
@@ -379,14 +385,109 @@
   }
 }
 
-.reviewSettings {
-  display: grid;
-  grid-template-columns: 180px 150px minmax(180px, 1fr);
-  gap: 12px 20px;
-  align-items: start;
+.reviewToolbar,
+.reviewGroupControls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 20px;
+  align-items: end;
 }
-.builder .reviewSettings {
-  margin: 12px 0 8px;
+.reviewToolbar {
+  justify-content: space-between;
+  align-items: center;
+}
+.builder .reviewCommon {
+  margin: 10px 0 14px;
+}
+.reviewCommon legend {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #496459;
+  margin-bottom: 8px;
+}
+.reviewCommon > small {
+  margin-top: 8px;
+}
+.builder .reviewKinds {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin: 0;
+}
+.reviewKind {
+  min-width: 0;
+  padding: 12px 14px;
+  border: 1px solid #cbd8d1;
+  border-radius: 10px;
+  background: #f7faf8;
+}
+.reviewKind h3 {
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin: 0;
+}
+.reviewKind h3 label {
+  font-size: inherit;
+  font-weight: inherit;
+}
+.reviewGroupControls {
+  margin-top: 10px;
+}
+.reviewInterval {
+  width: 140px;
+}
+.reviewPageQuantity {
+  width: 160px;
+  margin-top: 10px;
+}
+.reviewGroupControls .reviewPageQuantity {
+  margin-top: 0;
+}
+.allocationFeedback {
+  margin-top: 10px;
+}
+.builder .allocationWarning {
+  display: block;
+  margin: 8px 0 0;
+  padding: 8px 10px;
+  border-left: 3px solid #a56b14;
+  background: #fff7e6;
+  color: #6a4308;
+  line-height: 1.5;
+  font-size: 0.82rem;
+}
+.reviewBlockBudget {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+.allocationWarning summary {
+  min-height: 44px;
+  cursor: pointer;
+  align-content: center;
+}
+.reviewEndNote {
+  display: block;
+  margin-top: 12px;
+  line-height: 1.45;
+  color: #496459;
+}
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 .reviewToggleRow {
   display: flex;
@@ -399,29 +500,29 @@
   color: #496459;
   line-height: 1.45;
 }
-.reviewSettings small {
-  display: block;
-  line-height: 1.4;
-}
 .reviewDialog {
   width: min(1050px, calc(100vw - 24px));
 }
 @media (max-width: 760px) {
-  .reviewSettings {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+  .builder .reviewKinds {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .reviewGroupControls {
+    gap: 8px 12px;
+  }
+  .reviewInterval {
+    width: 126px;
+  }
+  .reviewPageQuantity {
+    width: 142px;
+  }
+  .reviewKind {
+    padding: 8px 12px 12px;
   }
 }
 
 .reviewPicker {
   margin: 16px 0 12px;
-}
-
-.reviewFinalRow {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 8px 20px;
-  margin: 8px 0;
 }
 
 .builder .levelFilter {
@@ -488,16 +589,4 @@
   font-weight: 400;
   font-size: 0.85rem;
   color: #496459;
-}
-.reviewSettings > label {
-  min-width: 0;
-}
-.reviewScope {
-  padding-top: 16px;
-}
-@media (max-width: 760px) {
-  .reviewScope {
-    grid-column: 1 / -1;
-    padding-top: 0;
-  }
 }

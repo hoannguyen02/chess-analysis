@@ -77,16 +77,17 @@ export default function WorksheetBuilder({
   const [reviewSettings, setReviewSettings] = useState(defaultReviewSettings);
   let scheduleError = '';
   let automaticBlocks: ReviewBlockDraft[] = [];
+  let reviewBlocks: ReviewBlockDraft[] = [];
   try {
     automaticBlocks = automaticReviewBlocks(chapterSections, reviewSettings);
+    reviewBlocks = resolveReviewBlocks(
+      automaticBlocks,
+      reviewOverrides,
+      reviewSettings.enabled
+    );
   } catch (e) {
     scheduleError = (e as Error).message;
   }
-  const reviewBlocks = resolveReviewBlocks(
-    automaticBlocks,
-    reviewOverrides,
-    reviewSettings.enabled
-  );
   const [reuseReview, setReuseReview] = useState(false);
   const [shuffleReview, setShuffleReview] = useState(true);
   const [title, setTitle] = useState('BÀI TẬP CHIẾN THUẬT CỜ VUA');
@@ -212,6 +213,10 @@ export default function WorksheetBuilder({
           chapterRows,
           reviewBlocks.map((block) => ({
             ...block,
+            pageCount:
+              block.pageCount === undefined
+                ? undefined
+                : Number(block.pageCount),
             rows: block.rows.map((row) => ({
               ...row,
               count: row.count.trim() === '' ? NaN : Number(row.count),
@@ -365,16 +370,29 @@ export default function WorksheetBuilder({
         </div>
         {bookMode && (
           <section className={styles.bookSettings}>
-            <button
-              type="button"
-              aria-haspopup="dialog"
-              onClick={() => {
-                setBookDraft(book);
-                setBookEditorOpen(true);
-              }}
-            >
-              Chỉnh sửa trang mở đầu và kết thúc
-            </button>
+            <div className={styles.bookOptions}>
+              <label className={styles.guideToggle}>
+                <input
+                  type="checkbox"
+                  checked={book.showContents ?? true}
+                  onChange={(e) => {
+                    setBook((b) => ({ ...b, showContents: e.target.checked }));
+                    setResult(null);
+                  }}
+                />
+                Thêm mục lục
+              </label>
+              <button
+                type="button"
+                aria-haspopup="dialog"
+                onClick={() => {
+                  setBookDraft(book);
+                  setBookEditorOpen(true);
+                }}
+              >
+                Chỉnh sửa trang mở đầu và kết thúc
+              </button>
+            </div>
             <dialog
               ref={bookDialog}
               className={styles.bookDialog}
@@ -668,7 +686,7 @@ export default function WorksheetBuilder({
           )}
         {bookMode && (
           <section className={styles.bookSettings}>
-            <h2>Ôn tập tổng hợp</h2>
+            <h2>Ôn tập</h2>
             <WorksheetReviewBlocks
               sourceOptions={
                 <>

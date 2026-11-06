@@ -363,6 +363,8 @@ test('generic Beginner import requires an owner anchor and imports its exact fra
       if (name === 'next/router') return { useRouter: () => router };
       if (name === 'chess.js') return chess;
       if (name.endsWith('/draw-trainer')) return trainer;
+      if (name.endsWith('/manual-tactics'))
+        return load('src/lib/chess/manual-tactics.ts', () => ({}));
       if (name.endsWith('/practice-access'))
         return {
           practiceAccessHeaders: () => ({ 'x-test-access': 'authorized' }),
@@ -439,7 +441,11 @@ test('generic Beginner import requires an owner anchor and imports its exact fra
   const shownBoard = () => nodes(tree, 'PracticeBoard')[0].props;
   const render = () => {
     cursor = 0;
-    tree = component({ writable: true, scope: bank.topic.scope });
+    tree = component({
+      writable: true,
+      scope: bank.topic.scope,
+      exercises: [{ manualId: 'authored' }, { fen: 'curated' }],
+    });
     for (const node of [...nodes(tree, 'dialog'), ...nodes(tree, 'div')])
       if (node.props.ref)
         node.props.ref.current = { showModal() {}, close() {}, focus() {} };
@@ -528,6 +534,12 @@ test('generic Beginner import requires an owner anchor and imports its exact fra
   assert.ok(
     reads.every((url) => url.includes(encodeURIComponent(bank.topic.scope)))
   );
+  await button('Thêm thế cờ Nhập môn').onClick();
+  await settle();
+  const blankDialog = nodes(tree, 'PracticePositionDialog')[0].props;
+  assert.deepEqual(blankDialog.insertionTargets, ['authored', 'curated']);
+  assert.equal(blankDialog.defaults.themeId, bank.topic.themeId);
+  assert.equal(blankDialog.defaults.level, 'Beginner');
   assert.deepEqual(
     bank,
     before,

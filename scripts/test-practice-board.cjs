@@ -18,6 +18,8 @@ new Function('module', 'exports', 'require', source)(
   mod.exports,
   (name) => {
     if (name === 'react-chessboard') return { Chessboard: 'board' };
+    // The source-context caption is outside these board-interaction tests.
+    if (name === '@/lib/chess/worksheet') return {};
     if (name.includes('useCustomBoard'))
       return {
         useCustomBoard: () => ({

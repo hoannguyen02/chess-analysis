@@ -14,7 +14,14 @@ The **Beginner-only** position-first flow supports editable piece setup/FEN
 and optional recorded solutions. See
 [Beginner-only position authoring](tactic-research-workflow.md#beginner-only-position-authoring).
 Choose **Chỉnh sửa thế cờ** to add, move or remove pieces, set the side to move,
-or import/export FEN. Undo and Cancel stay inside the draft; use the outer Save
+or import/export FEN. The piece editor reuses Setup Board's shared drag manager
+and paint layer: select a piece once, then click or sweep across empty squares
+to place copies. Dropping from the tray keeps that piece selected; existing
+pieces remain draggable, and dragging off the board removes them. Each sweep
+is one undo step. **Di chuyển quân** or **D** exits placement mode; Escape still
+discards the setup dialog. Apply (check), cancel (cross) and copy (overlapping
+sheets) share the compact row with **Đặt theo FEN**, using accessible labels and
+tooltips. Undo and Cancel stay inside the draft; use the outer Save
 button to persist. Changing FEN clears recorded lines and stale preceding-move
 context. Solutionless entries use free practice and print no invented answer.
 A, B, C, C*, D keep the existing authoring and required-solution behavior below.
@@ -24,6 +31,16 @@ open a dialog instead of expanding the form inline. The close button, **Hủy**,
 or Escape discard the unsaved draft and return focus to the opening button.
 Piece placement and solution recording open nested dialogs; closing either
 returns to the authoring form. A successful save closes the authoring dialog.
+**Thêm thế cờ Nhập môn** uses the current topic and Beginner level automatically,
+so its dialog hides those two selectors. The objective remains an explicit choice.
+For new entries, **Vị trí chèn** defaults to **Đầu danh sách**. Choose **Cuối danh sách**
+or **Trước bài số…** (1 through the current Beginner count) to insert elsewhere.
+Inserting before exercise 10 makes the new entry number 10. Saved placement uses
+stable following-exercise references, with the next surviving neighbour as fallback;
+when none remain, it falls at the end. New first insertions precede earlier ones.
+Placement applies after owner removals, level changes and transfers, and the
+protected practice/worksheet APIs share the same order. Editing an existing entry
+preserves its placement. Bulk source imports keep their existing order.
 
 In the shared reference-game viewer choose **＋ Thêm thế cờ**. The position is
 captured from the currently displayed move. Choose **Chủ đề**, **Cấp độ** and
@@ -36,6 +53,8 @@ including legal-move input, annotations, castling, en passant and promotion.
 Choose **OK · Giữ ... phương án** to keep all recorded lines and close the
 recorder. **Hủy**, the close button or Escape discard this recording session's
 changes. Reopening the recorder starts with the lines already in the form.
+**Phân tích ↗** beneath the recording board opens its currently displayed FEN in
+a separate analysis tab; the recorder and its unsaved variations stay open.
 You can select the main line, delete a variation or use **Kết thúc phương án tại
 đây** to trim its continuation. The starting FEN and preceding move stay outside
 the recording and are never replaced by the position currently displayed on the
@@ -49,6 +68,12 @@ spaced move numbers, commas and standalone separators.
 Saving opens the destination topic with the chosen level and new exercise
 selected. Source games need not be saved as favorites. **☆ Lưu ván** is a separate
 optional action.
+
+Editing replaces the existing record in place, preserving its list number and
+identity even when a Beginner FEN changes. The save link selects that same entry
+again. New manual entries append; editing a curated Beginner uses its original
+slot, and solution changes on transferred exercises preserve their destination
+order. No existing collection is globally re-sorted to recover historical order.
 
 The preceding move is captured automatically with its position before the move,
 including castling/en-passant rights and move counters. It remains separate from
@@ -79,8 +104,15 @@ There is no automatic quota filling or new researched collection.
 
 A recorded solution is a teaching variation supplied by the author. The shared
 trainer, board, alternative handling, side/objective display and game dialog
-remain in use. A source reference opens the already stored original game; the
-manual position does not copy its complete moves. Use **Chỉnh sửa thế cờ / lời
+remain in use. A source reference uses the shared viewer. When an illustrative
+or edited exercise differs from its source marker, it opens **Thế cờ bài tập**
+at the exercise's exact FEN, retaining a valid preceding move and any recorded
+solution branches. **Ván gốc** separately shows the unchanged saved game at its
+source marker; this is labelled **Vị trí nguồn trong ván**, rather than claiming
+it is the exercise position. Matching positions keep the ordinary game viewer,
+and saved-game bookmarks retain their existing behavior. The preview is derived
+at runtime and does not rewrite manual entries, source games or source pointers.
+The manual position does not copy its complete moves. Use **Chỉnh sửa thế cờ / lời
 giải** on a Beginner exercise, or **Sửa thế cờ tự thêm** at A–D, to edit it. **Quản lý bài tập**
 provides level changes and reversible removal for manual and curated exercises;
 see [practice management](practice-management.md).

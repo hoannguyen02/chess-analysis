@@ -33,7 +33,58 @@ export type GameSource = {
   fen: string;
   lines: string[][];
 };
-export type ReferenceGame = { reference: GameReference; source?: GameSource };
+export type GameExercisePosition = {
+  fen: string;
+  moves: string[];
+  alternativeLines?: string[][];
+  previousMove?: { fen: string; move: string };
+};
+export type ReferenceGame = {
+  reference: GameReference;
+  source?: GameSource;
+  position?: GameExercisePosition;
+};
+
+function positionKey(fen: string) {
+  const board = new Chess(fen);
+  const fields = board.fen().split(' ');
+  if (!board.moves({ verbose: true }).some((move) => move.flags.includes('e')))
+    fields[3] = '-';
+  return fields.slice(0, 4).join(' ');
+}
+
+/** A teaching position must never masquerade as a played source-game frame. */
+export function exerciseGamePreview(
+  source: GameSource,
+  reference: Pick<GameReference, 'branch' | 'ply'>,
+  position?: GameExercisePosition
+): { source: GameSource; markerPly: number } | null {
+  if (!position) return null;
+  const frame = gameFrames(source, reference.branch)[reference.ply];
+  if (frame && positionKey(frame.fen) === positionKey(position.fen))
+    return null;
+  let fen = position.fen;
+  let prefix: string[] = [];
+  if (position.previousMove) {
+    const before = new Chess(position.previousMove.fen);
+    const move = before.move(position.previousMove.move);
+    if (move && positionKey(before.fen()) === positionKey(position.fen)) {
+      fen = position.previousMove.fen;
+      prefix = [move.san];
+    }
+  }
+  return {
+    markerPly: prefix.length,
+    source: {
+      kind: 'study',
+      headers: source.headers,
+      fen,
+      lines: [position.moves, ...(position.alternativeLines ?? [])].map(
+        (line) => [...prefix, ...line]
+      ),
+    },
+  };
+}
 
 /** One entry per original game, retaining the active exercise's exact marker. */
 export function referenceGameList(

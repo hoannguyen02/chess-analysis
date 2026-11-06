@@ -9,6 +9,7 @@ import {
   validPracticeScope,
   practiceManagementTopics,
   assertPracticeDestinationAvailable,
+  validatePracticeSolution,
 } from '@/lib/server/practice-management';
 import { practiceLevels, type PracticeLevel } from '@/lib/chess/draw-levels';
 import {
@@ -68,7 +69,14 @@ export default async function handler(
     if (
       typeof id !== 'string' ||
       !/^[a-f0-9]{24}$/.test(id) ||
-      !['move', 'remove', 'restore', 'reset'].includes(action)
+      ![
+        'move',
+        'remove',
+        'restore',
+        'reset',
+        'solution',
+        'reset-solution',
+      ].includes(action)
     )
       throw new Error('Thay đổi không hợp lệ.');
     if (action === 'move' && !practiceLevels.includes(req.body.level))
@@ -83,7 +91,7 @@ export default async function handler(
       throw new Error('Ghi chú tối đa 1000 ký tự.');
     const note = req.body.note.trim();
     if (
-      (action === 'move' || action === 'remove') &&
+      ['move', 'remove', 'solution', 'reset-solution'].includes(action) &&
       (!validPracticeReference(reference, signature) ||
         reference.scope !== scope ||
         (referenceId !== id && !legacyReference))
@@ -105,6 +113,29 @@ export default async function handler(
       }
       if (!old && (action === 'restore' || action === 'reset'))
         throw new Error('Không tìm thấy thay đổi cần khôi phục.');
+      const editingSolution =
+        action === 'solution' || action === 'reset-solution';
+      if (
+        editingSolution &&
+        (reference.manualId ||
+          (old?.level ?? reference.baseLevel) === 'Beginner')
+      )
+        throw new Error(
+          'Dùng cửa sổ chỉnh sửa thế cờ để sửa bài tự thêm hoặc bài Nhập môn.'
+        );
+      if (
+        editingSolution &&
+        (!reference.exercise || reference.exercise.decision)
+      )
+        throw new Error('Bài tập này không hỗ trợ ghi phương án.');
+      if (old?.removed && editingSolution)
+        throw new Error('Khôi phục bài tập trước khi sửa lời giải.');
+      const solutionOverride =
+        action === 'solution'
+          ? validatePracticeSolution(reference, req.body.solution)
+          : action === 'reset-solution'
+            ? undefined
+            : old?.solutionOverride;
       const destinationScope =
         action === 'reset'
           ? scope
@@ -122,7 +153,10 @@ export default async function handler(
             : action === 'reset'
               ? source.baseLevel
               : (old?.level ?? source.baseLevel);
-        let sourceMoves = source.exercise?.moves ?? source.moves;
+        let sourceMoves =
+          old?.solutionOverride?.moves ??
+          source.exercise?.moves ??
+          source.moves;
         if (source.manualId) {
           const { readManualTactics } = await import(
             '@/lib/server/manual-tactics'
@@ -155,7 +189,9 @@ export default async function handler(
       const entry: PracticeAdjustment = {
         id,
         reference:
-          action === 'move' || action === 'remove' ? reference : old!.reference,
+          action === 'move' || action === 'remove' || editingSolution
+            ? reference
+            : old!.reference,
         level:
           action === 'reset'
             ? null
@@ -164,7 +200,8 @@ export default async function handler(
               : (old?.level ?? null),
         ...(destinationScope !== scope ? { destinationScope } : {}),
         removed: action === 'remove',
-        note,
+        note: editingSolution ? (old?.note ?? '') : note,
+        ...(solutionOverride ? { solutionOverride } : {}),
         updatedAt: now,
         history: [
           ...(old?.history ?? []),
@@ -174,10 +211,14 @@ export default async function handler(
             scope: destinationScope,
             note,
             at: now,
+            ...(action === 'solution' ? { solution: solutionOverride } : {}),
           },
         ],
       };
-      return [...items.filter((item) => item.id !== id), entry];
+      // Incoming transfers use this order too; solution edits keep their slot.
+      return old
+        ? items.map((item) => (item.id === id ? entry : item))
+        : [...items, entry];
     }).catch((error) => {
       if (conflict) res.status(409);
       throw error;

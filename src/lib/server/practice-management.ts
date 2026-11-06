@@ -6,6 +6,7 @@ import {
 } from 'node:crypto';
 import { promises as fs } from 'node:fs';
 import path from 'node:path';
+import { Chess } from 'chess.js';
 import seed from './practice-adjustments.json';
 import { tacticsCatalog } from './tactics-catalog';
 import {
@@ -20,7 +21,13 @@ import {
   practiceCurrentScope,
   type PracticeAdjustment,
   type PracticeReviewReference,
+  type PracticeSolution,
 } from '../chess/practice-management';
+import {
+  MAX_RECORDED_VARIATIONS,
+  parsePracticeVariation,
+  recordedVariationLines,
+} from '../chess/practice-exploration';
 import { drawThemeRoutePaths } from '../chess/draw-practice-view';
 
 export function practiceManagementTopics() {
@@ -126,6 +133,50 @@ export async function mutatePracticeAdjustments(
   }
 }
 
+/** Owner-recorded lines: legal replay, not an automatic tactical approval. */
+export function validatePracticeSolution(
+  reference: PracticeReviewReference,
+  value: unknown
+): PracticeSolution {
+  const input = value as Partial<PracticeSolution> | null;
+  if (
+    !input ||
+    !Array.isArray(input.alternativeLines) ||
+    input.alternativeLines.length >= MAX_RECORDED_VARIATIONS ||
+    typeof input.solution !== 'string' ||
+    input.solution.length > 4000
+  )
+    throw new Error('Phương án hoặc giải thích không hợp lệ.');
+  const lines = recordedVariationLines(
+    [input.moves, ...input.alternativeLines].map((line, index) => {
+      try {
+        return parsePracticeVariation(reference.fen, line);
+      } catch (error) {
+        throw new Error(`Phương án ${index + 1}: ${(error as Error).message}`);
+      }
+    })
+  );
+  if (
+    reference.goal === 'checkmate' ||
+    reference.exercise?.outcome === 'checkmate'
+  ) {
+    for (const line of lines) {
+      const board = new Chess(reference.fen);
+      const solver = board.turn();
+      for (const move of line) board.move(move);
+      if (!board.in_checkmate() || board.turn() === solver)
+        throw new Error(
+          'Mỗi phương án chiếu hết phải kết thúc bằng nước chiếu hết của bên giải.'
+        );
+    }
+  }
+  return {
+    moves: lines[0],
+    alternativeLines: lines.slice(1),
+    solution: input.solution.trim(),
+  };
+}
+
 export function applyPracticeAdjustments(
   pagePath: string,
   categories: DrawCategory[],
@@ -223,6 +274,7 @@ export function applyPracticeAdjustments(
       const level = adjustment?.level;
       const adjusted: DrawExercise = {
         ...exercise,
+        ...(adjustment?.solutionOverride ?? {}),
         management: {
           id: managementId,
           scope: originScope,
@@ -233,6 +285,9 @@ export function applyPracticeAdjustments(
             : {}),
           updatedAt: adjustment?.updatedAt ?? null,
           writable,
+          ...(adjustment?.solutionOverride
+            ? { sourceReference: reference, solutionEdited: true }
+            : {}),
           ...(writable
             ? { signature: practiceReferenceSignature(reference) }
             : {}),
@@ -286,15 +341,14 @@ export async function includePracticeManagement(
     ...entry,
     reference: { ...entry.reference },
   }));
+  const { readManualTactics, manualExercise, orderManualInsertions } =
+    await import('./manual-tactics');
+  const manual = await readManualTactics();
   // Authored positions remain editable after a transfer. Their current manual
   // record supplies the moves; the transfer keeps its original review snapshot.
   if (
     entries.some((entry) => entry.destinationScope && entry.reference.manualId)
   ) {
-    const { readManualTactics, manualExercise } = await import(
-      './manual-tactics'
-    );
-    const manual = await readManualTactics();
     for (const entry of entries) {
       const source = manual.find(
         (position) => position.id === entry.reference.manualId
@@ -306,7 +360,10 @@ export async function includePracticeManagement(
         };
     }
   }
-  return applyPracticeAdjustments(pagePath, categories, entries);
+  return orderManualInsertions(
+    applyPracticeAdjustments(pagePath, categories, entries),
+    manual
+  );
 }
 
 /** Validate before changing either page; the single overlay write is atomic. */

@@ -40,6 +40,8 @@ export type WorksheetSection = {
   count: number;
 };
 export type WorksheetPage = {
+  /** Keep a chapter's identity across its printed pages. */
+  sectionId?: number;
   title: string;
   level: WorksheetLevel;
   review?: boolean;
@@ -103,6 +105,7 @@ export function planWorksheet(
     selected.forEach((e) => seen.add(positionKey(e)));
     for (let i = 0; i < selected.length; i += POSITIONS_PER_PAGE)
       pages.push({
+        sectionId: section.id,
         title: topic.title,
         level: section.level,
         exercises: selected
@@ -143,7 +146,9 @@ export function explainLine(fen: string, moves: string[], numbered = false) {
     return `${notation} - ${explanation}.`;
   });
 }
-export function previousMoveLabel(e: Pick<DrawExercise, 'fen' | 'previousMove'>) {
+export function previousMoveLabel(
+  e: Pick<DrawExercise, 'fen' | 'previousMove'>
+) {
   if (!e.previousMove) return '';
   const b = new Chess(e.previousMove.fen);
   const fen = (board: ReturnType<typeof Chess>) => {
@@ -202,12 +207,14 @@ export const worksheetClosingReview = {
     'Cân nhắc cấp độ tiếp theo khi có thể tự giải các thế cờ mới ở cấp độ hiện tại, giải thích ý tưởng chính và tính được những nước đi quan trọng của đối phương.',
 };
 export type WorksheetBookOptions = {
+  showContents?: boolean;
   showLevelGuide?: boolean;
   showNotationGuide?: boolean;
   introduction: { title: string; body: string };
   closing: { title: string; body: string };
 };
 export const defaultBookOptions: WorksheetBookOptions = {
+  showContents: true,
   showLevelGuide: true,
   showNotationGuide: true,
   introduction: {
@@ -346,6 +353,8 @@ export type WorksheetReviewBlock = {
   id: number;
   afterSectionId: number;
   rows: WorksheetSection[];
+  kind?: 'group' | 'final';
+  pageCount?: number;
 };
 
 /** Anchors follow chapter identity when chapters move. Fresh positions are
@@ -380,6 +389,17 @@ export function planWorksheetBookBlocks(
             `Ôn tập ${order + 1}: chỉ chọn chủ đề đã xuất hiện trước khối ôn tập.`
           );
       }
+      if (
+        block.pageCount !== undefined &&
+        (!Number.isSafeInteger(block.pageCount) ||
+          block.pageCount < 1 ||
+          !Number.isSafeInteger(block.pageCount * POSITIONS_PER_PAGE) ||
+          block.rows.reduce((sum, row) => sum + row.count, 0) !==
+            block.pageCount * POSITIONS_PER_PAGE)
+      )
+        throw new Error(
+          `Ôn tập ${order + 1}: phân bổ phải đủ ${block.pageCount} trang, mỗi trang ${POSITIONS_PER_PAGE} thế cờ.`
+        );
       return { block, index, order };
     })
     .sort((a, b) => a.index - b.index || a.order - b.order);
@@ -414,6 +434,7 @@ export function planWorksheetBookBlocks(
   const used = new Set(reserved);
   const preceding = new Set<string>();
   let reviewNumber = 0;
+  let groupReviewNumber = 0;
   sections.forEach((section, index) => {
     const chapter = planWorksheet([section], filterCatalog(used), topics);
     chapter
@@ -442,7 +463,11 @@ export function planWorksheetBookBlocks(
             chosen,
             seed + reviewNumber - 1,
             shuffle,
-            `Ôn tập tổng hợp ${reviewNumber}`
+            block.kind === 'final'
+              ? 'Ôn tập cuối sách'
+              : block.kind === 'group'
+                ? `Ôn tập theo nhóm ${++groupReviewNumber}`
+                : `Ôn tập tổng hợp ${reviewNumber}`
           )
         );
       }

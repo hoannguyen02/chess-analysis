@@ -106,29 +106,47 @@ print-layout choice, not a guarantee about a specific printer's gray rendering.
 
 Choose **Sách bài tập A4** in the format selector. Worksheet mode remains the
 original layout. Book mode adds a cover with name/start-date lines, optional
-introduction, ordered practice sections, optional mixed review, and optional
+table of contents, introduction, ordered practice sections, optional mixed review, and optional
 closing text. Use “Chỉnh sửa trang mở đầu và kết thúc” to open the editor dialog.
 “Lưu thay đổi” applies edits; Cancel, Close, and Escape discard draft changes.
 Edit the introduction/closing titles and bodies; a blank body
 omits that section. Paragraphs and long words wrap, with additional pages as
 needed at a readable font size. Settings are held in the current session.
 
-Review scheduling is dynamic and enabled by default: recent-group review after every
-3 topics, 6 positions per topic per available selected level, plus a final cumulative review. The interval,
-count, cumulative/recent-group scope, and final review toggle are configurable.
-A final block replaces the periodic block at the same endpoint. Ten chapters
-therefore yield blocks after 3, 6, 9, and 10 chapters, containing 18, 18, 18,
-and 60 positions when one populated level is selected for each topic. The final block always covers all chapters.
+Review scheduling is dynamic and enabled by default: recent-group review after
+every 2 topics, 1 page per group, and a separate final whole-book review with its
+own page count (default 1). Each page has `POSITIONS_PER_PAGE` positions (6).
+Two topics on one review page receive 3 positions each; two pages give 6 each.
+Three topics receive 2 each on one page, or 4 each on two pages. Page budgets
+are independent: a periodic block and final block at the same endpoint both
+remain, with distinct labels in the UI, exercise PDF, contents and answer book.
+
+`allocateReviewRows` first shares the fixed total across topics, then across
+each topic's selected levels. Multiple levels never multiply the requested
+pages. Topic-level coverage must fit within a balanced allocation; otherwise
+the builder asks for more pages. Unused remainder slots rotate across blocks,
+while respecting minimum level coverage. Every level already selected for a
+topic gets at least one position; no topic/level is silently omitted.
+
+When the total does not divide evenly among topics, a non-blocking warning shows
+the allocation and the next page count that divides equally. Four topics on one
+page use 2 + 2 + 1 + 1; the warning suggests two pages for 3 each. Source shortages
+remain blocking errors rather than automatic repeats or reduced quantities.
 
 Automatic blocks derive their topics, chapter levels and anchors from the current
 chapter order. One customization button opens a native modal dialog containing a block selector
 to customize topics, levels and counts across all reviews. Draft edits survive
 switching blocks; Save applies all edits together, and Cancel/Escape discards all
 unsaved edits. Reset and orphan-block removal are available inside the dialog. Automatic
-placement is read-only in the dialog. Reset restores current shared settings.
+placement is read-only in the dialog. Reset restores the current page-based allocation.
 Custom overrides follow their schedule slot (the final slot follows the book end),
 retain chosen rows, and flag topics that no longer precede their block. Overrides
-whose slot disappears remain visible outside the schedule for correction/deletion;
+with a changed page budget keep their chosen topics/levels and are rebalanced
+to the new total. With an unchanged budget, manually edited counts remain.
+The editor shows the target pages/positions, offers `Chia đều theo số trang`, and
+requires the complete allocation before saving. Export independently validates
+the same total; custom quantities cannot silently change the requested pages.
+Overrides whose slot disappears remain visible outside the schedule for correction/deletion;
 they are not silently discarded. Disabling automatic review omits all review
 blocks while retaining edits for re-enabling. Topic-level pairs are unique within each block.
 
@@ -158,6 +176,24 @@ This is normal sequential A4 pagination, not folded-booklet imposition. Chapters
 start on fresh pages; they are not forced to start on odd pages. Footer and
 watermark settings apply to both books. A physical printer check is still
 recommended before printing a full run.
+
+### Table of contents
+
+“Thêm mục lục” is enabled by default beside the opening/closing editor. Each
+book gets its own contents immediately after its cover. The exercise book lists
+the included introduction, notation guide, chapter sections, review blocks and
+closing. The answer book lists the corresponding chapter/review solutions.
+Chapter rows show the level and exercise-number range, so reviews and repeated
+topic names remain distinguishable. Continuation pages stay under one entry.
+
+Contents reserve as many pages as needed, wrap long topic names, and bind each
+row to the actual rendered destination. Printed numbers therefore include
+contents and any extra introduction/solution pages; answers never borrow the
+exercise book's pagination. Rows are clickable PDF links, with hit areas that
+follow the mirrored binding margin. Notation cross-references use the final
+page number as well. Long repeated exercise labels on answer continuation pages
+wrap within the content margin. Disabling contents removes it from both PDFs; ordinary
+worksheet mode does not add contents. All these edits invalidate existing links.
 
 Book regressions cover reservation, reuse, shortages, zero/invalid counts,
 continuous numbering, stable mixing, answer metadata, A4 page structure, and
@@ -274,16 +310,29 @@ are inserted after the last selected level of the relevant topic. Automatic revi
 rows include every available selected topic-level pair. Custom review rows can
 include the same topic at different levels without duplicate topic-level pairs.
 
-The single `Tùy chỉnh ôn tập` button sits beside the final-review checkbox; the
-dialog manages all blocks. There is no separate review-count card.
+The review UI uses two clearly named panels: `Ôn tập theo nhóm` covers the latest
+group (or all preceding topics when `Ôn cả các chủ đề trước` is checked), while
+`Ôn tập cuối sách` defaults to all topics once at the end. The interval belongs
+only to the group panel, alongside `Số trang mỗi lần ôn`. The final panel has
+`Số trang cuối sách`. `Thiết lập chung` contains only the new/reused-position
+and shuffle settings, explicitly applying to both.
+`Thêm phần ôn tập` still enables/disables the whole review setup and preserves
+edits. Page totals and their derived allocations update with the settings.
+
+The single `Tùy chỉnh ôn tập` button stays in the review toolbar; its dialog names
+group and final blocks explicitly. When only the final block is needed, a short
+note explains that there are too few topics for an intermediate group. The two
+budgets are not merged at the end. There is no separate review-count
+card. Panels share one row on desktop and stack on narrow screens.
 
 
 `src/lib/chess/worksheet-layout.ts` owns `POSITIONS_PER_PAGE = 6`, matching the
 A4 layout of two columns and three rows. Chapter defaults, automatic-review
 defaults, topic/level availability and both chapter/review pagination use this
 constant. Counts refer to distinct, playable positions returned by
-`levelExercises`. Custom quantities and partial last pages remain supported;
-source eligibility is based on having at least one complete page in that level.
+`levelExercises`. Chapter quantities and partial last chapter pages remain supported;
+review blocks with a page budget must fill every selected page. Source
+eligibility is based on having at least one complete page in that level.
 
 
 ## Chess notation reference page

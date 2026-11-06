@@ -11,6 +11,7 @@ import {
   mutateManualTactics,
   validateManualPreviousMove,
   manualPracticeAdjustment,
+  validateBeginnerInsertion,
 } from '@/lib/server/manual-tactics';
 import {
   readPracticeAdjustments,
@@ -99,6 +100,16 @@ export default async function handler(
         previousAtPosition?.id ||
         manualTacticId(input.themeId, input.fen, input.level)
       : req.body?.id;
+    const insertion =
+      input && req.body.insertion !== undefined
+        ? validateBeginnerInsertion(
+            req.body.insertion,
+            input.level,
+            manualTopicPath(
+              tacticsCatalog.themes.find((theme) => theme.id === input.themeId)!
+            )
+          )
+        : undefined;
     if (typeof id !== 'string' || !/^[a-f0-9]{24}$/.test(id))
       throw new Error('Mã thế cờ không hợp lệ.');
     if (input) {
@@ -197,6 +208,8 @@ export default async function handler(
     }
     const positions = await mutateManualTactics((entries) => {
       const old = entries.find((e) => e.id === id);
+      if (insertion && (old || input?.beginnerBaseFen))
+        throw new Error('Bài đã có giữ nguyên vị trí khi cập nhật.');
       if (
         copying &&
         entries.find((entry) => entry.id === suppliedId)?.updatedAt !==
@@ -240,46 +253,50 @@ export default async function handler(
       const now = new Date(
         Math.max(Date.now(), old ? Date.parse(old.updatedAt) + 1 : 0)
       ).toISOString();
-      return [
-        ...entries.filter((e) => e.id !== id),
-        {
-          ...updated,
-          reference: input.reference ?? old?.reference,
-          headers: input.headers ?? old?.headers,
-          gameOpening: input.gameOpening ?? old?.gameOpening,
-          ...(input.level === 'Beginner' || old?.beginnerOriginalFen
-            ? {
-                beginnerOriginalFen:
-                  old?.beginnerOriginalFen ??
-                  input.beginnerOriginalFen ??
-                  old?.fen ??
-                  input.fen,
-                ...((input.beginnerBaseFen ?? old?.beginnerBaseFen)
-                  ? {
-                      beginnerBaseFen:
-                        input.beginnerBaseFen ?? old?.beginnerBaseFen,
-                    }
-                  : {}),
-                ...((input.beginnerSourceLevel ?? old?.beginnerSourceLevel)
-                  ? {
-                      beginnerSourceLevel:
-                        input.beginnerSourceLevel ?? old?.beginnerSourceLevel,
-                    }
-                  : {}),
-              }
-            : {}),
-          previousMove: validateManualPreviousMove(
-            input.fen,
-            input.level === 'Beginner' && req.body.previousMove === null
-              ? undefined
-              : (input.previousMove ??
-                  (changedFen ? undefined : old?.previousMove))
-          ),
-          id,
-          createdAt: old?.createdAt ?? now,
-          updatedAt: now,
-        },
-      ];
+      const entry = {
+        ...updated,
+        ...((old?.beginnerInsertion ?? insertion)
+          ? { beginnerInsertion: old?.beginnerInsertion ?? insertion }
+          : {}),
+        reference: input.reference ?? old?.reference,
+        headers: input.headers ?? old?.headers,
+        gameOpening: input.gameOpening ?? old?.gameOpening,
+        ...(input.level === 'Beginner' || old?.beginnerOriginalFen
+          ? {
+              beginnerOriginalFen:
+                old?.beginnerOriginalFen ??
+                input.beginnerOriginalFen ??
+                old?.fen ??
+                input.fen,
+              ...((input.beginnerBaseFen ?? old?.beginnerBaseFen)
+                ? {
+                    beginnerBaseFen:
+                      input.beginnerBaseFen ?? old?.beginnerBaseFen,
+                  }
+                : {}),
+              ...((input.beginnerSourceLevel ?? old?.beginnerSourceLevel)
+                ? {
+                    beginnerSourceLevel:
+                      input.beginnerSourceLevel ?? old?.beginnerSourceLevel,
+                  }
+                : {}),
+            }
+          : {}),
+        previousMove: validateManualPreviousMove(
+          input.fen,
+          input.level === 'Beginner' && req.body.previousMove === null
+            ? undefined
+            : (input.previousMove ??
+                (changedFen ? undefined : old?.previousMove))
+        ),
+        id,
+        createdAt: old?.createdAt ?? now,
+        updatedAt: now,
+      };
+      // Updating content must not move an exercise to the end of the review list.
+      return old
+        ? entries.map((item) => (item.id === id ? entry : item))
+        : [...entries, entry];
     });
     const position = positions.find((e) => e.id === id);
     const theme = tacticsCatalog.themes.find((t) => t.id === position?.themeId);

@@ -2,10 +2,14 @@ import { useEffect, useId, useRef, useState } from 'react';
 import { useRouter } from 'next/router';
 import type { DrawExercise } from '@/lib/chess/draw-practice';
 import { practiceLevels, type PracticeLevel } from '@/lib/chess/draw-levels';
-import { practiceReviewReference } from '@/lib/chess/practice-management';
+import {
+  practiceReviewReference,
+  type PracticeSolution,
+} from '@/lib/chess/practice-management';
 import { practiceAccessHeaders } from '@/lib/practice-access';
 import styles from '@/styles/SavedGames.module.css';
 import { FiMoreHorizontal, FiX } from 'react-icons/fi';
+import PracticeSolutionEditor from './PracticeSolutionEditor';
 
 async function changePractice(body: object) {
   const response = await fetch('/api/practice-management', {
@@ -20,11 +24,16 @@ async function changePractice(body: object) {
 
 export function ExerciseManagementControl({
   exercise,
+  onEditPosition,
+  removalReturnHref,
 }: {
   exercise: DrawExercise;
+  onEditPosition?: () => void;
+  removalReturnHref?: string;
 }) {
   const router = useRouter();
   const [open, setOpen] = useState(false);
+  const [editingSolution, setEditingSolution] = useState(false);
   const [level, setLevel] = useState<PracticeLevel>(
     exercise.beginner ? 'Beginner' : (exercise.difficulty?.level ?? 'A')
   );
@@ -37,6 +46,7 @@ export function ExerciseManagementControl({
   const [topics, setTopics] = useState<{ scope: string; label: string }[]>([]);
   const dialogRef = useRef<HTMLDialogElement>(null);
   const triggerRef = useRef<HTMLButtonElement>(null);
+  const editSolutionRef = useRef<HTMLButtonElement>(null);
   const dialogId = useId();
   useEffect(() => {
     const dialog = dialogRef.current;
@@ -48,6 +58,10 @@ export function ExerciseManagementControl({
       if (trigger?.isConnected) trigger.focus({ preventScroll: true });
     };
   }, [open]);
+  useEffect(() => {
+    if (open && !editingSolution)
+      editSolutionRef.current?.focus({ preventScroll: true });
+  }, [open, editingSolution]);
   useEffect(() => {
     if (!open || !management) return;
     const controller = new AbortController();
@@ -73,6 +87,22 @@ export function ExerciseManagementControl({
   const currentLevel = exercise.beginner
     ? 'Beginner'
     : exercise.difficulty?.level;
+  async function saveSolution(solution: PracticeSolution | null) {
+    if (!management) return;
+    const href = await changePractice({
+      id: management.id,
+      scope: management.scope,
+      expectedUpdatedAt: management.updatedAt,
+      reference: practiceReviewReference(management.scope, exercise),
+      signature: management.signature,
+      action: solution ? 'solution' : 'reset-solution',
+      solution,
+      note: '',
+    });
+    if (router.asPath.replace(/^\/(?:vi|en)(?=\/)/, '') === href)
+      router.reload();
+    else await router.replace(href);
+  }
   async function change(action: 'move' | 'remove' | 'reset') {
     if (!management || busy) return;
     const title = exercise.playerTitle || exercise.title;
@@ -93,7 +123,7 @@ export function ExerciseManagementControl({
     setBusy(true);
     setError('');
     try {
-      const href = await changePractice({
+      const savedHref = await changePractice({
         id: management.id,
         scope: management.scope,
         expectedUpdatedAt: management.updatedAt,
@@ -104,9 +134,17 @@ export function ExerciseManagementControl({
         destinationScope,
         note,
       });
-      if (router.asPath.replace(/^\/(?:vi|en)(?=\/)/, '') === href)
+      const href =
+        action === 'remove' && removalReturnHref
+          ? removalReturnHref
+          : savedHref;
+      if (
+        router.asPath.replace(/^\/(?:vi|en)(?=\/)/, '') ===
+        href.replace(/^\/(?:vi|en)(?=\/)/, '')
+      )
         router.reload();
-      else await router.replace(href);
+      else
+        await router.replace(href, undefined, { scroll: action !== 'remove' });
     } catch (e) {
       setError((e as Error).message);
       setBusy(false);
@@ -123,7 +161,10 @@ export function ExerciseManagementControl({
         aria-haspopup="dialog"
         aria-controls={open ? dialogId : undefined}
         aria-expanded={open}
-        onClick={() => setOpen(true)}
+        onClick={() => {
+          setEditingSolution(false);
+          setOpen(true);
+        }}
       >
         <FiMoreHorizontal size={22} aria-hidden="true" />
       </button>
@@ -152,7 +193,9 @@ export function ExerciseManagementControl({
           }}
         >
           <header className={styles.managementHeader}>
-            <h3 id={`${dialogId}-title`}>Quản lý bài tập</h3>
+            <h3 id={`${dialogId}-title`}>
+              {editingSolution ? 'Chỉnh sửa lời giải' : 'Quản lý bài tập'}
+            </h3>
             <button
               type="button"
               title="Đóng"
@@ -162,99 +205,130 @@ export function ExerciseManagementControl({
               <FiX size={20} aria-hidden="true" />
             </button>
           </header>
-          <form
-            className={styles.editor}
-            aria-label="Quản lý bài tập"
-            onSubmit={(event) => {
-              event.preventDefault();
-              void change('move');
-            }}
-          >
-            <div className={`${styles.actions} ${styles.managementLevelRow}`}>
-              <label className={styles.managementTopic}>
-                Chủ đề đích
-                <select
-                  value={destinationScope}
-                  disabled={busy || !topics.length}
-                  onChange={(event) => setDestinationScope(event.target.value)}
+          {editingSolution ? (
+            <PracticeSolutionEditor
+              exercise={exercise}
+              onSave={saveSolution}
+              onCancel={() => setEditingSolution(false)}
+            />
+          ) : (
+            <>
+              {!exercise.decision &&
+                (exercise.moves.length > 0 || onEditPosition) && (
+                  <div className={styles.actions}>
+                    <button
+                      ref={editSolutionRef}
+                      type="button"
+                      disabled={busy}
+                      onClick={() => {
+                        if (onEditPosition) onEditPosition();
+                        else setEditingSolution(true);
+                      }}
+                    >
+                      Chỉnh sửa lời giải / phương án
+                    </button>
+                  </div>
+                )}
+              <form
+                className={styles.editor}
+                aria-label="Quản lý bài tập"
+                onSubmit={(event) => {
+                  event.preventDefault();
+                  void change('move');
+                }}
+              >
+                <div
+                  className={`${styles.actions} ${styles.managementLevelRow}`}
                 >
-                  {!topics.length && (
-                    <option value={currentScope}>Đang tải chủ đề…</option>
+                  <label className={styles.managementTopic}>
+                    Chủ đề đích
+                    <select
+                      value={destinationScope}
+                      disabled={busy || !topics.length}
+                      onChange={(event) =>
+                        setDestinationScope(event.target.value)
+                      }
+                    >
+                      {!topics.length && (
+                        <option value={currentScope}>Đang tải chủ đề…</option>
+                      )}
+                      {topics.map((topic) => (
+                        <option key={topic.scope} value={topic.scope}>
+                          {topic.label}
+                        </option>
+                      ))}
+                    </select>
+                  </label>
+                  <label>
+                    Cấp độ của bài
+                    <select
+                      value={level}
+                      disabled={busy}
+                      onChange={(event) =>
+                        setLevel(event.target.value as PracticeLevel)
+                      }
+                    >
+                      {practiceLevels.map((item) => (
+                        <option key={item}>{item}</option>
+                      ))}
+                    </select>
+                  </label>
+                  <button
+                    type="submit"
+                    disabled={
+                      busy ||
+                      !topics.length ||
+                      (level === currentLevel &&
+                        destinationScope === currentScope)
+                    }
+                  >
+                    {destinationScope === currentScope
+                      ? 'Chuyển cấp độ'
+                      : 'Chuyển bài tập'}
+                  </button>
+                </div>
+                <label>
+                  Lý do điều chỉnh (tùy chọn)
+                  <input
+                    value={note}
+                    onChange={(event) => setNote(event.target.value)}
+                    maxLength={1000}
+                    disabled={busy}
+                  />
+                </label>
+                <div className={styles.actions}>
+                  <button
+                    type="button"
+                    disabled={busy}
+                    onClick={() => void change('remove')}
+                  >
+                    Bỏ khỏi bài tập
+                  </button>
+                  {(management.baseLevel !== currentLevel ||
+                    management.scope !== currentScope) && (
+                    <button
+                      type="button"
+                      disabled={busy}
+                      onClick={() => void change('reset')}
+                    >
+                      {management.scope !== currentScope
+                        ? 'Trả về chủ đề và cấp độ ban đầu'
+                        : `Trả về cấp độ ${management.baseLevel}`}
+                    </button>
                   )}
-                  {topics.map((topic) => (
-                    <option key={topic.scope} value={topic.scope}>
-                      {topic.label}
-                    </option>
-                  ))}
-                </select>
-              </label>
-              <label>
-                Cấp độ của bài
-                <select
-                  value={level}
-                  disabled={busy}
-                  onChange={(event) =>
-                    setLevel(event.target.value as PracticeLevel)
-                  }
-                >
-                  {practiceLevels.map((item) => (
-                    <option key={item}>{item}</option>
-                  ))}
-                </select>
-              </label>
-              <button
-                type="submit"
-                disabled={
-                  busy ||
-                  !topics.length ||
-                  (level === currentLevel && destinationScope === currentScope)
-                }
-              >
-                {destinationScope === currentScope
-                  ? 'Chuyển cấp độ'
-                  : 'Chuyển bài tập'}
-              </button>
-            </div>
-            <label>
-              Lý do điều chỉnh (tùy chọn)
-              <input
-                value={note}
-                onChange={(event) => setNote(event.target.value)}
-                maxLength={1000}
-                disabled={busy}
-              />
-            </label>
-            <div className={styles.actions}>
-              <button
-                type="button"
-                disabled={busy}
-                onClick={() => void change('remove')}
-              >
-                Bỏ khỏi bài tập
-              </button>
-              {(management.baseLevel !== currentLevel ||
-                management.scope !== currentScope) && (
-                <button
-                  type="button"
-                  disabled={busy}
-                  onClick={() => void change('reset')}
-                >
-                  {management.scope !== currentScope
-                    ? 'Trả về chủ đề và cấp độ ban đầu'
-                    : `Trả về cấp độ ${management.baseLevel}`}
-                </button>
-              )}
-            </div>
-            {error && (
-              <p role="alert">
-                {error}{' '}
-                <button type="button" onClick={() => router.reload()}>
-                  Tải lại trang
-                </button>
-              </p>
-            )}
-            {busy && <p role="status">Đang lưu thay đổi…</p>}
-          </form>
+                </div>
+                {error && (
+                  <p role="alert">
+                    {error}{' '}
+                    <button type="button" onClick={() => router.reload()}>
+                      Tải lại trang
+                    </button>
+                  </p>
+                )}
+                {busy && <p role="status">Đang lưu thay đổi…</p>}
+              </form>
+            </>
+          )}
         </dialog>
       )}
     </div>

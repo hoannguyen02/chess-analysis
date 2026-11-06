@@ -10,6 +10,10 @@ import {
 import { usePracticeFullscreen } from '@/hooks/usePracticeFullscreen';
 import { drawExerciseUrl } from '@/lib/chess/draw-exercise-url';
 import {
+  practiceRemovalHref,
+  practiceReviewIndex,
+} from '@/lib/chess/practice-management';
+import {
   DrawLevel,
   drawLevelDescriptions,
   drawLevels,
@@ -49,19 +53,24 @@ function CategoryIntroduction({ category }: { category: DrawCategory }) {
 function CategoryPractice({
   category,
   showIntroduction = true,
+  reviewLevel,
+  skewerKind,
 }: {
   category: DrawCategory;
   showIntroduction?: boolean;
+  reviewLevel: DrawLevel | 'all' | 'beginner';
+  skewerKind?: 'king' | 'queen';
 }) {
   const router = useRouter();
-  const initialIndex = Math.max(
-    0,
-    category.exercises.findIndex(
-      (e) =>
-        typeof router.query.exercise === 'string' &&
-        (e.manualId === router.query.exercise ||
-          e.management?.id === router.query.exercise)
-    )
+  const level = reviewLevel === 'beginner' ? 'Beginner' : reviewLevel;
+  const sameReviewContext =
+    router.query.category === category.id &&
+    router.query.level === level &&
+    (!skewerKind || router.query.beginnerKind === skewerKind);
+  const initialIndex = practiceReviewIndex(
+    category.exercises,
+    router.query.exercise,
+    sameReviewContext ? router.query.reviewIndex : undefined
   );
   const [page, setPage] = useState(Math.floor(initialIndex / PAGE_SIZE));
   const [activeIndex, setActiveIndex] = useState(initialIndex);
@@ -150,8 +159,18 @@ function CategoryPractice({
         <DrawTrainer
           key={drawExerciseUrl(category.exercises[activeIndex])}
           exercise={category.exercises[activeIndex]}
+          removalReturnHref={practiceRemovalHref(
+            router.asPath,
+            category.exercises,
+            activeIndex,
+            {
+              categoryId: category.id,
+              level,
+              beginnerKind: skewerKind,
+            }
+          )}
           referenceGames={category.exercises.flatMap((e) =>
-            e.gameReference ? [{ reference: e.gameReference }] : []
+            e.gameReference ? [{ reference: e.gameReference, position: e }] : []
           )}
           onPreviousExercise={
             activeIndex > 0
@@ -292,6 +311,7 @@ export default function ChessPractice({
                 e.management?.id === router.query.exercise)
           )
         ) ??
+        choices.find((item) => item.id === router.query.category) ??
         choices.find((item) =>
           choices.some((c) => c.exercises.some((e) => e.beginner))
             ? item.exercises.some((e) => e.beginner)
@@ -319,7 +339,20 @@ export default function ChessPractice({
                 ? 'beginner'
                 : 'A'
   );
-  const [beginnerKind, setBeginnerKind] = useState<'king' | 'queen'>('king');
+  const [beginnerKind, setBeginnerKind] = useState<'king' | 'queen'>(() => {
+    const active = choices
+      .flatMap((item) => item.exercises)
+      .find(
+        (exercise) =>
+          typeof router.query.exercise === 'string' &&
+          (exercise.manualId === router.query.exercise ||
+            exercise.management?.id === router.query.exercise)
+      );
+    return active?.beginnerKind === 'queen' ||
+      (!active?.beginnerKind && router.query.beginnerKind === 'queen')
+      ? 'queen'
+      : 'king';
+  });
   const category = choices.find((item) => item.id === selectedId) ?? choices[0];
   const filtered = {
     ...category,
@@ -407,6 +440,7 @@ export default function ChessPractice({
           key={category.managementScope}
           scope={category.managementScope}
           writable={Boolean(category.managementWritable)}
+          exercises={beginnerPracticeExercises(category)}
         />
       )}
       {showLevelFilter && (
@@ -503,6 +537,12 @@ export default function ChessPractice({
         <CategoryPractice
           key={`${category.id}-${selectedLevel}-${beginnerKind}`}
           category={filtered}
+          reviewLevel={selectedLevel}
+          skewerKind={
+            variant === 'skewer' && selectedLevel === 'beginner'
+              ? beginnerKind
+              : undefined
+          }
           showIntroduction={variant === 'draw'}
         />
       ) : (

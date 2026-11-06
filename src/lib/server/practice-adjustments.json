@@ -3424,5 +3424,1254 @@
         "at": "2026-11-06T04:16:31.254Z"
       }
     ]
+  },
+  {
+    "id": "c58be243cf8742d475f46517",
+    "reference": {
+      "scope": "/fork",
+      "fen": "3nN3/5r1k/6pp/5p2/4p3/8/4KPPP/3R4 w - - 0 59",
+      "baseLevel": "D",
+      "title": "GM Anand, Viswanathan (2765) — Polgar, Judit (2645)",
+      "moves": [
+        "Rxd8",
+        "Re7",
+        "Rd7",
+        "Rxd7",
+        "Nf6+",
+        "Kg7",
+        "Nxd7"
+      ],
+      "alternativeLines": [
+        [
+          "Rxd8",
+          "Re7",
+          "Rd7",
+          "Rxd7",
+          "Nf6+",
+          "Kh8",
+          "Nxd7"
+        ]
+      ],
+      "goal": null,
+      "previousMove": {
+        "fen": "3QN3/5r1k/4n1pp/5p2/4p3/8/4KPPP/3R4 b - - 0 58",
+        "move": "Nxd8"
+      },
+      "gameReference": {
+        "id": "1a10c843a67feeca",
+        "kind": "game",
+        "ply": 116,
+        "branch": 0,
+        "collection": "fork"
+      },
+      "manualId": null,
+      "exercise": {
+        "title": "Anand, Viswanathan — Polgar, Judit",
+        "prompt": "Tạo đòn tấn công đôi rồi bắt quân để thắng vật chất.",
+        "mode": "interactive",
+        "outcome": "fork",
+        "fen": "3nN3/5r1k/6pp/5p2/4p3/8/4KPPP/3R4 w - - 0 59",
+        "moves": [
+          "Rxd8",
+          "Re7",
+          "Rd7",
+          "Rxd7",
+          "Nf6+",
+          "Kg7",
+          "Nxd7"
+        ],
+        "alternativeLines": [
+          [
+            "Rxd8",
+            "Re7",
+            "Rd7",
+            "Rxd7",
+            "Nf6+",
+            "Kh8",
+            "Nxd7"
+          ]
+        ],
+        "previousMove": {
+          "fen": "3QN3/5r1k/4n1pp/5p2/4p3/8/4KPPP/3R4 b - - 0 58",
+          "move": "Nxd8"
+        },
+        "source": "https://www.pgnmentor.com/players/PolgarJ.zip",
+        "gameReference": {
+          "id": "1a10c843a67feeca",
+          "kind": "game",
+          "ply": 116,
+          "branch": 0,
+          "collection": "fork"
+        },
+        "hints": [
+          "Tìm hai mục tiêu mà cùng một quân có thể tấn công. Kiểm tra nước đáp và khả năng bắt lại."
+        ],
+        "solution": "Mã ở f6 tấn công đồng thời các mục tiêu ở e4, d7, h7. Sau nước đáp, bắt quân để thu lợi về vật chất.",
+        "gameCaption": "1997 · Dos Hermanas",
+        "gameOpening": "Khai cuộc: King's Indian Defense: Orthodox Variation, Bayonet Attack · E97",
+        "playerTitle": "GM Anand, Viswanathan (2765) — Polgar, Judit (2645)",
+        "players": [
+          {
+            "name": "Anand, Viswanathan",
+            "title": "GM",
+            "rating": "2765"
+          },
+          {
+            "name": "Polgar, Judit",
+            "title": "",
+            "rating": "2645"
+          }
+        ],
+        "beginner": false,
+        "difficulty": {
+          "level": "D",
+          "status": "suggested",
+          "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
+          "solverMoves": 4,
+          "sacrificeCount": 1
+        }
+      }
+    },
+    "level": null,
+    "removed": true,
+    "note": "",
+    "updatedAt": "2026-11-06T06:31:56.063Z",
+    "history": [
+      {
+        "action": "remove",
+        "level": null,
+        "scope": "/fork",
+        "note": "",
+        "at": "2026-11-06T06:31:56.063Z"
+      }
+    ]
+  },
+  {
+    "id": "b25a585a8e6cb6d03c0cf66c",
+    "reference": {
+      "scope": "/fork",
+      "fen": "6k1/2Nn1p2/5Npp/2p5/5P2/4RKP1/7r/8 b - - 0 35",
+      "baseLevel": "D",
+      "title": "Nei, Iivo (2495) — Tal, Mihail (2620)",
+      "moves": [
+        "Nxf6",
+        "Rc3",
+        "Rf2+",
+        "Kxf2",
+        "Ne4+",
+        "Ke2",
+        "Nxc3+"
+      ],
+      "alternativeLines": [
+        [
+          "Nxf6",
+          "Rc3",
+          "Rf2+",
+          "Kxf2",
+          "Ne4+",
+          "Kf3",
+          "Nxc3"
+        ],
+        [
+          "Nxf6",
+          "Rc3",
+          "Rf2+",
+          "Kxf2",
+          "Ne4+",
+          "Ke3",
+          "Nxc3"
+        ],
+        [
+          "Nxf6",
+          "Rc3",
+          "Rf2+",
+          "Kxf2",
+          "Ne4+",
+          "Kg2",
+          "Nxc3"
+        ],
+        [
+          "Nxf6",
+          "Rc3",
+          "Rf2+",
+          "Kxf2",
+          "Ne4+",
+          "Kg1",
+          "Nxc3"
+        ],
+        [
+          "Nxf6",
+          "Rc3",
+          "Rf2+",
+          "Kxf2",
+          "Ne4+",
+          "Kf1",
+          "Nxc3"
+        ],
+        [
+          "Nxf6",
+          "Rc3",
+          "Rf2+",
+          "Kxf2",
+          "Ne4+",
+          "Ke1",
+          "Nxc3"
+        ]
+      ],
+      "goal": null,
+      "previousMove": {
+        "fen": "6k1/2Nn1p2/5npp/2p5/4NP2/4RKP1/7r/8 w - - 0 35",
+        "move": "Nxf6+"
+      },
+      "gameReference": {
+        "id": "45031870cd822a42",
+        "kind": "game",
+        "ply": 69,
+        "branch": 0,
+        "collection": "fork"
+      },
+      "manualId": null,
+      "exercise": {
+        "title": "Nei, Iivo — Tal, Mihail",
+        "prompt": "Tạo đòn tấn công đôi rồi bắt quân để thắng vật chất.",
+        "mode": "interactive",
+        "outcome": "fork",
+        "fen": "6k1/2Nn1p2/5Npp/2p5/5P2/4RKP1/7r/8 b - - 0 35",
+        "moves": [
+          "Nxf6",
+          "Rc3",
+          "Rf2+",
+          "Kxf2",
+          "Ne4+",
+          "Ke2",
+          "Nxc3+"
+        ],
+        "alternativeLines": [
+          [
+            "Nxf6",
+            "Rc3",
+            "Rf2+",
+            "Kxf2",
+            "Ne4+",
+            "Kf3",
+            "Nxc3"
+          ],
+          [
+            "Nxf6",
+            "Rc3",
+            "Rf2+",
+            "Kxf2",
+            "Ne4+",
+            "Ke3",
+            "Nxc3"
+          ],
+          [
+            "Nxf6",
+            "Rc3",
+            "Rf2+",
+            "Kxf2",
+            "Ne4+",
+            "Kg2",
+            "Nxc3"
+          ],
+          [
+            "Nxf6",
+            "Rc3",
+            "Rf2+",
+            "Kxf2",
+            "Ne4+",
+            "Kg1",
+            "Nxc3"
+          ],
+          [
+            "Nxf6",
+            "Rc3",
+            "Rf2+",
+            "Kxf2",
+            "Ne4+",
+            "Kf1",
+            "Nxc3"
+          ],
+          [
+            "Nxf6",
+            "Rc3",
+            "Rf2+",
+            "Kxf2",
+            "Ne4+",
+            "Ke1",
+            "Nxc3"
+          ]
+        ],
+        "previousMove": {
+          "fen": "6k1/2Nn1p2/5npp/2p5/4NP2/4RKP1/7r/8 w - - 0 35",
+          "move": "Nxf6+"
+        },
+        "source": "https://www.pgnmentor.com/players/Tal.zip",
+        "gameReference": {
+          "id": "45031870cd822a42",
+          "kind": "game",
+          "ply": 69,
+          "branch": 0,
+          "collection": "fork"
+        },
+        "hints": [
+          "Tìm hai mục tiêu mà cùng một quân có thể tấn công. Kiểm tra nước đáp và khả năng bắt lại."
+        ],
+        "solution": "Mã ở e4 tấn công đồng thời các mục tiêu ở f2, c3, g3. Sau nước đáp, bắt quân để thu lợi về vật chất.",
+        "gameCaption": "1983 · Keres mem",
+        "gameOpening": "Khai cuộc: Queen's Indian Defense: Buerger Variation · E15",
+        "playerTitle": "Nei, Iivo (2495) — Tal, Mihail (2620)",
+        "players": [
+          {
+            "name": "Nei, Iivo",
+            "title": "",
+            "rating": "2495"
+          },
+          {
+            "name": "Tal, Mihail",
+            "title": "",
+            "rating": "2620"
+          }
+        ],
+        "beginner": false,
+        "difficulty": {
+          "level": "D",
+          "status": "suggested",
+          "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
+          "solverMoves": 4,
+          "sacrificeCount": 1
+        }
+      }
+    },
+    "level": null,
+    "removed": true,
+    "note": "",
+    "updatedAt": "2026-11-06T06:41:32.806Z",
+    "history": [
+      {
+        "action": "remove",
+        "level": null,
+        "scope": "/fork",
+        "note": "",
+        "at": "2026-11-06T06:41:32.806Z"
+      }
+    ]
+  },
+  {
+    "id": "390e393d32eb160c055235a2",
+    "reference": {
+      "scope": "/fork",
+      "fen": "rnb1kqnr/pp3pbp/3p4/3Np3/2B2B2/5Q2/PPP3PP/R4RK1 w kq - 2 14",
+      "baseLevel": "B",
+      "title": "Dufresne, Jean — Anderssen, Adolf",
+      "moves": [
+        "Bg5",
+        "f6",
+        "Nc7+",
+        "Kd8",
+        "Nxa8"
+      ],
+      "alternativeLines": [
+        [
+          "Bg5",
+          "f6",
+          "Nc7+",
+          "Ke7",
+          "Nxa8"
+        ],
+        [
+          "Bg5",
+          "f6",
+          "Nc7+",
+          "Kd7",
+          "Nxa8"
+        ]
+      ],
+      "goal": null,
+      "previousMove": {
+        "fen": "rnb1k1nr/pp2qpbp/3p4/3Np3/2B2B2/5Q2/PPP3PP/R4RK1 b kq - 1 13",
+        "move": "Qf8"
+      },
+      "gameReference": {
+        "id": "0d4d8b3a5b92b01d",
+        "kind": "game",
+        "ply": 26,
+        "branch": 0,
+        "collection": "fork"
+      },
+      "manualId": null,
+      "exercise": {
+        "title": "Dufresne, Jean — Anderssen, Adolf",
+        "prompt": "Tạo đòn tấn công đôi rồi bắt quân để thắng vật chất.",
+        "mode": "interactive",
+        "outcome": "fork",
+        "fen": "rnb1kqnr/pp3pbp/3p4/3Np3/2B2B2/5Q2/PPP3PP/R4RK1 w kq - 2 14",
+        "moves": [
+          "Bg5",
+          "f6",
+          "Nc7+",
+          "Kd8",
+          "Nxa8"
+        ],
+        "alternativeLines": [
+          [
+            "Bg5",
+            "f6",
+            "Nc7+",
+            "Ke7",
+            "Nxa8"
+          ],
+          [
+            "Bg5",
+            "f6",
+            "Nc7+",
+            "Kd7",
+            "Nxa8"
+          ]
+        ],
+        "previousMove": {
+          "fen": "rnb1k1nr/pp2qpbp/3p4/3Np3/2B2B2/5Q2/PPP3PP/R4RK1 b kq - 1 13",
+          "move": "Qf8"
+        },
+        "source": "https://www.pgnmentor.com/players/Anderssen.zip",
+        "gameReference": {
+          "id": "0d4d8b3a5b92b01d",
+          "kind": "game",
+          "ply": 26,
+          "branch": 0,
+          "collection": "fork"
+        },
+        "hints": [
+          "Tìm hai mục tiêu mà cùng một quân có thể tấn công. Kiểm tra nước đáp và khả năng bắt lại."
+        ],
+        "solution": "Mã ở c7 tấn công đồng thời các mục tiêu ở a8, e8. Sau nước đáp, bắt quân để thu lợi về vật chất.",
+        "gameCaption": "1851 · Berlin m2",
+        "gameOpening": "Khai cuộc: King's Gambit Accepted: McDonnell Gambit · C37",
+        "playerTitle": "Dufresne, Jean — Anderssen, Adolf",
+        "players": [
+          {
+            "name": "Dufresne, Jean",
+            "title": "",
+            "rating": ""
+          },
+          {
+            "name": "Anderssen, Adolf",
+            "title": "",
+            "rating": ""
+          }
+        ],
+        "beginner": false,
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
+          "solverMoves": 3,
+          "sacrificeCount": 0
+        }
+      }
+    },
+    "level": "C*",
+    "removed": false,
+    "note": "",
+    "updatedAt": "2026-11-06T08:57:28.424Z",
+    "history": [
+      {
+        "action": "move",
+        "level": "C*",
+        "scope": "/fork",
+        "note": "",
+        "at": "2026-11-06T08:57:28.424Z"
+      }
+    ]
+  },
+  {
+    "id": "76743b5c84b473d01a85b314",
+    "reference": {
+      "scope": "/fork",
+      "fen": "r3r1k1/ppp2pp1/1b3q1p/3PpN1Q/4Pn2/B5R1/P4PPP/5R1K w - - 10 27",
+      "baseLevel": "B",
+      "title": "Anderssen, Adolf — Gelbfuhs, Oscar",
+      "moves": [
+        "Qxh6",
+        "Qxh6",
+        "Nxh6+",
+        "Kh7",
+        "Nxf7"
+      ],
+      "alternativeLines": [
+        [
+          "Qxh6",
+          "Qxh6",
+          "Nxh6+",
+          "Kh8",
+          "Nxf7+"
+        ]
+      ],
+      "goal": null,
+      "previousMove": {
+        "fen": "r3r1k1/ppp2pp1/1b3qnp/3PpN1Q/4P3/B5R1/P4PPP/5R1K b - - 9 26",
+        "move": "Nf4"
+      },
+      "gameReference": {
+        "id": "2354a693956d69b1",
+        "kind": "game",
+        "ply": 52,
+        "branch": 0,
+        "collection": "fork"
+      },
+      "manualId": null,
+      "exercise": {
+        "title": "Anderssen, Adolf — Gelbfuhs, Oscar",
+        "prompt": "Tạo đòn tấn công đôi rồi bắt quân để thắng vật chất.",
+        "mode": "interactive",
+        "outcome": "fork",
+        "fen": "r3r1k1/ppp2pp1/1b3q1p/3PpN1Q/4Pn2/B5R1/P4PPP/5R1K w - - 10 27",
+        "moves": [
+          "Qxh6",
+          "Qxh6",
+          "Nxh6+",
+          "Kh7",
+          "Nxf7"
+        ],
+        "alternativeLines": [
+          [
+            "Qxh6",
+            "Qxh6",
+            "Nxh6+",
+            "Kh8",
+            "Nxf7+"
+          ]
+        ],
+        "previousMove": {
+          "fen": "r3r1k1/ppp2pp1/1b3qnp/3PpN1Q/4P3/B5R1/P4PPP/5R1K b - - 9 26",
+          "move": "Nf4"
+        },
+        "source": "https://www.pgnmentor.com/players/Anderssen.zip",
+        "gameReference": {
+          "id": "2354a693956d69b1",
+          "kind": "game",
+          "ply": 52,
+          "branch": 0,
+          "collection": "fork"
+        },
+        "hints": [
+          "Tìm hai mục tiêu mà cùng một quân có thể tấn công. Kiểm tra nước đáp và khả năng bắt lại."
+        ],
+        "solution": "Mã ở h6 tấn công đồng thời các mục tiêu ở f7, g8. Sau nước đáp, bắt quân để thu lợi về vật chất.",
+        "gameCaption": "1873 · Vienna",
+        "gameOpening": "Khai cuộc: Italian Game: Evans Gambit, Morphy Attack · C51",
+        "playerTitle": "Anderssen, Adolf — Gelbfuhs, Oscar",
+        "players": [
+          {
+            "name": "Anderssen, Adolf",
+            "title": "",
+            "rating": ""
+          },
+          {
+            "name": "Gelbfuhs, Oscar",
+            "title": "",
+            "rating": ""
+          }
+        ],
+        "beginner": false,
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
+          "solverMoves": 3,
+          "sacrificeCount": 0
+        }
+      }
+    },
+    "level": "C*",
+    "removed": false,
+    "note": "",
+    "updatedAt": "2026-11-06T09:04:11.673Z",
+    "history": [
+      {
+        "action": "move",
+        "level": "C*",
+        "scope": "/fork",
+        "note": "",
+        "at": "2026-11-06T09:04:11.673Z"
+      }
+    ]
+  },
+  {
+    "id": "6f02d7a620cc36dabd781b59",
+    "reference": {
+      "scope": "/fork",
+      "fen": "8/3k3p/2N5/1B6/8/5n1n/1P6/1K6 w - - 0 48",
+      "baseLevel": "Beginner",
+      "title": "Carlsen,M (2770) — Ivanchuk,V (2746)",
+      "moves": [],
+      "alternativeLines": [],
+      "goal": "material",
+      "previousMove": {
+        "fen": "8/2kR3p/2N5/1B6/8/5n1n/1P6/1K6 b - - 0 47",
+        "move": "Kxd7"
+      },
+      "gameReference": {
+        "id": "bfb60242f4cc9115",
+        "kind": "game",
+        "branch": 0,
+        "ply": 94,
+        "collection": "fork"
+      },
+      "manualId": "189df950d3318245b421a340",
+      "exercise": {
+        "manualId": "189df950d3318245b421a340",
+        "title": "Nhập môn · Carlsen,M — Ivanchuk,V",
+        "fen": "8/3k3p/2N5/1B6/8/5n1n/1P6/1K6 w - - 0 48",
+        "goal": "material",
+        "moves": [],
+        "alternativeLines": [],
+        "solution": "",
+        "prompt": "Tính phương án để đạt mục tiêu của thế cờ.",
+        "outcome": "fork",
+        "mode": "interactive",
+        "forcedReplies": false,
+        "source": "Thế cờ được thêm thủ công.",
+        "beginnerOriginalFen": "8/3k3p/2N5/1B6/8/5n1n/1P6/1K6 w - - 0 48",
+        "gameReference": {
+          "id": "bfb60242f4cc9115",
+          "kind": "game",
+          "branch": 0,
+          "ply": 94,
+          "collection": "fork"
+        },
+        "previousMove": {
+          "fen": "8/2kR3p/2N5/1B6/8/5n1n/1P6/1K6 b - - 0 47",
+          "move": "Kxd7"
+        },
+        "players": [
+          {
+            "name": "Carlsen,M",
+            "title": "",
+            "rating": "2770"
+          },
+          {
+            "name": "Ivanchuk,V",
+            "title": "",
+            "rating": "2746"
+          }
+        ],
+        "playerTitle": "Carlsen,M (2770) — Ivanchuk,V (2746)",
+        "gameCaption": "2009.06.07 · XXII Rapid KO",
+        "beginner": true
+      }
+    },
+    "level": null,
+    "removed": true,
+    "note": "",
+    "updatedAt": "2026-11-06T11:12:17.574Z",
+    "history": [
+      {
+        "action": "remove",
+        "level": null,
+        "scope": "/fork",
+        "note": "",
+        "at": "2026-11-06T11:12:17.574Z"
+      }
+    ]
+  },
+  {
+    "id": "e37d1e69ee30e7a81f231216",
+    "reference": {
+      "scope": "/fork",
+      "fen": "8/2bP3p/2P5/6k1/b5P1/8/4B1K1/8 b - - 10 73",
+      "baseLevel": "Beginner",
+      "title": "Wang,Tianqi (2202) — Shabalov,A (2563)",
+      "moves": [],
+      "alternativeLines": [],
+      "goal": "material",
+      "previousMove": {
+        "fen": "8/2bP3p/2P5/6k1/b5P1/5K2/4B3/8 w - - 9 73",
+        "move": "Kg2"
+      },
+      "gameReference": {
+        "id": "f7e2faaca07d7394",
+        "kind": "game",
+        "branch": 0,
+        "ply": 145,
+        "collection": "fork"
+      },
+      "manualId": "457919836d9a8b0d447fd7a5",
+      "exercise": {
+        "manualId": "457919836d9a8b0d447fd7a5",
+        "title": "Nhập môn · Wang,Tianqi — Shabalov,A",
+        "fen": "8/2bP3p/2P5/6k1/b5P1/8/4B1K1/8 b - - 10 73",
+        "goal": "material",
+        "moves": [],
+        "alternativeLines": [],
+        "solution": "",
+        "prompt": "Tính phương án để đạt mục tiêu của thế cờ.",
+        "outcome": "fork",
+        "mode": "interactive",
+        "forcedReplies": false,
+        "source": "Thế cờ được thêm thủ công.",
+        "beginnerOriginalFen": "8/2bP3p/2P5/6k1/b5P1/8/4B1K1/8 b - - 10 73",
+        "gameReference": {
+          "id": "f7e2faaca07d7394",
+          "kind": "game",
+          "branch": 0,
+          "ply": 145,
+          "collection": "fork"
+        },
+        "previousMove": {
+          "fen": "8/2bP3p/2P5/6k1/b5P1/5K2/4B3/8 w - - 9 73",
+          "move": "Kg2"
+        },
+        "players": [
+          {
+            "name": "Wang,Tianqi",
+            "title": "",
+            "rating": "2202"
+          },
+          {
+            "name": "Shabalov,A",
+            "title": "",
+            "rating": "2563"
+          }
+        ],
+        "playerTitle": "Wang,Tianqi (2202) — Shabalov,A (2563)",
+        "gameCaption": "2016.12.28 · 43rd Eastern Open 2016",
+        "beginner": true
+      }
+    },
+    "level": null,
+    "removed": true,
+    "note": "",
+    "updatedAt": "2026-11-06T12:17:32.715Z",
+    "history": [
+      {
+        "action": "remove",
+        "level": null,
+        "scope": "/fork",
+        "note": "",
+        "at": "2026-11-06T12:17:32.715Z"
+      }
+    ]
+  },
+  {
+    "id": "114ea61de095e06dab6a4a04",
+    "reference": {
+      "scope": "/fork",
+      "fen": "8/8/8/5K2/5p2/r6k/8/6Q1 w - - 6 65",
+      "baseLevel": "Beginner",
+      "title": "Ivanchuk,V (2731) — Sutovsky,E (2623)",
+      "moves": [],
+      "alternativeLines": [],
+      "goal": "material",
+      "previousMove": {
+        "fen": "8/8/8/5K2/5p2/5r1k/8/6Q1 b - - 5 64",
+        "move": "Ra3"
+      },
+      "gameReference": {
+        "id": "ccc5ca08a828854f",
+        "kind": "game",
+        "branch": 0,
+        "ply": 124,
+        "collection": "fork"
+      },
+      "manualId": "c908e6960f3dde275f98f357",
+      "exercise": {
+        "manualId": "c908e6960f3dde275f98f357",
+        "title": "Nhập môn · Phương án minh họa · Ivanchuk,V — Sutovsky,E",
+        "fen": "8/8/8/5K2/5p2/r6k/8/6Q1 w - - 6 65",
+        "goal": "material",
+        "moves": [],
+        "alternativeLines": [],
+        "solution": "",
+        "prompt": "Tính phương án để đạt mục tiêu của thế cờ.",
+        "outcome": "fork",
+        "mode": "interactive",
+        "forcedReplies": false,
+        "source": "Thế cờ được thêm thủ công.",
+        "beginnerOriginalFen": "8/8/8/5K2/5p2/r6k/8/6Q1 w - - 6 65",
+        "gameReference": {
+          "id": "ccc5ca08a828854f",
+          "kind": "game",
+          "branch": 0,
+          "ply": 124,
+          "collection": "fork"
+        },
+        "previousMove": {
+          "fen": "8/8/8/5K2/5p2/5r1k/8/6Q1 b - - 5 64",
+          "move": "Ra3"
+        },
+        "players": [
+          {
+            "name": "Ivanchuk,V",
+            "title": "",
+            "rating": "2731"
+          },
+          {
+            "name": "Sutovsky,E",
+            "title": "",
+            "rating": "2623"
+          }
+        ],
+        "playerTitle": "Ivanchuk,V (2731) — Sutovsky,E (2623)",
+        "gameCaption": "2015.04.22 · 10th World Teams 2015",
+        "beginner": true
+      }
+    },
+    "level": null,
+    "removed": true,
+    "note": "",
+    "updatedAt": "2026-11-06T12:18:11.214Z",
+    "history": [
+      {
+        "action": "remove",
+        "level": null,
+        "scope": "/fork",
+        "note": "",
+        "at": "2026-11-06T12:18:11.214Z"
+      }
+    ]
+  },
+  {
+    "id": "2b61f98b50c5446936bf4bc9",
+    "reference": {
+      "scope": "/fork",
+      "fen": "8/5Q2/2k5/8/3pKB2/6P1/8/8 w - - 3 79",
+      "baseLevel": "Beginner",
+      "title": "Ivanchuk,V (2787) — Graf,A (2574)",
+      "moves": [],
+      "alternativeLines": [],
+      "goal": "material",
+      "previousMove": {
+        "fen": "8/3k1Q2/8/8/3pKB2/6P1/8/8 b - - 2 78",
+        "move": "Kc6"
+      },
+      "gameReference": {
+        "id": "2ae5bff2dd967252",
+        "kind": "game",
+        "branch": 0,
+        "ply": 150,
+        "collection": "fork"
+      },
+      "manualId": "35c76c379a3d6a1e6541122d",
+      "exercise": {
+        "manualId": "35c76c379a3d6a1e6541122d",
+        "title": "Nhập môn · Phương án minh họa · Ivanchuk,V — Graf,A",
+        "fen": "8/5Q2/2k5/8/3pKB2/6P1/8/8 w - - 3 79",
+        "goal": "material",
+        "moves": [],
+        "alternativeLines": [],
+        "solution": "",
+        "prompt": "Tính phương án để đạt mục tiêu của thế cờ.",
+        "outcome": "fork",
+        "mode": "interactive",
+        "forcedReplies": false,
+        "source": "Thế cờ được thêm thủ công.",
+        "beginnerOriginalFen": "8/5Q2/2k5/8/3pKB2/6P1/8/8 w - - 3 79",
+        "gameReference": {
+          "id": "2ae5bff2dd967252",
+          "kind": "game",
+          "branch": 0,
+          "ply": 150,
+          "collection": "fork"
+        },
+        "previousMove": {
+          "fen": "8/3k1Q2/8/8/3pKB2/6P1/8/8 b - - 2 78",
+          "move": "Kc6"
+        },
+        "players": [
+          {
+            "name": "Ivanchuk,V",
+            "title": "",
+            "rating": "2787"
+          },
+          {
+            "name": "Graf,A",
+            "title": "",
+            "rating": "2574"
+          }
+        ],
+        "playerTitle": "Ivanchuk,V (2787) — Graf,A (2574)",
+        "gameCaption": "2007.12.21 · XX Carlos Torre Wimbledon",
+        "beginner": true
+      }
+    },
+    "level": null,
+    "removed": true,
+    "note": "",
+    "updatedAt": "2026-11-06T12:19:33.329Z",
+    "history": [
+      {
+        "action": "remove",
+        "level": null,
+        "scope": "/fork",
+        "note": "",
+        "at": "2026-11-06T12:19:33.329Z"
+      }
+    ]
+  },
+  {
+    "id": "382bc6ff75664c303bf89604",
+    "reference": {
+      "scope": "/fork",
+      "fen": "8/6Rp/p4r1P/3kp3/3p4/8/PK3R1P/8 b - - 0 40",
+      "baseLevel": "Beginner",
+      "title": "Cheng,X (2271) — Shabalov,A (2604)",
+      "moves": [],
+      "alternativeLines": [],
+      "goal": "material",
+      "previousMove": {
+        "fen": "8/6Rp/p4r1P/3kp3/3p4/8/PK1R1r1P/8 w - - 0 40",
+        "move": "Rxf2"
+      },
+      "gameReference": {
+        "id": "697208e5569635d9",
+        "kind": "game",
+        "branch": 0,
+        "ply": 79,
+        "collection": "fork"
+      },
+      "manualId": "a6e29f525187b20dc4112c37",
+      "exercise": {
+        "manualId": "a6e29f525187b20dc4112c37",
+        "title": "Nhập môn · Cheng,X — Shabalov,A",
+        "fen": "8/6Rp/p4r1P/3kp3/3p4/8/PK3R1P/8 b - - 0 40",
+        "goal": "material",
+        "moves": [],
+        "alternativeLines": [],
+        "solution": "",
+        "prompt": "Tính phương án để đạt mục tiêu của thế cờ.",
+        "outcome": "fork",
+        "mode": "interactive",
+        "forcedReplies": false,
+        "source": "Thế cờ được thêm thủ công.",
+        "beginnerOriginalFen": "8/6Rp/p4r1P/3kp3/3p4/8/PK3R1P/8 b - - 0 40",
+        "gameReference": {
+          "id": "697208e5569635d9",
+          "kind": "game",
+          "branch": 0,
+          "ply": 79,
+          "collection": "fork"
+        },
+        "previousMove": {
+          "fen": "8/6Rp/p4r1P/3kp3/3p4/8/PK1R1r1P/8 w - - 0 40",
+          "move": "Rxf2"
+        },
+        "players": [
+          {
+            "name": "Cheng,X",
+            "title": "",
+            "rating": "2271"
+          },
+          {
+            "name": "Shabalov,A",
+            "title": "",
+            "rating": "2604"
+          }
+        ],
+        "playerTitle": "Cheng,X (2271) — Shabalov,A (2604)",
+        "gameCaption": "2006.08.08 · 107th Annual US Open",
+        "beginner": true
+      }
+    },
+    "level": null,
+    "removed": true,
+    "note": "",
+    "updatedAt": "2026-11-06T12:24:08.395Z",
+    "history": [
+      {
+        "action": "remove",
+        "level": null,
+        "scope": "/fork",
+        "note": "",
+        "at": "2026-11-06T12:24:08.395Z"
+      }
+    ]
+  },
+  {
+    "id": "86e01ad8b4a69fbd80eab2c3",
+    "reference": {
+      "scope": "/fork",
+      "fen": "6k1/8/p3r3/5B2/2p1P2P/3n2P1/1P6/5K2 w - - 0 55",
+      "baseLevel": "Beginner",
+      "title": "Calero, Ivan — Tal, Mihail",
+      "moves": [],
+      "alternativeLines": [],
+      "goal": "material",
+      "previousMove": {
+        "fen": "6k1/8/p3Qr2/5B2/2p1P2P/3n2P1/1P6/5K2 b - - 0 54",
+        "move": "Rxe6"
+      },
+      "gameReference": {
+        "id": "13de7acf5c45d71b",
+        "kind": "game",
+        "branch": 0,
+        "ply": 108,
+        "collection": "fork"
+      },
+      "manualId": "ccd62e1b9967e8597c177c8b",
+      "exercise": {
+        "manualId": "ccd62e1b9967e8597c177c8b",
+        "title": "Nhập môn · Calero, Ivan — Tal, Mihail",
+        "fen": "6k1/8/p3r3/5B2/2p1P2P/3n2P1/1P6/5K2 w - - 0 55",
+        "goal": "material",
+        "moves": [],
+        "alternativeLines": [],
+        "solution": "",
+        "prompt": "Tính phương án để đạt mục tiêu của thế cờ.",
+        "outcome": "fork",
+        "mode": "interactive",
+        "forcedReplies": false,
+        "source": "Thế cờ được thêm thủ công.",
+        "beginnerOriginalFen": "6k1/8/p3r3/5B2/2p1P2P/3n2P1/1P6/5K2 w - - 0 55",
+        "gameReference": {
+          "id": "13de7acf5c45d71b",
+          "kind": "game",
+          "branch": 0,
+          "ply": 108,
+          "collection": "fork"
+        },
+        "previousMove": {
+          "fen": "6k1/8/p3Qr2/5B2/2p1P2P/3n2P1/1P6/5K2 b - - 0 54",
+          "move": "Rxe6"
+        },
+        "players": [
+          {
+            "name": "Calero, Ivan",
+            "title": "",
+            "rating": ""
+          },
+          {
+            "name": "Tal, Mihail",
+            "title": "",
+            "rating": ""
+          }
+        ],
+        "playerTitle": "Calero, Ivan — Tal, Mihail",
+        "gameCaption": "1963.??.?? · Capablanca mem",
+        "beginner": true
+      }
+    },
+    "level": null,
+    "removed": true,
+    "note": "",
+    "updatedAt": "2026-11-06T12:30:03.561Z",
+    "history": [
+      {
+        "action": "remove",
+        "level": null,
+        "scope": "/fork",
+        "note": "",
+        "at": "2026-11-06T12:30:03.561Z"
+      }
+    ]
+  },
+  {
+    "id": "ccbcdf7dc80a744ea08e78d7",
+    "reference": {
+      "scope": "/fork",
+      "fen": "4N3/3r3k/7p/5pp1/4p3/8/4KPPP/8 w - - 0 61",
+      "baseLevel": "Beginner",
+      "title": "GM Anand, Viswanathan (2765) — Polgar, Judit (2645)",
+      "moves": [],
+      "alternativeLines": [],
+      "goal": "win",
+      "previousMove": {
+        "fen": "4N3/3R1r1k/7p/5pp1/4p3/8/4KPPP/8 b - - 1 60",
+        "move": "Rxd7"
+      },
+      "gameReference": {
+        "id": "1a10c843a67feeca",
+        "kind": "game",
+        "branch": 0,
+        "ply": 120,
+        "collection": "fork"
+      },
+      "manualId": "b1591c89497c91fa04db1d18",
+      "exercise": {
+        "manualId": "b1591c89497c91fa04db1d18",
+        "title": "Nhập môn · Anand, Viswanathan — Polgar, Judit",
+        "fen": "4N3/3r3k/7p/5pp1/4p3/8/4KPPP/8 w - - 0 61",
+        "goal": "win",
+        "moves": [],
+        "alternativeLines": [],
+        "solution": "",
+        "prompt": "Tính phương án để đạt mục tiêu của thế cờ.",
+        "outcome": "fork",
+        "mode": "interactive",
+        "forcedReplies": false,
+        "source": "Thế cờ được thêm thủ công.",
+        "beginnerOriginalFen": "4N3/3r3k/7p/5pp1/4p3/8/4KPPP/8 w - - 0 61",
+        "gameReference": {
+          "id": "1a10c843a67feeca",
+          "kind": "game",
+          "branch": 0,
+          "ply": 120,
+          "collection": "fork"
+        },
+        "previousMove": {
+          "fen": "4N3/3R1r1k/7p/5pp1/4p3/8/4KPPP/8 b - - 1 60",
+          "move": "Rxd7"
+        },
+        "players": [
+          {
+            "name": "Anand, Viswanathan",
+            "title": "GM",
+            "rating": "2765"
+          },
+          {
+            "name": "Polgar, Judit",
+            "title": "",
+            "rating": "2645"
+          }
+        ],
+        "playerTitle": "GM Anand, Viswanathan (2765) — Polgar, Judit (2645)",
+        "gameCaption": "1997.04.12 · Dos Hermanas",
+        "beginner": true
+      }
+    },
+    "level": null,
+    "removed": true,
+    "note": "",
+    "updatedAt": "2026-11-06T12:32:11.058Z",
+    "history": [
+      {
+        "action": "remove",
+        "level": null,
+        "scope": "/fork",
+        "note": "",
+        "at": "2026-11-06T12:32:11.058Z"
+      }
+    ]
+  },
+  {
+    "id": "d09be5f81e739d280fde9dc7",
+    "reference": {
+      "scope": "/fork",
+      "fen": "1k6/7p/1r3p2/pR6/P3Pp2/1K3P2/7r/8 w - - 0 42",
+      "baseLevel": "Beginner",
+      "title": "Grischuk,A (2663) — Shirov,A (2718)",
+      "moves": [],
+      "alternativeLines": [],
+      "goal": "material",
+      "previousMove": {
+        "fen": "1R6/1k5p/1r3p2/pR6/P3Pp2/1K3P2/7r/8 b - - 7 41",
+        "move": "Kxb8"
+      },
+      "gameReference": {
+        "id": "24ae31cf006b14ac",
+        "kind": "game",
+        "branch": 0,
+        "ply": 82,
+        "collection": "fork"
+      },
+      "manualId": "82e89d8c56a8995ad0d59ead",
+      "exercise": {
+        "manualId": "82e89d8c56a8995ad0d59ead",
+        "title": "Nhập môn · Grischuk,A — Shirov,A",
+        "fen": "1k6/7p/1r3p2/pR6/P3Pp2/1K3P2/7r/8 w - - 0 42",
+        "goal": "material",
+        "moves": [],
+        "alternativeLines": [],
+        "solution": "",
+        "prompt": "Tính phương án để đạt mục tiêu của thế cờ.",
+        "outcome": "fork",
+        "mode": "interactive",
+        "forcedReplies": false,
+        "source": "Thế cờ được thêm thủ công.",
+        "beginnerOriginalFen": "1k6/7p/1r3p2/pR6/P3Pp2/1K3P2/7r/8 w - - 0 42",
+        "gameReference": {
+          "id": "24ae31cf006b14ac",
+          "kind": "game",
+          "branch": 0,
+          "ply": 82,
+          "collection": "fork"
+        },
+        "previousMove": {
+          "fen": "1R6/1k5p/1r3p2/pR6/P3Pp2/1K3P2/7r/8 b - - 7 41",
+          "move": "Kxb8"
+        },
+        "players": [
+          {
+            "name": "Grischuk,A",
+            "title": "",
+            "rating": "2663"
+          },
+          {
+            "name": "Shirov,A",
+            "title": "",
+            "rating": "2718"
+          }
+        ],
+        "playerTitle": "Grischuk,A (2663) — Shirov,A (2718)",
+        "gameCaption": "2001.03.05 · SuperGM",
+        "beginner": true
+      }
+    },
+    "level": null,
+    "removed": true,
+    "note": "",
+    "updatedAt": "2026-11-06T12:35:36.218Z",
+    "history": [
+      {
+        "action": "remove",
+        "level": null,
+        "scope": "/fork",
+        "note": "",
+        "at": "2026-11-06T12:35:36.218Z"
+      }
+    ]
+  },
+  {
+    "id": "32958fecffd1afd042a3095f",
+    "reference": {
+      "scope": "/fork",
+      "fen": "6k1/8/R7/8/8/4q3/K7/8 b - - 0 42",
+      "baseLevel": "Beginner",
+      "title": "Tấn công đôi · Thế cờ tự thêm",
+      "moves": [
+        "Qe2+",
+        "Kb3",
+        "Qxa6"
+      ],
+      "alternativeLines": [],
+      "goal": "material",
+      "previousMove": null,
+      "gameReference": null,
+      "manualId": "688589253dd48928898e5234",
+      "exercise": {
+        "manualId": "688589253dd48928898e5234",
+        "title": "Tấn công đôi · Thế cờ tự thêm",
+        "fen": "6k1/8/R7/8/8/4q3/K7/8 b - - 0 42",
+        "goal": "material",
+        "moves": [
+          "Qe2+",
+          "Kb3",
+          "Qxa6"
+        ],
+        "alternativeLines": [],
+        "solution": "Tính các nước đáp khác rồi đối chiếu với phương án minh họa.",
+        "prompt": "Tính phương án để đạt mục tiêu của thế cờ.",
+        "outcome": "fork",
+        "mode": "interactive",
+        "forcedReplies": false,
+        "source": "Thế cờ được chỉnh sửa từ vị trí nguồn.",
+        "beginnerOriginalFen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+        "gameCaption": "Thế cờ đã chỉnh sửa",
+        "beginner": true
+      }
+    },
+    "level": null,
+    "removed": true,
+    "note": "",
+    "updatedAt": "2026-11-06T13:53:30.191Z",
+    "history": [
+      {
+        "action": "remove",
+        "level": null,
+        "scope": "/fork",
+        "note": "",
+        "at": "2026-11-06T13:53:30.191Z"
+      }
+    ]
   }
 ]

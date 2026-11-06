@@ -1,6 +1,6 @@
 # Setup Board: lesson quick reference
 
-Open **Setup Board → LIMA Lesson** to load and teach saved positions.
+Open **Setup Board → LIMA Chess Lesson** to load and teach saved positions.
 
 ## Keyboard shortcuts
 
@@ -26,7 +26,7 @@ The two small icons beside the move text perform the same before/replay actions.
 ## Import from a spreadsheet
 
 1. Copy cells containing **FEN + optional previous move** columns. You can include several adjacent column pairs and their level headings, such as `Level A` and `Level B/B*`.
-2. Click the **spreadsheet grid icon** in the LIMA Lesson toolbar (before the JSON import icon) and paste the cells. Click it again to close the panel.
+2. Click the **spreadsheet grid icon** in the LIMA Chess Lesson toolbar (before the JSON import icon) and paste the cells. Click it again to close the panel.
 3. Review the preview. Invalid FENs and moves are listed by row and column; the import button explicitly identifies when only valid entries will be added.
 4. Add the positions. They append to the existing lesson, grouped by column pair, and the first newly imported position loads.
 

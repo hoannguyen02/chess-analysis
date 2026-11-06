@@ -258,120 +258,6 @@
   {
     "themeId": "fork",
     "level": "Beginner",
-    "fen": "8/3k4/8/2K5/8/5p2/5B2/1q6 b - - 3 64",
-    "goal": "material",
-    "moves": [],
-    "alternativeLines": [],
-    "solution": "",
-    "title": "Nhập môn · Tal, Mihail — Van der Wiel, John TH",
-    "headers": {
-      "Event": "Brussels blitz",
-      "Site": "Brussels",
-      "Date": "1987.??.??",
-      "Round": "?",
-      "White": "Tal, Mihail",
-      "Black": "Van der Wiel, John TH",
-      "Result": "0-1",
-      "WhiteElo": "2605",
-      "BlackElo": "2590",
-      "ECO": "B40"
-    },
-    "beginnerOriginalFen": "8/3k4/8/2K5/8/5p2/5B2/1q6 b - - 3 64",
-    "beginnerSourceLevel": "D",
-    "reference": {
-      "id": "3e82acb4376b7033",
-      "kind": "game",
-      "branch": 0,
-      "ply": 127,
-      "collection": "fork"
-    },
-    "previousMove": {
-      "fen": "8/3k4/1K6/8/8/5p2/5B2/1q6 w - - 2 64",
-      "move": "Kc5"
-    },
-    "id": "ddb3c14f685184538fb6ac12",
-    "createdAt": "2026-11-06T03:01:59.727Z",
-    "updatedAt": "2026-11-06T03:01:59.727Z"
-  },
-  {
-    "themeId": "fork",
-    "level": "Beginner",
-    "fen": "8/8/2b5/8/p1p2k2/P7/7K/3R4 w - - 0 89",
-    "goal": "material",
-    "moves": [],
-    "alternativeLines": [],
-    "solution": "",
-    "title": "Nhập môn · Kasparov, Gary — Jussupow, Artur",
-    "headers": {
-      "Event": "Linares",
-      "Site": "Linares",
-      "Date": "1993.??.??",
-      "Round": "3",
-      "White": "Kasparov, Gary",
-      "Black": "Jussupow, Artur",
-      "Result": "1/2-1/2",
-      "WhiteElo": "2805",
-      "BlackElo": "2645",
-      "ECO": "D35"
-    },
-    "beginnerOriginalFen": "8/8/2b5/8/p1p2k2/P7/7K/3R4 w - - 0 89",
-    "beginnerSourceLevel": "C*",
-    "reference": {
-      "id": "1902b13b7903f18e",
-      "kind": "game",
-      "branch": 0,
-      "ply": 176,
-      "collection": "fork"
-    },
-    "previousMove": {
-      "fen": "8/8/2b5/1p6/p1P2k2/P7/7K/3R4 b - - 0 88",
-      "move": "bxc4"
-    },
-    "id": "9bb9e34c2ee7358516e220c4",
-    "createdAt": "2026-11-06T03:01:59.819Z",
-    "updatedAt": "2026-11-06T03:01:59.819Z"
-  },
-  {
-    "themeId": "fork",
-    "level": "Beginner",
-    "fen": "8/3k4/6R1/5K1P/P6P/8/8/4q3 b - - 1 60",
-    "goal": "material",
-    "moves": [],
-    "alternativeLines": [],
-    "solution": "",
-    "title": "Nhập môn · Shabalov,A — Mahesh Chandran,P",
-    "headers": {
-      "Event": "33rd World Open",
-      "Site": "Philadelphia USA",
-      "Date": "2005.07.04",
-      "Round": "9",
-      "White": "Shabalov,A",
-      "Black": "Mahesh Chandran,P",
-      "Result": "0-1",
-      "WhiteElo": "2593",
-      "BlackElo": "2473",
-      "ECO": "C91"
-    },
-    "beginnerOriginalFen": "8/3k4/6R1/5K1P/P6P/8/8/4q3 b - - 1 60",
-    "beginnerSourceLevel": "D",
-    "reference": {
-      "id": "66708223c26afb47",
-      "kind": "game",
-      "branch": 0,
-      "ply": 119,
-      "collection": "fork"
-    },
-    "previousMove": {
-      "fen": "8/3k4/7R/5K1P/P6P/8/8/4q3 w - - 0 60",
-      "move": "Rg6"
-    },
-    "id": "2051372bc34322c3ae9cebc6",
-    "createdAt": "2026-11-06T03:01:59.832Z",
-    "updatedAt": "2026-11-06T03:01:59.832Z"
-  },
-  {
-    "themeId": "fork",
-    "level": "Beginner",
     "fen": "8/3k3p/2N5/1B6/8/5n1n/1P6/1K6 w - - 0 48",
     "goal": "material",
     "moves": [],
@@ -450,7 +336,11 @@
     "level": "Beginner",
     "fen": "8/6Q1/8/3K4/5p2/4k3/3n4/8 w - - 6 79",
     "goal": "material",
-    "moves": [],
+    "moves": [
+      "Qd4+",
+      "Ke2",
+      "Qxf4"
+    ],
     "alternativeLines": [],
     "solution": "",
     "title": "Nhập môn · Phương án minh họa · Kasparov, Gary — Kramnik, Vladimir",
@@ -481,7 +371,7 @@
     },
     "id": "9a731496647626d412b3fca2",
     "createdAt": "2026-11-06T03:01:59.928Z",
-    "updatedAt": "2026-11-06T03:01:59.928Z"
+    "updatedAt": "2026-11-06T12:16:45.469Z"
   },
   {
     "themeId": "fork",
@@ -564,7 +454,11 @@
     "level": "Beginner",
     "fen": "6k1/6p1/p4B2/3R4/1p2p3/1P1n4/1P2K3/8 b - - 0 44",
     "goal": "material",
-    "moves": [],
+    "moves": [
+      "Nf4+",
+      "Kf2",
+      "Nxd5"
+    ],
     "alternativeLines": [],
     "solution": "",
     "title": "Nhập môn · Karjakin,Sergey — Ivanchuk,V",
@@ -595,7 +489,7 @@
     },
     "id": "9605501b257efd39c47fe4cf",
     "createdAt": "2026-11-06T03:01:59.995Z",
-    "updatedAt": "2026-11-06T03:01:59.995Z"
+    "updatedAt": "2026-11-06T12:18:54.782Z"
   },
   {
     "themeId": "fork",
@@ -640,7 +534,11 @@
     "level": "Beginner",
     "fen": "6k1/2N2p2/5npp/2p5/5P2/2R3P1/5K2/8 b - - 0 37",
     "goal": "material",
-    "moves": [],
+    "moves": [
+      "Ne4+",
+      "Ke3",
+      "Nxc3"
+    ],
     "alternativeLines": [],
     "solution": "",
     "title": "Nhập môn · Nei, Iivo — Tal, Mihail",
@@ -671,14 +569,18 @@
     },
     "id": "7fb1df25c7f7737b3d13b548",
     "createdAt": "2026-11-06T03:02:00.053Z",
-    "updatedAt": "2026-11-06T03:02:00.053Z"
+    "updatedAt": "2026-11-06T12:21:17.021Z"
   },
   {
     "themeId": "fork",
     "level": "Beginner",
     "fen": "4Q3/2K3p1/2B2k2/4p2P/4n3/8/8/2q5 w - - 2 62",
     "goal": "material",
-    "moves": [],
+    "moves": [
+      "Qg6+",
+      "Ke7",
+      "Qxg7+"
+    ],
     "alternativeLines": [],
     "solution": "",
     "title": "Nhập môn · Kasparov, Gary — Beliavsky, Alexander G",
@@ -709,7 +611,7 @@
     },
     "id": "d6af68184f3beebdf2dc14a8",
     "createdAt": "2026-11-06T03:02:00.143Z",
-    "updatedAt": "2026-11-06T03:02:00.143Z"
+    "updatedAt": "2026-11-06T12:22:18.476Z"
   },
   {
     "themeId": "fork",
@@ -902,7 +804,11 @@
     "level": "Beginner",
     "fen": "Q7/5pp1/5r2/8/1kp5/7P/6PK/8 w - - 0 52",
     "goal": "material",
-    "moves": [],
+    "moves": [
+      "Qf8+",
+      "Kb3",
+      "Qxg7"
+    ],
     "alternativeLines": [],
     "solution": "",
     "title": "Nhập môn · Cordel, Oskar — Anderssen, Adolf",
@@ -933,14 +839,18 @@
     },
     "id": "cd22f267b3ede1c5a9970787",
     "createdAt": "2026-11-06T03:34:37.836Z",
-    "updatedAt": "2026-11-06T03:34:37.836Z"
+    "updatedAt": "2026-11-06T12:29:00.148Z"
   },
   {
     "themeId": "fork",
     "level": "Beginner",
     "fen": "6k1/1b5p/p5p1/4p3/1R3nP1/7P/4NK2/5N2 b - - 0 44",
     "goal": "material",
-    "moves": [],
+    "moves": [
+      "Nd3+",
+      "Ke3",
+      "Nxb4"
+    ],
     "alternativeLines": [],
     "solution": "",
     "title": "Nhập môn · Kulomzin, Viacheslav Nikolaev — Chigorin, Mikhail",
@@ -971,7 +881,7 @@
     },
     "id": "66aedfd24ec486e10fdcd177",
     "createdAt": "2026-11-06T03:34:37.850Z",
-    "updatedAt": "2026-11-06T03:34:37.850Z"
+    "updatedAt": "2026-11-06T12:29:43.777Z"
   },
   {
     "themeId": "fork",
@@ -1016,7 +926,11 @@
     "level": "Beginner",
     "fen": "3Q4/7p/5p2/3Bpb1k/2P4P/6K1/P3q3/8 b - - 8 53",
     "goal": "material",
-    "moves": [],
+    "moves": [
+      "Qg4+",
+      "Kh2",
+      "Qxh4+"
+    ],
     "alternativeLines": [],
     "solution": "",
     "title": "Nhập môn · Phương án minh họa · Iuldachev,S — Ivanchuk,V",
@@ -1047,7 +961,7 @@
     },
     "id": "c14adc9980b2faf77ee01db8",
     "createdAt": "2026-11-06T03:34:37.873Z",
-    "updatedAt": "2026-11-06T03:34:37.873Z"
+    "updatedAt": "2026-11-06T12:31:12.976Z"
   },
   {
     "themeId": "fork",
@@ -1095,7 +1009,11 @@
     "level": "Beginner",
     "fen": "4N3/3r3k/6pp/5p2/4p3/8/4KPPP/8 w - - 0 61",
     "goal": "material",
-    "moves": [],
+    "moves": [
+      "Nf6+",
+      "Kg7",
+      "Nxd7"
+    ],
     "alternativeLines": [],
     "solution": "",
     "title": "Nhập môn · Phương án minh họa · Anand, Viswanathan — Polgar, Judit",
@@ -1126,14 +1044,18 @@
     },
     "id": "7f8a610498ae9da23848de2f",
     "createdAt": "2026-11-06T05:15:43.822Z",
-    "updatedAt": "2026-11-06T05:15:43.822Z"
+    "updatedAt": "2026-11-06T12:31:33.610Z"
   },
   {
     "themeId": "fork",
     "level": "Beginner",
     "fen": "8/1p3r1k/p1p5/6pP/4N1P1/6K1/1P6/8 w - - 0 58",
     "goal": "material",
-    "moves": [],
+    "moves": [
+      "Nxg5+",
+      "Kg7",
+      "Nxf7"
+    ],
     "alternativeLines": [],
     "solution": "",
     "title": "Nhập môn · Tal, Mihail — Savon, Vladimir A",
@@ -1164,7 +1086,7 @@
     },
     "id": "cbe5364d16c8ee2cfcf7796d",
     "createdAt": "2026-11-06T05:15:43.838Z",
-    "updatedAt": "2026-11-06T05:15:43.838Z"
+    "updatedAt": "2026-11-06T12:31:52.732Z"
   },
   {
     "themeId": "fork",
@@ -1247,7 +1169,11 @@
     "level": "Beginner",
     "fen": "8/7k/3p2p1/4p2p/8/5Q1P/p5PK/2r5 w - - 0 59",
     "goal": "material",
-    "moves": [],
+    "moves": [
+      "Qf7+",
+      "Kh6",
+      "Qxa2"
+    ],
     "alternativeLines": [],
     "solution": "",
     "title": "Nhập môn · Phương án minh họa · Stein, Leonid — Hennings, Artur",
@@ -1278,14 +1204,18 @@
     },
     "id": "02cc1fa98831f2746f9015a1",
     "createdAt": "2026-11-06T05:15:43.963Z",
-    "updatedAt": "2026-11-06T05:15:43.963Z"
+    "updatedAt": "2026-11-06T12:32:48.315Z"
   },
   {
     "themeId": "fork",
     "level": "Beginner",
     "fen": "2r5/6R1/4k2p/p1pp4/8/1P5P/PB4K1/8 w - - 0 40",
     "goal": "material",
-    "moves": [],
+    "moves": [
+      "Rg6+",
+      "Kf5",
+      "Rxh6"
+    ],
     "alternativeLines": [],
     "solution": "",
     "title": "Nhập môn · Phương án minh họa · Topalov,V — Ivanchuk,V",
@@ -1316,14 +1246,18 @@
     },
     "id": "3daed9109bfd0db73ecb21c2",
     "createdAt": "2026-11-06T05:15:44.008Z",
-    "updatedAt": "2026-11-06T05:15:44.008Z"
+    "updatedAt": "2026-11-06T12:33:34.548Z"
   },
   {
     "themeId": "fork",
     "level": "Beginner",
     "fen": "6k1/5pp1/8/8/b3P3/2P3Pp/1K3Q1P/3q4 b - - 0 48",
     "goal": "material",
-    "moves": [],
+    "moves": [
+      "Qb3+",
+      "Ka1",
+      "Qxc3+"
+    ],
     "alternativeLines": [],
     "solution": "",
     "title": "Nhập môn · Phương án minh họa · Aronian,L — Praggnanandhaa,R",
@@ -1354,6 +1288,799 @@
     },
     "id": "826a384e9f6edfb174fbb0a9",
     "createdAt": "2026-11-06T05:15:44.080Z",
-    "updatedAt": "2026-11-06T05:15:44.080Z"
+    "updatedAt": "2026-11-06T12:34:13.891Z"
+  },
+  {
+    "themeId": "fork",
+    "level": "C",
+    "fen": "6k1/2N2p2/5npp/2p5/5P2/2R2KP1/7r/8 b - - 1 36",
+    "goal": "win",
+    "moves": [
+      "Rf2+",
+      "Kxf2",
+      "Ne4+"
+    ],
+    "alternativeLines": [],
+    "solution": "",
+    "title": "Tấn công đôi · Thế cờ tự thêm",
+    "headers": {
+      "Event": "Keres mem",
+      "Site": "Tallinn",
+      "Date": "1983.??.??",
+      "Round": "6",
+      "White": "Nei, Iivo",
+      "Black": "Tal, Mihail",
+      "Result": "1/2-1/2",
+      "WhiteElo": "2495",
+      "BlackElo": "2620",
+      "ECO": "E15"
+    },
+    "gameOpening": "Khai cuộc: Queen's Indian Defense: Buerger Variation · E15",
+    "reference": {
+      "id": "45031870cd822a42",
+      "kind": "game",
+      "branch": 0,
+      "ply": 71,
+      "collection": "fork"
+    },
+    "previousMove": {
+      "fen": "6k1/2N2p2/5npp/2p5/5P2/4RKP1/7r/8 w - - 0 36",
+      "move": "Rc3"
+    },
+    "id": "61b4bc792bc85cde767b0b8f",
+    "createdAt": "2026-11-06T06:41:16.347Z",
+    "updatedAt": "2026-11-06T06:41:16.347Z"
+  },
+  {
+    "themeId": "fork",
+    "level": "Beginner",
+    "fen": "8/3k4/8/2K5/8/5p2/5B2/1q6 b - - 3 64",
+    "goal": "material",
+    "moves": [
+      "Qc2+",
+      "Kd5",
+      "Qxf2"
+    ],
+    "alternativeLines": [],
+    "solution": "",
+    "title": "Nhập môn · Tal, Mihail — Van der Wiel, John TH",
+    "headers": {
+      "Event": "Brussels blitz",
+      "Site": "Brussels",
+      "Date": "1987.??.??",
+      "Round": "?",
+      "White": "Tal, Mihail",
+      "Black": "Van der Wiel, John TH",
+      "Result": "0-1",
+      "WhiteElo": "2605",
+      "BlackElo": "2590",
+      "ECO": "B40"
+    },
+    "beginnerOriginalFen": "8/3k4/8/2K5/8/5p2/5B2/1q6 b - - 3 64",
+    "beginnerSourceLevel": "D",
+    "reference": {
+      "id": "3e82acb4376b7033",
+      "kind": "game",
+      "branch": 0,
+      "ply": 127,
+      "collection": "fork"
+    },
+    "previousMove": {
+      "fen": "8/3k4/1K6/8/8/5p2/5B2/1q6 w - - 2 64",
+      "move": "Kc5"
+    },
+    "id": "ddb3c14f685184538fb6ac12",
+    "createdAt": "2026-11-06T03:01:59.727Z",
+    "updatedAt": "2026-11-06T10:37:17.160Z"
+  },
+  {
+    "themeId": "fork",
+    "level": "Beginner",
+    "fen": "8/8/2b5/8/p1p2k2/P7/7K/3R4 w - - 0 89",
+    "goal": "material",
+    "moves": [
+      "Rd4+",
+      "Ke5",
+      "Rxc4"
+    ],
+    "alternativeLines": [],
+    "solution": "",
+    "title": "Nhập môn · Kasparov, Gary — Jussupow, Artur",
+    "headers": {
+      "Event": "Linares",
+      "Site": "Linares",
+      "Date": "1993.??.??",
+      "Round": "3",
+      "White": "Kasparov, Gary",
+      "Black": "Jussupow, Artur",
+      "Result": "1/2-1/2",
+      "WhiteElo": "2805",
+      "BlackElo": "2645",
+      "ECO": "D35"
+    },
+    "beginnerOriginalFen": "8/8/2b5/8/p1p2k2/P7/7K/3R4 w - - 0 89",
+    "beginnerSourceLevel": "C*",
+    "reference": {
+      "id": "1902b13b7903f18e",
+      "kind": "game",
+      "branch": 0,
+      "ply": 176,
+      "collection": "fork"
+    },
+    "previousMove": {
+      "fen": "8/8/2b5/1p6/p1P2k2/P7/7K/3R4 b - - 0 88",
+      "move": "bxc4"
+    },
+    "id": "9bb9e34c2ee7358516e220c4",
+    "createdAt": "2026-11-06T03:01:59.819Z",
+    "updatedAt": "2026-11-06T10:39:01.719Z"
+  },
+  {
+    "themeId": "fork",
+    "level": "Beginner",
+    "fen": "8/3k4/6R1/5K1P/P6P/8/8/4q3 b - - 1 60",
+    "goal": "material",
+    "moves": [
+      "Qa5+",
+      "Kg4",
+      "Qxa4+"
+    ],
+    "alternativeLines": [
+      [
+        "Qa5+",
+        "Kf6",
+        "Qxh5",
+        "a5",
+        "Qxh4+"
+      ]
+    ],
+    "solution": "",
+    "title": "Nhập môn · Shabalov,A — Mahesh Chandran,P",
+    "headers": {
+      "Event": "33rd World Open",
+      "Site": "Philadelphia USA",
+      "Date": "2005.07.04",
+      "Round": "9",
+      "White": "Shabalov,A",
+      "Black": "Mahesh Chandran,P",
+      "Result": "0-1",
+      "WhiteElo": "2593",
+      "BlackElo": "2473",
+      "ECO": "C91"
+    },
+    "beginnerOriginalFen": "8/3k4/6R1/5K1P/P6P/8/8/4q3 b - - 1 60",
+    "beginnerSourceLevel": "D",
+    "reference": {
+      "id": "66708223c26afb47",
+      "kind": "game",
+      "branch": 0,
+      "ply": 119,
+      "collection": "fork"
+    },
+    "previousMove": {
+      "fen": "8/3k4/7R/5K1P/P6P/8/8/4q3 w - - 0 60",
+      "move": "Rg6"
+    },
+    "id": "2051372bc34322c3ae9cebc6",
+    "createdAt": "2026-11-06T03:01:59.832Z",
+    "updatedAt": "2026-11-06T10:59:58.605Z"
+  },
+  {
+    "themeId": "fork",
+    "level": "Beginner",
+    "fen": "7r/8/8/p4k2/P1NPp3/1P2P2p/3K3R/8 w - - 0 51",
+    "goal": "material",
+    "moves": [
+      "Nd6+",
+      "Ke6",
+      "Nxe4"
+    ],
+    "alternativeLines": [],
+    "solution": "",
+    "title": "Nhập môn · Phương án minh họa · Charousek, Rudolf Rezso — Chigorin, Mikhail",
+    "headers": {
+      "Event": "Budapest playoff-1pl",
+      "Site": "Budapest",
+      "Date": "1896.??.??",
+      "Round": "3",
+      "White": "Charousek, Rudolf Rezso",
+      "Black": "Chigorin, Mikhail",
+      "Result": "1-0",
+      "WhiteElo": "",
+      "BlackElo": "",
+      "ECO": "E14"
+    },
+    "beginnerOriginalFen": "7r/8/8/p4k2/P1NPp3/1P2P2p/3K3R/8 w - - 0 51",
+    "beginnerSourceLevel": "C*",
+    "reference": {
+      "id": "4c9ea60e450a25f8",
+      "kind": "game",
+      "branch": 0,
+      "ply": 94,
+      "collection": "fork"
+    },
+    "previousMove": {
+      "fen": "7r/8/5k2/p4P2/P1NPp3/1P2P2p/3K3R/8 b - - 1 50",
+      "move": "Kxf5"
+    },
+    "id": "e785065f52623e6920aa6efa",
+    "createdAt": "2026-11-06T12:14:53.859Z",
+    "updatedAt": "2026-11-06T12:16:01.422Z"
+  },
+  {
+    "themeId": "fork",
+    "level": "Beginner",
+    "fen": "1k6/7p/1r3p2/pR6/P3Pp2/1K3P2/7r/8 w - - 0 42",
+    "goal": "material",
+    "moves": [],
+    "alternativeLines": [],
+    "solution": "",
+    "title": "Nhập môn · Grischuk,A — Shirov,A",
+    "headers": {
+      "Event": "SuperGM",
+      "Site": "Linares ESP",
+      "Date": "2001.03.05",
+      "Round": "9",
+      "White": "Grischuk,A",
+      "Black": "Shirov,A",
+      "Result": "1-0",
+      "WhiteElo": "2663",
+      "BlackElo": "2718",
+      "ECO": "B90"
+    },
+    "beginnerOriginalFen": "1k6/7p/1r3p2/pR6/P3Pp2/1K3P2/7r/8 w - - 0 42",
+    "beginnerSourceLevel": "D",
+    "reference": {
+      "id": "24ae31cf006b14ac",
+      "kind": "game",
+      "branch": 0,
+      "ply": 82,
+      "collection": "fork"
+    },
+    "previousMove": {
+      "fen": "1R6/1k5p/1r3p2/pR6/P3Pp2/1K3P2/7r/8 b - - 7 41",
+      "move": "Kxb8"
+    },
+    "id": "82e89d8c56a8995ad0d59ead",
+    "createdAt": "2026-11-06T12:20:49.223Z",
+    "updatedAt": "2026-11-06T12:20:49.223Z"
+  },
+  {
+    "themeId": "fork",
+    "level": "Beginner",
+    "fen": "4k3/2p5/ppN5/5Qbq/1P6/8/KPP5/8 w - - 8 61",
+    "goal": "material",
+    "moves": [
+      "Qc8+",
+      "Kf7",
+      "Qxc7+"
+    ],
+    "alternativeLines": [],
+    "solution": "",
+    "title": "Nhập môn · Chigorin, Mikhail — Tarrasch, Siegbert",
+    "headers": {
+      "Event": "Ostende",
+      "Site": "Ostende",
+      "Date": "1907.??.??",
+      "Round": "3",
+      "White": "Chigorin, Mikhail",
+      "Black": "Tarrasch, Siegbert",
+      "Result": "1-0",
+      "WhiteElo": "",
+      "BlackElo": "",
+      "ECO": "B01"
+    },
+    "beginnerOriginalFen": "4k3/2p5/ppN5/5Qbq/1P6/8/KPP5/8 w - - 8 61",
+    "beginnerSourceLevel": "C*",
+    "reference": {
+      "id": "f2f2148020aa95a6",
+      "kind": "game",
+      "branch": 0,
+      "ply": 120,
+      "collection": "fork"
+    },
+    "previousMove": {
+      "fen": "3k4/2p5/ppN5/5Qbq/1P6/8/KPP5/8 b - - 7 60",
+      "move": "Ke8"
+    },
+    "id": "54f43ec606d0440895d7cce4",
+    "createdAt": "2026-11-06T12:20:49.237Z",
+    "updatedAt": "2026-11-06T12:36:08.558Z"
+  },
+  {
+    "themeId": "fork",
+    "level": "Beginner",
+    "fen": "2R2b1k/8/3N4/p3q3/6p1/6P1/P4PK1/1r6 w - - 0 46",
+    "goal": "material",
+    "moves": [
+      "Nf7+",
+      "Kg7",
+      "Nxe5"
+    ],
+    "alternativeLines": [],
+    "solution": "",
+    "title": "Nhập môn · Geller, Efim P — Uhlmann, Wolfgang",
+    "headers": {
+      "Event": "Stockholm Interzonal",
+      "Site": "Stockholm",
+      "Date": "1962.??.??",
+      "Round": "10",
+      "White": "Geller, Efim P",
+      "Black": "Uhlmann, Wolfgang",
+      "Result": "1-0",
+      "WhiteElo": "",
+      "BlackElo": "",
+      "ECO": "E62"
+    },
+    "beginnerOriginalFen": "2R2b1k/8/3N4/p3q3/6p1/6P1/P4PK1/1r6 w - - 0 46",
+    "beginnerSourceLevel": "C",
+    "reference": {
+      "id": "3f9db899ce5832f1",
+      "kind": "game",
+      "branch": 0,
+      "ply": 90,
+      "collection": "fork"
+    },
+    "previousMove": {
+      "fen": "2R2b1k/8/3N4/p3Q2q/6p1/6P1/P4PK1/1r6 b - - 0 45",
+      "move": "Qxe5"
+    },
+    "id": "f4143197f04d874328935156",
+    "createdAt": "2026-11-06T12:20:49.251Z",
+    "updatedAt": "2026-11-06T12:37:30.947Z"
+  },
+  {
+    "themeId": "fork",
+    "level": "Beginner",
+    "fen": "2r5/1p3b1k/p2P4/4B1R1/r4PP1/6K1/P7/8 w - - 0 48",
+    "goal": "material",
+    "moves": [
+      "Rg7+",
+      "Kh6",
+      "Rxf7"
+    ],
+    "alternativeLines": [],
+    "solution": "",
+    "title": "Nhập môn · Ivanchuk,V — Melkumyan,H",
+    "headers": {
+      "Event": "Tournament of Peace 2019",
+      "Site": "Zagreb CRO",
+      "Date": "2019.11.27",
+      "Round": "8.6",
+      "White": "Ivanchuk,V",
+      "Black": "Melkumyan,H",
+      "Result": "1-0",
+      "WhiteElo": "2679",
+      "BlackElo": "2661",
+      "ECO": "E54"
+    },
+    "beginnerOriginalFen": "2r5/1p3b1k/p2P4/4B1R1/r4PP1/6K1/P7/8 w - - 0 48",
+    "beginnerSourceLevel": "C*",
+    "reference": {
+      "id": "0f69ce001a9d6075",
+      "kind": "game",
+      "branch": 0,
+      "ply": 94,
+      "collection": "fork"
+    },
+    "previousMove": {
+      "fen": "2r5/1p3b1k/p2P4/4B1R1/B3rPP1/6K1/P7/8 b - - 0 47",
+      "move": "Rxa4"
+    },
+    "id": "f4d34c063f2c5b7ee87b351a",
+    "createdAt": "2026-11-06T12:38:05.631Z",
+    "updatedAt": "2026-11-06T12:38:30.244Z"
+  },
+  {
+    "themeId": "fork",
+    "level": "Beginner",
+    "fen": "7k/4b3/4Bpp1/4r3/3p1N2/4P2P/5PP1/6K1 w - - 0 55",
+    "goal": "material",
+    "moves": [
+      "Nxg6+",
+      "Kg7",
+      "Nxe5"
+    ],
+    "alternativeLines": [],
+    "solution": "",
+    "title": "Nhập môn · Topalov,V — Shirov,A",
+    "headers": {
+      "Event": "Amber Rapid",
+      "Site": "Monte Carlo MNC",
+      "Date": "2005.03.24",
+      "Round": "5",
+      "White": "Topalov,V",
+      "Black": "Shirov,A",
+      "Result": "1-0",
+      "WhiteElo": "2757",
+      "BlackElo": "2713",
+      "ECO": "D15"
+    },
+    "beginnerOriginalFen": "7k/4b3/4Bpp1/4r3/3p1N2/4P2P/5PP1/6K1 w - - 0 55",
+    "beginnerSourceLevel": "C",
+    "reference": {
+      "id": "fe2e20165488b941",
+      "kind": "game",
+      "branch": 0,
+      "ply": 108,
+      "collection": "fork"
+    },
+    "previousMove": {
+      "fen": "7k/4b2p/4BpR1/4r3/3p1N2/4P2P/5PP1/6K1 b - - 0 54",
+      "move": "hxg6"
+    },
+    "id": "44b311131130f690d39336c5",
+    "createdAt": "2026-11-06T12:38:05.644Z",
+    "updatedAt": "2026-11-06T12:43:45.766Z"
+  },
+  {
+    "themeId": "fork",
+    "level": "Beginner",
+    "fen": "8/3k4/1p1p4/2pNpK2/p1P5/P2P3n/7P/8 w - - 0 52",
+    "goal": "material",
+    "moves": [
+      "Nxb6+",
+      "Kc6",
+      "Nxa4"
+    ],
+    "alternativeLines": [],
+    "solution": "",
+    "title": "Nhập môn · Bird, Henry Edward — Blackburne, Joseph Henry",
+    "headers": {
+      "Event": "London",
+      "Site": "London",
+      "Date": "1883.??.??",
+      "Round": "12",
+      "White": "Bird, Henry Edward",
+      "Black": "Blackburne, Joseph Henry",
+      "Result": "1-0",
+      "WhiteElo": "",
+      "BlackElo": "",
+      "ECO": "A02"
+    },
+    "beginnerOriginalFen": "8/3k4/1p1p4/2pNpK2/p1P5/P2P3n/7P/8 w - - 0 52",
+    "beginnerSourceLevel": "B",
+    "reference": {
+      "id": "5af42eb599147c4d",
+      "kind": "game",
+      "branch": 0,
+      "ply": 102,
+      "collection": "fork"
+    },
+    "previousMove": {
+      "fen": "8/p2k4/1P1p4/2pNpK2/p1P5/P2P3n/7P/8 b - - 0 51",
+      "move": "axb6"
+    },
+    "id": "4f90a10c65684163c76e4863",
+    "createdAt": "2026-11-06T12:38:05.691Z",
+    "updatedAt": "2026-11-06T12:44:11.640Z"
+  },
+  {
+    "themeId": "fork",
+    "level": "Beginner",
+    "fen": "Q7/5ppk/8/5P1p/1P4n1/4P3/4K1P1/2qN4 b - - 1 35",
+    "goal": "material",
+    "moves": [
+      "Qc4+",
+      "Kd2",
+      "Qxb4+"
+    ],
+    "alternativeLines": [],
+    "solution": "",
+    "title": "Nhập môn · Larsen, Bent — Geller, Efim P",
+    "headers": {
+      "Event": "Linares",
+      "Site": "Linares",
+      "Date": "1983.??.??",
+      "Round": "?",
+      "White": "Larsen, Bent",
+      "Black": "Geller, Efim P",
+      "Result": "0-1",
+      "WhiteElo": "2555",
+      "BlackElo": "2575",
+      "ECO": "D35"
+    },
+    "beginnerOriginalFen": "Q7/5ppk/8/5P1p/1P4n1/4P3/4K1P1/2qN4 b - - 1 35",
+    "beginnerSourceLevel": "C*",
+    "reference": {
+      "id": "810012dd54c704f4",
+      "kind": "game",
+      "branch": 0,
+      "ply": 69,
+      "collection": "fork"
+    },
+    "previousMove": {
+      "fen": "Q7/5ppk/8/5P1p/1P4n1/4P3/1N2K1P1/2q5 w - - 0 35",
+      "move": "Nd1"
+    },
+    "id": "bdbcdce77168f8f7e848068d",
+    "createdAt": "2026-11-06T12:38:05.730Z",
+    "updatedAt": "2026-11-06T12:47:48.726Z"
+  },
+  {
+    "themeId": "fork",
+    "level": "Beginner",
+    "fen": "8/8/3n2K1/3k3P/P7/8/2p5/3N4 w - - 0 62",
+    "goal": "win",
+    "moves": [
+      "Ne3+",
+      "Ke6",
+      "Nxc2"
+    ],
+    "alternativeLines": [],
+    "solution": "",
+    "title": "Tấn công đôi · Thế cờ tự thêm",
+    "headers": {
+      "Event": "London",
+      "Site": "London",
+      "Date": "1883.??.??",
+      "Round": "12",
+      "White": "Bird, Henry Edward",
+      "Black": "Blackburne, Joseph Henry",
+      "Result": "1-0",
+      "WhiteElo": "",
+      "BlackElo": "",
+      "ECO": "A02"
+    },
+    "gameOpening": "Khai cuộc: Bird Opening · A02",
+    "beginnerOriginalFen": "8/8/3n2K1/3k3P/P7/8/2p5/3N4 w - - 0 62",
+    "reference": {
+      "id": "5af42eb599147c4d",
+      "kind": "game",
+      "branch": 0,
+      "ply": 122,
+      "collection": "fork"
+    },
+    "previousMove": {
+      "fen": "8/8/3n2K1/3k3P/P7/2p5/8/3N4 b - - 1 61",
+      "move": "c2"
+    },
+    "id": "a8dc0caf48978326292bcfe6",
+    "createdAt": "2026-11-06T12:45:47.982Z",
+    "updatedAt": "2026-11-06T12:45:47.982Z"
+  },
+  {
+    "themeId": "fork",
+    "level": "Beginner",
+    "fen": "6k1/8/R7/8/8/4q3/K7/8 b - - 0 42",
+    "goal": "material",
+    "moves": [
+      "Qe2+",
+      "Kb3",
+      "Qxa6"
+    ],
+    "alternativeLines": [],
+    "solution": "",
+    "title": "Tấn công đôi · Thế cờ tự thêm",
+    "beginnerOriginalFen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+    "beginnerInsertion": {
+      "scope": "/fork",
+      "before": "first"
+    },
+    "id": "688589253dd48928898e5234",
+    "createdAt": "2026-11-06T13:47:07.320Z",
+    "updatedAt": "2026-11-06T13:47:07.320Z"
+  },
+  {
+    "themeId": "fork",
+    "level": "Beginner",
+    "fen": "8/1r5k/8/8/8/8/K7/4Q3 w - - 0 42",
+    "goal": "material",
+    "moves": [
+      "Qe4+",
+      "Kh6",
+      "Qxb7"
+    ],
+    "alternativeLines": [
+      [
+        "Qh1+",
+        "Kg6",
+        "Qxb7"
+      ]
+    ],
+    "solution": "",
+    "title": "Tấn công đôi · Thế cờ tự thêm",
+    "beginnerOriginalFen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+    "beginnerInsertion": {
+      "scope": "/fork",
+      "before": "first"
+    },
+    "id": "2047a128945139f1f9e8f4ed",
+    "createdAt": "2026-11-06T13:53:17.439Z",
+    "updatedAt": "2026-11-06T13:53:17.439Z"
+  },
+  {
+    "themeId": "fork",
+    "level": "Beginner",
+    "fen": "3Q4/7K/8/8/8/8/1p3k2/8 w - - 0 1",
+    "goal": "material",
+    "moves": [
+      "Qd4+"
+    ],
+    "alternativeLines": [
+      [
+        "Qb6+"
+      ],
+      [
+        "Qf6+"
+      ],
+      [
+        "Qd2+"
+      ]
+    ],
+    "solution": "",
+    "title": "Tấn công đôi · Thế cờ tự thêm",
+    "beginnerOriginalFen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+    "beginnerInsertion": {
+      "scope": "/fork",
+      "before": "first"
+    },
+    "id": "3d2d65b9a62d429e90626bc7",
+    "createdAt": "2026-11-06T13:56:19.801Z",
+    "updatedAt": "2026-11-06T13:56:19.801Z"
+  },
+  {
+    "themeId": "fork",
+    "level": "Beginner",
+    "fen": "k7/8/8/8/3q4/6B1/8/2K5 b - - 0 1",
+    "goal": "material",
+    "moves": [
+      "Qc3+"
+    ],
+    "alternativeLines": [
+      [
+        "Qe3+"
+      ],
+      [
+        "Qg1+"
+      ]
+    ],
+    "solution": "",
+    "title": "Tấn công đôi · Thế cờ tự thêm",
+    "beginnerOriginalFen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+    "beginnerInsertion": {
+      "scope": "/fork",
+      "before": "first"
+    },
+    "id": "2c014987a0ddc712e00d6b8b",
+    "createdAt": "2026-11-06T13:58:55.205Z",
+    "updatedAt": "2026-11-06T13:58:55.205Z"
+  },
+  {
+    "themeId": "fork",
+    "level": "Beginner",
+    "fen": "8/8/8/4k1r1/8/6PP/5P1K/8 w - - 0 1",
+    "goal": "material",
+    "moves": [
+      "f4+"
+    ],
+    "alternativeLines": [],
+    "solution": "",
+    "title": "Tấn công đôi · Thế cờ tự thêm",
+    "beginnerOriginalFen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+    "beginnerInsertion": {
+      "scope": "/fork",
+      "before": [
+        "2047a128945139f1f9e8f4ed",
+        "9a731496647626d412b3fca2",
+        "9605501b257efd39c47fe4cf",
+        "7fb1df25c7f7737b3d13b548",
+        "d6af68184f3beebdf2dc14a8",
+        "a83c21c13cb2cc6ddf15adbf",
+        "cd22f267b3ede1c5a9970787",
+        "66aedfd24ec486e10fdcd177",
+        "c14adc9980b2faf77ee01db8",
+        "7f8a610498ae9da23848de2f",
+        "cbe5364d16c8ee2cfcf7796d",
+        "2b6280f05a360f1d69db927e",
+        "02cc1fa98831f2746f9015a1",
+        "3daed9109bfd0db73ecb21c2",
+        "826a384e9f6edfb174fbb0a9",
+        "ddb3c14f685184538fb6ac12",
+        "9bb9e34c2ee7358516e220c4",
+        "2051372bc34322c3ae9cebc6",
+        "e785065f52623e6920aa6efa",
+        "54f43ec606d0440895d7cce4",
+        "f4143197f04d874328935156",
+        "f4d34c063f2c5b7ee87b351a",
+        "44b311131130f690d39336c5",
+        "4f90a10c65684163c76e4863",
+        "bdbcdce77168f8f7e848068d",
+        "a8dc0caf48978326292bcfe6"
+      ]
+    },
+    "id": "d455d53fb1634fb9a132894d",
+    "createdAt": "2026-11-06T14:08:15.243Z",
+    "updatedAt": "2026-11-06T14:08:15.243Z"
+  },
+  {
+    "themeId": "fork",
+    "level": "Beginner",
+    "fen": "8/8/2n3k1/8/8/3R1K2/8/8 w - - 0 1",
+    "goal": "material",
+    "moves": [
+      "Rd6+"
+    ],
+    "alternativeLines": [],
+    "solution": "",
+    "title": "Tấn công đôi · Thế cờ tự thêm",
+    "beginnerOriginalFen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+    "beginnerInsertion": {
+      "scope": "/fork",
+      "before": "first"
+    },
+    "id": "846ae7e1a8a1daa9120289c8",
+    "createdAt": "2026-11-06T14:09:43.354Z",
+    "updatedAt": "2026-11-06T14:09:43.354Z"
+  },
+  {
+    "themeId": "fork",
+    "level": "Beginner",
+    "fen": "8/4k3/8/6P1/6K1/r3B3/8/8 w - - 0 1",
+    "goal": "material",
+    "moves": [
+      "Bc5+"
+    ],
+    "alternativeLines": [],
+    "solution": "",
+    "title": "Tấn công đôi · Thế cờ tự thêm",
+    "beginnerOriginalFen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+    "beginnerInsertion": {
+      "scope": "/fork",
+      "before": [
+        "2c014987a0ddc712e00d6b8b",
+        "3d2d65b9a62d429e90626bc7",
+        "d455d53fb1634fb9a132894d",
+        "2047a128945139f1f9e8f4ed",
+        "9a731496647626d412b3fca2",
+        "9605501b257efd39c47fe4cf",
+        "7fb1df25c7f7737b3d13b548",
+        "d6af68184f3beebdf2dc14a8",
+        "a83c21c13cb2cc6ddf15adbf",
+        "cd22f267b3ede1c5a9970787",
+        "66aedfd24ec486e10fdcd177",
+        "c14adc9980b2faf77ee01db8",
+        "7f8a610498ae9da23848de2f",
+        "cbe5364d16c8ee2cfcf7796d",
+        "2b6280f05a360f1d69db927e",
+        "02cc1fa98831f2746f9015a1",
+        "3daed9109bfd0db73ecb21c2",
+        "826a384e9f6edfb174fbb0a9",
+        "ddb3c14f685184538fb6ac12",
+        "9bb9e34c2ee7358516e220c4",
+        "2051372bc34322c3ae9cebc6",
+        "e785065f52623e6920aa6efa",
+        "54f43ec606d0440895d7cce4",
+        "f4143197f04d874328935156",
+        "f4d34c063f2c5b7ee87b351a",
+        "44b311131130f690d39336c5",
+        "4f90a10c65684163c76e4863",
+        "bdbcdce77168f8f7e848068d",
+        "a8dc0caf48978326292bcfe6"
+      ]
+    },
+    "id": "e9a623d4b77ddee6b4dd95c7",
+    "createdAt": "2026-11-06T14:11:47.018Z",
+    "updatedAt": "2026-11-06T14:11:47.018Z"
+  },
+  {
+    "themeId": "fork",
+    "level": "Beginner",
+    "fen": "4k3/8/r3N3/8/5P2/5K2/8/8 w - - 0 1",
+    "goal": "material",
+    "moves": [
+      "Nc7+"
+    ],
+    "alternativeLines": [],
+    "solution": "",
+    "title": "Tấn công đôi · Thế cờ tự thêm",
+    "beginnerOriginalFen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+    "beginnerInsertion": {
+      "scope": "/fork",
+      "before": "first"
+    },
+    "id": "297dfe3f8ee798857894ee81",
+    "createdAt": "2026-11-06T14:13:22.037Z",
+    "updatedAt": "2026-11-06T14:13:22.037Z"
   }
 ]

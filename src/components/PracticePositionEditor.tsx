@@ -27,6 +27,8 @@ type Props = {
   previousMove?: DrawExercise['previousMove'];
   editId?: string;
   defaults?: Pick<ManualTactic, 'themeId' | 'level' | 'solution'>;
+  hideDestinationFields?: boolean;
+  insertionTargets?: string[];
   initialLines?: string[][];
   initialGoal?: ManualTactic['goal'];
   beginnerBaseFen?: string;
@@ -41,6 +43,8 @@ export default function PracticePositionEditor({
   previousMove,
   editId,
   defaults,
+  hideDestinationFields = false,
+  insertionTargets,
   initialLines,
   initialGoal,
   beginnerBaseFen,
@@ -57,8 +61,8 @@ export default function PracticePositionEditor({
     Record<string, PracticeLevel>
   >({});
   const [writable, setWritable] = useState(false);
-  const [themeId, setThemeId] = useState('');
-  const [level, setLevel] = useState<PracticeLevel | ''>('');
+  const [themeId, setThemeId] = useState(defaults?.themeId ?? '');
+  const [level, setLevel] = useState<PracticeLevel | ''>(defaults?.level ?? '');
   const [goal, setGoal] = useState<ManualTactic['goal'] | ''>('');
   const [variations, setVariations] = useState<string[][]>([]);
   const [recording, setRecording] = useState(false);
@@ -69,6 +73,10 @@ export default function PracticePositionEditor({
   const [busy, setBusy] = useState(true);
   const [message, setMessage] = useState('');
   const [destination, setDestination] = useState('');
+  const [insertion, setInsertion] = useState<'first' | 'last' | 'before'>(
+    'first'
+  );
+  const [insertionNumber, setInsertionNumber] = useState('1');
   const defaultTheme = defaults?.themeId;
   const defaultLevel = defaults?.level;
   const defaultSolution = defaults?.solution;
@@ -88,6 +96,12 @@ export default function PracticePositionEditor({
     entries.find((e) => e.id === editId && e.themeId === themeId) ??
     matches.find((e) => e.themeId === themeId);
   const origin = existing ?? entries.find((e) => e.id === editId) ?? matches[0];
+  const chooseInsertion =
+    insertionTargets !== undefined &&
+    level === 'Beginner' &&
+    !existing &&
+    !editId &&
+    !beginnerBaseFen;
   const branch = reference?.branch;
   const ply = reference?.ply;
   const sourceContext = useMemo(
@@ -200,6 +214,14 @@ export default function PracticePositionEditor({
     setMessage('');
     setDestination('');
     try {
+      if (
+        chooseInsertion &&
+        insertion === 'before' &&
+        (!Number.isInteger(Number(insertionNumber)) ||
+          Number(insertionNumber) < 1 ||
+          Number(insertionNumber) > insertionTargets.length)
+      )
+        throw new Error(`Chọn số bài từ 1 đến ${insertionTargets.length}.`);
       const res = await fetch('/api/manual-tactics', {
         method: 'POST',
         headers: {
@@ -218,6 +240,14 @@ export default function PracticePositionEditor({
           alternativeLines: variations.slice(1),
           solution,
           title,
+          ...(chooseInsertion
+            ? {
+                insertion:
+                  insertion === 'before'
+                    ? insertionTargets.slice(Number(insertionNumber) - 1)
+                    : insertion,
+              }
+            : {}),
           ...(level === 'Beginner'
             ? {
                 beginnerOriginalFen:
@@ -290,7 +320,7 @@ export default function PracticePositionEditor({
             ?.label ?? 'chủ đề đã chọn'}{' '}
           · {level}. Đổi chủ đề hoặc cấp độ trong “Quản lý bài tập”.
         </p>
-      ) : (
+      ) : !hideDestinationFields ? (
         <div className={styles.positionFields}>
           <label>
             Chủ đề
@@ -335,12 +365,53 @@ export default function PracticePositionEditor({
             </select>
           </label>
         </div>
-      )}
+      ) : null}
       {existing &&
         levelOverrides[existing.id] &&
         !topicOverrides[existing.id] && (
           <p>Đổi cấp độ trong “Quản lý bài tập” trên trang luyện tập.</p>
         )}
+      {chooseInsertion && (
+        <div>
+          <div className={styles.insertionFields}>
+            <label>
+              Vị trí chèn
+              <select
+                value={insertion}
+                disabled={!writable || busy}
+                onChange={(event) =>
+                  setInsertion(event.target.value as typeof insertion)
+                }
+              >
+                <option value="first">Đầu danh sách</option>
+                <option value="last">Cuối danh sách</option>
+                <option value="before" disabled={!insertionTargets.length}>
+                  Trước bài số…
+                </option>
+              </select>
+            </label>
+            {insertion === 'before' && (
+              <label>
+                Số bài
+                <input
+                  type="number"
+                  min={1}
+                  max={insertionTargets.length}
+                  step={1}
+                  required
+                  value={insertionNumber}
+                  disabled={!writable || busy}
+                  onChange={(event) => setInsertionNumber(event.target.value)}
+                />
+              </label>
+            )}
+          </div>
+          <p className={styles.insertionHint}>
+            Hiện có {insertionTargets.length} bài Nhập môn.
+            {insertion === 'before' && ' Bài mới sẽ mang số bài đã chọn.'}
+          </p>
+        </div>
+      )}
       <label>
         Mục tiêu
         <select

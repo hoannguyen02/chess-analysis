@@ -21,12 +21,21 @@ export type ManualTactic = {
   // A manual overlay may replace only a curated Beginner position.
   beginnerBaseFen?: string;
   beginnerSourceLevel?: PracticeLevel;
+  /** Saved placement in the current Beginner collection; content edits retain it. */
+  beginnerInsertion?: {
+    scope: string;
+    before: 'first' | 'last' | string[];
+  };
   createdAt: string;
   updatedAt: string;
 };
 
 export const manualPositionKey = (fen: string) =>
   fen.split(' ').slice(0, 4).join(' ');
+export const manualInsertionKey = (exercise: DrawExercise) =>
+  exercise.beginnerBaseFen
+    ? manualPositionKey(exercise.beginnerBaseFen)
+    : (exercise.manualId ?? manualPositionKey(exercise.fen));
 export const manualLevelPositionKey = (fen: string, beginner: boolean) =>
   `${beginner ? 'Beginner' : 'standard'}|${manualPositionKey(fen)}`;
 export const manualTopicPath = (theme: {

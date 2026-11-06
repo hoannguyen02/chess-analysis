@@ -692,8 +692,20 @@ tactics topic, including forks, skewers, pins, and discovered checks/attacks.
   visible radio buttons for two distinct modes that do not fit an on/off label.
   Preserve the intended default: new-position review and final review are
   checked by default; cumulative review is unchecked. Periodic reviews cover
-  only the latest group (default 3 topics, 6 positions per topic), while the
-  final review covers all topics. Apply this preference to future controls.
+  only the latest group (default 2 topics and 1 review page), while the final
+  review covers all topics with its own page count (default 1). Review quantity
+  comes from pages × `POSITIONS_PER_PAGE` (6), shared fairly across topics and
+  then their levels; selected levels must not multiply the requested pages.
+  Recalculate allocations when the interval or page count changes. Show a
+  non-blocking warning and the actual distribution when the total does not
+  divide evenly among topics, with a suggested page count for equal shares.
+  Report insufficient coverage or source exercises; never silently repeat,
+  drop levels, underfill pages, or change the requested quantity. Keep group
+  and final review page budgets independent, including at the same endpoint.
+  Distinguish group reviews from the final whole-book review with explicit
+  headings and short scope descriptions. Label source/shuffle options as shared;
+  keep page quantities in their respective panels and use the same distinction
+  in dialogs. Custom allocations must fill the selected number of pages.
 
 - Keep related actions on one row where practical, particularly on cards and
   teaching screens. Shorten labels and use familiar icons instead of stacking

@@ -325,16 +325,15 @@ export default function PracticeExploration({
           >
             Lật bàn
           </button>
-          {!recording && (
-            <Link
-              href={{ pathname: '/analysis', query: { fen: displayedFen } }}
-              target="_blank"
-              rel="noopener noreferrer"
-              prefetch={false}
-            >
-              Phân tích ↗
-            </Link>
-          )}
+          <Link
+            href={{ pathname: '/analysis', query: { fen: displayedFen } }}
+            target="_blank"
+            rel="noopener noreferrer"
+            prefetch={false}
+            title="Phân tích thế hiện tại trong tab mới"
+          >
+            Phân tích ↗
+          </Link>
         </div>
       </div>
       <div className={styles.trainerInfo}>

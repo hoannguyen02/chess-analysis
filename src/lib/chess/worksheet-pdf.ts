@@ -222,6 +222,163 @@ export async function createWorksheetPdfs(
     pages.flatMap((p) => p.exercises.map((e) => e.level ?? p.level))
   );
   const includedLevels = worksheetLevels.filter((level) => included.has(level));
+  type ContentsEntry = {
+    title: string;
+    detail?: string;
+    firstNumber?: number;
+    target?: PDFPage;
+  };
+  // Build chapter runs before pagination, then bind them to the actual pages.
+  // Solutions can span pages independently of the exercise book.
+  const chapterEntries: ContentsEntry[] = [];
+  const entryByGroup: number[] = [];
+  let previousChapter = '';
+  pages.forEach((group) => {
+    const key = JSON.stringify([
+      !!group.review,
+      group.sectionId,
+      group.title,
+      group.review ? undefined : group.level,
+    ]);
+    if (key !== previousChapter) chapterEntries.push({ title: group.title });
+    previousChapter = key;
+    const index = chapterEntries.length - 1;
+    entryByGroup.push(index);
+    const first = group.exercises[0]?.number;
+    const last = group.exercises.at(-1)?.number;
+    const entry = chapterEntries[index];
+    // Keep the range on continuation pages, rather than listing every page.
+    entry.firstNumber ??= first;
+    const start = entry.firstNumber;
+    entry.detail = [
+      group.review ? '' : levelLabel(group.level),
+      first === undefined
+        ? ''
+        : `Bài ${start}${String(start) === String(last) ? '' : `-${last}`}`,
+    ]
+      .filter(Boolean)
+      .join(' · ');
+  });
+  const answerEntries: ContentsEntry[] = chapterEntries.map(
+    ({ title, detail }) => ({ title, detail })
+  );
+  const introductionEntry: ContentsEntry = {
+    title: book?.introduction.title.trim() || 'Mở đầu',
+    detail: book?.showLevelGuide
+      ? 'Hệ thống cấp độ và cách luyện tập'
+      : undefined,
+  };
+  const notationEntry: ContentsEntry = { title: 'Hướng dẫn ký hiệu cờ vua' };
+  const closingEntry: ContentsEntry = {
+    title: book?.closing.title.trim() || 'Tổng kết',
+  };
+  const reserveContents = (
+    doc: PDFDocument,
+    pageFont: PDFFont,
+    entries: ContentsEntry[],
+    isAnswer = false
+  ) => {
+    if (!book || book.showContents === false) return () => {};
+    const rows: {
+      page: PDFPage;
+      entry: ContentsEntry;
+      y: number;
+      height: number;
+      titleLines: string[];
+      detailLines: string[];
+    }[] = [];
+    let page: PDFPage;
+    let cursor = 0;
+    const start = () => {
+      page = doc.addPage([W, H]);
+      drawWatermark(page, pageFont);
+      draw(
+        page,
+        isAnswer ? 'MỤC LỤC LỜI GIẢI' : 'MỤC LỤC',
+        30,
+        H - 48,
+        20,
+        pageFont,
+        coverGreen
+      );
+      draw(
+        page,
+        heading,
+        30,
+        H - 70,
+        Math.min(9, (W - 90) / pageFont.widthOfTextAtSize(heading, 1)),
+        pageFont
+      );
+      draw(page, 'NỘI DUNG', 30, H - 99, 8, pageFont);
+      draw(page, 'TRANG', W - 73, H - 99, 8, pageFont);
+      cursor = H - 126;
+    };
+    start();
+    for (const entry of entries) {
+      const titleLines = lines(entry.title, pageFont, 10, W - 125);
+      const detailLines = entry.detail
+        ? lines(entry.detail, pageFont, 8.5, W - 125)
+        : [];
+      const height = titleLines.length * 14 + detailLines.length * 12 + 20;
+      if (cursor - height < 48) start();
+      rows.push({
+        page: page!,
+        entry,
+        y: cursor,
+        height,
+        titleLines,
+        detailLines,
+      });
+      cursor -= height;
+    }
+    return () => {
+      const allPages = doc.getPages();
+      for (const row of rows) {
+        if (!row.entry.target)
+          throw new Error('Không xác định được trang trong mục lục.');
+        let y = row.y;
+        for (const line of row.titleLines) {
+          draw(row.page, line, 30, y, 10, pageFont);
+          y -= 14;
+        }
+        for (const line of row.detailLines) {
+          draw(row.page, line, 30, y, 8.5, pageFont);
+          y -= 12;
+        }
+        const target = String(allPages.indexOf(row.entry.target) + 1);
+        draw(
+          row.page,
+          target,
+          W - 45 - pageFont.widthOfTextAtSize(target, 10),
+          row.y,
+          10,
+          pageFont
+        );
+        const bottom = row.y - row.height + 18;
+        row.page.drawLine({
+          start: { x: 30, y: bottom },
+          end: { x: W - 45, y: bottom },
+          thickness: 0.4,
+          color: rgb(0.8, 0.8, 0.8),
+        });
+        // translateContent does not move annotations. Match the final binding offset.
+        const offset = allPages.indexOf(row.page) % 2 === 0 ? 10 : -10;
+        row.page.node.addAnnot(
+          doc.context.register(
+            doc.context.obj({
+              Type: 'Annot',
+              Subtype: 'Link',
+              Rect: [30 + offset, bottom, W - 45 + offset, row.y + 13],
+              Border: [0, 0, 0],
+              Dest: [row.entry.target.ref, 'Fit'],
+            })
+          )
+        );
+      }
+    };
+  };
+  let finishWorksheetContents = () => {};
+  let finishAnswerContents = () => {};
   const notationReferences: { page: PDFPage; top: number }[] = [];
   const textSection = (
     doc: PDFDocument,
@@ -742,7 +899,17 @@ export async function createWorksheetPdfs(
   };
   if (book) {
     await cover(sheet, font);
+    finishWorksheetContents = reserveContents(sheet, font, [
+      ...(book.introduction.body.trim() ? [introductionEntry] : []),
+      ...(book.introduction.body.trim() && (book.showNotationGuide ?? true)
+        ? [notationEntry]
+        : []),
+      ...chapterEntries,
+      ...(book.closing.body.trim() ? [closingEntry] : []),
+    ]);
+    const introductionStart = sheet.getPageCount();
     textSection(sheet, font, book.introduction, true, 'introduction');
+    introductionEntry.target = sheet.getPages()[introductionStart];
     if (book.introduction.body.trim() && (book.showNotationGuide ?? true)) {
       const targetPage = sheet.getPageCount() + 1;
       for (const reference of notationReferences)
@@ -755,21 +922,35 @@ export async function createWorksheetPdfs(
           font
         );
       notationGuide(sheet, font);
+      notationEntry.target = sheet.getPages()[targetPage - 1];
     }
     await cover(answers, answerFont, true);
+    finishAnswerContents = reserveContents(
+      answers,
+      answerFont,
+      answerEntries,
+      true
+    );
   }
-  for (const group of pages) {
+  for (const [groupIndex, group] of pages.entries()) {
     const page = sheet.addPage([W, H]);
+    chapterEntries[entryByGroup[groupIndex]].target ??= page;
     drawWatermark(page, font);
     const titleSize = Math.min(15, 535 / font.widthOfTextAtSize(heading, 1));
     draw(page, heading, 30, H - 24, titleSize);
-    draw(
-      page,
-      group.review
-        ? group.title
-        : `${group.title} · ${levelLabel(group.level)}`,
-      30,
-      H - 39
+    const caption = group.review
+      ? group.title
+      : `${group.title} · ${levelLabel(group.level)}`;
+    // Keep long topic names inside the header, above the first row of boards.
+    const captionLineLimit = book ? 2 : 1;
+    let captionSize = 9;
+    let captionLines = lines(caption, font, captionSize, W - 60);
+    while (captionLines.length > captionLineLimit && captionSize > 0.5) {
+      captionSize -= 0.25;
+      captionLines = lines(caption, font, captionSize, W - 60);
+    }
+    captionLines.forEach((line, i) =>
+      draw(page, line, 30, H - 39 - i * 11, captionSize)
     );
     if (!book && sheet.getPageCount() === 1) {
       draw(
@@ -892,7 +1073,11 @@ export async function createWorksheetPdfs(
       });
     }
   }
-  if (book) textSection(sheet, font, book.closing, false, 'closing');
+  if (book) {
+    const closingStart = sheet.getPageCount();
+    textSection(sheet, font, book.closing, false, 'closing');
+    closingEntry.target = sheet.getPages()[closingStart];
+  }
   let ap: PDFPage;
   let y = 0;
   let currentExercise = '';
@@ -902,8 +1087,16 @@ export async function createWorksheetPdfs(
     draw(ap, 'LỜI GIẢI VÀ PHÂN TÍCH', 30, H - 30, 16, answerFont);
     y = H - 52;
     if (currentExercise) {
-      draw(ap, `${currentExercise} (tiếp theo)`, 30, y, 9, answerFont);
-      y -= 18;
+      for (const line of lines(
+        `${currentExercise} (tiếp theo)`,
+        answerFont,
+        9,
+        W - 60
+      )) {
+        draw(ap, line, 30, y, 9, answerFont);
+        y -= 14;
+      }
+      y -= 4;
     }
   };
   newPage();
@@ -935,10 +1128,13 @@ export async function createWorksheetPdfs(
     8
   );
   y -= 8;
-  for (const group of pages)
+  for (const [groupIndex, group] of pages.entries())
     for (const { number, exercise: e, topicTitle, level } of group.exercises) {
       currentExercise = '';
       if (y < 150) newPage();
+      answerEntries[entryByGroup[groupIndex]].target ??= answers.getPage(
+        answers.getPageCount() - 1
+      );
       currentExercise = `${number}. ${topicTitle ?? group.title} · ${levelLabel(level ?? group.level)}${group.review ? ' · Ôn tập' : ''}`;
       write(currentExercise, 11);
       explainLine(e.fen, e.moves, true).forEach((s) => write(s));
@@ -953,6 +1149,8 @@ export async function createWorksheetPdfs(
       worksheetSourceLines(e).forEach((source) => write(source, 8));
       y -= 12;
     }
+  finishWorksheetContents();
+  finishAnswerContents();
   for (const doc of [sheet, answers]) {
     await doc.attach(artworkNotice, 'Chess-piece-artwork-license.txt', {
       mimeType: 'text/plain',

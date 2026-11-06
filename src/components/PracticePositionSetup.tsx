@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import type { Square } from 'chess.js';
-import { ChessboardDnDProvider, SparePiece } from 'react-chessboard';
+import { SparePiece } from 'react-chessboard';
+import { FiCheck, FiCopy, FiDownload, FiX } from 'react-icons/fi';
 import { usePracticeBoardTools } from '@/hooks/usePracticeBoardTools';
 import {
   setupFromFen,
@@ -11,6 +12,8 @@ import {
   type SetupPosition,
 } from '@/lib/chess/position-setup';
 import PracticeBoard from './PracticeBoard';
+import { SetupBoardDnDProvider } from './SetupBoardDnDProvider';
+import { SetupBoardPaintLayer } from './SetupBoardPaintLayer';
 import styles from '@/styles/SavedGames.module.css';
 
 const pieces: SetupPiece[] = [
@@ -43,6 +46,9 @@ export default function PracticePositionSetup({
   const dialog = useRef<HTMLDialogElement>(null);
   const boardBox = useRef<HTMLDivElement>(null);
   const [draft, setDraft] = useState(() => setupFromFen(fen));
+  const draftRef = useRef(draft);
+  const painting = useRef(false);
+  const strokeRecorded = useRef(false);
   const [history, setHistory] = useState<SetupPosition[]>([]);
   const [tool, setTool] = useState<SetupPiece | 'remove' | null>(null);
   const [flipped, setFlipped] = useState(false);
@@ -68,20 +74,45 @@ export default function PracticePositionSetup({
     };
   }, []);
   function change(next: SetupPosition) {
-    setHistory((items) => [...items.slice(-49), draft]);
+    const previous = draftRef.current;
+    if (setupToFen(next) === setupToFen(previous)) {
+      setInput(setupToFen(next));
+      setError('');
+      return;
+    }
+    if (!painting.current || !strokeRecorded.current)
+      setHistory((items) => [...items.slice(-49), previous]);
+    if (painting.current) strokeRecorded.current = true;
+    draftRef.current = next;
     setDraft(next);
     setInput(setupToFen(next));
     setError('');
   }
   function place(square: Square, piece?: SetupPiece, from?: Square) {
-    change(changeSetupPiece(draft, square, piece, from));
+    change(changeSetupPiece(draftRef.current, square, piece, from));
   }
   return (
     <dialog
       ref={dialog}
       className={styles.variationDialog}
       aria-labelledby="position-setup-title"
-      onKeyDown={(e) => e.stopPropagation()}
+      onKeyDown={(e) => {
+        e.stopPropagation();
+        if (
+          !e.ctrlKey &&
+          !e.metaKey &&
+          !e.altKey &&
+          !e.shiftKey &&
+          e.key.toLowerCase() === 'd' &&
+          !(
+            e.target instanceof HTMLElement &&
+            e.target.closest('input, textarea, select, [contenteditable]')
+          )
+        ) {
+          e.preventDefault();
+          setTool(null);
+        }
+      }}
       onCancel={(e) => {
         e.preventDefault();
         e.stopPropagation();
@@ -98,33 +129,62 @@ export default function PracticePositionSetup({
           ✕
         </button>
       </header>
-      {/* Share the same window manager as the practice and preview boards. */}
-      <ChessboardDnDProvider context={window}>
+      <SetupBoardDnDProvider
+        context={typeof window === 'undefined' ? undefined : window}
+      >
         <div className={styles.setupGrid}>
           <div ref={boardBox} className={styles.setupBoard}>
-            <PracticeBoard
-              id="beginner-position-setup"
-              fen={setupToFen(draft)}
-              position={draft.pieces}
-              width={width}
-              orientation={flipped ? 'black' : 'white'}
-              tools={tools}
-              canMove={tool === null}
-              pendingPromotion={null}
-              onSquareClick={(square) => {
-                if (tool) place(square, tool === 'remove' ? undefined : tool);
-              }}
-              onPieceDrop={(from, to, piece) => {
-                place(to, piece, from);
-                return true;
-              }}
-              onPieceDropOffBoard={(square) => place(square)}
-              onSparePieceDrop={(piece, square) => {
-                place(square, piece);
-                return true;
-              }}
-              onPromotionPieceSelect={() => false}
-            />
+            <div className={styles.setupPaintBoard}>
+              <PracticeBoard
+                id="beginner-position-setup"
+                fen={setupToFen(draft)}
+                position={draft.pieces}
+                width={width}
+                orientation={flipped ? 'black' : 'white'}
+                tools={tools}
+                canMove={tool !== 'remove'}
+                pendingPromotion={null}
+                onSquareClick={(square) => {
+                  if (tool === 'remove') place(square);
+                  else if (tool && !draftRef.current.pieces[square])
+                    place(square, tool);
+                }}
+                onPieceDrop={(from, to, piece) => {
+                  if (from === to) return false;
+                  place(to, piece, from);
+                  return true;
+                }}
+                onPieceDropOffBoard={(square) => place(square)}
+                onSparePieceDrop={(piece, square) => {
+                  place(square, piece);
+                  setTool(piece);
+                  return true;
+                }}
+                onPromotionPieceSelect={() => false}
+              />
+              <SetupBoardPaintLayer
+                orientation={flipped ? 'black' : 'white'}
+                occupiedSquares={new Set(Object.keys(draft.pieces) as Square[])}
+                enabled={tool !== null && tool !== 'remove'}
+                onPaint={(square) => {
+                  if (
+                    tool &&
+                    tool !== 'remove' &&
+                    !draftRef.current.pieces[square]
+                  )
+                    place(square, tool);
+                }}
+                onStrokeStart={() => {
+                  painting.current = true;
+                  strokeRecorded.current = false;
+                }}
+                onStrokeEnd={() => {
+                  painting.current = false;
+                  strokeRecorded.current = false;
+                }}
+                label={(square) => `Đặt quân vào ô ${square}`}
+              />
+            </div>
             <div className={styles.setupActions}>
               <button
                 type="button"
@@ -132,6 +192,7 @@ export default function PracticePositionSetup({
                 onClick={() => {
                   const previous = history[history.length - 1];
                   setHistory(history.slice(0, -1));
+                  draftRef.current = previous;
                   setDraft(previous);
                   setInput(setupToFen(previous));
                   setError('');
@@ -146,8 +207,9 @@ export default function PracticePositionSetup({
           </div>
           <div className={styles.setupControls}>
             <p>
-              Chọn quân rồi chạm ô để đặt, hoặc kéo quân vào bàn. Kéo quân ra
-              ngoài để xóa.
+              Chọn quân rồi chạm ô để đặt, hoặc giữ chuột và rê qua nhiều ô
+              trống để đặt liên tiếp. Kéo quân để di chuyển; kéo ra ngoài bàn để
+              xóa.
             </p>
             <div className={styles.piecePalette} aria-label="Chọn quân để đặt">
               {pieces.map((piece) => (
@@ -170,6 +232,8 @@ export default function PracticePositionSetup({
               <button
                 type="button"
                 aria-pressed={tool === null}
+                aria-keyshortcuts="d"
+                title="Di chuyển quân (D)"
                 onClick={() => setTool(null)}
               >
                 Di chuyển quân
@@ -265,9 +329,12 @@ export default function PracticePositionSetup({
                 spellCheck={false}
               />
             </label>
-            <div className={styles.setupActions}>
+            <div className={`${styles.setupActions} ${styles.setupFenActions}`}>
               <button
                 type="button"
+                className={styles.setupFenLoadButton}
+                aria-label="Đặt theo FEN"
+                title="Đặt theo FEN"
                 onClick={() => {
                   try {
                     change(setupFromFen(input));
@@ -276,10 +343,14 @@ export default function PracticePositionSetup({
                   }
                 }}
               >
-                Đặt theo FEN
+                <FiDownload size={20} aria-hidden="true" />
+                FEN
               </button>
               <button
                 type="button"
+                className={styles.setupIconButton}
+                aria-label="Sao chép FEN"
+                title="Sao chép FEN"
                 onClick={async () => {
                   try {
                     await navigator.clipboard.writeText(setupToFen(draft));
@@ -289,8 +360,34 @@ export default function PracticePositionSetup({
                   }
                 }}
               >
-                Sao chép FEN
+                <FiCopy size={20} aria-hidden="true" />
               </button>
+              <div className={styles.setupConfirmActions}>
+                <button
+                  type="button"
+                  className={`${styles.setupIconButton} ${styles.setupConfirmButton}`}
+                  aria-label="Áp dụng thế cờ"
+                  title="Áp dụng thế cờ"
+                  onClick={() => {
+                    try {
+                      onConfirm(validateSetupFen(setupToFen(draft)));
+                    } catch (e) {
+                      setError((e as Error).message);
+                    }
+                  }}
+                >
+                  <FiCheck size={22} aria-hidden="true" />
+                </button>
+                <button
+                  type="button"
+                  className={styles.setupIconButton}
+                  aria-label="Hủy"
+                  title="Hủy chỉnh sửa thế cờ"
+                  onClick={onClose}
+                >
+                  <FiX size={22} aria-hidden="true" />
+                </button>
+              </div>
             </div>
             {hasLines && setupToFen(draft) !== fen && (
               <p>
@@ -299,26 +396,9 @@ export default function PracticePositionSetup({
               </p>
             )}
             <p role="status">{error}</p>
-            <div className={styles.setupActions}>
-              <button
-                type="button"
-                onClick={() => {
-                  try {
-                    onConfirm(validateSetupFen(setupToFen(draft)));
-                  } catch (e) {
-                    setError((e as Error).message);
-                  }
-                }}
-              >
-                Áp dụng thế cờ
-              </button>
-              <button type="button" onClick={onClose}>
-                Hủy
-              </button>
-            </div>
           </div>
         </div>
-      </ChessboardDnDProvider>
+      </SetupBoardDnDProvider>
     </dialog>
   );
 }

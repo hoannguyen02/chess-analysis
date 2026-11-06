@@ -868,3 +868,265 @@ test('a transferred Beginner queen skewer remains visible outside the skewer-onl
   assert.equal(view.beginnerPracticeExercises(target, 'king').length, 0);
   assert.equal(target.exercises[0].management.baseLevel, 'Beginner');
 });
+
+test('owner solution edits preserve source context, classification and signed identity across transfers and resets', async () => {
+  const raw = {
+    ...sample,
+    previousMove: undefined,
+    gameReference: {
+      collection: 'test',
+      id: 'source',
+      kind: 'game',
+      ply: 0,
+      branch: 0,
+    },
+    hints: ['Keep the teaching hint'],
+  };
+  const original = structuredClone(raw);
+  const source = annotated('/fork', raw);
+  const solution = {
+    moves: ['e4', 'e5', 'Nf3'],
+    alternativeLines: [
+      ['e4', 'c5', 'Nf3'],
+      ['e4', 'e6', 'd4'],
+    ],
+    solution: 'Owner teaching explanation',
+  };
+  const saved = await call(action(source, 'solution', { solution }));
+  assert.equal(saved.statusCode, 200);
+  let entries = await store.readPracticeAdjustments();
+  const read = () =>
+    store.applyPracticeAdjustments(
+      '/fork',
+      [{ id: 'fork', exercises: [raw] }],
+      entries
+    )[0].exercises[0];
+  let edited = read();
+  assert.deepEqual(edited.moves, solution.moves);
+  assert.deepEqual(edited.alternativeLines, solution.alternativeLines);
+  assert.equal(edited.solution, solution.solution);
+  for (const field of ['fen', 'goal', 'gameReference', 'hints', 'difficulty'])
+    assert.deepEqual(edited[field], original[field]);
+  assert.deepEqual(raw, original);
+  assert.equal(edited.management.id, source.management.id);
+  assert.equal(edited.management.solutionEdited, true);
+  assert.ok(
+    store.validPracticeReference(
+      shared.practiceReviewReference('/fork', edited),
+      edited.management.signature
+    )
+  );
+  assert.deepEqual(entries[0].reference.moves, sample.moves);
+  assert.deepEqual(entries[0].history[0].solution, solution);
+  const stale = await call(action(source, 'solution', { solution }));
+  assert.equal(stale.statusCode, 409);
+  assert.deepEqual(await store.readPracticeAdjustments(), entries);
+  const moved = await call(
+    action(edited, 'move', { destinationScope: '/pin', level: 'D' })
+  );
+  assert.equal(moved.statusCode, 200);
+  let target = (await catalog('pin-exercises'))[0].exercises.find(
+    (e) => e.management?.id === source.management.id
+  );
+  assert.deepEqual(target.alternativeLines, solution.alternativeLines);
+  const updatedSolution = { ...solution, solution: 'Edited after transfer' };
+  assert.equal(
+    (await call(action(target, 'solution', { solution: updatedSolution })))
+      .statusCode,
+    200
+  );
+  target = (await catalog('pin-exercises'))[0].exercises.find(
+    (e) => e.management?.id === source.management.id
+  );
+  assert.equal(target.solution, updatedSolution.solution);
+  assert.equal(target.difficulty.level, 'D');
+  assert.equal((await call(action(target, 'reset'))).statusCode, 200);
+  entries = await store.readPracticeAdjustments();
+  edited = read();
+  assert.equal(edited.solution, updatedSolution.solution);
+  assert.deepEqual(edited.difficulty, original.difficulty);
+  assert.equal((await call(action(edited, 'reset-solution'))).statusCode, 200);
+  entries = await store.readPracticeAdjustments();
+  edited = read();
+  assert.deepEqual(edited.moves, original.moves);
+  assert.deepEqual(edited.alternativeLines, original.alternativeLines);
+  assert.equal(edited.solution, original.solution);
+  assert.equal(edited.management.solutionEdited, undefined);
+  assert.equal(
+    entries[0].history.filter((item) => item.action === 'solution').length,
+    2
+  );
+});
+
+test('solution updates validate every branch, bounds, access and the signed source before any write', async () => {
+  const source = annotated();
+  const valid = {
+    moves: ['e4', 'e5'],
+    alternativeLines: [['d4', 'd5']],
+    solution: '',
+  };
+  for (const solution of [
+    { ...valid, moves: [] },
+    { ...valid, alternativeLines: [['e4', 'e5', 'e4']] },
+    { ...valid, alternativeLines: Array(12).fill(['e4']) },
+    { ...valid, solution: 'x'.repeat(4001) },
+  ]) {
+    assert.equal(
+      (await call(action(source, 'solution', { solution }))).statusCode,
+      400
+    );
+    assert.deepEqual(await store.readPracticeAdjustments(), []);
+  }
+  const tampered = action(source, 'solution', { solution: valid });
+  tampered.reference = {
+    ...tampered.reference,
+    fen: '8/8/8/8/8/4k3/8/4K3 w - - 0 1',
+  };
+  assert.equal((await call(tampered)).statusCode, 400);
+  access = false;
+  assert.equal(
+    (await call(action(source, 'solution', { solution: valid }))).statusCode,
+    401
+  );
+  access = true;
+  env.NODE_ENV = 'production';
+  assert.equal(
+    (await call(action(source, 'solution', { solution: valid }))).statusCode,
+    403
+  );
+  env.NODE_ENV = 'development';
+  assert.deepEqual(await store.readPracticeAdjustments(), []);
+  // Keep the existing manual/Beginner authoring store as the only editor.
+  for (const raw of [
+    { ...sample, manualId: 'owner-entry' },
+    { ...sample, beginner: true },
+  ]) {
+    assert.equal(
+      (
+        await call(
+          action(annotated('/fork', raw), 'solution', { solution: valid })
+        )
+      ).statusCode,
+      400
+    );
+  }
+});
+
+test('mate solution updates require mate by the solver; all stored branches remain usable by the trainer', async () => {
+  const raw = {
+    ...sample,
+    fen: '7k/8/5KQ1/8/8/8/8/8 w - - 0 1',
+    moves: ['Qg7#'],
+    alternativeLines: [],
+    outcome: 'checkmate',
+    goal: 'checkmate',
+  };
+  const source = annotated('/fork', raw);
+  const bad = await call(
+    action(source, 'solution', {
+      solution: { moves: ['Qg7#'], alternativeLines: [['Qg4']], solution: '' },
+    })
+  );
+  assert.equal(bad.statusCode, 400);
+  assert.deepEqual(await store.readPracticeAdjustments(), []);
+  const saved = await call(
+    action(source, 'solution', {
+      solution: {
+        moves: ['Qg7#'],
+        alternativeLines: [['Qg3', 'Kh7', 'Qg7#']],
+        solution: '',
+      },
+    })
+  );
+  assert.equal(saved.statusCode, 200);
+  const edited = store.applyPracticeAdjustments(
+    '/fork',
+    [{ id: 'fork', exercises: [raw] }],
+    await store.readPracticeAdjustments()
+  )[0].exercises[0];
+  const trainer = load('src/lib/chess/draw-trainer.ts');
+  assert.equal(trainer.tryDrawMove(edited, [], 'Qg3').status, 'accepted');
+  assert.equal(
+    trainer.tryDrawMove(edited, ['Qg3', 'Kh7'], 'Qg7#').complete,
+    true
+  );
+});
+
+test('real fork solution edits reach practice and worksheet catalogs without adding a position', async () => {
+  const before = (await catalog('fork-exercises'))[0];
+  const source = before.exercises.find(
+    (e) => !e.beginner && e.moves.length && !e.manualId
+  );
+  const snapshot = structuredClone(source);
+  const solution = {
+    moves: source.moves,
+    alternativeLines: source.alternativeLines ?? [],
+    solution: 'Owner explanation for worksheet and practice',
+  };
+  assert.equal(
+    (await call(action(source, 'solution', { solution }))).statusCode,
+    200
+  );
+  const after = (await catalog('fork-exercises'))[0];
+  assert.equal(after.exercises.length, before.exercises.length);
+  const edited = after.exercises.find(
+    (e) => e.management?.id === source.management.id
+  );
+  assert.equal(edited.solution, solution.solution);
+  assert.deepEqual(edited.previousMove, snapshot.previousMove);
+  const worksheet = load('src/lib/chess/worksheet.ts');
+  const selection = worksheet.levelExercises(
+    after.exercises,
+    source.difficulty.level
+  );
+  assert.ok(selection.some((e) => e.solution === solution.solution));
+});
+
+test('editing a transferred solution keeps its number among other incoming positions', async () => {
+  const sources = ['e4', 'd4', 'c4'].map((san) => {
+    const board = new chess.Chess(fen);
+    board.move(san);
+    return annotated('/fork', {
+      ...sample,
+      fen: board.fen(),
+      moves: ['e5'],
+      alternativeLines: [],
+      title: san,
+    });
+  });
+  const destinationScope = '/tactic-positions?theme=exposedKing';
+  for (const source of sources) {
+    assert.equal(
+      (await call(action(source, 'move', { destinationScope, level: 'B' })))
+        .statusCode,
+      200
+    );
+  }
+  const before = (
+    await catalog('manual-tactic-exercises', { theme: 'exposedKing' })
+  )[0].exercises;
+  const ids = before.map((e) => e.management.id);
+  const middle = before[1];
+  const saved = await call(
+    action(middle, 'solution', {
+      solution: {
+        moves: ['e5', 'Nf3'],
+        alternativeLines: [],
+        solution: 'Updated in place',
+      },
+    })
+  );
+  assert.equal(saved.statusCode, 200);
+  const after = (
+    await catalog('manual-tactic-exercises', { theme: 'exposedKing' })
+  )[0].exercises;
+  assert.deepEqual(
+    after.map((e) => e.management.id),
+    ids
+  );
+  assert.equal(after[1].solution, 'Updated in place');
+  assert.deepEqual(
+    (await store.readPracticeAdjustments()).map((e) => e.id),
+    ids
+  );
+});

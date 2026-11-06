@@ -41,7 +41,10 @@ const text = (node) =>
         ? text(node.props.children)
         : '';
 
-function harness(overrides = {}) {
+function harness(
+  overrides = {},
+  { removalReturnHref, asPath = '/discovered-attack?level=B' } = {}
+) {
   const exercise = {
     title: 'Review example',
     fen: '8/8/8/8/8/4k3/8/4K3 w - - 0 1',
@@ -64,7 +67,8 @@ function harness(overrides = {}) {
     effects = [],
     prompts = [],
     writes = [],
-    routes = [];
+    routes = [],
+    navigationOptions = [];
   let cursor = 0,
     accept = false;
   const mod = { exports: {} };
@@ -110,8 +114,11 @@ function harness(overrides = {}) {
       if (name === 'next/router')
         return {
           useRouter: () => ({
-            asPath: '/discovered-attack?level=B',
-            replace: async (href) => routes.push(href),
+            asPath,
+            replace: async (href, _as, options) => {
+              routes.push(href);
+              navigationOptions.push(options);
+            },
             reload: () => routes.push('reload'),
           }),
         };
@@ -149,7 +156,10 @@ function harness(overrides = {}) {
   );
   function render() {
     cursor = 0;
-    const result = mod.exports.ExerciseManagementControl({ exercise });
+    const result = mod.exports.ExerciseManagementControl({
+      exercise,
+      removalReturnHref,
+    });
     while (effects.length) effects.shift()();
     return result;
   }
@@ -167,6 +177,7 @@ function harness(overrides = {}) {
     prompts,
     writes,
     routes,
+    navigationOptions,
     exercise,
     before,
     accept: () => {
@@ -256,4 +267,104 @@ test('returning a transferred exercise confirms its original topic and level', a
   h.click('Trả về chủ đề và cấp độ ban đầu');
   assert.match(h.prompts[0], /chủ đề ban đầu, cấp độ A/);
   assert.deepEqual(h.writes, []);
+});
+
+test('removal resumes at the same filtered slot, with previous/empty-list fallbacks and stable pagination', () => {
+  const exercises = Array.from({ length: 23 }, (_, i) =>
+    i % 2 ? { manualId: `manual-${i}` } : { management: { id: `curated-${i}` } }
+  );
+  const original = structuredClone(exercises);
+  for (const index of [0, 4, 6, 22]) {
+    const href = shared.exports.practiceRemovalHref(
+      '/vi/fork?level=A&exercise=old-link&theme=kept#practice',
+      exercises,
+      index,
+      {
+        level: 'Beginner',
+        categoryId: 'fork',
+      }
+    );
+    const url = new URL(href, 'https://local.test');
+    const after = exercises.filter((_, i) => i !== index);
+    const expectedIndex = Math.min(index, after.length - 1);
+    const expected = after[expectedIndex];
+    assert.equal(url.pathname, '/vi/fork');
+    assert.equal(url.searchParams.get('level'), 'Beginner');
+    assert.equal(url.searchParams.get('category'), 'fork');
+    assert.equal(url.searchParams.get('theme'), 'kept');
+    assert.equal(url.hash, '#practice');
+    assert.equal(
+      url.searchParams.get('exercise'),
+      expected.manualId ?? expected.management.id
+    );
+    const nextIndex = shared.exports.practiceReviewIndex(
+      after,
+      url.searchParams.get('exercise'),
+      url.searchParams.get('reviewIndex')
+    );
+    assert.equal(nextIndex, expectedIndex);
+    assert.equal(Math.floor(nextIndex / 6), Math.floor(expectedIndex / 6));
+    assert.equal(
+      shared.exports.practiceReviewIndex(
+        after,
+        'concurrently-removed',
+        url.searchParams.get('reviewIndex')
+      ),
+      expectedIndex
+    );
+  }
+  const empty = new URL(
+    shared.exports.practiceRemovalHref(
+      '/vi/skewer?exercise=gone',
+      [exercises[0]],
+      0,
+      {
+        level: 'Beginner',
+        categoryId: 'skewer',
+        beginnerKind: 'queen',
+      }
+    ),
+    'https://local.test'
+  );
+  assert.equal(empty.searchParams.has('exercise'), false);
+  assert.equal(empty.searchParams.get('beginnerKind'), 'queen');
+  assert.equal(empty.searchParams.get('reviewIndex'), '0');
+  assert.equal(shared.exports.practiceReviewIndex([], undefined, '0'), 0);
+  assert.equal(
+    shared.exports.practiceReviewIndex(exercises, undefined, 'invalid'),
+    0
+  );
+  assert.deepEqual(exercises, original);
+});
+
+test('only confirmed removal uses the review return link, without jumping to a draft destination', async () => {
+  const removalReturnHref =
+    '/vi/discovered-attack?level=B&category=discovery&exercise=next-review&reviewIndex=4';
+  const h = harness({}, { removalReturnHref });
+  await h.open();
+  h.select('Chủ đề đích', '/pin');
+  h.select('Cấp độ của bài', 'D');
+  h.click('Bỏ khỏi bài tập');
+  await flush();
+  assert.deepEqual(h.writes, []);
+  assert.deepEqual(h.routes, []);
+  h.accept();
+  h.click('Bỏ khỏi bài tập');
+  await flush();
+  assert.equal(h.writes[0].action, 'remove');
+  assert.deepEqual(h.routes, [removalReturnHref]);
+  assert.deepEqual(h.navigationOptions, [{ scroll: false }]);
+  assert.deepEqual(h.exercise, h.before);
+
+  const moved = harness({}, { removalReturnHref });
+  await moved.open();
+  moved.select('Cấp độ của bài', 'C*');
+  moved.accept();
+  moved.submit();
+  await flush();
+  assert.deepEqual(
+    moved.routes,
+    ['/pin?level=C*'],
+    'moving still opens its selected destination'
+  );
 });

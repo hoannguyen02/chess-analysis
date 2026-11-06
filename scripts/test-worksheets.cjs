@@ -206,7 +206,16 @@ test('generated PDF page counts, A4 size and separate answers', async () => {
       undefined,
       'LIMA CHESS'
     );
-    const { PDFDocument } = require('pdf-lib');
+    const { PDFDocument, PDFName } = require('pdf-lib');
+    const contentsTargets = (doc, page = 1) => {
+      const refs = doc.getPages().map((p) => p.ref.toString());
+      return (doc.getPage(page).node.Annots()?.asArray() ?? []).map((ref) => {
+        const annotation = doc.context.lookup(ref);
+        assert.equal(annotation.get(PDFName.of('Subtype')).toString(), '/Link');
+        const destination = annotation.lookup(PDFName.of('Dest'));
+        return refs.indexOf(destination.get(0).toString()) + 1;
+      });
+    };
     const sheet = await PDFDocument.load(result.worksheet),
       answers = await PDFDocument.load(result.answers);
     assert.equal(sheet.getPageCount(), 10);
@@ -226,8 +235,14 @@ test('generated PDF page counts, A4 size and separate answers', async () => {
       model.defaultBookOptions
     );
     const bookDoc = await PDFDocument.load(bookResult.worksheet);
-    assert.equal(bookDoc.getPageCount(), 7); // Cover, intro, notation guide, 2 chapters, review, closing.
-    assert.ok((await PDFDocument.load(bookResult.answers)).getPageCount() > 1);
+    assert.equal(bookDoc.getPageCount(), 8); // Cover, contents, intro, notation, 2 chapters, review, closing.
+    assert.deepEqual(contentsTargets(bookDoc), [3, 4, 5, 6, 7, 8]);
+    const answerDoc = await PDFDocument.load(bookResult.answers);
+    const answerTargets = contentsTargets(answerDoc);
+    assert.equal(answerTargets.length, 3);
+    assert.ok(answerTargets.every((n) => n >= 3 && n <= answerDoc.getPageCount()));
+    assert.deepEqual([...answerTargets].sort((a, b) => a - b), answerTargets);
+    assert.notDeepEqual(answerTargets, [5, 6, 7], 'answers use their own actual pagination');
     const longBook = await pdf.createWorksheetPdfs(
       bookPages,
       'BÀI TẬP CHIẾN THUẬT VÀ RÈN LUYỆN TƯ DUY CỜ VUA DÀNH CHO NGƯỜI MỚI BẮT ĐẦU',
@@ -256,13 +271,45 @@ test('generated PDF page counts, A4 size and separate answers', async () => {
         showNotationGuide: false,
       }
     );
-    assert.equal((await PDFDocument.load(noGuide.worksheet)).getPageCount(), 6);
+    const noGuideDoc = await PDFDocument.load(noGuide.worksheet);
+    assert.equal(noGuideDoc.getPageCount(), 7);
+    assert.deepEqual(contentsTargets(noGuideDoc), [3, 4, 5, 6, 7]);
+    const noContents = await pdf.createWorksheetPdfs(bookPages, 'Sách không có mục lục', undefined, '', {
+      ...model.defaultBookOptions, showContents: false,
+    });
+    assert.equal((await PDFDocument.load(noContents.worksheet)).getPageCount(), 7);
+    assert.equal((await PDFDocument.load(noContents.answers)).getPageCount(), answerDoc.getPageCount() - 1);
+    // Stress wrapping and multi-page contents without adding any practice data.
+    const contentsPages = Array.from({ length: 22 }, (_, i) => ({
+      ...bookPages[0], sectionId: i + 1,
+      title: `Chủ đề ${i + 1}: Phối hợp quân và tính toán phương án với nhiều khả năng phòng thủ trong các thế cờ tấn công và phòng thủ`,
+      exercises: [{ ...bookPages[0].exercises[0], number: i + 2 }],
+    }));
+    // A continuation stays under the first entry; a separate chapter with the
+    // same title/level still gets its own entry through its section identity.
+    contentsPages.splice(0, 0, {
+      ...contentsPages[0],
+      exercises: [{ ...bookPages[0].exercises[0], number: 1 }],
+    });
+    contentsPages[2].title = contentsPages[0].title;
+    const manyContents = await pdf.createWorksheetPdfs(contentsPages, 'Sách nhiều chủ đề', undefined, '', {
+      ...model.defaultBookOptions,
+      introduction: { title: '', body: '' }, closing: { title: '', body: '' },
+    });
+    const manyDoc = await PDFDocument.load(manyContents.worksheet);
+    const firstTargets = contentsTargets(manyDoc);
+    assert.ok(firstTargets.length > 0 && firstTargets.length < 22);
+    const secondTargets = contentsTargets(manyDoc, 2);
+    assert.equal(firstTargets.length + secondTargets.length, 22);
+    assert.deepEqual([...firstTargets, ...secondTargets], [4, ...Array.from({ length: 21 }, (_, i) => i + 6)]);
     if (process.env.WORKSHEET_RENDER) {
       fs.mkdirSync('tmp/pdfs', { recursive: true });
       fs.writeFileSync('tmp/pdfs/book-no-guide.pdf', noGuide.worksheet);
       fs.writeFileSync('tmp/pdfs/book-worksheet.pdf', bookResult.worksheet);
       fs.writeFileSync('tmp/pdfs/book-answers.pdf', bookResult.answers);
       fs.writeFileSync('tmp/pdfs/book-long.pdf', longBook.worksheet);
+      fs.writeFileSync('tmp/pdfs/book-many-contents.pdf', manyContents.worksheet);
+      fs.writeFileSync('tmp/pdfs/book-many-answers.pdf', manyContents.answers);
       fs.writeFileSync('tmp/pdfs/builder-worksheet.pdf', result.worksheet);
       fs.writeFileSync('tmp/pdfs/builder-answers.pdf', result.answers);
     }
@@ -818,12 +865,15 @@ test('review blocks follow chapter anchors, reserve globally and keep answer met
   assert.equal(zero.filter((p) => p.review).length, 0);
 });
 
-test('dynamic reviews: recent-group defaults, final deduplication and live chapter order', () => {
+test('dynamic reviews: page budgets, separate final review and live chapter order', () => {
   const {
     automaticReviewBlocks: auto,
-    defaultReviewSettings: defaults,
+    defaultReviewSettings: baseDefaults,
     resolveReviewBlocks: resolve,
   } = load('src/lib/chess/worksheet-review.ts');
+  const defaults = { ...baseDefaults, finalPages: '2' };
+  assert.equal(baseDefaults.pages, '1');
+  assert.equal(baseDefaults.finalPages, '1');
   const chapters = Array.from({ length: 10 }, (_, i) => ({
     id: i + 1,
     topic: `topic-${i + 1}`,
@@ -833,28 +883,29 @@ test('dynamic reviews: recent-group defaults, final deduplication and live chapt
   const blocks = auto(chapters, defaults);
   assert.deepEqual(
     blocks.map((b) => b.afterSectionId),
-    [3, 6, 9, 10]
+    [2, 4, 6, 8, 10, 10]
   );
   assert.deepEqual(
     blocks.map((b) => b.rows.length),
-    [3, 3, 3, 10]
+    [2, 2, 2, 2, 2, 10]
   );
   assert.deepEqual(
     blocks[1].rows.map((r) => r.topic),
-    ['topic-4', 'topic-5', 'topic-6']
+    ['topic-3', 'topic-4']
   );
-  assert.ok(blocks.every((b) => b.rows.every((r) => r.count === '6')));
-  assert.equal(auto(chapters.slice(0, 9), defaults).length, 3);
+  assert.ok(blocks.slice(0, -1).every((b) => b.rows.every((r) => r.count === '3')));
+  assert.equal(blocks.at(-1).rows.reduce((n,r)=>n+Number(r.count),0),12);
+  assert.equal(auto(chapters.slice(0, 9), defaults).length, 5);
   assert.equal(auto(chapters.slice(0, 1), defaults).length, 1);
   assert.deepEqual(auto([], defaults), []);
   assert.deepEqual(auto(chapters, { ...defaults, enabled: false }), []);
   assert.deepEqual(
     auto(chapters, { ...defaults, final: false }).map((b) => b.afterSectionId),
-    [3, 6, 9]
+    [2, 4, 6, 8, 10]
   );
   assert.deepEqual(
-    auto(chapters, { ...defaults, cumulative: true }).map((b) => b.rows.length),
-    [3, 6, 9, 10]
+    auto(chapters, { ...defaults, cumulative: true, pages: '2' }).map((b) => b.rows.length),
+    [2, 4, 6, 8, 10, 10]
   );
   assert.deepEqual(
     auto(chapters, { ...defaults, interval: '4' }).map((b) => b.afterSectionId),
@@ -867,11 +918,11 @@ test('dynamic reviews: recent-group defaults, final deduplication and live chapt
     rows: [{ ...blocks[0].rows[0], count: '4', level: 'B' }],
   };
   const resolved = resolve(auto(reordered, defaults), [custom], true);
-  assert.equal(resolved[0].afterSectionId, 8);
+  assert.equal(resolved[0].afterSectionId, 9);
   assert.equal(resolved[0].rows[0].count, '4');
   assert.equal(resolved[0].rows[0].level, 'B');
   assert.equal(
-    resolve(auto(chapters.slice(0, 2), defaults), [custom], true).length,
+    resolve(auto(chapters.slice(0, 1), defaults), [custom], true).length,
     2,
     'custom orphan stays visible'
   );
@@ -881,10 +932,67 @@ test('dynamic reviews: recent-group defaults, final deduplication and live chapt
     blocks,
     'reset restores automatic values'
   );
+  const threeTopics = auto(chapters, { ...defaults, interval: '3', pages: '1' });
+  assert.deepEqual(threeTopics.map((b) => b.afterSectionId), [3, 6, 9, 10]);
+  assert.deepEqual(threeTopics.map((b) => b.rows.length), [3, 3, 3, 10]);
+  assert.ok(threeTopics.slice(0,-1).every((b) => b.rows.every((r) => r.count === '2')));
+  const defaultReviewPages = model.planWorksheetBookBlocks(
+    [row(1, 'pin', 'A', 6), row(2, 'fork', 'A', 6)].map((r) => ({ ...r })),
+    auto([row(1, 'pin', 'A', '6'), row(2, 'fork', 'A', '6')], baseDefaults)
+      .map((b) => ({ ...b, pageCount: Number(b.pageCount), rows: b.rows.map((r) => ({ ...r, count: Number(r.count) })) })),
+    { pin, fork }, topics
+  );
+  assert.deepEqual(defaultReviewPages.filter((p) => p.review).map((p) => p.exercises.length), [6,6]);
+  assert.deepEqual(defaultReviewPages.filter(p=>p.review).map(p=>p.title), ['Ôn tập theo nhóm 1','Ôn tập cuối sách']);
   for (const interval of ['', '0', '-1', '2.5', 'NaN'])
     assert.throws(() => auto(chapters, { ...defaults, interval }));
-  for (const count of ['', '0', '-1', '1.5'])
-    assert.throws(() => auto(chapters, { ...defaults, count }));
+  for (const pages of ['', '0', '-1', '1.5']) {
+    assert.throws(() => auto(chapters, { ...defaults, pages }));
+    assert.throws(() => auto(chapters, { ...defaults, finalPages: pages }));
+  }
+});
+
+test('review page allocation shares a fixed total across topics and levels', () => {
+  const { allocateReviewRows: allocate, reviewDistribution: distribution,
+    reviewBudgetError: budgetError, automaticReviewBlocks: auto,
+    defaultReviewSettings: defaults, resolveReviewBlocks: resolve } = load('src/lib/chess/worksheet-review.ts');
+  const drafts = n => Array.from({length:n},(_,i)=>row(i+1,`topic-${i+1}`,'A','6'));
+  const numbers = rows => rows.map(r=>Number(r.count));
+  for (const [topics,pages,expected] of [[2,'1',[3,3]],[2,'2',[6,6]],[3,'1',[2,2,2]],[3,'2',[4,4,4]],[4,'1',[2,2,1,1]]]) {
+    const rows = allocate(drafts(topics),pages);
+    assert.deepEqual(numbers(rows),expected);
+    assert.equal(budgetError({id:1,afterSectionId:1,pageCount:pages,rows}), '');
+  }
+  assert.equal(distribution(4,'1').uneven,true);
+  assert.equal(distribution(4,'1').suggestedPages,2);
+  assert.equal(distribution(4,'2').uneven,false);
+  assert.equal(distribution(5,'1').suggestedPages,5);
+  assert.deepEqual(numbers(allocate(drafts(4),'1',1)),[1,2,2,1]);
+  assert.equal(auto(drafts(4),{...defaults,interval:'4',final:false})[0].rows.reduce((n,r)=>n+Number(r.count),0),6,'uneven allocation remains exportable');
+  const multiple = [
+    {...row(1,'one','A','6'),topicGroupId:1}, {...row(2,'one','B','6'),topicGroupId:1},
+    {...row(3,'two','A','6'),topicGroupId:2}, {...row(4,'two','B','6'),topicGroupId:2},
+  ];
+  assert.deepEqual(numbers(allocate(multiple,'1')),[2,1,1,2]);
+  assert.equal(numbers(allocate(multiple,'2')).reduce((n,x)=>n+x,0),12,'levels do not multiply page count');
+  assert.deepEqual(numbers(allocate([...drafts(2),row(3,'topic-3','A','6'),row(4,'topic-3','B','6'),row(5,'topic-4','A','6'),row(6,'topic-4','B','6')],'1')),[1,1,1,1,1,1],'level coverage can receive remainder slots');
+  assert.throws(()=>allocate(drafts(7),'1'),/ít nhất 2 trang/);
+  assert.throws(()=>allocate([...multiple,row(5,'one','C','6'),row(6,'one','D','6')],'1'),/ít nhất 2 trang/);
+  const varied=[...drafts(10),...drafts(3).map((r,i)=>({...r,id:20+i,level:'B'}))];
+  assert.throws(()=>allocate(varied,'2'),/ít nhất 3 trang/);
+  assert.equal(numbers(allocate(varied,'3')).reduce((n,x)=>n+x,0),18);
+  for (const pages of ['', '0','-1','1.5','Infinity',String(Number.MAX_SAFE_INTEGER)]) assert.throws(()=>allocate(drafts(2),pages));
+  const original=auto(drafts(2),defaults);
+  const override={...original[0],rows:original[0].rows.map((r,i)=>({...r,count:i?'2':'4'}))};
+  const larger=resolve(auto(drafts(2),{...defaults,pages:'2'}),[override],true);
+  assert.deepEqual(numbers(larger[0].rows),[6,6]);
+  assert.equal(larger[0].pageCount,'2');
+  assert.equal(larger.at(-1).pageCount,'1','final pages remain independent');
+  assert.deepEqual(numbers(resolve(original,[override],true)[0].rows),[4,2],'manual distribution survives an unchanged budget');
+  const invalid={...original[0],rows:[{...original[0].rows[0],count:'5'}]};
+  assert.match(budgetError(invalid),/cần 6 thế; hiện có 5/);
+  const realSections=[row(1,'pin','A',6),row(2,'fork','A',6)];
+  assert.throws(()=>model.planWorksheetBookBlocks(realSections,[{...invalid,pageCount:1,rows:invalid.rows.map(r=>({...r,topic:'pin',count:Number(r.count)}))}],{pin,fork},topics),/mỗi trang 6 thế/);
 });
 
 test('repetition notes already explaining a claim are not duplicated in print', () => {
@@ -964,20 +1072,25 @@ test('global level selection requires a full A4 page and shares the pagination d
   assert.deepEqual(eligible([]),[]);
   assert.deepEqual(selection.availableWorksheetLevels('mixed',['D','A','Beginner'],catalog),['Beginner','A']);
   assert.equal(selection.defaultWorksheetCount,String(POSITIONS_PER_PAGE));
-  assert.equal(review.defaultReviewSettings.count,String(POSITIONS_PER_PAGE));
+  assert.equal(review.defaultReviewSettings.pages,'1');
+  assert.equal(review.defaultReviewSettings.finalPages,'1');
   const rows = [{id:1,topic:'mixed',count:'6'},{id:2,topic:'exact',count:'6'},{id:3,topic:'advanced',count:'6'}];
   const expanded = selection.expandWorksheetTopics(rows,['D','A','Beginner'],catalog);
   assert.deepEqual(expanded.map(s=>[s.topic,s.level]),[['mixed','Beginner'],['mixed','A'],['exact','A'],['advanced','D']]);
   assert.equal(new Set(expanded.map(s=>s.id)).size,4);
   const blocks=review.automaticReviewBlocks(expanded,{...review.defaultReviewSettings,final:false});
   assert.equal(blocks.length,1,'reviews count topics, not levels');
-  assert.equal(blocks[0].afterSectionId,expanded[3].id);
-  assert.equal(blocks[0].rows.length,4);
+  assert.equal(blocks[0].afterSectionId,expanded[2].id);
+  assert.equal(blocks[0].rows.length,3);
   const moved=selection.expandWorksheetTopics([rows[2],rows[0],rows[1]],['Beginner','A','D'],catalog);
   assert.equal(moved[0].id,expanded[3].id);
-  const chapters=Array.from({length:10},(_,i)=>({id:i+1,topic:'mixed',count:'6'}));
-  const multiple=selection.expandWorksheetTopics(chapters,['Beginner','A'],catalog);
-  assert.deepEqual(review.automaticReviewBlocks(multiple,review.defaultReviewSettings).map(b=>b.rows.length),[6,6,6,20]);
+  const chapters=Array.from({length:10},(_,i)=>({id:i+1,topic:`mixed-${i}`,count:'6'}));
+  const multiCatalog=Object.fromEntries(chapters.map(c=>[c.topic,catalog.mixed]));
+  const multiple=selection.expandWorksheetTopics(chapters,['Beginner','A'],multiCatalog);
+  const multipleBlocks=review.automaticReviewBlocks(multiple,{...review.defaultReviewSettings,finalPages:'4'});
+  assert.deepEqual(multipleBlocks.map(b=>b.rows.length),[4,4,4,4,4,20]);
+  assert.ok(multipleBlocks.slice(0,-1).every(b=>b.rows.reduce((n,r)=>n+Number(r.count),0)===6));
+  assert.equal(multipleBlocks.at(-1).rows.reduce((n,r)=>n+Number(r.count),0),24);
   const paginated=plan([row(1,'pin','Beginner',POSITIONS_PER_PAGE+1)],{pin});
   assert.deepEqual(paginated.map(p=>p.exercises.length),[POSITIONS_PER_PAGE,1]);
 });

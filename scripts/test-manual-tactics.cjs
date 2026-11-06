@@ -806,6 +806,198 @@ test('Beginner FEN edits retain stable identity and source but clear stale solut
   );
 });
 
+test('new Beginner insertions reach the chosen practice and worksheet slot and content edits retain it', async () => {
+  await store.mutateManualTactics(() => []);
+  fs.writeFileSync(
+    path.join(root, 'src/lib/server/practice-adjustments.json'),
+    '[]'
+  );
+  fs.writeFileSync(path.join(root, 'src/lib/server/fork-exercises.json'), '[]');
+  fs.writeFileSync(
+    path.join(root, 'src/lib/server/fork-beginner-exercises.json'),
+    '[]'
+  );
+  const api = load('src/pages/api/fork-exercises.ts').default;
+  const keys = load('src/lib/chess/manual-tactics.ts');
+  const catalog = async () => {
+    const res = response();
+    await api({ method: 'GET', headers: {} }, res);
+    assert.equal(res.code, 200);
+    return res.body.categories[0].exercises;
+  };
+  const beginner = async () =>
+    (await catalog()).filter((exercise) => exercise.beginner);
+  const original = await catalog();
+  const add = async (fen, insertion) => {
+    const res = await call('POST', {
+      ...sample,
+      fen,
+      level: 'Beginner',
+      moves: [],
+      solution: '',
+      insertion,
+    });
+    assert.equal(res.code, 200, JSON.stringify(res.body));
+    return res.body.position;
+  };
+  const first = await add('7k/8/8/8/8/8/R7/K7 w - - 0 1', 'first');
+  assert.equal((await beginner())[0].manualId, first.id);
+  const { beginnerInsertion, ...legacy } = first;
+  const unmanaged = [
+    { id: 'legacy', exercises: [store.manualExercise(legacy)] },
+  ];
+  assert.deepEqual(store.orderManualInsertions(unmanaged, [legacy]), unmanaged);
+  const last = await add('7k/8/8/8/8/8/1R6/K7 w - - 0 1', 'last');
+  assert.equal((await beginner()).at(-1).manualId, last.id);
+  const before = await beginner();
+  const slot = Math.floor(before.length / 2);
+  const middle = await add(
+    '7k/8/8/8/8/8/2R5/K7 w - - 0 1',
+    before.slice(slot).map(keys.manualInsertionKey)
+  );
+  const ordered = await beginner();
+  assert.equal(
+    ordered[slot].manualId,
+    middle.id,
+    'insert at the chosen middle slot'
+  );
+  assert.equal(
+    keys.manualInsertionKey(ordered[slot + 1]),
+    keys.manualInsertionKey(before[slot])
+  );
+  const anchor = before[slot];
+  const replacement = {
+    ...anchor,
+    manualId: 'edited-curated-position',
+    beginnerBaseFen: anchor.fen,
+    fen: '7k/8/8/8/8/8/5R2/K7 w - - 0 1',
+  };
+  const withEditedAnchor = store.orderManualInsertions(
+    [
+      {
+        managementScope: '/fork',
+        exercises: ordered.map((exercise) =>
+          exercise === ordered[slot + 1] ? replacement : exercise
+        ),
+      },
+    ],
+    await store.readManualTactics()
+  )[0].exercises;
+  assert.equal(withEditedAnchor[slot].manualId, middle.id);
+  assert.equal(
+    withEditedAnchor[slot + 1].manualId,
+    replacement.manualId,
+    'a curated board edit retains its insertion anchor'
+  );
+  const newest = await add('7k/8/8/8/8/8/3R4/K7 w - - 0 1', 'first');
+  assert.equal(
+    (await beginner())[0].manualId,
+    newest.id,
+    'the newest first insertion comes first'
+  );
+  assert.deepEqual(
+    (await catalog()).filter((exercise) => !exercise.beginner),
+    original.filter((exercise) => !exercise.beginner),
+    'all later-level content and order are preserved'
+  );
+  const priorOrder = (await beginner()).map(keys.manualInsertionKey);
+  const edited = await call('POST', {
+    ...first,
+    fen: '7k/8/8/8/8/8/4R3/K7 w - - 0 1',
+    title: 'Edited without reordering',
+    expectedUpdatedAt: first.updatedAt,
+  });
+  assert.equal(edited.code, 200);
+  assert.deepEqual(
+    edited.body.position.beginnerInsertion,
+    first.beginnerInsertion
+  );
+  assert.deepEqual((await beginner()).map(keys.manualInsertionKey), priorOrder);
+  const worksheet = load('src/lib/chess/worksheet.ts');
+  assert.deepEqual(
+    worksheet
+      .levelExercises(await catalog(), 'Beginner')
+      .map(keys.manualInsertionKey),
+    priorOrder,
+    'worksheet source uses the same sequence'
+  );
+  const bytes = fs.readFileSync(file, 'utf8');
+  for (const insertion of [
+    null,
+    [],
+    0,
+    'middle',
+    [null],
+    ['x'.repeat(241)],
+    Array(1001).fill('x'),
+  ]) {
+    const result = await call('POST', {
+      ...sample,
+      level: 'Beginner',
+      moves: [],
+      insertion,
+    });
+    assert.equal(result.code, 400);
+    assert.equal(fs.readFileSync(file, 'utf8'), bytes);
+  }
+  assert.equal(
+    (await call('POST', { ...sample, insertion: 'first' })).code,
+    400
+  );
+  assert.equal(
+    (
+      await call('POST', {
+        ...edited.body.position,
+        insertion: 'last',
+        expectedUpdatedAt: edited.body.position.updatedAt,
+      })
+    ).code,
+    400,
+    'an update cannot silently change its saved placement'
+  );
+
+  // Owner removal uses the signed exercise actually supplied by the practice API.
+  const target = (await beginner()).find(
+    (exercise) =>
+      keys.manualInsertionKey(exercise) ===
+      keys.manualInsertionKey(before[slot])
+  );
+  const management = target.management;
+  const res = response();
+  await load('src/pages/api/practice-management.ts').default(
+    {
+      method: 'POST',
+      body: {
+        scope: '/fork',
+        id: management.id,
+        action: 'remove',
+        note: '',
+        expectedUpdatedAt: management.updatedAt,
+        reference: load(
+          'src/lib/chess/practice-management.ts'
+        ).practiceReviewReference('/fork', target),
+        signature: management.signature,
+      },
+    },
+    res
+  );
+  assert.equal(res.code, 200, JSON.stringify(res.body));
+  const afterRemoval = await beginner();
+  const index = afterRemoval.findIndex(
+    (exercise) => exercise.manualId === middle.id
+  );
+  assert.equal(
+    keys.manualInsertionKey(afterRemoval[index + 1]),
+    keys.manualInsertionKey(before[slot + 1]),
+    'use the next surviving neighbour'
+  );
+  await store.mutateManualTactics(() => []);
+  fs.writeFileSync(
+    path.join(root, 'src/lib/server/practice-adjustments.json'),
+    '[]'
+  );
+});
+
 test('a Beginner overlay replaces only its original curated Beginner after the board changes', async () => {
   await store.mutateManualTactics(() => []);
   fs.writeFileSync(
@@ -884,6 +1076,134 @@ test('a Beginner overlay replaces only its original curated Beginner after the b
     400,
     'A–D curated positions cannot be overlaid'
   );
+});
+
+test('updating a middle manual exercise keeps its list number, identity and worksheet order, including FEN edits', async () => {
+  await store.mutateManualTactics(() => []);
+  fs.writeFileSync(
+    path.join(root, 'src/lib/server/practice-adjustments.json'),
+    '[]'
+  );
+  fs.writeFileSync(path.join(root, 'src/lib/server/fork-exercises.json'), '[]');
+  fs.writeFileSync(
+    path.join(root, 'src/lib/server/fork-beginner-exercises.json'),
+    '[]'
+  );
+  const positions = [];
+  for (const san of ['e4', 'd4', 'c4']) {
+    const board = new chess.Chess(sample.fen);
+    board.move(san);
+    const saved = await call('POST', {
+      ...sample,
+      fen: board.fen(),
+      level: 'Beginner',
+      moves: [],
+      solution: '',
+      title: san,
+    });
+    assert.equal(saved.code, 200);
+    positions.push(JSON.parse(JSON.stringify(saved.body.position)));
+  }
+  const ids = positions.map((e) => e.id);
+  let middle = positions[1];
+  const changedBoard = new chess.Chess(sample.fen);
+  changedBoard.move('Nf3');
+  for (const patch of [
+    { title: 'Updated explanation', solution: 'Owner note' },
+    {
+      fen: changedBoard.fen(),
+      moves: [],
+      alternativeLines: [],
+      previousMove: null,
+    },
+  ]) {
+    const saved = await call('POST', {
+      ...middle,
+      ...patch,
+      expectedUpdatedAt: middle.updatedAt,
+    });
+    assert.equal(saved.code, 200);
+    middle = saved.body.position;
+    assert.equal(middle.id, positions[1].id);
+    assert.equal(middle.createdAt, positions[1].createdAt);
+    assert.match(saved.body.href, new RegExp(`exercise=${middle.id}$`));
+    assert.deepEqual(
+      (await call('GET')).body.positions.map((e) => e.id),
+      ids
+    );
+    const catalog = store.mergeManualCategories(
+      '/fork',
+      [{ id: 'fork', exercises: [] }],
+      await store.readManualTactics()
+    )[0].exercises;
+    assert.equal(
+      catalog.findIndex((e) => e.manualId === middle.id),
+      1
+    );
+    assert.deepEqual(
+      load('src/lib/chess/worksheet.ts')
+        .levelExercises(catalog, 'Beginner')
+        .map((e) => e.manualId),
+      ids
+    );
+  }
+  const all = await store.readManualTactics();
+  assert.deepEqual(all[0], positions[0]);
+  assert.deepEqual(all[2], positions[2]);
+  const board = new chess.Chess(sample.fen);
+  board.move('g3');
+  const added = await call('POST', {
+    ...sample,
+    fen: board.fen(),
+    level: 'Beginner',
+    moves: [],
+  });
+  assert.equal(added.code, 200);
+  assert.deepEqual(
+    (await store.readManualTactics()).map((e) => e.id),
+    [...ids, added.body.position.id]
+  );
+  await store.mutateManualTactics(() => []);
+});
+
+test('curated Beginner overlays keep the original slot even when saved out of order or on an edited FEN', () => {
+  const exercises = ['e4', 'd4', 'c4'].map((san, index) => {
+    const board = new chess.Chess(sample.fen);
+    board.move(san);
+    return {
+      ...sample,
+      fen: board.fen(),
+      title: `Original ${index}`,
+      moves: [],
+      beginner: true,
+      beginnerKind: 'queen',
+    };
+  });
+  const modified = new chess.Chess(sample.fen);
+  modified.move('Nf3');
+  const entries = [2, 1].map((index) => ({
+    ...sample,
+    id: `overlay-${index}`,
+    fen: index === 1 ? modified.fen() : exercises[index].fen,
+    level: 'Beginner',
+    moves: [],
+    beginnerBaseFen: exercises[index].fen,
+    createdAt: 'now',
+    updatedAt: 'now',
+  }));
+  const snapshot = structuredClone(exercises);
+  const merged = store.mergeManualCategories(
+    '/fork',
+    [{ id: 'fork', exercises }],
+    entries
+  )[0].exercises;
+  assert.equal(merged.length, 3);
+  assert.equal(merged[0], exercises[0]);
+  assert.equal(merged[1].manualId, 'overlay-1');
+  assert.equal(merged[1].fen, modified.fen());
+  assert.equal(merged[2].manualId, 'overlay-2');
+  assert.equal(merged[1].beginnerKind, 'queen');
+  assert.deepEqual(exercises, snapshot);
 });
 
 test('a same-FEN Beginner source copy has separate management identity and never changes its A–D source', async () => {
