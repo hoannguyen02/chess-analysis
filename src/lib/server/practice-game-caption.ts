@@ -17,6 +17,7 @@ import simplificationSources from './simplification-game-sources.json';
 import discoverySources from './discovery-game-sources.json';
 import forkSources from './fork-game-sources.json';
 import pinSources from './pin-game-sources.json';
+import removingDefenderSources from './removing-defender-game-sources.json';
 import skewerSources from './skewer-game-sources.json';
 import type { GameReference } from '../chess/draw-game-viewer';
 
@@ -46,41 +47,43 @@ export function practicePlayers(reference?: GameReference) {
 
 function practiceHeaders(reference: GameReference) {
   const sources = (
-    reference.collection === 'promotion-mate'
-      ? promotionMateSources
-      : reference.collection === 'underpromotion'
-        ? underpromotionSources
-        : reference.collection === 'passed-pawn-simplification'
-          ? passedPawnSources
-          : reference.collection === 'promotion'
-            ? promotionSources
-            : reference.collection === 'anastasia-mate'
-              ? anastasiaMateSources
-              : reference.collection === 'arabian-mate'
-                ? arabianMateSources
-                : reference.collection === 'rook-bishop-mate'
-                  ? rookBishopMateSources
-                  : reference.collection === 'queen-rook-mate'
-                    ? queenRookMateSources
-                    : reference.collection === 'back-rank-mate'
-                      ? backRankMateSources
-                      : reference.collection === 'queen-mate'
-                        ? queenMateSources
-                        : reference.collection === 'one-rook-mate'
-                          ? oneRookMateSources
-                          : reference.collection === 'two-rook-mate'
-                            ? twoRookMateSources
-                            : reference.collection === 'simplification'
-                              ? simplificationSources
-                              : reference.collection === 'discovery'
-                                ? discoverySources
-                                : reference.collection === 'fork'
-                                  ? forkSources
-                                  : reference.collection === 'pin'
-                                    ? pinSources
-                                    : reference.collection === 'skewer'
-                                      ? skewerSources
-                                      : drawSources
+    reference.collection === 'removing-defender'
+      ? removingDefenderSources
+      : reference.collection === 'promotion-mate'
+        ? promotionMateSources
+        : reference.collection === 'underpromotion'
+          ? underpromotionSources
+          : reference.collection === 'passed-pawn-simplification'
+            ? passedPawnSources
+            : reference.collection === 'promotion'
+              ? promotionSources
+              : reference.collection === 'anastasia-mate'
+                ? anastasiaMateSources
+                : reference.collection === 'arabian-mate'
+                  ? arabianMateSources
+                  : reference.collection === 'rook-bishop-mate'
+                    ? rookBishopMateSources
+                    : reference.collection === 'queen-rook-mate'
+                      ? queenRookMateSources
+                      : reference.collection === 'back-rank-mate'
+                        ? backRankMateSources
+                        : reference.collection === 'queen-mate'
+                          ? queenMateSources
+                          : reference.collection === 'one-rook-mate'
+                            ? oneRookMateSources
+                            : reference.collection === 'two-rook-mate'
+                              ? twoRookMateSources
+                              : reference.collection === 'simplification'
+                                ? simplificationSources
+                                : reference.collection === 'discovery'
+                                  ? discoverySources
+                                  : reference.collection === 'fork'
+                                    ? forkSources
+                                    : reference.collection === 'pin'
+                                      ? pinSources
+                                      : reference.collection === 'skewer'
+                                        ? skewerSources
+                                        : drawSources
   ) as Record<string, { headers: Record<string, string> }>;
   return sources[reference.id]?.headers;
 }

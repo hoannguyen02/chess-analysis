@@ -1,3 +1,4 @@
+import { POSITIONS_PER_PAGE } from '@/lib/chess/worksheet-layout';
 import type { DrawCategory } from '@/lib/chess/draw-practice';
 import {
   defaultWorksheetFooter,
@@ -8,8 +9,15 @@ import {
   worksheetLevels,
   type WorksheetTopic,
   type WorksheetCatalog,
-  type WorksheetSection,
+  type WorksheetLevel,
 } from '@/lib/chess/worksheet';
+import {
+  availableWorksheetLevels,
+  eligibleWorksheetTopics,
+  expandWorksheetTopics,
+  defaultWorksheetCount,
+  type WorksheetTopicDraft,
+} from '@/lib/chess/worksheet-selection';
 import { practiceAccessHeaders } from '@/lib/practice-access';
 import styles from '@/styles/WorksheetBuilder.module.css';
 import { useEffect, useRef, useState } from 'react';
@@ -21,7 +29,6 @@ import {
 } from '@/lib/chess/worksheet-review';
 import WorksheetReviewBlocks, {
   type ReviewBlockDraft,
-  type WorksheetSectionDraft,
 } from './WorksheetReviewBlocks';
 
 export default function WorksheetBuilder({
@@ -30,14 +37,22 @@ export default function WorksheetBuilder({
   topics: WorksheetTopic[];
 }) {
   const [catalog, setCatalog] = useState<WorksheetCatalog>({});
-  const [sections, setSections] = useState<WorksheetSectionDraft[]>(() =>
-    worksheetTopics.length
-      ? [{ id: 1, topic: worksheetTopics[0].id, level: 'Beginner', count: '6' }]
-      : []
+  const [sections, setSections] = useState<WorksheetTopicDraft[]>([]);
+  const [selectedLevels, setSelectedLevels] = useState<WorksheetLevel[]>([]);
+  const initialTopicChosen = useRef(false);
+  const nextId = useRef(1);
+  const eligibleTopics = eligibleWorksheetTopics(
+    worksheetTopics,
+    selectedLevels,
+    catalog
   );
-  const nextId = useRef(2);
-  const unusedTopics = worksheetTopics.filter(
+  const unusedTopics = eligibleTopics.filter(
     (topic) => !sections.some((section) => section.topic === topic.id)
+  );
+  const chapterSections = expandWorksheetTopics(
+    sections,
+    selectedLevels,
+    catalog
   );
   const [bookMode, setBookMode] = useState(true);
   const [book, setBook] = useState(defaultBookOptions);
@@ -63,7 +78,7 @@ export default function WorksheetBuilder({
   let scheduleError = '';
   let automaticBlocks: ReviewBlockDraft[] = [];
   try {
-    automaticBlocks = automaticReviewBlocks(sections, reviewSettings);
+    automaticBlocks = automaticReviewBlocks(chapterSections, reviewSettings);
   } catch (e) {
     scheduleError = (e as Error).message;
   }
@@ -95,53 +110,67 @@ export default function WorksheetBuilder({
     },
     [result]
   );
-  const pending = worksheetTopics.filter(
-    (t) =>
-      [
-        ...sections,
-        ...(bookMode ? reviewBlocks.flatMap((b) => b.rows) : []),
-      ].some((s) => s.topic === t.id) && !catalog[t.id]
-  );
-  const pendingKey = pending.map((t) => t.id).join(',');
+  const sourcesKey = worksheetTopics
+    .map((t) => `${t.id}:${t.endpoint}`)
+    .join(',');
   useEffect(() => {
-    if (!pendingKey) {
-      setLoading('');
-      return;
-    }
+    if (!sourcesKey) return;
     const controller = new AbortController();
-    setLoading('Đang tải thế cờ…');
+    setLoading('Đang tải chủ đề và cấp độ…');
+    setResult(null);
     setError('');
-    Promise.all(
-      pendingKey.split(',').map(async (id) => {
-        const topic = worksheetTopics.find((t) => t.id === id)!;
-        const res = await fetch(topic.endpoint, {
-          headers: practiceAccessHeaders(),
-          cache: 'no-store',
-          signal: controller.signal,
-        });
-        if (!res.ok)
-          throw new Error(
-            res.status === 401
-              ? 'Phiên truy cập đã hết hạn. Mở lại thư viện để đăng nhập.'
-              : 'Không tải được chủ đề. Hãy thử lại.'
-          );
-        const data: { categories: DrawCategory[] } = await res.json();
-        return [topic.id, data.categories.flatMap((c) => c.exercises)] as const;
-      })
-    )
-      .then((entries) => {
-        if (!controller.signal.aborted)
-          setCatalog((c) => ({ ...c, ...Object.fromEntries(entries) }));
-      })
-      .catch((e) => {
-        if (!controller.signal.aborted) setError(e.message);
-      })
-      .finally(() => {
-        if (!controller.signal.aborted) setLoading('');
-      });
+    const entries: [string, DrawCategory['exercises']][] = [];
+    const failed: string[] = [];
+    const queue = [...worksheetTopics];
+    const worker = async () => {
+      while (queue.length && !controller.signal.aborted) {
+        const topic = queue.shift()!;
+        try {
+          const res = await fetch(topic.endpoint, {
+            headers: practiceAccessHeaders(),
+            cache: 'no-store',
+            signal: controller.signal,
+          });
+          if (!res.ok)
+            throw new Error(
+              res.status === 401
+                ? 'Phiên truy cập đã hết hạn. Mở lại thư viện để đăng nhập.'
+                : `Không tải được chủ đề: ${topic.title}.`
+            );
+          const data: { categories: DrawCategory[] } = await res.json();
+          entries.push([topic.id, data.categories.flatMap((c) => c.exercises)]);
+        } catch (e) {
+          if (!controller.signal.aborted) failed.push((e as Error).message);
+        }
+      }
+    };
+    Promise.all(Array.from({ length: Math.min(4, queue.length) }, worker)).then(
+      () => {
+        if (controller.signal.aborted) return;
+        setCatalog(Object.fromEntries(entries));
+        setError(
+          failed.length
+            ? `${failed[0]}${failed.length > 1 ? ` (${failed.length} chủ đề chưa tải được.)` : ''}`
+            : ''
+        );
+        setLoading('');
+      }
+    );
     return () => controller.abort();
-  }, [pendingKey, retry, worksheetTopics]);
-  const change = (id: number, patch: Partial<WorksheetSectionDraft>) => {
+  }, [sourcesKey, retry, worksheetTopics]);
+  useEffect(() => {
+    if (initialTopicChosen.current || !eligibleTopics.length) return;
+    initialTopicChosen.current = true;
+    const topic = eligibleTopics[0];
+    setSections([
+      {
+        id: nextId.current++,
+        topic: topic.id,
+        count: defaultWorksheetCount,
+      },
+    ]);
+  }, [eligibleTopics, selectedLevels, catalog]);
+  const change = (id: number, patch: Partial<WorksheetTopicDraft>) => {
     setResult(null);
     setSections((s) =>
       s.map((row) => (row.id === id ? { ...row, ...patch } : row))
@@ -161,8 +190,20 @@ export default function WorksheetBuilder({
   let validation = '';
   let pages: ReturnType<typeof planWorksheet> = [];
   try {
+    if (sections.some((s) => !catalog[s.topic]))
+      throw new Error('Chờ tải xong chủ đề trước khi tạo PDF.');
+    if (!selectedLevels.length) throw new Error('Chọn ít nhất một cấp độ.');
+    const unavailable = sections.find(
+      (s) =>
+        catalog[s.topic] &&
+        !availableWorksheetLevels(s.topic, selectedLevels, catalog).length
+    );
+    if (unavailable)
+      throw new Error(
+        `${worksheetTopics.find((t) => t.id === unavailable.topic)?.title ?? unavailable.topic}: chưa đủ thế cờ cho một trang A4 ở cấp độ đã chọn. Chọn chủ đề khác hoặc xóa phần này.`
+      );
     if (bookMode && scheduleError) throw new Error(scheduleError);
-    const chapterRows = sections.map((section) => ({
+    const chapterRows = chapterSections.map((section) => ({
       ...section,
       count: section.count.trim() === '' ? NaN : Number(section.count),
     }));
@@ -369,11 +410,28 @@ export default function WorksheetBuilder({
                       }))
                     }
                   />
-                  Hiện lộ trình cấp độ và gợi ý luyện tiếp
+                  Hiện hệ thống cấp độ và phần tự đánh giá
                 </label>
                 <p>
-                  Lộ trình xuất hiện ở trang mở đầu và lời kết, kèm các cấp độ
-                  có trong sách này.
+                  Bảng cấp độ ở phần mở đầu; phần tự đánh giá và nội dung luyện
+                  tiếp ở trang kết thúc.
+                </p>
+                <label className={styles.guideToggle}>
+                  <input
+                    type="checkbox"
+                    checked={bookDraft.showNotationGuide ?? true}
+                    onChange={(e) =>
+                      setBookDraft((b) => ({
+                        ...b,
+                        showNotationGuide: e.target.checked,
+                      }))
+                    }
+                  />
+                  Thêm hướng dẫn ký hiệu cờ vua
+                </label>
+                <p>
+                  Trang tra cứu cột, hàng, quân cờ và cách ghi nước đi, đặt sau
+                  phần mở đầu.
                 </p>
                 {(['introduction', 'closing'] as const).map((key) => (
                   <section key={key} className={styles.pageEditor}>
@@ -438,11 +496,50 @@ export default function WorksheetBuilder({
             <h2>Các phần bài tập</h2>
           </section>
         )}
-        <ol className={styles.sections}>
+        <fieldset
+          className={styles.levelFilter}
+          aria-describedby="worksheet-level-help"
+        >
+          <legend>Cấp độ</legend>
+          <div className={styles.levelChoices}>
+            {worksheetLevels.map((level) => (
+              <label key={level}>
+                <input
+                  type="checkbox"
+                  checked={selectedLevels.includes(level)}
+                  onChange={(e) => {
+                    setSelectedLevels((current) =>
+                      worksheetLevels.filter((l) =>
+                        l === level ? e.target.checked : current.includes(l)
+                      )
+                    );
+                    setResult(null);
+                  }}
+                />
+                {level === 'Beginner' ? 'Nhập môn / Beginner' : level}
+              </label>
+            ))}
+          </div>
+          <small id="worksheet-level-help">
+            Chọn một hoặc nhiều cấp độ. Chỉ hiển thị chủ đề có ít nhất{' '}
+            {POSITIONS_PER_PAGE} thế cờ ở cấp độ đã chọn, đủ một trang A4. Số
+            thế áp dụng cho mỗi cấp độ đủ bài.
+          </small>
+        </fieldset>
+        {!loading && selectedLevels.length > 0 && !eligibleTopics.length && (
+          <p role="status">
+            Chưa có chủ đề đủ bài cho một trang A4 ở cấp độ đã chọn. Chọn cấp độ
+            khác.
+          </p>
+        )}
+        <ol className={`${styles.sections} ${styles.topicSections}`}>
           {sections.map((row, index) => {
-            const available = catalog[row.topic]
-              ? levelExercises(catalog[row.topic]!, row.level).length
-              : null;
+            const availableLevels = availableWorksheetLevels(
+              row.topic,
+              selectedLevels,
+              catalog
+            );
+            const unavailable = !availableLevels.length;
             return (
               <li key={row.id}>
                 <span className={styles.number}>{index + 1}</span>
@@ -453,11 +550,18 @@ export default function WorksheetBuilder({
                     value={row.topic}
                     onChange={(e) =>
                       change(row.id, {
-                        topic: e.target.value as WorksheetSection['topic'],
+                        topic: e.target.value,
                       })
                     }
                   >
-                    {worksheetTopics
+                    {unavailable && (
+                      <option value={row.topic} disabled>
+                        {worksheetTopics.find((t) => t.id === row.topic)
+                          ?.title ?? row.topic}{' '}
+                        — chưa đủ bài ở cấp độ đã chọn
+                      </option>
+                    )}
+                    {eligibleTopics
                       .filter(
                         (topic) =>
                           topic.id === row.topic ||
@@ -473,30 +577,9 @@ export default function WorksheetBuilder({
                   </select>
                 </label>
                 <label>
-                  Mức độ
-                  <select
-                    aria-label={`Mức độ phần ${index + 1}`}
-                    value={row.level}
-                    onChange={(e) =>
-                      change(row.id, {
-                        level: e.target.value as WorksheetSection['level'],
-                      })
-                    }
-                  >
-                    {worksheetLevels.map((l) => (
-                      <option key={l} value={l}>
-                        {l}
-                        {l === 'Beginner' ? ' (Nhập môn)' : ''}
-                        {catalog[row.topic]
-                          ? ` · ${levelExercises(catalog[row.topic]!, l).length} thế`
-                          : ''}
-                      </option>
-                    ))}
-                  </select>
-                </label>
-                <label>
-                  Số thế
+                  Số thế / cấp độ
                   <input
+                    aria-label={`Số thế mỗi cấp độ phần ${index + 1}`}
                     type="number"
                     min={1}
                     value={row.count}
@@ -541,16 +624,26 @@ export default function WorksheetBuilder({
                   </button>
                 </div>
                 <small>
-                  {available === null ? 'Đang tải…' : `${available} thế có sẵn`}
-                  {available === 0 ? ' · Mức này chưa có bài phù hợp.' : ''}
+                  {availableLevels.length
+                    ? availableLevels
+                        .map(
+                          (level) =>
+                            `${level === 'Beginner' ? 'Nhập môn' : level}: ${levelExercises(catalog[row.topic]!, level).length} thế`
+                        )
+                        .join(' · ')
+                    : 'Chưa đủ thế cờ cho một trang A4 ở cấp độ đã chọn.'}
                 </small>
               </li>
             );
           })}
         </ol>
         <button
-          disabled={!unusedTopics.length}
-          title={!unusedTopics.length ? 'Đã thêm tất cả chủ đề.' : undefined}
+          disabled={!!loading || !unusedTopics.length}
+          title={
+            !unusedTopics.length
+              ? 'Không còn chủ đề phù hợp để thêm.'
+              : undefined
+          }
           onClick={() => {
             const topic = unusedTopics[0];
             if (!topic) return;
@@ -560,21 +653,22 @@ export default function WorksheetBuilder({
               {
                 id: nextId.current++,
                 topic: topic.id,
-                level: 'A',
-                count: '6',
+                count: defaultWorksheetCount,
               },
             ]);
           }}
         >
           + Thêm phần
         </button>
-        {worksheetTopics.length > 0 && !unusedTopics.length && (
-          <p role="status">Đã thêm tất cả chủ đề.</p>
-        )}
+        {!loading &&
+          selectedLevels.length > 0 &&
+          worksheetTopics.length > 0 &&
+          !unusedTopics.length && (
+            <p role="status">Không còn chủ đề phù hợp để thêm.</p>
+          )}
         {bookMode && (
           <section className={styles.bookSettings}>
             <h2>Ôn tập tổng hợp</h2>
-            <p>Chọn Tùy chỉnh ôn tập để đổi chủ đề, cấp độ và số thế.</p>
             <WorksheetReviewBlocks
               sourceOptions={
                 <>
@@ -608,7 +702,7 @@ export default function WorksheetBuilder({
                   ? 'Ôn lại thế cờ từ các chương trước.'
                   : 'Dùng thế cờ chưa xuất hiện trong sách.'
               }
-              sections={sections}
+              sections={chapterSections}
               topics={worksheetTopics}
               catalog={catalog}
               blocks={reviewBlocks}
@@ -619,13 +713,15 @@ export default function WorksheetBuilder({
                 setReviewSettings(settings);
                 setResult(null);
               }}
-              nextId={() => nextId.current++}
+              nextId={() => nextId.current++ * 10 + 9}
               onChange={(blocks) => {
                 setReviewOverrides(blocks);
                 setResult(null);
               }}
             />
-            {validation && !loading && <p role="status">{validation}</p>}
+            {validation && !loading && selectedLevels.length > 0 && (
+              <p role="status">{validation}</p>
+            )}
           </section>
         )}
       </fieldset>

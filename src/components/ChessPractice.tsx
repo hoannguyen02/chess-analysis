@@ -1,5 +1,7 @@
+import BeginnerTacticImport from './BeginnerTacticImport';
 import {
   drawThemeRoutePaths,
+  beginnerPracticeExercises,
   drawPracticeChoices,
   drawPracticeLevelChoices,
   initialDrawPracticeLevel,
@@ -17,12 +19,14 @@ import type { DrawCategory } from '@/lib/chess/draw-practice';
 import { simplificationLevelDescriptions } from '@/lib/chess/simplification-levels';
 import { discoveryLevelDescriptions } from '@/lib/chess/discovery-levels';
 import { forkLevelDescriptions } from '@/lib/chess/fork-levels';
+import { removingDefenderLevelDescriptions } from '@/lib/chess/removing-defender-levels';
 import { pinLevelDescriptions } from '@/lib/chess/pin-levels';
 import { skewerLevelDescriptions } from '@/lib/chess/skewer-levels';
 import styles from '@/styles/ChessPractice.module.css';
 import dynamic from 'next/dynamic';
 import Link from 'next/link';
 import { useState } from 'react';
+import { useRouter } from 'next/router';
 import GamePlayerNames from './GamePlayerNames';
 import { TeachingTimer } from './TeachingTimer';
 
@@ -49,8 +53,18 @@ function CategoryPractice({
   category: DrawCategory;
   showIntroduction?: boolean;
 }) {
-  const [page, setPage] = useState(0);
-  const [activeIndex, setActiveIndex] = useState(0);
+  const router = useRouter();
+  const initialIndex = Math.max(
+    0,
+    category.exercises.findIndex(
+      (e) =>
+        typeof router.query.exercise === 'string' &&
+        (e.manualId === router.query.exercise ||
+          e.management?.id === router.query.exercise)
+    )
+  );
+  const [page, setPage] = useState(Math.floor(initialIndex / PAGE_SIZE));
+  const [activeIndex, setActiveIndex] = useState(initialIndex);
   const { trainerRef, expandButtonRef, expanded, toggleExpanded } =
     usePracticeFullscreen();
   const [timerPaused, setTimerPaused] = useState(false);
@@ -253,39 +267,57 @@ export default function ChessPractice({
     | 'draw'
     | 'skewer'
     | 'pin'
+    | 'removing-defender'
     | 'fork'
     | 'discovery'
     | 'simplification'
     | 'checkmate'
-    | 'promotion';
+    | 'promotion'
+    | 'manual';
   showLevelFilter?: boolean;
   showCategoryNavigation?: boolean;
   categoryLinks?: DrawThemeLink[];
 }) {
+  const router = useRouter();
   const choices =
     variant === 'draw' ? drawPracticeChoices(categories) : categories;
   const [selectedId, setSelectedId] = useState(
     () =>
       (
         choices.find((item) =>
+          item.exercises.some(
+            (e) =>
+              typeof router.query.exercise === 'string' &&
+              (e.manualId === router.query.exercise ||
+                e.management?.id === router.query.exercise)
+          )
+        ) ??
+        choices.find((item) =>
           choices.some((c) => c.exercises.some((e) => e.beginner))
             ? item.exercises.some((e) => e.beginner)
             : filterDrawLevel(item.exercises, 'A').length > 0
-        ) ?? choices[0]
+        ) ??
+        choices[0]
       ).id
   );
   const [selectedLevel, setSelectedLevel] = useState<
     DrawLevel | 'all' | 'beginner'
   >(
-    !showLevelFilter
-      ? 'all'
-      : variant === 'draw'
-        ? initialDrawPracticeLevel(categories)
-        : categories.some((item) =>
-              item.exercises.some((exercise) => exercise.beginner)
-            )
-          ? 'beginner'
-          : 'A'
+    router.query.level === 'Beginner'
+      ? 'beginner'
+      : drawLevels.some((l) => l === router.query.level)
+        ? (router.query.level as DrawLevel)
+        : !showLevelFilter
+          ? 'all'
+          : variant === 'draw'
+            ? initialDrawPracticeLevel(categories)
+            : categories.some((item) =>
+                  item.exercises.some((exercise) => exercise.beginner)
+                )
+              ? 'beginner'
+              : variant === 'removing-defender' || variant === 'manual'
+                ? 'beginner'
+                : 'A'
   );
   const [beginnerKind, setBeginnerKind] = useState<'king' | 'queen'>('king');
   const category = choices.find((item) => item.id === selectedId) ?? choices[0];
@@ -310,14 +342,9 @@ export default function ChessPractice({
       : {}),
     exercises:
       selectedLevel === 'beginner'
-        ? category.exercises.filter(
-            (exercise) =>
-              exercise.beginner &&
-              (variant === 'draw' ||
-                variant === 'checkmate' ||
-                variant === 'promotion' ||
-                variant === 'pin' ||
-                (exercise.beginnerKind ?? 'king') === beginnerKind)
+        ? beginnerPracticeExercises(
+            category,
+            variant === 'skewer' ? beginnerKind : undefined
           )
         : filterDrawLevel(category.exercises, selectedLevel),
   };
@@ -375,6 +402,13 @@ export default function ChessPractice({
           <CategoryIntroduction category={filtered} />
         </div>
       )}
+      {selectedLevel === 'beginner' && category.managementScope && (
+        <BeginnerTacticImport
+          key={category.managementScope}
+          scope={category.managementScope}
+          writable={Boolean(category.managementWritable)}
+        />
+      )}
       {showLevelFilter && (
         <div className={styles.filterPanel}>
           <div className={styles.filterGroup}>
@@ -399,10 +433,7 @@ export default function ChessPractice({
                     </span>
                   </button>
                 ))}
-              {(variant === 'checkmate' ||
-                variant === 'promotion' ||
-                variant === 'pin' ||
-                variant === 'discovery') && (
+              {variant !== 'draw' && (
                 <button
                   type="button"
                   aria-pressed={selectedLevel === 'beginner'}
@@ -417,46 +448,6 @@ export default function ChessPractice({
                   </span>
                 </button>
               )}
-              {variant !== 'draw' &&
-                variant !== 'checkmate' &&
-                variant !== 'promotion' &&
-                variant !== 'pin' &&
-                variant !== 'discovery' &&
-                (['king', 'queen'] as const).map((kind) => {
-                  const count = category.exercises.filter(
-                    (exercise) =>
-                      exercise.beginner &&
-                      (exercise.beginnerKind ?? 'king') === kind
-                  ).length;
-                  if (!count) return null;
-                  return (
-                    <button
-                      type="button"
-                      key={kind}
-                      aria-pressed={
-                        selectedLevel === 'beginner' && beginnerKind === kind
-                      }
-                      title={
-                        variant !== 'skewer'
-                          ? 'Nhập môn / Beginner'
-                          : kind === 'king'
-                            ? 'Nhập môn: xiên Vua'
-                            : 'Nhập môn: xiên Hậu'
-                      }
-                      onClick={() => {
-                        setSelectedLevel('beginner');
-                        setBeginnerKind(kind);
-                      }}
-                    >
-                      {variant !== 'skewer'
-                        ? 'Nhập môn / Beginner'
-                        : kind === 'king'
-                          ? 'Nhập môn · Xiên Vua'
-                          : 'Nhập môn · Xiên Hậu'}
-                      <span aria-label={`${count} bài`}>{count}</span>
-                    </button>
-                  );
-                })}
               {variant !== 'draw' &&
                 drawLevels.map((level) => {
                   const count = filterDrawLevel(
@@ -475,11 +466,13 @@ export default function ChessPractice({
                             ? discoveryLevelDescriptions
                             : variant === 'fork'
                               ? forkLevelDescriptions
-                              : variant === 'pin'
-                                ? pinLevelDescriptions
-                                : variant === 'skewer'
-                                  ? skewerLevelDescriptions
-                                  : drawLevelDescriptions)[level]
+                              : variant === 'removing-defender'
+                                ? removingDefenderLevelDescriptions
+                                : variant === 'pin'
+                                  ? pinLevelDescriptions
+                                  : variant === 'skewer'
+                                    ? skewerLevelDescriptions
+                                    : drawLevelDescriptions)[level]
                       }
                       onClick={() => setSelectedLevel(level)}
                     >
@@ -491,6 +484,20 @@ export default function ChessPractice({
             </nav>
           </div>
         </div>
+      )}
+      {variant === 'skewer' && selectedLevel === 'beginner' && (
+        <nav className={styles.controls} aria-label="Chọn kiểu xiên">
+          {(['king', 'queen'] as const).map((kind) => (
+            <button
+              key={kind}
+              type="button"
+              aria-pressed={beginnerKind === kind}
+              onClick={() => setBeginnerKind(kind)}
+            >
+              {kind === 'king' ? 'Xiên Vua' : 'Xiên Hậu'}
+            </button>
+          ))}
+        </nav>
       )}
       {filtered.exercises.length ? (
         <CategoryPractice

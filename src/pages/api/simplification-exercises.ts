@@ -21,22 +21,27 @@ export default async function handler(
     practicePlayers,
     practiceGameOpening,
   } = await import('@/lib/server/practice-game-caption');
-  return res.status(200).json({
-    hubPath: privateHubPath(),
-    categories: [
-      {
-        id: 'simplification',
-        title: 'Đơn giản hóa',
-        description:
-          'Đổi quân để chuyển sang thế cờ dễ xử lý hơn. Trước khi đổi, hãy đánh giá tàn cuộc còn lại: có thắng được hoặc giữ hòa không?',
-        exercises: (exercises as DrawExercise[]).map((exercise) => ({
-          ...exercise,
-          gameCaption: practiceGameCaption(exercise.gameReference),
-          gameOpening: practiceGameOpening(exercise.gameReference),
-          playerTitle: practicePlayerTitle(exercise.gameReference),
-          players: practicePlayers(exercise.gameReference),
-        })),
-      },
-    ],
-  });
+  const { includeManualExercises } = await import(
+    '@/lib/server/manual-tactics'
+  );
+  return res.status(200).json(
+    await includeManualExercises('/simplification', {
+      hubPath: privateHubPath(),
+      categories: [
+        {
+          id: 'simplification',
+          title: 'Đơn giản hóa',
+          description:
+            'Đổi quân để chuyển sang thế cờ dễ xử lý hơn. Trước khi đổi, hãy đánh giá tàn cuộc còn lại: có thắng được hoặc giữ hòa không?',
+          exercises: (exercises as DrawExercise[]).map((exercise) => ({
+            ...exercise,
+            gameCaption: practiceGameCaption(exercise.gameReference),
+            gameOpening: practiceGameOpening(exercise.gameReference),
+            playerTitle: practicePlayerTitle(exercise.gameReference),
+            players: practicePlayers(exercise.gameReference),
+          })),
+        },
+      ],
+    })
+  );
 }

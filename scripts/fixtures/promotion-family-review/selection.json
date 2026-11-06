@@ -9,7 +9,7 @@
           "b8=R",
           "Ka7"
         ],
-        "level": "Beginner",
+        "level": "A",
         "aspects": [
           "move-P",
           "noncapture",
@@ -19,7 +19,7 @@
           "white"
         ],
         "status": "retained",
-        "reason": "Distinct decision retained with legal continuation and existing objective evidence; finite root screen is not exhaustive."
+        "reason": "User grading policy: avoiding pat through promotion begins at A. Position and solution unchanged."
       },
       {
         "id": "underpromotion-129eff642d2244c4",
@@ -139,7 +139,7 @@
           "c8=B",
           "Ka8"
         ],
-        "level": "Beginner",
+        "level": "A",
         "aspects": [
           "move-P",
           "noncapture",
@@ -149,7 +149,7 @@
           "white"
         ],
         "status": "retained",
-        "reason": "Both Queen and Rook stalemate; Bishop or Knight retains a minor-piece gain. Four-piece introduction, unlike the existing Rook-only anti-pat decision."
+        "reason": "User grading policy: avoiding pat through promotion begins at A. Position and solution unchanged."
       },
       {
         "id": "underpromotion-0129e7239b9dc5c2",
@@ -234,33 +234,9 @@
     ],
     "coverage": {
       "Beginner": {
-        "count": 3,
-        "gap": 21,
+        "count": 1,
+        "gap": 23,
         "aspects": {
-          "move-P": [
-            "underpromotion-932093e04d4bd5fc",
-            "underpromotion-8801066d7f01256e",
-            "underpromotion-7a553890c3e5b112"
-          ],
-          "noncapture": [
-            "underpromotion-932093e04d4bd5fc",
-            "underpromotion-7a553890c3e5b112"
-          ],
-          "promote-r": [
-            "underpromotion-932093e04d4bd5fc"
-          ],
-          "quiet": [
-            "underpromotion-932093e04d4bd5fc",
-            "underpromotion-7a553890c3e5b112"
-          ],
-          "straight-promotion": [
-            "underpromotion-932093e04d4bd5fc",
-            "underpromotion-7a553890c3e5b112"
-          ],
-          "white": [
-            "underpromotion-932093e04d4bd5fc",
-            "underpromotion-7a553890c3e5b112"
-          ],
           "black": [
             "underpromotion-8801066d7f01256e"
           ],
@@ -273,11 +249,11 @@
           "check": [
             "underpromotion-8801066d7f01256e"
           ],
-          "promote-n": [
+          "move-P": [
             "underpromotion-8801066d7f01256e"
           ],
-          "promote-b": [
-            "underpromotion-7a553890c3e5b112"
+          "promote-n": [
+            "underpromotion-8801066d7f01256e"
           ]
         },
         "unresolved": [
@@ -287,39 +263,52 @@
         ]
       },
       "A": {
-        "count": 3,
-        "gap": 21,
+        "count": 5,
+        "gap": 19,
         "aspects": {
+          "move-P": [
+            "underpromotion-932093e04d4bd5fc",
+            "underpromotion-fb60babf7c46b399",
+            "underpromotion-8a617f6955b22dfa",
+            "underpromotion-7a553890c3e5b112",
+            "underpromotion-968b0196ac9e8f1a"
+          ],
+          "noncapture": [
+            "underpromotion-932093e04d4bd5fc",
+            "underpromotion-fb60babf7c46b399",
+            "underpromotion-8a617f6955b22dfa",
+            "underpromotion-7a553890c3e5b112"
+          ],
+          "promote-r": [
+            "underpromotion-932093e04d4bd5fc"
+          ],
+          "quiet": [
+            "underpromotion-932093e04d4bd5fc",
+            "underpromotion-fb60babf7c46b399",
+            "underpromotion-8a617f6955b22dfa",
+            "underpromotion-7a553890c3e5b112"
+          ],
+          "straight-promotion": [
+            "underpromotion-932093e04d4bd5fc",
+            "underpromotion-fb60babf7c46b399",
+            "underpromotion-8a617f6955b22dfa",
+            "underpromotion-7a553890c3e5b112"
+          ],
+          "white": [
+            "underpromotion-932093e04d4bd5fc",
+            "underpromotion-fb60babf7c46b399",
+            "underpromotion-8a617f6955b22dfa",
+            "underpromotion-7a553890c3e5b112"
+          ],
           "check": [
             "underpromotion-fb60babf7c46b399",
             "underpromotion-8a617f6955b22dfa",
             "underpromotion-968b0196ac9e8f1a"
           ],
-          "move-P": [
-            "underpromotion-fb60babf7c46b399",
-            "underpromotion-8a617f6955b22dfa",
-            "underpromotion-968b0196ac9e8f1a"
-          ],
-          "noncapture": [
-            "underpromotion-fb60babf7c46b399",
-            "underpromotion-8a617f6955b22dfa"
-          ],
           "promote-n": [
             "underpromotion-fb60babf7c46b399",
             "underpromotion-8a617f6955b22dfa",
             "underpromotion-968b0196ac9e8f1a"
-          ],
-          "quiet": [
-            "underpromotion-fb60babf7c46b399",
-            "underpromotion-8a617f6955b22dfa"
-          ],
-          "straight-promotion": [
-            "underpromotion-fb60babf7c46b399",
-            "underpromotion-8a617f6955b22dfa"
-          ],
-          "white": [
-            "underpromotion-fb60babf7c46b399",
-            "underpromotion-8a617f6955b22dfa"
           ],
           "capture": [
             "underpromotion-8a617f6955b22dfa",
@@ -327,6 +316,9 @@
           ],
           "move-N": [
             "underpromotion-8a617f6955b22dfa"
+          ],
+          "promote-b": [
+            "underpromotion-7a553890c3e5b112"
           ],
           "black": [
             "underpromotion-968b0196ac9e8f1a"

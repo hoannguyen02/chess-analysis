@@ -57,6 +57,11 @@ def main():
   sources[r['gameId']]=dict(kind='game',headers=r['headers'],fen=r['gameFen'],lines=[r['gameMoves']])
  for name,data in [('fork-exercises',exercises),('fork-game-sources',sources)]:
   (ROOT/f'src/lib/server/{name}.json').write_text(json.dumps(data,ensure_ascii=False,indent=2)+'\n')
+ beginner=ROOT/'scripts/fixtures/fork/beginner.json'
+ if beginner.exists():
+  from beginner_tactics import approved_exercises
+  items=approved_exercises(json.loads(beginner.read_text()))
+  (ROOT/'src/lib/server/fork-beginner-exercises.json').write_text(json.dumps(items,ensure_ascii=False,indent=2)+'\n')
  (ROOT/'scripts/fixtures/fork/published.json').write_text(json.dumps(dict(records=ordered,rejected=sorted(set(rejected)-records.keys())),ensure_ascii=False,indent=2)+'\n')
  print(len(ordered),'games',{l:sum(r['level']==l for r in ordered) for l in miner.LEVELS})
 if __name__=='__main__':main()

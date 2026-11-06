@@ -94,3 +94,15 @@ The [web tactics review](web-tactics-copy-review.md) subsequently moved the
 reviewed wording into the four tactical collections and their publishing
 scripts. Those 827 exercise records now have identical web/PDF solution prose;
 the PDF adapter remains for other collections and backward compatibility.
+
+
+### Reader-friendly opponent-move wording
+
+For shared PDF instructions, prefer "nước đi của đối phương" over "nước đáp".
+Use "nước đi tốt nhất của đối phương" when instructing calculation against best
+play; do not add "tốt nhất" to a general recording or move-count explanation.
+The level descriptions and counting note address the reader as "mình": only
+"nước đi của mình" count, and the opponent's moves are excluded. The example
+"Trắng đi - Đen đi - Trắng đi" therefore counts as two White moves. Technical
+exercise analyses may retain "nước đáp" where appropriate; changing a general
+instruction does not justify relabeling a played or illustrative reply as best.

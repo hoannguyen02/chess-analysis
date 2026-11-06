@@ -20,7 +20,12 @@ export type DrawThemeLink = {
 export function drawPracticeChoices(
   categories: DrawCategory[]
 ): DrawCategory[] {
-  return categories.filter((category) => category.exercises.length > 0);
+  return categories.filter(
+    (category) =>
+      category.exercises.length > 0 ||
+      (category.removedCount ?? 0) > 0 ||
+      (category.transferredCount ?? 0) > 0
+  );
 }
 
 /** The Draw page always exposes Beginner and the five reviewed levels. */
@@ -37,6 +42,18 @@ export function drawPracticeLevelChoices(category: DrawCategory) {
       count: filterDrawLevel(category.exercises, level).length,
     })),
   ];
+}
+
+/** Only the skewer page splits Beginner by the piece being skewered. */
+export function beginnerPracticeExercises(
+  category: DrawCategory,
+  skewerKind?: 'king' | 'queen'
+) {
+  return category.exercises.filter(
+    (exercise) =>
+      exercise.beginner &&
+      (!skewerKind || (exercise.beginnerKind ?? 'king') === skewerKind)
+  );
 }
 
 /** Start sparse theme routes on their first level that has positions. */

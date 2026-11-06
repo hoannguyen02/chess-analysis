@@ -21,17 +21,22 @@ export default async function handler(
     practicePlayers,
     practiceGameOpening,
   } = await import('@/lib/server/practice-game-caption');
-  return res.status(200).json({
-    hubPath: privateHubPath(),
-    categories: (categories as DrawCategory[]).map((category) => ({
-      ...category,
-      exercises: category.exercises.map((exercise) => ({
-        ...exercise,
-        gameCaption: practiceGameCaption(exercise.gameReference),
-        gameOpening: practiceGameOpening(exercise.gameReference),
-        playerTitle: practicePlayerTitle(exercise.gameReference),
-        players: practicePlayers(exercise.gameReference),
+  const { includeManualExercises } = await import(
+    '@/lib/server/manual-tactics'
+  );
+  return res.status(200).json(
+    await includeManualExercises('/passed-pawn-simplification', {
+      hubPath: privateHubPath(),
+      categories: (categories as DrawCategory[]).map((category) => ({
+        ...category,
+        exercises: category.exercises.map((exercise) => ({
+          ...exercise,
+          gameCaption: practiceGameCaption(exercise.gameReference),
+          gameOpening: practiceGameOpening(exercise.gameReference),
+          playerTitle: practicePlayerTitle(exercise.gameReference),
+          players: practicePlayers(exercise.gameReference),
+        })),
       })),
-    })),
-  });
+    })
+  );
 }

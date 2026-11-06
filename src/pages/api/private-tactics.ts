@@ -12,5 +12,10 @@ export default async function handler(
     return res.status(405).end();
   }
   const { topicGroups } = await import('@/lib/server/private-tactics');
-  return res.status(200).json({ hubPath: privateHubPath(), topicGroups });
+  const { tacticsCatalog } = await import('@/lib/server/tactics-catalog');
+  return res.status(200).json({
+    hubPath: privateHubPath(),
+    topicGroups,
+    themeCatalog: tacticsCatalog,
+  });
 }

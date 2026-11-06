@@ -1,6 +1,8 @@
+import { POSITIONS_PER_PAGE } from './worksheet-layout';
 import type { WorksheetSection } from './worksheet';
 export type WorksheetSectionDraft = Omit<WorksheetSection, 'count'> & {
   count: string;
+  topicGroupId?: number;
 };
 export type ReviewBlockDraft = {
   id: number;
@@ -17,7 +19,7 @@ export type ReviewSettings = {
 export const defaultReviewSettings: ReviewSettings = {
   enabled: true,
   interval: '3',
-  count: '6',
+  count: String(POSITIONS_PER_PAGE),
   cumulative: false,
   final: true,
 };
@@ -36,20 +38,29 @@ export function automaticReviewBlocks(
   const count = Number(settings.count);
   if (!settings.count.trim() || !Number.isSafeInteger(count) || count < 1)
     throw new Error('Số thế mỗi chủ đề ôn tập phải là số nguyên lớn hơn 0.');
+  // Multiple selected levels belong to one topic for review placement.
+  const groups: WorksheetSectionDraft[][] = [];
+  for (const section of sections) {
+    const last = groups.at(-1);
+    const key = section.topicGroupId ?? section.id;
+    if (last && (last[0].topicGroupId ?? last[0].id) === key)
+      last.push(section);
+    else groups.push([section]);
+  }
   const ends: number[] = [];
-  for (let end = interval; end <= sections.length; end += interval)
+  for (let end = interval; end <= groups.length; end += interval)
     ends.push(end);
-  if (settings.final && ends.at(-1) !== sections.length)
-    ends.push(sections.length);
+  if (settings.final && ends.at(-1) !== groups.length) ends.push(groups.length);
   return ends.map((end) => {
-    const final = settings.final && end === sections.length;
+    const final = settings.final && end === groups.length;
     const start =
       final || settings.cumulative ? 0 : Math.max(0, end - interval);
     return {
       id: final ? -1 : -end - 1,
-      afterSectionId: sections[end - 1].id,
-      rows: sections
+      afterSectionId: groups[end - 1].at(-1)!.id,
+      rows: groups
         .slice(start, end)
+        .flat()
         .map((s) => ({ ...s, count: settings.count })),
     };
   });

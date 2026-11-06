@@ -1,5 +1,6 @@
 import { Chess, Square } from 'chess.js';
 import type { DrawExercise } from './draw-practice';
+import { proveRemovingDefenderAlternative } from './removing-defender-alternatives';
 
 export type PromotionPiece = 'q' | 'r' | 'b' | 'n';
 
@@ -25,11 +26,17 @@ export function replayDrawExercise(
 }
 
 // A preceding move is source context, not the student's first solution move.
-export function previousDrawPosition(exercise: DrawExercise) {
+export function previousDrawPosition(exercise: Pick<DrawExercise, 'fen' | 'previousMove'>) {
   if (!exercise.previousMove) return null;
   const game = new Chess(exercise.previousMove.fen);
   const move = game.move(exercise.previousMove.move);
-  if (!move || game.fen() !== exercise.fen) {
+  const fen = (board: ReturnType<typeof Chess>) => {
+    const fields = board.fen().split(' ');
+    // An uncapturable en passant square can be omitted by PGN tools.
+    if (!board.moves({ verbose: true }).some((candidate) => candidate.flags.includes('e'))) fields[3] = '-';
+    return fields.join(' ');
+  };
+  if (!move || fen(game) !== fen(new Chess(exercise.fen))) {
     throw new Error('Previous move does not reach the exercise FEN');
   }
   return { fen: exercise.previousMove.fen, move };
@@ -91,7 +98,7 @@ function proveMateAlternative(
 }
 
 // The gain is measured in centipawns against the starting material balance.
-// Completion waits for a defensive reply, and promotion must have occurred.
+// Completion waits for a defensive reply. Reviewed promotion threats may win material when an exchange is declined.
 export function promotionGainReached(
   exercise: DrawExercise,
   game: ReturnType<typeof Chess>
@@ -123,13 +130,33 @@ export function promotionGainReached(
       (move) =>
         typeof move !== 'string' && move.color === solver && move.promotion
     );
-  return (
-    Boolean(promoted) &&
-    !game.in_draw() &&
-    (game.turn() === solver ||
-      (game.in_checkmate() && game.turn() !== solver)) &&
-    balance(game) - balance(initial) >= exercise.promotionGain.minimumGain
-  );
+  const minimum = exercise.promotionGain.minimumGain;
+  const baseline = balance(initial);
+  if (!(promoted || exercise.promotionGain.allowUnrealizedThreat) ||
+      game.in_draw() || balance(game) - baseline < minimum ||
+      !(game.turn() === solver || (game.in_checkmate() && game.turn() !== solver))) return false;
+  if (!exercise.promotionGain.verifyCheckingReplies) return true;
+  const board = new Chess(game.fen());
+  const deadline = Date.now() + 40;
+  let nodes = 0;
+  function secure(left: number): boolean {
+    if (++nodes > 2000 || Date.now() > deadline || balance(board) - baseline < minimum) return false;
+    if (board.in_checkmate()) return board.turn() !== solver;
+    if (board.in_draw()) return false;
+    const own = board.turn() === solver;
+    if (own && !board.in_check()) return true;
+    if (own && !left) return false;
+    const moves = board.moves();
+    for (const move of moves) {
+      board.move(move);
+      const safe = secure(left - Number(own));
+      board.undo();
+      if (own && safe) return true;
+      if (!own && !safe) return false;
+    }
+    return !own && moves.length > 0;
+  }
+  return secure(2);
 }
 
 // Direct promotion tasks certify the material gain against every legal reply.
@@ -142,11 +169,12 @@ export function verifyDirectPromotionMaterial(
   if (!exercise.promotionMaterial) return null;
   const board = new Chess(exercise.fen);
   if (
-    ![3, 4].includes(board.board().flat().filter(Boolean).length) ||
+    ![3, 4, 5, 6].includes(board.board().flat().filter(Boolean).length) ||
     board
       .board()
       .flat()
-      .filter((piece) => piece?.type === 'p').length !== 1
+      .filter((piece) => piece?.type === 'p' && piece.color === board.turn())
+      .length < 1
   )
     return null;
   const solver = board.turn();
@@ -164,8 +192,6 @@ export function verifyDirectPromotionMaterial(
   const before = material();
   const promotion = board.move(input);
   if (!promotion?.promotion || board.in_draw()) return null;
-  // Direct capture promotions must also leave only kings and the promoted piece.
-  if (board.board().flat().filter(Boolean).length !== 3) return null;
   if (board.in_checkmate()) return { moves: [promotion.san] };
   const replies = board.moves();
   if (replies.length > 100) return null;
@@ -173,6 +199,9 @@ export function verifyDirectPromotionMaterial(
     board.move(reply);
     const reached =
       !board.game_over() &&
+      (!exercise.promotionMaterial.retainPromotedPiece ||
+        (board.get(promotion.to)?.type === promotion.promotion &&
+          board.get(promotion.to)?.color === solver)) &&
       material() - before >= exercise.promotionMaterial.minimumGain;
     board.undo();
     if (!reached) return null;
@@ -256,6 +285,17 @@ export function tryDrawMove(
   const terminalDraw =
     exercise.outcome !== 'fortress' &&
     drawPositionOutcome(game) === exercise.outcome;
+  if (!sameMove && played.length === 0 && exercise.outcome === 'removing-defender') {
+    const tail = proveRemovingDefenderAlternative(exercise, move.san);
+    if (tail) {
+      return {
+        status: 'accepted' as const,
+        played: [move.san, tail[0]],
+        complete: false,
+        continuation: [move.san, ...tail],
+      };
+    }
+  }
   if (!sameMove && exercise.promotionGain) {
     const solver = new Chess(exercise.fen).turn();
     const remaining =

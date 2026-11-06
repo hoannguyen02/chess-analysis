@@ -1,0 +1,1987 @@
+[
+  {
+    "id": "removing-defender-beginner-01",
+    "title": "Bắt quân bảo vệ Xe",
+    "beginner": true,
+    "mode": "interactive",
+    "outcome": "removing-defender",
+    "goal": "material",
+    "fen": "8/K7/8/8/4k3/3b4/1R2B3/1r6 w - - 0 1",
+    "removingDefender": {
+      "target": "b1",
+      "minimumGain": 5
+    },
+    "prompt": "Loại bỏ quân đang bảo vệ Xe đen, rồi giành lợi thế vật chất.",
+    "moves": ["Bxd3+", "Kxd3", "Rxb1"],
+    "alternativeLines": [
+      ["Bxd3+", "Ke5", "Bxb1"],
+      ["Bxd3+", "Kd5", "Bxb1"],
+      ["Bxd3+", "Kf4", "Bxb1"],
+      ["Bxd3+", "Kd4", "Bxb1"],
+      ["Bxd3+", "Kf3", "Bxb1"],
+      ["Bxd3+", "Ke3", "Bxb1"]
+    ],
+    "hints": ["Xe b1 được Tượng d3 bảo vệ. Hãy tìm nước bắt Tượng có chiếu."],
+    "solution": "Bxd3+ — Tượng từ e2 bắt Tượng d3 và chiếu Vua. Nếu ...Kxd3, Trắng chơi Rxb1 — Xe từ b2 bắt Xe b1. Nếu Vua đen đi ô khác, Trắng chơi Bxb1 — Tượng từ d3 bắt Xe b1.",
+    "source": "original-composition"
+  },
+  {
+    "id": "removing-defender-beginner-02",
+    "title": "Đổi Xe để bắt Tượng",
+    "beginner": true,
+    "mode": "interactive",
+    "outcome": "removing-defender",
+    "goal": "material",
+    "fen": "8/3k4/4p3/3r3R/3b4/5N2/P7/7K w - - 0 1",
+    "removingDefender": {
+      "target": "d4",
+      "minimumGain": 3
+    },
+    "prompt": "Loại bỏ quân bảo vệ Tượng đen, rồi giành lợi thế vật chất.",
+    "moves": ["Rxd5+", "exd5", "Nxd4"],
+    "alternativeLines": [
+      ["Rxd5+", "Ke8", "Rxd4"],
+      ["Rxd5+", "Kc8", "Rxd4"],
+      ["Rxd5+", "Ke7", "Rxd4"],
+      ["Rxd5+", "Kc7", "Rxd4"],
+      ["Rxd5+", "Kc6", "Rxd4"]
+    ],
+    "hints": [
+      "Xe d5 bảo vệ Tượng d4. Tìm nước bắt Xe có chiếu và tính nước bắt lại của Tốt."
+    ],
+    "solution": "Rxd5+ — Xe từ h5 bắt Xe d5 và chiếu Vua. Nếu ...exd5, Trắng chơi Nxd4 — Mã từ f3 bắt Tượng d4. Nếu Vua đen đi ô khác, Trắng chơi Rxd4 — Xe từ d5 bắt Tượng d4.",
+    "source": "original-composition"
+  },
+  {
+    "id": "removing-defender-beginner-03",
+    "title": "Chiếu để Vua rời Tượng",
+    "beginner": true,
+    "mode": "interactive",
+    "outcome": "removing-defender",
+    "goal": "material",
+    "fen": "4b3/4r3/4k3/K7/B1p5/8/5R2/8 b - - 0 1",
+    "removingDefender": {
+      "target": "a4",
+      "minimumGain": 3
+    },
+    "prompt": "Đưa Vua trắng rời Tượng a4, rồi giành lợi thế vật chất.",
+    "moves": ["Ra7+", "Kb6", "Rxa4"],
+    "alternativeLines": [["Ra7+", "Kb4", "Rxa4+"]],
+    "hints": ["Vua a5 bảo vệ Tượng a4. Tìm nước chiếu bằng Xe."],
+    "solution": "Ra7+ — Xe từ e7 đến a7 và chiếu Vua. Sau Kb6, Đen chơi Rxa4 — Xe từ a7 bắt Tượng a4. Nếu Trắng đi Kb4, Rxa4+ vẫn bắt Tượng và chiếu Vua; Tượng e8 bảo vệ Xe đen.",
+    "source": "original-composition"
+  },
+  {
+    "id": "removing-defender-beginner-04",
+    "title": "Đổi Xe để đưa Vua khỏi Tượng",
+    "beginner": true,
+    "mode": "interactive",
+    "outcome": "removing-defender",
+    "goal": "material",
+    "fen": "4K3/7R/4B2r/7k/5Pb1/8/8/8 w - - 0 1",
+    "removingDefender": {
+      "target": "g4",
+      "minimumGain": 3
+    },
+    "prompt": "Đưa Vua đen rời Tượng g4, rồi giành lợi thế vật chất.",
+    "moves": ["Rxh6+", "Kxh6", "Bxg4"],
+    "alternativeLines": [
+      ["Bxg4+", "Kxg4", "Rxh6", "Kxf4"],
+      ["Bxg4+", "Kg6", "Rxh6+", "Kxh6"],
+      ["Bxg4+", "Kg6", "Rxh6+", "Kg7"],
+      ["Bxg4+", "Kh4", "Rxh6+", "Kxg4"],
+      ["Bxg4+", "Kh4", "Rxh6+", "Kg3", "Be6", "Kxf4"],
+      ["Bf7+", "Kh4", "Rxh6+", "Bh5", "Rxh5+", "Kg3"],
+      ["Bf7+", "Kh4", "Rxh6+", "Kg3", "Be6", "Bxe6", "Rxe6", "Kxf4"]
+    ],
+    "hints": [
+      "Vua h5 bảo vệ Tượng g4. Tìm nước bắt Xe có chiếu để đưa Vua rời Tượng."
+    ],
+    "solution": "Rxh6+ — Xe từ h7 bắt Xe h6 và chiếu Vua. Sau Kxh6, Vua đen rời vị trí bảo vệ Tượng g4; Trắng chơi Bxg4 — Tượng từ e6 bắt Tượng g4. Trắng cũng có thể bắt Tượng bằng Bxg4+ rồi dùng Xe bắt quân còn lại.",
+    "source": "original-composition"
+  },
+  {
+    "id": "removing-defender-beginner-05",
+    "title": "Tốt bắt Mã bảo vệ Tượng",
+    "beginner": true,
+    "mode": "interactive",
+    "outcome": "removing-defender",
+    "goal": "material",
+    "fen": "8/8/2k2b2/3n2B1/2P5/8/1P6/K7 w - - 0 1",
+    "removingDefender": {
+      "target": "f6",
+      "minimumGain": 5
+    },
+    "prompt": "Bắt Mã bảo vệ Tượng f6, rồi giành lợi thế vật chất.",
+    "moves": ["cxd5+", "Kxd5", "Bxf6"],
+    "alternativeLines": [["cxd5+", "Kd6", "Bxf6"]],
+    "hints": [
+      "Mã d5 bảo vệ Tượng f6. Tốt c4 có thể bắt Mã và chiếu Vua không?"
+    ],
+    "solution": "cxd5+ — Tốt từ c4 bắt Mã d5 và chiếu Vua. Sau Kxd5, Bxf6 — Tượng từ g5 bắt Tượng f6. Nếu Vua đen đi sang ô khác, Trắng vẫn có thể bắt Tượng f6. Bắt Tượng ngay bằng Bxf6 cho phép Mã bắt lại bằng Nxf6.",
+    "source": "original-composition"
+  },
+  {
+    "id": "removing-defender-a-vernay-mosesov-2026",
+    "title": "Vernay — Mosesov",
+    "prompt": "Loại bỏ quân bảo vệ Tốt b7 để giành lợi thế vật chất.",
+    "mode": "interactive",
+    "outcome": "removing-defender",
+    "goal": "material",
+    "fen": "6k1/pp1r3p/5np1/8/P7/1P3B2/6PP/3R2K1 w - - 2 32",
+    "previousMove": {
+      "fen": "6k1/pp1r3p/6p1/3n4/P7/1P3B2/6PP/3R2K1 b - - 1 31",
+      "move": "Nf6"
+    },
+    "gameReference": {
+      "id": "babe6cdb28443031",
+      "kind": "game",
+      "ply": 62,
+      "branch": 0,
+      "collection": "removing-defender"
+    },
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "reason": "Đổi Xe trực tiếp để bắt Tốt; không cần thí quân.",
+      "solverMoves": 3,
+      "sacrificeCount": 0
+    },
+    "moves": ["Rxd7", "Nxd7", "Bxb7", "Nc5", "Bd5+"],
+    "alternativeLines": [["Rxd7", "Nxd7", "Bxb7", "Kf7", "Kf2"]],
+    "hints": ["Xe d7 bảo vệ Tốt b7. Hãy tính nước đổi Xe trước khi bắt Tốt."],
+    "solution": "Rxd7 Nxd7 Bxb7: sau khi đổi Xe, Tượng bắt được Tốt b7. Trong một phương án phân tích, ...Nc5 tấn công Tượng nhưng Bd5+ đưa Tượng đến ô an toàn với chiếu. Trong ván đấu, Đen chơi ...Kf7.",
+    "source": "https://theweekinchess.com/zips/twic1666g.zip",
+    "removingDefender": {
+      "target": "b7",
+      "minimumGain": 1
+    }
+  },
+  {
+    "id": "removing-defender-a-firouzja-vachier-2026",
+    "title": "Firouzja — Vachier-Lagrave",
+    "prompt": "Loại bỏ quân bảo vệ Tốt b2 để giành lợi thế vật chất.",
+    "mode": "interactive",
+    "outcome": "removing-defender",
+    "goal": "material",
+    "fen": "r5k1/2p1p2p/1n4p1/1pN1bb2/4Np2/5P2/PP2n1PP/1BBR3K b - - 6 28",
+    "removingDefender": {
+      "target": "b2",
+      "minimumGain": 1
+    },
+    "previousMove": {
+      "fen": "r5k1/2p1p2p/1n4p1/1pN1bb2/4Np2/5P2/PP2n1PP/1BBR2K1 w - - 5 28",
+      "move": "Kh1"
+    },
+    "gameReference": {
+      "id": "832e7eb5925b0ee6",
+      "kind": "game",
+      "ply": 55,
+      "branch": 0,
+      "collection": "removing-defender"
+    },
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "reason": "Bắt quân bảo vệ trực tiếp, rồi dùng Tượng bắt Tốt.",
+      "solverMoves": 2,
+      "sacrificeCount": 0
+    },
+    "moves": ["Nxc1", "Rxc1", "Bxb2", "Re1"],
+    "alternativeLines": [],
+    "hints": [
+      "Tượng c1 bảo vệ Tốt b2. Tìm nước bắt Tượng trước khi dùng Tượng đen bắt Tốt."
+    ],
+    "solution": "Nxc1 Rxc1 Bxb2: Đen đổi Mã lấy Tượng bảo vệ, rồi dùng Tượng bắt Tốt b2. Trong ván đấu, Trắng đáp Re1.",
+    "source": "https://theweekinchess.com/zips/twic1662g.zip"
+  },
+  {
+    "id": "removing-defender-a-piorun-niemann-2026",
+    "title": "Piorun — Niemann",
+    "prompt": "Đổi quân bảo vệ Tốt f6 để giành lợi thế vật chất.",
+    "mode": "interactive",
+    "outcome": "removing-defender",
+    "goal": "material",
+    "fen": "8/6pk/2p1qP1p/p3p3/P3P3/2P1Q2P/r4RK1/8 b - - 0 36",
+    "removingDefender": {
+      "target": "f6",
+      "minimumGain": 1
+    },
+    "previousMove": {
+      "fen": "8/6pk/2p1qP1p/p3pR2/P3P3/2P1Q2P/r4rK1/8 w - - 0 36",
+      "move": "Rxf2"
+    },
+    "gameReference": {
+      "id": "ef00f93f5c5aeacc",
+      "kind": "game",
+      "ply": 71,
+      "branch": 0,
+      "collection": "removing-defender"
+    },
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "reason": "Đổi Xe có chiếu, rồi bắt Tốt đang được Xe bảo vệ.",
+      "solverMoves": 2,
+      "sacrificeCount": 0
+    },
+    "moves": ["Rxf2+", "Qxf2", "Qxf6", "Qc5"],
+    "alternativeLines": [["Rxf2+", "Kxf2", "Qxf6+", "Ke2"]],
+    "hints": [
+      "Xe f2 bảo vệ Tốt f6. Nước đổi Xe có chiếu sẽ mở đường cho Hậu bắt Tốt."
+    ],
+    "solution": "Rxf2+ loại bỏ Xe bảo vệ. Trong ván đấu, Trắng đáp Qxf2 và Đen tiếp tục Qxf6; nếu Kxf2 thì Qxf6+ cũng bắt Tốt có chiếu.",
+    "source": "https://theweekinchess.com/zips/twic1662g.zip"
+  },
+  {
+    "id": "removing-defender-a-petrov-gurel-2026",
+    "title": "Petrov — Gürel",
+    "prompt": "Đổi quân bảo vệ Tốt c5 để giành lợi thế vật chất.",
+    "mode": "interactive",
+    "outcome": "removing-defender",
+    "goal": "material",
+    "fen": "2r3k1/5pb1/4p1p1/pqP4p/1pRr4/1P2N3/P1Q2PPP/4R1K1 b - - 0 29",
+    "removingDefender": {
+      "target": "c5",
+      "minimumGain": 1
+    },
+    "previousMove": {
+      "fen": "2r3k1/5pb1/4p1p1/pqP4p/1pRr4/4N3/PPQ2PPP/4R1K1 w - - 2 29",
+      "move": "b3"
+    },
+    "gameReference": {
+      "id": "4528bc031ffb76dd",
+      "kind": "game",
+      "ply": 57,
+      "branch": 0,
+      "collection": "removing-defender"
+    },
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "reason": "Đổi Xe trực tiếp để Hậu bắt Tốt không còn được bảo vệ.",
+      "solverMoves": 2,
+      "sacrificeCount": 0
+    },
+    "moves": ["Rxc4", "Qxc4", "Qxc5", "Rd1"],
+    "alternativeLines": [
+      ["Rxc4", "Qxc4", "Qxc5", "Qxc5", "Rxc5"],
+      ["Rxc4", "Nxc4", "Qxc5", "g3"],
+      ["Rxc4", "bxc4", "Qxc5", "Qa4"]
+    ],
+    "hints": [
+      "Xe c4 bảo vệ Tốt c5. Tính nước đổi Xe trước khi dùng Hậu bắt Tốt."
+    ],
+    "solution": "Rxc4 đổi Xe bảo vệ Tốt c5. Sau Qxc4, Đen bắt Tốt bằng Qxc5; nếu Trắng đổi Hậu bằng Qxc5 thì Xe đen có thể bắt lại. Trắng cũng có thể bắt Xe bằng Mã hoặc Tốt.",
+    "source": "https://theweekinchess.com/zips/twic1663g.zip"
+  },
+  {
+    "id": "removing-defender-a-zhigalko-lazavik-2026",
+    "title": "Zhigalko — Lazavik",
+    "prompt": "Đổi Tượng bảo vệ Tốt d6 để giành lợi thế vật chất.",
+    "mode": "interactive",
+    "outcome": "removing-defender",
+    "goal": "material",
+    "fen": "2rq1rk1/1p1nbppp/p1bpp3/6B1/4P2P/2NQ1N2/PPP2PP1/1K1RR3 w - - 1 14",
+    "removingDefender": {
+      "target": "d6",
+      "minimumGain": 1
+    },
+    "previousMove": {
+      "fen": "2rq1rk1/1p2bppp/p1bppn2/6B1/4P2P/2NQ1N2/PPP2PP1/1K1RR3 b - - 0 13",
+      "move": "Nd7"
+    },
+    "gameReference": {
+      "id": "016842654f176bff",
+      "kind": "game",
+      "ply": 26,
+      "branch": 0,
+      "collection": "removing-defender"
+    },
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "reason": "Đổi Tượng trực tiếp, bắt Tốt rồi bắt lại nếu đối phương đổi Hậu.",
+      "solverMoves": 3,
+      "sacrificeCount": 0
+    },
+    "moves": ["Bxe7", "Qxe7", "Qxd6", "Qxd6", "Rxd6", "Nc5"],
+    "alternativeLines": [["Bxe7", "Qxe7", "Qxd6", "Qf6", "Qg3", "Rfd8"]],
+    "hints": [
+      "Tượng e7 bảo vệ Tốt d6. Sau khi đổi Tượng, tính cả khả năng Đen đổi Hậu."
+    ],
+    "solution": "Bxe7 đổi Tượng bảo vệ Tốt d6. Sau Qxe7, Trắng bắt Tốt bằng Qxd6. Nếu Đen đổi Hậu bằng Qxd6, Xe trắng bắt lại bằng Rxd6; Đen cũng có thể giữ Hậu bằng Qf6.",
+    "source": "https://theweekinchess.com/zips/twic1666g.zip"
+  },
+  {
+    "id": "removing-defender-a-yip-bulmaga-2026",
+    "title": "Yip — Bulmaga",
+    "prompt": "Đổi Hậu bảo vệ Tốt e5, rồi giữ lợi thế vật chất.",
+    "mode": "interactive",
+    "outcome": "removing-defender",
+    "goal": "material",
+    "fen": "r2nk2r/bpp2p2/p6p/3Bp1qQ/2N1Pp2/2P4P/PP3PP1/3R1R1K w kq - 2 21",
+    "removingDefender": {
+      "target": "e5",
+      "minimumGain": 1
+    },
+    "previousMove": {
+      "fen": "r2nk2r/bpp1qp2/p6p/3Bp2Q/2N1Pp2/2P4P/PP3PP1/3R1R1K b kq - 1 20",
+      "move": "Qg5"
+    },
+    "gameReference": {
+      "id": "50b4bc1a07b07173",
+      "kind": "game",
+      "ply": 40,
+      "branch": 0,
+      "collection": "removing-defender"
+    },
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "reason": "Đổi Hậu trực tiếp để Mã bắt Tốt; sau đó đưa Mã khỏi đòn tấn công.",
+      "solverMoves": 3,
+      "sacrificeCount": 0
+    },
+    "moves": ["Qxg5", "hxg5", "Nxe5", "f6", "Ng4", "Ke7"],
+    "alternativeLines": [["Qxg5", "hxg5", "Nxe5", "Rh6", "Bb3", "Bc5"]],
+    "hints": [
+      "Hậu g5 bảo vệ Tốt e5. Sau khi đổi Hậu, chú ý nước Tốt đen tấn công Mã."
+    ],
+    "solution": "Qxg5 hxg5 đổi Hậu đang bảo vệ Tốt e5. Trắng bắt Tốt bằng Nxe5. Sau f6 tấn công Mã, Ng4 đưa Mã đến ô an toàn. Đen cũng có thể chơi Rh6 thay vì đẩy Tốt.",
+    "source": "https://theweekinchess.com/zips/twic1664g.zip"
+  },
+  {
+    "id": "removing-defender-a-krasteva-silva-2026",
+    "title": "Krasteva — Silva",
+    "prompt": "Đổi Mã bảo vệ Tốt d5 để giành lợi thế vật chất.",
+    "mode": "interactive",
+    "outcome": "removing-defender",
+    "goal": "material",
+    "fen": "3r2k1/1b3p2/2nprnqp/p2p2pN/1p1P2P1/1P2P3/PB3PBP/2RQ1RK1 w - - 1 30",
+    "removingDefender": {
+      "target": "d5",
+      "minimumGain": 1
+    },
+    "previousMove": {
+      "fen": "3r2k1/1b3p2/2nprn1p/p2p1qpN/1p1P2P1/1P2P3/PB3PBP/2RQ1RK1 b - - 0 29",
+      "move": "Qg6"
+    },
+    "gameReference": {
+      "id": "5a1b0d3d0e8b56f6",
+      "kind": "game",
+      "ply": 58,
+      "branch": 0,
+      "collection": "removing-defender"
+    },
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "reason": "Đổi Mã trực tiếp bằng nước chiếu rồi dùng Tượng bắt Tốt.",
+      "solverMoves": 4,
+      "sacrificeCount": 0
+    },
+    "moves": ["Nxf6+", "Rxf6", "Bxd5", "Rc8", "Qe2", "Rc7", "Bg2"],
+    "alternativeLines": [
+      ["Nxf6+", "Qxf6", "Bxd5", "Rc8", "Bxe6", "fxe6", "d5"],
+      ["Nxf6+", "Rxf6", "Bxd5", "Ne7", "Bxb7", "d5", "Qc2"]
+    ],
+    "hints": [
+      "Mã f6 bảo vệ Tốt d5. Tìm nước đổi Mã đó trước khi dùng Tượng bắt Tốt."
+    ],
+    "solution": "Nxf6+ đổi Mã bảo vệ Tốt d5. Sau Rxf6, Tượng trắng bắt Tốt bằng Bxd5. Nếu Đen bắt lại bằng Hậu, Trắng cũng có thể bắt Tốt; nếu Đen tấn công Tượng bằng Ne7, Tượng có thể bắt quân ở b7.",
+    "source": "https://theweekinchess.com/zips/twic1663g.zip"
+  },
+  {
+    "id": "removing-defender-a-imomkuzieva-contreras-2026",
+    "title": "Imomkuzieva — Contreras",
+    "prompt": "Đổi quân bảo vệ Mã c4 để giành lợi thế vật chất.",
+    "mode": "interactive",
+    "outcome": "removing-defender",
+    "goal": "material",
+    "fen": "r3r1k1/pp3p1p/2p1b3/7p/2nB4/1BP5/PP3PPP/R3R1K1 w - - 3 21",
+    "removingDefender": {
+      "target": "c4",
+      "minimumGain": 1
+    },
+    "previousMove": {
+      "fen": "r4rk1/pp3p1p/2p1b3/7p/2nB4/1BP5/PP3PPP/R3R1K1 b - - 2 20",
+      "move": "Rfe8"
+    },
+    "gameReference": {
+      "id": "add0c768b56a75f7",
+      "kind": "game",
+      "ply": 40,
+      "branch": 0,
+      "collection": "removing-defender"
+    },
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "reason": "Đổi Xe lấy Tượng bảo vệ Mã rồi bắt Mã; tính cả hai cách bắt lại.",
+      "solverMoves": 3,
+      "sacrificeCount": 0
+    },
+    "moves": ["Rxe6", "fxe6", "Bxc4", "b5", "Bb3"],
+    "alternativeLines": [["Rxe6", "Rxe6", "Bxc4", "Re4", "Bd3"]],
+    "hints": [
+      "Tượng e6 bảo vệ Mã c4. Hãy tính Rxe6 và các cách bắt lại của Đen."
+    ],
+    "solution": "Rxe6 đổi Tượng bảo vệ Mã c4. Trong ván đấu, sau fxe6, Trắng chơi Bxc4; sau b5, Bb3 đưa Tượng về ô an toàn. Nếu Đen bắt lại bằng Rxe6, Trắng vẫn có Bxc4; sau Re4, Bd3 vừa tấn công Xe vừa bảo vệ Tượng còn lại.",
+    "source": "https://theweekinchess.com/zips/twic1664g.zip"
+  },
+  {
+    "id": "removing-defender-a-boulrens-nigmatov-2026",
+    "title": "Boulrens — Nigmatov",
+    "prompt": "Đổi Xe đang bảo vệ Tốt f4 để giành lợi thế vật chất.",
+    "mode": "interactive",
+    "outcome": "removing-defender",
+    "goal": "material",
+    "fen": "2r3k1/1b3p1p/p3p2b/1p2P3/5P2/PBN1R3/1P1r1RP1/6K1 b - - 0 27",
+    "removingDefender": {
+      "target": "f4",
+      "minimumGain": 1
+    },
+    "previousMove": {
+      "fen": "2r3k1/1b3p1p/p3p2b/1p2P3/5p2/PBN1R1P1/1P1r1RP1/6K1 w - - 0 27",
+      "move": "gxf4"
+    },
+    "gameReference": {
+      "id": "ea5f5a51db8c489e",
+      "kind": "game",
+      "ply": 53,
+      "branch": 0,
+      "collection": "removing-defender"
+    },
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "reason": "Đổi hai Xe, rồi bắt Tốt và tấn công Xe còn lại; không thí quân.",
+      "solverMoves": 2,
+      "sacrificeCount": 0
+    },
+    "moves": ["Rxf2", "Kxf2", "Bxf4", "Re2"],
+    "alternativeLines": [["Rxf2", "Kxf2", "Bxf4", "Re1"]],
+    "hints": [
+      "Xe f2 bảo vệ Tốt f4. Hãy tính Rxf2, Vua bắt lại và Tượng bắt Tốt."
+    ],
+    "solution": "Rxf2 đổi Xe đang bảo vệ Tốt f4. Sau Kxf2, Bxf4 bắt Tốt và đồng thời tấn công Xe e3. Trong ván đấu, Trắng đưa Xe về e2 bằng Re2; Re1 cũng là một cách giữ Xe. Bxf4 ngay lập tức cho phép Rxf4.",
+    "source": "https://theweekinchess.com/zips/twic1663g.zip"
+  },
+  {
+    "id": "removing-defender-a-muthaiah-roudi-2026",
+    "title": "Muthaiah — Roudi",
+    "prompt": "Đổi Mã bảo vệ Tốt f6 và giữ lợi thế sau các nước đổi quân.",
+    "mode": "interactive",
+    "outcome": "removing-defender",
+    "goal": "material",
+    "fen": "r1r1nbk1/pb1q3p/1p2ppBQ/2ppB1P1/3P4/2P1PP2/PP1N3P/R3K2R w KQ - 1 18",
+    "removingDefender": {
+      "target": "f6",
+      "minimumGain": 1
+    },
+    "previousMove": {
+      "fen": "r1r1n1k1/pb1qb2p/1p2ppBQ/2ppB1P1/3P4/2P1PP2/PP1N3P/R3K2R b KQ - 0 17",
+      "move": "Bf8"
+    },
+    "gameReference": {
+      "id": "ad1c32d8dba6ad7a",
+      "kind": "game",
+      "ply": 34,
+      "branch": 0,
+      "collection": "removing-defender"
+    },
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "reason": "Bắt Mã bảo vệ Tốt rồi tính nước bắt lại và đổi Hậu.",
+      "solverMoves": 4,
+      "sacrificeCount": 0
+    },
+    "moves": ["Bxe8", "Rxe8", "Qxf6", "Bg7", "Qxg7+", "Qxg7", "Bxg7", "Kxg7"],
+    "alternativeLines": [["Bxe8", "Qxe8", "Qxf6", "Qg6", "Qxg6+", "hxg6"]],
+    "hints": [
+      "Mã e8 bảo vệ Tốt f6. Tượng g6 có thể đổi Mã trước khi Hậu bắt Tốt không?"
+    ],
+    "solution": "Bxe8 đổi Mã bảo vệ Tốt f6. Sau Rxe8, Qxf6 bắt Tốt; nếu Đen tấn công Hậu bằng Bg7, Trắng có Qxg7+ Qxg7 Bxg7 Kxg7 và giữ lợi thế vật chất. Nếu Đen bắt Tượng bằng Qxe8, Trắng vẫn có Qxf6. Ván đấu kết thúc sau Qxf6; các nước tiếp theo là phân tích.",
+    "source": "https://theweekinchess.com/zips/twic1668g.zip"
+  },
+  {
+    "id": "removing-defender-b-klimkowski-vakhidov-2026",
+    "title": "Klimkowski — Vakhidov",
+    "prompt": "Loại bỏ quân bảo vệ Tượng d4 để giành lợi thế vật chất.",
+    "mode": "interactive",
+    "outcome": "removing-defender",
+    "goal": "material",
+    "fen": "r1r3k1/1p2ppbp/p2pb1p1/q7/2PBN3/1P6/P2QBPPP/2R2RK1 b - - 0 15",
+    "previousMove": {
+      "fen": "r1r3k1/1p2ppbp/p2pb1p1/q7/2PBn3/1PN5/P2QBPPP/2R2RK1 w - - 0 15",
+      "move": "Nxe4"
+    },
+    "gameReference": {
+      "id": "034a2be51d268c88",
+      "kind": "game",
+      "ply": 29,
+      "branch": 0,
+      "collection": "removing-defender"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "reason": "Phối hợp đổi Hậu và Tượng, rồi tính cách đưa Tượng đến ô an toàn.",
+      "solverMoves": 3,
+      "sacrificeCount": 0
+    },
+    "moves": ["Qxd2", "Nxd2", "Bxd4", "Nf3", "Bf6"],
+    "alternativeLines": [],
+    "hints": [
+      "Hậu d2 vừa bảo vệ Tượng d4 vừa bị Hậu đen tấn công. Tính nước đổi Hậu trước khi bắt Tượng."
+    ],
+    "solution": "Qxd2 Nxd2 Bxd4: Đen đổi Hậu, loại bỏ quân bảo vệ rồi bắt Tượng d4. Trong ván đấu, Trắng chơi Nf3 tấn công Tượng; Đen đáp Bf6 để đưa Tượng đến ô an toàn.",
+    "source": "https://theweekinchess.com/zips/twic1667g.zip",
+    "removingDefender": {
+      "target": "d4",
+      "minimumGain": 3
+    }
+  },
+  {
+    "id": "removing-defender-b-gharibyan-deac-2026",
+    "title": "Gharibyan — Deac",
+    "prompt": "Loại bỏ quân bảo vệ Xe e1 để giành lợi thế vật chất.",
+    "mode": "interactive",
+    "outcome": "removing-defender",
+    "goal": "material",
+    "fen": "4r2r/pp3k1p/2p2pp1/2Pn4/2N5/2BR2P1/PP3P1P/1K2R3 b - - 0 28",
+    "removingDefender": {
+      "target": "e1",
+      "minimumGain": 5
+    },
+    "previousMove": {
+      "fen": "4r2r/pp3k1p/2p2pp1/B1Pn4/2N5/2nR2P1/PP3P1P/1K2R3 w - - 3 28",
+      "move": "Bxc3"
+    },
+    "gameReference": {
+      "id": "9e9ef90ab0c0d667",
+      "kind": "game",
+      "ply": 55,
+      "branch": 0,
+      "collection": "removing-defender"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "reason": "Dùng nước chiếu để loại bỏ quân bảo vệ, rồi phối hợp Xe bắt quân.",
+      "solverMoves": 2,
+      "sacrificeCount": 0
+    },
+    "moves": ["Nxc3+", "Kc2", "Rxe1", "Kxc3"],
+    "alternativeLines": [["Nxc3+", "Rxc3", "Rxe1+"]],
+    "hints": ["Tượng c3 bảo vệ Xe e1. Mã có thể bắt Tượng bằng nước chiếu."],
+    "solution": "Nxc3+ loại bỏ Tượng bảo vệ Xe e1. Trong phương án phân tích Kc2 Rxe1 Kxc3, Đen mất Mã nhưng bắt được Xe. Trong ván đấu, sau ...Rxe1, Trắng chơi Nd6+ trước khi bắt Mã.",
+    "source": "https://theweekinchess.com/zips/twic1662g.zip"
+  },
+  {
+    "id": "removing-defender-b-macias-almagro-2026",
+    "title": "Macías Pino — Almagro Llamas",
+    "prompt": "Loại bỏ quân bảo vệ Tốt g7 rồi tính nước đáp của Đen.",
+    "mode": "interactive",
+    "outcome": "removing-defender",
+    "goal": "material",
+    "fen": "2kr1b2/3q1ppN/p1n1b1n1/1p1pPp1N/2pP4/4B3/PPP3QP/2K2R1R w - - 3 24",
+    "removingDefender": {
+      "target": "g7",
+      "minimumGain": 1
+    },
+    "previousMove": {
+      "fen": "r3kb2/3q1ppN/p1n1b1n1/1p1pPp1N/2pP4/4B3/PPP3QP/2K2R1R b q - 2 23",
+      "move": "O-O-O"
+    },
+    "gameReference": {
+      "id": "4fddadb88544c33f",
+      "kind": "game",
+      "ply": 46,
+      "branch": 0,
+      "collection": "removing-defender"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "reason": "Phối hợp hai Mã, đổi quân bảo vệ rồi tính đòn tấn công Tốt.",
+      "solverMoves": 3,
+      "sacrificeCount": 0
+    },
+    "moves": ["Nxf8", "Nxf8", "Nxg7", "Nb4", "a3"],
+    "alternativeLines": [
+      ["Nxf8", "Rxf8", "Nxg7", "f4", "Nxe6", "Qxe6", "Bxf4", "Nxd4"]
+    ],
+    "hints": [
+      "Tượng f8 bảo vệ Tốt g7. Dùng một Mã đổi Tượng, rồi dùng Mã còn lại bắt Tốt."
+    ],
+    "solution": "Nxf8 đổi Tượng bảo vệ; sau ...Nxf8 Nxg7, Trắng bắt Tốt g7. Trong phương án phân tích ...Nb4 a3, Tốt đuổi Mã đang đe dọa Tốt a2. Ván đấu tiếp tục ...Rxf8 Nxg7 f4 Nxe6 Qxe6 Bxf4 Nxd4.",
+    "source": "https://theweekinchess.com/zips/twic1662g.zip"
+  },
+  {
+    "id": "removing-defender-b-sharifov-sebenik-2026",
+    "title": "Sharifov — Sebenik",
+    "prompt": "Loại bỏ quân bảo vệ Tốt c6, rồi tính nước phản công của Tốt đen.",
+    "mode": "interactive",
+    "outcome": "removing-defender",
+    "goal": "material",
+    "fen": "8/5kpp/1ppRr3/p3np2/P7/1PB1P1P1/5PKP/8 w - - 1 34",
+    "removingDefender": {
+      "target": "c6",
+      "minimumGain": 1
+    },
+    "previousMove": {
+      "fen": "4r3/5kpp/1ppR4/p3np2/P7/1PB1P1P1/5PKP/8 b - - 0 33",
+      "move": "Re6"
+    },
+    "gameReference": {
+      "id": "458c1f2d41e8783a",
+      "kind": "game",
+      "ply": 66,
+      "branch": 0,
+      "collection": "removing-defender"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "reason": "Đổi Tượng lấy Mã bảo vệ, bắt Tốt rồi xử lý nước đẩy Tốt phản công.",
+      "solverMoves": 3,
+      "sacrificeCount": 0
+    },
+    "moves": ["Bxe5", "Rxe5", "Rxc6", "b5", "Ra6", "b4"],
+    "alternativeLines": [["Bxe5", "Rxe5", "Rxc6", "b5", "Ra6", "bxa4", "bxa4"]],
+    "hints": [
+      "Mã e5 bảo vệ Tốt c6. Tính nước đổi Tượng lấy Mã trước khi dùng Xe bắt Tốt."
+    ],
+    "solution": "Bxe5 Rxe5 Rxc6: Trắng đổi quân bảo vệ rồi bắt Tốt c6. Ván đấu tiếp tục ...b5 Ra6 b4; nếu ...bxa4 thì bxa4 bắt lại Tốt và giữ lợi thế vật chất.",
+    "source": "https://theweekinchess.com/zips/twic1663g.zip"
+  },
+  {
+    "id": "removing-defender-b-petkov-wei-2026",
+    "title": "Petkov — Wei Yi",
+    "prompt": "Loại các quân bảo vệ Tốt d5, rồi giữ lợi thế vật chất.",
+    "mode": "interactive",
+    "outcome": "removing-defender",
+    "goal": "material",
+    "fen": "4k3/1p4p1/p2p4/2rPpp2/4P2b/1PNK4/P1P5/6R1 b - - 0 29",
+    "removingDefender": {
+      "target": "d5",
+      "minimumGain": 1
+    },
+    "previousMove": {
+      "fen": "4k3/1p4p1/p2p4/2rPpp2/7b/1PNKP3/P1P5/6R1 w - - 0 29",
+      "move": "e4"
+    },
+    "gameReference": {
+      "id": "9f774a3db2932e4c",
+      "kind": "game",
+      "ply": 57,
+      "branch": 0,
+      "collection": "removing-defender"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "reason": "Bắt có chiếu để đổi hướng Mã bảo vệ và bảo vệ Tốt g7 sau khi bắt Tốt d5.",
+      "solverMoves": 3,
+      "sacrificeCount": 0
+    },
+    "moves": ["fxe4+", "Nxe4", "Rxd5+", "Ke3", "Kf7", "c3"],
+    "alternativeLines": [
+      ["fxe4+", "Kxe4", "Rxc3", "Rxg7", "Be7"],
+      ["fxe4+", "Ke2", "Rxc3", "Rxg7", "Rxc2+", "Ke3"]
+    ],
+    "hints": [
+      "Tốt e4 và Mã c3 đều bảo vệ d5. Tìm nước bắt có chiếu khiến Mã rời c3."
+    ],
+    "solution": "fxe4+ bắt Tốt e4 và chiếu Vua. Sau Nxe4, Mã rời c3, nên Xe bắt Tốt bằng Rxd5+. Đen tiếp tục Kf7 để bảo vệ Tốt g7. Nếu Vua trắng bắt tại e4, Xe đen có thể bắt Mã c3.",
+    "source": "https://theweekinchess.com/zips/twic1663g.zip"
+  },
+  {
+    "id": "removing-defender-b-gukesh-nigmatov-2026",
+    "title": "Gukesh — Nigmatov",
+    "prompt": "Đổi Xe bảo vệ Tượng c8, rồi giữ lợi thế vật chất.",
+    "mode": "interactive",
+    "outcome": "removing-defender",
+    "goal": "material",
+    "fen": "2b2r2/4N1kp/2p5/3pP1p1/2P1p1n1/4P3/4BRP1/6K1 w - - 2 34",
+    "removingDefender": {
+      "target": "c8",
+      "minimumGain": 2
+    },
+    "previousMove": {
+      "fen": "2b2r2/4N2p/2p3k1/3pP1p1/2P1p1n1/4P3/4BRP1/6K1 b - - 1 33",
+      "move": "Kg7"
+    },
+    "gameReference": {
+      "id": "da3f1f2303fd28fe",
+      "kind": "game",
+      "ply": 66,
+      "branch": 0,
+      "collection": "removing-defender"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "reason": "Đổi Xe để Mã bắt Tượng và xử lý đòn phản công của Mã đen.",
+      "solverMoves": 4,
+      "sacrificeCount": 0
+    },
+    "moves": ["Rxf8", "Kxf8", "Nxc8", "Nxe3", "cxd5", "cxd5", "Kf2"],
+    "alternativeLines": [["Rxf8", "Nxe3", "Rxc8", "d4"]],
+    "hints": [
+      "Xe f8 bảo vệ Tượng c8. Tính nước đổi Xe trước khi Mã bắt Tượng."
+    ],
+    "solution": "Rxf8 đổi Xe bảo vệ Tượng c8; sau Kxf8, Mã bắt Tượng bằng Nxc8. Đen có thể phản công bằng Nxe3, nhưng sau cxd5 cxd5, Kf2 bảo vệ Tốt g2 và tấn công Mã đen. Nếu Đen bắt Tốt e3 ngay, Xe trắng có thể bắt Tượng c8.",
+    "source": "https://theweekinchess.com/zips/twic1664g.zip"
+  },
+  {
+    "id": "removing-defender-b-can-miezis-2026",
+    "title": "Can — Miezis",
+    "prompt": "Loại Tượng bảo vệ Mã h3 để giành lợi thế vật chất.",
+    "mode": "interactive",
+    "outcome": "removing-defender",
+    "goal": "material",
+    "fen": "6k1/pp3pp1/8/3r1bq1/3N4/4Q1Pn/P1P4K/3RR3 w - - 0 28",
+    "removingDefender": {
+      "target": "h3",
+      "minimumGain": 3
+    },
+    "previousMove": {
+      "fen": "6k1/pp3pp1/8/3r1bq1/3N1n2/4Q1PP/P1P4K/3RR3 b - - 0 27",
+      "move": "Nxh3"
+    },
+    "gameReference": {
+      "id": "c36c561fa51a0212",
+      "kind": "game",
+      "ply": 54,
+      "branch": 0,
+      "collection": "removing-defender"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "reason": "Đổi quân bảo vệ, dùng Vua bắt Mã và tính các nước đáp bằng Xe hoặc Hậu.",
+      "solverMoves": 4,
+      "sacrificeCount": 0
+    },
+    "moves": ["Nxf5", "Rxf5", "Kxh3", "Qf6", "Qe8+", "Kh7", "Qe4"],
+    "alternativeLines": [
+      ["Nxf5", "Qxf5", "Rxd5", "Qxd5", "Qe8+", "Kh7", "Kxh3"]
+    ],
+    "hints": [
+      "Tượng f5 bảo vệ Mã h3. Tính nước đổi Tượng để Vua trắng có thể bắt Mã."
+    ],
+    "solution": "Nxf5 đổi Tượng bảo vệ Mã h3. Sau Rxf5, Vua trắng bắt Mã bằng Kxh3. Nếu Đen bắt lại bằng Hậu, Trắng có thể chơi Rxd5 Qxd5 Qe8+ Kh7 Kxh3; nước chiếu giúp Vua trắng có thời gian bắt Mã.",
+    "source": "https://theweekinchess.com/zips/twic1663g.zip"
+  },
+  {
+    "id": "removing-defender-b-lizano-bullen-2026",
+    "title": "Lizano — Bullen",
+    "prompt": "Đổi Mã bảo vệ Tốt g7, rồi giữ lợi thế vật chất.",
+    "mode": "interactive",
+    "outcome": "removing-defender",
+    "goal": "material",
+    "fen": "2k1br1r/3n2p1/pq2N3/2pp1n1P/8/2P1Q1N1/PP2B2P/2KR2R1 w - - 1 26",
+    "removingDefender": {
+      "target": "g7",
+      "minimumGain": 1
+    },
+    "previousMove": {
+      "fen": "2k1br1r/3nn1p1/pq2N3/2pp3P/8/2P1Q1N1/PP2B2P/2KR2R1 b - - 0 25",
+      "move": "Nf5"
+    },
+    "gameReference": {
+      "id": "6c06defac18d6d93",
+      "kind": "game",
+      "ply": 50,
+      "branch": 0,
+      "collection": "removing-defender"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "reason": "Phối hợp hai Mã: đổi Mã bảo vệ rồi bắt Tốt và đưa Hậu ra khỏi đòn tấn công.",
+      "solverMoves": 4,
+      "sacrificeCount": 0
+    },
+    "moves": ["Nxf5", "Rxf5", "Nxg7", "Re5", "Qd2", "Nf6", "Bf3"],
+    "alternativeLines": [],
+    "hints": [
+      "Mã f5 bảo vệ Tốt g7. Tính nước đổi Mã đó trước khi Mã còn lại bắt Tốt."
+    ],
+    "solution": "Nxf5 dùng Mã g3 đổi Mã bảo vệ Tốt g7. Sau Rxf5, Mã e6 bắt Tốt bằng Nxg7. Đen chơi Re5 tấn công Hậu e3, nên Trắng đưa Hậu đến d2 bằng Qd2.",
+    "source": "https://theweekinchess.com/zips/twic1664g.zip"
+  },
+  {
+    "id": "removing-defender-b-ogorman-ezra-2026",
+    "title": "O’Gorman — Ezra",
+    "prompt": "Loại Tượng bảo vệ Mã e4, rồi tính đòn bắt lại Xe để giành vật chất.",
+    "mode": "interactive",
+    "outcome": "removing-defender",
+    "goal": "material",
+    "fen": "8/3pbk1p/2b1p1p1/4B3/2P1NP2/r4B2/7P/5R1K b - - 0 42",
+    "removingDefender": {
+      "target": "e4",
+      "minimumGain": 3
+    },
+    "previousMove": {
+      "fen": "8/3pbk1p/2b1p1p1/4B3/2P1NP2/r4n2/4B2P/5R1K w - - 0 42",
+      "move": "Bxf3"
+    },
+    "gameReference": {
+      "id": "536b029473621f48",
+      "kind": "game",
+      "ply": 83,
+      "branch": 0,
+      "collection": "removing-defender"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "reason": "Đổi quân bảo vệ, bắt Mã và tính tiếp đòn Tượng tấn công Xe.",
+      "solverMoves": 3,
+      "sacrificeCount": 0
+    },
+    "moves": ["Rxf3", "Rxf3", "Bxe4", "Kg2", "Bxf3+", "Kxf3"],
+    "alternativeLines": [],
+    "hints": [
+      "Tượng f3 bảo vệ Mã e4. Sau khi đổi Tượng, chú ý Tượng đen còn tấn công Xe trắng."
+    ],
+    "solution": "Rxf3 Rxf3 đổi Tượng bảo vệ Mã e4. Sau Bxe4, Tượng đen tấn công Xe f3. Nếu Trắng chơi Kg2, Bxf3+ Kxf3 hoàn tất đổi quân: Đen đã lấy hai quân nhẹ để đổi lấy một Xe và một Tượng.",
+    "source": "https://theweekinchess.com/zips/twic1664g.zip"
+  },
+  {
+    "id": "removing-defender-b-amartuvshin-garzon-2026",
+    "title": "Amartuvshin — Garzón",
+    "prompt": "Đổi Tượng bảo vệ Tốt f7, rồi xử lý phản công để giữ lợi thế vật chất.",
+    "mode": "interactive",
+    "outcome": "removing-defender",
+    "goal": "material",
+    "fen": "8/2R2p1k/p2r2pp/P2b4/3n4/3BN1P1/5P1P/6K1 w - - 0 40",
+    "removingDefender": {
+      "target": "f7",
+      "minimumGain": 1
+    },
+    "previousMove": {
+      "fen": "8/2R2ppk/p2r3p/P2b4/3n4/3BN1P1/5P1P/6K1 b - - 1 39",
+      "move": "g6"
+    },
+    "gameReference": {
+      "id": "1908de08fc24f574",
+      "kind": "game",
+      "ply": 78,
+      "branch": 0,
+      "collection": "removing-defender"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "reason": "Đổi quân bảo vệ rồi đưa Xe ra khỏi đòn tấn công và tính các nước bắt Tốt tiếp theo.",
+      "solverMoves": 6,
+      "sacrificeCount": 0
+    },
+    "moves": [
+      "Nxd5",
+      "Rxd5",
+      "Rxf7+",
+      "Kg8",
+      "Rf6",
+      "Rxa5",
+      "Rxg6+",
+      "Kf7",
+      "Rxh6",
+      "Ra1+",
+      "Kg2"
+    ],
+    "alternativeLines": [
+      [
+        "Nxd5",
+        "Rxd5",
+        "Rxf7+",
+        "Kg8",
+        "Rf6",
+        "g5",
+        "Kg2",
+        "Rxa5",
+        "Rxh6",
+        "Ra3",
+        "Bxa6"
+      ],
+      ["Nxd5", "Rxd5", "Rxf7+", "Kh8", "Bxg6", "Rxa5"]
+    ],
+    "hints": [
+      "Tượng d5 bảo vệ Tốt f7. Tính nước đổi Tượng và đường rút của Xe sau khi bắt Tốt."
+    ],
+    "solution": "Nxd5 Rxd5 đổi Tượng bảo vệ Tốt f7. Sau Rxf7+ Kg8, Xe rút về f6. Đen bắt Tốt a5, nhưng Trắng đáp Rxg6+ rồi Rxh6; sau Ra1+ Vua trắng đi Kg2. Nếu Đen chơi g5, Xe vẫn có thể bắt Tốt h6.",
+    "source": "https://theweekinchess.com/zips/twic1663g.zip"
+  },
+  {
+    "id": "removing-defender-b-terao-clarke-2026",
+    "title": "Terao — Clarke",
+    "prompt": "Đổi các Xe để loại quân bảo vệ Tốt h7, rồi giành lợi thế vật chất.",
+    "mode": "interactive",
+    "outcome": "removing-defender",
+    "goal": "material",
+    "fen": "5N2/p1r1r2p/5kp1/4Rp2/2P2P2/1P4Pb/PK6/4R3 w - - 3 46",
+    "removingDefender": {
+      "target": "h7",
+      "minimumGain": 1
+    },
+    "previousMove": {
+      "fen": "5N2/p2rr2p/5kp1/4Rp2/2P2P2/1P4Pb/PK6/4R3 b - - 2 45",
+      "move": "Rc7"
+    },
+    "gameReference": {
+      "id": "851060b58fced3be",
+      "kind": "game",
+      "ply": 90,
+      "branch": 0,
+      "collection": "removing-defender"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "reason": "Phối hợp hai Xe để đổi quân bảo vệ, rồi dùng Mã bắt Tốt.",
+      "solverMoves": 4,
+      "sacrificeCount": 0
+    },
+    "moves": ["Rxe7", "Rxe7", "Rxe7", "Kxe7", "Nxh7", "Bg2", "Kc3", "Be4"],
+    "alternativeLines": [["Kc3", "Rxe5", "fxe5+", "Ke7", "Nxh7", "Bg4", "Ng5"]],
+    "hints": [
+      "Xe e7 bảo vệ Tốt h7. Tính cả hai nước bắt lại trên cột e trước khi dùng Mã."
+    ],
+    "solution": "Rxe7 Rxe7 Rxe7 Kxe7 đổi hai cặp Xe và loại Xe bảo vệ Tốt h7. Sau đó Mã bắt Tốt bằng Nxh7. Trắng cũng có thể chuẩn bị bằng Kc3; nếu Đen đổi Xe ở e5, Tốt bắt lại và Mã vẫn có thể bắt Tốt h7.",
+    "source": "https://theweekinchess.com/zips/twic1663g.zip"
+  },
+  {
+    "id": "removing-defender-b-barbot-liu-2026",
+    "title": "Barbot — Liu",
+    "prompt": "Đổi Tốt bảo vệ Tốt f5, rồi xử lý phản công của Xe đen.",
+    "mode": "interactive",
+    "outcome": "removing-defender",
+    "goal": "material",
+    "fen": "8/6k1/1r4p1/2R2p1P/p3pK2/P3P3/5PP1/8 w - - 1 47",
+    "removingDefender": {
+      "target": "f5",
+      "minimumGain": 1
+    },
+    "previousMove": {
+      "fen": "8/6k1/r5p1/2R2p1P/p3pK2/P3P3/5PP1/8 b - - 0 46",
+      "move": "Rb6"
+    },
+    "gameReference": {
+      "id": "3e9e05b0d3f0db5a",
+      "kind": "game",
+      "ply": 92,
+      "branch": 0,
+      "collection": "removing-defender"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "reason": "Đổi Tốt bảo vệ, bắt Tốt và dùng Xe giữ lợi thế trước phản công.",
+      "solverMoves": 5,
+      "sacrificeCount": 0
+    },
+    "moves": [
+      "hxg6",
+      "Kxg6",
+      "Rxf5",
+      "Rb3",
+      "Ra5",
+      "Rxa3",
+      "Ra6+",
+      "Kf7",
+      "Rxa4"
+    ],
+    "alternativeLines": [
+      ["hxg6", "Kxg6", "Rxf5", "Rb3", "Kxe4", "Rxa3", "Ra5", "Kf6", "Rxa4"]
+    ],
+    "hints": [
+      "Tốt g6 bảo vệ Tốt f5. Hãy tính nước đổi Tốt và phản công của Xe đen."
+    ],
+    "solution": "hxg6 Kxg6 đổi Tốt bảo vệ f5, rồi Xe bắt Tốt bằng Rxf5. Sau Rb3 Ra5 Rxa3, Trắng chiếu Ra6+ và bắt Tốt a4 bằng Rxa4. Trắng cũng có thể dùng Vua bắt Tốt e4 trước.",
+    "source": "https://theweekinchess.com/zips/twic1663g.zip"
+  },
+  {
+    "id": "removing-defender-b-dahl-berend-2026",
+    "title": "Dahl — Berend",
+    "prompt": "Loại các quân bảo vệ Tốt b3, rồi tính đòn tấn công tiếp theo của Mã.",
+    "mode": "interactive",
+    "outcome": "removing-defender",
+    "goal": "material",
+    "fen": "r4rk1/1ppb4/3p1qpb/p1nPp2p/2P1P3/PPN2PP1/2QN2B1/R3R1K1 b - - 0 18",
+    "removingDefender": {
+      "target": "b3",
+      "minimumGain": 3
+    },
+    "previousMove": {
+      "fen": "r4rk1/1ppb4/3p1qpb/p1nPp2p/2P1P3/PPN2Pp1/2QN2BP/R3R1K1 w - - 0 18",
+      "move": "hxg3"
+    },
+    "gameReference": {
+      "id": "60a13395ca776b59",
+      "kind": "game",
+      "ply": 35,
+      "branch": 0,
+      "collection": "removing-defender"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "reason": "Đổi quân bảo vệ, bắt Tốt và tính đòn Mã tấn công Hậu cùng Xe.",
+      "solverMoves": 3,
+      "sacrificeCount": 0
+    },
+    "moves": ["Bxd2", "Qxd2", "Nxb3", "Qe3", "Nxa1", "Rxa1"],
+    "alternativeLines": [["Bxd2", "Qxd2", "Nxb3", "Qh6", "Nxa1", "Rxa1"]],
+    "hints": [
+      "Mã d2 và Hậu c2 cùng bảo vệ Tốt b3. Tính nước đổi Mã và vị trí Hậu sau khi bắt lại."
+    ],
+    "solution": "Bxd2 Qxd2 đổi Mã bảo vệ Tốt b3 và đưa Hậu trắng rời c2. Sau Nxb3, Mã đen tấn công cả Hậu d2 lẫn Xe a1. Nếu Hậu đi, Nxa1 Rxa1 hoàn tất đổi quân và Đen giành lợi thế vật chất.",
+    "source": "https://theweekinchess.com/zips/twic1663g.zip"
+  },
+  {
+    "id": "removing-defender-b-ortega-parsa-2026",
+    "title": "Ortega — Parsa",
+    "prompt": "Đổi Tượng bảo vệ Tốt e5, rồi tính nước bắt lại Xe.",
+    "mode": "interactive",
+    "outcome": "removing-defender",
+    "goal": "material",
+    "fen": "r1b2r1k/1p4qp/3R1b2/p1pQpP2/2P1N1B1/7P/PP3P2/4K2R w K - 14 25",
+    "removingDefender": {
+      "target": "e5",
+      "minimumGain": 1
+    },
+    "previousMove": {
+      "fen": "r1b2rk1/1p4qp/3R1b2/p1pQpP2/2P1N1B1/7P/PP3P2/4K2R b K - 13 24",
+      "move": "Kh8"
+    },
+    "gameReference": {
+      "id": "5c048c3c7e62f020",
+      "kind": "game",
+      "ply": 48,
+      "branch": 0,
+      "collection": "removing-defender"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "reason": "Đổi Tượng bảo vệ, bắt Tốt rồi tính nước bắt lại Xe.",
+      "solverMoves": 3,
+      "sacrificeCount": 0
+    },
+    "moves": ["Nxf6", "Rxf6", "Qxe5", "Rxd6", "Qxd6", "h6"],
+    "alternativeLines": [["Nxf6", "e4", "Nxe4", "a4", "f6", "Qg6", "f7"]],
+    "hints": [
+      "Tượng f6 bảo vệ Tốt e5. Sau khi đổi Tượng và bắt Tốt, tính nước Xe đen bắt Xe trắng."
+    ],
+    "solution": "Nxf6 Rxf6 đổi Tượng bảo vệ Tốt e5. Hậu trắng bắt Tốt bằng Qxe5; nếu Đen chơi Rxd6, Trắng bắt lại Xe bằng Qxd6. Nếu Đen đẩy e4 thay vì bắt Mã, Trắng có thể bắt Tốt bằng Nxe4.",
+    "source": "https://theweekinchess.com/zips/twic1663g.zip"
+  },
+  {
+    "id": "removing-defender-b-amnol-harper-2026",
+    "title": "Amnol — Harper",
+    "prompt": "Đổi Tượng bảo vệ Tốt f4 và giành lợi thế vật chất.",
+    "mode": "interactive",
+    "outcome": "removing-defender",
+    "goal": "material",
+    "fen": "2r2rk1/p4ppp/3bp3/8/1p3Pnq/3BBP2/PP2Q2P/R4R1K b - - 0 21",
+    "removingDefender": {
+      "target": "f4",
+      "minimumGain": 1
+    },
+    "previousMove": {
+      "fen": "2r2rk1/p4ppp/3bp3/8/1p3Pnq/3BB3/PP2QP1P/R4R1K w - - 1 21",
+      "move": "f3"
+    },
+    "gameReference": {
+      "id": "39805240f7c1e858",
+      "kind": "game",
+      "ply": 41,
+      "branch": 0,
+      "collection": "removing-defender"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "reason": "Đổi quân bảo vệ rồi bắt Tốt, đồng thời tính đòn tấn công Hậu.",
+      "solverMoves": 3,
+      "sacrificeCount": 0
+    },
+    "moves": ["Nxe3", "Qxe3", "Bxf4", "Qe2", "Rcd8"],
+    "alternativeLines": [["Nxe3", "Qxe3", "Bxf4", "Qf2", "Qh6", "Rad1", "Rc5"]],
+    "hints": [
+      "Tượng e3 bảo vệ Tốt f4. Sau khi đổi Tượng, chú ý vị trí hai Hậu."
+    ],
+    "solution": "Nxe3 Qxe3 đổi Tượng bảo vệ Tốt f4. Tượng đen bắt Tốt bằng Bxf4 và tấn công Hậu trắng. Nếu Trắng đưa Hậu đến f2 để tấn công Hậu đen, Đen có thể chơi Qh6.",
+    "source": "https://theweekinchess.com/zips/twic1663g.zip"
+  },
+  {
+    "id": "removing-defender-b-boulrens-amdouni-2026",
+    "title": "Boulrens — Amdouni",
+    "prompt": "Tấn công quân đang bảo vệ Tượng e7 để giành lợi thế vật chất.",
+    "mode": "interactive",
+    "outcome": "removing-defender",
+    "goal": "material",
+    "fen": "1kr5/p2Rbp2/4pq1p/2p3p1/2N2P2/1PP1B2P/P5P1/3R2K1 w - - 0 25",
+    "removingDefender": {
+      "target": "e7",
+      "minimumGain": 1
+    },
+    "previousMove": {
+      "fen": "1kr5/p2Rbpp1/4pq1p/2p5/2N2P2/1PP1B2P/P5P1/3R2K1 b - - 2 24",
+      "move": "g5"
+    },
+    "gameReference": {
+      "id": "b08d1fcc1206b34e",
+      "kind": "game",
+      "ply": 48,
+      "branch": 0,
+      "collection": "removing-defender"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "reason": "Đổi Tốt rồi dùng Xe tấn công Hậu đang bảo vệ Tượng; không có thí quân.",
+      "solverMoves": 6,
+      "sacrificeCount": 0
+    },
+    "moves": [
+      "fxg5",
+      "hxg5",
+      "Rf1",
+      "Qxc3",
+      "Rxe7",
+      "f5",
+      "Bxg5",
+      "Rg8",
+      "Bf4+",
+      "Ka8",
+      "Be5"
+    ],
+    "alternativeLines": [
+      [
+        "fxg5",
+        "hxg5",
+        "Rf1",
+        "Qg6",
+        "Rxe7",
+        "Rc7",
+        "Rxc7",
+        "Kxc7",
+        "Bxc5",
+        "f5"
+      ],
+      ["fxg5", "Qxg5", "Bxg5", "Bxg5", "Rxf7", "Rc7", "Rxc7", "Kxc7"]
+    ],
+    "hints": [
+      "Tượng e7 được Hậu f6 bảo vệ. Hãy tính cách mở cột f để Xe tấn công Hậu."
+    ],
+    "solution": "Sau fxg5 hxg5, Rf1 tấn công Hậu f6. Nếu Hậu rời đường bảo vệ Tượng e7, Trắng có Rxe7. Trong ván đấu, Đen chơi Qxc3; sau Rxe7 f5 Bxg5, Trắng thu lại Tốt g5. Khi Xe đen tấn công Tượng bằng Rg8, Bf4+ và Be5 đưa Tượng đến nơi an toàn. Nếu Qxg5 ngay sau fxg5, Trắng có Bxg5 Bxg5 Rxf7.",
+    "source": "https://theweekinchess.com/zips/twic1664g.zip"
+  },
+  {
+    "id": "removing-defender-b-ramos-mureya-2026",
+    "title": "Ramos Espinoza — Mureya",
+    "prompt": "Tấn công rồi đổi quân bảo vệ Tốt e4 để giành lợi thế vật chất.",
+    "mode": "interactive",
+    "outcome": "removing-defender",
+    "goal": "material",
+    "fen": "r5k1/p2n1ppp/1pr5/1Npb4/3PpP2/P7/1P2PPBP/2R2RK1 w - - 3 21",
+    "removingDefender": {
+      "target": "e4",
+      "minimumGain": 1
+    },
+    "previousMove": {
+      "fen": "r5k1/p2n1ppp/1p2r3/1Npb4/3PpP2/P7/1P2PPBP/2R2RK1 b - - 2 20",
+      "move": "Rc6"
+    },
+    "gameReference": {
+      "id": "b267d07b2030b80f",
+      "kind": "game",
+      "ply": 40,
+      "branch": 0,
+      "collection": "removing-defender"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "reason": "Dùng Mã tấn công Tượng bảo vệ, rồi tính chuỗi đổi quân ngắn.",
+      "solverMoves": 3,
+      "sacrificeCount": 0
+    },
+    "moves": ["Nc3", "Nf6", "Nxd5", "Nxd5", "Bxe4", "Rd8"],
+    "alternativeLines": [
+      ["Nc3", "Bb3", "Bxe4", "Rg6+", "Bxg6", "hxg6"],
+      ["Nc3", "cxd4", "Nxd5", "Rxc1", "Rxc1", "Nc5"]
+    ],
+    "hints": [
+      "Tượng d5 bảo vệ Tốt e4. Tìm nước Mã tấn công Tượng, rồi tính nước bắt lại của Đen."
+    ],
+    "solution": "Nc3 tấn công Tượng d5 đang bảo vệ Tốt e4. Sau Nf6, Trắng đổi Tượng bằng Nxd5; sau Nxd5, Bxe4 bắt Tốt. Nếu Tượng lùi về b3, Trắng có Bxe4; sau Rg6+, Bxg6 hxg6 đổi Tượng lấy Xe. Nếu Đen chơi cxd4, Trắng có Nxd5 Rxc1 Rxc1.",
+    "source": "https://theweekinchess.com/zips/twic1664g.zip"
+  },
+  {
+    "id": "removing-defender-b-wilson-sivanandan-2026",
+    "title": "Wilson — Sivanandan",
+    "prompt": "Đổi Mã bảo vệ Tốt e4, rồi giữ lợi thế vật chất.",
+    "mode": "interactive",
+    "outcome": "removing-defender",
+    "goal": "material",
+    "fen": "3rk2r/5pp1/p3pnp1/1p6/1bq1PP2/P1N1B1P1/1PQ4P/R3K2R b KQk - 0 21",
+    "removingDefender": {
+      "target": "e4",
+      "minimumGain": 1
+    },
+    "previousMove": {
+      "fen": "3rk2r/5pp1/p3pnp1/1p6/1bq1PP2/2N1B1P1/PPQ4P/R3K2R w KQk - 3 21",
+      "move": "a3"
+    },
+    "gameReference": {
+      "id": "302d656e954e9f8a",
+      "kind": "game",
+      "ply": 41,
+      "branch": 0,
+      "collection": "removing-defender"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "reason": "Đổi Tượng lấy Mã bảo vệ, rồi tính thêm nước bắt Tốt g3 và đòn tấn công Xe.",
+      "solverMoves": 5,
+      "sacrificeCount": 0
+    },
+    "moves": [
+      "Bxc3+",
+      "bxc3",
+      "Nxe4",
+      "Rc1",
+      "Nxg3",
+      "Rg1",
+      "Nf5",
+      "Bb6",
+      "Rd6"
+    ],
+    "alternativeLines": [
+      ["Bxc3+", "Qxc3", "Qxc3+", "bxc3", "Nxe4", "Bf2"],
+      ["Qxe4", "Qxe4", "Bxc3+", "bxc3", "Nxe4"]
+    ],
+    "hints": [
+      "Mã c3 bảo vệ Tốt e4. Nước bắt Mã có chiếu sẽ giúp Đen giành Tốt như thế nào?"
+    ],
+    "solution": "Bxc3+ đổi Mã bảo vệ Tốt e4. Sau bxc3, Nxe4 bắt Tốt. Trong ván đấu, sau Rc1 Nxg3 Rg1 Nf5, Đen đưa Mã đến ô an toàn; Bb6 tấn công Xe d8, nên Đen chơi Rd6. Nếu Trắng bắt Mã bằng hxg3 ngay sau Nxg3, cột h mở và Đen có Rxh1+. Nếu Qxc3 thay cho bxc3, Đen đổi Hậu rồi chơi Nxe4.",
+    "source": "https://theweekinchess.com/zips/twic1663g.zip"
+  },
+  {
+    "id": "removing-defender-c-cardoso-bilych-2026",
+    "title": "Cardoso Cardoso — Bilych",
+    "prompt": "Thí quân để loại bỏ quân bảo vệ Tượng e5 và giành lợi thế vật chất.",
+    "mode": "interactive",
+    "outcome": "removing-defender",
+    "goal": "material",
+    "fen": "r4r1k/1q1n1p1p/p3p1p1/4b3/8/PNN3Q1/1PP3PP/3R1R1K w - - 0 24",
+    "removingDefender": {
+      "target": "e5",
+      "minimumGain": 1
+    },
+    "previousMove": {
+      "fen": "r4r1k/1q1n1p1p/p3pbp1/4B3/8/PNN3Q1/1PP3PP/3R1R1K b - - 0 23",
+      "move": "Bxe5"
+    },
+    "gameReference": {
+      "id": "bbde212e5c4cfbf8",
+      "kind": "game",
+      "ply": 46,
+      "branch": 0,
+      "collection": "removing-defender"
+    },
+    "difficulty": {
+      "level": "C",
+      "status": "suggested",
+      "reason": "Thí Xe lấy Mã để loại bỏ quân bảo vệ; sau đó bắt Tượng có chiếu.",
+      "solverMoves": 3,
+      "sacrificeCount": 1
+    },
+    "moves": ["Rxd7", "Qxd7", "Qxe5+", "f6", "Qe3"],
+    "alternativeLines": [["Rxd7", "Qxd7", "Qxe5+", "Kg8"]],
+    "hints": [
+      "Mã d7 bảo vệ Tượng e5. Nếu đổi Xe lấy Mã, Hậu trắng có thể bắt Tượng bằng nước chiếu."
+    ],
+    "solution": "Rxd7 Qxd7 Qxe5+: Trắng thí Xe lấy Mã rồi dùng Hậu bắt Tượng có chiếu. Một phương án phân tích là ...f6 Qe3, đưa Hậu khỏi đòn tấn công của Tốt; nếu ...Kg8, Trắng đã giành lợi thế vật chất. Trong ván đấu, sau ...f6, Trắng chọn Rxf6.",
+    "source": "https://theweekinchess.com/zips/twic1667g.zip"
+  },
+  {
+    "id": "removing-defender-c-georgiev-hommadov-2026",
+    "title": "Georgiev — Hommadov",
+    "prompt": "Thí Tượng để đổi Hậu bảo vệ Mã c7 và giành lợi thế vật chất.",
+    "mode": "interactive",
+    "outcome": "removing-defender",
+    "goal": "material",
+    "fen": "rr4k1/pbnq1ppp/3p1n2/RP6/2BPp3/1Q2P3/1B1N1PPP/2R3K1 w - - 1 21",
+    "removingDefender": {
+      "target": "c7",
+      "minimumGain": 1
+    },
+    "previousMove": {
+      "fen": "r4rk1/pbnq1ppp/3p1n2/RP6/2BPp3/1Q2P3/1B1N1PPP/2R3K1 b - - 0 20",
+      "move": "Rfb8"
+    },
+    "gameReference": {
+      "id": "1a0ffc31580b2870",
+      "kind": "game",
+      "ply": 40,
+      "branch": 0,
+      "collection": "removing-defender"
+    },
+    "difficulty": {
+      "level": "C",
+      "status": "suggested",
+      "reason": "Thí Tượng lấy Tốt để dẫn Hậu đến ô f7, sau đó đổi Hậu và bắt Mã.",
+      "solverMoves": 3,
+      "sacrificeCount": 1
+    },
+    "moves": ["Bxf7+", "Qxf7", "Qxf7+", "Kxf7", "Rxc7+", "Kg6"],
+    "alternativeLines": [
+      ["Bxf7+", "Kh8", "Bc4", "Rf8"],
+      ["Bxf7+", "Kf8", "Bc4", "Ba6"]
+    ],
+    "hints": [
+      "Hậu d7 bảo vệ Mã c7. Tìm nước chiếu đưa Hậu đen đến ô có thể đổi."
+    ],
+    "solution": "Bxf7+ thí Tượng lấy Tốt. Sau Qxf7 Qxf7+ Kxf7, Hậu bảo vệ Mã c7 đã bị đổi và Xe trắng bắt Mã bằng Rxc7+. Nếu Vua đen đi thay vì bắt Tượng, Tượng có thể trở về c4 sau khi đã lấy Tốt.",
+    "source": "https://theweekinchess.com/zips/twic1664g.zip"
+  },
+  {
+    "id": "removing-defender-c-abdusattorov-caruana-2026",
+    "title": "Abdusattorov — Caruana",
+    "prompt": "Thí Xe để loại Tốt bảo vệ Xe f6, rồi dùng Vua giành lợi thế vật chất.",
+    "mode": "interactive",
+    "outcome": "removing-defender",
+    "goal": "material",
+    "fen": "3r2k1/1p2R1p1/5rP1/p4PK1/8/8/4R3/8 w - - 3 44",
+    "removingDefender": {
+      "target": "f6",
+      "minimumGain": 1
+    },
+    "previousMove": {
+      "fen": "3r1k2/1p2R1p1/5rP1/p4PK1/8/8/4R3/8 b - - 2 43",
+      "move": "Kg8"
+    },
+    "gameReference": {
+      "id": "2f6555107c50590a",
+      "kind": "game",
+      "ply": 86,
+      "branch": 0,
+      "collection": "removing-defender"
+    },
+    "difficulty": {
+      "level": "C",
+      "status": "suggested",
+      "reason": "Thí Xe lấy Tốt bảo vệ rồi chiếu để Vua trắng bắt Xe đen.",
+      "solverMoves": 4,
+      "sacrificeCount": 1
+    },
+    "moves": ["Rxg7+", "Kxg7", "Re7+", "Kf8", "Kxf6", "Rd6+", "Re6"],
+    "alternativeLines": [
+      ["Rxg7+", "Kf8", "Kxf6", "Rd6+", "Re6"],
+      ["Rxg7+", "Kh8", "Kxf6", "Rd6+", "Re6"],
+      ["Rxg7+", "Kxg7", "Re7+", "Kg8", "Kxf6", "a4"]
+    ],
+    "hints": [
+      "Tốt g7 bảo vệ Xe f6. Tính nước bắt Tốt có chiếu và đường đi của Vua trắng."
+    ],
+    "solution": "Rxg7+ thí Xe để loại Tốt bảo vệ Xe f6. Sau Kxg7, Re7+ đưa Vua đen ra khỏi g7 và Vua trắng bắt Xe bằng Kxf6. Nếu Đen chiếu Rd6+, Re6 che chiếu; Vua trắng bảo vệ Xe e6. Đen cũng có thể đưa Vua đi ngay sau Rxg7+, khi đó Trắng vẫn bắt được Xe f6.",
+    "source": "https://theweekinchess.com/zips/twic1664g.zip"
+  },
+  {
+    "id": "removing-defender-c-kourkoulos-chipanga-2026",
+    "title": "Kourkoulos-Arditis — Chipanga",
+    "prompt": "Thí Xe để loại Tượng bảo vệ Mã d5 và giành lợi thế vật chất.",
+    "mode": "interactive",
+    "outcome": "removing-defender",
+    "goal": "material",
+    "fen": "5rk1/1pq3pp/p2bb1r1/3n1pBQ/8/1BP4P/PP3PP1/R3R1K1 w - - 0 25",
+    "removingDefender": {
+      "target": "d5",
+      "minimumGain": 1
+    },
+    "previousMove": {
+      "fen": "5rk1/1pqb2pp/p2bN1r1/3n1pBQ/8/1BP4P/PP3PP1/R3R1K1 b - - 0 24",
+      "move": "Bxe6"
+    },
+    "gameReference": {
+      "id": "4ce6abce114ce2dd",
+      "kind": "game",
+      "ply": 48,
+      "branch": 0,
+      "collection": "removing-defender"
+    },
+    "difficulty": {
+      "level": "C",
+      "status": "suggested",
+      "reason": "Thí Xe lấy Tượng bảo vệ rồi dùng Tượng còn lại bắt Mã.",
+      "solverMoves": 5,
+      "sacrificeCount": 1
+    },
+    "moves": [
+      "Rxe6",
+      "Rxe6",
+      "Bxd5",
+      "Qf7",
+      "Qxf7+",
+      "Kxf7",
+      "Re1",
+      "Re8",
+      "Kf1"
+    ],
+    "alternativeLines": [
+      ["Rxe6", "Bh2+", "Kh1", "Rxe6", "Bxd5", "Qb6", "Bxe6+"]
+    ],
+    "hints": [
+      "Tượng e6 bảo vệ Mã d5. Tính nước bắt Tượng bằng Xe và nước bắt lại của Đen."
+    ],
+    "solution": "Rxe6 thí Xe lấy Tượng bảo vệ Mã d5. Sau Rxe6, Tượng trắng bắt Mã bằng Bxd5. Nếu Đen đề nghị đổi Hậu bằng Qf7, Trắng có thể đổi Hậu rồi đưa Xe còn lại đến e1.",
+    "source": "https://theweekinchess.com/zips/twic1663g.zip"
+  },
+  {
+    "id": "removing-defender-c-iclicki-singh-2026",
+    "title": "Iclicki — Singh",
+    "prompt": "Chuẩn bị thí Xe để loại Mã bảo vệ Tượng d2 và giành lợi thế vật chất.",
+    "mode": "interactive",
+    "outcome": "removing-defender",
+    "goal": "material",
+    "fen": "5rk1/pp2q1bp/2p1b1p1/4p3/2P1Pp2/1P1r1N1P/P2B1PP1/R2Q1RK1 b - - 2 23",
+    "removingDefender": {
+      "target": "d2",
+      "minimumGain": 1
+    },
+    "previousMove": {
+      "fen": "5rk1/pp2q1bp/2p1b1p1/4p3/2P1Pp2/1P1r1N1P/P2B1PP1/R1Q2RK1 w - - 1 23",
+      "move": "Qd1"
+    },
+    "gameReference": {
+      "id": "78e2396aa8282009",
+      "kind": "game",
+      "ply": 45,
+      "branch": 0,
+      "collection": "removing-defender"
+    },
+    "difficulty": {
+      "level": "C",
+      "status": "suggested",
+      "reason": "Đưa Hậu vào cột d, thí Xe lấy Mã bảo vệ rồi bắt Tượng.",
+      "solverMoves": 5,
+      "sacrificeCount": 1
+    },
+    "moves": ["Qd8", "c5", "Rxf3", "Qxf3", "Qxd2", "Rfd1", "Qb4", "Rd6", "Re8"],
+    "alternativeLines": [
+      ["Qd8", "a3", "Rxf3", "Qxf3", "Qxd2", "Rfd1", "Qa5", "b4", "Qxb4"]
+    ],
+    "hints": [
+      "Mã f3 bảo vệ Tượng d2. Sau khi Xe bắt Mã, quân nào của Đen có thể bắt Tượng?"
+    ],
+    "solution": "Qd8 đưa Hậu vào cột d phía sau Xe. Sau c5, Đen chơi Rxf3; nếu Qxf3 thì Xe đã rời cột d và Hậu bắt Tượng bằng Qxd2. Khi Xe trắng tấn công Hậu bằng Rfd1, Qb4 đưa Hậu ra khỏi đòn tấn công.",
+    "source": "https://theweekinchess.com/zips/twic1664g.zip"
+  },
+  {
+    "id": "removing-defender-c-cave-roselli-2026",
+    "title": "Cave — Roselli Mailhe",
+    "prompt": "Loại hai quân bảo vệ Hậu f3 để giành lợi thế vật chất.",
+    "mode": "interactive",
+    "outcome": "removing-defender",
+    "goal": "material",
+    "fen": "3r2k1/1p1bnpp1/pb3q1p/3p4/3N4/1BP1BQPP/PP3PK1/4R3 b - - 9 32",
+    "removingDefender": {
+      "target": "f3",
+      "minimumGain": 4
+    },
+    "previousMove": {
+      "fen": "3r2k1/1p1bnpp1/pb3q1p/3p4/3N4/1BP1B1PP/PP2QPK1/4R3 w - - 8 32",
+      "move": "Qf3"
+    },
+    "gameReference": {
+      "id": "2a1abf14a7e78737",
+      "kind": "game",
+      "ply": 63,
+      "branch": 0,
+      "collection": "removing-defender"
+    },
+    "difficulty": {
+      "level": "C",
+      "status": "suggested",
+      "reason": "Thí Tượng có chiếu để đưa Vua rời Hậu sau khi đổi Mã bảo vệ.",
+      "solverMoves": 3,
+      "sacrificeCount": 1
+    },
+    "moves": ["Bxd4", "Bxd4", "Bxh3+", "Kxh3", "Qxf3", "Rxe7"],
+    "alternativeLines": [["Bxd4", "Bxd4", "Bxh3+", "Kh2", "Qxf3", "Kxh3"]],
+    "hints": [
+      "Hậu f3 được Mã d4 và Vua g2 bảo vệ. Sau khi đổi Mã, có nước thí Tượng nào chiếu Vua không?"
+    ],
+    "solution": "Bxd4 đổi Mã bảo vệ Hậu f3. Sau Bxd4, Bxh3+ thí Tượng để đưa Vua g2 rời vị trí bảo vệ Hậu. Nếu Kxh3, Đen bắt Hậu bằng Qxf3; Trắng có thể đáp Rxe7. Nếu Vua đi Kh2, Đen vẫn có Qxf3.",
+    "source": "https://theweekinchess.com/zips/twic1663g.zip"
+  },
+  {
+    "id": "removing-defender-c-shih-gould-fus-2026",
+    "title": "Shih Gould — Fus",
+    "prompt": "Thí Xe để loại Tượng bảo vệ Mã f3, rồi tính tiếp các nước bắt lại.",
+    "mode": "interactive",
+    "outcome": "removing-defender",
+    "goal": "material",
+    "fen": "5rk1/pp2r2p/2n3p1/2Pp1qPb/Nb1P1p1P/1P3N2/R3BP1K/1Q4R1 b - - 10 27",
+    "removingDefender": {
+      "target": "f3",
+      "minimumGain": 1
+    },
+    "previousMove": {
+      "fen": "5rk1/pp2r2p/2n3p1/2Pp1qPb/Nb1P1p1P/1P3N2/R3BP1K/3Q2R1 w - - 9 27",
+      "move": "Qb1"
+    },
+    "gameReference": {
+      "id": "ae2d8d5f60512e9f",
+      "kind": "game",
+      "ply": 53,
+      "branch": 0,
+      "collection": "removing-defender"
+    },
+    "difficulty": {
+      "level": "C",
+      "status": "suggested",
+      "reason": "Thí Xe lấy Tượng bảo vệ Mã; sau đó bắt Mã và Tốt d4.",
+      "solverMoves": 6,
+      "sacrificeCount": 1
+    },
+    "moves": [
+      "Qxb1",
+      "Rxb1",
+      "Rxe2",
+      "Rxe2",
+      "Bxf3",
+      "Re6",
+      "Nxd4",
+      "Re7",
+      "Rf7",
+      "Re8+",
+      "Kg7"
+    ],
+    "alternativeLines": [
+      ["Rxe2", "Qxf5", "Rxf5", "Rxe2", "Bxf3", "Re6", "Nxd4"],
+      ["Rxe2", "Rxe2", "Qxb1", "Rxb1", "Bxf3", "Re6", "Nxd4"]
+    ],
+    "hints": [
+      "Tượng e2 bảo vệ Mã f3. Sau khi đổi Hậu, hãy tính nước Xe bắt Tượng và Tượng h5 bắt Mã."
+    ],
+    "solution": "Qxb1 Rxb1 đổi Hậu. Sau đó Rxe2 thí Xe lấy Tượng bảo vệ Mã; Rxe2 Bxf3 giúp Đen bắt Mã f3. Mã này cũng bảo vệ Tốt d4, nên sau Re6 Đen có Nxd4. Trắng chiếu Re8+ và Đen đáp Kg7. Đen cũng có thể bắt Tượng e2 trước khi đổi Hậu.",
+    "source": "https://theweekinchess.com/zips/twic1667g.zip"
+  },
+  {
+    "id": "removing-defender-cstar-chaudhary-kamble-2026",
+    "title": "Chaudhary — Kamble",
+    "prompt": "Loại bỏ quân bảo vệ Xe f8, rồi xử lý Tốt d2 để giữ lợi thế vật chất.",
+    "mode": "interactive",
+    "outcome": "removing-defender",
+    "goal": "material",
+    "fen": "R4r2/7p/Q2q2p1/2k5/8/6P1/PPrp4/3R2K1 w - - 6 33",
+    "removingDefender": {
+      "target": "f8",
+      "minimumGain": 5
+    },
+    "previousMove": {
+      "fen": "R4r2/7p/Q1kq2p1/8/8/6P1/PPrp4/3R2K1 b - - 5 32",
+      "move": "Kc5"
+    },
+    "gameReference": {
+      "id": "be045236589a3b61",
+      "kind": "game",
+      "ply": 64,
+      "branch": 0,
+      "collection": "removing-defender"
+    },
+    "difficulty": {
+      "level": "C*",
+      "status": "suggested",
+      "reason": "Không thí quân; sau khi đổi Hậu cần phối hợp hai Xe để xử lý Tốt thông và giữ lợi thế.",
+      "solverMoves": 5,
+      "sacrificeCount": 0
+    },
+    "moves": [
+      "Qxd6+",
+      "Kxd6",
+      "Rxf8",
+      "Rxb2",
+      "Rd8+",
+      "Ke5",
+      "R8xd2",
+      "Rxd2",
+      "Rxd2"
+    ],
+    "alternativeLines": [],
+    "hints": [
+      "Hậu d6 bảo vệ Xe f8. Sau khi đổi Hậu và bắt Xe, Tốt d2 vẫn cần được xử lý."
+    ],
+    "solution": "Qxd6+ Kxd6 Rxf8 loại bỏ quân bảo vệ và bắt Xe. Trong phương án phân tích ...Rxb2 Rd8+ Ke5 R8xd2 Rxd2 Rxd2, Trắng phối hợp hai Xe để bắt Tốt d2 và đổi Xe còn lại. Ván đấu kết thúc sau Qxd6+; các nước tiếp theo là phân tích.",
+    "source": "https://theweekinchess.com/zips/twic1666g.zip"
+  },
+  {
+    "id": "removing-defender-cstar-kandil-waqar-2026",
+    "title": "Kandil — Muhammad Waqar",
+    "prompt": "Loại hai quân bảo vệ Tốt c6, đồng thời giữ Mã an toàn.",
+    "mode": "interactive",
+    "outcome": "removing-defender",
+    "goal": "material",
+    "fen": "r3r1k1/p1pb2bp/2pp2pn/8/5P2/1Pq2BNP/P1PQ1BPK/3R1R2 w - - 7 23",
+    "removingDefender": {
+      "target": "c6",
+      "minimumGain": 1
+    },
+    "previousMove": {
+      "fen": "r3r1k1/p1pb2bp/2pp1qpn/8/5P2/1P3BNP/P1PQ1BPK/3R1R2 b - - 6 22",
+      "move": "Qc3"
+    },
+    "gameReference": {
+      "id": "c548dbddf7c85196",
+      "kind": "game",
+      "ply": 44,
+      "branch": 0,
+      "collection": "removing-defender"
+    },
+    "difficulty": {
+      "level": "C*",
+      "status": "suggested",
+      "reason": "Đổi Hậu, tấn công Tượng bảo vệ rồi đưa Mã thoát đòn Tốt trước khi bắt Tốt c6; không thí quân.",
+      "solverMoves": 5,
+      "sacrificeCount": 0
+    },
+    "moves": [
+      "Qxc3",
+      "Bxc3",
+      "Ne4",
+      "Bg7",
+      "Nc5",
+      "Bf5",
+      "Na6",
+      "Rac8",
+      "Bxc6",
+      "Re2"
+    ],
+    "alternativeLines": [
+      [
+        "Qxc3",
+        "Bxc3",
+        "Ne4",
+        "Bg7",
+        "Nc5",
+        "dxc5",
+        "Rxd7",
+        "Rad8",
+        "Rxc7",
+        "Rf8"
+      ]
+    ],
+    "hints": [
+      "Hậu c3 và Tượng d7 cùng bảo vệ Tốt c6. Sau khi đổi Hậu, hãy dùng Mã tấn công Tượng và chú ý Tốt d6."
+    ],
+    "solution": "Qxc3 Bxc3 đổi Hậu đang bảo vệ Tốt c6. Ne4 buộc Tượng lùi; Nc5 tấn công Tượng d7, quân bảo vệ còn lại. Sau Bf5, Mã c5 đang bị Tốt d6 tấn công nên Trắng chơi Na6 trước khi bắt Tốt bằng Bxc6. Sau Re2, Xe f1 bảo vệ Tượng f2. Nếu Đen bắt Mã bằng dxc5 ngay sau Nc5, Trắng có Rxd7 và Rxc7.",
+    "source": "https://theweekinchess.com/zips/twic1663g.zip"
+  },
+  {
+    "id": "removing-defender-cstar-khan-michaelides-2026",
+    "title": "Khan — Michaelides",
+    "prompt": "Đổi Tượng bảo vệ Mã c2, rồi tính nước chiếu trung gian và chuỗi đổi quân.",
+    "mode": "interactive",
+    "outcome": "removing-defender",
+    "goal": "material",
+    "fen": "8/5pk1/7p/3Qp1p1/3nP3/1B1n1PP1/PqN3KP/8 b - - 13 52",
+    "removingDefender": {
+      "target": "c2",
+      "minimumGain": 3
+    },
+    "previousMove": {
+      "fen": "8/5pk1/7p/3Qp1p1/3nP3/1B1nNPP1/Pq4KP/8 w - - 12 52",
+      "move": "Nc2"
+    },
+    "gameReference": {
+      "id": "2420902995311e03",
+      "kind": "game",
+      "ply": 103,
+      "branch": 0,
+      "collection": "removing-defender"
+    },
+    "difficulty": {
+      "level": "C*",
+      "status": "suggested",
+      "reason": "Đổi Tượng bảo vệ, xen nước chiếu rồi đổi Hậu và bắt Mã; không thí quân.",
+      "solverMoves": 6,
+      "sacrificeCount": 0
+    },
+    "moves": [
+      "Nxb3",
+      "Qxb3",
+      "Ne1+",
+      "Kh3",
+      "Qxb3",
+      "axb3",
+      "Nxc2",
+      "f4",
+      "exf4",
+      "gxf4",
+      "gxf4"
+    ],
+    "alternativeLines": [
+      ["Nxb3", "axb3", "Qxc2+", "Kh3"],
+      ["Nxb3", "Qxd3", "Nd4", "f4", "Nxc2", "Qb3", "Qxb3", "axb3"]
+    ],
+    "hints": [
+      "Tượng b3 bảo vệ Mã c2. Sau khi đổi Tượng, hãy xem Mã còn lại có nước chiếu nào để tiến đến c2."
+    ],
+    "solution": "Nxb3 đổi Tượng đang bảo vệ Mã c2. Nếu Qxb3, Ne1+ đưa Mã còn lại đến vị trí có thể bắt Mã c2 sau Qxb3 axb3. Sau Nxc2 f4, Đen có exf4 gxf4 gxf4. Nếu Trắng bắt Mã đầu bằng axb3, Đen có Qxc2+. Ván đấu kết thúc sau Nxb3; các nước tiếp theo là phương án phân tích.",
+    "source": "https://theweekinchess.com/zips/twic1663g.zip"
+  },
+  {
+    "id": "removing-defender-d-kvaloy-campos-2026",
+    "title": "Kvaløy — Campos Gómez",
+    "prompt": "Thí quân để loại bỏ quân bảo vệ Tượng e4. Tính các nước chiếu của Đen trước khi giành vật chất.",
+    "mode": "interactive",
+    "outcome": "removing-defender",
+    "goal": "material",
+    "fen": "rr4k1/6pp/pR3n2/2p2B2/2P1b3/4N3/P5PP/2KR4 w - - 7 25",
+    "removingDefender": {
+      "target": "e4",
+      "minimumGain": 1
+    },
+    "previousMove": {
+      "fen": "rr4k1/1b4pp/pR3n2/2p2B2/2P5/4N3/P5PP/2KR4 b - - 6 24",
+      "move": "Be4"
+    },
+    "gameReference": {
+      "id": "2a5d27f1103b08e6",
+      "kind": "game",
+      "ply": 48,
+      "branch": 0,
+      "collection": "removing-defender"
+    },
+    "difficulty": {
+      "level": "D",
+      "status": "suggested",
+      "reason": "Thí Xe lấy Mã; xử lý các nước chiếu và phối hợp bắt lại trước khi bắt Tượng.",
+      "solverMoves": 5,
+      "sacrificeCount": 1
+    },
+    "moves": [
+      "Rxf6",
+      "Rb1+",
+      "Kd2",
+      "Rd8+",
+      "Ke2",
+      "Rbxd1",
+      "Nxd1",
+      "gxf6",
+      "Bxe4"
+    ],
+    "alternativeLines": [
+      [
+        "Rxf6",
+        "Rb1+",
+        "Kd2",
+        "Rd8+",
+        "Ke2",
+        "Rbxd1",
+        "Nxd1",
+        "Bf3+",
+        "Kxf3",
+        "gxf6"
+      ]
+    ],
+    "hints": [
+      "Mã f6 bảo vệ Tượng e4. Sau khi bắt Mã, hãy tính cả chuỗi chiếu và nước bắt Xe d1."
+    ],
+    "solution": "Rxf6 thí Xe lấy Mã bảo vệ Tượng. Trong ván đấu, Đen chơi ...Rb1+ Kd2 Rd8+ Ke2 Rbxd1 Nxd1 gxf6 Bxe4: Mã bắt lại Xe, rồi Tượng bắt Tượng e4. Một nước đáp khác là ...Bf3+; Vua có thể bắt Tượng trước khi Tốt bắt Xe f6.",
+    "source": "https://theweekinchess.com/zips/twic1664g.zip"
+  },
+  {
+    "id": "removing-defender-d-martinovic-sipila-2026",
+    "title": "Martinović — Sipilä",
+    "prompt": "Thí quân để loại Hậu bảo vệ Mã a6 và giành lợi thế vật chất.",
+    "mode": "interactive",
+    "outcome": "removing-defender",
+    "goal": "material",
+    "fen": "1k1r3r/pq6/npQP1p2/4p2p/P3N2P/1R2P1P1/6K1/1R6 w - - 3 34",
+    "removingDefender": {
+      "target": "a6",
+      "minimumGain": 4
+    },
+    "previousMove": {
+      "fen": "1k1r3r/p6q/npQP1p2/4p2p/P3N2P/1R2P1P1/6K1/1R6 b - - 2 33",
+      "move": "Qb7"
+    },
+    "gameReference": {
+      "id": "4c5c3f5f656da956",
+      "kind": "game",
+      "ply": 66,
+      "branch": 0,
+      "collection": "removing-defender"
+    },
+    "difficulty": {
+      "level": "D",
+      "status": "suggested",
+      "reason": "Thí Xe, phối hợp Xe còn lại và Hậu qua hơn ba nước của mình.",
+      "solverMoves": 7,
+      "sacrificeCount": 1
+    },
+    "moves": [
+      "Rxb6",
+      "axb6",
+      "Rxb6",
+      "Rh7",
+      "Rxb7+",
+      "Rxb7",
+      "Qxa6",
+      "f5",
+      "Nc5",
+      "Rb2+",
+      "Kh3",
+      "f4",
+      "exf4"
+    ],
+    "alternativeLines": [
+      ["Rxb6", "Qxb6", "Rxb6+", "axb6", "Qxb6+", "Kc8", "Qc6+", "Kb8", "Qxa6"],
+      [
+        "Rxb6",
+        "axb6",
+        "Rxb6",
+        "Rd7",
+        "Rxb7+",
+        "Rxb7",
+        "Qxa6",
+        "Ra7",
+        "Qf1",
+        "Rc8",
+        "Kh3",
+        "f5",
+        "Qxf5"
+      ]
+    ],
+    "hints": [
+      "Tốt a7 bảo vệ b6. Tính cách mở cột b, đổi Hậu bảo vệ Mã a6 và đưa Mã e4 ra khỏi đòn tấn công."
+    ],
+    "solution": "Rxb6 thí Xe để mở đường cho Xe còn lại. Sau axb6 Rxb6 Rh7, Rxb7+ đổi Xe lấy Hậu đang bảo vệ Mã a6; tiếp theo Qxa6 bắt Mã. Khi Đen đẩy f5 tấn công Mã e4, Nc5 đưa Mã đến ô an toàn. Đen có thể bắt Xe đầu tiên bằng Hậu; khi đó Trắng đổi Hậu rồi bắt Mã a6.",
+    "source": "https://theweekinchess.com/zips/twic1664g.zip"
+  },
+  {
+    "id": "removing-defender-d-vazquez-kawuma-2026",
+    "title": "Vázquez — Kawuma",
+    "prompt": "Phối hợp hai Mã để loại quân bảo vệ Tốt f5 và giành lợi thế vật chất.",
+    "mode": "interactive",
+    "outcome": "removing-defender",
+    "goal": "material",
+    "fen": "3rr1k1/1b4qp/2p3p1/1pp1pp1n/2N1P3/1P1P1N1P/R1P2PP1/2Q1R1K1 w - - 0 20",
+    "removingDefender": {
+      "target": "f5",
+      "minimumGain": 1
+    },
+    "previousMove": {
+      "fen": "3rr1k1/1bq3Bp/2p3p1/1pp1pp1n/2N1P3/1P1P1N1P/R1P2PP1/2Q1R1K1 b - - 0 19",
+      "move": "Qxg7"
+    },
+    "gameReference": {
+      "id": "8353cc45f08d2147",
+      "kind": "game",
+      "ply": 38,
+      "branch": 0,
+      "collection": "removing-defender"
+    },
+    "difficulty": {
+      "level": "D",
+      "status": "suggested",
+      "reason": "Phối hợp hai Mã, Tốt và Hậu qua hơn ba nước của mình; cần tính cả phương án Hậu bắt lại.",
+      "solverMoves": 4,
+      "sacrificeCount": 1
+    },
+    "moves": ["Ncxe5", "Rxe5", "Nxe5", "Qxe5", "exf5", "Qf4", "Qxf4", "Nxf4"],
+    "alternativeLines": [
+      [
+        "Ncxe5",
+        "Rxe5",
+        "Nxe5",
+        "Qxe5",
+        "exf5",
+        "Qxf5",
+        "g4",
+        "Qf7",
+        "gxh5",
+        "gxh5"
+      ]
+    ],
+    "hints": [
+      "Tính chuỗi hai Mã bắt ở e5. Sau khi Tốt bắt f5, hãy xem Hậu đen và Mã h5 có thể bị tấn công cùng lúc không."
+    ],
+    "solution": "Ncxe5 kéo Xe đến e5; sau Rxe5, Nxe5 đổi Xe đang bảo vệ Tốt f5. Sau Qxe5, exf5 bắt Tốt và mở cột e tấn công Hậu. Nếu Đen chơi Qf4, Trắng đổi Hậu bằng Qxf4. Nếu Đen bắt lại bằng Qxf5, g4 tấn công cả Hậu lẫn Mã h5; sau khi Hậu rời đi, gxh5 bắt Mã.",
+    "source": "https://theweekinchess.com/zips/twic1663g.zip"
+  },
+  {
+    "id": "removing-defender-d-demchenko-ynojosa-2026",
+    "title": "Demchenko — Ynojosa Aponte",
+    "prompt": "Thí Xe để loại Mã bảo vệ Xe d2 và giành lợi thế vật chất.",
+    "mode": "interactive",
+    "outcome": "removing-defender",
+    "goal": "material",
+    "fen": "8/3Q4/p4p1k/3b3r/PP6/8/3R2P1/4qNK1 b - - 16 48",
+    "removingDefender": {
+      "target": "d2",
+      "minimumGain": 3
+    },
+    "previousMove": {
+      "fen": "8/3Q4/p4p1k/3b3r/PP6/8/3R2PN/4q1K1 w - - 15 48",
+      "move": "Nf1"
+    },
+    "gameReference": {
+      "id": "47b183627fb3c5fc",
+      "kind": "game",
+      "ply": 95,
+      "branch": 0,
+      "collection": "removing-defender"
+    },
+    "difficulty": {
+      "level": "D",
+      "status": "suggested",
+      "reason": "Thí Xe, chiếu Vua để bắt Mã bảo vệ rồi phối hợp Hậu và Vua qua hơn ba nước của mình.",
+      "solverMoves": 5,
+      "sacrificeCount": 1
+    },
+    "moves": [
+      "Rh1+",
+      "Kxh1",
+      "Qxf1+",
+      "Kh2",
+      "Qf4+",
+      "Kg1",
+      "Qxd2",
+      "Qh3+",
+      "Kg6"
+    ],
+    "alternativeLines": [
+      ["Rh1+", "Kxh1", "Qxf1+", "Kh2", "Qf4+", "Kh1", "Qxd2", "Qh3+", "Kg5"],
+      [
+        "Rh1+",
+        "Kxh1",
+        "Qxf1+",
+        "Kh2",
+        "Qf4+",
+        "Kh3",
+        "Qxd2",
+        "Qg4",
+        "Qe3+",
+        "Kh2"
+      ]
+    ],
+    "hints": [
+      "Mã f1 bảo vệ Xe d2. Tìm nước thí Xe có chiếu để đưa Vua trắng rời g1 và cho Hậu bắt Mã."
+    ],
+    "solution": "Rh1+ thí Xe; sau Kxh1, Qxf1+ bắt Mã bảo vệ Xe d2. Sau Kh2, Qf4+ đặt Hậu trên đường chéo đến d2. Nếu Vua về g1, Qxd2 bắt Xe; sau Qh3+, Kg6 đưa Vua đen tránh chiếu. Vua trắng cũng có thể chọn Kh1 hoặc Kh3 sau Qf4+; Đen vẫn có Qxd2.",
+    "source": "https://theweekinchess.com/zips/twic1663g.zip"
+  }
+]

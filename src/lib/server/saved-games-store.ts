@@ -3,7 +3,13 @@ import { promises as fs } from 'node:fs';
 import path from 'node:path';
 import { Chess } from 'chess.js';
 import seed from './saved-games.json';
-import type { SavedGame } from '../chess/saved-games';
+import { tacticsCatalog } from './tactics-catalog';
+import { practiceLevels } from '../chess/draw-levels';
+import type {
+  PositionDraft,
+  SavedAnnotations,
+  SavedGame,
+} from '../chess/saved-games';
 
 const file = path.join(process.cwd(), 'src/lib/server/saved-games.json');
 export const writable = () =>
@@ -13,10 +19,13 @@ export async function readSavedGames(): Promise<SavedGame[]> {
     ? JSON.parse(await fs.readFile(file, 'utf8'))
     : (seed as SavedGame[]);
 }
-export function validateSavedGame(
-  value: unknown
-): Omit<SavedGame, 'id' | 'createdAt' | 'updatedAt' | 'moments'> {
-  const v = value as SavedGame;
+export function validateSavedGame(value: unknown): Omit<
+  SavedGame,
+  'id' | 'createdAt' | 'updatedAt' | 'moments' | 'positions'
+> & {
+  position?: PositionDraft & { fen: string };
+} {
+  const v = value as SavedGame & { position?: PositionDraft };
   if (
     !v ||
     !v.source ||
@@ -59,6 +68,33 @@ export function validateSavedGame(
     ply > s.lines[branch].length
   )
     throw new Error('Mốc nước đi không hợp lệ.');
+  let position;
+  if (v.position !== undefined) {
+    const p = v.position;
+    if (
+      !p ||
+      !tacticsCatalog.themes.some((theme) => theme.id === p.themeId) ||
+      !practiceLevels.includes(p.level)
+    )
+      throw new Error('Chọn chủ đề và mức đề xuất cho thế cờ.');
+    const game = new Chess(s.fen);
+    for (const move of s.lines[branch].slice(0, ply)) game.move(move);
+    position = {
+      ...validateAnnotations(p),
+      themeId: p.themeId,
+      level: p.level,
+      // Always derive the exact position from the validated full game.
+      fen: game.fen(),
+    };
+  }
+  return {
+    reference: v.reference,
+    source: s,
+    ...validateAnnotations(v),
+    ...(position ? { position } : {}),
+  };
+}
+function validateAnnotations(v: SavedAnnotations): SavedAnnotations {
   if (
     !Array.isArray(v.squares) ||
     v.squares.length > 64 ||
@@ -71,12 +107,21 @@ export function validateSavedGame(
   )
     throw new Error('Kiểm tra ô cờ, nhãn và ghi chú (tối đa 4000 ký tự).');
   return {
-    reference: v.reference,
-    source: s,
     squares: [...new Set(v.squares)],
     tags: [...new Set(v.tags.map((x) => x.trim()))],
     note: v.note.trim(),
   };
+}
+export function positionId(
+  game: string,
+  branch: number,
+  ply: number,
+  themeId: string
+) {
+  return createHash('sha256')
+    .update(JSON.stringify([game, branch, ply, themeId]))
+    .digest('hex')
+    .slice(0, 24);
 }
 export function gameId(source: SavedGame['source']) {
   return createHash('sha256')

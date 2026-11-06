@@ -1,0 +1,479 @@
+{
+  "records": [
+    {
+      "id": "c5ea876b70de4372",
+      "fen": "r6r/1ppkb3/p2p1p2/3n4/1P4Q1/5p1q/P6N/R1B1RNK1 b - - 3 28",
+      "gameId": "7042bafec407a244",
+      "reason": "The candidate line Qxg4+ Nxg4 Rag8 Kf2 Rxg4 already wins a knight before the later Rxb4 capture; the defender removal of b4 is incidental to the prior material gain.",
+      "line": [
+        "Qxg4+",
+        "Nxg4",
+        "Rag8",
+        "Kf2",
+        "Rxg4"
+      ],
+      "materialGainBeforeTarget": 3
+    },
+    {
+      "id": "dfca8fb43230db5a",
+      "gameId": "06b89c67ff7e5100",
+      "fen": "1k6/q3nrp1/2p5/4R2p/1PPBR2P/3P1r2/P7/1K6 w - - 0 41",
+      "reason": "Bxa7+ Kxa7 already wins a queen for a bishop; the later knight capture is incidental.",
+      "source": "https://theweekinchess.com/zips/twic1663g.zip",
+      "archiveSha256": "36ac4a1324a21674649f7b5eb12e0ef21167b18288917cce6aba3d8120669dd9"
+    },
+    {
+      "id": "1973d152dfc46d31",
+      "gameId": "06b89c67ff7e5100",
+      "fen": "1k6/p1q1nrp1/2p5/4R2p/1PPBR2P/Q2P1r2/P7/1K6 w - - 1 40",
+      "reason": "Rxh5 wins an unprotected pawn without removing a defender; no immediate recapture exists and the 1,000,000-node review retains the advantage.",
+      "source": "https://theweekinchess.com/zips/twic1663g.zip",
+      "archiveSha256": "36ac4a1324a21674649f7b5eb12e0ef21167b18288917cce6aba3d8120669dd9"
+    },
+    {
+      "id": "dead15de3931edcd",
+      "gameId": "0d3c16e3a766676c",
+      "fen": "1r3rk1/1Bq1bpp1/p3p3/2p1n3/Q7/2P3Pp/PP1N1P1P/R1B1R1K1 b - - 0 23",
+      "reason": "The sample already wins a bishop after Qxb7 Qe4 Nd3 Qxb7 Rxb7 before the later pawn capture, so the indexed defender removal is incidental to that gain.",
+      "source": "https://theweekinchess.com/zips/twic1663g.zip",
+      "archiveSha256": "36ac4a1324a21674649f7b5eb12e0ef21167b18288917cce6aba3d8120669dd9"
+    },
+    {
+      "id": "fc25e063ec813370",
+      "gameId": "e7c0578c47d77153",
+      "fen": "5B2/5Qbk/p2p1p2/4p2p/4b2P/1P6/PKP5/6r1 w - - 4 39",
+      "reason": "Bxd6 safely captures an undefended pawn without removing the g7 defender; the reviewed line Bxd6 Bg6 Qb7 Kh6 Qxa6 gains a second pawn. The intended Bxg7 Rxg7 Qxf6 is therefore incidental to the material objective.",
+      "line": [
+        "Bxd6",
+        "Bg6",
+        "Qb7",
+        "Kh6",
+        "Qxa6"
+      ],
+      "source": "https://theweekinchess.com/zips/twic1664g.zip",
+      "archiveSha256": "87bcd88e628c85b6e7e5b36894738fc9e6ef4012345740e57ff05795a908940f"
+    },
+    {
+      "id": "023718b4cc746e6d",
+      "gameId": "06716f8dd61bb6af",
+      "fen": "2rq1rk1/p4ppp/1p2pB2/8/4b3/Pn2PN2/1PR1BPPP/3QK2R b K - 0 18",
+      "reason": "Direct Bxc2 Qxd8 Rfxd8 Bxd8 Rxd8 wins material without first removing the queen; the intended queen exchange is not essential to a simpler material gain.",
+      "line": [
+        "Bxc2",
+        "Qxd8",
+        "Rfxd8",
+        "Bxd8",
+        "Rxd8"
+      ],
+      "source": "https://theweekinchess.com/zips/twic1661g.zip",
+      "archiveSha256": "1c77bb2515885228fa57f1bde11f33214260e83abecc538e19e5a40d73cc5425"
+    },
+    {
+      "id": "c417b94ef884ea35",
+      "gameId": "023b53acbb4abcba",
+      "fen": "7k/8/1ppNn1R1/p1n2b1p/P3P2p/1P6/2P5/6K1 w - - 0 47",
+      "reason": "The simple exf5 captures an undefended bishop before the advertised later removal and target; the named motif is unnecessary to win material.",
+      "source": "https://theweekinchess.com/zips/twic1664g.zip",
+      "archiveSha256": "87bcd88e628c85b6e7e5b36894738fc9e6ef4012345740e57ff05795a908940f"
+    },
+    {
+      "id": "fbed1423024a3a2c",
+      "gameId": "03db8972cac705a7",
+      "fen": "8/k3r1pp/N7/8/3q4/P1P5/1P4RP/7K w - - 0 39",
+      "reason": "The first move cxd4 wins the queen; even after Kxa6 it has already gained a queen for a knight, so the later capture on g7 is incidental.",
+      "source": "https://theweekinchess.com/zips/twic1664g.zip",
+      "archiveSha256": "87bcd88e628c85b6e7e5b36894738fc9e6ef4012345740e57ff05795a908940f"
+    },
+    {
+      "id": "67a71e029ecaeebc",
+      "gameId": "0973ef1e2d28b6cd",
+      "fen": "1r1r2k1/7p/pq2n1pb/4p3/3nP3/N7/PP1R1BPP/2RQ1BK1 b - - 2 26",
+      "reason": "Bxd2 followed by Qxd2 wins a rook for a bishop before the later b2 capture; the advertised defender removal is incidental to that gain.",
+      "source": "https://theweekinchess.com/zips/twic1663g.zip",
+      "archiveSha256": "36ac4a1324a21674649f7b5eb12e0ef21167b18288917cce6aba3d8120669dd9"
+    },
+    {
+      "id": "2b05fbf4e1e2fbdf",
+      "gameId": "15a15f9cd50ca505",
+      "fen": "4q1k1/2b2pn1/p3nQ2/P1pRP1pp/1pP1P2P/1N4PB/7K/8 w - - 2 42",
+      "reason": "The direct hxg5 wins the g5 pawn without first exchanging the defender: Nxg5 allows Qxg5, and bounded analysis favors declining the recapture.",
+      "source": "https://theweekinchess.com/zips/twic1664g.zip",
+      "archiveSha256": "87bcd88e628c85b6e7e5b36894738fc9e6ef4012345740e57ff05795a908940f"
+    },
+    {
+      "id": "dba3b8a0300c0f64",
+      "gameId": "28fc21d3f0090e7d",
+      "fen": "r4r2/1pp3kp/1pq2pn1/8/3QN2R/2P5/1P4PP/3R2K1 w - - 0 33",
+      "reason": "In the advertised variation, Qd7+ Qxd7 Rxd7+ Rf7 Rxh7+ Kxh7 Rxf7+ has already gained a pawn before the later Nxf6, making removal of the king as a defender incidental to the material gain.",
+      "source": "https://theweekinchess.com/zips/twic1664g.zip",
+      "archiveSha256": "87bcd88e628c85b6e7e5b36894738fc9e6ef4012345740e57ff05795a908940f"
+    },
+    {
+      "id": "a7077b5d51bbc7de",
+      "gameId": "260ec1e73c40a2ac",
+      "fen": "b5k1/1n3pb1/pq3npp/1p1pr3/3N1N2/PPB2P1P/3Q2P1/1B1R3K w - - 2 30",
+      "reason": "Nxb5 wins a pawn and uncovers an attack on the rook e5 before the later Bxf6, so the later defender removal is incidental.",
+      "source": "https://theweekinchess.com/zips/twic1663g.zip",
+      "archiveSha256": "36ac4a1324a21674649f7b5eb12e0ef21167b18288917cce6aba3d8120669dd9"
+    },
+    {
+      "id": "225d40fd33093699",
+      "gameId": "2aa009272ad8c095",
+      "fen": "1q3b1r/2rB2k1/pp3pp1/3Q1b1p/4p3/2N1P1P1/PP3PP1/2RR2K1 w - - 2 27",
+      "reason": "Bxf5 gxf5 Qxf5 already wins a pawn before the later target e4 is captured, so that later defender removal is incidental.",
+      "source": "https://theweekinchess.com/zips/twic1664g.zip",
+      "archiveSha256": "87bcd88e628c85b6e7e5b36894738fc9e6ef4012345740e57ff05795a908940f"
+    },
+    {
+      "id": "dee61c238ad52719",
+      "gameId": "2d659f423d1c03c9",
+      "fen": "r2qr1k1/pb2bp2/np5p/2pp4/3Pn1NP/2N1P1P1/PP3PB1/2RQR1K1 w - - 0 17",
+      "reason": "Nxh6+ directly captures an undefended pawn with check, without the intended defender removal.",
+      "source": "https://theweekinchess.com/zips/twic1664g.zip",
+      "archiveSha256": "87bcd88e628c85b6e7e5b36894738fc9e6ef4012345740e57ff05795a908940f"
+    },
+    {
+      "id": "05b8b19fb8fc7b02",
+      "gameId": "584ea977e924bfa1",
+      "fen": "r4bk1/3n1p2/2pqb1p1/p1p4p/Nr1p3P/BP2P1P1/P1Q2PB1/3R1RK1 w - - 0 25",
+      "reason": "Bxb4 axb4 wins a rook for a bishop before the later exd4; the indexed defender removal is incidental to that gain.",
+      "source": "https://theweekinchess.com/zips/twic1664g.zip",
+      "archiveSha256": "87bcd88e628c85b6e7e5b36894738fc9e6ef4012345740e57ff05795a908940f"
+    },
+    {
+      "id": "db31f91d2ad3916c",
+      "gameId": "88c84c5ed1e85fbb",
+      "fen": "4r1k1/p5p1/4r2p/b1p1q3/5p2/PQ5P/2PNbPP1/1R1R1NK1 b - - 3 28",
+      "reason": "Bxd1 Rxd1 wins a rook for a bishop before the later capture on d2, so the named motif is incidental to the material gain.",
+      "source": "https://theweekinchess.com/zips/twic1664g.zip",
+      "archiveSha256": "87bcd88e628c85b6e7e5b36894738fc9e6ef4012345740e57ff05795a908940f"
+    },
+    {
+      "id": "f0f67cbe12a893d4",
+      "gameId": "a0817d705b5a54d8",
+      "fen": "r1b2b1k/pp1r1n2/1q1P1N1p/2pQ1p2/P1B3p1/4P1P1/1P3PP1/3RK2R w K - 6 24",
+      "reason": "Nxd7 Bxd7 wins a rook for a knight before the later Qxf7; the indexed defender removal is incidental.",
+      "source": "https://theweekinchess.com/zips/twic1664g.zip",
+      "archiveSha256": "87bcd88e628c85b6e7e5b36894738fc9e6ef4012345740e57ff05795a908940f"
+    },
+    {
+      "id": "6d05ad97c0d137db",
+      "gameId": "2ac2a8e5d9b30577",
+      "fen": "1R6/2r4k/8/7p/p5pK/P5P1/1P6/8 w - - 0 55",
+      "reason": "Kxh5 already wins the pawn on h5 safely; Kxg4 is an additional gain, so the indexed defender removal is incidental.",
+      "source": "https://theweekinchess.com/zips/twic1664g.zip",
+      "archiveSha256": "87bcd88e628c85b6e7e5b36894738fc9e6ef4012345740e57ff05795a908940f"
+    },
+    {
+      "id": "900ac3729f06dfa4",
+      "gameId": "3bda456835235445",
+      "fen": "rn4k1/5r1p/pq1b3B/1ppQpN2/2P5/6P1/PP3P1P/R4bK1 w - - 2 20",
+      "reason": "Nxd6 Bxc4 wins a bishop for a pawn before the later capture on e5; the named motif is incidental to the material gain.",
+      "source": "https://theweekinchess.com/zips/twic1664g.zip",
+      "archiveSha256": "87bcd88e628c85b6e7e5b36894738fc9e6ef4012345740e57ff05795a908940f"
+    },
+    {
+      "id": "f1120cf2f1f04805",
+      "gameId": "3e3429ab2d5f886b",
+      "fen": "5nk1/5pb1/1BpQ2p1/7p/1Pp1p3/2P4P/5PP1/1q4NK b - - 1 40",
+      "reason": "Bxc3 already wins the pawn on c3, before the later target capture on b4.",
+      "source": "https://theweekinchess.com/zips/twic1664g.zip",
+      "archiveSha256": "87bcd88e628c85b6e7e5b36894738fc9e6ef4012345740e57ff05795a908940f"
+    },
+    {
+      "id": "b59eb14ffb91bc08",
+      "gameId": "3f8a6f4496ea5ddc",
+      "fen": "2b1q2r/2p2pkn/6p1/pN1PN1b1/2p1P3/P7/5QBP/5R1K w - - 1 42",
+      "reason": "Qxf7+ already wins a pawn even after the queen exchange; the later capture on c7 is an additional, incidental gain.",
+      "source": "https://theweekinchess.com/zips/twic1664g.zip",
+      "archiveSha256": "87bcd88e628c85b6e7e5b36894738fc9e6ef4012345740e57ff05795a908940f"
+    },
+    {
+      "id": "c297ca5587455c83",
+      "gameId": "75982946e6f0c10c",
+      "fen": "1r1r4/1p2kp2/p1np2pQ/3bq3/5R2/1P4P1/P3PPB1/3R2K1 w - - 4 29",
+      "reason": "Bxd5 already wins the bishop; Qxd5 would permit Rxd5, losing the queen. The later f7 pawn capture is an incidental gain.",
+      "source": "https://theweekinchess.com/zips/twic1664g.zip",
+      "archiveSha256": "87bcd88e628c85b6e7e5b36894738fc9e6ef4012345740e57ff05795a908940f"
+    },
+    {
+      "id": "8bddd754eeb25ff6",
+      "gameId": "36bcf6b082e3a95a",
+      "fen": "2q4k/p2r1p1p/b1n2bp1/4PnN1/2p2P2/6P1/P2Q1BBP/3R2K1 w - - 0 32",
+      "reason": "Qxd7 Qxd7 Rxd7 has already won a rook before the later target pawn is captured, so the indexed defender removal is incidental.",
+      "line": [
+        "Qxd7",
+        "Qxd7",
+        "Rxd7"
+      ],
+      "source": "https://theweekinchess.com/zips/twic1664g.zip",
+      "archiveSha256": "87bcd88e628c85b6e7e5b36894738fc9e6ef4012345740e57ff05795a908940f"
+    },
+    {
+      "id": "3b909603f1868772",
+      "gameId": "5182dfb0b327834a",
+      "fen": "1r6/1b5p/p1kbN3/1p6/2n1prBB/8/PPP4P/2KRR3 w - - 12 30",
+      "reason": "Direct Nxf4 Bxf4+ Kb1 wins a rook for a knight without removing the intended defender, so the smaller material gain already bypasses the motif.",
+      "line": [
+        "Nxf4",
+        "Bxf4+",
+        "Kb1"
+      ],
+      "source": "https://theweekinchess.com/zips/twic1663g.zip",
+      "archiveSha256": "36ac4a1324a21674649f7b5eb12e0ef21167b18288917cce6aba3d8120669dd9"
+    },
+    {
+      "id": "5b48de45068b6162",
+      "gameId": "47d9e905ca98f533",
+      "fen": "b2rk3/R2n1pp1/2p4p/2b1pP2/1pB1P3/4BK2/1P3NPP/8 w - - 0 28",
+      "reason": "Direct Bxc5 Nxc5 Bxf7+ Kf8 Bc4 wins a pawn without the rook sacrifice and removes the need for the advertised defender tactic.",
+      "line": [
+        "Bxc5",
+        "Nxc5",
+        "Bxf7+",
+        "Kf8",
+        "Bc4"
+      ],
+      "source": "https://theweekinchess.com/zips/twic1664g.zip",
+      "archiveSha256": "87bcd88e628c85b6e7e5b36894738fc9e6ef4012345740e57ff05795a908940f"
+    },
+    {
+      "id": "c693d9699db46b65",
+      "gameId": "58665b62f5e4a98a",
+      "fen": "2rqr1k1/p5pp/2p1nnb1/2bP1R2/2P5/2N3P1/P3N1BP/1RB2Q1K b - - 2 20",
+      "reason": "Bxf5 Qxf5 wins a rook for a bishop before the later pawn capture; the advertised defender removal is incidental.",
+      "line": [
+        "Bxf5",
+        "Qxf5"
+      ],
+      "source": "https://theweekinchess.com/zips/twic1663g.zip",
+      "archiveSha256": "36ac4a1324a21674649f7b5eb12e0ef21167b18288917cce6aba3d8120669dd9"
+    },
+    {
+      "id": "b34f76dd09d383c2",
+      "gameId": "6d276ea9c68407c0",
+      "fen": "6k1/Q1p3pp/3p4/1pPb1pq1/1P6/4PpPP/5P2/B5K1 w - - 0 29",
+      "reason": "Qxc7 directly captures an undefended pawn before the later d6 capture; the advertised defender removal is incidental.",
+      "line": [
+        "Qxc7"
+      ],
+      "source": "https://theweekinchess.com/zips/twic1663g.zip",
+      "archiveSha256": "36ac4a1324a21674649f7b5eb12e0ef21167b18288917cce6aba3d8120669dd9"
+    },
+    {
+      "id": "d0779a234bb0fd87",
+      "gameId": "66a4ae8b72552eed",
+      "fen": "4R3/5r2/2p5/2Kp1k2/p2P4/8/1P6/8 w - - 0 84",
+      "reason": "Kxc6 captures an undefended pawn immediately; the later capture of d5 is not needed to win material.",
+      "line": [
+        "Kxc6"
+      ],
+      "source": "https://theweekinchess.com/zips/twic1664g.zip",
+      "archiveSha256": "87bcd88e628c85b6e7e5b36894738fc9e6ef4012345740e57ff05795a908940f"
+    },
+    {
+      "id": "ff034b7b45cb2fae",
+      "gameId": "19e466404146a583",
+      "fen": "8/1R3Q1p/6pk/1p2q2P/1P3p2/r7/5PPK/8 w - - 2 50",
+      "reason": "Qxh7+ captures an undefended pawn immediately; the subsequent capture on g6 is unnecessary for a material gain.",
+      "line": [
+        "Qxh7+"
+      ],
+      "source": "https://theweekinchess.com/zips/twic1664g.zip",
+      "archiveSha256": "87bcd88e628c85b6e7e5b36894738fc9e6ef4012345740e57ff05795a908940f"
+    },
+    {
+      "id": "99f5d5cbc41afbad",
+      "gameId": "30284e418353f3b2",
+      "fen": "3r1r1k/pp1q2p1/2p3B1/2Pb4/3P1R1P/3Q1P2/PP4R1/6K1 b - - 0 32",
+      "reason": "Rxf4 directly captures an undefended rook; the later capture of f3 is incidental.",
+      "line": [
+        "Rxf4"
+      ],
+      "source": "https://theweekinchess.com/zips/twic1664g.zip",
+      "archiveSha256": "87bcd88e628c85b6e7e5b36894738fc9e6ef4012345740e57ff05795a908940f"
+    },
+    {
+      "id": "f6ae8ea49a7a1b5c",
+      "gameId": "576880ccc328d1ce",
+      "fen": "7k/7p/2P5/p7/8/6bP/5RP1/r4B1K b - - 0 46",
+      "reason": "Bxf2 directly captures an undefended rook, before the later capture of the bishop on f1.",
+      "line": [
+        "Bxf2"
+      ],
+      "source": "https://theweekinchess.com/zips/twic1664g.zip",
+      "archiveSha256": "87bcd88e628c85b6e7e5b36894738fc9e6ef4012345740e57ff05795a908940f"
+    },
+    {
+      "id": "8df3a643a34dd468",
+      "gameId": "e9f98a67fe561ad1",
+      "fen": "4kb1r/1p1np1p1/p3n3/2p3p1/2B5/4B3/PP3PPP/2KR3R w - - 2 23",
+      "reason": "Bxe6 directly wins an undefended knight; the later capture of g5 is incidental.",
+      "line": [
+        "Bxe6"
+      ],
+      "source": "https://theweekinchess.com/zips/twic1663g.zip",
+      "archiveSha256": "36ac4a1324a21674649f7b5eb12e0ef21167b18288917cce6aba3d8120669dd9"
+    },
+    {
+      "id": "fe0eef16847cbc53",
+      "gameId": "eb6797d41ee8665b",
+      "fen": "4r2R/5pk1/2q2n2/1pp1P3/p7/Pb3R1P/1P3QP1/6K1 w - - 0 54",
+      "reason": "Rxf6 Rxh8 Rxc6 wins queen and knight for rook without the advertised defender-removal sequence.",
+      "line": [
+        "Rxf6",
+        "Rxh8",
+        "Rxc6"
+      ],
+      "source": "https://theweekinchess.com/zips/twic1663g.zip",
+      "archiveSha256": "36ac4a1324a21674649f7b5eb12e0ef21167b18288917cce6aba3d8120669dd9"
+    },
+    {
+      "id": "9b6aba196a3f9ca4",
+      "gameId": "f397b1480a5e2af0",
+      "fen": "1r2r3/1qp1k1pp/p2p4/2n2R1P/2Q1PP2/2bB4/1PP5/1K4R1 w - - 0 32",
+      "reason": "Qxc3 directly wins an undefended bishop; the later removal of the defender of a6 is incidental.",
+      "line": [
+        "Qxc3"
+      ],
+      "source": "https://theweekinchess.com/zips/twic1664g.zip",
+      "archiveSha256": "87bcd88e628c85b6e7e5b36894738fc9e6ef4012345740e57ff05795a908940f"
+    },
+    {
+      "id": "2ad3caf7126830e2",
+      "gameId": "2ccba00e2ad2b29d",
+      "fen": "2rq2k1/p4ppn/1p2nP2/3pPN1p/P5QP/2r5/6P1/R1B2RK1 w - - 0 27",
+      "reason": "Qxh5 g6 Qg4 wins the undefended h5 pawn without the intended knight-and-queen sequence.",
+      "line": [
+        "Qxh5",
+        "g6",
+        "Qg4"
+      ],
+      "source": "https://theweekinchess.com/zips/twic1663g.zip",
+      "archiveSha256": "36ac4a1324a21674649f7b5eb12e0ef21167b18288917cce6aba3d8120669dd9"
+    },
+    {
+      "id": "5af9230136c08e76",
+      "gameId": "9c58561f28be0570",
+      "fen": "2r2rk1/1p6/pB4p1/2Pb4/P2bp1Np/1P2R2P/3R2P1/7K b - - 5 37",
+      "reason": "Bxe3 Nxe3 already wins the exchange before the later pawn capture, making the advertised b3 removal incidental.",
+      "line": [
+        "Bxe3",
+        "Nxe3"
+      ],
+      "source": "https://theweekinchess.com/zips/twic1663g.zip",
+      "archiveSha256": "36ac4a1324a21674649f7b5eb12e0ef21167b18288917cce6aba3d8120669dd9"
+    },
+    {
+      "id": "d694695f83c42713",
+      "gameId": "da0b67912d1ddc2a",
+      "fen": "r4rk1/pp2ppbp/2n3p1/q7/3P2b1/1QP2NB1/P3BPPP/R3K2R b KQ - 0 14",
+      "reason": "Bxd4 Nxd4 Nxd4 already wins a pawn through the pin of the c3 pawn; the advertised defender-removal line is not necessary.",
+      "line": [
+        "Bxd4",
+        "Nxd4",
+        "Nxd4"
+      ],
+      "source": "https://theweekinchess.com/zips/twic1663g.zip",
+      "archiveSha256": "36ac4a1324a21674649f7b5eb12e0ef21167b18288917cce6aba3d8120669dd9"
+    },
+    {
+      "id": "a8b9e00bd92830fb",
+      "fen": "r2nk2r/bpp1qp2/p5np/3Bp1p1/2N1P3/2P2QBP/PP3PP1/R4R1K w kq - 1 18",
+      "reason": "A different reviewed Yip–Bulmaga position from this same game is already published. The collection builder requires distinct source games, so this alternative is not added.",
+      "line": [
+        "Qf5",
+        "c6",
+        "Bxf7+",
+        "Nxf7",
+        "Qxg6",
+        "O-O-O"
+      ],
+      "source": "https://theweekinchess.com/zips/twic1664g.zip",
+      "archiveSha256": "87bcd88e628c85b6e7e5b36894738fc9e6ef4012345740e57ff05795a908940f"
+    },
+    {
+      "id": "3261758d8a474188",
+      "fen": "8/pp2rr1p/8/3pR1Pk/3B1n2/2P3R1/P5PK/8 w - - 4 38",
+      "reason": "After g6+ Rxe5 gxf7 Rf5 Rg7 Ng6, Bxa7 gains a different pawn before the advertised capture on h7.",
+      "line": [
+        "g6+",
+        "Rxe5",
+        "gxf7",
+        "Rf5",
+        "Rg7",
+        "Ng6",
+        "Bxa7"
+      ],
+      "source": "https://theweekinchess.com/zips/twic1663g.zip",
+      "archiveSha256": "36ac4a1324a21674649f7b5eb12e0ef21167b18288917cce6aba3d8120669dd9",
+      "gameId": "76f5f0a688604aa6"
+    },
+    {
+      "id": "22674a3f4beb4372",
+      "fen": "6k1/5pp1/4p2p/1pB1P3/5PPb/1P2P2P/2Q4K/4q3 b - - 0 33",
+      "reason": "Qg3+ Kh1 Qxh3+ already wins the undefended h3 pawn before the later capture on g4.",
+      "line": [
+        "Qg3+",
+        "Kh1",
+        "Qxh3+"
+      ],
+      "source": "https://theweekinchess.com/zips/twic1663g.zip",
+      "archiveSha256": "36ac4a1324a21674649f7b5eb12e0ef21167b18288917cce6aba3d8120669dd9",
+      "gameId": "71c86ddda32d21c0"
+    },
+    {
+      "id": "78a8d0119547e2ca",
+      "fen": "8/p4pk1/1pp5/2p3p1/2P5/1P1Q1n2/P3K1R1/q7 b - - 15 44",
+      "reason": "Nd4+ saves the knight with check, then Qxa2+ wins the undefended a2 pawn before the later capture on b3.",
+      "line": [
+        "Nd4+",
+        "Kf2",
+        "Qxa2+"
+      ],
+      "source": "https://theweekinchess.com/zips/twic1663g.zip",
+      "archiveSha256": "36ac4a1324a21674649f7b5eb12e0ef21167b18288917cce6aba3d8120669dd9",
+      "gameId": "0d59c14c1b551260"
+    },
+    {
+      "id": "c48fdcb976cb92a6",
+      "fen": "3r3r/1kp1n3/p1n4p/1pP2pp1/3NP3/2P5/bP2B1PP/2BRR1K1 b - - 0 23",
+      "reason": "Direct fxe4 Nxc6 Nxc6 wins the e4 pawn without the longer defender-removal line.",
+      "line": [
+        "fxe4",
+        "Nxc6",
+        "Nxc6"
+      ],
+      "source": "https://theweekinchess.com/zips/twic1665g.zip",
+      "archiveSha256": "302fde627aaacdc30bf276442347ff0f73cbae00914416d71f68c6d4243dd2b4",
+      "gameId": "8262fa340847f76a"
+    },
+    {
+      "id": "1dab291b98b5b2c0",
+      "fen": "3qrr1k/1p5p/p2p1nn1/2p2bB1/P1P4p/2N5/1P2BPP1/2QR2KR w - - 4 24",
+      "reason": "Bxh4 Nxh4 Rxh4 wins a pawn by a direct favorable exchange; the longer preparatory line is not needed.",
+      "line": [
+        "Bxh4",
+        "Nxh4",
+        "Rxh4"
+      ],
+      "source": "https://theweekinchess.com/zips/twic1667g.zip",
+      "archiveSha256": "b3ba02fe4c8e1c126fdc2953e96bffb776406f6912ba9cb1348dc12b5f59a4ff",
+      "gameId": "7b2f29ee059e2bb9"
+    },
+    {
+      "id": "b197d8e9daaf049c",
+      "fen": "4r1k1/p5p1/b3r2p/b1p1q3/5p2/P4Q1P/2PN1PP1/1R1R1NK1 b - - 1 27",
+      "reason": "Be2 Qb3 Bxd1 Rxd1 already wins the exchange before the later capture on d2.",
+      "line": [
+        "Be2",
+        "Qb3",
+        "Bxd1",
+        "Rxd1"
+      ],
+      "source": "https://theweekinchess.com/zips/twic1664g.zip",
+      "archiveSha256": "87bcd88e628c85b6e7e5b36894738fc9e6ef4012345740e57ff05795a908940f",
+      "gameId": "88c84c5ed1e85fbb"
+    }
+  ]
+}

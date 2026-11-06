@@ -1,0 +1,516 @@
+[
+  {
+    "id": "fork-beginner-01",
+    "title": "Tấn công đôi bằng Mã · 1",
+    "beginner": true,
+    "goal": "material",
+    "prompt": "Tạo đòn tấn công đôi rồi thu lợi vật chất.",
+    "mode": "interactive",
+    "outcome": "fork",
+    "fen": "8/8/2P5/4K3/5N2/6r1/8/2k5 w - - 0 1",
+    "moves": [
+      "Ne2+",
+      "Kd1",
+      "Nxg3"
+    ],
+    "alternativeLines": [
+      [
+        "Ne2+",
+        "Kd2",
+        "Nxg3"
+      ],
+      [
+        "Ne2+",
+        "Kc2",
+        "Nxg3"
+      ],
+      [
+        "Ne2+",
+        "Kb2",
+        "Nxg3"
+      ],
+      [
+        "Ne2+",
+        "Kb1",
+        "Nxg3"
+      ]
+    ],
+    "source": "original-composition",
+    "hints": [
+      "Tìm nước đi tạo hai mối đe dọa. Kiểm tra nước đáp và khả năng bắt lại."
+    ],
+    "solution": "Ne2+ — Mã từ f4 đến e2. Nước chiếu của Mã buộc Vua đỡ chiếu. Sau nước đáp, bắt Xe ở g3 để thu lợi vật chất."
+  },
+  {
+    "id": "fork-beginner-02",
+    "title": "Tấn công đôi bằng Mã · 2",
+    "beginner": true,
+    "goal": "material",
+    "prompt": "Tạo đòn tấn công đôi rồi thu lợi vật chất.",
+    "mode": "interactive",
+    "outcome": "fork",
+    "fen": "8/8/5k1K/2P1N3/8/8/5r2/8 w - - 0 1",
+    "moves": [
+      "Ng4+",
+      "Kf7",
+      "Nxf2"
+    ],
+    "alternativeLines": [
+      [
+        "Ng4+",
+        "Ke7",
+        "Nxf2"
+      ],
+      [
+        "Ng4+",
+        "Ke6",
+        "Nxf2"
+      ],
+      [
+        "Ng4+",
+        "Kf5",
+        "Nxf2"
+      ]
+    ],
+    "source": "original-composition",
+    "hints": [
+      "Tìm nước đi tạo hai mối đe dọa. Kiểm tra nước đáp và khả năng bắt lại."
+    ],
+    "solution": "Ng4+ — Mã từ e5 đến g4. Mã e5 đang bị Vua f6 tấn công. Ng4+ giúp Mã rời ô bị đe dọa với nhịp chiếu; sau đó bắt Xe ở f2."
+  },
+  {
+    "id": "fork-beginner-03",
+    "title": "Tấn công đôi bằng Xe · 3",
+    "beginner": true,
+    "goal": "material",
+    "prompt": "Tạo đòn tấn công đôi rồi thu lợi vật chất.",
+    "mode": "interactive",
+    "outcome": "fork",
+    "fen": "8/8/5R2/8/2K5/8/k7/4b2n w - - 0 1",
+    "moves": [
+      "Rf1",
+      "Bf2",
+      "Rxh1"
+    ],
+    "alternativeLines": [
+      [
+        "Rf1",
+        "Ka3",
+        "Rxh1"
+      ],
+      [
+        "Rf1",
+        "Ka3",
+        "Rxe1"
+      ],
+      [
+        "Rf1",
+        "Kb2",
+        "Rxh1"
+      ],
+      [
+        "Rf1",
+        "Kb2",
+        "Rxe1"
+      ],
+      [
+        "Rf1",
+        "Kb1",
+        "Rxh1"
+      ],
+      [
+        "Rf1",
+        "Kb1",
+        "Rxe1+"
+      ],
+      [
+        "Rf1",
+        "Ka1",
+        "Rxh1"
+      ],
+      [
+        "Rf1",
+        "Ka1",
+        "Rxe1+"
+      ],
+      [
+        "Rf1",
+        "Ng3",
+        "Rxe1"
+      ],
+      [
+        "Rf1",
+        "Nf2",
+        "Rxe1"
+      ],
+      [
+        "Rf1",
+        "Ba5",
+        "Rxh1"
+      ],
+      [
+        "Rf1",
+        "Bh4",
+        "Rxh1"
+      ],
+      [
+        "Rf1",
+        "Bb4",
+        "Rxh1"
+      ],
+      [
+        "Rf1",
+        "Bg3",
+        "Rxh1"
+      ],
+      [
+        "Rf1",
+        "Bc3",
+        "Rxh1"
+      ],
+      [
+        "Rf1",
+        "Bd2",
+        "Rxh1"
+      ]
+    ],
+    "source": "original-composition",
+    "hints": [
+      "Tìm nước đi tạo hai mối đe dọa. Kiểm tra nước đáp và khả năng bắt lại."
+    ],
+    "solution": "Rf1 — Xe từ f6 đến f1. Xe đến f1 tấn công đồng thời Tượng e1 và Mã h1. Sau nước đáp, chọn mục tiêu còn có thể bắt an toàn."
+  },
+  {
+    "id": "fork-beginner-04",
+    "title": "Tấn công đôi bằng Xe · 4",
+    "beginner": true,
+    "goal": "material",
+    "prompt": "Tạo đòn tấn công đôi rồi thu lợi vật chất.",
+    "mode": "interactive",
+    "outcome": "fork",
+    "fen": "8/6k1/8/7K/8/2R5/8/1n4b1 w - - 0 1",
+    "moves": [
+      "Rc1",
+      "Kf7",
+      "Rxb1"
+    ],
+    "alternativeLines": [
+      [
+        "Rg3+",
+        "Kh8",
+        "Rxg1"
+      ],
+      [
+        "Rg3+",
+        "Kf8",
+        "Rxg1"
+      ],
+      [
+        "Rg3+",
+        "Kh7",
+        "Rxg1"
+      ],
+      [
+        "Rg3+",
+        "Kf7",
+        "Rxg1"
+      ],
+      [
+        "Rg3+",
+        "Kf6",
+        "Rxg1"
+      ],
+      [
+        "Rc1",
+        "Kh8",
+        "Rxg1"
+      ],
+      [
+        "Rc1",
+        "Kh8",
+        "Rxb1"
+      ],
+      [
+        "Rc1",
+        "Kg8",
+        "Rxg1+"
+      ],
+      [
+        "Rc1",
+        "Kg8",
+        "Rxb1"
+      ],
+      [
+        "Rc1",
+        "Kf8",
+        "Rxg1"
+      ],
+      [
+        "Rc1",
+        "Kf8",
+        "Rxb1"
+      ],
+      [
+        "Rc1",
+        "Kh7",
+        "Rxg1"
+      ],
+      [
+        "Rc1",
+        "Kh7",
+        "Rxb1"
+      ],
+      [
+        "Rc1",
+        "Kf7",
+        "Rxg1"
+      ],
+      [
+        "Rc1",
+        "Kf6",
+        "Rxg1"
+      ],
+      [
+        "Rc1",
+        "Kf6",
+        "Rxb1"
+      ],
+      [
+        "Rc1",
+        "Ba7",
+        "Rxb1"
+      ],
+      [
+        "Rc1",
+        "Bb6",
+        "Rxb1"
+      ],
+      [
+        "Rc1",
+        "Bc5",
+        "Rxc5"
+      ],
+      [
+        "Rc1",
+        "Bc5",
+        "Rxb1"
+      ],
+      [
+        "Rc1",
+        "Bd4",
+        "Rxb1"
+      ],
+      [
+        "Rc1",
+        "Be3",
+        "Rxb1"
+      ],
+      [
+        "Rc1",
+        "Bh2",
+        "Rxb1"
+      ],
+      [
+        "Rc1",
+        "Bf2",
+        "Rxb1"
+      ],
+      [
+        "Rc1",
+        "Nc3",
+        "Rxc3"
+      ],
+      [
+        "Rc1",
+        "Nc3",
+        "Rxg1+"
+      ],
+      [
+        "Rc1",
+        "Na3",
+        "Rxg1+"
+      ],
+      [
+        "Rc1",
+        "Nd2",
+        "Rxg1+"
+      ]
+    ],
+    "source": "original-composition",
+    "hints": [
+      "Tìm nước đi tạo hai mối đe dọa. Kiểm tra nước đáp và khả năng bắt lại."
+    ],
+    "solution": "Rc1 — Xe từ c3 đến c1. Mã b1 đang tấn công Xe c3. Rc1 vừa đưa Xe ra khỏi tầm bắt của Mã, vừa tấn công Mã b1 và Tượng g1."
+  },
+  {
+    "id": "fork-beginner-05",
+    "title": "Tấn công đôi bằng Hậu · 5",
+    "beginner": true,
+    "goal": "material",
+    "prompt": "Tạo đòn tấn công đôi rồi thu lợi vật chất.",
+    "mode": "interactive",
+    "outcome": "fork",
+    "fen": "5kr1/7Q/8/8/2K5/4r3/8/8 w - - 0 1",
+    "moves": [
+      "Qh6+",
+      "Kf7",
+      "Qxe3"
+    ],
+    "alternativeLines": [
+      [
+        "Qh6+",
+        "Ke8",
+        "Qxe3+"
+      ],
+      [
+        "Qh6+",
+        "Ke7",
+        "Qxe3+"
+      ],
+      [
+        "Qh6+",
+        "Rg7",
+        "Qxe3"
+      ]
+    ],
+    "source": "original-composition",
+    "hints": [
+      "Tìm nước đi tạo hai mối đe dọa. Kiểm tra nước đáp và khả năng bắt lại."
+    ],
+    "solution": "Qh6+ — Hậu từ h7 đến h6. Qh6+ chiếu Vua f8 và tấn công Xe e3. Nếu Xe g8 chắn ở g7, Hậu vẫn bắt được Xe e3."
+  },
+  {
+    "id": "fork-beginner-06",
+    "title": "Tấn công đôi bằng Hậu · 6",
+    "beginner": true,
+    "goal": "material",
+    "prompt": "Tạo đòn tấn công đôi rồi thu lợi vật chất.",
+    "mode": "interactive",
+    "outcome": "fork",
+    "fen": "4Q3/1k6/3p4/8/1n6/8/5r2/3K4 w - - 0 1",
+    "moves": [
+      "Qb5+",
+      "Kc7",
+      "Qxb4"
+    ],
+    "alternativeLines": [
+      [
+        "Qd7+",
+        "Kb8",
+        "Qxd6+"
+      ],
+      [
+        "Qd7+",
+        "Ka8",
+        "Qxd6"
+      ],
+      [
+        "Qd7+",
+        "Kb6",
+        "Qxd6+"
+      ],
+      [
+        "Qd7+",
+        "Ka6",
+        "Qxd6+"
+      ],
+      [
+        "Qb5+",
+        "Kc8",
+        "Qxb4"
+      ],
+      [
+        "Qb5+",
+        "Ka8",
+        "Qxb4"
+      ],
+      [
+        "Qb5+",
+        "Ka7",
+        "Qxb4"
+      ]
+    ],
+    "source": "original-composition",
+    "hints": [
+      "Tìm nước đi tạo hai mối đe dọa. Kiểm tra nước đáp và khả năng bắt lại."
+    ],
+    "solution": "Qb5+ — Hậu từ e8 đến b5. Qb5+ chiếu Vua b7 và tấn công Mã b4, đồng thời giữ Hậu ngoài tầm bắt của Vua. Sau nước đáp, bắt Mã."
+  },
+  {
+    "id": "fork-beginner-07",
+    "title": "Tấn công đôi bằng Hậu · 7",
+    "beginner": true,
+    "goal": "material",
+    "prompt": "Tạo đòn tấn công đôi rồi thu lợi vật chất.",
+    "mode": "interactive",
+    "outcome": "fork",
+    "fen": "8/6rn/3k4/8/1K6/8/1p6/6Q1 w - - 0 1",
+    "moves": [
+      "Qh2+",
+      "Kd5",
+      "Qxb2"
+    ],
+    "alternativeLines": [
+      [
+        "Qd4+",
+        "Ke7",
+        "Qxg7+"
+      ],
+      [
+        "Qd4+",
+        "Ke7",
+        "Qxb2"
+      ],
+      [
+        "Qd4+",
+        "Kc7",
+        "Qxg7+"
+      ],
+      [
+        "Qd4+",
+        "Kc7",
+        "Qxb2"
+      ],
+      [
+        "Qd4+",
+        "Ke6",
+        "Qxb2"
+      ],
+      [
+        "Qd4+",
+        "Kc6",
+        "Qxb2"
+      ],
+      [
+        "Qh2+",
+        "Ke7",
+        "Qxb2"
+      ],
+      [
+        "Qh2+",
+        "Kd7",
+        "Qxb2"
+      ],
+      [
+        "Qh2+",
+        "Ke6",
+        "Qxb2"
+      ],
+      [
+        "Qh2+",
+        "Kc6",
+        "Qxb2"
+      ],
+      [
+        "Qh2+",
+        "Rg3",
+        "Qxb2"
+      ]
+    ],
+    "source": "original-composition",
+    "hints": [
+      "Tìm nước đi tạo hai mối đe dọa. Kiểm tra nước đáp và khả năng bắt lại."
+    ],
+    "solution": "Qh2+ — Hậu từ g1 đến h2. Qh2+ chiếu Vua d6 và tấn công Tốt b2 sắp phong cấp. Mã h7 được Xe g7 bảo vệ; mục tiêu có thể bắt an toàn là Tốt b2."
+  }
+]

@@ -8,7 +8,17 @@ function load(path, resolve = require) {
   const js = ts.transpileModule(fs.readFileSync(path, 'utf8'), {
     compilerOptions: { module: ts.ModuleKind.CommonJS, esModuleInterop: true },
   }).outputText;
-  new Function('module', 'exports', 'require', js)(mod, mod.exports, resolve);
+  new Function('module', 'exports', 'require', js)(mod, mod.exports, (id) =>
+    id.endsWith('/manual-tactics')
+      ? {
+          includeManualExercises: async (_route, data) => data,
+          readManualTactics: async () => [],
+          manualTopicPages: () => [],
+        }
+      : id.endsWith('/practice-management')
+        ? { readPracticeAdjustments: async () => [] }
+        : resolve(id)
+  );
   return mod.exports;
 }
 function response() {
@@ -59,6 +69,8 @@ test('private practice access', async (t) => {
       for (const path of [
         'skewer-exercises',
         'skewer-game-sources',
+        'removing-defender-exercises',
+        'removing-defender-game-sources',
         'pin-exercises',
         'pin-game-sources',
         'fork-exercises',
@@ -117,10 +129,11 @@ test('private practice access', async (t) => {
             return [{ id: 'two-rook-mate', exercises: [] }];
           if (name.includes('queen-skewer-pilot')) return [];
           if (name.includes('queen-skewer-intro')) return [];
-          if (name.includes('skewer-beginner-exercises')) return [];
+          if (name.includes('-beginner-exercises')) return [];
           if (
             name.includes('skewer-exercises') ||
             name.includes('pin-exercises') ||
+            name.includes('removing-defender-exercises') ||
             name.includes('fork-exercises') ||
             name.includes('discovery-exercises') ||
             name.includes('simplification-exercises')
@@ -191,7 +204,7 @@ test('private practice access', async (t) => {
   });
 });
 
-test('private hub path rotation and protected directory', () => {
+test('private hub path rotation and protected directory', async () => {
   const hub = load('src/lib/server/private-hub.ts');
   delete process.env.PRIVATE_HUB_PATH;
   assert.equal(hub.matchesPrivateHub('private'), false);
@@ -214,12 +227,12 @@ test('private hub path rotation and protected directory', () => {
     name.endsWith('private-hub') ? hub : auth
   ).default;
   const denied = response();
-  handler({ method: 'GET', headers: {} }, denied);
+  await handler({ method: 'GET', headers: {} }, denied);
   assert.equal(denied.code, 401);
   assert.equal(denied.body.pages, undefined);
   assert.equal(denied.body.hubPath, undefined);
   const allowed = response();
-  handler(
+  await handler(
     {
       method: 'GET',
       headers: { authorization: `Bearer ${auth.issueAccessToken()}` },
@@ -266,6 +279,24 @@ test('additional private pages protect their data and support login return paths
   const hub = load('src/lib/server/private-hub.ts');
   const { privateReturnPath } = load('src/lib/private-navigation.ts');
   const paths = hub.privatePages.map((page) => page.href);
+  assert.equal(
+    privateReturnPath(
+      '/tactic-positions?theme=exposedKing&level=D',
+      'vi',
+      paths,
+      '/fork'
+    ),
+    '/vi/tactic-positions?theme=exposedKing&level=D'
+  );
+  assert.equal(
+    privateReturnPath(
+      '/saved-games?theme=exposedKing&level=D',
+      'vi',
+      paths,
+      '/skewer'
+    ),
+    '/vi/saved-games?theme=exposedKing&level=D'
+  );
   for (const path of [
     '/pin',
     '/fork',
@@ -316,6 +347,10 @@ test('additional private pages protect their data and support login return paths
       if (name.endsWith('/practice-game-caption')) return {};
       if (name.endsWith('/private-tactics'))
         return { topicGroups: [{ title: 'test', topics: [] }] };
+      if (name.endsWith('/tactics-catalog'))
+        return load('src/lib/server/tactics-catalog.ts', () =>
+          require('./fixtures/tactics-index/tactics-map.json')
+        );
       if (name.endsWith('/private-schedule'))
         return { scheduleData: { sessions: [] } };
       return { game: {} };
@@ -335,6 +370,24 @@ test('additional private pages protect their data and support login return paths
     assert.equal(allowed.code, 200);
     assert.equal(allowed.headers['Cache-Control'], 'private, no-store');
     assert.ok(reads > 0);
+    if (endpoint === 'private-tactics') {
+      const catalog = require('./fixtures/tactics-index/tactics-map.json');
+      assert.deepEqual(allowed.body.topicGroups, [
+        { title: 'test', topics: [] },
+      ]);
+      assert.deepEqual(allowed.body.themeCatalog, catalog);
+      assert.deepEqual(
+        allowed.body.themeCatalog.themes.find(
+          (t) => t.id === 'exchangeSacrifice'
+        ).levels,
+        ['C', 'D']
+      );
+      assert.equal(
+        allowed.body.themeCatalog.themes.find((t) => t.id === 'windmill')
+          .parentId,
+        'discoveredCheck'
+      );
+    }
   }
 });
 
@@ -350,7 +403,13 @@ test('Draw theme APIs stay protected and return only their route category', asyn
     if (name.endsWith('/practice-access')) return auth;
     if (name.endsWith('/private-hub')) return hub;
     if (name.endsWith('/draw-practice-view'))
-      return { drawThemeLinks: (items) => items.map((item) => item.id) };
+      return {
+        drawThemeLinks: (items) => items.map((item) => item.id),
+        drawThemeRoutePaths: {
+          stalemate: '/stalemate',
+          'perpetual-check': '/perpetual-check',
+        },
+      };
     if (name.endsWith('/draw-practice')) return { drawCategories: categories };
     if (name.endsWith('/draw-game-reference'))
       return { gameReference: () => undefined };

@@ -5,7 +5,6 @@
     "mode": "interactive",
     "goal": "material",
     "outcome": "promotion",
-    "beginner": true,
     "fen": "8/1P6/k7/8/1K6/8/8/8 w - - 0 1",
     "moves": [
       "b8=R",
@@ -21,7 +20,14 @@
     "promotionMaterial": {
       "minimumGain": 4
     },
-    "id": "promotion-beginner-avoid-stalemate"
+    "id": "promotion-beginner-avoid-stalemate",
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "solverMoves": 1,
+      "sacrificeCount": 0,
+      "reason": "Chọn quân phong cấp để tránh pat; nội dung từ cấp A."
+    }
   },
   {
     "title": "Phong cấp · Bài 2",
@@ -60,15 +66,15 @@
     "goal": "material",
     "outcome": "promotion",
     "beginner": true,
-    "fen": "1r6/P7/7k/8/8/8/8/K7 w - - 0 1",
+    "fen": "1r5k/P7/8/8/8/8/8/K7 w - - 0 1",
     "moves": [
-      "axb8=Q",
-      "Kg5"
+      "axb8=Q+",
+      "Kh7"
     ],
     "alternativeLines": [
       [
-        "axb8=R",
-        "Kg5"
+        "axb8=R+",
+        "Kh7"
       ]
     ],
     "source": "Thế cờ biên soạn.",
@@ -76,9 +82,309 @@
       "So sánh a8 và axb8: Xe đen có thể bắt quân mới ở ô nào?",
       "Bắt Xe trên b8 đồng thời phong cấp."
     ],
-    "solution": "axb8=Q — Tốt từ a7 bắt Xe ở b8 và phong cấp thành Hậu. Nếu đi a8=Q, Đen có thể bắt Hậu bằng Rxa8+. Phong Xe trên b8 cũng đạt mục tiêu.",
+    "solution": "axb8=Q+ — Tốt từ a7 bắt Xe ở b8, phong cấp thành Hậu và chiếu Vua trên hàng 8. Nếu đi a8=Q, Đen có thể bắt Hậu bằng Rxa8+. Phong Xe trên b8 cũng đạt mục tiêu.",
     "promotionMaterial": {
       "minimumGain": 4
+    }
+  },
+  {
+    "id": "promotion-beginner-away-from-king",
+    "title": "Chọn ô xa Vua đối phương",
+    "prompt": "Phong cấp, giữ quân mới và giành lợi thế vật chất.",
+    "mode": "interactive",
+    "goal": "material",
+    "outcome": "promotion",
+    "beginner": true,
+    "fen": "7k/8/8/8/8/8/1pK5/R7 b - - 0 1",
+    "moves": [
+      "bxa1=Q",
+      "Kb3"
+    ],
+    "alternativeLines": [],
+    "source": "Thế cờ biên soạn.",
+    "hints": [
+      "Kiểm tra ô phong cấp và các quân có thể bắt quân mới.",
+      "Đi b1 để phong cấp sẽ bị Vua bắt. Bắt Xe trên a1 đưa Hậu mới tới ô an toàn."
+    ],
+    "solution": "bxa1=Q — Tốt từ b2 bắt Xe ở a1, phong cấp thành Hậu. Đi b1 để phong cấp sẽ bị Vua bắt. Bắt Xe trên a1 đưa Hậu mới tới ô an toàn.",
+    "promotionMaterial": {
+      "minimumGain": 4,
+      "retainPromotedPiece": true
+    }
+  },
+  {
+    "id": "promotion-beginner-capture-rook-checker",
+    "title": "Bắt quân đang chiếu",
+    "prompt": "Phong cấp, giữ quân mới và giành lợi thế vật chất.",
+    "mode": "interactive",
+    "goal": "material",
+    "outcome": "promotion",
+    "beginner": true,
+    "fen": "1k6/8/8/8/8/8/p7/1R5K b - - 0 1",
+    "moves": [
+      "axb1=Q+",
+      "Kg2"
+    ],
+    "alternativeLines": [],
+    "source": "Thế cờ biên soạn.",
+    "hints": [
+      "Kiểm tra ô phong cấp và các quân có thể bắt quân mới.",
+      "Xe b1 đang chiếu dọc cột b. Tốt bắt Xe và phong cấp trong cùng một nước. Quân mới đồng thời chiếu Vua trên hàng 1."
+    ],
+    "solution": "axb1=Q+ — Tốt từ a2 bắt Xe ở b1, phong cấp thành Hậu. Xe b1 đang chiếu dọc cột b. Tốt bắt Xe và phong cấp trong cùng một nước. Quân mới đồng thời chiếu Vua trên hàng 1.",
+    "promotionMaterial": {
+      "minimumGain": 4,
+      "retainPromotedPiece": true
+    }
+  },
+  {
+    "id": "promotion-beginner-king-support",
+    "title": "Ô phong cấp được bảo vệ",
+    "prompt": "Phong cấp, giữ quân mới và giành lợi thế vật chất.",
+    "mode": "interactive",
+    "goal": "material",
+    "outcome": "promotion",
+    "beginner": true,
+    "fen": "8/2KPk3/8/8/8/8/8/8 w - - 0 1",
+    "moves": [
+      "d8=Q+",
+      "Ke6"
+    ],
+    "alternativeLines": [],
+    "source": "Thế cờ biên soạn.",
+    "hints": [
+      "Kiểm tra ô phong cấp và các quân có thể bắt quân mới.",
+      "Vua c7 bảo vệ d8 nên Vua đen không thể bắt Hậu vừa phong cấp."
+    ],
+    "solution": "d8=Q+ — Tốt từ d7 đến d8, phong cấp thành Hậu. Vua c7 bảo vệ d8 nên Vua đen không thể bắt Hậu vừa phong cấp.",
+    "promotionMaterial": {
+      "minimumGain": 4,
+      "retainPromotedPiece": true
+    }
+  },
+  {
+    "id": "promotion-beginner-open-support",
+    "title": "Mở đường bảo vệ ô phong cấp",
+    "prompt": "Phong cấp, giữ quân mới và giành lợi thế vật chất.",
+    "mode": "interactive",
+    "goal": "material",
+    "outcome": "promotion",
+    "beginner": true,
+    "fen": "3rk3/2P5/1B6/8/8/8/8/K7 w - - 0 1",
+    "moves": [
+      "cxd8=Q+",
+      "Kf7"
+    ],
+    "alternativeLines": [],
+    "source": "Thế cờ biên soạn.",
+    "hints": [
+      "Kiểm tra ô phong cấp và các quân có thể bắt quân mới.",
+      "Tốt rời c7 mở đường chéo b6–d8. Tượng bảo vệ Hậu mới trên d8 trước Vua đen."
+    ],
+    "solution": "cxd8=Q+ — Tốt từ c7 bắt Xe ở d8, phong cấp thành Hậu. Tốt rời c7 mở đường chéo b6–d8. Tượng bảo vệ Hậu mới trên d8 trước Vua đen.",
+    "promotionMaterial": {
+      "minimumGain": 4,
+      "retainPromotedPiece": true
+    }
+  },
+  {
+    "id": "promotion-beginner-two-captures",
+    "title": "So sánh hai ô bắt quân",
+    "prompt": "Phong cấp, giữ quân mới và giành lợi thế vật chất.",
+    "mode": "interactive",
+    "goal": "material",
+    "outcome": "promotion",
+    "beginner": true,
+    "fen": "7k/8/8/8/8/8/3p4/2R1NK2 b - - 0 1",
+    "moves": [
+      "dxc1=Q",
+      "Ke2"
+    ],
+    "alternativeLines": [],
+    "source": "Thế cờ biên soạn.",
+    "hints": [
+      "Kiểm tra ô phong cấp và các quân có thể bắt quân mới.",
+      "Bắt Xe trên c1 giữ được Hậu mới; bắt Mã trên e1 để phong cấp sẽ bị Vua bắt lại."
+    ],
+    "solution": "dxc1=Q — Tốt từ d2 bắt Xe ở c1, phong cấp thành Hậu. Bắt Xe trên c1 giữ được Hậu mới; bắt Mã trên e1 để phong cấp sẽ bị Vua bắt lại.",
+    "promotionMaterial": {
+      "minimumGain": 4,
+      "retainPromotedPiece": true
+    }
+  },
+  {
+    "id": "promotion-beginner-advance-not-capture",
+    "title": "Tiến thẳng hay bắt chéo",
+    "prompt": "Phong cấp, giữ quân mới và giành lợi thế vật chất.",
+    "mode": "interactive",
+    "goal": "material",
+    "outcome": "promotion",
+    "beginner": true,
+    "fen": "4nk2/3P4/8/8/8/8/8/K7 w - - 0 1",
+    "moves": [
+      "d8=Q",
+      "Kf7"
+    ],
+    "alternativeLines": [],
+    "source": "Thế cờ biên soạn.",
+    "hints": [
+      "Kiểm tra ô phong cấp và các quân có thể bắt quân mới.",
+      "Phong cấp trên d8 giữ được Hậu. Bắt Mã trên e8 để phong cấp sẽ bị Vua bắt lại."
+    ],
+    "solution": "d8=Q — Tốt từ d7 đến d8, phong cấp thành Hậu. Phong cấp trên d8 giữ được Hậu. Bắt Mã trên e8 để phong cấp sẽ bị Vua bắt lại.",
+    "promotionMaterial": {
+      "minimumGain": 4,
+      "retainPromotedPiece": true
+    }
+  },
+  {
+    "id": "promotion-beginner-blocked-forward",
+    "title": "Tốt không bắt thẳng phía trước",
+    "prompt": "Phong cấp, giữ quân mới và giành lợi thế vật chất.",
+    "mode": "interactive",
+    "goal": "material",
+    "outcome": "promotion",
+    "beginner": true,
+    "fen": "k7/8/8/8/8/8/1p6/1NR4K b - - 0 1",
+    "moves": [
+      "bxc1=Q+",
+      "Kg2"
+    ],
+    "alternativeLines": [],
+    "source": "Thế cờ biên soạn.",
+    "hints": [
+      "Kiểm tra ô phong cấp và các quân có thể bắt quân mới.",
+      "Mã chặn b1. Tốt phải bắt chéo Xe trên c1 để phong cấp. Quân mới đồng thời chiếu Vua trên hàng 1."
+    ],
+    "solution": "bxc1=Q+ — Tốt từ b2 bắt Xe ở c1, phong cấp thành Hậu. Mã chặn b1. Tốt phải bắt chéo Xe trên c1 để phong cấp. Quân mới đồng thời chiếu Vua trên hàng 1.",
+    "promotionMaterial": {
+      "minimumGain": 4,
+      "retainPromotedPiece": true
+    }
+  },
+  {
+    "id": "promotion-beginner-capture-pinner",
+    "title": "Tốt bị ghim vẫn có thể bắt quân ghim",
+    "prompt": "Phong cấp, giữ quân mới và giành lợi thế vật chất.",
+    "mode": "interactive",
+    "goal": "material",
+    "outcome": "promotion",
+    "beginner": true,
+    "fen": "k5b1/5P2/4K3/8/8/8/8/8 w - - 0 1",
+    "moves": [
+      "fxg8=Q+",
+      "Ka7"
+    ],
+    "alternativeLines": [],
+    "source": "Thế cờ biên soạn.",
+    "hints": [
+      "Kiểm tra ô phong cấp và các quân có thể bắt quân mới.",
+      "Tốt f7 đang che đường Tượng g8 tới Vua e6. Bắt Tượng đồng thời phong cấp giữ Vua an toàn."
+    ],
+    "solution": "fxg8=Q+ — Tốt từ f7 bắt Tượng ở g8, phong cấp thành Hậu. Tốt f7 đang che đường Tượng g8 tới Vua e6. Bắt Tượng đồng thời phong cấp giữ Vua an toàn.",
+    "promotionMaterial": {
+      "minimumGain": 4,
+      "retainPromotedPiece": true
+    }
+  },
+  {
+    "id": "promotion-beginner-two-pawns",
+    "title": "Chọn Tốt có ô phong cấp an toàn",
+    "prompt": "Phong cấp, giữ quân mới và giành lợi thế vật chất.",
+    "mode": "interactive",
+    "goal": "material",
+    "outcome": "promotion",
+    "beginner": true,
+    "fen": "8/1P4Pk/5K2/8/8/8/8/8 w - - 0 1",
+    "moves": [
+      "b8=Q",
+      "Kh6"
+    ],
+    "alternativeLines": [],
+    "source": "Thế cờ biên soạn.",
+    "hints": [
+      "Kiểm tra ô phong cấp và các quân có thể bắt quân mới.",
+      "Tốt b7 có thể phong cấp an toàn; Tốt g7 phong cấp sẽ bị Vua h7 bắt."
+    ],
+    "solution": "b8=Q — Tốt từ b7 đến b8, phong cấp thành Hậu. Tốt b7 có thể phong cấp an toàn; Tốt g7 phong cấp sẽ bị Vua h7 bắt.",
+    "promotionMaterial": {
+      "minimumGain": 4,
+      "retainPromotedPiece": true
+    }
+  },
+  {
+    "id": "promotion-beginner-stop-promotion",
+    "title": "Chiếu khi phong cấp",
+    "prompt": "Phong cấp, giữ quân mới và giành lợi thế vật chất.",
+    "mode": "interactive",
+    "goal": "material",
+    "outcome": "promotion",
+    "beginner": true,
+    "fen": "8/P7/2k5/8/8/7K/5p2/6N1 b - - 0 1",
+    "moves": [
+      "f1=Q+",
+      "Kg3"
+    ],
+    "alternativeLines": [],
+    "source": "Thế cờ biên soạn.",
+    "hints": [
+      "Kiểm tra ô phong cấp và các quân có thể bắt quân mới.",
+      "Tiến thẳng để phong cấp thành Hậu và chiếu. Bắt Mã trên g1 để phong cấp không chiếu, cho phép Tốt trắng phong cấp ngay."
+    ],
+    "solution": "f1=Q+ — Tốt từ f2 đến f1, phong cấp thành Hậu. Tiến thẳng để phong cấp thành Hậu và chiếu. Bắt Mã trên g1 để phong cấp không chiếu, cho phép Tốt trắng phong cấp ngay.",
+    "promotionMaterial": {
+      "minimumGain": 4,
+      "retainPromotedPiece": true
+    }
+  },
+  {
+    "id": "promotion-beginner-double-check-recapture",
+    "title": "Phong cấp và chiếu đôi",
+    "prompt": "Phong cấp, giữ quân mới và giành lợi thế vật chất.",
+    "mode": "interactive",
+    "goal": "material",
+    "outcome": "promotion",
+    "beginner": true,
+    "fen": "3nk3/2K1P3/8/8/8/3r4/8/4R3 w - - 0 1",
+    "moves": [
+      "exd8=Q+",
+      "Kf7"
+    ],
+    "alternativeLines": [],
+    "source": "Thế cờ biên soạn.",
+    "hints": [
+      "Kiểm tra ô phong cấp và các quân có thể bắt quân mới.",
+      "Hậu mới và Xe e1 cùng chiếu Vua. Xe đen không thể bắt Hậu vì nước đó không giải quyết được nước chiếu của Xe e1."
+    ],
+    "solution": "exd8=Q+ — Tốt từ e7 bắt Mã ở d8, phong cấp thành Hậu. Hậu mới và Xe e1 cùng chiếu Vua. Xe đen không thể bắt Hậu vì nước đó không giải quyết được nước chiếu của Xe e1.",
+    "promotionMaterial": {
+      "minimumGain": 4,
+      "retainPromotedPiece": true
+    }
+  },
+  {
+    "id": "promotion-beginner-pinned-recapturer",
+    "title": "Quân bị ghim không thể bắt lại",
+    "prompt": "Phong cấp, giữ quân mới và giành lợi thế vật chất.",
+    "mode": "interactive",
+    "goal": "material",
+    "outcome": "promotion",
+    "beginner": true,
+    "fen": "1r1k4/P1b5/1B6/8/8/8/8/7K w - - 0 1",
+    "moves": [
+      "axb8=Q+",
+      "Kd7"
+    ],
+    "alternativeLines": [],
+    "source": "Thế cờ biên soạn.",
+    "hints": [
+      "Kiểm tra ô phong cấp và các quân có thể bắt quân mới.",
+      "Tượng c7 không thể bắt Hậu vì rời c7 sẽ mở đường Tượng b6 chiếu Vua d8."
+    ],
+    "solution": "axb8=Q+ — Tốt từ a7 bắt Xe ở b8, phong cấp thành Hậu. Tượng c7 không thể bắt Hậu vì rời c7 sẽ mở đường Tượng b6 chiếu Vua d8.",
+    "promotionMaterial": {
+      "minimumGain": 4,
+      "retainPromotedPiece": true
     }
   }
 ]

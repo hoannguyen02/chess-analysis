@@ -3,6 +3,7 @@ import argparse,glob,hashlib,json,importlib.util,sys
 sys.dont_write_bytecode=True
 from pathlib import Path
 import chess,chess.engine
+from tactic_research import CachedEngine, ResearchCache, DEFAULT_CACHE, digest, code_version
 ROOT=Path(__file__).resolve().parents[1]
 V={1:100,2:320,3:330,4:500,5:900,6:0}
 LEVELS=['A','B','C','C*','D']
@@ -54,33 +55,57 @@ def inspect(start,pv,levels=None):
  return None
 
 def main():
- ap=argparse.ArgumentParser();ap.add_argument('--target',type=int,default=50);ap.add_argument('--phase',choices=['seeds','tactics','tails'],default='seeds');ap.add_argument('--extra-corpus');ap.add_argument('--output',default='scripts/fixtures/discovery/researched.json');ap.add_argument('--levels',nargs='+',default=LEVELS);args=ap.parse_args()
- output=ROOT/args.output;output.parent.mkdir(exist_ok=True)
+ ap=argparse.ArgumentParser();ap.add_argument('--target',type=int,default=50);ap.add_argument('--phase',choices=['seeds','tactics','tails'],default='seeds');ap.add_argument('--extra-corpus');ap.add_argument('--output',default='scripts/fixtures/discovery/researched.json');ap.add_argument('--levels',nargs='+',default=LEVELS);ap.add_argument('--cache',type=Path,default=DEFAULT_CACHE);ap.add_argument('--no-cache',action='store_true');ap.add_argument('--review-index',type=Path);args=ap.parse_args()
+ output=ROOT/args.output;output.parent.mkdir(parents=True,exist_ok=True)
  saved=json.loads(output.read_text())['records'] if output.exists() else []
  existing=json.loads((ROOT/'scripts/fixtures/discovery/published.json').read_text())['records']
  spec=importlib.util.spec_from_file_location('discovery_builder',ROOT/'scripts/build-discovery.py')
  builder=importlib.util.module_from_spec(spec);spec.loader.exec_module(builder)
  excluded={r['gameId'] for r in json.loads((ROOT/'scripts/fixtures/discovery/excluded.json').read_text())}
- saved=[r for r in saved if r['gameId'] not in excluded]
+ registry=None;decisions={}
+ if args.review_index:
+  from research_index import connect,disposition
+  registry=connect(args.review_index)
+  for row in registry.execute("SELECT game_id,position_key,level,status,evidence_hash FROM research_decisions WHERE topic='discovery' ORDER BY game_id,position_key,level"):
+   decisions.setdefault(row[0],[]).append(row[1:])
+ saved=[r for r in saved if r['gameId'] not in excluded and (registry is None or disposition(registry,'discovery',r) is None)]
  seen={r['gameId'] for r in saved+existing}|excluded;counts={l:sum(r['level']==l for r in saved) for l in LEVELS}
  inputs={}
  for f in ([args.extra_corpus] if args.extra_corpus else sorted(glob.glob(str(ROOT/'scripts/fixtures/skewer/*candidates.json')))+[str(ROOT/'scripts/fixtures/skewer/audit.json')]):
   data=json.load(open(f))
-  for r in data['records']:inputs.setdefault(r['gameId'],r)
- engine=chess.engine.SimpleEngine.popen_uci('/opt/homebrew/bin/stockfish');engine.configure({'Threads':1,'Hash':128})
+  for r in data['records']:inputs.setdefault(r.get('gameId',r.get('gameKey')),r)
+ engine=CachedEngine(cache=None if args.no_cache else args.cache,options={'Threads':1,'Hash':128})
+ from discovery_research import early_gate
+ scans=ResearchCache(args.cache) if not args.no_cache else None
+ scan_version=code_version('collect-discovery.py','build-discovery.py','tactic_research.py','discovery_research.py','review-discovery-level-a.py')
+ scan_hits=0;withheld=[]
  def save():
   temporary=output.with_suffix('.tmp')
-  temporary.write_text(json.dumps(dict(engine=engine.id,nodes=300000,defenceNodes=100000,records=saved),ensure_ascii=False,indent=2)+'\n')
+  temporary.write_text(json.dumps(dict(engine=engine.id,nodes=300000,defenceNodes=100000,records=saved,withheld=withheld,scanCacheHits=scan_hits,engineStats=engine.stats),ensure_ascii=False,indent=2)+'\n')
   temporary.replace(output)
  try:
   for index,r in enumerate(inputs.values()):
-   ident=r['gameId']
+   ident=r.get('gameId')
    if ident in seen:continue
+   needed=[l for l in args.levels if counts[l]<args.target]
+   scan_key=digest({'game':r,'phase':args.phase,'levels':needed,'code':scan_version,'engine':engine.identity,'priorDecisions':decisions.get(ident,[]) if ident is not None else decisions})
+   previous=scans.get('discovery-scan',scan_key) if scans else None
+   if previous is not None:
+    scan_hits+=1;withheld.extend(previous.get('withheld',[]))
+    for record in previous['records']:
+     if record['gameId'] not in seen and counts[record['level']]<args.target and (registry is None or disposition(registry,'discovery',record) is None):
+      saved.append(record);seen.add(record['gameId']);counts[record['level']]+=1;save()
+    if all(counts[l]>=args.target for l in args.levels):break
+    continue
+   found=[];game_withheld=[]
    game=chess.Board(r['gameFen']);positions=[game.copy(stack=False)]
    for san in r['gameMoves']:game.push_san(san);positions.append(game.copy(stack=False))
-   if positions[r['ply']].fen(en_passant='fen')!=r['fen']:raise ValueError('source FEN mismatch')
-   if hashlib.sha256(' '.join(m.uci() for m in game.move_stack).encode()).hexdigest()[:16]!=ident:raise ValueError('source identity mismatch')
-   seeds=[r['ply']]
+   computed=hashlib.sha256(' '.join(m.uci() for m in game.move_stack).encode()).hexdigest()[:16]
+   if ident is not None and ident!=computed:raise ValueError('source identity mismatch')
+   ident=computed
+   if ident in seen:continue
+   if 'fen' in r and positions[r['ply']].fen(en_passant='fen')!=r['fen']:raise ValueError('source FEN mismatch')
+   seeds=[r.get('ply',1)]
    if args.phase=='tactics':
     seeds=[];actual=list(game.move_stack)
     for i,move in enumerate(actual):
@@ -101,6 +126,11 @@ def main():
     quick=engine.analyse(b,chess.engine.Limit(nodes=12000));line=inspect(b,quick.get('pv',[]),needed)
     if not line and args.phase=='tactics':line=inspect(b,list(game.move_stack)[ply:ply+18],needed)
     if not line or line['level'] not in args.levels or counts[line['level']]>=args.target or quick['score'].pov(b.turn).score(mate_score=100000)<150:continue
+    if registry is not None and disposition(registry,'discovery',{'gameId':ident,'fen':b.fen(en_passant='fen'),'level':line['level']}) is not None:continue
+    gate=early_gate(dict(gameId=ident,fen=b.fen(en_passant='fen'),**line),False)
+    if gate['flags']:
+     lead={'gameId':ident,'fen':b.fen(en_passant='fen'),'ply':ply,'moves':line['moves'],'level':line['level'],'flags':gate['flags'],'source':r['source']}
+     game_withheld.append(lead);withheld.append(lead);continue
     infos=engine.analyse(b,chess.engine.Limit(nodes=300000),multipv=3);best=infos[0]['score'].pov(b.turn).score(mate_score=100000)
     candidates=[]
     for info in infos:
@@ -118,10 +148,16 @@ def main():
       if cp<100:valid=False;break
     if not valid:continue
     record=dict(gameId=ident,headers=r['headers'],source=r['source'],gameFen=r['gameFen'],gameMoves=r['gameMoves'],fen=b.fen(en_passant='fen'),ply=ply,previousMove=dict(fen=positions[ply-1].fen(en_passant='fen'),move=r['gameMoves'][ply-1]),score=score,alternatives=[c[0]['moves'] for c in candidates[1:]],validation=dict(principalVariation=[m.uci() for m in info['pv']],depth=info['depth'],bestScore=best,defences=checks),**line)
+    for key in ('sourceReferences','masterCredential'):
+     if key in r:record[key]=r[key]
     coverage=builder.reply_coverage(record)
     if not coverage:continue
-    saved.append(record);seen.add(ident);counts[line['level']]+=1;save();print(index,counts,r['headers']['White'],line['moves'],flush=True);break
+    saved.append(record);found.append(record);seen.add(ident);counts[line['level']]+=1;save();print(index,counts,r['headers']['White'],line['moves'],flush=True);break
+   if scans:scans.put('discovery-scan',scan_key,{'records':found,'withheld':game_withheld,'complete':not bool(found),'stoppedAfterCandidate':bool(found)})
    if all(counts[l]>=args.target for l in args.levels):break
    if index%25==0:print('progress',index,counts,flush=True)
- finally:save();engine.quit()
+ finally:
+  save();engine.quit()
+  if scans:scans.close()
+  if registry:registry.close()
 if __name__=='__main__':main()

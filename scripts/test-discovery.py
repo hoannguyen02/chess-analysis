@@ -1,11 +1,52 @@
 import hashlib,importlib.util,json,sys,unittest
 from pathlib import Path
 import chess
+from review_store import read_review_reference
 sys.dont_write_bytecode=True
 ROOT=Path(__file__).resolve().parents[1]
 spec=importlib.util.spec_from_file_location('builder',ROOT/'scripts/build-discovery.py')
 builder=importlib.util.module_from_spec(spec);spec.loader.exec_module(builder)
 class Discovery(unittest.TestCase):
+ def test_two_additions_each_to_b_and_c_speed_trial(self):
+  from discovery_management import apply as apply_management
+  trial=json.loads((ROOT/'scripts/fixtures/research-benchmark/discovery-b-c-extension-20261105.json').read_text())
+  records=json.loads((ROOT/'scripts/fixtures/discovery/published.json').read_text())['records']
+  by_id={r['gameId']:r for r in records}
+  all_new=set(trial['added']['B']+trial['added']['C'])
+  self.assertEqual(len(all_new),4)
+  for level,ids in trial['added'].items():
+   self.assertEqual(len(ids),2)
+   for ident in ids:
+    self.assertEqual(by_id[ident]['level'],level)
+    self.assertEqual(len(by_id[ident]['sacrifices']),0 if level=='B' else 1)
+  final=json.loads((ROOT/'scripts/fixtures/discovery/level-c-expansion-20261105.json').read_text())
+  historic_ids=set(trial['before']['sourceIds'])|all_new
+  historic=apply_management([r for r in records if r['gameId'] in historic_ids],final['managementAtPublication'])
+  for level in ['B','C']:self.assertEqual(sum(r['level']==level for r in historic),24)
+  oldids=set(trial['before']['sourceIds'])
+  for name in ['discovery-exercises.json','discovery-game-sources.json']:
+   path=ROOT/'src/lib/server'/name;data=json.loads(path.read_text())
+   old=[e for e in data if e['gameReference']['id'] in oldids] if isinstance(data,list) else {k:v for k,v in data.items() if k in oldids}
+   self.assertEqual(hashlib.sha256((json.dumps(old,ensure_ascii=False,indent=2)+'\n').encode()).hexdigest(),trial['before']['fileHashes'][str(path.relative_to(ROOT))])
+  b=chess.Board(by_id['eef5583eeab818c6']['fen'])
+  for san in ['Ke3','Bg2','Rg5+']:b.push_san(san)
+  self.assertNotIn(chess.Move.from_uci('h3g5'),b.legal_moves)
+  b.remove_piece_at(chess.E5)
+  self.assertIn(chess.Move.from_uci('h3g5'),b.legal_moves)
+  b=chess.Board(by_id['51b6258a7c5e5a7b']['fen'])
+  for san in by_id['51b6258a7c5e5a7b']['moves']:b.push_san(san)
+  self.assertNotIn(chess.Move.from_uci('f7e6'),b.legal_moves)
+  b.remove_piece_at(chess.B8)
+  self.assertIn(chess.Move.from_uci('f7e6'),b.legal_moves)
+  for ident,reply,gain in [('043fa99a6866848c','Bxe7',180),('765f315a6674451f','gxf4',220)]:
+   b=chess.Board(by_id[ident]['fen']);side=b.turn;base=builder.miner.material(b,side)
+   for san in by_id[ident]['moves']:b.push_san(san)
+   b.push_san(reply)
+   self.assertEqual(builder.miner.material(b,side)-base,gain)
+  b=chess.Board(by_id['043fa99a6866848c']['fen'])
+  for san in ['Qd4','hxg6','Nxg6+']:b.push_san(san)
+  self.assertEqual(len(b.checkers()),2)
+  self.assertTrue(all(b.piece_type_at(m.from_square)==chess.KING for m in b.legal_moves))
  def test_editorial_reviews_are_preserved(self):
   fixtures=ROOT/'scripts/fixtures/discovery'
   published=json.loads((fixtures/'published.json').read_text())['records']
@@ -57,7 +98,24 @@ class Discovery(unittest.TestCase):
     self.assertEqual(positions[r['ply']],r['fen'])
     self.assertEqual(positions[r['ply']-1],r['previousMove']['fen'])
     result=builder.miner.inspect(chess.Board(r['fen']),[chess.Move.from_uci(u) for u in r['validation']['principalVariation']],[r.get('inferredLevel',r['level'])])
-    for field in ['moves','discoveryPly','sliderSquare','targetSquare','moverSquare','kind','goal','gain','localGain','sacrifices']:self.assertEqual(result[field],r[field])
+    for field in ['moves','discoveryPly','sliderSquare','targetSquare','moverSquare','kind','goal','gain','localGain']:self.assertEqual(result[field],r[field])
+    # A mover-only heuristic misses an accepted offer of a stationary piece.
+    # Preserve its inference and independently replay the editorial correction.
+    if r.get('sacrificeReview'):
+     evidence=r['sacrificeReview']
+     self.assertEqual(result['sacrifices'],evidence['automaticSacrifices'])
+     self.assertEqual(r['level'],'C');self.assertEqual(len(r['sacrifices']),1)
+     before=chess.Board(r['fen'])
+     for san in r['moves'][:evidence['acceptedCapturePly']]:before.push_san(san)
+     capture=before.parse_san(r['moves'][evidence['acceptedCapturePly']])
+     self.assertTrue(before.is_capture(capture))
+     self.assertEqual(chess.square_name(capture.to_square),evidence['capturedSquare'])
+     self.assertEqual(before.piece_at(capture.to_square).symbol().upper(),evidence['capturedPiece'])
+     side=chess.Board(r['fen']).turn
+     material=builder.miner.material(before,side)
+     before.push(capture)
+     self.assertLess(builder.miner.material(before,side),material-75)
+    else:self.assertEqual(result['sacrifices'],r['sacrifices'])
     self.assertEqual(builder.reply_coverage(r),r['coverage'])
     if r['coverage']['mode']=='capture':self.assertIn(r['moves'][-1],r['coverage']['replies'][r['moves'][-2]])
     self.assertGreaterEqual(r['score'],150)
@@ -121,14 +179,21 @@ class Discovery(unittest.TestCase):
   analyses={r['gameId']:r for name in ['upper-curation-analysis.json','upper-research-review.json'] for r in json.loads((fixtures/name).read_text())['reviews']}
   shortcuts={r['gameId']:r for name in ['upper-shortcut-review.json','upper-research-shortcuts.json'] for r in json.loads((fixtures/name).read_text())['reviews']}
   shorter={r['gameId']:r for r in json.loads((fixtures/'upper-shorter-mates.json').read_text())['proofs']}
+  for path in fixtures.glob('level-*-expansion-*.json'):
+   expansion=json.loads(path.read_text())
+   if 'evidenceFile' not in expansion:continue
+   evidence=read_review_reference(fixtures/expansion['evidenceFile'])
+   analyses.update({r['gameId']:r for r in evidence['analyses']})
+   shortcuts.update({r['gameId']:r for r in evidence['shortcuts']})
+   shorter.update({r['gameId']:r for r in expansion['shorterMateProofs']})
   reviews={r['gameId']:r for r in c['reviews']}
   self.assertEqual(len(original),120)
   self.assertTrue(all(r['gameId'] in reviews for r in original))
   for level,order in c['order'].items():
    self.assertEqual([r['gameId'] for r in records if r['level']==level],order)
    self.assertEqual(len(order),c['counts'][level])
-   self.assertEqual(c['gaps'][level],24-len(order))
-   self.assertLessEqual(len(order),24)
+   self.assertEqual(c['gaps'][level],max(0,24-c.get('effectiveCounts',c['counts'])[level]))
+   self.assertLessEqual(len(order),c.get('sourceCountLimits',{}).get(level,24))
    for e in [e for e in exercises if e['difficulty']['level']==level]:
     review=reviews[e['gameReference']['id']]
     self.assertEqual(review['decision'],'keep')
@@ -147,6 +212,8 @@ class Discovery(unittest.TestCase):
     if level in ['C','D']:self.assertGreater(e['difficulty']['sacrificeCount'],0)
     if level=='D':self.assertGreater(e['difficulty']['solverMoves'],3)
   proofs={p['gameId']:p for p in json.loads((fixtures/'upper-mate-proofs.json').read_text())['proofs']}
+  for path in fixtures.glob('level-*-expansion-*.json'):
+   expansion=json.loads(path.read_text());proofs.update({p['gameId']:p for p in expansion.get('mateProofs',[])})
   for r in records:
    if r['level']=='A' or r['goal']!='mate':continue
    proof=proofs[r['gameId']];self.assertEqual(proof['status'],'proved')
@@ -184,10 +251,110 @@ class Discovery(unittest.TestCase):
   spec=importlib.util.spec_from_file_location('coverage',ROOT/'scripts/discovery-coverage-report.py')
   coverage=importlib.util.module_from_spec(spec);spec.loader.exec_module(coverage)
   saved=json.loads((fixtures/'second-pass-coverage.json').read_text())
-  self.assertEqual(coverage.report(published),saved)
+  snapshot=saved['ownerDecisions']
+  self.assertEqual(coverage.report(published,snapshot),saved)
   for level in ['B','C','C*','D']:
-   self.assertEqual(saved['levels'][level]['count'],review['counts'][level])
-   self.assertEqual(saved['levels'][level]['missingPositions'],24-review['counts'][level])
+   from discovery_management import apply as apply_management
+   self.assertEqual(saved['levels'][level]['count'],sum(r['level']==level for r in apply_management(published,snapshot)))
+   self.assertEqual(saved['levels'][level]['missingPositions'],24-saved['levels'][level]['count'])
+ def test_five_new_level_b_positions(self):
+  fixtures=ROOT/'scripts/fixtures/discovery'
+  batch=json.loads((fixtures/'level-b-expansion-20261104.json').read_text())
+  evidence=read_review_reference(fixtures/batch['evidenceFile'])
+  published=json.loads((fixtures/'published.json').read_text())['records']
+  exercises=json.loads((ROOT/'src/lib/server/discovery-exercises.json').read_text())
+  level=[r for r in published if r['level']=='B']
+  self.assertGreaterEqual(len(level),24)
+  self.assertEqual([r['gameId'] for r in level][:24],batch['baseOrder']+batch['order'])
+  self.assertEqual(len(batch['records']),5)
+  self.assertEqual(len({r['gameId'] for r in batch['records']}),5)
+  canon=lambda value:hashlib.sha256(json.dumps(value,ensure_ascii=False,sort_keys=True).encode()).hexdigest()
+  self.assertEqual(canon([e for e in exercises if e['gameReference']['id'] in batch['preservedNonBIds']]),batch['preservedNonBExerciseSha256'])
+  self.assertEqual(canon([e for e in exercises if e['difficulty']['level']=='B'][:19]),batch['preservedBExerciseSha256'])
+  self.assertEqual(hashlib.sha256((ROOT/'src/lib/server/discovery-beginner-exercises.json').read_bytes()).hexdigest(),batch['preservedBeginnerSha256'])
+  timelines={r['gameId']:r for r in evidence['timelines']}
+  for r in batch['records']:
+   self.assertEqual(r['level'],'B');self.assertEqual(r['solverMoves'],3);self.assertFalse(r['sacrifices'])
+   self.assertFalse(timelines[r['gameId']]['flags'])
+   self.assertTrue(r['sourceReferences'])
+   for source in r['sourceReferences']:
+    self.assertEqual(len(source['sha256']),64);self.assertTrue(source['url'].startswith('https://'));self.assertTrue(source['retrieved'])
+   self.assertTrue(any(r['headers'].get(side+'Title') in ['FM','IM','GM'] for side in ['White','Black']))
+   self.assertEqual(r['continuationType'],'played' if r['gameMoves'][r['ply']:r['ply']+len(r['moves'])]==r['moves'] else 'analysis')
+  # This discovered check must prevent the real Nxh3+ countercheck and Bishop capture.
+  r=next(r for r in batch['records'] if r['gameId']=='044835b0f98dd68c')
+  b=chess.Board(r['fen'])
+  for san in ['Rg7+','Kh8','Rxg6+']:b.push_san(san)
+  self.assertNotIn(chess.Move.from_uci('g5h3'),b.legal_moves)
+  b.remove_piece_at(chess.D4)
+  self.assertIn(chess.Move.from_uci('g5h3'),b.legal_moves)
+  self.assertEqual(b.san(chess.Move.from_uci('g5h3')),'Nxh3+')
+ def test_nine_new_active_b_positions_and_saved_management(self):
+  from discovery_management import apply as apply_management
+  fixtures=ROOT/'scripts/fixtures/discovery'
+  batch=json.loads((fixtures/'level-b-expansion-20261105.json').read_text())
+  rows=json.loads((fixtures/'published.json').read_text())['records']
+  historical=[r for r in rows if r['gameId'] in batch['preservedSourceIds']+batch['order']]
+  active=apply_management(historical,batch['managementAtPublication'])
+  self.assertEqual([r['gameId'] for r in active if r['level']=='B'],batch['baseActiveOrder']+batch['order'])
+  self.assertEqual(len(batch['baseActiveOrder']),15);self.assertEqual(len(batch['order']),9)
+  self.assertEqual({level:sum(r['level']==level for r in active) for level in batch['expectedEffectiveCounts']},batch['expectedEffectiveCounts'])
+  # The publication snapshot is immutable; later owner decisions are expected
+  # to change current counts and must never be reset to satisfy an old test.
+  current=apply_management(rows)
+  for entry in json.loads((ROOT/'src/lib/server/practice-adjustments.json').read_text()):
+   if entry['reference']['scope']!='/discovered-attack':continue
+   matches=[r for r in current if ' '.join(r['fen'].split()[:4])==' '.join(entry['reference']['fen'].split()[:4])]
+   if entry['removed'] or entry.get('destinationScope','/discovered-attack')!='/discovered-attack':self.assertFalse(matches)
+   elif entry.get('level'):
+    self.assertTrue(all(r['level']==entry['level'] for r in matches))
+  data=json.loads((ROOT/'src/lib/server/discovery-exercises.json').read_text())
+  old=[e for e in data if e['gameReference']['id'] in batch['preservedSourceIds']]
+  self.assertEqual(hashlib.sha256(json.dumps(old,ensure_ascii=False,sort_keys=True).encode()).hexdigest(),batch['preservedSourceExercisesSha256'])
+  self.assertEqual(hashlib.sha256((ROOT/'src/lib/server/discovery-beginner-exercises.json').read_bytes()).hexdigest(),batch['preservedBeginnerSha256'])
+  self.assertEqual(len({r['gameId'] for r in batch['records']}),9)
+  self.assertFalse({'bb8a2206e82c4bf6','3e2ceb3919bb1a37'} & {r['gameId'] for r in rows})
+  for r in batch['records']:
+   self.assertEqual(r['level'],'B');self.assertFalse(r['sacrifices']);self.assertEqual(r['solverMoves'],3)
+   self.assertTrue(r['sourceReferences']);self.assertTrue(r['masterCredential'])
+   for ref in r['sourceReferences']:self.assertEqual(len(ref['sha256']),64)
+   # A declined offer in the sample line must not conceal a B-level sacrifice.
+   b=chess.Board(r['fen'])
+   for ply,san in enumerate(r['moves']):
+    move=b.parse_san(san);capture=b.is_capture(move);b.push(move)
+    if ply%2==0 and not capture:
+     takes=[m for m in b.legal_moves if b.is_capture(m) and m.to_square==move.to_square]
+     if r['gameId']=='8bc8a1916e336e16' and ply==0:
+      self.assertEqual([b.san(m) for m in takes],['Rxg3+'])
+      b2=b.copy();b2.push(takes[0]);b2.push_san('hxg3')
+      start=chess.Board(r['fen'])
+      self.assertEqual(builder.miner.material(b2,start.turn),builder.miner.material(start,start.turn))
+     else:self.assertFalse(takes,(r['gameId'],san))
+  # The equal exchanges clear two blockers before the final pawn gain.
+  r=next(r for r in batch['records'] if r['gameId']=='92b22f0f4da6a18f')
+  b=chess.Board(r['fen']);side=b.turn;base=builder.miner.material(b,side)
+  for san in r['moves'][:-1]:b.push_san(san)
+  self.assertEqual(builder.miner.material(b,side),base)
+  self.assertIn(chess.Move.from_uci('d1d6'),b.legal_moves)
+  # Both initial King choices enter the Rook rank and lose the target Rook.
+  r=next(r for r in batch['records'] if r['gameId']=='ae9d43b1c118dddb')
+  b=chess.Board(r['fen']);b.push_san('Bf7+')
+  self.assertEqual({b.san(m) for m in b.legal_moves},{'Kg7','Kh7'})
+  for reply in list(b.legal_moves):
+   branch=b.copy();branch.push(reply);branch.push_san('Bb3+')
+   self.assertTrue(branch.is_check())
+   for defence in list(branch.legal_moves):
+    end=branch.copy();end.push(defence)
+    self.assertEqual(end.piece_at(chess.C2),chess.Piece(chess.ROOK,chess.BLACK))
+    end.push_san('Bxc2')
+    self.assertFalse(any(m.to_square==chess.C2 and end.is_capture(m) for m in end.legal_moves))
+  # The Bishop preparation makes the Knight clearance a check instead of a Queen loss.
+  r=next(r for r in batch['records'] if r['gameId']=='309400c511b2bc0f')
+  b=chess.Board(r['fen']);b.push_san('Nd3');self.assertIn('Qxg3',[b.san(m) for m in b.legal_moves])
+  b=chess.Board(r['fen']);b.push_san('Bb3+')
+  self.assertEqual([b.san(m) for m in b.legal_moves],['Kc1'])
+  b.push_san('Kc1');b.push_san('Nd3+')
+  self.assertEqual([b.san(m) for m in b.legal_moves],['Kb1'])
  def test_user_rejected_muradli_aronian_stays_unpublished(self):
   ident='9f0cc28d5b4447d5'
   fixtures=ROOT/'scripts/fixtures/discovery'

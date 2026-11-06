@@ -63,8 +63,9 @@ function template(text) {
     previous = 0;
   for (const page of library) {
     let body;
-    await load('src/pages' + page.worksheetEndpoint + '.ts').default(
-      { method: 'GET' },
+    const endpoint = new URL(page.worksheetEndpoint, 'http://local.invalid');
+    await load('src/pages' + endpoint.pathname + '.ts').default(
+      { method: 'GET', query: Object.fromEntries(endpoint.searchParams) },
       {
         status() {
           return this;
@@ -77,7 +78,7 @@ function template(text) {
     );
     const entries = body.categories
       .flatMap((c) => c.exercises)
-      .filter((e) => e.moves.length && e.mode !== 'recognition');
+      .filter((e) => (e.beginner || e.moves.length) && e.mode !== 'recognition');
     const topic = page.href.slice(1);
     catalog[topic] = entries;
     const templates = new Map();

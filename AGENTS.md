@@ -14,6 +14,236 @@
   registration, access integration, documentation, and required validation.
   Do not present a scaffold as a completed page; report genuine research gaps.
 
+# Practice research: execution and evidence
+
+## Efficient execution for every tactics topic
+
+- Scope an extension to the topic, levels and number requested. A request for
+  nine B additions does not reopen every approved level or require finishing
+  an entire archive. New practice pages still require all six levels and the
+  end-to-end integration above. Keep the target of 24 and report actual gaps.
+- Use `docs/tactic-research-workflow.md` and the shared
+  `scripts/research-tactics.py` workflow. Reuse its engine cache, source index,
+  resumable batches and review packets for future topics. A topic must supply
+  its own motif/objective adapter; an unsupported topic must fail closed,
+  never fall back to generic engine-score approval. Discovery is the first
+  integrated adapter; existing topic proof requirements remain authoritative.
+- Read current owner removals, transfers and level choices before research.
+  Reuse complete indexed games, source manifests, approved evidence and
+  level-specific rejections. Import a new validated corpus once. Keep bulk
+  archives and disposable caches outside Git; retain durable approvals,
+  exclusions and source evidence. Do not resurrect rejected positions or
+  reuse an approval for a different topic, objective or difficulty.
+- Apply inexpensive legal, source, material, motif and level checks before
+  deep engine work. Review small batches, prioritize genuinely missing ideas,
+  and stop expanding the search once the requested additions have passed
+  tactical and editorial review. Preserve unused leads for later requests.
+  Group similar decision patterns for editorial review; geometric signatures
+  alone neither prove duplication nor justify including similar exercises.
+- For non-sacrificial levels, inspect relevant legal captures of the moving
+  piece and stationary attacker, including pawn offers and offers declined
+  in the sample line. An offer triggers review, not an automatic sacrifice
+  verdict: check immediate equal exchanges, recaptures and the teaching payoff.
+  Do this before writing final copy or exporting worksheets.
+- Cache only completed analysis using the exact engine binary/version,
+  relevant options and networks, full position and relevant move history,
+  search budget, MultiPV, allowed roots and hash-reset policy. Changed moves,
+  objectives, levels, provenance or verification code invalidate affected
+  review results. A shallow result must never stand in for deeper evidence;
+  search limits remain unresolved and cannot become automatic approval.
+- Reuse identical engine results between review passes, while retaining
+  independent tactical/editorial checks. Every surviving candidate still
+  requires comparison with all legal starting moves, simpler alternatives,
+  relevant strong defences, material recovery, accurate provenance and level.
+  Claimed forced mates still require every legal defensive reply. No speed
+  target authorizes weaker verification, padding or automatic publication.
+- Run independent positions in a bounded worker pool with one engine per
+  worker; benchmark worker counts rather than assuming more is faster. Use
+  atomic checkpoints for completed, rejected and pending work. Never resume
+  by game ID alone when the position, line or settings may have changed.
+- Query the persistent candidate-position store before exporting or scanning
+  complete games. Retain unselected leads and their source records outside
+  Git. Cache geometric game scans separately from requested levels and owner
+  decisions; apply current eligibility and approval requirements when retrieving
+  leads. A cached candidate is not an approved exercise.
+- Use bounded parallel collection for independent games and disjoint editorial
+  packets for parallel agent review when several candidates need decisions.
+  Each reviewer must apply the same full tactical/editorial requirements and
+  bind a decision to the exact candidate, evidence and verification version.
+  The coordinating agent checks coverage, distinctness and consistency before
+  merging decisions. If parallel review is unavailable, keep the same checks.
+- Finalize editorial selection and copy before packaging approved records.
+  Use the shared builders and required focused checks, then export and inspect
+  affected PDFs once the content is stable. Repeat checks when a change or
+  failure warrants it; do not repeatedly rebuild unchanged artifacts.
+- Use the reusable publication/check and PDF-preview commands instead of
+  creating a new render harness for each batch. Rehearse changes in isolation,
+  preserve prior data and owner decisions, and inspect affected PDF pages once
+  the content is stable. Generated previews await visual inspection; rendering
+  success alone is not visual approval.
+- Record stage wall times, cache hits, engine calls, candidate yields and
+  unresolved results. Benchmark the same fixed input and verification budgets;
+  distinguish cold and warm runs, automated review from human editorial work,
+  and review timing from source downloads, publication and PDF inspection.
+  Report measured speedups with their scope, not an unmeasured end-to-end ETA.
+- Start a run ledger before candidate lookup and finish it after editorial
+  review, publication, tests and required PDF inspection. Record each phase,
+  including parallel reviewer intervals; include gaps and unresolved work in
+  the full elapsed time. Do not replace whole-task timing with the sum of
+  engine commands or advertise a replay of known positions as fresh research.
+
+## Adaptive workflow for every tactic, including Beginner
+
+- The owner's new position-first flow is **Beginner only**; see
+  [Beginner-only position authoring](docs/tactic-research-workflow.md#beginner-only-position-authoring).
+  Extract the FEN immediately before the tactic from existing exercises, retain
+  its source reference, and let the owner edit the pieces and FEN. A recorded
+  solution is optional for this flow. Validate the saved position and duplicates;
+  do not require engine review or a mandatory solution before owner review.
+- For source-derived Beginner imports, use B, C, C*, D only by default, based
+  on the owner's current level choices. Exclude A because its direct positions
+  overlap Beginner. Keep extracting the FEN immediately before the motif;
+  retain original Beginner compositions and preserve source exercises.
+- Preserve the actual preceding position and opponent move when importing a
+  Beginner FEN. Show the last-move description and origin/destination highlights,
+  with read-only access to the position before it. Keep this context outside
+  solution moves and free-play branches. Do not invent a preceding move for a
+  composition or retain one that no longer reaches an edited FEN; distinguish
+  source-game play from a teaching-analysis continuation.
+- Apply this Beginner workflow to every current and future tactics topic.
+  Open **Thêm thế cờ Nhập môn** and **Chỉnh sửa thế cờ / lời giải** in the shared
+  authoring dialog, with nested piece setup and optional solution recording.
+  Closing, Cancel or Escape discard unsaved changes and restore trigger focus;
+  a successful save closes the dialog. Reuse the existing manual data store.
+- Keep A, B, C, C*, D content, required solutions, research, verification,
+  grading, solving behavior and publication workflow unchanged. Deriving a new
+  Beginner position must not edit or reclassify its source exercise or game.
+  Do not extend solutionless practice to later levels. Shared code may support
+  the Beginner exception only with preserved later-level behavior.
+- For solutionless Beginner positions, use free practice without automatic
+  correctness/completion claims or invented answers. Keep the editing mode
+  distinct from legal-move recording; invalidate incompatible recorded lines
+  when the starting FEN changes. Preserve the entry's identity during edits.
+  Owner-reviewed position counts are not claims of tactical verification.
+- The rules below retain the agent-verified research route and its evidence
+  requirements when that route is requested. They do not add an approval queue
+  to the new owner-reviewed Beginner authoring flow. The shared editor, manual
+  API and preceding-move display are reusable across topics. Use the shared
+  `BeginnerTacticImport` and protected `/api/beginner-tactic-candidates` for
+  automatic source-FEN extraction on registered topics; do not add a separate
+  importer or extraction script for each page. Standard topic JSON and manual
+  sources are loaded by convention; legacy storage is handled centrally.
+- For future source data, store the explicit objective and, when reviewed,
+  `tacticPly`: the zero-based ply immediately before the tactic in the saved
+  solution, counting both sides. The shared extractor uses this marker first,
+  then bounded geometry checks for familiar motifs. These checks suggest a
+  position for owner review; they do not establish a tactical payoff or grade.
+  When no reliable marker is available, show legal solver-turn frames and
+  require the owner to choose the tactical move before import. Never label an
+  arbitrary first/last move as detected, or bypass this choice to fill 24.
+- Follow the [adaptive workflow](docs/tactic-research-workflow.md#adaptive-workflow-for-all-tactics)
+  when adding or reviewing positions. Scope the request, read owner decisions,
+  check topic/level suitability, record coverage gaps, and reuse current evidence
+  before generating or researching new candidates. Target 24 where suitable;
+  a scoped addition does not authorize replacing the existing collection.
+- Prefer simple original compositions for agent-generated Beginner additions.
+  Construct from the intended decision and defensive relationships; reuse
+  suitable reviewed candidates first. A–D retain the complete master-game
+  research requirements. Do not reduce an advanced combination or remove its
+  defining sacrifice merely to produce a Beginner version. Keep unsuitable
+  levels visible and explain the gap.
+- Share collection infrastructure, legal checks, exact caches, review packets
+  and publication tools. Each topic must define its own teaching families,
+  essential motif, defensive resources, objective checks and distinctness
+  criteria. Unsupported checks or exhausted budgets mean unverified. The
+  shared CLI supports `review-compositions --topic fork` for supplied,
+  agent-verified compositions. It is not a universal position generator;
+  other topics still need their own motif/objective adapter.
+- For short Beginner lines, check every legal starting move and all legal
+  defensive replies within the stated teaching horizon, including recaptures
+  and counterattacks. Retain the existing alternative/engine/editorial checks;
+  a finite material horizon does not prove an eventual game win. Pins should
+  be created and restrict a real defence; skewers must survive alternatives to
+  moving the front piece. Reject incidental motifs and unresolved payoffs.
+- Use small resumable batches. When yield is poor, inspect rejection reasons
+  and change the construction constraints, teaching family or source before
+  increasing search. Preserve unused leads and stable exclusions. Select by
+  the learner's decision and defensive mechanism; mirrors and color changes
+  alone do not add variety. Do not force 24 mechanical variations.
+- Publish only after tactical and editorial review, through the existing topic
+  stores and shared practice/worksheet components. Keep the owner's manual
+  authoring path unchanged; it must not become a shortcut for publishing
+  agent-generated, unverified exercises. Benchmark fresh additions end to end,
+  with unchanged required checks and full elapsed time.
+
+## Repository hygiene for all future requests
+
+- Reuse parameterized collection, review, publication and rendering tools.
+  Do not add a script for each player, position, numbered batch or date. Extend
+  the existing tool or pass candidate IDs/configuration when its behavior is
+  reusable. For defender removal, use `validate-removing-defender-batch.py`;
+  the completed per-position review scripts have been retired.
+- Keep scratch scripts, candidate dumps, raw archives, run ledgers, logs,
+  benchmark outputs and PDF previews outside Git. Use an external cache or the
+  ignored `research/scratch/`, `research/runs/` and `research/benchmarks/`
+  directories. Put concise measured results in the existing workflow docs;
+  keep a benchmark JSON in fixtures only when it is a fixed regression input
+  or contains preservation evidence that tests actually need.
+- Keep durable approvals, exclusions, selected complete games, source manifests,
+  tactical proofs and reproducible review evidence. Update the existing topic
+  bundles rather than creating separate evidence/source JSON files for every
+  request. Discovery uses `expansion-evidence.json#record-key`; defender-removal
+  and promotion reviews use their existing review bundles. Preserve stable IDs,
+  per-record checksums and historical owner decisions when consolidating data.
+  A small approved batch manifest is appropriate when builders need its ordered
+  selection and publication boundary; it is not a disposable research dump.
+- Before deleting or ignoring an existing file, inspect its imports and its
+  builder, test and documentation references. Consolidate necessary contents
+  first and update readers/reproduction commands. Never ignore all JSON or
+  `scripts/fixtures/`, and never remove evidence merely because it was generated.
+- Before finishing, inspect the files added by the task, remove its temporary
+  artifacts, and run the affected rebuild/preservation tests. Do not clean up
+  unrelated user changes. `.gitignore` does not untrack staged/tracked files;
+  remove only the exact obsolete paths from Git when cleanup is authorized.
+
+## Research targets and approval
+
+- Treat 24 positions per level as the target for the task, not a reason to
+  stop after a small batch. For a new page or a requested full collection,
+  continue across all six levels until the target is reached or a concrete
+  limitation prevents progress. For a scoped extension, finish its requested
+  additions and affected integration. Do not claim a gap is unavoidable
+  without sufficient search.
+- Follow the established skewer collection workflow for new or expanded
+  practice collections: collect and deduplicate candidates from complete games,
+  run staged engine screening, independently review candidates in batches, then
+  build exercise and game-source data from durable approved records. Reuse the
+  pipeline or adapt its focused stages to the motif; checkpoint work so it can
+  resume. A new topic may need different motif detection and objective checks.
+- Reuse the shared tactic map and game index in `docs/tactics-index.md` when
+  scanning source games. Record possible cross-topic matches for later review,
+  preserve full-game provenance and distinguish played moves from analysis.
+  Indexed tags are leads only; follow the topic-specific review and publication
+  requirements before using them as exercises.
+- Treat automatic grades, engine scores and candidate lines as review leads,
+  not publication approval. The batch validator must check the current legal,
+  alternative-move, defensive-reply, material-recovery, provenance, level and
+  editorial requirements, including topic-specific requirements below. Record
+  accepted and excluded positions with stable IDs and reasons; publish each
+  batch that passes rather than waiting for all six levels to reach the target.
+- For material-winning exercises, compare all legal starting moves and review
+  relevant forcing alternatives, strong defensive replies and material recovery.
+  Bounded engine searches and documented professional tactical review are
+  sufficient evidence when the stated payoff and likely recovery are clear;
+  describe the evidence accurately, not as an exhaustive proof. Apply any
+  stricter topic-specific proof requirements stated below.
+- Require coverage of every legal defensive reply when claiming a forced mate
+  within a stated move limit. For other objectives, document unresolved
+  defences and do not publish a position whose stated payoff remains in doubt.
+- Do not end a task merely because the full collection takes substantial work.
+  Give progress updates while continuing. If a concrete blocker prevents further
+  work, identify it and report actual counts and remaining gaps.
+
 This project's viewers include chess coaches/trainers, arbiters, children, and
 parents. Treat this as a standing requirement for all pages and future changes.
 
@@ -199,6 +429,41 @@ every difficulty level.
 
 # Tactical exercise selection and review
 
+## Start from a meaningful contest; let the tactic create the advantage
+
+- For all current and future tactic pages, prefer positions with roughly
+  balanced material and meaningful counterplay, where understanding the named
+  tactic is what enables the learner to gain an advantage. Avoid selecting
+  exercises mainly because the solver can collect more material in an already
+  overwhelmingly won position or complete an essentially unopposed conversion.
+- "Roughly balanced" is an instructional preference, not a requirement for an
+  engine evaluation of zero: a position containing a sound winning tactic may
+  already have a winning engine score. Review the starting material, threats,
+  defensive resources and alternatives to establish why finding the tactic
+  matters. Equal material alone does not establish a suitable exercise.
+- Prefer a concrete decision that creates the opportunity: a capture leading
+  to an exchange, a check that induces a relevant exchange or defensive move,
+  removing or diverting a defender, or clearing a necessary square or line.
+  For promotion, show how such a decision enables promotion and its payoff,
+  rather than routinely starting with an uncontested pawn already ready to
+  promote. Include the preparation and relevant exchanges in the published
+  solution; do not justify a routine endpoint by an unseen preceding combination.
+- Verify the payoff after recaptures and against relevant defensive replies.
+  Do not describe an exchange or reply as forced without checking alternatives.
+  Record the initial material balance, the tactical opportunity, why routine
+  alternatives do not achieve the same payoff, and the resulting gain or goal
+  in the position's review evidence. A numerical gain from promotion alone is
+  insufficient editorial justification for publishing a position.
+- Respect the existing level definitions: Beginner may isolate a simple final
+  decision to build recognition; A uses direct decisions or short preparation
+  without sacrifice. Put genuine sacrifices and longer coordination in the
+  appropriate later levels, rather than making every exercise a combination.
+  Drawing, defensive and explicit conversion lessons may start from unequal
+  positions when that imbalance is essential to their stated objective; record
+  the reason. Apply this preference during selection and review, with durable
+  reasons for any rejection or replacement, rather than removing existing
+  approved exercises without review.
+
 ## Coverage of each tactic at every level
 
 - Keep collections concise and varied: the user's preferred count is 24
@@ -260,6 +525,77 @@ every difficulty level.
   player/event/date headers, the complete legal game, the exact exercise FEN,
   source ply, and preceding move when available. Save these locally in code;
   practice and replay must not depend on temporary external links.
+- Search complete tournament or player PGNs from PGN Mentor and The Week in
+  Chess, together with the project's validated local game corpora. Lichess
+  puzzle records (FEN, solution, theme, rating and game URL) may suggest
+  candidates, but a puzzle rating or link does not establish a master game.
+  Resolve a lead to its complete original PGN and verify the players' master
+  credentials when that provenance matters. Do not publish from a puzzle
+  snippet or a reconstructed game.
+- Make broad promotion scans efficient without lowering publication standards:
+  normalize and deduplicate complete games, then deduplicate candidate FENs and
+  learner-decision signatures before engine work. Apply inexpensive legal,
+  material-window, promotion-distance and motif filters first. Use a staged
+  engine screen: shallow analysis for broad ranking, then deeper analysis of a
+  shortlist; the final starting-move comparison must still cover every legal
+  move. Run all-reply objective proofs only on candidates that survive those
+  screens. Cache engine results by position FEN, engine name/version, and exact
+  settings (including node or depth limit, MultiPV and relevant options); never
+  reuse a lower-budget screen as a higher-budget result or as a proof. Checkpoint
+  completed batches atomically so an interrupted scan can resume, and label
+  unfinished or timed-out work as incomplete/unverified. Keep this disposable
+  scan cache outside the repository; retain only selected evidence, rejections,
+  source manifests and reproducible review data in project files.
+- Scale game discovery in this order: deduplicate and re-search validated local
+  corpora; add PGN Mentor player and event archives; then add The Week in Chess
+  issue or tournament PGNs in dated batches. Maintain a corpus manifest with
+  the exact source URL, archive SHA-256, retrieval date, game count and parsing
+  result for every batch. Deduplicate across sources by normalized complete
+  game move sequence while retaining all source references. Keep raw bulk
+  archives outside the repository; save selected complete games and their
+  evidence in the project fixtures.
+- Use the Lichess puzzle database as a high-recall lead index: filter its FEN,
+  moves and themes, follow `GameUrl`, and resolve each promising lead to the
+  full game before review. Puzzle rating, theme and URL are discovery metadata,
+  not evidence of master-game provenance. The Lichess rated-game dumps are an
+  optional supplementary search source only when a known player or event can
+  be identified and the complete game can be independently sourced; do not
+  ingest the large general dump as if it were a master-game corpus.
+- Search both played promotions and games where promotion was threatened but
+  not played (including resignations). Begin with several plies before played
+  promotions, then widen the window for longer C*/D combinations; also inspect
+  balanced passer endgames without a played promotion. Preserve when the game
+  ended before the teaching payoff and label any verified continuation as
+  analysis. High-recall filters and engine screens create leads only; every
+  published exercise still needs the full provenance, legal replay, objective
+  verification, alternatives/replies review and level-specific editorial check
+  below.
+- Treat a roughly balanced start as a preference for material-promotion
+  exercises, not an eligibility gate. A promotion position may begin with a
+  material imbalance or a favorable engine evaluation when the learner still
+  faces a concrete, meaningful promotion decision: the correct preparation,
+  timing, exchange, capture-promotion, pawn-race calculation or promotion choice
+  must create, preserve or decisively convert the stated material payoff.
+  Include positions where promotion is the tactical answer to a real defensive
+  resource even if the side to move is already somewhat better. Do not use
+  positions where the side can make an unopposed routine promotion, collect a
+  free piece independently of promotion, or choose an unrelated simpler tactic
+  to achieve the same or better result. Review material, counterplay, all legal
+  starting moves and relevant replies; use engine scores as leads, not verdicts.
+  Record why the promotion decision is instructional and why a simpler move
+  does not make it incidental. This broader selection rule does not relax
+  real-game provenance, level definitions, sacrifice requirements, tactical
+  proof, counterpromotion review or distinctness. Apply it in a pilot batch and
+  report the actual counts and remaining gaps; never add examples just to fill
+  24.
+  For material-promotion proofs, continue beyond the first promotion when the opponent has a live passed pawn or a forcing counterpromotion. A certificate that stops while a counter-passer can promote does not establish a durable material gain; verify the resulting exchange or other stated payoff against that promotion before publishing.
+- For each candidate, legally replay the original game to the exact exercise
+  FEN and preceding move; save the complete game, source URL, archive SHA-256,
+  headers and source ply locally. Check that the named motif is essential,
+  analyze strong defensive replies and valid alternatives, then deduplicate
+  by learner decision and defensive mechanism before grading. Preserve the
+  actual played continuation separately from an engine-verified teaching line,
+  including when the game ended before the tactical payoff was played.
 - Distinguish the actual game continuation from an engine-verified teaching
   variation. Never invent game provenance or label a composed position as a
   master game. Open saved full games through the shared `DrawGameViewer`.
@@ -377,7 +713,76 @@ tactics topic, including forks, skewers, pins, and discovered checks/attacks.
 
 ## Promotion coverage
 
+- On the material-promotion practice page, publish levels B, C, C*, and D
+  only from legally replayed real games. A composed position may remain in
+  research or rejection data, but must not appear in those published levels.
+  Keep the empty level visible and report its actual count while suitable game
+  positions are researched; never relabel a composition or invent provenance.
+  Save the complete game, source URL and archive checksum, player/event/date
+  headers, exact exercise FEN and source ply, preceding move when available,
+  and verified tactical line in the consolidated topic review and local game
+  source data. The all-reply and alternative-move standards above still apply.
+
+- For material-promotion level B, teach a short, non-sacrificial preparation
+  that makes promotion work against a real defence. Suitable decisions include
+  blocking a defender's line, exchanging or displacing a piece that controls
+  the promotion square, making a checking move to gain a tempo, coordinating
+  the King or a minor piece to protect the new piece, or stopping the opponent's
+  passer before promoting. An equal-value exchange is not a sacrifice; if the
+  solver must knowingly give up material for the promotion, review it for C.
+  Judge the level by the decision and calculation, not line length alone. A
+  capture that removes the only piece controlling the promotion square can be a
+  B-level preparation when immediate promotion fails, the capture is not a
+  sacrifice, and the resulting material gain is verified against every legal
+  defence. Keep a winning pawn ending out of the material-promotion set unless
+  material is actually gained; assign a position-winning objective only on a
+  page that supports and states that objective.
+- Compare the legal pawn choices from the starting position: a straight advance,
+  a capture-promotion, and any useful preparatory move. A capture-promotion is
+  not automatically sound: verify whether the opponent can capture the new
+  piece, keep control of its square, or promote with tempo. Sometimes the pawn
+  must advance quietly because a capture leaves the promotion square defended;
+  sometimes a check, block or equal exchange must first remove that defence.
+  Include the relevant branch and material payoff in the solution.
+- Preserve a level-B coverage map for defender blocks/removals, equal exchanges,
+  tempo checks, King/minor-piece support, advance-versus-capture choices,
+  defended promotion squares, and opposing pawn races/counterpromotions. Map
+  every covered decision to a stable exercise ID and list missing aspects. Do
+  not fill the 24-position target with mirrored versions, routine promotions,
+  or near-duplicates. Review all legal starting moves, replies, recaptures and
+  promotion safety under the existing tactical-selection standards.
+- To find more B candidates, widen discovery beyond games with a played
+  promotion. Replay every legal move in each saved, checksummed master-game
+  batch and inspect positions with a passed pawn on ranks 5–7 (or the mirrored
+  ranks for Black) when a defender controls the route or promotion square.
+  Search short windows before and after checks, blocks, interpositions, equal
+  exchanges, rook/queen trades, and pawn captures; include games that end by
+  resignation before the promotion and label any continuation as analysis.
+  Compare straight advances, capture-promotions, and preparatory moves. A
+  high-recall pattern or material certificate is a lead only: publish only
+  after full-game replay, all-legal-root comparison, all-reply payoff and
+  promoted-piece safety, plus a distinct learner-decision review. Expand to
+  older TWIC issues and additional PGN Mentor player/event archives in dated,
+  checksummed batches before relaxing any instructional or proof criterion.
+
+- For Beginner capture-promotion examples introducing later exchange or
+  sacrifice combinations, put the opposing King on the same last rank as
+  the captured piece. Teach the final capture-promotion first, including
+  the check it gives when applicable. Keep actual preparatory exchanges and
+  sacrifices in their appropriate later levels. Do not invent a preceding
+  forced exchange or sacrifice; verify any such continuation before adding it.
+
+- Beginner promotion builds the foundation for A and later levels through
+  direct advances to rank 1/8 and capture-promotions. Review captures near an
+  opposing King on the last rank, including whether the new piece is safe.
+  Keep these decisions short and concrete; preserve the 24-position target
+  and the distinct-idea requirement rather than adding transformed copies.
+
 - At Beginner, explicitly review capturing onto the last rank to promote, alongside
   advancing without capture. Include verified capture-promotion decisions where
   suitable; document gaps. Changing the captured piece, board orientation or
   pawn file alone does not establish a distinct instructional decision.
+
+- Promotions that require choosing a piece to avoid stalemate (pat) start at
+  level A, never Beginner. Apply this to every promotion category and PDF.
+  Beginner retains direct promotion and capture-promotion with a visible payoff.

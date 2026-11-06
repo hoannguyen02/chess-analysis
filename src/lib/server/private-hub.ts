@@ -100,6 +100,13 @@ export const privatePages = [
       'Những ván đáng nhớ, tìm theo khai cuộc, kỳ thủ và ô quan trọng.',
   },
   {
+    href: '/tactic-positions?theme=exposedKing',
+    worksheetEndpoint: '/api/manual-tactic-exercises?theme=exposedKing',
+    group: 'Chiến thuật',
+    title: 'Tấn công Vua yếu',
+    description: 'Luyện các thế cờ và phương án được thêm thủ công.',
+  },
+  {
     href: '/one-rook-mate',
     worksheetEndpoint: '/api/one-rook-mate-exercises',
     group: 'Chiếu hết',
@@ -136,6 +143,13 @@ export const privatePages = [
     group: 'Chiến thuật',
     title: 'Tấn công đôi',
     description: 'Tấn công đồng thời nhiều mục tiêu để giành lợi thế vật chất.',
+  },
+  {
+    href: '/removing-defender',
+    worksheetEndpoint: '/api/removing-defender-exercises',
+    group: 'Chiến thuật',
+    title: 'Loại bỏ quân bảo vệ',
+    description: 'Loại bỏ quân phòng thủ để khai thác mục tiêu được bảo vệ.',
   },
   {
     href: '/pin',

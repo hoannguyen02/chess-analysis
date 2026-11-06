@@ -19,10 +19,13 @@ function load(file) {
   return (cache[file] = module.exports);
 }
 const { drawCategories } = load('src/lib/chess/draw-practice.ts');
-const { drawLevels, filterDrawLevel } = load('src/lib/chess/draw-levels.ts');
+const { drawLevels, practiceLevels, filterDrawLevel } = load(
+  'src/lib/chess/draw-levels.ts'
+);
 
 test('reviewed levels and theme routes expose their actual counts and objectives', () => {
   assert.deepEqual(drawLevels, ['A', 'B', 'C', 'C*', 'D']);
+  assert.deepEqual(practiceLevels, ['Beginner', 'A', 'B', 'C', 'C*', 'D']);
   const manifest = JSON.parse(
     fs.readFileSync(
       'scripts/fixtures/draw-practice/curated-selection.json',

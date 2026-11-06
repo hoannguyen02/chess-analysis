@@ -1,4 +1,4 @@
-from promotion_review_store import ReviewStore
+from review_store import ReviewStore
 from mate_proof_store import MateProofStore
 """Publish only proof-backed additions, preserving snapshots, game replay and audits."""
 import json,chess,hashlib
@@ -20,6 +20,8 @@ for r in read(D/'candidates.json'):
   p=F/(slug+'-original.json');data=read(p);e=dict(copy[r['id']],fen=r['fen'],moves=r['moves'],source=r['source'],mode='interactive',goal=r['goal'],outcome='checkmate' if r['goal']=='checkmate' else 'promotion')
   if r['level']=='Beginner':e['beginner']=True;e['promotionGain']=dict(minimumGain=r['minimumGain'],solverMoves=1);e['alternativeLines']=r['alternatives']
   else:e['difficulty']=dict(level=r['level'],status='suggested',solverMoves=r['solverMoves'],sacrificeCount=1 if r['id']=='krobshofer-bishop-selfblock' else 0,reason='Thí Xe, điều Tượng và chiếu mở trong bốn nước.' if r['id']=='krobshofer-bishop-selfblock' else 'Phân mức theo toàn bộ phương án và các nước đáp.')
+  if r['goal']=='material':
+   e['promotionGain']=dict(minimumGain=r['minimumGain'],solverMoves=r['solverMoves']);e['alternativeLines']=r.get('alternatives',[])
   if r.get('sourceGame'):
    game=r['sourceGame'];ident=game['gameId'];e['gameReference']=dict(collection=slug,kind='game',id=ident,ply=r['ply'],branch=0);e['previousMove']=r['previousMove']
    srcpath=OUT/(slug+'-game-sources.json');sources=read(srcpath);sources[ident]=dict(kind='game',headers=game['headers'],fen=game['gameFen'],lines=[game['gameMoves']]);save(srcpath,sources)

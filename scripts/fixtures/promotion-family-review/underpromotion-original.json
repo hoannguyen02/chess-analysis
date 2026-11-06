@@ -168,7 +168,13 @@
         "mode": "interactive",
         "goal": "material",
         "outcome": "promotion",
-        "beginner": true,
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 1,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo toàn bộ phương án và các nước đáp."
+        },
         "promotionGain": {
           "minimumGain": 220,
           "solverMoves": 1

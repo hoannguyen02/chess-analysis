@@ -1,6 +1,18 @@
 {
-  "date": "2026-10-29",
+  "date": "2026-11-05",
   "targetPerLevel": 24,
+  "sourceCountLimits": {
+    "B": 35,
+    "C": 24,
+    "C*": 24,
+    "D": 24
+  },
+  "effectiveCounts": {
+    "B": 24,
+    "C": 24,
+    "C*": 10,
+    "D": 22
+  },
   "scope": "All 120 previously published B/C/C*/D positions, plus the recorded replacement candidates. Beginner and A unchanged.",
   "method": "All legal roots screened by finite engine search; immediate mates and mates in two checked against every reply; bounded material shortcuts and all immediate local discovery defences checked. Full preparation probed with best defensive engine replies. Finite material horizons are not exhaustive long-term proofs. Saved mates additionally have all-reply proofs.",
   "order": {
@@ -23,7 +35,23 @@
       "a47aeafddfb1266b",
       "605db1bbb1fa9cc2",
       "bfb60242f4cc9115",
-      "a1ad9410f81616a3"
+      "a1ad9410f81616a3",
+      "0953aa6625d2d073",
+      "044835b0f98dd68c",
+      "471a7ac876440e16",
+      "b07069c015311028",
+      "3ff01cfb3ddd4181",
+      "92b22f0f4da6a18f",
+      "ae9d43b1c118dddb",
+      "b5be9bfe50794952",
+      "bf1257225a89bff1",
+      "309400c511b2bc0f",
+      "69dbb25d85019a1e",
+      "28abfaf127a68955",
+      "8bc8a1916e336e16",
+      "02767676b9337285",
+      "eef5583eeab818c6",
+      "51b6258a7c5e5a7b"
     ],
     "C": [
       "0ee13b73848ee956",
@@ -47,7 +75,9 @@
       "c0209e56ab19cf19",
       "e156b41271bd5b4d",
       "65e28198bca55561",
-      "f597cd96e9f20a30"
+      "f597cd96e9f20a30",
+      "043fa99a6866848c",
+      "765f315a6674451f"
     ],
     "C*": [
       "9a6890d28d1fda55",
@@ -81,15 +111,15 @@
     ]
   },
   "counts": {
-    "B": 19,
-    "C": 22,
+    "B": 35,
+    "C": 24,
     "C*": 4,
     "D": 22
   },
   "gaps": {
-    "B": 5,
-    "C": 2,
-    "C*": 20,
+    "B": 0,
+    "C": 0,
+    "C*": 14,
     "D": 2
   },
   "reviews": [
@@ -5694,6 +5724,698 @@
       ],
       "decision": "remove",
       "reason": "Omit as a repeated sacrifice/clearance pattern in the 24-position selection; the retained set includes this mechanism with different blockers, targets and preparation. This is an editorial redundancy decision, not a claim of tactical unsoundness."
+    },
+    {
+      "gameId": "0953aa6625d2d073",
+      "originalLevel": "B",
+      "level": "B",
+      "originalExerciseNumber": null,
+      "newResearch": true,
+      "title": "Queipo Caballero,G — Donkeng Hussel",
+      "fen": "6k1/p6p/1p4p1/5r2/2PpN3/PP5P/1B4P1/1Rb4K b - - 0 37",
+      "moves": [
+        "Rf1+",
+        "Kh2",
+        "Bf4+",
+        "g3",
+        "Rxb1"
+      ],
+      "decision": "keep",
+      "reason": "A checking Rook alignment forces Kh2, then Bf4+ clears the first rank while giving a direct Bishop check. Both g3 and Ng3 leave Rxb1 available. Unlike the retained discovered-check windmill, this is a checking Bishop clearance with defensive interposition and a stationary Rook collecting the target. Black starts a Knight down and must resolve the blocked Rook line; the tactic changes the material contest. Bxd4 recovers only a pawn after the Rook is lost.",
+      "goal": "material",
+      "sacrificeCount": 0,
+      "gradingReason": null,
+      "initialMaterialCp": -320,
+      "solutionVi": "Rf1+ — Xe từ f5 đến f1, chiếu Vua. Sau Kh2, Bf4+ — Tượng từ c1 đến f4, vừa chiếu Vua vừa mở hàng 1 cho Xe tấn công Xe b1. Trắng có thể chắn đường chiếu bằng g3 hoặc Ng3; Đen tiếp tục Rxb1. Nước Bxd4 sau đó chỉ lấy lại một Tốt, không bù được Xe đã mất.",
+      "hintsVi": [
+        "Xe cần đến hàng nào để phối hợp với Tượng c1?",
+        "Tìm nước Tượng vừa chiếu Vua vừa mở đường cho Xe bắt Xe b1."
+      ],
+      "coverage": {
+        "mover": "B",
+        "slider": "R",
+        "kind": "attack",
+        "capture": false,
+        "promotion": false,
+        "sideToMove": "b",
+        "solverMoves": 3
+      }
+    },
+    {
+      "gameId": "044835b0f98dd68c",
+      "originalLevel": "B",
+      "level": "B",
+      "originalExerciseNumber": null,
+      "newResearch": true,
+      "title": "Sasikiran,K — Angada H P",
+      "fen": "4r1k1/R7/6pP/3b2n1/3Bp3/4P1PB/1P6/6K1 w - - 3 36",
+      "moves": [
+        "Rg7+",
+        "Kh8",
+        "Rxg6+",
+        "Kh7",
+        "Rxg5"
+      ],
+      "decision": "keep",
+      "reason": "Rg7+ makes the King choose a wing. Against Kh8, Rxg6+ uncovers Bd4 along d4–h8, preventing the real countercheck Nxh3+ that would take the other Bishop. Rxg5 then removes that Knight. This is a tempo-based defence of a threatened Bishop, not another windmill whose only distinction is its target. Against Kf8, Bc5+ Re7 Bxe7+ wins the Rook within three solver moves; a longer engine mating indication in that branch is not claimed as a proof.",
+      "goal": "material",
+      "sacrificeCount": 0,
+      "gradingReason": null,
+      "initialMaterialCp": 210,
+      "solutionVi": "Rg7+ — Xe từ a7 đến g7, chiếu Vua. Trong phương án Kh8, Rxg6+ — Xe bắt Tốt g6 và mở đường chéo d4–h8 cho Tượng chiếu Vua. Đen không thể dùng Nxh3+ để bắt Tượng h3 vì Vua h8 vẫn đang bị chiếu. Sau Kh7, Rxg5 bắt Mã. Nếu Đen chọn Kf8, phương án Bc5+ Re7 Bxe7+ lấy Xe.",
+      "hintsVi": [
+        "Chú ý đòn Nxh3+ của Đen. Làm thế nào giành thời gian trước đe dọa này?",
+        "Sau Rg7+ Kh8, tìm nước Xe mở đường chiếu cho Tượng d4."
+      ],
+      "coverage": {
+        "mover": "R",
+        "slider": "B",
+        "kind": "check",
+        "capture": true,
+        "promotion": false,
+        "sideToMove": "w",
+        "solverMoves": 3
+      },
+      "alternativeLines": [
+        [
+          "Rg7+",
+          "Kf8",
+          "Bc5+",
+          "Re7",
+          "Bxe7+"
+        ]
+      ]
+    },
+    {
+      "gameId": "471a7ac876440e16",
+      "originalLevel": "B",
+      "level": "B",
+      "originalExerciseNumber": null,
+      "newResearch": true,
+      "title": "Lam,Chun Yung Samuel — Van Wely,L",
+      "fen": "5rk1/Q5p1/p2r1p2/1p5p/3B4/b2P1P1P/2q3P1/K2RR3 b - - 11 33",
+      "moves": [
+        "Qa4",
+        "Bb2",
+        "Bc5+",
+        "Kb1",
+        "Bxa7"
+      ],
+      "decision": "keep",
+      "reason": "Qa4 quietly aligns the Queen behind Ba3 and also attacks Bd4. In the strongest reviewed Bb2 defence, Bc5+ reveals the Queen check on the a-file while the Bishop attacks Qa7; Kb1 allows Bxa7. This introduces quiet Queen setup followed by Bishop double threat, rather than repeating the existing Queen-and-Knight back-rank capture. Moving the attacked White Queen instead exposes the Bishop on d4; stronger replies were compared in the saved engine probes.",
+      "goal": "material",
+      "sacrificeCount": 0,
+      "gradingReason": null,
+      "initialMaterialCp": 100,
+      "solutionVi": "Qa4 — Hậu từ c2 đến a4, đặt sau Tượng a3 và tấn công Tượng d4. Trong phương án Bb2, Bc5+ — Tượng từ a3 đến c5, mở cột a cho Hậu chiếu Vua đồng thời tấn công Hậu a7. Sau Kb1, Bxa7 bắt Hậu. Nước chiếu mở khiến Trắng phải xử lý đe dọa lên Vua trước khi cứu Hậu.",
+      "hintsVi": [
+        "Tìm cách đặt Hậu cùng cột với Vua a1, phía sau Tượng a3.",
+        "Khi Tượng rời cột a, Tượng có thể đồng thời tấn công quân nào?"
+      ],
+      "coverage": {
+        "mover": "B",
+        "slider": "Q",
+        "kind": "check",
+        "capture": false,
+        "promotion": false,
+        "sideToMove": "b",
+        "solverMoves": 3
+      }
+    },
+    {
+      "gameId": "b07069c015311028",
+      "originalLevel": "B",
+      "level": "B",
+      "originalExerciseNumber": null,
+      "newResearch": true,
+      "title": "Yuffa,D — Nikitenko,M",
+      "fen": "4k3/p7/7R/3KNP2/r5P1/4b3/8/8 w - - 7 53",
+      "moves": [
+        "Re6+",
+        "Kd8",
+        "Nc6+",
+        "Kc8",
+        "Rxe3"
+      ],
+      "decision": "keep",
+      "reason": "Re6+ aligns the Rook with Be3, then the Knight checks from c6 against Kd8 or d7 against Kf8, uncovering the Rook attack. These two legal King choices require different Knight checks; simply copying a square from one variation fails. All local King replies permit Rxe3. Rxg4 is a possible pawn recovery, insufficient to recover the Bishop; this balanced-material ending requires coordination, not an unopposed conversion.",
+      "goal": "material",
+      "sacrificeCount": 0,
+      "gradingReason": null,
+      "initialMaterialCp": 90,
+      "solutionVi": "Re6+ — Xe từ h6 đến e6, chiếu Vua và hướng về Tượng e3. Sau Kd8, Nc6+ — Mã từ e5 đến c6, vừa chiếu Vua vừa mở cột e cho Xe tấn công Tượng. Trắng tiếp tục Rxe3 sau nước đỡ chiếu. Nếu Đen đi Kf8, dùng Nd7+ để mở cùng đường tấn công. Đen có thể lấy lại Tốt g4 bằng Rxg4, nhưng vẫn mất Tượng.",
+      "hintsVi": [
+        "Đặt Xe trên cột của Tượng e3 bằng một nước chiếu.",
+        "Chọn ô chiếu của Mã theo vị trí Vua: c6 khi Vua ở d8, hoặc d7 khi Vua ở f8."
+      ],
+      "coverage": {
+        "mover": "N",
+        "slider": "R",
+        "kind": "attack",
+        "capture": false,
+        "promotion": false,
+        "sideToMove": "w",
+        "solverMoves": 3
+      },
+      "alternativeLines": [
+        [
+          "Re6+",
+          "Kf8",
+          "Nd7+",
+          "Kg8",
+          "Rxe3"
+        ],
+        [
+          "Re6+",
+          "Kf8",
+          "Nd7+",
+          "Kg7",
+          "Rxe3"
+        ],
+        [
+          "Re6+",
+          "Kf8",
+          "Nd7+",
+          "Kf7",
+          "Rxe3"
+        ]
+      ]
+    },
+    {
+      "gameId": "3ff01cfb3ddd4181",
+      "originalLevel": "B",
+      "level": "B",
+      "originalExerciseNumber": null,
+      "newResearch": true,
+      "title": "Nepomniachtchi,I — Bjerre,Jonas Buhl",
+      "fen": "6rk/1bq1p3/p2pPp2/3B1P1n/2pN1B2/7R/P5PK/1r6 w - - 0 31",
+      "moves": [
+        "Rxh5+",
+        "Kg7",
+        "Bh6+",
+        "Kh7",
+        "Bf8#"
+      ],
+      "decision": "keep",
+      "reason": "A three-move mating attack: Rxh5+ removes the Knight and displaces the King; Bh6+ drives it to h7 or h8; Bf8# clears the h-file for the Rook while retaining control of g7. The all-reply proof establishes mate within three solver moves and the exact shorter search finds none within two. White begins materially far behind, but faces a meaningful forcing mating contest rather than an unopposed conversion. No sacrifice occurs in the published line.",
+      "goal": "checkmate",
+      "sacrificeCount": 0,
+      "gradingReason": null,
+      "initialMaterialCp": -1170,
+      "solutionVi": "Rxh5+ — Xe từ h3 bắt Mã h5, chiếu Vua. Sau Kg7, Bh6+ — Tượng từ f4 đến h6, tiếp tục chiếu. Đen có thể đi Kh7 hoặc Kh8; trong cả hai trường hợp, Bf8# — Tượng từ h6 đến f8, mở cột h cho Xe chiếu hết. Tượng f8 vẫn khống chế ô thoát g7.",
+      "hintsVi": [
+        "Tìm nước bắt quân bằng Xe để buộc Vua rời h8.",
+        "Sau Bh6+, Tượng cần rời cột h nhưng vẫn khống chế g7."
+      ],
+      "coverage": {
+        "mover": "B",
+        "slider": "R",
+        "kind": "check",
+        "capture": false,
+        "promotion": false,
+        "sideToMove": "w",
+        "solverMoves": 3
+      }
+    },
+    {
+      "gameId": "92b22f0f4da6a18f",
+      "originalLevel": "B",
+      "level": "B",
+      "originalExerciseNumber": null,
+      "newResearch": true,
+      "title": "Spassky, Boris V — Boleslavsky, Isaak",
+      "fen": "2b1r1k1/1p3qbr/p2ppn2/P2N1p2/2PB1P1p/1P3B1P/4R1P1/3QR2K w - - 2 36",
+      "moves": [
+        "Bxf6",
+        "Bxf6",
+        "Nxf6+",
+        "Qxf6",
+        "Qxd6"
+      ],
+      "decision": "keep",
+      "reason": "Two blockers on the d-file must be cleared by equal minor-piece exchanges. Bxf6 Bxf6 removes Bd4; Nxf6+ Qxf6 removes Nd5 and makes Qxd6 possible. The exchanges cancel before the pawn gain; this is not a Knight sacrifice. Unlike a Queen-and-Knight back-rank fork, the central decision is the order of two exchanges and clearing both blockers.",
+      "goal": "material",
+      "sacrificeCount": 0,
+      "gradingReason": null,
+      "initialMaterialCp": 0,
+      "solutionVi": "Bxf6 — Tượng d4 bắt Mã f6. Sau Bxf6, tiếp tục Nxf6+ — Mã d5 bắt Tượng f6, vừa chiếu Vua vừa mở cột d cho Hậu. Trong phương án Qxf6, Qxd6 lấy Tốt d6. Hai bên đã đổi một Tượng và một Mã; phần vật chất Trắng thu thêm là một Tốt.",
+      "hintsVi": [
+        "Trên cột d, cả Tượng d4 lẫn Mã d5 đều chắn Hậu d1.",
+        "Tìm thứ tự đổi quân để mở cột d bằng một nước chiếu."
+      ],
+      "coverage": {
+        "mover": "N",
+        "slider": "Q",
+        "kind": "attack",
+        "capture": true,
+        "promotion": false,
+        "sideToMove": "w",
+        "solverMoves": 3
+      }
+    },
+    {
+      "gameId": "ae9d43b1c118dddb",
+      "originalLevel": "B",
+      "level": "B",
+      "originalExerciseNumber": null,
+      "newResearch": true,
+      "title": "Anand,V — Gelfand,B",
+      "fen": "8/R7/5nkp/2P2pp1/2Bp4/3P1KPP/2r2P2/8 w - - 4 40",
+      "moves": [
+        "Bf7+",
+        "Kg7",
+        "Bb3+",
+        "Kf8",
+        "Bxc2"
+      ],
+      "decision": "keep",
+      "reason": "Bf7+ deliberately puts the Bishop onto its own Rook rank while checking. The Rook protects Bf7 from Kxf7, and both legal King replies, Kg7 and Kh7, enter the Rook line. Bb3+ then clears that line with check and attacks Rc2, followed by Bxc2. Immediate Bb3 lacks the checking tempo and lets the Rook escape. Unlike the Bishop tempo-escape example, the key decision is to create the blocker while forcing the King into its line; no piece is offered unprotected. Both initial King choices retain the same three-move non-sacrificial payoff.",
+      "goal": "material",
+      "sacrificeCount": 0,
+      "gradingReason": null,
+      "initialMaterialCp": 110,
+      "solutionVi": "Bf7+ — Tượng c4 đến f7, chiếu Vua và được Xe a7 bảo vệ. Đen chỉ có Kg7 hoặc Kh7; cả hai nước đều đưa Vua vào hàng 7. Tiếp theo Bb3+ — Tượng f7 đến b3, mở hàng 7 cho Xe chiếu Vua đồng thời tấn công Xe c2. Sau nước Vua, Bxc2 bắt Xe. Nếu đi Bb3 ngay từ đầu, Đen chưa bị chiếu và có thời gian cứu Xe.",
+      "hintsVi": [
+        "Có thể đưa Tượng lên hàng 7 bằng một nước chiếu mà vẫn được Xe a7 bảo vệ không?",
+        "Sau khi Vua Đen vào hàng 7, chọn nước Tượng vừa mở đường chiếu vừa tấn công Xe c2."
+      ],
+      "coverage": {
+        "mover": "B",
+        "slider": "R",
+        "kind": "check",
+        "capture": false,
+        "promotion": false,
+        "sideToMove": "w",
+        "solverMoves": 3
+      }
+    },
+    {
+      "gameId": "b5be9bfe50794952",
+      "originalLevel": "B",
+      "level": "B",
+      "originalExerciseNumber": null,
+      "newResearch": true,
+      "title": "Stefansson, Hannes — Karpov, Anatoly",
+      "fen": "8/1r1bkr2/2pp2Q1/p3pP2/2P1P1B1/1P5P/P3K3/8 w - - 3 41",
+      "moves": [
+        "Bh5",
+        "Be8",
+        "Qe6+",
+        "Kd8",
+        "Bxf7"
+      ],
+      "decision": "keep",
+      "reason": "Bh5 puts the Bishop behind its own Queen on the h5–f7 diagonal. Qe6+ then clears that diagonal with a supported Queen check; the Bishop takes Rf7 after the King moves. Be8 can recapture on f7, so the verified payoff is an exchange, not an intact Rook. This is a genuine Queen-uncovering move and requires choosing the Bishop, not the Queen, to capture the protected Rook.",
+      "goal": "material",
+      "sacrificeCount": 0,
+      "gradingReason": null,
+      "initialMaterialCp": 100,
+      "solutionVi": "Bh5 — Tượng g4 đến h5, hướng về Xe f7 qua ô g6 đang có Hậu Trắng. Trong phương án Be8, Qe6+ — Hậu g6 đến e6, vừa chiếu Vua vừa mở đường cho Tượng. Sau Kd8 hoặc Kf8, Bxf7 lấy Xe. Nếu Bxf7 bắt lại Tượng, Trắng vẫn thắng đổi: lấy Xe và mất Tượng.",
+      "hintsVi": [
+        "Hậu g6 đang chắn đường của Tượng đến Xe f7.",
+        "Tìm nước Hậu rời đường chéo bằng một nước chiếu; sau đó chọn quân bắt Xe có lợi."
+      ],
+      "coverage": {
+        "mover": "Q",
+        "slider": "B",
+        "kind": "attack",
+        "capture": false,
+        "promotion": false,
+        "sideToMove": "w",
+        "solverMoves": 3
+      }
+    },
+    {
+      "gameId": "bf1257225a89bff1",
+      "originalLevel": "B",
+      "level": "B",
+      "originalExerciseNumber": null,
+      "newResearch": true,
+      "title": "Fischer, Robert James — Janushkovsky, A.",
+      "fen": "r2kr3/p1p3pp/Q1Pn1q2/2B5/8/6P1/P4P1P/R2R2K1 w - - 1 28",
+      "moves": [
+        "Bxd6",
+        "Re6",
+        "Be5+",
+        "Ke7",
+        "Bxf6+"
+      ],
+      "decision": "keep",
+      "reason": "Bxd6 removes the Knight. Re6 attacks Bd6 while Qf6 supports a future Rxd6; simply leaving the Bishop and exchanging Rooks does not preserve the gain. Be5+ is a tempo escape: it uncovers Rd1 against Kd8 and attacks Qf6. The checking tempo prevents Qxe5 or Rxe5; Bxf6+ follows. Rxf6 may recapture the Bishop, so the benefit is net material, not winning the Queen intact.",
+      "goal": "material",
+      "sacrificeCount": 0,
+      "gradingReason": null,
+      "initialMaterialCp": 110,
+      "solutionVi": "Bxd6 — Tượng c5 bắt Mã d6. Sau Re6, Be5+ — Tượng d6 đến e5, mở cột d cho Xe chiếu Vua đồng thời tấn công Hậu f6. Sau Ke7, Bxf6+ bắt Hậu. Đen có thể dùng Rxf6 bắt lại Tượng, nhưng vẫn chịu thiệt hại vật chất lớn trong toàn bộ phương án.",
+      "hintsVi": [
+        "Sau Bxd6 Re6, Tượng cần tránh bị bắt mà vẫn giữ thời gian tấn công.",
+        "Tìm ô vừa mở cột d cho Xe chiếu Vua vừa tấn công Hậu f6."
+      ],
+      "coverage": {
+        "mover": "B",
+        "slider": "R",
+        "kind": "check",
+        "capture": false,
+        "promotion": false,
+        "sideToMove": "w",
+        "solverMoves": 3
+      }
+    },
+    {
+      "gameId": "309400c511b2bc0f",
+      "originalLevel": "B",
+      "level": "B",
+      "originalExerciseNumber": null,
+      "newResearch": true,
+      "title": "Gledura,B — Kramnik,V",
+      "fen": "3r2k1/p1Q1b1pp/4b3/5p2/1P3n2/P1B1pPqP/3P2B1/R2K2R1 b - - 2 30",
+      "moves": [
+        "Bb3+",
+        "Kc1",
+        "Nd3+",
+        "Kb1",
+        "Qxc7"
+      ],
+      "decision": "keep",
+      "reason": "Black starts about an exchange behind with real counterplay and must coordinate Bishop, Knight and Queen. Bb3+ forces Kc1; Nd3+ then clears Qg3 against Qc7 with check, forcing Kb1 before Qxc7. Immediate Nd3 instead permits Qxg3, so displacing the King is essential to making the discovery safe. Unlike an ordinary Knight-check windmill, the preparation changes whether clearing the Queen diagonal loses the stationary Queen. No moved piece can be captured after either checking move. The alternative Rxd2+ Bxd2 is a genuine Rook sacrifice and needs a longer continuation, not a simpler non-sacrificial gain.",
+      "goal": "material",
+      "sacrificeCount": 0,
+      "gradingReason": null,
+      "initialMaterialCp": -180,
+      "solutionVi": "Bb3+ — Tượng e6 đến b3, chiếu Vua và buộc Kc1. Tiếp theo Nd3+ — Mã f4 đến d3, vừa chiếu Vua vừa mở đường chéo g3–c7 cho Hậu. Sau Kb1, Qxc7 bắt Hậu. Nếu đi Nd3 ngay, Trắng có Qxg3 bắt Hậu Đen vì Vua chưa bị chiếu.",
+      "hintsVi": [
+        "Nếu Mã f4 rời đường chéo ngay, Trắng có thể bắt Hậu g3.",
+        "Dùng Tượng đưa Vua Trắng đến ô mà nước Nd3 sẽ chiếu Vua."
+      ],
+      "coverage": {
+        "mover": "N",
+        "slider": "Q",
+        "kind": "attack",
+        "capture": false,
+        "promotion": false,
+        "sideToMove": "b",
+        "solverMoves": 3
+      }
+    },
+    {
+      "gameId": "69dbb25d85019a1e",
+      "originalLevel": "B",
+      "level": "B",
+      "originalExerciseNumber": null,
+      "newResearch": true,
+      "title": "Kramnik,V — Han,Yichen",
+      "fen": "r2r4/pp2bppp/5k2/3p4/5B2/P1R5/1PP2PPP/2K1R3 w - - 14 20",
+      "moves": [
+        "Rf3",
+        "Bf8",
+        "Bc7+",
+        "Kg6",
+        "Bxd8"
+      ],
+      "decision": "keep",
+      "reason": "Rf3 quietly aligns the Rook behind Bf4 against Kf6. Bc7+ clears the file while attacking Rd8. The King reply cannot save the Rook; Ra8 may recapture Bxd8, leaving a verified exchange gain. Unlike the existing quiet Queen/Bishop Queen-capture example, the learner must account for the real defending Rook and claim only an exchange.",
+      "goal": "material",
+      "sacrificeCount": 0,
+      "gradingReason": null,
+      "initialMaterialCp": 0,
+      "solutionVi": "Rf3 — Xe c3 đến f3, đặt sau Tượng f4 trên cột của Vua f6. Trong phương án Bf8, Bc7+ — Tượng f4 đến c7, mở cột f cho Xe chiếu Vua và tấn công Xe d8. Sau nước Vua, Bxd8 lấy Xe. Xe a8 có thể bắt lại Tượng, nên kết quả là thắng đổi, không phải thắng nguyên một Xe.",
+      "hintsVi": [
+        "Đặt Xe sau Tượng f4, cùng cột với Vua Đen.",
+        "Khi rời cột f để mở đường chiếu, Tượng cần tấn công quân nào?"
+      ],
+      "coverage": {
+        "mover": "B",
+        "slider": "R",
+        "kind": "check",
+        "capture": false,
+        "promotion": false,
+        "sideToMove": "w",
+        "solverMoves": 3
+      }
+    },
+    {
+      "gameId": "28abfaf127a68955",
+      "originalLevel": "B",
+      "level": "B",
+      "originalExerciseNumber": null,
+      "newResearch": true,
+      "title": "Fischer, Robert James — Petrosian, Tigran V",
+      "fen": "B7/1R3pp1/2k1pn1p/2P5/1p6/1K4Pr/PP6/8 w - - 4 36",
+      "moves": [
+        "Kc4",
+        "Rh4+",
+        "gxh4",
+        "h5",
+        "Rxf7#"
+      ],
+      "decision": "keep",
+      "reason": "Kc4 establishes essential King control before the final discovery. After the defensive Rh4+ gxh4 h5, Rxf7# clears Ba8 against Kc6 while the Rook controls the seventh rank and the King/pawn cover other escapes. All legal defences are covered by the mate-in-three proof; no mate within two solver moves is found. Material starts nearly balanced; the opponent offering a Rook in defence is not a sacrifice by the solving side.",
+      "goal": "checkmate",
+      "sacrificeCount": 0,
+      "gradingReason": null,
+      "initialMaterialCp": -90,
+      "solutionVi": "Kc4 — Vua b3 đến c4, khống chế các ô b5, c5 và d5. Trong phương án Rh4+, gxh4 bắt Xe và đỡ chiếu. Sau h5, Rxf7# — Xe b7 bắt Tốt f7, mở đường chéo a8–c6 cho Tượng chiếu hết. Xe f7 khống chế hàng 7; Vua c4 và Tốt c5 giữ các ô thoát còn lại.",
+      "hintsVi": [
+        "Vua Trắng cần đến ô nào để khống chế b5, c5 và d5?",
+        "Khi Xe rời b7, Tượng a8 mở đường chiếu. Chọn ô Xe vừa bắt quân vừa khống chế hàng 7."
+      ],
+      "coverage": {
+        "mover": "R",
+        "slider": "B",
+        "kind": "check",
+        "capture": true,
+        "promotion": false,
+        "sideToMove": "w",
+        "solverMoves": 3
+      }
+    },
+    {
+      "gameId": "8bc8a1916e336e16",
+      "originalLevel": "B",
+      "level": "B",
+      "originalExerciseNumber": null,
+      "newResearch": true,
+      "title": "Short,N — Harikrishna,P",
+      "fen": "4nr2/pp3k1p/2b1Np2/6p1/6r1/1BR5/PP3P1P/4R1K1 w - - 0 27",
+      "moves": [
+        "Rg3",
+        "Rxg3+",
+        "hxg3",
+        "Rh8",
+        "Nxg5+"
+      ],
+      "decision": "keep",
+      "reason": "White starts in check from Rg4. Rg3 interposes and offers an equal Rook exchange; Rxg3+ hxg3 is not a sacrifice. Nxg5+ then captures the f6-pawn-defended g5 pawn while uncovering Bb3 against Kf7, preventing fxg5. After Kg6 the Knight can retreat to e6, protected by Bb3, retaining the extra pawn. This combines a necessary response to check, equal exchange and a discovery preventing a real recapture.",
+      "goal": "material",
+      "sacrificeCount": 0,
+      "gradingReason": null,
+      "initialMaterialCp": -100,
+      "solutionVi": "Trắng đang bị chiếu trên cột g. Rg3 — Xe c3 đến g3, chắn đường chiếu. Sau Rxg3+ hxg3, hai bên đã đổi Xe. Trong phương án Rh8, Nxg5+ — Mã e6 bắt Tốt g5, mở đường cho Tượng b3 chiếu Vua. Đen không thể dùng fxg5 bắt lại Mã vì Vua vẫn đang bị chiếu. Nếu Vua đuổi Mã bằng Kg6, Ne6 đưa Mã về ô được Tượng b3 bảo vệ và giữ Tốt đã thắng.",
+      "hintsVi": [
+        "Trước hết phải đỡ nước chiếu của Xe g4. Có thể đổi Xe mà không thiệt quân không?",
+        "Sau khi đổi Xe, tìm nước Mã bắt Tốt được bảo vệ và mở đường chiếu cho Tượng b3."
+      ],
+      "coverage": {
+        "mover": "N",
+        "slider": "B",
+        "kind": "check",
+        "capture": true,
+        "promotion": false,
+        "sideToMove": "w",
+        "solverMoves": 3
+      }
+    },
+    {
+      "gameId": "02767676b9337285",
+      "originalLevel": "B",
+      "level": "B",
+      "originalExerciseNumber": null,
+      "newResearch": true,
+      "title": "Riazantsev,A — Kramnik,V",
+      "fen": "5k2/p4Rp1/1p5p/8/P1B1b3/7P/6r1/7K b - - 7 35",
+      "moves": [
+        "Ke8",
+        "Rxa7",
+        "Rc2+",
+        "Kg1",
+        "Rxc4"
+      ],
+      "decision": "keep",
+      "reason": "Black begins in check from Rf7 and must move the King. Ke8 meets the check without offering a moved piece. Rxa7 is White counterplay against a pawn that the King never defended, not a sacrificial deflection by Black. Rc2+ uncovers Be4 against Kh1 and attacks Bc4; White must answer check before saving the Bishop. Rxc4 gives a Bishop for the pawn lost. This is a defensive King response followed by a checking Rook clearance, not an unopposed conversion.",
+      "goal": "material",
+      "sacrificeCount": 0,
+      "gradingReason": null,
+      "initialMaterialCp": 200,
+      "solutionVi": "Đen đang bị Xe f7 chiếu. Ke8 — Vua f8 đến e8, đỡ chiếu. Trong phương án Rxa7, Rc2+ — Xe g2 đến c2, mở đường chéo e4–h1 cho Tượng chiếu Vua đồng thời tấn công Tượng c4. Sau Kg1, Rxc4 lấy Tượng. Trắng đã lấy một Tốt ở a7, nhưng mất Tượng trong phương án này.",
+      "hintsVi": [
+        "Cần đỡ nước chiếu trước khi thực hiện ý tưởng tấn công.",
+        "Sau khi Vua an toàn, Xe g2 có thể rời đường chéo e4–h1 và đồng thời tấn công quân nào?"
+      ],
+      "coverage": {
+        "mover": "R",
+        "slider": "B",
+        "kind": "check",
+        "capture": false,
+        "promotion": false,
+        "sideToMove": "b",
+        "solverMoves": 3
+      }
+    },
+    {
+      "gameId": "eef5583eeab818c6",
+      "recordHash": "78ba77593357ee798192b6cd4d2d61881f1b946069ae4adbcb02802e464d9e24",
+      "decision": "keep",
+      "reason": "White begins in a real Knight check with nearly balanced material (+80 cp nominal). Ke3 resolves it; Bg2 is the played defensive move, not forced. Rg5+ clears Be5 against Kh2 while attacking h5. The checking tempo makes the otherwise geometrically possible ...Nxg5 illegal; Rxh5 then escapes that attack with a pawn. Strong alternatives h4 and Bb3 are met by corresponding Rook clearances, Rg4+/Rxh4 and Rg6+/Rxc6. Interposition ...Nf4 permits Bxf4+ instead. No simpler safe capture or independent short material route was verified; Rxh3+ Kxh3 exchanges a Rook for a Knight and is not the stated gain.",
+      "distinctness": "Unlike the existing King-escape/Rook-fork example, the Rook enters a square attacked by a Knight and uses the discovered-check tempo to leave safely by capturing a pawn. A defensive Knight interposition changes the capture target. This is a real additional decision, not a mirrored Rook fork.",
+      "solutionVi": "Ke3 tránh nước chiếu của Mã h3. Sau ...Bg2, Rg5+ đưa Xe rời g3, mở đường cho Tượng e5 chiếu Vua h2 và đồng thời tấn công Tốt h5. Đen không thể chơi ...Nxg5 vì Vua vẫn bị chiếu. Sau ...Kg1 hoặc ...Kh1, Rxh5 thắng Tốt. Nếu ...Nf4 chặn đường chiếu thì Bxf4+ thắng Mã. Đen có thể chọn nước đáp khác ngay sau Ke3: với ...h4, Trắng dùng Rg4+ rồi Rxh4; với ...Bb3, Trắng dùng Rg6+ rồi Rxc6. Các phương án đều dựa vào nhịp chiếu mở để bắt quân trước khi Đen kịp bảo vệ hoặc di chuyển mục tiêu.",
+      "hintsVi": [
+        "Trắng đang bị Mã h3 chiếu; cần đưa Vua đến ô an toàn trước.",
+        "Xe g3 đang chắn đường e5–h2 của Tượng. Tìm cách mở đường chiếu và tấn công một Tốt.",
+        "Sau ...Bg2, Rg5+ không cho Mã h3 bắt Xe. Nếu Đen chặn bằng ...Nf4, hãy đổi mục tiêu sang Mã."
+      ],
+      "originalLevel": "B",
+      "level": "B",
+      "newResearch": true,
+      "originalExerciseNumber": null,
+      "gradingReason": null,
+      "title": "Castillo Beitia,Ashley Alexandra — Wagener,A",
+      "fen": "8/8/2p5/3bB2p/8/6Rn/1P3K1k/8 w - - 6 47",
+      "moves": [
+        "Ke3",
+        "Bg2",
+        "Rg5+",
+        "Kg1",
+        "Rxh5"
+      ],
+      "goal": "material",
+      "sacrificeCount": 0,
+      "initialMaterialCp": 80,
+      "coverage": {
+        "mover": "R",
+        "slider": "B",
+        "kind": "check",
+        "capture": false,
+        "promotion": false,
+        "sideToMove": "w",
+        "solverMoves": 3
+      }
+    },
+    {
+      "gameId": "51b6258a7c5e5a7b",
+      "recordHash": "a2c729457cdbeb9b9de68aa2c8bc1d516acf7310634c920801bc7f5a2ea7b225",
+      "decision": "keep",
+      "reason": "Material starts at +220 cp, with Queens, Rooks and live counterplay; Rxe6 is not a free pawn because ...fxe6 loses the exchange. Qb8+ Kh7 Nf8+ forces the King to g8 or h8 before Nxe6+ uncovers the Queen on the eighth rank. The f7-pawn geometrically attacks e6 but cannot recapture while its King remains checked. Every immediate reply after the final capture retains the pawn gain. All legal roots, forcing alternatives and strong defences were reviewed; Qf8+ remains a valid alternative lead, and no uniqueness claim is made.",
+      "distinctness": "Two checking placements establish the eighth-rank discovery before a defended pawn is captured. The purpose is a legal recapture restriction, not the ordinary Knight/King/Rook windmill. It adds a non-sacrificial Queen-backed capture to active B after the earlier manually reclassified examples; no owner decision is restored.",
+      "solutionVi": "Qb8+ đưa Hậu lên hàng 8. Sau ...Kh7, Nf8+ buộc Vua đến g8 hoặc h8. Khi đó Nxe6+ vừa bắt Tốt e6 vừa dọn hàng 8 để Hậu b8 chiếu Vua. Tốt f7 đang bảo vệ e6 nhưng không thể chơi ...fxe6 vì nước đó không giải quyết được nước chiếu. Nhờ vậy, Trắng giữ thêm một Tốt. Bắt ngay bằng Rxe6 không đạt cùng lợi ích vì Đen có thể đáp ...fxe6, đổi Tốt lấy Xe. Đây là một phương án thắng vật chất; không khẳng định nước mở đầu là duy nhất.",
+      "hintsVi": [
+        "Tốt e6 được Tốt f7 bảo vệ. Cần làm cho nước ăn lại ...fxe6 không hợp lệ.",
+        "Đưa Hậu lên hàng 8 rồi dùng Mã chiếu để đặt Vua Đen vào đường chiếu mở.",
+        "Qb8+ ...Kh7 Nf8+ chuẩn bị Nxe6+, mở đường cho Hậu chiếu Vua."
+      ],
+      "originalLevel": "B",
+      "level": "B",
+      "newResearch": true,
+      "originalExerciseNumber": null,
+      "gradingReason": null,
+      "title": "Terry,R — Erigaisi,Arjun",
+      "fen": "6k1/3N1pp1/3Qp2p/8/2pP2P1/2q5/r4PP1/4R1K1 w - - 0 38",
+      "moves": [
+        "Qb8+",
+        "Kh7",
+        "Nf8+",
+        "Kg8",
+        "Nxe6+"
+      ],
+      "goal": "material",
+      "sacrificeCount": 0,
+      "initialMaterialCp": 220,
+      "coverage": {
+        "mover": "N",
+        "slider": "Q",
+        "kind": "check",
+        "capture": true,
+        "promotion": false,
+        "sideToMove": "w",
+        "solverMoves": 3
+      }
+    },
+    {
+      "gameId": "043fa99a6866848c",
+      "recordHash": "5fbf3b19d03c878ea3ac1f2c51b133ca9ecd6d6b092e72548393b8f1fa86f2a7",
+      "decision": "keep",
+      "reason": "The quiet Qd4 aligns the Queen with Kh8 and offers the stationary Rook on g6. In the teaching analysis, the legal hxg6 accepts that sacrifice: the automatic mover-only grade B missed it. Nxg6+ captures that pawn and gives double check by Knight and Queen, so only King moves remain; Nxe7 then wins the Queen. After the relevant Bxe7 recapture, White traded Rook+Knight for Queen+pawn, a nominal +180 cp gain from the starting material (+290 cp). The Qd4 preparation is essential to the Queen component of the double check. The strong declined-offer defence Rf6 is documented in engine review, with Nf7+ Qxf7 Rxf6 retaining an exchange gain. No safe independent starting capture or simpler two-move material route was verified. The sacrifice is explicit editorial evidence, not a fabricated mover sacrifice. The original game instead continued Rc6 Qg7 Kf2 at this point; Qd4 hxg6 Nxg6+ is a verified teaching analysis, not the played continuation.",
+      "distinctness": "Adds a quiet Queen alignment and a sacrificed stationary Rook that attracts a pawn to the Knight clearance square. The learner must recognize double check and then account for the Bishop recapturing the Knight. Existing direct checking-clearance sacrifices do not teach this preparatory deflection.",
+      "gradingReason": "C: one accepted stationary Rook sacrifice, followed by a clear double-check fork within three solver moves. The automatic B inference is retained as a review lead and explicitly corrected by legal capture evidence.",
+      "solutionVi": "Qd4 đặt Hậu lên đường chéo d4–h8 và chấp nhận thí Xe g6. Sau ...hxg6, Nxg6+ vừa mở đường cho Hậu vừa để Mã chiếu Vua h8. Đây là chiếu đôi: Vua bị hai quân cùng chiếu, nên Đen phải đi Vua. Tiếp theo, Nxe7+ bắt Hậu; nếu Đen chọn ...Kh7 thì Nxe7 không kèm chiếu. Cần tính cả nước ăn lại ...Bxe7: Trắng đã đổi Xe và Mã lấy Hậu cùng Tốt, vẫn thu được lợi thế vật chất. Đen có thể từ chối Xe; chẳng hạn, sau ...Rf6, phương án Nf7+ ...Qxf7 Rxf6 vẫn thắng đổi chất.",
+      "hintsVi": [
+        "Hãy chuẩn bị đường chéo của Hậu trước khi xử lý nước ...hxg6.",
+        "Qd4 cho phép thí Xe g6. Sau ...hxg6, Mã có thể bắt Tốt và mở đường cho Hậu.",
+        "Nxg6+ là chiếu đôi và đồng thời tấn công Hậu e7. Đừng quên tính ...Bxe7 sau khi bắt Hậu."
+      ],
+      "originalLevel": "C",
+      "level": "C",
+      "newResearch": true,
+      "originalExerciseNumber": null,
+      "title": "Seirawan, Yasser — Spassky, Boris V",
+      "fen": "5r1k/p3q2p/6R1/3QNp2/5P2/bP2P1P1/P5P1/6K1 w - - 1 39",
+      "moves": [
+        "Qd4",
+        "hxg6",
+        "Nxg6+",
+        "Kg8",
+        "Nxe7+"
+      ],
+      "goal": "material",
+      "sacrificeCount": 1,
+      "initialMaterialCp": 290,
+      "coverage": {
+        "mover": "N",
+        "slider": "Q",
+        "kind": "check",
+        "capture": true,
+        "promotion": false,
+        "sideToMove": "w",
+        "solverMoves": 3
+      }
+    },
+    {
+      "gameId": "765f315a6674451f",
+      "recordHash": "35ff46b5bfa4ad08294310ec9ddd9454a64ca4ad01619c5e786cbf8b68fc2273",
+      "decision": "keep",
+      "reason": "Initial material is -100 cp. Rxf6+ removes Nf6 and offers a Rook; Kxf6 places the King on the file of Rf2. Ng3+ clears that file while attacking Qe4, so the Queen cannot simply escape without answering check. The strong Qf4 interposition is met by Rxf4+; gxf4 recaptures that second Rook. The complete immediate settlement trades two Rooks for Queen+Knight, nominal +220 cp from the start, not an intact Queen gain. All eight legal replies to Ng3+ have a material-winning capture in local coverage. Kh7 declines the first Rook and is not called forced; the line Rh6+ keeps the captured Knight benefit. The all-root review found no simpler safe material capture or superior own-side mating lead.",
+      "distinctness": "The sacrifice first relocates the enemy King onto a Rook file; the Knight then creates discovered check and attacks the Queen. A Queen interposition and a pawn recapture require counting both Rooks, distinguishing this from a direct Rook clearance or a sacrifice justified only by an unplayed later payoff.",
+      "solutionVi": "Rxf6+ bắt Mã và thí Xe để kéo Vua đến f6. Sau ...Kxf6, Ng3+ mở cột f cho Xe f2 chiếu Vua, đồng thời tấn công Hậu e4. Nếu Vua đi thì Nxe4 bắt Hậu. Trong phương án ...Qf4 chặn đường chiếu, Trắng dùng Rxf4+; Đen có thể ăn lại bằng ...gxf4. Khi tính đủ hai nước ăn lại, Trắng đã đổi hai Xe lấy Hậu và Mã, vẫn lợi vật chất. Đen cũng có thể từ chối Xe bằng ...Kh7; khi đó Rh6+ tiếp tục tận dụng việc Mã f6 đã bị bắt.",
+      "hintsVi": [
+        "Cần kéo Vua Đen vào cột f của Xe f2.",
+        "Rxf6+ ...Kxf6 chuẩn bị cho Mã rời f5 với nhịp chiếu mở.",
+        "Ng3+ vừa mở cột f vừa tấn công Hậu. Nếu ...Qf4 thì Rxf4+, nhưng phải tính cả ...gxf4."
+      ],
+      "originalLevel": "C",
+      "level": "C",
+      "newResearch": true,
+      "originalExerciseNumber": null,
+      "gradingReason": null,
+      "title": "Maurizzi,MarcAndria — Marjanovic,Dej",
+      "fen": "8/8/p1R2nk1/2p2Npp/1p2q2P/8/PP3R1K/8 w - - 2 48",
+      "moves": [
+        "Rxf6+",
+        "Kxf6",
+        "Ng3+",
+        "Qf4",
+        "Rxf4+"
+      ],
+      "goal": "material",
+      "sacrificeCount": 1,
+      "initialMaterialCp": -100,
+      "coverage": {
+        "mover": "N",
+        "slider": "R",
+        "kind": "check",
+        "capture": false,
+        "promotion": false,
+        "sideToMove": "w",
+        "solverMoves": 3
+      }
     }
   ]
 }

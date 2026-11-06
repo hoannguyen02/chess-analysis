@@ -39,6 +39,8 @@ import {
 import GamePlayerNames from './GamePlayerNames';
 import PracticeBoard from './PracticeBoard';
 import PracticeExploration from './PracticeExploration';
+import { ManualPositionControl } from './PracticePositionEditor';
+import { ExerciseManagementControl } from './PracticeManagement';
 
 const DrawGameViewer = dynamic(() => import('./DrawGameViewer'), {
   ssr: false,
@@ -84,15 +86,23 @@ export default function DrawTrainer({
   const tactical = [
     'skewer',
     'pin',
+    'removing-defender',
     'fork',
     'discovery',
     'simplification',
+    'manual',
   ].includes(exercise.outcome);
-  const recognition = !decision && exercise.moves.length === 0;
+  const solutionlessBeginner = Boolean(
+    exercise.beginner && exercise.moves.length === 0
+  );
+  const recognition =
+    !solutionlessBeginner && !decision && exercise.moves.length === 0;
+  const [freePlaySession, setFreePlaySession] = useState(0);
   const [played, setPlayed] = useState<string[]>([]);
   const [verifiedLines, setVerifiedLines] = useState<string[][]>([]);
   const [review, setReview] = useState(lesson);
   const [reviewPly, setReviewPly] = useState(0);
+  const [reviewLineIndex, setReviewLineIndex] = useState(0);
   const [historyPly, setHistoryPly] = useState<number | null>(null);
   const [complete, setComplete] = useState(false);
   const [message, setMessage] = useState('');
@@ -112,7 +122,9 @@ export default function DrawTrainer({
   const [flipped, setFlipped] = useState(false);
   const [showPrevious, setShowPrevious] = useState(false);
   const previous = useMemo(() => previousDrawPosition(exercise), [exercise]);
-  const availableMoves = review ? exercise.moves : played;
+  const solutionLines = [exercise.moves, ...(exercise.alternativeLines ?? [])];
+  const reviewMoves = solutionLines[reviewLineIndex] ?? exercise.moves;
+  const availableMoves = review ? reviewMoves : played;
   const currentPly = review ? reviewPly : (historyPly ?? played.length);
   const browsingHistory = !review && currentPly < played.length;
   const line = availableMoves.slice(0, currentPly);
@@ -138,7 +150,8 @@ export default function DrawTrainer({
 
   useEffect(() => {
     onTimerPause?.(
-      exploring ||
+      solutionlessBeginner ||
+        exploring ||
         review ||
         complete ||
         showPrevious ||
@@ -147,6 +160,7 @@ export default function DrawTrainer({
     );
   }, [
     exploring,
+    solutionlessBeginner,
     review,
     complete,
     showPrevious,
@@ -259,6 +273,7 @@ export default function DrawTrainer({
     setVerifiedLines([]);
     setHistoryPly(null);
     setReviewPly(0);
+    setReviewLineIndex(0);
     setComplete(false);
     setMessage('');
     setFeedbackKind('info');
@@ -292,7 +307,7 @@ export default function DrawTrainer({
       b: previous ? () => setShowPrevious(true) : undefined,
       n: previous ? () => setShowPrevious(false) : undefined,
     },
-    !exploring && !viewerOpen && !pendingPromotion
+    !solutionlessBeginner && !exploring && !viewerOpen && !pendingPromotion
   );
 
   const history = game.history({ verbose: true });
@@ -309,6 +324,104 @@ export default function DrawTrainer({
   const orientation = (flipped ? !initialWhite : initialWhite)
     ? 'white'
     : 'black';
+
+  const scope = exercise.management?.currentScope ?? exercise.management?.scope;
+  const scopeTheme = scope?.includes('?theme=')
+    ? new URLSearchParams(scope.split('?')[1]).get('theme')
+    : scope
+      ? ((
+          {
+            '/discovered-attack': 'discoveredAttack',
+            '/removing-defender': 'capturingDefender',
+          } as Record<string, string>
+        )[scope] ??
+        scope
+          .slice(1)
+          .replace(/-([a-z])/g, (_, letter: string) => letter.toUpperCase()))
+      : exercise.outcome === 'fork'
+        ? 'fork'
+        : undefined;
+  const editPosition = (exercise.beginner || exercise.manualId) && (
+    <ManualPositionControl
+      fen={exercise.fen}
+      editId={exercise.manualId}
+      previousMove={exercise.previousMove}
+      {...(exercise.beginner
+        ? {
+            initialLines: solutionLines.filter((moves) => moves.length > 0),
+            initialGoal: exercise.goal,
+            beginnerBaseFen: exercise.fen,
+            beginnerOriginalFen: exercise.beginnerOriginalFen ?? exercise.fen,
+            ...(scopeTheme
+              ? {
+                  defaults: {
+                    themeId: scopeTheme,
+                    level: 'Beginner' as const,
+                    solution: exercise.solution,
+                  },
+                }
+              : {}),
+          }
+        : {})}
+    />
+  );
+
+  if (solutionlessBeginner)
+    return (
+      <PracticeExploration
+        key={`${exercise.fen}:${freePlaySession}`}
+        fen={exercise.fen}
+        moves={[]}
+        initialPly={0}
+        orientation={orientation}
+        freePlay
+        previousMove={exercise.previousMove}
+        onClose={() => setFreePlaySession((session) => session + 1)}
+        header={
+          <>
+            <h4>{exercise.title}</h4>
+            <p className={styles.exerciseGoal}>
+              <strong>{initialWhite ? 'Trắng' : 'Đen'} đi</strong>
+              {exercise.goal && (
+                <>
+                  {' '}
+                  · Mục tiêu:{' '}
+                  {
+                    {
+                      win: 'Giành thế thắng',
+                      draw: 'Hòa',
+                      checkmate: 'Chiếu hết',
+                      material: 'Thắng vật chất',
+                    }[exercise.goal]
+                  }
+                </>
+              )}
+            </p>
+            <p className={styles.note}>Chưa có lời giải</p>
+            {editPosition}
+            <ExerciseManagementControl exercise={exercise} />
+            {reference && (
+              <button
+                type="button"
+                aria-label={viewerLabel}
+                onClick={() => setViewerOpen(true)}
+              >
+                <FiBookOpen size={20} aria-hidden="true" />
+              </button>
+            )}
+            {viewerOpen && reference && (
+              <DrawGameViewer
+                reference={reference}
+                source={gameSource}
+                referenceGames={referenceGames}
+                orientation={orientation}
+                onClose={() => setViewerOpen(false)}
+              />
+            )}
+          </>
+        }
+      />
+    );
 
   if (exploring)
     return (
@@ -573,6 +686,7 @@ export default function DrawTrainer({
               {exercise.gameOpening}
             </p>
           )}
+          {editPosition}
           {viewerOpen && reference && (
             <DrawGameViewer
               reference={reference}
@@ -582,22 +696,27 @@ export default function DrawTrainer({
               onClose={() => setViewerOpen(false)}
             />
           )}
-          {exercise.goal && (
-            <p className={styles.exerciseGoal} aria-label="Yêu cầu bài tập">
-              <strong>{initialWhite ? 'Trắng' : 'Đen'} đi</strong>
-              <span aria-hidden="true">·</span>
-              <strong>
-                Mục tiêu:{' '}
-                {
-                  {
-                    win: 'Giành thế thắng',
-                    draw: 'Hòa',
-                    checkmate: 'Chiếu hết',
-                    material: 'Thắng vật chất',
-                  }[exercise.goal]
-                }
-              </strong>
-            </p>
+          {(exercise.goal || exercise.management?.writable) && (
+            <div className={styles.exerciseTaskRow}>
+              {exercise.goal && (
+                <p className={styles.exerciseGoal} aria-label="Yêu cầu bài tập">
+                  <strong>{initialWhite ? 'Trắng' : 'Đen'} đi</strong>
+                  <span aria-hidden="true">·</span>
+                  <strong>
+                    Mục tiêu:{' '}
+                    {
+                      {
+                        win: 'Giành thế thắng',
+                        draw: 'Hòa',
+                        checkmate: 'Chiếu hết',
+                        material: 'Thắng vật chất',
+                      }[exercise.goal]
+                    }
+                  </strong>
+                </p>
+              )}
+              <ExerciseManagementControl exercise={exercise} />
+            </div>
           )}
           {(!tactical ||
             decision ||
@@ -652,11 +771,37 @@ export default function DrawTrainer({
           )}
           {review && !recognition && (
             <>
+              {(exercise.manualId ||
+                (exercise.management?.currentScope &&
+                  exercise.management.currentScope !==
+                    exercise.management.scope)) &&
+                solutionLines.length > 1 && (
+                  <label className={styles.explorationSelect}>
+                    Phương án lời giải
+                    <select
+                      value={reviewLineIndex}
+                      onChange={(e) => {
+                        setReviewLineIndex(Number(e.target.value));
+                        setReviewPly(0);
+                        setShowPrevious(false);
+                        setSelectedSquare(null);
+                        setPendingPromotion(null);
+                        setMessage('');
+                      }}
+                    >
+                      {solutionLines.map((_, i) => (
+                        <option key={i} value={i}>
+                          {i === 0 ? 'Phương án chính' : `Phương án ${i + 1}`}
+                        </option>
+                      ))}
+                    </select>
+                  </label>
+                )}
               <p>
-                Nước {reviewPly}/{exercise.moves.length} ·{' '}
+                Nước {reviewPly}/{reviewMoves.length} ·{' '}
                 {game.turn() === 'w' ? 'Trắng' : 'Đen'} đi
               </p>
-              {reviewPly === exercise.moves.length && (
+              {reviewPly === reviewMoves.length && (
                 <p>Đã xem hết phương án minh họa.</p>
               )}
             </>
@@ -700,24 +845,28 @@ export default function DrawTrainer({
                           ? exercise.hints?.[0]
                           : exercise.outcome === 'simplification'
                             ? 'Tính đủ các nước đổi và bắt lại. Đánh giá thế cờ còn lại sau khi đổi quân.'
-                            : exercise.outcome === 'discovery'
-                              ? 'Tận dụng đường tấn công vừa được mở. Kiểm tra nước chiếu và nước bắt quân.'
-                              : exercise.outcome === 'pin' ||
-                                  exercise.outcome === 'fork'
-                                ? exercise.outcome === 'fork'
-                                  ? 'Tìm mục tiêu còn bị tấn công sau nước đáp của đối phương.'
-                                  : 'Tìm cách khai thác quân bị ghim.'
-                                : 'Tìm nước buộc đối phương phải đáp lại để tiếp tục ý tưởng đòn xiên.';
+                            : exercise.outcome === 'removing-defender'
+                              ? 'Kiểm tra mục tiêu sau khi quân bảo vệ rời đi và tính các nước bắt lại.'
+                              : exercise.outcome === 'discovery'
+                                ? 'Tận dụng đường tấn công vừa được mở. Kiểm tra nước chiếu và nước bắt quân.'
+                                : exercise.outcome === 'pin' ||
+                                    exercise.outcome === 'fork'
+                                  ? exercise.outcome === 'fork'
+                                    ? 'Tìm mục tiêu còn bị tấn công sau nước đáp của đối phương.'
+                                    : 'Tìm cách khai thác quân bị ghim.'
+                                  : 'Tìm nước buộc đối phương phải đáp lại để tiếp tục ý tưởng đòn xiên.';
                       setMessage(
                         stage === 0
                           ? exercise.prompt
                           : stage === 1
                             ? (first ??
-                              (exercise.outcome === 'discovery'
-                                ? 'Tìm quân đang che đường của Xe, Tượng hoặc Hậu.'
-                                : exercise.outcome === 'fork'
-                                  ? 'Tìm hai mục tiêu có thể bị tấn công cùng lúc.'
-                                  : 'Tìm hai quân đối phương trên cùng một đường.'))
+                              (exercise.outcome === 'removing-defender'
+                                ? 'Tìm quân đang bảo vệ mục tiêu bị tấn công.'
+                                : exercise.outcome === 'discovery'
+                                  ? 'Tìm quân đang che đường của Xe, Tượng hoặc Hậu.'
+                                  : exercise.outcome === 'fork'
+                                    ? 'Tìm hai mục tiêu có thể bị tấn công cùng lúc.'
+                                    : 'Tìm hai quân đối phương trên cùng một đường.'))
                             : stage === 2
                               ? `Gợi ý: xét quân ở ô ${hint.from}.`
                               : `Gợi ý: ${explainLine(replayDrawExercise(exercise, played).fen(), [hint.san])[0]}`

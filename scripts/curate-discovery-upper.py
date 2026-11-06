@@ -1,5 +1,6 @@
 """Apply the recorded B–D editorial selection; research never publishes itself."""
 import json
+from discovery_management import apply as apply_management
 from pathlib import Path
 import chess
 ROOT=Path(__file__).resolve().parents[1];F=ROOT/'scripts/fixtures/discovery'
@@ -118,8 +119,32 @@ def main():
     return score,ids.index(key)
    key=min(pending,key=rank);ordered.append(key);pending.remove(key)
   orders[level]=ordered
- assert all(0<len(v)<=24 for v in orders.values())
- manifest={'date':'2026-10-29' if latest else '2026-10-28','targetPerLevel':24,'scope':'All 120 previously published B/C/C*/D positions, plus the recorded replacement candidates. Beginner and A unchanged.','method':'All legal roots screened by finite engine search; immediate mates and mates in two checked against every reply; bounded material shortcuts and all immediate local discovery defences checked. Full preparation probed with best defensive engine replies. Finite material horizons are not exhaustive long-term proofs. Saved mates additionally have all-reply proofs.','order':orders,'counts':{l:len(v) for l,v in orders.items()},'gaps':{l:24-len(v) for l,v in orders.items()},'reviews':reviews}
+ publication_date='2026-10-29' if latest else '2026-10-28'
+ limits={level:24 for level in orders}
+ # Independently reviewed additions extend the curated set without changing its order.
+ for path in sorted(F.glob('level-*-expansion-*.json')):
+  if path.name.endswith('-review.json'):continue
+  expansion=json.loads(path.read_text())
+  if 'baseOrder' not in expansion:continue
+  publication_date=max(publication_date,expansion['date'])
+  expansion_level=expansion.get('level','B')
+  assert expansion_level in orders,'Use the existing Beginner/A curation workflows'
+  limits[expansion_level]=expansion.get('sourceCountLimit',24)
+  assert orders[expansion_level]==expansion['baseOrder'],'Re-review additions if the base selection changes'
+  approved_rows={row['gameId']:row for row in expansion['reviews'] if row['decision']=='keep'}
+  assert set(expansion['order'])==set(approved_rows)
+  assert {r['gameId'] for r in expansion['records']}==set(approved_rows)
+  excluded_ids={row['gameId'] for row in load('excluded.json')}
+  assert not set(approved_rows)&excluded_ids,'Expansion must respect durable exclusions'
+  for ident in expansion['order']:
+   row=approved_rows[ident]
+   assert row['level']==expansion_level and ident not in {r['gameId'] for r in reviews}
+   reviews.append(row);orders[expansion_level].append(ident)
+ assert all(len(orders[level])<=limits[level] for level in orders)
+ rows_by_id={row['gameId']:row for row in reviews}
+ active=apply_management([rows_by_id[key] for ids in orders.values() for key in ids])
+ effective_counts={level:sum(row['level']==level for row in active) for level in orders}
+ manifest={'date':publication_date,'targetPerLevel':24,'sourceCountLimits':limits,'effectiveCounts':effective_counts,'scope':'All 120 previously published B/C/C*/D positions, plus the recorded replacement candidates. Beginner and A unchanged.','method':'All legal roots screened by finite engine search; immediate mates and mates in two checked against every reply; bounded material shortcuts and all immediate local discovery defences checked. Full preparation probed with best defensive engine replies. Finite material horizons are not exhaustive long-term proofs. Saved mates additionally have all-reply proofs.','order':orders,'counts':{l:len(v) for l,v in orders.items()},'gaps':{l:max(0,24-effective_counts[l]) for l in orders},'reviews':reviews}
  (F/'upper-curation.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+'\n')
  approved={r['gameId'] for r in reviews if r['decision']=='keep'}
  exclusions=[r for r in load('excluded.json') if not (r.get('batch')=='upper-variety-2026-10-28' and r['gameId'] in approved)];byid={r['gameId']:r for r in exclusions}

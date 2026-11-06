@@ -4,7 +4,7 @@ from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1];D=ROOT/'scripts/fixtures/promotion-expansion'
 def save(n,x):(D/n).write_text(json.dumps(x,ensure_ascii=False,indent=2)+'\n')
 rows=[]
-rows.append(dict(id='minor-promotion-avoids-pat',level='Beginner',goal='material',fen='8/k1P5/2K5/8/1N6/8/8/8 w - - 0 1',moves=['c8=B','Ka8'],alternatives=[['c8=N+','Ka8']],solverMoves=1,minimumGain=220,source='Thế cờ biên soạn.',mechanism='Both Queen and Rook stalemate; Bishop or Knight retains a minor-piece gain. Four-piece introduction, unlike the existing Rook-only anti-pat decision.'))
+rows.append(dict(id='minor-promotion-avoids-pat',level='A',goal='material',fen='8/k1P5/2K5/8/1N6/8/8/8 w - - 0 1',moves=['c8=B','Ka8'],alternatives=[['c8=N+','Ka8']],solverMoves=1,minimumGain=220,source='Thế cờ biên soạn.',mechanism='Both Queen and Rook stalemate; Bishop or Knight retains a minor-piece gain. Four-piece introduction, unlike the existing Rook-only anti-pat decision.'))
 rows.append(dict(id='krobshofer-bishop-selfblock',level='D',goal='checkmate',fen='8/1KP5/8/2p5/1pP5/p7/k7/1R3R2 w - - 0 1',moves=['c8=B','b3','Bg4','b2','Bd1','Kxb1','Bb3#'],solverMoves=4,source='Oswald von Krobshofer, thế cờ biên soạn, Münchner Neueste Nachrichten, 11-09-1904. https://www.chesshistory.com/winter/extra/underpromotion.html',mechanism='Bishop routes to d1 to block its own Rook, permits Kxb1, then discovers mate. Complex positional Rook sacrifice with four solver moves; not a non-sacrificial C* line.',sourceUrl='https://www.chesshistory.com/winter/extra/underpromotion.html'))
 r=json.loads((D/'archive-leads.json').read_text())[-1];b=chess.Board(r['gameFen']);ply=r['ply']-6
 for san in r['gameMoves'][:ply]:b.push_san(san)

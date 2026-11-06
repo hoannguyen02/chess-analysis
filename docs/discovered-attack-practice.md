@@ -5,11 +5,18 @@ It reuses `ChessPractice`, `DrawTrainer`, `PracticeBoard`, the timer,
 full-screen mode, branch exploration, analysis link and `DrawGameViewer`.
 Exercise and full-game APIs require the same access as `/fork`.
 
-The published collection contains **115 positions**: 24 Beginner compositions
-and **91 positions from 91 distinct games**. Current counts are Beginner 24,
-A 24, B 19, C 22, C* 4, D 22. The target remains 24 per level; the gaps are
-shown explicitly after the second-pass review on 2026-10-29. Including Beginner,
-there are 61 discovered checks and 54 discovered attacks.
+The active collection contains **125 positions**: 24 Beginner compositions
+and **101 positions from distinct games**, after saved user removals, transfers
+and level changes. Current counts are Beginner 24, A 24, B 24, C 22, C* 9,
+D 22 as of 2026-11-05. The remaining count gaps are C: 2, C*: 15 and D: 2.
+Including Beginner, there are 67 discovered checks and 58 discovered attacks.
+
+The durable source bank retains 129 records, including three removed exercises
+and one transferred to another topic. Five source-B records are shown at C*
+under saved user decisions. These source records preserve review history and
+reference games; they are not extra active B exercises. Builders read saved
+decisions without rewriting them, and the protected API applies the authoritative
+management rules to both practice and worksheet selection.
 
 The topic filters are All, Discovered check and Discovered attack. Editorial
 quality takes priority over the target of 24 positions per level. Every level must remain nonempty, but no rejected lesson is restored
@@ -18,7 +25,8 @@ The builder enforces these publication checks.
 
 ## Sources
 
-Complete games come from the public [PGN Mentor archives](https://www.pgnmentor.com/files.html).
+Complete games come from the public [PGN Mentor archives](https://www.pgnmentor.com/files.html)
+and [The Week in Chess](https://theweekinchess.com/zips/).
 Each record retains headers, archive URL, complete game, original game ply,
 exercise FEN and preceding move. Archive SHA-256 checksums are recorded in
 `scripts/fixtures/discovery/corpus-sources.json`. Analysis continuations may
@@ -435,3 +443,193 @@ best engine roots at two million nodes for retained C*/D exercises, looking for
 shorter A/B/C-length motif payoffs with local defensive coverage. No such lead
 was found in that bounded probe; this does not prove uniqueness or exclude
 every possible shorter continuation.
+
+
+## Five new B exercises — 2026-11-04
+
+Added five newly researched positions to the retained 19, bringing B to 24.
+The preceding 19 exercises keep their order and content. Other levels retain
+their previous counts and selections. These additions do not restore any
+previously excluded game or shifted start of an excluded combination.
+
+| B number | Stable game ID | Game | Distinct decision |
+| --- | --- | --- | --- |
+| 20 | `0953aa6625d2d073` | Queipo Caballero–Donkeng Hussel | Rook alignment, then a checking Bishop clearance; both interpositions leave the target Rook lost. |
+| 21 | `044835b0f98dd68c` | Sasikiran–Angada H P | The discovery prevents the real Nxh3+ countercheck and Bishop capture before the Rook collects the Knight. |
+| 22 | `471a7ac876440e16` | Lam–Van Wely | Quiet Queen alignment and attack on a Bishop, followed by Bishop clearance with check and a simultaneous attack on the Queen. |
+| 23 | `b07069c015311028` | Yuffa–Nikitenko | Rook-and-Knight coordination; the correct Knight check depends on whether the King chooses d8 or f8. |
+| 24 | `3ff01cfb3ddd4181` | Nepomniachtchi–Bjerre | Remove the Knight, drive the King, then clear the h-file for a verified mate in three solver moves. |
+
+The search reused 7,877 complete games in the shared tactics index. The played
+combination scan completed; a separate near-resignation scan stopped after 30
+candidates, at 7,234 visited games. After deduplication, 40 source games were
+independently reviewed. Early material gains, shorter independent captures,
+pawn offers unsuitable for B, repeated windmills, incidental discoveries and
+unresolved mating leads were rejected from this B batch. This is a focused
+expansion, not an exhaustive search of all master games.
+
+`level-b-expansion-20261104.json` keeps the five complete games, exact FENs,
+source plies, preceding moves, source references, approved reasons and Vietnamese
+copy. It distinguishes actual played continuations from teaching analysis and
+contains the new mate proof and shorter-mate search result. The mate proof covers
+every legal defensive reply; material checks use bounded engine analysis and
+professional tactical review, not an exhaustive long-term proof.
+
+`expansion-evidence.json#level-b-expansion-20261104-review` saves every legal starting-move comparison
+at one million total MultiPV nodes, exact settings, local two-move material
+shortcut checks, complete timelines and defensive probes at 500,000 nodes. It
+records the initial material and editorial decision for every candidate. Starting
+material is close enough for a meaningful contest in the four material examples.
+The mating exercise starts with White far behind in material but with a concrete
+forcing attack; its task is mate, and the line contains no sacrifice.
+
+`expansion-evidence.json#level-b-expansion-20261104-sources` records archive URLs, SHA-256 checksums,
+retrieval dates, archive/import counts, title evidence from source headers and
+possible cross-topic index tags. Those tags remain unreviewed leads for other
+pages. Raw corpus exports and disposable scan files stay outside the repository.
+The new records are merged only through the approved curation path. The existing
+exclusion and second-pass decisions remain effective.
+
+The coverage map now includes Bishop movers in B through three different roles:
+checking clearance, a discovered-check double threat, and mating clearance.
+Queen and King clearance, two-square pawn discoveries, newly exposed pin benefits,
+en passant and castling discoveries remain B coverage gaps; they are not claimed
+covered by a move elsewhere in the solution. B has no position-count gap.
+C still needs two positions, C* twenty, and D two under the current approved sets.
+
+Regression checks enforce exactly five additions, preservation of all prior
+exercises, full-game replay, checksums, explicit objectives, the Nxh3+ restriction,
+all-reply mate proof, and all 24 B positions in worksheet export. Rebuild through
+`curate-discovery-upper.py`, `build-discovery.py` and `discovery-coverage-report.py`.
+
+## Nine new active B exercises — 2026-11-05
+
+After the saved user decisions, B contained 15 active exercises. Nine newly
+reviewed positions bring it to 24. The preceding 15 retain their order and
+content. Three removals, five B-to-C* changes and the transfer to the exposed-King
+topic remain effective. None of the earlier rejected games is restored.
+
+| Active B number | Stable game ID | Game | Distinct decision |
+| --- | --- | --- | --- |
+| 16 | `92b22f0f4da6a18f` | Spassky–Boleslavsky | Clear two blockers from the Queen's file through equal minor-piece exchanges, then win a pawn. |
+| 17 | `ae9d43b1c118dddb` | Anand–Gelfand | Put a protected Bishop onto its own Rook's rank with check, forcing the King into that rank before clearing it with a double threat. |
+| 18 | `b5be9bfe50794952` | Stefansson–Karpov | Align the Bishop, then move its blocking Queen with check; account for the defender's recapture and win the exchange. |
+| 19 | `bf1257225a89bff1` | Fischer–Janushkovsky | An attacked Bishop escapes with discovered check and attacks the Queen, preserving the tactical gain. |
+| 20 | `309400c511b2bc0f` | Gledura–Kramnik | Drive the King onto a Knight-check square before clearing the Queen diagonal; immediate clearance would lose Black's own Queen. |
+| 21 | `69dbb25d85019a1e` | Kramnik–Han Yichen | Quiet Rook alignment prepares a Bishop clearance with check; the second defending Rook limits the payoff to an exchange. |
+| 22 | `28abfaf127a68955` | Fischer–Petrosian | A quiet King move establishes the mating net before a Rook clearance opens the Bishop's mating diagonal. |
+| 23 | `8bc8a1916e336e16` | Short–Harikrishna | Meet check with an equal Rook exchange, then use discovered check to prevent a real pawn recapture of the Knight. |
+| 24 | `02767676b9337285` | Riazantsev–Kramnik | Escape check before a Rook clearance creates a discovered-check double threat; include White's pawn capture in the net gain. |
+
+All nine use three solver moves without a solving-side sacrifice. Equal
+exchanges and the opponent's defensive material offers are distinguished from
+sacrifices. Eight exercises have a material objective; Fischer–Petrosian has
+a verified mate-in-three objective. Solutions explain relevant recaptures rather
+than describing a won exchange as winning an intact Rook or Queen.
+
+Research first reused the shared 7,877-game index and then replayed 2,131
+deduplicated saved games. The expanded PGN Mentor search scanned 13,471 new
+deduplicated eligible games from Fischer, Spassky, Karpov, Kramnik, Short and
+Gelfand archives, completing both played-combination and near-resignation scans.
+The Navara archive separately verified the complete original game for a local
+lead that was withheld during final review. Sixty-three distinct candidates received root, shortcut and complete-line
+review. Repetitive windmills, independent earlier gains, sacrifices, unsuitable
+levels and unresolved superior mating leads were withheld.
+
+`level-b-expansion-20261105.json` stores the nine approved complete games,
+exact positions, moves, original plies, preceding moves, editorial decisions,
+Vietnamese copy and the coverage checklist used before selection. Its baseline
+records the 15 active B IDs and the saved-decision checksum. The source-bank B
+limit is 33 so rebuilding preserves the nine managed records as well as the
+24 active B exercises; `effectiveCounts` and gaps use the saved decisions.
+
+`expansion-evidence.json#level-b-expansion-20261105-review` records all legal starting moves at one
+million total MultiPV nodes, immediate-mate checks, bounded two-solver-move
+material shortcuts, intermediate material balances and relevant defensive lines
+at 500,000 nodes. These material checks and tactical review are finite evidence,
+not exhaustive long-term proofs. The Fischer–Petrosian proof covers every legal
+defensive reply within three solver moves (248 proof nodes); a separate all-reply
+search excludes mate within two solver moves (546 nodes).
+
+`expansion-evidence.json#level-b-expansion-20261105-sources` records URLs, archive checksums,
+retrieval dates, parsing results and the role of every downloaded archive.
+The one malformed Gelfand game was skipped and is not a published source.
+Actual game continuations remain separate from teaching analysis, with full
+games available through the shared viewer. Raw archives and disposable scan
+caches remain outside the repository.
+
+Final defensive review withheld Karpov–Timman (`bb8a2206e82c4bf6`) from B:
+after Qf4+ Kh3 g4+, both Kh4 and fxg4 are legal. The latter accepts the offered
+pawn before Qxh6+, so this is a simple-sacrifice lead for C review. Choosing
+Kh4 in the sample line does not establish no-sacrifice B suitability.
+Navara–Shahaliyev (`3e2ceb3919bb1a37`) was likewise withheld because Rh8+
+allows Kxh8, accepting a Rook offer. A sample line declining a sacrifice is
+insufficient evidence for B, even when automatic main-line grading reports none.
+
+The active coverage map now includes Queen clearance, ordered double clearance,
+checking escapes, clearance that must be prepared to protect the stationary
+Queen, and defenses that expose a recapture restriction. Existing pawn
+discoveries are preserved. King *preparation* is not counted as King *clearance*.
+B still lacks verified King clearances, two-square pawn discoveries, discoveries
+with a newly exposed pin benefit, en passant and castling. These are coverage
+gaps, despite reaching 24; unsuitable examples are not added to fill them.
+
+Regression checks replay all nine full games, preserve the earlier source data
+and Beginner set, verify the mate certificates, and exercise the actual protected
+API with saved management decisions. The worksheet check selects all 24 active B
+positions, including the nine additions, and rejects a request for 25. The full
+B worksheet and answer PDFs were rendered for layout and copy review.
+
+## Two additions each to B and C — 2026-11-05 speed trial
+
+The current owner decisions left B and C at 22 active positions each. Two
+additions per level bring both to 24. Beginner and A remain at 24, C* at 10,
+and D at 22. Every earlier exercise and saved full game is preserved exactly;
+the Beginner file and all owner decisions are unchanged.
+
+| Level | Stable game ID | Game | Additional decision |
+| --- | --- | --- | --- |
+| B | `eef5583eeab818c6` | Castillo Beitia–Wagener | Escape a Knight check, then use discovered check to put a Rook on a Knight-attacked square safely before capturing a pawn. A Knight interposition changes the winning capture. |
+| B | `51b6258a7c5e5a7b` | Terry–Erigaisi | Two checking placements prepare a Queen discovery on the eighth rank; the check makes the f7-pawn's apparent recapture on e6 illegal. |
+| C | `043fa99a6866848c` | Seirawan–Spassky | Quiet Queen alignment offers a stationary Rook, attracts a pawn to g6, and enables a double-check fork. Count the Bishop's subsequent recapture of the Knight. |
+| C | `765f315a6674451f` | Maurizzi–Marjanovic | A Rook sacrifice relocates the King before a Knight clearance. Review the Queen interposition and final pawn recapture: the exchange is two Rooks for Queen and Knight. |
+
+The B pair contains no solving-side sacrifice and the C pair contains one
+simple sacrifice each, with three solver moves in each teaching line. The
+Seirawan position was previously withheld from B specifically because a Rook
+could be taken. Its C review records the legal `hxg6` capture of the stationary
+Rook in the teaching analysis and preserves the automatic B inference as a review lead. A legal-replay
+regression verifies this correction independently of the mover-only heuristic.
+No owner removal or global exclusion is restored.
+
+The two new manifests are `level-b-expansion-20261105b.json` and
+`level-c-expansion-20261105.json`, with selected review evidence and source manifests stored by batch key in
+`expansion-evidence.json`. They preserve complete games, source plies, preceding moves, archive
+checksums, title evidence and the distinction between play and teaching analysis.
+All-root comparisons, material shortcuts, strong defensive lines and recovery
+checks remain required. The C payoffs include the relevant final recaptures:
+the nominal gains are 180 cp and 220 cp, not an intact Queen in either example.
+Finite engine evidence and tactical/editorial review are not exhaustive
+long-term material proofs.
+
+The trial reused the 21,348-game index. The serial collector produced twelve
+leads and withheld 431 early; its observed process interval was about 11.2
+minutes. Candidate review passes finished in seconds and subsequent reviews
+reused cached analysis. The protected API and full worksheet selections were
+checked at 24 positions for both levels. The four new diagrams and all answer
+text were rendered through the shared PDF generator and visually inspected.
+
+The [trial report](../scripts/fixtures/research-benchmark/discovery-b-c-extension-20261105.json)
+records full-task timing separately from the saved review-pass metrics. This is
+an actual content-extension trial, not a matched end-to-end comparison with
+the older nine-position task. Serial game scanning and editorial selection
+remain the main time costs; the earlier 5.91-times figure applies only to the
+fixed automated-review benchmark. Level-specific King/two-square-pawn,
+pin-benefit and special-move coverage gaps remain documented in
+`second-pass-coverage.json`; reaching 24 does not imply complete coverage.
+
+The parallel workflow review clarified Seirawan–Spassky provenance: the saved
+original game continues `Rc6 Qg7 Kf2` at the exercise position. The published
+`Qd4 hxg6 Nxg6+` solution is a teaching analysis. The earlier review phrase
+calling `hxg6` played was corrected; the FEN, solution and complete original
+game are unchanged.

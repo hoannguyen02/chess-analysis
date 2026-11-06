@@ -1,7 +1,7 @@
 """Review bundling, incremental updates and source-index coverage."""
 import json,tempfile,unittest
 from pathlib import Path
-from promotion_review_store import ReviewStore
+from review_store import ReviewStore
 ROOT=Path(__file__).resolve().parents[1]
 class Reviews(unittest.TestCase):
  def test_updates_preserve_other_records(self):

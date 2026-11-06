@@ -1,4 +1,4 @@
-from promotion_review_store import ReviewStore
+from review_store import ReviewStore
 from mate_proof_store import MateProofStore
 """Proof certificates enumerate every legal reply; root screens are explicitly finite."""
 import json,chess,chess.engine,time

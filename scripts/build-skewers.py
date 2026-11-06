@@ -19,7 +19,7 @@ DESCRIPTIONS={
 'B':'Một nước chuẩn bị để tạo đòn xiên; không thí quân.',
 'C':'Một thí quân đơn giản dẫn đến đòn xiên trong chuỗi ngắn.',
 'C*':'Cần tính trước 2–3 nước chuẩn bị; không có thí quân đã xác nhận trong nhánh.',
-'D':'Thí quân phức tạp và hơn 3 nước của bên giải để khai thác đòn xiên.',
+'D':'Thí quân phức tạp và hơn 3 nước của mình để khai thác đòn xiên.',
 }
 PIECES={'B':'Tượng','R':'Xe','Q':'Hậu'}
 def build(records, minimum_per_level=0):

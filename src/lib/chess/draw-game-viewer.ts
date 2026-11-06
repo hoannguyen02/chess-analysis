@@ -5,6 +5,7 @@ export type GameReference = {
   collection?:
     | 'skewer'
     | 'pin'
+    | 'removing-defender'
     | 'fork'
     | 'discovery'
     | 'simplification'
@@ -66,12 +67,37 @@ export function gameFrames(source: GameSource, branch: number) {
   }
   return frames;
 }
+
+/** Keep the last played move outside the exercise's solution line. */
+export function gameExerciseContext(
+  source: GameSource,
+  reference: Pick<GameReference, 'branch' | 'ply'>
+) {
+  const line = source.lines[reference.branch];
+  if (
+    !line ||
+    !Number.isInteger(reference.ply) ||
+    reference.ply < 0 ||
+    reference.ply > line.length
+  )
+    throw new Error('Invalid exercise source position');
+  const game = new Chess(source.fen);
+  let previousMove: { fen: string; move: string } | undefined;
+  for (const san of line.slice(0, reference.ply)) {
+    const fen = game.fen();
+    const move = game.move(san);
+    if (!move) throw new Error('Invalid exercise source move');
+    previousMove = { fen, move: move.san };
+  }
+  return { fen: game.fen(), previousMove };
+}
 const collections = new Map<string, Promise<Record<string, GameSource>>>();
 export async function loadGameSource(
   id: string,
   collection?:
     | 'skewer'
     | 'pin'
+    | 'removing-defender'
     | 'fork'
     | 'discovery'
     | 'simplification'
@@ -89,41 +115,43 @@ export async function loadGameSource(
     | 'two-rook-mate'
 ): Promise<GameSource> {
   const endpoint =
-    collection === 'promotion-mate'
-      ? '/api/promotion-mate-game-sources'
-      : collection === 'underpromotion'
-        ? '/api/underpromotion-game-sources'
-        : collection === 'passed-pawn-simplification'
-          ? '/api/passed-pawn-simplification-game-sources'
-          : collection === 'promotion'
-            ? '/api/promotion-game-sources'
-            : collection === 'anastasia-mate'
-              ? '/api/anastasia-mate-game-sources'
-              : collection === 'arabian-mate'
-                ? '/api/arabian-mate-game-sources'
-                : collection === 'rook-bishop-mate'
-                  ? '/api/rook-bishop-mate-game-sources'
-                  : collection === 'queen-rook-mate'
-                    ? '/api/queen-rook-mate-game-sources'
-                    : collection === 'back-rank-mate'
-                      ? '/api/back-rank-mate-game-sources'
-                      : collection === 'queen-mate'
-                        ? '/api/queen-mate-game-sources'
-                        : collection === 'one-rook-mate'
-                          ? '/api/one-rook-mate-game-sources'
-                          : collection === 'two-rook-mate'
-                            ? '/api/two-rook-mate-game-sources'
-                            : collection === 'simplification'
-                              ? '/api/simplification-game-sources'
-                              : collection === 'discovery'
-                                ? '/api/discovery-game-sources'
-                                : collection === 'fork'
-                                  ? '/api/fork-game-sources'
-                                  : collection === 'pin'
-                                    ? '/api/pin-game-sources'
-                                    : collection === 'skewer'
-                                      ? '/api/skewer-game-sources'
-                                      : '/api/draw-game-sources';
+    collection === 'removing-defender'
+      ? '/api/removing-defender-game-sources'
+      : collection === 'promotion-mate'
+        ? '/api/promotion-mate-game-sources'
+        : collection === 'underpromotion'
+          ? '/api/underpromotion-game-sources'
+          : collection === 'passed-pawn-simplification'
+            ? '/api/passed-pawn-simplification-game-sources'
+            : collection === 'promotion'
+              ? '/api/promotion-game-sources'
+              : collection === 'anastasia-mate'
+                ? '/api/anastasia-mate-game-sources'
+                : collection === 'arabian-mate'
+                  ? '/api/arabian-mate-game-sources'
+                  : collection === 'rook-bishop-mate'
+                    ? '/api/rook-bishop-mate-game-sources'
+                    : collection === 'queen-rook-mate'
+                      ? '/api/queen-rook-mate-game-sources'
+                      : collection === 'back-rank-mate'
+                        ? '/api/back-rank-mate-game-sources'
+                        : collection === 'queen-mate'
+                          ? '/api/queen-mate-game-sources'
+                          : collection === 'one-rook-mate'
+                            ? '/api/one-rook-mate-game-sources'
+                            : collection === 'two-rook-mate'
+                              ? '/api/two-rook-mate-game-sources'
+                              : collection === 'simplification'
+                                ? '/api/simplification-game-sources'
+                                : collection === 'discovery'
+                                  ? '/api/discovery-game-sources'
+                                  : collection === 'fork'
+                                    ? '/api/fork-game-sources'
+                                    : collection === 'pin'
+                                      ? '/api/pin-game-sources'
+                                      : collection === 'skewer'
+                                        ? '/api/skewer-game-sources'
+                                        : '/api/draw-game-sources';
   const cacheKey = `${endpoint}:${readPracticeToken()}`;
   let sources = collections.get(cacheKey);
   if (!sources) {

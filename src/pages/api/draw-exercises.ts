@@ -19,21 +19,26 @@ export default async function handler(
     practicePlayers,
     practiceGameOpening,
   } = await import('@/lib/server/practice-game-caption');
-  return res.status(200).json({
-    hubPath: privateHubPath(),
-    categories: drawCategories.map((category) => ({
-      ...category,
-      exercises: category.exercises.map((exercise) => {
-        const reference = gameReference(exercise.fen);
-        return {
-          ...exercise,
-          gameReference: reference ?? null,
-          gameCaption: practiceGameCaption(reference),
-          gameOpening: practiceGameOpening(reference),
-          playerTitle: practicePlayerTitle(reference),
-          players: practicePlayers(reference),
-        };
-      }),
-    })),
-  });
+  const { includeManualExercises } = await import(
+    '@/lib/server/manual-tactics'
+  );
+  return res.status(200).json(
+    await includeManualExercises('/draw', {
+      hubPath: privateHubPath(),
+      categories: drawCategories.map((category) => ({
+        ...category,
+        exercises: category.exercises.map((exercise) => {
+          const reference = gameReference(exercise.fen);
+          return {
+            ...exercise,
+            gameReference: reference,
+            gameCaption: practiceGameCaption(reference),
+            gameOpening: practiceGameOpening(reference),
+            playerTitle: practicePlayerTitle(reference),
+            players: practicePlayers(reference),
+          };
+        }),
+      })),
+    })
+  );
 }

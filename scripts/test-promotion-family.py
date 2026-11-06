@@ -1,4 +1,4 @@
-from promotion_review_store import ReviewStore
+from review_store import ReviewStore
 from mate_proof_store import read_proof_reference
 """Selection and legal coverage regressions, separate from engine evidence."""
 import json,unittest

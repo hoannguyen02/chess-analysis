@@ -47,8 +47,8 @@ promotion ideas. Two non-promotion mating leads remain quarantined (mate indices
 
 | Level | Retained / target | Missing observed attributes to research |
 | --- | --- | --- |
-| Beginner | 3 / 24 | No attribute gap in this list; instructional coverage still requires review. |
-| A | 3 / 24 | promote-r, promote-b |
+| Beginner | 1 / 24 | white, noncapture, quiet, straight-promotion, promote-r, promote-b |
+| A | 5 / 24 | Further distinct decisions need review. |
 | B | 1 / 24 | black, capture, capture-promotion, promote-r, promote-b |
 | C | 0 / 24 | white, black, capture, noncapture, check, quiet, capture-promotion, straight-promotion, promote-r, promote-b, promote-n |
 | C* | 1 / 24 | white, capture-promotion, promote-b, promote-n |
@@ -134,7 +134,7 @@ passed this finite screen. This is a research limitation, not proof none exists.
 
 Four distinct additions to underpromotion:
 
-- Beginner: `minor-promotion-avoids-pat`. Four pieces; both Queen and Rook cause
+- A: `minor-promotion-avoids-pat`. Four pieces; both Queen and Rook cause
   pat. Bishop and Knight are valid and retained as alternatives. This differs
   from the earlier Rook choice because the Rook also fails. Every legal reply
   preserves at least 220 centipawns of material gain; no claim that two Knights
@@ -188,9 +188,16 @@ snapshot index to the unchanged review record and stable exercise identifier.
 Expansion root analysis is in `promotion-expansion/root-reviews.json`, keyed
 by candidate ID. Rejected-candidate analysis remains available in these bundles.
 
-`promotion_review_store.py` provides atomic updates; reviewers and publishers
+`review_store.py` provides atomic updates; reviewers and publishers
 update bundles directly and no longer generate one JSON file per position.
 Run one writer per bundle at a time. Existing source snapshots, coverage maps,
 rejection decisions, full games and proof bundles remain separate because
 builders and tests consume them. This consolidation replaced 218 individual
 review files with four bundles without changing exercise content or decisions.
+
+## Grading correction — 2026-11-02
+
+The Rook-to-avoid-pat exercise and the Bishop/Knight-to-avoid-pat exercise
+now belong to A across their published categories. Earlier Beginner descriptions
+above record the historical review, not their current grade. The six-level
+structure, objectives, positions, proof evidence and alternatives are unchanged.

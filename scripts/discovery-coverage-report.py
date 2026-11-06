@@ -2,6 +2,7 @@
 import importlib.util,json,sys
 from pathlib import Path
 import chess
+from discovery_management import apply as apply_management, projection_snapshot
 sys.dont_write_bytecode=True
 ROOT=Path(__file__).resolve().parents[1];F=ROOT/'scripts/fixtures/discovery'
 s=importlib.util.spec_from_file_location('miner',ROOT/'scripts/collect-discovery.py');miner=importlib.util.module_from_spec(s);s.loader.exec_module(miner)
@@ -29,7 +30,9 @@ def tags(record):
      if any(m.to_square==move.to_square and m.uci() not in actual for m in counter.legal_moves):found.add('recapture-prevented')
   b=after
  return sorted(found)
-def report(records):
+def report(records,entries=None):
+ entries=projection_snapshot(entries)
+ records=apply_management(records,entries)
  levels={}
  for level in ['B','C','C*','D']:
   rows=[r for r in records if r['level']==level];by_id={r['gameId']:tags(r) for r in rows};aspects={}
@@ -39,8 +42,8 @@ def report(records):
    if key=='new-absolute-pin':note+=' A geometric pin is not proof of a pin-dependent payoff; its teaching benefit requires separate review.'
    if key=='recapture-prevented':note+=' Legal recapture becomes possible when the exposed checking slider is removed; this counterfactual is distinct from exhaustive tactical verification.'
    aspects[key]={'status':'represented' if ids else 'gap','exerciseIds':ids,'assessment':note}
-  levels[level]={'count':len(rows),'missingPositions':24-len(rows),'aspects':aspects}
- return {'date':'2026-10-29','scope':'B, C, C*, D individually; these mappings do not infer coverage from another level.','method':'Legal replay of actual discoveries throughout each saved line. Preparatory king moves do not count as King clearance. Promotion in a solution is distinguished from promotion that itself uncovers an attack. Geometric tags do not by themselves justify retaining near-duplicates.','levels':levels}
+  levels[level]={'count':len(rows),'missingPositions':max(0,24-len(rows)),'aspects':aspects}
+ return {'date':json.loads((F/'upper-curation.json').read_text())['date'],'scope':'Active B, C, C*, D after saved user removals, level changes and transfers; mappings do not infer coverage from another level.','method':'Legal replay of actual discoveries throughout each saved line. Preparatory king moves do not count as King clearance. Promotion in a solution is distinguished from promotion that itself uncovers an attack. Geometric tags do not by themselves justify retaining near-duplicates.','levels':levels,'ownerDecisions':entries}
 def main():
  records=json.loads((F/'published.json').read_text())['records']
  (F/'second-pass-coverage.json').write_text(json.dumps(report(records),ensure_ascii=False,indent=2)+'\n')

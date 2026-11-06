@@ -5,6 +5,7 @@ import type {
 } from '@/lib/chess/worksheet';
 import { levelExercises, worksheetLevels } from '@/lib/chess/worksheet';
 import styles from '@/styles/WorksheetBuilder.module.css';
+import { POSITIONS_PER_PAGE } from '@/lib/chess/worksheet-layout';
 
 import { useEffect, useRef, useState, type ReactNode } from 'react';
 import type {
@@ -46,6 +47,22 @@ export default function WorksheetReviewBlocks({
 }) {
   const topicName = (id: string) =>
     topics.find((t) => t.id === id)?.title ?? id;
+  const topicEnds = sections.filter((section, index) => {
+    const next = sections[index + 1];
+    return (
+      !next ||
+      (section.topicGroupId ?? section.id) !== (next.topicGroupId ?? next.id)
+    );
+  });
+  const topicNumber = (id: number) => {
+    const section = sections.find((s) => s.id === id);
+    return section
+      ? topicEnds.findIndex(
+          (s) =>
+            (s.topicGroupId ?? s.id) === (section.topicGroupId ?? section.id)
+        ) + 1
+      : 0;
+  };
   const [session, setSession] = useState<{
     blocks: ReviewBlockDraft[];
     overrides: ReviewBlockDraft[];
@@ -107,24 +124,29 @@ export default function WorksheetReviewBlocks({
       </small>
       <fieldset disabled={!settings.enabled} className={styles.reviewSettings}>
         <label>
-          Sau mỗi (chủ đề)
-          <input
-            type="number"
-            min={1}
-            value={settings.interval}
-            onChange={(e) => configure({ interval: e.target.value })}
-          />
+          Ôn tập sau mỗi
+          <span className={styles.quantityControl}>
+            <input
+              type="number"
+              min={1}
+              aria-label="Số chủ đề giữa các phần ôn tập"
+              value={settings.interval}
+              onChange={(e) => configure({ interval: e.target.value })}
+            />
+            <span aria-hidden="true">chủ đề</span>
+          </span>
         </label>
         <label>
-          Số thế mỗi chủ đề
+          Số thế ôn tập
           <input
             type="number"
             min={1}
+            aria-describedby="review-count-help"
             value={settings.count}
             onChange={(e) => configure({ count: e.target.value })}
           />
         </label>
-        <div>
+        <div className={styles.reviewScope}>
           <label className={styles.guideToggle}>
             <input
               type="checkbox"
@@ -171,8 +193,9 @@ export default function WorksheetReviewBlocks({
           Tùy chỉnh ôn tập
         </button>
       </div>
-      <small className={styles.reviewHelp}>
-        Cấp độ theo chương. Ôn tập cuối sách gồm tất cả chủ đề.
+      <small id="review-count-help" className={styles.reviewHelp}>
+        Số thế áp dụng cho từng chủ đề ở mỗi cấp độ. Ôn tập cuối sách gồm tất cả
+        chủ đề.
       </small>
       {blocks.some(needsAttention) && (
         <p role="status">
@@ -207,9 +230,9 @@ export default function WorksheetReviewBlocks({
               >
                 {session.blocks.map((b, i) => (
                   <option key={b.id} value={b.id}>
-                    Ôn tập {i + 1} · Sau chủ đề{' '}
-                    {sections.findIndex((s) => s.id === b.afterSectionId) + 1} ·{' '}
-                    {b.rows.reduce((n, r) => n + (Number(r.count) || 0), 0)} thế
+                    Ôn tập {i + 1} · Sau chủ đề {topicNumber(b.afterSectionId)}{' '}
+                    · {b.rows.reduce((n, r) => n + (Number(r.count) || 0), 0)}{' '}
+                    thế
                     {needsAttention(b) ? ' · Cần kiểm tra' : ''}
                   </option>
                 ))}
@@ -245,8 +268,17 @@ export default function WorksheetReviewBlocks({
               const eligible = topics.filter((t) =>
                 preceding.some((s) => s.topic === t.id)
               );
-              const unused = eligible.filter(
-                (t) => !block.rows.some((r) => r.topic === t.id)
+              const unused = eligible.flatMap((topic) =>
+                worksheetLevels
+                  .filter(
+                    (level) =>
+                      levelExercises(catalog[topic.id] ?? [], level).length >=
+                        POSITIONS_PER_PAGE &&
+                      !block.rows.some(
+                        (r) => r.topic === topic.id && r.level === level
+                      )
+                  )
+                  .map((level) => ({ topic: topic.id, level }))
               );
               const setRows = (rows: WorksheetSectionDraft[]) =>
                 update(block.id, { rows });
@@ -276,7 +308,7 @@ export default function WorksheetReviewBlocks({
                           Phần bài tập đã bị xóa — chọn lại vị trí
                         </option>
                       )}
-                      {sections.map((s, i) => (
+                      {topicEnds.map((s, i) => (
                         <option key={s.id} value={s.id}>
                           Sau phần {i + 1}: {topicName(s.topic)}
                         </option>
@@ -300,7 +332,21 @@ export default function WorksheetReviewBlocks({
                             <select
                               aria-label={`Chủ đề ôn tập ${blockIndex + 1}.${i + 1}`}
                               value={row.topic}
-                              onChange={(e) => patch({ topic: e.target.value })}
+                              onChange={(e) => {
+                                const topic = e.target.value;
+                                const level = worksheetLevels.find(
+                                  (l) =>
+                                    levelExercises(catalog[topic] ?? [], l)
+                                      .length >= POSITIONS_PER_PAGE &&
+                                    !block.rows.some(
+                                      (r) =>
+                                        r.id !== row.id &&
+                                        r.topic === topic &&
+                                        r.level === l
+                                    )
+                                );
+                                if (level) patch({ topic, level });
+                              }}
                             >
                               {!valid && (
                                 <option value={row.topic}>
@@ -312,7 +358,7 @@ export default function WorksheetReviewBlocks({
                                 .filter(
                                   (t) =>
                                     t.id === row.topic ||
-                                    !block.rows.some((r) => r.topic === t.id)
+                                    unused.some((pair) => pair.topic === t.id)
                                 )
                                 .map((t) => (
                                   <option key={t.id} value={t.id}>
@@ -334,7 +380,21 @@ export default function WorksheetReviewBlocks({
                               }
                             >
                               {worksheetLevels.map((l) => (
-                                <option key={l} value={l}>
+                                <option
+                                  key={l}
+                                  value={l}
+                                  disabled={
+                                    l !== row.level &&
+                                    (levelExercises(catalog[row.topic] ?? [], l)
+                                      .length < POSITIONS_PER_PAGE ||
+                                      block.rows.some(
+                                        (r) =>
+                                          r.id !== row.id &&
+                                          r.topic === row.topic &&
+                                          r.level === l
+                                      ))
+                                  }
+                                >
                                   {l === 'Beginner'
                                     ? 'Nhập môn / Beginner'
                                     : `Cấp độ ${l} / Level ${l}`}
@@ -383,17 +443,14 @@ export default function WorksheetReviewBlocks({
                   <button
                     disabled={!unused.length}
                     onClick={() => {
-                      const topic = unused[0];
-                      if (!topic) return;
-                      const chapter = preceding.find(
-                        (s) => s.topic === topic.id
-                      )!;
+                      const pair = unused[0];
+                      if (!pair) return;
                       setRows([
                         ...block.rows,
                         {
                           id: nextId(),
-                          topic: topic.id,
-                          level: chapter.level,
+                          topic: pair.topic,
+                          level: pair.level,
                           count: settings.count,
                         },
                       ]);

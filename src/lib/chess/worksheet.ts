@@ -1,5 +1,6 @@
 import { Chess } from 'chess.js';
 import type { DrawExercise } from './draw-practice';
+import { POSITIONS_PER_PAGE } from './worksheet-layout';
 
 export type WorksheetTopic = {
   id: string;
@@ -19,7 +20,9 @@ export function worksheetTopicsFromLibrary(
     .filter(
       (page) =>
         page.worksheetEndpoint &&
-        /^\/api\/[a-z0-9-]+$/.test(page.worksheetEndpoint)
+        /^\/api\/[a-z0-9-]+(?:\?theme=[A-Za-z][A-Za-z0-9-]*)?$/.test(
+          page.worksheetEndpoint
+        )
     )
     .map((page) => ({
       id: page.href.replace(/^\//, ''),
@@ -65,7 +68,7 @@ export function levelExercises(
     if (
       !matches ||
       seen.has(key) ||
-      !e.moves.length ||
+      (!e.moves.length && !e.beginner) ||
       e.mode === 'recognition'
     )
       return false;
@@ -98,12 +101,12 @@ export function planWorksheet(
       );
     const selected = pool.slice(0, section.count);
     selected.forEach((e) => seen.add(positionKey(e)));
-    for (let i = 0; i < selected.length; i += 6)
+    for (let i = 0; i < selected.length; i += POSITIONS_PER_PAGE)
       pages.push({
         title: topic.title,
         level: section.level,
         exercises: selected
-          .slice(i, i + 6)
+          .slice(i, i + POSITIONS_PER_PAGE)
           .map((exercise) => ({ number: number++, exercise })),
       });
   }
@@ -140,10 +143,19 @@ export function explainLine(fen: string, moves: string[], numbered = false) {
     return `${notation} - ${explanation}.`;
   });
 }
-export function previousMoveLabel(e: DrawExercise) {
+export function previousMoveLabel(e: Pick<DrawExercise, 'fen' | 'previousMove'>) {
   if (!e.previousMove) return '';
   const b = new Chess(e.previousMove.fen);
-  if (!b.move(e.previousMove.move) || b.fen() !== new Chess(e.fen).fen())
+  const fen = (board: ReturnType<typeof Chess>) => {
+    const fields = board.fen().split(' ');
+    // An uncapturable en passant square can be omitted by PGN tools.
+    if (
+      !board.moves({ verbose: true }).some((move) => move.flags.includes('e'))
+    )
+      fields[3] = '-';
+    return fields.join(' ');
+  };
+  if (!b.move(e.previousMove.move) || fen(b) !== fen(new Chess(e.fen)))
     throw new Error('Nước đi trước không khớp thế cờ.');
   return explainLine(e.previousMove.fen, [e.previousMove.move])[0].replace(
     ':',
@@ -166,27 +178,45 @@ export function worksheetFooterText(footer: WorksheetFooter) {
 
 export const worksheetLevelGuide: Record<WorksheetLevel, string> = {
   Beginner:
-    'Dành cho người mới biết đi quân và bắt quân. Thế cờ ít quân, ý tưởng trực tiếp.',
-  A: 'Vận dụng trực tiếp chủ đề; không thí quân hoặc chuẩn bị dài.',
-  B: 'Có nước chuẩn bị đơn giản hoặc phối hợp quân trong phương án ngắn.',
-  C: 'Thí quân đơn giản với mục đích chiến thuật rõ ràng.',
-  'C*': 'Không thí quân; yêu cầu tính sâu hơn cấp B thêm 2-3 nước của bên giải.',
-  D: 'Thí quân phức tạp, phối hợp nâng cao; trên 3 nước của bên giải.',
+    'Dành cho người mới biết đi quân và bắt quân. Thế cờ ít quân, ý tưởng đơn giản và dễ nhận biết.',
+  A: 'Vận dụng trực tiếp ý tưởng chiến thuật; không thí quân hoặc tính toán dài.',
+  B: 'Có bước chuẩn bị đơn giản hoặc cần phối hợp quân trong một phương án ngắn.',
+  C: 'Thí quân đơn giản để tạo cơ hội chiến thuật và đạt mục tiêu của bài tập.',
+  'C*': 'Không thí quân; cần tính sâu hơn cấp B thêm 2-3 nước đi của mình.',
+  D: 'Thí quân phức tạp, phối hợp nhiều ý tưởng chiến thuật; cần tính trên 3 nước đi của mình.',
+};
+export const worksheetClosingReview = {
+  skills: [
+    'Nhận ra và giải thích được ý tưởng chính.',
+    'Tính được những nước đi quan trọng của đối phương.',
+    'Kiểm tra được kết quả cuối, kể cả khả năng đối phương bắt lại.',
+    'Tự giải được thế cờ mới ở cùng cấp độ mà không cần gợi ý.',
+  ],
+  omissions: [
+    'Ý tưởng chiến thuật',
+    'Nước đi của đối phương',
+    'Khả năng bắt lại',
+    'Đánh giá kết quả cuối',
+  ],
+  readiness:
+    'Cân nhắc cấp độ tiếp theo khi có thể tự giải các thế cờ mới ở cấp độ hiện tại, giải thích ý tưởng chính và tính được những nước đi quan trọng của đối phương.',
 };
 export type WorksheetBookOptions = {
   showLevelGuide?: boolean;
+  showNotationGuide?: boolean;
   introduction: { title: string; body: string };
   closing: { title: string; body: string };
 };
 export const defaultBookOptions: WorksheetBookOptions = {
   showLevelGuide: true,
+  showNotationGuide: true,
   introduction: {
     title: 'Hướng dẫn luyện tập',
-    body: 'Trước khi chọn nước đi, xác định bên đến lượt và xem xét các nước chiếu, bắt quân, đe dọa của cả hai bên. Tính cả phương án phòng thủ tốt nhất của đối phương, không chỉ nước đáp thuận lợi cho mình.\n\nGhi phương án dưới bàn cờ; với bài nhiều nước, ghi cả nước đáp của đối phương. Người mới học có thể vẽ mũi tên. Ví dụ: Nd4 là nước Mã đến ô d4.\n\nTự giải trước khi đối chiếu lời giải. Nếu chọn phương án khác, kiểm tra xem phương án đó có đạt yêu cầu bài tập trước các cách phòng thủ của đối phương hay không.',
+    body: 'Quan sát: Xác định bên đến lượt và đe dọa trực tiếp.\nLựa chọn: Xét các nước chiếu, bắt quân, đe dọa và nước chuẩn bị cần thiết.\nTính toán: Xét nước đi tốt nhất của đối phương rồi tiếp tục phương án.\nKiểm tra: Xác định kết quả cuối; khi thắng vật chất, tính cả khả năng đối phương bắt lại.\n\nGhi phương án dưới bàn cờ, gồm cả nước đi của đối phương; người mới học có thể vẽ mũi tên.',
   },
   closing: {
     title: 'Tổng kết và định hướng luyện tập',
-    body: 'Giải lại các bài còn sai hoặc cần gợi ý trước khi xem lời giải. Với mỗi bài, xác định ý tưởng chính và kiểm tra phương án phòng thủ tốt nhất của đối phương.\n\nChọn cấp độ tiếp theo khi có thể tự giải và giải thích rõ phương án. Nếu còn bỏ sót nước đáp, luyện thêm ở cấp độ hiện tại hoặc bổ sung bài cùng cấp độ thuộc chủ đề khác.',
+    body: 'Giải lại những bài chưa hoàn thành hoặc còn cần gợi ý. Với mỗi bài, nêu ý tưởng chính, kiểm tra các nước đi quan trọng của đối phương và xác định kết quả cuối.',
   },
 };
 
@@ -300,12 +330,14 @@ function mixReviewPages(
     }
   let number = 1;
   const result: WorksheetPage[] = [];
-  for (let i = 0; i < mixed.length; i += 6)
+  for (let i = 0; i < mixed.length; i += POSITIONS_PER_PAGE)
     result.push({
       title,
       level: 'Beginner',
       review: true,
-      exercises: mixed.slice(i, i + 6).map((e) => ({ ...e, number: number++ })),
+      exercises: mixed
+        .slice(i, i + POSITIONS_PER_PAGE)
+        .map((e) => ({ ...e, number: number++ })),
     });
   return result;
 }
@@ -423,6 +455,7 @@ export function planWorksheetBookBlocks(
  * Replacements are limited to reviewed source phrases; no tactical claims
  * are inferred from topic names, game results, or engine scores. */
 export function worksheetSolutionText(exercise: DrawExercise): string {
+  if (exercise.beginner && !exercise.moves.length) return 'Chưa có lời giải.';
   let text = exercise.solution.normalize('NFC').trim();
   const sameMoves = (value: string) =>
     value.replace(/[ ·\s]/g, '') === exercise.moves.join('');

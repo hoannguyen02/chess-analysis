@@ -1,20 +1,16 @@
 {
-  "date": "2026-10-29",
-  "scope": "B, C, C*, D individually; these mappings do not infer coverage from another level.",
+  "date": "2026-11-05",
+  "scope": "Active B, C, C*, D after saved user removals, level changes and transfers; mappings do not infer coverage from another level.",
   "method": "Legal replay of actual discoveries throughout each saved line. Preparatory king moves do not count as King clearance. Promotion in a solution is distinguished from promotion that itself uncovers an attack. Geometric tags do not by themselves justify retaining near-duplicates.",
   "levels": {
     "B": {
-      "count": 19,
-      "missingPositions": 5,
+      "count": 24,
+      "missingPositions": 0,
       "aspects": {
         "mover-P": {
           "status": "represented",
           "exerciseIds": [
-            "1f95e7caefa9237a",
             "df7a27315904a833",
-            "8f195eb5e17e51f6",
-            "bfef9477bba315c3",
-            "2c941c0fca87f625",
             "605db1bbb1fa9cc2"
           ],
           "assessment": "Verified by legal replay of the saved solution; this tag alone does not establish instructional quality."
@@ -22,7 +18,6 @@
         "mover-N": {
           "status": "represented",
           "exerciseIds": [
-            "b715e1b3cb3644a1",
             "a0d2e9b76703f002",
             "a9948e12cc09c940",
             "4c42ad8f14a0d069",
@@ -30,29 +25,41 @@
             "c32aeb86261d79e1",
             "a47aeafddfb1266b",
             "bfb60242f4cc9115",
-            "a1ad9410f81616a3"
+            "b07069c015311028",
+            "92b22f0f4da6a18f",
+            "309400c511b2bc0f",
+            "51b6258a7c5e5a7b"
           ],
           "assessment": "Verified by legal replay of the saved solution; this tag alone does not establish instructional quality."
         },
         "mover-B": {
-          "status": "gap",
-          "exerciseIds": [],
-          "assessment": "No retained example verified at this level. Coverage gap; do not fill with an incidental motif or a position outside the level definition."
+          "status": "represented",
+          "exerciseIds": [
+            "0953aa6625d2d073",
+            "471a7ac876440e16",
+            "3ff01cfb3ddd4181",
+            "ae9d43b1c118dddb",
+            "69dbb25d85019a1e"
+          ],
+          "assessment": "Verified by legal replay of the saved solution; this tag alone does not establish instructional quality."
         },
         "mover-R": {
           "status": "represented",
           "exerciseIds": [
-            "4acf9d2a4534e6dc",
-            "eb90320742dca76e",
-            "59d867196a5f620d",
-            "22a9700eeb011cca"
+            "22a9700eeb011cca",
+            "044835b0f98dd68c",
+            "28abfaf127a68955",
+            "02767676b9337285",
+            "eef5583eeab818c6"
           ],
           "assessment": "Verified by legal replay of the saved solution; this tag alone does not establish instructional quality."
         },
         "mover-Q": {
-          "status": "gap",
-          "exerciseIds": [],
-          "assessment": "No retained example verified at this level. Coverage gap; do not fill with an incidental motif or a position outside the level definition."
+          "status": "represented",
+          "exerciseIds": [
+            "b5be9bfe50794952"
+          ],
+          "assessment": "Verified by legal replay of the saved solution; this tag alone does not establish instructional quality."
         },
         "mover-K": {
           "status": "gap",
@@ -62,62 +69,66 @@
         "slider-B": {
           "status": "represented",
           "exerciseIds": [
-            "b715e1b3cb3644a1",
-            "4acf9d2a4534e6dc",
-            "59d867196a5f620d",
             "22a9700eeb011cca",
             "a47aeafddfb1266b",
-            "bfb60242f4cc9115"
+            "bfb60242f4cc9115",
+            "044835b0f98dd68c",
+            "92b22f0f4da6a18f",
+            "b5be9bfe50794952",
+            "28abfaf127a68955",
+            "02767676b9337285",
+            "eef5583eeab818c6"
           ],
           "assessment": "Verified by legal replay of the saved solution; this tag alone does not establish instructional quality."
         },
         "slider-R": {
           "status": "represented",
           "exerciseIds": [
-            "1f95e7caefa9237a",
             "a0d2e9b76703f002",
             "a9948e12cc09c940",
-            "8f195eb5e17e51f6",
-            "bfef9477bba315c3",
-            "2c941c0fca87f625",
-            "a47aeafddfb1266b"
+            "a47aeafddfb1266b",
+            "0953aa6625d2d073",
+            "b07069c015311028",
+            "3ff01cfb3ddd4181",
+            "ae9d43b1c118dddb",
+            "69dbb25d85019a1e"
           ],
           "assessment": "Verified by legal replay of the saved solution; this tag alone does not establish instructional quality."
         },
         "slider-Q": {
           "status": "represented",
           "exerciseIds": [
-            "b715e1b3cb3644a1",
             "df7a27315904a833",
-            "eb90320742dca76e",
             "4c42ad8f14a0d069",
             "80360d633653b13a",
             "c32aeb86261d79e1",
             "605db1bbb1fa9cc2",
-            "a1ad9410f81616a3"
+            "471a7ac876440e16",
+            "92b22f0f4da6a18f",
+            "309400c511b2bc0f",
+            "51b6258a7c5e5a7b"
           ],
           "assessment": "Verified by legal replay of the saved solution; this tag alone does not establish instructional quality."
         },
         "target-P": {
           "status": "represented",
           "exerciseIds": [
-            "b715e1b3cb3644a1",
-            "a47aeafddfb1266b"
+            "a47aeafddfb1266b",
+            "92b22f0f4da6a18f"
           ],
           "assessment": "Verified by legal replay of the saved solution; this tag alone does not establish instructional quality."
         },
         "target-N": {
           "status": "represented",
           "exerciseIds": [
-            "a9948e12cc09c940",
-            "59d867196a5f620d"
+            "a9948e12cc09c940"
           ],
           "assessment": "Verified by legal replay of the saved solution; this tag alone does not establish instructional quality."
         },
         "target-B": {
           "status": "represented",
           "exerciseIds": [
-            "b715e1b3cb3644a1"
+            "b07069c015311028"
           ],
           "assessment": "Verified by legal replay of the saved solution; this tag alone does not establish instructional quality."
         },
@@ -125,96 +136,111 @@
           "status": "represented",
           "exerciseIds": [
             "a0d2e9b76703f002",
-            "22a9700eeb011cca"
+            "22a9700eeb011cca",
+            "0953aa6625d2d073",
+            "b5be9bfe50794952"
           ],
           "assessment": "Verified by legal replay of the saved solution; this tag alone does not establish instructional quality."
         },
         "target-Q": {
           "status": "represented",
           "exerciseIds": [
-            "4c42ad8f14a0d069"
+            "4c42ad8f14a0d069",
+            "309400c511b2bc0f"
           ],
           "assessment": "Verified by legal replay of the saved solution; this tag alone does not establish instructional quality."
         },
         "target-K": {
           "status": "represented",
           "exerciseIds": [
-            "1f95e7caefa9237a",
-            "4acf9d2a4534e6dc",
             "df7a27315904a833",
-            "eb90320742dca76e",
-            "8f195eb5e17e51f6",
-            "bfef9477bba315c3",
             "80360d633653b13a",
             "c32aeb86261d79e1",
-            "2c941c0fca87f625",
             "a47aeafddfb1266b",
             "605db1bbb1fa9cc2",
             "bfb60242f4cc9115",
-            "a1ad9410f81616a3"
+            "044835b0f98dd68c",
+            "471a7ac876440e16",
+            "3ff01cfb3ddd4181",
+            "ae9d43b1c118dddb",
+            "69dbb25d85019a1e",
+            "28abfaf127a68955",
+            "02767676b9337285",
+            "eef5583eeab818c6",
+            "51b6258a7c5e5a7b"
           ],
           "assessment": "Verified by legal replay of the saved solution; this tag alone does not establish instructional quality."
         },
         "white": {
           "status": "represented",
           "exerciseIds": [
-            "1f95e7caefa9237a",
-            "b715e1b3cb3644a1",
             "a0d2e9b76703f002",
-            "8f195eb5e17e51f6",
             "4c42ad8f14a0d069",
-            "bfef9477bba315c3",
             "80360d633653b13a",
             "22a9700eeb011cca",
-            "2c941c0fca87f625",
             "a47aeafddfb1266b",
             "605db1bbb1fa9cc2",
             "bfb60242f4cc9115",
-            "a1ad9410f81616a3"
+            "044835b0f98dd68c",
+            "b07069c015311028",
+            "3ff01cfb3ddd4181",
+            "92b22f0f4da6a18f",
+            "ae9d43b1c118dddb",
+            "b5be9bfe50794952",
+            "69dbb25d85019a1e",
+            "28abfaf127a68955",
+            "eef5583eeab818c6",
+            "51b6258a7c5e5a7b"
           ],
           "assessment": "Verified by legal replay of the saved solution; this tag alone does not establish instructional quality."
         },
         "black": {
           "status": "represented",
           "exerciseIds": [
-            "4acf9d2a4534e6dc",
             "df7a27315904a833",
             "a9948e12cc09c940",
-            "eb90320742dca76e",
-            "59d867196a5f620d",
-            "c32aeb86261d79e1"
+            "c32aeb86261d79e1",
+            "0953aa6625d2d073",
+            "471a7ac876440e16",
+            "309400c511b2bc0f",
+            "02767676b9337285"
           ],
           "assessment": "Verified by legal replay of the saved solution; this tag alone does not establish instructional quality."
         },
         "quiet-move": {
           "status": "represented",
           "exerciseIds": [
-            "4acf9d2a4534e6dc",
             "a0d2e9b76703f002",
             "df7a27315904a833",
             "a9948e12cc09c940",
             "4c42ad8f14a0d069",
             "22a9700eeb011cca",
             "605db1bbb1fa9cc2",
-            "bfb60242f4cc9115"
+            "bfb60242f4cc9115",
+            "0953aa6625d2d073",
+            "471a7ac876440e16",
+            "b07069c015311028",
+            "3ff01cfb3ddd4181",
+            "ae9d43b1c118dddb",
+            "b5be9bfe50794952",
+            "309400c511b2bc0f",
+            "69dbb25d85019a1e",
+            "02767676b9337285",
+            "eef5583eeab818c6"
           ],
           "assessment": "Verified by legal replay of the saved solution; this tag alone does not establish instructional quality."
         },
         "capture": {
           "status": "represented",
           "exerciseIds": [
-            "1f95e7caefa9237a",
-            "b715e1b3cb3644a1",
             "df7a27315904a833",
-            "eb90320742dca76e",
-            "8f195eb5e17e51f6",
-            "bfef9477bba315c3",
-            "59d867196a5f620d",
             "80360d633653b13a",
             "c32aeb86261d79e1",
-            "2c941c0fca87f625",
             "a47aeafddfb1266b",
-            "a1ad9410f81616a3"
+            "044835b0f98dd68c",
+            "92b22f0f4da6a18f",
+            "28abfaf127a68955",
+            "51b6258a7c5e5a7b"
           ],
           "assessment": "Verified by legal replay of the saved solution; this tag alone does not establish instructional quality."
         },
@@ -234,37 +260,34 @@
         "pawn-capture": {
           "status": "represented",
           "exerciseIds": [
-            "1f95e7caefa9237a",
-            "df7a27315904a833",
-            "8f195eb5e17e51f6",
-            "bfef9477bba315c3",
-            "2c941c0fca87f625"
+            "df7a27315904a833"
           ],
           "assessment": "Verified by legal replay of the saved solution; this tag alone does not establish instructional quality."
         },
         "check": {
           "status": "represented",
           "exerciseIds": [
-            "1f95e7caefa9237a",
-            "4acf9d2a4534e6dc",
             "df7a27315904a833",
-            "eb90320742dca76e",
-            "8f195eb5e17e51f6",
-            "bfef9477bba315c3",
             "80360d633653b13a",
             "c32aeb86261d79e1",
-            "2c941c0fca87f625",
             "a47aeafddfb1266b",
             "605db1bbb1fa9cc2",
             "bfb60242f4cc9115",
-            "a1ad9410f81616a3"
+            "044835b0f98dd68c",
+            "471a7ac876440e16",
+            "3ff01cfb3ddd4181",
+            "ae9d43b1c118dddb",
+            "69dbb25d85019a1e",
+            "28abfaf127a68955",
+            "02767676b9337285",
+            "eef5583eeab818c6",
+            "51b6258a7c5e5a7b"
           ],
           "assessment": "Verified by legal replay of the saved solution; this tag alone does not establish instructional quality."
         },
         "double-check": {
           "status": "represented",
           "exerciseIds": [
-            "1f95e7caefa9237a",
             "df7a27315904a833",
             "c32aeb86261d79e1",
             "bfb60242f4cc9115"
@@ -274,7 +297,6 @@
         "nonchecking-attack": {
           "status": "represented",
           "exerciseIds": [
-            "59d867196a5f620d",
             "a47aeafddfb1266b"
           ],
           "assessment": "Verified by legal replay of the saved solution; this tag alone does not establish instructional quality."
@@ -282,15 +304,15 @@
         "file": {
           "status": "represented",
           "exerciseIds": [
-            "1f95e7caefa9237a",
-            "b715e1b3cb3644a1",
             "a0d2e9b76703f002",
             "df7a27315904a833",
             "a9948e12cc09c940",
-            "8f195eb5e17e51f6",
-            "bfef9477bba315c3",
             "a47aeafddfb1266b",
-            "a1ad9410f81616a3"
+            "471a7ac876440e16",
+            "b07069c015311028",
+            "3ff01cfb3ddd4181",
+            "92b22f0f4da6a18f",
+            "69dbb25d85019a1e"
           ],
           "assessment": "Verified by legal replay of the saved solution; this tag alone does not establish instructional quality."
         },
@@ -298,40 +320,44 @@
           "status": "represented",
           "exerciseIds": [
             "df7a27315904a833",
-            "2c941c0fca87f625"
+            "0953aa6625d2d073",
+            "ae9d43b1c118dddb",
+            "51b6258a7c5e5a7b"
           ],
           "assessment": "Verified by legal replay of the saved solution; this tag alone does not establish instructional quality."
         },
         "diagonal": {
           "status": "represented",
           "exerciseIds": [
-            "b715e1b3cb3644a1",
-            "4acf9d2a4534e6dc",
-            "eb90320742dca76e",
             "4c42ad8f14a0d069",
-            "59d867196a5f620d",
             "80360d633653b13a",
             "22a9700eeb011cca",
             "c32aeb86261d79e1",
             "a47aeafddfb1266b",
             "605db1bbb1fa9cc2",
-            "bfb60242f4cc9115"
+            "bfb60242f4cc9115",
+            "044835b0f98dd68c",
+            "92b22f0f4da6a18f",
+            "b5be9bfe50794952",
+            "309400c511b2bc0f",
+            "28abfaf127a68955",
+            "02767676b9337285",
+            "eef5583eeab818c6"
           ],
           "assessment": "Verified by legal replay of the saved solution; this tag alone does not establish instructional quality."
         },
         "recapture-prevented": {
           "status": "represented",
           "exerciseIds": [
-            "1f95e7caefa9237a",
             "df7a27315904a833",
-            "8f195eb5e17e51f6",
-            "bfef9477bba315c3",
             "80360d633653b13a",
             "c32aeb86261d79e1",
-            "2c941c0fca87f625",
             "a47aeafddfb1266b",
             "bfb60242f4cc9115",
-            "a1ad9410f81616a3"
+            "471a7ac876440e16",
+            "3ff01cfb3ddd4181",
+            "eef5583eeab818c6",
+            "51b6258a7c5e5a7b"
           ],
           "assessment": "Verified by legal replay of the saved solution; this tag alone does not establish instructional quality. Legal recapture becomes possible when the exposed checking slider is removed; this counterfactual is distinct from exhaustive tactical verification."
         },
@@ -368,8 +394,8 @@
       }
     },
     "C": {
-      "count": 22,
-      "missingPositions": 2,
+      "count": 24,
+      "missingPositions": 0,
       "aspects": {
         "mover-P": {
           "status": "represented",
@@ -389,7 +415,9 @@
             "89edd5609c6b96d5",
             "aabef71fc713b171",
             "ee1a0c1a5f6fcfad",
-            "e156b41271bd5b4d"
+            "e156b41271bd5b4d",
+            "043fa99a6866848c",
+            "765f315a6674451f"
           ],
           "assessment": "Verified by legal replay of the saved solution; this tag alone does not establish instructional quality."
         },
@@ -450,7 +478,8 @@
             "808ff4b820ad89be",
             "05b127856d986ac1",
             "7dc5f1cef07069b8",
-            "e156b41271bd5b4d"
+            "e156b41271bd5b4d",
+            "765f315a6674451f"
           ],
           "assessment": "Verified by legal replay of the saved solution; this tag alone does not establish instructional quality."
         },
@@ -468,7 +497,8 @@
             "aabef71fc713b171",
             "edc75c8164ac66f8",
             "e156b41271bd5b4d",
-            "f597cd96e9f20a30"
+            "f597cd96e9f20a30",
+            "043fa99a6866848c"
           ],
           "assessment": "Verified by legal replay of the saved solution; this tag alone does not establish instructional quality."
         },
@@ -528,7 +558,9 @@
           "exerciseIds": [
             "6e399180d48ad8bd",
             "d45cd7a63d7f0cae",
-            "d1a0bb978be3430a"
+            "d1a0bb978be3430a",
+            "043fa99a6866848c",
+            "765f315a6674451f"
           ],
           "assessment": "Verified by legal replay of the saved solution; this tag alone does not establish instructional quality."
         },
@@ -546,7 +578,9 @@
             "05b127856d986ac1",
             "edc75c8164ac66f8",
             "7dc5f1cef07069b8",
-            "f597cd96e9f20a30"
+            "f597cd96e9f20a30",
+            "043fa99a6866848c",
+            "765f315a6674451f"
           ],
           "assessment": "Verified by legal replay of the saved solution; this tag alone does not establish instructional quality."
         },
@@ -577,7 +611,8 @@
             "c0209e56ab19cf19",
             "e156b41271bd5b4d",
             "65e28198bca55561",
-            "f597cd96e9f20a30"
+            "f597cd96e9f20a30",
+            "765f315a6674451f"
           ],
           "assessment": "Verified by legal replay of the saved solution; this tag alone does not establish instructional quality."
         },
@@ -597,7 +632,8 @@
             "05b127856d986ac1",
             "edc75c8164ac66f8",
             "7dc5f1cef07069b8",
-            "e156b41271bd5b4d"
+            "e156b41271bd5b4d",
+            "043fa99a6866848c"
           ],
           "assessment": "Verified by legal replay of the saved solution; this tag alone does not establish instructional quality."
         },
@@ -626,14 +662,18 @@
           "exerciseIds": [
             "6e399180d48ad8bd",
             "d45cd7a63d7f0cae",
-            "d1a0bb978be3430a"
+            "d1a0bb978be3430a",
+            "043fa99a6866848c",
+            "765f315a6674451f"
           ],
           "assessment": "Verified by legal replay of the saved solution; this tag alone does not establish instructional quality."
         },
         "double-check": {
-          "status": "gap",
-          "exerciseIds": [],
-          "assessment": "No retained example verified at this level. Coverage gap; do not fill with an incidental motif or a position outside the level definition."
+          "status": "represented",
+          "exerciseIds": [
+            "043fa99a6866848c"
+          ],
+          "assessment": "Verified by legal replay of the saved solution; this tag alone does not establish instructional quality."
         },
         "nonchecking-attack": {
           "status": "represented",
@@ -654,7 +694,8 @@
             "05b127856d986ac1",
             "7dc5f1cef07069b8",
             "e156b41271bd5b4d",
-            "f597cd96e9f20a30"
+            "f597cd96e9f20a30",
+            "765f315a6674451f"
           ],
           "assessment": "Verified by legal replay of the saved solution; this tag alone does not establish instructional quality."
         },
@@ -680,7 +721,8 @@
             "edc75c8164ac66f8",
             "ee1a0c1a5f6fcfad",
             "c0209e56ab19cf19",
-            "65e28198bca55561"
+            "65e28198bca55561",
+            "043fa99a6866848c"
           ],
           "assessment": "Verified by legal replay of the saved solution; this tag alone does not establish instructional quality."
         },
@@ -723,12 +765,15 @@
       }
     },
     "C*": {
-      "count": 4,
-      "missingPositions": 20,
+      "count": 10,
+      "missingPositions": 14,
       "aspects": {
         "mover-P": {
           "status": "represented",
           "exerciseIds": [
+            "8f195eb5e17e51f6",
+            "bfef9477bba315c3",
+            "2c941c0fca87f625",
             "7411f04447e3aaec"
           ],
           "assessment": "Verified by legal replay of the saved solution; this tag alone does not establish instructional quality."
@@ -736,6 +781,7 @@
         "mover-N": {
           "status": "represented",
           "exerciseIds": [
+            "8bc8a1916e336e16",
             "9a6890d28d1fda55"
           ],
           "assessment": "Verified by legal replay of the saved solution; this tag alone does not establish instructional quality."
@@ -748,9 +794,12 @@
           "assessment": "Verified by legal replay of the saved solution; this tag alone does not establish instructional quality."
         },
         "mover-R": {
-          "status": "gap",
-          "exerciseIds": [],
-          "assessment": "No retained example verified at this level. Coverage gap; do not fill with an incidental motif or a position outside the level definition."
+          "status": "represented",
+          "exerciseIds": [
+            "4acf9d2a4534e6dc",
+            "59d867196a5f620d"
+          ],
+          "assessment": "Verified by legal replay of the saved solution; this tag alone does not establish instructional quality."
         },
         "mover-Q": {
           "status": "represented",
@@ -765,13 +814,21 @@
           "assessment": "No retained example verified at this level. Coverage gap; do not fill with an incidental motif or a position outside the level definition."
         },
         "slider-B": {
-          "status": "gap",
-          "exerciseIds": [],
-          "assessment": "No retained example verified at this level. Coverage gap; do not fill with an incidental motif or a position outside the level definition."
+          "status": "represented",
+          "exerciseIds": [
+            "4acf9d2a4534e6dc",
+            "59d867196a5f620d",
+            "8bc8a1916e336e16"
+          ],
+          "assessment": "Verified by legal replay of the saved solution; this tag alone does not establish instructional quality."
         },
         "slider-R": {
           "status": "represented",
           "exerciseIds": [
+            "8f195eb5e17e51f6",
+            "bfef9477bba315c3",
+            "2c941c0fca87f625",
+            "8bc8a1916e336e16",
             "9a6890d28d1fda55",
             "67984d20afcafdb2"
           ],
@@ -791,9 +848,12 @@
           "assessment": "No retained example verified at this level. Coverage gap; do not fill with an incidental motif or a position outside the level definition."
         },
         "target-N": {
-          "status": "gap",
-          "exerciseIds": [],
-          "assessment": "No retained example verified at this level. Coverage gap; do not fill with an incidental motif or a position outside the level definition."
+          "status": "represented",
+          "exerciseIds": [
+            "59d867196a5f620d",
+            "8bc8a1916e336e16"
+          ],
+          "assessment": "Verified by legal replay of the saved solution; this tag alone does not establish instructional quality."
         },
         "target-B": {
           "status": "gap",
@@ -817,19 +877,31 @@
         "target-K": {
           "status": "represented",
           "exerciseIds": [
+            "4acf9d2a4534e6dc",
+            "8f195eb5e17e51f6",
+            "bfef9477bba315c3",
+            "2c941c0fca87f625",
+            "8bc8a1916e336e16",
             "7411f04447e3aaec",
             "4a44ccadcb4b7d83"
           ],
           "assessment": "Verified by legal replay of the saved solution; this tag alone does not establish instructional quality."
         },
         "white": {
-          "status": "gap",
-          "exerciseIds": [],
-          "assessment": "No retained example verified at this level. Coverage gap; do not fill with an incidental motif or a position outside the level definition."
+          "status": "represented",
+          "exerciseIds": [
+            "8f195eb5e17e51f6",
+            "bfef9477bba315c3",
+            "2c941c0fca87f625",
+            "8bc8a1916e336e16"
+          ],
+          "assessment": "Verified by legal replay of the saved solution; this tag alone does not establish instructional quality."
         },
         "black": {
           "status": "represented",
           "exerciseIds": [
+            "4acf9d2a4534e6dc",
+            "59d867196a5f620d",
             "9a6890d28d1fda55",
             "7411f04447e3aaec",
             "67984d20afcafdb2",
@@ -840,6 +912,7 @@
         "quiet-move": {
           "status": "represented",
           "exerciseIds": [
+            "4acf9d2a4534e6dc",
             "9a6890d28d1fda55",
             "67984d20afcafdb2",
             "4a44ccadcb4b7d83"
@@ -849,6 +922,11 @@
         "capture": {
           "status": "represented",
           "exerciseIds": [
+            "8f195eb5e17e51f6",
+            "bfef9477bba315c3",
+            "59d867196a5f620d",
+            "2c941c0fca87f625",
+            "8bc8a1916e336e16",
             "7411f04447e3aaec"
           ],
           "assessment": "Verified by legal replay of the saved solution; this tag alone does not establish instructional quality."
@@ -866,6 +944,9 @@
         "pawn-capture": {
           "status": "represented",
           "exerciseIds": [
+            "8f195eb5e17e51f6",
+            "bfef9477bba315c3",
+            "2c941c0fca87f625",
             "7411f04447e3aaec"
           ],
           "assessment": "Verified by legal replay of the saved solution; this tag alone does not establish instructional quality."
@@ -873,24 +954,36 @@
         "check": {
           "status": "represented",
           "exerciseIds": [
+            "4acf9d2a4534e6dc",
+            "8f195eb5e17e51f6",
+            "bfef9477bba315c3",
+            "2c941c0fca87f625",
+            "8bc8a1916e336e16",
             "7411f04447e3aaec",
             "4a44ccadcb4b7d83"
           ],
           "assessment": "Verified by legal replay of the saved solution; this tag alone does not establish instructional quality."
         },
         "double-check": {
-          "status": "gap",
-          "exerciseIds": [],
-          "assessment": "No retained example verified at this level. Coverage gap; do not fill with an incidental motif or a position outside the level definition."
+          "status": "represented",
+          "exerciseIds": [
+            "8bc8a1916e336e16"
+          ],
+          "assessment": "Verified by legal replay of the saved solution; this tag alone does not establish instructional quality."
         },
         "nonchecking-attack": {
-          "status": "gap",
-          "exerciseIds": [],
-          "assessment": "No retained example verified at this level. Coverage gap; do not fill with an incidental motif or a position outside the level definition."
+          "status": "represented",
+          "exerciseIds": [
+            "59d867196a5f620d"
+          ],
+          "assessment": "Verified by legal replay of the saved solution; this tag alone does not establish instructional quality."
         },
         "file": {
           "status": "represented",
           "exerciseIds": [
+            "8f195eb5e17e51f6",
+            "bfef9477bba315c3",
+            "8bc8a1916e336e16",
             "67984d20afcafdb2"
           ],
           "assessment": "Verified by legal replay of the saved solution; this tag alone does not establish instructional quality."
@@ -898,6 +991,7 @@
         "rank": {
           "status": "represented",
           "exerciseIds": [
+            "2c941c0fca87f625",
             "9a6890d28d1fda55",
             "4a44ccadcb4b7d83"
           ],
@@ -906,6 +1000,9 @@
         "diagonal": {
           "status": "represented",
           "exerciseIds": [
+            "4acf9d2a4534e6dc",
+            "59d867196a5f620d",
+            "8bc8a1916e336e16",
             "7411f04447e3aaec"
           ],
           "assessment": "Verified by legal replay of the saved solution; this tag alone does not establish instructional quality."
@@ -913,6 +1010,10 @@
         "recapture-prevented": {
           "status": "represented",
           "exerciseIds": [
+            "8f195eb5e17e51f6",
+            "bfef9477bba315c3",
+            "2c941c0fca87f625",
+            "8bc8a1916e336e16",
             "7411f04447e3aaec",
             "4a44ccadcb4b7d83"
           ],
@@ -1328,5 +1429,118 @@
         }
       }
     }
-  }
+  },
+  "ownerDecisions": [
+    {
+      "id": "790495c02c2b9d3643f661ae",
+      "reference": {
+        "scope": "/discovered-attack",
+        "fen": "3rr3/p2kq1b1/2p1pn2/1Q3pBp/3P2p1/8/PPP2PPP/R2R2K1 w - - 0 24",
+        "baseLevel": "B"
+      },
+      "level": null,
+      "removed": true
+    },
+    {
+      "id": "3186a18081cee22478bb680d",
+      "reference": {
+        "scope": "/discovered-attack",
+        "fen": "4k2r/1p1bppbp/p4np1/q7/3Q2P1/1PN4P/P1P2PB1/2KR3R w k - 1 17",
+        "baseLevel": "B"
+      },
+      "level": null,
+      "removed": true
+    },
+    {
+      "id": "4a6ee43786971a1993f0b5db",
+      "reference": {
+        "scope": "/discovered-attack",
+        "fen": "5rk1/p2Q4/6P1/6p1/1ppp4/1P3b2/P6K/1B4r1 b - - 2 41",
+        "baseLevel": "B"
+      },
+      "level": "C*",
+      "removed": false
+    },
+    {
+      "id": "3450ae0d747f2952a24ef3ba",
+      "reference": {
+        "scope": "/discovered-attack",
+        "fen": "5nk1/3b1p1p/3p1Q2/2pP2PN/2P2P1p/R4N1q/4K3/5r2 b - - 3 40",
+        "baseLevel": "B"
+      },
+      "level": "B",
+      "removed": false,
+      "destinationScope": "/tactic-positions?theme=exposedKing"
+    },
+    {
+      "id": "aaacd000322c79a7886afaf8",
+      "reference": {
+        "scope": "/discovered-attack",
+        "fen": "3r1rk1/1p3p2/p1b2q1p/5ppn/6RP/1BN1Q3/PPP2P2/2K3R1 w - - 0 26",
+        "baseLevel": "B"
+      },
+      "level": "C*",
+      "removed": false
+    },
+    {
+      "id": "5faae4e8a393de39bcb59ca6",
+      "reference": {
+        "scope": "/discovered-attack",
+        "fen": "r1b1r3/pp3k2/2pq2pB/8/4p1PQ/2Nn4/PP3P1P/3R1RK1 w - - 1 20",
+        "baseLevel": "B"
+      },
+      "level": "C*",
+      "removed": false
+    },
+    {
+      "id": "331571510f0b2d474bcf2f98",
+      "reference": {
+        "scope": "/discovered-attack",
+        "fen": "2r3k1/3b1pb1/p5p1/3Pr2p/2p1N1nP/2N3P1/P7/2KRRB2 b - - 0 30",
+        "baseLevel": "B"
+      },
+      "level": "C*",
+      "removed": false
+    },
+    {
+      "id": "13e5a45a7c73f6edb2fea794",
+      "reference": {
+        "scope": "/discovered-attack",
+        "fen": "7Q/5p2/6p1/2r3kp/3pR3/2qP3P/5PK1/8 w - - 0 39",
+        "baseLevel": "B"
+      },
+      "level": "C*",
+      "removed": false
+    },
+    {
+      "id": "c46d1998d45d3893a8daa92b",
+      "reference": {
+        "scope": "/discovered-attack",
+        "fen": "4r1k1/pn6/1p4pB/2qP4/6N1/7P/P4QP1/7K w - - 11 38",
+        "baseLevel": "B"
+      },
+      "level": null,
+      "removed": true
+    },
+    {
+      "id": "ef2f03c907850ed058f7ed32",
+      "reference": {
+        "scope": "/discovered-attack",
+        "fen": "r2kr3/p1p3pp/Q1Pn1q2/2B5/8/6P1/P4P1P/R2R2K1 w - - 1 28",
+        "baseLevel": "B"
+      },
+      "level": null,
+      "removed": true
+    },
+    {
+      "id": "0df4c6b1c9c64d1a3f0ab88c",
+      "reference": {
+        "scope": "/discovered-attack",
+        "fen": "4nr2/pp3k1p/2b1Np2/6p1/6r1/1BR5/PP3P1P/4R1K1 w - - 0 27",
+        "baseLevel": "B"
+      },
+      "level": "C*",
+      "removed": false
+    }
+  ]
 }

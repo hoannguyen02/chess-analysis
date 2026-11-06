@@ -7,7 +7,11 @@ const { renderToStaticMarkup } = require('react-dom/server');
 function load(path, resolve = require) {
   const mod = { exports: {} };
   const code = ts.transpileModule(fs.readFileSync(path, 'utf8'), {
-    compilerOptions: { module: ts.ModuleKind.CommonJS, jsx: ts.JsxEmit.ReactJSX, esModuleInterop: true },
+    compilerOptions: {
+      module: ts.ModuleKind.CommonJS,
+      jsx: ts.JsxEmit.ReactJSX,
+      esModuleInterop: true,
+    },
   }).outputText;
   new Function('module', 'exports', 'require', code)(mod, mod.exports, resolve);
   return mod.exports;
@@ -16,8 +20,11 @@ const pages = load('src/lib/server/private-hub.ts').privatePages;
 function render(items, query = '', group = '') {
   const state = [query, group];
   const Library = load('src/components/PracticeLibrary.tsx', (name) => {
-    if (name === 'react') return { ...React, useState: () => [state.shift(), () => {}] };
-    if (name === 'next/link') return ({ children, href }) => React.createElement('a', { href }, children);
+    if (name === 'react')
+      return { ...React, useState: () => [state.shift(), () => {}] };
+    if (name === 'next/link')
+      return ({ children, href }) =>
+        React.createElement('a', { href }, children);
     if (name.endsWith('.css')) return {};
     return require(name);
   }).default;
@@ -40,4 +47,21 @@ test('a single unknown group does not produce redundant navigation or heading', 
   const html = render([{ href: '/new', title: 'New', description: '' }]);
   assert.doesNotMatch(html, /<h2>Khác|Nhóm nội dung/);
   assert.match(html, /href="\/new"/);
+});
+test('King-attack menu opens manual practice with a protected worksheet source', () => {
+  const link = pages.find(
+    (page) => page.href === '/tactic-positions?theme=exposedKing'
+  );
+  assert.ok(link);
+  assert.equal(link.group, 'Chiến thuật');
+  assert.equal(
+    link.worksheetEndpoint,
+    '/api/manual-tactic-exercises?theme=exposedKing'
+  );
+  assert.match(link.title, /Tấn công Vua yếu/);
+  assert.match(link.description, /thủ công/);
+  assert.match(
+    render(pages, 'tan cong vua'),
+    /href="\/tactic-positions\?theme=exposedKing"/
+  );
 });

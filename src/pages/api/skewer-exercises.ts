@@ -30,33 +30,38 @@ export default async function handler(
     practicePlayers,
     practiceGameOpening,
   } = await import('@/lib/server/practice-game-caption');
-  return res.status(200).json({
-    hubPath: privateHubPath(),
-    categories: [
-      {
-        id: 'skewer',
-        title: 'Đòn xiên',
-        description:
-          'Tấn công quân phía trước để khai thác quân phía sau trên cùng một đường. Bắt đầu với Nhập môn, rồi chọn cấp độ A, B, C, C* hoặc D.',
-        exercises: (
-          [
-            ...beginnerExercises,
-            ...[...queenIntroExercises, ...queenExercises].map(
-              (exercise, i) => ({
-                ...exercise,
-                title: `Xiên Hậu · ${i + 1}`,
-              })
-            ),
-            ...exercises,
-          ] as DrawExercise[]
-        ).map((exercise) => ({
-          ...exercise,
-          gameCaption: practiceGameCaption(exercise.gameReference),
-          gameOpening: practiceGameOpening(exercise.gameReference),
-          playerTitle: practicePlayerTitle(exercise.gameReference),
-          players: practicePlayers(exercise.gameReference),
-        })),
-      },
-    ],
-  });
+  const { includeManualExercises } = await import(
+    '@/lib/server/manual-tactics'
+  );
+  return res.status(200).json(
+    await includeManualExercises('/skewer', {
+      hubPath: privateHubPath(),
+      categories: [
+        {
+          id: 'skewer',
+          title: 'Đòn xiên',
+          description:
+            'Tấn công quân phía trước để khai thác quân phía sau trên cùng một đường. Bắt đầu với Nhập môn, rồi chọn cấp độ A, B, C, C* hoặc D.',
+          exercises: (
+            [
+              ...beginnerExercises,
+              ...[...queenIntroExercises, ...queenExercises].map(
+                (exercise, i) => ({
+                  ...exercise,
+                  title: `Xiên Hậu · ${i + 1}`,
+                })
+              ),
+              ...exercises,
+            ] as DrawExercise[]
+          ).map((exercise) => ({
+            ...exercise,
+            gameCaption: practiceGameCaption(exercise.gameReference),
+            gameOpening: practiceGameOpening(exercise.gameReference),
+            playerTitle: practicePlayerTitle(exercise.gameReference),
+            players: practicePlayers(exercise.gameReference),
+          })),
+        },
+      ],
+    })
+  );
 }

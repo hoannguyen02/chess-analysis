@@ -1,5 +1,8 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import { drawThemeLinks } from '@/lib/chess/draw-practice-view';
+import {
+  drawThemeLinks,
+  drawThemeRoutePaths,
+} from '@/lib/chess/draw-practice-view';
 import { requirePracticeAccess } from './practice-access';
 import { privateHubPath } from './private-hub';
 
@@ -32,7 +35,7 @@ export function createDrawCategoryHandler(categoryId: string) {
           const reference = references.gameReference(exercise.fen);
           return {
             ...exercise,
-            gameReference: reference ?? null,
+            gameReference: reference,
             gameCaption: captions.practiceGameCaption(reference),
             gameOpening: captions.practiceGameOpening(reference),
             playerTitle: captions.practicePlayerTitle(reference),
@@ -41,10 +44,18 @@ export function createDrawCategoryHandler(categoryId: string) {
         }),
       },
     ];
-    return res.status(200).json({
-      hubPath: privateHubPath(),
-      categories,
-      themeLinks: drawThemeLinks(practice.drawCategories),
+    const { includeManualExercises } = await import(
+      '@/lib/server/manual-tactics'
+    );
+    const adjustedThemes = await includeManualExercises('/draw', {
+      categories: practice.drawCategories,
     });
+    return res.status(200).json(
+      await includeManualExercises(drawThemeRoutePaths[categoryId], {
+        hubPath: privateHubPath(),
+        categories,
+        themeLinks: drawThemeLinks(adjustedThemes.categories),
+      })
+    );
   };
 }

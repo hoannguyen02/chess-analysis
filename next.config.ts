@@ -1,9 +1,23 @@
 import type { NextConfig } from 'next';
 import { PHASE_DEVELOPMENT_SERVER } from 'next/constants';
 
+const beginnerSourceFiles = [
+  './src/lib/server/*-exercises.json',
+  './src/lib/server/*-game-sources.json',
+  './src/lib/server/queen-skewer-*.json',
+  './src/lib/server/*-beginner-exercises.json',
+  './src/lib/chess/*-exercises.json',
+  './scripts/fixtures/*/published.json',
+];
+
 const nextConfig: NextConfig = {
   /* config options here */
   reactStrictMode: true,
+  // The shared Beginner importer discovers registered topic JSON by convention.
+  outputFileTracingIncludes: {
+    '/api/beginner-tactic-candidates': beginnerSourceFiles,
+    '/api/fork-exercises': beginnerSourceFiles,
+  },
   i18n: {
     locales: ['en', 'vi'], // Supported locales
     defaultLocale: 'en', // Default locale

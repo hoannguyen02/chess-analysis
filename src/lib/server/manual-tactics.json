@@ -1,0 +1,1359 @@
+[
+  {
+    "themeId": "exposedKing",
+    "level": "D",
+    "fen": "2r2rk1/2q2pp1/p2bp3/1p1b2Qp/2nN4/P2B1P1P/1PP2BP1/1K1RR3 b - - 5 21",
+    "goal": "win",
+    "moves": [
+      "Nxb2",
+      "Kxb2",
+      "Qc3+",
+      "Kb1",
+      "Bxa3",
+      "Qc1",
+      "Bxc1"
+    ],
+    "alternativeLines": [
+      [
+        "Nxb2",
+        "Nf5",
+        "exf5",
+        "Bd4",
+        "f6",
+        "Qxf5",
+        "Nxd3",
+        "Qxd5+",
+        "Rf7",
+        "cxd3",
+        "Qc2+",
+        "Ka1",
+        "Bxa3"
+      ]
+    ],
+    "solution": "",
+    "title": "Tấn công Vua yếu · Thế cờ tự thêm",
+    "headers": {
+      "Event": "46th Olympiad 2026",
+      "Site": "Samarkand UZB",
+      "Date": "2026.09.16",
+      "Round": "1.6",
+      "White": "Lam,Chun Yung Samuel",
+      "Black": "Van Wely,L",
+      "Result": "0-1",
+      "Board": "2",
+      "TimeControl": "40/5400:1800+30",
+      "WhiteTitle": "FM",
+      "BlackTitle": "GM",
+      "WhiteElo": "2255",
+      "BlackElo": "2643",
+      "ECO": "B90",
+      "Opening": "Sicilian",
+      "Variation": "Najdorf",
+      "WhiteTeam": "Hong Kong, China",
+      "BlackTeam": "Netherlands",
+      "WhiteFideId": "6004431",
+      "BlackFideId": "1000268",
+      "EventDate": "2026.09.16",
+      "EventType": "team",
+      "SourceTitle": "The Week in Chess 1663",
+      "Source": "Mark Crowther",
+      "SourceDate": "2026.09.21"
+    },
+    "gameOpening": "Khai cuộc: Sicilian: Najdorf · B90",
+    "reference": {
+      "id": "471a7ac876440e16",
+      "kind": "game",
+      "branch": 0,
+      "ply": 41,
+      "collection": "discovery"
+    },
+    "previousMove": {
+      "fen": "2r2rk1/2q2pp1/p2bp3/1p1b2Qp/2nN4/P4P1P/1PP2BP1/1K1RRB2 w - - 4 21",
+      "move": "Bd3"
+    },
+    "id": "82c998d256e56f9d5cd7c2aa",
+    "createdAt": "2026-11-04T18:13:43.143Z",
+    "updatedAt": "2026-11-04T18:49:43.623Z"
+  },
+  {
+    "themeId": "fork",
+    "level": "B",
+    "fen": "5rk1/p1p3n1/8/1p2p3/2n1P1p1/P1P2q2/6Q1/5RRK b - - 1 35",
+    "goal": "material",
+    "moves": [
+      "Qxg2+",
+      "Kxg2",
+      "Ne3+"
+    ],
+    "alternativeLines": [
+      [
+        "Qxg2+",
+        "Rxg2",
+        "Rxf1+"
+      ]
+    ],
+    "solution": "",
+    "title": "Tấn công đôi · Thế cờ tự thêm",
+    "headers": {
+      "Event": "US Open",
+      "Site": "Dallas USA",
+      "Date": "2008.08.06",
+      "Round": "5",
+      "White": "Landaw,M",
+      "Black": "Shabalov,A",
+      "Result": "0-1",
+      "WhiteElo": "2128",
+      "BlackElo": "2611",
+      "ECO": "E27"
+    },
+    "gameOpening": "Khai cuộc: Nimzo-Indian Defense: Sämisch Variation · E27",
+    "reference": {
+      "id": "e48f8058973b2d73",
+      "kind": "game",
+      "branch": 0,
+      "ply": 69,
+      "collection": "fork"
+    },
+    "previousMove": {
+      "fen": "5rk1/p1p3n1/8/1p2p3/2n1P1p1/P1P2q2/6Q1/4R1RK w - - 0 35",
+      "move": "Ref1"
+    },
+    "id": "bb55159a994a90b07270c9c3",
+    "createdAt": "2026-11-05T14:02:49.452Z",
+    "updatedAt": "2026-11-05T14:02:49.452Z"
+  },
+  {
+    "themeId": "discoveredCheck",
+    "level": "C",
+    "fen": "r5k1/1p3pbp/2pp2p1/p3n3/Pq1RP1P1/1PN4P/2P2QB1/R5K1 b - - 0 25",
+    "goal": "material",
+    "moves": [
+      "Nf3+",
+      "Qxf3",
+      "Bxd4+",
+      "Kh1",
+      "Bxc3"
+    ],
+    "alternativeLines": [
+      [
+        "Nf3+",
+        "Bxf3",
+        "Bxd4"
+      ]
+    ],
+    "solution": "",
+    "title": "Chiếu mở · Thế cờ tự thêm",
+    "headers": {
+      "Event": "Novi Sad",
+      "Site": "Novi Sad",
+      "Date": "1979.??.??",
+      "Round": "?",
+      "White": "Buljovcic, Ivan",
+      "Black": "Geller, Efim P",
+      "Result": "0-1",
+      "WhiteElo": "2430",
+      "BlackElo": "2550",
+      "ECO": "C26"
+    },
+    "gameOpening": "Khai cuộc: Vienna Game: Mieses Variation · C26",
+    "reference": {
+      "id": "30522b5abed1cf06",
+      "kind": "game",
+      "branch": 0,
+      "ply": 49,
+      "collection": "fork"
+    },
+    "previousMove": {
+      "fen": "r5k1/1p3pbp/2pp2p1/p3n3/Pq1nP1P1/1PN4P/2P2QB1/R2R2K1 w - - 0 25",
+      "move": "Rxd4"
+    },
+    "id": "50fa1eca68ce59d9e4a88d08",
+    "createdAt": "2026-11-05T14:46:19.633Z",
+    "updatedAt": "2026-11-05T14:46:19.633Z"
+  },
+  {
+    "themeId": "pin",
+    "level": "C",
+    "fen": "6k1/1p3p1p/3p2p1/3Pq3/2P5/8/3Q2PP/rB2RK2 b - - 7 40",
+    "goal": "material",
+    "moves": [
+      "Rxb1",
+      "Rxb1",
+      "Qf5+",
+      "Ke2",
+      "Qxb1"
+    ],
+    "alternativeLines": [],
+    "solution": "",
+    "title": "Đòn ghim · Thế cờ tự thêm",
+    "headers": {
+      "Event": "Dos Hermanas",
+      "Site": "Dos Hermanas",
+      "Date": "1996.??.??",
+      "Round": "9",
+      "White": "Gelfand, Boris",
+      "Black": "Kasparov, Gary",
+      "Result": "0-1",
+      "WhiteElo": "2700",
+      "BlackElo": "2775",
+      "ECO": "A35"
+    },
+    "gameOpening": "Khai cuộc: English Opening: Symmetrical Variation · A30",
+    "reference": {
+      "id": "ca39eae5a9ec1621",
+      "kind": "game",
+      "branch": 0,
+      "ply": 79,
+      "collection": "fork"
+    },
+    "previousMove": {
+      "fen": "6k1/1p3p1p/3p2p1/3Pq3/2P5/8/3QK1PP/rB2R3 w - - 6 40",
+      "move": "Kf1"
+    },
+    "id": "d7d95bf21eb4fc778f29128f",
+    "createdAt": "2026-11-05T15:31:18.634Z",
+    "updatedAt": "2026-11-05T15:33:04.185Z"
+  },
+  {
+    "themeId": "deflection",
+    "level": "C",
+    "fen": "4r3/7k/pbP1pp2/q7/P1Pp4/7P/5PP1/1R1Q2K1 w - - 0 31",
+    "goal": "material",
+    "moves": [
+      "Rxb6",
+      "Qxb6",
+      "Qh5+"
+    ],
+    "alternativeLines": [],
+    "solution": "",
+    "title": "Đánh lạc hướng · Thế cờ tự thêm",
+    "headers": {
+      "Event": "TCh-RUS",
+      "Site": "Sochi RUS",
+      "Date": "2007.05.07",
+      "Round": "6",
+      "White": "Ivanchuk,V",
+      "Black": "Miton,K",
+      "Result": "1-0",
+      "WhiteElo": "2729",
+      "BlackElo": "2653",
+      "ECO": "C92"
+    },
+    "gameOpening": "Khai cuộc: Ruy Lopez: Closed, Flohr System · C92",
+    "reference": {
+      "id": "ec49f8089b57267f",
+      "kind": "game",
+      "branch": 0,
+      "ply": 60,
+      "collection": "fork"
+    },
+    "previousMove": {
+      "fen": "4r1k1/7B/pbP1pp2/q7/P1Pp4/7P/5PP1/1R1Q2K1 b - - 0 30",
+      "move": "Kxh7"
+    },
+    "id": "378ece6d10586cff1018863a",
+    "createdAt": "2026-11-05T15:44:24.597Z",
+    "updatedAt": "2026-11-05T15:44:24.597Z"
+  },
+  {
+    "themeId": "fork",
+    "level": "Beginner",
+    "fen": "8/3k4/8/2K5/8/5p2/5B2/1q6 b - - 3 64",
+    "goal": "material",
+    "moves": [],
+    "alternativeLines": [],
+    "solution": "",
+    "title": "Nhập môn · Tal, Mihail — Van der Wiel, John TH",
+    "headers": {
+      "Event": "Brussels blitz",
+      "Site": "Brussels",
+      "Date": "1987.??.??",
+      "Round": "?",
+      "White": "Tal, Mihail",
+      "Black": "Van der Wiel, John TH",
+      "Result": "0-1",
+      "WhiteElo": "2605",
+      "BlackElo": "2590",
+      "ECO": "B40"
+    },
+    "beginnerOriginalFen": "8/3k4/8/2K5/8/5p2/5B2/1q6 b - - 3 64",
+    "beginnerSourceLevel": "D",
+    "reference": {
+      "id": "3e82acb4376b7033",
+      "kind": "game",
+      "branch": 0,
+      "ply": 127,
+      "collection": "fork"
+    },
+    "previousMove": {
+      "fen": "8/3k4/1K6/8/8/5p2/5B2/1q6 w - - 2 64",
+      "move": "Kc5"
+    },
+    "id": "ddb3c14f685184538fb6ac12",
+    "createdAt": "2026-11-06T03:01:59.727Z",
+    "updatedAt": "2026-11-06T03:01:59.727Z"
+  },
+  {
+    "themeId": "fork",
+    "level": "Beginner",
+    "fen": "8/8/2b5/8/p1p2k2/P7/7K/3R4 w - - 0 89",
+    "goal": "material",
+    "moves": [],
+    "alternativeLines": [],
+    "solution": "",
+    "title": "Nhập môn · Kasparov, Gary — Jussupow, Artur",
+    "headers": {
+      "Event": "Linares",
+      "Site": "Linares",
+      "Date": "1993.??.??",
+      "Round": "3",
+      "White": "Kasparov, Gary",
+      "Black": "Jussupow, Artur",
+      "Result": "1/2-1/2",
+      "WhiteElo": "2805",
+      "BlackElo": "2645",
+      "ECO": "D35"
+    },
+    "beginnerOriginalFen": "8/8/2b5/8/p1p2k2/P7/7K/3R4 w - - 0 89",
+    "beginnerSourceLevel": "C*",
+    "reference": {
+      "id": "1902b13b7903f18e",
+      "kind": "game",
+      "branch": 0,
+      "ply": 176,
+      "collection": "fork"
+    },
+    "previousMove": {
+      "fen": "8/8/2b5/1p6/p1P2k2/P7/7K/3R4 b - - 0 88",
+      "move": "bxc4"
+    },
+    "id": "9bb9e34c2ee7358516e220c4",
+    "createdAt": "2026-11-06T03:01:59.819Z",
+    "updatedAt": "2026-11-06T03:01:59.819Z"
+  },
+  {
+    "themeId": "fork",
+    "level": "Beginner",
+    "fen": "8/3k4/6R1/5K1P/P6P/8/8/4q3 b - - 1 60",
+    "goal": "material",
+    "moves": [],
+    "alternativeLines": [],
+    "solution": "",
+    "title": "Nhập môn · Shabalov,A — Mahesh Chandran,P",
+    "headers": {
+      "Event": "33rd World Open",
+      "Site": "Philadelphia USA",
+      "Date": "2005.07.04",
+      "Round": "9",
+      "White": "Shabalov,A",
+      "Black": "Mahesh Chandran,P",
+      "Result": "0-1",
+      "WhiteElo": "2593",
+      "BlackElo": "2473",
+      "ECO": "C91"
+    },
+    "beginnerOriginalFen": "8/3k4/6R1/5K1P/P6P/8/8/4q3 b - - 1 60",
+    "beginnerSourceLevel": "D",
+    "reference": {
+      "id": "66708223c26afb47",
+      "kind": "game",
+      "branch": 0,
+      "ply": 119,
+      "collection": "fork"
+    },
+    "previousMove": {
+      "fen": "8/3k4/7R/5K1P/P6P/8/8/4q3 w - - 0 60",
+      "move": "Rg6"
+    },
+    "id": "2051372bc34322c3ae9cebc6",
+    "createdAt": "2026-11-06T03:01:59.832Z",
+    "updatedAt": "2026-11-06T03:01:59.832Z"
+  },
+  {
+    "themeId": "fork",
+    "level": "Beginner",
+    "fen": "8/3k3p/2N5/1B6/8/5n1n/1P6/1K6 w - - 0 48",
+    "goal": "material",
+    "moves": [],
+    "alternativeLines": [],
+    "solution": "",
+    "title": "Nhập môn · Carlsen,M — Ivanchuk,V",
+    "headers": {
+      "Event": "XXII Rapid KO",
+      "Site": "Leon ESP",
+      "Date": "2009.06.07",
+      "Round": "2.7",
+      "White": "Carlsen,M",
+      "Black": "Ivanchuk,V",
+      "Result": "1-0",
+      "WhiteElo": "2770",
+      "BlackElo": "2746",
+      "ECO": "A70"
+    },
+    "beginnerOriginalFen": "8/3k3p/2N5/1B6/8/5n1n/1P6/1K6 w - - 0 48",
+    "beginnerSourceLevel": "C*",
+    "reference": {
+      "id": "bfb60242f4cc9115",
+      "kind": "game",
+      "branch": 0,
+      "ply": 94,
+      "collection": "fork"
+    },
+    "previousMove": {
+      "fen": "8/2kR3p/2N5/1B6/8/5n1n/1P6/1K6 b - - 0 47",
+      "move": "Kxd7"
+    },
+    "id": "189df950d3318245b421a340",
+    "createdAt": "2026-11-06T03:01:59.843Z",
+    "updatedAt": "2026-11-06T03:01:59.843Z"
+  },
+  {
+    "themeId": "fork",
+    "level": "Beginner",
+    "fen": "8/8/8/6B1/R6p/P4k1b/4r3/6K1 b - - 4 84",
+    "goal": "material",
+    "moves": [],
+    "alternativeLines": [],
+    "solution": "",
+    "title": "Nhập môn · Illescas Cordoba, Miguel — Kasparov, Gary",
+    "headers": {
+      "Event": "World Cup",
+      "Site": "Barcelona",
+      "Date": "1989.??.??",
+      "Round": "?",
+      "White": "Illescas Cordoba, Miguel",
+      "Black": "Kasparov, Gary",
+      "Result": "0-1",
+      "WhiteElo": "2525",
+      "BlackElo": "2775",
+      "ECO": "B84"
+    },
+    "beginnerOriginalFen": "8/8/8/6B1/R6p/P4k1b/4r3/6K1 b - - 4 84",
+    "beginnerSourceLevel": "A",
+    "reference": {
+      "id": "276ff4248ed22e13",
+      "kind": "game",
+      "branch": 0,
+      "ply": 167,
+      "collection": "fork"
+    },
+    "previousMove": {
+      "fen": "8/8/8/6B1/R6p/P4k1b/4r3/5K2 w - - 3 84",
+      "move": "Kg1"
+    },
+    "id": "a8dc2457abf6afd010275f15",
+    "createdAt": "2026-11-06T03:01:59.913Z",
+    "updatedAt": "2026-11-06T03:01:59.913Z"
+  },
+  {
+    "themeId": "fork",
+    "level": "Beginner",
+    "fen": "8/6Q1/8/3K4/5p2/4k3/3n4/8 w - - 6 79",
+    "goal": "material",
+    "moves": [],
+    "alternativeLines": [],
+    "solution": "",
+    "title": "Nhập môn · Phương án minh họa · Kasparov, Gary — Kramnik, Vladimir",
+    "headers": {
+      "Event": "PCA/Intel-GP",
+      "Site": "Paris",
+      "Date": "1994.??.??",
+      "Round": "3.2",
+      "White": "Kasparov, Gary",
+      "Black": "Kramnik, Vladimir",
+      "Result": "1-0",
+      "WhiteElo": "2810",
+      "BlackElo": "2725",
+      "ECO": "D19"
+    },
+    "beginnerOriginalFen": "8/6Q1/8/3K4/5p2/4k3/3n4/8 w - - 6 79",
+    "beginnerSourceLevel": "C*",
+    "reference": {
+      "id": "bdd1c8e2f287395d",
+      "kind": "game",
+      "branch": 0,
+      "ply": 152,
+      "collection": "fork"
+    },
+    "previousMove": {
+      "fen": "8/6Q1/8/3K4/5p2/4kn2/8/8 b - - 5 78",
+      "move": "Nd2"
+    },
+    "id": "9a731496647626d412b3fca2",
+    "createdAt": "2026-11-06T03:01:59.928Z",
+    "updatedAt": "2026-11-06T03:01:59.928Z"
+  },
+  {
+    "themeId": "fork",
+    "level": "Beginner",
+    "fen": "8/2bP3p/2P5/6k1/b5P1/8/4B1K1/8 b - - 10 73",
+    "goal": "material",
+    "moves": [],
+    "alternativeLines": [],
+    "solution": "",
+    "title": "Nhập môn · Wang,Tianqi — Shabalov,A",
+    "headers": {
+      "Event": "43rd Eastern Open 2016",
+      "Site": "Bethesda USA",
+      "Date": "2016.12.28",
+      "Round": "2.1",
+      "White": "Wang,Tianqi",
+      "Black": "Shabalov,A",
+      "Result": "0-1",
+      "WhiteElo": "2202",
+      "BlackElo": "2563",
+      "ECO": "A48"
+    },
+    "beginnerOriginalFen": "8/2bP3p/2P5/6k1/b5P1/8/4B1K1/8 b - - 10 73",
+    "beginnerSourceLevel": "B",
+    "reference": {
+      "id": "f7e2faaca07d7394",
+      "kind": "game",
+      "branch": 0,
+      "ply": 145,
+      "collection": "fork"
+    },
+    "previousMove": {
+      "fen": "8/2bP3p/2P5/6k1/b5P1/5K2/4B3/8 w - - 9 73",
+      "move": "Kg2"
+    },
+    "id": "457919836d9a8b0d447fd7a5",
+    "createdAt": "2026-11-06T03:01:59.941Z",
+    "updatedAt": "2026-11-06T03:01:59.941Z"
+  },
+  {
+    "themeId": "fork",
+    "level": "Beginner",
+    "fen": "8/8/8/5K2/5p2/r6k/8/6Q1 w - - 6 65",
+    "goal": "material",
+    "moves": [],
+    "alternativeLines": [],
+    "solution": "",
+    "title": "Nhập môn · Phương án minh họa · Ivanchuk,V — Sutovsky,E",
+    "headers": {
+      "Event": "10th World Teams 2015",
+      "Site": "Tsaghkadzor ARM",
+      "Date": "2015.04.22",
+      "Round": "4.3",
+      "White": "Ivanchuk,V",
+      "Black": "Sutovsky,E",
+      "Result": "1-0",
+      "WhiteElo": "2731",
+      "BlackElo": "2623",
+      "ECO": "B30"
+    },
+    "beginnerOriginalFen": "8/8/8/5K2/5p2/r6k/8/6Q1 w - - 6 65",
+    "beginnerSourceLevel": "C*",
+    "reference": {
+      "id": "ccc5ca08a828854f",
+      "kind": "game",
+      "branch": 0,
+      "ply": 124,
+      "collection": "fork"
+    },
+    "previousMove": {
+      "fen": "8/8/8/5K2/5p2/5r1k/8/6Q1 b - - 5 64",
+      "move": "Ra3"
+    },
+    "id": "c908e6960f3dde275f98f357",
+    "createdAt": "2026-11-06T03:01:59.965Z",
+    "updatedAt": "2026-11-06T03:01:59.965Z"
+  },
+  {
+    "themeId": "fork",
+    "level": "Beginner",
+    "fen": "6k1/6p1/p4B2/3R4/1p2p3/1P1n4/1P2K3/8 b - - 0 44",
+    "goal": "material",
+    "moves": [],
+    "alternativeLines": [],
+    "solution": "",
+    "title": "Nhập môn · Karjakin,Sergey — Ivanchuk,V",
+    "headers": {
+      "Event": "24th ECC",
+      "Site": "Kallithea GRE",
+      "Date": "2008.10.23",
+      "Round": "7",
+      "White": "Karjakin,Sergey",
+      "Black": "Ivanchuk,V",
+      "Result": "0-1",
+      "WhiteElo": "2730",
+      "BlackElo": "2786",
+      "ECO": "B80"
+    },
+    "beginnerOriginalFen": "6k1/6p1/p4B2/3R4/1p2p3/1P1n4/1P2K3/8 b - - 0 44",
+    "beginnerSourceLevel": "C",
+    "reference": {
+      "id": "013044da3cea6dc5",
+      "kind": "game",
+      "branch": 0,
+      "ply": 87,
+      "collection": "fork"
+    },
+    "previousMove": {
+      "fen": "6k1/6p1/p4B2/3R4/1p2p3/1P1n4/1P1Kr3/8 w - - 0 44",
+      "move": "Kxe2"
+    },
+    "id": "9605501b257efd39c47fe4cf",
+    "createdAt": "2026-11-06T03:01:59.995Z",
+    "updatedAt": "2026-11-06T03:01:59.995Z"
+  },
+  {
+    "themeId": "fork",
+    "level": "Beginner",
+    "fen": "8/5Q2/2k5/8/3pKB2/6P1/8/8 w - - 3 79",
+    "goal": "material",
+    "moves": [],
+    "alternativeLines": [],
+    "solution": "",
+    "title": "Nhập môn · Phương án minh họa · Ivanchuk,V — Graf,A",
+    "headers": {
+      "Event": "XX Carlos Torre Wimbledon",
+      "Site": "Merida MEX",
+      "Date": "2007.12.21",
+      "Round": "3.4",
+      "White": "Ivanchuk,V",
+      "Black": "Graf,A",
+      "Result": "1-0",
+      "WhiteElo": "2787",
+      "BlackElo": "2574",
+      "ECO": "A40"
+    },
+    "beginnerOriginalFen": "8/5Q2/2k5/8/3pKB2/6P1/8/8 w - - 3 79",
+    "beginnerSourceLevel": "C*",
+    "reference": {
+      "id": "2ae5bff2dd967252",
+      "kind": "game",
+      "branch": 0,
+      "ply": 150,
+      "collection": "fork"
+    },
+    "previousMove": {
+      "fen": "8/3k1Q2/8/8/3pKB2/6P1/8/8 b - - 2 78",
+      "move": "Kc6"
+    },
+    "id": "35c76c379a3d6a1e6541122d",
+    "createdAt": "2026-11-06T03:02:00.031Z",
+    "updatedAt": "2026-11-06T03:02:00.031Z"
+  },
+  {
+    "themeId": "fork",
+    "level": "Beginner",
+    "fen": "6k1/2N2p2/5npp/2p5/5P2/2R3P1/5K2/8 b - - 0 37",
+    "goal": "material",
+    "moves": [],
+    "alternativeLines": [],
+    "solution": "",
+    "title": "Nhập môn · Nei, Iivo — Tal, Mihail",
+    "headers": {
+      "Event": "Keres mem",
+      "Site": "Tallinn",
+      "Date": "1983.??.??",
+      "Round": "6",
+      "White": "Nei, Iivo",
+      "Black": "Tal, Mihail",
+      "Result": "1/2-1/2",
+      "WhiteElo": "2495",
+      "BlackElo": "2620",
+      "ECO": "E15"
+    },
+    "beginnerOriginalFen": "6k1/2N2p2/5npp/2p5/5P2/2R3P1/5K2/8 b - - 0 37",
+    "beginnerSourceLevel": "D",
+    "reference": {
+      "id": "45031870cd822a42",
+      "kind": "game",
+      "branch": 0,
+      "ply": 73,
+      "collection": "fork"
+    },
+    "previousMove": {
+      "fen": "6k1/2N2p2/5npp/2p5/5P2/2R2KP1/5r2/8 w - - 2 37",
+      "move": "Kxf2"
+    },
+    "id": "7fb1df25c7f7737b3d13b548",
+    "createdAt": "2026-11-06T03:02:00.053Z",
+    "updatedAt": "2026-11-06T03:02:00.053Z"
+  },
+  {
+    "themeId": "fork",
+    "level": "Beginner",
+    "fen": "4Q3/2K3p1/2B2k2/4p2P/4n3/8/8/2q5 w - - 2 62",
+    "goal": "material",
+    "moves": [],
+    "alternativeLines": [],
+    "solution": "",
+    "title": "Nhập môn · Kasparov, Gary — Beliavsky, Alexander G",
+    "headers": {
+      "Event": "URS-ch49",
+      "Site": "Frunze",
+      "Date": "1981.??.??",
+      "Round": "?",
+      "White": "Kasparov, Gary",
+      "Black": "Beliavsky, Alexander G",
+      "Result": "1-0",
+      "WhiteElo": "2630",
+      "BlackElo": "2615",
+      "ECO": "D18"
+    },
+    "beginnerOriginalFen": "4Q3/2K3p1/2B2k2/4p2P/4n3/8/8/2q5 w - - 2 62",
+    "beginnerSourceLevel": "B",
+    "reference": {
+      "id": "3e238c0f0b362919",
+      "kind": "game",
+      "branch": 0,
+      "ply": 122,
+      "collection": "fork"
+    },
+    "previousMove": {
+      "fen": "4Q3/2K1k1p1/2B5/4p2P/4n3/8/8/2q5 b - - 1 61",
+      "move": "Kf6"
+    },
+    "id": "d6af68184f3beebdf2dc14a8",
+    "createdAt": "2026-11-06T03:02:00.143Z",
+    "updatedAt": "2026-11-06T03:02:00.143Z"
+  },
+  {
+    "themeId": "fork",
+    "level": "Beginner",
+    "fen": "8/6Rp/p4r1P/3kp3/3p4/8/PK3R1P/8 b - - 0 40",
+    "goal": "material",
+    "moves": [],
+    "alternativeLines": [],
+    "solution": "",
+    "title": "Nhập môn · Cheng,X — Shabalov,A",
+    "headers": {
+      "Event": "107th Annual US Open",
+      "Site": "Chicago USA",
+      "Date": "2006.08.08",
+      "Round": "4",
+      "White": "Cheng,X",
+      "Black": "Shabalov,A",
+      "Result": "0-1",
+      "WhiteElo": "2271",
+      "BlackElo": "2604",
+      "ECO": "B33"
+    },
+    "beginnerOriginalFen": "8/6Rp/p4r1P/3kp3/3p4/8/PK3R1P/8 b - - 0 40",
+    "beginnerSourceLevel": "B",
+    "reference": {
+      "id": "697208e5569635d9",
+      "kind": "game",
+      "branch": 0,
+      "ply": 79,
+      "collection": "fork"
+    },
+    "previousMove": {
+      "fen": "8/6Rp/p4r1P/3kp3/3p4/8/PK1R1r1P/8 w - - 0 40",
+      "move": "Rxf2"
+    },
+    "id": "a6e29f525187b20dc4112c37",
+    "createdAt": "2026-11-06T03:02:00.165Z",
+    "updatedAt": "2026-11-06T03:02:00.165Z"
+  },
+  {
+    "themeId": "fork",
+    "level": "Beginner",
+    "fen": "8/8/8/1p3N2/1PkP4/P3K3/6b1/8 w - - 19 68",
+    "goal": "material",
+    "moves": [],
+    "alternativeLines": [],
+    "solution": "",
+    "title": "Nhập môn · Karpov, Anatoly — Kasparov, Gary",
+    "headers": {
+      "Event": "World Championship 31th-KK1",
+      "Site": "Moscow",
+      "Date": "1984.??.??",
+      "Round": "9",
+      "White": "Karpov, Anatoly",
+      "Black": "Kasparov, Gary",
+      "Result": "1-0",
+      "WhiteElo": "2705",
+      "BlackElo": "2715",
+      "ECO": "D34"
+    },
+    "beginnerOriginalFen": "8/8/8/1p3N2/1PkP4/P3K3/6b1/8 w - - 19 68",
+    "beginnerSourceLevel": "A",
+    "reference": {
+      "id": "d4fb770cc23461cd",
+      "kind": "game",
+      "branch": 0,
+      "ply": 134,
+      "collection": "fork"
+    },
+    "previousMove": {
+      "fen": "8/1b6/8/1p3N2/1PkP4/P3K3/8/8 b - - 18 67",
+      "move": "Bg2"
+    },
+    "id": "1a24126aca1fb007617b259b",
+    "createdAt": "2026-11-06T03:02:00.178Z",
+    "updatedAt": "2026-11-06T03:02:00.178Z"
+  },
+  {
+    "themeId": "fork",
+    "level": "Beginner",
+    "fen": "8/p4q2/1pkB4/8/P4P2/3RP3/2K5/8 b - f3 0 38",
+    "goal": "material",
+    "moves": [],
+    "alternativeLines": [],
+    "solution": "",
+    "title": "Nhập môn · Bareev,E — Ivanchuk,V",
+    "headers": {
+      "Event": "FIDE GP",
+      "Site": "Dubai UAE",
+      "Date": "2002.04.03",
+      "Round": "1.1",
+      "White": "Bareev,E",
+      "Black": "Ivanchuk,V",
+      "Result": "1-0",
+      "WhiteElo": "2707",
+      "BlackElo": "2717",
+      "ECO": "D45"
+    },
+    "beginnerOriginalFen": "8/p4q2/1pkB4/8/P4P2/3RP3/2K5/8 b - f3 0 38",
+    "beginnerSourceLevel": "A",
+    "reference": {
+      "id": "435ec7318ffd937f",
+      "kind": "game",
+      "branch": 0,
+      "ply": 75,
+      "collection": "fork"
+    },
+    "previousMove": {
+      "fen": "8/p4q2/1pkB4/8/P7/3RP3/2K2P2/8 w - - 4 38",
+      "move": "f4"
+    },
+    "id": "54a7c9d149457fce65ee072d",
+    "createdAt": "2026-11-06T03:02:00.189Z",
+    "updatedAt": "2026-11-06T03:02:00.189Z"
+  },
+  {
+    "themeId": "fork",
+    "level": "Beginner",
+    "fen": "8/8/8/8/3q1P1k/p5R1/Pr1N3P/7K w - - 2 66",
+    "goal": "material",
+    "moves": [],
+    "alternativeLines": [],
+    "solution": "",
+    "title": "Nhập môn · Ippolito,D — Shabalov,A",
+    "headers": {
+      "Event": "New England Masters",
+      "Site": "Peabody USA",
+      "Date": "2007.08.17",
+      "Round": "8",
+      "White": "Ippolito,D",
+      "Black": "Shabalov,A",
+      "Result": "1-0",
+      "WhiteElo": "2395",
+      "BlackElo": "2637",
+      "ECO": "A90"
+    },
+    "beginnerOriginalFen": "8/8/8/8/3q1P1k/p5R1/Pr1N3P/7K w - - 2 66",
+    "beginnerSourceLevel": "D",
+    "reference": {
+      "id": "90644a1dda653786",
+      "kind": "game",
+      "branch": 0,
+      "ply": 130,
+      "collection": "fork"
+    },
+    "previousMove": {
+      "fen": "8/8/8/8/3q1P2/p5Rk/Pr1N3P/7K b - - 1 65",
+      "move": "Kh4"
+    },
+    "id": "a83c21c13cb2cc6ddf15adbf",
+    "createdAt": "2026-11-06T03:02:00.200Z",
+    "updatedAt": "2026-11-06T03:02:00.200Z"
+  },
+  {
+    "themeId": "fork",
+    "level": "Beginner",
+    "fen": "8/8/1k6/5P2/pB2pP2/2K1P3/4P3/3q4 b - - 2 72",
+    "goal": "material",
+    "moves": [],
+    "alternativeLines": [],
+    "solution": "",
+    "title": "Nhập môn · Torre, Eugenio — Kasparov, Gary",
+    "headers": {
+      "Event": "Brussels blitz",
+      "Site": "Brussels",
+      "Date": "1987.??.??",
+      "Round": "?",
+      "White": "Torre, Eugenio",
+      "Black": "Kasparov, Gary",
+      "Result": "0-1",
+      "WhiteElo": "2540",
+      "BlackElo": "2735",
+      "ECO": "D03"
+    },
+    "beginnerOriginalFen": "8/8/1k6/5P2/pB2pP2/2K1P3/4P3/3q4 b - - 2 72",
+    "beginnerSourceLevel": "A",
+    "reference": {
+      "id": "64d5ef2b633ae5ac",
+      "kind": "game",
+      "branch": 0,
+      "ply": 143,
+      "collection": "fork"
+    },
+    "id": "77407b5b45fb2accbe9abc16",
+    "createdAt": "2026-11-06T03:02:00.266Z",
+    "updatedAt": "2026-11-06T03:11:21.402Z"
+  },
+  {
+    "themeId": "fork",
+    "level": "Beginner",
+    "fen": "Q7/5pp1/5r2/8/1kp5/7P/6PK/8 w - - 0 52",
+    "goal": "material",
+    "moves": [],
+    "alternativeLines": [],
+    "solution": "",
+    "title": "Nhập môn · Cordel, Oskar — Anderssen, Adolf",
+    "headers": {
+      "Event": "Leipzig sim",
+      "Site": "Leipzig",
+      "Date": "1871.??.??",
+      "Round": "?",
+      "White": "Cordel, Oskar",
+      "Black": "Anderssen, Adolf",
+      "Result": "0-1",
+      "WhiteElo": "",
+      "BlackElo": "",
+      "ECO": "C80"
+    },
+    "beginnerOriginalFen": "Q7/5pp1/5r2/8/1kp5/7P/6PK/8 w - - 0 52",
+    "beginnerSourceLevel": "B",
+    "reference": {
+      "id": "e46d7f6257982106",
+      "kind": "game",
+      "branch": 0,
+      "ply": 102,
+      "collection": "fork"
+    },
+    "previousMove": {
+      "fen": "Q7/5pp1/5r2/2p5/1k6/7P/6PK/8 b - - 0 51",
+      "move": "c4"
+    },
+    "id": "cd22f267b3ede1c5a9970787",
+    "createdAt": "2026-11-06T03:34:37.836Z",
+    "updatedAt": "2026-11-06T03:34:37.836Z"
+  },
+  {
+    "themeId": "fork",
+    "level": "Beginner",
+    "fen": "6k1/1b5p/p5p1/4p3/1R3nP1/7P/4NK2/5N2 b - - 0 44",
+    "goal": "material",
+    "moves": [],
+    "alternativeLines": [],
+    "solution": "",
+    "title": "Nhập môn · Kulomzin, Viacheslav Nikolaev — Chigorin, Mikhail",
+    "headers": {
+      "Event": "RUS-ch03",
+      "Site": "Kiev",
+      "Date": "1903.??.??",
+      "Round": "4",
+      "White": "Kulomzin, Viacheslav Nikolaev",
+      "Black": "Chigorin, Mikhail",
+      "Result": "0-1",
+      "WhiteElo": "",
+      "BlackElo": "",
+      "ECO": "C84"
+    },
+    "beginnerOriginalFen": "6k1/1b5p/p5p1/4p3/1R3nP1/7P/4NK2/5N2 b - - 0 44",
+    "beginnerSourceLevel": "C",
+    "reference": {
+      "id": "3efccff3c1e4c9b0",
+      "kind": "game",
+      "branch": 0,
+      "ply": 87,
+      "collection": "fork"
+    },
+    "previousMove": {
+      "fen": "6k1/1b5p/p5p1/4p3/1r3nP1/7P/4NK2/1R3N2 w - - 0 44",
+      "move": "Rxb4"
+    },
+    "id": "66aedfd24ec486e10fdcd177",
+    "createdAt": "2026-11-06T03:34:37.850Z",
+    "updatedAt": "2026-11-06T03:34:37.850Z"
+  },
+  {
+    "themeId": "fork",
+    "level": "Beginner",
+    "fen": "6k1/8/p3r3/5B2/2p1P2P/3n2P1/1P6/5K2 w - - 0 55",
+    "goal": "material",
+    "moves": [],
+    "alternativeLines": [],
+    "solution": "",
+    "title": "Nhập môn · Calero, Ivan — Tal, Mihail",
+    "headers": {
+      "Event": "Capablanca mem",
+      "Site": "Havana",
+      "Date": "1963.??.??",
+      "Round": "14",
+      "White": "Calero, Ivan",
+      "Black": "Tal, Mihail",
+      "Result": "1-0",
+      "WhiteElo": "",
+      "BlackElo": "",
+      "ECO": "A64"
+    },
+    "beginnerOriginalFen": "6k1/8/p3r3/5B2/2p1P2P/3n2P1/1P6/5K2 w - - 0 55",
+    "beginnerSourceLevel": "C",
+    "reference": {
+      "id": "13de7acf5c45d71b",
+      "kind": "game",
+      "branch": 0,
+      "ply": 108,
+      "collection": "fork"
+    },
+    "previousMove": {
+      "fen": "6k1/8/p3Qr2/5B2/2p1P2P/3n2P1/1P6/5K2 b - - 0 54",
+      "move": "Rxe6"
+    },
+    "id": "ccd62e1b9967e8597c177c8b",
+    "createdAt": "2026-11-06T03:34:37.862Z",
+    "updatedAt": "2026-11-06T03:34:37.862Z"
+  },
+  {
+    "themeId": "fork",
+    "level": "Beginner",
+    "fen": "3Q4/7p/5p2/3Bpb1k/2P4P/6K1/P3q3/8 b - - 8 53",
+    "goal": "material",
+    "moves": [],
+    "alternativeLines": [],
+    "solution": "",
+    "title": "Nhập môn · Phương án minh họa · Iuldachev,S — Ivanchuk,V",
+    "headers": {
+      "Event": "Olympiad",
+      "Site": "Bled SLO",
+      "Date": "2002.10.27",
+      "Round": "2",
+      "White": "Iuldachev,S",
+      "Black": "Ivanchuk,V",
+      "Result": "0-1",
+      "WhiteElo": "2511",
+      "BlackElo": "2709",
+      "ECO": "B43"
+    },
+    "beginnerOriginalFen": "3Q4/7p/5p2/3Bpb1k/2P4P/6K1/P3q3/8 b - - 8 53",
+    "beginnerSourceLevel": "C*",
+    "reference": {
+      "id": "b9f22796d7548410",
+      "kind": "game",
+      "branch": 0,
+      "ply": 99,
+      "collection": "fork"
+    },
+    "previousMove": {
+      "fen": "3Q4/7p/5p2/3Bpb1k/2P4P/8/P3q1K1/8 w - - 7 53",
+      "move": "Kg3"
+    },
+    "id": "c14adc9980b2faf77ee01db8",
+    "createdAt": "2026-11-06T03:34:37.873Z",
+    "updatedAt": "2026-11-06T03:34:37.873Z"
+  },
+  {
+    "themeId": "fork",
+    "level": "C",
+    "fen": "3RN3/5r1k/7p/5pp1/4p3/8/4KPPP/8 w - - 0 60",
+    "goal": "win",
+    "moves": [
+      "Rd7",
+      "Rxd7",
+      "Nf6+"
+    ],
+    "alternativeLines": [],
+    "solution": "",
+    "title": "Tấn công đôi · Thế cờ tự thêm",
+    "headers": {
+      "Event": "Dos Hermanas",
+      "Site": "Dos Hermanas",
+      "Date": "1997.04.12",
+      "Round": "9",
+      "White": "Anand, Viswanathan",
+      "Black": "Polgar, Judit",
+      "Result": "1-0",
+      "WhiteElo": "2765",
+      "BlackElo": "2645",
+      "ECO": "E97"
+    },
+    "gameOpening": "Khai cuộc: King's Indian Defense: Orthodox Variation, Bayonet Attack · E97",
+    "reference": {
+      "id": "1a10c843a67feeca",
+      "kind": "game",
+      "branch": 0,
+      "ply": 118,
+      "collection": "fork"
+    },
+    "previousMove": {
+      "fen": "3RN3/5r1k/6pp/5p2/4p3/8/4KPPP/8 b - - 0 59",
+      "move": "g5"
+    },
+    "id": "3645510f1e5f868fe36dc22d",
+    "createdAt": "2026-11-06T04:06:26.605Z",
+    "updatedAt": "2026-11-06T04:06:26.605Z"
+  },
+  {
+    "themeId": "fork",
+    "level": "Beginner",
+    "fen": "4N3/3r3k/6pp/5p2/4p3/8/4KPPP/8 w - - 0 61",
+    "goal": "material",
+    "moves": [],
+    "alternativeLines": [],
+    "solution": "",
+    "title": "Nhập môn · Phương án minh họa · Anand, Viswanathan — Polgar, Judit",
+    "headers": {
+      "Event": "Dos Hermanas",
+      "Site": "Dos Hermanas",
+      "Date": "1997.04.12",
+      "Round": "9",
+      "White": "Anand, Viswanathan",
+      "Black": "Polgar, Judit",
+      "Result": "1-0",
+      "WhiteElo": "2765",
+      "BlackElo": "2645",
+      "ECO": "E97"
+    },
+    "beginnerOriginalFen": "4N3/3r3k/6pp/5p2/4p3/8/4KPPP/8 w - - 0 61",
+    "beginnerSourceLevel": "D",
+    "reference": {
+      "id": "1a10c843a67feeca",
+      "kind": "game",
+      "branch": 0,
+      "ply": 116,
+      "collection": "fork"
+    },
+    "previousMove": {
+      "fen": "4N3/3Rr2k/6pp/5p2/4p3/8/4KPPP/8 b - - 2 60",
+      "move": "Rxd7"
+    },
+    "id": "7f8a610498ae9da23848de2f",
+    "createdAt": "2026-11-06T05:15:43.822Z",
+    "updatedAt": "2026-11-06T05:15:43.822Z"
+  },
+  {
+    "themeId": "fork",
+    "level": "Beginner",
+    "fen": "8/1p3r1k/p1p5/6pP/4N1P1/6K1/1P6/8 w - - 0 58",
+    "goal": "material",
+    "moves": [],
+    "alternativeLines": [],
+    "solution": "",
+    "title": "Nhập môn · Tal, Mihail — Savon, Vladimir A",
+    "headers": {
+      "Event": "URS-ch29",
+      "Site": "Baku",
+      "Date": "1961.??.??",
+      "Round": "8",
+      "White": "Tal, Mihail",
+      "Black": "Savon, Vladimir A",
+      "Result": "1-0",
+      "WhiteElo": "",
+      "BlackElo": "",
+      "ECO": "E98"
+    },
+    "beginnerOriginalFen": "8/1p3r1k/p1p5/6pP/4N1P1/6K1/1P6/8 w - - 0 58",
+    "beginnerSourceLevel": "C",
+    "reference": {
+      "id": "b5a4185d0d0c947b",
+      "kind": "game",
+      "branch": 0,
+      "ply": 114,
+      "collection": "fork"
+    },
+    "previousMove": {
+      "fen": "8/1p3r1k/p1p4p/6RP/4N1P1/6K1/1P6/8 b - - 0 57",
+      "move": "hxg5"
+    },
+    "id": "cbe5364d16c8ee2cfcf7796d",
+    "createdAt": "2026-11-06T05:15:43.838Z",
+    "updatedAt": "2026-11-06T05:15:43.838Z"
+  },
+  {
+    "themeId": "fork",
+    "level": "Beginner",
+    "fen": "4N3/3r3k/7p/5pp1/4p3/8/4KPPP/8 w - - 0 61",
+    "goal": "win",
+    "moves": [],
+    "alternativeLines": [],
+    "solution": "",
+    "title": "Nhập môn · Anand, Viswanathan — Polgar, Judit",
+    "headers": {
+      "Event": "Dos Hermanas",
+      "Site": "Dos Hermanas",
+      "Date": "1997.04.12",
+      "Round": "9",
+      "White": "Anand, Viswanathan",
+      "Black": "Polgar, Judit",
+      "Result": "1-0",
+      "WhiteElo": "2765",
+      "BlackElo": "2645",
+      "ECO": "E97"
+    },
+    "beginnerOriginalFen": "4N3/3r3k/7p/5pp1/4p3/8/4KPPP/8 w - - 0 61",
+    "beginnerSourceLevel": "C",
+    "reference": {
+      "id": "1a10c843a67feeca",
+      "kind": "game",
+      "branch": 0,
+      "ply": 120,
+      "collection": "fork"
+    },
+    "previousMove": {
+      "fen": "4N3/3R1r1k/7p/5pp1/4p3/8/4KPPP/8 b - - 1 60",
+      "move": "Rxd7"
+    },
+    "id": "b1591c89497c91fa04db1d18",
+    "createdAt": "2026-11-06T05:15:43.850Z",
+    "updatedAt": "2026-11-06T05:15:43.850Z"
+  },
+  {
+    "themeId": "fork",
+    "level": "Beginner",
+    "fen": "2k1q3/bN5p/8/3B4/P7/6PP/6PK/8 w - - 0 43",
+    "goal": "material",
+    "moves": [],
+    "alternativeLines": [],
+    "solution": "",
+    "title": "Nhập môn · Phương án minh họa · Ivanchuk,V — Le Quang Liem",
+    "headers": {
+      "Event": "46th Capablanca Memorial Elite",
+      "Site": "Havana CUB",
+      "Date": "2011.05.21",
+      "Round": "10",
+      "White": "Ivanchuk,V",
+      "Black": "Le Quang Liem",
+      "Result": "1-0",
+      "WhiteElo": "2776",
+      "BlackElo": "2687",
+      "ECO": "C07"
+    },
+    "beginnerOriginalFen": "2k1q3/bN5p/8/3B4/P7/6PP/6PK/8 w - - 0 43",
+    "beginnerSourceLevel": "D",
+    "reference": {
+      "id": "57c710232c565cb4",
+      "kind": "game",
+      "branch": 0,
+      "ply": 72,
+      "collection": "fork"
+    },
+    "previousMove": {
+      "fen": "2k1Q3/bN5p/8/3B4/P7/4q1PP/6PK/8 b - - 0 42",
+      "move": "Qxe8"
+    },
+    "id": "2b6280f05a360f1d69db927e",
+    "createdAt": "2026-11-06T05:15:43.862Z",
+    "updatedAt": "2026-11-06T05:15:43.862Z"
+  },
+  {
+    "themeId": "fork",
+    "level": "Beginner",
+    "fen": "8/7k/3p2p1/4p2p/8/5Q1P/p5PK/2r5 w - - 0 59",
+    "goal": "material",
+    "moves": [],
+    "alternativeLines": [],
+    "solution": "",
+    "title": "Nhập môn · Phương án minh họa · Stein, Leonid — Hennings, Artur",
+    "headers": {
+      "Event": "Kislovodsk",
+      "Site": "Kislovodsk",
+      "Date": "1972.??.??",
+      "Round": "?",
+      "White": "Stein, Leonid",
+      "Black": "Hennings, Artur",
+      "Result": "1-0",
+      "WhiteElo": "",
+      "BlackElo": "",
+      "ECO": "C95"
+    },
+    "beginnerOriginalFen": "8/7k/3p2p1/4p2p/8/5Q1P/p5PK/2r5 w - - 0 59",
+    "beginnerSourceLevel": "D",
+    "reference": {
+      "id": "e9d6150b67b1a32b",
+      "kind": "game",
+      "branch": 0,
+      "ply": 106,
+      "collection": "fork"
+    },
+    "previousMove": {
+      "fen": "8/7k/3p2p1/4p2p/8/p4Q1P/6PK/2r5 b - - 6 58",
+      "move": "a2"
+    },
+    "id": "02cc1fa98831f2746f9015a1",
+    "createdAt": "2026-11-06T05:15:43.963Z",
+    "updatedAt": "2026-11-06T05:15:43.963Z"
+  },
+  {
+    "themeId": "fork",
+    "level": "Beginner",
+    "fen": "2r5/6R1/4k2p/p1pp4/8/1P5P/PB4K1/8 w - - 0 40",
+    "goal": "material",
+    "moves": [],
+    "alternativeLines": [],
+    "solution": "",
+    "title": "Nhập môn · Phương án minh họa · Topalov,V — Ivanchuk,V",
+    "headers": {
+      "Event": "Amber Rapid",
+      "Site": "Monte Carlo MNC",
+      "Date": "2003.03.25",
+      "Round": "9",
+      "White": "Topalov,V",
+      "Black": "Ivanchuk,V",
+      "Result": "1-0",
+      "WhiteElo": "2743",
+      "BlackElo": "2699",
+      "ECO": "B42"
+    },
+    "beginnerOriginalFen": "2r5/6R1/4k2p/p1pp4/8/1P5P/PB4K1/8 w - - 0 40",
+    "beginnerSourceLevel": "D",
+    "reference": {
+      "id": "dbd0595f0f4217d9",
+      "kind": "game",
+      "branch": 0,
+      "ply": 68,
+      "collection": "fork"
+    },
+    "previousMove": {
+      "fen": "2r5/6R1/3pk2p/p1p5/8/1P5P/PB4K1/8 b - - 0 39",
+      "move": "d5"
+    },
+    "id": "3daed9109bfd0db73ecb21c2",
+    "createdAt": "2026-11-06T05:15:44.008Z",
+    "updatedAt": "2026-11-06T05:15:44.008Z"
+  },
+  {
+    "themeId": "fork",
+    "level": "Beginner",
+    "fen": "6k1/5pp1/8/8/b3P3/2P3Pp/1K3Q1P/3q4 b - - 0 48",
+    "goal": "material",
+    "moves": [],
+    "alternativeLines": [],
+    "solution": "",
+    "title": "Nhập môn · Phương án minh họa · Aronian,L — Praggnanandhaa,R",
+    "headers": {
+      "Event": "FTX Crypto Cup 2022",
+      "Site": "Miami USA",
+      "Date": "2022.08.18",
+      "Round": "4.4",
+      "White": "Aronian,L",
+      "Black": "Praggnanandhaa,R",
+      "Result": "0-1",
+      "WhiteElo": "2775",
+      "BlackElo": "2661",
+      "ECO": "A22"
+    },
+    "beginnerOriginalFen": "6k1/5pp1/8/8/b3P3/2P3Pp/1K3Q1P/3q4 b - - 0 48",
+    "beginnerSourceLevel": "D",
+    "reference": {
+      "id": "fae98a5b202d9fc8",
+      "kind": "game",
+      "branch": 0,
+      "ply": 87,
+      "collection": "fork"
+    },
+    "previousMove": {
+      "fen": "6k1/5pp1/8/8/b7/2P1P1Pp/1K3Q1P/3q4 w - - 2 48",
+      "move": "e4"
+    },
+    "id": "826a384e9f6edfb174fbb0a9",
+    "createdAt": "2026-11-06T05:15:44.080Z",
+    "updatedAt": "2026-11-06T05:15:44.080Z"
+  }
+]

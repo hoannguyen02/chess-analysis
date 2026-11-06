@@ -1,28 +1,30 @@
-import {
-  PDFDocument,
-  degrees,
-  rgb,
-  pushGraphicsState,
-  popGraphicsState,
-  concatTransformationMatrix,
-  type PDFFont,
-  type PDFPage,
-} from 'pdf-lib';
 import fontkit from '@pdf-lib/fontkit';
 import { Chess } from 'chess.js';
 import {
+  PDFDocument,
+  concatTransformationMatrix,
+  degrees,
+  popGraphicsState,
+  pushGraphicsState,
+  rgb,
+  type PDFFont,
+  type PDFPage,
+} from 'pdf-lib';
+import {
+  defaultWorksheetFooter,
   explainLine,
+  previousMoveLabel,
+  worksheetClosingReview,
+  worksheetFooterText,
+  worksheetLevelGuide,
+  worksheetLevels,
   worksheetSolutionText,
   worksheetSourceLines,
-  worksheetLevels,
-  worksheetLevelGuide,
-  defaultWorksheetFooter,
-  worksheetFooterText,
-  type WorksheetFooter,
   type WorksheetBookOptions,
-  previousMoveLabel,
+  type WorksheetFooter,
   type WorksheetPage,
 } from './worksheet';
+import { notationExampleText, notationGuideRows } from './worksheet-notation';
 const levelLabel = (level: WorksheetPage['level']) =>
   level === 'Beginner'
     ? 'Cấp độ Nhập môn / Beginner'
@@ -66,6 +68,7 @@ export async function createWorksheetPdfs(
   book?: WorksheetBookOptions
 ) {
   const fontBytes = await asset('/fonts/DejaVuSans.ttf');
+  const boldBytes = book ? await asset('/fonts/DejaVuSans-Bold.ttf') : null;
   const artworkNotice = await asset('/chess-print/NOTICE.txt');
   // Preserve the existing brand symbol’s vector geometry and original colors.
   const logo: {
@@ -102,6 +105,9 @@ export async function createWorksheetPdfs(
   answers.registerFontkit(fontkit);
   const font = await sheet.embedFont(fontBytes, { subset: true }),
     answerFont = await answers.embedFont(fontBytes, { subset: true });
+  const boldFont = boldBytes
+    ? await sheet.embedFont(boldBytes, { subset: true })
+    : undefined;
   const pieces = await Promise.all(images.map((data) => sheet.embedPng(data)));
   const draw = (
     page: PDFPage,
@@ -170,7 +176,8 @@ export async function createWorksheetPdfs(
   const drawBrandHeader = (
     page: PDFPage,
     pageFont: PDFFont,
-    center: number
+    center: number,
+    scale = 1
   ) => {
     const gold = rgb(0.72, 0.46, 0.06);
     const centered = (
@@ -188,24 +195,34 @@ export async function createWorksheetPdfs(
         pageFont,
         color
       );
-    drawLogo(page, center, H - 28, 62);
-    centered('TRUNG TÂM CỜ VUA', H - 111, 11);
-    centered('LIMA Chess', H - 148, 32, gold);
+    drawLogo(page, center, H - 28 * scale, 62 * scale);
+    centered('TRUNG TÂM CỜ VUA', H - 111 * scale, 11 * scale);
+    centered('LIMA Chess', H - 148 * scale, 32 * scale, gold);
     for (const direction of [-1, 1])
       page.drawLine({
-        start: { x: center + direction * 10, y: H - 163 },
-        end: { x: center + direction * 190, y: H - 163 },
+        start: { x: center + direction * 10 * scale, y: H - 163 * scale },
+        end: { x: center + direction * 190 * scale, y: H - 163 * scale },
         thickness: 0.7,
         color: rgb(0, 0, 0),
       });
     page.drawSvgPath('M 0 -4 L 4 0 L 0 4 L -4 0 Z', {
       x: center,
-      y: H - 163,
+      y: H - 163 * scale,
+      scale,
       color: gold,
     });
-    centered('TƯ DUY · TẬP TRUNG · KỶ LUẬT · BẢN LĨNH', H - 183, 9);
+    centered(
+      'TƯ DUY · TẬP TRUNG · KỶ LUẬT · BẢN LĨNH',
+      H - 183 * scale,
+      Math.max(8.5, 9 * scale)
+    );
   };
   const heading = title.trim() || 'BÀI TẬP CỜ VUA';
+  const included = new Set(
+    pages.flatMap((p) => p.exercises.map((e) => e.level ?? p.level))
+  );
+  const includedLevels = worksheetLevels.filter((level) => included.has(level));
+  const notationReferences: { page: PDFPage; top: number }[] = [];
   const textSection = (
     doc: PDFDocument,
     pageFont: PDFFont,
@@ -217,38 +234,14 @@ export async function createWorksheetPdfs(
     let page: PDFPage;
     let cursor = 0;
     let firstPage = true;
-    const start = () => {
-      page = doc.addPage([W, H]);
-      drawWatermark(page, pageFont);
-      cursor = H - 48;
-      if (colorOpening && firstPage) {
-        const center = (W - 20) / 2;
-        drawBrandHeader(page, pageFont, center);
-        const centered = (text: string, y: number, size: number) =>
-          draw(
-            page,
-            text,
-            center - pageFont.widthOfTextAtSize(text, size) / 2,
-            y,
-            size,
-            pageFont
-          );
-        cursor = H - 212;
-        for (const line of lines(heading, pageFont, 11, W - 80)) {
-          centered(line, cursor, 11);
-          cursor -= 16;
-        }
-        cursor -= 12;
-      }
-      firstPage = false;
-      for (const line of lines(
-        section.title || heading,
-        pageFont,
-        17,
-        W - 80
-      )) {
+    const openingWithLevels = guide === 'introduction' && book?.showLevelGuide;
+    let sectionHeading = openingWithLevels
+      ? 'Hệ thống cấp độ'
+      : section.title || heading;
+    const drawSectionHeading = () => {
+      for (const line of lines(sectionHeading, pageFont, 17, W - 80)) {
         draw(
-          page,
+          page!,
           line,
           30,
           cursor,
@@ -259,7 +252,7 @@ export async function createWorksheetPdfs(
         cursor -= 24;
       }
       if (colorOpening)
-        page.drawLine({
+        page!.drawLine({
           start: { x: 30, y: cursor + 5 },
           end: { x: 90, y: cursor + 5 },
           thickness: 2,
@@ -267,21 +260,50 @@ export async function createWorksheetPdfs(
         });
       cursor -= 18;
     };
-    start();
-    for (const paragraph of section.body.replace(/\r/g, '').split('\n')) {
-      for (const line of lines(
-        paragraph,
-        pageFont,
-        colorOpening ? 10 : 11,
-        W - 80
-      )) {
-        if (cursor < 56) start();
-        draw(page!, line, 30, cursor, colorOpening ? 10 : 11, pageFont);
-        cursor -= colorOpening ? 16 : 18;
+    const start = () => {
+      page = doc.addPage([W, H]);
+      drawWatermark(page, pageFont);
+      cursor = H - 48;
+      if (colorOpening && firstPage) {
+        const center = (W - 20) / 2;
+        drawBrandHeader(page, pageFont, center, 0.8);
+        const centered = (text: string, y: number, size: number) =>
+          draw(
+            page,
+            text,
+            center - pageFont.widthOfTextAtSize(text, size) / 2,
+            y,
+            size,
+            pageFont
+          );
+        cursor = H - 174;
+        for (const line of lines(heading, pageFont, 11, W - 80)) {
+          centered(line, cursor, 11);
+          cursor -= 16;
+        }
+        cursor -= 12;
       }
-      cursor -= colorOpening ? 6 : 10;
-    }
-    if (guide && book?.showLevelGuide) {
+      firstPage = false;
+      drawSectionHeading();
+    };
+    start();
+    const drawBody = () => {
+      for (const paragraph of section.body.replace(/\r/g, '').split('\n')) {
+        for (const line of lines(
+          paragraph,
+          pageFont,
+          colorOpening ? 10 : 11,
+          W - 80
+        )) {
+          if (cursor < 56) start();
+          draw(page!, line, 30, cursor, colorOpening ? 10 : 11, pageFont);
+          cursor -= colorOpening ? 14 : 18;
+        }
+        cursor -= colorOpening ? 4 : 10;
+      }
+    };
+    if (!openingWithLevels) drawBody();
+    if (guide === 'introduction' && book?.showLevelGuide) {
       const ensure = (height: number) => {
         if (cursor - height < 50) start();
       };
@@ -292,36 +314,7 @@ export async function createWorksheetPdfs(
           cursor -= 16;
         }
       };
-      if (guide === 'closing') {
-        ensure(92);
-        draw(page!, 'Nội dung cần củng cố', 30, cursor, 12, pageFont);
-        cursor -= 24;
-        for (const label of ['Bài cần giải lại', 'Chủ đề cần ôn tập']) {
-          draw(page!, label, 30, cursor, 9, pageFont);
-          page!.drawLine({
-            start: { x: 140, y: cursor - 2 },
-            end: { x: W - 50, y: cursor - 2 },
-            thickness: 0.5,
-            color: rgb(0, 0, 0),
-          });
-          cursor -= 26;
-        }
-        cursor -= 12;
-      }
       ensure(110);
-      draw(
-        page!,
-        'Hệ thống cấp độ',
-        30,
-        cursor,
-        14,
-        pageFont,
-        colorOpening ? coverGreen : undefined
-      );
-      cursor -= 24;
-      const included = new Set(
-        pages.flatMap((p) => p.exercises.map((e) => e.level ?? p.level))
-      );
       paragraph(
         `Cấp độ trong tập này: ${worksheetLevels
           .filter((level) => included.has(level))
@@ -336,13 +329,13 @@ export async function createWorksheetPdfs(
         const description = lines(
           worksheetLevelGuide[level],
           pageFont,
-          9,
+          colorOpening ? 10 : 9,
           W - 240
         );
-        const rowLineHeight = colorOpening ? 12 : 14;
+        const rowLineHeight = 14;
         const height = Math.max(
-          colorOpening ? 32 : 36,
-          description.length * rowLineHeight + (colorOpening ? 12 : 14)
+          colorOpening ? 40 : 36,
+          description.length * rowLineHeight + (colorOpening ? 16 : 14)
         );
         ensure(height);
         page!.drawRectangle({
@@ -360,45 +353,249 @@ export async function createWorksheetPdfs(
             : `Cấp độ ${level} / Level ${level}`,
           40,
           cursor - 17,
-          9,
-          pageFont,
+          colorOpening ? 9.5 : 9,
+          included.has(level) ? (boldFont ?? pageFont) : pageFont,
           colorOpening ? coverGreen : undefined
         );
         description.forEach((line, i) =>
-          draw(page!, line, 180, cursor - 17 - i * rowLineHeight, 9, pageFont)
+          draw(
+            page!,
+            line,
+            180,
+            cursor - 17 - i * rowLineHeight,
+            colorOpening ? 10 : 9,
+            pageFont
+          )
         );
         cursor -= height;
       }
       cursor -= 17;
-      ensure(44);
+      for (const note of [
+        'Thí quân: Chủ động chấp nhận thiệt vật chất để đạt mục đích chiến thuật.',
+        'Trong bảng cấp độ, chỉ đếm nước đi của mình, không tính nước đi của đối phương.',
+        'Ví dụ: Trắng đi - Đen đi - Trắng đi được tính là 2 nước đi của Trắng.',
+      ]) {
+        for (const line of lines(note, pageFont, 8.5, W - 80)) {
+          ensure(12);
+          draw(page!, line, 30, cursor, 8.5, pageFont);
+          cursor -= 12;
+        }
+      }
+      cursor -= 2;
+    }
+    if (guide === 'closing' && book?.showLevelGuide) {
+      const ensure = (height: number) => {
+        if (cursor - height < 56) start();
+      };
+      const paragraph = (text: string, size = 10) => {
+        for (const line of lines(text, pageFont, size, W - 80)) {
+          ensure(15);
+          draw(page!, line, 30, cursor, size, pageFont);
+          cursor -= 15;
+        }
+      };
+      const subheading = (title: string, height: number) => {
+        ensure(height);
+        draw(page!, title, 30, cursor, 12, boldFont ?? pageFont, coverGreen);
+        cursor -= 24;
+      };
+      const checkbox = (label: string, x: number, y: number) => {
+        page!.drawRectangle({
+          x,
+          y: y - 1,
+          width: 8,
+          height: 8,
+          borderWidth: 0.6,
+          borderColor: rgb(0, 0, 0),
+        });
+        draw(page!, label, x + 16, y, 10, pageFont);
+      };
+      subheading('Đánh dấu những việc đã làm được', 130);
+      for (const skill of worksheetClosingReview.skills) {
+        checkbox(skill, 30, cursor);
+        cursor -= 25;
+      }
+      cursor -= 12;
+      subheading('Bài cần giải lại', 64);
+      paragraph('Ghi số bài để tìm lại khi ôn tập.', 9);
+      cursor -= 6;
+      page!.drawLine({
+        start: { x: 30, y: cursor },
+        end: { x: W - 50, y: cursor },
+        thickness: 0.5,
+        color: rgb(0, 0, 0),
+      });
+      cursor -= 34;
+      subheading('Điểm còn bỏ sót', 100);
+      worksheetClosingReview.omissions.forEach((label, i) =>
+        checkbox(label, 30 + (i % 2) * 260, cursor - Math.floor(i / 2) * 25)
+      );
+      cursor -= 61;
+      subheading('Tiêu chí chọn cấp độ tiếp theo', 112);
+      paragraph(worksheetClosingReview.readiness);
+      cursor -= 12;
+      subheading('Nội dung luyện tiếp', 106);
+      for (const label of ['Chủ đề', 'Cấp độ']) {
+        draw(page!, label, 30, cursor, 10, pageFont);
+        page!.drawLine({
+          start: { x: 90, y: cursor - 2 },
+          end: { x: W - 50, y: cursor - 2 },
+          thickness: 0.5,
+          color: rgb(0, 0, 0),
+        });
+        cursor -= 29;
+      }
+      const brand = footer.name.trim().replace(/\s+/g, ' ') || 'LIMA Chess';
       paragraph(
-        'Thí quân: chủ động chấp nhận thiệt vật chất để đạt mục đích chiến thuật. Số nước nêu trên chỉ tính nước đi của bên giải, không tính nước đáp của đối phương.',
+        `Liên hệ ${brand} để được tư vấn nội dung luyện tập phù hợp.`,
         9
       );
-      if (guide === 'closing') {
-        cursor -= 18;
-        ensure(100);
-        draw(page!, 'Định hướng tiếp theo', 30, cursor, 12, pageFont);
-        cursor -= 22;
-        const brand = footer.name.trim().replace(/\s+/g, ' ') || 'LIMA Chess';
-        paragraph(
-          `Liên hệ ${brand} để được tư vấn chủ đề và cấp độ luyện tập tiếp theo.`,
-          10
-        );
-        cursor -= 10;
-        paragraph(
-          'Chủ đề / Cấp độ tiếp theo: ........................................................................',
-          9
-        );
-      } else {
-        cursor -= 10;
-        ensure(36);
-        paragraph(
-          'Chọn cấp độ phù hợp với khả năng tự giải và tính toán. Cấp C tập trung vào thí quân đơn giản; cấp C* yêu cầu tính sâu hơn nhưng không thí quân.',
-          9
-        );
-      }
     }
+    if (openingWithLevels) {
+      cursor -= 12;
+      sectionHeading = section.title || heading;
+      const headingHeight =
+        lines(sectionHeading, pageFont, 17, W - 80).length * 24 + 18;
+      // Keep the instruction heading with its first lines; custom text may continue.
+      if (cursor - headingHeight - 32 < 56) start();
+      else drawSectionHeading();
+      drawBody();
+    }
+    if (guide === 'introduction' && (book?.showNotationGuide ?? true)) {
+      const height = 46;
+      if (cursor - height < 56) start();
+      page!.drawRectangle({
+        x: 30,
+        y: cursor - height,
+        width: W - 80,
+        height,
+        borderWidth: 0.5,
+        borderColor: rgb(0.6, 0.65, 0.62),
+      });
+      draw(
+        page!,
+        'Tra cứu ký hiệu',
+        42,
+        cursor - 16,
+        10,
+        boldFont ?? pageFont,
+        coverGreen
+      );
+      notationReferences.push({ page: page!, top: cursor });
+      cursor -= height + 18;
+    }
+  };
+  const notationGuide = (doc: PDFDocument, pageFont: PDFFont) => {
+    let page: PDFPage;
+    let cursor: number;
+    const start = () => {
+      page = doc.addPage([W, H]);
+      drawWatermark(page, pageFont);
+      draw(
+        page,
+        'Hướng dẫn ký hiệu cờ vua',
+        30,
+        H - 48,
+        19,
+        pageFont,
+        coverGreen
+      );
+      draw(
+        page,
+        'Chess notation - Ký hiệu đại số dùng trong bài tập và lời giải',
+        30,
+        H - 69,
+        9.5,
+        pageFont
+      );
+      cursor = H - 94;
+    };
+    const ensure = (height: number) => {
+      if (cursor - height < 56) start();
+    };
+    const paragraph = (text: string, size = 9.5) => {
+      for (const line of lines(text, pageFont, size, W - 80)) {
+        ensure(13);
+        draw(page!, line, 30, cursor!, size, pageFont);
+        cursor! -= 13;
+      }
+    };
+    start();
+    paragraph('Cột / Files: a, b, c, d, e, f, g, h. Hàng / Ranks: 1 đến 8.');
+    paragraph(
+      'Nhìn từ phía Trắng: cột a ở bên trái, hàng 1 ở gần nhất. Tên ô = cột + hàng, như e4.'
+    );
+    paragraph('Tên ô giữ nguyên khi xoay bàn cờ.');
+    cursor! -= 12;
+    const pieceNames = [
+      ['wK', 'K', 'Vua', 'King'],
+      ['wQ', 'Q', 'Hậu', 'Queen'],
+      ['wR', 'R', 'Xe', 'Rook'],
+      ['wB', 'B', 'Tượng', 'Bishop'],
+      ['wN', 'N', 'Mã', 'Knight'],
+      ['wP', '', 'Tốt', 'Pawn'],
+    ];
+    const cell = (W - 80) / pieceNames.length;
+    pieceNames.forEach(([symbol, letter, vietnamese, english], i) => {
+      const x = 30 + cell * i;
+      page!.drawImage(pieces[symbols.indexOf(symbol)], {
+        x,
+        y: cursor! - 29,
+        width: 29,
+        height: 29,
+      });
+      draw(
+        page!,
+        letter || 'không chữ',
+        x + 32,
+        cursor! - 17,
+        letter ? 13 : 7.5,
+        pageFont,
+        coverGreen
+      );
+      draw(page!, `${vietnamese} / ${english}`, x, cursor! - 44, 8.5, pageFont);
+    });
+    cursor! -= 64;
+    paragraph(
+      'Mã dùng N để phân biệt với K (Vua). Khi ghi nước Tốt, không dùng chữ P.',
+      9
+    );
+    cursor! -= 12;
+    for (const row of notationGuideRows) {
+      const body = [row.rule, ...row.examples.map(notationExampleText)].flatMap(
+        (text) => lines(text, pageFont, 10, W - 222)
+      );
+      const height = Math.max(43, body.length * 13 + 16);
+      ensure(height);
+      page!.drawRectangle({
+        x: 30,
+        y: cursor! - height,
+        width: W - 80,
+        height,
+        borderColor: rgb(0.72, 0.75, 0.73),
+        borderWidth: 0.4,
+      });
+      draw(page!, row.title, 40, cursor! - 17, 10, pageFont, coverGreen);
+      const english = lines(row.english, pageFont, 8, 116);
+      english.forEach((line, i) =>
+        draw(page!, line, 40, cursor! - 31 - i * 11, 8, pageFont)
+      );
+      body.forEach((line, i) =>
+        draw(page!, line, 166, cursor! - 16 - i * 13, 10, pageFont)
+      );
+      cursor! -= height;
+    }
+    cursor! -= 19;
+    paragraph(
+      'Ví dụ số thứ tự: 1. e4 e5 ghi nước Trắng rồi nước Đen; 1... e5 bắt đầu từ nước Đen.',
+      8.7
+    );
+    cursor! -= 7;
+    paragraph(
+      'Tham khảo: FIDE Laws of Chess, Phụ lục C - Algebraic Notation.',
+      8
+    );
+    paragraph('handbook.fide.com/chapter/E012023', 8);
   };
   const cover = async (
     doc: PDFDocument,
@@ -428,6 +625,7 @@ export async function createWorksheetPdfs(
 
     drawBrandHeader(page, pageFont, center);
 
+    let titleBottom = 558;
     let titleSize = 30;
     let titleLines = lines(heading, pageFont, titleSize, 440);
     while (titleLines.length > 3 && titleSize > 18) {
@@ -469,8 +667,20 @@ export async function createWorksheetPdfs(
       titleLines.forEach((line, i) =>
         centered(line, titleTop - i * (titleSize + 9), titleSize)
       );
+      titleBottom = titleTop - (titleLines.length - 1) * (titleSize + 9);
     }
-    if (isAnswer) centered('SÁCH LỜI GIẢI', 480, 12);
+    const levelCaption =
+      includedLevels.length === 1
+        ? levelLabel(includedLevels[0])
+        : `Cấp độ / Levels: ${includedLevels.map((level) => (level === 'Beginner' ? 'Nhập môn / Beginner' : level)).join(' · ')}`;
+    const levelLines = includedLevels.length
+      ? lines(levelCaption, pageFont, 11, 440)
+      : [];
+    const levelTop = Math.min(516, titleBottom - 28);
+    levelLines.forEach((line, i) => centered(line, levelTop - i * 15, 11));
+    const levelBottom = levelTop - Math.max(0, levelLines.length - 1) * 15;
+    if (isAnswer)
+      centered('SÁCH LỜI GIẢI', Math.min(480, levelBottom - 24), 12);
 
     // A decorative piece study, deliberately not a puzzle or a game position.
     // Reuse the licensed high-resolution Cburnett assets already in the PDF.
@@ -533,6 +743,19 @@ export async function createWorksheetPdfs(
   if (book) {
     await cover(sheet, font);
     textSection(sheet, font, book.introduction, true, 'introduction');
+    if (book.introduction.body.trim() && (book.showNotationGuide ?? true)) {
+      const targetPage = sheet.getPageCount() + 1;
+      for (const reference of notationReferences)
+        draw(
+          reference.page,
+          `Xem Hướng dẫn ký hiệu cờ vua ở trang ${targetPage} để đọc và ghi nước đi.`,
+          42,
+          reference.top - 33,
+          9.5,
+          font
+        );
+      notationGuide(sheet, font);
+    }
     await cover(answers, answerFont, true);
   }
   for (const group of pages) {
@@ -557,7 +780,7 @@ export async function createWorksheetPdfs(
       );
       draw(
         page,
-        'Ghi phương án hoặc vẽ mũi tên. Với bài nhiều nước, ghi cả nước đáp.',
+        'Ghi phương án hoặc vẽ mũi tên. Với bài nhiều nước, ghi cả nước đi của đối phương.',
         30,
         H - 68,
         8.5
@@ -693,7 +916,7 @@ export async function createWorksheetPdfs(
   };
   write(heading, 11);
   write(
-    'Các phương án dưới đây dùng để đối chiếu và phân tích. Một bài có thể có nhiều cách giải; cần kiểm tra nước đáp và kết quả của từng phương án.'
+    'Các phương án dưới đây dùng để đối chiếu và phân tích. Một bài có thể có nhiều cách giải; cần kiểm tra nước đi của đối phương và kết quả của từng phương án.'
   );
   write(
     'Với bài trích từ ván đấu, nguồn tư liệu xác định xuất xứ thế cờ; phương án phân tích có thể khác diễn biến thực tế.',
@@ -719,8 +942,11 @@ export async function createWorksheetPdfs(
       currentExercise = `${number}. ${topicTitle ?? group.title} · ${levelLabel(level ?? group.level)}${group.review ? ' · Ôn tập' : ''}`;
       write(currentExercise, 11);
       explainLine(e.fen, e.moves, true).forEach((s) => write(s));
-      if (e.solution) write(worksheetSolutionText(e));
-      for (const alt of e.alternativeLines ?? []) {
+      if (e.solution || (e.beginner && !e.moves.length))
+        write(worksheetSolutionText(e));
+      for (const alt of e.moves.length ? (e.alternativeLines ?? []) : []) {
+        // Keep the label with at least the first move of its variation.
+        if (y < 62) newPage();
         write('Phương án bổ sung:', 8);
         explainLine(e.fen, alt, true).forEach((s) => write(s, 8));
       }

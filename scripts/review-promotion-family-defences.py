@@ -1,4 +1,4 @@
-from promotion_review_store import ReviewStore
+from review_store import ReviewStore
 """Finite defensive review of every published exchange continuation; not a proof."""
 import json,chess,chess.engine
 from pathlib import Path

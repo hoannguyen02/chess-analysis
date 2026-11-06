@@ -1,4 +1,4 @@
-from promotion_review_store import ReviewStore
+from review_store import ReviewStore
 """Apply durable editorial decisions after the objective split; never pad counts."""
 import json,collections
 from pathlib import Path
@@ -41,6 +41,10 @@ for slug in groups:
    e['hints']=['Xe đen trên c8 có thể bắt quân mới nếu Tốt đi thẳng đến b8.','Tốt có thể vừa bắt Xe vừa phong cấp.']
    e['solution']='bxc8=Q# — Tốt từ b7 bắt Xe ở c8, phong cấp thành Hậu và chiếu hết. Xe trắng trên e7 khống chế các ô thoát trên hàng 7.'
    decision['reason']='Regraded from A: five pieces, immediate capture removes the defender and promotes with mate.'
+  if e['fen'] in {'8/1P6/k7/8/1K6/8/8/8 w - - 0 1','8/k1P5/2K5/8/1N6/8/8/8 w - - 0 1'}:
+   e.pop('beginner',None)
+   e['difficulty']=dict(level='A',status='suggested',solverMoves=1,sacrificeCount=0,reason='Chọn quân phong cấp để tránh pat; nội dung từ cấp A.')
+   decision['reason']='User grading policy: avoiding pat through promotion begins at A. Position and solution unchanged.'
   level='Beginner' if e.get('beginner') else e['difficulty']['level']
   aspects=[]
   b=chess.Board(e['fen']);aspects.append('white' if b.turn else 'black')

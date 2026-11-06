@@ -59,7 +59,7 @@ def main():
  for path in sorted(glob.glob(str(ROOT/'scripts/fixtures/discovery/*.json'))):
   if Path(path).name=='published.json':continue
   data=json.loads(Path(path).read_text())
-  if isinstance(data,dict):candidates.extend(data.get('records',[]))
+  if isinstance(data,dict) and isinstance(data.get('records'),list):candidates.extend(data['records'])
  # A game can contain several motifs. Retain its more demanding verified lesson,
  # without counting the same source game in several levels.
  for r in sorted(candidates,key=lambda r:(-miner.LEVELS.index(r['level']),r['gameId'],r['ply'])):
@@ -95,7 +95,7 @@ def main():
    allowed=set(ids)
    records={key:r for key,r in records.items() if r['level']!=level or key in allowed}
    assert {r['gameId'] for r in records.values() if r['level']==level}==allowed,(level,allowed-{*records})
-   assert 0<len(ids)<=upper['targetPerLevel']
+   assert 0<len(ids)<=upper.get('sourceCountLimits',{}).get(level,upper['targetPerLevel'])
   upper_order={key:i for ids in upper['order'].values() for i,key in enumerate(ids)}
  ordered=sorted(records.values(),key=lambda r:(miner.LEVELS.index(r['level']),a_order[r['gameId']] if curation and r['level']=='A' else upper_order[r['gameId']] if upper else r['solverMoves'],r['gameId']))
  counts={l:sum(r['level']==l for r in ordered) for l in miner.LEVELS}
@@ -105,6 +105,9 @@ def main():
  exercises=[];sources={}
  proofs_path=ROOT/'scripts/fixtures/discovery/upper-mate-proofs.json'
  proofs={p['gameId']:p for p in json.loads(proofs_path.read_text())['proofs']} if upper else {}
+ for path in sorted((ROOT/'scripts/fixtures/discovery').glob('level-*-expansion-*.json')):
+  data=json.loads(path.read_text())
+  proofs.update({p['gameId']:p for p in data.get('mateProofs',[])})
  for r in ordered:
   prefix=r['moves'][:r['discoveryPly']+1]
   alternatives=[prefix+[reply,capture] for reply,captures in r['coverage']['replies'].items() for capture in captures]
@@ -118,6 +121,10 @@ def main():
    assert r['fen']==review['fen'] and r['moves']==review['moves'],r['gameId']
    exercise['solution']=review['solutionVi']
    exercise['hints']=review['hintsVi']
+   for line in review.get('alternativeLines',[]):
+    replay=chess.Board(r['fen'])
+    for san in line:replay.push_san(san)
+    if line!=exercise['moves'] and line not in exercise['alternativeLines']:exercise['alternativeLines'].append(line)
    exercise['difficulty']['sacrificeCount']=review.get('sacrificeCount',len(r['sacrifices']))
    board=chess.Board(r['fen'])
    if r['goal']=='mate':

@@ -18,6 +18,7 @@ export function privateReturnPath(
   if (url.origin !== 'https://private.invalid') return defaultPath;
   const match = /^\/(vi|en)(\/.*)$/.exec(url.pathname);
   const path = match ? match[2] : url.pathname;
-  if (!allowedPaths.includes(path)) return defaultPath;
+  if (!allowedPaths.some((allowed) => allowed.split('?')[0] === path))
+    return defaultPath;
   return `/${match ? match[1] : language}${path}${url.search}${url.hash}`;
 }

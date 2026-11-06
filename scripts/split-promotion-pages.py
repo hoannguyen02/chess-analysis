@@ -5,7 +5,7 @@ Material candidates are prefixes of verified all-defence strategies, regraded
 at the earlier payoff. They are published only if every certified defence retains
 a positive material gain after promotion and a direct mate is not the sole payoff.
 """
-import collections,copy,hashlib,importlib.util,json
+import collections,copy,hashlib,importlib.util,json,subprocess,sys
 from pathlib import Path
 import chess
 ROOT=Path(__file__).resolve().parents[1];D=ROOT/'scripts/fixtures/promotion';OUT=ROOT/'src/lib/server';AUDIT=ROOT/'scripts/fixtures/promotion-split'
@@ -18,7 +18,7 @@ def safe_capture_reply(b,move,c,baseline):
  child=b.copy();child.push(move);return not child.is_game_over() and mat(child,c)>=baseline+100
 legacy=read(AUDIT/'original-mixed.json')[0]['exercises'];basic=read(AUDIT/'material-intro.json')
 accepted={a['gameId'] for a in read(D/'composed-reviewed.json') if a['decision']=='accepted'}
-records=read(D/'master-published.json')['records']+[r for r in read(D/'composed-candidates.json') if r['gameId'] in accepted and r['gameId'] in proof_store];sources=read(OUT/'promotion-game-sources.json');materials=list(basic);materialRecords=[];under=[];underSources={};fps=set()
+records=read(D/'master-published.json')['records']+[r for r in read(D/'composed-candidates.json') if r['gameId'] in accepted and r['gameId'] in proof_store];sources={**read(OUT/'promotion-mate-game-sources.json'),**read(OUT/'promotion-game-sources.json')};promotionSources=copy.deepcopy(sources);materials=list(basic);materialRecords=[];under=[];underSources={};fps=set()
 for e in basic:
  b=chess.Board(e['fen']);move=b.parse_san(e['moves'][0]);q=b.copy();q.push(chess.Move(move.from_square,move.to_square,promotion=chess.QUEEN))
  if move.promotion!=chess.QUEEN and q.is_stalemate():under.append(copy.deepcopy(e))
@@ -124,11 +124,62 @@ if importancePath.exists():
 if not passed:
  raw=read(OUT/'simplification-exercises.json')
  if raw and 'exercises' in raw[0]:raise RuntimeError('Expected flat simplification data; adapt wrapper explicitly')
+# Add the independently reviewed A expansion after the existing selections.
+# Its material proofs cover every legal defence, including recaptures.
+expansionPath=AUDIT/'material-a-expansion.json'
+if expansionPath.exists():
+ subprocess.run([sys.executable,str(ROOT/'scripts/build-promotion-a-expansion.py')],check=True)
+ for r in read(expansionPath)['records']:
+  e=copy.deepcopy(r['exercise'])
+  assert e['fen'] not in {old['fen'] for old in materials},e['id']
+  materials.append(e)
+  materialRecords.append(dict(**r['certificate'],gameId=e['id'],level='A',moves=e['moves']))
+  if r.get('sourceGame'):
+   g=r['sourceGame']
+   promotionSources[g['gameId']]=dict(kind='game',headers=g['headers'],fen=g['gameFen'],lines=[g['gameMoves']])
+ save(OUT/'promotion-game-sources.json',promotionSources)
+# Editorial review supersedes the historical 24-position A selection.
+reviewPath=AUDIT/'material-a-editorial-review.json'
+if reviewPath.exists():
+ subprocess.run([sys.executable,str(ROOT/'scripts/review-promotion-a.py')],check=True)
+ review=read(reviewPath)
+ retained={r['exercise']['fen'] for r in review['reviews'] if r['status']=='retained'}
+ materials=[e for e in materials if e.get('difficulty',{}).get('level')!='A' or e['fen'] in retained]
+ excludedB={r['fen'] for r in review.get('levelBExclusions',[]) if r['status']=='rejected'}
+ materials=[e for e in materials if e.get('difficulty',{}).get('level')!='B' or e['fen'] not in excludedB]
+ advancedExclusions={r['fen'] for r in review.get('advancedExclusions',[]) if r['status']=='rejected'}
+ materials=[e for e in materials if e['fen'] not in advancedExclusions]
+ for r in review['replacements']:
+  e=copy.deepcopy(r['exercise']);materials.append(e)
+  materialRecords.append(dict(**r['certificate'],gameId=e['id'],level='A',moves=e['moves']))
+  if r.get('sourceGame'):
+   g=r['sourceGame'];promotionSources[g['gameId']]=dict(kind='game',headers=g['headers'],fen=g['gameFen'],lines=[g['gameMoves']])
+ for r in review.get('advancedAdditions',[]):
+  assert r['status']=='accepted'
+  e=copy.deepcopy(r['exercise'])
+  assert e['fen'] not in {old['fen'] for old in materials},e['id']
+  materials.append(e)
+  materialRecords.append(dict(**r['certificate'],gameId=e['id'],level=e['difficulty']['level'],moves=e['moves']))
+  if r.get('sourceGame'):
+   g=r['sourceGame'];promotionSources[g['gameId']]=dict(kind='game',headers=g['headers'],fen=g['gameFen'],lines=[g['gameMoves']])
+ save(OUT/'promotion-game-sources.json',promotionSources)
+# Advanced material-promotion exercises must have a replayable real-game source.
+# Review new compositions explicitly before excluding them from publication.
+advancedLevels={'B','C','C*','D'}
+nonGameAdvanced=[e for e in materials if e.get('difficulty',{}).get('level') in advancedLevels and not e.get('gameReference')]
+expectedNonGame={r['fen'] for r in review.get('nonGameAdvancedExclusions',[]) if r['status']=='source-ineligible'} if reviewPath.exists() else set()
+assert {e['fen'] for e in nonGameAdvanced}==expectedNonGame,'Review every non-game advanced promotion candidate before rebuilding'
+materials=[e for e in materials if e not in nonGameAdvanced]
+assert all(e['gameReference']['kind']=='game' and e['gameReference']['id'] in promotionSources for e in materials if e.get('difficulty',{}).get('level') in advancedLevels)
 limited=[];counts=collections.Counter()
 for e in materials:
  level='Beginner' if e.get('beginner') else e['difficulty']['level']
  if counts[level]<24:limited.append(e);counts[level]+=1
 materials=limited
+publishedMaterialFens={e['fen'] for e in materials}
+materialRecords=[r for r in materialRecords if r['fen'] in publishedMaterialFens]
+materialSourceIds={e['gameReference']['id'] for e in materials if e.get('gameReference')}
+save(OUT/'promotion-game-sources.json',{key:value for key,value in promotionSources.items() if key in materialSourceIds})
 save(OUT/'promotion-exercises.json',[dict(id='promotion',title='Phong cấp giành vật chất',description='Khai thác phong cấp để giành vật chất; kiểm tra các nước bắt lại.',exercises=materials)])
 if (AUDIT/'underpromotion-fork.json').exists():under.append(read(AUDIT/'underpromotion-fork.json')['exercise'])
 save(OUT/'underpromotion-exercises.json',[dict(id='underpromotion',title='Phong cấp thành Xe, Tượng hoặc Mã',description='Tìm lý do cụ thể để chọn quân khác Hậu: tránh pat, tạo nước chiếu hoặc đạt mục tiêu chiến thuật.',exercises=under)])
@@ -142,7 +193,8 @@ mate=read(AUDIT/'mate-intro.json')+[copy.deepcopy(e) for e in legacy if not e.ge
 for e in mate:
  if e.get('gameReference'):e['gameReference']['collection']='promotion-mate'
 save(OUT/'promotion-mate-exercises.json',[dict(id='promotion-mate',title='Phong cấp chiếu hết',description='Phong cấp và phối hợp quân để chiếu hết.',exercises=mate)])
-save(OUT/'promotion-mate-game-sources.json',sources)
+mateSourceIds={e.get('gameReference',{}).get('id') for e in mate}
+save(OUT/'promotion-mate-game-sources.json',{key:value for key,value in sources.items() if key in mateSourceIds})
 print('mate',len(mate),collections.Counter('Beginner' if e.get('beginner') else e['difficulty']['level'] for e in mate))
 
 # Apply the complete family review, including durable duplicate exclusions.

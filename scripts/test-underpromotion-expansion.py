@@ -1,4 +1,4 @@
-from promotion_review_store import ReviewStore
+from review_store import ReviewStore
 from mate_proof_store import MateProofStore
 """Independent legal proofs, alternative choices, provenance and coverage checks."""
 import json,chess,unittest

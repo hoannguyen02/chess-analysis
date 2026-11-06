@@ -87,6 +87,8 @@ test('topic filters partition the real-game collection', async () => {
     }
   ).outputText;
   new Function('module', 'exports', 'require', js)(mod, mod.exports, (name) => {
+    if (name.endsWith('/manual-tactics'))
+      return { includeManualExercises: async (_route, data) => data };
     if (name.endsWith('/practice-access'))
       return { requirePracticeAccess: () => true };
     if (name.endsWith('/private-hub'))
@@ -138,5 +140,138 @@ test('Beginner discoveries have explicit goals and no invented game provenance',
   assert.deepEqual(
     new Set(beginners.map((e) => e.discoveryKind)),
     new Set(['check', 'attack'])
+  );
+});
+
+test('Discovery B publication snapshot and live worksheet preserve owner decisions', async () => {
+  const path = require('node:path');
+  const modules = new Map();
+  const chess = await import('chess.js');
+  function load(file) {
+    file = path.resolve(file);
+    if (!path.extname(file))
+      file += fs.existsSync(file + '.ts') ? '.ts' : '.json';
+    if (modules.has(file)) return modules.get(file).exports;
+    if (file.endsWith('.json'))
+      return JSON.parse(fs.readFileSync(file, 'utf8'));
+    if (file.endsWith('/server/practice-access.ts'))
+      return { requirePracticeAccess: () => true };
+    const mod = { exports: {} };
+    modules.set(file, mod);
+    const local = (id) => {
+      if (id === 'chess.js') return chess;
+      if (id.startsWith('@/')) return load('src/' + id.slice(2));
+      if (id.startsWith('.')) return load(path.join(path.dirname(file), id));
+      return require(id);
+    };
+    new Function(
+      'module',
+      'exports',
+      'require',
+      ts.transpileModule(fs.readFileSync(file, 'utf8'), {
+        compilerOptions: {
+          module: ts.ModuleKind.CommonJS,
+          target: ts.ScriptTarget.ES2020,
+          esModuleInterop: true,
+        },
+      }).outputText
+    )(mod, mod.exports, local);
+    return mod.exports;
+  }
+  let payload;
+  await load('src/pages/api/discovery-exercises.ts').default(
+    { method: 'GET' },
+    {
+      status(code) {
+        assert.equal(code, 200);
+        return this;
+      },
+      json(body) {
+        payload = body;
+      },
+    }
+  );
+  const batch = require('./fixtures/discovery/level-b-expansion-20261105.json');
+  const all = payload.categories[0].exercises;
+  const activeB = all.filter((e) => e.difficulty?.level === 'B');
+  const historical = load(
+    'src/lib/server/practice-management.ts'
+  ).applyPracticeAdjustments(
+    '/discovered-attack',
+    [
+      {
+        id: 'discovery',
+        exercises: [
+          ...beginners,
+          ...exercises.filter((e) =>
+            [...batch.preservedSourceIds, ...batch.order].includes(
+              e.gameReference.id
+            )
+          ),
+        ],
+      },
+    ],
+    batch.managementAtPublication,
+    false
+  )[0].exercises;
+  assert.deepEqual(
+    historical
+      .filter((e) => e.difficulty?.level === 'B')
+      .map((e) => e.gameReference.id),
+    [...batch.baseActiveOrder, ...batch.order]
+  );
+  for (const [level, count] of Object.entries(batch.expectedEffectiveCounts))
+    assert.equal(
+      historical.filter((e) => e.difficulty?.level === level).length,
+      count,
+      level
+    );
+  const choices = require('../src/lib/server/practice-adjustments.json');
+  const key = (fen) => fen.split(' ').slice(0, 4).join(' ');
+  const expectedB = exercises.filter((e) => {
+    const choice = choices.find(
+      (x) =>
+        x.reference.scope === '/discovered-attack' &&
+        key(x.reference.fen) === key(e.fen)
+    );
+    return (
+      !choice?.removed &&
+      (!choice?.destinationScope ||
+        choice.destinationScope === '/discovered-attack') &&
+      (choice?.level || e.difficulty?.level) === 'B'
+    );
+  });
+  const sourceIds = new Set(exercises.map((e) => e.gameReference.id));
+  assert.deepEqual(
+    activeB
+      .filter((e) => sourceIds.has(e.gameReference?.id))
+      .map((e) => e.gameReference.id),
+    expectedB.map((e) => e.gameReference.id)
+  );
+  const model = load('src/lib/chess/worksheet.ts');
+  const topics = model.worksheetTopicsFromLibrary(
+    load('src/lib/server/private-hub.ts').privatePages
+  );
+  const topic = topics.find((t) => t.id === 'discovered-attack');
+  assert.ok(topic);
+  const pages = model.planWorksheet(
+    [{ id: 1, topic: topic.id, level: 'B', count: activeB.length }],
+    { [topic.id]: all },
+    [topic]
+  );
+  const ids = pages
+    .flatMap((p) => p.exercises)
+    .map((x) => x.exercise.gameReference.id);
+  assert.equal(new Set(ids).size, activeB.length);
+  assert.deepEqual(
+    ids,
+    activeB.map((e) => e.gameReference.id)
+  );
+  assert.throws(() =>
+    model.planWorksheet(
+      [{ id: 1, topic: topic.id, level: 'B', count: activeB.length + 1 }],
+      { [topic.id]: all },
+      [topic]
+    )
   );
 });

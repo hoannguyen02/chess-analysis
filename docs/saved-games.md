@@ -4,6 +4,19 @@
 
 The page combines text search with opening, winner, result, theme, and square filters (any/all), and sorts by saved date, game date, or White's name. Open a card in the existing `DrawGameViewer` to replay or edit; additional saved moments are available from the card. Removal has an inline confirmation.
 
+## Position authoring
+
+To add a position directly to a tactic level, use **＋ Thêm thế cờ**, choose the
+objective and level, and enter the required solution. This writes a separate
+manual exercise and opens the existing tactic page. It does not save the full
+game or add a favorite. See [manual tactic positions](manual-tactic-positions.md).
+
+The earlier topic/level position bookmarks are retained as legacy data. They
+remain filterable in **Ván đã lưu**. **Thêm vào bài tập** opens the direct authoring
+form with their topic and level preselected; a solution is required. Legacy
+bookmarks are never silently published or deleted. New position authoring does
+not use the old `pending-review` bookmark status or an approval queue.
+
 ## Project persistence
 
 The durable file is `src/lib/server/saved-games.json`. Run `yarn dev` to add/edit/remove games. Changes update this tracked file atomically; commit it with the project and deploy to publish the collection to viewers who have practice access. Saving does not automatically create a Git commit or deploy. The initial collection is deliberately empty.
@@ -16,8 +29,11 @@ The game source snapshot is saved, rather than relying on a temporary remote sou
 
 ## Checks
 
-- `node --test scripts/test-saved-games.cjs`: legal replay validation, boundary/tag rejection, stable identity, atomic persistence, write conflicts, read-only production, winners, API authorization, repeated saves and removal. Tests write only to an isolated temporary directory.
+- `node --test scripts/test-saved-games.cjs`: legal replay validation, boundary/tag rejection, stable identity, atomic persistence, write conflicts, read-only production, winners, API authorization, repeated saves and removal; candidate catalog/level validation, server-derived FEN, pending-review status, independent notes/topics/moves, branch remapping, stale edits/removals, combined topic/level filtering and legacy compatibility. Tests write only to an isolated temporary directory.
 - `node scripts/test-mate-alternatives.cjs`: existing shared trainer regression coverage.
 - `npx tsc --noEmit`
 
 Manual check: sign in, open any real reference game, save with `f2, f7` and a note, open `/saved-games`, combine filters, reopen the saved move, add another bookmark, and edit/remove the entry. Repeat at narrow viewport widths. Arrow keys in the note/tag fields must edit text without advancing the chessboard.
+
+
+For direct-position authoring checks, see [manual tactic positions](manual-tactic-positions.md).

@@ -17,7 +17,7 @@ function load(path, overrides = {}) {
       },
     }).outputText
   )(mod, mod.exports, (id) =>
-    id === 'chess.js' ? chess : (overrides[id] ?? require(id))
+    id === 'chess.js' ? chess : id === './worksheet-layout' ? load('src/lib/chess/worksheet-layout.ts') : id === './worksheet-notation' ? load('src/lib/chess/worksheet-notation.ts', { './worksheet': model }) : (overrides[id] ?? require(id))
   );
   return mod.exports;
 }
@@ -31,8 +31,16 @@ test.before(async () => {
   model = load('src/lib/chess/worksheet.ts');
   topics = model.worksheetTopicsFromLibrary(library);
 });
+test('worksheet level choices match the shared catalog order', () => {
+  const { practiceLevels } = load('src/lib/chess/draw-levels.ts');
+  assert.deepEqual(model.worksheetLevels, practiceLevels);
+});
 const pin = require('../src/lib/server/pin-exercises.json');
-const fork = require('../src/lib/server/fork-exercises.json');
+const forkBeginners = require('../src/lib/server/fork-beginner-exercises.json');
+const fork = [
+  ...forkBeginners,
+  ...require('../src/lib/server/fork-exercises.json'),
+];
 const row = (id, topic, level, count) => ({ id, topic, level, count });
 test('ordered sections, partial pages, numbering and duplicate avoidance', () => {
   const pages = plan(
@@ -57,11 +65,37 @@ test('ordered sections, partial pages, numbering and duplicate avoidance', () =>
     new Set(flat.map((e) => model.positionKey(e.exercise))).size,
     15
   );
-  assert.throws(() => plan([row(1, 'fork', 'Beginner', 1)], { fork }), /còn 0/);
+  assert.throws(() => plan([row(1, 'fork', 'Beginner', forkBeginners.length + 1)], { fork }), new RegExp(`còn ${forkBeginners.length}`));
   assert.throws(() => plan([row(1, 'pin', 'Beginner', 25)], { pin }), /còn 24/);
   for (const count of [0, -1, 1.5, NaN, 121])
     assert.throws(() => plan([row(1, 'pin', 'Beginner', count)], { pin }));
   assert.throws(() => plan([], {}));
+});
+test('Fork Beginner exports the verified compositions through the existing worksheet source', () => {
+  assert.equal(forkBeginners.length, 7);
+  assert.equal(topics.find((topic) => topic.id === 'fork').endpoint, '/api/fork-exercises');
+  assert.deepEqual(model.levelExercises(fork, 'Beginner'), forkBeginners);
+  const pages = plan([row(1, 'fork', 'Beginner', forkBeginners.length)], { fork });
+  assert.deepEqual(pages.map((page) => page.exercises.length), [6, 1]);
+  const exported = pages.flatMap((page) => page.exercises.map((item) => item.exercise));
+  assert.equal(new Set(exported.map((exercise) => model.positionKey(exercise))).size, forkBeginners.length);
+  for (const exercise of exported) {
+    assert.equal(exercise.goal, 'material');
+    assert.equal(model.worksheetSolutionText(exercise), exercise.solution);
+    assert.deepEqual(model.worksheetSourceLines(exercise), ['Xuất xứ: thế cờ biên soạn.']);
+    for (const line of [exercise.moves, ...(exercise.alternativeLines ?? [])])
+      assert.equal(model.explainLine(exercise.fen, line).length, line.length);
+  }
+});
+test('solutionless Beginner positions print diagrams without invented answers; A-D still require moves', () => {
+  const exercise = { ...forkBeginners[0], manualId: 'author-fen-only', moves: [], alternativeLines: [], solution: '' };
+  const pages = plan([row(1, 'fork', 'Beginner', 1)], { fork: [exercise] });
+  assert.equal(pages[0].exercises[0].exercise, exercise);
+  assert.equal(model.worksheetSolutionText(exercise), 'Chưa có lời giải.');
+  assert.deepEqual(model.explainLine(exercise.fen, exercise.moves), []);
+  const advanced = { ...exercise, beginner: false, difficulty: { level: 'A' } };
+  assert.deepEqual(model.levelExercises([advanced], 'A'), []);
+  assert.throws(() => plan([row(1, 'fork', 'A', 1)], { fork: [advanced] }), /còn 0/);
 });
 test('Vietnamese explanation, previous move and every eligible saved continuation', () => {
   for (const [path, items] of Object.entries({
@@ -97,6 +131,18 @@ test('Vietnamese explanation, previous move and every eligible saved continuatio
     })
   );
 });
+test('previous-move comparison preserves only available en passant rights', () => {
+  const exercise = require('../src/lib/server/removing-defender-exercises.json')
+    .find((item) => item.id === 'removing-defender-b-boulrens-amdouni-2026');
+  assert.match(model.previousMoveLabel(exercise), /g5/);
+  const previousMove = { fen: '4k3/3p4/8/4P3/8/8/8/4K3 b - - 0 1', move: 'd5' };
+  assert.throws(() => model.previousMoveLabel({
+    fen: '4k3/8/8/3pP3/8/8/8/4K3 w - - 0 2', previousMove,
+  }), /không khớp/);
+  assert.match(model.previousMoveLabel({
+    fen: '4k3/8/8/3pP3/8/8/8/4K3 w - d6 0 2', previousMove,
+  }), /d5/);
+});
 test('generated PDF page counts, A4 size and separate answers', async () => {
   const pdf = load('src/lib/chess/worksheet-pdf.ts', { './worksheet': model });
   const original = global.fetch;
@@ -116,7 +162,7 @@ test('generated PDF page counts, A4 size and separate answers', async () => {
         row(3, 'rook-bishop-mate', 'Beginner', 6),
         row(4, 'arabian-mate', 'Beginner', 6),
         row(5, 'anastasia-mate', 'Beginner', 6),
-        row(6, 'promotion', 'Beginner', 3),
+        row(6, 'promotion', 'Beginner', 2),
         row(7, 'underpromotion', 'A', 2),
         row(8, 'passed-pawn-simplification', 'D', 6),
         row(9, 'promotion-mate', 'C*', 6),
@@ -180,7 +226,7 @@ test('generated PDF page counts, A4 size and separate answers', async () => {
       model.defaultBookOptions
     );
     const bookDoc = await PDFDocument.load(bookResult.worksheet);
-    assert.equal(bookDoc.getPageCount(), 6); // Cover, intro, 2 chapters, review, closing.
+    assert.equal(bookDoc.getPageCount(), 7); // Cover, intro, notation guide, 2 chapters, review, closing.
     assert.ok((await PDFDocument.load(bookResult.answers)).getPageCount() > 1);
     const longBook = await pdf.createWorksheetPdfs(
       bookPages,
@@ -207,6 +253,7 @@ test('generated PDF page counts, A4 size and separate answers', async () => {
       {
         ...model.defaultBookOptions,
         showLevelGuide: false,
+        showNotationGuide: false,
       }
     );
     assert.equal((await PDFDocument.load(noGuide.worksheet)).getPageCount(), 6);
@@ -504,6 +551,7 @@ test('PDF editorial notes retain tactical data and distinguish sources from anal
 test('published tactics use the same solution prose on web and PDF', () => {
   const paths = [
     '../src/lib/server/fork-exercises.json',
+    '../src/lib/server/fork-beginner-exercises.json',
     '../src/lib/server/pin-exercises.json',
     '../src/lib/server/discovery-exercises.json',
     '../src/lib/server/discovery-beginner-exercises.json',
@@ -891,4 +939,65 @@ test('all four promotion topics expose their actual printable levels', () => {
       if (id === 'promotion-mate') assert.equal(count, { Beginner: 5, A: 20, B: 18, C: 17, 'C*': 21, D: 22 }[level]);
     }
   }
+});
+
+test('global level selection requires a full A4 page and shares the pagination default', () => {
+  const { POSITIONS_PER_PAGE } = load('src/lib/chess/worksheet-layout.ts');
+  const selection = load('src/lib/chess/worksheet-selection.ts', { './worksheet': model });
+  const review = load('src/lib/chess/worksheet-review.ts');
+  const sample = (fen, level, extra = {}) => ({ fen, moves: ['e4'], beginner: level === 'Beginner', difficulty: { level }, ...extra });
+  const batch = (prefix, count, level) => Array.from({length:count},(_,i)=>sample(`${prefix}-${i} w - - 0 1`,level));
+  const catalog = {
+    empty: [], one: batch('one',1,'A'), five: batch('five',POSITIONS_PER_PAGE-1,'A'),
+    exact: batch('exact',POSITIONS_PER_PAGE,'A'),
+    duplicate: [...batch('dup',POSITIONS_PER_PAGE-1,'A'), sample('dup-0 w - - 0 2','A')],
+    recognition: [...batch('rec',POSITIONS_PER_PAGE-1,'A'), sample('recognition w - - 0 1','A',{mode:'recognition'})],
+    mixed: [...batch('beginner',POSITIONS_PER_PAGE,'Beginner'), ...batch('a',POSITIONS_PER_PAGE,'A'), ...batch('sparse',1,'D')],
+    advanced: batch('d',POSITIONS_PER_PAGE+1,'D'),
+  };
+  const topics = Object.keys(catalog).map(id => ({id,title:id,endpoint:`/api/${id}`}));
+  const eligible = levels => selection.eligibleWorksheetTopics(topics,levels,catalog).map(t=>t.id);
+  assert.deepEqual(eligible(['Beginner']),['mixed']);
+  assert.deepEqual(eligible(['A']),['exact','mixed']);
+  assert.deepEqual(eligible(['Beginner','A']),['exact','mixed']);
+  assert.deepEqual(eligible(['D']),['advanced']);
+  assert.deepEqual(eligible([]),[]);
+  assert.deepEqual(selection.availableWorksheetLevels('mixed',['D','A','Beginner'],catalog),['Beginner','A']);
+  assert.equal(selection.defaultWorksheetCount,String(POSITIONS_PER_PAGE));
+  assert.equal(review.defaultReviewSettings.count,String(POSITIONS_PER_PAGE));
+  const rows = [{id:1,topic:'mixed',count:'6'},{id:2,topic:'exact',count:'6'},{id:3,topic:'advanced',count:'6'}];
+  const expanded = selection.expandWorksheetTopics(rows,['D','A','Beginner'],catalog);
+  assert.deepEqual(expanded.map(s=>[s.topic,s.level]),[['mixed','Beginner'],['mixed','A'],['exact','A'],['advanced','D']]);
+  assert.equal(new Set(expanded.map(s=>s.id)).size,4);
+  const blocks=review.automaticReviewBlocks(expanded,{...review.defaultReviewSettings,final:false});
+  assert.equal(blocks.length,1,'reviews count topics, not levels');
+  assert.equal(blocks[0].afterSectionId,expanded[3].id);
+  assert.equal(blocks[0].rows.length,4);
+  const moved=selection.expandWorksheetTopics([rows[2],rows[0],rows[1]],['Beginner','A','D'],catalog);
+  assert.equal(moved[0].id,expanded[3].id);
+  const chapters=Array.from({length:10},(_,i)=>({id:i+1,topic:'mixed',count:'6'}));
+  const multiple=selection.expandWorksheetTopics(chapters,['Beginner','A'],catalog);
+  assert.deepEqual(review.automaticReviewBlocks(multiple,review.defaultReviewSettings).map(b=>b.rows.length),[6,6,6,20]);
+  const paginated=plan([row(1,'pin','Beginner',POSITIONS_PER_PAGE+1)],{pin});
+  assert.deepEqual(paginated.map(p=>p.exercises.length),[POSITIONS_PER_PAGE,1]);
+});
+
+
+test('notation examples replay legally with accurate SAN and Vietnamese explanations', () => {
+  const guide = load('src/lib/chess/worksheet-notation.ts', { './worksheet': model });
+  for (const [id, example] of Object.entries(guide.notationExamples)) {
+    const board = new chess.Chess(example.fen);
+    assert.equal(board.validate_fen(example.fen).valid, true, id);
+    const move = board.move(example.move);
+    assert.ok(move, id);
+    assert.equal(move.san, example.move, id);
+    assert.ok(guide.notationExampleText(id).includes(move.san), id);
+    if (id === 'check') { assert.ok(board.in_check()); assert.equal(board.in_checkmate(), false); }
+    if (id === 'mate') assert.ok(board.in_checkmate());
+  }
+  assert.match(guide.notationExampleText('enPassant'), /đến d6, bắt Tốt qua đường ở d5/);
+  assert.match(guide.notationExampleText('capturePromotion'), /bắt Xe ở d8, phong thành Mã/);
+  assert.match(guide.notationExampleText('file'), /Mã từ b1 đến d2/);
+  assert.match(guide.notationExampleText('rank'), /Xe từ e1 đến e2/);
+  assert.match(guide.notationExampleText('square'), /Mã từ b1 đến d2/);
 });

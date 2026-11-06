@@ -17,7 +17,11 @@ function load(path, resolve) {
         esModuleInterop: true,
       },
     }).outputText
-  )(mod, mod.exports, resolve);
+  )(mod, mod.exports, (id) =>
+    id.endsWith('/manual-tactics')
+      ? { includeManualExercises: async (_route, data) => data }
+      : resolve(id)
+  );
   return mod.exports;
 }
 
@@ -52,9 +56,19 @@ test('private endpoint puts 10 compositions before the six preserved pilot exerc
   const all = payload.categories[0].exercises;
   const queens = all.filter((e) => e.beginnerKind === 'queen');
   assert.equal(queens.length, 16);
-  assert.deepEqual(queens.slice(10).map((e) => e.fen), exercises.map((e) => e.fen));
-  assert.ok(queens.slice(0, 10).every((e) => e.source === 'original-composition' && !e.gameReference));
-  assert.deepEqual(queens.map((e) => e.title), Array.from({ length: 16 }, (_, i) => `Xiên Hậu · ${i + 1}`));
+  assert.deepEqual(
+    queens.slice(10).map((e) => e.fen),
+    exercises.map((e) => e.fen)
+  );
+  assert.ok(
+    queens
+      .slice(0, 10)
+      .every((e) => e.source === 'original-composition' && !e.gameReference)
+  );
+  assert.deepEqual(
+    queens.map((e) => e.title),
+    Array.from({ length: 16 }, (_, i) => `Xiên Hậu · ${i + 1}`)
+  );
   assert.equal(all.filter((e) => e.beginner && !e.beginnerKind).length, 57);
   assert.equal(all.filter((e) => !e.beginner).length, 246);
   assert.equal(all.filter((e) => e.decision).length, 1);
@@ -133,7 +147,11 @@ test('all 10 composed lessons complete through the shared trainer', async () => 
     let played = [];
     let result;
     while (played.length < exercise.moves.length) {
-      result = trainer.tryDrawMove(exercise, played, exercise.moves[played.length]);
+      result = trainer.tryDrawMove(
+        exercise,
+        played,
+        exercise.moves[played.length]
+      );
       assert.equal(result.status, 'accepted', exercise.title);
       assert.ok(result.played.length > played.length);
       played = result.played;

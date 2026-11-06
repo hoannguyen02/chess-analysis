@@ -1,7 +1,8 @@
 """Independent second pass: full solver timeline, all-root probes and motif coverage."""
-import importlib.util,json,sys
+import argparse,importlib.util,json,sys
 from pathlib import Path
 import chess,chess.engine
+from tactic_research import CachedEngine, DEFAULT_CACHE, code_version, digest, resume_reviews, atomic_json
 sys.dont_write_bytecode=True
 ROOT=Path(__file__).resolve().parents[1];F=ROOT/'scripts/fixtures/discovery'
 s=importlib.util.spec_from_file_location('audit',ROOT/'scripts/review-discovery-upper.py');audit=importlib.util.module_from_spec(s);s.loader.exec_module(audit)
@@ -14,12 +15,14 @@ def line(b,pv):
  return result
 
 def main():
- archive=F/'second-pass-candidates.json'
+ parser=argparse.ArgumentParser();parser.add_argument('--input',type=Path);parser.add_argument('--output',type=Path);parser.add_argument('--cache',type=Path,default=DEFAULT_CACHE);parser.add_argument('--no-cache',action='store_true');args=parser.parse_args()
+ archive=args.input or F/'second-pass-candidates.json'
  if not archive.exists():archive.write_text(json.dumps({'candidates':[r for r in json.loads((F/'published.json').read_text())['records'] if r['level']!='A']},ensure_ascii=False,indent=2)+'\n')
- records=json.loads(archive.read_text())['candidates'];out=F/'second-pass-analysis.json'
+ records=json.loads(archive.read_text())['records' if args.input else 'candidates'];out=args.output or F/'second-pass-analysis.json'
  data=json.loads(out.read_text()) if out.exists() else {'method':'All legal starting moves screened at 1,000,000 total Stockfish MultiPV nodes. Every solver position replayed, including the discovery itself and post-capture settlement. All immediate replies recorded for material balance. Three engine defences per solver move probed at 500,000 nodes; finite search is evidence, not exhaustive tactical proof.','reviews':[]}
- done={r['gameId'] for r in data['reviews']}
- with chess.engine.SimpleEngine.popen_uci('/opt/homebrew/bin/stockfish') as engine:
+ policy={'rootNodes':1000000,'defenceNodes':500000,'engineSha256':__import__('hashlib').sha256(Path('/opt/homebrew/bin/stockfish').read_bytes()).hexdigest(),'code':code_version('tactic_research.py','review-discovery-second-pass.py','review-discovery-level-a.py','build-discovery.py','collect-discovery.py'),'cachedColdHash':not args.no_cache}
+ done=resume_reviews(data,records,policy)
+ with (chess.engine.SimpleEngine.popen_uci('/opt/homebrew/bin/stockfish') if args.no_cache else CachedEngine(cache=args.cache)) as engine:
   engine.configure({'Threads':1,'Hash':64});data['engine']=engine.id
   for r in records:
    if r['gameId'] in done:continue
@@ -57,6 +60,6 @@ def main():
     if any(x['mate'] is not None and x['mate']>0 for x in roots):flags.append('root-mating-lead')
     if any(x['safeImmediateGain'] for x in timeline if x['ply']<r['discoveryPly']):flags.append('material-before-discovery')
     if r['kind']=='attack' and next(x for x in timeline if x['ply']==r['discoveryPly'])['safeImmediateGain']:flags.append('material-on-direct-move-before-discovered-target')
-   row={'gameId':r['gameId'],'level':r['level'],'fen':r['fen'],'moves':r['moves'],'aspects':sorted(aspects),'motifs':motifs,'roots':roots,'timeline':timeline,'flags':flags}
-   data['reviews'].append(row);out.write_text(json.dumps(data,ensure_ascii=False,indent=2)+'\n');print(r['level'],r['gameId'],flags,flush=True)
+   row={'gameId':r['gameId'],'candidateHash':digest(r),'level':r['level'],'fen':r['fen'],'moves':r['moves'],'aspects':sorted(aspects),'motifs':motifs,'roots':roots,'timeline':timeline,'flags':flags}
+   data['reviews'].append(row);atomic_json(out,data);print(r['level'],r['gameId'],flags,flush=True)
 if __name__=='__main__':main()

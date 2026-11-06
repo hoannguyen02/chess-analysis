@@ -10,7 +10,6 @@
         "mode": "interactive",
         "goal": "material",
         "outcome": "promotion",
-        "beginner": true,
         "fen": "8/1P6/k7/8/1K6/8/8/8 w - - 0 1",
         "moves": [
           "b8=R",
@@ -26,7 +25,14 @@
         "promotionMaterial": {
           "minimumGain": 4
         },
-        "id": "underpromotion-932093e04d4bd5fc"
+        "id": "underpromotion-932093e04d4bd5fc",
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 1,
+          "sacrificeCount": 0,
+          "reason": "Chọn quân phong cấp để tránh pat; nội dung từ cấp A."
+        }
       },
       {
         "title": "Phong cấp · Bài 10",
@@ -153,7 +159,13 @@
         "mode": "interactive",
         "goal": "material",
         "outcome": "promotion",
-        "beginner": true,
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 1,
+          "sacrificeCount": 0,
+          "reason": "Chọn quân phong cấp để tránh pat; nội dung từ cấp A."
+        },
         "promotionGain": {
           "minimumGain": 220,
           "solverMoves": 1

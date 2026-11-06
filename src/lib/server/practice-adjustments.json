@@ -1,0 +1,3428 @@
+[
+  {
+    "id": "790495c02c2b9d3643f661ae",
+    "reference": {
+      "scope": "/discovered-attack",
+      "fen": "3rr3/p2kq1b1/2p1pn2/1Q3pBp/3P2p1/8/PPP2PPP/R2R2K1 w - - 0 24",
+      "baseLevel": "B",
+      "title": "Aldokhin,I (2413) — Jobava,Ba (2578)",
+      "moves": [
+        "Qb7+",
+        "Kd6",
+        "Bf4+",
+        "e5",
+        "dxe5+"
+      ],
+      "alternativeLines": [],
+      "goal": "material",
+      "previousMove": {
+        "fen": "3rr3/p1pkq1b1/4pn2/1Q3pBp/3P2p1/8/PPP2PPP/R2R2K1 b - - 5 23",
+        "move": "c6"
+      },
+      "gameReference": {
+        "id": "1f95e7caefa9237a",
+        "kind": "game",
+        "ply": 46,
+        "branch": 0,
+        "collection": "discovery"
+      },
+      "manualId": null
+    },
+    "level": null,
+    "removed": true,
+    "note": "",
+    "updatedAt": "2026-11-05T02:23:49.318Z",
+    "history": [
+      {
+        "action": "remove",
+        "level": null,
+        "note": "",
+        "at": "2026-11-05T02:23:49.318Z"
+      }
+    ]
+  },
+  {
+    "id": "3186a18081cee22478bb680d",
+    "reference": {
+      "scope": "/discovered-attack",
+      "fen": "4k2r/1p1bppbp/p4np1/q7/3Q2P1/1PN4P/P1P2PB1/2KR3R w k - 1 17",
+      "baseLevel": "B",
+      "title": "King, Daniel J (2435) — Nunn, John DM (2585)",
+      "moves": [
+        "Nd5",
+        "O-O",
+        "Nxf6+",
+        "exf6",
+        "Qxd7"
+      ],
+      "alternativeLines": [
+        [
+          "Nd5",
+          "O-O",
+          "Nxf6+",
+          "Kh8",
+          "Qxd7"
+        ],
+        [
+          "Nd5",
+          "O-O",
+          "Nxf6+",
+          "Bxf6",
+          "Qxd7"
+        ]
+      ],
+      "goal": "material",
+      "previousMove": {
+        "fen": "3qk2r/1p1bppbp/p4np1/8/3Q2P1/1PN4P/P1P2PB1/2KR3R b k - 0 16",
+        "move": "Qa5"
+      },
+      "gameReference": {
+        "id": "b715e1b3cb3644a1",
+        "kind": "game",
+        "ply": 32,
+        "branch": 0,
+        "collection": "discovery"
+      },
+      "manualId": null
+    },
+    "level": null,
+    "removed": true,
+    "note": "",
+    "updatedAt": "2026-11-05T02:26:33.837Z",
+    "history": [
+      {
+        "action": "remove",
+        "level": null,
+        "note": "",
+        "at": "2026-11-05T02:26:33.837Z"
+      }
+    ]
+  },
+  {
+    "id": "4a6ee43786971a1993f0b5db",
+    "reference": {
+      "scope": "/discovered-attack",
+      "fen": "5rk1/p2Q4/6P1/6p1/1ppp4/1P3b2/P6K/1B4r1 b - - 2 41",
+      "baseLevel": "B",
+      "title": "Jobava,Ba (2707) — Kramnik,V (2808)",
+      "moves": [
+        "Rg2+",
+        "Kh1",
+        "Rb2+",
+        "Kg1",
+        "Rxb1+"
+      ],
+      "alternativeLines": [],
+      "goal": "material",
+      "previousMove": {
+        "fen": "5rk1/p2Q4/6P1/6p1/1ppp4/1P3bK1/P7/1B4r1 w - - 1 41",
+        "move": "Kh2"
+      },
+      "gameReference": {
+        "id": "4acf9d2a4534e6dc",
+        "kind": "game",
+        "ply": 81,
+        "branch": 0,
+        "collection": "discovery"
+      },
+      "manualId": null
+    },
+    "level": "C*",
+    "removed": false,
+    "note": "",
+    "updatedAt": "2026-11-05T02:29:25.536Z",
+    "history": [
+      {
+        "action": "move",
+        "level": "C*",
+        "note": "",
+        "at": "2026-11-05T02:29:25.536Z"
+      }
+    ]
+  },
+  {
+    "id": "3450ae0d747f2952a24ef3ba",
+    "reference": {
+      "scope": "/discovered-attack",
+      "fen": "5nk1/3b1p1p/3p1Q2/2pP2PN/2P2P1p/R4N1q/4K3/5r2 b - - 3 40",
+      "baseLevel": "B",
+      "title": "Quinteros, Miguel A (2495) — Larsen, Bent (2630)",
+      "moves": [
+        "Qg2+",
+        "Ke3",
+        "Rxf3+",
+        "Ke4",
+        "Rxa3#"
+      ],
+      "alternativeLines": [
+        [
+          "Qg2+",
+          "Kd3",
+          "Rxf3+",
+          "Ke4",
+          "Rxa3#"
+        ]
+      ],
+      "goal": "checkmate",
+      "previousMove": {
+        "fen": "5nk1/3b1p1p/3p1Q2/2pP2PN/2P2P1p/R4N1q/5K2/5r2 w - - 2 40",
+        "move": "Ke2"
+      },
+      "gameReference": {
+        "id": "eb90320742dca76e",
+        "kind": "game",
+        "ply": 79,
+        "branch": 0,
+        "collection": "discovery"
+      },
+      "manualId": null,
+      "exercise": {
+        "title": "Quinteros, Miguel A — Larsen, Bent",
+        "discoveryKind": "check",
+        "prompt": "Khai thác chiếu mở để chiếu hết.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "fen": "5nk1/3b1p1p/3p1Q2/2pP2PN/2P2P1p/R4N1q/4K3/5r2 b - - 3 40",
+        "moves": [
+          "Qg2+",
+          "Ke3",
+          "Rxf3+",
+          "Ke4",
+          "Rxa3#"
+        ],
+        "alternativeLines": [
+          [
+            "Qg2+",
+            "Kd3",
+            "Rxf3+",
+            "Ke4",
+            "Rxa3#"
+          ]
+        ],
+        "previousMove": {
+          "fen": "5nk1/3b1p1p/3p1Q2/2pP2PN/2P2P1p/R4N1q/5K2/5r2 w - - 2 40",
+          "move": "Ke2"
+        },
+        "source": "https://www.pgnmentor.com/players/Larsen.zip",
+        "gameReference": {
+          "id": "eb90320742dca76e",
+          "kind": "game",
+          "ply": 79,
+          "branch": 0,
+          "collection": "discovery"
+        },
+        "hints": [
+          "Xem quân nào có thể mở đường tấn công cho Hậu sau các nước chuẩn bị.",
+          "Kiểm tra nước đáp, nước bắt lại và kết quả của toàn bộ phương án."
+        ],
+        "solution": "Qg2+ — Hậu từ h3 đến g2. Trong phương án đã cho, Rxa3# — Xe từ f3 bắt Xe ở a3. Nước này mở đường cho Hậu ở g2 chiếu Vua ở e4. Đối phương phải xử lý nước chiếu trước khi đáp lại các đe dọa khác. Phương án kết thúc bằng chiếu hết.",
+        "goal": "checkmate",
+        "gameCaption": "1974 · Manila",
+        "gameOpening": "Khai cuộc: Benoni Defense: French Benoni · A43",
+        "playerTitle": "Quinteros, Miguel A (2495) — Larsen, Bent (2630)",
+        "players": [
+          {
+            "name": "Quinteros, Miguel A",
+            "title": "",
+            "rating": "2495"
+          },
+          {
+            "name": "Larsen, Bent",
+            "title": "",
+            "rating": "2630"
+          }
+        ],
+        "beginner": false,
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
+          "solverMoves": 3,
+          "sacrificeCount": 0
+        }
+      }
+    },
+    "level": "B",
+    "destinationScope": "/tactic-positions?theme=exposedKing",
+    "removed": false,
+    "note": "Phân loại thủ công: tấn công Vua, cấp độ B.",
+    "updatedAt": "2026-11-05T03:43:30.998Z",
+    "history": [
+      {
+        "action": "move",
+        "level": "B",
+        "scope": "/tactic-positions?theme=exposedKing",
+        "note": "Phân loại thủ công: tấn công Vua, cấp độ B.",
+        "at": "2026-11-05T03:43:30.998Z"
+      }
+    ]
+  },
+  {
+    "id": "aaacd000322c79a7886afaf8",
+    "reference": {
+      "scope": "/discovered-attack",
+      "fen": "3r1rk1/1p3p2/p1b2q1p/5ppn/6RP/1BN1Q3/PPP2P2/2K3R1 w - - 0 26",
+      "baseLevel": "B",
+      "title": "Morozevich,A (2707) — Cvitan,O (2562)",
+      "moves": [
+        "hxg5",
+        "Qd6",
+        "Rh4",
+        "Rfe8",
+        "gxh6+"
+      ],
+      "alternativeLines": [],
+      "goal": "material",
+      "previousMove": {
+        "fen": "3r1rk1/1p3p2/p1b1pq1p/5Ppn/6RP/1BN1Q3/PPP2P2/2K3R1 b - h3 0 25",
+        "move": "exf5"
+      },
+      "gameReference": {
+        "id": "8f195eb5e17e51f6",
+        "kind": "game",
+        "ply": 50,
+        "branch": 0,
+        "collection": "discovery"
+      },
+      "manualId": null,
+      "exercise": {
+        "title": "Morozevich,A — Cvitan,O",
+        "discoveryKind": "check",
+        "prompt": "Khai thác chiếu mở để thắng vật chất.",
+        "mode": "interactive",
+        "outcome": "discovery",
+        "fen": "3r1rk1/1p3p2/p1b2q1p/5ppn/6RP/1BN1Q3/PPP2P2/2K3R1 w - - 0 26",
+        "moves": [
+          "hxg5",
+          "Qd6",
+          "Rh4",
+          "Rfe8",
+          "gxh6+"
+        ],
+        "alternativeLines": [],
+        "previousMove": {
+          "fen": "3r1rk1/1p3p2/p1b1pq1p/5Ppn/6RP/1BN1Q3/PPP2P2/2K3R1 b - h3 0 25",
+          "move": "exf5"
+        },
+        "source": "https://www.pgnmentor.com/players/Morozevich.zip",
+        "gameReference": {
+          "id": "8f195eb5e17e51f6",
+          "kind": "game",
+          "ply": 50,
+          "branch": 0,
+          "collection": "discovery"
+        },
+        "hints": [
+          "Xem quân nào có thể mở đường tấn công cho Xe sau các nước chuẩn bị.",
+          "Kiểm tra nước đáp, nước bắt lại và kết quả của toàn bộ phương án."
+        ],
+        "solution": "hxg5 — Tốt từ h4 bắt Tốt ở g5. Trong phương án đã cho, gxh6+ — Tốt từ g5 bắt Tốt ở h6. Nước này mở đường cho Xe ở g1 chiếu Vua ở g8. Đối phương phải xử lý nước chiếu trước khi đáp lại các đe dọa khác. Tính cả các nước bắt lại trong phương án, bên đi giành lợi thế vật chất so với thế cờ ban đầu.",
+        "goal": "material",
+        "gameCaption": "2002 · Olympiad",
+        "gameOpening": "Khai cuộc: Sicilian Defense: Najdorf Variation, Lipnitsky Attack · B90",
+        "playerTitle": "Morozevich,A (2707) — Cvitan,O (2562)",
+        "players": [
+          {
+            "name": "Morozevich,A",
+            "title": "",
+            "rating": "2707"
+          },
+          {
+            "name": "Cvitan,O",
+            "title": "",
+            "rating": "2562"
+          }
+        ],
+        "beginner": false,
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
+          "solverMoves": 3,
+          "sacrificeCount": 0
+        }
+      }
+    },
+    "level": "C*",
+    "removed": false,
+    "note": "",
+    "updatedAt": "2026-11-05T05:08:43.517Z",
+    "history": [
+      {
+        "action": "move",
+        "level": "C*",
+        "scope": "/discovered-attack",
+        "note": "",
+        "at": "2026-11-05T05:08:43.517Z"
+      }
+    ]
+  },
+  {
+    "id": "5faae4e8a393de39bcb59ca6",
+    "reference": {
+      "scope": "/discovered-attack",
+      "fen": "r1b1r3/pp3k2/2pq2pB/8/4p1PQ/2Nn4/PP3P1P/3R1RK1 w - - 1 20",
+      "baseLevel": "B",
+      "title": "Liang,Awonder (2608) — Aronian,L (2755)",
+      "moves": [
+        "Be3",
+        "Qe5",
+        "f3",
+        "Rh8",
+        "fxe4+"
+      ],
+      "alternativeLines": [],
+      "goal": "material",
+      "previousMove": {
+        "fen": "r1b1r3/pp3k2/2pq2pB/8/1n2p1PQ/2N5/PP3P1P/3R1RK1 b - - 0 19",
+        "move": "Nd3"
+      },
+      "gameReference": {
+        "id": "bfef9477bba315c3",
+        "kind": "game",
+        "ply": 38,
+        "branch": 0,
+        "collection": "discovery"
+      },
+      "manualId": null,
+      "exercise": {
+        "title": "Liang,Awonder — Aronian,L",
+        "discoveryKind": "check",
+        "prompt": "Khai thác chiếu mở để thắng vật chất.",
+        "mode": "interactive",
+        "outcome": "discovery",
+        "fen": "r1b1r3/pp3k2/2pq2pB/8/4p1PQ/2Nn4/PP3P1P/3R1RK1 w - - 1 20",
+        "moves": [
+          "Be3",
+          "Qe5",
+          "f3",
+          "Rh8",
+          "fxe4+"
+        ],
+        "alternativeLines": [],
+        "previousMove": {
+          "fen": "r1b1r3/pp3k2/2pq2pB/8/1n2p1PQ/2N5/PP3P1P/3R1RK1 b - - 0 19",
+          "move": "Nd3"
+        },
+        "source": "https://www.pgnmentor.com/players/Aronian.zip",
+        "gameReference": {
+          "id": "bfef9477bba315c3",
+          "kind": "game",
+          "ply": 38,
+          "branch": 0,
+          "collection": "discovery"
+        },
+        "hints": [
+          "Xem quân nào có thể mở đường tấn công cho Xe sau các nước chuẩn bị.",
+          "Kiểm tra nước đáp, nước bắt lại và kết quả của toàn bộ phương án."
+        ],
+        "solution": "Be3 — Tượng từ h6 đến e3. Trong phương án đã cho, fxe4+ — Tốt từ f3 bắt Tốt ở e4. Nước này mở đường cho Xe ở f1 chiếu Vua ở f7. Đối phương phải xử lý nước chiếu trước khi đáp lại các đe dọa khác. Tính cả các nước bắt lại trong phương án, bên đi giành lợi thế vật chất so với thế cờ ban đầu.",
+        "goal": "material",
+        "gameCaption": "2022 · ch-USA 2022",
+        "gameOpening": "Khai cuộc: Scotch Game: Cochrane-Shumov Defense · C44",
+        "playerTitle": "Liang,Awonder (2608) — Aronian,L (2755)",
+        "players": [
+          {
+            "name": "Liang,Awonder",
+            "title": "",
+            "rating": "2608"
+          },
+          {
+            "name": "Aronian,L",
+            "title": "",
+            "rating": "2755"
+          }
+        ],
+        "beginner": false,
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
+          "solverMoves": 3,
+          "sacrificeCount": 0
+        }
+      }
+    },
+    "level": "C*",
+    "removed": false,
+    "note": "",
+    "updatedAt": "2026-11-05T05:12:02.078Z",
+    "history": [
+      {
+        "action": "move",
+        "level": "C*",
+        "scope": "/discovered-attack",
+        "note": "",
+        "at": "2026-11-05T05:12:02.078Z"
+      }
+    ]
+  },
+  {
+    "id": "331571510f0b2d474bcf2f98",
+    "reference": {
+      "scope": "/discovered-attack",
+      "fen": "2r3k1/3b1pb1/p5p1/3Pr2p/2p1N1nP/2N3P1/P7/2KRRB2 b - - 0 30",
+      "baseLevel": "B",
+      "title": "Mohota,N (2303) — Ivanchuk,V (2752)",
+      "moves": [
+        "f5",
+        "Ng5",
+        "Rxe1",
+        "Rxe1",
+        "Bxc3"
+      ],
+      "alternativeLines": [
+        [
+          "f5",
+          "Ng5",
+          "Rxe1",
+          "Nh7",
+          "Bxc3"
+        ],
+        [
+          "f5",
+          "Ng5",
+          "Rxe1",
+          "Nf7",
+          "Bxc3"
+        ],
+        [
+          "f5",
+          "Ng5",
+          "Rxe1",
+          "Ne6",
+          "Bxc3"
+        ],
+        [
+          "f5",
+          "Ng5",
+          "Rxe1",
+          "Nge4",
+          "Bxc3"
+        ],
+        [
+          "f5",
+          "Ng5",
+          "Rxe1",
+          "Nh3",
+          "Bxc3"
+        ],
+        [
+          "f5",
+          "Ng5",
+          "Rxe1",
+          "Nf3",
+          "Bxc3"
+        ],
+        [
+          "f5",
+          "Ng5",
+          "Rxe1",
+          "Nb5",
+          "Rxf1"
+        ],
+        [
+          "f5",
+          "Ng5",
+          "Rxe1",
+          "Nb5",
+          "Rxd1+"
+        ],
+        [
+          "f5",
+          "Ng5",
+          "Rxe1",
+          "Nce4",
+          "Rxe4"
+        ],
+        [
+          "f5",
+          "Ng5",
+          "Rxe1",
+          "Nce4",
+          "Rxf1"
+        ],
+        [
+          "f5",
+          "Ng5",
+          "Rxe1",
+          "Nce4",
+          "Rxd1+"
+        ],
+        [
+          "f5",
+          "Ng5",
+          "Rxe1",
+          "Na4",
+          "Rxf1"
+        ],
+        [
+          "f5",
+          "Ng5",
+          "Rxe1",
+          "Na4",
+          "Rxd1+"
+        ],
+        [
+          "f5",
+          "Ng5",
+          "Rxe1",
+          "Ne2",
+          "Rxe2"
+        ],
+        [
+          "f5",
+          "Ng5",
+          "Rxe1",
+          "Ne2",
+          "Rxf1"
+        ],
+        [
+          "f5",
+          "Ng5",
+          "Rxe1",
+          "Ne2",
+          "Rxd1+"
+        ],
+        [
+          "f5",
+          "Ng5",
+          "Rxe1",
+          "Nb1",
+          "Rxf1"
+        ],
+        [
+          "f5",
+          "Ng5",
+          "Rxe1",
+          "Nb1",
+          "Rxd1+"
+        ],
+        [
+          "f5",
+          "Ng5",
+          "Rxe1",
+          "Bxc4",
+          "Bxc3"
+        ],
+        [
+          "f5",
+          "Ng5",
+          "Rxe1",
+          "Bh3",
+          "Bxc3"
+        ],
+        [
+          "f5",
+          "Ng5",
+          "Rxe1",
+          "Bd3",
+          "Bxc3"
+        ],
+        [
+          "f5",
+          "Ng5",
+          "Rxe1",
+          "Bg2",
+          "Bxc3"
+        ],
+        [
+          "f5",
+          "Ng5",
+          "Rxe1",
+          "Be2",
+          "Bxc3"
+        ],
+        [
+          "f5",
+          "Ng5",
+          "Rxe1",
+          "Kd2",
+          "Bxc3+"
+        ],
+        [
+          "f5",
+          "Ng5",
+          "Rxe1",
+          "Kc2",
+          "Bxc3"
+        ],
+        [
+          "f5",
+          "Ng5",
+          "Rxe1",
+          "Kb2",
+          "Bxc3+"
+        ],
+        [
+          "f5",
+          "Ng5",
+          "Rxe1",
+          "Kb1",
+          "Bxc3"
+        ],
+        [
+          "f5",
+          "Ng5",
+          "Rxe1",
+          "d6",
+          "Bxc3"
+        ],
+        [
+          "f5",
+          "Ng5",
+          "Rxe1",
+          "a3",
+          "Bxc3"
+        ],
+        [
+          "f5",
+          "Ng5",
+          "Rxe1",
+          "a4",
+          "Bxc3"
+        ]
+      ],
+      "goal": "material",
+      "previousMove": {
+        "fen": "2r3k1/3b1pb1/p5p1/3Pr2p/2p1N1nP/2N5/P5P1/2KRRB2 w - - 0 30",
+        "move": "g3"
+      },
+      "gameReference": {
+        "id": "59d867196a5f620d",
+        "kind": "game",
+        "ply": 59,
+        "branch": 0,
+        "collection": "discovery"
+      },
+      "manualId": null,
+      "exercise": {
+        "title": "Mohota,N — Ivanchuk,V",
+        "discoveryKind": "attack",
+        "prompt": "Khai thác tấn công mở để thắng vật chất.",
+        "mode": "interactive",
+        "outcome": "discovery",
+        "fen": "2r3k1/3b1pb1/p5p1/3Pr2p/2p1N1nP/2N3P1/P7/2KRRB2 b - - 0 30",
+        "moves": [
+          "f5",
+          "Ng5",
+          "Rxe1",
+          "Rxe1",
+          "Bxc3"
+        ],
+        "alternativeLines": [
+          [
+            "f5",
+            "Ng5",
+            "Rxe1",
+            "Nh7",
+            "Bxc3"
+          ],
+          [
+            "f5",
+            "Ng5",
+            "Rxe1",
+            "Nf7",
+            "Bxc3"
+          ],
+          [
+            "f5",
+            "Ng5",
+            "Rxe1",
+            "Ne6",
+            "Bxc3"
+          ],
+          [
+            "f5",
+            "Ng5",
+            "Rxe1",
+            "Nge4",
+            "Bxc3"
+          ],
+          [
+            "f5",
+            "Ng5",
+            "Rxe1",
+            "Nh3",
+            "Bxc3"
+          ],
+          [
+            "f5",
+            "Ng5",
+            "Rxe1",
+            "Nf3",
+            "Bxc3"
+          ],
+          [
+            "f5",
+            "Ng5",
+            "Rxe1",
+            "Nb5",
+            "Rxf1"
+          ],
+          [
+            "f5",
+            "Ng5",
+            "Rxe1",
+            "Nb5",
+            "Rxd1+"
+          ],
+          [
+            "f5",
+            "Ng5",
+            "Rxe1",
+            "Nce4",
+            "Rxe4"
+          ],
+          [
+            "f5",
+            "Ng5",
+            "Rxe1",
+            "Nce4",
+            "Rxf1"
+          ],
+          [
+            "f5",
+            "Ng5",
+            "Rxe1",
+            "Nce4",
+            "Rxd1+"
+          ],
+          [
+            "f5",
+            "Ng5",
+            "Rxe1",
+            "Na4",
+            "Rxf1"
+          ],
+          [
+            "f5",
+            "Ng5",
+            "Rxe1",
+            "Na4",
+            "Rxd1+"
+          ],
+          [
+            "f5",
+            "Ng5",
+            "Rxe1",
+            "Ne2",
+            "Rxe2"
+          ],
+          [
+            "f5",
+            "Ng5",
+            "Rxe1",
+            "Ne2",
+            "Rxf1"
+          ],
+          [
+            "f5",
+            "Ng5",
+            "Rxe1",
+            "Ne2",
+            "Rxd1+"
+          ],
+          [
+            "f5",
+            "Ng5",
+            "Rxe1",
+            "Nb1",
+            "Rxf1"
+          ],
+          [
+            "f5",
+            "Ng5",
+            "Rxe1",
+            "Nb1",
+            "Rxd1+"
+          ],
+          [
+            "f5",
+            "Ng5",
+            "Rxe1",
+            "Bxc4",
+            "Bxc3"
+          ],
+          [
+            "f5",
+            "Ng5",
+            "Rxe1",
+            "Bh3",
+            "Bxc3"
+          ],
+          [
+            "f5",
+            "Ng5",
+            "Rxe1",
+            "Bd3",
+            "Bxc3"
+          ],
+          [
+            "f5",
+            "Ng5",
+            "Rxe1",
+            "Bg2",
+            "Bxc3"
+          ],
+          [
+            "f5",
+            "Ng5",
+            "Rxe1",
+            "Be2",
+            "Bxc3"
+          ],
+          [
+            "f5",
+            "Ng5",
+            "Rxe1",
+            "Kd2",
+            "Bxc3+"
+          ],
+          [
+            "f5",
+            "Ng5",
+            "Rxe1",
+            "Kc2",
+            "Bxc3"
+          ],
+          [
+            "f5",
+            "Ng5",
+            "Rxe1",
+            "Kb2",
+            "Bxc3+"
+          ],
+          [
+            "f5",
+            "Ng5",
+            "Rxe1",
+            "Kb1",
+            "Bxc3"
+          ],
+          [
+            "f5",
+            "Ng5",
+            "Rxe1",
+            "d6",
+            "Bxc3"
+          ],
+          [
+            "f5",
+            "Ng5",
+            "Rxe1",
+            "a3",
+            "Bxc3"
+          ],
+          [
+            "f5",
+            "Ng5",
+            "Rxe1",
+            "a4",
+            "Bxc3"
+          ]
+        ],
+        "previousMove": {
+          "fen": "2r3k1/3b1pb1/p5p1/3Pr2p/2p1N1nP/2N5/P5P1/2KRRB2 w - - 0 30",
+          "move": "g3"
+        },
+        "source": "https://www.pgnmentor.com/players/Ivanchuk.zip",
+        "gameReference": {
+          "id": "59d867196a5f620d",
+          "kind": "game",
+          "ply": 59,
+          "branch": 0,
+          "collection": "discovery"
+        },
+        "hints": [
+          "Xem quân nào có thể mở đường tấn công cho Tượng sau các nước chuẩn bị.",
+          "Kiểm tra nước đáp, nước bắt lại và kết quả của toàn bộ phương án."
+        ],
+        "solution": "f5 — Tốt từ f7 đến f5. Trong phương án đã cho, Rxe1 — Xe từ e5 bắt Xe ở e1. Nước này mở đường cho Tượng ở g7 tấn công Mã ở c3. Bxc3 — Tượng từ g7 bắt Mã ở c3. Tính cả các nước bắt lại trong phương án, bên đi giành lợi thế vật chất so với thế cờ ban đầu.",
+        "goal": "material",
+        "gameCaption": "2005 · Canadian Open",
+        "gameOpening": "Khai cuộc: ECO E81",
+        "playerTitle": "Mohota,N (2303) — Ivanchuk,V (2752)",
+        "players": [
+          {
+            "name": "Mohota,N",
+            "title": "",
+            "rating": "2303"
+          },
+          {
+            "name": "Ivanchuk,V",
+            "title": "",
+            "rating": "2752"
+          }
+        ],
+        "beginner": false,
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
+          "solverMoves": 3,
+          "sacrificeCount": 0
+        }
+      }
+    },
+    "level": "C*",
+    "removed": false,
+    "note": "",
+    "updatedAt": "2026-11-05T05:13:11.545Z",
+    "history": [
+      {
+        "action": "move",
+        "level": "C*",
+        "scope": "/discovered-attack",
+        "note": "",
+        "at": "2026-11-05T05:13:11.545Z"
+      }
+    ]
+  },
+  {
+    "id": "13e5a45a7c73f6edb2fea794",
+    "reference": {
+      "scope": "/discovered-attack",
+      "fen": "7Q/5p2/6p1/2r3kp/3pR3/2qP3P/5PK1/8 w - - 0 39",
+      "baseLevel": "B",
+      "title": "Ivanchuk,V (2729) — Ding Liren (2781)",
+      "moves": [
+        "f4+",
+        "Kh4",
+        "Qf6+",
+        "g5",
+        "fxg5#"
+      ],
+      "alternativeLines": [
+        [
+          "f4+",
+          "Kf5",
+          "Re5+",
+          "Kxf4",
+          "Qf6#"
+        ],
+        [
+          "f4+",
+          "Kf5",
+          "Re5+",
+          "Rxe5",
+          "Qxe5#"
+        ],
+        [
+          "f4+",
+          "Kh4",
+          "Qf6+",
+          "Rg5+",
+          "Qxg5#"
+        ]
+      ],
+      "goal": "checkmate",
+      "previousMove": {
+        "fen": "7Q/5p2/6p1/2P2rkp/3pR3/2qP3P/5PK1/8 b - - 16 38",
+        "move": "Rxc5"
+      },
+      "gameReference": {
+        "id": "2c941c0fca87f625",
+        "kind": "game",
+        "ply": 76,
+        "branch": 0,
+        "collection": "discovery"
+      },
+      "manualId": null,
+      "exercise": {
+        "title": "Ivanchuk,V — Ding Liren",
+        "discoveryKind": "check",
+        "prompt": "Khai thác chiếu mở để chiếu hết.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "fen": "7Q/5p2/6p1/2r3kp/3pR3/2qP3P/5PK1/8 w - - 0 39",
+        "moves": [
+          "f4+",
+          "Kh4",
+          "Qf6+",
+          "g5",
+          "fxg5#"
+        ],
+        "alternativeLines": [
+          [
+            "f4+",
+            "Kf5",
+            "Re5+",
+            "Kxf4",
+            "Qf6#"
+          ],
+          [
+            "f4+",
+            "Kf5",
+            "Re5+",
+            "Rxe5",
+            "Qxe5#"
+          ],
+          [
+            "f4+",
+            "Kh4",
+            "Qf6+",
+            "Rg5+",
+            "Qxg5#"
+          ]
+        ],
+        "previousMove": {
+          "fen": "7Q/5p2/6p1/2P2rkp/3pR3/2qP3P/5PK1/8 b - - 16 38",
+          "move": "Rxc5"
+        },
+        "source": "https://www.pgnmentor.com/players/Ivanchuk.zip",
+        "gameReference": {
+          "id": "2c941c0fca87f625",
+          "kind": "game",
+          "ply": 76,
+          "branch": 0,
+          "collection": "discovery"
+        },
+        "hints": [
+          "Xem quân nào có thể mở đường tấn công cho Xe sau các nước chuẩn bị.",
+          "Kiểm tra nước đáp, nước bắt lại và kết quả của toàn bộ phương án."
+        ],
+        "solution": "f4+ — Tốt từ f2 đến f4. Trong phương án đã cho, fxg5# — Tốt từ f4 bắt Tốt ở g5. Nước này mở đường cho Xe ở e4 chiếu Vua ở h4. Đối phương phải xử lý nước chiếu trước khi đáp lại các đe dọa khác. Phương án kết thúc bằng chiếu hết.",
+        "goal": "checkmate",
+        "gameCaption": "2017 · 8th Danzhou Super GM 2017",
+        "gameOpening": "Khai cuộc: ECO C88",
+        "playerTitle": "Ivanchuk,V (2729) — Ding Liren (2781)",
+        "players": [
+          {
+            "name": "Ivanchuk,V",
+            "title": "",
+            "rating": "2729"
+          },
+          {
+            "name": "Ding Liren",
+            "title": "",
+            "rating": "2781"
+          }
+        ],
+        "beginner": false,
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
+          "solverMoves": 3,
+          "sacrificeCount": 0
+        }
+      }
+    },
+    "level": "C*",
+    "removed": false,
+    "note": "",
+    "updatedAt": "2026-11-05T06:50:53.618Z",
+    "history": [
+      {
+        "action": "move",
+        "level": "C*",
+        "scope": "/discovered-attack",
+        "note": "",
+        "at": "2026-11-05T06:50:53.618Z"
+      }
+    ]
+  },
+  {
+    "id": "c46d1998d45d3893a8daa92b",
+    "reference": {
+      "scope": "/discovered-attack",
+      "fen": "4r1k1/pn6/1p4pB/2qP4/6N1/7P/P4QP1/7K w - - 11 38",
+      "baseLevel": "B",
+      "title": "Topalov,V (2783) — Shirov,A (2715)",
+      "moves": [
+        "Qf1",
+        "Qe7",
+        "Nf6+",
+        "Kf7",
+        "Nxe8+"
+      ],
+      "alternativeLines": [],
+      "goal": "material",
+      "previousMove": {
+        "fen": "4r1k1/pn6/1p1q2pB/3P4/6N1/7P/P4QP1/7K b - - 10 37",
+        "move": "Qc5"
+      },
+      "gameReference": {
+        "id": "a1ad9410f81616a3",
+        "kind": "game",
+        "ply": 74,
+        "branch": 0,
+        "collection": "discovery"
+      },
+      "manualId": null,
+      "exercise": {
+        "title": "Topalov,V — Shirov,A",
+        "discoveryKind": "check",
+        "prompt": "Khai thác chiếu mở để thắng vật chất.",
+        "mode": "interactive",
+        "outcome": "discovery",
+        "fen": "4r1k1/pn6/1p4pB/2qP4/6N1/7P/P4QP1/7K w - - 11 38",
+        "moves": [
+          "Qf1",
+          "Qe7",
+          "Nf6+",
+          "Kf7",
+          "Nxe8+"
+        ],
+        "alternativeLines": [],
+        "previousMove": {
+          "fen": "4r1k1/pn6/1p1q2pB/3P4/6N1/7P/P4QP1/7K b - - 10 37",
+          "move": "Qc5"
+        },
+        "source": "https://www.pgnmentor.com/players/Shirov.zip",
+        "gameReference": {
+          "id": "a1ad9410f81616a3",
+          "kind": "game",
+          "ply": 74,
+          "branch": 0,
+          "collection": "discovery"
+        },
+        "hints": [
+          "Xem quân nào có thể mở đường tấn công cho Hậu sau các nước chuẩn bị.",
+          "Kiểm tra nước đáp, nước bắt lại và kết quả của toàn bộ phương án."
+        ],
+        "solution": "Qf1 — Hậu từ f2 đến f1. Trong phương án đã cho, Nxe8+ — Mã từ f6 bắt Xe ở e8. Nước này mở đường cho Hậu ở f1 chiếu Vua ở f7. Đối phương phải xử lý nước chiếu trước khi đáp lại các đe dọa khác. Tính cả các nước bắt lại trong phương án, bên đi giành lợi thế vật chất so với thế cờ ban đầu.",
+        "goal": "material",
+        "gameCaption": "2007 · Corus A",
+        "gameOpening": "Khai cuộc: ECO D89",
+        "playerTitle": "Topalov,V (2783) — Shirov,A (2715)",
+        "players": [
+          {
+            "name": "Topalov,V",
+            "title": "",
+            "rating": "2783"
+          },
+          {
+            "name": "Shirov,A",
+            "title": "",
+            "rating": "2715"
+          }
+        ],
+        "beginner": false,
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
+          "solverMoves": 3,
+          "sacrificeCount": 0
+        }
+      }
+    },
+    "level": null,
+    "removed": true,
+    "note": "",
+    "updatedAt": "2026-11-05T06:53:00.406Z",
+    "history": [
+      {
+        "action": "remove",
+        "level": null,
+        "scope": "/discovered-attack",
+        "note": "",
+        "at": "2026-11-05T06:53:00.406Z"
+      }
+    ]
+  },
+  {
+    "id": "ef2f03c907850ed058f7ed32",
+    "reference": {
+      "scope": "/discovered-attack",
+      "fen": "r2kr3/p1p3pp/Q1Pn1q2/2B5/8/6P1/P4P1P/R2R2K1 w - - 1 28",
+      "baseLevel": "B",
+      "title": "Fischer, Robert James — Janushkovsky, A.",
+      "moves": [
+        "Bxd6",
+        "Re6",
+        "Be5+",
+        "Ke7",
+        "Bxf6+"
+      ],
+      "alternativeLines": [
+        [
+          "Bxd6",
+          "Re6",
+          "Be5+",
+          "Ke8",
+          "Bxf6"
+        ],
+        [
+          "Bxd6",
+          "Re6",
+          "Be5+",
+          "Rd6",
+          "Bxf6+"
+        ]
+      ],
+      "goal": "material",
+      "previousMove": {
+        "fen": "r2kr3/p1p3pp/Q1P2q2/1nB5/8/6P1/P4P1P/R2R2K1 b - - 0 27",
+        "move": "Nd6"
+      },
+      "gameReference": {
+        "id": "bf1257225a89bff1",
+        "kind": "game",
+        "ply": 54,
+        "branch": 0,
+        "collection": "discovery"
+      },
+      "manualId": null,
+      "exercise": {
+        "title": "Fischer, Robert James — Janushkovsky, A.",
+        "discoveryKind": "check",
+        "prompt": "Khai thác chiếu mở để thắng vật chất.",
+        "mode": "interactive",
+        "outcome": "discovery",
+        "fen": "r2kr3/p1p3pp/Q1Pn1q2/2B5/8/6P1/P4P1P/R2R2K1 w - - 1 28",
+        "moves": [
+          "Bxd6",
+          "Re6",
+          "Be5+",
+          "Ke7",
+          "Bxf6+"
+        ],
+        "alternativeLines": [
+          [
+            "Bxd6",
+            "Re6",
+            "Be5+",
+            "Ke8",
+            "Bxf6"
+          ],
+          [
+            "Bxd6",
+            "Re6",
+            "Be5+",
+            "Rd6",
+            "Bxf6+"
+          ]
+        ],
+        "previousMove": {
+          "fen": "r2kr3/p1p3pp/Q1P2q2/1nB5/8/6P1/P4P1P/R2R2K1 b - - 0 27",
+          "move": "Nd6"
+        },
+        "source": "https://www.pgnmentor.com/players/Fischer.zip",
+        "gameReference": {
+          "id": "bf1257225a89bff1",
+          "kind": "game",
+          "ply": 54,
+          "branch": 0,
+          "collection": "discovery"
+        },
+        "hints": [
+          "Sau Bxd6 Re6, Tượng cần tránh bị bắt mà vẫn giữ thời gian tấn công.",
+          "Tìm ô vừa mở cột d cho Xe chiếu Vua vừa tấn công Hậu f6."
+        ],
+        "solution": "Bxd6 — Tượng c5 bắt Mã d6. Sau Re6, Be5+ — Tượng d6 đến e5, mở cột d cho Xe chiếu Vua đồng thời tấn công Hậu f6. Sau Ke7, Bxf6+ bắt Hậu. Đen có thể dùng Rxf6 bắt lại Tượng, nhưng vẫn chịu thiệt hại vật chất lớn trong toàn bộ phương án.",
+        "goal": "material",
+        "gameCaption": "1964 · Davis sim",
+        "gameOpening": "Khai cuộc: ECO C52",
+        "playerTitle": "Fischer, Robert James — Janushkovsky, A.",
+        "players": [
+          {
+            "name": "Fischer, Robert James",
+            "title": "",
+            "rating": ""
+          },
+          {
+            "name": "Janushkovsky, A.",
+            "title": "",
+            "rating": ""
+          }
+        ],
+        "beginner": false,
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
+          "solverMoves": 3,
+          "sacrificeCount": 0
+        }
+      }
+    },
+    "level": null,
+    "removed": true,
+    "note": "",
+    "updatedAt": "2026-11-05T10:03:27.800Z",
+    "history": [
+      {
+        "action": "remove",
+        "level": null,
+        "scope": "/discovered-attack",
+        "note": "",
+        "at": "2026-11-05T10:03:27.800Z"
+      }
+    ]
+  },
+  {
+    "id": "0df4c6b1c9c64d1a3f0ab88c",
+    "reference": {
+      "scope": "/discovered-attack",
+      "fen": "4nr2/pp3k1p/2b1Np2/6p1/6r1/1BR5/PP3P1P/4R1K1 w - - 0 27",
+      "baseLevel": "B",
+      "title": "Short,N (2702) — Harikrishna,P (2582)",
+      "moves": [
+        "Rg3",
+        "Rxg3+",
+        "hxg3",
+        "Rh8",
+        "Nxg5+"
+      ],
+      "alternativeLines": [],
+      "goal": "material",
+      "previousMove": {
+        "fen": "4nr2/pp3k1p/2b1Np2/6p1/3r2P1/1BR5/PP3P1P/4R1K1 b - - 0 26",
+        "move": "Rxg4+"
+      },
+      "gameReference": {
+        "id": "8bc8a1916e336e16",
+        "kind": "game",
+        "ply": 52,
+        "branch": 0,
+        "collection": "discovery"
+      },
+      "manualId": null,
+      "exercise": {
+        "title": "Short,N — Harikrishna,P",
+        "discoveryKind": "check",
+        "prompt": "Khai thác chiếu mở để thắng vật chất.",
+        "mode": "interactive",
+        "outcome": "discovery",
+        "fen": "4nr2/pp3k1p/2b1Np2/6p1/6r1/1BR5/PP3P1P/4R1K1 w - - 0 27",
+        "moves": [
+          "Rg3",
+          "Rxg3+",
+          "hxg3",
+          "Rh8",
+          "Nxg5+"
+        ],
+        "alternativeLines": [],
+        "previousMove": {
+          "fen": "4nr2/pp3k1p/2b1Np2/6p1/3r2P1/1BR5/PP3P1P/4R1K1 b - - 0 26",
+          "move": "Rxg4+"
+        },
+        "source": "https://www.pgnmentor.com/players/Short.zip",
+        "gameReference": {
+          "id": "8bc8a1916e336e16",
+          "kind": "game",
+          "ply": 52,
+          "branch": 0,
+          "collection": "discovery"
+        },
+        "hints": [
+          "Trước hết phải đỡ nước chiếu của Xe g4. Có thể đổi Xe mà không thiệt quân không?",
+          "Sau khi đổi Xe, tìm nước Mã bắt Tốt được bảo vệ và mở đường chiếu cho Tượng b3."
+        ],
+        "solution": "Trắng đang bị chiếu trên cột g. Rg3 — Xe c3 đến g3, chắn đường chiếu. Sau Rxg3+ hxg3, hai bên đã đổi Xe. Trong phương án Rh8, Nxg5+ — Mã e6 bắt Tốt g5, mở đường cho Tượng b3 chiếu Vua. Đen không thể dùng fxg5 bắt lại Mã vì Vua vẫn đang bị chiếu. Nếu Vua đuổi Mã bằng Kg6, Ne6 đưa Mã về ô được Tượng b3 bảo vệ và giữ Tốt đã thắng.",
+        "goal": "material",
+        "gameCaption": "2004 · ch-Commonwealth",
+        "gameOpening": "Khai cuộc: ECO C10",
+        "playerTitle": "Short,N (2702) — Harikrishna,P (2582)",
+        "players": [
+          {
+            "name": "Short,N",
+            "title": "",
+            "rating": "2702"
+          },
+          {
+            "name": "Harikrishna,P",
+            "title": "",
+            "rating": "2582"
+          }
+        ],
+        "beginner": false,
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
+          "solverMoves": 3,
+          "sacrificeCount": 0
+        }
+      }
+    },
+    "level": "C*",
+    "removed": false,
+    "note": "",
+    "updatedAt": "2026-11-05T10:10:03.816Z",
+    "history": [
+      {
+        "action": "move",
+        "level": "C*",
+        "scope": "/discovered-attack",
+        "note": "",
+        "at": "2026-11-05T10:10:03.816Z"
+      }
+    ]
+  },
+  {
+    "id": "aa57040cba22abf7454341af",
+    "reference": {
+      "scope": "/fork",
+      "fen": "r7/1bpk1n1p/p7/8/p7/P1QP4/2P2P1P/5K2 w - - 2 29",
+      "baseLevel": "A",
+      "title": "Ivanchuk,V (2717) — Adams,Mi (2742)",
+      "moves": [
+        "Qd4+",
+        "Nd6",
+        "Qxa4+"
+      ],
+      "alternativeLines": [
+        [
+          "Qd4+",
+          "Ke8",
+          "Qxa4+"
+        ],
+        [
+          "Qd4+",
+          "Kc8",
+          "Qxa4"
+        ],
+        [
+          "Qd4+",
+          "Ke7",
+          "Qxa4"
+        ],
+        [
+          "Qd4+",
+          "Ke6",
+          "Qxa4"
+        ],
+        [
+          "Qd4+",
+          "Kc6",
+          "Qxa4+"
+        ],
+        [
+          "Qd4+",
+          "Bd5",
+          "Qxa4+"
+        ]
+      ],
+      "goal": null,
+      "previousMove": {
+        "fen": "r7/1bp1kn1p/p7/8/p7/P1QP4/2P2P1P/5K2 b - - 1 28",
+        "move": "Kd7"
+      },
+      "gameReference": {
+        "id": "64d091c867dc3a1a",
+        "kind": "game",
+        "ply": 56,
+        "branch": 0,
+        "collection": "fork"
+      },
+      "manualId": null,
+      "exercise": {
+        "title": "Ivanchuk,V — Adams,Mi",
+        "prompt": "Tạo đòn tấn công đôi rồi bắt quân để thắng vật chất.",
+        "mode": "interactive",
+        "outcome": "fork",
+        "fen": "r7/1bpk1n1p/p7/8/p7/P1QP4/2P2P1P/5K2 w - - 2 29",
+        "moves": [
+          "Qd4+",
+          "Nd6",
+          "Qxa4+"
+        ],
+        "alternativeLines": [
+          [
+            "Qd4+",
+            "Ke8",
+            "Qxa4+"
+          ],
+          [
+            "Qd4+",
+            "Kc8",
+            "Qxa4"
+          ],
+          [
+            "Qd4+",
+            "Ke7",
+            "Qxa4"
+          ],
+          [
+            "Qd4+",
+            "Ke6",
+            "Qxa4"
+          ],
+          [
+            "Qd4+",
+            "Kc6",
+            "Qxa4+"
+          ],
+          [
+            "Qd4+",
+            "Bd5",
+            "Qxa4+"
+          ]
+        ],
+        "previousMove": {
+          "fen": "r7/1bp1kn1p/p7/8/p7/P1QP4/2P2P1P/5K2 b - - 1 28",
+          "move": "Kd7"
+        },
+        "source": "https://www.pgnmentor.com/players/Ivanchuk.zip",
+        "gameReference": {
+          "id": "64d091c867dc3a1a",
+          "kind": "game",
+          "ply": 56,
+          "branch": 0,
+          "collection": "fork"
+        },
+        "hints": [
+          "Tìm hai mục tiêu mà cùng một quân có thể tấn công. Kiểm tra nước đáp và khả năng bắt lại."
+        ],
+        "solution": "Hậu ở d4 tấn công đồng thời các mục tiêu ở a4, d7. Sau nước đáp, bắt quân để thu lợi về vật chất.",
+        "gameCaption": "2002 · SuperGM",
+        "gameOpening": "Khai cuộc: Ruy Lopez: Closed, Anti-Marshall · C88",
+        "playerTitle": "Ivanchuk,V (2717) — Adams,Mi (2742)",
+        "players": [
+          {
+            "name": "Ivanchuk,V",
+            "title": "",
+            "rating": "2717"
+          },
+          {
+            "name": "Adams,Mi",
+            "title": "",
+            "rating": "2742"
+          }
+        ],
+        "beginner": false,
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
+          "solverMoves": 2,
+          "sacrificeCount": 0
+        }
+      }
+    },
+    "level": null,
+    "removed": true,
+    "note": "",
+    "updatedAt": "2026-11-05T13:50:01.523Z",
+    "history": [
+      {
+        "action": "remove",
+        "level": null,
+        "scope": "/fork",
+        "note": "",
+        "at": "2026-11-05T13:50:01.523Z"
+      }
+    ]
+  },
+  {
+    "id": "6edbbbd8a83341624191f580",
+    "reference": {
+      "scope": "/fork",
+      "fen": "5k2/p1q5/1p4pp/1P3N2/4P3/P5PP/1Q4BK/2r5 w - - 2 37",
+      "baseLevel": "B",
+      "title": "Choukri,A (2199) — Shabalov,A (2522)",
+      "moves": [
+        "Qf6+",
+        "Qf7",
+        "Qh8+",
+        "Qg8",
+        "Qxh6+"
+      ],
+      "alternativeLines": [],
+      "goal": null,
+      "previousMove": {
+        "fen": "3q1k2/p7/1p4pp/1P3N2/4P3/P5PP/1Q4BK/2r5 b - - 1 36",
+        "move": "Qc7"
+      },
+      "gameReference": {
+        "id": "a0077bb4ff59659b",
+        "kind": "game",
+        "ply": 72,
+        "branch": 0,
+        "collection": "fork"
+      },
+      "manualId": null,
+      "exercise": {
+        "title": "Choukri,A — Shabalov,A",
+        "prompt": "Tạo đòn tấn công đôi rồi bắt quân để thắng vật chất.",
+        "mode": "interactive",
+        "outcome": "fork",
+        "fen": "5k2/p1q5/1p4pp/1P3N2/4P3/P5PP/1Q4BK/2r5 w - - 2 37",
+        "moves": [
+          "Qf6+",
+          "Qf7",
+          "Qh8+",
+          "Qg8",
+          "Qxh6+"
+        ],
+        "alternativeLines": [],
+        "previousMove": {
+          "fen": "3q1k2/p7/1p4pp/1P3N2/4P3/P5PP/1Q4BK/2r5 b - - 1 36",
+          "move": "Qc7"
+        },
+        "source": "https://www.pgnmentor.com/players/Shabalov.zip",
+        "gameReference": {
+          "id": "a0077bb4ff59659b",
+          "kind": "game",
+          "ply": 72,
+          "branch": 0,
+          "collection": "fork"
+        },
+        "hints": [
+          "Tìm hai mục tiêu mà cùng một quân có thể tấn công. Kiểm tra nước đáp và khả năng bắt lại."
+        ],
+        "solution": "Hậu ở h8 tấn công đồng thời các mục tiêu ở h6, f8. Sau nước đáp, bắt quân để thu lợi về vật chất.",
+        "gameCaption": "2015 · World Rapid 2015",
+        "gameOpening": "Khai cuộc: Sicilian Defense: Modern Variations · B50",
+        "playerTitle": "Choukri,A (2199) — Shabalov,A (2522)",
+        "players": [
+          {
+            "name": "Choukri,A",
+            "title": "",
+            "rating": "2199"
+          },
+          {
+            "name": "Shabalov,A",
+            "title": "",
+            "rating": "2522"
+          }
+        ],
+        "beginner": false,
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
+          "solverMoves": 3,
+          "sacrificeCount": 0
+        }
+      }
+    },
+    "level": "C*",
+    "removed": false,
+    "note": "",
+    "updatedAt": "2026-11-05T14:31:22.360Z",
+    "history": [
+      {
+        "action": "move",
+        "level": "C*",
+        "scope": "/fork",
+        "note": "",
+        "at": "2026-11-05T14:31:22.360Z"
+      }
+    ]
+  },
+  {
+    "id": "eb81c052a74cc5f3f55b0cef",
+    "reference": {
+      "scope": "/fork",
+      "fen": "r4rk1/1p2n1p1/2pbPn2/p2p3q/2PP1pP1/PP5B/1B1NPR1P/R4QK1 b - - 0 20",
+      "baseLevel": "C",
+      "title": "Bonin,J (2353) — Shabalov,A (2585)",
+      "moves": [
+        "Nxg4",
+        "Bxg4",
+        "Qxg4+",
+        "Qg2",
+        "Qxe6"
+      ],
+      "alternativeLines": [
+        [
+          "Nxg4",
+          "Bxg4",
+          "Qxg4+",
+          "Kh1",
+          "Qxe6"
+        ],
+        [
+          "Nxg4",
+          "Bxg4",
+          "Qxg4+",
+          "Rg2",
+          "Qxe6"
+        ]
+      ],
+      "goal": null,
+      "previousMove": {
+        "fen": "r4rk1/1p2n1p1/2pbPn2/p2p3q/2PP1pp1/PP3P1B/1B1NPR1P/R4QK1 w - - 0 20",
+        "move": "fxg4"
+      },
+      "gameReference": {
+        "id": "7619537ddfd7b379",
+        "kind": "game",
+        "ply": 39,
+        "branch": 0,
+        "collection": "fork"
+      },
+      "manualId": null,
+      "exercise": {
+        "title": "Bonin,J — Shabalov,A",
+        "prompt": "Tạo đòn tấn công đôi rồi bắt quân để thắng vật chất.",
+        "mode": "interactive",
+        "outcome": "fork",
+        "fen": "r4rk1/1p2n1p1/2pbPn2/p2p3q/2PP1pP1/PP5B/1B1NPR1P/R4QK1 b - - 0 20",
+        "moves": [
+          "Nxg4",
+          "Bxg4",
+          "Qxg4+",
+          "Qg2",
+          "Qxe6"
+        ],
+        "alternativeLines": [
+          [
+            "Nxg4",
+            "Bxg4",
+            "Qxg4+",
+            "Kh1",
+            "Qxe6"
+          ],
+          [
+            "Nxg4",
+            "Bxg4",
+            "Qxg4+",
+            "Rg2",
+            "Qxe6"
+          ]
+        ],
+        "previousMove": {
+          "fen": "r4rk1/1p2n1p1/2pbPn2/p2p3q/2PP1pp1/PP3P1B/1B1NPR1P/R4QK1 w - - 0 20",
+          "move": "fxg4"
+        },
+        "source": "https://www.pgnmentor.com/players/Shabalov.zip",
+        "gameReference": {
+          "id": "7619537ddfd7b379",
+          "kind": "game",
+          "ply": 39,
+          "branch": 0,
+          "collection": "fork"
+        },
+        "hints": [
+          "Tìm hai mục tiêu mà cùng một quân có thể tấn công. Kiểm tra nước đáp và khả năng bắt lại."
+        ],
+        "solution": "Hậu ở g4 tấn công đồng thời các mục tiêu ở g1, e2, e6. Sau nước đáp, bắt quân để thu lợi về vật chất.",
+        "gameCaption": "2008 · National Chess Congress",
+        "gameOpening": "Khai cuộc: King's Indian Attack: Keres Variation · A07",
+        "playerTitle": "Bonin,J (2353) — Shabalov,A (2585)",
+        "players": [
+          {
+            "name": "Bonin,J",
+            "title": "",
+            "rating": "2353"
+          },
+          {
+            "name": "Shabalov,A",
+            "title": "",
+            "rating": "2585"
+          }
+        ],
+        "beginner": false,
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
+          "solverMoves": 3,
+          "sacrificeCount": 1
+        }
+      }
+    },
+    "level": "B",
+    "removed": false,
+    "note": "",
+    "updatedAt": "2026-11-05T14:58:20.698Z",
+    "history": [
+      {
+        "action": "move",
+        "level": "B",
+        "scope": "/fork",
+        "note": "",
+        "at": "2026-11-05T14:58:20.698Z"
+      }
+    ]
+  },
+  {
+    "id": "d474561fd438838913c9c586",
+    "reference": {
+      "scope": "/fork",
+      "fen": "r4rk1/1b3N1p/4PBp1/pp6/1b1p2P1/3BP2q/PQ6/R2K1R2 b - - 2 25",
+      "baseLevel": "C",
+      "title": "Aronian,L (2807) — Ivanchuk,V (2765)",
+      "moves": [
+        "Bf3+",
+        "Rxf3",
+        "Qxf3+",
+        "Be2",
+        "Qxf6"
+      ],
+      "alternativeLines": [
+        [
+          "Bf3+",
+          "Rxf3",
+          "Qxf3+",
+          "Kc2",
+          "Qxf6"
+        ],
+        [
+          "Bf3+",
+          "Rxf3",
+          "Qxf3+",
+          "Kc1",
+          "Qxf6"
+        ],
+        [
+          "Bf3+",
+          "Rxf3",
+          "Qxf3+",
+          "Kc1",
+          "Qxe3+"
+        ],
+        [
+          "Bf3+",
+          "Rxf3",
+          "Qxf3+",
+          "Qe2",
+          "Qxf6"
+        ]
+      ],
+      "goal": null,
+      "previousMove": {
+        "fen": "r4rk1/1b3N1p/4PBp1/pp6/1b1p2P1/3BP2q/PQ6/R3KR2 w - - 1 25",
+        "move": "Kd1"
+      },
+      "gameReference": {
+        "id": "d9c515b46eb6a297",
+        "kind": "game",
+        "ply": 49,
+        "branch": 0,
+        "collection": "fork"
+      },
+      "manualId": null,
+      "exercise": {
+        "title": "Aronian,L — Ivanchuk,V",
+        "prompt": "Tạo đòn tấn công đôi rồi bắt quân để thắng vật chất.",
+        "mode": "interactive",
+        "outcome": "fork",
+        "fen": "r4rk1/1b3N1p/4PBp1/pp6/1b1p2P1/3BP2q/PQ6/R2K1R2 b - - 2 25",
+        "moves": [
+          "Bf3+",
+          "Rxf3",
+          "Qxf3+",
+          "Be2",
+          "Qxf6"
+        ],
+        "alternativeLines": [
+          [
+            "Bf3+",
+            "Rxf3",
+            "Qxf3+",
+            "Kc2",
+            "Qxf6"
+          ],
+          [
+            "Bf3+",
+            "Rxf3",
+            "Qxf3+",
+            "Kc1",
+            "Qxf6"
+          ],
+          [
+            "Bf3+",
+            "Rxf3",
+            "Qxf3+",
+            "Kc1",
+            "Qxe3+"
+          ],
+          [
+            "Bf3+",
+            "Rxf3",
+            "Qxf3+",
+            "Qe2",
+            "Qxf6"
+          ]
+        ],
+        "previousMove": {
+          "fen": "r4rk1/1b3N1p/4PBp1/pp6/1b1p2P1/3BP2q/PQ6/R3KR2 w - - 1 25",
+          "move": "Kd1"
+        },
+        "source": "https://www.pgnmentor.com/players/Ivanchuk.zip",
+        "gameReference": {
+          "id": "d9c515b46eb6a297",
+          "kind": "game",
+          "ply": 49,
+          "branch": 0,
+          "collection": "fork"
+        },
+        "hints": [
+          "Tìm hai mục tiêu mà cùng một quân có thể tấn công. Kiểm tra nước đáp và khả năng bắt lại."
+        ],
+        "solution": "Hậu ở f3 tấn công đồng thời các mục tiêu ở d1, e3, g4, f6. Sau nước đáp, bắt quân để thu lợi về vật chất.",
+        "gameCaption": "2011 · 4th Final Masters",
+        "gameOpening": "Khai cuộc: Queen's Gambit Declined: Barmen Variation · D37",
+        "playerTitle": "Aronian,L (2807) — Ivanchuk,V (2765)",
+        "players": [
+          {
+            "name": "Aronian,L",
+            "title": "",
+            "rating": "2807"
+          },
+          {
+            "name": "Ivanchuk,V",
+            "title": "",
+            "rating": "2765"
+          }
+        ],
+        "beginner": false,
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
+          "solverMoves": 3,
+          "sacrificeCount": 1
+        }
+      }
+    },
+    "level": "C*",
+    "removed": false,
+    "note": "",
+    "updatedAt": "2026-11-05T15:38:59.982Z",
+    "history": [
+      {
+        "action": "move",
+        "level": "C*",
+        "scope": "/fork",
+        "note": "",
+        "at": "2026-11-05T15:38:59.982Z"
+      }
+    ]
+  },
+  {
+    "id": "b958c9d172ed0a267f8bf2f1",
+    "reference": {
+      "scope": "/fork",
+      "fen": "8/8/1k6/5P2/pB2pP2/2K1P3/4P3/3q4 b - - 2 72",
+      "baseLevel": "Beginner",
+      "title": "Torre, Eugenio (2540) — Kasparov, Gary (2735)",
+      "moves": [],
+      "alternativeLines": [],
+      "goal": "material",
+      "previousMove": null,
+      "gameReference": {
+        "id": "64d5ef2b633ae5ac",
+        "kind": "game",
+        "branch": 0,
+        "ply": 143,
+        "collection": "fork"
+      },
+      "manualId": "77407b5b45fb2accbe9abc16",
+      "exercise": {
+        "manualId": "77407b5b45fb2accbe9abc16",
+        "title": "Nhập môn · Torre, Eugenio — Kasparov, Gary",
+        "fen": "8/8/1k6/5P2/pB2pP2/2K1P3/4P3/3q4 b - - 2 72",
+        "goal": "material",
+        "moves": [],
+        "alternativeLines": [],
+        "solution": "",
+        "prompt": "Tính phương án để đạt mục tiêu của thế cờ.",
+        "outcome": "fork",
+        "mode": "interactive",
+        "forcedReplies": false,
+        "source": "Thế cờ được thêm thủ công.",
+        "beginnerOriginalFen": "8/8/1k6/5P2/pB2pP2/2K1P3/4P3/3q4 b - - 2 72",
+        "gameReference": {
+          "id": "64d5ef2b633ae5ac",
+          "kind": "game",
+          "branch": 0,
+          "ply": 143,
+          "collection": "fork"
+        },
+        "players": [
+          {
+            "name": "Torre, Eugenio",
+            "title": "",
+            "rating": "2540"
+          },
+          {
+            "name": "Kasparov, Gary",
+            "title": "",
+            "rating": "2735"
+          }
+        ],
+        "playerTitle": "Torre, Eugenio (2540) — Kasparov, Gary (2735)",
+        "gameCaption": "1987.??.?? · Brussels blitz",
+        "beginner": true
+      }
+    },
+    "level": null,
+    "removed": true,
+    "note": "Chỉ lấy nguồn B, C, C*, D cho Nhập môn; loại bản sao từ A vì trùng ý tưởng.",
+    "updatedAt": "2026-11-06T03:30:30.443Z",
+    "history": [
+      {
+        "action": "remove",
+        "level": null,
+        "scope": "/fork",
+        "note": "Chỉ lấy nguồn B, C, C*, D cho Nhập môn; loại bản sao từ A vì trùng ý tưởng.",
+        "at": "2026-11-06T03:30:30.443Z"
+      }
+    ]
+  },
+  {
+    "id": "8ad76487654e1bcf7daf828f",
+    "reference": {
+      "scope": "/fork",
+      "fen": "8/p4q2/1pkB4/8/P4P2/3RP3/2K5/8 b - f3 0 38",
+      "baseLevel": "Beginner",
+      "title": "Bareev,E (2707) — Ivanchuk,V (2717)",
+      "moves": [],
+      "alternativeLines": [],
+      "goal": "material",
+      "previousMove": {
+        "fen": "8/p4q2/1pkB4/8/P7/3RP3/2K2P2/8 w - - 4 38",
+        "move": "f4"
+      },
+      "gameReference": {
+        "id": "435ec7318ffd937f",
+        "kind": "game",
+        "branch": 0,
+        "ply": 75,
+        "collection": "fork"
+      },
+      "manualId": "54a7c9d149457fce65ee072d",
+      "exercise": {
+        "manualId": "54a7c9d149457fce65ee072d",
+        "title": "Nhập môn · Bareev,E — Ivanchuk,V",
+        "fen": "8/p4q2/1pkB4/8/P4P2/3RP3/2K5/8 b - f3 0 38",
+        "goal": "material",
+        "moves": [],
+        "alternativeLines": [],
+        "solution": "",
+        "prompt": "Tính phương án để đạt mục tiêu của thế cờ.",
+        "outcome": "fork",
+        "mode": "interactive",
+        "forcedReplies": false,
+        "source": "Thế cờ được thêm thủ công.",
+        "beginnerOriginalFen": "8/p4q2/1pkB4/8/P4P2/3RP3/2K5/8 b - f3 0 38",
+        "gameReference": {
+          "id": "435ec7318ffd937f",
+          "kind": "game",
+          "branch": 0,
+          "ply": 75,
+          "collection": "fork"
+        },
+        "previousMove": {
+          "fen": "8/p4q2/1pkB4/8/P7/3RP3/2K2P2/8 w - - 4 38",
+          "move": "f4"
+        },
+        "players": [
+          {
+            "name": "Bareev,E",
+            "title": "",
+            "rating": "2707"
+          },
+          {
+            "name": "Ivanchuk,V",
+            "title": "",
+            "rating": "2717"
+          }
+        ],
+        "playerTitle": "Bareev,E (2707) — Ivanchuk,V (2717)",
+        "gameCaption": "2002.04.03 · FIDE GP",
+        "beginner": true
+      }
+    },
+    "level": null,
+    "removed": true,
+    "note": "Chỉ lấy nguồn B, C, C*, D cho Nhập môn; loại bản sao từ A vì trùng ý tưởng.",
+    "updatedAt": "2026-11-06T03:32:53.809Z",
+    "history": [
+      {
+        "action": "remove",
+        "level": null,
+        "scope": "/fork",
+        "note": "Chỉ lấy nguồn B, C, C*, D cho Nhập môn; loại bản sao từ A vì trùng ý tưởng.",
+        "at": "2026-11-06T03:32:53.809Z"
+      }
+    ]
+  },
+  {
+    "id": "b37e7083c2241e709f4df207",
+    "reference": {
+      "scope": "/fork",
+      "fen": "8/8/8/6B1/R6p/P4k1b/4r3/6K1 b - - 4 84",
+      "baseLevel": "Beginner",
+      "title": "Illescas Cordoba, Miguel (2525) — Kasparov, Gary (2775)",
+      "moves": [],
+      "alternativeLines": [],
+      "goal": "material",
+      "previousMove": {
+        "fen": "8/8/8/6B1/R6p/P4k1b/4r3/5K2 w - - 3 84",
+        "move": "Kg1"
+      },
+      "gameReference": {
+        "id": "276ff4248ed22e13",
+        "kind": "game",
+        "branch": 0,
+        "ply": 167,
+        "collection": "fork"
+      },
+      "manualId": "a8dc2457abf6afd010275f15",
+      "exercise": {
+        "manualId": "a8dc2457abf6afd010275f15",
+        "title": "Nhập môn · Illescas Cordoba, Miguel — Kasparov, Gary",
+        "fen": "8/8/8/6B1/R6p/P4k1b/4r3/6K1 b - - 4 84",
+        "goal": "material",
+        "moves": [],
+        "alternativeLines": [],
+        "solution": "",
+        "prompt": "Tính phương án để đạt mục tiêu của thế cờ.",
+        "outcome": "fork",
+        "mode": "interactive",
+        "forcedReplies": false,
+        "source": "Thế cờ được thêm thủ công.",
+        "beginnerOriginalFen": "8/8/8/6B1/R6p/P4k1b/4r3/6K1 b - - 4 84",
+        "gameReference": {
+          "id": "276ff4248ed22e13",
+          "kind": "game",
+          "branch": 0,
+          "ply": 167,
+          "collection": "fork"
+        },
+        "previousMove": {
+          "fen": "8/8/8/6B1/R6p/P4k1b/4r3/5K2 w - - 3 84",
+          "move": "Kg1"
+        },
+        "players": [
+          {
+            "name": "Illescas Cordoba, Miguel",
+            "title": "",
+            "rating": "2525"
+          },
+          {
+            "name": "Kasparov, Gary",
+            "title": "",
+            "rating": "2775"
+          }
+        ],
+        "playerTitle": "Illescas Cordoba, Miguel (2525) — Kasparov, Gary (2775)",
+        "gameCaption": "1989.??.?? · World Cup",
+        "beginner": true
+      }
+    },
+    "level": null,
+    "removed": true,
+    "note": "Chỉ lấy nguồn B, C, C*, D cho Nhập môn; loại bản sao từ A vì trùng ý tưởng.",
+    "updatedAt": "2026-11-06T03:34:37.718Z",
+    "history": [
+      {
+        "action": "remove",
+        "level": null,
+        "scope": "/fork",
+        "note": "Chỉ lấy nguồn B, C, C*, D cho Nhập môn; loại bản sao từ A vì trùng ý tưởng.",
+        "at": "2026-11-06T03:34:37.718Z"
+      }
+    ]
+  },
+  {
+    "id": "198a88f718d652944bf09390",
+    "reference": {
+      "scope": "/fork",
+      "fen": "8/8/8/1p3N2/1PkP4/P3K3/6b1/8 w - - 19 68",
+      "baseLevel": "Beginner",
+      "title": "Karpov, Anatoly (2705) — Kasparov, Gary (2715)",
+      "moves": [],
+      "alternativeLines": [],
+      "goal": "material",
+      "previousMove": {
+        "fen": "8/1b6/8/1p3N2/1PkP4/P3K3/8/8 b - - 18 67",
+        "move": "Bg2"
+      },
+      "gameReference": {
+        "id": "d4fb770cc23461cd",
+        "kind": "game",
+        "branch": 0,
+        "ply": 134,
+        "collection": "fork"
+      },
+      "manualId": "1a24126aca1fb007617b259b",
+      "exercise": {
+        "manualId": "1a24126aca1fb007617b259b",
+        "title": "Nhập môn · Karpov, Anatoly — Kasparov, Gary",
+        "fen": "8/8/8/1p3N2/1PkP4/P3K3/6b1/8 w - - 19 68",
+        "goal": "material",
+        "moves": [],
+        "alternativeLines": [],
+        "solution": "",
+        "prompt": "Tính phương án để đạt mục tiêu của thế cờ.",
+        "outcome": "fork",
+        "mode": "interactive",
+        "forcedReplies": false,
+        "source": "Thế cờ được thêm thủ công.",
+        "beginnerOriginalFen": "8/8/8/1p3N2/1PkP4/P3K3/6b1/8 w - - 19 68",
+        "gameReference": {
+          "id": "d4fb770cc23461cd",
+          "kind": "game",
+          "branch": 0,
+          "ply": 134,
+          "collection": "fork"
+        },
+        "previousMove": {
+          "fen": "8/1b6/8/1p3N2/1PkP4/P3K3/8/8 b - - 18 67",
+          "move": "Bg2"
+        },
+        "players": [
+          {
+            "name": "Karpov, Anatoly",
+            "title": "",
+            "rating": "2705"
+          },
+          {
+            "name": "Kasparov, Gary",
+            "title": "",
+            "rating": "2715"
+          }
+        ],
+        "playerTitle": "Karpov, Anatoly (2705) — Kasparov, Gary (2715)",
+        "gameCaption": "1984.??.?? · World Championship 31th-KK1",
+        "beginner": true
+      }
+    },
+    "level": null,
+    "removed": true,
+    "note": "Chỉ lấy nguồn B, C, C*, D cho Nhập môn; loại bản sao từ A vì trùng ý tưởng.",
+    "updatedAt": "2026-11-06T03:34:37.718Z",
+    "history": [
+      {
+        "action": "remove",
+        "level": null,
+        "scope": "/fork",
+        "note": "Chỉ lấy nguồn B, C, C*, D cho Nhập môn; loại bản sao từ A vì trùng ý tưởng.",
+        "at": "2026-11-06T03:34:37.718Z"
+      }
+    ]
+  },
+  {
+    "id": "8ecf00d8878bc9567f5ae602",
+    "reference": {
+      "scope": "/fork",
+      "fen": "8/8/2P5/4K3/5N2/6r1/8/2k5 w - - 0 1",
+      "baseLevel": "Beginner",
+      "title": "Tấn công đôi bằng Mã · 1",
+      "moves": [
+        "Ne2+",
+        "Kd1",
+        "Nxg3"
+      ],
+      "alternativeLines": [
+        [
+          "Ne2+",
+          "Kd2",
+          "Nxg3"
+        ],
+        [
+          "Ne2+",
+          "Kc2",
+          "Nxg3"
+        ],
+        [
+          "Ne2+",
+          "Kb2",
+          "Nxg3"
+        ],
+        [
+          "Ne2+",
+          "Kb1",
+          "Nxg3"
+        ]
+      ],
+      "goal": "material",
+      "previousMove": null,
+      "gameReference": null,
+      "manualId": null,
+      "exercise": {
+        "id": "fork-beginner-01",
+        "title": "Tấn công đôi bằng Mã · 1",
+        "goal": "material",
+        "prompt": "Tạo đòn tấn công đôi rồi thu lợi vật chất.",
+        "mode": "interactive",
+        "outcome": "fork",
+        "fen": "8/8/2P5/4K3/5N2/6r1/8/2k5 w - - 0 1",
+        "moves": [
+          "Ne2+",
+          "Kd1",
+          "Nxg3"
+        ],
+        "alternativeLines": [
+          [
+            "Ne2+",
+            "Kd2",
+            "Nxg3"
+          ],
+          [
+            "Ne2+",
+            "Kc2",
+            "Nxg3"
+          ],
+          [
+            "Ne2+",
+            "Kb2",
+            "Nxg3"
+          ],
+          [
+            "Ne2+",
+            "Kb1",
+            "Nxg3"
+          ]
+        ],
+        "source": "original-composition",
+        "hints": [
+          "Tìm nước đi tạo hai mối đe dọa. Kiểm tra nước đáp và khả năng bắt lại."
+        ],
+        "solution": "Ne2+ — Mã từ f4 đến e2. Nước chiếu của Mã buộc Vua đỡ chiếu. Sau nước đáp, bắt Xe ở g3 để thu lợi vật chất.",
+        "gameCaption": "",
+        "gameOpening": "",
+        "playerTitle": "",
+        "players": [],
+        "beginner": true
+      }
+    },
+    "level": null,
+    "removed": true,
+    "note": "",
+    "updatedAt": "2026-11-06T04:15:26.671Z",
+    "history": [
+      {
+        "action": "remove",
+        "level": null,
+        "scope": "/fork",
+        "note": "",
+        "at": "2026-11-06T04:15:26.671Z"
+      }
+    ]
+  },
+  {
+    "id": "0ef8336516c744547eafd6b7",
+    "reference": {
+      "scope": "/fork",
+      "fen": "8/8/5k1K/2P1N3/8/8/5r2/8 w - - 0 1",
+      "baseLevel": "Beginner",
+      "title": "Tấn công đôi bằng Mã · 2",
+      "moves": [
+        "Ng4+",
+        "Kf7",
+        "Nxf2"
+      ],
+      "alternativeLines": [
+        [
+          "Ng4+",
+          "Ke7",
+          "Nxf2"
+        ],
+        [
+          "Ng4+",
+          "Ke6",
+          "Nxf2"
+        ],
+        [
+          "Ng4+",
+          "Kf5",
+          "Nxf2"
+        ]
+      ],
+      "goal": "material",
+      "previousMove": null,
+      "gameReference": null,
+      "manualId": null,
+      "exercise": {
+        "id": "fork-beginner-02",
+        "title": "Tấn công đôi bằng Mã · 2",
+        "goal": "material",
+        "prompt": "Tạo đòn tấn công đôi rồi thu lợi vật chất.",
+        "mode": "interactive",
+        "outcome": "fork",
+        "fen": "8/8/5k1K/2P1N3/8/8/5r2/8 w - - 0 1",
+        "moves": [
+          "Ng4+",
+          "Kf7",
+          "Nxf2"
+        ],
+        "alternativeLines": [
+          [
+            "Ng4+",
+            "Ke7",
+            "Nxf2"
+          ],
+          [
+            "Ng4+",
+            "Ke6",
+            "Nxf2"
+          ],
+          [
+            "Ng4+",
+            "Kf5",
+            "Nxf2"
+          ]
+        ],
+        "source": "original-composition",
+        "hints": [
+          "Tìm nước đi tạo hai mối đe dọa. Kiểm tra nước đáp và khả năng bắt lại."
+        ],
+        "solution": "Ng4+ — Mã từ e5 đến g4. Mã e5 đang bị Vua f6 tấn công. Ng4+ giúp Mã rời ô bị đe dọa với nhịp chiếu; sau đó bắt Xe ở f2.",
+        "gameCaption": "",
+        "gameOpening": "",
+        "playerTitle": "",
+        "players": [],
+        "beginner": true
+      }
+    },
+    "level": null,
+    "removed": true,
+    "note": "",
+    "updatedAt": "2026-11-06T04:15:34.916Z",
+    "history": [
+      {
+        "action": "remove",
+        "level": null,
+        "scope": "/fork",
+        "note": "",
+        "at": "2026-11-06T04:15:34.916Z"
+      }
+    ]
+  },
+  {
+    "id": "2cd20e2bda81c40860157805",
+    "reference": {
+      "scope": "/fork",
+      "fen": "8/8/5R2/8/2K5/8/k7/4b2n w - - 0 1",
+      "baseLevel": "Beginner",
+      "title": "Tấn công đôi bằng Xe · 3",
+      "moves": [
+        "Rf1",
+        "Bf2",
+        "Rxh1"
+      ],
+      "alternativeLines": [
+        [
+          "Rf1",
+          "Ka3",
+          "Rxh1"
+        ],
+        [
+          "Rf1",
+          "Ka3",
+          "Rxe1"
+        ],
+        [
+          "Rf1",
+          "Kb2",
+          "Rxh1"
+        ],
+        [
+          "Rf1",
+          "Kb2",
+          "Rxe1"
+        ],
+        [
+          "Rf1",
+          "Kb1",
+          "Rxh1"
+        ],
+        [
+          "Rf1",
+          "Kb1",
+          "Rxe1+"
+        ],
+        [
+          "Rf1",
+          "Ka1",
+          "Rxh1"
+        ],
+        [
+          "Rf1",
+          "Ka1",
+          "Rxe1+"
+        ],
+        [
+          "Rf1",
+          "Ng3",
+          "Rxe1"
+        ],
+        [
+          "Rf1",
+          "Nf2",
+          "Rxe1"
+        ],
+        [
+          "Rf1",
+          "Ba5",
+          "Rxh1"
+        ],
+        [
+          "Rf1",
+          "Bh4",
+          "Rxh1"
+        ],
+        [
+          "Rf1",
+          "Bb4",
+          "Rxh1"
+        ],
+        [
+          "Rf1",
+          "Bg3",
+          "Rxh1"
+        ],
+        [
+          "Rf1",
+          "Bc3",
+          "Rxh1"
+        ],
+        [
+          "Rf1",
+          "Bd2",
+          "Rxh1"
+        ]
+      ],
+      "goal": "material",
+      "previousMove": null,
+      "gameReference": null,
+      "manualId": null,
+      "exercise": {
+        "id": "fork-beginner-03",
+        "title": "Tấn công đôi bằng Xe · 3",
+        "goal": "material",
+        "prompt": "Tạo đòn tấn công đôi rồi thu lợi vật chất.",
+        "mode": "interactive",
+        "outcome": "fork",
+        "fen": "8/8/5R2/8/2K5/8/k7/4b2n w - - 0 1",
+        "moves": [
+          "Rf1",
+          "Bf2",
+          "Rxh1"
+        ],
+        "alternativeLines": [
+          [
+            "Rf1",
+            "Ka3",
+            "Rxh1"
+          ],
+          [
+            "Rf1",
+            "Ka3",
+            "Rxe1"
+          ],
+          [
+            "Rf1",
+            "Kb2",
+            "Rxh1"
+          ],
+          [
+            "Rf1",
+            "Kb2",
+            "Rxe1"
+          ],
+          [
+            "Rf1",
+            "Kb1",
+            "Rxh1"
+          ],
+          [
+            "Rf1",
+            "Kb1",
+            "Rxe1+"
+          ],
+          [
+            "Rf1",
+            "Ka1",
+            "Rxh1"
+          ],
+          [
+            "Rf1",
+            "Ka1",
+            "Rxe1+"
+          ],
+          [
+            "Rf1",
+            "Ng3",
+            "Rxe1"
+          ],
+          [
+            "Rf1",
+            "Nf2",
+            "Rxe1"
+          ],
+          [
+            "Rf1",
+            "Ba5",
+            "Rxh1"
+          ],
+          [
+            "Rf1",
+            "Bh4",
+            "Rxh1"
+          ],
+          [
+            "Rf1",
+            "Bb4",
+            "Rxh1"
+          ],
+          [
+            "Rf1",
+            "Bg3",
+            "Rxh1"
+          ],
+          [
+            "Rf1",
+            "Bc3",
+            "Rxh1"
+          ],
+          [
+            "Rf1",
+            "Bd2",
+            "Rxh1"
+          ]
+        ],
+        "source": "original-composition",
+        "hints": [
+          "Tìm nước đi tạo hai mối đe dọa. Kiểm tra nước đáp và khả năng bắt lại."
+        ],
+        "solution": "Rf1 — Xe từ f6 đến f1. Xe đến f1 tấn công đồng thời Tượng e1 và Mã h1. Sau nước đáp, chọn mục tiêu còn có thể bắt an toàn.",
+        "gameCaption": "",
+        "gameOpening": "",
+        "playerTitle": "",
+        "players": [],
+        "beginner": true
+      }
+    },
+    "level": null,
+    "removed": true,
+    "note": "",
+    "updatedAt": "2026-11-06T04:15:45.195Z",
+    "history": [
+      {
+        "action": "remove",
+        "level": null,
+        "scope": "/fork",
+        "note": "",
+        "at": "2026-11-06T04:15:45.195Z"
+      }
+    ]
+  },
+  {
+    "id": "70360d0b1298d06ba41e42d7",
+    "reference": {
+      "scope": "/fork",
+      "fen": "8/6k1/8/7K/8/2R5/8/1n4b1 w - - 0 1",
+      "baseLevel": "Beginner",
+      "title": "Tấn công đôi bằng Xe · 4",
+      "moves": [
+        "Rc1",
+        "Kf7",
+        "Rxb1"
+      ],
+      "alternativeLines": [
+        [
+          "Rg3+",
+          "Kh8",
+          "Rxg1"
+        ],
+        [
+          "Rg3+",
+          "Kf8",
+          "Rxg1"
+        ],
+        [
+          "Rg3+",
+          "Kh7",
+          "Rxg1"
+        ],
+        [
+          "Rg3+",
+          "Kf7",
+          "Rxg1"
+        ],
+        [
+          "Rg3+",
+          "Kf6",
+          "Rxg1"
+        ],
+        [
+          "Rc1",
+          "Kh8",
+          "Rxg1"
+        ],
+        [
+          "Rc1",
+          "Kh8",
+          "Rxb1"
+        ],
+        [
+          "Rc1",
+          "Kg8",
+          "Rxg1+"
+        ],
+        [
+          "Rc1",
+          "Kg8",
+          "Rxb1"
+        ],
+        [
+          "Rc1",
+          "Kf8",
+          "Rxg1"
+        ],
+        [
+          "Rc1",
+          "Kf8",
+          "Rxb1"
+        ],
+        [
+          "Rc1",
+          "Kh7",
+          "Rxg1"
+        ],
+        [
+          "Rc1",
+          "Kh7",
+          "Rxb1"
+        ],
+        [
+          "Rc1",
+          "Kf7",
+          "Rxg1"
+        ],
+        [
+          "Rc1",
+          "Kf6",
+          "Rxg1"
+        ],
+        [
+          "Rc1",
+          "Kf6",
+          "Rxb1"
+        ],
+        [
+          "Rc1",
+          "Ba7",
+          "Rxb1"
+        ],
+        [
+          "Rc1",
+          "Bb6",
+          "Rxb1"
+        ],
+        [
+          "Rc1",
+          "Bc5",
+          "Rxc5"
+        ],
+        [
+          "Rc1",
+          "Bc5",
+          "Rxb1"
+        ],
+        [
+          "Rc1",
+          "Bd4",
+          "Rxb1"
+        ],
+        [
+          "Rc1",
+          "Be3",
+          "Rxb1"
+        ],
+        [
+          "Rc1",
+          "Bh2",
+          "Rxb1"
+        ],
+        [
+          "Rc1",
+          "Bf2",
+          "Rxb1"
+        ],
+        [
+          "Rc1",
+          "Nc3",
+          "Rxc3"
+        ],
+        [
+          "Rc1",
+          "Nc3",
+          "Rxg1+"
+        ],
+        [
+          "Rc1",
+          "Na3",
+          "Rxg1+"
+        ],
+        [
+          "Rc1",
+          "Nd2",
+          "Rxg1+"
+        ]
+      ],
+      "goal": "material",
+      "previousMove": null,
+      "gameReference": null,
+      "manualId": null,
+      "exercise": {
+        "id": "fork-beginner-04",
+        "title": "Tấn công đôi bằng Xe · 4",
+        "goal": "material",
+        "prompt": "Tạo đòn tấn công đôi rồi thu lợi vật chất.",
+        "mode": "interactive",
+        "outcome": "fork",
+        "fen": "8/6k1/8/7K/8/2R5/8/1n4b1 w - - 0 1",
+        "moves": [
+          "Rc1",
+          "Kf7",
+          "Rxb1"
+        ],
+        "alternativeLines": [
+          [
+            "Rg3+",
+            "Kh8",
+            "Rxg1"
+          ],
+          [
+            "Rg3+",
+            "Kf8",
+            "Rxg1"
+          ],
+          [
+            "Rg3+",
+            "Kh7",
+            "Rxg1"
+          ],
+          [
+            "Rg3+",
+            "Kf7",
+            "Rxg1"
+          ],
+          [
+            "Rg3+",
+            "Kf6",
+            "Rxg1"
+          ],
+          [
+            "Rc1",
+            "Kh8",
+            "Rxg1"
+          ],
+          [
+            "Rc1",
+            "Kh8",
+            "Rxb1"
+          ],
+          [
+            "Rc1",
+            "Kg8",
+            "Rxg1+"
+          ],
+          [
+            "Rc1",
+            "Kg8",
+            "Rxb1"
+          ],
+          [
+            "Rc1",
+            "Kf8",
+            "Rxg1"
+          ],
+          [
+            "Rc1",
+            "Kf8",
+            "Rxb1"
+          ],
+          [
+            "Rc1",
+            "Kh7",
+            "Rxg1"
+          ],
+          [
+            "Rc1",
+            "Kh7",
+            "Rxb1"
+          ],
+          [
+            "Rc1",
+            "Kf7",
+            "Rxg1"
+          ],
+          [
+            "Rc1",
+            "Kf6",
+            "Rxg1"
+          ],
+          [
+            "Rc1",
+            "Kf6",
+            "Rxb1"
+          ],
+          [
+            "Rc1",
+            "Ba7",
+            "Rxb1"
+          ],
+          [
+            "Rc1",
+            "Bb6",
+            "Rxb1"
+          ],
+          [
+            "Rc1",
+            "Bc5",
+            "Rxc5"
+          ],
+          [
+            "Rc1",
+            "Bc5",
+            "Rxb1"
+          ],
+          [
+            "Rc1",
+            "Bd4",
+            "Rxb1"
+          ],
+          [
+            "Rc1",
+            "Be3",
+            "Rxb1"
+          ],
+          [
+            "Rc1",
+            "Bh2",
+            "Rxb1"
+          ],
+          [
+            "Rc1",
+            "Bf2",
+            "Rxb1"
+          ],
+          [
+            "Rc1",
+            "Nc3",
+            "Rxc3"
+          ],
+          [
+            "Rc1",
+            "Nc3",
+            "Rxg1+"
+          ],
+          [
+            "Rc1",
+            "Na3",
+            "Rxg1+"
+          ],
+          [
+            "Rc1",
+            "Nd2",
+            "Rxg1+"
+          ]
+        ],
+        "source": "original-composition",
+        "hints": [
+          "Tìm nước đi tạo hai mối đe dọa. Kiểm tra nước đáp và khả năng bắt lại."
+        ],
+        "solution": "Rc1 — Xe từ c3 đến c1. Mã b1 đang tấn công Xe c3. Rc1 vừa đưa Xe ra khỏi tầm bắt của Mã, vừa tấn công Mã b1 và Tượng g1.",
+        "gameCaption": "",
+        "gameOpening": "",
+        "playerTitle": "",
+        "players": [],
+        "beginner": true
+      }
+    },
+    "level": null,
+    "removed": true,
+    "note": "",
+    "updatedAt": "2026-11-06T04:15:51.350Z",
+    "history": [
+      {
+        "action": "remove",
+        "level": null,
+        "scope": "/fork",
+        "note": "",
+        "at": "2026-11-06T04:15:51.350Z"
+      }
+    ]
+  },
+  {
+    "id": "222e7950c55842e0219f3579",
+    "reference": {
+      "scope": "/fork",
+      "fen": "5kr1/7Q/8/8/2K5/4r3/8/8 w - - 0 1",
+      "baseLevel": "Beginner",
+      "title": "Tấn công đôi bằng Hậu · 5",
+      "moves": [
+        "Qh6+",
+        "Kf7",
+        "Qxe3"
+      ],
+      "alternativeLines": [
+        [
+          "Qh6+",
+          "Ke8",
+          "Qxe3+"
+        ],
+        [
+          "Qh6+",
+          "Ke7",
+          "Qxe3+"
+        ],
+        [
+          "Qh6+",
+          "Rg7",
+          "Qxe3"
+        ]
+      ],
+      "goal": "material",
+      "previousMove": null,
+      "gameReference": null,
+      "manualId": null,
+      "exercise": {
+        "id": "fork-beginner-05",
+        "title": "Tấn công đôi bằng Hậu · 5",
+        "goal": "material",
+        "prompt": "Tạo đòn tấn công đôi rồi thu lợi vật chất.",
+        "mode": "interactive",
+        "outcome": "fork",
+        "fen": "5kr1/7Q/8/8/2K5/4r3/8/8 w - - 0 1",
+        "moves": [
+          "Qh6+",
+          "Kf7",
+          "Qxe3"
+        ],
+        "alternativeLines": [
+          [
+            "Qh6+",
+            "Ke8",
+            "Qxe3+"
+          ],
+          [
+            "Qh6+",
+            "Ke7",
+            "Qxe3+"
+          ],
+          [
+            "Qh6+",
+            "Rg7",
+            "Qxe3"
+          ]
+        ],
+        "source": "original-composition",
+        "hints": [
+          "Tìm nước đi tạo hai mối đe dọa. Kiểm tra nước đáp và khả năng bắt lại."
+        ],
+        "solution": "Qh6+ — Hậu từ h7 đến h6. Qh6+ chiếu Vua f8 và tấn công Xe e3. Nếu Xe g8 chắn ở g7, Hậu vẫn bắt được Xe e3.",
+        "gameCaption": "",
+        "gameOpening": "",
+        "playerTitle": "",
+        "players": [],
+        "beginner": true
+      }
+    },
+    "level": null,
+    "removed": true,
+    "note": "",
+    "updatedAt": "2026-11-06T04:16:17.603Z",
+    "history": [
+      {
+        "action": "remove",
+        "level": null,
+        "scope": "/fork",
+        "note": "",
+        "at": "2026-11-06T04:16:17.603Z"
+      }
+    ]
+  },
+  {
+    "id": "408326920e363a15953ac5ab",
+    "reference": {
+      "scope": "/fork",
+      "fen": "4Q3/1k6/3p4/8/1n6/8/5r2/3K4 w - - 0 1",
+      "baseLevel": "Beginner",
+      "title": "Tấn công đôi bằng Hậu · 6",
+      "moves": [
+        "Qb5+",
+        "Kc7",
+        "Qxb4"
+      ],
+      "alternativeLines": [
+        [
+          "Qd7+",
+          "Kb8",
+          "Qxd6+"
+        ],
+        [
+          "Qd7+",
+          "Ka8",
+          "Qxd6"
+        ],
+        [
+          "Qd7+",
+          "Kb6",
+          "Qxd6+"
+        ],
+        [
+          "Qd7+",
+          "Ka6",
+          "Qxd6+"
+        ],
+        [
+          "Qb5+",
+          "Kc8",
+          "Qxb4"
+        ],
+        [
+          "Qb5+",
+          "Ka8",
+          "Qxb4"
+        ],
+        [
+          "Qb5+",
+          "Ka7",
+          "Qxb4"
+        ]
+      ],
+      "goal": "material",
+      "previousMove": null,
+      "gameReference": null,
+      "manualId": null,
+      "exercise": {
+        "id": "fork-beginner-06",
+        "title": "Tấn công đôi bằng Hậu · 6",
+        "goal": "material",
+        "prompt": "Tạo đòn tấn công đôi rồi thu lợi vật chất.",
+        "mode": "interactive",
+        "outcome": "fork",
+        "fen": "4Q3/1k6/3p4/8/1n6/8/5r2/3K4 w - - 0 1",
+        "moves": [
+          "Qb5+",
+          "Kc7",
+          "Qxb4"
+        ],
+        "alternativeLines": [
+          [
+            "Qd7+",
+            "Kb8",
+            "Qxd6+"
+          ],
+          [
+            "Qd7+",
+            "Ka8",
+            "Qxd6"
+          ],
+          [
+            "Qd7+",
+            "Kb6",
+            "Qxd6+"
+          ],
+          [
+            "Qd7+",
+            "Ka6",
+            "Qxd6+"
+          ],
+          [
+            "Qb5+",
+            "Kc8",
+            "Qxb4"
+          ],
+          [
+            "Qb5+",
+            "Ka8",
+            "Qxb4"
+          ],
+          [
+            "Qb5+",
+            "Ka7",
+            "Qxb4"
+          ]
+        ],
+        "source": "original-composition",
+        "hints": [
+          "Tìm nước đi tạo hai mối đe dọa. Kiểm tra nước đáp và khả năng bắt lại."
+        ],
+        "solution": "Qb5+ — Hậu từ e8 đến b5. Qb5+ chiếu Vua b7 và tấn công Mã b4, đồng thời giữ Hậu ngoài tầm bắt của Vua. Sau nước đáp, bắt Mã.",
+        "gameCaption": "",
+        "gameOpening": "",
+        "playerTitle": "",
+        "players": [],
+        "beginner": true
+      }
+    },
+    "level": null,
+    "removed": true,
+    "note": "",
+    "updatedAt": "2026-11-06T04:16:23.825Z",
+    "history": [
+      {
+        "action": "remove",
+        "level": null,
+        "scope": "/fork",
+        "note": "",
+        "at": "2026-11-06T04:16:23.825Z"
+      }
+    ]
+  },
+  {
+    "id": "37e0fee20dd61401af9e0937",
+    "reference": {
+      "scope": "/fork",
+      "fen": "8/6rn/3k4/8/1K6/8/1p6/6Q1 w - - 0 1",
+      "baseLevel": "Beginner",
+      "title": "Tấn công đôi bằng Hậu · 7",
+      "moves": [
+        "Qh2+",
+        "Kd5",
+        "Qxb2"
+      ],
+      "alternativeLines": [
+        [
+          "Qd4+",
+          "Ke7",
+          "Qxg7+"
+        ],
+        [
+          "Qd4+",
+          "Ke7",
+          "Qxb2"
+        ],
+        [
+          "Qd4+",
+          "Kc7",
+          "Qxg7+"
+        ],
+        [
+          "Qd4+",
+          "Kc7",
+          "Qxb2"
+        ],
+        [
+          "Qd4+",
+          "Ke6",
+          "Qxb2"
+        ],
+        [
+          "Qd4+",
+          "Kc6",
+          "Qxb2"
+        ],
+        [
+          "Qh2+",
+          "Ke7",
+          "Qxb2"
+        ],
+        [
+          "Qh2+",
+          "Kd7",
+          "Qxb2"
+        ],
+        [
+          "Qh2+",
+          "Ke6",
+          "Qxb2"
+        ],
+        [
+          "Qh2+",
+          "Kc6",
+          "Qxb2"
+        ],
+        [
+          "Qh2+",
+          "Rg3",
+          "Qxb2"
+        ]
+      ],
+      "goal": "material",
+      "previousMove": null,
+      "gameReference": null,
+      "manualId": null,
+      "exercise": {
+        "id": "fork-beginner-07",
+        "title": "Tấn công đôi bằng Hậu · 7",
+        "goal": "material",
+        "prompt": "Tạo đòn tấn công đôi rồi thu lợi vật chất.",
+        "mode": "interactive",
+        "outcome": "fork",
+        "fen": "8/6rn/3k4/8/1K6/8/1p6/6Q1 w - - 0 1",
+        "moves": [
+          "Qh2+",
+          "Kd5",
+          "Qxb2"
+        ],
+        "alternativeLines": [
+          [
+            "Qd4+",
+            "Ke7",
+            "Qxg7+"
+          ],
+          [
+            "Qd4+",
+            "Ke7",
+            "Qxb2"
+          ],
+          [
+            "Qd4+",
+            "Kc7",
+            "Qxg7+"
+          ],
+          [
+            "Qd4+",
+            "Kc7",
+            "Qxb2"
+          ],
+          [
+            "Qd4+",
+            "Ke6",
+            "Qxb2"
+          ],
+          [
+            "Qd4+",
+            "Kc6",
+            "Qxb2"
+          ],
+          [
+            "Qh2+",
+            "Ke7",
+            "Qxb2"
+          ],
+          [
+            "Qh2+",
+            "Kd7",
+            "Qxb2"
+          ],
+          [
+            "Qh2+",
+            "Ke6",
+            "Qxb2"
+          ],
+          [
+            "Qh2+",
+            "Kc6",
+            "Qxb2"
+          ],
+          [
+            "Qh2+",
+            "Rg3",
+            "Qxb2"
+          ]
+        ],
+        "source": "original-composition",
+        "hints": [
+          "Tìm nước đi tạo hai mối đe dọa. Kiểm tra nước đáp và khả năng bắt lại."
+        ],
+        "solution": "Qh2+ — Hậu từ g1 đến h2. Qh2+ chiếu Vua d6 và tấn công Tốt b2 sắp phong cấp. Mã h7 được Xe g7 bảo vệ; mục tiêu có thể bắt an toàn là Tốt b2.",
+        "gameCaption": "",
+        "gameOpening": "",
+        "playerTitle": "",
+        "players": [],
+        "beginner": true
+      }
+    },
+    "level": null,
+    "removed": true,
+    "note": "",
+    "updatedAt": "2026-11-06T04:16:31.254Z",
+    "history": [
+      {
+        "action": "remove",
+        "level": null,
+        "scope": "/fork",
+        "note": "",
+        "at": "2026-11-06T04:16:31.254Z"
+      }
+    ]
+  }
+]

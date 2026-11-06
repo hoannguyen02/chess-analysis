@@ -23,11 +23,13 @@ export default function DrawGameViewer({
   source: initialSource,
   referenceGames,
   orientation = 'white',
+  bookmark = false,
 }: {
   reference: GameReference;
   referenceGames?: ReferenceGame[];
   source?: GameSource;
   orientation?: 'white' | 'black';
+  bookmark?: boolean;
   onClose: () => void;
 }) {
   const playlist = useMemo(
@@ -64,6 +66,7 @@ export default function DrawGameViewer({
   );
   const frame = frames[ply];
   const title = reference.kind === 'game' ? 'Ván gốc' : 'Bài nghiên cứu';
+  const markerLabel = bookmark ? 'Thế cờ đã lưu' : 'Vị trí bài tập';
   const gameCaption = source
     ? [
         source.headers.Date?.match(/^\d{4}/)?.[0] ??
@@ -224,9 +227,10 @@ export default function DrawGameViewer({
       </header>
       {source?.kind === 'game' && (
         <SaveGameControl
-          key={`${reference.collection}:${reference.id}`}
+          key={`${reference.collection}:${reference.id}:${branch}:${ply}`}
           source={source}
           reference={{ ...reference, branch, ply }}
+          onOpen={() => setPlaying(false)}
         />
       )}
       {!source && (
@@ -329,7 +333,7 @@ export default function DrawGameViewer({
                   setPly(reference.ply);
                 }}
               >
-                Về vị trí bài tập
+                {bookmark ? 'Về thế cờ đã lưu' : 'Về vị trí bài tập'}
               </button>
               <button type="button" onClick={() => setFlipped(!flipped)}>
                 Lật bàn
@@ -379,7 +383,11 @@ export default function DrawGameViewer({
                   {source.lines.map((_, i) => (
                     <option key={i} value={i}>
                       {i === 0 ? 'Nhánh chính' : `Biến ${i}`}
-                      {i === reference.branch ? ' · Bài tập' : ''}
+                      {i === reference.branch
+                        ? bookmark
+                          ? ' · Đã lưu'
+                          : ' · Bài tập'
+                        : ''}
                     </option>
                   ))}
                 </select>
@@ -402,12 +410,12 @@ export default function DrawGameViewer({
                   aria-current={i === ply ? 'step' : undefined}
                   title={
                     i === reference.ply && branch === reference.branch
-                      ? 'Vị trí bài tập'
+                      ? markerLabel
                       : undefined
                   }
                   aria-label={
                     i === reference.ply && branch === reference.branch
-                      ? `${item.label} — Vị trí bài tập`
+                      ? `${item.label} — ${markerLabel}`
                       : undefined
                   }
                   onClick={() => jump(i)}

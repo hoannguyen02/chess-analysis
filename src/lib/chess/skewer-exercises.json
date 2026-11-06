@@ -5,11 +5,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "1n1q4/r2kb2p/pp3r2/6NQ/5p2/PP4P1/5PKP/R3R3 w - - 2 24",
-    "moves": [
-      "Rad1+",
-      "Kc8",
-      "Rxd8+"
-    ],
+    "moves": ["Rad1+", "Kc8", "Rxd8+"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "1n1qk3/r3b2p/pp3r2/6NQ/5p2/PP4P1/5PKP/R3R3 b - - 1 23",
@@ -41,11 +37,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "2b2Q2/kp6/3n3P/r1N5/3K4/8/2P3Pb/8 b - - 0 46",
-    "moves": [
-      "Bg1+",
-      "Kd5",
-      "Bxc5"
-    ],
+    "moves": ["Bg1+", "Kd5", "Bxc5"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "2b2Q2/kp6/3n4/r1N4P/3K4/8/2P3Pb/8 w - - 25 46",
@@ -77,11 +69,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "8/5pkr/p7/2pPq3/2P1PpK1/7P/2B1N3/1R5R b - - 2 42",
-    "moves": [
-      "Qh5+",
-      "Kxf4",
-      "Qxe2"
-    ],
+    "moves": ["Qh5+", "Kxf4", "Qxe2"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "1R6/5pkr/p7/2pPq3/2P1PpK1/7P/2B1N3/7R w - - 1 42",
@@ -113,11 +101,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "b3R2Q/2q2k2/5n2/1p5p/2pP2PP/2P5/5P2/6K1 w - - 7 41",
-    "moves": [
-      "Rf8+",
-      "Ke6",
-      "Rxf6+"
-    ],
+    "moves": ["Rf8+", "Ke6", "Rxf6+"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "b3R2Q/2q2k2/8/1p1n3p/2pP2PP/2P5/5P2/6K1 b - - 6 40",
@@ -149,11 +133,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "5k1r/pb1P4/7p/2p2q2/3b2BP/P4n2/6P1/3R1R1K w - - 0 44",
-    "moves": [
-      "d8=Q+",
-      "Kg7",
-      "Qxh8+"
-    ],
+    "moves": ["d8=Q+", "Kg7", "Qxh8+"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "5k1r/pb1P1q2/7p/2p2Q2/3b2BP/P4n2/6P1/3R1R1K b - - 0 43",
@@ -185,11 +165,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "1k1rr3/1bq3p1/1pp1pp1p/2n1P3/5P2/P7/1PBBQ1PP/1K1R1R2 b - - 2 24",
-    "moves": [
-      "Ba6",
-      "Qe3",
-      "Bxf1"
-    ],
+    "moves": ["Ba6", "Qe3", "Bxf1"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "1k1rr3/1bq3p1/1pp1pp1p/2n1P3/4BP2/P7/1P1BQ1PP/1K1R1R2 w - - 1 24",
@@ -221,11 +197,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "4k1r1/pQ2pp1p/3p2p1/q7/2rB2n1/2P3P1/P3PP1P/R4RK1 w - - 5 21",
-    "moves": [
-      "Qb8+",
-      "Kd7",
-      "Qxg8"
-    ],
+    "moves": ["Qb8+", "Kd7", "Qxg8"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "4k1r1/pQ2pp1p/3p2p1/q1r5/3B2n1/2P3P1/P3PP1P/R4RK1 b - - 4 20",
@@ -257,11 +229,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "5r2/1p4n1/1q2pBk1/1r1pP3/p1pP4/P1Q5/3K1P2/3B4 w - - 0 40",
-    "moves": [
-      "Qg3+",
-      "Kf7",
-      "Qxg7+"
-    ],
+    "moves": ["Qg3+", "Kf7", "Qxg7+"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "5r2/1p4nk/1q2pBR1/1r1pP3/p1pP4/P1Q5/3K1P2/3B4 b - - 0 39",
@@ -293,11 +261,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "2R5/pp6/8/6P1/1P2kb2/P7/2KB2r1/8 w - - 3 43",
-    "moves": [
-      "Rc4+",
-      "Kd5",
-      "Rxf4"
-    ],
+    "moves": ["Rc4+", "Kd5", "Rxf4"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "2R5/pp6/8/4b1P1/1P2k3/P7/2KB2r1/8 b - - 2 42",
@@ -329,11 +293,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "2k5/8/p7/1p6/2pP3P/N4KR1/P1P1n1r1/8 b - - 2 37",
-    "moves": [
-      "Rxg3+",
-      "Kxe2",
-      "Rxa3"
-    ],
+    "moves": ["Rxg3+", "Kxe2", "Rxa3"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "2k5/8/p7/1p6/2pP1K1P/N5R1/P1P1n1r1/8 w - - 1 37",
@@ -365,11 +325,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "8/p7/5kp1/2pr4/3r2pp/1P6/P1R2P1P/5KR1 b - - 5 42",
-    "moves": [
-      "Rd1+",
-      "Ke2",
-      "Rxg1"
-    ],
+    "moves": ["Rd1+", "Ke2", "Rxg1"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "8/p7/5kp1/2pr4/3r2pp/1P6/P1R2PRP/5K2 w - - 4 42",
@@ -401,11 +357,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "r1b3k1/pp3p2/7p/3Pr2q/5QpP/8/PPP3P1/R1B3KR b - - 0 19",
-    "moves": [
-      "Re1+",
-      "Kf2",
-      "Rxh1"
-    ],
+    "moves": ["Re1+", "Kf2", "Rxh1"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "r1b3k1/pp3p2/7p/3Pr2q/5ppP/8/PPPQ2P1/R1B3KR w - - 0 19",
@@ -437,11 +389,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "8/3q2p1/3k2P1/2p1r3/p6Q/P7/1P6/K5R1 w - - 19 57",
-    "moves": [
-      "Rd1+",
-      "Kc7",
-      "Rxd7+"
-    ],
+    "moves": ["Rd1+", "Kc7", "Rxd7+"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "8/3qk1p1/6P1/2p1r3/p6Q/P7/1P6/K5R1 b - - 18 56",
@@ -473,20 +421,8 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "3r1rk1/p1q1n3/3b1n2/2p1p3/2P2ppN/2B3P1/P2QPPB1/2RR2K1 w - - 0 28",
-    "moves": [
-      "Ba5",
-      "Qc8",
-      "Bxd8"
-    ],
-    "alternativeLines": [
-      [
-        "gxf4",
-        "exf4",
-        "Ba5",
-        "Qc8",
-        "Bxd8"
-      ]
-    ],
+    "moves": ["Ba5", "Qc8", "Bxd8"],
+    "alternativeLines": [["gxf4", "exf4", "Ba5", "Qc8", "Bxd8"]],
     "previousMove": {
       "fen": "3r1rk1/p1q1n3/3b1n2/2p1pp2/2P3pN/2B3P1/P2QPPB1/2RR2K1 b - - 3 27",
       "move": "f4"
@@ -517,11 +453,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "Q7/5ppk/8/5P1p/1P4n1/4P3/1N4Pq/2R2K2 b - - 0 33",
-    "moves": [
-      "Qh1+",
-      "Ke2",
-      "Qxc1"
-    ],
+    "moves": ["Qh1+", "Ke2", "Qxc1"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "Q7/5ppk/8/5P1p/1P4n1/4P3/1r4Pq/2RN1K2 w - - 1 33",
@@ -553,11 +485,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "8/8/3K2p1/5qPp/1Q5P/6k1/8/8 b - - 6 82",
-    "moves": [
-      "Qf8+",
-      "Ke6",
-      "Qxb4"
-    ],
+    "moves": ["Qf8+", "Ke6", "Qxb4"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "8/8/2K3p1/5qPp/1Q5P/6k1/8/8 w - - 5 82",
@@ -589,11 +517,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "r6r/p2n3p/p1p1k2b/3p1p2/N2P1P2/1P2P2P/1P1K4/2R3R1 w - - 0 22",
-    "moves": [
-      "Rxc6+",
-      "Kf7",
-      "Rxh6"
-    ],
+    "moves": ["Rxc6+", "Kf7", "Rxh6"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "r6r/pp1n3p/B1p1k2b/3p1p2/N2P1P2/1P2P2P/1P1K4/2R3R1 b - - 8 21",
@@ -625,22 +549,8 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "3k1r2/3b3R/2p2p2/1p1npPp1/1P2N1P1/6K1/2P5/R7 w - - 4 41",
-    "moves": [
-      "Ra8+",
-      "Kc7",
-      "Rxf8"
-    ],
-    "alternativeLines": [
-      [
-        "Nc5",
-        "Nb6",
-        "Nxd7",
-        "Nxd7",
-        "Ra8+",
-        "Kc7",
-        "Rxf8"
-      ]
-    ],
+    "moves": ["Ra8+", "Kc7", "Rxf8"],
+    "alternativeLines": [["Nc5", "Nb6", "Nxd7", "Nxd7", "Ra8+", "Kc7", "Rxf8"]],
     "previousMove": {
       "fen": "4kr2/3b3R/2p2p2/1p1npPp1/1P2N1P1/6K1/2P5/R7 b - - 3 40",
       "move": "Kd8"
@@ -671,11 +581,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "6r1/p1k2q2/1pb3n1/5pB1/2pR3P/P3P3/6P1/3QKB2 w - - 0 30",
-    "moves": [
-      "Bxc4",
-      "Qg7",
-      "Bxg8"
-    ],
+    "moves": ["Bxc4", "Qg7", "Bxg8"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "6r1/p1k2q2/1pb3n1/3p1pB1/2PR3P/P3P3/6P1/3QKB2 b - - 0 29",
@@ -707,11 +613,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "r1b2k1r/pp2n1pp/3Q1p2/1B3nBq/8/2P2N1P/P4PP1/R3R1K1 w - - 1 21",
-    "moves": [
-      "Qd8+",
-      "Kf7",
-      "Qxh8"
-    ],
+    "moves": ["Qd8+", "Kf7", "Qxh8"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "r1b2k1r/pp2n1pp/3Q1p1n/1B4Bq/8/2P2N1P/P4PP1/R3R1K1 b - - 0 20",
@@ -743,11 +645,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "1r4k1/5ppp/2p5/b1PpPbP1/3P4/r3PK2/6RP/2RN1B2 b - - 2 26",
-    "moves": [
-      "Be4+",
-      "Kf4",
-      "Bxg2"
-    ],
+    "moves": ["Be4+", "Kf4", "Bxg2"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "1r4k1/5ppp/2p5/b1PpPbP1/3P4/r3PK2/7P/2RN1BR1 w - - 1 26",
@@ -779,11 +677,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "4b3/8/3P4/8/1p4p1/1k1K4/1p5P/1B6 b - - 3 78",
-    "moves": [
-      "Bg6+",
-      "Kd4",
-      "Bxb1"
-    ],
+    "moves": ["Bg6+", "Kd4", "Bxb1"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "4b3/8/3P4/8/1p1K2p1/1k6/1p5P/1B6 w - - 2 78",
@@ -815,11 +709,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "1k1r4/1p3pQ1/p6N/2bqp3/8/7P/3r2P1/1R3R1K b - - 2 31",
-    "moves": [
-      "Bf8",
-      "Qg3",
-      "Bxh6"
-    ],
+    "moves": ["Bf8", "Qg3", "Bxh6"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "1k1r4/1p3p2/p4Q1N/2bqp3/8/7P/3r2P1/1R3R1K w - - 1 31",
@@ -851,11 +741,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "k1nr4/pp1r1ppp/2p2qb1/P3p3/1Q6/1BP2P2/5BPP/R3R1K1 w - - 28 34",
-    "moves": [
-      "Bh4",
-      "Qd6",
-      "Bxd8"
-    ],
+    "moves": ["Bh4", "Qd6", "Bxd8"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "1knr4/pp1r1ppp/2p2qb1/P3p3/1Q6/1BP2P2/5BPP/R3R1K1 b - - 27 33",
@@ -887,11 +773,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "1nb2rk1/2p1qpb1/r1P3pp/p3p3/N3P3/4BN2/PP4PP/2RQ1RK1 w - - 1 18",
-    "moves": [
-      "Bc5",
-      "Qe8",
-      "Bxf8"
-    ],
+    "moves": ["Bc5", "Qe8", "Bxf8"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "2b2rk1/2pnqpb1/r1P3pp/p3p3/N3P3/4BN2/PP4PP/2RQ1RK1 b - - 0 17",
@@ -923,11 +805,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "8/8/p7/PN6/2k3P1/4p3/6r1/R3K3 b - - 0 64",
-    "moves": [
-      "Rg1+",
-      "Ke2",
-      "Rxa1"
-    ],
+    "moves": ["Rg1+", "Ke2", "Rxa1"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "8/8/p7/Pb6/2kN2P1/4p3/6r1/R3K3 w - - 18 64",
@@ -959,11 +837,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "2r5/1b1r2k1/p3p3/1p5Q/5q2/P2B4/1PP3PP/1K5R w - - 0 27",
-    "moves": [
-      "Qh7+",
-      "Kf6",
-      "Qxd7"
-    ],
+    "moves": ["Qh7+", "Kf6", "Qxd7"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "2r5/1b1R1rk1/p3p3/1p5Q/5q2/P2B4/1PP3PP/1K5R b - - 4 26",
@@ -995,11 +869,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "8/1p2r1kp/2n4R/5p2/p4p2/P6R/1P4PP/6K1 w - - 0 33",
-    "moves": [
-      "Rxh7+",
-      "Kf8",
-      "Rxe7"
-    ],
+    "moves": ["Rxh7+", "Kf8", "Rxe7"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "8/1p2r1kp/2n4R/4pp2/p4P2/P6R/1P4PP/6K1 b - - 0 32",
@@ -1031,11 +901,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "8/8/8/3p4/8/4K1Q1/2kr2p1/8 b - - 1 78",
-    "moves": [
-      "Rd3+",
-      "Kf4",
-      "Rxg3"
-    ],
+    "moves": ["Rd3+", "Kf4", "Rxg3"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "8/8/8/3p4/4K3/6Q1/2kr2p1/8 w - - 0 78",
@@ -1067,11 +933,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "8/4ppk1/6p1/p2P4/P5P1/2b2P2/3RK3/1QN3q1 b - - 0 53",
-    "moves": [
-      "Qg2+",
-      "Kd3",
-      "Qxd2+"
-    ],
+    "moves": ["Qg2+", "Kd3", "Qxd2+"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "8/4ppk1/6p1/p2P4/P3Q1P1/2b2P2/3RK3/1rN3q1 w - - 4 53",
@@ -1103,11 +965,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "8/2p4R/3kp3/1p2p3/1P2Pp2/7K/4QPP1/2qr4 b - - 11 43",
-    "moves": [
-      "Rh1+",
-      "Kg4",
-      "Rxh7"
-    ],
+    "moves": ["Rh1+", "Kg4", "Rxh7"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "8/2p4R/3kp3/1p2p3/1P2Pp2/8/4QPPK/2qr4 w - - 10 43",
@@ -1139,11 +997,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "rnq2k1n/pp3r1P/8/3pp2Q/2pP4/P1P4b/2P2P1P/R1B1K1R1 w Q - 1 20",
-    "moves": [
-      "Rg8+",
-      "Ke7",
-      "Rxc8"
-    ],
+    "moves": ["Rg8+", "Ke7", "Rxc8"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "rn1q1k1n/pp3r1P/8/3pp2Q/2pP4/P1P4b/2P2P1P/R1B1K1R1 b Q - 0 19",
@@ -1175,11 +1029,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "r1bq1b1k/1pp1r3/2n3p1/p1n1pp2/4P3/BPP2NP1/P1QN1P1P/R3R1K1 w - - 0 18",
-    "moves": [
-      "Bxc5",
-      "Re6",
-      "Bxf8"
-    ],
+    "moves": ["Bxc5", "Re6", "Bxf8"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "r1bq1b1k/1pp1r2p/2n3B1/p1n1pp2/4P3/BPP2NP1/P1QN1P1P/R3R1K1 b - - 0 17",
@@ -1211,26 +1061,10 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "6Q1/2pk1p1N/p1pp4/5PKP/4P3/3Pn3/7q/8 b - - 4 40",
-    "moves": [
-      "Qg2+",
-      "Kh6",
-      "Qxg8"
-    ],
+    "moves": ["Qg2+", "Kh6", "Qxg8"],
     "alternativeLines": [
-      [
-        "Qg3+",
-        "Kh6",
-        "Qxg8"
-      ],
-      [
-        "Qg1+",
-        "Kf4",
-        "Qf2+",
-        "Kg5",
-        "Qg3+",
-        "Kh6",
-        "Qxg8"
-      ]
+      ["Qg3+", "Kh6", "Qxg8"],
+      ["Qg1+", "Kf4", "Qf2+", "Kg5", "Qg3+", "Kh6", "Qxg8"]
     ],
     "previousMove": {
       "fen": "6Q1/2pk1p1N/p1pp4/5P1P/4P2K/3Pn3/7q/8 w - - 3 40",
@@ -1262,11 +1096,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "5n1Q/2q1pk2/1p1p2p1/1PnP3p/4P2P/6P1/7K/2R5 w - - 0 36",
-    "moves": [
-      "Rf1+",
-      "Ke8",
-      "Rxf8+"
-    ],
+    "moves": ["Rf1+", "Ke8", "Rxf8+"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "4kn1Q/2q1pB2/1p1p2p1/1PnP3p/4P2P/6P1/7K/2R5 b - - 8 35",
@@ -1298,11 +1128,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "4r1k1/8/p1p5/1p2r1bp/1P3p2/P1PR3P/2N2KP1/4R3 b - - 1 43",
-    "moves": [
-      "Bh4+",
-      "Kf3",
-      "Bxe1"
-    ],
+    "moves": ["Bh4+", "Kf3", "Bxe1"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "4r1k1/8/p1p5/1p2r1bp/1P3p2/P1PRN2P/5KP1/4R3 w - - 0 43",
@@ -1334,11 +1160,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "7R/8/8/3Nn1k1/4pN2/4P1rp/1K6/8 w - - 4 82",
-    "moves": [
-      "Rh5+",
-      "Kg4",
-      "Rxe5"
-    ],
+    "moves": ["Rh5+", "Kg4", "Rxe5"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "7R/3n4/8/3N2k1/4pN2/4P1rp/1K6/8 b - - 3 81",
@@ -1370,11 +1192,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "1k1rr3/ppp4p/5p1n/2B4Q/5R2/P2P4/1PP3qP/R2K4 b - - 11 27",
-    "moves": [
-      "Qh1+",
-      "Kd2",
-      "Qxa1"
-    ],
+    "moves": ["Qh1+", "Kd2", "Qxa1"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "1k1rr3/ppp4p/5p1n/2B4Q/5R2/P2P4/1PP3qP/R3K3 w - - 10 27",
@@ -1406,11 +1224,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "2k3r1/1pp1n1p1/4p2p/p1r5/P5R1/7P/1BP2PP1/R5K1 w - - 0 26",
-    "moves": [
-      "Ba3",
-      "Rxc2",
-      "Bxe7"
-    ],
+    "moves": ["Ba3", "Rxc2", "Bxe7"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "2k3r1/1pp1n1p1/2r1p2p/p1N5/P5R1/7P/1BP2PP1/R5K1 b - - 0 25",
@@ -1442,11 +1256,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "r4rk1/4q1pp/p3pb2/1p2B3/8/2P3Q1/PP4PP/4RRK1 b - - 0 22",
-    "moves": [
-      "Bh4",
-      "Qe3",
-      "Bxe1"
-    ],
+    "moves": ["Bh4", "Qe3", "Bxe1"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "r4rk1/4q1pp/p3pb2/1p2n3/3B4/2P3Q1/PP4PP/4RRK1 w - - 2 22",
@@ -1478,11 +1288,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "8/8/1p2p1k1/p1pPP1bp/P1P1R1n1/6P1/1r6/6KR b - - 0 49",
-    "moves": [
-      "Rb1+",
-      "Kg2",
-      "Rxh1"
-    ],
+    "moves": ["Rb1+", "Kg2", "Rxh1"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "8/8/1p2p1k1/p1p1P1bp/P1PPR1n1/6P1/1r6/6KR w - - 0 49",
@@ -1514,11 +1320,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "8/8/8/8/1p1K3R/1kr4p/8/8 b - - 7 88",
-    "moves": [
-      "Rc4+",
-      "Ke5",
-      "Rxh4"
-    ],
+    "moves": ["Rc4+", "Ke5", "Rxh4"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "7R/8/8/8/1p1K4/1kr4p/8/8 w - - 6 88",
@@ -1550,11 +1352,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "8/2Q5/5kp1/4n2p/P6q/1P6/2P5/2K5 w - - 0 41",
-    "moves": [
-      "Qd8+",
-      "Ke6",
-      "Qxh4"
-    ],
+    "moves": ["Qd8+", "Ke6", "Qxh4"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "8/2Q5/5kp1/4n2p/P2q3P/1P6/2P5/2K5 b - a3 0 40",
@@ -1586,11 +1384,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "r1b5/1pB1k2p/2p2rp1/2p5/p3Pb2/3R1P2/PP4P1/3R1BK1 w - - 0 31",
-    "moves": [
-      "Bd8+",
-      "Kf7",
-      "Bxf6"
-    ],
+    "moves": ["Bd8+", "Kf7", "Bxf6"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "r1b5/1pB1k2p/2pp1rp1/2P5/p3Pb2/3R1P2/PP4P1/3R1BK1 b - - 0 30",
@@ -1622,11 +1416,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "6r1/2k2r1p/p3p3/2qnP3/2p1Qp2/P7/1RP3PP/1R5K w - - 0 36",
-    "moves": [
-      "Rb7+",
-      "Kc6",
-      "Rxf7"
-    ],
+    "moves": ["Rb7+", "Kc6", "Rxf7"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "6r1/2k2r1p/p1q1p3/2BnP3/2p1Qp2/P7/1RP3PP/1R5K b - - 9 35",
@@ -1658,13 +1448,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "r3k2N/2p5/pp5p/6p1/P1B3b1/8/1PP5/2K2R2 w - - 0 23",
-    "moves": [
-      "Ng6",
-      "Bh5",
-      "Rf8+",
-      "Kd7",
-      "Rxa8"
-    ],
+    "moves": ["Ng6", "Bh5", "Rf8+", "Kd7", "Rxa8"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "r3k2N/2p5/pp5p/6pb/P1B3P1/8/1PP5/2K2R2 b - - 0 22",
@@ -1696,13 +1480,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "4B2k/1b2p3/p5p1/6p1/1pP5/3r1nP1/P1P2Q1P/5K2 b - - 0 31",
-    "moves": [
-      "Rd1+",
-      "Ke2",
-      "Rd2+",
-      "Ke3",
-      "Rxf2"
-    ],
+    "moves": ["Rd1+", "Ke2", "Rd2+", "Ke3", "Rxf2"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "4B2k/1b2p3/p5p1/6p1/1pq5/1P1r1nP1/P1P2Q1P/5K2 w - - 0 31",
@@ -1734,13 +1512,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "4k2r/p4p2/4p2p/1b1nP3/1P1P3B/1R6/2rN1PPP/3K3R b k - 2 28",
-    "moves": [
-      "Ra2",
-      "Rf3",
-      "Ra1+",
-      "Kc2",
-      "Rxh1"
-    ],
+    "moves": ["Ra2", "Rf3", "Ra1+", "Kc2", "Rxh1"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "4k2r/p4p2/4p2p/1b1nP3/1P1P3B/1R6/2rNKPPP/7R w k - 1 28",
@@ -1772,13 +1544,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "r7/1bpqk3/1p1p1R1p/3P4/P1P2P2/3Q4/2p3PP/5RK1 w - - 3 31",
-    "moves": [
-      "Qg6",
-      "Re8",
-      "Rf7+",
-      "Kd8",
-      "Rxd7+"
-    ],
+    "moves": ["Qg6", "Re8", "Rf7+", "Kd8", "Rxd7+"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "r4k2/1bpq4/1p1p1R1p/3P4/P1P2P2/3Q4/2p3PP/5RK1 b - - 2 30",
@@ -1810,22 +1576,8 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "6k1/p4pP1/1p2p2p/6q1/3PP3/P4K1Q/6r1/7R b - - 2 30",
-    "moves": [
-      "Ra2",
-      "a4",
-      "Ra3+",
-      "Ke2",
-      "Rxh3"
-    ],
-    "alternativeLines": [
-      [
-        "Rc2",
-        "a4",
-        "Rc3+",
-        "Ke2",
-        "Rxh3"
-      ]
-    ],
+    "moves": ["Ra2", "a4", "Ra3+", "Ke2", "Rxh3"],
+    "alternativeLines": [["Rc2", "a4", "Rc3+", "Ke2", "Rxh3"]],
     "previousMove": {
       "fen": "6k1/p4pP1/1p2p2p/6q1/3PPK2/P6Q/6r1/7R w - - 1 30",
       "move": "Kf3"
@@ -1856,13 +1608,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "3n2kr/4b1p1/p2p4/1p1P3p/8/5P2/PP1B1P1P/4R1K1 w - - 0 31",
-    "moves": [
-      "Rxe7",
-      "h4",
-      "Re8+",
-      "Kh7",
-      "Rxh8+"
-    ],
+    "moves": ["Rxe7", "h4", "Re8+", "Kh7", "Rxh8+"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "3n1bkr/4R1p1/p2p4/1p1P3p/8/5P2/PP1B1P1P/4R1K1 b - - 0 30",
@@ -1894,13 +1640,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "4R3/pp4p1/3k4/8/3nB2b/P5r1/1P1K4/3N4 b - - 12 43",
-    "moves": [
-      "Bg5+",
-      "Ke1",
-      "Rg1+",
-      "Kf2",
-      "Rxd1"
-    ],
+    "moves": ["Bg5+", "Ke1", "Rg1+", "Kf2", "Rxd1"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "4R3/pp4p1/3k2B1/8/3n3b/P5r1/1P1K4/3N4 w - - 11 43",
@@ -1932,13 +1672,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "r1bk4/p5pQ/2p2R2/q1n1p3/npB1P3/1P6/P1P2P1P/2K3R1 w - - 0 23",
-    "moves": [
-      "Rxg7",
-      "Bd7",
-      "Qg8+",
-      "Kc7",
-      "Qxa8"
-    ],
+    "moves": ["Rxg7", "Bd7", "Qg8+", "Kc7", "Qxa8"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "r1bk4/p5pQ/1np2R2/q1n1p3/NpB1P3/1P6/P1P2P1P/2K3R1 b - - 0 22",
@@ -1970,13 +1704,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "r5k1/1p3pb1/nqpp2pp/8/QPbNP3/5PPP/N4BBK/3R4 b - - 0 30",
-    "moves": [
-      "Nc7",
-      "Qc2",
-      "Rxa2",
-      "Qxc4",
-      "Rxf2"
-    ],
+    "moves": ["Nc7", "Qc2", "Rxa2", "Qxc4", "Rxf2"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "r5k1/1p3pb1/nqpp2pp/8/nPbNP3/1Q3PPP/N4BBK/3R4 w - - 0 30",
@@ -2008,13 +1736,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "2b2bk1/2r2pp1/p2p3p/P2P4/1Bq5/3pr2P/3Q1PP1/1R1R2K1 w - - 0 31",
-    "moves": [
-      "Qxe3",
-      "Bf5",
-      "Rdc1",
-      "Qa2",
-      "Rxc7"
-    ],
+    "moves": ["Qxe3", "Bf5", "Rdc1", "Qa2", "Rxc7"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "2b2bk1/2r2pp1/p2p3p/P2P4/1BP5/1q1pr2P/3Q1PP1/1R1R2K1 b - - 3 30",
@@ -2046,13 +1768,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "r5k1/1p6/3p1p2/6pP/2n1P1b1/1P1P4/p7/R1K1QBq1 b - - 1 34",
-    "moves": [
-      "Qd4",
-      "dxc4",
-      "Qxa1+",
-      "Kd2",
-      "Qxe1+"
-    ],
+    "moves": ["Qd4", "dxc4", "Qxa1+", "Kd2", "Qxe1+"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "r5k1/1p6/3p1p2/6pP/2n1P1b1/1P1P4/p3Q3/R1K2Bq1 w - - 0 34",
@@ -2084,13 +1800,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "2k2r2/4qp2/p5pp/8/B5PP/2P2Q2/PP3P2/3K4 w - - 0 37",
-    "moves": [
-      "Qa8+",
-      "Kc7",
-      "Qa7+",
-      "Kc8",
-      "Qxe7"
-    ],
+    "moves": ["Qa8+", "Kc7", "Qa7+", "Kc8", "Qxe7"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "2k2r2/2q1Rp2/p5pp/8/B5PP/2P2Q2/PP3P2/3K4 b - - 0 36",
@@ -2122,13 +1832,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "8/8/3R4/4p1Pk/1Pr5/2n1KN2/8/8 w - - 0 50",
-    "moves": [
-      "Rh6+",
-      "Kg4",
-      "Rh4+",
-      "Kf5",
-      "Rxc4"
-    ],
+    "moves": ["Rh6+", "Kg4", "Rh4+", "Kf5", "Rxc4"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "8/8/3R4/4p1Pk/1PP2r2/2n1KN2/8/8 b - - 0 49",
@@ -2160,13 +1864,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "r4k2/6Rp/2p1r1p1/p3B3/PbN1p3/8/2P1R1K1/8 w - - 2 36",
-    "moves": [
-      "Rf2+",
-      "Ke8",
-      "Rg8+",
-      "Ke7",
-      "Rxa8"
-    ],
+    "moves": ["Rf2+", "Ke8", "Rg8+", "Ke7", "Rxa8"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "r5k1/6Rp/2p1r1p1/p3B3/PbN1p3/8/2P1R1K1/8 b - - 1 35",
@@ -2198,22 +1896,8 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "8/p2r1pp1/2k1p3/4Pn1p/RPPB1P1P/3K4/6P1/8 w - - 1 40",
-    "moves": [
-      "b5+",
-      "Kb7",
-      "Rxa7+",
-      "Kc8",
-      "Rxd7"
-    ],
-    "alternativeLines": [
-      [
-        "Ra6+",
-        "Kb7",
-        "Rxa7+",
-        "Kc8",
-        "Rxd7"
-      ]
-    ],
+    "moves": ["b5+", "Kb7", "Rxa7+", "Kc8", "Rxd7"],
+    "alternativeLines": [["Ra6+", "Kb7", "Rxa7+", "Kc8", "Rxd7"]],
     "previousMove": {
       "fen": "8/pr3pp1/2k1p3/4Pn1p/RPPB1P1P/3K4/6P1/8 b - - 0 39",
       "move": "Rd7"
@@ -2244,13 +1928,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "8/p1qp1nrk/3R1Q1p/2p2P2/2P5/1P3prP/P5P1/3R2K1 b - - 1 37",
-    "moves": [
-      "Rxg2+",
-      "Kf1",
-      "Rg1+",
-      "Kf2",
-      "Rxd1"
-    ],
+    "moves": ["Rxg2+", "Kf1", "Rg1+", "Kf2", "Rxd1"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "8/p1qp1nrk/5Q1p/2p2P2/2P5/1P1R1prP/P5P1/3R2K1 w - - 0 37",
@@ -2282,13 +1960,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "2R5/ppb2rk1/3q1p2/3p2pp/P2Pr3/1Q2B2P/1P3PP1/2R3K1 b - - 4 25",
-    "moves": [
-      "Qh2+",
-      "Kf1",
-      "Qh1+",
-      "Ke2",
-      "Qxc1"
-    ],
+    "moves": ["Qh2+", "Kf1", "Qh1+", "Ke2", "Qxc1"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "2R5/ppb2rk1/3q1p2/3p2pp/P2Pr3/1Q2B2P/1P3PP1/R5K1 w - - 3 25",
@@ -2320,13 +1992,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "1k5r/pp6/2p4p/4P1p1/2b2PK1/P1P2PQ1/3r1q1P/2R4R b - - 1 33",
-    "moves": [
-      "h5+",
-      "Kxg5",
-      "Rg8+",
-      "Kf5",
-      "Rxg3"
-    ],
+    "moves": ["h5+", "Kxg5", "Rg8+", "Kf5", "Rxg3"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "1k5r/pp6/2p4p/4P1p1/2b2P1K/P1P2PQ1/3r1q1P/2R4R w - - 0 33",
@@ -2358,13 +2024,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "2r4r/1k3ppp/3Rp3/1N2P3/5P2/2P1bNP1/PPn1B2P/5K2 w - - 4 25",
-    "moves": [
-      "Bd3",
-      "Ra8",
-      "Be4+",
-      "Kb8",
-      "Bxa8"
-    ],
+    "moves": ["Bd3", "Ra8", "Be4+", "Kb8", "Bxa8"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "2r4r/5ppp/2kRp3/1N2P3/5P2/2P1bNP1/PPn1B2P/5K2 b - - 3 24",
@@ -2396,13 +2056,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "4r1k1/1p3p1p/p2p2pb/P2P3q/2P1r3/2RQBN2/1P2R1PP/7K b - - 0 32",
-    "moves": [
-      "Rxe3",
-      "Rxe3",
-      "Rxe3",
-      "Qd1",
-      "Rxc3"
-    ],
+    "moves": ["Rxe3", "Rxe3", "Rxe3", "Qd1", "Rxc3"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "4r1k1/1p3p1p/p2p2pb/P2P3q/2P1r3/2RQnN2/1P2R1PP/6BK w - - 14 32",
@@ -2434,13 +2088,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "8/7R/5q2/6k1/P3Q1p1/2b5/5PKP/8 w - - 11 73",
-    "moves": [
-      "Qe3+",
-      "Kg6",
-      "Rh6+",
-      "Kf7",
-      "Rxf6+"
-    ],
+    "moves": ["Qe3+", "Kg6", "Rh6+", "Kf7", "Rxf6+"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "8/7R/5q2/8/P3Q1pk/2b5/5PKP/8 b - - 10 72",
@@ -2472,13 +2120,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "2r5/3R1p2/1p3P1k/1p1Nb1p1/3r2Pn/8/8/1K3R1B b - - 2 47",
-    "moves": [
-      "Ra4",
-      "Nc7",
-      "Ra1+",
-      "Kc2",
-      "Rxf1"
-    ],
+    "moves": ["Ra4", "Nc7", "Ra1+", "Kc2", "Rxf1"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "2r5/5p2/1p1R1P1k/1p1Nb1p1/3r2Pn/8/8/1K3R1B w - - 1 47",
@@ -2510,13 +2152,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "r7/2r1k3/P6R/2p1p1p1/1p1pN3/3Kn1PP/1P6/R7 w - - 0 42",
-    "moves": [
-      "Rh7+",
-      "Kd8",
-      "Rh8+",
-      "Ke7",
-      "Rxa8"
-    ],
+    "moves": ["Rh7+", "Kd8", "Rh8+", "Ke7", "Rxa8"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "r7/2r1k3/P1p4R/4p1p1/1p1pN3/3Kn1PP/1P6/R7 b - - 9 41",
@@ -2548,13 +2184,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "8/2k1R3/3r4/p2P1p2/1p3Pp1/1P4Pp/P2RK2P/7r b - - 0 61",
-    "moves": [
-      "Kd8",
-      "Re5",
-      "Rxh2+",
-      "Ke3",
-      "Rxd2"
-    ],
+    "moves": ["Kd8", "Re5", "Rxh2+", "Ke3", "Rxd2"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "8/2k1p3/3r4/p2P1p2/1p3Pp1/1P2R1Pp/P2RK2P/7r w - - 18 61",
@@ -2586,13 +2216,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "1Q6/4k1p1/2p1P3/2K2P2/8/8/1P2n3/7q b - - 0 37",
-    "moves": [
-      "Qc1+",
-      "Kb6",
-      "Qxb2+",
-      "Ka7",
-      "Qxb8+"
-    ],
+    "moves": ["Qc1+", "Kb6", "Qxb2+", "Ka7", "Qxb8+"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "8/1P2k1p1/2p1P3/2K2P2/8/8/1P2n3/7q w - - 0 37",
@@ -2624,13 +2248,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "r3qrk1/3b2pp/pb1p1p2/n1pPnP2/1p2PN2/3B1N2/P2Q2PP/B1R2R1K b - - 2 23",
-    "moves": [
-      "Nxd3",
-      "Qxd3",
-      "Bb5",
-      "Qc2",
-      "Bxf1"
-    ],
+    "moves": ["Nxd3", "Qxd3", "Bb5", "Qc2", "Bxf1"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "r3qrk1/3b2pp/pb1p1p2/n1pPnP2/1p2P3/3B1N2/P2QN1PP/B1R2R1K w - - 1 23",
@@ -2662,13 +2280,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "r2nqr2/bppb2pk/p2p1p1p/3Pp3/1P2P3/1QPBNN2/P4PPP/3R1R1K b - - 2 18",
-    "moves": [
-      "Bxe3",
-      "fxe3",
-      "Ba4",
-      "Qb1",
-      "Bxd1"
-    ],
+    "moves": ["Bxe3", "fxe3", "Ba4", "Qb1", "Bxd1"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "r2nqr2/bppb2pk/p2p1p1p/3Pp3/1PB1P3/1QP1NN2/P4PPP/3R1R1K w - - 1 18",
@@ -2700,13 +2312,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "8/8/6RP/r7/7P/kp5K/8/q7 b - - 0 63",
-    "moves": [
-      "Qh1+",
-      "Kg3",
-      "Qg1+",
-      "Kf3",
-      "Qxg6"
-    ],
+    "moves": ["Qh1+", "Kg3", "Qg1+", "Kf3", "Qxg6"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "8/8/6R1/r6P/7P/kp5K/8/q7 w - - 0 63",
@@ -2738,13 +2344,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "4r1k1/Q4ppp/3p4/2p1r3/8/2P1B2q/PP1RKP1P/4R3 b - - 4 26",
-    "moves": [
-      "Rxe3+",
-      "fxe3",
-      "Qxe3+",
-      "Kd1",
-      "Qxe1+"
-    ],
+    "moves": ["Rxe3+", "fxe3", "Qxe3+", "Kd1", "Qxe1+"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "4r1k1/Q4ppp/3p4/2p1r3/8/2P1B2q/PP1R1P1P/4RK2 w - - 3 26",
@@ -2776,13 +2376,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "4r3/2q1b1p1/2k1p1Pp/2P2p2/n3r2P/pQ6/P1R2PB1/1K5R w - - 0 33",
-    "moves": [
-      "Bxe4+",
-      "fxe4",
-      "Qxa4+",
-      "Kd5",
-      "Qxe8"
-    ],
+    "moves": ["Bxe4+", "fxe4", "Qxa4+", "Kd5", "Qxe8"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "4r3/1kq1b1p1/2N1p1Pp/2P2p2/n3r2P/pQ6/P1R2PB1/1K5R b - - 2 32",
@@ -2814,13 +2408,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "1q3k2/5b1R/3p4/2p5/2P5/P1B1R3/5P2/6K1 w - - 14 54",
-    "moves": [
-      "Bg7+",
-      "Kg8",
-      "Rh8+",
-      "Kxg7",
-      "Rxb8"
-    ],
+    "moves": ["Bg7+", "Kg8", "Rh8+", "Kxg7", "Rxb8"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "1q6/4kb1R/3p4/2p5/2P5/P1B1R3/5P2/6K1 b - - 13 53",
@@ -2852,13 +2440,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "6k1/pppq1p2/2b4p/8/3Q4/2N1rpP1/PPP4P/3R2KB b - - 0 28",
-    "moves": [
-      "Qxd4",
-      "Rxd4",
-      "Re1+",
-      "Kf2",
-      "Rxh1"
-    ],
+    "moves": ["Qxd4", "Rxd4", "Re1+", "Kf2", "Rxh1"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "6k1/pppq1p2/2b4p/8/3b4/2NQrpP1/PPP4P/3R2KB w - - 0 28",
@@ -2890,13 +2472,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "r7/pkpb1p1p/1p4q1/3P4/6p1/2P5/PP2QBP1/3R2K1 b - - 0 27",
-    "moves": [
-      "g3",
-      "Be1",
-      "Bg4",
-      "Qd3",
-      "Bxd1"
-    ],
+    "moves": ["g3", "Be1", "Bg4", "Qd3", "Bxd1"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "r7/pkpb1p1p/1p4q1/3P4/6p1/2P5/PP1QrBP1/3R2K1 w - - 0 27",
@@ -2928,13 +2504,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "6R1/3nkp2/b6N/3Pq3/5Q2/1r1p3P/5PPK/8 w - - 3 37",
-    "moves": [
-      "d6+",
-      "Ke6",
-      "Re8+",
-      "Kd5",
-      "Rxe5+"
-    ],
+    "moves": ["d6+", "Ke6", "Re8+", "Kd5", "Rxe5+"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "5kR1/3n1p2/b6N/3Pq3/5Q2/1r1p3P/5PPK/8 b - - 2 36",
@@ -2966,13 +2536,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "8/1Q4bk/7p/2P5/2K5/7P/6P1/3q4 b - - 6 56",
-    "moves": [
-      "Qe2+",
-      "Kb4",
-      "Qb2+",
-      "Kc4",
-      "Qxb7"
-    ],
+    "moves": ["Qe2+", "Kb4", "Qb2+", "Kc4", "Qxb7"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "8/1Q4bk/7p/2P5/8/3K3P/6P1/3q4 w - - 5 56",
@@ -3004,13 +2568,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "r5k1/5ppp/8/4p3/2b2PP1/R5P1/4P3/KR6 b - - 0 31",
-    "moves": [
-      "Rxa3+",
-      "Kb2",
-      "Rb3+",
-      "Kc2",
-      "Rxb1"
-    ],
+    "moves": ["Rxa3+", "Kb2", "Rb3+", "Kc2", "Rxb1"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "r5k1/5ppp/8/4p3/2b2PP1/b5P1/R3P3/KR6 w - - 4 31",
@@ -3042,13 +2600,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "7k/6p1/2p1p2p/2Pp4/1P1PnP2/1p5P/r5PK/2R1B3 b - - 1 40",
-    "moves": [
-      "b2",
-      "Rb1",
-      "Ra1",
-      "Rxb2",
-      "Rxe1"
-    ],
+    "moves": ["b2", "Rb1", "Ra1", "Rxb2", "Rxe1"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "7k/6p1/2p1p2p/2Pp4/1P1PnP2/1p5P/r2B2PK/2R5 w - - 0 40",
@@ -3080,13 +2632,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "6k1/1p4pp/P1p3r1/3p4/P2P1Pq1/R3PR2/2Q1K1P1/7r b - - 4 31",
-    "moves": [
-      "bxa6",
-      "Kd3",
-      "Qf5+",
-      "Kc3",
-      "Qxc2+"
-    ],
+    "moves": ["bxa6", "Kd3", "Qf5+", "Kc3", "Qxc2+"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "6k1/1p4pp/P1p3r1/3p4/P2P1Pq1/R3PR2/2Q2KP1/7r w - - 3 31",
@@ -3118,13 +2664,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "4k3/1pr2p2/p1p3pp/6q1/4Pp2/P3Q1P1/1PPR3P/6K1 w - - 0 30",
-    "moves": [
-      "Qd4",
-      "Rc8",
-      "Qh8+",
-      "Ke7",
-      "Qxc8"
-    ],
+    "moves": ["Qd4", "Rc8", "Qh8+", "Ke7", "Qxc8"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "4k3/1pr2p2/p1p3pp/4p1q1/4PP2/P3Q1P1/1PPR3P/6K1 b - f3 0 29",
@@ -3156,13 +2696,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "r4nk1/pp6/3pq1pQ/2p1p3/2P1P3/8/PP2N3/2K4R w - - 0 29",
-    "moves": [
-      "Qh8+",
-      "Kf7",
-      "Rf1+",
-      "Ke8",
-      "Rxf8+"
-    ],
+    "moves": ["Qh8+", "Kf7", "Rf1+", "Ke8", "Rxf8+"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "r4nk1/pp6/3pPqpQ/2p1p3/2P1P3/8/PP2N3/2K4R b - - 0 28",
@@ -3194,13 +2728,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "2r3k1/3Q1pp1/4p3/p2n4/P2P1b1p/5B1P/1Bq2PP1/3R2K1 b - - 8 33",
-    "moves": [
-      "Nf6",
-      "Qb5",
-      "Rb8",
-      "Qxa5",
-      "Rxb2"
-    ],
+    "moves": ["Nf6", "Qb5", "Rb8", "Qxa5", "Rxb2"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "2r3k1/5pp1/4p3/pQ1n4/P2P1b1p/5B1P/1Bq2PP1/3R2K1 w - - 7 33",
@@ -3232,13 +2760,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "4rbk1/3b3p/3p1p2/1p1N1qP1/1P3P2/3Q4/2P5/1K5R w - - 0 35",
-    "moves": [
-      "Nxf6+",
-      "Kf7",
-      "Rxh7+",
-      "Kg6",
-      "Rxd7"
-    ],
+    "moves": ["Nxf6+", "Kf7", "Rxh7+", "Kg6", "Rxd7"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "4rbk1/3b2pp/3p1N2/1p1N1qP1/1P3P2/3Q4/2P5/1K5R b - - 8 34",
@@ -3270,13 +2792,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "1n3R2/1Qb1k3/1pp5/p3q2p/3p2p1/1P1P2P1/PKP4P/1N6 w - - 4 39",
-    "moves": [
-      "Qc8",
-      "b5",
-      "Re8+",
-      "Kf6",
-      "Rxe5"
-    ],
+    "moves": ["Qc8", "b5", "Re8+", "Kf6", "Rxe5"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "1n1k1R2/1Qb5/1pp5/p3q2p/3p2p1/1P1P2P1/PKP4P/1N6 b - - 3 38",
@@ -3308,13 +2824,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "8/p1p3k1/1p2P1p1/8/4Q3/2P3R1/P4K2/3r2r1 b - - 0 43",
-    "moves": [
-      "Rdf1+",
-      "Ke3",
-      "Re1+",
-      "Kd2",
-      "Rxe4"
-    ],
+    "moves": ["Rdf1+", "Ke3", "Re1+", "Kd2", "Rxe4"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "8/p1p3k1/1p2P1p1/8/4Q3/2P1R1q1/P4K2/3r2r1 w - - 0 43",
@@ -3346,13 +2856,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "5R2/4k3/4N2p/4KP2/8/3r4/8/8 w - - 0 47",
-    "moves": [
-      "f6+",
-      "Kd7",
-      "Rd8+",
-      "Kc6",
-      "Rxd3"
-    ],
+    "moves": ["f6+", "Kd7", "Rd8+", "Kc6", "Rxd3"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "5R2/4k3/4N2p/4KP2/8/3P1r2/8/8 b - - 0 46",
@@ -3384,13 +2888,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "8/8/8/1k6/8/R4P2/p4K2/r7 b - - 0 59",
-    "moves": [
-      "Rh1",
-      "Rxa2",
-      "Rh2+",
-      "Ke3",
-      "Rxa2"
-    ],
+    "moves": ["Rh1", "Rxa2", "Rh2+", "Ke3", "Rxa2"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "8/8/8/1k6/8/R4p2/p4KP1/r7 w - - 0 59",
@@ -3422,13 +2920,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "5nk1/3b1p1p/3p1Q2/2pP2PN/2P2P1p/R4N1q/4K3/5r2 b - - 3 40",
-    "moves": [
-      "Qg2+",
-      "Ke3",
-      "Rxf3+",
-      "Ke4",
-      "Rxa3#"
-    ],
+    "moves": ["Qg2+", "Ke3", "Rxf3+", "Ke4", "Rxa3#"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "5nk1/3b1p1p/3p1Q2/2pP2PN/2P2P1p/R4N1q/5K2/5r2 w - - 2 40",
@@ -3460,13 +2952,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "8/8/2RNk3/p5p1/P3p3/1n4P1/6KP/3n4 w - - 2 48",
-    "moves": [
-      "Nxe4+",
-      "Kd5",
-      "Rd6+",
-      "Kxe4",
-      "Rxd1"
-    ],
+    "moves": ["Nxe4+", "Kd5", "Rd6+", "Kxe4", "Rxd1"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "8/5k2/2RN4/p5p1/P3p3/1n4P1/6KP/3n4 b - - 1 47",
@@ -3498,13 +2984,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "r2knQ2/8/q6r/3P1P1p/6p1/2N5/P1PK4/1R6 w - - 3 37",
-    "moves": [
-      "Re1",
-      "Rh7",
-      "Rxe8+",
-      "Kd7",
-      "Rxa8"
-    ],
+    "moves": ["Re1", "Rh7", "Rxe8+", "Kd7", "Rxa8"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "r2k1Q2/8/q4n1r/3P1P1p/6p1/2N5/P1PK4/1R6 b - - 2 36",
@@ -3536,13 +3016,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "8/p1r4p/1p2kr1R/2pR4/2P1pP2/7P/P3K3/8 w - - 0 46",
-    "moves": [
-      "Re5+",
-      "Kf7",
-      "Rxh7+",
-      "Kf8",
-      "Rxc7"
-    ],
+    "moves": ["Re5+", "Kf7", "Rxh7+", "Kf8", "Rxc7"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "8/p1r2r1p/1p2kB1R/2pR4/2P1pP2/7P/P3K3/8 b - - 0 45",
@@ -3574,22 +3048,8 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "5R2/2P3pk/p6q/5p2/Q7/P4Bp1/5PK1/8 w - - 0 41",
-    "moves": [
-      "Rh8+",
-      "Kg6",
-      "Rxh6+"
-    ],
-    "alternativeLines": [
-      [
-        "Qc2",
-        "Qh2+",
-        "Kf1",
-        "Kh6",
-        "Rh8+",
-        "Kg5",
-        "Rxh2"
-      ]
-    ],
+    "moves": ["Rh8+", "Kg6", "Rxh6+"],
+    "alternativeLines": [["Qc2", "Qh2+", "Kf1", "Kh6", "Rh8+", "Kg5", "Rxh2"]],
     "previousMove": {
       "fen": "5R2/2P3pk/p6R/5pq1/Q7/P4Bp1/5PK1/8 b - - 0 40",
       "move": "Qxh6"
@@ -3620,13 +3080,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "1k5r/2p5/1nr1p3/R1N5/1P6/1P3P2/1K2P3/R7 w - - 9 34",
-    "moves": [
-      "Nd7+",
-      "Nxd7",
-      "Ra8+",
-      "Kb7",
-      "Rxh8"
-    ],
+    "moves": ["Nd7+", "Nxd7", "Ra8+", "Kb7", "Rxh8"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "1k5r/2p5/2r1p3/R1Nn4/1P6/1P3P2/1K2P3/R7 b - - 8 33",
@@ -3658,13 +3112,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "8/4n3/2b1pk2/6pP/2P1npP1/7r/1R3PK1/2R5 b - - 2 41",
-    "moves": [
-      "Nxf2+",
-      "Kxf2",
-      "Rh2+",
-      "Ke1",
-      "Rxb2"
-    ],
+    "moves": ["Nxf2+", "Kxf2", "Rh2+", "Ke1", "Rxb2"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "8/4n3/2b1pk2/6pP/2P1npP1/7r/1R3P2/2R3K1 w - - 1 41",
@@ -3696,13 +3144,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "7r/8/4kp2/p3n1P1/Pr1pP3/3P2R1/1BR1K3/8 b - - 0 44",
-    "moves": [
-      "Rxb2",
-      "Rxb2",
-      "Rh2+",
-      "Kf1",
-      "Rxb2"
-    ],
+    "moves": ["Rxb2", "Rxb2", "Rh2+", "Kf1", "Rxb2"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "7r/8/4kp2/p3n1p1/Pr1pP2P/3P2R1/1BR1K3/8 w - - 1 44",
@@ -3734,13 +3176,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "1q6/7P/4bk2/2Q5/8/K2B4/1p6/8 w - - 3 59",
-    "moves": [
-      "h8=Q+",
-      "Qxh8",
-      "Qd4+",
-      "Ke7",
-      "Qxh8"
-    ],
+    "moves": ["h8=Q+", "Qxh8", "Qd4+", "Ke7", "Qxh8"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "1q6/4k2P/4b3/2Q5/8/K2B4/1p6/8 b - - 2 58",
@@ -3772,13 +3208,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "r1b1r3/p1R1nk2/qp1ppbN1/6Qp/P2PP2P/4BP2/1P4P1/R5K1 w - - 1 31",
-    "moves": [
-      "Ne5+",
-      "dxe5",
-      "Qxh5+",
-      "Kg8",
-      "Qxe8+"
-    ],
+    "moves": ["Ne5+", "dxe5", "Qxh5+", "Kg8", "Qxe8+"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "r1b1r3/p1R1nkb1/qp1pp1N1/6Qp/P2PP2P/4BP2/1P4P1/R5K1 b - - 0 30",
@@ -3810,13 +3240,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "4bk1r/p7/3p1p2/3B4/2P2b1p/1R6/PP6/4R1K1 w - - 2 33",
-    "moves": [
-      "Rxe8+",
-      "Kxe8",
-      "Rb8+",
-      "Ke7",
-      "Rxh8"
-    ],
+    "moves": ["Rxe8+", "Kxe8", "Rb8+", "Ke7", "Rxh8"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "4bk1r/p7/3p1p2/3B2b1/2P4p/1R6/PP6/4R1K1 b - - 1 32",
@@ -3848,13 +3272,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "2k2r2/R5p1/4n3/1Np1R1Pp/2P2p1P/2KPr3/1P6/8 w - - 4 39",
-    "moves": [
-      "Rxe6",
-      "Rxe6",
-      "Ra8+",
-      "Kd7",
-      "Rxf8"
-    ],
+    "moves": ["Rxe6", "Rxe6", "Ra8+", "Kd7", "Rxf8"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "5r2/R2k2p1/4n3/1Np1R1Pp/2P2p1P/2KPr3/1P6/8 b - - 3 38",
@@ -3886,13 +3304,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "r3k3/p6R/2b1p1pN/2p3P1/2P2n2/8/PPB4P/6K1 w - - 0 32",
-    "moves": [
-      "Ba4",
-      "Bxa4",
-      "Rh8+",
-      "Kd7",
-      "Rxa8"
-    ],
+    "moves": ["Ba4", "Bxa4", "Rh8+", "Kd7", "Rxa8"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "r3k3/p6R/2b1p1pN/2p3Pn/2P2P2/8/PPB4P/6K1 b - - 0 31",
@@ -3924,13 +3336,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "2r5/r2kb1p1/8/p4R1B/1pPp1P2/3P2P1/2P1R3/6K1 w - - 2 35",
-    "moves": [
-      "Rxe7+",
-      "Kxe7",
-      "Rf7+",
-      "Kd6",
-      "Rxa7"
-    ],
+    "moves": ["Rxe7+", "Kxe7", "Rf7+", "Kd6", "Rxa7"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "2r1k3/r3b1p1/8/p4R1B/1pPp1P2/3P2P1/2P1R3/6K1 b - - 1 34",
@@ -3962,13 +3368,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "2bn2R1/2qkr3/p3p1P1/1p1pP3/1PnN1P1Q/P2B4/2P2BK1/8 w - - 1 44",
-    "moves": [
-      "Qxe7+",
-      "Kxe7",
-      "Rg7+",
-      "Kf8",
-      "Rxc7"
-    ],
+    "moves": ["Qxe7+", "Kxe7", "Rg7+", "Kf8", "Rxc7"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "2bn2R1/2qk1r2/p3p1P1/1p1pP3/1PnN1P1Q/P2B4/2P2BK1/8 b - - 0 43",
@@ -4000,13 +3400,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "3R4/pp3p1k/5n2/7P/3R4/P7/1P1K1PP1/2r1r3 b - - 3 39",
-    "moves": [
-      "Ne4+",
-      "Rxe4",
-      "Red1+",
-      "Ke2",
-      "Rxd8"
-    ],
+    "moves": ["Ne4+", "Rxe4", "Red1+", "Ke2", "Rxd8"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "3R4/pp3p1k/5n2/7P/6R1/P7/1P1K1PP1/2r1r3 w - - 2 39",
@@ -4038,13 +3432,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "8/8/2k5/1p3P1p/1Pn5/3RP2r/2R1KPr1/8 b - - 0 46",
-    "moves": [
-      "Rxf2+",
-      "Kxf2",
-      "Rh2+",
-      "Kf3",
-      "Rxc2"
-    ],
+    "moves": ["Rxf2+", "Kxf2", "Rh2+", "Kf3", "Rxc2"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "8/8/2k5/1p5p/1Pn2P2/3RP2r/2R1KPr1/8 w - - 0 46",
@@ -4076,13 +3464,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "3k2r1/R1n5/3p1p2/3P4/2PN2P1/1K6/8/8 w - - 6 65",
-    "moves": [
-      "Ne6+",
-      "Nxe6",
-      "Ra8+",
-      "Kc7",
-      "Rxg8"
-    ],
+    "moves": ["Ne6+", "Nxe6", "Ra8+", "Kc7", "Rxg8"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "6r1/R1nk4/3p1p2/3P4/2PN2P1/1K6/8/8 b - - 5 64",
@@ -4114,13 +3496,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "3R1Q2/pp3p1p/2r2kp1/8/8/2q1P1P1/5PKP/8 w - - 6 29",
-    "moves": [
-      "Rd6+",
-      "Rxd6",
-      "Qh8+",
-      "Ke7",
-      "Qxc3"
-    ],
+    "moves": ["Rd6+", "Rxd6", "Qh8+", "Ke7", "Qxc3"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "3R1Q2/pp3pkp/2r3p1/8/8/2q1P1P1/5PKP/8 b - - 5 28",
@@ -4152,13 +3528,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "r2k2r1/p6R/1p6/3p4/3Pp1b1/6P1/PP1B3P/2R3K1 w - - 3 28",
-    "moves": [
-      "Bg5+",
-      "Rxg5",
-      "Rh8+",
-      "Kd7",
-      "Rxa8"
-    ],
+    "moves": ["Bg5+", "Rxg5", "Rh8+", "Kd7", "Rxa8"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "r1k3r1/p6R/1p6/3p4/3Pp1b1/6P1/PP1B3P/2R3K1 b - - 2 27",
@@ -4190,13 +3560,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "8/8/1pq1kr2/p5Q1/P2p3R/1P6/K1P5/8 w - - 9 55",
-    "moves": [
-      "Qxf6+",
-      "Kxf6",
-      "Rh6+",
-      "Ke5",
-      "Rxc6"
-    ],
+    "moves": ["Qxf6+", "Kxf6", "Rh6+", "Ke5", "Rxc6"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "8/8/1pq2r2/p3k1Q1/P2p3R/1P6/K1P5/8 b - - 8 54",
@@ -4228,13 +3592,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "6k1/6p1/3p3r/2PP4/P3Q3/8/r7/4K3 b - - 4 50",
-    "moves": [
-      "Rh1+",
-      "Qxh1",
-      "Ra1+",
-      "Kd2",
-      "Rxh1"
-    ],
+    "moves": ["Rh1+", "Qxh1", "Ra1+", "Kd2", "Rxh1"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "6k1/6p1/3p3r/2PP4/P7/3Q4/r7/4K3 w - - 3 50",
@@ -4266,13 +3624,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "8/R3bkp1/8/4KP1p/8/8/p6P/8 b - - 0 59",
-    "moves": [
-      "a1=Q+",
-      "Rxa1",
-      "Bf6+",
-      "Kf4",
-      "Bxa1"
-    ],
+    "moves": ["a1=Q+", "Rxa1", "Bf6+", "Kf4", "Bxa1"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "8/R3bkp1/8/4rP1p/5K2/8/p6P/8 w - - 0 59",
@@ -4304,13 +3656,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "r1nr4/5k2/4Rbp1/pp1P1p2/5B2/3R1N2/PP4PP/6K1 w - - 4 29",
-    "moves": [
-      "Rxf6+",
-      "Kxf6",
-      "Bg5+",
-      "Kf7",
-      "Bxd8"
-    ],
+    "moves": ["Rxf6+", "Kxf6", "Bg5+", "Kf7", "Bxd8"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "r1nr4/5kb1/4R1p1/pp1P1p2/5B2/3R1N2/PP4PP/6K1 b - - 3 28",
@@ -4342,13 +3688,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "8/7k/R1N4p/1p6/3P4/P2K4/r4r2/8 b - - 5 60",
-    "moves": [
-      "Rxa3+",
-      "Rxa3",
-      "Rf3+",
-      "Ke2",
-      "Rxa3"
-    ],
+    "moves": ["Rxa3+", "Rxa3", "Rf3+", "Ke2", "Rxa3"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "8/7k/R6p/Np6/3P4/P2K4/r4r2/8 w - - 4 60",
@@ -4380,13 +3720,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "6k1/5p2/R5p1/3P2n1/1p2P1q1/3QK1Pp/1r1B3P/8 b - - 0 55",
-    "moves": [
-      "Rb3",
-      "Qxb3",
-      "Qf3+",
-      "Kd4",
-      "Qxb3"
-    ],
+    "moves": ["Rb3", "Qxb3", "Qf3+", "Kd4", "Qxb3"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "6k1/5p2/p5p1/3P2n1/1p2P1q1/R2QK1Pp/1r1B3P/8 w - - 0 55",
@@ -4418,13 +3752,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "B1b5/2q5/p2kp3/4b1Q1/8/4B1P1/PPP4P/6K1 w - - 1 32",
-    "moves": [
-      "Qxe5+",
-      "Kxe5",
-      "Bf4+",
-      "Kd4",
-      "Bxc7"
-    ],
+    "moves": ["Qxe5+", "Kxe5", "Bf4+", "Kd4", "Bxc7"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "B1b5/5q2/p2kp3/4b1Q1/8/4B1P1/PPP4P/6K1 b - - 0 31",
@@ -4456,22 +3784,8 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "8/8/p5p1/2k5/P7/5P2/1r1pK3/7R b - - 0 49",
-    "moves": [
-      "d1=Q+",
-      "Kxd1",
-      "Rb1+",
-      "Kd2",
-      "Rxh1"
-    ],
-    "alternativeLines": [
-      [
-        "d1=R+",
-        "Kxd1",
-        "Rb1+",
-        "Kd2",
-        "Rxh1"
-      ]
-    ],
+    "moves": ["d1=Q+", "Kxd1", "Rb1+", "Kd2", "Rxh1"],
+    "alternativeLines": [["d1=R+", "Kxd1", "Rb1+", "Kd2", "Rxh1"]],
     "previousMove": {
       "fen": "8/8/p5p1/2k5/P7/3K1P2/1r1pn3/7R w - - 0 49",
       "move": "Kxe2"
@@ -4502,13 +3816,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "7k/1P6/3p4/3Nb3/2Prp2P/2K1Nq2/1R3P2/8 b - - 0 59",
-    "moves": [
-      "Rd2+",
-      "Kxd2",
-      "Qxf2+",
-      "Kd1",
-      "Qxb2"
-    ],
+    "moves": ["Rd2+", "Kxd2", "Qxf2+", "Kd1", "Qxb2"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "7k/8/1P1p4/3Nb3/2Prp2P/2K1Nq2/1R3P2/8 w - - 1 59",
@@ -4540,13 +3848,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "5k2/1R5P/2p5/p4K2/P1P4r/8/8/8 w - - 0 60",
-    "moves": [
-      "h8=Q+",
-      "Rxh8",
-      "Rb8+",
-      "Ke7",
-      "Rxh8"
-    ],
+    "moves": ["h8=Q+", "Rxh8", "Rb8+", "Ke7", "Rxh8"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "5k2/1R5P/1pp5/P4K2/P1P4r/8/8/8 b - - 0 59",
@@ -4578,13 +3880,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "1k2r3/R1n3pp/1r3p2/8/8/4P1PP/4P1B1/R5K1 w - - 1 33",
-    "moves": [
-      "Ra8+",
-      "Nxa8",
-      "Rxa8+",
-      "Kc7",
-      "Rxe8"
-    ],
+    "moves": ["Ra8+", "Nxa8", "Rxa8+", "Kc7", "Rxe8"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "1k2r3/R5pp/1r2np2/8/8/4P1PP/4P1B1/R5K1 b - - 0 32",
@@ -4616,13 +3912,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "Q7/8/7r/7P/1k4P1/8/6K1/Rbq5 w - - 0 62",
-    "moves": [
-      "Rxb1+",
-      "Qxb1",
-      "Qb8+",
-      "Kc5",
-      "Qxb1"
-    ],
+    "moves": ["Rxb1+", "Qxb1", "Qb8+", "Kc5", "Qxb1"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "Q7/8/7r/7P/1k4P1/8/2p3K1/Rb6 b - - 0 61",
@@ -4654,13 +3944,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "2r3k1/pb1p1p2/1p2n3/6Pp/1P2q3/PQ2B3/4BP1P/4K1R1 b - - 3 30",
-    "moves": [
-      "Nd4",
-      "Bxd4",
-      "Rc1+",
-      "Kd2",
-      "Rxg1"
-    ],
+    "moves": ["Nd4", "Bxd4", "Rc1+", "Kd2", "Rxg1"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "2r3k1/pb1p1p2/1p2n3/6Pp/1P2q3/PQ6/3BBP1P/4K1R1 w - - 2 30",
@@ -4692,13 +3976,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "3rb2k/1p3pp1/1P5p/3B4/4P1r1/8/1R3QPq/3RK3 b - - 2 35",
-    "moves": [
-      "Rxe4+",
-      "Bxe4",
-      "Qh1+",
-      "Ke2",
-      "Qxd1+"
-    ],
+    "moves": ["Rxe4+", "Bxe4", "Qh1+", "Ke2", "Qxd1+"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "3rb2k/1p3pp1/1P5p/3B4/4P1r1/8/1R3QPq/3R1K2 w - - 1 35",
@@ -4730,13 +4008,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "4q1k1/pb4r1/5ppQ/4n3/4p2R/2P4P/P5B1/3R2K1 w - - 1 39",
-    "moves": [
-      "Rd8",
-      "Qxd8",
-      "Qh8+",
-      "Kf7",
-      "Qxd8"
-    ],
+    "moves": ["Rd8", "Qxd8", "Qh8+", "Kf7", "Qxd8"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "4q1k1/pb2r3/5ppQ/4n3/4p2R/2P4P/P5B1/3R2K1 b - - 0 38",
@@ -4768,13 +4040,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "2R1R3/5p2/4nkpp/4q3/p4r2/P5QP/5PPK/8 w - - 36 64",
-    "moves": [
-      "Rxe6+",
-      "Kxe6",
-      "Re8+",
-      "Kd6",
-      "Rxe5"
-    ],
+    "moves": ["Rxe6+", "Kxe6", "Re8+", "Kd6", "Rxe5"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "2R1R3/5p2/5kpp/4q3/p2n1r2/P5QP/5PPK/8 b - - 35 63",
@@ -4806,13 +4072,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "3r1k2/pp4b1/1r1PBn1R/5Q2/2pq1Pp1/P1N3P1/1P4P1/1K5R w - - 7 34",
-    "moves": [
-      "Rh8+",
-      "Bxh8",
-      "Rxh8+",
-      "Kg7",
-      "Rxd8"
-    ],
+    "moves": ["Rh8+", "Bxh8", "Rxh8+", "Kg7", "Rxd8"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "3r1k2/pp4b1/1r1PB2R/3n1Q2/2pq1Pp1/P1N3P1/1P4P1/1K5R b - - 6 33",
@@ -4844,13 +4104,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "8/7k/6p1/4KP1p/1r1N3n/4B3/5P2/8 b - - 0 66",
-    "moves": [
-      "Nxf5",
-      "Nxf5",
-      "Rb5+",
-      "Kf4",
-      "Rxf5+"
-    ],
+    "moves": ["Nxf5", "Nxf5", "Rb5+", "Kf4", "Rxf5+"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "8/7k/6p1/4K2p/1r1N1P1n/4B3/5P2/8 w - - 0 66",
@@ -4882,13 +4136,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "8/pp1q3p/2p2krQ/3p1n2/P2b2P1/5R2/5P1P/4R1K1 w - - 3 31",
-    "moves": [
-      "Rxf5+",
-      "Qxf5",
-      "Qf8+",
-      "Kg5",
-      "Qxf5+"
-    ],
+    "moves": ["Rxf5+", "Qxf5", "Qf8+", "Kg5", "Qxf5+"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "6r1/pp1q3p/2p2k1Q/3p1n2/P2b2P1/5R2/5P1P/4R1K1 b - - 2 30",
@@ -4920,13 +4168,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "5rk1/p6p/1p4p1/2p5/2PpP2P/1P4PQ/q6R/2K5 b - - 1 33",
-    "moves": [
-      "Rf1+",
-      "Qxf1",
-      "Qa1+",
-      "Kd2",
-      "Qxf1"
-    ],
+    "moves": ["Rf1+", "Qxf1", "Qa1+", "Kd2", "Qxf1"],
     "alternativeLines": [
       [
         "Qa1+",
@@ -4972,13 +4214,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "3k2r1/1R1b1p2/8/1P1p2P1/PBnN3p/8/5PP1/6K1 w - - 3 33",
-    "moves": [
-      "Nc6+",
-      "Bxc6",
-      "Rb8+",
-      "Kc7",
-      "Rxg8"
-    ],
+    "moves": ["Nc6+", "Bxc6", "Rb8+", "Kc7", "Rxg8"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "6r1/1R1bkp2/8/1P1p2P1/PBnN3p/8/5PP1/6K1 b - - 2 32",
@@ -5010,13 +4246,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "2k3r1/2p2p2/1p1p4/3P1P1p/2q1P1rP/Q4KP1/P7/4RN2 b - - 1 31",
-    "moves": [
-      "Qxf1+",
-      "Rxf1",
-      "Rxg3+",
-      "Kf2",
-      "Rxa3"
-    ],
+    "moves": ["Qxf1+", "Rxf1", "Rxg3+", "Kf2", "Rxa3"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "2k3r1/Q1p2p2/1p1p4/3P1P1p/2q1P1rP/5KP1/P7/4RN2 w - - 0 31",
@@ -5048,13 +4278,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "2r3k1/1q3pp1/2n1p2p/pN1bP3/Np3PPP/1P6/P3Q2K/3R4 b - - 2 29",
-    "moves": [
-      "Nxe5",
-      "fxe5",
-      "Bf3",
-      "Qd3",
-      "Bxd1"
-    ],
+    "moves": ["Nxe5", "fxe5", "Bf3", "Qd3", "Bxd1"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "2r3k1/1q3pp1/2n1p2p/p2bP3/Np1N1PPP/1P6/P3Q2K/3R4 w - - 1 29",
@@ -5086,13 +4310,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "7R/8/1p1k2bP/4r3/1KBp3r/1P6/P2R4/8 w - - 1 47",
-    "moves": [
-      "Rxd4+",
-      "Rxd4",
-      "Rd8+",
-      "Kc7",
-      "Rxd4"
-    ],
+    "moves": ["Rxd4+", "Rxd4", "Rd8+", "Kc7", "Rxd4"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "4b2R/8/1p1k3P/4r3/1KBp3r/1P6/P2R4/8 b - - 0 46",
@@ -5124,22 +4342,8 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "5k2/R6P/6K1/4P3/5P1r/8/8/8 w - - 3 67",
-    "moves": [
-      "h8=R+",
-      "Rxh8",
-      "Ra8+",
-      "Ke7",
-      "Rxh8"
-    ],
-    "alternativeLines": [
-      [
-        "h8=Q+",
-        "Rxh8",
-        "Ra8+",
-        "Ke7",
-        "Rxh8"
-      ]
-    ],
+    "moves": ["h8=R+", "Rxh8", "Ra8+", "Ke7", "Rxh8"],
+    "alternativeLines": [["h8=Q+", "Rxh8", "Ra8+", "Ke7", "Rxh8"]],
     "previousMove": {
       "fen": "5k2/R6P/6K1/4P2r/5P2/8/8/8 b - - 2 66",
       "move": "Rh4"
@@ -5170,13 +4374,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "r7/1p2pkb1/3pb1p1/1P6/p1P1P2r/P2K4/2R2BP1/1R3B2 b - - 0 29",
-    "moves": [
-      "Rxe4",
-      "Kxe4",
-      "Bf5+",
-      "Ke3",
-      "Bxc2"
-    ],
+    "moves": ["Rxe4", "Kxe4", "Bf5+", "Ke3", "Bxc2"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "r7/1p2pkb1/3pb1p1/1P6/p1P1p2r/P2K1P2/2R2BP1/1R3B2 w - - 0 29",
@@ -5208,13 +4406,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "3r1q2/kbn2p2/1p1ppP1r/p5N1/2B3RP/1P6/P1PPQ3/1K3R2 w - - 2 32",
-    "moves": [
-      "Nxf7",
-      "Qxf7",
-      "Rg7",
-      "Qf8",
-      "Rxc7"
-    ],
+    "moves": ["Nxf7", "Qxf7", "Rg7", "Qf8", "Rxc7"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "3r1q2/kb3p2/1p1ppP1r/p2n2N1/2B3RP/1P6/P1PPQ3/1K3R2 b - - 1 31",
@@ -5246,13 +4438,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "5Q2/2q2p2/4k3/3p2RP/4n3/5N2/p1n2PP1/3R2K1 w - - 1 34",
-    "moves": [
-      "Re5+",
-      "Qxe5",
-      "Qe8+",
-      "Kd6",
-      "Qxe5+"
-    ],
+    "moves": ["Re5+", "Qxe5", "Qe8+", "Kd6", "Qxe5+"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "5Q2/2q2p2/4kn2/3p2RP/8/5N2/p1n2PP1/3R2K1 b - - 0 33",
@@ -5284,13 +4470,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "8/p3k3/1p4p1/1n2b2p/2p1PN1P/P3BrP1/1P2K3/6R1 b - - 1 35",
-    "moves": [
-      "Rxe3+",
-      "Kxe3",
-      "Bd4+",
-      "Kd2",
-      "Bxg1"
-    ],
+    "moves": ["Rxe3+", "Kxe3", "Bd4+", "Kd2", "Bxg1"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "8/p3k3/1p4p1/1n2b2p/2p1PN1P/P3BrP1/1P1K4/6R1 w - - 0 35",
@@ -5322,13 +4502,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "r1b1r3/1q1nNk1p/1p4p1/p1nN1p2/2PQ1P2/8/PP2B1PP/R2R2K1 w - - 2 26",
-    "moves": [
-      "Nxf5",
-      "gxf5",
-      "Bh5+",
-      "Kg8",
-      "Bxe8"
-    ],
+    "moves": ["Nxf5", "gxf5", "Bh5+", "Kg8", "Bxe8"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "r1b1r3/1q1nN1kp/1p4p1/p1nN1p2/2PQ1P2/8/PP2B1PP/R2R2K1 b - - 1 25",
@@ -5360,13 +4534,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "2r5/7n/1pp1bk1N/p2p2p1/3P4/P7/1P1K1PP1/3BR3 w - - 4 34",
-    "moves": [
-      "Rxe6+",
-      "Kxe6",
-      "Bg4+",
-      "Ke7",
-      "Bxc8"
-    ],
+    "moves": ["Rxe6+", "Kxe6", "Bg4+", "Ke7", "Bxc8"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "2r5/5k1n/1pp1b2N/p2p2p1/3P4/P7/1P1K1PP1/3BR3 b - - 3 33",
@@ -5398,13 +4566,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "7r/3nkb2/1pp2p2/p1p2P2/P1P1N2p/1P5P/3BR1P1/5K2 w - - 3 49",
-    "moves": [
-      "Nxf6+",
-      "Kxf6",
-      "Bc3+",
-      "Kxf5",
-      "Bxh8"
-    ],
+    "moves": ["Nxf6+", "Kxf6", "Bc3+", "Kxf5", "Bxh8"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "8/3nkb2/1pp2p1r/p1p2P2/P1P1N2p/1P5P/3BR1P1/5K2 b - - 2 48",
@@ -5436,13 +4598,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "6r1/1p4Bp/4k2P/3p1pb1/4p3/1P1r4/P1R5/R3K3 b Q - 0 30",
-    "moves": [
-      "Bxh6",
-      "Bxh6",
-      "Rg1+",
-      "Kf2",
-      "Rxa1"
-    ],
+    "moves": ["Bxh6", "Bxh6", "Rg1+", "Kf2", "Rxa1"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "6r1/1p4Bp/4k3/3p1pbP/4p3/1P1r4/P1R5/R3K3 w Q - 1 30",
@@ -5474,13 +4630,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "2r3k1/5pp1/8/q2P4/8/1bN1P1Pp/1P1K1Q1P/3R4 b - - 7 44",
-    "moves": [
-      "Rxc3",
-      "bxc3",
-      "Qxd5+",
-      "Kc1",
-      "Qxd1+"
-    ],
+    "moves": ["Rxc3", "bxc3", "Qxd5+", "Kc1", "Qxd1+"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "2r3k1/5pp1/8/q2P4/8/1bN1P1Pp/1P3Q1P/2KR4 w - - 6 44",
@@ -5512,13 +4662,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "r5k1/pbp1R1pp/8/7q/Q1KN1r2/8/PPP2P1P/R7 b - - 2 29",
-    "moves": [
-      "Rxd4+",
-      "Kxd4",
-      "Qh4+",
-      "Ke3",
-      "Qxa4"
-    ],
+    "moves": ["Rxd4+", "Kxd4", "Qh4+", "Ke3", "Qxa4"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "r5k1/pbp1R1pp/8/2K4q/Q2N1r2/8/PPP2P1P/R7 w - - 1 29",
@@ -5550,15 +4694,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "5rk1/4p2p/p2p1npQ/1p5P/4P3/P7/2PKB3/q5RR b - - 2 23",
-    "moves": [
-      "Nxe4+",
-      "Ke3",
-      "Qc3+",
-      "Bd3",
-      "Qd2+",
-      "Kd4",
-      "Qxh6"
-    ],
+    "moves": ["Nxe4+", "Ke3", "Qc3+", "Bd3", "Qd2+", "Kd4", "Qxh6"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "5rk1/4p2p/p2p1npQ/1p5P/4P3/P7/2P1B3/q1K3RR w - - 1 23",
@@ -5590,15 +4726,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "3b1r2/qbr2ppk/pN2p3/P2nN3/1p1P1R2/4P3/1P2Q1PP/5RK1 w - - 0 33",
-    "moves": [
-      "Qh5+",
-      "Kg8",
-      "Ng6",
-      "f5",
-      "Qh8+",
-      "Kf7",
-      "Qxf8+"
-    ],
+    "moves": ["Qh5+", "Kg8", "Ng6", "f5", "Qh8+", "Kf7", "Qxf8+"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "3b1rk1/qbr2ppB/pN2p3/P2nN3/1p1P1R2/4P3/1P2Q1PP/5RK1 b - - 0 32",
@@ -5630,15 +4758,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "4k3/1R1b4/4Nq2/1p1PQ1p1/4P2p/7P/P5PK/5r2 w - - 3 38",
-    "moves": [
-      "Rb8+",
-      "Bc8",
-      "Rxc8+",
-      "Kf7",
-      "Rf8+",
-      "Kg6",
-      "Rxf6+"
-    ],
+    "moves": ["Rb8+", "Bc8", "Rxc8+", "Kf7", "Rf8+", "Kg6", "Rxf6+"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "4k3/1R1bq3/4N3/1p1PQ1p1/4P2p/7P/P5PK/5r2 b - - 2 37",
@@ -5670,15 +4790,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "5b2/3k4/4R2p/2pP1pp1/2K5/4BPP1/r2N2bP/8 b - - 0 34",
-    "moves": [
-      "f4",
-      "gxf4",
-      "gxf4",
-      "Bxc5",
-      "Rc2+",
-      "Kd3",
-      "Rxc5"
-    ],
+    "moves": ["f4", "gxf4", "gxf4", "Bxc5", "Rc2+", "Kd3", "Rxc5"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "5b2/3k4/4R2p/2pP1pp1/2p5/3KBPP1/r2N2bP/8 w - - 0 34",
@@ -5710,15 +4822,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "8/p1n2k2/1ppp1n1p/3P2p1/1NP5/1P1B2K1/P2Q3P/5q2 b - - 5 35",
-    "moves": [
-      "Qg1+",
-      "Kf3",
-      "g4+",
-      "Ke2",
-      "Qxh2+",
-      "Ke1",
-      "Qxd2+"
-    ],
+    "moves": ["Qg1+", "Kf3", "g4+", "Ke2", "Qxh2+", "Ke1", "Qxd2+"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "8/p1n2k2/1ppp1n1p/3P2p1/1NP3K1/1P1B4/P2Q3P/5q2 w - - 4 35",
@@ -5750,15 +4854,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "r1b1r2k/1p3p2/p2p1n2/3PbP1N/P1p1P3/2Nn3R/1q2Q1PP/5R1K w - - 0 26",
-    "moves": [
-      "Nxf6+",
-      "Kg7",
-      "Qg4+",
-      "Kf8",
-      "Rh8+",
-      "Ke7",
-      "Rxe8+"
-    ],
+    "moves": ["Nxf6+", "Kg7", "Qg4+", "Kf8", "Rh8+", "Ke7", "Rxe8+"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "r1b1r2k/1p3p1n/p2p1B2/3PbP1N/P1p1P3/2Nn3R/1q2Q1PP/5R1K b - - 1 25",
@@ -5790,15 +4886,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "3r4/ppN1pQbk/2q5/2p1Pp2/3n1P1P/P2P4/1P3P2/R3K3 b - - 1 29",
-    "moves": [
-      "Qf3",
-      "Qxf5+",
-      "Nxf5",
-      "Nb5",
-      "Qh1+",
-      "Ke2",
-      "Qxa1"
-    ],
+    "moves": ["Qf3", "Qxf5+", "Nxf5", "Nb5", "Qh1+", "Ke2", "Qxa1"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "3r4/ppN1pQbk/2q5/2p1Pp2/3n1P1P/P2P4/1P3P2/R4K2 w - - 0 29",
@@ -5830,15 +4918,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "5r2/p3k1pp/3pP1b1/PBp1p1P1/2P1Pr2/1R3PK1/2P5/3R4 b - - 11 40",
-    "moves": [
-      "Rxf3+",
-      "Rxf3",
-      "Rxf3+",
-      "Kxf3",
-      "Bh5+",
-      "Kg3",
-      "Bxd1"
-    ],
+    "moves": ["Rxf3+", "Rxf3", "Rxf3+", "Kxf3", "Bh5+", "Kg3", "Bxd1"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "5r2/p3k1pp/3pP1b1/PBp1p1P1/2P1Pr2/3R1PK1/2P5/3R4 w - - 10 40",
@@ -5870,15 +4950,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "8/1B5p/4bkp1/2P5/5B2/K3P3/5r1P/8 b - - 6 52",
-    "moves": [
-      "g5",
-      "Bc7",
-      "Ra2+",
-      "Kb4",
-      "Rb2+",
-      "Ka5",
-      "Rxb7"
-    ],
+    "moves": ["g5", "Bc7", "Ra2+", "Kb4", "Rb2+", "Ka5", "Rxb7"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "8/7p/2B1bkp1/2P5/5B2/K3P3/5r1P/8 w - - 5 52",
@@ -5910,15 +4982,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "1b1r1kr1/1p5R/3P4/p3pPp1/4N1K1/8/PP6/3R4 w - - 6 44",
-    "moves": [
-      "f6",
-      "a4",
-      "f7",
-      "Rg6",
-      "Rh8+",
-      "Kxf7",
-      "Rxd8"
-    ],
+    "moves": ["f6", "a4", "f7", "Rg6", "Rh8+", "Kxf7", "Rxd8"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "1b1r2r1/1p3k1R/3P4/p3pPp1/4N1K1/8/PP6/3R4 b - - 5 43",
@@ -5950,24 +5014,8 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "1r1r2k1/6pp/ppq5/5Q2/2P5/3RPnP1/1N3P1P/R4K2 b - - 2 32",
-    "moves": [
-      "Nh4",
-      "Qg5",
-      "Rxd3",
-      "Nxd3",
-      "Qh1+",
-      "Ke2",
-      "Qxa1"
-    ],
-    "alternativeLines": [
-      [
-        "Nd4",
-        "Rxd4",
-        "Qh1+",
-        "Ke2",
-        "Qxa1"
-      ]
-    ],
+    "moves": ["Nh4", "Qg5", "Rxd3", "Nxd3", "Qh1+", "Ke2", "Qxa1"],
+    "alternativeLines": [["Nd4", "Rxd4", "Qh1+", "Ke2", "Qxa1"]],
     "previousMove": {
       "fen": "1r1r2k1/6pp/ppq5/5Q2/2P5/3RPnP1/1N3P1P/R5K1 w - - 1 32",
       "move": "Kf1"
@@ -5998,15 +5046,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "4r3/4Ppk1/p1N5/1p5p/8/2qp2QP/P7/3K4 b - - 1 44",
-    "moves": [
-      "Kh7",
-      "Qf2",
-      "Qa1+",
-      "Kd2",
-      "Qxa2+",
-      "Ke3",
-      "Qxf2+"
-    ],
+    "moves": ["Kh7", "Qf2", "Qa1+", "Kd2", "Qxa2+", "Ke3", "Qxf2+"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "4r3/2Q1Ppk1/p1N5/1p5p/8/2qp3P/P7/3K4 w - - 0 44",
@@ -6038,15 +5078,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "4R3/p4p1p/3N1k2/3p3b/5B1P/5n2/r3B3/5K2 w - - 0 29",
-    "moves": [
-      "Bg5+",
-      "Nxg5",
-      "hxg5+",
-      "Kxg5",
-      "Re5+",
-      "Kf6",
-      "Rxh5"
-    ],
+    "moves": ["Bg5+", "Nxg5", "hxg5+", "Kxg5", "Re5+", "Kf6", "Rxh5"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "4R3/p4p1p/3N1k2/3p3b/5B1P/5n2/Pr2B3/5K2 b - - 1 28",
@@ -6078,15 +5110,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "5r1k/1R5p/8/p7/P1BK4/2P2r2/1P6/8 b - - 3 44",
-    "moves": [
-      "R3f4+",
-      "Kd5",
-      "Rd8+",
-      "Kc5",
-      "Rc8+",
-      "Kb5",
-      "Rcxc4"
-    ],
+    "moves": ["R3f4+", "Kd5", "Rd8+", "Kc5", "Rc8+", "Kb5", "Rcxc4"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "5r1k/1R5p/8/p7/P1B5/2P1Kr2/1P6/8 w - - 2 44",
@@ -6118,15 +5142,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "3R4/p1r1k2p/6p1/2p5/6Q1/5P2/q3r1PP/4R1K1 w - - 0 39",
-    "moves": [
-      "Qg5+",
-      "Ke6",
-      "Rxe2+",
-      "Qxe2",
-      "Re8+",
-      "Kd7",
-      "Rxe2"
-    ],
+    "moves": ["Qg5+", "Ke6", "Rxe2+", "Qxe2", "Re8+", "Kd7", "Rxe2"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "3Rk3/p1r1P2p/6p1/2p5/6Q1/5P2/q3r1PP/4R1K1 b - - 6 38",
@@ -6158,15 +5174,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "R7/1p1k2pp/1rp2p2/8/5Q2/PP6/KP3PPP/3q4 w - - 1 37",
-    "moves": [
-      "Qf5+",
-      "Kc7",
-      "Rc8+",
-      "Kd6",
-      "Rd8+",
-      "Ke7",
-      "Rxd1"
-    ],
+    "moves": ["Qf5+", "Kc7", "Rc8+", "Kd6", "Rd8+", "Ke7", "Rxd1"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "R7/1p1k2pp/1rp2p2/8/5Q2/PP6/KP3PPP/4q3 b - - 0 36",
@@ -6198,15 +5206,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "2r2rk1/pp1bn1pp/8/2PpB3/1P2p3/P3PP2/4B3/2RQ1KNq b - - 0 29",
-    "moves": [
-      "Bh3+",
-      "Kf2",
-      "Qg2+",
-      "Ke1",
-      "Qxg1+",
-      "Kd2",
-      "Qxd1+"
-    ],
+    "moves": ["Bh3+", "Kf2", "Qg2+", "Ke1", "Qxg1+", "Kd2", "Qxd1+"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "2r2rk1/pp1bn1pp/8/2PpB3/1P2p3/P3P3/4BP2/2RQ1KNq w - - 2 29",
@@ -6238,15 +5238,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "1q5r/1B3pp1/3rkn2/2B1p3/1p5p/4PQ1P/5PP1/R5K1 w - - 4 30",
-    "moves": [
-      "Bxd6",
-      "Kxd6",
-      "Qc6+",
-      "Ke7",
-      "Ra8",
-      "Qd6",
-      "Rxh8"
-    ],
+    "moves": ["Bxd6", "Kxd6", "Qc6+", "Ke7", "Ra8", "Qd6", "Rxh8"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "1q1r3r/1B3pp1/4kn2/2B1p3/1p5p/4PQ1P/5PP1/R5K1 b - - 3 29",
@@ -6278,15 +5270,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "1n2rk1r/2q3b1/1p2p1Q1/pn1pP1pP/2pP3B/2P1R1P1/1P3P2/R5K1 w - - 0 29",
-    "moves": [
-      "Rf3+",
-      "Ke7",
-      "Qxg5+",
-      "Kd7",
-      "Rf7+",
-      "Kc6",
-      "Rxc7+"
-    ],
+    "moves": ["Rf3+", "Ke7", "Qxg5+", "Kd7", "Rf7+", "Kc6", "Rxc7+"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "1n2rk1r/2q3b1/1p2p1Qp/pn1pP1NP/2pP3B/2P1R1P1/1P3P2/R5K1 b - - 3 28",
@@ -6318,15 +5302,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "r5k1/5p2/2q3pQ/8/5R2/1Pn3PP/P4P1K/8 w - - 0 52",
-    "moves": [
-      "Rh4",
-      "Qf6",
-      "Qh7+",
-      "Kf8",
-      "Qh8+",
-      "Ke7",
-      "Qxa8"
-    ],
+    "moves": ["Rh4", "Qf6", "Qh7+", "Kf8", "Qh8+", "Ke7", "Qxa8"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "r5k1/5p2/2N3pQ/3q4/5R2/1Pn3PP/P4P1K/8 b - - 2 51",
@@ -6358,15 +5334,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "8/pp4pk/7p/8/1B5Q/3q1P1P/P6K/2r5 b - - 8 46",
-    "moves": [
-      "Qe2+",
-      "Kg3",
-      "Rg1+",
-      "Kf4",
-      "Qc4+",
-      "Ke3",
-      "Qxh4"
-    ],
+    "moves": ["Qe2+", "Kg3", "Rg1+", "Kf4", "Qc4+", "Ke3", "Qxh4"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "8/pp4pk/7p/8/1B6/3q1P1P/P4Q1K/2r5 w - - 7 46",
@@ -6398,15 +5366,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "5r1k/ppb4r/6R1/3p2P1/3P1p1q/3B1Q2/PP3PK1/4R3 b - - 0 38",
-    "moves": [
-      "Qh2+",
-      "Kf1",
-      "Qh1+",
-      "Qxh1",
-      "Rxh1+",
-      "Kg2",
-      "Rxe1"
-    ],
+    "moves": ["Qh2+", "Kf1", "Qh1+", "Qxh1", "Rxh1+", "Kg2", "Rxe1"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "5r1k/ppb4r/6R1/3p4/3P1pPq/3B1Q2/PP3PK1/4R3 w - - 1 38",
@@ -6438,15 +5398,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "1r6/1p4k1/p2N4/2pPp1b1/P1P5/3K1QP1/7q/1R6 b - - 0 32",
-    "moves": [
-      "Qd2+",
-      "Ke4",
-      "Qd4+",
-      "Kf5",
-      "Rf8+",
-      "Kxg5",
-      "Rxf3"
-    ],
+    "moves": ["Qd2+", "Ke4", "Qd4+", "Kf5", "Rf8+", "Kxg5", "Rxf3"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "1r6/1p4k1/p2N4/2pPp1b1/P1P5/3K1bP1/7q/1R1Q4 w - - 0 32",
@@ -6478,15 +5430,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "4q3/2nn2k1/1pN4p/1P3Q1p/8/6P1/2B2P2/6K1 w - - 5 48",
-    "moves": [
-      "Qh7+",
-      "Kf8",
-      "Qxh6+",
-      "Kf7",
-      "Bg6+",
-      "Ke6",
-      "Bxe8+"
-    ],
+    "moves": ["Qh7+", "Kf8", "Qxh6+", "Kf7", "Bg6+", "Ke6", "Bxe8+"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "4q2k/2nn4/1pN4p/1P3Q1p/8/6P1/2B2P2/6K1 b - - 4 47",
@@ -6518,15 +5462,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "7r/p1k1p2p/P1p1Q1p1/1p6/3q1P2/6P1/5PBP/6K1 w - - 0 29",
-    "moves": [
-      "Qxc6+",
-      "Kd8",
-      "Bd5",
-      "Qb6",
-      "Qa8+",
-      "Kd7",
-      "Qxh8"
-    ],
+    "moves": ["Qxc6+", "Kd8", "Bd5", "Qb6", "Qa8+", "Kd7", "Qxh8"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "7r/p1k1p2p/P1p1Q1p1/1pq5/3R1P2/6P1/5PBP/6K1 b - - 0 28",
@@ -6558,15 +5494,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "r1b1k2r/1pp2pbp/4p1p1/p7/qB1P4/1BP2Q2/P1P2PPP/R3K2R b KQkq - 1 14",
-    "moves": [
-      "Qb5",
-      "a4",
-      "axb4",
-      "axb5",
-      "Rxa1+",
-      "Ke2",
-      "Rxh1"
-    ],
+    "moves": ["Qb5", "a4", "axb4", "axb5", "Rxa1+", "Ke2", "Rxh1"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "r1b1k2r/1pp2pbp/4p1p1/p7/qBBP4/2P2Q2/P1P2PPP/R3K2R w KQkq a6 0 14",
@@ -6598,15 +5526,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "Q3B2k/7p/4N1p1/5p2/1P6/1KP3q1/6P1/2Qnq3 b - - 0 54",
-    "moves": [
-      "Qgxc3+",
-      "Qxc3+",
-      "Qxc3+",
-      "Ka4",
-      "Qa1+",
-      "Kb5",
-      "Qxa8"
-    ],
+    "moves": ["Qgxc3+", "Qxc3+", "Qxc3+", "Ka4", "Qa1+", "Kb5", "Qxa8"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "4B2k/P6p/4N1p1/5p2/1P6/1KP3q1/6P1/2Qnq3 w - - 0 54",
@@ -6638,15 +5558,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "2k3r1/pp6/2b2p2/2pN3p/2P4P/P2q4/BP2R3/R4K2 b - - 1 33",
-    "moves": [
-      "Bxd5",
-      "cxd5",
-      "Qh3+",
-      "Ke1",
-      "Qh1+",
-      "Kd2",
-      "Qxa1"
-    ],
+    "moves": ["Bxd5", "cxd5", "Qh3+", "Ke1", "Qh1+", "Kd2", "Qxa1"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "2k3r1/pp6/2b2p2/2pN3p/2P4P/P2q4/BP3R2/R4K2 w - - 0 33",
@@ -6678,15 +5590,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "1k4rq/pP6/Q7/3p1K2/B4p2/8/1P6/2B2R2 b - - 4 35",
-    "moves": [
-      "Qh7+",
-      "Ke5",
-      "Qe4+",
-      "Kd6",
-      "Rg6+",
-      "Kc5",
-      "Rxa6"
-    ],
+    "moves": ["Qh7+", "Ke5", "Qe4+", "Kd6", "Rg6+", "Kc5", "Rxa6"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "1k4rq/pP6/Q5K1/3p4/B4p2/8/1P6/2B2R2 w - - 3 35",
@@ -6718,15 +5622,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "6k1/8/3P2p1/4Q1N1/2p1b2p/7P/5qPK/4r3 w - - 0 50",
-    "moves": [
-      "Qe8+",
-      "Kg7",
-      "Ne6+",
-      "Kf6",
-      "Qf8+",
-      "Kxe6",
-      "Qxf2"
-    ],
+    "moves": ["Qe8+", "Kg7", "Ne6+", "Kf6", "Qf8+", "Kxe6", "Qxf2"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "6k1/5q2/3P2p1/4Q1N1/2p1b2p/7P/5PPK/4r3 b - - 2 49",
@@ -6842,17 +5738,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "8/5p2/1pB3R1/1P1P1p2/7P/4K1k1/1r6/8 b - - 0 57",
-    "moves": [
-      "fxg6",
-      "Kd3",
-      "f4",
-      "d6",
-      "f3",
-      "Bxf3",
-      "Rb3+",
-      "Kc4",
-      "Rxf3"
-    ],
+    "moves": ["fxg6", "Kd3", "f4", "d6", "f3", "Bxf3", "Rb3+", "Kc4", "Rxf3"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "6R1/5p2/1pB3r1/1P1P1p2/7P/4K1k1/1r6/8 w - - 2 57",
@@ -6937,15 +5823,7 @@
       "Kg3",
       "Qxf7"
     ],
-    "alternativeLines": [
-      [
-        "Rxc3+",
-        "Bd3",
-        "Qf1+",
-        "Kg3",
-        "Qxf7"
-      ]
-    ],
+    "alternativeLines": [["Rxc3+", "Bd3", "Qf1+", "Kg3", "Qxf7"]],
     "previousMove": {
       "fen": "4k3/p4R1Q/1p4Bp/3pP3/6P1/P1r2K2/1P4P1/2r1q3 w - - 7 39",
       "move": "bxc3"
@@ -7228,17 +6106,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "R7/3k4/5K2/7P/8/5P2/5r2/8 w - - 11 61",
-    "moves": [
-      "h6",
-      "Rxf3+",
-      "Kg5",
-      "Rh3",
-      "h7",
-      "Rxh7",
-      "Ra7+",
-      "Kd6",
-      "Rxh7"
-    ],
+    "moves": ["h6", "Rxf3+", "Kg5", "Rh3", "h7", "Rxh7", "Ra7+", "Kd6", "Rxh7"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "R3k3/8/5K2/7P/8/5P2/5r2/8 b - - 10 60",
@@ -7324,17 +6192,7 @@
       "Qxa4"
     ],
     "alternativeLines": [
-      [
-        "Qc7+",
-        "Kd4",
-        "Qb6+",
-        "Ke5",
-        "Qf6+",
-        "Kf4",
-        "Qh4+",
-        "Ke5",
-        "Qxa4"
-      ]
+      ["Qc7+", "Kd4", "Qb6+", "Ke5", "Qf6+", "Kf4", "Qh4+", "Ke5", "Qxa4"]
     ],
     "previousMove": {
       "fen": "3Q4/1p2B3/p3k3/3P1b2/q7/P4P2/2Pn2P1/2K5 b - - 0 32",
@@ -7618,15 +6476,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "4R3/6bk/p5r1/1p1Q4/6P1/2p2P2/P6q/5K2 b - - 1 43",
-    "moves": [
-      "c2",
-      "Rc8",
-      "c1=Q+",
-      "Rxc1",
-      "Qh1+",
-      "Kf2",
-      "Qxc1"
-    ],
+    "moves": ["c2", "Rc8", "c1=Q+", "Rxc1", "Qh1+", "Kf2", "Qxc1"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "8/6bk/p5r1/1p1Q4/6P1/2p2P2/P6q/4RK2 w - - 0 43",
@@ -7643,7 +6493,7 @@
     "difficulty": {
       "level": "D",
       "status": "suggested",
-      "reason": "Thí quân phức tạp và hơn 3 nước của bên giải để khai thác đòn xiên.",
+      "reason": "Thí quân phức tạp và hơn 3 nước của mình để khai thác đòn xiên.",
       "solverMoves": 4,
       "sacrificeCount": 1
     },
@@ -7658,25 +6508,9 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "r1r5/p1bb1k2/4pp2/3p4/6q1/1P1QRN2/P2B1PP1/2R3K1 w - - 0 25",
-    "moves": [
-      "Qh7+",
-      "Ke8",
-      "Rxc7",
-      "Rxc7",
-      "Qh8+",
-      "Ke7",
-      "Qxa8"
-    ],
+    "moves": ["Qh7+", "Ke8", "Rxc7", "Rxc7", "Qh8+", "Ke7", "Qxa8"],
     "alternativeLines": [
-      [
-        "Rxc7",
-        "Rxc7",
-        "Qh7+",
-        "Kf8",
-        "Qh8+",
-        "Ke7",
-        "Qxa8"
-      ]
+      ["Rxc7", "Rxc7", "Qh7+", "Kf8", "Qh8+", "Ke7", "Qxa8"]
     ],
     "previousMove": {
       "fen": "r1r5/p1bb1kp1/4pP2/3p4/6q1/1P1QRN2/P2B1PP1/2R3K1 b - - 0 24",
@@ -7693,7 +6527,7 @@
     "difficulty": {
       "level": "D",
       "status": "suggested",
-      "reason": "Thí quân phức tạp và hơn 3 nước của bên giải để khai thác đòn xiên.",
+      "reason": "Thí quân phức tạp và hơn 3 nước của mình để khai thác đòn xiên.",
       "solverMoves": 4,
       "sacrificeCount": 1
     },
@@ -7708,25 +6542,9 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "6n1/6k1/2p1Qpp1/1p5p/3P3q/2P1NPb1/2R3P1/r1B3K1 b - - 1 40",
-    "moves": [
-      "Qh2+",
-      "Kf1",
-      "Rxc1+",
-      "Rxc1",
-      "Qh1+",
-      "Ke2",
-      "Qxc1"
-    ],
+    "moves": ["Qh2+", "Kf1", "Rxc1+", "Rxc1", "Qh1+", "Ke2", "Qxc1"],
     "alternativeLines": [
-      [
-        "Rxc1+",
-        "Rxc1",
-        "Qh2+",
-        "Kf1",
-        "Qh1+",
-        "Ke2",
-        "Qxc1"
-      ]
+      ["Rxc1+", "Rxc1", "Qh2+", "Kf1", "Qh1+", "Ke2", "Qxc1"]
     ],
     "previousMove": {
       "fen": "6n1/6k1/2p1Qpp1/1p5p/3P2Nq/2P2Pb1/2R3P1/r1B3K1 w - h6 0 40",
@@ -7743,7 +6561,7 @@
     "difficulty": {
       "level": "D",
       "status": "suggested",
-      "reason": "Thí quân phức tạp và hơn 3 nước của bên giải để khai thác đòn xiên.",
+      "reason": "Thí quân phức tạp và hơn 3 nước của mình để khai thác đòn xiên.",
       "solverMoves": 4,
       "sacrificeCount": 1
     },
@@ -7758,24 +6576,8 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "2b5/2p1bkn1/5p2/1pp2P2/6P1/2Br1NK1/PP6/2N4R b - - 2 30",
-    "moves": [
-      "Bd6+",
-      "Kg2",
-      "Rxf3",
-      "Kxf3",
-      "Bb7+",
-      "Ke3",
-      "Bxh1"
-    ],
-    "alternativeLines": [
-      [
-        "Rxf3+",
-        "Kxf3",
-        "Bb7+",
-        "Ke3",
-        "Bxh1"
-      ]
-    ],
+    "moves": ["Bd6+", "Kg2", "Rxf3", "Kxf3", "Bb7+", "Ke3", "Bxh1"],
+    "alternativeLines": [["Rxf3+", "Kxf3", "Bb7+", "Ke3", "Bxh1"]],
     "previousMove": {
       "fen": "2b5/2p1bkn1/5p2/1pp2P2/6P1/2Br1NK1/PP2N3/7R w - - 1 30",
       "move": "Nc1"
@@ -7791,7 +6593,7 @@
     "difficulty": {
       "level": "D",
       "status": "suggested",
-      "reason": "Thí quân phức tạp và hơn 3 nước của bên giải để khai thác đòn xiên.",
+      "reason": "Thí quân phức tạp và hơn 3 nước của mình để khai thác đòn xiên.",
       "solverMoves": 4,
       "sacrificeCount": 1
     },
@@ -7806,15 +6608,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "4k3/1R1r2qp/4r3/1Q3p2/P1N1p3/8/2P3PP/5K2 w - - 2 32",
-    "moves": [
-      "Rb8+",
-      "Ke7",
-      "Qxd7+",
-      "Kxd7",
-      "Rb7+",
-      "Kd8",
-      "Rxg7"
-    ],
+    "moves": ["Rb8+", "Ke7", "Qxd7+", "Kxd7", "Rb7+", "Kd8", "Rxg7"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "4k3/1R1rq2p/4r3/1Q3p2/P1N1p3/8/2P3PP/5K2 b - - 1 31",
@@ -7831,7 +6625,7 @@
     "difficulty": {
       "level": "D",
       "status": "suggested",
-      "reason": "Thí quân phức tạp và hơn 3 nước của bên giải để khai thác đòn xiên.",
+      "reason": "Thí quân phức tạp và hơn 3 nước của mình để khai thác đòn xiên.",
       "solverMoves": 4,
       "sacrificeCount": 1
     },
@@ -7846,15 +6640,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "1rb2r2/p5pQ/4p1B1/1pq1k1P1/8/8/PPP2p2/1K1R1R2 w - - 1 31",
-    "moves": [
-      "Qxg7+",
-      "Kf4",
-      "Qxf8+",
-      "Qxf8",
-      "Rxf2+",
-      "Ke5",
-      "Rxf8"
-    ],
+    "moves": ["Qxg7+", "Kf4", "Qxf8+", "Qxf8", "Rxf2+", "Ke5", "Rxf8"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "1rb2r2/p5pQ/4pkB1/1pq3P1/8/8/PPP2p2/1K1R1R2 b - - 0 30",
@@ -7871,7 +6657,7 @@
     "difficulty": {
       "level": "D",
       "status": "suggested",
-      "reason": "Thí quân phức tạp và hơn 3 nước của bên giải để khai thác đòn xiên.",
+      "reason": "Thí quân phức tạp và hơn 3 nước của mình để khai thác đòn xiên.",
       "solverMoves": 4,
       "sacrificeCount": 1
     },
@@ -7886,15 +6672,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "8/8/4q2k/6p1/6pp/Q7/p4PK1/8 b - - 5 51",
-    "moves": [
-      "Qe4+",
-      "Kf1",
-      "a1=Q+",
-      "Qxa1",
-      "Qh1+",
-      "Ke2",
-      "Qxa1"
-    ],
+    "moves": ["Qe4+", "Kf1", "a1=Q+", "Qxa1", "Qh1+", "Ke2", "Qxa1"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "8/8/4q2k/6p1/6pp/3Q4/p4PK1/8 w - - 4 51",
@@ -7911,7 +6689,7 @@
     "difficulty": {
       "level": "D",
       "status": "suggested",
-      "reason": "Thí quân phức tạp và hơn 3 nước của bên giải để khai thác đòn xiên.",
+      "reason": "Thí quân phức tạp và hơn 3 nước của mình để khai thác đòn xiên.",
       "solverMoves": 4,
       "sacrificeCount": 1
     },
@@ -7926,15 +6704,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "r1br1nk1/pp2qpbp/1npp2p1/5P2/1PP1P3/1NN1B3/P2QB1PP/2R2RK1 w - - 1 22",
-    "moves": [
-      "f6",
-      "Bxf6",
-      "Rxf6",
-      "Qxf6",
-      "Bg5",
-      "Qg7",
-      "Bxd8"
-    ],
+    "moves": ["f6", "Bxf6", "Rxf6", "Qxf6", "Bg5", "Qg7", "Bxd8"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "r1br1nk1/pp3pbp/1npp1qp1/5P2/1PP1P3/1NN1B3/P2QB1PP/2R2RK1 b - - 0 21",
@@ -7951,7 +6721,7 @@
     "difficulty": {
       "level": "D",
       "status": "suggested",
-      "reason": "Thí quân phức tạp và hơn 3 nước của bên giải để khai thác đòn xiên.",
+      "reason": "Thí quân phức tạp và hơn 3 nước của mình để khai thác đòn xiên.",
       "solverMoves": 4,
       "sacrificeCount": 1
     },
@@ -7966,15 +6736,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "4k3/7R/1P2Pp2/3K2p1/5r1p/8/8/8 w - - 0 59",
-    "moves": [
-      "b7",
-      "Rb4",
-      "b8=Q+",
-      "Rxb8",
-      "Rh8+",
-      "Ke7",
-      "Rxb8"
-    ],
+    "moves": ["b7", "Rb4", "b8=Q+", "Rxb8", "Rh8+", "Ke7", "Rxb8"],
     "alternativeLines": [
       [
         "Rh8+",
@@ -8005,7 +6767,7 @@
     "difficulty": {
       "level": "D",
       "status": "suggested",
-      "reason": "Thí quân phức tạp và hơn 3 nước của bên giải để khai thác đòn xiên.",
+      "reason": "Thí quân phức tạp và hơn 3 nước của mình để khai thác đòn xiên.",
       "solverMoves": 4,
       "sacrificeCount": 1
     },
@@ -8020,15 +6782,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "2kr2r1/1b6/3q1pp1/Rp1p3p/1NpP3P/2P3Q1/1P3PP1/R5K1 w - - 4 27",
-    "moves": [
-      "Qxd6",
-      "Rxd6",
-      "Ra8+",
-      "Bxa8",
-      "Rxa8+",
-      "Kc7",
-      "Rxg8"
-    ],
+    "moves": ["Qxd6", "Rxd6", "Ra8+", "Bxa8", "Rxa8+", "Kc7", "Rxg8"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "2kr2r1/1b6/1q3pp1/Rp1p3p/1NpP3P/2P3Q1/1P3PP1/R5K1 b - - 3 26",
@@ -8045,7 +6799,7 @@
     "difficulty": {
       "level": "D",
       "status": "suggested",
-      "reason": "Thí quân phức tạp và hơn 3 nước của bên giải để khai thác đòn xiên.",
+      "reason": "Thí quân phức tạp và hơn 3 nước của mình để khai thác đòn xiên.",
       "solverMoves": 4,
       "sacrificeCount": 1
     },
@@ -8060,15 +6814,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "6k1/5pp1/7p/2bN4/2P5/pQ5P/5qP1/3K4 b - - 1 39",
-    "moves": [
-      "a2",
-      "Qa4",
-      "a1=Q+",
-      "Qxa1",
-      "Qf1+",
-      "Kc2",
-      "Qxa1"
-    ],
+    "moves": ["a2", "Qa4", "a1=Q+", "Qxa1", "Qf1+", "Kc2", "Qxa1"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "6k1/5pp1/7p/2bN4/2P5/pQ5P/5qP1/4K3 w - - 0 39",
@@ -8085,7 +6831,7 @@
     "difficulty": {
       "level": "D",
       "status": "suggested",
-      "reason": "Thí quân phức tạp và hơn 3 nước của bên giải để khai thác đòn xiên.",
+      "reason": "Thí quân phức tạp và hơn 3 nước của mình để khai thác đòn xiên.",
       "solverMoves": 4,
       "sacrificeCount": 1
     },
@@ -8100,15 +6846,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "r3k3/1b1p1pp1/p3p3/1p2n2p/4Pb1q/2P1NPr1/PPB3PP/R3QRK1 b q - 1 24",
-    "moves": [
-      "Rxg2+",
-      "Nxg2",
-      "Qxh2+",
-      "Kf2",
-      "Bg3+",
-      "Ke2",
-      "Bxe1"
-    ],
+    "moves": ["Rxg2+", "Nxg2", "Qxh2+", "Kf2", "Bg3+", "Ke2", "Bxe1"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "r3k3/1b1p1pp1/p3p3/1p2n2p/4Pb1q/2P1NPr1/PPB2QPP/R4RK1 w q - 0 24",
@@ -8125,7 +6863,7 @@
     "difficulty": {
       "level": "D",
       "status": "suggested",
-      "reason": "Thí quân phức tạp và hơn 3 nước của bên giải để khai thác đòn xiên.",
+      "reason": "Thí quân phức tạp và hơn 3 nước của mình để khai thác đòn xiên.",
       "solverMoves": 4,
       "sacrificeCount": 1
     },
@@ -8140,25 +6878,9 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "8/P3kb2/5p2/1B2p1p1/7p/q1P1QP2/5KPP/8 w - - 1 42",
-    "moves": [
-      "a8=R",
-      "Qxa8",
-      "Qc5+",
-      "Ke6",
-      "Bc4+",
-      "Kd7",
-      "Bxf7"
-    ],
+    "moves": ["a8=R", "Qxa8", "Qc5+", "Ke6", "Bc4+", "Kd7", "Bxf7"],
     "alternativeLines": [
-      [
-        "a8=Q",
-        "Qxa8",
-        "Qc5+",
-        "Ke6",
-        "Bc4+",
-        "Kd7",
-        "Bxf7"
-      ]
+      ["a8=Q", "Qxa8", "Qc5+", "Ke6", "Bc4+", "Kd7", "Bxf7"]
     ],
     "previousMove": {
       "fen": "8/P3k3/5pb1/1B2p1p1/7p/q1P1QP2/5KPP/8 b - - 0 41",
@@ -8175,7 +6897,7 @@
     "difficulty": {
       "level": "D",
       "status": "suggested",
-      "reason": "Thí quân phức tạp và hơn 3 nước của bên giải để khai thác đòn xiên.",
+      "reason": "Thí quân phức tạp và hơn 3 nước của mình để khai thác đòn xiên.",
       "solverMoves": 4,
       "sacrificeCount": 1
     },
@@ -8190,25 +6912,9 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "r1bR4/p5kp/4p1p1/2q1b1B1/1pB5/8/1PQ2rP1/1NK4R w - - 2 22",
-    "moves": [
-      "Bh6+",
-      "Kf6",
-      "Qxf2+",
-      "Qxf2",
-      "Rf8+",
-      "Ke7",
-      "Rxf2"
-    ],
+    "moves": ["Bh6+", "Kf6", "Qxf2+", "Qxf2", "Rf8+", "Ke7", "Rxf2"],
     "alternativeLines": [
-      [
-        "Qxf2",
-        "Qxf2",
-        "Bh6+",
-        "Kf6",
-        "Rf8+",
-        "Ke7",
-        "Rxf2"
-      ]
+      ["Qxf2", "Qxf2", "Bh6+", "Kf6", "Rf8+", "Ke7", "Rxf2"]
     ],
     "previousMove": {
       "fen": "r1bR2k1/p6p/4p1p1/2q1b1B1/1pB5/8/1PQ2rP1/1NK4R b - - 1 21",
@@ -8225,7 +6931,7 @@
     "difficulty": {
       "level": "D",
       "status": "suggested",
-      "reason": "Thí quân phức tạp và hơn 3 nước của bên giải để khai thác đòn xiên.",
+      "reason": "Thí quân phức tạp và hơn 3 nước của mình để khai thác đòn xiên.",
       "solverMoves": 4,
       "sacrificeCount": 1
     },
@@ -8240,15 +6946,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "8/8/r3b3/P3kp2/2p4R/2Pp4/1P1K4/R7 w - - 0 41",
-    "moves": [
-      "Re1+",
-      "Kf6",
-      "Rxe6+",
-      "Rxe6",
-      "Rh6+",
-      "Kf7",
-      "Rxe6"
-    ],
+    "moves": ["Re1+", "Kf6", "Rxe6+", "Rxe6", "Rh6+", "Kf7", "Rxe6"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "8/8/r3b3/P2kPp2/2p4R/2Pp4/1P1K4/R7 b - - 1 40",
@@ -8265,7 +6963,7 @@
     "difficulty": {
       "level": "D",
       "status": "suggested",
-      "reason": "Thí quân phức tạp và hơn 3 nước của bên giải để khai thác đòn xiên.",
+      "reason": "Thí quân phức tạp và hơn 3 nước của mình để khai thác đòn xiên.",
       "solverMoves": 4,
       "sacrificeCount": 1
     },
@@ -8280,15 +6978,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "3rk2r/1RB1bpp1/p3p1p1/1pq1n3/8/1Q3B2/PP4PP/1K1R4 w k - 2 27",
-    "moves": [
-      "Bxd8",
-      "Bxd8",
-      "Rxd8+",
-      "Kxd8",
-      "Rb8+",
-      "Kc7",
-      "Rxh8"
-    ],
+    "moves": ["Bxd8", "Bxd8", "Rxd8+", "Kxd8", "Rb8+", "Kc7", "Rxh8"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "3rk2r/1RB1bpp1/p3p1p1/1p2n3/3q4/1Q3B2/PP4PP/1K1R4 b k - 1 26",
@@ -8305,7 +6995,7 @@
     "difficulty": {
       "level": "D",
       "status": "suggested",
-      "reason": "Thí quân phức tạp và hơn 3 nước của bên giải để khai thác đòn xiên.",
+      "reason": "Thí quân phức tạp và hơn 3 nước của mình để khai thác đòn xiên.",
       "solverMoves": 4,
       "sacrificeCount": 1
     },
@@ -8320,15 +7010,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "4r1k1/p6N/b1p1p1p1/B1PpPp2/4nP1R/Pr5P/6P1/4R1K1 w - - 5 30",
-    "moves": [
-      "Rxe4",
-      "fxe4",
-      "Nf6+",
-      "Kf8",
-      "Rh8+",
-      "Kg7",
-      "Rxe8"
-    ],
+    "moves": ["Rxe4", "fxe4", "Nf6+", "Kf8", "Rh8+", "Kg7", "Rxe8"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "2b1r1k1/p6N/2p1p1p1/B1PpPp2/4nP1R/Pr5P/6P1/4R1K1 b - - 4 29",
@@ -8345,7 +7027,7 @@
     "difficulty": {
       "level": "D",
       "status": "suggested",
-      "reason": "Thí quân phức tạp và hơn 3 nước của bên giải để khai thác đòn xiên.",
+      "reason": "Thí quân phức tạp và hơn 3 nước của mình để khai thác đòn xiên.",
       "solverMoves": 4,
       "sacrificeCount": 1
     },
@@ -8360,15 +7042,7 @@
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "5Bk1/r4pp1/2b1pb1p/3p4/3P1q2/3B4/PQ2K1PP/2R4R b - - 0 22",
-    "moves": [
-      "Bxd4",
-      "Qd2",
-      "Rxa2",
-      "Qxa2",
-      "Qf2+",
-      "Kd1",
-      "Qxa2"
-    ],
+    "moves": ["Bxd4", "Qd2", "Rxa2", "Qxa2", "Qf2+", "Kd1", "Qxa2"],
     "alternativeLines": [],
     "previousMove": {
       "fen": "5rk1/r4pp1/2b1pb1p/3p4/1B1P1q2/3B4/PQ2K1PP/2R4R w - - 0 22",
@@ -8385,7 +7059,7 @@
     "difficulty": {
       "level": "D",
       "status": "suggested",
-      "reason": "Thí quân phức tạp và hơn 3 nước của bên giải để khai thác đòn xiên.",
+      "reason": "Thí quân phức tạp và hơn 3 nước của mình để khai thác đòn xiên.",
       "solverMoves": 4,
       "sacrificeCount": 1
     },
@@ -8412,15 +7086,7 @@
       "Qxf8"
     ],
     "alternativeLines": [
-      [
-        "Rf1+",
-        "Bf5",
-        "Rxf5+",
-        "Kxf5",
-        "Qf2+",
-        "Ke5",
-        "Qxf8"
-      ]
+      ["Rf1+", "Bf5", "Rxf5+", "Kxf5", "Qf2+", "Ke5", "Qxf8"]
     ],
     "previousMove": {
       "fen": "2b2q2/7p/p1p3k1/1p1p2nB/7Q/2P5/PP4PP/3R3K b - - 9 32",
@@ -8437,7 +7103,7 @@
     "difficulty": {
       "level": "D",
       "status": "suggested",
-      "reason": "Thí quân phức tạp và hơn 3 nước của bên giải để khai thác đòn xiên.",
+      "reason": "Thí quân phức tạp và hơn 3 nước của mình để khai thác đòn xiên.",
       "solverMoves": 5,
       "sacrificeCount": 1
     },
@@ -8479,7 +7145,7 @@
     "difficulty": {
       "level": "D",
       "status": "suggested",
-      "reason": "Thí quân phức tạp và hơn 3 nước của bên giải để khai thác đòn xiên.",
+      "reason": "Thí quân phức tạp và hơn 3 nước của mình để khai thác đòn xiên.",
       "solverMoves": 5,
       "sacrificeCount": 1
     },
@@ -8521,7 +7187,7 @@
     "difficulty": {
       "level": "D",
       "status": "suggested",
-      "reason": "Thí quân phức tạp và hơn 3 nước của bên giải để khai thác đòn xiên.",
+      "reason": "Thí quân phức tạp và hơn 3 nước của mình để khai thác đòn xiên.",
       "solverMoves": 5,
       "sacrificeCount": 1
     },
@@ -8563,7 +7229,7 @@
     "difficulty": {
       "level": "D",
       "status": "suggested",
-      "reason": "Thí quân phức tạp và hơn 3 nước của bên giải để khai thác đòn xiên.",
+      "reason": "Thí quân phức tạp và hơn 3 nước của mình để khai thác đòn xiên.",
       "solverMoves": 5,
       "sacrificeCount": 1
     },
@@ -8605,7 +7271,7 @@
     "difficulty": {
       "level": "D",
       "status": "suggested",
-      "reason": "Thí quân phức tạp và hơn 3 nước của bên giải để khai thác đòn xiên.",
+      "reason": "Thí quân phức tạp và hơn 3 nước của mình để khai thác đòn xiên.",
       "solverMoves": 5,
       "sacrificeCount": 1
     },
@@ -8647,7 +7313,7 @@
     "difficulty": {
       "level": "D",
       "status": "suggested",
-      "reason": "Thí quân phức tạp và hơn 3 nước của bên giải để khai thác đòn xiên.",
+      "reason": "Thí quân phức tạp và hơn 3 nước của mình để khai thác đòn xiên.",
       "solverMoves": 5,
       "sacrificeCount": 2
     },
@@ -8689,7 +7355,7 @@
     "difficulty": {
       "level": "D",
       "status": "suggested",
-      "reason": "Thí quân phức tạp và hơn 3 nước của bên giải để khai thác đòn xiên.",
+      "reason": "Thí quân phức tạp và hơn 3 nước của mình để khai thác đòn xiên.",
       "solverMoves": 5,
       "sacrificeCount": 1
     },
@@ -8731,7 +7397,7 @@
     "difficulty": {
       "level": "D",
       "status": "suggested",
-      "reason": "Thí quân phức tạp và hơn 3 nước của bên giải để khai thác đòn xiên.",
+      "reason": "Thí quân phức tạp và hơn 3 nước của mình để khai thác đòn xiên.",
       "solverMoves": 5,
       "sacrificeCount": 1
     },
@@ -8773,7 +7439,7 @@
     "difficulty": {
       "level": "D",
       "status": "suggested",
-      "reason": "Thí quân phức tạp và hơn 3 nước của bên giải để khai thác đòn xiên.",
+      "reason": "Thí quân phức tạp và hơn 3 nước của mình để khai thác đòn xiên.",
       "solverMoves": 5,
       "sacrificeCount": 1
     },
@@ -8815,7 +7481,7 @@
     "difficulty": {
       "level": "D",
       "status": "suggested",
-      "reason": "Thí quân phức tạp và hơn 3 nước của bên giải để khai thác đòn xiên.",
+      "reason": "Thí quân phức tạp và hơn 3 nước của mình để khai thác đòn xiên.",
       "solverMoves": 5,
       "sacrificeCount": 1
     },
@@ -8857,7 +7523,7 @@
     "difficulty": {
       "level": "D",
       "status": "suggested",
-      "reason": "Thí quân phức tạp và hơn 3 nước của bên giải để khai thác đòn xiên.",
+      "reason": "Thí quân phức tạp và hơn 3 nước của mình để khai thác đòn xiên.",
       "solverMoves": 5,
       "sacrificeCount": 1
     },
@@ -8899,7 +7565,7 @@
     "difficulty": {
       "level": "D",
       "status": "suggested",
-      "reason": "Thí quân phức tạp và hơn 3 nước của bên giải để khai thác đòn xiên.",
+      "reason": "Thí quân phức tạp và hơn 3 nước của mình để khai thác đòn xiên.",
       "solverMoves": 5,
       "sacrificeCount": 1
     },
@@ -8972,7 +7638,7 @@
     "difficulty": {
       "level": "D",
       "status": "suggested",
-      "reason": "Thí quân phức tạp và hơn 3 nước của bên giải để khai thác đòn xiên.",
+      "reason": "Thí quân phức tạp và hơn 3 nước của mình để khai thác đòn xiên.",
       "solverMoves": 5,
       "sacrificeCount": 1
     },
@@ -9016,7 +7682,7 @@
     "difficulty": {
       "level": "D",
       "status": "suggested",
-      "reason": "Thí quân phức tạp và hơn 3 nước của bên giải để khai thác đòn xiên.",
+      "reason": "Thí quân phức tạp và hơn 3 nước của mình để khai thác đòn xiên.",
       "solverMoves": 6,
       "sacrificeCount": 1
     },
@@ -9060,7 +7726,7 @@
     "difficulty": {
       "level": "D",
       "status": "suggested",
-      "reason": "Thí quân phức tạp và hơn 3 nước của bên giải để khai thác đòn xiên.",
+      "reason": "Thí quân phức tạp và hơn 3 nước của mình để khai thác đòn xiên.",
       "solverMoves": 6,
       "sacrificeCount": 1
     },
@@ -9104,7 +7770,7 @@
     "difficulty": {
       "level": "D",
       "status": "suggested",
-      "reason": "Thí quân phức tạp và hơn 3 nước của bên giải để khai thác đòn xiên.",
+      "reason": "Thí quân phức tạp và hơn 3 nước của mình để khai thác đòn xiên.",
       "solverMoves": 6,
       "sacrificeCount": 1
     },
@@ -9148,7 +7814,7 @@
     "difficulty": {
       "level": "D",
       "status": "suggested",
-      "reason": "Thí quân phức tạp và hơn 3 nước của bên giải để khai thác đòn xiên.",
+      "reason": "Thí quân phức tạp và hơn 3 nước của mình để khai thác đòn xiên.",
       "solverMoves": 6,
       "sacrificeCount": 1
     },
@@ -9192,7 +7858,7 @@
     "difficulty": {
       "level": "D",
       "status": "suggested",
-      "reason": "Thí quân phức tạp và hơn 3 nước của bên giải để khai thác đòn xiên.",
+      "reason": "Thí quân phức tạp và hơn 3 nước của mình để khai thác đòn xiên.",
       "solverMoves": 6,
       "sacrificeCount": 1
     },
@@ -9236,7 +7902,7 @@
     "difficulty": {
       "level": "D",
       "status": "suggested",
-      "reason": "Thí quân phức tạp và hơn 3 nước của bên giải để khai thác đòn xiên.",
+      "reason": "Thí quân phức tạp và hơn 3 nước của mình để khai thác đòn xiên.",
       "solverMoves": 6,
       "sacrificeCount": 1
     },
@@ -9307,7 +7973,7 @@
     "difficulty": {
       "level": "D",
       "status": "suggested",
-      "reason": "Thí quân phức tạp và hơn 3 nước của bên giải để khai thác đòn xiên.",
+      "reason": "Thí quân phức tạp và hơn 3 nước của mình để khai thác đòn xiên.",
       "solverMoves": 6,
       "sacrificeCount": 1
     },
@@ -9351,7 +8017,7 @@
     "difficulty": {
       "level": "D",
       "status": "suggested",
-      "reason": "Thí quân phức tạp và hơn 3 nước của bên giải để khai thác đòn xiên.",
+      "reason": "Thí quân phức tạp và hơn 3 nước của mình để khai thác đòn xiên.",
       "solverMoves": 6,
       "sacrificeCount": 1
     },
@@ -9397,7 +8063,7 @@
     "difficulty": {
       "level": "D",
       "status": "suggested",
-      "reason": "Thí quân phức tạp và hơn 3 nước của bên giải để khai thác đòn xiên.",
+      "reason": "Thí quân phức tạp và hơn 3 nước của mình để khai thác đòn xiên.",
       "solverMoves": 7,
       "sacrificeCount": 1
     },
@@ -9443,7 +8109,7 @@
     "difficulty": {
       "level": "D",
       "status": "suggested",
-      "reason": "Thí quân phức tạp và hơn 3 nước của bên giải để khai thác đòn xiên.",
+      "reason": "Thí quân phức tạp và hơn 3 nước của mình để khai thác đòn xiên.",
       "solverMoves": 7,
       "sacrificeCount": 1
     },
@@ -9489,7 +8155,7 @@
     "difficulty": {
       "level": "D",
       "status": "suggested",
-      "reason": "Thí quân phức tạp và hơn 3 nước của bên giải để khai thác đòn xiên.",
+      "reason": "Thí quân phức tạp và hơn 3 nước của mình để khai thác đòn xiên.",
       "solverMoves": 7,
       "sacrificeCount": 1
     },
@@ -9535,7 +8201,7 @@
     "difficulty": {
       "level": "D",
       "status": "suggested",
-      "reason": "Thí quân phức tạp và hơn 3 nước của bên giải để khai thác đòn xiên.",
+      "reason": "Thí quân phức tạp và hơn 3 nước của mình để khai thác đòn xiên.",
       "solverMoves": 7,
       "sacrificeCount": 1
     },
@@ -9581,7 +8247,7 @@
     "difficulty": {
       "level": "D",
       "status": "suggested",
-      "reason": "Thí quân phức tạp và hơn 3 nước của bên giải để khai thác đòn xiên.",
+      "reason": "Thí quân phức tạp và hơn 3 nước của mình để khai thác đòn xiên.",
       "solverMoves": 7,
       "sacrificeCount": 1
     },
@@ -9627,7 +8293,7 @@
     "difficulty": {
       "level": "D",
       "status": "suggested",
-      "reason": "Thí quân phức tạp và hơn 3 nước của bên giải để khai thác đòn xiên.",
+      "reason": "Thí quân phức tạp và hơn 3 nước của mình để khai thác đòn xiên.",
       "solverMoves": 7,
       "sacrificeCount": 1
     },
@@ -9673,7 +8339,7 @@
     "difficulty": {
       "level": "D",
       "status": "suggested",
-      "reason": "Thí quân phức tạp và hơn 3 nước của bên giải để khai thác đòn xiên.",
+      "reason": "Thí quân phức tạp và hơn 3 nước của mình để khai thác đòn xiên.",
       "solverMoves": 7,
       "sacrificeCount": 1
     },
@@ -9719,7 +8385,7 @@
     "difficulty": {
       "level": "D",
       "status": "suggested",
-      "reason": "Thí quân phức tạp và hơn 3 nước của bên giải để khai thác đòn xiên.",
+      "reason": "Thí quân phức tạp và hơn 3 nước của mình để khai thác đòn xiên.",
       "solverMoves": 7,
       "sacrificeCount": 1
     },
@@ -9765,7 +8431,7 @@
     "difficulty": {
       "level": "D",
       "status": "suggested",
-      "reason": "Thí quân phức tạp và hơn 3 nước của bên giải để khai thác đòn xiên.",
+      "reason": "Thí quân phức tạp và hơn 3 nước của mình để khai thác đòn xiên.",
       "solverMoves": 7,
       "sacrificeCount": 1
     },
@@ -9844,7 +8510,7 @@
     "difficulty": {
       "level": "D",
       "status": "suggested",
-      "reason": "Thí quân phức tạp và hơn 3 nước của bên giải để khai thác đòn xiên.",
+      "reason": "Thí quân phức tạp và hơn 3 nước của mình để khai thác đòn xiên.",
       "solverMoves": 8,
       "sacrificeCount": 1
     },
@@ -9894,7 +8560,7 @@
     "difficulty": {
       "level": "D",
       "status": "suggested",
-      "reason": "Thí quân phức tạp và hơn 3 nước của bên giải để khai thác đòn xiên.",
+      "reason": "Thí quân phức tạp và hơn 3 nước của mình để khai thác đòn xiên.",
       "solverMoves": 9,
       "sacrificeCount": 1
     },

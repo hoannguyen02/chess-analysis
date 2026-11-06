@@ -1,0 +1,6744 @@
+{
+  "topic": "fork",
+  "level": "Beginner",
+  "target": 24,
+  "requestedCount": 24,
+  "sourceType": "original-composition",
+  "entries": [
+    {
+      "exercise": {
+        "id": "fork-beginner-01",
+        "title": "Tấn công đôi bằng Mã · 1",
+        "beginner": true,
+        "goal": "material",
+        "prompt": "Tạo đòn tấn công đôi rồi thu lợi vật chất.",
+        "mode": "interactive",
+        "outcome": "fork",
+        "fen": "8/8/2P5/4K3/5N2/6r1/8/2k5 w - - 0 1",
+        "moves": [
+          "Ne2+",
+          "Kd1",
+          "Nxg3"
+        ],
+        "alternativeLines": [
+          [
+            "Ne2+",
+            "Kd2",
+            "Nxg3"
+          ],
+          [
+            "Ne2+",
+            "Kc2",
+            "Nxg3"
+          ],
+          [
+            "Ne2+",
+            "Kb2",
+            "Nxg3"
+          ],
+          [
+            "Ne2+",
+            "Kb1",
+            "Nxg3"
+          ]
+        ],
+        "source": "original-composition",
+        "hints": [
+          "Tìm nước đi tạo hai mối đe dọa. Kiểm tra nước đáp và khả năng bắt lại."
+        ],
+        "solution": "Ne2+ — Mã từ f4 đến e2. Nước chiếu của Mã buộc Vua đỡ chiếu. Sau nước đáp, bắt Xe ở g3 để thu lợi vật chất."
+      },
+      "review": {
+        "candidate": {
+          "fen": "8/8/2P5/4K3/5N2/6r1/8/2k5 w - - 0 1",
+          "root": "Ne2+",
+          "moves": [
+            "Ne2+",
+            "Kd2",
+            "Nxg3"
+          ],
+          "forkPiece": "N",
+          "targets": [
+            "c1",
+            "g3"
+          ],
+          "teachingFamily": "N-royal-rook",
+          "distinctness": "Create a direct fork; safe unprotected landing square; targets lack a shared defender; 5 legal defensive choices.",
+          "source": "original-composition",
+          "startingMaterial": -1,
+          "localEvidence": {
+            "lines": [
+              [
+                "Ne2+",
+                "Kd2",
+                "Nxg3"
+              ],
+              [
+                "Ne2+",
+                "Kc2",
+                "Nxg3"
+              ],
+              [
+                "Ne2+",
+                "Kb2",
+                "Nxg3"
+              ],
+              [
+                "Ne2+",
+                "Kd1",
+                "Nxg3"
+              ],
+              [
+                "Ne2+",
+                "Kb1",
+                "Nxg3"
+              ]
+            ],
+            "minimumGain": 5,
+            "targets": [
+              "c1",
+              "g3"
+            ],
+            "checking": true
+          },
+          "mechanism": [
+            false,
+            false,
+            false,
+            false
+          ],
+          "constructiveAttempts": 1
+        },
+        "candidateHash": "227ed7ad85262c427e58dc5f62f13adf00fa5ee05f86007e9a1c670554086376",
+        "verificationVersion": "42438004b5d0397ca6bbf1905d52da892d8908797a65ccb1808816087a334cfa",
+        "topic": "fork",
+        "settings": {
+          "rootNodes": 200000,
+          "rootMultiPV": "every legal move",
+          "endpointNodesEach": 50000
+        },
+        "flags": [],
+        "roots": [
+          {
+            "move": "Kf6",
+            "targets": [],
+            "forkWin": false,
+            "immediateCaptureGain": false,
+            "nonForkShortGain": false
+          },
+          {
+            "move": "Ke6",
+            "targets": [],
+            "forkWin": false,
+            "immediateCaptureGain": false,
+            "nonForkShortGain": false
+          },
+          {
+            "move": "Kd6",
+            "targets": [],
+            "forkWin": false,
+            "immediateCaptureGain": false,
+            "nonForkShortGain": false
+          },
+          {
+            "move": "Kf5",
+            "targets": [],
+            "forkWin": false,
+            "immediateCaptureGain": false,
+            "nonForkShortGain": false
+          },
+          {
+            "move": "Kd5",
+            "targets": [],
+            "forkWin": false,
+            "immediateCaptureGain": false,
+            "nonForkShortGain": false
+          },
+          {
+            "move": "Ke4",
+            "targets": [],
+            "forkWin": false,
+            "immediateCaptureGain": false,
+            "nonForkShortGain": false
+          },
+          {
+            "move": "Kd4",
+            "targets": [],
+            "forkWin": false,
+            "immediateCaptureGain": false,
+            "nonForkShortGain": false
+          },
+          {
+            "move": "Ng6",
+            "targets": [],
+            "forkWin": false,
+            "immediateCaptureGain": false,
+            "nonForkShortGain": false
+          },
+          {
+            "move": "Ne6",
+            "targets": [],
+            "forkWin": false,
+            "immediateCaptureGain": false,
+            "nonForkShortGain": false
+          },
+          {
+            "move": "Nh5",
+            "targets": [],
+            "forkWin": false,
+            "immediateCaptureGain": false,
+            "nonForkShortGain": false
+          },
+          {
+            "move": "Nd5",
+            "targets": [],
+            "forkWin": false,
+            "immediateCaptureGain": false,
+            "nonForkShortGain": false
+          },
+          {
+            "move": "Nh3",
+            "targets": [],
+            "forkWin": false,
+            "immediateCaptureGain": false,
+            "nonForkShortGain": false
+          },
+          {
+            "move": "Nd3+",
+            "targets": [],
+            "forkWin": false,
+            "immediateCaptureGain": false,
+            "nonForkShortGain": false
+          },
+          {
+            "move": "Ng2",
+            "targets": [],
+            "forkWin": false,
+            "immediateCaptureGain": false,
+            "nonForkShortGain": false
+          },
+          {
+            "move": "Ne2+",
+            "targets": [
+              "c1",
+              "g3"
+            ],
+            "forkWin": true,
+            "immediateCaptureGain": false,
+            "nonForkShortGain": false
+          },
+          {
+            "move": "c7",
+            "targets": [],
+            "forkWin": false,
+            "immediateCaptureGain": false,
+            "nonForkShortGain": false
+          }
+        ],
+        "lines": [
+          [
+            "Ne2+",
+            "Kd2",
+            "Nxg3"
+          ],
+          [
+            "Ne2+",
+            "Kc2",
+            "Nxg3"
+          ],
+          [
+            "Ne2+",
+            "Kb2",
+            "Nxg3"
+          ],
+          [
+            "Ne2+",
+            "Kd1",
+            "Nxg3"
+          ],
+          [
+            "Ne2+",
+            "Kb1",
+            "Nxg3"
+          ]
+        ],
+        "shortMates": {
+          "immediate": [],
+          "inTwoSolverMoves": []
+        },
+        "initialMaterialCp": -100,
+        "engineRoots": [
+          {
+            "move": "Ne2+",
+            "cp": 656,
+            "mate": null,
+            "depth": 15,
+            "pv": [
+              "Ne2+",
+              "Kd2",
+              "Nxg3",
+              "Ke3",
+              "c7",
+              "Kf2",
+              "Kd4",
+              "Kxg3",
+              "Kc5",
+              "Kf2",
+              "Kc6",
+              "Kg2"
+            ]
+          },
+          {
+            "move": "Kd5",
+            "cp": 17,
+            "mate": null,
+            "depth": 15,
+            "pv": [
+              "Kd5",
+              "Rg7",
+              "Nd3+",
+              "Kd1",
+              "Nb2+",
+              "Ke2"
+            ]
+          },
+          {
+            "move": "Kd6",
+            "cp": 12,
+            "mate": null,
+            "depth": 15,
+            "pv": [
+              "Kd6",
+              "Kd2",
+              "Nd5",
+              "Rg6+",
+              "Nf6",
+              "Rg7",
+              "Ke5",
+              "Re7+",
+              "Kd4"
+            ]
+          },
+          {
+            "move": "Kf6",
+            "cp": 6,
+            "mate": null,
+            "depth": 15,
+            "pv": [
+              "Kf6",
+              "Kb2",
+              "Nd5",
+              "Rh3"
+            ]
+          },
+          {
+            "move": "Nd5",
+            "cp": 6,
+            "mate": null,
+            "depth": 15,
+            "pv": [
+              "Nd5",
+              "Rf3",
+              "Kd6",
+              "Rf8",
+              "Nc3"
+            ]
+          },
+          {
+            "move": "c7",
+            "cp": 6,
+            "mate": null,
+            "depth": 15,
+            "pv": [
+              "c7",
+              "Rg8",
+              "Ne2+",
+              "Kd2",
+              "Ng1",
+              "Rc8",
+              "Kd6",
+              "Kd1",
+              "Kd7",
+              "Rg8",
+              "c8=Q",
+              "Rxc8"
+            ]
+          },
+          {
+            "move": "Kf5",
+            "cp": 5,
+            "mate": null,
+            "depth": 15,
+            "pv": [
+              "Kf5",
+              "Rg8",
+              "Ng6",
+              "Rc8",
+              "Ne5",
+              "Rg8",
+              "Nd3+",
+              "Kb1"
+            ]
+          },
+          {
+            "move": "Kd4",
+            "cp": 5,
+            "mate": null,
+            "depth": 15,
+            "pv": [
+              "Kd4",
+              "Kd2",
+              "Nd5",
+              "Rg6",
+              "c7",
+              "Rc6"
+            ]
+          },
+          {
+            "move": "Ke6",
+            "cp": 5,
+            "mate": null,
+            "depth": 15,
+            "pv": [
+              "Ke6",
+              "Rg8",
+              "Nd3+",
+              "Kd2",
+              "Kf7",
+              "Rc8"
+            ]
+          },
+          {
+            "move": "Ke4",
+            "cp": 2,
+            "mate": null,
+            "depth": 15,
+            "pv": [
+              "Ke4",
+              "Kd2",
+              "c7",
+              "Rg8"
+            ]
+          },
+          {
+            "move": "Ng2",
+            "cp": 1,
+            "mate": null,
+            "depth": 15,
+            "pv": [
+              "Ng2",
+              "Rg6",
+              "Kd5",
+              "Kd2",
+              "c7",
+              "Rg5+",
+              "Kd6"
+            ]
+          },
+          {
+            "move": "Nd3+",
+            "cp": 0,
+            "mate": null,
+            "depth": 15,
+            "pv": [
+              "Nd3+",
+              "Rxd3",
+              "Ke6",
+              "Rc3",
+              "Kd6",
+              "Rxc6+",
+              "Kxc6",
+              "Kb2",
+              "Kd7",
+              "Kc2",
+              "Kd8",
+              "Kd1"
+            ]
+          },
+          {
+            "move": "Nh3",
+            "cp": 0,
+            "mate": null,
+            "depth": 15,
+            "pv": [
+              "Nh3",
+              "Rxh3",
+              "Kd5",
+              "Rc3",
+              "Kd6",
+              "Rxc6+",
+              "Kxc6",
+              "Kb2",
+              "Kd7",
+              "Kc2",
+              "Kd8",
+              "Kc1"
+            ]
+          },
+          {
+            "move": "Ng6",
+            "cp": 0,
+            "mate": null,
+            "depth": 15,
+            "pv": [
+              "Ng6",
+              "Rxg6",
+              "Kd5",
+              "Rxc6",
+              "Kxc6",
+              "Kb2",
+              "Kd7",
+              "Kc2",
+              "Kd8",
+              "Kc1",
+              "Kd7",
+              "Kd1"
+            ]
+          },
+          {
+            "move": "Ne6",
+            "cp": 0,
+            "mate": null,
+            "depth": 15,
+            "pv": [
+              "Ne6",
+              "Rc3",
+              "Nc5",
+              "Rxc5+",
+              "Kd6",
+              "Rc3",
+              "Kd7",
+              "Rxc6",
+              "Kxc6",
+              "Kb2",
+              "Kd7",
+              "Kc2"
+            ]
+          },
+          {
+            "move": "Nh5",
+            "cp": -4,
+            "mate": null,
+            "depth": 15,
+            "pv": [
+              "Nh5",
+              "Rc3",
+              "Kd6",
+              "Rxc6+",
+              "Kxc6",
+              "Kd1",
+              "Kb7",
+              "Kc2",
+              "Ng3"
+            ]
+          }
+        ],
+        "endpointProbes": [
+          {
+            "moves": [
+              "Ne2+",
+              "Kd2",
+              "Nxg3"
+            ],
+            "fen": "8/8/2P5/4K3/8/6N1/3k4/8 b - - 0 2",
+            "minimumGainDuringEightPlyPV": 500,
+            "gainAfterEightPlyPV": 500,
+            "recoveryFen": "8/2P5/8/3K4/4N3/5k2/8/8 b - - 6 6",
+            "move": "Ke3",
+            "cp": 647,
+            "mate": null,
+            "depth": 16,
+            "pv": [
+              "Ke3",
+              "c7",
+              "Kf2",
+              "Ne4+",
+              "Kg2",
+              "Kd4",
+              "Kf3",
+              "Kd5",
+              "Kg2",
+              "Nc5",
+              "Kf1",
+              "c8=Q"
+            ]
+          },
+          {
+            "moves": [
+              "Ne2+",
+              "Kc2",
+              "Nxg3"
+            ],
+            "fen": "8/8/2P5/4K3/8/6N1/2k5/8 b - - 0 2",
+            "minimumGainDuringEightPlyPV": 500,
+            "gainAfterEightPlyPV": 500,
+            "recoveryFen": "8/2P5/8/3K4/3N4/8/4k3/8 b - - 6 6",
+            "move": "Kd2",
+            "cp": 667,
+            "mate": null,
+            "depth": 16,
+            "pv": [
+              "Kd2",
+              "c7",
+              "Ke1",
+              "Kd5",
+              "Kd2",
+              "Nf5",
+              "Ke2",
+              "Nd4+",
+              "Kd1",
+              "c8=Q",
+              "Ke1",
+              "Qc3+"
+            ]
+          },
+          {
+            "moves": [
+              "Ne2+",
+              "Kb2",
+              "Nxg3"
+            ],
+            "fen": "8/8/2P5/4K3/8/6N1/1k6/8 b - - 0 2",
+            "minimumGainDuringEightPlyPV": 500,
+            "gainAfterEightPlyPV": 500,
+            "recoveryFen": "8/2P5/3K4/2N5/8/8/1k6/8 b - - 2 6",
+            "move": "Ka2",
+            "cp": 654,
+            "mate": null,
+            "depth": 16,
+            "pv": [
+              "Ka2",
+              "Kd6",
+              "Kb2",
+              "Ne4",
+              "Ka1",
+              "c7",
+              "Kb2",
+              "Nc5",
+              "Ka3",
+              "c8=Q"
+            ]
+          },
+          {
+            "moves": [
+              "Ne2+",
+              "Kd1",
+              "Nxg3"
+            ],
+            "fen": "8/8/2P5/4K3/8/6N1/8/3k4 b - - 0 2",
+            "minimumGainDuringEightPlyPV": 500,
+            "gainAfterEightPlyPV": 500,
+            "recoveryFen": "8/2P5/8/4K3/4N3/8/8/3k4 w - - 3 5",
+            "move": "Ke1",
+            "cp": 635,
+            "mate": null,
+            "depth": 15,
+            "pv": [
+              "Ke1",
+              "c7",
+              "Kd2",
+              "Ne4+",
+              "Kd1"
+            ]
+          },
+          {
+            "moves": [
+              "Ne2+",
+              "Kb1",
+              "Nxg3"
+            ],
+            "fen": "8/8/2P5/4K3/8/6N1/8/1k6 b - - 0 2",
+            "minimumGainDuringEightPlyPV": 500,
+            "gainAfterEightPlyPV": 500,
+            "recoveryFen": "8/2P5/3K4/8/8/8/3N4/3k4 b - - 6 6",
+            "move": "Kc2",
+            "cp": 651,
+            "mate": null,
+            "depth": 17,
+            "pv": [
+              "Kc2",
+              "c7",
+              "Kd1",
+              "Nf1",
+              "Ke1",
+              "Nd2",
+              "Kd1",
+              "Kd6",
+              "Ke2",
+              "Kd5",
+              "Kxd2",
+              "Kc6"
+            ]
+          }
+        ],
+        "engine": {
+          "identity": {
+            "binarySha256": "2604a5c457bd7d288bdab58d3ee413f715a6afd26d44b29f6160fa49d0f7f0b2",
+            "options": {
+              "Threads": 1,
+              "Hash": 64
+            },
+            "externalNetworks": {},
+            "chessVersion": "1.11.2",
+            "hashPolicy": "clear-before-every-request-v1",
+            "cacheVersion": 1
+          },
+          "name": {
+            "name": "Stockfish 17",
+            "author": "the Stockfish developers (see AUTHORS file)"
+          }
+        },
+        "status": "needs-editorial-review",
+        "metrics": {
+          "hits": 6,
+          "misses": 0,
+          "engineCalls": 0,
+          "engineSeconds": 0.0
+        },
+        "reused": false,
+        "wallSeconds": 0.20773341700260062
+      },
+      "decision": {
+        "candidateIndex": 1,
+        "fen": "8/8/2P5/4K3/5N2/6r1/8/2k5 w - - 0 1",
+        "root": "Ne2+",
+        "candidateHash": "227ed7ad85262c427e58dc5f62f13adf00fa5ee05f86007e9a1c670554086376",
+        "decision": "keep",
+        "mechanism": "royal-fork-introduction",
+        "reason": "A clean direct Knight fork: check makes the King move and leaves the Rook capturable. No initial capture, simple short payoff. Retain as the baseline royal-fork example.",
+        "reviewer": "fork_integration",
+        "distinctness": "royal-fork-introduction",
+        "evidenceSha256": "ba69f54ac111b082adf9080d589f54be60a713e55c124ee4500fc367d35a9005"
+      }
+    },
+    {
+      "exercise": {
+        "id": "fork-beginner-02",
+        "title": "Tấn công đôi bằng Mã · 2",
+        "beginner": true,
+        "goal": "material",
+        "prompt": "Tạo đòn tấn công đôi rồi thu lợi vật chất.",
+        "mode": "interactive",
+        "outcome": "fork",
+        "fen": "8/8/5k1K/2P1N3/8/8/5r2/8 w - - 0 1",
+        "moves": [
+          "Ng4+",
+          "Kf7",
+          "Nxf2"
+        ],
+        "alternativeLines": [
+          [
+            "Ng4+",
+            "Ke7",
+            "Nxf2"
+          ],
+          [
+            "Ng4+",
+            "Ke6",
+            "Nxf2"
+          ],
+          [
+            "Ng4+",
+            "Kf5",
+            "Nxf2"
+          ]
+        ],
+        "source": "original-composition",
+        "hints": [
+          "Tìm nước đi tạo hai mối đe dọa. Kiểm tra nước đáp và khả năng bắt lại."
+        ],
+        "solution": "Ng4+ — Mã từ e5 đến g4. Mã e5 đang bị Vua f6 tấn công. Ng4+ giúp Mã rời ô bị đe dọa với nhịp chiếu; sau đó bắt Xe ở f2."
+      },
+      "review": {
+        "candidate": {
+          "fen": "8/8/5k1K/2P1N3/8/8/5r2/8 w - - 0 1",
+          "root": "Ng4+",
+          "moves": [
+            "Ng4+",
+            "Kf7",
+            "Nxf2"
+          ],
+          "forkPiece": "N",
+          "targets": [
+            "f2",
+            "f6"
+          ],
+          "teachingFamily": "N-royal-rook",
+          "distinctness": "Attacked forker escapes with a fork; safe unprotected landing square; targets lack a shared defender; 4 legal defensive choices.",
+          "source": "original-composition",
+          "startingMaterial": -1,
+          "localEvidence": {
+            "lines": [
+              [
+                "Ng4+",
+                "Kf7",
+                "Nxf2"
+              ],
+              [
+                "Ng4+",
+                "Ke7",
+                "Nxf2"
+              ],
+              [
+                "Ng4+",
+                "Ke6",
+                "Nxf2"
+              ],
+              [
+                "Ng4+",
+                "Kf5",
+                "Nxf2"
+              ]
+            ],
+            "minimumGain": 5,
+            "targets": [
+              "f2",
+              "f6"
+            ],
+            "checking": true
+          },
+          "mechanism": [
+            true,
+            false,
+            false,
+            false
+          ],
+          "constructiveAttempts": 12
+        },
+        "candidateHash": "08154e611c462841438e7bd27c95282eff936974bb606de3d6525848d8967981",
+        "verificationVersion": "42438004b5d0397ca6bbf1905d52da892d8908797a65ccb1808816087a334cfa",
+        "topic": "fork",
+        "settings": {
+          "rootNodes": 200000,
+          "rootMultiPV": "every legal move",
+          "endpointNodesEach": 50000
+        },
+        "flags": [],
+        "roots": [
+          {
+            "move": "Kh7",
+            "targets": [],
+            "forkWin": false,
+            "immediateCaptureGain": false,
+            "nonForkShortGain": false
+          },
+          {
+            "move": "Kh5",
+            "targets": [],
+            "forkWin": false,
+            "immediateCaptureGain": false,
+            "nonForkShortGain": false
+          },
+          {
+            "move": "Nf7",
+            "targets": [],
+            "forkWin": false,
+            "immediateCaptureGain": false,
+            "nonForkShortGain": false
+          },
+          {
+            "move": "Nd7+",
+            "targets": [],
+            "forkWin": false,
+            "immediateCaptureGain": false,
+            "nonForkShortGain": false
+          },
+          {
+            "move": "Ng6",
+            "targets": [],
+            "forkWin": false,
+            "immediateCaptureGain": false,
+            "nonForkShortGain": false
+          },
+          {
+            "move": "Nc6",
+            "targets": [],
+            "forkWin": false,
+            "immediateCaptureGain": false,
+            "nonForkShortGain": false
+          },
+          {
+            "move": "Ng4+",
+            "targets": [
+              "f2",
+              "f6"
+            ],
+            "forkWin": true,
+            "immediateCaptureGain": false,
+            "nonForkShortGain": false
+          },
+          {
+            "move": "Nc4",
+            "targets": [],
+            "forkWin": false,
+            "immediateCaptureGain": false,
+            "nonForkShortGain": false
+          },
+          {
+            "move": "Nf3",
+            "targets": [],
+            "forkWin": false,
+            "immediateCaptureGain": false,
+            "nonForkShortGain": false
+          },
+          {
+            "move": "Nd3",
+            "targets": [],
+            "forkWin": false,
+            "immediateCaptureGain": false,
+            "nonForkShortGain": false
+          },
+          {
+            "move": "c6",
+            "targets": [],
+            "forkWin": false,
+            "immediateCaptureGain": false,
+            "nonForkShortGain": false
+          }
+        ],
+        "lines": [
+          [
+            "Ng4+",
+            "Kf7",
+            "Nxf2"
+          ],
+          [
+            "Ng4+",
+            "Ke7",
+            "Nxf2"
+          ],
+          [
+            "Ng4+",
+            "Ke6",
+            "Nxf2"
+          ],
+          [
+            "Ng4+",
+            "Kf5",
+            "Nxf2"
+          ]
+        ],
+        "shortMates": {
+          "immediate": [],
+          "inTwoSolverMoves": []
+        },
+        "initialMaterialCp": -100,
+        "engineRoots": [
+          {
+            "move": "Ng4+",
+            "cp": 549,
+            "mate": null,
+            "depth": 18,
+            "pv": [
+              "Ng4+",
+              "Kf5",
+              "Nxf2",
+              "Ke6",
+              "Kg7",
+              "Kd7",
+              "Kf6",
+              "Kc6",
+              "Nd3",
+              "Kb7",
+              "Ke7",
+              "Kc7"
+            ]
+          },
+          {
+            "move": "Nd7+",
+            "cp": 0,
+            "mate": null,
+            "depth": 18,
+            "pv": [
+              "Nd7+",
+              "Ke6",
+              "c6",
+              "Rc2",
+              "Kg7",
+              "Rg2+",
+              "Kf8",
+              "Ra2",
+              "Kg7",
+              "Rg2+"
+            ]
+          },
+          {
+            "move": "Kh7",
+            "cp": -597,
+            "mate": null,
+            "depth": 18,
+            "pv": [
+              "Kh7",
+              "Kxe5",
+              "Kg6",
+              "Ke6",
+              "c6",
+              "Rc2",
+              "c7",
+              "Rxc7",
+              "Kg5",
+              "Kf7",
+              "Kh6",
+              "Ke8"
+            ]
+          },
+          {
+            "move": "Kh5",
+            "cp": -590,
+            "mate": null,
+            "depth": 17,
+            "pv": [
+              "Kh5",
+              "Rf5+",
+              "Kh4",
+              "Rxe5",
+              "c6",
+              "Re7",
+              "c7",
+              "Rxc7",
+              "Kg4",
+              "Kf7",
+              "Kg5",
+              "Kg8"
+            ]
+          },
+          {
+            "move": "Nf3",
+            "cp": -602,
+            "mate": null,
+            "depth": 17,
+            "pv": [
+              "Nf3",
+              "Rxf3",
+              "Kh5",
+              "Rf5+",
+              "Kg4",
+              "Rf2",
+              "c6",
+              "Rc2",
+              "c7",
+              "Rxc7",
+              "Kf4",
+              "Re7"
+            ]
+          },
+          {
+            "move": "Ng6",
+            "cp": null,
+            "mate": -2,
+            "depth": 17,
+            "pv": [
+              "Ng6",
+              "Rh2+",
+              "Nh4",
+              "Rxh4#"
+            ]
+          },
+          {
+            "move": "c6",
+            "cp": null,
+            "mate": -1,
+            "depth": 17,
+            "pv": [
+              "c6",
+              "Rh2#"
+            ]
+          },
+          {
+            "move": "Nd3",
+            "cp": null,
+            "mate": -1,
+            "depth": 17,
+            "pv": [
+              "Nd3",
+              "Rh2#"
+            ]
+          },
+          {
+            "move": "Nc4",
+            "cp": null,
+            "mate": -1,
+            "depth": 17,
+            "pv": [
+              "Nc4",
+              "Rh2#"
+            ]
+          },
+          {
+            "move": "Nc6",
+            "cp": null,
+            "mate": -1,
+            "depth": 17,
+            "pv": [
+              "Nc6",
+              "Rh2#"
+            ]
+          },
+          {
+            "move": "Nf7",
+            "cp": null,
+            "mate": -1,
+            "depth": 17,
+            "pv": [
+              "Nf7",
+              "Rh2#"
+            ]
+          }
+        ],
+        "endpointProbes": [
+          {
+            "moves": [
+              "Ng4+",
+              "Kf7",
+              "Nxf2"
+            ],
+            "fen": "8/5k2/7K/2P5/8/8/5N2/8 b - - 0 2",
+            "minimumGainDuringEightPlyPV": 500,
+            "gainAfterEightPlyPV": 500,
+            "recoveryFen": "8/8/2k1K3/2P5/8/3N4/8/8 b - - 8 6",
+            "move": "Ke6",
+            "cp": 532,
+            "mate": null,
+            "depth": 16,
+            "pv": [
+              "Ke6",
+              "Kg6",
+              "Ke5",
+              "Nd3+",
+              "Kd5",
+              "Kf6",
+              "Kc6",
+              "Ke6",
+              "Kc7",
+              "Ke5",
+              "Kb8",
+              "Kd5"
+            ]
+          },
+          {
+            "moves": [
+              "Ng4+",
+              "Ke7",
+              "Nxf2"
+            ],
+            "fen": "8/4k3/7K/2P5/8/8/5N2/8 b - - 0 2",
+            "minimumGainDuringEightPlyPV": 500,
+            "gainAfterEightPlyPV": 500,
+            "recoveryFen": "8/3k4/5K2/2P5/8/3N4/8/8 b - - 8 6",
+            "move": "Kf6",
+            "cp": 549,
+            "mate": null,
+            "depth": 17,
+            "pv": [
+              "Kf6",
+              "Nd3",
+              "Kf7",
+              "Kg5",
+              "Ke6",
+              "Kg6",
+              "Kd7",
+              "Kf6",
+              "Kc6",
+              "Ke6",
+              "Kc7",
+              "Kd5"
+            ]
+          },
+          {
+            "moves": [
+              "Ng4+",
+              "Ke6",
+              "Nxf2"
+            ],
+            "fen": "8/8/4k2K/2P5/8/8/5N2/8 b - - 0 2",
+            "minimumGainDuringEightPlyPV": 500,
+            "gainAfterEightPlyPV": 500,
+            "recoveryFen": "8/8/5K2/2Pk4/8/3N4/8/8 b - - 8 6",
+            "move": "Ke5",
+            "cp": 540,
+            "mate": null,
+            "depth": 16,
+            "pv": [
+              "Ke5",
+              "Kg5",
+              "Kd5",
+              "Nd3",
+              "Ke6",
+              "Kg6",
+              "Kd5",
+              "Kf6",
+              "Kc6",
+              "Ke5",
+              "Kb7",
+              "Kd5"
+            ]
+          },
+          {
+            "moves": [
+              "Ng4+",
+              "Kf5",
+              "Nxf2"
+            ],
+            "fen": "8/8/7K/2P2k2/8/8/5N2/8 b - - 0 2",
+            "minimumGainDuringEightPlyPV": 500,
+            "gainAfterEightPlyPV": 500,
+            "recoveryFen": "8/4K3/2k5/2P5/8/3N4/8/8 b - - 8 6",
+            "move": "Ke5",
+            "cp": 539,
+            "mate": null,
+            "depth": 17,
+            "pv": [
+              "Ke5",
+              "Kg7",
+              "Ke6",
+              "Kf8",
+              "Kd5",
+              "Nd3",
+              "Kc6",
+              "Ke7",
+              "Kc7",
+              "Nb4",
+              "Kb8",
+              "Ke6"
+            ]
+          }
+        ],
+        "engine": {
+          "identity": {
+            "binarySha256": "2604a5c457bd7d288bdab58d3ee413f715a6afd26d44b29f6160fa49d0f7f0b2",
+            "options": {
+              "Threads": 1,
+              "Hash": 64
+            },
+            "externalNetworks": {},
+            "chessVersion": "1.11.2",
+            "hashPolicy": "clear-before-every-request-v1",
+            "cacheVersion": 1
+          },
+          "name": {
+            "name": "Stockfish 17",
+            "author": "the Stockfish developers (see AUTHORS file)"
+          }
+        },
+        "status": "needs-editorial-review",
+        "metrics": {
+          "hits": 5,
+          "misses": 0,
+          "engineCalls": 0,
+          "engineSeconds": 0.0
+        },
+        "reused": false,
+        "wallSeconds": 0.1986870840046322
+      },
+      "decision": {
+        "candidateIndex": 2,
+        "fen": "8/8/5k1K/2P1N3/8/8/5r2/8 w - - 0 1",
+        "root": "Ng4+",
+        "candidateHash": "08154e611c462841438e7bd27c95282eff936974bb606de3d6525848d8967981",
+        "decision": "keep",
+        "mechanism": "escape-king-attack-with-tempo",
+        "reason": "The Knight e5 is attacked by the King f6. Ng4+ solves its safety problem with tempo and wins the Rook f2. The decision adds escaping an immediate attack to the baseline royal fork.",
+        "reviewer": "fork_integration",
+        "distinctness": "escape-king-attack-with-tempo",
+        "evidenceSha256": "5139a56c79b255eb1111e5828fa5a850401fe24b030e2034a0d03acf9f12e7f0"
+      }
+    },
+    {
+      "exercise": {
+        "id": "fork-beginner-03",
+        "title": "Tấn công đôi bằng Xe · 3",
+        "beginner": true,
+        "goal": "material",
+        "prompt": "Tạo đòn tấn công đôi rồi thu lợi vật chất.",
+        "mode": "interactive",
+        "outcome": "fork",
+        "fen": "8/8/5R2/8/2K5/8/k7/4b2n w - - 0 1",
+        "moves": [
+          "Rf1",
+          "Bf2",
+          "Rxh1"
+        ],
+        "alternativeLines": [
+          [
+            "Rf1",
+            "Ka3",
+            "Rxh1"
+          ],
+          [
+            "Rf1",
+            "Ka3",
+            "Rxe1"
+          ],
+          [
+            "Rf1",
+            "Kb2",
+            "Rxh1"
+          ],
+          [
+            "Rf1",
+            "Kb2",
+            "Rxe1"
+          ],
+          [
+            "Rf1",
+            "Kb1",
+            "Rxh1"
+          ],
+          [
+            "Rf1",
+            "Kb1",
+            "Rxe1+"
+          ],
+          [
+            "Rf1",
+            "Ka1",
+            "Rxh1"
+          ],
+          [
+            "Rf1",
+            "Ka1",
+            "Rxe1+"
+          ],
+          [
+            "Rf1",
+            "Ng3",
+            "Rxe1"
+          ],
+          [
+            "Rf1",
+            "Nf2",
+            "Rxe1"
+          ],
+          [
+            "Rf1",
+            "Ba5",
+            "Rxh1"
+          ],
+          [
+            "Rf1",
+            "Bh4",
+            "Rxh1"
+          ],
+          [
+            "Rf1",
+            "Bb4",
+            "Rxh1"
+          ],
+          [
+            "Rf1",
+            "Bg3",
+            "Rxh1"
+          ],
+          [
+            "Rf1",
+            "Bc3",
+            "Rxh1"
+          ],
+          [
+            "Rf1",
+            "Bd2",
+            "Rxh1"
+          ]
+        ],
+        "source": "original-composition",
+        "hints": [
+          "Tìm nước đi tạo hai mối đe dọa. Kiểm tra nước đáp và khả năng bắt lại."
+        ],
+        "solution": "Rf1 — Xe từ f6 đến f1. Xe đến f1 tấn công đồng thời Tượng e1 và Mã h1. Sau nước đáp, chọn mục tiêu còn có thể bắt an toàn."
+      },
+      "review": {
+        "candidate": {
+          "fen": "8/8/5R2/8/2K5/8/k7/4b2n w - - 0 1",
+          "root": "Rf1",
+          "moves": [
+            "Rf1",
+            "Ka3",
+            "Rxh1"
+          ],
+          "forkPiece": "R",
+          "targets": [
+            "e1",
+            "h1"
+          ],
+          "teachingFamily": "R-quiet-minors",
+          "distinctness": "Create a direct fork; safe unprotected landing square; targets lack a shared defender; 13 legal defensive choices.",
+          "source": "original-composition",
+          "startingMaterial": -1,
+          "localEvidence": {
+            "lines": [
+              [
+                "Rf1",
+                "Ka3",
+                "Rxh1"
+              ],
+              [
+                "Rf1",
+                "Kb2",
+                "Rxh1"
+              ],
+              [
+                "Rf1",
+                "Kb1",
+                "Rxh1"
+              ],
+              [
+                "Rf1",
+                "Ka1",
+                "Rxh1"
+              ],
+              [
+                "Rf1",
+                "Ng3",
+                "Rxe1"
+              ],
+              [
+                "Rf1",
+                "Nf2",
+                "Rxe1"
+              ],
+              [
+                "Rf1",
+                "Ba5",
+                "Rxh1"
+              ],
+              [
+                "Rf1",
+                "Bh4",
+                "Rxh1"
+              ],
+              [
+                "Rf1",
+                "Bb4",
+                "Rxh1"
+              ],
+              [
+                "Rf1",
+                "Bg3",
+                "Rxh1"
+              ],
+              [
+                "Rf1",
+                "Bc3",
+                "Rxh1"
+              ],
+              [
+                "Rf1",
+                "Bf2",
+                "Rxh1"
+              ],
+              [
+                "Rf1",
+                "Bd2",
+                "Rxh1"
+              ]
+            ],
+            "minimumGain": 3,
+            "targets": [
+              "e1",
+              "h1"
+            ],
+            "checking": false
+          },
+          "mechanism": [
+            false,
+            false,
+            false,
+            false
+          ],
+          "constructiveAttempts": 142
+        },
+        "candidateHash": "75b68691d6c6d7912c1851ca013a03e8fa15a79426306caccb7523ad9ac709f8",
+        "verificationVersion": "42438004b5d0397ca6bbf1905d52da892d8908797a65ccb1808816087a334cfa",
+        "topic": "fork",
+        "settings": {
+          "rootNodes": 200000,
+          "rootMultiPV": "every legal move",
+          "endpointNodesEach": 50000
+        },
+        "flags": [],
+        "roots": [
+          {
+            "move": "Rf8",
+            "targets": [],
+            "forkWin": false,
+            "immediateCaptureGain": false,
+            "nonForkShortGain": false
+          },
+          {
+            "move": "Rf7",
+            "targets": [],
+            "forkWin": false,
+            "immediateCaptureGain": false,
+            "nonForkShortGain": false
+          },
+          {
+            "move": "Rh6",
+            "targets": [],
+            "forkWin": false,
+            "immediateCaptureGain": false,
+            "nonForkShortGain": false
+          },
+          {
+            "move": "Rg6",
+            "targets": [],
+            "forkWin": false,
+            "immediateCaptureGain": false,
+            "nonForkShortGain": false
+          },
+          {
+            "move": "Re6",
+            "targets": [],
+            "forkWin": false,
+            "immediateCaptureGain": false,
+            "nonForkShortGain": false
+          },
+          {
+            "move": "Rd6",
+            "targets": [],
+            "forkWin": false,
+            "immediateCaptureGain": false,
+            "nonForkShortGain": false
+          },
+          {
+            "move": "Rc6",
+            "targets": [],
+            "forkWin": false,
+            "immediateCaptureGain": false,
+            "nonForkShortGain": false
+          },
+          {
+            "move": "Rb6",
+            "targets": [],
+            "forkWin": false,
+            "immediateCaptureGain": false,
+            "nonForkShortGain": false
+          },
+          {
+            "move": "Ra6+",
+            "targets": [],
+            "forkWin": false,
+            "immediateCaptureGain": false,
+            "nonForkShortGain": false
+          },
+          {
+            "move": "Rf5",
+            "targets": [],
+            "forkWin": false,
+            "immediateCaptureGain": false,
+            "nonForkShortGain": false
+          },
+          {
+            "move": "Rf4",
+            "targets": [],
+            "forkWin": false,
+            "immediateCaptureGain": false,
+            "nonForkShortGain": false
+          },
+          {
+            "move": "Rf3",
+            "targets": [],
+            "forkWin": false,
+            "immediateCaptureGain": false,
+            "nonForkShortGain": false
+          },
+          {
+            "move": "Rf2+",
+            "targets": [],
+            "forkWin": false,
+            "immediateCaptureGain": false,
+            "nonForkShortGain": false
+          },
+          {
+            "move": "Rf1",
+            "targets": [
+              "e1",
+              "h1"
+            ],
+            "forkWin": true,
+            "immediateCaptureGain": false,
+            "nonForkShortGain": false
+          },
+          {
+            "move": "Kd5",
+            "targets": [],
+            "forkWin": false,
+            "immediateCaptureGain": false,
+            "nonForkShortGain": false
+          },
+          {
+            "move": "Kc5",
+            "targets": [],
+            "forkWin": false,
+            "immediateCaptureGain": false,
+            "nonForkShortGain": false
+          },
+          {
+            "move": "Kb5",
+            "targets": [],
+            "forkWin": false,
+            "immediateCaptureGain": false,
+            "nonForkShortGain": false
+          },
+          {
+            "move": "Kd4",
+            "targets": [],
+            "forkWin": false,
+            "immediateCaptureGain": false,
+            "nonForkShortGain": false
+          },
+          {
+            "move": "Kd3",
+            "targets": [],
+            "forkWin": false,
+            "immediateCaptureGain": false,
+            "nonForkShortGain": false
+          }
+        ],
+        "lines": [
+          [
+            "Rf1",
+            "Ka3",
+            "Rxh1"
+          ],
+          [
+            "Rf1",
+            "Ka3",
+            "Rxe1"
+          ],
+          [
+            "Rf1",
+            "Kb2",
+            "Rxh1"
+          ],
+          [
+            "Rf1",
+            "Kb2",
+            "Rxe1"
+          ],
+          [
+            "Rf1",
+            "Kb1",
+            "Rxh1"
+          ],
+          [
+            "Rf1",
+            "Kb1",
+            "Rxe1+"
+          ],
+          [
+            "Rf1",
+            "Ka1",
+            "Rxh1"
+          ],
+          [
+            "Rf1",
+            "Ka1",
+            "Rxe1+"
+          ],
+          [
+            "Rf1",
+            "Ng3",
+            "Rxe1"
+          ],
+          [
+            "Rf1",
+            "Nf2",
+            "Rxe1"
+          ],
+          [
+            "Rf1",
+            "Ba5",
+            "Rxh1"
+          ],
+          [
+            "Rf1",
+            "Bh4",
+            "Rxh1"
+          ],
+          [
+            "Rf1",
+            "Bb4",
+            "Rxh1"
+          ],
+          [
+            "Rf1",
+            "Bg3",
+            "Rxh1"
+          ],
+          [
+            "Rf1",
+            "Bc3",
+            "Rxh1"
+          ],
+          [
+            "Rf1",
+            "Bf2",
+            "Rxh1"
+          ],
+          [
+            "Rf1",
+            "Bd2",
+            "Rxh1"
+          ]
+        ],
+        "shortMates": {
+          "immediate": [],
+          "inTwoSolverMoves": []
+        },
+        "initialMaterialCp": -100,
+        "engineRoots": [
+          {
+            "move": "Rf1",
+            "cp": 58,
+            "mate": null,
+            "depth": 11,
+            "pv": [
+              "Rf1",
+              "Bg3",
+              "Rxh1",
+              "Be5",
+              "Rh7",
+              "Kb2"
+            ]
+          },
+          {
+            "move": "Rf8",
+            "cp": 46,
+            "mate": null,
+            "depth": 11,
+            "pv": [
+              "Rf8",
+              "Ng3",
+              "Rf3",
+              "Kb2",
+              "Rxg3",
+              "Bxg3",
+              "Kd5",
+              "Ka3",
+              "Ke6"
+            ]
+          },
+          {
+            "move": "Kd3",
+            "cp": 44,
+            "mate": null,
+            "depth": 11,
+            "pv": [
+              "Kd3",
+              "Ng3",
+              "Re6",
+              "Bf2",
+              "Re2+",
+              "Nxe2",
+              "Kxe2",
+              "Kb1"
+            ]
+          },
+          {
+            "move": "Rg6",
+            "cp": 40,
+            "mate": null,
+            "depth": 11,
+            "pv": [
+              "Rg6",
+              "Ng3"
+            ]
+          },
+          {
+            "move": "Rf3",
+            "cp": 47,
+            "mate": null,
+            "depth": 10,
+            "pv": [
+              "Rf3",
+              "Ba5",
+              "Rh3",
+              "Nf2",
+              "Rh2",
+              "Be1",
+              "Rxf2+",
+              "Bxf2",
+              "Kd5",
+              "Kb1",
+              "Ke6",
+              "Bg1"
+            ]
+          },
+          {
+            "move": "Rf7",
+            "cp": 40,
+            "mate": null,
+            "depth": 10,
+            "pv": [
+              "Rf7",
+              "Ng3",
+              "Kd3",
+              "Kb2",
+              "Re7",
+              "Bf2",
+              "Re2+",
+              "Nxe2",
+              "Kxe2",
+              "Be1",
+              "Kd1"
+            ]
+          },
+          {
+            "move": "Rd6",
+            "cp": 40,
+            "mate": null,
+            "depth": 10,
+            "pv": [
+              "Rd6",
+              "Ng3",
+              "Re6",
+              "Bf2",
+              "Rf6",
+              "Be1",
+              "Rf3",
+              "Ne4",
+              "Re3",
+              "Nd6+",
+              "Kd5"
+            ]
+          },
+          {
+            "move": "Rf5",
+            "cp": 40,
+            "mate": null,
+            "depth": 10,
+            "pv": [
+              "Rf5",
+              "Ng3",
+              "Rf3",
+              "Ne4",
+              "Re3",
+              "Nd6+",
+              "Kd5"
+            ]
+          },
+          {
+            "move": "Rh6",
+            "cp": 40,
+            "mate": null,
+            "depth": 10,
+            "pv": [
+              "Rh6",
+              "Ng3",
+              "Re6",
+              "Bf2",
+              "Rf6",
+              "Be1",
+              "Rf3",
+              "Ne4",
+              "Re3",
+              "Nd6+",
+              "Kd5"
+            ]
+          },
+          {
+            "move": "Kb5",
+            "cp": 38,
+            "mate": null,
+            "depth": 10,
+            "pv": [
+              "Kb5",
+              "Bc3",
+              "Rf1",
+              "Ng3",
+              "Rf3",
+              "Ne4",
+              "Rxc3",
+              "Nxc3+",
+              "Kb4",
+              "Nd5+",
+              "Ka5"
+            ]
+          },
+          {
+            "move": "Kd4",
+            "cp": 37,
+            "mate": null,
+            "depth": 10,
+            "pv": [
+              "Kd4",
+              "Ng3",
+              "Re6",
+              "Bf2+",
+              "Kc3",
+              "Kb1",
+              "Kb3",
+              "Nf5",
+              "Rf6"
+            ]
+          },
+          {
+            "move": "Re6",
+            "cp": 37,
+            "mate": null,
+            "depth": 10,
+            "pv": [
+              "Re6",
+              "Bg3",
+              "Kc3",
+              "Kb1",
+              "Re2",
+              "Kc1",
+              "Re3",
+              "Bf2",
+              "Rf3",
+              "Be1+",
+              "Kb3"
+            ]
+          },
+          {
+            "move": "Kd5",
+            "cp": 37,
+            "mate": null,
+            "depth": 10,
+            "pv": [
+              "Kd5",
+              "Ng3",
+              "Rf3",
+              "Nh5",
+              "Rf7",
+              "Ng3",
+              "Ra7+",
+              "Kb2"
+            ]
+          },
+          {
+            "move": "Rf4",
+            "cp": 37,
+            "mate": null,
+            "depth": 10,
+            "pv": [
+              "Rf4",
+              "Ba5",
+              "Rf7",
+              "Bd8",
+              "Rh7",
+              "Ng3",
+              "Kd3"
+            ]
+          },
+          {
+            "move": "Rb6",
+            "cp": 36,
+            "mate": null,
+            "depth": 10,
+            "pv": [
+              "Rb6",
+              "Bg3",
+              "Kd4"
+            ]
+          },
+          {
+            "move": "Kc5",
+            "cp": 35,
+            "mate": null,
+            "depth": 10,
+            "pv": [
+              "Kc5",
+              "Ng3",
+              "Re6",
+              "Bf2+",
+              "Kd5",
+              "Kb1",
+              "Re5"
+            ]
+          },
+          {
+            "move": "Rc6",
+            "cp": 30,
+            "mate": null,
+            "depth": 10,
+            "pv": [
+              "Rc6",
+              "Kb2",
+              "Re6",
+              "Bg3",
+              "Re3",
+              "Bf4",
+              "Rf3",
+              "Be5"
+            ]
+          },
+          {
+            "move": "Ra6+",
+            "cp": 30,
+            "mate": null,
+            "depth": 10,
+            "pv": [
+              "Ra6+",
+              "Kb1",
+              "Rf6",
+              "Nf2",
+              "Rxf2",
+              "Bxf2",
+              "Kd3",
+              "Bd4",
+              "Ke4",
+              "Kc2",
+              "Kf3"
+            ]
+          },
+          {
+            "move": "Rf2+",
+            "cp": -152,
+            "mate": null,
+            "depth": 10,
+            "pv": [
+              "Rf2+",
+              "Bxf2",
+              "Kd5",
+              "Ba7",
+              "Ke6",
+              "Nf2",
+              "Kf7",
+              "Ne4"
+            ]
+          }
+        ],
+        "endpointProbes": [
+          {
+            "moves": [
+              "Rf1",
+              "Ka3",
+              "Rxh1"
+            ],
+            "fen": "8/8/8/8/2K5/k7/8/4b2R b - - 0 2",
+            "minimumGainDuringEightPlyPV": 300,
+            "gainAfterEightPlyPV": 300,
+            "recoveryFen": "8/8/8/8/3K1b2/8/4R3/2k5 b - - 8 6",
+            "move": "Bd2",
+            "cp": 62,
+            "mate": null,
+            "depth": 16,
+            "pv": [
+              "Bd2",
+              "Rh4",
+              "Kb2",
+              "Rh2",
+              "Kc1",
+              "Kd4",
+              "Bf4",
+              "Re2"
+            ]
+          },
+          {
+            "moves": [
+              "Rf1",
+              "Ka3",
+              "Rxe1"
+            ],
+            "fen": "8/8/8/8/2K5/k7/8/4R2n b - - 0 2",
+            "minimumGainDuringEightPlyPV": 300,
+            "gainAfterEightPlyPV": 600,
+            "recoveryFen": "8/8/8/8/8/3K4/6R1/3k4 b - - 4 6",
+            "move": "Ng3",
+            "cp": 540,
+            "mate": null,
+            "depth": 17,
+            "pv": [
+              "Ng3",
+              "Re3+",
+              "Kb2",
+              "Rxg3",
+              "Kc2",
+              "Rg2+",
+              "Kd1",
+              "Kd3",
+              "Ke1",
+              "Rg1+",
+              "Kf2",
+              "Rc1"
+            ]
+          },
+          {
+            "moves": [
+              "Rf1",
+              "Kb2",
+              "Rxh1"
+            ],
+            "fen": "8/8/8/8/2K5/8/1k6/4b2R b - - 0 2",
+            "minimumGainDuringEightPlyPV": 300,
+            "gainAfterEightPlyPV": 300,
+            "recoveryFen": "8/8/8/8/8/1k1K2b1/8/5R2 w - - 7 6",
+            "move": "Bg3",
+            "cp": 62,
+            "mate": null,
+            "depth": 15,
+            "pv": [
+              "Bg3",
+              "Kd3",
+              "Kb3",
+              "Rg1",
+              "Bf2",
+              "Rf1",
+              "Bg3"
+            ]
+          },
+          {
+            "moves": [
+              "Rf1",
+              "Kb2",
+              "Rxe1"
+            ],
+            "fen": "8/8/8/8/2K5/8/1k6/4R2n b - - 0 2",
+            "minimumGainDuringEightPlyPV": 300,
+            "gainAfterEightPlyPV": 300,
+            "recoveryFen": "8/8/8/8/2K5/4R1n1/1k6/8 b - - 2 3",
+            "move": "Ng3",
+            "cp": 262,
+            "mate": null,
+            "depth": 17,
+            "pv": [
+              "Ng3",
+              "Re3"
+            ]
+          },
+          {
+            "moves": [
+              "Rf1",
+              "Kb1",
+              "Rxh1"
+            ],
+            "fen": "8/8/8/8/2K5/8/8/1k2b2R b - - 0 2",
+            "minimumGainDuringEightPlyPV": 300,
+            "gainAfterEightPlyPV": 600,
+            "recoveryFen": "8/8/8/8/8/3K4/4R3/3k4 b - - 6 6",
+            "move": "Kc2",
+            "cp": null,
+            "mate": 8,
+            "depth": 29,
+            "pv": [
+              "Kc2",
+              "Rxe1",
+              "Kd2",
+              "Re7",
+              "Kc2",
+              "Re2+",
+              "Kd1",
+              "Kd3",
+              "Kc1",
+              "Kc3",
+              "Kb1",
+              "Re1+"
+            ]
+          },
+          {
+            "moves": [
+              "Rf1",
+              "Kb1",
+              "Rxe1+"
+            ],
+            "fen": "8/8/8/8/2K5/8/8/1k2R2n b - - 0 2",
+            "minimumGainDuringEightPlyPV": 300,
+            "gainAfterEightPlyPV": 600,
+            "recoveryFen": "8/8/8/8/8/8/1K5R/3k4 b - - 6 6",
+            "move": "Kc2",
+            "cp": 529,
+            "mate": null,
+            "depth": 17,
+            "pv": [
+              "Kc2",
+              "Rxh1",
+              "Kd2",
+              "Rh2+",
+              "Kc1",
+              "Kb3",
+              "Kd1",
+              "Kb2",
+              "Ke1",
+              "Kc1",
+              "Kf1",
+              "Rd2"
+            ]
+          },
+          {
+            "moves": [
+              "Rf1",
+              "Ka1",
+              "Rxh1"
+            ],
+            "fen": "8/8/8/8/2K5/8/8/k3b2R b - - 0 2",
+            "minimumGainDuringEightPlyPV": 300,
+            "gainAfterEightPlyPV": 600,
+            "recoveryFen": "8/8/8/8/8/1K1k4/8/4R3 b - - 6 6",
+            "move": "Kb2",
+            "cp": 542,
+            "mate": null,
+            "depth": 17,
+            "pv": [
+              "Kb2",
+              "Rxe1",
+              "Kc2",
+              "Re4",
+              "Kd2",
+              "Kb3",
+              "Kd3",
+              "Re1",
+              "Kd2",
+              "Re7",
+              "Kd3",
+              "Re6"
+            ]
+          },
+          {
+            "moves": [
+              "Rf1",
+              "Ka1",
+              "Rxe1+"
+            ],
+            "fen": "8/8/8/8/2K5/8/8/k3R2n b - - 0 2",
+            "minimumGainDuringEightPlyPV": 300,
+            "gainAfterEightPlyPV": 600,
+            "recoveryFen": "8/8/8/8/8/3K4/2R5/4k3 b - - 6 6",
+            "move": "Kb2",
+            "cp": 567,
+            "mate": null,
+            "depth": 18,
+            "pv": [
+              "Kb2",
+              "Rxh1",
+              "Kc2",
+              "Rh2+",
+              "Kd1",
+              "Kd3",
+              "Ke1",
+              "Rc2",
+              "Kf1",
+              "Kd2",
+              "Kg1",
+              "Ke2"
+            ]
+          },
+          {
+            "moves": [
+              "Rf1",
+              "Ng3",
+              "Rxe1"
+            ],
+            "fen": "8/8/8/8/2K5/6n1/k7/4R3 b - - 0 2",
+            "minimumGainDuringEightPlyPV": 300,
+            "gainAfterEightPlyPV": 300,
+            "recoveryFen": "8/8/8/8/2K5/6n1/1k6/4R3 w - - 1 3",
+            "move": "Kb2",
+            "cp": 239,
+            "mate": null,
+            "depth": 17,
+            "pv": [
+              "Kb2"
+            ]
+          },
+          {
+            "moves": [
+              "Rf1",
+              "Nf2",
+              "Rxe1"
+            ],
+            "fen": "8/8/8/8/2K5/8/k4n2/4R3 b - - 0 2",
+            "minimumGainDuringEightPlyPV": 300,
+            "gainAfterEightPlyPV": 300,
+            "recoveryFen": "8/8/8/8/6n1/2K5/8/1k2R3 b - - 8 6",
+            "move": "Ng4",
+            "cp": 274,
+            "mate": null,
+            "depth": 17,
+            "pv": [
+              "Ng4",
+              "Re4",
+              "Nf6",
+              "Re6",
+              "Ng4",
+              "Kc3",
+              "Kb1",
+              "Re1+",
+              "Ka2",
+              "Re2+",
+              "Kb1",
+              "Re4"
+            ]
+          },
+          {
+            "moves": [
+              "Rf1",
+              "Ba5",
+              "Rxh1"
+            ],
+            "fen": "8/8/8/b7/2K5/8/k7/7R b - - 0 2",
+            "minimumGainDuringEightPlyPV": 300,
+            "gainAfterEightPlyPV": 300,
+            "recoveryFen": "8/8/8/b7/2K5/8/1k6/7R w - - 1 3",
+            "move": "Kb2",
+            "cp": 64,
+            "mate": null,
+            "depth": 13,
+            "pv": [
+              "Kb2"
+            ]
+          },
+          {
+            "moves": [
+              "Rf1",
+              "Bh4",
+              "Rxh1"
+            ],
+            "fen": "8/8/8/8/2K4b/8/k7/7R b - - 0 2",
+            "minimumGainDuringEightPlyPV": 300,
+            "gainAfterEightPlyPV": 300,
+            "recoveryFen": "8/8/8/7R/2K5/6b1/k7/8 b - - 2 3",
+            "move": "Bg3",
+            "cp": 56,
+            "mate": null,
+            "depth": 14,
+            "pv": [
+              "Bg3",
+              "Rh5"
+            ]
+          },
+          {
+            "moves": [
+              "Rf1",
+              "Bb4",
+              "Rxh1"
+            ],
+            "fen": "8/8/8/8/1bK5/8/k7/7R b - - 0 2",
+            "minimumGainDuringEightPlyPV": 300,
+            "gainAfterEightPlyPV": 300,
+            "recoveryFen": "8/4b3/8/8/2K5/8/k7/5R2 b - - 2 3",
+            "move": "Be7",
+            "cp": 56,
+            "mate": null,
+            "depth": 13,
+            "pv": [
+              "Be7",
+              "Rf1"
+            ]
+          },
+          {
+            "moves": [
+              "Rf1",
+              "Bg3",
+              "Rxh1"
+            ],
+            "fen": "8/8/8/8/2K5/6b1/k7/7R b - - 0 2",
+            "minimumGainDuringEightPlyPV": 300,
+            "gainAfterEightPlyPV": 300,
+            "recoveryFen": "8/8/8/8/1K1R1b2/8/1k6/8 b - - 6 5",
+            "move": "Bc7",
+            "cp": 55,
+            "mate": null,
+            "depth": 13,
+            "pv": [
+              "Bc7",
+              "Rd1",
+              "Bf4",
+              "Kb4",
+              "Kb2",
+              "Rd4"
+            ]
+          },
+          {
+            "moves": [
+              "Rf1",
+              "Bc3",
+              "Rxh1"
+            ],
+            "fen": "8/8/8/8/2K5/2b5/k7/7R b - - 0 2",
+            "minimumGainDuringEightPlyPV": 300,
+            "gainAfterEightPlyPV": 300,
+            "recoveryFen": "8/8/8/2K1b3/8/k7/5R2/8 b - - 8 6",
+            "move": "Be5",
+            "cp": 61,
+            "mate": null,
+            "depth": 14,
+            "pv": [
+              "Be5",
+              "Re1",
+              "Bh8",
+              "Rf1",
+              "Be5",
+              "Rf2+",
+              "Ka3",
+              "Kc5"
+            ]
+          },
+          {
+            "moves": [
+              "Rf1",
+              "Bf2",
+              "Rxh1"
+            ],
+            "fen": "8/8/8/8/2K5/8/k4b2/7R b - - 0 2",
+            "minimumGainDuringEightPlyPV": 300,
+            "gainAfterEightPlyPV": 300,
+            "recoveryFen": "8/8/8/4b3/1k6/8/2K5/3R4 w - - 7 6",
+            "move": "Bg3",
+            "cp": 51,
+            "mate": null,
+            "depth": 14,
+            "pv": [
+              "Bg3",
+              "Kc3",
+              "Be5+",
+              "Kc2",
+              "Ka3",
+              "Rd1",
+              "Kb4"
+            ]
+          },
+          {
+            "moves": [
+              "Rf1",
+              "Bd2",
+              "Rxh1"
+            ],
+            "fen": "8/8/8/8/2K5/8/k2b4/7R b - - 0 2",
+            "minimumGainDuringEightPlyPV": 300,
+            "gainAfterEightPlyPV": 300,
+            "recoveryFen": "8/8/8/8/2K2b2/8/k7/7R w - - 1 3",
+            "move": "Bf4",
+            "cp": 60,
+            "mate": null,
+            "depth": 14,
+            "pv": [
+              "Bf4"
+            ]
+          }
+        ],
+        "engine": {
+          "identity": {
+            "binarySha256": "2604a5c457bd7d288bdab58d3ee413f715a6afd26d44b29f6160fa49d0f7f0b2",
+            "options": {
+              "Threads": 1,
+              "Hash": 64
+            },
+            "externalNetworks": {},
+            "chessVersion": "1.11.2",
+            "hashPolicy": "clear-before-every-request-v1",
+            "cacheVersion": 1
+          },
+          "name": {
+            "name": "Stockfish 17",
+            "author": "the Stockfish developers (see AUTHORS file)"
+          }
+        },
+        "status": "needs-editorial-review",
+        "metrics": {
+          "hits": 18,
+          "misses": 0,
+          "engineCalls": 0,
+          "engineSeconds": 0.0
+        },
+        "reused": false,
+        "wallSeconds": 0.24564620800083503
+      },
+      "decision": {
+        "candidateIndex": 13,
+        "fen": "8/8/5R2/8/2K5/8/k7/4b2n w - - 0 1",
+        "root": "Rf1",
+        "candidateHash": "75b68691d6c6d7912c1851ca013a03e8fa15a79426306caccb7523ad9ac709f8",
+        "decision": "keep",
+        "mechanism": "quiet-choice-between-two-escapable-targets",
+        "reason": "Rf1 creates competing rank attacks against Bishop e1 and Knight h1; either can move, so the solver captures the other. This is the plain quiet-fork introduction, distinct from forcing royal forks and from the protected-target exchanges in 5/6.",
+        "reviewer": "fork_integration",
+        "distinctness": "quiet-choice-between-two-escapable-targets",
+        "evidenceSha256": "9bea7b604b8ee55b87ce75f5c79e7987e1a0e6781db496ed41ec687a8894e3a0"
+      }
+    },
+    {
+      "exercise": {
+        "id": "fork-beginner-04",
+        "title": "Tấn công đôi bằng Xe · 4",
+        "beginner": true,
+        "goal": "material",
+        "prompt": "Tạo đòn tấn công đôi rồi thu lợi vật chất.",
+        "mode": "interactive",
+        "outcome": "fork",
+        "fen": "8/6k1/8/7K/8/2R5/8/1n4b1 w - - 0 1",
+        "moves": [
+          "Rc1",
+          "Kf7",
+          "Rxb1"
+        ],
+        "alternativeLines": [
+          [
+            "Rg3+",
+            "Kh8",
+            "Rxg1"
+          ],
+          [
+            "Rg3+",
+            "Kf8",
+            "Rxg1"
+          ],
+          [
+            "Rg3+",
+            "Kh7",
+            "Rxg1"
+          ],
+          [
+            "Rg3+",
+            "Kf7",
+            "Rxg1"
+          ],
+          [
+            "Rg3+",
+            "Kf6",
+            "Rxg1"
+          ],
+          [
+            "Rc1",
+            "Kh8",
+            "Rxg1"
+          ],
+          [
+            "Rc1",
+            "Kh8",
+            "Rxb1"
+          ],
+          [
+            "Rc1",
+            "Kg8",
+            "Rxg1+"
+          ],
+          [
+            "Rc1",
+            "Kg8",
+            "Rxb1"
+          ],
+          [
+            "Rc1",
+            "Kf8",
+            "Rxg1"
+          ],
+          [
+            "Rc1",
+            "Kf8",
+            "Rxb1"
+          ],
+          [
+            "Rc1",
+            "Kh7",
+            "Rxg1"
+          ],
+          [
+            "Rc1",
+            "Kh7",
+            "Rxb1"
+          ],
+          [
+            "Rc1",
+            "Kf7",
+            "Rxg1"
+          ],
+          [
+            "Rc1",
+            "Kf6",
+            "Rxg1"
+          ],
+          [
+            "Rc1",
+            "Kf6",
+            "Rxb1"
+          ],
+          [
+            "Rc1",
+            "Ba7",
+            "Rxb1"
+          ],
+          [
+            "Rc1",
+            "Bb6",
+            "Rxb1"
+          ],
+          [
+            "Rc1",
+            "Bc5",
+            "Rxc5"
+          ],
+          [
+            "Rc1",
+            "Bc5",
+            "Rxb1"
+          ],
+          [
+            "Rc1",
+            "Bd4",
+            "Rxb1"
+          ],
+          [
+            "Rc1",
+            "Be3",
+            "Rxb1"
+          ],
+          [
+            "Rc1",
+            "Bh2",
+            "Rxb1"
+          ],
+          [
+            "Rc1",
+            "Bf2",
+            "Rxb1"
+          ],
+          [
+            "Rc1",
+            "Nc3",
+            "Rxc3"
+          ],
+          [
+            "Rc1",
+            "Nc3",
+            "Rxg1+"
+          ],
+          [
+            "Rc1",
+            "Na3",
+            "Rxg1+"
+          ],
+          [
+            "Rc1",
+            "Nd2",
+            "Rxg1+"
+          ]
+        ],
+        "source": "original-composition",
+        "hints": [
+          "Tìm nước đi tạo hai mối đe dọa. Kiểm tra nước đáp và khả năng bắt lại."
+        ],
+        "solution": "Rc1 — Xe từ c3 đến c1. Mã b1 đang tấn công Xe c3. Rc1 vừa đưa Xe ra khỏi tầm bắt của Mã, vừa tấn công Mã b1 và Tượng g1."
+      },
+      "review": {
+        "candidate": {
+          "fen": "8/6k1/8/7K/8/2R5/8/1n4b1 w - - 0 1",
+          "root": "Rc1",
+          "moves": [
+            "Rc1",
+            "Kh8",
+            "Rxg1"
+          ],
+          "forkPiece": "R",
+          "targets": [
+            "b1",
+            "g1"
+          ],
+          "teachingFamily": "R-quiet-minors",
+          "distinctness": "Attacked forker escapes with a fork; safe unprotected landing square; targets lack a shared defender; 16 legal defensive choices.",
+          "source": "original-composition",
+          "startingMaterial": -1,
+          "localEvidence": {
+            "lines": [
+              [
+                "Rc1",
+                "Kh8",
+                "Rxg1"
+              ],
+              [
+                "Rc1",
+                "Kg8",
+                "Rxg1+"
+              ],
+              [
+                "Rc1",
+                "Kf8",
+                "Rxg1"
+              ],
+              [
+                "Rc1",
+                "Kh7",
+                "Rxg1"
+              ],
+              [
+                "Rc1",
+                "Kf7",
+                "Rxg1"
+              ],
+              [
+                "Rc1",
+                "Kf6",
+                "Rxg1"
+              ],
+              [
+                "Rc1",
+                "Ba7",
+                "Rxb1"
+              ],
+              [
+                "Rc1",
+                "Bb6",
+                "Rxb1"
+              ],
+              [
+                "Rc1",
+                "Bc5",
+                "Rxb1"
+              ],
+              [
+                "Rc1",
+                "Bd4",
+                "Rxb1"
+              ],
+              [
+                "Rc1",
+                "Be3",
+                "Rxb1"
+              ],
+              [
+                "Rc1",
+                "Bh2",
+                "Rxb1"
+              ],
+              [
+                "Rc1",
+                "Bf2",
+                "Rxb1"
+              ],
+              [
+                "Rc1",
+                "Nc3",
+                "Rxg1+"
+              ],
+              [
+                "Rc1",
+                "Na3",
+                "Rxg1+"
+              ],
+              [
+                "Rc1",
+                "Nd2",
+                "Rxg1+"
+              ]
+            ],
+            "minimumGain": 3,
+            "targets": [
+              "b1",
+              "g1"
+            ],
+            "checking": false
+          },
+          "mechanism": [
+            true,
+            false,
+            false,
+            false
+          ],
+          "constructiveAttempts": 337
+        },
+        "candidateHash": "eb38252fea8845b66878286519c58dfa491ba1a43d63652da74000f4f4f597e2",
+        "verificationVersion": "42438004b5d0397ca6bbf1905d52da892d8908797a65ccb1808816087a334cfa",
+        "topic": "fork",
+        "settings": {
+          "rootNodes": 200000,
+          "rootMultiPV": "every legal move",
+          "endpointNodesEach": 50000
+        },
+        "flags": [],
+        "roots": [
+          {
+            "move": "Kg5",
+            "targets": [],
+            "forkWin": false,
+            "immediateCaptureGain": false,
+            "nonForkShortGain": false
+          },
+          {
+            "move": "Kh4",
+            "targets": [],
+            "forkWin": false,
+            "immediateCaptureGain": false,
+            "nonForkShortGain": false
+          },
+          {
+            "move": "Kg4",
+            "targets": [],
+            "forkWin": false,
+            "immediateCaptureGain": false,
+            "nonForkShortGain": false
+          },
+          {
+            "move": "Rc8",
+            "targets": [],
+            "forkWin": false,
+            "immediateCaptureGain": false,
+            "nonForkShortGain": false
+          },
+          {
+            "move": "Rc7+",
+            "targets": [],
+            "forkWin": false,
+            "immediateCaptureGain": false,
+            "nonForkShortGain": false
+          },
+          {
+            "move": "Rc6",
+            "targets": [],
+            "forkWin": false,
+            "immediateCaptureGain": false,
+            "nonForkShortGain": false
+          },
+          {
+            "move": "Rc5",
+            "targets": [],
+            "forkWin": false,
+            "immediateCaptureGain": false,
+            "nonForkShortGain": false
+          },
+          {
+            "move": "Rc4",
+            "targets": [],
+            "forkWin": false,
+            "immediateCaptureGain": false,
+            "nonForkShortGain": false
+          },
+          {
+            "move": "Rh3",
+            "targets": [],
+            "forkWin": false,
+            "immediateCaptureGain": false,
+            "nonForkShortGain": false
+          },
+          {
+            "move": "Rg3+",
+            "targets": [
+              "g1",
+              "g7"
+            ],
+            "forkWin": true,
+            "immediateCaptureGain": false,
+            "nonForkShortGain": false
+          },
+          {
+            "move": "Rf3",
+            "targets": [],
+            "forkWin": false,
+            "immediateCaptureGain": false,
+            "nonForkShortGain": false
+          },
+          {
+            "move": "Re3",
+            "targets": [],
+            "forkWin": false,
+            "immediateCaptureGain": false,
+            "nonForkShortGain": false
+          },
+          {
+            "move": "Rd3",
+            "targets": [],
+            "forkWin": false,
+            "immediateCaptureGain": false,
+            "nonForkShortGain": false
+          },
+          {
+            "move": "Rb3",
+            "targets": [],
+            "forkWin": false,
+            "immediateCaptureGain": false,
+            "nonForkShortGain": false
+          },
+          {
+            "move": "Ra3",
+            "targets": [],
+            "forkWin": false,
+            "immediateCaptureGain": false,
+            "nonForkShortGain": false
+          },
+          {
+            "move": "Rc2",
+            "targets": [],
+            "forkWin": false,
+            "immediateCaptureGain": false,
+            "nonForkShortGain": false
+          },
+          {
+            "move": "Rc1",
+            "targets": [
+              "b1",
+              "g1"
+            ],
+            "forkWin": true,
+            "immediateCaptureGain": false,
+            "nonForkShortGain": false
+          }
+        ],
+        "lines": [
+          [
+            "Rg3+",
+            "Kh8",
+            "Rxg1"
+          ],
+          [
+            "Rg3+",
+            "Kf8",
+            "Rxg1"
+          ],
+          [
+            "Rg3+",
+            "Kh7",
+            "Rxg1"
+          ],
+          [
+            "Rg3+",
+            "Kf7",
+            "Rxg1"
+          ],
+          [
+            "Rg3+",
+            "Kf6",
+            "Rxg1"
+          ],
+          [
+            "Rc1",
+            "Kh8",
+            "Rxg1"
+          ],
+          [
+            "Rc1",
+            "Kh8",
+            "Rxb1"
+          ],
+          [
+            "Rc1",
+            "Kg8",
+            "Rxg1+"
+          ],
+          [
+            "Rc1",
+            "Kg8",
+            "Rxb1"
+          ],
+          [
+            "Rc1",
+            "Kf8",
+            "Rxg1"
+          ],
+          [
+            "Rc1",
+            "Kf8",
+            "Rxb1"
+          ],
+          [
+            "Rc1",
+            "Kh7",
+            "Rxg1"
+          ],
+          [
+            "Rc1",
+            "Kh7",
+            "Rxb1"
+          ],
+          [
+            "Rc1",
+            "Kf7",
+            "Rxg1"
+          ],
+          [
+            "Rc1",
+            "Kf7",
+            "Rxb1"
+          ],
+          [
+            "Rc1",
+            "Kf6",
+            "Rxg1"
+          ],
+          [
+            "Rc1",
+            "Kf6",
+            "Rxb1"
+          ],
+          [
+            "Rc1",
+            "Ba7",
+            "Rxb1"
+          ],
+          [
+            "Rc1",
+            "Bb6",
+            "Rxb1"
+          ],
+          [
+            "Rc1",
+            "Bc5",
+            "Rxc5"
+          ],
+          [
+            "Rc1",
+            "Bc5",
+            "Rxb1"
+          ],
+          [
+            "Rc1",
+            "Bd4",
+            "Rxb1"
+          ],
+          [
+            "Rc1",
+            "Be3",
+            "Rxb1"
+          ],
+          [
+            "Rc1",
+            "Bh2",
+            "Rxb1"
+          ],
+          [
+            "Rc1",
+            "Bf2",
+            "Rxb1"
+          ],
+          [
+            "Rc1",
+            "Nc3",
+            "Rxc3"
+          ],
+          [
+            "Rc1",
+            "Nc3",
+            "Rxg1+"
+          ],
+          [
+            "Rc1",
+            "Na3",
+            "Rxg1+"
+          ],
+          [
+            "Rc1",
+            "Nd2",
+            "Rxg1+"
+          ]
+        ],
+        "shortMates": {
+          "immediate": [],
+          "inTwoSolverMoves": []
+        },
+        "initialMaterialCp": -100,
+        "engineRoots": [
+          {
+            "move": "Rg3+",
+            "cp": 59,
+            "mate": null,
+            "depth": 11,
+            "pv": [
+              "Rg3+",
+              "Kf7",
+              "Rxg1",
+              "Na3",
+              "Rg4",
+              "Nb1",
+              "Rc4",
+              "Na3"
+            ]
+          },
+          {
+            "move": "Rc1",
+            "cp": 49,
+            "mate": null,
+            "depth": 11,
+            "pv": [
+              "Rc1",
+              "Bb6",
+              "Rxb1",
+              "Bd4",
+              "Rd1",
+              "Be5",
+              "Rd7+",
+              "Kf6"
+            ]
+          },
+          {
+            "move": "Rc7+",
+            "cp": 47,
+            "mate": null,
+            "depth": 11,
+            "pv": [
+              "Rc7+",
+              "Kf6",
+              "Rc1",
+              "Bd4",
+              "Rxb1",
+              "Ke7",
+              "Rd1",
+              "Be5",
+              "Kg6",
+              "Ke6",
+              "Rd7"
+            ]
+          },
+          {
+            "move": "Rb3",
+            "cp": 46,
+            "mate": null,
+            "depth": 11,
+            "pv": [
+              "Rb3",
+              "Kf6",
+              "Rxb1",
+              "Bh2",
+              "Rf1+",
+              "Ke6",
+              "Rf6+",
+              "Ke7"
+            ]
+          },
+          {
+            "move": "Rd3",
+            "cp": 29,
+            "mate": null,
+            "depth": 11,
+            "pv": [
+              "Rd3",
+              "Bc5",
+              "Rf3",
+              "Bf8"
+            ]
+          },
+          {
+            "move": "Rf3",
+            "cp": 27,
+            "mate": null,
+            "depth": 11,
+            "pv": [
+              "Rf3",
+              "Bc5",
+              "Rb3",
+              "Nd2",
+              "Rg3+",
+              "Kf6",
+              "Rg8",
+              "Nf1"
+            ]
+          },
+          {
+            "move": "Rc2",
+            "cp": 24,
+            "mate": null,
+            "depth": 11,
+            "pv": [
+              "Rc2",
+              "Bd4",
+              "Rc1",
+              "Na3",
+              "Rd1",
+              "Bb2",
+              "Rg1+",
+              "Kh7"
+            ]
+          },
+          {
+            "move": "Rh3",
+            "cp": 21,
+            "mate": null,
+            "depth": 11,
+            "pv": [
+              "Rh3",
+              "Bc5",
+              "Rf3",
+              "Nd2",
+              "Rf5",
+              "Bb4",
+              "Rg5+",
+              "Kf6"
+            ]
+          },
+          {
+            "move": "Rc6",
+            "cp": 29,
+            "mate": null,
+            "depth": 10,
+            "pv": [
+              "Rc6",
+              "Bh2",
+              "Re6",
+              "Na3",
+              "Re2",
+              "Bd6",
+              "Rb2",
+              "Be5",
+              "Rb7+",
+              "Kf8",
+              "Rb3",
+              "Nc2"
+            ]
+          },
+          {
+            "move": "Rc4",
+            "cp": 26,
+            "mate": null,
+            "depth": 10,
+            "pv": [
+              "Rc4",
+              "Bh2"
+            ]
+          },
+          {
+            "move": "Rc8",
+            "cp": 24,
+            "mate": null,
+            "depth": 10,
+            "pv": [
+              "Rc8",
+              "Bh2",
+              "Rc2",
+              "Be5",
+              "Rc1",
+              "Na3",
+              "Re1",
+              "Bd6",
+              "Ra1",
+              "Nb5",
+              "Rg1+",
+              "Kh7"
+            ]
+          },
+          {
+            "move": "Kh4",
+            "cp": -218,
+            "mate": null,
+            "depth": 10,
+            "pv": [
+              "Kh4",
+              "Nxc3",
+              "Kg3",
+              "Kg6",
+              "Kg2",
+              "Be3",
+              "Kf1",
+              "Kh6",
+              "Ke1",
+              "Na4"
+            ]
+          },
+          {
+            "move": "Re3",
+            "cp": -218,
+            "mate": null,
+            "depth": 10,
+            "pv": [
+              "Re3",
+              "Bxe3",
+              "Kg4",
+              "Nc3",
+              "Kf3",
+              "Ba7",
+              "Kg2",
+              "Kh6",
+              "Kf1",
+              "Be3",
+              "Ke1",
+              "Na4"
+            ]
+          },
+          {
+            "move": "Kg4",
+            "cp": -218,
+            "mate": null,
+            "depth": 10,
+            "pv": [
+              "Kg4",
+              "Nxc3",
+              "Kg3",
+              "Kg6",
+              "Kg2",
+              "Be3",
+              "Kf1",
+              "Kh6",
+              "Ke1",
+              "Na4"
+            ]
+          },
+          {
+            "move": "Rc5",
+            "cp": -218,
+            "mate": null,
+            "depth": 10,
+            "pv": [
+              "Rc5",
+              "Bxc5",
+              "Kh4",
+              "Nc3",
+              "Kh3",
+              "Be3"
+            ]
+          },
+          {
+            "move": "Kg5",
+            "cp": -222,
+            "mate": null,
+            "depth": 10,
+            "pv": [
+              "Kg5",
+              "Nxc3",
+              "Kg4",
+              "Be3",
+              "Kf3"
+            ]
+          },
+          {
+            "move": "Ra3",
+            "cp": -239,
+            "mate": null,
+            "depth": 10,
+            "pv": [
+              "Ra3",
+              "Nxa3",
+              "Kh4",
+              "Kh6",
+              "Kh3",
+              "Nc4",
+              "Kg2",
+              "Be3",
+              "Kh3",
+              "Nd6",
+              "Kh4"
+            ]
+          }
+        ],
+        "endpointProbes": [
+          {
+            "moves": [
+              "Rc1",
+              "Kh8",
+              "Rxg1"
+            ],
+            "fen": "7k/8/8/7K/8/8/8/1n4R1 b - - 0 2",
+            "minimumGainDuringEightPlyPV": 300,
+            "gainAfterEightPlyPV": 300,
+            "recoveryFen": "7k/8/6K1/8/8/8/3n4/6R1 b - - 2 3",
+            "move": "Nd2",
+            "cp": 506,
+            "mate": null,
+            "depth": 16,
+            "pv": [
+              "Nd2",
+              "Kg6"
+            ]
+          },
+          {
+            "moves": [
+              "Rc1",
+              "Kh8",
+              "Rxb1"
+            ],
+            "fen": "7k/8/8/7K/8/8/8/1R4b1 b - - 0 2",
+            "minimumGainDuringEightPlyPV": 300,
+            "gainAfterEightPlyPV": 300,
+            "recoveryFen": "1bR2k2/8/6K1/8/8/8/8/8 b - - 8 6",
+            "move": "Bh2",
+            "cp": 501,
+            "mate": null,
+            "depth": 15,
+            "pv": [
+              "Bh2",
+              "Rh1",
+              "Bb8",
+              "Kg6+",
+              "Kg8",
+              "Rc1",
+              "Kf8",
+              "Rc8+",
+              "Ke7",
+              "Rxb8",
+              "Kd6",
+              "Rb1"
+            ]
+          },
+          {
+            "moves": [
+              "Rc1",
+              "Kg8",
+              "Rxg1+"
+            ],
+            "fen": "6k1/8/8/7K/8/8/8/1n4R1 b - - 0 2",
+            "minimumGainDuringEightPlyPV": 300,
+            "gainAfterEightPlyPV": 600,
+            "recoveryFen": "8/8/8/8/2k5/7K/8/5R2 b - - 6 6",
+            "move": "Kf7",
+            "cp": 530,
+            "mate": null,
+            "depth": 17,
+            "pv": [
+              "Kf7",
+              "Rxb1",
+              "Ke6",
+              "Kh4",
+              "Kd5",
+              "Kh3",
+              "Kc4",
+              "Rf1",
+              "Kb5",
+              "Kg2",
+              "Kb6"
+            ]
+          },
+          {
+            "moves": [
+              "Rc1",
+              "Kg8",
+              "Rxb1"
+            ],
+            "fen": "6k1/8/8/7K/8/8/8/1R4b1 b - - 0 2",
+            "minimumGainDuringEightPlyPV": 300,
+            "gainAfterEightPlyPV": 300,
+            "recoveryFen": "6k1/8/6K1/2b5/8/8/8/1R6 b - - 2 3",
+            "move": "Bc5",
+            "cp": 54,
+            "mate": null,
+            "depth": 14,
+            "pv": [
+              "Bc5",
+              "Kg6"
+            ]
+          },
+          {
+            "moves": [
+              "Rc1",
+              "Kf8",
+              "Rxg1"
+            ],
+            "fen": "5k2/8/8/7K/8/8/8/1n4R1 b - - 0 2",
+            "minimumGainDuringEightPlyPV": 300,
+            "gainAfterEightPlyPV": 300,
+            "recoveryFen": "3k4/R7/8/5K2/2n5/8/8/8 b - - 8 6",
+            "move": "Na3",
+            "cp": 54,
+            "mate": null,
+            "depth": 15,
+            "pv": [
+              "Na3",
+              "Ra1",
+              "Nc4",
+              "Ra7",
+              "Ke8",
+              "Kg5",
+              "Kd8",
+              "Kf5",
+              "Nd6+",
+              "Ke6",
+              "Nb5"
+            ]
+          },
+          {
+            "moves": [
+              "Rc1",
+              "Kf8",
+              "Rxb1"
+            ],
+            "fen": "5k2/8/8/7K/8/8/8/1R4b1 b - - 0 2",
+            "minimumGainDuringEightPlyPV": 300,
+            "gainAfterEightPlyPV": 300,
+            "recoveryFen": "2R2k2/8/8/7K/8/8/1b6/8 b - - 8 6",
+            "move": "Bc5",
+            "cp": 47,
+            "mate": null,
+            "depth": 15,
+            "pv": [
+              "Bc5",
+              "Rb7",
+              "Bd4",
+              "Rb4",
+              "Ba1",
+              "Rc4",
+              "Bb2",
+              "Rc8+",
+              "Kg7"
+            ]
+          },
+          {
+            "moves": [
+              "Rc1",
+              "Kh7",
+              "Rxg1"
+            ],
+            "fen": "8/7k/8/7K/8/8/8/1n4R1 b - - 0 2",
+            "minimumGainDuringEightPlyPV": 300,
+            "gainAfterEightPlyPV": 300,
+            "recoveryFen": "5k2/8/8/4K3/n7/8/8/2R5 b - - 8 6",
+            "move": "Nc3",
+            "cp": 201,
+            "mate": null,
+            "depth": 15,
+            "pv": [
+              "Nc3",
+              "Kg5",
+              "Kg7",
+              "Kf5+",
+              "Kf8",
+              "Ke5",
+              "Na4",
+              "Rc1",
+              "Ke7",
+              "Rc6",
+              "Kd7",
+              "Kd5"
+            ]
+          },
+          {
+            "moves": [
+              "Rc1",
+              "Kh7",
+              "Rxb1"
+            ],
+            "fen": "8/7k/8/7K/8/8/8/1R4b1 b - - 0 2",
+            "minimumGainDuringEightPlyPV": 300,
+            "gainAfterEightPlyPV": 300,
+            "recoveryFen": "6k1/3R4/8/7K/8/8/1b6/8 w - - 7 6",
+            "move": "Bc5",
+            "cp": 50,
+            "mate": null,
+            "depth": 14,
+            "pv": [
+              "Bc5",
+              "Rb5",
+              "Bd4",
+              "Rd5",
+              "Bb2",
+              "Rd7+",
+              "Kg8"
+            ]
+          },
+          {
+            "moves": [
+              "Rc1",
+              "Kf7",
+              "Rxg1"
+            ],
+            "fen": "8/5k2/8/7K/8/8/8/1n4R1 b - - 0 2",
+            "minimumGainDuringEightPlyPV": 300,
+            "gainAfterEightPlyPV": 300,
+            "recoveryFen": "6R1/4k3/8/8/6K1/8/n7/8 w - - 5 5",
+            "move": "Nc3",
+            "cp": 46,
+            "mate": null,
+            "depth": 14,
+            "pv": [
+              "Nc3",
+              "Rg8",
+              "Ke7",
+              "Kg4",
+              "Na2"
+            ]
+          },
+          {
+            "moves": [
+              "Rc1",
+              "Kf7",
+              "Rxb1"
+            ],
+            "fen": "8/5k2/8/7K/8/8/8/1R4b1 b - - 0 2",
+            "minimumGainDuringEightPlyPV": 300,
+            "gainAfterEightPlyPV": 300,
+            "recoveryFen": "8/5k2/8/2b4K/8/8/8/2R5 b - - 2 3",
+            "move": "Bc5",
+            "cp": 42,
+            "mate": null,
+            "depth": 13,
+            "pv": [
+              "Bc5",
+              "Rc1"
+            ]
+          },
+          {
+            "moves": [
+              "Rc1",
+              "Kf6",
+              "Rxg1"
+            ],
+            "fen": "8/8/5k2/7K/8/8/8/1n4R1 b - - 0 2",
+            "minimumGainDuringEightPlyPV": 300,
+            "gainAfterEightPlyPV": 300,
+            "recoveryFen": "8/8/5k2/8/6K1/2n5/8/6R1 b - - 2 3",
+            "move": "Nc3",
+            "cp": 59,
+            "mate": null,
+            "depth": 13,
+            "pv": [
+              "Nc3",
+              "Kg4"
+            ]
+          },
+          {
+            "moves": [
+              "Rc1",
+              "Kf6",
+              "Rxb1"
+            ],
+            "fen": "8/8/5k2/7K/8/8/8/1R4b1 b - - 0 2",
+            "minimumGainDuringEightPlyPV": 300,
+            "gainAfterEightPlyPV": 300,
+            "recoveryFen": "8/8/5k2/2b4K/8/8/8/1R6 w - - 1 3",
+            "move": "Bc5",
+            "cp": 51,
+            "mate": null,
+            "depth": 14,
+            "pv": [
+              "Bc5"
+            ]
+          },
+          {
+            "moves": [
+              "Rc1",
+              "Ba7",
+              "Rxb1"
+            ],
+            "fen": "8/b5k1/8/7K/8/8/8/1R6 b - - 0 2",
+            "minimumGainDuringEightPlyPV": 300,
+            "gainAfterEightPlyPV": 300,
+            "recoveryFen": "8/6k1/8/2b3K1/8/8/8/1R6 b - - 2 3",
+            "move": "Bc5",
+            "cp": 55,
+            "mate": null,
+            "depth": 13,
+            "pv": [
+              "Bc5",
+              "Kg5"
+            ]
+          },
+          {
+            "moves": [
+              "Rc1",
+              "Bb6",
+              "Rxb1"
+            ],
+            "fen": "8/6k1/1b6/7K/8/8/8/1R6 b - - 0 2",
+            "minimumGainDuringEightPlyPV": 300,
+            "gainAfterEightPlyPV": 300,
+            "recoveryFen": "3b4/6k1/8/7K/8/8/8/1R6 w - - 1 3",
+            "move": "Bd8",
+            "cp": 54,
+            "mate": null,
+            "depth": 14,
+            "pv": [
+              "Bd8"
+            ]
+          },
+          {
+            "moves": [
+              "Rc1",
+              "Bc5",
+              "Rxc5"
+            ],
+            "fen": "8/6k1/8/2R4K/8/8/8/1n6 b - - 0 2",
+            "minimumGainDuringEightPlyPV": 300,
+            "gainAfterEightPlyPV": 300,
+            "recoveryFen": "8/5k2/8/2R4K/8/8/8/1n6 w - - 1 3",
+            "move": "Kf7",
+            "cp": 55,
+            "mate": null,
+            "depth": 14,
+            "pv": [
+              "Kf7"
+            ]
+          },
+          {
+            "moves": [
+              "Rc1",
+              "Bc5",
+              "Rxb1"
+            ],
+            "fen": "8/6k1/8/2b4K/8/8/8/1R6 b - - 0 2",
+            "minimumGainDuringEightPlyPV": 300,
+            "gainAfterEightPlyPV": 300,
+            "recoveryFen": "8/8/1R1b4/3k2K1/8/8/8/8 b - - 8 6",
+            "move": "Kf6",
+            "cp": 52,
+            "mate": null,
+            "depth": 13,
+            "pv": [
+              "Kf6",
+              "Kg4",
+              "Bd6",
+              "Rb7",
+              "Ke6",
+              "Rb6",
+              "Kd5",
+              "Kg5",
+              "Kc5"
+            ]
+          },
+          {
+            "moves": [
+              "Rc1",
+              "Bd4",
+              "Rxb1"
+            ],
+            "fen": "8/6k1/8/7K/3b4/8/8/1R6 b - - 0 2",
+            "minimumGainDuringEightPlyPV": 300,
+            "gainAfterEightPlyPV": 300,
+            "recoveryFen": "8/8/4k3/8/3b2K1/1R6/8/8 w - - 7 6",
+            "move": "Kf6",
+            "cp": 56,
+            "mate": null,
+            "depth": 14,
+            "pv": [
+              "Kf6",
+              "Rb5",
+              "Be5",
+              "Kg4",
+              "Ke6",
+              "Rb3",
+              "Bd4"
+            ]
+          },
+          {
+            "moves": [
+              "Rc1",
+              "Be3",
+              "Rxb1"
+            ],
+            "fen": "8/6k1/8/7K/8/4b3/8/1R6 b - - 0 2",
+            "minimumGainDuringEightPlyPV": 300,
+            "gainAfterEightPlyPV": 300,
+            "recoveryFen": "8/8/5k2/8/6K1/4b3/8/1R6 b - - 2 3",
+            "move": "Kf6",
+            "cp": 53,
+            "mate": null,
+            "depth": 14,
+            "pv": [
+              "Kf6",
+              "Kg4"
+            ]
+          },
+          {
+            "moves": [
+              "Rc1",
+              "Bh2",
+              "Rxb1"
+            ],
+            "fen": "8/6k1/8/7K/8/8/7b/1R6 b - - 0 2",
+            "minimumGainDuringEightPlyPV": 300,
+            "gainAfterEightPlyPV": 300,
+            "recoveryFen": "8/8/5k2/8/6K1/8/7b/1R6 b - - 2 3",
+            "move": "Kf6",
+            "cp": 47,
+            "mate": null,
+            "depth": 13,
+            "pv": [
+              "Kf6",
+              "Kg4"
+            ]
+          },
+          {
+            "moves": [
+              "Rc1",
+              "Bf2",
+              "Rxb1"
+            ],
+            "fen": "8/6k1/8/7K/8/8/5b2/1R6 b - - 0 2",
+            "minimumGainDuringEightPlyPV": 300,
+            "gainAfterEightPlyPV": 300,
+            "recoveryFen": "8/6k1/8/2b4K/8/8/8/1R6 w - - 1 3",
+            "move": "Bc5",
+            "cp": 59,
+            "mate": null,
+            "depth": 16,
+            "pv": [
+              "Bc5"
+            ]
+          },
+          {
+            "moves": [
+              "Rc1",
+              "Nc3",
+              "Rxc3"
+            ],
+            "fen": "8/6k1/8/7K/8/2R5/8/6b1 b - - 0 2",
+            "minimumGainDuringEightPlyPV": 300,
+            "gainAfterEightPlyPV": 300,
+            "recoveryFen": "8/8/5k2/1R5K/8/8/8/6b1 b - - 8 6",
+            "move": "Kf6",
+            "cp": 49,
+            "mate": null,
+            "depth": 13,
+            "pv": [
+              "Kf6",
+              "Rg3",
+              "Bc5",
+              "Rg8",
+              "Bd4",
+              "Rb8",
+              "Bg1",
+              "Rb5",
+              "Bf2"
+            ]
+          },
+          {
+            "moves": [
+              "Rc1",
+              "Nc3",
+              "Rxg1+"
+            ],
+            "fen": "8/6k1/8/7K/8/2n5/8/6R1 b - - 0 2",
+            "minimumGainDuringEightPlyPV": 300,
+            "gainAfterEightPlyPV": 300,
+            "recoveryFen": "8/5k2/8/3n4/8/5K2/8/4R3 w - - 7 6",
+            "move": "Kf6",
+            "cp": 60,
+            "mate": null,
+            "depth": 14,
+            "pv": [
+              "Kf6",
+              "Kg4",
+              "Nd5",
+              "Re1",
+              "Kg7",
+              "Kf3",
+              "Kf7"
+            ]
+          },
+          {
+            "moves": [
+              "Rc1",
+              "Na3",
+              "Rxg1+"
+            ],
+            "fen": "8/6k1/8/7K/8/n7/8/6R1 b - - 0 2",
+            "minimumGainDuringEightPlyPV": 300,
+            "gainAfterEightPlyPV": 300,
+            "recoveryFen": "8/5k2/8/7K/8/n7/8/6R1 w - - 1 3",
+            "move": "Kf7",
+            "cp": 55,
+            "mate": null,
+            "depth": 14,
+            "pv": [
+              "Kf7"
+            ]
+          },
+          {
+            "moves": [
+              "Rc1",
+              "Nd2",
+              "Rxg1+"
+            ],
+            "fen": "8/6k1/8/7K/8/8/3n4/6R1 b - - 0 2",
+            "minimumGainDuringEightPlyPV": 300,
+            "gainAfterEightPlyPV": 300,
+            "recoveryFen": "8/8/5k2/7K/8/8/3n4/3R4 b - - 2 3",
+            "move": "Kf6",
+            "cp": 59,
+            "mate": null,
+            "depth": 14,
+            "pv": [
+              "Kf6",
+              "Rd1"
+            ]
+          }
+        ],
+        "engine": {
+          "identity": {
+            "binarySha256": "2604a5c457bd7d288bdab58d3ee413f715a6afd26d44b29f6160fa49d0f7f0b2",
+            "options": {
+              "Threads": 1,
+              "Hash": 64
+            },
+            "externalNetworks": {},
+            "chessVersion": "1.11.2",
+            "hashPolicy": "clear-before-every-request-v1",
+            "cacheVersion": 1
+          },
+          "name": {
+            "name": "Stockfish 17",
+            "author": "the Stockfish developers (see AUTHORS file)"
+          }
+        },
+        "status": "needs-editorial-review",
+        "metrics": {
+          "hits": 25,
+          "misses": 0,
+          "engineCalls": 0,
+          "engineSeconds": 0.0
+        },
+        "reused": false,
+        "wallSeconds": 0.22368029200151796
+      },
+      "decision": {
+        "candidateIndex": 14,
+        "fen": "8/6k1/8/7K/8/2R5/8/1n4b1 w - - 0 1",
+        "root": "Rc1",
+        "candidateHash": "eb38252fea8845b66878286519c58dfa491ba1a43d63652da74000f4f4f597e2",
+        "decision": "keep",
+        "mechanism": "escape-knight-attack-with-quiet-or-checking-fork",
+        "reason": "The Rook c3 is attacked by Knight b1. Rc1 escapes and threatens both minor pieces; Rg3+ is also a valid checking fork. Retain only with both valid root continuations accepted. This adds an immediate Rook-safety decision and equivalent checking/quiet choices to the plain quiet fork in 13.",
+        "reviewer": "fork_integration",
+        "distinctness": "escape-knight-attack-with-quiet-or-checking-fork",
+        "evidenceSha256": "44c6003cab7e6fbf5f58411e14a2049b07872a3f98f41a6aca666637f692f90d"
+      }
+    },
+    {
+      "exercise": {
+        "id": "fork-beginner-05",
+        "title": "Tấn công đôi bằng Hậu · 5",
+        "beginner": true,
+        "goal": "material",
+        "prompt": "Tạo đòn tấn công đôi rồi thu lợi vật chất.",
+        "mode": "interactive",
+        "outcome": "fork",
+        "fen": "5kr1/7Q/8/8/2K5/4r3/8/8 w - - 0 1",
+        "moves": [
+          "Qh6+",
+          "Kf7",
+          "Qxe3"
+        ],
+        "alternativeLines": [
+          [
+            "Qh6+",
+            "Ke8",
+            "Qxe3+"
+          ],
+          [
+            "Qh6+",
+            "Ke7",
+            "Qxe3+"
+          ],
+          [
+            "Qh6+",
+            "Rg7",
+            "Qxe3"
+          ]
+        ],
+        "source": "original-composition",
+        "hints": [
+          "Tìm nước đi tạo hai mối đe dọa. Kiểm tra nước đáp và khả năng bắt lại."
+        ],
+        "solution": "Qh6+ — Hậu từ h7 đến h6. Qh6+ chiếu Vua f8 và tấn công Xe e3. Nếu Xe g8 chắn ở g7, Hậu vẫn bắt được Xe e3."
+      },
+      "review": {
+        "candidate": {
+          "fen": "5kr1/7Q/8/8/2K5/4r3/8/8 w - - 0 1",
+          "root": "Qh6+",
+          "moves": [
+            "Qh6+",
+            "Ke8",
+            "Qxe3+"
+          ],
+          "forkPiece": "Q",
+          "targets": [
+            "e3",
+            "f8"
+          ],
+          "teachingFamily": "Q-royal-rook",
+          "distinctness": "Create a direct fork; safe unprotected landing square; targets lack a shared defender; 4 legal defensive choices.",
+          "source": "original-composition",
+          "startingMaterial": -1,
+          "localEvidence": {
+            "lines": [
+              [
+                "Qh6+",
+                "Ke8",
+                "Qxe3+"
+              ],
+              [
+                "Qh6+",
+                "Kf7",
+                "Qxe3"
+              ],
+              [
+                "Qh6+",
+                "Ke7",
+                "Qxe3+"
+              ],
+              [
+                "Qh6+",
+                "Rg7",
+                "Qxe3"
+              ]
+            ],
+            "minimumGain": 5,
+            "targets": [
+              "e3",
+              "f8"
+            ],
+            "checking": true
+          },
+          "mechanism": [
+            false,
+            false,
+            false,
+            false
+          ],
+          "constructiveAttempts": 206
+        },
+        "candidateHash": "8ce139608dae449f70eec7d968c8f71361fe430d557a6dc5a23fdee162d2c319",
+        "verificationVersion": "42438004b5d0397ca6bbf1905d52da892d8908797a65ccb1808816087a334cfa",
+        "topic": "fork",
+        "settings": {
+          "rootNodes": 200000,
+          "rootMultiPV": "every legal move",
+          "endpointNodesEach": 50000
+        },
+        "flags": [],
+        "roots": [
+          {
+            "move": "Qh8",
+            "targets": [],
+            "forkWin": false,
+            "immediateCaptureGain": false,
+            "nonForkShortGain": false
+          },
+          {
+            "move": "Qxg8+",
+            "targets": [],
+            "forkWin": false,
+            "immediateCaptureGain": false,
+            "nonForkShortGain": false
+          },
+          {
+            "move": "Qg7+",
+            "targets": [
+              "f8",
+              "g8"
+            ],
+            "forkWin": false,
+            "immediateCaptureGain": false,
+            "nonForkShortGain": false
+          },
+          {
+            "move": "Qf7+",
+            "targets": [
+              "f8",
+              "g8"
+            ],
+            "forkWin": false,
+            "immediateCaptureGain": false,
+            "nonForkShortGain": false
+          },
+          {
+            "move": "Qe7+",
+            "targets": [
+              "e3",
+              "f8"
+            ],
+            "forkWin": false,
+            "immediateCaptureGain": false,
+            "nonForkShortGain": false
+          },
+          {
+            "move": "Qd7",
+            "targets": [],
+            "forkWin": false,
+            "immediateCaptureGain": false,
+            "nonForkShortGain": false
+          },
+          {
+            "move": "Qc7",
+            "targets": [],
+            "forkWin": false,
+            "immediateCaptureGain": false,
+            "nonForkShortGain": false
+          },
+          {
+            "move": "Qb7",
+            "targets": [],
+            "forkWin": false,
+            "immediateCaptureGain": false,
+            "nonForkShortGain": false
+          },
+          {
+            "move": "Qa7",
+            "targets": [],
+            "forkWin": false,
+            "immediateCaptureGain": false,
+            "nonForkShortGain": false
+          },
+          {
+            "move": "Qh6+",
+            "targets": [
+              "e3",
+              "f8"
+            ],
+            "forkWin": true,
+            "immediateCaptureGain": false,
+            "nonForkShortGain": false
+          },
+          {
+            "move": "Qg6",
+            "targets": [],
+            "forkWin": false,
+            "immediateCaptureGain": false,
+            "nonForkShortGain": false
+          },
+          {
+            "move": "Qh5",
+            "targets": [],
+            "forkWin": false,
+            "immediateCaptureGain": false,
+            "nonForkShortGain": false
+          },
+          {
+            "move": "Qf5+",
+            "targets": [],
+            "forkWin": false,
+            "immediateCaptureGain": false,
+            "nonForkShortGain": false
+          },
+          {
+            "move": "Qh4",
+            "targets": [],
+            "forkWin": false,
+            "immediateCaptureGain": false,
+            "nonForkShortGain": false
+          },
+          {
+            "move": "Qe4",
+            "targets": [],
+            "forkWin": false,
+            "immediateCaptureGain": false,
+            "nonForkShortGain": false
+          },
+          {
+            "move": "Qh3",
+            "targets": [],
+            "forkWin": false,
+            "immediateCaptureGain": false,
+            "nonForkShortGain": false
+          },
+          {
+            "move": "Qd3",
+            "targets": [],
+            "forkWin": false,
+            "immediateCaptureGain": false,
+            "nonForkShortGain": false
+          },
+          {
+            "move": "Qh2",
+            "targets": [],
+            "forkWin": false,
+            "immediateCaptureGain": false,
+            "nonForkShortGain": false
+          },
+          {
+            "move": "Qc2",
+            "targets": [],
+            "forkWin": false,
+            "immediateCaptureGain": false,
+            "nonForkShortGain": false
+          },
+          {
+            "move": "Qh1",
+            "targets": [],
+            "forkWin": false,
+            "immediateCaptureGain": false,
+            "nonForkShortGain": false
+          },
+          {
+            "move": "Qb1",
+            "targets": [],
+            "forkWin": false,
+            "immediateCaptureGain": false,
+            "nonForkShortGain": false
+          },
+          {
+            "move": "Kd5",
+            "targets": [],
+            "forkWin": false,
+            "immediateCaptureGain": false,
+            "nonForkShortGain": false
+          },
+          {
+            "move": "Kc5",
+            "targets": [],
+            "forkWin": false,
+            "immediateCaptureGain": false,
+            "nonForkShortGain": false
+          },
+          {
+            "move": "Kb5",
+            "targets": [],
+            "forkWin": false,
+            "immediateCaptureGain": false,
+            "nonForkShortGain": false
+          },
+          {
+            "move": "Kd4",
+            "targets": [],
+            "forkWin": false,
+            "immediateCaptureGain": false,
+            "nonForkShortGain": false
+          },
+          {
+            "move": "Kb4",
+            "targets": [],
+            "forkWin": false,
+            "immediateCaptureGain": false,
+            "nonForkShortGain": false
+          }
+        ],
+        "lines": [
+          [
+            "Qh6+",
+            "Ke8",
+            "Qxe3+"
+          ],
+          [
+            "Qh6+",
+            "Kf7",
+            "Qxe3"
+          ],
+          [
+            "Qh6+",
+            "Ke7",
+            "Qxe3+"
+          ],
+          [
+            "Qh6+",
+            "Rg7",
+            "Qxe3"
+          ]
+        ],
+        "shortMates": {
+          "immediate": [],
+          "inTwoSolverMoves": []
+        },
+        "initialMaterialCp": -100,
+        "engineRoots": [
+          {
+            "move": "Qh6+",
+            "cp": 270,
+            "mate": null,
+            "depth": 13,
+            "pv": [
+              "Qh6+",
+              "Rg7",
+              "Qf4+",
+              "Ke8",
+              "Qxe3+",
+              "Kd8",
+              "Qd2+",
+              "Ke8"
+            ]
+          },
+          {
+            "move": "Qf5+",
+            "cp": 266,
+            "mate": null,
+            "depth": 13,
+            "pv": [
+              "Qf5+",
+              "Ke8",
+              "Qh5+",
+              "Ke7",
+              "Qh7+",
+              "Kd8",
+              "Qxg8+",
+              "Re8",
+              "Qd5+",
+              "Ke7",
+              "Qc5+",
+              "Kf6"
+            ]
+          },
+          {
+            "move": "Qb1",
+            "cp": 28,
+            "mate": null,
+            "depth": 13,
+            "pv": [
+              "Qb1",
+              "Re5",
+              "Qb8+",
+              "Re8",
+              "Qd6+",
+              "Kf7",
+              "Qd7+",
+              "Kf6",
+              "Qd4+",
+              "Ke6"
+            ]
+          },
+          {
+            "move": "Qd7",
+            "cp": 26,
+            "mate": null,
+            "depth": 13,
+            "pv": [
+              "Qd7",
+              "Re7",
+              "Qd8+",
+              "Kf7",
+              "Qd5+",
+              "Kg7",
+              "Qg5+",
+              "Kf7",
+              "Qf4+",
+              "Ke8",
+              "Kc3",
+              "Rd7"
+            ]
+          },
+          {
+            "move": "Qh4",
+            "cp": 23,
+            "mate": null,
+            "depth": 13,
+            "pv": [
+              "Qh4",
+              "Re7",
+              "Qf6+",
+              "Ke8",
+              "Qc6+",
+              "Kf7",
+              "Qd5+",
+              "Kg7",
+              "Qg5+",
+              "Kf7",
+              "Qf4+",
+              "Ke8"
+            ]
+          },
+          {
+            "move": "Qh5",
+            "cp": 15,
+            "mate": null,
+            "depth": 13,
+            "pv": [
+              "Qh5",
+              "Rgg3",
+              "Qc5+",
+              "Kf7"
+            ]
+          },
+          {
+            "move": "Kd4",
+            "cp": 9,
+            "mate": null,
+            "depth": 13,
+            "pv": [
+              "Kd4",
+              "Re7",
+              "Qh6+",
+              "Kf7",
+              "Qd6",
+              "Ra7",
+              "Qf4+",
+              "Kg6"
+            ]
+          },
+          {
+            "move": "Kd5",
+            "cp": 7,
+            "mate": null,
+            "depth": 13,
+            "pv": [
+              "Kd5",
+              "Rgg3",
+              "Qb1",
+              "Rd3+",
+              "Ke5",
+              "Rde3+",
+              "Kd4",
+              "Rb3",
+              "Qf5+",
+              "Kg7",
+              "Qe5+",
+              "Kf8"
+            ]
+          },
+          {
+            "move": "Qc7",
+            "cp": 2,
+            "mate": null,
+            "depth": 13,
+            "pv": [
+              "Qc7",
+              "Rg4+",
+              "Kd5",
+              "Ree4",
+              "Qc8+",
+              "Kf7",
+              "Qh8",
+              "Rb4",
+              "Qh7+",
+              "Kf8"
+            ]
+          },
+          {
+            "move": "Qb7",
+            "cp": 2,
+            "mate": null,
+            "depth": 13,
+            "pv": [
+              "Qb7",
+              "Rg4+",
+              "Kd5",
+              "Re8",
+              "Qh7",
+              "Rg1",
+              "Qh8+",
+              "Kf7",
+              "Qh5+",
+              "Kf8"
+            ]
+          },
+          {
+            "move": "Qa7",
+            "cp": 1,
+            "mate": null,
+            "depth": 13,
+            "pv": [
+              "Qa7",
+              "Rg4+",
+              "Kc5",
+              "Rgg3",
+              "Kd5",
+              "Rd3+",
+              "Ke6",
+              "Rde3+",
+              "Kf5",
+              "Rgf3+",
+              "Kg4",
+              "Rg3+"
+            ]
+          },
+          {
+            "move": "Qh2",
+            "cp": -2,
+            "mate": null,
+            "depth": 13,
+            "pv": [
+              "Qh2",
+              "Rgg3",
+              "Qh8+",
+              "Kf7",
+              "Qh7+",
+              "Kf6",
+              "Qh8+",
+              "Rg7"
+            ]
+          },
+          {
+            "move": "Qc2",
+            "cp": 5,
+            "mate": null,
+            "depth": 12,
+            "pv": [
+              "Qc2",
+              "Rg4+",
+              "Kc5",
+              "Rgg3",
+              "Qf5+",
+              "Ke7"
+            ]
+          },
+          {
+            "move": "Kb5",
+            "cp": 2,
+            "mate": null,
+            "depth": 12,
+            "pv": [
+              "Kb5",
+              "Rg5+",
+              "Kc4",
+              "Reg3",
+              "Qh8+",
+              "Kf7"
+            ]
+          },
+          {
+            "move": "Kc5",
+            "cp": 0,
+            "mate": null,
+            "depth": 12,
+            "pv": [
+              "Kc5",
+              "Rgg3",
+              "Qf5+",
+              "Kg7",
+              "Qd7+",
+              "Kf6"
+            ]
+          },
+          {
+            "move": "Qh1",
+            "cp": -2,
+            "mate": null,
+            "depth": 12,
+            "pv": [
+              "Qh1",
+              "Rg4+",
+              "Kc5",
+              "Rc3+",
+              "Kd5",
+              "Rcg3",
+              "Qh8+",
+              "Ke7",
+              "Qe5+",
+              "Kd7"
+            ]
+          },
+          {
+            "move": "Kb4",
+            "cp": -2,
+            "mate": null,
+            "depth": 12,
+            "pv": [
+              "Kb4",
+              "Rg4+",
+              "Kc5",
+              "Rgg3",
+              "Qf5+",
+              "Ke7",
+              "Kd4",
+              "Rh3",
+              "Qg5+",
+              "Ke6"
+            ]
+          },
+          {
+            "move": "Qxg8+",
+            "cp": -555,
+            "mate": null,
+            "depth": 12,
+            "pv": [
+              "Qxg8+",
+              "Kxg8",
+              "Kd5",
+              "Re2",
+              "Kc6",
+              "Re7",
+              "Kd6",
+              "Rf7",
+              "Kc6",
+              "Ra7",
+              "Kd6"
+            ]
+          },
+          {
+            "move": "Qd3",
+            "cp": -582,
+            "mate": null,
+            "depth": 12,
+            "pv": [
+              "Qd3",
+              "Rxd3",
+              "Kxd3",
+              "Rg7",
+              "Kd4",
+              "Rd7+",
+              "Kc5"
+            ]
+          },
+          {
+            "move": "Qg6",
+            "cp": -643,
+            "mate": null,
+            "depth": 12,
+            "pv": [
+              "Qg6",
+              "Rxg6",
+              "Kb4",
+              "Ke8"
+            ]
+          },
+          {
+            "move": "Qg7+",
+            "cp": -664,
+            "mate": null,
+            "depth": 12,
+            "pv": [
+              "Qg7+",
+              "Kxg7",
+              "Kd4",
+              "Re6",
+              "Kd5"
+            ]
+          },
+          {
+            "move": "Qe7+",
+            "cp": -720,
+            "mate": null,
+            "depth": 12,
+            "pv": [
+              "Qe7+",
+              "Rxe7",
+              "Kd5",
+              "Rc7",
+              "Ke6",
+              "Rf7",
+              "Ke5",
+              "Rgg7"
+            ]
+          },
+          {
+            "move": "Qh8",
+            "cp": -742,
+            "mate": null,
+            "depth": 12,
+            "pv": [
+              "Qh8",
+              "Rxh8",
+              "Kd5",
+              "Re7",
+              "Kc6"
+            ]
+          },
+          {
+            "move": "Qe4",
+            "cp": -745,
+            "mate": null,
+            "depth": 12,
+            "pv": [
+              "Qe4",
+              "Rxe4+",
+              "Kd5",
+              "Rh4",
+              "Ke5",
+              "Ke8",
+              "Kf6",
+              "Rh6+",
+              "Kf5"
+            ]
+          },
+          {
+            "move": "Qf7+",
+            "cp": -745,
+            "mate": null,
+            "depth": 12,
+            "pv": [
+              "Qf7+",
+              "Kxf7",
+              "Kb5",
+              "Rg5+",
+              "Kc6",
+              "Kg6"
+            ]
+          },
+          {
+            "move": "Qh3",
+            "cp": -760,
+            "mate": null,
+            "depth": 12,
+            "pv": [
+              "Qh3",
+              "Rxh3",
+              "Kd4",
+              "Rh2",
+              "Kc3"
+            ]
+          }
+        ],
+        "endpointProbes": [
+          {
+            "moves": [
+              "Qh6+",
+              "Ke8",
+              "Qxe3+"
+            ],
+            "fen": "4k1r1/8/8/8/2K5/4Q3/8/8 b - - 0 2",
+            "minimumGainDuringEightPlyPV": 500,
+            "gainAfterEightPlyPV": 500,
+            "recoveryFen": "3r4/8/6k1/8/2K5/5Q2/8/8 w - - 5 5",
+            "move": "Kf7",
+            "cp": 269,
+            "mate": null,
+            "depth": 14,
+            "pv": [
+              "Kf7",
+              "Qe2",
+              "Rd8",
+              "Qf3+",
+              "Kg6"
+            ]
+          },
+          {
+            "moves": [
+              "Qh6+",
+              "Kf7",
+              "Qxe3"
+            ],
+            "fen": "6r1/5k2/8/8/2K5/4Q3/8/8 b - - 0 2",
+            "minimumGainDuringEightPlyPV": 500,
+            "gainAfterEightPlyPV": 500,
+            "recoveryFen": "8/6k1/6r1/1K6/8/4Q3/8/8 w - - 3 4",
+            "move": "Rg6",
+            "cp": 257,
+            "mate": null,
+            "depth": 15,
+            "pv": [
+              "Rg6",
+              "Kb5",
+              "Kg7"
+            ]
+          },
+          {
+            "moves": [
+              "Qh6+",
+              "Ke7",
+              "Qxe3+"
+            ],
+            "fen": "6r1/4k3/8/8/2K5/4Q3/8/8 b - - 0 2",
+            "minimumGainDuringEightPlyPV": 500,
+            "gainAfterEightPlyPV": 500,
+            "recoveryFen": "3r4/6k1/8/2K5/8/8/5Q2/8 w - - 5 5",
+            "move": "Kf7",
+            "cp": 271,
+            "mate": null,
+            "depth": 14,
+            "pv": [
+              "Kf7",
+              "Kc5",
+              "Rd8",
+              "Qf2+",
+              "Kg7"
+            ]
+          },
+          {
+            "moves": [
+              "Qh6+",
+              "Rg7",
+              "Qxe3"
+            ],
+            "fen": "5k2/6r1/8/8/2K5/4Q3/8/8 b - - 0 2",
+            "minimumGainDuringEightPlyPV": 500,
+            "gainAfterEightPlyPV": 500,
+            "recoveryFen": "8/5k2/8/4K3/8/1Q6/8/5r2 b - - 8 6",
+            "move": "Re7",
+            "cp": 282,
+            "mate": null,
+            "depth": 15,
+            "pv": [
+              "Re7",
+              "Qa3",
+              "Kf7",
+              "Kd5",
+              "Re1",
+              "Qb3",
+              "Rf1",
+              "Ke5+",
+              "Kg6"
+            ]
+          }
+        ],
+        "engine": {
+          "identity": {
+            "binarySha256": "2604a5c457bd7d288bdab58d3ee413f715a6afd26d44b29f6160fa49d0f7f0b2",
+            "options": {
+              "Threads": 1,
+              "Hash": 64
+            },
+            "externalNetworks": {},
+            "chessVersion": "1.11.2",
+            "hashPolicy": "clear-before-every-request-v1",
+            "cacheVersion": 1
+          },
+          "name": {
+            "name": "Stockfish 17",
+            "author": "the Stockfish developers (see AUTHORS file)"
+          }
+        },
+        "status": "needs-editorial-review",
+        "metrics": {
+          "hits": 5,
+          "misses": 0,
+          "engineCalls": 0,
+          "engineSeconds": 0.0
+        },
+        "reused": false,
+        "wallSeconds": 0.24353212500136578
+      },
+      "decision": {
+        "candidateIndex": 15,
+        "fen": "5kr1/7Q/8/8/2K5/4r3/8/8 w - - 0 1",
+        "root": "Qh6+",
+        "candidateHash": "8ce139608dae449f70eec7d968c8f71361fe430d557a6dc5a23fdee162d2c319",
+        "decision": "keep",
+        "mechanism": "checking-fork-survives-interposition",
+        "reason": "Qh6+ forks the King and Rook e3. The other Rook can answer with Rg7, blocking the checking diagonal, but Qxe3 still wins the target. Direct Qxg8+ fails to Kxg8. This is a concrete block-versus-King-move defensive choice, unlike the earlier unblockable royal forks.",
+        "reviewer": "fork_integration",
+        "distinctness": "checking-fork-survives-interposition",
+        "evidenceSha256": "02cf114897055a444b68db024b5bb7f8575e14e728480762ae629a3bcb84788b"
+      }
+    },
+    {
+      "exercise": {
+        "id": "fork-beginner-06",
+        "title": "Tấn công đôi bằng Hậu · 6",
+        "beginner": true,
+        "goal": "material",
+        "prompt": "Tạo đòn tấn công đôi rồi thu lợi vật chất.",
+        "mode": "interactive",
+        "outcome": "fork",
+        "fen": "4Q3/1k6/3p4/8/1n6/8/5r2/3K4 w - - 0 1",
+        "moves": [
+          "Qb5+",
+          "Kc7",
+          "Qxb4"
+        ],
+        "alternativeLines": [
+          [
+            "Qd7+",
+            "Kb8",
+            "Qxd6+"
+          ],
+          [
+            "Qd7+",
+            "Ka8",
+            "Qxd6"
+          ],
+          [
+            "Qd7+",
+            "Kb6",
+            "Qxd6+"
+          ],
+          [
+            "Qd7+",
+            "Ka6",
+            "Qxd6+"
+          ],
+          [
+            "Qb5+",
+            "Kc8",
+            "Qxb4"
+          ],
+          [
+            "Qb5+",
+            "Ka8",
+            "Qxb4"
+          ],
+          [
+            "Qb5+",
+            "Ka7",
+            "Qxb4"
+          ]
+        ],
+        "source": "original-composition",
+        "hints": [
+          "Tìm nước đi tạo hai mối đe dọa. Kiểm tra nước đáp và khả năng bắt lại."
+        ],
+        "solution": "Qb5+ — Hậu từ e8 đến b5. Qb5+ chiếu Vua b7 và tấn công Mã b4, đồng thời giữ Hậu ngoài tầm bắt của Vua. Sau nước đáp, bắt Mã."
+      },
+      "review": {
+        "candidate": {
+          "fen": "4Q3/1k6/3p4/8/1n6/8/5r2/3K4 w - - 0 1",
+          "root": "Qb5+",
+          "moves": [
+            "Qb5+",
+            "Kc8",
+            "Qxb4"
+          ],
+          "forkPiece": "Q",
+          "targets": [
+            "b4",
+            "b7"
+          ],
+          "teachingFamily": "Q-royal-knight",
+          "distinctness": "Create a direct fork; safe unprotected landing square; targets lack a shared defender; 4 legal defensive choices.",
+          "source": "original-composition",
+          "startingMaterial": 0,
+          "localEvidence": {
+            "lines": [
+              [
+                "Qb5+",
+                "Kc8",
+                "Qxb4"
+              ],
+              [
+                "Qb5+",
+                "Ka8",
+                "Qxb4"
+              ],
+              [
+                "Qb5+",
+                "Kc7",
+                "Qxb4"
+              ],
+              [
+                "Qb5+",
+                "Ka7",
+                "Qxb4"
+              ]
+            ],
+            "minimumGain": 3,
+            "targets": [
+              "b4",
+              "b7"
+            ],
+            "checking": true
+          },
+          "mechanism": [
+            false,
+            false,
+            false,
+            false
+          ],
+          "constructiveAttempts": 112
+        },
+        "candidateHash": "213d8ac54c7448c2ad15ce0ac61aa5d31b698ba685dc1ea5e3ed63eee130ca0b",
+        "verificationVersion": "42438004b5d0397ca6bbf1905d52da892d8908797a65ccb1808816087a334cfa",
+        "topic": "fork",
+        "settings": {
+          "rootNodes": 200000,
+          "rootMultiPV": "every legal move",
+          "endpointNodesEach": 50000
+        },
+        "flags": [],
+        "roots": [
+          {
+            "move": "Qh8",
+            "targets": [],
+            "forkWin": false,
+            "immediateCaptureGain": false,
+            "nonForkShortGain": false
+          },
+          {
+            "move": "Qg8",
+            "targets": [],
+            "forkWin": false,
+            "immediateCaptureGain": false,
+            "nonForkShortGain": false
+          },
+          {
+            "move": "Qf8",
+            "targets": [
+              "f2",
+              "d6"
+            ],
+            "forkWin": false,
+            "immediateCaptureGain": false,
+            "nonForkShortGain": false
+          },
+          {
+            "move": "Qd8",
+            "targets": [],
+            "forkWin": false,
+            "immediateCaptureGain": false,
+            "nonForkShortGain": false
+          },
+          {
+            "move": "Qc8+",
+            "targets": [],
+            "forkWin": false,
+            "immediateCaptureGain": false,
+            "nonForkShortGain": false
+          },
+          {
+            "move": "Qb8+",
+            "targets": [
+              "d6",
+              "b7"
+            ],
+            "forkWin": false,
+            "immediateCaptureGain": false,
+            "nonForkShortGain": false
+          },
+          {
+            "move": "Qa8+",
+            "targets": [],
+            "forkWin": false,
+            "immediateCaptureGain": false,
+            "nonForkShortGain": false
+          },
+          {
+            "move": "Qf7+",
+            "targets": [
+              "f2",
+              "b7"
+            ],
+            "forkWin": false,
+            "immediateCaptureGain": false,
+            "nonForkShortGain": false
+          },
+          {
+            "move": "Qe7+",
+            "targets": [
+              "d6",
+              "b7"
+            ],
+            "forkWin": false,
+            "immediateCaptureGain": false,
+            "nonForkShortGain": false
+          },
+          {
+            "move": "Qd7+",
+            "targets": [
+              "d6",
+              "b7"
+            ],
+            "forkWin": true,
+            "immediateCaptureGain": false,
+            "nonForkShortGain": false
+          },
+          {
+            "move": "Qg6",
+            "targets": [],
+            "forkWin": false,
+            "immediateCaptureGain": false,
+            "nonForkShortGain": false
+          },
+          {
+            "move": "Qe6",
+            "targets": [],
+            "forkWin": false,
+            "immediateCaptureGain": false,
+            "nonForkShortGain": false
+          },
+          {
+            "move": "Qc6+",
+            "targets": [
+              "d6",
+              "b7"
+            ],
+            "forkWin": false,
+            "immediateCaptureGain": false,
+            "nonForkShortGain": false
+          },
+          {
+            "move": "Qh5",
+            "targets": [],
+            "forkWin": false,
+            "immediateCaptureGain": false,
+            "nonForkShortGain": false
+          },
+          {
+            "move": "Qe5",
+            "targets": [],
+            "forkWin": false,
+            "immediateCaptureGain": false,
+            "nonForkShortGain": false
+          },
+          {
+            "move": "Qb5+",
+            "targets": [
+              "b4",
+              "b7"
+            ],
+            "forkWin": true,
+            "immediateCaptureGain": false,
+            "nonForkShortGain": false
+          },
+          {
+            "move": "Qe4+",
+            "targets": [
+              "b4",
+              "b7"
+            ],
+            "forkWin": false,
+            "immediateCaptureGain": false,
+            "nonForkShortGain": false
+          },
+          {
+            "move": "Qa4",
+            "targets": [],
+            "forkWin": false,
+            "immediateCaptureGain": false,
+            "nonForkShortGain": false
+          },
+          {
+            "move": "Qe3",
+            "targets": [],
+            "forkWin": false,
+            "immediateCaptureGain": false,
+            "nonForkShortGain": false
+          },
+          {
+            "move": "Qe2",
+            "targets": [],
+            "forkWin": false,
+            "immediateCaptureGain": false,
+            "nonForkShortGain": false
+          },
+          {
+            "move": "Qe1",
+            "targets": [
+              "f2",
+              "b4"
+            ],
+            "forkWin": false,
+            "immediateCaptureGain": false,
+            "nonForkShortGain": false
+          },
+          {
+            "move": "Ke1",
+            "targets": [],
+            "forkWin": false,
+            "immediateCaptureGain": false,
+            "nonForkShortGain": false
+          },
+          {
+            "move": "Kc1",
+            "targets": [],
+            "forkWin": false,
+            "immediateCaptureGain": false,
+            "nonForkShortGain": false
+          }
+        ],
+        "lines": [
+          [
+            "Qd7+",
+            "Kb8",
+            "Qxd6+"
+          ],
+          [
+            "Qd7+",
+            "Ka8",
+            "Qxd6"
+          ],
+          [
+            "Qd7+",
+            "Kb6",
+            "Qxd6+"
+          ],
+          [
+            "Qd7+",
+            "Ka6",
+            "Qxd6+"
+          ],
+          [
+            "Qb5+",
+            "Kc8",
+            "Qxb4"
+          ],
+          [
+            "Qb5+",
+            "Ka8",
+            "Qxb4"
+          ],
+          [
+            "Qb5+",
+            "Kc7",
+            "Qxb4"
+          ],
+          [
+            "Qb5+",
+            "Ka7",
+            "Qxb4"
+          ]
+        ],
+        "shortMates": {
+          "immediate": [],
+          "inTwoSolverMoves": []
+        },
+        "initialMaterialCp": 0,
+        "engineRoots": [
+          {
+            "move": "Qb5+",
+            "cp": 213,
+            "mate": null,
+            "depth": 11,
+            "pv": [
+              "Qb5+",
+              "Kc8",
+              "Qc4+",
+              "Kd7",
+              "Qxb4",
+              "Rf8",
+              "Qb7+",
+              "Ke8",
+              "Qc6+",
+              "Ke7",
+              "Qc7+",
+              "Ke8"
+            ]
+          },
+          {
+            "move": "Qe7+",
+            "cp": 35,
+            "mate": null,
+            "depth": 11,
+            "pv": [
+              "Qe7+",
+              "Kc6",
+              "Qh4",
+              "Rb2",
+              "Qc4+",
+              "Kd7",
+              "Qb5+",
+              "Ke7",
+              "Qb7+",
+              "Ke8"
+            ]
+          },
+          {
+            "move": "Qd7+",
+            "cp": 9,
+            "mate": null,
+            "depth": 11,
+            "pv": [
+              "Qd7+",
+              "Kb6",
+              "Qd8+",
+              "Kc5",
+              "Qa5+",
+              "Kc4",
+              "Qc7+",
+              "Kd5",
+              "Qb7+",
+              "Kc4",
+              "Qe4+",
+              "Kb5"
+            ]
+          },
+          {
+            "move": "Qe1",
+            "cp": 2,
+            "mate": null,
+            "depth": 11,
+            "pv": [
+              "Qe1",
+              "Rf4",
+              "Qd2",
+              "Rf1+",
+              "Ke2",
+              "Rb1",
+              "Qxd6",
+              "Rb2+",
+              "Ke1",
+              "Rb1+",
+              "Kd2",
+              "Nc6"
+            ]
+          },
+          {
+            "move": "Qe3",
+            "cp": 1,
+            "mate": null,
+            "depth": 11,
+            "pv": [
+              "Qe3",
+              "Rf1+",
+              "Kd2",
+              "Nc6",
+              "Qb3+",
+              "Kc7",
+              "Qc3",
+              "Rb1",
+              "Qg7+",
+              "Kb6"
+            ]
+          },
+          {
+            "move": "Qe6",
+            "cp": 0,
+            "mate": null,
+            "depth": 11,
+            "pv": [
+              "Qe6",
+              "Nc6",
+              "Qd7+",
+              "Kb6",
+              "Qxd6",
+              "Rf3",
+              "Qg6",
+              "Rf1+",
+              "Kd2",
+              "Rh1",
+              "Qg7",
+              "Rh2+"
+            ]
+          },
+          {
+            "move": "Qg6",
+            "cp": -3,
+            "mate": null,
+            "depth": 11,
+            "pv": [
+              "Qg6",
+              "Nc6",
+              "Qxd6",
+              "Rf1+",
+              "Kd2",
+              "Kb6",
+              "Qg3"
+            ]
+          },
+          {
+            "move": "Qe4+",
+            "cp": -3,
+            "mate": null,
+            "depth": 11,
+            "pv": [
+              "Qe4+",
+              "Nc6",
+              "Qg6",
+              "Rh2",
+              "Qg7+",
+              "Kc8",
+              "Qg1",
+              "Rh4",
+              "Kd2"
+            ]
+          },
+          {
+            "move": "Qh5",
+            "cp": -3,
+            "mate": null,
+            "depth": 11,
+            "pv": [
+              "Qh5",
+              "Nc6",
+              "Qh6",
+              "Rf1+",
+              "Kd2",
+              "Kc7",
+              "Qg7+",
+              "Kb6",
+              "Qb2+",
+              "Ka5",
+              "Qc3+",
+              "Kb5"
+            ]
+          },
+          {
+            "move": "Qd8",
+            "cp": -4,
+            "mate": null,
+            "depth": 11,
+            "pv": [
+              "Qd8",
+              "Rf1+",
+              "Ke2",
+              "Ra1",
+              "Qe7+",
+              "Kc6",
+              "Qe6",
+              "Ra7"
+            ]
+          },
+          {
+            "move": "Ke1",
+            "cp": -5,
+            "mate": null,
+            "depth": 11,
+            "pv": [
+              "Ke1",
+              "Nd3+"
+            ]
+          },
+          {
+            "move": "Qh8",
+            "cp": 0,
+            "mate": null,
+            "depth": 10,
+            "pv": [
+              "Qh8",
+              "Rf4",
+              "Qb2",
+              "Rc4",
+              "Qg2+",
+              "Nc6"
+            ]
+          },
+          {
+            "move": "Qa4",
+            "cp": 0,
+            "mate": null,
+            "depth": 10,
+            "pv": [
+              "Qa4",
+              "Nc6",
+              "Qb3+",
+              "Kc7",
+              "Ke1",
+              "Rh2",
+              "Qf7+",
+              "Kb6",
+              "Qb3+",
+              "Kc7"
+            ]
+          },
+          {
+            "move": "Qg8",
+            "cp": -1,
+            "mate": null,
+            "depth": 10,
+            "pv": [
+              "Qg8",
+              "Rf4",
+              "Qg1",
+              "Rh4",
+              "Qg7+",
+              "Kc6",
+              "Qg2+",
+              "Nd5"
+            ]
+          },
+          {
+            "move": "Kc1",
+            "cp": -9,
+            "mate": null,
+            "depth": 10,
+            "pv": [
+              "Kc1",
+              "Nd3+",
+              "Kd1",
+              "Nc5",
+              "Qe7+",
+              "Kc6",
+              "Qe8+",
+              "Kd5",
+              "Qh5+",
+              "Ke4",
+              "Qh4+",
+              "Rf4"
+            ]
+          },
+          {
+            "move": "Qe2",
+            "cp": -519,
+            "mate": null,
+            "depth": 10,
+            "pv": [
+              "Qe2",
+              "Rxe2",
+              "Kxe2",
+              "Kc6",
+              "Ke3",
+              "Kd5",
+              "Kf4",
+              "Kc4",
+              "Ke3",
+              "Kc5"
+            ]
+          },
+          {
+            "move": "Qe5",
+            "cp": -620,
+            "mate": null,
+            "depth": 10,
+            "pv": [
+              "Qe5",
+              "dxe5",
+              "Ke1",
+              "Rf7",
+              "Kd2"
+            ]
+          },
+          {
+            "move": "Qc8+",
+            "cp": -621,
+            "mate": null,
+            "depth": 10,
+            "pv": [
+              "Qc8+",
+              "Kxc8",
+              "Ke1",
+              "Nd3+",
+              "Kd1",
+              "Nb2+",
+              "Kc1"
+            ]
+          },
+          {
+            "move": "Qa8+",
+            "cp": -630,
+            "mate": null,
+            "depth": 10,
+            "pv": [
+              "Qa8+",
+              "Kxa8",
+              "Kc1",
+              "Nd3+",
+              "Kd1"
+            ]
+          },
+          {
+            "move": "Qb8+",
+            "cp": -633,
+            "mate": null,
+            "depth": 10,
+            "pv": [
+              "Qb8+",
+              "Kxb8",
+              "Kc1",
+              "Rf7",
+              "Kd2",
+              "Nc6",
+              "Kd3"
+            ]
+          },
+          {
+            "move": "Qf7+",
+            "cp": -634,
+            "mate": null,
+            "depth": 10,
+            "pv": [
+              "Qf7+",
+              "Rxf7"
+            ]
+          },
+          {
+            "move": "Qf8",
+            "cp": -655,
+            "mate": null,
+            "depth": 10,
+            "pv": [
+              "Qf8",
+              "Rxf8",
+              "Kd2",
+              "Kb6",
+              "Kc3",
+              "Rc8+",
+              "Kb2"
+            ]
+          },
+          {
+            "move": "Qc6+",
+            "cp": -723,
+            "mate": null,
+            "depth": 10,
+            "pv": [
+              "Qc6+",
+              "Kxc6",
+              "Kc1",
+              "Nd3+",
+              "Kd1"
+            ]
+          }
+        ],
+        "endpointProbes": [
+          {
+            "moves": [
+              "Qb5+",
+              "Kc8",
+              "Qxb4"
+            ],
+            "fen": "2k5/8/3p4/8/1Q6/8/5r2/3K4 b - - 0 2",
+            "minimumGainDuringEightPlyPV": 300,
+            "gainAfterEightPlyPV": 300,
+            "recoveryFen": "1k4Q1/1r6/3p4/8/8/3K4/8/8 b - - 8 6",
+            "move": "Rf7",
+            "cp": 250,
+            "mate": null,
+            "depth": 14,
+            "pv": [
+              "Rf7",
+              "Ke2",
+              "Re7+",
+              "Kd3",
+              "Rb7",
+              "Qg4+",
+              "Kb8",
+              "Qg8+",
+              "Ka7"
+            ]
+          },
+          {
+            "moves": [
+              "Qb5+",
+              "Ka8",
+              "Qxb4"
+            ],
+            "fen": "k7/8/3p4/8/1Q6/8/5r2/3K4 b - - 0 2",
+            "minimumGainDuringEightPlyPV": 300,
+            "gainAfterEightPlyPV": 400,
+            "recoveryFen": "1k6/4Q3/2r5/8/8/8/8/3K4 w - - 5 6",
+            "move": "Rf8",
+            "cp": 268,
+            "mate": null,
+            "depth": 15,
+            "pv": [
+              "Rf8",
+              "Qxd6",
+              "Rc8",
+              "Qd7",
+              "Kb8",
+              "Qe7",
+              "Rc6"
+            ]
+          },
+          {
+            "moves": [
+              "Qb5+",
+              "Kc7",
+              "Qxb4"
+            ],
+            "fen": "8/2k5/3p4/8/1Q6/8/5r2/3K4 b - - 0 2",
+            "minimumGainDuringEightPlyPV": 300,
+            "gainAfterEightPlyPV": 300,
+            "recoveryFen": "8/3k4/3p4/2r5/K5Q1/8/8/8 b - - 8 6",
+            "move": "Rf5",
+            "cp": 234,
+            "mate": null,
+            "depth": 14,
+            "pv": [
+              "Rf5",
+              "Kc2",
+              "Re5",
+              "Kb3",
+              "Rc5",
+              "Ka4",
+              "Kd7",
+              "Qg4+",
+              "Ke7",
+              "Kb3"
+            ]
+          },
+          {
+            "moves": [
+              "Qb5+",
+              "Ka7",
+              "Qxb4"
+            ],
+            "fen": "8/k7/3p4/8/1Q6/8/5r2/3K4 b - - 0 2",
+            "minimumGainDuringEightPlyPV": 300,
+            "gainAfterEightPlyPV": 400,
+            "recoveryFen": "8/k7/3Q4/1r6/3K4/8/8/8 b - - 6 6",
+            "move": "Rf5",
+            "cp": 267,
+            "mate": null,
+            "depth": 16,
+            "pv": [
+              "Rf5",
+              "Qxd6",
+              "Rb5",
+              "Kd2",
+              "Rb1",
+              "Kc3",
+              "Rb5",
+              "Kd4",
+              "Rb7"
+            ]
+          }
+        ],
+        "engine": {
+          "identity": {
+            "binarySha256": "2604a5c457bd7d288bdab58d3ee413f715a6afd26d44b29f6160fa49d0f7f0b2",
+            "options": {
+              "Threads": 1,
+              "Hash": 64
+            },
+            "externalNetworks": {},
+            "chessVersion": "1.11.2",
+            "hashPolicy": "clear-before-every-request-v1",
+            "cacheVersion": 1
+          },
+          "name": {
+            "name": "Stockfish 17",
+            "author": "the Stockfish developers (see AUTHORS file)"
+          }
+        },
+        "status": "needs-editorial-review",
+        "metrics": {
+          "hits": 5,
+          "misses": 0,
+          "engineCalls": 0,
+          "engineSeconds": 0.0
+        },
+        "reused": false,
+        "wallSeconds": 0.24487804200180108
+      },
+      "decision": {
+        "candidateIndex": 19,
+        "fen": "4Q3/1k6/3p4/8/1n6/8/5r2/3K4 w - - 0 1",
+        "root": "Qb5+",
+        "candidateHash": "213d8ac54c7448c2ad15ce0ac61aa5d31b698ba685dc1ea5e3ed63eee130ca0b",
+        "decision": "keep",
+        "mechanism": "compare-forks-with-different-payoffs",
+        "reason": "Both Qb5+ (winning Knight b4) and Qd7+ (winning Pawn d6) are motif-based solutions. The useful additional decision is comparing two available forks, not merely changing the target type. Accept the smaller valid Pawn gain and explain the larger Knight gain without claiming uniqueness.",
+        "reviewer": "fork_integration",
+        "distinctness": "compare-forks-with-different-payoffs",
+        "evidenceSha256": "82089410547c8919ec568b7cb0d0bb332323deadbb50a46e3d82b7de181cc95d"
+      }
+    },
+    {
+      "exercise": {
+        "id": "fork-beginner-07",
+        "title": "Tấn công đôi bằng Hậu · 7",
+        "beginner": true,
+        "goal": "material",
+        "prompt": "Tạo đòn tấn công đôi rồi thu lợi vật chất.",
+        "mode": "interactive",
+        "outcome": "fork",
+        "fen": "8/6rn/3k4/8/1K6/8/1p6/6Q1 w - - 0 1",
+        "moves": [
+          "Qh2+",
+          "Kd5",
+          "Qxb2"
+        ],
+        "alternativeLines": [
+          [
+            "Qd4+",
+            "Ke7",
+            "Qxg7+"
+          ],
+          [
+            "Qd4+",
+            "Ke7",
+            "Qxb2"
+          ],
+          [
+            "Qd4+",
+            "Kc7",
+            "Qxg7+"
+          ],
+          [
+            "Qd4+",
+            "Kc7",
+            "Qxb2"
+          ],
+          [
+            "Qd4+",
+            "Ke6",
+            "Qxb2"
+          ],
+          [
+            "Qd4+",
+            "Kc6",
+            "Qxb2"
+          ],
+          [
+            "Qh2+",
+            "Ke7",
+            "Qxb2"
+          ],
+          [
+            "Qh2+",
+            "Kd7",
+            "Qxb2"
+          ],
+          [
+            "Qh2+",
+            "Ke6",
+            "Qxb2"
+          ],
+          [
+            "Qh2+",
+            "Kc6",
+            "Qxb2"
+          ],
+          [
+            "Qh2+",
+            "Rg3",
+            "Qxb2"
+          ]
+        ],
+        "source": "original-composition",
+        "hints": [
+          "Tìm nước đi tạo hai mối đe dọa. Kiểm tra nước đáp và khả năng bắt lại."
+        ],
+        "solution": "Qh2+ — Hậu từ g1 đến h2. Qh2+ chiếu Vua d6 và tấn công Tốt b2 sắp phong cấp. Mã h7 được Xe g7 bảo vệ; mục tiêu có thể bắt an toàn là Tốt b2."
+      },
+      "review": {
+        "candidate": {
+          "fen": "8/6rn/3k4/8/1K6/8/1p6/6Q1 w - - 0 1",
+          "root": "Qh2+",
+          "moves": [
+            "Qh2+",
+            "Ke7",
+            "Qxb2"
+          ],
+          "forkPiece": "Q",
+          "targets": [
+            "b2",
+            "d6",
+            "h7"
+          ],
+          "teachingFamily": "Q-royal-knight",
+          "distinctness": "Attacked forker escapes with a fork; safe unprotected landing square; a target has a defender; 6 legal defensive choices.",
+          "source": "original-composition",
+          "startingMaterial": 0,
+          "localEvidence": {
+            "lines": [
+              [
+                "Qh2+",
+                "Ke7",
+                "Qxb2"
+              ],
+              [
+                "Qh2+",
+                "Kd7",
+                "Qxb2"
+              ],
+              [
+                "Qh2+",
+                "Ke6",
+                "Qxb2"
+              ],
+              [
+                "Qh2+",
+                "Kc6",
+                "Qxb2"
+              ],
+              [
+                "Qh2+",
+                "Kd5",
+                "Qxb2"
+              ],
+              [
+                "Qh2+",
+                "Rg3",
+                "Qxb2"
+              ]
+            ],
+            "minimumGain": 1,
+            "targets": [
+              "b2",
+              "d6",
+              "h7"
+            ],
+            "checking": true
+          },
+          "mechanism": [
+            true,
+            false,
+            true,
+            false
+          ],
+          "constructiveAttempts": 661
+        },
+        "candidateHash": "daba00623e19ff921355933ee114fe8bcda46d5a73fa1f9cb3724f2e07fdb18b",
+        "verificationVersion": "42438004b5d0397ca6bbf1905d52da892d8908797a65ccb1808816087a334cfa",
+        "topic": "fork",
+        "settings": {
+          "rootNodes": 200000,
+          "rootMultiPV": "every legal move",
+          "endpointNodesEach": 50000
+        },
+        "flags": [],
+        "roots": [
+          {
+            "move": "Kb5",
+            "targets": [],
+            "forkWin": false,
+            "immediateCaptureGain": false,
+            "nonForkShortGain": false
+          },
+          {
+            "move": "Ka5",
+            "targets": [],
+            "forkWin": false,
+            "immediateCaptureGain": false,
+            "nonForkShortGain": false
+          },
+          {
+            "move": "Kc4",
+            "targets": [],
+            "forkWin": false,
+            "immediateCaptureGain": false,
+            "nonForkShortGain": false
+          },
+          {
+            "move": "Ka4",
+            "targets": [],
+            "forkWin": false,
+            "immediateCaptureGain": false,
+            "nonForkShortGain": false
+          },
+          {
+            "move": "Kc3",
+            "targets": [],
+            "forkWin": false,
+            "immediateCaptureGain": false,
+            "nonForkShortGain": false
+          },
+          {
+            "move": "Kb3",
+            "targets": [],
+            "forkWin": false,
+            "immediateCaptureGain": false,
+            "nonForkShortGain": false
+          },
+          {
+            "move": "Ka3",
+            "targets": [],
+            "forkWin": false,
+            "immediateCaptureGain": false,
+            "nonForkShortGain": false
+          },
+          {
+            "move": "Qxg7",
+            "targets": [
+              "b2",
+              "h7"
+            ],
+            "forkWin": false,
+            "immediateCaptureGain": false,
+            "nonForkShortGain": false
+          },
+          {
+            "move": "Qa7",
+            "targets": [],
+            "forkWin": false,
+            "immediateCaptureGain": false,
+            "nonForkShortGain": false
+          },
+          {
+            "move": "Qg6+",
+            "targets": [
+              "d6",
+              "g7",
+              "h7"
+            ],
+            "forkWin": false,
+            "immediateCaptureGain": false,
+            "nonForkShortGain": false
+          },
+          {
+            "move": "Qb6+",
+            "targets": [],
+            "forkWin": false,
+            "immediateCaptureGain": false,
+            "nonForkShortGain": false
+          },
+          {
+            "move": "Qg5",
+            "targets": [],
+            "forkWin": false,
+            "immediateCaptureGain": false,
+            "nonForkShortGain": false
+          },
+          {
+            "move": "Qc5+",
+            "targets": [],
+            "forkWin": false,
+            "immediateCaptureGain": false,
+            "nonForkShortGain": false
+          },
+          {
+            "move": "Qg4",
+            "targets": [],
+            "forkWin": false,
+            "immediateCaptureGain": false,
+            "nonForkShortGain": false
+          },
+          {
+            "move": "Qd4+",
+            "targets": [
+              "b2",
+              "d6",
+              "g7"
+            ],
+            "forkWin": true,
+            "immediateCaptureGain": false,
+            "nonForkShortGain": false
+          },
+          {
+            "move": "Qg3+",
+            "targets": [
+              "d6",
+              "g7"
+            ],
+            "forkWin": false,
+            "immediateCaptureGain": false,
+            "nonForkShortGain": false
+          },
+          {
+            "move": "Qe3",
+            "targets": [],
+            "forkWin": false,
+            "immediateCaptureGain": false,
+            "nonForkShortGain": false
+          },
+          {
+            "move": "Qh2+",
+            "targets": [
+              "b2",
+              "d6",
+              "h7"
+            ],
+            "forkWin": true,
+            "immediateCaptureGain": false,
+            "nonForkShortGain": false
+          },
+          {
+            "move": "Qg2",
+            "targets": [
+              "b2",
+              "g7"
+            ],
+            "forkWin": false,
+            "immediateCaptureGain": false,
+            "nonForkShortGain": false
+          },
+          {
+            "move": "Qf2",
+            "targets": [],
+            "forkWin": false,
+            "immediateCaptureGain": false,
+            "nonForkShortGain": false
+          },
+          {
+            "move": "Qh1",
+            "targets": [],
+            "forkWin": false,
+            "immediateCaptureGain": false,
+            "nonForkShortGain": false
+          },
+          {
+            "move": "Qf1",
+            "targets": [],
+            "forkWin": false,
+            "immediateCaptureGain": false,
+            "nonForkShortGain": false
+          },
+          {
+            "move": "Qe1",
+            "targets": [],
+            "forkWin": false,
+            "immediateCaptureGain": false,
+            "nonForkShortGain": false
+          },
+          {
+            "move": "Qd1+",
+            "targets": [],
+            "forkWin": false,
+            "immediateCaptureGain": false,
+            "nonForkShortGain": false
+          },
+          {
+            "move": "Qc1",
+            "targets": [],
+            "forkWin": false,
+            "immediateCaptureGain": false,
+            "nonForkShortGain": false
+          },
+          {
+            "move": "Qb1",
+            "targets": [
+              "b2",
+              "h7"
+            ],
+            "forkWin": false,
+            "immediateCaptureGain": false,
+            "nonForkShortGain": false
+          },
+          {
+            "move": "Qa1",
+            "targets": [],
+            "forkWin": false,
+            "immediateCaptureGain": false,
+            "nonForkShortGain": false
+          }
+        ],
+        "lines": [
+          [
+            "Qd4+",
+            "Ke7",
+            "Qxg7+"
+          ],
+          [
+            "Qd4+",
+            "Ke7",
+            "Qxb2"
+          ],
+          [
+            "Qd4+",
+            "Kc7",
+            "Qxg7+"
+          ],
+          [
+            "Qd4+",
+            "Kc7",
+            "Qxb2"
+          ],
+          [
+            "Qd4+",
+            "Ke6",
+            "Qxb2"
+          ],
+          [
+            "Qd4+",
+            "Kc6",
+            "Qxb2"
+          ],
+          [
+            "Qh2+",
+            "Ke7",
+            "Qxb2"
+          ],
+          [
+            "Qh2+",
+            "Kd7",
+            "Qxb2"
+          ],
+          [
+            "Qh2+",
+            "Ke6",
+            "Qxb2"
+          ],
+          [
+            "Qh2+",
+            "Kc6",
+            "Qxb2"
+          ],
+          [
+            "Qh2+",
+            "Kd5",
+            "Qxb2"
+          ],
+          [
+            "Qh2+",
+            "Rg3",
+            "Qxb2"
+          ]
+        ],
+        "shortMates": {
+          "immediate": [],
+          "inTwoSolverMoves": []
+        },
+        "initialMaterialCp": 0,
+        "engineRoots": [
+          {
+            "move": "Qb6+",
+            "cp": 22,
+            "mate": null,
+            "depth": 12,
+            "pv": [
+              "Qb6+",
+              "Ke7",
+              "Ka3",
+              "Nf8",
+              "Qxb2",
+              "Ne6",
+              "Qb8",
+              "Kf6",
+              "Ka2"
+            ]
+          },
+          {
+            "move": "Qd1+",
+            "cp": 15,
+            "mate": null,
+            "depth": 11,
+            "pv": [
+              "Qd1+",
+              "Ke7",
+              "Qe2+",
+              "Kf7",
+              "Qxb2",
+              "Nf6",
+              "Ka3"
+            ]
+          },
+          {
+            "move": "Qh2+",
+            "cp": 14,
+            "mate": null,
+            "depth": 11,
+            "pv": [
+              "Qh2+",
+              "Ke6",
+              "Qxb2",
+              "Nf6",
+              "Qe2+",
+              "Kf5",
+              "Qd3+",
+              "Kg4",
+              "Kc3"
+            ]
+          },
+          {
+            "move": "Qc5+",
+            "cp": 10,
+            "mate": null,
+            "depth": 11,
+            "pv": [
+              "Qc5+",
+              "Kd7",
+              "Qb5+",
+              "Kc8",
+              "Qe8+",
+              "Kb7",
+              "Qe4+",
+              "Kc8",
+              "Qc2+",
+              "Rc7",
+              "Qf5+",
+              "Kd8"
+            ]
+          },
+          {
+            "move": "Qd4+",
+            "cp": 10,
+            "mate": null,
+            "depth": 11,
+            "pv": [
+              "Qd4+",
+              "Ke6",
+              "Qxb2",
+              "Nf6",
+              "Qe2+",
+              "Kd6",
+              "Qh2+",
+              "Ke7",
+              "Qc7+",
+              "Nd7",
+              "Qb7"
+            ]
+          },
+          {
+            "move": "Qb1",
+            "cp": 1,
+            "mate": null,
+            "depth": 11,
+            "pv": [
+              "Qb1",
+              "Nf6",
+              "Ka3",
+              "Nd5",
+              "Qxb2",
+              "Ra7+",
+              "Kb3",
+              "Rb7+",
+              "Ka3"
+            ]
+          },
+          {
+            "move": "Qxg7",
+            "cp": -8,
+            "mate": null,
+            "depth": 11,
+            "pv": [
+              "Qxg7",
+              "b1=Q+",
+              "Kc4",
+              "Qf1+",
+              "Kb4",
+              "Nf6",
+              "Qf8+",
+              "Kd7",
+              "Qf7+",
+              "Kc6",
+              "Qc4+",
+              "Qxc4+"
+            ]
+          },
+          {
+            "move": "Qf1",
+            "cp": -552,
+            "mate": null,
+            "depth": 11,
+            "pv": [
+              "Qf1",
+              "b1=Q+",
+              "Qxb1",
+              "Rb7+",
+              "Ka4",
+              "Rxb1",
+              "Ka5",
+              "Rb7",
+              "Ka6",
+              "Rg7",
+              "Ka5",
+              "Nf8"
+            ]
+          },
+          {
+            "move": "Qh1",
+            "cp": -554,
+            "mate": null,
+            "depth": 11,
+            "pv": [
+              "Qh1",
+              "b1=R+",
+              "Qxb1",
+              "Rb7+",
+              "Kc3",
+              "Rxb1",
+              "Kd2",
+              "Rb7",
+              "Kc3",
+              "Rg7"
+            ]
+          },
+          {
+            "move": "Qe1",
+            "cp": -581,
+            "mate": null,
+            "depth": 11,
+            "pv": [
+              "Qe1",
+              "b1=Q+",
+              "Qxb1",
+              "Rb7+",
+              "Ka4",
+              "Rxb1",
+              "Ka3",
+              "Rb7",
+              "Ka4",
+              "Rg7",
+              "Ka5",
+              "Kd7"
+            ]
+          },
+          {
+            "move": "Ka3",
+            "cp": -653,
+            "mate": null,
+            "depth": 11,
+            "pv": [
+              "Ka3",
+              "Rxg1",
+              "Kxb2",
+              "Kc7",
+              "Kb3",
+              "Rg3+",
+              "Ka4",
+              "Kd8",
+              "Ka5",
+              "Rh3",
+              "Kb6",
+              "Rh6+"
+            ]
+          },
+          {
+            "move": "Qe3",
+            "cp": -658,
+            "mate": null,
+            "depth": 11,
+            "pv": [
+              "Qe3",
+              "b1=Q+",
+              "Ka5",
+              "Qa1+",
+              "Kb5",
+              "Rb7+",
+              "Qb6+",
+              "Rxb6+",
+              "Kxb6",
+              "Qa4",
+              "Kb7",
+              "Qc6+"
+            ]
+          },
+          {
+            "move": "Kc3",
+            "cp": -669,
+            "mate": null,
+            "depth": 11,
+            "pv": [
+              "Kc3",
+              "Rxg1",
+              "Kxb2",
+              "Rg3",
+              "Kb1",
+              "Kc7",
+              "Ka2",
+              "Kd8"
+            ]
+          },
+          {
+            "move": "Kb3",
+            "cp": -673,
+            "mate": null,
+            "depth": 11,
+            "pv": [
+              "Kb3",
+              "Rxg1",
+              "Kxb2",
+              "Rg3",
+              "Kb1",
+              "Kc7",
+              "Kb2",
+              "Kd8",
+              "Ka2",
+              "Rh3",
+              "Kb2"
+            ]
+          },
+          {
+            "move": "Qf2",
+            "cp": -690,
+            "mate": null,
+            "depth": 11,
+            "pv": [
+              "Qf2",
+              "b1=Q+",
+              "Ka4",
+              "Qa1+",
+              "Kb5",
+              "Rb7+",
+              "Qb6+",
+              "Rxb6+",
+              "Kxb6",
+              "Qa4",
+              "Kb7",
+              "Nf8"
+            ]
+          },
+          {
+            "move": "Qg6+",
+            "cp": -938,
+            "mate": null,
+            "depth": 11,
+            "pv": [
+              "Qg6+",
+              "Rxg6",
+              "Kc3",
+              "b1=Q",
+              "Kd4",
+              "Rg4+",
+              "Ke3",
+              "Re4+",
+              "Kd2",
+              "Rd4+",
+              "Ke2",
+              "Qe4+"
+            ]
+          },
+          {
+            "move": "Qa1",
+            "cp": -938,
+            "mate": null,
+            "depth": 11,
+            "pv": [
+              "Qa1",
+              "bxa1=Q",
+              "Kc4",
+              "Rg4+",
+              "Kd3",
+              "Qb1+",
+              "Ke2",
+              "Re4+",
+              "Kd2",
+              "Rd4+",
+              "Ke2",
+              "Qe4+"
+            ]
+          },
+          {
+            "move": "Qg5",
+            "cp": -938,
+            "mate": null,
+            "depth": 11,
+            "pv": [
+              "Qg5",
+              "Rxg5",
+              "Kc4",
+              "Rg4+",
+              "Kd3",
+              "b1=Q+",
+              "Ke2",
+              "Re4+",
+              "Kd2",
+              "Rd4+",
+              "Ke2",
+              "Qe4+"
+            ]
+          },
+          {
+            "move": "Qa7",
+            "cp": -955,
+            "mate": null,
+            "depth": 11,
+            "pv": [
+              "Qa7",
+              "Rxa7",
+              "Kc4",
+              "b1=Q",
+              "Kd4",
+              "Qg1+",
+              "Kc3",
+              "Qa1+",
+              "Kd3",
+              "Ra3+",
+              "Kd2"
+            ]
+          },
+          {
+            "move": "Kc4",
+            "cp": -976,
+            "mate": null,
+            "depth": 11,
+            "pv": [
+              "Kc4",
+              "Rxg1",
+              "Kd4",
+              "Rd1+",
+              "Kc4"
+            ]
+          },
+          {
+            "move": "Qg2",
+            "cp": -1096,
+            "mate": null,
+            "depth": 11,
+            "pv": [
+              "Qg2",
+              "Rxg2",
+              "Kc4",
+              "Rg4+",
+              "Kd3",
+              "b1=Q+",
+              "Ke3",
+              "Re4+",
+              "Kd2",
+              "Rd4+",
+              "Ke3",
+              "Qe4+"
+            ]
+          },
+          {
+            "move": "Qg4",
+            "cp": -1144,
+            "mate": null,
+            "depth": 11,
+            "pv": [
+              "Qg4",
+              "Rxg4+",
+              "Kc3",
+              "b1=Q",
+              "Kd2",
+              "Rd4+",
+              "Ke3",
+              "Qd3+",
+              "Kf2",
+              "Qc2+",
+              "Kg3",
+              "Rd3+"
+            ]
+          },
+          {
+            "move": "Kb5",
+            "cp": null,
+            "mate": -7,
+            "depth": 11,
+            "pv": [
+              "Kb5",
+              "Rxg1",
+              "Kc4",
+              "Rg3",
+              "Kd4",
+              "b1=Q",
+              "Kc4",
+              "Qc2+",
+              "Kb4",
+              "Qb2+",
+              "Kc4",
+              "Rc3+"
+            ]
+          },
+          {
+            "move": "Ka5",
+            "cp": null,
+            "mate": -7,
+            "depth": 11,
+            "pv": [
+              "Ka5",
+              "Rxg1",
+              "Kb6",
+              "b1=Q+",
+              "Ka7",
+              "Rg5",
+              "Ka6",
+              "Qb5+",
+              "Ka7",
+              "Qa5+",
+              "Kb8",
+              "Rb5+"
+            ]
+          },
+          {
+            "move": "Ka4",
+            "cp": null,
+            "mate": -7,
+            "depth": 11,
+            "pv": [
+              "Ka4",
+              "Rxg1",
+              "Kb3",
+              "b1=Q+",
+              "Kc3",
+              "Rg2",
+              "Kd4",
+              "Qc2",
+              "Ke3",
+              "Rg3+",
+              "Kf4",
+              "Qf2+"
+            ]
+          },
+          {
+            "move": "Qg3+",
+            "cp": null,
+            "mate": -6,
+            "depth": 11,
+            "pv": [
+              "Qg3+",
+              "Rxg3",
+              "Ka5",
+              "b1=Q",
+              "Ka4",
+              "Qa1+",
+              "Kb5",
+              "Qb2+",
+              "Kc4",
+              "Rc3+",
+              "Kd4",
+              "Qb4#"
+            ]
+          },
+          {
+            "move": "Qc1",
+            "cp": null,
+            "mate": -4,
+            "depth": 11,
+            "pv": [
+              "Qc1",
+              "bxc1=Q",
+              "Kb5",
+              "Rb7+",
+              "Ka6",
+              "Qc6+",
+              "Ka5",
+              "Qb5#"
+            ]
+          }
+        ],
+        "endpointProbes": [
+          {
+            "moves": [
+              "Qh2+",
+              "Ke7",
+              "Qxb2"
+            ],
+            "fen": "8/4k1rn/8/8/1K6/8/1Q6/8 b - - 0 2",
+            "minimumGainDuringEightPlyPV": 100,
+            "gainAfterEightPlyPV": 100,
+            "recoveryFen": "8/4k1r1/5n2/4Q3/1K6/8/8/8 b - - 2 3",
+            "move": "Nf6",
+            "cp": 5,
+            "mate": null,
+            "depth": 14,
+            "pv": [
+              "Nf6",
+              "Qe5+"
+            ]
+          },
+          {
+            "moves": [
+              "Qh2+",
+              "Kd7",
+              "Qxb2"
+            ],
+            "fen": "8/3k2rn/8/8/1K6/8/1Q6/8 b - - 0 2",
+            "minimumGainDuringEightPlyPV": 100,
+            "gainAfterEightPlyPV": 100,
+            "recoveryFen": "4kn2/3r4/8/8/1Q6/1K6/8/8 b - - 8 6",
+            "move": "Re7",
+            "cp": 7,
+            "mate": null,
+            "depth": 15,
+            "pv": [
+              "Re7",
+              "Kb3",
+              "Nf8",
+              "Qd4+",
+              "Ke8",
+              "Qa4+",
+              "Rd7",
+              "Qb4",
+              "Rh7"
+            ]
+          },
+          {
+            "moves": [
+              "Qh2+",
+              "Ke6",
+              "Qxb2"
+            ],
+            "fen": "8/6rn/4k3/8/1K6/8/1Q6/8 b - - 0 2",
+            "minimumGainDuringEightPlyPV": 100,
+            "gainAfterEightPlyPV": 100,
+            "recoveryFen": "8/6r1/4kn2/8/1K6/8/1Q6/8 w - - 1 3",
+            "move": "Nf6",
+            "cp": 23,
+            "mate": null,
+            "depth": 12,
+            "pv": [
+              "Nf6"
+            ]
+          },
+          {
+            "moves": [
+              "Qh2+",
+              "Kc6",
+              "Qxb2"
+            ],
+            "fen": "8/6rn/2k5/8/1K6/8/1Q6/8 b - - 0 2",
+            "minimumGainDuringEightPlyPV": 100,
+            "gainAfterEightPlyPV": 100,
+            "recoveryFen": "8/1r5n/2k5/8/8/2K5/1Q6/8 b - - 2 3",
+            "move": "Rb7+",
+            "cp": 36,
+            "mate": null,
+            "depth": 13,
+            "pv": [
+              "Rb7+",
+              "Kc3"
+            ]
+          },
+          {
+            "moves": [
+              "Qh2+",
+              "Kd5",
+              "Qxb2"
+            ],
+            "fen": "8/6rn/8/3k4/1K6/8/1Q6/8 b - - 0 2",
+            "minimumGainDuringEightPlyPV": 100,
+            "gainAfterEightPlyPV": 100,
+            "recoveryFen": "8/1r5n/8/3k4/8/K7/1Q6/8 b - - 2 3",
+            "move": "Rb7+",
+            "cp": 4,
+            "mate": null,
+            "depth": 15,
+            "pv": [
+              "Rb7+",
+              "Ka3"
+            ]
+          },
+          {
+            "moves": [
+              "Qh2+",
+              "Rg3",
+              "Qxb2"
+            ],
+            "fen": "8/7n/3k4/8/1K6/6r1/1Q6/8 b - - 0 2",
+            "minimumGainDuringEightPlyPV": 100,
+            "gainAfterEightPlyPV": 100,
+            "recoveryFen": "8/7n/3k4/8/6r1/1K6/1Q6/8 b - - 2 3",
+            "move": "Rg4+",
+            "cp": 17,
+            "mate": null,
+            "depth": 14,
+            "pv": [
+              "Rg4+",
+              "Kb3"
+            ]
+          }
+        ],
+        "engine": {
+          "identity": {
+            "binarySha256": "2604a5c457bd7d288bdab58d3ee413f715a6afd26d44b29f6160fa49d0f7f0b2",
+            "options": {
+              "Threads": 1,
+              "Hash": 64
+            },
+            "externalNetworks": {},
+            "chessVersion": "1.11.2",
+            "hashPolicy": "clear-before-every-request-v1",
+            "cacheVersion": 1
+          },
+          "name": {
+            "name": "Stockfish 17",
+            "author": "the Stockfish developers (see AUTHORS file)"
+          }
+        },
+        "status": "needs-editorial-review",
+        "metrics": {
+          "hits": 7,
+          "misses": 0,
+          "engineCalls": 0,
+          "engineSeconds": 0.0
+        },
+        "reused": false,
+        "wallSeconds": 0.2630119579989696
+      },
+      "decision": {
+        "candidateIndex": 20,
+        "fen": "8/6rn/3k4/8/1K6/8/1p6/6Q1 w - - 0 1",
+        "root": "Qh2+",
+        "candidateHash": "daba00623e19ff921355933ee114fe8bcda46d5a73fa1f9cb3724f2e07fdb18b",
+        "decision": "keep",
+        "mechanism": "escape-rook-attack-and-stop-counterpromotion",
+        "reason": "The Queen g1 is attacked by Rook g7 and Black threatens b1 promotion. Qh2+ attacks multiple targets; even Rg3 interposition allows Qxb2, removing the counter-passer. Qd4+ is another valid checking fork. The equal-material start and promotion resource make the Pawn capture meaningful. Retain only with both roots and the interposition branch verified and with concise copy about stopping promotion.",
+        "reviewer": "fork_integration",
+        "distinctness": "escape-rook-attack-and-stop-counterpromotion",
+        "evidenceSha256": "3285a0c8af60b4a06c46d627f7a0159645c87b367ba3a2d50116486a8eea2623"
+      }
+    }
+  ],
+  "remainingPositions": 17,
+  "scope": "Verified first batch; further directly composed positions remain in progress."
+}

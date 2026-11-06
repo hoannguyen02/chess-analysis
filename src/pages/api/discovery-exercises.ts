@@ -33,31 +33,36 @@ export default async function handler(
       players: practicePlayers(exercise.gameReference),
     })
   );
-  return res.status(200).json({
-    hubPath: privateHubPath(),
-    categories: [
-      {
-        id: 'discovery',
-        shortLabel: 'Tất cả',
-        title: 'Chiếu mở và tấn công mở',
-        description:
-          'Di chuyển quân chắn đường để Xe, Tượng hoặc Hậu phía sau tấn công. Tính nước đáp rồi khai thác để thắng vật chất hoặc chiếu hết.',
-        exercises: items,
-      },
-      {
-        id: 'discovered-check',
-        title: 'Chiếu mở',
-        description:
-          'Di chuyển quân chắn để quân phía sau chiếu Vua. Tận dụng nước chiếu để thắng vật chất hoặc chiếu hết.',
-        exercises: items.filter((e) => e.discoveryKind === 'check'),
-      },
-      {
-        id: 'discovered-attack',
-        title: 'Tấn công mở',
-        description:
-          'Di chuyển quân chắn để quân phía sau tấn công một quân đối phương. Phối hợp hai quân để thu lợi về vật chất.',
-        exercises: items.filter((e) => e.discoveryKind === 'attack'),
-      },
-    ],
-  });
+  const { includeManualExercises } = await import(
+    '@/lib/server/manual-tactics'
+  );
+  return res.status(200).json(
+    await includeManualExercises('/discovered-attack', {
+      hubPath: privateHubPath(),
+      categories: [
+        {
+          id: 'discovery',
+          shortLabel: 'Tất cả',
+          title: 'Chiếu mở và tấn công mở',
+          description:
+            'Di chuyển quân chắn đường để Xe, Tượng hoặc Hậu phía sau tấn công. Tính nước đáp rồi khai thác để thắng vật chất hoặc chiếu hết.',
+          exercises: items,
+        },
+        {
+          id: 'discovered-check',
+          title: 'Chiếu mở',
+          description:
+            'Di chuyển quân chắn để quân phía sau chiếu Vua. Tận dụng nước chiếu để thắng vật chất hoặc chiếu hết.',
+          exercises: items.filter((e) => e.discoveryKind === 'check'),
+        },
+        {
+          id: 'discovered-attack',
+          title: 'Tấn công mở',
+          description:
+            'Di chuyển quân chắn để quân phía sau tấn công một quân đối phương. Phối hợp hai quân để thu lợi về vật chất.',
+          exercises: items.filter((e) => e.discoveryKind === 'attack'),
+        },
+      ],
+    })
+  );
 }

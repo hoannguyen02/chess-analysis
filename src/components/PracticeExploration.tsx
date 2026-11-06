@@ -1,9 +1,16 @@
-import { useCustomBoard } from '@/hooks/useCustomBoard';
 import { usePracticeBoardTools } from '@/hooks/usePracticeBoardTools';
-import type { PromotionPiece } from '@/lib/chess/draw-trainer';
+import {
+  previousDrawPosition,
+  type PromotionPiece,
+} from '@/lib/chess/draw-trainer';
+import type { DrawExercise } from '@/lib/chess/draw-practice';
 import {
   explorationPosition,
   exploreMove,
+  recordVariationMove,
+  recordedVariationLines,
+  MAX_RECORDED_VARIATIONS,
+  MAX_VARIATION_PLIES,
 } from '@/lib/chess/practice-exploration';
 import styles from '@/styles/ChessPractice.module.css';
 import type { Square } from 'chess.js';
@@ -14,10 +21,9 @@ import {
   useRef,
   useState,
   type CSSProperties,
+  type ReactNode,
 } from 'react';
-import { Chessboard } from 'react-chessboard';
-
-type Branch = { label: string; moves: string[] };
+import PracticeBoard, { PreviousMoveControl } from './PracticeBoard';
 
 export default function PracticeExploration({
   fen,
@@ -25,16 +31,31 @@ export default function PracticeExploration({
   initialPly,
   orientation,
   onClose,
+  initialLines,
+  onConfirm,
+  header,
+  freePlay = false,
+  previousMove,
 }: {
   fen: string;
   moves: string[];
   initialPly: number;
   orientation: 'white' | 'black';
   onClose: () => void;
+  initialLines?: string[][];
+  onConfirm?: (lines: string[][]) => void;
+  header?: ReactNode;
+  freePlay?: boolean;
+  previousMove?: DrawExercise['previousMove'];
 }) {
-  const [branches, setBranches] = useState<Branch[]>([
-    { label: 'Phương án bài tập', moves: [...moves] },
-  ]);
+  const recording = Boolean(onConfirm);
+  const [branches, setBranches] = useState<string[][]>(() =>
+    recording
+      ? initialLines?.length
+        ? initialLines.map((line) => [...line])
+        : [[]]
+      : [[...moves]]
+  );
   const [branchIndex, setBranchIndex] = useState(0);
   const [ply, setPly] = useState(initialPly);
   const [flipped, setFlipped] = useState(false);
@@ -44,16 +65,21 @@ export default function PracticeExploration({
     to: Square;
   } | null>(null);
   const [error, setError] = useState('');
+  const [showPrevious, setShowPrevious] = useState(false);
+  const previous = useMemo(
+    () => previousDrawPosition({ fen, previousMove }),
+    [fen, previousMove]
+  );
   const boardRef = useRef<HTMLDivElement>(null);
   const closeRef = useRef<HTMLButtonElement>(null);
   const [width, setWidth] = useState(360);
-  const theme = useCustomBoard();
   const branch = branches[branchIndex];
   const game = useMemo(
-    () => explorationPosition(fen, branch.moves, ply),
-    [fen, branch.moves, ply]
+    () => explorationPosition(fen, branch, ply),
+    [fen, branch, ply]
   );
   const terminal = game.in_checkmate() || game.in_stalemate();
+  const displayedFen = showPrevious && previous ? previous.fen : game.fen();
   useEffect(() => {
     closeRef.current?.focus({ preventScroll: true });
     const element = boardRef.current;
@@ -71,42 +97,54 @@ export default function PracticeExploration({
     setSelected(null);
     setPromotion(null);
     setError('');
+    setShowPrevious(false);
   }
   function play(from: Square, to: Square, piece?: PromotionPiece) {
-    if (terminal) return false;
-    const next = exploreMove(fen, branch.moves, ply, {
-      from,
-      to,
-      promotion: piece,
-    });
+    if (showPrevious || terminal) return false;
+    const input = { from, to, promotion: piece };
     setSelected(null);
     setPromotion(null);
+    if (recording) {
+      const result = recordVariationMove(
+        fen,
+        { lines: branches, branchIndex, ply },
+        input
+      );
+      if (result.status !== 'recorded') {
+        setError(
+          result.status === 'line-limit'
+            ? `Đã có ${MAX_RECORDED_VARIATIONS} phương án. Xóa một phương án trước khi ghi thêm.`
+            : result.status === 'move-limit'
+              ? `Mỗi phương án có tối đa ${MAX_VARIATION_PLIES} nửa nước.`
+              : 'Nước đi không hợp lệ. Hãy chọn quân để xem các ô có thể đi.'
+        );
+        return false;
+      }
+      setBranches(result.state.lines);
+      setBranchIndex(result.state.branchIndex);
+      setPly(result.state.ply);
+      setError('');
+      return true;
+    }
+    const next = exploreMove(fen, branch, ply, input);
     if (!next) {
       setError('Nước đi không hợp lệ. Hãy chọn quân để xem các ô có thể đi.');
       return false;
     }
     setError('');
-    if (branch.moves[ply] === next[ply]) {
-      setPly(ply + 1);
-    } else if (branchIndex !== 0 && ply === branch.moves.length) {
-      setBranches(
-        branches.map((item, i) =>
-          i === branchIndex ? { ...item, moves: next } : item
-        )
-      );
+    if (branch[ply] === next[ply]) setPly(ply + 1);
+    else if (branchIndex !== 0 && ply === branch.length) {
+      setBranches(branches.map((item, i) => (i === branchIndex ? next : item)));
       setPly(next.length);
     } else {
-      setBranches([
-        ...branches,
-        { label: `Biến ${branches.length}`, moves: next },
-      ]);
+      setBranches([...branches, next]);
       setBranchIndex(branches.length);
       setPly(next.length);
     }
     return true;
   }
   function drop(from: Square, to: Square) {
-    if (terminal || promotion) return false;
+    if (showPrevious || terminal || promotion) return false;
     if (
       game
         .moves({ square: from, verbose: true })
@@ -119,18 +157,23 @@ export default function PracticeExploration({
     return play(from, to);
   }
   const tools = usePracticeBoardTools(
-    game.fen(),
+    displayedFen,
     {
       f: () => setFlipped((value) => !value),
       r: () => navigate(0),
       ArrowLeft: ply > 0 ? () => navigate(ply - 1) : undefined,
-      ArrowRight:
-        ply < branch.moves.length ? () => navigate(ply + 1) : undefined,
+      ArrowRight: showPrevious
+        ? () => setShowPrevious(false)
+        : ply < branch.length
+          ? () => navigate(ply + 1)
+          : undefined,
     },
     !promotion
   );
   const squareStyles: Record<string, CSSProperties> = {};
-  const last = game.history({ verbose: true }).at(-1);
+  const last = showPrevious
+    ? undefined
+    : (game.history({ verbose: true }).at(-1) ?? previous?.move);
   if (last)
     for (const square of [last.from, last.to])
       squareStyles[square] = { backgroundColor: '#e5cf65' };
@@ -139,11 +182,13 @@ export default function PracticeExploration({
     for (const move of game.moves({ square: selected, verbose: true }))
       squareStyles[move.to] = { boxShadow: 'inset 0 0 0 4px #355b29' };
   }
-  const fullMoves = explorationPosition(
-    fen,
-    branch.moves,
-    branch.moves.length
-  ).history({ verbose: true });
+  const fullMoves = useMemo(
+    () =>
+      explorationPosition(fen, branch, branch.length).history({
+        verbose: true,
+      }),
+    [fen, branch]
+  );
   const startNumber = Number(fen.split(' ')[5]);
   const startsBlack = fen.split(' ')[1] === 'b';
   const label = (index: number) =>
@@ -153,9 +198,61 @@ export default function PracticeExploration({
     : game.in_stalemate()
       ? 'Hòa do hết nước đi (pat).'
       : `${game.turn() === 'w' ? 'Trắng' : 'Đen'} đi${game.in_check() ? ' — đang bị chiếu' : ''}.`;
-
+  const recorded = recordedVariationLines(branches);
+  const branchName = (i: number) =>
+    recording
+      ? i === 0
+        ? 'Phương án chính'
+        : `Phương án ${i + 1}`
+      : i === 0
+        ? freePlay
+          ? 'Phương án 1'
+          : 'Phương án bài tập'
+        : `Biến ${i}`;
+  function removeBranch() {
+    const next = branches.filter((_, i) => i !== branchIndex);
+    if (!next.length) {
+      setBranches([[]]);
+      navigate(0, 0);
+    } else {
+      const index = Math.min(branchIndex, next.length - 1);
+      setBranches(next);
+      navigate(next[index].length, index);
+    }
+  }
   return (
-    <section className={styles.trainer} aria-label="Thử nước khác">
+    <section
+      className={styles.trainer}
+      aria-label={
+        recording
+          ? 'Ghi phương án'
+          : freePlay
+            ? 'Đi thử trên bàn cờ'
+            : 'Thử nước khác'
+      }
+      onKeyDown={(event) => {
+        if (
+          !recording ||
+          promotion ||
+          event.ctrlKey ||
+          event.metaKey ||
+          event.altKey ||
+          event.shiftKey ||
+          (event.target instanceof HTMLElement &&
+            event.target.closest('input, textarea, select, [contenteditable]'))
+        )
+          return;
+        if (event.key === 'ArrowLeft' && ply > 0) {
+          event.preventDefault();
+          event.stopPropagation();
+          navigate(ply - 1);
+        } else if (event.key === 'ArrowRight' && ply < branch.length) {
+          event.preventDefault();
+          event.stopPropagation();
+          navigate(ply + 1);
+        }
+      }}
+    >
       <div>
         <div
           ref={boardRef}
@@ -163,50 +260,38 @@ export default function PracticeExploration({
           {...tools.boardInteractionProps}
           aria-label="Bàn cờ và công cụ đánh dấu"
         >
-          <Chessboard
-            key={tools.boardRenderKey}
-            id="practice-exploration-board"
-            boardWidth={width}
-            position={game.fen()}
-            boardOrientation={
+          <PracticeBoard
+            id={
+              recording
+                ? 'practice-variation-editor-board'
+                : 'practice-exploration-board'
+            }
+            fen={displayedFen}
+            width={width}
+            orientation={
               flipped
                 ? orientation === 'white'
                   ? 'black'
                   : 'white'
                 : orientation
             }
-            customPieces={theme.customPieces}
-            customDarkSquareStyle={{ backgroundColor: theme.bgDark }}
-            customLightSquareStyle={{ backgroundColor: theme.bgLight }}
-            customSquareStyles={{
-              ...squareStyles,
-              ...tools.customSquareStyles,
-            }}
-            customArrowColor={tools.selectedColor.arrow}
-            onSquareRightClick={tools.handleSquareRightClick}
-            onArrowsChange={tools.handleArrowsChange}
-            animationDuration={0}
-            arePiecesDraggable={!terminal && !promotion}
+            tools={tools}
+            squareStyles={squareStyles}
+            canMove={!showPrevious && !terminal}
+            pendingPromotion={promotion}
             onPieceDrop={drop}
-            // Both clicks and drops open the same on-board piece picker.
-            onPromotionCheck={() => false}
-            showPromotionDialog={Boolean(promotion)}
-            promotionToSquare={promotion?.to ?? null}
             onPromotionPieceSelect={(piece) => {
-              if (piece && promotion) {
+              if (piece && promotion)
                 play(
                   promotion.from,
                   promotion.to,
                   piece[1].toLowerCase() as PromotionPiece
                 );
-              }
               setPromotion(null);
-              // The practice state applies the complete resulting position.
               return false;
             }}
             onSquareClick={(square) => {
-              tools.handleSquareClick();
-              if (terminal || promotion) return;
+              if (showPrevious || terminal || promotion) return;
               if (selected === square) setSelected(null);
               else if (selected && game.get(square)?.color !== game.turn())
                 drop(selected, square);
@@ -218,7 +303,7 @@ export default function PracticeExploration({
         <div className={`${styles.controls} ${styles.boardActions}`}>
           <button
             type="button"
-            disabled={ply === 0}
+            disabled={ply === 0 || Boolean(promotion)}
             aria-keyshortcuts="ArrowLeft"
             onClick={() => navigate(ply - 1)}
           >
@@ -226,7 +311,7 @@ export default function PracticeExploration({
           </button>
           <button
             type="button"
-            disabled={ply === branch.moves.length}
+            disabled={ply === branch.length || Boolean(promotion)}
             aria-keyshortcuts="ArrowRight"
             onClick={() => navigate(ply + 1)}
           >
@@ -240,29 +325,70 @@ export default function PracticeExploration({
           >
             Lật bàn
           </button>
-          <Link
-            href={{ pathname: '/analysis', query: { fen: game.fen() } }}
-            target="_blank"
-            rel="noopener noreferrer"
-            prefetch={false}
-          >
-            Phân tích ↗
-          </Link>
+          {!recording && (
+            <Link
+              href={{ pathname: '/analysis', query: { fen: displayedFen } }}
+              target="_blank"
+              rel="noopener noreferrer"
+              prefetch={false}
+            >
+              Phân tích ↗
+            </Link>
+          )}
         </div>
       </div>
       <div className={styles.trainerInfo}>
-        <h4>Thử phương án</h4>
+        {header}
+        {previous && (
+          <PreviousMoveControl
+            fen={fen}
+            previousMove={previousMove}
+            showingPrevious={showPrevious}
+            disabled={Boolean(promotion)}
+            onToggle={() => {
+              setShowPrevious(!showPrevious);
+              setSelected(null);
+              setError('');
+            }}
+          />
+        )}
+        <h4>
+          {recording
+            ? 'Ghi cho cả hai bên'
+            : freePlay
+              ? 'Đi thử trên bàn cờ'
+              : 'Thử phương án'}
+        </h4>
         <p className={styles.note}>
-          Đi thử cho cả hai bên. Tiến độ bài tập được giữ nguyên. Bạn có thể bật
-          lại đồng hồ bất cứ lúc nào.
+          {recording
+            ? 'Đi liên tiếp cho cả hai bên. Chọn một nước đã ghi rồi đi nước khác để tạo phương án mới. Phương án cũ vẫn được giữ.'
+            : freePlay
+              ? 'Đi thử cho cả hai bên để phân tích thế cờ.'
+              : 'Đi thử cho cả hai bên. Tiến độ bài tập được giữ nguyên. Bạn có thể bật lại đồng hồ bất cứ lúc nào.'}
         </p>
         <div className={styles.controls}>
+          {recording && (
+            <button
+              type="button"
+              disabled={!recorded.length || Boolean(promotion)}
+              onClick={() => onConfirm?.(recorded)}
+            >
+              OK · Giữ {recorded.length} phương án
+            </button>
+          )}
           <button ref={closeRef} type="button" onClick={onClose}>
-            Quay lại bài tập
+            {recording
+              ? 'Hủy'
+              : freePlay
+                ? 'Về thế bắt đầu'
+                : 'Quay lại bài tập'}
           </button>
         </div>
         <p role="status" aria-live="polite">
-          {error || status}
+          {showPrevious
+            ? 'Đang xem thế trước nước đi đã ghi. Trở lại bàn cờ để đi tiếp.'
+            : error ||
+              (promotion ? 'Chọn quân phong cấp để tiếp tục.' : status)}
         </p>
         {game.in_threefold_repetition() && (
           <p className={styles.note}>
@@ -276,14 +402,15 @@ export default function PracticeExploration({
           Phương án đang xem
           <select
             value={branchIndex}
+            disabled={Boolean(promotion)}
             onChange={(event) => {
               const index = Number(event.target.value);
-              navigate(branches[index].moves.length, index);
+              navigate(branches[index].length, index);
             }}
           >
-            {branches.map((item, i) => (
+            {branches.map((_, i) => (
               <option value={i} key={i}>
-                {item.label}
+                {branchName(i)}
               </option>
             ))}
           </select>
@@ -296,25 +423,70 @@ export default function PracticeExploration({
           <button
             type="button"
             aria-pressed={ply === 0}
+            disabled={Boolean(promotion)}
             onClick={() => navigate(0)}
           >
             Thế bắt đầu
           </button>
-          {branch.moves.map((move, i) => (
+          {branch.map((move, i) => (
             <button
               type="button"
               key={`${i}-${move}`}
               aria-pressed={ply === i + 1}
+              disabled={Boolean(promotion)}
               onClick={() => navigate(i + 1)}
             >
               {label(i)}
             </button>
           ))}
         </div>
-        <p className={styles.note}>
-          Chọn vị trí rồi đi nước khác để tạo biến mới. Các biến được giữ trong
-          phiên thử này.
-        </p>
+        {recording ? (
+          <div className={styles.controls}>
+            <button
+              type="button"
+              disabled={branchIndex === 0 || Boolean(promotion)}
+              onClick={() => {
+                setBranches([
+                  branch,
+                  ...branches.filter((_, i) => i !== branchIndex),
+                ]);
+                navigate(ply, 0);
+              }}
+            >
+              Đặt làm phương án chính
+            </button>
+            <button
+              type="button"
+              disabled={
+                ply === 0 || ply === branch.length || Boolean(promotion)
+              }
+              onClick={() => {
+                setBranches(
+                  branches.map((line, i) =>
+                    i === branchIndex ? line.slice(0, ply) : line
+                  )
+                );
+                navigate(ply);
+              }}
+            >
+              Kết thúc phương án tại đây
+            </button>
+            <button
+              type="button"
+              disabled={
+                (!branch.length && branches.length === 1) || Boolean(promotion)
+              }
+              onClick={removeBranch}
+            >
+              Xóa phương án này
+            </button>
+          </div>
+        ) : (
+          <p className={styles.note}>
+            Chọn vị trí rồi đi nước khác để tạo biến mới. Các biến được giữ
+            trong phiên thử này.
+          </p>
+        )}
       </div>
     </section>
   );

@@ -9,21 +9,19 @@ no separate hard-coded worksheet topic list.
 To add a printable topic, set `worksheetEndpoint` on its existing entry in
 `src/lib/server/private-hub.ts`. The endpoint must require practice access and
 return `{ categories: DrawCategory[] }`. The builder uses the entry's title,
-order and route ID, and fetches exercises only for selected topics. Current
+order and route ID, and loads protected sources to calculate level availability. Current
 entries include tactics, checkmates, simplification and draw practice. Schedules,
 saved games, external Lichess links and the London course have no compatible
 exercise endpoint and are not listed. An empty registry shows no selectable
 sections and prevents export. Renaming the private hub URL needs no builder change.
 
-Choose ordered topic/level sections and quantities. Each chapter topic can be
-selected once in the builder: Add section chooses the first unused topic, and
-chapter dropdowns omit topics used by other rows. Removing or changing a row
-releases its old topic; adding is disabled when all topics are selected. Mixed
-review has its own selections and can revisit chapter topics, but each topic
-can appear only once within each review block. Adding review rows prefers unused
-chapter topics (with their selected level), then unused library topics. Removing
-or changing a review row releases its topic; adding is disabled when all review
-topics have been selected. This applies to both fresh and reused review positions.
+Choose levels once using the shared checkboxes, then order topics and set the
+quantity per available selected level. Each chapter topic can be selected once:
+Add section chooses the first unused eligible topic, and topic dropdowns omit
+other rows' topics. Removing or changing a row releases its old topic. Mixed
+review can revisit preceding chapter topics at multiple levels; each topic-level
+pair can appear once per block. Adding review rows prefers an unused available
+pair from preceding topics. These rules apply to fresh and reused positions.
 
 Levels are Beginner, A, B,
 C, C\*, D; availability is calculated from the current published exercises.
@@ -116,23 +114,23 @@ omits that section. Paragraphs and long words wrap, with additional pages as
 needed at a readable font size. Settings are held in the current session.
 
 Review scheduling is dynamic and enabled by default: recent-group review after every
-3 topics, 6 positions per topic, plus a final cumulative review. The interval,
+3 topics, 6 positions per topic per available selected level, plus a final cumulative review. The interval,
 count, cumulative/recent-group scope, and final review toggle are configurable.
 A final block replaces the periodic block at the same endpoint. Ten chapters
 therefore yield blocks after 3, 6, 9, and 10 chapters, containing 18, 18, 18,
-and 60 positions with the defaults. The final block always covers all chapters.
+and 60 positions when one populated level is selected for each topic. The final block always covers all chapters.
 
 Automatic blocks derive their topics, chapter levels and anchors from the current
-chapter order. One compact summary card opens a native modal dialog containing a block selector
+chapter order. One customization button opens a native modal dialog containing a block selector
 to customize topics, levels and counts across all reviews. Draft edits survive
 switching blocks; Save applies all edits together, and Cancel/Escape discards all
-unsaved edits. Reset and orphan-block removal are available inside the dialog. Save applies a draft; Cancel and Escape discard it. Automatic
+unsaved edits. Reset and orphan-block removal are available inside the dialog. Automatic
 placement is read-only in the dialog. Reset restores current shared settings.
 Custom overrides follow their schedule slot (the final slot follows the book end),
 retain chosen rows, and flag topics that no longer precede their block. Overrides
 whose slot disappears remain visible outside the schedule for correction/deletion;
 they are not silently discarded. Disabling automatic review omits all review
-blocks while retaining edits for re-enabling. Topics are unique within each block.
+blocks while retaining edits for re-enabling. Topic-level pairs are unique within each block.
 
 Fresh review positions are reserved globally across every block before chapter
 selection. They repeat neither chapter nor other review positions. Reuse mode
@@ -194,14 +192,14 @@ they are not print certification. Review a physical print before a large run.
 
 ## Level guide and continuing practice
 
-The introduction and closing pages include an optional shared guide in the exact
-Beginner, A, B, C, C*, D order. Descriptions follow AGENTS.md, including the
+The introduction includes an optional level guide in the exact
+Beginner, A, B, C, C*, D order. The closing uses a practical self-review sheet. Descriptions follow AGENTS.md, including the
 sacrifice distinction between C and C* and solver-move counting for D. The
 current book's levels are derived from its actual selected exercises, including
 review metadata. The guide does not assert that every topic has all levels.
 
-“Hiện lộ trình cấp độ và gợi ý luyện tiếp” in the page editor controls the guide
-in both sections. Blank introduction/closing bodies still omit their sections.
+“Hiện hệ thống cấp độ và phần tự đánh giá” in the page editor controls the
+introduction table and the closing self-review sheet. Blank introduction/closing bodies still omit their sections.
 The closing page adds reflection lines and a prompt to contact the configured
 footer organization for a suitable next book, with a space to record that choice.
 There is no automatic promotion, score threshold, or invented public access link.
@@ -245,3 +243,125 @@ The default content fits one A4 page; longer custom text flows to continuation
 pages with compact section headings rather than repeating the brand block.
 The shared contact footer remains configurable. Practice boards and the closing
 page retain their monochrome treatment.
+
+
+## Shared multi-level selection
+
+The builder has one checkbox group above the topic rows, in the shared order
+Beginner, A, B, C, C*, D. No level is selected initially; the first eligible topic is added only after a level is selected. It loads registered
+protected exercise sources with at most four requests in flight, using the
+existing access headers. Counts use `levelExercises`, including its playable-move,
+recognition-mode and duplicate-position exclusions. No public count endpoint is
+introduced. Successful sources remain usable if another source fails; the UI
+reports failed loading and supports retry. A selected source that failed to load
+cannot be silently omitted from export.
+
+The topic selector includes a source if **any** selected level has at least `POSITIONS_PER_PAGE`
+exportable positions (currently six, enough for one A4 page). Selected levels
+with fewer than six positions are omitted from that topic. Topics already used
+in another row remain excluded. A retained topic that no longer matches the level
+selection stays visible as an invalid selection, blocks export and can be replaced
+or deleted; changing a level never silently deletes a configured topic. Empty
+level selection blocks export and all six level controls remain available.
+
+Each topic row expands to its available selected levels in the shared order.
+`Số thế / cấp độ` applies separately to each available level. New rows default to
+`POSITIONS_PER_PAGE` positions per eligible level. Entered counts
+remain unchanged on level changes; shortages are reported by the existing planner.
+Topic-level IDs remain stable on reorder, and level sections carry a topic group
+ID. Review intervals count topic groups, not the number of selected levels; reviews
+are inserted after the last selected level of the relevant topic. Automatic review
+rows include every available selected topic-level pair. Custom review rows can
+include the same topic at different levels without duplicate topic-level pairs.
+
+The single `Tùy chỉnh ôn tập` button sits beside the final-review checkbox; the
+dialog manages all blocks. There is no separate review-count card.
+
+
+`src/lib/chess/worksheet-layout.ts` owns `POSITIONS_PER_PAGE = 6`, matching the
+A4 layout of two columns and three rows. Chapter defaults, automatic-review
+defaults, topic/level availability and both chapter/review pagination use this
+constant. Counts refer to distinct, playable positions returned by
+`levelExercises`. Custom quantities and partial last pages remain supported;
+source eligibility is based on having at least one complete page in that level.
+
+
+## Chess notation reference page
+
+The two explanatory paragraphs below the introduction's level table are removed.
+A separate, printable Vietnamese-English notation page follows the introduction
+by default. `showNotationGuide` (default true) controls it independently from the
+level guide. The page editor exposes "Thêm hướng dẫn ký hiệu cờ vua". A blank
+introduction still omits the complete opening section, including this reference.
+The introduction table has a concise explanation of sacrifices and solver-move counts.
+
+The reference covers files/ranks/squares, English piece letters with Cburnett
+artwork, pawn notation, ordinary moves, captures, check/checkmate, both castlings,
+promotion (including capture-promotion), en passant and file/rank/full-square
+disambiguation. All displayed move explanations come from composed example FENs
+via the shared legal-replay helper; these are notation illustrations, not new
+practice exercises. `scripts/test-worksheets.cjs` verifies each example's exact
+SAN, check vs mate, captured en-passant square, promotions and disambiguation.
+
+Editorial reference checked 2026-11-04: [FIDE Laws of Chess, Appendix C]
+(https://handbook.fide.com/chapter/E012023), with Articles 3.7.3 and 3.8.2 for
+special-move wording, cross-checked against the [2025 FIDE Arbiters' Manual]
+(https://arbiters.fide.com/wp-content/uploads/Publications/Manual/Arbiters_Manual_2025.pdf).
+The PDF uses O-O/O-O-O and =Q/=N as its SAN examples and notes the 0-0/0-0-0 and
+promotion-without-= forms that readers may encounter in other materials. It uses
+# for mate, without redefining ++ as double check. Disambiguation considers legal
+moves, so a piece pinned to its King does not create a second legal origin.
+
+### Introduction copy and notation cross-reference
+
+The default opening uses two short practice instructions. It omits the previous
+"Tự giải trước khi đối chiếu lời giải" paragraph and inline Nd4 example. An
+outlined "Tra cứu ký hiệu" callout follows the practice instructions when the
+notation page is enabled. The renderer reserves the callout's space during introduction
+pagination, then fills its target only after every introduction/level page has
+been laid out. The reference uses the same one-based page numbering as the PDF
+footer; it is not a fixed "page 3" string. Disabling notation or omitting the
+introduction removes the callout completely.
+
+All six levels remain in order. Levels actually included in the selected chapters
+or reviews have bold labels, using the bundled DejaVu Sans Bold font under the
+existing DejaVu license. Introduction descriptions use 10-point text and taller
+rows. Verification covered the normal page-3 target, a long introduction whose
+guide starts on page 6, and a document without notation; no text falls outside
+page bounds in these specimens.
+
+
+The introduction is ordered as: LIMA branding and book title, level system with
+all six levels, practice instructions, then the notation callout at the bottom.
+This keeps the reading/recording instructions next to the following notation
+page. Custom introduction text follows the level table and can continue across
+pages with its own heading; the notation page reference is resolved afterward.
+When the level guide is disabled, the practice instructions follow the branding
+directly. A clear gap separates the table from the practice heading.
+
+
+### Coaching content review
+
+The cover identifies the actual included levels (including exercise-level review
+metadata) on both the exercise and answer books. A single level uses the full
+bilingual label; a multi-level book uses a compact shared caption. Long titles
+and captions use measured wrapping so they do not overlap the answer-book label.
+
+The six descriptions retain the established definitions, with B explicitly
+requiring preparation/coordination. The default practice text follows observation,
+candidate selection (including quiet preparation), calculation against important
+defences, and checking the final payoff including recaptures. Recording guidance
+and the notation reference remain beneath the level table. The introduction's
+brand header is slightly more compact to keep the expanded guidance readable on
+one page; the cover retains its full-size branding.
+
+The closing no longer repeats the six-row level table. Its editable opening is
+followed by a printed checklist, a field for exercise numbers to revisit,
+categories of missed decisions, an explicit readiness criterion based on new
+positions rather than memorized answers, and topic/level fields for the next
+practice plan. Checkboxes and writing lines use black vector outlines. Contact
+information remains below the practice plan. Turning off the guide option omits
+these structured additions; a blank closing body omits the complete closing.
+
+The default copy lives in `worksheet.ts`, including `worksheetClosingReview`,
+so the PDF renders source wording rather than applying editorial substitutions.

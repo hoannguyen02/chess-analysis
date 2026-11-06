@@ -1,6 +1,7 @@
 import type { GamePlayer } from './game-player-title';
 import type { GameReference } from './draw-game-viewer';
 import type { DrawDifficulty } from './draw-levels';
+import type { PracticeExerciseManagement } from './practice-management';
 import { drawLevelRatings } from './draw-level-ratings';
 import { drawSelection } from './draw-selection';
 import { drawAdditions } from './draw-additions';
@@ -8,14 +9,28 @@ import { expandedDrawExercises } from './draw-expansion';
 import { realRepetitionExercises } from './real-repetition';
 
 export type DrawExercise = {
+  manualId?: string;
+  management?: PracticeExerciseManagement;
   decision?: {
     options: { id: string; label: string }[];
     correctOption: string;
     retryMessage: string;
   };
   beginner?: boolean;
-  promotionMaterial?: { minimumGain: number };
-  promotionGain?: { minimumGain: number; solverMoves: number };
+  beginnerOriginalFen?: string;
+  beginnerBaseFen?: string;
+  /** Zero-based solver ply immediately before the named tactic is created.
+   * Shared Beginner extraction uses this reviewed marker without topic-specific code.
+   */
+  tacticPly?: number;
+  removingDefender?: { target: string; minimumGain: number };
+  promotionMaterial?: { minimumGain: number; retainPromotedPiece?: boolean };
+  promotionGain?: {
+    minimumGain: number;
+    solverMoves: number;
+    allowUnrealizedThreat?: boolean;
+    verifyCheckingReplies?: boolean;
+  };
   beginnerKind?: 'king' | 'queen' | 'rook';
   pinSetup?: { pinner: string; front: string; back: string; target: string };
   gameReference?: GameReference;
@@ -47,8 +62,10 @@ export type DrawExercise = {
     | 'discovery'
     | 'fork'
     | 'pin'
+    | 'removing-defender'
     | 'skewer'
     | 'opening'
+    | 'manual'
     | 'promotion';
   solution: string;
   url?: string;
@@ -61,6 +78,10 @@ export type DrawCategory = {
   title: string;
   description: string;
   exercises: DrawExercise[];
+  managementScope?: string;
+  managementWritable?: boolean;
+  removedCount?: number;
+  transferredCount?: number;
 };
 
 // Archived source pool; the published collection below also includes credited studies and compositions.

@@ -1,14 +1,20 @@
 import { useEffect, useState } from 'react';
 import Head from 'next/head';
+import { useRouter } from 'next/router';
 import type { GetStaticProps } from 'next';
 import PrivateContent from '@/components/PrivateContent';
 import DrawGameViewer from '@/components/DrawGameViewer';
+import PracticePositionEditor from '@/components/PracticePositionEditor';
 import {
   type SavedGame,
   type SavedGamesData,
+  matchingSavedPositions,
+  savedMoveLabel,
+  savedPositionFilters,
   splitTags,
   winningPlayer,
 } from '@/lib/chess/saved-games';
+import { practiceLevels } from '@/lib/chess/draw-levels';
 import { gameOpeningCaption } from '@/lib/chess/game-opening';
 import { practiceAccessHeaders } from '@/lib/practice-access';
 import styles from '@/styles/SavedGames.module.css';
@@ -17,7 +23,13 @@ const opening = (g: SavedGame) =>
   g.source.gameOpening ||
   gameOpeningCaption(g.source.headers) ||
   'Chưa rõ khai cuộc';
-function Library({ initial }: { initial: SavedGamesData }) {
+function Library({
+  initial,
+  initialFilters,
+}: {
+  initial: SavedGamesData;
+  initialFilters: ReturnType<typeof savedPositionFilters>;
+}) {
   const [games, setGames] = useState(initial.games);
   const [active, setActive] = useState<SavedGame>();
   const [query, setQuery] = useState('');
@@ -26,6 +38,7 @@ function Library({ initial }: { initial: SavedGamesData }) {
     winner: '',
     result: '',
     tag: '',
+    ...initialFilters,
     squares: '',
     match: 'any',
     sort: 'saved',
@@ -33,6 +46,12 @@ function Library({ initial }: { initial: SavedGamesData }) {
   const [message, setMessage] = useState('');
   const [busy, setBusy] = useState(false);
   const [removing, setRemoving] = useState<string>();
+  const [removingPosition, setRemovingPosition] = useState<string>();
+  const [addingPosition, setAddingPosition] = useState<string>();
+  const themeLabel = (id: string) =>
+    initial.themes.find((theme) => theme.id === id)?.label ?? id;
+  const positionsFor = (game: SavedGame) =>
+    matchingSavedPositions(game, filters);
   const set = (key: keyof typeof filters, value: string) =>
     setFilters((f) => ({ ...f, [key]: value }));
   useEffect(() => {
@@ -56,7 +75,7 @@ function Library({ initial }: { initial: SavedGamesData }) {
       window.removeEventListener('saved-games-changed', refresh);
     };
   }, []);
-  async function remove(game: SavedGame) {
+  async function remove(game: SavedGame, positionId?: string) {
     setBusy(true);
     setMessage('');
     try {
@@ -68,6 +87,7 @@ function Library({ initial }: { initial: SavedGamesData }) {
         },
         body: JSON.stringify({
           id: game.id,
+          ...(positionId ? { positionId } : {}),
           expectedUpdatedAt: game.updatedAt,
         }),
       });
@@ -75,7 +95,12 @@ function Library({ initial }: { initial: SavedGamesData }) {
       if (!res.ok) throw new Error(data.error);
       setGames(data.games);
       setRemoving(undefined);
-      setMessage('Đã bỏ ván khỏi bộ sưu tập.');
+      setRemovingPosition(undefined);
+      setMessage(
+        positionId
+          ? 'Đã bỏ mốc thế cờ đã lưu. Ván gốc vẫn được giữ lại.'
+          : 'Đã bỏ ván khỏi bộ sưu tập.'
+      );
     } catch (e) {
       setMessage((e as Error).message);
     } finally {
@@ -86,6 +111,12 @@ function Library({ initial }: { initial: SavedGamesData }) {
   const visible = games
     .filter((g) => {
       const h = g.source.headers;
+      const positions = positionsFor(g);
+      const tags = [...g.tags, ...positions.flatMap((p) => p.tags)];
+      const markedSquares = [
+        ...g.squares,
+        ...positions.flatMap((p) => p.squares),
+      ];
       const text = [
         h.White,
         h.Black,
@@ -95,6 +126,13 @@ function Library({ initial }: { initial: SavedGamesData }) {
         g.note,
         ...g.tags,
         ...g.squares,
+        ...positions.flatMap((p) => [
+          themeLabel(p.themeId),
+          p.level,
+          p.note,
+          ...p.tags,
+          ...p.squares,
+        ]),
       ]
         .join(' ')
         .toLocaleLowerCase();
@@ -103,11 +141,12 @@ function Library({ initial }: { initial: SavedGamesData }) {
         (!filters.opening || opening(g) === filters.opening) &&
         (!filters.winner || winningPlayer(g.source) === filters.winner) &&
         (!filters.result || h.Result === filters.result) &&
-        (!filters.tag || g.tags.includes(filters.tag)) &&
+        (!(filters.themeId || filters.level) || positions.length > 0) &&
+        (!filters.tag || tags.includes(filters.tag)) &&
         (!squares.length ||
           (filters.match === 'all'
-            ? squares.every((s) => g.squares.includes(s))
-            : squares.some((s) => g.squares.includes(s))))
+            ? squares.every((s) => markedSquares.includes(s))
+            : squares.some((s) => markedSquares.includes(s))))
       );
     })
     .sort((a, b) =>
@@ -130,7 +169,7 @@ function Library({ initial }: { initial: SavedGamesData }) {
   return (
     <>
       <h1>Ván đã lưu</h1>
-      <p>Giữ lại những ván đáng nhớ và tìm lại ý tưởng bạn muốn xem.</p>
+      <p>Giữ lại ván gốc và các mốc thế cờ theo chủ đề, cấp độ đã ghi.</p>
       {!initial.writable && <p>Để thêm hoặc sửa ván, hãy mở dự án trên máy.</p>}
       <div className={styles.filters}>
         <label>
@@ -140,6 +179,34 @@ function Library({ initial }: { initial: SavedGamesData }) {
             onChange={(e) => setQuery(e.target.value)}
             placeholder="Kỳ thủ, ghi chú, từ khóa…"
           />
+        </label>
+        <label>
+          Chủ đề thế cờ
+          <select
+            value={filters.themeId}
+            onChange={(e) => set('themeId', e.target.value)}
+          >
+            <option value="">Tất cả chủ đề</option>
+            {initial.themes.map((theme) => (
+              <option key={theme.id} value={theme.id}>
+                {theme.label}
+              </option>
+            ))}
+          </select>
+        </label>
+        <label>
+          Cấp độ đã ghi
+          <select
+            value={filters.level}
+            onChange={(e) => set('level', e.target.value)}
+          >
+            <option value="">Tất cả mức</option>
+            {practiceLevels.map((level) => (
+              <option key={level} value={level}>
+                {level}
+              </option>
+            ))}
+          </select>
         </label>
         <label>
           Khai cuộc
@@ -181,7 +248,12 @@ function Library({ initial }: { initial: SavedGamesData }) {
             onChange={(e) => set('tag', e.target.value)}
           >
             <option value="">Tất cả nhãn</option>
-            {options(games.flatMap((g) => g.tags))}
+            {options(
+              games.flatMap((g) => [
+                ...g.tags,
+                ...(g.positions ?? []).flatMap((p) => p.tags),
+              ])
+            )}
           </select>
         </label>
         <label>
@@ -217,6 +289,9 @@ function Library({ initial }: { initial: SavedGamesData }) {
       <div className={styles.actions}>
         <p>
           {visible.length} / {games.length} ván
+          {' · '}
+          {visible.reduce((count, g) => count + positionsFor(g).length, 0)} thế
+          cờ đã lưu
         </p>
         <button
           onClick={() => {
@@ -226,6 +301,8 @@ function Library({ initial }: { initial: SavedGamesData }) {
               winner: '',
               result: '',
               tag: '',
+              themeId: '',
+              level: '',
               squares: '',
               match: 'any',
               sort: 'saved',
@@ -237,7 +314,10 @@ function Library({ initial }: { initial: SavedGamesData }) {
       </div>
       <p role="status">{message}</p>
       {!games.length ? (
-        <p>Chưa có ván nào. Khi xem ván gốc, chọn “☆ Lưu ván” để bắt đầu.</p>
+        <p>
+          Chưa có ván nào. Khi xem ván gốc, chọn “☆ Lưu ván” hoặc “☆ Lưu thế cờ”
+          để bắt đầu.
+        </p>
       ) : !visible.length ? (
         <p>Không có ván phù hợp. Thử đổi hoặc xóa bộ lọc.</p>
       ) : null}
@@ -265,6 +345,84 @@ function Library({ initial }: { initial: SavedGamesData }) {
               ))}
             </div>
             {g.note && <p className={styles.note}>{g.note}</p>}
+            {positionsFor(g).length > 0 && (
+              <section
+                className={styles.positions}
+                aria-label="Mốc thế cờ đã lưu"
+              >
+                <h3>Mốc thế cờ đã lưu</h3>
+                {positionsFor(g).map((p) => (
+                  <div key={p.id} className={styles.position}>
+                    <p className={styles.positionHeading}>
+                      {themeLabel(p.themeId)} · Cấp độ đã ghi {p.level}
+                    </p>
+                    <p>
+                      {savedMoveLabel(g.source, p.reference)} ·{' '}
+                      {p.fen.split(' ')[1] === 'w' ? 'Trắng đi' : 'Đen đi'}
+                      {p.reference.branch > 0 &&
+                        ` · Biến ${p.reference.branch + 1}`}
+                    </p>
+                    <div className={styles.chips}>
+                      {[...p.squares, ...p.tags].map((tag, i) => (
+                        <span key={`${tag}:${i}`}>{tag}</span>
+                      ))}
+                    </div>
+                    {p.note && <p className={styles.note}>{p.note}</p>}
+                    <div className={styles.actions}>
+                      {initial.writable && (
+                        <button
+                          onClick={() =>
+                            setAddingPosition(
+                              addingPosition === p.id ? undefined : p.id
+                            )
+                          }
+                        >
+                          Thêm vào bài tập
+                        </button>
+                      )}
+                      <button
+                        onClick={() =>
+                          setActive({ ...g, reference: p.reference })
+                        }
+                      >
+                        Xem thế cờ / sửa
+                      </button>
+                      {initial.writable && (
+                        <button onClick={() => setRemovingPosition(p.id)}>
+                          Bỏ thế cờ
+                        </button>
+                      )}
+                    </div>
+                    {addingPosition === p.id && (
+                      <PracticePositionEditor
+                        fen={p.fen}
+                        source={g.source}
+                        reference={p.reference}
+                        defaults={{
+                          themeId: p.themeId,
+                          level: p.level,
+                          solution: p.note,
+                        }}
+                      />
+                    )}
+                    {removingPosition === p.id && (
+                      <div className={styles.actions}>
+                        <span>Bỏ mốc thế cờ này khỏi bộ sưu tập?</span>
+                        <button disabled={busy} onClick={() => remove(g, p.id)}>
+                          Bỏ thế cờ đã lưu
+                        </button>
+                        <button
+                          disabled={busy}
+                          onClick={() => setRemovingPosition(undefined)}
+                        >
+                          Giữ lại
+                        </button>
+                      </div>
+                    )}
+                  </div>
+                ))}
+              </section>
+            )}
             <div className={styles.actions}>
               <button onClick={() => setActive(g)}>Xem ván / sửa</button>
               {initial.writable && (
@@ -309,6 +467,7 @@ function Library({ initial }: { initial: SavedGamesData }) {
       </div>
       {active && (
         <DrawGameViewer
+          bookmark
           reference={active.reference}
           source={active.source}
           referenceGames={visible.map((g) => ({
@@ -322,6 +481,7 @@ function Library({ initial }: { initial: SavedGamesData }) {
   );
 }
 export default function SavedGamesPage() {
+  const router = useRouter();
   return (
     <>
       <Head>
@@ -330,7 +490,16 @@ export default function SavedGamesPage() {
       </Head>
       <main lang="vi" className={styles.page}>
         <PrivateContent<SavedGamesData> endpoint="/api/saved-games">
-          {(data) => <Library initial={data} />}
+          {(data) => {
+            const filters = savedPositionFilters(router.query, data.themes);
+            return (
+              <Library
+                key={`${filters.themeId}:${filters.level}`}
+                initial={data}
+                initialFilters={filters}
+              />
+            );
+          }}
         </PrivateContent>
       </main>
     </>
