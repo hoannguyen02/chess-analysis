@@ -31,7 +31,10 @@ function load(path) {
 
 for (const [page, content] of [
   ['lich-hoc', ['Lịch học chung', 'Học phí', 'maps.app.goo.gl']],
-  ['chien-thuat', ['Chủ đề luyện chiến thuật', 'lichess.org/training/mateIn1']],
+  [
+    'don-chien-thuat',
+    ['Chủ đề luyện chiến thuật', 'lichess.org/training/mateIn1'],
+  ],
 ]) {
   test(`${page} renders its content without a login session`, () => {
     const Page = load(`src/pages/${page}.tsx`).default;

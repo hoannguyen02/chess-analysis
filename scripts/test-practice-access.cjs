@@ -170,8 +170,11 @@ test('private practice access', async (t) => {
           assert.equal(res.headers['Cache-Control'], 'private, no-store');
         }
         assert.equal(privateReads, 0);
-        if (path.startsWith('hanging-piece-') || path.includes('mate-in-one') ||
-            path === 'manual-tactic-exercises') {
+        if (
+          path.startsWith('hanging-piece-') ||
+          path.includes('mate-in-one') ||
+          path === 'manual-tactic-exercises'
+        ) {
           const deniedMethod = response();
           await handler(
             { method: 'POST', headers: { authorization: `Bearer ${token}` } },
@@ -183,7 +186,11 @@ test('private practice access', async (t) => {
         }
         const res = response();
         await handler(
-          { method: 'GET', query: { theme: 'mateIn1' }, headers: { authorization: `Bearer ${token}` } },
+          {
+            method: 'GET',
+            query: { theme: 'mateIn1' },
+            headers: { authorization: `Bearer ${token}` },
+          },
           res
         );
         assert.equal(res.code, 200);
@@ -344,7 +351,7 @@ test('additional private pages protect their data and support login return paths
     '/insufficient-material',
     '/repetition-draw',
     '/fortress-draw',
-    '/chien-thuat',
+    '/don-chien-thuat',
     '/lich-hoc',
   ]) {
     assert.ok(paths.includes(path));

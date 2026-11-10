@@ -26,8 +26,8 @@ const nextConfig: NextConfig = {
   // async redirects() {
   //   return [
   //     {
-  //       source: '/luyen-chien-thuat',
-  //       destination: '/chien-thuat',
+  //       source: '/luyen-don-chien-thuat',
+  //       destination: '/don-chien-thuat',
   //       permanent: true,
   //     },
   //     {
@@ -39,6 +39,15 @@ const nextConfig: NextConfig = {
   // },
   // async redirects() {
   //   return [{ source: '/don-xien', destination: '/skewer', permanent: true }];
+  // },
+  // async redirects() {
+  //   return [
+  //     {
+  //       source: '/chien-thuat',
+  //       destination: '/don-chien-thuat',
+  //       permanent: true,
+  //     },
+  //   ];
   // },
   async headers() {
     return [

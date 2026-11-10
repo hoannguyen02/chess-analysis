@@ -182,7 +182,7 @@ page, retaining the original destination for the next login.
 
 ## Additional private pages
 
-The hub also includes `/draw`, `/chien-thuat`, and `/lich-hoc`. Each uses
+The hub also includes `/draw`, `/don-chien-thuat`, and `/lich-hoc`. Each uses
 PrivateContent and the shared login/return flow. Draw exercises and source games
 are served by authenticated `/api/draw-exercises` and `/api/draw-game-sources`.
 Tactics topics and schedule data are served by `/api/private-tactics` and
