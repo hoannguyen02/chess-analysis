@@ -48,7 +48,7 @@ text in the temporary audit report.
 - A third occurrence permits a valid draw claim under the repetition rules;
   it does not automatically end the game. A dead position ends the game
   immediately. A drawn tablebase assessment is not an automatic termination.
-- Keep the required Beginner/A/B/C/C*/D definitions, explicitly counting the
+- Keep the required Beginner/A/B/C/C*/D/D* definitions, explicitly counting the
   solving side's moves. The levels are the project's instructional scheme.
 - Retain player names, event captions and source URLs. Identify composed and
   modified positions in ordinary Vietnamese. Source attribution identifies

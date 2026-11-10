@@ -9,7 +9,7 @@ function load(path, resolve = require) {
     compilerOptions: { module: ts.ModuleKind.CommonJS, esModuleInterop: true },
   }).outputText;
   new Function('module', 'exports', 'require', js)(mod, mod.exports, (id) =>
-    id.endsWith('/manual-tactics')
+    id.endsWith('/manual-tactics') && id !== '@/lib/chess/manual-tactics'
       ? {
           includeManualExercises: async (_route, data) => data,
           readManualTactics: async () => [],
@@ -75,6 +75,11 @@ test('private practice access', async (t) => {
         'pin-game-sources',
         'fork-exercises',
         'fork-game-sources',
+        'hanging-piece-exercises',
+        'defensive-move-game-sources',
+        'mate-in-one-game-sources',
+        'manual-tactic-exercises',
+        'hanging-piece-game-sources',
         'discovery-exercises',
         'discovery-game-sources',
         'simplification-exercises',
@@ -112,6 +117,10 @@ test('private practice access', async (t) => {
           privateReads++;
           if (name.endsWith('/game-source-openings'))
             return { withGameOpenings: (sources) => sources };
+          if (name.endsWith('/tactics-catalog'))
+            return { tacticsCatalog: { themes: [{ id: 'mateIn1' }] } };
+          if (name === '@/lib/chess/manual-tactics')
+            return load('src/lib/chess/manual-tactics.ts');
           if (
             name.includes('back-rank-mate-exercises') ||
             name.includes('underpromotion-exercises') ||
@@ -135,6 +144,8 @@ test('private practice access', async (t) => {
             name.includes('pin-exercises') ||
             name.includes('removing-defender-exercises') ||
             name.includes('fork-exercises') ||
+            name.includes('hanging-piece-exercises') ||
+            name.includes('mate-in-one-exercises') ||
             name.includes('discovery-exercises') ||
             name.includes('simplification-exercises')
           )
@@ -159,9 +170,20 @@ test('private practice access', async (t) => {
           assert.equal(res.headers['Cache-Control'], 'private, no-store');
         }
         assert.equal(privateReads, 0);
+        if (path.startsWith('hanging-piece-') || path.includes('mate-in-one') ||
+            path === 'manual-tactic-exercises') {
+          const deniedMethod = response();
+          await handler(
+            { method: 'POST', headers: { authorization: `Bearer ${token}` } },
+            deniedMethod
+          );
+          assert.equal(deniedMethod.code, 405);
+          assert.equal(deniedMethod.headers.Allow, 'GET');
+          assert.equal(privateReads, 0);
+        }
         const res = response();
         await handler(
-          { method: 'GET', headers: { authorization: `Bearer ${token}` } },
+          { method: 'GET', query: { theme: 'mateIn1' }, headers: { authorization: `Bearer ${token}` } },
           res
         );
         assert.equal(res.code, 200);
@@ -300,6 +322,7 @@ test('additional private pages protect their data and support login return paths
   for (const path of [
     '/pin',
     '/fork',
+    '/hanging-piece',
     '/discovered-attack',
     '/simplification',
     '/back-rank-mate',
@@ -396,7 +419,7 @@ test('Draw theme APIs stay protected and return only their route category', asyn
   const auth = load('src/lib/server/practice-access.ts');
   const hub = load('src/lib/server/private-hub.ts');
   const categories = [
-    { id: 'perpetual-check', title: 'Chiếu vĩnh viễn', exercises: [] },
+    { id: 'perpetual-check', title: 'Chiếu lặp lại để giữ hòa', exercises: [] },
     { id: 'stalemate', title: 'Bẫy hết nước đi', exercises: [] },
   ];
   const resolver = (name) => {

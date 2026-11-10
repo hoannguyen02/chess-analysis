@@ -10,8 +10,9 @@ import {
 import { usePracticeFullscreen } from '@/hooks/usePracticeFullscreen';
 import { drawExerciseUrl } from '@/lib/chess/draw-exercise-url';
 import {
-  practiceRemovalHref,
   practiceReviewIndex,
+  practiceReviewKey,
+  refreshedPracticeReviewIndex,
 } from '@/lib/chess/practice-management';
 import {
   DrawLevel,
@@ -29,10 +30,15 @@ import { skewerLevelDescriptions } from '@/lib/chess/skewer-levels';
 import styles from '@/styles/ChessPractice.module.css';
 import dynamic from 'next/dynamic';
 import Link from 'next/link';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import GamePlayerNames from './GamePlayerNames';
 import { TeachingTimer } from './TeachingTimer';
+import { usePrivateContentRefresh } from './PrivateContent';
+import PracticeSaveFeedback, {
+  PracticeCatalogRefresh,
+  type PracticeSaveNotice,
+} from './PracticeSaveFeedback';
 
 const DrawTrainer = dynamic(() => import('./DrawTrainer'), {
   ssr: false,
@@ -55,11 +61,13 @@ function CategoryPractice({
   showIntroduction = true,
   reviewLevel,
   skewerKind,
+  showHangingPieceHint,
 }: {
   category: DrawCategory;
   showIntroduction?: boolean;
   reviewLevel: DrawLevel | 'all' | 'beginner';
   skewerKind?: 'king' | 'queen';
+  showHangingPieceHint: boolean;
 }) {
   const router = useRouter();
   const level = reviewLevel === 'beginner' ? 'Beginner' : reviewLevel;
@@ -72,14 +80,59 @@ function CategoryPractice({
     router.query.exercise,
     sameReviewContext ? router.query.reviewIndex : undefined
   );
-  const [page, setPage] = useState(Math.floor(initialIndex / PAGE_SIZE));
-  const [activeIndex, setActiveIndex] = useState(initialIndex);
+  const [selectedPage, setPage] = useState(
+    Math.floor(initialIndex / PAGE_SIZE)
+  );
+  const [selection, setSelection] = useState(() => ({
+    index: initialIndex,
+    key: category.exercises[initialIndex]
+      ? practiceReviewKey(category.exercises[initialIndex])
+      : undefined,
+  }));
+  const activeIndex = refreshedPracticeReviewIndex(
+    category.exercises,
+    selection.key,
+    selection.index
+  );
+  const exercise = category.exercises[activeIndex];
+  const activeKey = exercise ? practiceReviewKey(exercise) : undefined;
+  const pages = Math.ceil(category.exercises.length / PAGE_SIZE);
+  const page = Math.min(selectedPage, Math.max(0, pages - 1));
+  if (activeIndex !== selection.index || activeKey !== selection.key)
+    setSelection({ index: activeIndex, key: activeKey });
+  if (page !== selectedPage) setPage(page);
+
+  function setActiveIndex(index: number) {
+    setSelection({ index, key: practiceReviewKey(category.exercises[index]) });
+  }
   const { trainerRef, expandButtonRef, expanded, toggleExpanded } =
     usePracticeFullscreen();
   const [timerPaused, setTimerPaused] = useState(false);
   const [attempt, setAttempt] = useState(0);
+  const [notice, setNotice] = useState<PracticeSaveNotice>();
 
-  const pages = Math.ceil(category.exercises.length / PAGE_SIZE);
+  useEffect(() => {
+    if (!exercise && expanded) void toggleExpanded();
+  }, [exercise, expanded, toggleExpanded]);
+
+  if (!exercise)
+    return (
+      <div className={styles.emptyLevel}>
+        <PracticeSaveFeedback notice={notice} />
+        <p role="status">
+          Chưa có bài ở cấp độ{' '}
+          {reviewLevel === 'beginner' ? 'Nhập môn / Beginner' : reviewLevel}{' '}
+          trong chủ đề này.
+        </p>
+        {showHangingPieceHint && (
+          <p>
+            Chủ đề này luyện cách bắt quân có lợi và giữ lợi thế vật chất. Các
+            bài thí quân phù hợp hơn với những chủ đề phối hợp chiến thuật.
+          </p>
+        )}
+      </div>
+    );
+
   const start = page * PAGE_SIZE;
   return (
     <section
@@ -143,7 +196,7 @@ function CategoryPractice({
               <TeachingTimer
                 minimal
                 paused={timerPaused}
-                resetKey={`${activeIndex}-${attempt}`}
+                resetKey={`${activeKey}-${attempt}`}
               />
             </div>
             <button
@@ -156,19 +209,17 @@ function CategoryPractice({
             </button>
           </div>
         </div>
+        <PracticeSaveFeedback notice={notice} />
         <DrawTrainer
-          key={drawExerciseUrl(category.exercises[activeIndex])}
-          exercise={category.exercises[activeIndex]}
-          removalReturnHref={practiceRemovalHref(
-            router.asPath,
-            category.exercises,
-            activeIndex,
-            {
-              categoryId: category.id,
-              level,
-              beginnerKind: skewerKind,
-            }
-          )}
+          key={JSON.stringify([
+            activeKey,
+            exercise.fen,
+            exercise.goal,
+            exercise.moves,
+            exercise.alternativeLines,
+          ])}
+          exercise={exercise}
+          onPracticeSaved={setNotice}
           referenceGames={category.exercises.flatMap((e) =>
             e.gameReference ? [{ reference: e.gameReference, position: e }] : []
           )}
@@ -274,13 +325,7 @@ function CategoryPractice({
   );
 }
 
-export default function ChessPractice({
-  categories,
-  variant = 'draw',
-  showLevelFilter = true,
-  showCategoryNavigation = true,
-  categoryLinks,
-}: {
+type ChessPracticeProps = {
   categories: DrawCategory[];
   variant?:
     | 'draw'
@@ -288,6 +333,7 @@ export default function ChessPractice({
     | 'pin'
     | 'removing-defender'
     | 'fork'
+    | 'hanging-piece'
     | 'discovery'
     | 'simplification'
     | 'checkmate'
@@ -296,7 +342,24 @@ export default function ChessPractice({
   showLevelFilter?: boolean;
   showCategoryNavigation?: boolean;
   categoryLinks?: DrawThemeLink[];
-}) {
+};
+
+export default function ChessPractice(props: ChessPracticeProps) {
+  const refreshCatalog = usePrivateContentRefresh();
+  return (
+    <PracticeCatalogRefresh.Provider value={refreshCatalog}>
+      <PracticeContent {...props} />
+    </PracticeCatalogRefresh.Provider>
+  );
+}
+
+function PracticeContent({
+  categories,
+  variant = 'draw',
+  showLevelFilter = true,
+  showCategoryNavigation = true,
+  categoryLinks,
+}: ChessPracticeProps) {
   const router = useRouter();
   const choices =
     variant === 'draw' ? drawPracticeChoices(categories) : categories;
@@ -382,7 +445,7 @@ export default function ChessPractice({
         : filterDrawLevel(category.exercises, selectedLevel),
   };
   return (
-    <div className={styles.practice}>
+    <div className={styles.practice} data-chess-practice>
       {(variant === 'draw' ||
         variant === 'discovery' ||
         (variant === 'checkmate' && categories.length > 1)) &&
@@ -533,29 +596,21 @@ export default function ChessPractice({
           ))}
         </nav>
       )}
-      {filtered.exercises.length ? (
-        <CategoryPractice
-          key={`${category.id}-${selectedLevel}-${beginnerKind}`}
-          category={filtered}
-          reviewLevel={selectedLevel}
-          skewerKind={
-            variant === 'skewer' && selectedLevel === 'beginner'
-              ? beginnerKind
-              : undefined
-          }
-          showIntroduction={variant === 'draw'}
-        />
-      ) : (
-        <div className={styles.emptyLevel} role="status">
-          <p>
-            Chưa có bài ở cấp độ{' '}
-            {selectedLevel === 'beginner'
-              ? 'Nhập môn / Beginner'
-              : selectedLevel}{' '}
-            trong chủ đề này.
-          </p>
-        </div>
-      )}
+      <CategoryPractice
+        key={`${category.id}-${selectedLevel}-${beginnerKind}`}
+        category={filtered}
+        reviewLevel={selectedLevel}
+        skewerKind={
+          variant === 'skewer' && selectedLevel === 'beginner'
+            ? beginnerKind
+            : undefined
+        }
+        showIntroduction={variant === 'draw'}
+        showHangingPieceHint={
+          variant === 'hanging-piece' &&
+          (selectedLevel === 'C' || selectedLevel === 'D')
+        }
+      />
       <details className={`${styles.note} ${styles.notationLegend}`}>
         <summary>Ký hiệu lời giải</summary>
         <p>

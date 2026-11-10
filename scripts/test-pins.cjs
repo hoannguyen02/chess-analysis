@@ -4,6 +4,10 @@ const fs = require('node:fs');
 const ts = require('typescript');
 const exercises = require('../src/lib/server/pin-exercises.json');
 const sources = require('../src/lib/server/pin-game-sources.json');
+const isReviewedComposition = (exercise) => exercise.id?.startsWith('pin-composed-');
+const isLegacyBeginnerRecognition = (exercise) =>
+  exercise.beginner && !exercise.gameReference && !exercise.pinSetup &&
+  !exercise.pinCreation && !isReviewedComposition(exercise);
 function aligned(a, f, b) {
   const xy = (s) => [s.charCodeAt(0) - 97, +s[1] - 1];
   const [x, y, z] = [a, f, b].map(xy);
@@ -33,7 +37,7 @@ test('pin practice: forced beginner captures and exact master-game references', 
   const counts = {};
   for (const level of ['A', 'B', 'C', 'C*', 'D']) {
     const games = exercises.filter(
-      (e) => e.gameReference && e.difficulty.level === level
+      (e) => e.gameReference && e.difficulty?.level === level
     );
     assert.ok(
       new Set(games.map((e) => e.gameReference.id)).size >= 20,
@@ -54,7 +58,7 @@ test('pin practice: forced beginner captures and exact master-game references', 
         mod.exports.tryDrawMove(e, line.slice(0, -1), line.at(-1)).complete,
         true
       );
-      if (e.beginner && !e.pinSetup && !e.pinCreation) {
+      if (isLegacyBeginnerRecognition(e)) {
         assert.equal(line.length, 3);
         assert.equal(
           mod.exports.tryDrawMove(e, [], line[0]).complete,
@@ -112,7 +116,7 @@ test('pin practice: forced beginner captures and exact master-game references', 
           );
       }
     }
-    if (e.beginner && !e.pinSetup && !e.pinCreation) {
+    if (isLegacyBeginnerRecognition(e)) {
       assert.equal(e.gameReference, undefined);
       const b = new Chess(e.fen);
       const move = b.move(e.moves[0]);
@@ -150,7 +154,7 @@ test('pin practice: forced beginner captures and exact master-game references', 
   assert.equal(audit.length, 60);
   assert.equal(
     audit.filter((r) => r.accepted).length,
-    exercises.filter((e) => e.beginner && !e.pinSetup && !e.pinCreation).length
+      exercises.filter(isLegacyBeginnerRecognition).length
   );
   for (const rejected of audit.filter((r) => !r.accepted)) {
     assert.ok(!exercises.some((e) => e.fen === rejected.fen));
@@ -161,7 +165,7 @@ test('pin practice: forced beginner captures and exact master-game references', 
 });
 
 test('beginner pin variety, explicit objectives and durable exclusions', () => {
-  const beginners = exercises.filter((e) => e.beginner);
+  const beginners = exercises.filter((e) => e.beginner && !e.gameReference && !isReviewedComposition(e));
   assert.equal(beginners.length, 24);
   const records = require('./fixtures/pin/beginner-reviewed.json');
   assert.equal(records.length, 29);
@@ -181,7 +185,7 @@ test('beginner pin variety, explicit objectives and durable exclusions', () => {
 
  test('beginner editorial review publishes only retained positions', () => {
   const review = require('./fixtures/pin/beginner-quality-review.json').records;
-  const beginners = exercises.filter((e) => e.source === 'original-composition');
+  const beginners = exercises.filter((e) => e.source === 'original-composition' && !isReviewedComposition(e));
   assert.equal(review.length, 52);
   assert.equal(review.filter((r) => r.decision === 'exclude').length, 11);
   assert.deepEqual(new Set(beginners.map((e) => e.fen)),

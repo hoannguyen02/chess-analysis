@@ -3676,44 +3676,6 @@
     "solution": "Tăng sức ép và bắt quân bị ghim ở e5."
   },
   {
-    "title": "Knaak, Rainer — Bronstein, David I",
-    "prompt": "Khai thác đòn ghim để thắng vật chất.",
-    "mode": "interactive",
-    "outcome": "pin",
-    "fen": "1r1q1k2/p4p2/3N1npP/2P3Q1/2B2Pp1/2B1r3/2b1p1P1/R3K3 w Q - 0 30",
-    "moves": [
-      "h7",
-      "Qb6",
-      "h8=Q+",
-      "Ke7",
-      "Qhxf6+"
-    ],
-    "alternativeLines": [],
-    "previousMove": {
-      "fen": "1r1q1k2/p4pp1/3N1n1P/2P3Q1/2B2Pp1/2B1r3/2b1p1P1/R3K3 b Q - 0 29",
-      "move": "g6"
-    },
-    "source": "https://www.pgnmentor.com/players/Bronstein.zip",
-    "gameReference": {
-      "id": "36ae809a6805f9de",
-      "kind": "game",
-      "ply": 58,
-      "branch": 0,
-      "collection": "pin"
-    },
-    "difficulty": {
-      "level": "B",
-      "status": "suggested",
-      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
-      "solverMoves": 3,
-      "sacrificeCount": 0
-    },
-    "hints": [
-      "Tìm quân bị ghim vào Vua: quân đó có còn bắt lại hoặc bảo vệ được không?"
-    ],
-    "solution": "Tăng sức ép và bắt quân bị ghim ở f6."
-  },
-  {
     "title": "Gurevich, Mikhail — Tal, Mihail",
     "prompt": "Khai thác đòn ghim để thắng vật chất.",
     "mode": "interactive",
@@ -3802,7 +3764,15 @@
       "Qe5",
       "Rxe5+"
     ],
-    "alternativeLines": [],
+    "alternativeLines": [
+      [
+        "Qg8+",
+        "Nf7",
+        "Re1+",
+        "Qe3",
+        "Rexe3+"
+      ]
+    ],
     "previousMove": {
       "fen": "8/p1r1bk1Q/1p3p2/2q1n3/8/P2R4/5PPP/3R2K1 b - - 10 31",
       "move": "Ke6"
@@ -3816,54 +3786,18 @@
       "collection": "pin"
     },
     "difficulty": {
-      "level": "B",
+      "level": "C*",
       "status": "suggested",
-      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
+      "reason": "Mã chặn chiếu bằng Nf7. Cần tính thêm Re1+ Qe5 rồi Rxe5+ để thắng Hậu đổi Xe.",
       "solverMoves": 3,
       "sacrificeCount": 0
     },
     "hints": [
-      "Tìm quân bị ghim vào Vua: quân đó có còn bắt lại hoặc bảo vệ được không?"
+      "Dùng Hậu chiếu trên đường chéo g8–e6.",
+      "Sau Nf7, tìm nước chiếu bằng Xe khi Mã đen đang che đường chiếu."
     ],
-    "solution": "Quân ở f7 bị ghim vào Vua nên không thể bắt lại trên ô cần bảo vệ."
-  },
-  {
-    "title": "Alekhine, Alexander — Pollock, H.",
-    "prompt": "Khai thác đòn ghim để thắng vật chất.",
-    "mode": "interactive",
-    "outcome": "pin",
-    "fen": "5r1k/pp4rp/2p1bq2/8/4Bp2/2N2Q1P/PPP3P1/4R2K b - - 5 29",
-    "moves": [
-      "Qh4",
-      "Rf1",
-      "Rg3",
-      "Qe2",
-      "Bxh3"
-    ],
-    "alternativeLines": [],
-    "previousMove": {
-      "fen": "5r1k/pp4rp/2p1bq2/8/5p2/2NB1Q1P/PPP3P1/4R2K w - - 4 29",
-      "move": "Be4"
-    },
-    "source": "https://www.pgnmentor.com/players/Alekhine.zip",
-    "gameReference": {
-      "id": "444af90727a257b5",
-      "kind": "game",
-      "ply": 57,
-      "branch": 0,
-      "collection": "pin"
-    },
-    "difficulty": {
-      "level": "B",
-      "status": "suggested",
-      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
-      "solverMoves": 3,
-      "sacrificeCount": 0
-    },
-    "hints": [
-      "Tìm quân bị ghim vào Vua: quân đó có còn bắt lại hoặc bảo vệ được không?"
-    ],
-    "solution": "Tăng sức ép và bắt quân bị ghim ở h3."
+    "solution": "Phương án phân tích. Qg8+ buộc Đen chọn cách đỡ chiếu. Sau Nf7, Re1+ khiến Hậu đen phải chặn đường chiếu hoặc Vua phải đi. Nếu Đen đáp Qe5, Trắng chơi Rxe5+. Mã f7 bị Hậu g8 ghim vào Vua e6, nên không thể bắt lại. Sau Kxe5 hoặc fxe5, Trắng thắng Hậu đổi Xe.",
+    "goal": "material"
   },
   {
     "title": "Giri,A — Shirov,A",
@@ -3875,20 +3809,53 @@
       "Kc1",
       "Ne7",
       "Nf5",
-      "Rg2",
-      "Nxg7"
+      "Nxf5",
+      "Qd8+",
+      "Rg8",
+      "Qxg8#"
     ],
     "alternativeLines": [
       [
-        "Kd1",
-        "Rh1+",
-        "Kd2",
-        "Rh2+",
         "Kc1",
         "Ne7",
         "Nf5",
         "Rg2",
-        "Nxg7"
+        "Nxg7",
+        "Rxg7",
+        "Qh4"
+      ],
+      [
+        "Kc1",
+        "Ne7",
+        "Nf5",
+        "Rg2",
+        "Nxg7",
+        "Rxg7",
+        "Qf8+"
+      ],
+      [
+        "Kc1",
+        "Ne7",
+        "Nf5",
+        "Rc2+",
+        "Kxc2",
+        "Nxf5",
+        "Qd8+",
+        "Rg8",
+        "Qxg8#"
+      ],
+      [
+        "Kd1",
+        "Ne7",
+        "Nf5",
+        "Rh1+",
+        "Kd2",
+        "Rh2+",
+        "Kc1",
+        "Rg2",
+        "Nxg7",
+        "Rxg7",
+        "Qh4"
       ],
       [
         "Ke1",
@@ -3899,7 +3866,9 @@
         "Ne7",
         "Nf5",
         "Rg2",
-        "Nxg7"
+        "Nxg7",
+        "Rxg7",
+        "Qh4"
       ]
     ],
     "previousMove": {
@@ -3915,16 +3884,18 @@
       "collection": "pin"
     },
     "difficulty": {
-      "level": "B",
+      "level": "C",
       "status": "suggested",
-      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
-      "solverMoves": 3,
-      "sacrificeCount": 0
+      "reason": "Trắng thí Mã trên f5 để buộc Đen lựa chọn giữa chiếu hết và mất Xe đổi Mã. Đòn ghim trên đường chéo f6–h8 giữ Xe Đen ở g7.",
+      "solverMoves": 4,
+      "sacrificeCount": 1
     },
     "hints": [
-      "Tìm quân bị ghim vào Vua: quân đó có còn bắt lại hoặc bảo vệ được không?"
+      "Đưa Vua ra khỏi hàng hai và giữ Tượng c4 khống chế ô g8.",
+      "Hậu f6 giữ Xe Đen ở g7. Đưa Mã đến ô bảo vệ g7 để dọa chiếu hết."
     ],
-    "solution": "Tăng sức ép và bắt quân bị ghim ở g7."
+    "solution": "Phương án phân tích. Sau Kc1 Ne7, Hậu f6 ghim Xe g7 vào Vua h8. Trắng chơi Nf5, dọa Qxg7#. Nếu Đen bắt Mã bằng ...Nxf5, Trắng chiếu Qd8+, buộc Xe chắn ở g8 rồi bắt Xe chiếu hết bằng Qxg8#. Trong ván đấu, Đen chơi ...Rg2. Sau Nxg7 Rxg7, Trắng đã đổi Mã lấy Xe. Qh4 là một phương án phân tích để giữ lợi thế.",
+    "goal": "material"
   },
   {
     "title": "Kosteniuk,A — Carlsen,M",
@@ -3965,44 +3936,6 @@
     "solution": "Quân ở e3 bị ghim vào Vua nên không thể bắt lại trên ô cần bảo vệ."
   },
   {
-    "title": "Groszpeter, Attila — Tal, Mihail",
-    "prompt": "Khai thác đòn ghim để thắng vật chất.",
-    "mode": "interactive",
-    "outcome": "pin",
-    "fen": "5rk1/1q2bpp1/4r2p/1p1p4/8/PP2PPB1/4QR1P/3R3K b - - 3 29",
-    "moves": [
-      "Bc5",
-      "Bf4",
-      "d4",
-      "Rg2",
-      "dxe3"
-    ],
-    "alternativeLines": [],
-    "previousMove": {
-      "fen": "5rk1/1q2bpp1/4r2p/1p1p4/8/PP2PPB1/4Q2P/3R1R1K w - - 2 29",
-      "move": "Rf2"
-    },
-    "source": "https://www.pgnmentor.com/players/Tal.zip",
-    "gameReference": {
-      "id": "50fdba0c6c40b7fe",
-      "kind": "game",
-      "ply": 57,
-      "branch": 0,
-      "collection": "pin"
-    },
-    "difficulty": {
-      "level": "B",
-      "status": "suggested",
-      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
-      "solverMoves": 3,
-      "sacrificeCount": 0
-    },
-    "hints": [
-      "Tìm quân đứng trước quân có giá trị cao hơn trên cùng đường tấn công."
-    ],
-    "solution": "Quân ở e3 bị ghim vào quân có giá trị cao hơn ở e2. Khai thác đòn ghim để thắng vật chất."
-  },
-  {
     "title": "Spielmann, Rudolf — Alatortsev, Vladimir",
     "prompt": "Khai thác đòn ghim để thắng vật chất.",
     "mode": "interactive",
@@ -4041,44 +3974,6 @@
     "solution": "Tăng sức ép và bắt quân bị ghim ở a5."
   },
   {
-    "title": "Macieja,B — Shirov,A",
-    "prompt": "Khai thác đòn ghim để thắng vật chất.",
-    "mode": "interactive",
-    "outcome": "pin",
-    "fen": "3rr1k1/pp1b1ppp/8/8/3N1PP1/P2Q1PqP/1P6/2R2K1R b - - 2 22",
-    "moves": [
-      "Bc6",
-      "Nf5",
-      "Rxd3",
-      "Nxg3",
-      "Rxf3+"
-    ],
-    "alternativeLines": [],
-    "previousMove": {
-      "fen": "3rr1k1/pp1b1ppp/8/8/3N1PP1/P2Q1PqP/1P6/2R3KR w - - 1 22",
-      "move": "Kf1"
-    },
-    "source": "https://www.pgnmentor.com/players/Shirov.zip",
-    "gameReference": {
-      "id": "53cc0e1f1b78b8cb",
-      "kind": "game",
-      "ply": 43,
-      "branch": 0,
-      "collection": "pin"
-    },
-    "difficulty": {
-      "level": "B",
-      "status": "suggested",
-      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
-      "solverMoves": 3,
-      "sacrificeCount": 0
-    },
-    "hints": [
-      "Tìm quân đứng trước quân có giá trị cao hơn trên cùng đường tấn công."
-    ],
-    "solution": "Quân ở f3 bị ghim vào quân có giá trị cao hơn ở h1. Khai thác đòn ghim để thắng vật chất."
-  },
-  {
     "title": "Shirov,A — Olszewski,Mi",
     "prompt": "Khai thác đòn ghim để thắng vật chất.",
     "mode": "interactive",
@@ -4086,12 +3981,31 @@
     "fen": "1r6/5pk1/2b3p1/R7/1nP1P3/pN2RB1r/P1P5/1K6 b - - 4 34",
     "moves": [
       "f5",
+      "Rxa3",
+      "fxe4",
       "Ra7+",
-      "Kh6",
-      "exf5",
-      "Bxf3"
+      "Kf6",
+      "Rxe4",
+      "Rxf3"
     ],
-    "alternativeLines": [],
+    "alternativeLines": [
+      [
+        "f5",
+        "exf5",
+        "Bxf3",
+        "Rxa3",
+        "gxf5"
+      ],
+      [
+        "f5",
+        "Ra7+",
+        "Kf6",
+        "Rxa3",
+        "fxe4",
+        "Rxe4",
+        "Rxf3"
+      ]
+    ],
     "previousMove": {
       "fen": "1r6/5pk1/2b3p1/4R3/1nP1P3/pN2RB1r/P1P5/1K6 w - - 3 34",
       "move": "Ra5"
@@ -4105,16 +4019,18 @@
       "collection": "pin"
     },
     "difficulty": {
-      "level": "B",
+      "level": "D*",
       "status": "suggested",
-      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
-      "solverMoves": 3,
+      "reason": "Sau Rxa3, Đen cần tính fxe4, đáp nước chiếu Ra7+ bằng Kf6, rồi Rxf3 sau Rxe4.",
+      "solverMoves": 4,
       "sacrificeCount": 0
     },
     "hints": [
-      "Tìm quân đứng trước quân có giá trị cao hơn trên cùng đường tấn công."
+      "Nhìn hàng 3 từ Xe h3 qua Tượng f3 đến Xe e3.",
+      "Nếu Trắng lấy tốt a3, tốt f5 có thể bắt ở ô nào để tấn công Tượng f3?"
     ],
-    "solution": "Quân ở f3 bị ghim vào quân có giá trị cao hơn ở e3. Khai thác đòn ghim để thắng vật chất."
+    "solution": "Phương án phân tích. Sau f5 Rxa3 fxe4, tốt đen tấn công Tượng f3. Xe h3 ghim tương đối Tượng này vào Xe e3. Trắng có thể chiếu Ra7+, nhưng sau Kf6 Rxe4, Đen thắng Tượng bằng Rxf3. Nếu Trắng bắt tốt f5 ngay bằng exf5, Đen có thể bắt Tượng trước rồi bắt lại tốt f5.",
+    "goal": "material"
   },
   {
     "title": "Short, Nigel D — Kasparov, Gary",
@@ -4129,7 +4045,20 @@
       "Nxe5",
       "Qxe6"
     ],
-    "alternativeLines": [],
+    "alternativeLines": [
+      [
+        "Nxd6+",
+        "Qxd6",
+        "exd6"
+      ],
+      [
+        "Nxd6+",
+        "Kf8",
+        "Rf1",
+        "Rh7",
+        "Qxe6"
+      ]
+    ],
     "previousMove": {
       "fen": "r3kb1r/1b1n1p2/p1qRp3/1p2P1B1/4N1Qp/1P6/1PP3PP/2K4R b kq - 2 20",
       "move": "Bxd6"
@@ -4143,16 +4072,18 @@
       "collection": "pin"
     },
     "difficulty": {
-      "level": "B",
+      "level": "C*",
       "status": "suggested",
-      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
+      "reason": "Sau Kf8, Trắng cần Rf1 để ghim tốt f7 rồi mới có thể bắt tốt e6 bằng Hậu.",
       "solverMoves": 3,
       "sacrificeCount": 0
     },
     "hints": [
-      "Tìm quân bị ghim vào Vua: quân đó có còn bắt lại hoặc bảo vệ được không?"
+      "Nước chiếu bằng Mã có thể đưa Vua đen đến cột nào?",
+      "Sau Kf8, tìm cách ghim tốt f7 trước khi đưa Hậu đến e6."
     ],
-    "solution": "Quân ở f7 bị ghim vào Vua nên không thể bắt lại trên ô cần bảo vệ."
+    "solution": "Trong ván đấu, Trắng đi Nxd6+ Kf8 Rf1. Xe f1 ghim tốt f7 vào Vua f8. Sau Nxe5, Hậu trắng bắt tốt e6 bằng Qxe6 mà tốt f7 không thể bắt lại. Nếu Đen dùng Hậu bắt Mã ngay ở d6, Trắng có thể đáp exd6 để thắng Hậu.",
+    "goal": "material"
   },
   {
     "title": "Kasparov, Gary — Short, Nigel D",
@@ -4269,44 +4200,6 @@
     "solution": "Quân ở e3 bị ghim vào quân có giá trị cao hơn ở e1. Khai thác đòn ghim để thắng vật chất."
   },
   {
-    "title": "Portisch, Lajos — Tal, Mihail",
-    "prompt": "Khai thác đòn ghim để thắng vật chất.",
-    "mode": "interactive",
-    "outcome": "pin",
-    "fen": "2r3k1/7p/p5p1/1P2n1q1/2bpB3/8/2Q3PP/3N1RK1 b - - 2 33",
-    "moves": [
-      "axb5",
-      "Bd5+",
-      "Kh8",
-      "Bxc4",
-      "bxc4"
-    ],
-    "alternativeLines": [],
-    "previousMove": {
-      "fen": "2r3k1/7p/p5p1/1P2n1q1/2bpB3/8/4Q1PP/3N1RK1 w - - 1 33",
-      "move": "Qc2"
-    },
-    "source": "https://www.pgnmentor.com/players/Tal.zip",
-    "gameReference": {
-      "id": "6dd148057d1993af",
-      "kind": "game",
-      "ply": 65,
-      "branch": 0,
-      "collection": "pin"
-    },
-    "difficulty": {
-      "level": "B",
-      "status": "suggested",
-      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
-      "solverMoves": 3,
-      "sacrificeCount": 0
-    },
-    "hints": [
-      "Tìm quân đứng trước quân có giá trị cao hơn trên cùng đường tấn công."
-    ],
-    "solution": "Quân ở c4 bị ghim vào quân có giá trị cao hơn ở c2. Khai thác đòn ghim để thắng vật chất."
-  },
-  {
     "title": "Gufeld, Eduard — Tal, Mihail",
     "prompt": "Khai thác đòn ghim để thắng vật chất.",
     "mode": "interactive",
@@ -4383,120 +4276,6 @@
     "solution": "Tăng sức ép và bắt quân bị ghim ở e5."
   },
   {
-    "title": "Tal, Mihail — Platonov, Igor V",
-    "prompt": "Khai thác đòn ghim để thắng vật chất.",
-    "mode": "interactive",
-    "outcome": "pin",
-    "fen": "2b5/3k3Q/4pP2/p1qp2P1/1R6/KPP5/2r5/8 b - - 3 42",
-    "moves": [
-      "Kc6",
-      "Qxc2",
-      "axb4+",
-      "Kb2",
-      "bxc3+"
-    ],
-    "alternativeLines": [],
-    "previousMove": {
-      "fen": "2b4Q/3k4/4pP2/p1qp2P1/1R6/KPP5/2r5/8 w - - 2 42",
-      "move": "Qh7+"
-    },
-    "source": "https://www.pgnmentor.com/players/Tal.zip",
-    "gameReference": {
-      "id": "8182a79d057f905f",
-      "kind": "game",
-      "ply": 83,
-      "branch": 0,
-      "collection": "pin"
-    },
-    "difficulty": {
-      "level": "B",
-      "status": "suggested",
-      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
-      "solverMoves": 3,
-      "sacrificeCount": 0
-    },
-    "hints": [
-      "Tìm quân đứng trước quân có giá trị cao hơn trên cùng đường tấn công."
-    ],
-    "solution": "Quân ở c3 bị ghim vào quân có giá trị cao hơn ở c2. Khai thác đòn ghim để thắng vật chất."
-  },
-  {
-    "title": "Shirov,A — Ljubojevic,L",
-    "prompt": "Khai thác đòn ghim để thắng vật chất.",
-    "mode": "interactive",
-    "outcome": "pin",
-    "fen": "r3kb1r/1bq5/p1n1pRp1/2p3Pp/4P3/2p1B2P/PPPQB3/2KR4 w kq - 0 22",
-    "moves": [
-      "Rxe6+",
-      "Be7",
-      "Qxc3",
-      "Rg8",
-      "Bxc5"
-    ],
-    "alternativeLines": [],
-    "previousMove": {
-      "fen": "r3kb1r/1bq5/p1n1pRp1/2p3Pp/1p2P3/2N1B2P/PPPQB3/2KR4 b kq - 1 21",
-      "move": "bxc3"
-    },
-    "source": "https://www.pgnmentor.com/players/Shirov.zip",
-    "gameReference": {
-      "id": "8356dd4ea794e725",
-      "kind": "game",
-      "ply": 42,
-      "branch": 0,
-      "collection": "pin"
-    },
-    "difficulty": {
-      "level": "B",
-      "status": "suggested",
-      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
-      "solverMoves": 3,
-      "sacrificeCount": 0
-    },
-    "hints": [
-      "Tìm quân bị ghim vào Vua: quân đó có còn bắt lại hoặc bảo vệ được không?"
-    ],
-    "solution": "Quân ở e7 bị ghim vào Vua nên không thể bắt lại trên ô cần bảo vệ."
-  },
-  {
-    "title": "Reshevsky, Samuel Herman — Broderman, J.",
-    "prompt": "Khai thác đòn ghim để thắng vật chất.",
-    "mode": "interactive",
-    "outcome": "pin",
-    "fen": "r2qbrk1/4b3/npp1Pp2/p2p1Ppp/2P4Q/2N1B2R/PP4PP/3BR1K1 w - g6 0 23",
-    "moves": [
-      "fxg6",
-      "Bxg6",
-      "Qg3",
-      "Qe8",
-      "Bxh5"
-    ],
-    "alternativeLines": [],
-    "previousMove": {
-      "fen": "r2qbrk1/4b1p1/npp1Pp2/p2p1P1p/2P4Q/2N1B2R/PP4PP/3BR1K1 b - - 1 22",
-      "move": "g5"
-    },
-    "source": "https://www.pgnmentor.com/players/Reshevsky.zip",
-    "gameReference": {
-      "id": "8677668f179221a3",
-      "kind": "game",
-      "ply": 44,
-      "branch": 0,
-      "collection": "pin"
-    },
-    "difficulty": {
-      "level": "B",
-      "status": "suggested",
-      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
-      "solverMoves": 3,
-      "sacrificeCount": 0
-    },
-    "hints": [
-      "Tìm quân bị ghim vào Vua: quân đó có còn bắt lại hoặc bảo vệ được không?"
-    ],
-    "solution": "Quân ở g6 bị ghim vào Vua nên không thể bắt lại trên ô cần bảo vệ."
-  },
-  {
     "title": "Kasparov, Gary — Kramnik, Vladimir",
     "prompt": "Khai thác đòn ghim để thắng vật chất.",
     "mode": "interactive",
@@ -4533,44 +4312,6 @@
       "Tìm quân bị ghim vào Vua: quân đó có còn bắt lại hoặc bảo vệ được không?"
     ],
     "solution": "Quân ở e3 bị ghim vào Vua nên không thể bắt lại trên ô cần bảo vệ."
-  },
-  {
-    "title": "Adams,Mi — Shirov,A",
-    "prompt": "Khai thác đòn ghim để thắng vật chất.",
-    "mode": "interactive",
-    "outcome": "pin",
-    "fen": "8/kpp5/3p1p2/p3p3/2P1P3/1K1PP3/PP4QR/2r3q1 b - - 7 48",
-    "moves": [
-      "Qd1+",
-      "Ka3",
-      "Qxd3+",
-      "b3",
-      "Rxc4"
-    ],
-    "alternativeLines": [],
-    "previousMove": {
-      "fen": "8/kpp5/3p1p2/p3p3/2P1P3/2KPP3/PP4QR/2r3q1 w - - 6 48",
-      "move": "Kb3"
-    },
-    "source": "https://www.pgnmentor.com/players/Shirov.zip",
-    "gameReference": {
-      "id": "8cf9ed4369747561",
-      "kind": "game",
-      "ply": 95,
-      "branch": 0,
-      "collection": "pin"
-    },
-    "difficulty": {
-      "level": "B",
-      "status": "suggested",
-      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
-      "solverMoves": 3,
-      "sacrificeCount": 0
-    },
-    "hints": [
-      "Tìm quân bị ghim vào Vua: quân đó có còn bắt lại hoặc bảo vệ được không?"
-    ],
-    "solution": "Quân ở b3 bị ghim vào Vua nên không thể bắt lại trên ô cần bảo vệ."
   },
   {
     "title": "Keres, Paul — Koberl, Ferenc",
@@ -4649,196 +4390,6 @@
     "solution": "Quân ở g2 bị ghim vào Vua nên không thể bắt lại trên ô cần bảo vệ."
   },
   {
-    "title": "Van Wely,L — Shirov,A",
-    "prompt": "Khai thác đòn ghim để thắng vật chất.",
-    "mode": "interactive",
-    "outcome": "pin",
-    "fen": "6k1/pp2bppp/3nN3/4n3/8/1Pr1P1P1/1P3PBP/R5K1 w - - 0 27",
-    "moves": [
-      "bxc3",
-      "fxe6",
-      "Rxa7",
-      "Kf7",
-      "Bxb7"
-    ],
-    "alternativeLines": [],
-    "previousMove": {
-      "fen": "2r3k1/pp2bppp/3nN3/4n3/8/1PB1P1P1/1P3PBP/R5K1 b - - 0 26",
-      "move": "Rxc3"
-    },
-    "source": "https://www.pgnmentor.com/players/Shirov.zip",
-    "gameReference": {
-      "id": "98ad047df19b9694",
-      "kind": "game",
-      "ply": 52,
-      "branch": 0,
-      "collection": "pin"
-    },
-    "difficulty": {
-      "level": "B",
-      "status": "suggested",
-      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
-      "solverMoves": 3,
-      "sacrificeCount": 0
-    },
-    "hints": [
-      "Tìm quân đứng trước quân có giá trị cao hơn trên cùng đường tấn công."
-    ],
-    "solution": "Quân ở b7 bị ghim vào quân có giá trị cao hơn ở e7. Khai thác đòn ghim để thắng vật chất."
-  },
-  {
-    "title": "Alekhine, Alexander — Bogoljubow, Efim",
-    "prompt": "Khai thác đòn ghim để thắng vật chất.",
-    "mode": "interactive",
-    "outcome": "pin",
-    "fen": "1rb3k1/1p4bR/p1p5/2Pp1pp1/NP4p1/4P3/P2K1PP1/7R w - - 0 24",
-    "moves": [
-      "R7h5",
-      "d4",
-      "Rxg5",
-      "Be6",
-      "exd4"
-    ],
-    "alternativeLines": [],
-    "previousMove": {
-      "fen": "1rb3k1/1p4bR/p1p1p3/2Pp1Bp1/NP4p1/4P3/P2K1PP1/7R b - - 0 23",
-      "move": "exf5"
-    },
-    "source": "https://www.pgnmentor.com/players/Alekhine.zip",
-    "gameReference": {
-      "id": "9b20a1a44c1fc431",
-      "kind": "game",
-      "ply": 46,
-      "branch": 0,
-      "collection": "pin"
-    },
-    "difficulty": {
-      "level": "B",
-      "status": "suggested",
-      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
-      "solverMoves": 3,
-      "sacrificeCount": 0
-    },
-    "hints": [
-      "Tìm quân bị ghim vào Vua: quân đó có còn bắt lại hoặc bảo vệ được không?"
-    ],
-    "solution": "Quân ở g7 bị ghim vào Vua nên không thể bắt lại trên ô cần bảo vệ."
-  },
-  {
-    "title": "Tal, Mihail — Bilek, Istvan",
-    "prompt": "Khai thác đòn ghim để thắng vật chất.",
-    "mode": "interactive",
-    "outcome": "pin",
-    "fen": "2b5/4q1k1/rp2prpp/4Q2P/4N3/1P6/1PP3P1/3R3K w - - 0 30",
-    "moves": [
-      "b4",
-      "Ra4",
-      "Rf1",
-      "Rxb4",
-      "Rxf6"
-    ],
-    "alternativeLines": [],
-    "previousMove": {
-      "fen": "2b5/1p2q1k1/r3prpp/4Q2P/4N3/1P6/1PP3P1/3R3K b - - 0 29",
-      "move": "b6"
-    },
-    "source": "https://www.pgnmentor.com/players/Tal.zip",
-    "gameReference": {
-      "id": "9b3cdc1a65342e2e",
-      "kind": "game",
-      "ply": 58,
-      "branch": 0,
-      "collection": "pin"
-    },
-    "difficulty": {
-      "level": "B",
-      "status": "suggested",
-      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
-      "solverMoves": 3,
-      "sacrificeCount": 0
-    },
-    "hints": [
-      "Tìm quân bị ghim vào Vua: quân đó có còn bắt lại hoặc bảo vệ được không?"
-    ],
-    "solution": "Tăng sức ép và bắt quân bị ghim ở f6."
-  },
-  {
-    "title": "Shirov,A — Yevseev,D",
-    "prompt": "Khai thác đòn ghim để thắng vật chất.",
-    "mode": "interactive",
-    "outcome": "pin",
-    "fen": "5r1k/ppq2Pp1/1np5/5n2/5PBP/1Q2p3/PP1rN1K1/2R2R2 b - - 0 29",
-    "moves": [
-      "Nd5",
-      "Bxf5",
-      "Rxe2+",
-      "Kg3",
-      "Qxf7"
-    ],
-    "alternativeLines": [],
-    "previousMove": {
-      "fen": "5r1k/ppq2Pp1/1np5/5n2/6BP/1Q2pP2/PP1rN1K1/2R2R2 w - - 3 29",
-      "move": "f4"
-    },
-    "source": "https://www.pgnmentor.com/players/Shirov.zip",
-    "gameReference": {
-      "id": "a0720ff6762f7d8c",
-      "kind": "game",
-      "ply": 57,
-      "branch": 0,
-      "collection": "pin"
-    },
-    "difficulty": {
-      "level": "B",
-      "status": "suggested",
-      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
-      "solverMoves": 3,
-      "sacrificeCount": 0
-    },
-    "hints": [
-      "Tìm quân đứng trước quân có giá trị cao hơn trên cùng đường tấn công."
-    ],
-    "solution": "Quân ở f7 bị ghim vào quân có giá trị cao hơn ở f5. Khai thác đòn ghim để thắng vật chất."
-  },
-  {
-    "title": "Tal, Mihail — Meulders, Richard",
-    "prompt": "Khai thác đòn ghim để thắng vật chất.",
-    "mode": "interactive",
-    "outcome": "pin",
-    "fen": "r4r1k/pp1n2q1/2p3p1/8/5pB1/1P1Q1R2/PbP4P/4R1K1 w - - 0 24",
-    "moves": [
-      "Rh3+",
-      "Kg8",
-      "Be6+",
-      "Rf7",
-      "Qxd7"
-    ],
-    "alternativeLines": [],
-    "previousMove": {
-      "fen": "r4r1k/pp1n2q1/2p2bp1/8/5pB1/1P1Q1R2/PBP4P/4R1K1 b - - 0 23",
-      "move": "Bxb2"
-    },
-    "source": "https://www.pgnmentor.com/players/Tal.zip",
-    "gameReference": {
-      "id": "a0f2593b2e3d7865",
-      "kind": "game",
-      "ply": 46,
-      "branch": 0,
-      "collection": "pin"
-    },
-    "difficulty": {
-      "level": "B",
-      "status": "suggested",
-      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
-      "solverMoves": 3,
-      "sacrificeCount": 0
-    },
-    "hints": [
-      "Tìm quân bị ghim vào Vua: quân đó có còn bắt lại hoặc bảo vệ được không?"
-    ],
-    "solution": "Quân ở f7 bị ghim vào Vua nên không thể bắt lại trên ô cần bảo vệ."
-  },
-  {
     "title": "Larsen, Bent — Spassky, Boris V",
     "prompt": "Khai thác đòn ghim để thắng vật chất.",
     "mode": "interactive",
@@ -4851,7 +4402,44 @@
       "Kg3",
       "Bxf3"
     ],
-    "alternativeLines": [],
+    "alternativeLines": [
+      [
+        "g4+",
+        "Kg2",
+        "gxf3+"
+      ],
+      [
+        "g4+",
+        "Kg3",
+        "gxf3"
+      ],
+      [
+        "g4+",
+        "Kh4",
+        "gxf3"
+      ],
+      [
+        "g4+",
+        "Kxg4",
+        "Bh5+",
+        "Kf5",
+        "Bxf3"
+      ],
+      [
+        "g4+",
+        "Kxg4",
+        "Bh5+",
+        "Kh3",
+        "Bxf3"
+      ],
+      [
+        "g4+",
+        "Kxg4",
+        "Bh5+",
+        "Kh4",
+        "Bxf3"
+      ]
+    ],
     "previousMove": {
       "fen": "8/p4bk1/3p3p/3P1Qp1/PP2B3/3Pq2K/7P/8 w - - 8 43",
       "move": "Qf3"
@@ -4865,54 +4453,18 @@
       "collection": "pin"
     },
     "difficulty": {
-      "level": "B",
+      "level": "C",
       "status": "suggested",
-      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
+      "reason": "Đen thí tốt bằng ...g4+ để kéo Vua Trắng sang g4. Tiếp đó, ...Bh5+ giúp Đen bắt Hậu f3. Phương án chính gồm ba nước của Đen.",
       "solverMoves": 3,
-      "sacrificeCount": 0
+      "sacrificeCount": 1
     },
     "hints": [
-      "Tìm quân bị ghim vào Vua: quân đó có còn bắt lại hoặc bảo vệ được không?"
+      "Hậu f3 đang che Vua h3 trên hàng ba. Hãy tìm một nước chiếu bằng tốt để tận dụng đòn ghim.",
+      "Nếu Vua Trắng bắt tốt ở g4, hãy tìm nước chiếu bằng Tượng để sau đó bắt Hậu f3."
     ],
-    "solution": "Tăng sức ép và bắt quân bị ghim ở f3."
-  },
-  {
-    "title": "Kasparov, Gary — Cebalo, Miso",
-    "prompt": "Khai thác đòn ghim để thắng vật chất.",
-    "mode": "interactive",
-    "outcome": "pin",
-    "fen": "3r2k1/1r3pqp/2R1p1p1/1p1PR2P/nP1Q4/6PB/5PK1/8 w - - 0 34",
-    "moves": [
-      "Qe3",
-      "Nb2",
-      "h6",
-      "Qf6",
-      "dxe6"
-    ],
-    "alternativeLines": [],
-    "previousMove": {
-      "fen": "3r2k1/1r2ppqp/2R3p1/1p1PR2P/nP1Q4/6PB/5PK1/8 b - - 6 33",
-      "move": "e6"
-    },
-    "source": "https://www.pgnmentor.com/players/Kasparov.zip",
-    "gameReference": {
-      "id": "a800769d8d479b45",
-      "kind": "game",
-      "ply": 66,
-      "branch": 0,
-      "collection": "pin"
-    },
-    "difficulty": {
-      "level": "B",
-      "status": "suggested",
-      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
-      "solverMoves": 3,
-      "sacrificeCount": 0
-    },
-    "hints": [
-      "Tìm quân đứng trước quân có giá trị cao hơn trên cùng đường tấn công."
-    ],
-    "solution": "Quân ở e6 bị ghim vào quân có giá trị cao hơn ở f6. Khai thác đòn ghim để thắng vật chất."
+    "solution": "Trong ván đấu, Đen chơi ...g4+. Hậu e3 ghim Hậu f3 vào Vua h3, nên Trắng không thể đáp Qxg4+. Phương án phân tích. Nếu Trắng bắt tốt bằng Kxg4, Đen chơi ...Bh5+. Sau Kg3 ...Bxf3 Bxf3, Đen mất một tốt và đổi được Tượng lấy Hậu. Nếu Trắng bắt Tượng bằng Kxh5, Đen chiếu hết bằng ...Qg5#.",
+    "goal": "material"
   },
   {
     "title": "Kasparov, Gary — BCF Girls",
@@ -4951,158 +4503,6 @@
       "Tìm quân đứng trước quân có giá trị cao hơn trên cùng đường tấn công."
     ],
     "solution": "Quân ở f4 bị ghim vào quân có giá trị cao hơn ở f5. Khai thác đòn ghim để thắng vật chất."
-  },
-  {
-    "title": "Tal, Mihail — Chiu, Amparan Aquiles",
-    "prompt": "Khai thác đòn ghim để thắng vật chất.",
-    "mode": "interactive",
-    "outcome": "pin",
-    "fen": "r1bqk1r1/pp1pn2p/6pB/1B2Q3/4P3/8/PP3PPP/R4K1R w q - 5 18",
-    "moves": [
-      "Rd1",
-      "a6",
-      "Bc4",
-      "d5",
-      "exd5"
-    ],
-    "alternativeLines": [],
-    "previousMove": {
-      "fen": "r1bqkr2/pp1pn2p/6pB/1B2Q3/4P3/8/PP3PPP/R4K1R b q - 4 17",
-      "move": "Rg8"
-    },
-    "source": "https://www.pgnmentor.com/players/Tal.zip",
-    "gameReference": {
-      "id": "b06d73e03091548b",
-      "kind": "game",
-      "ply": 34,
-      "branch": 0,
-      "collection": "pin"
-    },
-    "difficulty": {
-      "level": "B",
-      "status": "suggested",
-      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
-      "solverMoves": 3,
-      "sacrificeCount": 0
-    },
-    "hints": [
-      "Tìm quân bị ghim vào Vua: quân đó có còn bắt lại hoặc bảo vệ được không?"
-    ],
-    "solution": "Quân ở e7 bị ghim vào Vua nên không thể bắt lại trên ô cần bảo vệ."
-  },
-  {
-    "title": "Shirov,A — Kacheishvili,G",
-    "prompt": "Khai thác đòn ghim để thắng vật chất.",
-    "mode": "interactive",
-    "outcome": "pin",
-    "fen": "1r3r1k/p4pp1/3bp2p/q3N2n/2Pp1B2/5Q2/PP3PP1/1K1RR3 w - - 0 23",
-    "moves": [
-      "Bd2",
-      "Qa3",
-      "b3",
-      "Rxb3+",
-      "axb3"
-    ],
-    "alternativeLines": [],
-    "previousMove": {
-      "fen": "1r3r1k/p4pp1/3bpn1p/q3N2P/2Pp1B2/5Q2/PP3PP1/1K1RR3 b - - 4 22",
-      "move": "Nxh5"
-    },
-    "source": "https://www.pgnmentor.com/players/Shirov.zip",
-    "gameReference": {
-      "id": "b071210843ee2d7d",
-      "kind": "game",
-      "ply": 44,
-      "branch": 0,
-      "collection": "pin"
-    },
-    "difficulty": {
-      "level": "B",
-      "status": "suggested",
-      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
-      "solverMoves": 3,
-      "sacrificeCount": 0
-    },
-    "hints": [
-      "Tìm quân đứng trước quân có giá trị cao hơn trên cùng đường tấn công."
-    ],
-    "solution": "Quân ở b3 bị ghim vào quân có giá trị cao hơn ở a3. Khai thác đòn ghim để thắng vật chất."
-  },
-  {
-    "title": "Shirov,A — Bareev,E",
-    "prompt": "Khai thác đòn ghim để thắng vật chất.",
-    "mode": "interactive",
-    "outcome": "pin",
-    "fen": "1r3r2/pb4pk/1p3b1q/3pNp2/1NpP1P2/5Q1P/PPP5/2KR2R1 w - - 4 26",
-    "moves": [
-      "Nd7",
-      "a5",
-      "Nxf8+",
-      "Rxf8",
-      "Nxd5"
-    ],
-    "alternativeLines": [],
-    "previousMove": {
-      "fen": "1r1b1r2/pb4pk/1p5q/3pNp2/1NpP1P2/5Q1P/PPP5/2KR2R1 b - - 3 25",
-      "move": "Bf6"
-    },
-    "source": "https://www.pgnmentor.com/players/Shirov.zip",
-    "gameReference": {
-      "id": "b1eef7a1b94b94d1",
-      "kind": "game",
-      "ply": 50,
-      "branch": 0,
-      "collection": "pin"
-    },
-    "difficulty": {
-      "level": "B",
-      "status": "suggested",
-      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
-      "solverMoves": 3,
-      "sacrificeCount": 0
-    },
-    "hints": [
-      "Tìm quân đứng trước quân có giá trị cao hơn trên cùng đường tấn công."
-    ],
-    "solution": "Quân ở d5 bị ghim vào quân có giá trị cao hơn ở b7. Khai thác đòn ghim để thắng vật chất."
-  },
-  {
-    "title": "Tal, Mihail — Larsen, Bent",
-    "prompt": "Khai thác đòn ghim để thắng vật chất.",
-    "mode": "interactive",
-    "outcome": "pin",
-    "fen": "2r5/4kp1p/1PBp2p1/3pb3/8/p1p2P2/P1K3PP/4R3 w - - 2 31",
-    "moves": [
-      "b7",
-      "Rb8",
-      "f4",
-      "Ke6",
-      "fxe5"
-    ],
-    "alternativeLines": [],
-    "previousMove": {
-      "fen": "2r5/4kp1p/1PBp1bp1/3p4/8/p1p2P2/P1K3PP/4R3 b - - 1 30",
-      "move": "Be5"
-    },
-    "source": "https://www.pgnmentor.com/players/Tal.zip",
-    "gameReference": {
-      "id": "b2a4fe2d9c0b61cb",
-      "kind": "game",
-      "ply": 60,
-      "branch": 0,
-      "collection": "pin"
-    },
-    "difficulty": {
-      "level": "B",
-      "status": "suggested",
-      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
-      "solverMoves": 3,
-      "sacrificeCount": 0
-    },
-    "hints": [
-      "Tìm quân bị ghim vào Vua: quân đó có còn bắt lại hoặc bảo vệ được không?"
-    ],
-    "solution": "Tăng sức ép và bắt quân bị ghim ở e5."
   },
   {
     "title": "Prado Lobo,Jonas — Shirov,A",
@@ -5181,44 +4581,6 @@
     "solution": "Quân ở g7 bị ghim vào Vua nên không thể bắt lại trên ô cần bảo vệ."
   },
   {
-    "title": "Rodriguez, Daniel Mauricio — Tal, Mihail",
-    "prompt": "Khai thác đòn ghim để thắng vật chất.",
-    "mode": "interactive",
-    "outcome": "pin",
-    "fen": "8/6k1/pb1p2p1/1p1Pqp2/P6p/1PP3nP/3Q1RP1/4B1K1 b - - 0 51",
-    "moves": [
-      "Ne4",
-      "Qe2",
-      "bxa4",
-      "Qxa6",
-      "Nxf2"
-    ],
-    "alternativeLines": [],
-    "previousMove": {
-      "fen": "8/6k1/pb1p2p1/1p1Pqp2/7p/PPP3nP/3Q1RP1/4B1K1 w - - 5 51",
-      "move": "a4"
-    },
-    "source": "https://www.pgnmentor.com/players/Tal.zip",
-    "gameReference": {
-      "id": "b8c9f863c83f1ee1",
-      "kind": "game",
-      "ply": 101,
-      "branch": 0,
-      "collection": "pin"
-    },
-    "difficulty": {
-      "level": "B",
-      "status": "suggested",
-      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
-      "solverMoves": 3,
-      "sacrificeCount": 0
-    },
-    "hints": [
-      "Tìm quân bị ghim vào Vua: quân đó có còn bắt lại hoặc bảo vệ được không?"
-    ],
-    "solution": "Tăng sức ép và bắt quân bị ghim ở f2."
-  },
-  {
     "title": "Firouzja,Alireza — Carlsen,M",
     "prompt": "Khai thác đòn ghim để thắng vật chất.",
     "mode": "interactive",
@@ -5228,10 +4590,52 @@
       "Qh8+",
       "Kf7",
       "Rf1+",
-      "Ke8",
-      "Rxf8+"
+      "Ke7",
+      "Qg7+",
+      "Kd8",
+      "Qxf8+"
     ],
-    "alternativeLines": [],
+    "alternativeLines": [
+      [
+        "Qh8+",
+        "Kf7",
+        "Rf1+",
+        "Ke7",
+        "Qg7+",
+        "Ke8",
+        "Qxf8+"
+      ],
+      [
+        "Qh8+",
+        "Kf7",
+        "Rf1+",
+        "Ke7",
+        "Qg7+",
+        "Qf7",
+        "Qxf7+"
+      ],
+      [
+        "Qh8+",
+        "Kf7",
+        "Rf1+",
+        "Ke8",
+        "Rxf8+"
+      ],
+      [
+        "Qh8+",
+        "Kf7",
+        "Rf1+",
+        "Qf5",
+        "exf5"
+      ],
+      [
+        "Qh8+",
+        "Kf7",
+        "Rf1+",
+        "Qf6",
+        "Rxf6+"
+      ]
+    ],
     "previousMove": {
       "fen": "r4nk1/pp6/3pPqpQ/2p1p3/2P1P3/8/PP2N3/2K4R b - - 0 28",
       "move": "Qxe6"
@@ -5245,54 +4649,18 @@
       "collection": "pin"
     },
     "difficulty": {
-      "level": "B",
+      "level": "D*",
       "status": "suggested",
-      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
-      "solverMoves": 3,
+      "reason": "Sau Qh8+ Kf7 Rf1+, Đen có phương án Ke7. Trắng cần thêm Qg7+ để buộc Đen đáp nước chiếu rồi mới bắt quân an toàn ở nước thứ tư.",
+      "solverMoves": 4,
       "sacrificeCount": 0
     },
     "hints": [
-      "Tìm quân bị ghim vào Vua: quân đó có còn bắt lại hoặc bảo vệ được không?"
+      "Dùng Hậu chiếu từ h8 để giữ Mã f8 trên hàng 8.",
+      "Sau Kf7, đưa Xe sang cột f. Nếu Vua đen sang e7, tìm thêm một nước chiếu trước khi bắt Mã."
     ],
-    "solution": "Tăng sức ép và bắt quân bị ghim ở f8."
-  },
-  {
-    "title": "Shirov,A — Oparin,G",
-    "prompt": "Khai thác đòn ghim để thắng vật chất.",
-    "mode": "interactive",
-    "outcome": "pin",
-    "fen": "5r2/kq1N2p1/3b1p2/PB1P1P2/2Q5/5P2/8/1Kn5 w - - 4 38",
-    "moves": [
-      "a6",
-      "Qc7",
-      "Qd4+",
-      "Bc5",
-      "Nxc5"
-    ],
-    "alternativeLines": [],
-    "previousMove": {
-      "fen": "1k3r2/1q1N2p1/3b1p2/PB1P1P2/2Q5/5P2/8/1Kn5 b - - 3 37",
-      "move": "Ka7"
-    },
-    "source": "https://www.pgnmentor.com/players/Shirov.zip",
-    "gameReference": {
-      "id": "c05e2ea5cf6cbb52",
-      "kind": "game",
-      "ply": 74,
-      "branch": 0,
-      "collection": "pin"
-    },
-    "difficulty": {
-      "level": "B",
-      "status": "suggested",
-      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
-      "solverMoves": 3,
-      "sacrificeCount": 0
-    },
-    "hints": [
-      "Tìm quân bị ghim vào Vua: quân đó có còn bắt lại hoặc bảo vệ được không?"
-    ],
-    "solution": "Tăng sức ép và bắt quân bị ghim ở c5."
+    "solution": "Ván đấu kết thúc sau Qh8+. Phương án phân tích tiếp tục Kf7 Rf1+. Nếu Đen đi Ke7, Trắng chiếu Qg7+ rồi bắt Mã bằng Qxf8+ sau Kd8 hoặc Ke8. Nếu Đen đáp Qf7, Trắng bắt Hậu bằng Qxf7+.",
+    "goal": "material"
   },
   {
     "title": "Tal, Mihail — Dittmann, Sieghart",
@@ -5331,82 +4699,6 @@
       "Tìm quân đứng trước quân có giá trị cao hơn trên cùng đường tấn công."
     ],
     "solution": "Quân ở g4 bị ghim vào quân có giá trị cao hơn ở g5. Khai thác đòn ghim để thắng vật chất."
-  },
-  {
-    "title": "Anderssen, Adolf — Paulsen, Louis",
-    "prompt": "Khai thác đòn ghim để thắng vật chất.",
-    "mode": "interactive",
-    "outcome": "pin",
-    "fen": "4rbk1/3b3p/3p1p2/1p1N1qP1/1P3P2/3Q4/2P5/1K5R w - - 0 35",
-    "moves": [
-      "Nxf6+",
-      "Kf7",
-      "Rxh7+",
-      "Kg6",
-      "Rxd7"
-    ],
-    "alternativeLines": [],
-    "previousMove": {
-      "fen": "4rbk1/3b2pp/3p1N2/1p1N1qP1/1P3P2/3Q4/2P5/1K5R b - - 8 34",
-      "move": "gxf6"
-    },
-    "source": "https://www.pgnmentor.com/players/Anderssen.zip",
-    "gameReference": {
-      "id": "d09194696f1b8414",
-      "kind": "game",
-      "ply": 68,
-      "branch": 0,
-      "collection": "pin"
-    },
-    "difficulty": {
-      "level": "B",
-      "status": "suggested",
-      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
-      "solverMoves": 3,
-      "sacrificeCount": 0
-    },
-    "hints": [
-      "Tìm quân bị ghim vào Vua: quân đó có còn bắt lại hoặc bảo vệ được không?"
-    ],
-    "solution": "Quân ở f5 bị ghim vào Vua nên không thể bắt lại trên ô cần bảo vệ."
-  },
-  {
-    "title": "Keres, Paul — Simagin, Vladimir",
-    "prompt": "Khai thác đòn ghim để thắng vật chất.",
-    "mode": "interactive",
-    "outcome": "pin",
-    "fen": "4R3/ppp2rkp/5r2/2P5/3QBPqP/6P1/PP5K/8 w - - 7 29",
-    "moves": [
-      "Bd5",
-      "Qd7",
-      "Qe5",
-      "b6",
-      "Bxf7"
-    ],
-    "alternativeLines": [],
-    "previousMove": {
-      "fen": "4R3/ppp2rkp/5rq1/2P5/3QBP1P/6P1/PP5K/8 b - - 6 28",
-      "move": "Qg4"
-    },
-    "source": "https://www.pgnmentor.com/players/Keres.zip",
-    "gameReference": {
-      "id": "d6eb20e3fae4878c",
-      "kind": "game",
-      "ply": 56,
-      "branch": 0,
-      "collection": "pin"
-    },
-    "difficulty": {
-      "level": "B",
-      "status": "suggested",
-      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
-      "solverMoves": 3,
-      "sacrificeCount": 0
-    },
-    "hints": [
-      "Tìm quân bị ghim vào Vua: quân đó có còn bắt lại hoặc bảo vệ được không?"
-    ],
-    "solution": "Quân ở f6 bị ghim vào Vua nên không thể bắt lại trên ô cần bảo vệ."
   },
   {
     "title": "Motylev,A — Savchenko,B",
@@ -5495,44 +4787,6 @@
     "solution": "Quân ở e4 bị ghim vào quân có giá trị cao hơn ở e7. Khai thác đòn ghim để thắng vật chất."
   },
   {
-    "title": "Kasparov, Gary — Timman, Jan H",
-    "prompt": "Khai thác đòn ghim để thắng vật chất.",
-    "mode": "interactive",
-    "outcome": "pin",
-    "fen": "r1b1k2r/ppqnbppp/3p1n2/4p1B1/2N5/2N3P1/PP2PPBP/R2Q1RK1 w kq - 7 11",
-    "moves": [
-      "Rc1",
-      "O-O",
-      "Nb5",
-      "Qd8",
-      "Nbxd6"
-    ],
-    "alternativeLines": [],
-    "previousMove": {
-      "fen": "r1bqk2r/pp1nbppp/3p1n2/4p1B1/2N5/2N3P1/PP2PPBP/R2Q1RK1 b kq - 6 10",
-      "move": "Qc7"
-    },
-    "source": "https://www.pgnmentor.com/players/Kasparov.zip",
-    "gameReference": {
-      "id": "dd3aeb1c69820de7",
-      "kind": "game",
-      "ply": 20,
-      "branch": 0,
-      "collection": "pin"
-    },
-    "difficulty": {
-      "level": "B",
-      "status": "suggested",
-      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
-      "solverMoves": 3,
-      "sacrificeCount": 0
-    },
-    "hints": [
-      "Tìm quân đứng trước quân có giá trị cao hơn trên cùng đường tấn công."
-    ],
-    "solution": "Quân ở d6 bị ghim vào quân có giá trị cao hơn ở d7. Khai thác đòn ghim để thắng vật chất."
-  },
-  {
     "title": "Carlsen,M — The World",
     "prompt": "Khai thác đòn ghim để thắng vật chất.",
     "mode": "interactive",
@@ -5542,10 +4796,58 @@
       "Bxc8",
       "Nxc8",
       "Rc1",
-      "Be3",
-      "Rcxc8+"
+      "Rc7",
+      "Rxc5",
+      "Rxc5",
+      "a7",
+      "Ra5",
+      "a8=Q",
+      "Rxa8",
+      "Rxa8"
     ],
-    "alternativeLines": [],
+    "alternativeLines": [
+      [
+        "Bxc8",
+        "Nxc8",
+        "Rc1",
+        "Be3",
+        "Rcxc8+"
+      ],
+      [
+        "Bxc8",
+        "Nxc8",
+        "Rc1",
+        "Bd4",
+        "Rcxc8+"
+      ],
+      [
+        "Bxc8",
+        "Nc6",
+        "Rb5",
+        "Be3",
+        "Bb7"
+      ],
+      [
+        "Bxc8",
+        "Nc6",
+        "Rb5",
+        "Kxc8",
+        "Rxc5"
+      ],
+      [
+        "Bxc8",
+        "Nxc8",
+        "Rc1",
+        "Rc7",
+        "Rxc5",
+        "Rxc5",
+        "a7",
+        "Ra5",
+        "a8=R",
+        "Rxa8",
+        "Rxa8"
+      ]
+    ],
     "previousMove": {
       "fen": "1Rb1k3/r3n2p/P5p1/2b1p3/4P3/5PKB/1P5P/R7 b - - 5 40",
       "move": "Kd8"
@@ -5559,54 +4861,18 @@
       "collection": "pin"
     },
     "difficulty": {
-      "level": "B",
+      "level": "E",
       "status": "suggested",
-      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
-      "solverMoves": 3,
-      "sacrificeCount": 0
+      "reason": "Sau Rc7, Trắng phải thí Xe bằng Rxc5 để mở đường cho tốt a. Xe b8 ghim Mã c8, nên tốt đến a7 an toàn. Trắng cần đến nước thứ sáu mới thu hồi phần đã thí và giữ lợi thế vật chất.",
+      "solverMoves": 6,
+      "sacrificeCount": 1
     },
     "hints": [
-      "Tìm quân bị ghim vào Vua: quân đó có còn bắt lại hoặc bảo vệ được không?"
+      "Sau Bxc8 Nxc8, Xe b8 ghim quân nào vào Vua d8?",
+      "Nếu Đen dùng Rc7 để chặn cột c, hãy tính nước thí Xe ở c5 và đường phong cấp của tốt a."
     ],
-    "solution": "Tăng sức ép và bắt quân bị ghim ở c8."
-  },
-  {
-    "title": "Fuchs, Reinhart — Tal, Mihail",
-    "prompt": "Khai thác đòn ghim để thắng vật chất.",
-    "mode": "interactive",
-    "outcome": "pin",
-    "fen": "r3r3/3nbk1p/pq1pp1p1/1p6/2pNPPn1/2P4P/PP4PK/R1BQ1R2 w - - 0 22",
-    "moves": [
-      "Qxg4",
-      "Bf6",
-      "f5",
-      "exf5",
-      "exf5"
-    ],
-    "alternativeLines": [],
-    "previousMove": {
-      "fen": "r3r3/3nbk1p/pq1ppnp1/1p6/2pNPPB1/2P4P/PP4PK/R1BQ1R2 b - - 1 21",
-      "move": "Nxg4+"
-    },
-    "source": "https://www.pgnmentor.com/players/Tal.zip",
-    "gameReference": {
-      "id": "e412812e6cc81094",
-      "kind": "game",
-      "ply": 42,
-      "branch": 0,
-      "collection": "pin"
-    },
-    "difficulty": {
-      "level": "B",
-      "status": "suggested",
-      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
-      "solverMoves": 3,
-      "sacrificeCount": 0
-    },
-    "hints": [
-      "Tìm quân đứng trước quân có giá trị cao hơn trên cùng đường tấn công."
-    ],
-    "solution": "Quân ở f5 bị ghim vào quân có giá trị cao hơn ở d7. Khai thác đòn ghim để thắng vật chất."
+    "solution": "Trong ván đấu, sau Bxc8 Nxc8 Rc1 Rc7, Trắng thí Xe bằng Rxc5. Đen bắt lại bằng Rxc5 và Trắng đẩy a7. Xe b8 ghim Mã c8 vào Vua d8, nên Mã không thể bắt tốt a7. Ván đấu kết thúc ở a7. Phương án phân tích Ra5 a8=Q Rxa8 Rxa8 cho thấy Trắng thu hồi phần đã thí và giữ lợi thế vật chất.",
+    "goal": "material"
   },
   {
     "title": "Tal, Mihail — Fischer, Robert James",
@@ -5859,42 +5125,6 @@
     "solution": "Quân ở f2 bị ghim vào Vua nên không thể bắt lại trên ô cần bảo vệ."
   },
   {
-    "title": "Keres, Paul — Lipnitsky, Isaak",
-    "prompt": "Khai thác đòn ghim để thắng vật chất.",
-    "mode": "interactive",
-    "outcome": "pin",
-    "fen": "r3r1k1/1ppbq1p1/p2b3p/4np2/3Nn3/P1N3PP/1PQ2PB1/2BRR1K1 w - - 2 21",
-    "moves": [
-      "Nxf5",
-      "Bxf5",
-      "Nxe4"
-    ],
-    "alternativeLines": [],
-    "previousMove": {
-      "fen": "r3r1k1/1ppbq1p1/p2b2np/5p2/3Nn3/P1N3PP/1PQ2PB1/2BRR1K1 b - - 1 20",
-      "move": "Ne5"
-    },
-    "source": "https://www.pgnmentor.com/players/Keres.zip",
-    "gameReference": {
-      "id": "58343427c0a43564",
-      "kind": "game",
-      "ply": 40,
-      "branch": 0,
-      "collection": "pin"
-    },
-    "difficulty": {
-      "level": "C",
-      "status": "suggested",
-      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
-      "solverMoves": 2,
-      "sacrificeCount": 1
-    },
-    "hints": [
-      "Tìm quân đứng trước quân có giá trị cao hơn trên cùng đường tấn công."
-    ],
-    "solution": "Quân ở e4 bị ghim vào quân có giá trị cao hơn ở f5. Khai thác đòn ghim để thắng vật chất."
-  },
-  {
     "title": "Brodsky,M — Shirov,A",
     "prompt": "Khai thác đòn ghim để thắng vật chất.",
     "mode": "interactive",
@@ -5965,42 +5195,6 @@
       "Tìm quân bị ghim vào Vua: quân đó có còn bắt lại hoặc bảo vệ được không?"
     ],
     "solution": "Quân ở e5 bị ghim vào Vua nên không thể bắt lại trên ô cần bảo vệ."
-  },
-  {
-    "title": "Shirov,A — Badacsonyi,Stanley",
-    "prompt": "Khai thác đòn ghim để thắng vật chất.",
-    "mode": "interactive",
-    "outcome": "pin",
-    "fen": "3r2r1/k2b1R1p/pq2p1p1/1p1pP3/3n2B1/2N3Q1/PP4PP/3R3K w - - 0 24",
-    "moves": [
-      "Nxd5",
-      "exd5",
-      "Bxd7"
-    ],
-    "alternativeLines": [],
-    "previousMove": {
-      "fen": "3r2r1/k2b1R1p/pqn1p1p1/1p1pP3/3P2B1/2N3Q1/PP4PP/3R3K b - - 3 23",
-      "move": "Nxd4"
-    },
-    "source": "https://www.pgnmentor.com/players/Shirov.zip",
-    "gameReference": {
-      "id": "5dc3c64e1abb088f",
-      "kind": "game",
-      "ply": 46,
-      "branch": 0,
-      "collection": "pin"
-    },
-    "difficulty": {
-      "level": "C",
-      "status": "suggested",
-      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
-      "solverMoves": 2,
-      "sacrificeCount": 1
-    },
-    "hints": [
-      "Tìm quân bị ghim vào Vua: quân đó có còn bắt lại hoặc bảo vệ được không?"
-    ],
-    "solution": "Tăng sức ép và bắt quân bị ghim ở d7."
   },
   {
     "title": "Rodriguez Vila,A — Ivanchuk,V",
@@ -6329,82 +5523,6 @@
     "solution": "Quân ở f7 bị ghim vào Vua nên không thể bắt lại trên ô cần bảo vệ."
   },
   {
-    "title": "Anderssen, Adolf — Dubois, Serafino",
-    "prompt": "Khai thác đòn ghim để thắng vật chất.",
-    "mode": "interactive",
-    "outcome": "pin",
-    "fen": "5r2/PQ1n4/1p2pk1b/1Pp4p/2P2q1P/2nB1Np1/1B1R2p1/2K5 b - - 3 46",
-    "moves": [
-      "Qxd2+",
-      "Nxd2",
-      "g1=Q+",
-      "Bf1",
-      "Qxf1+"
-    ],
-    "alternativeLines": [],
-    "previousMove": {
-      "fen": "5r2/PQ1n4/1p2pk1b/1Pp4p/2P2q1P/B1nB1Np1/3R2p1/2K5 w - - 2 46",
-      "move": "Bb2"
-    },
-    "source": "https://www.pgnmentor.com/players/Anderssen.zip",
-    "gameReference": {
-      "id": "1d83cd4ab90f0407",
-      "kind": "game",
-      "ply": 91,
-      "branch": 0,
-      "collection": "pin"
-    },
-    "difficulty": {
-      "level": "C",
-      "status": "suggested",
-      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
-      "solverMoves": 3,
-      "sacrificeCount": 1
-    },
-    "hints": [
-      "Tìm quân bị ghim vào Vua: quân đó có còn bắt lại hoặc bảo vệ được không?"
-    ],
-    "solution": "Quân ở d2 bị ghim vào Vua nên không thể bắt lại trên ô cần bảo vệ."
-  },
-  {
-    "title": "Ivanchuk,V — Deac,Bogdan-Daniel",
-    "prompt": "Khai thác đòn ghim để thắng vật chất.",
-    "mode": "interactive",
-    "outcome": "pin",
-    "fen": "3r4/p1pnq1pk/2p2p1p/1p2PP1b/6N1/P1B3Q1/1P4P1/1K2R3 b - - 0 34",
-    "moves": [
-      "Bxg4",
-      "Qxg4",
-      "Nxe5",
-      "Bxe5",
-      "fxe5"
-    ],
-    "alternativeLines": [],
-    "previousMove": {
-      "fen": "3r4/p1pnq1pk/2p2p1p/1p3P1b/4P1N1/P1B3Q1/1P4P1/1K2R3 w - - 0 34",
-      "move": "e5"
-    },
-    "source": "https://www.pgnmentor.com/players/Ivanchuk.zip",
-    "gameReference": {
-      "id": "40877d4d6cba5938",
-      "kind": "game",
-      "ply": 67,
-      "branch": 0,
-      "collection": "pin"
-    },
-    "difficulty": {
-      "level": "C",
-      "status": "suggested",
-      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
-      "solverMoves": 3,
-      "sacrificeCount": 1
-    },
-    "hints": [
-      "Tìm quân đứng trước quân có giá trị cao hơn trên cùng đường tấn công."
-    ],
-    "solution": "Quân ở e5 bị ghim vào quân có giá trị cao hơn ở e1. Khai thác đòn ghim để thắng vật chất."
-  },
-  {
     "title": "Aizpurua,Patrick Emilio — Ivanchuk,V",
     "prompt": "Khai thác đòn ghim để thắng vật chất.",
     "mode": "interactive",
@@ -6450,12 +5568,40 @@
     "fen": "6rk/Bpq4p/2bnR2P/3p2p1/5rP1/2NB4/PP1Q1PK1/8 w - - 1 30",
     "moves": [
       "Qxf4",
+      "d4+",
+      "Kg1",
       "gxf4",
-      "Bd4+",
+      "Bxd4+",
       "Rg7",
       "hxg7+"
     ],
-    "alternativeLines": [],
+    "alternativeLines": [
+      [
+        "Qxf4",
+        "d4+",
+        "Kg1",
+        "gxf4",
+        "Bxd4+",
+        "Qg7",
+        "hxg7+"
+      ],
+      [
+        "Qxf4",
+        "gxf4",
+        "Bd4+",
+        "Rg7",
+        "hxg7+"
+      ],
+      [
+        "Qxf4",
+        "gxf4",
+        "Bd4+",
+        "Rg7",
+        "hxg7+",
+        "Qxg7",
+        "Bxg7+"
+      ]
+    ],
     "previousMove": {
       "fen": "4b1rk/Bpq4p/3nR2P/3p2p1/5rP1/2NB4/PP1Q1PK1/8 b - - 0 29",
       "move": "Bc6"
@@ -6469,16 +5615,18 @@
       "collection": "pin"
     },
     "difficulty": {
-      "level": "C",
+      "level": "D",
       "status": "suggested",
-      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
-      "solverMoves": 3,
+      "reason": "Đen chen nước chiếu ...d4+ trước khi bắt Hậu. Trắng phải tránh chiếu rồi mới dùng Tượng ghim Xe g7. Tốt h6 bắt Xe ở nước thứ tư của Trắng.",
+      "solverMoves": 4,
       "sacrificeCount": 1
     },
     "hints": [
-      "Tìm quân bị ghim vào Vua: quân đó có còn bắt lại hoặc bảo vệ được không?"
+      "Sau Qxf4, hãy tính nước chiếu ...d4+ trước khi Đen bắt Hậu.",
+      "Tượng có thể chiếu trên đường chéo nào để buộc Đen đưa quân vào ô g7, nơi tốt h6 đang khống chế?"
     ],
-    "solution": "Tăng sức ép và bắt quân bị ghim ở g7."
+    "solution": "Trong ván đấu, Trắng chơi Qxf4. Đen chen nước chiếu ...d4+ rồi bắt Hậu bằng ...gxf4 sau Kg1. Trắng chiếu Bxd4+ và Đen đưa Xe đến g7 để chắn. Tượng d4 ghim Xe g7 vào Vua h8, nên tốt h6 bắt Xe bằng hxg7+ và Trắng vượt lên về vật chất. Phương án phân tích. Nếu Đen bắt lại bằng ...Qxg7, Trắng có Bxg7+. Nếu Đen chắn bằng Hậu với ...Qg7 ngay sau Bxd4+, Trắng cũng chơi hxg7+. Nếu Đen bắt Hậu ngay bằng ...gxf4, Trắng tiếp tục Bd4+ Rg7 hxg7+. Sau ...Qxg7, Bxg7+ thu hồi thêm vật chất.",
+    "goal": "material"
   },
   {
     "title": "Tseshkovsky, Vitaly — Kasparov, Gary",
@@ -6981,44 +6129,6 @@
       "Tìm quân đứng trước quân có giá trị cao hơn trên cùng đường tấn công."
     ],
     "solution": "Quân ở f5 bị ghim vào quân có giá trị cao hơn ở f6. Khai thác đòn ghim để thắng vật chất."
-  },
-  {
-    "title": "Geller, Efim P — Keres, Paul",
-    "prompt": "Khai thác đòn ghim để thắng vật chất.",
-    "mode": "interactive",
-    "outcome": "pin",
-    "fen": "3r3r/1kpqnpp1/pp6/7p/3p3P/2R1P1N1/PP1Q1PP1/2R3K1 w - - 0 20",
-    "moves": [
-      "Rxc7+",
-      "Qxc7",
-      "Rxc7+",
-      "Kxc7",
-      "exd4"
-    ],
-    "alternativeLines": [],
-    "previousMove": {
-      "fen": "3r3r/1kpqnpp1/pp6/4p2p/3P3P/2R1P1N1/PP1Q1PP1/2R3K1 b - - 1 19",
-      "move": "exd4"
-    },
-    "source": "https://www.pgnmentor.com/players/Keres.zip",
-    "gameReference": {
-      "id": "df92b649d0b8773d",
-      "kind": "game",
-      "ply": 38,
-      "branch": 0,
-      "collection": "pin"
-    },
-    "difficulty": {
-      "level": "C",
-      "status": "suggested",
-      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
-      "solverMoves": 3,
-      "sacrificeCount": 1
-    },
-    "hints": [
-      "Tìm quân đứng trước quân có giá trị cao hơn trên cùng đường tấn công."
-    ],
-    "solution": "Quân ở d4 bị ghim vào quân có giá trị cao hơn ở d8. Khai thác đòn ghim để thắng vật chất."
   },
   {
     "title": "Shirov,A — Adly,A",
@@ -10807,5 +9917,3239 @@
       "Tìm quân bị ghim vào Vua: quân đó có còn bắt lại hoặc bảo vệ được không?"
     ],
     "solution": "Quân ở g6 bị ghim vào Vua nên không thể bắt lại trên ô cần bảo vệ."
+  },
+  {
+    "title": "Schnaider,Ilan — Faryma,Maksym",
+    "prompt": "Tạo đòn ghim để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "pin",
+    "goal": "material",
+    "fen": "5k2/4rP1R/8/7p/1K1B4/2P2b2/8/8 w - - 1 62",
+    "moves": [
+      "Bc5"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "5k2/5P1R/4r3/7p/1K1B4/2P2b2/8/8 b - - 0 61",
+      "move": "Re7"
+    },
+    "source": "https://theweekinchess.com/zips/twic1668g.zip",
+    "gameReference": {
+      "id": "cfc1da0ffbfa08d8",
+      "kind": "game",
+      "ply": 122,
+      "branch": 0,
+      "collection": "pin"
+    },
+    "hints": [
+      "Quan sát đường chéo đi qua Xe e7 và Vua f8.",
+      "Tượng Trắng có thể đến ô nào trên đường chéo đó?"
+    ],
+    "solution": "Bc5 — Tượng từ d4 đến c5, ghim Xe e7 vào Vua f8. Chẳng hạn, sau …Be2, Trắng chơi Bxe7+. Nếu …Kxe7, Trắng đã đổi Tượng lấy Xe.",
+    "beginner": true
+  },
+  {
+    "title": "Daurelle,H — De La Tullaye,Amaury",
+    "prompt": "Khai thác đòn ghim để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "pin",
+    "goal": "material",
+    "fen": "r2qk2r/pp1bbppp/2n2n2/1Bpp4/3P4/5N2/PPPN1PPP/R1BQR1K1 w kq - 4 9",
+    "moves": [
+      "dxc5"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "r2qkb1r/pp1b1ppp/2n2n2/1Bpp4/3P4/5N2/PPPN1PPP/R1BQR1K1 b kq - 3 8",
+      "move": "Be7"
+    },
+    "source": "https://theweekinchess.com/zips/twic1657g.zip",
+    "gameReference": {
+      "id": "0cfc1677e92262f5",
+      "kind": "game",
+      "ply": 16,
+      "branch": 0,
+      "collection": "pin"
+    },
+    "hints": [
+      "Xe trắng e1 và Vua đen e8 nằm trên cùng một cột.",
+      "Tượng e7 có thể rời cột e để bắt ở c5 không?"
+    ],
+    "solution": "dxc5 — Tốt từ d4 bắt tốt ở c5. Tượng đen e7 không thể bắt lại ở c5 vì sẽ mở cột e cho Xe trắng e1 chiếu Vua e8. Nếu Đen nhập thành, Nb3 đưa Mã tới b3 để bảo vệ tốt c5.",
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "solverMoves": 1,
+      "sacrificeCount": 0,
+      "reason": "Bắt quân trực tiếp khi quân bảo vệ bị ghim vào Vua."
+    }
+  },
+  {
+    "title": "Akobian,V — Boyer,Mahel",
+    "prompt": "Khai thác đòn ghim để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "pin",
+    "goal": "material",
+    "fen": "7k/p7/3N1n2/3P4/1P1Bp3/8/1PK5/5r2 w - - 0 41",
+    "moves": [
+      "Nxe4"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "6kR/p7/3N1n2/3P4/1P1Bp3/8/1PK5/5r2 b - - 0 40",
+      "move": "Kxh8"
+    },
+    "source": "https://www.pgnmentor.com/players/Akobian.zip",
+    "gameReference": {
+      "id": "4928a7e02ac06872",
+      "kind": "game",
+      "ply": 80,
+      "branch": 0,
+      "collection": "pin"
+    },
+    "hints": [
+      "Mã Đen ở f6 đang che đường chéo nào dẫn đến Vua h8?",
+      "Xem Mã Trắng ở d6 có thể bắt tốt nào mà Mã f6 đang bảo vệ."
+    ],
+    "solution": "Nxe4 — Mã từ d6 bắt tốt e4. Tượng d4 ghim Mã f6 vào Vua h8, nên Mã Đen không thể bắt lại ở e4. Nếu Đen đi Kg7 để tháo ghim, Trắng có thể bắt Mã bằng Nxf6.",
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "solverMoves": 1,
+      "sacrificeCount": 0,
+      "reason": "Bắt quân trực tiếp khi quân bảo vệ bị ghim vào Vua."
+    }
+  },
+  {
+    "title": "Sabria Batlle,P — Yang,Bohan (Henry)",
+    "prompt": "Khai thác đòn ghim để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "pin",
+    "goal": "material",
+    "fen": "4r3/5k2/p1nPp3/1p3p2/6P1/1BP3K1/P7/4R3 w - - 0 42",
+    "moves": [
+      "gxf5"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "4r3/5k2/p1nPp1p1/1p3P2/6P1/1BP3K1/P7/4R3 b - - 0 41",
+      "move": "gxf5"
+    },
+    "source": "https://theweekinchess.com/zips/twic1663g.zip",
+    "gameReference": {
+      "id": "baaed4a0f0dced28",
+      "kind": "game",
+      "ply": 82,
+      "branch": 0,
+      "collection": "pin"
+    },
+    "hints": [
+      "Tốt nào của Đen đang bảo vệ f5?",
+      "Xem Tượng b3 đang ghim quân nào trên đường chéo đến f7."
+    ],
+    "solution": "gxf5 — Tốt Trắng từ g4 bắt Tốt f5. Tượng b3 ghim Tốt e6 vào Vua f7, nên Đen không thể đáp …exf5. Trắng thắng một Tốt.",
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "solverMoves": 1,
+      "sacrificeCount": 0,
+      "reason": "Bắt quân trực tiếp khi quân bảo vệ bị ghim vào Vua."
+    }
+  },
+  {
+    "title": "Sjugirov,S — Aliyev,Ravan",
+    "prompt": "Khai thác đòn ghim để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "pin",
+    "goal": "material",
+    "fen": "8/6k1/2q2p2/6Pp/5R2/4PNP1/5PK1/8 b - - 0 48",
+    "moves": [
+      "fxg5"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "8/6k1/2q2p2/6pp/5R1P/4PNP1/5PK1/8 w - - 0 48",
+      "move": "hxg5"
+    },
+    "source": "https://theweekinchess.com/zips/twic1648g.zip",
+    "gameReference": {
+      "id": "d8e31b4c6fd3db66",
+      "kind": "game",
+      "ply": 95,
+      "branch": 0,
+      "collection": "pin"
+    },
+    "hints": [
+      "Nhìn đường chéo c6–d5–e4–f3–g2.",
+      "Quân nào của Trắng đang bảo vệ ô g5?"
+    ],
+    "solution": "fxg5 — Tốt đen từ f6 bắt tốt ở g5. Mã trắng f3 không thể bắt lại ở g5 vì Hậu đen c6 sẽ chiếu Vua g2. Nếu Trắng chơi Rf5, Đen đẩy tốt g4. Sau Rxh5, Đen có gxf3+ và thắng Mã.",
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "solverMoves": 1,
+      "sacrificeCount": 0,
+      "reason": "Bắt quân trực tiếp khi quân bảo vệ bị ghim vào Vua."
+    }
+  },
+  {
+    "title": "Schmidt,Florian Pascal — Strehse,Nelson",
+    "prompt": "Khai thác đòn ghim để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "pin",
+    "goal": "material",
+    "fen": "4r1k1/3r2pp/5b2/p1P5/Pp1P4/1P1K4/7P/5RR1 w - - 0 42",
+    "moves": [
+      "Rxf6"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "3br1k1/3r2pp/5N2/p1P5/Pp1P4/1P1K4/7P/5RR1 b - - 2 41",
+      "move": "Bxf6"
+    },
+    "source": "https://theweekinchess.com/zips/twic1657g.zip",
+    "gameReference": {
+      "id": "f203d080397d92fc",
+      "kind": "game",
+      "ply": 82,
+      "branch": 0,
+      "collection": "pin"
+    },
+    "hints": [
+      "Quan sát Xe g1, tốt g7 và Vua g8 trên cột g.",
+      "Xe nào có thể bắt Tượng f6 mà tốt g7 không thể bắt lại?"
+    ],
+    "solution": "Rxf6 — Xe từ f1 bắt Tượng ở f6. Xe g1 ghim tốt g7 vào Vua g8, nên Đen không thể đáp ...gxf6. Nếu Đen phản công bằng ...Rxd4+, Trắng đáp Kxd4 và giữ phần vật chất vừa thắng.",
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "solverMoves": 1,
+      "sacrificeCount": 0,
+      "reason": "Bắt quân trực tiếp khi quân bảo vệ bị ghim vào Vua."
+    }
+  },
+  {
+    "title": "Anton Guijarro,D — Gubajdullin,A",
+    "prompt": "Khai thác đòn ghim để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "pin",
+    "goal": "material",
+    "fen": "2Q2bk1/5p2/4p2p/3n2pP/8/p7/1P3PP1/1K6 w - - 0 38",
+    "moves": [
+      "bxa3"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "2Q2bk1/5p2/4p2p/3n2pP/Pp6/8/1P3PP1/1K6 b - a3 0 37",
+      "move": "bxa3"
+    },
+    "source": "https://theweekinchess.com/zips/twic1665g.zip",
+    "gameReference": {
+      "id": "804560f166fb9018",
+      "kind": "game",
+      "ply": 74,
+      "branch": 0,
+      "collection": "pin"
+    },
+    "hints": [
+      "Nhìn dọc hàng 8 từ Hậu c8 đến Vua g8.",
+      "Nếu Tượng f8 rời hàng 8 để bắt ở a3, quân nào sẽ chiếu Vua Đen?"
+    ],
+    "solution": "bxa3 — Tốt Trắng từ b2 bắt tốt a3. Hậu c8 ghim Tượng f8 vào Vua g8, nên Tượng Đen không thể bắt lại ở a3.",
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "solverMoves": 1,
+      "sacrificeCount": 0,
+      "reason": "Bắt quân trực tiếp khi quân bảo vệ bị ghim vào Vua."
+    }
+  },
+  {
+    "title": "Ganiev,Artur — Gurevich,Neria",
+    "prompt": "Khai thác đòn ghim để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "pin",
+    "goal": "material",
+    "fen": "r4q2/4p1kp/p1p2rp1/1p2Q3/4B3/2N5/PPP2P1P/1K5R w - - 0 22",
+    "moves": [
+      "Bxc6"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "r4q2/2p1p1kp/p4rp1/1p2Q3/4B3/2N5/PPP2P1P/1K5R b - - 0 21",
+      "move": "c6"
+    },
+    "source": "https://theweekinchess.com/zips/twic1661g.zip",
+    "gameReference": {
+      "id": "ce1e36921969f2d5",
+      "kind": "game",
+      "ply": 42,
+      "branch": 0,
+      "collection": "pin"
+    },
+    "hints": [
+      "Xe f6 có vẻ đang bảo vệ Tốt c6.",
+      "Nếu Xe rời f6 để bắt lại, quân nào sẽ chiếu Vua g7?"
+    ],
+    "solution": "Bxc6 — Tượng từ e4 bắt Tốt c6. Hậu e5 ghim Xe f6 vào Vua g7, nên Đen không thể đáp …Rxc6. Trắng thắng một Tốt.",
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "solverMoves": 1,
+      "sacrificeCount": 0,
+      "reason": "Bắt quân trực tiếp khi quân bảo vệ bị ghim vào Vua."
+    }
+  },
+  {
+    "title": "Kamalsyah,Muhammad — Muzis,Renars",
+    "prompt": "Khai thác đòn ghim để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "pin",
+    "goal": "material",
+    "fen": "2k1rbnr/ppq3pp/2n1p3/3pp3/8/1NP3PB/P3PP1P/R1BQ1RK1 w - - 2 13",
+    "moves": [
+      "Qxd5"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "2kr1bnr/ppq3pp/2n1p3/3pp3/8/1NP3PB/P3PP1P/R1BQ1RK1 b - - 1 12",
+      "move": "Re8"
+    },
+    "source": "https://theweekinchess.com/zips/twic1665g.zip",
+    "gameReference": {
+      "id": "0decb450c568582e",
+      "kind": "game",
+      "ply": 24,
+      "branch": 0,
+      "collection": "pin"
+    },
+    "hints": [
+      "Tìm đường chéo từ Tượng h3 đến Vua c8.",
+      "Xét tốt nào đang bảo vệ d5 và liệu nó có thể rời đường chéo đang che Vua hay không."
+    ],
+    "solution": "Qxd5 — Hậu từ d1 bắt tốt d5. Tượng h3 ghim tốt e6 vào Vua c8, nên Đen không thể đáp exd5. Nếu Đen đi Nf6 tấn công Hậu, Trắng có thể giữ tốt đã thắng bằng Qc4.",
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "solverMoves": 1,
+      "sacrificeCount": 0,
+      "reason": "Bắt quân trực tiếp khi quân bảo vệ bị ghim vào Vua."
+    }
+  },
+  {
+    "title": "Razafindratsima,Timothe — Manukyan,SaA",
+    "prompt": "Khai thác đòn ghim để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "pin",
+    "goal": "material",
+    "fen": "3r3k/4r1pp/2R3b1/6P1/3P1P2/q3P2R/3Q1KB1/8 w - - 19 43",
+    "moves": [
+      "Rxg6"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "3r3k/4r1pp/2Rq2b1/6P1/3P1P2/4P2R/3Q1KB1/8 b - - 18 42",
+      "move": "Qa3"
+    },
+    "source": "https://theweekinchess.com/zips/twic1667g.zip",
+    "gameReference": {
+      "id": "4fb7cc6e7b1214f4",
+      "kind": "game",
+      "ply": 84,
+      "branch": 0,
+      "collection": "pin"
+    },
+    "hints": [
+      "Xem Xe h3 đang ghim quân nào trước Vua đen.",
+      "Xe c6 có thể bắt Tượng g6 nếu tốt h7 không thể bắt lại."
+    ],
+    "solution": "Rxg6 — Xe trắng từ c6 bắt Tượng ở g6. Tốt đen h7 không thể bắt lại vì rời cột h sẽ để Xe h3 chiếu Vua h8. Nếu Đen dùng Xe bắt tốt ở d4, Hậu trắng bắt lại bằng Qxd4.",
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "solverMoves": 1,
+      "sacrificeCount": 0,
+      "reason": "Bắt quân trực tiếp khi quân bảo vệ bị ghim vào Vua."
+    }
+  },
+  {
+    "title": "Gyenes,Mate — Shirov,A",
+    "prompt": "Khai thác đòn ghim để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "pin",
+    "goal": "material",
+    "fen": "2R5/p4rpk/4K2p/4B3/5PP1/8/4r3/8 b - - 9 37",
+    "moves": [
+      "Rxf4"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "2R5/p4rpk/7p/4BK2/5PP1/8/4r3/8 w - - 8 37",
+      "move": "Ke6"
+    },
+    "source": "https://www.pgnmentor.com/players/Shirov.zip",
+    "gameReference": {
+      "id": "ff8af84a238af293",
+      "kind": "game",
+      "ply": 73,
+      "branch": 0,
+      "collection": "pin"
+    },
+    "hints": [
+      "Xe f7 đang bị Vua Trắng tấn công. Tìm một ô có thể bắt quân khi đưa Xe ra khỏi f7.",
+      "Hãy kiểm tra đường e2–e6 trước khi xét Tượng e5 có thể bắt lại."
+    ],
+    "solution": "Rxf4 — Xe từ f7 bắt tốt f4 và tránh bị Vua Trắng bắt ở f7. Tượng e5 bị Xe e2 ghim vào Vua e6, nên Trắng không thể đáp Bxf4.",
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "solverMoves": 1,
+      "sacrificeCount": 0,
+      "reason": "Bắt quân trực tiếp khi quân bảo vệ bị ghim vào Vua."
+    }
+  },
+  {
+    "title": "Stefansson,Vignir Vatnar — Preman,Nathan",
+    "prompt": "Tạo đòn ghim để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "pin",
+    "goal": "material",
+    "fen": "8/8/1b2k2p/R2p4/K5P1/8/6P1/8 w - - 0 46",
+    "moves": [
+      "Ra6"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "8/8/1P2k2p/R2p4/K2b2P1/8/6P1/8 b - - 0 45",
+      "move": "Bxb6"
+    },
+    "source": "https://theweekinchess.com/zips/twic1666g.zip",
+    "gameReference": {
+      "id": "ce39985349e44a20",
+      "kind": "game",
+      "ply": 90,
+      "branch": 0,
+      "collection": "pin"
+    },
+    "hints": [
+      "Tượng b6 đang tấn công Xe a5.",
+      "Tìm ô để Xe vừa tránh bị bắt vừa ghim Tượng vào Vua e6."
+    ],
+    "solution": "Ra6 — Xe từ a5 đến a6, vừa thoát khỏi đòn tấn công của Tượng vừa ghim Tượng b6 vào Vua e6. Ví dụ, nếu …d4, Trắng bắt Tượng bằng Rxb6+.",
+    "beginner": true
+  },
+  {
+    "title": "Klimkowski,Jan — Grot,Blazej",
+    "prompt": "Tạo đòn ghim để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "pin",
+    "goal": "material",
+    "fen": "8/2p1k3/1p3n2/3PK2p/5B1P/1P6/8/8 w - - 5 58",
+    "moves": [
+      "Bg5"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "8/2pk4/1p3n2/3PK2p/5B1P/1P6/8/8 b - - 4 57",
+      "move": "Ke7"
+    },
+    "source": "https://theweekinchess.com/zips/twic1664g.zip",
+    "gameReference": {
+      "id": "8f8d3a225b74b875",
+      "kind": "game",
+      "ply": 114,
+      "branch": 0,
+      "collection": "pin"
+    },
+    "hints": [
+      "Nhìn hai ô f6 và e7 trên cùng một đường chéo.",
+      "Tượng có thể chuyển sang ô nào để tấn công Mã qua đường chéo đó?"
+    ],
+    "solution": "Bg5 — Tượng trắng từ f4 đến g5, ghim Mã f6 vào Vua e7. Mã không thể nhảy ra khỏi đường chéo để thoát. Chẳng hạn, sau Ke8 (Vua đen về e8), Bxf6 bắt Mã an toàn.",
+    "beginner": true
+  },
+  {
+    "title": "Samdanov,S — Baturin-Vinogradov,Miroslav",
+    "prompt": "Tạo đòn ghim để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "pin",
+    "goal": "material",
+    "fen": "8/B1p5/4b3/8/5k2/4N2p/5K1P/8 w - - 4 55",
+    "moves": [
+      "Bb8"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "8/B1p2b2/8/8/5k2/4N2p/5K1P/8 b - - 3 54",
+      "move": "Be6"
+    },
+    "source": "https://theweekinchess.com/zips/twic1653g.zip",
+    "gameReference": {
+      "id": "e204e5276a7abdba",
+      "kind": "game",
+      "ply": 108,
+      "branch": 0,
+      "collection": "pin"
+    },
+    "hints": [
+      "Tìm đường chéo đi qua tốt c7 và Vua f4.",
+      "Đưa Tượng lên đường chéo đó để tốt c7 không thể tiến."
+    ],
+    "solution": "Bb8 — Tượng từ a7 đến b8, ghim tốt c7 vào Vua f4. Tốt không thể đi c6 hoặc c5 khi Vua còn trên đường chéo này. Chẳng hạn, sau ...Bd7, Trắng bắt tốt bằng Bxc7+.",
+    "beginner": true
+  },
+  {
+    "title": "Pijpers,A — Vinke,Maarten",
+    "prompt": "Tạo đòn ghim để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "pin",
+    "goal": "material",
+    "fen": "3k4/1p6/4p3/p5r1/8/1P2K1B1/P7/8 w - - 0 42",
+    "moves": [
+      "Bh4"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "3k4/1p6/4p3/pr4R1/8/1P2K1B1/P7/8 b - - 0 41",
+      "move": "Rxg5"
+    },
+    "source": "https://theweekinchess.com/zips/twic1654g.zip",
+    "gameReference": {
+      "id": "fa4a2965133badab",
+      "kind": "game",
+      "ply": 82,
+      "branch": 0,
+      "collection": "pin"
+    },
+    "hints": [
+      "Tìm đường chéo đi qua cả Xe g5 và Vua d8.",
+      "Tượng Trắng có thể đứng ở đầu đường chéo nào để giữ Xe Đen tại g5?"
+    ],
+    "solution": "Bh4 — Tượng từ g3 đến h4, ghim Xe g5 vào Vua d8. Xe không thể rời đường chéo đang che Vua. Chẳng hạn, nếu Đen đi Kd7, Trắng bắt Xe bằng Bxg5.",
+    "beginner": true
+  },
+  {
+    "title": "Sierra Vallina,Lionel — Nainys,Zanas",
+    "prompt": "Tạo đòn ghim để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "pin",
+    "goal": "material",
+    "fen": "8/B7/p3rp2/1b1k4/3P4/1R6/8/3K4 b - - 16 57",
+    "moves": [
+      "Ba4"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "8/8/pB2rp2/1b1k4/3P4/1R6/8/3K4 w - - 15 57",
+      "move": "Ba7"
+    },
+    "source": "https://theweekinchess.com/zips/twic1667g.zip",
+    "gameReference": {
+      "id": "daa80783925e077c",
+      "kind": "game",
+      "ply": 113,
+      "branch": 0,
+      "collection": "pin"
+    },
+    "hints": [
+      "Tìm đường chéo đi qua Xe b3 và Vua d1.",
+      "Tượng Đen có thể đứng ở đâu để chặn đường thoát của Xe?"
+    ],
+    "solution": "Ba4 — Tượng Đen từ b5 đến a4, ghim Xe b3 vào Vua d1. Nếu Trắng chơi Kc2, Đen vẫn có Bxb3+ Kxb3 và đổi được Tượng lấy Xe.",
+    "beginner": true
+  },
+  {
+    "title": "Kocharin,Timur — Potapova,Margarita",
+    "prompt": "Tạo đòn ghim để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "pin",
+    "goal": "material",
+    "fen": "8/2k5/7P/1p2r3/4p3/4B3/4K3/8 w - - 0 45",
+    "moves": [
+      "Bf4"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "8/2k5/7P/1p1rR3/4p3/4B3/4K3/8 b - - 0 44",
+      "move": "Rxe5"
+    },
+    "source": "https://theweekinchess.com/zips/twic1664g.zip",
+    "gameReference": {
+      "id": "75a25cae9e1880eb",
+      "kind": "game",
+      "ply": 88,
+      "branch": 0,
+      "collection": "pin"
+    },
+    "hints": [
+      "Nếu Xe e5 được đi sang h5, tốt h6 sẽ bị đe dọa.",
+      "Tìm đường chéo đi qua Xe e5 và Vua c7."
+    ],
+    "solution": "Bf4 — Tượng từ e3 đến f4, ghim Xe e5 vào Vua c7. Nếu Đen đưa Vua tới d6, Trắng vẫn có Bxe5+ Kxe5, đổi Tượng lấy Xe.",
+    "beginner": true
+  },
+  {
+    "title": "Vazelakis,D — Ros Eskisabel,J",
+    "prompt": "Tạo đòn ghim để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "pin",
+    "goal": "material",
+    "fen": "8/1p1k2p1/2p4p/8/2b1R1P1/7P/6K1/8 b - - 0 40",
+    "moves": [
+      "Bd5"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "8/1p1k2p1/2p4p/8/2b1R1P1/7P/6r1/6K1 w - - 0 40",
+      "move": "Kxg2"
+    },
+    "source": "https://theweekinchess.com/zips/twic1658g.zip",
+    "gameReference": {
+      "id": "39686901f584f920",
+      "kind": "game",
+      "ply": 79,
+      "branch": 0,
+      "collection": "pin"
+    },
+    "hints": [
+      "Quan sát đường chéo nối Xe e4 và Vua g2.",
+      "Nếu Vua Trắng tiến đến f3, Đen còn thắng vật chất bằng cách nào?"
+    ],
+    "solution": "Bd5 — Tượng Đen từ c4 đến d5, ghim Xe e4 vào Vua g2. Nếu Trắng chơi Kf3, Đen có Bxe4+ Kxe4 và đổi được Tượng lấy Xe.",
+    "beginner": true
+  },
+  {
+    "title": "Altini,N — Hnatyshyn,Anastasiia",
+    "prompt": "Tạo đòn ghim để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "pin",
+    "goal": "material",
+    "fen": "2Q5/8/5rp1/4p1k1/4P3/8/8/6K1 w - - 1 61",
+    "moves": [
+      "Qd8"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "2Q5/8/4r1p1/4p1k1/4P3/8/8/6K1 b - - 0 60",
+      "move": "Rf6"
+    },
+    "source": "https://theweekinchess.com/zips/twic1661g.zip",
+    "gameReference": {
+      "id": "e76b59192d464f99",
+      "kind": "game",
+      "ply": 120,
+      "branch": 0,
+      "collection": "pin"
+    },
+    "hints": [
+      "Tìm đường chéo đi qua Xe f6 và Vua g5.",
+      "Hậu có thể đứng ở đâu trên đường chéo đó mà Xe không thể bắt Hậu?"
+    ],
+    "solution": "Qd8 — Hậu từ c8 đến d8, ghim Xe f6 vào Vua g5. Nếu Đen đáp ...Kf4, Trắng bắt Xe bằng Qxf6+. Sau ...Kxe4, Trắng vẫn thắng Xe đổi một tốt.",
+    "beginner": true
+  },
+  {
+    "title": "Angeles Vera,Mario Alberto — Reprintsev,A",
+    "prompt": "Tạo đòn ghim để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "pin",
+    "goal": "material",
+    "fen": "8/8/5p2/5P1p/1B2K2P/r7/6k1/8 b - - 21 73",
+    "moves": [
+      "Ra4"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "8/8/5p2/5P1p/4K2P/r7/6k1/4B3 w - - 20 73",
+      "move": "Bb4"
+    },
+    "source": "https://theweekinchess.com/zips/twic1651g.zip",
+    "gameReference": {
+      "id": "fe099d291bce7e01",
+      "kind": "game",
+      "ply": 145,
+      "branch": 0,
+      "collection": "pin"
+    },
+    "hints": [
+      "Tượng b4 và Vua e4 cùng đứng trên hàng nào?",
+      "Đặt Xe Đen trên hàng đó để Tượng không thể thoát mà vẫn che Vua."
+    ],
+    "solution": "Ra4 — Xe từ a3 đến a4, ghim Tượng b4 vào Vua e4. Trắng chỉ có thể di chuyển Vua. Nếu Trắng đi Kd5, Đen bắt Tượng bằng Rxb4.",
+    "beginner": true
+  },
+  {
+    "title": "Ter Sahakyan,S — Vershinin,Igor",
+    "prompt": "Tạo đòn ghim để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "pin",
+    "goal": "material",
+    "fen": "4R3/2b4p/8/6p1/2k5/3pK3/6P1/8 w - - 1 48",
+    "moves": [
+      "Rc8"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "4R3/2b4p/8/3k2p1/8/3pK3/6P1/8 b - - 0 47",
+      "move": "Kc4"
+    },
+    "source": "https://theweekinchess.com/zips/twic1651g.zip",
+    "gameReference": {
+      "id": "80fc566ff2507ceb",
+      "kind": "game",
+      "ply": 94,
+      "branch": 0,
+      "collection": "pin"
+    },
+    "hints": [
+      "Vua c4 và Tượng c7 nằm trên cùng một cột.",
+      "Tìm ô trên cột c để Xe vừa tấn công Tượng, vừa chặn đường Tượng chạy."
+    ],
+    "solution": "Rc8 — Xe trắng từ e8 đến c8, ghim Tượng c7 vào Vua c4. Nếu Đen chơi d2, Rxc7+ vừa bắt Tượng vừa chiếu. Sau Kd5, Vua trắng có thể bắt tốt bằng Kxd2.",
+    "beginner": true
+  },
+  {
+    "title": "Nakamura,Hi — Kramnik,V",
+    "prompt": "Tạo đòn ghim để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "pin",
+    "goal": "material",
+    "fen": "8/4r3/1B3k2/4N2p/4K3/6P1/8/8 w - - 4 66",
+    "moves": [
+      "Bd8"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "8/4r3/1B4k1/4N2p/4K3/6P1/8/8 b - - 3 65",
+      "move": "Kf6"
+    },
+    "source": "https://www.pgnmentor.com/players/Kramnik.zip",
+    "gameReference": {
+      "id": "c2403a247af0f68e",
+      "kind": "game",
+      "ply": 130,
+      "branch": 0,
+      "collection": "pin"
+    },
+    "hints": [
+      "Xe e7 đang tấn công Mã e5.",
+      "Tìm một nước lùi Tượng để ghim Xe vào Vua f6."
+    ],
+    "solution": "Bd8 — Tượng từ b6 lùi về d8, ghim Xe e7 vào Vua f6. Xe không thể rời đường chéo để bắt Mã e5. Ví dụ, sau …Ke6, Trắng chơi Bxe7 Kxe7 và đổi được Tượng lấy Xe.",
+    "beginner": true
+  },
+  {
+    "title": "Shirov,A — Topalov,V",
+    "prompt": "Tạo đòn ghim để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "pin",
+    "goal": "material",
+    "fen": "8/8/3b3k/6p1/5p2/1R5P/KP6/8 w - - 0 73",
+    "moves": [
+      "Rb6"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "8/8/3Q3k/2b3p1/5p2/1R5P/KP6/8 b - - 0 72",
+      "move": "Bxd6"
+    },
+    "source": "https://www.pgnmentor.com/players/Topalov.zip",
+    "gameReference": {
+      "id": "2709e348d6b6771b",
+      "kind": "game",
+      "ply": 144,
+      "branch": 0,
+      "collection": "pin"
+    },
+    "hints": [
+      "Tượng d6 và Vua h6 nằm trên cùng một hàng.",
+      "Xe có thể vào hàng 6 từ cột b để tấn công Tượng."
+    ],
+    "solution": "Rb6 — Xe trắng từ b3 đến b6, ghim Tượng d6 vào Vua h6. Nếu Đen đẩy tốt f3, Rxd6+ vừa bắt Tượng vừa chiếu. Nếu Vua đen rời hàng 6, Xe vẫn bắt được Tượng ở d6.",
+    "beginner": true
+  },
+  {
+    "title": "Titus,Branco — Ten Hertog,H",
+    "prompt": "Tạo đòn ghim để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "pin",
+    "goal": "material",
+    "fen": "5nk1/8/1N6/7p/P2P4/7P/2P3K1/r7 b - - 3 37",
+    "moves": [
+      "Ra2"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "5nk1/8/8/3N3p/P2P4/7P/2P3K1/r7 w - - 2 37",
+      "move": "Nb6"
+    },
+    "source": "https://theweekinchess.com/zips/twic1645g.zip",
+    "gameReference": {
+      "id": "ce1791851b3ee7eb",
+      "kind": "game",
+      "ply": 73,
+      "branch": 0,
+      "collection": "pin"
+    },
+    "hints": [
+      "Quan sát tốt c2 và Vua g2 trên hàng hai.",
+      "Xe cần tới ô nào để chặn cả c3 lẫn c4 bằng đòn ghim?"
+    ],
+    "solution": "Ra2 — Xe từ a1 đến a2, ghim tốt c2 vào Vua g2 trên hàng hai. Tốt không thể đi c3 hay c4. Ví dụ, sau khi Trắng đi Kf3, Đen bắt tốt bằng Rxc2.",
+    "beginner": true
+  },
+  {
+    "title": "Jannur,Kupjasar — Devaev,A",
+    "prompt": "Tạo đòn ghim để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "pin",
+    "goal": "material",
+    "fen": "8/1p6/5k2/pB2b3/P7/6NK/6P1/4r3 b - - 5 59",
+    "moves": [
+      "Re3"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "8/1p6/5k2/pB2bN2/P7/7K/6P1/4r3 w - - 4 59",
+      "move": "Ng3"
+    },
+    "source": "https://theweekinchess.com/zips/twic1667g.zip",
+    "gameReference": {
+      "id": "5a6c4b669b1c242b",
+      "kind": "game",
+      "ply": 117,
+      "branch": 0,
+      "collection": "pin"
+    },
+    "hints": [
+      "Tìm hàng ngang nối Mã g3 với Vua h3.",
+      "So sánh việc bắt Mã ngay bằng Tượng với việc đưa thêm Xe tới khống chế ô g3."
+    ],
+    "solution": "Re3 — Xe từ e1 đến e3, ghim Mã g3 vào Vua h3. Tượng e5 và Xe e3 cùng khống chế g3. Ví dụ, sau Kh4, Đen bắt Mã bằng Rxg3.",
+    "beginner": true
+  },
+  {
+    "title": "Grischuk,A — Svidler,P",
+    "prompt": "Tạo đòn ghim để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "pin",
+    "goal": "material",
+    "fen": "8/5p2/4pk2/2K3p1/6Pp/5n2/7P/3R4 w - - 0 53",
+    "moves": [
+      "Rf1"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "8/5p2/4pk2/2K3p1/6Pp/5P2/3n3P/3R4 b - - 14 52",
+      "move": "Nxf3"
+    },
+    "source": "https://www.pgnmentor.com/players/Svidler.zip",
+    "gameReference": {
+      "id": "fe795c84362bf004",
+      "kind": "game",
+      "ply": 104,
+      "branch": 0,
+      "collection": "pin"
+    },
+    "hints": [
+      "Tìm cột có cả Mã f3 và Vua f6.",
+      "Xe cần đến ô nào để Mã không thể nhảy sang h2?"
+    ],
+    "solution": "Rf1 — Xe trắng từ d1 đến f1, ghim Mã f3 vào Vua f6. Mã không thể nhảy sang h2 để bắt tốt. Nếu Đen chơi Ke5 (Vua đen sang e5), Rxf3 bắt Mã.",
+    "beginner": true
+  },
+  {
+    "title": "Dann,M — Nepomniachtchi,I",
+    "prompt": "Tạo đòn ghim để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "pin",
+    "goal": "material",
+    "fen": "3b4/1k6/8/3r4/1P6/2PB3P/2K5/8 w - - 0 45",
+    "moves": [
+      "Be4"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "3b4/1k1r4/8/3R4/1P6/2PB3P/2K5/8 b - - 0 44",
+      "move": "Rxd5"
+    },
+    "source": "https://www.pgnmentor.com/players/Nepomniachtchi.zip",
+    "gameReference": {
+      "id": "bf77a3e626f5c600",
+      "kind": "game",
+      "ply": 88,
+      "branch": 0,
+      "collection": "pin"
+    },
+    "hints": [
+      "Xe d5 đang tấn công Tượng d3.",
+      "Tìm ô trên đường chéo d5–b7 để Tượng vừa thoát bị bắt vừa ghim Xe."
+    ],
+    "solution": "Be4 — Tượng từ d3 đến e4, tránh đòn tấn công của Xe và ghim Xe d5 vào Vua b7. Nếu Đen đi ...Kc6, Trắng có Bxd5+ Kxd5 và đổi Tượng lấy Xe.",
+    "beginner": true
+  },
+  {
+    "title": "Ambartsumova,K — Aarit Kapil",
+    "prompt": "Khai thác đòn ghim để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "pin",
+    "goal": "material",
+    "fen": "r5k1/4q1p1/3p1R1p/pp6/2nPp3/2P3Q1/R5PP/6K1 w - - 1 27",
+    "moves": [
+      "Rxh6"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "r5k1/3q2p1/3p1R1p/pp6/2nPp3/2P3Q1/R5PP/6K1 b - - 0 26",
+      "move": "Qe7"
+    },
+    "source": "https://theweekinchess.com/zips/twic1664g.zip",
+    "gameReference": {
+      "id": "3266c9ab8720fafc",
+      "kind": "game",
+      "ply": 52,
+      "branch": 0,
+      "collection": "pin"
+    },
+    "hints": [
+      "Hậu e7 đang tấn công Xe f6.",
+      "Tốt g7 có thể bắt lại trên h6 mà không để lộ Vua g8 không?"
+    ],
+    "solution": "Rxh6 — Xe từ f6 bắt Tốt h6. Hậu g3 ghim Tốt g7 vào Vua g8, nên Đen không thể đáp …gxh6. Trắng vừa đưa Xe khỏi tầm bắt của Hậu e7, vừa thắng một Tốt.",
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "solverMoves": 1,
+      "sacrificeCount": 0,
+      "reason": "Bắt quân trực tiếp khi quân bảo vệ bị ghim vào Vua."
+    }
+  },
+  {
+    "title": "Mester,Philipp — Shevchenko,Yaroslav",
+    "prompt": "Khai thác đòn ghim để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "pin",
+    "goal": "material",
+    "fen": "r3r1k1/1p1q1pp1/1b5p/p2pR3/3Pb3/PP3PPP/1B1Q2B1/5RK1 b - - 0 25",
+    "moves": [
+      "Rxe5"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "r3r1k1/1p1q1pp1/1b5p/p2pR3/3Pb3/PP4PP/1B1Q1PB1/5RK1 w - - 2 25",
+      "move": "f3"
+    },
+    "source": "https://theweekinchess.com/zips/twic1655g.zip",
+    "gameReference": {
+      "id": "e20f23e337eb5d96",
+      "kind": "game",
+      "ply": 49,
+      "branch": 0,
+      "collection": "pin"
+    },
+    "hints": [
+      "Quan sát đường chéo từ Tượng b6 đến Vua g1.",
+      "Tốt d4 có thể bắt lại trên e5 mà vẫn che được đường chiếu vào Vua không?"
+    ],
+    "solution": "Rxe5 — Xe từ e8 bắt Xe ở e5. Tượng b6 ghim tốt d4 vào Vua g1, nên Trắng không thể đáp dxe5. Nếu Trắng chọn fxe4, Đen đáp ...dxe4 và vẫn thắng vật chất.",
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "solverMoves": 1,
+      "sacrificeCount": 0,
+      "reason": "Bắt quân trực tiếp khi quân bảo vệ bị ghim vào Vua."
+    }
+  },
+  {
+    "title": "Ibadov,Dashgyn — Puzyrevsky,Semyon",
+    "prompt": "Tạo đòn ghim để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "pin",
+    "goal": "material",
+    "fen": "8/3K3p/6p1/1N2p3/2P2k2/3B4/7P/r7 b - - 0 49",
+    "moves": [
+      "Rd1"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "8/3K3p/6p1/1N2p3/5k2/2PB4/7P/r7 w - - 14 49",
+      "move": "c4"
+    },
+    "source": "https://theweekinchess.com/zips/twic1660g.zip",
+    "gameReference": {
+      "id": "a2fa026a1c7674ca",
+      "kind": "game",
+      "ply": 97,
+      "branch": 0,
+      "collection": "pin"
+    },
+    "hints": [
+      "Tìm cột có cả Tượng d3 và Vua d7.",
+      "Xe Đen có thể đứng ở ô nào để ghim Tượng?"
+    ],
+    "solution": "Rd1 — Xe Đen từ a1 đến d1, ghim Tượng d3 vào Vua d7. Chẳng hạn, nếu Trắng chơi Ke8, Đen bắt Tượng bằng Rxd3.",
+    "beginner": true
+  },
+  {
+    "title": "Sokolov,Iv — Ivanchuk,V",
+    "prompt": "Tạo đòn ghim để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "pin",
+    "goal": "material",
+    "fen": "8/8/3k4/2p1b3/p1P5/P3R3/8/2K5 b - - 0 61",
+    "moves": [
+      "Bf4"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "8/8/3k4/2p1b3/p1P1R3/P3r3/8/2K5 w - - 0 61",
+      "move": "Rxe3"
+    },
+    "source": "https://www.pgnmentor.com/players/Ivanchuk.zip",
+    "gameReference": {
+      "id": "2e3062a914ba9785",
+      "kind": "game",
+      "ply": 121,
+      "branch": 0,
+      "collection": "pin"
+    },
+    "hints": [
+      "Xe e3 và Vua c1 nằm trên cùng một đường chéo.",
+      "Tượng đen có thể đến ô nào để Xe không thể rời đường chéo đó?"
+    ],
+    "solution": "Bf4 — Tượng đen từ e5 đến f4, ghim Xe e3 vào Vua c1. Nếu Trắng đi Kd2, Đen bắt Xe bằng Bxe3+. Sau Kxe3, Đen đã đổi Tượng lấy Xe và gỡ lại phần vật chất bị thiếu.",
+    "beginner": true
+  },
+  {
+    "title": "Shuvalova,Polina — Zhu,Jiner",
+    "prompt": "Tạo đòn ghim để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "pin",
+    "goal": "material",
+    "fen": "8/3b3k/7n/3PP3/5K2/1R6/8/8 w - - 0 70",
+    "moves": [
+      "Rb7"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "8/3b3k/7P/3PPn2/5K2/1R6/8/8 b - - 2 69",
+      "move": "Nxh6"
+    },
+    "source": "https://theweekinchess.com/zips/twic1661g.zip",
+    "gameReference": {
+      "id": "096dfecb36203b21",
+      "kind": "game",
+      "ply": 138,
+      "branch": 0,
+      "collection": "pin"
+    },
+    "hints": [
+      "Quan sát Tượng d7 và Vua h7 trên hàng bảy.",
+      "Đưa Xe lên hàng đó để Tượng không thể rời đường ghim."
+    ],
+    "solution": "Rb7 — Xe từ b3 đến b7, ghim Tượng d7 vào Vua h7. Nếu Đen đưa Vua đến g6, Trắng bắt Tượng bằng Rxd7.",
+    "beginner": true
+  },
+  {
+    "title": "Eynullayev,Altay — Bacrot,E",
+    "prompt": "Tạo đòn ghim để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "pin",
+    "goal": "material",
+    "fen": "8/2k5/8/p6P/1pK2N2/1P6/7r/8 b - - 3 53",
+    "moves": [
+      "Rh4"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "8/2k5/6N1/p6P/1pK5/1P6/7r/8 w - - 2 53",
+      "move": "Nf4"
+    },
+    "source": "https://www.pgnmentor.com/players/Bacrot.zip",
+    "gameReference": {
+      "id": "6c3148b00cd1c6f4",
+      "kind": "game",
+      "ply": 105,
+      "branch": 0,
+      "collection": "pin"
+    },
+    "hints": [
+      "Tìm hàng ngang có cả Mã f4 và Vua c4.",
+      "Đưa Xe lên hàng đó để Mã không thể rời đường che Vua."
+    ],
+    "solution": "Rh4 — Xe từ h2 đến h4, ghim Mã f4 vào Vua c4. Nếu Trắng đẩy h6, Đen bắt Mã bằng Rxf4+ và Xe vẫn có thể chặn tốt h.",
+    "beginner": true
+  },
+  {
+    "title": "Megaranto,S — Avirat Chauhan",
+    "prompt": "Khai thác đòn ghim để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "pin",
+    "goal": "material",
+    "fen": "5k2/6p1/1p2qb1p/1P6/P2p1Q2/6P1/5P2/3R2K1 w - - 1 42",
+    "moves": [
+      "Rxd4"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "5k2/6p1/1p3b1p/1P6/P2p1Q2/6Pq/5P2/3R2K1 b - - 0 41",
+      "move": "Qe6"
+    },
+    "source": "https://theweekinchess.com/zips/twic1653g.zip",
+    "gameReference": {
+      "id": "17f07aed61587610",
+      "kind": "game",
+      "ply": 82,
+      "branch": 0,
+      "collection": "pin"
+    },
+    "hints": [
+      "Tượng f6 có vẻ đang bảo vệ Tốt d4.",
+      "Nếu Tượng rời cột f để bắt Xe trên d4, Hậu f4 sẽ tấn công quân nào?"
+    ],
+    "solution": "Phương án phân tích. Rxd4 — Xe từ d1 bắt Tốt thông d4. Hậu f4 ghim Tượng f6 vào Vua f8, nên Đen không thể đáp …Bxd4. Trắng thắng một Tốt.",
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "solverMoves": 1,
+      "sacrificeCount": 0,
+      "reason": "Bắt quân trực tiếp khi quân bảo vệ bị ghim vào Vua."
+    }
+  },
+  {
+    "title": "Smietanska,Wiktoria — Janaszak,Daw",
+    "prompt": "Khai thác đòn ghim để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "pin",
+    "goal": "material",
+    "fen": "3r3k/5pb1/p4Np1/3N3p/2P2P2/8/P2K3P/6B1 b - - 3 40",
+    "moves": [
+      "Bxf6"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "3r3k/5pb1/p4Np1/3N3p/2P2P2/8/P6P/4K1B1 w - - 2 40",
+      "move": "Kd2"
+    },
+    "source": "https://theweekinchess.com/zips/twic1649g.zip",
+    "gameReference": {
+      "id": "15927fbe436bc2e2",
+      "kind": "game",
+      "ply": 79,
+      "branch": 0,
+      "collection": "pin"
+    },
+    "hints": [
+      "Hai Mã trắng ở d5 và f6 đang bảo vệ nhau.",
+      "Nhìn cột d từ Xe đen d8 đến Vua trắng d2."
+    ],
+    "solution": "Phương án phân tích. Bxf6 — Tượng đen từ g7 bắt Mã ở f6. Mã trắng d5 không thể bắt lại vì sẽ mở cột d cho Xe đen d8 chiếu Vua d2. Nếu Trắng đi Bb6 tấn công Xe, Rd6 giữ đòn ghim.",
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "solverMoves": 1,
+      "sacrificeCount": 0,
+      "reason": "Bắt quân trực tiếp khi quân bảo vệ bị ghim vào Vua."
+    }
+  },
+  {
+    "title": "Oro,Faustino — Keinanen,Toivo",
+    "prompt": "Khai thác đòn ghim để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "pin",
+    "goal": "material",
+    "fen": "4r1k1/5bpp/2p5/4P3/2P2N2/2N1Q2P/P7/q4BK1 b - - 3 48",
+    "moves": [
+      "Bxc4"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "4r1k1/5bpp/2p5/4P3/2PQ1N2/2N4P/P7/q4BK1 w - - 2 48",
+      "move": "Qe3"
+    },
+    "source": "https://theweekinchess.com/zips/twic1649g.zip",
+    "gameReference": {
+      "id": "51fc24cd5f8183dc",
+      "kind": "game",
+      "ply": 95,
+      "branch": 0,
+      "collection": "pin"
+    },
+    "hints": [
+      "Quan sát Hậu a1, Tượng f1 và Vua g1 trên hàng một.",
+      "Nếu Tượng f1 rời hàng một để bắt lại, Vua Trắng sẽ ra sao?"
+    ],
+    "solution": "Phương án phân tích. Bxc4 — Tượng từ f7 bắt tốt ở c4. Hậu a1 ghim Tượng f1 vào Vua g1, nên Tượng Trắng không thể bắt lại trên c4.",
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "solverMoves": 1,
+      "sacrificeCount": 0,
+      "reason": "Bắt quân trực tiếp khi quân bảo vệ bị ghim vào Vua."
+    }
+  },
+  {
+    "title": "Tsvetkov,Andrey — Dreev,A",
+    "prompt": "Khai thác đòn ghim để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "pin",
+    "goal": "material",
+    "fen": "7R/8/6k1/4r1p1/7p/8/6RK/8 w - - 47 69",
+    "moves": [
+      "Rxh4"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "7R/8/8/4r1pk/7p/8/6RK/8 b - - 46 68",
+      "move": "Kg6"
+    },
+    "source": "https://www.pgnmentor.com/players/Dreev.zip",
+    "gameReference": {
+      "id": "2350efc96452aa4f",
+      "kind": "game",
+      "ply": 136,
+      "branch": 0,
+      "collection": "pin"
+    },
+    "hints": [
+      "Xe g2, tốt g5 và Vua g6 cùng đứng trên cột nào?",
+      "Kiểm tra tốt g5 có thể bắt chéo sang h4 mà vẫn che được Vua hay không."
+    ],
+    "solution": "Phương án phân tích. Rxh4 — Xe từ h8 bắt tốt h4. Xe g2 ghim tốt g5 vào Vua g6, nên Đen không thể bắt lại ở h4. Nếu Đen đi Kf6 để tháo ghim, Trắng có thể đưa Xe khỏi h4 bằng Rh6+.",
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "solverMoves": 1,
+      "sacrificeCount": 0,
+      "reason": "Bắt quân trực tiếp khi quân bảo vệ bị ghim vào Vua."
+    }
+  },
+  {
+    "title": "Rosen,E — Mendonca,Leon Luke",
+    "prompt": "Khai thác đòn ghim để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "pin",
+    "goal": "material",
+    "fen": "5rk1/p2b2p1/1p2p1Bp/2ppP2P/5rP1/2P1RP2/P1P2K2/4R3 b - - 4 32",
+    "moves": [
+      "Rxg4"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "5rk1/p2b2p1/1p2p1Bp/2ppP2P/5rP1/2P1RP2/P1P1K3/4R3 w - - 3 32",
+      "move": "Kf2"
+    },
+    "source": "https://theweekinchess.com/zips/twic1647g.zip",
+    "gameReference": {
+      "id": "67b810f4ffd0b2c9",
+      "kind": "game",
+      "ply": 63,
+      "branch": 0,
+      "collection": "pin"
+    },
+    "hints": [
+      "Tốt f3 đang bảo vệ Tốt g4.",
+      "Nhìn dọc cột f để xem Tốt f3 có thể bắt lại trên g4 hay không."
+    ],
+    "solution": "Phương án phân tích. Rxg4 — Xe Đen từ f4 bắt Tốt g4. Xe f8 ghim Tốt f3 vào Vua f2, nên Trắng không thể đáp fxg4. Đen thắng một Tốt.",
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "solverMoves": 1,
+      "sacrificeCount": 0,
+      "reason": "Bắt quân trực tiếp khi quân bảo vệ bị ghim vào Vua."
+    }
+  },
+  {
+    "title": "Sliwicki,D — Olhovik,Andrei",
+    "prompt": "Khai thác đòn ghim để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "pin",
+    "goal": "material",
+    "fen": "8/5k2/1p2bp2/2p3p1/2P5/1r1PK1PP/4R1B1/8 b - - 5 34",
+    "moves": [
+      "Bxc4"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "8/5k2/1p2bp2/2p3p1/2P5/1r1P2PP/4RKB1/8 w - - 4 34",
+      "move": "Ke3"
+    },
+    "source": "https://theweekinchess.com/zips/twic1657g.zip",
+    "gameReference": {
+      "id": "18f9b5044ed0bd4c",
+      "kind": "game",
+      "ply": 67,
+      "branch": 0,
+      "collection": "pin"
+    },
+    "hints": [
+      "Quan sát hàng 3 từ Xe đen b3 đến Vua trắng e3.",
+      "Tượng đen có thể bắt tốt nào khi tốt d3 đang bị ghim?"
+    ],
+    "solution": "Phương án phân tích. Bxc4 — Tượng đen từ e6 bắt tốt ở c4. Tốt trắng d3 không thể bắt lại vì sẽ để Xe b3 chiếu Vua e3. Nếu Trắng đi Kf2, Đen có thể bắt thêm tốt bằng Rxd3.",
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "solverMoves": 1,
+      "sacrificeCount": 0,
+      "reason": "Bắt quân trực tiếp khi quân bảo vệ bị ghim vào Vua."
+    }
+  },
+  {
+    "title": "Drygalov,Sergey — Darvishi,Mohammad Hossein",
+    "prompt": "Khai thác đòn ghim để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "pin",
+    "goal": "material",
+    "fen": "6k1/5pp1/2Q1p1n1/8/3q4/3r2BP/5PP1/5RK1 b - - 0 35",
+    "moves": [
+      "Rxg3"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "6k1/5pp1/2p1p1n1/8/3qQ3/3r2BP/5PP1/5RK1 w - - 0 35",
+      "move": "Qxc6"
+    },
+    "source": "https://theweekinchess.com/zips/twic1652g.zip",
+    "gameReference": {
+      "id": "b33e3be29bba2e23",
+      "kind": "game",
+      "ply": 69,
+      "branch": 0,
+      "collection": "pin"
+    },
+    "hints": [
+      "Tìm đường chéo đi qua Hậu d4, tốt f2 và Vua g1.",
+      "Kiểm tra xem tốt f2 có thể bắt lại trên g3 hay không."
+    ],
+    "solution": "Phương án phân tích. Rxg3 — Xe từ d3 bắt Tượng ở g3. Hậu d4 ghim tốt f2 vào Vua g1, nên Trắng không thể đáp fxg3. Nếu Trắng chiếu Qe8+, Đen đi ...Kh7 và vẫn giữ phần vật chất vừa thắng.",
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "solverMoves": 1,
+      "sacrificeCount": 0,
+      "reason": "Bắt quân trực tiếp khi quân bảo vệ bị ghim vào Vua."
+    }
+  },
+  {
+    "title": "Samunenkov,Ihor — Tahmasebi,Hamidreza",
+    "prompt": "Tạo đòn ghim để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "pin",
+    "goal": "material",
+    "fen": "4R3/8/B1r5/3k1b2/PP3p2/8/1K6/8 w - - 3 65",
+    "moves": [
+      "Bb7"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "4R3/8/B1r5/4kb2/PP3p2/8/1K6/8 b - - 2 64",
+      "move": "Kd5"
+    },
+    "source": "https://theweekinchess.com/zips/twic1667g.zip",
+    "gameReference": {
+      "id": "d15fd7f89bf8a74b",
+      "kind": "game",
+      "ply": 128,
+      "branch": 0,
+      "collection": "pin"
+    },
+    "hints": [
+      "Tìm đường chéo đi qua Xe c6 và Vua d5.",
+      "Đưa Tượng tới đầu đường chéo. Sau đó, hãy so sánh giá trị của Xe và Tượng nếu Đen bắt lại."
+    ],
+    "solution": "Phương án phân tích. Bb7 — Tượng từ a6 đến b7, ghim Xe c6 vào Vua d5. Nếu Đen đi Bd7, Trắng có thể bắt Xe bằng Bxc6+; kể cả khi Đen bắt lại Tượng, Trắng vẫn đổi Tượng lấy Xe.",
+    "beginner": true
+  },
+  {
+    "title": "Amburgy,Ryan — Weetik,V",
+    "prompt": "Khai thác đòn ghim để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "pin",
+    "goal": "material",
+    "fen": "6nk/ppp1n1q1/3p3p/3P1p2/8/2PN3P/P1P3B1/4Q1K1 b - - 5 27",
+    "moves": [
+      "Nxd5"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "6nk/ppp1n1q1/3pQ2p/3P1p2/8/2PN3P/P1P3B1/6K1 w - - 4 27",
+      "move": "Qe1"
+    },
+    "source": "https://theweekinchess.com/zips/twic1668g.zip",
+    "gameReference": {
+      "id": "f5ed8a1db4f2df5b",
+      "kind": "game",
+      "ply": 53,
+      "branch": 0,
+      "collection": "pin"
+    },
+    "hints": [
+      "Tượng g2 có vẻ đang bảo vệ Tốt d5.",
+      "Nếu Tượng rời cột g để bắt Mã, Hậu g7 sẽ chiếu Vua g1."
+    ],
+    "solution": "Phương án phân tích. Nxd5 — Mã Đen từ e7 bắt Tốt d5. Hậu g7 ghim Tượng g2 vào Vua g1, nên Trắng không thể đáp Bxd5. Đen thắng một Tốt.",
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "solverMoves": 1,
+      "sacrificeCount": 0,
+      "reason": "Bắt quân trực tiếp khi quân bảo vệ bị ghim vào Vua."
+    }
+  },
+  {
+    "title": "Alcazar Jimenez,J — Lopez Martinez,Jaime",
+    "prompt": "Khai thác đòn ghim để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "pin",
+    "goal": "material",
+    "fen": "8/4r3/p6p/1p1kB1p1/2b2PPP/P2p2K1/P2RrR2/8 w - g6 0 55",
+    "moves": [
+      "Rfxe2"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "8/4r1p1/p6p/1p1kB3/2b2PPP/P2p2K1/P2RrR2/8 b - - 16 54",
+      "move": "g5"
+    },
+    "source": "https://theweekinchess.com/zips/twic1666g.zip",
+    "gameReference": {
+      "id": "99e42281bdcc0297",
+      "kind": "game",
+      "ply": 108,
+      "branch": 0,
+      "collection": "pin"
+    },
+    "hints": [
+      "Cả hai Xe Trắng đều có thể bắt Xe e2.",
+      "Xe nào cần ở lại cột d để Tốt d3 không thể bắt lại?"
+    ],
+    "solution": "Phương án phân tích. Rfxe2 — Xe từ f2 bắt Xe e2. Xe d2 tiếp tục ghim Tốt d3 vào Vua d5, nên Đen không thể đáp …dxe2. Nếu dùng Xe d2 để bắt, Trắng sẽ tháo ghim và Đen có thể bắt lại.",
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "solverMoves": 1,
+      "sacrificeCount": 0,
+      "reason": "Bắt quân trực tiếp khi quân bảo vệ bị ghim vào Vua."
+    }
+  },
+  {
+    "title": "Rasulov,Vu — Dirikolu,Deniz",
+    "prompt": "Khai thác đòn ghim để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "pin",
+    "goal": "material",
+    "fen": "8/2p2p2/2k1b1p1/2PNK1P1/4PP1R/8/4r3/8 b - - 2 40",
+    "moves": [
+      "Bxd5"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "8/2p2p2/2k1b1p1/2PNK1P1/4PP2/7R/4r3/8 w - - 1 40",
+      "move": "Rh4"
+    },
+    "source": "https://theweekinchess.com/zips/twic1646g.zip",
+    "gameReference": {
+      "id": "3f739c699ee3e8d7",
+      "kind": "game",
+      "ply": 79,
+      "branch": 0,
+      "collection": "pin"
+    },
+    "hints": [
+      "Tốt e4 đang bảo vệ Mã trắng d5.",
+      "Theo cột e từ Xe đen e2 đến Vua trắng e5. Tốt e4 có thể rời cột này không?"
+    ],
+    "solution": "Phương án phân tích. Bxd5 — Tượng đen từ e6 bắt Mã ở d5. Tốt trắng e4 không thể bắt lại vì sẽ mở cột e cho Xe đen e2 chiếu Vua e5. Nếu Đen bắt tốt bằng Kxc5 ngay, Mã trắng có thể bắt lại một tốt bằng Nxc7.",
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "solverMoves": 1,
+      "sacrificeCount": 0,
+      "reason": "Bắt quân trực tiếp khi quân bảo vệ bị ghim vào Vua."
+    }
+  },
+  {
+    "title": "Luba,L — Stickler,Florentin",
+    "prompt": "Khai thác đòn ghim để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "pin",
+    "goal": "material",
+    "fen": "8/5p1k/R7/6p1/P2N2p1/1r2P3/r4PK1/8 b - - 3 38",
+    "moves": [
+      "Rxe3"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "8/5p1k/R7/5Np1/P5p1/1r2P3/r4PK1/8 w - - 2 38",
+      "move": "Nd4"
+    },
+    "source": "https://theweekinchess.com/zips/twic1662g.zip",
+    "gameReference": {
+      "id": "f14c18b9827bd82e",
+      "kind": "game",
+      "ply": 75,
+      "branch": 0,
+      "collection": "pin"
+    },
+    "hints": [
+      "Mã d4 đang tấn công Xe b3. Tìm một nước bắt quân để đưa Xe ra khỏi b3.",
+      "Quan sát Xe a2, tốt f2 và Vua g2 trên hàng hai."
+    ],
+    "solution": "Phương án phân tích. Rxe3 — Xe từ b3 bắt tốt ở e3 và thoát khỏi đòn tấn công của Mã d4. Xe a2 ghim tốt f2 vào Vua g2, nên Trắng không thể đáp fxe3.",
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "solverMoves": 1,
+      "sacrificeCount": 0,
+      "reason": "Bắt quân trực tiếp khi quân bảo vệ bị ghim vào Vua."
+    }
+  },
+  {
+    "title": "Giordani,Luca — Rosen,E",
+    "prompt": "Tạo đòn ghim để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "pin",
+    "goal": "material",
+    "fen": "8/5k2/3R1b2/p7/P7/K7/5P2/8 b - - 0 54",
+    "moves": [
+      "Be7"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "8/5k2/2Rr1b2/p7/P7/K7/5P2/8 w - - 0 54",
+      "move": "Rxd6"
+    },
+    "source": "https://theweekinchess.com/zips/twic1665g.zip",
+    "gameReference": {
+      "id": "281a0db835e598a6",
+      "kind": "game",
+      "ply": 107,
+      "branch": 0,
+      "collection": "pin"
+    },
+    "hints": [
+      "Xe d6 đang tấn công Tượng f6.",
+      "Tìm một ô trên đường chéo nối Xe d6 với Vua a3."
+    ],
+    "solution": "Be7 — Tượng Đen từ f6 đến e7, vừa tránh bị bắt vừa ghim Xe d6 vào Vua a3. Nếu Trắng chơi Kb3, Đen bắt Xe bằng Bxd6.",
+    "beginner": true
+  },
+  {
+    "title": "Admiraal,M — Ernst,S",
+    "prompt": "Khai thác đòn ghim để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "pin",
+    "goal": "material",
+    "fen": "1b6/4kp2/p1r1p1pp/8/1Nr2P2/R1P4P/2K1NP2/4R3 b - - 0 39",
+    "moves": [
+      "Rxb4"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "1b6/4kp2/p1r1p1pp/8/1nr2P2/R1PN3P/2K1NP2/4R3 w - - 0 39",
+      "move": "Nxb4"
+    },
+    "source": "https://theweekinchess.com/zips/twic1659g.zip",
+    "gameReference": {
+      "id": "3ba601842bf863bd",
+      "kind": "game",
+      "ply": 77,
+      "branch": 0,
+      "collection": "pin"
+    },
+    "hints": [
+      "Mã b4 đang tấn công Xe c6. Hãy xem Xe c4 có thể bắt Mã không.",
+      "Kiểm tra cột c trước khi xét tốt c3 có thể bắt lại trên b4 hay không."
+    ],
+    "solution": "Rxb4 — Xe từ c4 bắt Mã ở b4. Xe c6 ghim tốt c3 vào Vua c2, nên Trắng chưa thể đáp cxb4. Trong ván đấu, Trắng đi Rxa6. Đen đáp ...Rxa6 và lúc đó tốt c3 mới bắt được Xe trên b4. Qua chuỗi đổi này, Đen thắng một Mã và mất một tốt.",
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "solverMoves": 1,
+      "sacrificeCount": 0,
+      "reason": "Bắt quân trực tiếp khi quân bảo vệ bị ghim vào Vua."
+    }
+  },
+  {
+    "title": "Martinez Alcantara,Jose Eduardo — Bok,B",
+    "prompt": "Tạo đòn ghim để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "pin",
+    "goal": "material",
+    "fen": "8/8/5K2/5B2/1P6/P7/4r2P/5k2 w - - 8 81",
+    "moves": [
+      "Bd3"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "8/8/5K2/5B2/1P6/P7/4r2P/4k3 b - - 7 80",
+      "move": "Kf1"
+    },
+    "source": "https://theweekinchess.com/zips/twic1663g.zip",
+    "gameReference": {
+      "id": "6849924d276e0f44",
+      "kind": "game",
+      "ply": 160,
+      "branch": 0,
+      "collection": "pin"
+    },
+    "hints": [
+      "Xe đen e2 đang dọa bắt tốt h2.",
+      "Tìm đường chéo đi qua Xe e2 và Vua f1."
+    ],
+    "solution": "Phương án phân tích. Bd3 — Tượng trắng từ f5 đến d3, ghim Xe e2 vào Vua f1. Nếu Đen đi Kf2 hoặc Ke1, Trắng bắt Xe bằng Bxe2. Sau Kxe2, Trắng vẫn lời vì đổi Tượng lấy Xe.",
+    "beginner": true
+  },
+  {
+    "title": "Kollars,Dmitrij — Sitbon,Itay",
+    "prompt": "Tạo đòn ghim để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "pin",
+    "goal": "material",
+    "fen": "8/K7/1R3rBk/p6P/Pb6/8/8/8 b - - 48 79",
+    "moves": [
+      "Bc5"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "8/KR6/5rBk/p6P/Pb6/8/8/8 w - - 47 79",
+      "move": "Rb6"
+    },
+    "source": "https://theweekinchess.com/zips/twic1657g.zip",
+    "gameReference": {
+      "id": "6c8245747ab6543e",
+      "kind": "game",
+      "ply": 157,
+      "branch": 0,
+      "collection": "pin"
+    },
+    "hints": [
+      "Nếu Đen bắt Xe b6 ngay, Vua Trắng có thể bắt lại.",
+      "Tượng b4 có thể đến ô nào để vừa ghim Xe b6 vừa bảo vệ ô bắt quân?"
+    ],
+    "solution": "Phương án phân tích. Bc5 — Tượng Đen từ b4 đến c5, ghim Xe b6 vào Vua a7 và bảo vệ ô b6. Chẳng hạn, nếu Trắng chơi Kb8, Đen bắt Xe bằng Rxb6+.",
+    "beginner": true
+  },
+  {
+    "title": "Bortnyk,Olexandr — Erigaisi,Arjun",
+    "prompt": "Tạo đòn ghim để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "pin",
+    "goal": "material",
+    "fen": "8/1R3p2/7p/8/8/6P1/2k2NKP/q7 b - - 1 73",
+    "moves": [
+      "Qa8"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "8/1R3p2/7p/8/8/6P1/2k2N1P/q5K1 w - - 0 73",
+      "move": "Kg2"
+    },
+    "source": "https://theweekinchess.com/zips/twic1646g.zip",
+    "gameReference": {
+      "id": "b8cee23dd22147ff",
+      "kind": "game",
+      "ply": 145,
+      "branch": 0,
+      "collection": "pin"
+    },
+    "hints": [
+      "Xe trắng có thể sang c7 để chiếu nếu chưa bị ghim.",
+      "Tìm đường chéo đi qua Xe b7 và Vua trắng g2."
+    ],
+    "solution": "Phương án phân tích. Qa8 — Hậu đen từ a1 đến a8, ghim Xe b7 vào Vua g2. Xe trắng không thể sang c7 để chiếu Vua đen. Nếu Trắng đi Kf3, Đen bắt Xe bằng Qxb7+.",
+    "beginner": true
+  },
+  {
+    "title": "Ocampos,I — Papasimakopoulos,Alexandros",
+    "prompt": "Tạo đòn ghim để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "pin",
+    "goal": "material",
+    "fen": "8/5ppk/4n2p/4r3/5N2/2P2K2/8/2R5 b - - 3 46",
+    "moves": [
+      "Rf5"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "8/5ppk/4n2p/4r3/5N2/2P3K1/8/2R5 w - - 2 46",
+      "move": "Kf3"
+    },
+    "source": "https://theweekinchess.com/zips/twic1641g.zip",
+    "gameReference": {
+      "id": "c5e5d8eccecf672e",
+      "kind": "game",
+      "ply": 91,
+      "branch": 0,
+      "collection": "pin"
+    },
+    "hints": [
+      "Quan sát Mã f4 và Vua f3 trên cột f.",
+      "Sau khi ghim Mã f4, nếu Vua Trắng tấn công Xe, quân nào nên bắt Mã?"
+    ],
+    "solution": "Rf5 — Xe từ e5 đến f5, ghim Mã f4 vào Vua f3. Nếu Vua Trắng sang e4, Đen bắt Mã bằng ...Rxf4+. Mã e6 bảo vệ Xe trên f4.",
+    "beginner": true
+  },
+  {
+    "title": "Averin,Nikolay — Iljiushenok,I",
+    "prompt": "Tạo đòn ghim để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "pin",
+    "goal": "material",
+    "fen": "8/ppp4k/8/8/1PP1r3/8/P2K4/3B4 w - - 0 43",
+    "moves": [
+      "Bc2"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "8/ppp3kR/8/8/1PP1r3/8/P2K4/3B4 b - - 2 42",
+      "move": "Kxh7"
+    },
+    "source": "https://theweekinchess.com/zips/twic1635g.zip",
+    "gameReference": {
+      "id": "25bde9922cba3458",
+      "kind": "game",
+      "ply": 84,
+      "branch": 0,
+      "collection": "pin"
+    },
+    "hints": [
+      "Tìm đường chéo qua Xe e4 và Vua h7.",
+      "Tượng Trắng có thể đến ô nào trên đường chéo đó?"
+    ],
+    "solution": "Bc2 — Tượng từ d1 đến c2, ghim Xe e4 vào Vua h7. Nếu Đen chơi …c6, Trắng bắt Xe bằng Bxe4+ và chiếu Vua.",
+    "beginner": true
+  },
+  {
+    "title": "Nakamura,Hi — Davudov,Tunar",
+    "prompt": "Tạo đòn ghim để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "pin",
+    "goal": "material",
+    "fen": "8/6k1/5rn1/6RK/8/4B3/8/8 w - - 13 79",
+    "moves": [
+      "Bd4"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "8/5rk1/6n1/6RK/8/4B3/8/8 b - - 12 78",
+      "move": "Rf6"
+    },
+    "source": "https://theweekinchess.com/zips/twic1637g.zip",
+    "gameReference": {
+      "id": "2603eca5f4878095",
+      "kind": "game",
+      "ply": 156,
+      "branch": 0,
+      "collection": "pin"
+    },
+    "hints": [
+      "Nếu Xe trắng bắt Mã g6, Xe đen f6 có thể bắt lại.",
+      "Tìm đường chéo đi qua Xe f6 và Vua đen g7."
+    ],
+    "solution": "Bd4 — Tượng trắng từ e3 đến d4, ghim Xe f6 vào Vua g7. Nếu Đen đi Kf7, Trắng bắt Xe bằng Bxf6. Sau Kxf6, Trắng vẫn lời vì đổi Tượng lấy Xe.",
+    "beginner": true
+  },
+  {
+    "title": "Stotyn,F — Dobrikov,Marco",
+    "prompt": "Tạo đòn ghim để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "pin",
+    "goal": "material",
+    "fen": "8/5k2/4b3/3p4/5bpQ/8/6K1/8 w - - 2 59",
+    "moves": [
+      "Qf2"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "8/8/4bk2/3p4/5bpQ/8/6K1/8 b - - 1 58",
+      "move": "Kf7"
+    },
+    "source": "https://theweekinchess.com/zips/twic1639g.zip",
+    "gameReference": {
+      "id": "b728131a801fbe08",
+      "kind": "game",
+      "ply": 116,
+      "branch": 0,
+      "collection": "pin"
+    },
+    "hints": [
+      "Tìm cột có cả Tượng f4 và Vua f7.",
+      "Hậu có thể vào cột đó ở đâu để Tượng f4 không còn đường thoát?"
+    ],
+    "solution": "Qf2 — Hậu từ h4 đến f2, ghim Tượng f4 vào Vua f7. Trong ván đấu, Đen đưa Tượng còn lại đến f5, rồi Trắng bắt Tượng f4 bằng Qxf4.",
+    "beginner": true
+  },
+  {
+    "title": "Javakhadze,Z — Vlassov,N",
+    "prompt": "Tạo đòn ghim để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "pin",
+    "goal": "material",
+    "fen": "8/8/7p/8/3b2k1/8/R5K1/8 w - - 0 57",
+    "moves": [
+      "Ra4"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "8/8/7p/2b5/3N2k1/8/R5K1/8 b - - 0 56",
+      "move": "Bxd4"
+    },
+    "source": "https://theweekinchess.com/zips/twic1644g.zip",
+    "gameReference": {
+      "id": "d68a27557ea1c743",
+      "kind": "game",
+      "ply": 112,
+      "branch": 0,
+      "collection": "pin"
+    },
+    "hints": [
+      "Tượng d4 và Vua g4 nằm trên cùng một hàng.",
+      "Xe có thể lên hàng 4 từ cột a."
+    ],
+    "solution": "Ra4 — Xe trắng từ a2 đến a4, ghim Tượng d4 vào Vua g4. Nếu Đen đẩy tốt đến h5, Rxd4+ vừa bắt Tượng vừa chiếu. Nếu Vua đen rời hàng 4, Xe vẫn bắt được Tượng ở d4.",
+    "beginner": true
+  },
+  {
+    "title": "Nazin,R — Pham Le Thao Nguyen",
+    "prompt": "Tạo đòn ghim để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "pin",
+    "goal": "material",
+    "fen": "8/8/p1K3pk/4N3/Pp6/8/1B1n1P2/8 w - - 6 58",
+    "moves": [
+      "Bc1"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "8/6k1/p1K3p1/4N3/Pp6/8/1B1n1P2/8 b - - 5 57",
+      "move": "Kh6"
+    },
+    "source": "https://theweekinchess.com/zips/twic1642g.zip",
+    "gameReference": {
+      "id": "f36800c6beba00fe",
+      "kind": "game",
+      "ply": 114,
+      "branch": 0,
+      "collection": "pin"
+    },
+    "hints": [
+      "Nhìn đường chéo đi qua Mã d2 và Vua đen h6.",
+      "Tượng trắng có thể lùi về hàng 1 để tấn công Mã trên đường chéo đó."
+    ],
+    "solution": "Phương án phân tích. Bc1 — Tượng trắng từ b2 đến c1, ghim Mã d2 vào Vua h6. Nếu Đen đẩy tốt đến b3, Bxd2+ vừa bắt Mã vừa chiếu.",
+    "beginner": true
+  },
+  {
+    "title": "Mammadzada,G — Rosen,E",
+    "prompt": "Tạo đòn ghim để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "pin",
+    "goal": "material",
+    "fen": "8/8/3nk3/3p4/3b3P/6R1/7K/8 b - - 4 59",
+    "moves": [
+      "Be5"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "8/8/3nk3/3p4/3b3P/6R1/6K1/8 w - - 3 59",
+      "move": "Kh2"
+    },
+    "source": "https://theweekinchess.com/zips/twic1637g.zip",
+    "gameReference": {
+      "id": "c926572592a19a12",
+      "kind": "game",
+      "ply": 117,
+      "branch": 0,
+      "collection": "pin"
+    },
+    "hints": [
+      "Tìm đường chéo đi qua Xe g3 và Vua h2.",
+      "Tượng có thể ghim Xe từ ô nào để Xe không thể chạy khỏi đường chéo?"
+    ],
+    "solution": "Phương án phân tích. Be5 — Tượng từ d4 đến e5, ghim Xe g3 vào Vua h2. Nếu Trắng đi Kg2, Đen đáp ...Bxg3. Sau Kxg3, Đen đã đổi Tượng lấy Xe.",
+    "beginner": true
+  },
+  {
+    "title": "Klukin,Kirill — Oberoi,Shelev",
+    "prompt": "Tạo đòn ghim để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "pin",
+    "goal": "material",
+    "fen": "8/5r2/P1k3p1/8/8/1K2B3/1P6/8 b - - 5 55",
+    "moves": [
+      "Rf3"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "8/5r2/PBk3p1/8/8/1K6/1P6/8 w - - 4 55",
+      "move": "Be3"
+    },
+    "source": "https://theweekinchess.com/zips/twic1640g.zip",
+    "gameReference": {
+      "id": "84d099f06393f257",
+      "kind": "game",
+      "ply": 109,
+      "branch": 0,
+      "collection": "pin"
+    },
+    "hints": [
+      "Tìm hàng ngang đi qua cả Tượng e3 và Vua b3.",
+      "Nếu Trắng đẩy tốt lên a7, Xe có thể bắt Tượng kèm chiếu không?"
+    ],
+    "solution": "Phương án phân tích. Rf3 — Xe từ f7 đến f3, ghim Tượng e3 vào Vua b3. Nếu Trắng đẩy a7, Đen bắt Tượng bằng Rxe3+. Chẳng hạn, sau Kc4, Đen đi Kb7 để chặn tốt a.",
+    "beginner": true
+  },
+  {
+    "title": "Thế cờ sáng tác",
+    "prompt": "Tạo đòn ghim để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "pin",
+    "goal": "material",
+    "fen": "4b3/7k/8/4Bp1n/2N5/8/8/5K2 b - - 0 1",
+    "moves": [
+      "Bb5"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "id": "pin-composed-4c11c7fff1e0103b",
+    "source": "original-composition",
+    "hints": [
+      "Tìm đường chéo đi qua Mã c4 và Vua trắng f1.",
+      "Tượng trắng có thể đi tới hoặc bảo vệ ô c4 không?"
+    ],
+    "solution": "Thế cờ biên soạn. Bb5 — Tượng đen từ e8 đến b5, ghim Mã c4 vào Vua f1. Tượng trắng đi trên các ô khác màu nên không thể bảo vệ Mã ở c4. Chẳng hạn, sau Bd6, Đen bắt Mã bằng Bxc4+.",
+    "beginner": true
+  },
+  {
+    "title": "Thế cờ sáng tác",
+    "prompt": "Tạo đòn ghim để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "pin",
+    "goal": "material",
+    "fen": "8/7K/3B4/6Pp/8/4p1B1/1r6/2k5 w - - 0 1",
+    "moves": [
+      "Ba3"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "id": "pin-composed-86a0fc9c79cfae24",
+    "source": "original-composition",
+    "hints": [
+      "Tìm đường chéo đi qua Xe b2 và Vua c1.",
+      "Tượng nào có thể ghim Xe? Tượng còn lại đang khống chế ô phong cấp nào?"
+    ],
+    "solution": "Ba3 — Tượng từ d6 đến a3, ghim Xe b2 vào Vua c1. Nếu Đen đi e2, Trắng bắt Xe bằng Bxb2+. Sau Kxb2, Trắng đã đổi Tượng lấy Xe, còn Tượng g3 khống chế ô phong cấp e1.",
+    "beginner": true
+  },
+  {
+    "title": "Thế cờ sáng tác",
+    "prompt": "Tạo đòn ghim để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "pin",
+    "goal": "material",
+    "fen": "8/4r3/1p1N1p2/8/8/8/1kBK4/8 b - - 0 1",
+    "moves": [
+      "Rd7"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "id": "pin-composed-a4bb939ad1ecc472",
+    "source": "original-composition",
+    "hints": [
+      "Quan sát Mã d6 và Vua d2 trên cột d.",
+      "Nếu Tượng Trắng tấn công Xe sau khi Mã bị ghim, Xe có thể bắt quân nào để thoát khỏi đòn tấn công?"
+    ],
+    "solution": "Thế cờ sáng tác. Rd7 — Xe từ e7 đến d7, ghim Mã d6 vào Vua d2. Nếu Trắng đi Ba4 tấn công Xe, Đen đáp ...Rxd6+, vừa bắt Mã vừa chiếu Vua.",
+    "beginner": true
+  },
+  {
+    "title": "Boikov,Pavel — Dang,H",
+    "prompt": "Tạo đòn ghim để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "pin",
+    "goal": "material",
+    "fen": "8/8/8/4Rr1k/3K3b/8/8/8 b - - 3 71",
+    "moves": [
+      "Bf6"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "8/8/8/5r1k/3KR2b/8/8/8 w - - 2 71",
+      "move": "Re5"
+    },
+    "source": "https://theweekinchess.com/zips/twic1616g.zip",
+    "gameReference": {
+      "id": "c5b6995a000c0c9f",
+      "kind": "game",
+      "ply": 141,
+      "branch": 0,
+      "collection": "pin"
+    },
+    "hints": [
+      "Nếu Đen chơi Rxe5 ngay, Vua Trắng có thể bắt lại.",
+      "Tượng h4 đến đâu để vừa ghim Xe e5 vừa bảo vệ ô e5?"
+    ],
+    "solution": "Bf6 — Tượng Đen từ h4 đến f6, ghim Xe e5 vào Vua d4. Nếu Trắng chơi Ke4, Đen bắt bằng Rxe5+ vì Tượng f6 bảo vệ ô e5.",
+    "beginner": true
+  },
+  {
+    "title": "Dumanuly,Sultanbeibarys — Shuvalov,E",
+    "prompt": "Tạo đòn ghim để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "pin",
+    "goal": "material",
+    "fen": "8/5k2/1p6/8/8/P6P/2N2KP1/r7 b - - 0 58",
+    "moves": [
+      "Ra2"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "8/5k2/1p6/8/8/P3N2P/2p2KP1/r7 w - - 2 58",
+      "move": "Nxc2"
+    },
+    "source": "https://theweekinchess.com/zips/twic1623g.zip",
+    "gameReference": {
+      "id": "7308b3aa94233536",
+      "kind": "game",
+      "ply": 115,
+      "branch": 0,
+      "collection": "pin"
+    },
+    "hints": [
+      "Mã trắng c2 đang tấn công Xe a1 và bảo vệ tốt a3.",
+      "Tìm ô để Xe vừa tránh bị bắt, vừa ghim Mã vào Vua trắng."
+    ],
+    "solution": "Ra2 — Xe đen từ a1 đến a2, vừa tránh nước Nxa1 vừa ghim Mã c2 vào Vua f2. Nếu Trắng đi Kf3, Đen bắt Mã bằng Rxc2.",
+    "beginner": true
+  },
+  {
+    "title": "Bulmaga,I — Schulze,Lara",
+    "prompt": "Tạo đòn ghim để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "pin",
+    "goal": "material",
+    "fen": "8/1K6/3r4/B3k3/1P6/8/8/8 w - - 0 73",
+    "moves": [
+      "Bc7"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "8/1K6/3rk3/B3R3/1P6/8/8/8 b - - 0 72",
+      "move": "Kxe5"
+    },
+    "source": "https://theweekinchess.com/zips/twic1627g.zip",
+    "gameReference": {
+      "id": "50808d27e74b8c78",
+      "kind": "game",
+      "ply": 144,
+      "branch": 0,
+      "collection": "pin"
+    },
+    "hints": [
+      "Quan sát Xe d6 và Vua e5 trên cùng một đường chéo.",
+      "Nếu Vua Đen đến d5, đổi Tượng lấy Xe sẽ để lại thế cờ nào?"
+    ],
+    "solution": "Bc7 — Tượng từ a5 đến c7, ghim Xe d6 vào Vua e5. Trong ván đấu, Đen đáp ...Kd5. Sau Bxd6 Kxd6, Trắng đổi được Tượng lấy Xe và giữ tốt thông b4.",
+    "beginner": true
+  },
+  {
+    "title": "Nguyen Ngoc Truong Son — Mitul K H",
+    "prompt": "Tạo đòn ghim để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "pin",
+    "goal": "material",
+    "fen": "8/p4p1R/2k2p2/2p5/2b5/P3KP2/8/8 w - - 1 37",
+    "moves": [
+      "Rh6"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "8/p4p1R/2k2p2/2p5/8/P3KP2/8/5b2 b - - 0 36",
+      "move": "Bc4"
+    },
+    "source": "https://theweekinchess.com/zips/twic1624g.zip",
+    "gameReference": {
+      "id": "d5bc920e7ca7ad38",
+      "kind": "game",
+      "ply": 72,
+      "branch": 0,
+      "collection": "pin"
+    },
+    "hints": [
+      "Tìm hàng ngang đi qua tốt f6 và Vua c6.",
+      "Nếu Xe đứng trên hàng đó, tốt f6 còn có thể tiến lên f5 không?"
+    ],
+    "solution": "Rh6 — Xe từ h7 đến h6, ghim tốt f6 vào Vua c6. Tốt không thể tiến lên f5. Ván đấu tiếp diễn ...Kb5 Rxf6 Ka4 Rc6 Kxa3 Rxc5. Trắng giữ mức lãi một tốt.",
+    "beginner": true
+  },
+  {
+    "title": "Manvelyan,Mikayel — Ashraf,Artin",
+    "prompt": "Tạo đòn ghim để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "pin",
+    "goal": "material",
+    "fen": "8/1p2b1k1/2p3p1/4N3/8/8/PKP4P/8 b - - 1 38",
+    "moves": [
+      "Bf6"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "8/1p2bNk1/2p3p1/8/8/8/PKP4P/8 w - - 0 38",
+      "move": "Ne5"
+    },
+    "source": "https://theweekinchess.com/zips/twic1622g.zip",
+    "gameReference": {
+      "id": "af78a0ad10ffd459",
+      "kind": "game",
+      "ply": 75,
+      "branch": 0,
+      "collection": "pin"
+    },
+    "hints": [
+      "Nhìn đường chéo đi qua Mã e5 và Vua trắng b2.",
+      "Nếu tốt trắng lên c3, Mã e5 có rời ô được ngay không?"
+    ],
+    "solution": "Bf6 — Tượng đen từ e7 đến f6, ghim Mã e5 vào Vua b2. Nếu Trắng đẩy tốt đến c3 để chắn đường chéo, Đen vẫn bắt được Mã bằng Bxe5.",
+    "beginner": true
+  },
+  {
+    "title": "Mendes Aaron Reeve — Gontcharov,Vladislav",
+    "prompt": "Tạo đòn ghim để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "pin",
+    "goal": "material",
+    "fen": "8/r3pk2/5p2/8/6PP/4PP2/1B4K1/8 b - - 0 44",
+    "moves": [
+      "Ra2"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "8/r3pk2/5p2/8/6PP/2B1PP2/1p4K1/8 w - - 0 44",
+      "move": "Bxb2"
+    },
+    "source": "https://theweekinchess.com/zips/twic1632g.zip",
+    "gameReference": {
+      "id": "8e61bac858e2555c",
+      "kind": "game",
+      "ply": 87,
+      "branch": 0,
+      "collection": "pin"
+    },
+    "hints": [
+      "Tượng b2 khống chế cả a1 lẫn a3. Hãy tìm một ô khác trên cột a.",
+      "Vua g2 đứng cùng hàng với Tượng b2. Xe có thể tận dụng hàng đó như thế nào?"
+    ],
+    "solution": "Ra2 — Xe từ a7 đến a2, ghim Tượng b2 vào Vua g2. Chọn a2 để tránh hai ô a1 và a3 do Tượng b2 khống chế. Trong ván đấu, Trắng đi Kg3 và Đen bắt Tượng bằng ...Rxb2.",
+    "beginner": true
+  },
+  {
+    "title": "Yilmaz,M — Anand,Tsogtbileg",
+    "prompt": "Tạo đòn ghim để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "pin",
+    "goal": "material",
+    "fen": "2R5/3b3k/pp6/5P2/8/2p5/P5P1/6K1 w - - 0 38",
+    "moves": [
+      "Rc7"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "2R5/3N3k/ppb5/5P2/8/2p5/P5P1/6K1 b - - 1 37",
+      "move": "Bxd7"
+    },
+    "source": "https://theweekinchess.com/zips/twic1625g.zip",
+    "gameReference": {
+      "id": "1542da0949a940b3",
+      "kind": "game",
+      "ply": 74,
+      "branch": 0,
+      "collection": "pin"
+    },
+    "hints": [
+      "Xe có thể ghim Tượng d7 trên hàng nào?",
+      "Nếu Đen đẩy c2, hãy tìm cách bắt Tượng kèm chiếu để Xe kịp quay lại cột c."
+    ],
+    "solution": "Rc7 — Xe từ c8 đến c7, ghim Tượng d7 vào Vua h7. Trong ván đấu, Đen đẩy c2. Trắng bắt Tượng bằng Rxd7+ rồi trở lại c7 sau Kh6 để chặn tốt c.",
+    "beginner": true
+  },
+  {
+    "title": "Madaminov,Mukhiddin — Maghsoodloo,Parham",
+    "prompt": "Tạo đòn ghim để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "pin",
+    "goal": "material",
+    "fen": "8/1K6/2r2p2/1k6/6P1/2p1Q3/8/8 w - - 0 75",
+    "moves": [
+      "Qe8"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "8/1K6/2r2p2/1k6/2p3P1/4Q3/8/8 b - - 38 74",
+      "move": "c3"
+    },
+    "source": "https://theweekinchess.com/zips/twic1616g.zip",
+    "gameReference": {
+      "id": "eea862fcf8335da4",
+      "kind": "game",
+      "ply": 148,
+      "branch": 0,
+      "collection": "pin"
+    },
+    "hints": [
+      "Tìm đường chéo đi qua Xe c6 và Vua đen b5.",
+      "Vua trắng b7 đang bảo vệ ô c6."
+    ],
+    "solution": "Phương án phân tích. Qe8 — Hậu trắng từ e3 đến e8, ghim Xe c6 vào Vua b5. Vua trắng b7 bảo vệ ô c6. Nếu Đen đẩy tốt đến c2, Qxc6+ bắt Xe và chiếu, rồi Hậu có thể bắt tốt bằng Qxc2.",
+    "beginner": true
+  },
+  {
+    "title": "Sjugirov,S — Haydon,D",
+    "prompt": "Tạo đòn ghim để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "pin",
+    "goal": "material",
+    "fen": "8/5r2/8/1P1k2p1/4N1P1/4K3/8/8 b - - 4 70",
+    "moves": [
+      "Re7"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "8/5r2/8/1P1k2p1/4N1P1/5K2/8/8 w - - 3 70",
+      "move": "Ke3"
+    },
+    "source": "https://theweekinchess.com/zips/twic1630g.zip",
+    "gameReference": {
+      "id": "aaf3653db24ed56f",
+      "kind": "game",
+      "ply": 139,
+      "branch": 0,
+      "collection": "pin"
+    },
+    "hints": [
+      "Mã e4 đang tấn công Tốt g5.",
+      "Tìm ô để Xe Đen ghim Mã trên cùng cột với Vua e3."
+    ],
+    "solution": "Phương án phân tích. Re7 — Xe Đen từ f7 đến e7, ghim Mã e4 vào Vua e3 và ngăn Mã bắt Tốt g5. Nếu Trắng chơi Kd3, Đen bắt Mã bằng Rxe4.",
+    "beginner": true
+  },
+  {
+    "title": "Mirzhanov,Arlan — Chemin,J",
+    "prompt": "Tạo đòn ghim để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "pin",
+    "goal": "material",
+    "fen": "8/8/4p3/R6p/4n2k/8/1P6/6K1 w - - 0 55",
+    "moves": [
+      "Ra4"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "8/8/4p3/R6p/4n1kP/8/1P6/6K1 b - - 0 54",
+      "move": "Kxh4"
+    },
+    "source": "https://theweekinchess.com/zips/twic1625g.zip",
+    "gameReference": {
+      "id": "2cf0832bb4565627",
+      "kind": "game",
+      "ply": 108,
+      "branch": 0,
+      "collection": "pin"
+    },
+    "hints": [
+      "Mã e4 và Vua h4 nằm trên cùng một hàng.",
+      "So sánh việc bắt tốt h5 với việc đưa Xe xuống hàng 4."
+    ],
+    "solution": "Phương án phân tích. Ra4 — Xe trắng từ a5 đến a4, ghim Mã e4 vào Vua h4. Nếu Đen đẩy tốt đến e5, Rxe4+ vừa bắt Mã vừa chiếu.",
+    "beginner": true
+  },
+  {
+    "title": "Hajialiyev,Islam — Martinez Alcantara,Jose Eduardo",
+    "prompt": "Tạo đòn ghim để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "pin",
+    "goal": "material",
+    "fen": "5r2/6bk/3P4/2p4p/2P4P/8/3R4/4K3 b - - 4 62",
+    "moves": [
+      "Bc3"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "5r2/6bk/3P4/2p4p/2P4P/8/4R3/4K3 w - - 3 62",
+      "move": "Rd2"
+    },
+    "source": "https://theweekinchess.com/zips/twic1629g.zip",
+    "gameReference": {
+      "id": "04832daa6ee46979",
+      "kind": "game",
+      "ply": 123,
+      "branch": 0,
+      "collection": "pin"
+    },
+    "hints": [
+      "Xe d2 đứng giữa Vua e1 và ô c3.",
+      "Nếu Tốt Trắng tiến lên d7, Xe Đen đang kiểm soát ô phong cấp nào?"
+    ],
+    "solution": "Phương án phân tích. Bc3 — Tượng Đen từ g7 đến c3, ghim Xe d2 vào Vua e1. Nếu Trắng chơi d7, Đen bắt Xe bằng Bxd2+. Xe f8 vẫn kiểm soát ô phong cấp d8.",
+    "beginner": true
+  },
+  {
+    "title": "Li,Aiden Linyuan — Rozman,Levy",
+    "prompt": "Khai thác đòn ghim để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "pin",
+    "goal": "material",
+    "fen": "8/3p4/3Pk3/4pbp1/5p1P/5P2/r4BK1/3R4 b - - 0 46",
+    "moves": [
+      "gxh4"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "8/3p4/3Pk3/4pbp1/5p2/5P1P/r4BK1/3R4 w - - 4 46",
+      "move": "h4"
+    },
+    "source": "https://theweekinchess.com/zips/twic1624g.zip",
+    "gameReference": {
+      "id": "5298e83e4cf7fdfc",
+      "kind": "game",
+      "ply": 91,
+      "branch": 0,
+      "collection": "pin"
+    },
+    "hints": [
+      "Quan sát hàng 2 từ Xe đen a2 đến Vua trắng g2.",
+      "Tượng f2 có thể rời hàng 2 để bắt tốt ở h4 không?"
+    ],
+    "solution": "gxh4 — Tốt đen từ g5 bắt tốt ở h4. Tượng trắng f2 không thể bắt lại vì sẽ để Xe a2 chiếu Vua g2. Nếu Trắng đi Kg1 để giải ghim, Đen có thể đẩy tốt thông đến h3.",
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "solverMoves": 1,
+      "sacrificeCount": 0,
+      "reason": "Bắt quân trực tiếp khi quân bảo vệ bị ghim vào Vua."
+    }
+  },
+  {
+    "title": "Lodici,Lorenzo — Prakhar Tripathi",
+    "prompt": "Khai thác đòn ghim để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "pin",
+    "goal": "material",
+    "fen": "r3kb2/2p2pp1/p1p3n1/4p2q/3p2p1/6P1/PPP5/R1BQRNK1 w q - 1 18",
+    "moves": [
+      "Qxd4"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "r3kb2/2p2pp1/p1p3n1/4p3/3p2pq/6P1/PPP5/R1BQRNK1 b q - 0 17",
+      "move": "Qh5"
+    },
+    "source": "https://theweekinchess.com/zips/twic1638g.zip",
+    "gameReference": {
+      "id": "1beb1f0772d42c35",
+      "kind": "game",
+      "ply": 34,
+      "branch": 0,
+      "collection": "pin"
+    },
+    "hints": [
+      "Nhìn dọc cột e từ Xe e1 đến Vua e8. Tốt e5 đang che đường chiếu nào?",
+      "Hậu có thể bắt tốt d4 mà tốt e5 không được phép bắt lại không?"
+    ],
+    "solution": "Qxd4 — Hậu từ d1 bắt tốt d4. Xe e1 ghim tốt e5 vào Vua e8, nên Đen không thể bắt lại bằng exd4. Trong ván đấu, Đen dùng Rd8 tấn công Hậu, và Trắng đáp Qe4.",
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "solverMoves": 1,
+      "sacrificeCount": 0,
+      "reason": "Bắt quân trực tiếp khi quân bảo vệ bị ghim vào Vua."
+    }
+  },
+  {
+    "title": "Samimi,Armin — Cumpe,Lucas",
+    "prompt": "Khai thác đòn ghim để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "pin",
+    "goal": "material",
+    "fen": "r7/p2R1pk1/4rp1p/8/2pb4/8/PPP3PP/1K2R3 w - - 0 25",
+    "moves": [
+      "Rxe6"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "r7/p2R1pk1/4rp1p/8/2pN4/4b3/PPP3PP/1K2R3 b - - 1 24",
+      "move": "Bxd4"
+    },
+    "source": "https://theweekinchess.com/zips/twic1624g.zip",
+    "gameReference": {
+      "id": "674dc9a18e4dc8e3",
+      "kind": "game",
+      "ply": 48,
+      "branch": 0,
+      "collection": "pin"
+    },
+    "hints": [
+      "Xe đen e6 đang dọa bắt Xe e1 và chiếu hết.",
+      "Nhìn hàng 7. Nếu tốt f7 rời hàng này, Vua đen có bị chiếu không?"
+    ],
+    "solution": "Rxe6 — Xe trắng từ e1 bắt Xe ở e6 và hóa giải đe dọa Rxe1#. Tốt đen f7 không thể bắt lại ở e6 vì sẽ để Xe d7 chiếu Vua g7.",
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "solverMoves": 1,
+      "sacrificeCount": 0,
+      "reason": "Bắt quân trực tiếp khi quân bảo vệ bị ghim vào Vua."
+    }
+  },
+  {
+    "title": "Safin,Timur — Czerw,D",
+    "prompt": "Khai thác đòn ghim để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "pin",
+    "goal": "material",
+    "fen": "r4k2/4b3/pqn2p2/1p1pPQr1/7p/7P/PP2N1P1/R4R1K w - - 0 25",
+    "moves": [
+      "Qxg5"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "r4k2/4b3/pqn2p2/1p1pPQBr/7p/7P/PP2N1P1/R4R1K b - - 0 24",
+      "move": "Rxg5"
+    },
+    "source": "https://theweekinchess.com/zips/twic1624g.zip",
+    "gameReference": {
+      "id": "b25caba86a2ba3d7",
+      "kind": "game",
+      "ply": 48,
+      "branch": 0,
+      "collection": "pin"
+    },
+    "hints": [
+      "Xe g5 đang tấn công Hậu f5. Tốt nào đang bảo vệ Xe g5?",
+      "Quan sát Xe f1, tốt f6 và Vua f8 trên cùng một cột."
+    ],
+    "solution": "Qxg5 — Hậu từ f5 bắt Xe ở g5. Xe f1 ghim tốt f6 vào Vua f8, nên Đen không thể đáp ...fxg5. Nếu Đen đi ...Nxe5, Trắng có Qxe5.",
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "solverMoves": 1,
+      "sacrificeCount": 0,
+      "reason": "Bắt quân trực tiếp khi quân bảo vệ bị ghim vào Vua."
+    }
+  },
+  {
+    "title": "Tanenbaum,Zachary — Dyulgerov,Volen",
+    "prompt": "Khai thác đòn ghim để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "pin",
+    "goal": "material",
+    "fen": "8/p4pk1/1p3p2/6r1/1q5Q/5PP1/5RKP/8 b - - 1 43",
+    "moves": [
+      "Qxh4"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "8/p4pk1/1p3p2/6r1/1q6/5PPQ/5RKP/8 w - - 0 43",
+      "move": "Qh4"
+    },
+    "source": "https://theweekinchess.com/zips/twic1617g.zip",
+    "gameReference": {
+      "id": "f912718ed489d4e7",
+      "kind": "game",
+      "ply": 85,
+      "branch": 0,
+      "collection": "pin"
+    },
+    "hints": [
+      "Tốt nào của Trắng có vẻ bảo vệ Hậu h4?",
+      "Nhìn dọc cột g để kiểm tra Tốt g3 có thể bắt lại hay không."
+    ],
+    "solution": "Qxh4 — Hậu Đen từ b4 bắt Hậu h4. Xe g5 ghim Tốt g3 vào Vua g2, nên Trắng không thể đáp gxh4. Đen thắng Hậu.",
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "solverMoves": 1,
+      "sacrificeCount": 0,
+      "reason": "Bắt quân trực tiếp khi quân bảo vệ bị ghim vào Vua."
+    }
+  },
+  {
+    "title": "Bolanos,Fernando — Nosach,Roman Al",
+    "prompt": "Khai thác đòn ghim để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "pin",
+    "goal": "material",
+    "fen": "1r6/kb1RR3/1p4pp/p1pr4/8/3P2P1/PPP2P2/6K1 w - - 0 30",
+    "moves": [
+      "Rxd5"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "1r6/kb1RR3/1p4pp/p1pB1r2/8/3P2P1/PPP2P2/6K1 b - - 0 29",
+      "move": "Rxd5"
+    },
+    "source": "https://theweekinchess.com/zips/twic1633g.zip",
+    "gameReference": {
+      "id": "ac76c4893c04db9a",
+      "kind": "game",
+      "ply": 58,
+      "branch": 0,
+      "collection": "pin"
+    },
+    "hints": [
+      "Xe e7 và Vua đen a7 nằm trên cùng một hàng.",
+      "Tượng b7 có thể rời hàng 7 để bắt Xe ở d5 không?"
+    ],
+    "solution": "Rxd5 — Xe trắng từ d7 bắt Xe ở d5. Tượng đen b7 không thể bắt lại vì sẽ để Xe e7 chiếu Vua a7. Nếu Vua đen sang a6 để giải ghim, Rd6 đưa Xe ra khỏi đường bắt của Tượng.",
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "solverMoves": 1,
+      "sacrificeCount": 0,
+      "reason": "Bắt quân trực tiếp khi quân bảo vệ bị ghim vào Vua."
+    }
+  },
+  {
+    "title": "Pribelszky,Bence — Santiago Vilca,Christian Amilca",
+    "prompt": "Khai thác đòn ghim để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "pin",
+    "goal": "material",
+    "fen": "5rk1/7p/1p1P2p1/1Pp5/8/5RP1/2r3BK/8 b - - 0 48",
+    "moves": [
+      "Rxf3"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "5rk1/7p/1p4p1/1PpP4/8/5RP1/2r3BK/8 w - - 0 48",
+      "move": "d6"
+    },
+    "source": "https://theweekinchess.com/zips/twic1638g.zip",
+    "gameReference": {
+      "id": "2a4356cfdcd807f7",
+      "kind": "game",
+      "ply": 95,
+      "branch": 0,
+      "collection": "pin"
+    },
+    "hints": [
+      "Xe c2 và Vua h2 cùng đứng trên hàng nào?",
+      "Tượng g2 sẽ để hở đường chiếu nào nếu rời hàng 2 để bắt ở f3?"
+    ],
+    "solution": "Rxf3 — Xe Đen từ f8 bắt Xe f3. Xe c2 ghim Tượng g2 vào Vua h2, nên Trắng không thể đáp Bxf3. Trong ván đấu, sau d7 Rd3 d8=Q+, Xe Đen bắt Hậu mới phong bằng Rxd8.",
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "solverMoves": 1,
+      "sacrificeCount": 0,
+      "reason": "Bắt quân trực tiếp khi quân bảo vệ bị ghim vào Vua."
+    }
+  },
+  {
+    "title": "Sarana,A — Daneshvar,Bardiya",
+    "prompt": "Khai thác đòn ghim để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "pin",
+    "goal": "material",
+    "fen": "5rk1/pp2brpp/Pqb1Qn2/8/1nBP1B2/2N5/1P3PPP/R2R2K1 w - - 1 18",
+    "moves": [
+      "Qxe7"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "2r3k1/pp2brpp/Pqb1Qn2/8/1nBP1B2/2N5/1P3PPP/R2R2K1 b - - 0 17",
+      "move": "Rf8"
+    },
+    "source": "https://theweekinchess.com/zips/twic1640g.zip",
+    "gameReference": {
+      "id": "85faed85ec67d236",
+      "kind": "game",
+      "ply": 34,
+      "branch": 0,
+      "collection": "pin"
+    },
+    "hints": [
+      "Xe f7 có vẻ bảo vệ Tượng e7.",
+      "Nếu Xe bắt lại trên e7, đường chéo c4–g8 sẽ mở ra thế nào?"
+    ],
+    "solution": "Qxe7 — Hậu từ e6 bắt Tượng e7. Tượng c4 ghim Xe f7 vào Vua g8, nên Đen không thể đáp …Rxe7. Nếu Đen chơi …Nfd5, Hậu có thể lùi về e5 để bảo vệ Tượng f4.",
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "solverMoves": 1,
+      "sacrificeCount": 0,
+      "reason": "Bắt quân trực tiếp khi quân bảo vệ bị ghim vào Vua."
+    }
+  },
+  {
+    "title": "Cunha,Lucas Aguiar — Yaniv,Ori",
+    "prompt": "Khai thác đòn ghim để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "pin",
+    "goal": "material",
+    "fen": "8/5p2/3Pk1pp/2r1P3/6P1/1rBK4/2R4P/8 b - - 12 47",
+    "moves": [
+      "Rxe5"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "8/5p2/3Pk1pp/2r1P3/6P1/1rBK4/4R2P/8 w - - 11 47",
+      "move": "Rc2"
+    },
+    "source": "https://theweekinchess.com/zips/twic1637g.zip",
+    "gameReference": {
+      "id": "a8f295df6bba8f01",
+      "kind": "game",
+      "ply": 93,
+      "branch": 0,
+      "collection": "pin"
+    },
+    "hints": [
+      "Quan sát hàng 3 từ Xe đen b3 đến Vua trắng d3.",
+      "Nếu Tượng c3 rời hàng 3 để bắt ở e5, Vua trắng có bị chiếu không?"
+    ],
+    "solution": "Rxe5 — Xe đen từ c5 bắt tốt ở e5. Tượng trắng c3 không thể bắt lại vì sẽ để Xe b3 chiếu Vua d3. Sau Kc4, phương án phân tích Reb5 đưa Xe e5 về cột b để bảo vệ Xe b3.",
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "solverMoves": 1,
+      "sacrificeCount": 0,
+      "reason": "Bắt quân trực tiếp khi quân bảo vệ bị ghim vào Vua."
+    }
+  },
+  {
+    "title": "Grot,Blazej — Mitrabha,G",
+    "prompt": "Khai thác đòn ghim để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "pin",
+    "goal": "material",
+    "fen": "r1b3k1/ppp1bp2/6pp/8/2B1PN2/2P2P2/PP3P2/3R2K1 w - - 2 24",
+    "moves": [
+      "Nxg6"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "r5k1/ppp1bp2/6pp/8/2B1PN2/2P2P1b/PP3P2/3R2K1 b - - 1 23",
+      "move": "Bc8"
+    },
+    "source": "https://theweekinchess.com/zips/twic1632g.zip",
+    "gameReference": {
+      "id": "b45e4b23ee728855",
+      "kind": "game",
+      "ply": 46,
+      "branch": 0,
+      "collection": "pin"
+    },
+    "hints": [
+      "Nhìn đường chéo từ Tượng c4 đến Vua đen g8.",
+      "Tốt f7 có thể rời đường chéo để bắt Mã ở g6 không?"
+    ],
+    "solution": "Nxg6 — Mã trắng từ f4 bắt tốt ở g6. Tốt đen f7 không thể bắt lại vì sẽ để Tượng c4 chiếu Vua g8. Sau Bf6, trong phương án phân tích, Mã có thể trở về f4 bằng Nf4.",
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "solverMoves": 1,
+      "sacrificeCount": 0,
+      "reason": "Bắt quân trực tiếp khi quân bảo vệ bị ghim vào Vua."
+    }
+  },
+  {
+    "title": "Fernandez,Li — Tang,Dylan",
+    "prompt": "Khai thác đòn ghim để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "pin",
+    "goal": "material",
+    "fen": "8/p4r1p/2p5/1pkbRp2/5R2/Pp3P2/2P2KPP/8 w - - 0 28",
+    "moves": [
+      "cxb3"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "8/p4r1p/2p5/1pkbRp2/2p2R2/PP3P2/2P2KPP/8 b - - 2 27",
+      "move": "cxb3"
+    },
+    "source": "https://theweekinchess.com/zips/twic1626g.zip",
+    "gameReference": {
+      "id": "a940038b0b7d41df",
+      "kind": "game",
+      "ply": 54,
+      "branch": 0,
+      "collection": "pin"
+    },
+    "hints": [
+      "Tốt đen ở b3 có thể tiến thêm đến đâu?",
+      "Quan sát đường ghim từ Xe e5 qua Tượng d5 đến Vua c5."
+    ],
+    "solution": "cxb3 — Tốt trắng từ c2 bắt tốt ở b3. Xe e5 ghim Tượng d5 vào Vua c5, nên Đen không thể đáp Bxb3. Nếu Vua đen đi Kd6 để giải ghim, Trắng có thể đưa Xe về e3 để bảo vệ tốt b3.",
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "solverMoves": 1,
+      "sacrificeCount": 0,
+      "reason": "Bắt quân trực tiếp khi quân bảo vệ bị ghim vào Vua."
+    }
+  },
+  {
+    "title": "Nguyen Ngoc Truong Son — Esipenko,Andrey",
+    "prompt": "Khai thác đòn ghim để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "pin",
+    "goal": "material",
+    "fen": "7k/6p1/1N3p1p/8/2P1PP1P/6P1/2r2nBK/8 b - - 2 56",
+    "moves": [
+      "Nxe4"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "7k/6p1/1N3p1p/8/2P1PP1P/6PK/2r2nB1/8 w - - 1 56",
+      "move": "Kh2"
+    },
+    "source": "https://theweekinchess.com/zips/twic1638g.zip",
+    "gameReference": {
+      "id": "8ec5c7b520fc40c1",
+      "kind": "game",
+      "ply": 111,
+      "branch": 0,
+      "collection": "pin"
+    },
+    "hints": [
+      "Quan sát Xe c2, Tượng g2 và Vua h2 trên hàng hai.",
+      "Nếu Mã bắt tốt e4, Tượng g2 có thể bắt lại mà vẫn che được đường chiếu vào Vua không?"
+    ],
+    "solution": "Nxe4 — Mã từ f2 bắt tốt ở e4. Xe c2 ghim Tượng g2 vào Vua h2, nên Trắng không thể đáp Bxe4. Trong ván đấu, Trắng đi Nd5 và Đen bắt thêm tốt bằng ...Rxc4.",
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "solverMoves": 1,
+      "sacrificeCount": 0,
+      "reason": "Bắt quân trực tiếp khi quân bảo vệ bị ghim vào Vua."
+    }
+  },
+  {
+    "title": "Matviishen,Viktor — Ostrovskiy,Al",
+    "prompt": "Khai thác đòn ghim để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "pin",
+    "goal": "material",
+    "fen": "8/8/8/1R1bk2r/PKp3R1/8/8/8 w - - 15 76",
+    "moves": [
+      "Rxc4"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "8/8/8/1R1b3r/PKpk2R1/8/8/8 b - - 14 75",
+      "move": "Ke5"
+    },
+    "source": "https://theweekinchess.com/zips/twic1624g.zip",
+    "gameReference": {
+      "id": "050742f9e3733b24",
+      "kind": "game",
+      "ply": 150,
+      "branch": 0,
+      "collection": "pin"
+    },
+    "hints": [
+      "Xe b5 ghim Tượng d5 vào Vua e5 theo hàng nào?",
+      "So sánh nước bắt tốt c4 bằng Xe với nước bắt bằng Vua. Tượng d5 vẫn khống chế ô nào?"
+    ],
+    "solution": "Rxc4 — Xe từ g4 bắt tốt c4. Xe b5 ghim Tượng d5 vào Vua e5, nên Đen không thể bắt lại bằng Bxc4. Tượng d5 vẫn khống chế c4, vì vậy Vua Trắng không thể bắt tốt ở ô này.",
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "solverMoves": 1,
+      "sacrificeCount": 0,
+      "reason": "Bắt quân trực tiếp khi quân bảo vệ bị ghim vào Vua."
+    }
+  },
+  {
+    "title": "Yip,Carissa — Kejna,Piotr",
+    "prompt": "Khai thác đòn ghim để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "pin",
+    "goal": "material",
+    "fen": "3r4/2k3b1/p2p2b1/2pP4/1P2pBB1/4K3/P7/5R2 w - - 0 42",
+    "moves": [
+      "bxc5"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "3r4/2k3b1/pp1p2b1/2PP4/1P2pBB1/4K3/P7/5R2 b - - 0 41",
+      "move": "bxc5"
+    },
+    "source": "https://theweekinchess.com/zips/twic1638g.zip",
+    "gameReference": {
+      "id": "594c53ed6f5eb82e",
+      "kind": "game",
+      "ply": 82,
+      "branch": 0,
+      "collection": "pin"
+    },
+    "hints": [
+      "Tốt d6 có đang che đường chiếu của Tượng f4 không?",
+      "Tốt b4 có thể bắt ở c5 mà không bị tốt d6 bắt lại không?"
+    ],
+    "solution": "bxc5 — Tốt trắng từ b4 bắt tốt ở c5. Tượng f4 ghim tốt d6 vào Vua c7, nên Đen không thể đáp dxc5. Nếu Đen lui Tượng về e8, Trắng có thể bắt tiếp ở d6 và chiếu Vua.",
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "solverMoves": 1,
+      "sacrificeCount": 0,
+      "reason": "Bắt quân trực tiếp khi quân bảo vệ bị ghim vào Vua."
+    }
+  },
+  {
+    "title": "Omonov,Asrorjon — Azali,Tannaz",
+    "prompt": "Khai thác đòn ghim để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "pin",
+    "goal": "material",
+    "fen": "8/3r4/4k3/p2n3p/P1B2pp1/6P1/5KP1/3R4 w - - 0 48",
+    "moves": [
+      "gxf4"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "8/3r4/4k3/p2np2p/P1B2Pp1/6P1/5KP1/3R4 b - - 0 47",
+      "move": "exf4"
+    },
+    "source": "https://theweekinchess.com/zips/twic1618g.zip",
+    "gameReference": {
+      "id": "310bce989f8daac9",
+      "kind": "game",
+      "ply": 94,
+      "branch": 0,
+      "collection": "pin"
+    },
+    "hints": [
+      "Tốt đen f4 đang tấn công tốt trắng g3.",
+      "Nhìn đường chéo c4–d5–e6. Mã d5 có thể bắt ở f4 không?"
+    ],
+    "solution": "gxf4 — Tốt trắng từ g3 bắt tốt ở f4. Mã đen d5 không thể bắt lại vì sẽ để Tượng c4 chiếu Vua e6.",
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "solverMoves": 1,
+      "sacrificeCount": 0,
+      "reason": "Bắt quân trực tiếp khi quân bảo vệ bị ghim vào Vua."
+    }
+  },
+  {
+    "title": "Alonso Moyano,J — Winkels,M",
+    "prompt": "Khai thác đòn ghim để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "pin",
+    "goal": "material",
+    "fen": "r2qk2r/pp2bppp/4b3/3n3Q/2Bp4/8/PPPP1PPP/R1B1R1K1 w kq - 4 12",
+    "moves": [
+      "Rxe6"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "r2qkb1r/pp3ppp/4b3/3n3Q/2Bp4/8/PPPP1PPP/R1B1R1K1 b kq - 3 11",
+      "move": "Be7"
+    },
+    "source": "https://theweekinchess.com/zips/twic1644g.zip",
+    "gameReference": {
+      "id": "b3f4fdfb0a419765",
+      "kind": "game",
+      "ply": 22,
+      "branch": 0,
+      "collection": "pin"
+    },
+    "hints": [
+      "Hãy nhìn đường chéo h5–e8 trước khi xét nước ...fxe6.",
+      "Nếu Vua Đen rời e8 bằng cách nhập thành, Xe e6 có thể về đâu?"
+    ],
+    "solution": "Rxe6 — Xe từ e1 bắt Tượng ở e6. Hậu h5 ghim tốt f7 vào Vua e8, nên Đen chưa thể đáp ...fxe6. Phương án phân tích. Nếu Đen nhập thành cánh Vua, Trắng có thể đi Re1 để giữ Xe và phần vật chất vừa thắng.",
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "solverMoves": 1,
+      "sacrificeCount": 0,
+      "reason": "Bắt quân trực tiếp khi quân bảo vệ bị ghim vào Vua."
+    }
+  },
+  {
+    "title": "Florescu,C — Kim,Se",
+    "prompt": "Khai thác đòn ghim để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "pin",
+    "goal": "material",
+    "fen": "1r6/3bk3/3b3p/3B2p1/p5P1/P6P/1P1R1P2/1K6 b - - 1 36",
+    "moves": [
+      "Bxa3"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "1r6/3bkB2/3b3p/6p1/p5P1/P6P/1P1R1P2/1K6 w - - 0 36",
+      "move": "Bd5"
+    },
+    "source": "https://theweekinchess.com/zips/twic1634g.zip",
+    "gameReference": {
+      "id": "0505f73cd2efa623",
+      "kind": "game",
+      "ply": 71,
+      "branch": 0,
+      "collection": "pin"
+    },
+    "hints": [
+      "Quan sát cột b từ Xe đen b8 đến Vua trắng b1.",
+      "So sánh nước tốt bắt ở a3 với nước tốt tiến đến b3."
+    ],
+    "solution": "Bxa3 — Tượng đen từ d6 bắt tốt ở a3. Tốt trắng b2 không thể bắt lại vì sẽ để Xe b8 chiếu Vua b1. Tốt b2 vẫn có thể tiến đến b3 trên cột b.",
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "solverMoves": 1,
+      "sacrificeCount": 0,
+      "reason": "Bắt quân trực tiếp khi quân bảo vệ bị ghim vào Vua."
+    }
+  },
+  {
+    "title": "Cervello Tost,Ferran — Barbero Senidic,A",
+    "prompt": "Khai thác đòn ghim để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "pin",
+    "goal": "material",
+    "fen": "8/2q2k1p/4p3/pp2RPP1/8/7P/7K/4R3 b - - 2 49",
+    "moves": [
+      "exf5"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "8/2q2k1p/4p3/pp3PP1/4R3/7P/7K/4R3 w - - 1 49",
+      "move": "Re5"
+    },
+    "source": "https://theweekinchess.com/zips/twic1637g.zip",
+    "gameReference": {
+      "id": "d5f13a1b27240bb7",
+      "kind": "game",
+      "ply": 97,
+      "branch": 0,
+      "collection": "pin"
+    },
+    "hints": [
+      "Xe e5 vừa che đường chiếu của Hậu c7. Đường chéo ấy kết thúc ở đâu?",
+      "Tốt e6 có thể bắt ở f5 trước khi Vua trắng rời đường ghim không?"
+    ],
+    "solution": "exf5 — Tốt đen từ e6 bắt tốt ở f5. Hậu c7 ghim Xe e5 vào Vua h2, nên Trắng không thể bắt lại bằng Rxf5+. Trong ván đấu, sau Kg1, Đen đưa Vua đến g6 để chặn tốt g5.",
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "solverMoves": 1,
+      "sacrificeCount": 0,
+      "reason": "Bắt quân trực tiếp khi quân bảo vệ bị ghim vào Vua."
+    }
+  },
+  {
+    "title": "Lukasiewicz,Krzysztof — Gibala,Adam",
+    "prompt": "Khai thác đòn ghim để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "pin",
+    "goal": "material",
+    "fen": "5r2/2R5/P5k1/3r2P1/1p3P2/5K2/7P/8 b - - 0 53",
+    "moves": [
+      "Rxg5"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "5r2/2b1R3/P5k1/3r2P1/1p3P2/5K2/7P/8 w - - 2 53",
+      "move": "Rxc7"
+    },
+    "source": "https://theweekinchess.com/zips/twic1644g.zip",
+    "gameReference": {
+      "id": "a86fdfd28d54420e",
+      "kind": "game",
+      "ply": 105,
+      "branch": 0,
+      "collection": "pin"
+    },
+    "hints": [
+      "Xe đen f8 và Vua trắng f3 nằm trên cùng một cột.",
+      "Nếu Xe d5 bắt ở g5, tốt f4 có thể bắt lại không?"
+    ],
+    "solution": "Rxg5 — Xe đen từ d5 bắt tốt ở g5. Tốt trắng f4 không thể bắt lại vì sẽ để Xe f8 chiếu Vua f3. Nếu Trắng đẩy a7, trong phương án phân tích Đen có thể đáp Ra5 để tấn công tốt thông.",
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "solverMoves": 1,
+      "sacrificeCount": 0,
+      "reason": "Bắt quân trực tiếp khi quân bảo vệ bị ghim vào Vua."
+    }
+  },
+  {
+    "title": "Banawa,Joe — Begunov,K",
+    "prompt": "Khai thác đòn ghim để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "pin",
+    "goal": "material",
+    "fen": "r3k2r/pp4pp/2p2n2/2np4/1b3B2/1P2PP1P/1P1N1P2/3RKB1R b Kkq - 2 16",
+    "moves": [
+      "Nxb3"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "r3k2r/pp4pp/2p2n2/2np4/1b3B2/1P2PP1P/1P1N1P2/R3KB1R w KQkq - 1 16",
+      "move": "Rd1"
+    },
+    "source": "https://theweekinchess.com/zips/twic1615g.zip",
+    "gameReference": {
+      "id": "6e48be9539f94a46",
+      "kind": "game",
+      "ply": 31,
+      "branch": 0,
+      "collection": "pin"
+    },
+    "hints": [
+      "Cả hai Mã đều có thể nhảy tới b3 theo cách đi của quân Mã. Mã nào đang bị ghim?",
+      "Hãy nhìn đường chéo b4–e1 trước khi xét nước bắt lại trên b3."
+    ],
+    "solution": "Nxb3 — Mã từ c5 bắt tốt ở b3. Tượng b4 ghim Mã d2 vào Vua e1, nên Trắng không thể đáp Nxb3.",
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "solverMoves": 1,
+      "sacrificeCount": 0,
+      "reason": "Bắt quân trực tiếp khi quân bảo vệ bị ghim vào Vua."
+    }
+  },
+  {
+    "title": "Atanasov,Anthony — Khodko,Yurii N.",
+    "prompt": "Khai thác đòn ghim để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "pin",
+    "goal": "material",
+    "fen": "2rr2kb/p4p1p/1p4pP/8/3PqB2/3R4/PP1Q1P2/1K1R4 b - - 6 24",
+    "moves": [
+      "Rxd4"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "2rr2kb/p4p1p/1p4pP/8/3PqB2/3R4/PP1Q1P2/2KR4 w - - 5 24",
+      "move": "Kb1"
+    },
+    "source": "https://theweekinchess.com/zips/twic1638g.zip",
+    "gameReference": {
+      "id": "03bdf89f10d4a932",
+      "kind": "game",
+      "ply": 47,
+      "branch": 0,
+      "collection": "pin"
+    },
+    "hints": [
+      "Tìm đường chéo từ Hậu e4 đến Vua b1. Xe Trắng nào đang che đường chiếu?",
+      "Xét nước bắt tốt d4 bằng Xe và kiểm tra xem Xe d3 có thể bắt lại không."
+    ],
+    "solution": "Rxd4 — Xe Đen từ d8 bắt tốt d4. Hậu e4 ghim Xe d3 vào Vua b1, nên Trắng không thể bắt lại bằng Rxd4. Trong ván đấu, sau Be3 tấn công Xe, Đen chuyển Xe lên d5.",
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "solverMoves": 1,
+      "sacrificeCount": 0,
+      "reason": "Bắt quân trực tiếp khi quân bảo vệ bị ghim vào Vua."
+    }
+  },
+  {
+    "title": "Andreikin,D — Esipenko,Andrey",
+    "prompt": "Khai thác đòn ghim để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "pin",
+    "goal": "material",
+    "fen": "8/2r1kp1R/1rb1p1p1/R2p2P1/p2K1P2/2P1P3/2B3P1/8 w - - 0 43",
+    "moves": [
+      "Bxg6"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "1r6/2r1kp1R/1Pb1p1p1/R2p2P1/p2K1P2/2P1P3/2B3P1/8 b - - 0 42",
+      "move": "Rxb6"
+    },
+    "source": "https://theweekinchess.com/zips/twic1622g.zip",
+    "gameReference": {
+      "id": "f45966d1d9bdcbf3",
+      "kind": "game",
+      "ply": 84,
+      "branch": 0,
+      "collection": "pin"
+    },
+    "hints": [
+      "Nhìn hàng 7 từ Xe h7 qua tốt f7 đến Vua e7.",
+      "Tượng c2 có thể bắt ở g6 mà tốt f7 không được phép bắt lại không?"
+    ],
+    "solution": "Bxg6 — Tượng trắng từ c2 bắt tốt ở g6. Xe h7 ghim tốt f7 vào Vua e7, nên Đen không thể đáp fxg6. Nếu Vua đen đi Kd6, Trắng có thể thắng thêm tốt f7 qua phương án Rxf7 Rxf7 Bxf7.",
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "solverMoves": 1,
+      "sacrificeCount": 0,
+      "reason": "Bắt quân trực tiếp khi quân bảo vệ bị ghim vào Vua."
+    }
+  },
+  {
+    "title": "Mahdavi,Reza — Sonis,Francesco",
+    "prompt": "Khai thác đòn ghim để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "pin",
+    "goal": "material",
+    "fen": "8/1bp5/p2p3b/1p1P1k2/5N2/P1PNK3/1P6/8 b - - 18 50",
+    "moves": [
+      "Bxd5"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "8/1bp5/p2p3b/1p1P1k2/5N2/P1P1K3/1P3N2/8 w - - 17 50",
+      "move": "Nd3"
+    },
+    "source": "https://theweekinchess.com/zips/twic1631g.zip",
+    "gameReference": {
+      "id": "ff4f71c6d64e15b3",
+      "kind": "game",
+      "ply": 99,
+      "branch": 0,
+      "collection": "pin"
+    },
+    "hints": [
+      "Tượng h6, Mã f4 và Vua e3 cùng nằm trên đường chéo nào?",
+      "Nếu Tượng b7 bắt tốt d5, Mã f4 có thể rời đường chéo để bắt lại không?"
+    ],
+    "solution": "Bxd5 — Tượng Đen từ b7 bắt tốt d5. Tượng h6 ghim Mã f4 vào Vua e3, nên Trắng không thể đáp Nxd5. Trong ván đấu, sau Kd4 tháo ghim và tấn công Tượng, Đen chuyển Tượng sang e4, ô được Vua f5 bảo vệ.",
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "solverMoves": 1,
+      "sacrificeCount": 0,
+      "reason": "Bắt quân trực tiếp khi quân bảo vệ bị ghim vào Vua."
+    }
+  },
+  {
+    "title": "Mekhitarian,K — Deac,Bogdan-Daniel",
+    "prompt": "Khai thác đòn ghim để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "pin",
+    "goal": "material",
+    "fen": "8/q6k/p7/3pN2r/3P2R1/8/P5P1/5RK1 b - - 2 42",
+    "moves": [
+      "Rxe5"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "8/q6k/p5R1/3pN2r/3P4/8/P5P1/5RK1 w - - 1 42",
+      "move": "Rg4"
+    },
+    "source": "https://theweekinchess.com/zips/twic1630g.zip",
+    "gameReference": {
+      "id": "26f66a1bc8d9c070",
+      "kind": "game",
+      "ply": 83,
+      "branch": 0,
+      "collection": "pin"
+    },
+    "hints": [
+      "Theo dõi đường chéo a7–g1. Quân nào đang che đường chiếu của Hậu đen?",
+      "Nếu Xe h5 bắt Mã e5, tốt d4 có được phép bắt lại không?"
+    ],
+    "solution": "Rxe5 — Xe đen từ h5 bắt Mã ở e5. Hậu a7 ghim tốt d4 vào Vua g1, nên Trắng không thể đáp dxe5. Nếu Trắng chiếu bằng Rh4+, Đen có thể đưa Vua đến g6 và giữ được Mã vừa thắng.",
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "solverMoves": 1,
+      "sacrificeCount": 0,
+      "reason": "Bắt quân trực tiếp khi quân bảo vệ bị ghim vào Vua."
+    }
   }
 ]

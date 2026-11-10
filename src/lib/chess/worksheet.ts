@@ -1,5 +1,6 @@
 import { Chess } from 'chess.js';
 import type { DrawExercise } from './draw-practice';
+import { drawLevelDescriptions, type PracticeLevel } from './draw-levels';
 import { POSITIONS_PER_PAGE } from './worksheet-layout';
 
 export type WorksheetTopic = {
@@ -31,8 +32,8 @@ export function worksheetTopicsFromLibrary(
       group: page.group,
     }));
 }
-export const worksheetLevels = ['Beginner', 'A', 'B', 'C', 'C*', 'D'] as const;
-export type WorksheetLevel = (typeof worksheetLevels)[number];
+export { practiceLevels as worksheetLevels } from './draw-levels';
+export type WorksheetLevel = PracticeLevel;
 export type WorksheetSection = {
   id: number;
   topic: string;
@@ -147,7 +148,8 @@ export function explainLine(fen: string, moves: string[], numbered = false) {
   });
 }
 export function previousMoveLabel(
-  e: Pick<DrawExercise, 'fen' | 'previousMove'>
+  e: Pick<DrawExercise, 'fen' | 'previousMove'>,
+  style: 'full' | 'compact' = 'full'
 ) {
   if (!e.previousMove) return '';
   const b = new Chess(e.previousMove.fen);
@@ -160,8 +162,24 @@ export function previousMoveLabel(
       fields[3] = '-';
     return fields.join(' ');
   };
-  if (!b.move(e.previousMove.move) || fen(b) !== fen(new Chess(e.fen)))
+  const move = b.move(e.previousMove.move);
+  if (!move || fen(b) !== fen(new Chess(e.fen)))
     throw new Error('Nước đi trước không khớp thế cờ.');
+  if (style === 'compact') {
+    const side = move.color === 'w' ? 'trắng' : 'đen';
+    let description = `${names[move.piece]} ${side} vừa đi ${move.from} → ${move.to}`;
+    if (move.flags.includes('k') || move.flags.includes('q')) {
+      const wing = move.flags.includes('k') ? 'Vua' : 'Hậu';
+      description = `${move.color === 'w' ? 'Trắng' : 'Đen'} vừa nhập thành cánh ${wing}`;
+    }
+    if (move.flags.includes('e'))
+      description += `, bắt Tốt qua đường ở ${move.to[0]}${move.from[1]}`;
+    else if (move.captured) description += `, bắt ${names[move.captured]}`;
+    if (move.promotion) description += `, phong thành ${names[move.promotion]}`;
+    if (move.san.endsWith('#')) description += ', chiếu hết';
+    else if (move.san.endsWith('+')) description += ', chiếu Vua';
+    return `${description} (${move.san})`;
+  }
   return explainLine(e.previousMove.fen, [e.previousMove.move])[0].replace(
     ':',
     ' vừa đi:'
@@ -174,6 +192,9 @@ export const defaultWorksheetFooter: WorksheetFooter = {
   phone: '0912333224',
   address: '29 Lê Thị Hồng Gấm, xã Đức Trọng, tỉnh Lâm Đồng',
 };
+export function bookFooterName(name: string) {
+  return name === defaultWorksheetFooter.name ? 'LIMA Chess' : name;
+}
 export function worksheetFooterText(footer: WorksheetFooter) {
   const clean = (value: string) => value.trim().replace(/\s+/g, ' ');
   return [clean(footer.name), clean(footer.phone), clean(footer.address)]
@@ -182,13 +203,12 @@ export function worksheetFooterText(footer: WorksheetFooter) {
 }
 
 export const worksheetLevelGuide: Record<WorksheetLevel, string> = {
+  ...drawLevelDescriptions,
   Beginner:
     'Dành cho người mới biết đi quân và bắt quân. Thế cờ ít quân, ý tưởng đơn giản và dễ nhận biết.',
   A: 'Vận dụng trực tiếp ý tưởng chiến thuật; không thí quân hoặc tính toán dài.',
   B: 'Có bước chuẩn bị đơn giản hoặc cần phối hợp quân trong một phương án ngắn.',
   C: 'Thí quân đơn giản để tạo cơ hội chiến thuật và đạt mục tiêu của bài tập.',
-  'C*': 'Không thí quân; cần tính sâu hơn cấp B thêm 2-3 nước đi của mình.',
-  D: 'Thí quân phức tạp, phối hợp nhiều ý tưởng chiến thuật; cần tính trên 3 nước đi của mình.',
 };
 export const worksheetClosingReview = {
   skills: [
@@ -208,15 +228,19 @@ export const worksheetClosingReview = {
 };
 export type WorksheetBookOptions = {
   showContents?: boolean;
+  showAddressOnEveryPage?: boolean;
   showLevelGuide?: boolean;
   showNotationGuide?: boolean;
   introduction: { title: string; body: string };
   closing: { title: string; body: string };
+  compilation?: { date?: string; version?: string; internalOnly?: boolean };
 };
 export const defaultBookOptions: WorksheetBookOptions = {
   showContents: true,
+  showAddressOnEveryPage: false,
   showLevelGuide: true,
   showNotationGuide: true,
+  compilation: { date: '', version: '1.0', internalOnly: true },
   introduction: {
     title: 'Hướng dẫn luyện tập',
     body: 'Quan sát: Xác định bên đến lượt và đe dọa trực tiếp.\nLựa chọn: Xét các nước chiếu, bắt quân, đe dọa và nước chuẩn bị cần thiết.\nTính toán: Xét nước đi tốt nhất của đối phương rồi tiếp tục phương án.\nKiểm tra: Xác định kết quả cuối; khi thắng vật chất, tính cả khả năng đối phương bắt lại.\n\nGhi phương án dưới bàn cờ, gồm cả nước đi của đối phương; người mới học có thể vẽ mũi tên.',

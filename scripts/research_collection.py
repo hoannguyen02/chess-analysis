@@ -72,7 +72,7 @@ def line_options(start, pv):
                         sacrifices.append({'ply': offered, 'piece': victim.symbol().upper()})
                 own = (end + 2) // 2
                 level = ('A' if own <= 2 else 'B' if own == 3 else 'C*') if not sacrifices else (
-                    'C' if own <= 3 and len(sacrifices) == 1 else 'D' if own > 3 else None)
+                    'E' if own >= 6 else 'D' if own >= 4 else 'C' if len(sacrifices) == 1 else None)
                 if not level or (not sacrifices and own > 5):
                     continue
                 yield {'moves': sans[:end + 1], 'level': level, 'solverMoves': own,

@@ -187,5 +187,46 @@ class CandidateBank(unittest.TestCase):
                 self.assertEqual(next(line_options(board,pv),None),miner.inspect(board,pv))
 
 
+class ForkGeometryCache(unittest.TestCase):
+    def test_complete_game_geometry_reuses_positive_and_negative_results(self):
+        from tactic_research import module
+        collector = module('collect-forks')
+        original = json.loads((ROOT/'scripts/fixtures/fork/published.json').read_text())['records'][0]
+        record = {key: original[key] for key in ('gameId','gameFen','gameMoves','headers','source')}
+        record['forkPlies'] = [original['ply']]
+        with tempfile.TemporaryDirectory() as directory:
+            task = (record, str(Path(directory)/'cache.sqlite'), 'fixed-geometry-test')
+            first, reused = collector.scan_indexed_game(task)
+            self.assertFalse(reused)
+            self.assertTrue(first)
+            # A warm lookup must return the exact leads without replaying a game.
+            with patch.object(collector.chess, 'Board', side_effect=AssertionError('unexpected replay')):
+                second, reused = collector.scan_indexed_game(task)
+            self.assertTrue(reused)
+            self.assertEqual(first, second)
+            negative = dict(record, forkPlies=[1])
+            empty, reused = collector.scan_indexed_game((negative, task[1], task[2]))
+            self.assertEqual(empty, [])
+            self.assertFalse(reused)
+            self.assertEqual(collector.scan_indexed_game((negative, task[1], task[2])), ([], True))
+
+    def test_candidate_frames_can_retry_without_publishing_two_from_one_game(self):
+        with tempfile.TemporaryDirectory() as directory:
+            db=connect(Path(directory)/'index.sqlite')
+            # Only store behavior is under test; the second legal frame uses
+            # a shared synthetic game identity, never publication approval.
+            another=dict(C, gameId=B['gameId'], level='B')
+            import_candidates(db,[B,another])
+            self.assertEqual(len(query_candidates(db,'discovery',['B'])['records']),1)
+            full=query_candidates(db,'discovery',['B'],distinct_games=False)
+            self.assertEqual(len(full['records']),2)
+            self.assertEqual(full['metrics']['sourceGamesReplayed'],0)
+            with db:
+                db.execute('INSERT INTO research_decisions VALUES (?,?,?,?,?,?,?)',
+                    ('discovery','', '*', B['gameId'],'removed','owner removal','fixed'))
+            self.assertEqual(query_candidates(db,'discovery',['B'],distinct_games=False)['records'],[])
+            db.close()
+
+
 if __name__=='__main__':
     unittest.main()

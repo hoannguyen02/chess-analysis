@@ -1,7 +1,8 @@
 import { usePracticeBoardTools } from '@/hooks/usePracticeBoardTools';
 import type { GameSource, ReferenceGame } from '@/lib/chess/draw-game-viewer';
 import type { DrawExercise } from '@/lib/chess/draw-practice';
-import { explainLine } from '@/lib/chess/worksheet';
+import { practiceGoalLabels } from '@/lib/chess/practice-goals';
+import { explainLine, previousMoveLabel } from '@/lib/chess/worksheet';
 import {
   drawPositionOutcome,
   evaluateDrawDecision,
@@ -45,6 +46,7 @@ import {
   PracticePositionDialog,
 } from './PracticePositionEditor';
 import { ExerciseManagementControl } from './PracticeManagement';
+import type { PracticeSaveNotice } from './PracticeSaveFeedback';
 
 const DrawGameViewer = dynamic(() => import('./DrawGameViewer'), {
   ssr: false,
@@ -63,7 +65,7 @@ export default function DrawTrainer({
   onRestart,
   onPreviousExercise,
   onNextExercise,
-  removalReturnHref,
+  onPracticeSaved = () => {},
   gameSource,
   referenceGames,
   onComplete,
@@ -76,7 +78,7 @@ export default function DrawTrainer({
   onRestart?: () => void;
   onPreviousExercise?: () => void;
   onNextExercise?: () => void;
-  removalReturnHref?: string;
+  onPracticeSaved?: (notice: PracticeSaveNotice) => void;
 }) {
   const [assisted, setAssisted] = useState(false);
   const opening = exercise.outcome === 'opening';
@@ -99,6 +101,8 @@ export default function DrawTrainer({
     'pin',
     'removing-defender',
     'fork',
+    'hanging-piece',
+    'defensive-move',
     'discovery',
     'simplification',
     'manual',
@@ -132,11 +136,25 @@ export default function DrawTrainer({
   } | null>(null);
   const [flipped, setFlipped] = useState(false);
   const [showPrevious, setShowPrevious] = useState(false);
-  const previous = useMemo(() => previousDrawPosition(exercise), [exercise]);
+  const previous = useMemo(() => {
+    const position = previousDrawPosition(exercise);
+    return position && { ...position, label: previousMoveLabel(exercise) };
+  }, [exercise]);
   const solutionLines = [exercise.moves, ...(exercise.alternativeLines ?? [])];
+  const solveMoves =
+    [...solutionLines, ...verifiedLines].find((candidate) =>
+      played.every((move, i) => candidate[i] === move)
+    ) ?? exercise.moves;
   const reviewMoves = solutionLines[reviewLineIndex] ?? exercise.moves;
   const availableMoves = review ? reviewMoves : played;
   const currentPly = review ? reviewPly : (historyPly ?? played.length);
+  const countSolverMoves = !review && !decision;
+  const displayedMove = countSolverMoves
+    ? Math.ceil(currentPly / 2)
+    : currentPly;
+  const displayedTotal = countSolverMoves
+    ? Math.ceil((complete ? played.length : solveMoves.length) / 2)
+    : availableMoves.length;
   const browsingHistory = !review && currentPly < played.length;
   const line = availableMoves.slice(0, currentPly);
   const game = useMemo(
@@ -353,6 +371,7 @@ export default function DrawTrainer({
         ? 'fork'
         : undefined;
   const positionEditorProps: ComponentProps<typeof ManualPositionControl> = {
+    onSaved: onPracticeSaved,
     fen: exercise.fen,
     editId: exercise.manualId,
     previousMove: exercise.previousMove,
@@ -407,14 +426,7 @@ export default function DrawTrainer({
                 <>
                   {' '}
                   · Mục tiêu:{' '}
-                  {
-                    {
-                      win: 'Giành thế thắng',
-                      draw: 'Hòa',
-                      checkmate: 'Chiếu hết',
-                      material: 'Thắng vật chất',
-                    }[exercise.goal]
-                  }
+                  {practiceGoalLabels[exercise.goal]}
                 </>
               )}
             </p>
@@ -422,7 +434,7 @@ export default function DrawTrainer({
             {editPosition}
             <ExerciseManagementControl
               exercise={exercise}
-              removalReturnHref={removalReturnHref}
+              onSaved={onPracticeSaved}
               onEditPosition={() => setEditingPositionFromMenu(true)}
             />
             {reference && (
@@ -533,7 +545,7 @@ export default function DrawTrainer({
               )}
           </div>
         </div>
-        {(availableMoves.length > 0 || previous) && (
+        {(displayedTotal > 0 || previous) && (
           <div
             className={styles.moveNavigation}
             role="group"
@@ -553,10 +565,13 @@ export default function DrawTrainer({
                 <FiChevronLeft size={20} aria-hidden="true" />
               </button>
             </Tooltip>
-            <span aria-live="polite">
+            <span
+              aria-live="polite"
+              title={countSolverMoves ? 'Số nước của bên giải' : undefined}
+            >
               {showPrevious
                 ? 'Trước thế bắt đầu'
-                : `${currentPly}/${availableMoves.length}`}
+                : `${displayedMove}/${displayedTotal}`}
             </span>
             <Tooltip content="Nước tiếp" placement="top">
               <button
@@ -724,28 +739,27 @@ export default function DrawTrainer({
               onClose={() => setViewerOpen(false)}
             />
           )}
-          {(exercise.goal || exercise.management?.writable) && (
+          {(exercise.goal || previous || exercise.management?.writable) && (
             <div className={styles.exerciseTaskRow}>
-              {exercise.goal && (
-                <p className={styles.exerciseGoal} aria-label="Yêu cầu bài tập">
-                  <strong>{initialWhite ? 'Trắng' : 'Đen'} đi</strong>
-                  <span aria-hidden="true">·</span>
-                  <strong>
-                    Mục tiêu:{' '}
-                    {
-                      {
-                        win: 'Giành thế thắng',
-                        draw: 'Hòa',
-                        checkmate: 'Chiếu hết',
-                        material: 'Thắng vật chất',
-                      }[exercise.goal]
-                    }
-                  </strong>
-                </p>
-              )}
+              <div className={styles.exerciseTaskText}>
+                {previous && <p>{previous.label}</p>}
+                {exercise.goal && (
+                  <p
+                    className={styles.exerciseGoal}
+                    aria-label="Yêu cầu bài tập"
+                  >
+                    <strong>{initialWhite ? 'Trắng' : 'Đen'} đi</strong>
+                    <span aria-hidden="true">·</span>
+                    <strong>
+                      Mục tiêu:{' '}
+                      {practiceGoalLabels[exercise.goal]}
+                    </strong>
+                  </p>
+                )}
+              </div>
               <ExerciseManagementControl
                 exercise={exercise}
-                removalReturnHref={removalReturnHref}
+                onSaved={onPracticeSaved}
                 onEditPosition={
                   exercise.beginner || exercise.manualId
                     ? () => setEditingPositionFromMenu(true)
@@ -845,16 +859,8 @@ export default function DrawTrainer({
                 onClick={() => {
                   setAssisted(true);
                   setFeedbackKind('info');
-                  const branch =
-                    [
-                      exercise.moves,
-                      ...(exercise.alternativeLines ?? []),
-                      ...verifiedLines,
-                    ].find((candidate) =>
-                      played.every((move, i) => candidate[i] === move)
-                    ) ?? exercise.moves;
                   const hint = replayDrawExercise(exercise, played).move(
-                    branch[played.length]
+                    solveMoves[played.length]
                   );
                   if (hint) {
                     if (opening) {
@@ -886,7 +892,9 @@ export default function DrawTrainer({
                                   ? exercise.outcome === 'fork'
                                     ? 'Tìm mục tiêu còn bị tấn công sau nước đáp của đối phương.'
                                     : 'Tìm cách khai thác quân bị ghim.'
-                                  : 'Tìm nước buộc đối phương phải đáp lại để tiếp tục ý tưởng đòn xiên.';
+                                  : exercise.outcome === 'hanging-piece'
+                                    ? 'Tính nước bắt lại và nước chiếu xen giữa để giữ phần vật chất vừa giành được.'
+                                    : 'Tìm nước buộc đối phương phải đáp lại để tiếp tục ý tưởng đòn xiên.';
                       setMessage(
                         stage === 0
                           ? exercise.prompt
@@ -898,6 +906,8 @@ export default function DrawTrainer({
                                   ? 'Tìm quân đang che đường của Xe, Tượng hoặc Hậu.'
                                   : exercise.outcome === 'fork'
                                     ? 'Tìm hai mục tiêu có thể bị tấn công cùng lúc.'
+                                    : exercise.outcome === 'hanging-piece'
+                                      ? 'Tìm quân đang bị tấn công và thiếu quân bảo vệ hữu hiệu.'
                                     : 'Tìm hai quân đối phương trên cùng một đường.'))
                             : stage === 2
                               ? `Gợi ý: xét quân ở ô ${hint.from}.`

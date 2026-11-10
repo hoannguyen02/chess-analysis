@@ -97,6 +97,23 @@ function proveMateAlternative(
   }
 }
 
+const pieceValuesCp = { p: 100, n: 320, b: 330, r: 500, q: 900, k: 0 };
+
+function materialBalance(
+  game: ReturnType<typeof Chess>,
+  solver: 'w' | 'b'
+) {
+  return game
+    .board()
+    .flat()
+    .reduce(
+      (sum, piece) =>
+        sum +
+        (piece ? pieceValuesCp[piece.type] * (piece.color === solver ? 1 : -1) : 0),
+      0
+    );
+}
+
 // The gain is measured in centipawns against the starting material balance.
 // Completion waits for a defensive reply. Reviewed promotion threats may win material when an exchange is declined.
 export function promotionGainReached(
@@ -106,24 +123,6 @@ export function promotionGainReached(
   if (!exercise.promotionGain) return false;
   const initial = new Chess(exercise.fen);
   const solver = initial.turn();
-  const values: Record<string, number> = {
-    p: 100,
-    n: 320,
-    b: 330,
-    r: 500,
-    q: 900,
-    k: 0,
-  };
-  const balance = (board: ReturnType<typeof Chess>) =>
-    board
-      .board()
-      .flat()
-      .reduce(
-        (sum, piece) =>
-          sum +
-          (piece ? values[piece.type] * (piece.color === solver ? 1 : -1) : 0),
-        0
-      );
   const promoted = game
     .history({ verbose: true })
     .some(
@@ -131,16 +130,16 @@ export function promotionGainReached(
         typeof move !== 'string' && move.color === solver && move.promotion
     );
   const minimum = exercise.promotionGain.minimumGain;
-  const baseline = balance(initial);
+  const baseline = materialBalance(initial, solver);
   if (!(promoted || exercise.promotionGain.allowUnrealizedThreat) ||
-      game.in_draw() || balance(game) - baseline < minimum ||
+      game.in_draw() || materialBalance(game, solver) - baseline < minimum ||
       !(game.turn() === solver || (game.in_checkmate() && game.turn() !== solver))) return false;
   if (!exercise.promotionGain.verifyCheckingReplies) return true;
   const board = new Chess(game.fen());
   const deadline = Date.now() + 40;
   let nodes = 0;
   function secure(left: number): boolean {
-    if (++nodes > 2000 || Date.now() > deadline || balance(board) - baseline < minimum) return false;
+    if (++nodes > 2000 || Date.now() > deadline || materialBalance(board, solver) - baseline < minimum) return false;
     if (board.in_checkmate()) return board.turn() !== solver;
     if (board.in_draw()) return false;
     const own = board.turn() === solver;
@@ -209,6 +208,94 @@ export function verifyDirectPromotionMaterial(
   return replies.length ? { moves: [promotion.san, replies[0]] } : null;
 }
 
+function hangingPieceGainReached(
+  exercise: DrawExercise,
+  game: ReturnType<typeof Chess>
+) {
+  const goal = exercise.hangingPiece;
+  if (
+    !goal ||
+    exercise.goal !== 'material' ||
+    !Number.isFinite(goal.minimumGain) ||
+    goal.minimumGain <= 0 ||
+    game.in_draw()
+  )
+    return false;
+  const start = new Chess(exercise.fen);
+  const solver = start.turn();
+  const gain = materialBalance(game, solver) - materialBalance(start, solver);
+  if (gain < goal.minimumGain || (game.turn() === solver && game.in_checkmate()))
+    return false;
+  if (
+    game.turn() !== solver &&
+    game.moves({ verbose: true }).some(({ captured, promotion }) => {
+      const captureGain = captured ? pieceValuesCp[captured] : 0;
+      const promotionGain = promotion
+        ? pieceValuesCp[promotion] - pieceValuesCp.p
+        : 0;
+      return gain - captureGain - promotionGain < goal.minimumGain;
+    })
+  )
+    return false;
+  return game.history({ verbose: true }).some(
+    (move) =>
+      move.color === solver &&
+      move.to === goal.target &&
+      Boolean(move.captured) &&
+      !move.flags.includes('e')
+  );
+}
+
+// Verify an unsaved capture of the specified loose piece against every legal
+// immediate reply. Positions with a live countercheck, recapture, or threat to
+// recover the material are left for the recorded variations or exploration.
+function verifyHangingPieceCapture(
+  exercise: DrawExercise,
+  game: ReturnType<typeof Chess>,
+  target: Square
+): string[] | null {
+  const goal = exercise.hangingPiece;
+  if (!goal || !hangingPieceGainReached(exercise, game)) return null;
+  if (game.in_checkmate()) return [];
+  const start = new Chess(exercise.fen);
+  const solver = start.turn();
+  const floor = materialBalance(start, solver) + goal.minimumGain;
+  const deadline = Date.now() + 100;
+  let strongest: { move: string; balance: number } | undefined;
+  for (const san of game.moves()) {
+    if (Date.now() > deadline) return null;
+    const reply = game.move(san);
+    if (!reply) throw new Error('Invalid legal reply');
+    try {
+      const balance = materialBalance(game, solver);
+      if (
+        (reply.to === target && reply.captured) ||
+        game.in_check() ||
+        game.game_over() ||
+        balance < floor
+      )
+        return null;
+      const fields = game.fen().split(' ');
+      fields[1] = reply.color;
+      fields[3] = '-';
+      const probe = new Chess(fields.join(' '));
+      if (
+        probe.moves({ verbose: true }).some(
+          (move) =>
+            move.promotion ||
+            (move.captured && balance - pieceValuesCp[move.captured] < floor)
+        )
+      )
+        return null;
+      if (!strongest || balance < strongest.balance)
+        strongest = { move: reply.san, balance };
+    } finally {
+      game.undo();
+    }
+  }
+  return strongest && Date.now() <= deadline ? [strongest.move] : null;
+}
+
 export function tryDrawMove(
   exercise: DrawExercise,
   played: string[],
@@ -229,7 +316,9 @@ export function tryDrawMove(
       played,
       complete: exercise.promotionGain
         ? promotionGainReached(exercise, game)
-        : true,
+        : exercise.hangingPiece
+          ? hangingPieceGainReached(exercise, game)
+          : true,
     };
   }
   const normalized =
@@ -279,12 +368,39 @@ export function tryDrawMove(
       move.promotion === expected.promotion
     );
   });
+  if (
+    selected &&
+    exercise.outcome === 'defensive-move' &&
+    game.moves().some((reply) => reply.endsWith('#'))
+  ) {
+    return { status: 'unrecorded' as const, played, complete: false };
+  }
   const sameMove = Boolean(selected);
   const selectedLine = selected ?? active;
   // Accept alternative moves that demonstrably achieve the requested draw.
   const terminalDraw =
     exercise.outcome !== 'fortress' &&
     drawPositionOutcome(game) === exercise.outcome;
+  if (
+    !sameMove &&
+    exercise.outcome === 'hanging-piece' &&
+    played.length === (exercise.tacticPly ?? 0) &&
+    exercise.hangingPiece?.target === move.to &&
+    move.captured &&
+    !move.flags.includes('e') &&
+    !move.promotion
+  ) {
+    const reply = verifyHangingPieceCapture(exercise, game, move.to);
+    if (reply !== null) {
+      const continuation = [...played, move.san, ...reply];
+      return {
+        status: 'accepted' as const,
+        played: continuation,
+        complete: true,
+        continuation,
+      };
+    }
+  }
   if (!sameMove && played.length === 0 && exercise.outcome === 'removing-defender') {
     const tail = proveRemovingDefenderAlternative(exercise, move.san);
     if (tail) {
@@ -348,13 +464,18 @@ export function tryDrawMove(
     if (!reply) throw new Error('Invalid stored opponent reply');
     next.push(reply.san);
   }
+  const lineFinished = next.length >= selectedLine.length || game.game_over();
+  if (
+    exercise.hangingPiece &&
+    lineFinished &&
+    !hangingPieceGainReached(exercise, game)
+  )
+    return { status: 'unrecorded' as const, played, complete: false };
   return {
     status: 'accepted' as const,
     played: next,
     complete: exercise.promotionGain
       ? promotionGainReached(exercise, game)
-      : next.length >= selectedLine.length ||
-        game.game_over() ||
-        drawPositionOutcome(game) === exercise.outcome,
+      : lineFinished || drawPositionOutcome(game) === exercise.outcome,
   };
 }

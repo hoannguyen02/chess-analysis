@@ -13,6 +13,15 @@ at the end of a checkmate sample; it does not claim a forced all-reply proof.
 The **Beginner-only** position-first flow supports editable piece setup/FEN
 and optional recorded solutions. See
 [Beginner-only position authoring](tactic-research-workflow.md#beginner-only-position-authoring).
+The 10-piece limit and unique-answer proof apply to newly verified
+exercises. Manual Beginner positions retain editable boards, optional
+solutions and free practice. [Verified Beginner requirements](beginner-one-move-game-requirements.md)
+The owner uses this flow to fill Beginner on new tactics pages. In
+**Nhập môn / Beginner**, choose **Lấy thế cờ từ B, C, C*, D, D*, E, E\*** and confirm the
+positions to import. The preview starts immediately before the selected tactic.
+Each saved board becomes a separate Beginner entry and preserves the source
+exercise. Use **Thêm thế cờ Nhập môn** to set up a board directly.
+
 Choose **Chỉnh sửa thế cờ** to add, move or remove pieces, set the side to move,
 or import/export FEN. The piece editor reuses Setup Board's shared drag manager
 and paint layer: select a piece once, then click or sweep across empty squares
@@ -24,7 +33,7 @@ sheets) share the compact row with **Đặt theo FEN**, using accessible labels 
 tooltips. Undo and Cancel stay inside the draft; use the outer Save
 button to persist. Changing FEN clears recorded lines and stale preceding-move
 context. Solutionless entries use free practice and print no invented answer.
-A, B, C, C*, D keep the existing authoring and required-solution behavior below.
+A, B, C, C*, D, D*, E and E* use the required-solution behavior below.
 
 On practice pages, **Thêm thế cờ Nhập môn** and **Chỉnh sửa thế cờ / lời giải**
 open a dialog instead of expanding the form inline. The close button, **Hủy**,
@@ -44,11 +53,27 @@ preserves its placement. Bulk source imports keep their existing order.
 
 In the shared reference-game viewer choose **＋ Thêm thế cờ**. The position is
 captured from the currently displayed move. Choose **Chủ đề**, **Cấp độ** and
-**Mục tiêu**, then choose **Ghi phương án trên bàn cờ**. Play moves for both
-sides. To create a second or third variation, select an earlier move (or
-**Thế bắt đầu**) and play a different move; the existing line stays available.
+**Mục tiêu**, then choose **Ghi phương án trên bàn cờ**. The topic picker follows
+the shared teaching order. Type a topic name with or without Vietnamese accents
+to narrow the list. The same picker is used for exercise transfers. For defence, choose
+**Hóa giải đe dọa** to stop a specific threat, **Cân bằng thế cờ** to restore
+an even position, or **Giữ lợi thế** to preserve an existing advantage. The
+selected objective appears in practice and on worksheet review pages.
+Play moves for both sides. To create a second or third variation, select an
+earlier move (or **Thế bắt đầu**) and play a different move; the existing line
+stays available.
 The recorder uses the existing `PracticeExploration` and shared `PracticeBoard`,
 including legal-move input, annotations, castling, en passant and promotion.
+Recording follows Chess.com Live. It stops at checkmate, stalemate, the third
+occurrence of the same position, or 50 moves by each side without a pawn move
+or capture. The material rule includes a single minor piece per side and two
+knights against a bare king, with the Live exception when the side to move
+has mate in one. Repetition counts the exercise start and the recorded moves
+in the current branch. Earlier positions are still available for branching.
+Both save paths reject moves after an automatic ending. Older lines remain
+readable and can be shortened with **Kết thúc phương án tại đây**.
+[Chess.com draw rules](https://support.chess.com/en/articles/8572743-how-do-draws-work) ·
+[Chess.com material rules](https://support.chess.com/en/articles/8705277-what-does-insufficient-mating-material-mean)
 
 Choose **OK · Giữ ... phương án** to keep all recorded lines and close the
 recorder. **Hủy**, the close button or Escape discard this recording session's
@@ -65,13 +90,16 @@ After OK, the form shows numbered notation automatically; no move text needs to
 be typed. Add an optional title or explanation, then save the exercise.
 The protected API still accepts older SAN/UCI input for compatibility, including
 spaced move numbers, commas and standalone separators.
-Saving opens the destination topic with the chosen level and new exercise
-selected. Source games need not be saved as favorites. **☆ Lưu ván** is a separate
-optional action.
+Saving keeps the game viewer on the displayed move. The confirmation offers
+**Mở bài tập →** to open the chosen topic and level with the saved exercise
+selected. If the game viewer is open over a practice list, that list refreshes
+when the viewer closes. Adding from **Ván đã lưu** keeps the current collection
+filters. **☆ Lưu ván** saves the game and its move marker in place.
 
 Editing replaces the existing record in place, preserving its list number and
-identity even when a Beginner FEN changes. The save link selects that same entry
-again. New manual entries append; editing a curated Beginner uses its original
+identity even when a Beginner FEN changes. The filtered practice list refreshes
+in place after a manual edit, addition or import. New manual entries append;
+editing a curated Beginner uses its original
 slot, and solution changes on transferred exercises preserve their destination
 order. No existing collection is globally re-sorted to recover historical order.
 
@@ -98,8 +126,8 @@ uses the same worksheet source. Topics without an existing page use the shared
 `/tactic-positions?theme=...` page and protected
 `/api/manual-tactic-exercises?theme=...` API. The main library adds a card for each
 such topic containing manually authored positions. King attack has a permanent
-entry in `privatePages`, including its worksheet endpoint. All six levels remain
-visible in order: Beginner, A, B, C, C*, D, with actual counts, including zero.
+entry in `privatePages`, including its worksheet endpoint. All nine levels remain
+visible in order (Beginner, A, B, C, C*, D, D*, E, E*) with their actual counts.
 There is no automatic quota filling or new researched collection.
 
 A recorded solution is a teaching variation supplied by the author. The shared

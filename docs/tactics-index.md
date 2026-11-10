@@ -15,9 +15,9 @@ The existing protected `/api/private-tactics` endpoint returns this same catalog
 as `themeCatalog`, alongside its unchanged `topicGroups` of working Lichess links.
 
 Each current theme also has an optional `levels` array for planned teaching
-suitability, in the order Beginner, A, B, C, C*, D. These arrays are independent
+suitability, in the order Beginner, A, B, C, C*, D, D*, E, E*. These arrays are independent
 of development priority, child-theme assessment and published exercise counts.
-They do not filter the six-level practice navigation or grade positions.
+They do not filter the shared practice navigation or grade positions.
 See [the suitability review](tactics-level-suitability.md) for all 110 initial
 assessments and their reasons. An omitted array on a future theme means
 unassessed; it does not default to every level.
@@ -46,6 +46,11 @@ changes need to survive deletion or moving machines. Raw bulk archives stay
 outside the repository. Durable published exercises, reviewed evidence,
 exclusions and source manifests remain in `scripts/fixtures/` and the protected
 server data.
+
+The [persistent research memory](tactic-research-workflow.md#persistent-research-memory)
+adds versioned position/line assessments to this same index. Retain an index
+backup: rebuilding from PGNs restores source games and geometric leads, but
+cannot reconstruct unpublished editorial judgments or retry history.
 
 The index stores complete normalized game moves once per game, original headers,
 source URL and archive SHA-256, exact starting position and source ply, previous

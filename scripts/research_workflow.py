@@ -8,19 +8,30 @@ import time
 
 from tactic_research import (CachedEngine, ResearchCache, candidate_key, code_version,
                              atomic_json, digest, ROOT)
+from beginner_one_move import source_beginner_proof
+from tactics_catalog import REVIEWED_LEVEL_MOVE_LIMITS, matches_current_level
 
 SETTINGS = {'rootNodes': 1000000, 'prepNodes': 150000, 'defenceNodes': 500000,
             'shortcutBudget': 18000, 'mateBudget': 1000000}
-ADAPTERS = {'discovery': 'discovery_research'}
+ADAPTERS = {'discovery': 'discovery_research', 'fork': 'fork_research',
+            'defensive-move': 'defensive_move_research', 'hanging-piece': 'hanging_piece_research',
+            'mate-in-one': 'mate_in_one_research', 'two-rook-mate': 'two_rook_mate_research',
+            'pin': 'pin_research'}
 _engine = _store = _policy = _adapter = None
 
 
 def verification_code():
     return code_version('tactic_research.py', 'discovery_research.py',
-                        'research_workflow.py', 'collect-discovery.py',
+                        'fork_research.py', 'collect-forks.py', 'build-forks.py',
+                        'research_workflow.py', 'beginner_one_move.py', 'collect-discovery.py',
                         'build-discovery.py', 'review-discovery-upper.py',
                         'review-discovery-level-a.py',
-                        'check-discovery-shortcuts.py', 'prove-discovery-mates.py')
+                        'check-discovery-shortcuts.py', 'prove-discovery-mates.py',
+                        'hanging_piece_research.py', 'collect_hanging_piece.py', 'mate_in_one_research.py',
+                        'defensive_move_research.py', 'collect_defensive_move.py',
+                        'two_rook_mate_research.py', 'two_rook_mate_proof.py',
+                        'collect-two-rook-games.py', 'collect_two_rook_mate.py', 'tactics_catalog.py',
+                        'pin_research.py', 'build-pins.py')
 
 
 def initialize_worker(topic, executable, cache, settings, complete, provenance):
@@ -46,8 +57,22 @@ def review_one(record):
     before = _engine.stats.copy()
     started = time.perf_counter()
     try:
-        result = _adapter.review(record, _engine, _policy['settings'],
-                                 _policy['complete'], _policy['provenance'])
+        # Historical builders replay their own approvals. Current D candidates
+        # must pass the new level rule before reaching the topic's engine checks.
+        if record['level'] == 'D' and not matches_current_level(record):
+            raise ValueError('Level D requires a sacrifice and four or five solver moves')
+        proof = None
+        if record['level'] == 'Beginner':
+            try:
+                proof = source_beginner_proof(_adapter, record)
+            except ValueError as error:
+                result = {'gameId': record.get('gameId'), 'status': 'withheld',
+                          'recordHash': _adapter.record_hash(record), 'flags': [str(error)]}
+        if record['level'] != 'Beginner' or proof is not None:
+            result = _adapter.review(record, _engine, _policy['settings'],
+                                     _policy['complete'], _policy['provenance'])
+            if proof is not None:
+                result['beginnerProof'] = proof
     except (ValueError, KeyError, IndexError, AssertionError) as error:
         result = {'gameId': record.get('gameId'), 'status': 'withheld',
                   'recordHash': _adapter.record_hash(record),
@@ -57,6 +82,7 @@ def review_one(record):
         # pool worker can exit; atexit alone runs too late during thread shutdown.
         _engine.stop_process()
     result['elapsedSeconds'] = time.perf_counter() - started
+    result['engineIdentity'] = _engine.identity
     # An incomplete bounded search is resumable, not an evergreen rejection.
     incomplete = any('unresolved' in flag or 'not-proved' in flag for flag in result['flags'])
     if _store and not incomplete:
@@ -151,9 +177,13 @@ def write_cards(path, report):
                   f'Record hash: `{row["recordHash"]}`', '', f'FEN: `{record["fen"]}`', '',
                   f'Line: {" ".join(record["moves"])}', '',
                   f'Initial material from the solving side: {row["preflight"]["initialMaterialCp"]} cp.', '',
-                  f'Similarity cluster (review lead only): `{row["preflight"]["cluster"]}`', '',
+                  f'Similarity cluster (review lead only): `{row["preflight"].get("cluster")}`', '',
                   'Review motif necessity, simpler alternatives, defensive choices, recovery, level and distinctness.', '']
         for step in row.get('timeline', {}).get('timeline', []):
+            if report['topic'] == 'defensive-move':
+                lines.append(f'- {step["move"]}: {len(step["allReplyScreen"])} replies compared; '
+                             f'{len(step["mateRefutations"])} starting moves allow mate.')
+                continue
             lines.append(f'- {step["move"]}: legal replies '
                          f'{", ".join(reply["move"] for reply in step["replies"])}; '
                          f'material change {step["materialGain"]} cp.')
@@ -164,7 +194,13 @@ def prepare_publication(report, decisions, output):
     """Build a durable approved bundle; never write directly to the live bank."""
     if not report['quality']['requiresProvenance']:
         raise ValueError('Benchmark-only reports cannot be published')
-    from discovery_research import record_hash, provenance
+    import importlib
+    from research_run import SOURCE_LEVELS
+    topic = report.get('topic', 'discovery')
+    if topic not in ADAPTERS:
+        raise ValueError('Implement a topic adapter before publication')
+    adapter = importlib.import_module(ADAPTERS[topic])
+    record_hash, provenance = adapter.record_hash, adapter.provenance
     by_id = {r['gameId']: r for r in report['candidates']}
     results = {r['gameId']: r for r in report['results']}
     approved, reviews = [], []
@@ -173,6 +209,10 @@ def prepare_publication(report, decisions, output):
             continue
         ident = decision['gameId']
         record, result = by_id[ident], results[ident]
+        level = record['level']
+        if ((level == 'Beginner' or level in REVIEWED_LEVEL_MOVE_LIMITS)
+                and (level not in SOURCE_LEVELS[topic] or not matches_current_level(record))):
+            raise ValueError(f'{ident}: current {record["level"]} research support or grade is missing')
         if (result['status'] != 'needs-editorial-review' or result['flags']
                 or result['recordHash'] != record_hash(record)
                 or decision.get('recordHash') != result['recordHash']):
@@ -193,9 +233,13 @@ def prepare_publication(report, decisions, output):
     if report.get('verificationCodeSha256') != verification_code():
         raise ValueError('Verification code changed or is missing; rerun review before publication')
     import chess
-    from discovery_research import audit
+    if topic == 'discovery':
+        from discovery_research import audit
     for record in approved:
         result = results[record['gameId']]
+        if record['level'] == 'Beginner':
+            if source_beginner_proof(adapter, record) != result.get('beginnerProof'):
+                raise ValueError('Current one-move Beginner proof is required')
         board = chess.Board(record['fen'])
         roots = result.get('analysis', {}).get('roots', [])
         if {row['move'] for row in roots} != {board.san(move) for move in board.legal_moves}:
@@ -204,11 +248,46 @@ def prepare_publication(report, decisions, output):
             raise ValueError('Complete solver timeline missing')
         if record['goal'] == 'mate':
             proof = result['mateProof']
-            if proof.get('fen') != record['fen']:
-                raise ValueError('Mate proof position mismatch')
-            audit.build.mate_lines(proof)
+            if topic == 'discovery':
+                if proof.get('fen') != record['fen']:
+                    raise ValueError('Mate proof position mismatch')
+                audit.build.mate_lines(proof)
+            elif topic == 'two-rook-mate':
+                gate = adapter.preflight(record, True)
+                if gate['flags'] or gate != result.get('preflight'):
+                    raise ValueError('Current two-rook motif or level evidence is missing')
+                if record['level'] == 'C*':
+                    comparison = result.get('defenceComparison', {})
+                    if not comparison.get('sampleRequiresDepth') or not comparison.get('contrastingReplies'):
+                        raise ValueError('Current strong-defence comparison is required for two-rook C*')
+                if record['level'] == 'C' and any(row.get('matesWithoutSacrifice') for row in roots):
+                    raise ValueError('A simpler non-sacrificial mate bypasses the C sacrifice')
+                adapter.verify_proof(record, proof)
+            elif topic == 'mate-in-one':
+                adapter.verify_review(record, result)
+            else:
+                raise ValueError('This adapter does not support mate publication')
+        if topic == 'hanging-piece':
+            gate = adapter.preflight(record, True)
+            if gate['flags'] or gate != result.get('preflight'):
+                raise ValueError('Current loose-piece geometry or material payoff evidence is missing')
+            for step in result['timeline']['timeline']:
+                required = {row['move'] for row in step['replies'] if row['capture'] or row['check']}
+                if not required <= {row['move'] for row in step['engineDefences']}:
+                    raise ValueError('Current tactical-reply coverage is missing')
+        if topic == 'fork':
+            gate = adapter.early_gate(record, True)
+            if gate['flags'] or gate['coverage'] != result.get('preflight', {}).get('coverage'):
+                raise ValueError('Current fork geometry, level or reply coverage is missing')
+        if topic == 'pin':
+            adapter.verify_review(record, result)
+        if topic == 'defensive-move' and record['level'] == 'D':
+            adapter.validate_advanced_evidence(record, result)
     bundle = {'topic': report['topic'], 'records': approved, 'reviews': reviews,
               'settings': report['settings'], 'reviewResults': [results[r['gameId']] for r in approved],
+              'verificationCodeSha256': report['verificationCodeSha256'],
+              'engineIdentities': list({digest(results[r['gameId']].get('engineIdentity')):
+                                        results[r['gameId']].get('engineIdentity') for r in approved}.values()),
               'status': 'editorially-approved-bundle', 'reviewInputSha256': report['inputSha256']}
     atomic_json(output, bundle)
     return bundle

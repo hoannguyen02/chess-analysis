@@ -5,1757 +5,6 @@
     "description": "Phối hợp hai Xe để hạn chế đường thoát và chiếu hết Vua đối phương. Ở các mức nâng cao, tìm cách mở đường và loại bỏ quân phòng thủ.",
     "exercises": [
       {
-        "title": "Chiếu hết trong 1 nước · Bài 1",
-        "prompt": "Phối hợp hai Xe để chiếu hết Vua đối phương trong 1 nước.",
-        "mode": "interactive",
-        "outcome": "checkmate",
-        "goal": "checkmate",
-        "fen": "8/7k/8/8/8/K5R1/8/1R6 w - - 0 1",
-        "moves": [
-          "Rh1#"
-        ],
-        "alternativeLines": [],
-        "hints": [
-          "Một Xe hạn chế đường thoát, Xe còn lại chiếu Vua.",
-          "Giữ Xe ngoài tầm bắt của Vua và kiểm tra tất cả các ô thoát."
-        ],
-        "solution": "Hai Xe phối hợp khống chế đường thoát và chiếu hết. Nhánh mẫu: Rh1#.",
-        "beginner": true
-      },
-      {
-        "title": "Chiếu hết trong 1 nước · Bài 2",
-        "prompt": "Phối hợp hai Xe để chiếu hết Vua đối phương trong 1 nước.",
-        "mode": "interactive",
-        "outcome": "checkmate",
-        "goal": "checkmate",
-        "fen": "1K6/8/8/8/8/R7/1R6/4k3 w - - 0 1",
-        "moves": [
-          "Ra1#"
-        ],
-        "alternativeLines": [],
-        "hints": [
-          "Một Xe hạn chế đường thoát, Xe còn lại chiếu Vua.",
-          "Giữ Xe ngoài tầm bắt của Vua và kiểm tra tất cả các ô thoát."
-        ],
-        "solution": "Hai Xe phối hợp khống chế đường thoát và chiếu hết. Nhánh mẫu: Ra1#.",
-        "beginner": true
-      },
-      {
-        "title": "Chiếu hết trong 1 nước · Bài 3",
-        "prompt": "Phối hợp hai Xe để chiếu hết Vua đối phương trong 1 nước.",
-        "mode": "interactive",
-        "outcome": "checkmate",
-        "goal": "checkmate",
-        "fen": "8/3k3r/8/8/8/8/5r2/1K6 b - - 0 1",
-        "moves": [
-          "Rh1#"
-        ],
-        "alternativeLines": [],
-        "hints": [
-          "Một Xe hạn chế đường thoát, Xe còn lại chiếu Vua.",
-          "Giữ Xe ngoài tầm bắt của Vua và kiểm tra tất cả các ô thoát."
-        ],
-        "solution": "Hai Xe phối hợp khống chế đường thoát và chiếu hết. Nhánh mẫu: Rh1#.",
-        "beginner": true
-      },
-      {
-        "title": "Chiếu hết trong 1 nước · Bài 4",
-        "prompt": "Phối hợp hai Xe để chiếu hết Vua đối phương trong 1 nước.",
-        "mode": "interactive",
-        "outcome": "checkmate",
-        "goal": "checkmate",
-        "fen": "8/5kr1/2r5/8/8/7K/8/8 b - - 0 1",
-        "moves": [
-          "Rh6#"
-        ],
-        "alternativeLines": [],
-        "hints": [
-          "Một Xe hạn chế đường thoát, Xe còn lại chiếu Vua.",
-          "Giữ Xe ngoài tầm bắt của Vua và kiểm tra tất cả các ô thoát."
-        ],
-        "solution": "Hai Xe phối hợp khống chế đường thoát và chiếu hết. Nhánh mẫu: Rh6#.",
-        "beginner": true
-      },
-      {
-        "title": "Chiếu hết trong 1 nước · Bài 5",
-        "prompt": "Phối hợp hai Xe để chiếu hết Vua đối phương trong 1 nước.",
-        "mode": "interactive",
-        "outcome": "checkmate",
-        "goal": "checkmate",
-        "fen": "7K/8/8/8/6r1/6k1/8/r7 b - - 0 1",
-        "moves": [
-          "Rh1#"
-        ],
-        "alternativeLines": [],
-        "hints": [
-          "Một Xe hạn chế đường thoát, Xe còn lại chiếu Vua.",
-          "Giữ Xe ngoài tầm bắt của Vua và kiểm tra tất cả các ô thoát."
-        ],
-        "solution": "Hai Xe phối hợp khống chế đường thoát và chiếu hết. Nhánh mẫu: Rh1#.",
-        "beginner": true
-      },
-      {
-        "title": "Chiếu hết trong 1 nước · Bài 6",
-        "prompt": "Phối hợp hai Xe để chiếu hết Vua đối phương trong 1 nước.",
-        "mode": "interactive",
-        "outcome": "checkmate",
-        "goal": "checkmate",
-        "fen": "6k1/2R5/8/R7/2K5/8/8/8 w - - 0 1",
-        "moves": [
-          "Ra8#"
-        ],
-        "alternativeLines": [],
-        "hints": [
-          "Một Xe hạn chế đường thoát, Xe còn lại chiếu Vua.",
-          "Giữ Xe ngoài tầm bắt của Vua và kiểm tra tất cả các ô thoát."
-        ],
-        "solution": "Hai Xe phối hợp khống chế đường thoát và chiếu hết. Nhánh mẫu: Ra8#.",
-        "beginner": true
-      },
-      {
-        "title": "Chiếu hết trong 1 nước · Bài 7",
-        "prompt": "Phối hợp hai Xe để chiếu hết Vua đối phương trong 1 nước.",
-        "mode": "interactive",
-        "outcome": "checkmate",
-        "goal": "checkmate",
-        "fen": "k7/7R/8/3R4/8/3K4/8/8 w - - 0 1",
-        "moves": [
-          "Rd8#"
-        ],
-        "alternativeLines": [],
-        "hints": [
-          "Một Xe hạn chế đường thoát, Xe còn lại chiếu Vua.",
-          "Giữ Xe ngoài tầm bắt của Vua và kiểm tra tất cả các ô thoát."
-        ],
-        "solution": "Hai Xe phối hợp khống chế đường thoát và chiếu hết. Nhánh mẫu: Rd8#.",
-        "beginner": true
-      },
-      {
-        "title": "Chiếu hết trong 1 nước · Bài 8",
-        "prompt": "Phối hợp hai Xe để chiếu hết Vua đối phương trong 1 nước.",
-        "mode": "interactive",
-        "outcome": "checkmate",
-        "goal": "checkmate",
-        "fen": "r7/6r1/8/7K/8/8/1k6/8 b - - 0 1",
-        "moves": [
-          "Rh8#"
-        ],
-        "alternativeLines": [],
-        "hints": [
-          "Một Xe hạn chế đường thoát, Xe còn lại chiếu Vua.",
-          "Giữ Xe ngoài tầm bắt của Vua và kiểm tra tất cả các ô thoát."
-        ],
-        "solution": "Hai Xe phối hợp khống chế đường thoát và chiếu hết. Nhánh mẫu: Rh8#.",
-        "beginner": true
-      },
-      {
-        "title": "Chiếu hết trong 1 nước · Bài 9",
-        "prompt": "Phối hợp hai Xe để chiếu hết Vua đối phương trong 1 nước.",
-        "mode": "interactive",
-        "outcome": "checkmate",
-        "goal": "checkmate",
-        "fen": "k7/7R/3R4/8/4K3/8/8/8 w - - 0 1",
-        "moves": [
-          "Rd8#"
-        ],
-        "alternativeLines": [],
-        "hints": [
-          "Một Xe hạn chế đường thoát, Xe còn lại chiếu Vua.",
-          "Giữ Xe ngoài tầm bắt của Vua và kiểm tra tất cả các ô thoát."
-        ],
-        "solution": "Hai Xe phối hợp khống chế đường thoát và chiếu hết. Nhánh mẫu: Rd8#.",
-        "beginner": true
-      },
-      {
-        "title": "Chiếu hết trong 1 nước · Bài 10",
-        "prompt": "Phối hợp hai Xe để chiếu hết Vua đối phương trong 1 nước.",
-        "mode": "interactive",
-        "outcome": "checkmate",
-        "goal": "checkmate",
-        "fen": "K7/8/7k/7r/8/8/8/1r6 b - - 0 1",
-        "moves": [
-          "Ra5#"
-        ],
-        "alternativeLines": [],
-        "hints": [
-          "Một Xe hạn chế đường thoát, Xe còn lại chiếu Vua.",
-          "Giữ Xe ngoài tầm bắt của Vua và kiểm tra tất cả các ô thoát."
-        ],
-        "solution": "Hai Xe phối hợp khống chế đường thoát và chiếu hết. Nhánh mẫu: Ra5#.",
-        "beginner": true
-      },
-      {
-        "title": "Chiếu hết trong 1 nước · Bài 11",
-        "prompt": "Phối hợp hai Xe để chiếu hết Vua đối phương trong 1 nước.",
-        "mode": "interactive",
-        "outcome": "checkmate",
-        "goal": "checkmate",
-        "fen": "7k/1R6/8/3K4/4R3/8/8/8 w - - 0 1",
-        "moves": [
-          "Re8#"
-        ],
-        "alternativeLines": [],
-        "hints": [
-          "Một Xe hạn chế đường thoát, Xe còn lại chiếu Vua.",
-          "Giữ Xe ngoài tầm bắt của Vua và kiểm tra tất cả các ô thoát."
-        ],
-        "solution": "Hai Xe phối hợp khống chế đường thoát và chiếu hết. Nhánh mẫu: Re8#.",
-        "beginner": true
-      },
-      {
-        "title": "Chiếu hết trong 1 nước · Bài 12",
-        "prompt": "Phối hợp hai Xe để chiếu hết Vua đối phương trong 1 nước.",
-        "mode": "interactive",
-        "outcome": "checkmate",
-        "goal": "checkmate",
-        "fen": "7k/8/3R4/8/6R1/8/8/5K2 w - - 0 1",
-        "moves": [
-          "Rh6#"
-        ],
-        "alternativeLines": [],
-        "hints": [
-          "Một Xe hạn chế đường thoát, Xe còn lại chiếu Vua.",
-          "Giữ Xe ngoài tầm bắt của Vua và kiểm tra tất cả các ô thoát."
-        ],
-        "solution": "Hai Xe phối hợp khống chế đường thoát và chiếu hết. Nhánh mẫu: Rh6#.",
-        "beginner": true
-      },
-      {
-        "title": "Chiếu hết trong 1 nước · Bài 13",
-        "prompt": "Phối hợp hai Xe để chiếu hết Vua đối phương trong 1 nước.",
-        "mode": "interactive",
-        "outcome": "checkmate",
-        "goal": "checkmate",
-        "fen": "8/8/2r4k/8/8/8/3r4/6K1 b - - 0 1",
-        "moves": [
-          "Rc1#"
-        ],
-        "alternativeLines": [],
-        "hints": [
-          "Một Xe hạn chế đường thoát, Xe còn lại chiếu Vua.",
-          "Giữ Xe ngoài tầm bắt của Vua và kiểm tra tất cả các ô thoát."
-        ],
-        "solution": "Hai Xe phối hợp khống chế đường thoát và chiếu hết. Nhánh mẫu: Rc1#.",
-        "beginner": true
-      },
-      {
-        "title": "Chiếu hết trong 1 nước · Bài 14",
-        "prompt": "Phối hợp hai Xe để chiếu hết Vua đối phương trong 1 nước.",
-        "mode": "interactive",
-        "outcome": "checkmate",
-        "goal": "checkmate",
-        "fen": "6k1/4R3/8/8/6K1/8/8/2R5 w - - 0 1",
-        "moves": [
-          "Rc8#"
-        ],
-        "alternativeLines": [],
-        "hints": [
-          "Một Xe hạn chế đường thoát, Xe còn lại chiếu Vua.",
-          "Giữ Xe ngoài tầm bắt của Vua và kiểm tra tất cả các ô thoát."
-        ],
-        "solution": "Hai Xe phối hợp khống chế đường thoát và chiếu hết. Nhánh mẫu: Rc8#.",
-        "beginner": true
-      },
-      {
-        "title": "Chiếu hết trong 1 nước · Bài 15",
-        "prompt": "Phối hợp hai Xe để chiếu hết Vua đối phương trong 1 nước.",
-        "mode": "interactive",
-        "outcome": "checkmate",
-        "goal": "checkmate",
-        "fen": "5R2/8/k7/8/8/1R6/3K4/8 w - - 0 1",
-        "moves": [
-          "Ra8#"
-        ],
-        "alternativeLines": [],
-        "hints": [
-          "Một Xe hạn chế đường thoát, Xe còn lại chiếu Vua.",
-          "Giữ Xe ngoài tầm bắt của Vua và kiểm tra tất cả các ô thoát."
-        ],
-        "solution": "Hai Xe phối hợp khống chế đường thoát và chiếu hết. Nhánh mẫu: Ra8#.",
-        "beginner": true
-      },
-      {
-        "title": "Chiếu hết trong 1 nước · Bài 16",
-        "prompt": "Phối hợp hai Xe để chiếu hết Vua đối phương trong 1 nước.",
-        "mode": "interactive",
-        "outcome": "checkmate",
-        "goal": "checkmate",
-        "fen": "7k/1R6/8/8/8/8/2KR4/8 w - - 0 1",
-        "moves": [
-          "Rd8#"
-        ],
-        "alternativeLines": [],
-        "hints": [
-          "Một Xe hạn chế đường thoát, Xe còn lại chiếu Vua.",
-          "Giữ Xe ngoài tầm bắt của Vua và kiểm tra tất cả các ô thoát."
-        ],
-        "solution": "Hai Xe phối hợp khống chế đường thoát và chiếu hết. Nhánh mẫu: Rd8#.",
-        "beginner": true
-      },
-      {
-        "title": "Chiếu hết trong 1 nước · Bài 17",
-        "prompt": "Phối hợp hai Xe để chiếu hết Vua đối phương trong 1 nước.",
-        "mode": "interactive",
-        "outcome": "checkmate",
-        "goal": "checkmate",
-        "fen": "8/8/2K5/6R1/8/R7/8/7k w - - 0 1",
-        "moves": [
-          "Rh3#"
-        ],
-        "alternativeLines": [],
-        "hints": [
-          "Một Xe hạn chế đường thoát, Xe còn lại chiếu Vua.",
-          "Giữ Xe ngoài tầm bắt của Vua và kiểm tra tất cả các ô thoát."
-        ],
-        "solution": "Hai Xe phối hợp khống chế đường thoát và chiếu hết. Nhánh mẫu: Rh3#.",
-        "beginner": true
-      },
-      {
-        "title": "Chiếu hết trong 1 nước · Bài 18",
-        "prompt": "Phối hợp hai Xe để chiếu hết Vua đối phương trong 1 nước.",
-        "mode": "interactive",
-        "outcome": "checkmate",
-        "goal": "checkmate",
-        "fen": "4k3/R5R1/8/8/8/8/2K5/8 w - - 0 1",
-        "moves": [
-          "Rg8#"
-        ],
-        "alternativeLines": [
-          [
-            "Ra8#"
-          ]
-        ],
-        "hints": [
-          "Một Xe hạn chế đường thoát, Xe còn lại chiếu Vua.",
-          "Giữ Xe ngoài tầm bắt của Vua và kiểm tra tất cả các ô thoát."
-        ],
-        "solution": "Hai Xe phối hợp khống chế đường thoát và chiếu hết. Nhánh mẫu: Rg8#.",
-        "beginner": true
-      },
-      {
-        "title": "Chiếu hết trong 1 nước · Bài 19",
-        "prompt": "Phối hợp hai Xe để chiếu hết Vua đối phương trong 1 nước.",
-        "mode": "interactive",
-        "outcome": "checkmate",
-        "goal": "checkmate",
-        "fen": "1r6/8/7k/6r1/8/8/8/K7 b - - 0 1",
-        "moves": [
-          "Ra5#"
-        ],
-        "alternativeLines": [],
-        "hints": [
-          "Một Xe hạn chế đường thoát, Xe còn lại chiếu Vua.",
-          "Giữ Xe ngoài tầm bắt của Vua và kiểm tra tất cả các ô thoát."
-        ],
-        "solution": "Hai Xe phối hợp khống chế đường thoát và chiếu hết. Nhánh mẫu: Ra5#.",
-        "beginner": true
-      },
-      {
-        "title": "Chiếu hết trong 1 nước · Bài 20",
-        "prompt": "Phối hợp hai Xe để chiếu hết Vua đối phương trong 1 nước.",
-        "mode": "interactive",
-        "outcome": "checkmate",
-        "goal": "checkmate",
-        "fen": "7K/2R5/8/8/7k/8/6R1/8 w - - 0 1",
-        "moves": [
-          "Rh7#"
-        ],
-        "alternativeLines": [],
-        "hints": [
-          "Một Xe hạn chế đường thoát, Xe còn lại chiếu Vua.",
-          "Giữ Xe ngoài tầm bắt của Vua và kiểm tra tất cả các ô thoát."
-        ],
-        "solution": "Hai Xe phối hợp khống chế đường thoát và chiếu hết. Nhánh mẫu: Rh7#.",
-        "beginner": true
-      },
-      {
-        "title": "Chiếu hết trong 2 nước · Bài 1",
-        "prompt": "Phối hợp hai Xe để chiếu hết Vua đối phương trong 2 nước.",
-        "mode": "interactive",
-        "outcome": "checkmate",
-        "goal": "checkmate",
-        "fen": "8/8/7k/8/r7/2r5/8/3K4 b - - 0 1",
-        "moves": [
-          "Ra2",
-          "Ke1",
-          "Rc1#"
-        ],
-        "alternativeLines": [],
-        "hints": [
-          "Một Xe hạn chế đường thoát, Xe còn lại chiếu Vua.",
-          "Giữ Xe ngoài tầm bắt của Vua và kiểm tra tất cả các ô thoát."
-        ],
-        "solution": "Hai Xe phối hợp khống chế đường thoát và chiếu hết. Nhánh mẫu: Ra2 · Ke1 · Rc1#.",
-        "difficulty": {
-          "level": "A",
-          "status": "suggested",
-          "solverMoves": 2,
-          "sacrificeCount": 0,
-          "reason": "Phối hợp trực tiếp hai Xe, không hy sinh."
-        }
-      },
-      {
-        "title": "Chiếu hết trong 2 nước · Bài 2",
-        "prompt": "Phối hợp hai Xe để chiếu hết Vua đối phương trong 2 nước.",
-        "mode": "interactive",
-        "outcome": "checkmate",
-        "goal": "checkmate",
-        "fen": "7K/8/8/8/1k6/4r3/r7/8 b - - 0 1",
-        "moves": [
-          "Rg2",
-          "Kh7",
-          "Rh3#"
-        ],
-        "alternativeLines": [
-          [
-            "Ra7",
-            "Kg8",
-            "Re8#"
-          ],
-          [
-            "Rg3",
-            "Kh7",
-            "Rh2#"
-          ],
-          [
-            "Re7",
-            "Kg8",
-            "Ra8#"
-          ]
-        ],
-        "hints": [
-          "Một Xe hạn chế đường thoát, Xe còn lại chiếu Vua.",
-          "Giữ Xe ngoài tầm bắt của Vua và kiểm tra tất cả các ô thoát."
-        ],
-        "solution": "Hai Xe phối hợp khống chế đường thoát và chiếu hết. Nhánh mẫu: Rg2 · Kh7 · Rh3#.",
-        "difficulty": {
-          "level": "A",
-          "status": "suggested",
-          "solverMoves": 2,
-          "sacrificeCount": 0,
-          "reason": "Phối hợp trực tiếp hai Xe, không hy sinh."
-        }
-      },
-      {
-        "title": "Chiếu hết trong 2 nước · Bài 3",
-        "prompt": "Phối hợp hai Xe để chiếu hết Vua đối phương trong 2 nước.",
-        "mode": "interactive",
-        "outcome": "checkmate",
-        "goal": "checkmate",
-        "fen": "7K/8/k7/2r5/4r3/8/8/8 b - - 0 1",
-        "moves": [
-          "Rg4",
-          "Kh7",
-          "Rh5#"
-        ],
-        "alternativeLines": [
-          [
-            "Rc7",
-            "Kg8",
-            "Re8#"
-          ],
-          [
-            "Rg5",
-            "Kh7",
-            "Rh4#"
-          ],
-          [
-            "Re7",
-            "Kg8",
-            "Rc8#"
-          ]
-        ],
-        "hints": [
-          "Một Xe hạn chế đường thoát, Xe còn lại chiếu Vua.",
-          "Giữ Xe ngoài tầm bắt của Vua và kiểm tra tất cả các ô thoát."
-        ],
-        "solution": "Hai Xe phối hợp khống chế đường thoát và chiếu hết. Nhánh mẫu: Rg4 · Kh7 · Rh5#.",
-        "difficulty": {
-          "level": "A",
-          "status": "suggested",
-          "solverMoves": 2,
-          "sacrificeCount": 0,
-          "reason": "Phối hợp trực tiếp hai Xe, không hy sinh."
-        }
-      },
-      {
-        "title": "Chiếu hết trong 2 nước · Bài 4",
-        "prompt": "Phối hợp hai Xe để chiếu hết Vua đối phương trong 2 nước.",
-        "mode": "interactive",
-        "outcome": "checkmate",
-        "goal": "checkmate",
-        "fen": "7K/3r4/2k5/8/3r4/8/8/8 b - - 0 1",
-        "moves": [
-          "Ra7",
-          "Kg8",
-          "Rd8#"
-        ],
-        "alternativeLines": [
-          [
-            "Ra4",
-            "Kg8",
-            "Ra8#"
-          ],
-          [
-            "Rb7",
-            "Kg8",
-            "Rd8#"
-          ],
-          [
-            "Re4",
-            "Kg8",
-            "Re8#"
-          ]
-        ],
-        "hints": [
-          "Một Xe hạn chế đường thoát, Xe còn lại chiếu Vua.",
-          "Giữ Xe ngoài tầm bắt của Vua và kiểm tra tất cả các ô thoát."
-        ],
-        "solution": "Hai Xe phối hợp khống chế đường thoát và chiếu hết. Nhánh mẫu: Ra7 · Kg8 · Rd8#.",
-        "difficulty": {
-          "level": "A",
-          "status": "suggested",
-          "solverMoves": 2,
-          "sacrificeCount": 0,
-          "reason": "Phối hợp trực tiếp hai Xe, không hy sinh."
-        }
-      },
-      {
-        "title": "Chiếu hết trong 2 nước · Bài 5",
-        "prompt": "Phối hợp hai Xe để chiếu hết Vua đối phương trong 2 nước.",
-        "mode": "interactive",
-        "outcome": "checkmate",
-        "goal": "checkmate",
-        "fen": "7k/8/3R4/2R5/8/8/K7/8 w - - 0 1",
-        "moves": [
-          "Rc7",
-          "Kg8",
-          "Rd8#"
-        ],
-        "alternativeLines": [
-          [
-            "Rd7",
-            "Kg8",
-            "Rc8#"
-          ]
-        ],
-        "hints": [
-          "Một Xe hạn chế đường thoát, Xe còn lại chiếu Vua.",
-          "Giữ Xe ngoài tầm bắt của Vua và kiểm tra tất cả các ô thoát."
-        ],
-        "solution": "Hai Xe phối hợp khống chế đường thoát và chiếu hết. Nhánh mẫu: Rc7 · Kg8 · Rd8#.",
-        "difficulty": {
-          "level": "A",
-          "status": "suggested",
-          "solverMoves": 2,
-          "sacrificeCount": 0,
-          "reason": "Phối hợp trực tiếp hai Xe, không hy sinh."
-        }
-      },
-      {
-        "title": "Chiếu hết trong 2 nước · Bài 6",
-        "prompt": "Phối hợp hai Xe để chiếu hết Vua đối phương trong 2 nước.",
-        "mode": "interactive",
-        "outcome": "checkmate",
-        "goal": "checkmate",
-        "fen": "8/8/4r3/7K/8/1k4r1/8/8 b - - 0 1",
-        "moves": [
-          "Rg1",
-          "Kh4",
-          "Rh6#"
-        ],
-        "alternativeLines": [
-          [
-            "Rg8",
-            "Kh4",
-            "Rh6#"
-          ],
-          [
-            "Rg2",
-            "Kh4",
-            "Rh6#"
-          ],
-          [
-            "Rg7",
-            "Kh4",
-            "Rh6#"
-          ]
-        ],
-        "hints": [
-          "Một Xe hạn chế đường thoát, Xe còn lại chiếu Vua.",
-          "Giữ Xe ngoài tầm bắt của Vua và kiểm tra tất cả các ô thoát."
-        ],
-        "solution": "Hai Xe phối hợp khống chế đường thoát và chiếu hết. Nhánh mẫu: Rg1 · Kh4 · Rh6#.",
-        "difficulty": {
-          "level": "A",
-          "status": "suggested",
-          "solverMoves": 2,
-          "sacrificeCount": 0,
-          "reason": "Phối hợp trực tiếp hai Xe, không hy sinh."
-        }
-      },
-      {
-        "title": "Chiếu hết trong 2 nước · Bài 7",
-        "prompt": "Phối hợp hai Xe để chiếu hết Vua đối phương trong 2 nước.",
-        "mode": "interactive",
-        "outcome": "checkmate",
-        "goal": "checkmate",
-        "fen": "2R5/8/8/8/1k6/8/8/R4K2 w - - 0 1",
-        "moves": [
-          "Rb1+",
-          "Ka3",
-          "Ra8#"
-        ],
-        "alternativeLines": [],
-        "hints": [
-          "Một Xe hạn chế đường thoát, Xe còn lại chiếu Vua.",
-          "Giữ Xe ngoài tầm bắt của Vua và kiểm tra tất cả các ô thoát."
-        ],
-        "solution": "Hai Xe phối hợp khống chế đường thoát và chiếu hết. Nhánh mẫu: Rb1+ · Ka3 · Ra8#.",
-        "difficulty": {
-          "level": "A",
-          "status": "suggested",
-          "solverMoves": 2,
-          "sacrificeCount": 0,
-          "reason": "Phối hợp trực tiếp hai Xe, không hy sinh."
-        }
-      },
-      {
-        "title": "Chiếu hết trong 2 nước · Bài 8",
-        "prompt": "Phối hợp hai Xe để chiếu hết Vua đối phương trong 2 nước.",
-        "mode": "interactive",
-        "outcome": "checkmate",
-        "goal": "checkmate",
-        "fen": "8/8/7R/7R/k7/4K3/8/8 w - - 0 1",
-        "moves": [
-          "Rb6",
-          "Ka3",
-          "Ra5#"
-        ],
-        "alternativeLines": [],
-        "hints": [
-          "Một Xe hạn chế đường thoát, Xe còn lại chiếu Vua.",
-          "Giữ Xe ngoài tầm bắt của Vua và kiểm tra tất cả các ô thoát."
-        ],
-        "solution": "Hai Xe phối hợp khống chế đường thoát và chiếu hết. Nhánh mẫu: Rb6 · Ka3 · Ra5#.",
-        "difficulty": {
-          "level": "A",
-          "status": "suggested",
-          "solverMoves": 2,
-          "sacrificeCount": 0,
-          "reason": "Phối hợp trực tiếp hai Xe, không hy sinh."
-        }
-      },
-      {
-        "title": "Chiếu hết trong 2 nước · Bài 9",
-        "prompt": "Phối hợp hai Xe để chiếu hết Vua đối phương trong 2 nước.",
-        "mode": "interactive",
-        "outcome": "checkmate",
-        "goal": "checkmate",
-        "fen": "4K3/8/8/8/1r6/1k6/5r2/8 b - - 0 1",
-        "moves": [
-          "Rb7",
-          "Kd8",
-          "Rf8#"
-        ],
-        "alternativeLines": [],
-        "hints": [
-          "Một Xe hạn chế đường thoát, Xe còn lại chiếu Vua.",
-          "Giữ Xe ngoài tầm bắt của Vua và kiểm tra tất cả các ô thoát."
-        ],
-        "solution": "Hai Xe phối hợp khống chế đường thoát và chiếu hết. Nhánh mẫu: Rb7 · Kd8 · Rf8#.",
-        "difficulty": {
-          "level": "A",
-          "status": "suggested",
-          "solverMoves": 2,
-          "sacrificeCount": 0,
-          "reason": "Phối hợp trực tiếp hai Xe, không hy sinh."
-        }
-      },
-      {
-        "title": "Chiếu hết trong 2 nước · Bài 10",
-        "prompt": "Phối hợp hai Xe để chiếu hết Vua đối phương trong 2 nước.",
-        "mode": "interactive",
-        "outcome": "checkmate",
-        "goal": "checkmate",
-        "fen": "2r5/2r5/8/5k2/8/8/8/7K b - - 0 1",
-        "moves": [
-          "Rg7",
-          "Kh2",
-          "Rh8#"
-        ],
-        "alternativeLines": [
-          [
-            "Rg8",
-            "Kh2",
-            "Rh7#"
-          ]
-        ],
-        "hints": [
-          "Một Xe hạn chế đường thoát, Xe còn lại chiếu Vua.",
-          "Giữ Xe ngoài tầm bắt của Vua và kiểm tra tất cả các ô thoát."
-        ],
-        "solution": "Hai Xe phối hợp khống chế đường thoát và chiếu hết. Nhánh mẫu: Rg7 · Kh2 · Rh8#.",
-        "difficulty": {
-          "level": "A",
-          "status": "suggested",
-          "solverMoves": 2,
-          "sacrificeCount": 0,
-          "reason": "Phối hợp trực tiếp hai Xe, không hy sinh."
-        }
-      },
-      {
-        "title": "Chiếu hết trong 2 nước · Bài 11",
-        "prompt": "Phối hợp hai Xe để chiếu hết Vua đối phương trong 2 nước.",
-        "mode": "interactive",
-        "outcome": "checkmate",
-        "goal": "checkmate",
-        "fen": "K7/8/8/8/8/4r3/4kr2/8 b - - 0 1",
-        "moves": [
-          "Rf7",
-          "Kb8",
-          "Re8#"
-        ],
-        "alternativeLines": [
-          [
-            "Re7",
-            "Kb8",
-            "Rf8#"
-          ]
-        ],
-        "hints": [
-          "Một Xe hạn chế đường thoát, Xe còn lại chiếu Vua.",
-          "Giữ Xe ngoài tầm bắt của Vua và kiểm tra tất cả các ô thoát."
-        ],
-        "solution": "Hai Xe phối hợp khống chế đường thoát và chiếu hết. Nhánh mẫu: Rf7 · Kb8 · Re8#.",
-        "difficulty": {
-          "level": "A",
-          "status": "suggested",
-          "solverMoves": 2,
-          "sacrificeCount": 0,
-          "reason": "Phối hợp trực tiếp hai Xe, không hy sinh."
-        }
-      },
-      {
-        "title": "Chiếu hết trong 2 nước · Bài 12",
-        "prompt": "Phối hợp hai Xe để chiếu hết Vua đối phương trong 2 nước.",
-        "mode": "interactive",
-        "outcome": "checkmate",
-        "goal": "checkmate",
-        "fen": "R7/3K4/8/7k/1R6/8/8/8 w - - 0 1",
-        "moves": [
-          "Rg8",
-          "Kh6",
-          "Rh4#"
-        ],
-        "alternativeLines": [],
-        "hints": [
-          "Một Xe hạn chế đường thoát, Xe còn lại chiếu Vua.",
-          "Giữ Xe ngoài tầm bắt của Vua và kiểm tra tất cả các ô thoát."
-        ],
-        "solution": "Hai Xe phối hợp khống chế đường thoát và chiếu hết. Nhánh mẫu: Rg8 · Kh6 · Rh4#.",
-        "difficulty": {
-          "level": "A",
-          "status": "suggested",
-          "solverMoves": 2,
-          "sacrificeCount": 0,
-          "reason": "Phối hợp trực tiếp hai Xe, không hy sinh."
-        }
-      },
-      {
-        "title": "Chiếu hết trong 2 nước · Bài 13",
-        "prompt": "Phối hợp hai Xe để chiếu hết Vua đối phương trong 2 nước.",
-        "mode": "interactive",
-        "outcome": "checkmate",
-        "goal": "checkmate",
-        "fen": "5k2/8/8/8/2R2K2/8/4R3/8 w - - 0 1",
-        "moves": [
-          "Rc7",
-          "Kg8",
-          "Re8#"
-        ],
-        "alternativeLines": [],
-        "hints": [
-          "Một Xe hạn chế đường thoát, Xe còn lại chiếu Vua.",
-          "Giữ Xe ngoài tầm bắt của Vua và kiểm tra tất cả các ô thoát."
-        ],
-        "solution": "Hai Xe phối hợp khống chế đường thoát và chiếu hết. Nhánh mẫu: Rc7 · Kg8 · Re8#.",
-        "difficulty": {
-          "level": "A",
-          "status": "suggested",
-          "solverMoves": 2,
-          "sacrificeCount": 0,
-          "reason": "Phối hợp trực tiếp hai Xe, không hy sinh."
-        }
-      },
-      {
-        "title": "Chiếu hết trong 2 nước · Bài 14",
-        "prompt": "Phối hợp hai Xe để chiếu hết Vua đối phương trong 2 nước.",
-        "mode": "interactive",
-        "outcome": "checkmate",
-        "goal": "checkmate",
-        "fen": "7k/8/8/7r/4r3/8/8/3K4 b - - 0 1",
-        "moves": [
-          "Rh2",
-          "Kc1",
-          "Re1#"
-        ],
-        "alternativeLines": [],
-        "hints": [
-          "Một Xe hạn chế đường thoát, Xe còn lại chiếu Vua.",
-          "Giữ Xe ngoài tầm bắt của Vua và kiểm tra tất cả các ô thoát."
-        ],
-        "solution": "Hai Xe phối hợp khống chế đường thoát và chiếu hết. Nhánh mẫu: Rh2 · Kc1 · Re1#.",
-        "difficulty": {
-          "level": "A",
-          "status": "suggested",
-          "solverMoves": 2,
-          "sacrificeCount": 0,
-          "reason": "Phối hợp trực tiếp hai Xe, không hy sinh."
-        }
-      },
-      {
-        "title": "Chiếu hết trong 2 nước · Bài 15",
-        "prompt": "Phối hợp hai Xe để chiếu hết Vua đối phương trong 2 nước.",
-        "mode": "interactive",
-        "outcome": "checkmate",
-        "goal": "checkmate",
-        "fen": "1K6/8/r7/5k2/8/8/8/7r b - - 0 1",
-        "moves": [
-          "Rh7",
-          "Kc8",
-          "Ra8#"
-        ],
-        "alternativeLines": [],
-        "hints": [
-          "Một Xe hạn chế đường thoát, Xe còn lại chiếu Vua.",
-          "Giữ Xe ngoài tầm bắt của Vua và kiểm tra tất cả các ô thoát."
-        ],
-        "solution": "Hai Xe phối hợp khống chế đường thoát và chiếu hết. Nhánh mẫu: Rh7 · Kc8 · Ra8#.",
-        "difficulty": {
-          "level": "A",
-          "status": "suggested",
-          "solverMoves": 2,
-          "sacrificeCount": 0,
-          "reason": "Phối hợp trực tiếp hai Xe, không hy sinh."
-        }
-      },
-      {
-        "title": "Chiếu hết trong 2 nước · Bài 16",
-        "prompt": "Phối hợp hai Xe để chiếu hết Vua đối phương trong 2 nước.",
-        "mode": "interactive",
-        "outcome": "checkmate",
-        "goal": "checkmate",
-        "fen": "8/8/8/8/8/4r2r/1K6/6k1 b - - 0 1",
-        "moves": [
-          "Rh2+",
-          "Kc1",
-          "Re1#"
-        ],
-        "alternativeLines": [],
-        "hints": [
-          "Một Xe hạn chế đường thoát, Xe còn lại chiếu Vua.",
-          "Giữ Xe ngoài tầm bắt của Vua và kiểm tra tất cả các ô thoát."
-        ],
-        "solution": "Hai Xe phối hợp khống chế đường thoát và chiếu hết. Nhánh mẫu: Rh2+ · Kc1 · Re1#.",
-        "difficulty": {
-          "level": "A",
-          "status": "suggested",
-          "solverMoves": 2,
-          "sacrificeCount": 0,
-          "reason": "Phối hợp trực tiếp hai Xe, không hy sinh."
-        }
-      },
-      {
-        "title": "Chiếu hết trong 2 nước · Bài 17",
-        "prompt": "Phối hợp hai Xe để chiếu hết Vua đối phương trong 2 nước.",
-        "mode": "interactive",
-        "outcome": "checkmate",
-        "goal": "checkmate",
-        "fen": "6r1/8/3r4/8/8/8/K3k3/8 b - - 0 1",
-        "moves": [
-          "Rb6",
-          "Ka1",
-          "Ra8#"
-        ],
-        "alternativeLines": [
-          [
-            "Rb8",
-            "Ka3",
-            "Ra6#"
-          ]
-        ],
-        "hints": [
-          "Một Xe hạn chế đường thoát, Xe còn lại chiếu Vua.",
-          "Giữ Xe ngoài tầm bắt của Vua và kiểm tra tất cả các ô thoát."
-        ],
-        "solution": "Hai Xe phối hợp khống chế đường thoát và chiếu hết. Nhánh mẫu: Rb6 · Ka1 · Ra8#.",
-        "difficulty": {
-          "level": "A",
-          "status": "suggested",
-          "solverMoves": 2,
-          "sacrificeCount": 0,
-          "reason": "Phối hợp trực tiếp hai Xe, không hy sinh."
-        }
-      },
-      {
-        "title": "Chiếu hết trong 2 nước · Bài 18",
-        "prompt": "Phối hợp hai Xe để chiếu hết Vua đối phương trong 2 nước.",
-        "mode": "interactive",
-        "outcome": "checkmate",
-        "goal": "checkmate",
-        "fen": "8/7R/6R1/4K3/8/8/8/2k5 w - - 0 1",
-        "moves": [
-          "Rg2",
-          "Kb1",
-          "Rh1#"
-        ],
-        "alternativeLines": [
-          [
-            "Rh2",
-            "Kd1",
-            "Rg1#"
-          ]
-        ],
-        "hints": [
-          "Một Xe hạn chế đường thoát, Xe còn lại chiếu Vua.",
-          "Giữ Xe ngoài tầm bắt của Vua và kiểm tra tất cả các ô thoát."
-        ],
-        "solution": "Hai Xe phối hợp khống chế đường thoát và chiếu hết. Nhánh mẫu: Rg2 · Kb1 · Rh1#.",
-        "difficulty": {
-          "level": "A",
-          "status": "suggested",
-          "solverMoves": 2,
-          "sacrificeCount": 0,
-          "reason": "Phối hợp trực tiếp hai Xe, không hy sinh."
-        }
-      },
-      {
-        "title": "Chiếu hết trong 2 nước · Bài 19",
-        "prompt": "Phối hợp hai Xe để chiếu hết Vua đối phương trong 2 nước.",
-        "mode": "interactive",
-        "outcome": "checkmate",
-        "goal": "checkmate",
-        "fen": "7k/8/8/8/8/1K6/3R4/R7 w - - 0 1",
-        "moves": [
-          "Rg2",
-          "Kh7",
-          "Rh1#"
-        ],
-        "alternativeLines": [
-          [
-            "Ra7",
-            "Kg8",
-            "Rd8#"
-          ],
-          [
-            "Rd7",
-            "Kg8",
-            "Ra8#"
-          ],
-          [
-            "Rg1",
-            "Kh7",
-            "Rh2#"
-          ]
-        ],
-        "hints": [
-          "Một Xe hạn chế đường thoát, Xe còn lại chiếu Vua.",
-          "Giữ Xe ngoài tầm bắt của Vua và kiểm tra tất cả các ô thoát."
-        ],
-        "solution": "Hai Xe phối hợp khống chế đường thoát và chiếu hết. Nhánh mẫu: Rg2 · Kh7 · Rh1#.",
-        "difficulty": {
-          "level": "A",
-          "status": "suggested",
-          "solverMoves": 2,
-          "sacrificeCount": 0,
-          "reason": "Phối hợp trực tiếp hai Xe, không hy sinh."
-        }
-      },
-      {
-        "title": "Chiếu hết trong 2 nước · Bài 20",
-        "prompt": "Phối hợp hai Xe để chiếu hết Vua đối phương trong 2 nước.",
-        "mode": "interactive",
-        "outcome": "checkmate",
-        "goal": "checkmate",
-        "fen": "5k2/6R1/K7/8/8/8/6R1/8 w - - 0 1",
-        "moves": [
-          "Rb7",
-          "Ke8",
-          "Rg8#"
-        ],
-        "alternativeLines": [
-          [
-            "Rc7",
-            "Ke8",
-            "Rg8#"
-          ],
-          [
-            "Ra7",
-            "Ke8",
-            "Rg8#"
-          ],
-          [
-            "Rh7",
-            "Ke8",
-            "Rg8#"
-          ]
-        ],
-        "hints": [
-          "Một Xe hạn chế đường thoát, Xe còn lại chiếu Vua.",
-          "Giữ Xe ngoài tầm bắt của Vua và kiểm tra tất cả các ô thoát."
-        ],
-        "solution": "Hai Xe phối hợp khống chế đường thoát và chiếu hết. Nhánh mẫu: Rb7 · Ke8 · Rg8#.",
-        "difficulty": {
-          "level": "A",
-          "status": "suggested",
-          "solverMoves": 2,
-          "sacrificeCount": 0,
-          "reason": "Phối hợp trực tiếp hai Xe, không hy sinh."
-        }
-      },
-      {
-        "title": "Chiếu hết trong 3 nước · Bài 1",
-        "prompt": "Phối hợp hai Xe để chiếu hết Vua đối phương trong 3 nước.",
-        "mode": "interactive",
-        "outcome": "checkmate",
-        "goal": "checkmate",
-        "fen": "R4R2/8/8/K7/8/8/6k1/8 w - - 0 1",
-        "moves": [
-          "Rf7",
-          "Kg1",
-          "Rg8+",
-          "Kh2",
-          "Rh7#"
-        ],
-        "alternativeLines": [
-          [
-            "Rf6",
-            "Kg3",
-            "Rg8+",
-            "Kh3",
-            "Rh6#"
-          ],
-          [
-            "Ra6",
-            "Kg3",
-            "Rg6+",
-            "Kh4",
-            "Rh8#"
-          ],
-          [
-            "Ra7",
-            "Kg1",
-            "Rg7+",
-            "Kh1",
-            "Rh8#"
-          ]
-        ],
-        "hints": [
-          "Một Xe hạn chế đường thoát, Xe còn lại chiếu Vua.",
-          "Giữ Xe ngoài tầm bắt của Vua và kiểm tra tất cả các ô thoát."
-        ],
-        "solution": "Hai Xe phối hợp khống chế đường thoát và chiếu hết. Nhánh mẫu: Rf7 · Kg1 · Rg8+ · Kh2 · Rh7#.",
-        "difficulty": {
-          "level": "B",
-          "status": "suggested",
-          "solverMoves": 3,
-          "sacrificeCount": 0,
-          "reason": "Phối hợp ngắn hai Xe qua các nước đáp của Vua, không hy sinh."
-        }
-      },
-      {
-        "title": "Chiếu hết trong 3 nước · Bài 2",
-        "prompt": "Phối hợp hai Xe để chiếu hết Vua đối phương trong 3 nước.",
-        "mode": "interactive",
-        "outcome": "checkmate",
-        "goal": "checkmate",
-        "fen": "8/2K4R/8/8/8/3R4/1k6/8 w - - 0 1",
-        "moves": [
-          "Rg3",
-          "Kc2",
-          "Rh2+",
-          "Kd1",
-          "Rg1#"
-        ],
-        "alternativeLines": [
-          [
-            "Rf3",
-            "Kc2",
-            "Rh2+",
-            "Kd1",
-            "Rf1#"
-          ]
-        ],
-        "hints": [
-          "Một Xe hạn chế đường thoát, Xe còn lại chiếu Vua.",
-          "Giữ Xe ngoài tầm bắt của Vua và kiểm tra tất cả các ô thoát."
-        ],
-        "solution": "Hai Xe phối hợp khống chế đường thoát và chiếu hết. Nhánh mẫu: Rg3 · Kc2 · Rh2+ · Kd1 · Rg1#.",
-        "difficulty": {
-          "level": "B",
-          "status": "suggested",
-          "solverMoves": 3,
-          "sacrificeCount": 0,
-          "reason": "Phối hợp ngắn hai Xe qua các nước đáp của Vua, không hy sinh."
-        }
-      },
-      {
-        "title": "Chiếu hết trong 4 nước · Bài 3",
-        "prompt": "Phối hợp hai Xe để chiếu hết Vua đối phương trong 4 nước.",
-        "mode": "interactive",
-        "outcome": "checkmate",
-        "goal": "checkmate",
-        "fen": "R7/1R6/6k1/8/8/8/8/K7 w - - 0 1",
-        "moves": [
-          "Ra5",
-          "Kf6",
-          "Rb6+",
-          "Kg7",
-          "Ra7+",
-          "Kg8",
-          "Rb8#"
-        ],
-        "alternativeLines": [],
-        "hints": [
-          "Một Xe hạn chế đường thoát, Xe còn lại chiếu Vua.",
-          "Giữ Xe ngoài tầm bắt của Vua và kiểm tra tất cả các ô thoát."
-        ],
-        "solution": "Hai Xe phối hợp khống chế đường thoát và chiếu hết. Nhánh mẫu: Ra5 · Kf6 · Rb6+ · Kg7 · Ra7+ · Kg8 · Rb8#.",
-        "difficulty": {
-          "level": "B",
-          "status": "suggested",
-          "solverMoves": 4,
-          "sacrificeCount": 0,
-          "reason": "Phối hợp ngắn hai Xe qua các nước đáp của Vua, không hy sinh."
-        }
-      },
-      {
-        "title": "Chiếu hết trong 4 nước · Bài 4",
-        "prompt": "Phối hợp hai Xe để chiếu hết Vua đối phương trong 4 nước.",
-        "mode": "interactive",
-        "outcome": "checkmate",
-        "goal": "checkmate",
-        "fen": "8/8/8/8/8/2r2r2/K4k2/8 b - - 0 1",
-        "moves": [
-          "Rb3",
-          "Ka1",
-          "Rfe3",
-          "Ka2",
-          "Rb7",
-          "Ka1",
-          "Ra3#"
-        ],
-        "alternativeLines": [],
-        "hints": [
-          "Một Xe hạn chế đường thoát, Xe còn lại chiếu Vua.",
-          "Giữ Xe ngoài tầm bắt của Vua và kiểm tra tất cả các ô thoát."
-        ],
-        "solution": "Hai Xe phối hợp khống chế đường thoát và chiếu hết. Nhánh mẫu: Rb3 · Ka1 · Rfe3 · Ka2 · Rb7 · Ka1 · Ra3#.",
-        "difficulty": {
-          "level": "B",
-          "status": "suggested",
-          "solverMoves": 4,
-          "sacrificeCount": 0,
-          "reason": "Phối hợp ngắn hai Xe qua các nước đáp của Vua, không hy sinh."
-        }
-      },
-      {
-        "title": "Chiếu hết trong 3 nước · Bài 5",
-        "prompt": "Phối hợp hai Xe để chiếu hết Vua đối phương trong 3 nước.",
-        "mode": "interactive",
-        "outcome": "checkmate",
-        "goal": "checkmate",
-        "fen": "3KR3/1R6/8/8/8/6k1/8/8 w - - 0 1",
-        "moves": [
-          "Rf7",
-          "Kg2",
-          "Rg8+",
-          "Kh3",
-          "Rh7#"
-        ],
-        "alternativeLines": [
-          [
-            "Rf8",
-            "Kg4",
-            "Rg7+",
-            "Kh5",
-            "Rh8#"
-          ]
-        ],
-        "hints": [
-          "Một Xe hạn chế đường thoát, Xe còn lại chiếu Vua.",
-          "Giữ Xe ngoài tầm bắt của Vua và kiểm tra tất cả các ô thoát."
-        ],
-        "solution": "Hai Xe phối hợp khống chế đường thoát và chiếu hết. Nhánh mẫu: Rf7 · Kg2 · Rg8+ · Kh3 · Rh7#.",
-        "difficulty": {
-          "level": "B",
-          "status": "suggested",
-          "solverMoves": 3,
-          "sacrificeCount": 0,
-          "reason": "Phối hợp ngắn hai Xe qua các nước đáp của Vua, không hy sinh."
-        }
-      },
-      {
-        "title": "Chiếu hết trong 4 nước · Bài 6",
-        "prompt": "Phối hợp hai Xe để chiếu hết Vua đối phương trong 4 nước.",
-        "mode": "interactive",
-        "outcome": "checkmate",
-        "goal": "checkmate",
-        "fen": "3KR3/8/8/8/8/k7/8/6R1 w - - 0 1",
-        "moves": [
-          "Rb1",
-          "Ka2",
-          "Rb7",
-          "Ka1",
-          "Re6",
-          "Ka2",
-          "Ra6#"
-        ],
-        "alternativeLines": [],
-        "hints": [
-          "Một Xe hạn chế đường thoát, Xe còn lại chiếu Vua.",
-          "Giữ Xe ngoài tầm bắt của Vua và kiểm tra tất cả các ô thoát."
-        ],
-        "solution": "Hai Xe phối hợp khống chế đường thoát và chiếu hết. Nhánh mẫu: Rb1 · Ka2 · Rb7 · Ka1 · Re6 · Ka2 · Ra6#.",
-        "difficulty": {
-          "level": "B",
-          "status": "suggested",
-          "solverMoves": 4,
-          "sacrificeCount": 0,
-          "reason": "Phối hợp ngắn hai Xe qua các nước đáp của Vua, không hy sinh."
-        }
-      },
-      {
-        "title": "Chiếu hết trong 3 nước · Bài 7",
-        "prompt": "Phối hợp hai Xe để chiếu hết Vua đối phương trong 3 nước.",
-        "mode": "interactive",
-        "outcome": "checkmate",
-        "goal": "checkmate",
-        "fen": "8/8/6r1/7K/8/2r5/2k5/8 b - - 0 1",
-        "moves": [
-          "Rcg3",
-          "Kh4",
-          "Rg8",
-          "Kh5",
-          "Rh3#"
-        ],
-        "alternativeLines": [
-          [
-            "Rgg3",
-            "Kh6",
-            "Rg2",
-            "Kh7",
-            "Rh3#"
-          ],
-          [
-            "Rg2",
-            "Kh4",
-            "Rg8",
-            "Kh5",
-            "Rh3#"
-          ],
-          [
-            "Rg7",
-            "Kh6",
-            "Rg2",
-            "Kh7",
-            "Rh3#"
-          ]
-        ],
-        "hints": [
-          "Một Xe hạn chế đường thoát, Xe còn lại chiếu Vua.",
-          "Giữ Xe ngoài tầm bắt của Vua và kiểm tra tất cả các ô thoát."
-        ],
-        "solution": "Hai Xe phối hợp khống chế đường thoát và chiếu hết. Nhánh mẫu: Rcg3 · Kh4 · Rg8 · Kh5 · Rh3#.",
-        "difficulty": {
-          "level": "B",
-          "status": "suggested",
-          "solverMoves": 3,
-          "sacrificeCount": 0,
-          "reason": "Phối hợp ngắn hai Xe qua các nước đáp của Vua, không hy sinh."
-        }
-      },
-      {
-        "title": "Chiếu hết trong 4 nước · Bài 8",
-        "prompt": "Phối hợp hai Xe để chiếu hết Vua đối phương trong 4 nước.",
-        "mode": "interactive",
-        "outcome": "checkmate",
-        "goal": "checkmate",
-        "fen": "8/3k4/8/7R/8/8/8/R3K3 w - - 0 1",
-        "moves": [
-          "Ra6",
-          "Kc7",
-          "Rh7+",
-          "Kb8",
-          "Re6",
-          "Kc8",
-          "Re8#"
-        ],
-        "alternativeLines": [
-          [
-            "Rh6",
-            "Kc7",
-            "Ra7+",
-            "Kb8",
-            "Rhh7",
-            "Kc8",
-            "Ra8#"
-          ]
-        ],
-        "hints": [
-          "Một Xe hạn chế đường thoát, Xe còn lại chiếu Vua.",
-          "Giữ Xe ngoài tầm bắt của Vua và kiểm tra tất cả các ô thoát."
-        ],
-        "solution": "Hai Xe phối hợp khống chế đường thoát và chiếu hết. Nhánh mẫu: Ra6 · Kc7 · Rh7+ · Kb8 · Re6 · Kc8 · Re8#.",
-        "difficulty": {
-          "level": "B",
-          "status": "suggested",
-          "solverMoves": 4,
-          "sacrificeCount": 0,
-          "reason": "Phối hợp ngắn hai Xe qua các nước đáp của Vua, không hy sinh."
-        }
-      },
-      {
-        "title": "Chiếu hết trong 3 nước · Bài 9",
-        "prompt": "Phối hợp hai Xe để chiếu hết Vua đối phương trong 3 nước.",
-        "mode": "interactive",
-        "outcome": "checkmate",
-        "goal": "checkmate",
-        "fen": "8/5k2/1R6/8/8/6K1/8/3R4 w - - 0 1",
-        "moves": [
-          "Rd7+",
-          "Ke8",
-          "Rh7",
-          "Kd8",
-          "Rb8#"
-        ],
-        "alternativeLines": [
-          [
-            "Ra1",
-            "Ke8",
-            "Ra7",
-            "Kf8",
-            "Rb8#"
-          ]
-        ],
-        "hints": [
-          "Một Xe hạn chế đường thoát, Xe còn lại chiếu Vua.",
-          "Giữ Xe ngoài tầm bắt của Vua và kiểm tra tất cả các ô thoát."
-        ],
-        "solution": "Hai Xe phối hợp khống chế đường thoát và chiếu hết. Nhánh mẫu: Rd7+ · Ke8 · Rh7 · Kd8 · Rb8#.",
-        "difficulty": {
-          "level": "B",
-          "status": "suggested",
-          "solverMoves": 3,
-          "sacrificeCount": 0,
-          "reason": "Phối hợp ngắn hai Xe qua các nước đáp của Vua, không hy sinh."
-        }
-      },
-      {
-        "title": "Chiếu hết trong 3 nước · Bài 10",
-        "prompt": "Phối hợp hai Xe để chiếu hết Vua đối phương trong 3 nước.",
-        "mode": "interactive",
-        "outcome": "checkmate",
-        "goal": "checkmate",
-        "fen": "8/8/8/7K/8/4r3/4r3/3k4 b - - 0 1",
-        "moves": [
-          "Rg2",
-          "Kh4",
-          "Rg8",
-          "Kh5",
-          "Rh3#"
-        ],
-        "alternativeLines": [
-          [
-            "Rg3",
-            "Kh4",
-            "Reg2",
-            "Kh5",
-            "Rh3#"
-          ]
-        ],
-        "hints": [
-          "Một Xe hạn chế đường thoát, Xe còn lại chiếu Vua.",
-          "Giữ Xe ngoài tầm bắt của Vua và kiểm tra tất cả các ô thoát."
-        ],
-        "solution": "Hai Xe phối hợp khống chế đường thoát và chiếu hết. Nhánh mẫu: Rg2 · Kh4 · Rg8 · Kh5 · Rh3#.",
-        "difficulty": {
-          "level": "B",
-          "status": "suggested",
-          "solverMoves": 3,
-          "sacrificeCount": 0,
-          "reason": "Phối hợp ngắn hai Xe qua các nước đáp của Vua, không hy sinh."
-        }
-      },
-      {
-        "title": "Chiếu hết trong 3 nước · Bài 11",
-        "prompt": "Phối hợp hai Xe để chiếu hết Vua đối phương trong 3 nước.",
-        "mode": "interactive",
-        "outcome": "checkmate",
-        "goal": "checkmate",
-        "fen": "8/8/7k/8/3R4/3R4/8/K7 w - - 0 1",
-        "moves": [
-          "Rg3",
-          "Kh5",
-          "Rb4",
-          "Kh6",
-          "Rh4#"
-        ],
-        "alternativeLines": [
-          [
-            "Rg4",
-            "Kh5",
-            "Rdg3",
-            "Kh6",
-            "Rh4#"
-          ]
-        ],
-        "hints": [
-          "Một Xe hạn chế đường thoát, Xe còn lại chiếu Vua.",
-          "Giữ Xe ngoài tầm bắt của Vua và kiểm tra tất cả các ô thoát."
-        ],
-        "solution": "Hai Xe phối hợp khống chế đường thoát và chiếu hết. Nhánh mẫu: Rg3 · Kh5 · Rb4 · Kh6 · Rh4#.",
-        "difficulty": {
-          "level": "B",
-          "status": "suggested",
-          "solverMoves": 3,
-          "sacrificeCount": 0,
-          "reason": "Phối hợp ngắn hai Xe qua các nước đáp của Vua, không hy sinh."
-        }
-      },
-      {
-        "title": "Chiếu hết trong 3 nước · Bài 12",
-        "prompt": "Phối hợp hai Xe để chiếu hết Vua đối phương trong 3 nước.",
-        "mode": "interactive",
-        "outcome": "checkmate",
-        "goal": "checkmate",
-        "fen": "8/k7/8/8/5r2/K7/8/7r b - - 0 1",
-        "moves": [
-          "Rh3+",
-          "Kb2",
-          "Rf2+",
-          "Ka1",
-          "Rh1#"
-        ],
-        "alternativeLines": [],
-        "hints": [
-          "Một Xe hạn chế đường thoát, Xe còn lại chiếu Vua.",
-          "Giữ Xe ngoài tầm bắt của Vua và kiểm tra tất cả các ô thoát."
-        ],
-        "solution": "Hai Xe phối hợp khống chế đường thoát và chiếu hết. Nhánh mẫu: Rh3+ · Kb2 · Rf2+ · Ka1 · Rh1#.",
-        "difficulty": {
-          "level": "B",
-          "status": "suggested",
-          "solverMoves": 3,
-          "sacrificeCount": 0,
-          "reason": "Phối hợp ngắn hai Xe qua các nước đáp của Vua, không hy sinh."
-        }
-      },
-      {
-        "title": "Chiếu hết trong 4 nước · Bài 13",
-        "prompt": "Phối hợp hai Xe để chiếu hết Vua đối phương trong 4 nước.",
-        "mode": "interactive",
-        "outcome": "checkmate",
-        "goal": "checkmate",
-        "fen": "8/1r3k2/8/8/3r4/8/8/2K5 b - - 0 1",
-        "moves": [
-          "Rd8",
-          "Kc2",
-          "Rc7+",
-          "Kb3",
-          "Rb8+",
-          "Ka2",
-          "Ra7#"
-        ],
-        "alternativeLines": [
-          [
-            "Rc7+",
-            "Kb2",
-            "Rd8",
-            "Kb3",
-            "Rb8+",
-            "Ka2",
-            "Ra7#"
-          ],
-          [
-            "Rd6",
-            "Kc2",
-            "Rc7+",
-            "Kb3",
-            "Rb6+",
-            "Ka2",
-            "Ra7#"
-          ]
-        ],
-        "hints": [
-          "Một Xe hạn chế đường thoát, Xe còn lại chiếu Vua.",
-          "Giữ Xe ngoài tầm bắt của Vua và kiểm tra tất cả các ô thoát."
-        ],
-        "solution": "Hai Xe phối hợp khống chế đường thoát và chiếu hết. Nhánh mẫu: Rd8 · Kc2 · Rc7+ · Kb3 · Rb8+ · Ka2 · Ra7#.",
-        "difficulty": {
-          "level": "B",
-          "status": "suggested",
-          "solverMoves": 4,
-          "sacrificeCount": 0,
-          "reason": "Phối hợp ngắn hai Xe qua các nước đáp của Vua, không hy sinh."
-        }
-      },
-      {
-        "title": "Chiếu hết trong 3 nước · Bài 14",
-        "prompt": "Phối hợp hai Xe để chiếu hết Vua đối phương trong 3 nước.",
-        "mode": "interactive",
-        "outcome": "checkmate",
-        "goal": "checkmate",
-        "fen": "3R4/7k/8/R7/8/8/8/2K5 w - - 0 1",
-        "moves": [
-          "Rd6",
-          "Kg7",
-          "Ra7+",
-          "Kf8",
-          "Rd8#"
-        ],
-        "alternativeLines": [
-          [
-            "Ra6",
-            "Kg7",
-            "Rd7+",
-            "Kf8",
-            "Ra8#"
-          ]
-        ],
-        "hints": [
-          "Một Xe hạn chế đường thoát, Xe còn lại chiếu Vua.",
-          "Giữ Xe ngoài tầm bắt của Vua và kiểm tra tất cả các ô thoát."
-        ],
-        "solution": "Hai Xe phối hợp khống chế đường thoát và chiếu hết. Nhánh mẫu: Rd6 · Kg7 · Ra7+ · Kf8 · Rd8#.",
-        "difficulty": {
-          "level": "B",
-          "status": "suggested",
-          "solverMoves": 3,
-          "sacrificeCount": 0,
-          "reason": "Phối hợp ngắn hai Xe qua các nước đáp của Vua, không hy sinh."
-        }
-      },
-      {
-        "title": "Chiếu hết trong 4 nước · Bài 15",
-        "prompt": "Phối hợp hai Xe để chiếu hết Vua đối phương trong 4 nước.",
-        "mode": "interactive",
-        "outcome": "checkmate",
-        "goal": "checkmate",
-        "fen": "8/2k5/8/8/3r4/8/K7/7r b - - 0 1",
-        "moves": [
-          "Rh3",
-          "Kb2",
-          "Rf4",
-          "Kc2",
-          "Rf2+",
-          "Kd1",
-          "Rh1#"
-        ],
-        "alternativeLines": [
-          [
-            "Rf4",
-            "Kb2",
-            "Rh3",
-            "Kc2",
-            "Rf2+",
-            "Kd1",
-            "Rh1#"
-          ]
-        ],
-        "hints": [
-          "Một Xe hạn chế đường thoát, Xe còn lại chiếu Vua.",
-          "Giữ Xe ngoài tầm bắt của Vua và kiểm tra tất cả các ô thoát."
-        ],
-        "solution": "Hai Xe phối hợp khống chế đường thoát và chiếu hết. Nhánh mẫu: Rh3 · Kb2 · Rf4 · Kc2 · Rf2+ · Kd1 · Rh1#.",
-        "difficulty": {
-          "level": "B",
-          "status": "suggested",
-          "solverMoves": 4,
-          "sacrificeCount": 0,
-          "reason": "Phối hợp ngắn hai Xe qua các nước đáp của Vua, không hy sinh."
-        }
-      },
-      {
-        "title": "Chiếu hết trong 3 nước · Bài 16",
-        "prompt": "Phối hợp hai Xe để chiếu hết Vua đối phương trong 3 nước.",
-        "mode": "interactive",
-        "outcome": "checkmate",
-        "goal": "checkmate",
-        "fen": "k7/8/2R5/8/8/8/4K1R1/8 w - - 0 1",
-        "moves": [
-          "Rc7",
-          "Kb8",
-          "Rh7",
-          "Ka8",
-          "Rg8#"
-        ],
-        "alternativeLines": [
-          [
-            "Rg7",
-            "Kb8",
-            "Rh7",
-            "Ka8",
-            "Rc8#"
-          ],
-          [
-            "Rh6",
-            "Kb7",
-            "Rg7+",
-            "Kb8",
-            "Rh8#"
-          ],
-          [
-            "Re6",
-            "Kb7",
-            "Rg7+",
-            "Kc8",
-            "Re8#"
-          ]
-        ],
-        "hints": [
-          "Một Xe hạn chế đường thoát, Xe còn lại chiếu Vua.",
-          "Giữ Xe ngoài tầm bắt của Vua và kiểm tra tất cả các ô thoát."
-        ],
-        "solution": "Hai Xe phối hợp khống chế đường thoát và chiếu hết. Nhánh mẫu: Rc7 · Kb8 · Rh7 · Ka8 · Rg8#.",
-        "difficulty": {
-          "level": "B",
-          "status": "suggested",
-          "solverMoves": 3,
-          "sacrificeCount": 0,
-          "reason": "Phối hợp ngắn hai Xe qua các nước đáp của Vua, không hy sinh."
-        }
-      },
-      {
-        "title": "Chiếu hết trong 3 nước · Bài 17",
-        "prompt": "Phối hợp hai Xe để chiếu hết Vua đối phương trong 3 nước.",
-        "mode": "interactive",
-        "outcome": "checkmate",
-        "goal": "checkmate",
-        "fen": "8/2rr4/8/8/8/7K/8/1k6 b - - 0 1",
-        "moves": [
-          "Rg7",
-          "Kh4",
-          "Rc3",
-          "Kh5",
-          "Rh3#"
-        ],
-        "alternativeLines": [],
-        "hints": [
-          "Một Xe hạn chế đường thoát, Xe còn lại chiếu Vua.",
-          "Giữ Xe ngoài tầm bắt của Vua và kiểm tra tất cả các ô thoát."
-        ],
-        "solution": "Hai Xe phối hợp khống chế đường thoát và chiếu hết. Nhánh mẫu: Rg7 · Kh4 · Rc3 · Kh5 · Rh3#.",
-        "difficulty": {
-          "level": "B",
-          "status": "suggested",
-          "solverMoves": 3,
-          "sacrificeCount": 0,
-          "reason": "Phối hợp ngắn hai Xe qua các nước đáp của Vua, không hy sinh."
-        }
-      },
-      {
-        "title": "Chiếu hết trong 3 nước · Bài 18",
-        "prompt": "Phối hợp hai Xe để chiếu hết Vua đối phương trong 3 nước.",
-        "mode": "interactive",
-        "outcome": "checkmate",
-        "goal": "checkmate",
-        "fen": "8/6k1/8/1R6/2R5/K7/8/8 w - - 0 1",
-        "moves": [
-          "Rc6",
-          "Kh7",
-          "Rb7+",
-          "Kg8",
-          "Rc8#"
-        ],
-        "alternativeLines": [
-          [
-            "Rb6",
-            "Kh7",
-            "Rc7+",
-            "Kg8",
-            "Rb8#"
-          ]
-        ],
-        "hints": [
-          "Một Xe hạn chế đường thoát, Xe còn lại chiếu Vua.",
-          "Giữ Xe ngoài tầm bắt của Vua và kiểm tra tất cả các ô thoát."
-        ],
-        "solution": "Hai Xe phối hợp khống chế đường thoát và chiếu hết. Nhánh mẫu: Rc6 · Kh7 · Rb7+ · Kg8 · Rc8#.",
-        "difficulty": {
-          "level": "B",
-          "status": "suggested",
-          "solverMoves": 3,
-          "sacrificeCount": 0,
-          "reason": "Phối hợp ngắn hai Xe qua các nước đáp của Vua, không hy sinh."
-        }
-      },
-      {
-        "title": "Chiếu hết trong 3 nước · Bài 19",
-        "prompt": "Phối hợp hai Xe để chiếu hết Vua đối phương trong 3 nước.",
-        "mode": "interactive",
-        "outcome": "checkmate",
-        "goal": "checkmate",
-        "fen": "6K1/2k5/5R2/8/1R6/8/8/8 w - - 0 1",
-        "moves": [
-          "Rh4",
-          "Kd8",
-          "Rh7",
-          "Ke8",
-          "Rf8#"
-        ],
-        "alternativeLines": [
-          [
-            "Rg4",
-            "Kd8",
-            "Rg7",
-            "Ke8",
-            "Rf8#"
-          ]
-        ],
-        "hints": [
-          "Một Xe hạn chế đường thoát, Xe còn lại chiếu Vua.",
-          "Giữ Xe ngoài tầm bắt của Vua và kiểm tra tất cả các ô thoát."
-        ],
-        "solution": "Hai Xe phối hợp khống chế đường thoát và chiếu hết. Nhánh mẫu: Rh4 · Kd8 · Rh7 · Ke8 · Rf8#.",
-        "difficulty": {
-          "level": "B",
-          "status": "suggested",
-          "solverMoves": 3,
-          "sacrificeCount": 0,
-          "reason": "Phối hợp ngắn hai Xe qua các nước đáp của Vua, không hy sinh."
-        }
-      },
-      {
-        "title": "Chiếu hết trong 3 nước · Bài 20",
-        "prompt": "Phối hợp hai Xe để chiếu hết Vua đối phương trong 3 nước.",
-        "mode": "interactive",
-        "outcome": "checkmate",
-        "goal": "checkmate",
-        "fen": "k2r4/6r1/8/8/2K5/8/8/8 b - - 0 1",
-        "moves": [
-          "Rc7+",
-          "Kb3",
-          "Rb8+",
-          "Ka2",
-          "Ra7#"
-        ],
-        "alternativeLines": [],
-        "hints": [
-          "Một Xe hạn chế đường thoát, Xe còn lại chiếu Vua.",
-          "Giữ Xe ngoài tầm bắt của Vua và kiểm tra tất cả các ô thoát."
-        ],
-        "solution": "Hai Xe phối hợp khống chế đường thoát và chiếu hết. Nhánh mẫu: Rc7+ · Kb3 · Rb8+ · Ka2 · Ra7#.",
-        "difficulty": {
-          "level": "B",
-          "status": "suggested",
-          "solverMoves": 3,
-          "sacrificeCount": 0,
-          "reason": "Phối hợp ngắn hai Xe qua các nước đáp của Vua, không hy sinh."
-        }
-      },
-      {
         "title": "Le Tuan Minh — Morozevich,A",
         "prompt": "Tìm cách phối hợp hai Xe để chiếu hết Vua đối phương.",
         "mode": "interactive",
@@ -4940,6 +3189,2110 @@
           "Tìm nước chiếu hoặc nước mở đường cho hai Xe; tính cả các cách phòng thủ."
         ],
         "solution": "Hy sinh Hậu trên g5 để mở đường cho đòn phối hợp. Xe ở g8 chiếu Vua; Xe ở f8 khống chế đường thoát hoặc bảo vệ Xe chiếu. Cả hai Xe đều cần thiết để hoàn thành thế chiếu hết. Nhánh mẫu: Qxg5+ · fxg5 · Rg7+ · Kh8 · Rxg5+ · Re5 · Bxe5+ · Bf6 · Bxf6+ · Rxf6 · Re8+ · Rf8 · Rxf8+ · Qg8 · Rgxg8#."
+      },
+      {
+        "title": "Wei Yi — Fressinet,L",
+        "prompt": "Phối hợp hai Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "4R3/3r3r/3N2k1/p4R1p/n4ppP/2P5/5PP1/6K1 w - - 4 47",
+        "moves": [
+          "Re6+",
+          "Kg7",
+          "Rg5+",
+          "Kf8",
+          "Re8#"
+        ],
+        "tacticPly": 4,
+        "previousMove": {
+          "fen": "4R3/3r3r/3N1k2/p4R1p/n4ppP/2P5/5PP1/6K1 b - - 3 46",
+          "move": "Kg6"
+        },
+        "source": "https://theweekinchess.com/zips/twic1657g.zip",
+        "gameReference": {
+          "collection": "two-rook-mate",
+          "kind": "game",
+          "id": "169499f358d94e33",
+          "ply": 92,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phối hợp hai Xe không thí quân."
+        },
+        "hints": [
+          "Tìm nước chiếu đưa Vua Đen về cột g.",
+          "Khi Vua rời cột g, dùng một Xe giữ cột đó và Xe kia chiếu trên hàng 8."
+        ],
+        "solution": "Ván đấu ghi đến Re6+ Kg7 Rg5+. Trong phương án phân tích, Vua Đen đi Kf8 hoặc Kh8 đều gặp Re8#. Xe g5 khóa đường trở lại g7."
+      },
+      {
+        "title": "Duda,J — Maghsoodloo,Parham",
+        "prompt": "Phối hợp hai Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "4rrk1/R1R5/4p1p1/1P1p1p1P/3P1K2/2P5/8/8 w - - 0 57",
+        "moves": [
+          "Rg7+",
+          "Kh8",
+          "Rh7+",
+          "Kg8",
+          "Rag7#"
+        ],
+        "tacticPly": 4,
+        "previousMove": {
+          "fen": "4rrk1/R1R2p2/4p1P1/1P1p1p1P/3P1K2/2P5/8/8 b - - 0 56",
+          "move": "fxg6"
+        },
+        "source": "https://theweekinchess.com/zips/twic1662g.zip",
+        "gameReference": {
+          "collection": "two-rook-mate",
+          "kind": "game",
+          "id": "2bae37c4399aa7cf",
+          "ply": 112,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phối hợp hai Xe không thí quân."
+        },
+        "hints": [
+          "Hai Xe Trắng đang cùng hàng. Tìm nước chiếu buộc Vua Đen vào h8.",
+          "Sau khi Xe chiếu chuyển sang h7, hãy đưa Xe còn lại vào ô g7."
+        ],
+        "solution": "Ván đấu ghi đến Rh7+. Trong phương án phân tích, sau Kg8, Xe a7 đến g7 chiếu hết. Xe h7 giữ ô h8 và bảo vệ Xe g7."
+      },
+      {
+        "title": "Aronian,L — Andreikin,D",
+        "prompt": "Phối hợp hai Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "1r4k1/1prBR2R/7p/p1Pp2p1/P7/2P1n3/1P4P1/6K1 w - - 2 38",
+        "moves": [
+          "Be6+",
+          "Kf8",
+          "Rxc7",
+          "h5",
+          "Rh8#"
+        ],
+        "tacticPly": 4,
+        "previousMove": {
+          "fen": "1r5k/1prBR2R/7p/p1Pp2p1/P7/2P1n3/1P4P1/6K1 b - - 1 37",
+          "move": "Kg8"
+        },
+        "source": "https://www.pgnmentor.com/players/Aronian.zip",
+        "gameReference": {
+          "collection": "two-rook-mate",
+          "kind": "game",
+          "id": "5fe71233c55099cf",
+          "ply": 74,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phối hợp hai Xe không thí quân."
+        },
+        "hints": [
+          "Dùng Tượng đưa Vua Đen lên hàng 8.",
+          "Sau khi bắt Xe ở c7, tính cả nước Xe Đen che đường chiếu trên hàng 8."
+        ],
+        "solution": "Be6+ Kf8 Rxc7. Xe c7 giữ hàng 7. Trong phương án phân tích, sau ...h5, Rh8# chiếu hết. Nếu ...Rc8 che hàng 8, Trắng đáp Rxc8#. Ván đấu dừng sau Rxc7."
+      },
+      {
+        "title": "Kramnik,V — Indjic,A",
+        "prompt": "Phối hợp hai Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "6k1/7R/r2Bn1B1/1p5p/2p4P/4r3/6RK/8 w - - 6 63",
+        "moves": [
+          "Bb1+",
+          "Rg3",
+          "Rxg3+",
+          "Ng7",
+          "Rgxg7#"
+        ],
+        "tacticPly": 4,
+        "previousMove": {
+          "fen": "r5k1/7R/3Bn1B1/1p5p/2p4P/4r3/6RK/8 b - - 5 62",
+          "move": "Ra6"
+        },
+        "source": "https://www.pgnmentor.com/players/Kramnik.zip",
+        "gameReference": {
+          "collection": "two-rook-mate",
+          "kind": "game",
+          "id": "7239e0b1f9b45b76",
+          "ply": 124,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phối hợp hai Xe không thí quân."
+        },
+        "hints": [
+          "Tượng g6 đang chắn đường chiếu của Xe g2. Hãy tìm cách mở cột g.",
+          "Nếu Đen dùng Xe hoặc Mã chắn cột g, hãy xác định Xe nào có thể bắt quân chắn."
+        ],
+        "solution": "Trong phương án phân tích, Bb1+ mở cột g cho Xe g2. Sau Rg3, Trắng chơi Rxg3+ Ng7 Rgxg7#. Nếu Đen chắn ngay bằng Ng7, Trắng dùng Xe h7 bắt Mã, rồi chiếu hết bằng Rg8#."
+      },
+      {
+        "title": "Spit,Vincent — Schippers,Maurice",
+        "prompt": "Phối hợp hai Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "1r4k1/4ppb1/r5pp/2pP4/2Q4P/5P2/PP1B2P1/1KN4R b - - 0 22",
+        "moves": [
+          "Rxb2+",
+          "Ka1",
+          "Rbxa2+",
+          "Kb1",
+          "Rb2#"
+        ],
+        "tacticPly": 4,
+        "previousMove": {
+          "fen": "1r4k1/4ppb1/r5pp/2pP4/2Q4P/4BP2/PP1q2P1/1KN4R w - - 0 22",
+          "move": "Bxd2"
+        },
+        "source": "https://theweekinchess.com/zips/twic1668g.zip",
+        "gameReference": {
+          "collection": "two-rook-mate",
+          "kind": "game",
+          "id": "7c3c2573ef513ea6",
+          "ply": 43,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phối hợp hai Xe không thí quân."
+        },
+        "hints": [
+          "Tính nước bắt Tốt b2 có chiếu. Vua Trắng còn ô nào?",
+          "Khi bắt Tốt a2, chọn Xe sao cho cột a vẫn bị khóa ở thế chiếu hết."
+        ],
+        "solution": "Rxb2+ buộc Vua Trắng sang a1. Sau Rbxa2+ Kb1, Xe trở về b2 chiếu hết. Xe a6 vẫn giữ cột a nên Vua không thể chạy lại a1."
+      },
+      {
+        "title": "Bortnyk,Olexandr — Demchenko,A",
+        "prompt": "Phối hợp hai Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "4r1kn/pp4r1/2p1Rn1P/2P5/3P4/8/PP4R1/6K1 w - - 0 36",
+        "moves": [
+          "Rxg7+",
+          "Kf8",
+          "Rxf6+",
+          "Nf7",
+          "Rfxf7#"
+        ],
+        "tacticPly": 4,
+        "previousMove": {
+          "fen": "4r1kn/pp2r1Q1/2p1Rn1P/2P5/3P4/8/PP4R1/6K1 b - - 0 35",
+          "move": "Rxg7"
+        },
+        "source": "https://theweekinchess.com/zips/twic1659g.zip",
+        "gameReference": {
+          "collection": "two-rook-mate",
+          "kind": "game",
+          "id": "80c2aa9faf92daf6",
+          "ply": 70,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phối hợp hai Xe không thí quân."
+        },
+        "hints": [
+          "Trắng có thể bắt Xe Đen ở hai nơi. So sánh vị trí của Vua Đen sau mỗi nước chiếu.",
+          "Sau khi Vua Đen đến f8, tìm cách dùng Xe còn lại để chiếu dọc cột f."
+        ],
+        "solution": "Ván đấu ghi đến Rxg7+ Kf8 Rxf6+. Trong phương án phân tích, nếu Đen chắn bằng Nf7, Trắng đáp Rfxf7#. Xe g7 bảo vệ Xe f7 và khống chế g8."
+      },
+      {
+        "title": "Kramnik,V — Ljubojevic,L",
+        "prompt": "Phối hợp hai Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/1pq4r/p1b5/6p1/3Qp1k1/P3R3/1PP5/1K3R2 w - - 10 48",
+        "moves": [
+          "Qd1+",
+          "Kh4",
+          "Rh1+",
+          "Qh2",
+          "Rxh2#"
+        ],
+        "tacticPly": 4,
+        "previousMove": {
+          "fen": "8/1pq4r/p1b5/5kp1/3Qp3/P3R3/1PP5/1K3R2 b - - 9 47",
+          "move": "Kg4"
+        },
+        "source": "https://www.pgnmentor.com/players/Kramnik.zip",
+        "gameReference": {
+          "collection": "two-rook-mate",
+          "kind": "game",
+          "id": "857bb15601efe2b1",
+          "ply": 94,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phối hợp hai Xe không thí quân."
+        },
+        "hints": [
+          "Dùng Hậu đưa Vua Đen về cột h.",
+          "Xe e3 giữ ô g3. Tính cách xử lý quân Đen che trên cột h."
+        ],
+        "solution": "Phương án phân tích là Qd1+ Kh4 Rh1+ Qh2 Rxh2#. Xe e3 giữ ô g3, còn Xe h2 bắt Hậu đang che đường chiếu và chiếu hết."
+      },
+      {
+        "title": "Sarana,A — Kramnik,V",
+        "prompt": "Phối hợp hai Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "2k5/1R6/R7/p5pK/P6n/5pr1/8/8 w - - 4 63",
+        "moves": [
+          "Rh7",
+          "Kb8",
+          "Re6",
+          "Ng6",
+          "Re8#"
+        ],
+        "tacticPly": 4,
+        "previousMove": {
+          "fen": "8/1R1k4/R7/p5pK/P6n/5pr1/8/8 b - - 3 62",
+          "move": "Kc8"
+        },
+        "source": "https://www.pgnmentor.com/players/Kramnik.zip",
+        "gameReference": {
+          "collection": "two-rook-mate",
+          "kind": "game",
+          "id": "8ee4e52ebe9e7ea5",
+          "ply": 124,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phối hợp hai Xe không thí quân."
+        },
+        "hints": [
+          "Xe trên hàng 7 đang ngăn Vua Đen thoát xuống. Hãy giữ hàng này và chuẩn bị đưa Xe kia lên hàng 8.",
+          "Nếu Vua Đen sang b8, tìm một cột khác để Xe a6 lên hàng 8."
+        ],
+        "solution": "Trong phương án phân tích, Rh7 giữ hàng 7 và dọa Ra8#. Nếu Đen đi Kb8, Trắng chuyển Xe a6 sang e6. Sau Ng6, Re8# chiếu hết, còn Xe h7 chặn đường Vua xuống hàng 7."
+      },
+      {
+        "title": "Kramnik,V — Fernandez Guillen,E",
+        "prompt": "Phối hợp hai Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "3b1rk1/1R3N2/ppp5/3bp1P1/1P6/P6R/1P6/6K1 w - - 3 41",
+        "moves": [
+          "Nh6+",
+          "Kh8",
+          "Nf5+",
+          "Kg8",
+          "Rg7#"
+        ],
+        "tacticPly": 4,
+        "previousMove": {
+          "fen": "3b1r1k/1R3N2/ppp5/3bp1P1/1P6/P6R/1P6/6K1 b - - 2 40",
+          "move": "Kg8"
+        },
+        "source": "https://www.pgnmentor.com/players/Kramnik.zip",
+        "gameReference": {
+          "collection": "two-rook-mate",
+          "kind": "game",
+          "id": "935459b565dd5b73",
+          "ply": 80,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phối hợp hai Xe không thí quân."
+        },
+        "hints": [
+          "Tìm nước Mã chiếu để đưa Vua Đen vào góc h8.",
+          "Sau khi Mã tới h6, hãy tìm cách mở lại cột h cho Xe."
+        ],
+        "solution": "Phương án phân tích: Nh6+ đưa Vua vào h8. Nf5+ mở cột h cho Xe h3 chiếu, buộc Vua trở về g8. Rg7# kết thúc vì Xe h3 vẫn khống chế h8."
+      },
+      {
+        "title": "Amar,Elham — Treminio Umanzor,Leonel Alejandro",
+        "prompt": "Phối hợp hai Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "6rk/1p4R1/p2p1B1p/3b1p2/1q6/3P4/PP4PP/4R2K w - - 0 31",
+        "moves": [
+          "Rf7+",
+          "Rg7",
+          "Re8+",
+          "Kh7",
+          "Rxg7#"
+        ],
+        "tacticPly": 4,
+        "previousMove": {
+          "fen": "6rk/1p4R1/p2p1B1p/3b1p2/1Q3q2/3P4/PP4PP/4R2K b - - 0 30",
+          "move": "Qxb4"
+        },
+        "source": "https://theweekinchess.com/zips/twic1663g.zip",
+        "gameReference": {
+          "collection": "two-rook-mate",
+          "kind": "game",
+          "id": "a694924779e9c57e",
+          "ply": 60,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phối hợp hai Xe không thí quân."
+        },
+        "hints": [
+          "Xem Tượng f6 sẽ chiếu vào đâu nếu Xe g7 rời đường chéo.",
+          "Sau khi Xe Đen chắn ở g7, tìm cách dùng Xe còn lại để cắt hàng 8."
+        ],
+        "solution": "Trắng chơi Rf7+ trong ván đấu, mở đường chéo f6–g7–h8 cho Tượng chiếu. Phương án chiếu hết là ...Rg7 Re8+ Kh7 Rxg7#. Xe e8 chặn ô h8, còn Tượng f6 bảo vệ Xe g7."
+      },
+      {
+        "title": "Sherbakov, Vitaly S — Spassky, Boris V",
+        "prompt": "Phối hợp hai Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "5bk1/5ppp/4r3/8/8/1N1BnP2/1P4rP/1R1R3K b - - 1 32",
+        "moves": [
+          "Rh6",
+          "Bxh7+",
+          "Kxh7",
+          "Rd2",
+          "Rhxh2#"
+        ],
+        "tacticPly": 4,
+        "previousMove": {
+          "fen": "5bk1/5ppp/4r3/8/8/1N1BnP2/1P4rP/1R1R2K1 w - - 0 32",
+          "move": "Kh1"
+        },
+        "source": "https://www.pgnmentor.com/players/Spassky.zip",
+        "gameReference": {
+          "collection": "two-rook-mate",
+          "kind": "game",
+          "id": "a9d24263394a7571",
+          "ply": 63,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phối hợp hai Xe không thí quân."
+        },
+        "hints": [
+          "Tìm cách chuyển Xe sang cột h. Xe g2 sẽ bảo vệ ô nào?",
+          "Tính nước đáp nếu Trắng chiếu bằng Tượng ở h7."
+        ],
+        "solution": "Rh6 đe dọa Rhxh2#. Trong phương án phân tích, nếu Trắng chơi Bxh7+, Đen đáp Kxh7. Sau Rd2, Rhxh2# chiếu hết. Nếu Tốt h tiến, Xe có thể bắt Tốt ngay trên cột h để chiếu hết."
+      },
+      {
+        "title": "Bouchaara,Taoufik — Llaneza Vega,M",
+        "prompt": "Phối hợp hai Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "2r2k2/p2bp2p/3p4/5Pp1/1P1N4/3RRPP1/r6P/7K b - - 0 26",
+        "moves": [
+          "Rc1+",
+          "Rd1",
+          "Rxd1+",
+          "Re1",
+          "Rxe1#"
+        ],
+        "tacticPly": 4,
+        "previousMove": {
+          "fen": "2r2k2/p2bp2p/3p4/5pp1/1P1NP3/3RRPP1/r6P/7K w - - 0 26",
+          "move": "exf5"
+        },
+        "source": "https://theweekinchess.com/zips/twic1668g.zip",
+        "gameReference": {
+          "collection": "two-rook-mate",
+          "kind": "game",
+          "id": "b9265bdabc1ac2be",
+          "ply": 51,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phối hợp hai Xe không thí quân."
+        },
+        "hints": [
+          "Xe a2 khống chế ô g2. Hãy tìm nước chiếu của Xe còn lại trên hàng 1.",
+          "Tính cả hai cách Trắng dùng Xe chắn đường chiếu."
+        ],
+        "solution": "Ván đấu ghi đến Rc1+. Trong phương án phân tích, nếu Trắng chắn bằng Rd1, Đen chơi Rxd1+ Re1 Rxe1#. Xe a2 giữ ô g2 nên Vua Trắng không thoát được."
+      },
+      {
+        "title": "Bakhrillaev,Bakhrom — Kuybokarov,Temur",
+        "prompt": "Phối hợp hai Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "6k1/7r/8/8/2N1n3/5r2/1PP3K1/3RR3 b - - 3 42",
+        "moves": [
+          "Rg3+",
+          "Kf1",
+          "Rf7+",
+          "Ke2",
+          "Rf2#"
+        ],
+        "tacticPly": 4,
+        "previousMove": {
+          "fen": "6k1/7r/8/8/2N1n3/5r2/1PP4K/3RR3 w - - 2 42",
+          "move": "Kg2"
+        },
+        "source": "https://theweekinchess.com/zips/twic1663g.zip",
+        "gameReference": {
+          "collection": "two-rook-mate",
+          "kind": "game",
+          "id": "db737f343b580972",
+          "ply": 83,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phối hợp hai Xe không thí quân."
+        },
+        "hints": [
+          "Tìm cách đưa Vua Trắng về cột f bằng một nước Xe chiếu.",
+          "Khi Vua ở e2, hãy kiểm tra những ô trên hàng 3 mà Xe g3 đã khống chế."
+        ],
+        "solution": "Ván cờ có Rg3+ Kf1 Rf7+. Nhánh phân tích tiếp tục Ke2 Rf2#. Xe g3 giữ hàng 3, chặn hai ô thoát d3 và e3."
+      },
+      {
+        "title": "Aronian,L — Bharath,Subramaniyam H",
+        "prompt": "Phối hợp hai Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "4b3/p3r2k/R6p/3B4/5n2/2P5/1P5P/6RK w - - 8 41",
+        "moves": [
+          "Bg8+",
+          "Kh8",
+          "Rxh6+",
+          "Rh7",
+          "Rxh7#"
+        ],
+        "tacticPly": 4,
+        "previousMove": {
+          "fen": "4b3/p3r2k/R5np/3B4/8/2P5/1P5P/6RK b - - 7 40",
+          "move": "Nf4"
+        },
+        "source": "https://www.pgnmentor.com/players/Aronian.zip",
+        "gameReference": {
+          "collection": "two-rook-mate",
+          "kind": "game",
+          "id": "e52f851c3011ab6b",
+          "ply": 80,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phối hợp hai Xe không thí quân."
+        },
+        "hints": [
+          "Xe g1 bảo vệ ô nào ở cuối cột g?",
+          "Khi Vua Đen bị dồn về h8, xem Xe a6 có thể mở cột h bằng nước bắt nào."
+        ],
+        "solution": "Ván đấu ghi đến Bg8+. Phương án phân tích tiếp tục Kh8 Rxh6+ Rh7 Rxh7#. Xe g1 bảo vệ Tượng g8, nên Vua Đen không thể bắt Tượng để thoát khi Xe h7 chiếu."
+      },
+      {
+        "title": "Martins,Bruno Andre Leite — Collado Alcolado,Angel",
+        "prompt": "Phối hợp hai Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/8/2R4R/1p1kr2p/4p3/P1P1K3/1P4PP/5r2 w - - 3 41",
+        "moves": [
+          "Rhd6#"
+        ],
+        "tacticPly": 0,
+        "previousMove": {
+          "fen": "8/8/2R4R/1pk1r2p/4p3/P1P1K3/1P4PP/5r2 b - - 2 40",
+          "move": "Kd5"
+        },
+        "source": "https://theweekinchess.com/zips/twic1666g.zip",
+        "gameReference": {
+          "collection": "two-rook-mate",
+          "kind": "game",
+          "id": "1390835c501836ae",
+          "ply": 80,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 1,
+          "sacrificeCount": 0,
+          "reason": "Phối hợp hai Xe không thí quân."
+        },
+        "hints": [
+          "Một Xe phải giữ cột c. Xe còn lại có thể chiếu Vua Đen từ ô nào?",
+          "Kiểm tra cả khả năng Vua Đen bắt Xe chiếu lẫn đường thoát qua c5."
+        ],
+        "solution": "Rhd6# — Xe từ h6 đến d6 chiếu hết. Xe c6 bảo vệ Xe d6 và khống chế các ô c5, c4."
+      },
+      {
+        "title": "Kramnik,V — Radjabov,T",
+        "prompt": "Phối hợp hai Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "5r1k/p3R3/1p4np/7R/8/6K1/7P/r7 b - - 1 38",
+        "moves": [
+          "Rg1+",
+          "Kh3",
+          "Rf3#"
+        ],
+        "tacticPly": 2,
+        "previousMove": {
+          "fen": "5r1k/p3R3/1p4np/5R2/8/6K1/7P/r7 w - - 0 38",
+          "move": "Rh5"
+        },
+        "source": "https://www.pgnmentor.com/players/Kramnik.zip",
+        "gameReference": {
+          "collection": "two-rook-mate",
+          "kind": "game",
+          "id": "22191f4e443d120a",
+          "ply": 75,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 0,
+          "reason": "Phối hợp hai Xe không thí quân."
+        },
+        "hints": [
+          "Tìm nước chiếu khiến Vua Trắng phải rời cột g.",
+          "Giữ Xe trên cột g và dùng Xe còn lại chiếu dọc hàng 3."
+        ],
+        "solution": "Phương án phân tích: Rg1+ đẩy Vua Trắng sang h3. Sau Rf3#, Xe g1 khóa cột g nên Vua không thể thoát qua g2 hoặc g4."
+      },
+      {
+        "title": "Injac,Teodora — Miranda Llanes,Y",
+        "prompt": "Phối hợp hai Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "1R6/r1r2kp1/8/n7/1Bb1B3/P3R1P1/1P5P/6K1 w - - 5 36",
+        "moves": [
+          "Rf8+",
+          "Ke6",
+          "Bc6#"
+        ],
+        "tacticPly": 2,
+        "previousMove": {
+          "fen": "1R4k1/r1r3p1/8/n7/1Bb1B3/P3R1P1/1P5P/6K1 b - - 4 35",
+          "move": "Kf7"
+        },
+        "source": "https://theweekinchess.com/zips/twic1664g.zip",
+        "gameReference": {
+          "collection": "two-rook-mate",
+          "kind": "game",
+          "id": "2735193267570bd9",
+          "ply": 70,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 0,
+          "reason": "Phối hợp hai Xe không thí quân."
+        },
+        "hints": [
+          "Tìm nước chiếu bằng Xe có thể đẩy Vua Đen sang cột e.",
+          "Khi Vua đến e6, quân nào của Trắng đang cản đường chiếu của Xe e3?"
+        ],
+        "solution": "Ván đấu ghi đến Rf8+. Trong phương án phân tích, sau Ke6, Bc6# mở cột e cho Xe e3 chiếu hết. Xe f8 khống chế f5, f6 và f7."
+      },
+      {
+        "title": "Ordonez Bonilla,Ricardo Andres — Hjartarson,J",
+        "prompt": "Phối hợp hai Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "6k1/3n1p2/6pp/2N5/4P3/2p1BP2/r3r1PP/2RB2K1 b - - 0 31",
+        "moves": [
+          "Re1#"
+        ],
+        "tacticPly": 0,
+        "previousMove": {
+          "fen": "6k1/3n1p2/4N1pp/2b5/4P3/2p1BP2/r3r1PP/2RB2K1 w - - 0 31",
+          "move": "Nxc5"
+        },
+        "source": "https://theweekinchess.com/zips/twic1663g.zip",
+        "gameReference": {
+          "collection": "two-rook-mate",
+          "kind": "game",
+          "id": "2c4846ab27e97cab",
+          "ply": 61,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 1,
+          "sacrificeCount": 0,
+          "reason": "Phối hợp hai Xe không thí quân."
+        },
+        "hints": [
+          "Hãy tìm nước chiếu trên hàng 1.",
+          "Trước khi đi, kiểm tra Xe nào đang khống chế ô f2."
+        ],
+        "solution": "Re1# — Xe từ e2 đến e1 chiếu hết. Xe a2 giữ ô f2, chặn đường thoát còn lại của Vua Trắng."
+      },
+      {
+        "title": "Lee,Alice — Henderson de La Fuente,Andrea",
+        "prompt": "Phối hợp hai Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/3R3p/r1p2k2/4R1p1/2r2PPP/p3K3/P7/8 w - - 0 45",
+        "moves": [
+          "hxg5+",
+          "Kg6",
+          "Re6#"
+        ],
+        "tacticPly": 2,
+        "previousMove": {
+          "fen": "8/3R3p/r1p2kp1/4R3/2r2PPP/p3K3/P7/8 b - - 1 44",
+          "move": "g5"
+        },
+        "source": "https://theweekinchess.com/zips/twic1663g.zip",
+        "gameReference": {
+          "collection": "two-rook-mate",
+          "kind": "game",
+          "id": "324ef4ae1b8d055d",
+          "ply": 88,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 0,
+          "reason": "Phối hợp hai Xe không thí quân."
+        },
+        "hints": [
+          "Tìm nước bắt Tốt có chiếu để đưa Vua Đen sang g6.",
+          "Khi Xe chiếu dọc hàng 6, Xe d7 giữ những ô thoát nào?"
+        ],
+        "solution": "Sau hxg5+, Vua Đen phải sang g6. Trắng chiếu hết bằng Re6#, còn Xe d7 chặn hai ô thoát f7 và g7."
+      },
+      {
+        "title": "Gelfand,B — Radjabov,T",
+        "prompt": "Phối hợp hai Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "4N3/8/pR2p2k/P6p/4P2P/7r/3K4/6r1 b - - 1 53",
+        "moves": [
+          "Rg2+",
+          "Kc1",
+          "Rh1#"
+        ],
+        "tacticPly": 2,
+        "previousMove": {
+          "fen": "1R2N3/8/p3p2k/P6p/4P2P/7r/3K4/6r1 w - - 0 53",
+          "move": "Rb6"
+        },
+        "source": "https://www.pgnmentor.com/players/Gelfand.zip",
+        "gameReference": {
+          "collection": "two-rook-mate",
+          "kind": "game",
+          "id": "421da9f99e7d416e",
+          "ply": 105,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 0,
+          "reason": "Phối hợp hai Xe không thí quân."
+        },
+        "hints": [
+          "Đưa Vua Trắng xuống hàng 1 bằng nước chiếu.",
+          "Giữ một Xe trên hàng 2 để Vua không quay lại."
+        ],
+        "solution": "Rg2+ buộc Vua Trắng về c1, d1 hoặc e1. Phương án phân tích tiếp tục bằng Rh1# trong cả ba trường hợp. Xe g2 chặn các ô thoát trên hàng 2."
+      },
+      {
+        "title": "Tsolakidou,Stavroula — Gong Qianyun",
+        "prompt": "Phối hợp hai Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "5n1k/pp6/7N/3p4/2qP4/2P1R3/7P/3r2RK w - - 0 37",
+        "moves": [
+          "Nf7+",
+          "Kh7",
+          "Rh3#"
+        ],
+        "tacticPly": 2,
+        "previousMove": {
+          "fen": "5n1k/pp6/7N/3p4/2qP4/2P1R3/7P/3Q1rRK b - - 2 36",
+          "move": "Rxd1"
+        },
+        "source": "https://theweekinchess.com/zips/twic1663g.zip",
+        "gameReference": {
+          "collection": "two-rook-mate",
+          "kind": "game",
+          "id": "4d3595444e18c48d",
+          "ply": 72,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 0,
+          "reason": "Phối hợp hai Xe không thí quân."
+        },
+        "hints": [
+          "Thay vì bắt Xe d1, hãy tìm một nước Mã chiếu.",
+          "Khi Vua sang h7, Xe nào giữ cột g và Xe nào có thể chiếu trên cột h?"
+        ],
+        "solution": "Ván cờ dừng sau Nf7+. Trong nhánh phân tích, Kh7 Rh3# kết thúc vì Xe g1 khóa cột g, chặn các ô g6, g7 và g8."
+      },
+      {
+        "title": "Arushi Severin Helen D Silva — Zhukenov,Aituar",
+        "prompt": "Phối hợp hai Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/p4ppk/1p6/1P2Pp1P/Pr3Pr1/7K/R6P/5R2 b - - 3 51",
+        "moves": [
+          "Rb3+",
+          "Rf3",
+          "Rxf3#"
+        ],
+        "tacticPly": 2,
+        "previousMove": {
+          "fen": "8/p4ppk/1p6/1P2Pp1P/Pr3Pr1/6K1/R6P/5R2 w - - 2 51",
+          "move": "Kh3"
+        },
+        "source": "https://theweekinchess.com/zips/twic1666g.zip",
+        "gameReference": {
+          "collection": "two-rook-mate",
+          "kind": "game",
+          "id": "53f29bdca1a2468c",
+          "ply": 101,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 0,
+          "reason": "Phối hợp hai Xe không thí quân."
+        },
+        "hints": [
+          "Xem Xe g4 đang chặn những ô thoát nào quanh Vua h3.",
+          "Tìm nước chiếu theo hàng 3 và tính cách xử lý nếu Xe Trắng chắn chiếu."
+        ],
+        "solution": "Trong ván đấu, Đen chơi ...Rb3+ Rf3 Rxf3#. Xe f3 chiếu theo hàng 3. Xe g4 chặn hai ô thoát g2 và h4."
+      },
+      {
+        "title": "Alekseenko,K — Bluebaum,M",
+        "prompt": "Phối hợp hai Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "7k/Rp1R4/4p1p1/1P3pr1/8/7p/P6r/5K2 w - - 0 42",
+        "moves": [
+          "Ra8#"
+        ],
+        "tacticPly": 0,
+        "previousMove": {
+          "fen": "7k/Rp1R4/4p1p1/1P3pr1/7p/8/P6r/5K2 b - - 1 41",
+          "move": "h3"
+        },
+        "source": "https://theweekinchess.com/zips/twic1666g.zip",
+        "gameReference": {
+          "collection": "two-rook-mate",
+          "kind": "game",
+          "id": "5690571c8e5e7b3f",
+          "ply": 82,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 1,
+          "sacrificeCount": 0,
+          "reason": "Phối hợp hai Xe không thí quân."
+        },
+        "hints": [
+          "Xe d7 đang giữ những ô thoát nào của Vua Đen?",
+          "Tìm nước chiếu dọc hàng 8."
+        ],
+        "solution": "Ra8# chiếu dọc hàng 8. Xe d7 khống chế g7 và h7, hai ô Vua Đen có thể dùng để thoát khỏi hàng 8."
+      },
+      {
+        "title": "Laine,Pan — Short,N",
+        "prompt": "Phối hợp hai Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/8/p3p3/4k3/P2R4/1B2P3/r2pK3/6r1 b - - 3 48",
+        "moves": [
+          "d1=Q#"
+        ],
+        "tacticPly": 0,
+        "previousMove": {
+          "fen": "8/8/p3p3/4k3/P4R2/1B2P3/r2pK3/6r1 w - - 2 48",
+          "move": "Rd4"
+        },
+        "source": "https://www.pgnmentor.com/players/Short.zip",
+        "gameReference": {
+          "collection": "two-rook-mate",
+          "kind": "game",
+          "id": "62651af7cc672ec6",
+          "ply": 95,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 1,
+          "sacrificeCount": 0,
+          "reason": "Phối hợp hai Xe không thí quân."
+        },
+        "hints": [
+          "Nếu Tốt d2 tiến xuống d1, đường chiếu của Xe nào được mở?",
+          "Kiểm tra quân phong cấp nào chặn được ô d3 và Xe nào bảo vệ d1."
+        ],
+        "solution": "d1=Q# mở hàng 2 cho Xe a2 chiếu, đồng thời Hậu mới ở d1 cũng chiếu Vua. Xe g1 bảo vệ d1 nên Vua Trắng không thể bắt Hậu."
+      },
+      {
+        "title": "Sklokin-Bagiyan,Sergey — Pidluznij,Gleb",
+        "prompt": "Phối hợp hai Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/6k1/3R4/4b3/K1p1Bn2/P7/1r6/7R w - - 2 42",
+        "moves": [
+          "Rh7+",
+          "Kg8",
+          "Rd8#"
+        ],
+        "tacticPly": 2,
+        "previousMove": {
+          "fen": "8/6k1/3R4/8/K1p1Bn2/P1b5/1r6/7R b - - 1 41",
+          "move": "Be5"
+        },
+        "source": "https://theweekinchess.com/zips/twic1658g.zip",
+        "gameReference": {
+          "collection": "two-rook-mate",
+          "kind": "game",
+          "id": "6d87d91285460fd1",
+          "ply": 82,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 0,
+          "reason": "Phối hợp hai Xe không thí quân."
+        },
+        "hints": [
+          "Xe h1 có thể chiếu để đẩy Vua Đen khỏi hàng 7.",
+          "Kiểm tra cả hai ô Vua Đen có thể đến sau nước chiếu đầu tiên."
+        ],
+        "solution": "Trong ván đấu, Trắng chơi Rh7+ Kg8 Rd8#. Nếu Đen chọn ...Kf8, Rd8# vẫn chiếu hết. Xe h7 cắt hàng 7 để Vua Đen không thể lùi xuống."
+      },
+      {
+        "title": "Gauri,S — Li,Aiden Linyuan",
+        "prompt": "Phối hợp hai Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "r1br4/3k2p1/p2Np3/1p2Pp1P/8/8/PPR2P1P/2R3K1 w - - 0 32",
+        "moves": [
+          "Rc7#"
+        ],
+        "tacticPly": 0,
+        "previousMove": {
+          "fen": "r1bQ3r/3k2p1/p2Np3/1p2Pp1P/8/8/PPR2P1P/2R3K1 b - - 0 31",
+          "move": "Rxd8"
+        },
+        "source": "https://theweekinchess.com/zips/twic1665g.zip",
+        "gameReference": {
+          "collection": "two-rook-mate",
+          "kind": "game",
+          "id": "7c7dc82b854a57b9",
+          "ply": 62,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 1,
+          "sacrificeCount": 0,
+          "reason": "Phối hợp hai Xe không thí quân."
+        },
+        "hints": [
+          "Hai Xe đang đứng cùng cột. Xe nào có thể áp sát Vua Đen?",
+          "Kiểm tra xem Vua có bắt được Xe chiếu trên c7 hay không."
+        ],
+        "solution": "Rc7# áp sát Vua Đen. Xe c1 bảo vệ Xe c7 dọc cột c, nên Vua ở d7 không thể bắt quân chiếu."
+      },
+      {
+        "title": "Sethuraman,S — Dzida,Kamil",
+        "prompt": "Phối hợp hai Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "3rr2R/1bq1bk2/p6R/1p2ppP1/6B1/2N5/PPPQ4/1K6 w - - 2 31",
+        "moves": [
+          "Bh5+",
+          "Kg7",
+          "R6h7#"
+        ],
+        "tacticPly": 2,
+        "previousMove": {
+          "fen": "3rr2R/1bq1b3/p3k2R/1p2ppP1/6B1/2N5/PPPQ4/1K6 b - - 1 30",
+          "move": "Kf7"
+        },
+        "source": "https://theweekinchess.com/zips/twic1658g.zip",
+        "gameReference": {
+          "collection": "two-rook-mate",
+          "kind": "game",
+          "id": "8a1a05c1e07520e8",
+          "ply": 60,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 0,
+          "reason": "Phối hợp hai Xe không thí quân."
+        },
+        "hints": [
+          "Dùng Tượng để đưa Vua Đen tới gần hai Xe trên cột h.",
+          "Khi Vua Đen ở g7, hãy chọn Xe có thể chiếu mà vẫn được Xe kia bảo vệ."
+        ],
+        "solution": "Ván đấu ghi đến Bh5+. Trong phương án phân tích, sau Kg7, Trắng chơi R6h7# bằng Xe h6. Xe h8 bảo vệ Xe h7 và khóa các ô f8, g8."
+      },
+      {
+        "title": "Banerjee,Supratit — Karttunen,M",
+        "prompt": "Phối hợp hai Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "1r6/5R2/6n1/5N1k/1p3P2/4p3/8/3r2RK w - - 1 52",
+        "moves": [
+          "Rh7#"
+        ],
+        "tacticPly": 0,
+        "previousMove": {
+          "fen": "1r6/5R2/6n1/5N1k/1p3P2/3rp3/8/6RK b - - 0 51",
+          "move": "Rd1"
+        },
+        "source": "https://theweekinchess.com/zips/twic1664g.zip",
+        "gameReference": {
+          "collection": "two-rook-mate",
+          "kind": "game",
+          "id": "a26f4ecf85f66515",
+          "ply": 102,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 1,
+          "sacrificeCount": 0,
+          "reason": "Phối hợp hai Xe không thí quân."
+        },
+        "hints": [
+          "Xe g1 đang cắt đường thoát nào của Vua h5?",
+          "Tìm một nước chiếu dọc cột h trong khi vẫn giữ Xe g1 tại chỗ."
+        ],
+        "solution": "Trong ván đấu, Trắng chiếu hết bằng Rh7#. Xe h7 chiếu dọc cột h, còn Xe g1 chặn ô g4."
+      },
+      {
+        "title": "Meshkovs,Nikita — Klimkowski,Jan",
+        "prompt": "Phối hợp hai Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "r7/p1r2ppp/1p3k2/4R3/5P2/6P1/PP2P2P/3R2K1 w - - 3 26",
+        "moves": [
+          "Rd6#"
+        ],
+        "tacticPly": 0,
+        "previousMove": {
+          "fen": "r7/p1r2ppp/1p2k3/4R3/5P2/6P1/PP2P2P/3R2K1 b - - 2 25",
+          "move": "Kf6"
+        },
+        "source": "https://theweekinchess.com/zips/twic1668g.zip",
+        "gameReference": {
+          "collection": "two-rook-mate",
+          "kind": "game",
+          "id": "a7068cb5d3b30084",
+          "ply": 50,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 1,
+          "sacrificeCount": 0,
+          "reason": "Phối hợp hai Xe không thí quân."
+        },
+        "hints": [
+          "Vua Đen còn những ô nào nếu Xe e5 rời vị trí?",
+          "Giữ Xe e5 và tìm nước chiếu bằng Xe còn lại."
+        ],
+        "solution": "Rd6# chiếu ngang trên hàng 6. Xe e5 khống chế e7 và f5, nên Vua Đen không còn đường thoát."
+      },
+      {
+        "title": "Movahed,Sina — Grandelius,N",
+        "prompt": "Phối hợp hai Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "4q1k1/p4r2/Pp2nPp1/3pP3/3p1P2/8/P2B1K1R/7R w - - 0 42",
+        "moves": [
+          "Rh8#"
+        ],
+        "tacticPly": 0,
+        "previousMove": {
+          "fen": "4q1k1/p4r1p/Pp2nPQ1/3pP3/3p1P2/8/P2B1K1R/7R b - - 0 41",
+          "move": "hxg6"
+        },
+        "source": "https://theweekinchess.com/zips/twic1655g.zip",
+        "gameReference": {
+          "collection": "two-rook-mate",
+          "kind": "game",
+          "id": "a8fd6970abb17499",
+          "ply": 82,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 1,
+          "sacrificeCount": 0,
+          "reason": "Phối hợp hai Xe không thí quân."
+        },
+        "hints": [
+          "Tốt Đen vừa rời cột h. Hãy nhìn lại đường đi của hai Xe Trắng.",
+          "Xe ở h1 có thể bảo vệ Xe kia trên ô nào khi chiếu Vua?"
+        ],
+        "solution": "Rh8# — Xe từ h2 đến h8 chiếu hết. Xe h1 bảo vệ Xe h8 nên Vua Đen không thể bắt Xe chiếu."
+      },
+      {
+        "title": "Javakhadze,Z — Usov,Aleksandr E.",
+        "prompt": "Phối hợp hai Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/Bp3ppk/6n1/6rp/4r3/2P5/PP5K/R4R2 b - - 3 36",
+        "moves": [
+          "Rh4#"
+        ],
+        "tacticPly": 0,
+        "previousMove": {
+          "fen": "8/Bp3ppk/6n1/6rp/4r3/2P4K/PP6/R4R2 w - - 2 36",
+          "move": "Kh2"
+        },
+        "source": "https://theweekinchess.com/zips/twic1664g.zip",
+        "gameReference": {
+          "collection": "two-rook-mate",
+          "kind": "game",
+          "id": "b6e8b4aee1925e30",
+          "ply": 71,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 1,
+          "sacrificeCount": 0,
+          "reason": "Phối hợp hai Xe không thí quân."
+        },
+        "hints": [
+          "Vua Trắng đang sát biên. Xe g5 đã khóa những ô nào?",
+          "Tìm nước Xe chiếu trên cột h mà Vua không thể tránh sang cột g."
+        ],
+        "solution": "Rh4# chiếu hết trên cột h. Xe g5 chặn ba ô thoát g1, g2 và g3 của Vua Trắng."
+      },
+      {
+        "title": "Kramnik,V — Gelfand,B",
+        "prompt": "Phối hợp hai Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "6k1/1R5p/7K/5p1p/3BnP2/P5P1/2r5/7r b - - 4 45",
+        "moves": [
+          "Rc6+",
+          "Bf6",
+          "Rxf6#"
+        ],
+        "tacticPly": 2,
+        "previousMove": {
+          "fen": "6k1/1R5p/8/5pKp/3BnP2/P5P1/2r5/7r w - - 3 45",
+          "move": "Kh6"
+        },
+        "source": "https://www.pgnmentor.com/players/Kramnik.zip",
+        "gameReference": {
+          "collection": "two-rook-mate",
+          "kind": "game",
+          "id": "b756f719b8e6faca",
+          "ply": 89,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 0,
+          "reason": "Phối hợp hai Xe không thí quân."
+        },
+        "hints": [
+          "Vua Trắng đang ở h6. Xem vì sao Vua không thể bắt Tốt h5.",
+          "Tìm nước chiếu theo hàng 6 rồi xét quân Trắng có thể chắn chiếu."
+        ],
+        "solution": "Ván đấu ghi đến Rc6+. Trong phương án phân tích, nếu Trắng chắn bằng Bf6, Đen đáp Rxf6#. Xe h1 bảo vệ Tốt h5, nên Vua Trắng không thể bắt Tốt để thoát."
+      },
+      {
+        "title": "Garcia,Erick — Aronian,L",
+        "prompt": "Phối hợp hai Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "2b3r1/7k/p2p3q/R1pP1p2/2P1p3/4N1rP/1PBQ1R2/7K b - - 0 34",
+        "moves": [
+          "Qxh3+",
+          "Rh2",
+          "Rg1#"
+        ],
+        "tacticPly": 2,
+        "previousMove": {
+          "fen": "2b3r1/7k/p2p3q/R1pP1p2/2P1p3/4N1rn/1PBQ1RP1/7K w - - 0 34",
+          "move": "gxh3"
+        },
+        "source": "https://www.pgnmentor.com/players/Aronian.zip",
+        "gameReference": {
+          "collection": "two-rook-mate",
+          "kind": "game",
+          "id": "d52caf42b1dee89a",
+          "ply": 67,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 0,
+          "reason": "Phối hợp hai Xe không thí quân."
+        },
+        "hints": [
+          "Tìm nước Hậu bắt Tốt có chiếu và buộc Xe Trắng phải chắn ở h2.",
+          "Khi chiếu trên g1, kiểm tra Xe nào bảo vệ ô đó."
+        ],
+        "solution": "Ván cờ dừng sau Qxh3+. Nhánh phân tích tiếp tục Rh2 Rg1#. Xe g8 bảo vệ g1 nên Vua Trắng không thể bắt Xe."
+      },
+      {
+        "title": "Bartel,Mat — Gustafsson,J",
+        "prompt": "Phối hợp hai Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "k7/1R6/p2r4/2bQp3/2P1P3/7p/q1P5/5R1K w - - 0 44",
+        "moves": [
+          "Rf8+",
+          "Rd8",
+          "Rxd8#"
+        ],
+        "tacticPly": 2,
+        "previousMove": {
+          "fen": "k2r4/1R6/p2N4/2bQp3/2P1P3/7p/q1P5/5R1K b - - 2 43",
+          "move": "Rxd6"
+        },
+        "source": "https://theweekinchess.com/zips/twic1659g.zip",
+        "gameReference": {
+          "collection": "two-rook-mate",
+          "kind": "game",
+          "id": "d87cde16059f716e",
+          "ply": 86,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 0,
+          "reason": "Phối hợp hai Xe không thí quân."
+        },
+        "hints": [
+          "Xe b7 đã chặn ô thoát nào của Vua a8?",
+          "Tìm nước chiếu trên hàng 8 và xem Xe Đen có thể chắn ở đâu."
+        ],
+        "solution": "Ván đấu ghi đến Rf8+. Trong phương án phân tích, nếu Đen chắn bằng Rd8, Trắng đáp Rxd8#. Xe b7 khống chế a7, nên Vua Đen không thể thoát khỏi góc a8."
+      },
+      {
+        "title": "Larino Nieto,D — Benbrik,Hassan",
+        "prompt": "Phối hợp hai Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "3k4/7R/R7/PPK1p2p/2r5/8/8/8 w - - 6 50",
+        "moves": [
+          "Kxc4",
+          "e4",
+          "Ra8#"
+        ],
+        "tacticPly": 2,
+        "previousMove": {
+          "fen": "3k4/7R/R7/PPK1p2p/5r2/8/8/8 b - - 5 49",
+          "move": "Rc4+"
+        },
+        "source": "https://theweekinchess.com/zips/twic1668g.zip",
+        "gameReference": {
+          "collection": "two-rook-mate",
+          "kind": "game",
+          "id": "dac5312e9d0d2580",
+          "ply": 98,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 0,
+          "reason": "Phối hợp hai Xe không thí quân."
+        },
+        "hints": [
+          "Trước hết xử lý nước chiếu của Xe Đen.",
+          "Giữ Xe h7 trên hàng 7 và tìm nước chiếu trên hàng 8."
+        ],
+        "solution": "Kxc4 bắt Xe đang chiếu. Trong phương án phân tích, sau ...e4, Ra8# chiếu hết. Vua Đen cũng không thoát nếu đi ...Ke8 hoặc ...Kc8 vì Xe h7 giữ hàng 7."
+      },
+      {
+        "title": "Nijboer, Friso — Karpov, Anatoly",
+        "prompt": "Phối hợp hai Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/3Br3/8/7R/1P1P1k2/2r5/7K/8 b - - 0 54",
+        "moves": [
+          "Re2+",
+          "Kg1",
+          "Rc1#"
+        ],
+        "tacticPly": 2,
+        "previousMove": {
+          "fen": "8/3Br3/8/3R3p/1P1P1k2/2r5/7K/8 w - - 6 54",
+          "move": "Rxh5"
+        },
+        "source": "https://www.pgnmentor.com/players/Karpov.zip",
+        "gameReference": {
+          "collection": "two-rook-mate",
+          "kind": "game",
+          "id": "ec43a1224fbf4c5d",
+          "ply": 107,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 0,
+          "reason": "Phối hợp hai Xe không thí quân."
+        },
+        "hints": [
+          "Hãy dùng một Xe chiếu ngang để dồn Vua Trắng xuống hàng 1.",
+          "Kiểm tra cả Kg1 và Kh1. Xe còn lại có thể chiếu từ cùng một ô."
+        ],
+        "solution": "Trong ván đấu, Đen chơi Rxd7. Phương án chiếu hết là Re2+. Sau Kg1 hoặc Kh1, Đen đều chơi Rc1#. Xe e2 khóa đường trở lại hàng 2."
+      },
+      {
+        "title": "Aronian,L — Matlakov,M",
+        "prompt": "Phối hợp hai Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "4rR2/1pp3k1/p1bp3p/7r/P6N/2N4P/1P5K/5R2 w - - 0 27",
+        "moves": [
+          "R1f7#"
+        ],
+        "tacticPly": 0,
+        "previousMove": {
+          "fen": "4rRk1/1pp3P1/p1bp3p/7r/P6N/2N4P/1P5K/5R2 b - - 2 26",
+          "move": "Kxg7"
+        },
+        "source": "https://www.pgnmentor.com/players/Aronian.zip",
+        "gameReference": {
+          "collection": "two-rook-mate",
+          "kind": "game",
+          "id": "fe17ed4e07996112",
+          "ply": 52,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 1,
+          "sacrificeCount": 0,
+          "reason": "Phối hợp hai Xe không thí quân."
+        },
+        "hints": [
+          "Hai Xe cùng đứng trên cột f. Hãy chọn Xe có thể đến f7 mà vẫn giữ được ô f8.",
+          "Kiểm tra xem Xe còn lại chặn những ô thoát nào trên hàng 8."
+        ],
+        "solution": "R1f7# đưa Xe từ f1 lên f7. Xe f8 bảo vệ f7 và khóa g8, h8, nên Vua Đen không thể bắt Xe chiếu hoặc lùi về hàng 8."
+      },
+      {
+        "title": "Amzir,Oussama — Karim,I",
+        "prompt": "Phối hợp hai Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "7r/pp3pk1/6p1/P3P3/Q2NPq2/R7/1PP2PK1/3r4 b - - 0 34",
+        "moves": [
+          "Rh2#"
+        ],
+        "tacticPly": 0,
+        "previousMove": {
+          "fen": "7r/pp3pk1/6p1/P3P3/Q2pPq2/R4N2/1PP2PK1/3r4 w - - 1 34",
+          "move": "Nxd4"
+        },
+        "source": "https://theweekinchess.com/zips/twic1668g.zip",
+        "gameReference": {
+          "collection": "two-rook-mate",
+          "kind": "game",
+          "id": "ffa9ed970d1d64ef",
+          "ply": 67,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 1,
+          "sacrificeCount": 0,
+          "reason": "Phối hợp hai Xe không thí quân."
+        },
+        "hints": [
+          "Xe d1 giữ hàng 1. Xe h8 có thể chiếu Vua Trắng từ ô nào?",
+          "Kiểm tra quân nào bảo vệ Xe khi Xe đến h2."
+        ],
+        "solution": "Rh2# — Xe từ h8 đến h2 chiếu hết. Hậu f4 bảo vệ Xe h2, còn Xe d1 khóa các ô g1 và f1."
+      },
+      {
+        "title": "Hebert,J — Korchnoi,V",
+        "prompt": "Phối hợp hai Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "r5k1/5ppp/8/P1P5/1r1PnQ2/8/P3q2P/KR1R4 b - - 3 31",
+        "moves": [
+          "Qxa2+",
+          "Kxa2",
+          "Rxa5#"
+        ],
+        "tacticPly": 2,
+        "previousMove": {
+          "fen": "r5k1/5ppp/8/P1P5/1r1PnQ2/8/P3q2P/K1RR4 w - - 2 31",
+          "move": "Rb1"
+        },
+        "source": "https://www.pgnmentor.com/players/Korchnoi.zip",
+        "gameReference": {
+          "collection": "two-rook-mate",
+          "kind": "game",
+          "id": "382e534e871c46a0",
+          "ply": 61,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 1,
+          "reason": "Thí một quân để tạo thế chiếu hết bằng hai Xe."
+        },
+        "hints": [
+          "Vua Trắng ở a1. Xe b4 đang khống chế những ô thoát nào nếu Vua lên a2?",
+          "Tìm nước thí Hậu đưa Vua lên cột a, rồi xét cách loại bỏ Tốt a5."
+        ],
+        "solution": "Trong ván đấu, Đen chơi Nc3. Phương án phân tích là Qxa2+ Kxa2 Rxa5#. Đen thí Hậu để kéo Vua Trắng lên a2. Xe a8 bắt Tốt a5 để chiếu dọc cột a. Xe b4 khống chế b2 và b3."
+      },
+      {
+        "title": "Grischuk,A — Short,N",
+        "prompt": "Phối hợp hai Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "k6r/pp6/4P3/3p1R1q/1PpPbQ2/P1P2NrP/6PK/5R2 b - - 0 32",
+        "moves": [
+          "Qxh3+",
+          "gxh3",
+          "Rhxh3#"
+        ],
+        "tacticPly": 2,
+        "previousMove": {
+          "fen": "k6r/pp6/4PR2/3p1n1q/1PpPbQ2/P1P2NrP/6PK/5R2 w - - 3 32",
+          "move": "Rxf5"
+        },
+        "source": "https://www.pgnmentor.com/players/Short.zip",
+        "gameReference": {
+          "collection": "two-rook-mate",
+          "kind": "game",
+          "id": "4c2bd69671dd2f63",
+          "ply": 63,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 1,
+          "reason": "Thí một quân để tạo thế chiếu hết bằng hai Xe."
+        },
+        "hints": [
+          "Tìm nước chiếu có thể kéo Tốt g2 sang cột h.",
+          "Nếu Trắng bắt Hậu trên h3, hãy chọn Xe có thể chiếu ở h3 mà vẫn giữ Xe g3 tại chỗ."
+        ],
+        "solution": "Ván đấu dừng sau Qxh3+. Trong phương án phân tích, nếu Trắng nhận thí Hậu bằng gxh3, Xe h8 xuống h3 chiếu hết bằng Rhxh3#. Xe g3 bảo vệ h3 và khống chế g1, g2. Nếu Vua Trắng chọn Kg1, Đen chiếu hết bằng Qxg2#."
+      },
+      {
+        "title": "Shohradova,Lala — Atalik,E",
+        "prompt": "Phối hợp hai Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "5n2/5rk1/1r4p1/2p2pP1/Q7/5P2/K1R1qP2/7R b - - 3 38",
+        "moves": [
+          "Qxc2+",
+          "Qxc2",
+          "Ra7+",
+          "Qa4",
+          "Rxa4#"
+        ],
+        "tacticPly": 4,
+        "previousMove": {
+          "fen": "5n2/5rk1/1r4p1/2p2pP1/Q1R5/5P2/K3qP2/7R w - - 2 38",
+          "move": "Rc2"
+        },
+        "source": "https://theweekinchess.com/zips/twic1664g.zip",
+        "gameReference": {
+          "collection": "two-rook-mate",
+          "kind": "game",
+          "id": "5a37e4f25ecf9976",
+          "ply": 75,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 1,
+          "reason": "Thí một quân để tạo thế chiếu hết bằng hai Xe."
+        },
+        "hints": [
+          "Xe b6 khóa cột b. Quân Trắng nào đang cản đường chiếu dọc cột a?",
+          "Tìm nước thí Hậu để kéo Hậu Trắng rời a4. Sau đó, tính cách bắt quân che đường chiếu."
+        ],
+        "solution": "Trong ván đấu, Đen chơi Qe6+. Phương án phân tích bắt đầu bằng Qxc2+. Nếu Trắng nhận thí Hậu bằng Qxc2, Đen chiếu Ra7+. Hậu Trắng phải che ở a4 và Đen chơi Rxa4#. Xe b6 khóa b1, b2 và b3. Nếu Trắng chọn Ka1 ngay sau Qxc2+, Đen chiếu hết ngay bằng Qa4#."
+      },
+      {
+        "title": "Bacrot,E — Maghsoodloo,Parham",
+        "prompt": "Phối hợp hai Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "6k1/6P1/3p3r/p3qB2/1pPp4/1P4R1/P6P/5RK1 w - - 1 42",
+        "moves": [
+          "Bh7+",
+          "Rxh7",
+          "Rf8#"
+        ],
+        "tacticPly": 2,
+        "previousMove": {
+          "fen": "6k1/6P1/3p4/p3qB2/1pPp3r/1P4R1/P6P/5RK1 b - - 0 41",
+          "move": "Rh6"
+        },
+        "source": "https://theweekinchess.com/zips/twic1656g.zip",
+        "gameReference": {
+          "collection": "two-rook-mate",
+          "kind": "game",
+          "id": "5a8a5337db58fcf2",
+          "ply": 82,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 1,
+          "reason": "Thí một quân để tạo thế chiếu hết bằng hai Xe."
+        },
+        "hints": [
+          "Tượng f5 đang chắn đường Xe f1 lên f8. Tìm nước Tượng chiếu để mở cột f.",
+          "Sau khi Tượng đến h7, hãy tính riêng hai cách Đen bắt Tượng, bằng Xe hoặc bằng Vua."
+        ],
+        "solution": "Trong ván đấu, Trắng đi Be4. Phương án phân tích bắt đầu bằng Bh7+, thí Tượng để mở cột f. Nếu Đen bắt bằng Rxh7, Trắng chơi Rf8#. Xe g3 bảo vệ Tốt g7 nên Vua Đen không thể bắt Tốt để thoát. Nếu Đen chọn Kxh7, Trắng phong Hậu và chiếu hết bằng g8=Q#."
+      },
+      {
+        "title": "Camacho Collados,J — Mak,Tong Kuan",
+        "prompt": "Phối hợp hai Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "r3k2r/1R3Rpp/2p1p3/p3P3/P1P1np2/4B3/5PPP/6K1 w - - 4 29",
+        "moves": [
+          "Bb6",
+          "Ra7",
+          "Rxa7",
+          "Nxf2",
+          "Rae7#"
+        ],
+        "tacticPly": 4,
+        "previousMove": {
+          "fen": "r4k1r/1R3Rpp/2p1p3/p3P3/P1P1np2/4B3/5PPP/6K1 b - - 3 28",
+          "move": "Ke8"
+        },
+        "source": "https://theweekinchess.com/zips/twic1664g.zip",
+        "gameReference": {
+          "collection": "two-rook-mate",
+          "kind": "game",
+          "id": "bf40da3ecc3d0996",
+          "ply": 56,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Tính nước phòng thủ mạnh trước khi chiếu hết bằng hai Xe."
+        },
+        "hints": [
+          "Nếu chiếu ngay Rbe7+, Vua Đen có thể thoát qua d8. Tìm cách khống chế ô đó.",
+          "Khi Xe Đen đến a7, hãy kiểm tra xem nó có thể bắt Xe chiếu trên e7 hay không."
+        ],
+        "solution": "Ván đấu dừng sau Bb6, nước khóa ô d8. Trong phương án phân tích, Đen đáp Ra7 để có thể bắt Xe nếu Trắng chiếu Rbe7+. Trắng cần chơi Rxa7 trước. Sau Nxf2, Rae7# chiếu hết. Xe f7 bảo vệ e7 và khống chế f8."
+      },
+      {
+        "title": "Karpov,Ana — Vachier Lagrave,M",
+        "prompt": "Phối hợp hai Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "4k3/7R/5R2/p3pKp1/Pn1b4/5PB1/2p2P2/1r6 w - - 6 58",
+        "moves": [
+          "Ke6",
+          "Rh1",
+          "Re7+",
+          "Kd8",
+          "Rf8#"
+        ],
+        "tacticPly": 4,
+        "previousMove": {
+          "fen": "8/4k2R/5R2/p3pKp1/Pn1b4/5PB1/2p2P2/1r6 b - - 5 57",
+          "move": "Ke8"
+        },
+        "source": "https://www.pgnmentor.com/players/Karpov.zip",
+        "gameReference": {
+          "collection": "two-rook-mate",
+          "kind": "game",
+          "id": "c6532d60ddb8ad50",
+          "ply": 114,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Tính nước phòng thủ mạnh trước khi chiếu hết bằng hai Xe."
+        },
+        "hints": [
+          "Vua Trắng cần giữ thêm ô nào trước khi hai Xe chiếu?",
+          "Nếu Xe Đen sang h1, hãy đổi hướng chiếu. Nếu Đen đưa Tượng tới c5, tính cách xử lý khi Tượng chắn ở f8."
+        ],
+        "solution": "Ván đấu dừng sau Ke6. Vua Trắng giữ d7 và bảo vệ e7. Trong phương án phân tích, nếu Đen chơi Rh1, Xe Đen có thể bắt Xe khi Trắng chiếu Rh8+ ngay. Trắng đổi hướng bằng Re7+ Kd8 Rf8#. Xe e7 khóa ô c7. Nếu Đen chơi Bc5, Trắng lại chọn Rh8+ Bf8 Rhxf8#."
+      },
+      {
+        "title": "Svidler,P — Kramnik,V",
+        "prompt": "Phối hợp hai Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "2r2n2/p1r5/1p2p3/2p4k/3PB1R1/6P1/PP4K1/5R2 w - - 4 40",
+        "moves": [
+          "Bf3",
+          "Ng6",
+          "Rh1+",
+          "Nh4+",
+          "Rhxh4#"
+        ],
+        "tacticPly": 4,
+        "previousMove": {
+          "fen": "2r2n2/p1r5/1p2p2k/2p5/3PB1R1/6P1/PP4K1/5R2 b - - 3 39",
+          "move": "Kh5"
+        },
+        "source": "https://www.pgnmentor.com/players/Kramnik.zip",
+        "gameReference": {
+          "collection": "two-rook-mate",
+          "kind": "game",
+          "id": "f4970e5d8ec979b3",
+          "ply": 78,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Tính nước phòng thủ mạnh trước khi chiếu hết bằng hai Xe."
+        },
+        "hints": [
+          "Nếu chiếu ngay Rh1+, Vua Đen có thể bắt Xe g4. Hãy tìm cách bảo vệ Xe này trước.",
+          "Nếu Mã Đen đến h4 vừa chắn chiếu vừa chiếu lại, hãy chọn Xe bắt Mã sao cho vẫn giữ được cột g."
+        ],
+        "solution": "Ván đấu dừng sau Bf3, nước bảo vệ Xe g4. Trong phương án phân tích, Đen đáp Ng6 để chuẩn bị chắn chiếu. Sau Rh1+ Nh4+, Trắng dùng Xe h1 bắt Mã bằng Rhxh4#. Xe g4 giữ hai ô thoát g5 và g6. Nếu dùng Xe g4 bắt Mã, Vua Đen còn đường thoát."
+      },
+      {
+        "title": "Timman, Jan H — Spassky, Boris V",
+        "prompt": "Phối hợp hai Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "r5k1/r1p4p/3pq1pB/5P2/Nppb1P1P/8/QPP3P1/KR2R3 b - - 0 29",
+        "moves": [
+          "Rxa4",
+          "Rbd1",
+          "Rxa2+",
+          "Kb1",
+          "Ra1#"
+        ],
+        "tacticPly": 4,
+        "previousMove": {
+          "fen": "r5k1/r1p4p/3pq1pB/5p2/NppbPP1P/8/QPP3P1/KR2R3 w - - 2 29",
+          "move": "exf5"
+        },
+        "source": "https://www.pgnmentor.com/players/Spassky.zip",
+        "gameReference": {
+          "collection": "two-rook-mate",
+          "kind": "game",
+          "id": "f9419a5600274c3c",
+          "ply": 57,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Tính nước phòng thủ mạnh trước khi chiếu hết bằng hai Xe."
+        },
+        "hints": [
+          "Tìm cách bắt Mã a4 và khai thác cột a đang bị chặn bởi Hậu Trắng.",
+          "Nếu Xe b1 rời vị trí, Vua Trắng thoát tới ô nào? Hãy giữ Xe a8 để bảo vệ nước chiếu cuối."
+        ],
+        "solution": "Ván đấu dừng sau Rxa4. Trong phương án phân tích, Rbd1 mở ô b1 cho Vua Trắng. Đen bắt Hậu bằng Rxa2+ để đẩy Vua tới b1, rồi chiếu hết bằng Ra1#. Xe a8 bảo vệ Xe a1. Nếu Trắng bắt Xe bằng Qxa4, Xe a8 bắt lại và chiếu hết ngay bằng Rxa4#."
+      },
+      {
+        "title": "Cardoso Cardoso,Jose Gabriel — Carlsen,M",
+        "prompt": "Phối hợp hai Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "r5k1/3R1ppp/8/3p4/3P4/3KB1P1/r4P1P/8 b - - 3 37",
+        "moves": [
+          "R8a3#"
+        ],
+        "tacticPly": 0,
+        "previousMove": {
+          "fen": "r5k1/3R1ppp/8/3p4/3P4/4B1P1/r2K1P1P/8 w - - 2 37",
+          "move": "Kd3"
+        },
+        "source": "https://www.pgnmentor.com/players/Carlsen.zip",
+        "gameReference": {
+          "collection": "two-rook-mate",
+          "kind": "game",
+          "id": "10bf2e51fe681d01",
+          "ply": 73,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 1,
+          "sacrificeCount": 0,
+          "reason": "Phối hợp hai Xe không thí quân."
+        },
+        "hints": [
+          "Vua Trắng ở d3. Xe a2 đang chặn các ô thoát nào ngay bên dưới Vua?",
+          "Giữ Xe ở a2 và tìm nước chiếu ngang bằng Xe còn lại."
+        ],
+        "solution": "Đen chiếu hết bằng R8a3#. Xe a8 xuống a3 chiếu ngang vào Vua d3. Xe a2 giữ c2, d2 và e2. Nếu dùng Xe a2 để chiếu, Vua Trắng có thể thoát xuống hàng 2."
+      },
+      {
+        "title": "Timmermans,M — Carlsen,M",
+        "prompt": "Phối hợp hai Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/5k2/p1p1pp2/5r1p/PpnPK3/1NP1R2P/1P2r3/1R6 b - - 7 40",
+        "moves": [
+          "Rxe3#"
+        ],
+        "tacticPly": 0,
+        "previousMove": {
+          "fen": "8/5k2/p1p1pp2/5r1p/PpnPK3/1NPR3P/1P2r3/1R6 w - - 6 40",
+          "move": "Re3"
+        },
+        "source": "https://www.pgnmentor.com/players/Carlsen.zip",
+        "gameReference": {
+          "collection": "two-rook-mate",
+          "kind": "game",
+          "id": "853c908d925f9e67",
+          "ply": 79,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 1,
+          "sacrificeCount": 0,
+          "reason": "Phối hợp hai Xe không thí quân."
+        },
+        "hints": [
+          "Trắng vừa dùng Xe che đường chiếu. Hãy xem Đen có thể bắt Xe đó bằng nước chiếu nào.",
+          "Vua Trắng có thể bắt Xe ở e3 hoặc thoát qua f4 không?"
+        ],
+        "solution": "Rxe3# — Xe từ e2 đến e3, bắt Xe Trắng và chiếu hết. Mã c4 bảo vệ Xe e3, còn Xe f5 chặn ô thoát f4."
+      },
+      {
+        "title": "Niemann,Hans Moke — Carlsen,M",
+        "prompt": "Phối hợp hai Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "1R6/6Rp/3rkp2/1P2p3/4P3/7P/1r4PK/8 w - - 1 41",
+        "moves": [
+          "Re8#"
+        ],
+        "tacticPly": 0,
+        "previousMove": {
+          "fen": "1R6/6Rp/2r1kp2/1P2p3/4P3/7P/1r4PK/8 b - - 0 40",
+          "move": "Rd6"
+        },
+        "source": "https://www.pgnmentor.com/players/Carlsen.zip",
+        "gameReference": {
+          "collection": "two-rook-mate",
+          "kind": "game",
+          "id": "3355db1f00123391",
+          "ply": 80,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 1,
+          "sacrificeCount": 0,
+          "reason": "Phối hợp hai Xe không thí quân."
+        },
+        "hints": [
+          "Vua Đen ở e6. Xe g7 đã khống chế những ô nào trên hàng 7?",
+          "Giữ Xe g7 và tìm nước chiếu dọc cột e bằng Xe còn lại."
+        ],
+        "solution": "Re8# — Xe từ b8 đến e8, chiếu hết. Xe g7 khóa d7 và f7. Xe d6 và Tốt f6 của Đen cũng chắn đường Vua Đen thoát sang hai bên."
+      },
+      {
+        "title": "Shirov,A — Ehlvest,J",
+        "prompt": "Phối hợp hai Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "2r2r2/1p1R3p/pq3b1Q/4k3/4p1B1/2P5/PP5P/2KR4 w - - 1 32",
+        "moves": [
+          "R7d5#"
+        ],
+        "tacticPly": 0,
+        "previousMove": {
+          "fen": "2r2r2/1pqR3p/p4b1Q/4k3/4p1B1/2P5/PP5P/2KR4 b - - 0 31",
+          "move": "Qb6"
+        },
+        "source": "https://www.pgnmentor.com/players/Shirov.zip",
+        "gameReference": {
+          "collection": "two-rook-mate",
+          "kind": "game",
+          "id": "6639a213596a3320",
+          "ply": 62,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 1,
+          "sacrificeCount": 0,
+          "reason": "Phối hợp hai Xe không thí quân."
+        },
+        "hints": [
+          "Vua Đen có thể bắt Xe trên d5 nếu ô đó không được bảo vệ. Hãy xét vai trò của Xe còn lại.",
+          "Thử cả hai cách đưa Xe đến d5. Xe đứng yên có bảo vệ được ô chiếu không?"
+        ],
+        "solution": "Trong ván đấu, Trắng chơi R7d5# bằng Xe d7. Xe d1 bảo vệ d5 nên Vua Đen không thể bắt Xe chiếu. R1d5# cũng chiếu hết vì khi đó Xe d7 bảo vệ d5."
+      },
+      {
+        "title": "Winants, Luc — Kortschnoj, Viktor",
+        "prompt": "Phối hợp hai Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "R2r4/3b1pbk/2B3pp/8/8/6P1/5rP1/1R1KN3 b - - 1 31",
+        "moves": [
+          "Bg4+",
+          "Kc1",
+          "Rd1#"
+        ],
+        "tacticPly": 2,
+        "previousMove": {
+          "fen": "3r4/3b1pbk/2B3pp/8/8/R5P1/5rP1/1R1KN3 w - - 0 31",
+          "move": "Ra8"
+        },
+        "source": "https://www.pgnmentor.com/players/Korchnoi.zip",
+        "gameReference": {
+          "collection": "two-rook-mate",
+          "kind": "game",
+          "id": "d113e20e0086f672",
+          "ply": 61,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 0,
+          "reason": "Phối hợp hai Xe không thí quân."
+        },
+        "hints": [
+          "Tượng d7 đang chắn đường Xe d8. Hãy tìm nước Tượng đi để cả Tượng và Xe cùng chiếu Vua Trắng.",
+          "Sau khi Vua Trắng tới c1, Xe f2 khóa ô thoát nào? Hãy tìm nước chiếu hết bằng Xe còn lại."
+        ],
+        "solution": "Bg4+ — Tượng từ d7 đến g4, vừa chiếu Vua vừa mở cột d cho Xe d8 cùng chiếu. Trắng chỉ có Kc1. Đen tiếp tục Rd1#, với Tượng g4 bảo vệ Xe d1 và Xe f2 chặn ô c2."
+      },
+      {
+        "title": "Carlsen,M — Suyarov,Mukhammadzokhid",
+        "prompt": "Phối hợp hai Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "1r6/4r2p/2pN1p1P/p1Pb3k/P1p2Pp1/2P5/1P1R4/2K3R1 w - - 0 32",
+        "moves": [
+          "Rh2+",
+          "Kg6",
+          "Rxg4#"
+        ],
+        "tacticPly": 2,
+        "previousMove": {
+          "fen": "1r6/4r2p/2pN1pkP/p1Pb3P/P1p2Pp1/2P5/1P1R4/2K3R1 b - - 0 31",
+          "move": "Kxh5"
+        },
+        "source": "https://www.pgnmentor.com/players/Carlsen.zip",
+        "gameReference": {
+          "collection": "two-rook-mate",
+          "kind": "game",
+          "id": "13feea87fd28dc37",
+          "ply": 62,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 0,
+          "reason": "Phối hợp hai Xe không thí quân."
+        },
+        "hints": [
+          "Trước khi bắt Tốt g4, hãy tìm nước chiếu đưa Vua Đen sang cột g.",
+          "Sau khi Vua sang g6, một Xe giữ cột h. Xe còn lại có thể bắt Tốt nào để chiếu hết?"
+        ],
+        "solution": "Trắng chơi Rh2+ để buộc Vua Đen sang g6. Sau Kg6, Rxg4# chiếu hết. Xe h2 chặn h5 và bảo vệ Tốt h6 nên Vua Đen không thể thoát sang cột h. Nếu bắt Tốt g4 ngay, Trắng chưa chiếu được Vua."
+      },
+      {
+        "title": "Shirov,A — Brynell,S",
+        "prompt": "Phối hợp hai Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "R1rr4/2k5/1n5p/1Rb1P3/2p5/2P3P1/5PBP/6K1 w - - 2 33",
+        "moves": [
+          "Ra7+",
+          "Kb8",
+          "Rb7+",
+          "Ka8",
+          "Ra5#"
+        ],
+        "tacticPly": 4,
+        "previousMove": {
+          "fen": "Rkrr4/8/1n5p/1Rb1P3/2p5/2P3P1/5PBP/6K1 b - - 1 32",
+          "move": "Kc7"
+        },
+        "source": "https://www.pgnmentor.com/players/Shirov.zip",
+        "gameReference": {
+          "collection": "two-rook-mate",
+          "kind": "game",
+          "id": "0927a6b38530c5df",
+          "ply": 64,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phối hợp hai Xe không thí quân."
+        },
+        "hints": [
+          "Dùng Xe a8 để buộc Vua Đen rời c7. Xe này có thể tiếp tục chiếu ngang từ hàng 7.",
+          "Khi Vua Đen về góc a8, giữ ô b8 và tìm nước chiếu dọc cột a bằng Xe còn lại."
+        ],
+        "solution": "Trong ván đấu, Trắng chơi 33.Rxc5+ và ván đấu kết thúc ở nước đó. Phương án phân tích là 33.Ra7+ Kb8 34.Rb7+ Ka8 35.Ra5#. Xe đi từ a8 qua a7 đến b7 và giữ ô b8. Xe còn lại từ b5 sang a5 chiếu hết dọc cột a."
+      },
+      {
+        "title": "Mestel, A Jonathan — Kortschnoj, Viktor",
+        "prompt": "Phối hợp hai Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/5Rpk/P7/8/5P1p/8/6rr/R4K2 b - - 4 51",
+        "moves": [
+          "h3",
+          "Rxg7+",
+          "Kxg7",
+          "Ke1",
+          "Rh1#"
+        ],
+        "tacticPly": 4,
+        "previousMove": {
+          "fen": "8/5Rpk/P7/8/5P1p/8/6rr/R5K1 w - - 3 51",
+          "move": "Kf1"
+        },
+        "source": "https://www.pgnmentor.com/players/Korchnoi.zip",
+        "gameReference": {
+          "collection": "two-rook-mate",
+          "kind": "game",
+          "id": "4c75bbb640fd3bc3",
+          "ply": 101,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phối hợp hai Xe không thí quân."
+        },
+        "hints": [
+          "Nếu Xe h2 đi xuống h1 ngay, quân nào của Đen có thể bị Vua Trắng bắt?",
+          "Dùng Tốt bảo vệ Xe g2, rồi tính cách đáp lại nước chiếu bằng Xe của Trắng."
+        ],
+        "solution": "Ván đấu dừng sau h3. Tốt h3 bảo vệ Xe g2 để Xe h2 có thể xuống h1 chiếu hết. Trong phương án phân tích, Trắng có thể kéo dài bằng Rxg7+. Đen đáp Kxg7, rồi chiếu hết bằng Rh1# sau Ke1. Nếu chiếu Rh1+ ngay từ thế ban đầu, Vua Trắng có thể bắt Xe g2."
+      },
+      {
+        "title": "Zhigalko,S — Carlsen,M",
+        "prompt": "Phối hợp hai Xe để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "5r2/6k1/p3Q1p1/3pP1P1/P4r1p/2P4P/5PK1/8 b - - 0 46",
+        "moves": [
+          "Rxf2+",
+          "Kg1",
+          "Rf1+",
+          "Kg2",
+          "R8f2#"
+        ],
+        "tacticPly": 4,
+        "previousMove": {
+          "fen": "5r2/6k1/pQ2p1p1/3pP1P1/P4r1p/2P4P/5PK1/8 w - - 4 46",
+          "move": "Qxe6"
+        },
+        "source": "https://www.pgnmentor.com/players/Carlsen.zip",
+        "gameReference": {
+          "collection": "two-rook-mate",
+          "kind": "game",
+          "id": "3a7f7c1bb4adb2a3",
+          "ply": 91,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phối hợp hai Xe không thí quân."
+        },
+        "hints": [
+          "Tìm nước bắt Tốt f2 có chiếu để đưa Vua Trắng xuống hàng 1.",
+          "Đưa Xe vừa bắt Tốt xuống f1. Xe nào sẽ chiếu trên f2 khi Vua Trắng trở lại hàng 2?"
+        ],
+        "solution": "Trong ván đấu, Đen chơi Rxf2+ Kg1 Rf1+ Kg2 R8f2#. Xe f1 giữ g1, h1 và bảo vệ Xe f2. Nếu Vua Trắng đi Kh1 thay cho Kg1, hoặc Kh2 thay cho Kg2, Đen vẫn dùng cùng hai nước Xe để chiếu hết."
       }
     ]
   }

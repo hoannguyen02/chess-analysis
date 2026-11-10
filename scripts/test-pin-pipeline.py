@@ -52,7 +52,9 @@ class Pins(unittest.TestCase):
   active={e['fen'] for e in published if e.get('source')=='original-composition'}
   evidence=json.loads((ROOT/'scripts/fixtures/pin/beginner-benefit-review.json').read_text())['records']
   self.assertEqual(len(evidence),22)
-  self.assertEqual(active,{r['fen'] for r in evidence if r['decision']=='retain'})
+  retired={'2k5/1n6/B7/p7/8/Q7/6K1/8 w - - 0 1'}
+  self.assertEqual(active & {r['fen'] for r in evidence},
+                   {r['fen'] for r in evidence if r['decision']=='retain'} - retired)
   for r in records:
    if r['exercise']['fen'] in active:
     self.assertTrue(review.verify(r))
@@ -64,7 +66,8 @@ class Pins(unittest.TestCase):
    self.assertNotIn(fen,active)
  def test_new_beginner_pins_need_the_defender_restriction(self):
   records=json.loads((ROOT/'scripts/fixtures/pin/beginner-reviewed.json').read_text())
-  new=[r for r in records if r['id'].startswith('pin-beginner-essential-')]
+  ids={f'pin-beginner-essential-20261027-{i:02}' for i in range(1,11)}
+  new=[r for r in records if r['id'] in ids]
   self.assertEqual(len(new),10)
   self.assertEqual(sum(chess.Board(r['exercise']['fen']).turn for r in new),5)
   for r in new:
@@ -98,4 +101,58 @@ class Pins(unittest.TestCase):
  def test_rejects_capture_without_pin(self):
   b=chess.Board('7k/8/8/8/8/8/q7/R5K1 w - - 0 1')
   self.assertIsNone(miner.inspect(b,[chess.Move.from_uci(u) for u in ['a1a2','h8g8','g1f1','g8f8']]))
+ def test_source_batch_proofs(self):
+  from pin_research import COMPOSITION, verify_review
+  path=ROOT/'scripts/fixtures/pin/expansion-evidence.json'
+  if not path.exists():
+   return
+  bundle=json.loads(path.read_text())
+  results={row['gameId']:row for row in bundle['reviewResults']}
+  exercises={(row.get('gameReference') or {}).get('id') or row.get('id'):row
+             for row in json.loads((ROOT/'src/lib/server/pin-exercises.json').read_text())
+             if row.get('gameReference') or row.get('id')}
+  sources=json.loads((ROOT/'src/lib/server/pin-game-sources.json').read_text())
+  for record in bundle['records']:
+   ident=record['gameId']
+   with self.subTest(ident=ident):
+    verify_review(record,results[ident])
+    if record['source']==COMPOSITION:
+     self.assertNotIn(ident,sources)
+     self.assertNotIn('previousMove',exercises[ident])
+     self.assertNotIn('gameReference',exercises[ident])
+     self.assertEqual(exercises[ident]['source'],COMPOSITION)
+    else:
+     self.assertEqual(sources[ident]['lines'],[record['gameMoves']])
+     if record['moves'][0] != record['gameMoves'][record['ply']]:
+      self.assertIn('Phương án phân tích.',exercises[ident]['solution'])
+ def test_published_master_reviews_preserve_games(self):
+  from tactic_research import module
+  builder=module('build-pins')
+  reviews=builder.master_review_changes()
+  exercises={e['gameReference']['id']:e for e in json.loads(
+   (ROOT/'src/lib/server/pin-exercises.json').read_text()) if e.get('gameReference')}
+  games=json.loads((ROOT/'src/lib/server/pin-game-sources.json').read_text())
+  originals={r['gameId']:r for r in json.loads(
+   (ROOT/'scripts/fixtures/pin/researched.json').read_text())['records']}
+  for ident,review in reviews.items():
+   with self.subTest(game=ident):
+    original=originals[ident]
+    self.assertEqual(games[ident]['lines'],[original['gameMoves']])
+    if review['decision']=='exclude':
+     self.assertNotIn(ident,exercises)
+    else:
+     exercise=exercises[ident]
+     self.assertEqual(exercise['fen'],original['fen'])
+     self.assertEqual(exercise['previousMove'],original['previousMove'])
+     self.assertEqual(exercise['difficulty']['level'],review['destination'])
+     self.assertEqual(exercise['moves'],review['moves'])
+     self.assertEqual(exercise['alternativeLines'],review['alternatives'])
+     sacrifices=review.get('sacrifices',[])
+     self.assertEqual(exercise['difficulty']['sacrificeCount'],len(sacrifices))
+     if sacrifices:
+      changed=[dict(sacrifices[0],acceptedBy='different reply'),*sacrifices[1:]]
+      with self.assertRaisesRegex(ValueError,'sacrifice did not settle'):
+       builder.apply_master_review(original,dict(review,sacrifices=changed))
+    with self.assertRaisesRegex(ValueError,'no longer matches'):
+     builder.apply_master_review(dict(original,fen=chess.STARTING_FEN),review)
 if __name__=='__main__':unittest.main()

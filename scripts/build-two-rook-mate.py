@@ -1,22 +1,23 @@
-"""Generate deterministic composed KRR-v-K lessons, validated with Stockfish.
+"""Generate deterministic A/B composed KRR-v-K lessons with Stockfish.
 No source games are invented. Saved alternative lines end in actual checkmate.
+Beginner positions are authored separately through the shared UI.
 """
-import collections,json,random,sys,subprocess
+import json,random,sys,subprocess
 from pathlib import Path
 import chess,chess.engine
 ROOT=Path(__file__).resolve().parents[1]
+if (ROOT/'scripts/fixtures/two-rook-mate/expansion-evidence.json').exists():
+ subprocess.run([sys.executable,str(ROOT/'scripts/build-two-rook-master-games.py')],check=True)
+ sys.exit(0)
+
 def publish(categories):
- exercises=[e for c in categories for e in c['exercises'] if not e.get('gameReference')]
+ exercises=[e for c in categories for e in c['exercises']
+            if not e.get('gameReference') and not e.get('beginner') and len(e['moves'])>1]
  for e in exercises:
   own=(len(e['moves'])+1)//2
-  e.pop('difficulty',None)
-  e.pop('beginner',None)
-  if own==1:
-   e['beginner']=True
-  else:
-   level='A' if own==2 else 'B'
-   e['difficulty']=dict(level=level,status='suggested',solverMoves=own,sacrificeCount=0,
-    reason='Phối hợp trực tiếp hai Xe, không hy sinh.' if level=='A' else 'Phối hợp ngắn hai Xe qua các nước đáp của Vua, không hy sinh.')
+  level='A' if own==2 else 'B'
+  e['difficulty']=dict(level=level,status='suggested',solverMoves=own,sacrificeCount=0,
+   reason='Phối hợp trực tiếp hai Xe, không hy sinh.' if level=='A' else 'Phối hợp ngắn hai Xe qua các nước đáp của Vua, không hy sinh.')
  data=[dict(id='two-rook-mate',title='Chiếu hết bằng hai Xe',description='Phối hợp hai Xe để hạn chế đường thoát và chiếu hết Vua đối phương. Giữ Xe ngoài tầm bắt của Vua.',exercises=exercises)]
  (ROOT/'scripts/fixtures/two-rook-mate/composed.json').write_text(json.dumps(data,ensure_ascii=False,indent=2)+'\n')
  (ROOT/'src/lib/server/two-rook-mate-exercises.json').write_text(json.dumps(data,ensure_ascii=False,indent=2)+'\n')
@@ -30,7 +31,7 @@ if '--regrade' in sys.argv:
 random.seed(240102)
 engine=chess.engine.SimpleEngine.popen_uci('/opt/homebrew/bin/stockfish')
 engine.configure({'Threads':2,'Hash':128})
-groups={1:[],2:[],3:[]};seen=set();audit=[]
+groups={2:[],3:[]};seen=set();audit=[]
 def line(board,pv):
  b=board.copy();out=[];used=set()
  for move in pv:
@@ -54,7 +55,7 @@ try:
   if key in seen:continue
   quick=engine.analyse(b,chess.engine.Limit(nodes=12000))
   mate=quick['score'].pov(b.turn).mate()
-  if mate not in [1,2,3,4]:continue
+  if mate not in [2,3,4]:continue
   group=min(mate,3)
   if len(groups[group])>=20:continue
   infos=engine.analyse(b,chess.engine.Limit(nodes=150000),multipv=4)
@@ -66,14 +67,14 @@ try:
    moves=line(b,info.get('pv',[]))
    if moves and moves not in lines:lines.append(moves)
   if not lines:continue
-  # For the multi-move lessons, both rooks must participate in the main line.
+  # Both rooks must participate in the main line.
   walk=b.copy();identities={sq:sq for sq in b.pieces(chess.ROOK,b.turn)};used=set()
   for san in lines[0]:
    m=walk.parse_san(san)
    if walk.turn==b.turn:
     identity=identities.pop(m.from_square);used.add(identity);identities[m.to_square]=identity
    walk.push(m)
-  if mate>1 and len(used)!=2:continue
+  if len(used)!=2:continue
   n=len(groups[group])+1
   exercise=dict(title=('Chiếu hết trong '+str(mate)+' nước')+' · Bài '+str(n),prompt='Phối hợp hai Xe để chiếu hết Vua đối phương trong '+str(mate)+' nước.',mode='interactive',outcome='checkmate',goal='checkmate',fen=b.fen(),moves=lines[0],alternativeLines=lines[1:],hints=['Một Xe hạn chế đường thoát, Xe còn lại chiếu Vua.','Giữ Xe ngoài tầm bắt của Vua và kiểm tra tất cả các ô thoát.'],solution='Hai Xe phối hợp khống chế đường thoát và chiếu hết. Nhánh mẫu: '+' · '.join(lines[0])+'.')
   groups[group].append(exercise);seen.add(key)
@@ -83,7 +84,7 @@ try:
  else:raise RuntimeError('Not enough validated positions')
 finally:engine.quit()
 categories=[]
-for k,title,description in [(1,'Chiếu hết một nước','Tìm nước chiếu hết: một Xe chiếu, Xe còn lại chặn đường thoát.'),(2,'Phối hợp hai nước','Phối hợp hai Xe để dồn Vua ra biên rồi chiếu hết trong hai nước.'),(3,'Chiếu bậc thang','Hai Xe lần lượt thu hẹp vùng di chuyển của Vua. Tính trước ba đến bốn nước, chú ý tránh để Vua bắt Xe.')]:
+for k,title,description in [(2,'Phối hợp hai nước','Phối hợp hai Xe để dồn Vua ra biên rồi chiếu hết trong hai nước.'),(3,'Chiếu bậc thang','Hai Xe lần lượt thu hẹp vùng di chuyển của Vua. Tính trước ba đến bốn nước, chú ý tránh để Vua bắt Xe.')]:
  categories.append(dict(id='two-rook-mate-'+str(k),title=title,description=description,exercises=groups[k]))
 publish(categories)
 (ROOT/'scripts/fixtures/two-rook-mate/validation.json').write_text(json.dumps(audit,ensure_ascii=False,indent=2)+'\n')

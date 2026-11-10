@@ -28,7 +28,7 @@ export function drawPracticeChoices(
   );
 }
 
-/** The Draw page always exposes Beginner and the five reviewed levels. */
+/** Show all levels with their actual counts, including empty levels. */
 export function drawPracticeLevelChoices(category: DrawCategory) {
   return [
     {

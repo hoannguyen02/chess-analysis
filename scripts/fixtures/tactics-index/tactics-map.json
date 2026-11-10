@@ -76,13 +76,13 @@
     },
     {
       "id": "hangingPiece",
-      "label": "Quân treo",
+      "label": "Bắt quân không được bảo vệ",
       "kind": "tactic",
-      "dedicatedPage": null,
+      "dedicatedPage": "/hanging-piece",
       "lichessTheme": "hangingPiece",
       "detector": null,
-      "status": "not-built",
-      "levels": ["Beginner", "A", "B", "C*"]
+      "status": "available",
+      "levels": ["Beginner", "A", "B", "C*", "D*"]
     },
     {
       "id": "trappedPiece",
@@ -117,7 +117,7 @@
     },
     {
       "id": "clearance",
-      "label": "Giải phóng ô hoặc đường",
+      "label": "Giải phóng ô, hàng, cột, đường chéo",
       "kind": "tactic",
       "dedicatedPage": null,
       "lichessTheme": "clearance",
@@ -127,7 +127,7 @@
     },
     {
       "id": "interference",
-      "label": "Ngắt đường liên lạc",
+      "label": "Ngắt mối liên kết",
       "kind": "tactic",
       "dedicatedPage": null,
       "lichessTheme": "interference",
@@ -354,7 +354,7 @@
       "lichessTheme": "mateIn1",
       "detector": null,
       "status": "not-built",
-      "levels": ["Beginner", "A"]
+      "levels": ["Beginner", "A", "B"]
     },
     {
       "id": "mateIn2",
@@ -608,7 +608,7 @@
     },
     {
       "id": "perpetualCheck",
-      "label": "Chiếu vĩnh viễn",
+      "label": "Chiếu lặp lại để giữ hòa",
       "kind": "endgame",
       "dedicatedPage": "/perpetual-check",
       "lichessTheme": null,
@@ -1105,7 +1105,7 @@
     },
     {
       "id": "perpetualCheckTrap",
-      "label": "Bẫy chiếu vĩnh viễn",
+      "label": "Bẫy chiếu lặp lại để giữ hòa",
       "kind": "tactic",
       "dedicatedPage": null,
       "lichessTheme": null,

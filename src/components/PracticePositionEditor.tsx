@@ -1,8 +1,10 @@
-import { useEffect, useId, useMemo, useRef, useState } from 'react';
+import { useContext, useEffect, useId, useMemo, useRef, useState } from 'react';
 import Link from 'next/link';
-import { useRouter } from 'next/router';
 import { practiceAccessHeaders } from '@/lib/practice-access';
 import { practiceLevels, type PracticeLevel } from '@/lib/chess/draw-levels';
+import { practiceGoalLabels } from '@/lib/chess/practice-goals';
+import { practicePositionKey } from '@/lib/chess/practice-position-key';
+import { otherPracticeTopics } from '@/lib/chess/practice-position-conflicts';
 import {
   manualPositionKey,
   type ManualTactic,
@@ -18,6 +20,11 @@ import { previousDrawPosition } from '@/lib/chess/draw-trainer';
 import { previousMoveLabel } from '@/lib/chess/worksheet';
 import PracticeVariationRecorder from './PracticeVariationRecorder';
 import PracticePositionSetup from './PracticePositionSetup';
+import PracticeTopicSelect from './PracticeTopicSelect';
+import {
+  PracticeCatalogRefresh,
+  type PracticeSaveNotice,
+} from './PracticeSaveFeedback';
 import styles from '@/styles/SavedGames.module.css';
 
 type Props = {
@@ -33,7 +40,7 @@ type Props = {
   initialGoal?: ManualTactic['goal'];
   beginnerBaseFen?: string;
   beginnerOriginalFen?: string;
-  onSaved?: () => void;
+  onSaved: (notice: PracticeSaveNotice) => void;
 };
 type Theme = { id: string; label: string; href: string };
 export default function PracticePositionEditor({
@@ -50,8 +57,9 @@ export default function PracticePositionEditor({
   beginnerBaseFen,
   beginnerOriginalFen,
   onSaved,
-}: Props) {
-  const router = useRouter();
+  onCancel,
+}: Props & { onCancel?: () => void }) {
+  const refreshCatalog = useContext(PracticeCatalogRefresh);
   const [themes, setThemes] = useState<Theme[]>([]);
   const [entries, setEntries] = useState<ManualTactic[]>([]);
   const [topicOverrides, setTopicOverrides] = useState<Record<string, string>>(
@@ -222,6 +230,16 @@ export default function PracticePositionEditor({
           Number(insertionNumber) > insertionTargets.length)
       )
         throw new Error(`Chọn số bài từ 1 đến ${insertionTargets.length}.`);
+      const scope = (existing && topicOverrides[existing.id]) ||
+        themes.find((theme) => theme.id === themeId)?.href;
+      const samePosition = existing && existing.themeId === themeId &&
+        practicePositionKey(existing.fen) === practicePositionKey(editFen);
+      if (scope && !samePosition) {
+        const matches = await otherPracticeTopics(editFen, scope);
+        if (matches.length && !window.confirm(
+          `Thế cờ này đã có trong ${matches.join(', ')}. Bạn có muốn lưu thêm vào chủ đề này không?`
+        )) return;
+      }
       const res = await fetch('/api/manual-tactics', {
         method: 'POST',
         headers: {
@@ -278,11 +296,13 @@ export default function PracticePositionEditor({
         setDestination(data.href ?? '');
         throw new Error(data.error);
       }
-      setMessage('Đã thêm thế cờ vào bài tập.');
-      onSaved?.();
-      if (router.asPath.replace(/^\/(?:vi|en)(?=\/)/, '') === data.href)
-        router.reload();
-      else await router.push(data.href);
+      onSaved({
+        message: existing
+          ? 'Đã cập nhật bài tập.'
+          : 'Đã thêm thế cờ vào bài tập.',
+        href: data.href,
+      });
+      refreshCatalog();
     } catch (e) {
       setMessage((e as Error).message);
     } finally {
@@ -298,245 +318,256 @@ export default function PracticePositionEditor({
         if (!recording && !editingPosition) save();
       }}
     >
-      <p>
-        {level === 'Beginner'
-          ? 'Chỉnh sửa thế cờ hoặc ghi phương án nếu cần. Bạn có thể lưu bài Nhập môn chưa có lời giải.'
-          : 'Chọn chủ đề, cấp độ và ghi phương án trên bàn cờ. Lưu để thêm trực tiếp vào bài luyện tập.'}
-      </p>
-      <p className={styles.positionHeading}>
-        {precedingMove &&
-          `Sau ${precedingMove.fen.split(' ')[5]}${precedingMove.fen.split(' ')[1] === 'w' ? '.' : '…'} ${precedingMove.move} · `}
-        {editFen.split(' ')[1] === 'w' ? 'Trắng đi' : 'Đen đi'}
-      </p>
-      {precedingMove && (
+      <div className={styles.positionEditorFields}>
         <p>
-          {previousMoveLabel({ fen: editFen, previousMove: precedingMove })}
+          {level === 'Beginner'
+            ? 'Chỉnh sửa thế cờ hoặc ghi phương án nếu cần. Bạn có thể lưu bài Nhập môn chưa có lời giải.'
+            : 'Chọn chủ đề, cấp độ và ghi phương án trên bàn cờ. Lưu để thêm trực tiếp vào bài luyện tập.'}
         </p>
-      )}
-      {existing && topicOverrides[existing.id] ? (
-        <p>
-          Bài tập hiện thuộc{' '}
-          {themes.find((theme) => theme.href === topicOverrides[existing.id])
-            ?.label ?? 'chủ đề đã chọn'}{' '}
-          · {level}. Đổi chủ đề hoặc cấp độ trong “Quản lý bài tập”.
+        <p className={styles.positionHeading}>
+          {precedingMove &&
+            `Sau ${precedingMove.fen.split(' ')[5]}${precedingMove.fen.split(' ')[1] === 'w' ? '.' : '…'} ${precedingMove.move} · `}
+          {editFen.split(' ')[1] === 'w' ? 'Trắng đi' : 'Đen đi'}
         </p>
-      ) : !hideDestinationFields ? (
-        <div className={styles.positionFields}>
-          <label>
-            Chủ đề
-            <select
+        {precedingMove && (
+          <p>
+            {previousMoveLabel({ fen: editFen, previousMove: precedingMove })}
+          </p>
+        )}
+        {existing && topicOverrides[existing.id] ? (
+          <p>
+            Bài tập hiện thuộc{' '}
+            {themes.find((theme) => theme.href === topicOverrides[existing.id])
+              ?.label ?? 'chủ đề đã chọn'}{' '}
+            · {level}. Đổi chủ đề hoặc cấp độ trong “Quản lý bài tập”.
+          </p>
+        ) : !hideDestinationFields ? (
+          <div className={styles.positionFields}>
+            <PracticeTopicSelect
+              label="Chủ đề"
               required
+              clearable
               value={themeId}
+              options={themes.map(({ id, label, href }) => ({
+                value: id,
+                label,
+                scope: href,
+              }))}
               disabled={!writable || busy}
-              onChange={(e) => {
-                setThemeId(e.target.value);
+              onChange={(value) => {
+                setThemeId(value);
                 setMessage('');
                 setDestination('');
-                const old = matches.find((p) => p.themeId === e.target.value);
+                const old = matches.find((p) => p.themeId === value);
                 if (old) fill(old, levelOverrides);
               }}
-            >
-              <option value="">Chọn chủ đề</option>
-              {themes.map((t) => (
-                <option key={t.id} value={t.id}>
-                  {t.label}
-                </option>
-              ))}
-            </select>
-          </label>
-          <label>
-            Cấp độ
-            <select
-              required
-              value={level}
-              disabled={
-                !writable ||
-                busy ||
-                Boolean(existing && levelOverrides[existing.id])
-              }
-              onChange={(e) => setLevel(e.target.value as PracticeLevel | '')}
-            >
-              <option value="">Chọn cấp độ</option>
-              {practiceLevels.map((l) => (
-                <option key={l} value={l}>
-                  {l}
-                </option>
-              ))}
-            </select>
-          </label>
-        </div>
-      ) : null}
-      {existing &&
-        levelOverrides[existing.id] &&
-        !topicOverrides[existing.id] && (
-          <p>Đổi cấp độ trong “Quản lý bài tập” trên trang luyện tập.</p>
-        )}
-      {chooseInsertion && (
-        <div>
-          <div className={styles.insertionFields}>
+            />
             <label>
-              Vị trí chèn
+              Cấp độ
               <select
-                value={insertion}
-                disabled={!writable || busy}
-                onChange={(event) =>
-                  setInsertion(event.target.value as typeof insertion)
+                required
+                value={level}
+                disabled={
+                  !writable ||
+                  busy ||
+                  Boolean(existing && levelOverrides[existing.id])
                 }
+                onChange={(e) => setLevel(e.target.value as PracticeLevel | '')}
               >
-                <option value="first">Đầu danh sách</option>
-                <option value="last">Cuối danh sách</option>
-                <option value="before" disabled={!insertionTargets.length}>
-                  Trước bài số…
-                </option>
+                <option value="">Chọn cấp độ</option>
+                {practiceLevels.map((l) => (
+                  <option key={l} value={l}>
+                    {l}
+                  </option>
+                ))}
               </select>
             </label>
-            {insertion === 'before' && (
+          </div>
+        ) : null}
+        {existing &&
+          levelOverrides[existing.id] &&
+          !topicOverrides[existing.id] && (
+            <p>Đổi cấp độ trong “Quản lý bài tập” trên trang luyện tập.</p>
+          )}
+        {chooseInsertion && (
+          <div>
+            <div className={styles.insertionFields}>
               <label>
-                Số bài
-                <input
-                  type="number"
-                  min={1}
-                  max={insertionTargets.length}
-                  step={1}
-                  required
-                  value={insertionNumber}
+                Vị trí chèn
+                <select
+                  value={insertion}
                   disabled={!writable || busy}
-                  onChange={(event) => setInsertionNumber(event.target.value)}
-                />
+                  onChange={(event) =>
+                    setInsertion(event.target.value as typeof insertion)
+                  }
+                >
+                  <option value="first">Đầu danh sách</option>
+                  <option value="last">Cuối danh sách</option>
+                  <option value="before" disabled={!insertionTargets.length}>
+                    Trước bài số…
+                  </option>
+                </select>
               </label>
-            )}
-          </div>
-          <p className={styles.insertionHint}>
-            Hiện có {insertionTargets.length} bài Nhập môn.
-            {insertion === 'before' && ' Bài mới sẽ mang số bài đã chọn.'}
-          </p>
-        </div>
-      )}
-      <label>
-        Mục tiêu
-        <select
-          required
-          value={goal}
-          disabled={!writable || busy}
-          onChange={(e) => setGoal(e.target.value as ManualTactic['goal'])}
-        >
-          <option value="">Chọn mục tiêu</option>
-          <option value="material">Thắng vật chất</option>
-          <option value="checkmate">Chiếu hết</option>
-          <option value="win">Giành thế thắng</option>
-          <option value="draw">Hòa</option>
-        </select>
-      </label>
-      <section aria-label="Phương án đã ghi">
-        {level === 'Beginner' && (
-          <div className={styles.setupActions}>
-            <button
-              type="button"
-              disabled={!writable || busy}
-              onClick={() => setEditingPosition(true)}
-            >
-              Chỉnh sửa thế cờ
-            </button>
+              {insertion === 'before' && (
+                <label>
+                  Số bài
+                  <input
+                    type="number"
+                    min={1}
+                    max={insertionTargets.length}
+                    step={1}
+                    required
+                    value={insertionNumber}
+                    disabled={!writable || busy}
+                    onChange={(event) => setInsertionNumber(event.target.value)}
+                  />
+                </label>
+              )}
+            </div>
+            <p className={styles.insertionHint}>
+              Hiện có {insertionTargets.length} bài Nhập môn.
+              {insertion === 'before' && ' Bài mới sẽ mang số bài đã chọn.'}
+            </p>
           </div>
         )}
-        <p className={styles.positionHeading}>
-          Phương án ({level === 'Beginner' ? 'tùy chọn' : 'bắt buộc'})
-        </p>
-        <button
-          type="button"
-          disabled={!writable || busy}
-          onClick={() => {
-            setMessage('');
-            setRecording(true);
-          }}
-        >
-          {variations.length
-            ? 'Mở bàn cờ để sửa phương án'
-            : 'Ghi phương án trên bàn cờ'}
-        </button>
-        {!variations.length ? (
-          <p>
-            {level === 'Beginner'
-              ? 'Chưa có lời giải. Có thể ghi thêm sau khi lưu thế cờ.'
-              : 'Chưa ghi phương án. Đi cho cả hai bên trên bàn cờ rồi chọn OK.'}
-          </p>
-        ) : (
-          <ol className={styles.variationPreview}>
-            {variations.map((line, i) => (
-              <li key={i}>
-                <strong>
-                  {i === 0 ? 'Phương án chính' : `Phương án ${i + 1}`}
-                </strong>
-                <p>{formatPracticeVariation(editFen, line)}</p>
-              </li>
+        <label>
+          Mục tiêu
+          <select
+            required
+            value={goal}
+            disabled={!writable || busy}
+            onChange={(e) => setGoal(e.target.value as ManualTactic['goal'])}
+          >
+            <option value="">Chọn mục tiêu</option>
+            {Object.entries(practiceGoalLabels).map(([value, label]) => (
+              <option key={value} value={value}>
+                {label}
+              </option>
             ))}
-          </ol>
+          </select>
+        </label>
+        <section aria-label="Phương án đã ghi">
+          {level === 'Beginner' && (
+            <div className={styles.setupActions}>
+              <button
+                type="button"
+                disabled={!writable || busy}
+                onClick={() => setEditingPosition(true)}
+              >
+                Chỉnh sửa thế cờ
+              </button>
+            </div>
+          )}
+          <p className={styles.positionHeading}>
+            Phương án ({level === 'Beginner' ? 'tùy chọn' : 'bắt buộc'})
+          </p>
+          <button
+            type="button"
+            disabled={!writable || busy}
+            onClick={() => {
+              setMessage('');
+              setRecording(true);
+            }}
+          >
+            {variations.length
+              ? 'Mở bàn cờ để sửa phương án'
+              : 'Ghi phương án trên bàn cờ'}
+          </button>
+          {!variations.length ? (
+            <p>
+              {level === 'Beginner'
+                ? 'Chưa có lời giải. Có thể ghi thêm sau khi lưu thế cờ.'
+                : 'Chưa ghi phương án. Đi cho cả hai bên trên bàn cờ rồi chọn OK.'}
+            </p>
+          ) : (
+            <ol className={styles.variationPreview}>
+              {variations.map((line, i) => (
+                <li key={i}>
+                  <strong>
+                    {i === 0 ? 'Phương án chính' : `Phương án ${i + 1}`}
+                  </strong>
+                  <p>{formatPracticeVariation(editFen, line)}</p>
+                </li>
+              ))}
+            </ol>
+          )}
+        </section>
+        {editingPosition && level === 'Beginner' && (
+          <PracticePositionSetup
+            fen={editFen}
+            hasLines={variations.length > 0 || Boolean(solution)}
+            onClose={() => setEditingPosition(false)}
+            onConfirm={(nextFen) => {
+              if (nextFen !== editFen) {
+                setEditFen(nextFen);
+                setVariations([]);
+                setSolution('');
+              }
+              setEditingPosition(false);
+            }}
+          />
         )}
-      </section>
-      {editingPosition && level === 'Beginner' && (
-        <PracticePositionSetup
-          fen={editFen}
-          hasLines={variations.length > 0 || Boolean(solution)}
-          onClose={() => setEditingPosition(false)}
-          onConfirm={(nextFen) => {
-            if (nextFen !== editFen) {
-              setEditFen(nextFen);
-              setVariations([]);
-              setSolution('');
+        {recording && (
+          <PracticeVariationRecorder
+            fen={editFen}
+            lines={variations}
+            onClose={() => setRecording(false)}
+            onConfirm={(lines) => {
+              setVariations(lines);
+              setRecording(false);
+              setMessage('');
+            }}
+          />
+        )}
+        <label>
+          Tên thế cờ (tùy chọn)
+          <input
+            value={title}
+            maxLength={1000}
+            onChange={(e) => setTitle(e.target.value)}
+            disabled={!writable || busy}
+          />
+        </label>
+        <label>
+          Giải thích phương án (tùy chọn)
+          <textarea
+            value={solution}
+            maxLength={4000}
+            onChange={(e) => setSolution(e.target.value)}
+            disabled={!writable || busy}
+          />
+        </label>
+      </div>
+      <footer className={styles.positionEditorFooter}>
+        <div className={styles.positionEditorActions}>
+          {onCancel && (
+            <button type="button" onClick={onCancel}>
+              Hủy
+            </button>
+          )}
+          <button
+            type="submit"
+            disabled={
+              !writable ||
+              busy ||
+              !themeId ||
+              !level ||
+              !goal ||
+              (level !== 'Beginner' && !variations.length)
             }
-            setEditingPosition(false);
-          }}
-        />
-      )}
-      {recording && (
-        <PracticeVariationRecorder
-          fen={editFen}
-          lines={variations}
-          onClose={() => setRecording(false)}
-          onConfirm={(lines) => {
-            setVariations(lines);
-            setRecording(false);
-            setMessage('');
-          }}
-        />
-      )}
-      <label>
-        Tên thế cờ (tùy chọn)
-        <input
-          value={title}
-          maxLength={1000}
-          onChange={(e) => setTitle(e.target.value)}
-          disabled={!writable || busy}
-        />
-      </label>
-      <label>
-        Giải thích phương án (tùy chọn)
-        <textarea
-          value={solution}
-          maxLength={4000}
-          onChange={(e) => setSolution(e.target.value)}
-          disabled={!writable || busy}
-        />
-      </label>
-      <button
-        type="submit"
-        disabled={
-          !writable ||
-          busy ||
-          !themeId ||
-          !level ||
-          !goal ||
-          (level !== 'Beginner' && !variations.length)
-        }
-      >
-        {busy
-          ? 'Đang xử lý…'
-          : existing
-            ? 'Cập nhật bài tập'
-            : 'Thêm vào bài tập'}
-      </button>
-      <p role="status">{message}</p>
-      {destination && <Link href={destination}>Mở chủ đề đã có thế cờ →</Link>}
+          >
+            {busy
+              ? 'Đang xử lý…'
+              : existing
+                ? 'Cập nhật bài tập'
+                : 'Thêm vào bài tập'}
+          </button>
+        </div>
+        <p role="status">{message}</p>
+        {destination && (
+          <Link href={destination}>Mở chủ đề đã có thế cờ →</Link>
+        )}
+      </footer>
     </form>
   );
 }
@@ -544,6 +575,7 @@ export default function PracticePositionEditor({
 export function PracticePositionDialog({
   title,
   onClose,
+  onSaved,
   ...props
 }: Props & { title: string; onClose: () => void }) {
   const dialog = useRef<HTMLDialogElement>(null);
@@ -563,7 +595,7 @@ export function PracticePositionDialog({
   return (
     <dialog
       ref={dialog}
-      className={styles.managementDialog}
+      className={`${styles.managementDialog} ${styles.positionDialog}`}
       aria-labelledby={titleId}
       onKeyDown={(event) => event.stopPropagation()}
       onCancel={(event) => {
@@ -578,10 +610,14 @@ export function PracticePositionDialog({
           ✕
         </button>
       </header>
-      <PracticePositionEditor {...props} onSaved={onClose} />
-      <button type="button" onClick={onClose}>
-        Hủy
-      </button>
+      <PracticePositionEditor
+        {...props}
+        onSaved={(notice) => {
+          onClose();
+          onSaved(notice);
+        }}
+        onCancel={onClose}
+      />
     </dialog>
   );
 }
@@ -607,7 +643,13 @@ export function ManualPositionControl(props: Props) {
             onClose={() => setOpen(false)}
           />
         ) : (
-          <PracticePositionEditor {...props} />
+          <PracticePositionEditor
+            {...props}
+            onSaved={(notice) => {
+              setOpen(false);
+              props.onSaved(notice);
+            }}
+          />
         ))}
     </div>
   );

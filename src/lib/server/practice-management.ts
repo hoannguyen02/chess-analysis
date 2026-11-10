@@ -9,6 +9,7 @@ import path from 'node:path';
 import { Chess } from 'chess.js';
 import seed from './practice-adjustments.json';
 import { tacticsCatalog } from './tactics-catalog';
+import { inPracticeTeachingOrder } from '../chess/practice-topic-order';
 import {
   manualTopicPath,
   manualPositionKey,
@@ -32,7 +33,7 @@ import { drawThemeRoutePaths } from '../chess/draw-practice-view';
 
 export function practiceManagementTopics() {
   const seen = new Set<string>();
-  return tacticsCatalog.themes.flatMap((theme) => {
+  const topics = tacticsCatalog.themes.flatMap((theme) => {
     const scope = manualTopicPath(theme);
     if (seen.has(scope)) return [];
     seen.add(scope);
@@ -46,6 +47,7 @@ export function practiceManagementTopics() {
       },
     ];
   });
+  return inPracticeTeachingOrder(topics, (topic) => topic.scope);
 }
 
 const file = path.join(

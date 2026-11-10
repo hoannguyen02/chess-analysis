@@ -77,6 +77,8 @@ def early_gate(record, require_provenance=True):
         flags.append('level-C-star-depth-needs-review')
     if record['level'] == 'D' and (not record.get('sacrifices') or own <= 3):
         flags.append('advanced-sacrifice-evidence-needed')
+    if record['level'] in ('E', 'E*'):
+        flags.append('unsupported-discovery-level')
     for ply, san in enumerate(record['moves']):
         before = board.copy()
         move = board.parse_san(san)

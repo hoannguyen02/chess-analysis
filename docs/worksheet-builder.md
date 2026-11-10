@@ -8,26 +8,43 @@ no separate hard-coded worksheet topic list.
 
 To add a printable topic, set `worksheetEndpoint` on its existing entry in
 `src/lib/server/private-hub.ts`. The endpoint must require practice access and
-return `{ categories: DrawCategory[] }`. The builder uses the entry's title,
-order and route ID, and loads protected sources to calculate level availability. Current
+return `{ categories: DrawCategory[] }`. The builder uses the entry's title
+and route ID, and loads protected sources to calculate level availability. Current
 entries include tactics, checkmates, simplification and draw practice. Schedules,
 saved games, external Lichess links and the London course have no compatible
 exercise endpoint and are not listed. An empty registry shows no selectable
 sections and prevents export. Renaming the private hub URL needs no builder change.
 
-Choose levels once using the shared checkboxes, then order topics and set the
-quantity per available selected level. Each chapter topic can be selected once:
-Add section chooses the first unused eligible topic, and topic dropdowns omit
-other rows' topics. Removing or changing a row releases its old topic. Mixed
+Choose levels once using the shared checkboxes, then select topics and set the
+quantity per available selected level. Type a topic name with or without
+Vietnamese accents to filter the chapter or review topic list. The pickers
+and default chapter order use the shared sequence in
+`src/lib/chess/practice-topic-order.ts`. It starts
+with spotting undefended pieces and answering threats. Mate in one and
+elementary patterns develop recognition of escape squares. Forks, pins,
+unpinning and skewers introduce direct tactical decisions. Removing the
+defender and discovered attacks then introduce preparation. Mate in two and
+one-rook technique follow the introductory mating patterns and direct tactics.
+Use level selection to control the calculation demands within each chapter.
+Place new topics where the learner has already practised their prerequisites.
+Unranked topics appear after ranked ones in library order.
+
+Each chapter topic can be selected once. Add section chooses the first unused
+eligible topic, and dropdowns omit other rows' topics. Removing or changing a
+row releases its old topic. The chapter arrows switch the current draft to a
+custom order. Further topic changes keep their chapter slots and new sections
+are appended. Both PDFs and their contents follow the order shown. Mixed
 review can revisit preceding chapter topics at multiple levels; each topic-level
 pair can appear once per block. Adding review rows prefers an unused available
 pair from preceding topics. These rules apply to fresh and reused positions.
+In mixed review, the exercise book omits the motif label so the learner must
+recognize the idea from the board. The answer book identifies the topic.
 
 Levels are Beginner, A, B,
 C, C\*, D; availability is calculated from the current published exercises.
 Beginner uses the existing boolean flag, never the level A fallback. Missing
 levels remain visible. Each section starts a fresh page; the final page may
-have fewer than six positions. Selection follows library order and skips
+have fewer than six positions. Each topic uses its source's position order and skips
 positions already used elsewhere in the packet (FEN including side, castling,
 and en-passant rights). There is no fixed position-count cap; the selected pools and duplicate checks
 determine availability. Exports over 120 positions show a non-blocking time/
@@ -42,15 +59,17 @@ No PDF service or server-side browser is required.
 ## Approved layout
 
 Name/date fields and solving instructions appear only on the first worksheet page.
-Topic and level remain on every page.
+The title, topic and level share a header row when they fit at readable sizes.
 
-A4 portrait, two columns by three rows; 194-point (~68 mm) boards. Side to move
-is taken from the starting FEN and the solving side faces the bottom. The
-previous move is displayed only when supplied and its replay reaches the exact
-starting FEN. Standard notation accompanies Vietnamese piece/move explanations.
-Per user approval, objectives and tactic/level labels are omitted from each
-position; topic and level remain in the page header. One unlabeled dotted
-answer line appears below each board. Cburnett pieces replace Unicode glyphs. Dark squares use pure-black 0.3-point
+A4 portrait, two columns by three rows with boards up to 194 points (~68 mm).
+Side to move comes from the starting FEN and the solving side faces the bottom.
+The previous move is displayed when supplied and its replay reaches the exact
+starting FEN. The compact caption puts the Vietnamese move description before
+the algebraic notation and shares the prompt row when it fits. Longer captions
+wrap, and both boards in a row align below the longer caption. Two unlabeled
+dotted answer lines sit below each board, 16 points (~5.6 mm) apart. Boards
+scale uniformly on a page when longer headers need more space. Cburnett pieces
+replace Unicode glyphs. Dark squares use pure-black 0.3-point
 diagonal vector hatching at 2.6-point offsets, inset 0.35 points inside each
 square. Light squares remain white; no pale gray fill is required. The pattern
 is drawn before the opaque piece artwork, in either board orientation.
@@ -77,13 +96,34 @@ the source of truth. Interactive trainer/alternative-mate code is unchanged.
 Browser checks: authorized entry, empty Beginner level, reorder, downloads,
 stale-download invalidation, mobile overflow, and unauthenticated API denial.
 
+## Local drafts and version history
+
+The builder autosaves its working settings in the current browser, including
+incomplete selections and committed dialog changes. Use “Lưu phiên bản” to
+keep a named snapshot. Opening a saved version preserves distinct current work
+as a checkpoint. The version printed on the PDF is independent of this history.
+
+Each successful PDF generation records the numbered positions in exercise-page
+order, with their FENs and fingerprints of printable content. Reopening an
+export restores its settings and checks the current selection before generating
+another PDF. A changed selection requires an explicit choice to proceed. The
+history stores references and settings. Keep downloaded PDFs for exact reprints.
+
+“Xuất bản sao JSON” includes the working draft, named versions and export
+records. “Nhập bản sao JSON” adds them to the version history and leaves the
+current working draft open. Browser profiles and site origins have separate
+storage. The JSON backup can be used to move drafts between them.
+
 ## Configurable footer
 
 The builder exposes name, telephone, and address fields, prefilled with LIMA
 Chess contact details. Blank fields are omitted. Editing these fields clears
-previous PDF links. The same contact footer appears on every worksheet and
-answer page, with page numbering reserved at the right; long text scales to
-fit the contact area. Values belong to the current builder session.
+previous PDF links. Standalone worksheets and their answers include the full
+contact footer. Books use a short name and phone line, with the page number on
+the outer edge for duplex printing. The final page includes the shared document
+information and full contact details. Enable “Hiện địa chỉ trên mỗi trang” to
+repeat the address in both book footers. Values belong to the current builder
+session.
 
 ## Watermark
 
@@ -183,8 +223,10 @@ recommended before printing a full run.
 book gets its own contents immediately after its cover. The exercise book lists
 the included introduction, notation guide, chapter sections, review blocks and
 closing. The answer book lists the corresponding chapter/review solutions.
-Chapter rows show the level and exercise-number range, so reviews and repeated
-topic names remain distinguishable. Continuation pages stay under one entry.
+Chapter rows show the exercise-number range. In books with multiple levels,
+chapter rows also show the level to distinguish repeated topic names. A
+single-level book shows its level on the cover. Continuation pages stay under
+one entry.
 
 Contents reserve as many pages as needed, wrap long topic names, and bind each
 row to the actual rendered destination. Printed numbers therefore include
@@ -229,8 +271,8 @@ they are not print certification. Review a physical print before a large run.
 ## Level guide and continuing practice
 
 The introduction includes an optional level guide in the exact
-Beginner, A, B, C, C*, D order. The closing uses a practical self-review sheet. Descriptions follow AGENTS.md, including the
-sacrifice distinction between C and C* and solver-move counting for D. The
+Beginner, A, B, C, C*, D, D*, E, E* order. The closing uses a practical self-review sheet. Descriptions follow AGENTS.md, including the
+non-sacrificial C* (2–3 solver moves), D* (4–5) and E* (6+), and sacrificial C, D (4–5) and E (6+). The
 current book's levels are derived from its actual selected exercises, including
 review metadata. The guide does not assert that every topic has all levels.
 
@@ -284,7 +326,7 @@ page retain their monochrome treatment.
 ## Shared multi-level selection
 
 The builder has one checkbox group above the topic rows, in the shared order
-Beginner, A, B, C, C*, D. No level is selected initially; the first eligible topic is added only after a level is selected. It loads registered
+Beginner, A, B, C, C*, D, D*, E, E*. No level is selected initially; the first eligible topic is added only after a level is selected. It loads registered
 protected exercise sources with at most four requests in flight, using the
 existing access headers. Counts use `levelExercises`, including its playable-move,
 recognition-mode and duplicate-position exclusions. No public count endpoint is
@@ -298,7 +340,7 @@ with fewer than six positions are omitted from that topic. Topics already used
 in another row remain excluded. A retained topic that no longer matches the level
 selection stays visible as an invalid selection, blocks export and can be replaced
 or deleted; changing a level never silently deletes a configured topic. Empty
-level selection blocks export and all six level controls remain available.
+level selection blocks export and all nine level controls remain available.
 
 Each topic row expands to its available selected levels in the shared order.
 `Số thế / cấp độ` applies separately to each available level. New rows default to
@@ -346,7 +388,7 @@ The introduction table has a concise explanation of sacrifices and solver-move c
 
 The reference covers files/ranks/squares, English piece letters with Cburnett
 artwork, pawn notation, ordinary moves, captures, check/checkmate, both castlings,
-promotion (including capture-promotion), en passant and file/rank/full-square
+promotion (including captures, check, and checkmate), en passant and file/rank/full-square
 disambiguation. All displayed move explanations come from composed example FENs
 via the shared legal-replay helper; these are notation illustrations, not new
 practice exercises. `scripts/test-worksheets.cjs` verifies each example's exact
@@ -372,7 +414,7 @@ been laid out. The reference uses the same one-based page numbering as the PDF
 footer; it is not a fixed "page 3" string. Disabling notation or omitting the
 introduction removes the callout completely.
 
-All six levels remain in order. Levels actually included in the selected chapters
+All nine levels remain in order. Levels actually included in the selected chapters
 or reviews have bold labels, using the bundled DejaVu Sans Bold font under the
 existing DejaVu license. Introduction descriptions use 10-point text and taller
 rows. Verification covered the normal page-3 target, a long introduction whose
@@ -381,7 +423,7 @@ page bounds in these specimens.
 
 
 The introduction is ordered as: LIMA branding and book title, level system with
-all six levels, practice instructions, then the notation callout at the bottom.
+all nine levels, practice instructions, then the notation callout at the bottom.
 This keeps the reading/recording instructions next to the following notation
 page. Custom introduction text follows the level table and can continue across
 pages with its own heading; the notation page reference is resolved afterward.

@@ -106,33 +106,24 @@ export function practiceManagementHref(
   return `${scope}${scope.includes('?') ? '&' : '?'}level=${encodeURIComponent(level)}${id ? `&exercise=${id}` : ''}`;
 }
 
-/** Resume with the neighbour in the currently filtered list after removal. */
-export function practiceRemovalHref(
-  href: string,
-  exercises: DrawExercise[],
-  index: number,
-  context: {
-    categoryId: string;
-    level: PracticeLevel | 'all';
-    beginnerKind?: 'king' | 'queen';
-  }
-) {
-  const [base, hash] = href.split('#', 2);
-  const [pathname, query] = base.split('?', 2);
-  const params = new URLSearchParams(query);
-  const neighbour = exercises[index + 1] ?? exercises[index - 1];
-  const id = neighbour?.manualId ?? neighbour?.management?.id;
-  if (id) params.set('exercise', id);
-  else params.delete('exercise');
-  params.set('level', context.level);
-  params.set('category', context.categoryId);
-  params.set(
-    'reviewIndex',
-    String(Math.max(0, Math.min(index, exercises.length - 2)))
+export function practiceReviewKey(exercise: DrawExercise) {
+  return (
+    exercise.manualId ?? exercise.management?.id ?? exercise.url ?? exercise.fen
   );
-  if (context.beginnerKind) params.set('beginnerKind', context.beginnerKind);
-  else params.delete('beginnerKind');
-  return `${pathname}?${params}${hash ? `#${hash}` : ''}`;
+}
+
+/** Retain the exercise when possible, otherwise use its slot in the filtered list. */
+export function refreshedPracticeReviewIndex(
+  exercises: DrawExercise[],
+  key: string | undefined,
+  index: number
+) {
+  const match = exercises.findIndex(
+    (exercise) => practiceReviewKey(exercise) === key
+  );
+  return match >= 0
+    ? match
+    : Math.max(0, Math.min(index, exercises.length - 1));
 }
 
 export function practiceReviewIndex(

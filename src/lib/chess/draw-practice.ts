@@ -1,6 +1,7 @@
 import type { GamePlayer } from './game-player-title';
 import type { GameReference } from './draw-game-viewer';
 import type { DrawDifficulty } from './draw-levels';
+import type { PracticeGoal } from './practice-goals';
 import type { PracticeExerciseManagement } from './practice-management';
 import { drawLevelRatings } from './draw-level-ratings';
 import { drawSelection } from './draw-selection';
@@ -24,6 +25,7 @@ export type DrawExercise = {
    */
   tacticPly?: number;
   removingDefender?: { target: string; minimumGain: number };
+  hangingPiece?: { target: string; minimumGain: number };
   promotionMaterial?: { minimumGain: number; retainPromotedPiece?: boolean };
   promotionGain?: {
     minimumGain: number;
@@ -47,7 +49,7 @@ export type DrawExercise = {
   mode?: 'interactive' | 'study' | 'analysis' | 'recognition';
   forcedReplies?: boolean;
   discoveryKind?: 'check' | 'attack';
-  goal?: 'win' | 'draw' | 'checkmate' | 'material';
+  goal?: PracticeGoal;
   title: string;
   prompt: string;
   fen: string;
@@ -61,6 +63,8 @@ export type DrawExercise = {
     | 'simplification'
     | 'discovery'
     | 'fork'
+    | 'hanging-piece'
+    | 'defensive-move'
     | 'pin'
     | 'removing-defender'
     | 'skewer'
@@ -88,9 +92,9 @@ export type DrawCategory = {
 export const drawResearchCategories: DrawCategory[] = [
   {
     id: 'perpetual-check',
-    title: 'Chiếu vĩnh viễn',
+    title: 'Chiếu lặp lại để giữ hòa',
     description:
-      'Tìm cách chuẩn bị và duy trì chuỗi chiếu để cứu hòa. Cùng thế cờ xuất hiện 3 lần thì được yêu cầu hòa; 5 lần thì tự động hòa. Phải cùng bên đến lượt và cùng quyền đi quân. Các nước đáp là diễn biến đã chơi, không nhất thiết bị bắt buộc.',
+      'Duy trì chuỗi chiếu để đưa ván cờ về cùng một thế cờ. Khi thế cờ xuất hiện lần thứ ba, bên đến lượt có thể yêu cầu hòa. Đến lần thứ năm, ván cờ tự động hòa. Hai thế cờ được tính là giống nhau khi quân cờ ở cùng vị trí, cùng bên đến lượt và có cùng các nước đi hợp lệ. Phương án minh họa một chuỗi nước đáp.',
     exercises: expandedDrawExercises['perpetual-check'],
   },
   {

@@ -8,7 +8,24 @@ LICHESS_KEYS = MAP.with_name('lichess-themes.json')
 REQUIRED = {'id', 'label', 'kind', 'dedicatedPage', 'lichessTheme', 'detector', 'status'}
 OPTIONAL = {'englishLabel', 'description', 'priority', 'levels', 'parentId', 'relatedThemes', 'aliases'}
 KINDS = {'tactic', 'checkmate', 'endgame', 'special-move'}
-PRACTICE_LEVELS = ('Beginner', 'A', 'B', 'C', 'C*', 'D')
+PRACTICE_LEVELS = ('Beginner', 'A', 'B', 'C', 'C*', 'D', 'D*', 'E', 'E*')
+STARRED_SOLVER_MOVES = {'C*': (2, 3), 'D*': (4, 5)}
+REVIEWED_LEVEL_MOVE_LIMITS = {
+    **STARRED_SOLVER_MOVES, 'D': (4, 5), 'E': (6, None), 'E*': (6, None),
+}
+
+
+def matches_current_level(record):
+    """Check the structural grade before tactical and editorial review."""
+    level = record['level']
+    limits = REVIEWED_LEVEL_MOVE_LIMITS.get(level)
+    if limits is None:
+        return True
+    minimum, maximum = limits
+    count = (len(record.get('moves', ())) + 1) // 2
+    return (count >= minimum and (maximum is None or count <= maximum)
+            and record.get('solverMoves', count) == count
+            and bool(record.get('sacrifices')) == (not level.endswith('*')))
 
 
 def validate_catalog(data):

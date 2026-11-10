@@ -1,0 +1,32 @@
+.field {
+  display: grid;
+  gap: 5px;
+  min-width: 0;
+  font-size: 0.9rem;
+}
+
+.field .control {
+  min-height: 44px;
+  border-radius: 9px;
+  border-color: #b9cbaa;
+}
+
+.field .control:focus-within {
+  border-color: #597c3e;
+  box-shadow: 0 0 0 2px #597c3e;
+}
+
+.field .option {
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+}
+
+.field .select input {
+  min-height: 0;
+  border: 0;
+  padding: 0;
+  background: transparent;
+  box-shadow: none;
+  outline: none;
+}

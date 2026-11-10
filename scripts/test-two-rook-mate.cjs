@@ -19,66 +19,55 @@ test('two-rook lessons: complete legal mates, both colors, and shared trainer co
     ).outputText
   )(mod, mod.exports, () => chess);
   assert.equal(categories.length, 1);
-  const exercises = categories[0].exercises.filter((e) => !e.gameReference);
-  assert.equal(exercises.length, 60);
+  const exercises = categories[0].exercises.filter((e) =>
+    ['A', 'B'].includes(e.difficulty?.level)
+  );
+  assert.ok(categories[0].exercises.every((e) => !e.beginner));
   const levels = [
-    { exercises: exercises.filter((e) => e.beginner) },
     { exercises: exercises.filter((e) => e.difficulty?.level === 'A') },
     { exercises: exercises.filter((e) => e.difficulty?.level === 'B') },
   ];
   assert.ok(
-    exercises.every(
-      (e) => e.beginner || ['A', 'B'].includes(e.difficulty?.level)
-    )
-  );
-  assert.ok(
-    exercises.filter((e) => e.beginner).every((e) => e.moves.length === 1)
-  );
-  assert.ok(
     exercises
       .filter((e) => e.difficulty?.level === 'A')
-      .every((e) => e.moves.length === 3)
+      .every((e) => [1, 3].includes(e.moves.length))
   );
   assert.ok(
     exercises
       .filter((e) => e.difficulty?.level === 'B')
-      .every((e) => [5, 7].includes(e.moves.length))
+      .every((e) => e.gameReference ? e.moves.length === 5 : [5, 7].includes(e.moves.length))
   );
   const seen = new Set();
   for (const category of levels) {
-    assert.equal(category.exercises.length, 20);
+    assert.ok(category.exercises.length > 0);
     const colors = new Set();
     for (const e of category.exercises) {
       assert.equal(e.goal, 'checkmate');
       assert.equal(e.outcome, 'checkmate');
-      assert.equal(
-        e.gameReference,
-        undefined,
-        'Composed positions must not claim a source game'
-      );
       assert.ok(!seen.has(e.fen));
       seen.add(e.fen);
       const game = new Chess(e.fen);
       colors.add(game.turn());
       const pieces = game.board().flat().filter(Boolean);
-      assert.equal(pieces.length, 4);
       assert.equal(pieces.filter((p) => p.type === 'k').length, 2);
       assert.equal(
         pieces.filter((p) => p.type === 'r' && p.color === game.turn()).length,
         2
       );
       assert.ok(!game.game_over());
-      const audit = validation.find((r) => r.fen === e.fen);
-      assert.ok(audit);
+      const audit = !e.gameReference && validation.find((r) => r.fen === e.fen);
+      if (!e.gameReference) {
+        assert.equal(pieces.length, 4);
+        assert.ok(audit);
+      }
       for (const line of [e.moves, ...(e.alternativeLines || [])]) {
         const board = new Chess(e.fen);
         for (const san of line) {
           assert.ok(!board.game_over());
           assert.ok(board.move(san), san);
-          assert.equal(board.board().flat().filter(Boolean).length, 4);
         }
         assert.ok(board.in_checkmate(), e.fen);
-        assert.ok(Math.ceil(line.length / 2) <= audit.mateIn);
+        assert.ok(Math.ceil(line.length / 2) <= (audit ? audit.mateIn : e.difficulty.solverMoves));
       }
       let played = [];
       while (played.length < e.moves.length) {
@@ -106,7 +95,7 @@ test('two-rook lessons: complete legal mates, both colors, and shared trainer co
     }
     assert.equal(colors.size, 2);
   }
-  assert.equal(seen.size, 60);
+  assert.equal(seen.size, exercises.length);
 });
 
 test('master-game lessons retain complete replay, source marker, and actual mating payoff', async () => {

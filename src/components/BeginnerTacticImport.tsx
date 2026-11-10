@@ -1,5 +1,11 @@
-import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
-import { useRouter } from 'next/router';
+import {
+  useCallback,
+  useContext,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+} from 'react';
 import { Chess } from 'chess.js';
 import { practiceAccessHeaders } from '@/lib/practice-access';
 import { usePracticeBoardTools } from '@/hooks/usePracticeBoardTools';
@@ -8,10 +14,16 @@ import {
   type ManualTactic,
 } from '@/lib/chess/manual-tactics';
 import type { DrawExercise } from '@/lib/chess/draw-practice';
+import { beginnerSourceLevels } from '@/lib/chess/draw-levels';
+import { practiceGoalLabels } from '@/lib/chess/practice-goals';
 import { previousDrawPosition } from '@/lib/chess/draw-trainer';
 import PracticeBoard, { PreviousMoveControl } from './PracticeBoard';
 import { PracticePositionDialog } from './PracticePositionEditor';
 import PracticePositionSetup from './PracticePositionSetup';
+import PracticeSaveFeedback, {
+  PracticeCatalogRefresh,
+  type PracticeSaveNotice,
+} from './PracticeSaveFeedback';
 import styles from '@/styles/SavedGames.module.css';
 
 type Candidate = {
@@ -42,6 +54,18 @@ type Bank = {
   };
 };
 const initialFen = new Chess().fen();
+const sourceLevelList = beginnerSourceLevels.join(', ');
+// Topics listed in docs/beginner-one-move-game-requirements.md.
+const oneMoveGameScopes = new Set([
+  '/tactic-positions?theme=defensiveMove',
+  '/hanging-piece',
+  '/fork',
+  '/pin',
+  '/skewer',
+  '/tactic-positions?theme=mateIn1',
+  '/back-rank-mate',
+  '/two-rook-mate',
+]);
 
 export default function BeginnerTacticImport({
   writable,
@@ -52,8 +76,9 @@ export default function BeginnerTacticImport({
   scope: string;
   exercises: DrawExercise[];
 }) {
-  const router = useRouter();
-  const [open, setOpen] = useState(false);
+  const refreshCatalog = useContext(PracticeCatalogRefresh);
+  const [step, setStep] = useState<'confirm' | 'import' | null>(null);
+  const open = step === 'import';
   const [blank, setBlank] = useState(false);
   const [bank, setBank] = useState<Bank | null>(null);
   const [selected, setSelected] = useState<Set<string>>(new Set());
@@ -64,8 +89,10 @@ export default function BeginnerTacticImport({
   const [showPrevious, setShowPrevious] = useState(false);
   const [busy, setBusy] = useState(false);
   const [message, setMessage] = useState('');
+  const [notice, setNotice] = useState<PracticeSaveNotice>();
   const [width, setWidth] = useState(400);
   const dialog = useRef<HTMLDialogElement>(null);
+  const importTrigger = useRef<HTMLButtonElement>(null);
   const boardBox = useRef<HTMLDivElement>(null);
   const current = bank?.candidates[index];
   const currentPly = current
@@ -107,6 +134,7 @@ export default function BeginnerTacticImport({
   async function openBlank() {
     setBusy(true);
     setMessage('');
+    setNotice(undefined);
     try {
       setBank(await fetchBank());
       setBlank(true);
@@ -117,13 +145,21 @@ export default function BeginnerTacticImport({
     }
   }
   useEffect(() => {
-    if (!open) return;
-    let live = true;
+    if (!step) return;
     const element = dialog.current!;
-    const trigger = document.activeElement as HTMLElement | null;
+    const trigger = importTrigger.current;
     const overflow = document.body.style.overflow;
     document.body.style.overflow = 'hidden';
     element.showModal();
+    return () => {
+      element.close();
+      document.body.style.overflow = overflow;
+      trigger?.focus({ preventScroll: true });
+    };
+  }, [step]);
+  useEffect(() => {
+    if (!open) return;
+    let live = true;
     setBusy(true);
     setMessage('');
     setEdited({});
@@ -152,9 +188,6 @@ export default function BeginnerTacticImport({
       });
     return () => {
       live = false;
-      element.close();
-      document.body.style.overflow = overflow;
-      trigger?.focus({ preventScroll: true });
     };
   }, [open, fetchBank]);
   useEffect(() => {
@@ -167,9 +200,10 @@ export default function BeginnerTacticImport({
   }, [open, bank]);
 
   async function addSelected() {
-    if (!bank) return;
+    if (!bank || busy || !selected.size) return;
     setBusy(true);
     setMessage('');
+    setNotice(undefined);
     let count = 0,
       skipped = 0,
       destination = '';
@@ -217,19 +251,18 @@ export default function BeginnerTacticImport({
           return next;
         });
       }
-      setMessage(
-        `Đã thêm ${count} thế cờ${skipped ? `; bỏ qua ${skipped} thế đã có` : ''}.`
-      );
-      if (destination) {
-        setOpen(false);
-        if (router.asPath === destination) router.reload();
-        else await router.push(destination);
-      }
+      setNotice({
+        message: `Đã thêm ${count} thế cờ.${skipped ? ` Bỏ qua ${skipped} thế đã có.` : ''}`,
+        href: destination,
+      });
+      setMessage('');
+      setStep(null);
     } catch (error) {
-      setMessage(
-        `${count ? `Đã giữ ${count} thế cờ vừa thêm. ` : ''}${(error as Error).message}`
-      );
+      if (count)
+        setNotice({ message: `Đã thêm ${count} thế cờ.`, href: destination });
+      setMessage((error as Error).message);
     } finally {
+      if (count || skipped) refreshCatalog();
       setBusy(false);
     }
   }
@@ -239,10 +272,16 @@ export default function BeginnerTacticImport({
       <div className={styles.setupActions}>
         <button
           type="button"
+          ref={importTrigger}
           disabled={!writable || busy}
-          onClick={() => setOpen(true)}
+          aria-expanded={step !== null}
+          aria-haspopup="dialog"
+          onClick={() => {
+            setNotice(undefined);
+            setStep(oneMoveGameScopes.has(scope) ? 'confirm' : 'import');
+          }}
         >
-          Lấy thế cờ từ B, C, C*, D
+          Lấy thế cờ từ {sourceLevelList}
         </button>
         <button
           type="button"
@@ -255,10 +294,12 @@ export default function BeginnerTacticImport({
         </button>
       </div>
       {!open && message && <p role="status">{message}</p>}
+      {!open && <PracticeSaveFeedback notice={notice} />}
       {blank && bank && (
         <PracticePositionDialog
           title="Thêm thế cờ Nhập môn"
           onClose={() => setBlank(false)}
+          onSaved={setNotice}
           fen={initialFen}
           hideDestinationFields
           insertionTargets={exercises.map(manualInsertionKey)}
@@ -269,6 +310,39 @@ export default function BeginnerTacticImport({
           }}
         />
       )}
+      {step === 'confirm' && (
+        <dialog
+          ref={dialog}
+          className={`${styles.variationDialog} ${styles.beginnerImportConfirmation}`}
+          aria-labelledby="beginner-tactic-confirm-title"
+          aria-describedby="beginner-tactic-confirm-description"
+          onKeyDown={(event) => event.stopPropagation()}
+          onCancel={(event) => {
+            event.preventDefault();
+            event.stopPropagation();
+            setStep(null);
+          }}
+        >
+          <header className={styles.variationHeader}>
+            <h3 id="beginner-tactic-confirm-title">
+              Kiểm tra thế cờ trước khi thêm
+            </h3>
+          </header>
+          <p id="beginner-tactic-confirm-description">
+            Khi chọn bài Nhập môn một nước, hãy dùng thế cờ gốc từ ván đấu với
+            tối đa 10 quân (tính cả Vua và Tốt) và đúng một nước đi hợp lệ đạt
+            mục tiêu.
+          </p>
+          <div className={styles.setupActions}>
+            <button type="button" onClick={() => setStep(null)}>
+              Hủy
+            </button>
+            <button type="button" onClick={() => setStep('import')}>
+              Tiếp tục
+            </button>
+          </div>
+        </dialog>
+      )}
       {open && (
         <dialog
           ref={dialog}
@@ -278,18 +352,18 @@ export default function BeginnerTacticImport({
           onCancel={(e) => {
             e.preventDefault();
             e.stopPropagation();
-            if (!busy) setOpen(false);
+            if (!busy) setStep(null);
           }}
         >
           <header className={styles.variationHeader}>
             <h3 id="beginner-tactic-import-title">
-              Thêm thế cờ Nhập môn từ B, C, C*, D
+              Thêm thế cờ Nhập môn từ {sourceLevelList}
             </h3>
             <button
               type="button"
               aria-label="Đóng danh sách thế cờ"
               disabled={busy}
-              onClick={() => setOpen(false)}
+              onClick={() => setStep(null)}
             >
               ✕
             </button>
@@ -332,13 +406,7 @@ export default function BeginnerTacticImport({
                 <p>
                   {displayedFen.split(' ')[1] === 'w' ? 'Trắng đi' : 'Đen đi'} ·
                   Mục tiêu:{' '}
-                  {currentEntry &&
-                    {
-                      material: 'Thắng vật chất',
-                      checkmate: 'Chiếu hết',
-                      win: 'Giành thế thắng',
-                      draw: 'Hòa',
-                    }[currentEntry.goal]}
+                  {currentEntry && practiceGoalLabels[currentEntry.goal]}
                 </p>
                 {previous && (
                   <PreviousMoveControl
@@ -508,6 +576,7 @@ export default function BeginnerTacticImport({
             </p>
           )}
           <p role="status">{message}</p>
+          <PracticeSaveFeedback notice={notice} />
           {setup && current && (
             <PracticePositionSetup
               fen={displayedFen}

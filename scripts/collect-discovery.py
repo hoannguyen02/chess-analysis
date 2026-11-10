@@ -49,7 +49,7 @@ def inspect(start,pv,levels=None):
      equal=capturer.piece_type==victim.piece_type and offered is not None and material(boards[j+2],color)>=material(boards[offered],color)-75
      if offered is not None and not equal and material(boards[j+1],color)<material(boards[offered],color)-75:sacrifices.append(dict(ply=offered,piece=victim.symbol().upper()))
     own=(end+2)//2
-    level=('A' if own<=2 else 'B' if own==3 else 'C*') if not sacrifices else ('C' if own<=3 and len(sacrifices)==1 else 'D' if own>3 else None)
+    level=('A' if own<=2 else 'B' if own==3 else 'C*') if not sacrifices else ('E' if own>=6 else 'D' if own>=4 else 'C' if len(sacrifices)==1 else None)
     if not level or (not sacrifices and own>5) or (levels is not None and level not in levels):continue
     return dict(moves=sans[:end+1],level=level,solverMoves=own,sacrifices=sacrifices,discoveryPly=i,payoffPly=end,sliderSquare=chess.square_name(slider),targetSquare=chess.square_name(target),moverSquare=chess.square_name(move.to_square),kind=kind,goal='mate' if mate else 'material',gain=gain,localGain=local,settlement=sans[end+1:end+3])
  return None

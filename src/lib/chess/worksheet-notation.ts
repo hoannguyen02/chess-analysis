@@ -18,6 +18,8 @@ export const notationExamples = {
   queenside: { fen: '4k3/8/8/8/8/8/8/R3K3 w Q - 0 1', move: 'O-O-O' },
   promotion: { fen: '8/k3P3/8/8/8/8/8/7K w - - 0 1', move: 'e8=Q' },
   capturePromotion: { fen: '3r4/k3P3/8/8/8/8/8/7K w - - 0 1', move: 'exd8=N' },
+  promotionCheck: { fen: 'k7/4P3/8/8/8/8/8/7K w - - 0 1', move: 'e8=Q+' },
+  promotionMate: { fen: 'k7/4P3/1K6/8/8/8/8/8 w - - 0 1', move: 'e8=Q#' },
   enPassant: { fen: '4k3/8/8/3pP3/8/8/8/4K3 w - d6 0 2', move: 'exd6' },
   file: { fen: '6k1/8/8/8/8/5N2/8/1N4K1 w - - 0 1', move: 'Nbd2' },
   rank: { fen: '6k1/8/8/8/8/4R3/8/4R1K1 w - - 0 1', move: 'R1e2' },
@@ -72,8 +74,8 @@ export const notationGuideRows: {
   {
     title: 'Phong cấp',
     english: 'Pawn promotion',
-    rule: 'Ghi = và quân mới: Q, R, B hoặc N. Một số tài liệu bỏ dấu =, như e8Q.',
-    examples: ['promotion', 'capturePromotion'],
+    rule: 'Ghi = và quân mới: Q, R, B hoặc N. Dấu + hoặc # đứng sau quân mới. Một số tài liệu bỏ dấu =, như e8Q.',
+    examples: ['promotion', 'capturePromotion', 'promotionCheck', 'promotionMate'],
   },
   {
     title: 'Bắt Tốt qua đường',

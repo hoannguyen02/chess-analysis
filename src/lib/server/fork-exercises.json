@@ -156,6 +156,51 @@
     "solution": "Mã ở e5 tấn công đồng thời các mục tiêu ở c4, d7. Sau nước đáp, bắt quân để thu lợi về vật chất."
   },
   {
+    "title": "Nihal,Sarin — Hafiz,Arif Abdul",
+    "prompt": "Tạo đòn tấn công đôi rồi bắt quân để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "fork",
+    "fen": "2r5/2kn2p1/p4pP1/4p3/NQ6/1P6/PB3q1r/K2R4 w - - 1 31",
+    "moves": [
+      "Qd6+",
+      "Kb7",
+      "Qxd7+"
+    ],
+    "alternativeLines": [
+      [
+        "Qd6+",
+        "Kd8",
+        "Qxd7#"
+      ]
+    ],
+    "previousMove": {
+      "fen": "3r4/2kn2p1/p4pP1/4p3/NQ6/1P6/PB3q1r/K2R4 b - - 0 30",
+      "move": "Rc8"
+    },
+    "source": "https://theweekinchess.com/zips/twic1663g.zip",
+    "gameReference": {
+      "id": "2ab7133b89879fa6",
+      "kind": "game",
+      "ply": 60,
+      "branch": 0,
+      "collection": "fork"
+    },
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
+      "solverMoves": 2,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Tìm nước chiếu của Hậu đồng thời tấn công Mã d7.",
+      "So sánh việc bắt Mã bằng Hậu với việc dùng Xe bắt ngay."
+    ],
+    "solution": "Qd6+ chiếu Vua c7, đồng thời tấn công Mã d7. Sau Kb7, Qxd7+ thu Mã và tiếp tục chiếu; Xe d1 bảo vệ Hậu. Nếu Đen chọn Kd8 thì Qxd7# chiếu hết.",
+    "goal": "material",
+    "tacticPly": 0
+  },
+  {
     "title": "Deacon, Frederic — Anderssen, Adolf",
     "prompt": "Tạo đòn tấn công đôi rồi bắt quân để thắng vật chất.",
     "mode": "interactive",
@@ -416,6 +461,71 @@
     "solution": "Xe ở g2 tấn công đồng thời các mục tiêu ở g1, b2, h2. Sau nước đáp, bắt quân để thu lợi về vật chất."
   },
   {
+    "title": "Junior,Domingos — Ali,Alqaisi",
+    "prompt": "Tạo đòn tấn công đôi rồi bắt quân để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "fork",
+    "fen": "5r2/5k2/7p/3p1p1P/1pr1n3/3R1N2/1PP3P1/R5K1 w - - 4 41",
+    "moves": [
+      "Ne5+",
+      "Ke6",
+      "Nxc4"
+    ],
+    "alternativeLines": [
+      [
+        "Ne5+",
+        "Kg8",
+        "Nxc4"
+      ],
+      [
+        "Ne5+",
+        "Ke8",
+        "Nxc4"
+      ],
+      [
+        "Ne5+",
+        "Kg7",
+        "Nxc4"
+      ],
+      [
+        "Ne5+",
+        "Ke7",
+        "Nxc4"
+      ],
+      [
+        "Ne5+",
+        "Kf6",
+        "Nxc4"
+      ]
+    ],
+    "previousMove": {
+      "fen": "5r2/8/4k2p/3p1p1P/1pr1n3/3R1N2/1PP3P1/R5K1 b - - 3 40",
+      "move": "Kf7"
+    },
+    "source": "https://theweekinchess.com/zips/twic1664g.zip",
+    "gameReference": {
+      "id": "62138295fa82f959",
+      "kind": "game",
+      "ply": 80,
+      "branch": 0,
+      "collection": "fork"
+    },
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
+      "solverMoves": 2,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Tìm nước chiếu của Mã đồng thời tấn công một Xe.",
+      "Sau khi bắt Xe c4, hãy tính cả khả năng Tốt d5 bắt lại Mã."
+    ],
+    "solution": "Ne5+ đưa Mã từ f3 đến e5, chiếu Vua f7 và tấn công Xe c4. Sau Ke6, Nxc4 thắng chất: đổi Mã lấy Xe. Đen có thể bắt lại bằng dxc4, nhưng Trắng vẫn thu lợi về vật chất.",
+    "goal": "material",
+    "tacticPly": 0
+  },
+  {
     "title": "Ivanchuk,V — Adams,Mi",
     "prompt": "Tạo đòn tấn công đôi rồi bắt quân để thắng vật chất.",
     "mode": "interactive",
@@ -523,6 +633,61 @@
       "Tìm hai mục tiêu mà cùng một quân có thể tấn công. Kiểm tra nước đáp và khả năng bắt lại."
     ],
     "solution": "Hậu ở b3 tấn công đồng thời các mục tiêu ở c3, b4. Sau nước đáp, bắt quân để thu lợi về vật chất."
+  },
+  {
+    "title": "Arab,A — Bouzidi,Ahmed",
+    "prompt": "Tạo đòn tấn công đôi rồi bắt quân để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "fork",
+    "fen": "4k3/1Q6/P3pq1p/2bp1ppn/2p5/5PP1/1P2PNKP/8 w - - 1 43",
+    "moves": [
+      "Qb5+",
+      "Kf7",
+      "Qxc5"
+    ],
+    "alternativeLines": [
+      [
+        "Qb5+",
+        "Kf8",
+        "Qxc5+"
+      ],
+      [
+        "Qb5+",
+        "Kd8",
+        "Qxc5"
+      ],
+      [
+        "Qb5+",
+        "Ke7",
+        "Qxc5+"
+      ]
+    ],
+    "previousMove": {
+      "fen": "4k3/1Q6/P3pq1p/3p1ppn/1bp5/5PP1/1P2PNKP/8 b - - 0 42",
+      "move": "Bc5"
+    },
+    "source": "https://theweekinchess.com/zips/twic1664g.zip",
+    "gameReference": {
+      "id": "657d5d5f31ec9b43",
+      "kind": "game",
+      "ply": 84,
+      "branch": 0,
+      "collection": "fork"
+    },
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
+      "solverMoves": 2,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Tìm nước chiếu của Hậu đồng thời tấn công Tượng c5.",
+      "So sánh các ô chiếu trên cột b và cột c; đừng vội bắt Tốt d5."
+    ],
+    "solution": "Qb5+ chiếu Vua e8, đồng thời tấn công Tượng c5. Sau Kf7, Qxc5 thu Tượng; các nước Vua khác cũng không cứu được Tượng. Đây là phương án minh họa. Trong ván gốc, Trắng chọn Qc6+ rồi Qxc5.",
+    "goal": "material",
+    "tacticPly": 0
   },
   {
     "title": "Frilles,R — Shabalov,A",
@@ -824,6 +989,61 @@
       "Tìm hai mục tiêu mà cùng một quân có thể tấn công. Kiểm tra nước đáp và khả năng bắt lại."
     ],
     "solution": "Mã ở c1 tấn công đồng thời các mục tiêu ở a2, d3. Sau nước đáp, bắt quân để thu lợi về vật chất."
+  },
+  {
+    "title": "Kandil,Adham — Blackman,J",
+    "prompt": "Tạo đòn tấn công đôi rồi bắt quân để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "fork",
+    "fen": "8/5p1k/4p1pp/p3P3/3q2P1/7P/1Q6/1K3R2 b - - 0 44",
+    "moves": [
+      "Qd3+",
+      "Ka2",
+      "Qxf1"
+    ],
+    "alternativeLines": [
+      [
+        "Qd3+",
+        "Kc1",
+        "Qxf1+"
+      ],
+      [
+        "Qd3+",
+        "Ka1",
+        "Qxf1+"
+      ],
+      [
+        "Qd3+",
+        "Qc2",
+        "Qxf1+"
+      ]
+    ],
+    "previousMove": {
+      "fen": "8/5p1k/4p1pp/p3P3/3q2P1/7P/1r2Q3/1K3R2 w - - 0 44",
+      "move": "Qxb2"
+    },
+    "source": "https://theweekinchess.com/zips/twic1663g.zip",
+    "gameReference": {
+      "id": "ca58ef45b3eaa150",
+      "kind": "game",
+      "ply": 87,
+      "branch": 0,
+      "collection": "fork"
+    },
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
+      "solverMoves": 2,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Hậu đen đang bị tấn công. Tìm nước vừa tránh đổi Hậu, vừa chiếu và tấn công Xe.",
+      "Kiểm tra cả khả năng Trắng dùng Hậu che chiếu."
+    ],
+    "solution": "Qd3+ đưa Hậu ra khỏi đường tấn công của Hậu trắng ở b2, đồng thời chiếu Vua b1 và tấn công Xe f1. Sau Ka2, Qxf1 thu Xe. Nếu Trắng che chiếu bằng Qc2, Qxf1+ vẫn thắng Xe.",
+    "goal": "material",
+    "tacticPly": 0
   },
   {
     "title": "Karpov, Anatoly — Kasparov, Gary",
@@ -1346,6 +1566,47 @@
     "solution": "Mã ở h6 tấn công đồng thời các mục tiêu ở f7, g8. Sau nước đáp, bắt quân để thu lợi về vật chất."
   },
   {
+    "title": "Baninga,Prince Mika Bosco — Morazo,J",
+    "prompt": "Tạo đòn tấn công đôi rồi bắt quân để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "fork",
+    "fen": "2r3k1/p4pp1/3bq3/1p1p2P1/1P1P4/P3BQ2/5P2/2R3K1 b - - 0 31",
+    "moves": [
+      "Rxc1+",
+      "Bxc1",
+      "Qe1+",
+      "Kg2",
+      "Qxc1"
+    ],
+    "alternativeLines": [],
+    "previousMove": {
+      "fen": "2r3k1/p4pp1/3bq3/1p1p2P1/1P1P4/P3BQ2/5P2/2r1R1K1 w - - 0 31",
+      "move": "Rxc1"
+    },
+    "source": "https://theweekinchess.com/zips/twic1663g.zip",
+    "gameReference": {
+      "id": "34164659aebe3932",
+      "kind": "game",
+      "ply": 61,
+      "branch": 0,
+      "collection": "fork"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
+      "solverMoves": 3,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Nếu Trắng dùng Tượng bắt lại Xe ở c1, Hậu đen có thể khai thác vị trí mới của Tượng như thế nào?",
+      "Sau Bxc1, Hậu có nước chiếu nào đồng thời tấn công Tượng trên hàng ngang thứ nhất?"
+    ],
+    "solution": "...Rxc1+ đổi Xe và đưa Tượng trắng đến c1 sau Bxc1. Khi đó ...Qe1+ đồng thời chiếu Vua g1 và tấn công Tượng c1. Sau Kg2, ...Qxc1 thu Tượng. Trắng có thể bắt Tốt d5, nhưng Đen vẫn hơn vật chất so với thế cờ ban đầu. Phương án này đã được chơi trong ván đấu.",
+    "goal": "material",
+    "tacticPly": 2
+  },
+  {
     "title": "Rosanes, Jacob — Anderssen, Adolf",
     "prompt": "Tạo đòn tấn công đôi rồi bắt quân để thắng vật chất.",
     "mode": "interactive",
@@ -1390,6 +1651,70 @@
       "Tìm hai mục tiêu mà cùng một quân có thể tấn công. Kiểm tra nước đáp và khả năng bắt lại."
     ],
     "solution": "Mã ở g6 tấn công đồng thời các mục tiêu ở f8, h8. Sau nước đáp, bắt quân để thu lợi về vật chất."
+  },
+  {
+    "title": "Nguyen,Quoc Hy — Aikhoje,O",
+    "prompt": "Tạo đòn tấn công đôi rồi bắt quân để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "fork",
+    "fen": "1k3nr1/r1R3b1/p2p4/B1pPp1PB/2p3P1/8/PP3R1P/2K5 w - - 5 33",
+    "moves": [
+      "Rff7",
+      "Rxc7",
+      "Bxc7+",
+      "Kc8",
+      "Bxd6"
+    ],
+    "alternativeLines": [
+      [
+        "Rff7",
+        "Rxc7",
+        "Bxc7+",
+        "Ka8",
+        "Bxd6"
+      ],
+      [
+        "Rff7",
+        "Rxc7",
+        "Bxc7+",
+        "Kb7",
+        "Bxd6+"
+      ],
+      [
+        "Rff7",
+        "Rxc7",
+        "Bxc7+",
+        "Ka7",
+        "Bxd6+"
+      ]
+    ],
+    "previousMove": {
+      "fen": "rk3nr1/2R3b1/p2p4/B1pPp1PB/2p3P1/8/PP3R1P/2K5 b - - 4 32",
+      "move": "Ra7"
+    },
+    "source": "https://theweekinchess.com/zips/twic1663g.zip",
+    "gameReference": {
+      "id": "3c26fbc4d79d9939",
+      "kind": "game",
+      "ply": 64,
+      "branch": 0,
+      "collection": "fork"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
+      "solverMoves": 3,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Tìm cách tăng sức ép của hai Xe trên hàng 7.",
+      "Nếu Xe đen bắt Xe c7, quân nào bắt lại được và đồng thời chiếu Vua?",
+      "Sau khi Vua đen tránh chiếu, xem Tượng c7 còn tấn công quân nào."
+    ],
+    "solution": "Rff7 đưa Xe thứ hai lên hàng 7, tăng sức ép lên Tượng g7. Trong ván đấu, Đen đáp Rxc7 và Trắng bắt lại bằng Bxc7+. Tượng c7 vừa chiếu Vua b8, vừa tấn công Tốt d6. Sau Kc8, Bxd6 thắng một Tốt.",
+    "goal": "material",
+    "tacticPly": 2
   },
   {
     "title": "Kasparov, Gary — Beliavsky, Alexander G",
@@ -1476,6 +1801,98 @@
     "solution": "Xe ở d3 tấn công đồng thời các mục tiêu ở c3, e3. Sau nước đáp, bắt quân để thu lợi về vật chất."
   },
   {
+    "title": "Terry,R — Erigaisi,Arjun",
+    "prompt": "Tạo đòn tấn công đôi rồi bắt quân để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "fork",
+    "fen": "6k1/3N1pp1/3Qp2p/8/2pP2P1/2q5/r4PP1/4R1K1 w - - 0 38",
+    "moves": [
+      "Qb8+",
+      "Kh7",
+      "Nf8+",
+      "Kg8",
+      "Nxe6+"
+    ],
+    "alternativeLines": [
+      [
+        "Qb8+",
+        "Kh7",
+        "Nf8+",
+        "Kh8",
+        "Nxe6+"
+      ]
+    ],
+    "previousMove": {
+      "fen": "6k1/3N1pp1/3Qp2p/8/2pP2P1/2Pq4/r4PP1/4R1K1 b - - 0 37",
+      "move": "Qxc3"
+    },
+    "source": "https://theweekinchess.com/zips/twic1666g.zip",
+    "gameReference": {
+      "id": "51b6258a7c5e5a7b",
+      "kind": "game",
+      "ply": 74,
+      "branch": 0,
+      "collection": "fork"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
+      "solverMoves": 3,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Hãy dùng Hậu chiếu dọc hàng 8 để buộc Vua đen xuống h7.",
+      "Khi Vua ở h7, Mã có thể chiếu và tấn công Tốt e6 từ ô nào?",
+      "Xét cả g8 và h8. Khi Mã rời f8 để bắt Tốt, đường chiếu nào được mở lại?"
+    ],
+    "solution": "Qb8+ chiếu dọc hàng 8 và buộc Vua đen xuống h7. Nf8+ tấn công đôi Vua h7 và Tốt e6. Dù Vua về g8 như trong ván đấu hay về h8, Nxe6+ đều thắng một Tốt. Khi Mã rời f8 để bắt Tốt, Hậu b8 lại chiếu dọc hàng 8, buộc Đen tiếp tục đỡ chiếu.",
+    "goal": "material",
+    "tacticPly": 2
+  },
+  {
+    "title": "Erdogmus,Yagiz Kaan — Bogner,S",
+    "prompt": "Tạo đòn tấn công đôi rồi bắt quân để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "fork",
+    "fen": "7R/3q1p2/3Q1nkp/1p4r1/4P1p1/6N1/5PK1/8 w - - 6 54",
+    "moves": [
+      "Qf8",
+      "Nh7",
+      "Qg8+",
+      "Kf6",
+      "Qxh7"
+    ],
+    "alternativeLines": [],
+    "previousMove": {
+      "fen": "7R/1q3p2/3Q1nkp/1p4r1/4P1p1/6N1/5PK1/8 b - - 5 53",
+      "move": "Qd7"
+    },
+    "source": "https://theweekinchess.com/zips/twic1663g.zip",
+    "gameReference": {
+      "id": "522e2bf0bee473d7",
+      "kind": "game",
+      "ply": 106,
+      "branch": 0,
+      "collection": "fork"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
+      "solverMoves": 3,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Xe h8 đang bảo vệ ô nào trên cột h? Hậu có thể tận dụng điều đó ra sao?",
+      "Nếu ...Nh7 chặn đường Xe, hãy tìm nước chiếu đồng thời tấn công Mã.",
+      "Tính nước đỡ chiếu sau Qg8+ rồi kiểm tra khả năng bắt lại khi Hậu bắt Mã h7."
+    ],
+    "solution": "Qf8 dọa bắt Tốt h6 chiếu hết nhờ Xe h8 bảo vệ ô h6. Trong ván đấu, ...Nh7 chặn đường Xe. Trắng chơi Qg8+, vừa chiếu Vua g6 vừa tấn công Mã h7. Sau ...Kf6, Qxh7 bắt Mã mà Đen không thể bắt lại ngay.",
+    "goal": "material",
+    "tacticPly": 2
+  },
+  {
     "title": "Bird, Henry Edward — Blackburne, Joseph Henry",
     "prompt": "Tạo đòn tấn công đôi rồi bắt quân để thắng vật chất.",
     "mode": "interactive",
@@ -1543,6 +1960,384 @@
     "solution": "Mã ở b6 tấn công đồng thời các mục tiêu ở a4, d7. Sau nước đáp, bắt quân để thu lợi về vật chất."
   },
   {
+    "title": "Sorensen,Hampus — Elena,Eduardo",
+    "prompt": "Tạo đòn tấn công đôi rồi bắt quân để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "fork",
+    "fen": "r1br2k1/ppp1qppp/2n1pn2/4N3/2pP1P2/2N3P1/PP1QP1BP/R3K2R w KQ - 1 11",
+    "moves": [
+      "Bxc6",
+      "bxc6",
+      "Nxc6",
+      "Qe8",
+      "Nxd8"
+    ],
+    "alternativeLines": [
+      [
+        "Bxc6",
+        "bxc6",
+        "Nxc6",
+        "Kh8",
+        "Nxd8"
+      ],
+      [
+        "Bxc6",
+        "bxc6",
+        "Nxc6",
+        "Kh8",
+        "Nxe7"
+      ],
+      [
+        "Bxc6",
+        "bxc6",
+        "Nxc6",
+        "Kf8",
+        "Nxd8"
+      ],
+      [
+        "Bxc6",
+        "bxc6",
+        "Nxc6",
+        "Kf8",
+        "Nxe7"
+      ],
+      [
+        "Bxc6",
+        "bxc6",
+        "Nxc6",
+        "Rf8",
+        "Nxe7+"
+      ],
+      [
+        "Bxc6",
+        "bxc6",
+        "Nxc6",
+        "Re8",
+        "Nxe7+"
+      ],
+      [
+        "Bxc6",
+        "bxc6",
+        "Nxc6",
+        "Rd7",
+        "Nxe7+"
+      ],
+      [
+        "Bxc6",
+        "bxc6",
+        "Nxc6",
+        "Rd6",
+        "Nxe7+"
+      ],
+      [
+        "Bxc6",
+        "bxc6",
+        "Nxc6",
+        "Rd5",
+        "Nxe7+"
+      ],
+      [
+        "Bxc6",
+        "bxc6",
+        "Nxc6",
+        "Rxd4",
+        "Nxe7+"
+      ],
+      [
+        "Bxc6",
+        "bxc6",
+        "Nxc6",
+        "Bd7",
+        "Nxd8"
+      ],
+      [
+        "Bxc6",
+        "bxc6",
+        "Nxc6",
+        "Bd7",
+        "Nxe7+"
+      ],
+      [
+        "Bxc6",
+        "bxc6",
+        "Nxc6",
+        "Bb7",
+        "Nxe7+"
+      ],
+      [
+        "Bxc6",
+        "bxc6",
+        "Nxc6",
+        "Ba6",
+        "Nxd8"
+      ],
+      [
+        "Bxc6",
+        "bxc6",
+        "Nxc6",
+        "Ba6",
+        "Nxe7+"
+      ],
+      [
+        "Bxc6",
+        "bxc6",
+        "Nxc6",
+        "Rb8",
+        "Nxd8"
+      ],
+      [
+        "Bxc6",
+        "bxc6",
+        "Nxc6",
+        "Rb8",
+        "Nxe7+"
+      ],
+      [
+        "Bxc6",
+        "bxc6",
+        "Nxc6",
+        "Qf8",
+        "Nxd8"
+      ],
+      [
+        "Bxc6",
+        "bxc6",
+        "Nxc6",
+        "Qd7",
+        "Nxd8"
+      ],
+      [
+        "Bxc6",
+        "bxc6",
+        "Nxc6",
+        "Qd6",
+        "Nxd8"
+      ],
+      [
+        "Bxc6",
+        "bxc6",
+        "Nxc6",
+        "Qc5",
+        "Nxd8"
+      ],
+      [
+        "Bxc6",
+        "bxc6",
+        "Nxc6",
+        "Qb4",
+        "Nxd8"
+      ],
+      [
+        "Bxc6",
+        "bxc6",
+        "Nxc6",
+        "Qa3",
+        "Nxd8"
+      ],
+      [
+        "Bxc6",
+        "bxc6",
+        "Nxc6",
+        "Ne8",
+        "Nxd8"
+      ],
+      [
+        "Bxc6",
+        "bxc6",
+        "Nxc6",
+        "Ne8",
+        "Nxe7+"
+      ],
+      [
+        "Bxc6",
+        "bxc6",
+        "Nxc6",
+        "Nd7",
+        "Nxd8"
+      ],
+      [
+        "Bxc6",
+        "bxc6",
+        "Nxc6",
+        "Nd7",
+        "Nxe7+"
+      ],
+      [
+        "Bxc6",
+        "bxc6",
+        "Nxc6",
+        "Nh5",
+        "Nxd8"
+      ],
+      [
+        "Bxc6",
+        "bxc6",
+        "Nxc6",
+        "Nh5",
+        "Nxe7+"
+      ],
+      [
+        "Bxc6",
+        "bxc6",
+        "Nxc6",
+        "Nd5",
+        "Nxd8"
+      ],
+      [
+        "Bxc6",
+        "bxc6",
+        "Nxc6",
+        "Nd5",
+        "Nxe7+"
+      ],
+      [
+        "Bxc6",
+        "bxc6",
+        "Nxc6",
+        "Ng4",
+        "Nxd8"
+      ],
+      [
+        "Bxc6",
+        "bxc6",
+        "Nxc6",
+        "Ng4",
+        "Nxe7+"
+      ],
+      [
+        "Bxc6",
+        "bxc6",
+        "Nxc6",
+        "Ne4",
+        "Nxe7+"
+      ],
+      [
+        "Bxc6",
+        "bxc6",
+        "Nxc6",
+        "h6",
+        "Nxd8"
+      ],
+      [
+        "Bxc6",
+        "bxc6",
+        "Nxc6",
+        "h6",
+        "Nxe7+"
+      ],
+      [
+        "Bxc6",
+        "bxc6",
+        "Nxc6",
+        "g6",
+        "Nxd8"
+      ],
+      [
+        "Bxc6",
+        "bxc6",
+        "Nxc6",
+        "g6",
+        "Nxe7+"
+      ],
+      [
+        "Bxc6",
+        "bxc6",
+        "Nxc6",
+        "a6",
+        "Nxd8"
+      ],
+      [
+        "Bxc6",
+        "bxc6",
+        "Nxc6",
+        "a6",
+        "Nxe7+"
+      ],
+      [
+        "Bxc6",
+        "bxc6",
+        "Nxc6",
+        "e5",
+        "Nxd8"
+      ],
+      [
+        "Bxc6",
+        "bxc6",
+        "Nxc6",
+        "e5",
+        "Nxe7+"
+      ],
+      [
+        "Bxc6",
+        "bxc6",
+        "Nxc6",
+        "h5",
+        "Nxd8"
+      ],
+      [
+        "Bxc6",
+        "bxc6",
+        "Nxc6",
+        "h5",
+        "Nxe7+"
+      ],
+      [
+        "Bxc6",
+        "bxc6",
+        "Nxc6",
+        "g5",
+        "Nxd8"
+      ],
+      [
+        "Bxc6",
+        "bxc6",
+        "Nxc6",
+        "g5",
+        "Nxe7+"
+      ],
+      [
+        "Bxc6",
+        "bxc6",
+        "Nxc6",
+        "a5",
+        "Nxd8"
+      ],
+      [
+        "Bxc6",
+        "bxc6",
+        "Nxc6",
+        "a5",
+        "Nxe7+"
+      ]
+    ],
+    "previousMove": {
+      "fen": "r1b2rk1/ppp1qppp/2n1pn2/4N3/2pP1P2/2N3P1/PP1QP1BP/R3K2R b KQ f3 0 10",
+      "move": "Rd8"
+    },
+    "source": "https://theweekinchess.com/zips/twic1663g.zip",
+    "gameReference": {
+      "id": "5e9a092d7ac5a531",
+      "kind": "game",
+      "ply": 20,
+      "branch": 0,
+      "collection": "fork"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
+      "solverMoves": 3,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Chưa vội dùng Mã bắt quân ở c6. Hãy đổi quân đang chiếm ô này trước.",
+      "Sau khi Tốt b7 bắt lại ở c6, Mã e5 có thể tạo hai mối đe dọa nào?"
+    ],
+    "solution": "Bxc6 đổi Tượng lấy Mã để dọn ô c6. Sau ...bxc6, Nxc6 tấn công đồng thời Hậu e7 và Xe d8. Trong phương án minh họa ...Qe8 Nxd8 Qxd8, Trắng đổi Mã lấy Xe và thu lợi vật chất. Đen đã chơi ...Qd6 trong ván đấu; phương án ...Qe8 là phân tích.",
+    "goal": "material",
+    "tacticPly": 2
+  },
+  {
     "title": "Rakhmanov,Ale — Shabalov,A",
     "prompt": "Tạo đòn tấn công đôi rồi bắt quân để thắng vật chất.",
     "mode": "interactive",
@@ -1587,6 +2382,70 @@
       "Tìm hai mục tiêu mà cùng một quân có thể tấn công. Kiểm tra nước đáp và khả năng bắt lại."
     ],
     "solution": "Mã ở c2 tấn công đồng thời các mục tiêu ở a1, e1. Sau nước đáp, bắt quân để thu lợi về vật chất."
+  },
+  {
+    "title": "Zaw,Ye Htut — Kandil,Adham",
+    "prompt": "Tạo đòn tấn công đôi rồi bắt quân để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "fork",
+    "fen": "5k2/1p3p1p/8/p4bP1/4p3/2P5/1PBr1PKP/2R5 b - - 1 29",
+    "moves": [
+      "e3",
+      "Bxf5",
+      "Rxf2+",
+      "Kg3",
+      "Rxf5"
+    ],
+    "alternativeLines": [
+      [
+        "e3",
+        "Bxf5",
+        "Rxf2+",
+        "Kh3",
+        "Rxf5"
+      ],
+      [
+        "e3",
+        "Bxf5",
+        "Rxf2+",
+        "Kh1",
+        "Rxf5"
+      ],
+      [
+        "e3",
+        "Bxf5",
+        "Rxf2+",
+        "Kg1",
+        "Rxf5"
+      ]
+    ],
+    "previousMove": {
+      "fen": "5k2/1p3p1p/8/p4bP1/4p3/2P5/1PBr1PKP/7R w - - 0 29",
+      "move": "Rc1"
+    },
+    "source": "https://theweekinchess.com/zips/twic1663g.zip",
+    "gameReference": {
+      "id": "6926d695db06ea62",
+      "kind": "game",
+      "ply": 57,
+      "branch": 0,
+      "collection": "fork"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
+      "solverMoves": 3,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Thử …Rxf2+ ngay. Vua trắng có bắt được Xe ở f2 không?",
+      "Tìm cách bảo vệ f2 bằng Tốt e. Vì sao Tốt trắng f2 không thể bắt sang e3?",
+      "Sau Bxf5, hãy dùng một nước chiếu để lấy Tốt trước khi bắt lại Tượng."
+    ],
+    "solution": "…e3 bảo vệ ô f2 và mở đường chéo của Tượng f5 đến c2. Tốt trắng f2 không thể bắt sang e3 vì sẽ để Xe d2 chiếu Vua. Sau Bxf5, …Rxf2+ là nước chiếu xen giữa, đồng thời tấn công Tượng f5. Trong ván đấu, Vua tránh chiếu bằng Kg3, rồi …Rxf5 bắt lại Tượng. Hai bên đổi Tượng và Đen thu thêm Tốt f2.",
+    "goal": "material",
+    "tacticPly": 2
   },
   {
     "title": "Cheng,X — Shabalov,A",
@@ -1656,6 +2515,139 @@
     "solution": "Xe ở f2 tấn công đồng thời các mục tiêu ở b2, h2. Sau nước đáp, bắt quân để thu lợi về vật chất."
   },
   {
+    "title": "Ivic,Velimir — Trost,Edvin",
+    "prompt": "Tạo đòn tấn công đôi rồi bắt quân để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "fork",
+    "fen": "6k1/4bpp1/4p2p/1pB1P3/5P2/1P2P2P/2Q3PK/4q3 b - - 2 32",
+    "moves": [
+      "Bh4",
+      "g4",
+      "Qg3+",
+      "Kh1",
+      "Qxh3+"
+    ],
+    "alternativeLines": [],
+    "previousMove": {
+      "fen": "6k1/4bpp1/4p2p/1pB1P3/5P2/1P2P2P/2Q3P1/4q1K1 w - - 1 32",
+      "move": "Kh2"
+    },
+    "source": "https://theweekinchess.com/zips/twic1663g.zip",
+    "gameReference": {
+      "id": "72cd744406b68caf",
+      "kind": "game",
+      "ply": 63,
+      "branch": 0,
+      "collection": "fork"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
+      "solverMoves": 3,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Hậu muốn vào g3, ô đang nằm cạnh Vua trắng. Quân nào có thể bảo vệ ô đó?",
+      "Sau g4, hãy tìm nước chiếu của Hậu đồng thời tấn công một Tốt bên cánh Vua.",
+      "Khi Vua lui về h1, bắt Tốt nào để vẫn tiếp tục chiếu?"
+    ],
+    "solution": "Bh4 dùng Tượng bảo vệ ô g3 cho Hậu. Trong ván đấu, Trắng đi g4. Sau Qg3+, Vua h2 chỉ có thể lui về h1. Hậu vừa chiếu Vua vừa tấn công Tốt h3, nên Đen thắng một Tốt bằng Qxh3+. Nếu Trắng đi g3 ngay sau Bh4, Hậu có thể bắt Tốt bằng Qxg3+ vì Tượng h4 bảo vệ ô g3.",
+    "goal": "material",
+    "tacticPly": 2
+  },
+  {
+    "title": "Supi,L — Khusenkhojaev,Mustafokhuja",
+    "prompt": "Tạo đòn tấn công đôi rồi bắt quân để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "fork",
+    "fen": "4rr2/3n1N2/2p2Pk1/pp4pR/3Pp3/P1P3P1/BP2K3/8 w - - 1 49",
+    "moves": [
+      "Rh6+",
+      "Kf5",
+      "Nd6+",
+      "Kg4",
+      "Nxe8"
+    ],
+    "alternativeLines": [],
+    "previousMove": {
+      "fen": "4rr2/3n1N1k/2p2P2/pp4pR/3Pp3/P1P3P1/BP2K3/8 b - - 0 48",
+      "move": "Kg6"
+    },
+    "source": "https://theweekinchess.com/zips/twic1664g.zip",
+    "gameReference": {
+      "id": "738d8a295b87ffa3",
+      "kind": "game",
+      "ply": 96,
+      "branch": 0,
+      "collection": "fork"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
+      "solverMoves": 3,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Tìm nước chiếu bằng Xe để đưa Vua đen vào tầm tấn công của Mã.",
+      "Sau khi Vua đến f5, ô nào giúp Mã đồng thời chiếu Vua và tấn công Xe?"
+    ],
+    "solution": "Rh6+ đưa Vua đen đến f5. Tiếp theo, Nd6+ đồng thời chiếu Vua f5 và tấn công Xe e8. Sau ...Kg4 Nxe8 Rxe8, Trắng đổi Mã lấy Xe, thu lợi vật chất; Tốt f6 vẫn tạo sức ép phong cấp. Phương án này đã xuất hiện trong ván đấu.",
+    "goal": "material",
+    "tacticPly": 2
+  },
+  {
+    "title": "Wong,Ho Cheung — Doumassi,Kodjovi Folly Corazon",
+    "prompt": "Tạo đòn tấn công đôi rồi bắt quân để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "fork",
+    "fen": "1k3r2/ppR4R/2pnp2p/3p4/3P1p1p/2P5/PP3P1P/2K5 w - - 2 31",
+    "moves": [
+      "Rcd7",
+      "Nf5",
+      "Rxb7+",
+      "Ka8",
+      "Rxa7+"
+    ],
+    "alternativeLines": [
+      [
+        "Rcd7",
+        "Nf5",
+        "Rxb7+",
+        "Kc8",
+        "Rxa7"
+      ]
+    ],
+    "previousMove": {
+      "fen": "2k2r2/ppR4R/2pnp2p/3p4/3P1p1p/2P5/PP3P1P/2K5 b - - 1 30",
+      "move": "Kb8"
+    },
+    "source": "https://theweekinchess.com/zips/twic1663g.zip",
+    "gameReference": {
+      "id": "7d4f16253d545f09",
+      "kind": "game",
+      "ply": 60,
+      "branch": 0,
+      "collection": "fork"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
+      "solverMoves": 3,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Mã d6 đang bảo vệ Tốt nào cạnh Vua đen?",
+      "Tìm cách tấn công Mã d6 bằng một Xe và giữ Xe còn lại trên hàng 7.",
+      "Sau Nf5, tìm nước bắt Tốt có chiếu. Xe vừa chiếu còn tấn công Tốt nào?"
+    ],
+    "solution": "Rcd7 tấn công Mã d6 đang bảo vệ Tốt b7. Trong ván đấu, sau Nf5, Trắng chơi Rxb7+, vừa chiếu Vua vừa tấn công Tốt a7. Xe h7 bảo vệ Xe b7. Sau Ka8, Rxa7+ thắng Tốt thứ hai. Nếu Đen chọn Nc8 thay cho Nf5, Trắng vẫn bắt được Tốt b7 bằng Rxb7+. Sau Ka8, Mã c8 còn giữ a7, nên Trắng có thể chơi Rhg7 để tiếp tục bảo vệ Xe b7 và giữ lợi thế một Tốt.",
+    "goal": "material",
+    "tacticPly": 2
+  },
+  {
     "title": "Falkbeer, Ernst Karl — Anderssen, Adolf",
     "prompt": "Tạo đòn tấn công đôi rồi bắt quân để thắng vật chất.",
     "mode": "interactive",
@@ -1692,6 +2684,370 @@
       "Tìm hai mục tiêu mà cùng một quân có thể tấn công. Kiểm tra nước đáp và khả năng bắt lại."
     ],
     "solution": "Xe ở g8 tấn công đồng thời các mục tiêu ở g6, a8, h8. Sau nước đáp, bắt quân để thu lợi về vật chất."
+  },
+  {
+    "title": "Righi,E — Soliz Gabarrete,Luis Fernando",
+    "prompt": "Tạo đòn tấn công đôi rồi bắt quân để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "fork",
+    "fen": "3q1rk1/5ppp/b1p1p3/3n4/Q2P4/4P3/3NBPPP/4R1K1 b - - 0 21",
+    "moves": [
+      "Bxe2",
+      "Rxe2",
+      "Nc3",
+      "Qc4",
+      "Nxe2+"
+    ],
+    "alternativeLines": [
+      [
+        "Bxe2",
+        "Rxe2",
+        "Nc3",
+        "Qa8",
+        "Nxe2+"
+      ],
+      [
+        "Bxe2",
+        "Rxe2",
+        "Nc3",
+        "Qa7",
+        "Nxe2+"
+      ],
+      [
+        "Bxe2",
+        "Rxe2",
+        "Nc3",
+        "Qxc6",
+        "Nxe2+"
+      ],
+      [
+        "Bxe2",
+        "Rxe2",
+        "Nc3",
+        "Qa6",
+        "Nxe2+"
+      ],
+      [
+        "Bxe2",
+        "Rxe2",
+        "Nc3",
+        "Qb5",
+        "Nxe2+"
+      ],
+      [
+        "Bxe2",
+        "Rxe2",
+        "Nc3",
+        "Qa5",
+        "Nxe2+"
+      ],
+      [
+        "Bxe2",
+        "Rxe2",
+        "Nc3",
+        "Qb4",
+        "Nxe2+"
+      ],
+      [
+        "Bxe2",
+        "Rxe2",
+        "Nc3",
+        "Qb3",
+        "Nxe2+"
+      ],
+      [
+        "Bxe2",
+        "Rxe2",
+        "Nc3",
+        "Qa3",
+        "Nxe2+"
+      ],
+      [
+        "Bxe2",
+        "Rxe2",
+        "Nc3",
+        "Qc2",
+        "Nxe2+"
+      ],
+      [
+        "Bxe2",
+        "Rxe2",
+        "Nc3",
+        "Qa2",
+        "Nxe2+"
+      ],
+      [
+        "Bxe2",
+        "Rxe2",
+        "Nc3",
+        "Qd1",
+        "Nxe2+"
+      ],
+      [
+        "Bxe2",
+        "Rxe2",
+        "Nc3",
+        "Qa1",
+        "Nxe2+"
+      ],
+      [
+        "Bxe2",
+        "Rxe2",
+        "Nc3",
+        "Re1",
+        "Nxa4"
+      ],
+      [
+        "Bxe2",
+        "Rxe2",
+        "Nc3",
+        "Ne4",
+        "Nxa4"
+      ],
+      [
+        "Bxe2",
+        "Rxe2",
+        "Nc3",
+        "Ne4",
+        "Nxe2+"
+      ],
+      [
+        "Bxe2",
+        "Rxe2",
+        "Nc3",
+        "Nc4",
+        "Nxa4"
+      ],
+      [
+        "Bxe2",
+        "Rxe2",
+        "Nc3",
+        "Nc4",
+        "Nxe2+"
+      ],
+      [
+        "Bxe2",
+        "Rxe2",
+        "Nc3",
+        "Nf3",
+        "Nxa4"
+      ],
+      [
+        "Bxe2",
+        "Rxe2",
+        "Nc3",
+        "Nf3",
+        "Nxe2+"
+      ],
+      [
+        "Bxe2",
+        "Rxe2",
+        "Nc3",
+        "Nb3",
+        "Nxa4"
+      ],
+      [
+        "Bxe2",
+        "Rxe2",
+        "Nc3",
+        "Nb3",
+        "Nxe2+"
+      ],
+      [
+        "Bxe2",
+        "Rxe2",
+        "Nc3",
+        "Nf1",
+        "Nxa4"
+      ],
+      [
+        "Bxe2",
+        "Rxe2",
+        "Nc3",
+        "Nf1",
+        "Nxe2+"
+      ],
+      [
+        "Bxe2",
+        "Rxe2",
+        "Nc3",
+        "Nb1",
+        "Nxa4"
+      ],
+      [
+        "Bxe2",
+        "Rxe2",
+        "Nc3",
+        "Nb1",
+        "Nxe2+"
+      ],
+      [
+        "Bxe2",
+        "Rxe2",
+        "Nc3",
+        "Kh1",
+        "Nxa4"
+      ],
+      [
+        "Bxe2",
+        "Rxe2",
+        "Nc3",
+        "Kh1",
+        "Nxe2"
+      ],
+      [
+        "Bxe2",
+        "Rxe2",
+        "Nc3",
+        "Kf1",
+        "Nxa4"
+      ],
+      [
+        "Bxe2",
+        "Rxe2",
+        "Nc3",
+        "Kf1",
+        "Nxe2"
+      ],
+      [
+        "Bxe2",
+        "Rxe2",
+        "Nc3",
+        "d5",
+        "Nxa4"
+      ],
+      [
+        "Bxe2",
+        "Rxe2",
+        "Nc3",
+        "d5",
+        "Nxe2+"
+      ],
+      [
+        "Bxe2",
+        "Rxe2",
+        "Nc3",
+        "e4",
+        "Nxa4"
+      ],
+      [
+        "Bxe2",
+        "Rxe2",
+        "Nc3",
+        "e4",
+        "Nxe2+"
+      ],
+      [
+        "Bxe2",
+        "Rxe2",
+        "Nc3",
+        "h3",
+        "Nxa4"
+      ],
+      [
+        "Bxe2",
+        "Rxe2",
+        "Nc3",
+        "h3",
+        "Nxe2+"
+      ],
+      [
+        "Bxe2",
+        "Rxe2",
+        "Nc3",
+        "g3",
+        "Nxa4"
+      ],
+      [
+        "Bxe2",
+        "Rxe2",
+        "Nc3",
+        "g3",
+        "Nxe2+"
+      ],
+      [
+        "Bxe2",
+        "Rxe2",
+        "Nc3",
+        "f3",
+        "Nxa4"
+      ],
+      [
+        "Bxe2",
+        "Rxe2",
+        "Nc3",
+        "f3",
+        "Nxe2+"
+      ],
+      [
+        "Bxe2",
+        "Rxe2",
+        "Nc3",
+        "h4",
+        "Nxa4"
+      ],
+      [
+        "Bxe2",
+        "Rxe2",
+        "Nc3",
+        "h4",
+        "Nxe2+"
+      ],
+      [
+        "Bxe2",
+        "Rxe2",
+        "Nc3",
+        "g4",
+        "Nxa4"
+      ],
+      [
+        "Bxe2",
+        "Rxe2",
+        "Nc3",
+        "g4",
+        "Nxe2+"
+      ],
+      [
+        "Bxe2",
+        "Rxe2",
+        "Nc3",
+        "f4",
+        "Nxa4"
+      ],
+      [
+        "Bxe2",
+        "Rxe2",
+        "Nc3",
+        "f4",
+        "Nxe2+"
+      ]
+    ],
+    "previousMove": {
+      "fen": "3q1rk1/5ppp/b1p1p3/3n4/Q2P4/4PN2/3bBPPP/4R1K1 w - - 0 21",
+      "move": "Nxd2"
+    },
+    "source": "https://theweekinchess.com/zips/twic1664g.zip",
+    "gameReference": {
+      "id": "8c0cea11ccc3f265",
+      "kind": "game",
+      "ply": 41,
+      "branch": 0,
+      "collection": "fork"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
+      "solverMoves": 3,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Tìm phép đổi quân mà sau khi Trắng dùng Xe bắt lại, Mã có thể tấn công Xe.",
+      "Sau Rxe2, Mã d5 có thể đồng thời tấn công Hậu và Xe bằng một nước không chiếu."
+    ],
+    "solution": "...Bxe2 đổi Tượng, đưa Xe trắng đến e2 sau Rxe2. Khi đó ...Nc3 tấn công đồng thời Hậu a4 và Xe e2. Sau Qc4, ...Nxe2+ Qxe2 giúp Đen đổi Mã lấy Xe và thu lợi vật chất. Phương án này đã xuất hiện trong ván đấu.",
+    "goal": "material",
+    "tacticPly": 2
   },
   {
     "title": "Chirila,I — Shabalov,A",
@@ -1738,6 +3094,132 @@
       "Tìm hai mục tiêu mà cùng một quân có thể tấn công. Kiểm tra nước đáp và khả năng bắt lại."
     ],
     "solution": "Mã ở f6 tấn công đồng thời các mục tiêu ở d5, h7, g8. Sau nước đáp, bắt quân để thu lợi về vật chất."
+  },
+  {
+    "title": "Vargas,Ga — Cvitan,Ena",
+    "prompt": "Tạo đòn tấn công đôi rồi bắt quân để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "fork",
+    "fen": "1k5r/pp6/2b4p/N2p2p1/3QP3/6q1/PP4P1/5K1R b - - 0 25",
+    "moves": [
+      "Rf8+",
+      "Kg1",
+      "Qe1+",
+      "Kh2",
+      "Qxa5"
+    ],
+    "alternativeLines": [],
+    "previousMove": {
+      "fen": "1k5r/pp6/2b4p/N2p2p1/3QP3/6q1/PP4P1/5rKR w - - 0 25",
+      "move": "Kxf1"
+    },
+    "source": "https://theweekinchess.com/zips/twic1663g.zip",
+    "gameReference": {
+      "id": "9832d80de8a5f143",
+      "kind": "game",
+      "ply": 49,
+      "branch": 0,
+      "collection": "fork"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
+      "solverMoves": 3,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Dùng Xe chiếu để thay đổi vị trí Vua trắng. Hãy xem cả nước chặn chiếu.",
+      "Sau Kg1, Hậu đen có thể chiếu trên hàng một và tấn công Mã a5 từ ô nào?",
+      "Kiểm tra đường chéo e1–a5 trước khi chọn nước bắt."
+    ],
+    "solution": "...Rf8+ đưa Vua trắng vào thế phải chọn nước đỡ chiếu. Trong ván đấu, Kg1 cho phép ...Qe1+, vừa chiếu Vua g1 vừa tấn công Mã a5 theo đường chéo. Sau Kh2, ...Qxa5 bắt Mã. Nếu Trắng chắn bằng Qf6, Xe đen có thể bắt Hậu trên f6.",
+    "goal": "material",
+    "tacticPly": 2
+  },
+  {
+    "title": "Meshkovs,Nikita — Almiron,A",
+    "prompt": "Tạo đòn tấn công đôi rồi bắt quân để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "fork",
+    "fen": "3r4/6pQ/q3pk1p/p1pr1p2/R2P1P1P/2P3P1/8/4R1K1 b - - 4 38",
+    "moves": [
+      "Qd3",
+      "Kf2",
+      "Qc2+",
+      "Re2",
+      "Qxa4"
+    ],
+    "alternativeLines": [
+      [
+        "Qd3",
+        "Kf2",
+        "Qc2+",
+        "Kf3",
+        "Qxa4"
+      ],
+      [
+        "Qd3",
+        "Kf2",
+        "Qc2+",
+        "Kf3",
+        "Qxc3+"
+      ],
+      [
+        "Qd3",
+        "Kf2",
+        "Qc2+",
+        "Ke3",
+        "Qxa4"
+      ],
+      [
+        "Qd3",
+        "Kf2",
+        "Qc2+",
+        "Ke3",
+        "Qxc3+"
+      ],
+      [
+        "Qd3",
+        "Kf2",
+        "Qc2+",
+        "Kg1",
+        "Qxa4"
+      ],
+      [
+        "Qd3",
+        "Kf2",
+        "Qc2+",
+        "Kf1",
+        "Qxa4"
+      ]
+    ],
+    "previousMove": {
+      "fen": "3r4/6pQ/q3pk1p/p1pr1p2/2RP1P1P/2P3P1/8/4R1K1 w - - 3 38",
+      "move": "Ra4"
+    },
+    "source": "https://theweekinchess.com/zips/twic1664g.zip",
+    "gameReference": {
+      "id": "9ba626cc76e3180c",
+      "kind": "game",
+      "ply": 75,
+      "branch": 0,
+      "collection": "fork"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
+      "solverMoves": 3,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Tìm một nước Hậu không chiếu nhưng đe dọa bắt Tốt g3 có chiếu.",
+      "Sau Kf2, nếu Hậu bắt Tốt g3 thì Vua trắng có thể bắt lại. Tìm một nước chiếu khác tấn công cả Xe a4."
+    ],
+    "solution": "…Qd3 đe dọa bắt Tốt g3 có chiếu. Sau Kf2, Vua trắng đã bảo vệ Tốt g3, nhưng …Qc2+ vừa chiếu Vua vừa tấn công Xe a4. Trong ván đấu, Trắng dùng Re2 đỡ chiếu, rồi …Qxa4 thu Xe. Nếu Vua chọn một ô tránh chiếu, Đen vẫn bắt được Xe a4.",
+    "goal": "material",
+    "tacticPly": 2
   },
   {
     "title": "Choukri,A — Shabalov,A",
@@ -1836,6 +3318,112 @@
       "Tìm hai mục tiêu mà cùng một quân có thể tấn công. Kiểm tra nước đáp và khả năng bắt lại."
     ],
     "solution": "Hậu ở f3 tấn công đồng thời các mục tiêu ở d1, f2, g3, d5, h5. Sau nước đáp, bắt quân để thu lợi về vật chất."
+  },
+  {
+    "title": "Stalmach,Richard — Wang,Shixu B",
+    "prompt": "Tạo đòn tấn công đôi rồi bắt quân để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "fork",
+    "fen": "2bk4/8/rp1p1p2/1QpP1qpB/P1P1p3/R5P1/5PP1/4K3 w - - 0 31",
+    "moves": [
+      "Qe8+",
+      "Kc7",
+      "Qc6+",
+      "Kd8",
+      "Qxd6+"
+    ],
+    "alternativeLines": [
+      [
+        "Qe8+",
+        "Kc7",
+        "Qc6+",
+        "Kb8",
+        "Qxd6+"
+      ]
+    ],
+    "previousMove": {
+      "fen": "2bk4/8/rp1p1p2/1QpPqPpB/P1P1p3/R5P1/5PP1/4K3 b - - 1 30",
+      "move": "Qxf5"
+    },
+    "source": "https://theweekinchess.com/zips/twic1667g.zip",
+    "gameReference": {
+      "id": "bd529176a44de824",
+      "kind": "game",
+      "ply": 60,
+      "branch": 0,
+      "collection": "fork"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
+      "solverMoves": 3,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Tìm nước chiếu buộc Vua đen rời d8. Tượng h5 đang bảo vệ ô nào?",
+      "Sau Kc7, Hậu có thể chiếu từ ô nào được Tốt d5 bảo vệ?",
+      "Xét cả hai ô Vua có thể lui về. Trong ba Tốt Hậu đang tấn công, Tốt nào có thể bắt mà Đen không bắt lại được?"
+    ],
+    "solution": "Qe8+ buộc Vua đen rời d8 đến c7. Tốt d5 bảo vệ ô c6, nên Trắng có thể chơi Qc6+, vừa chiếu Vua vừa tấn công các Tốt b6, c5 và d6. Xe a6 giữ Tốt b6, còn Tốt b6 giữ Tốt c5. Dù Vua lui về d8 như trong ván đấu hay về b8, Qxd6+ đều thắng một Tốt.",
+    "goal": "material",
+    "tacticPly": 2
+  },
+  {
+    "title": "Eltag,S — Rodi,L",
+    "prompt": "Tạo đòn tấn công đôi rồi bắt quân để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "fork",
+    "fen": "8/2R3p1/3p1p2/1p5p/p1kP4/P4rP1/1PK4P/8 b - - 3 37",
+    "moves": [
+      "Kxd4",
+      "Rxg7",
+      "Rf2+",
+      "Kb1",
+      "Rxh2"
+    ],
+    "alternativeLines": [
+      [
+        "Kxd4",
+        "Rxg7",
+        "Rf2+",
+        "Kd1",
+        "Rxh2"
+      ],
+      [
+        "Kxd4",
+        "Rxg7",
+        "Rf2+",
+        "Kc1",
+        "Rxh2"
+      ]
+    ],
+    "previousMove": {
+      "fen": "8/1R4p1/3p1p2/1p5p/p1kP4/P4rP1/1PK4P/8 w - - 2 37",
+      "move": "Rc7+"
+    },
+    "source": "https://theweekinchess.com/zips/twic1664g.zip",
+    "gameReference": {
+      "id": "d3f989771c8a877c",
+      "kind": "game",
+      "ply": 73,
+      "branch": 0,
+      "collection": "fork"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
+      "solverMoves": 3,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Tính nước bắt Tốt bằng Vua, rồi kiểm tra khả năng Trắng bắt Tốt g7.",
+      "Sau Rxg7, Xe đen có thể vừa chiếu Vua vừa tấn công Tốt nào?"
+    ],
+    "solution": "...Kxd4 bắt Tốt d4. Trắng có thể đáp Rxg7 để lấy lại một Tốt, nhưng ...Rf2+ đồng thời chiếu Vua c2 và tấn công Tốt h2. Sau Kb1, ...Rxh2 giúp Đen thu thêm một Tốt so với thế cờ ban đầu. Đây là phương án đã được chơi; Trắng cũng có thể chọn các nước Xe khác.",
+    "goal": "material",
+    "tacticPly": 2
   },
   {
     "title": "Kasparov, Gary — Short, Nigel D",
@@ -2090,6 +3678,63 @@
       "Tìm hai mục tiêu mà cùng một quân có thể tấn công. Kiểm tra nước đáp và khả năng bắt lại."
     ],
     "solution": "Mã ở c3 tấn công đồng thời các mục tiêu ở b1, a2, e2. Sau nước đáp, bắt quân để thu lợi về vật chất."
+  },
+  {
+    "title": "Moosavifar,Seyed Abolfazl — Pranav,V",
+    "prompt": "Tạo đòn tấn công đôi rồi bắt quân để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "fork",
+    "fen": "2rr1k2/5p1p/5Q2/7R/1p3P2/4n3/1P4PP/6K1 b - - 0 29",
+    "moves": [
+      "Rc1+",
+      "Kf2",
+      "Ng4+",
+      "Ke2",
+      "Nxf6"
+    ],
+    "alternativeLines": [
+      [
+        "Rc1+",
+        "Kf2",
+        "Ng4+",
+        "Kg3",
+        "Nxf6"
+      ],
+      [
+        "Rc1+",
+        "Kf2",
+        "Ng4+",
+        "Kf3",
+        "Nxf6"
+      ]
+    ],
+    "previousMove": {
+      "fen": "2rr1k2/5p1p/5Q2/7R/1p3P2/4n3/1P4PP/6qK w - - 0 29",
+      "move": "Kxg1"
+    },
+    "source": "https://theweekinchess.com/zips/twic1660g.zip",
+    "gameReference": {
+      "id": "f39be840937a0c34",
+      "kind": "game",
+      "ply": 57,
+      "branch": 0,
+      "collection": "fork"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
+      "solverMoves": 3,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Xe nào có thể chiếu để đưa Vua trắng tới một ô Mã có thể tấn công?",
+      "Từ g4, Mã tấn công đồng thời ô f2 và ô nào có Hậu trắng?",
+      "Xem cả Ke2, Kf3 và Kg3 sau ...Ng4+."
+    ],
+    "solution": "...Rc1+ buộc Vua trắng đến f2. Từ e3, Mã đen nhảy đến g4, chiếu Vua f2 và tấn công Hậu f6. Sau nước đỡ chiếu, Đen bắt Hậu bằng ...Nxf6. Trong ván đấu, Trắng chọn Ke2.",
+    "goal": "material",
+    "tacticPly": 2
   },
   {
     "title": "Wang,Tianqi — Shabalov,A",
@@ -6079,6 +7724,168 @@
     "solution": "Mã ở e2 tấn công đồng thời các mục tiêu ở g1, g3. Sau nước đáp, bắt quân để thu lợi về vật chất."
   },
   {
+    "title": "Kramnik,V — Leko,P",
+    "prompt": "Tạo đòn tấn công đôi rồi bắt quân để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "fork",
+    "fen": "6k1/5p1p/P1pb1n2/6p1/3P4/1BPq1NP1/1P3K1P/R1B5 b - - 0 27",
+    "moves": [
+      "Ne4+",
+      "Ke1",
+      "Nxc3",
+      "bxc3",
+      "Qxc3+",
+      "Kd1",
+      "Qxa1"
+    ],
+    "alternativeLines": [
+      [
+        "Ne4+",
+        "Ke1",
+        "Nxc3",
+        "bxc3",
+        "Qxc3+",
+        "Kf2",
+        "Qxb3"
+      ],
+      [
+        "Ne4+",
+        "Ke1",
+        "Nxc3",
+        "bxc3",
+        "Qxc3+",
+        "Kf2",
+        "Qxa1"
+      ],
+      [
+        "Ne4+",
+        "Ke1",
+        "Nxc3",
+        "bxc3",
+        "Qxc3+",
+        "Ke2",
+        "Qxb3"
+      ],
+      [
+        "Ne4+",
+        "Ke1",
+        "Nxc3",
+        "bxc3",
+        "Qxc3+",
+        "Ke2",
+        "Qxa1"
+      ],
+      [
+        "Ne4+",
+        "Ke1",
+        "Nxc3",
+        "bxc3",
+        "Qxc3+",
+        "Kf1",
+        "Qxf3+"
+      ],
+      [
+        "Ne4+",
+        "Ke1",
+        "Nxc3",
+        "bxc3",
+        "Qxc3+",
+        "Kf1",
+        "Qxb3"
+      ],
+      [
+        "Ne4+",
+        "Ke1",
+        "Nxc3",
+        "bxc3",
+        "Qxc3+",
+        "Kf1",
+        "Qxa1"
+      ],
+      [
+        "Ne4+",
+        "Ke1",
+        "Nxc3",
+        "bxc3",
+        "Qxc3+",
+        "Kd1",
+        "Qxf3+"
+      ],
+      [
+        "Ne4+",
+        "Ke1",
+        "Nxc3",
+        "bxc3",
+        "Qxc3+",
+        "Kd1",
+        "Qxb3+"
+      ],
+      [
+        "Ne4+",
+        "Ke1",
+        "Nxc3",
+        "bxc3",
+        "Qxc3+",
+        "Nd2",
+        "Qxa1"
+      ],
+      [
+        "Ne4+",
+        "Ke1",
+        "Nxc3",
+        "bxc3",
+        "Qxc3+",
+        "Bd2",
+        "Qxf3"
+      ],
+      [
+        "Ne4+",
+        "Ke1",
+        "Nxc3",
+        "bxc3",
+        "Qxc3+",
+        "Bd2",
+        "Qxb3"
+      ],
+      [
+        "Ne4+",
+        "Ke1",
+        "Nxc3",
+        "bxc3",
+        "Qxc3+",
+        "Bd2",
+        "Qxa1+"
+      ]
+    ],
+    "previousMove": {
+      "fen": "6k1/5p1p/P1pb1n2/6p1/3P4/1BPq1bP1/1P1N1K1P/R1B5 w - - 0 27",
+      "move": "Nxf3"
+    },
+    "source": "https://www.pgnmentor.com/players/Kramnik.zip",
+    "gameReference": {
+      "id": "5bf5716fb3926512",
+      "kind": "game",
+      "ply": 53,
+      "branch": 0,
+      "collection": "fork"
+    },
+    "difficulty": {
+      "level": "D",
+      "status": "suggested",
+      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
+      "solverMoves": 4,
+      "sacrificeCount": 1
+    },
+    "hints": [
+      "Dùng nước chiếu bằng Mã để Vua trắng rời f2, rồi kiểm tra ô c3.",
+      "Tốt b2 đang che đường chéo đến Xe a1. Tính xem điều gì xảy ra nếu Tốt này bắt Mã ở c3.",
+      "Sau khi thu Xe, vẫn phải kiểm soát Tốt thông a6."
+    ],
+    "solution": "...Ne4+ mở đầu đòn phối hợp. Sau Ke1, ...Nxc3 thí Mã; bxc3 mở đường chéo từ c3 đến a1. ...Qxc3+ đồng thời chiếu Vua e1 và tấn công Xe a1, rồi ...Qxa1 thu Xe sau nước đỡ chiếu. Cần tính cả Tốt a6: nếu a7 thì ...Qxa7 ngăn phong cấp. Ván đấu chọn Kf2; Kd1 trong lời giải là phương án phân tích.",
+    "goal": "material",
+    "tacticPly": 4
+  },
+  {
     "title": "Geller, Efim P — Martinovic, Slobodan",
     "prompt": "Tạo đòn tấn công đôi rồi bắt quân để thắng vật chất.",
     "mode": "interactive",
@@ -6255,6 +8062,51 @@
     "solution": "Hậu ở e5 tấn công đồng thời các mục tiêu ở e4, d5, d6. Sau nước đáp, bắt quân để thu lợi về vật chất."
   },
   {
+    "title": "Aronian,L — Gelfand,B",
+    "prompt": "Tạo đòn tấn công đôi rồi bắt quân để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "fork",
+    "fen": "8/pRP2ppk/2q4p/5r1P/3Q4/6K1/P2B4/8 w - - 3 40",
+    "moves": [
+      "Qd3",
+      "g6",
+      "c8=Q",
+      "Qxc8",
+      "Rxf7+",
+      "Rxf7",
+      "Qxg6+",
+      "Kh8",
+      "Qxf7"
+    ],
+    "alternativeLines": [],
+    "previousMove": {
+      "fen": "8/pRP2ppk/7p/5r1P/3Q4/6K1/P1qB4/8 b - - 2 39",
+      "move": "Qc6"
+    },
+    "source": "https://www.pgnmentor.com/players/Aronian.zip",
+    "gameReference": {
+      "id": "1b5b4544d8068285",
+      "kind": "game",
+      "ply": 78,
+      "branch": 0,
+      "collection": "fork"
+    },
+    "difficulty": {
+      "level": "D",
+      "status": "suggested",
+      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
+      "solverMoves": 5,
+      "sacrificeCount": 2
+    },
+    "hints": [
+      "Tìm nước Hậu vừa giữ ô f3, vừa chuẩn bị tiến đến g6.",
+      "Tính đủ việc bắt quân phong cấp và thí Xe; tìm cách đưa Xe đen vào đòn tấn công đôi."
+    ],
+    "solution": "Qd3 giữ ô f3 và chuẩn bị đường chéo từ d3 đến g6. Sau g6, c8=Q Qxc8, Rxf7+ Rxf7 đưa Xe đen lên f7 và mở đường cho Hậu. Qxg6+ tấn công đôi Vua h7 và Xe f7; sau Kh8, Qxf7 giúp Trắng thu lợi một Tốt so với thế cờ ban đầu, sau khi tính đủ các lần bắt lại.",
+    "goal": "material",
+    "tacticPly": 6
+  },
+  {
     "title": "Zukertort, Johannes Hermann — Anderssen, Adolf",
     "prompt": "Tạo đòn tấn công đôi rồi bắt quân để thắng vật chất.",
     "mode": "interactive",
@@ -6307,6 +8159,52 @@
       "Tìm hai mục tiêu mà cùng một quân có thể tấn công. Kiểm tra nước đáp và khả năng bắt lại."
     ],
     "solution": "Mã ở f6 tấn công đồng thời các mục tiêu ở d7, h7, e8. Sau nước đáp, bắt quân để thu lợi về vật chất."
+  },
+  {
+    "title": "Firouzja,Alireza — Aronian,L",
+    "prompt": "Tạo đòn tấn công đôi rồi bắt quân để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "fork",
+    "fen": "2bN2k1/1p4bp/8/p7/P2pn3/qP2P3/6PP/3Q1RK1 w - - 0 27",
+    "moves": [
+      "Qh5",
+      "Nd6",
+      "Qd5+",
+      "Kh8",
+      "Qxd6",
+      "Qxd6",
+      "Nf7+",
+      "Kg8",
+      "Nxd6"
+    ],
+    "alternativeLines": [],
+    "previousMove": {
+      "fen": "2RN2k1/1p1b2bp/8/p7/P2pn3/qP2P3/6PP/3Q1RK1 b - - 0 26",
+      "move": "Bxc8"
+    },
+    "source": "https://www.pgnmentor.com/players/Aronian.zip",
+    "gameReference": {
+      "id": "3917e1eb97e46199",
+      "kind": "game",
+      "ply": 52,
+      "branch": 0,
+      "collection": "fork"
+    },
+    "difficulty": {
+      "level": "D",
+      "status": "suggested",
+      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
+      "solverMoves": 5,
+      "sacrificeCount": 1
+    },
+    "hints": [
+      "Tốt d4 ngăn Hậu đi thẳng từ d1 lên d5. Tìm đường đưa Hậu tới d5 bằng hai nước.",
+      "Mã đến f7 chỉ chiếu được Vua khi Vua đen ở h8. Hãy tính thứ tự nước chiếu và thí Hậu.",
+      "Sau khi Hậu đen bắt trên d6, tìm nước Mã vừa chiếu vừa tấn công Hậu. Tính tiếp các lần bắt lại."
+    ],
+    "solution": "Qh5 chuẩn bị đưa Hậu tới d5, vì Tốt d4 đang chắn cột d. Trong ván đấu, sau ...Nd6, Qd5+ Kh8 tạo điều kiện thí Hậu bằng Qxd6. Nếu nhận thí bằng ...Qxd6, Đen rơi vào Nf7+: Mã đồng thời chiếu Vua h8 và tấn công Hậu d6. Sau ...Kg8 Nxd6, Trắng lấy lại Hậu và thu lợi một Mã. Cần tính cả ...Be6 exd4 Bxd4+ Kh1; loạt bắt lại này không xóa lợi thế vật chất.",
+    "goal": "material",
+    "tacticPly": 6
   },
   {
     "title": "Tal, Mihail — Van der Wiel, John TH",
@@ -6396,6 +8294,96 @@
     "solution": "Hậu ở c2 tấn công đồng thời các mục tiêu ở f2, c5. Sau nước đáp, bắt quân để thu lợi về vật chất."
   },
   {
+    "title": "Karpov,Ana — Ribli,Z",
+    "prompt": "Tạo đòn tấn công đôi rồi bắt quân để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "fork",
+    "fen": "4r1k1/1p4p1/p1b2p2/2BB4/1P2rq1p/P4N2/1Q1R1KPP/8 b - - 0 27",
+    "moves": [
+      "Bxd5",
+      "Rxd5",
+      "Re2+",
+      "Qxe2",
+      "Rxe2+",
+      "Kxe2",
+      "Qe4+",
+      "Kf2",
+      "Qxd5"
+    ],
+    "alternativeLines": [
+      [
+        "Bxd5",
+        "Rxd5",
+        "Re2+",
+        "Qxe2",
+        "Rxe2+",
+        "Kxe2",
+        "Qe4+",
+        "Kd2",
+        "Qxd5+"
+      ],
+      [
+        "Bxd5",
+        "Rxd5",
+        "Re2+",
+        "Qxe2",
+        "Rxe2+",
+        "Kxe2",
+        "Qe4+",
+        "Kf1",
+        "Qxd5"
+      ],
+      [
+        "Bxd5",
+        "Rxd5",
+        "Re2+",
+        "Qxe2",
+        "Rxe2+",
+        "Kxe2",
+        "Qe4+",
+        "Kd1",
+        "Qxd5+"
+      ],
+      [
+        "Bxd5",
+        "Rxd5",
+        "Re2+",
+        "Qxe2",
+        "Rxe2+",
+        "Kxe2",
+        "Qe4+",
+        "Be3",
+        "Qxd5"
+      ]
+    ],
+    "previousMove": {
+      "fen": "4r1k1/1p4p1/p1b2p2/2Bp4/1P2rq1p/PB3N2/1Q1R1KPP/8 w - - 0 27",
+      "move": "Bxd5+"
+    },
+    "source": "https://www.pgnmentor.com/players/Karpov.zip",
+    "gameReference": {
+      "id": "46bccd944e7969ac",
+      "kind": "game",
+      "ply": 53,
+      "branch": 0,
+      "collection": "fork"
+    },
+    "difficulty": {
+      "level": "D",
+      "status": "suggested",
+      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
+      "solverMoves": 5,
+      "sacrificeCount": 1
+    },
+    "hints": [
+      "Trước hết xử lý nước chiếu. Sau khi đổi Tượng, tìm nước chiếu bằng Xe trên cột e.",
+      "Tính đủ các lần bắt lại ở e2, rồi tìm nước chiếu của Hậu đồng thời tấn công Xe d5."
+    ],
+    "solution": "Bxd5 đáp chiếu và đổi Tượng. Sau Rxd5, Re2+ Qxe2 Rxe2+ Kxe2, Đen đổi hai Xe lấy Hậu và kéo Vua trắng đến e2. Qe4+ vừa chiếu Vua vừa tấn công Xe d5; sau Kf2, Qxd5 thu Xe. Trắng có thể bắt Tốt h4 bằng Nxh4, nhưng Đen vẫn thu lợi về vật chất.",
+    "goal": "material",
+    "tacticPly": 6
+  },
+  {
     "title": "Shabalov,A — Mahesh Chandran,P",
     "prompt": "Tạo đòn tấn công đôi rồi bắt quân để thắng vật chất.",
     "mode": "interactive",
@@ -6470,6 +8458,52 @@
       "Tìm hai mục tiêu mà cùng một quân có thể tấn công. Kiểm tra nước đáp và khả năng bắt lại."
     ],
     "solution": "Hậu ở a5 tấn công đồng thời các mục tiêu ở a4, f5. Sau nước đáp, bắt quân để thu lợi về vật chất."
+  },
+  {
+    "title": "Pantsulaia,L — Kramnik,V",
+    "prompt": "Tạo đòn tấn công đôi rồi bắt quân để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "fork",
+    "fen": "4r1k1/5p2/1P4p1/3Q2B1/3R1K2/5PPq/P3r3/8 b - - 0 43",
+    "moves": [
+      "R8e5",
+      "Qxe5",
+      "Rxe5",
+      "Kxe5",
+      "Qe6+",
+      "Kf4",
+      "Qf5+",
+      "Ke3",
+      "Qxg5+"
+    ],
+    "alternativeLines": [],
+    "previousMove": {
+      "fen": "4r1k1/5p2/6p1/1P1Q2B1/3R1K2/5PPq/P3r3/8 w - - 0 43",
+      "move": "b6"
+    },
+    "source": "https://www.pgnmentor.com/players/Kramnik.zip",
+    "gameReference": {
+      "id": "a3a964496ef9318a",
+      "kind": "game",
+      "ply": 85,
+      "branch": 0,
+      "collection": "fork"
+    },
+    "difficulty": {
+      "level": "D",
+      "status": "suggested",
+      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
+      "solverMoves": 5,
+      "sacrificeCount": 1
+    },
+    "hints": [
+      "Tìm nước Xe không chiếu nhưng đồng thời tấn công Hậu và Tượng.",
+      "Sau loạt đổi hai Xe lấy Hậu, chưa vội tạo đòn tấn công đôi: cần chọn nước chiếu để Vua trắng không đến gần Tốt thông b6.",
+      "So sánh ...Qe6+ với ...Qf5+ ngay. Vua trắng được phép đi đến đâu trong mỗi phương án?"
+    ],
+    "solution": "...R8e5 tấn công đồng thời Hậu d5 và Tượng g5, đồng thời chuẩn bị thí hai Xe lấy Hậu. Sau Qxe5 ...Rxe5 Kxe5, ...Qe6+ đưa Vua về f4; ...Qf5+ đồng thời chiếu Vua và tấn công Tượng g5, rồi ...Qxg5+ thu Tượng. Chiếu ở e6 trước giúp Vua trắng rời xa Tốt thông b6. Đây là phương án phân tích; ván đấu tiếp tục ...Qc8.",
+    "goal": "material",
+    "tacticPly": 6
   },
   {
     "title": "Movsesian,S — Bhat,V",
@@ -6569,6 +8603,142 @@
     "solution": "Mã ở g5 tấn công đồng thời các mục tiêu ở e4, f7, h7. Sau nước đáp, bắt quân để thu lợi về vật chất."
   },
   {
+    "title": "Maurizzi,MarcAndria — Agmanov,Zhandos",
+    "prompt": "Tạo đòn tấn công đôi rồi bắt quân để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "fork",
+    "fen": "6k1/1Qnqr3/1R2p1p1/2Rp1pNp/3r3P/8/5PP1/6K1 w - - 0 34",
+    "moves": [
+      "Rxc7",
+      "Rd1+",
+      "Kh2",
+      "Qxc7+",
+      "Qxc7",
+      "Rxc7",
+      "Rb8+",
+      "Kg7",
+      "Nxe6+",
+      "Kf6",
+      "Nxc7"
+    ],
+    "alternativeLines": [
+      [
+        "Rxc7",
+        "Rd1+",
+        "Kh2",
+        "Qxc7+",
+        "Qxc7",
+        "Rxc7",
+        "Rb8+",
+        "Kg7",
+        "Nxe6+",
+        "Kh7",
+        "Nxc7"
+      ],
+      [
+        "Rxc7",
+        "Rd1+",
+        "Kh2",
+        "Qxc7+",
+        "Qxc7",
+        "Rxc7",
+        "Rb8+",
+        "Kg7",
+        "Nxe6+",
+        "Kf7",
+        "Nxc7"
+      ],
+      [
+        "Rxc7",
+        "Rd1+",
+        "Kh2",
+        "Qxc7+",
+        "Qxc7",
+        "Rxc7",
+        "Rb8+",
+        "Kg7",
+        "Nxe6+",
+        "Kh6",
+        "Nxc7"
+      ]
+    ],
+    "previousMove": {
+      "fen": "6k1/1Qnqr3/1R2p1p1/2Rp1pNp/2rP3P/8/5PP1/6K1 b - - 8 33",
+      "move": "Rxd4"
+    },
+    "source": "https://theweekinchess.com/zips/twic1663g.zip",
+    "gameReference": {
+      "id": "59a4bbff8800ef22",
+      "kind": "game",
+      "ply": 66,
+      "branch": 0,
+      "collection": "fork"
+    },
+    "difficulty": {
+      "level": "D",
+      "status": "suggested",
+      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
+      "solverMoves": 6,
+      "sacrificeCount": 1
+    },
+    "hints": [
+      "Tính đến cuối loạt đổi quân ở c7 trước khi kết luận về phép thí Xe.",
+      "Sau khi đỡ nước chiếu ở hàng ngang thứ nhất, hãy dùng Xe còn lại đưa Vua đen vào tầm tấn công của Mã.",
+      "Mã g5 cần chiếu Vua đồng thời tấn công Xe ở c7."
+    ],
+    "solution": "Rxc7 thí Xe lấy Mã, rồi tính tiếp loạt đổi Hậu. Sau ...Rd1+ Kh2 ...Qxc7+ Qxc7 ...Rxc7, Rb8+ đưa Vua đến g7. Nxe6+ đồng thời chiếu Vua g7 và tấn công Xe c7; Nxc7 thu Xe và tạo lợi thế vật chất. Đen có thể nhận Xe ngay ở nước đầu, dẫn đến cùng ý tưởng. Phương án chính đã xuất hiện trong ván đấu.",
+    "goal": "material",
+    "tacticPly": 8
+  },
+  {
+    "title": "Rogule,L — Salimova,Nurgyul",
+    "prompt": "Tạo đòn tấn công đôi rồi bắt quân để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "fork",
+    "fen": "5r1k/p5p1/1p1P1q2/1P1Qn3/2r3P1/2N2p1P/1P3K1B/3R4 b - - 1 37",
+    "moves": [
+      "Qh4+",
+      "Bg3",
+      "Qxh3",
+      "Qxe5",
+      "Qg2+",
+      "Ke3",
+      "Rxc3+",
+      "bxc3",
+      "Qe2+",
+      "Kd4",
+      "Qxd1+"
+    ],
+    "alternativeLines": [],
+    "previousMove": {
+      "fen": "5r1k/p5p1/1p1P1q2/1P1Qn3/2r3P1/2N2p1P/1P4KB/3R4 w - - 0 37",
+      "move": "Kf2"
+    },
+    "source": "https://theweekinchess.com/zips/twic1664g.zip",
+    "gameReference": {
+      "id": "881f21662999c535",
+      "kind": "game",
+      "ply": 73,
+      "branch": 0,
+      "collection": "fork"
+    },
+    "difficulty": {
+      "level": "D",
+      "status": "suggested",
+      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
+      "solverMoves": 6,
+      "sacrificeCount": 2
+    },
+    "hints": [
+      "Tìm chuỗi nước chiếu khai thác Vua trắng ở f2; đừng vội rút Mã e5 đang bị tấn công.",
+      "Sau khi Hậu trắng bắt Mã e5, dùng nước chiếu đưa Vua đến e3. Quân trắng nào đang giữ ô e2?",
+      "Tính đủ Rxc3+ và cả bxc3 lẫn Qxc3. Sau đó Hậu có thể đồng thời chiếu Vua và tấn công Xe d1 ở ô nào?"
+    ],
+    "solution": "Trong phương án của ván đấu, Qh4+ Bg3 Qxh3 cho phép Qxe5 bắt Mã e5 và kéo Hậu trắng rời cột d. Sau Qg2+ Ke3, Rxc3+ loại Mã đang giữ e2. Dù bxc3 hay Qxc3, Qe2+ tấn công đôi Vua e3 và Xe d1; Kd4 là nước đỡ chiếu duy nhất, rồi Qxd1+ thu Xe. Tính đủ các lần bắt lại, Đen thu lợi một Tốt so với thế cờ ban đầu. Trong phân tích tiếp, Kc4 Qa4+ Kd3 Qxg4 Bf2 Rd8 giúp ngăn Tốt d6 phong cấp.",
+    "goal": "material",
+    "tacticPly": 8
+  },
+  {
     "title": "Aronian,L — Praggnanandhaa,R",
     "prompt": "Tạo đòn tấn công đôi rồi bắt quân để thắng vật chất.",
     "mode": "interactive",
@@ -6625,6 +8795,71 @@
       "Tìm hai mục tiêu mà cùng một quân có thể tấn công. Kiểm tra nước đáp và khả năng bắt lại."
     ],
     "solution": "Hậu ở b3 tấn công đồng thời các mục tiêu ở b2, c3. Sau nước đáp, bắt quân để thu lợi về vật chất."
+  },
+  {
+    "title": "Xiong,Jeffery — Aronian,L",
+    "prompt": "Tạo đòn tấn công đôi rồi bắt quân để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "fork",
+    "fen": "3rk2r/p2pb1pp/q3pn2/2p1N1B1/1n6/2N5/PP3PPP/R2QR1K1 w k - 8 17",
+    "moves": [
+      "Bxf6",
+      "Bxf6",
+      "a3",
+      "Nc6",
+      "Qh5+",
+      "g6",
+      "Nxg6",
+      "hxg6",
+      "Qxg6+",
+      "Ke7",
+      "Nd5+",
+      "Kd6",
+      "Nxf6"
+    ],
+    "alternativeLines": [
+      [
+        "Bxf6",
+        "Bxf6",
+        "a3",
+        "Nc6",
+        "Qh5+",
+        "g6",
+        "Nxg6",
+        "hxg6",
+        "Qxg6+",
+        "Ke7",
+        "Nd5+",
+        "Kf8",
+        "Nxf6"
+      ]
+    ],
+    "previousMove": {
+      "fen": "r3k2r/p2pb1pp/q3pn2/2p1N1B1/1n6/2N5/PP3PPP/R2QR1K1 b kq - 7 16",
+      "move": "Rd8"
+    },
+    "source": "https://www.pgnmentor.com/players/Aronian.zip",
+    "gameReference": {
+      "id": "48c4a54ae6c7e136",
+      "kind": "game",
+      "ply": 32,
+      "branch": 0,
+      "collection": "fork"
+    },
+    "difficulty": {
+      "level": "D",
+      "status": "suggested",
+      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
+      "solverMoves": 7,
+      "sacrificeCount": 1
+    },
+    "hints": [
+      "Xác định quân đen đang giữ h5 và quân có thể bắt Mã nếu Mã đến d5.",
+      "Sau khi xử lý hai quân phòng thủ, tính chuỗi thí Mã mở đường cho Hậu chiếu rồi tạo đòn tấn công đôi."
+    ],
+    "solution": "Bxf6 đổi Tượng lấy Mã đang giữ h5; a3 đuổi Mã b4 để quân này không còn khống chế d5. Sau Qh5+ g6 Nxg6 hxg6 Qxg6+ Ke7, Nd5+ tấn công đôi Vua e7 và Tượng f6. Kd6 Nxf6 hoàn tất việc thu hồi quân đã thí và thắng vật chất. Đây là phương án minh họa; ván gốc chơi a3 trước Bxf6.",
+    "goal": "material",
+    "tacticPly": 10
   },
   {
     "title": "Gufeld, Eduard — Tal, Mihail",

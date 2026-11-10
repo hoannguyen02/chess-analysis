@@ -5,7 +5,16 @@
   },
   {
     "source": "https://www.pgnmentor.com/players/Aronian.zip",
-    "sha256": "d9fa17c7a3dab9c76627e93d00bf0c6f70dbe6deb12289b71a4c34ec4601fcc5"
+    "sha256": "d9fa17c7a3dab9c76627e93d00bf0c6f70dbe6deb12289b71a4c34ec4601fcc5",
+    "verifiedRetrievals": [
+      {
+        "retrieved": "2026-11-06",
+        "eligibleGames": 4339,
+        "retrieval": "Public source archive downloaded and legally parsed for this review.",
+        "parsedGames": 5610,
+        "parserErrors": 0
+      }
+    ]
   },
   {
     "source": "https://www.pgnmentor.com/players/Blackburne.zip",

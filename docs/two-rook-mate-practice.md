@@ -2,40 +2,70 @@
 
 `/two-rook-mate` (including `/vi/two-rook-mate`) is a private, noindex page
 listed in the private hub. Protected exercise and reference-game endpoints
-supply 138 exercises and 78 distinct original games saved locally.
+supply 133 bundled exercises and 133 distinct original games saved locally.
 
 | Level    | Composed | Master games | Total |
 | -------- | -------: | -----------: | ----: |
-| Beginner |       20 |            0 |    20 |
-| A        |       20 |            0 |    20 |
-| B        |       20 |           10 |    30 |
-| C        |        0 |           22 |    22 |
-| C\*      |        0 |           22 |    22 |
+| Beginner |        0 |            0 |     0 |
+| A        |        0 |           30 |    30 |
+| B        |        0 |           27 |    27 |
+| C        |        0 |           26 |    26 |
+| C\*      |        0 |           26 |    26 |
 | D        |        0 |           24 |    24 |
+| D\*      |        0 |            0 |     0 |
 
-The approved 60 composed exercises are preserved in
-`scripts/fixtures/two-rook-mate/composed.json`. Beginner covers direct mate in
-one, A covers direct coordination in two moves, and B covers short ladder
-coordination. Master-game B additions require short preparation without a
-sacrifice. C requires a simple sacrifice, C\* requires deeper calculation without
-a sacrifice, and D requires a queen sacrifice or multiple sacrifices over more
+Beginner starts empty. In local development, use **Lấy thế cờ từ B, C, C\*, D, D\***
+in **Nhập môn** to choose and save positions through the shared importer, or use
+**Thêm thế cờ Nhập môn** to set up a position directly.
+
+The 40 earlier A/B compositions were retired from practice. A now uses direct
+checkmates in one or two moves from master games. B requires three solver moves
+and covers short preparation such as cutting off a rank, removing a defender,
+or coping with a countercheck. The new C examples require one simple sacrifice.
+The new C\* examples require three solver moves without a sacrifice and show a
+strong defensive choice that changes the solver's continuation. Earlier C\*
+grades retain their original review. D requires a queen sacrifice or multiple sacrifices over more
 than three solver moves. These are combination-based editorial grades, not
 move-count-only difficulty ratings.
 
 Every exercise identifies the starting side and checkmate objective. The page
 reuses `ChessPractice`, `DrawTrainer`, and `PracticeBoard`, including fullscreen,
 timer, hints, analysis, and branch exploration. Reference games open in the
-shared `DrawGameViewer`. Composed exercises do not display a game button.
+shared `DrawGameViewer`.
 
 ## Research and provenance
 
-The master positions come from 36 cached public PGN Mentor archives. Archive
-URLs and SHA-256 checksums are retained in `master-corpus-sources.json`. Each
+The earlier master positions come from 36 cached public PGN Mentor archives.
+Their URLs and SHA-256 checksums are retained in `master-corpus-sources.json`.
+The A/B replacement batch uses indexed PGN Mentor and The Week in Chess games,
+with archive references, checksums and master credentials in the cumulative
+`expansion-evidence.json` bundle. Each
 published record retains its exact FEN, previous move, source ply, complete
 original game, headers, stable game identifier, solution and review evidence.
 The exercise's analyzed continuation can differ from the recorded game,
 particularly when the original game ended in resignation. Original-game replay
 always shows the recorded moves.
+
+The short-mate adapter (`two_rook_mate_research.py`) compares every legal starting
+move to the published mate limit, rejects shorter forced mates and unrelated
+mate routes within that limit, then certifies the displayed line against every
+legal defensive reply. The certificate checks both rook roles in the displayed
+mate and material recovery after defensive captures. Stockfish
+provides a separate root comparison. The editorial review checks the two rook
+roles, distinct defensive mechanisms, level, provenance, and Vietnamese copy.
+Of the 38 new positions, 15 use the recorded finish and 23 use a verified
+analysis line from the recorded position. The 10 previously reviewed B games
+retain their original records and grades.
+
+For the four C additions, the all-reply mate proof covers both acceptance and
+other defences. The shown accepting branch needs both rooks. The root comparison
+rules out a mate in the same number of moves without a sacrifice. Exchanges of
+equal minor pieces do not count as sacrifices. For the four C\* additions, the
+review records the shortest mate and the available continuations after every
+first reply. Each sample shows a defence that requires a different response or
+survives longer than a weaker choice. Inferior replies can allow an earlier
+mate. All eight examples start from recorded game positions and show verified
+analysis continuations alongside the complete original replays.
 
 `collect-two-rook-games.py` searches recorded mating finishes;
 `prepare-two-rook-resignations.py` prepares additional mating positions from
@@ -62,12 +92,51 @@ solution. Original review failures and their resolutions are retained in
 
 ## Publishing and validation
 
-`python3 scripts/build-two-rook-master-games.py` merges the approved composed
-snapshot with reviewed master records, verifies the motif and any certificates,
-and writes the exercise JSON, local source games, and publication manifest.
-`python3 scripts/build-two-rook-mate.py --regrade` reapplies composed grades and
-then merges master records when present, so it does not erase researched games.
-The composed generator's original engine evidence remains in `validation.json`.
+Use `scripts/research-tactics.py` with `--topic two-rook-mate` for indexed A/B/C/C\*
+collection, exact tactical review and editorial packets. Publish through
+`finish-batch` with `scripts/fixtures/two-rook-mate/expansion-evidence.json` and
+the original scoped `--run-file`. The shared publication gate rehearses
+`build-two-rook-master-games.py`, preserves existing games and owner data,
+and exports the affected worksheet and answer pages for visual review.
+The archived `composed.json` and `validation.json` retain historical evidence.
+The A/B compositions cannot return to practice through either builder when the
+approved expansion bundle is present.
+
+The replacement run screened 10,952 indexed games in 291 seconds on its first
+pass. A second 3,000-game pass with the direct mate-in-one route reused 3,043
+engine results and made no new engine calls. Final tactical review compared
+3,287 legal roots in 105 candidate positions; 47 candidates were withheld and
+50 distinct source games reached the editorial packets. In a separate cold
+benchmark on the same six positions and budgets, one worker took 4.84 seconds
+and three took 1.95 seconds with identical findings. This comparison measures
+the tactical review only. The full run ledger measured 56 minutes 6 seconds,
+including 32 minutes 35 seconds outside named stages.
+
+The six later Level A additions came from 75 eligible saved leads. The
+shortlist contained 16 positions. Tactical review compared 512 legal starting
+moves in 4.40 seconds with three workers. Nine positions reached independent
+editorial review and six were selected. All six finishes were played in their
+original games. Four are mates in one, two are mates in two, and each colour
+solves three. No archives were rescanned for this batch. The full run took
+6 minutes 3 seconds, including 2 minutes 50 seconds outside named stages.
+
+The three later Level B additions came from 57 eligible saved leads. Tactical
+review compared 755 legal starting moves across 26 candidates in 5.30 seconds
+with three workers. Six reached editorial review. The recorded continuation of
+one finalist received a separate exact review using cached engine analysis.
+All three additions force mate in three. One uses the recorded finish and two
+use verified analysis continuations. No archives were rescanned. The full run
+took 7 minutes 12 seconds, including 2 minutes 53 seconds outside named stages.
+
+For the C/C\* batch, the 10,914-game indexed pass reused 16,655 engine
+results. Six additional PGN Mentor archives contributed 15,704 unique decisive
+games to the index. A targeted pass screened 5,200 games from those sources in
+215 seconds. The final tactical review compared 551 legal roots in 16
+candidates, with 11 reaching editorial review and eight selected. In a cold
+comparison on the same six positions and budgets, one worker took 5.43 seconds
+and three took 2.51 seconds with identical findings. This comparison covers
+tactical review only. The full run took 21 minutes 35 seconds, including
+6 minutes 3 seconds outside named stages.
 
 Run:
 
@@ -79,7 +148,7 @@ npm run build
 
 Tests replay original games and solutions, verify exact source positions and
 previous moves, check actual mate and both-rook involvement, independently
-verify certificates, preserve the composed exercises, enforce counts and
+verify certificates, enforce the A/B replacement and source counts and
 provenance, and exercise shared trainer completion and private API access.
 
 Saved alternative solutions are accepted by the shared trainer. Any legal

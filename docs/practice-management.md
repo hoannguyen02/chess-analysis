@@ -2,20 +2,21 @@
 
 While reviewing any shared practice exercise, open **⋯ (Quản lý bài tập)** at
 the right of the side/objective row. The controls open in a compact dialog. Choose
-one of **Beginner, A, B, C, C*, D**, optionally record a reason, then choose
-**Chuyển cấp độ**. The destination level opens with the same exercise selected.
-The six levels remain visible with actual counts; no positions are invented or
+one of **Beginner, A, B, C, C*, D, D*, E, E\***, optionally record a reason, then choose
+**Chuyển cấp độ**. The filtered list refreshes in place and the confirmation
+offers **Mở bài tập →** to open the exercise at its destination.
+The nine levels remain visible with actual counts; no positions are invented or
 replaced to maintain the target of 24 per level.
 
 **Bỏ khỏi bài tập** excludes the position from interactive practice and future
 worksheet selection. It does not erase its source or solution. When reviewing
-positions in sequence, removal opens the next exercise in the same filtered slot,
-or the previous exercise when removing the last one. Its stable identity and a
-clamped index fallback keep the level, category, Beginner skewer kind and list
-page selected after the protected catalog reloads. Removing the sole exercise
-leaves that level's empty state visible. Cancelling removal leaves selection
-unchanged; topic/level transfers still open their requested destination. The
-**Bài đã bỏ** and **Bài đã chuyển** history panels have
+positions in sequence, a move or removal selects the next exercise in the same
+filtered slot if the current exercise leaves the list. If it was the last
+exercise, review continues with the previous one. A stable exercise key and a
+clamped index keep the level, category, Beginner skewer kind and list page
+selected when the protected catalog refreshes. Removing the sole exercise
+leaves that level's empty state visible. Cancelling removal keeps the current
+selection. The **Bài đã bỏ** and **Bài đã chuyển** history panels have
 been removed from shared practice pages. Removal, level changes, transfers and
 resets show a confirmation naming the exercise and requested change before
 saving. Cancelling sends no mutation. A moved exercise still offers **Trả về
@@ -51,7 +52,7 @@ Collection builders can regenerate their source JSON without erasing these
 manual exclusions or level choices. Interactive practice and WorksheetBuilder
 consume the same adjusted protected catalogs, so counts, eligible levels,
 solutions and exclusions agree. Previously downloaded PDFs remain unchanged.
-Empty levels and topics with removed positions retain all six level controls.
+Empty levels and topics with removed positions retain all nine level controls.
 Saved decisions and history remain in the overlay; the protected API retains
 restoration support, but there is no removed-position list or restore button on
 the practice page.
@@ -75,15 +76,15 @@ apply to additions and changes to chess content.
 ## Validation
 
 - `node --test scripts/test-practice-management.cjs`: move/remove/restore/reset,
-  all six levels, unchanged solutions, history, identity, scope isolation,
+  all nine levels, unchanged solutions, history, identity, scope isolation,
   access/production guards, signed references, stale writes, lock/error safety,
   real Discovery API subcategories and worksheet eligibility, manual generic
   topics, and Draw aliases including empty recovery.
 - Shared manual authoring, practice access, level, worksheet, mate alternative
   and exploration regression suites; `node scripts/audit-worksheet-copy.cjs`.
 - `node --test scripts/test-practice-management-controls.cjs`: cancellation
-  prevents writes and navigation; confirmed removal, level changes, transfers
-  and resets retain the signed request and destination details.
+  prevents writes and refreshes. Confirmed removal, level changes, transfers,
+  resets and solution saves refresh in place and retain the signed request.
 - TypeScript, ESLint and production build.
 - Browser: confirm the history panels are absent, open the management dialog,
   cancel a removal confirmation and verify the exercise remains. Check desktop
@@ -93,15 +94,16 @@ apply to additions and changes to chess content.
 
 **Chủ đề đích** in **Quản lý bài tập** selects the destination page. Pick its
 level and choose **Chuyển bài tập**. Keeping the current topic instead offers
-**Chuyển cấp độ**. Every destination uses Beginner, A, B, C, C*, D; this is the
-owner's manual classification, with no automatic motif or difficulty claim.
+**Chuyển cấp độ**. Destination topics follow the same teaching sequence as the
+worksheet builder. Every destination uses Beginner, A, B, C, C*, D, D*, E, E*. This is
+the owner's manual classification, with no automatic motif or difficulty claim.
 
 A transfer removes the exercise from its current page and inserts it at the
 selected topic/level in one atomic overlay update. Its original identity stays
 stable across further moves. **Trả về chủ đề và cấp độ ban đầu** on the
 destination returns it after confirmation. Removing a transferred exercise hides
 it from its current topic; a later API restoration keeps that topic and level.
-Empty source topics retain all six levels. Practice pages do not display removed
+Empty source topics retain all nine levels. Practice pages do not display removed
 or transferred history lists.
 
 The decision's optional `destinationScope` records the current topic. New source
@@ -178,7 +180,8 @@ both sides, rewind to a move and play a different reply to add a branch. For
 example, a king move can be recorded as a separate defence alongside a queen
 interposition. Continue each branch through the intended teaching payoff.
 Choose **OK** to keep the lines in the draft, then **Lưu lời giải** to persist
-them. Closing, Escape or **Hủy** discards unsaved edits; cancelling the recorder
+them. The current exercise refreshes and the confirmation offers a direct link.
+Closing, Escape or **Hủy** discards unsaved edits; cancelling the recorder
 leaves the editor's previous draft intact. An optional common explanation can
 also be changed. No source-game moves are rewritten.
 

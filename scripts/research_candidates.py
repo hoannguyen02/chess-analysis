@@ -7,6 +7,7 @@ import chess
 
 from tactic_research import ROOT, digest
 from research_index import disposition, master_credential
+from tactics_catalog import PRACTICE_LEVELS, matches_current_level
 
 SOURCE_FIELDS = ('gameFen', 'gameMoves', 'headers', 'source', 'sourceReferences', 'masterCredential')
 STAGES = {'incomplete': 0, 'geometry': 1, 'tail': 1, 'withheld': 2, 'saved': 3, 'screened': 4}
@@ -55,17 +56,28 @@ def candidate_id(topic, record):
 
 
 def aspects(record):
-    if not record.get('moves') or 'discoveryPly' not in record:
+    if not record.get('moves') or not any(key in record for key in ('discoveryPly','forkPly')):
         return []
+    fork = 'forkPly' in record
+    ply = record['forkPly'] if fork else record['discoveryPly']
     board = chess.Board(record['fen'])
-    for san in record['moves'][:record['discoveryPly']]:
+    for san in record['moves'][:ply]:
         board.push_san(san)
-    move = board.parse_san(record['moves'][record['discoveryPly']])
+    move = board.parse_san(record['moves'][ply])
     piece = board.piece_at(move.from_square)
-    slider = board.piece_at(chess.parse_square(record['sliderSquare']))
-    found = [f'mover-{piece.symbol().upper()}', f'slider-{slider.symbol().upper()}',
-             record['kind'], 'capture' if board.is_capture(move) else 'quiet',
+    found = [f'mover-{piece.symbol().upper()}', 'capture' if board.is_capture(move) else 'quiet',
              'white' if board.turn else 'black']
+    if fork:
+        found.append('fork')
+        for square in record.get('targets', []):
+            target = board.piece_at(chess.parse_square(square))
+            if target:
+                found.append(f'target-{target.symbol().upper()}')
+        if record.get('sacrifices'):
+            found.append('recorded-sacrifice')
+    else:
+        slider = board.piece_at(chess.parse_square(record['sliderSquare']))
+        found.extend((f'slider-{slider.symbol().upper()}', record['kind']))
     if piece.piece_type == chess.PAWN:
         found.append('pawn-capture' if board.is_capture(move) else
                      'pawn-two-square' if abs(move.to_square - move.from_square) == 16 else 'pawn-one-square')
@@ -76,9 +88,26 @@ def aspects(record):
     if move.promotion:
         found.append('promotion')
     board.push(move)
+    if fork:
+        found.append('check' if board.is_check() else 'non-check')
     if len(board.checkers()) > 1:
         found.append('double-check')
-    return sorted(found)
+    return sorted(set(found))
+
+
+def refresh_aspects(db, topic):
+    """Re-tag stored lines, without replaying complete games or changing outcomes."""
+    initialize(db)
+    rows = db.execute('SELECT candidate_id,record,aspects FROM research_candidate_positions WHERE topic=?',
+                      (topic,)).fetchall()
+    changed = []
+    for ident, raw, old in rows:
+        new = json.dumps(aspects(json.loads(raw)))
+        if new != old:
+            changed.append((new, ident))
+    with db:
+        db.executemany('UPDATE research_candidate_positions SET aspects=? WHERE candidate_id=?', changed)
+    return {'examined': len(rows), 'updated': len(changed), 'sourceGamesReplayed': 0}
 
 
 def enrich(db, record):
@@ -155,11 +184,12 @@ def import_candidates(db, records, topic='discovery', origin='explicit-import', 
     return {'input': len(records), 'stored': count, 'stage': stage, 'publicationApproved': False}
 
 
-def bootstrap_candidates(db, paths=None):
+def bootstrap_candidates(db, paths=None, topic='discovery'):
     """Import known saved leads once; full-game tactical review still follows lookup."""
     import hashlib
+    from research_run import SOURCE_LEVELS
     initialize(db)
-    paths = paths if paths is not None else sorted((ROOT / 'scripts/fixtures/discovery').glob('*.json'))
+    paths = paths if paths is not None else sorted((ROOT / f'scripts/fixtures/{topic}').glob('*.json'))
     imported = skipped = files = 0
     for value in paths:
         path = Path(value)
@@ -173,12 +203,13 @@ def bootstrap_candidates(db, paths=None):
         if not isinstance(data, dict):
             continue
         records = data.get('records', data.get('candidates', []))
-        records = [r for r in records if isinstance(r, dict) and r.get('level') in ('A', 'B', 'C', 'C*', 'D')]
+        levels = PRACTICE_LEVELS if 'Beginner' in SOURCE_LEVELS.get(topic, ()) else PRACTICE_LEVELS[1:]
+        records = [r for r in records if isinstance(r, dict) and r.get('level') in levels]
         if not records:
             continue
         flags = {r['gameId']: r.get('flags', []) for r in data.get('results', [])}
         with db:
-            count = _insert(db, records, 'discovery', path, 'saved', 'tactics', flags)
+            count = _insert(db, records, topic, path, 'saved', 'tactics', flags)
             db.execute('INSERT OR REPLACE INTO research_candidate_imports VALUES (?,?,?)',
                        (str(path.resolve()), sha, count))
         imported += count
@@ -189,7 +220,8 @@ def bootstrap_candidates(db, paths=None):
 
 def query_candidates(db, topic, levels, limit=0, recheck=False, include_geometry=False,
                      phase=None, include_withheld=False, aspect_filters=None, exclude_ids=(),
-                     exclude_game_ids=()):
+                     exclude_game_ids=(), distinct_games=True, memory_mode='reuse', memory_policy=None,
+                     published_positions=None):
     """Lazily interleave per-level shortlists, applying current decisions late.
 
     A limit bounds decoded records, rather than fetching/parsing the entire
@@ -197,6 +229,16 @@ def query_candidates(db, topic, levels, limit=0, recheck=False, include_geometry
     records are found, so owner/exclusion checks cannot be bypassed for speed.
     """
     initialize(db)
+    from research_memory import (initialize as init_memory, current_policy, assessment, ready_candidate_ids,
+                                 rule_versions, scoped_policy, HOLD, READY)
+    init_memory(db)
+    if memory_mode not in ('reuse','stale','force'):
+        raise ValueError('Unknown research memory mode')
+    current = memory_policy
+    has_memory = db.execute('SELECT 1 FROM research_assessments WHERE topic=? LIMIT 1', (topic,)).fetchone()
+    if current is None and has_memory:
+        current = current_policy(topic)
+    versions = rule_versions(topic) if current else {}
     started = time.perf_counter()
     levels = list(dict.fromkeys(levels))
     if not levels or limit < 0:
@@ -204,7 +246,7 @@ def query_candidates(db, topic, levels, limit=0, recheck=False, include_geometry
     stages = ['screened', 'saved']
     if include_geometry:
         stages += ['geometry', 'tail']
-    if include_withheld:
+    if include_withheld or memory_mode in ('stale','force'):
         stages.append('withheld')
     protected = set() if recheck else {row[0] for row in db.execute(
         "SELECT game_id FROM research_decisions WHERE topic=? AND (status IN ('approved','manual','removed','transferred') OR level='*')",
@@ -214,14 +256,18 @@ def query_candidates(db, topic, levels, limit=0, recheck=False, include_geometry
     wanted_aspects = set(aspect_filters or [])
     excluded, excluded_games = set(exclude_ids), set(exclude_game_ids)
     examined = 0
+    memory_skips = 0
     current_detector = None
     if include_geometry:
         from research_collection import detector_version
         current_detector = detector_version()
     def eligible(level):
-        nonlocal examined
-        seen_games, seen_positions = set(), set()
-        for stage in stages:
+        nonlocal examined, memory_skips
+        seen_games, seen_positions, seen_ids = set(), set(), set()
+        scope = scoped_policy(current, versions, level)
+        preferred = ready_candidate_ids(db, topic, level, scope) if memory_mode == 'reuse' else []
+        searches = [(stage, ident) for ident in preferred for stage in stages] + [(stage, None) for stage in stages]
+        for stage, wanted in searches:
             where, params = 'p.topic=? AND p.level=? AND p.stage=?', [topic, level, stage]
             if stage == 'tail' and phase == 'tails':
                 params[1] = '*'
@@ -231,29 +277,56 @@ def query_candidates(db, topic, levels, limit=0, recheck=False, include_geometry
             if phase:
                 where += ' AND p.phase=?'
                 params.append(phase)
+            if wanted:
+                where += ' AND p.candidate_id=?'
+                params.append(wanted)
             cursor = db.execute('SELECT p.candidate_id,p.game_id,p.level,p.record,s.payload,p.stage,p.flags,p.aspects '
                                 'FROM research_candidate_positions p JOIN research_candidate_sources s USING(source_key) '
                                 f'WHERE {where} ORDER BY p.game_id,p.candidate_id', params)
             try:
                 for ident, game_id, actual_level, raw, source, actual_stage, flags, tags in cursor:
+                    if ident in seen_ids:
+                        continue
                     examined += 1
                     if ident in excluded or game_id in excluded_games or game_id in protected or game_id in owner:
                         skipped.append({'candidateId': ident, 'gameId': game_id, 'reason': 'Saved or current source-game decision'})
                         continue
-                    if game_id in seen_games:
+                    if distinct_games and game_id in seen_games:
                         continue
                     if wanted_aspects and not wanted_aspects.intersection(json.loads(tags)):
                         continue
                     record = {**json.loads(raw), **json.loads(source)}
+                    if published_positions is not None:
+                        from research_positions import overlaps
+                        matches = overlaps(published_positions, topic, record['fen'])
+                        if matches:
+                            skipped.append({'candidateId': ident, 'gameId': game_id,
+                                            'reason': 'Cross-topic published position', 'matches': matches})
+                            continue
+                    if memory_mode == 'reuse' and not matches_current_level(record):
+                        skipped.append({'candidateId': ident, 'gameId': game_id,
+                                        'reason': 'Lead does not match the current level rules'})
+                        continue
                     old = disposition(db, topic, {**record, 'level': level})
                     if old and (not recheck or old['status'] in ('removed', 'transferred', 'manual')):
                         skipped.append({'candidateId': ident, 'gameId': game_id, 'reason': old})
                         continue
+                    prior = assessment(db, topic, record, scope) if scope else None
+                    if wanted and (not prior or prior['status'] not in READY):
+                        continue  # Same legacy ID may now contain a changed record.
+                    if prior and prior['status'] in HOLD and memory_mode != 'force':
+                        memory_skips += 1
+                        skipped.append({'candidateId': ident, 'gameId': game_id, 'reason': prior})
+                        continue
+                    if memory_mode == 'stale' and (prior or not db.execute(
+                            'SELECT 1 FROM research_assessments WHERE topic=? AND level=? AND revision=? LIMIT 1',
+                            (topic, level, digest(record))).fetchone()):
+                        continue
                     key = ' '.join(record['fen'].split()[:4])
                     if key in seen_positions:
                         continue
-                    seen_games.add(game_id); seen_positions.add(key)
-                    yield record, actual_stage, ident, json.loads(flags)
+                    seen_games.add(game_id); seen_positions.add(key); seen_ids.add(ident)
+                    yield record, actual_stage, ident, json.loads(flags), prior
             finally:
                 cursor.close()
     generators = {level: eligible(level) for level in levels}
@@ -272,6 +345,8 @@ def query_candidates(db, topic, levels, limit=0, recheck=False, include_geometry
             generator.close()
     return {'records': [row[0] for row in selected], 'candidateStages': [row[1] for row in selected],
             'candidateIds': [row[2] for row in selected], 'flags': [row[3] for row in selected],
+            'assessments': [row[4] for row in selected],
             'skipped': skipped, 'metrics': {'lookupSeconds': time.perf_counter() - started,
-                'rowsExamined': examined, 'eligiblePositions': len(selected), 'sourceGamesReplayed': 0},
+                'rowsExamined': examined, 'eligiblePositions': len(selected), 'sourceGamesReplayed': 0,
+                'memorySkipped': memory_skips, 'memoryReady': sum(bool(row[4]) and row[4]['status'] in READY for row in selected)},
             'publicationApproved': False}

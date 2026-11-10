@@ -83,7 +83,8 @@ decisions rather than mirrored positions or a mechanical cross-product.
 - At Beginner, prioritize few pieces and a direct material payoff without a
   sacrifice or lengthy calculation. At A use direct play; B may add short
   preparation. C requires a simple sacrifice, C* longer non-sacrificial
-  calculation, and D complex sacrifices and more than three solver moves.
+  calculation. Complex sacrificial combinations use D for four or five solver
+  moves and E for six or more, after verifying the required depth.
 
 ## Candidate review record
 
@@ -210,7 +211,7 @@ continuations independently before using any candidate.
 
 `/removing-defender` now uses the shared practice interface and protected
 exercise and game-source endpoints. The protected worksheet catalog registers
-the same exercise endpoint. The six levels remain visible with their actual counts. There are four printable
+the same exercise endpoint. All nine levels remain visible with their actual counts. There are four printable
 Beginner exercises and thirty-one printable original-game exercises. Game replay and
 worksheet generation with actual examples, and a broader verifier for unsaved material-winning alternatives remain to be
 completed before publishing exercises outside the narrow case described below. The empty page is an incomplete implementation,

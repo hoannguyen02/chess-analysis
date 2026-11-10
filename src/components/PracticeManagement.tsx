@@ -1,5 +1,4 @@
-import { useEffect, useId, useRef, useState } from 'react';
-import { useRouter } from 'next/router';
+import { useContext, useEffect, useId, useRef, useState } from 'react';
 import type { DrawExercise } from '@/lib/chess/draw-practice';
 import { practiceLevels, type PracticeLevel } from '@/lib/chess/draw-levels';
 import {
@@ -10,6 +9,11 @@ import { practiceAccessHeaders } from '@/lib/practice-access';
 import styles from '@/styles/SavedGames.module.css';
 import { FiMoreHorizontal, FiX } from 'react-icons/fi';
 import PracticeSolutionEditor from './PracticeSolutionEditor';
+import PracticeTopicSelect from './PracticeTopicSelect';
+import {
+  PracticeCatalogRefresh,
+  type PracticeSaveNotice,
+} from './PracticeSaveFeedback';
 
 async function changePractice(body: object) {
   const response = await fetch('/api/practice-management', {
@@ -25,13 +29,13 @@ async function changePractice(body: object) {
 export function ExerciseManagementControl({
   exercise,
   onEditPosition,
-  removalReturnHref,
+  onSaved,
 }: {
   exercise: DrawExercise;
   onEditPosition?: () => void;
-  removalReturnHref?: string;
+  onSaved: (notice: PracticeSaveNotice) => void;
 }) {
-  const router = useRouter();
+  const refreshCatalog = useContext(PracticeCatalogRefresh);
   const [open, setOpen] = useState(false);
   const [editingSolution, setEditingSolution] = useState(false);
   const [level, setLevel] = useState<PracticeLevel>(
@@ -42,12 +46,19 @@ export function ExerciseManagementControl({
   const [error, setError] = useState('');
   const management = exercise.management;
   const currentScope = management?.currentScope ?? management?.scope ?? '';
+  const currentLevel = exercise.beginner
+    ? 'Beginner'
+    : exercise.difficulty?.level;
   const [destinationScope, setDestinationScope] = useState(currentScope);
   const [topics, setTopics] = useState<{ scope: string; label: string }[]>([]);
   const dialogRef = useRef<HTMLDialogElement>(null);
   const triggerRef = useRef<HTMLButtonElement>(null);
   const editSolutionRef = useRef<HTMLButtonElement>(null);
   const dialogId = useId();
+  useEffect(() => {
+    setLevel(currentLevel ?? 'A');
+    setDestinationScope(currentScope);
+  }, [currentLevel, currentScope]);
   useEffect(() => {
     const dialog = dialogRef.current;
     if (!open || !dialog) return;
@@ -84,9 +95,11 @@ export function ExerciseManagementControl({
     return () => controller.abort();
   }, [open, management]);
   if (!management?.writable) return null;
-  const currentLevel = exercise.beginner
-    ? 'Beginner'
-    : exercise.difficulty?.level;
+  function finish(notice: PracticeSaveNotice) {
+    setOpen(false);
+    onSaved(notice);
+    refreshCatalog();
+  }
   async function saveSolution(solution: PracticeSolution | null) {
     if (!management) return;
     const href = await changePractice({
@@ -99,9 +112,10 @@ export function ExerciseManagementControl({
       solution,
       note: '',
     });
-    if (router.asPath.replace(/^\/(?:vi|en)(?=\/)/, '') === href)
-      router.reload();
-    else await router.replace(href);
+    finish({
+      message: solution ? 'Đã lưu lời giải.' : 'Đã khôi phục lời giải ban đầu.',
+      href,
+    });
   }
   async function change(action: 'move' | 'remove' | 'reset') {
     if (!management || busy) return;
@@ -123,7 +137,7 @@ export function ExerciseManagementControl({
     setBusy(true);
     setError('');
     try {
-      const savedHref = await changePractice({
+      const href = await changePractice({
         id: management.id,
         scope: management.scope,
         expectedUpdatedAt: management.updatedAt,
@@ -134,19 +148,23 @@ export function ExerciseManagementControl({
         destinationScope,
         note,
       });
-      const href =
-        action === 'remove' && removalReturnHref
-          ? removalReturnHref
-          : savedHref;
-      if (
-        router.asPath.replace(/^\/(?:vi|en)(?=\/)/, '') ===
-        href.replace(/^\/(?:vi|en)(?=\/)/, '')
-      )
-        router.reload();
-      else
-        await router.replace(href, undefined, { scroll: action !== 'remove' });
+      finish(
+        action === 'remove'
+          ? { message: 'Đã bỏ bài khỏi danh sách luyện tập.' }
+          : {
+              message:
+                action === 'reset'
+                  ? 'Đã trả bài về chủ đề và cấp độ ban đầu.'
+                  : destinationScope === currentScope
+                    ? `Đã chuyển bài sang cấp độ ${level}.`
+                    : `Đã chuyển bài sang “${destination?.label ?? 'Chủ đề đích'}”, cấp độ ${level}.`,
+              href,
+            }
+      );
+      setNote('');
     } catch (e) {
       setError((e as Error).message);
+    } finally {
       setBusy(false);
     }
   }
@@ -221,8 +239,10 @@ export function ExerciseManagementControl({
                       type="button"
                       disabled={busy}
                       onClick={() => {
-                        if (onEditPosition) onEditPosition();
-                        else setEditingSolution(true);
+                        if (onEditPosition) {
+                          setOpen(false);
+                          onEditPosition();
+                        } else setEditingSolution(true);
                       }}
                     >
                       Chỉnh sửa lời giải / phương án
@@ -240,25 +260,19 @@ export function ExerciseManagementControl({
                 <div
                   className={`${styles.actions} ${styles.managementLevelRow}`}
                 >
-                  <label className={styles.managementTopic}>
-                    Chủ đề đích
-                    <select
-                      value={destinationScope}
-                      disabled={busy || !topics.length}
-                      onChange={(event) =>
-                        setDestinationScope(event.target.value)
-                      }
-                    >
-                      {!topics.length && (
-                        <option value={currentScope}>Đang tải chủ đề…</option>
-                      )}
-                      {topics.map((topic) => (
-                        <option key={topic.scope} value={topic.scope}>
-                          {topic.label}
-                        </option>
-                      ))}
-                    </select>
-                  </label>
+                  <PracticeTopicSelect
+                    label="Chủ đề đích"
+                    className={styles.managementTopic}
+                    value={destinationScope}
+                    options={topics.map(({ scope, label }) => ({
+                      value: scope,
+                      label,
+                      scope,
+                    }))}
+                    disabled={busy || !topics.length}
+                    placeholder={topics.length ? undefined : 'Đang tải chủ đề…'}
+                    onChange={setDestinationScope}
+                  />
                   <label>
                     Cấp độ của bài
                     <select
@@ -320,8 +334,14 @@ export function ExerciseManagementControl({
                 {error && (
                   <p role="alert">
                     {error}{' '}
-                    <button type="button" onClick={() => router.reload()}>
-                      Tải lại trang
+                    <button
+                      type="button"
+                      onClick={() => {
+                        setOpen(false);
+                        refreshCatalog();
+                      }}
+                    >
+                      Tải lại danh sách
                     </button>
                   </p>
                 )}

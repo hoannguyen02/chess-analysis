@@ -96,7 +96,7 @@ function comparable(fen) {
 }
 function checkPosition(position) {
   const { entry } = position;
-  assert.ok(['B', 'C', 'C*', 'D'].includes(entry.beginnerSourceLevel));
+  assert.ok(['B', 'C', 'C*', 'D', 'D*', 'E', 'E*'].includes(entry.beginnerSourceLevel));
   assert.equal(entry.level, 'Beginner');
   assert.deepEqual(entry.moves, []);
   assert.deepEqual(entry.alternativeLines, []);
@@ -199,6 +199,7 @@ function samples() {
     exercise('Source C*', ['c4', 'e5'], ['Nc3', 'Nf6', 'g3'], 'C*'),
     exercise('Source D', ['Nf3', 'Nf6'], ['g3', 'g6', 'Bg2'], 'D'),
     exercise('Source A', ['a3', 'a6'], ['h3', 'h6', 'Nf3'], 'A'),
+    exercise('Source D*', ['d3', 'd6'], ['Nf3', 'Nf6', 'g3'], 'D*'),
     exercise(
       'Needs owner anchor',
       ['g3', 'g6'],
@@ -270,9 +271,9 @@ test('a future registered topic uses conventional files and explicit anchors wit
       label: 'Future weave',
       scope: '/future-weave',
     });
-    assert.equal(result.candidates.length, 5);
+    assert.equal(result.candidates.length, 6);
     assert.equal(result.existingCount, 0);
-    assert.equal(result.suggestedCount, 4);
+    assert.equal(result.suggestedCount, 5);
     assert.equal(result.diagnostics.missingGoal, 1);
     assert.equal(result.writable, true);
     for (const candidate of result.candidates) {
@@ -283,6 +284,10 @@ test('a future registered topic uses conventional files and explicit anchors wit
       assert.ok(source);
       for (const position of candidate.positions) {
         checkPosition(position);
+        assert.equal(
+          position.entry.beginnerSourceLevel,
+          source.difficulty.level
+        );
         const board = new chess.Chess(source.fen);
         for (const san of source.moves.slice(0, position.ply)) board.move(san);
         assert.equal(position.entry.fen, board.fen());
@@ -296,6 +301,9 @@ test('a future registered topic uses conventional files and explicit anchors wit
         assert.equal(candidate.entry.fen, atMarker(source));
       }
     }
+    assert.ok(
+      result.candidates.some((candidate) => candidate.sourceTitle === 'Source D*')
+    );
     await assert.rejects(() =>
       f
         .load('src/lib/server/beginner-tactic-candidates.ts')

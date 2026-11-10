@@ -12,18 +12,23 @@ permission to publish an unverified exercise. An omitted level is outside this
 initial teaching plan, not a claim that no suitable chess position could ever
 exist. Revisit the assessment with a specific reviewed example when needed.
 Existing approved exercises retain their grades and publication status.
+New verified Beginner exercises use at most 10 pieces and one sound move
+that meets the topic's objective. Historical suitability entries guide
+research. [One-move Beginner requirements](beginner-one-move-game-requirements.md)
 
-All six navigation choices remain Beginner, A, B, C, C*, D, with actual counts;
-the target remains 24 verified positions per level where suitable. This metadata
-must not hide tabs, create counts or infer an exercise's grade. Missing `levels`
-means unassessed, never all levels; a present array must be nonempty, unique and
-in that exact order. Parent suitability is not inherited by a child.
+All nine navigation choices remain Beginner, A, B, C, C*, D, D*, E, E*, with actual counts.
+The target remains 24 verified positions per researched level where suitable.
+The owner fills Beginner on new tactics pages through the shared UI, so the
+level may start at zero. This metadata must not hide tabs, create counts or
+infer an exercise's grade. Missing `levels` means unassessed, never all levels.
+A present array must be nonempty, unique and in that exact order. Parent
+suitability is not inherited by a child.
 
 For each candidate, assess the full solution, shorter alternatives, relevant
 defensive replies, material recovery and sacrifices under the existing research
-and publication requirements. Beginner/A/B/C* have no voluntary sacrifice;
-C needs a simple sacrifice; D needs complex sacrificial coordination and more
-than three solver moves. An unavoidable loss by a doomed piece is not by itself
+and publication requirements. Beginner, A, B, C*, D* and E* have no voluntary sacrifice. C needs a simple
+sacrifice. D and E need complex sacrificial coordination in 4–5 and 6+ solver
+moves respectively. An unavoidable loss by a doomed piece is not by itself
 a new voluntary sacrifice. An equal exchange is not a sacrifice.
 
 Beginner promotion choices that require avoiding stalemate remain excluded from
@@ -45,7 +50,7 @@ editorial planning decisions, not new tactical-verification certificates.
 | `discoveredCheck` | Beginner, A, B, C, C*, D | An elementary discovered check can gain material visibly; longer preparations and sacrifices add difficulty. |
 | `capturingDefender` | Beginner, A, B, C, C*, D | A safe direct capture can remove a real defender; later positions require exchanges, calculation or sacrifices. |
 | `doubleCheck` | Beginner, A, B, C, C*, D | A sparse direct double-check position can show the payoff; preparations and mating combinations extend the motif. |
-| `hangingPiece` | Beginner, A, B, C* | Plan direct safe captures, short safety checks and deeper non-sacrificial exploitation; do not add sacrificial cases without a specific motif review. |
+| `hangingPiece` | Beginner, A, B, C*, D* | Plan direct safe captures, short safety checks and deeper non-sacrificial exploitation; do not add sacrificial cases without a specific motif review. |
 | `trappedPiece` | Beginner, A, B, C, C*, D | A single simple escape restriction can trap a piece; deeper escape analysis and sacrifices extend the task. |
 | `attraction` | A, B, C, C*, D | Introduce a short non-sacrificial lure or equal exchange before sacrificial and longer versions; reply comparison exceeds the initial Beginner scope. |
 | `deflection` | Beginner, A, B, C, C*, D | A safe direct threat can drive a defender from its duty; exchanges and sacrifices extend the mechanism. |
@@ -57,7 +62,7 @@ editorial planning decisions, not new tactical-verification certificates.
 | `defensiveMove` | Beginner, A, B, C, C*, D | A direct protective or active defensive move can be elementary; full defensive combinations can include sacrifice and deeper calculation. |
 | `zugzwang` | A, B, C, C*, D | Compare the opponent's legal moves and the effect of losing a tempo; use short examples before deeper or sacrificial preparations. |
 | `quietMove` | A, B, C, C*, D | The hidden follow-up needs anticipation beyond a direct Beginner payoff; quiet moves can prepare both non-sacrificial and sacrificial combinations. |
-| `sacrifice` | C, D | Giving up material is the defining lesson; use simple purposeful sacrifices at C and complex coordination beyond three solver moves at D. |
+| `sacrifice` | C, D | Giving up material is the defining lesson; use simple purposeful sacrifices at C and complex coordination in four or five solver moves at D. |
 | `attackingF2F7` | Beginner, A, B, C, C*, D | A direct vulnerable-square attack can be simple; combinations around the same target can require preparation or sacrifice. |
 | `exposedKing` | Beginner, A, B, C, C*, D | A direct mating or material threat against an exposed King can be isolated; longer attacks and sacrifices remain possible. |
 | `collinearMove` | A, B, C, C*, D | Sliding along an opposing line requires checking captures and tactics; introduce directly at A, then add coordination or sacrifices. |
@@ -72,10 +77,10 @@ editorial planning decisions, not new tactical-verification certificates.
 | `queenMate` | Beginner, A, B, C, C*, D | Direct Queen mating positions can be elementary; the route to the mating position can include preparation and sacrifices. |
 | `queenRookMate` | Beginner, A, B, C, C*, D | An elementary Queen/Rook mate can be isolated; later cases require coordination, line opening or sacrifice. |
 | `rookBishopMate` | Beginner, A, B, C, C*, D | A direct Rook/Bishop pattern can be sparse and visible; more complex preparation and sacrifices can create it. |
-| `mateIn1` | Beginner, A | One solver move can be elementary or require wider board vision; it has no preparation or material sacrifice within the solution. |
-| `mateIn2` | Beginner, A, B, C | Sparse two-move mates can be introductory; a short preparation or simple first-move sacrifice fits B/C. Two solver moves cannot meet D. |
+| `mateIn1` | Beginner, A, B | A direct mating check fits A. Coordination that changes the choice of checking move fits B. Each exercise still ends after one move. |
+| `mateIn2` | Beginner, A, B, C | The initial plan included sparse two-move mates. Use the one-move requirements for new Beginner work and keep full two-move decisions at the suitable later levels. |
 | `mateIn3` | A, B, C | Plan direct familiar patterns, short coordination or a simple sacrifice; do not infer advanced difficulty solely from three solver moves. |
-| `mateIn4` | B, C, C*, D | Plan coordinated examples and deeper non-sacrificial or sacrificial tasks; D additionally needs complex sacrifice and more than three solver moves. |
+| `mateIn4` | B, C, C*, D | Plan coordinated examples and deeper non-sacrificial or sacrificial tasks; D additionally needs complex sacrifice within four or five solver moves. |
 | `mateIn5` | B, C, C*, D | A long forcing line can still involve simple coordination; C*, C and D require their own calculation and sacrifice criteria. |
 | `blindSwineMate` | Beginner, A, B, C, C*, D | Direct two-Rook confinement can be isolated; preparation and sacrifices can establish the pattern in advanced tasks. |
 | `operaMate` | Beginner, A, B, C, C*, D | A direct supported Rook mate is visible with few pieces; line opening and sacrifices can precede it. |

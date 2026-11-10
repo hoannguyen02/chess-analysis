@@ -7,10 +7,13 @@ import type { DrawExercise } from '@/lib/chess/draw-practice';
 import {
   explorationPosition,
   exploreMove,
+  parsePracticeVariation,
+  recordingPosition,
   recordVariationMove,
   recordedVariationLines,
   MAX_RECORDED_VARIATIONS,
   MAX_VARIATION_PLIES,
+  variationEndLabels,
 } from '@/lib/chess/practice-exploration';
 import styles from '@/styles/ChessPractice.module.css';
 import type { Square } from 'chess.js';
@@ -74,11 +77,24 @@ export default function PracticeExploration({
   const closeRef = useRef<HTMLButtonElement>(null);
   const [width, setWidth] = useState(360);
   const branch = branches[branchIndex];
-  const game = useMemo(
-    () => explorationPosition(fen, branch, ply),
-    [fen, branch, ply]
+  const { game, ended } = useMemo(
+    () =>
+      recording
+        ? recordingPosition(fen, branch, ply)
+        : {
+            game: explorationPosition(fen, branch, ply),
+            ended: null,
+          },
+    [fen, branch, ply, recording]
   );
-  const terminal = game.in_checkmate() || game.in_stalemate();
+  const endReason = recording
+    ? ended?.reason
+    : game.in_checkmate()
+      ? 'checkmate'
+      : game.in_stalemate()
+        ? 'stalemate'
+        : undefined;
+  const terminal = endReason !== undefined;
   const displayedFen = showPrevious && previous ? previous.fen : game.fen();
   useEffect(() => {
     closeRef.current?.focus({ preventScroll: true });
@@ -116,7 +132,9 @@ export default function PracticeExploration({
             ? `Đã có ${MAX_RECORDED_VARIATIONS} phương án. Xóa một phương án trước khi ghi thêm.`
             : result.status === 'move-limit'
               ? `Mỗi phương án có tối đa ${MAX_VARIATION_PLIES} nửa nước.`
-              : 'Nước đi không hợp lệ. Hãy chọn quân để xem các ô có thể đi.'
+              : result.status === 'ended'
+                ? `${variationEndLabels[result.reason]}.`
+                : 'Nước đi không hợp lệ. Hãy chọn quân để xem các ô có thể đi.'
         );
         return false;
       }
@@ -193,12 +211,22 @@ export default function PracticeExploration({
   const startsBlack = fen.split(' ')[1] === 'b';
   const label = (index: number) =>
     `${startNumber + Math.floor((index + (startsBlack ? 1 : 0)) / 2)}${fullMoves[index].color === 'w' ? '.' : '…'} ${fullMoves[index].san}`;
-  const status = game.in_checkmate()
-    ? 'Chiếu hết.'
-    : game.in_stalemate()
-      ? 'Hòa do hết nước đi (pat).'
-      : `${game.turn() === 'w' ? 'Trắng' : 'Đen'} đi${game.in_check() ? ' — đang bị chiếu' : ''}.`;
+  const status = endReason
+    ? `${variationEndLabels[endReason]}.`
+    : `${game.turn() === 'w' ? 'Trắng' : 'Đen'} đi${game.in_check() ? ' — đang bị chiếu' : ''}.`;
   const recorded = recordedVariationLines(branches);
+  function confirmRecording() {
+    // An older saved line may contain moves played after an automatic draw.
+    for (const [i, line] of recorded.entries()) {
+      try {
+        parsePracticeVariation(fen, line);
+      } catch (error) {
+        setError(`Phương án ${i + 1}. ${(error as Error).message}`);
+        return;
+      }
+    }
+    onConfirm?.(recorded);
+  }
   const branchName = (i: number) =>
     recording
       ? i === 0
@@ -360,7 +388,7 @@ export default function PracticeExploration({
         </h4>
         <p className={styles.note}>
           {recording
-            ? 'Đi liên tiếp cho cả hai bên. Chọn một nước đã ghi rồi đi nước khác để tạo phương án mới. Phương án cũ vẫn được giữ.'
+            ? 'Đi liên tiếp cho cả hai bên. Chọn một nước đã ghi rồi đi nước khác để tạo phương án mới. Phương án cũ vẫn được giữ. Hộp ghi xử lý hòa tự động theo cách Chess.com Live.'
             : freePlay
               ? 'Đi thử cho cả hai bên để phân tích thế cờ.'
               : 'Đi thử cho cả hai bên. Tiến độ bài tập được giữ nguyên. Bạn có thể bật lại đồng hồ bất cứ lúc nào.'}
@@ -370,7 +398,7 @@ export default function PracticeExploration({
             <button
               type="button"
               disabled={!recorded.length || Boolean(promotion)}
-              onClick={() => onConfirm?.(recorded)}
+              onClick={confirmRecording}
             >
               OK · Giữ {recorded.length} phương án
             </button>
@@ -389,12 +417,21 @@ export default function PracticeExploration({
             : error ||
               (promotion ? 'Chọn quân phong cấp để tiếp tục.' : status)}
         </p>
-        {game.in_threefold_repetition() && (
+        {recording && ended && ply > 0 && (
+          <p className={styles.note}>
+            {ended.ply === 0
+              ? 'Ván đã kết thúc ngay ở thế bắt đầu.'
+              : ended.ply < ply
+                ? `Ván đã kết thúc ở nước ${label(ended.ply - 1)}. Quay lại nước đó rồi chọn “Kết thúc phương án tại đây”.`
+                : 'Quay lại một thế trước đó để ghi phương án khác.'}
+          </p>
+        )}
+        {!recording && game.in_threefold_repetition() && (
           <p className={styles.note}>
             Thế cờ đã xuất hiện ít nhất 3 lần trong nhánh đang thử.
           </p>
         )}
-        {game.insufficient_material() && (
+        {!recording && game.insufficient_material() && (
           <p className={styles.note}>Không đủ lực chiếu hết.</p>
         )}
         <label className={styles.explorationSelect}>

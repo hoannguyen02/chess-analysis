@@ -88,7 +88,9 @@ test('worksheet uses available exercises and does not invent missing positions',
       ? chess
       : id === './worksheet-layout'
         ? load('src/lib/chess/worksheet-layout.ts')
-        : require(id)
+        : id === './draw-levels'
+          ? load('src/lib/chess/draw-levels.ts')
+          : require(id)
   );
   const hub = load('src/lib/server/private-hub.ts');
   const exercises = require('../src/lib/server/removing-defender-exercises.json');

@@ -3,7 +3,7 @@ export const topicGroups = [
     title: 'Cơ bản · Bắt đầu ở đây',
     topics: [
       ['Chiếu hết 1 nước', 'mateIn1'],
-      ['Tấn công quân treo', 'hangingPiece'],
+      ['Bắt quân không được bảo vệ', 'hangingPiece'],
       ['Tấn công đôi', 'fork'],
       ['Đòn ghim', 'pin'],
       ['Chiếu hết hàng ngang cuối', 'backRankMate'],

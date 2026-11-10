@@ -11,6 +11,8 @@ import {
   type PDFPage,
 } from 'pdf-lib';
 import {
+  bookFooterName,
+  defaultBookOptions,
   defaultWorksheetFooter,
   explainLine,
   previousMoveLabel,
@@ -25,6 +27,7 @@ import {
   type WorksheetPage,
 } from './worksheet';
 import { notationExampleText, notationGuideRows } from './worksheet-notation';
+import { practiceGoalLabels } from './practice-goals';
 const levelLabel = (level: WorksheetPage['level']) =>
   level === 'Beginner'
     ? 'Cấp độ Nhập môn / Beginner'
@@ -33,6 +36,8 @@ const coverGreen = rgb(24 / 255, 56 / 255, 47 / 255);
 const coverGold = rgb(246 / 255, 167 / 255, 31 / 255);
 const W = 595.28,
   H = 841.89;
+const bookFooterY = 20;
+const bookFooterFontSize = 9;
 async function asset(path: string) {
   const res = await fetch(path);
   if (!res.ok)
@@ -68,7 +73,7 @@ export async function createWorksheetPdfs(
   book?: WorksheetBookOptions
 ) {
   const fontBytes = await asset('/fonts/DejaVuSans.ttf');
-  const boldBytes = book ? await asset('/fonts/DejaVuSans-Bold.ttf') : null;
+  const boldBytes = await asset('/fonts/DejaVuSans-Bold.ttf');
   const artworkNotice = await asset('/chess-print/NOTICE.txt');
   // Preserve the existing brand symbol’s vector geometry and original colors.
   const logo: {
@@ -105,9 +110,10 @@ export async function createWorksheetPdfs(
   answers.registerFontkit(fontkit);
   const font = await sheet.embedFont(fontBytes, { subset: true }),
     answerFont = await answers.embedFont(fontBytes, { subset: true });
-  const boldFont = boldBytes
-    ? await sheet.embedFont(boldBytes, { subset: true })
-    : undefined;
+  const boldFont = await sheet.embedFont(boldBytes, { subset: true });
+  const answerBoldFont = book
+    ? await answers.embedFont(boldBytes, { subset: true })
+    : answerFont;
   const pieces = await Promise.all(images.map((data) => sheet.embedPng(data)));
   const draw = (
     page: PDFPage,
@@ -251,7 +257,7 @@ export async function createWorksheetPdfs(
     entry.firstNumber ??= first;
     const start = entry.firstNumber;
     entry.detail = [
-      group.review ? '' : levelLabel(group.level),
+      !group.review && includedLevels.length > 1 ? levelLabel(group.level) : '',
       first === undefined
         ? ''
         : `Bài ${start}${String(start) === String(last) ? '' : `-${last}`}`,
@@ -262,12 +268,14 @@ export async function createWorksheetPdfs(
   const answerEntries: ContentsEntry[] = chapterEntries.map(
     ({ title, detail }) => ({ title, detail })
   );
-  const introductionEntry: ContentsEntry = {
-    title: book?.introduction.title.trim() || 'Mở đầu',
-    detail: book?.showLevelGuide
-      ? 'Hệ thống cấp độ và cách luyện tập'
-      : undefined,
-  };
+  const introductionTitle = book?.introduction.title.trim() || 'Mở đầu';
+  const introductionEntry: ContentsEntry = { title: introductionTitle };
+  if (book?.showLevelGuide) {
+    introductionEntry.title =
+      introductionTitle === defaultBookOptions.introduction.title
+        ? 'Hệ thống cấp độ và hướng dẫn luyện tập'
+        : `Hệ thống cấp độ · ${introductionTitle}`;
+  }
   const notationEntry: ContentsEntry = { title: 'Hướng dẫn ký hiệu cờ vua' };
   const closingEntry: ContentsEntry = {
     title: book?.closing.title.trim() || 'Tổng kết',
@@ -380,6 +388,64 @@ export async function createWorksheetPdfs(
   let finishWorksheetContents = () => {};
   let finishAnswerContents = () => {};
   const notationReferences: { page: PDFPage; top: number }[] = [];
+  const contactPhone = footer.phone
+    .trim()
+    .replace(/^(0\d{3})(\d{3})(\d{3})$/, '$1 $2 $3');
+  const drawDocumentInfo = (
+    doc: PDFDocument,
+    pageFont: PDFFont,
+    position?: { page: PDFPage; cursor: number }
+  ) => {
+    if (!book) return;
+    const info = book.compilation;
+    const version = info?.version?.trim();
+    const date = info?.date?.split('-').reverse().join('/');
+    const details = [version && `Phiên bản ${version}`, date]
+      .filter(Boolean)
+      .join(' · ');
+    const copy = [
+      'Biên soạn · Trung tâm Cờ vua LIMA Chess',
+      details,
+      info?.internalOnly ? 'Lưu hành nội bộ' : '',
+    ]
+      .filter(Boolean)
+      .flatMap((line) => lines(line, pageFont, 10, W - 80));
+    const labelFont = doc === sheet ? boldFont : answerBoldFont;
+    const address = footer.address.trim();
+    const contactHeading = contactPhone || address ? 'Liên hệ' : '';
+    const addressLines = lines(address, pageFont, 10, W - 80);
+    const contactGap = contactHeading ? 8 : 0;
+    const bodyLineCount =
+      copy.length + Number(!!contactHeading) + addressLines.length;
+    let page = position?.page;
+    let top = (position?.cursor ?? 0) - 12;
+    if (!page || top - 36 - (bodyLineCount - 1) * 14 - contactGap < 56) {
+      page = doc.addPage([W, H]);
+      drawWatermark(page, pageFont);
+      top = H - 48;
+    }
+    page.drawLine({
+      start: { x: 30, y: top },
+      end: { x: W - 50, y: top },
+      thickness: 0.5,
+      color: rgb(0.6, 0.6, 0.6),
+    });
+    draw(page, 'Thông tin tài liệu', 30, top - 18, 11, labelFont);
+    copy.forEach((line, i) =>
+      draw(page, line, 30, top - 36 - i * 14, 10, pageFont)
+    );
+    if (contactHeading) {
+      const y = top - 36 - copy.length * 14 - contactGap;
+      draw(page, contactHeading, 30, y, 10, labelFont);
+      if (contactPhone) {
+        const x = 30 + labelFont.widthOfTextAtSize(contactHeading, 10);
+        draw(page, ` · ${contactPhone}`, x, y, 10, pageFont);
+      }
+      addressLines.forEach((line, i) =>
+        draw(page, line, 30, y - (i + 1) * 14, 10, pageFont)
+      );
+    }
+  };
   const textSection = (
     doc: PDFDocument,
     pageFont: PDFFont,
@@ -486,14 +552,11 @@ export async function createWorksheetPdfs(
         const description = lines(
           worksheetLevelGuide[level],
           pageFont,
-          colorOpening ? 10 : 9,
+          9,
           W - 240
         );
-        const rowLineHeight = 14;
-        const height = Math.max(
-          colorOpening ? 40 : 36,
-          description.length * rowLineHeight + (colorOpening ? 16 : 14)
-        );
+        const rowLineHeight = 11.5;
+        const height = Math.max(27, description.length * rowLineHeight + 9);
         ensure(height);
         page!.drawRectangle({
           x: 30,
@@ -509,9 +572,9 @@ export async function createWorksheetPdfs(
             ? 'Nhập môn / Beginner'
             : `Cấp độ ${level} / Level ${level}`,
           40,
-          cursor - 17,
+          cursor - 12,
           colorOpening ? 9.5 : 9,
-          included.has(level) ? (boldFont ?? pageFont) : pageFont,
+          included.has(level) ? boldFont : pageFont,
           colorOpening ? coverGreen : undefined
         );
         description.forEach((line, i) =>
@@ -519,8 +582,8 @@ export async function createWorksheetPdfs(
             page!,
             line,
             180,
-            cursor - 17 - i * rowLineHeight,
-            colorOpening ? 10 : 9,
+            cursor - 12 - i * rowLineHeight,
+            9,
             pageFont
           )
         );
@@ -553,7 +616,7 @@ export async function createWorksheetPdfs(
       };
       const subheading = (title: string, height: number) => {
         ensure(height);
-        draw(page!, title, 30, cursor, 12, boldFont ?? pageFont, coverGreen);
+        draw(page!, title, 30, cursor, 12, boldFont, coverGreen);
         cursor -= 24;
       };
       const checkbox = (label: string, x: number, y: number) => {
@@ -602,11 +665,6 @@ export async function createWorksheetPdfs(
         });
         cursor -= 29;
       }
-      const brand = footer.name.trim().replace(/\s+/g, ' ') || 'LIMA Chess';
-      paragraph(
-        `Liên hệ ${brand} để được tư vấn nội dung luyện tập phù hợp.`,
-        9
-      );
     }
     if (openingWithLevels) {
       cursor -= 12;
@@ -635,12 +693,13 @@ export async function createWorksheetPdfs(
         42,
         cursor - 16,
         10,
-        boldFont ?? pageFont,
+        boldFont,
         coverGreen
       );
       notationReferences.push({ page: page!, top: cursor });
       cursor -= height + 18;
     }
+    return { page: page!, cursor };
   };
   const notationGuide = (doc: PDFDocument, pageFont: PDFFont) => {
     let page: PDFPage;
@@ -680,7 +739,7 @@ export async function createWorksheetPdfs(
     start();
     paragraph('Cột / Files: a, b, c, d, e, f, g, h. Hàng / Ranks: 1 đến 8.');
     paragraph(
-      'Nhìn từ phía Trắng: cột a ở bên trái, hàng 1 ở gần nhất. Tên ô = cột + hàng, như e4.'
+      'Nhìn từ phía Trắng: Cột a ở bên trái, hàng 1 ở gần nhất. Tên ô = cột + hàng, như e4.'
     );
     paragraph('Tên ô giữ nguyên khi xoay bàn cờ.');
     cursor! -= 12;
@@ -936,66 +995,133 @@ export async function createWorksheetPdfs(
     const page = sheet.addPage([W, H]);
     chapterEntries[entryByGroup[groupIndex]].target ??= page;
     drawWatermark(page, font);
-    const titleSize = Math.min(15, 535 / font.widthOfTextAtSize(heading, 1));
-    draw(page, heading, 30, H - 24, titleSize);
-    const caption = group.review
-      ? group.title
-      : `${group.title} · ${levelLabel(group.level)}`;
-    // Keep long topic names inside the header, above the first row of boards.
-    const captionLineLimit = book ? 2 : 1;
-    let captionSize = 9;
-    let captionLines = lines(caption, font, captionSize, W - 60);
-    while (captionLines.length > captionLineLimit && captionSize > 0.5) {
-      captionSize -= 0.25;
-      captionLines = lines(caption, font, captionSize, W - 60);
+    const caption = [
+      group.title === heading ? '' : group.title,
+      group.review ? '' : levelLabel(group.level),
+    ]
+      .filter(Boolean)
+      .join(' · ');
+    const headerWidth = W - 60;
+    const captionWidth = font.widthOfTextAtSize(caption.normalize('NFC'), 9);
+    let headerBottom = H - 24;
+    if (
+      font.widthOfTextAtSize(heading.normalize('NFC'), 12) +
+        16 +
+        captionWidth <=
+      headerWidth
+    ) {
+      draw(page, heading, 30, headerBottom, 12);
+      draw(page, caption, W - 30 - captionWidth, headerBottom);
+    } else {
+      const titleSize = Math.min(
+        15,
+        headerWidth / font.widthOfTextAtSize(heading.normalize('NFC'), 1)
+      );
+      draw(page, heading, 30, headerBottom, titleSize);
+      let captionSize = 9;
+      let captionLines = lines(caption, font, captionSize, headerWidth);
+      while (captionLines.length > 2 && captionSize > 0.5) {
+        captionSize -= 0.25;
+        captionLines = lines(caption, font, captionSize, headerWidth);
+      }
+      headerBottom -= 15;
+      captionLines.forEach((line, i) =>
+        draw(page, line, 30, headerBottom - i * 11, captionSize)
+      );
+      headerBottom -= (captionLines.length - 1) * 11;
     }
-    captionLines.forEach((line, i) =>
-      draw(page, line, 30, H - 39 - i * 11, captionSize)
-    );
     if (!book && sheet.getPageCount() === 1) {
+      headerBottom -= 15;
       draw(
         page,
         'Họ tên: .....................................................   Ngày: ........................',
         30,
-        H - 54
+        headerBottom
       );
+      headerBottom -= 14;
       draw(
         page,
         'Ghi phương án hoặc vẽ mũi tên. Với bài nhiều nước, ghi cả nước đi của đối phương.',
         30,
-        H - 68,
+        headerBottom,
         8.5
       );
     }
-    for (let i = 0; i < group.exercises.length; i++) {
-      const { number, exercise: e } = group.exercises[i];
+    const promptSize = 9.5;
+    const previousSize = 8.5;
+    const previousLineHeight = 11;
+    const boardGap = 12;
+    const writingOffsets = [21, 37] as const;
+    const rowGap = 14;
+    const firstPromptY = headerBottom - 23;
+    const positions = group.exercises.map(({ number, exercise: e }) => {
       const b = new Chess(e.fen);
-      const x = 30 + (i % 2) * 277,
-        top = H - 81 - Math.floor(i / 2) * 250;
-      const objective =
-        group.review && e.goal
-          ? {
-              win: 'Giành thế thắng',
-              draw: 'Hòa',
-              checkmate: 'Chiếu hết',
-              material: 'Thắng vật chất',
-            }[e.goal]
-          : '';
-      draw(
-        page,
-        `${number}. ${b.turn() === 'w' ? 'Trắng' : 'Đen'} đi${objective ? ` · ${objective}` : ''}`,
-        x,
-        top,
-        10
+      const objective = group.review && e.goal ? practiceGoalLabels[e.goal] : '';
+      const prompt = [
+        { text: `${number}. `, face: font },
+        { text: `${b.turn() === 'w' ? 'Trắng' : 'Đen'} đi`, face: boldFont },
+        { text: objective ? ` · ${objective}` : '', face: font },
+      ].map(({ text, face }) => ({
+        text,
+        face,
+        width: face.widthOfTextAtSize(text, promptSize),
+      }));
+      const previous = previousMoveLabel(e, 'compact');
+      const promptWidth = prompt.reduce((sum, part) => sum + part.width, 0);
+      const inline = previous ? ` · ${previous}` : '';
+      const fitsInline =
+        promptWidth + font.widthOfTextAtSize(inline, previousSize) <= 255;
+      return {
+        b,
+        prompt,
+        inline: fitsInline ? inline : '',
+        previousLines: fitsInline
+          ? []
+          : lines(previous, font, previousSize, 255),
+      };
+    });
+    // Both boards in a row share the space needed by its longer caption.
+    const rowCaptionHeights: number[] = [];
+    for (let i = 0; i < positions.length; i += 2)
+      rowCaptionHeights.push(
+        Math.max(
+          positions[i].previousLines.length,
+          positions[i + 1]?.previousLines.length ?? 0
+        ) * previousLineHeight
       );
-      const prev = previousMoveLabel(e);
-      if (prev) {
-        const size = Math.min(7, 255 / font.widthOfTextAtSize(prev, 1));
-        draw(page, prev, x, top - 14, size);
+    const rowCount = rowCaptionHeights.length;
+    const rowOverhead = boardGap + writingOffsets[1];
+    const totalOverhead =
+      rowCaptionHeights.reduce((sum, height) => sum + height + rowOverhead, 0) +
+      Math.max(0, rowCount - 1) * rowGap;
+    const minWritingLineY = book ? bookFooterY + bookFooterFontSize + 12 : 32;
+    const boardSize = Math.min(
+      194,
+      (firstPromptY - minWritingLineY - totalOverhead) / Math.max(1, rowCount)
+    );
+    let nextPromptY = firstPromptY;
+    const rowPromptYs = rowCaptionHeights.map((height) => {
+      const y = nextPromptY;
+      nextPromptY -= height + rowOverhead + boardSize + rowGap;
+      return y;
+    });
+    for (const [i, position] of positions.entries()) {
+      const { b, prompt, inline, previousLines } = position;
+      const x = 30 + (i % 2) * 277;
+      const rowIndex = Math.floor(i / 2);
+      const top = rowPromptYs[rowIndex];
+      let captionX = x;
+      for (const { text, face, width } of prompt) {
+        if (text) draw(page, text, captionX, top, promptSize, face);
+        captionX += width;
       }
-      const bx = x + 22,
-        by = top - 216,
-        step = 194 / 8,
+      if (inline) draw(page, inline, captionX, top, previousSize);
+      previousLines.forEach((line, j) =>
+        draw(page, line, x, top - (j + 1) * previousLineHeight, previousSize)
+      );
+      const bx = x + 22 + (194 - boardSize) / 2,
+        by = top - rowCaptionHeights[rowIndex] - boardGap - boardSize,
+        step = boardSize / 8,
         white = b.turn() === 'w';
       for (let row = 0; row < 8; row++)
         for (let col = 0; col < 8; col++) {
@@ -1043,8 +1169,8 @@ export async function createWorksheetPdfs(
       page.drawRectangle({
         x: bx,
         y: by,
-        width: 194,
-        height: 194,
+        width: boardSize,
+        height: boardSize,
         borderColor: rgb(0, 0, 0),
         borderWidth: 0.6,
       });
@@ -1064,19 +1190,21 @@ export async function createWorksheetPdfs(
           7
         );
       }
-      page.drawLine({
-        start: { x: bx, y: top - 234 },
-        end: { x: bx + 194, y: top - 234 },
-        thickness: 0.4,
-        dashArray: [1, 2],
-        color: rgb(0.45, 0.45, 0.45),
-      });
+      for (const offset of writingOffsets)
+        page.drawLine({
+          start: { x: bx, y: by - offset },
+          end: { x: bx + boardSize, y: by - offset },
+          thickness: 0.4,
+          dashArray: [1, 2],
+          color: rgb(0.45, 0.45, 0.45),
+        });
     }
   }
   if (book) {
     const closingStart = sheet.getPageCount();
-    textSection(sheet, font, book.closing, false, 'closing');
+    const closingEnd = textSection(sheet, font, book.closing, false, 'closing');
     closingEntry.target = sheet.getPages()[closingStart];
+    drawDocumentInfo(sheet, font, closingEnd);
   }
   let ap: PDFPage;
   let y = 0;
@@ -1149,8 +1277,18 @@ export async function createWorksheetPdfs(
       worksheetSourceLines(e).forEach((source) => write(source, 8));
       y -= 12;
     }
+  drawDocumentInfo(answers, answerFont, { page: ap!, cursor: y });
   finishWorksheetContents();
   finishAnswerContents();
+  const footerText = worksheetFooterText(
+    book
+      ? {
+          name: bookFooterName(footer.name),
+          phone: contactPhone,
+          address: book.showAddressOnEveryPage ? footer.address : '',
+        }
+      : footer
+  ).normalize('NFC');
   for (const doc of [sheet, answers]) {
     await doc.attach(artworkNotice, 'Chess-piece-artwork-license.txt', {
       mimeType: 'text/plain',
@@ -1163,7 +1301,35 @@ export async function createWorksheetPdfs(
     );
     doc.getPages().forEach((p, i) => {
       const footerFont = doc === sheet ? font : answerFont;
-      const footerText = worksheetFooterText(footer);
+      if (book) {
+        const leftPage = i % 2 === 1;
+        const number = String(i + 1);
+        const numberWidth = footerFont.widthOfTextAtSize(
+          number,
+          bookFooterFontSize
+        );
+        if (footerText) {
+          const size = Math.min(
+            bookFooterFontSize,
+            (W - 80 - numberWidth) / footerFont.widthOfTextAtSize(footerText, 1)
+          );
+          const x = leftPage
+            ? W - 30 - footerFont.widthOfTextAtSize(footerText, size)
+            : 30;
+          draw(p, footerText, x, bookFooterY, size, footerFont);
+        }
+        draw(
+          p,
+          number,
+          leftPage ? 30 : W - 30 - numberWidth,
+          bookFooterY,
+          bookFooterFontSize,
+          footerFont
+        );
+        // Mirror the binding allowance for long-edge duplex printing.
+        p.translateContent(leftPage ? -10 : 10, 0);
+        return;
+      }
       if (footerText) {
         const size = Math.min(
           7,
@@ -1179,8 +1345,6 @@ export async function createWorksheetPdfs(
         7,
         doc === sheet ? font : answerFont
       );
-      // Mirror the binding allowance for long-edge duplex printing.
-      if (book) p.translateContent(i % 2 === 0 ? 10 : -10, 0);
     });
   }
   return { worksheet: await sheet.save(), answers: await answers.save() };

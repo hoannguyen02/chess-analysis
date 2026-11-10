@@ -2,7 +2,7 @@ import SaveGameControl from './SaveGameControl';
 import { gameOpeningCaption } from '@/lib/chess/game-opening';
 import GamePlayerNames from './GamePlayerNames';
 import { gamePlayers } from '@/lib/chess/game-player-title';
-import { useEffect, useMemo, useRef, useState } from 'react';
+import { useContext, useEffect, useMemo, useRef, useState } from 'react';
 import Link from 'next/link';
 import { Chessboard } from 'react-chessboard';
 import { FiStar } from 'react-icons/fi';
@@ -18,6 +18,7 @@ import {
   type GameExercisePosition,
 } from '@/lib/chess/draw-game-viewer';
 import styles from '@/styles/DrawGameViewer.module.css';
+import { PracticeCatalogRefresh } from './PracticeSaveFeedback';
 
 export default function DrawGameViewer({
   reference: initialReference,
@@ -36,14 +37,22 @@ export default function DrawGameViewer({
   position?: GameExercisePosition;
   onClose: () => void;
 }) {
-  const playlist = useMemo(
-    () =>
-      referenceGameList(referenceGames ?? [], {
-        reference: initialReference,
-        source: initialSource,
-        position: initialPosition,
-      }),
-    [referenceGames, initialReference, initialSource, initialPosition]
+  const refreshCatalog = useContext(PracticeCatalogRefresh);
+  const refreshOnClose = useRef(false);
+  const closed = useRef(false);
+  function close() {
+    closed.current = true;
+    onClose();
+    if (refreshOnClose.current) refreshCatalog();
+  }
+
+  // Keep the open replay stable while its parent list refreshes after a save.
+  const [playlist] = useState(() =>
+    referenceGameList(referenceGames ?? [], {
+      reference: initialReference,
+      source: initialSource,
+      position: initialPosition,
+    })
   );
   const [gameIndex, setGameIndex] = useState(() =>
     playlist.findIndex(
@@ -209,7 +218,7 @@ export default function DrawGameViewer({
       data-draw-game-viewer
       onCancel={(event) => {
         event.preventDefault();
-        onClose();
+        close();
       }}
       onKeyDown={(event) => {
         if (
@@ -257,7 +266,7 @@ export default function DrawGameViewer({
         )}
         <button
           type="button"
-          onClick={onClose}
+          onClick={close}
           aria-label="Đóng ván gốc"
           autoFocus
         >
@@ -300,12 +309,20 @@ export default function DrawGameViewer({
         </section>
       )}
       {source?.kind === 'game' && !showingContext && (
-        <SaveGameControl
-          key={`${reference.collection}:${reference.id}:${branch}:${ply}`}
-          source={source}
-          reference={{ ...reference, branch, ply }}
-          onOpen={() => setPlaying(false)}
-        />
+        <PracticeCatalogRefresh.Provider
+          value={() => {
+            // A save can also change the exercise that owns this dialog.
+            if (closed.current) refreshCatalog();
+            else refreshOnClose.current = true;
+          }}
+        >
+          <SaveGameControl
+            key={`${reference.collection}:${reference.id}:${branch}:${ply}`}
+            source={source}
+            reference={{ ...reference, branch, ply }}
+            onOpen={() => setPlaying(false)}
+          />
+        </PracticeCatalogRefresh.Provider>
       )}
       {!source && (
         <div className={styles.loading} role="status">

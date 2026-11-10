@@ -16,9 +16,16 @@ function load(path, overrides = {}) {
         target: ts.ScriptTarget.ES2020,
       },
     }).outputText
-  )(mod, mod.exports, (id) =>
-    id === 'chess.js' ? chess : id === './worksheet-layout' ? load('src/lib/chess/worksheet-layout.ts') : id === './worksheet-notation' ? load('src/lib/chess/worksheet-notation.ts', { './worksheet': model }) : (overrides[id] ?? require(id))
-  );
+  )(mod, mod.exports, (id) => {
+    if (id === 'chess.js') return chess;
+    if (id === './draw-levels') return load('src/lib/chess/draw-levels.ts');
+    if (id === './practice-goals') return load('src/lib/chess/practice-goals.ts');
+    if (id === './worksheet-layout')
+      return load('src/lib/chess/worksheet-layout.ts');
+    if (id === './worksheet-notation')
+      return load('src/lib/chess/worksheet-notation.ts', { './worksheet': model });
+    return overrides[id] ?? require(id);
+  });
   return mod.exports;
 }
 let model;
@@ -34,6 +41,13 @@ test.before(async () => {
 test('worksheet level choices match the shared catalog order', () => {
   const { practiceLevels } = load('src/lib/chess/draw-levels.ts');
   assert.deepEqual(model.worksheetLevels, practiceLevels);
+  for (const [level, solverMoves] of [['D*', 4], ['E', 6], ['E*', 6]]) {
+    const exercise = { ...fork.find((item) => item.difficulty?.level === 'A'),
+      difficulty: { level, solverMoves } };
+    const [chapter] = plan([row(1, 'fork', level, 1)], { fork: [exercise] });
+    assert.equal(chapter.level, level);
+    assert.equal(chapter.exercises[0].exercise, exercise);
+  }
 });
 const pin = require('../src/lib/server/pin-exercises.json');
 const forkBeginners = require('../src/lib/server/fork-beginner-exercises.json');
@@ -43,6 +57,7 @@ const fork = [
 ];
 const row = (id, topic, level, count) => ({ id, topic, level, count });
 test('ordered sections, partial pages, numbering and duplicate avoidance', () => {
+  const pinBeginnerCount = model.levelExercises(pin, 'Beginner').length;
   const pages = plan(
     [
       row(1, 'fork', 'A', 7),
@@ -66,7 +81,10 @@ test('ordered sections, partial pages, numbering and duplicate avoidance', () =>
     15
   );
   assert.throws(() => plan([row(1, 'fork', 'Beginner', forkBeginners.length + 1)], { fork }), new RegExp(`còn ${forkBeginners.length}`));
-  assert.throws(() => plan([row(1, 'pin', 'Beginner', 25)], { pin }), /còn 24/);
+  assert.throws(
+    () => plan([row(1, 'pin', 'Beginner', pinBeginnerCount + 1)], { pin }),
+    new RegExp(`còn ${pinBeginnerCount}`)
+  );
   for (const count of [0, -1, 1.5, NaN, 121])
     assert.throws(() => plan([row(1, 'pin', 'Beginner', count)], { pin }));
   assert.throws(() => plan([], {}));
@@ -324,6 +342,10 @@ test('worksheet topics follow the private library metadata and future additions'
     library.filter((p) => p.worksheetEndpoint).length
   );
   assert.ok(topics.some((t) => t.id === 'queen-mate'));
+  assert.equal(
+    topics.find((topic) => topic.id === 'hanging-piece').endpoint,
+    '/api/hanging-piece-exercises'
+  );
   assert.ok(
     !topics.some((t) =>
       [
@@ -355,6 +377,75 @@ test('worksheet topics follow the private library metadata and future additions'
     ]).length,
     0
   );
+});
+
+test('eligible worksheet topics and default book chapters follow teaching order', () => {
+  const { inPracticeTeachingOrder } = load('src/lib/chess/practice-topic-order.ts', {
+    './manual-tactics': load('src/lib/chess/manual-tactics.ts'),
+  });
+  const selection = load('src/lib/chess/worksheet-selection.ts', {
+    './worksheet': model,
+  });
+  const twoRook = require('../src/lib/server/two-rook-mate-exercises.json').flatMap(
+    (category) => category.exercises
+  );
+  const hanging = 'tactic-positions?theme=hangingPiece';
+  const catalog = {
+    pin,
+    fork,
+    'two-rook-mate': twoRook,
+    'back-rank-mate': require('../src/lib/server/back-rank-mate-exercises.json')
+      .flatMap((category) => category.exercises),
+    'one-rook-mate': require('../src/lib/server/one-rook-mate-exercises.json')
+      .flatMap((category) => category.exercises),
+    [hanging]: pin,
+    'hanging-piece': pin,
+    future: pin,
+  };
+  const choices = model.worksheetTopicsFromLibrary([
+    ...library,
+    { href: '/future', title: 'Future', worksheetEndpoint: '/api/future' },
+    {
+      href: `/${hanging}`,
+      title: 'Quân treo',
+      worksheetEndpoint: '/api/manual-tactic-exercises?theme=hangingPiece',
+    },
+  ]);
+  const ranked = inPracticeTeachingOrder(choices, (topic) => `/${topic.id}`);
+  assert.deepEqual(
+    selection.eligibleWorksheetTopics(ranked, ['Beginner'], catalog)
+      .map((topic) => topic.id),
+    [
+      'hanging-piece',
+      hanging,
+      'back-rank-mate',
+      'fork',
+      'pin',
+      'one-rook-mate',
+      'future',
+    ]
+  );
+
+  const draft = ['pin', 'two-rook-mate', 'fork'].map((topic, id) => ({
+    id,
+    topic,
+    count: '6',
+  }));
+  const ordered = inPracticeTeachingOrder(draft, (section) => `/${section.topic}`);
+  const chapters = (rows) =>
+    model.planWorksheetBookBlocks(
+      selection.expandWorksheetTopics(rows, ['A'], catalog)
+        .map((section) => ({ ...section, count: Number(section.count) })),
+      [],
+      catalog,
+      ranked
+    ).map((page) => page.title);
+  assert.deepEqual(chapters(ordered), [
+    'Chiếu hết bằng hai Xe', 'Tấn công đôi', 'Đòn ghim',
+  ]);
+  assert.deepEqual(chapters(draft), [
+    'Đòn ghim', 'Chiếu hết bằng hai Xe', 'Tấn công đôi',
+  ]);
 });
 
 test('newly available checkmate and endgame topics have printable legal lines', () => {
@@ -423,6 +514,7 @@ test('shared practice pages register their protected exercise endpoint for works
 });
 
 test('book review reserves fresh positions, interleaves topics, and preserves answer metadata', () => {
+  const pinBeginnerCount = model.levelExercises(pin, 'Beginner').length;
   const sections = [row(1, 'pin', 'Beginner', 4), row(2, 'fork', 'A', 6)];
   const reviews = [row(3, 'pin', 'Beginner', 2), row(4, 'fork', 'A', 4)];
   const build = (seed = 1) =>
@@ -460,12 +552,12 @@ test('book review reserves fresh positions, interleaves topics, and preserves an
   assert.throws(
     () =>
       model.planWorksheetBook(
-        [row(1, 'pin', 'Beginner', 24)],
+        [row(1, 'pin', 'Beginner', pinBeginnerCount)],
         reviews,
         { pin, fork },
         topics
       ),
-    /còn 22/
+    new RegExp(`còn ${pinBeginnerCount - 2}`)
   );
   const reused = model.planWorksheetBook(
     sections,
@@ -548,6 +640,17 @@ test('printed move descriptions distinguish en passant, promotion, castling, mat
   assert.match(
     model.previousMoveLabel({ fen: board.fen(), previousMove: previous }),
     /^Trắng vừa đi: exd6 .* ở d5\.$/
+  );
+  assert.equal(
+    model.previousMoveLabel({ fen: board.fen(), previousMove: previous }, 'compact'),
+    'Tốt trắng vừa đi e5 → d6, bắt Tốt qua đường ở d5 (exd6)'
+  );
+  const knightMove = { fen: '7k/8/8/8/8/5n2/8/K7 b - - 0 1', move: 'Nd2' };
+  const knightBoard = new chess.Chess(knightMove.fen);
+  assert.ok(knightBoard.move(knightMove.move));
+  assert.equal(
+    model.previousMoveLabel({ fen: knightBoard.fen(), previousMove: knightMove }, 'compact'),
+    'Mã đen vừa đi f3 → d2 (Nd2)'
   );
 });
 
@@ -683,14 +786,15 @@ test('review shuffle can be disabled without changing selection or answer number
 
 test('large worksheets and books are bounded by available positions, not 120', async () => {
   const skewer = require('../src/lib/chess/skewer-exercises.json');
-  const catalog = { pin, skewer };
-  const sections = [row(1, 'pin', 'B', 74), row(2, 'skewer', 'D', 50)];
-  const pages = model.planWorksheet(sections, catalog, topics);
-  assert.equal(pages.flatMap((p) => p.exercises).length, 124);
-  // A single row can also exceed the former input max when its pool permits it.
+  // Keep the size regression independent of the curated Pin level counts.
   const largePool = pin
     .filter((e) => !e.beginner)
     .map((e) => ({ ...e, difficulty: { ...e.difficulty, level: 'A' } }));
+  const catalog = { pin: largePool, skewer };
+  const sections = [row(1, 'pin', 'A', 74), row(2, 'skewer', 'D', 50)];
+  const pages = model.planWorksheet(sections, catalog, topics);
+  assert.equal(pages.flatMap((p) => p.exercises).length, 124);
+  // A single row can also exceed the former input max when its pool permits it.
   const poolSize = model.levelExercises(largePool, 'A').length;
   assert.ok(poolSize > 120);
   assert.equal(
@@ -710,8 +814,8 @@ test('large worksheets and books are bounded by available positions, not 120', a
   );
   for (const reuse of [false, true]) {
     const book = model.planWorksheetBook(
-      [row(1, 'pin', 'B', 60), row(2, 'skewer', 'D', 40)],
-      [row(3, 'pin', 'B', 14), row(4, 'skewer', 'D', 10)],
+      [row(1, 'pin', 'A', 60), row(2, 'skewer', 'D', 40)],
+      [row(3, 'pin', 'A', 14), row(4, 'skewer', 'D', 10)],
       catalog,
       topics,
       reuse
@@ -722,7 +826,7 @@ test('large worksheets and books are bounded by available positions, not 120', a
     () =>
       model.planWorksheetBook(
         sections,
-        [row(3, 'pin', 'B', 1)],
+        [row(3, 'pin', 'A', poolSize - sections[0].count + 1)],
         catalog,
         topics
       ),
@@ -1105,11 +1209,13 @@ test('notation examples replay legally with accurate SAN and Vietnamese explanat
     assert.ok(move, id);
     assert.equal(move.san, example.move, id);
     assert.ok(guide.notationExampleText(id).includes(move.san), id);
-    if (id === 'check') { assert.ok(board.in_check()); assert.equal(board.in_checkmate(), false); }
-    if (id === 'mate') assert.ok(board.in_checkmate());
+    if (example.move.endsWith('+')) { assert.ok(board.in_check()); assert.equal(board.in_checkmate(), false); }
+    if (example.move.endsWith('#')) assert.ok(board.in_checkmate());
   }
   assert.match(guide.notationExampleText('enPassant'), /đến d6, bắt Tốt qua đường ở d5/);
   assert.match(guide.notationExampleText('capturePromotion'), /bắt Xe ở d8, phong thành Mã/);
+  assert.equal(guide.notationExampleText('promotionCheck'), 'e8=Q+ - Tốt từ e7 đến e8, phong thành Hậu, chiếu Vua.');
+  assert.equal(guide.notationExampleText('promotionMate'), 'e8=Q# - Tốt từ e7 đến e8, phong thành Hậu, chiếu hết.');
   assert.match(guide.notationExampleText('file'), /Mã từ b1 đến d2/);
   assert.match(guide.notationExampleText('rank'), /Xe từ e1 đến e2/);
   assert.match(guide.notationExampleText('square'), /Mã từ b1 đến d2/);

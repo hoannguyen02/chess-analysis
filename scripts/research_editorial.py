@@ -102,6 +102,11 @@ def _summary(record, result):
                      'checkers': len(board.checkers()),
                      'recapturesLegalOnlyWithoutSlider': newly_possible,
                      'counterfactualNote': 'Geometric review lead only; removing the slider is not a tactical proof.'}
+        if ply == record.get('forkPly'):
+            motif = {'kind': 'fork', 'move': san, 'movingPiece': piece.symbol().upper(),
+                     'forkSquare': record['forkSquare'], 'targets': record['targets'],
+                     'checkers': len(board.checkers()),
+                     'localReplyCount': len(result.get('preflight', {}).get('coverage') or {})}
         last_move = move
     recaptures = []
     if last_move:
@@ -175,6 +180,12 @@ def _markdown(packet):
                   f'Sacrifices: {json.dumps(s["recordedSacrifices"], ensure_ascii=False)}.',
                   f'Motif: {json.dumps(s["motif"], ensure_ascii=False)}.',
                   f'Root comparison: {s["allLegalRootCount"]} roots; highlighted moves below. Scores are bounded evidence.', '']
+        if s['level'] in ('C*', 'D*', 'E*'):
+            lines += ['For the grade, identify the strong defensive reply, why the simpler '
+                      'continuations miss the same payoff, and how the line avoids a sacrifice.', '']
+        if s['level'] in ('D', 'E'):
+            lines += ['For the grade, identify the necessary complex sacrifice and coordination, '
+                      'the strong defence, and why shorter continuations miss the same payoff.', '']
         for root in s['rootHighlights']:
             lines.append(f'- {root["move"]}: cp={root.get("scoreCp")}, mate={root.get("mateScore")}; '
                          f'safe immediate gain={root.get("safeImmediateGain")}; PV={" ".join(root.get("pv", []))}')

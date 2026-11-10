@@ -6,15 +6,97 @@ checkpoints and metrics are shared infrastructure for future tactics adapters.
 Other topics must implement their own motif and objective checks before joining
 the adapter registry. There is no generic publication approval from engine score.
 
+## Executable workflow checks
+
+Source-derived batches now require a scoped run, for example `start-run --topic
+fork --additions A=4 B=5 --task 'Four A and five B additions' --run-file /tmp/run.json`.
+This starts the ledger before reading the current instructions and owner data,
+synchronizing decisions and querying the persistent candidate store. Unsupported
+topic/level combinations stop before engine review. Use the same `--run-file`
+for subsequent commands; an unscoped ledger remains suitable for timing a benchmark.
+
+The CLI records content-bound receipts only after actual review, packet creation
+and editorial merge. Named timing stages and free-text completion notes cannot
+replace these receipts. Rehearsal and final visual publication both check them.
+Changed instructions, owner decisions or verification code require `preflight
+--run-file /tmp/run.json` and renewed affected command receipts, retaining the
+original elapsed time. Exact engine caches remain reusable. Combined review
+reports may reuse results only with identical candidates, policies and complete
+tactical evidence from this run. Final copy belongs in reviewer inputs before
+merge; use `editorial-merge --coverage /path/to/checklist.json` for final coverage.
+
+`finish-run` requires the requested additions to have completed publication and
+visual review, using exact finish-report receipts. It cannot turn an unfinished
+batch into a completed task. Inspect `run-status` for receipts, stages and gaps.
+Run `python3 scripts/test-research-run.py` and `python3 scripts/test-research-finish.py`
+when changing these gates. They guard the supported commands, not direct local
+file edits. Editorial judgment, actual page inspection and adapter quality still
+require review; no completion-time guarantee follows from these checks.
+
+## Cross-topic starting positions
+
+The shared candidate lookup and review skip a position already active in
+another practice topic. Diagnostics identify the existing topic and exercise.
+The publication workflow checks the selected FENs again in rehearsal and under
+the publication lock. Both checks use the effective practice catalogs after
+owner removals, transfers and manual edits. The position key includes pieces,
+side to move, castling rights and legal en passant, and ignores the FEN clocks.
+The manual position editor asks before saving a cross-topic duplicate. The
+explicit Beginner source-import flow continues to support intentional reuse.
+
+## Execution audit: six Fork D additions (2026-11-06)
+
+The efficient-execution rules already existed in `AGENTS.md` and this document.
+The 64.3-minute run exposed inconsistent execution and implementation defects;
+it does not establish that a routine six-position extension needs an hour.
+Do not add duplicate instructions or relax verification to explain this delay.
+
+| Existing requirement | What went wrong | Apply the existing requirement this way |
+| --- | --- | --- |
+| Use a topic-specific adapter and validate reusable tools | D support, sacrifice accounting and recovery handling were developed while candidate selection and editorial review were already running. | Check topic/level capability first. Complete a small representative positive/negative pilot before issuing independent review packets. Record necessary adapter work separately within the authorized task. Fix genuine defects when found and rerun affected checks. |
+| Apply inexpensive material, motif and level checks before deep analysis | Incidental forks and an immediately recovered equal exchange reached expensive review. | In the early triage, identify the actual checking piece, explain why both fork threats matter, check whether the gain is already secured, and settle immediate exchanges. A geometric match or nominal offer remains a lead. Full independent tactical/editorial review is still required. |
+| Diagnose poor yield before enlarging a search | An initial query excluded metadata-only master games because they had no fork tags. More collection happened before this source-coverage problem was identified. | Check source inventory, eligibility counts and representative rejection reasons before widening a window or downloading another corpus. Reuse complete untagged games through the cached scan path. |
+| Reuse identical results while retaining independent checks | Validator changes caused repeated packet creation, handoffs and binding refreshes. | Keep verification code stable during editorial review when possible. After a necessary change, rerun affected tactical checks with exact caches. Reuse existing editorial notes only after exact candidate and complete tactical-evidence equality checks; refresh current packet bindings and retain prior reviewer/version history. Changed evidence needs renewed review. |
+| Record each phase and keep finalization concise | A broad 55-minute stage obscured source/development costs; about 6.7 minutes remained after visual publication for documentation, audits and cleanup. | Time adapter work, lookup, source retrieval/import, collection, triage, tactical review, editorial review, publication/checks, PDF inspection and finalization separately with existing ledger commands. Keep documentation to decisions, gaps and measured results; use the shared finalization tools. |
+
+The ledger recorded about 30.4 minutes of editorial windows after removing
+parallel overlap. The final 13-candidate verification used completed caches and
+took 27.8 seconds; the final build/check/PDF command took 32.5 seconds. These
+figures overlap other work and are not an exclusive breakdown of the full run.
+Source collection and development were not separately timed well enough to
+assign the remaining elapsed time precisely.
+
+For subsequent batches, use the existing small-batch process: early suitability
+triage, full tactical evidence, disjoint independent review packets, final copy,
+then one shared publication/check/PDF pass. Repeat checks or exports only when
+changed inputs, a failure or an unresolved concern warrants it. Stop expanding
+the search after the requested additions pass review; retain unused leads.
+Every existing legal-root, defence, recovery, provenance, level, alternative,
+access and visual-inspection requirement remains in force.
+
+The audit alone did not enforce those steps. The executable checks above now
+require scoped runs and current command evidence; automatic carry-forward of
+editorial decisions remains unimplemented. Existing packet integrity checks and
+reviewer binding remain required. No end-to-end speedup or future completion-time
+guarantee has been measured.
+
 ## Beginner-only position authoring
 
-This position-first authoring flow is **Beginner only**. All registered practice
-topics reuse one source-FEN extractor, preview/import dialog and manual editor.
-The editor supports free piece placement and optional Beginner solutions. No
-separate extraction adapter or UI is required for each new tactic.
+This position-first authoring flow is **Beginner only**. On new tactics pages,
+the owner fills Beginner through the UI. Keep the tab visible with its actual
+count, including zero, and connect the shared importer and editor. Agent-created
+or prefilled Beginner exercises require an explicit request. Preserve any
+existing Beginner entries.
 
-Extract the FEN immediately before the named tactic from an existing exercise.
-Use B, C, C*, D as source levels, respecting current owner level choices; exclude
+All registered practice topics reuse one source-FEN extractor, preview/import
+dialog and manual editor. The owner selects and confirms positions through
+**Lấy thế cờ từ B, C, C*, D, D*, E, E\*** or opens **Thêm thế cờ Nhập môn** to set up a
+position directly. The editor supports free piece placement and optional
+Beginner solutions.
+
+When the owner opens the importer, extract the FEN immediately before the
+named tactic from an existing exercise.
+Use B, C, C*, D, D*, E, E* as source levels, respecting current owner level choices; exclude
 A because its direct positions overlap Beginner. Replay to the tactical move.
 Keep the source reference and skip duplicate positions. Show
 the proposed batch and one confirmation before adding the Beginner entries.
@@ -40,7 +122,7 @@ or completion verdict. Allow a solution to be added later. Worksheets may includ
 the diagram; answer output must not fabricate a continuation. Saved position
 counts must not be described as tactically verified counts without that evidence.
 
-**A, B, C, C*, D remain unchanged:** retain their exercises, source games,
+For the later levels, retain their exercises, source games,
 required solutions, level rules, research/verification requirements, trainer
 behavior and publication workflow. Do not overwrite or reclassify an original
 exercise when deriving a Beginner board. Do not make solutions optional for these
@@ -76,7 +158,7 @@ changes the FEN that will be imported. Goals and full-game references follow the
 selected position, with played and analysis continuations labeled separately.
 
 The shared loader applies current owner levels/removals/transfers before
-extracting B, C, C*, D sources, skips existing/original Beginner FENs, preserves
+extracting B, C, C*, D, D*, E, E* sources, skips existing/original Beginner FENs, preserves
 preceding moves and checks a current source snapshot before confirmation. It
 reads no external network sources, calls no engine and writes nothing during
 lookup. Candidate counts are authoring choices, not tactical approvals. Unknown
@@ -104,12 +186,12 @@ isolation of board edits between selected moves.
 
 ## Adaptive workflow for all tactics
 
-This is the standing process for agent-generated additions and collection
-reviews across tactics topics. The shared CLI retains the Discovery research
-adapter and supports `review-compositions --topic fork` for supplied compositions.
-Other topics still need their own checks. This is not a universal generator or
-a measured composition speedup, and it is separate from owner-reviewed FEN import.
-Preserve approved collections while adding support incrementally.
+Use this process for agent-generated additions and collection reviews across
+tactics topics. The shared CLI uses topic-specific source adapters and
+supports supplied Fork and Hanging Piece compositions through
+`review-compositions`. Add a verifier for each new topic and objective as
+needed. Preserve approved collections and use the separate owner workflow
+for manual positions and FEN imports.
 
 ### Choose the route from the request
 
@@ -118,21 +200,64 @@ Read `AGENTS.md`, current owner decisions, existing topic evidence and the
 metadata is a planning lead, not approval or automatic grading. Missing metadata
 requires assessment. Record the requested topic, objective, levels, number of
 additions, preserved IDs and actual remaining coverage/count gaps in the existing
-topic documentation or review bundle. Preserve Beginner, A, B, C, C*, D navigation.
+topic documentation or review bundle. Preserve the shared level order
+Beginner, A, B, C, C*, D, D*, E, E*.
 
 | Request or condition | Route |
 | --- | --- |
-| Beginner additions with a suitable direct idea | Reuse eligible reviewed candidates, then construct simple original compositions around missing teaching decisions. Suitable existing real-game examples may also be used. |
+| New tactics page | Keep all nine levels visible and connect the owner's Beginner UI. Research A, B, C, C*, D, D*, E and E* where suitable. Beginner may launch with zero positions. |
+| Explicit request for [verified Beginner additions](beginner-one-move-game-requirements.md) | Use at most 10 pieces, including kings and pawns. Verify exactly one legal move that wins, draws or saves according to the stated objective. Prefer original positions from complete indexed games and keep their preceding move and source. Apply the same checks to allowed compositions. |
 | A–D additions | Reuse the indexed complete master games and existing staged research pipeline, with full provenance and the established level definitions. |
 | Review or cleanup of a level | Review the complete requested set before replacement. Respect explicit cleanup counts and record specific keep/remove reasons. |
 | Topic whose defining idea exceeds Beginner | Retain the visible level and explain the suitability gap. Do not remove a defining sacrifice or hide necessary preparation. |
 | Owner manually authors a position | Preserve the explicit manual workflow in [manual tactic positions](manual-tactic-positions.md). Legal sample validation remains distinct from agent tactical/editorial verification. |
 
-The standard target is 24 verified positions per suitable level. A scoped request
-for additions finishes those additions and their integration; reaching a target
-does not justify removing approved positions or reopening other levels. A new
-page retains the full end-to-end requirements. A genuine gap needs a documented
-search/construction history, not just one unsuccessful batch.
+The standard target is 24 verified positions per suitable level in the research
+scope. On a new tactics page, the Beginner count reflects the owner's entries
+and any preserved approved positions. A zero count awaiting owner authoring
+does not require research to finish the page. A scoped request for additions
+finishes those additions and their integration. Reaching a target does not
+justify removing approved positions or reopening other levels. Document the
+search or construction history for any research gap in the requested scope.
+
+For verified Beginner additions, check the candidate bank first, then search
+suitable positions throughout complete indexed games. Existing A–E* exercises
+are one source of leads. Apply the piece limit and compare all legal moves
+before selecting a position. If two moves achieve the objective, or the
+evidence for an alternative is unresolved, hold the position out of this
+format. Keep the proof and preceding move with the source. Store only the
+learner's answer as the playable line and keep follow-up analysis in the
+evidence and explanation. See the [one-move requirements](beginner-one-move-game-requirements.md).
+
+The shared `beginner_one_move.py` gate checks the board and legal answer and
+requires one resolved result per legal starting move. Source review runs it
+before engine analysis and recomputes its proof at publication. A source
+adapter supplies `beginner_outcomes(board, record)` and registers Beginner
+support after its motif, provenance, collection and publication paths are
+ready. Defensive Move currently supports this source route. The Fork and
+Hanging Piece composition profiles use the same gate and retain their
+reply and recovery evidence. Historical builders reproduce existing
+approvals. New additions go through the current gates.
+
+For new reviews, D and D* require four or five solver moves. E and E*
+require six or more. D and E require a genuine complex sacrifice and advanced
+coordination. D* and E* require a strong defence that makes the stated depth
+necessary, without a sacrifice. C* still requires two or three solver moves
+without a sacrifice and a defensive resource beyond B.
+
+Count solver moves through the point where the objective is achieved or
+secured against the relevant strong defence. Record the defence, shorter
+alternatives, and the payoff after any relevant recaptures. If a shorter sound
+line reaches the same objective, use that line for grading. Forced mate still
+requires coverage of all legal defensive replies and a check for a shorter mate.
+Earlier published grades remain valid records of their review until each
+position is reassessed. A six-move saved sample alone cannot justify regrading.
+
+The shared level check validates the move range and recorded sacrifices before
+publication. It does not establish tactical necessity. Hanging Piece supports
+C* and D* in its source workflow. Discovery's earlier C* workflow uses the old
+depth rule. New E and E* research runs require explicit topic adapter support
+for the deeper objective checks before those levels are enabled for publication.
 
 ### Define the topic's teaching and verification rules
 
@@ -177,17 +302,16 @@ a sufficient teaching family. Never inherit a parent's suitability or approval.
 | Stage | Work and decision |
 | --- | --- |
 | 1. Scope and reuse | Start the timing ledger; capture owner decisions and requested scope. Read approved records, exclusions and available unused leads. Identify the missing decisions, not just the missing count. |
-| 2. Construct or research | For Beginner, build backward from the intended motif and useful defence: place the related targets/defender/attacker, choose a legal starting move, then place Kings and only necessary supporting pieces. For A–D use complete indexed games. Mark compositions and modifications accurately. |
+| 2. Construct or research | For Beginner, prefer original positions in complete indexed games. Use the same piece limit and one-move rule for allowed compositions. For A–E* use complete indexed master games. Mark compositions and modifications accurately. |
 | 3. Cheap filtering | Check position validity, legal moves, explicit objective, terminal positions, material, visible free gains, immediate mates and level conflicts. Deduplicate positions and group equivalent decisions before engine work. Review offers of moving and stationary pieces; a declined offer can still be a sacrifice. |
 | 4. Motif and objective verification | Compare all legal roots; verify the essential motif, relevant defences, full stated payoff and material recovery. Run the existing required engine and objective-specific checks with exact cache identities. Incomplete searches stay unverified. |
 | 5. Editorial selection | Independently inspect the diagrams, lines and evidence for clarity, difficulty, motif necessity and distinctness. Review hints, alternatives and solutions together. A technically winning position can still be unsuitable teaching material. |
 | 6. Publication and integration | Update existing topic approval/evidence stores and builders. Rehearse changes while preserving prior exercises, owner decisions and provenance. Reuse protected APIs, shared trainer, alternative handling, side/objective display, game viewer and worksheet source. |
 | 7. Validation and measurement | Run affected preservation, tactical, access, API and worksheet checks. Audit shared copy and inspect affected rendered PDFs once content is stable. Record full elapsed time, actual additions, counts, coverage and unresolved gaps. |
 
-Constructed Beginner positions should use few pieces, a direct decision, no
-sacrifice and a short visible payoff, usually one or two solver moves. This is a
-design starting point, not an automatic grade or a rigid piece-count rule. Review
-the complete line and shorter alternatives. Prefer a meaningful material contest
+Constructed Beginner positions use at most 10 pieces, one direct decision,
+no sacrifice and a short visible payoff. Review the full proof and
+alternatives. Prefer a meaningful material contest
 and retain necessary defenders/counterplay; removing all defence to simplify a
 real game may destroy its teaching value. Do not turn routine conversions of an
 overwhelming advantage into new tactical exercises.
@@ -207,7 +331,8 @@ Compare the intended line with every legal starting move. Check immediate mates,
 simple captures/exchanges, forcing checks, quiet mating threats and competing
 tactical payoffs under the existing standards. A smaller safe gain that bypasses
 a pin, fork or other named motif can invalidate its instructional purpose.
-Equivalent motif-based solutions are welcome; uniqueness is not required.
+Use equivalent motif-based solutions in formats that support multiple answers.
+Each newly verified Beginner exercise requires a unique sound move.
 Distinguish a draw, material gain, winning position and game win in all copy.
 
 Forced-mate claims require all legal defensive replies within the stated solver
@@ -285,12 +410,15 @@ no speed claim or ETA from unmeasured composition performance.
 ## Research and review
 
 ```sh
+python3 scripts/research-tactics.py start-run --topic discovery --additions B=4 \
+  --task 'Four Discovery B additions' --run-file /tmp/run.json
 python3 scripts/research-tactics.py sync-decisions
 python3 scripts/research-tactics.py import-corpus \
-  --input /path/to/prepared-corpus.json --manifest /path/to/source-manifest.json
+  --input /path/to/prepared-corpus.json --manifest /path/to/source-manifest.json \
+  --run-file /tmp/run.json
 python3 scripts/research-tactics.py collect --topic discovery --level B \
   --phase tactics --target 6 --output /tmp/discovery-candidates.json \
-  --review-output /tmp/discovery-review.json --workers 4
+  --review-output /tmp/discovery-review.json --workers 4 --run-file /tmp/run.json
 ```
 
 Re-review an explicitly changed candidate file without collecting more games:
@@ -298,7 +426,7 @@ Re-review an explicitly changed candidate file without collecting more games:
 ```sh
 python3 scripts/research-tactics.py review --topic discovery --level B \
   --input /tmp/discovery-candidates.json --output /tmp/discovery-review.json \
-  --workers 4 --batch-size 4 --need 4
+  --workers 4 --batch-size 4 --need 4 --run-file /tmp/run.json
 ```
 
 The shared `collect` command now queries the candidate-position bank first.
@@ -354,10 +482,11 @@ candidates can skip expensive later stages because they are not published.
 
 ## Cache and resume
 
-The default cache is outside the repository at
-`~/Library/Caches/chess-analysis/research-v1.sqlite`. Override it with
-`CHESS_RESEARCH_CACHE` or `--cache`. It uses SQLite transactions/WAL for bounded
-worker concurrency. The source index remains the existing ignored SQLite file.
+The shared source `review` and `collect` commands default to the writable,
+ignored `research/scratch/tactics-engine-cache.sqlite`. Legacy tools use
+`~/Library/Caches/chess-analysis/research-v1.sqlite`; use `CHESS_RESEARCH_CACHE`
+or `--cache` to point them at the same cache. Engine work checks writability
+before starting. The source index remains the existing ignored SQLite file.
 
 An engine request is keyed by binary checksum, options, external network
 checksums, Python-chess version, full FEN, complete supplied move stack, exact
@@ -376,39 +505,101 @@ trusted as resume hits.
 The cache is disposable computation, not durable approval. Keep approved source
 games, selected evidence, editorial decisions and exclusions in project fixtures.
 
+### Persistent research memory
+
+The shared source review commits the actual outcomes of each completed batch to
+`research_assessments` in the existing index. Editorial merge records its bound
+decisions there as well. `sync-decisions` only refreshes the owner/publication
+projection; it does not erase assessment history. The existing game and geometry
+checkpoints still govern source replay. Assessment history includes the exact
+record, tactical facts, flags, settings, evidence and original artifact reference.
+
+The neutral position/line identity has no grade or tactic. Applicability still
+requires the exact record revision, topic, objective, level, proof dependencies,
+engine identity, budgets and scoped rule version. A hold for one line does not
+blacklist its game. Current ready/unselected candidates rank ahead of unexamined
+leads. Current withholdings, unresolved searches and editorial holds stay out of
+the normal queue. A deferral only for a full batch may record
+`"retryWhen": "next-selection"` in the reviewer decision to stay available.
+Use ordinary `defer` for an outstanding tactical/editorial question.
+
+```sh
+python3 scripts/research-tactics.py memory-backfill --from-run /path/to/previous-run.json
+python3 scripts/research-tactics.py memory-explain --topic fork --level D --game-id GAME_ID
+python3 scripts/research-tactics.py memory-coverage --output /tmp/tactic-coverage.json
+python3 scripts/research-tactics.py candidates --topic fork --levels D \
+  --aspect mover-B --limit 8 --output /tmp/bishop-fork-leads.json
+python3 scripts/research-tactics.py memory-backup --output research/backups/index-snapshot.sqlite
+```
+
+Backfill checks exact prior command artifacts. Missing or changed artifacts are
+reported, not treated as completed evidence. Unrecognized verifier versions
+remain historical. Add `--evidence` to inspect the complete stored assessment.
+Back up the index separately from engine cache cleanup and test restoring to a
+separate index path. Backup refuses to overwrite an existing file.
+
+Use `candidates --memory-mode stale` for previously assessed records whose
+verification policy no longer matches. To mark a teaching-rule revision for a
+single scope, set e.g. `"topics": {"fork": {"D": "fork-d-v2"}}` in
+`scripts/fixtures/tactics-index/research-rules.json`. Update the topic adapter
+when the verification itself changes. A rule marker queues reconsideration;
+it does not change a grade or relax a check. Refresh preflight for an active run
+when the manifest changes. Other level assessments and exact engine requests
+remain reusable unless their own dependencies changed.
+
+For a focused retry at a higher budget, `review --settings FILE.json` accepts
+the existing budget keys. Use `candidates --memory-mode force --reason TEXT`
+and `review --force-review TEXT` to reconsider an existing hold explicitly.
+These modes retain exact caches and owner protections. Normal publication still
+requires scoped receipts, independent editorial decisions and visual approval.
+
+`memory-coverage` lists all map topics and all nine levels with their current
+source review capability and stored research counts, not verified exercise
+counts. Fork A/B/D and Discovery A–D have source review adapters; other scopes
+remain unsupported until their own objective checks exist. Beginner position
+authoring and its owner review stay separate. Coverage tags are legal-replay
+observations and do not prove the motif is essential.
+
+On the Nov 7 Fork D history, six exact review artifacts and two editorial
+merges imported 27 assessment records; one earlier overwritten artifact was
+skipped. The normal queue skipped 21 matching holds with zero source-game
+replays. A fixed replay of the 23 previously examined inputs reused two complete
+tactical results and made zero engine calls. This is a warm reuse check, not
+fresh-position research or a measured end-to-end speedup.
+
 ## Editorial handoff and packaging
 
 Write a decision file with a `reviews` array. Each kept record needs its
 `gameId`, exact `recordHash` from the packet, `decision: "keep"`, a tactical
 `reason`, concrete `distinctness`, reviewed `solutionVi` and `hintsVi`.
+Create packets and merge their decisions with the commands below before packaging;
+a handwritten decisions file cannot replace the merge receipt.
 
 ```sh
 python3 scripts/research-tactics.py prepare-publication \
   --review /tmp/discovery-review.json --decisions /tmp/editorial-decisions.json \
-  --output /tmp/approved-discovery.json
+  --output /tmp/approved-discovery.json --run-file /tmp/run.json
 ```
 
 This prepares only explicitly approved, current, clean results. Benchmark-only
 records cannot be packaged for publication. A packet made with changed or
-unrecorded verification code must be reviewed again. A Discovery B, C, C* or D batch can
+unrecorded verification code must be reviewed again. A Discovery B, C or D batch can
 also be emitted directly in the existing builder format. Add the recorded
-level-specific `coverageChecklist` and review `date` to the decision file:
+level-specific `coverageChecklist` to reviewer inputs or pass `--coverage` before
+the editorial merge. Do not edit its bound output afterward:
 
 ```sh
 python3 scripts/research-tactics.py prepare-publication \
   --review /tmp/discovery-review.json --decisions /tmp/editorial-decisions.json \
   --format discovery-expansion \
-  --output scripts/fixtures/discovery/level-b-expansion-YYYYMMDD.json
-python3 scripts/curate-discovery-upper.py
-python3 scripts/build-discovery.py
-python3 scripts/discovery-coverage-report.py
+  --output /tmp/level-b-expansion.json --run-file /tmp/run.json
 ```
 
-Use `level-c`, `level-c-star` or `level-d` for those expansion filenames. The
+Use `level-c`, `level-c-star` or `level-d` for the eventual expansion manifest. The
 converter refuses duplicate/excluded games, owner decisions and overwriting an
 existing batch. It writes selected evidence and source references first, then
 atomically commits the manifest. Beginner and A retain their existing curated
-workflows. The topic curation/builders remain the publication boundary; they
+workflows. Use `finish-batch` below for isolated curation/building and publication; its builders
 preserve owner choices, build practice/game-source data and feed protected APIs
 and the worksheet selector.
 Finalize the selection before running required validation and rendering affected
@@ -508,7 +699,7 @@ python3 scripts/research-tactics.py candidates-import --input /path/to/saved-lea
 python3 scripts/research-tactics.py candidates --levels B C --limit 8 \
   --output /tmp/available-leads.json
 python3 scripts/research-tactics.py index-positions --workers 4 \
-  --output /tmp/position-index.json
+  --output /tmp/position-index.json --run-file /tmp/run.json
 ```
 
 `index-positions` is the one-time geometric population step; unchanged complete
@@ -522,7 +713,7 @@ Create a run ledger before lookup, and attach it to subsequent commands:
 
 ```sh
 python3 scripts/research-tactics.py start-run --run-file /tmp/run.json \
-  --task 'Two additions each to Discovery B and C'
+  --task 'Two additions each to Discovery B and C' --topic discovery --additions B=2 C=2
 python3 scripts/research-tactics.py collect --topic discovery --levels B C \
   --target 4 --workers 4 --output /tmp/leads.json \
   --review-output /tmp/review.json --run-file /tmp/run.json
@@ -561,6 +752,46 @@ publication gates; packets never create approval automatically.
 
 ## One publication/check command and reusable PDF previews
 
+Fork A/B/D now also uses `review --topic fork`, candidate import/query, owner
+decision synchronization, immutable editorial packets, approved-bundle
+packaging and `finish-batch`. Its source collector remains `collect-forks.py
+--index ...`; shared `collect` and `index-positions` explicitly reject Fork
+until a collection adapter exists. The Fork adapter checks every legal starting
+move, meaningful preparation, captures of the moving piece and future attacker,
+equal recaptures, material recovery and every immediate fork reply. Mate goals
+and other levels fail closed. An engine evaluation alone never approves a lead.
+
+D additionally verifies actual unequal sacrifice costs through the complete
+immediate capture chain, including recaptures on another square. Ordinary equal
+exchanges do not become sacrifices because the line is long. Promotion
+compensation is recorded separately. Every legal preparation reply is compared;
+captures, counterchecks, the sample and near-best declines receive focused
+full-budget probes. A truncated defensive PV triggers a bounded solver-turn
+continuation with full source history, at least one million nodes and three
+variations. It still needs a concrete recovery/fork witness; a high score or
+unresolved search never approves publication. Editorial review separately
+rejects incidental forks and unnecessary preparation.
+
+The indexed Fork collector scans complete metadata-only games even when they
+have no motif tags yet. Per-game positive and negative geometry results use
+exact game/source/code fingerprints, independently of requested levels and owner
+choices; current eligibility is applied on retrieval. Independent games and
+engine screens use bounded worker pools. `--source-contains` selects an archive,
+and the bank can retry different source frames while publication retains only
+one exercise per game.
+
+For a new Fork batch, pass the cumulative
+`scripts/fixtures/fork/expansion-evidence.json` path to the same `finish-batch`
+command. Fresh approvals append in staging; prior records, decisions, evidence
+and metadata remain unchanged. `publicationBatches` retains exact per-batch
+budgets and engine/code identities, without relabeling old reviews with newer
+limits. Conflicting identities/outcomes fail closed. It rehearses
+`build-forks.py`, preserves prior
+exercises/games and owner data, runs Fork/worksheet/access/mate/viewer and copy
+checks, and exports the affected PDFs with the shared renderer. Visual approval
+uses the same exact-artifact hashes, publication lock, snapshot checks and
+rollback. Existing Fork evidence bundles are not silently replaced.
+
 ```sh
 python3 scripts/research-tactics.py finish-batch --review /tmp/review.json \
   --decisions /tmp/decisions.json \
@@ -571,7 +802,7 @@ python3 scripts/research-tactics.py finish-batch --review /tmp/review.json \
 This rehearses a new batch in an isolated copy and runs the existing builders,
 previous-content preservation checks, Discovery/worksheet/access/mate tests,
 copy audit, selected-ID PDF export and PNG previews. It replaces the temporary
-per-task rendering harness. An existing manifest is refused here; use
+per-task rendering harness. An existing Discovery manifest is refused here; use
 `inspect-batch --manifests PATH... --output-dir PATH` for an explicitly named
 already-published-batch rehearsal.
 
@@ -637,3 +868,22 @@ Reproduce the collection comparison with `benchmark-tactic-collection.py`.
 `benchmark-tactic-workflow.py prepare|finish|report --work-dir PATH` deliberately
 stops for actual editorial decisions and visual inspection; it cannot replace
 those steps with timed automatic acceptance.
+
+## Hanging Piece pilot
+
+The `hanging-piece` adapter uses the same source index, exact engine cache,
+review memory, editorial packets and isolated publication as other registered
+topics. It separates direct wins from short or deeper material recovery after
+taking an undefended piece. Its source-level policy covers A, B, C* and D*. The
+separate Beginner composition verifier retains an exact local reply certificate.
+See [Hanging Piece practice](hanging-piece-practice.md) for the level counts,
+scope and source scan results.
+
+In the initial fixed eight-position source benchmark, two workers took 9.43 s
+cold and four workers took 6.81 s cold at the same full budgets and 54 engine
+calls each. Both returned the same tactical statuses. The warm runs took
+0.14 s and 0.17 s with zero engine calls. An eight-position Beginner benchmark
+took 1.33 s with two workers and 0.91 s with four, with 18 engine calls in each
+cold run. Its four-worker warm run took 0.31 s with zero engine calls. These
+are automated review timings. Source replay, editorial review, validation
+and PDF inspection are measured separately in the run ledgers.

@@ -1,6 +1,8 @@
 import { POSITIONS_PER_PAGE } from '@/lib/chess/worksheet-layout';
 import type { DrawCategory } from '@/lib/chess/draw-practice';
+import { inPracticeTeachingOrder } from '@/lib/chess/practice-topic-order';
 import {
+  bookFooterName,
   defaultWorksheetFooter,
   defaultBookOptions,
   planWorksheetBookBlocks,
@@ -19,8 +21,24 @@ import {
   type WorksheetTopicDraft,
 } from '@/lib/chess/worksheet-selection';
 import { practiceAccessHeaders } from '@/lib/practice-access';
+import { useWorksheetDrafts } from '@/hooks/useWorksheetDrafts';
+import {
+  addWorksheetExport,
+  captureWorksheetPositions,
+  encodeWorksheetDrafts,
+  makeWorksheetVersion,
+  mergeWorksheetBackup,
+  parseWorksheetDrafts,
+  sameWorksheetChoices,
+  worksheetExportDifference,
+  type WorksheetDraftChoices,
+  type WorksheetExportPosition,
+  type WorksheetExportRecord,
+  type WorksheetVersion,
+} from '@/lib/chess/worksheet-drafts';
 import styles from '@/styles/WorksheetBuilder.module.css';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
+import PracticeTopicSelect from './PracticeTopicSelect';
 
 import {
   automaticReviewBlocks,
@@ -30,17 +48,48 @@ import {
 import WorksheetReviewBlocks, {
   type ReviewBlockDraft,
 } from './WorksheetReviewBlocks';
+import WorksheetDraftHistory from './WorksheetDraftHistory';
+
+function preserveSavedOrder(saved: WorksheetDraftChoices) {
+  return (
+    saved.hasCustomOrder ||
+    inPracticeTeachingOrder(saved.sections, (row) => `/${row.topic}`).some(
+      (row, i) => row.id !== saved.sections[i].id
+    )
+  );
+}
 
 export default function WorksheetBuilder({
-  topics: worksheetTopics,
+  topics,
 }: {
   topics: WorksheetTopic[];
 }) {
+  const drafts = useWorksheetDrafts();
+  const restored = drafts.initial?.choices;
+  const [referenceId, setReferenceId] = useState(drafts.initial?.referenceId);
+  const worksheetTopics = useMemo(
+    () => inPracticeTeachingOrder(topics, (topic) => `/${topic.id}`),
+    [topics]
+  );
   const [catalog, setCatalog] = useState<WorksheetCatalog>({});
-  const [sections, setSections] = useState<WorksheetTopicDraft[]>([]);
-  const [selectedLevels, setSelectedLevels] = useState<WorksheetLevel[]>([]);
-  const initialTopicChosen = useRef(false);
-  const nextId = useRef(1);
+  const [draftSections, setSections] = useState<WorksheetTopicDraft[]>(
+    restored?.sections ?? []
+  );
+  const [hasCustomOrder, setHasCustomOrder] = useState(() =>
+    restored ? preserveSavedOrder(restored) : false
+  );
+  const sections = useMemo(
+    () =>
+      hasCustomOrder
+        ? draftSections
+        : inPracticeTeachingOrder(draftSections, (row) => `/${row.topic}`),
+    [draftSections, hasCustomOrder]
+  );
+  const [selectedLevels, setSelectedLevels] = useState<WorksheetLevel[]>(
+    restored?.levels ?? []
+  );
+  const initialTopicChosen = useRef(restored?.initialTopicChosen ?? false);
+  const nextId = useRef(restored?.nextId ?? 1);
   const eligibleTopics = eligibleWorksheetTopics(
     worksheetTopics,
     selectedLevels,
@@ -54,9 +103,21 @@ export default function WorksheetBuilder({
     selectedLevels,
     catalog
   );
-  const [bookMode, setBookMode] = useState(true);
-  const [book, setBook] = useState(defaultBookOptions);
-  const [bookDraft, setBookDraft] = useState(defaultBookOptions);
+  const [bookMode, setBookMode] = useState(restored?.bookMode ?? true);
+  const [book, setBook] = useState(() => {
+    if (restored) return restored.book;
+    const today = new Date();
+    const month = String(today.getMonth() + 1).padStart(2, '0');
+    const day = String(today.getDate()).padStart(2, '0');
+    return {
+      ...defaultBookOptions,
+      compilation: {
+        ...defaultBookOptions.compilation,
+        date: `${today.getFullYear()}-${month}-${day}`,
+      },
+    };
+  });
+  const [bookDraft, setBookDraft] = useState(book);
   const [bookEditorOpen, setBookEditorOpen] = useState(false);
   const bookDialog = useRef<HTMLDialogElement>(null);
   useEffect(() => {
@@ -72,9 +133,11 @@ export default function WorksheetBuilder({
     };
   }, [bookEditorOpen]);
   const [reviewOverrides, setReviewOverrides] = useState<ReviewBlockDraft[]>(
-    []
+    restored?.reviewOverrides ?? []
   );
-  const [reviewSettings, setReviewSettings] = useState(defaultReviewSettings);
+  const [reviewSettings, setReviewSettings] = useState(
+    restored?.reviewSettings ?? defaultReviewSettings
+  );
   let scheduleError = '';
   let automaticBlocks: ReviewBlockDraft[] = [];
   let reviewBlocks: ReviewBlockDraft[] = [];
@@ -88,14 +151,71 @@ export default function WorksheetBuilder({
   } catch (e) {
     scheduleError = (e as Error).message;
   }
-  const [reuseReview, setReuseReview] = useState(false);
-  const [shuffleReview, setShuffleReview] = useState(true);
-  const [title, setTitle] = useState('BÀI TẬP CHIẾN THUẬT CỜ VUA');
-  const [watermark, setWatermark] = useState('LIMA Chess');
-  const [footer, setFooter] = useState({ ...defaultWorksheetFooter });
+  const [reuseReview, setReuseReview] = useState(
+    restored?.reuseReview ?? false
+  );
+  const [shuffleReview, setShuffleReview] = useState(
+    restored?.shuffleReview ?? true
+  );
+  const [title, setTitle] = useState(
+    restored?.title ?? 'BÀI TẬP CHIẾN THUẬT CỜ VUA'
+  );
+  const [watermark, setWatermark] = useState(
+    restored?.watermark ?? 'LIMA Chess'
+  );
+  const [footer, setFooter] = useState(
+    restored?.footer ?? { ...defaultWorksheetFooter }
+  );
+  const choices = useMemo<WorksheetDraftChoices>(
+    () => ({
+      bookMode,
+      title,
+      watermark,
+      footer,
+      book,
+      levels: selectedLevels,
+      sections,
+      hasCustomOrder,
+      initialTopicChosen: initialTopicChosen.current,
+      nextId: nextId.current,
+      reviewSettings,
+      reviewOverrides,
+      reuseReview,
+      shuffleReview,
+    }),
+    [
+      bookMode,
+      title,
+      watermark,
+      footer,
+      book,
+      selectedLevels,
+      sections,
+      hasCustomOrder,
+      reviewSettings,
+      reviewOverrides,
+      reuseReview,
+      shuffleReview,
+    ]
+  );
+  const initialChoices = useRef(choices);
+  const { saveWorking } = drafts;
+  useEffect(() => {
+    if (choices !== initialChoices.current || restored || referenceId)
+      saveWorking(choices, referenceId);
+  }, [choices, referenceId, restored, saveWorking]);
   const [loading, setLoading] = useState('');
   const [error, setError] = useState('');
   const [busy, setBusy] = useState(false);
+  const [exportHistoryError, setExportHistoryError] = useState('');
+  const unsavedExports = useRef<WorksheetVersion[]>([]);
+  const [exportWarning, setExportWarning] = useState<{
+    choices: WorksheetDraftChoices;
+    previous: WorksheetExportRecord;
+    positions: WorksheetExportPosition[];
+    changed: number;
+    firstChanged: number;
+  }>();
   const [result, setResult] = useState<{
     worksheet: string;
     answers: string;
@@ -179,20 +299,31 @@ export default function WorksheetBuilder({
   };
   const move = (index: number, direction: number) => {
     setResult(null);
-    setSections((s) => {
-      const rows = [...s];
-      [rows[index], rows[index + direction]] = [
-        rows[index + direction],
-        rows[index],
-      ];
-      return rows;
-    });
+    const rows = [...sections];
+    [rows[index], rows[index + direction]] = [
+      rows[index + direction],
+      rows[index],
+    ];
+    setHasCustomOrder(true);
+    setSections(rows);
   };
   let validation = '';
   let pages: ReturnType<typeof planWorksheet> = [];
   try {
-    if (sections.some((s) => !catalog[s.topic]))
-      throw new Error('Chờ tải xong chủ đề trước khi tạo PDF.');
+    const missing = sections.find(
+      (s) => !worksheetTopics.some((topic) => topic.id === s.topic)
+    );
+    if (missing)
+      throw new Error(
+        `Chủ đề ${missing.topic} đã lưu không còn trong thư viện. Hãy chọn chủ đề khác hoặc xóa phần này.`
+      );
+    const notLoaded = sections.find((s) => !catalog[s.topic]);
+    if (notLoaded)
+      throw new Error(
+        loading
+          ? 'Chờ tải xong chủ đề trước khi tạo PDF.'
+          : `Chưa tải được chủ đề ${worksheetTopics.find((topic) => topic.id === notLoaded.topic)?.title ?? notLoaded.topic}. Hãy thử tải lại.`
+      );
     if (!selectedLevels.length) throw new Error('Chọn ít nhất một cấp độ.');
     const unavailable = sections.find(
       (s) =>
@@ -236,11 +367,138 @@ export default function WorksheetBuilder({
     (total, page) => total + page.exercises.length,
     0
   );
-  async function generate() {
+  async function openVersion(
+    version: WorksheetVersion,
+    entry?: WorksheetExportRecord
+  ) {
+    const hasWork = choices !== initialChoices.current || restored;
+    if (hasWork && !sameWorksheetChoices(choices, version.choices)) {
+      const saved = await drafts.updateVersions((current) =>
+        current.some((item) => sameWorksheetChoices(item.choices, choices))
+          ? current
+          : [
+              makeWorksheetVersion(
+                choices,
+                `Bản đang làm · ${title.trim().slice(0, 140) || 'Tài liệu cờ vua'}`
+              ),
+              ...current,
+            ]
+      );
+      if (!saved) return false;
+    }
+    const saved = version.choices;
+    initialTopicChosen.current = saved.initialTopicChosen;
+    nextId.current = saved.nextId;
+    setSections(saved.sections);
+    setHasCustomOrder(preserveSavedOrder(saved));
+    setSelectedLevels(saved.levels);
+    setBookMode(saved.bookMode);
+    setBook(saved.book);
+    setTitle(saved.title);
+    setWatermark(saved.watermark);
+    setFooter(saved.footer);
+    setReviewSettings(saved.reviewSettings);
+    setReviewOverrides(saved.reviewOverrides);
+    setReuseReview(saved.reuseReview);
+    setShuffleReview(saved.shuffleReview);
+    setReferenceId(entry?.id ?? version.id);
+    setResult(null);
+    setExportWarning(undefined);
+    setExportHistoryError('');
+    return true;
+  }
+
+  function exportBackup() {
+    const working = {
+      at:
+        drafts.working && sameWorksheetChoices(drafts.working.choices, choices)
+          ? drafts.working.at
+          : new Date().toISOString(),
+      choices,
+      referenceId,
+    };
+    const blob = new Blob(
+      [
+        encodeWorksheetDrafts(working, [
+          ...drafts.versions,
+          ...unsavedExports.current,
+        ]),
+      ],
+      {
+        type: 'application/json',
+      }
+    );
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = `LIMA-Chess-ban-nhap-${working.at.slice(0, 10)}.json`;
+    link.click();
+    setTimeout(() => URL.revokeObjectURL(url), 1000);
+  }
+
+  async function importBackup(file: File) {
+    try {
+      if (file.size > 16 * 1024 * 1024)
+        throw new Error('Tệp sao lưu quá lớn để nhập.');
+      const backup = parseWorksheetDrafts(await file.text());
+      const imported = await drafts.updateVersions((current) =>
+        mergeWorksheetBackup(current, backup)
+      );
+      return imported
+        ? 'Đã nhập bản sao. Chọn phiên bản trong danh sách để mở.'
+        : '';
+    } catch (error) {
+      return (error as Error).message;
+    }
+  }
+
+  async function generate(acceptedPositions?: WorksheetExportPosition[]) {
     setBusy(true);
     setError('');
     setResult(null);
+    setExportWarning(undefined);
+    setExportHistoryError('');
     try {
+      const referenceVersion = drafts.versions.find(
+        (item) =>
+          item.id === referenceId ||
+          item.exports.some((entry) => entry.id === referenceId)
+      );
+      const previous =
+        referenceVersion?.exports.find((entry) => entry.id === referenceId) ??
+        referenceVersion?.exports.at(-1) ??
+        drafts.versions
+          .find(
+            (item) =>
+              item.exports.length && sameWorksheetChoices(item.choices, choices)
+          )
+          ?.exports.at(-1);
+      let positions: WorksheetExportPosition[] | undefined;
+      try {
+        positions = await captureWorksheetPositions(pages);
+      } catch {
+        if (previous)
+          throw new Error(
+            'Chưa đối chiếu được danh sách thế cờ với bản đã xuất. Hãy thử lại.'
+          );
+        setExportHistoryError(
+          'Trình duyệt chưa ghi được danh sách thế cờ cho lần xuất này.'
+        );
+      }
+      if (positions && previous) {
+        const difference = worksheetExportDifference(
+          previous.positions,
+          positions
+        );
+        if (
+          difference.changed &&
+          (!acceptedPositions ||
+            worksheetExportDifference(acceptedPositions, positions).changed)
+        ) {
+          setExportWarning({ choices, previous, positions, ...difference });
+          return;
+        }
+      }
       const { createWorksheetPdfs } = await import('@/lib/chess/worksheet-pdf');
       const files = await createWorksheetPdfs(
         pages,
@@ -257,6 +515,27 @@ export default function WorksheetBuilder({
           new Blob([files.answers as BlobPart], { type: 'application/pdf' })
         ),
       });
+      if (positions) {
+        const entry = {
+          id: crypto.randomUUID(),
+          at: new Date().toISOString(),
+          positions,
+        };
+        const saved = await drafts.updateVersions((current) =>
+          addWorksheetExport(current, choices, entry, referenceVersion?.id)
+        );
+        if (saved) setReferenceId(entry.id);
+        else {
+          unsavedExports.current = addWorksheetExport(
+            unsavedExports.current,
+            choices,
+            entry
+          );
+          setExportHistoryError(
+            'Đã tạo PDF. Trình duyệt chưa lưu được danh sách thế cờ. Hãy xuất bản sao JSON để giữ danh sách của lần xuất này.'
+          );
+        }
+      }
     } catch (e) {
       setError((e as Error).message || 'Không tạo được PDF. Vui lòng thử lại.');
     } finally {
@@ -269,8 +548,8 @@ export default function WorksheetBuilder({
         <div>
           <h1>Tạo phiếu bài tập</h1>
           <p>
-            Chọn chủ đề và mức độ, sắp xếp thứ tự, rồi tải bài tập và lời giải
-            riêng.
+            Chọn cấp độ và chủ đề. Các phần mặc định xếp theo thứ tự học. Dùng
+            nút mũi tên để đổi chỗ.
           </p>
         </div>
         <fieldset className={styles.mode} disabled={busy}>
@@ -332,12 +611,31 @@ export default function WorksheetBuilder({
             </small>
           </label>
         </div>
+        <WorksheetDraftHistory
+          choices={choices}
+          versions={drafts.versions}
+          savedAt={drafts.working?.at}
+          draftError={drafts.draftError}
+          historyError={drafts.historyError}
+          busy={busy}
+          onSave={async (name) =>
+            Boolean(
+              await drafts.updateVersions((current) => [
+                makeWorksheetVersion(choices, name),
+                ...current,
+              ])
+            )
+          }
+          onOpen={openVersion}
+          onExport={exportBackup}
+          onImport={importBackup}
+        />
         <div className={styles.footerSettings}>
           <label>
             Tên ở chân trang
             <input
               maxLength={30}
-              value={footer.name}
+              value={bookMode ? bookFooterName(footer.name) : footer.name}
               onChange={(e) => {
                 setFooter((f) => ({ ...f, name: e.target.value }));
                 setResult(null);
@@ -381,6 +679,20 @@ export default function WorksheetBuilder({
                   }}
                 />
                 Thêm mục lục
+              </label>
+              <label className={styles.guideToggle}>
+                <input
+                  type="checkbox"
+                  checked={book.showAddressOnEveryPage ?? false}
+                  onChange={(e) => {
+                    setBook((b) => ({
+                      ...b,
+                      showAddressOnEveryPage: e.target.checked,
+                    }));
+                    setResult(null);
+                  }}
+                />
+                Hiện địa chỉ trên mỗi trang
               </label>
               <button
                 type="button"
@@ -451,6 +763,63 @@ export default function WorksheetBuilder({
                   Trang tra cứu cột, hàng, quân cờ và cách ghi nước đi, đặt sau
                   phần mở đầu.
                 </p>
+                <section
+                  className={styles.pageEditor}
+                  aria-labelledby="book-compilation-title"
+                >
+                  <h3 id="book-compilation-title">Thông tin tài liệu</h3>
+                  <div className={styles.compilationFields}>
+                    <label>
+                      Ngày ghi trên tài liệu
+                      <input
+                        type="date"
+                        value={bookDraft.compilation?.date ?? ''}
+                        onChange={(e) =>
+                          setBookDraft((b) => ({
+                            ...b,
+                            compilation: {
+                              ...b.compilation,
+                              date: e.target.value,
+                            },
+                          }))
+                        }
+                      />
+                    </label>
+                    <label>
+                      Phiên bản
+                      <input
+                        maxLength={30}
+                        value={bookDraft.compilation?.version ?? ''}
+                        onChange={(e) =>
+                          setBookDraft((b) => ({
+                            ...b,
+                            compilation: {
+                              ...b.compilation,
+                              version: e.target.value,
+                            },
+                          }))
+                        }
+                      />
+                    </label>
+                  </div>
+                  <label className={styles.guideToggle}>
+                    <input
+                      type="checkbox"
+                      checked={bookDraft.compilation?.internalOnly ?? false}
+                      onChange={(e) =>
+                        setBookDraft((b) => ({
+                          ...b,
+                          compilation: {
+                            ...b.compilation,
+                            internalOnly: e.target.checked,
+                          },
+                        }))
+                      }
+                    />
+                    Lưu hành nội bộ
+                  </label>
+                  <small>Dùng chung cho sách bài tập và sách lời giải.</small>
+                </section>
                 {(['introduction', 'closing'] as const).map((key) => (
                   <section key={key} className={styles.pageEditor}>
                     <h3>{key === 'introduction' ? 'Lời mở đầu' : 'Lời kết'}</h3>
@@ -558,42 +927,39 @@ export default function WorksheetBuilder({
               catalog
             );
             const unavailable = !availableLevels.length;
+            const topicOptions = eligibleTopics
+              .filter(
+                (topic) =>
+                  topic.id === row.topic ||
+                  !sections.some((section) => section.topic === topic.id)
+              )
+              .map(({ id, title }) => ({
+                value: id,
+                label: title,
+                scope: `/${id}`,
+                disabled: false,
+              }));
+            if (unavailable) {
+              const title =
+                worksheetTopics.find((t) => t.id === row.topic)?.title ??
+                row.topic;
+              topicOptions.push({
+                value: row.topic,
+                label: `${title} — chưa đủ bài ở cấp độ đã chọn`,
+                scope: `/${row.topic}`,
+                disabled: true,
+              });
+            }
             return (
               <li key={row.id}>
                 <span className={styles.number}>{index + 1}</span>
-                <label>
-                  Chủ đề
-                  <select
-                    aria-label={`Chủ đề phần ${index + 1}`}
-                    value={row.topic}
-                    onChange={(e) =>
-                      change(row.id, {
-                        topic: e.target.value,
-                      })
-                    }
-                  >
-                    {unavailable && (
-                      <option value={row.topic} disabled>
-                        {worksheetTopics.find((t) => t.id === row.topic)
-                          ?.title ?? row.topic}{' '}
-                        — chưa đủ bài ở cấp độ đã chọn
-                      </option>
-                    )}
-                    {eligibleTopics
-                      .filter(
-                        (topic) =>
-                          topic.id === row.topic ||
-                          !sections.some(
-                            (section) => section.topic === topic.id
-                          )
-                      )
-                      .map((t) => (
-                        <option key={t.id} value={t.id}>
-                          {t.title}
-                        </option>
-                      ))}
-                  </select>
-                </label>
+                <PracticeTopicSelect
+                  label="Chủ đề"
+                  ariaLabel={`Chủ đề phần ${index + 1}`}
+                  value={row.topic}
+                  options={topicOptions}
+                  onChange={(topic) => change(row.id, { topic })}
+                />
                 <label>
                   Số thế / cấp độ
                   <input
@@ -754,13 +1120,35 @@ export default function WorksheetBuilder({
           <button onClick={() => setRetry((r) => r + 1)}>Thử tải lại</button>
         </p>
       )}
+      {!bookMode && validation && !loading && selectedLevels.length > 0 && (
+        <p role="status">{validation}</p>
+      )}
+      {exportHistoryError && <p role="status">{exportHistoryError}</p>}
       <button
         className={styles.primary}
         disabled={busy || !!loading || !!validation}
-        onClick={generate}
+        onClick={() => generate()}
       >
         {busy ? 'Đang tạo PDF…' : 'Tạo PDF'}
       </button>
+      {exportWarning?.choices === choices && !validation && !loading && (
+        <div className={styles.draftWarning} role="status">
+          <p>
+            Danh sách hiện tại khác bản đã xuất. Bản đã xuất có{' '}
+            {exportWarning.previous.positions.length} thế, danh sách hiện tại có{' '}
+            {exportWarning.positions.length} thế. Có {exportWarning.changed} mục
+            khác, bắt đầu từ bài {exportWarning.firstChanged}. Bạn có thể xem
+            lại danh sách cũ trong lịch sử phiên bản.
+          </p>
+          <button
+            type="button"
+            disabled={busy}
+            onClick={() => generate(exportWarning.positions)}
+          >
+            Tạo PDF với danh sách hiện tại
+          </button>
+        </div>
+      )}
       {!validation && exerciseCount > 120 && (
         <p role="status">
           Tài liệu có {exerciseCount} thế cờ. Việc tạo PDF bài tập và lời giải

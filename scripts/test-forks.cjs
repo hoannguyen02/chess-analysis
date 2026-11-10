@@ -345,7 +345,10 @@ test('solutionless Beginner uses neutral free legal play and every Beginner expo
         useRef: (current) => ({ current }),
       };
     if (name.endsWith('/draw-trainer')) return runtime.exports;
-    if (name.endsWith('/worksheet')) return { explainLine: () => [] };
+    if (name.endsWith('/practice-goals'))
+      return { practiceGoalLabels: { material: 'Thắng vật chất' } };
+    if (name.endsWith('/worksheet'))
+      return { explainLine: () => [], previousMoveLabel: () => '' };
     if (name.endsWith('/practice-exploration'))
       return { explorationStartPly: () => 0 };
     if (name.endsWith('/usePracticeBoardTools'))

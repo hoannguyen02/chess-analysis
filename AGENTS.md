@@ -4,15 +4,22 @@
 
 - Before planning or editing any current or future chess practice page, review
   this file's required levels and exercise-count rule. Use Beginner, A, B, C,
-  C*, D in that order, with a target of 24 verified positions at each level.
+  C*, D, D*, E, E* in that order, with a target of 24 verified positions per
+  level in the required research scope.
+- On new tactics pages, the owner fills Beginner manually through the shared
+  UI. Keep the level visible with its actual count, including zero, and wire
+  both the source importer and manual editor. Agents may generate, research,
+  prefill or import Beginner exercises only at the owner's explicit request.
+  Preserve existing Beginner positions and owner choices.
 - Keep every level visible even when research has not yet produced 24 suitable
   positions. Show the actual count and document the gap; never fabricate or pad
   examples to meet the target.
-- Treat a request to create a practice page as an end-to-end implementation:
-  finish research and position review, page and protected APIs, all six level
-  counts (24 verified positions each where suitable), game replay, worksheet
-  registration, access integration, documentation, and required validation.
-  Do not present a scaffold as a completed page; report genuine research gaps.
+- Treat a request to create a practice page as an end-to-end implementation.
+  Finish research and position review for the required levels, page and
+  protected APIs, all nine level counts, game replay, worksheet registration,
+  access integration, documentation, and required validation. On a new
+  tactics page, the owner can fill Beginner after delivery. Report genuine
+  research gaps in the levels assigned to the agent.
 
 # Practice research: execution and evidence
 
@@ -20,7 +27,7 @@
 
 - Scope an extension to the topic, levels and number requested. A request for
   nine B additions does not reopen every approved level or require finishing
-  an entire archive. New practice pages still require all six levels and the
+  an entire archive. New practice pages still require all nine levels and the
   end-to-end integration above. Keep the target of 24 and report actual gaps.
 - Use `docs/tactic-research-workflow.md` and the shared
   `scripts/research-tactics.py` workflow. Reuse its engine cache, source index,
@@ -91,16 +98,24 @@
   including parallel reviewer intervals; include gaps and unresolved work in
   the full elapsed time. Do not replace whole-task timing with the sum of
   engine commands or advertise a replay of known positions as fresh research.
+- For source-derived batches, use the executable workflow gate: `start-run
+  --topic TOPIC --additions LEVEL=COUNT ...`, then retain the same `--run-file`
+  through review, editorial merge, publication and visual inspection. See
+  `docs/tactic-research-workflow.md#executable-workflow-checks`. Do not bypass a
+  failed gate with direct builder writes or handwritten completion receipts;
+  resolve its cause and rerun the affected shared command.
 
 ## Adaptive workflow for every tactic, including Beginner
 
-- The owner's new position-first flow is **Beginner only**; see
+- The owner's position-first flow is **Beginner only** and is the default way
+  to populate Beginner on a new tactics page. The owner opens **Lấy thế cờ từ
+  B, C, C*, D, D*, E, E\*** in Beginner and selects which positions to save. See
   [Beginner-only position authoring](docs/tactic-research-workflow.md#beginner-only-position-authoring).
   Extract the FEN immediately before the tactic from existing exercises, retain
   its source reference, and let the owner edit the pieces and FEN. A recorded
   solution is optional for this flow. Validate the saved position and duplicates;
   do not require engine review or a mandatory solution before owner review.
-- For source-derived Beginner imports, use B, C, C*, D only by default, based
+- For source-derived Beginner imports, use B, C, C*, D, D*, E, E* by default, based
   on the owner's current level choices. Exclude A because its direct positions
   overlap Beginner. Keep extracting the FEN immediately before the motif;
   retain original Beginner compositions and preserve source exercises.
@@ -115,7 +130,7 @@
   authoring dialog, with nested piece setup and optional solution recording.
   Closing, Cancel or Escape discard unsaved changes and restore trigger focus;
   a successful save closes the dialog. Reuse the existing manual data store.
-- Keep A, B, C, C*, D content, required solutions, research, verification,
+- Keep the later levels' content, required solutions, research, verification,
   grading, solving behavior and publication workflow unchanged. Deriving a new
   Beginner position must not edit or reclassify its source exercise or game.
   Do not extend solutionless practice to later levels. Shared code may support
@@ -146,19 +161,26 @@
   check topic/level suitability, record coverage gaps, and reuse current evidence
   before generating or researching new candidates. Target 24 where suitable;
   a scoped addition does not authorize replacing the existing collection.
-- Prefer simple original compositions for agent-generated Beginner additions.
-  Construct from the intended decision and defensive relationships; reuse
-  suitable reviewed candidates first. A–D retain the complete master-game
-  research requirements. Do not reduce an advanced combination or remove its
-  defining sacrifice merely to produce a Beginner version. Keep unsuitable
-  levels visible and explain the gap.
+- When the owner explicitly requests verified Beginner additions for any
+  tactics topic, apply the [shared one-move requirements](docs/beginner-one-move-game-requirements.md).
+  Count every piece, including kings and pawns, toward the maximum of 10.
+  Verify exactly one legal move that wins, draws or saves the position
+  according to the explicit topic objective. Stop the exercise after that
+  move. Keep any follow-up needed to prove the payoff in the review and
+  explanation. Preserve existing exercises and owner-authored practice.
+- Prefer original positions from complete games. Search the game index
+  beyond published higher-level exercises and preserve the preceding move
+  and full-game source. When the request allows compositions, apply the
+  same proof and label them as compositions. Keep the level visible and
+  report any gap if the defining motif needs more than one learner move,
+  a sacrifice or advanced preparation.
 - Share collection infrastructure, legal checks, exact caches, review packets
   and publication tools. Each topic must define its own teaching families,
   essential motif, defensive resources, objective checks and distinctness
   criteria. Unsupported checks or exhausted budgets mean unverified. The
-  shared CLI supports `review-compositions --topic fork` for supplied,
-  agent-verified compositions. It is not a universal position generator;
-  other topics still need their own motif/objective adapter.
+  shared CLI supports `review-compositions` for supplied Fork and Hanging
+  Piece compositions. Use the shared Beginner gates and add a topic-specific
+  proof adapter before verifying additions for an unsupported topic.
 - For short Beginner lines, check every legal starting move and all legal
   defensive replies within the stated teaching horizon, including recaptures
   and counterattacks. Retain the existing alternative/engine/editorial checks;
@@ -208,12 +230,13 @@
 
 ## Research targets and approval
 
-- Treat 24 positions per level as the target for the task, not a reason to
-  stop after a small batch. For a new page or a requested full collection,
-  continue across all six levels until the target is reached or a concrete
-  limitation prevents progress. For a scoped extension, finish its requested
-  additions and affected integration. Do not claim a gap is unavoidable
-  without sufficient search.
+- For a new page or a requested full collection, continue researching each
+  required level until the 24-position target is reached or a concrete
+  limitation prevents progress. For a new tactics page, this applies to A,
+  B, C, C*, D, D*, E, E* by default. A zero Beginner count can reflect owner authoring
+  still to come. For a scoped extension, finish its requested additions and
+  affected integration. Do not claim a research gap is unavoidable without
+  sufficient search.
 - Follow the established skewer collection workflow for new or expanded
   practice collections: collect and deduplicate candidates from complete games,
   run staged engine screening, independently review candidates in batches, then
@@ -230,7 +253,8 @@
   alternative-move, defensive-reply, material-recovery, provenance, level and
   editorial requirements, including topic-specific requirements below. Record
   accepted and excluded positions with stable IDs and reasons; publish each
-  batch that passes rather than waiting for all six levels to reach the target.
+  batch that passes rather than waiting for every researched level to reach
+  the target.
 - For material-winning exercises, compare all legal starting moves and review
   relevant forcing alternatives, strong defensive replies and material recovery.
   Bounded engine searches and documented professional tactical review are
@@ -363,12 +387,14 @@ Apply this requirement to all current and future practice pages and levels.
 # Required practice levels
 
 All current and future chess practice pages, including checkmate and endgame
-pages, must use this exact level order: **Beginner, A, B, C, C*, D**.
-Use exactly one asterisk in `C*`; do not introduce `B*` or `C**`.
+pages, must use this exact level order: `Beginner, A, B, C, C*, D, D*, E, E*`.
+Use exactly one asterisk in each of `C*`, `D*` and `E*`.
 
 - **Beginner**: for people who have just learned how pieces move and capture.
-  Use few pieces and a direct, easily recognizable idea. Composed positions
-  are appropriate; real-game provenance is not required for this level.
+  Use few pieces and a direct, easily recognizable idea. Apply the
+  [one-move requirements](docs/beginner-one-move-game-requirements.md) to all
+  newly verified tactics exercises. Preserve existing approved positions
+  and the separate owner-authoring flow.
   For current and future tactics pages, prioritize simple moves that create
   the named tactical motif and lead to a clear material gain. Keep the payoff
   short and visible; avoid sacrifices, long calculation, and incidental motifs
@@ -385,19 +411,35 @@ Use exactly one asterisk in `C*`; do not introduce `B*` or `C**`.
   preparatory calculation.
 - **B**: slightly harder than A, with simple preparation or short coordination.
 - **C**: requires a simple sacrifice with a clear tactical purpose.
-- **C***: no sacrifice, but requires thinking two or three moves further ahead
-  than B. Do not classify a longer non-sacrificial line as C or D merely for
-  its length.
-- **D**: complicated sacrifices and advanced tactical coordination requiring
-  more than three moves by the solving side. Count solver moves, not plies.
+- **C\***: two or three solver moves without a sacrifice. A strong defensive
+  resource requires a harder choice or calculation than the simple
+  preparation or coordination at B.
+- **D**: complex sacrifice and advanced tactical coordination requiring four
+  or five solver moves.
+- **D\***: four or five solver moves without a sacrifice. A strong defensive
+  reply must make that depth necessary to achieve or secure the stated payoff.
+- **E**: complex sacrifice and advanced tactical coordination requiring six
+  or more solver moves.
+- **E\***: six or more solver moves without a sacrifice. A strong defensive
+  reply must make that depth necessary to achieve or secure the stated payoff.
+
+Count only the solving side's moves needed to achieve or secure the stated
+objective. For C*, D, D*, E and E*, document the relevant strong defence,
+compare shorter continuations and include the moves needed for the payoff.
+Weaker replies may resolve sooner. If a shorter sound continuation achieves
+the same objective, grade the shorter continuation.
+Keep existing reviewed grades until the individual position is re-reviewed.
 
 Keep these levels separate from lesson topics. Labels such as "mate in one",
 "mate in two", and "ladder mate" may be additional categories, but must not
 replace the required level navigation. Reuse or extend the shared level UI;
 do not disable it for a new topic without an explicit user request.
 
-Use 24 verified positions per level for all current and future tactics and
-checkmate practice pages unless the user explicitly specifies a different count.
+Use a target of 24 verified positions per researched level for tactics and
+checkmate practice pages unless the user specifies a different count. For
+new tactics pages, Beginner is owner-authored through the UI by default.
+Show the actual count, including zero, and distinguish owner-authored positions
+from tactically verified exercises.
 Do not remove previously approved positions solely because a level already
 contains more than 24; retain them unless an editorial review rejects them.
 Review the complete solution, defensive replies, and shorter alternatives before
@@ -480,8 +522,8 @@ every difficulty level.
   them consecutively. Balance sides across the set without requiring a
   White/Black pair for every aspect. Fit broad coverage into the requested
   count rather than adding repetitive positions to fill a checklist.
-- For every current and future tactics page, review the full range of ways
-  to create and exploit its motif separately at Beginner, A, B, C, C*, and D.
+- For every tactics collection under review, consider the full range of ways
+  to create and exploit its motif separately at each level in the research scope.
   Reaching the position count does not establish coverage. Do not assume an
   aspect is covered at one level merely because it appears at another.
 - Before selecting positions, record a topic-specific coverage checklist in
@@ -517,8 +559,8 @@ every difficulty level.
 ## Master-game research and provenance
 
 - For current and future tactics and checkmate pages, research real master
-  games for A–D, especially C, C*, and D; include suitable real-game examples
-  in B even when composed introductory exercises already exist. Preserve
+  games for A, B, C, C*, D, D*, E and E*, especially the advanced levels. Include
+  suitable real-game examples in B even when introductory exercises exist. Preserve
   approved Beginner exercises instead of replacing them unnecessarily.
 - Reuse the established master-game PGN research pipeline and available
   validated corpora. Retain reputable source URLs and archive checksums,
@@ -563,7 +605,7 @@ every difficulty level.
   ingest the large general dump as if it were a master-game corpus.
 - Search both played promotions and games where promotion was threatened but
   not played (including resignations). Begin with several plies before played
-  promotions, then widen the window for longer C*/D combinations; also inspect
+  promotions, then widen the window for D, D*, E and E* combinations; also inspect
   balanced passer endgames without a played promotion. Preserve when the game
   ended before the teaching payoff and label any verified continuation as
   analysis. High-recall filters and engine screens create leads only; every
@@ -725,7 +767,7 @@ tactics topic, including forks, skewers, pins, and discovered checks/attacks.
 
 ## Promotion coverage
 
-- On the material-promotion practice page, publish levels B, C, C*, and D
+- On the material-promotion practice page, publish levels B, C, C*, D, D*, E and E*
   only from legally replayed real games. A composed position may remain in
   research or rejection data, but must not appear in those published levels.
   Keep the empty level visible and report its actual count while suitable game

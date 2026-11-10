@@ -1,5 +1,5 @@
 .practice {
-  margin-top: 18px;
+  margin-top: 0;
 }
 .categories {
   display: flex;
@@ -581,6 +581,12 @@
 .exerciseTaskRow .exerciseGoal {
   min-width: 0;
   margin: 0;
+}
+.exerciseTaskText {
+  min-width: 0;
+}
+.exerciseTaskText p + .exerciseGoal {
+  margin-top: 4px;
 }
 
 .moveNavigation {

@@ -97,7 +97,9 @@ class Discovery(unittest.TestCase):
     self.assertEqual(hashlib.sha256(' '.join(m.uci() for m in game.move_stack).encode()).hexdigest()[:16],r['gameId'])
     self.assertEqual(positions[r['ply']],r['fen'])
     self.assertEqual(positions[r['ply']-1],r['previousMove']['fen'])
-    result=builder.miner.inspect(chess.Board(r['fen']),[chess.Move.from_uci(u) for u in r['validation']['principalVariation']],[r.get('inferredLevel',r['level'])])
+    inferred=r.get('inferredLevel',r['level'])
+    levels=['D','E'] if inferred=='D' else [inferred]
+    result=builder.miner.inspect(chess.Board(r['fen']),[chess.Move.from_uci(u) for u in r['validation']['principalVariation']],levels)
     for field in ['moves','discoveryPly','sliderSquare','targetSquare','moverSquare','kind','goal','gain','localGain']:self.assertEqual(result[field],r[field])
     # A mover-only heuristic misses an accepted offer of a stationary piece.
     # Preserve its inference and independently replay the editorial correction.

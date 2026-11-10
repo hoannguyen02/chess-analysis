@@ -155,6 +155,41 @@ test.beforeEach(() => {
 });
 test.after(() => fs.rmSync(temporary, { recursive: true, force: true }));
 
+test('transfer destinations follow teaching order and preserve shared topic routes', async () => {
+  const response = await call(undefined, 'GET', { scope: '/fork' });
+  assert.equal(response.statusCode, 200);
+  const { topics } = response.body;
+  const scopes = topics.map(({ scope }) => scope);
+  const { manualTopicPath } = load('src/lib/chess/manual-tactics.ts');
+  const { tacticsCatalog } = load('src/lib/server/tactics-catalog.ts');
+  assert.deepEqual(
+    new Set(scopes),
+    new Set(tacticsCatalog.themes.map(manualTopicPath))
+  );
+  assert.equal(scopes.length, new Set(scopes).size);
+  assert.deepEqual(scopes.slice(0, 15), [
+    '/hanging-piece',
+    '/tactic-positions?theme=defensiveMove',
+    '/tactic-positions?theme=mateIn1',
+    '/two-rook-mate',
+    '/queen-mate',
+    '/back-rank-mate',
+    '/fork',
+    '/pin',
+    '/tactic-positions?theme=unpinning',
+    '/skewer',
+    '/removing-defender',
+    '/discovered-attack',
+    '/tactic-positions?theme=doubleCheck',
+    '/tactic-positions?theme=mateIn2',
+    '/one-rook-mate',
+  ]);
+  assert.equal(
+    topics.find((topic) => topic.scope === '/discovered-attack').label,
+    'Chiếu mở và tấn công mở'
+  );
+});
+
 test('move, remove, restore and reset preserve exact solutions and record durable decisions', async () => {
   const original = JSON.stringify(sample);
   const first = annotated();
@@ -220,7 +255,7 @@ test('move, remove, restore and reset preserve exact solutions and record durabl
   );
 });
 
-test('Beginner moves keep six levels separate and identity ignores game counters, not topic', async () => {
+test('Beginner moves keep the nine levels separate and identity ignores game counters, not topic', async () => {
   const exercise = annotated();
   const moved = await call(action(exercise, 'move', { level: 'Beginner' }));
   assert.equal(moved.statusCode, 200);
@@ -236,10 +271,10 @@ test('Beginner moves keep six levels separate and identity ignores game counters
     view
       .drawPracticeLevelChoices({ exercises: [adjusted] })
       .map((e) => e.count),
-    [1, 0, 0, 0, 0, 0]
+    [1, 0, 0, 0, 0, 0, 0, 0, 0]
   );
   assert.equal(
-    (await call(action(adjusted, 'move', { level: 'D' }))).statusCode,
+    (await call(action(adjusted, 'move', { level: 'E*' }))).statusCode,
     200
   );
   adjusted = store.applyPracticeAdjustments(
@@ -248,7 +283,7 @@ test('Beginner moves keep six levels separate and identity ignores game counters
     await store.readPracticeAdjustments()
   )[0].exercises[0];
   assert.equal(adjusted.beginner, false);
-  assert.equal(adjusted.difficulty.level, 'D');
+  assert.equal(adjusted.difficulty.level, 'E*');
   assert.equal(
     store.practiceAdjustmentId('/fork', fen),
     store.practiceAdjustmentId('/fork', fen.replace('0 1', '9 30'))
@@ -457,7 +492,7 @@ test('standalone Draw topic navigation uses adjusted counts', async () => {
   assert.equal(res.body.categories[0].exercises.length, countBefore - 1);
 });
 
-test('Draw route aliases share decisions and empty topics retain restoration and all six levels', async () => {
+test('Draw route aliases share decisions and empty topics retain restoration and all nine levels', async () => {
   const exercise = annotated('/perpetual-check', {
     ...sample,
     outcome: 'repetition',
@@ -490,7 +525,7 @@ test('Draw route aliases share decisions and empty topics retain restoration and
   assert.equal(view.drawPracticeChoices(combined).length, 1);
   assert.deepEqual(
     view.drawPracticeLevelChoices(combined[0]).map((e) => e.count),
-    [0, 0, 0, 0, 0, 0]
+    [0, 0, 0, 0, 0, 0, 0, 0, 0]
   );
 });
 

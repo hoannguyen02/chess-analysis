@@ -377,6 +377,35 @@ test('atomic authoring updates one topic/position, moves levels, preserves other
   fs.unlinkSync(file + '.lock');
   assert.equal(fs.readFileSync(file, 'utf8'), before);
 });
+test('defensive objectives survive saving and loading the practice catalog', async () => {
+  const catalog = load('src/pages/api/manual-tactic-exercises.ts').default;
+  for (const goal of ['defend', 'equalize', 'keepAdvantage']) {
+    const saved = await call('POST', {
+      themeId: 'defensiveMove',
+      level: 'B',
+      fen: '6k1/8/8/8/8/8/q3R3/6K1 w - - 0 1',
+      moves: ['Re1'],
+      goal,
+    });
+    assert.equal(saved.code, 200);
+    const { id, updatedAt } = saved.body.position;
+    try {
+      const res = response();
+      await catalog({ method: 'GET', query: { theme: 'defensiveMove' } }, res);
+      assert.equal(res.code, 200);
+      const exercise = res.body.categories[0].exercises.find(
+        (entry) => entry.manualId === id
+      );
+      assert.ok(exercise);
+      assert.equal(exercise.goal, goal);
+      assert.deepEqual(exercise.moves, ['Re1']);
+    } finally {
+      const removed = await call('DELETE', { id, expectedUpdatedAt: updatedAt });
+      assert.equal(removed.code, 200);
+    }
+  }
+});
+
 test('manual Fork exercises appear in the existing protected API and shared worksheet levels without duplicate positions', async () => {
   await store.mutateManualTactics(() => []);
   const added = (await call('POST', sample)).body.position;
@@ -642,6 +671,31 @@ test('each alternative is legally replayed and mate examples must end in mate on
   assert.throws(
     () => store.validateManualTactic({ ...mate, alternativeLines: [['Qe7']] }),
     /Mỗi phương án/
+  );
+});
+
+test('solution saves reject legal-looking moves after an automatic draw', async () => {
+  const { validatePracticeSolution } = load(
+    'src/lib/server/practice-management.ts'
+  );
+  const input = {
+    ...sample,
+    fen: '7k/8/8/8/8/8/8/R3K3 w - - 99 80',
+    moves: ['Ra2'],
+    alternativeLines: [['Ra3', 'Kg8']],
+  };
+  const before = fs.readFileSync(file, 'utf8');
+  const response = await call('POST', input);
+  assert.equal(response.code, 400);
+  assert.match(response.body.error, /Phương án 2.*50 nước.*nước thứ 2/);
+  assert.equal(fs.readFileSync(file, 'utf8'), before);
+  assert.throws(
+    () => validatePracticeSolution({ fen: input.fen }, input),
+    /Phương án 2.*50 nước.*nước thứ 2/
+  );
+  assert.deepEqual(
+    store.validateManualTactic({ ...input, alternativeLines: [['Ra3']] }).moves,
+    ['Ra2']
   );
 });
 

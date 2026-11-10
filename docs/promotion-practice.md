@@ -2,7 +2,7 @@
 
 The promotion family has four private practice routes with the existing shared access. All reuse
 `ChessPractice`, `DrawTrainer`, the shared full-game dialog, access guards and
-worksheet generator. Each route keeps Beginner, A, B, C, C*, D visible, including
+worksheet generator. Each route keeps Beginner, A, B, C, C*, D, D*, E, E* visible, including
 empty levels. The starting side and explicit objective remain visible in normal
 and fullscreen practice. These are the project's instructional levels.
 

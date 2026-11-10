@@ -286,6 +286,54 @@
   margin: 0;
   background: transparent;
 }
+.positionEditorFields,
+.positionEditorActions {
+  display: grid;
+  gap: 12px;
+}
+.positionEditorFooter p:not(:empty) {
+  margin-top: 8px;
+}
+.positionDialog[open] {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  overflow: hidden;
+}
+.positionDialog .managementHeader {
+  flex: none;
+  margin: 0;
+  padding: 12px 20px;
+  border-bottom: 1px solid #d8dfd0;
+}
+.positionDialog .editor {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  min-height: 0;
+}
+.positionDialog .positionEditorFields {
+  min-height: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scroll-padding-block: 12px;
+  padding: 16px 20px;
+}
+.positionDialog .positionEditorFooter {
+  flex: none;
+  padding: 12px 20px;
+  border-top: 1px solid #d8dfd0;
+}
+.positionDialog .positionEditorActions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 8px;
+}
+.positionDialog .positionEditorActions button[type='submit'] {
+  background: #345626;
+  color: white;
+}
 .managementTopic {
   flex: 1 1 220px;
   min-width: 0;
@@ -377,6 +425,9 @@
 .variationHeader h3 {
   font-size: 1.2rem;
   font-weight: 700;
+}
+.beginnerImportConfirmation {
+  width: min(460px, calc(100vw - 24px));
 }
 .variationPreview {
   display: grid;

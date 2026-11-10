@@ -88,6 +88,7 @@ Thumbs.db
 # Rebuildable local search index; raw source archives remain outside the repository.
 /research/tactics-index.sqlite*
 /research/tactic-publication.lock
+/research/backups/
 
 # Disposable research runs, timing reports, previews and one-off scripts.
 # Approved fixtures, complete selected games and reusable tools stay tracked.

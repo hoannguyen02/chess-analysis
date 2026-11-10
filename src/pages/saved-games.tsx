@@ -5,6 +5,9 @@ import type { GetStaticProps } from 'next';
 import PrivateContent from '@/components/PrivateContent';
 import DrawGameViewer from '@/components/DrawGameViewer';
 import PracticePositionEditor from '@/components/PracticePositionEditor';
+import PracticeSaveFeedback, {
+  type PracticeSaveNotice,
+} from '@/components/PracticeSaveFeedback';
 import {
   type SavedGame,
   type SavedGamesData,
@@ -48,6 +51,10 @@ function Library({
   const [removing, setRemoving] = useState<string>();
   const [removingPosition, setRemovingPosition] = useState<string>();
   const [addingPosition, setAddingPosition] = useState<string>();
+  const [positionSave, setPositionSave] = useState<{
+    id: string;
+    notice: PracticeSaveNotice;
+  }>();
   const themeLabel = (id: string) =>
     initial.themes.find((theme) => theme.id === id)?.label ?? id;
   const positionsFor = (game: SavedGame) =>
@@ -371,11 +378,12 @@ function Library({
                     <div className={styles.actions}>
                       {initial.writable && (
                         <button
-                          onClick={() =>
+                          onClick={() => {
+                            setPositionSave(undefined);
                             setAddingPosition(
                               addingPosition === p.id ? undefined : p.id
-                            )
-                          }
+                            );
+                          }}
                         >
                           Thêm vào bài tập
                         </button>
@@ -393,11 +401,18 @@ function Library({
                         </button>
                       )}
                     </div>
+                    {positionSave?.id === p.id && (
+                      <PracticeSaveFeedback notice={positionSave.notice} />
+                    )}
                     {addingPosition === p.id && (
                       <PracticePositionEditor
                         fen={p.fen}
                         source={g.source}
                         reference={p.reference}
+                        onSaved={(notice) => {
+                          setPositionSave({ id: p.id, notice });
+                          setAddingPosition(undefined);
+                        }}
                         defaults={{
                           themeId: p.themeId,
                           level: p.level,

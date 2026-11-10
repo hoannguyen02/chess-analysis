@@ -4,8 +4,8 @@ import type { GetStaticProps } from 'next';
 export default function PerpetualCheckPage() {
   return (
     <DrawThemePracticePage
-      title="Chiếu vĩnh viễn"
-      label="Luyện chiếu vĩnh viễn"
+      title="Chiếu lặp lại để giữ hòa"
+      label="Luyện chiếu lặp lại để giữ hòa"
       endpoint="/api/perpetual-check-exercises"
     />
   );

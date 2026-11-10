@@ -7,6 +7,9 @@ export type GameReference = {
     | 'pin'
     | 'removing-defender'
     | 'fork'
+    | 'hanging-piece'
+    | 'defensive-move'
+    | 'mate-in-one'
     | 'discovery'
     | 'simplification'
     | 'back-rank-mate'
@@ -145,25 +148,7 @@ export function gameExerciseContext(
 const collections = new Map<string, Promise<Record<string, GameSource>>>();
 export async function loadGameSource(
   id: string,
-  collection?:
-    | 'skewer'
-    | 'pin'
-    | 'removing-defender'
-    | 'fork'
-    | 'discovery'
-    | 'simplification'
-    | 'back-rank-mate'
-    | 'rook-bishop-mate'
-    | 'arabian-mate'
-    | 'anastasia-mate'
-    | 'promotion'
-    | 'underpromotion'
-    | 'passed-pawn-simplification'
-    | 'promotion-mate'
-    | 'queen-rook-mate'
-    | 'queen-mate'
-    | 'one-rook-mate'
-    | 'two-rook-mate'
+  collection?: GameReference['collection']
 ): Promise<GameSource> {
   const endpoint =
     collection === 'removing-defender'
@@ -202,7 +187,13 @@ export async function loadGameSource(
                                       ? '/api/pin-game-sources'
                                       : collection === 'skewer'
                                         ? '/api/skewer-game-sources'
-                                        : '/api/draw-game-sources';
+                                        : collection === 'hanging-piece'
+                                          ? '/api/hanging-piece-game-sources'
+                                          : collection === 'defensive-move'
+                                            ? '/api/defensive-move-game-sources'
+                                            : collection === 'mate-in-one'
+                                              ? '/api/mate-in-one-game-sources'
+                                              : '/api/draw-game-sources';
   const cacheKey = `${endpoint}:${readPracticeToken()}`;
   let sources = collections.get(cacheKey);
   if (!sources) {

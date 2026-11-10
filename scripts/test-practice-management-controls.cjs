@@ -41,10 +41,7 @@ const text = (node) =>
         ? text(node.props.children)
         : '';
 
-function harness(
-  overrides = {},
-  { removalReturnHref, asPath = '/discovered-attack?level=B' } = {}
-) {
+function harness(overrides = {}) {
   const exercise = {
     title: 'Review example',
     fen: '8/8/8/8/8/4k3/8/4K3 w - - 0 1',
@@ -67,8 +64,8 @@ function harness(
     effects = [],
     prompts = [],
     writes = [],
-    routes = [],
-    navigationOptions = [];
+    notices = [];
+  let refreshes = 0;
   let cursor = 0,
     accept = false;
   const mod = { exports: {} };
@@ -80,6 +77,9 @@ function harness(
       if (name === 'react')
         return {
           useId: () => 'management-test',
+          useContext: () => () => {
+            refreshes += 1;
+          },
           useRef(initial) {
             const i = cursor++;
             if (!(i in state)) state[i] = { current: initial };
@@ -111,22 +111,28 @@ function harness(
           jsx: (type, props) => ({ type, props }),
           jsxs: (type, props) => ({ type, props }),
         };
-      if (name === 'next/router')
-        return {
-          useRouter: () => ({
-            asPath,
-            replace: async (href, _as, options) => {
-              routes.push(href);
-              navigationOptions.push(options);
-            },
-            reload: () => routes.push('reload'),
-          }),
-        };
+      if (name === 'next/router') assert.fail('Management must save in place');
       if (name.endsWith('/draw-levels'))
-        return { practiceLevels: ['Beginner', 'A', 'B', 'C', 'C*', 'D'] };
+        return {
+          practiceLevels: [
+            'Beginner',
+            'A',
+            'B',
+            'C',
+            'C*',
+            'D',
+            'D*',
+            'E',
+            'E*',
+          ],
+        };
       if (name.endsWith('/chess/practice-management')) return shared.exports;
       if (name.endsWith('/practice-access'))
         return { practiceAccessHeaders: () => ({ 'x-test-access': 'access' }) };
+      if (name === './PracticeTopicSelect')
+        return { default: 'PracticeTopicSelect' };
+      if (name === './PracticeSolutionEditor')
+        return { default: 'PracticeSolutionEditor' };
       return {};
     },
     {
@@ -158,7 +164,7 @@ function harness(
     cursor = 0;
     const result = mod.exports.ExerciseManagementControl({
       exercise,
-      removalReturnHref,
+      onSaved: (notice) => notices.push(notice),
     });
     while (effects.length) effects.shift()();
     return result;
@@ -176,8 +182,10 @@ function harness(
     click,
     prompts,
     writes,
-    routes,
-    navigationOptions,
+    notices,
+    get refreshes() {
+      return refreshes;
+    },
     exercise,
     before,
     accept: () => {
@@ -189,7 +197,16 @@ function harness(
       await flush();
     },
     select(label, value) {
-      const field = nodes(render(), 'label').find((node) =>
+      const tree = render();
+      const topic = nodes(tree, 'PracticeTopicSelect').find(
+        (node) => node.props.label === label
+      );
+      if (topic) {
+        assert.ok(topic.props.options.some((option) => option.value === value));
+        topic.props.onChange(value);
+        return;
+      }
+      const field = nodes(tree, 'label').find((node) =>
         text(node).startsWith(label)
       );
       assert.ok(field, label);
@@ -208,7 +225,8 @@ test('cancelled removal leaves the exercise, request state and navigation untouc
   await flush();
   assert.match(h.prompts[0], /Bỏ bài tập.*Review example/);
   assert.deepEqual(h.writes, []);
-  assert.deepEqual(h.routes, []);
+  assert.deepEqual(h.notices, []);
+  assert.equal(h.refreshes, 0);
   assert.deepEqual(h.exercise, h.before);
   assert.ok(
     !nodes(h.render(), 'button').find(
@@ -223,7 +241,11 @@ test('cancelled removal leaves the exercise, request state and navigation untouc
   assert.equal(h.writes[0].signature, 'signed-source');
   assert.equal(h.writes[0].expectedUpdatedAt, h.exercise.management.updatedAt);
   assert.deepEqual(h.writes[0].reference.moves, h.before.moves);
-  assert.deepEqual(h.routes, ['/pin?level=C*']);
+  assert.deepEqual(h.notices, [
+    { message: 'Đã bỏ bài khỏi danh sách luyện tập.' },
+  ]);
+  assert.equal(h.refreshes, 1);
+  assert.equal(nodes(h.render(), 'dialog').length, 0);
 });
 
 test('level changes, topic transfers and resets confirm the selected destination before saving', async () => {
@@ -240,7 +262,8 @@ test('level changes, topic transfers and resets confirm the selected destination
     assert.match(h.prompts[0], kind === 'reset' ? /về cấp độ A/ : /cấp độ C\*/);
     if (kind === 'transfer') assert.match(h.prompts[0], /Đòn ghim/);
     assert.deepEqual(h.writes, []);
-    assert.deepEqual(h.routes, []);
+    assert.deepEqual(h.notices, []);
+    assert.equal(h.refreshes, 0);
     h.accept();
     save();
     await flush();
@@ -248,6 +271,9 @@ test('level changes, topic transfers and resets confirm the selected destination
     assert.equal(h.writes[0].action, kind === 'reset' ? 'reset' : 'move');
     if (kind !== 'reset') assert.equal(h.writes[0].level, 'C*');
     if (kind === 'transfer') assert.equal(h.writes[0].destinationScope, '/pin');
+    assert.equal(h.notices[0].href, '/pin?level=C*');
+    assert.equal(h.refreshes, 1);
+    assert.equal(nodes(h.render(), 'dialog').length, 0);
     assert.deepEqual(h.exercise, h.before);
   }
 });
@@ -269,66 +295,30 @@ test('returning a transferred exercise confirms its original topic and level', a
   assert.deepEqual(h.writes, []);
 });
 
-test('removal resumes at the same filtered slot, with previous/empty-list fallbacks and stable pagination', () => {
+test('refresh retains exercise identity or resumes at the same filtered slot', () => {
+  const { practiceReviewKey, refreshedPracticeReviewIndex } = shared.exports;
   const exercises = Array.from({ length: 23 }, (_, i) =>
     i % 2 ? { manualId: `manual-${i}` } : { management: { id: `curated-${i}` } }
   );
   const original = structuredClone(exercises);
   for (const index of [0, 4, 6, 22]) {
-    const href = shared.exports.practiceRemovalHref(
-      '/vi/fork?level=A&exercise=old-link&theme=kept#practice',
-      exercises,
-      index,
-      {
-        level: 'Beginner',
-        categoryId: 'fork',
-      }
-    );
-    const url = new URL(href, 'https://local.test');
     const after = exercises.filter((_, i) => i !== index);
     const expectedIndex = Math.min(index, after.length - 1);
-    const expected = after[expectedIndex];
-    assert.equal(url.pathname, '/vi/fork');
-    assert.equal(url.searchParams.get('level'), 'Beginner');
-    assert.equal(url.searchParams.get('category'), 'fork');
-    assert.equal(url.searchParams.get('theme'), 'kept');
-    assert.equal(url.hash, '#practice');
+    const key = practiceReviewKey(exercises[index]);
     assert.equal(
-      url.searchParams.get('exercise'),
-      expected.manualId ?? expected.management.id
-    );
-    const nextIndex = shared.exports.practiceReviewIndex(
-      after,
-      url.searchParams.get('exercise'),
-      url.searchParams.get('reviewIndex')
-    );
-    assert.equal(nextIndex, expectedIndex);
-    assert.equal(Math.floor(nextIndex / 6), Math.floor(expectedIndex / 6));
-    assert.equal(
-      shared.exports.practiceReviewIndex(
-        after,
-        'concurrently-removed',
-        url.searchParams.get('reviewIndex')
-      ),
+      refreshedPracticeReviewIndex(after, key, index),
       expectedIndex
     );
+    assert.equal(
+      refreshedPracticeReviewIndex(
+        [{ manualId: 'inserted' }, ...exercises],
+        key,
+        index
+      ),
+      index + 1
+    );
   }
-  const empty = new URL(
-    shared.exports.practiceRemovalHref(
-      '/vi/skewer?exercise=gone',
-      [exercises[0]],
-      0,
-      {
-        level: 'Beginner',
-        categoryId: 'skewer',
-        beginnerKind: 'queen',
-      }
-    ),
-    'https://local.test'
-  );
-  assert.equal(empty.searchParams.has('exercise'), false);
-  assert.equal(empty.searchParams.get('beginnerKind'), 'queen');
-  assert.equal(empty.searchParams.get('reviewIndex'), '0');
+  assert.equal(refreshedPracticeReviewIndex([], 'gone', 0), 0);
   assert.equal(shared.exports.practiceReviewIndex([], undefined, '0'), 0);
   assert.equal(
     shared.exports.practiceReviewIndex(exercises, undefined, 'invalid'),
@@ -337,34 +327,19 @@ test('removal resumes at the same filtered slot, with previous/empty-list fallba
   assert.deepEqual(exercises, original);
 });
 
-test('only confirmed removal uses the review return link, without jumping to a draft destination', async () => {
-  const removalReturnHref =
-    '/vi/discovered-attack?level=B&category=discovery&exercise=next-review&reviewIndex=4';
-  const h = harness({}, { removalReturnHref });
-  await h.open();
-  h.select('Chủ đề đích', '/pin');
-  h.select('Cấp độ của bài', 'D');
-  h.click('Bỏ khỏi bài tập');
-  await flush();
-  assert.deepEqual(h.writes, []);
-  assert.deepEqual(h.routes, []);
-  h.accept();
-  h.click('Bỏ khỏi bài tập');
-  await flush();
-  assert.equal(h.writes[0].action, 'remove');
-  assert.deepEqual(h.routes, [removalReturnHref]);
-  assert.deepEqual(h.navigationOptions, [{ scroll: false }]);
-  assert.deepEqual(h.exercise, h.before);
-
-  const moved = harness({}, { removalReturnHref });
-  await moved.open();
-  moved.select('Cấp độ của bài', 'C*');
-  moved.accept();
-  moved.submit();
-  await flush();
-  assert.deepEqual(
-    moved.routes,
-    ['/pin?level=C*'],
-    'moving still opens its selected destination'
-  );
+test('saving and restoring a solution refresh in place and offer the exercise link', async () => {
+  for (const solution of [
+    null,
+    { moves: ['Kf1'], alternativeLines: [], solution: '' },
+  ]) {
+    const h = harness();
+    await h.open();
+    h.click('Chỉnh sửa lời giải / phương án');
+    const editor = nodes(h.render(), 'PracticeSolutionEditor')[0];
+    await editor.props.onSave(solution);
+    assert.equal(h.writes[0].action, solution ? 'solution' : 'reset-solution');
+    assert.equal(h.notices[0].href, '/pin?level=C*');
+    assert.equal(h.refreshes, 1);
+    assert.equal(nodes(h.render(), 'dialog').length, 0);
+  }
 });

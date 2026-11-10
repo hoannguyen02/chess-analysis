@@ -4,6 +4,7 @@ import type { GetStaticProps } from 'next';
 import PrivateContent from '@/components/PrivateContent';
 import ChessPractice from '@/components/ChessPractice';
 import type { DrawCategory } from '@/lib/chess/draw-practice';
+import { mateInOneTheme } from '@/lib/chess/manual-tactics';
 import styles from '@/styles/TournamentNotice.module.css';
 
 export default function TacticPositionsPage() {
@@ -32,7 +33,7 @@ export default function TacticPositionsPage() {
                   <ChessPractice
                     key={theme}
                     categories={categories}
-                    variant="manual"
+                    variant={theme === mateInOneTheme ? 'checkmate' : 'manual'}
                   />
                 </>
               )}

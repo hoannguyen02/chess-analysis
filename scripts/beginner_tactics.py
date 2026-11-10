@@ -13,6 +13,7 @@ import time
 import chess
 import chess.engine
 
+from beginner_one_move import check_legacy_compositions, review_composed_beginner
 from tactic_research import CachedEngine, DEFAULT_CACHE, ROOT, atomic_json, digest, module
 
 # Conventional material units, distinct from Stockfish's position evaluation.
@@ -21,11 +22,14 @@ VALUES = {chess.PAWN: 100, chess.KNIGHT: 300, chess.BISHOP: 300,
           chess.ROOK: 500, chess.QUEEN: 900, chess.KING: 0}
 NAMES = {1: 'Tốt', 2: 'Mã', 3: 'Tượng', 4: 'Xe', 5: 'Hậu', 6: 'Vua'}
 PROFILES = {'fork'}
+LEGACY_VERSION = '42438004b5d0397ca6bbf1905d52da892d8908797a65ccb1808816087a334cfa'
+LEGACY_ENTRIES = 'dbd4b6b08fb7ffec38f3531ff6c6be50830ad1130a1ce6c12fa1e44091174e30'
 
 
 def version():
     return digest([hashlib.sha256((ROOT / 'scripts' / name).read_bytes()).hexdigest()
-                   for name in ('beginner_tactics.py', 'validate-removing-defender-batch.py')])
+                   for name in ('beginner_tactics.py', 'beginner_one_move.py',
+                                'validate-removing-defender-batch.py')])
 
 
 def balance(board, side):
@@ -167,14 +171,14 @@ def _review_job(args):
         previous = engine.cache.get('composition-review', key) if engine.cache else None
         if previous:
             return {**previous, 'reused': True, 'wallSeconds': time.perf_counter() - started}
-        local = local_review(candidate, topic)
+        local = review_composed_beginner(candidate, lambda row: local_review(row, topic), 'forkWin')
         result.update(local)
         if not local['flags']:
             board = chess.Board(candidate['fen']); side = board.turn
             infos = engine.analyse(board, chess.engine.Limit(nodes=nodes),
                                    multipv=board.legal_moves.count())
             result['engineRoots'] = [engine_row(board, info, side) for info in infos]
-            primary = board.san(board.parse_san(candidate.get('root') or candidate['moves'][0]))
+            primary = local['beginnerProof']['answer']
             primary_score = next(row for row in result['engineRoots'] if row['move'] == primary)
             score_value = lambda row: row['cp'] if row['cp'] is not None else (100000 if row['mate'] > 0 else -100000)
             forks = {line[0] for line in local['lines']}
@@ -240,11 +244,13 @@ def approved_exercises(bundle):
     """Rebuild only exact, explicitly approved composition records."""
     if bundle.get('topic') not in PROFILES:
         raise ValueError('Unsupported composition profile')
+    check_legacy_compositions(bundle['entries'], LEGACY_VERSION, LEGACY_ENTRIES)
     exercises, seen = [], set()
     for entry in bundle['entries']:
         review, decision, exercise = entry['review'], entry['decision'], entry['exercise']
+        legacy = review.get('verificationVersion') == LEGACY_VERSION
         if (review['status'] != 'needs-editorial-review' or review['flags']
-                or review.get('verificationVersion') != version()
+                or not (legacy or review.get('verificationVersion') == version())
                 or decision.get('decision') != 'keep' or not decision.get('reason')
                 or not decision.get('distinctness') or not decision.get('reviewer')
                 or decision.get('candidateHash') != review['candidateHash']
@@ -256,7 +262,14 @@ def approved_exercises(bundle):
         if exercise['goal'] != 'material' or not exercise.get('beginner') or exercise.get('gameReference'):
             raise ValueError('Composition objective/provenance mismatch')
         saved = {tuple(line) for line in [exercise['moves'], *exercise.get('alternativeLines', [])]}
-        if saved != {tuple(line) for line in review['lines']}:
+        if legacy:
+            expected = {tuple(line) for line in review['lines']}
+        else:
+            local = review_composed_beginner(review['candidate'], local_review, 'forkWin')
+            if local['flags'] or any(local[key] != review.get(key) for key in local):
+                raise ValueError('Missing current one-move Beginner proof')
+            expected = {(local['beginnerProof']['answer'],)}
+        if saved != expected:
             raise ValueError('Composition solution changed after verification')
         if exercise.get('source') != 'original-composition':
             raise ValueError('Composed source must be explicit')

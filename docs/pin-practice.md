@@ -5,10 +5,189 @@ full-screen mode, branch exploration and original-game dialog from skewer
 practice. Authorized APIs serve the exercises and original games separately;
 the static page contains neither dataset.
 
-## Published collection
+## Current practice collection
 
-Current real-game counts: **A 20 · B 74 · C 39 · C* 67 · D 21**
-(**221 distinct games**), plus 24 Beginner exercises, fifteen composed exercises in A and two composed exercises in C. Published level A now has 35 positions (20 master-game positions and fifteen compositions). Published level C now has 41 positions (39 master-game positions and two compositions).
+| Beginner | A | B | C | C* | D | D* | E | E* |
+| ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| 46 | 48 | 30 | 37 | 72 | 23 | 3 | 1 | 0 |
+
+At the owner's request, 22 Beginner and 32 A positions were removed from
+practice and future worksheet selection. The shared practice adjustment store
+records the removals by exercise, using the effective level at the time.
+The two verified Beginner batches contributed 48 positions before subsequent
+owner adjustments. Level A contains 48 verified source-game positions across
+three batches.
+
+## Level C review — 2026-11-10
+
+All 43 active Level C positions were reviewed in their starting catalog order.
+Position 24, Shirov–Akesson, moved to D. In the game, `Qxf4 d4+ Kg1 gxf4`
+accepts the queen sacrifice. `Bxd4+` forces an interposition and `hxg7+`
+takes the pinned rook on White's fourth move. The local material check
+compared all 51 initial moves and found no settled gain within three solver
+moves. The revised exercise also shows the shorter response to immediate
+`gxf4` and the recovery after `Qxg7`. The review verified no E regrade.
+
+Seven positions were confirmed at C. Five were excluded from practice and
+future worksheet selection, with their complete games preserved. Positions
+8, 11, and 38 have simpler material gains. Position 21 allows a direct
+promotion that forces mate, and the stronger reply in position 22 erases the
+saved gain.
+
+Of the 30 deferred positions, 25 have a grade mismatch and five still have an
+unresolved tactical question. A typical mismatch is a favourable immediate
+exchange presented as a sacrifice. The review retained owner choices and
+recorded the grade mismatches separately from the authorized D and E moves.
+The active C count includes these deferred positions. Seven positions are
+confirmed under the current C criteria, 17 short of the collection target.
+
+The run reused two recent C approvals, screened the other 41 positions
+against all legal roots, and checked all 1,719 roots for mate within two
+moves. The final screen records 789 Stockfish calls and three cache hits.
+For Mayet–Anderssen, an exact three-move search verified both the
+queen-first analysis and the rook-first game continuation. The evidence
+and stable IDs are recorded in `publishedExerciseReviews` in
+`scripts/fixtures/pin/expansion-evidence.json`. The full review took about
+13 minutes, including the rebuild, checks, and PDF inspection.
+
+## Level B review of positions 10–62 — 2026-11-10
+
+The review used the protected practice order at the start of the run. Stable
+exercise IDs bind the decisions after the list renumbers. The 53 reviewed
+positions include one owner-authored exercise, which retains its original
+level and objective.
+
+| Original position | Game | New level | Defence that determines the grade |
+| ---: | --- | :---: | --- |
+| 13 | Kasparov–Portisch | C* | After `Qg8+ Nf7`, `Re1+ Qe5 Rxe5+` wins the queen for a rook because the knight cannot recapture. |
+| 20 | Shirov–Olszewski | D* | `Rxa3` and `Ra7+` require the four-move line through `Kf6` and `Rxf3`. |
+| 21 | Short–Kasparov | C* | `Kf8` requires `Rf1`, which prevents `fxe6` when White plays `Qxe6` after `Nxe5`. |
+| 50 | Firouzja–Carlsen | D* | After `Qh8+ Kf7 Rf1+ Ke7`, White needs `Qg7+` before winning material on the fourth move. |
+
+Twenty-two positions were excluded from practice and future worksheet
+selection because a simpler gain bypassed the pin or the pin was incidental
+to the payoff. Their complete games are preserved. Ten positions were kept
+at B. Seventeen retained their existing grade while further work is pending
+on sacrifice classification, material recovery, or stronger defensive lines.
+No position met the E* threshold.
+
+The `publishedExerciseReviews` section of
+`scripts/fixtures/pin/expansion-evidence.json` contains the exact FENs, original
+lines, stable exercise IDs, evidence hashes and individual decisions. The
+four-worker tactical screen compared 1,992 legal roots in 97 seconds using
+1,388 Stockfish calls. Exact checks found no mate in one or forced mate in
+two from the reviewed roots. Targeted follow-up probes and independent
+editorial review were separate stages. The full run took about 13 minutes,
+including the rebuild, checks, and visual inspection of the PDFs.
+
+### Follow-up on the 17 deferred positions
+
+The numbers below refer to the original Level B order.
+
+| Position | Game | New level | Verified sacrifice and payoff |
+| ---: | --- | :---: | --- |
+| 15 | Giri–Shirov | C | `Nf5` offers the knight while the g7-rook is pinned. Taking the knight allows mate. The stronger `Rg2` branch gives up a rook for the knight. |
+| 40 | Larsen–Spassky | C | `g4+` sacrifices a pawn to draw out the king. `Bh5+` then lets Black win the queen for a bishop in the strongest material line. |
+| 58 | Carlsen–The World | E | `Rxc5` sacrifices the exchange. The pinned knight cannot take on a7, and the promotion exchange secures the material gain on White's sixth move. |
+
+Positions 18, 22, and 26 remain at B. In position 26, the knight loss is
+immediately recovered by taking a rook. Positions 14, 28, and 57 were
+excluded from practice and future worksheets. The pin is incidental in
+14 and 57, and the recaptures in 28 erase the saved line's material gain.
+Their complete games remain in the source collection.
+
+Positions 11, 12, 24, 42, 47, 52, 60, and 61 remain pending. The follow-up
+found either a shorter plausible line, an unproven role for the pin, or a
+strong defence without a verified material payoff. The exact decisions and
+supporting lines are in the next `publishedExerciseReviews` batch.
+
+The review reused the all-root comparisons for all 17 positions, covering
+550 legal roots. The recorded targeted probe packets contain 153 new
+Stockfish calls and one cache hit. The six-move promotion line was checked
+against shorter gains and the legal replies to the rook sacrifice. Mating
+branches cited for the two C positions were checked separately. The full
+follow-up took about 26 minutes, including review, rebuild, checks, and PDF
+inspection.
+
+## Level A extension — 2026-11-10
+
+The additional 24 positions use moves played in complete games from the
+indexed TWIC archives. Twelve have White to move and twelve have Black to
+move. Each solution is a direct, non-sacrificial capture made possible by the
+pin. The answers cover defences such as castling out of a pin, checking the
+king after the capture, and advancing a pawn toward promotion. Analysis
+continuations are identified separately from the moves played.
+
+Matviishen–Ostrovskiy shows why a rook can take on c4 while the king cannot.
+The pinned bishop still attacks c4 under Articles 3.1.3 and 3.9.1.
+[FIDE Laws of Chess](https://handbook.fide.com/chapter/E012023)
+
+The scoped run reused the local TWIC 1613–1644 source index and existing
+exclusions. Five fresh tactical batches reviewed 338 leads in about 268
+seconds of automated review, with 1,234 Stockfish calls. Collection reused
+44,263 cached game scans across the overlapping searches. Owner-context
+refreshes and final selection reused 142 exact tactical assessments. The full
+run took about 19 minutes, including collection, independent editorial review,
+publication checks and PDF inspection.
+
+## Beginner extension — 2026-11-10
+
+The second Beginner batch adds 24 positions. Twenty-one come from complete
+games and three are original compositions. Every exercise stops after the one
+move that creates the pin. The worked explanation shows the material gain
+against a relevant defence. The compositions have a source label and contain
+only the authored position and its reviewed solution.
+
+The new positions cover both sides to move and pins of pawns, knights, bishops
+and rooks. Examples include a pawn interposing without saving a knight, a
+checking capture that lets the rook return in time to stop promotion, and a
+bishop pin whose capture square is covered by the second attacker.
+
+The research reused indexed games and imported 51,966 eligible complete-game
+records from TWIC issues 1613–1644. The source manifest retains each archive
+checksum, retrieval date and preparation counts. Four fresh tactical batches
+reviewed 231 leads in about 112 seconds with 809 Stockfish calls. The scoped
+run records collection, independent editorial review, owner-context refreshes,
+publication tests and visual inspection separately.
+[The Week in Chess archive](https://theweekinchess.com/twic)
+
+## New Beginner and A source-game positions
+
+Beginner exercises use at most ten pieces and stop after the one move that
+creates an absolute pin. The solution explains how the pin prevents an escape
+and how to gain material against a relevant reply. Level A uses a direct,
+non-sacrificial capture that depends on a pinned defender being unable to
+recapture. Article 3.9.2 governs moves that would expose a player's king.
+[FIDE Laws of Chess](https://handbook.fide.com/chapter/E012023)
+
+The scoped shared research workflow compared every legal starting move,
+checked the immediate material gain through legal replies and recaptures,
+and probed strong defences with Stockfish. Independent editorial review
+checked whether the pin was essential, whether a simpler gain was available,
+and whether the defence could recover the material. The checks support a
+short material objective with bounded tactical evidence.
+
+`scripts/fixtures/pin/expansion-evidence.json` retains each approved source
+game, exact starting and preceding positions, tactical evidence and editorial
+decision. The original game viewer shows the moves played. The exercise and
+worksheet identify a different teaching move as “Phương án phân tích.”
+Source collection reused the indexed complete games. The Pin adapter supports
+`collect --unplayed` for missed tactical opportunities and `collect
+--drawn-games` for positions from drawn games. Use the same scoped
+`--run-file` from preflight through editorial merge, publication and PDF
+inspection.
+
+Ten tactical review batches covered 502 distinct candidate records in
+265 seconds of automated review, with 1,319 Stockfish calls, 11 engine-cache
+hits and seven complete-review cache hits. The run ledger separately records
+source scans, independent editorial review, publication and PDF inspection,
+including the interrupted run's elapsed time.
+
+## Collection before practice adjustments
+
+The built data contains 221 distinct games (A 20, B 74, C 39, C* 67, D 21),
+plus 24 Beginner compositions, fifteen compositions in A and two in C.
+The counts below describe earlier reviews and builds.
 
 - **24 beginner exercises**: twenty-three pin-creation positions and one composed pinned-defender position. The original 60
   recognition-only positions were audited on 2026-10-25; 52 were removed,
@@ -81,8 +260,8 @@ were not used as substitutes for full original games.
 Conceptual references: [Chess.com, Pin](https://www.chess.com/terms/pin-chess)
 and [FIDE teaching curriculum](https://www.fide.com/docs/presentations/Curriculum%20Chess%20for%20Refugees.pdf).
 Relative pins do not make a move illegal. Absolute pins prohibit moves that
-expose the king, but a piece can sometimes move along the pin line. Beginner
-positions are original compositions, not copied exercises.
+expose the king, but a piece can sometimes move along the pin line. The earlier
+Beginner collection included original compositions.
 
 ## Validation and grading
 

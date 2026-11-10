@@ -16,10 +16,15 @@ import drawSources from './draw-game-sources.json';
 import simplificationSources from './simplification-game-sources.json';
 import discoverySources from './discovery-game-sources.json';
 import forkSources from './fork-game-sources.json';
+import defensiveMoveSources from './defensive-move-game-sources.json';
+import mateInOneSources from './mate-in-one-game-sources.json';
+import hangingPieceSources from './hanging-piece-game-sources.json';
 import pinSources from './pin-game-sources.json';
 import removingDefenderSources from './removing-defender-game-sources.json';
 import skewerSources from './skewer-game-sources.json';
 import type { GameReference } from '../chess/draw-game-viewer';
+
+type GameSourceHeaders = { headers: Record<string, string> };
 
 /** Only this small caption is sent with exercise cards, not the full game. */
 export function practiceGameCaption(reference?: GameReference): string {
@@ -46,6 +51,10 @@ export function practicePlayers(reference?: GameReference) {
 }
 
 function practiceHeaders(reference: GameReference) {
+  if (reference.collection === 'mate-in-one')
+    return (mateInOneSources as Record<string, GameSourceHeaders>)[reference.id]?.headers;
+  if (reference.collection === 'defensive-move')
+    return (defensiveMoveSources as Record<string, GameSourceHeaders>)[reference.id]?.headers;
   const sources = (
     reference.collection === 'removing-defender'
       ? removingDefenderSources
@@ -83,8 +92,10 @@ function practiceHeaders(reference: GameReference) {
                                       ? pinSources
                                       : reference.collection === 'skewer'
                                         ? skewerSources
-                                        : drawSources
-  ) as Record<string, { headers: Record<string, string> }>;
+                                        : reference.collection === 'hanging-piece'
+                                          ? hangingPieceSources
+                                          : drawSources
+  ) as Record<string, GameSourceHeaders>;
   return sources[reference.id]?.headers;
 }
 

@@ -12,11 +12,16 @@ import {
 } from '../chess/practice-management';
 import { tacticsCatalog } from './tactics-catalog';
 import { practiceLevels } from '../chess/draw-levels';
+import { isPracticeGoal } from '../chess/practice-goals';
 import {
   manualPositionKey,
   manualInsertionKey,
   manualLevelPositionKey,
   manualTopicPath,
+  defensiveMoveTheme,
+  defensiveMoveCollection,
+  mateInOneTheme,
+  mateInOneCollection,
   type ManualTactic,
 } from '../chess/manual-tactics';
 import type { DrawCategory, DrawExercise } from '../chess/draw-practice';
@@ -108,8 +113,7 @@ export function validateManualTactic(
     typeof v.fen !== 'string' ||
     !tacticsCatalog.themes.some((t) => t.id === v.themeId) ||
     !practiceLevels.some((level) => level === v.level) ||
-    typeof v.goal !== 'string' ||
-    !['material', 'win', 'draw', 'checkmate'].includes(v.goal)
+    !isPracticeGoal(v.goal)
   )
     throw new Error('Chọn chủ đề, cấp độ, mục tiêu và thế cờ hợp lệ.');
   const game = new Chess();
@@ -171,7 +175,7 @@ export function validateManualTactic(
     themeId: theme.id,
     level: v.level as ManualTactic['level'],
     fen,
-    goal: v.goal as ManualTactic['goal'],
+    goal: v.goal,
     moves,
     ...(alternativeLines !== undefined ? { alternativeLines } : {}),
     solution: typeof v.solution === 'string' ? v.solution.trim() : '',
@@ -221,7 +225,9 @@ export function validateManualTactic(
       !Number.isInteger(ref.branch) ||
       ref.branch < 0 ||
       (ref.collection &&
-        ![...collections, 'discovery'].includes(ref.collection))
+        ![...collections, 'discovery', defensiveMoveCollection].includes(
+          ref.collection
+        ))
     )
       throw new Error('Mốc nguồn không hợp lệ.');
     result.reference = {
@@ -442,7 +448,7 @@ export function mergeManualCategories(
   entries: ManualTactic[]
 ) {
   const themes = tacticsCatalog.themes.filter(
-    (t) => t.dedicatedPage === pagePath
+    (t) => manualTopicPath(t) === pagePath
   );
   const additions = entries.filter((e) =>
     themes.some((t) => t.id === e.themeId)
@@ -565,8 +571,15 @@ export async function curatedPositionLevel(
       ? 'Beginner'
       : (incoming.level ?? incoming.reference.baseLevel);
   const route = theme.dedicatedPage;
-  if (!route) return undefined;
-  const topic = route === '/discovered-attack' ? 'discovery' : route.slice(1);
+  const topic =
+    themeId === defensiveMoveTheme
+      ? defensiveMoveCollection
+      : themeId === mateInOneTheme
+        ? mateInOneCollection
+        : route === '/discovered-attack'
+          ? 'discovery'
+          : route?.slice(1);
+  if (!topic) return undefined;
   const files =
     topic === 'skewer'
       ? [
@@ -577,7 +590,7 @@ export async function curatedPositionLevel(
         ]
       : [
           `src/lib/server/${topic}-exercises.json`,
-          ...(topic === 'discovery' || topic === 'fork'
+          ...(['discovery', 'fork', 'hanging-piece'].includes(topic)
             ? [`src/lib/server/${topic}-beginner-exercises.json`]
             : []),
         ];

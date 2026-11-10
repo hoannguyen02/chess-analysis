@@ -81,7 +81,7 @@ test('validates legal full replay, tags and bookmarked boundaries', () => {
   ])
     assert.throws(() => store.validateSavedGame(bad));
 });
-test('position classification uses the catalog and six levels; FEN is derived from legal replay', () => {
+test('position classification uses the catalog and nine levels; FEN is derived from legal replay', () => {
   const game = new chess.Chess(sample.source.fen);
   game.move('e4');
   const input = store.validateSavedGame({
@@ -90,7 +90,7 @@ test('position classification uses the catalog and six levels; FEN is derived fr
   });
   assert.equal(input.position.fen, game.fen());
   assert.equal(input.position.status, undefined);
-  for (const level of ['Beginner', 'A', 'B', 'C', 'C*', 'D'])
+  for (const level of ['Beginner', 'A', 'B', 'C', 'C*', 'D', 'D*', 'E', 'E*'])
     assert.equal(
       store.validateSavedGame({ ...sample, position: { ...position, level } })
         .position.level,
@@ -151,14 +151,14 @@ test('topic and level filters must match one saved position and support legacy g
     'Sau 17… e5'
   );
 });
-test('saved-position links accept catalog themes and six levels, ignoring invalid or repeated query values', () => {
+test('saved-position links accept catalog themes and nine levels, ignoring invalid or repeated query values', () => {
   const { savedPositionFilters } = loadSavedGames();
   const themes = tacticsCatalog.themes;
   assert.deepEqual(savedPositionFilters({ theme: 'exposedKing' }, themes), {
     themeId: 'exposedKing',
     level: '',
   });
-  for (const level of ['Beginner', 'A', 'B', 'C', 'C*', 'D'])
+  for (const level of ['Beginner', 'A', 'B', 'C', 'C*', 'D', 'D*', 'E', 'E*'])
     assert.deepEqual(
       savedPositionFilters({ theme: 'exposedKing', level }, themes),
       { themeId: 'exposedKing', level }

@@ -14,7 +14,8 @@ through sacrifices; blocking and capturing defences; promotions, en passant and
 castling when suitable. Map selected aspects to stable IDs in coverage data.
 Special cases without an accepted example remain coverage gaps.
 
-Use Beginner, A, B, C, C*, D, 24 verified positions each. Composed and modified
+Use the shared level order Beginner, A, B, C, C*, D, D*, E, E* and the standard research
+target in `AGENTS.md`. Composed and modified
 positions must be clearly identified; retain master-game provenance and local
 full-game replay only for genuine game positions. Verify the full line, all
 legal defensive replies, immediate alternatives, shorter mates and level grade.

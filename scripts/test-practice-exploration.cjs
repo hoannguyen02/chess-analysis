@@ -229,7 +229,7 @@ test('generic Beginner import requires an owner anchor and imports its exact fra
   const trainer = load('src/lib/chess/draw-trainer.ts', (name) =>
     name === 'chess.js' ? chess : {}
   );
-  const makeCandidate = (id, sourceTitle, moves) => {
+  const makeCandidate = (id, sourceTitle, moves, level = 'B') => {
     const board = new chess.Chess(),
       positions = [];
     let previousMove;
@@ -252,7 +252,7 @@ test('generic Beginner import requires an owner anchor and imports its exact fra
             reference: { id, kind: 'game', collection: 'fork', branch: 0, ply },
             ...(previousMove ? { previousMove } : {}),
             beginnerOriginalFen: fen,
-            beginnerSourceLevel: 'B',
+            beginnerSourceLevel: level,
           },
         });
       const move = board.move(san);
@@ -270,13 +270,12 @@ test('generic Beginner import requires an owner anchor and imports its exact fra
       positions,
     };
   };
-  const first = makeCandidate('first-source', 'First source', [
-    'e4',
-    'e5',
-    'Nf3',
-    'Nc6',
-    'Bb5',
-  ]);
+  const first = makeCandidate(
+    'first-source',
+    'First source',
+    ['e4', 'e5', 'Nf3', 'Nc6', 'Bb5'],
+    'D*'
+  );
   const second = makeCandidate('second-source', 'Second source', [
     'd4',
     'd5',
@@ -297,8 +296,8 @@ test('generic Beginner import requires an owner anchor and imports its exact fra
   };
   const before = structuredClone(bank),
     writes = [],
-    reads = [],
-    routes = [];
+    reads = [];
+  let refreshes = 0;
   const state = [],
     effects = [];
   let cursor = 0,
@@ -315,17 +314,15 @@ test('generic Beginner import requires an owner anchor and imports its exact fra
       state[index] = { dependencies, value: factory() };
     return state[index].value;
   };
-  const router = {
-    asPath: bank.topic.scope,
-    push: async (href) => routes.push(href),
-    reload: () => routes.push('reload'),
-  };
   const component = load(
     'src/components/BeginnerTacticImport.tsx',
     (name) => {
       if (name === 'react/jsx-runtime') return { jsx, jsxs: jsx };
       if (name === 'react')
         return {
+          useContext: () => () => {
+            refreshes += 1;
+          },
           useState(initial) {
             const index = cursor++;
             if (!(index in state))
@@ -360,9 +357,14 @@ test('generic Beginner import requires an owner anchor and imports its exact fra
             }
           },
         };
-      if (name === 'next/router') return { useRouter: () => router };
+      if (name === './PracticeSaveFeedback')
+        return { __esModule: true, default: 'PracticeSaveFeedback' };
       if (name === 'chess.js') return chess;
       if (name.endsWith('/draw-trainer')) return trainer;
+      if (name.endsWith('/draw-levels'))
+        return load('src/lib/chess/draw-levels.ts', () => ({}));
+      if (name.endsWith('/practice-goals'))
+        return load('src/lib/chess/practice-goals.ts', () => ({}));
       if (name.endsWith('/manual-tactics'))
         return load('src/lib/chess/manual-tactics.ts', () => ({}));
       if (name.endsWith('/practice-access'))
@@ -439,11 +441,11 @@ test('generic Beginner import requires an owner anchor and imports its exact fra
       (node) => node.props['aria-label'] === 'Chọn thế 1'
     ).props;
   const shownBoard = () => nodes(tree, 'PracticeBoard')[0].props;
-  const render = () => {
+  const render = (scope = bank.topic.scope) => {
     cursor = 0;
     tree = component({
       writable: true,
-      scope: bank.topic.scope,
+      scope,
       exercises: [{ manualId: 'authored' }, { fen: 'curated' }],
     });
     for (const node of [...nodes(tree, 'dialog'), ...nodes(tree, 'div')])
@@ -451,14 +453,39 @@ test('generic Beginner import requires an owner anchor and imports its exact fra
         node.props.ref.current = { showModal() {}, close() {}, focus() {} };
     while (effects.length) effects.shift()();
   };
-  const settle = async () => {
+  const settle = async (scope = bank.topic.scope) => {
     await new Promise((resolve) => setImmediate(resolve));
-    render();
+    render(scope);
   };
   render();
-  button('Lấy thế cờ').onClick();
+  button('Lấy thế cờ từ B, C, C*, D, D*, E, E*').onClick();
   render();
+  const confirmation = () =>
+    nodes(tree, 'dialog').find(
+      (node) =>
+        node.props['aria-labelledby'] === 'beginner-tactic-confirm-title'
+    );
+  const importDialog = () =>
+    nodes(tree, 'dialog').find(
+      (node) => node.props['aria-labelledby'] === 'beginner-tactic-import-title'
+    );
+  const confirmationCopy = () =>
+    text(
+      nodes(tree, 'p').find(
+        (node) => node.props.id === 'beginner-tactic-confirm-description'
+      )
+    );
+  assert.equal(confirmation(), undefined);
+  assert.ok(importDialog());
   await settle();
+  assert.equal(
+    text(
+      nodes(tree, 'h3').find(
+        (node) => node.props.id === 'beginner-tactic-import-title'
+      )
+    ),
+    'Thêm thế cờ Nhập môn từ B, C, C*, D, D*, E, E*'
+  );
   assert.equal(checkbox().disabled, true);
   assert.equal(button('Xác nhận thêm').disabled, true);
   button('Chọn tất cả').onClick();
@@ -528,9 +555,15 @@ test('generic Beginner import requires an owner anchor and imports its exact fra
   );
   assert.deepEqual(writes[0].previousMove, selectedEntry.previousMove);
   assert.deepEqual(writes[0].reference, selectedEntry.reference);
+  assert.equal(writes[0].beginnerSourceLevel, 'D*');
   assert.equal(writes[0].expectedUpdatedAt, null);
   assert.deepEqual(writes[0].moves, []);
-  assert.equal(routes.length, 1);
+  assert.equal(refreshes, 1);
+  assert.equal(importDialog(), undefined);
+  assert.deepEqual(nodes(tree, 'PracticeSaveFeedback')[0].props.notice, {
+    message: 'Đã thêm 1 thế cờ.',
+    href: '/tactic-positions?theme=futureLesson&level=Beginner&exercise=added',
+  });
   assert.ok(
     reads.every((url) => url.includes(encodeURIComponent(bank.topic.scope)))
   );
@@ -545,9 +578,40 @@ test('generic Beginner import requires an owner anchor and imports its exact fra
     before,
     'preview selection does not mutate the source response'
   );
+  blankDialog.onClose();
+  const defensiveScope = '/tactic-positions?theme=defensiveMove';
+  render(defensiveScope);
+  const readsBeforeConfirmation = reads.length;
+  const openConfirmation = () => {
+    button('Lấy thế cờ từ B, C, C*, D, D*, E, E*').onClick();
+    render(defensiveScope);
+    assert.ok(confirmation());
+    assert.equal(importDialog(), undefined);
+    assert.equal(reads.length, readsBeforeConfirmation);
+  };
+  openConfirmation();
+  assert.match(confirmationCopy(), /thế cờ gốc từ ván đấu/);
+  assert.match(confirmationCopy(), /tối đa 10 quân \(tính cả Vua và Tốt\)/);
+  assert.match(confirmationCopy(), /đúng một nước đi hợp lệ đạt mục tiêu/);
+  button('Hủy').onClick();
+  render(defensiveScope);
+  assert.equal(nodes(tree, 'dialog').length, 0);
+
+  openConfirmation();
+  confirmation().props.onCancel({ preventDefault() {}, stopPropagation() {} });
+  render(defensiveScope);
+  assert.equal(nodes(tree, 'dialog').length, 0);
+
+  openConfirmation();
+  button('Tiếp tục').onClick();
+  render(defensiveScope);
+  assert.equal(confirmation(), undefined);
+  assert.ok(importDialog());
+  assert.equal(reads.length, readsBeforeConfirmation + 1);
+  await settle(defensiveScope);
 });
 
-test('viewing the preceding move is read-only context and preserves free-play branches', async () => {
+async function explorationComponent(props) {
   const chess = await import('chess.js');
   const load = (file, dependency) => {
     const mod = { exports: {} };
@@ -618,8 +682,19 @@ test('viewing the preceding move is read-only context and preserves free-play br
             ...(tree.type === type ? [tree] : []),
             ...nodes(tree.props?.children, type),
           ];
+  return {
+    nodes,
+    render() {
+      cursor = 0;
+      return component(props);
+    },
+  };
+}
+
+test('viewing the preceding move is read-only context and preserves free-play branches', async () => {
+  const { Chess } = await import('chess.js');
   const before = '7k/3p4/8/4P3/8/8/8/K7 b - - 0 1';
-  const board = new chess.Chess(before);
+  const board = new Chess(before);
   board.move('d5');
   const props = {
     fen: board.fen(),
@@ -635,10 +710,7 @@ test('viewing the preceding move is read-only context and preserves free-play br
     moves: props.moves,
     previousMove: props.previousMove,
   });
-  const render = () => {
-    cursor = 0;
-    return component(props);
-  };
+  const { nodes, render } = await explorationComponent(props);
   let tree = render();
   let shown = nodes(tree, 'PracticeBoard')[0].props;
   assert.equal(shown.fen, props.fen);
@@ -682,6 +754,39 @@ test('viewing the preceding move is read-only context and preserves free-play br
     0,
     'no historical move is invented'
   );
+});
+
+test('the recorder locks an automatic draw, preserves the ending move and can branch before it', async () => {
+  const fen = '7k/8/8/8/8/8/8/R3K3 w - - 99 80';
+  let confirmed;
+  const { nodes, render } = await explorationComponent({
+    fen,
+    moves: [],
+    initialPly: 0,
+    orientation: 'white',
+    onClose() {},
+    onConfirm: (lines) => (confirmed = lines),
+  });
+  const board = () => nodes(render(), 'PracticeBoard')[0].props;
+  const button = (label) =>
+    nodes(render(), 'button').find((node) =>
+      [node.props.children].flat().join('').startsWith(label)
+    ).props;
+  assert.equal(board().onPieceDrop('a1', 'b2'), false);
+  assert.equal(board().fen, fen);
+  assert.equal(board().onPieceDrop('a1', 'a2'), true);
+  assert.equal(board().canMove, false);
+  assert.equal(board().onPieceDrop('h8', 'g8'), false);
+  board().onSquareClick('h8');
+  board().onSquareClick('g8');
+  assert.match(JSON.stringify(render()), /Hòa theo luật 50 nước/);
+  assert.equal(button('Nước tiếp').disabled, true);
+  button('← Nước trước').onClick();
+  assert.equal(board().canMove, true);
+  assert.equal(board().onPieceDrop('a1', 'a3'), true);
+  assert.equal(board().canMove, false);
+  button('OK').onClick();
+  assert.deepEqual(confirmed, [['Ra2'], ['Ra3']]);
 });
 test('Beginner piece setup is free arrangement with strict save validation', async () => {
   const chess = await import('chess.js');
@@ -831,6 +936,111 @@ test('terminal positions cannot accept moves', async () => {
     null
   );
 });
+
+test('recording stops at the third occurrence or 50 moves, with priority for checkmate', async () => {
+  const {
+    Chess,
+    recordingPosition,
+    recordVariationMove,
+    parsePracticeVariation,
+  } = await runtime();
+  const initial = new Chess().fen();
+  const cycle = ['Nf3', 'Nf6', 'Ng1', 'Ng8'];
+  const repeated = [...cycle, ...cycle];
+  const play = (fen, moves, input) =>
+    recordVariationMove(
+      fen,
+      { lines: [moves], branchIndex: 0, ply: moves.length },
+      input
+    );
+  assert.equal(recordingPosition(initial, repeated, 4).ended, null);
+  assert.equal(play(initial, repeated.slice(0, 4), 'e4').status, 'recorded');
+  assert.deepEqual(play(initial, repeated, 'e4'), {
+    status: 'ended',
+    reason: 'threefold',
+  });
+  assert.deepEqual(recordingPosition(initial, [...repeated, 'e4'], 9).ended, {
+    ply: 8,
+    reason: 'threefold',
+  });
+  assert.deepEqual(parsePracticeVariation(initial, repeated), repeated);
+  assert.throws(
+    () => parsePracticeVariation(initial, [...repeated, 'e4']),
+    /3 lần.*nước thứ 9/
+  );
+
+  const rook = '7k/8/8/8/8/8/8/R3K3 w - -';
+  assert.equal(play(rook + ' 98 80', ['Ra2'], 'Kg8').status, 'recorded');
+  assert.deepEqual(play(rook + ' 99 80', ['Ra2'], 'Kg8'), {
+    status: 'ended',
+    reason: 'fiftyMoves',
+  });
+  assert.equal(
+    recordingPosition('7k/8/8/8/8/8/p7/R3K3 w - - 99 80', ['Rxa2'], 1).ended,
+    null
+  );
+  assert.equal(
+    recordingPosition('7k/5Q2/5K2/8/8/8/8/8 w - - 99 80', ['Qg7#'], 1).ended
+      .reason,
+    'checkmate'
+  );
+});
+
+test('Chess.com Live material draws allow a legal mate in one', async () => {
+  const { recordingPosition, recordVariationMove, parsePracticeVariation } =
+    await runtime();
+  for (const [fen, move] of [
+    ['7k/8/8/8/8/8/8/1K6 w - - 0 1', 'Ka1'],
+    ['7k/8/8/8/8/8/1n6/B3K3 w - - 0 1', 'Bxb2+'],
+    ['7k/8/8/8/8/8/NN6/4K3 w - - 0 1', 'Nc3'],
+  ]) {
+    assert.deepEqual(
+      recordVariationMove(fen, { lines: [[]], branchIndex: 0, ply: 0 }, move),
+      { status: 'ended', reason: 'material' }
+    );
+    assert.throws(() => parsePracticeVariation(fen, [move]), /không đủ lực/);
+  }
+  for (const [fen, mate] of [
+    ['5N1k/5K2/8/4N3/8/8/8/8 w - - 0 1', 'Neg6#'],
+    ['5Bnk/8/6K1/8/8/8/8/8 w - - 0 1', 'Bg7#'],
+  ]) {
+    assert.equal(recordingPosition(fen, [], 0).ended, null);
+    assert.deepEqual(parsePracticeVariation(fen, [mate]), [mate]);
+    assert.equal(recordingPosition(fen, [mate], 1).ended.reason, 'checkmate');
+  }
+  assert.equal(
+    recordingPosition('5N1k/5K2/8/4N3/8/8/8/8 w - - 0 1', ['Nfd7'], 1).ended
+      .reason,
+    'material'
+  );
+  assert.equal(
+    recordingPosition('7k/8/8/8/8/8/NN5p/4K3 w - - 0 1', [], 0).ended,
+    null
+  );
+});
+
+test('repetition distinguishes castling and legal en passant rights', async () => {
+  const { recordingPosition } = await runtime();
+  for (const [fen, cycle, reason] of [
+    [
+      '4r2k/8/8/3pP3/8/8/8/4K3 w - d6 0 2',
+      ['Kd1', 'Kg8', 'Ke1', 'Kh8'],
+      'threefold',
+    ],
+    [
+      '7k/8/8/3pP3/8/8/8/K7 w - d6 0 2',
+      ['Kb1', 'Kg8', 'Ka1', 'Kh8'],
+      undefined,
+    ],
+    ['4k3/8/8/8/8/8/8/4K2R w K - 0 1', ['Rh2', 'Kd8', 'Rh1', 'Ke8'], undefined],
+  ]) {
+    const moves = [...cycle, ...cycle];
+    assert.equal(
+      recordingPosition(fen, moves, moves.length).ended?.reason,
+      reason
+    );
+  }
+});
 test('recording extends lines, branches from earlier moves, and revisits existing variants without overwriting', async () => {
   const {
     Chess,
@@ -925,15 +1135,14 @@ test('recording bounds and special moves preserve legal position history', async
     recordVariationMove(fen, { lines, branchIndex: 0, ply: 0 }, 'b3').status,
     'recorded'
   );
-  const long = Array.from(
-    { length: MAX_VARIATION_PLIES },
-    (_, i) => ['Nf3', 'Nf6', 'Ng1', 'Ng8'][i % 4]
-  );
+  // Carlsen–Firouzja has a legal continuation at the recording limit.
+  const source = require('../src/lib/server/draw-game-sources.json')['265'];
+  const long = source.lines[0].slice(0, MAX_VARIATION_PLIES);
   assert.equal(
     recordVariationMove(
-      fen,
+      source.fen,
       { lines: [long], branchIndex: 0, ply: long.length },
-      'Nf3'
+      source.lines[0][MAX_VARIATION_PLIES]
     ).status,
     'move-limit'
   );

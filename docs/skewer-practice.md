@@ -3,7 +3,7 @@
 `/skewer` (Vietnamese: `/vi/skewer`) is an unlisted, password-free page,
 with `noindex, nofollow`, matching `/draw`. It reuses the practice board,
 timer, fullscreen layout, promotion picker, previous-move context, original-game
-viewer and analysis links. Levels are exactly **A, B, C, C*, D**, initially A.
+viewer and analysis links. The shared level order is Beginner, A, B, C, C*, D, D*, E, E*.
 The current route is `/skewer`; the legacy redirect is disabled in `next.config.ts`.
 
 ## Teaching set
@@ -22,7 +22,7 @@ Count the learner's moves, not both players' plies:
 - B: one preparatory move before the skewer; no sacrifice.
 - C: one simple sacrifice and a short sequence (at most three learner moves).
 - C*: two or three preparatory moves without a detected sacrifice.
-- D: more than three learner moves, with multiple sacrifices or a rook/queen
+- D: four or five learner moves, with multiple sacrifices or a rook/queen
   sacrifice in a longer combination. These are **suggested** levels for teacher
   review; move count and piece value cannot fully measure human difficulty.
 

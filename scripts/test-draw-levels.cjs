@@ -24,8 +24,8 @@ const { drawLevels, practiceLevels, filterDrawLevel } = load(
 );
 
 test('reviewed levels and theme routes expose their actual counts and objectives', () => {
-  assert.deepEqual(drawLevels, ['A', 'B', 'C', 'C*', 'D']);
-  assert.deepEqual(practiceLevels, ['Beginner', 'A', 'B', 'C', 'C*', 'D']);
+  assert.deepEqual(drawLevels, ['A', 'B', 'C', 'C*', 'D', 'D*', 'E', 'E*']);
+  assert.deepEqual(practiceLevels, ['Beginner', 'A', 'B', 'C', 'C*', 'D', 'D*', 'E', 'E*']);
   const manifest = JSON.parse(
     fs.readFileSync(
       'scripts/fixtures/draw-practice/curated-selection.json',
@@ -92,6 +92,9 @@ test('reviewed levels and theme routes expose their actual counts and objectives
     C: 23,
     'C*': 24,
     D: 24,
+    'D*': 0,
+    E: 0,
+    'E*': 0,
   });
 });
 
@@ -179,6 +182,9 @@ test('draw theme and level navigation omit combined options and empty themes', (
       { id: 'C', label: 'Cấp độ C', count: 29 },
       { id: 'C*', label: 'Cấp độ C*', count: 25 },
       { id: 'D', label: 'Cấp độ D', count: 27 },
+      { id: 'D*', label: 'Cấp độ D*', count: 0 },
+      { id: 'E', label: 'Cấp độ E', count: 0 },
+      { id: 'E*', label: 'Cấp độ E*', count: 0 },
     ]
   );
   assert.equal(

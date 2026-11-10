@@ -13,6 +13,9 @@ import {
 import { practiceAccessHeaders } from '@/lib/practice-access';
 import styles from '@/styles/SavedGames.module.css';
 import PracticePositionEditor from './PracticePositionEditor';
+import PracticeSaveFeedback, {
+  type PracticeSaveNotice,
+} from './PracticeSaveFeedback';
 
 type SaveProps = { source: GameSource; reference: GameReference };
 export default function SaveGameControl({
@@ -21,10 +24,12 @@ export default function SaveGameControl({
   onOpen,
 }: SaveProps & { onOpen?: () => void }) {
   const [mode, setMode] = useState<'game' | 'position'>();
+  const [positionNotice, setPositionNotice] = useState<PracticeSaveNotice>();
   function edit(next: 'game' | 'position') {
     if (mode === next) setMode(undefined);
     else {
       onOpen?.();
+      setPositionNotice(undefined);
       setMode(next);
     }
   }
@@ -47,8 +52,16 @@ export default function SaveGameControl({
         </button>
         <Link href="/saved-games">Ván đã lưu →</Link>
       </div>
+      <PracticeSaveFeedback notice={positionNotice} />
       {mode === 'position' && (
-        <PositionEditor source={source} reference={reference} />
+        <PositionEditor
+          source={source}
+          reference={reference}
+          onSaved={(notice) => {
+            setPositionNotice(notice);
+            setMode(undefined);
+          }}
+        />
       )}
       {mode === 'game' && (
         <SaveGameEditor source={source} reference={reference} />
@@ -56,7 +69,11 @@ export default function SaveGameControl({
     </div>
   );
 }
-function PositionEditor({ source, reference }: SaveProps) {
+function PositionEditor({
+  source,
+  reference,
+  onSaved,
+}: SaveProps & { onSaved: (notice: PracticeSaveNotice) => void }) {
   const { branch, ply } = reference;
   const context = useMemo(
     () => gameExerciseContext(source, { branch, ply }),
@@ -68,6 +85,7 @@ function PositionEditor({ source, reference }: SaveProps) {
       source={source}
       reference={reference}
       previousMove={context.previousMove}
+      onSaved={onSaved}
     />
   );
 }

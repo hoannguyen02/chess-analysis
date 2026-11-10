@@ -16,13 +16,21 @@ import {
 import {
   manualPositionKey,
   manualTopicPath,
+  defensiveMoveTheme,
+  defensiveMoveCollection,
+  mateInOneTheme,
+  mateInOneCollection,
   type ManualTactic,
 } from '../chess/manual-tactics';
 import { practiceCurrentScope } from '../chess/practice-management';
 import { beginnerTacticFrames } from '../chess/beginner-tactic-extraction';
 import type { DrawExercise, DrawCategory } from '../chess/draw-practice';
+import { isPracticeGoal } from '../chess/practice-goals';
 import type { GameSource, GameReference } from '../chess/draw-game-viewer';
-import type { PracticeLevel } from '../chess/draw-levels';
+import {
+  beginnerSourceLevels,
+  type PracticeLevel,
+} from '../chess/draw-levels';
 import { drawThemeRoutePaths } from '../chess/draw-practice-view';
 
 type Entry = Omit<ManualTactic, 'id' | 'createdAt' | 'updatedAt'>;
@@ -58,7 +66,7 @@ type ReviewedRecord = {
 const maximumFileBytes = 16 * 1024 * 1024;
 const digest = (value: unknown) =>
   createHash('sha256').update(JSON.stringify(value)).digest('hex');
-const sourceLevels = new Set(['B', 'C', 'C*', 'D']);
+const sourceLevels = new Set<string>(beginnerSourceLevels);
 // These older collections already use material gain as their published task.
 // New collections must store exercise.goal explicitly; this is not motif grading.
 const legacyGoals: Record<string, Entry['goal']> = {
@@ -162,7 +170,12 @@ export async function beginnerTacticCandidates(scope: string) {
         }
       : choice;
   });
-  const topic = theme.dedicatedPage ? topicName(theme.dedicatedPage) : '';
+  const sharedCollections: Record<string, string> = {
+    [defensiveMoveTheme]: defensiveMoveCollection,
+    [mateInOneTheme]: mateInOneCollection,
+  };
+  const topic = sharedCollections[theme.id] ??
+    (theme.dedicatedPage ? topicName(theme.dedicatedPage) : '');
   const runtimeFiles =
     topic && safeName(topic)
       ? [
@@ -211,7 +224,7 @@ export async function beginnerTacticCandidates(scope: string) {
   const base: DrawCategory[] = [
     { id: theme.id, title: theme.label, description: '', exercises: uniqueRaw },
   ];
-  const merged = theme.dedicatedPage
+  const merged = topic
     ? mergeManualCategories(scope, base, manual)
     : [
         {
@@ -256,6 +269,8 @@ export async function beginnerTacticCandidates(scope: string) {
     )
   );
   collections.add('draw');
+  for (const collection of Object.values(sharedCollections))
+    collections.add(collection);
   const sourceCache = new Map<
     string,
     Promise<Record<string, GameSource> | undefined>
@@ -298,7 +313,7 @@ export async function beginnerTacticCandidates(scope: string) {
     diagnostics.considered++;
     const exercise = { ...original } as SourceExercise;
     const goal = exercise.goal ?? legacyGoals[topic];
-    if (!goal || !['material', 'win', 'draw', 'checkmate'].includes(goal)) {
+    if (!isPracticeGoal(goal)) {
       diagnostics.missingGoal++;
       continue;
     }

@@ -9,6 +9,19 @@ const ts = require('typescript');
 const TOPICS = {
   discovery: { id: 'discovered-attack', endpoint: 'discovery-exercises' },
   fork: { id: 'fork', endpoint: 'fork-exercises' },
+  pin: { id: 'pin', endpoint: 'pin-exercises' },
+  'defensive-move': {
+    id: 'tactic-positions?theme=defensiveMove',
+    endpoint: 'manual-tactic-exercises',
+    query: { theme: 'defensiveMove' },
+  },
+  'mate-in-one': {
+    id: 'tactic-positions?theme=mateIn1',
+    endpoint: 'manual-tactic-exercises',
+    query: { theme: 'mateIn1' },
+  },
+  'hanging-piece': { id: 'hanging-piece', endpoint: 'hanging-piece-exercises' },
+  'two-rook-mate': { id: 'two-rook-mate', endpoint: 'two-rook-mate-exercises' },
 };
 
 function options(argv) {
@@ -67,7 +80,7 @@ async function renderBatch({ topic, ids, outputDir, root = path.resolve(__dirnam
   ).find((entry) => entry.id === adapter.id);
   if (!source) throw new Error('Topic is missing its protected worksheet registration.');
   let payload;
-  await load(`src/pages/api/${adapter.endpoint}.ts`).default({ method: 'GET' }, {
+  await load(`src/pages/api/${adapter.endpoint}.ts`).default({ method: 'GET', query: adapter.query }, {
     status(code) {
       if (code !== 200) throw new Error(`Protected catalog returned ${code}.`);
       return this;
@@ -128,7 +141,7 @@ async function renderBatch({ topic, ids, outputDir, root = path.resolve(__dirnam
   return result;
 }
 
-module.exports = { renderBatch, options };
+module.exports = { renderBatch, catalogLoader, options };
 if (require.main === module) {
   const args = options(process.argv.slice(2));
   renderBatch({ topic: args.topic, ids: args.ids.split(','), outputDir: args['output-dir'], root: args.root })

@@ -41,7 +41,7 @@ export default async function handler(
           id: 'skewer',
           title: 'Đòn xiên',
           description:
-            'Tấn công quân phía trước để khai thác quân phía sau trên cùng một đường. Bắt đầu với Nhập môn, rồi chọn cấp độ A, B, C, C* hoặc D.',
+            'Tấn công quân phía trước để khai thác quân phía sau trên cùng một đường. Bắt đầu với Nhập môn, rồi chọn cấp độ phù hợp.',
           exercises: (
             [
               ...beginnerExercises,

@@ -1,0 +1,2513 @@
+[
+  {
+    "title": "Cieslak,Patryk — Kramnik,V",
+    "prompt": "Tìm cách bắt quân và tính nước đáp để giữ lợi thế vật chất.",
+    "mode": "interactive",
+    "outcome": "hanging-piece",
+    "goal": "material",
+    "fen": "8/6p1/r7/6KP/8/8/R1k5/8 b - - 0 49",
+    "moves": [
+      "Rxa2"
+    ],
+    "tacticPly": 0,
+    "hangingPiece": {
+      "target": "a2",
+      "minimumGain": 130
+    },
+    "previousMove": {
+      "fen": "8/6p1/r7/6KP/8/8/p1k5/R7 w - - 1 49",
+      "move": "Rxa2+"
+    },
+    "source": "https://www.pgnmentor.com/players/Kramnik.zip",
+    "gameReference": {
+      "id": "1f4c947b4809c2f9",
+      "kind": "game",
+      "ply": 97,
+      "branch": 0,
+      "collection": "hanging-piece"
+    },
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "reason": "Bắt quân trực tiếp và kiểm tra khả năng bị bắt lại.",
+      "solverMoves": 1,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Hãy tìm nước vừa hết chiếu vừa bắt Xe."
+    ],
+    "solution": "…Rxa2 bắt Xe a2 và che đường chiếu vào Vua c2. Sau Kg6, Xe có thể lùi về a7 để chặn Tốt h."
+  },
+  {
+    "title": "Ghaem Maghami,E — Short,N",
+    "prompt": "Tìm cách bắt quân và tính nước đáp để giữ lợi thế vật chất.",
+    "mode": "interactive",
+    "outcome": "hanging-piece",
+    "goal": "material",
+    "fen": "4r1k1/5B2/p4P2/1p4P1/5K2/8/Pbp5/7R b - - 0 45",
+    "moves": [
+      "Kxf7"
+    ],
+    "tacticPly": 0,
+    "hangingPiece": {
+      "target": "f7",
+      "minimumGain": 130
+    },
+    "previousMove": {
+      "fen": "4r1k1/5p2/p4P2/1p4PB/5K2/8/Pbp5/7R w - - 1 45",
+      "move": "Bxf7+"
+    },
+    "source": "https://www.pgnmentor.com/players/Short.zip",
+    "gameReference": {
+      "id": "1b15c68cb81170da",
+      "kind": "game",
+      "ply": 89,
+      "branch": 0,
+      "collection": "hanging-piece"
+    },
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "reason": "Bắt quân trực tiếp và kiểm tra khả năng bị bắt lại.",
+      "solverMoves": 1,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Ô f7 có quân Trắng nào khống chế không?"
+    ],
+    "solution": "…Kxf7 bắt Tượng f7 ngay khi đang bị chiếu. Sau Rh7+, Vua có thể thoát sang e6. Nếu đi …Kf8, Trắng giữ được Tượng."
+  },
+  {
+    "title": "Jussupow, Artur — Spassky, Boris V",
+    "prompt": "Tìm cách bắt quân và tính nước đáp để giữ lợi thế vật chất.",
+    "mode": "interactive",
+    "outcome": "hanging-piece",
+    "goal": "material",
+    "fen": "4Nn2/pp3krp/2p5/3b1P2/3P4/5N2/PP1Q1K1q/4R3 w - - 0 32",
+    "moves": [
+      "Nxh2"
+    ],
+    "tacticPly": 0,
+    "hangingPiece": {
+      "target": "h2",
+      "minimumGain": 140
+    },
+    "previousMove": {
+      "fen": "4Nn2/ppq2krp/2p5/3b1P2/3P4/5N2/PP1Q1K1P/4R3 b - - 0 31",
+      "move": "Qxh2+"
+    },
+    "source": "https://www.pgnmentor.com/players/Spassky.zip",
+    "gameReference": {
+      "id": "8042ae6f2962963c",
+      "kind": "game",
+      "ply": 62,
+      "branch": 0,
+      "collection": "hanging-piece"
+    },
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "reason": "Bắt quân trực tiếp và kiểm tra khả năng bị bắt lại.",
+      "solverMoves": 1,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Mã f3 có thể tới ô h2 không?"
+    ],
+    "solution": "Nxh2 bắt Hậu đang chiếu. Nếu Đen tiếp tục chiếu bằng …Rg2+, Vua Trắng có thể sang e3."
+  },
+  {
+    "title": "Jaramillo Lopez,Ali Aaron — Alriyami,Faris Rashid",
+    "prompt": "Tìm cách bắt quân và tính nước đáp để giữ lợi thế vật chất.",
+    "mode": "interactive",
+    "outcome": "hanging-piece",
+    "goal": "material",
+    "fen": "2r4R/4p3/1K6/3Pk1p1/8/6P1/8/8 w - - 0 58",
+    "moves": [
+      "Rxc8"
+    ],
+    "tacticPly": 0,
+    "hangingPiece": {
+      "target": "c8",
+      "minimumGain": 130
+    },
+    "previousMove": {
+      "fen": "2Q4R/4p3/1K6/3Pk1p1/8/6P1/8/2r5 b - - 0 57",
+      "move": "Rxc8"
+    },
+    "source": "https://theweekinchess.com/zips/twic1664g.zip",
+    "gameReference": {
+      "id": "f301c3591bab4a99",
+      "kind": "game",
+      "ply": 114,
+      "branch": 0,
+      "collection": "hanging-piece"
+    },
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "reason": "Bắt quân trực tiếp và kiểm tra khả năng bị bắt lại.",
+      "solverMoves": 1,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Nhìn dọc hàng ngang số 8 từ Xe h8."
+    ],
+    "solution": "Rxc8 bắt Xe không được bảo vệ. Sau …Kxd5, Trắng vẫn hơn Xe và có thể chiếu bằng Rc5+."
+  },
+  {
+    "title": "Mnyasta,Charlton — Alvarez Pedraza,A",
+    "prompt": "Tìm cách bắt quân và tính nước đáp để giữ lợi thế vật chất.",
+    "mode": "interactive",
+    "outcome": "hanging-piece",
+    "goal": "material",
+    "fen": "8/4k3/6K1/pp1B2P1/2p2P2/P1b4p/1P6/8 w - - 0 46",
+    "moves": [
+      "bxc3"
+    ],
+    "tacticPly": 0,
+    "hangingPiece": {
+      "target": "c3",
+      "minimumGain": 130
+    },
+    "previousMove": {
+      "fen": "8/4k3/5bK1/pp1B2P1/2p2P2/P1P4p/1P6/8 b - - 0 45",
+      "move": "Bxc3"
+    },
+    "source": "https://theweekinchess.com/zips/twic1664g.zip",
+    "gameReference": {
+      "id": "bbc0938d421fd988",
+      "kind": "game",
+      "ply": 90,
+      "branch": 0,
+      "collection": "hanging-piece"
+    },
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "reason": "Bắt quân trực tiếp và kiểm tra khả năng bị bắt lại.",
+      "solverMoves": 1,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Tốt b2 có thể bắt quân ở ô nào?"
+    ],
+    "solution": "bxc3 bắt Tượng c3. Nếu Đen đẩy …h2, Trắng có thể đẩy f5 để tạo Tốt thông và giữ lợi thế vật chất."
+  },
+  {
+    "title": "Waqar,M — Blackwood,Ryan",
+    "prompt": "Tìm cách bắt quân và tính nước đáp để giữ lợi thế vật chất.",
+    "mode": "interactive",
+    "outcome": "hanging-piece",
+    "goal": "material",
+    "fen": "8/5r2/p4Qrk/8/6p1/6P1/P4PK1/8 w - - 0 53",
+    "moves": [
+      "Qxf7"
+    ],
+    "tacticPly": 0,
+    "hangingPiece": {
+      "target": "f7",
+      "minimumGain": 130
+    },
+    "previousMove": {
+      "fen": "8/2r2N2/p4Qrk/8/6p1/6P1/P4PK1/8 b - - 2 52",
+      "move": "Rxf7"
+    },
+    "source": "https://theweekinchess.com/zips/twic1664g.zip",
+    "gameReference": {
+      "id": "1447f9e255ef8b65",
+      "kind": "game",
+      "ply": 104,
+      "branch": 0,
+      "collection": "hanging-piece"
+    },
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "reason": "Bắt quân trực tiếp và kiểm tra khả năng bị bắt lại.",
+      "solverMoves": 1,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "So sánh các nước chiếu của Hậu với nước bắt ở f7."
+    ],
+    "solution": "Qxf7 bắt Xe f7. Sau …Rg7, Qf6+ vừa đưa Hậu ra khỏi đường tấn công vừa chiếu Vua."
+  },
+  {
+    "title": "Kramnik,V — Ding Liren",
+    "prompt": "Tìm cách bắt quân và tính nước đáp để giữ lợi thế vật chất.",
+    "mode": "interactive",
+    "outcome": "hanging-piece",
+    "goal": "material",
+    "fen": "8/3b1B1p/p6P/P1k1Kp2/2p2P2/2P1R2r/8/8 b - - 0 52",
+    "moves": [
+      "Rxe3+"
+    ],
+    "tacticPly": 0,
+    "hangingPiece": {
+      "target": "e3",
+      "minimumGain": 130
+    },
+    "previousMove": {
+      "fen": "8/3b1B1p/p6P/P1k1Kp2/2p2P2/2P1p2r/8/4R3 w - - 2 52",
+      "move": "Rxe3"
+    },
+    "source": "https://www.pgnmentor.com/players/Kramnik.zip",
+    "gameReference": {
+      "id": "6e2f128445c78c7b",
+      "kind": "game",
+      "ply": 103,
+      "branch": 0,
+      "collection": "hanging-piece"
+    },
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "reason": "Bắt quân trực tiếp và kiểm tra khả năng bị bắt lại.",
+      "solverMoves": 1,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Xe Trắng trên e3 có được bảo vệ không?"
+    ],
+    "solution": "…Rxe3+ bắt Xe treo và chiếu Vua e4. Đen hơn Xe sau khi Vua Trắng rời đường chiếu."
+  },
+  {
+    "title": "Xue,Haowen — Szpar,Milosz",
+    "prompt": "Tìm cách bắt quân và tính nước đáp để giữ lợi thế vật chất.",
+    "mode": "interactive",
+    "outcome": "hanging-piece",
+    "goal": "material",
+    "fen": "1r6/3Nkpp1/3n3p/2R5/3p2P1/1P4P1/5PK1/8 w - - 4 39",
+    "moves": [
+      "Nxb8"
+    ],
+    "tacticPly": 0,
+    "hangingPiece": {
+      "target": "b8",
+      "minimumGain": 130
+    },
+    "previousMove": {
+      "fen": "1r3k2/3N1pp1/3n3p/2R5/3p2P1/1P4P1/5PK1/8 b - - 3 38",
+      "move": "Ke7"
+    },
+    "source": "https://theweekinchess.com/zips/twic1665g.zip",
+    "gameReference": {
+      "id": "d5f455d14e35954f",
+      "kind": "game",
+      "ply": 76,
+      "branch": 0,
+      "collection": "hanging-piece"
+    },
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "reason": "Bắt quân trực tiếp và kiểm tra khả năng bị bắt lại.",
+      "solverMoves": 1,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Từ d7, Mã có thể bắt quân ở góc nào?"
+    ],
+    "solution": "Nxb8 bắt Xe ở góc. Nếu Đen đẩy …d3, Rd5 chặn đường tiến của Tốt."
+  },
+  {
+    "title": "Suyarov,Mukhammadzokhid — Gasparyan,Erik R.",
+    "prompt": "Tìm cách bắt quân và tính nước đáp để giữ lợi thế vật chất.",
+    "mode": "interactive",
+    "outcome": "hanging-piece",
+    "goal": "material",
+    "fen": "8/1p1r2p1/p1p4p/P1K1B3/2P1bPk1/2P5/4R2P/8 w - - 0 47",
+    "moves": [
+      "Rxe4"
+    ],
+    "tacticPly": 0,
+    "hangingPiece": {
+      "target": "e4",
+      "minimumGain": 130
+    },
+    "previousMove": {
+      "fen": "8/1p1r2p1/p1p4p/P1K1Bk2/2P1bPP1/2P5/4R2P/8 b - - 0 46",
+      "move": "Kxg4"
+    },
+    "source": "https://theweekinchess.com/zips/twic1656g.zip",
+    "gameReference": {
+      "id": "f4e148c9464214c0",
+      "kind": "game",
+      "ply": 92,
+      "branch": 0,
+      "collection": "hanging-piece"
+    },
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "reason": "Bắt quân trực tiếp và kiểm tra khả năng bị bắt lại.",
+      "solverMoves": 1,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Tượng e4 nằm cùng cột với quân nào của Trắng?"
+    ],
+    "solution": "Rxe4 bắt Tượng e4. Sau …Rd2, Rd4 chặn Xe Đen trên cột d và giữ phần hơn quân."
+  },
+  {
+    "title": "Grischuk,A — Aronian,L",
+    "prompt": "Tìm cách bắt quân và tính nước đáp để giữ lợi thế vật chất.",
+    "mode": "interactive",
+    "outcome": "hanging-piece",
+    "goal": "material",
+    "fen": "8/8/3kb3/1p6/5P2/4K3/B7/8 b - - 0 61",
+    "moves": [
+      "Bxa2"
+    ],
+    "tacticPly": 0,
+    "hangingPiece": {
+      "target": "a2",
+      "minimumGain": 130
+    },
+    "previousMove": {
+      "fen": "8/8/3kb3/1p6/5P2/4K3/p7/1B6 w - - 1 61",
+      "move": "Bxa2"
+    },
+    "source": "https://www.pgnmentor.com/players/Aronian.zip",
+    "gameReference": {
+      "id": "9414e2c6b2bcd276",
+      "kind": "game",
+      "ply": 121,
+      "branch": 0,
+      "collection": "hanging-piece"
+    },
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "reason": "Bắt quân trực tiếp và kiểm tra khả năng bị bắt lại.",
+      "solverMoves": 1,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Lần theo đường chéo e6–a2."
+    ],
+    "solution": "…Bxa2 bắt Tượng a2. Vua e3 cách xa ô a2 và Trắng chỉ còn Tốt để phản công."
+  },
+  {
+    "title": "Maghsoodloo,Parham — Bluebaum,M",
+    "prompt": "Tìm cách bắt quân và tính nước đáp để giữ lợi thế vật chất.",
+    "mode": "interactive",
+    "outcome": "hanging-piece",
+    "goal": "material",
+    "fen": "1Q6/8/8/3p4/4p3/4k1q1/P5P1/7K w - - 6 47",
+    "moves": [
+      "Qxg3+"
+    ],
+    "tacticPly": 0,
+    "hangingPiece": {
+      "target": "g3",
+      "minimumGain": 130
+    },
+    "previousMove": {
+      "fen": "1Q6/8/8/3p4/4pk2/6q1/P5P1/7K b - - 5 46",
+      "move": "Ke3"
+    },
+    "source": "https://theweekinchess.com/zips/twic1660g.zip",
+    "gameReference": {
+      "id": "c44799bd147d2371",
+      "kind": "game",
+      "ply": 92,
+      "branch": 0,
+      "collection": "hanging-piece"
+    },
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "reason": "Bắt quân trực tiếp và kiểm tra khả năng bị bắt lại.",
+      "solverMoves": 1,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Lần theo đường chéo b8–g3 và xét các quân bảo vệ ô g3."
+    ],
+    "solution": "Qxg3+ bắt Hậu Đen và chiếu Vua e3. Các nước chiếu khác bỏ qua cơ hội bắt Hậu."
+  },
+  {
+    "title": "Aronian,L — Topalov,V",
+    "prompt": "Tìm cách bắt quân và tính nước đáp để giữ lợi thế vật chất.",
+    "mode": "interactive",
+    "outcome": "hanging-piece",
+    "goal": "material",
+    "fen": "5k2/N4pp1/1p4p1/1nbB4/1p4P1/1P5P/P3KP2/8 w - - 1 39",
+    "moves": [
+      "Nxb5"
+    ],
+    "tacticPly": 0,
+    "hangingPiece": {
+      "target": "b5",
+      "minimumGain": 130
+    },
+    "previousMove": {
+      "fen": "5k2/N4pp1/1p1n2p1/2bB4/1p4P1/1P5P/P3KP2/8 b - g3 0 38",
+      "move": "Nb5"
+    },
+    "source": "https://www.pgnmentor.com/players/Aronian.zip",
+    "gameReference": {
+      "id": "9ba7b547c3db930a",
+      "kind": "game",
+      "ply": 76,
+      "branch": 0,
+      "collection": "hanging-piece"
+    },
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "reason": "Bắt quân trực tiếp và kiểm tra khả năng bị bắt lại.",
+      "solverMoves": 1,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Từ a7, Mã có thể bắt quân nào ở hàng ngang số 5?"
+    ],
+    "solution": "Nxb5 bắt Mã b5. Tượng c5 cùng hàng ngang với Mã b5 nên không thể bắt lại."
+  },
+  {
+    "title": "Mishra,Abhimanyu — Aronian,L",
+    "prompt": "Tìm cách bắt quân và tính nước đáp để giữ lợi thế vật chất.",
+    "mode": "interactive",
+    "outcome": "hanging-piece",
+    "goal": "material",
+    "fen": "7k/3qR2p/p7/2p5/P1P5/8/6R1/4K3 b - - 0 47",
+    "moves": [
+      "Qxe7+"
+    ],
+    "tacticPly": 0,
+    "hangingPiece": {
+      "target": "e7",
+      "minimumGain": 130
+    },
+    "previousMove": {
+      "fen": "7k/3qr2p/p7/2p5/P1P5/8/4R1R1/4K3 w - - 0 47",
+      "move": "Rxe7"
+    },
+    "source": "https://www.pgnmentor.com/players/Aronian.zip",
+    "gameReference": {
+      "id": "3860a1c5619625bd",
+      "kind": "game",
+      "ply": 93,
+      "branch": 0,
+      "collection": "hanging-piece"
+    },
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "reason": "Bắt quân trực tiếp và kiểm tra khả năng bị bắt lại.",
+      "solverMoves": 1,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Tìm nước bắt Xe e7 bằng Hậu."
+    ],
+    "solution": "…Qxe7+ bắt Xe không được bảo vệ và chiếu Vua e1. Xe g2 không thể bắt lại trên e7."
+  },
+  {
+    "title": "Fischer, Robert James — Ostojic, Predrag",
+    "prompt": "Tìm cách bắt quân và tính nước đáp để giữ lợi thế vật chất.",
+    "mode": "interactive",
+    "outcome": "hanging-piece",
+    "goal": "material",
+    "fen": "1r6/K7/8/P3k1pp/8/4p1P1/7P/2R5 w - - 0 52",
+    "moves": [
+      "Kxb8"
+    ],
+    "tacticPly": 0,
+    "hangingPiece": {
+      "target": "b8",
+      "minimumGain": 130
+    },
+    "previousMove": {
+      "fen": "1Q6/K7/8/P3k1pp/8/4p1P1/1r5P/2R5 b - - 0 51",
+      "move": "Rxb8"
+    },
+    "source": "https://www.pgnmentor.com/players/Fischer.zip",
+    "gameReference": {
+      "id": "95f878764eff9b69",
+      "kind": "game",
+      "ply": 102,
+      "branch": 0,
+      "collection": "hanging-piece"
+    },
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "reason": "Bắt quân trực tiếp và kiểm tra khả năng bị bắt lại.",
+      "solverMoves": 1,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Vua a7 có thể tới b8 an toàn không?"
+    ],
+    "solution": "Kxb8 bắt Xe b8. Nếu Đen đẩy …h4, Trắng có thể đáp a6 để tiếp tục đưa Tốt thông tới hàng phong cấp."
+  },
+  {
+    "title": "Divya,Deshmukh — Assaubayeva,Bibisara",
+    "prompt": "Tìm cách bắt quân và tính nước đáp để giữ lợi thế vật chất.",
+    "mode": "interactive",
+    "outcome": "hanging-piece",
+    "goal": "material",
+    "fen": "3r1rk1/ppq1p1bp/4p1p1/4P3/3B1P2/P6Q/P5PP/1R3R1K b - - 0 21",
+    "moves": [
+      "Rxd4"
+    ],
+    "tacticPly": 0,
+    "hangingPiece": {
+      "target": "d4",
+      "minimumGain": 130
+    },
+    "previousMove": {
+      "fen": "3r1rk1/ppq1p1bp/4p1p1/4P3/3n1P2/P1B4Q/P5PP/1R3R1K w - - 3 21",
+      "move": "Bxd4"
+    },
+    "source": "https://theweekinchess.com/zips/twic1655g.zip",
+    "gameReference": {
+      "id": "34c48abb98228d04",
+      "kind": "game",
+      "ply": 41,
+      "branch": 0,
+      "collection": "hanging-piece"
+    },
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "reason": "Bắt quân trực tiếp và kiểm tra khả năng bị bắt lại.",
+      "solverMoves": 1,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Sau khi Xe bắt Tượng d4, Vua Đen có thể đáp thế nào nếu Trắng chiếu ở e6?"
+    ],
+    "solution": "…Rxd4 bắt Tượng d4. Sau Qxe6+, …Kh8 đưa Vua khỏi đường chiếu và Đen vẫn giữ phần hơn quân."
+  },
+  {
+    "title": "Aronian,L — Guseinov,G",
+    "prompt": "Tìm cách bắt quân và tính nước đáp để giữ lợi thế vật chất.",
+    "mode": "interactive",
+    "outcome": "hanging-piece",
+    "goal": "material",
+    "fen": "R4n2/5k2/4pPp1/3b3p/p1r5/7B/P3NPPK/8 b - - 3 52",
+    "moves": [
+      "Bxa8"
+    ],
+    "tacticPly": 0,
+    "hangingPiece": {
+      "target": "a8",
+      "minimumGain": 130
+    },
+    "previousMove": {
+      "fen": "2R2n2/5k2/4pPp1/3b3p/p1r5/7B/P3NPPK/8 w - - 2 52",
+      "move": "Ra8"
+    },
+    "source": "https://www.pgnmentor.com/players/Aronian.zip",
+    "gameReference": {
+      "id": "c5941bd73c8a992f",
+      "kind": "game",
+      "ply": 103,
+      "branch": 0,
+      "collection": "hanging-piece"
+    },
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "reason": "Bắt quân trực tiếp và kiểm tra khả năng bị bắt lại.",
+      "solverMoves": 1,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Lần theo đường chéo d5–a8 từ Tượng Đen."
+    ],
+    "solution": "…Bxa8 bắt Xe a8. Trắng không có nước bắt lại ở góc a8."
+  },
+  {
+    "title": "Geller, Efim P — Spassky, Boris V",
+    "prompt": "Tìm cách bắt quân và tính nước đáp để giữ lợi thế vật chất.",
+    "mode": "interactive",
+    "outcome": "hanging-piece",
+    "goal": "material",
+    "fen": "2k2rr1/p7/1p1p3p/5B1N/2P5/P3K3/7P/4R3 b - - 0 31",
+    "moves": [
+      "Rxf5"
+    ],
+    "tacticPly": 0,
+    "hangingPiece": {
+      "target": "f5",
+      "minimumGain": 180
+    },
+    "previousMove": {
+      "fen": "2k2rr1/p7/1p1p3p/5b1N/2P5/P3K2B/7P/4R3 w - - 2 31",
+      "move": "Bxf5+"
+    },
+    "source": "https://www.pgnmentor.com/players/Spassky.zip",
+    "gameReference": {
+      "id": "5c3ea9c34aabc7ca",
+      "kind": "game",
+      "ply": 61,
+      "branch": 0,
+      "collection": "hanging-piece"
+    },
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "reason": "Bắt quân trực tiếp và kiểm tra khả năng bị bắt lại.",
+      "solverMoves": 1,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Hãy kiểm tra nước Xe f8 bắt Tượng f5."
+    ],
+    "solution": "…Rxf5 bắt Tượng f5 và hóa giải nước chiếu. Vua Đen không cần rời c8."
+  },
+  {
+    "title": "Aronian,L — Svidler,P",
+    "prompt": "Tìm cách bắt quân và tính nước đáp để giữ lợi thế vật chất.",
+    "mode": "interactive",
+    "outcome": "hanging-piece",
+    "goal": "material",
+    "fen": "1R6/p1r1ppkp/4N1p1/p1r5/P7/6P1/4PKBP/8 b - - 0 31",
+    "moves": [
+      "fxe6"
+    ],
+    "tacticPly": 0,
+    "hangingPiece": {
+      "target": "e6",
+      "minimumGain": 100
+    },
+    "previousMove": {
+      "fen": "1R6/p1r1ppkp/4b1p1/p1r5/P2N4/6P1/4PKBP/8 w - - 9 31",
+      "move": "Nxe6+"
+    },
+    "source": "https://www.pgnmentor.com/players/Aronian.zip",
+    "gameReference": {
+      "id": "351f279832e15e97",
+      "kind": "game",
+      "ply": 61,
+      "branch": 0,
+      "collection": "hanging-piece"
+    },
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "reason": "Bắt quân trực tiếp và kiểm tra khả năng bị bắt lại.",
+      "solverMoves": 1,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Tìm nước Tốt bắt chéo để hóa giải nước chiếu của Mã."
+    ],
+    "solution": "…fxe6 bắt Mã e6 và hết chiếu. Xe Trắng trên b8 có thể đổi hướng tấn công nhưng không bắt lại được ở e6."
+  },
+  {
+    "title": "Van Hesselingen,Guido — Zwirs,Nico",
+    "prompt": "Tìm cách bắt quân và tính nước đáp để giữ lợi thế vật chất.",
+    "mode": "interactive",
+    "outcome": "hanging-piece",
+    "goal": "material",
+    "fen": "3r1r1k/1p4pp/p7/q1b5/2Q5/2P5/1PR2NPP/R5K1 w - - 2 29",
+    "moves": [
+      "Rxa5"
+    ],
+    "tacticPly": 0,
+    "hangingPiece": {
+      "target": "a5",
+      "minimumGain": 140
+    },
+    "previousMove": {
+      "fen": "3r1rk1/1p4pp/p7/q1b5/2Q5/2P5/1PR2NPP/R5K1 b - - 1 28",
+      "move": "Kh8"
+    },
+    "source": "https://theweekinchess.com/zips/twic1668g.zip",
+    "gameReference": {
+      "id": "bd82d63fb483f41e",
+      "kind": "game",
+      "ply": 56,
+      "branch": 0,
+      "collection": "hanging-piece"
+    },
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "reason": "Bắt quân trực tiếp và kiểm tra khả năng bị bắt lại.",
+      "solverMoves": 1,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Sau khi Xe a1 bắt ở a5, quân nào của Trắng có thể che nước chiếu ở d1?"
+    ],
+    "solution": "Rxa5 bắt Hậu a5. Nếu Đen chiếu …Rd1+, Qf1 che đường chiếu và Trắng có thể bắt lại sau …Rxf1+."
+  },
+  {
+    "title": "Abrha,Robel Brhane — Jobava,Ba",
+    "prompt": "Tìm cách bắt quân và tính nước đáp để giữ lợi thế vật chất.",
+    "mode": "interactive",
+    "outcome": "hanging-piece",
+    "goal": "material",
+    "fen": "5rk1/pp2bppp/4p3/3pP3/P2P4/1P1n1NN1/5PPP/2R3K1 b - - 0 23",
+    "moves": [
+      "Nxc1"
+    ],
+    "tacticPly": 0,
+    "hangingPiece": {
+      "target": "c1",
+      "minimumGain": 120
+    },
+    "previousMove": {
+      "fen": "5rk1/pp2bppp/4p3/3pP3/P2P4/1P1n1NN1/5PPP/2r1R1K1 w - - 0 23",
+      "move": "Rxc1"
+    },
+    "source": "https://theweekinchess.com/zips/twic1663g.zip",
+    "gameReference": {
+      "id": "71a56b78a76e4ba2",
+      "kind": "game",
+      "ply": 45,
+      "branch": 0,
+      "collection": "hanging-piece"
+    },
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "reason": "Bắt quân trực tiếp và kiểm tra khả năng bị bắt lại.",
+      "solverMoves": 1,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Xe Trắng vừa tới c1. Mã d3 có bắt được quân ở ô đó không?"
+    ],
+    "solution": "…Nxc1 bắt Xe c1. Trắng không có quân nào bắt lại được Mã trên c1."
+  },
+  {
+    "title": "Le,Quang Liem — Henriquez Villagra,C",
+    "prompt": "Tìm cách bắt quân và tính nước đáp để giữ lợi thế vật chất.",
+    "mode": "interactive",
+    "outcome": "hanging-piece",
+    "goal": "material",
+    "fen": "r7/2B2k2/8/3P4/1PP2n1p/5P1P/3r2PK/2R5 w - - 0 43",
+    "moves": [
+      "Bxf4"
+    ],
+    "tacticPly": 0,
+    "hangingPiece": {
+      "target": "f4",
+      "minimumGain": 120
+    },
+    "previousMove": {
+      "fen": "r7/2B2k2/8/3P3n/1PP2N1p/5P1P/3r2PK/2R5 b - - 10 42",
+      "move": "Nxf4"
+    },
+    "source": "https://theweekinchess.com/zips/twic1662g.zip",
+    "gameReference": {
+      "id": "6def741a23564697",
+      "kind": "game",
+      "ply": 84,
+      "branch": 0,
+      "collection": "hanging-piece"
+    },
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "reason": "Bắt quân trực tiếp và kiểm tra khả năng bị bắt lại.",
+      "solverMoves": 1,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Hãy lần theo đường chéo từ Tượng c7 đến f4."
+    ],
+    "solution": "Bxf4 bắt Mã f4. Xe Đen có thể tấn công các Tốt trên hàng ngang số 2 nhưng không thể bắt lại Tượng ngay."
+  },
+  {
+    "title": "Akmal,Ahmad — Stefansson,H",
+    "prompt": "Tìm cách bắt quân và tính nước đáp để giữ lợi thế vật chất.",
+    "mode": "interactive",
+    "outcome": "hanging-piece",
+    "goal": "material",
+    "fen": "6k1/1p1n1p2/6pp/2Ppp3/1p2N2P/1N2P3/1P6/6K1 b - - 0 31",
+    "moves": [
+      "dxe4"
+    ],
+    "tacticPly": 0,
+    "hangingPiece": {
+      "target": "e4",
+      "minimumGain": 150
+    },
+    "previousMove": {
+      "fen": "6k1/1p1n1p2/6pp/2Ppp3/1p2n2P/1N2P1N1/1P6/6K1 w - - 1 31",
+      "move": "Nxe4"
+    },
+    "source": "https://theweekinchess.com/zips/twic1663g.zip",
+    "gameReference": {
+      "id": "99a3ef2bfcd97fd4",
+      "kind": "game",
+      "ply": 61,
+      "branch": 0,
+      "collection": "hanging-piece"
+    },
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "reason": "Bắt quân trực tiếp và kiểm tra khả năng bị bắt lại.",
+      "solverMoves": 1,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Tốt d5 có thể bắt Mã trên e4 không?"
+    ],
+    "solution": "…dxe4 bắt Mã e4. Nếu Trắng đẩy c6, Tốt b7 có thể bắt ở c6."
+  },
+  {
+    "title": "Moranda,W — Klekowski,M",
+    "prompt": "Tìm cách bắt quân và tính nước đáp để giữ lợi thế vật chất.",
+    "mode": "interactive",
+    "outcome": "hanging-piece",
+    "goal": "material",
+    "fen": "4k3/1b3q2/pp6/7Q/3Pp1n1/4P1P1/PP3P2/5BK1 w - - 2 36",
+    "moves": [
+      "Qxg4"
+    ],
+    "tacticPly": 0,
+    "hangingPiece": {
+      "target": "g4",
+      "minimumGain": 150
+    },
+    "previousMove": {
+      "fen": "4k3/1b2q3/pp6/7Q/3Pp1n1/4P1P1/PP3P2/5BK1 b - - 1 35",
+      "move": "Qf7"
+    },
+    "source": "https://theweekinchess.com/zips/twic1657g.zip",
+    "gameReference": {
+      "id": "22668d6ba4da3437",
+      "kind": "game",
+      "ply": 70,
+      "branch": 0,
+      "collection": "hanging-piece"
+    },
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "reason": "Bắt quân trực tiếp và kiểm tra khả năng bị bắt lại.",
+      "solverMoves": 1,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Hậu h5 có thể bắt Mã g4 ngay."
+    ],
+    "solution": "Qxg4 bắt Mã g4. Nếu Qxf7+, Vua Đen bắt lại Hậu trên f7 và Trắng bỏ lỡ cơ hội hơn quân."
+  },
+  {
+    "title": "Fischer, Robert James — Eliskases, Erich Gottlieb",
+    "prompt": "Tìm cách bắt quân và tính nước đáp để giữ lợi thế vật chất.",
+    "mode": "interactive",
+    "outcome": "hanging-piece",
+    "goal": "material",
+    "fen": "7r/8/8/6p1/2pBPk2/2P2p2/1P3P1K/8 w - - 0 43",
+    "moves": [
+      "Bxh8"
+    ],
+    "tacticPly": 0,
+    "hangingPiece": {
+      "target": "h8",
+      "minimumGain": 200
+    },
+    "previousMove": {
+      "fen": "r6Q/8/8/6p1/2pBPk2/2P2p2/1P3P1K/8 b - - 0 42",
+      "move": "Rxh8+"
+    },
+    "source": "https://www.pgnmentor.com/players/Fischer.zip",
+    "gameReference": {
+      "id": "495fee67d510d877",
+      "kind": "game",
+      "ply": 84,
+      "branch": 0,
+      "collection": "hanging-piece"
+    },
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "reason": "Bắt quân trực tiếp và kiểm tra khả năng bị bắt lại.",
+      "solverMoves": 1,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Tượng d4 nhìn tới h8 qua những ô nào?"
+    ],
+    "solution": "Bxh8 bắt Xe đang chiếu. Nếu Đen đáp …Kxe4, Trắng vẫn giữ được lợi thế vật chất."
+  },
+  {
+    "title": "Martins,Bruno Andre Leite — Beltran Garcia,R",
+    "prompt": "Tìm cách bắt quân và tính nước đáp để giữ lợi thế vật chất.",
+    "mode": "interactive",
+    "outcome": "hanging-piece",
+    "goal": "material",
+    "fen": "r4rk1/pp4pp/8/3pqb2/4nP2/3B4/PP1QN1PP/R4RK1 w - - 1 19",
+    "moves": [
+      "fxe5",
+      "Nxd2",
+      "Rxf5",
+      "Rxf5",
+      "Bxf5"
+    ],
+    "tacticPly": 0,
+    "hangingPiece": {
+      "target": "e5",
+      "minimumGain": 130
+    },
+    "previousMove": {
+      "fen": "r4rk1/pp4pp/5n2/3pqb2/5P2/3B4/PP1QN1PP/R4RK1 b - f3 0 18",
+      "move": "Ne4"
+    },
+    "source": "https://theweekinchess.com/zips/twic1666g.zip",
+    "gameReference": {
+      "id": "a3e39a6124149c1e",
+      "kind": "game",
+      "ply": 36,
+      "branch": 0,
+      "collection": "hanging-piece"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "reason": "Tính nước đáp và phối hợp thêm để giữ lợi thế vật chất.",
+      "solverMoves": 3,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Xem cột f thay đổi thế nào sau khi bắt Hậu trên e5.",
+      "Tính tiếp nếu Mã Đen bắt Hậu ở d2."
+    ],
+    "solution": "Tốt f4 bắt Hậu e5 và mở cột f. Nếu Mã Đen bắt Hậu d2, Xe Trắng bắt Tượng f5. Sau …Rxf5, Tượng d3 bắt lại Xe. Trắng thu thêm một Tượng."
+  },
+  {
+    "title": "Karpov,Ana — Anand,V",
+    "prompt": "Tìm cách bắt quân và tính nước đáp để giữ lợi thế vật chất.",
+    "mode": "interactive",
+    "outcome": "hanging-piece",
+    "goal": "material",
+    "fen": "r4rk1/p5pp/1p1pp2q/2P2p2/2P2Pn1/PQ2Pb1P/1B2B1P1/3R1RK1 b - - 0 21",
+    "moves": [
+      "Bxe2",
+      "cxb6",
+      "Bxd1"
+    ],
+    "tacticPly": 0,
+    "hangingPiece": {
+      "target": "e2",
+      "minimumGain": 140
+    },
+    "previousMove": {
+      "fen": "r4rk1/p5pp/1p1pp2q/2P2p2/2P2Pn1/PQ2Pb2/1B2B1PP/3R1RK1 w - - 0 21",
+      "move": "h3"
+    },
+    "source": "https://www.pgnmentor.com/players/Karpov.zip",
+    "gameReference": {
+      "id": "2561dc71fff73156",
+      "kind": "game",
+      "ply": 41,
+      "branch": 0,
+      "collection": "hanging-piece"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "reason": "Tính nước đáp và phối hợp thêm để giữ lợi thế vật chất.",
+      "solverMoves": 2,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Kiểm tra xem Tượng ở e2 có được bảo vệ không.",
+      "Sau khi bắt, Tượng Đen tấn công những quân nào?"
+    ],
+    "solution": "Tượng f3 bắt Tượng e2 và tấn công cả hai Xe ở d1 và f1. Sau cxb6, Tượng có thể bắt Xe d1. Kể cả khi Xe f1 bắt lại, Đen vẫn thu lợi về vật chất."
+  },
+  {
+    "title": "Sturt,R — Matlakov,M",
+    "prompt": "Tìm cách bắt quân và tính nước đáp để giữ lợi thế vật chất.",
+    "mode": "interactive",
+    "outcome": "hanging-piece",
+    "goal": "material",
+    "fen": "2kr4/pp3ppp/2p1pn2/8/2P2P2/1PBrP2P/P3K1P1/R2R4 b - - 0 18",
+    "moves": [
+      "Rxc3",
+      "Rxd8+",
+      "Kxd8"
+    ],
+    "tacticPly": 0,
+    "hangingPiece": {
+      "target": "c3",
+      "minimumGain": 140
+    },
+    "previousMove": {
+      "fen": "2kr4/pp3ppp/2p1pn2/8/2P2P2/1PbrP2P/P2BK1P1/R2R4 w - - 0 18",
+      "move": "Bxc3"
+    },
+    "source": "https://theweekinchess.com/zips/twic1661g.zip",
+    "gameReference": {
+      "id": "73b99e8ef747e9b0",
+      "kind": "game",
+      "ply": 35,
+      "branch": 0,
+      "collection": "hanging-piece"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "reason": "Tính nước đáp và phối hợp thêm để giữ lợi thế vật chất.",
+      "solverMoves": 2,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Tính nước Xe Trắng bắt ở d8 có chiếu sau khi Xe Đen bắt Tượng."
+    ],
+    "solution": "…Rxc3 bắt Tượng treo. Nếu Trắng đáp Rxd8+, …Kxd8 đổi nốt cặp Xe và giữ phần hơn Tượng."
+  },
+  {
+    "title": "Short,N — Bruzon Batista,L",
+    "prompt": "Tìm cách bắt quân và tính nước đáp để giữ lợi thế vật chất.",
+    "mode": "interactive",
+    "outcome": "hanging-piece",
+    "goal": "material",
+    "fen": "1r1r2k1/p4ppp/Q3pN2/1q6/2p5/P4NP1/1Pn1PPBP/1R4K1 b - - 0 20",
+    "moves": [
+      "gxf6",
+      "Qxa7",
+      "Rd7",
+      "a4",
+      "Rxa7"
+    ],
+    "tacticPly": 0,
+    "hangingPiece": {
+      "target": "f6",
+      "minimumGain": 200
+    },
+    "previousMove": {
+      "fen": "1r1r2k1/p4ppp/Q3pb2/1q6/2p1N3/P4NP1/1Pn1PPBP/1R4K1 w - - 5 20",
+      "move": "Nxf6+"
+    },
+    "source": "https://www.pgnmentor.com/players/Short.zip",
+    "gameReference": {
+      "id": "1c8d9b994dcb4168",
+      "kind": "game",
+      "ply": 39,
+      "branch": 0,
+      "collection": "hanging-piece"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "reason": "Tính nước đáp và phối hợp thêm để giữ lợi thế vật chất.",
+      "solverMoves": 3,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Có thể vừa giải chiếu vừa bắt quân nào?",
+      "Sau Qxa7, tìm cách để Xe đen tấn công Hậu trên hàng 7."
+    ],
+    "solution": "Tốt g7 bắt Mã f6 và giải chiếu. Sau Qxa7, Xe d8 đến d7 tấn công Hậu. Nếu a4 tấn công Hậu b5, Đen bắt Hậu a7. Sau axb5, Xe b8 bắt lại Tốt và giữ lợi thế từ nước bắt Mã."
+  },
+  {
+    "title": "Aronian,L — Anand,V",
+    "prompt": "Tìm cách bắt quân và tính nước đáp để giữ lợi thế vật chất.",
+    "mode": "interactive",
+    "outcome": "hanging-piece",
+    "goal": "material",
+    "fen": "r5k1/pp3ppp/1qpp2b1/4R3/6n1/2P4P/PPBQ2K1/R1B5 b - - 1 20",
+    "moves": [
+      "Nxe5",
+      "Bxg6",
+      "Nxg6"
+    ],
+    "tacticPly": 0,
+    "hangingPiece": {
+      "target": "e5",
+      "minimumGain": 200
+    },
+    "previousMove": {
+      "fen": "r5k1/pp3ppp/1qpp2b1/4R3/6n1/2P4P/PPBQ4/R1B3K1 w - - 0 20",
+      "move": "Kg2"
+    },
+    "source": "https://www.pgnmentor.com/players/Aronian.zip",
+    "gameReference": {
+      "id": "2bbdec95c01823c0",
+      "kind": "game",
+      "ply": 39,
+      "branch": 0,
+      "collection": "hanging-piece"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "reason": "Tính nước đáp và phối hợp thêm để giữ lợi thế vật chất.",
+      "solverMoves": 2,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Quân nào có thể bắt Xe ở e5 rồi quay lại g6 để bắt Tượng?"
+    ],
+    "solution": "…Nxe5 bắt Xe treo. Sau Bxg6, …Nxg6 đổi Tượng và giữ phần hơn Xe. Nếu dùng Tốt d bắt ở e5, Đen mất cách bắt lại này."
+  },
+  {
+    "title": "Kramnik,V — Radjabov,T",
+    "prompt": "Tìm cách bắt quân và tính nước đáp để giữ lợi thế vật chất.",
+    "mode": "interactive",
+    "outcome": "hanging-piece",
+    "goal": "material",
+    "fen": "5r1k/p3R3/1p4Bp/5R2/5n2/6K1/7P/r7 b - - 4 37",
+    "moves": [
+      "Nxg6",
+      "Rxf8+",
+      "Nxf8"
+    ],
+    "tacticPly": 0,
+    "hangingPiece": {
+      "target": "g6",
+      "minimumGain": 100
+    },
+    "previousMove": {
+      "fen": "5r1k/p3R3/1p4Bp/5R2/5n2/8/6KP/r7 w - - 3 37",
+      "move": "Kg3"
+    },
+    "source": "https://www.pgnmentor.com/players/Kramnik.zip",
+    "gameReference": {
+      "id": "22191f4e443d120a",
+      "kind": "game",
+      "ply": 73,
+      "branch": 0,
+      "collection": "hanging-piece"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "reason": "Tính nước đáp và phối hợp thêm để giữ lợi thế vật chất.",
+      "solverMoves": 2,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Sau khi bắt Tượng g6, Mã Đen bảo vệ được Xe nào?",
+      "Tính nước đáp của Đen nếu Trắng chơi Rxf8+."
+    ],
+    "solution": "Mã f4 bắt Tượng g6 và bảo vệ Xe f8. Nếu Trắng bắt Xe f8 kèm chiếu, Mã g6 bắt lại. Đen giữ phần vật chất thu được ở g6."
+  },
+  {
+    "title": "Vakhidov,J — Suyarov,Mukhammadzokhid",
+    "prompt": "Tìm cách bắt quân và tính nước đáp để giữ lợi thế vật chất.",
+    "mode": "interactive",
+    "outcome": "hanging-piece",
+    "goal": "material",
+    "fen": "r4rk1/3bpp1p/P2p1np1/3P4/3bP3/q2B4/3QNPPP/2R2RK1 w - - 0 21",
+    "moves": [
+      "Nxd4",
+      "Qa4",
+      "Nc6",
+      "Bxc6",
+      "dxc6"
+    ],
+    "tacticPly": 0,
+    "hangingPiece": {
+      "target": "d4",
+      "minimumGain": 200
+    },
+    "previousMove": {
+      "fen": "r4rk1/3bpp1p/P2p1np1/3Pb3/3BP3/q2B4/3QNPPP/2R2RK1 b - - 3 20",
+      "move": "Bxd4"
+    },
+    "source": "https://theweekinchess.com/zips/twic1659g.zip",
+    "gameReference": {
+      "id": "5fe6a0bf95c7e7db",
+      "kind": "game",
+      "ply": 40,
+      "branch": 0,
+      "collection": "hanging-piece"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "reason": "Tính nước đáp và phối hợp thêm để giữ lợi thế vật chất.",
+      "solverMoves": 3,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Sau khi Mã bắt Tượng ở d4, hãy xét đường tấn công của Hậu Đen vào c1 và cách đổi quân trên c6."
+    ],
+    "solution": "Nxd4 bắt Tượng treo. Nếu …Qa4, Nc6 đưa Mã lên c6. Sau …Bxc6, dxc6 giữ lợi thế vật chất và tạo Tốt thông."
+  },
+  {
+    "title": "Rakotomaharo,Fy Antenaina — Deac,Bogdan-Daniel",
+    "prompt": "Tìm cách bắt quân và tính nước đáp để giữ lợi thế vật chất.",
+    "mode": "interactive",
+    "outcome": "hanging-piece",
+    "goal": "material",
+    "fen": "8/p4Pk1/2r3pp/8/R4p2/2Nn4/P4P1P/6K1 b - - 0 34",
+    "moves": [
+      "Rxc3",
+      "Rxa7",
+      "Ne5",
+      "f8=B+",
+      "Kxf8"
+    ],
+    "tacticPly": 0,
+    "hangingPiece": {
+      "target": "c3",
+      "minimumGain": 130
+    },
+    "previousMove": {
+      "fen": "8/p4bk1/2r1P1pp/8/R4p2/2Nn4/P4P1P/6K1 w - - 0 34",
+      "move": "exf7"
+    },
+    "source": "https://theweekinchess.com/zips/twic1663g.zip",
+    "gameReference": {
+      "id": "bd0fa6a909eff116",
+      "kind": "game",
+      "ply": 67,
+      "branch": 0,
+      "collection": "hanging-piece"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "reason": "Tính nước đáp và phối hợp thêm để giữ lợi thế vật chất.",
+      "solverMoves": 3,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Tìm Mã treo rồi kiểm tra Tốt f7.",
+      "Nếu Trắng phong cấp ở f8, quân Đen nào có thể bắt lại?"
+    ],
+    "solution": "Xe c6 bắt Mã c3. Nếu Xe Trắng bắt Tốt a7, Mã d3 đến e5 để tấn công Tốt f7. Khi Trắng phong cấp ở f8 kèm chiếu, Vua g7 bắt quân vừa phong cấp."
+  },
+  {
+    "title": "Van Rensselaer,William — Belouadah,S",
+    "prompt": "Tìm cách bắt quân và tính nước đáp để giữ lợi thế vật chất.",
+    "mode": "interactive",
+    "outcome": "hanging-piece",
+    "goal": "material",
+    "fen": "8/8/B3p1k1/6p1/1P2p3/3nP3/2KB4/5Rr1 b - - 0 55",
+    "moves": [
+      "Rxf1",
+      "Bxd3",
+      "exd3+"
+    ],
+    "tacticPly": 0,
+    "hangingPiece": {
+      "target": "f1",
+      "minimumGain": 200
+    },
+    "previousMove": {
+      "fen": "5R2/8/B3p1k1/6p1/1P2p3/3nP3/2KB4/5qr1 w - - 0 55",
+      "move": "Rxf1"
+    },
+    "source": "https://theweekinchess.com/zips/twic1663g.zip",
+    "gameReference": {
+      "id": "51041f90aaf11191",
+      "kind": "game",
+      "ply": 109,
+      "branch": 0,
+      "collection": "hanging-piece"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "reason": "Tính nước đáp và phối hợp thêm để giữ lợi thế vật chất.",
+      "solverMoves": 2,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Tính xem Đen có thể bắt lại bằng quân nào nếu Trắng lấy Mã ở d3."
+    ],
+    "solution": "…Rxf1 bắt Xe treo. Nếu Bxd3, …exd3+ bắt lại có chiếu. Ngay cả khi Vua Trắng bắt Tốt d3, Đen vẫn hơn vật chất."
+  },
+  {
+    "title": "Andreikin,D — Paravyan,D",
+    "prompt": "Tìm cách bắt quân và tính nước đáp để giữ lợi thế vật chất.",
+    "mode": "interactive",
+    "outcome": "hanging-piece",
+    "goal": "material",
+    "fen": "2r2r1k/2p1bpp1/pn2p2p/1p2P3/3qB2P/1b3N2/2QB1PP1/2R1K2R w K - 0 20",
+    "moves": [
+      "Nxd4",
+      "Bxc2",
+      "Rxc2"
+    ],
+    "tacticPly": 0,
+    "hangingPiece": {
+      "target": "d4",
+      "minimumGain": 200
+    },
+    "previousMove": {
+      "fen": "2r2r1k/2p1bpp1/pn2p2p/1p2P3/3qB2P/1P3N2/b1QB1PP1/2R1K2R b K - 1 19",
+      "move": "Bxb3"
+    },
+    "source": "https://theweekinchess.com/zips/twic1668g.zip",
+    "gameReference": {
+      "id": "f851ff7cffc16839",
+      "kind": "game",
+      "ply": 38,
+      "branch": 0,
+      "collection": "hanging-piece"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "reason": "Tính nước đáp và phối hợp thêm để giữ lợi thế vật chất.",
+      "solverMoves": 2,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Hai Hậu đều đang bị tấn công. Tìm quân có thể bắt Hậu Đen.",
+      "Quân nào của Trắng đứng sẵn để bắt lại ở c2?"
+    ],
+    "solution": "Mã f3 bắt Hậu d4. Nếu Tượng Đen bắt Hậu c2, Xe c1 bắt lại Tượng. Hai Hậu rời bàn và Trắng thu thêm một Tượng."
+  },
+  {
+    "title": "Narva,M — Pipiras,Filipa Fortuna",
+    "prompt": "Tìm cách bắt quân và tính nước đáp để giữ lợi thế vật chất.",
+    "mode": "interactive",
+    "outcome": "hanging-piece",
+    "goal": "material",
+    "fen": "1r1qr2k/5pp1/2bP3p/pn3p2/1b6/1P1QB1P1/5PBP/R2R2K1 w - - 0 29",
+    "moves": [
+      "Bxc6",
+      "Rxe3",
+      "Qxe3"
+    ],
+    "tacticPly": 0,
+    "hangingPiece": {
+      "target": "c6",
+      "minimumGain": 200
+    },
+    "previousMove": {
+      "fen": "1r1qr2k/3b1pp1/2NP3p/pn3p2/1b6/1P1QB1P1/5PBP/R2R2K1 b - - 6 28",
+      "move": "Bxc6"
+    },
+    "source": "https://theweekinchess.com/zips/twic1663g.zip",
+    "gameReference": {
+      "id": "b86b194806dc043d",
+      "kind": "game",
+      "ply": 56,
+      "branch": 0,
+      "collection": "hanging-piece"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "reason": "Tính nước đáp và phối hợp thêm để giữ lợi thế vật chất.",
+      "solverMoves": 2,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Sau Bxc6, nếu Xe Đen bắt Tượng e3, quân Trắng nào bắt lại được?"
+    ],
+    "solution": "Bxc6 bắt Tượng treo. Nếu …Rxe3, Qxe3 đổi Tượng lấy Xe. Nhờ vậy, Trắng chuyển từ thiếu quân sang hơn vật chất."
+  },
+  {
+    "title": "Zichichi, Alvise — Spassky, Boris V",
+    "prompt": "Tìm cách bắt quân và tính nước đáp để giữ lợi thế vật chất.",
+    "mode": "interactive",
+    "outcome": "hanging-piece",
+    "goal": "material",
+    "fen": "2rr2k1/1q3p2/1p1bn1pp/3B4/p7/P4PB1/1PQ3PP/3R1RK1 w - - 1 33",
+    "moves": [
+      "Bxb7",
+      "Rxc2",
+      "Rxd6",
+      "Rxd6",
+      "Bxd6"
+    ],
+    "tacticPly": 0,
+    "hangingPiece": {
+      "target": "b7",
+      "minimumGain": 120
+    },
+    "previousMove": {
+      "fen": "2rr2k1/1q3p2/1p1b2pp/2nB4/p7/P4PB1/1PQ3PP/3R1RK1 b - - 0 32",
+      "move": "Ne6"
+    },
+    "source": "https://www.pgnmentor.com/players/Spassky.zip",
+    "gameReference": {
+      "id": "ab3ebd304db535d1",
+      "kind": "game",
+      "ply": 64,
+      "branch": 0,
+      "collection": "hanging-piece"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "reason": "Tính nước đáp và phối hợp thêm để giữ lợi thế vật chất.",
+      "solverMoves": 3,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Tính phương án sau khi cả hai Hậu bị bắt. Hãy kiểm tra quân nào của Trắng khống chế ô d6."
+    ],
+    "solution": "Bxb7 bắt Hậu treo. Sau …Rxc2, Rxd6 lấy Tượng; nếu …Rxd6, Bxd6 bắt lại Xe. Trắng giữ phần hơn Tượng sau khi hai Hậu rời bàn."
+  },
+  {
+    "title": "Arauz Espinoza,Douglas Ariel — Kvaloy,Aksel Bu",
+    "prompt": "Tìm cách bắt quân và tính nước đáp để giữ lợi thế vật chất.",
+    "mode": "interactive",
+    "outcome": "hanging-piece",
+    "goal": "material",
+    "fen": "R2qk2r/2p2ppp/2n2n2/1pb5/2Q1p1b1/2P5/1PBP1PPP/1NB2RK1 b k - 0 13",
+    "moves": [
+      "bxc4",
+      "Rxd8+",
+      "Kxd8"
+    ],
+    "tacticPly": 0,
+    "hangingPiece": {
+      "target": "c4",
+      "minimumGain": 200
+    },
+    "previousMove": {
+      "fen": "r2qk2r/2p2ppp/2n2n2/1pb5/2Q1p1b1/2P5/1PBP1PPP/RNB2RK1 w kq - 0 13",
+      "move": "Rxa8"
+    },
+    "source": "https://theweekinchess.com/zips/twic1663g.zip",
+    "gameReference": {
+      "id": "5482327b215c21f6",
+      "kind": "game",
+      "ply": 25,
+      "branch": 0,
+      "collection": "hanging-piece"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "reason": "Tính nước đáp và phối hợp thêm để giữ lợi thế vật chất.",
+      "solverMoves": 2,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Kiểm tra Hậu c4 trước khi xử lý mối đe dọa ở d8.",
+      "Nếu Trắng chiếu bằng Rxd8+, quân Đen nào có thể bắt lại?"
+    ],
+    "solution": "Tốt b5 bắt Hậu c4. Nếu Xe Trắng bắt Hậu ở d8 kèm chiếu, Vua hoặc Mã Đen có thể bắt lại Xe. Trong ván đấu, Đen chơi Kxd8 và thu thêm một Xe."
+  },
+  {
+    "title": "Kogan, Artur — Spassky, Boris V",
+    "prompt": "Tìm cách bắt quân và tính nước đáp để giữ lợi thế vật chất.",
+    "mode": "interactive",
+    "outcome": "hanging-piece",
+    "goal": "material",
+    "fen": "r2q4/1bpk1p1p/pp1p1N1B/4nP1Q/P2p3r/3B4/1PP3PP/3RR1K1 b - - 0 19",
+    "moves": [
+      "Qxf6",
+      "Bg5",
+      "Rxh5"
+    ],
+    "tacticPly": 0,
+    "hangingPiece": {
+      "target": "f6",
+      "minimumGain": 200
+    },
+    "previousMove": {
+      "fen": "r2q4/1bpk1p1p/pp1p1b1B/4nP1Q/P2pN2r/3B4/1PP3PP/3RR1K1 w - - 4 19",
+      "move": "Nxf6+"
+    },
+    "source": "https://www.pgnmentor.com/players/Spassky.zip",
+    "gameReference": {
+      "id": "133d94e8cd3bd47c",
+      "kind": "game",
+      "ply": 37,
+      "branch": 0,
+      "collection": "hanging-piece"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "reason": "Tính nước đáp và phối hợp thêm để giữ lợi thế vật chất.",
+      "solverMoves": 2,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Tìm cách giải chiếu bằng một nước bắt quân.",
+      "Nếu Bg5 tấn công Hậu Đen, hãy kiểm tra Hậu Trắng ở h5."
+    ],
+    "solution": "Hậu d8 bắt Mã f6 và giải chiếu. Nếu Tượng Trắng đến g5 tấn công Hậu, Xe h4 bắt Hậu h5. Sau Bxf6, hai Hậu rời bàn và Đen giữ phần vật chất đã thu được từ nước bắt Mã."
+  },
+  {
+    "title": "Karpov, Anatoly — Franco Ocampo, Zenon",
+    "prompt": "Tìm cách bắt quân và tính nước đáp để giữ lợi thế vật chất.",
+    "mode": "interactive",
+    "outcome": "hanging-piece",
+    "goal": "material",
+    "fen": "b7/2q1kp2/6p1/N1n1p1P1/1Q6/1P3P2/P1P1B3/1K1r4 w - - 0 33",
+    "moves": [
+      "Bxd1",
+      "Qd6",
+      "Be2"
+    ],
+    "tacticPly": 0,
+    "hangingPiece": {
+      "target": "d1",
+      "minimumGain": 200
+    },
+    "previousMove": {
+      "fen": "b2r4/2q1kp2/6p1/N1n1p1P1/1Q6/1P3P2/P1P1B3/1K1R4 b - - 0 32",
+      "move": "Rxd1+"
+    },
+    "source": "https://www.pgnmentor.com/players/Karpov.zip",
+    "gameReference": {
+      "id": "ab00d89d39d8f9dd",
+      "kind": "game",
+      "ply": 64,
+      "branch": 0,
+      "collection": "hanging-piece"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "reason": "Tính nước đáp và phối hợp thêm để giữ lợi thế vật chất.",
+      "solverMoves": 2,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Bắt Xe đang chiếu, rồi để ý đường dọc cột d của Hậu Đen."
+    ],
+    "solution": "Bxd1 bắt Xe treo và hóa giải nước chiếu. Nếu …Qd6, Be2 đưa Tượng ra khỏi đường tấn công và giữ lợi thế vật chất."
+  },
+  {
+    "title": "Kempinski,R — Short,N",
+    "prompt": "Tìm cách bắt quân và tính nước đáp để giữ lợi thế vật chất.",
+    "mode": "interactive",
+    "outcome": "hanging-piece",
+    "goal": "material",
+    "fen": "1r3b1k/pN1b1Rp1/7p/3B4/8/8/1P5P/1K6 w - - 0 42",
+    "moves": [
+      "Rxd7",
+      "Re8",
+      "Nd6",
+      "Bxd6",
+      "Rxd6"
+    ],
+    "tacticPly": 0,
+    "hangingPiece": {
+      "target": "d7",
+      "minimumGain": 200
+    },
+    "previousMove": {
+      "fen": "1r3b1k/pN1P1Rp1/7p/3B4/6b1/8/1P5P/1K6 b - - 0 41",
+      "move": "Bxd7"
+    },
+    "source": "https://www.pgnmentor.com/players/Short.zip",
+    "gameReference": {
+      "id": "bcd28908f688ba36",
+      "kind": "game",
+      "ply": 82,
+      "branch": 0,
+      "collection": "hanging-piece"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "reason": "Tính nước đáp và phối hợp thêm để giữ lợi thế vật chất.",
+      "solverMoves": 3,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Sau khi bắt Tượng, kiểm tra Mã b7.",
+      "Nếu Xe Đen đến e8, Mã có thể chuyển đến ô nào được Xe d7 bảo vệ?"
+    ],
+    "solution": "Xe f7 bắt Tượng d7. Nếu …Re8, Mã b7 đến d6, ô được Xe d7 bảo vệ. Khi Tượng Đen bắt Mã, Xe Trắng bắt lại ở d6 và giữ lợi thế vật chất."
+  },
+  {
+    "title": "Gelfand, Boris — Karpov, Anatoly",
+    "prompt": "Tìm cách bắt quân và tính nước đáp để giữ lợi thế vật chất.",
+    "mode": "interactive",
+    "outcome": "hanging-piece",
+    "goal": "material",
+    "fen": "3r2k1/2qr1ppp/p4b2/1NP1p3/1Pn1Q3/P5P1/5PKP/B1RR4 b - - 0 32",
+    "moves": [
+      "axb5",
+      "Rxd7",
+      "Qxd7",
+      "a4",
+      "Nd2"
+    ],
+    "tacticPly": 0,
+    "hangingPiece": {
+      "target": "b5",
+      "minimumGain": 200
+    },
+    "previousMove": {
+      "fen": "3r2k1/2qr1ppp/p4b2/1pP1p3/1PnNQ3/P5P1/5PKP/B1RR4 w - - 0 32",
+      "move": "Nxb5"
+    },
+    "source": "https://www.pgnmentor.com/players/Karpov.zip",
+    "gameReference": {
+      "id": "528989e8a05e014e",
+      "kind": "game",
+      "ply": 63,
+      "branch": 0,
+      "collection": "hanging-piece"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "reason": "Tính nước đáp và phối hợp thêm để giữ lợi thế vật chất.",
+      "solverMoves": 3,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Sau …axb5 và đổi Xe trên d7, kiểm tra Mã còn lại ở c4."
+    ],
+    "solution": "…axb5 bắt Mã treo. Nếu Rxd7, …Qxd7 bắt lại. Trong phương án a4, …Nd2 đưa Mã c4 khỏi đường tấn công và giữ phần hơn quân."
+  },
+  {
+    "title": "Ohanyan,Emin — Caruana,F",
+    "prompt": "Tìm cách bắt quân và tính nước đáp để giữ lợi thế vật chất.",
+    "mode": "interactive",
+    "outcome": "hanging-piece",
+    "goal": "material",
+    "fen": "3q1k2/pr3p1Q/1p2Rb2/3p3p/1Pb2B2/P6P/5PP1/R5K1 b - - 0 30",
+    "moves": [
+      "fxe6",
+      "Qxb7",
+      "Bxa1"
+    ],
+    "tacticPly": 0,
+    "hangingPiece": {
+      "target": "e6",
+      "minimumGain": 200
+    },
+    "previousMove": {
+      "fen": "3q1k2/pr3p1Q/1p2nb2/3p3p/1Pb2B2/P6P/5PP1/R3R1K1 w - - 0 30",
+      "move": "Rxe6"
+    },
+    "source": "https://theweekinchess.com/zips/twic1662g.zip",
+    "gameReference": {
+      "id": "3988316d77e2c956",
+      "kind": "game",
+      "ply": 59,
+      "branch": 0,
+      "collection": "hanging-piece"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "reason": "Tính nước đáp và phối hợp thêm để giữ lợi thế vật chất.",
+      "solverMoves": 2,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Hai Xe Trắng đều có thể bị bắt. Hãy tính nước chiếu Bh6+ trước khi chọn.",
+      "Nước bắt nào giúp Vua Đen có thêm ô thoát?"
+    ],
+    "solution": "Tốt f7 bắt Xe e6 trước. Sau Qxb7, Tượng f6 bắt Xe a1. Nếu Đen bắt Xe a1 ngay, Trắng có Bh6+ và sau …Bg7 là Bxg7#."
+  },
+  {
+    "title": "Martinez Alcantara,Jose Eduardo — Aronian,L",
+    "prompt": "Tìm cách bắt quân và tính nước đáp để giữ lợi thế vật chất.",
+    "mode": "interactive",
+    "outcome": "hanging-piece",
+    "goal": "material",
+    "fen": "1r6/4q1k1/2p2pp1/p3p2p/P1RpPP1P/1RbQ2PN/6K1/8 b - - 0 37",
+    "moves": [
+      "Rxb3",
+      "Rxc6",
+      "Rb2+"
+    ],
+    "tacticPly": 0,
+    "hangingPiece": {
+      "target": "b3",
+      "minimumGain": 200
+    },
+    "previousMove": {
+      "fen": "1r6/4q1k1/2p2pp1/p3p2p/P1RpPP1P/1rbQ2PN/6K1/1R6 w - - 0 37",
+      "move": "Rxb3"
+    },
+    "source": "https://www.pgnmentor.com/players/Aronian.zip",
+    "gameReference": {
+      "id": "b6e83feff2616968",
+      "kind": "game",
+      "ply": 73,
+      "branch": 0,
+      "collection": "hanging-piece"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "reason": "Tính nước đáp và phối hợp thêm để giữ lợi thế vật chất.",
+      "solverMoves": 2,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Sau khi bắt Xe b3, hãy tìm nước chiếu nếu Xe Trắng bắt Tốt c6."
+    ],
+    "solution": "…Rxb3 bắt Xe treo. Sau Rxc6, …Rb2+ buộc Trắng đỡ chiếu. Nếu Kg1, …Bd2 đưa Tượng khỏi cột c và giữ lợi thế vật chất."
+  },
+  {
+    "title": "Lodici,Lorenzo — Aronian,L",
+    "prompt": "Tìm cách bắt quân và tính nước đáp để giữ lợi thế vật chất.",
+    "mode": "interactive",
+    "outcome": "hanging-piece",
+    "goal": "material",
+    "fen": "2rr4/1pb2ppk/p3p2p/N6P/1PP3P1/2R1B3/P3B3/6Kb w - - 0 27",
+    "moves": [
+      "Kxh1",
+      "Bxa5",
+      "bxa5"
+    ],
+    "tacticPly": 0,
+    "hangingPiece": {
+      "target": "h1",
+      "minimumGain": 200
+    },
+    "previousMove": {
+      "fen": "2rr4/1pb2ppk/p1b1p2p/N6P/1PP3P1/2R1B3/P3B3/6KR b - - 0 26",
+      "move": "Bxh1"
+    },
+    "source": "https://www.pgnmentor.com/players/Aronian.zip",
+    "gameReference": {
+      "id": "5d3e9e28e806751c",
+      "kind": "game",
+      "ply": 52,
+      "branch": 0,
+      "collection": "hanging-piece"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "reason": "Tính nước đáp và phối hợp thêm để giữ lợi thế vật chất.",
+      "solverMoves": 2,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Kiểm tra xem Vua có thể bắt Tượng h1 an toàn không.",
+      "Mã a5 được quân nào bảo vệ?"
+    ],
+    "solution": "Vua g1 bắt Tượng h1. Nếu Tượng Đen bắt Mã ở a5, Tốt b4 bắt lại. Trắng giữ lợi thế vật chất thu được ở h1."
+  },
+  {
+    "title": "Jeet,J — Kramnik,V",
+    "prompt": "Tìm cách bắt quân và tính nước đáp để giữ lợi thế vật chất.",
+    "mode": "interactive",
+    "outcome": "hanging-piece",
+    "goal": "material",
+    "fen": "1rr3k1/B4ppp/4p3/8/8/Pn2PN1P/2R1BPP1/6K1 b - - 0 23",
+    "moves": [
+      "Rxc2",
+      "Bxb8",
+      "Rxe2"
+    ],
+    "tacticPly": 0,
+    "hangingPiece": {
+      "target": "c2",
+      "minimumGain": 200
+    },
+    "previousMove": {
+      "fen": "1rr3k1/p4ppp/4p3/2B5/8/Pn2PN1P/2R1BPP1/6K1 w - - 1 23",
+      "move": "Bxa7"
+    },
+    "source": "https://www.pgnmentor.com/players/Kramnik.zip",
+    "gameReference": {
+      "id": "38ba4006fbbeee0f",
+      "kind": "game",
+      "ply": 45,
+      "branch": 0,
+      "collection": "hanging-piece"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "reason": "Tính nước đáp và phối hợp thêm để giữ lợi thế vật chất.",
+      "solverMoves": 2,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Nếu Tượng Trắng lấy Xe ở b8, Xe Đen có thể bắt quân nào trên hàng ngang số 2?"
+    ],
+    "solution": "…Rxc2 bắt Xe treo. Nếu Bxb8, …Rxe2 bắt Tượng còn lại trên e2. Hai bên mất mỗi bên một Xe và Đen hơn vật chất nhờ bắt thêm Tượng."
+  },
+  {
+    "title": "Daulyte-Cornette,Deimante — Unuk,Laura",
+    "prompt": "Tìm cách bắt quân và tính nước đáp để giữ lợi thế vật chất.",
+    "mode": "interactive",
+    "outcome": "hanging-piece",
+    "goal": "material",
+    "fen": "2r1k3/ppB1R3/6pb/8/4Pnp1/2P5/PPK4P/3R4 b - - 0 29",
+    "moves": [
+      "Kxe7",
+      "Be5",
+      "Nh3"
+    ],
+    "tacticPly": 0,
+    "hangingPiece": {
+      "target": "e7",
+      "minimumGain": 200
+    },
+    "previousMove": {
+      "fen": "2r1k3/ppBRr3/6pb/8/4Pnp1/2P5/PPK4P/3R4 w - - 8 29",
+      "move": "Rxe7+"
+    },
+    "source": "https://theweekinchess.com/zips/twic1664g.zip",
+    "gameReference": {
+      "id": "e280db2c8c337846",
+      "kind": "game",
+      "ply": 57,
+      "branch": 0,
+      "collection": "hanging-piece"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "reason": "Tính nước đáp và phối hợp thêm để giữ lợi thế vật chất.",
+      "solverMoves": 2,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Sau khi Vua Đen bắt Xe, hãy tính cách giữ Mã f4 nếu Tượng Trắng tới e5."
+    ],
+    "solution": "…Kxe7 bắt Xe treo. Nếu Be5, …Nh3 đưa Mã ra khỏi đường tấn công của Tượng. Đen giữ lợi thế vật chất."
+  },
+  {
+    "title": "Pietzsch, Wolfgang — Spassky, Boris V",
+    "prompt": "Tìm cách bắt quân và tính nước đáp để giữ lợi thế vật chất.",
+    "mode": "interactive",
+    "outcome": "hanging-piece",
+    "goal": "material",
+    "fen": "8/2p3P1/p1k5/2b2N2/1p3K2/8/P1p5/6R1 b - - 0 41",
+    "moves": [
+      "Bxg1",
+      "Kg4",
+      "c1=Q"
+    ],
+    "tacticPly": 0,
+    "hangingPiece": {
+      "target": "g1",
+      "minimumGain": 200
+    },
+    "previousMove": {
+      "fen": "8/2p3P1/p1k5/2b2N2/1p3K2/8/P1p5/6rR w - - 0 41",
+      "move": "Rxg1"
+    },
+    "source": "https://www.pgnmentor.com/players/Spassky.zip",
+    "gameReference": {
+      "id": "38cd658758b553af",
+      "kind": "game",
+      "ply": 81,
+      "branch": 0,
+      "collection": "hanging-piece"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "reason": "Tính nước đáp và phối hợp thêm để giữ lợi thế vật chất.",
+      "solverMoves": 2,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Sau khi bắt Xe, hãy kiểm tra cả hai Tốt thông.",
+      "Nếu Trắng phong cấp trước, nước phong cấp của Đen có chiếu không?"
+    ],
+    "solution": "…Bxg1 bắt Xe g1. Nếu Trắng chơi Kg4, Đen phong cấp bằng …c1=Q. Nếu Trắng phong cấp trước bằng g8=Q, …c1=Q+ đáp lại có chiếu. Khi cả hai bên đã phong cấp, Đen giữ phần hơn Xe từ nước bắt ở g1."
+  },
+  {
+    "title": "Maghsoodloo,Parham — Duda,J",
+    "prompt": "Tìm cách bắt quân và tính nước đáp để giữ lợi thế vật chất.",
+    "mode": "interactive",
+    "outcome": "hanging-piece",
+    "goal": "material",
+    "fen": "1r5R/6k1/4pR2/8/1p1pP3/1P6/Ppr5/1K6 w - - 0 33",
+    "moves": [
+      "Rxb8",
+      "d3",
+      "Rf1"
+    ],
+    "tacticPly": 0,
+    "hangingPiece": {
+      "target": "b8",
+      "minimumGain": 200
+    },
+    "previousMove": {
+      "fen": "1r4kR/6P1/4pR2/8/1p1pP3/1P6/Ppr5/1K6 b - - 1 32",
+      "move": "Kxg7"
+    },
+    "source": "https://theweekinchess.com/zips/twic1665g.zip",
+    "gameReference": {
+      "id": "4fccf3cadb98c9aa",
+      "kind": "game",
+      "ply": 64,
+      "branch": 0,
+      "collection": "hanging-piece"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "reason": "Tính nước đáp và phối hợp thêm để giữ lợi thế vật chất.",
+      "solverMoves": 2,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Sau khi bắt Xe b8, kiểm tra nước chiếu …Rc1+.",
+      "Xe còn lại cần về đâu để bảo vệ ô c1?"
+    ],
+    "solution": "Xe h8 bắt Xe b8. Nếu Đen chơi …d3, Xe f6 về f1 để giữ ô c1. Khi …Rc1+, Trắng có thể chơi Rxc1. Sau …bxc1=Q+, Vua b1 bắt Hậu mới ở c1."
+  },
+  {
+    "title": "Firouzja,Alireza — Tabatabaei,M",
+    "prompt": "Tìm cách bắt quân và tính nước đáp để giữ lợi thế vật chất.",
+    "mode": "interactive",
+    "outcome": "hanging-piece",
+    "goal": "material",
+    "fen": "3r2k1/4nppp/1B6/p3p3/1P2p1PP/5Pb1/P1r1B3/R4K1R w - - 0 30",
+    "moves": [
+      "Bxd8",
+      "Nd5",
+      "Rh3",
+      "Ne3+",
+      "Kg1",
+      "Bf4",
+      "Kf2",
+      "f5",
+      "gxf5"
+    ],
+    "tacticPly": 0,
+    "hangingPiece": {
+      "target": "d8",
+      "minimumGain": 200
+    },
+    "previousMove": {
+      "fen": "3r2k1/2r1nppp/1B6/p3p3/1P2p1PP/5Pb1/P1P1B3/R4K1R b - - 3 29",
+      "move": "Rxc2"
+    },
+    "source": "https://theweekinchess.com/zips/twic1666g.zip",
+    "gameReference": {
+      "id": "35d57f7464e91417",
+      "kind": "game",
+      "ply": 58,
+      "branch": 0,
+      "collection": "hanging-piece"
+    },
+    "difficulty": {
+      "level": "C*",
+      "status": "suggested",
+      "reason": "Tính chuỗi nước đáp dài hơn để giữ lợi thế vật chất mà không thí quân.",
+      "solverMoves": 5,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Xét Tượng b6 và quân Đen trên đường chéo đến d8. Sau nước bắt, tính nước chiếu của Mã Đen.",
+      "Khi Tượng Đen đến f4, tìm cách bảo vệ Tượng e2 trước sức ép của Xe c2."
+    ],
+    "solution": "Bxd8 bắt Xe treo ở d8. Sau …Nd5, Rh3 tấn công Tượng g3. Nếu Đen chiếu …Ne3+, Vua Trắng có thể sang g1. Sau …Bf4, Kf2 bảo vệ Tượng e2 đang bị Xe c2 nhắm tới. Sau …f5, gxf5 bắt Tốt và giữ lợi thế vật chất."
+  },
+  {
+    "title": "Qin Kanying — Karpov, Anatoly",
+    "prompt": "Tìm cách bắt quân và tính nước đáp để giữ lợi thế vật chất.",
+    "mode": "interactive",
+    "outcome": "hanging-piece",
+    "goal": "material",
+    "fen": "2r5/1p1kbpp1/n1B1p2p/3pP2P/2pP4/n4N2/5PP1/R2RB1K1 b - - 0 35",
+    "moves": [
+      "Rxc6",
+      "Ra2",
+      "b5",
+      "Rda1",
+      "b4",
+      "Bxb4",
+      "Bxb4"
+    ],
+    "tacticPly": 0,
+    "hangingPiece": {
+      "target": "c6",
+      "minimumGain": 200
+    },
+    "previousMove": {
+      "fen": "2r5/1p1kbpp1/n1b1p2p/3pP2P/B1pP4/n4N2/5PP1/R2RB1K1 w - - 3 35",
+      "move": "Bxc6+"
+    },
+    "source": "https://www.pgnmentor.com/players/Karpov.zip",
+    "gameReference": {
+      "id": "03f8fc110c333ca6",
+      "kind": "game",
+      "ply": 69,
+      "branch": 0,
+      "collection": "hanging-piece"
+    },
+    "difficulty": {
+      "level": "C*",
+      "status": "suggested",
+      "reason": "Tính chuỗi nước đáp dài hơn để giữ lợi thế vật chất mà không thí quân.",
+      "solverMoves": 4,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Trước tiên tìm cách bắt Tượng đang chiếu ở c6. Sau đó xem quân nào của Đen đang bị nhắm tới trên cột a.",
+      "Tính hai nước đẩy Tốt b và đường chéo từ Tượng e7 tới Mã a3."
+    ],
+    "solution": "…Rxc6 bắt Tượng treo đang chiếu. Khi Xe Trắng lên a2 rồi Xe còn lại đến a1, Mã a3 chịu sức ép trên cột a. Đen đẩy Tốt bằng …b5 rồi …b4. Nếu Trắng chơi Bxb4, …Bxb4 bắt lại và Tượng Đen ở b4 vẫn bảo vệ Mã a3. Trong ván đấu, Đen bắt Tượng c6 bằng Vua."
+  },
+  {
+    "title": "Kramnik,V — Karpov,Ana",
+    "prompt": "Tìm cách bắt quân và tính nước đáp để giữ lợi thế vật chất.",
+    "mode": "interactive",
+    "outcome": "hanging-piece",
+    "goal": "material",
+    "fen": "r4rk1/3N1ppp/p2bp3/1pp5/3q4/6P1/PPQNPPbP/R4RK1 w - - 0 16",
+    "moves": [
+      "Kxg2",
+      "Rfd8",
+      "Nf3",
+      "Qb4",
+      "Nde5",
+      "Bxe5",
+      "Nxe5"
+    ],
+    "tacticPly": 0,
+    "hangingPiece": {
+      "target": "g2",
+      "minimumGain": 200
+    },
+    "previousMove": {
+      "fen": "r4rk1/3N1ppp/p2bpq2/1pp5/3P4/6P1/PPQNPPbP/R4RK1 b - - 0 15",
+      "move": "Qxd4"
+    },
+    "source": "https://www.pgnmentor.com/players/Karpov.zip",
+    "gameReference": {
+      "id": "249c68a2e2444e23",
+      "kind": "game",
+      "ply": 30,
+      "branch": 0,
+      "collection": "hanging-piece"
+    },
+    "difficulty": {
+      "level": "C*",
+      "status": "suggested",
+      "reason": "Tính chuỗi nước đáp dài hơn để giữ lợi thế vật chất mà không thí quân.",
+      "solverMoves": 4,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Sau khi bắt Tượng g2, hãy xem Mã nào chịu sức ép nếu Xe Đen đến d8.",
+      "Tìm nước vừa tấn công Hậu d4 vừa chuẩn bị bảo vệ ô e5 cho Mã d7."
+    ],
+    "solution": "Kxg2 bắt Tượng treo. Sau …Rfd8, Xe Đen nhắm vào Mã d7. Nf3 tấn công Hậu d4 và đưa Mã vào vị trí bắt lại trên e5. Nếu Hậu Đen sang b4, Nde5 rút Mã d7 khỏi cột d. Sau …Bxe5, Nxe5 bắt lại Tượng và giữ lợi thế vật chất."
+  },
+  {
+    "title": "Reyes, Romuel — Fischer, Robert James",
+    "prompt": "Tìm cách bắt quân và tính nước đáp để giữ lợi thế vật chất.",
+    "mode": "interactive",
+    "outcome": "hanging-piece",
+    "goal": "material",
+    "fen": "q5k1/3n1ppp/pB1p4/1p1b1p2/8/P1r2PP1/2P2R1P/3QR1K1 b - - 0 23",
+    "moves": [
+      "Nxb6",
+      "Qd4",
+      "Rc6",
+      "Rfe2",
+      "Be6",
+      "Rxe6",
+      "fxe6"
+    ],
+    "tacticPly": 0,
+    "hangingPiece": {
+      "target": "b6",
+      "minimumGain": 110
+    },
+    "previousMove": {
+      "fen": "q5k1/3n1ppp/pb1p4/1p1b1p2/8/P1r1BPP1/2P2R1P/3QR1K1 w - - 0 23",
+      "move": "Bxb6"
+    },
+    "source": "https://www.pgnmentor.com/players/Fischer.zip",
+    "gameReference": {
+      "id": "c584e8997695ffc9",
+      "kind": "game",
+      "ply": 45,
+      "branch": 0,
+      "collection": "hanging-piece"
+    },
+    "difficulty": {
+      "level": "C*",
+      "status": "suggested",
+      "reason": "Tính chuỗi nước đáp dài hơn để giữ lợi thế vật chất mà không thí quân.",
+      "solverMoves": 4,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Sau khi bắt Tượng b6, tìm cách bảo vệ Mã nếu Hậu Trắng đến d4.",
+      "Khi hai Xe Trắng cùng lên cột e, tính cách chặn đường vào e8 và các nước bắt lại ở e6."
+    ],
+    "solution": "…Nxb6 bắt Tượng treo. Khi Hậu Trắng đến d4 nhắm vào Mã b6, …Rc6 đưa Xe lên bảo vệ Mã. Sau Rfe2, …Be6 chặn đường tiến của hai Xe Trắng vào e8. Nếu Xe thứ nhất bắt Tượng ở e6, …fxe6 bắt lại Xe. Nếu Xe còn lại bắt Tốt ở e6, Đen vẫn hơn vật chất."
+  },
+  {
+    "title": "Fedoseev,Vl3 — Dehtiarov,Roman",
+    "prompt": "Tìm cách bắt quân và tính nước đáp để giữ lợi thế vật chất.",
+    "mode": "interactive",
+    "outcome": "hanging-piece",
+    "goal": "material",
+    "fen": "2k1r3/1pNnp1bp/4r1p1/2P4b/4P3/4B1P1/PP5P/3R1RK1 w - - 0 27",
+    "moves": [
+      "Nxe6",
+      "Bxd1",
+      "Nxg7"
+    ],
+    "tacticPly": 0,
+    "hangingPiece": {
+      "target": "e6",
+      "minimumGain": 200
+    },
+    "previousMove": {
+      "fen": "2k1r3/1pNnp1bp/r3Q1p1/2P4b/4P3/4B1P1/PP5P/3R1RK1 b - - 0 26",
+      "move": "Rxe6"
+    },
+    "source": "https://theweekinchess.com/zips/twic1657g.zip",
+    "gameReference": {
+      "id": "046bfa97b22b35ba",
+      "kind": "game",
+      "ply": 52,
+      "branch": 0,
+      "collection": "hanging-piece"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "reason": "Tính nước đáp và phối hợp thêm để giữ lợi thế vật chất.",
+      "solverMoves": 2,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Mã c7 có thể bắt hai Xe. Nếu bắt ở e8, Xe còn lại có thể làm gì trên cột e?",
+      "Nếu Tượng Đen bắt Xe d1, Mã ở e6 có thể bắt quân nào để giữ lợi thế?"
+    ],
+    "solution": "Mã c7 bắt Xe e6. Nếu Tượng Đen bắt Xe ở d1, Mã bắt Tượng ở g7 và tấn công Xe e8. Sau …Rg8, Xe Trắng bắt lại Tượng ở d1. Kể cả khi Đen bắt Mã ở g7, Trắng vẫn giữ lợi thế vật chất."
+  },
+  {
+    "title": "Assaubayeva,Bibisara — Kramnik,V",
+    "prompt": "Tìm cách bắt quân và tính nước đáp để giữ lợi thế vật chất.",
+    "mode": "interactive",
+    "outcome": "hanging-piece",
+    "goal": "material",
+    "fen": "3r1rk1/pp4pp/5b1q/3p1Q2/4n3/1P2PN1P/PB3PB1/R4RK1 b - - 0 21",
+    "moves": [
+      "Bxb2",
+      "Qg4",
+      "Bxa1"
+    ],
+    "tacticPly": 0,
+    "hangingPiece": {
+      "target": "b2",
+      "minimumGain": 200
+    },
+    "previousMove": {
+      "fen": "3r1rk1/pp4pp/5b1q/3pQb2/4n3/1P2PN1P/PB3PB1/R4RK1 w - - 3 21",
+      "move": "Qxf5"
+    },
+    "source": "https://www.pgnmentor.com/players/Kramnik.zip",
+    "gameReference": {
+      "id": "05675d41119de072",
+      "kind": "game",
+      "ply": 41,
+      "branch": 0,
+      "collection": "hanging-piece"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "reason": "Tính nước đáp và phối hợp thêm để giữ lợi thế vật chất.",
+      "solverMoves": 2,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Tượng f6 có thể bắt quân nào chưa được bảo vệ?",
+      "Sau Qg4, hãy tính phần vật chất Đen thu được nếu Trắng bắt lại trên a1."
+    ],
+    "solution": "Tượng f6 bắt Tượng ở b2, mở cột f để Xe Đen tấn công Hậu f5. Trong ván đấu, Trắng đưa Hậu đến g4. Đen bắt Xe a1 bằng Tượng. Sau Rxa1, Đen vẫn hơn vật chất nhờ đổi Tượng lấy Xe."
+  },
+  {
+    "title": "Gelfand,B — Nakamura,Hi",
+    "prompt": "Tìm cách bắt quân và tính nước đáp để giữ lợi thế vật chất.",
+    "mode": "interactive",
+    "outcome": "hanging-piece",
+    "goal": "material",
+    "fen": "r4bk1/1pP3r1/1p3n2/P3N2p/4Pp2/2Nq1P2/7P/R4QBK b - - 0 30",
+    "moves": [
+      "Qxc3",
+      "Nc4",
+      "Rxc7"
+    ],
+    "tacticPly": 0,
+    "hangingPiece": {
+      "target": "c3",
+      "minimumGain": 100
+    },
+    "previousMove": {
+      "fen": "r4bk1/1pP3r1/1p3n2/P3N2p/4Pp2/2Nq1P2/7P/R3QbBK w - - 0 30",
+      "move": "Qxf1"
+    },
+    "source": "https://www.pgnmentor.com/players/Gelfand.zip",
+    "gameReference": {
+      "id": "0c20131520b499b1",
+      "kind": "game",
+      "ply": 59,
+      "branch": 0,
+      "collection": "hanging-piece"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "reason": "Tính nước đáp và phối hợp thêm để giữ lợi thế vật chất.",
+      "solverMoves": 2,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Hậu Đen bắt được quân nào chưa được bảo vệ?",
+      "Sau Nc4, hãy kiểm tra Tốt c7. Đen có thể chặn phong cấp bằng nước bắt nào?"
+    ],
+    "solution": "Hậu d3 bắt Mã ở c3 và rời đường chéo tấn công của Hậu Trắng. Nếu Trắng chơi Nc4, Xe g7 bắt Tốt c7 để ngăn phong cấp. Trong ván đấu, Trắng chơi Rc1 và Đen đáp …Qxe5."
+  },
+  {
+    "title": "Svidler,P — Kramnik,V",
+    "prompt": "Tìm cách bắt quân và tính nước đáp để giữ lợi thế vật chất.",
+    "mode": "interactive",
+    "outcome": "hanging-piece",
+    "goal": "material",
+    "fen": "2r5/6nk/1N2p1pq/2Pp4/P5Qp/7B/4Pr2/2RR3K w - - 0 43",
+    "moves": [
+      "Nxc8",
+      "Nf5",
+      "Rc3"
+    ],
+    "tacticPly": 0,
+    "hangingPiece": {
+      "target": "c8",
+      "minimumGain": 100
+    },
+    "previousMove": {
+      "fen": "2Q3r1/6nk/1N2p1pq/2Pp4/P5Qp/7B/4Pr2/2RR3K b - - 0 42",
+      "move": "Rxc8"
+    },
+    "source": "https://www.pgnmentor.com/players/Kramnik.zip",
+    "gameReference": {
+      "id": "11fed5a64d62e612",
+      "kind": "game",
+      "ply": 84,
+      "branch": 0,
+      "collection": "hanging-piece"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "reason": "Tính nước đáp và phối hợp thêm để giữ lợi thế vật chất.",
+      "solverMoves": 2,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Xe c8 vừa bắt quân. Có quân Đen nào bảo vệ Xe không?",
+      "Sau …Nf5, hãy tính nước chiếu …Ng3+ và kiểm tra đường chéo h6–c1 của Hậu Đen."
+    ],
+    "solution": "Mã b6 bắt Xe ở c8. Sau …Nf5, Rc3 đưa Xe khỏi đường chéo h6–c1 của Hậu Đen và giữ ô g3. Nếu Đen chiếu bằng …Ng3+, Xe bắt Mã. Sau …hxg3, Hậu Trắng bắt lại ở g3 và giữ lợi thế vật chất."
+  },
+  {
+    "title": "Dreev,A — Short,N",
+    "prompt": "Tìm cách bắt quân và tính nước đáp để giữ lợi thế vật chất.",
+    "mode": "interactive",
+    "outcome": "hanging-piece",
+    "goal": "material",
+    "fen": "4r1k1/p4pp1/7p/1Q1P4/3q3P/1P3nB1/6PK/R7 w - - 0 45",
+    "moves": [
+      "gxf3",
+      "Rc8",
+      "Ra2"
+    ],
+    "tacticPly": 0,
+    "hangingPiece": {
+      "target": "f3",
+      "minimumGain": 120
+    },
+    "previousMove": {
+      "fen": "4r1k1/p4pp1/7p/1Q1P4/3q3P/1P3PB1/6PK/R3n3 b - - 2 44",
+      "move": "Nxf3+"
+    },
+    "source": "https://www.pgnmentor.com/players/Short.zip",
+    "gameReference": {
+      "id": "122a10161a7e1703",
+      "kind": "game",
+      "ply": 88,
+      "branch": 0,
+      "collection": "hanging-piece"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "reason": "Tính nước đáp và phối hợp thêm để giữ lợi thế vật chất.",
+      "solverMoves": 2,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Nước nào vừa hóa giải chiếu vừa bắt được Mã f3?",
+      "Sau khi Xe Đen rời e8, Hậu Đen còn tấn công Xe Trắng ở ô nào?"
+    ],
+    "solution": "Tốt g2 bắt Mã ở f3 để hóa giải chiếu. Nếu Đen bắt Xe a1 ngay bằng …Qxa1, Trắng có Qxe8+. Khi Đen đưa Xe từ e8 đến c8, phương án đổi Xe này không còn. Ra2 đưa Xe Trắng khỏi đường chéo của Hậu Đen và giữ lợi thế vật chất."
+  },
+  {
+    "title": "Palit,S — Short,N",
+    "prompt": "Tìm cách bắt quân và tính nước đáp để giữ lợi thế vật chất.",
+    "mode": "interactive",
+    "outcome": "hanging-piece",
+    "goal": "material",
+    "fen": "6k1/5pp1/3p1n1p/4p3/P3P3/1rBbRK2/R4PPP/8 b - - 0 31",
+    "moves": [
+      "Rxc3",
+      "a5",
+      "Bxe4+"
+    ],
+    "tacticPly": 0,
+    "hangingPiece": {
+      "target": "c3",
+      "minimumGain": 200
+    },
+    "previousMove": {
+      "fen": "6k1/5pp1/3p1n1p/4p3/P3P3/1rrbRK2/R2B1PPP/8 w - - 0 31",
+      "move": "Bxc3"
+    },
+    "source": "https://www.pgnmentor.com/players/Short.zip",
+    "gameReference": {
+      "id": "1c2d1df41f20274a",
+      "kind": "game",
+      "ply": 61,
+      "branch": 0,
+      "collection": "hanging-piece"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "reason": "Tính nước đáp và phối hợp thêm để giữ lợi thế vật chất.",
+      "solverMoves": 2,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Đen có thể bắt Tượng nào mà Trắng không thể bắt lại ngay trên ô đó?",
+      "Sau a5, hãy tìm nước bắt Tốt kèm chiếu. Xe c3 và Mã f6 ngăn những nước bắt lại nào?"
+    ],
+    "solution": "Xe b3 bắt Tượng c3 trước. Nếu Trắng bắt Tượng d3 bằng Rxd3, Xe Đen bắt lại kèm chiếu. Trong ván đấu, Trắng đẩy Tốt thông bằng a5. Đen chơi …Bxe4+ để đưa Tượng khỏi ô d3 và bắt thêm Tốt. Xe c3 ghim Xe e3 vào Vua f3, còn Mã f6 bảo vệ Tượng e4."
+  },
+  {
+    "title": "Davtyan,Arsen — Matlakov,M",
+    "prompt": "Tìm cách bắt quân và tính nước đáp để giữ lợi thế vật chất.",
+    "mode": "interactive",
+    "outcome": "hanging-piece",
+    "goal": "material",
+    "fen": "5rk1/6pp/3pp3/2R5/4P3/r7/2N1NnPP/3R2K1 b - - 0 42",
+    "moves": [
+      "dxc5",
+      "Nxa3",
+      "Nxd1"
+    ],
+    "tacticPly": 0,
+    "hangingPiece": {
+      "target": "c5",
+      "minimumGain": 200
+    },
+    "previousMove": {
+      "fen": "5rk1/6pp/3pp3/1Rb5/4P3/r7/2N1NnPP/3R2K1 w - - 0 42",
+      "move": "Rxc5"
+    },
+    "source": "https://theweekinchess.com/zips/twic1665g.zip",
+    "gameReference": {
+      "id": "082caf88d040c76b",
+      "kind": "game",
+      "ply": 83,
+      "branch": 0,
+      "collection": "hanging-piece"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "reason": "Tính nước đáp và phối hợp thêm để giữ lợi thế vật chất.",
+      "solverMoves": 2,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Hai Xe Trắng ở c5 và d1 có quân nào bảo vệ không?",
+      "Sau …dxc5, nếu Mã c2 bắt Xe ở a3, Mã f2 còn bắt được quân nào?"
+    ],
+    "solution": "Tốt d6 bắt Xe ở c5. Nếu Trắng đáp Nxa3, Mã f2 bắt Xe d1. Đen bắt được hai Xe và mất một Xe. Trong ván đấu, Trắng chọn Rf1, và Đen đưa Xe a3 đến a2."
+  },
+  {
+    "title": "Pultinevicius,Paulius — Wafa,Hamed",
+    "prompt": "Tìm cách bắt quân và tính nước đáp để giữ lợi thế vật chất.",
+    "mode": "interactive",
+    "outcome": "hanging-piece",
+    "goal": "material",
+    "fen": "r4k2/p2b1Bb1/3p4/KP6/3ppP2/8/P7/1R4R1 b - - 0 30",
+    "moves": [
+      "Kxf7",
+      "Rbc1",
+      "Bf6"
+    ],
+    "tacticPly": 0,
+    "hangingPiece": {
+      "target": "f7",
+      "minimumGain": 200
+    },
+    "previousMove": {
+      "fen": "r4k2/p2b1rb1/3p4/KP6/2BppP2/8/P7/1R4R1 w - - 2 30",
+      "move": "Bxf7"
+    },
+    "source": "https://theweekinchess.com/zips/twic1664g.zip",
+    "gameReference": {
+      "id": "23168294a2a930bf",
+      "kind": "game",
+      "ply": 59,
+      "branch": 0,
+      "collection": "hanging-piece"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "reason": "Tính nước đáp và phối hợp thêm để giữ lợi thế vật chất.",
+      "solverMoves": 2,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Vua Đen có thể bắt Tượng nào? Nếu Xe Trắng bắt Tượng g7 kèm chiếu, Vua Đen đáp thế nào?",
+      "Xe Trắng có thể xâm nhập ở c7. Tượng g7 nên đến ô nào để chuẩn bị ghim Xe đó vào Vua a5?"
+    ],
+    "solution": "Vua f8 bắt Tượng f7. Nếu Trắng chơi Rxg7+, Vua Đen bắt lại Xe. Trong ván đấu, Xe b1 đến c1. Đen đưa Tượng khỏi cột g bằng …Bf6. Nếu Xe Trắng lên c7, …Bd8 ghim Xe c7 vào Vua a5."
+  },
+  {
+    "title": "Shidolo,Simon Hatwiikulipi — Gavrilescu,David",
+    "prompt": "Tìm cách bắt quân và tính nước đáp để giữ lợi thế vật chất.",
+    "mode": "interactive",
+    "outcome": "hanging-piece",
+    "goal": "material",
+    "fen": "r3B1k1/5p1p/4p1p1/3P2q1/p2P4/8/1P2QP1P/2bR1K2 b - - 2 24",
+    "moves": [
+      "Rxe8",
+      "Qc4",
+      "Bf4"
+    ],
+    "tacticPly": 0,
+    "hangingPiece": {
+      "target": "e8",
+      "minimumGain": 130
+    },
+    "previousMove": {
+      "fen": "r3B1k1/5p1p/4p1p1/3P2q1/p2P4/8/1P2QP1P/2bR2K1 w - - 1 24",
+      "move": "Kf1"
+    },
+    "source": "https://theweekinchess.com/zips/twic1663g.zip",
+    "gameReference": {
+      "id": "25be475599517654",
+      "kind": "game",
+      "ply": 47,
+      "branch": 0,
+      "collection": "hanging-piece"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "reason": "Tính nước đáp và phối hợp thêm để giữ lợi thế vật chất.",
+      "solverMoves": 2,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Xe a8 có thể bắt Tượng nào mà Trắng không thể bắt lại ngay?",
+      "Sau Qc4, vì sao Hậu Đen không thể bắt lại an toàn nếu Trắng chơi Rxc1?"
+    ],
+    "solution": "Xe a8 bắt Tượng ở e8. Sau Qc4, Hậu Trắng giữ ô c1. Nếu Xe Trắng bắt Tượng ở c1, …Qxc1+ sẽ bị Hậu Trắng bắt lại. Đen chơi …Bf4 để đưa Tượng ra khỏi cột c và bảo vệ Hậu g5."
+  }
+]

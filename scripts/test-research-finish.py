@@ -1,3 +1,4 @@
+from functools import partial
 import json
 import multiprocessing
 from pathlib import Path
@@ -6,8 +7,13 @@ import unittest
 from unittest import mock
 
 from tactic_research import ROOT, atomic_json
-from research_finish import (SOURCE_FILES, FinishRun, _code_snapshot, _preserve,
+from research_finish import (APPEND_MANIFESTS, SOURCE_FILES, FORK_SOURCE_FILES, FinishRun,
+                             _code_snapshot, _preserve, _runtime_files,
+                             _append_bundle, _preserve_evidence,
                              approve_visual_review, finish_batch, sha, snapshot)
+
+
+append_fork_bundle = partial(_append_bundle, topic='fork')
 
 
 def concurrent_approval(report_path, queue, entered=None, release=None):
@@ -19,7 +25,9 @@ def concurrent_approval(report_path, queue, entered=None, release=None):
                 raise RuntimeError('Concurrent test release timed out')
         return replace(path, target)
     try:
-        with mock.patch.object(Path, 'replace', controlled_replace):
+        # Publication-contract behavior is covered by test-research-run.py;
+        # these fixtures isolate commit safety after a successful contract gate.
+        with mock.patch('research_finish.check_workflow'), mock.patch.object(Path, 'replace', controlled_replace):
             approve_visual_review(report_path, 'Inspected the exact final pages')
         queue.put(('complete', ''))
     except Exception as error:
@@ -28,6 +36,9 @@ def concurrent_approval(report_path, queue, entered=None, release=None):
 
 class FinishSafety(unittest.TestCase):
     def setUp(self):
+        gate = mock.patch('research_finish.check_workflow')
+        gate.start()
+        self.addCleanup(gate.stop)
         self.directory = tempfile.TemporaryDirectory()
         self.root = Path(self.directory.name) / 'root'
         self.output = Path(self.directory.name) / 'output'
@@ -101,6 +112,23 @@ class FinishSafety(unittest.TestCase):
         self.assertEqual(report['status'], 'complete')
         self.assertEqual(json.loads((self.root / name).read_text()), {'approved': ['stable-id']})
         self.assertEqual(snapshot(self.root), before)
+
+    def test_visual_approval_rechecks_other_topics_before_writing(self):
+        run = self.report('new-approved-publication')
+        stage = self.output / 'staging'
+        name = 'scripts/fixtures/discovery/level-b-expansion-test.json'
+        atomic_json(stage / name, {'approved': ['candidate']})
+        run.report.update(stagingRoot=str(stage), stagedChanges={name: sha(stage / name)})
+        run.save()
+        fen = '7k/8/6K1/8/8/8/8/R7 w - - 17 34'
+        other = {'scope': '/one-rook-mate', 'topic': 'Chiếu hết bằng một Xe',
+                 'level': 'A', 'exercise': 'existing'}
+        with mock.patch('research_finish.check_workflow', return_value=[{'gameId': 'candidate', 'fen': fen}]), \
+             mock.patch('research_positions.active_positions',
+                        return_value={'7k/8/6K1/8/8/8/8/R7 w - -': [other]}):
+            with self.assertRaisesRegex(ValueError, 'already published.*existing'):
+                approve_visual_review(run.path, 'Checked exact final pages')
+        self.assertFalse((self.root / name).exists())
 
     def test_failed_commit_restores_only_its_own_writes(self):
         run = self.report('new-approved-publication')
@@ -190,6 +218,289 @@ class FinishSafety(unittest.TestCase):
         self.assertIn('startedUtc', rows[0])
         self.assertIn('finishedUtc', rows[0])
         self.assertGreaterEqual(rows[0]['wallSeconds'], 0)
+
+    def test_fork_visual_approval_tracks_its_own_bank_and_owner_snapshot(self):
+        for name in FORK_SOURCE_FILES:
+            if not (self.root / name).exists():
+                atomic_json(self.root / name, {})
+        for name in _code_snapshot(ROOT, 'fork'):
+            path = self.root / name
+            path.parent.mkdir(parents=True, exist_ok=True)
+            path.write_bytes((ROOT / name).read_bytes())
+        run = FinishRun(self.output, self.root, 'new-approved-publication', topic='fork')
+        artifact = self.output / 'preview.png'
+        artifact.write_bytes(b'inspected-fork-page')
+        source = self.output / 'input.json'
+        source.write_text('{}')
+        stage = self.output / 'staging'
+        name = 'src/lib/server/fork-exercises.json'
+        atomic_json(stage / name, [{'id': 'approved-fork'}])
+        run.report.update(status='awaiting-visual-review', validationComplete=True,
+                          inputSnapshots={str(source): sha(source)}, artifacts={str(artifact): sha(artifact)},
+                          stagingRoot=str(stage), stagedChanges={name: sha(stage / name)})
+        run.save()
+        owner = self.root / 'src/lib/server/practice-adjustments.json'
+        owner.write_text('[{"owner":"later choice"}]')
+        with self.assertRaisesRegex(ValueError, 'Source bank'):
+            approve_visual_review(run.path, 'Inspected Fork diagrams and answers')
+        self.assertEqual(json.loads((self.root / name).read_text()), {})
+        self.assertIn('later choice', owner.read_text())
+
+    @staticmethod
+    def fork_bundle(ids, root_nodes=1000000):
+        return {'topic': 'fork', 'status': 'editorially-approved-bundle',
+                'records': [{'gameId': ident, 'level': 'A' if ident.startswith('old') else 'D',
+                             'fen': 'saved-' + ident, 'moves': ['saved-line']} for ident in ids],
+                'reviews': [{'gameId': ident, 'decision': 'keep', 'reviewer': 'saved-editor',
+                             'reason': 'Exact reviewed decision for ' + ident} for ident in ids],
+                'reviewResults': [{'gameId': ident, 'proof': {'root': ['exact', ident]},
+                                   'engineIdentity': {'binarySha256': 'saved-engine'}} for ident in ids],
+                'settings': {'rootNodes': root_nodes, 'prepNodes': 150000},
+                'verificationCodeSha256': 'code-' + str(root_nodes),
+                'engineIdentities': [{'binarySha256': 'engine-' + str(root_nodes)}],
+                'reviewInputSha256': 'input-' + str(root_nodes),
+                'coverageChecklist': {'scope': list(ids)},
+                'history': [{'note': 'Original history must remain unchanged'}],
+                'exclusions': [], 'deferred': []}
+
+    def fork_append_report(self, *, rehearsal=False, first=False, output=None):
+        output = output or self.output
+        for name in FORK_SOURCE_FILES:
+            if not (self.root / name).exists():
+                atomic_json(self.root / name, [] if name.endswith('exercises.json') else {})
+        for name in _code_snapshot(ROOT, 'fork'):
+            path = self.root / name
+            path.parent.mkdir(parents=True, exist_ok=True)
+            path.write_bytes((ROOT / name).read_bytes())
+        old = self.fork_bundle([f'old-{i}' for i in range(9)])
+        incoming = self.fork_bundle([f'new-{i}' for i in range(6)], 2000000)
+        manifest = self.root / 'scripts/fixtures/fork/expansion-evidence.json'
+        if not first:
+            atomic_json(manifest, old)
+        review = self.root / 'new-review.json'
+        decisions = self.root / 'new-decisions.json'
+        atomic_json(review, {'topic': 'fork', 'candidates': incoming['records']})
+        atomic_json(decisions, {'reviews': incoming['reviews']})
+        def approve(report, choices, output):
+            value = json.loads(json.dumps(incoming))
+            atomic_json(output, value)
+            return value
+        def render(run, stage, ids, validate=True, topic='discovery'):
+            self.assertEqual(topic, 'fork')
+            self.assertEqual(ids, [f'new-{i}' for i in range(6)])
+            artifact = run.output / 'exact-fork-preview.png'
+            artifact.write_bytes(b'exact-reviewed-fork-pages')
+            run.report.update(status='awaiting-visual-review', validationComplete=True,
+                              artifacts={str(artifact): sha(artifact)})
+            run.save()
+        with mock.patch('research_workflow.prepare_publication', side_effect=approve), \
+                mock.patch.object(FinishRun, 'command'), \
+                mock.patch('research_finish._check_and_render', side_effect=render):
+            report = finish_batch(review, decisions, manifest, output,
+                                  root=self.root, rehearsal=rehearsal)
+        return report, manifest, old, incoming
+
+    def test_fork_append_preserves_prior_nine_exact_evidence_and_per_batch_budgets(self):
+        old = self.fork_bundle([f'old-{i}' for i in range(9)])
+        old['deferred'] = [{'gameId': 'old-defer', 'reason': 'Keep this old decision'}]
+        incoming = self.fork_bundle([f'new-{i}' for i in range(6)], 2000000)
+        before = json.loads(json.dumps(old))
+        merged = append_fork_bundle(old, incoming)
+        self.assertEqual(old, before, 'Appending must not mutate the source object')
+        self.assertEqual(_preserve_evidence(old, merged)['previousApprovedRecords'], 9)
+        for key in ('records', 'reviews', 'reviewResults'):
+            self.assertEqual(merged[key][:9], old[key])
+            self.assertEqual(merged[key][9:], incoming[key])
+        for key in ('settings', 'history', 'engineIdentities', 'verificationCodeSha256',
+                    'reviewInputSha256', 'coverageChecklist', 'deferred'):
+            self.assertEqual(merged[key], old[key])
+        batches = merged['publicationBatches']
+        self.assertEqual([row['settings']['rootNodes'] for row in batches], [1000000, 2000000])
+        self.assertEqual(batches[0]['recordIds'], [f'old-{i}' for i in range(9)])
+        self.assertEqual(batches[1]['recordIds'], [f'new-{i}' for i in range(6)])
+        third = append_fork_bundle(merged, self.fork_bundle(['later'], 3000000))
+        self.assertEqual(third['publicationBatches'][:2], batches)
+        self.assertEqual(third['settings'], old['settings'])
+
+    def test_fork_append_rejects_duplicates_conflicting_outcomes_and_corrupt_coverage(self):
+        old = self.fork_bundle(['old'])
+        with self.assertRaisesRegex(ValueError, 'already exist'):
+            append_fork_bundle(old, self.fork_bundle(['old']))
+        with self.assertRaisesRegex(ValueError, 'Duplicate Fork IDs'):
+            append_fork_bundle(old, self.fork_bundle(['new', 'new']))
+        old['exclusions'] = [{'gameId': 'excluded', 'reason': 'Earlier rejected objective'}]
+        with self.assertRaisesRegex(ValueError, 'already exist'):
+            append_fork_bundle(old, self.fork_bundle(['excluded']))
+        new = self.fork_bundle(['new'])
+        new['deferred'] = [{'gameId': 'new'}]
+        with self.assertRaisesRegex(ValueError, 'Conflicting Fork'):
+            append_fork_bundle(old, new)
+        new = self.fork_bundle(['new'])
+        new['reviewResults'] = []
+        with self.assertRaisesRegex(ValueError, 'exactly matching'):
+            append_fork_bundle(old, new)
+        old['publicationBatches'] = [{'recordIds': ['unrelated'], 'settings': {'rootNodes': 1}}]
+        with self.assertRaisesRegex(ValueError, 'batch IDs/settings'):
+            append_fork_bundle(old, self.fork_bundle(['new']))
+
+    def test_first_hanging_piece_publication_binds_new_files_and_beginner_previews(self):
+        topic = 'hanging-piece'
+        for name in _code_snapshot(ROOT, topic):
+            path = self.root / name
+            path.parent.mkdir(parents=True, exist_ok=True)
+            path.write_bytes((ROOT / name).read_bytes())
+        manifest = self.root / APPEND_MANIFESTS[topic]
+        runtime = _runtime_files(topic)
+        incoming = {**self.fork_bundle(['new-A']), 'topic': topic}
+        review = self.root / 'new-review.json'
+        decisions = self.root / 'new-decisions.json'
+        atomic_json(review, {'topic': topic, 'candidates': incoming['records']})
+        atomic_json(decisions, {'reviews': incoming['reviews']})
+
+        def build(run, name, command, stage):
+            self.assertEqual(name, 'build-hanging-piece')
+            for name, value in zip(runtime, ([{'gameReference': {'id': 'new-A'}}],
+                                             {'new-A': {}}, [{'id': 'new-intro'}])):
+                atomic_json(stage / name, value)
+
+        def render(run, stage, ids, validate=True, topic='discovery'):
+            self.assertEqual(topic, 'hanging-piece')
+            self.assertEqual(ids, ['new-intro', 'new-A'])
+            artifact = run.output / 'exact-preview.png'
+            artifact.write_bytes(b'exact-reviewed-pages')
+            run.report.update(status='awaiting-visual-review', validationComplete=True,
+                              artifacts={str(artifact): sha(artifact)})
+            run.save()
+
+        with mock.patch('research_workflow.prepare_publication', return_value=incoming), \
+                mock.patch.object(FinishRun, 'command', autospec=True, side_effect=build), \
+                mock.patch('research_finish._check_and_render', side_effect=render):
+            report = finish_batch(review, decisions, manifest, self.output, root=self.root)
+        self.assertFalse(manifest.exists())
+        self.assertTrue(all(not (self.root / name).exists() for name in runtime))
+        self.assertEqual(report['preservation']['previousExercises'], 0)
+
+        # A file that was absent at rehearsal still belongs to the snapshot.
+        appeared = self.root / runtime[0]
+        atomic_json(appeared, [{'id': 'separate-publication'}])
+        with self.assertRaisesRegex(ValueError, 'file inventory changed'):
+            approve_visual_review(report['reportPath'], 'Inspected exact diagrams and answers')
+        self.assertEqual(json.loads(appeared.read_text()), [{'id': 'separate-publication'}])
+        self.assertFalse(manifest.exists())
+        appeared.unlink()
+        result = approve_visual_review(report['reportPath'], 'Inspected exact diagrams and answers')
+        self.assertEqual(result['status'], 'complete')
+        self.assertTrue(all((self.root / name).exists() for name in runtime))
+        self.assertEqual(json.loads(manifest.read_text())['records'], incoming['records'])
+
+    def test_fork_evidence_preservation_rejects_record_or_policy_replacement(self):
+        old = self.fork_bundle(['old'])
+        for key in ('records', 'reviews', 'reviewResults', 'settings', 'history'):
+            merged = append_fork_bundle(old, self.fork_bundle(['new'], 2000000))
+            if isinstance(merged[key], list):
+                merged[key][0] = {'changed': True}
+            else:
+                merged[key] = {'rootNodes': 9000000}
+            with self.subTest(key=key), self.assertRaisesRegex(ValueError, 'historical Fork'):
+                _preserve_evidence(old, merged)
+
+    def test_fresh_approval_resolves_deferral_without_rewriting_prior_decision(self):
+        old = self.fork_bundle(['old'])
+        old['deferred'] = [{'gameId': 'later', 'decision': 'defer', 'reason': 'Earlier batch full'},
+                           {'gameId': 'pending', 'decision': 'defer', 'reason': 'Unresolved'}]
+        before = json.loads(json.dumps(old))
+        merged = append_fork_bundle(old, self.fork_bundle(['later'], 2000000))
+        self.assertEqual(old, before)
+        self.assertEqual(merged['deferralHistory'], old['deferred'][:1])
+        self.assertEqual(merged['deferred'], old['deferred'][1:])
+        self.assertEqual(merged['publicationBatches'][0]['deferredIds'], ['later', 'pending'])
+        next_batch = append_fork_bundle(merged, self.fork_bundle(['pending'], 2000000))
+        self.assertEqual(next_batch['deferralHistory'], old['deferred'])
+        self.assertEqual(next_batch['deferred'], [])
+        _preserve_evidence(merged, next_batch)
+        next_batch['deferralHistory'][-1]['reason'] = 'Changed old reasoning'
+        with self.assertRaisesRegex(ValueError, 'historical Fork'):
+            _preserve_evidence(merged, next_batch)
+
+    def test_fork_append_rehearses_existing_bundle_then_commits_only_after_visual_review(self):
+        report, manifest, old, incoming = self.fork_append_report()
+        self.assertEqual(json.loads(manifest.read_text()), old)
+        self.assertEqual(report['evidencePreservation']['previousApprovedRecords'], 9)
+        self.assertIn(str(manifest.relative_to(self.root)), report['sourceSnapshot'])
+        self.assertEqual(report['ids'], [row['gameId'] for row in incoming['records']])
+        approved = approve_visual_review(report['reportPath'], 'Inspected exact six D diagrams and answers')
+        merged = json.loads(manifest.read_text())
+        self.assertEqual(approved['status'], 'complete')
+        self.assertEqual(merged['records'][:9], old['records'])
+        self.assertEqual(merged['records'][9:], incoming['records'])
+        self.assertEqual(merged['settings'], old['settings'])
+
+    def test_fork_append_detects_stale_existing_evidence_without_overwriting_it(self):
+        report, manifest, old, incoming = self.fork_append_report()
+        changed = {**old, 'history': old['history'] + [{'owner': 'later evidence correction'}]}
+        atomic_json(manifest, changed)
+        with self.assertRaisesRegex(ValueError, 'Source bank'):
+            approve_visual_review(report['reportPath'], 'Inspected exact pages')
+        self.assertEqual(json.loads(manifest.read_text()), changed)
+
+    def test_fork_append_detects_new_source_bundle_during_visual_review(self):
+        report, manifest, old, incoming = self.fork_append_report()
+        atomic_json(self.root / 'scripts/fixtures/fork/later-approved-evidence.json',
+                    {'later': 'source addition'})
+        with self.assertRaisesRegex(ValueError, 'file inventory changed'):
+            approve_visual_review(report['reportPath'], 'Inspected exact pages')
+        self.assertEqual(json.loads(manifest.read_text()), old)
+
+    def test_fork_append_failed_commit_restores_existing_bundle_bytes(self):
+        report, manifest, old, incoming = self.fork_append_report()
+        original = manifest.read_bytes()
+        replace = Path.replace
+        def fail_generated(path, target):
+            if Path(target).name == 'published.json':
+                raise OSError('simulated append failure')
+            return replace(path, target)
+        with mock.patch.object(Path, 'replace', fail_generated):
+            with self.assertRaisesRegex(OSError, 'simulated append failure'):
+                approve_visual_review(report['reportPath'], 'Inspected exact pages')
+        self.assertEqual(manifest.read_bytes(), original)
+        self.assertEqual(json.loads(manifest.read_text()), old)
+
+    def test_first_fork_bundle_still_uses_existing_publication_flow(self):
+        report, manifest, old, incoming = self.fork_append_report(first=True)
+        self.assertFalse(manifest.exists())
+        approved = approve_visual_review(report['reportPath'], 'Inspected exact pages')
+        self.assertEqual(approved['status'], 'complete')
+        self.assertEqual(json.loads(manifest.read_text()), incoming | {
+            'exclusions': [], 'deferred': [], 'coverageChecklist': None})
+
+    def test_concurrent_fork_appends_cannot_overwrite_the_first_visual_commit(self):
+        first, manifest, old, incoming = self.fork_append_report()
+        second, _, _, _ = self.fork_append_report(output=Path(self.directory.name) / 'second')
+        ctx = multiprocessing.get_context('spawn')
+        entered, release, queue = ctx.Event(), ctx.Event(), ctx.Queue()
+        a = ctx.Process(target=concurrent_approval,
+                        args=(first['reportPath'], queue, entered, release))
+        b = ctx.Process(target=concurrent_approval, args=(second['reportPath'], queue))
+        a.start()
+        try:
+            self.assertTrue(entered.wait(8), 'First Fork append did not reach its locked commit')
+            b.start()
+            with self.assertRaises(__import__('queue').Empty):
+                queue.get(timeout=0.2)
+            release.set()
+            outcomes = [queue.get(timeout=8), queue.get(timeout=8)]
+            self.assertEqual(sorted(row[0] for row in outcomes), ['complete', 'rejected'])
+            self.assertIn('Source bank', next(row[1] for row in outcomes if row[0] == 'rejected'))
+        finally:
+            release.set()
+            for process in (a, b):
+                if process.pid:
+                    process.join(8)
+                    if process.is_alive():
+                        process.terminate(); process.join()
+        merged = json.loads(manifest.read_text())
+        self.assertEqual(merged['records'], old['records'] + incoming['records'])
+        self.assertEqual(len(merged['publicationBatches']), 2)
 
 
 if __name__ == '__main__':

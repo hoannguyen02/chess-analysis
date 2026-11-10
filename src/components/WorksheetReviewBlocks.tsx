@@ -13,6 +13,7 @@ import {
 } from '@/lib/chess/worksheet-review';
 
 import { useEffect, useRef, useState, type ReactNode } from 'react';
+import PracticeTopicSelect from './PracticeTopicSelect';
 import type {
   ReviewBlockDraft,
   ReviewSettings,
@@ -502,49 +503,48 @@ export default function WorksheetReviewBlocks({
                           )
                         );
                       const valid = eligible.some((t) => t.id === row.topic);
+                      const topicOptions = eligible
+                        .filter(
+                          (t) =>
+                            t.id === row.topic ||
+                            unused.some((pair) => pair.topic === t.id)
+                        )
+                        .map(({ id, title }) => ({
+                          value: id,
+                          label: title,
+                          scope: `/${id}`,
+                          disabled: false,
+                        }));
+                      if (!valid)
+                        topicOptions.push({
+                          value: row.topic,
+                          label: `${topicName(row.topic)} — chưa có trước khối này`,
+                          scope: `/${row.topic}`,
+                          disabled: true,
+                        });
                       return (
                         <li key={row.id}>
                           <span className={styles.number}>{i + 1}</span>
-                          <label>
-                            Chủ đề ôn tập
-                            <select
-                              aria-label={`Chủ đề ôn tập ${blockIndex + 1}.${i + 1}`}
-                              value={row.topic}
-                              onChange={(e) => {
-                                const topic = e.target.value;
-                                const level = worksheetLevels.find(
-                                  (l) =>
-                                    levelExercises(catalog[topic] ?? [], l)
-                                      .length >= POSITIONS_PER_PAGE &&
-                                    !block.rows.some(
-                                      (r) =>
-                                        r.id !== row.id &&
-                                        r.topic === topic &&
-                                        r.level === l
-                                    )
-                                );
-                                if (level) patch({ topic, level });
-                              }}
-                            >
-                              {!valid && (
-                                <option value={row.topic}>
-                                  {topicName(row.topic)} — chưa có trước khối
-                                  này
-                                </option>
-                              )}
-                              {eligible
-                                .filter(
-                                  (t) =>
-                                    t.id === row.topic ||
-                                    unused.some((pair) => pair.topic === t.id)
-                                )
-                                .map((t) => (
-                                  <option key={t.id} value={t.id}>
-                                    {t.title}
-                                  </option>
-                                ))}
-                            </select>
-                          </label>
+                          <PracticeTopicSelect
+                            label="Chủ đề ôn tập"
+                            ariaLabel={`Chủ đề ôn tập ${blockIndex + 1}.${i + 1}`}
+                            value={row.topic}
+                            options={topicOptions}
+                            onChange={(topic) => {
+                              const level = worksheetLevels.find(
+                                (l) =>
+                                  levelExercises(catalog[topic] ?? [], l)
+                                    .length >= POSITIONS_PER_PAGE &&
+                                  !block.rows.some(
+                                    (r) =>
+                                      r.id !== row.id &&
+                                      r.topic === topic &&
+                                      r.level === l
+                                  )
+                              );
+                              if (level) patch({ topic, level });
+                            }}
+                          />
                           <label>
                             Cấp độ
                             <select

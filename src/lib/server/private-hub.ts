@@ -41,6 +41,14 @@ export const privatePages = [
     description: 'Phong cấp để giành và giữ lợi thế vật chất.',
   },
   {
+    href: '/tactic-positions?theme=mateIn1',
+    worksheetEndpoint: '/api/manual-tactic-exercises?theme=mateIn1',
+    group: 'Chiếu hết',
+    title: 'Chiếu hết một nước',
+    description:
+      'Tìm nước chiếu hết trực tiếp ở cấp A và phối hợp quân ở cấp B.',
+  },
+  {
     href: '/anastasia-mate',
     worksheetEndpoint: '/api/anastasia-mate-exercises',
     group: 'Chiếu hết',
@@ -100,6 +108,13 @@ export const privatePages = [
       'Những ván đáng nhớ, tìm theo khai cuộc, kỳ thủ và ô quan trọng.',
   },
   {
+    href: '/tactic-positions?theme=defensiveMove',
+    worksheetEndpoint: '/api/manual-tactic-exercises?theme=defensiveMove',
+    group: 'Chiến thuật',
+    title: 'Nước phòng thủ chiến thuật',
+    description: 'Nhận ra mối đe dọa chiếu hết và tìm cách hóa giải.',
+  },
+  {
     href: '/tactic-positions?theme=exposedKing',
     worksheetEndpoint: '/api/manual-tactic-exercises?theme=exposedKing',
     group: 'Chiến thuật',
@@ -136,6 +151,13 @@ export const privatePages = [
     title: 'Chiếu mở và tấn công mở',
     description:
       'Di chuyển quân chắn đường để khai thác sức tấn công của quân phía sau.',
+  },
+  {
+    href: '/hanging-piece',
+    worksheetEndpoint: '/api/hanging-piece-exercises',
+    group: 'Chiến thuật',
+    title: 'Bắt quân không được bảo vệ',
+    description: 'Tìm nước bắt quân có lợi và kiểm tra nước đáp của đối phương.',
   },
   {
     href: '/fork',
@@ -176,9 +198,8 @@ export const privatePages = [
     href: '/perpetual-check',
     worksheetEndpoint: '/api/perpetual-check-exercises',
     group: 'Hòa cờ',
-    title: 'Chiếu vĩnh viễn',
-    description:
-      'Tạo chuỗi chiếu để giữ hòa và tính các nước thoát của đối thủ.',
+    title: 'Chiếu lặp lại để giữ hòa',
+    description: 'Duy trì chuỗi chiếu để lặp lại thế cờ và giữ hòa.',
   },
   {
     href: '/stalemate',

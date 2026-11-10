@@ -177,6 +177,87 @@ def disposition(db, topic, record):
     return None
 
 
+def sync_topic_decisions(db, topic):
+    """Mirror authoritative published/owner decisions for registered research topics."""
+    if topic == 'discovery':
+        return sync_discovery(db)
+    if topic not in ('fork', 'hanging-piece', 'two-rook-mate', 'defensive-move', 'mate-in-one', 'pin'):
+        raise ValueError('Implement topic decision synchronization before research')
+    fixtures = ROOT / 'scripts/fixtures' / topic
+    published_path = fixtures / ('master-published.json' if topic == 'two-rook-mate' else 'published.json')
+    published = json.loads(published_path.read_text())['records'] if published_path.exists() else []
+    scope = {'defensive-move': '/tactic-positions?theme=defensiveMove',
+             'mate-in-one': '/tactic-positions?theme=mateIn1'}.get(topic, f'/{topic}')
+    with db:
+        db.execute('DELETE FROM research_decisions WHERE topic=?', (topic,))
+        authored_theme = {'defensive-move': 'defensiveMove', 'mate-in-one': 'mateIn1',
+                          'pin': 'pin'}.get(topic)
+        if authored_theme:
+            for row in json.loads((ROOT / 'src/lib/server/manual-tactics.json').read_text()):
+                if row['themeId'] != authored_theme:
+                    continue
+                db.execute('INSERT OR REPLACE INTO research_decisions VALUES (?,?,?,?,?,?,?)', (
+                    topic, index.pkey(row['fen'])[0], '*', (row.get('reference') or {}).get('id', ''),
+                    'manual', 'Owner-authored position', digest(row)))
+        for path in sorted(fixtures.glob('*.json')):
+            data = json.loads(path.read_text())
+            if not isinstance(data, dict) or data.get('status') != 'editorially-approved-bundle':
+                continue
+            for row in data.get('exclusions', []):
+                db.execute('INSERT OR REPLACE INTO research_decisions VALUES (?,?,?,?,?,?,?)', (
+                    topic, index.pkey(row['fen'])[0], row['level'], row['gameId'],
+                    'rejected', row['reason'], digest(row)))
+            if topic == 'pin':
+                published_reviews = {
+                    row['gameId']: row for batch in data.get('publishedExerciseReviews', [])
+                    for row in batch['decisions'] if row.get('applied')
+                }
+                for row in published_reviews.values():
+                    if row['decision'] == 'exclude':
+                        db.execute('INSERT OR REPLACE INTO research_decisions VALUES (?,?,?,?,?,?,?)', (
+                            topic, index.pkey(row['original']['fen'])[0], '*', row['gameId'],
+                            'rejected', row['reason'], digest(row)))
+        for row in published:
+            db.execute('INSERT OR REPLACE INTO research_decisions VALUES (?,?,?,?,?,?,?)', (
+                topic, index.pkey(row['fen'])[0], row['level'], row['gameId'],
+                'approved', 'Existing published exercise; preserve its source game', digest(row)))
+        if topic == 'pin':
+            for row in json.loads((ROOT / 'src/lib/server/pin-exercises.json').read_text()):
+                db.execute('INSERT OR REPLACE INTO research_decisions VALUES (?,?,?,?,?,?,?)', (
+                    topic, index.pkey(row['fen'])[0],
+                    'Beginner' if row.get('beginner') else row['difficulty']['level'],
+                    (row.get('gameReference') or {}).get('id', ''),
+                    'approved', 'Existing Pin exercise', digest(row)))
+            for row in json.loads((fixtures / 'beginner-excluded.json').read_text()):
+                db.execute('INSERT OR REPLACE INTO research_decisions VALUES (?,?,?,?,?,?,?)', (
+                    topic, index.pkey(row['fen'])[0], '*', '',
+                    'rejected', row['reason'], digest(row)))
+        exclusions = fixtures / ('master-excluded.json' if topic == 'two-rook-mate' else 'excluded.json')
+        for row in json.loads(exclusions.read_text()) if exclusions.exists() else []:
+            db.execute('INSERT OR REPLACE INTO research_decisions VALUES (?,?,?,?,?,?,?)', (
+                topic, index.pkey(row['fen'])[0] if row.get('fen') else '', '*', row['gameId'],
+                'rejected', row['reason'], digest(row)))
+        for entry in json.loads((ROOT / 'src/lib/server/practice-adjustments.json').read_text()):
+            ref = entry['reference']
+            # Beginner imports can share their source FEN. Their manual-entry
+            # removals/classifications must not become decisions on A-D games.
+            incoming = topic in ('defensive-move', 'mate-in-one', 'pin') and entry.get('destinationScope') == scope
+            if (not incoming and ref['scope'] != scope) or (
+                    ref['baseLevel'] == 'Beginner' and topic not in ('defensive-move', 'mate-in-one', 'pin')):
+                continue
+            key = index.pkey(ref['fen'])[0]
+            status = ('removed' if entry['removed'] else 'transferred'
+                      if not incoming and entry.get('destinationScope', ref['scope']) != ref['scope']
+                      else 'manual')
+            existing = db.execute("SELECT game_id FROM research_decisions WHERE topic=? AND position_key=? LIMIT 1", (topic, key)).fetchone()
+            ident = existing[0] if existing else (ref.get('gameReference') or {}).get('id', '')
+            db.execute("DELETE FROM research_decisions WHERE topic=? AND position_key=?", (topic, key))
+            db.execute('INSERT INTO research_decisions VALUES (?,?,?,?,?,?,?)', (
+                topic, key, entry.get('level') or ref['baseLevel'], ident, status,
+                entry.get('note') or 'Saved owner review decision', digest(entry)))
+    return dict(db.execute('SELECT status,count(*) FROM research_decisions WHERE topic=? GROUP BY status', (topic,)))
+
+
 def export_games(db, output):
     output = Path(output)
     signature = digest({'games': db.execute('SELECT game_key,headers,preferred FROM games ORDER BY game_key').fetchall(),

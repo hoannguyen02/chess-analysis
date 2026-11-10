@@ -2,15 +2,26 @@
 import copy,csv,hashlib,importlib.util,json,re,sqlite3,subprocess,sys,unittest,tempfile,zipfile
 from pathlib import Path
 import chess
-from tactics_catalog import PRACTICE_LEVELS, load_catalog, resolve_theme_id, validate_catalog
+from tactics_catalog import PRACTICE_LEVELS, load_catalog, matches_current_level, resolve_theme_id, validate_catalog
 ROOT=Path(__file__).resolve().parents[1]
 spec=importlib.util.spec_from_file_location('tactics_index',ROOT/'scripts/tactics-index.py')
 index=importlib.util.module_from_spec(spec);spec.loader.exec_module(index)
 
 class TacticsIndex(unittest.TestCase):
+ def test_advanced_grade_checks_move_range_and_sacrifice(self):
+  for level in ('D', 'D*', 'E', 'E*'):
+   for count in (3, 4, 5, 6, 10):
+    for has_sacrifice in (False, True):
+     record = {'level': level, 'solverMoves': count, 'moves': [''] * (2 * count - 1),
+               'sacrifices': [{'ply': 0}] if has_sacrifice else []}
+     in_range = count >= 6 if level.startswith('E') else count in (4, 5)
+     with self.subTest(level=level, count=count, has_sacrifice=has_sacrifice):
+      self.assertEqual(matches_current_level(record), in_range and has_sacrifice != level.endswith('*'))
+      self.assertFalse(matches_current_level(dict(record, solverMoves=count + 1)))
+
  def test_level_suitability_is_optional_and_independent_of_parent_and_priority(self):
   catalog=load_catalog();themes={t['id']:t for t in catalog['themes']}
-  self.assertEqual(PRACTICE_LEVELS,('Beginner','A','B','C','C*','D'))
+  self.assertEqual(PRACTICE_LEVELS,('Beginner','A','B','C','C*','D','D*','E','E*'))
   self.assertEqual(themes['exchangeSacrifice']['priority'],1)
   self.assertEqual(themes['exchangeSacrifice']['levels'],['C','D'])
   self.assertEqual(themes['doubleThreatCreation']['priority'],3)
@@ -24,8 +35,8 @@ class TacticsIndex(unittest.TestCase):
 
  def test_level_arrays_reject_unknown_values_duplicates_empty_arrays_and_wrong_order(self):
   original=load_catalog()
-  for levels in [None,[],{},'A',['beginner'],['B*'],['C**'],['E'],[1],
-                 ['A','A'],['B','Beginner'],['D','C*'],['Beginner','A',None]]:
+  for levels in [None,[],{},'A',['beginner'],['B*'],['C**'],['D**'],['E**'],['F'],[1],
+                 ['A','A'],['B','Beginner'],['D','C*'],['D*','D'],['E*','E'],['Beginner','A',None]]:
    data=copy.deepcopy(original);data['themes'][0]['levels']=levels
    with self.subTest(levels=levels):
     with self.assertRaisesRegex(ValueError,'levels'):validate_catalog(data)
@@ -46,7 +57,7 @@ class TacticsIndex(unittest.TestCase):
   for identifier in ['sacrifice','exchangeSacrifice','exchangeSacrificeC3C6','greekGift','positionalSacrifice']:
    self.assertEqual(themes[identifier]['levels'],['C','D'])
   self.assertEqual(themes['laskerDoubleBishopSacrifice']['levels'],['D'])
-  self.assertEqual(themes['mateIn1']['levels'],['Beginner','A'])
+  self.assertEqual(themes['mateIn1']['levels'],['Beginner','A','B'])
   for identifier in ['mateIn2','mateIn3']:self.assertNotIn('D',themes[identifier]['levels'])
   self.assertEqual(themes['longForcingCombination']['levels'],['C','C*','D'])
 

@@ -101,12 +101,63 @@ def intro():
  assert len(order)==len(exercises) and {r['fen'] for r in order}==set(by_fen)
  return [by_fen[r['fen']] for r in order]
 
+def master_review_changes():
+    path = ROOT / 'scripts/fixtures/pin/expansion-evidence.json'
+    if not path.exists():
+        return {}
+    bundle = json.loads(path.read_text())
+    return {row['gameId']: row for batch in bundle.get('publishedExerciseReviews', [])
+            for row in batch['decisions'] if row.get('applied')}
+
+
+def apply_master_review(record, review):
+    """Check the original exercise before applying a reviewed publication change."""
+    from fork_research import sacrifice_review
+    from tactics_catalog import matches_current_level
+
+    keys = ('fen', 'level', 'goal', 'moves', 'alternatives')
+    if any(record[key] != review['original'][key] for key in keys):
+        raise ValueError(f"{record['gameId']}: published Pin review no longer matches its source")
+    if review['decision'] == 'exclude':
+        return None
+    level = review['destination']
+    if review['decision'] != 'regrade' or level not in ('C', 'C*', 'D', 'D*', 'E', 'E*'):
+        raise ValueError(f"{record['gameId']}: unsupported Pin review change")
+    moves = review['moves']
+    alternatives = review['alternatives']
+    sacrifices = review.get('sacrifices', [])
+    updated = dict(record, level=level, moves=moves, alternatives=alternatives,
+                   solverMoves=(len(moves) + 1) // 2, sacrifices=sacrifices)
+    if (record['goal'] != 'material' or bool(sacrifices) != (not level.endswith('*'))
+            or not matches_current_level(updated)
+            or not review['solutionVi'] or not review['hintsVi']):
+        raise ValueError(f"{record['gameId']}: incomplete Pin regrade")
+    for line in (moves, *alternatives):
+        if not line or len(line) % 2 == 0:
+            raise ValueError(f"{record['gameId']}: reviewed line must end on a solver move")
+        board = chess.Board(record['fen'])
+        for san in line:
+            board.push_san(san)
+    if sacrifices:
+        # The shared classifier uses this boundary to scan losses before the
+        # tactical payoff. For a Pin review, include the entire teaching line.
+        proof = sacrifice_review({**updated, 'forkPly': len(moves)})
+        accepted = {(event['offeredPly'], event['piece'], event['capture'])
+                    for event in proof['accepted']}
+        claimed = {(offer['ply'], offer['piece'], offer['acceptedBy'])
+                   for offer in sacrifices if offer.get('reason')}
+        if accepted != claimed or len(claimed) != len(sacrifices):
+            raise ValueError(f"{record['gameId']}: reviewed Pin sacrifice did not settle as recorded")
+    return updated
+
+
 def masters():
  records=json.loads((ROOT/'scripts/fixtures/pin/researched.json').read_text())['records']
  excluded={r['gameId'] for r in json.loads((ROOT/'scripts/fixtures/pin/excluded.json').read_text())}
  records=[r for r in records if r['gameId'] not in excluded]
  overrides=json.loads((ROOT/'scripts/fixtures/pin/level-overrides.json').read_text())
  records=[dict(r,level=overrides.get(r['gameId'],{}).get('level',r['level'])) for r in records]
+ reviews=master_review_changes()
  exercises=[];sources={};audit=[]
  levels=['A','B','C','C*','D']
  counts={level:sum(r['level']==level for r in records) for level in levels}
@@ -115,6 +166,13 @@ def masters():
  assert len({r['fen'] for r in records})==len(records),'Duplicate exercise position'
  for r in sorted(records,key=lambda r:(levels.index(r['level']),r['solverMoves'],r['gameId'])):
   ident=r['gameId']
+  sources[ident]=dict(kind='game',headers=r['headers'],fen=r['gameFen'],lines=[r['gameMoves']])
+  audit.append({key:r.get(key) for key in ['gameId','pinSquare','pinner','backSquare','goal','motif','gain','localGain','settlement','validation']})
+  review=reviews.get(ident)
+  if review:
+   r=apply_master_review(r,review)
+   if r is None:
+    continue
   idea=(f"Quân ở {r['pinSquare']} bị ghim vào Vua nên không thể bắt lại trên ô cần bảo vệ."
         if r['motif']=='pinned-defender' else f"Tăng sức ép và bắt quân bị ghim ở {r['pinSquare']}.")
   if r['motif']=='relative-capture':
@@ -127,11 +185,79 @@ def masters():
    difficulty=dict(level=r['level'],status='suggested',reason=overrides.get(ident,{}).get('reason','Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.'),solverMoves=r['solverMoves'],sacrificeCount=len(r['sacrifices'])),
    hints=[hint],
    solution=idea))
-  sources[ident]=dict(kind='game',headers=r['headers'],fen=r['gameFen'],lines=[r['gameMoves']])
-  audit.append({key:r.get(key) for key in ['gameId','pinSquare','pinner','backSquare','goal','motif','gain','localGain','settlement','validation']})
+  if review:
+   exercise=exercises[-1]
+   exercise.update(goal=r['goal'],solution=review['solutionVi'],hints=review['hintsVi'])
+   exercise['difficulty']['reason']=review['reasonVi']
  return exercises,sources,audit
+def reviewed_additions(exercises, sources):
+    from pin_research import COMPOSITION, verify_review
+    from research_editorial import _evidence
+    from research_finish import APPEND_MANIFESTS, _bundle_ids, _validate_batches
+    from research_workflow import SETTINGS
+    from tactic_research import digest
+
+    manifest = ROOT / APPEND_MANIFESTS['pin']
+    if not manifest.exists():
+        return
+    bundle = json.loads(manifest.read_text())
+    _validate_batches(bundle, _bundle_ids(bundle, 'pin'))
+    decisions = {row['gameId']: row for row in bundle['reviews']}
+    results = {row['gameId']: row for row in bundle['reviewResults']}
+    policies = {ident: batch for batch in bundle.get('publicationBatches', [])
+                for ident in batch['recordIds']}
+    positions = {chess.Board(exercise['fen']).epd() for exercise in exercises}
+    for record in bundle['records']:
+        ident, level = record['gameId'], record['level']
+        result, decision = results[ident], decisions[ident]
+        settings = policies.get(ident, bundle)['settings']
+        if any(settings.get(key, 0) < value for key, value in SETTINGS.items()):
+            raise ValueError(f'{ident}: full review budgets required')
+        if (decision['decision'] != 'keep' or not decision.get('reviewer')
+                or not decision['solutionVi'] or not decision['hintsVi']
+                or decision['recordHash'] != result['recordHash']
+                or decision['fullRecordSha256'] != digest(record)
+                or decision['evidenceSha256'] != digest(_evidence(result))):
+            raise ValueError(f'{ident}: stale or incomplete Pin editorial approval')
+        verify_review(record, result)
+        position = chess.Board(record['fen']).epd()
+        if ident in sources or position in positions:
+            raise ValueError(f'{ident}: duplicate source game or practice position')
+        positions.add(position)
+        composed = record['source'] == COMPOSITION
+        headers = record.get('headers')
+        exercise = {
+            'title': 'Thế cờ sáng tác' if composed else f"{headers['White']} — {headers['Black']}",
+            'prompt': ('Tạo đòn ghim để thắng vật chất.' if level == 'Beginner'
+                       else 'Khai thác đòn ghim để thắng vật chất.'),
+            'mode': 'interactive', 'outcome': 'pin', 'goal': 'material',
+            'fen': record['fen'], 'moves': record['moves'], 'alternativeLines': [], 'tacticPly': 0,
+        }
+        if composed:
+            exercise['id'] = ident
+        else:
+            exercise['previousMove'] = record['previousMove']
+        exercise['source'] = record['source']
+        if not composed:
+            exercise['gameReference'] = {'id': ident, 'kind': 'game', 'ply': record['ply'],
+                                         'branch': 0, 'collection': 'pin'}
+            sources[ident] = {'kind': 'game', 'headers': headers, 'fen': record['gameFen'],
+                              'lines': [record['gameMoves']]}
+        exercise.update(hints=decision['hintsVi'], solution=decision['solutionVi'])
+        if level == 'Beginner':
+            exercise['beginner'] = True
+        else:
+            exercise['difficulty'] = {
+                'level': level, 'status': 'suggested', 'solverMoves': 1, 'sacrificeCount': 0,
+                'reason': 'Bắt quân trực tiếp khi quân bảo vệ bị ghim vào Vua.',
+            }
+        exercises.append(exercise)
+
+
 if __name__=='__main__':
  beginner=intro();games,sources,audit=masters()
- for name,data in [('pin-exercises',beginner+games),('pin-game-sources',sources),('pin-audit',audit)]:
+ exercises=beginner+games
+ reviewed_additions(exercises,sources)
+ for name,data in [('pin-exercises',exercises),('pin-game-sources',sources),('pin-audit',audit)]:
   (ROOT/f'src/lib/server/{name}.json').write_text(json.dumps(data,ensure_ascii=False,indent=2)+'\n')
  print('Beginner',sum(bool(e.get('beginner')) for e in beginner),'Graded compositions',sum(not e.get('beginner') for e in beginner),'Master games',len(games),{l:sum(e['difficulty']['level']==l for e in games) for l in ['A','B','C','C*','D']})
