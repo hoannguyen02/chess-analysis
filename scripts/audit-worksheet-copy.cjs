@@ -78,7 +78,9 @@ function template(text) {
     );
     const entries = body.categories
       .flatMap((c) => c.exercises)
-      .filter((e) => (e.beginner || e.moves.length) && e.mode !== 'recognition');
+      .filter(
+        (e) => (e.beginner || e.moves.length) && e.mode !== 'recognition'
+      );
     const topic = page.href.slice(1);
     catalog[topic] = entries;
     const templates = new Map();
@@ -152,26 +154,28 @@ function template(text) {
   );
   if (process.env.WORKSHEET_RENDER) {
     // One six-position page per topic, using the level with its longest note.
-    const sections = sourceTopics.map((topic, i) => {
-      const longest = [...catalog[topic.id]].sort(
-        (a, b) => b.solution.length - a.solution.length
-      )[0];
-      const level = longest.beginner ? 'Beginner' : longest.difficulty?.level;
-      assert.ok(model.worksheetLevels.includes(level), topic.id);
-      catalog[topic.id] = [
-        longest,
-        ...catalog[topic.id].filter((e) => e !== longest),
-      ];
-      return {
-        id: i,
-        topic: topic.id,
-        level,
-        count: Math.min(
-          6,
-          model.levelExercises(catalog[topic.id], level).length
-        ),
-      };
-    });
+    const sections = sourceTopics
+      .filter((topic) => catalog[topic.id].length)
+      .map((topic, i) => {
+        const longest = [...catalog[topic.id]].sort(
+          (a, b) => b.solution.length - a.solution.length
+        )[0];
+        const level = longest.beginner ? 'Beginner' : longest.difficulty?.level;
+        assert.ok(model.worksheetLevels.includes(level), topic.id);
+        catalog[topic.id] = [
+          longest,
+          ...catalog[topic.id].filter((e) => e !== longest),
+        ];
+        return {
+          id: i,
+          topic: topic.id,
+          level,
+          count: Math.min(
+            6,
+            model.levelExercises(catalog[topic.id], level).length
+          ),
+        };
+      });
     const originalFetch = global.fetch;
     global.fetch = async (url) => {
       const data = fs.readFileSync('public' + url);

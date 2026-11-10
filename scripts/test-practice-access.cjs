@@ -136,8 +136,6 @@ test('private practice access', async (t) => {
             name.includes('two-rook-mate-exercises')
           )
             return [{ id: 'two-rook-mate', exercises: [] }];
-          if (name.includes('queen-skewer-pilot')) return [];
-          if (name.includes('queen-skewer-intro')) return [];
           if (name.includes('-beginner-exercises')) return [];
           if (
             name.includes('skewer-exercises') ||

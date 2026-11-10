@@ -22085,5 +22085,1614 @@
         "at": "2026-11-10T02:06:11.835Z"
       }
     ]
+  },
+  {
+    "id": "5c18b58baaa53757695a55fe",
+    "reference": {
+      "scope": "/pin",
+      "fen": "1kr5/1nbr1pp1/4p2p/pN2P3/1PpB4/2P5/5PPP/R3R1K1 w - - 0 29",
+      "baseLevel": "B",
+      "title": "Spielmann, Rudolf — Alatortsev, Vladimir",
+      "moves": [
+        "Na7",
+        "Rh8",
+        "Nc6+",
+        "Ka8",
+        "bxa5"
+      ],
+      "alternativeLines": [],
+      "goal": null,
+      "previousMove": {
+        "fen": "1kr5/1nbr1pp1/1p2p2p/PN2P3/1PpB4/2P5/5PPP/R3R1K1 b - - 0 28",
+        "move": "bxa5"
+      },
+      "gameReference": {
+        "id": "52054a1938a466e0",
+        "kind": "game",
+        "ply": 56,
+        "branch": 0,
+        "collection": "pin"
+      },
+      "manualId": null,
+      "exercise": {
+        "title": "Spielmann, Rudolf — Alatortsev, Vladimir",
+        "prompt": "Khai thác đòn ghim để thắng vật chất.",
+        "mode": "interactive",
+        "outcome": "pin",
+        "fen": "1kr5/1nbr1pp1/4p2p/pN2P3/1PpB4/2P5/5PPP/R3R1K1 w - - 0 29",
+        "moves": [
+          "Na7",
+          "Rh8",
+          "Nc6+",
+          "Ka8",
+          "bxa5"
+        ],
+        "alternativeLines": [],
+        "previousMove": {
+          "fen": "1kr5/1nbr1pp1/1p2p2p/PN2P3/1PpB4/2P5/5PPP/R3R1K1 b - - 0 28",
+          "move": "bxa5"
+        },
+        "source": "https://www.pgnmentor.com/players/Spielmann.zip",
+        "gameReference": {
+          "id": "52054a1938a466e0",
+          "kind": "game",
+          "ply": 56,
+          "branch": 0,
+          "collection": "pin"
+        },
+        "hints": [
+          "Tìm quân bị ghim vào Vua: quân đó có còn bắt lại hoặc bảo vệ được không?"
+        ],
+        "solution": "Tăng sức ép và bắt quân bị ghim ở a5.",
+        "gameCaption": "1935 · Moscow",
+        "gameOpening": "Khai cuộc: Pseudo Queen's Indian Defense · A47",
+        "playerTitle": "Spielmann, Rudolf — Alatortsev, Vladimir",
+        "players": [
+          {
+            "name": "Spielmann, Rudolf",
+            "title": "",
+            "rating": ""
+          },
+          {
+            "name": "Alatortsev, Vladimir",
+            "title": "",
+            "rating": ""
+          }
+        ],
+        "beginner": false,
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
+          "solverMoves": 3,
+          "sacrificeCount": 0
+        }
+      }
+    },
+    "level": "C*",
+    "destinationScope": "/tactic-positions?theme=counterattack",
+    "removed": false,
+    "note": "",
+    "updatedAt": "2026-11-10T04:03:44.829Z",
+    "history": [
+      {
+        "action": "move",
+        "level": "C*",
+        "scope": "/tactic-positions?theme=counterattack",
+        "note": "",
+        "at": "2026-11-10T04:03:44.829Z"
+      }
+    ]
+  },
+  {
+    "id": "9d93f484bb481523f8e9bc48",
+    "reference": {
+      "scope": "/pin",
+      "fen": "2r2r2/pp2b1pk/2p4p/q7/6QP/2N3P1/PPb2P2/3RR1K1 w - - 0 30",
+      "baseLevel": "B",
+      "title": "Kasparov, Gary (2740) — Short, Nigel D (2615)",
+      "moves": [
+        "Rxe7",
+        "Rg8",
+        "Rdd7",
+        "Kh8",
+        "Rxg7"
+      ],
+      "alternativeLines": [],
+      "goal": null,
+      "previousMove": {
+        "fen": "2r2r2/pp2b1pk/2p3bp/q7/6QP/2N3P1/PPB2P2/3RR1K1 b - - 2 29",
+        "move": "Bxc2"
+      },
+      "gameReference": {
+        "id": "61bab6eb7391ee26",
+        "kind": "game",
+        "ply": 58,
+        "branch": 0,
+        "collection": "pin"
+      },
+      "manualId": null,
+      "exercise": {
+        "title": "Kasparov, Gary — Short, Nigel D",
+        "prompt": "Khai thác đòn ghim để thắng vật chất.",
+        "mode": "interactive",
+        "outcome": "pin",
+        "fen": "2r2r2/pp2b1pk/2p4p/q7/6QP/2N3P1/PPb2P2/3RR1K1 w - - 0 30",
+        "moves": [
+          "Rxe7",
+          "Rg8",
+          "Rdd7",
+          "Kh8",
+          "Rxg7"
+        ],
+        "alternativeLines": [],
+        "previousMove": {
+          "fen": "2r2r2/pp2b1pk/2p3bp/q7/6QP/2N3P1/PPB2P2/3RR1K1 b - - 2 29",
+          "move": "Bxc2"
+        },
+        "source": "https://www.pgnmentor.com/players/Kasparov.zip",
+        "gameReference": {
+          "id": "61bab6eb7391ee26",
+          "kind": "game",
+          "ply": 58,
+          "branch": 0,
+          "collection": "pin"
+        },
+        "hints": [
+          "Tìm quân đứng trước quân có giá trị cao hơn trên cùng đường tấn công."
+        ],
+        "solution": "Quân ở g7 bị ghim vào quân có giá trị cao hơn ở g8. Khai thác đòn ghim để thắng vật chất.",
+        "gameCaption": "1986 · OHRA-A",
+        "gameOpening": "Khai cuộc: Queen's Gambit Declined: Anti-Tartakower Variation, Petrosian Variation · D55",
+        "playerTitle": "Kasparov, Gary (2740) — Short, Nigel D (2615)",
+        "players": [
+          {
+            "name": "Kasparov, Gary",
+            "title": "",
+            "rating": "2740"
+          },
+          {
+            "name": "Short, Nigel D",
+            "title": "",
+            "rating": "2615"
+          }
+        ],
+        "beginner": false,
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
+          "solverMoves": 3,
+          "sacrificeCount": 0
+        }
+      }
+    },
+    "level": "C",
+    "destinationScope": "/tactic-positions?theme=counterattack",
+    "removed": false,
+    "note": "",
+    "updatedAt": "2026-11-10T04:05:58.139Z",
+    "history": [
+      {
+        "action": "move",
+        "level": "C",
+        "scope": "/tactic-positions?theme=counterattack",
+        "note": "",
+        "at": "2026-11-10T04:05:58.139Z"
+      }
+    ]
+  },
+  {
+    "id": "0073d0c5c117bbaaf2c8f9eb",
+    "reference": {
+      "scope": "/pin",
+      "fen": "4r1k1/p5pp/1bn1r3/5p2/2RpP3/5N2/PP1B1PPP/4R1K1 b - - 0 24",
+      "baseLevel": "B",
+      "title": "Deac,Bogdan-Daniel (2625) — Shirov,A (2662)",
+      "moves": [
+        "fxe4",
+        "Ng5",
+        "e3",
+        "fxe3",
+        "dxe3"
+      ],
+      "alternativeLines": [],
+      "goal": null,
+      "previousMove": {
+        "fen": "4r1k1/p5pp/1bn1r3/5p2/2Rpp3/3P1N2/PP1B1PPP/4R1K1 w - - 0 24",
+        "move": "dxe4"
+      },
+      "gameReference": {
+        "id": "6b6572c1742c7274",
+        "kind": "game",
+        "ply": 47,
+        "branch": 0,
+        "collection": "pin"
+      },
+      "manualId": null,
+      "exercise": {
+        "title": "Deac,Bogdan-Daniel — Shirov,A",
+        "prompt": "Khai thác đòn ghim để thắng vật chất.",
+        "mode": "interactive",
+        "outcome": "pin",
+        "fen": "4r1k1/p5pp/1bn1r3/5p2/2RpP3/5N2/PP1B1PPP/4R1K1 b - - 0 24",
+        "moves": [
+          "fxe4",
+          "Ng5",
+          "e3",
+          "fxe3",
+          "dxe3"
+        ],
+        "alternativeLines": [],
+        "previousMove": {
+          "fen": "4r1k1/p5pp/1bn1r3/5p2/2Rpp3/3P1N2/PP1B1PPP/4R1K1 w - - 0 24",
+          "move": "dxe4"
+        },
+        "source": "https://www.pgnmentor.com/players/Shirov.zip",
+        "gameReference": {
+          "id": "6b6572c1742c7274",
+          "kind": "game",
+          "ply": 47,
+          "branch": 0,
+          "collection": "pin"
+        },
+        "hints": [
+          "Tìm quân đứng trước quân có giá trị cao hơn trên cùng đường tấn công."
+        ],
+        "solution": "Quân ở e3 bị ghim vào quân có giá trị cao hơn ở e1. Khai thác đòn ghim để thắng vật chất.",
+        "gameCaption": "2021 · C'Chartres Apr Blitz Open",
+        "gameOpening": "Khai cuộc: Italian Game: Two Knights Defense, Polerio Defense, Bishop Check Line · C58",
+        "playerTitle": "Deac,Bogdan-Daniel (2625) — Shirov,A (2662)",
+        "players": [
+          {
+            "name": "Deac,Bogdan-Daniel",
+            "title": "",
+            "rating": "2625"
+          },
+          {
+            "name": "Shirov,A",
+            "title": "",
+            "rating": "2662"
+          }
+        ],
+        "beginner": false,
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
+          "solverMoves": 3,
+          "sacrificeCount": 0
+        }
+      }
+    },
+    "level": "D",
+    "removed": false,
+    "note": "",
+    "updatedAt": "2026-11-10T04:12:19.302Z",
+    "history": [
+      {
+        "action": "move",
+        "level": "D",
+        "scope": "/pin",
+        "note": "",
+        "at": "2026-11-10T04:12:19.302Z"
+      }
+    ]
+  },
+  {
+    "id": "1d3b84f74e3a31d2112e3e04",
+    "reference": {
+      "scope": "/back-rank-mate",
+      "fen": "3r2k1/1p2b1pp/p2p1r2/3P3Q/b1P1BR2/P7/7P/7K w - - 0 29",
+      "baseLevel": "B",
+      "title": "Krasenkow,M (2660) — Szieberth,A (2315)",
+      "moves": [
+        "Qxh7+",
+        "Kf8",
+        "Bg6",
+        "a5",
+        "Qh8#"
+      ],
+      "alternativeLines": [],
+      "goal": "checkmate",
+      "previousMove": {
+        "fen": "3r1rk1/1p2b1pp/p2p1B2/3P3Q/b1P1BR2/P7/7P/7K b - - 0 28",
+        "move": "Rxf6"
+      },
+      "gameReference": {
+        "collection": "back-rank-mate",
+        "kind": "game",
+        "id": "31c4b4738c38279a",
+        "ply": 56,
+        "branch": 0
+      },
+      "manualId": null,
+      "exercise": {
+        "title": "Krasenkow,M — Szieberth,A",
+        "prompt": "Khai thác hàng cuối để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "3r2k1/1p2b1pp/p2p1r2/3P3Q/b1P1BR2/P7/7P/7K w - - 0 29",
+        "moves": [
+          "Qxh7+",
+          "Kf8",
+          "Bg6",
+          "a5",
+          "Qh8#"
+        ],
+        "previousMove": {
+          "fen": "3r1rk1/1p2b1pp/p2p1B2/3P3Q/b1P1BR2/P7/7P/7K b - - 0 28",
+          "move": "Rxf6"
+        },
+        "source": "https://www.pgnmentor.com/players/Krasenkow.zip",
+        "gameReference": {
+          "collection": "back-rank-mate",
+          "kind": "game",
+          "id": "31c4b4738c38279a",
+          "ply": 56,
+          "branch": 0
+        },
+        "hints": [
+          "Quan sát hàng cuối và các quân đang chặn đường thoát của Vua.",
+          "Tìm cách đưa Xe hoặc Hậu vào hàng cuối; tính cả các nước chắn và bắt quân chiếu."
+        ],
+        "solution": "Hậu ở h8 chiếu dọc hàng cuối. Các quân ở e7, g7 chặn đường thoát của Vua ở f8. Nhánh mẫu: Qxh7+ · Kf8 · Bg6 · a5 · Qh8#.",
+        "gameCaption": "2007 · 16th Monarch Assurance",
+        "gameOpening": "Khai cuộc: ECO A33",
+        "playerTitle": "Krasenkow,M (2660) — Szieberth,A (2315)",
+        "players": [
+          {
+            "name": "Krasenkow,M",
+            "title": "",
+            "rating": "2660"
+          },
+          {
+            "name": "Szieberth,A",
+            "title": "",
+            "rating": "2315"
+          }
+        ],
+        "beginner": false,
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        }
+      }
+    },
+    "level": "C",
+    "removed": false,
+    "note": "",
+    "updatedAt": "2026-11-10T04:27:42.876Z",
+    "history": [
+      {
+        "action": "move",
+        "level": "C",
+        "scope": "/back-rank-mate",
+        "note": "",
+        "at": "2026-11-10T04:27:42.876Z"
+      }
+    ]
+  },
+  {
+    "id": "fbf18a3e67039ce3c24f9c2c",
+    "reference": {
+      "scope": "/back-rank-mate",
+      "fen": "Rq2r2k/1P4bp/6p1/1b6/8/8/R1Q1pBPP/6K1 b - - 1 47",
+      "baseLevel": "B",
+      "title": "Fressinet,L (2668) — Bacrot,E (2696)",
+      "moves": [
+        "e1=R+",
+        "Bxe1",
+        "Bd4+",
+        "Bf2",
+        "Re1#"
+      ],
+      "alternativeLines": [],
+      "goal": "checkmate",
+      "previousMove": {
+        "fen": "Rq2r2k/1P4bp/6p1/1bB5/8/8/R1Q1p1PP/6K1 w - - 0 47",
+        "move": "Bf2"
+      },
+      "gameReference": {
+        "collection": "back-rank-mate",
+        "kind": "game",
+        "id": "662ddfeadd3f15c1",
+        "ply": 93,
+        "branch": 0
+      },
+      "manualId": null,
+      "exercise": {
+        "title": "Fressinet,L — Bacrot,E",
+        "prompt": "Khai thác hàng cuối để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "Rq2r2k/1P4bp/6p1/1b6/8/8/R1Q1pBPP/6K1 b - - 1 47",
+        "moves": [
+          "e1=R+",
+          "Bxe1",
+          "Bd4+",
+          "Bf2",
+          "Re1#"
+        ],
+        "previousMove": {
+          "fen": "Rq2r2k/1P4bp/6p1/1bB5/8/8/R1Q1p1PP/6K1 w - - 0 47",
+          "move": "Bf2"
+        },
+        "source": "https://www.pgnmentor.com/players/Bacrot.zip",
+        "gameReference": {
+          "collection": "back-rank-mate",
+          "kind": "game",
+          "id": "662ddfeadd3f15c1",
+          "ply": 93,
+          "branch": 0
+        },
+        "hints": [
+          "Quan sát hàng cuối và các quân đang chặn đường thoát của Vua.",
+          "Tìm cách đưa Xe hoặc Hậu vào hàng cuối; tính cả các nước chắn và bắt quân chiếu."
+        ],
+        "solution": "Xe ở e1 chiếu dọc hàng cuối. Các quân ở f2, g2, h2 chặn đường thoát của Vua ở g1. Nhánh mẫu: e1=R+ · Bxe1 · Bd4+ · Bf2 · Re1#.",
+        "gameCaption": "2017 · 14th Balagna Rapid Open",
+        "gameOpening": "Khai cuộc: ECO B51",
+        "playerTitle": "Fressinet,L (2668) — Bacrot,E (2696)",
+        "players": [
+          {
+            "name": "Fressinet,L",
+            "title": "",
+            "rating": "2668"
+          },
+          {
+            "name": "Bacrot,E",
+            "title": "",
+            "rating": "2696"
+          }
+        ],
+        "beginner": false,
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        }
+      }
+    },
+    "level": "C",
+    "removed": false,
+    "note": "",
+    "updatedAt": "2026-11-10T04:33:21.334Z",
+    "history": [
+      {
+        "action": "move",
+        "level": "C",
+        "scope": "/back-rank-mate",
+        "note": "",
+        "at": "2026-11-10T04:33:21.334Z"
+      }
+    ]
+  },
+  {
+    "id": "0d35bae12bb0fcf94b18ba06",
+    "reference": {
+      "scope": "/back-rank-mate",
+      "fen": "6k1/5pp1/8/4B3/5p2/1b1pbB2/1P4PP/4K3 b - - 3 47",
+      "baseLevel": "B",
+      "title": "Balakrishnan,Praveen (2503) — Caruana,F (2796)",
+      "moves": [
+        "d2+",
+        "Kf1",
+        "Bc4+",
+        "Be2",
+        "d1=Q#"
+      ],
+      "alternativeLines": [],
+      "goal": "checkmate",
+      "previousMove": {
+        "fen": "6k1/5pp1/8/4B3/5p2/1b1pbB2/1P4PP/3K4 w - - 2 47",
+        "move": "Ke1"
+      },
+      "gameReference": {
+        "collection": "back-rank-mate",
+        "kind": "game",
+        "id": "b4a108b439c1b2d2",
+        "ply": 93,
+        "branch": 0
+      },
+      "manualId": null,
+      "exercise": {
+        "title": "Balakrishnan,Praveen — Caruana,F",
+        "prompt": "Khai thác hàng cuối để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "6k1/5pp1/8/4B3/5p2/1b1pbB2/1P4PP/4K3 b - - 3 47",
+        "moves": [
+          "d2+",
+          "Kf1",
+          "Bc4+",
+          "Be2",
+          "d1=Q#"
+        ],
+        "previousMove": {
+          "fen": "6k1/5pp1/8/4B3/5p2/1b1pbB2/1P4PP/3K4 w - - 2 47",
+          "move": "Ke1"
+        },
+        "source": "https://www.pgnmentor.com/players/Caruana.zip",
+        "gameReference": {
+          "collection": "back-rank-mate",
+          "kind": "game",
+          "id": "b4a108b439c1b2d2",
+          "ply": 93,
+          "branch": 0
+        },
+        "hints": [
+          "Quan sát hàng cuối và các quân đang chặn đường thoát của Vua.",
+          "Tìm cách đưa Xe hoặc Hậu vào hàng cuối; tính cả các nước chắn và bắt quân chiếu."
+        ],
+        "solution": "Hậu ở d1 chiếu dọc hàng cuối. Các quân ở e2, g2 chặn đường thoát của Vua ở f1. Nhánh mẫu: d2+ · Kf1 · Bc4+ · Be2 · d1=Q#.",
+        "gameCaption": "2024 · Titled Tue 9th Jul Late",
+        "gameOpening": "Khai cuộc: ECO B33",
+        "playerTitle": "Balakrishnan,Praveen (2503) — Caruana,F (2796)",
+        "players": [
+          {
+            "name": "Balakrishnan,Praveen",
+            "title": "",
+            "rating": "2503"
+          },
+          {
+            "name": "Caruana,F",
+            "title": "",
+            "rating": "2796"
+          }
+        ],
+        "beginner": false,
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        }
+      }
+    },
+    "level": "C*",
+    "removed": false,
+    "note": "",
+    "updatedAt": "2026-11-10T04:36:00.561Z",
+    "history": [
+      {
+        "action": "move",
+        "level": "C*",
+        "scope": "/back-rank-mate",
+        "note": "",
+        "at": "2026-11-10T04:36:00.561Z"
+      }
+    ]
+  },
+  {
+    "id": "e5547c141f6ee9e9d0a983fd",
+    "reference": {
+      "scope": "/back-rank-mate",
+      "fen": "4r3/5pk1/2b2n2/1B4p1/Pp6/1P2p1q1/2P1Q1P1/3R1RK1 b - - 1 34",
+      "baseLevel": "B",
+      "title": "Matinian,N (2416) — Kamsky,G (2659)",
+      "moves": [
+        "Rh8",
+        "Rf3",
+        "Qh2+",
+        "Kf1",
+        "Qh1#"
+      ],
+      "alternativeLines": [],
+      "goal": "checkmate",
+      "previousMove": {
+        "fen": "4r3/5pk1/B1b2n2/6p1/Pp6/1P2p1q1/2P1Q1P1/3R1RK1 w - - 0 34",
+        "move": "Bb5"
+      },
+      "gameReference": {
+        "collection": "back-rank-mate",
+        "kind": "game",
+        "id": "c9b927f72cfc58ae",
+        "ply": 67,
+        "branch": 0
+      },
+      "manualId": null,
+      "exercise": {
+        "title": "Matinian,N — Kamsky,G",
+        "prompt": "Khai thác hàng cuối để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "4r3/5pk1/2b2n2/1B4p1/Pp6/1P2p1q1/2P1Q1P1/3R1RK1 b - - 1 34",
+        "moves": [
+          "Rh8",
+          "Rf3",
+          "Qh2+",
+          "Kf1",
+          "Qh1#"
+        ],
+        "previousMove": {
+          "fen": "4r3/5pk1/B1b2n2/6p1/Pp6/1P2p1q1/2P1Q1P1/3R1RK1 w - - 0 34",
+          "move": "Bb5"
+        },
+        "source": "https://www.pgnmentor.com/players/Kamsky.zip",
+        "gameReference": {
+          "collection": "back-rank-mate",
+          "kind": "game",
+          "id": "c9b927f72cfc58ae",
+          "ply": 67,
+          "branch": 0
+        },
+        "hints": [
+          "Quan sát hàng cuối và các quân đang chặn đường thoát của Vua.",
+          "Tìm cách đưa Xe hoặc Hậu vào hàng cuối; tính cả các nước chắn và bắt quân chiếu."
+        ],
+        "solution": "Hậu ở h1 chiếu dọc hàng cuối. Các quân ở e2, g2 chặn đường thoát của Vua ở f1. Nhánh mẫu: Rh8 · Rf3 · Qh2+ · Kf1 · Qh1#.",
+        "gameCaption": "2023 · Titled Tue 6th Jun Late",
+        "gameOpening": "Khai cuộc: ECO B43",
+        "playerTitle": "Matinian,N (2416) — Kamsky,G (2659)",
+        "players": [
+          {
+            "name": "Matinian,N",
+            "title": "",
+            "rating": "2416"
+          },
+          {
+            "name": "Kamsky,G",
+            "title": "",
+            "rating": "2659"
+          }
+        ],
+        "beginner": false,
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        }
+      }
+    },
+    "level": "C",
+    "removed": false,
+    "note": "",
+    "updatedAt": "2026-11-10T04:36:37.654Z",
+    "history": [
+      {
+        "action": "move",
+        "level": "C",
+        "scope": "/back-rank-mate",
+        "note": "",
+        "at": "2026-11-10T04:36:37.654Z"
+      }
+    ]
+  },
+  {
+    "id": "769825ef7cea66c9ea0d9578",
+    "reference": {
+      "scope": "/back-rank-mate",
+      "fen": "r3b2r/1p2bp1k/6pB/p1nBP3/6R1/7Q/Pq3PPP/3R2K1 w - - 3 24",
+      "baseLevel": "B",
+      "title": "Carlsen,M (2847) — Naroditsky,D (2623)",
+      "moves": [
+        "Bf8+",
+        "Kg8",
+        "Rxg6+",
+        "Kxf8",
+        "Qxh8#"
+      ],
+      "alternativeLines": [],
+      "goal": "checkmate",
+      "previousMove": {
+        "fen": "r3br2/1p2bp1k/6pB/p1nBP3/6R1/7Q/Pq3PPP/3R2K1 b - - 2 23",
+        "move": "Rh8"
+      },
+      "gameReference": {
+        "collection": "back-rank-mate",
+        "kind": "game",
+        "id": "cdee8cf8711e4330",
+        "ply": 46,
+        "branch": 0
+      },
+      "manualId": null,
+      "exercise": {
+        "title": "Carlsen,M — Naroditsky,D",
+        "prompt": "Khai thác hàng cuối để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "r3b2r/1p2bp1k/6pB/p1nBP3/6R1/7Q/Pq3PPP/3R2K1 w - - 3 24",
+        "moves": [
+          "Bf8+",
+          "Kg8",
+          "Rxg6+",
+          "Kxf8",
+          "Qxh8#"
+        ],
+        "previousMove": {
+          "fen": "r3br2/1p2bp1k/6pB/p1nBP3/6R1/7Q/Pq3PPP/3R2K1 b - - 2 23",
+          "move": "Rh8"
+        },
+        "source": "https://www.pgnmentor.com/players/Carlsen.zip",
+        "gameReference": {
+          "collection": "back-rank-mate",
+          "kind": "game",
+          "id": "cdee8cf8711e4330",
+          "ply": 46,
+          "branch": 0
+        },
+        "hints": [
+          "Quan sát hàng cuối và các quân đang chặn đường thoát của Vua.",
+          "Tìm cách đưa Xe hoặc Hậu vào hàng cuối; tính cả các nước chắn và bắt quân chiếu."
+        ],
+        "solution": "Hậu ở h8 chiếu dọc hàng cuối. Các quân ở e7, f7 chặn đường thoát của Vua ở f8. Nhánh mẫu: Bf8+ · Kg8 · Rxg6+ · Kxf8 · Qxh8#.",
+        "gameCaption": "2021 · Aimchess US Rapid Prelim",
+        "gameOpening": "Khai cuộc: ECO C02",
+        "playerTitle": "Carlsen,M (2847) — Naroditsky,D (2623)",
+        "players": [
+          {
+            "name": "Carlsen,M",
+            "title": "",
+            "rating": "2847"
+          },
+          {
+            "name": "Naroditsky,D",
+            "title": "",
+            "rating": "2623"
+          }
+        ],
+        "beginner": false,
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        }
+      }
+    },
+    "level": "C",
+    "removed": false,
+    "note": "",
+    "updatedAt": "2026-11-10T04:37:24.757Z",
+    "history": [
+      {
+        "action": "move",
+        "level": "C",
+        "scope": "/back-rank-mate",
+        "note": "",
+        "at": "2026-11-10T04:37:24.757Z"
+      }
+    ]
+  },
+  {
+    "id": "8acba2a15429a7fff95c5db0",
+    "reference": {
+      "scope": "/back-rank-mate",
+      "fen": "2B5/4r1k1/p1Q2n2/Pp2q2p/3p2p1/5p2/1P3P1P/2R3K1 b - - 1 35",
+      "baseLevel": "C",
+      "title": "Gubajdullin,A (2314) — Gurevich,D (2370)",
+      "moves": [
+        "Qe1+",
+        "Rxe1",
+        "Rxe1#"
+      ],
+      "alternativeLines": [],
+      "goal": "checkmate",
+      "previousMove": {
+        "fen": "2B5/4r1k1/p1Q2n2/Pp2q2p/3p2p1/5p2/1P3P1P/2R2K2 w - - 0 35",
+        "move": "Kg1"
+      },
+      "gameReference": {
+        "collection": "back-rank-mate",
+        "kind": "game",
+        "id": "ac1d15919d642c7c",
+        "ply": 69,
+        "branch": 0
+      },
+      "manualId": null,
+      "exercise": {
+        "title": "Gubajdullin,A — Gurevich,D",
+        "prompt": "Khai thác hàng cuối để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "2B5/4r1k1/p1Q2n2/Pp2q2p/3p2p1/5p2/1P3P1P/2R3K1 b - - 1 35",
+        "moves": [
+          "Qe1+",
+          "Rxe1",
+          "Rxe1#"
+        ],
+        "previousMove": {
+          "fen": "2B5/4r1k1/p1Q2n2/Pp2q2p/3p2p1/5p2/1P3P1P/2R2K2 w - - 0 35",
+          "move": "Kg1"
+        },
+        "source": "https://www.pgnmentor.com/players/GurevichD.zip",
+        "gameReference": {
+          "collection": "back-rank-mate",
+          "kind": "game",
+          "id": "ac1d15919d642c7c",
+          "ply": 69,
+          "branch": 0
+        },
+        "hints": [
+          "Quan sát hàng cuối và các quân đang chặn đường thoát của Vua.",
+          "Tìm cách đưa Xe hoặc Hậu vào hàng cuối; tính cả các nước chắn và bắt quân chiếu."
+        ],
+        "solution": "Hy sinh Hậu trên e1 để mở đường cho đòn phối hợp. Xe ở e1 chiếu dọc hàng cuối. Các quân ở f2, h2 chặn đường thoát của Vua ở g1. Nhánh mẫu: Qe1+ · Rxe1 · Rxe1#.",
+        "gameCaption": "2021 · Titled Tuesday 12th Oct",
+        "gameOpening": "Khai cuộc: ECO A46",
+        "playerTitle": "Gubajdullin,A (2314) — Gurevich,D (2370)",
+        "players": [
+          {
+            "name": "Gubajdullin,A",
+            "title": "",
+            "rating": "2314"
+          },
+          {
+            "name": "Gurevich,D",
+            "title": "",
+            "rating": "2370"
+          }
+        ],
+        "beginner": false,
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        }
+      }
+    },
+    "level": "B",
+    "removed": false,
+    "note": "",
+    "updatedAt": "2026-11-10T05:12:05.062Z",
+    "history": [
+      {
+        "action": "move",
+        "level": "B",
+        "scope": "/back-rank-mate",
+        "note": "",
+        "at": "2026-11-10T05:12:05.062Z"
+      }
+    ]
+  },
+  {
+    "id": "ff5035b52f1f82b2b0f8088e",
+    "reference": {
+      "scope": "/back-rank-mate",
+      "fen": "2r3k1/pQ3p1p/4bqpP/8/2pp4/5N2/PPP2PP1/4R1K1 w - - 0 24",
+      "baseLevel": "C",
+      "title": "Carlsen,M (2839) — Gorovets,A (2454)",
+      "moves": [
+        "Qxc8+",
+        "Bxc8",
+        "Re8#"
+      ],
+      "alternativeLines": [],
+      "goal": "checkmate",
+      "previousMove": {
+        "fen": "2r3k1/pQ3p1p/4bqpP/2p5/3p4/5N2/PPP2PP1/4R1K1 b - - 5 23",
+        "move": "c4"
+      },
+      "gameReference": {
+        "collection": "back-rank-mate",
+        "kind": "game",
+        "id": "c453ebe6e29ee737",
+        "ply": 46,
+        "branch": 0
+      },
+      "manualId": null,
+      "exercise": {
+        "title": "Carlsen,M — Gorovets,A",
+        "prompt": "Khai thác hàng cuối để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "2r3k1/pQ3p1p/4bqpP/8/2pp4/5N2/PPP2PP1/4R1K1 w - - 0 24",
+        "moves": [
+          "Qxc8+",
+          "Bxc8",
+          "Re8#"
+        ],
+        "previousMove": {
+          "fen": "2r3k1/pQ3p1p/4bqpP/2p5/3p4/5N2/PPP2PP1/4R1K1 b - - 5 23",
+          "move": "c4"
+        },
+        "source": "https://www.pgnmentor.com/players/Carlsen.zip",
+        "gameReference": {
+          "collection": "back-rank-mate",
+          "kind": "game",
+          "id": "c453ebe6e29ee737",
+          "ply": 46,
+          "branch": 0
+        },
+        "hints": [
+          "Quan sát hàng cuối và các quân đang chặn đường thoát của Vua.",
+          "Tìm cách đưa Xe hoặc Hậu vào hàng cuối; tính cả các nước chắn và bắt quân chiếu."
+        ],
+        "solution": "Hy sinh Hậu trên c8 để mở đường cho đòn phối hợp. Xe ở e8 chiếu dọc hàng cuối. Các quân ở f7, h7 chặn đường thoát của Vua ở g8. Nhánh mẫu: Qxc8+ · Bxc8 · Re8#.",
+        "gameCaption": "2025 · Titled Tue 19th Aug Early",
+        "gameOpening": "Khai cuộc: ECO A00",
+        "playerTitle": "Carlsen,M (2839) — Gorovets,A (2454)",
+        "players": [
+          {
+            "name": "Carlsen,M",
+            "title": "",
+            "rating": "2839"
+          },
+          {
+            "name": "Gorovets,A",
+            "title": "",
+            "rating": "2454"
+          }
+        ],
+        "beginner": false,
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        }
+      }
+    },
+    "level": "B",
+    "removed": false,
+    "note": "",
+    "updatedAt": "2026-11-10T05:13:14.015Z",
+    "history": [
+      {
+        "action": "move",
+        "level": "B",
+        "scope": "/back-rank-mate",
+        "note": "",
+        "at": "2026-11-10T05:13:14.015Z"
+      }
+    ]
+  },
+  {
+    "id": "849a7484f1b00280cf322c70",
+    "reference": {
+      "scope": "/back-rank-mate",
+      "fen": "3rQ3/5pbk/6p1/pp6/4R1Pp/7P/PPNq1P2/1K4R1 b - - 0 35",
+      "baseLevel": "C",
+      "title": "Popov,Iv RUS (2609) — Nepomniachtchi,I (2733)",
+      "moves": [
+        "Qd1+",
+        "Rxd1",
+        "Rxd1#"
+      ],
+      "alternativeLines": [],
+      "goal": "checkmate",
+      "previousMove": {
+        "fen": "3rQ3/5pbk/6p1/pp6/4R1Pp/4N2P/PPrq1P2/1K4R1 w - - 4 35",
+        "move": "Nxc2"
+      },
+      "gameReference": {
+        "collection": "back-rank-mate",
+        "kind": "game",
+        "id": "cbaa389382fe5e30",
+        "ply": 69,
+        "branch": 0
+      },
+      "manualId": null,
+      "exercise": {
+        "title": "Popov,Iv RUS — Nepomniachtchi,I",
+        "prompt": "Khai thác hàng cuối để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "3rQ3/5pbk/6p1/pp6/4R1Pp/7P/PPNq1P2/1K4R1 b - - 0 35",
+        "moves": [
+          "Qd1+",
+          "Rxd1",
+          "Rxd1#"
+        ],
+        "previousMove": {
+          "fen": "3rQ3/5pbk/6p1/pp6/4R1Pp/4N2P/PPrq1P2/1K4R1 w - - 4 35",
+          "move": "Nxc2"
+        },
+        "source": "https://www.pgnmentor.com/players/Nepomniachtchi.zip",
+        "gameReference": {
+          "collection": "back-rank-mate",
+          "kind": "game",
+          "id": "cbaa389382fe5e30",
+          "ply": 69,
+          "branch": 0
+        },
+        "hints": [
+          "Quan sát hàng cuối và các quân đang chặn đường thoát của Vua.",
+          "Tìm cách đưa Xe hoặc Hậu vào hàng cuối; tính cả các nước chắn và bắt quân chiếu."
+        ],
+        "solution": "Hy sinh Hậu trên d1 để mở đường cho đòn phối hợp. Xe ở d1 chiếu dọc hàng cuối. Các quân ở a2, b2, c2 chặn đường thoát của Vua ở b1. Nhánh mẫu: Qd1+ · Rxd1 · Rxd1#.",
+        "gameCaption": "2017 · 33rd ECC Open 2017",
+        "gameOpening": "Khai cuộc: ECO B90",
+        "playerTitle": "Popov,Iv RUS (2609) — Nepomniachtchi,I (2733)",
+        "players": [
+          {
+            "name": "Popov,Iv RUS",
+            "title": "",
+            "rating": "2609"
+          },
+          {
+            "name": "Nepomniachtchi,I",
+            "title": "",
+            "rating": "2733"
+          }
+        ],
+        "beginner": false,
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        }
+      }
+    },
+    "level": "B",
+    "removed": false,
+    "note": "",
+    "updatedAt": "2026-11-10T05:13:29.583Z",
+    "history": [
+      {
+        "action": "move",
+        "level": "B",
+        "scope": "/back-rank-mate",
+        "note": "",
+        "at": "2026-11-10T05:13:29.583Z"
+      }
+    ]
+  },
+  {
+    "id": "c2597cd4989b21b5784fb9e9",
+    "reference": {
+      "scope": "/back-rank-mate",
+      "fen": "3rrBk1/2p5/p3bppQ/4pN2/3nq1P1/8/5PRP/3q2RK b - - 1 32",
+      "baseLevel": "C",
+      "title": "Andreikin,D (2710) — Carlsen,M (2839)",
+      "moves": [
+        "Qxg1+",
+        "Kxg1",
+        "Qe1#"
+      ],
+      "alternativeLines": [],
+      "goal": "checkmate",
+      "previousMove": {
+        "fen": "3rrBk1/2p5/p3bppQ/4pN2/3nq1P1/6R1/5P1P/3q2RK w - - 0 32",
+        "move": "Rg2"
+      },
+      "gameReference": {
+        "collection": "back-rank-mate",
+        "kind": "game",
+        "id": "dd9465ed4d8fa0de",
+        "ply": 63,
+        "branch": 0
+      },
+      "manualId": null,
+      "exercise": {
+        "title": "Andreikin,D — Carlsen,M",
+        "prompt": "Khai thác hàng cuối để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "3rrBk1/2p5/p3bppQ/4pN2/3nq1P1/8/5PRP/3q2RK b - - 1 32",
+        "moves": [
+          "Qxg1+",
+          "Kxg1",
+          "Qe1#"
+        ],
+        "previousMove": {
+          "fen": "3rrBk1/2p5/p3bppQ/4pN2/3nq1P1/6R1/5P1P/3q2RK w - - 0 32",
+          "move": "Rg2"
+        },
+        "source": "https://www.pgnmentor.com/players/Carlsen.zip",
+        "gameReference": {
+          "collection": "back-rank-mate",
+          "kind": "game",
+          "id": "dd9465ed4d8fa0de",
+          "ply": 63,
+          "branch": 0
+        },
+        "hints": [
+          "Quan sát hàng cuối và các quân đang chặn đường thoát của Vua.",
+          "Tìm cách đưa Xe hoặc Hậu vào hàng cuối; tính cả các nước chắn và bắt quân chiếu."
+        ],
+        "solution": "Hy sinh Hậu trên g1 để mở đường cho đòn phối hợp. Hậu ở e1 chiếu dọc hàng cuối. Các quân ở f2, g2, h2 chặn đường thoát của Vua ở g1. Nhánh mẫu: Qxg1+ · Kxg1 · Qe1#.",
+        "gameCaption": "2025 · Titled Tue 14th Oct 2025",
+        "gameOpening": "Khai cuộc: ECO C85",
+        "playerTitle": "Andreikin,D (2710) — Carlsen,M (2839)",
+        "players": [
+          {
+            "name": "Andreikin,D",
+            "title": "",
+            "rating": "2710"
+          },
+          {
+            "name": "Carlsen,M",
+            "title": "",
+            "rating": "2839"
+          }
+        ],
+        "beginner": false,
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        }
+      }
+    },
+    "level": "B",
+    "removed": false,
+    "note": "",
+    "updatedAt": "2026-11-10T05:13:52.959Z",
+    "history": [
+      {
+        "action": "move",
+        "level": "B",
+        "scope": "/back-rank-mate",
+        "note": "",
+        "at": "2026-11-10T05:13:52.959Z"
+      }
+    ]
+  },
+  {
+    "id": "ea5117e63b48a93799415a3b",
+    "reference": {
+      "scope": "/back-rank-mate",
+      "fen": "4r1k1/5p1p/p3q1pQ/1p6/1P6/P1R5/6PP/2R4K b - - 0 34",
+      "baseLevel": "C",
+      "title": "Moen,A (2390) — Topalov,V (2771)",
+      "moves": [
+        "Qe1+",
+        "Rxe1",
+        "Rxe1#"
+      ],
+      "alternativeLines": [],
+      "goal": "checkmate",
+      "previousMove": {
+        "fen": "4r1k1/5p1p/p3q1pb/1p6/1P3Q2/P1R5/6PP/2R4K w - - 1 34",
+        "move": "Qxh6"
+      },
+      "gameReference": {
+        "collection": "back-rank-mate",
+        "kind": "game",
+        "id": "f66041d73e2dcbed",
+        "ply": 67,
+        "branch": 0
+      },
+      "manualId": null,
+      "exercise": {
+        "title": "Moen,A — Topalov,V",
+        "prompt": "Khai thác hàng cuối để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "4r1k1/5p1p/p3q1pQ/1p6/1P6/P1R5/6PP/2R4K b - - 0 34",
+        "moves": [
+          "Qe1+",
+          "Rxe1",
+          "Rxe1#"
+        ],
+        "previousMove": {
+          "fen": "4r1k1/5p1p/p3q1pb/1p6/1P3Q2/P1R5/6PP/2R4K w - - 1 34",
+          "move": "Qxh6"
+        },
+        "source": "https://www.pgnmentor.com/players/Topalov.zip",
+        "gameReference": {
+          "collection": "back-rank-mate",
+          "kind": "game",
+          "id": "f66041d73e2dcbed",
+          "ply": 67,
+          "branch": 0
+        },
+        "hints": [
+          "Quan sát hàng cuối và các quân đang chặn đường thoát của Vua.",
+          "Tìm cách đưa Xe hoặc Hậu vào hàng cuối; tính cả các nước chắn và bắt quân chiếu."
+        ],
+        "solution": "Hy sinh Hậu trên e1 để mở đường cho đòn phối hợp. Xe ở e1 chiếu dọc hàng cuối. Các quân ở g2, h2 chặn đường thoát của Vua ở h1. Nhánh mẫu: Qe1+ · Rxe1 · Rxe1#.",
+        "gameCaption": "2013 · 29th ECC Open 2013",
+        "gameOpening": "Khai cuộc: ECO B43",
+        "playerTitle": "Moen,A (2390) — Topalov,V (2771)",
+        "players": [
+          {
+            "name": "Moen,A",
+            "title": "",
+            "rating": "2390"
+          },
+          {
+            "name": "Topalov,V",
+            "title": "",
+            "rating": "2771"
+          }
+        ],
+        "beginner": false,
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        }
+      }
+    },
+    "level": "B",
+    "removed": false,
+    "note": "",
+    "updatedAt": "2026-11-10T05:15:33.139Z",
+    "history": [
+      {
+        "action": "move",
+        "level": "B",
+        "scope": "/back-rank-mate",
+        "note": "",
+        "at": "2026-11-10T05:15:33.139Z"
+      }
+    ]
+  },
+  {
+    "id": "412559e3da14a584ab7b01ae",
+    "reference": {
+      "scope": "/back-rank-mate",
+      "fen": "8/5ppk/2b1p2p/7P/3r4/5PQ1/PPP1q1P1/2K1R3 b - - 0 32",
+      "baseLevel": "C",
+      "title": "Shirov,A (2620) — Fedorov,Artem Alek (2198)",
+      "moves": [
+        "Qd2+",
+        "Kb1",
+        "Qd1+",
+        "Rxd1",
+        "Rxd1#"
+      ],
+      "alternativeLines": [],
+      "goal": "checkmate",
+      "previousMove": {
+        "fen": "1Q6/5ppk/2b1p2p/7P/3r4/5Pn1/PPP1q1P1/2K1R3 w - - 2 32",
+        "move": "Qxg3"
+      },
+      "gameReference": {
+        "collection": "back-rank-mate",
+        "kind": "game",
+        "id": "762e16ce46b40948",
+        "ply": 63,
+        "branch": 0
+      },
+      "manualId": null,
+      "exercise": {
+        "title": "Shirov,A — Fedorov,Artem Alek",
+        "prompt": "Khai thác hàng cuối để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/5ppk/2b1p2p/7P/3r4/5PQ1/PPP1q1P1/2K1R3 b - - 0 32",
+        "moves": [
+          "Qd2+",
+          "Kb1",
+          "Qd1+",
+          "Rxd1",
+          "Rxd1#"
+        ],
+        "previousMove": {
+          "fen": "1Q6/5ppk/2b1p2p/7P/3r4/5Pn1/PPP1q1P1/2K1R3 w - - 2 32",
+          "move": "Qxg3"
+        },
+        "source": "https://www.pgnmentor.com/players/Shirov.zip",
+        "gameReference": {
+          "collection": "back-rank-mate",
+          "kind": "game",
+          "id": "762e16ce46b40948",
+          "ply": 63,
+          "branch": 0
+        },
+        "hints": [
+          "Quan sát hàng cuối và các quân đang chặn đường thoát của Vua.",
+          "Tìm cách đưa Xe hoặc Hậu vào hàng cuối; tính cả các nước chắn và bắt quân chiếu."
+        ],
+        "solution": "Hy sinh Hậu trên d1 để mở đường cho đòn phối hợp. Xe ở d1 chiếu dọc hàng cuối. Các quân ở a2, b2, c2 chặn đường thoát của Vua ở b1. Nhánh mẫu: Qd2+ · Kb1 · Qd1+ · Rxd1 · Rxd1#.",
+        "gameCaption": "2025 · Titled Tue 27th May Late",
+        "gameOpening": "Khai cuộc: ECO B40",
+        "playerTitle": "Shirov,A (2620) — Fedorov,Artem Alek (2198)",
+        "players": [
+          {
+            "name": "Shirov,A",
+            "title": "",
+            "rating": "2620"
+          },
+          {
+            "name": "Fedorov,Artem Alek",
+            "title": "",
+            "rating": "2198"
+          }
+        ],
+        "beginner": false,
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        }
+      }
+    },
+    "level": "B",
+    "removed": false,
+    "note": "",
+    "updatedAt": "2026-11-10T05:16:35.743Z",
+    "history": [
+      {
+        "action": "move",
+        "level": "B",
+        "scope": "/back-rank-mate",
+        "note": "",
+        "at": "2026-11-10T05:16:35.743Z"
+      }
+    ]
+  },
+  {
+    "id": "bc0aeff69710342420affec6",
+    "reference": {
+      "scope": "/skewer",
+      "fen": "1k6/1p6/r3p1R1/4P3/1K6/1R6/8/1r6 b - - 4 43",
+      "baseLevel": "Beginner",
+      "title": "FM Dreelinck,Jacob (2324) — FM Kononenko,Dmitry2 (2152)",
+      "moves": [
+        "Rb6+"
+      ],
+      "alternativeLines": [],
+      "goal": "material",
+      "previousMove": {
+        "fen": "1k6/1p6/r3p1R1/4P3/K7/1R6/8/1r6 w - - 3 43",
+        "move": "Kb4"
+      },
+      "gameReference": {
+        "id": "b7433507b406bd72",
+        "kind": "game",
+        "ply": 85,
+        "branch": 0,
+        "collection": "skewer"
+      },
+      "manualId": null,
+      "exercise": {
+        "id": "b7433507b406bd72",
+        "title": "Dreelinck,Jacob — Kononenko,Dmitry2",
+        "prompt": "Chọn một nước tạo đòn xiên để giành lợi thế vật chất.",
+        "mode": "interactive",
+        "outcome": "skewer",
+        "goal": "material",
+        "fen": "1k6/1p6/r3p1R1/4P3/1K6/1R6/8/1r6 b - - 4 43",
+        "moves": [
+          "Rb6+"
+        ],
+        "tacticPly": 0,
+        "previousMove": {
+          "fen": "1k6/1p6/r3p1R1/4P3/K7/1R6/8/1r6 w - - 3 43",
+          "move": "Kb4"
+        },
+        "source": "https://theweekinchess.com/zips/twic1638g.zip",
+        "gameReference": {
+          "id": "b7433507b406bd72",
+          "kind": "game",
+          "ply": 85,
+          "branch": 0,
+          "collection": "skewer"
+        },
+        "hints": [
+          "Xe đen ở b1 có thể bắt Xe b3 ngay, nhưng Vua trắng có thể bắt lại.",
+          "Hãy dùng Xe a6 để chiếu trước và phối hợp hai Xe trên cột b.",
+          "Đưa Xe đen từ a6 đến b6."
+        ],
+        "solution": "Rb6+ — Xe đen từ a6 đến b6, chiếu Vua trắng trên cột b. Sau khi Vua trắng rời cột, Xe từ b6 có thể bắt Xe trắng ở b3. Xe đen ở b1 bảo vệ ô b3, nên Vua trắng không thể bắt lại.",
+        "gameCaption": "2026 · 1st 3-0 Thu 26th Mar 2026",
+        "gameOpening": "Khai cuộc: Scandinavian defence, Lasker variation · B01",
+        "playerTitle": "FM Dreelinck,Jacob (2324) — FM Kononenko,Dmitry2 (2152)",
+        "players": [
+          {
+            "name": "Dreelinck,Jacob",
+            "title": "FM",
+            "rating": "2324"
+          },
+          {
+            "name": "Kononenko,Dmitry2",
+            "title": "FM",
+            "rating": "2152"
+          }
+        ],
+        "beginner": true
+      }
+    },
+    "level": "A",
+    "removed": false,
+    "note": "",
+    "updatedAt": "2026-11-10T05:23:11.358Z",
+    "history": [
+      {
+        "action": "move",
+        "level": "A",
+        "scope": "/skewer",
+        "note": "",
+        "at": "2026-11-10T05:23:11.358Z"
+      }
+    ]
+  },
+  {
+    "id": "c7c34e2b23118131653a283b",
+    "reference": {
+      "scope": "/skewer",
+      "fen": "7Q/8/8/4K3/8/8/1k2n3/6q1 b - - 1 72",
+      "baseLevel": "Beginner",
+      "title": "GM Movahed,Sina (2576) — GM Le Tuan Minh (2585)",
+      "moves": [
+        "Qd4+"
+      ],
+      "alternativeLines": [],
+      "goal": "material",
+      "previousMove": {
+        "fen": "8/6Q1/8/4K3/8/8/1k2n3/6q1 w - - 0 72",
+        "move": "Qh8"
+      },
+      "gameReference": {
+        "id": "7a3a8ccfef6e095d",
+        "kind": "game",
+        "ply": 143,
+        "branch": 0,
+        "collection": "skewer"
+      },
+      "manualId": null,
+      "exercise": {
+        "id": "7a3a8ccfef6e095d",
+        "title": "Movahed,Sina — Le Tuan Minh",
+        "prompt": "Chọn một nước tạo đòn xiên để giành lợi thế vật chất.",
+        "mode": "interactive",
+        "outcome": "skewer",
+        "goal": "material",
+        "fen": "7Q/8/8/4K3/8/8/1k2n3/6q1 b - - 1 72",
+        "moves": [
+          "Qd4+"
+        ],
+        "tacticPly": 0,
+        "previousMove": {
+          "fen": "8/6Q1/8/4K3/8/8/1k2n3/6q1 w - - 0 72",
+          "move": "Qh8"
+        },
+        "source": "https://theweekinchess.com/zips/twic1667g.zip",
+        "gameReference": {
+          "id": "7a3a8ccfef6e095d",
+          "kind": "game",
+          "ply": 143,
+          "branch": 0,
+          "collection": "skewer"
+        },
+        "hints": [
+          "Vua e5 đang che đường chéo từ Hậu trắng ở h8 đến Vua đen ở b2.",
+          "Tìm ô trên đường chéo đó để Hậu đen vừa chiếu Vua trắng, vừa chắn đường chiếu về b2.",
+          "Đưa Hậu đen từ g1 đến d4."
+        ],
+        "solution": "Qd4+ — Hậu đen từ g1 đến d4, chiếu Vua trắng trên đường chéo d4–h8. Hậu đen ở d4 cũng chắn đường chiếu từ h8 đến Vua đen ở b2. Khi Vua trắng rời đường chéo, Hậu đen bắt Hậu trắng ở h8.",
+        "gameCaption": "2026 · 1st 3-0 Thu 15th Oct 2026",
+        "gameOpening": "Khai cuộc: QGD Slav: 4.Nc3 · D15",
+        "playerTitle": "GM Movahed,Sina (2576) — GM Le Tuan Minh (2585)",
+        "players": [
+          {
+            "name": "Movahed,Sina",
+            "title": "GM",
+            "rating": "2576"
+          },
+          {
+            "name": "Le Tuan Minh",
+            "title": "GM",
+            "rating": "2585"
+          }
+        ],
+        "beginner": true
+      }
+    },
+    "level": "A",
+    "removed": false,
+    "note": "",
+    "updatedAt": "2026-11-10T05:26:34.675Z",
+    "history": [
+      {
+        "action": "move",
+        "level": "A",
+        "scope": "/skewer",
+        "note": "",
+        "at": "2026-11-10T05:26:34.675Z"
+      }
+    ]
+  },
+  {
+    "id": "6636192846882f3872b23052",
+    "reference": {
+      "scope": "/skewer",
+      "fen": "8/8/1k6/6PB/5P2/3pNK2/3q4/8 b - - 3 49",
+      "baseLevel": "Beginner",
+      "title": "Manukian,Ar (2059) — IM Javakhadze,Z (2423)",
+      "moves": [
+        "Qe2+"
+      ],
+      "alternativeLines": [],
+      "goal": "material",
+      "previousMove": {
+        "fen": "8/8/1k6/6PB/5P2/3pN3/3q1K2/8 w - - 2 49",
+        "move": "Kf3"
+      },
+      "gameReference": {
+        "id": "6c83abe8d67f6e7e",
+        "kind": "game",
+        "ply": 97,
+        "branch": 0,
+        "collection": "skewer"
+      },
+      "manualId": null,
+      "exercise": {
+        "id": "6c83abe8d67f6e7e",
+        "title": "Manukian,Ar — Javakhadze,Z",
+        "prompt": "Chọn một nước tạo đòn xiên để giành lợi thế vật chất.",
+        "mode": "interactive",
+        "outcome": "skewer",
+        "goal": "material",
+        "fen": "8/8/1k6/6PB/5P2/3pNK2/3q4/8 b - - 3 49",
+        "moves": [
+          "Qe2+"
+        ],
+        "tacticPly": 0,
+        "previousMove": {
+          "fen": "8/8/1k6/6PB/5P2/3pN3/3q1K2/8 w - - 2 49",
+          "move": "Kf3"
+        },
+        "source": "https://theweekinchess.com/zips/twic1641g.zip",
+        "gameReference": {
+          "id": "6c83abe8d67f6e7e",
+          "kind": "game",
+          "ply": 97,
+          "branch": 0,
+          "collection": "skewer"
+        },
+        "hints": [
+          "Vua trắng ở f3 và Tượng trắng ở h5 cùng đứng trên một đường chéo.",
+          "Tìm ô chiếu được Tốt đen ở d3 bảo vệ.",
+          "Đưa Hậu đen từ d2 đến e2."
+        ],
+        "solution": "Qe2+ — Hậu đen từ d2 đến e2, chiếu Vua trắng trên đường chéo e2–h5. Tốt đen ở d3 bảo vệ e2 nên Vua trắng không thể bắt Hậu. Khi Vua trắng rời đường chéo, Hậu đen bắt Tượng trắng ở h5. Nếu Vua trắng sau đó bắt Tốt d3, Đen vẫn giành lợi thế vật chất.",
+        "gameCaption": "2026 · Titled Tue 14th Apr 2026",
+        "gameOpening": "Khai cuộc: Scotch: Mieses variation · C45",
+        "playerTitle": "Manukian,Ar (2059) — IM Javakhadze,Z (2423)",
+        "players": [
+          {
+            "name": "Manukian,Ar",
+            "title": "",
+            "rating": "2059"
+          },
+          {
+            "name": "Javakhadze,Z",
+            "title": "IM",
+            "rating": "2423"
+          }
+        ],
+        "beginner": true
+      }
+    },
+    "level": "A",
+    "removed": false,
+    "note": "",
+    "updatedAt": "2026-11-10T05:27:19.950Z",
+    "history": [
+      {
+        "action": "move",
+        "level": "A",
+        "scope": "/skewer",
+        "note": "",
+        "at": "2026-11-10T05:27:19.950Z"
+      }
+    ]
   }
 ]

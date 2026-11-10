@@ -5,6 +5,7 @@ import {
   useMemo,
   useRef,
   useState,
+  type ReactNode,
 } from 'react';
 import { Chess } from 'chess.js';
 import { practiceAccessHeaders } from '@/lib/practice-access';
@@ -20,7 +21,7 @@ import { previousDrawPosition } from '@/lib/chess/draw-trainer';
 import PracticeBoard, { PreviousMoveControl } from './PracticeBoard';
 import { PracticePositionDialog } from './PracticePositionEditor';
 import PracticePositionSetup from './PracticePositionSetup';
-import PracticeSaveFeedback, {
+import {
   PracticeCatalogRefresh,
   type PracticeSaveNotice,
 } from './PracticeSaveFeedback';
@@ -71,10 +72,14 @@ export default function BeginnerTacticImport({
   writable,
   scope,
   exercises,
+  saveFeedback,
+  onSaved,
 }: {
   writable: boolean;
   scope: string;
   exercises: DrawExercise[];
+  saveFeedback: ReactNode;
+  onSaved: (notice: PracticeSaveNotice | undefined) => void;
 }) {
   const refreshCatalog = useContext(PracticeCatalogRefresh);
   const [step, setStep] = useState<'confirm' | 'import' | null>(null);
@@ -89,7 +94,6 @@ export default function BeginnerTacticImport({
   const [showPrevious, setShowPrevious] = useState(false);
   const [busy, setBusy] = useState(false);
   const [message, setMessage] = useState('');
-  const [notice, setNotice] = useState<PracticeSaveNotice>();
   const [width, setWidth] = useState(400);
   const dialog = useRef<HTMLDialogElement>(null);
   const importTrigger = useRef<HTMLButtonElement>(null);
@@ -134,7 +138,7 @@ export default function BeginnerTacticImport({
   async function openBlank() {
     setBusy(true);
     setMessage('');
-    setNotice(undefined);
+    onSaved(undefined);
     try {
       setBank(await fetchBank());
       setBlank(true);
@@ -203,7 +207,7 @@ export default function BeginnerTacticImport({
     if (!bank || busy || !selected.size) return;
     setBusy(true);
     setMessage('');
-    setNotice(undefined);
+    onSaved(undefined);
     let count = 0,
       skipped = 0,
       destination = '';
@@ -251,7 +255,7 @@ export default function BeginnerTacticImport({
           return next;
         });
       }
-      setNotice({
+      onSaved({
         message: `Đã thêm ${count} thế cờ.${skipped ? ` Bỏ qua ${skipped} thế đã có.` : ''}`,
         href: destination,
       });
@@ -259,7 +263,7 @@ export default function BeginnerTacticImport({
       setStep(null);
     } catch (error) {
       if (count)
-        setNotice({ message: `Đã thêm ${count} thế cờ.`, href: destination });
+        onSaved({ message: `Đã thêm ${count} thế cờ.`, href: destination });
       setMessage((error as Error).message);
     } finally {
       if (count || skipped) refreshCatalog();
@@ -277,7 +281,7 @@ export default function BeginnerTacticImport({
           aria-expanded={step !== null}
           aria-haspopup="dialog"
           onClick={() => {
-            setNotice(undefined);
+            onSaved(undefined);
             setStep(oneMoveGameScopes.has(scope) ? 'confirm' : 'import');
           }}
         >
@@ -294,12 +298,11 @@ export default function BeginnerTacticImport({
         </button>
       </div>
       {!open && message && <p role="status">{message}</p>}
-      {!open && <PracticeSaveFeedback notice={notice} />}
       {blank && bank && (
         <PracticePositionDialog
           title="Thêm thế cờ Nhập môn"
           onClose={() => setBlank(false)}
-          onSaved={setNotice}
+          onSaved={onSaved}
           fen={initialFen}
           hideDestinationFields
           insertionTargets={exercises.map(manualInsertionKey)}
@@ -576,7 +579,7 @@ export default function BeginnerTacticImport({
             </p>
           )}
           <p role="status">{message}</p>
-          <PracticeSaveFeedback notice={notice} />
+          {saveFeedback}
           {setup && current && (
             <PracticePositionSetup
               fen={displayedFen}

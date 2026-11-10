@@ -21,7 +21,7 @@ SOURCE_LEVELS = {'fork': {'A', 'B', 'D'},
                  'hanging-piece': {'A', 'B', 'C*', 'D*'},
                  'mate-in-one': {'Beginner', 'A', 'B'},
                  'two-rook-mate': {'A', 'B', 'C', 'C*'},
-                 'pin': {'Beginner', 'A'}}
+                 'pin': {'Beginner', 'A'}, 'skewer': {'Beginner'}}
 
 
 def file_binding(path):

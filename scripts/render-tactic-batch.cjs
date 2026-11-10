@@ -10,6 +10,7 @@ const TOPICS = {
   discovery: { id: 'discovered-attack', endpoint: 'discovery-exercises' },
   fork: { id: 'fork', endpoint: 'fork-exercises' },
   pin: { id: 'pin', endpoint: 'pin-exercises' },
+  skewer: { id: 'skewer', endpoint: 'skewer-exercises' },
   'defensive-move': {
     id: 'tactic-positions?theme=defensiveMove',
     endpoint: 'manual-tactic-exercises',

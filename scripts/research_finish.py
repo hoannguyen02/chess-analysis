@@ -48,6 +48,7 @@ APPEND_MANIFESTS = {
     'mate-in-one': 'scripts/fixtures/mate-in-one/published.json',
     'two-rook-mate': 'scripts/fixtures/two-rook-mate/expansion-evidence.json',
     'pin': 'scripts/fixtures/pin/expansion-evidence.json',
+    'skewer': 'scripts/fixtures/skewer/published.json',
 }
 TOPIC_CHECKS = {
     'discovery': ('test-discovery.py', 'test-discovery.cjs'),
@@ -57,12 +58,16 @@ TOPIC_CHECKS = {
     'mate-in-one': ('test-mate-in-one.py', 'test-mate-in-one.cjs'),
     'two-rook-mate': ('test-two-rook-master-games.py', 'test-two-rook-mate.cjs'),
     'pin': ('test-pin-pipeline.py', 'test-pins.cjs'),
+    'skewer': ('test-skewer-research.py', 'test-beginner-tactic-candidates.cjs'),
 }
 
 
 def _runtime_files(topic):
-    return [f'src/lib/server/{topic}-{suffix}.json' for suffix in
-            ('exercises', 'game-sources', 'beginner-exercises')]
+    files = [f'src/lib/server/{topic}-{suffix}.json' for suffix in
+             ('exercises', 'game-sources', 'beginner-exercises')]
+    if topic == 'skewer':
+        files[0] = 'src/lib/chess/skewer-exercises.json'
+    return files
 
 
 def _source_files(root, topic):
@@ -183,6 +188,13 @@ def _code_snapshot(root, topic='discovery'):
             'research_index.py', 'collect_two_rook_mate.py', 'tactic_research.py', *TOPIC_CHECKS[topic])]
         dependencies += ['src/pages/pin.tsx', 'src/components/ChessPractice.tsx',
                          'src/pages/api/pin-exercises.ts', 'src/pages/api/pin-game-sources.ts']
+    elif topic == 'skewer':
+        dependencies += [f'scripts/{name}' for name in (
+            'skewer_research.py', 'build-skewer.py', 'pin_research.py', 'hanging_piece_research.py',
+            'collect_two_rook_mate.py', 'master_game_identity.py', 'research_index.py',
+            'tactic_research.py', *TOPIC_CHECKS[topic])]
+        dependencies += ['src/pages/skewer.tsx', 'src/components/ChessPractice.tsx',
+                         'src/pages/api/skewer-exercises.ts', 'src/pages/api/skewer-game-sources.ts']
     return snapshot(root, dependencies)
 
 
@@ -224,7 +236,7 @@ def _preserve(root, stage, topic='discovery'):
     if {key: new_sources.get(key) for key in old_sources} != old_sources:
         raise ValueError('Publication changed or removed an existing full game')
     preserved = list(FORK_SOURCE_FILES[-2:])
-    if (not optional and topic not in ('two-rook-mate', 'pin')) or (root / beginner).exists():
+    if (not optional and topic not in ('two-rook-mate', 'pin', 'skewer')) or (root / beginner).exists():
         preserved.append(beginner)
     for name in preserved:
         if sha(root / name) != sha(stage / name):
@@ -584,7 +596,7 @@ def _finish_append_batch(topic, review_path, decisions_path, manifest_path, outp
         names = [str(relative), *runtime]
         if topic == 'fork':
             names.insert(1, FORK_SOURCE_FILES[0])
-        elif topic in ('defensive-move', 'mate-in-one', 'pin'):
+        elif topic in ('defensive-move', 'mate-in-one', 'pin', 'skewer'):
             names = [str(relative), *runtime[:2]]
         elif topic == 'two-rook-mate':
             names = [str(relative), *runtime[:2], 'scripts/fixtures/two-rook-mate/master-published.json']

@@ -441,12 +441,17 @@ test('generic Beginner import requires an owner anchor and imports its exact fra
       (node) => node.props['aria-label'] === 'Chọn thế 1'
     ).props;
   const shownBoard = () => nodes(tree, 'PracticeBoard')[0].props;
+  let notice;
   const render = (scope = bank.topic.scope) => {
     cursor = 0;
     tree = component({
       writable: true,
       scope,
       exercises: [{ manualId: 'authored' }, { fen: 'curated' }],
+      saveFeedback: null,
+      onSaved: (value) => {
+        notice = value;
+      },
     });
     for (const node of [...nodes(tree, 'dialog'), ...nodes(tree, 'div')])
       if (node.props.ref)
@@ -560,7 +565,7 @@ test('generic Beginner import requires an owner anchor and imports its exact fra
   assert.deepEqual(writes[0].moves, []);
   assert.equal(refreshes, 1);
   assert.equal(importDialog(), undefined);
-  assert.deepEqual(nodes(tree, 'PracticeSaveFeedback')[0].props.notice, {
+  assert.deepEqual(notice, {
     message: 'Đã thêm 1 thế cờ.',
     href: '/tactic-positions?theme=futureLesson&level=Beginner&exercise=added',
   });
@@ -865,9 +870,10 @@ test('Beginner piece setup is free arrangement with strict save validation', asy
 test('revisit the opponent decision without modifying the saved exercise', async () => {
   const { explorationStartPly, explorationPosition, exploreMove } =
     await runtime();
-  const e = require('../src/lib/chess/skewer-exercises.json').find((e) =>
-    e.title.includes('Djurhuus')
-  );
+  const e = {
+    fen: '7k/8/8/8/8/3r4/5Q2/5K2 b - - 0 1',
+    moves: ['Rd1+', 'Ke2', 'Rd2+', 'Ke3', 'Rxf2'],
+  };
   const seen = Object.freeze(e.moves.slice(0, 2));
   assert.equal(explorationStartPly(seen, false), 1);
   assert.equal(explorationStartPly(seen, true), 2);

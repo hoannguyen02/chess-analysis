@@ -16,7 +16,7 @@ SETTINGS = {'rootNodes': 1000000, 'prepNodes': 150000, 'defenceNodes': 500000,
 ADAPTERS = {'discovery': 'discovery_research', 'fork': 'fork_research',
             'defensive-move': 'defensive_move_research', 'hanging-piece': 'hanging_piece_research',
             'mate-in-one': 'mate_in_one_research', 'two-rook-mate': 'two_rook_mate_research',
-            'pin': 'pin_research'}
+            'pin': 'pin_research', 'skewer': 'skewer_research'}
 _engine = _store = _policy = _adapter = None
 
 
@@ -31,7 +31,7 @@ def verification_code():
                         'defensive_move_research.py', 'collect_defensive_move.py',
                         'two_rook_mate_research.py', 'two_rook_mate_proof.py',
                         'collect-two-rook-games.py', 'collect_two_rook_mate.py', 'tactics_catalog.py',
-                        'pin_research.py', 'build-pins.py')
+                        'pin_research.py', 'build-pins.py', 'skewer_research.py', 'build-skewer.py')
 
 
 def initialize_worker(topic, executable, cache, settings, complete, provenance):
@@ -279,7 +279,7 @@ def prepare_publication(report, decisions, output):
             gate = adapter.early_gate(record, True)
             if gate['flags'] or gate['coverage'] != result.get('preflight', {}).get('coverage'):
                 raise ValueError('Current fork geometry, level or reply coverage is missing')
-        if topic == 'pin':
+        if topic in ('pin', 'skewer'):
             adapter.verify_review(record, result)
         if topic == 'defensive-move' and record['level'] == 'D':
             adapter.validate_advanced_evidence(record, result)

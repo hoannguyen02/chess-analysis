@@ -6,7 +6,7 @@ import PrivateContent from '@/components/PrivateContent';
 import DrawGameViewer from '@/components/DrawGameViewer';
 import PracticePositionEditor from '@/components/PracticePositionEditor';
 import PracticeSaveFeedback, {
-  type PracticeSaveNotice,
+  usePracticeSaveNotice,
 } from '@/components/PracticeSaveFeedback';
 import {
   type SavedGame,
@@ -51,10 +51,7 @@ function Library({
   const [removing, setRemoving] = useState<string>();
   const [removingPosition, setRemovingPosition] = useState<string>();
   const [addingPosition, setAddingPosition] = useState<string>();
-  const [positionSave, setPositionSave] = useState<{
-    id: string;
-    notice: PracticeSaveNotice;
-  }>();
+  const [notice, setNotice] = usePracticeSaveNotice();
   const themeLabel = (id: string) =>
     initial.themes.find((theme) => theme.id === id)?.label ?? id;
   const positionsFor = (game: SavedGame) =>
@@ -103,11 +100,11 @@ function Library({
       setGames(data.games);
       setRemoving(undefined);
       setRemovingPosition(undefined);
-      setMessage(
-        positionId
+      setNotice({
+        message: positionId
           ? 'Đã bỏ mốc thế cờ đã lưu. Ván gốc vẫn được giữ lại.'
-          : 'Đã bỏ ván khỏi bộ sưu tập.'
-      );
+          : 'Đã bỏ ván khỏi bộ sưu tập.',
+      });
     } catch (e) {
       setMessage((e as Error).message);
     } finally {
@@ -320,6 +317,10 @@ function Library({
         </button>
       </div>
       <p role="status">{message}</p>
+      <PracticeSaveFeedback
+        notice={notice}
+        onDismiss={() => setNotice(undefined)}
+      />
       {!games.length ? (
         <p>
           Chưa có ván nào. Khi xem ván gốc, chọn “☆ Lưu ván” hoặc “☆ Lưu thế cờ”
@@ -379,7 +380,7 @@ function Library({
                       {initial.writable && (
                         <button
                           onClick={() => {
-                            setPositionSave(undefined);
+                            setNotice(undefined);
                             setAddingPosition(
                               addingPosition === p.id ? undefined : p.id
                             );
@@ -401,16 +402,13 @@ function Library({
                         </button>
                       )}
                     </div>
-                    {positionSave?.id === p.id && (
-                      <PracticeSaveFeedback notice={positionSave.notice} />
-                    )}
                     {addingPosition === p.id && (
                       <PracticePositionEditor
                         fen={p.fen}
                         source={g.source}
                         reference={p.reference}
                         onSaved={(notice) => {
-                          setPositionSave({ id: p.id, notice });
+                          setNotice(notice);
                           setAddingPosition(undefined);
                         }}
                         defaults={{

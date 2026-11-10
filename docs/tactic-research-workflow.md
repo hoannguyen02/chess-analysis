@@ -137,7 +137,7 @@ it does not impose an approval queue on this owner-reviewed Beginner flow.
 registered topics and reads their existing local data. Standard topics use
 `src/lib/server/<route>-exercises.json` or
 `src/lib/chess/<route>-exercises.json`, as flat exercise arrays or category arrays.
-Manual-only topics reuse `manual-tactics.json`. Legacy Discovery, Skewer and
+Manual-only topics reuse `manual-tactics.json`. Legacy Discovery and
 draw-family layouts are handled centrally. Production tracing includes these
 source files; access protection and local-only writes remain unchanged.
 
@@ -887,3 +887,12 @@ took 1.33 s with two workers and 0.91 s with four, with 18 engine calls in each
 cold run. Its four-worker warm run took 0.31 s with zero engine calls. These
 are automated review timings. Source replay, editorial review, validation
 and PDF inspection are measured separately in the run ledgers.
+
+## Skewer Beginner
+
+The `skewer` source adapter supports `Beginner` only. It searches indexed
+complete games for a played checking skewer, verifies unique short material
+gain and every reply through material recovery, and uses the shared scoped
+run, editorial packets, append-only evidence and visual publication gate.
+The retired collection's games and rejected positions remain in the research
+archive. See [Skewer practice](skewer-practice.md#verified-beginner-research).

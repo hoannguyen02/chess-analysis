@@ -15,15 +15,6 @@ export default async function handler(
   const { default: exercises } = await import(
     '@/lib/chess/skewer-exercises.json'
   );
-  const { default: beginnerExercises } = await import(
-    '@/lib/chess/skewer-beginner-exercises.json'
-  );
-  const { default: queenExercises } = await import(
-    '@/lib/server/queen-skewer-pilot.json'
-  );
-  const { default: queenIntroExercises } = await import(
-    '@/lib/server/queen-skewer-intro.json'
-  );
   const {
     practiceGameCaption,
     practicePlayerTitle,
@@ -41,19 +32,8 @@ export default async function handler(
           id: 'skewer',
           title: 'Đòn xiên',
           description:
-            'Tấn công quân phía trước để khai thác quân phía sau trên cùng một đường. Bắt đầu với Nhập môn, rồi chọn cấp độ phù hợp.',
-          exercises: (
-            [
-              ...beginnerExercises,
-              ...[...queenIntroExercises, ...queenExercises].map(
-                (exercise, i) => ({
-                  ...exercise,
-                  title: `Xiên Hậu · ${i + 1}`,
-                })
-              ),
-              ...exercises,
-            ] as DrawExercise[]
-          ).map((exercise) => ({
+            'Tấn công quân có giá trị cao hơn ở phía trước. Khi quân đó rời đường tấn công, quân phía sau có thể bị bắt.',
+          exercises: (exercises as DrawExercise[]).map((exercise) => ({
             ...exercise,
             gameCaption: practiceGameCaption(exercise.gameReference),
             gameOpening: practiceGameOpening(exercise.gameReference),

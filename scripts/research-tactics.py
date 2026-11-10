@@ -68,6 +68,8 @@ def main():
     collect.add_argument('--source-contains', action='append', default=[],
                          help='Limit indexed Pin or two-rook collection to matching archive URLs')
     collect.add_argument('--no-bank', action='store_true', help='Skip candidate lookup for a controlled cold collection run')
+    collect.add_argument('--skewer-white-bishop', action='store_true',
+                         help='Focus on White bishop skewers; use --no-bank after checking saved leads')
     collect.add_argument('--unplayed', action='store_true',
                          help='Expand Pin collection to verified-analysis leads from legal unplayed moves')
     collect.add_argument('--drawn-games', action='store_true',
@@ -201,15 +203,17 @@ def main():
 def dispatch(args, ledger=None, metadata=None):
     metadata = metadata if metadata is not None else {}
     if (args.command == 'index-positions' and args.topic != 'discovery') or (
-            args.command == 'collect' and args.topic not in ('discovery', 'hanging-piece', 'two-rook-mate', 'defensive-move', 'mate-in-one', 'pin')):
+            args.command == 'collect' and args.topic not in ('discovery', 'hanging-piece', 'two-rook-mate', 'defensive-move', 'mate-in-one', 'pin', 'skewer')):
         raise ValueError(f'{args.topic}: implement a topic collection adapter before scanning; no Discovery fallback')
     if (args.command in ('collect', 'candidates') and 'Beginner' not in SOURCE_LEVELS.get(args.topic, ())
             and ('Beginner' in (args.levels or []) or getattr(args, 'level', None) == 'Beginner')):
         raise ValueError('This topic has no Beginner source research adapter')
-    if args.command == 'collect' and args.topic in ('hanging-piece', 'defensive-move', 'mate-in-one', 'pin') and args.phase != 'tactics':
+    if args.command == 'collect' and args.topic in ('hanging-piece', 'defensive-move', 'mate-in-one', 'pin', 'skewer') and args.phase != 'tactics':
         raise ValueError(f'{args.topic} supports the tactics phase')
     if args.command == 'collect' and args.source_contains and args.topic not in ('two-rook-mate', 'pin'):
         raise ValueError('Shared archive filtering is supported by Pin and two-rook collection')
+    if args.command == 'collect' and args.skewer_white_bishop and (args.topic != 'skewer' or not args.no_bank):
+        raise ValueError('Use --skewer-white-bishop only for Skewer collection after bank lookup (--no-bank)')
     if args.command == 'collect' and (args.unplayed or args.drawn_games) and args.topic != 'pin':
         raise ValueError('Unplayed-move and drawn-game collection currently support Pin')
     if args.command == 'review-compositions':
@@ -375,7 +379,7 @@ def dispatch(args, ledger=None, metadata=None):
                                           target=args.target, existing=selected, phase=args.phase,
                                           source_filters=args.source_contains)
                         source_metrics.update(scanned['metrics'])
-                    elif args.topic in ('mate-in-one', 'pin'):
+                    elif args.topic in ('mate-in-one', 'pin', 'skewer'):
                         if args.input:
                             raise ValueError('Import the full corpus into the index before collection')
                         from importlib import import_module
@@ -385,6 +389,8 @@ def dispatch(args, ledger=None, metadata=None):
                         if args.topic == 'pin':
                             scan_options.update(unplayed=args.unplayed, drawn_games=args.drawn_games,
                                                 source_filters=args.source_contains)
+                        elif args.topic == 'skewer':
+                            scan_options['white_bishop'] = args.skewer_white_bishop
                         scanned = collect(db, cache=args.cache, workers=args.workers, output=collection,
                                           levels=missing, target=args.target, max_games=args.max_games,
                                           existing=selected, **scan_options)

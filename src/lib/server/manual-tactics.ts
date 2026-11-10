@@ -582,12 +582,7 @@ export async function curatedPositionLevel(
   if (!topic) return undefined;
   const files =
     topic === 'skewer'
-      ? [
-          'src/lib/chess/skewer-exercises.json',
-          'src/lib/chess/skewer-beginner-exercises.json',
-          'src/lib/server/queen-skewer-intro.json',
-          'src/lib/server/queen-skewer-pilot.json',
-        ]
+      ? ['src/lib/chess/skewer-exercises.json']
       : [
           `src/lib/server/${topic}-exercises.json`,
           ...(['discovery', 'fork', 'hanging-piece'].includes(topic)

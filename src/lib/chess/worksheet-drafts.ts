@@ -314,9 +314,10 @@ export function sameWorksheetChoices(
   b: WorksheetDraftChoices
 ) {
   // The allocator is saved for safe restores but does not change the output.
-  const { nextId: _a, ...left } = a;
-  const { nextId: _b, ...right } = b;
-  return canonical(left) === canonical(right);
+  return (
+    canonical({ ...a, nextId: undefined }) ===
+    canonical({ ...b, nextId: undefined })
+  );
 }
 
 export function makeWorksheetVersion(
