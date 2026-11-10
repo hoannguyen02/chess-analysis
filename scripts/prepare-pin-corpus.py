@@ -1,12 +1,10 @@
 """Prepare a downloaded PGN Mentor ZIP for collect-pins.py --extra-corpus."""
-import argparse,hashlib,importlib.util,io,json,re,zipfile
+import argparse,hashlib,io,json,re,zipfile
 from pathlib import Path
 import chess.pgn
 import sys
 sys.dont_write_bytecode = True
-ROOT=Path(__file__).resolve().parents[1]
-spec=importlib.util.spec_from_file_location('skewer_sources',ROOT/'scripts/collect-skewers.py')
-source=importlib.util.module_from_spec(spec);spec.loader.exec_module(source)
+import master_game_identity as source
 def main():
  ap=argparse.ArgumentParser();ap.add_argument('archive',type=Path);ap.add_argument('--name',required=True);ap.add_argument('--output',type=Path,required=True);args=ap.parse_args()
  records=[]

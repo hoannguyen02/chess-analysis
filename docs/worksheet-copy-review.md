@@ -7,7 +7,7 @@ introduction, closing, level guide, instructions, move descriptions, solution
 notes, alternative lines, provenance and contact footer. User-written titles,
 introduction/closing text and contact details remain editable and are not rewritten.
 
-The current printable library contains **2,558 exercises across 12 topics**,
+The printable library at the time of this review contained **2,558 exercises across 12 topics**,
 with **141 normalized prose templates**. The audit replays every primary line,
 1,426 additional lines and 2,283 supplied preceding moves. Normalization groups
 repeated notes while preserving each exercise's FEN, moves and full before/after

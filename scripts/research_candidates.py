@@ -189,7 +189,11 @@ def bootstrap_candidates(db, paths=None, topic='discovery'):
     import hashlib
     from research_run import SOURCE_LEVELS
     initialize(db)
-    paths = paths if paths is not None else sorted((ROOT / f'scripts/fixtures/{topic}').glob('*.json'))
+    if paths is None:
+        fixtures = ROOT / f'scripts/fixtures/{topic}'
+        # Retired Skewer batches are historical evidence, separate from the
+        # new Beginner bank. Fresh source leads are imported after collection.
+        paths = sorted(fixtures.glob('published.json' if topic == 'skewer' else '*.json'))
     imported = skipped = files = 0
     for value in paths:
         path = Path(value)

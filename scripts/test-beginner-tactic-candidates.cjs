@@ -96,7 +96,9 @@ function comparable(fen) {
 }
 function checkPosition(position) {
   const { entry } = position;
-  assert.ok(['B', 'C', 'C*', 'D', 'D*', 'E', 'E*'].includes(entry.beginnerSourceLevel));
+  assert.ok(
+    ['B', 'C', 'C*', 'D', 'D*', 'E', 'E*'].includes(entry.beginnerSourceLevel)
+  );
   assert.equal(entry.level, 'Beginner');
   assert.deepEqual(entry.moves, []);
   assert.deepEqual(entry.alternativeLines, []);
@@ -302,7 +304,9 @@ test('a future registered topic uses conventional files and explicit anchors wit
       }
     }
     assert.ok(
-      result.candidates.some((candidate) => candidate.sourceTitle === 'Source D*')
+      result.candidates.some(
+        (candidate) => candidate.sourceTitle === 'Source D*'
+      )
     );
     await assert.rejects(() =>
       f
@@ -473,7 +477,6 @@ test('existing tactic, nested promotion and typed draw catalogs extract read-onl
   const scopes = [
     '/fork',
     '/pin',
-    '/skewer',
     '/discovered-attack',
     '/promotion',
     '/stalemate',
@@ -483,12 +486,10 @@ test('existing tactic, nested promotion and typed draw catalogs extract read-onl
     'src/lib/server/practice-adjustments.json',
     'src/lib/server/fork-exercises.json',
     'src/lib/server/pin-exercises.json',
-    'src/lib/chess/skewer-exercises.json',
     'src/lib/server/discovery-exercises.json',
     'src/lib/server/promotion-exercises.json',
     'src/lib/server/fork-game-sources.json',
     'src/lib/server/pin-game-sources.json',
-    'src/lib/server/skewer-game-sources.json',
     'src/lib/server/discovery-game-sources.json',
     'src/lib/server/promotion-game-sources.json',
     'src/lib/server/draw-game-sources.json',
@@ -503,11 +504,7 @@ test('existing tactic, nested promotion and typed draw catalogs extract read-onl
   const before = snapshot(),
     load = loader();
   const sourceFiles = files.filter((name) => name.endsWith('-exercises.json'));
-  const extraFiles = [
-    'src/lib/server/queen-skewer-intro.json',
-    'src/lib/server/queen-skewer-pilot.json',
-  ];
-  const sourceRows = [...sourceFiles, ...extraFiles].flatMap((file) =>
+  const sourceRows = sourceFiles.flatMap((file) =>
     flatten(JSON.parse(fs.readFileSync(file, 'utf8')))
   );
   sourceRows.push(
@@ -578,4 +575,79 @@ test('existing tactic, nested promotion and typed draw catalogs extract read-onl
     before,
     'candidate reads cannot mutate published sources or owner data'
   );
+});
+
+test('an empty Skewer catalog can save a Beginner board and import future higher-level positions', async () => {
+  const f = fixture();
+  try {
+    const load = loader({
+      root: f.root,
+      intercept: (file) =>
+        file.endsWith('/chess/skewer-exercises.json') ? [] : undefined,
+    });
+    const exercises = load('src/pages/api/skewer-exercises.ts').default;
+    const candidates = load(
+      'src/pages/api/beginner-tactic-candidates.ts'
+    ).default;
+    const get = async (handler) => {
+      const res = response();
+      await handler({ method: 'GET', query: { scope: '/skewer' } }, res);
+      assert.equal(res.code, 200);
+      return res.body;
+    };
+
+    const {
+      categories: [empty],
+    } = await get(exercises);
+    assert.equal(empty.managementScope, '/skewer');
+    assert.equal(empty.managementWritable, true);
+    assert.deepEqual(empty.exercises, []);
+    const bank = await get(candidates);
+    assert.equal(bank.existingCount, 0);
+    assert.deepEqual(bank.candidates, []);
+
+    const res = response();
+    await load('src/pages/api/manual-tactics.ts').default(
+      {
+        method: 'POST',
+        body: {
+          themeId: 'skewer',
+          level: 'Beginner',
+          goal: 'material',
+          fen: '3q4/8/8/3k3K/8/8/8/7R w - - 0 1',
+        },
+      },
+      res
+    );
+    assert.equal(res.code, 200, JSON.stringify(res.body));
+    const {
+      categories: [
+        {
+          exercises: [saved],
+        },
+      ],
+    } = await get(exercises);
+    assert.equal(saved.beginner, true);
+    assert.deepEqual(saved.moves, []);
+    assert.equal((await get(candidates)).existingCount, 1);
+
+    const source = {
+      ...exercise('Future B', [], ['Ra1', 'Kd6', 'Rd1+', 'Ke6', 'Rxd8']),
+      fen: '3q4/8/8/3k3K/8/8/R7/8 w - - 0 1',
+    };
+    write(f.root, 'src/lib/chess/skewer-exercises.json', [source]);
+    const result = await get(candidates);
+    assert.equal(result.candidates.length, 1);
+    assert.equal(result.candidates[0].suggestedPly, 2);
+    assert.equal(result.candidates[0].entry.previousMove.move, 'Kd6');
+    result.candidates[0].positions.forEach(checkPosition);
+
+    delete source.goal;
+    write(f.root, 'src/lib/chess/skewer-exercises.json', [source]);
+    const missingGoal = await get(candidates);
+    assert.deepEqual(missingGoal.candidates, []);
+    assert.equal(missingGoal.diagnostics.missingGoal, 1);
+  } finally {
+    f.close();
+  }
 });

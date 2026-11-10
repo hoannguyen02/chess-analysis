@@ -9,9 +9,9 @@ import chess
 
 from tactic_research import ROOT, module, digest
 from review_store import ReviewStore
+import master_game_identity as masters
 
 index = module('tactics-index')
-masters = module('collect-skewers')
 DEFAULT_INDEX = ROOT / 'research/tactics-index.sqlite'
 
 
@@ -26,6 +26,7 @@ def master_credential(headers, references):
         since = masters.MASTER_SINCE.get(player)
         if since and year.isdigit() and int(year) >= since and masters.master_identity(headers, player):
             return {'archivePlayer': player, 'conservativeMasterSince': since,
+                    # Keep the historical attribution in reproducible review evidence.
                     'basis': 'Existing collect-skewers.py archive-player identity and conservative post-title date filter; no invented source-header title.',
                     'sourceSha256': reference['sha256']}
     return None
@@ -181,7 +182,7 @@ def sync_topic_decisions(db, topic):
     """Mirror authoritative published/owner decisions for registered research topics."""
     if topic == 'discovery':
         return sync_discovery(db)
-    if topic not in ('fork', 'hanging-piece', 'two-rook-mate', 'defensive-move', 'mate-in-one', 'pin'):
+    if topic not in ('fork', 'hanging-piece', 'two-rook-mate', 'defensive-move', 'mate-in-one', 'pin', 'skewer'):
         raise ValueError('Implement topic decision synchronization before research')
     fixtures = ROOT / 'scripts/fixtures' / topic
     published_path = fixtures / ('master-published.json' if topic == 'two-rook-mate' else 'published.json')
@@ -191,7 +192,7 @@ def sync_topic_decisions(db, topic):
     with db:
         db.execute('DELETE FROM research_decisions WHERE topic=?', (topic,))
         authored_theme = {'defensive-move': 'defensiveMove', 'mate-in-one': 'mateIn1',
-                          'pin': 'pin'}.get(topic)
+                          'pin': 'pin', 'skewer': 'skewer'}.get(topic)
         if authored_theme:
             for row in json.loads((ROOT / 'src/lib/server/manual-tactics.json').read_text()):
                 if row['themeId'] != authored_theme:
@@ -221,6 +222,15 @@ def sync_topic_decisions(db, topic):
             db.execute('INSERT OR REPLACE INTO research_decisions VALUES (?,?,?,?,?,?,?)', (
                 topic, index.pkey(row['fen'])[0], row['level'], row['gameId'],
                 'approved', 'Existing published exercise; preserve its source game', digest(row)))
+        if topic == 'skewer':
+            # The reset retired the entire former publication; its source games
+            # remain available to other motifs. Keep previous rejected FENs out.
+            archived = json.loads((fixtures / 'audit.json').read_text())
+            for status, rows in [('removed', archived['records']), ('rejected', archived['rejected'])]:
+                for row in rows:
+                    db.execute('INSERT OR REPLACE INTO research_decisions VALUES (?,?,?,?,?,?,?)', (
+                        topic, index.pkey(row['fen'])[0], '*', row.get('gameId', ''), status,
+                        row.get('reason', 'Retired by the Skewer collection reset'), digest(row)))
         if topic == 'pin':
             for row in json.loads((ROOT / 'src/lib/server/pin-exercises.json').read_text()):
                 db.execute('INSERT OR REPLACE INTO research_decisions VALUES (?,?,?,?,?,?,?)', (
@@ -241,9 +251,9 @@ def sync_topic_decisions(db, topic):
             ref = entry['reference']
             # Beginner imports can share their source FEN. Their manual-entry
             # removals/classifications must not become decisions on A-D games.
-            incoming = topic in ('defensive-move', 'mate-in-one', 'pin') and entry.get('destinationScope') == scope
+            incoming = topic in ('defensive-move', 'mate-in-one', 'pin', 'skewer') and entry.get('destinationScope') == scope
             if (not incoming and ref['scope'] != scope) or (
-                    ref['baseLevel'] == 'Beginner' and topic not in ('defensive-move', 'mate-in-one', 'pin')):
+                    ref['baseLevel'] == 'Beginner' and topic not in ('defensive-move', 'mate-in-one', 'pin', 'skewer')):
                 continue
             key = index.pkey(ref['fen'])[0]
             status = ('removed' if entry['removed'] else 'transferred'

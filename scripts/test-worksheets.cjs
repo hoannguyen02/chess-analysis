@@ -44,6 +44,10 @@ test.before(async () => {
 test('worksheet level choices match the shared catalog order', () => {
   const { practiceLevels } = load('src/lib/chess/draw-levels.ts');
   assert.deepEqual(model.worksheetLevels, practiceLevels);
+  assert.equal(
+    topics.find((topic) => topic.id === 'skewer').endpoint,
+    '/api/skewer-exercises'
+  );
   for (const [level, solverMoves] of [
     ['D*', 4],
     ['E', 6],
@@ -156,10 +160,6 @@ test('Vietnamese explanation, previous move and every eligible saved continuatio
   for (const [path, items] of Object.entries({
     pin,
     fork,
-    skewer: require('../src/lib/chess/skewer-exercises.json'),
-    beginner: require('../src/lib/chess/skewer-beginner-exercises.json'),
-    intro: require('../src/lib/server/queen-skewer-intro.json'),
-    pilot: require('../src/lib/server/queen-skewer-pilot.json'),
     discovery: require('../src/lib/server/discovery-exercises.json'),
     discoveryBeginner: require('../src/lib/server/discovery-beginner-exercises.json'),
   })) {
@@ -814,10 +814,6 @@ test('published tactics use the same solution prose on web and PDF', () => {
     '../src/lib/server/pin-exercises.json',
     '../src/lib/server/discovery-exercises.json',
     '../src/lib/server/discovery-beginner-exercises.json',
-    '../src/lib/chess/skewer-exercises.json',
-    '../src/lib/chess/skewer-beginner-exercises.json',
-    '../src/lib/server/queen-skewer-intro.json',
-    '../src/lib/server/queen-skewer-pilot.json',
   ];
   for (const path of paths) {
     for (const exercise of require(path)) {
@@ -894,13 +890,18 @@ test('review shuffle can be disabled without changing selection or answer number
 });
 
 test('large worksheets and books are bounded by available positions, not 120', async () => {
-  const skewer = require('../src/lib/chess/skewer-exercises.json');
-  // Keep the size regression independent of the curated Pin level counts.
+  const discovery = require('../src/lib/server/discovery-exercises.json').map(
+    (e) => ({ ...e, difficulty: { ...e.difficulty, level: 'D' } })
+  );
+  // Keep the size regression independent of the curated level counts.
   const largePool = pin
     .filter((e) => !e.beginner)
     .map((e) => ({ ...e, difficulty: { ...e.difficulty, level: 'A' } }));
-  const catalog = { pin: largePool, skewer };
-  const sections = [row(1, 'pin', 'A', 74), row(2, 'skewer', 'D', 50)];
+  const catalog = { pin: largePool, 'discovered-attack': discovery };
+  const sections = [
+    row(1, 'pin', 'A', 74),
+    row(2, 'discovered-attack', 'D', 50),
+  ];
   const pages = model.planWorksheet(sections, catalog, topics);
   assert.equal(pages.flatMap((p) => p.exercises).length, 124);
   // A single row can also exceed the former input max when its pool permits it.
@@ -923,8 +924,8 @@ test('large worksheets and books are bounded by available positions, not 120', a
   );
   for (const reuse of [false, true]) {
     const book = model.planWorksheetBook(
-      [row(1, 'pin', 'A', 60), row(2, 'skewer', 'D', 40)],
-      [row(3, 'pin', 'A', 14), row(4, 'skewer', 'D', 10)],
+      [row(1, 'pin', 'A', 60), row(2, 'discovered-attack', 'D', 40)],
+      [row(3, 'pin', 'A', 14), row(4, 'discovered-attack', 'D', 10)],
       catalog,
       topics,
       reuse
@@ -996,11 +997,11 @@ test('curated discovery levels export every published position without repeats',
 });
 
 test('review blocks follow chapter anchors, reserve globally and keep answer metadata', () => {
-  const skewer = require('../src/lib/chess/skewer-exercises.json');
+  const discovery = require('../src/lib/server/discovery-exercises.json');
   const sections = [
     row(11, 'pin', 'B', 6),
     row(22, 'fork', 'A', 6),
-    row(33, 'skewer', 'A', 6),
+    row(33, 'discovered-attack', 'A', 6),
   ];
   const blocks = [
     { id: 100, afterSectionId: 11, rows: [row(101, 'pin', 'B', 2)] },
@@ -1010,11 +1011,11 @@ test('review blocks follow chapter anchors, reserve globally and keep answer met
       rows: [
         row(201, 'pin', 'B', 2),
         row(202, 'fork', 'A', 2),
-        row(203, 'skewer', 'A', 2),
+        row(203, 'discovered-attack', 'A', 2),
       ],
     },
   ];
-  const catalog = { pin, fork, skewer };
+  const catalog = { pin, fork, 'discovered-attack': discovery };
   const build = (rs = sections, bs = blocks, reuse = false, shuffle = true) =>
     model.planWorksheetBookBlocks(rs, bs, catalog, topics, reuse, 1, shuffle);
   const pages = build();
@@ -1024,7 +1025,7 @@ test('review blocks follow chapter anchors, reserve globally and keep answer met
       'Đòn ghim',
       'Ôn tập tổng hợp 1',
       'Tấn công đôi',
-      'Đòn xiên',
+      'Chiếu mở và tấn công mở',
       'Ôn tập tổng hợp 2',
     ]
   );

@@ -1,6 +1,6 @@
 # Queen-skewer pilot: six positions for review
 
-**Status: these six positions remain in the website as lessons 11–16, following 10 sparse compositions. Numbering 1–6 below refers to this review sample. The former 30-position dataset is retained offline.**
+**Archived review.** These six positions were lessons 11–16 in the former Skewer collection. Numbering 1–6 below refers to the review sample. See the [collection reset](skewer-practice.md) for the current practice page.
 
 This sample tests teaching variety and chess correctness. It is not the final beginner sequence: four game positions are transfer exercises with substantial board complexity. The new introductory set uses independently checked original compositions rather than edits to these game positions.
 
@@ -273,15 +273,6 @@ Root search budget: 3,000,000 nodes. Scores are bounded engine estimates, not hu
 - Roots are checked at 1 million and 3 million nodes. The king example required 12 million nodes when the smaller root search did not pass. Each displayed reply and continuation uses the first unrestricted MultiPV candidate at 1 million nodes.
 - Replay and material accounting are independently tested with chess.js. Legal recaptures are checked in addition to geometric protection. These checks do not exhaustively establish every defensive variation.
 - Four complex game positions test transfer. This six-position sample does not yet cover all defensive resources, an equal White/Black split, every rear-target type, or assessment reliability with real learners.
-- Before expanding this set: verify additional near-best defensive branches and pilot difficulty with users. Bxd6 in position 4 is accepted in the website; its defensive reply is separately audited. Other unrecorded alternatives receive neutral feedback.
+- Before expanding this set: verify additional near-best defensive branches and pilot difficulty with users. The former website accepted Bxd6 in position 4; its defensive reply is separately audited. Other unrecorded alternatives receive neutral feedback.
 
-## Reproduce
-
-```sh
-python3 scripts/build-queen-skewer-pilot.py --rank-seed scripts/fixtures/skewer/queen-pilot-rank-seed.json
-python3 scripts/build-queen-skewer-web.py
-node --test scripts/test-queen-skewer-pilot.cjs scripts/test-queen-skewer-web.cjs
-python3 scripts/render-queen-skewer-pilot.py
-```
-
-The renderer uses python-chess, CairoSVG, Pillow and the macOS Arial font. The auditor uses Stockfish at `/opt/homebrew/bin/stockfish` by default; override with `--engine`. Full engine evidence is in `scripts/fixtures/skewer/queen-pilot.json`.
+Full engine evidence is retained in `scripts/fixtures/skewer/queen-pilot.json`.

@@ -15,6 +15,7 @@ import styles from '@/styles/SavedGames.module.css';
 import PracticePositionEditor from './PracticePositionEditor';
 import PracticeSaveFeedback, {
   type PracticeSaveNotice,
+  usePracticeSaveNotice,
 } from './PracticeSaveFeedback';
 
 type SaveProps = { source: GameSource; reference: GameReference };
@@ -24,12 +25,12 @@ export default function SaveGameControl({
   onOpen,
 }: SaveProps & { onOpen?: () => void }) {
   const [mode, setMode] = useState<'game' | 'position'>();
-  const [positionNotice, setPositionNotice] = useState<PracticeSaveNotice>();
+  const [notice, setNotice] = usePracticeSaveNotice();
   function edit(next: 'game' | 'position') {
     if (mode === next) setMode(undefined);
     else {
       onOpen?.();
-      setPositionNotice(undefined);
+      setNotice(undefined);
       setMode(next);
     }
   }
@@ -52,19 +53,26 @@ export default function SaveGameControl({
         </button>
         <Link href="/saved-games">Ván đã lưu →</Link>
       </div>
-      <PracticeSaveFeedback notice={positionNotice} />
+      <PracticeSaveFeedback
+        notice={notice}
+        onDismiss={() => setNotice(undefined)}
+      />
       {mode === 'position' && (
         <PositionEditor
           source={source}
           reference={reference}
           onSaved={(notice) => {
-            setPositionNotice(notice);
+            setNotice(notice);
             setMode(undefined);
           }}
         />
       )}
       {mode === 'game' && (
-        <SaveGameEditor source={source} reference={reference} />
+        <SaveGameEditor
+          source={source}
+          reference={reference}
+          onSaved={setNotice}
+        />
       )}
     </div>
   );
@@ -89,7 +97,11 @@ function PositionEditor({
     />
   );
 }
-function SaveGameEditor({ source, reference }: SaveProps) {
+function SaveGameEditor({
+  source,
+  reference,
+  onSaved,
+}: SaveProps & { onSaved: (notice: PracticeSaveNotice) => void }) {
   const [ready, setReady] = useState(false);
   const [busy, setBusy] = useState(true);
   const [existing, setExisting] = useState<SavedGame>();
@@ -163,7 +175,7 @@ function SaveGameEditor({ source, reference }: SaveProps) {
       const data = await res.json();
       if (!res.ok) throw new Error(data.error);
       setExisting(data.games[0]);
-      setMessage('Đã lưu ván và mốc nước đi hiện tại.');
+      onSaved({ message: 'Đã lưu ván và mốc nước đi hiện tại.' });
       window.dispatchEvent(new Event('saved-games-changed'));
     } catch (e) {
       setMessage((e as Error).message);

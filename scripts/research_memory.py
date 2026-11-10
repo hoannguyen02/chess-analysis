@@ -24,6 +24,8 @@ PROOF_FILES = {'discovery': (*SHARED_PROOF, 'discovery_research.py'),
                                  'hanging_piece_research.py'),
                'pin': (*SHARED_PROOF, 'discovery_research.py', 'hanging_piece_research.py',
                        'pin_research.py', 'build-pins.py'),
+               'skewer': (*SHARED_PROOF, 'discovery_research.py', 'hanging_piece_research.py',
+                          'pin_research.py', 'skewer_research.py', 'build-skewer.py'),
                'two-rook-mate': (*SHARED_PROOF, 'discovery_research.py', 'two_rook_mate_research.py',
                                  'two_rook_mate_proof.py', 'collect-two-rook-games.py',
                                  'collect_two_rook_mate.py')}

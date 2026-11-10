@@ -30,13 +30,14 @@ import { skewerLevelDescriptions } from '@/lib/chess/skewer-levels';
 import styles from '@/styles/ChessPractice.module.css';
 import dynamic from 'next/dynamic';
 import Link from 'next/link';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, type ReactNode } from 'react';
 import { useRouter } from 'next/router';
 import GamePlayerNames from './GamePlayerNames';
 import { TeachingTimer } from './TeachingTimer';
 import { usePrivateContentRefresh } from './PrivateContent';
 import PracticeSaveFeedback, {
   PracticeCatalogRefresh,
+  usePracticeSaveNotice,
   type PracticeSaveNotice,
 } from './PracticeSaveFeedback';
 
@@ -62,12 +63,16 @@ function CategoryPractice({
   reviewLevel,
   skewerKind,
   showHangingPieceHint,
+  saveFeedback,
+  onSaved,
 }: {
   category: DrawCategory;
   showIntroduction?: boolean;
   reviewLevel: DrawLevel | 'all' | 'beginner';
   skewerKind?: 'king' | 'queen';
   showHangingPieceHint: boolean;
+  saveFeedback: ReactNode;
+  onSaved: (notice: PracticeSaveNotice) => void;
 }) {
   const router = useRouter();
   const level = reviewLevel === 'beginner' ? 'Beginner' : reviewLevel;
@@ -109,7 +114,6 @@ function CategoryPractice({
     usePracticeFullscreen();
   const [timerPaused, setTimerPaused] = useState(false);
   const [attempt, setAttempt] = useState(0);
-  const [notice, setNotice] = useState<PracticeSaveNotice>();
 
   useEffect(() => {
     if (!exercise && expanded) void toggleExpanded();
@@ -118,7 +122,7 @@ function CategoryPractice({
   if (!exercise)
     return (
       <div className={styles.emptyLevel}>
-        <PracticeSaveFeedback notice={notice} />
+        {saveFeedback}
         <p role="status">
           Chưa có bài ở cấp độ{' '}
           {reviewLevel === 'beginner' ? 'Nhập môn / Beginner' : reviewLevel}{' '}
@@ -209,7 +213,7 @@ function CategoryPractice({
             </button>
           </div>
         </div>
-        <PracticeSaveFeedback notice={notice} />
+        {saveFeedback}
         <DrawTrainer
           key={JSON.stringify([
             activeKey,
@@ -219,7 +223,7 @@ function CategoryPractice({
             exercise.alternativeLines,
           ])}
           exercise={exercise}
-          onPracticeSaved={setNotice}
+          onPracticeSaved={onSaved}
           referenceGames={category.exercises.flatMap((e) =>
             e.gameReference ? [{ reference: e.gameReference, position: e }] : []
           )}
@@ -361,6 +365,13 @@ function PracticeContent({
   categoryLinks,
 }: ChessPracticeProps) {
   const router = useRouter();
+  const [notice, setNotice] = usePracticeSaveNotice();
+  const saveFeedback = (
+    <PracticeSaveFeedback
+      notice={notice}
+      onDismiss={() => setNotice(undefined)}
+    />
+  );
   const choices =
     variant === 'draw' ? drawPracticeChoices(categories) : categories;
   const [selectedId, setSelectedId] = useState(
@@ -398,7 +409,10 @@ function PracticeContent({
                   item.exercises.some((exercise) => exercise.beginner)
                 )
               ? 'beginner'
-              : variant === 'removing-defender' || variant === 'manual'
+              : variant === 'removing-defender' ||
+                  variant === 'manual' ||
+                  (variant === 'skewer' &&
+                    categories.every((item) => !item.exercises.length))
                 ? 'beginner'
                 : 'A'
   );
@@ -417,10 +431,15 @@ function PracticeContent({
       : 'king';
   });
   const category = choices.find((item) => item.id === selectedId) ?? choices[0];
+  const splitSkewers =
+    variant === 'skewer' &&
+    selectedLevel === 'beginner' &&
+    category.exercises.some(
+      (exercise) => exercise.beginner && exercise.beginnerKind
+    );
   const filtered = {
     ...category,
-    ...(selectedLevel === 'beginner' &&
-    (variant === 'pin' || variant === 'skewer')
+    ...(selectedLevel === 'beginner' && (variant === 'pin' || splitSkewers)
       ? {
           title:
             variant === 'pin'
@@ -433,14 +452,14 @@ function PracticeContent({
               ? 'Khai thác quân bị ghim để giành lợi thế vật chất. Ghim vào Vua hạn chế các nước đi làm lộ chiếu; ghim vào Hậu hoặc Xe cần tính cả nước bắt lại và phản công.'
               : beginnerKind === 'king'
                 ? 'Dùng Xe, Tượng hoặc Hậu chiếu Vua theo cột, hàng, đường chéo, rồi bắt quân phía sau.'
-                : 'Tìm đòn xiên trên đường chéo, hàng hoặc cột. Kiểm tra quân bảo vệ và tính đủ các nước bắt lại. Ở bài cuối, hãy quyết định đòn xiên có thực sự hiệu quả không.',
+                : 'Tìm đòn xiên trên đường chéo, hàng hoặc cột. Kiểm tra quân bảo vệ và tính đủ các nước bắt lại.',
         }
       : {}),
     exercises:
       selectedLevel === 'beginner'
         ? beginnerPracticeExercises(
             category,
-            variant === 'skewer' ? beginnerKind : undefined
+            splitSkewers ? beginnerKind : undefined
           )
         : filterDrawLevel(category.exercises, selectedLevel),
   };
@@ -504,6 +523,8 @@ function PracticeContent({
           scope={category.managementScope}
           writable={Boolean(category.managementWritable)}
           exercises={beginnerPracticeExercises(category)}
+          saveFeedback={saveFeedback}
+          onSaved={setNotice}
         />
       )}
       {showLevelFilter && (
@@ -582,7 +603,7 @@ function PracticeContent({
           </div>
         </div>
       )}
-      {variant === 'skewer' && selectedLevel === 'beginner' && (
+      {splitSkewers && (
         <nav className={styles.controls} aria-label="Chọn kiểu xiên">
           {(['king', 'queen'] as const).map((kind) => (
             <button
@@ -600,12 +621,10 @@ function PracticeContent({
         key={`${category.id}-${selectedLevel}-${beginnerKind}`}
         category={filtered}
         reviewLevel={selectedLevel}
-        skewerKind={
-          variant === 'skewer' && selectedLevel === 'beginner'
-            ? beginnerKind
-            : undefined
-        }
+        skewerKind={splitSkewers ? beginnerKind : undefined}
         showIntroduction={variant === 'draw'}
+        saveFeedback={saveFeedback}
+        onSaved={setNotice}
         showHangingPieceHint={
           variant === 'hanging-piece' &&
           (selectedLevel === 'C' || selectedLevel === 'D')

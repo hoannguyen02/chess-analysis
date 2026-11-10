@@ -72,7 +72,6 @@ const sourceLevels = new Set<string>(beginnerSourceLevels);
 const legacyGoals: Record<string, Entry['goal']> = {
   fork: 'material',
   pin: 'material',
-  skewer: 'material',
 };
 const topicName = (scope: string) =>
   scope === '/discovered-attack' ? 'discovery' : scope.slice(1);
@@ -183,12 +182,6 @@ export async function beginnerTacticCandidates(scope: string) {
           `src/lib/chess/${topic}-exercises.json`,
           `src/lib/server/${topic}-beginner-exercises.json`,
           `src/lib/chess/${topic}-beginner-exercises.json`,
-          ...(topic === 'skewer'
-            ? [
-                'src/lib/server/queen-skewer-intro.json',
-                'src/lib/server/queen-skewer-pilot.json',
-              ]
-            : []),
         ]
       : [];
   let raw = (await Promise.all(runtimeFiles.map(readJson))).flatMap(

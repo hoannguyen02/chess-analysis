@@ -2,7 +2,7 @@
 
 ## Scope
 
-Reviewed the current fork, pin, skewer and discovered-check/attack pages,
+Reviewed the fork, pin, skewer and discovered-check/attack pages as published at the time,
 the shared practice controls and feedback, library descriptions, and the
 `/don-chien-thuat` topic directory. The four practice topics contain 827 distinct
 published exercise records: 122 forks, 227 pins, 159 discoveries and 319 skewers
